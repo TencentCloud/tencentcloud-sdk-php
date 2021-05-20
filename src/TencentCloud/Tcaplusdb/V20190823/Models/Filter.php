@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置过滤字段名
  * @method string getValue() 获取过滤字段值
  * @method void setValue(string $Value) 设置过滤字段值
+ * @method array getValues() 获取过滤字段值
+ * @method void setValues(array $Values) 设置过滤字段值
  */
 class Filter extends AbstractModel
 {
@@ -38,8 +40,14 @@ class Filter extends AbstractModel
     public $Value;
 
     /**
+     * @var array 过滤字段值
+     */
+    public $Values;
+
+    /**
      * @param string $Name 过滤字段名
      * @param string $Value 过滤字段值
+     * @param array $Values 过滤字段值
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class Filter extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

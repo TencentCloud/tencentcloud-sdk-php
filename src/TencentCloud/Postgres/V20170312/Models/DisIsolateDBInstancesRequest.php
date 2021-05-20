@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置资源ID列表
  * @method integer getPeriod() 获取包年包月实例解隔离时购买时常 以月为单位
  * @method void setPeriod(integer $Period) 设置包年包月实例解隔离时购买时常 以月为单位
- * @method boolean getAutoVoucher() 获取是否使用代金券
- * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否使用代金券
+ * @method boolean getAutoVoucher() 获取是否使用代金券：true-使用,false-不使用，默认不使用
+ * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否使用代金券：true-使用,false-不使用，默认不使用
  * @method array getVoucherIds() 获取代金券id列表
  * @method void setVoucherIds(array $VoucherIds) 设置代金券id列表
  */
@@ -42,7 +42,7 @@ class DisIsolateDBInstancesRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var boolean 是否使用代金券
+     * @var boolean 是否使用代金券：true-使用,false-不使用，默认不使用
      */
     public $AutoVoucher;
 
@@ -54,7 +54,7 @@ class DisIsolateDBInstancesRequest extends AbstractModel
     /**
      * @param array $DBInstanceIdSet 资源ID列表
      * @param integer $Period 包年包月实例解隔离时购买时常 以月为单位
-     * @param boolean $AutoVoucher 是否使用代金券
+     * @param boolean $AutoVoucher 是否使用代金券：true-使用,false-不使用，默认不使用
      * @param array $VoucherIds 代金券id列表
      */
     function __construct()

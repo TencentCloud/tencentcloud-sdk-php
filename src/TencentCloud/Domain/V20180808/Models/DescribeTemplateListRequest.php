@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置用户注册类型，默认:all , 个人：I ,企业: E
  * @method string getStatus() 获取认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
  * @method void setStatus(string $Status) 设置认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+ * @method string getKeyword() 获取域名所有者筛选
+ * @method void setKeyword(string $Keyword) 设置域名所有者筛选
  */
 class DescribeTemplateListRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeTemplateListRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var string 域名所有者筛选
+     */
+    public $Keyword;
+
+    /**
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param string $Type 用户注册类型，默认:all , 个人：I ,企业: E
      * @param string $Status 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+     * @param string $Keyword 域名所有者筛选
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeTemplateListRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

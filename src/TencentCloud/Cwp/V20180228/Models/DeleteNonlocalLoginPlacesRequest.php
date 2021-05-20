@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIds(array $Ids) 设置异地登录事件ID数组。DelType为Ids或DelType未填时此项必填
  * @method array getIp() 获取异地登录事件的Ip。DelType为Ip时必填
  * @method void setIp(array $Ip) 设置异地登录事件的Ip。DelType为Ip时必填
+ * @method string getUuid() 获取主机Uuid
+ * @method void setUuid(string $Uuid) 设置主机Uuid
  */
 class DeleteNonlocalLoginPlacesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteNonlocalLoginPlacesRequest extends AbstractModel
     public $Ip;
 
     /**
+     * @var string 主机Uuid
+     */
+    public $Uuid;
+
+    /**
      * @param string $DelType 删除异地登录事件的方式，可选值："Ids"、"Ip"、"All"，默认为Ids
      * @param array $Ids 异地登录事件ID数组。DelType为Ids或DelType未填时此项必填
      * @param array $Ip 异地登录事件的Ip。DelType为Ip时必填
+     * @param string $Uuid 主机Uuid
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteNonlocalLoginPlacesRequest extends AbstractModel
 
         if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
             $this->Ip = $param["Ip"];
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 代客基础信息，for国际站查代客API
+ * 代客基础信息
  *
  * @method string getAgentUin() 获取代客关联的代理商UIN
  * @method void setAgentUin(string $AgentUin) 设置代客关联的代理商UIN

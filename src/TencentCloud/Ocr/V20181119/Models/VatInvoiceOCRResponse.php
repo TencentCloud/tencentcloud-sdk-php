@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVatInvoiceInfos(array $VatInvoiceInfos) 设置检测到的文本信息，具体内容请点击左侧链接。
  * @method array getItems() 获取明细条目。VatInvoiceInfos中关于明细项的具体条目。
  * @method void setItems(array $Items) 设置明细条目。VatInvoiceInfos中关于明细项的具体条目。
- * @method integer getPdfPageSize() 获取图片为PDF时，返回PDF的总页数，默认为0
- * @method void setPdfPageSize(integer $PdfPageSize) 设置图片为PDF时，返回PDF的总页数，默认为0
+ * @method integer getPdfPageSize() 获取默认值为0。如果图片为PDF时，返回PDF的总页数。
+ * @method void setPdfPageSize(integer $PdfPageSize) 设置默认值为0。如果图片为PDF时，返回PDF的总页数。
  * @method float getAngle() 获取图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
  * @method void setAngle(float $Angle) 设置图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +44,7 @@ class VatInvoiceOCRResponse extends AbstractModel
     public $Items;
 
     /**
-     * @var integer 图片为PDF时，返回PDF的总页数，默认为0
+     * @var integer 默认值为0。如果图片为PDF时，返回PDF的总页数。
      */
     public $PdfPageSize;
 
@@ -61,7 +61,7 @@ class VatInvoiceOCRResponse extends AbstractModel
     /**
      * @param array $VatInvoiceInfos 检测到的文本信息，具体内容请点击左侧链接。
      * @param array $Items 明细条目。VatInvoiceInfos中关于明细项的具体条目。
-     * @param integer $PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
+     * @param integer $PdfPageSize 默认值为0。如果图片为PDF时，返回PDF的总页数。
      * @param float $Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

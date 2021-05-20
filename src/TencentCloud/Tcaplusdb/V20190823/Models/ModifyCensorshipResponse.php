@@ -14,30 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLogStorageStatistic返回参数结构体
+ * ModifyCensorship返回参数结构体
  *
- * @method integer getTotalSize() 获取总容量（单位：GB）
- * @method void setTotalSize(integer $TotalSize) 设置总容量（单位：GB）
- * @method integer getUsedSize() 获取已使用容量（单位：GB）
- * @method void setUsedSize(integer $UsedSize) 设置已使用容量（单位：GB）
+ * @method string getClusterId() 获取集群id
+ * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method array getUins() 获取已加入审批人的uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUins(array $Uins) 设置已加入审批人的uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCensorship() 获取集群是否开启审核 0-关闭 1-开启
+ * @method void setCensorship(integer $Censorship) 设置集群是否开启审核 0-关闭 1-开启
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLogStorageStatisticResponse extends AbstractModel
+class ModifyCensorshipResponse extends AbstractModel
 {
     /**
-     * @var integer 总容量（单位：GB）
+     * @var string 集群id
      */
-    public $TotalSize;
+    public $ClusterId;
 
     /**
-     * @var integer 已使用容量（单位：GB）
+     * @var array 已加入审批人的uin
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $UsedSize;
+    public $Uins;
+
+    /**
+     * @var integer 集群是否开启审核 0-关闭 1-开启
+     */
+    public $Censorship;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +55,10 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalSize 总容量（单位：GB）
-     * @param integer $UsedSize 已使用容量（单位：GB）
+     * @param string $ClusterId 集群id
+     * @param array $Uins 已加入审批人的uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Censorship 集群是否开启审核 0-关闭 1-开启
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +74,16 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalSize",$param) and $param["TotalSize"] !== null) {
-            $this->TotalSize = $param["TotalSize"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("UsedSize",$param) and $param["UsedSize"] !== null) {
-            $this->UsedSize = $param["UsedSize"];
+        if (array_key_exists("Uins",$param) and $param["Uins"] !== null) {
+            $this->Uins = $param["Uins"];
+        }
+
+        if (array_key_exists("Censorship",$param) and $param["Censorship"] !== null) {
+            $this->Censorship = $param["Censorship"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

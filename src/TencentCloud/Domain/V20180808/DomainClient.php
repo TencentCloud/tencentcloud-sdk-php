@@ -37,8 +37,6 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\DescribeBatchOperationLogsResponse DescribeBatchOperationLogs(Models\DescribeBatchOperationLogsRequest $req) 本接口 ( DescribeBatchOperationLogs ) 用于获取批量操作日志 。
  * @method Models\DescribeDomainBaseInfoResponse DescribeDomainBaseInfo(Models\DescribeDomainBaseInfoRequest $req) 本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
 
-默认接口请求频率限制：20次/秒。
-
  * @method Models\DescribeDomainNameListResponse DescribeDomainNameList(Models\DescribeDomainNameListRequest $req) 本接口 (  DescribeDomainNameList ) 获取域名列表。
 
  * @method Models\DescribeDomainPriceListResponse DescribeDomainPriceList(Models\DescribeDomainPriceListRequest $req) 按照域名后缀获取对应的价格列表

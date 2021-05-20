@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLogStorageStatistic返回参数结构体
+ * DescribeLiveDomainReferer返回参数结构体
  *
- * @method integer getTotalSize() 获取总容量（单位：GB）
- * @method void setTotalSize(integer $TotalSize) 设置总容量（单位：GB）
- * @method integer getUsedSize() 获取已使用容量（单位：GB）
- * @method void setUsedSize(integer $UsedSize) 设置已使用容量（单位：GB）
+ * @method RefererAuthConfig getRefererAuthConfig() 获取域名 Referer 黑白名单配置。
+ * @method void setRefererAuthConfig(RefererAuthConfig $RefererAuthConfig) 设置域名 Referer 黑白名单配置。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLogStorageStatisticResponse extends AbstractModel
+class DescribeLiveDomainRefererResponse extends AbstractModel
 {
     /**
-     * @var integer 总容量（单位：GB）
+     * @var RefererAuthConfig 域名 Referer 黑白名单配置。
      */
-    public $TotalSize;
-
-    /**
-     * @var integer 已使用容量（单位：GB）
-     */
-    public $UsedSize;
+    public $RefererAuthConfig;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalSize 总容量（单位：GB）
-     * @param integer $UsedSize 已使用容量（单位：GB）
+     * @param RefererAuthConfig $RefererAuthConfig 域名 Referer 黑白名单配置。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,9 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalSize",$param) and $param["TotalSize"] !== null) {
-            $this->TotalSize = $param["TotalSize"];
-        }
-
-        if (array_key_exists("UsedSize",$param) and $param["UsedSize"] !== null) {
-            $this->UsedSize = $param["UsedSize"];
+        if (array_key_exists("RefererAuthConfig",$param) and $param["RefererAuthConfig"] !== null) {
+            $this->RefererAuthConfig = new RefererAuthConfig();
+            $this->RefererAuthConfig->deserialize($param["RefererAuthConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

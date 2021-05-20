@@ -14,30 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLogStorageStatistic返回参数结构体
+ * UpdateApply返回参数结构体
  *
- * @method integer getTotalSize() 获取总容量（单位：GB）
- * @method void setTotalSize(integer $TotalSize) 设置总容量（单位：GB）
- * @method integer getUsedSize() 获取已使用容量（单位：GB）
- * @method void setUsedSize(integer $UsedSize) 设置已使用容量（单位：GB）
+ * @method array getApplyResults() 获取已更新的申请单列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplyResults(array $ApplyResults) 设置已更新的申请单列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取更新数量
+ * @method void setTotalCount(integer $TotalCount) 设置更新数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLogStorageStatisticResponse extends AbstractModel
+class UpdateApplyResponse extends AbstractModel
 {
     /**
-     * @var integer 总容量（单位：GB）
+     * @var array 已更新的申请单列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TotalSize;
+    public $ApplyResults;
 
     /**
-     * @var integer 已使用容量（单位：GB）
+     * @var integer 更新数量
      */
-    public $UsedSize;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalSize 总容量（单位：GB）
-     * @param integer $UsedSize 已使用容量（单位：GB）
+     * @param array $ApplyResults 已更新的申请单列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 更新数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +66,17 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalSize",$param) and $param["TotalSize"] !== null) {
-            $this->TotalSize = $param["TotalSize"];
+        if (array_key_exists("ApplyResults",$param) and $param["ApplyResults"] !== null) {
+            $this->ApplyResults = [];
+            foreach ($param["ApplyResults"] as $key => $value){
+                $obj = new ApplyResult();
+                $obj->deserialize($value);
+                array_push($this->ApplyResults, $obj);
+            }
         }
 
-        if (array_key_exists("UsedSize",$param) and $param["UsedSize"] !== null) {
-            $this->UsedSize = $param["UsedSize"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

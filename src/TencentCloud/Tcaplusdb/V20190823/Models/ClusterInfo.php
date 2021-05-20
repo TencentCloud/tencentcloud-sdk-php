@@ -82,6 +82,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyList(array $ProxyList) 设置独占proxy机器信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCensorship() 获取是否开启审核 0-不开启 1-开启
+ * @method void setCensorship(integer $Censorship) 设置是否开启审核 0-不开启 1-开启
+ * @method array getDbaUins() 获取审批人uin列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbaUins(array $DbaUins) 设置审批人uin列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInfo extends AbstractModel
 {
@@ -205,6 +211,17 @@ class ClusterInfo extends AbstractModel
     public $ProxyList;
 
     /**
+     * @var integer 是否开启审核 0-不开启 1-开启
+     */
+    public $Censorship;
+
+    /**
+     * @var array 审批人uin列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbaUins;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterId 集群ID
      * @param string $Region 集群所在地域
@@ -235,6 +252,9 @@ class ClusterInfo extends AbstractModel
      * @param array $ServerList 独占server机器信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProxyList 独占proxy机器信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Censorship 是否开启审核 0-不开启 1-开启
+     * @param array $DbaUins 审批人uin列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -346,6 +366,14 @@ class ClusterInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ProxyList, $obj);
             }
+        }
+
+        if (array_key_exists("Censorship",$param) and $param["Censorship"] !== null) {
+            $this->Censorship = $param["Censorship"];
+        }
+
+        if (array_key_exists("DbaUins",$param) and $param["DbaUins"] !== null) {
+            $this->DbaUins = $param["DbaUins"];
         }
     }
 }

@@ -18,20 +18,26 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDBInstances请求参数结构体
+ * CreateInstances请求参数结构体
  *
  * @method string getSpecCode() 获取售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
  * @method void setSpecCode(string $SpecCode) 设置售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
- * @method string getDBVersion() 获取PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。
- * @method void setDBVersion(string $DBVersion) 设置PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。
+ * @method string getDBVersion() 获取PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
+ * @method void setDBVersion(string $DBVersion) 设置PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
  * @method integer getStorage() 获取实例容量大小，单位：GB。
  * @method void setStorage(integer $Storage) 设置实例容量大小，单位：GB。
- * @method integer getInstanceCount() 获取一次性购买的实例数量。取值1-100
- * @method void setInstanceCount(integer $InstanceCount) 设置一次性购买的实例数量。取值1-100
+ * @method integer getInstanceCount() 获取一次性购买的实例数量。取值1-10。
+ * @method void setInstanceCount(integer $InstanceCount) 设置一次性购买的实例数量。取值1-10。
  * @method integer getPeriod() 获取购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
  * @method void setPeriod(integer $Period) 设置购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
  * @method string getZone() 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
  * @method void setZone(string $Zone) 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+ * @method string getCharset() 获取实例字符集，目前只支持：UTF8、LATIN1。
+ * @method void setCharset(string $Charset) 设置实例字符集，目前只支持：UTF8、LATIN1。
+ * @method string getAdminName() 获取实例根账号用户名。
+ * @method void setAdminName(string $AdminName) 设置实例根账号用户名。
+ * @method string getAdminPassword() 获取实例根账号用户名对应的密码。
+ * @method void setAdminPassword(string $AdminPassword) 设置实例根账号用户名对应的密码。
  * @method integer getProjectId() 获取项目ID。
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
  * @method string getInstanceChargeType() 获取实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
@@ -42,22 +48,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
  * @method string getVpcId() 获取私有网络ID。
  * @method void setVpcId(string $VpcId) 设置私有网络ID。
- * @method string getSubnetId() 获取私有网络子网ID。
- * @method void setSubnetId(string $SubnetId) 设置私有网络子网ID。
- * @method integer getAutoRenewFlag() 获取续费标记：0-正常续费（默认）；1-自动续费；
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：0-正常续费（默认）；1-自动续费；
- * @method integer getActivityId() 获取活动ID
- * @method void setActivityId(integer $ActivityId) 设置活动ID
- * @method string getName() 获取实例名(后续支持)
- * @method void setName(string $Name) 设置实例名(后续支持)
- * @method integer getNeedSupportIpv6() 获取是否需要支持Ipv6，1：是，0：否
- * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) 设置是否需要支持Ipv6，1：是，0：否
- * @method array getTagList() 获取实例需要绑定的Tag信息，默认为空
- * @method void setTagList(array $TagList) 设置实例需要绑定的Tag信息，默认为空
- * @method array getSecurityGroupIds() 获取安全组id
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组id
+ * @method string getSubnetId() 获取已配置的私有网络中的子网ID。
+ * @method void setSubnetId(string $SubnetId) 设置已配置的私有网络中的子网ID。
+ * @method integer getAutoRenewFlag() 获取续费标记：0-正常续费（默认）；1-自动续费。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置续费标记：0-正常续费（默认）；1-自动续费。
+ * @method integer getActivityId() 获取活动ID。
+ * @method void setActivityId(integer $ActivityId) 设置活动ID。
+ * @method string getName() 获取实例名。
+ * @method void setName(string $Name) 设置实例名。
+ * @method integer getNeedSupportIpv6() 获取是否需要支持Ipv6，1：是，0：否。
+ * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) 设置是否需要支持Ipv6，1：是，0：否。
+ * @method array getTagList() 获取实例需要绑定的Tag信息，默认为空。
+ * @method void setTagList(array $TagList) 设置实例需要绑定的Tag信息，默认为空。
+ * @method array getSecurityGroupIds() 获取安全组ID。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID。
  */
-class CreateDBInstancesRequest extends AbstractModel
+class CreateInstancesRequest extends AbstractModel
 {
     /**
      * @var string 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
@@ -65,7 +71,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $SpecCode;
 
     /**
-     * @var string PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。
+     * @var string PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
      */
     public $DBVersion;
 
@@ -75,7 +81,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer 一次性购买的实例数量。取值1-100
+     * @var integer 一次性购买的实例数量。取值1-10。
      */
     public $InstanceCount;
 
@@ -88,6 +94,21 @@ class CreateDBInstancesRequest extends AbstractModel
      * @var string 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      */
     public $Zone;
+
+    /**
+     * @var string 实例字符集，目前只支持：UTF8、LATIN1。
+     */
+    public $Charset;
+
+    /**
+     * @var string 实例根账号用户名。
+     */
+    public $AdminName;
+
+    /**
+     * @var string 实例根账号用户名对应的密码。
+     */
+    public $AdminPassword;
 
     /**
      * @var integer 项目ID。
@@ -115,59 +136,62 @@ class CreateDBInstancesRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string 私有网络子网ID。
+     * @var string 已配置的私有网络中的子网ID。
      */
     public $SubnetId;
 
     /**
-     * @var integer 续费标记：0-正常续费（默认）；1-自动续费；
+     * @var integer 续费标记：0-正常续费（默认）；1-自动续费。
      */
     public $AutoRenewFlag;
 
     /**
-     * @var integer 活动ID
+     * @var integer 活动ID。
      */
     public $ActivityId;
 
     /**
-     * @var string 实例名(后续支持)
+     * @var string 实例名。
      */
     public $Name;
 
     /**
-     * @var integer 是否需要支持Ipv6，1：是，0：否
+     * @var integer 是否需要支持Ipv6，1：是，0：否。
      */
     public $NeedSupportIpv6;
 
     /**
-     * @var array 实例需要绑定的Tag信息，默认为空
+     * @var array 实例需要绑定的Tag信息，默认为空。
      */
     public $TagList;
 
     /**
-     * @var array 安全组id
+     * @var array 安全组ID。
      */
     public $SecurityGroupIds;
 
     /**
      * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
-     * @param string $DBVersion PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。
+     * @param string $DBVersion PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
      * @param integer $Storage 实例容量大小，单位：GB。
-     * @param integer $InstanceCount 一次性购买的实例数量。取值1-100
+     * @param integer $InstanceCount 一次性购买的实例数量。取值1-10。
      * @param integer $Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
      * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * @param string $Charset 实例字符集，目前只支持：UTF8、LATIN1。
+     * @param string $AdminName 实例根账号用户名。
+     * @param string $AdminPassword 实例根账号用户名对应的密码。
      * @param integer $ProjectId 项目ID。
      * @param string $InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
      * @param integer $AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      * @param string $VpcId 私有网络ID。
-     * @param string $SubnetId 私有网络子网ID。
-     * @param integer $AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
-     * @param integer $ActivityId 活动ID
-     * @param string $Name 实例名(后续支持)
-     * @param integer $NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
-     * @param array $TagList 实例需要绑定的Tag信息，默认为空
-     * @param array $SecurityGroupIds 安全组id
+     * @param string $SubnetId 已配置的私有网络中的子网ID。
+     * @param integer $AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费。
+     * @param integer $ActivityId 活动ID。
+     * @param string $Name 实例名。
+     * @param integer $NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否。
+     * @param array $TagList 实例需要绑定的Tag信息，默认为空。
+     * @param array $SecurityGroupIds 安全组ID。
      */
     function __construct()
     {
@@ -204,6 +228,18 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("Charset",$param) and $param["Charset"] !== null) {
+            $this->Charset = $param["Charset"];
+        }
+
+        if (array_key_exists("AdminName",$param) and $param["AdminName"] !== null) {
+            $this->AdminName = $param["AdminName"];
+        }
+
+        if (array_key_exists("AdminPassword",$param) and $param["AdminPassword"] !== null) {
+            $this->AdminPassword = $param["AdminPassword"];
         }
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {

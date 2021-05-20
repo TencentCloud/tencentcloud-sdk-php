@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskIds(array $TaskIds) 设置任务ID列表，对于创建多任务的接口有效
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取腾讯云申请审核单Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置腾讯云申请审核单Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableResultNew extends AbstractModel
 {
@@ -104,6 +108,12 @@ class TableResultNew extends AbstractModel
     public $TaskIds;
 
     /**
+     * @var string 腾讯云申请审核单Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
      * @param string $TableInstanceId 表格实例ID，形如：tcaplus-3be64cbb
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 任务ID，对于创建单任务的接口有效
@@ -119,6 +129,8 @@ class TableResultNew extends AbstractModel
      * @param ErrorInfo $Error 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TaskIds 任务ID列表，对于创建多任务的接口有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId 腾讯云申请审核单Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -165,6 +177,10 @@ class TableResultNew extends AbstractModel
 
         if (array_key_exists("TaskIds",$param) and $param["TaskIds"] !== null) {
             $this->TaskIds = $param["TaskIds"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }

@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLogStorageStatistic返回参数结构体
+ * MergeTablesData返回参数结构体
  *
- * @method integer getTotalSize() 获取总容量（单位：GB）
- * @method void setTotalSize(integer $TotalSize) 设置总容量（单位：GB）
- * @method integer getUsedSize() 获取已使用容量（单位：GB）
- * @method void setUsedSize(integer $UsedSize) 设置已使用容量（单位：GB）
+ * @method array getResults() 获取合服结果集
+ * @method void setResults(array $Results) 设置合服结果集
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLogStorageStatisticResponse extends AbstractModel
+class MergeTablesDataResponse extends AbstractModel
 {
     /**
-     * @var integer 总容量（单位：GB）
+     * @var array 合服结果集
      */
-    public $TotalSize;
-
-    /**
-     * @var integer 已使用容量（单位：GB）
-     */
-    public $UsedSize;
+    public $Results;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalSize 总容量（单位：GB）
-     * @param integer $UsedSize 已使用容量（单位：GB）
+     * @param array $Results 合服结果集
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,13 @@ class DescribeLogStorageStatisticResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalSize",$param) and $param["TotalSize"] !== null) {
-            $this->TotalSize = $param["TotalSize"];
-        }
-
-        if (array_key_exists("UsedSize",$param) and $param["UsedSize"] !== null) {
-            $this->UsedSize = $param["UsedSize"];
+        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
+            $this->Results = [];
+            foreach ($param["Results"] as $key => $value){
+                $obj = new MergeTableResult();
+                $obj->deserialize($value);
+                array_push($this->Results, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

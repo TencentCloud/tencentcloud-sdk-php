@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceInstanceId(string $SourceInstanceId) 设置弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
  * @method string getDestinationInstanceId() 获取待迁移的目的CVM实例ID。
  * @method void setDestinationInstanceId(string $DestinationInstanceId) 设置待迁移的目的CVM实例ID。
+ * @method integer getAttachType() 获取网卡绑定类型：0 标准型 1 扩展型。
+ * @method void setAttachType(integer $AttachType) 设置网卡绑定类型：0 标准型 1 扩展型。
  */
 class MigrateNetworkInterfaceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
     public $DestinationInstanceId;
 
     /**
+     * @var integer 网卡绑定类型：0 标准型 1 扩展型。
+     */
+    public $AttachType;
+
+    /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param string $SourceInstanceId 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
      * @param string $DestinationInstanceId 待迁移的目的CVM实例ID。
+     * @param integer $AttachType 网卡绑定类型：0 标准型 1 扩展型。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
 
         if (array_key_exists("DestinationInstanceId",$param) and $param["DestinationInstanceId"] !== null) {
             $this->DestinationInstanceId = $param["DestinationInstanceId"];
+        }
+
+        if (array_key_exists("AttachType",$param) and $param["AttachType"] !== null) {
+            $this->AttachType = $param["AttachType"];
         }
     }
 }

@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceVolumes(array $ServiceVolumes) 设置服务磁盘挂载
  * @method integer getIsCreateJnsGw() 获取是否创建JnsGw 0未传默认创建 1创建 2不创建
  * @method void setIsCreateJnsGw(integer $IsCreateJnsGw) 设置是否创建JnsGw 0未传默认创建 1创建 2不创建
+ * @method array getServiceVolumeMounts() 获取数据卷挂载参数
+ * @method void setServiceVolumeMounts(array $ServiceVolumeMounts) 设置数据卷挂载参数
  */
 class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -283,6 +285,11 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
     public $IsCreateJnsGw;
 
     /**
+     * @var array 数据卷挂载参数
+     */
+    public $ServiceVolumeMounts;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $UploadType 枚举（package/repository/image)
      * @param integer $FlowRatio 流量占比
@@ -320,6 +327,7 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param CloudBaseSecurityContext $Security 安全特性
      * @param array $ServiceVolumes 服务磁盘挂载
      * @param integer $IsCreateJnsGw 是否创建JnsGw 0未传默认创建 1创建 2不创建
+     * @param array $ServiceVolumeMounts 数据卷挂载参数
      */
     function __construct()
     {
@@ -500,6 +508,15 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 
         if (array_key_exists("IsCreateJnsGw",$param) and $param["IsCreateJnsGw"] !== null) {
             $this->IsCreateJnsGw = $param["IsCreateJnsGw"];
+        }
+
+        if (array_key_exists("ServiceVolumeMounts",$param) and $param["ServiceVolumeMounts"] !== null) {
+            $this->ServiceVolumeMounts = [];
+            foreach ($param["ServiceVolumeMounts"] as $key => $value){
+                $obj = new CloudBaseRunServiceVolumeMount();
+                $obj->deserialize($value);
+                array_push($this->ServiceVolumeMounts, $obj);
+            }
         }
     }
 }

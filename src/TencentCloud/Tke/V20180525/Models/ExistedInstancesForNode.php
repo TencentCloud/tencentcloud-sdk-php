@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExistedInstancesPara(ExistedInstancesPara $ExistedInstancesPara) 设置已存在实例的重装参数
  * @method InstanceAdvancedSettings getInstanceAdvancedSettingsOverride() 获取节点高级设置，会覆盖集群级别设置的InstanceAdvancedSettings（当前只对节点自定义参数ExtraArgs生效）
  * @method void setInstanceAdvancedSettingsOverride(InstanceAdvancedSettings $InstanceAdvancedSettingsOverride) 设置节点高级设置，会覆盖集群级别设置的InstanceAdvancedSettings（当前只对节点自定义参数ExtraArgs生效）
+ * @method array getDesiredPodNumbers() 获取自定义模式集群，可指定每个节点的pod数量
+ * @method void setDesiredPodNumbers(array $DesiredPodNumbers) 设置自定义模式集群，可指定每个节点的pod数量
  */
 class ExistedInstancesForNode extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ExistedInstancesForNode extends AbstractModel
     public $InstanceAdvancedSettingsOverride;
 
     /**
+     * @var array 自定义模式集群，可指定每个节点的pod数量
+     */
+    public $DesiredPodNumbers;
+
+    /**
      * @param string $NodeRole 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。
      * @param ExistedInstancesPara $ExistedInstancesPara 已存在实例的重装参数
      * @param InstanceAdvancedSettings $InstanceAdvancedSettingsOverride 节点高级设置，会覆盖集群级别设置的InstanceAdvancedSettings（当前只对节点自定义参数ExtraArgs生效）
+     * @param array $DesiredPodNumbers 自定义模式集群，可指定每个节点的pod数量
      */
     function __construct()
     {
@@ -74,6 +82,10 @@ class ExistedInstancesForNode extends AbstractModel
         if (array_key_exists("InstanceAdvancedSettingsOverride",$param) and $param["InstanceAdvancedSettingsOverride"] !== null) {
             $this->InstanceAdvancedSettingsOverride = new InstanceAdvancedSettings();
             $this->InstanceAdvancedSettingsOverride->deserialize($param["InstanceAdvancedSettingsOverride"]);
+        }
+
+        if (array_key_exists("DesiredPodNumbers",$param) and $param["DesiredPodNumbers"] !== null) {
+            $this->DesiredPodNumbers = $param["DesiredPodNumbers"];
         }
     }
 }

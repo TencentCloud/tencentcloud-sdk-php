@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置环境所属地域
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvInfo extends AbstractModel
 {
@@ -195,6 +199,12 @@ class EnvInfo extends AbstractModel
     public $Region;
 
     /**
+     * @var array 环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvId 账户下该环境唯一标识
      * @param string $Source 环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
@@ -227,6 +237,8 @@ class EnvInfo extends AbstractModel
      * @param boolean $IsDefault 是否为默认环境
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 环境所属地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 环境标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -337,6 +349,15 @@ class EnvInfo extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

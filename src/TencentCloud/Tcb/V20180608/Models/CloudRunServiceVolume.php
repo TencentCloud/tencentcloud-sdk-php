@@ -32,9 +32,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretName(string $SecretName) 设置secret名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnableEmptyDirVolume() 获取是否开启临时目录
+ * @method boolean getEnableEmptyDirVolume() 获取是否开启临时目录逐步废弃，请使用 EmptyDir
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableEmptyDirVolume(boolean $EnableEmptyDirVolume) 设置是否开启临时目录
+ * @method void setEnableEmptyDirVolume(boolean $EnableEmptyDirVolume) 设置是否开启临时目录逐步废弃，请使用 EmptyDir
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CloudBaseRunEmptyDirVolumeSource getEmptyDir() 获取emptydir数据卷详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmptyDir(CloudBaseRunEmptyDirVolumeSource $EmptyDir) 设置emptydir数据卷详细信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudRunServiceVolume extends AbstractModel
@@ -58,10 +62,16 @@ class CloudRunServiceVolume extends AbstractModel
     public $SecretName;
 
     /**
-     * @var boolean 是否开启临时目录
+     * @var boolean 是否开启临时目录逐步废弃，请使用 EmptyDir
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableEmptyDirVolume;
+
+    /**
+     * @var CloudBaseRunEmptyDirVolumeSource emptydir数据卷详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EmptyDir;
 
     /**
      * @param string $Name 名称
@@ -70,7 +80,9 @@ class CloudRunServiceVolume extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretName secret名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $EnableEmptyDirVolume 是否开启临时目录
+     * @param boolean $EnableEmptyDirVolume 是否开启临时目录逐步废弃，请使用 EmptyDir
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudBaseRunEmptyDirVolumeSource $EmptyDir emptydir数据卷详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -101,6 +113,11 @@ class CloudRunServiceVolume extends AbstractModel
 
         if (array_key_exists("EnableEmptyDirVolume",$param) and $param["EnableEmptyDirVolume"] !== null) {
             $this->EnableEmptyDirVolume = $param["EnableEmptyDirVolume"];
+        }
+
+        if (array_key_exists("EmptyDir",$param) and $param["EmptyDir"] !== null) {
+            $this->EmptyDir = new CloudBaseRunEmptyDirVolumeSource();
+            $this->EmptyDir->deserialize($param["EmptyDir"]);
         }
     }
 }

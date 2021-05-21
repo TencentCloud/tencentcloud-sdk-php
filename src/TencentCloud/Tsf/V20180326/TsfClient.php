@@ -131,6 +131,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeSimpleNamespacesResponse DescribeSimpleNamespaces(Models\DescribeSimpleNamespacesRequest $req) 查询简单命名空间列表 
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 查询任务详情
  * @method Models\DescribeTaskLastStatusResponse DescribeTaskLastStatus(Models\DescribeTaskLastStatusRequest $req) 查询任务最近一次执行状态
+ * @method Models\DescribeTaskRecordsResponse DescribeTaskRecords(Models\DescribeTaskRecordsRequest $req) 翻页查询任务列表
  * @method Models\DescribeUnitApiUseDetailResponse DescribeUnitApiUseDetail(Models\DescribeUnitApiUseDetailRequest $req) 查询网关API监控明细数据（仅单元化网关），非单元化网关使用DescribeApiUseDetail
  * @method Models\DescribeUnitNamespacesResponse DescribeUnitNamespaces(Models\DescribeUnitNamespacesRequest $req) 查询单元化命名空间列表
  * @method Models\DescribeUnitRuleResponse DescribeUnitRule(Models\DescribeUnitRuleRequest $req) 查询单元化规则详情

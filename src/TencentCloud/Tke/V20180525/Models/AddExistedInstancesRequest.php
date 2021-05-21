@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodePool(NodePoolOption $NodePool) 设置节点池选项
  * @method array getSkipValidateOptions() 获取校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
  * @method void setSkipValidateOptions(array $SkipValidateOptions) 设置校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+ * @method array getInstanceAdvancedSettingsOverrides() 获取参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
+
+参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
+ * @method void setInstanceAdvancedSettingsOverrides(array $InstanceAdvancedSettingsOverrides) 设置参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
+
+参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
  */
 class AddExistedInstancesRequest extends AbstractModel
 {
@@ -87,6 +93,13 @@ class AddExistedInstancesRequest extends AbstractModel
     public $SkipValidateOptions;
 
     /**
+     * @var array 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
+
+参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
+     */
+    public $InstanceAdvancedSettingsOverrides;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIds 实例列表，不支持竞价实例
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息(默认值)
@@ -96,6 +109,9 @@ class AddExistedInstancesRequest extends AbstractModel
      * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
      * @param NodePoolOption $NodePool 节点池选项
      * @param array $SkipValidateOptions 校验规则相关选项，可配置跳过某些校验规则。目前支持GlobalRouteCIDRCheck（跳过GlobalRouter的相关校验），VpcCniCIDRCheck（跳过VpcCni相关校验）
+     * @param array $InstanceAdvancedSettingsOverrides 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
+
+参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
      */
     function __construct()
     {
@@ -148,6 +164,15 @@ class AddExistedInstancesRequest extends AbstractModel
 
         if (array_key_exists("SkipValidateOptions",$param) and $param["SkipValidateOptions"] !== null) {
             $this->SkipValidateOptions = $param["SkipValidateOptions"];
+        }
+
+        if (array_key_exists("InstanceAdvancedSettingsOverrides",$param) and $param["InstanceAdvancedSettingsOverrides"] !== null) {
+            $this->InstanceAdvancedSettingsOverrides = [];
+            foreach ($param["InstanceAdvancedSettingsOverrides"] as $key => $value){
+                $obj = new InstanceAdvancedSettings();
+                $obj->deserialize($value);
+                array_push($this->InstanceAdvancedSettingsOverrides, $obj);
+            }
         }
     }
 }

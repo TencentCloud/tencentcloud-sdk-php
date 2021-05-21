@@ -24,8 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置创建实例的可用区。
  * @method integer getInstanceCount() 获取在当前可用区欲创建的实例数目。
  * @method void setInstanceCount(integer $InstanceCount) 设置在当前可用区欲创建的实例数目。
- * @method string getISP() 获取运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。
- * @method void setISP(string $ISP) 设置运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。
+ * @method string getISP() 获取运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
+ * @method void setISP(string $ISP) 设置运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
  * @method string getVpcId() 获取指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
  * @method void setVpcId(string $VpcId) 设置指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
  * @method string getSubnetId() 获取指定子网编号，SubnetId与VpcId必须同时指定或不指定
@@ -48,7 +56,11 @@ class ZoneInstanceCountISP extends AbstractModel
     public $InstanceCount;
 
     /**
-     * @var string 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。
+     * @var string 运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
      */
     public $ISP;
 
@@ -75,7 +87,11 @@ class ZoneInstanceCountISP extends AbstractModel
     /**
      * @param string $Zone 创建实例的可用区。
      * @param integer $InstanceCount 在当前可用区欲创建的实例数目。
-     * @param string $ISP 运营商，CTCC电信，CUCC联通，CMCC移动，多个运营商用英文分号连接";"。多运营商需要开通白名单，请直接联系腾讯云客服。
+     * @param string $ISP 运营商如下：
+CTCC：中国电信
+CUCC：中国联通
+CMCC：中国移动
+多个运营商用英文分号连接";"，例如："CMCC;CUCC;CTCC"。多运营商需要开通白名单，请直接联系腾讯云客服。
      * @param string $VpcId 指定私有网络编号，SubnetId与VpcId必须同时指定或不指定
      * @param string $SubnetId 指定子网编号，SubnetId与VpcId必须同时指定或不指定
      * @param array $PrivateIpAddresses 指定主网卡内网IP。条件：SubnetId与VpcId必须同时指定，并且IP数量与InstanceCount相同，多IP主机副网卡内网IP在相同子网内通过DHCP获取。

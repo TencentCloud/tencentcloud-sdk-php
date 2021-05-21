@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method string getInstanceId() 获取CVM实例ID。形如：ins-r8hr2upy。
  * @method void setInstanceId(string $InstanceId) 设置CVM实例ID。形如：ins-r8hr2upy。
+ * @method integer getAttachType() 获取网卡的挂载类型：0 标准型，1扩展型，默认值0。
+ * @method void setAttachType(integer $AttachType) 设置网卡的挂载类型：0 标准型，1扩展型，默认值0。
  */
 class AttachNetworkInterfaceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AttachNetworkInterfaceRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 网卡的挂载类型：0 标准型，1扩展型，默认值0。
+     */
+    public $AttachType;
+
+    /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param string $InstanceId CVM实例ID。形如：ins-r8hr2upy。
+     * @param integer $AttachType 网卡的挂载类型：0 标准型，1扩展型，默认值0。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AttachNetworkInterfaceRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AttachType",$param) and $param["AttachType"] !== null) {
+            $this->AttachType = $param["AttachType"];
         }
     }
 }

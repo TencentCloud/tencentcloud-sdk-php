@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetChargeType(string $InternetChargeType) 设置弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagSet() 获取弹性公网IP关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSet(array $TagSet) 设置弹性公网IP关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Address extends AbstractModel
 {
@@ -156,6 +160,12 @@ class Address extends AbstractModel
     public $InternetChargeType;
 
     /**
+     * @var array 弹性公网IP关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSet;
+
+    /**
      * @param string $AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      * @param string $AddressName `EIP`名称。
      * @param string $AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
@@ -175,6 +185,8 @@ class Address extends AbstractModel
      * @param integer $Bandwidth 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InternetChargeType 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagSet 弹性公网IP关联的标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -261,6 +273,15 @@ class Address extends AbstractModel
 
         if (array_key_exists("InternetChargeType",$param) and $param["InternetChargeType"] !== null) {
             $this->InternetChargeType = $param["InternetChargeType"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

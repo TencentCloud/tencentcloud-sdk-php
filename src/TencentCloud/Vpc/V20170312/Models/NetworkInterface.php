@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置网卡所关联的CDC实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAttachType() 获取弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttachType(integer $AttachType) 设置弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkInterface extends AbstractModel
 {
@@ -174,6 +178,12 @@ class NetworkInterface extends AbstractModel
     public $CdcId;
 
     /**
+     * @var integer 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttachType;
+
+    /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      * @param string $NetworkInterfaceName 弹性网卡名称。
      * @param string $NetworkInterfaceDescription 弹性网卡描述。
@@ -199,6 +209,8 @@ class NetworkInterface extends AbstractModel
      * @param string $Business 网卡绑定的子机类型：cvm，eks。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcId 网卡所关联的CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AttachType 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -300,6 +312,10 @@ class NetworkInterface extends AbstractModel
 
         if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
             $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("AttachType",$param) and $param["AttachType"] !== null) {
+            $this->AttachType = $param["AttachType"];
         }
     }
 }

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) 设置弹性网卡描述，可任意命名，但不得超过60个字符。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method integer getAttachType() 获取绑定类型：0 标准型 1 扩展型。
+ * @method void setAttachType(integer $AttachType) 设置绑定类型：0 标准型 1 扩展型。
  */
 class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 绑定类型：0 标准型 1 扩展型。
+     */
+    public $AttachType;
+
+    /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
      * @param string $SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
@@ -96,6 +103,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
      * @param array $SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
      * @param string $NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param integer $AttachType 绑定类型：0 标准型 1 扩展型。
      */
     function __construct()
     {
@@ -154,6 +162,10 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AttachType",$param) and $param["AttachType"] !== null) {
+            $this->AttachType = $param["AttachType"];
         }
     }
 }

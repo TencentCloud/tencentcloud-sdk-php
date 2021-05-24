@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意，不传该参数表示清除该权限。
  * @method void setColumnPrivileges(array $ColumnPrivileges) 设置数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
 注意，不传该参数表示清除该权限。
+ * @method string getModifyAction() 获取该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+ * @method void setModifyAction(string $ModifyAction) 设置该参数不为空时，为批量修改权限。可选值为：grant，revoke。
  */
 class ModifyAccountPrivilegesRequest extends AbstractModel
 {
@@ -78,6 +80,11 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
     public $ColumnPrivileges;
 
     /**
+     * @var string 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+     */
+    public $ModifyAction;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $Accounts 数据库的账号，包括用户名和域名。
      * @param array $GlobalPrivileges 全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "PROCESS", "DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
@@ -88,6 +95,7 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
 注意，不传该参数表示清除该权限。
      * @param array $ColumnPrivileges 数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
 注意，不传该参数表示清除该权限。
+     * @param string $ModifyAction 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ColumnPrivileges, $obj);
             }
+        }
+
+        if (array_key_exists("ModifyAction",$param) and $param["ModifyAction"] !== null) {
+            $this->ModifyAction = $param["ModifyAction"];
         }
     }
 }

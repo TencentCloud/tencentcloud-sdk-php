@@ -104,6 +104,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>当 DestinationResource.Resource.Id 不存在时候且原始资源与目标资源归属相同，操作结果为重命名原始分类；</li>
 <li>当 DestinationResource.Resource.Id 存在时候，操作结果为产生新目录 /素材/视频/篮球/NBA</li>
 
+ * @method Models\ParseEventResponse ParseEvent(Models\ParseEventRequest $req) 该接口接受制作云回调给客户的事件内容，将其转化为对应的 EventContent 结构，请不要实际调用该接口，只需要将接收到的事件内容直接使用 JSON 解析到 EventContent  即可使用。
  * @method Models\RevokeResourceAuthorizationResponse RevokeResourceAuthorization(Models\RevokeResourceAuthorizationRequest $req)  资源所属实体对目标实体回收目标资源的相应权限，若原本没有相应权限则不产生变更。
  * @method Models\SearchMaterialResponse SearchMaterial(Models\SearchMaterialRequest $req) 根据检索条件搜索媒体，返回媒体的基本信息。
  */

@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置账号信息修改时间
  * @method string getModifyPasswordTime() 获取修改密码的时间
  * @method void setModifyPasswordTime(string $ModifyPasswordTime) 设置修改密码的时间
- * @method string getCreateTime() 获取账号的创建时间
- * @method void setCreateTime(string $CreateTime) 设置账号的创建时间
+ * @method string getCreateTime() 获取该值已废弃
+ * @method void setCreateTime(string $CreateTime) 设置该值已废弃
+ * @method integer getMaxUserConnections() 获取用户最大可用实例连接数
+ * @method void setMaxUserConnections(integer $MaxUserConnections) 设置用户最大可用实例连接数
  */
 class AccountInfo extends AbstractModel
 {
@@ -61,9 +63,14 @@ class AccountInfo extends AbstractModel
     public $ModifyPasswordTime;
 
     /**
-     * @var string 账号的创建时间
+     * @var string 该值已废弃
      */
     public $CreateTime;
+
+    /**
+     * @var integer 用户最大可用实例连接数
+     */
+    public $MaxUserConnections;
 
     /**
      * @param string $Notes 账号备注信息
@@ -71,7 +78,8 @@ class AccountInfo extends AbstractModel
      * @param string $User 账号的名称
      * @param string $ModifyTime 账号信息修改时间
      * @param string $ModifyPasswordTime 修改密码的时间
-     * @param string $CreateTime 账号的创建时间
+     * @param string $CreateTime 该值已废弃
+     * @param integer $MaxUserConnections 用户最大可用实例连接数
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class AccountInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

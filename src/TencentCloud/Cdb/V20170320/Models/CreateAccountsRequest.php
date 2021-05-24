@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置新账户的密码。
  * @method string getDescription() 获取备注信息。
  * @method void setDescription(string $Description) 设置备注信息。
+ * @method integer getMaxUserConnections() 获取新账户最大可用连接数。
+ * @method void setMaxUserConnections(integer $MaxUserConnections) 设置新账户最大可用连接数。
  */
 class CreateAccountsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateAccountsRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 新账户最大可用连接数。
+     */
+    public $MaxUserConnections;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $Accounts 云数据库账号。
      * @param string $Password 新账户的密码。
      * @param string $Description 备注信息。
+     * @param integer $MaxUserConnections 新账户最大可用连接数。
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateAccountsRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

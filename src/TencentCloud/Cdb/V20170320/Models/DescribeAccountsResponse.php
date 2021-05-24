@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的账号数量。
  * @method array getItems() 获取符合查询条件的账号详细信息。
  * @method void setItems(array $Items) 设置符合查询条件的账号详细信息。
+ * @method integer getMaxUserConnections() 获取用户可设置实例最大连接数。
+ * @method void setMaxUserConnections(integer $MaxUserConnections) 设置用户可设置实例最大连接数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeAccountsResponse extends AbstractModel
     public $Items;
 
     /**
+     * @var integer 用户可设置实例最大连接数。
+     */
+    public $MaxUserConnections;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeAccountsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 符合查询条件的账号数量。
      * @param array $Items 符合查询条件的账号详细信息。
+     * @param integer $MaxUserConnections 用户可设置实例最大连接数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeAccountsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

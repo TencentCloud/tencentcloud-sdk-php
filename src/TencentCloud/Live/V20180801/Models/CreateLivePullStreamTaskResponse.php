@@ -14,36 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tse\V20201207\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ManageConfig返回参数结构体
+ * CreateLivePullStreamTask返回参数结构体
  *
- * @method string getResult() 获取对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getOpResult() 获取操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOpResult(boolean $OpResult) 设置操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskId() 获取任务 Id 。
+ * @method void setTaskId(string $TaskId) 设置任务 Id 。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ManageConfigResponse extends AbstractModel
+class CreateLivePullStreamTaskResponse extends AbstractModel
 {
     /**
-     * @var string 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 任务 Id 。
      */
-    public $Result;
-
-    /**
-     * @var boolean 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $OpResult;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +38,7 @@ class ManageConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $OpResult 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskId 任务 Id 。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,12 +54,8 @@ class ManageConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
-        }
-
-        if (array_key_exists("OpResult",$param) and $param["OpResult"] !== null) {
-            $this->OpResult = $param["OpResult"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

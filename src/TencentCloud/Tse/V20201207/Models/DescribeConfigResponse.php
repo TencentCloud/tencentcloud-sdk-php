@@ -18,32 +18,40 @@ namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ManageConfig返回参数结构体
+ * DescribeConfig返回参数结构体
  *
- * @method string getResult() 获取对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getOpResult() 获取操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOpResult(boolean $OpResult) 设置操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKey() 获取配置项或路径key
+ * @method void setKey(string $Key) 设置配置项或路径key
+ * @method string getValue() 获取配置项的值
+ * @method void setValue(string $Value) 设置配置项的值
+ * @method boolean getIsDir() 获取当前key是否为路径
+ * @method void setIsDir(boolean $IsDir) 设置当前key是否为路径
+ * @method array getList() 获取当前key下的子路径
+ * @method void setList(array $List) 设置当前key下的子路径
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ManageConfigResponse extends AbstractModel
+class DescribeConfigResponse extends AbstractModel
 {
     /**
-     * @var string 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 配置项或路径key
      */
-    public $Result;
+    public $Key;
 
     /**
-     * @var boolean 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 配置项的值
      */
-    public $OpResult;
+    public $Value;
+
+    /**
+     * @var boolean 当前key是否为路径
+     */
+    public $IsDir;
+
+    /**
+     * @var array 当前key下的子路径
+     */
+    public $List;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +59,10 @@ class ManageConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 对配置中心操作配置之后的返回值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $OpResult 操作是否成功
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Key 配置项或路径key
+     * @param string $Value 配置项的值
+     * @param boolean $IsDir 当前key是否为路径
+     * @param array $List 当前key下的子路径
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,12 +78,20 @@ class ManageConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("OpResult",$param) and $param["OpResult"] !== null) {
-            $this->OpResult = $param["OpResult"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("IsDir",$param) and $param["IsDir"] !== null) {
+            $this->IsDir = $param["IsDir"];
+        }
+
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = $param["List"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -15,36 +15,36 @@
  * limitations under the License.
  */
 
-namespace TencentCloud\Tse\V20201207;
+namespace TencentCloud\Mrs\V20200910;
 
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Tse\V20201207\Models as Models;
+use TencentCloud\Mrs\V20200910\Models as Models;
 
 /**
- * @method Models\DescribeConfigResponse DescribeConfig(Models\DescribeConfigRequest $req) 查看配置项
- * @method Models\DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddress(Models\DescribeSREInstanceAccessAddressRequest $req) 查询微服务注册引擎实例访问地址
- * @method Models\DescribeSREInstancesResponse DescribeSREInstances(Models\DescribeSREInstancesRequest $req) 用于查询微服务注册中心实例列表
- * @method Models\ManageConfigResponse ManageConfig(Models\ManageConfigRequest $req) 管理配置
+ * @method Models\ImageToClassResponse ImageToClass(Models\ImageToClassRequest $req) 图片分类
+ * @method Models\ImageToObjectResponse ImageToObject(Models\ImageToObjectRequest $req) 图片转结构化对象
+ * @method Models\TextToClassResponse TextToClass(Models\TextToClassRequest $req) 文本分类
+ * @method Models\TextToObjectResponse TextToObject(Models\TextToObjectRequest $req) 文本转结构化对象
  */
 
-class TseClient extends AbstractClient
+class MrsClient extends AbstractClient
 {
     /**
      * @var string
      */
-    protected $endpoint = "tse.tencentcloudapi.com";
+    protected $endpoint = "mrs.tencentcloudapi.com";
 
     /**
      * @var string
      */
-    protected $service = "tse";
+    protected $service = "mrs";
 
     /**
      * @var string
      */
-    protected $version = "2020-12-07";
+    protected $version = "2020-09-10";
 
     /**
      * @param Credential $credential
@@ -59,7 +59,7 @@ class TseClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("tse")."\\"."V20201207\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud"."\\".ucfirst("mrs")."\\"."V20200910\\Models"."\\".ucfirst($action)."Response";
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

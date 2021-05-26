@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResources(Resource $Resources) 设置资源对
  * @method string getEventRegion() 获取事件地域
  * @method void setEventRegion(string $EventRegion) 设置事件地域
+ * @method string getLocation() 获取IP 归属地
+ * @method void setLocation(string $Location) 设置IP 归属地
  */
 class Event extends AbstractModel
 {
@@ -142,6 +144,11 @@ class Event extends AbstractModel
     public $EventRegion;
 
     /**
+     * @var string IP 归属地
+     */
+    public $Location;
+
+    /**
      * @param string $EventId 日志ID
      * @param string $Username 用户名
      * @param string $EventTime 事件时间
@@ -160,6 +167,7 @@ class Event extends AbstractModel
      * @param string $EventNameCn 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      * @param Resource $Resources 资源对
      * @param string $EventRegion 事件地域
+     * @param string $Location IP 归属地
      */
     function __construct()
     {
@@ -237,6 +245,10 @@ class Event extends AbstractModel
 
         if (array_key_exists("EventRegion",$param) and $param["EventRegion"] !== null) {
             $this->EventRegion = $param["EventRegion"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
         }
     }
 }

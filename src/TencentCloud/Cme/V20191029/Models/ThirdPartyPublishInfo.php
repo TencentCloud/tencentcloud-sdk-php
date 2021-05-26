@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeiboPublishInfo(WeiboPublishInfo $WeiboPublishInfo) 设置新浪微博发布信息，如果使用的发布通道为新浪微博时必填。
  * @method KuaishouPublishInfo getKuaishouPublishInfo() 获取快手发布信息，如果使用的发布通道为快手时必填。
  * @method void setKuaishouPublishInfo(KuaishouPublishInfo $KuaishouPublishInfo) 设置快手发布信息，如果使用的发布通道为快手时必填。
+ * @method CosPublishInputInfo getCosPublishInfo() 获取腾讯云对象存储发布信息， 如果使用的发布通道为腾讯云对象存储时必填。
+ * @method void setCosPublishInfo(CosPublishInputInfo $CosPublishInfo) 设置腾讯云对象存储发布信息， 如果使用的发布通道为腾讯云对象存储时必填。
  */
 class ThirdPartyPublishInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ThirdPartyPublishInfo extends AbstractModel
     public $KuaishouPublishInfo;
 
     /**
+     * @var CosPublishInputInfo 腾讯云对象存储发布信息， 如果使用的发布通道为腾讯云对象存储时必填。
+     */
+    public $CosPublishInfo;
+
+    /**
      * @param string $ChannelMaterialId 发布通道  ID。
      * @param PenguinMediaPlatformPublishInfo $PenguinMediaPlatformPublishInfo 企鹅号发布信息，如果使用的发布通道为企鹅号时必填。
      * @param WeiboPublishInfo $WeiboPublishInfo 新浪微博发布信息，如果使用的发布通道为新浪微博时必填。
      * @param KuaishouPublishInfo $KuaishouPublishInfo 快手发布信息，如果使用的发布通道为快手时必填。
+     * @param CosPublishInputInfo $CosPublishInfo 腾讯云对象存储发布信息， 如果使用的发布通道为腾讯云对象存储时必填。
      */
     function __construct()
     {
@@ -87,6 +95,11 @@ class ThirdPartyPublishInfo extends AbstractModel
         if (array_key_exists("KuaishouPublishInfo",$param) and $param["KuaishouPublishInfo"] !== null) {
             $this->KuaishouPublishInfo = new KuaishouPublishInfo();
             $this->KuaishouPublishInfo->deserialize($param["KuaishouPublishInfo"]);
+        }
+
+        if (array_key_exists("CosPublishInfo",$param) and $param["CosPublishInfo"] !== null) {
+            $this->CosPublishInfo = new CosPublishInputInfo();
+            $this->CosPublishInfo->deserialize($param["CosPublishInfo"]);
         }
     }
 }

@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEidToken请求参数结构体
  *
- * @method string getMerchantId() 获取EID商户id
- * @method void setMerchantId(string $MerchantId) 设置EID商户id
+ * @method string getMerchantId() 获取EID商户id，字段长度最长50位。
+ * @method void setMerchantId(string $MerchantId) 设置EID商户id，字段长度最长50位。
  * @method string getIdCard() 获取身份标识（未使用OCR服务时，必须传入）。
 规则：a-zA-Z0-9组合。最长长度32位。
  * @method void setIdCard(string $IdCard) 设置身份标识（未使用OCR服务时，必须传入）。
 规则：a-zA-Z0-9组合。最长长度32位。
  * @method string getName() 获取姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
  * @method void setName(string $Name) 设置姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
- * @method string getExtra() 获取透传字段，在获取验证结果时返回。
- * @method void setExtra(string $Extra) 设置透传字段，在获取验证结果时返回。
+ * @method string getExtra() 获取透传字段，在获取验证结果时返回。最长长度1024位。
+ * @method void setExtra(string $Extra) 设置透传字段，在获取验证结果时返回。最长长度1024位。
  * @method GetEidTokenConfig getConfig() 获取小程序模式配置，包括如何传入姓名身份证的配置。
  * @method void setConfig(GetEidTokenConfig $Config) 设置小程序模式配置，包括如何传入姓名身份证的配置。
  */
 class GetEidTokenRequest extends AbstractModel
 {
     /**
-     * @var string EID商户id
+     * @var string EID商户id，字段长度最长50位。
      */
     public $MerchantId;
 
@@ -52,7 +52,7 @@ class GetEidTokenRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 透传字段，在获取验证结果时返回。
+     * @var string 透传字段，在获取验证结果时返回。最长长度1024位。
      */
     public $Extra;
 
@@ -62,11 +62,11 @@ class GetEidTokenRequest extends AbstractModel
     public $Config;
 
     /**
-     * @param string $MerchantId EID商户id
+     * @param string $MerchantId EID商户id，字段长度最长50位。
      * @param string $IdCard 身份标识（未使用OCR服务时，必须传入）。
 规则：a-zA-Z0-9组合。最长长度32位。
      * @param string $Name 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
-     * @param string $Extra 透传字段，在获取验证结果时返回。
+     * @param string $Extra 透传字段，在获取验证结果时返回。最长长度1024位。
      * @param GetEidTokenConfig $Config 小程序模式配置，包括如何传入姓名身份证的配置。
      */
     function __construct()

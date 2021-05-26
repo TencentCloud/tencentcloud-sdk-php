@@ -47,7 +47,7 @@ use TencentCloud\Iai\V20200303\Models as Models;
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
  * @method Models\CompareMaskFaceResponse CompareMaskFace(Models\CompareMaskFaceRequest $req) 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
 
-戴口罩人脸比对接口可在查询照人脸戴口罩情况下使用，口罩遮挡程度最高可以遮挡鼻尖。
+戴口罩人脸比对接口可在人脸戴口罩情况下使用，口罩遮挡程度最高可以遮挡鼻尖。
 
 如图片人脸不存在戴口罩情况，建议使用人脸比对服务。
  * @method Models\CopyPersonResponse CopyPerson(Models\CopyPersonRequest $req) 将已存在于某人员库的人员复制到其他人员库，该人员的描述信息不会被复制。单个人员最多只能同时存在100个人员库中。

@@ -54,6 +54,8 @@ Config = {"Name":true,"Address":true}
  * @method void setAddress(string $Address) 设置用于入参是文本的场景，Address表示经营地址。Address为可选项，填写后会返回Address的校验结果。
  * @method integer getRegCapital() 获取1表示输出注册资本字段（单位：万元），其他值表示不输出。默认不输出。
  * @method void setRegCapital(integer $RegCapital) 设置1表示输出注册资本字段（单位：万元），其他值表示不输出。默认不输出。
+ * @method boolean getEstablishTime() 获取true表示展示成立/注册日期
+ * @method void setEstablishTime(boolean $EstablishTime) 设置true表示展示成立/注册日期
  */
 class VerifyBasicBizLicenseRequest extends AbstractModel
 {
@@ -103,6 +105,11 @@ Config = {"Name":true,"Address":true}
     public $RegCapital;
 
     /**
+     * @var boolean true表示展示成立/注册日期
+     */
+    public $EstablishTime;
+
+    /**
      * @param string $ImageBase64 用于入参是营业执照图片的场景，ImageBase64和ImageUrl必须提供一个，如果都提供，只使用 ImageUrl。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -120,6 +127,7 @@ Config = {"Name":true,"Address":true}
      * @param string $Name 用于入参是文本的场景，Name表示企业名称。Name为可选项，填写后会返回Name的校验结果。
      * @param string $Address 用于入参是文本的场景，Address表示经营地址。Address为可选项，填写后会返回Address的校验结果。
      * @param integer $RegCapital 1表示输出注册资本字段（单位：万元），其他值表示不输出。默认不输出。
+     * @param boolean $EstablishTime true表示展示成立/注册日期
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ Config = {"Name":true,"Address":true}
 
         if (array_key_exists("RegCapital",$param) and $param["RegCapital"] !== null) {
             $this->RegCapital = $param["RegCapital"];
+        }
+
+        if (array_key_exists("EstablishTime",$param) and $param["EstablishTime"] !== null) {
+            $this->EstablishTime = $param["EstablishTime"];
         }
     }
 }

@@ -33,11 +33,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefaultDataDiskSize() 获取默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
  * @method void setDefaultDataDiskSize(integer $DefaultDataDiskSize) 设置默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
  * @method boolean getCloseIpDirect() 获取是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
  * @method void setCloseIpDirect(boolean $CloseIpDirect) 设置是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
  * @method array getTagSpecification() 获取标签列表。
  * @method void setTagSpecification(array $TagSpecification) 设置标签列表。
  * @method array getSecurityGroups() 获取模块默认安全组列表
@@ -81,8 +81,8 @@ class CreateModuleRequest extends AbstractModel
 
     /**
      * @var boolean 是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
      */
     public $CloseIpDirect;
 
@@ -114,8 +114,8 @@ class CreateModuleRequest extends AbstractModel
      * @param integer $DefaultSystemDiskSize 默认系统盘大小，单位：G，默认大小为50G。范围不得超过系统盘上下限制，详看DescribeConfig。
      * @param integer $DefaultDataDiskSize 默认数据盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
      * @param boolean $CloseIpDirect 是否关闭IP直通。取值范围：
-1：表示关闭IP直通
-0：表示开通IP直通
+true：表示关闭IP直通
+false：表示开通IP直通
      * @param array $TagSpecification 标签列表。
      * @param array $SecurityGroups 模块默认安全组列表
      * @param integer $DefaultBandWidthIn 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。

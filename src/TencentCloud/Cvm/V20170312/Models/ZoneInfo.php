@@ -29,6 +29,7 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
 <li> ap-hongkong-2 </li>
+<li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
@@ -79,6 +80,7 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
 <li> ap-hongkong-2 </li>
+<li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
@@ -139,6 +141,7 @@ class ZoneInfo extends AbstractModel
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
 <li> ap-hongkong-2 </li>
+<li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>
@@ -208,6 +211,7 @@ class ZoneInfo extends AbstractModel
 <li> ap-chengdu-2 </li>
 <li> ap-hongkong-1 </li>
 <li> ap-hongkong-2 </li>
+<li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
 <li> ap-shenzhen-fsi-3 </li>

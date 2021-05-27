@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPortRange(string $PortRange) 设置端口范围
  * @method string getIpProtocol() 获取传输层协议。tcp，udp或ALL
  * @method void setIpProtocol(string $IpProtocol) 设置传输层协议。tcp，udp或ALL
+ * @method string getId() 获取安全组id代表的地址集合
+ * @method void setId(string $Id) 设置安全组id代表的地址集合
+ * @method string getAddressModule() 获取地址组id代表的地址集合
+ * @method void setAddressModule(string $AddressModule) 设置地址组id代表的地址集合
+ * @method string getServiceModule() 获取服务组id代表的协议和端口集合
+ * @method void setServiceModule(string $ServiceModule) 设置服务组id代表的协议和端口集合
+ * @method string getDesc() 获取描述
+ * @method void setDesc(string $Desc) 设置描述
  */
 class SecurityGroupBound extends AbstractModel
 {
@@ -52,10 +60,34 @@ class SecurityGroupBound extends AbstractModel
     public $IpProtocol;
 
     /**
+     * @var string 安全组id代表的地址集合
+     */
+    public $Id;
+
+    /**
+     * @var string 地址组id代表的地址集合
+     */
+    public $AddressModule;
+
+    /**
+     * @var string 服务组id代表的协议和端口集合
+     */
+    public $ServiceModule;
+
+    /**
+     * @var string 描述
+     */
+    public $Desc;
+
+    /**
      * @param string $Action 执行规则。ACCEPT或DROP
      * @param string $CidrIp ip段。
      * @param string $PortRange 端口范围
      * @param string $IpProtocol 传输层协议。tcp，udp或ALL
+     * @param string $Id 安全组id代表的地址集合
+     * @param string $AddressModule 地址组id代表的地址集合
+     * @param string $ServiceModule 服务组id代表的协议和端口集合
+     * @param string $Desc 描述
      */
     function __construct()
     {
@@ -84,6 +116,22 @@ class SecurityGroupBound extends AbstractModel
 
         if (array_key_exists("IpProtocol",$param) and $param["IpProtocol"] !== null) {
             $this->IpProtocol = $param["IpProtocol"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("AddressModule",$param) and $param["AddressModule"] !== null) {
+            $this->AddressModule = $param["AddressModule"];
+        }
+
+        if (array_key_exists("ServiceModule",$param) and $param["ServiceModule"] !== null) {
+            $this->ServiceModule = $param["ServiceModule"];
+        }
+
+        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
+            $this->Desc = $param["Desc"];
         }
     }
 }

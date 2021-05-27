@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFeatureIdList(array $FeatureIdList) 设置镜像特征ID列表
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取实例额外需要设置参数信息
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置实例额外需要设置参数信息
- * @method array getSecurityGroupIds() 获取部署组ID
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置部署组ID
+ * @method array getSecurityGroupIds() 获取安全组 ID 列表
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组 ID 列表
  */
 class AddClusterInstancesRequest extends AbstractModel
 {
@@ -103,7 +103,7 @@ class AddClusterInstancesRequest extends AbstractModel
     public $InstanceAdvancedSettings;
 
     /**
-     * @var array 部署组ID
+     * @var array 安全组 ID 列表
      */
     public $SecurityGroupIds;
 
@@ -119,7 +119,7 @@ class AddClusterInstancesRequest extends AbstractModel
      * @param string $OsCustomizeType 镜像定制类型
      * @param array $FeatureIdList 镜像特征ID列表
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息
-     * @param array $SecurityGroupIds 部署组ID
+     * @param array $SecurityGroupIds 安全组 ID 列表
      */
     function __construct()
     {

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfrequentStorage(integer $InfrequentStorage) 设置当前低频存储量，单位是字节。
  * @method integer getStandardStorage() 获取当前标准存储量，单位是字节。
  * @method void setStandardStorage(integer $StandardStorage) 设置当前标准存储量，单位是字节。
+ * @method integer getArchiveStorage() 获取当前归档存储量，单位是字节。
+ * @method void setArchiveStorage(integer $ArchiveStorage) 设置当前归档存储量，单位是字节。
+ * @method integer getDeepArchiveStorage() 获取当前深度归档存储量，单位是字节。
+ * @method void setDeepArchiveStorage(integer $DeepArchiveStorage) 设置当前深度归档存储量，单位是字节。
  */
 class StorageStatData extends AbstractModel
 {
@@ -58,12 +62,24 @@ class StorageStatData extends AbstractModel
     public $StandardStorage;
 
     /**
+     * @var integer 当前归档存储量，单位是字节。
+     */
+    public $ArchiveStorage;
+
+    /**
+     * @var integer 当前深度归档存储量，单位是字节。
+     */
+    public $DeepArchiveStorage;
+
+    /**
      * @param string $Area 点播存储的计费区域，可能值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
 <li>Outside Chinese Mainland：中国境外。</li>
      * @param integer $TotalStorage 当前总存储量，单位是字节。
      * @param integer $InfrequentStorage 当前低频存储量，单位是字节。
      * @param integer $StandardStorage 当前标准存储量，单位是字节。
+     * @param integer $ArchiveStorage 当前归档存储量，单位是字节。
+     * @param integer $DeepArchiveStorage 当前深度归档存储量，单位是字节。
      */
     function __construct()
     {
@@ -92,6 +108,14 @@ class StorageStatData extends AbstractModel
 
         if (array_key_exists("StandardStorage",$param) and $param["StandardStorage"] !== null) {
             $this->StandardStorage = $param["StandardStorage"];
+        }
+
+        if (array_key_exists("ArchiveStorage",$param) and $param["ArchiveStorage"] !== null) {
+            $this->ArchiveStorage = $param["ArchiveStorage"];
+        }
+
+        if (array_key_exists("DeepArchiveStorage",$param) and $param["DeepArchiveStorage"] !== null) {
+            $this->DeepArchiveStorage = $param["DeepArchiveStorage"];
         }
     }
 }

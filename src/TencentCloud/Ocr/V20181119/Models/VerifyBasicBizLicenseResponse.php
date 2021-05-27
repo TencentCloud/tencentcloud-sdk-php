@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegNumResult(BizLicenseVerifyResult $RegNumResult) 设置验证结果
  * @method string getRegCapital() 获取注册资本（单位：万元）,只有输入参数regCapital为1的时候才输出
  * @method void setRegCapital(string $RegCapital) 设置注册资本（单位：万元）,只有输入参数regCapital为1的时候才输出
+ * @method string getEstablishTime() 获取成立/注册日期，只有输入参数EstablishTime为true时展示，默认为空
+ * @method void setEstablishTime(string $EstablishTime) 设置成立/注册日期，只有输入参数EstablishTime为true时展示，默认为空
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -145,6 +147,11 @@ class VerifyBasicBizLicenseResponse extends AbstractModel
     public $RegCapital;
 
     /**
+     * @var string 成立/注册日期，只有输入参数EstablishTime为true时展示，默认为空
+     */
+    public $EstablishTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -167,6 +174,7 @@ class VerifyBasicBizLicenseResponse extends AbstractModel
      * @param string $Dom 住址
      * @param BizLicenseVerifyResult $RegNumResult 验证结果
      * @param string $RegCapital 注册资本（单位：万元）,只有输入参数regCapital为1的时候才输出
+     * @param string $EstablishTime 成立/注册日期，只有输入参数EstablishTime为true时展示，默认为空
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -249,6 +257,10 @@ class VerifyBasicBizLicenseResponse extends AbstractModel
 
         if (array_key_exists("RegCapital",$param) and $param["RegCapital"] !== null) {
             $this->RegCapital = $param["RegCapital"];
+        }
+
+        if (array_key_exists("EstablishTime",$param) and $param["EstablishTime"] !== null) {
+            $this->EstablishTime = $param["EstablishTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

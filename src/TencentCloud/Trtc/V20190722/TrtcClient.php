@@ -23,15 +23,15 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Trtc\V20190722\Models as Models;
 
 /**
- * @method Models\CreatePictureResponse CreatePicture(Models\CreatePictureRequest $req) 上传图片
+ * @method Models\CreatePictureResponse CreatePicture(Models\CreatePictureRequest $req) 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
  * @method Models\CreateTroubleInfoResponse CreateTroubleInfo(Models\CreateTroubleInfoRequest $req) 创建异常信息
- * @method Models\DeletePictureResponse DeletePicture(Models\DeletePictureRequest $req) 删除图片
+ * @method Models\DeletePictureResponse DeletePicture(Models\DeletePictureRequest $req) 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
  * @method Models\DescribeAbnormalEventResponse DescribeAbnormalEvent(Models\DescribeAbnormalEventRequest $req) 查询SDKAppID下用户的异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询15天内数据，查询起止时间不超过1个小时。支持跨天查询。异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
  * @method Models\DescribeCallDetailResponse DescribeCallDetail(Models\DescribeCallDetailRequest $req) 查询指定时间内的用户列表及用户通话质量数据，可查询14天内数据。DataType 不为null，查询实时数据时，查询起止时间不超过1个小时，每次查询用户不超过6个，支持跨天查询。DataType，UserIds为null时，默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。
 注意：不建议依赖接口做实时类业务逻辑处理
  * @method Models\DescribeDetailEventResponse DescribeDetailEvent(Models\DescribeDetailEventRequest $req) 查询用户某次通话内的进退房，视频开关等详细事件。可查询14天内数据。
  * @method Models\DescribeHistoryScaleResponse DescribeHistoryScale(Models\DescribeHistoryScaleRequest $req) 可查询sdkqppid 每天的房间数和用户数，每分钟1次，可查询最近14天的数据。当天未结束，无法查到当天的房间数与用户数。
- * @method Models\DescribePictureResponse DescribePicture(Models\DescribePictureRequest $req) 查询某图片相关参数。
+ * @method Models\DescribePictureResponse DescribePicture(Models\DescribePictureRequest $req) 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
  * @method Models\DescribeRealtimeNetworkResponse DescribeRealtimeNetwork(Models\DescribeRealtimeNetworkRequest $req) 查询sdkappid维度下每分钟实时网络状态，包括上行丢包与下行丢包。可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
  * @method Models\DescribeRealtimeQualityResponse DescribeRealtimeQuality(Models\DescribeRealtimeQualityRequest $req) 查询sdkappid维度下每分钟实时质量数据，包括：进房成功率，首帧秒开率，音频卡顿率，视频卡顿率。可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
  * @method Models\DescribeRealtimeScaleResponse DescribeRealtimeScale(Models\DescribeRealtimeScaleRequest $req)  查询sdkappid维度下每分钟实时规模，可查询24小时内数据，查询起止时间不低于1分钟，不超过1个小时。
@@ -57,7 +57,7 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 注意：不建议依赖接口做实时类业务逻辑处理
  * @method Models\DismissRoomResponse DismissRoom(Models\DismissRoomRequest $req) 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\DismissRoomByStrRoomIdResponse DismissRoomByStrRoomId(Models\DismissRoomByStrRoomIdRequest $req) 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
- * @method Models\ModifyPictureResponse ModifyPicture(Models\ModifyPictureRequest $req) 修改图片相关参数。
+ * @method Models\ModifyPictureResponse ModifyPicture(Models\ModifyPictureRequest $req) 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
  * @method Models\RemoveUserResponse RemoveUser(Models\RemoveUserRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\RemoveUserByStrRoomIdResponse RemoveUserByStrRoomId(Models\RemoveUserByStrRoomIdRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\StartMCUMixTranscodeResponse StartMCUMixTranscode(Models\StartMCUMixTranscodeRequest $req) 接口说明：启动云端混流，并指定混流画面中各路画面的布局位置。

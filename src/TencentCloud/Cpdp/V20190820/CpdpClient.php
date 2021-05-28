@@ -43,6 +43,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CheckAcctResponse CheckAcct(Models\CheckAcctRequest $req) 商户绑定提现银行卡的验证接口
  * @method Models\CheckAmountResponse CheckAmount(Models\CheckAmountRequest $req) 验证鉴权金额。此接口可受理BindRelateAcctSmallAmount接口发起的转账金额（往账鉴权方式）的验证处理。若所回填的验证金额验证通过，则会绑定原申请中的银行账户作为提现账户。通过此接口也可以查得BindRelateAcctSmallAmount接口发起的来账鉴权方式的申请的当前状态。
  * @method Models\CloseOrderResponse CloseOrder(Models\CloseOrderRequest $req) 通过此接口关闭此前已创建的订单，关闭后，用户将无法继续付款。仅能关闭创建后未支付的订单
+ * @method Models\ContractOrderResponse ContractOrder(Models\ContractOrderRequest $req) 应用需要先带上签约信息调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
  * @method Models\CreateAcctResponse CreateAcct(Models\CreateAcctRequest $req) 子商户入驻聚鑫平台
  * @method Models\CreateAgentTaxPaymentInfosResponse CreateAgentTaxPaymentInfos(Models\CreateAgentTaxPaymentInfosRequest $req) 直播平台-代理商完税信息录入
  * @method Models\CreateCustAcctIdResponse CreateCustAcctId(Models\CreateCustAcctIdRequest $req) 会员子账户开立。会员在银行注册，并开立会员子账户，交易网会员代码即会员在平台端系统的会员编号。
@@ -77,6 +78,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryBankWithdrawCashDetailsResponse QueryBankWithdrawCashDetails(Models\QueryBankWithdrawCashDetailsRequest $req) 查询银行时间段内清分提现明细。查询银行时间段内清分提现明细接口：若为“见证+收单退款”“见证+收单充值”记录时备注Note为“见证+收单充值,订单号”“见证+收单退款,订单号”，此接口可以查到T0/T1的充值明细和退款记录。查询标志：充值记录仍用3清分选项查询，退款记录同提现用2选项查询。
  * @method Models\QueryBillDownloadURLResponse QueryBillDownloadURL(Models\QueryBillDownloadURLRequest $req) 获取单笔代发转账对账单下载URL
  * @method Models\QueryCommonTransferRechargeResponse QueryCommonTransferRecharge(Models\QueryCommonTransferRechargeRequest $req) 查询普通转账充值明细。接口用于查询会员主动转账进资金汇总账户的明细情况。若会员使用绑定账号转入，则直接入账到会员子账户。若未使用绑定账号转入，则系统无法自动清分到对应子账户，则转入挂账子账户由平台自行清分。若是 “见证+收单充值”T0充值记录时备注Note为“见证+收单充值,订单号” 此接口可以查到T0到账的“见证+收单充值”充值记录。
+ * @method Models\QueryContractResponse QueryContract(Models\QueryContractRequest $req) 通过此接口查询签约数据
  * @method Models\QueryCustAcctIdBalanceResponse QueryCustAcctIdBalance(Models\QueryCustAcctIdBalanceRequest $req) 查询银行子账户余额。查询会员子账户以及平台的功能子账户的余额。
  * @method Models\QueryExchangeRateResponse QueryExchangeRate(Models\QueryExchangeRateRequest $req) 跨境-查询汇率
  * @method Models\QueryInvoiceResponse QueryInvoice(Models\QueryInvoiceRequest $req) 智慧零售-发票查询
@@ -108,6 +110,8 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\ReviseMbrPropertyResponse ReviseMbrProperty(Models\ReviseMbrPropertyRequest $req) 修改会员属性-普通商户子账户。修改会员的会员属性。
  * @method Models\RevokeMemberRechargeThirdPayResponse RevokeMemberRechargeThirdPay(Models\RevokeMemberRechargeThirdPayRequest $req) 撤销会员在途充值(经第三方支付渠道)
  * @method Models\RevokeRechargeByThirdPayResponse RevokeRechargeByThirdPay(Models\RevokeRechargeByThirdPayRequest $req) 撤销会员在途充值(经第三方支付渠道)接口
+ * @method Models\SyncContractDataResponse SyncContractData(Models\SyncContractDataRequest $req) 对于存量的签约关系导入或者部分场景下米大师无法收到签约通知的场景，需要由调用方主动将签约状态同步至米大师
+ * @method Models\TerminateContractResponse TerminateContract(Models\TerminateContractRequest $req) 通过此接口进行解约
  * @method Models\TransferSinglePayResponse TransferSinglePay(Models\TransferSinglePayRequest $req) 智能代发-单笔代发转账接口
  * @method Models\UnBindAcctResponse UnBindAcct(Models\UnBindAcctRequest $req) 商户解除绑定的提现银行卡
  * @method Models\UnbindRelateAcctResponse UnbindRelateAcct(Models\UnbindRelateAcctRequest $req) 会员解绑提现账户。此接口可以支持会员解除名下的绑定账户关系。

@@ -32,6 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBpm(integer $Bpm) 设置节奏信息
  * @method float getScore() 获取商业化权益
  * @method void setScore(float $Score) 设置商业化权益
+ * @method array getScene() 获取场景信息
+ * @method void setScene(array $Scene) 设置场景信息
+ * @method array getRegion() 获取应用地域
+ * @method void setRegion(array $Region) 设置应用地域
+ * @method string getAuthPeriod() 获取授权期限
+ * @method void setAuthPeriod(string $AuthPeriod) 设置授权期限
+ * @method string getCommercialization() 获取商业化权益
+ * @method void setCommercialization(string $Commercialization) 设置商业化权益
+ * @method string getPlatform() 获取跨平台传播权益
+ * @method void setPlatform(string $Platform) 设置跨平台传播权益
+ * @method string getChannel() 获取传播渠道
+ * @method void setChannel(string $Channel) 设置传播渠道
  */
 class MusicDetailInfo extends AbstractModel
 {
@@ -66,12 +78,48 @@ class MusicDetailInfo extends AbstractModel
     public $Score;
 
     /**
+     * @var array 场景信息
+     */
+    public $Scene;
+
+    /**
+     * @var array 应用地域
+     */
+    public $Region;
+
+    /**
+     * @var string 授权期限
+     */
+    public $AuthPeriod;
+
+    /**
+     * @var string 商业化权益
+     */
+    public $Commercialization;
+
+    /**
+     * @var string 跨平台传播权益
+     */
+    public $Platform;
+
+    /**
+     * @var string 传播渠道
+     */
+    public $Channel;
+
+    /**
      * @param string $MusicId 资源方音乐Id
      * @param string $AmeId 资源方识别信息
      * @param array $Tags 分类标签
      * @param array $HitWords 关键词
      * @param integer $Bpm 节奏信息
      * @param float $Score 商业化权益
+     * @param array $Scene 场景信息
+     * @param array $Region 应用地域
+     * @param string $AuthPeriod 授权期限
+     * @param string $Commercialization 商业化权益
+     * @param string $Platform 跨平台传播权益
+     * @param string $Channel 传播渠道
      */
     function __construct()
     {
@@ -108,6 +156,30 @@ class MusicDetailInfo extends AbstractModel
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("AuthPeriod",$param) and $param["AuthPeriod"] !== null) {
+            $this->AuthPeriod = $param["AuthPeriod"];
+        }
+
+        if (array_key_exists("Commercialization",$param) and $param["Commercialization"] !== null) {
+            $this->Commercialization = $param["Commercialization"];
+        }
+
+        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
+            $this->Platform = $param["Platform"];
+        }
+
+        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
+            $this->Channel = $param["Channel"];
         }
     }
 }

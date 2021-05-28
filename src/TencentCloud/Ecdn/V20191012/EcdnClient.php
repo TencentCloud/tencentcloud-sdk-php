@@ -24,6 +24,7 @@ use TencentCloud\Ecdn\V20191012\Models as Models;
 
 /**
  * @method Models\AddEcdnDomainResponse AddEcdnDomain(Models\AddEcdnDomainRequest $req) 本接口（AddEcdnDomain）用于创建加速域名。
+ * @method Models\CreateVerifyRecordResponse CreateVerifyRecord(Models\CreateVerifyRecordRequest $req) 生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权
  * @method Models\DeleteEcdnDomainResponse DeleteEcdnDomain(Models\DeleteEcdnDomainRequest $req) 本接口（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必须处于已停用状态。
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 本接口（DescribeDomains）用于查询CDN域名基本信息，包括项目id，状态，业务类型，创建时间，更新时间等。
  * @method Models\DescribeDomainsConfigResponse DescribeDomainsConfig(Models\DescribeDomainsConfigRequest $req) 本接口（DescribeDomainsConfig）用于查询CDN加速域名详细配置信息。

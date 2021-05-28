@@ -34,6 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
  * @method boolean getCni() 获取网络插件是否启用CNI(默认开启)
  * @method void setCni(boolean $Cni) 设置网络插件是否启用CNI(默认开启)
+ * @method string getKubeProxyMode() 获取service的网络模式，当前参数只适用于ipvs+bpf模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKubeProxyMode(string $KubeProxyMode) 设置service的网络模式，当前参数只适用于ipvs+bpf模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServiceCIDR() 获取用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceCIDR(string $ServiceCIDR) 设置用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSubnets() 获取集群关联的容器子网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubnets(array $Subnets) 设置集群关联的容器子网
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterNetworkSettings extends AbstractModel
 {
@@ -73,6 +85,24 @@ class ClusterNetworkSettings extends AbstractModel
     public $Cni;
 
     /**
+     * @var string service的网络模式，当前参数只适用于ipvs+bpf模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KubeProxyMode;
+
+    /**
+     * @var string 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceCIDR;
+
+    /**
+     * @var array 集群关联的容器子网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Subnets;
+
+    /**
      * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
      * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量(默认为256)
@@ -80,6 +110,12 @@ class ClusterNetworkSettings extends AbstractModel
      * @param boolean $Ipvs 是否启用IPVS(默认不开启)
      * @param string $VpcId 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
      * @param boolean $Cni 网络插件是否启用CNI(默认开启)
+     * @param string $KubeProxyMode service的网络模式，当前参数只适用于ipvs+bpf模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServiceCIDR 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Subnets 集群关联的容器子网
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +156,18 @@ class ClusterNetworkSettings extends AbstractModel
 
         if (array_key_exists("Cni",$param) and $param["Cni"] !== null) {
             $this->Cni = $param["Cni"];
+        }
+
+        if (array_key_exists("KubeProxyMode",$param) and $param["KubeProxyMode"] !== null) {
+            $this->KubeProxyMode = $param["KubeProxyMode"];
+        }
+
+        if (array_key_exists("ServiceCIDR",$param) and $param["ServiceCIDR"] !== null) {
+            $this->ServiceCIDR = $param["ServiceCIDR"];
+        }
+
+        if (array_key_exists("Subnets",$param) and $param["Subnets"] !== null) {
+            $this->Subnets = $param["Subnets"];
         }
     }
 }

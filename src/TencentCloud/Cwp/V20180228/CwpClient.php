@@ -58,6 +58,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeAttackVulTypeListResponse DescribeAttackVulTypeList(Models\DescribeAttackVulTypeListRequest $req) 获取网络攻击威胁类型列表
  * @method Models\DescribeBashEventsResponse DescribeBashEvents(Models\DescribeBashEventsRequest $req) 获取高危命令列表
  * @method Models\DescribeBashRulesResponse DescribeBashRules(Models\DescribeBashRulesRequest $req) 获取高危命令规则列表
+ * @method Models\DescribeBruteAttackListResponse DescribeBruteAttackList(Models\DescribeBruteAttackListRequest $req) 获取密码破解列表
  * @method Models\DescribeBruteAttacksResponse DescribeBruteAttacks(Models\DescribeBruteAttacksRequest $req) 本接口{DescribeBruteAttacks}用于获取暴力破解事件列表。
  * @method Models\DescribeComponentInfoResponse DescribeComponentInfo(Models\DescribeComponentInfoRequest $req) 本接口 (DescribeComponentInfo) 用于获取组件信息数据。
  * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。

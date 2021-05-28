@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormattedDescription(string $FormattedDescription) 设置命令的结构化描述。公共命令有值，用户命令为空字符串。
  * @method string getCreatedBy() 获取命令创建者。TAT 代表公共命令，USER 代表个人命令。
  * @method void setCreatedBy(string $CreatedBy) 设置命令创建者。TAT 代表公共命令，USER 代表个人命令。
+ * @method array getTags() 获取命令关联的标签列表。
+ * @method void setTags(array $Tags) 设置命令关联的标签列表。
  */
 class Command extends AbstractModel
 {
@@ -115,6 +117,11 @@ class Command extends AbstractModel
     public $CreatedBy;
 
     /**
+     * @var array 命令关联的标签列表。
+     */
+    public $Tags;
+
+    /**
      * @param string $CommandId 命令ID。
      * @param string $CommandName 命令名称。
      * @param string $Description 命令描述。
@@ -128,6 +135,7 @@ class Command extends AbstractModel
      * @param string $DefaultParameters 自定义参数的默认取值。
      * @param string $FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
      * @param string $CreatedBy 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+     * @param array $Tags 命令关联的标签列表。
      */
     function __construct()
     {
@@ -192,6 +200,15 @@ class Command extends AbstractModel
 
         if (array_key_exists("CreatedBy",$param) and $param["CreatedBy"] !== null) {
             $this->CreatedBy = $param["CreatedBy"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

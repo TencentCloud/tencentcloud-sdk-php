@@ -22,10 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMusicId() 获取歌曲Id
  * @method void setMusicId(string $MusicId) 设置歌曲Id
- * @method string getMusicType() 获取MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
-MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
- * @method void setMusicType(string $MusicType) 设置MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
-MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
+ * @method string getMusicType() 获取歌曲类型，可选值有：
+<li>MP3-128K-FTW：含有水印的试听资源；</li>
+<li>MP3-320K-FTD-P：320kbps歌曲热门片段；</li>
+<li>MP3-320K-FTD：320kbps已核验歌曲完整资源。</li>
+默认为：MP3-128K-FTW
+ * @method void setMusicType(string $MusicType) 设置歌曲类型，可选值有：
+<li>MP3-128K-FTW：含有水印的试听资源；</li>
+<li>MP3-320K-FTD-P：320kbps歌曲热门片段；</li>
+<li>MP3-320K-FTD：320kbps已核验歌曲完整资源。</li>
+默认为：MP3-128K-FTW
  */
 class DescribeCloudMusicRequest extends AbstractModel
 {
@@ -35,15 +41,21 @@ class DescribeCloudMusicRequest extends AbstractModel
     public $MusicId;
 
     /**
-     * @var string MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
-MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
+     * @var string 歌曲类型，可选值有：
+<li>MP3-128K-FTW：含有水印的试听资源；</li>
+<li>MP3-320K-FTD-P：320kbps歌曲热门片段；</li>
+<li>MP3-320K-FTD：320kbps已核验歌曲完整资源。</li>
+默认为：MP3-128K-FTW
      */
     public $MusicType;
 
     /**
      * @param string $MusicId 歌曲Id
-     * @param string $MusicType MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
-MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
+     * @param string $MusicType 歌曲类型，可选值有：
+<li>MP3-128K-FTW：含有水印的试听资源；</li>
+<li>MP3-320K-FTD-P：320kbps歌曲热门片段；</li>
+<li>MP3-320K-FTD：320kbps已核验歌曲完整资源。</li>
+默认为：MP3-128K-FTW
      */
     function __construct()
     {

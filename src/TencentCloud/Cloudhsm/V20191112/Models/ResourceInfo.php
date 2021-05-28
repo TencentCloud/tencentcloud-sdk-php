@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getManufacturer() 获取厂商
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setManufacturer(string $Manufacturer) 设置厂商
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceInfo extends AbstractModel
 {
@@ -234,6 +238,12 @@ class ResourceInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Manufacturer;
+
+    /**
      * @param string $ResourceId 资源Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 资源名称
@@ -275,6 +285,8 @@ class ResourceInfo extends AbstractModel
      * @param integer $RenewFlag 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Manufacturer 厂商
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -382,6 +394,10 @@ class ResourceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Manufacturer",$param) and $param["Manufacturer"] !== null) {
+            $this->Manufacturer = $param["Manufacturer"];
         }
     }
 }

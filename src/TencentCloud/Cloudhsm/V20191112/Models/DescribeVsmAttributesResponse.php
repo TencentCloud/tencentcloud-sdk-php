@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getManufacturer() 获取厂商
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setManufacturer(string $Manufacturer) 设置厂商
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -213,6 +217,12 @@ class DescribeVsmAttributesResponse extends AbstractModel
     public $RenewFlag;
 
     /**
+     * @var string 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Manufacturer;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -250,6 +260,8 @@ class DescribeVsmAttributesResponse extends AbstractModel
      * @param array $Tags 资源所关联的Tag
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 资源续费标识，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Manufacturer 厂商
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -362,6 +374,10 @@ class DescribeVsmAttributesResponse extends AbstractModel
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("Manufacturer",$param) and $param["Manufacturer"] !== null) {
+            $this->Manufacturer = $param["Manufacturer"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

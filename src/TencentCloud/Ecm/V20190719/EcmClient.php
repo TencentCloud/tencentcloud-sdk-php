@@ -163,7 +163,7 @@ EIP 如果被封堵，则不能进行解绑定操作。
  * @method Models\ResetInstancesMaxBandwidthResponse ResetInstancesMaxBandwidth(Models\ResetInstancesMaxBandwidthRequest $req) 重置实例的最大带宽上限。
  * @method Models\ResetInstancesPasswordResponse ResetInstancesPassword(Models\ResetInstancesPasswordRequest $req) 重置处于运行中状态的实例的密码，需要显式指定强制关机参数ForceStop。如果没有显式指定强制关机参数，则只有处于关机状态的实例才允许执行重置密码操作。
  * @method Models\ResetRoutesResponse ResetRoutes(Models\ResetRoutesRequest $req) 对某个路由表名称和所有路由策略（Route）进行重新设置
- * @method Models\RunInstancesResponse RunInstances(Models\RunInstancesRequest $req) 创建ECM实例
+ * @method Models\RunInstancesResponse RunInstances(Models\RunInstancesRequest $req) 创建ECM实例。
  * @method Models\SetLoadBalancerSecurityGroupsResponse SetLoadBalancerSecurityGroups(Models\SetLoadBalancerSecurityGroupsRequest $req) 设置负载均衡实例的安全组。
  * @method Models\SetSecurityGroupForLoadbalancersResponse SetSecurityGroupForLoadbalancers(Models\SetSecurityGroupForLoadbalancersRequest $req) 绑定或解绑一个安全组到多个负载均衡实例。
  * @method Models\StartInstancesResponse StartInstances(Models\StartInstancesRequest $req) 只有状态为STOPPED的实例才可以进行此操作；接口调用成功时，实例会进入STARTING状态；启动实例成功时，实例会进入RUNNING状态。

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置查询关键字
  * @method array getTagFilters() 获取标签过滤条件
  * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
+ * @method string getManufacturer() 获取设备所属的厂商名称，根据厂商来进行筛选
+ * @method void setManufacturer(string $Manufacturer) 设置设备所属的厂商名称，根据厂商来进行筛选
  */
 class DescribeVsmsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeVsmsRequest extends AbstractModel
     public $TagFilters;
 
     /**
+     * @var string 设备所属的厂商名称，根据厂商来进行筛选
+     */
+    public $Manufacturer;
+
+    /**
      * @param integer $Offset 偏移
      * @param integer $Limit 最大数量
      * @param string $SearchWord 查询关键字
      * @param array $TagFilters 标签过滤条件
+     * @param string $Manufacturer 设备所属的厂商名称，根据厂商来进行筛选
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeVsmsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagFilters, $obj);
             }
+        }
+
+        if (array_key_exists("Manufacturer",$param) and $param["Manufacturer"] !== null) {
+            $this->Manufacturer = $param["Manufacturer"];
         }
     }
 }

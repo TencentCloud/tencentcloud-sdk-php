@@ -72,6 +72,8 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 如果未提供该参数取值，将使用 DefaultParameters 进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+ * @method array getTags() 获取如果保存命令，可为命令设置标签。列表长度不超过10。
+ * @method void setTags(array $Tags) 设置如果保存命令，可为命令设置标签。列表长度不超过10。
  */
 class RunCommandRequest extends AbstractModel
 {
@@ -146,6 +148,11 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     public $Parameters;
 
     /**
+     * @var array 如果保存命令，可为命令设置标签。列表长度不超过10。
+     */
+    public $Tags;
+
+    /**
      * @param string $Content Base64编码后的命令内容，长度不可超过64KB。
      * @param array $InstanceIds 待执行命令的实例ID列表。 支持实例类型：
 <li> CVM
@@ -172,6 +179,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 如果未提供该参数取值，将使用 DefaultParameters 进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * @param array $Tags 如果保存命令，可为命令设置标签。列表长度不超过10。
      */
     function __construct()
     {
@@ -228,6 +236,15 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
         if (array_key_exists("Parameters",$param) and $param["Parameters"] !== null) {
             $this->Parameters = $param["Parameters"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMetric() 获取查询指标，取值有：
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
+<li>Requests：请求数。</li>
  * @method void setMetric(string $Metric) 设置查询指标，取值有：
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
+<li>Requests：请求数。</li>
  * @method string getStartTime() 获取起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setStartTime(string $StartTime) 设置起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getEndTime() 获取结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -159,6 +161,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
      * @var string 查询指标，取值有：
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
+<li>Requests：请求数。</li>
      */
     public $Metric;
 
@@ -261,6 +264,7 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
      * @param string $Metric 查询指标，取值有：
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
+<li>Requests：请求数。</li>
      * @param string $StartTime 起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $EndTime 结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param array $DomainNames 域名列表。一次最多查询20个域名的数据。默认返回所有域名叠加的用量数据。

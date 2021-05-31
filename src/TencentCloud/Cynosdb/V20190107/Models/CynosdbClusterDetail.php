@@ -66,6 +66,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method array getResourceTags() 获取实例绑定的tag数组信息
  * @method void setResourceTags(array $ResourceTags) 设置实例绑定的tag数组信息
+ * @method string getServerlessStatus() 获取当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
+ * @method void setServerlessStatus(string $ServerlessStatus) 设置当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -185,6 +195,15 @@ class CynosdbClusterDetail extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
+     */
+    public $ServerlessStatus;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域
@@ -208,6 +227,11 @@ class CynosdbClusterDetail extends AbstractModel
      * @param integer $ProjectID 项目id
      * @param string $Zone 可用区
      * @param array $ResourceTags 实例绑定的tag数组信息
+     * @param string $ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
      */
     function __construct()
     {
@@ -327,6 +351,10 @@ class CynosdbClusterDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
+            $this->ServerlessStatus = $param["ServerlessStatus"];
         }
     }
 }

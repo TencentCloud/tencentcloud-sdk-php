@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirmwareName(string $FirmwareName) 设置固件名称。
  * @method string getFirmwareDescription() 获取固件描述
  * @method void setFirmwareDescription(string $FirmwareDescription) 设置固件描述
+ * @method string getFwType() 获取固件类型：选填 mcu、moudule。默认：mcu
+ * @method void setFwType(string $FwType) 设置固件类型：选填 mcu、moudule。默认：mcu
  */
 class EditFirmwareRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class EditFirmwareRequest extends AbstractModel
     public $FirmwareDescription;
 
     /**
+     * @var string 固件类型：选填 mcu、moudule。默认：mcu
+     */
+    public $FwType;
+
+    /**
      * @param string $ProductID 产品ID。
      * @param string $FirmwareVersion 固件版本号。
      * @param string $FirmwareName 固件名称。
      * @param string $FirmwareDescription 固件描述
+     * @param string $FwType 固件类型：选填 mcu、moudule。默认：mcu
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class EditFirmwareRequest extends AbstractModel
 
         if (array_key_exists("FirmwareDescription",$param) and $param["FirmwareDescription"] !== null) {
             $this->FirmwareDescription = $param["FirmwareDescription"];
+        }
+
+        if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
+            $this->FwType = $param["FwType"];
         }
     }
 }

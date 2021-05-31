@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomainName() 获取所查询域名名称
  * @method void setDomainName(string $DomainName) 设置所查询域名名称
- * @method string getPeriod() 获取年限
- * @method void setPeriod(string $Period) 设置年限
+ * @method string getPeriod() 获取年限。该参数为空时无法查询溢价词域名
+ * @method void setPeriod(string $Period) 设置年限。该参数为空时无法查询溢价词域名
  */
 class CheckDomainRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CheckDomainRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 年限
+     * @var string 年限。该参数为空时无法查询溢价词域名
      */
     public $Period;
 
     /**
      * @param string $DomainName 所查询域名名称
-     * @param string $Period 年限
+     * @param string $Period 年限。该参数为空时无法查询溢价词域名
      */
     function __construct()
     {

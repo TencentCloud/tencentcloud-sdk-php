@@ -28,6 +28,7 @@ use TencentCloud\Ame\V20190916\Models as Models;
  * @method Models\DescribeCloudMusicPurchasedResponse DescribeCloudMusicPurchased(Models\DescribeCloudMusicPurchasedRequest $req) 获取授权项目下已购云音乐列表
  * @method Models\DescribeItemByIdResponse DescribeItemById(Models\DescribeItemByIdRequest $req) 根据歌曲ID查询歌曲信息
  * @method Models\DescribeItemsResponse DescribeItems(Models\DescribeItemsRequest $req) 该服务后续会停用，不再建议使用
+ * @method Models\DescribeKTVMusicDetailResponse DescribeKTVMusicDetail(Models\DescribeKTVMusicDetailRequest $req) 根据 Id 查询歌曲的详细信息，包含基础信息及播放信息。
  * @method Models\DescribeLyricResponse DescribeLyric(Models\DescribeLyricRequest $req) 根据接口的模式及歌曲ID来取得歌词信息。
  * @method Models\DescribeMusicResponse DescribeMusic(Models\DescribeMusicRequest $req) 获取曲库包歌曲播放信息接口
  * @method Models\DescribePackageItemsResponse DescribePackageItems(Models\DescribePackageItemsRequest $req) 获取曲库包下已核销歌曲列表接口
@@ -36,6 +37,7 @@ use TencentCloud\Ame\V20190916\Models as Models;
  * @method Models\ModifyMusicOnShelvesResponse ModifyMusicOnShelves(Models\ModifyMusicOnShelvesRequest $req) 根据资源方，需要变更的参数，请求该接口进行变更，为空的参数默认为无变更
  * @method Models\PutMusicOnTheShelvesResponse PutMusicOnTheShelves(Models\PutMusicOnTheShelvesRequest $req) 根据资源方所传歌曲信息，进行歌曲上架，多个歌曲同时请求时，需构造复合结构进行请求
  * @method Models\ReportDataResponse ReportData(Models\ReportDataRequest $req) 客户上报用户数据功能，为了更好地为用户提供优质服务
+ * @method Models\SearchKTVMusicsResponse SearchKTVMusics(Models\SearchKTVMusicsRequest $req) 根据搜索条件，返回匹配的歌曲列表。
  * @method Models\TakeMusicOffShelvesResponse TakeMusicOffShelves(Models\TakeMusicOffShelvesRequest $req) 根据资源方所传MusicId进行将歌曲进行下架，多个MusicId使用逗号隔开
  */
 

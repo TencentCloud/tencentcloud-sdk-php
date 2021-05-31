@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getStatus() 获取域名状态，”enable” 、”disable” 分别代表启用和暂
- * @method void setStatus(string $Status) 设置域名状态，”enable” 、”disable” 分别代表启用和暂
+ * @method string getStatus() 获取域名状态，”enable” 、”disable” 分别代表启用和暂停
+ * @method void setStatus(string $Status) 设置域名状态，”enable” 、”disable” 分别代表启用和暂停
  * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
  * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
  */
@@ -35,7 +35,7 @@ class ModifyDomainStatusRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 域名状态，”enable” 、”disable” 分别代表启用和暂
+     * @var string 域名状态，”enable” 、”disable” 分别代表启用和暂停
      */
     public $Status;
 
@@ -46,7 +46,7 @@ class ModifyDomainStatusRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param string $Status 域名状态，”enable” 、”disable” 分别代表启用和暂
+     * @param string $Status 域名状态，”enable” 、”disable” 分别代表启用和暂停
      * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      */
     function __construct()

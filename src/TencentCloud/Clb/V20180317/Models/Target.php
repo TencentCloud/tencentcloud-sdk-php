@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。表示绑定主网卡主IP。
 注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWeight() 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
- * @method void setWeight(integer $Weight) 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+ * @method integer getWeight() 获取后端服务修改后的转发权重，取值范围：[0, 100]，默认为 10。此参数的优先级高于[RsWeightRule](https://cloud.tencent.com/document/api/214/30694#RsWeightRule)中的Weight参数，即最终的权重值以此Weight参数值为准，仅当此Weight参数为空时，才以RsWeightRule中的Weight参数为准。
+ * @method void setWeight(integer $Weight) 设置后端服务修改后的转发权重，取值范围：[0, 100]，默认为 10。此参数的优先级高于[RsWeightRule](https://cloud.tencent.com/document/api/214/30694#RsWeightRule)中的Weight参数，即最终的权重值以此Weight参数值为准，仅当此Weight参数为空时，才以RsWeightRule中的Weight参数为准。
  * @method string getEniIp() 获取绑定IP时需要传入此参数，支持弹性网卡的IP和其他内网IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
 注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,7 +68,7 @@ class Target extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * @var integer 后端服务修改后的转发权重，取值范围：[0, 100]，默认为 10。此参数的优先级高于[RsWeightRule](https://cloud.tencent.com/document/api/214/30694#RsWeightRule)中的Weight参数，即最终的权重值以此Weight参数值为准，仅当此Weight参数为空时，才以RsWeightRule中的Weight参数为准。
      */
     public $Weight;
 
@@ -88,7 +88,7 @@ class Target extends AbstractModel
      * @param string $InstanceId 绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。表示绑定主网卡主IP。
 注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * @param integer $Weight 后端服务修改后的转发权重，取值范围：[0, 100]，默认为 10。此参数的优先级高于[RsWeightRule](https://cloud.tencent.com/document/api/214/30694#RsWeightRule)中的Weight参数，即最终的权重值以此Weight参数值为准，仅当此Weight参数为空时，才以RsWeightRule中的Weight参数为准。
      * @param string $EniIp 绑定IP时需要传入此参数，支持弹性网卡的IP和其他内网IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
 注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
 注意：此字段可能返回 null，表示取不到有效值。

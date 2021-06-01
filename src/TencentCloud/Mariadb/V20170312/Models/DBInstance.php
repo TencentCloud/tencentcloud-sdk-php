@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(integer $VpcId) 设置私有网络 ID，基础网络时为 0
  * @method integer getSubnetId() 获取子网 ID，基础网络时为 0
  * @method void setSubnetId(integer $SubnetId) 设置子网 ID，基础网络时为 0
- * @method integer getStatus() 获取实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
- * @method void setStatus(integer $Status) 设置实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
+ * @method integer getStatus() 获取实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除，4 实例初始化中，5 实例删除中，6 实例重启中，7 数据迁移中
+ * @method void setStatus(integer $Status) 设置实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除，4 实例初始化中，5 实例删除中，6 实例重启中，7 数据迁移中
  * @method string getVip() 获取内网 IP 地址
  * @method void setVip(string $Vip) 设置内网 IP 地址
  * @method integer getVport() 获取内网端口
@@ -192,7 +192,7 @@ class DBInstance extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
+     * @var integer 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除，4 实例初始化中，5 实例删除中，6 实例重启中，7 数据迁移中
      */
     public $Status;
 
@@ -424,7 +424,7 @@ class DBInstance extends AbstractModel
      * @param string $Zone 实例所在可用区名称，如 ap-shanghai-1
      * @param integer $VpcId 私有网络 ID，基础网络时为 0
      * @param integer $SubnetId 子网 ID，基础网络时为 0
-     * @param integer $Status 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
+     * @param integer $Status 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除，4 实例初始化中，5 实例删除中，6 实例重启中，7 数据迁移中
      * @param string $Vip 内网 IP 地址
      * @param integer $Vport 内网端口
      * @param string $WanDomain 外网访问的域名，公网可解析

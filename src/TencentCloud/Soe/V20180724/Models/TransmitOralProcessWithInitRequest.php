@@ -46,9 +46,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
  * @method string getRefText() 获取被评估语音对应的文本，仅支持中文和英文。
 句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
  * @method void setRefText(string $RefText) 设置被评估语音对应的文本，仅支持中文和英文。
 句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
  * @method integer getWorkMode() 获取语音输入模式
 0：流式分片
@@ -68,6 +70,7 @@ use TencentCloud\Common\AbstractModel;
 6：句子多分支评测模式
 7：单词实时评测模式
 8：拼音评测模式
+关于每种评测模式的详细介绍，以及适用场景，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
  * @method void setEvalMode(integer $EvalMode) 设置评测模式
 0：单词/单字模式（中文评测模式下为单字模式）
 1：句子模式
@@ -78,6 +81,7 @@ use TencentCloud\Common\AbstractModel;
 6：句子多分支评测模式
 7：单词实时评测模式
 8：拼音评测模式
+关于每种评测模式的详细介绍，以及适用场景，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
  * @method float getScoreCoeff() 获取评价苛刻指数。取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数。
 1.0：适用于最小年龄段用户，一般对应儿童应用场景；
 4.0：适用于最高年龄段用户，一般对应成人严格打分场景。
@@ -172,6 +176,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
     /**
      * @var string 被评估语音对应的文本，仅支持中文和英文。
 句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      */
     public $RefText;
@@ -195,6 +200,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 6：句子多分支评测模式
 7：单词实时评测模式
 8：拼音评测模式
+关于每种评测模式的详细介绍，以及适用场景，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
      */
     public $EvalMode;
 
@@ -271,6 +277,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
      * @param string $SessionId 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
      * @param string $RefText 被评估语音对应的文本，仅支持中文和英文。
 句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。
+关于RefText的文本键入要求，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
 如需要在评测模式下使用自定义注音（支持中英文），可以通过设置「TextMode」参数实现，设置方式请参考[音素标注](https://cloud.tencent.com/document/product/884/33698)。
      * @param integer $WorkMode 语音输入模式
 0：流式分片
@@ -286,6 +293,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 6：句子多分支评测模式
 7：单词实时评测模式
 8：拼音评测模式
+关于每种评测模式的详细介绍，以及适用场景，请参考[评测模式介绍](https://cloud.tencent.com/document/product/884/56131)。
      * @param float $ScoreCoeff 评价苛刻指数。取值为[1.0 - 4.0]范围内的浮点数，用于平滑不同年龄段的分数。
 1.0：适用于最小年龄段用户，一般对应儿童应用场景；
 4.0：适用于最高年龄段用户，一般对应成人严格打分场景。

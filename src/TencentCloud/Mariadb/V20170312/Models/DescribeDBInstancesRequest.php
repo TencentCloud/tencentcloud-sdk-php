@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeys(array $TagKeys) 设置按标签key查询
  * @method string getFilterInstanceType() 获取实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
  * @method void setFilterInstanceType(string $FilterInstanceType) 设置实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
+ * @method array getStatus() 获取按照实例状态进行筛选
+ * @method void setStatus(array $Status) 设置按照实例状态进行筛选
+ * @method array getExcludeStatus() 获取排除实例状态
+ * @method void setExcludeStatus(array $ExcludeStatus) 设置排除实例状态
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -143,6 +147,16 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $FilterInstanceType;
 
     /**
+     * @var array 按照实例状态进行筛选
+     */
+    public $Status;
+
+    /**
+     * @var array 排除实例状态
+     */
+    public $ExcludeStatus;
+
+    /**
      * @param array $InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：tdsql-ow728lmc。每次请求的实例的上限为100。
      * @param string $SearchName 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
      * @param string $SearchKey 搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
@@ -160,6 +174,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $ExclusterIds 按独享集群ID过滤实例，独享集群ID形如dbdc-4ih6uct9
      * @param array $TagKeys 按标签key查询
      * @param string $FilterInstanceType 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
+     * @param array $Status 按照实例状态进行筛选
+     * @param array $ExcludeStatus 排除实例状态
      */
     function __construct()
     {
@@ -240,6 +256,14 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterInstanceType",$param) and $param["FilterInstanceType"] !== null) {
             $this->FilterInstanceType = $param["FilterInstanceType"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ExcludeStatus",$param) and $param["ExcludeStatus"] !== null) {
+            $this->ExcludeStatus = $param["ExcludeStatus"];
         }
     }
 }

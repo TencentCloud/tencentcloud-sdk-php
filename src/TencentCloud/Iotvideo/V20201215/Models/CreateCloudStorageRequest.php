@@ -54,6 +54,8 @@ ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
 yc1w7d : 全时7天存储周套餐。
 ye1w7d : 事件7天存储周套餐。
+ * @method integer getOverride() 获取如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
+ * @method void setOverride(integer $Override) 设置如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
  */
 class CreateCloudStorageRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ ye1w7d : 事件7天存储周套餐。
     public $PackageId;
 
     /**
+     * @var integer 如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
+     */
+    public $Override;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $PackageId 云存套餐ID：
@@ -104,6 +111,7 @@ ye1y7d ：事件7天存储年套餐。
 ye1y30d ：事件30天存储年套餐。
 yc1w7d : 全时7天存储周套餐。
 ye1w7d : 事件7天存储周套餐。
+     * @param integer $Override 如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ ye1w7d : 事件7天存储周套餐。
 
         if (array_key_exists("PackageId",$param) and $param["PackageId"] !== null) {
             $this->PackageId = $param["PackageId"];
+        }
+
+        if (array_key_exists("Override",$param) and $param["Override"] !== null) {
+            $this->Override = $param["Override"];
         }
     }
 }

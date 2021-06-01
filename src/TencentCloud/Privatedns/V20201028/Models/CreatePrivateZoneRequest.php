@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcSet(array $VpcSet) 设置创建私有域的同时，将其关联至VPC
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
- * @method string getDnsForwardStatus() 获取是否开启子域名递归, ENABLED， DISABLED
- * @method void setDnsForwardStatus(string $DnsForwardStatus) 设置是否开启子域名递归, ENABLED， DISABLED
+ * @method string getDnsForwardStatus() 获取是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
+ * @method void setDnsForwardStatus(string $DnsForwardStatus) 设置是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
  * @method array getVpcs() 获取创建私有域的同时，将其关联至VPC
  * @method void setVpcs(array $Vpcs) 设置创建私有域的同时，将其关联至VPC
  */
@@ -56,7 +56,7 @@ class CreatePrivateZoneRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var string 是否开启子域名递归, ENABLED， DISABLED
+     * @var string 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
      */
     public $DnsForwardStatus;
 
@@ -70,7 +70,7 @@ class CreatePrivateZoneRequest extends AbstractModel
      * @param array $TagSet 创建私有域的同时，为其打上标签
      * @param array $VpcSet 创建私有域的同时，将其关联至VPC
      * @param string $Remark 备注
-     * @param string $DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED
+     * @param string $DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
      * @param array $Vpcs 创建私有域的同时，将其关联至VPC
      */
     function __construct()

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取实例ID的数组
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID的数组
+ * @method string getRestartTime() 获取重启时间
+ * @method void setRestartTime(string $RestartTime) 设置重启时间
  */
 class RestartDBInstancesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class RestartDBInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var string 重启时间
+     */
+    public $RestartTime;
+
+    /**
      * @param array $InstanceIds 实例ID的数组
+     * @param string $RestartTime 重启时间
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class RestartDBInstancesRequest extends AbstractModel
         }
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("RestartTime",$param) and $param["RestartTime"] !== null) {
+            $this->RestartTime = $param["RestartTime"];
         }
     }
 }

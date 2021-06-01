@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPrivateZone请求参数结构体
  *
- * @method string getZoneId() 获取域名，格式必须是标准的TLD
- * @method void setZoneId(string $ZoneId) 设置域名，格式必须是标准的TLD
+ * @method string getZoneId() 获取私有域ID
+ * @method void setZoneId(string $ZoneId) 设置私有域ID
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
  * @method string getDnsForwardStatus() 获取是否开启子域名递归, ENABLED， DISABLED
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyPrivateZoneRequest extends AbstractModel
 {
     /**
-     * @var string 域名，格式必须是标准的TLD
+     * @var string 私有域ID
      */
     public $ZoneId;
 
@@ -45,7 +45,7 @@ class ModifyPrivateZoneRequest extends AbstractModel
     public $DnsForwardStatus;
 
     /**
-     * @param string $ZoneId 域名，格式必须是标准的TLD
+     * @param string $ZoneId 私有域ID
      * @param string $Remark 备注
      * @param string $DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED
      */

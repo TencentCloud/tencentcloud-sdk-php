@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRequestData请求参数结构体
  *
- * @method string getTimeRangeBegin() 获取请求量统计起始时间
- * @method void setTimeRangeBegin(string $TimeRangeBegin) 设置请求量统计起始时间
+ * @method string getTimeRangeBegin() 获取请求量统计起始时间，格式：2020-11-22 00:00:00
+ * @method void setTimeRangeBegin(string $TimeRangeBegin) 设置请求量统计起始时间，格式：2020-11-22 00:00:00
  * @method array getFilters() 获取筛选参数：
  * @method void setFilters(array $Filters) 设置筛选参数：
- * @method string getTimeRangeEnd() 获取请求量统计结束时间
- * @method void setTimeRangeEnd(string $TimeRangeEnd) 设置请求量统计结束时间
+ * @method string getTimeRangeEnd() 获取请求量统计结束时间，格式：2020-11-22 23:59:59
+ * @method void setTimeRangeEnd(string $TimeRangeEnd) 设置请求量统计结束时间，格式：2020-11-22 23:59:59
  */
 class DescribeRequestDataRequest extends AbstractModel
 {
     /**
-     * @var string 请求量统计起始时间
+     * @var string 请求量统计起始时间，格式：2020-11-22 00:00:00
      */
     public $TimeRangeBegin;
 
@@ -40,14 +40,14 @@ class DescribeRequestDataRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 请求量统计结束时间
+     * @var string 请求量统计结束时间，格式：2020-11-22 23:59:59
      */
     public $TimeRangeEnd;
 
     /**
-     * @param string $TimeRangeBegin 请求量统计起始时间
+     * @param string $TimeRangeBegin 请求量统计起始时间，格式：2020-11-22 00:00:00
      * @param array $Filters 筛选参数：
-     * @param string $TimeRangeEnd 请求量统计结束时间
+     * @param string $TimeRangeEnd 请求量统计结束时间，格式：2020-11-22 23:59:59
      */
     function __construct()
     {

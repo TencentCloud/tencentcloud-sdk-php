@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTimeRangeBegin() 获取请求量统计起始时间
  * @method void setTimeRangeBegin(string $TimeRangeBegin) 设置请求量统计起始时间
- * @method array getFilters() 获取筛选参数：
- * @method void setFilters(array $Filters) 设置筛选参数：
+ * @method array getFilters() 获取筛选参数：ZoneId：私有域ID；Domain：私有域；OperatorUin：操作者账号ID
+ * @method void setFilters(array $Filters) 设置筛选参数：ZoneId：私有域ID；Domain：私有域；OperatorUin：操作者账号ID
  * @method string getTimeRangeEnd() 获取请求量统计结束时间
  * @method void setTimeRangeEnd(string $TimeRangeEnd) 设置请求量统计结束时间
  * @method integer getOffset() 获取分页偏移量，从0开始
@@ -39,7 +39,7 @@ class DescribeAuditLogRequest extends AbstractModel
     public $TimeRangeBegin;
 
     /**
-     * @var array 筛选参数：
+     * @var array 筛选参数：ZoneId：私有域ID；Domain：私有域；OperatorUin：操作者账号ID
      */
     public $Filters;
 
@@ -60,7 +60,7 @@ class DescribeAuditLogRequest extends AbstractModel
 
     /**
      * @param string $TimeRangeBegin 请求量统计起始时间
-     * @param array $Filters 筛选参数：
+     * @param array $Filters 筛选参数：ZoneId：私有域ID；Domain：私有域；OperatorUin：操作者账号ID
      * @param string $TimeRangeEnd 请求量统计结束时间
      * @param integer $Offset 分页偏移量，从0开始
      * @param integer $Limit 分页限制数目， 最大100，默认20

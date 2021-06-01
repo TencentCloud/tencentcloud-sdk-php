@@ -122,6 +122,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\EditPrivilegeRuleResponse EditPrivilegeRule(Models\EditPrivilegeRuleRequest $req) 新增或修改本地提权规则
  * @method Models\EditReverseShellRuleResponse EditReverseShellRule(Models\EditReverseShellRuleRequest $req) 编辑反弹Shell规则
  * @method Models\EditTagsResponse EditTags(Models\EditTagsRequest $req) 新增或编辑标签
+ * @method Models\ExportAssetCoreModuleListResponse ExportAssetCoreModuleList(Models\ExportAssetCoreModuleListRequest $req) 导出资产管理内核模块列表
  * @method Models\ExportAttackLogsResponse ExportAttackLogs(Models\ExportAttackLogsRequest $req) 导出网络攻击日志
  * @method Models\ExportBashEventsResponse ExportBashEvents(Models\ExportBashEventsRequest $req) 导出高危命令事件
  * @method Models\ExportBruteAttacksResponse ExportBruteAttacks(Models\ExportBruteAttacksRequest $req) 本接口 (ExportBruteAttacks) 用于导出密码破解记录成CSV文件。

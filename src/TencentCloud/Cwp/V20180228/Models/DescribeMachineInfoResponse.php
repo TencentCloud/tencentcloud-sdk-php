@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentVersion(string $AgentVersion) 设置agent版本号
  * @method string getProVersionDeadline() 获取专业版到期时间(仅预付费)
  * @method void setProVersionDeadline(string $ProVersionDeadline) 设置专业版到期时间(仅预付费)
+ * @method integer getHasAssetScan() 获取是否有资产扫描记录，0无，1有
+ * @method void setHasAssetScan(integer $HasAssetScan) 设置是否有资产扫描记录，0无，1有
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -176,6 +178,11 @@ class DescribeMachineInfoResponse extends AbstractModel
     public $ProVersionDeadline;
 
     /**
+     * @var integer 是否有资产扫描记录，0无，1有
+     */
+    public $HasAssetScan;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -207,6 +214,7 @@ class DescribeMachineInfoResponse extends AbstractModel
      * @param integer $FreeVulsLeft 免费漏洞剩余检测数量。
      * @param string $AgentVersion agent版本号
      * @param string $ProVersionDeadline 专业版到期时间(仅预付费)
+     * @param integer $HasAssetScan 是否有资产扫描记录，0无，1有
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -292,6 +300,10 @@ class DescribeMachineInfoResponse extends AbstractModel
 
         if (array_key_exists("ProVersionDeadline",$param) and $param["ProVersionDeadline"] !== null) {
             $this->ProVersionDeadline = $param["ProVersionDeadline"];
+        }
+
+        if (array_key_exists("HasAssetScan",$param) and $param["HasAssetScan"] !== null) {
+            $this->HasAssetScan = $param["HasAssetScan"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

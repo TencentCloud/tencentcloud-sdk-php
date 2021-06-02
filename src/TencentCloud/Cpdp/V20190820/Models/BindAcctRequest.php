@@ -90,6 +90,8 @@ release: 现网环境
 sandbox: 沙箱环境
 development: 开发环境
 缺省: release
+ * @method AgencyClientInfo getAgencyClientInfo() 获取经办人信息
+ * @method void setAgencyClientInfo(AgencyClientInfo $AgencyClientInfo) 设置经办人信息
  */
 class BindAcctRequest extends AbstractModel
 {
@@ -193,6 +195,11 @@ development: 开发环境
     public $MidasEnvironment;
 
     /**
+     * @var AgencyClientInfo 经办人信息
+     */
+    public $AgencyClientInfo;
+
+    /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户
      * @param integer $BindType 1 – 小额转账验证
@@ -228,6 +235,7 @@ release: 现网环境
 sandbox: 沙箱环境
 development: 开发环境
 缺省: release
+     * @param AgencyClientInfo $AgencyClientInfo 经办人信息
      */
     function __construct()
     {
@@ -304,6 +312,11 @@ development: 开发环境
 
         if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
             $this->MidasEnvironment = $param["MidasEnvironment"];
+        }
+
+        if (array_key_exists("AgencyClientInfo",$param) and $param["AgencyClientInfo"] !== null) {
+            $this->AgencyClientInfo = new AgencyClientInfo();
+            $this->AgencyClientInfo->deserialize($param["AgencyClientInfo"]);
         }
     }
 }

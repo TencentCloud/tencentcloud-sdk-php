@@ -47,10 +47,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubMchType() 获取子商户类型：
 个人: personal
 企业: enterprise
+个体工商户: individual
 缺省: enterprise
  * @method void setSubMchType(string $SubMchType) 设置子商户类型：
 个人: personal
 企业: enterprise
+个体工商户: individual
 缺省: enterprise
  * @method string getShortName() 获取不填则默认子商户名称
  * @method void setShortName(string $ShortName) 设置不填则默认子商户名称
@@ -90,6 +92,12 @@ release: 现网环境
 sandbox: 沙箱环境
 development: 开发环境
 缺省: release
+ * @method string getSubMerchantStoreName() 获取店铺名称
+企业、个体工商户必输
+ * @method void setSubMerchantStoreName(string $SubMerchantStoreName) 设置店铺名称
+企业、个体工商户必输
+ * @method OrganizationInfo getOrganizationInfo() 获取公司信息
+ * @method void setOrganizationInfo(OrganizationInfo $OrganizationInfo) 设置公司信息
  */
 class CreateAcctRequest extends AbstractModel
 {
@@ -145,6 +153,7 @@ class CreateAcctRequest extends AbstractModel
      * @var string 子商户类型：
 个人: personal
 企业: enterprise
+个体工商户: individual
 缺省: enterprise
      */
     public $SubMchType;
@@ -197,6 +206,17 @@ development: 开发环境
     public $MidasEnvironment;
 
     /**
+     * @var string 店铺名称
+企业、个体工商户必输
+     */
+    public $SubMerchantStoreName;
+
+    /**
+     * @var OrganizationInfo 公司信息
+     */
+    public $OrganizationInfo;
+
+    /**
      * @param string $MidasAppId 聚鑫平台分配的支付MidasAppId
      * @param string $SubMchId 业务平台的子商户ID，唯一
      * @param string $SubMchName 子商户名称
@@ -212,6 +232,7 @@ development: 开发环境
      * @param string $SubMchType 子商户类型：
 个人: personal
 企业: enterprise
+个体工商户: individual
 缺省: enterprise
      * @param string $ShortName 不填则默认子商户名称
      * @param string $SubMerchantMemberType 子商户会员类型：
@@ -232,6 +253,9 @@ release: 现网环境
 sandbox: 沙箱环境
 development: 开发环境
 缺省: release
+     * @param string $SubMerchantStoreName 店铺名称
+企业、个体工商户必输
+     * @param OrganizationInfo $OrganizationInfo 公司信息
      */
     function __construct()
     {
@@ -312,6 +336,15 @@ development: 开发环境
 
         if (array_key_exists("MidasEnvironment",$param) and $param["MidasEnvironment"] !== null) {
             $this->MidasEnvironment = $param["MidasEnvironment"];
+        }
+
+        if (array_key_exists("SubMerchantStoreName",$param) and $param["SubMerchantStoreName"] !== null) {
+            $this->SubMerchantStoreName = $param["SubMerchantStoreName"];
+        }
+
+        if (array_key_exists("OrganizationInfo",$param) and $param["OrganizationInfo"] !== null) {
+            $this->OrganizationInfo = new OrganizationInfo();
+            $this->OrganizationInfo->deserialize($param["OrganizationInfo"]);
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyIndex(integer $PolicyIndex) 设置策略索引
  * @method string getDescription() 获取备注
  * @method void setDescription(string $Description) 设置备注
- * @method string getCidrBlock() 获取192.168.1.0/24
- * @method void setCidrBlock(string $CidrBlock) 设置192.168.1.0/24
+ * @method string getCidrBlock() 获取运行访问的公网IP地址端
+ * @method void setCidrBlock(string $CidrBlock) 设置运行访问的公网IP地址端
  * @method string getPolicyVersion() 获取安全策略的版本
  * @method void setPolicyVersion(string $PolicyVersion) 设置安全策略的版本
  */
@@ -42,7 +42,7 @@ class SecurityPolicy extends AbstractModel
     public $Description;
 
     /**
-     * @var string 192.168.1.0/24
+     * @var string 运行访问的公网IP地址端
      */
     public $CidrBlock;
 
@@ -54,7 +54,7 @@ class SecurityPolicy extends AbstractModel
     /**
      * @param integer $PolicyIndex 策略索引
      * @param string $Description 备注
-     * @param string $CidrBlock 192.168.1.0/24
+     * @param string $CidrBlock 运行访问的公网IP地址端
      * @param string $PolicyVersion 安全策略的版本
      */
     function __construct()

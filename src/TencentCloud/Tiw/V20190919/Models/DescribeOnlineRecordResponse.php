@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
 - AUTO: 房间内长时间没有音视频上行及白板操作导致自动停止录制
 - USER_CALL: 主动调用了停止录制接口
 - EXCEPTION: 录制异常结束
+- FORCE_STOP: 强制停止录制，一般是因为暂停超过90分钟或者录制总时长超过24小时。
  * @method void setFinishReason(string $FinishReason) 设置录制结束原因，
 - AUTO: 房间内长时间没有音视频上行及白板操作导致自动停止录制
 - USER_CALL: 主动调用了停止录制接口
 - EXCEPTION: 录制异常结束
+- FORCE_STOP: 强制停止录制，一般是因为暂停超过90分钟或者录制总时长超过24小时。
  * @method string getTaskId() 获取需要查询结果的录制任务Id
  * @method void setTaskId(string $TaskId) 设置需要查询结果的录制任务Id
  * @method string getStatus() 获取录制任务状态
@@ -74,6 +76,7 @@ class DescribeOnlineRecordResponse extends AbstractModel
 - AUTO: 房间内长时间没有音视频上行及白板操作导致自动停止录制
 - USER_CALL: 主动调用了停止录制接口
 - EXCEPTION: 录制异常结束
+- FORCE_STOP: 强制停止录制，一般是因为暂停超过90分钟或者录制总时长超过24小时。
      */
     public $FinishReason;
 
@@ -153,6 +156,7 @@ class DescribeOnlineRecordResponse extends AbstractModel
 - AUTO: 房间内长时间没有音视频上行及白板操作导致自动停止录制
 - USER_CALL: 主动调用了停止录制接口
 - EXCEPTION: 录制异常结束
+- FORCE_STOP: 强制停止录制，一般是因为暂停超过90分钟或者录制总时长超过24小时。
      * @param string $TaskId 需要查询结果的录制任务Id
      * @param string $Status 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）

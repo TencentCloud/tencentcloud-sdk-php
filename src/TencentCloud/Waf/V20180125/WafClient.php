@@ -29,6 +29,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteDownloadRecordResponse DeleteDownloadRecord(Models\DeleteDownloadRecordRequest $req) 删除访问日志下载记录
  * @method Models\DeleteSessionResponse DeleteSession(Models\DeleteSessionRequest $req) 删除CC攻击的session设置
  * @method Models\DescribeCustomRulesResponse DescribeCustomRules(Models\DescribeCustomRulesRequest $req) 获取防护配置中的自定义策略列表
+ * @method Models\DescribeFlowTrendResponse DescribeFlowTrend(Models\DescribeFlowTrendRequest $req) 获取waf流量访问趋势
  * @method Models\DescribeUserClbWafRegionsResponse DescribeUserClbWafRegions(Models\DescribeUserClbWafRegionsRequest $req) 在负载均衡型WAF的添加、编辑域名配置的时候，需要展示负载均衡型WAF（clb-waf)支持的地域列表，通过DescribeUserClbWafRegions既可以获得当前对客户已经开放的地域列表
  * @method Models\ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(Models\ModifyCustomRuleStatusRequest $req) 开启或禁用自定义策略
  */

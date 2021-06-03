@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHost(string $Host) 设置host 地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocol() 获取协议，选项为 http， https，默认为 http
+ * @method void setProtocol(string $Protocol) 设置协议，选项为 http， https，默认为 http
  */
 class IngressRule extends AbstractModel
 {
@@ -41,9 +43,15 @@ class IngressRule extends AbstractModel
     public $Host;
 
     /**
+     * @var string 协议，选项为 http， https，默认为 http
+     */
+    public $Protocol;
+
+    /**
      * @param IngressRuleValue $Http ingress rule value
      * @param string $Host host 地址
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Protocol 协议，选项为 http， https，默认为 http
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class IngressRule extends AbstractModel
 
         if (array_key_exists("Host",$param) and $param["Host"] !== null) {
             $this->Host = $param["Host"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

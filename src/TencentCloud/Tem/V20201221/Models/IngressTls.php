@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ingress tls 配置
  *
- * @method array getHosts() 获取host 数组
- * @method void setHosts(array $Hosts) 设置host 数组
- * @method string getSecretName() 获取secret name
- * @method void setSecretName(string $SecretName) 设置secret name
+ * @method array getHosts() 获取host 数组, 空数组表示全部域名的默认证书
+ * @method void setHosts(array $Hosts) 设置host 数组, 空数组表示全部域名的默认证书
+ * @method string getSecretName() 获取secret name，如使用证书，则填空字符串
+ * @method void setSecretName(string $SecretName) 设置secret name，如使用证书，则填空字符串
+ * @method string getCertificateId() 获取SSL Certificate Id
+ * @method void setCertificateId(string $CertificateId) 设置SSL Certificate Id
  */
 class IngressTls extends AbstractModel
 {
     /**
-     * @var array host 数组
+     * @var array host 数组, 空数组表示全部域名的默认证书
      */
     public $Hosts;
 
     /**
-     * @var string secret name
+     * @var string secret name，如使用证书，则填空字符串
      */
     public $SecretName;
 
     /**
-     * @param array $Hosts host 数组
-     * @param string $SecretName secret name
+     * @var string SSL Certificate Id
+     */
+    public $CertificateId;
+
+    /**
+     * @param array $Hosts host 数组, 空数组表示全部域名的默认证书
+     * @param string $SecretName secret name，如使用证书，则填空字符串
+     * @param string $CertificateId SSL Certificate Id
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class IngressTls extends AbstractModel
 
         if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
             $this->SecretName = $param["SecretName"];
+        }
+
+        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
+            $this->CertificateId = $param["CertificateId"];
         }
     }
 }

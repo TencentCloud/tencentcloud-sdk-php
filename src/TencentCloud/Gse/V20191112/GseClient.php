@@ -83,6 +83,7 @@ use TencentCloud\Gse\V20191112\Models as Models;
  * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 本接口（DescribeUserQuota）获取用户单个模块配额。
  * @method Models\DescribeUserQuotasResponse DescribeUserQuotas(Models\DescribeUserQuotasRequest $req) 本接口（DescribeUserQuotas）用于获取用户配额
  * @method Models\DetachCcnInstancesResponse DetachCcnInstances(Models\DetachCcnInstancesRequest $req) 本接口（DetachCcnInstances）用于解关联云联网实例。
+ * @method Models\EndGameServerSessionAndProcessResponse EndGameServerSessionAndProcess(Models\EndGameServerSessionAndProcessRequest $req) 本接口（EndGameServerSessionAndProcess）用于终止游戏服务器会话和对应的进程。
  * @method Models\GetGameServerInstanceLogUrlResponse GetGameServerInstanceLogUrl(Models\GetGameServerInstanceLogUrlRequest $req) 本接口用于获取游戏服务器实例的日志URL。
  * @method Models\GetGameServerSessionLogUrlResponse GetGameServerSessionLogUrl(Models\GetGameServerSessionLogUrlRequest $req) 本接口（GetGameServerSessionLogUrl）用于获取游戏服务器会话的日志URL。
  * @method Models\GetInstanceAccessResponse GetInstanceAccess(Models\GetInstanceAccessRequest $req) 本接口（GetInstanceAccess）用于获取实例登录所需要的凭据。

@@ -24,21 +24,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableIndex(integer $TableIndex) 设置表格位置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getOutDiagnosis() 获取""
+ * @method BlockInfo getOutDiagnosis() 获取出院诊断
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutDiagnosis(BlockInfo $OutDiagnosis) 设置""
+ * @method void setOutDiagnosis(BlockInfo $OutDiagnosis) 设置出院诊断
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getDiseaseCode() 获取""
+ * @method BlockInfo getDiseaseCode() 获取疾病编码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiseaseCode(BlockInfo $DiseaseCode) 设置""
+ * @method void setDiseaseCode(BlockInfo $DiseaseCode) 设置疾病编码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getInStatus() 获取""
+ * @method BlockInfo getInStatus() 获取入院情况
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInStatus(BlockInfo $InStatus) 设置""
+ * @method void setInStatus(BlockInfo $InStatus) 设置入院情况
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getOutStatus() 获取""
+ * @method BlockInfo getOutStatus() 获取出院情况
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutStatus(BlockInfo $OutStatus) 设置""
+ * @method void setOutStatus(BlockInfo $OutStatus) 设置出院情况
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DischargeDiagnosis extends AbstractModel
@@ -50,25 +50,25 @@ class DischargeDiagnosis extends AbstractModel
     public $TableIndex;
 
     /**
-     * @var BlockInfo ""
+     * @var BlockInfo 出院诊断
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutDiagnosis;
 
     /**
-     * @var BlockInfo ""
+     * @var BlockInfo 疾病编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiseaseCode;
 
     /**
-     * @var BlockInfo ""
+     * @var BlockInfo 入院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InStatus;
 
     /**
-     * @var BlockInfo ""
+     * @var BlockInfo 出院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutStatus;
@@ -76,13 +76,13 @@ class DischargeDiagnosis extends AbstractModel
     /**
      * @param integer $TableIndex 表格位置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $OutDiagnosis ""
+     * @param BlockInfo $OutDiagnosis 出院诊断
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $DiseaseCode ""
+     * @param BlockInfo $DiseaseCode 疾病编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $InStatus ""
+     * @param BlockInfo $InStatus 入院情况
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $OutStatus ""
+     * @param BlockInfo $OutStatus 出院情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

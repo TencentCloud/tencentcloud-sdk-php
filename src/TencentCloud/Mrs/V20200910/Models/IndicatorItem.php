@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 指标项
  *
- * @method string getCode() 获取“”
+ * @method string getCode() 获取英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCode(string $Code) 设置“”
+ * @method void setCode(string $Code) 设置英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScode() 获取“”
+ * @method string getScode() 获取标准缩写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScode(string $Scode) 设置“”
+ * @method void setScode(string $Scode) 设置标准缩写
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取“”
+ * @method string getName() 获取项目名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置“”
+ * @method void setName(string $Name) 设置项目名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSname() 获取“”
+ * @method string getSname() 获取标准名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSname(string $Sname) 设置“”
+ * @method void setSname(string $Sname) 设置标准名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResult() 获取“”
+ * @method string getResult() 获取结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置“”
+ * @method void setResult(string $Result) 设置结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUnit() 获取“”
+ * @method string getUnit() 获取单位
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnit(string $Unit) 设置“”
+ * @method void setUnit(string $Unit) 设置单位
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRange() 获取“”
+ * @method string getRange() 获取参考范围
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRange(string $Range) 设置“”
+ * @method void setRange(string $Range) 设置参考范围
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getArrow() 获取“”
+ * @method string getArrow() 获取上下箭头
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArrow(string $Arrow) 设置“”
+ * @method void setArrow(string $Arrow) 设置上下箭头
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getNormal() 获取是否正常
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,49 +60,49 @@ use TencentCloud\Common\AbstractModel;
 class IndicatorItem extends AbstractModel
 {
     /**
-     * @var string “”
+     * @var string 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
-     * @var string “”
+     * @var string 标准缩写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scode;
 
     /**
-     * @var string “”
+     * @var string 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string “”
+     * @var string 标准名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sname;
 
     /**
-     * @var string “”
+     * @var string 结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
-     * @var string “”
+     * @var string 单位
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
-     * @var string “”
+     * @var string 参考范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Range;
 
     /**
-     * @var string “”
+     * @var string 上下箭头
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Arrow;
@@ -114,21 +114,21 @@ class IndicatorItem extends AbstractModel
     public $Normal;
 
     /**
-     * @param string $Code “”
+     * @param string $Code 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Scode “”
+     * @param string $Scode 标准缩写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name “”
+     * @param string $Name 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Sname “”
+     * @param string $Sname 标准名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Result “”
+     * @param string $Result 结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Unit “”
+     * @param string $Unit 单位
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Range “”
+     * @param string $Range 参考范围
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Arrow “”
+     * @param string $Arrow 上下箭头
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Normal 是否正常
 注意：此字段可能返回 null，表示取不到有效值。

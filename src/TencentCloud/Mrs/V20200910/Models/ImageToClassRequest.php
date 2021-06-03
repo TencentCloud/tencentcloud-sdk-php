@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImageToClass请求参数结构体
  *
- * @method array getImageInfoList() 获取图片列表
- * @method void setImageInfoList(array $ImageInfoList) 设置图片列表
+ * @method array getImageInfoList() 获取图片列表，允许传入多张图片，支持传入图片的url或base64编码
+ * @method void setImageInfoList(array $ImageInfoList) 设置图片列表，允许传入多张图片，支持传入图片的url或base64编码
  * @method HandleParam getHandleParam() 获取图片处理参数
  * @method void setHandleParam(HandleParam $HandleParam) 设置图片处理参数
  * @method integer getType() 获取图片类型
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ImageToClassRequest extends AbstractModel
 {
     /**
-     * @var array 图片列表
+     * @var array 图片列表，允许传入多张图片，支持传入图片的url或base64编码
      */
     public $ImageInfoList;
 
@@ -45,7 +45,7 @@ class ImageToClassRequest extends AbstractModel
     public $Type;
 
     /**
-     * @param array $ImageInfoList 图片列表
+     * @param array $ImageInfoList 图片列表，允许传入多张图片，支持传入图片的url或base64编码
      * @param HandleParam $HandleParam 图片处理参数
      * @param integer $Type 图片类型
      */

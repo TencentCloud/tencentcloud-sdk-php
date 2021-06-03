@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 值
  *
- * @method string getGrade() 获取“”
+ * @method string getGrade() 获取等级
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGrade(string $Grade) 设置“”
+ * @method void setGrade(string $Grade) 设置等级
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPercent() 获取“”
+ * @method array getPercent() 获取百分比
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPercent(array $Percent) 设置“”
+ * @method void setPercent(array $Percent) 设置百分比
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPositive() 获取阳性
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
 class Value extends AbstractModel
 {
     /**
-     * @var string “”
+     * @var string 等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Grade;
 
     /**
-     * @var array “”
+     * @var array 百分比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Percent;
@@ -54,9 +54,9 @@ class Value extends AbstractModel
     public $Positive;
 
     /**
-     * @param string $Grade “”
+     * @param string $Grade 等级
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Percent “”
+     * @param array $Percent 百分比
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Positive 阳性
 注意：此字段可能返回 null，表示取不到有效值。

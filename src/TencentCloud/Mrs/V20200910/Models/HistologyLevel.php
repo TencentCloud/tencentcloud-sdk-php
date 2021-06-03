@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 等级
  *
- * @method string getGrade() 获取“”
+ * @method string getGrade() 获取等级
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGrade(string $Grade) 设置“”
+ * @method void setGrade(string $Grade) 设置等级
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIndex() 获取原文位置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class HistologyLevel extends AbstractModel
 {
     /**
-     * @var string “”
+     * @var string 等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Grade;
@@ -54,7 +54,7 @@ class HistologyLevel extends AbstractModel
     public $Src;
 
     /**
-     * @param string $Grade “”
+     * @param string $Grade 等级
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 原文位置
 注意：此字段可能返回 null，表示取不到有效值。

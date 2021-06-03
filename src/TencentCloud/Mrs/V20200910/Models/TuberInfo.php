@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(array $Size) 设置大小
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Multiple getMultiple() 获取数量
+ * @method Multiple getMultiple() 获取多发
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMultiple(Multiple $Multiple) 设置数量
+ * @method void setMultiple(Multiple $Multiple) 设置多发
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AspectRatio getAspectRatio() 获取纵横比
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,25 +52,25 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRearEcho(BlockInfo $RearEcho) 设置外部回声
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Elastic getElastic() 获取质地
+ * @method Elastic getElastic() 获取质地弹性
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setElastic(Elastic $Elastic) 设置质地
+ * @method void setElastic(Elastic $Elastic) 设置质地弹性
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getShape() 获取形态
+ * @method BlockInfo getShape() 获取形状
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShape(BlockInfo $Shape) 设置形态
+ * @method void setShape(BlockInfo $Shape) 设置形状
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getShapeAttr() 获取形态属性
+ * @method BlockInfo getShapeAttr() 获取形态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShapeAttr(BlockInfo $ShapeAttr) 设置形态属性
+ * @method void setShapeAttr(BlockInfo $ShapeAttr) 设置形态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getSkinMedulla() 获取“”
+ * @method BlockInfo getSkinMedulla() 获取皮髓质信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSkinMedulla(BlockInfo $SkinMedulla) 设置“”
+ * @method void setSkinMedulla(BlockInfo $SkinMedulla) 设置皮髓质信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getTrend() 获取“”
+ * @method BlockInfo getTrend() 获取变化趋势
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTrend(BlockInfo $Trend) 设置“”
+ * @method void setTrend(BlockInfo $Trend) 设置变化趋势
 注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getCalcification() 获取钙化
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,61 +96,61 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivity(BlockInfo $Activity) 设置活动度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getOperation() 获取“”
+ * @method BlockInfo getOperation() 获取手术情况
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOperation(BlockInfo $Operation) 设置“”
+ * @method void setOperation(BlockInfo $Operation) 设置手术情况
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getCDFI() 获取“”
+ * @method BlockInfo getCDFI() 获取血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCDFI(BlockInfo $CDFI) 设置“”
+ * @method void setCDFI(BlockInfo $CDFI) 设置血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIndex() 获取原文位置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置原文位置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getSizeStatus() 获取“”
+ * @method BlockInfo getSizeStatus() 获取大小状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSizeStatus(BlockInfo $SizeStatus) 设置“”
+ * @method void setSizeStatus(BlockInfo $SizeStatus) 设置大小状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getInnerEchoDistribution() 获取“”
+ * @method BlockInfo getInnerEchoDistribution() 获取内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInnerEchoDistribution(BlockInfo $InnerEchoDistribution) 设置“”
+ * @method void setInnerEchoDistribution(BlockInfo $InnerEchoDistribution) 设置内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInnerEchoType() 获取“”
+ * @method array getInnerEchoType() 获取内部回声类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInnerEchoType(array $InnerEchoType) 设置“”
+ * @method void setInnerEchoType(array $InnerEchoType) 设置内部回声类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getOutline() 获取“”
+ * @method BlockInfo getOutline() 获取轮廓
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutline(BlockInfo $Outline) 设置“”
+ * @method void setOutline(BlockInfo $Outline) 设置轮廓
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getStructure() 获取“”
+ * @method BlockInfo getStructure() 获取结构
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStructure(BlockInfo $Structure) 设置“”
+ * @method void setStructure(BlockInfo $Structure) 设置结构
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getDensity() 获取“”
+ * @method BlockInfo getDensity() 获取密度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDensity(BlockInfo $Density) 设置“”
+ * @method void setDensity(BlockInfo $Density) 设置密度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getVas() 获取“”
+ * @method BlockInfo getVas() 获取血管
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVas(BlockInfo $Vas) 设置“”
+ * @method void setVas(BlockInfo $Vas) 设置血管
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getCysticwall() 获取“”
+ * @method BlockInfo getCysticwall() 获取囊壁
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCysticwall(BlockInfo $Cysticwall) 设置“”
+ * @method void setCysticwall(BlockInfo $Cysticwall) 设置囊壁
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getCapsule() 获取“”
+ * @method BlockInfo getCapsule() 获取被膜
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCapsule(BlockInfo $Capsule) 设置“”
+ * @method void setCapsule(BlockInfo $Capsule) 设置被膜
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Size getIsthmusThicknese() 获取“”
+ * @method Size getIsthmusThicknese() 获取峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsthmusThicknese(Size $IsthmusThicknese) 设置“”
+ * @method void setIsthmusThicknese(Size $IsthmusThicknese) 设置峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSrc() 获取“”
+ * @method string getSrc() 获取原文
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSrc(string $Src) 设置“”
+ * @method void setSrc(string $Src) 设置原文
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TuberInfo extends AbstractModel
@@ -174,7 +174,7 @@ class TuberInfo extends AbstractModel
     public $Size;
 
     /**
-     * @var Multiple 数量
+     * @var Multiple 多发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Multiple;
@@ -204,31 +204,31 @@ class TuberInfo extends AbstractModel
     public $RearEcho;
 
     /**
-     * @var Elastic 质地
+     * @var Elastic 质地弹性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Elastic;
 
     /**
-     * @var BlockInfo 形态
+     * @var BlockInfo 形状
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Shape;
 
     /**
-     * @var BlockInfo 形态属性
+     * @var BlockInfo 形态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShapeAttr;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 皮髓质信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkinMedulla;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 变化趋势
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trend;
@@ -270,13 +270,13 @@ class TuberInfo extends AbstractModel
     public $Activity;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 手术情况
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operation;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CDFI;
@@ -288,67 +288,67 @@ class TuberInfo extends AbstractModel
     public $Index;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 大小状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SizeStatus;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InnerEchoDistribution;
 
     /**
-     * @var array “”
+     * @var array 内部回声类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InnerEchoType;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 轮廓
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Outline;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 结构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Structure;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 密度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Density;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 血管
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vas;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 囊壁
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cysticwall;
 
     /**
-     * @var BlockInfo “”
+     * @var BlockInfo 被膜
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Capsule;
 
     /**
-     * @var Size “”
+     * @var Size 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsthmusThicknese;
 
     /**
-     * @var string “”
+     * @var string 原文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
@@ -360,7 +360,7 @@ class TuberInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Size 大小
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Multiple $Multiple 数量
+     * @param Multiple $Multiple 多发
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AspectRatio $AspectRatio 纵横比
 注意：此字段可能返回 null，表示取不到有效值。
@@ -370,15 +370,15 @@ class TuberInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $RearEcho 外部回声
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Elastic $Elastic 质地
+     * @param Elastic $Elastic 质地弹性
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $Shape 形态
+     * @param BlockInfo $Shape 形状
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $ShapeAttr 形态属性
+     * @param BlockInfo $ShapeAttr 形态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $SkinMedulla “”
+     * @param BlockInfo $SkinMedulla 皮髓质信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $Trend “”
+     * @param BlockInfo $Trend 变化趋势
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Calcification 钙化
 注意：此字段可能返回 null，表示取不到有效值。
@@ -392,33 +392,33 @@ class TuberInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Activity 活动度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $Operation “”
+     * @param BlockInfo $Operation 手术情况
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $CDFI “”
+     * @param BlockInfo $CDFI 血液cdfi
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 原文位置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $SizeStatus “”
+     * @param BlockInfo $SizeStatus 大小状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $InnerEchoDistribution “”
+     * @param BlockInfo $InnerEchoDistribution 内部回声分布
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InnerEchoType “”
+     * @param array $InnerEchoType 内部回声类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $Outline “”
+     * @param BlockInfo $Outline 轮廓
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $Structure “”
+     * @param BlockInfo $Structure 结构
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $Density “”
+     * @param BlockInfo $Density 密度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $Vas “”
+     * @param BlockInfo $Vas 血管
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $Cysticwall “”
+     * @param BlockInfo $Cysticwall 囊壁
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $Capsule “”
+     * @param BlockInfo $Capsule 被膜
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Size $IsthmusThicknese “”
+     * @param Size $IsthmusThicknese 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Src “”
+     * @param string $Src 原文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

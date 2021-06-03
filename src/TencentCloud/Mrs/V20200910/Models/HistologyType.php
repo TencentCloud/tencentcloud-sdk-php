@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 类型
  *
- * @method string getInfiltration() 获取“”
+ * @method string getInfiltration() 获取浸润
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInfiltration(string $Infiltration) 设置“”
+ * @method void setInfiltration(string $Infiltration) 设置浸润
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIndex() 获取原文位置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class HistologyType extends AbstractModel
 {
     /**
-     * @var string “”
+     * @var string 浸润
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Infiltration;
@@ -64,7 +64,7 @@ class HistologyType extends AbstractModel
     public $Type;
 
     /**
-     * @param string $Infiltration “”
+     * @param string $Infiltration 浸润
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 原文位置
 注意：此字段可能返回 null，表示取不到有效值。

@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip(string $Vip) 设置clb ip
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getMixed() 获取是否混合 https，默认 false，可选值 true 代表有 https 协议监听
+ * @method void setMixed(boolean $Mixed) 设置是否混合 https，默认 false，可选值 true 代表有 https 协议监听
  */
 class IngressInfo extends AbstractModel
 {
@@ -102,6 +108,17 @@ class IngressInfo extends AbstractModel
     public $Vip;
 
     /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var boolean 是否混合 https，默认 false，可选值 true 代表有 https 协议监听
+     */
+    public $Mixed;
+
+    /**
      * @param string $NamespaceId tem namespaceId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EksNamespace eks namespace
@@ -116,6 +133,9 @@ class IngressInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip clb ip
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Mixed 是否混合 https，默认 false，可选值 true 代表有 https 协议监听
      */
     function __construct()
     {
@@ -174,6 +194,14 @@ class IngressInfo extends AbstractModel
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
             $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Mixed",$param) and $param["Mixed"] !== null) {
+            $this->Mixed = $param["Mixed"];
         }
     }
 }

@@ -20,81 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 月经史
  *
- * @method string getLastMenstrualPeriod() 获取“”
+ * @method string getLastMenstrualPeriod() 获取末次月经时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastMenstrualPeriod(string $LastMenstrualPeriod) 设置“”
+ * @method void setLastMenstrualPeriod(string $LastMenstrualPeriod) 设置末次月经时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMenstrualFlow() 获取“”
+ * @method string getMenstrualFlow() 获取经量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMenstrualFlow(string $MenstrualFlow) 设置“”
+ * @method void setMenstrualFlow(string $MenstrualFlow) 设置经量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMenarcheAge() 获取“”
+ * @method string getMenarcheAge() 获取月经初潮年龄
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMenarcheAge(string $MenarcheAge) 设置“”
+ * @method void setMenarcheAge(string $MenarcheAge) 设置月经初潮年龄
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMenstruationOrNot() 获取“”
+ * @method string getMenstruationOrNot() 获取是否来月经
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMenstruationOrNot(string $MenstruationOrNot) 设置“”
+ * @method void setMenstruationOrNot(string $MenstruationOrNot) 设置是否来月经
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMenstrualCycles() 获取“”
+ * @method string getMenstrualCycles() 获取月经周期
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMenstrualCycles(string $MenstrualCycles) 设置“”
+ * @method void setMenstrualCycles(string $MenstrualCycles) 设置月经周期
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMenstrualPeriod() 获取“”
+ * @method string getMenstrualPeriod() 获取月经持续天数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMenstrualPeriod(string $MenstrualPeriod) 设置“”
+ * @method void setMenstrualPeriod(string $MenstrualPeriod) 设置月经持续天数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MenstrualMedicalHistory extends AbstractModel
 {
     /**
-     * @var string “”
+     * @var string 末次月经时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastMenstrualPeriod;
 
     /**
-     * @var string “”
+     * @var string 经量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenstrualFlow;
 
     /**
-     * @var string “”
+     * @var string 月经初潮年龄
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenarcheAge;
 
     /**
-     * @var string “”
+     * @var string 是否来月经
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenstruationOrNot;
 
     /**
-     * @var string “”
+     * @var string 月经周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenstrualCycles;
 
     /**
-     * @var string “”
+     * @var string 月经持续天数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MenstrualPeriod;
 
     /**
-     * @param string $LastMenstrualPeriod “”
+     * @param string $LastMenstrualPeriod 末次月经时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MenstrualFlow “”
+     * @param string $MenstrualFlow 经量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MenarcheAge “”
+     * @param string $MenarcheAge 月经初潮年龄
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MenstruationOrNot “”
+     * @param string $MenstruationOrNot 是否来月经
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MenstrualCycles “”
+     * @param string $MenstrualCycles 月经周期
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MenstrualPeriod “”
+     * @param string $MenstrualPeriod 月经持续天数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

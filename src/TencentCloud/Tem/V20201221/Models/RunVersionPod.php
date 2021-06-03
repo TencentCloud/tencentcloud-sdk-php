@@ -28,8 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置状态
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getPodIp() 获取pod的ip
- * @method void setPodIp(string $PodIp) 设置pod的ip
+ * @method string getPodIp() 获取实例的ip
+ * @method void setPodIp(string $PodIp) 设置实例的ip
+ * @method string getZone() 获取可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeployVersion() 获取部署版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployVersion(string $DeployVersion) 设置部署版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunVersionPod extends AbstractModel
 {
@@ -54,16 +62,32 @@ class RunVersionPod extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string pod的ip
+     * @var string 实例的ip
      */
     public $PodIp;
+
+    /**
+     * @var string 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
+     * @var string 部署版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployVersion;
 
     /**
      * @param string $Webshell shell地址
      * @param string $PodId pod的id
      * @param string $Status 状态
      * @param string $CreateTime 创建时间
-     * @param string $PodIp pod的ip
+     * @param string $PodIp 实例的ip
+     * @param string $Zone 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeployVersion 部署版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +120,14 @@ class RunVersionPod extends AbstractModel
 
         if (array_key_exists("PodIp",$param) and $param["PodIp"] !== null) {
             $this->PodIp = $param["PodIp"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("DeployVersion",$param) and $param["DeployVersion"] !== null) {
+            $this->DeployVersion = $param["DeployVersion"];
         }
     }
 }

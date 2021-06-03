@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置原文位置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSrc() 获取“”
+ * @method string getSrc() 获取原文
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSrc(string $Src) 设置“”
+ * @method void setSrc(string $Src) 设置原文
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取“”
+ * @method string getName() 获取名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置“”
+ * @method void setName(string $Name) 设置名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Value getValue() 获取“”
- * @method void setValue(Value $Value) 设置“”
+ * @method Value getValue() 获取值
+ * @method void setValue(Value $Value) 设置值
  */
 class IHCInfo extends AbstractModel
 {
@@ -44,30 +44,30 @@ class IHCInfo extends AbstractModel
     public $Index;
 
     /**
-     * @var string “”
+     * @var string 原文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
-     * @var string “”
+     * @var string 名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var Value “”
+     * @var Value 值
      */
     public $Value;
 
     /**
      * @param array $Index 原文位置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Src “”
+     * @param string $Src 原文
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name “”
+     * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value $Value “”
+     * @param Value $Value 值
      */
     function __construct()
     {

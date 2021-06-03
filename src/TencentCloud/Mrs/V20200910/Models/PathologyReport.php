@@ -20,73 +20,73 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 病理报告
  *
- * @method Part getCancerPart() 获取""
+ * @method Part getCancerPart() 获取癌症部位
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCancerPart(Part $CancerPart) 设置""
+ * @method void setCancerPart(Part $CancerPart) 设置癌症部位
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCancerSize() 获取""
+ * @method array getCancerSize() 获取癌症部位大小
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCancerSize(array $CancerSize) 设置""
+ * @method void setCancerSize(array $CancerSize) 设置癌症部位大小
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescText() 获取描述文本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescText(string $DescText) 设置描述文本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method HistologyLevel getHistologyLevel() 获取癌症
+ * @method HistologyLevel getHistologyLevel() 获取组织学等级
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHistologyLevel(HistologyLevel $HistologyLevel) 设置癌症
+ * @method void setHistologyLevel(HistologyLevel $HistologyLevel) 设置组织学等级
 注意：此字段可能返回 null，表示取不到有效值。
- * @method HistologyType getHistologyType() 获取扩散
+ * @method HistologyType getHistologyType() 获取组织学类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHistologyType(HistologyType $HistologyType) 设置扩散
+ * @method void setHistologyType(HistologyType $HistologyType) 设置组织学类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getIHC() 获取淋巴
+ * @method array getIHC() 获取IHC信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIHC(array $IHC) 设置淋巴
+ * @method void setIHC(array $IHC) 设置IHC信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getInfiltrationDepth() 获取""
+ * @method BlockInfo getInfiltrationDepth() 获取浸润深度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInfiltrationDepth(BlockInfo $InfiltrationDepth) 设置""
+ * @method void setInfiltrationDepth(BlockInfo $InfiltrationDepth) 设置浸润深度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInvasive() 获取""
+ * @method array getInvasive() 获取肿瘤扩散
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInvasive(array $Invasive) 设置""
+ * @method void setInvasive(array $Invasive) 设置肿瘤扩散
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLymphNodes() 获取""
+ * @method array getLymphNodes() 获取淋巴结
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLymphNodes(array $LymphNodes) 设置""
+ * @method void setLymphNodes(array $LymphNodes) 设置淋巴结
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getPTNM() 获取""
+ * @method BlockInfo getPTNM() 获取PTNM信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPTNM(BlockInfo $PTNM) 设置""
+ * @method void setPTNM(BlockInfo $PTNM) 设置PTNM信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getPathologicalReportType() 获取""
+ * @method BlockInfo getPathologicalReportType() 获取病理报告类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPathologicalReportType(BlockInfo $PathologicalReportType) 设置""
+ * @method void setPathologicalReportType(BlockInfo $PathologicalReportType) 设置病理报告类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReportText() 获取""
+ * @method string getReportText() 获取报告原文
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReportText(string $ReportText) 设置""
+ * @method void setReportText(string $ReportText) 设置报告原文
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BlockInfo getSampleType() 获取""
+ * @method BlockInfo getSampleType() 获取标本类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSampleType(BlockInfo $SampleType) 设置""
+ * @method void setSampleType(BlockInfo $SampleType) 设置标本类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSummaryText() 获取""
+ * @method string getSummaryText() 获取结论文本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSummaryText(string $SummaryText) 设置""
+ * @method void setSummaryText(string $SummaryText) 设置结论文本
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PathologyReport extends AbstractModel
 {
     /**
-     * @var Part ""
+     * @var Part 癌症部位
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CancerPart;
 
     /**
-     * @var array ""
+     * @var array 癌症部位大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CancerSize;
@@ -98,99 +98,99 @@ class PathologyReport extends AbstractModel
     public $DescText;
 
     /**
-     * @var HistologyLevel 癌症
+     * @var HistologyLevel 组织学等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HistologyLevel;
 
     /**
-     * @var HistologyType 扩散
+     * @var HistologyType 组织学类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HistologyType;
 
     /**
-     * @var array 淋巴
+     * @var array IHC信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IHC;
 
     /**
-     * @var BlockInfo ""
+     * @var BlockInfo 浸润深度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InfiltrationDepth;
 
     /**
-     * @var array ""
+     * @var array 肿瘤扩散
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Invasive;
 
     /**
-     * @var array ""
+     * @var array 淋巴结
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LymphNodes;
 
     /**
-     * @var BlockInfo ""
+     * @var BlockInfo PTNM信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PTNM;
 
     /**
-     * @var BlockInfo ""
+     * @var BlockInfo 病理报告类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PathologicalReportType;
 
     /**
-     * @var string ""
+     * @var string 报告原文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportText;
 
     /**
-     * @var BlockInfo ""
+     * @var BlockInfo 标本类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleType;
 
     /**
-     * @var string ""
+     * @var string 结论文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SummaryText;
 
     /**
-     * @param Part $CancerPart ""
+     * @param Part $CancerPart 癌症部位
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CancerSize ""
+     * @param array $CancerSize 癌症部位大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DescText 描述文本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HistologyLevel $HistologyLevel 癌症
+     * @param HistologyLevel $HistologyLevel 组织学等级
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HistologyType $HistologyType 扩散
+     * @param HistologyType $HistologyType 组织学类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $IHC 淋巴
+     * @param array $IHC IHC信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $InfiltrationDepth ""
+     * @param BlockInfo $InfiltrationDepth 浸润深度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Invasive ""
+     * @param array $Invasive 肿瘤扩散
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $LymphNodes ""
+     * @param array $LymphNodes 淋巴结
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $PTNM ""
+     * @param BlockInfo $PTNM PTNM信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $PathologicalReportType ""
+     * @param BlockInfo $PathologicalReportType 病理报告类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReportText ""
+     * @param string $ReportText 报告原文
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockInfo $SampleType ""
+     * @param BlockInfo $SampleType 标本类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SummaryText ""
+     * @param string $SummaryText 结论文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

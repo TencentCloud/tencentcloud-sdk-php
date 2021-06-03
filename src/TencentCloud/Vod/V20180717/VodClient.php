@@ -161,8 +161,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
     1. 可以查询最近365天内的存储空间数据；
     2. 查询时间跨度不超过90天；
     3. 分钟粒度查询跨度不超过7天；
- * @method Models\DescribeSubAppIdsResponse DescribeSubAppIds(Models\DescribeSubAppIdsRequest $req) 该接口用于获取当前账号有权限的子应用列表，包含主应用。若尚未开通子应用功能，接口将返回 
- FailedOperation。
+ * @method Models\DescribeSubAppIdsResponse DescribeSubAppIds(Models\DescribeSubAppIdsRequest $req) 该接口用于获取当前账号的子应用列表，包含主应用。
  * @method Models\DescribeSuperPlayerConfigsResponse DescribeSuperPlayerConfigs(Models\DescribeSuperPlayerConfigsRequest $req) 查询超级播放器配置，支持根据条件，分页查询。
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) * 该接口用于查询任务列表；

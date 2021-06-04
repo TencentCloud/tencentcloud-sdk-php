@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayload(string $Payload) 设置消息内容
  * @method integer getQos() 获取消息质量等级
  * @method void setQos(integer $Qos) 设置消息质量等级
+ * @method string getPayloadEncoding() 获取Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
+ * @method void setPayloadEncoding(string $PayloadEncoding) 设置Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
  */
 class PublishBroadcastMessageRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class PublishBroadcastMessageRequest extends AbstractModel
     public $Qos;
 
     /**
+     * @var string Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
+     */
+    public $PayloadEncoding;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $Payload 消息内容
      * @param integer $Qos 消息质量等级
+     * @param string $PayloadEncoding Payload内容的编码格式，取值为base64或空。base64表示云端将收到的请求数据进行base64解码后下发到设备，空则直接将原始内容下发到设备
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class PublishBroadcastMessageRequest extends AbstractModel
 
         if (array_key_exists("Qos",$param) and $param["Qos"] !== null) {
             $this->Qos = $param["Qos"];
+        }
+
+        if (array_key_exists("PayloadEncoding",$param) and $param["PayloadEncoding"] !== null) {
+            $this->PayloadEncoding = $param["PayloadEncoding"];
         }
     }
 }

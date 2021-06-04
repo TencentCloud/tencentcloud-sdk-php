@@ -33,9 +33,12 @@ use TencentCloud\Tem\V20201221\Models as Models;
  * @method Models\DescribeIngressResponse DescribeIngress(Models\DescribeIngressRequest $req) 查询 Ingress 规则
  * @method Models\DescribeIngressesResponse DescribeIngresses(Models\DescribeIngressesRequest $req) 查询 Ingress 规则列表
  * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) 获取租户环境列表
+ * @method Models\DescribeRelatedIngressesResponse DescribeRelatedIngresses(Models\DescribeRelatedIngressesRequest $req) 查询服务关联的 Ingress 规则列表
  * @method Models\DescribeServiceRunPodListV2Response DescribeServiceRunPodListV2(Models\DescribeServiceRunPodListV2Request $req) 获取服务下面运行pod列表
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 创建或者更新 Ingress 规则
  * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 编辑环境
+ * @method Models\ModifyServiceInfoResponse ModifyServiceInfo(Models\ModifyServiceInfoRequest $req) 修改服务基本信息
+ * @method Models\RestartServiceRunPodResponse RestartServiceRunPod(Models\RestartServiceRunPodRequest $req) 重启实例
  */
 
 class TemClient extends AbstractClient

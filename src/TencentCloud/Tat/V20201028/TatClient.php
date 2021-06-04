@@ -29,7 +29,8 @@ use TencentCloud\Tat\V20201028\Models as Models;
  * @method Models\DescribeCommandsResponse DescribeCommands(Models\DescribeCommandsRequest $req) 此接口用于查询命令详情。
  * @method Models\DescribeInvocationTasksResponse DescribeInvocationTasks(Models\DescribeInvocationTasksRequest $req) 此接口用于查询执行任务详情。
  * @method Models\DescribeInvocationsResponse DescribeInvocations(Models\DescribeInvocationsRequest $req) 此接口用于查询执行活动详情。
- * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 此接口用于查询地域列表
+ * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 此接口用于查询 TAT 产品后台地域列表。
+RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；未返回，代表该地域的 TAT 后台服务尚不可用。
  * @method Models\InvokeCommandResponse InvokeCommand(Models\InvokeCommandRequest $req) 在指定的实例上触发命令，调用成功返回执行活动ID（inv-xxxxxxxx），每个执行活动内部有一个或多个执行任务（invt-xxxxxxxx），每个执行任务代表命令在一台 CVM 或一台 Lighthouse 上的执行记录。
 
 * 如果指定实例未安装 agent，或 agent 不在线，返回失败

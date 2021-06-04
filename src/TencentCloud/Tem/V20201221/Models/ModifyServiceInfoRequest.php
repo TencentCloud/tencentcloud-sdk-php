@@ -18,28 +18,26 @@ namespace TencentCloud\Tem\V20201221\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIngresses请求参数结构体
+ * ModifyServiceInfo请求参数结构体
  *
- * @method string getNamespaceId() 获取namespace id
- * @method void setNamespaceId(string $NamespaceId) 设置namespace id
- * @method string getEksNamespace() 获取namespace
- * @method void setEksNamespace(string $EksNamespace) 设置namespace
+ * @method string getServiceId() 获取服务ID
+ * @method void setServiceId(string $ServiceId) 设置服务ID
+ * @method string getDescription() 获取描述
+ * @method void setDescription(string $Description) 设置描述
  * @method integer getSourceChannel() 获取来源渠道
  * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
- * @method array getNames() 获取ingress 规则名列表
- * @method void setNames(array $Names) 设置ingress 规则名列表
  */
-class DescribeIngressesRequest extends AbstractModel
+class ModifyServiceInfoRequest extends AbstractModel
 {
     /**
-     * @var string namespace id
+     * @var string 服务ID
      */
-    public $NamespaceId;
+    public $ServiceId;
 
     /**
-     * @var string namespace
+     * @var string 描述
      */
-    public $EksNamespace;
+    public $Description;
 
     /**
      * @var integer 来源渠道
@@ -47,15 +45,9 @@ class DescribeIngressesRequest extends AbstractModel
     public $SourceChannel;
 
     /**
-     * @var array ingress 规则名列表
-     */
-    public $Names;
-
-    /**
-     * @param string $NamespaceId namespace id
-     * @param string $EksNamespace namespace
+     * @param string $ServiceId 服务ID
+     * @param string $Description 描述
      * @param integer $SourceChannel 来源渠道
-     * @param array $Names ingress 规则名列表
      */
     function __construct()
     {
@@ -70,20 +62,16 @@ class DescribeIngressesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
-            $this->NamespaceId = $param["NamespaceId"];
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
         }
 
-        if (array_key_exists("EksNamespace",$param) and $param["EksNamespace"] !== null) {
-            $this->EksNamespace = $param["EksNamespace"];
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
 
         if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
             $this->SourceChannel = $param["SourceChannel"];
-        }
-
-        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
-            $this->Names = $param["Names"];
         }
     }
 }

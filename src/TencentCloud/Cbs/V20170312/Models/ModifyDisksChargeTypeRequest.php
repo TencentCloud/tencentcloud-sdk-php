@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskIds(array $DiskIds) 设置一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
  * @method DiskChargePrepaid getDiskChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
  * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+ * @method boolean getDiskChargePostpaid() 获取后付费模式
+ * @method void setDiskChargePostpaid(boolean $DiskChargePostpaid) 设置后付费模式
  */
 class ModifyDisksChargeTypeRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyDisksChargeTypeRequest extends AbstractModel
     public $DiskChargePrepaid;
 
     /**
+     * @var boolean 后付费模式
+     */
+    public $DiskChargePostpaid;
+
+    /**
      * @param array $DiskIds 一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
      * @param DiskChargePrepaid $DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+     * @param boolean $DiskChargePostpaid 后付费模式
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class ModifyDisksChargeTypeRequest extends AbstractModel
         if (array_key_exists("DiskChargePrepaid",$param) and $param["DiskChargePrepaid"] !== null) {
             $this->DiskChargePrepaid = new DiskChargePrepaid();
             $this->DiskChargePrepaid->deserialize($param["DiskChargePrepaid"]);
+        }
+
+        if (array_key_exists("DiskChargePostpaid",$param) and $param["DiskChargePostpaid"] !== null) {
+            $this->DiskChargePostpaid = $param["DiskChargePostpaid"];
         }
     }
 }

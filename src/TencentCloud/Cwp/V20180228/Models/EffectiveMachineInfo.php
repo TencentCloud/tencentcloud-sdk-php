@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置机器Quuid
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUuid() 获取云镜Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUuid(string $Uuid) 设置云镜Uuid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EffectiveMachineInfo extends AbstractModel
 {
@@ -74,6 +78,12 @@ class EffectiveMachineInfo extends AbstractModel
     public $Quuid;
 
     /**
+     * @var string 云镜Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uuid;
+
+    /**
      * @param string $MachineName 机器名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachinePublicIp 机器公网ip
@@ -83,6 +93,8 @@ class EffectiveMachineInfo extends AbstractModel
      * @param array $MachineTag 机器标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 机器Quuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uuid 云镜Uuid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -121,6 +133,10 @@ class EffectiveMachineInfo extends AbstractModel
 
         if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
             $this->Quuid = $param["Quuid"];
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
         }
     }
 }

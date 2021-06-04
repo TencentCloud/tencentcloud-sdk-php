@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineList(array $MachineList) 设置服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组
  * @method string getImportType() 获取批量导入的数据类型：Ip、Name、Id 三选一
  * @method void setImportType(string $ImportType) 设置批量导入的数据类型：Ip、Name、Id 三选一
+ * @method boolean getIsQueryProMachine() 获取是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+ * @method void setIsQueryProMachine(boolean $IsQueryProMachine) 设置是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
  */
 class DescribeImportMachineInfoRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeImportMachineInfoRequest extends AbstractModel
     public $ImportType;
 
     /**
+     * @var boolean 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+     */
+    public $IsQueryProMachine;
+
+    /**
      * @param array $MachineList 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组
      * @param string $ImportType 批量导入的数据类型：Ip、Name、Id 三选一
+     * @param boolean $IsQueryProMachine 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeImportMachineInfoRequest extends AbstractModel
 
         if (array_key_exists("ImportType",$param) and $param["ImportType"] !== null) {
             $this->ImportType = $param["ImportType"];
+        }
+
+        if (array_key_exists("IsQueryProMachine",$param) and $param["IsQueryProMachine"] !== null) {
+            $this->IsQueryProMachine = $param["IsQueryProMachine"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域名称，例如，ap-guangzhou
  * @method string getRegionName() 获取地域描述，例如: 广州
  * @method void setRegionName(string $RegionName) 设置地域描述，例如: 广州
- * @method string getRegionState() 获取地域是否可用状态
- * @method void setRegionState(string $RegionState) 设置地域是否可用状态
+ * @method string getRegionState() 获取地域是否可用状态，AVAILABLE 代表可用
+ * @method void setRegionState(string $RegionState) 设置地域是否可用状态，AVAILABLE 代表可用
  */
 class RegionInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class RegionInfo extends AbstractModel
     public $RegionName;
 
     /**
-     * @var string 地域是否可用状态
+     * @var string 地域是否可用状态，AVAILABLE 代表可用
      */
     public $RegionState;
 
     /**
      * @param string $Region 地域名称，例如，ap-guangzhou
      * @param string $RegionName 地域描述，例如: 广州
-     * @param string $RegionState 地域是否可用状态
+     * @param string $RegionState 地域是否可用状态，AVAILABLE 代表可用
      */
     function __construct()
     {

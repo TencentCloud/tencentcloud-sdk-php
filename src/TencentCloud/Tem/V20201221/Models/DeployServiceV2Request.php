@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageCommand(string $ImageCommand) 设置镜像命令
  * @method array getImageArgs() 获取镜像命令参数
  * @method void setImageArgs(array $ImageArgs) 设置镜像命令参数
+ * @method array getPortMappings() 获取服务端口映射
+ * @method void setPortMappings(array $PortMappings) 设置服务端口映射
+ * @method boolean getUseRegistryDefaultConfig() 获取是否添加默认注册中心配置
+ * @method void setUseRegistryDefaultConfig(boolean $UseRegistryDefaultConfig) 设置是否添加默认注册中心配置
  */
 class DeployServiceV2Request extends AbstractModel
 {
@@ -210,6 +214,16 @@ class DeployServiceV2Request extends AbstractModel
     public $ImageArgs;
 
     /**
+     * @var array 服务端口映射
+     */
+    public $PortMappings;
+
+    /**
+     * @var boolean 是否添加默认注册中心配置
+     */
+    public $UseRegistryDefaultConfig;
+
+    /**
      * @param string $ServiceId 服务ID
      * @param integer $ContainerPort 容器端口
      * @param integer $InitPodNum 初始化 pod 数
@@ -240,6 +254,8 @@ class DeployServiceV2Request extends AbstractModel
      * @param string $Description 版本描述
      * @param string $ImageCommand 镜像命令
      * @param array $ImageArgs 镜像命令参数
+     * @param array $PortMappings 服务端口映射
+     * @param boolean $UseRegistryDefaultConfig 是否添加默认注册中心配置
      */
     function __construct()
     {
@@ -365,6 +381,19 @@ class DeployServiceV2Request extends AbstractModel
 
         if (array_key_exists("ImageArgs",$param) and $param["ImageArgs"] !== null) {
             $this->ImageArgs = $param["ImageArgs"];
+        }
+
+        if (array_key_exists("PortMappings",$param) and $param["PortMappings"] !== null) {
+            $this->PortMappings = [];
+            foreach ($param["PortMappings"] as $key => $value){
+                $obj = new PortMapping();
+                $obj->deserialize($value);
+                array_push($this->PortMappings, $obj);
+            }
+        }
+
+        if (array_key_exists("UseRegistryDefaultConfig",$param) and $param["UseRegistryDefaultConfig"] !== null) {
+            $this->UseRegistryDefaultConfig = $param["UseRegistryDefaultConfig"];
         }
     }
 }

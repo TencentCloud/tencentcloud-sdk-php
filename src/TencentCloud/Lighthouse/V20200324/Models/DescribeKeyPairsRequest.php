@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。
+ * @method array getFilters() 获取过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+ * @method void setFilters(array $Filters) 设置过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
  */
 class DescribeKeyPairsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeKeyPairsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+     */
+    public $Filters;
+
+    /**
      * @param array $KeyIds 密钥对 ID 列表。
      * @param integer $Offset 偏移量，默认为 0。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
+     * @param array $Filters 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class DescribeKeyPairsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

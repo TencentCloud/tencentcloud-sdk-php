@@ -18,26 +18,26 @@ namespace TencentCloud\Tem\V20201221\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIngresses请求参数结构体
+ * DescribeRelatedIngresses请求参数结构体
  *
- * @method string getNamespaceId() 获取namespace id
- * @method void setNamespaceId(string $NamespaceId) 设置namespace id
- * @method string getEksNamespace() 获取namespace
- * @method void setEksNamespace(string $EksNamespace) 设置namespace
+ * @method string getNamespaceId() 获取环境 id
+ * @method void setNamespaceId(string $NamespaceId) 设置环境 id
+ * @method string getEksNamespace() 获取EKS namespace
+ * @method void setEksNamespace(string $EksNamespace) 设置EKS namespace
  * @method integer getSourceChannel() 获取来源渠道
  * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
- * @method array getNames() 获取ingress 规则名列表
- * @method void setNames(array $Names) 设置ingress 规则名列表
+ * @method string getServiceId() 获取服务 ID
+ * @method void setServiceId(string $ServiceId) 设置服务 ID
  */
-class DescribeIngressesRequest extends AbstractModel
+class DescribeRelatedIngressesRequest extends AbstractModel
 {
     /**
-     * @var string namespace id
+     * @var string 环境 id
      */
     public $NamespaceId;
 
     /**
-     * @var string namespace
+     * @var string EKS namespace
      */
     public $EksNamespace;
 
@@ -47,15 +47,15 @@ class DescribeIngressesRequest extends AbstractModel
     public $SourceChannel;
 
     /**
-     * @var array ingress 规则名列表
+     * @var string 服务 ID
      */
-    public $Names;
+    public $ServiceId;
 
     /**
-     * @param string $NamespaceId namespace id
-     * @param string $EksNamespace namespace
+     * @param string $NamespaceId 环境 id
+     * @param string $EksNamespace EKS namespace
      * @param integer $SourceChannel 来源渠道
-     * @param array $Names ingress 规则名列表
+     * @param string $ServiceId 服务 ID
      */
     function __construct()
     {
@@ -82,8 +82,8 @@ class DescribeIngressesRequest extends AbstractModel
             $this->SourceChannel = $param["SourceChannel"];
         }
 
-        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
-            $this->Names = $param["Names"];
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
         }
     }
 }

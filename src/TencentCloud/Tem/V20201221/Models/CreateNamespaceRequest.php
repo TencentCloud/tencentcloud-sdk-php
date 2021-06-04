@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setK8sVersion(string $K8sVersion) 设置K8s version
  * @method integer getSourceChannel() 获取来源渠道
  * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
+ * @method boolean getEnableTswTraceService() 获取是否开启tsw服务
+ * @method void setEnableTswTraceService(boolean $EnableTswTraceService) 设置是否开启tsw服务
  */
 class CreateNamespaceRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateNamespaceRequest extends AbstractModel
     public $SourceChannel;
 
     /**
+     * @var boolean 是否开启tsw服务
+     */
+    public $EnableTswTraceService;
+
+    /**
      * @param string $NamespaceName 命名空间名称
      * @param string $Vpc 私有网络名称
      * @param array $SubnetIds 子网列表
      * @param string $Description 命名空间描述
      * @param string $K8sVersion K8s version
      * @param integer $SourceChannel 来源渠道
+     * @param boolean $EnableTswTraceService 是否开启tsw服务
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreateNamespaceRequest extends AbstractModel
 
         if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
             $this->SourceChannel = $param["SourceChannel"];
+        }
+
+        if (array_key_exists("EnableTswTraceService",$param) and $param["EnableTswTraceService"] !== null) {
+            $this->EnableTswTraceService = $param["EnableTswTraceService"];
         }
     }
 }

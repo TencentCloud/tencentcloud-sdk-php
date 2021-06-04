@@ -27,22 +27,20 @@ CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
-SSLVPN：sslvpn网关；
+HAVIP：高可用虚拟IP；
 NAT：NAT网关; 
 NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
-CCN：云联网；
 LOCAL_GATEWAY：本地网关。
  * @method void setGatewayType(string $GatewayType) 设置下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
-SSLVPN：sslvpn网关；
+HAVIP：高可用虚拟IP；
 NAT：NAT网关; 
 NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
-CCN：云联网；
 LOCAL_GATEWAY：本地网关。
  * @method string getGatewayId() 获取下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
@@ -90,11 +88,10 @@ CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
-SSLVPN：sslvpn网关；
+HAVIP：高可用虚拟IP；
 NAT：NAT网关; 
 NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
-CCN：云联网；
 LOCAL_GATEWAY：本地网关。
      */
     public $GatewayType;
@@ -162,11 +159,10 @@ CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
-SSLVPN：sslvpn网关；
+HAVIP：高可用虚拟IP；
 NAT：NAT网关; 
 NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
-CCN：云联网；
 LOCAL_GATEWAY：本地网关。
      * @param string $GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'

@@ -31,6 +31,7 @@ use TencentCloud\Common\AbstractModel;
 - https：是否配置https，on，off或processing。
 - originPullProtocol：回源协议类型，支持http，follow或https。
 - area：加速区域，支持mainland，overseas或global。
+- tagKey：标签键。
  * @method void setName(string $Name) 设置过滤字段名，支持的列表如下：
 - origin：主源站。
 - domain：域名。
@@ -42,6 +43,7 @@ use TencentCloud\Common\AbstractModel;
 - https：是否配置https，on，off或processing。
 - originPullProtocol：回源协议类型，支持http，follow或https。
 - area：加速区域，支持mainland，overseas或global。
+- tagKey：标签键。
  * @method array getValue() 获取过滤字段值。
  * @method void setValue(array $Value) 设置过滤字段值。
  * @method boolean getFuzzy() 获取是否启用模糊查询，仅支持过滤字段名为origin，domain。
@@ -61,6 +63,7 @@ class DomainFilter extends AbstractModel
 - https：是否配置https，on，off或processing。
 - originPullProtocol：回源协议类型，支持http，follow或https。
 - area：加速区域，支持mainland，overseas或global。
+- tagKey：标签键。
      */
     public $Name;
 
@@ -86,6 +89,7 @@ class DomainFilter extends AbstractModel
 - https：是否配置https，on，off或processing。
 - originPullProtocol：回源协议类型，支持http，follow或https。
 - area：加速区域，支持mainland，overseas或global。
+- tagKey：标签键。
      * @param array $Value 过滤字段值。
      * @param boolean $Fuzzy 是否启用模糊查询，仅支持过滤字段名为origin，domain。
      */

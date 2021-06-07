@@ -35,7 +35,7 @@ use TencentCloud\Btoe\V20210514\Models as Models;
  * @method Models\GetDepositFileResponse GetDepositFile(Models\GetDepositFileRequest $req) 用户通过存证编码向BTOE获取存证文件的下载URL。
 -注：Hash类存证、业务数据明文存证不产生存证文件。
  * @method Models\GetDepositInfoResponse GetDepositInfo(Models\GetDepositInfoRequest $req) 用户通过存证编码向BTOE查询存证基本信息。
- * @method Models\VerifyEvidenceBlockChainTxHashResponse VerifyEvidenceBlockChainTxHash(Models\VerifyEvidenceBlockChainTxHashRequest $req) 用户向BTOE核验存证结果中的区块链交易hash
+ * @method Models\VerifyEvidenceBlockChainTxHashResponse VerifyEvidenceBlockChainTxHash(Models\VerifyEvidenceBlockChainTxHashRequest $req) 用户向BTOE核验存证结果中的区块链交易hash的真实性
  * @method Models\VerifyEvidenceHashResponse VerifyEvidenceHash(Models\VerifyEvidenceHashRequest $req) 用户存证内容hash向BTOE核验存证记录的真实性。
  */
 

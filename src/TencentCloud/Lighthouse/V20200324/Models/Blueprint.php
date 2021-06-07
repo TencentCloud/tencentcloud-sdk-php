@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlueprintType(string $BlueprintType) 设置镜像类型，如 APP_OS、PURE_OS、PRIVATE。
  * @method string getImageUrl() 获取镜像图片 URL。
  * @method void setImageUrl(string $ImageUrl) 设置镜像图片 URL。
- * @method integer getRequiredSystemDiskSize() 获取镜像所需系统盘大小。
- * @method void setRequiredSystemDiskSize(integer $RequiredSystemDiskSize) 设置镜像所需系统盘大小。
+ * @method integer getRequiredSystemDiskSize() 获取镜像所需系统盘大小，单位 GB。
+ * @method void setRequiredSystemDiskSize(integer $RequiredSystemDiskSize) 设置镜像所需系统盘大小，单位 GB。
  * @method string getBlueprintState() 获取镜像状态。
  * @method void setBlueprintState(string $BlueprintState) 设置镜像状态。
  * @method string getCreatedTime() 获取创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
@@ -103,7 +103,7 @@ class Blueprint extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var integer 镜像所需系统盘大小。
+     * @var integer 镜像所需系统盘大小，单位 GB。
      */
     public $RequiredSystemDiskSize;
 
@@ -144,7 +144,7 @@ class Blueprint extends AbstractModel
      * @param string $PlatformType 操作系统平台类型，如 LINUX_UNIX、WINDOWS。
      * @param string $BlueprintType 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
      * @param string $ImageUrl 镜像图片 URL。
-     * @param integer $RequiredSystemDiskSize 镜像所需系统盘大小。
+     * @param integer $RequiredSystemDiskSize 镜像所需系统盘大小，单位 GB。
      * @param string $BlueprintState 镜像状态。
      * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。

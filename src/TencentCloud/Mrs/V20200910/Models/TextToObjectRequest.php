@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getText() 获取报告文本
  * @method void setText(string $Text) 设置报告文本
- * @method integer getType() 获取报告类型
- * @method void setType(integer $Type) 设置报告类型
- * @method boolean getIsUsedClassify() 获取是否使用分类引擎
- * @method void setIsUsedClassify(boolean $IsUsedClassify) 设置是否使用分类引擎
+ * @method integer getType() 获取报告类型，目前支持12（检查报告单），15（病理报告），218（诊断证明）。如果不清楚报告类型，可以使用分类引擎，该字段传0（同时IsUsedClassify字段必须为True，否则无法输出结果）
+ * @method void setType(integer $Type) 设置报告类型，目前支持12（检查报告单），15（病理报告），218（诊断证明）。如果不清楚报告类型，可以使用分类引擎，该字段传0（同时IsUsedClassify字段必须为True，否则无法输出结果）
+ * @method boolean getIsUsedClassify() 获取是否使用分类引擎，当不确定报告类型时，可以使用收费的报告分类引擎服务。若该字段为False，则Type字段不能为0，否则无法输出结果。
+ * @method void setIsUsedClassify(boolean $IsUsedClassify) 设置是否使用分类引擎，当不确定报告类型时，可以使用收费的报告分类引擎服务。若该字段为False，则Type字段不能为0，否则无法输出结果。
  */
 class TextToObjectRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class TextToObjectRequest extends AbstractModel
     public $Text;
 
     /**
-     * @var integer 报告类型
+     * @var integer 报告类型，目前支持12（检查报告单），15（病理报告），218（诊断证明）。如果不清楚报告类型，可以使用分类引擎，该字段传0（同时IsUsedClassify字段必须为True，否则无法输出结果）
      */
     public $Type;
 
     /**
-     * @var boolean 是否使用分类引擎
+     * @var boolean 是否使用分类引擎，当不确定报告类型时，可以使用收费的报告分类引擎服务。若该字段为False，则Type字段不能为0，否则无法输出结果。
      */
     public $IsUsedClassify;
 
     /**
      * @param string $Text 报告文本
-     * @param integer $Type 报告类型
-     * @param boolean $IsUsedClassify 是否使用分类引擎
+     * @param integer $Type 报告类型，目前支持12（检查报告单），15（病理报告），218（诊断证明）。如果不清楚报告类型，可以使用分类引擎，该字段传0（同时IsUsedClassify字段必须为True，否则无法输出结果）
+     * @param boolean $IsUsedClassify 是否使用分类引擎，当不确定报告类型时，可以使用收费的报告分类引擎服务。若该字段为False，则Type字段不能为0，否则无法输出结果。
      */
     function __construct()
     {

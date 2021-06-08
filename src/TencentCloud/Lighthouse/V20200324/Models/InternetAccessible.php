@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述了启动配置创建实例的公网可访问性，声明了实例的公网使用计费模式，最大带宽等。
  *
- * @method string getInternetChargeType() 获取网络计费类型。
- * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费类型。
+ * @method string getInternetChargeType() 获取网络计费类型,，取值范围：
+<li>按流量包付费：TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>按带宽付费： BANDWIDTH_POSTPAID_BY_HOUR</li>
+ * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费类型,，取值范围：
+<li>按流量包付费：TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>按带宽付费： BANDWIDTH_POSTPAID_BY_HOUR</li>
  * @method integer getInternetMaxBandwidthOut() 获取公网出带宽上限，单位：Mbps。
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网出带宽上限，单位：Mbps。
  * @method boolean getPublicIpAssigned() 获取是否分配公网 IP。
@@ -30,7 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class InternetAccessible extends AbstractModel
 {
     /**
-     * @var string 网络计费类型。
+     * @var string 网络计费类型,，取值范围：
+<li>按流量包付费：TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>按带宽付费： BANDWIDTH_POSTPAID_BY_HOUR</li>
      */
     public $InternetChargeType;
 
@@ -45,7 +51,9 @@ class InternetAccessible extends AbstractModel
     public $PublicIpAssigned;
 
     /**
-     * @param string $InternetChargeType 网络计费类型。
+     * @param string $InternetChargeType 网络计费类型,，取值范围：
+<li>按流量包付费：TRAFFIC_POSTPAID_BY_HOUR</li>
+<li>按带宽付费： BANDWIDTH_POSTPAID_BY_HOUR</li>
      * @param integer $InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps。
      * @param boolean $PublicIpAssigned 是否分配公网 IP。
      */

@@ -20,58 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 批量绑定类型
  *
- * @method string getListenerId() 获取监听器ID
- * @method void setListenerId(string $ListenerId) 设置监听器ID
- * @method integer getPort() 获取绑定端口
- * @method void setPort(integer $Port) 设置绑定端口
- * @method string getInstanceId() 获取子机ID。表示绑定主网卡主IP
- * @method void setInstanceId(string $InstanceId) 设置子机ID。表示绑定主网卡主IP
- * @method string getEniIp() 获取弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
- * @method void setEniIp(string $EniIp) 设置弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
- * @method integer getWeight() 获取子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
- * @method void setWeight(integer $Weight) 设置子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
- * @method string getLocationId() 获取七层规则ID
- * @method void setLocationId(string $LocationId) 设置七层规则ID
+ * @method string getListenerId() 获取监听器 ID。
+ * @method void setListenerId(string $ListenerId) 设置监听器 ID。
+ * @method integer getPort() 获取绑定端口。
+ * @method void setPort(integer $Port) 设置绑定端口。
+ * @method string getInstanceId() 获取子机 ID。表示绑定主网卡主 IP。
+ * @method void setInstanceId(string $InstanceId) 设置子机 ID。表示绑定主网卡主 IP。
+ * @method string getEniIp() 获取绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
+注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
+ * @method void setEniIp(string $EniIp) 设置绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
+注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
+ * @method integer getWeight() 获取子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+ * @method void setWeight(integer $Weight) 设置子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+ * @method string getLocationId() 获取七层规则 ID。
+ * @method void setLocationId(string $LocationId) 设置七层规则 ID。
  */
 class BatchTarget extends AbstractModel
 {
     /**
-     * @var string 监听器ID
+     * @var string 监听器 ID。
      */
     public $ListenerId;
 
     /**
-     * @var integer 绑定端口
+     * @var integer 绑定端口。
      */
     public $Port;
 
     /**
-     * @var string 子机ID。表示绑定主网卡主IP
+     * @var string 子机 ID。表示绑定主网卡主 IP。
      */
     public $InstanceId;
 
     /**
-     * @var string 弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
+     * @var string 绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
+注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
      */
     public $EniIp;
 
     /**
-     * @var integer 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
+     * @var integer 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
      */
     public $Weight;
 
     /**
-     * @var string 七层规则ID
+     * @var string 七层规则 ID。
      */
     public $LocationId;
 
     /**
-     * @param string $ListenerId 监听器ID
-     * @param integer $Port 绑定端口
-     * @param string $InstanceId 子机ID。表示绑定主网卡主IP
-     * @param string $EniIp 弹性网卡ip或其他内网IP。如果是双栈IPV6子机，必须传该参数。
-     * @param integer $Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10
-     * @param string $LocationId 七层规则ID
+     * @param string $ListenerId 监听器 ID。
+     * @param integer $Port 绑定端口。
+     * @param string $InstanceId 子机 ID。表示绑定主网卡主 IP。
+     * @param string $EniIp 绑定 IP 时需要传入此参数，支持弹性网卡的 IP 和其他内网 IP，如果是弹性网卡则必须先绑定至CVM，然后才能绑定到负载均衡实例。
+注意：参数 InstanceId、EniIp 只能传入一个且必须传入一个。如果绑定双栈IPV6子机，必须传该参数。
+     * @param integer $Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+     * @param string $LocationId 七层规则 ID。
      */
     function __construct()
     {

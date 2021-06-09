@@ -14,32 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cbs\V20170312\Models;
+namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述键值对过滤器，用于条件过滤查询。
+ * 综合画质修复，包括：去噪，去毛刺，细节增强，主观画质提升。
  *
- * @method array getValues() 获取一个或者多个过滤值。
- * @method void setValues(array $Values) 设置一个或者多个过滤值。
- * @method string getName() 获取过滤键的名称。
- * @method void setName(string $Name) 设置过滤键的名称。
+ * @method string getType() 获取画质修复类型，可选值：weak，normal，strong;
+默认值: weak
+ * @method void setType(string $Type) 设置画质修复类型，可选值：weak，normal，strong;
+默认值: weak
  */
-class Filter extends AbstractModel
+class VideoRepair extends AbstractModel
 {
     /**
-     * @var array 一个或者多个过滤值。
+     * @var string 画质修复类型，可选值：weak，normal，strong;
+默认值: weak
      */
-    public $Values;
+    public $Type;
 
     /**
-     * @var string 过滤键的名称。
-     */
-    public $Name;
-
-    /**
-     * @param array $Values 一个或者多个过滤值。
-     * @param string $Name 过滤键的名称。
+     * @param string $Type 画质修复类型，可选值：weak，normal，strong;
+默认值: weak
      */
     function __construct()
     {
@@ -54,12 +50,8 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
-        }
-
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

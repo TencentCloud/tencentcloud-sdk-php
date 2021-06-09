@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeId(string $NodeId) 设置节点的序列ID
  * @method string getStatus() 获取节点的状态
  * @method void setStatus(string $Status) 设置节点的状态
+ * @method string getRole() 获取节点角色
+ * @method void setRole(string $Role) 设置节点角色
  */
 class RedisNode extends AbstractModel
 {
@@ -52,10 +54,16 @@ class RedisNode extends AbstractModel
     public $Status;
 
     /**
+     * @var string 节点角色
+     */
+    public $Role;
+
+    /**
      * @param integer $Keys 节点key的个数
      * @param string $Slot 节点slot分布
      * @param string $NodeId 节点的序列ID
      * @param string $Status 节点的状态
+     * @param string $Role 节点角色
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class RedisNode extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

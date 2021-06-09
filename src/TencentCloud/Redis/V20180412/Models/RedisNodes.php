@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeRole(string $NodeRole) 设置节点角色
  * @method integer getClusterId() 获取分片ID
  * @method void setClusterId(integer $ClusterId) 设置分片ID
+ * @method integer getZoneId() 获取可用区ID
+ * @method void setZoneId(integer $ZoneId) 设置可用区ID
  */
 class RedisNodes extends AbstractModel
 {
@@ -45,9 +47,15 @@ class RedisNodes extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var integer 可用区ID
+     */
+    public $ZoneId;
+
+    /**
      * @param string $NodeId 节点ID
      * @param string $NodeRole 节点角色
      * @param integer $ClusterId 分片ID
+     * @param integer $ZoneId 可用区ID
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class RedisNodes extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

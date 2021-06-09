@@ -29,7 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method Sharp getSharp() 获取细节增强参数。
  * @method void setSharp(Sharp $Sharp) 设置细节增强参数。
  * @method integer getWdSuperResolution() 获取超分参数，可选项：2，目前仅支持2倍超分。
+注意：此参数已经弃用，超分可以使用VideoSuperResolution参数
  * @method void setWdSuperResolution(integer $WdSuperResolution) 设置超分参数，可选项：2，目前仅支持2倍超分。
+注意：此参数已经弃用，超分可以使用VideoSuperResolution参数
  * @method FaceProtect getFaceProtect() 获取人脸保护信息。
  * @method void setFaceProtect(FaceProtect $FaceProtect) 设置人脸保护信息。
  * @method integer getWdFps() 获取插帧，取值范围：[0, 60]，单位：Hz。
@@ -40,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScratchRepair(ScratchRepair $ScratchRepair) 设置去划痕参数
  * @method LowLightEnhance getLowLightEnhance() 获取低光照增强参数
  * @method void setLowLightEnhance(LowLightEnhance $LowLightEnhance) 设置低光照增强参数
+ * @method VideoSuperResolution getVideoSuperResolution() 获取视频超分参数
+ * @method void setVideoSuperResolution(VideoSuperResolution $VideoSuperResolution) 设置视频超分参数
+ * @method VideoRepair getVideoRepair() 获取视频画质修复参数
+ * @method void setVideoRepair(VideoRepair $VideoRepair) 设置视频画质修复参数
  */
 class VideoEnhance extends AbstractModel
 {
@@ -65,6 +71,7 @@ class VideoEnhance extends AbstractModel
 
     /**
      * @var integer 超分参数，可选项：2，目前仅支持2倍超分。
+注意：此参数已经弃用，超分可以使用VideoSuperResolution参数
      */
     public $WdSuperResolution;
 
@@ -90,16 +97,29 @@ class VideoEnhance extends AbstractModel
     public $LowLightEnhance;
 
     /**
+     * @var VideoSuperResolution 视频超分参数
+     */
+    public $VideoSuperResolution;
+
+    /**
+     * @var VideoRepair 视频画质修复参数
+     */
+    public $VideoRepair;
+
+    /**
      * @param ArtifactReduction $ArtifactReduction 去编码毛刺、伪影参数。
      * @param Denoising $Denoising 去噪声参数。
      * @param ColorEnhance $ColorEnhance 颜色增强参数。
      * @param Sharp $Sharp 细节增强参数。
      * @param integer $WdSuperResolution 超分参数，可选项：2，目前仅支持2倍超分。
+注意：此参数已经弃用，超分可以使用VideoSuperResolution参数
      * @param FaceProtect $FaceProtect 人脸保护信息。
      * @param integer $WdFps 插帧，取值范围：[0, 60]，单位：Hz。
 注意：当取值为 0，表示帧率和原始视频保持一致。
      * @param ScratchRepair $ScratchRepair 去划痕参数
      * @param LowLightEnhance $LowLightEnhance 低光照增强参数
+     * @param VideoSuperResolution $VideoSuperResolution 视频超分参数
+     * @param VideoRepair $VideoRepair 视频画质修复参数
      */
     function __construct()
     {
@@ -155,6 +175,16 @@ class VideoEnhance extends AbstractModel
         if (array_key_exists("LowLightEnhance",$param) and $param["LowLightEnhance"] !== null) {
             $this->LowLightEnhance = new LowLightEnhance();
             $this->LowLightEnhance->deserialize($param["LowLightEnhance"]);
+        }
+
+        if (array_key_exists("VideoSuperResolution",$param) and $param["VideoSuperResolution"] !== null) {
+            $this->VideoSuperResolution = new VideoSuperResolution();
+            $this->VideoSuperResolution->deserialize($param["VideoSuperResolution"]);
+        }
+
+        if (array_key_exists("VideoRepair",$param) and $param["VideoRepair"] !== null) {
+            $this->VideoRepair = new VideoRepair();
+            $this->VideoRepair->deserialize($param["VideoRepair"]);
         }
     }
 }

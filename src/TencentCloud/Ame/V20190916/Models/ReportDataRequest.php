@@ -32,7 +32,7 @@ reportData由两部分数据组成：
 不同的report_type对应的data数据结构不一样。
 
 详细说明请参考文档reportdata.docx：
-https://github.com/ame-demo/doc
+https://github.com/tencentyun/ame-documents
  * @method void setReportData(string $ReportData) 设置上报数据
 注:reportData为客户端压缩后的上报数据进行16进制转换的字符串数据
 压缩说明：
@@ -45,7 +45,7 @@ reportData由两部分数据组成：
 不同的report_type对应的data数据结构不一样。
 
 详细说明请参考文档reportdata.docx：
-https://github.com/ame-demo/doc
+https://github.com/tencentyun/ame-documents
  */
 class ReportDataRequest extends AbstractModel
 {
@@ -62,7 +62,7 @@ reportData由两部分数据组成：
 不同的report_type对应的data数据结构不一样。
 
 详细说明请参考文档reportdata.docx：
-https://github.com/ame-demo/doc
+https://github.com/tencentyun/ame-documents
      */
     public $ReportData;
 
@@ -79,7 +79,7 @@ reportData由两部分数据组成：
 不同的report_type对应的data数据结构不一样。
 
 详细说明请参考文档reportdata.docx：
-https://github.com/ame-demo/doc
+https://github.com/tencentyun/ame-documents
      */
     function __construct()
     {

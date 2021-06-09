@@ -26,14 +26,12 @@ use TencentCloud\Common\AbstractModel;
 edaf,
 wdaf，
 默认edaf。
-注意：edaf：速度快，去毛刺效果强，保护边缘效果较弱；
-wdaf：速度慢，保护边缘效果好
+注意：此参数已经弃用
  * @method void setAlgorithm(string $Algorithm) 设置去毛刺算法，可选项：
 edaf,
 wdaf，
 默认edaf。
-注意：edaf：速度快，去毛刺效果强，保护边缘效果较弱；
-wdaf：速度慢，保护边缘效果好
+注意：此参数已经弃用
  */
 class ArtifactReduction extends AbstractModel
 {
@@ -47,8 +45,7 @@ class ArtifactReduction extends AbstractModel
 edaf,
 wdaf，
 默认edaf。
-注意：edaf：速度快，去毛刺效果强，保护边缘效果较弱；
-wdaf：速度慢，保护边缘效果好
+注意：此参数已经弃用
      */
     public $Algorithm;
 
@@ -58,8 +55,7 @@ wdaf：速度慢，保护边缘效果好
 edaf,
 wdaf，
 默认edaf。
-注意：edaf：速度快，去毛刺效果强，保护边缘效果较弱；
-wdaf：速度慢，保护边缘效果好
+注意：此参数已经弃用
      */
     function __construct()
     {

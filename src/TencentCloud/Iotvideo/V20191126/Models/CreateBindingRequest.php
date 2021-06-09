@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceBind(boolean $ForceBind) 设置是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
  * @method string getNick() 获取设备昵称，最多不超过64个字符
  * @method void setNick(string $Nick) 设置设备昵称，最多不超过64个字符
+ * @method string getBindToken() 获取绑定过程中的会话token，由设备通过SDK接口确认是否允许绑定的token，用于增加设备被绑定的安全性
+ * @method void setBindToken(string $BindToken) 设置绑定过程中的会话token，由设备通过SDK接口确认是否允许绑定的token，用于增加设备被绑定的安全性
  */
 class CreateBindingRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateBindingRequest extends AbstractModel
     public $Nick;
 
     /**
+     * @var string 绑定过程中的会话token，由设备通过SDK接口确认是否允许绑定的token，用于增加设备被绑定的安全性
+     */
+    public $BindToken;
+
+    /**
      * @param string $AccessId 终端用户在IoT Video上的唯一标识ID
      * @param string $Tid 设备TID
      * @param string $Role 用户角色，owner：主人，guest：访客
      * @param boolean $ForceBind 是否踢掉之前的主人，true：踢掉；false：不踢掉。当role为guest时，可以不填
      * @param string $Nick 设备昵称，最多不超过64个字符
+     * @param string $BindToken 绑定过程中的会话token，由设备通过SDK接口确认是否允许绑定的token，用于增加设备被绑定的安全性
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateBindingRequest extends AbstractModel
 
         if (array_key_exists("Nick",$param) and $param["Nick"] !== null) {
             $this->Nick = $param["Nick"];
+        }
+
+        if (array_key_exists("BindToken",$param) and $param["BindToken"] !== null) {
+            $this->BindToken = $param["BindToken"];
         }
     }
 }

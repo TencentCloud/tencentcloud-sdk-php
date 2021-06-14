@@ -53,6 +53,8 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口 (DescribeAccounts) 用于获取帐号列表数据。
  * @method Models\DescribeAgentVulsResponse DescribeAgentVuls(Models\DescribeAgentVulsRequest $req) 本接口 (DescribeAgentVuls) 用于获取单台主机的漏洞列表。
  * @method Models\DescribeAlarmAttributeResponse DescribeAlarmAttribute(Models\DescribeAlarmAttributeRequest $req) 本接口 (DescribeAlarmAttribute) 用于获取告警设置。
+ * @method Models\DescribeAssetInfoResponse DescribeAssetInfo(Models\DescribeAssetInfoRequest $req) 获取资产数量： 主机数、账号数、端口数、进程数、软件数、数据库数、Web应用数、Web框架数、Web服务数、Web站点数
+ * @method Models\DescribeAssetRecentMachineInfoResponse DescribeAssetRecentMachineInfo(Models\DescribeAssetRecentMachineInfoRequest $req) 获取主机最近趋势情况
  * @method Models\DescribeAttackLogInfoResponse DescribeAttackLogInfo(Models\DescribeAttackLogInfoRequest $req) 网络攻击日志详情
  * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) 按分页形式展示网络攻击日志列表
  * @method Models\DescribeAttackVulTypeListResponse DescribeAttackVulTypeList(Models\DescribeAttackVulTypeListRequest $req) 获取网络攻击威胁类型列表
@@ -150,6 +152,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\SeparateMalwaresResponse SeparateMalwares(Models\SeparateMalwaresRequest $req) 本接口（SeparateMalwares）用于隔离木马。
  * @method Models\SetBashEventsStatusResponse SetBashEventsStatus(Models\SetBashEventsStatusRequest $req) 设置高危命令事件状态
  * @method Models\SwitchBashRulesResponse SwitchBashRules(Models\SwitchBashRulesRequest $req) 切换高危命令规则状态
+ * @method Models\SyncAssetScanResponse SyncAssetScan(Models\SyncAssetScanRequest $req) 同步资产扫描信息
  * @method Models\TrustMaliciousRequestResponse TrustMaliciousRequest(Models\TrustMaliciousRequestRequest $req) 本接口 (TrustMaliciousRequest) 用于恶意请求添加信任。
  * @method Models\TrustMalwaresResponse TrustMalwares(Models\TrustMalwaresRequest $req) 本接口(TrustMalwares)将被识别木马文件设为信任。
  * @method Models\UntrustMaliciousRequestResponse UntrustMaliciousRequest(Models\UntrustMaliciousRequestRequest $req) 本接口 (UntrustMaliciousRequest) 用于取消信任恶意请求。

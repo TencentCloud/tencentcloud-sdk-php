@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPortMappings(array $PortMappings) 设置服务端口映射
  * @method boolean getUseRegistryDefaultConfig() 获取是否添加默认注册中心配置
  * @method void setUseRegistryDefaultConfig(boolean $UseRegistryDefaultConfig) 设置是否添加默认注册中心配置
+ * @method array getSettingConfs() 获取挂载配置信息
+ * @method void setSettingConfs(array $SettingConfs) 设置挂载配置信息
+ * @method EksService getEksService() 获取eks 访问设置
+ * @method void setEksService(EksService $EksService) 设置eks 访问设置
  */
 class DeployServiceV2Request extends AbstractModel
 {
@@ -224,6 +228,16 @@ class DeployServiceV2Request extends AbstractModel
     public $UseRegistryDefaultConfig;
 
     /**
+     * @var array 挂载配置信息
+     */
+    public $SettingConfs;
+
+    /**
+     * @var EksService eks 访问设置
+     */
+    public $EksService;
+
+    /**
      * @param string $ServiceId 服务ID
      * @param integer $ContainerPort 容器端口
      * @param integer $InitPodNum 初始化 pod 数
@@ -256,6 +270,8 @@ class DeployServiceV2Request extends AbstractModel
      * @param array $ImageArgs 镜像命令参数
      * @param array $PortMappings 服务端口映射
      * @param boolean $UseRegistryDefaultConfig 是否添加默认注册中心配置
+     * @param array $SettingConfs 挂载配置信息
+     * @param EksService $EksService eks 访问设置
      */
     function __construct()
     {
@@ -394,6 +410,20 @@ class DeployServiceV2Request extends AbstractModel
 
         if (array_key_exists("UseRegistryDefaultConfig",$param) and $param["UseRegistryDefaultConfig"] !== null) {
             $this->UseRegistryDefaultConfig = $param["UseRegistryDefaultConfig"];
+        }
+
+        if (array_key_exists("SettingConfs",$param) and $param["SettingConfs"] !== null) {
+            $this->SettingConfs = [];
+            foreach ($param["SettingConfs"] as $key => $value){
+                $obj = new MountedSettingConf();
+                $obj->deserialize($value);
+                array_push($this->SettingConfs, $obj);
+            }
+        }
+
+        if (array_key_exists("EksService",$param) and $param["EksService"] !== null) {
+            $this->EksService = new EksService();
+            $this->EksService->deserialize($param["EksService"]);
         }
     }
 }

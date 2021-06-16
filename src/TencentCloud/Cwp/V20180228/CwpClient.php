@@ -29,6 +29,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\CreateBaselineStrategyResponse CreateBaselineStrategy(Models\CreateBaselineStrategyRequest $req) 根据策略信息创建基线策略
  * @method Models\CreateOpenPortTaskResponse CreateOpenPortTask(Models\CreateOpenPortTaskRequest $req) 本接口 (CreateOpenPortTask) 用于创建实时获取端口任务。
  * @method Models\CreateProcessTaskResponse CreateProcessTask(Models\CreateProcessTaskRequest $req) 本接口 (CreateProcessTask) 用于创建实时拉取进程任务。
+ * @method Models\CreateProtectServerResponse CreateProtectServer(Models\CreateProtectServerRequest $req) 添加房展防护服务器
  * @method Models\CreateSearchLogResponse CreateSearchLog(Models\CreateSearchLogRequest $req) 添加历史搜索记录
  * @method Models\CreateSearchTemplateResponse CreateSearchTemplate(Models\CreateSearchTemplateRequest $req) 添加检索模板
  * @method Models\CreateUsualLoginPlacesResponse CreateUsualLoginPlaces(Models\CreateUsualLoginPlacesRequest $req) 此接口（CreateUsualLoginPlaces）用于添加常用登录地。
@@ -49,6 +50,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DeleteSearchTemplateResponse DeleteSearchTemplate(Models\DeleteSearchTemplateRequest $req) 删除检索模板
  * @method Models\DeleteTagsResponse DeleteTags(Models\DeleteTagsRequest $req) 删除标签
  * @method Models\DeleteUsualLoginPlacesResponse DeleteUsualLoginPlaces(Models\DeleteUsualLoginPlacesRequest $req) 本接口（DeleteUsualLoginPlaces）用于删除常用登录地。
+ * @method Models\DeleteWebPageEventLogResponse DeleteWebPageEventLog(Models\DeleteWebPageEventLogRequest $req) 网站防篡改-删除事件记录
  * @method Models\DescribeAccountStatisticsResponse DescribeAccountStatistics(Models\DescribeAccountStatisticsRequest $req) 本接口 (DescribeAccountStatistics) 用于获取帐号统计列表数据。
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口 (DescribeAccounts) 用于获取帐号列表数据。
  * @method Models\DescribeAgentVulsResponse DescribeAgentVuls(Models\DescribeAgentVulsRequest $req) 本接口 (DescribeAgentVuls) 用于获取单台主机的漏洞列表。
@@ -113,6 +115,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeVulScanResultResponse DescribeVulScanResult(Models\DescribeVulScanResultRequest $req) 本接口 (DescribeVulScanResult) 用于获取漏洞检测结果。
 
  * @method Models\DescribeVulsResponse DescribeVuls(Models\DescribeVulsRequest $req) 本接口 (DescribeVuls) 用于获取漏洞列表数据。
+ * @method Models\DescribeWebPageGeneralizeResponse DescribeWebPageGeneralize(Models\DescribeWebPageGeneralizeRequest $req) 查询网站防篡改 概览信息
  * @method Models\DescribeWeeklyReportBruteAttacksResponse DescribeWeeklyReportBruteAttacks(Models\DescribeWeeklyReportBruteAttacksRequest $req) 本接口 (DescribeWeeklyReportBruteAttacks) 用于获取专业周报密码破解数据。
  * @method Models\DescribeWeeklyReportInfoResponse DescribeWeeklyReportInfo(Models\DescribeWeeklyReportInfoRequest $req) 本接口 (DescribeWeeklyReportInfo) 用于获取专业周报详情数据。
  * @method Models\DescribeWeeklyReportMalwaresResponse DescribeWeeklyReportMalwares(Models\DescribeWeeklyReportMalwaresRequest $req) 本接口 (DescribeWeeklyReportMalwares) 用于获取专业周报木马数据。
@@ -144,11 +147,13 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ModifyLoginWhiteListResponse ModifyLoginWhiteList(Models\ModifyLoginWhiteListRequest $req) 本接口用于编辑异地登录白名单规则。
  * @method Models\ModifyMalwareTimingScanSettingsResponse ModifyMalwareTimingScanSettings(Models\ModifyMalwareTimingScanSettingsRequest $req) 定时扫描设置
  * @method Models\ModifyProVersionRenewFlagResponse ModifyProVersionRenewFlag(Models\ModifyProVersionRenewFlagRequest $req) 本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
+ * @method Models\ModifyWebPageProtectSettingResponse ModifyWebPageProtectSetting(Models\ModifyWebPageProtectSettingRequest $req) 网站防篡改-修改网站防护设置
  * @method Models\OpenProVersionResponse OpenProVersion(Models\OpenProVersionRequest $req) 本接口 (OpenProVersion) 用于开通专业版。
  * @method Models\OpenProVersionPrepaidResponse OpenProVersionPrepaid(Models\OpenProVersionPrepaidRequest $req) 本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。
  * @method Models\RecoverMalwaresResponse RecoverMalwares(Models\RecoverMalwaresRequest $req) 本接口（RecoverMalwares）用于批量恢复已经被隔离的木马文件。
  * @method Models\RenewProVersionResponse RenewProVersion(Models\RenewProVersionRequest $req) 本接口 (RenewProVersion) 用于续费专业版(包年包月)。
  * @method Models\RescanImpactedHostResponse RescanImpactedHost(Models\RescanImpactedHostRequest $req) 本接口 (RescanImpactedHost) 用于漏洞重新检测。
+ * @method Models\ScanVulResponse ScanVul(Models\ScanVulRequest $req) 漏洞管理 - 一键检测
  * @method Models\SeparateMalwaresResponse SeparateMalwares(Models\SeparateMalwaresRequest $req) 本接口（SeparateMalwares）用于隔离木马。
  * @method Models\SetBashEventsStatusResponse SetBashEventsStatus(Models\SetBashEventsStatusRequest $req) 设置高危命令事件状态
  * @method Models\SwitchBashRulesResponse SwitchBashRules(Models\SwitchBashRulesRequest $req) 切换高危命令规则状态

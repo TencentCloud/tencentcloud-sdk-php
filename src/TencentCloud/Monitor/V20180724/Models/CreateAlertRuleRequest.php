@@ -38,8 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDuration(string $Duration) 设置规则报警持续时间
  * @method array getLabels() 获取标签列表
  * @method void setLabels(array $Labels) 设置标签列表
- * @method array getAnnotations() 获取注释列表
- * @method void setAnnotations(array $Annotations) 设置注释列表
+ * @method array getAnnotations() 获取注释列表。
+
+告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
+ * @method void setAnnotations(array $Annotations) 设置注释列表。
+
+告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
  * @method string getType() 获取报警策略模板分类
  * @method void setType(string $Type) 设置报警策略模板分类
  */
@@ -83,7 +87,9 @@ class CreateAlertRuleRequest extends AbstractModel
     public $Labels;
 
     /**
-     * @var array 注释列表
+     * @var array 注释列表。
+
+告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
      */
     public $Annotations;
 
@@ -102,7 +108,9 @@ class CreateAlertRuleRequest extends AbstractModel
 <li>3=RuleDisabled</li>
      * @param string $Duration 规则报警持续时间
      * @param array $Labels 标签列表
-     * @param array $Annotations 注释列表
+     * @param array $Annotations 注释列表。
+
+告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
      * @param string $Type 报警策略模板分类
      */
     function __construct()

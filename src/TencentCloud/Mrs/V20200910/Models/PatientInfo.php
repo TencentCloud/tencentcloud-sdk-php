@@ -44,6 +44,46 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdCard(string $IdCard) 设置患者身份证
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHealthCardNo() 获取健康卡号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthCardNo(string $HealthCardNo) 设置健康卡号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSocialSecurityCardNo() 获取社保卡号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSocialSecurityCardNo(string $SocialSecurityCardNo) 设置社保卡号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBirthday() 获取出生日期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBirthday(string $Birthday) 设置出生日期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEthnicity() 获取民族
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEthnicity(string $Ethnicity) 设置民族
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMarried() 获取婚姻状况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMarried(string $Married) 设置婚姻状况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProfession() 获取职业
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProfession(string $Profession) 设置职业
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEducationBackground() 获取教育程度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEducationBackground(string $EducationBackground) 设置教育程度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNationality() 获取国籍
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNationality(string $Nationality) 设置国籍
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBirthPlace() 获取籍贯
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBirthPlace(string $BirthPlace) 设置籍贯
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMedicalInsuranceType() 获取医保类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMedicalInsuranceType(string $MedicalInsuranceType) 设置医保类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PatientInfo extends AbstractModel
 {
@@ -84,6 +124,66 @@ class PatientInfo extends AbstractModel
     public $IdCard;
 
     /**
+     * @var string 健康卡号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthCardNo;
+
+    /**
+     * @var string 社保卡号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SocialSecurityCardNo;
+
+    /**
+     * @var string 出生日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Birthday;
+
+    /**
+     * @var string 民族
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ethnicity;
+
+    /**
+     * @var string 婚姻状况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Married;
+
+    /**
+     * @var string 职业
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Profession;
+
+    /**
+     * @var string 教育程度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EducationBackground;
+
+    /**
+     * @var string 国籍
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Nationality;
+
+    /**
+     * @var string 籍贯
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BirthPlace;
+
+    /**
+     * @var string 医保类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MedicalInsuranceType;
+
+    /**
      * @param string $Name 患者姓名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sex 患者性别
@@ -95,6 +195,26 @@ class PatientInfo extends AbstractModel
      * @param string $Address 患者地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdCard 患者身份证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HealthCardNo 健康卡号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SocialSecurityCardNo 社保卡号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Birthday 出生日期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Ethnicity 民族
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Married 婚姻状况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Profession 职业
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EducationBackground 教育程度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Nationality 国籍
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BirthPlace 籍贯
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MedicalInsuranceType 医保类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +252,46 @@ class PatientInfo extends AbstractModel
 
         if (array_key_exists("IdCard",$param) and $param["IdCard"] !== null) {
             $this->IdCard = $param["IdCard"];
+        }
+
+        if (array_key_exists("HealthCardNo",$param) and $param["HealthCardNo"] !== null) {
+            $this->HealthCardNo = $param["HealthCardNo"];
+        }
+
+        if (array_key_exists("SocialSecurityCardNo",$param) and $param["SocialSecurityCardNo"] !== null) {
+            $this->SocialSecurityCardNo = $param["SocialSecurityCardNo"];
+        }
+
+        if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
+            $this->Birthday = $param["Birthday"];
+        }
+
+        if (array_key_exists("Ethnicity",$param) and $param["Ethnicity"] !== null) {
+            $this->Ethnicity = $param["Ethnicity"];
+        }
+
+        if (array_key_exists("Married",$param) and $param["Married"] !== null) {
+            $this->Married = $param["Married"];
+        }
+
+        if (array_key_exists("Profession",$param) and $param["Profession"] !== null) {
+            $this->Profession = $param["Profession"];
+        }
+
+        if (array_key_exists("EducationBackground",$param) and $param["EducationBackground"] !== null) {
+            $this->EducationBackground = $param["EducationBackground"];
+        }
+
+        if (array_key_exists("Nationality",$param) and $param["Nationality"] !== null) {
+            $this->Nationality = $param["Nationality"];
+        }
+
+        if (array_key_exists("BirthPlace",$param) and $param["BirthPlace"] !== null) {
+            $this->BirthPlace = $param["BirthPlace"];
+        }
+
+        if (array_key_exists("MedicalInsuranceType",$param) and $param["MedicalInsuranceType"] !== null) {
+            $this->MedicalInsuranceType = $param["MedicalInsuranceType"];
         }
     }
 }

@@ -32,16 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBpm(integer $Bpm) 设置节奏信息
  * @method float getScore() 获取商业化权益
  * @method void setScore(float $Score) 设置商业化权益
- * @method array getScene() 获取场景信息
- * @method void setScene(array $Scene) 设置场景信息
- * @method array getRegion() 获取应用地域
- * @method void setRegion(array $Region) 设置应用地域
- * @method string getAuthPeriod() 获取授权期限
- * @method void setAuthPeriod(string $AuthPeriod) 设置授权期限
- * @method string getCommercialization() 获取商业化权益
- * @method void setCommercialization(string $Commercialization) 设置商业化权益
- * @method string getPlatform() 获取跨平台传播权益
- * @method void setPlatform(string $Platform) 设置跨平台传播权益
+ * @method array getScene() 获取应用歌曲信息,1.图文/短视频,2.网络直播,3.网络电台FM,4.免费游戏,5.商业游戏,6.网店网站设计,7.广告营销,8.网络长视频
+ * @method void setScene(array $Scene) 设置应用歌曲信息,1.图文/短视频,2.网络直播,3.网络电台FM,4.免费游戏,5.商业游戏,6.网店网站设计,7.广告营销,8.网络长视频
+ * @method array getRegion() 获取应用地域,1. 中国大陆,2. 中国含港澳台,3. 全球
+ * @method void setRegion(array $Region) 设置应用地域,1. 中国大陆,2. 中国含港澳台,3. 全球
+ * @method string getAuthPeriod() 获取授权时间,1. 1年, 5. 随片永久
+ * @method void setAuthPeriod(string $AuthPeriod) 设置授权时间,1. 1年, 5. 随片永久
+ * @method string getCommercialization() 获取商业化授权，1. 支持商业化 ,2. 不支持商业化
+ * @method void setCommercialization(string $Commercialization) 设置商业化授权，1. 支持商业化 ,2. 不支持商业化
+ * @method string getPlatform() 获取跨平台传播，1. 支持跨平台传播 ,2. 不支持跨平台传播
+ * @method void setPlatform(string $Platform) 设置跨平台传播，1. 支持跨平台传播 ,2. 不支持跨平台传播
  * @method string getChannel() 获取传播渠道
  * @method void setChannel(string $Channel) 设置传播渠道
  */
@@ -78,27 +78,27 @@ class MusicDetailInfo extends AbstractModel
     public $Score;
 
     /**
-     * @var array 场景信息
+     * @var array 应用歌曲信息,1.图文/短视频,2.网络直播,3.网络电台FM,4.免费游戏,5.商业游戏,6.网店网站设计,7.广告营销,8.网络长视频
      */
     public $Scene;
 
     /**
-     * @var array 应用地域
+     * @var array 应用地域,1. 中国大陆,2. 中国含港澳台,3. 全球
      */
     public $Region;
 
     /**
-     * @var string 授权期限
+     * @var string 授权时间,1. 1年, 5. 随片永久
      */
     public $AuthPeriod;
 
     /**
-     * @var string 商业化权益
+     * @var string 商业化授权，1. 支持商业化 ,2. 不支持商业化
      */
     public $Commercialization;
 
     /**
-     * @var string 跨平台传播权益
+     * @var string 跨平台传播，1. 支持跨平台传播 ,2. 不支持跨平台传播
      */
     public $Platform;
 
@@ -114,11 +114,11 @@ class MusicDetailInfo extends AbstractModel
      * @param array $HitWords 关键词
      * @param integer $Bpm 节奏信息
      * @param float $Score 商业化权益
-     * @param array $Scene 场景信息
-     * @param array $Region 应用地域
-     * @param string $AuthPeriod 授权期限
-     * @param string $Commercialization 商业化权益
-     * @param string $Platform 跨平台传播权益
+     * @param array $Scene 应用歌曲信息,1.图文/短视频,2.网络直播,3.网络电台FM,4.免费游戏,5.商业游戏,6.网店网站设计,7.广告营销,8.网络长视频
+     * @param array $Region 应用地域,1. 中国大陆,2. 中国含港澳台,3. 全球
+     * @param string $AuthPeriod 授权时间,1. 1年, 5. 随片永久
+     * @param string $Commercialization 商业化授权，1. 支持商业化 ,2. 不支持商业化
+     * @param string $Platform 跨平台传播，1. 支持跨平台传播 ,2. 不支持跨平台传播
      * @param string $Channel 传播渠道
      */
     function __construct()

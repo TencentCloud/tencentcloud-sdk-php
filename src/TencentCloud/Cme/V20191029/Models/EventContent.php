@@ -21,17 +21,22 @@ use TencentCloud\Common\AbstractModel;
  * 回调事件内容。
  *
  * @method string getEventType() 获取事件类型，可取值为：
-<li>Storage.NewFileCreated：新文件产生。</li>
+<li>Storage.NewFileCreated：新文件产生；</li>
+<li>Project.StreamConnect.StatusChanged：云转推项目状态变更。</li>
  * @method void setEventType(string $EventType) 设置事件类型，可取值为：
-<li>Storage.NewFileCreated：新文件产生。</li>
+<li>Storage.NewFileCreated：新文件产生；</li>
+<li>Project.StreamConnect.StatusChanged：云转推项目状态变更。</li>
  * @method StorageNewFileCreatedEvent getStorageNewFileCreatedEvent() 获取新文件产生事件信息。仅当 EventType 为 Storage.NewFileCreated 时有效。
  * @method void setStorageNewFileCreatedEvent(StorageNewFileCreatedEvent $StorageNewFileCreatedEvent) 设置新文件产生事件信息。仅当 EventType 为 Storage.NewFileCreated 时有效。
+ * @method ProjectStreamConnectStatusChangedEvent getProjectStreamConnectStatusChangedEvent() 获取云转推项目状态变更事件信息。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。
+ * @method void setProjectStreamConnectStatusChangedEvent(ProjectStreamConnectStatusChangedEvent $ProjectStreamConnectStatusChangedEvent) 设置云转推项目状态变更事件信息。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。
  */
 class EventContent extends AbstractModel
 {
     /**
      * @var string 事件类型，可取值为：
-<li>Storage.NewFileCreated：新文件产生。</li>
+<li>Storage.NewFileCreated：新文件产生；</li>
+<li>Project.StreamConnect.StatusChanged：云转推项目状态变更。</li>
      */
     public $EventType;
 
@@ -41,9 +46,16 @@ class EventContent extends AbstractModel
     public $StorageNewFileCreatedEvent;
 
     /**
+     * @var ProjectStreamConnectStatusChangedEvent 云转推项目状态变更事件信息。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。
+     */
+    public $ProjectStreamConnectStatusChangedEvent;
+
+    /**
      * @param string $EventType 事件类型，可取值为：
-<li>Storage.NewFileCreated：新文件产生。</li>
+<li>Storage.NewFileCreated：新文件产生；</li>
+<li>Project.StreamConnect.StatusChanged：云转推项目状态变更。</li>
      * @param StorageNewFileCreatedEvent $StorageNewFileCreatedEvent 新文件产生事件信息。仅当 EventType 为 Storage.NewFileCreated 时有效。
+     * @param ProjectStreamConnectStatusChangedEvent $ProjectStreamConnectStatusChangedEvent 云转推项目状态变更事件信息。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。
      */
     function __construct()
     {
@@ -65,6 +77,11 @@ class EventContent extends AbstractModel
         if (array_key_exists("StorageNewFileCreatedEvent",$param) and $param["StorageNewFileCreatedEvent"] !== null) {
             $this->StorageNewFileCreatedEvent = new StorageNewFileCreatedEvent();
             $this->StorageNewFileCreatedEvent->deserialize($param["StorageNewFileCreatedEvent"]);
+        }
+
+        if (array_key_exists("ProjectStreamConnectStatusChangedEvent",$param) and $param["ProjectStreamConnectStatusChangedEvent"] !== null) {
+            $this->ProjectStreamConnectStatusChangedEvent = new ProjectStreamConnectStatusChangedEvent();
+            $this->ProjectStreamConnectStatusChangedEvent->deserialize($param["ProjectStreamConnectStatusChangedEvent"]);
         }
     }
 }

@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUltraNum(string $UltraNum) 设置超声号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiagnose() 获取临床诊断
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiagnose(string $Diagnose) 设置临床诊断
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReportInfo extends AbstractModel
 {
@@ -194,6 +198,12 @@ class ReportInfo extends AbstractModel
     public $UltraNum;
 
     /**
+     * @var string 临床诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Diagnose;
+
+    /**
      * @param string $Hospital 医院名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DepartmentName 科室名称
@@ -227,6 +237,8 @@ class ReportInfo extends AbstractModel
      * @param string $ReportName 报告名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UltraNum 超声号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Diagnose 临床诊断
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -308,6 +320,10 @@ class ReportInfo extends AbstractModel
 
         if (array_key_exists("UltraNum",$param) and $param["UltraNum"] !== null) {
             $this->UltraNum = $param["UltraNum"];
+        }
+
+        if (array_key_exists("Diagnose",$param) and $param["Diagnose"] !== null) {
+            $this->Diagnose = $param["Diagnose"];
         }
     }
 }

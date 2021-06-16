@@ -32,6 +32,8 @@ view-id - String - （过滤条件）view id形如：12342。
  * @method void setFilters(array $Filters) 设置过滤条件，如下支持的过滤类型，传参Name应为其一
 view-name - String - （过滤条件）数据表名称,形如：view-001。
 view-id - String - （过滤条件）view id形如：12342。
+ * @method string getDatasourceConnectionName() 获取数据库所属的数据源名称
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据库所属的数据源名称
  */
 class DescribeViewsRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ view-id - String - （过滤条件）view id形如：12342。
     public $Filters;
 
     /**
+     * @var string 数据库所属的数据源名称
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DatabaseName 列出该数据库下所属数据表。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 数据偏移量，从0开始，默认为0。
      * @param array $Filters 过滤条件，如下支持的过滤类型，传参Name应为其一
 view-name - String - （过滤条件）数据表名称,形如：view-001。
 view-id - String - （过滤条件）view id形如：12342。
+     * @param string $DatasourceConnectionName 数据库所属的数据源名称
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ view-id - String - （过滤条件）view id形如：12342。
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

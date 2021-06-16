@@ -18,7 +18,7 @@ namespace TencentCloud\Mrs\V20200910\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 部位
+ * 标准部位
  *
  * @method string getPart() 获取部位值
 注意：此字段可能返回 null，表示取不到有效值。

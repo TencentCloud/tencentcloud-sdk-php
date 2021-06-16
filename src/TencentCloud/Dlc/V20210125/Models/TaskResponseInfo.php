@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPercentage(integer $Percentage) 设置任务执行进度num/100(%)
  * @method string getOutputMessage() 获取任务执行输出信息。
  * @method void setOutputMessage(string $OutputMessage) 设置任务执行输出信息。
+ * @method string getTaskType() 获取执行SQL的引擎类型
+ * @method void setTaskType(string $TaskType) 设置执行SQL的引擎类型
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -132,6 +134,11 @@ class TaskResponseInfo extends AbstractModel
     public $OutputMessage;
 
     /**
+     * @var string 执行SQL的引擎类型
+     */
+    public $TaskType;
+
+    /**
      * @param string $DatabaseName 任务所属Database的名称。
      * @param integer $DataAmount 任务数据量。
      * @param string $Id 任务Id。
@@ -148,6 +155,7 @@ class TaskResponseInfo extends AbstractModel
      * @param string $Error 失败信息, 例如：errorMessage。该字段已废弃。
      * @param integer $Percentage 任务执行进度num/100(%)
      * @param string $OutputMessage 任务执行输出信息。
+     * @param string $TaskType 执行SQL的引擎类型
      */
     function __construct()
     {
@@ -220,6 +228,10 @@ class TaskResponseInfo extends AbstractModel
 
         if (array_key_exists("OutputMessage",$param) and $param["OutputMessage"] !== null) {
             $this->OutputMessage = $param["OutputMessage"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
     }
 }

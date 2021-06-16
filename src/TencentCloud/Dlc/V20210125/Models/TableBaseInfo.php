@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) 设置该数据表所属数据库名字
  * @method string getTableName() 获取数据表名字
  * @method void setTableName(string $TableName) 设置数据表名字
+ * @method string getDatasourceConnectionName() 获取该数据表所属数据源名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置该数据表所属数据源名字
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableBaseInfo extends AbstractModel
 {
@@ -38,8 +42,16 @@ class TableBaseInfo extends AbstractModel
     public $TableName;
 
     /**
+     * @var string 该数据表所属数据源名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DatabaseName 该数据表所属数据库名字
      * @param string $TableName 数据表名字
+     * @param string $DatasourceConnectionName 该数据表所属数据源名字
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class TableBaseInfo extends AbstractModel
 
         if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
             $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

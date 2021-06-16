@@ -18,7 +18,7 @@ namespace TencentCloud\Mrs\V20200910\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 等级
+ * 组织学等级
  *
  * @method string getGrade() 获取等级
 注意：此字段可能返回 null，表示取不到有效值。

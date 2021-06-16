@@ -18,7 +18,7 @@ namespace TencentCloud\Mrs\V20200910\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 病症描述
+ * 病症描述信息
  *
  * @method BlockInfo getGrade() 获取等级
 注意：此字段可能返回 null，表示取不到有效值。

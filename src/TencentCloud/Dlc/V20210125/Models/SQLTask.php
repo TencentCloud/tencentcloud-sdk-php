@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSQL() 获取base64加密后的SQL语句
  * @method void setSQL(string $SQL) 设置base64加密后的SQL语句
+ * @method array getConfig() 获取任务的配置信息
+ * @method void setConfig(array $Config) 设置任务的配置信息
  */
 class SQLTask extends AbstractModel
 {
@@ -31,7 +33,13 @@ class SQLTask extends AbstractModel
     public $SQL;
 
     /**
+     * @var array 任务的配置信息
+     */
+    public $Config;
+
+    /**
      * @param string $SQL base64加密后的SQL语句
+     * @param array $Config 任务的配置信息
      */
     function __construct()
     {
@@ -48,6 +56,15 @@ class SQLTask extends AbstractModel
         }
         if (array_key_exists("SQL",$param) and $param["SQL"] !== null) {
             $this->SQL = $param["SQL"];
+        }
+
+        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+            $this->Config = [];
+            foreach ($param["Config"] as $key => $value){
+                $obj = new KVPair();
+                $obj->deserialize($value);
+                array_push($this->Config, $obj);
+            }
         }
     }
 }

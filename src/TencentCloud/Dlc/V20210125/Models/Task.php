@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method SQLTask getSQLTask() 获取SQL查询任务
  * @method void setSQLTask(SQLTask $SQLTask) 设置SQL查询任务
+ * @method SQLTask getSparkSQLTask() 获取Spark SQL查询任务
+ * @method void setSparkSQLTask(SQLTask $SparkSQLTask) 设置Spark SQL查询任务
  */
 class Task extends AbstractModel
 {
@@ -31,7 +33,13 @@ class Task extends AbstractModel
     public $SQLTask;
 
     /**
+     * @var SQLTask Spark SQL查询任务
+     */
+    public $SparkSQLTask;
+
+    /**
      * @param SQLTask $SQLTask SQL查询任务
+     * @param SQLTask $SparkSQLTask Spark SQL查询任务
      */
     function __construct()
     {
@@ -49,6 +57,11 @@ class Task extends AbstractModel
         if (array_key_exists("SQLTask",$param) and $param["SQLTask"] !== null) {
             $this->SQLTask = new SQLTask();
             $this->SQLTask->deserialize($param["SQLTask"]);
+        }
+
+        if (array_key_exists("SparkSQLTask",$param) and $param["SparkSQLTask"] !== null) {
+            $this->SparkSQLTask = new SQLTask();
+            $this->SparkSQLTask->deserialize($param["SparkSQLTask"]);
         }
     }
 }

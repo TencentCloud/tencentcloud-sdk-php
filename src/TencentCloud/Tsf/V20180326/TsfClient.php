@@ -171,6 +171,8 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\RevocationConfigResponse RevocationConfig(Models\RevocationConfigRequest $req) 撤回已发布的配置
  * @method Models\RevocationPublicConfigResponse RevocationPublicConfig(Models\RevocationPublicConfigRequest $req) 撤回已发布的公共配置
  * @method Models\RollbackConfigResponse RollbackConfig(Models\RollbackConfigRequest $req) 回滚配置
+ * @method Models\SearchBusinessLogResponse SearchBusinessLog(Models\SearchBusinessLogRequest $req) 业务日志搜索
+ * @method Models\SearchStdoutLogResponse SearchStdoutLog(Models\SearchStdoutLogRequest $req) 标准输出日志搜索
  * @method Models\ShrinkGroupResponse ShrinkGroup(Models\ShrinkGroupRequest $req) 下线部署组所有机器实例
  * @method Models\ShrinkInstancesResponse ShrinkInstances(Models\ShrinkInstancesRequest $req) 虚拟机部署组下线实例
  * @method Models\StartContainerGroupResponse StartContainerGroup(Models\StartContainerGroupRequest $req) 启动容器部署组

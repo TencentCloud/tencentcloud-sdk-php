@@ -18,7 +18,7 @@ namespace TencentCloud\Mrs\V20200910\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 指标项
+ * 检验指标项
  *
  * @method string getCode() 获取英文缩写
 注意：此字段可能返回 null，表示取不到有效值。

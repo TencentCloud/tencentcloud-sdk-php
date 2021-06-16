@@ -18,7 +18,7 @@ namespace TencentCloud\Mrs\V20200910\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 类型
+ * 组织学类型
  *
  * @method string getInfiltration() 获取浸润
 注意：此字段可能返回 null，表示取不到有效值。

@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMusicIds() 获取资源方对应音乐Id
  * @method void setMusicIds(string $MusicIds) 设置资源方对应音乐Id
  * @method string getSaleStatus() 获取当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架
+在售状态，0在售，1临时下架，2永久下架
  * @method void setSaleStatus(string $SaleStatus) 设置当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架
+在售状态，0在售，1临时下架，2永久下架
  */
 class TakeMusicOffShelves extends AbstractModel
 {
@@ -34,12 +36,14 @@ class TakeMusicOffShelves extends AbstractModel
 
     /**
      * @var string 当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架
+在售状态，0在售，1临时下架，2永久下架
      */
     public $SaleStatus;
 
     /**
      * @param string $MusicIds 资源方对应音乐Id
      * @param string $SaleStatus 当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架
+在售状态，0在售，1临时下架，2永久下架
      */
     function __construct()
     {

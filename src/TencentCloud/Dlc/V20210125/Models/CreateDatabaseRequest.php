@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method DatabaseInfo getDatabaseInfo() 获取数据库基础信息
  * @method void setDatabaseInfo(DatabaseInfo $DatabaseInfo) 设置数据库基础信息
+ * @method string getDatasourceConnectionName() 获取数据源名称，默认为CosDataCatalog
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源名称，默认为CosDataCatalog
  */
 class CreateDatabaseRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateDatabaseRequest extends AbstractModel
     public $DatabaseInfo;
 
     /**
+     * @var string 数据源名称，默认为CosDataCatalog
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param DatabaseInfo $DatabaseInfo 数据库基础信息
+     * @param string $DatasourceConnectionName 数据源名称，默认为CosDataCatalog
      */
     function __construct()
     {
@@ -49,6 +57,10 @@ class CreateDatabaseRequest extends AbstractModel
         if (array_key_exists("DatabaseInfo",$param) and $param["DatabaseInfo"] !== null) {
             $this->DatabaseInfo = new DatabaseInfo();
             $this->DatabaseInfo->deserialize($param["DatabaseInfo"]);
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

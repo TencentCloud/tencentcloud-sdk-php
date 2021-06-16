@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRearEcho(BlockInfo $RearEcho) 设置外部回声
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Elastic getElastic() 获取质地弹性
+ * @method Elastic getElastic() 获取弹性质地
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setElastic(Elastic $Elastic) 设置质地弹性
+ * @method void setElastic(Elastic $Elastic) 设置弹性质地
 注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getShape() 获取形状
 注意：此字段可能返回 null，表示取不到有效值。
@@ -204,7 +204,7 @@ class TuberInfo extends AbstractModel
     public $RearEcho;
 
     /**
-     * @var Elastic 质地弹性
+     * @var Elastic 弹性质地
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Elastic;
@@ -370,7 +370,7 @@ class TuberInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $RearEcho 外部回声
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Elastic $Elastic 质地弹性
+     * @param Elastic $Elastic 弹性质地
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Shape 形状
 注意：此字段可能返回 null，表示取不到有效值。

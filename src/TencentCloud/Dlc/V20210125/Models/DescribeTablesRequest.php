@@ -32,6 +32,8 @@ table-id - String - （过滤条件）table id形如：12342。
  * @method void setFilters(array $Filters) 设置过滤条件，如下支持的过滤类型，传参Name应为其一
 table-name - String - （过滤条件）数据表名称,形如：table-001。
 table-id - String - （过滤条件）table id形如：12342。
+ * @method string getDatasourceConnectionName() 获取指定查询的数据源名称，默认为CosDataCatalog
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置指定查询的数据源名称，默认为CosDataCatalog
  */
 class DescribeTablesRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ table-id - String - （过滤条件）table id形如：12342。
     public $Filters;
 
     /**
+     * @var string 指定查询的数据源名称，默认为CosDataCatalog
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DatabaseName 列出该数据库下所属数据表。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 数据偏移量，从0开始，默认为0。
      * @param array $Filters 过滤条件，如下支持的过滤类型，传参Name应为其一
 table-name - String - （过滤条件）数据表名称,形如：table-001。
 table-id - String - （过滤条件）table id形如：12342。
+     * @param string $DatasourceConnectionName 指定查询的数据源名称，默认为CosDataCatalog
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ table-id - String - （过滤条件）table id形如：12342。
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

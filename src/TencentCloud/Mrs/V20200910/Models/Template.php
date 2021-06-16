@@ -56,6 +56,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportType(string $ReportType) 设置报告类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MedicalRecordInfo getMedicalRecordInfo() 获取门诊病历信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMedicalRecordInfo(MedicalRecordInfo $MedicalRecordInfo) 设置门诊病历信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Hospitalization getHospitalization() 获取出入院信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHospitalization(Hospitalization $Hospitalization) 设置出入院信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Surgery getSurgery() 获取手术记录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSurgery(Surgery $Surgery) 设置手术记录
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
@@ -114,6 +126,24 @@ class Template extends AbstractModel
     public $ReportType;
 
     /**
+     * @var MedicalRecordInfo 门诊病历信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MedicalRecordInfo;
+
+    /**
+     * @var Hospitalization 出入院信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Hospitalization;
+
+    /**
+     * @var Surgery 手术记录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Surgery;
+
+    /**
      * @param PatientInfo $PatientInfo 患者信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportInfo $ReportInfo 报告信息
@@ -131,6 +161,12 @@ class Template extends AbstractModel
      * @param Indicator $Indicator 检验报告
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportType 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MedicalRecordInfo $MedicalRecordInfo 门诊病历信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Hospitalization $Hospitalization 出入院信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Surgery $Surgery 手术记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +224,21 @@ class Template extends AbstractModel
 
         if (array_key_exists("ReportType",$param) and $param["ReportType"] !== null) {
             $this->ReportType = $param["ReportType"];
+        }
+
+        if (array_key_exists("MedicalRecordInfo",$param) and $param["MedicalRecordInfo"] !== null) {
+            $this->MedicalRecordInfo = new MedicalRecordInfo();
+            $this->MedicalRecordInfo->deserialize($param["MedicalRecordInfo"]);
+        }
+
+        if (array_key_exists("Hospitalization",$param) and $param["Hospitalization"] !== null) {
+            $this->Hospitalization = new Hospitalization();
+            $this->Hospitalization->deserialize($param["Hospitalization"]);
+        }
+
+        if (array_key_exists("Surgery",$param) and $param["Surgery"] !== null) {
+            $this->Surgery = new Surgery();
+            $this->Surgery->deserialize($param["Surgery"]);
         }
     }
 }

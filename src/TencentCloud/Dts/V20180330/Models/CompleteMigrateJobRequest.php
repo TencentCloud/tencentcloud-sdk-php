@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() 获取数据迁移任务ID
  * @method void setJobId(string $JobId) 设置数据迁移任务ID
+ * @method string getCompleteMode() 获取完成任务的方式,仅支持旧版MySQL迁移任务。waitForSync-等待主从差距为0才停止,immediately-立即完成，不会等待主从差距一致。默认为waitForSync
+ * @method void setCompleteMode(string $CompleteMode) 设置完成任务的方式,仅支持旧版MySQL迁移任务。waitForSync-等待主从差距为0才停止,immediately-立即完成，不会等待主从差距一致。默认为waitForSync
  */
 class CompleteMigrateJobRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CompleteMigrateJobRequest extends AbstractModel
     public $JobId;
 
     /**
+     * @var string 完成任务的方式,仅支持旧版MySQL迁移任务。waitForSync-等待主从差距为0才停止,immediately-立即完成，不会等待主从差距一致。默认为waitForSync
+     */
+    public $CompleteMode;
+
+    /**
      * @param string $JobId 数据迁移任务ID
+     * @param string $CompleteMode 完成任务的方式,仅支持旧版MySQL迁移任务。waitForSync-等待主从差距为0才停止,immediately-立即完成，不会等待主从差距一致。默认为waitForSync
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CompleteMigrateJobRequest extends AbstractModel
         }
         if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
             $this->JobId = $param["JobId"];
+        }
+
+        if (array_key_exists("CompleteMode",$param) and $param["CompleteMode"] !== null) {
+            $this->CompleteMode = $param["CompleteMode"];
         }
     }
 }

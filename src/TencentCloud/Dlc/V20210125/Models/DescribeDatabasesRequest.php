@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始，默认为0。
  * @method string getKeyWord() 获取模糊匹配，库名关键字。
  * @method void setKeyWord(string $KeyWord) 设置模糊匹配，库名关键字。
+ * @method string getDatasourceConnectionName() 获取数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
  */
 class DescribeDatabasesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeDatabasesRequest extends AbstractModel
     public $KeyWord;
 
     /**
+     * @var string 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 数据偏移量，从0开始，默认为0。
      * @param string $KeyWord 模糊匹配，库名关键字。
+     * @param string $DatasourceConnectionName 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeDatabasesRequest extends AbstractModel
 
         if (array_key_exists("KeyWord",$param) and $param["KeyWord"] !== null) {
             $this->KeyWord = $param["KeyWord"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageInfoList(array $ImageInfoList) 设置图片列表，允许传入多张图片，支持传入图片的url或base64编码
  * @method HandleParam getHandleParam() 获取图片处理参数
  * @method void setHandleParam(HandleParam $HandleParam) 设置图片处理参数
- * @method integer getType() 获取图片类型
- * @method void setType(integer $Type) 设置图片类型
+ * @method integer getType() 获取图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
+ * @method void setType(integer $Type) 设置图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
  */
 class ImageToClassRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ImageToClassRequest extends AbstractModel
     public $HandleParam;
 
     /**
-     * @var integer 图片类型
+     * @var integer 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
      */
     public $Type;
 
     /**
      * @param array $ImageInfoList 图片列表，允许传入多张图片，支持传入图片的url或base64编码
      * @param HandleParam $HandleParam 图片处理参数
-     * @param integer $Type 图片类型
+     * @param integer $Type 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
      */
     function __construct()
     {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableName(string $TableName) 设置查询对象表名称
  * @method string getDatabaseName() 获取查询表所在的数据库名称。
  * @method void setDatabaseName(string $DatabaseName) 设置查询表所在的数据库名称。
+ * @method string getDatasourceConnectionName() 获取查询表所在的数据源名称
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置查询表所在的数据源名称
  */
 class DescribeTableRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeTableRequest extends AbstractModel
     public $DatabaseName;
 
     /**
+     * @var string 查询表所在的数据源名称
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $TableName 查询对象表名称
      * @param string $DatabaseName 查询表所在的数据库名称。
+     * @param string $DatasourceConnectionName 查询表所在的数据源名称
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeTableRequest extends AbstractModel
 
         if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
             $this->DatabaseName = $param["DatabaseName"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

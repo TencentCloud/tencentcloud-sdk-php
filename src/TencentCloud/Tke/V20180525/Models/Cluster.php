@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableExternalNode() 获取集群是否开启第三方节点支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableExternalNode(boolean $EnableExternalNode) 设置集群是否开启第三方节点支持
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -171,6 +175,12 @@ class Cluster extends AbstractModel
     public $DeletionProtection;
 
     /**
+     * @var boolean 集群是否开启第三方节点支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableExternalNode;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterDescription 集群描述
@@ -195,6 +205,8 @@ class Cluster extends AbstractModel
      * @param string $CreatedTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeletionProtection 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableExternalNode 集群是否开启第三方节点支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -286,6 +298,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("EnableExternalNode",$param) and $param["EnableExternalNode"] !== null) {
+            $this->EnableExternalNode = $param["EnableExternalNode"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAspectRatio(string $AspectRatio) 设置视频编辑模板宽高比。
  * @method array getSlotSet() 获取卡槽信息。
  * @method void setSlotSet(array $SlotSet) 设置卡槽信息。
+ * @method string getPreviewVideoUrl() 获取模板预览视频 URL 地址 。
+ * @method void setPreviewVideoUrl(string $PreviewVideoUrl) 设置模板预览视频 URL 地址 。
  */
 class VideoEditTemplateMaterial extends AbstractModel
 {
@@ -38,8 +40,14 @@ class VideoEditTemplateMaterial extends AbstractModel
     public $SlotSet;
 
     /**
+     * @var string 模板预览视频 URL 地址 。
+     */
+    public $PreviewVideoUrl;
+
+    /**
      * @param string $AspectRatio 视频编辑模板宽高比。
      * @param array $SlotSet 卡槽信息。
+     * @param string $PreviewVideoUrl 模板预览视频 URL 地址 。
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class VideoEditTemplateMaterial extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SlotSet, $obj);
             }
+        }
+
+        if (array_key_exists("PreviewVideoUrl",$param) and $param["PreviewVideoUrl"] !== null) {
+            $this->PreviewVideoUrl = $param["PreviewVideoUrl"];
         }
     }
 }

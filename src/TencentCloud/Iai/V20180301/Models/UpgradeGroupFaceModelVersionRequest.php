@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取需要升级的人员库ID。
  * @method void setGroupId(string $GroupId) 设置需要升级的人员库ID。
- * @method string getFaceModelVersion() 获取需要升级至的算法模型版本。默认为最新版本。
- * @method void setFaceModelVersion(string $FaceModelVersion) 设置需要升级至的算法模型版本。默认为最新版本。
+ * @method string getFaceModelVersion() 获取需要升级至的算法模型版本。默认为最新版本。不可逆向升级
+ * @method void setFaceModelVersion(string $FaceModelVersion) 设置需要升级至的算法模型版本。默认为最新版本。不可逆向升级
  */
 class UpgradeGroupFaceModelVersionRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class UpgradeGroupFaceModelVersionRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string 需要升级至的算法模型版本。默认为最新版本。
+     * @var string 需要升级至的算法模型版本。默认为最新版本。不可逆向升级
      */
     public $FaceModelVersion;
 
     /**
      * @param string $GroupId 需要升级的人员库ID。
-     * @param string $FaceModelVersion 需要升级至的算法模型版本。默认为最新版本。
+     * @param string $FaceModelVersion 需要升级至的算法模型版本。默认为最新版本。不可逆向升级
      */
     function __construct()
     {

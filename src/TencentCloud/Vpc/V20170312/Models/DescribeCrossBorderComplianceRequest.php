@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceEndDate(string $ServiceEndDate) 设置（精确匹配）服务结束日期，如：`2021-07-28`。
  * @method string getState() 获取（精确匹配）状态。待审批：`PENDING`，通过：`APPROVED `，拒绝：`DENY`。
  * @method void setState(string $State) 设置（精确匹配）状态。待审批：`PENDING`，通过：`APPROVED `，拒绝：`DENY`。
+ * @method integer getOffset() 获取偏移量
+ * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getLimit() 获取返回数量
+ * @method void setLimit(integer $Limit) 设置返回数量
  */
 class DescribeCrossBorderComplianceRequest extends AbstractModel
 {
@@ -136,6 +140,16 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
     public $State;
 
     /**
+     * @var integer 偏移量
+     */
+    public $Offset;
+
+    /**
+     * @var integer 返回数量
+     */
+    public $Limit;
+
+    /**
      * @param string $ServiceProvider （精确匹配）服务商，可选值：`UNICOM`。
      * @param integer $ComplianceId （精确匹配）合规化审批单`ID`。
      * @param string $Company （模糊查询）公司名称。
@@ -152,6 +166,8 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
      * @param string $ServiceStartDate （精确匹配）服务开始日期，如：`2020-07-28`。
      * @param string $ServiceEndDate （精确匹配）服务结束日期，如：`2021-07-28`。
      * @param string $State （精确匹配）状态。待审批：`PENDING`，通过：`APPROVED `，拒绝：`DENY`。
+     * @param integer $Offset 偏移量
+     * @param integer $Limit 返回数量
      */
     function __construct()
     {
@@ -228,6 +244,14 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

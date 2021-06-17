@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间，例如 2020-07-22 19：27：23
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityGroupPolicy extends AbstractModel
 {
@@ -97,6 +101,12 @@ class SecurityGroupPolicy extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var string 网段或IPv6(互斥)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6CidrBlock;
+
+    /**
      * @param integer $PolicyIndex 安全组规则索引号
      * @param string $Protocol 协议, 取值: TCP,UDP, ICMP。
      * @param string $Port 端口(all, 离散port, range)。
@@ -107,6 +117,8 @@ class SecurityGroupPolicy extends AbstractModel
      * @param string $Action ACCEPT 或 DROP。
      * @param string $PolicyDescription 安全组规则描述。
      * @param string $ModifyTime 修改时间，例如 2020-07-22 19：27：23
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -162,6 +174,10 @@ class SecurityGroupPolicy extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("Ipv6CidrBlock",$param) and $param["Ipv6CidrBlock"] !== null) {
+            $this->Ipv6CidrBlock = $param["Ipv6CidrBlock"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置列表Offset
  * @method string getDevStatus() 获取产品Status
  * @method void setDevStatus(string $DevStatus) 设置产品Status
+ * @method string getProductId() 获取产品ID
+ * @method void setProductId(string $ProductId) 设置产品ID
  */
 class SearchStudioProductRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class SearchStudioProductRequest extends AbstractModel
     public $DevStatus;
 
     /**
+     * @var string 产品ID
+     */
+    public $ProductId;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $ProductName 产品名称
      * @param integer $Limit 列表Limit
      * @param integer $Offset 列表Offset
      * @param string $DevStatus 产品Status
+     * @param string $ProductId 产品ID
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class SearchStudioProductRequest extends AbstractModel
 
         if (array_key_exists("DevStatus",$param) and $param["DevStatus"] !== null) {
             $this->DevStatus = $param["DevStatus"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

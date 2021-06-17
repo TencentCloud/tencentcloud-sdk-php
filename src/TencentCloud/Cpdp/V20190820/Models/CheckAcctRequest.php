@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidasSecretId(string $MidasSecretId) 设置聚鑫分配的安全ID
  * @method string getMidasSignature() 获取按照聚鑫安全密钥计算的签名
  * @method void setMidasSignature(string $MidasSignature) 设置按照聚鑫安全密钥计算的签名
- * @method string getCheckCode() 获取短信验证码
-BindType==2必填
- * @method void setCheckCode(string $CheckCode) 设置短信验证码
-BindType==2必填
+ * @method string getCheckCode() 获取短信验证码或指令号
+BindType==2必填，平安渠道必填
+ * @method void setCheckCode(string $CheckCode) 设置短信验证码或指令号
+BindType==2必填，平安渠道必填
  * @method string getCurrencyType() 获取币种 RMB
 BindType==1必填
  * @method void setCurrencyType(string $CurrencyType) 设置币种 RMB
@@ -111,8 +111,8 @@ class CheckAcctRequest extends AbstractModel
     public $MidasSignature;
 
     /**
-     * @var string 短信验证码
-BindType==2必填
+     * @var string 短信验证码或指令号
+BindType==2必填，平安渠道必填
      */
     public $CheckCode;
 
@@ -162,8 +162,8 @@ development: 开发环境
 <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param string $MidasSecretId 聚鑫分配的安全ID
      * @param string $MidasSignature 按照聚鑫安全密钥计算的签名
-     * @param string $CheckCode 短信验证码
-BindType==2必填
+     * @param string $CheckCode 短信验证码或指令号
+BindType==2必填，平安渠道必填
      * @param string $CurrencyType 币种 RMB
 BindType==1必填
      * @param integer $CurrencyUnit 单位

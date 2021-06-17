@@ -46,9 +46,13 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgTime(integer $MsgTime) 设置消息发送的时间戳，单位为秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ChatArchivingMsgTypeVideo getVideo() 获取MsgType=video时的消息体
+ * @method ChatArchivingMsgTypeVideo getVideo() 获取MsgType=video时的消息体，忽略此字段，见BodyJson字段
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVideo(ChatArchivingMsgTypeVideo $Video) 设置MsgType=video时的消息体
+ * @method void setVideo(ChatArchivingMsgTypeVideo $Video) 设置MsgType=video时的消息体，忽略此字段，见BodyJson字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBodyJson() 获取根据MsgType的不同取值，解析内容不同，参考：https://open.work.weixin.qq.com/api/doc/90000/90135/91774
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBodyJson(string $BodyJson) 设置根据MsgType的不同取值，解析内容不同，参考：https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChatArchivingDetail extends AbstractModel
@@ -95,10 +99,16 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
     public $MsgTime;
 
     /**
-     * @var ChatArchivingMsgTypeVideo MsgType=video时的消息体
+     * @var ChatArchivingMsgTypeVideo MsgType=video时的消息体，忽略此字段，见BodyJson字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Video;
+
+    /**
+     * @var string 根据MsgType的不同取值，解析内容不同，参考：https://open.work.weixin.qq.com/api/doc/90000/90135/91774
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BodyJson;
 
     /**
      * @param string $MsgId 消息id
@@ -114,7 +124,9 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgTime 消息发送的时间戳，单位为秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChatArchivingMsgTypeVideo $Video MsgType=video时的消息体
+     * @param ChatArchivingMsgTypeVideo $Video MsgType=video时的消息体，忽略此字段，见BodyJson字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BodyJson 根据MsgType的不同取值，解析内容不同，参考：https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -161,6 +173,10 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
         if (array_key_exists("Video",$param) and $param["Video"] !== null) {
             $this->Video = new ChatArchivingMsgTypeVideo();
             $this->Video->deserialize($param["Video"]);
+        }
+
+        if (array_key_exists("BodyJson",$param) and $param["BodyJson"] !== null) {
+            $this->BodyJson = $param["BodyJson"];
         }
     }
 }

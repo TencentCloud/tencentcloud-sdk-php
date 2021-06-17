@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendBatchMessages请求参数结构体
  *
- * @method string getTopic() 获取Topic name
- * @method void setTopic(string $Topic) 设置Topic name
+ * @method string getTopic() 获取消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+ * @method void setTopic(string $Topic) 设置消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
  * @method string getPayload() 获取需要发送消息的内容
  * @method void setPayload(string $Payload) 设置需要发送消息的内容
- * @method string getStringToken() 获取String 类型的 token，用来校验客户端和服务端之间的连接
- * @method void setStringToken(string $StringToken) 设置String 类型的 token，用来校验客户端和服务端之间的连接
+ * @method string getStringToken() 获取String 类型的 token，可以不填，系统会自动获取
+ * @method void setStringToken(string $StringToken) 设置String 类型的 token，可以不填，系统会自动获取
  * @method string getProducerName() 获取producer 的名字，要求全局是唯一的，如果不设置，系统会自动生成
  * @method void setProducerName(string $ProducerName) 设置producer 的名字，要求全局是唯一的，如果不设置，系统会自动生成
  * @method integer getSendTimeout() 获取单位：s。消息发送的超时时间。默认值为：30s
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class SendBatchMessagesRequest extends AbstractModel
 {
     /**
-     * @var string Topic name
+     * @var string 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
      */
     public $Topic;
 
@@ -52,7 +52,7 @@ class SendBatchMessagesRequest extends AbstractModel
     public $Payload;
 
     /**
-     * @var string String 类型的 token，用来校验客户端和服务端之间的连接
+     * @var string String 类型的 token，可以不填，系统会自动获取
      */
     public $StringToken;
 
@@ -87,9 +87,9 @@ class SendBatchMessagesRequest extends AbstractModel
     public $BatchingMaxBytes;
 
     /**
-     * @param string $Topic Topic name
+     * @param string $Topic 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
      * @param string $Payload 需要发送消息的内容
-     * @param string $StringToken String 类型的 token，用来校验客户端和服务端之间的连接
+     * @param string $StringToken String 类型的 token，可以不填，系统会自动获取
      * @param string $ProducerName producer 的名字，要求全局是唯一的，如果不设置，系统会自动生成
      * @param integer $SendTimeout 单位：s。消息发送的超时时间。默认值为：30s
      * @param integer $MaxPendingMessages 内存中允许缓存的生产消息的最大数量，默认值：1000条

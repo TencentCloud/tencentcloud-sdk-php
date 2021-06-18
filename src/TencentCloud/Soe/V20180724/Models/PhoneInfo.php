@@ -28,14 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPronAccuracy(float $PronAccuracy) 设置音节发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
  * @method boolean getDetectedStress() 获取当前音节是否检测为重音
  * @method void setDetectedStress(boolean $DetectedStress) 设置当前音节是否检测为重音
- * @method string getPhone() 获取当前音节
- * @method void setPhone(string $Phone) 设置当前音节
+ * @method string getPhone() 获取当前音节，当前评测识别的音素
+ * @method void setPhone(string $Phone) 设置当前音节，当前评测识别的音素
  * @method boolean getStress() 获取当前音节是否应为重音
  * @method void setStress(boolean $Stress) 设置当前音节是否应为重音
  * @method string getReferencePhone() 获取参考音素，在单词诊断模式下，代表标准音素
  * @method void setReferencePhone(string $ReferencePhone) 设置参考音素，在单词诊断模式下，代表标准音素
  * @method integer getMatchTag() 获取当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
  * @method void setMatchTag(integer $MatchTag) 设置当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+ * @method string getReferenceLetter() 获取参考字符，在单词诊断模式下，代表音素对应的原始文本
+ * @method void setReferenceLetter(string $ReferenceLetter) 设置参考字符，在单词诊断模式下，代表音素对应的原始文本
  */
 class PhoneInfo extends AbstractModel
 {
@@ -60,7 +62,7 @@ class PhoneInfo extends AbstractModel
     public $DetectedStress;
 
     /**
-     * @var string 当前音节
+     * @var string 当前音节，当前评测识别的音素
      */
     public $Phone;
 
@@ -80,14 +82,20 @@ class PhoneInfo extends AbstractModel
     public $MatchTag;
 
     /**
+     * @var string 参考字符，在单词诊断模式下，代表音素对应的原始文本
+     */
+    public $ReferenceLetter;
+
+    /**
      * @param integer $MemBeginTime 当前音节语音起始时间点，单位为ms
      * @param integer $MemEndTime 当前音节语音终止时间点，单位为ms
      * @param float $PronAccuracy 音节发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
      * @param boolean $DetectedStress 当前音节是否检测为重音
-     * @param string $Phone 当前音节
+     * @param string $Phone 当前音节，当前评测识别的音素
      * @param boolean $Stress 当前音节是否应为重音
      * @param string $ReferencePhone 参考音素，在单词诊断模式下，代表标准音素
      * @param integer $MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     * @param string $ReferenceLetter 参考字符，在单词诊断模式下，代表音素对应的原始文本
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class PhoneInfo extends AbstractModel
 
         if (array_key_exists("MatchTag",$param) and $param["MatchTag"] !== null) {
             $this->MatchTag = $param["MatchTag"];
+        }
+
+        if (array_key_exists("ReferenceLetter",$param) and $param["ReferenceLetter"] !== null) {
+            $this->ReferenceLetter = $param["ReferenceLetter"];
         }
     }
 }

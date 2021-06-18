@@ -38,6 +38,18 @@ install_suit = 安装组件
 running = 运行中
  * @method string getCOSBucket() 获取COS桶存储
  * @method void setCOSBucket(string $COSBucket) 设置COS桶存储
+ * @method string getGrafanaURL() 获取grafana默认地址，如果开启外网访问得为域名，否则为内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGrafanaURL(string $GrafanaURL) 设置grafana默认地址，如果开启外网访问得为域名，否则为内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBoundTotal() 获取关联集群总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBoundTotal(integer $BoundTotal) 设置关联集群总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBoundNormal() 获取运行正常的集群数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBoundNormal(integer $BoundNormal) 设置运行正常的集群数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusInstanceOverview extends AbstractModel
 {
@@ -75,6 +87,24 @@ running = 运行中
     public $COSBucket;
 
     /**
+     * @var string grafana默认地址，如果开启外网访问得为域名，否则为内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GrafanaURL;
+
+    /**
+     * @var integer 关联集群总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BoundTotal;
+
+    /**
+     * @var integer 运行正常的集群数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BoundNormal;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $Name 实例名称
      * @param string $VpcId 实例vpcId
@@ -84,6 +114,12 @@ prepare_env = 初始化环境
 install_suit = 安装组件
 running = 运行中
      * @param string $COSBucket COS桶存储
+     * @param string $GrafanaURL grafana默认地址，如果开启外网访问得为域名，否则为内网地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BoundTotal 关联集群总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BoundNormal 运行正常的集群数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +156,18 @@ running = 运行中
 
         if (array_key_exists("COSBucket",$param) and $param["COSBucket"] !== null) {
             $this->COSBucket = $param["COSBucket"];
+        }
+
+        if (array_key_exists("GrafanaURL",$param) and $param["GrafanaURL"] !== null) {
+            $this->GrafanaURL = $param["GrafanaURL"];
+        }
+
+        if (array_key_exists("BoundTotal",$param) and $param["BoundTotal"] !== null) {
+            $this->BoundTotal = $param["BoundTotal"];
+        }
+
+        if (array_key_exists("BoundNormal",$param) and $param["BoundNormal"] !== null) {
+            $this->BoundNormal = $param["BoundNormal"];
         }
     }
 }

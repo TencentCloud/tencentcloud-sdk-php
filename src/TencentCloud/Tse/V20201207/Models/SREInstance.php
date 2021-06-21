@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPaymode(string $Paymode) 设置计费方式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEKSClusterID() 获取EKS集群的ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEKSClusterID(string $EKSClusterID) 设置EKS集群的ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -130,6 +138,18 @@ class SREInstance extends AbstractModel
     public $Paymode;
 
     /**
+     * @var string EKS集群的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EKSClusterID;
+
+    /**
+     * @var string 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -147,6 +167,10 @@ class SREInstance extends AbstractModel
      * @param integer $StorageCapacity 云硬盘容量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Paymode 计费方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EKSClusterID EKS集群的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 集群创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +236,14 @@ class SREInstance extends AbstractModel
 
         if (array_key_exists("Paymode",$param) and $param["Paymode"] !== null) {
             $this->Paymode = $param["Paymode"];
+        }
+
+        if (array_key_exists("EKSClusterID",$param) and $param["EKSClusterID"] !== null) {
+            $this->EKSClusterID = $param["EKSClusterID"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

@@ -35,6 +35,7 @@ use TencentCloud\Tem\V20201221\Models as Models;
  * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) 获取租户环境列表
  * @method Models\DescribeRelatedIngressesResponse DescribeRelatedIngresses(Models\DescribeRelatedIngressesRequest $req) 查询服务关联的 Ingress 规则列表
  * @method Models\DescribeServiceRunPodListV2Response DescribeServiceRunPodListV2(Models\DescribeServiceRunPodListV2Request $req) 获取服务下面运行pod列表
+ * @method Models\GenerateDownloadUrlResponse GenerateDownloadUrl(Models\GenerateDownloadUrlRequest $req) 生成包预签名下载链接
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 创建或者更新 Ingress 规则
  * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 编辑环境
  * @method Models\ModifyServiceInfoResponse ModifyServiceInfo(Models\ModifyServiceInfoRequest $req) 修改服务基本信息

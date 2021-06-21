@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExternalUserId(string $ExternalUserId) 设置外部联系人的userId
  * @method string getUserId() 获取添加了此外部联系人的企业成员userId
  * @method void setUserId(string $UserId) 设置添加了此外部联系人的企业成员userId
+ * @method string getSalesName() 获取添加了此外部联系人的企业成员的姓名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSalesName(string $SalesName) 设置添加了此外部联系人的企业成员的姓名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExternalContactSimpleInfo extends AbstractModel
 {
@@ -38,8 +42,16 @@ class ExternalContactSimpleInfo extends AbstractModel
     public $UserId;
 
     /**
+     * @var string 添加了此外部联系人的企业成员的姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SalesName;
+
+    /**
      * @param string $ExternalUserId 外部联系人的userId
      * @param string $UserId 添加了此外部联系人的企业成员userId
+     * @param string $SalesName 添加了此外部联系人的企业成员的姓名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class ExternalContactSimpleInfo extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("SalesName",$param) and $param["SalesName"] !== null) {
+            $this->SalesName = $param["SalesName"];
         }
     }
 }

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnionId(string $UnionId) 设置外部联系人在微信开放平台的唯一身份标识（微信unionid），通过此字段企业可将外部联系人与公众号/小程序用户关联起来。仅当联系人类型是微信用户，且企业或第三方服务商绑定了微信开发者ID有此字段。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPhone() 获取外部联系人联系电话
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPhone(string $Phone) 设置外部联系人联系电话
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExternalContact extends AbstractModel
 {
@@ -62,11 +66,19 @@ class ExternalContact extends AbstractModel
     public $UnionId;
 
     /**
+     * @var string 外部联系人联系电话
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Phone;
+
+    /**
      * @param string $ExternalUserId 外部联系人的userId
      * @param integer $Gender 外部联系人性别 0-未知 1-男性 2-女性
      * @param string $Name 外部联系人的名称
      * @param integer $Type 外部联系人的类型，1表示该外部联系人是微信用户，2表示该外部联系人是企业微信用户
      * @param string $UnionId 外部联系人在微信开放平台的唯一身份标识（微信unionid），通过此字段企业可将外部联系人与公众号/小程序用户关联起来。仅当联系人类型是微信用户，且企业或第三方服务商绑定了微信开发者ID有此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Phone 外部联系人联系电话
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class ExternalContact extends AbstractModel
 
         if (array_key_exists("UnionId",$param) and $param["UnionId"] !== null) {
             $this->UnionId = $param["UnionId"];
+        }
+
+        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
+            $this->Phone = $param["Phone"];
         }
     }
 }

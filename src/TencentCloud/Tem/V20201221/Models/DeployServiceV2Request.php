@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSettingConfs(array $SettingConfs) 设置挂载配置信息
  * @method EksService getEksService() 获取eks 访问设置
  * @method void setEksService(EksService $EksService) 设置eks 访问设置
+ * @method string getVersionId() 获取要回滚到的历史版本id
+ * @method void setVersionId(string $VersionId) 设置要回滚到的历史版本id
  */
 class DeployServiceV2Request extends AbstractModel
 {
@@ -238,6 +240,11 @@ class DeployServiceV2Request extends AbstractModel
     public $EksService;
 
     /**
+     * @var string 要回滚到的历史版本id
+     */
+    public $VersionId;
+
+    /**
      * @param string $ServiceId 服务ID
      * @param integer $ContainerPort 容器端口
      * @param integer $InitPodNum 初始化 pod 数
@@ -272,6 +279,7 @@ class DeployServiceV2Request extends AbstractModel
      * @param boolean $UseRegistryDefaultConfig 是否添加默认注册中心配置
      * @param array $SettingConfs 挂载配置信息
      * @param EksService $EksService eks 访问设置
+     * @param string $VersionId 要回滚到的历史版本id
      */
     function __construct()
     {
@@ -424,6 +432,10 @@ class DeployServiceV2Request extends AbstractModel
         if (array_key_exists("EksService",$param) and $param["EksService"] !== null) {
             $this->EksService = new EksService();
             $this->EksService->deserialize($param["EksService"]);
+        }
+
+        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
+            $this->VersionId = $param["VersionId"];
         }
     }
 }

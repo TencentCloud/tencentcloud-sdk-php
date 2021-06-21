@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOptType(integer $OptType) 设置optType 1上传  2查询
  * @method integer getSourceChannel() 获取来源 channel
  * @method void setSourceChannel(integer $SourceChannel) 设置来源 channel
+ * @method string getTimeVersion() 获取充当deployVersion入参
+ * @method void setTimeVersion(string $TimeVersion) 设置充当deployVersion入参
  */
 class CreateCosTokenV2Request extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateCosTokenV2Request extends AbstractModel
     public $SourceChannel;
 
     /**
+     * @var string 充当deployVersion入参
+     */
+    public $TimeVersion;
+
+    /**
      * @param string $ServiceId 服务ID
      * @param string $PkgName 包名
      * @param integer $OptType optType 1上传  2查询
      * @param integer $SourceChannel 来源 channel
+     * @param string $TimeVersion 充当deployVersion入参
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateCosTokenV2Request extends AbstractModel
 
         if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
             $this->SourceChannel = $param["SourceChannel"];
+        }
+
+        if (array_key_exists("TimeVersion",$param) and $param["TimeVersion"] !== null) {
+            $this->TimeVersion = $param["TimeVersion"];
         }
     }
 }

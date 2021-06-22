@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 当图像中检测到多个物品时，会对显著性最高的进行识别。
  * @method void setProductInfo(ProductInfo $ProductInfo) 设置图像识别出的商品的详细信息。 
 当图像中检测到多个物品时，会对显著性最高的进行识别。
+ * @method array getProductInfoList() 获取相似商品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductInfoList(array $ProductInfoList) 设置相似商品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,6 +53,12 @@ class DetectProductBetaResponse extends AbstractModel
     public $ProductInfo;
 
     /**
+     * @var array 相似商品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductInfoList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -59,6 +69,8 @@ class DetectProductBetaResponse extends AbstractModel
 最多可以输出__3组__检测结果。
      * @param ProductInfo $ProductInfo 图像识别出的商品的详细信息。 
 当图像中检测到多个物品时，会对显著性最高的进行识别。
+     * @param array $ProductInfoList 相似商品信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -86,6 +98,15 @@ class DetectProductBetaResponse extends AbstractModel
         if (array_key_exists("ProductInfo",$param) and $param["ProductInfo"] !== null) {
             $this->ProductInfo = new ProductInfo();
             $this->ProductInfo->deserialize($param["ProductInfo"]);
+        }
+
+        if (array_key_exists("ProductInfoList",$param) and $param["ProductInfoList"] !== null) {
+            $this->ProductInfoList = [];
+            foreach ($param["ProductInfoList"] as $key => $value){
+                $obj = new ProductInfo();
+                $obj->deserialize($value);
+                array_push($this->ProductInfoList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -164,6 +164,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKibanaConfig(string $KibanaConfig) 设置Kibana配置项
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method KibanaNodeInfo getKibanaNodeInfo() 获取Kibana节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKibanaNodeInfo(KibanaNodeInfo $KibanaNodeInfo) 设置Kibana节点信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -456,6 +460,12 @@ class InstanceInfo extends AbstractModel
     public $KibanaConfig;
 
     /**
+     * @var KibanaNodeInfo Kibana节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KibanaNodeInfo;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -527,6 +537,8 @@ class InstanceInfo extends AbstractModel
      * @param integer $SceneType 场景化模板类型：0、不开启；1、通用场景；2、日志场景；3、搜索场景
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KibanaConfig Kibana配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KibanaNodeInfo $KibanaNodeInfo Kibana节点信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -776,6 +788,11 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("KibanaConfig",$param) and $param["KibanaConfig"] !== null) {
             $this->KibanaConfig = $param["KibanaConfig"];
+        }
+
+        if (array_key_exists("KibanaNodeInfo",$param) and $param["KibanaNodeInfo"] !== null) {
+            $this->KibanaNodeInfo = new KibanaNodeInfo();
+            $this->KibanaNodeInfo->deserialize($param["KibanaNodeInfo"]);
         }
     }
 }

@@ -34,6 +34,10 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
  * @method ItemCoord getItemPolygon() 获取文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
  * @method void setItemPolygon(ItemCoord $ItemPolygon) 设置文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+ * @method array getWords() 获取识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+ * @method void setWords(array $Words) 设置识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+ * @method array getWordCoordPoint() 获取单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+ * @method void setWordCoordPoint(array $WordCoordPoint) 设置单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
  */
 class TextDetection extends AbstractModel
 {
@@ -65,6 +69,16 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     public $ItemPolygon;
 
     /**
+     * @var array 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     */
+    public $Words;
+
+    /**
+     * @var array 单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     */
+    public $WordCoordPoint;
+
+    /**
      * @param string $DetectedText 识别出的文本行内容
      * @param integer $Confidence 置信度 0 ~100
      * @param array $Polygon 文本行坐标，以四个顶点坐标表示
@@ -72,6 +86,8 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
      * @param string $AdvancedInfo 此字段为扩展字段。
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
      * @param ItemCoord $ItemPolygon 文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * @param array $Words 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+     * @param array $WordCoordPoint 单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
      */
     function __construct()
     {
@@ -110,6 +126,24 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
         if (array_key_exists("ItemPolygon",$param) and $param["ItemPolygon"] !== null) {
             $this->ItemPolygon = new ItemCoord();
             $this->ItemPolygon->deserialize($param["ItemPolygon"]);
+        }
+
+        if (array_key_exists("Words",$param) and $param["Words"] !== null) {
+            $this->Words = [];
+            foreach ($param["Words"] as $key => $value){
+                $obj = new DetectedWords();
+                $obj->deserialize($value);
+                array_push($this->Words, $obj);
+            }
+        }
+
+        if (array_key_exists("WordCoordPoint",$param) and $param["WordCoordPoint"] !== null) {
+            $this->WordCoordPoint = [];
+            foreach ($param["WordCoordPoint"] as $key => $value){
+                $obj = new DetectedWordCoordPoint();
+                $obj->deserialize($value);
+                array_push($this->WordCoordPoint, $obj);
+            }
         }
     }
 }

@@ -27,11 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOrganizationCode() 获取公司证件号码，个体工商户必输
  * @method void setOrganizationCode(string $OrganizationCode) 设置公司证件号码，个体工商户必输
  * @method string getLegalPersonName() 获取法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method void setLegalPersonName(string $LegalPersonName) 设置法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method string getLegalPersonIdType() 获取法人证件类型，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
  * @method void setLegalPersonIdType(string $LegalPersonIdType) 设置法人证件类型，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
  * @method string getLegalPersonIdCode() 获取法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  * @method void setLegalPersonIdCode(string $LegalPersonIdCode) 设置法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  */
 class OrganizationInfo extends AbstractModel
 {
@@ -52,6 +56,7 @@ class OrganizationInfo extends AbstractModel
 
     /**
      * @var string 法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public $LegalPersonName;
 
@@ -62,6 +67,7 @@ class OrganizationInfo extends AbstractModel
 
     /**
      * @var string 法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     public $LegalPersonIdCode;
 
@@ -70,8 +76,10 @@ class OrganizationInfo extends AbstractModel
      * @param string $OrganizationType 公司证件类型，个体工商户必输，证件类型仅支持73
      * @param string $OrganizationCode 公司证件号码，个体工商户必输
      * @param string $LegalPersonName 法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      * @param string $LegalPersonIdType 法人证件类型，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
      * @param string $LegalPersonIdCode 法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     function __construct()
     {

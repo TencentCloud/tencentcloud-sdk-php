@@ -61,9 +61,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getInternational() 获取是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
+注：需要和待修改签名International值保持一致，该参数不能直接修改国内签名到国际签名。
  * @method void setInternational(integer $International) 设置是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
+注：需要和待修改签名International值保持一致，该参数不能直接修改国内签名到国际签名。
  * @method integer getUsedMethod() 获取签名用途：
 0：自用。
 1：他用。
@@ -122,6 +124,7 @@ class ModifySmsSignRequest extends AbstractModel
      * @var integer 是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
+注：需要和待修改签名International值保持一致，该参数不能直接修改国内签名到国际签名。
      */
     public $International;
 
@@ -172,6 +175,7 @@ class ModifySmsSignRequest extends AbstractModel
      * @param integer $International 是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
+注：需要和待修改签名International值保持一致，该参数不能直接修改国内签名到国际签名。
      * @param integer $UsedMethod 签名用途：
 0：自用。
 1：他用。

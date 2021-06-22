@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 地址。
 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method boolean getIsWords() 获取是否返回单字信息，默认关
+ * @method void setIsWords(boolean $IsWords) 设置是否返回单字信息，默认关
  */
 class GeneralAccurateOCRRequest extends AbstractModel
 {
@@ -50,12 +52,18 @@ class GeneralAccurateOCRRequest extends AbstractModel
     public $ImageUrl;
 
     /**
+     * @var boolean 是否返回单字信息，默认关
+     */
+    public $IsWords;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。
 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param string $ImageUrl 图片的 Url 地址。
 要求图片经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP格式。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param boolean $IsWords 是否返回单字信息，默认关
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class GeneralAccurateOCRRequest extends AbstractModel
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("IsWords",$param) and $param["IsWords"] !== null) {
+            $this->IsWords = $param["IsWords"];
         }
     }
 }

@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * AddSmsSign请求参数结构体
  *
  * @method string getSignName() 获取签名名称。
+注：不能重复申请已通过或待审核的签名。
  * @method void setSignName(string $SignName) 设置签名名称。
+注：不能重复申请已通过或待审核的签名。
  * @method integer getSignType() 获取签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
 0：公司（0，1，2，3）。
 1：APP（0，1，2，3，4） 。
@@ -83,6 +85,7 @@ class AddSmsSignRequest extends AbstractModel
 {
     /**
      * @var string 签名名称。
+注：不能重复申请已通过或待审核的签名。
      */
     public $SignName;
 
@@ -144,6 +147,7 @@ class AddSmsSignRequest extends AbstractModel
 
     /**
      * @param string $SignName 签名名称。
+注：不能重复申请已通过或待审核的签名。
      * @param integer $SignType 签名类型。其中每种类型后面标注了其可选的 DocumentType（证明类型）：
 0：公司（0，1，2，3）。
 1：APP（0，1，2，3，4） 。

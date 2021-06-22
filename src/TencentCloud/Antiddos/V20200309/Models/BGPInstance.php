@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  "bounding"：正在绑定中
 "failed"：绑定失败
 ]
+ * @method string getDDoSLevel() 获取四层防护严格级别
+ * @method void setDDoSLevel(string $DDoSLevel) 设置四层防护严格级别
+ * @method integer getCCEnable() 获取CC防护开关
+ * @method void setCCEnable(integer $CCEnable) 设置CC防护开关
  */
 class BGPInstance extends AbstractModel
 {
@@ -137,6 +141,16 @@ class BGPInstance extends AbstractModel
     public $BoundStatus;
 
     /**
+     * @var string 四层防护严格级别
+     */
+    public $DDoSLevel;
+
+    /**
+     * @var integer CC防护开关
+     */
+    public $CCEnable;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPInstanceUsages $Usage 资产实例的使用统计信息
@@ -160,6 +174,8 @@ class BGPInstance extends AbstractModel
  "bounding"：正在绑定中
 "failed"：绑定失败
 ]
+     * @param string $DDoSLevel 四层防护严格级别
+     * @param integer $CCEnable CC防护开关
      */
     function __construct()
     {
@@ -226,6 +242,14 @@ class BGPInstance extends AbstractModel
 
         if (array_key_exists("BoundStatus",$param) and $param["BoundStatus"] !== null) {
             $this->BoundStatus = $param["BoundStatus"];
+        }
+
+        if (array_key_exists("DDoSLevel",$param) and $param["DDoSLevel"] !== null) {
+            $this->DDoSLevel = $param["DDoSLevel"];
+        }
+
+        if (array_key_exists("CCEnable",$param) and $param["CCEnable"] !== null) {
+            $this->CCEnable = $param["CCEnable"];
         }
     }
 }

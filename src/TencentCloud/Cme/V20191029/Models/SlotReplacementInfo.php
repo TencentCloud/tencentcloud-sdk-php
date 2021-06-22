@@ -23,17 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取卡槽 Id。
  * @method void setId(integer $Id) 设置卡槽 Id。
  * @method string getReplacementType() 获取替换类型，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
-注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。
+<li> AUDIO ：音频；</li>
+<li> VIDEO ：视频；</li>
+<li> IMAGE ：图片；</li>
+<li> TEXT ：文本。</li>
+注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。如果替换的类型为Text,，则必须保证模板轨道数据中相应卡槽的位置标记的是文本。
  * @method void setReplacementType(string $ReplacementType) 设置替换类型，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
-注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。
+<li> AUDIO ：音频；</li>
+<li> VIDEO ：视频；</li>
+<li> IMAGE ：图片；</li>
+<li> TEXT ：文本。</li>
+注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。如果替换的类型为Text,，则必须保证模板轨道数据中相应卡槽的位置标记的是文本。
  * @method MediaReplacementInfo getMediaReplacementInfo() 获取媒体替换信息，仅当要替换的媒体类型为音频、视频、图片时有效。
  * @method void setMediaReplacementInfo(MediaReplacementInfo $MediaReplacementInfo) 设置媒体替换信息，仅当要替换的媒体类型为音频、视频、图片时有效。
+ * @method TextReplacementInfo getTextReplacementInfo() 获取文本替换信息，仅当要替换的卡槽类型为文本时有效。
+ * @method void setTextReplacementInfo(TextReplacementInfo $TextReplacementInfo) 设置文本替换信息，仅当要替换的卡槽类型为文本时有效。
  */
 class SlotReplacementInfo extends AbstractModel
 {
@@ -44,10 +48,11 @@ class SlotReplacementInfo extends AbstractModel
 
     /**
      * @var string 替换类型，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
-注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。
+<li> AUDIO ：音频；</li>
+<li> VIDEO ：视频；</li>
+<li> IMAGE ：图片；</li>
+<li> TEXT ：文本。</li>
+注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。如果替换的类型为Text,，则必须保证模板轨道数据中相应卡槽的位置标记的是文本。
      */
     public $ReplacementType;
 
@@ -57,13 +62,20 @@ class SlotReplacementInfo extends AbstractModel
     public $MediaReplacementInfo;
 
     /**
+     * @var TextReplacementInfo 文本替换信息，仅当要替换的卡槽类型为文本时有效。
+     */
+    public $TextReplacementInfo;
+
+    /**
      * @param integer $Id 卡槽 Id。
      * @param string $ReplacementType 替换类型，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
-注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。
+<li> AUDIO ：音频；</li>
+<li> VIDEO ：视频；</li>
+<li> IMAGE ：图片；</li>
+<li> TEXT ：文本。</li>
+注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。如果替换的类型为Text,，则必须保证模板轨道数据中相应卡槽的位置标记的是文本。
      * @param MediaReplacementInfo $MediaReplacementInfo 媒体替换信息，仅当要替换的媒体类型为音频、视频、图片时有效。
+     * @param TextReplacementInfo $TextReplacementInfo 文本替换信息，仅当要替换的卡槽类型为文本时有效。
      */
     function __construct()
     {
@@ -89,6 +101,11 @@ class SlotReplacementInfo extends AbstractModel
         if (array_key_exists("MediaReplacementInfo",$param) and $param["MediaReplacementInfo"] !== null) {
             $this->MediaReplacementInfo = new MediaReplacementInfo();
             $this->MediaReplacementInfo->deserialize($param["MediaReplacementInfo"]);
+        }
+
+        if (array_key_exists("TextReplacementInfo",$param) and $param["TextReplacementInfo"] !== null) {
+            $this->TextReplacementInfo = new TextReplacementInfo();
+            $this->TextReplacementInfo->deserialize($param["TextReplacementInfo"]);
         }
     }
 }

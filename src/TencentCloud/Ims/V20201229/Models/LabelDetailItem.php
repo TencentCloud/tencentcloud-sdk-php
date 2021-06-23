@@ -18,47 +18,47 @@ namespace TencentCloud\Ims\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 分类模型命中子标签结果
+ * 用于返回分类模型命中子标签的详细结果
  *
- * @method integer getId() 获取序号
+ * @method integer getId() 获取该字段用于返回识别对象的ID以方便识别和区分。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setId(integer $Id) 设置序号
+ * @method void setId(integer $Id) 设置该字段用于返回识别对象的ID以方便识别和区分。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取子标签名称
+ * @method string getName() 获取该字段用于返回识命中的子标签名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置子标签名称
+ * @method void setName(string $Name) 设置该字段用于返回识命中的子标签名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScore() 获取子标签分数
+ * @method integer getScore() 获取该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScore(integer $Score) 设置子标签分数
+ * @method void setScore(integer $Score) 设置该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LabelDetailItem extends AbstractModel
 {
     /**
-     * @var integer 序号
+     * @var integer 该字段用于返回识别对象的ID以方便识别和区分。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
-     * @var string 子标签名称
+     * @var string 该字段用于返回识命中的子标签名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var integer 子标签分数
+     * @var integer 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
-     * @param integer $Id 序号
+     * @param integer $Id 该字段用于返回识别对象的ID以方便识别和区分。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 子标签名称
+     * @param string $Name 该字段用于返回识命中的子标签名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Score 子标签分数
+     * @param integer $Score 该字段用于返回对应子标签命中的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

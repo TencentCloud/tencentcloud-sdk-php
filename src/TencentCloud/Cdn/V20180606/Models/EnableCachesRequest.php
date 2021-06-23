@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getUrls() 获取解封 URL 列表
  * @method void setUrls(array $Urls) 设置解封 URL 列表
+ * @method string getDate() 获取URL封禁日期
+ * @method void setDate(string $Date) 设置URL封禁日期
  */
 class EnableCachesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class EnableCachesRequest extends AbstractModel
     public $Urls;
 
     /**
+     * @var string URL封禁日期
+     */
+    public $Date;
+
+    /**
      * @param array $Urls 解封 URL 列表
+     * @param string $Date URL封禁日期
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class EnableCachesRequest extends AbstractModel
         }
         if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
             $this->Urls = $param["Urls"];
+        }
+
+        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
+            $this->Date = $param["Date"];
         }
     }
 }

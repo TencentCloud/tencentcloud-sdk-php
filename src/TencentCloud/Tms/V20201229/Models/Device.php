@@ -18,68 +18,76 @@ namespace TencentCloud\Tms\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 设备信息
+ * 用于表示业务用户对应的设备信息
  *
- * @method string getIP() 获取用户IP
- * @method void setIP(string $IP) 设置用户IP
- * @method string getMac() 获取Mac地址
- * @method void setMac(string $Mac) 设置Mac地址
- * @method string getTokenId() 获取设备指纹Token
- * @method void setTokenId(string $TokenId) 设置设备指纹Token
- * @method string getDeviceId() 获取设备指纹ID
- * @method void setDeviceId(string $DeviceId) 设置设备指纹ID
- * @method string getIMEI() 获取设备序列号
- * @method void setIMEI(string $IMEI) 设置设备序列号
- * @method string getIDFA() 获取IOS设备，Identifier For Advertising（广告标识符）
- * @method void setIDFA(string $IDFA) 设置IOS设备，Identifier For Advertising（广告标识符）
- * @method string getIDFV() 获取IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
- * @method void setIDFV(string $IDFV) 设置IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
+ * @method string getIP() 获取该字段表示业务用户对应设备的IP地址。<br>
+备注:目前仅支持IPv4地址记录，不支持IPv6地址记录。
+ * @method void setIP(string $IP) 设置该字段表示业务用户对应设备的IP地址。<br>
+备注:目前仅支持IPv4地址记录，不支持IPv6地址记录。
+ * @method string getMac() 获取该字段表示业务用户对应的MAC地址，以方便设备识别与管理；其格式与取值与标准MAC地址一致。
+ * @method void setMac(string $Mac) 设置该字段表示业务用户对应的MAC地址，以方便设备识别与管理；其格式与取值与标准MAC地址一致。
+ * @method string getTokenId() 获取*内测中，敬请期待。*
+ * @method void setTokenId(string $TokenId) 设置*内测中，敬请期待。*
+ * @method string getDeviceId() 获取*内测中，敬请期待。*
+ * @method void setDeviceId(string $DeviceId) 设置*内测中，敬请期待。*
+ * @method string getIMEI() 获取该字段表示业务用户对应设备的**IMEI码**（国际移动设备识别码），该识别码可用于识别每一部独立的手机等移动通信设备，方便设备识别与管理。<br>备注：格式为**15-17位纯数字**。
+ * @method void setIMEI(string $IMEI) 设置该字段表示业务用户对应设备的**IMEI码**（国际移动设备识别码），该识别码可用于识别每一部独立的手机等移动通信设备，方便设备识别与管理。<br>备注：格式为**15-17位纯数字**。
+ * @method string getIDFA() 获取**iOS设备专用**，该字段表示业务用户对应的**IDFA**(广告标识符),这是由苹果公司提供的用于追踪用户的广告标识符，由一串16进制的32位数字和字母组成。<br>
+备注：苹果公司自2021年iOS14更新后允许用户手动关闭或者开启IDFA，故此字符串标记有效性可能有所降低。
+ * @method void setIDFA(string $IDFA) 设置**iOS设备专用**，该字段表示业务用户对应的**IDFA**(广告标识符),这是由苹果公司提供的用于追踪用户的广告标识符，由一串16进制的32位数字和字母组成。<br>
+备注：苹果公司自2021年iOS14更新后允许用户手动关闭或者开启IDFA，故此字符串标记有效性可能有所降低。
+ * @method string getIDFV() 获取**iOS设备专用**，该字段表示业务用户对应的**IDFV**(应用开发商标识符),这是由苹果公司提供的用于标注应用开发商的标识符，由一串16进制的32位数字和字母组成，可被用于唯一标识设备。
+ * @method void setIDFV(string $IDFV) 设置**iOS设备专用**，该字段表示业务用户对应的**IDFV**(应用开发商标识符),这是由苹果公司提供的用于标注应用开发商的标识符，由一串16进制的32位数字和字母组成，可被用于唯一标识设备。
  */
 class Device extends AbstractModel
 {
     /**
-     * @var string 用户IP
+     * @var string 该字段表示业务用户对应设备的IP地址。<br>
+备注:目前仅支持IPv4地址记录，不支持IPv6地址记录。
      */
     public $IP;
 
     /**
-     * @var string Mac地址
+     * @var string 该字段表示业务用户对应的MAC地址，以方便设备识别与管理；其格式与取值与标准MAC地址一致。
      */
     public $Mac;
 
     /**
-     * @var string 设备指纹Token
+     * @var string *内测中，敬请期待。*
      */
     public $TokenId;
 
     /**
-     * @var string 设备指纹ID
+     * @var string *内测中，敬请期待。*
      */
     public $DeviceId;
 
     /**
-     * @var string 设备序列号
+     * @var string 该字段表示业务用户对应设备的**IMEI码**（国际移动设备识别码），该识别码可用于识别每一部独立的手机等移动通信设备，方便设备识别与管理。<br>备注：格式为**15-17位纯数字**。
      */
     public $IMEI;
 
     /**
-     * @var string IOS设备，Identifier For Advertising（广告标识符）
+     * @var string **iOS设备专用**，该字段表示业务用户对应的**IDFA**(广告标识符),这是由苹果公司提供的用于追踪用户的广告标识符，由一串16进制的32位数字和字母组成。<br>
+备注：苹果公司自2021年iOS14更新后允许用户手动关闭或者开启IDFA，故此字符串标记有效性可能有所降低。
      */
     public $IDFA;
 
     /**
-     * @var string IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
+     * @var string **iOS设备专用**，该字段表示业务用户对应的**IDFV**(应用开发商标识符),这是由苹果公司提供的用于标注应用开发商的标识符，由一串16进制的32位数字和字母组成，可被用于唯一标识设备。
      */
     public $IDFV;
 
     /**
-     * @param string $IP 用户IP
-     * @param string $Mac Mac地址
-     * @param string $TokenId 设备指纹Token
-     * @param string $DeviceId 设备指纹ID
-     * @param string $IMEI 设备序列号
-     * @param string $IDFA IOS设备，Identifier For Advertising（广告标识符）
-     * @param string $IDFV IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
+     * @param string $IP 该字段表示业务用户对应设备的IP地址。<br>
+备注:目前仅支持IPv4地址记录，不支持IPv6地址记录。
+     * @param string $Mac 该字段表示业务用户对应的MAC地址，以方便设备识别与管理；其格式与取值与标准MAC地址一致。
+     * @param string $TokenId *内测中，敬请期待。*
+     * @param string $DeviceId *内测中，敬请期待。*
+     * @param string $IMEI 该字段表示业务用户对应设备的**IMEI码**（国际移动设备识别码），该识别码可用于识别每一部独立的手机等移动通信设备，方便设备识别与管理。<br>备注：格式为**15-17位纯数字**。
+     * @param string $IDFA **iOS设备专用**，该字段表示业务用户对应的**IDFA**(广告标识符),这是由苹果公司提供的用于追踪用户的广告标识符，由一串16进制的32位数字和字母组成。<br>
+备注：苹果公司自2021年iOS14更新后允许用户手动关闭或者开启IDFA，故此字符串标记有效性可能有所降低。
+     * @param string $IDFV **iOS设备专用**，该字段表示业务用户对应的**IDFV**(应用开发商标识符),这是由苹果公司提供的用于标注应用开发商的标识符，由一串16进制的32位数字和字母组成，可被用于唯一标识设备。
      */
     function __construct()
     {

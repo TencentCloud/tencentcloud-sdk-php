@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 坐标
  *
- * @method float getX() 获取左上角横坐标
- * @method void setX(float $X) 设置左上角横坐标
- * @method float getY() 获取左上角纵坐标
- * @method void setY(float $Y) 设置左上角纵坐标
- * @method float getWidth() 获取宽度
- * @method void setWidth(float $Width) 设置宽度
- * @method float getHeight() 获取高度
- * @method void setHeight(float $Height) 设置高度
- * @method float getRotate() 获取检测框的旋转角度
- * @method void setRotate(float $Rotate) 设置检测框的旋转角度
+ * @method float getX() 获取该参数用于返回检测框**左上角位置的横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
+ * @method void setX(float $X) 设置该参数用于返回检测框**左上角位置的横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
+ * @method float getY() 获取该参数用于返回检测框**左上角位置的纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
+ * @method void setY(float $Y) 设置该参数用于返回检测框**左上角位置的纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
+ * @method float getWidth() 获取该参数用于返回**检测框的宽度**（由左上角出发在x轴向右延伸的长度），结合剩余参数可唯一确定检测框的大小和位置。
+ * @method void setWidth(float $Width) 设置该参数用于返回**检测框的宽度**（由左上角出发在x轴向右延伸的长度），结合剩余参数可唯一确定检测框的大小和位置。
+ * @method float getHeight() 获取该参数用于返回**检测框的高度**（由左上角出发在y轴向下延伸的长度），结合剩余参数可唯一确定检测框的大小和位置。
+ * @method void setHeight(float $Height) 设置该参数用于返回**检测框的高度**（由左上角出发在y轴向下延伸的长度），结合剩余参数可唯一确定检测框的大小和位置。
+ * @method float getRotate() 获取该参数用于返回**检测框的旋转角度**，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：**0-360**（**角度制**），方向为**逆时针旋转**。
+ * @method void setRotate(float $Rotate) 设置该参数用于返回**检测框的旋转角度**，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：**0-360**（**角度制**），方向为**逆时针旋转**。
  */
 class Location extends AbstractModel
 {
     /**
-     * @var float 左上角横坐标
+     * @var float 该参数用于返回检测框**左上角位置的横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
      */
     public $X;
 
     /**
-     * @var float 左上角纵坐标
+     * @var float 该参数用于返回检测框**左上角位置的纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
      */
     public $Y;
 
     /**
-     * @var float 宽度
+     * @var float 该参数用于返回**检测框的宽度**（由左上角出发在x轴向右延伸的长度），结合剩余参数可唯一确定检测框的大小和位置。
      */
     public $Width;
 
     /**
-     * @var float 高度
+     * @var float 该参数用于返回**检测框的高度**（由左上角出发在y轴向下延伸的长度），结合剩余参数可唯一确定检测框的大小和位置。
      */
     public $Height;
 
     /**
-     * @var float 检测框的旋转角度
+     * @var float 该参数用于返回**检测框的旋转角度**，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：**0-360**（**角度制**），方向为**逆时针旋转**。
      */
     public $Rotate;
 
     /**
-     * @param float $X 左上角横坐标
-     * @param float $Y 左上角纵坐标
-     * @param float $Width 宽度
-     * @param float $Height 高度
-     * @param float $Rotate 检测框的旋转角度
+     * @param float $X 该参数用于返回检测框**左上角位置的横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
+     * @param float $Y 该参数用于返回检测框**左上角位置的纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
+     * @param float $Width 该参数用于返回**检测框的宽度**（由左上角出发在x轴向右延伸的长度），结合剩余参数可唯一确定检测框的大小和位置。
+     * @param float $Height 该参数用于返回**检测框的高度**（由左上角出发在y轴向下延伸的长度），结合剩余参数可唯一确定检测框的大小和位置。
+     * @param float $Rotate 该参数用于返回**检测框的旋转角度**，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：**0-360**（**角度制**），方向为**逆时针旋转**。
      */
     function __construct()
     {

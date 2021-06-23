@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTargets请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
- * @method array getListenerIds() 获取监听器ID列表。
- * @method void setListenerIds(array $ListenerIds) 设置监听器ID列表。
+ * @method string getLoadBalancerId() 获取负载均衡实例 ID。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID。
+ * @method array getListenerIds() 获取监听器 ID 列表。ID 数量上限为20个。
+ * @method void setListenerIds(array $ListenerIds) 设置监听器 ID 列表。ID 数量上限为20个。
  * @method string getProtocol() 获取监听器协议类型。
  * @method void setProtocol(string $Protocol) 设置监听器协议类型。
  * @method integer getPort() 获取监听器端口。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTargetsRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例ID。
+     * @var string 负载均衡实例 ID。
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 监听器ID列表。
+     * @var array 监听器 ID 列表。ID 数量上限为20个。
      */
     public $ListenerIds;
 
@@ -52,8 +52,8 @@ class DescribeTargetsRequest extends AbstractModel
     public $Port;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例ID。
-     * @param array $ListenerIds 监听器ID列表。
+     * @param string $LoadBalancerId 负载均衡实例 ID。
+     * @param array $ListenerIds 监听器 ID 列表。ID 数量上限为20个。
      * @param string $Protocol 监听器协议类型。
      * @param integer $Port 监听器端口。
      */

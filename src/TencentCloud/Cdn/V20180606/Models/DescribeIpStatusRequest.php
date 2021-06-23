@@ -38,6 +38,8 @@ global: 全球节点
 mainland: 国内节点
 overseas: 海外节点
 global: 全球节点
+ * @method boolean getSegment() 获取是否以IP段的格式返回。
+ * @method void setSegment(boolean $Segment) 设置是否以IP段的格式返回。
  */
 class DescribeIpStatusRequest extends AbstractModel
 {
@@ -63,6 +65,11 @@ global: 全球节点
     public $Area;
 
     /**
+     * @var boolean 是否以IP段的格式返回。
+     */
+    public $Segment;
+
+    /**
      * @param string $Domain 加速域名
      * @param string $Layer 节点类型：
 edge：表示边缘节点
@@ -72,6 +79,7 @@ last：表示回源层节点
 mainland: 国内节点
 overseas: 海外节点
 global: 全球节点
+     * @param boolean $Segment 是否以IP段的格式返回。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ global: 全球节点
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Segment",$param) and $param["Segment"] !== null) {
+            $this->Segment = $param["Segment"];
         }
     }
 }

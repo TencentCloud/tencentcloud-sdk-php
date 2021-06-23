@@ -18,84 +18,108 @@ namespace TencentCloud\Ims\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * User结果
+ * 用于表示业务用户的账号相关信息
  *
- * @method string getUserId() 获取业务用户ID 如填写，会根据账号历史恶意情况，判定消息有害结果，特别是有利于可疑恶意情况下的辅助判断。账号可以填写微信uin、QQ号、微信openid、QQopenid、字符串等。该字段和账号类别确定唯一账号。
- * @method void setUserId(string $UserId) 设置业务用户ID 如填写，会根据账号历史恶意情况，判定消息有害结果，特别是有利于可疑恶意情况下的辅助判断。账号可以填写微信uin、QQ号、微信openid、QQopenid、字符串等。该字段和账号类别确定唯一账号。
- * @method string getAccountType() 获取业务用户ID类型 "1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-其它string"
- * @method void setAccountType(string $AccountType) 设置业务用户ID类型 "1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-其它string"
- * @method string getNickname() 获取用户昵称
- * @method void setNickname(string $Nickname) 设置用户昵称
- * @method integer getGender() 获取性别 默认0 未知 1 男性 2 女性
- * @method void setGender(integer $Gender) 设置性别 默认0 未知 1 男性 2 女性
- * @method integer getAge() 获取年龄 默认0 未知
- * @method void setAge(integer $Age) 设置年龄 默认0 未知
- * @method integer getLevel() 获取用户等级，默认0 未知 1 低 2 中 3 高
- * @method void setLevel(integer $Level) 设置用户等级，默认0 未知 1 低 2 中 3 高
- * @method string getPhone() 获取手机号
- * @method void setPhone(string $Phone) 设置手机号
- * @method string getDesc() 获取用户简介，长度不超过5000字
- * @method void setDesc(string $Desc) 设置用户简介，长度不超过5000字
- * @method string getHeadUrl() 获取用户头像图片链接
- * @method void setHeadUrl(string $HeadUrl) 设置用户头像图片链接
+ * @method string getUserId() 获取该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
+备注：该字段可传入微信openid、QQopenid、字符串等账号信息，与账号类别参数（AccountType）配合使用可确定唯一账号。
+ * @method void setUserId(string $UserId) 设置该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
+备注：该字段可传入微信openid、QQopenid、字符串等账号信息，与账号类别参数（AccountType）配合使用可确定唯一账号。
+ * @method string getNickname() 获取该字段表示业务用户对应的账号昵称信息。
+ * @method void setNickname(string $Nickname) 设置该字段表示业务用户对应的账号昵称信息。
+ * @method string getAccountType() 获取该字段表示业务用户ID对应的账号类型，取值：**1**-微信uin，**2**-QQ号，**3**-微信群uin，**4**-qq群号，**5**-微信openid，**6**-QQopenid，**7**-其它string。<br>
+该字段与账号ID参数（UserId）配合使用可确定唯一账号。
+ * @method void setAccountType(string $AccountType) 设置该字段表示业务用户ID对应的账号类型，取值：**1**-微信uin，**2**-QQ号，**3**-微信群uin，**4**-qq群号，**5**-微信openid，**6**-QQopenid，**7**-其它string。<br>
+该字段与账号ID参数（UserId）配合使用可确定唯一账号。
+ * @method integer getGender() 获取该字段表示业务用户对应账号的性别信息。<br>
+取值：**0**（默认值，代表性别未知）、**1**（男性）、**2**（女性）。
+ * @method void setGender(integer $Gender) 设置该字段表示业务用户对应账号的性别信息。<br>
+取值：**0**（默认值，代表性别未知）、**1**（男性）、**2**（女性）。
+ * @method integer getAge() 获取该字段表示业务用户对应账号的年龄信息。<br>
+取值：**0**（默认值，代表年龄未知）-（**自定义年龄上限**）之间的整数。
+ * @method void setAge(integer $Age) 设置该字段表示业务用户对应账号的年龄信息。<br>
+取值：**0**（默认值，代表年龄未知）-（**自定义年龄上限**）之间的整数。
+ * @method integer getLevel() 获取该字段表示业务用户对应账号的等级信息。<br>
+取值：**0**（默认值，代表等级未知）、**1**（等级较低）、**2**（等级中等）、**3**（等级较高），目前**暂不支持自定义等级**。
+ * @method void setLevel(integer $Level) 设置该字段表示业务用户对应账号的等级信息。<br>
+取值：**0**（默认值，代表等级未知）、**1**（等级较低）、**2**（等级中等）、**3**（等级较高），目前**暂不支持自定义等级**。
+ * @method string getPhone() 获取该字段表示业务用户对应账号的手机号信息，支持全球各地区手机号的记录。<br>
+备注：请保持手机号格式的统一，如区号格式（086/+86）等。
+ * @method void setPhone(string $Phone) 设置该字段表示业务用户对应账号的手机号信息，支持全球各地区手机号的记录。<br>
+备注：请保持手机号格式的统一，如区号格式（086/+86）等。
+ * @method string getDesc() 获取该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，**长度不超过5000个汉字字符**。
+ * @method void setDesc(string $Desc) 设置该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，**长度不超过5000个汉字字符**。
+ * @method string getHeadUrl() 获取该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：头像图片**大小不超过5MB**，建议**分辨率不低于256x256**；图片下载时间限制为3秒，超过则会返回下载超时。
+ * @method void setHeadUrl(string $HeadUrl) 设置该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：头像图片**大小不超过5MB**，建议**分辨率不低于256x256**；图片下载时间限制为3秒，超过则会返回下载超时。
  */
 class User extends AbstractModel
 {
     /**
-     * @var string 业务用户ID 如填写，会根据账号历史恶意情况，判定消息有害结果，特别是有利于可疑恶意情况下的辅助判断。账号可以填写微信uin、QQ号、微信openid、QQopenid、字符串等。该字段和账号类别确定唯一账号。
+     * @var string 该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
+备注：该字段可传入微信openid、QQopenid、字符串等账号信息，与账号类别参数（AccountType）配合使用可确定唯一账号。
      */
     public $UserId;
 
     /**
-     * @var string 业务用户ID类型 "1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-其它string"
-     */
-    public $AccountType;
-
-    /**
-     * @var string 用户昵称
+     * @var string 该字段表示业务用户对应的账号昵称信息。
      */
     public $Nickname;
 
     /**
-     * @var integer 性别 默认0 未知 1 男性 2 女性
+     * @var string 该字段表示业务用户ID对应的账号类型，取值：**1**-微信uin，**2**-QQ号，**3**-微信群uin，**4**-qq群号，**5**-微信openid，**6**-QQopenid，**7**-其它string。<br>
+该字段与账号ID参数（UserId）配合使用可确定唯一账号。
+     */
+    public $AccountType;
+
+    /**
+     * @var integer 该字段表示业务用户对应账号的性别信息。<br>
+取值：**0**（默认值，代表性别未知）、**1**（男性）、**2**（女性）。
      */
     public $Gender;
 
     /**
-     * @var integer 年龄 默认0 未知
+     * @var integer 该字段表示业务用户对应账号的年龄信息。<br>
+取值：**0**（默认值，代表年龄未知）-（**自定义年龄上限**）之间的整数。
      */
     public $Age;
 
     /**
-     * @var integer 用户等级，默认0 未知 1 低 2 中 3 高
+     * @var integer 该字段表示业务用户对应账号的等级信息。<br>
+取值：**0**（默认值，代表等级未知）、**1**（等级较低）、**2**（等级中等）、**3**（等级较高），目前**暂不支持自定义等级**。
      */
     public $Level;
 
     /**
-     * @var string 手机号
+     * @var string 该字段表示业务用户对应账号的手机号信息，支持全球各地区手机号的记录。<br>
+备注：请保持手机号格式的统一，如区号格式（086/+86）等。
      */
     public $Phone;
 
     /**
-     * @var string 用户简介，长度不超过5000字
+     * @var string 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，**长度不超过5000个汉字字符**。
      */
     public $Desc;
 
     /**
-     * @var string 用户头像图片链接
+     * @var string 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：头像图片**大小不超过5MB**，建议**分辨率不低于256x256**；图片下载时间限制为3秒，超过则会返回下载超时。
      */
     public $HeadUrl;
 
     /**
-     * @param string $UserId 业务用户ID 如填写，会根据账号历史恶意情况，判定消息有害结果，特别是有利于可疑恶意情况下的辅助判断。账号可以填写微信uin、QQ号、微信openid、QQopenid、字符串等。该字段和账号类别确定唯一账号。
-     * @param string $AccountType 业务用户ID类型 "1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-其它string"
-     * @param string $Nickname 用户昵称
-     * @param integer $Gender 性别 默认0 未知 1 男性 2 女性
-     * @param integer $Age 年龄 默认0 未知
-     * @param integer $Level 用户等级，默认0 未知 1 低 2 中 3 高
-     * @param string $Phone 手机号
-     * @param string $Desc 用户简介，长度不超过5000字
-     * @param string $HeadUrl 用户头像图片链接
+     * @param string $UserId 该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
+备注：该字段可传入微信openid、QQopenid、字符串等账号信息，与账号类别参数（AccountType）配合使用可确定唯一账号。
+     * @param string $Nickname 该字段表示业务用户对应的账号昵称信息。
+     * @param string $AccountType 该字段表示业务用户ID对应的账号类型，取值：**1**-微信uin，**2**-QQ号，**3**-微信群uin，**4**-qq群号，**5**-微信openid，**6**-QQopenid，**7**-其它string。<br>
+该字段与账号ID参数（UserId）配合使用可确定唯一账号。
+     * @param integer $Gender 该字段表示业务用户对应账号的性别信息。<br>
+取值：**0**（默认值，代表性别未知）、**1**（男性）、**2**（女性）。
+     * @param integer $Age 该字段表示业务用户对应账号的年龄信息。<br>
+取值：**0**（默认值，代表年龄未知）-（**自定义年龄上限**）之间的整数。
+     * @param integer $Level 该字段表示业务用户对应账号的等级信息。<br>
+取值：**0**（默认值，代表等级未知）、**1**（等级较低）、**2**（等级中等）、**3**（等级较高），目前**暂不支持自定义等级**。
+     * @param string $Phone 该字段表示业务用户对应账号的手机号信息，支持全球各地区手机号的记录。<br>
+备注：请保持手机号格式的统一，如区号格式（086/+86）等。
+     * @param string $Desc 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，**长度不超过5000个汉字字符**。
+     * @param string $HeadUrl 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：头像图片**大小不超过5MB**，建议**分辨率不低于256x256**；图片下载时间限制为3秒，超过则会返回下载超时。
      */
     function __construct()
     {
@@ -114,12 +138,12 @@ class User extends AbstractModel
             $this->UserId = $param["UserId"];
         }
 
-        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
-            $this->AccountType = $param["AccountType"];
-        }
-
         if (array_key_exists("Nickname",$param) and $param["Nickname"] !== null) {
             $this->Nickname = $param["Nickname"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
 
         if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {

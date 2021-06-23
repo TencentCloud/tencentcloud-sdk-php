@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述键值对过滤器，用于条件过滤查询。
+ * 操作返回码，只用于返回成功的情况
  *
- * @method array getValues() 获取一个或者多个过滤值。
- * @method void setValues(array $Values) 设置一个或者多个过滤值。
- * @method string getName() 获取过滤键的名称。
- * @method void setName(string $Name) 设置过滤键的名称。
+ * @method string getMessage() 获取描述
+ * @method void setMessage(string $Message) 设置描述
+ * @method string getCode() 获取成功/错误码
+ * @method void setCode(string $Code) 设置成功/错误码
  */
-class Filter extends AbstractModel
+class SuccessCode extends AbstractModel
 {
     /**
-     * @var array 一个或者多个过滤值。
+     * @var string 描述
      */
-    public $Values;
+    public $Message;
 
     /**
-     * @var string 过滤键的名称。
+     * @var string 成功/错误码
      */
-    public $Name;
+    public $Code;
 
     /**
-     * @param array $Values 一个或者多个过滤值。
-     * @param string $Name 过滤键的名称。
+     * @param string $Message 描述
+     * @param string $Code 成功/错误码
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
         }
     }
 }

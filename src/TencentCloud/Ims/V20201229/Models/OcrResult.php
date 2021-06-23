@@ -18,80 +18,72 @@ namespace TencentCloud\Ims\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OCR结果检测详情
+ * 用于返回OCR结果检测详情
  *
- * @method string getScene() 获取场景识别结果
- * @method void setScene(string $Scene) 设置场景识别结果
- * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
- * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
- * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
- * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
- * @method string getSubLabel() 获取子标签检测结果
- * @method void setSubLabel(string $SubLabel) 设置子标签检测结果
- * @method integer getScore() 获取该标签模型命中的分值
- * @method void setScore(integer $Score) 设置该标签模型命中的分值
- * @method array getDetails() 获取ocr结果详情
+ * @method string getScene() 获取该字段表示识别场景，取值默认为OCR（图片OCR识别）。
+ * @method void setScene(string $Scene) 设置该字段表示识别场景，取值默认为OCR（图片OCR识别）。
+ * @method string getSuggestion() 获取该字段用于返回优先级最高的恶意标签对应的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+ * @method void setSuggestion(string $Suggestion) 设置该字段用于返回优先级最高的恶意标签对应的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+ * @method string getLabel() 获取该字段用于返回OCR检测结果所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+ * @method void setLabel(string $Label) 设置该字段用于返回OCR检测结果所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+ * @method string getSubLabel() 获取该字段用于返回当前标签（Label）下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+ * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Label）下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+ * @method integer getScore() 获取该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
+ * @method void setScore(integer $Score) 设置该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
+ * @method array getDetails() 获取该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDetails(array $Details) 设置ocr结果详情
+ * @method void setDetails(array $Details) 设置该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getText() 获取ocr识别出的文本结果
- * @method void setText(string $Text) 设置ocr识别出的文本结果
+ * @method string getText() 获取该字段用于返回OCR识别出的文字信息。
+ * @method void setText(string $Text) 设置该字段用于返回OCR识别出的文字信息。
  */
 class OcrResult extends AbstractModel
 {
     /**
-     * @var string 场景识别结果
+     * @var string 该字段表示识别场景，取值默认为OCR（图片OCR识别）。
      */
     public $Scene;
 
     /**
-     * @var string 建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     * @var string 该字段用于返回优先级最高的恶意标签对应的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
      */
     public $Suggestion;
 
     /**
-     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
+     * @var string 该字段用于返回OCR检测结果所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      */
     public $Label;
 
     /**
-     * @var string 子标签检测结果
+     * @var string 该字段用于返回当前标签（Label）下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
      */
     public $SubLabel;
 
     /**
-     * @var integer 该标签模型命中的分值
+     * @var integer 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
      */
     public $Score;
 
     /**
-     * @var array ocr结果详情
+     * @var array 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Details;
 
     /**
-     * @var string ocr识别出的文本结果
+     * @var string 该字段用于返回OCR识别出的文字信息。
      */
     public $Text;
 
     /**
-     * @param string $Scene 场景识别结果
-     * @param string $Suggestion 建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
-     * @param string $SubLabel 子标签检测结果
-     * @param integer $Score 该标签模型命中的分值
-     * @param array $Details ocr结果详情
+     * @param string $Scene 该字段表示识别场景，取值默认为OCR（图片OCR识别）。
+     * @param string $Suggestion 该字段用于返回优先级最高的恶意标签对应的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+     * @param string $Label 该字段用于返回OCR检测结果所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
+     * @param string $SubLabel 该字段用于返回当前标签（Label）下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+     * @param integer $Score 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
+     * @param array $Details 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Text ocr识别出的文本结果
+     * @param string $Text 该字段用于返回OCR识别出的文字信息。
      */
     function __construct()
     {

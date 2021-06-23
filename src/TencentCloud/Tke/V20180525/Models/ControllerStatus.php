@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述键值对过滤器，用于条件过滤查询。
+ * 集群中控制器的状态描述
  *
- * @method array getValues() 获取一个或者多个过滤值。
- * @method void setValues(array $Values) 设置一个或者多个过滤值。
- * @method string getName() 获取过滤键的名称。
- * @method void setName(string $Name) 设置过滤键的名称。
+ * @method string getName() 获取控制器的名字
+ * @method void setName(string $Name) 设置控制器的名字
+ * @method boolean getEnabled() 获取控制器是否开启
+ * @method void setEnabled(boolean $Enabled) 设置控制器是否开启
  */
-class Filter extends AbstractModel
+class ControllerStatus extends AbstractModel
 {
     /**
-     * @var array 一个或者多个过滤值。
-     */
-    public $Values;
-
-    /**
-     * @var string 过滤键的名称。
+     * @var string 控制器的名字
      */
     public $Name;
 
     /**
-     * @param array $Values 一个或者多个过滤值。
-     * @param string $Name 过滤键的名称。
+     * @var boolean 控制器是否开启
+     */
+    public $Enabled;
+
+    /**
+     * @param string $Name 控制器的名字
+     * @param boolean $Enabled 控制器是否开启
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
-        }
-
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
     }
 }

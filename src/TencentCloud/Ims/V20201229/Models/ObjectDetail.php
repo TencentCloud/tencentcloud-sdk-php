@@ -20,54 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实体检测结果明细，当检测场景为实体、广告台标、二维码时表示模型检测目标框的标签名称、标签值、标签分数以及检测框的位置信息。
  *
- * @method integer getId() 获取序号
- * @method void setId(integer $Id) 设置序号
- * @method string getName() 获取标签名称
- * @method void setName(string $Name) 设置标签名称
- * @method string getValue() 获取标签值，
-当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
- * @method void setValue(string $Value) 设置标签值，
-当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
- * @method integer getScore() 获取分数
- * @method void setScore(integer $Score) 设置分数
- * @method Location getLocation() 获取检测框坐标
- * @method void setLocation(Location $Location) 设置检测框坐标
+ * @method integer getId() 获取该参数用于返回识别对象的ID以方便识别和区分。
+ * @method void setId(integer $Id) 设置该参数用于返回识别对象的ID以方便识别和区分。
+ * @method string getName() 获取该参数用于返回命中的实体标签。
+ * @method void setName(string $Name) 设置该参数用于返回命中的实体标签。
+ * @method string getValue() 获取该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。
+ * @method void setValue(string $Value) 设置该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。
+ * @method integer getScore() 获取该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。
+ * @method void setScore(integer $Score) 设置该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。
+ * @method Location getLocation() 获取该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
+ * @method void setLocation(Location $Location) 设置该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
  */
 class ObjectDetail extends AbstractModel
 {
     /**
-     * @var integer 序号
+     * @var integer 该参数用于返回识别对象的ID以方便识别和区分。
      */
     public $Id;
 
     /**
-     * @var string 标签名称
+     * @var string 该参数用于返回命中的实体标签。
      */
     public $Name;
 
     /**
-     * @var string 标签值，
-当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
+     * @var string 该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。
      */
     public $Value;
 
     /**
-     * @var integer 分数
+     * @var integer 该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。
      */
     public $Score;
 
     /**
-     * @var Location 检测框坐标
+     * @var Location 该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
      */
     public $Location;
 
     /**
-     * @param integer $Id 序号
-     * @param string $Name 标签名称
-     * @param string $Value 标签值，
-当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
-     * @param integer $Score 分数
-     * @param Location $Location 检测框坐标
+     * @param integer $Id 该参数用于返回识别对象的ID以方便识别和区分。
+     * @param string $Name 该参数用于返回命中的实体标签。
+     * @param string $Value 该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。
+     * @param integer $Score 该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。
+     * @param Location $Location 该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
      */
     function __construct()
     {

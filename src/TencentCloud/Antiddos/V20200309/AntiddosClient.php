@@ -30,6 +30,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateDDoSSpeedLimitConfigResponse CreateDDoSSpeedLimitConfig(Models\CreateDDoSSpeedLimitConfigRequest $req) 添加DDoS防护的访问限速配置
  * @method Models\CreateDefaultAlarmThresholdResponse CreateDefaultAlarmThreshold(Models\CreateDefaultAlarmThresholdRequest $req) 设置单IP默认告警阈值配置
  * @method Models\CreateIPAlarmThresholdConfigResponse CreateIPAlarmThresholdConfig(Models\CreateIPAlarmThresholdConfigRequest $req) 设置单IP告警阈值配置
+ * @method Models\CreateL7RuleCertsResponse CreateL7RuleCerts(Models\CreateL7RuleCertsRequest $req) 批量配置L7转发规则的证书供SSL测调用
  * @method Models\CreatePacketFilterConfigResponse CreatePacketFilterConfig(Models\CreatePacketFilterConfigRequest $req) 添加DDoS防护的特征过滤规则
  * @method Models\CreateProtocolBlockConfigResponse CreateProtocolBlockConfig(Models\CreateProtocolBlockConfigRequest $req) 设置DDoS防护的协议封禁配置
  * @method Models\CreateSchedulingDomainResponse CreateSchedulingDomain(Models\CreateSchedulingDomainRequest $req) 创建一个域名，可用于在封堵时调度切换IP
@@ -43,6 +44,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DeleteWaterPrintKeyResponse DeleteWaterPrintKey(Models\DeleteWaterPrintKeyRequest $req) 删除DDoS防护的水印防护密钥
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) 获取DDoS防护的IP黑白名单
  * @method Models\DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(Models\DescribeDefaultAlarmThresholdRequest $req) 获取单IP默认告警阈值配置
+ * @method Models\DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(Models\DescribeL7RulesBySSLCertIdRequest $req) 查询与证书ID对于域名匹配的七层规则
  * @method Models\DescribeListBGPIPInstancesResponse DescribeListBGPIPInstances(Models\DescribeListBGPIPInstancesRequest $req) 获取高防IP资产实例列表
 
  * @method Models\DescribeListBGPInstancesResponse DescribeListBGPInstances(Models\DescribeListBGPInstancesRequest $req) 获取高防包资产实例列表

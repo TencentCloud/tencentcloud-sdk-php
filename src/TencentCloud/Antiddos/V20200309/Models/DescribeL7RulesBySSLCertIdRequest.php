@@ -14,32 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecm\V20190719\Models;
+namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述键值对过滤器，用于条件过滤查询。
+ * DescribeL7RulesBySSLCertId请求参数结构体
  *
- * @method array getValues() 获取一个或者多个过滤值。
- * @method void setValues(array $Values) 设置一个或者多个过滤值。
- * @method string getName() 获取过滤键的名称。
- * @method void setName(string $Name) 设置过滤键的名称。
+
  */
-class Filter extends AbstractModel
+class DescribeL7RulesBySSLCertIdRequest extends AbstractModel
 {
-    /**
-     * @var array 一个或者多个过滤值。
-     */
-    public $Values;
+
 
     /**
-     * @var string 过滤键的名称。
-     */
-    public $Name;
 
-    /**
-     * @param array $Values 一个或者多个过滤值。
-     * @param string $Name 过滤键的名称。
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
-            $this->Values = $param["Values"];
-        }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
     }
 }

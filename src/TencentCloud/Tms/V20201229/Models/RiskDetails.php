@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 账号风险检测结果
  *
- * @method string getLabel() 获取风险类别，RiskAccount，RiskIP, RiskIMEI
- * @method void setLabel(string $Label) 设置风险类别，RiskAccount，RiskIP, RiskIMEI
- * @method integer getLevel() 获取风险等级，1:疑似，2：恶意
- * @method void setLevel(integer $Level) 设置风险等级，1:疑似，2：恶意
+ * @method string getLabel() 获取该字段用于返回账号信息检测对应的风险类别，取值为：**RiskAccount**（账号存在风险）、**RiskIP**（IP地址存在风险）、**RiskIMEI**（移动设备识别码存在风险）。
+ * @method void setLabel(string $Label) 设置该字段用于返回账号信息检测对应的风险类别，取值为：**RiskAccount**（账号存在风险）、**RiskIP**（IP地址存在风险）、**RiskIMEI**（移动设备识别码存在风险）。
+ * @method integer getLevel() 获取该字段用于返回账号信息检测对应的风险等级，取值为：**1**（疑似存在风险）和**2**（存在恶意风险）。
+ * @method void setLevel(integer $Level) 设置该字段用于返回账号信息检测对应的风险等级，取值为：**1**（疑似存在风险）和**2**（存在恶意风险）。
  */
 class RiskDetails extends AbstractModel
 {
     /**
-     * @var string 风险类别，RiskAccount，RiskIP, RiskIMEI
+     * @var string 该字段用于返回账号信息检测对应的风险类别，取值为：**RiskAccount**（账号存在风险）、**RiskIP**（IP地址存在风险）、**RiskIMEI**（移动设备识别码存在风险）。
      */
     public $Label;
 
     /**
-     * @var integer 风险等级，1:疑似，2：恶意
+     * @var integer 该字段用于返回账号信息检测对应的风险等级，取值为：**1**（疑似存在风险）和**2**（存在恶意风险）。
      */
     public $Level;
 
     /**
-     * @param string $Label 风险类别，RiskAccount，RiskIP, RiskIMEI
-     * @param integer $Level 风险等级，1:疑似，2：恶意
+     * @param string $Label 该字段用于返回账号信息检测对应的风险类别，取值为：**RiskAccount**（账号存在风险）、**RiskIP**（IP地址存在风险）、**RiskIMEI**（移动设备识别码存在风险）。
+     * @param integer $Level 该字段用于返回账号信息检测对应的风险等级，取值为：**1**（疑似存在风险）和**2**（存在恶意风险）。
      */
     function __construct()
     {

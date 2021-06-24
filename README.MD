@@ -37,6 +37,7 @@
 <?php
 require_once '/path/to/vendor/autoload.php';
 
+use TencentCloud\Cvm\V20170312\CvmClient;
 use TencentCloud\Cvm\V20170312\Models\DescribeInstancesRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;

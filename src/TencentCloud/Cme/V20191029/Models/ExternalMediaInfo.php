@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒资绑定资源信息，包含媒资绑定模板 ID 和文件信息。
  *
- * @method integer getDefinition() 获取媒资绑定模板 ID。
- * @method void setDefinition(integer $Definition) 设置媒资绑定模板 ID。
- * @method string getMediaKey() 获取媒资绑定媒体路径或文件 ID。
- * @method void setMediaKey(string $MediaKey) 设置媒资绑定媒体路径或文件 ID。
+ * @method integer getDefinition() 获取媒资绑定模板 ID，可取值为：
+<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
+<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+
+注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
+ * @method void setDefinition(integer $Definition) 设置媒资绑定模板 ID，可取值为：
+<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
+<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+
+注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
+ * @method string getMediaKey() 获取媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。
+ * @method void setMediaKey(string $MediaKey) 设置媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。
  */
 class ExternalMediaInfo extends AbstractModel
 {
     /**
-     * @var integer 媒资绑定模板 ID。
+     * @var integer 媒资绑定模板 ID，可取值为：
+<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
+<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+
+注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
      */
     public $Definition;
 
     /**
-     * @var string 媒资绑定媒体路径或文件 ID。
+     * @var string 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。
      */
     public $MediaKey;
 
     /**
-     * @param integer $Definition 媒资绑定模板 ID。
-     * @param string $MediaKey 媒资绑定媒体路径或文件 ID。
+     * @param integer $Definition 媒资绑定模板 ID，可取值为：
+<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
+<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+
+注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
+     * @param string $MediaKey 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。
      */
     function __construct()
     {

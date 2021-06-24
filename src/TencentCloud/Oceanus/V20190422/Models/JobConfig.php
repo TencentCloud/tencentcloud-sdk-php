@@ -70,6 +70,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxParallelism(integer $MaxParallelism) 设置作业的最大并行度
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getJobManagerSpec() 获取JobManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobManagerSpec(float $JobManagerSpec) 设置JobManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getTaskManagerSpec() 获取TaskManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskManagerSpec(float $TaskManagerSpec) 设置TaskManager规格
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobConfig extends AbstractModel
 {
@@ -155,6 +163,18 @@ class JobConfig extends AbstractModel
     public $MaxParallelism;
 
     /**
+     * @var float JobManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobManagerSpec;
+
+    /**
+     * @var float TaskManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskManagerSpec;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -179,6 +199,10 @@ class JobConfig extends AbstractModel
      * @param integer $LogCollect 是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxParallelism 作业的最大并行度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $JobManagerSpec JobManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $TaskManagerSpec TaskManager规格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -258,6 +282,14 @@ class JobConfig extends AbstractModel
 
         if (array_key_exists("MaxParallelism",$param) and $param["MaxParallelism"] !== null) {
             $this->MaxParallelism = $param["MaxParallelism"];
+        }
+
+        if (array_key_exists("JobManagerSpec",$param) and $param["JobManagerSpec"] !== null) {
+            $this->JobManagerSpec = $param["JobManagerSpec"];
+        }
+
+        if (array_key_exists("TaskManagerSpec",$param) and $param["TaskManagerSpec"] !== null) {
+            $this->TaskManagerSpec = $param["TaskManagerSpec"];
         }
     }
 }

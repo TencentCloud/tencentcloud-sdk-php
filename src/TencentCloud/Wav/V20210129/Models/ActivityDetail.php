@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivityType(integer $ActivityType) 设置活动类型，100:留资活动
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStartTime() 获取活动开始时间，单位：秒
+ * @method integer getStartTime() 获取活动开始时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(integer $StartTime) 设置活动开始时间，单位：秒
+ * @method void setStartTime(integer $StartTime) 设置活动开始时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEndTime() 获取活动结束时间，单位：秒
+ * @method integer getEndTime() 获取活动结束时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(integer $EndTime) 设置活动结束时间，单位：秒
+ * @method void setEndTime(integer $EndTime) 设置活动结束时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMainPhoto() 获取活动主图
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivacyAgreementId(string $PrivacyAgreementId) 设置协议编号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpdateTime() 获取活动更新时间，单位：秒
+ * @method integer getUpdateTime() 获取活动更新时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(integer $UpdateTime) 设置活动更新时间，单位：秒
+ * @method void setUpdateTime(integer $UpdateTime) 设置活动更新时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActivityDataList() 获取活动数据列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,13 +88,13 @@ class ActivityDetail extends AbstractModel
     public $ActivityType;
 
     /**
-     * @var integer 活动开始时间，单位：秒
+     * @var integer 活动开始时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var integer 活动结束时间，单位：秒
+     * @var integer 活动结束时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
@@ -112,7 +112,7 @@ class ActivityDetail extends AbstractModel
     public $PrivacyAgreementId;
 
     /**
-     * @var integer 活动更新时间，单位：秒
+     * @var integer 活动更新时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
@@ -132,15 +132,15 @@ class ActivityDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActivityType 活动类型，100:留资活动
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StartTime 活动开始时间，单位：秒
+     * @param integer $StartTime 活动开始时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EndTime 活动结束时间，单位：秒
+     * @param integer $EndTime 活动结束时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MainPhoto 活动主图
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivacyAgreementId 协议编号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpdateTime 活动更新时间，单位：秒
+     * @param integer $UpdateTime 活动更新时间戳，单位：秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActivityDataList 活动数据列表
 注意：此字段可能返回 null，表示取不到有效值。

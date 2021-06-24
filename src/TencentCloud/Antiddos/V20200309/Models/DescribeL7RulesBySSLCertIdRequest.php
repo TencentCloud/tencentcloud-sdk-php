@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeL7RulesBySSLCertId请求参数结构体
  *
-
+ * @method string getStatus() 获取域名状态，可取bindable, binded, opened, closed, all，all表示全部状态
+ * @method void setStatus(string $Status) 设置域名状态，可取bindable, binded, opened, closed, all，all表示全部状态
+ * @method array getCertIds() 获取证书ID列表
+ * @method void setCertIds(array $CertIds) 设置证书ID列表
  */
 class DescribeL7RulesBySSLCertIdRequest extends AbstractModel
 {
-
+    /**
+     * @var string 域名状态，可取bindable, binded, opened, closed, all，all表示全部状态
+     */
+    public $Status;
 
     /**
+     * @var array 证书ID列表
+     */
+    public $CertIds;
 
+    /**
+     * @param string $Status 域名状态，可取bindable, binded, opened, closed, all，all表示全部状态
+     * @param array $CertIds 证书ID列表
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeL7RulesBySSLCertIdRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
 
+        if (array_key_exists("CertIds",$param) and $param["CertIds"] !== null) {
+            $this->CertIds = $param["CertIds"];
+        }
     }
 }

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrimaryLanguage(integer $PrimaryLanguage) 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
  * @method integer getSampleRate() 获取音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
  * @method void setSampleRate(integer $SampleRate) 设置音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
- * @method string getCodec() 获取返回音频格式，可取值：mp3（默认），mp3，pcm
- * @method void setCodec(string $Codec) 设置返回音频格式，可取值：mp3（默认），mp3，pcm
+ * @method string getCodec() 获取返回音频格式，可取值：mp3（默认），wav，pcm
+ * @method void setCodec(string $Codec) 设置返回音频格式，可取值：mp3（默认），wav，pcm
  * @method string getCallbackUrl() 获取回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。[回调说明](https://cloud.tencent.com/document/product/1073/55746)
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。[回调说明](https://cloud.tencent.com/document/product/1073/55746)
  */
@@ -87,7 +87,7 @@ class CreateTtsTaskRequest extends AbstractModel
     public $SampleRate;
 
     /**
-     * @var string 返回音频格式，可取值：mp3（默认），mp3，pcm
+     * @var string 返回音频格式，可取值：mp3（默认），wav，pcm
      */
     public $Codec;
 
@@ -106,7 +106,7 @@ class CreateTtsTaskRequest extends AbstractModel
      * @param integer $VoiceType 标准音色<li>1001-智瑜，情感女声(默认)</li><li>1002-智聆，通用女声</li><li>1003-智美，客服女声</li><li>1006-智云，通用男声</li><li>1050-WeJack，英文男声</li><li>1051-WeRose，英文女声</li>精品音色<br>精品音色拟真度更高，价格不同于普通音色，查看[购买指南](https://cloud.tencent.com/product/tts/pricing)<br><li>101001-智瑜，情感女声（精品）</li><li>101002-智聆，通用女声（精品）</li><li>101003-智美，客服女声（精品）</li><li>101004-智云，通用男声</li><li>101005-智莉，通用女声</li><li>101006-智言，助手女声</li><li>101007-智娜，客服女声</li><li>101008-智琪，客服女声</li><li>101009-智芸，知性女声</li><li>101010-智华，通用男声</li><li>101011-智燕，新闻女声</li><li>101012-智丹，新闻女声</li><li>101013-智辉，新闻男声</li><li>101014-智宁，新闻男声</li><li>101015-智萌，男童声</li><li>101016-智甜，女童声</li><li>101017-智蓉，情感女声</li><li>101018-智靖，情感男声</li><li>101019-智彤，粤语女声</li><li>101050-WeJack，英文男声（精品）</li><li>101051-WeRose，英文女声（精品）</li>
      * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      * @param integer $SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
-     * @param string $Codec 返回音频格式，可取值：mp3（默认），mp3，pcm
+     * @param string $Codec 返回音频格式，可取值：mp3（默认），wav，pcm
      * @param string $CallbackUrl 回调 URL，用户自行搭建的用于接收识别结果的服务URL。如果用户使用轮询方式获取识别结果，则无需提交该参数。[回调说明](https://cloud.tencent.com/document/product/1073/55746)
      */
     function __construct()

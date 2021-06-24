@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCOSBucket(string $COSBucket) 设置作业使用的 COS 存储桶名
  * @method boolean getLogCollect() 获取是否采集作业日志
  * @method void setLogCollect(boolean $LogCollect) 设置是否采集作业日志
+ * @method float getJobManagerSpec() 获取JobManager规格
+ * @method void setJobManagerSpec(float $JobManagerSpec) 设置JobManager规格
+ * @method float getTaskManagerSpec() 获取TaskManager规格
+ * @method void setTaskManagerSpec(float $TaskManagerSpec) 设置TaskManager规格
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class CreateJobConfigRequest extends AbstractModel
     public $LogCollect;
 
     /**
+     * @var float JobManager规格
+     */
+    public $JobManagerSpec;
+
+    /**
+     * @var float TaskManager规格
+     */
+    public $TaskManagerSpec;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -104,6 +118,8 @@ class CreateJobConfigRequest extends AbstractModel
      * @param integer $AutoDelete 1: 作业配置达到上限之后，自动删除可删除的最早版本
      * @param string $COSBucket 作业使用的 COS 存储桶名
      * @param boolean $LogCollect 是否采集作业日志
+     * @param float $JobManagerSpec JobManager规格
+     * @param float $TaskManagerSpec TaskManager规格
      */
     function __construct()
     {
@@ -166,6 +182,14 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("LogCollect",$param) and $param["LogCollect"] !== null) {
             $this->LogCollect = $param["LogCollect"];
+        }
+
+        if (array_key_exists("JobManagerSpec",$param) and $param["JobManagerSpec"] !== null) {
+            $this->JobManagerSpec = $param["JobManagerSpec"];
+        }
+
+        if (array_key_exists("TaskManagerSpec",$param) and $param["TaskManagerSpec"] !== null) {
+            $this->TaskManagerSpec = $param["TaskManagerSpec"];
         }
     }
 }

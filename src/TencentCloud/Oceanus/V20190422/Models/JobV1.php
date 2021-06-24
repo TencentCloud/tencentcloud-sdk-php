@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置作业名字
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getJobType() 获取作业类型
+ * @method integer getJobType() 获取作业类型，1：sql作业，2：Jar作业
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobType(integer $JobType) 设置作业类型
+ * @method void setJobType(integer $JobType) 设置作业类型，1：sql作业，2：Jar作业
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取作业状态，1：未初始化，2：未发布，3：操作中，4：运行中，5：停止，6：暂停，-1：故障
 注意：此字段可能返回 null，表示取不到有效值。
@@ -128,6 +128,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterStatus(integer $ClusterStatus) 设置作业所在集群状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getRunningCu() 获取细粒度下的运行的CU数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunningCu(float $RunningCu) 设置细粒度下的运行的CU数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobV1 extends AbstractModel
 {
@@ -174,7 +178,7 @@ class JobV1 extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 作业类型
+     * @var integer 作业类型，1：sql作业，2：Jar作业
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobType;
@@ -294,6 +298,12 @@ class JobV1 extends AbstractModel
     public $ClusterStatus;
 
     /**
+     * @var float 细粒度下的运行的CU数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RunningCu;
+
+    /**
      * @param string $JobId 作业ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
@@ -308,7 +318,7 @@ class JobV1 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 作业名字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $JobType 作业类型
+     * @param integer $JobType 作业类型，1：sql作业，2：Jar作业
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 作业状态，1：未初始化，2：未发布，3：操作中，4：运行中，5：停止，6：暂停，-1：故障
 注意：此字段可能返回 null，表示取不到有效值。
@@ -347,6 +357,8 @@ class JobV1 extends AbstractModel
      * @param integer $SchedulerType 作业所在集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterStatus 作业所在集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $RunningCu 细粒度下的运行的CU数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -468,6 +480,10 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
             $this->ClusterStatus = $param["ClusterStatus"];
+        }
+
+        if (array_key_exists("RunningCu",$param) and $param["RunningCu"] !== null) {
+            $this->RunningCu = $param["RunningCu"];
         }
     }
 }

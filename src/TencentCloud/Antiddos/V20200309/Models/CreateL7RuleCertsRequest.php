@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateL7RuleCerts请求参数结构体
  *
-
+ * @method string getCertId() 获取SSL证书ID
+ * @method void setCertId(string $CertId) 设置SSL证书ID
+ * @method array getL7Rules() 获取L7域名转发规则列表
+ * @method void setL7Rules(array $L7Rules) 设置L7域名转发规则列表
  */
 class CreateL7RuleCertsRequest extends AbstractModel
 {
-
+    /**
+     * @var string SSL证书ID
+     */
+    public $CertId;
 
     /**
+     * @var array L7域名转发规则列表
+     */
+    public $L7Rules;
 
+    /**
+     * @param string $CertId SSL证书ID
+     * @param array $L7Rules L7域名转发规则列表
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class CreateL7RuleCertsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
+            $this->CertId = $param["CertId"];
+        }
 
+        if (array_key_exists("L7Rules",$param) and $param["L7Rules"] !== null) {
+            $this->L7Rules = [];
+            foreach ($param["L7Rules"] as $key => $value){
+                $obj = new InsL7Rules();
+                $obj->deserialize($value);
+                array_push($this->L7Rules, $obj);
+            }
+        }
     }
 }

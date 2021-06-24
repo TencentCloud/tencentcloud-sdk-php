@@ -27,11 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSourceType() 获取导入媒资类型，取值：
 <li>VOD：云点播文件；</li>
 <li>EXTERNAL：媒资绑定。</li>
-注意：如果不填默认为云点播文件。
+
+注意：如果不填默认为云点播文件，如果媒体存储在非腾讯云点播中，都需要使用媒资绑定。
  * @method void setSourceType(string $SourceType) 设置导入媒资类型，取值：
 <li>VOD：云点播文件；</li>
 <li>EXTERNAL：媒资绑定。</li>
-注意：如果不填默认为云点播文件。
+
+注意：如果不填默认为云点播文件，如果媒体存储在非腾讯云点播中，都需要使用媒资绑定。
  * @method string getVodFileId() 获取云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
  * @method void setVodFileId(string $VodFileId) 设置云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
  * @method ExternalMediaInfo getExternalMediaInfo() 获取原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
@@ -63,7 +65,8 @@ class ImportMediaToProjectRequest extends AbstractModel
      * @var string 导入媒资类型，取值：
 <li>VOD：云点播文件；</li>
 <li>EXTERNAL：媒资绑定。</li>
-注意：如果不填默认为云点播文件。
+
+注意：如果不填默认为云点播文件，如果媒体存储在非腾讯云点播中，都需要使用媒资绑定。
      */
     public $SourceType;
 
@@ -100,7 +103,8 @@ class ImportMediaToProjectRequest extends AbstractModel
      * @param string $SourceType 导入媒资类型，取值：
 <li>VOD：云点播文件；</li>
 <li>EXTERNAL：媒资绑定。</li>
-注意：如果不填默认为云点播文件。
+
+注意：如果不填默认为云点播文件，如果媒体存储在非腾讯云点播中，都需要使用媒资绑定。
      * @param string $VodFileId 云点播媒资文件 Id，当 SourceType 取值 VOD 或者缺省的时候必填。
      * @param ExternalMediaInfo $ExternalMediaInfo 原始媒资文件信息，当 SourceType 取值 EXTERNAL 的时候必填。
      * @param string $Name 媒体名称，不能超过30个字符。

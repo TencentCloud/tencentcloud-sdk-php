@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDiagDBInstanceConf请求参数结构体
  *
- * @method InstanceConfs getInstanceConfs() 获取巡检开关。
- * @method void setInstanceConfs(InstanceConfs $InstanceConfs) 设置巡检开关。
+ * @method InstanceConfs getInstanceConfs() 获取实例配置，包括巡检、概览开关等。
+ * @method void setInstanceConfs(InstanceConfs $InstanceConfs) 设置实例配置，包括巡检、概览开关等。
  * @method string getRegions() 获取生效实例地域，取值为"All"，代表全地域。
  * @method void setRegions(string $Regions) 设置生效实例地域，取值为"All"，代表全地域。
  * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDiagDBInstanceConfRequest extends AbstractModel
 {
     /**
-     * @var InstanceConfs 巡检开关。
+     * @var InstanceConfs 实例配置，包括巡检、概览开关等。
      */
     public $InstanceConfs;
 
@@ -52,7 +52,7 @@ class ModifyDiagDBInstanceConfRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @param InstanceConfs $InstanceConfs 巡检开关。
+     * @param InstanceConfs $InstanceConfs 实例配置，包括巡检、概览开关等。
      * @param string $Regions 生效实例地域，取值为"All"，代表全地域。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL。
      * @param array $InstanceIds 指定更改巡检状态的实例ID。

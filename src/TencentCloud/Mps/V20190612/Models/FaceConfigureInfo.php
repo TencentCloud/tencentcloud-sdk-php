@@ -37,9 +37,9 @@ use TencentCloud\Common\AbstractModel;
 <li>sport：体育明星；</li>
 <li>politician：政治人物。</li>
  * @method array getUserDefineLibraryLabelSet() 获取用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
-标签个数最多 10 个，每个标签长度最多 16 个字符。
+标签个数最多 100 个，每个标签长度最多 16 个字符。
  * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) 设置用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
-标签个数最多 10 个，每个标签长度最多 16 个字符。
+标签个数最多 100 个，每个标签长度最多 16 个字符。
  * @method string getFaceLibrary() 获取人物库选择，可选值：
 <li>Default：使用默认人物库；</li>
 <li>UserDefine：使用用户自定义人物库。</li>
@@ -75,7 +75,7 @@ class FaceConfigureInfo extends AbstractModel
 
     /**
      * @var array 用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
-标签个数最多 10 个，每个标签长度最多 16 个字符。
+标签个数最多 100 个，每个标签长度最多 16 个字符。
      */
     public $UserDefineLibraryLabelSet;
 
@@ -98,7 +98,7 @@ class FaceConfigureInfo extends AbstractModel
 <li>sport：体育明星；</li>
 <li>politician：政治人物。</li>
      * @param array $UserDefineLibraryLabelSet 用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
-标签个数最多 10 个，每个标签长度最多 16 个字符。
+标签个数最多 100 个，每个标签长度最多 16 个字符。
      * @param string $FaceLibrary 人物库选择，可选值：
 <li>Default：使用默认人物库；</li>
 <li>UserDefine：使用用户自定义人物库。</li>

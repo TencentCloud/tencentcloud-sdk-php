@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getDayTime() 获取查询时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据。
+注意：支持查询近1个月内某天的详细数据，截止到昨天。
  * @method void setDayTime(string $DayTime) 设置查询时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据。
+注意：支持查询近1个月内某天的详细数据，截止到昨天。
  * @method integer getPageNum() 获取页数，默认1，
 不超过100页。
  * @method void setPageNum(integer $PageNum) 设置页数，默认1，
@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：支持查询近1个月内的详细数据。
  * @method string getEndDayTime() 获取结束天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
  * @method void setEndDayTime(string $EndDayTime) 设置结束天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
  */
 class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 {
@@ -66,7 +66,7 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
     /**
      * @var string 查询时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据。
+注意：支持查询近1个月内某天的详细数据，截止到昨天。
      */
     public $DayTime;
 
@@ -92,7 +92,7 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
     /**
      * @var string 结束天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
      */
     public $EndDayTime;
 
@@ -101,7 +101,7 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
      * @param string $StreamName 流名称。
      * @param string $DayTime 查询时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内某天的详细数据。
+注意：支持查询近1个月内某天的详细数据，截止到昨天。
      * @param integer $PageNum 页数，默认1，
 不超过100页。
      * @param integer $PageSize 每页个数，默认20，
@@ -111,7 +111,7 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 注意：支持查询近1个月内的详细数据。
      * @param string $EndDayTime 结束天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近1个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+注意：支持查询近1个月内的详细数据，截止到昨天，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
      */
     function __construct()
     {

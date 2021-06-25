@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMessageId() 获取用作标识消息的唯一的ID（可从 receiveMessage 的返回值中获得）
  * @method void setMessageId(string $MessageId) 设置用作标识消息的唯一的ID（可从 receiveMessage 的返回值中获得）
- * @method string getAckTopic() 获取Topic 名字（可从 receiveMessage 的返回值中获得）这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
- * @method void setAckTopic(string $AckTopic) 设置Topic 名字（可从 receiveMessage 的返回值中获得）这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+ * @method string getAckTopic() 获取Topic 名字（可从 receiveMessage 的返回值中获得）这里尽量需要使用topic的全路径，即：tenant/namespace/topic。如果不指定，默认使用的是：public/default
+ * @method void setAckTopic(string $AckTopic) 设置Topic 名字（可从 receiveMessage 的返回值中获得）这里尽量需要使用topic的全路径，即：tenant/namespace/topic。如果不指定，默认使用的是：public/default
  * @method string getSubName() 获取订阅者的名字，可以从receiveMessage的返回值中获取到。这里尽量与receiveMessage中的订阅者保持一致，否则没办法正确ack 接收回来的消息。
  * @method void setSubName(string $SubName) 设置订阅者的名字，可以从receiveMessage的返回值中获取到。这里尽量与receiveMessage中的订阅者保持一致，否则没办法正确ack 接收回来的消息。
  */
@@ -35,7 +35,7 @@ class AcknowledgeMessageRequest extends AbstractModel
     public $MessageId;
 
     /**
-     * @var string Topic 名字（可从 receiveMessage 的返回值中获得）这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+     * @var string Topic 名字（可从 receiveMessage 的返回值中获得）这里尽量需要使用topic的全路径，即：tenant/namespace/topic。如果不指定，默认使用的是：public/default
      */
     public $AckTopic;
 
@@ -46,7 +46,7 @@ class AcknowledgeMessageRequest extends AbstractModel
 
     /**
      * @param string $MessageId 用作标识消息的唯一的ID（可从 receiveMessage 的返回值中获得）
-     * @param string $AckTopic Topic 名字（可从 receiveMessage 的返回值中获得）这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+     * @param string $AckTopic Topic 名字（可从 receiveMessage 的返回值中获得）这里尽量需要使用topic的全路径，即：tenant/namespace/topic。如果不指定，默认使用的是：public/default
      * @param string $SubName 订阅者的名字，可以从receiveMessage的返回值中获取到。这里尽量与receiveMessage中的订阅者保持一致，否则没办法正确ack 接收回来的消息。
      */
     function __construct()

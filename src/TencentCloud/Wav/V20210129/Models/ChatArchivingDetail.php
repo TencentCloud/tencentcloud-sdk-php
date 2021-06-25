@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgId(string $MsgId) 设置消息id
  * @method string getAction() 获取动作名称，switch表示切换企微账号，send表示企微普通消息
  * @method void setAction(string $Action) 设置动作名称，switch表示切换企微账号，send表示企微普通消息
- * @method string getMsgType() 获取消息类型，当Action != "switch"时存在，比如video, text, voice 等，和企微开放文档一一对应
+ * @method string getMsgType() 获取消息类型，当Action != "switch"时存在，例如video, text, voice 等，和企微开放文档一一对应
 https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMsgType(string $MsgType) 设置消息类型，当Action != "switch"时存在，比如video, text, voice 等，和企微开放文档一一对应
+ * @method void setMsgType(string $MsgType) 设置消息类型，当Action != "switch"时存在，例如video, text, voice 等，和企微开放文档一一对应
 https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFrom() 获取消息发送人
@@ -68,7 +68,7 @@ class ChatArchivingDetail extends AbstractModel
     public $Action;
 
     /**
-     * @var string 消息类型，当Action != "switch"时存在，比如video, text, voice 等，和企微开放文档一一对应
+     * @var string 消息类型，当Action != "switch"时存在，例如video, text, voice 等，和企微开放文档一一对应
 https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -113,7 +113,7 @@ https://open.work.weixin.qq.com/api/doc/90000/90135/91774
     /**
      * @param string $MsgId 消息id
      * @param string $Action 动作名称，switch表示切换企微账号，send表示企微普通消息
-     * @param string $MsgType 消息类型，当Action != "switch"时存在，比如video, text, voice 等，和企微开放文档一一对应
+     * @param string $MsgType 消息类型，当Action != "switch"时存在，例如video, text, voice 等，和企微开放文档一一对应
 https://open.work.weixin.qq.com/api/doc/90000/90135/91774
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $From 消息发送人

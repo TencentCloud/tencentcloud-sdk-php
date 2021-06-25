@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReceiveMessage请求参数结构体
  *
- * @method string getTopic() 获取接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
- * @method void setTopic(string $Topic) 设置接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+ * @method string getTopic() 获取接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
+ * @method void setTopic(string $Topic) 设置接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
  * @method string getSubscriptionName() 获取订阅者的名字
  * @method void setSubscriptionName(string $SubscriptionName) 设置订阅者的名字
  * @method integer getReceiverQueueSize() 获取默认值为1000，consumer接收的消息会首先存储到receiverQueueSize这个队列中，用作调优接收消息的速率
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ReceiveMessageRequest extends AbstractModel
 {
     /**
-     * @var string 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+     * @var string 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
      */
     public $Topic;
 
@@ -52,7 +52,7 @@ class ReceiveMessageRequest extends AbstractModel
     public $SubInitialPosition;
 
     /**
-     * @param string $Topic 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+     * @param string $Topic 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
      * @param string $SubscriptionName 订阅者的名字
      * @param integer $ReceiverQueueSize 默认值为1000，consumer接收的消息会首先存储到receiverQueueSize这个队列中，用作调优接收消息的速率
      * @param string $SubInitialPosition 默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest

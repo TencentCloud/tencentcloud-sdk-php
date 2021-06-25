@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 订单价格详情
  *
- * @method integer getRealTotalCost() 获取实付金额
- * @method void setRealTotalCost(integer $RealTotalCost) 设置实付金额
+ * @method integer getRealTotalCost() 获取实付金额（单位：分）
+ * @method void setRealTotalCost(integer $RealTotalCost) 设置实付金额（单位：分）
+ * @method integer getOriginalTotalCost() 获取原始金额（不含折扣，单位：分）
+ * @method void setOriginalTotalCost(integer $OriginalTotalCost) 设置原始金额（不含折扣，单位：分）
  */
 class DealGoodsPriceNewElem extends AbstractModel
 {
     /**
-     * @var integer 实付金额
+     * @var integer 实付金额（单位：分）
      */
     public $RealTotalCost;
 
     /**
-     * @param integer $RealTotalCost 实付金额
+     * @var integer 原始金额（不含折扣，单位：分）
+     */
+    public $OriginalTotalCost;
+
+    /**
+     * @param integer $RealTotalCost 实付金额（单位：分）
+     * @param integer $OriginalTotalCost 原始金额（不含折扣，单位：分）
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DealGoodsPriceNewElem extends AbstractModel
         }
         if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
             $this->RealTotalCost = $param["RealTotalCost"];
+        }
+
+        if (array_key_exists("OriginalTotalCost",$param) and $param["OriginalTotalCost"] !== null) {
+            $this->OriginalTotalCost = $param["OriginalTotalCost"];
         }
     }
 }

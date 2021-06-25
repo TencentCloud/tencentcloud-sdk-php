@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) 设置模块名，固定值 monitor
  * @method string getNamespace() 获取告警策略类型，由 DescribeAllNamespaces 获得，例如 cvm_device
  * @method void setNamespace(string $Namespace) 设置告警策略类型，由 DescribeAllNamespaces 获得，例如 cvm_device
+ * @method string getMonitorType() 获取监控类型，如 MT_QCE。如果不填默认为 MT_QCE。
+ * @method void setMonitorType(string $MonitorType) 设置监控类型，如 MT_QCE。如果不填默认为 MT_QCE。
  */
 class DescribeAlarmEventsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeAlarmEventsRequest extends AbstractModel
     public $Namespace;
 
     /**
+     * @var string 监控类型，如 MT_QCE。如果不填默认为 MT_QCE。
+     */
+    public $MonitorType;
+
+    /**
      * @param string $Module 模块名，固定值 monitor
      * @param string $Namespace 告警策略类型，由 DescribeAllNamespaces 获得，例如 cvm_device
+     * @param string $MonitorType 监控类型，如 MT_QCE。如果不填默认为 MT_QCE。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeAlarmEventsRequest extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("MonitorType",$param) and $param["MonitorType"] !== null) {
+            $this->MonitorType = $param["MonitorType"];
         }
     }
 }

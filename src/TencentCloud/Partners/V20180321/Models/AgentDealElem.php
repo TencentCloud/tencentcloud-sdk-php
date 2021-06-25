@@ -116,6 +116,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductInfo(array $ProductInfo) 设置产品详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPaymentMethod() 获取付款方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPaymentMethod(string $PaymentMethod) 设置付款方式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateTime() 获取订单更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(string $UpdateTime) 设置订单更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentDealElem extends AbstractModel
 {
@@ -272,6 +280,18 @@ class AgentDealElem extends AbstractModel
     public $ProductInfo;
 
     /**
+     * @var string 付款方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PaymentMethod;
+
+    /**
+     * @var string 订单更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $DealId 订单自增 ID
      * @param string $DealName 订单号
      * @param string $GoodsCategoryId 商品类型 ID
@@ -319,6 +339,10 @@ class AgentDealElem extends AbstractModel
      * @param string $OverdueTime 订单过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProductInfo 产品详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PaymentMethod 付款方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateTime 订单更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -442,6 +466,14 @@ class AgentDealElem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ProductInfo, $obj);
             }
+        }
+
+        if (array_key_exists("PaymentMethod",$param) and $param["PaymentMethod"] !== null) {
+            $this->PaymentMethod = $param["PaymentMethod"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

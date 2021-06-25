@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhone(string $Phone) 设置代客手机，打码显示
  * @method integer getHasOverdueBill() 获取0表示不欠费，1表示欠费
  * @method void setHasOverdueBill(integer $HasOverdueBill) 设置0表示不欠费，1表示欠费
- * @method integer getStatus() 获取1:待代理商审核;2:待腾讯云审核
- * @method void setStatus(integer $Status) 设置1:待代理商审核;2:待腾讯云审核
+ * @method integer getStatus() 获取1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
+ * @method void setStatus(integer $Status) 设置1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
  * @method string getSalesUin() 获取业务员ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesUin(string $SalesUin) 设置业务员ID
@@ -43,6 +43,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSalesName() 获取业务员姓名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesName(string $SalesName) 设置业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientName() 获取客户名称，此字段和控制台返回一致。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientName(string $ClientName) 设置客户名称，此字段和控制台返回一致。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentClientElem extends AbstractModel
@@ -83,7 +87,7 @@ class AgentClientElem extends AbstractModel
     public $HasOverdueBill;
 
     /**
-     * @var integer 1:待代理商审核;2:待腾讯云审核
+     * @var integer 1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
      */
     public $Status;
 
@@ -100,6 +104,12 @@ class AgentClientElem extends AbstractModel
     public $SalesName;
 
     /**
+     * @var string 客户名称，此字段和控制台返回一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientName;
+
+    /**
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 代客账号ID
      * @param integer $ApplyTime 代客申请时间戳
@@ -107,10 +117,12 @@ class AgentClientElem extends AbstractModel
      * @param string $Mail 代客邮箱，打码显示
      * @param string $Phone 代客手机，打码显示
      * @param integer $HasOverdueBill 0表示不欠费，1表示欠费
-     * @param integer $Status 1:待代理商审核;2:待腾讯云审核
+     * @param integer $Status 1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
      * @param string $SalesUin 业务员ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SalesName 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientName 客户名称，此字段和控制台返回一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class AgentClientElem extends AbstractModel
 
         if (array_key_exists("SalesName",$param) and $param["SalesName"] !== null) {
             $this->SalesName = $param["SalesName"];
+        }
+
+        if (array_key_exists("ClientName",$param) and $param["ClientName"] !== null) {
+            $this->ClientName = $param["ClientName"];
         }
     }
 }

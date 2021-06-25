@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置该成员对此外部联系人的描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCreateTime() 获取该成员添加此外部联系人的时间,单位为秒
- * @method void setCreateTime(integer $CreateTime) 设置该成员添加此外部联系人的时间,单位为秒
- * @method integer getAddWay() 获取该成员添加此客户的来源，具体含义详见来<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
- * @method void setAddWay(integer $AddWay) 设置该成员添加此客户的来源，具体含义详见来<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
+ * @method integer getCreateTime() 获取该成员添加此外部联系人的时间戳，单位为秒
+ * @method void setCreateTime(integer $CreateTime) 设置该成员添加此外部联系人的时间戳，单位为秒
+ * @method integer getAddWay() 获取该成员添加此客户的来源，具体含义详见<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
+ * @method void setAddWay(integer $AddWay) 设置该成员添加此客户的来源，具体含义详见<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
  * @method string getOperUserId() 获取发起添加的userid，如果成员主动添加，为成员的userid；如果是客户主动添加，则为客户的外部联系人userid；如果是内部成员共享/管理员分配，则为对应的成员/管理员userid
  * @method void setOperUserId(string $OperUserId) 设置发起添加的userid，如果成员主动添加，为成员的userid；如果是客户主动添加，则为客户的外部联系人userid；如果是内部成员共享/管理员分配，则为对应的成员/管理员userid
  * @method array getTags() 获取该成员添加此外部联系人所打标签信息
@@ -61,12 +61,12 @@ class FollowUser extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 该成员添加此外部联系人的时间,单位为秒
+     * @var integer 该成员添加此外部联系人的时间戳，单位为秒
      */
     public $CreateTime;
 
     /**
-     * @var integer 该成员添加此客户的来源，具体含义详见来<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
+     * @var integer 该成员添加此客户的来源，具体含义详见<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
      */
     public $AddWay;
 
@@ -87,8 +87,8 @@ class FollowUser extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 该成员对此外部联系人的描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CreateTime 该成员添加此外部联系人的时间,单位为秒
-     * @param integer $AddWay 该成员添加此客户的来源，具体含义详见来<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
+     * @param integer $CreateTime 该成员添加此外部联系人的时间戳，单位为秒
+     * @param integer $AddWay 该成员添加此客户的来源，具体含义详见<a href="https://work.weixin.qq.com/api/doc/90000/90135/92114#%E6%9D%A5%E6%BA%90%E5%AE%9A%E4%B9%89">来源定义</a>
      * @param string $OperUserId 发起添加的userid，如果成员主动添加，为成员的userid；如果是客户主动添加，则为客户的外部联系人userid；如果是内部成员共享/管理员分配，则为对应的成员/管理员userid
      * @param array $Tags 该成员添加此外部联系人所打标签信息
 注意：此字段可能返回 null，表示取不到有效值。

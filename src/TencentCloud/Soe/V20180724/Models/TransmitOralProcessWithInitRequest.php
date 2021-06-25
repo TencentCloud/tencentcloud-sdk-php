@@ -94,13 +94,13 @@ use TencentCloud\Common\AbstractModel;
 0：不存储
 1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
 2：永久存储音频，需要提工单申请，会产生一定的存储费用；
-3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。关于自定义存储cos基础设置的方式，请查看下文自定义存储cos基础设置流程。
+3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
 注：对可用性要求较高的用户建议自行存储至腾讯云COS。
  * @method void setStorageMode(integer $StorageMode) 设置音频存储模式
 0：不存储
 1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
 2：永久存储音频，需要提工单申请，会产生一定的存储费用；
-3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。关于自定义存储cos基础设置的方式，请查看下文自定义存储cos基础设置流程。
+3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
 注：对可用性要求较高的用户建议自行存储至腾讯云COS。
  * @method integer getSentenceInfoEnabled() 获取输出断句中间结果标识
 0：不输出
@@ -221,7 +221,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 0：不存储
 1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
 2：永久存储音频，需要提工单申请，会产生一定的存储费用；
-3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。关于自定义存储cos基础设置的方式，请查看下文自定义存储cos基础设置流程。
+3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
 注：对可用性要求较高的用户建议自行存储至腾讯云COS。
      */
     public $StorageMode;
@@ -302,7 +302,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 0：不存储
 1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
 2：永久存储音频，需要提工单申请，会产生一定的存储费用；
-3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中，需要提工单登记存储信息。关于自定义存储cos基础设置的方式，请查看下文自定义存储cos基础设置流程。
+3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
 注：对可用性要求较高的用户建议自行存储至腾讯云COS。
      * @param integer $SentenceInfoEnabled 输出断句中间结果标识
 0：不输出

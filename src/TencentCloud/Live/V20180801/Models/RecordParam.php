@@ -22,17 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRecordInterval() 获取录制间隔。
 单位秒，默认：1800。
-取值范围：300-7200。
+取值范围：60-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
  * @method void setRecordInterval(integer $RecordInterval) 设置录制间隔。
 单位秒，默认：1800。
-取值范围：300-7200。
+取值范围：60-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
  * @method integer getStorageTime() 获取录制存储时长。
-单位秒，取值范围： 0 - 93312000。
+单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
  * @method void setStorageTime(integer $StorageTime) 设置录制存储时长。
-单位秒，取值范围： 0 - 93312000。
+单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
  * @method integer getEnable() 获取是否开启当前格式录制，默认值为0，0：否， 1：是。
  * @method void setEnable(integer $Enable) 设置是否开启当前格式录制，默认值为0，0：否， 1：是。
@@ -76,20 +76,36 @@ use TencentCloud\Common\AbstractModel;
 {EndMillisecond}: 结束时间-毫秒
 
 若未设置默认录制文件名为{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}
+ * @method string getProcedure() 获取任务流
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProcedure(string $Procedure) 设置任务流
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStorageMode() 获取视频存储策略。
+normal：标准存储。
+cold：低频存储。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorageMode(string $StorageMode) 设置视频存储策略。
+normal：标准存储。
+cold：低频存储。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClassId() 获取点播应用分类
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClassId(integer $ClassId) 设置点播应用分类
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordParam extends AbstractModel
 {
     /**
      * @var integer 录制间隔。
 单位秒，默认：1800。
-取值范围：300-7200。
+取值范围：60-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      */
     public $RecordInterval;
 
     /**
      * @var integer 录制存储时长。
-单位秒，取值范围： 0 - 93312000。
+单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
      */
     public $StorageTime;
@@ -128,12 +144,32 @@ class RecordParam extends AbstractModel
     public $VodFileName;
 
     /**
+     * @var string 任务流
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Procedure;
+
+    /**
+     * @var string 视频存储策略。
+normal：标准存储。
+cold：低频存储。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StorageMode;
+
+    /**
+     * @var integer 点播应用分类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClassId;
+
+    /**
      * @param integer $RecordInterval 录制间隔。
 单位秒，默认：1800。
-取值范围：300-7200。
+取值范围：60-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      * @param integer $StorageTime 录制存储时长。
-单位秒，取值范围： 0 - 93312000。
+单位秒，取值范围： 0 - 1500天。
 0：表示永久存储。
      * @param integer $Enable 是否开启当前格式录制，默认值为0，0：否， 1：是。
      * @param integer $VodSubAppId 点播子应用 ID。
@@ -156,6 +192,14 @@ class RecordParam extends AbstractModel
 {EndMillisecond}: 结束时间-毫秒
 
 若未设置默认录制文件名为{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}
+     * @param string $Procedure 任务流
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StorageMode 视频存储策略。
+normal：标准存储。
+cold：低频存储。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClassId 点播应用分类
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -188,6 +232,18 @@ class RecordParam extends AbstractModel
 
         if (array_key_exists("VodFileName",$param) and $param["VodFileName"] !== null) {
             $this->VodFileName = $param["VodFileName"];
+        }
+
+        if (array_key_exists("Procedure",$param) and $param["Procedure"] !== null) {
+            $this->Procedure = $param["Procedure"];
+        }
+
+        if (array_key_exists("StorageMode",$param) and $param["StorageMode"] !== null) {
+            $this->StorageMode = $param["StorageMode"];
+        }
+
+        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
+            $this->ClassId = $param["ClassId"];
         }
     }
 }

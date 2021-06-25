@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsyncRequestIds(array $AsyncRequestIds) 设置日志导出任务Id列表。
  * @method integer getOffset() 获取偏移量，默认0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认0。
- * @method integer getLimit() 获取返回数量，默认20。
- * @method void setLimit(integer $Limit) 设置返回数量，默认20。
+ * @method integer getLimit() 获取返回数量，默认20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认20，最大值为100。
  */
 class DescribeSecurityAuditLogExportTasksRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeSecurityAuditLogExportTasksRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认20。
+     * @var integer 返回数量，默认20，最大值为100。
      */
     public $Limit;
 
@@ -63,7 +63,7 @@ class DescribeSecurityAuditLogExportTasksRequest extends AbstractModel
      * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL。
      * @param array $AsyncRequestIds 日志导出任务Id列表。
      * @param integer $Offset 偏移量，默认0。
-     * @param integer $Limit 返回数量，默认20。
+     * @param integer $Limit 返回数量，默认20，最大值为100。
      */
     function __construct()
     {

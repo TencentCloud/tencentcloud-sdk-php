@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Status - String - 是否必填：否 - 状态筛选0:待处理；2:信任；3:不信任</li>
 <li>MergeBeginTime - String - 是否必填：否 - 最近访问开始时间</li>
 <li>MergeEndTime - String - 是否必填：否 - 最近访问结束时间</li>
- * @method string getOrder() 获取排序方式
- * @method void setOrder(string $Order) 设置排序方式
- * @method string getBy() 获取排序字段
- * @method void setBy(string $By) 设置排序字段
+ * @method string getOrder() 获取排序方式：根据请求次数排序：asc-升序/desc-降序
+ * @method void setOrder(string $Order) 设置排序方式：根据请求次数排序：asc-升序/desc-降序
+ * @method string getBy() 获取排序字段：AccessCount-请求次数
+ * @method void setBy(string $By) 设置排序字段：AccessCount-请求次数
  */
 class DescribeRiskDnsListRequest extends AbstractModel
 {
@@ -64,12 +64,12 @@ class DescribeRiskDnsListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 排序方式
+     * @var string 排序方式：根据请求次数排序：asc-升序/desc-降序
      */
     public $Order;
 
     /**
-     * @var string 排序字段
+     * @var string 排序字段：AccessCount-请求次数
      */
     public $By;
 
@@ -82,8 +82,8 @@ class DescribeRiskDnsListRequest extends AbstractModel
 <li>Status - String - 是否必填：否 - 状态筛选0:待处理；2:信任；3:不信任</li>
 <li>MergeBeginTime - String - 是否必填：否 - 最近访问开始时间</li>
 <li>MergeEndTime - String - 是否必填：否 - 最近访问结束时间</li>
-     * @param string $Order 排序方式
-     * @param string $By 排序字段
+     * @param string $Order 排序方式：根据请求次数排序：asc-升序/desc-降序
+     * @param string $By 排序字段：AccessCount-请求次数
      */
     function __construct()
     {

@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 慢日志TopSql
  *
- * @method float getLockTime() 获取sql总锁等待时间
- * @method void setLockTime(float $LockTime) 设置sql总锁等待时间
- * @method float getLockTimeMax() 获取最大锁等待时间
- * @method void setLockTimeMax(float $LockTimeMax) 设置最大锁等待时间
- * @method float getLockTimeMin() 获取最小锁等待时间
- * @method void setLockTimeMin(float $LockTimeMin) 设置最小锁等待时间
+ * @method float getLockTime() 获取sql总锁等待时间，单位秒
+ * @method void setLockTime(float $LockTime) 设置sql总锁等待时间，单位秒
+ * @method float getLockTimeMax() 获取最大锁等待时间，单位秒
+ * @method void setLockTimeMax(float $LockTimeMax) 设置最大锁等待时间，单位秒
+ * @method float getLockTimeMin() 获取最小锁等待时间，单位秒
+ * @method void setLockTimeMin(float $LockTimeMin) 设置最小锁等待时间，单位秒
  * @method integer getRowsExamined() 获取总扫描行数
  * @method void setRowsExamined(integer $RowsExamined) 设置总扫描行数
  * @method integer getRowsExaminedMax() 获取最大扫描行数
  * @method void setRowsExaminedMax(integer $RowsExaminedMax) 设置最大扫描行数
  * @method integer getRowsExaminedMin() 获取最小扫描行数
  * @method void setRowsExaminedMin(integer $RowsExaminedMin) 设置最小扫描行数
- * @method float getQueryTime() 获取总耗时
- * @method void setQueryTime(float $QueryTime) 设置总耗时
- * @method float getQueryTimeMax() 获取最大执行时间
- * @method void setQueryTimeMax(float $QueryTimeMax) 设置最大执行时间
- * @method float getQueryTimeMin() 获取最小执行时间
- * @method void setQueryTimeMin(float $QueryTimeMin) 设置最小执行时间
+ * @method float getQueryTime() 获取总耗时，单位秒
+ * @method void setQueryTime(float $QueryTime) 设置总耗时，单位秒
+ * @method float getQueryTimeMax() 获取最大执行时间，单位秒
+ * @method void setQueryTimeMax(float $QueryTimeMax) 设置最大执行时间，单位秒
+ * @method float getQueryTimeMin() 获取最小执行时间，单位秒
+ * @method void setQueryTimeMin(float $QueryTimeMin) 设置最小执行时间，单位秒
  * @method integer getRowsSent() 获取总返回行数
  * @method void setRowsSent(integer $RowsSent) 设置总返回行数
  * @method integer getRowsSentMax() 获取最大返回行数
@@ -52,37 +52,37 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlText(string $SqlText) 设置带参数SQL（随机）
  * @method string getSchema() 获取数据库名
  * @method void setSchema(string $Schema) 设置数据库名
- * @method float getQueryTimeRatio() 获取总耗时占比
- * @method void setQueryTimeRatio(float $QueryTimeRatio) 设置总耗时占比
- * @method float getLockTimeRatio() 获取sql总锁等待时间占比
- * @method void setLockTimeRatio(float $LockTimeRatio) 设置sql总锁等待时间占比
- * @method float getRowsExaminedRatio() 获取总扫描行数占比
- * @method void setRowsExaminedRatio(float $RowsExaminedRatio) 设置总扫描行数占比
- * @method float getRowsSentRatio() 获取总返回行数占比
- * @method void setRowsSentRatio(float $RowsSentRatio) 设置总返回行数占比
- * @method float getQueryTimeAvg() 获取平均执行时间
- * @method void setQueryTimeAvg(float $QueryTimeAvg) 设置平均执行时间
+ * @method float getQueryTimeRatio() 获取总耗时占比，单位%
+ * @method void setQueryTimeRatio(float $QueryTimeRatio) 设置总耗时占比，单位%
+ * @method float getLockTimeRatio() 获取sql总锁等待时间占比，单位%
+ * @method void setLockTimeRatio(float $LockTimeRatio) 设置sql总锁等待时间占比，单位%
+ * @method float getRowsExaminedRatio() 获取总扫描行数占比，单位%
+ * @method void setRowsExaminedRatio(float $RowsExaminedRatio) 设置总扫描行数占比，单位%
+ * @method float getRowsSentRatio() 获取总返回行数占比，单位%
+ * @method void setRowsSentRatio(float $RowsSentRatio) 设置总返回行数占比，单位%
+ * @method float getQueryTimeAvg() 获取平均执行时间，单位秒
+ * @method void setQueryTimeAvg(float $QueryTimeAvg) 设置平均执行时间，单位秒
  * @method float getRowsSentAvg() 获取平均返回行数
  * @method void setRowsSentAvg(float $RowsSentAvg) 设置平均返回行数
- * @method float getLockTimeAvg() 获取平均锁等待时间
- * @method void setLockTimeAvg(float $LockTimeAvg) 设置平均锁等待时间
+ * @method float getLockTimeAvg() 获取平均锁等待时间，单位秒
+ * @method void setLockTimeAvg(float $LockTimeAvg) 设置平均锁等待时间，单位秒
  * @method float getRowsExaminedAvg() 获取平均扫描行数
  * @method void setRowsExaminedAvg(float $RowsExaminedAvg) 设置平均扫描行数
  */
 class SlowLogTopSqlItem extends AbstractModel
 {
     /**
-     * @var float sql总锁等待时间
+     * @var float sql总锁等待时间，单位秒
      */
     public $LockTime;
 
     /**
-     * @var float 最大锁等待时间
+     * @var float 最大锁等待时间，单位秒
      */
     public $LockTimeMax;
 
     /**
-     * @var float 最小锁等待时间
+     * @var float 最小锁等待时间，单位秒
      */
     public $LockTimeMin;
 
@@ -102,17 +102,17 @@ class SlowLogTopSqlItem extends AbstractModel
     public $RowsExaminedMin;
 
     /**
-     * @var float 总耗时
+     * @var float 总耗时，单位秒
      */
     public $QueryTime;
 
     /**
-     * @var float 最大执行时间
+     * @var float 最大执行时间，单位秒
      */
     public $QueryTimeMax;
 
     /**
-     * @var float 最小执行时间
+     * @var float 最小执行时间，单位秒
      */
     public $QueryTimeMin;
 
@@ -152,27 +152,27 @@ class SlowLogTopSqlItem extends AbstractModel
     public $Schema;
 
     /**
-     * @var float 总耗时占比
+     * @var float 总耗时占比，单位%
      */
     public $QueryTimeRatio;
 
     /**
-     * @var float sql总锁等待时间占比
+     * @var float sql总锁等待时间占比，单位%
      */
     public $LockTimeRatio;
 
     /**
-     * @var float 总扫描行数占比
+     * @var float 总扫描行数占比，单位%
      */
     public $RowsExaminedRatio;
 
     /**
-     * @var float 总返回行数占比
+     * @var float 总返回行数占比，单位%
      */
     public $RowsSentRatio;
 
     /**
-     * @var float 平均执行时间
+     * @var float 平均执行时间，单位秒
      */
     public $QueryTimeAvg;
 
@@ -182,7 +182,7 @@ class SlowLogTopSqlItem extends AbstractModel
     public $RowsSentAvg;
 
     /**
-     * @var float 平均锁等待时间
+     * @var float 平均锁等待时间，单位秒
      */
     public $LockTimeAvg;
 
@@ -192,15 +192,15 @@ class SlowLogTopSqlItem extends AbstractModel
     public $RowsExaminedAvg;
 
     /**
-     * @param float $LockTime sql总锁等待时间
-     * @param float $LockTimeMax 最大锁等待时间
-     * @param float $LockTimeMin 最小锁等待时间
+     * @param float $LockTime sql总锁等待时间，单位秒
+     * @param float $LockTimeMax 最大锁等待时间，单位秒
+     * @param float $LockTimeMin 最小锁等待时间，单位秒
      * @param integer $RowsExamined 总扫描行数
      * @param integer $RowsExaminedMax 最大扫描行数
      * @param integer $RowsExaminedMin 最小扫描行数
-     * @param float $QueryTime 总耗时
-     * @param float $QueryTimeMax 最大执行时间
-     * @param float $QueryTimeMin 最小执行时间
+     * @param float $QueryTime 总耗时，单位秒
+     * @param float $QueryTimeMax 最大执行时间，单位秒
+     * @param float $QueryTimeMin 最小执行时间，单位秒
      * @param integer $RowsSent 总返回行数
      * @param integer $RowsSentMax 最大返回行数
      * @param integer $RowsSentMin 最小返回行数
@@ -208,13 +208,13 @@ class SlowLogTopSqlItem extends AbstractModel
      * @param string $SqlTemplate sql模板
      * @param string $SqlText 带参数SQL（随机）
      * @param string $Schema 数据库名
-     * @param float $QueryTimeRatio 总耗时占比
-     * @param float $LockTimeRatio sql总锁等待时间占比
-     * @param float $RowsExaminedRatio 总扫描行数占比
-     * @param float $RowsSentRatio 总返回行数占比
-     * @param float $QueryTimeAvg 平均执行时间
+     * @param float $QueryTimeRatio 总耗时占比，单位%
+     * @param float $LockTimeRatio sql总锁等待时间占比，单位%
+     * @param float $RowsExaminedRatio 总扫描行数占比，单位%
+     * @param float $RowsSentRatio 总返回行数占比，单位%
+     * @param float $QueryTimeAvg 平均执行时间，单位秒
      * @param float $RowsSentAvg 平均返回行数
-     * @param float $LockTimeAvg 平均锁等待时间
+     * @param float $LockTimeAvg 平均锁等待时间，单位秒
      * @param float $RowsExaminedAvg 平均扫描行数
      */
     function __construct()

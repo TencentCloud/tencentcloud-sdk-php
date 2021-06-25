@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoticeIds(array $NoticeIds) 设置通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
  * @method array getTriggerTasks() 获取触发任务列表
  * @method void setTriggerTasks(array $TriggerTasks) 设置触发任务列表
+ * @method AlarmPolicyFilter getFilter() 获取全局过滤条件
+ * @method void setFilter(AlarmPolicyFilter $Filter) 设置全局过滤条件
+ * @method array getGroupBy() 获取聚合维度列表，指定按哪些维度 key 来做 group by
+ * @method void setGroupBy(array $GroupBy) 设置聚合维度列表，指定按哪些维度 key 来做 group by
  */
 class CreateAlarmPolicyRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $TriggerTasks;
 
     /**
+     * @var AlarmPolicyFilter 全局过滤条件
+     */
+    public $Filter;
+
+    /**
+     * @var array 聚合维度列表，指定按哪些维度 key 来做 group by
+     */
+    public $GroupBy;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param string $PolicyName 策略名称，不超过20字符
      * @param string $MonitorType 监控类型 MT_QCE=云产品监控
@@ -120,6 +134,8 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param AlarmPolicyEventCondition $EventCondition 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
      * @param array $NoticeIds 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
      * @param array $TriggerTasks 触发任务列表
+     * @param AlarmPolicyFilter $Filter 全局过滤条件
+     * @param array $GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
      */
     function __construct()
     {
@@ -187,6 +203,15 @@ class CreateAlarmPolicyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TriggerTasks, $obj);
             }
+        }
+
+        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+            $this->Filter = new AlarmPolicyFilter();
+            $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
+            $this->GroupBy = $param["GroupBy"];
         }
     }
 }

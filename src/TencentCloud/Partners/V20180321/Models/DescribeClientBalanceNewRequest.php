@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RecoverMalwares请求参数结构体
+ * DescribeClientBalanceNew请求参数结构体
  *
- * @method array getIds() 获取木马Id数组（单次最大恢复不超过100条）
- * @method void setIds(array $Ids) 设置木马Id数组（单次最大恢复不超过100条）
+ * @method string getClientUin() 获取客户(代客)账号ID
+ * @method void setClientUin(string $ClientUin) 设置客户(代客)账号ID
  */
-class RecoverMalwaresRequest extends AbstractModel
+class DescribeClientBalanceNewRequest extends AbstractModel
 {
     /**
-     * @var array 木马Id数组（单次最大恢复不超过100条）
+     * @var string 客户(代客)账号ID
      */
-    public $Ids;
+    public $ClientUin;
 
     /**
-     * @param array $Ids 木马Id数组（单次最大恢复不超过100条）
+     * @param string $ClientUin 客户(代客)账号ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class RecoverMalwaresRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
-            $this->Ids = $param["Ids"];
+        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
+            $this->ClientUin = $param["ClientUin"];
         }
     }
 }

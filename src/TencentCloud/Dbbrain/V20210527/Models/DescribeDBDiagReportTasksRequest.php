@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskStatuses(string $TaskStatuses) 设置任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。
  * @method integer getOffset() 获取偏移量，默认0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认0。
- * @method integer getLimit() 获取返回数量，默认20。
- * @method void setLimit(integer $Limit) 设置返回数量，默认20。
+ * @method integer getLimit() 获取返回数量，默认20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认20，最大值为100。
  * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
  */
@@ -77,7 +77,7 @@ class DescribeDBDiagReportTasksRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认20。
+     * @var integer 返回数量，默认20，最大值为100。
      */
     public $Limit;
 
@@ -94,7 +94,7 @@ class DescribeDBDiagReportTasksRequest extends AbstractModel
      * @param string $HealthLevels 报告的健康等级，支持的取值包括："HEALTH" - 健康；"SUB_HEALTH" - 亚健康；"RISK" - 危险；"HIGH_RISK" - 高危。
      * @param string $TaskStatuses 任务的状态，支持的取值包括："created" - 新建；"chosen" - 待执行； "running" - 执行中；"failed" - 失败；"finished" - 已完成。
      * @param integer $Offset 偏移量，默认0。
-     * @param integer $Limit 返回数量，默认20。
+     * @param integer $Limit 返回数量，默认20，最大值为100。
      * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
      */
     function __construct()

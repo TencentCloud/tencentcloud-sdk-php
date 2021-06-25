@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableReshootCheck(boolean $EnableReshootCheck) 设置翻拍检测开关，如果输入的图片是银行卡翻拍图片则返回告警，默认false。
  * @method boolean getEnableBorderCheck() 获取边框遮挡检测开关，如果输入的图片是银行卡边框被遮挡则返回告警，默认false。
  * @method void setEnableBorderCheck(boolean $EnableBorderCheck) 设置边框遮挡检测开关，如果输入的图片是银行卡边框被遮挡则返回告警，默认false。
+ * @method boolean getEnableQualityValue() 获取是否返回图片质量分数（图片质量分数是评价一个图片的模糊程度的标准），默认false。
+ * @method void setEnableQualityValue(boolean $EnableQualityValue) 设置是否返回图片质量分数（图片质量分数是评价一个图片的模糊程度的标准），默认false。
  */
 class BankCardOCRRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ class BankCardOCRRequest extends AbstractModel
     public $EnableBorderCheck;
 
     /**
+     * @var boolean 是否返回图片质量分数（图片质量分数是评价一个图片的模糊程度的标准），默认false。
+     */
+    public $EnableQualityValue;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -88,6 +95,7 @@ class BankCardOCRRequest extends AbstractModel
      * @param boolean $EnableCopyCheck 复印件检测开关，如果输入的图片是银行卡复印件图片则返回告警，默认false。
      * @param boolean $EnableReshootCheck 翻拍检测开关，如果输入的图片是银行卡翻拍图片则返回告警，默认false。
      * @param boolean $EnableBorderCheck 边框遮挡检测开关，如果输入的图片是银行卡边框被遮挡则返回告警，默认false。
+     * @param boolean $EnableQualityValue 是否返回图片质量分数（图片质量分数是评价一个图片的模糊程度的标准），默认false。
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ class BankCardOCRRequest extends AbstractModel
 
         if (array_key_exists("EnableBorderCheck",$param) and $param["EnableBorderCheck"] !== null) {
             $this->EnableBorderCheck = $param["EnableBorderCheck"];
+        }
+
+        if (array_key_exists("EnableQualityValue",$param) and $param["EnableQualityValue"] !== null) {
+            $this->EnableQualityValue = $param["EnableQualityValue"];
         }
     }
 }

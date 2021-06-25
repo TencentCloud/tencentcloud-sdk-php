@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCondition(AlarmPolicyCondition $Condition) 设置指标触发条件
  * @method AlarmPolicyEventCondition getEventCondition() 获取事件触发条件
  * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) 设置事件触发条件
+ * @method AlarmPolicyFilter getFilter() 获取全局过滤条件
+ * @method void setFilter(AlarmPolicyFilter $Filter) 设置全局过滤条件
+ * @method array getGroupBy() 获取聚合维度列表，指定按哪些维度 key 来做 group by
+ * @method void setGroupBy(array $GroupBy) 设置聚合维度列表，指定按哪些维度 key 来做 group by
  */
 class ModifyAlarmPolicyConditionRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     public $EventCondition;
 
     /**
+     * @var AlarmPolicyFilter 全局过滤条件
+     */
+    public $Filter;
+
+    /**
+     * @var array 聚合维度列表，指定按哪些维度 key 来做 group by
+     */
+    public $GroupBy;
+
+    /**
      * @param string $Module 模块名，固定值 monitor
      * @param string $PolicyId 告警策略 ID
      * @param integer $ConditionTemplateId 触发条件模板 Id，可不传
      * @param AlarmPolicyCondition $Condition 指标触发条件
      * @param AlarmPolicyEventCondition $EventCondition 事件触发条件
+     * @param AlarmPolicyFilter $Filter 全局过滤条件
+     * @param array $GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
      */
     function __construct()
     {
@@ -98,6 +114,15 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
         if (array_key_exists("EventCondition",$param) and $param["EventCondition"] !== null) {
             $this->EventCondition = new AlarmPolicyEventCondition();
             $this->EventCondition->deserialize($param["EventCondition"]);
+        }
+
+        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+            $this->Filter = new AlarmPolicyFilter();
+            $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
+            $this->GroupBy = $param["GroupBy"];
         }
     }
 }

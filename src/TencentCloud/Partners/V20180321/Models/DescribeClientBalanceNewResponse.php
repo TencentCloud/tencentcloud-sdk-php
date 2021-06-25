@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMalwares返回参数结构体
+ * DescribeClientBalanceNew返回参数结构体
  *
- * @method integer getTotalCount() 获取木马总数。
- * @method void setTotalCount(integer $TotalCount) 设置木马总数。
- * @method array getMalwares() 获取木马相关信息。
- * @method void setMalwares(array $Malwares) 设置木马相关信息。
+ * @method integer getBalance() 获取账户可用余额，单位分 （可用余额 = 现金余额 + 赠送金余额 - 欠费金额 - 冻结金额）
+ * @method void setBalance(integer $Balance) 设置账户可用余额，单位分 （可用余额 = 现金余额 + 赠送金余额 - 欠费金额 - 冻结金额）
+ * @method integer getCash() 获取账户现金余额，单位分
+ * @method void setCash(integer $Cash) 设置账户现金余额，单位分
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMalwaresResponse extends AbstractModel
+class DescribeClientBalanceNewResponse extends AbstractModel
 {
     /**
-     * @var integer 木马总数。
+     * @var integer 账户可用余额，单位分 （可用余额 = 现金余额 + 赠送金余额 - 欠费金额 - 冻结金额）
      */
-    public $TotalCount;
+    public $Balance;
 
     /**
-     * @var array 木马相关信息。
+     * @var integer 账户现金余额，单位分
      */
-    public $Malwares;
+    public $Cash;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeMalwaresResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 木马总数。
-     * @param array $Malwares 木马相关信息。
+     * @param integer $Balance 账户可用余额，单位分 （可用余额 = 现金余额 + 赠送金余额 - 欠费金额 - 冻结金额）
+     * @param integer $Cash 账户现金余额，单位分
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,12 @@ class DescribeMalwaresResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Balance",$param) and $param["Balance"] !== null) {
+            $this->Balance = $param["Balance"];
         }
 
-        if (array_key_exists("Malwares",$param) and $param["Malwares"] !== null) {
-            $this->Malwares = [];
-            foreach ($param["Malwares"] as $key => $value){
-                $obj = new Malware();
-                $obj->deserialize($value);
-                array_push($this->Malwares, $obj);
-            }
+        if (array_key_exists("Cash",$param) and $param["Cash"] !== null) {
+            $this->Cash = $param["Cash"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

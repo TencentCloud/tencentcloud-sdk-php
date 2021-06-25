@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMalwares返回参数结构体
+ * DescribeMySqlProcessList返回参数结构体
  *
- * @method integer getTotalCount() 获取木马总数。
- * @method void setTotalCount(integer $TotalCount) 设置木马总数。
- * @method array getMalwares() 获取木马相关信息。
- * @method void setMalwares(array $Malwares) 设置木马相关信息。
+ * @method array getProcessList() 获取实时线程列表。
+ * @method void setProcessList(array $ProcessList) 设置实时线程列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMalwaresResponse extends AbstractModel
+class DescribeMySqlProcessListResponse extends AbstractModel
 {
     /**
-     * @var integer 木马总数。
+     * @var array 实时线程列表。
      */
-    public $TotalCount;
-
-    /**
-     * @var array 木马相关信息。
-     */
-    public $Malwares;
+    public $ProcessList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeMalwaresResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 木马总数。
-     * @param array $Malwares 木马相关信息。
+     * @param array $ProcessList 实时线程列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +54,12 @@ class DescribeMalwaresResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Malwares",$param) and $param["Malwares"] !== null) {
-            $this->Malwares = [];
-            foreach ($param["Malwares"] as $key => $value){
-                $obj = new Malware();
+        if (array_key_exists("ProcessList",$param) and $param["ProcessList"] !== null) {
+            $this->ProcessList = [];
+            foreach ($param["ProcessList"] as $key => $value){
+                $obj = new MySqlProcess();
                 $obj->deserialize($value);
-                array_push($this->Malwares, $obj);
+                array_push($this->ProcessList, $obj);
             }
         }
 

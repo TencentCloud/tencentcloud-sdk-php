@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendMessages请求参数结构体
  *
- * @method string getTopic() 获取消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
- * @method void setTopic(string $Topic) 设置消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+ * @method string getTopic() 获取消息要发送的topic的名字, 这里尽量需要使用topic的全路径，即：tenant/namespace/topic。如果不指定，默认使用的是：public/default
+ * @method void setTopic(string $Topic) 设置消息要发送的topic的名字, 这里尽量需要使用topic的全路径，即：tenant/namespace/topic。如果不指定，默认使用的是：public/default
  * @method string getPayload() 获取要发送的消息的内容
  * @method void setPayload(string $Payload) 设置要发送的消息的内容
  * @method string getStringToken() 获取Token 是用来做鉴权使用的，可以不填，系统会自动获取
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class SendMessagesRequest extends AbstractModel
 {
     /**
-     * @var string 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+     * @var string 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，即：tenant/namespace/topic。如果不指定，默认使用的是：public/default
      */
     public $Topic;
 
@@ -66,7 +66,7 @@ class SendMessagesRequest extends AbstractModel
     public $MaxPendingMessages;
 
     /**
-     * @param string $Topic 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+     * @param string $Topic 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，即：tenant/namespace/topic。如果不指定，默认使用的是：public/default
      * @param string $Payload 要发送的消息的内容
      * @param string $StringToken Token 是用来做鉴权使用的，可以不填，系统会自动获取
      * @param string $ProducerName 设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成

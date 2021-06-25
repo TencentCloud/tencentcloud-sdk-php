@@ -38,7 +38,8 @@ use TencentCloud\Partners\V20180321\Models as Models;
  * @method Models\DescribeAgentPayDealsV2Response DescribeAgentPayDealsV2(Models\DescribeAgentPayDealsV2Request $req) 可以查询代理商代付的所有订单
  * @method Models\DescribeAgentSelfPayDealsResponse DescribeAgentSelfPayDeals(Models\DescribeAgentSelfPayDealsRequest $req) 【该接口将逐步下线，请切换使用升级版本DescribeAgentSelfPayDealsV2】可以查询代理商下指定客户的自付订单
  * @method Models\DescribeAgentSelfPayDealsV2Response DescribeAgentSelfPayDealsV2(Models\DescribeAgentSelfPayDealsV2Request $req) 可以查询代理商下指定客户的自付订单
- * @method Models\DescribeClientBalanceResponse DescribeClientBalance(Models\DescribeClientBalanceRequest $req) 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+ * @method Models\DescribeClientBalanceResponse DescribeClientBalance(Models\DescribeClientBalanceRequest $req) 【该接口将逐步下线，请切换使用升级版本DescribeClientBalanceNew】为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额.
+ * @method Models\DescribeClientBalanceNewResponse DescribeClientBalanceNew(Models\DescribeClientBalanceNewRequest $req) 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
  * @method Models\DescribeClientBaseInfoResponse DescribeClientBaseInfo(Models\DescribeClientBaseInfoRequest $req) 该接口即将下线，请切换调用DescribeClientBasicInfo。
 
 国际站根据UIN查询代客基础信息【本接口仅限主账号访问】

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 1-表示需要， 0-表示不需要
  * @method string getActionType() 获取查询交易类型。如 按量计费日结，按量计费小时结 等
  * @method void setActionType(string $ActionType) 设置查询交易类型。如 按量计费日结，按量计费小时结 等
+ * @method string getResourceId() 获取查询指定资源信息
+ * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
+ * @method string getPayMode() 获取付费模式 prePay/postPay
+ * @method void setPayMode(string $PayMode) 设置付费模式 prePay/postPay
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
@@ -69,6 +73,16 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $ActionType;
 
     /**
+     * @var string 查询指定资源信息
+     */
+    public $ResourceId;
+
+    /**
+     * @var string 付费模式 prePay/postPay
+     */
+    public $PayMode;
+
+    /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量，最大值为1000
      * @param string $PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
@@ -76,6 +90,8 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
      * @param integer $NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
      * @param string $ActionType 查询交易类型。如 按量计费日结，按量计费小时结 等
+     * @param string $ResourceId 查询指定资源信息
+     * @param string $PayMode 付费模式 prePay/postPay
      */
     function __construct()
     {
@@ -112,6 +128,14 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

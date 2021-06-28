@@ -14,31 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Eis\V20210601\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskDnsList返回参数结构体
+ * ListRuntimeDeployedInstancesMC返回参数结构体
  *
- * @method array getRiskDnsList() 获取恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskDnsList(array $RiskDnsList) 设置恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取总数量
- * @method void setTotalCount(integer $TotalCount) 设置总数量
+ * @method array getInstances() 获取运行时所部属的应用实例列表
+ * @method void setInstances(array $Instances) 设置运行时所部属的应用实例列表
+ * @method integer getTotalCount() 获取满足条件的记录总数，用于分页器
+ * @method void setTotalCount(integer $TotalCount) 设置满足条件的记录总数，用于分页器
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRiskDnsListResponse extends AbstractModel
+class ListRuntimeDeployedInstancesMCResponse extends AbstractModel
 {
     /**
-     * @var array 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 运行时所部属的应用实例列表
      */
-    public $RiskDnsList;
+    public $Instances;
 
     /**
-     * @var integer 总数量
+     * @var integer 满足条件的记录总数，用于分页器
      */
     public $TotalCount;
 
@@ -48,9 +45,8 @@ class DescribeRiskDnsListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RiskDnsList 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 总数量
+     * @param array $Instances 运行时所部属的应用实例列表
+     * @param integer $TotalCount 满足条件的记录总数，用于分页器
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +62,12 @@ class DescribeRiskDnsListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RiskDnsList",$param) and $param["RiskDnsList"] !== null) {
-            $this->RiskDnsList = [];
-            foreach ($param["RiskDnsList"] as $key => $value){
-                $obj = new RiskDnsList();
+        if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
+            $this->Instances = [];
+            foreach ($param["Instances"] as $key => $value){
+                $obj = new RuntimeDeployedInstanceMC();
                 $obj->deserialize($value);
-                array_push($this->RiskDnsList, $obj);
+                array_push($this->Instances, $obj);
             }
         }
 

@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountTarget(string $MountTarget) 设置挂载目录
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiskPartition() 获取挂载设备名或分区名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiskPartition(string $DiskPartition) 设置挂载设备名或分区名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataDisk extends AbstractModel
 {
@@ -74,6 +78,12 @@ class DataDisk extends AbstractModel
     public $MountTarget;
 
     /**
+     * @var string 挂载设备名或分区名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiskPartition;
+
+    /**
      * @param string $DiskType 云盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileSystem 文件系统(ext3/ext4/xfs)
@@ -83,6 +93,8 @@ class DataDisk extends AbstractModel
      * @param boolean $AutoFormatAndMount 是否自动化格式盘并挂载
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountTarget 挂载目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiskPartition 挂载设备名或分区名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class DataDisk extends AbstractModel
 
         if (array_key_exists("MountTarget",$param) and $param["MountTarget"] !== null) {
             $this->MountTarget = $param["MountTarget"];
+        }
+
+        if (array_key_exists("DiskPartition",$param) and $param["DiskPartition"] !== null) {
+            $this->DiskPartition = $param["DiskPartition"];
         }
     }
 }

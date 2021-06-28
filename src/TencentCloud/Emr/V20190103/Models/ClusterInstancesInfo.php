@@ -190,6 +190,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(integer $ProductId) 设置集群版本Id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取地区ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置地区ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -395,6 +399,12 @@ class ClusterInstancesInfo extends AbstractModel
     public $ProductId;
 
     /**
+     * @var string 地区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
      * @param integer $Id ID号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
@@ -479,6 +489,8 @@ class ClusterInstancesInfo extends AbstractModel
      * @param string $AliasInfo 集群所有节点的别名序列化
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProductId 集群版本Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 地区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -614,6 +626,10 @@ class ClusterInstancesInfo extends AbstractModel
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

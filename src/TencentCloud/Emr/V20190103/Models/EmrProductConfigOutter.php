@@ -84,6 +84,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCbsEncrypt(integer $CbsEncrypt) 设置是否开启Cbs加密
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationRole() 获取自定义应用角色。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationRole(string $ApplicationRole) 设置自定义应用角色。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecurityGroups() 获取安全组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroups(array $SecurityGroups) 设置安全组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmrProductConfigOutter extends AbstractModel
 {
@@ -184,6 +192,18 @@ class EmrProductConfigOutter extends AbstractModel
     public $CbsEncrypt;
 
     /**
+     * @var string 自定义应用角色。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationRole;
+
+    /**
+     * @var array 安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroups;
+
+    /**
      * @param array $SoftInfo 软件信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MasterNodeSize Master节点个数
@@ -215,6 +235,10 @@ class EmrProductConfigOutter extends AbstractModel
      * @param string $SecurityGroup 安全组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CbsEncrypt 是否开启Cbs加密
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationRole 自定义应用角色。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecurityGroups 安全组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -296,6 +320,14 @@ class EmrProductConfigOutter extends AbstractModel
 
         if (array_key_exists("CbsEncrypt",$param) and $param["CbsEncrypt"] !== null) {
             $this->CbsEncrypt = $param["CbsEncrypt"];
+        }
+
+        if (array_key_exists("ApplicationRole",$param) and $param["ApplicationRole"] !== null) {
+            $this->ApplicationRole = $param["ApplicationRole"];
+        }
+
+        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
+            $this->SecurityGroups = $param["SecurityGroups"];
         }
     }
 }

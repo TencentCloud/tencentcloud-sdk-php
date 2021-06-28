@@ -161,5 +161,9 @@ cURL error 0: The cURL request was retried 3 times and did not succeed. The most
 
 为了支持部分源码安装的需要，我们将依赖的包文件放在 vendor 目录中，又考虑到不能造成对 composer 的不兼容，github 不得不设置禁止导出 vendor 目录，造成必须使用 `git clone` 命令才能拿到 vendor 目录的情况，对一些不熟悉 github 的用户造成了困扰。从 3.0.188 版本开始，我们暂时移除了源码安装，必须使用 composer 安装 SDK 和依赖的包。
 
+## 关键字冲突问题
+
+目前已知在 PHP 7.x 版本中，由于关键字冲突，弹性伸缩产品对应的 As 模块可能无法使用。可以考虑升级到 SDK 3.0.362 版本，使用 Autoscaling 模块。或者升级到 PHP 8 版本。
+
 # 旧版SDK
 新版SDK兼容旧版SDK。旧版本的SDK存放于QcloudApi目录，但不再维护更新，推荐使用新版SDK。

@@ -27,10 +27,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取节点类型<li>hotData: 热数据节点</li>
 <li>warmData: 冷数据节点</li>
 <li>dedicatedMaster: 专用主节点</li>
+<li>kibana: Kibana节点</li>
 默认值为hotData
  * @method void setType(string $Type) 设置节点类型<li>hotData: 热数据节点</li>
 <li>warmData: 冷数据节点</li>
 <li>dedicatedMaster: 专用主节点</li>
+<li>kibana: Kibana节点</li>
 默认值为hotData
  * @method string getDiskType() 获取节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
  * @method void setDiskType(string $DiskType) 设置节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
@@ -61,6 +63,7 @@ class NodeInfo extends AbstractModel
      * @var string 节点类型<li>hotData: 热数据节点</li>
 <li>warmData: 冷数据节点</li>
 <li>dedicatedMaster: 专用主节点</li>
+<li>kibana: Kibana节点</li>
 默认值为hotData
      */
     public $Type;
@@ -97,6 +100,7 @@ class NodeInfo extends AbstractModel
      * @param string $Type 节点类型<li>hotData: 热数据节点</li>
 <li>warmData: 冷数据节点</li>
 <li>dedicatedMaster: 专用主节点</li>
+<li>kibana: Kibana节点</li>
 默认值为hotData
      * @param string $DiskType 节点磁盘类型<li>CLOUD_SSD：SSD云硬盘</li><li>CLOUD_PREMIUM：高硬能云硬盘</li>默认值CLOUD_SSD
      * @param integer $DiskSize 节点磁盘容量（单位GB）

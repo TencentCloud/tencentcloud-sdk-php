@@ -46,6 +46,12 @@ zip： 生成`.zip`压缩包
 tar.gz： 生成`.tar.gz`压缩包
  * @method string getExtraData() 获取内部参数
  * @method void setExtraData(string $ExtraData) 设置内部参数
+ * @method string getPriority() 获取文档转码优先级，支持填入以下值：<br/>
+- low: 低优先级转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br/>
+- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码
+ * @method void setPriority(string $Priority) 设置文档转码优先级，支持填入以下值：<br/>
+- low: 低优先级转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br/>
+- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码
  */
 class CreateTranscodeRequest extends AbstractModel
 {
@@ -91,6 +97,13 @@ tar.gz： 生成`.tar.gz`压缩包
     public $ExtraData;
 
     /**
+     * @var string 文档转码优先级，支持填入以下值：<br/>
+- low: 低优先级转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br/>
+- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码
+     */
+    public $Priority;
+
+    /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $Url 经过URL编码后的转码文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pdf，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pdf。为了提高URL解析的成功率，请对URL进行编码。
      * @param boolean $IsStaticPPT 是否为静态PPT，默认为False；
@@ -104,6 +117,9 @@ tar.gz： 生成`.tar.gz`压缩包
 zip： 生成`.zip`压缩包
 tar.gz： 生成`.tar.gz`压缩包
      * @param string $ExtraData 内部参数
+     * @param string $Priority 文档转码优先级，支持填入以下值：<br/>
+- low: 低优先级转码，能支持500MB（下载超时时间10分钟）以及2000页文档，但资源有限可能会有比较长时间的排队，请酌情使用该功能。<br/>
+- 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码
      */
     function __construct()
     {
@@ -144,6 +160,10 @@ tar.gz： 生成`.tar.gz`压缩包
 
         if (array_key_exists("ExtraData",$param) and $param["ExtraData"] !== null) {
             $this->ExtraData = $param["ExtraData"];
+        }
+
+        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
+            $this->Priority = $param["Priority"];
         }
     }
 }

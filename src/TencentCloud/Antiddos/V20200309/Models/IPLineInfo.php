@@ -25,14 +25,14 @@ use TencentCloud\Common\AbstractModel;
 "ctcc"：电信线路IP
 "cucc"：联通线路IP
 "cmcc"：移动线路IP
-"abroad"：海外线路IP
+"abroad"：境外线路IP
 ]
  * @method void setType(string $Type) 设置IP线路类型，取值[
 "bgp"：BGP线路IP
 "ctcc"：电信线路IP
 "cucc"：联通线路IP
 "cmcc"：移动线路IP
-"abroad"：海外线路IP
+"abroad"：境外线路IP
 ]
  * @method string getEip() 获取线路IP
  * @method void setEip(string $Eip) 设置线路IP
@@ -45,7 +45,7 @@ class IPLineInfo extends AbstractModel
 "ctcc"：电信线路IP
 "cucc"：联通线路IP
 "cmcc"：移动线路IP
-"abroad"：海外线路IP
+"abroad"：境外线路IP
 ]
      */
     public $Type;
@@ -61,7 +61,7 @@ class IPLineInfo extends AbstractModel
 "ctcc"：电信线路IP
 "cucc"：联通线路IP
 "cmcc"：移动线路IP
-"abroad"：海外线路IP
+"abroad"：境外线路IP
 ]
      * @param string $Eip 线路IP
      */

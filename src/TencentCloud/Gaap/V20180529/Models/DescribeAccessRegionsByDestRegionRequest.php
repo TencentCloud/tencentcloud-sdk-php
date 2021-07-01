@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDestRegion() 获取源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
  * @method void setDestRegion(string $DestRegion) 设置源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
+ * @method string getIPAddressVersion() 获取IP版本，可取值：IPv4、IPv6，默认值IPv4
+ * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
  */
 class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
     public $DestRegion;
 
     /**
+     * @var string IP版本，可取值：IPv4、IPv6，默认值IPv4
+     */
+    public $IPAddressVersion;
+
+    /**
      * @param string $DestRegion 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
+     * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
         }
         if (array_key_exists("DestRegion",$param) and $param["DestRegion"] !== null) {
             $this->DestRegion = $param["DestRegion"];
+        }
+
+        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
+            $this->IPAddressVersion = $param["IPAddressVersion"];
         }
     }
 }

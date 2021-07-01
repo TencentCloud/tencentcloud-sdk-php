@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gaap\V20180529\Models;
+namespace TencentCloud\Cii\V20210408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRegionAndPrice请求参数结构体
+ * DescribeStructureResult请求参数结构体
  *
- * @method string getIPAddressVersion() 获取IP版本，可取值：IPv4、IPv6，默认值IPv4
- * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
+ * @method string getMainTaskId() 获取创建任务时返回的主任务ID
+ * @method void setMainTaskId(string $MainTaskId) 设置创建任务时返回的主任务ID
  */
-class DescribeRegionAndPriceRequest extends AbstractModel
+class DescribeStructureResultRequest extends AbstractModel
 {
     /**
-     * @var string IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @var string 创建任务时返回的主任务ID
      */
-    public $IPAddressVersion;
+    public $MainTaskId;
 
     /**
-     * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @param string $MainTaskId 创建任务时返回的主任务ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeRegionAndPriceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
-            $this->IPAddressVersion = $param["IPAddressVersion"];
+        if (array_key_exists("MainTaskId",$param) and $param["MainTaskId"] !== null) {
+            $this->MainTaskId = $param["MainTaskId"];
         }
     }
 }

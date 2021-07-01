@@ -23,8 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cii\V20210408\Models as Models;
 
 /**
- * @method Models\CreateStructureTaskResponse CreateStructureTask(Models\CreateStructureTaskRequest $req) 基于提供的客户及保单信息，启动结构化识别任务。
+ * @method Models\CreateStructureTaskResponse CreateStructureTask(Models\CreateStructureTaskRequest $req) 本接口(CreateStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
  * @method Models\DescribeStructCompareDataResponse DescribeStructCompareData(Models\DescribeStructCompareDataRequest $req) 结构化对比查询接口，对比结构化复核前后数据差异，查询识别正确率，召回率。
+ * @method Models\DescribeStructureResultResponse DescribeStructureResult(Models\DescribeStructureResultRequest $req) 本接口(DescribeStructureResult)用于查询结构化结果接口
  * @method Models\DescribeStructureTaskResultResponse DescribeStructureTaskResult(Models\DescribeStructureTaskResultRequest $req) 依据任务ID获取结构化结果接口。
  */
 

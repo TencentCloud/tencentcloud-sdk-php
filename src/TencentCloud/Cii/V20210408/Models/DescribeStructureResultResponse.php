@@ -18,19 +18,35 @@ namespace TencentCloud\Cii\V20210408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateStructureTask返回参数结构体
+ * DescribeStructureResult返回参数结构体
  *
- * @method string getMainTaskId() 获取创建的主任务号，用于查询结果
- * @method void setMainTaskId(string $MainTaskId) 设置创建的主任务号，用于查询结果
+ * @method integer getStatus() 获取结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+ * @method void setStatus(integer $Status) 设置结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+ * @method array getResults() 获取结构化结果
+ * @method void setResults(array $Results) 设置结构化结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateStructureTaskResponse extends AbstractModel
+class DescribeStructureResultResponse extends AbstractModel
 {
     /**
-     * @var string 创建的主任务号，用于查询结果
+     * @var integer 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
      */
-    public $MainTaskId;
+    public $Status;
+
+    /**
+     * @var array 结构化结果
+     */
+    public $Results;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +54,11 @@ class CreateStructureTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MainTaskId 创建的主任务号，用于查询结果
+     * @param integer $Status 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+     * @param array $Results 结构化结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +74,17 @@ class CreateStructureTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MainTaskId",$param) and $param["MainTaskId"] !== null) {
-            $this->MainTaskId = $param["MainTaskId"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
+            $this->Results = [];
+            foreach ($param["Results"] as $key => $value){
+                $obj = new StructureResultObject();
+                $obj->deserialize($value);
+                array_push($this->Results, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

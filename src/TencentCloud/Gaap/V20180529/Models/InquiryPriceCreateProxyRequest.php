@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConcurrent(integer $Concurrent) 设置（新参数）通道并发量上限，表示同时在线的连接数，单位：万。
  * @method integer getBillingType() 获取计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
  * @method void setBillingType(integer $BillingType) 设置计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
+ * @method string getIPAddressVersion() 获取IP版本，可取值：IPv4、IPv6，默认值IPv4
+ * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
  */
 class InquiryPriceCreateProxyRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
     public $BillingType;
 
     /**
+     * @var string IP版本，可取值：IPv4、IPv6，默认值IPv4
+     */
+    public $IPAddressVersion;
+
+    /**
      * @param string $AccessRegion 加速区域名称。
      * @param integer $Bandwidth 通道带宽上限，单位：Mbps。
      * @param string $DestRegion （旧参数，请切换到RealServerRegion）源站区域名称。
@@ -80,6 +87,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
      * @param string $RealServerRegion （新参数）源站区域名称。
      * @param integer $Concurrent （新参数）通道并发量上限，表示同时在线的连接数，单位：万。
      * @param integer $BillingType 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
+     * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
 
         if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
             $this->BillingType = $param["BillingType"];
+        }
+
+        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
+            $this->IPAddressVersion = $param["IPAddressVersion"];
         }
     }
 }

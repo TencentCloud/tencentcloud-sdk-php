@@ -80,6 +80,14 @@ lc表示最小连接数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIPMethod(integer $ClientIPMethod) 设置监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHealthyThreshold() 获取健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthyThreshold(integer $HealthyThreshold) 设置健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUnhealthyThreshold() 获取不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) 设置不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TCPListener extends AbstractModel
 {
@@ -174,6 +182,18 @@ lc表示最小连接数。
     public $ClientIPMethod;
 
     /**
+     * @var integer 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthyThreshold;
+
+    /**
+     * @var integer 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UnhealthyThreshold;
+
+    /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
@@ -203,6 +223,10 @@ lc表示最小连接数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 监听器创建时间，Unix时间戳
      * @param integer $ClientIPMethod 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -281,6 +305,14 @@ lc表示最小连接数。
 
         if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
             $this->ClientIPMethod = $param["ClientIPMethod"];
+        }
+
+        if (array_key_exists("HealthyThreshold",$param) and $param["HealthyThreshold"] !== null) {
+            $this->HealthyThreshold = $param["HealthyThreshold"];
+        }
+
+        if (array_key_exists("UnhealthyThreshold",$param) and $param["UnhealthyThreshold"] !== null) {
+            $this->UnhealthyThreshold = $param["UnhealthyThreshold"];
         }
     }
 }

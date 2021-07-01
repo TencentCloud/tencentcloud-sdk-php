@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientIPMethod(integer $ClientIPMethod) 设置监听器获取客户端 IP 的方式，0表示 TOA, 1表示Proxy Protocol
  * @method integer getFailoverSwitch() 获取源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
  * @method void setFailoverSwitch(integer $FailoverSwitch) 设置源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+ * @method integer getHealthyThreshold() 获取健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+ * @method void setHealthyThreshold(integer $HealthyThreshold) 设置健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+ * @method integer getUnhealthyThreshold() 获取不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+ * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) 设置不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
  */
 class CreateTCPListenersRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateTCPListenersRequest extends AbstractModel
     public $FailoverSwitch;
 
     /**
+     * @var integer 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+     */
+    public $HealthyThreshold;
+
+    /**
+     * @var integer 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+     */
+    public $UnhealthyThreshold;
+
+    /**
      * @param string $ListenerName 监听器名称。
      * @param array $Ports 监听器端口列表。
      * @param string $Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
@@ -120,6 +134,8 @@ class CreateTCPListenersRequest extends AbstractModel
      * @param array $RealServerPorts 源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
      * @param integer $ClientIPMethod 监听器获取客户端 IP 的方式，0表示 TOA, 1表示Proxy Protocol
      * @param integer $FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     * @param integer $HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+     * @param integer $UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class CreateTCPListenersRequest extends AbstractModel
 
         if (array_key_exists("FailoverSwitch",$param) and $param["FailoverSwitch"] !== null) {
             $this->FailoverSwitch = $param["FailoverSwitch"];
+        }
+
+        if (array_key_exists("HealthyThreshold",$param) and $param["HealthyThreshold"] !== null) {
+            $this->HealthyThreshold = $param["HealthyThreshold"];
+        }
+
+        if (array_key_exists("UnhealthyThreshold",$param) and $param["UnhealthyThreshold"] !== null) {
+            $this->UnhealthyThreshold = $param["UnhealthyThreshold"];
         }
     }
 }

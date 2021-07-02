@@ -15,42 +15,33 @@
  * limitations under the License.
  */
 
-namespace TencentCloud\Mrs\V20200910;
+namespace TencentCloud\Dtf\V20200506;
 
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Mrs\V20200910\Models as Models;
+use TencentCloud\Dtf\V20200506\Models as Models;
 
 /**
- * @method Models\ImageToClassResponse ImageToClass(Models\ImageToClassRequest $req) 图片分类
- * @method Models\ImageToObjectResponse ImageToObject(Models\ImageToObjectRequest $req) 图片转结构化对象
- * @method Models\ReportImageStructuredResponse ReportImageStructured(Models\ReportImageStructuredRequest $req) 接口没有流量
-
-将输入的图片类型报告结构化
- * @method Models\ReportTextStructuredResponse ReportTextStructured(Models\ReportTextStructuredRequest $req) 接口还未上线
-
-将输入的医疗报告文本内容进行结构化输出
- * @method Models\TextToClassResponse TextToClass(Models\TextToClassRequest $req) 文本分类
- * @method Models\TextToObjectResponse TextToObject(Models\TextToObjectRequest $req) 文本转结构化对象
+ * @method Models\DescribeTransactionsResponse DescribeTransactions(Models\DescribeTransactionsRequest $req) 查询主事务列表
  */
 
-class MrsClient extends AbstractClient
+class DtfClient extends AbstractClient
 {
     /**
      * @var string
      */
-    protected $endpoint = "mrs.tencentcloudapi.com";
+    protected $endpoint = "dtf.tencentcloudapi.com";
 
     /**
      * @var string
      */
-    protected $service = "mrs";
+    protected $service = "dtf";
 
     /**
      * @var string
      */
-    protected $version = "2020-09-10";
+    protected $version = "2020-05-06";
 
     /**
      * @param Credential $credential
@@ -65,7 +56,7 @@ class MrsClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("mrs")."\\"."V20200910\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud"."\\".ucfirst("dtf")."\\"."V20200506\\Models"."\\".ucfirst($action)."Response";
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

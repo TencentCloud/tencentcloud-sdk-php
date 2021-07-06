@@ -102,6 +102,8 @@ FAILED：表示操作失败
  * @method void setPlatform(string $Platform) 设置操作系统平台。
  * @method string getOsName() 获取操作系统名称。
  * @method void setOsName(string $OsName) 设置操作系统名称。
+ * @method string getZone() 获取可用区。
+ * @method void setZone(string $Zone) 设置可用区。
  */
 class Instance extends AbstractModel
 {
@@ -243,6 +245,11 @@ FAILED：表示操作失败
     public $OsName;
 
     /**
+     * @var string 可用区。
+     */
+    public $Zone;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $BundleId 套餐 ID。
      * @param string $BlueprintId 镜像 ID。
@@ -284,6 +291,7 @@ FAILED：表示操作失败
      * @param string $PlatformType 操作系统平台类型，如 LINUX_UNIX、WINDOWS。
      * @param string $Platform 操作系统平台。
      * @param string $OsName 操作系统名称。
+     * @param string $Zone 可用区。
      */
     function __construct()
     {
@@ -395,6 +403,10 @@ FAILED：表示操作失败
 
         if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
             $this->OsName = $param["OsName"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

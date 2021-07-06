@@ -68,6 +68,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ListGroupsResponse ListGroups(Models\ListGroupsRequest $req) 查询用户组列表
  * @method Models\ListGroupsForUserResponse ListGroupsForUser(Models\ListGroupsForUserRequest $req) 列出用户关联的用户组
  * @method Models\ListPoliciesResponse ListPolicies(Models\ListPoliciesRequest $req) 本接口（ListPolicies）可用于查询策略列表。
+ * @method Models\ListPoliciesGrantingServiceAccessResponse ListPoliciesGrantingServiceAccess(Models\ListPoliciesGrantingServiceAccessRequest $req) 获取所有已授权服务
  * @method Models\ListPolicyVersionsResponse ListPolicyVersions(Models\ListPolicyVersionsRequest $req) 该接口（ListPolicyVersions）用于获取策略版本列表
  * @method Models\ListSAMLProvidersResponse ListSAMLProviders(Models\ListSAMLProvidersRequest $req) 查询SAML身份提供商列表
  * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) 拉取子用户

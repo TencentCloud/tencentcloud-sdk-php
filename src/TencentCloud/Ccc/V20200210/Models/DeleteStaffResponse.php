@@ -18,22 +18,22 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateStaff返回参数结构体
+ * DeleteStaff返回参数结构体
  *
- * @method array getErrorStaffList() 获取错误坐席列表及错误信息
+ * @method array getOnlineStaffList() 获取无法删除的状态为在线的客服列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorStaffList(array $ErrorStaffList) 设置错误坐席列表及错误信息
+ * @method void setOnlineStaffList(array $OnlineStaffList) 设置无法删除的状态为在线的客服列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateStaffResponse extends AbstractModel
+class DeleteStaffResponse extends AbstractModel
 {
     /**
-     * @var array 错误坐席列表及错误信息
+     * @var array 无法删除的状态为在线的客服列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ErrorStaffList;
+    public $OnlineStaffList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +41,7 @@ class CreateStaffResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ErrorStaffList 错误坐席列表及错误信息
+     * @param array $OnlineStaffList 无法删除的状态为在线的客服列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,13 +58,8 @@ class CreateStaffResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorStaffList",$param) and $param["ErrorStaffList"] !== null) {
-            $this->ErrorStaffList = [];
-            foreach ($param["ErrorStaffList"] as $key => $value){
-                $obj = new ErrStaffItem();
-                $obj->deserialize($value);
-                array_push($this->ErrorStaffList, $obj);
-            }
+        if (array_key_exists("OnlineStaffList",$param) and $param["OnlineStaffList"] !== null) {
+            $this->OnlineStaffList = $param["OnlineStaffList"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

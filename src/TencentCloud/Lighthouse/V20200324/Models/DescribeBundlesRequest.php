@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BundleIds 和 Filters。
+ * @method array getZones() 获取可用区列表。默认为全部可用区。
+ * @method void setZones(array $Zones) 设置可用区列表。默认为全部可用区。
  */
 class DescribeBundlesRequest extends AbstractModel
 {
@@ -76,6 +78,11 @@ class DescribeBundlesRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var array 可用区列表。默认为全部可用区。
+     */
+    public $Zones;
+
+    /**
      * @param array $BundleIds 套餐 ID 列表。
      * @param integer $Offset 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
@@ -88,6 +95,7 @@ class DescribeBundlesRequest extends AbstractModel
 类型：String
 必选：否
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BundleIds 和 Filters。
+     * @param array $Zones 可用区列表。默认为全部可用区。
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class DescribeBundlesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

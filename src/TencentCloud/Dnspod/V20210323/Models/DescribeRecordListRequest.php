@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortType(string $SortType) 设置排序方式，正序：ASC，逆序：DESC。默认值为ASC。
  * @method integer getOffset() 获取偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
- * @method integer getLimit() 获取限制数量，当前Limit最大支持3000。默认值为3000。
- * @method void setLimit(integer $Limit) 设置限制数量，当前Limit最大支持3000。默认值为3000。
+ * @method integer getLimit() 获取限制数量，当前Limit最大支持3000。默认值为100。
+ * @method void setLimit(integer $Limit) 设置限制数量，当前Limit最大支持3000。默认值为100。
  */
 class DescribeRecordListRequest extends AbstractModel
 {
@@ -103,7 +103,7 @@ class DescribeRecordListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 限制数量，当前Limit最大支持3000。默认值为3000。
+     * @var integer 限制数量，当前Limit最大支持3000。默认值为100。
      */
     public $Limit;
 
@@ -119,7 +119,7 @@ class DescribeRecordListRequest extends AbstractModel
      * @param string $SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
      * @param string $SortType 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
      * @param integer $Offset 偏移量，默认值为0。
-     * @param integer $Limit 限制数量，当前Limit最大支持3000。默认值为3000。
+     * @param integer $Limit 限制数量，当前Limit最大支持3000。默认值为100。
      */
     function __construct()
     {

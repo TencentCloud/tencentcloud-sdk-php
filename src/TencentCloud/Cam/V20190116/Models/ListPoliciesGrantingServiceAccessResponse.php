@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ccc\V20200210\Models;
+namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateStaff返回参数结构体
+ * ListPoliciesGrantingServiceAccess返回参数结构体
  *
- * @method array getErrorStaffList() 获取错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorStaffList(array $ErrorStaffList) 设置错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getList() 获取列表
+ * @method void setList(array $List) 设置列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateStaffResponse extends AbstractModel
+class ListPoliciesGrantingServiceAccessResponse extends AbstractModel
 {
     /**
-     * @var array 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 列表
      */
-    public $ErrorStaffList;
+    public $List;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class CreateStaffResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ErrorStaffList 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $List 列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,12 +54,12 @@ class CreateStaffResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrorStaffList",$param) and $param["ErrorStaffList"] !== null) {
-            $this->ErrorStaffList = [];
-            foreach ($param["ErrorStaffList"] as $key => $value){
-                $obj = new ErrStaffItem();
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new ListGrantServiceAccessNode();
                 $obj->deserialize($value);
-                array_push($this->ErrorStaffList, $obj);
+                array_push($this->List, $obj);
             }
         }
 

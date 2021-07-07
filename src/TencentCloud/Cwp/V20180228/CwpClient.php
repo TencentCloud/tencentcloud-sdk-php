@@ -30,6 +30,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\CreateOpenPortTaskResponse CreateOpenPortTask(Models\CreateOpenPortTaskRequest $req) 本接口 (CreateOpenPortTask) 用于创建实时获取端口任务。
  * @method Models\CreateProcessTaskResponse CreateProcessTask(Models\CreateProcessTaskRequest $req) 本接口 (CreateProcessTask) 用于创建实时拉取进程任务。
  * @method Models\CreateProtectServerResponse CreateProtectServer(Models\CreateProtectServerRequest $req) 添加房展防护服务器
+ * @method Models\CreateScanMalwareSettingResponse CreateScanMalwareSetting(Models\CreateScanMalwareSettingRequest $req) 该接口可以对入侵检测-文件查杀扫描检测
  * @method Models\CreateSearchLogResponse CreateSearchLog(Models\CreateSearchLogRequest $req) 添加历史搜索记录
  * @method Models\CreateSearchTemplateResponse CreateSearchTemplate(Models\CreateSearchTemplateRequest $req) 添加检索模板
  * @method Models\CreateUsualLoginPlacesResponse CreateUsualLoginPlaces(Models\CreateUsualLoginPlacesRequest $req) 此接口（CreateUsualLoginPlaces）用于添加常用登录地。
@@ -85,6 +86,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeMachinesResponse DescribeMachines(Models\DescribeMachinesRequest $req) 本接口 (DescribeMachines) 用于获取区域主机列表。
  * @method Models\DescribeMaliciousRequestsResponse DescribeMaliciousRequests(Models\DescribeMaliciousRequestsRequest $req) 本接口 (DescribeMaliciousRequests) 用于获取恶意请求数据。
  * @method Models\DescribeMalwareInfoResponse DescribeMalwareInfo(Models\DescribeMalwareInfoRequest $req) 查看恶意文件详情
+ * @method Models\DescribeMalwareTimingScanSettingResponse DescribeMalwareTimingScanSetting(Models\DescribeMalwareTimingScanSettingRequest $req) 查询定时扫描配置
  * @method Models\DescribeMalwaresResponse DescribeMalwares(Models\DescribeMalwaresRequest $req) 本接口（DescribeMalwares）用于获取木马事件列表。
  * @method Models\DescribeNonlocalLoginPlacesResponse DescribeNonlocalLoginPlaces(Models\DescribeNonlocalLoginPlacesRequest $req) 本接口(DescribeNonlocalLoginPlaces)用于获取异地登录事件。
  * @method Models\DescribeOpenPortStatisticsResponse DescribeOpenPortStatistics(Models\DescribeOpenPortStatisticsRequest $req) 本接口 (DescribeOpenPortStatistics) 用于获取端口统计列表。
@@ -102,6 +104,8 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeReverseShellRulesResponse DescribeReverseShellRules(Models\DescribeReverseShellRulesRequest $req) 获取反弹Shell规则列表
  * @method Models\DescribeRiskDnsListResponse DescribeRiskDnsList(Models\DescribeRiskDnsListRequest $req) 入侵检测，获取恶意请求列表
  * @method Models\DescribeScanMalwareScheduleResponse DescribeScanMalwareSchedule(Models\DescribeScanMalwareScheduleRequest $req) 查询木马扫描进度
+ * @method Models\DescribeScanTaskDetailsResponse DescribeScanTaskDetails(Models\DescribeScanTaskDetailsRequest $req) DescribeScanTaskDetails 查询扫描任务详情 , 可以查询扫描进度信息/异常;
+ * @method Models\DescribeScanVulSettingResponse DescribeScanVulSetting(Models\DescribeScanVulSettingRequest $req) 查询定期检测的配置
  * @method Models\DescribeSearchExportListResponse DescribeSearchExportList(Models\DescribeSearchExportListRequest $req) 导出ES查询文档列表
  * @method Models\DescribeSearchLogsResponse DescribeSearchLogs(Models\DescribeSearchLogsRequest $req) 获取历史搜索记录
  * @method Models\DescribeSearchTemplatesResponse DescribeSearchTemplates(Models\DescribeSearchTemplatesRequest $req) 获取快速检索列表
@@ -124,6 +128,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
 
  * @method Models\DescribeWeeklyReportsResponse DescribeWeeklyReports(Models\DescribeWeeklyReportsRequest $req) 本接口 (DescribeWeeklyReports) 用于获取周报列表数据。
  * @method Models\EditBashRuleResponse EditBashRule(Models\EditBashRuleRequest $req) 新增或修改高危命令规则
+ * @method Models\EditBashRulesResponse EditBashRules(Models\EditBashRulesRequest $req) 新增或修改高危命令规则
  * @method Models\EditPrivilegeRuleResponse EditPrivilegeRule(Models\EditPrivilegeRuleRequest $req) 新增或修改本地提权规则
  * @method Models\EditReverseShellRuleResponse EditReverseShellRule(Models\EditReverseShellRuleRequest $req) 编辑反弹Shell规则
  * @method Models\EditTagsResponse EditTags(Models\EditTagsRequest $req) 新增或编辑标签
@@ -153,7 +158,9 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\RecoverMalwaresResponse RecoverMalwares(Models\RecoverMalwaresRequest $req) 本接口（RecoverMalwares）用于批量恢复已经被隔离的木马文件。
  * @method Models\RenewProVersionResponse RenewProVersion(Models\RenewProVersionRequest $req) 本接口 (RenewProVersion) 用于续费专业版(包年包月)。
  * @method Models\RescanImpactedHostResponse RescanImpactedHost(Models\RescanImpactedHostRequest $req) 本接口 (RescanImpactedHost) 用于漏洞重新检测。
- * @method Models\ScanVulResponse ScanVul(Models\ScanVulRequest $req) 漏洞管理 - 一键检测
+ * @method Models\ScanVulResponse ScanVul(Models\ScanVulRequest $req)  一键检测
+ * @method Models\ScanVulAgainResponse ScanVulAgain(Models\ScanVulAgainRequest $req) 漏洞管理-重新检测接口
+ * @method Models\ScanVulSettingResponse ScanVulSetting(Models\ScanVulSettingRequest $req) 定期扫描漏洞设置
  * @method Models\SeparateMalwaresResponse SeparateMalwares(Models\SeparateMalwaresRequest $req) 本接口（SeparateMalwares）用于隔离木马。
  * @method Models\SetBashEventsStatusResponse SetBashEventsStatus(Models\SetBashEventsStatusRequest $req) 设置高危命令事件状态
  * @method Models\SwitchBashRulesResponse SwitchBashRules(Models\SwitchBashRulesRequest $req) 切换高危命令规则状态

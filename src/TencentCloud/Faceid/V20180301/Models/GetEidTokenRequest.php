@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtra(string $Extra) 设置透传字段，在获取验证结果时返回。最长长度1024位。
  * @method GetEidTokenConfig getConfig() 获取小程序模式配置，包括如何传入姓名身份证的配置。
  * @method void setConfig(GetEidTokenConfig $Config) 设置小程序模式配置，包括如何传入姓名身份证的配置。
+ * @method string getRedirectUrl() 获取最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
+ * @method void setRedirectUrl(string $RedirectUrl) 设置最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
  */
 class GetEidTokenRequest extends AbstractModel
 {
@@ -62,12 +64,18 @@ class GetEidTokenRequest extends AbstractModel
     public $Config;
 
     /**
+     * @var string 最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
+     */
+    public $RedirectUrl;
+
+    /**
      * @param string $MerchantId EID商户id，字段长度最长50位。
      * @param string $IdCard 身份标识（未使用OCR服务时，必须传入）。
 规则：a-zA-Z0-9组合。最长长度32位。
      * @param string $Name 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
      * @param string $Extra 透传字段，在获取验证结果时返回。最长长度1024位。
      * @param GetEidTokenConfig $Config 小程序模式配置，包括如何传入姓名身份证的配置。
+     * @param string $RedirectUrl 最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class GetEidTokenRequest extends AbstractModel
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = new GetEidTokenConfig();
             $this->Config->deserialize($param["Config"]);
+        }
+
+        if (array_key_exists("RedirectUrl",$param) and $param["RedirectUrl"] !== null) {
+            $this->RedirectUrl = $param["RedirectUrl"];
         }
     }
 }

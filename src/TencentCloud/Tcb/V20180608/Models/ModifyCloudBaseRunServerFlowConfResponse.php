@@ -14,36 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Market\V20191010\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetCateTree返回参数结构体
+ * ModifyCloudBaseRunServerFlowConf返回参数结构体
  *
- * @method integer getCateId() 获取分类ID
+ * @method string getResult() 获取返回结果，succ代表成功
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCateId(integer $CateId) 设置分类ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取分类名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置分类名称
+ * @method void setResult(string $Result) 设置返回结果，succ代表成功
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GetCateTreeResponse extends AbstractModel
+class ModifyCloudBaseRunServerFlowConfResponse extends AbstractModel
 {
     /**
-     * @var integer 分类ID
+     * @var string 返回结果，succ代表成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $CateId;
-
-    /**
-     * @var string 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Name;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,9 +41,7 @@ class GetCateTreeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $CateId 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 分类名称
+     * @param string $Result 返回结果，succ代表成功
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -70,12 +58,8 @@ class GetCateTreeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CateId",$param) and $param["CateId"] !== null) {
-            $this->CateId = $param["CateId"];
-        }
-
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

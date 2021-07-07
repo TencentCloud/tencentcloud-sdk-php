@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenAccessTypes(array $OpenAccessTypes) 设置OA PUBLIC MINIAPP VPC
  * @method integer getIsCreatePath() 获取是否创建Path 0未传默认创建 1创建 2不创建
  * @method void setIsCreatePath(integer $IsCreatePath) 设置是否创建Path 0未传默认创建 1创建 2不创建
+ * @method string getServerPath() 获取指定创建路径（如不存在，则创建。存在，则忽略）
+ * @method void setServerPath(string $ServerPath) 设置指定创建路径（如不存在，则创建。存在，则忽略）
  */
 class EstablishCloudBaseRunServerRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class EstablishCloudBaseRunServerRequest extends AbstractModel
     public $IsCreatePath;
 
     /**
+     * @var string 指定创建路径（如不存在，则创建。存在，则忽略）
+     */
+    public $ServerPath;
+
+    /**
      * @param string $EnvId 环境id
      * @param string $ServiceName 服务名称
      * @param boolean $IsPublic 是否开通外网访问
@@ -128,6 +135,7 @@ class EstablishCloudBaseRunServerRequest extends AbstractModel
      * @param integer $PublicAccess 0/1=允许公网访问;2=关闭公网访问
      * @param array $OpenAccessTypes OA PUBLIC MINIAPP VPC
      * @param integer $IsCreatePath 是否创建Path 0未传默认创建 1创建 2不创建
+     * @param string $ServerPath 指定创建路径（如不存在，则创建。存在，则忽略）
      */
     function __construct()
     {
@@ -194,6 +202,10 @@ class EstablishCloudBaseRunServerRequest extends AbstractModel
 
         if (array_key_exists("IsCreatePath",$param) and $param["IsCreatePath"] !== null) {
             $this->IsCreatePath = $param["IsCreatePath"];
+        }
+
+        if (array_key_exists("ServerPath",$param) and $param["ServerPath"] !== null) {
+            $this->ServerPath = $param["ServerPath"];
         }
     }
 }

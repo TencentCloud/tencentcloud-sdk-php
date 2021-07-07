@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormal(boolean $Normal) 设置是否正常
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getItemString() 获取项目原文
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setItemString(string $ItemString) 设置项目原文
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IndicatorItem extends AbstractModel
 {
@@ -114,6 +118,12 @@ class IndicatorItem extends AbstractModel
     public $Normal;
 
     /**
+     * @var string 项目原文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ItemString;
+
+    /**
      * @param string $Code 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Scode 标准缩写
@@ -131,6 +141,8 @@ class IndicatorItem extends AbstractModel
      * @param string $Arrow 上下箭头
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Normal 是否正常
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ItemString 项目原文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class IndicatorItem extends AbstractModel
 
         if (array_key_exists("Normal",$param) and $param["Normal"] !== null) {
             $this->Normal = $param["Normal"];
+        }
+
+        if (array_key_exists("ItemString",$param) and $param["ItemString"] !== null) {
+            $this->ItemString = $param["ItemString"];
         }
     }
 }

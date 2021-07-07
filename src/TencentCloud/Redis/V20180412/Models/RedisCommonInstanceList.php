@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置实例网络id
  * @method string getSubnetId() 获取子网id
  * @method void setSubnetId(string $SubnetId) 设置子网id
- * @method string getStatus() 获取实例状态信息，0-创建中，1-运行中
- * @method void setStatus(string $Status) 设置实例状态信息，0-创建中，1-运行中
+ * @method string getStatus() 获取实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
+ * @method void setStatus(string $Status) 设置实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
  * @method array getVips() 获取实例网络ip
  * @method void setVips(array $Vips) 设置实例网络ip
  * @method integer getVport() 获取实例网络端口
@@ -92,7 +92,7 @@ class RedisCommonInstanceList extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 实例状态信息，0-创建中，1-运行中
+     * @var string 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
      */
     public $Status;
 
@@ -130,7 +130,7 @@ class RedisCommonInstanceList extends AbstractModel
      * @param string $Zone 实例接入zone
      * @param string $VpcId 实例网络id
      * @param string $SubnetId 子网id
-     * @param string $Status 实例状态信息，0-创建中，1-运行中
+     * @param string $Status 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
      * @param array $Vips 实例网络ip
      * @param integer $Vport 实例网络端口
      * @param string $Createtime 实例创建时间

@@ -23,11 +23,15 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Iotvideo\V20201215\Models as Models;
 
 /**
+ * @method Models\ApplyAIModelResponse ApplyAIModel(Models\ApplyAIModelRequest $req) 申请AI模型
  * @method Models\BatchUpdateFirmwareResponse BatchUpdateFirmware(Models\BatchUpdateFirmwareRequest $req) 本接口（BatchUpdateFirmware）用于批量更新设备固件 
+ * @method Models\CancelAIModelApplicationResponse CancelAIModelApplication(Models\CancelAIModelApplicationRequest $req) 取消AI模型申请
  * @method Models\CancelDeviceFirmwareTaskResponse CancelDeviceFirmwareTask(Models\CancelDeviceFirmwareTaskRequest $req) 本接口用于取消设备升级任务
  * @method Models\CheckForwardAuthResponse CheckForwardAuth(Models\CheckForwardAuthRequest $req) 判断是否开启的转发的权限
  * @method Models\ControlDeviceDataResponse ControlDeviceData(Models\ControlDeviceDataRequest $req) 根据设备产品ID、设备名称，设置控制设备的属性数据。
+ * @method Models\CreateAIDetectionResponse CreateAIDetection(Models\CreateAIDetectionRequest $req) 发起AI推理请求
  * @method Models\CreateBatchResponse CreateBatch(Models\CreateBatchRequest $req) 创建批次
+ * @method Models\CreateCOSCredentialsResponse CreateCOSCredentials(Models\CreateCOSCredentialsRequest $req) 创建COS上传密钥
  * @method Models\CreateCloudStorageResponse CreateCloudStorage(Models\CreateCloudStorageRequest $req) 开通云存服务
  * @method Models\CreateForwardRuleResponse CreateForwardRule(Models\CreateForwardRuleRequest $req) 创建转发规则
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 创建产品
@@ -36,6 +40,10 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\DeleteFirmwareResponse DeleteFirmware(Models\DeleteFirmwareRequest $req) 本接口（DeleteFirmware）用于删除固件 
  * @method Models\DeleteForwardRuleResponse DeleteForwardRule(Models\DeleteForwardRuleRequest $req) 删除转发规则
  * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) 删除产品
+ * @method Models\DescribeAIModelApplicationsResponse DescribeAIModelApplications(Models\DescribeAIModelApplicationsRequest $req) 用户AI模型申请记录
+ * @method Models\DescribeAIModelChannelResponse DescribeAIModelChannel(Models\DescribeAIModelChannelRequest $req) 查看AI推理结果推送配置
+ * @method Models\DescribeAIModelUsageResponse DescribeAIModelUsage(Models\DescribeAIModelUsageRequest $req) 查看AI模型资源包
+ * @method Models\DescribeAIModelsResponse DescribeAIModels(Models\DescribeAIModelsRequest $req) 拉取AI模型列表
  * @method Models\DescribeBalanceResponse DescribeBalance(Models\DescribeBalanceRequest $req) 查询账户余额
  * @method Models\DescribeBalanceTransactionsResponse DescribeBalanceTransactions(Models\DescribeBalanceTransactionsRequest $req) 拉取账户流水
  * @method Models\DescribeBatchResponse DescribeBatch(Models\DescribeBatchRequest $req) 获取批次详情
@@ -74,10 +82,12 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\ModifyModelDefinitionResponse ModifyModelDefinition(Models\ModifyModelDefinitionRequest $req) 提供修改产品的数据模板的能力
  * @method Models\ModifyProductResponse ModifyProduct(Models\ModifyProductRequest $req) 修改产品信息
  * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 本接口（PublishMessage）用于使用自定义透传协议进行设备远控
+ * @method Models\ReportAliveDeviceResponse ReportAliveDevice(Models\ReportAliveDeviceRequest $req) 上报活跃设备
  * @method Models\ResetCloudStorageResponse ResetCloudStorage(Models\ResetCloudStorageRequest $req) 重置云存服务
  * @method Models\RetryDeviceFirmwareTaskResponse RetryDeviceFirmwareTask(Models\RetryDeviceFirmwareTaskRequest $req) 本接口用于重试设备升级任务
  * @method Models\SetForwardAuthResponse SetForwardAuth(Models\SetForwardAuthRequest $req) 设置转发权限
  * @method Models\TransferCloudStorageResponse TransferCloudStorage(Models\TransferCloudStorageRequest $req) 转移云存服务
+ * @method Models\UpdateAIModelChannelResponse UpdateAIModelChannel(Models\UpdateAIModelChannelRequest $req) 更新AI推理结果推送配置
  * @method Models\UploadFirmwareResponse UploadFirmware(Models\UploadFirmwareRequest $req) 本接口（UploadFirmware）用于上传设备固件信息 
  */
 

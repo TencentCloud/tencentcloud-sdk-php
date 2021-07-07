@@ -57,6 +57,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\GetPolicyVersionResponse GetPolicyVersion(Models\GetPolicyVersionRequest $req) 该接口（GetPolicyVersion）用于查询策略版本详情
  * @method Models\GetRoleResponse GetRole(Models\GetRoleRequest $req) 本接口（GetRole）用于获取指定角色的详细信息。
  * @method Models\GetSAMLProviderResponse GetSAMLProvider(Models\GetSAMLProviderRequest $req) 查询SAML身份提供商详情
+ * @method Models\GetSecurityLastUsedResponse GetSecurityLastUsed(Models\GetSecurityLastUsedRequest $req) 获取密钥最近使用情况
  * @method Models\GetServiceLinkedRoleDeletionStatusResponse GetServiceLinkedRoleDeletionStatus(Models\GetServiceLinkedRoleDeletionStatusRequest $req) 根据删除TaskId获取服务相关角色删除状态
  * @method Models\GetUserResponse GetUser(Models\GetUserRequest $req) 查询子用户
  * @method Models\ListAccessKeysResponse ListAccessKeys(Models\ListAccessKeysRequest $req) 列出指定CAM用户的访问密钥

@@ -72,6 +72,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNwkSKey(string $NwkSKey) 设置LoRaWAN 网络会话密钥
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateUserId() 获取创建人Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateUserId(integer $CreateUserId) 设置创建人Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatorNickName() 获取创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatorNickName(string $CreatorNickName) 设置创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceInfo extends AbstractModel
 {
@@ -158,6 +166,18 @@ class DeviceInfo extends AbstractModel
     public $NwkSKey;
 
     /**
+     * @var integer 创建人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateUserId;
+
+    /**
+     * @var string 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatorNickName;
+
+    /**
      * @param string $DeviceName 设备名
      * @param integer $Status 0: 离线, 1: 在线, 2: 获取失败, 3 未激活
      * @param string $DevicePsk 设备密钥，密钥加密的设备返回
@@ -183,6 +203,10 @@ class DeviceInfo extends AbstractModel
      * @param string $AppSKey LoRaWAN 应用会话密钥
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NwkSKey LoRaWAN 网络会话密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateUserId 创建人Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatorNickName 创建人昵称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -252,6 +276,14 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("NwkSKey",$param) and $param["NwkSKey"] !== null) {
             $this->NwkSKey = $param["NwkSKey"];
+        }
+
+        if (array_key_exists("CreateUserId",$param) and $param["CreateUserId"] !== null) {
+            $this->CreateUserId = $param["CreateUserId"];
+        }
+
+        if (array_key_exists("CreatorNickName",$param) and $param["CreatorNickName"] !== null) {
+            $this->CreatorNickName = $param["CreatorNickName"];
         }
     }
 }

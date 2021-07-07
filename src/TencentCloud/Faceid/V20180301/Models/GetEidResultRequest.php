@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEidResult请求参数结构体
  *
- * @method string getEidToken() 获取人脸核身流程的标识，调用GetEidToken接口时生成的。
- * @method void setEidToken(string $EidToken) 设置人脸核身流程的标识，调用GetEidToken接口时生成的。
+ * @method string getEidToken() 获取E证通流程的唯一标识，调用GetEidToken接口时生成。
+ * @method void setEidToken(string $EidToken) 设置E证通流程的唯一标识，调用GetEidToken接口时生成。
  * @method string getInfoType() 获取指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息）。
 如 13表示拉取文本类、最佳截图信息。
 默认值：0
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class GetEidResultRequest extends AbstractModel
 {
     /**
-     * @var string 人脸核身流程的标识，调用GetEidToken接口时生成的。
+     * @var string E证通流程的唯一标识，调用GetEidToken接口时生成。
      */
     public $EidToken;
 
@@ -51,7 +51,7 @@ class GetEidResultRequest extends AbstractModel
     public $BestFramesCount;
 
     /**
-     * @param string $EidToken 人脸核身流程的标识，调用GetEidToken接口时生成的。
+     * @param string $EidToken E证通流程的唯一标识，调用GetEidToken接口时生成。
      * @param string $InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息）。
 如 13表示拉取文本类、最佳截图信息。
 默认值：0

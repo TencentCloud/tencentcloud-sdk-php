@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Market\V20191010\Models;
+namespace TencentCloud\Iotvideo\V20201215\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetCateTree请求参数结构体
+ * DescribeAIModelChannel请求参数结构体
  *
- * @method integer getCateId() 获取分类ID
- * @method void setCateId(integer $CateId) 设置分类ID
+ * @method string getModelId() 获取模型ID
+ * @method void setModelId(string $ModelId) 设置模型ID
+ * @method string getProductId() 获取产品ID
+ * @method void setProductId(string $ProductId) 设置产品ID
  */
-class GetCateTreeRequest extends AbstractModel
+class DescribeAIModelChannelRequest extends AbstractModel
 {
     /**
-     * @var integer 分类ID
+     * @var string 模型ID
      */
-    public $CateId;
+    public $ModelId;
 
     /**
-     * @param integer $CateId 分类ID
+     * @var string 产品ID
+     */
+    public $ProductId;
+
+    /**
+     * @param string $ModelId 模型ID
+     * @param string $ProductId 产品ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class GetCateTreeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CateId",$param) and $param["CateId"] !== null) {
-            $this->CateId = $param["CateId"];
+        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
+            $this->ModelId = $param["ModelId"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

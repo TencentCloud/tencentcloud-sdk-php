@@ -24,8 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getAccountName() 获取子账号名称
  * @method void setAccountName(string $AccountName) 设置子账号名称
- * @method string getAccountPassword() 获取子账号密码
- * @method void setAccountPassword(string $AccountPassword) 设置子账号密码
+ * @method string getAccountPassword() 获取1.长度8-30位,推荐使用12位以上的密码
+2.不能以"/"开头
+3.至少包含两项
+    a.小写字母a-z
+    b.大写字母A-Z
+    c.数字0-9
+    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+ * @method void setAccountPassword(string $AccountPassword) 设置1.长度8-30位,推荐使用12位以上的密码
+2.不能以"/"开头
+3.至少包含两项
+    a.小写字母a-z
+    b.大写字母A-Z
+    c.数字0-9
+    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
  * @method array getReadonlyPolicy() 获取路由策略：填写master或者replication，表示主节点或者从节点
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置路由策略：填写master或者replication，表示主节点或者从节点
  * @method string getPrivilege() 获取读写策略：填写r、rw，表示只读、读写
@@ -46,7 +58,13 @@ class CreateInstanceAccountRequest extends AbstractModel
     public $AccountName;
 
     /**
-     * @var string 子账号密码
+     * @var string 1.长度8-30位,推荐使用12位以上的密码
+2.不能以"/"开头
+3.至少包含两项
+    a.小写字母a-z
+    b.大写字母A-Z
+    c.数字0-9
+    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
      */
     public $AccountPassword;
 
@@ -68,7 +86,13 @@ class CreateInstanceAccountRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID
      * @param string $AccountName 子账号名称
-     * @param string $AccountPassword 子账号密码
+     * @param string $AccountPassword 1.长度8-30位,推荐使用12位以上的密码
+2.不能以"/"开头
+3.至少包含两项
+    a.小写字母a-z
+    b.大写字母A-Z
+    c.数字0-9
+    d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
      * @param array $ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
      * @param string $Privilege 读写策略：填写r、rw，表示只读、读写
      * @param string $Remark 子账号描述信息

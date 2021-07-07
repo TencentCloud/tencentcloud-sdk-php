@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceMonitorTopNCmdTook请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getSpanType() 获取时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
  * @method void setSpanType(integer $SpanType) 设置时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
  */
 class DescribeInstanceMonitorTopNCmdTookRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 实例ID
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class DescribeInstanceMonitorTopNCmdTookRequest extends AbstractModel
     public $SpanType;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 实例ID
      * @param integer $SpanType 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
      */
     function __construct()

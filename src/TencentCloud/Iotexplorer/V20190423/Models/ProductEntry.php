@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableProductScript(string $EnableProductScript) 设置是否使用脚本进行二进制转json功能 可以取值 true / false
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateUserId() 获取创建人 UinId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateUserId(integer $CreateUserId) 设置创建人 UinId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatorNickName() 获取创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatorNickName(string $CreatorNickName) 设置创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductEntry extends AbstractModel
 {
@@ -132,6 +140,18 @@ class ProductEntry extends AbstractModel
     public $EnableProductScript;
 
     /**
+     * @var integer 创建人 UinId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateUserId;
+
+    /**
+     * @var string 创建者昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatorNickName;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param integer $CategoryId 产品分组模板ID
@@ -147,6 +167,10 @@ class ProductEntry extends AbstractModel
      * @param string $ProjectId 项目ID
      * @param integer $ModuleId 产品ModuleId
      * @param string $EnableProductScript 是否使用脚本进行二进制转json功能 可以取值 true / false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateUserId 创建人 UinId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatorNickName 创建者昵称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -220,6 +244,14 @@ class ProductEntry extends AbstractModel
 
         if (array_key_exists("EnableProductScript",$param) and $param["EnableProductScript"] !== null) {
             $this->EnableProductScript = $param["EnableProductScript"];
+        }
+
+        if (array_key_exists("CreateUserId",$param) and $param["CreateUserId"] !== null) {
+            $this->CreateUserId = $param["CreateUserId"];
+        }
+
+        if (array_key_exists("CreatorNickName",$param) and $param["CreatorNickName"] !== null) {
+            $this->CreatorNickName = $param["CreatorNickName"];
         }
     }
 }

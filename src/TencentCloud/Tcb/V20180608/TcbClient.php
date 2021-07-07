@@ -41,6 +41,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildService(Models\DescribeCloudBaseBuildServiceRequest $req) 获取云托管代码上传url
  * @method Models\DescribeCloudBaseProjectLatestVersionListResponse DescribeCloudBaseProjectLatestVersionList(Models\DescribeCloudBaseProjectLatestVersionListRequest $req) 获取云开发项目列表
  * @method Models\DescribeCloudBaseProjectVersionListResponse DescribeCloudBaseProjectVersionList(Models\DescribeCloudBaseProjectVersionListRequest $req) 云项目部署列表
+ * @method Models\DescribeCloudBaseRunConfForGateWayResponse DescribeCloudBaseRunConfForGateWay(Models\DescribeCloudBaseRunConfForGateWayRequest $req) 独立网关中拉取云托管服务对应的配置信息
  * @method Models\DescribeCloudBaseRunResourceResponse DescribeCloudBaseRunResource(Models\DescribeCloudBaseRunResourceRequest $req) 查看容器托管的集群状态
  * @method Models\DescribeCloudBaseRunResourceForExtendResponse DescribeCloudBaseRunResourceForExtend(Models\DescribeCloudBaseRunResourceForExtendRequest $req) 查看容器托管的集群状态扩展使用
  * @method Models\DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersion(Models\DescribeCloudBaseRunServerVersionRequest $req) 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
@@ -70,6 +71,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DestroyStaticStoreResponse DestroyStaticStore(Models\DestroyStaticStoreRequest $req) 销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
  * @method Models\EstablishCloudBaseRunServerResponse EstablishCloudBaseRunServer(Models\EstablishCloudBaseRunServerRequest $req) 创建云应用服务
  * @method Models\EstablishWxGatewayRouteResponse EstablishWxGatewayRoute(Models\EstablishWxGatewayRouteRequest $req) 创建或修改安全网关路由
+ * @method Models\ModifyCloudBaseRunServerFlowConfResponse ModifyCloudBaseRunServerFlowConf(Models\ModifyCloudBaseRunServerFlowConfRequest $req) 修改容器内的版本流量配置
  * @method Models\ModifyDatabaseACLResponse ModifyDatabaseACL(Models\ModifyDatabaseACLRequest $req) 修改数据库权限
  * @method Models\ModifyEndUserResponse ModifyEndUser(Models\ModifyEndUserRequest $req) 管理终端用户
  * @method Models\ModifyEnvResponse ModifyEnv(Models\ModifyEnvRequest $req) 更新环境信息

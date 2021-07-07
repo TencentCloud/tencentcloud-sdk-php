@@ -27,6 +27,7 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\BankCard4EVerificationResponse BankCard4EVerification(Models\BankCard4EVerificationRequest $req) 本接口用于输入银行卡号、姓名、开户证件号、开户手机号，校验信息的真实性和一致性。
  * @method Models\BankCardVerificationResponse BankCardVerification(Models\BankCardVerificationRequest $req) 本接口用于银行卡号、姓名、开户证件号信息的真实性和一致性。
  * @method Models\CheckBankCardInformationResponse CheckBankCardInformation(Models\CheckBankCardInformationRequest $req) 银行卡基础信息查询
+ * @method Models\CheckEidTokenStatusResponse CheckEidTokenStatus(Models\CheckEidTokenStatusRequest $req) 用于轮询E证通H5场景EidToken验证状态。
  * @method Models\CheckIdCardInformationResponse CheckIdCardInformation(Models\CheckIdCardInformationRequest $req) 传入身份证人像面照片，识别身份证照片上的信息，并将姓名、身份证号、身份证人像照片与公安权威库的证件照进行比对，是否属于同一个人，从而验证身份证信息的真实性。
  * @method Models\CheckPhoneAndNameResponse CheckPhoneAndName(Models\CheckPhoneAndNameRequest $req) 手机号二要素核验接口用于校验手机号和姓名的真实性和一致性，支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
 
@@ -36,7 +37,7 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\GetDetectInfoResponse GetDetectInfo(Models\GetDetectInfoRequest $req) 完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
  * @method Models\GetDetectInfoEnhancedResponse GetDetectInfoEnhanced(Models\GetDetectInfoEnhancedRequest $req) 完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
  * @method Models\GetEidResultResponse GetEidResult(Models\GetEidResultRequest $req) 完成验证后，用EidToken调用本接口获取结果信息，EidToken生成后三天内（3\*24\*3,600秒）可多次拉取。
- * @method Models\GetEidTokenResponse GetEidToken(Models\GetEidTokenRequest $req) 每次调用E证通小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
+ * @method Models\GetEidTokenResponse GetEidToken(Models\GetEidTokenRequest $req) 每次调用E证通服务前，需先调用本接口获取EidToken，用来串联E证通流程，在验证完成后，用于获取E证通结果信息。
  * @method Models\GetFaceIdResultResponse GetFaceIdResult(Models\GetFaceIdResultRequest $req) 完成验证后，用FaceIdToken调用本接口获取结果信息，FaceIdToken生成后三天内（3\*24\*3,600秒）可多次拉取。
  * @method Models\GetFaceIdTokenResponse GetFaceIdToken(Models\GetFaceIdTokenRequest $req) 每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取验证结果信息，该token仅能核身一次。
  * @method Models\GetLiveCodeResponse GetLiveCode(Models\GetLiveCodeRequest $req) 使用数字活体检测模式前，需调用本接口获取数字验证码。

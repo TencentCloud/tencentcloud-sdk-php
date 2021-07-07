@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParameters(string $Parameters) 设置自定义参数取值。
  * @method string getDefaultParameters() 获取自定义参数的默认取值。
  * @method void setDefaultParameters(string $DefaultParameters) 设置自定义参数的默认取值。
+ * @method string getInstanceKind() 获取执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
+ * @method void setInstanceKind(string $InstanceKind) 设置执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
  */
 class Invocation extends AbstractModel
 {
@@ -119,6 +121,11 @@ class Invocation extends AbstractModel
     public $DefaultParameters;
 
     /**
+     * @var string 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
+     */
+    public $InstanceKind;
+
+    /**
      * @param string $InvocationId 执行活动ID。
      * @param string $CommandId 命令ID。
      * @param string $InvocationStatus 执行任务状态。取值范围：
@@ -136,6 +143,7 @@ class Invocation extends AbstractModel
      * @param string $UpdatedTime 执行活动更新时间。
      * @param string $Parameters 自定义参数取值。
      * @param string $DefaultParameters 自定义参数的默认取值。
+     * @param string $InstanceKind 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
      */
     function __construct()
     {
@@ -197,6 +205,10 @@ class Invocation extends AbstractModel
 
         if (array_key_exists("DefaultParameters",$param) and $param["DefaultParameters"] !== null) {
             $this->DefaultParameters = $param["DefaultParameters"];
+        }
+
+        if (array_key_exists("InstanceKind",$param) and $param["InstanceKind"] !== null) {
+            $this->InstanceKind = $param["InstanceKind"];
         }
     }
 }

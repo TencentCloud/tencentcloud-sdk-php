@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(string $OrderByType) 设置排序方式
  * @method array getVips() 获取实例vip信息列表
  * @method void setVips(array $Vips) 设置实例vip信息列表
- * @method array getUniqVpcIds() 获取vpc网络统一Id列表
- * @method void setUniqVpcIds(array $UniqVpcIds) 设置vpc网络统一Id列表
- * @method array getUniqSubnetIds() 获取子网统一id列表
- * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置子网统一id列表
+ * @method array getUniqVpcIds() 获取vpc网络ID信息列表
+ * @method void setUniqVpcIds(array $UniqVpcIds) 设置vpc网络ID信息列表
+ * @method array getUniqSubnetIds() 获取子网统一ID列表
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置子网统一ID列表
  * @method integer getLimit() 获取数量限制，默认推荐100
  * @method void setLimit(integer $Limit) 设置数量限制，默认推荐100
  * @method integer getOffset() 获取偏移量，默认0
@@ -95,12 +95,12 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
     public $Vips;
 
     /**
-     * @var array vpc网络统一Id列表
+     * @var array vpc网络ID信息列表
      */
     public $UniqVpcIds;
 
     /**
-     * @var array 子网统一id列表
+     * @var array 子网统一ID列表
      */
     public $UniqSubnetIds;
 
@@ -124,8 +124,8 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
      * @param string $OrderBy 排序字段
      * @param string $OrderByType 排序方式
      * @param array $Vips 实例vip信息列表
-     * @param array $UniqVpcIds vpc网络统一Id列表
-     * @param array $UniqSubnetIds 子网统一id列表
+     * @param array $UniqVpcIds vpc网络ID信息列表
+     * @param array $UniqSubnetIds 子网统一ID列表
      * @param integer $Limit 数量限制，默认推荐100
      * @param integer $Offset 偏移量，默认0
      */

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置分页尺寸，上限 100
  * @method integer getPageNumber() 获取分页页码，从 0 开始
  * @method void setPageNumber(integer $PageNumber) 设置分页页码，从 0 开始
+ * @method array getPhones() 获取按手机号筛选
+ * @method void setPhones(array $Phones) 设置按手机号筛选
  */
 class DescribeTelCdrRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeTelCdrRequest extends AbstractModel
     public $PageNumber;
 
     /**
+     * @var array 按手机号筛选
+     */
+    public $Phones;
+
+    /**
      * @param integer $StartTimeStamp 起始时间戳，Unix 时间戳
      * @param integer $EndTimeStamp 结束时间戳，Unix 时间戳
      * @param integer $Limit 返回数据条数，上限（deprecated）
@@ -88,6 +95,7 @@ class DescribeTelCdrRequest extends AbstractModel
      * @param integer $SdkAppId 应用 ID
      * @param integer $PageSize 分页尺寸，上限 100
      * @param integer $PageNumber 分页页码，从 0 开始
+     * @param array $Phones 按手机号筛选
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeTelCdrRequest extends AbstractModel
 
         if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
             $this->PageNumber = $param["PageNumber"];
+        }
+
+        if (array_key_exists("Phones",$param) and $param["Phones"] !== null) {
+            $this->Phones = $param["Phones"];
         }
     }
 }

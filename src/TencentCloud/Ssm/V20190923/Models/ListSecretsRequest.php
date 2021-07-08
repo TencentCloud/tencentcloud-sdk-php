@@ -26,12 +26,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单次查询返回的最大数量，0或不设置则使用默认值 20。
  * @method integer getOrderType() 获取根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
  * @method void setOrderType(integer $OrderType) 设置根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
- * @method integer getState() 获取根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
- * @method void setState(integer $State) 设置根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
+ * @method integer getState() 获取根据凭据状态进行过滤。
+默认为0表示查询全部。
+1 --  表示查询Enabled 凭据列表。
+2 --  表示查询Disabled 凭据列表。
+3 --  表示查询PendingDelete 凭据列表。
+4 --  表示PendingCreate。
+5 --  表示CreateFailed。
+其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
+ * @method void setState(integer $State) 设置根据凭据状态进行过滤。
+默认为0表示查询全部。
+1 --  表示查询Enabled 凭据列表。
+2 --  表示查询Disabled 凭据列表。
+3 --  表示查询PendingDelete 凭据列表。
+4 --  表示PendingCreate。
+5 --  表示CreateFailed。
+其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
  * @method string getSearchSecretName() 获取根据凭据名称进行过滤，为空表示不过滤。
  * @method void setSearchSecretName(string $SearchSecretName) 设置根据凭据名称进行过滤，为空表示不过滤。
- * @method array getTagFilters() 获取标签过滤条件
- * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
+ * @method array getTagFilters() 获取标签过滤条件。
+ * @method void setTagFilters(array $TagFilters) 设置标签过滤条件。
+ * @method integer getSecretType() 获取0  -- 表示用户自定义凭据，默认为0。
+1  -- 表示用户云产品凭据。
+这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+ * @method void setSecretType(integer $SecretType) 设置0  -- 表示用户自定义凭据，默认为0。
+1  -- 表示用户云产品凭据。
+这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
  */
 class ListSecretsRequest extends AbstractModel
 {
@@ -51,7 +71,14 @@ class ListSecretsRequest extends AbstractModel
     public $OrderType;
 
     /**
-     * @var integer 根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
+     * @var integer 根据凭据状态进行过滤。
+默认为0表示查询全部。
+1 --  表示查询Enabled 凭据列表。
+2 --  表示查询Disabled 凭据列表。
+3 --  表示查询PendingDelete 凭据列表。
+4 --  表示PendingCreate。
+5 --  表示CreateFailed。
+其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
      */
     public $State;
 
@@ -61,17 +88,34 @@ class ListSecretsRequest extends AbstractModel
     public $SearchSecretName;
 
     /**
-     * @var array 标签过滤条件
+     * @var array 标签过滤条件。
      */
     public $TagFilters;
+
+    /**
+     * @var integer 0  -- 表示用户自定义凭据，默认为0。
+1  -- 表示用户云产品凭据。
+这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+     */
+    public $SecretType;
 
     /**
      * @param integer $Offset 查询列表的起始位置，以0开始，不设置默认为0。
      * @param integer $Limit 单次查询返回的最大数量，0或不设置则使用默认值 20。
      * @param integer $OrderType 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
-     * @param integer $State 根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
+     * @param integer $State 根据凭据状态进行过滤。
+默认为0表示查询全部。
+1 --  表示查询Enabled 凭据列表。
+2 --  表示查询Disabled 凭据列表。
+3 --  表示查询PendingDelete 凭据列表。
+4 --  表示PendingCreate。
+5 --  表示CreateFailed。
+其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
      * @param string $SearchSecretName 根据凭据名称进行过滤，为空表示不过滤。
-     * @param array $TagFilters 标签过滤条件
+     * @param array $TagFilters 标签过滤条件。
+     * @param integer $SecretType 0  -- 表示用户自定义凭据，默认为0。
+1  -- 表示用户云产品凭据。
+这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
      */
     function __construct()
     {
@@ -113,6 +157,10 @@ class ListSecretsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagFilters, $obj);
             }
+        }
+
+        if (array_key_exists("SecretType",$param) and $param["SecretType"] !== null) {
+            $this->SecretType = $param["SecretType"];
         }
     }
 }

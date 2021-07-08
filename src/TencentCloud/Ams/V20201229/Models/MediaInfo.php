@@ -20,54 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒体类型
  *
- * @method string getCodecs() 获取编码格式
- * @method void setCodecs(string $Codecs) 设置编码格式
- * @method integer getDuration() 获取流检测时分片时长
-注意：此字段可能返回 0，表示取不到有效值。
- * @method void setDuration(integer $Duration) 设置流检测时分片时长
-注意：此字段可能返回 0，表示取不到有效值。
- * @method integer getWidth() 获取宽，单位为像素
- * @method void setWidth(integer $Width) 设置宽，单位为像素
- * @method integer getHeight() 获取高，单位为像素
- * @method void setHeight(integer $Height) 设置高，单位为像素
- * @method string getThumbnail() 获取缩略图
- * @method void setThumbnail(string $Thumbnail) 设置缩略图
+ * @method string getCodecs() 获取该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
+ * @method void setCodecs(string $Codecs) 设置该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
+ * @method integer getDuration() 获取该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
+ * @method void setDuration(integer $Duration) 设置该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
+ * @method integer getWidth() 获取*内测中，敬请期待*
+ * @method void setWidth(integer $Width) 设置*内测中，敬请期待*
+ * @method integer getHeight() 获取*内测中，敬请期待*
+ * @method void setHeight(integer $Height) 设置*内测中，敬请期待*
+ * @method string getThumbnail() 获取*内测中，敬请期待*
+ * @method void setThumbnail(string $Thumbnail) 设置*内测中，敬请期待*
  */
 class MediaInfo extends AbstractModel
 {
     /**
-     * @var string 编码格式
+     * @var string 该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
      */
     public $Codecs;
 
     /**
-     * @var integer 流检测时分片时长
-注意：此字段可能返回 0，表示取不到有效值。
+     * @var integer 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
      */
     public $Duration;
 
     /**
-     * @var integer 宽，单位为像素
+     * @var integer *内测中，敬请期待*
      */
     public $Width;
 
     /**
-     * @var integer 高，单位为像素
+     * @var integer *内测中，敬请期待*
      */
     public $Height;
 
     /**
-     * @var string 缩略图
+     * @var string *内测中，敬请期待*
      */
     public $Thumbnail;
 
     /**
-     * @param string $Codecs 编码格式
-     * @param integer $Duration 流检测时分片时长
-注意：此字段可能返回 0，表示取不到有效值。
-     * @param integer $Width 宽，单位为像素
-     * @param integer $Height 高，单位为像素
-     * @param string $Thumbnail 缩略图
+     * @param string $Codecs 该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
+     * @param integer $Duration 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
+     * @param integer $Width *内测中，敬请期待*
+     * @param integer $Height *内测中，敬请期待*
+     * @param string $Thumbnail *内测中，敬请期待*
      */
     function __construct()
     {

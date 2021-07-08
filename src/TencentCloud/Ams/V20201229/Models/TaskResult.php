@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建任务时的返回结果
  *
- * @method string getDataId() 获取请求时传入的DataId
+ * @method string getDataId() 获取该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataId(string $DataId) 设置请求时传入的DataId
+ * @method void setDataId(string $DataId) 设置该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取TaskId，任务ID
+ * @method string getTaskId() 获取该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置TaskId，任务ID
+ * @method void setTaskId(string $TaskId) 设置该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCode() 获取错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
+ * @method string getCode() 获取该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCode(string $Code) 设置错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
+ * @method void setCode(string $Code) 设置该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取如果错误，该字段表示错误详情
+ * @method string getMessage() 获取**仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置如果错误，该字段表示错误详情
+ * @method void setMessage(string $Message) 设置**仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResult extends AbstractModel
 {
     /**
-     * @var string 请求时传入的DataId
+     * @var string 该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataId;
 
     /**
-     * @var string TaskId，任务ID
+     * @var string 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
+     * @var string 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
-     * @var string 如果错误，该字段表示错误详情
+     * @var string **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
-     * @param string $DataId 请求时传入的DataId
+     * @param string $DataId 该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId TaskId，任务ID
+     * @param string $TaskId 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Code 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
+     * @param string $Code 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message 如果错误，该字段表示错误详情
+     * @param string $Message **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

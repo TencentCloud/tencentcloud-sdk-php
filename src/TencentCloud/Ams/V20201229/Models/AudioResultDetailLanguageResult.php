@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音频小语种检测结果
  *
- * @method string getLabel() 获取语言信息
+ * @method string getLabel() 获取该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置语言信息
+ * @method void setLabel(string $Label) 设置该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScore() 获取得分
+ * @method integer getScore() 获取该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScore(integer $Score) 设置得分
+ * @method void setScore(integer $Score) 设置该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getStartTime() 获取开始时间
+ * @method float getStartTime() 获取该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(float $StartTime) 设置开始时间
+ * @method void setStartTime(float $StartTime) 设置该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getEndTime() 获取结束时间
+ * @method float getEndTime() 获取该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(float $EndTime) 设置结束时间
+ * @method void setEndTime(float $EndTime) 设置该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubLabelCode() 获取子标签码
+ * @method string getSubLabelCode() 获取*内测中，敬请期待*
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubLabelCode(string $SubLabelCode) 设置子标签码
+ * @method void setSubLabelCode(string $SubLabelCode) 设置*内测中，敬请期待*
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioResultDetailLanguageResult extends AbstractModel
 {
     /**
-     * @var string 语言信息
+     * @var string 该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
-     * @var integer 得分
+     * @var integer 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
-     * @var float 开始时间
+     * @var float 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var float 结束时间
+     * @var float 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
-     * @var string 子标签码
+     * @var string *内测中，敬请期待*
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabelCode;
 
     /**
-     * @param string $Label 语言信息
+     * @param string $Label 该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Score 得分
+     * @param integer $Score 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $StartTime 开始时间
+     * @param float $StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $EndTime 结束时间
+     * @param float $EndTime 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubLabelCode 子标签码
+     * @param string $SubLabelCode *内测中，敬请期待*
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetSecurityLastUsed请求参数结构体
  *
-
+ * @method array getSecretIdList() 获取查询密钥ID列表
+ * @method void setSecretIdList(array $SecretIdList) 设置查询密钥ID列表
  */
 class GetSecurityLastUsedRequest extends AbstractModel
 {
-
+    /**
+     * @var array 查询密钥ID列表
+     */
+    public $SecretIdList;
 
     /**
-
+     * @param array $SecretIdList 查询密钥ID列表
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class GetSecurityLastUsedRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("SecretIdList",$param) and $param["SecretIdList"] !== null) {
+            $this->SecretIdList = $param["SecretIdList"];
+        }
     }
 }

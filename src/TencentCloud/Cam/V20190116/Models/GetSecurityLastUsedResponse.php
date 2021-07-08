@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetSecurityLastUsed返回参数结构体
  *
+ * @method array getSecretIdLastUsedRows() 获取密钥ID最近访问列表
+ * @method void setSecretIdLastUsedRows(array $SecretIdLastUsedRows) 设置密钥ID最近访问列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class GetSecurityLastUsedResponse extends AbstractModel
 {
     /**
+     * @var array 密钥ID最近访问列表
+     */
+    public $SecretIdLastUsedRows;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $SecretIdLastUsedRows 密钥ID最近访问列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,15 @@ class GetSecurityLastUsedResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SecretIdLastUsedRows",$param) and $param["SecretIdLastUsedRows"] !== null) {
+            $this->SecretIdLastUsedRows = [];
+            foreach ($param["SecretIdLastUsedRows"] as $key => $value){
+                $obj = new SecretIdLastUsed();
+                $obj->deserialize($value);
+                array_push($this->SecretIdLastUsedRows, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

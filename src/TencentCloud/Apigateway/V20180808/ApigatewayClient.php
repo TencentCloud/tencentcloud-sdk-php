@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Apigateway\V20180808\Models as Models;
 
 /**
+ * @method Models\AttachPluginResponse AttachPlugin(Models\AttachPluginRequest $req) 绑定插件到API上。
  * @method Models\BindEnvironmentResponse BindEnvironment(Models\BindEnvironmentRequest $req) 本接口（BindEnvironment）用于绑定使用计划到服务或API。
 用户在发布服务到某个环境中后，如果 API 需要鉴权，还需要绑定使用计划才能进行调用，此接口用户将使用计划绑定到特定环境。
 目前支持绑定使用计划到API，但是同一个服务不能同时存在绑定到服务的使用计划和绑定到API的使用计划，所以对已经绑定过服务级别使用计划的环境，请先使用 服务级别使用计划降级 接口进行降级操作。
@@ -45,6 +46,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DeleteApiResponse DeleteApi(Models\DeleteApiRequest $req) 本接口（DeleteApi）用于删除已经创建的API。
  * @method Models\DeleteApiKeyResponse DeleteApiKey(Models\DeleteApiKeyRequest $req) 本接口（DeleteApiKey）用于删除一对 API 密钥。
  * @method Models\DeleteIPStrategyResponse DeleteIPStrategy(Models\DeleteIPStrategyRequest $req) 本接口（DeleteIPStrategy）用于删除服务IP策略。
+ * @method Models\DeletePluginResponse DeletePlugin(Models\DeletePluginRequest $req) 删除API网关插件
  * @method Models\DeleteServiceResponse DeleteService(Models\DeleteServiceRequest $req) 本接口（DeleteService）用于删除 API 网关中某个服务。
  * @method Models\DeleteServiceSubDomainMappingResponse DeleteServiceSubDomainMapping(Models\DeleteServiceSubDomainMappingRequest $req) 本接口（DeleteServiceSubDomainMapping）用于删除服务中某个环境的自定义域名映射。
 当用户使用自定义域名，并使用了自定义映射时，可使用此接口。但需注意，若删除了所有环境的映射时，调用此 API 均会返回失败。
@@ -54,6 +56,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
 如果当前环境没有发布，不允许进行此操作。
  * @method Models\DescribeAPIDocDetailResponse DescribeAPIDocDetail(Models\DescribeAPIDocDetailRequest $req) 查询 API 文档详情
  * @method Models\DescribeAPIDocsResponse DescribeAPIDocs(Models\DescribeAPIDocsRequest $req) 查询 API 文档列表
+ * @method Models\DescribeAllPluginApisResponse DescribeAllPluginApis(Models\DescribeAllPluginApisRequest $req) 展示插件相关的API列表，包括已绑定的和未绑定的API信息。
  * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) 本接口（DescribeApi）用于查询用户 API 网关的 API 接口的详细信息。​
  * @method Models\DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(Models\DescribeApiEnvironmentStrategyRequest $req) 本接口（DescribeApiEnvironmentStrategy）用于展示API绑定的限流策略。
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) 本接口（DescribeApiKey）用于查询密钥详情。
@@ -67,6 +70,8 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(Models\DescribeIPStrategyApisStatusRequest $req) 本接口（DescribeIPStrategyApisStatus）用于查询IP策略可以绑定的API列表。即服务下所有API和该策略已绑定API的差集。
  * @method Models\DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(Models\DescribeIPStrategysStatusRequest $req) 本接口（DescribeIPStrategysStatus）用于查询服务IP策略列表。
  * @method Models\DescribeLogSearchResponse DescribeLogSearch(Models\DescribeLogSearchRequest $req) 本接口DescribeLogSearch用于搜索日志
+ * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) 展示插件详情，支持按照插件ID进行。
+ * @method Models\DescribePluginApisResponse DescribePluginApis(Models\DescribePluginApisRequest $req) 查询指定插件下绑定的API信息
  * @method Models\DescribePluginsResponse DescribePlugins(Models\DescribePluginsRequest $req) 展示插件列表和详情，支持分页，支持按照插件类型查询，支持按照插件ID批量查询，支持按照插件名称查询。
  * @method Models\DescribeServiceResponse DescribeService(Models\DescribeServiceRequest $req) 本接口（DescribeService）用于查询一个服务的详细信息、包括服务的描述、域名、协议、创建时间、发布情况等信息。
  * @method Models\DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(Models\DescribeServiceEnvironmentListRequest $req) 本接口（DescribeServiceEnvironmentList）用于查询一个服务的环境列表，可查询到此服务下所有环境及其状态。
@@ -88,6 +93,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
  * @method Models\DescribeUsagePlanSecretIdsResponse DescribeUsagePlanSecretIds(Models\DescribeUsagePlanSecretIdsRequest $req) 本接口（DescribeUsagePlanSecretIds）用于查询使用计划绑定的密钥列表。
 在 API 网关中，一个使用计划可绑定多个密钥对，可使用本接口查询使用计划绑定的密钥列表。
  * @method Models\DescribeUsagePlansStatusResponse DescribeUsagePlansStatus(Models\DescribeUsagePlansStatusRequest $req) 本接口（DescribeUsagePlanStatus）用于查询使用计划的列表。
+ * @method Models\DetachPluginResponse DetachPlugin(Models\DetachPluginRequest $req) 解除插件与API绑定
  * @method Models\DisableApiKeyResponse DisableApiKey(Models\DisableApiKeyRequest $req) 本接口（DisableApiKey）用于禁用一对 API 密钥。
  * @method Models\EnableApiKeyResponse EnableApiKey(Models\EnableApiKeyRequest $req) 本接口（EnableApiKey）用于启动一对被禁用的 API 密钥。
  * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) 本接口（GenerateApiDocument）用于自动生成 API 文档和 SDK，一个服务的一个环境生成一份文档和 SDK。
@@ -96,6 +102,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
  * @method Models\ModifyApiEnvironmentStrategyResponse ModifyApiEnvironmentStrategy(Models\ModifyApiEnvironmentStrategyRequest $req) 本接口（ModifyApiEnvironmentStrategy）用于修改API限流策略
  * @method Models\ModifyApiIncrementResponse ModifyApiIncrement(Models\ModifyApiIncrementRequest $req) 提供增量更新API能力，主要是给程序调用（区别于ModifyApi，该接口是需要传入API的全量参数，对console使用较友好）
  * @method Models\ModifyIPStrategyResponse ModifyIPStrategy(Models\ModifyIPStrategyRequest $req) 本接口（ModifyIPStrategy）用于修改服务IP策略。
+ * @method Models\ModifyPluginResponse ModifyPlugin(Models\ModifyPluginRequest $req) 修改API网关插件。
  * @method Models\ModifyServiceResponse ModifyService(Models\ModifyServiceRequest $req) 本接口（ModifyService）用于修改服务的相关信息。当服务创建后，服务的名称、描述和服务类型均可被修改。
  * @method Models\ModifyServiceEnvironmentStrategyResponse ModifyServiceEnvironmentStrategy(Models\ModifyServiceEnvironmentStrategyRequest $req) 本接口（ModifyServiceEnvironmentStrategy）用于修改服务限流策略
  * @method Models\ModifySubDomainResponse ModifySubDomain(Models\ModifySubDomainRequest $req) 本接口（ModifySubDomain）用于修改服务的自定义域名设置中的路径映射，可以修改绑定自定义域名之前的路径映射规则。

@@ -20,83 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务数据
  *
- * @method string getDataId() 获取输入的数据ID
+ * @method string getDataId() 获取该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataId(string $DataId) 设置输入的数据ID
+ * @method void setDataId(string $DataId) 设置该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getStatus() 获取状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
- * @method void setStatus(string $Status) 设置状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
- * @method string getName() 获取任务名称
+ * @method string getTaskId() 获取该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
+ * @method void setTaskId(string $TaskId) 设置该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
+ * @method string getStatus() 获取该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
+ * @method void setStatus(string $Status) 设置该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
+ * @method string getName() 获取该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置任务名称
+ * @method void setName(string $Name) 设置该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBizType() 获取业务类型
+ * @method string getBizType() 获取该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBizType(string $BizType) 设置业务类型
+ * @method void setBizType(string $BizType) 设置该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取任务类型
+ * @method string getType() 获取该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置任务类型
+ * @method void setType(string $Type) 设置该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSuggestion() 获取建议。可选：Pass，Block，Review
+ * @method string getSuggestion() 获取该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuggestion(string $Suggestion) 设置建议。可选：Pass，Block，Review
+ * @method void setSuggestion(string $Suggestion) 设置该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaInfo getMediaInfo() 获取输入信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaInfo(MediaInfo $MediaInfo) 设置输入信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLabels() 获取任务违规标签
+ * @method array getLabels() 获取该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabels(array $Labels) 设置任务违规标签
+ * @method void setLabels(array $Labels) 设置该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedAt() 获取创建时间（ iso 8601 格式）
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间（ iso 8601 格式）
- * @method string getUpdatedAt() 获取更新时间（ iso 8601 格式）
+ * @method string getCreatedAt() 获取该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
+ * @method void setCreatedAt(string $CreatedAt) 设置该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
+ * @method string getUpdatedAt() 获取该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间（ iso 8601 格式）
+ * @method void setUpdatedAt(string $UpdatedAt) 设置该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskData extends AbstractModel
 {
     /**
-     * @var string 输入的数据ID
+     * @var string 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataId;
 
     /**
-     * @var string 任务ID
+     * @var string 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
      */
     public $TaskId;
 
     /**
-     * @var string 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
+     * @var string 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
      */
     public $Status;
 
     /**
-     * @var string 任务名称
+     * @var string 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 业务类型
+     * @var string 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BizType;
 
     /**
-     * @var string 任务类型
+     * @var string 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 建议。可选：Pass，Block，Review
+     * @var string 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
@@ -108,41 +111,42 @@ class TaskData extends AbstractModel
     public $MediaInfo;
 
     /**
-     * @var array 任务违规标签
+     * @var array 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
-     * @var string 创建时间（ iso 8601 格式）
+     * @var string 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
      */
     public $CreatedAt;
 
     /**
-     * @var string 更新时间（ iso 8601 格式）
+     * @var string 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
-     * @param string $DataId 输入的数据ID
+     * @param string $DataId 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 任务ID
-     * @param string $Status 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
-     * @param string $Name 任务名称
+     * @param string $TaskId 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
+     * @param string $Status 该字段用于返回所查询内容的任务状态。
+<br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
+     * @param string $Name 该字段用于返回音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BizType 业务类型
+     * @param string $BizType 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 任务类型
+     * @param string $Type 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Suggestion 建议。可选：Pass，Block，Review
+     * @param string $Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaInfo $MediaInfo 输入信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Labels 任务违规标签
+     * @param array $Labels 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedAt 创建时间（ iso 8601 格式）
-     * @param string $UpdatedAt 更新时间（ iso 8601 格式）
+     * @param string $CreatedAt 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
+     * @param string $UpdatedAt 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

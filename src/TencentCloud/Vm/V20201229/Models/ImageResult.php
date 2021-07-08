@@ -20,137 +20,97 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Result结果详情
  *
- * @method integer getHitFlag() 获取违规标志
-0 未命中
-1 命中
+ * @method integer getHitFlag() 获取该参数用于标识审核内容是否命中恶意标签，取值：0（**未命中**）和1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHitFlag(integer $HitFlag) 设置违规标志
-0 未命中
-1 命中
+ * @method void setHitFlag(integer $HitFlag) 设置该参数用于标识审核内容是否命中恶意标签，取值：0（**未命中**）和1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLabel() 获取命中的标签
-Porn 色情
-Sexy 性感
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-以及其他令人反感、不安全或不适宜的内容类型。
+ * @method string getLabel() 获取该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置命中的标签
-Porn 色情
-Sexy 性感
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-以及其他令人反感、不安全或不适宜的内容类型。
+ * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSuggestion() 获取审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+ * @method string getSuggestion() 获取该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuggestion(string $Suggestion) 设置审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+ * @method void setSuggestion(string $Suggestion) 设置该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScore() 获取得分
+ * @method integer getScore() 获取该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 -性行为 99*，则表明该文本非常有可能属于色情性行为内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScore(integer $Score) 设置得分
+ * @method void setScore(integer $Score) 设置该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 -性行为 99*，则表明该文本非常有可能属于色情性行为内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResults() 获取画面截帧图片结果集
+ * @method array getResults() 获取该字段用于返回图像审核结果的子结果，详细内容敬请参考ImageResultResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResults(array $Results) 设置画面截帧图片结果集
+ * @method void setResults(array $Results) 设置该字段用于返回图像审核结果的子结果，详细内容敬请参考ImageResultResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUrl() 获取图片URL地址
+ * @method string getUrl() 获取该字段用于返回审核结果的访问链接（URL），图片支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：数据**默认有效期为12小时**。如您需要更长时间的保存，请在数据储存的COS桶中配置对应的储存时长。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUrl(string $Url) 设置图片URL地址
+ * @method void setUrl(string $Url) 设置该字段用于返回审核结果的访问链接（URL），图片支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：数据**默认有效期为12小时**。如您需要更长时间的保存，请在数据储存的COS桶中配置对应的储存时长。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtra() 获取附加字段
+ * @method string getExtra() 获取该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtra(string $Extra) 设置附加字段
+ * @method void setExtra(string $Extra) 设置该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageResult extends AbstractModel
 {
     /**
-     * @var integer 违规标志
-0 未命中
-1 命中
+     * @var integer 该参数用于标识审核内容是否命中恶意标签，取值：0（**未命中**）和1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HitFlag;
 
     /**
-     * @var string 命中的标签
-Porn 色情
-Sexy 性感
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-以及其他令人反感、不安全或不适宜的内容类型。
+     * @var string 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
-     * @var string 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @var string 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
-     * @var integer 得分
+     * @var integer 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 -性行为 99*，则表明该文本非常有可能属于色情性行为内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
-     * @var array 画面截帧图片结果集
+     * @var array 该字段用于返回图像审核结果的子结果，详细内容敬请参考ImageResultResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
 
     /**
-     * @var string 图片URL地址
+     * @var string 该字段用于返回审核结果的访问链接（URL），图片支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：数据**默认有效期为12小时**。如您需要更长时间的保存，请在数据储存的COS桶中配置对应的储存时长。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
-     * @var string 附加字段
+     * @var string 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
 
     /**
-     * @param integer $HitFlag 违规标志
-0 未命中
-1 命中
+     * @param integer $HitFlag 该参数用于标识审核内容是否命中恶意标签，取值：0（**未命中**）和1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Label 命中的标签
-Porn 色情
-Sexy 性感
-Illegal 违法
-Abuse 谩骂
-Ad 广告
-以及其他令人反感、不安全或不适宜的内容类型。
+     * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Suggestion 审核建议，可选值：
-Pass 通过，
-Review 建议人审，
-Block 确认违规
+     * @param string $Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Score 得分
+     * @param integer $Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 -性行为 99*，则表明该文本非常有可能属于色情性行为内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Results 画面截帧图片结果集
+     * @param array $Results 该字段用于返回图像审核结果的子结果，详细内容敬请参考ImageResultResult数据结构的描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Url 图片URL地址
+     * @param string $Url 该字段用于返回审核结果的访问链接（URL），图片支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：数据**默认有效期为12小时**。如您需要更长时间的保存，请在数据储存的COS桶中配置对应的储存时长。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Extra 附加字段
+     * @param string $Extra 该字段用于返回输入参数中的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

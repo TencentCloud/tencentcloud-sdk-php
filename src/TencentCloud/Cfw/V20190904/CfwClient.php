@@ -31,6 +31,10 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DeleteSecurityGroupRuleResponse DeleteSecurityGroupRule(Models\DeleteSecurityGroupRuleRequest $req) 删除规则
  * @method Models\DescribeAcListsResponse DescribeAcLists(Models\DescribeAcListsRequest $req) 访问控制列表
  * @method Models\DescribeAssociatedInstanceListResponse DescribeAssociatedInstanceList(Models\DescribeAssociatedInstanceListRequest $req) 获取安全组关联实例列表
+ * @method Models\DescribeBlockByIpTimesListResponse DescribeBlockByIpTimesList(Models\DescribeBlockByIpTimesListRequest $req) DescribeBlockByIpTimesList 告警中心阻断ip折线图
+
+ * @method Models\DescribeBlockStaticListResponse DescribeBlockStaticList(Models\DescribeBlockStaticListRequest $req) DescribeBlockStaticList 告警中心柱形图
+
  * @method Models\DescribeCfwEipsResponse DescribeCfwEips(Models\DescribeCfwEipsRequest $req) 查询防火墙弹性公网ip
  * @method Models\DescribeGuideScanInfoResponse DescribeGuideScanInfo(Models\DescribeGuideScanInfoRequest $req) DescribeGuideScanInfo新手引导扫描接口信息
  * @method Models\DescribeNatRuleOverviewResponse DescribeNatRuleOverview(Models\DescribeNatRuleOverviewRequest $req) nat规则列表概况
@@ -38,7 +42,13 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeSecurityGroupListResponse DescribeSecurityGroupList(Models\DescribeSecurityGroupListRequest $req) 查询安全组规则列表
  * @method Models\DescribeSwitchListsResponse DescribeSwitchLists(Models\DescribeSwitchListsRequest $req) 防火墙开关列表
  * @method Models\DescribeSyncAssetStatusResponse DescribeSyncAssetStatus(Models\DescribeSyncAssetStatusRequest $req) 同步资产状态查询-互联网&VPC
+ * @method Models\DescribeTLogInfoResponse DescribeTLogInfo(Models\DescribeTLogInfoRequest $req) DescribeTLogInfo告警中心概况
+
+ * @method Models\DescribeTLogIpListResponse DescribeTLogIpList(Models\DescribeTLogIpListRequest $req) DescribeTLogIpList告警中心ip柱形图
+
  * @method Models\DescribeTableStatusResponse DescribeTableStatus(Models\DescribeTableStatusRequest $req) 查询规则表状态
+ * @method Models\DescribeUnHandleEventTabListResponse DescribeUnHandleEventTabList(Models\DescribeUnHandleEventTabListRequest $req) DescribeUnHandleEventTabList 告警中心伪攻击链事件未处置接口
+
  * @method Models\DescribeVpcRuleOverviewResponse DescribeVpcRuleOverview(Models\DescribeVpcRuleOverviewRequest $req) vpc规则列表概况
  * @method Models\ExpandCfwVerticalResponse ExpandCfwVertical(Models\ExpandCfwVerticalRequest $req) 防火墙垂直扩容
  * @method Models\ModifyAcRuleResponse ModifyAcRule(Models\ModifyAcRuleRequest $req) 修改规则
@@ -48,6 +58,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
 批量增加拦截IP、忽略IP/域名
 批量删除拦截IP、忽略IP/域名
 批量修改拦截IP、忽略IP/域名生效事件
+ * @method Models\ModifyBlockTopResponse ModifyBlockTop(Models\ModifyBlockTopRequest $req) ModifyBlockTop取消置顶接口
  * @method Models\ModifyItemSwitchStatusResponse ModifyItemSwitchStatus(Models\ModifyItemSwitchStatusRequest $req) 修改单个防火墙开关
  * @method Models\ModifySecurityGroupAllRuleStatusResponse ModifySecurityGroupAllRuleStatus(Models\ModifySecurityGroupAllRuleStatusRequest $req) 启用停用全部规则
  * @method Models\ModifySequenceRulesResponse ModifySequenceRules(Models\ModifySequenceRulesRequest $req) 修改规则执行顺序

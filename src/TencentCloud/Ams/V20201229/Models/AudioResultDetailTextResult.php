@@ -20,90 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音频ASR文本审核结果
  *
- * @method string getLabel() 获取标签
+ * @method string getLabel() 获取该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置标签
+ * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getKeywords() 获取命中的关键词
+ * @method array getKeywords() 获取该字段用于返回ASR识别出的文本内容命中的关键词信息，用于标注内容违规的具体原因（如：加我微信）。该参数可能会有多个返回值，代表命中的多个关键词；若返回值为空，Score不为空，则代表识别结果所对应的恶意标签（Label）来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKeywords(array $Keywords) 设置命中的关键词
+ * @method void setKeywords(array $Keywords) 设置该字段用于返回ASR识别出的文本内容命中的关键词信息，用于标注内容违规的具体原因（如：加我微信）。该参数可能会有多个返回值，代表命中的多个关键词；若返回值为空，Score不为空，则代表识别结果所对应的恶意标签（Label）来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLibId() 获取命中的LibId
+ * @method string getLibId() 获取该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLibId(string $LibId) 设置命中的LibId
+ * @method void setLibId(string $LibId) 设置该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLibName() 获取命中的LibName
+ * @method string getLibName() 获取该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLibName(string $LibName) 设置命中的LibName
+ * @method void setLibName(string $LibName) 设置该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScore() 获取得分
+ * @method integer getScore() 获取该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScore(integer $Score) 设置得分
+ * @method void setScore(integer $Score) 设置该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSuggestion() 获取审核建议
+ * @method string getSuggestion() 获取该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuggestion(string $Suggestion) 设置审核建议
+ * @method void setSuggestion(string $Suggestion) 设置该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLibType() 获取词库类型 1 黑白库 2 自定义库
- * @method void setLibType(integer $LibType) 设置词库类型 1 黑白库 2 自定义库
+ * @method integer getLibType() 获取该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
+ * @method void setLibType(integer $LibType) 设置该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
  */
 class AudioResultDetailTextResult extends AbstractModel
 {
     /**
-     * @var string 标签
+     * @var string 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
-     * @var array 命中的关键词
+     * @var array 该字段用于返回ASR识别出的文本内容命中的关键词信息，用于标注内容违规的具体原因（如：加我微信）。该参数可能会有多个返回值，代表命中的多个关键词；若返回值为空，Score不为空，则代表识别结果所对应的恶意标签（Label）来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keywords;
 
     /**
-     * @var string 命中的LibId
+     * @var string 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibId;
 
     /**
-     * @var string 命中的LibName
+     * @var string 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibName;
 
     /**
-     * @var integer 得分
+     * @var integer 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
-     * @var string 审核建议
+     * @var string 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
-     * @var integer 词库类型 1 黑白库 2 自定义库
+     * @var integer 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
      */
     public $LibType;
 
     /**
-     * @param string $Label 标签
+     * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Keywords 命中的关键词
+     * @param array $Keywords 该字段用于返回ASR识别出的文本内容命中的关键词信息，用于标注内容违规的具体原因（如：加我微信）。该参数可能会有多个返回值，代表命中的多个关键词；若返回值为空，Score不为空，则代表识别结果所对应的恶意标签（Label）来自于语义模型判断的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LibId 命中的LibId
+     * @param string $LibId 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LibName 命中的LibName
+     * @param string $LibName 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Score 得分
+     * @param integer $Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Suggestion 审核建议
+     * @param string $Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LibType 词库类型 1 黑白库 2 自定义库
+     * @param integer $LibType 该字段用于返回自定义关键词对应的词库类型，取值为**1**（黑白库）和**2**（自定义关键词库），若未配置自定义关键词库,则默认值为1（黑白库匹配）。
      */
     function __construct()
     {

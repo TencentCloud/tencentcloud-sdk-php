@@ -20,74 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 凭据的基础信息
  *
- * @method string getSecretName() 获取凭据名称。
- * @method void setSecretName(string $SecretName) 设置凭据名称。
- * @method string getDescription() 获取凭据的描述信息。
- * @method void setDescription(string $Description) 设置凭据的描述信息。
- * @method string getKmsKeyId() 获取用于加密凭据的KMS KeyId。
- * @method void setKmsKeyId(string $KmsKeyId) 设置用于加密凭据的KMS KeyId。
- * @method integer getCreateUin() 获取创建者UIN。
- * @method void setCreateUin(integer $CreateUin) 设置创建者UIN。
- * @method string getStatus() 获取凭据状态：Enabled、Disabled、PendingDelete
- * @method void setStatus(string $Status) 设置凭据状态：Enabled、Disabled、PendingDelete
- * @method integer getDeleteTime() 获取凭据删除日期，对于status为PendingDelete 的有效，unix时间戳。
- * @method void setDeleteTime(integer $DeleteTime) 设置凭据删除日期，对于status为PendingDelete 的有效，unix时间戳。
- * @method integer getCreateTime() 获取凭据创建时间，unix时间戳。
- * @method void setCreateTime(integer $CreateTime) 设置凭据创建时间，unix时间戳。
- * @method string getKmsKeyType() 获取用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥。
- * @method void setKmsKeyType(string $KmsKeyType) 设置用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥。
+ * @method string getSecretName() 获取凭据名称
+ * @method void setSecretName(string $SecretName) 设置凭据名称
+ * @method string getDescription() 获取凭据的描述信息
+ * @method void setDescription(string $Description) 设置凭据的描述信息
+ * @method string getKmsKeyId() 获取用于加密凭据的KMS KeyId
+ * @method void setKmsKeyId(string $KmsKeyId) 设置用于加密凭据的KMS KeyId
+ * @method integer getCreateUin() 获取创建者UIN
+ * @method void setCreateUin(integer $CreateUin) 设置创建者UIN
+ * @method string getStatus() 获取凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
+ * @method void setStatus(string $Status) 设置凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
+ * @method integer getDeleteTime() 获取凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
+ * @method void setDeleteTime(integer $DeleteTime) 设置凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
+ * @method integer getCreateTime() 获取凭据创建时间，unix时间戳
+ * @method void setCreateTime(integer $CreateTime) 设置凭据创建时间，unix时间戳
+ * @method string getKmsKeyType() 获取用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
+ * @method void setKmsKeyType(string $KmsKeyType) 设置用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
+ * @method integer getRotationStatus() 获取1:--开启轮转；0--禁止轮转
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRotationStatus(integer $RotationStatus) 设置1:--开启轮转；0--禁止轮转
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNextRotationTime() 获取下一次轮转开始时间，uinx 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNextRotationTime(integer $NextRotationTime) 设置下一次轮转开始时间，uinx 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSecretType() 获取0 -- 用户自定义凭据；1 -- 云产品凭据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecretType(integer $SecretType) 设置0 -- 用户自定义凭据；1 -- 云产品凭据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductName() 获取云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductName(string $ProductName) 设置云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecretMetadata extends AbstractModel
 {
     /**
-     * @var string 凭据名称。
+     * @var string 凭据名称
      */
     public $SecretName;
 
     /**
-     * @var string 凭据的描述信息。
+     * @var string 凭据的描述信息
      */
     public $Description;
 
     /**
-     * @var string 用于加密凭据的KMS KeyId。
+     * @var string 用于加密凭据的KMS KeyId
      */
     public $KmsKeyId;
 
     /**
-     * @var integer 创建者UIN。
+     * @var integer 创建者UIN
      */
     public $CreateUin;
 
     /**
-     * @var string 凭据状态：Enabled、Disabled、PendingDelete
+     * @var string 凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
      */
     public $Status;
 
     /**
-     * @var integer 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳。
+     * @var integer 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
      */
     public $DeleteTime;
 
     /**
-     * @var integer 凭据创建时间，unix时间戳。
+     * @var integer 凭据创建时间，unix时间戳
      */
     public $CreateTime;
 
     /**
-     * @var string 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥。
+     * @var string 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
      */
     public $KmsKeyType;
 
     /**
-     * @param string $SecretName 凭据名称。
-     * @param string $Description 凭据的描述信息。
-     * @param string $KmsKeyId 用于加密凭据的KMS KeyId。
-     * @param integer $CreateUin 创建者UIN。
-     * @param string $Status 凭据状态：Enabled、Disabled、PendingDelete
-     * @param integer $DeleteTime 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳。
-     * @param integer $CreateTime 凭据创建时间，unix时间戳。
-     * @param string $KmsKeyType 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥。
+     * @var integer 1:--开启轮转；0--禁止轮转
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RotationStatus;
+
+    /**
+     * @var integer 下一次轮转开始时间，uinx 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NextRotationTime;
+
+    /**
+     * @var integer 0 -- 用户自定义凭据；1 -- 云产品凭据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecretType;
+
+    /**
+     * @var string 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductName;
+
+    /**
+     * @param string $SecretName 凭据名称
+     * @param string $Description 凭据的描述信息
+     * @param string $KmsKeyId 用于加密凭据的KMS KeyId
+     * @param integer $CreateUin 创建者UIN
+     * @param string $Status 凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
+     * @param integer $DeleteTime 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
+     * @param integer $CreateTime 凭据创建时间，unix时间戳
+     * @param string $KmsKeyType 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
+     * @param integer $RotationStatus 1:--开启轮转；0--禁止轮转
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NextRotationTime 下一次轮转开始时间，uinx 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SecretType 0 -- 用户自定义凭据；1 -- 云产品凭据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductName 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +180,22 @@ class SecretMetadata extends AbstractModel
 
         if (array_key_exists("KmsKeyType",$param) and $param["KmsKeyType"] !== null) {
             $this->KmsKeyType = $param["KmsKeyType"];
+        }
+
+        if (array_key_exists("RotationStatus",$param) and $param["RotationStatus"] !== null) {
+            $this->RotationStatus = $param["RotationStatus"];
+        }
+
+        if (array_key_exists("NextRotationTime",$param) and $param["NextRotationTime"] !== null) {
+            $this->NextRotationTime = $param["NextRotationTime"];
+        }
+
+        if (array_key_exists("SecretType",$param) and $param["SecretType"] !== null) {
+            $this->SecretType = $param["SecretType"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
         }
     }
 }

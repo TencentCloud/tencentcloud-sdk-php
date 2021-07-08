@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityId(integer $ActivityId) 设置活动ID。
  * @method string getName() 获取实例名。
  * @method void setName(string $Name) 设置实例名。
- * @method integer getNeedSupportIpv6() 获取是否需要支持Ipv6，1：是，0：否。
- * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) 设置是否需要支持Ipv6，1：是，0：否。
+ * @method integer getNeedSupportIpv6() 获取是否需要支持Ipv6，1：是，0：否（默认）。
+ * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) 设置是否需要支持Ipv6，1：是，0：否（默认）。
  * @method array getTagList() 获取实例需要绑定的Tag信息，默认为空。
  * @method void setTagList(array $TagList) 设置实例需要绑定的Tag信息，默认为空。
  * @method array getSecurityGroupIds() 获取安全组ID。
@@ -156,7 +156,7 @@ class CreateInstancesRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 是否需要支持Ipv6，1：是，0：否。
+     * @var integer 是否需要支持Ipv6，1：是，0：否（默认）。
      */
     public $NeedSupportIpv6;
 
@@ -189,7 +189,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param integer $AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费。
      * @param integer $ActivityId 活动ID。
      * @param string $Name 实例名。
-     * @param integer $NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否。
+     * @param integer $NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否（默认）。
      * @param array $TagList 实例需要绑定的Tag信息，默认为空。
      * @param array $SecurityGroupIds 安全组ID。
      */

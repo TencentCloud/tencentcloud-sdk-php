@@ -18,44 +18,36 @@ namespace TencentCloud\Ams\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  数据存储信息
+ * 用于表示数据存储的相关信息
  *
- * @method string getType() 获取类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
- * @method void setType(string $Type) 设置类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
- * @method string getUrl() 获取资源链接
- * @method void setUrl(string $Url) 设置资源链接
- * @method BucketInfo getBucketInfo() 获取腾讯云存储桶信息
- * @method void setBucketInfo(BucketInfo $BucketInfo) 设置腾讯云存储桶信息
+ * @method string getType() 获取该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)；该字段应当与传入的访问类型相对应，可用于强校验并方便系统快速识别访问地址；若不传入此参数，则默认值为URL，此时系统将自动判定访问地址类型。
+ * @method void setType(string $Type) 设置该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)；该字段应当与传入的访问类型相对应，可用于强校验并方便系统快速识别访问地址；若不传入此参数，则默认值为URL，此时系统将自动判定访问地址类型。
+ * @method string getUrl() 获取该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空，该参数与BucketInfo参数须传入其中之一
+ * @method void setUrl(string $Url) 设置该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空，该参数与BucketInfo参数须传入其中之一
+ * @method BucketInfo getBucketInfo() 获取该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空，该参数与Url参数须传入其中之一。
+ * @method void setBucketInfo(BucketInfo $BucketInfo) 设置该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空，该参数与Url参数须传入其中之一。
  */
 class StorageInfo extends AbstractModel
 {
     /**
-     * @var string 类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
+     * @var string 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)；该字段应当与传入的访问类型相对应，可用于强校验并方便系统快速识别访问地址；若不传入此参数，则默认值为URL，此时系统将自动判定访问地址类型。
      */
     public $Type;
 
     /**
-     * @var string 资源链接
+     * @var string 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空，该参数与BucketInfo参数须传入其中之一
      */
     public $Url;
 
     /**
-     * @var BucketInfo 腾讯云存储桶信息
+     * @var BucketInfo 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空，该参数与Url参数须传入其中之一。
      */
     public $BucketInfo;
 
     /**
-     * @param string $Type 类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
-     * @param string $Url 资源链接
-     * @param BucketInfo $BucketInfo 腾讯云存储桶信息
+     * @param string $Type 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)；该字段应当与传入的访问类型相对应，可用于强校验并方便系统快速识别访问地址；若不传入此参数，则默认值为URL，此时系统将自动判定访问地址类型。
+     * @param string $Url 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空，该参数与BucketInfo参数须传入其中之一
+     * @param BucketInfo $BucketInfo 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空，该参数与Url参数须传入其中之一。
      */
     function __construct()
     {

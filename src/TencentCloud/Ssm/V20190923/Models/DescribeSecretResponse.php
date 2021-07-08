@@ -28,12 +28,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKmsKeyId(string $KmsKeyId) 设置用于加密的KMS CMK ID。
  * @method integer getCreateUin() 获取创建者UIN。
  * @method void setCreateUin(integer $CreateUin) 设置创建者UIN。
- * @method string getStatus() 获取凭据状态：Enabled、Disabled、PendingDelete
- * @method void setStatus(string $Status) 设置凭据状态：Enabled、Disabled、PendingDelete
+ * @method string getStatus() 获取凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
+ * @method void setStatus(string $Status) 设置凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
  * @method integer getDeleteTime() 获取删除日期，uinx 时间戳，非计划删除状态的凭据为0。
  * @method void setDeleteTime(integer $DeleteTime) 设置删除日期，uinx 时间戳，非计划删除状态的凭据为0。
  * @method integer getCreateTime() 获取创建日期。
  * @method void setCreateTime(integer $CreateTime) 设置创建日期。
+ * @method integer getSecretType() 获取0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecretType(integer $SecretType) 设置0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductName() 获取云产品名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductName(string $ProductName) 设置云产品名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceID() 获取云产品实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceID(string $ResourceID) 设置云产品实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getRotationStatus() 获取是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRotationStatus(boolean $RotationStatus) 设置是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRotationFrequency() 获取轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRotationFrequency(integer $RotationFrequency) 设置轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -60,7 +80,7 @@ class DescribeSecretResponse extends AbstractModel
     public $CreateUin;
 
     /**
-     * @var string 凭据状态：Enabled、Disabled、PendingDelete
+     * @var string 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
      */
     public $Status;
 
@@ -75,6 +95,36 @@ class DescribeSecretResponse extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecretType;
+
+    /**
+     * @var string 云产品名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductName;
+
+    /**
+     * @var string 云产品实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceID;
+
+    /**
+     * @var boolean 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RotationStatus;
+
+    /**
+     * @var integer 轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RotationFrequency;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -84,9 +134,19 @@ class DescribeSecretResponse extends AbstractModel
      * @param string $Description 凭据描述信息。
      * @param string $KmsKeyId 用于加密的KMS CMK ID。
      * @param integer $CreateUin 创建者UIN。
-     * @param string $Status 凭据状态：Enabled、Disabled、PendingDelete
+     * @param string $Status 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
      * @param integer $DeleteTime 删除日期，uinx 时间戳，非计划删除状态的凭据为0。
      * @param integer $CreateTime 创建日期。
+     * @param integer $SecretType 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductName 云产品名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceID 云产品实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $RotationStatus 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RotationFrequency 轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +188,26 @@ class DescribeSecretResponse extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("SecretType",$param) and $param["SecretType"] !== null) {
+            $this->SecretType = $param["SecretType"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("ResourceID",$param) and $param["ResourceID"] !== null) {
+            $this->ResourceID = $param["ResourceID"];
+        }
+
+        if (array_key_exists("RotationStatus",$param) and $param["RotationStatus"] !== null) {
+            $this->RotationStatus = $param["RotationStatus"];
+        }
+
+        if (array_key_exists("RotationFrequency",$param) and $param["RotationFrequency"] !== null) {
+            $this->RotationFrequency = $param["RotationFrequency"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -18,140 +18,128 @@ namespace TencentCloud\Ams\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 音频输出参数
+ * 音频审核输出参数
  *
- * @method integer getHitFlag() 获取是否命中
-0 未命中
-1 命中
+ * @method integer getHitFlag() 获取该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHitFlag(integer $HitFlag) 设置是否命中
-0 未命中
-1 命中
+ * @method void setHitFlag(integer $HitFlag) 设置该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
+ * @method string getLabel() 获取该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
+ * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+ * @method string getSuggestion() 获取该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+ * @method void setSuggestion(string $Suggestion) 设置该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScore() 获取得分，0-100
+ * @method integer getScore() 获取该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScore(integer $Score) 设置得分，0-100
+ * @method void setScore(integer $Score) 设置该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getText() 获取音频ASR文本
+ * @method string getText() 获取该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setText(string $Text) 设置音频ASR文本
+ * @method void setText(string $Text) 设置该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUrl() 获取音频片段存储URL，有效期为1天
+ * @method string getUrl() 获取该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUrl(string $Url) 设置音频片段存储URL，有效期为1天
+ * @method void setUrl(string $Url) 设置该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDuration() 获取音频时长
- * @method void setDuration(string $Duration) 设置音频时长
- * @method string getExtra() 获取拓展字段
- * @method void setExtra(string $Extra) 设置拓展字段
- * @method array getTextResults() 获取文本识别结果
- * @method void setTextResults(array $TextResults) 设置文本识别结果
- * @method array getMoanResults() 获取音频呻吟检测结果
- * @method void setMoanResults(array $MoanResults) 设置音频呻吟检测结果
- * @method array getLanguageResults() 获取音频语言检测结果
- * @method void setLanguageResults(array $LanguageResults) 设置音频语言检测结果
+ * @method string getDuration() 获取该字段用于返回音频文件的时长，单位为秒。
+ * @method void setDuration(string $Duration) 设置该字段用于返回音频文件的时长，单位为秒。
+ * @method string getExtra() 获取该字段用于返回额外附加信息，不同客户或Biztype下返回信息不同。
+ * @method void setExtra(string $Extra) 设置该字段用于返回额外附加信息，不同客户或Biztype下返回信息不同。
+ * @method array getTextResults() 获取该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+ * @method void setTextResults(array $TextResults) 设置该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+ * @method array getMoanResults() 获取该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
+ * @method void setMoanResults(array $MoanResults) 设置该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
+ * @method array getLanguageResults() 获取该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+ * @method void setLanguageResults(array $LanguageResults) 设置该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
  */
 class AudioResult extends AbstractModel
 {
     /**
-     * @var integer 是否命中
-0 未命中
-1 命中
+     * @var integer 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HitFlag;
 
     /**
-     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
+     * @var string 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
-     * @var string 建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     * @var string 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
-     * @var integer 得分，0-100
+     * @var integer 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
-     * @var string 音频ASR文本
+     * @var string 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
-     * @var string 音频片段存储URL，有效期为1天
+     * @var string 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
-     * @var string 音频时长
+     * @var string 该字段用于返回音频文件的时长，单位为秒。
      */
     public $Duration;
 
     /**
-     * @var string 拓展字段
+     * @var string 该字段用于返回额外附加信息，不同客户或Biztype下返回信息不同。
      */
     public $Extra;
 
     /**
-     * @var array 文本识别结果
+     * @var array 该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
      */
     public $TextResults;
 
     /**
-     * @var array 音频呻吟检测结果
+     * @var array 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
      */
     public $MoanResults;
 
     /**
-     * @var array 音频语言检测结果
+     * @var array 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
      */
     public $LanguageResults;
 
     /**
-     * @param integer $HitFlag 是否命中
-0 未命中
-1 命中
+     * @param integer $HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及其他令人反感、不安全或不适宜的内容类型。
+     * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Suggestion 建议您拿到判断结果后的执行操作。
-建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+     * @param string $Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Score 得分，0-100
+     * @param integer $Score 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Text 音频ASR文本
+     * @param string $Text 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Url 音频片段存储URL，有效期为1天
+     * @param string $Url 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Duration 音频时长
-     * @param string $Extra 拓展字段
-     * @param array $TextResults 文本识别结果
-     * @param array $MoanResults 音频呻吟检测结果
-     * @param array $LanguageResults 音频语言检测结果
+     * @param string $Duration 该字段用于返回音频文件的时长，单位为秒。
+     * @param string $Extra 该字段用于返回额外附加信息，不同客户或Biztype下返回信息不同。
+     * @param array $TextResults 该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+     * @param array $MoanResults 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
+     * @param array $LanguageResults 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
      */
     function __construct()
     {

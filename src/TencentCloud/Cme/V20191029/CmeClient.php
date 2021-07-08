@@ -24,6 +24,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 
 /**
  * @method Models\AddTeamMemberResponse AddTeamMember(Models\AddTeamMemberRequest $req) 向一个团队中团队成员，并且指定成员的角色。
+ * @method Models\CopyProjectResponse CopyProject(Models\CopyProjectRequest $req) 复制一个项目，包括项目素材及轨道数据。目前仅普通剪辑及模板制作项目可复制，其它类型的项目不支持复制。
  * @method Models\CreateClassResponse CreateClass(Models\CreateClassRequest $req) 新增分类，用于管理素材。分类层数不能超过20。
  * @method Models\CreateLinkResponse CreateLink(Models\CreateLinkRequest $req)  创建媒体链接或分类路径链接，将源资源信息链接到目标。
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建云剪的编辑项目，支持创建视频剪辑、直播剪辑、导播台、视频拆条、录制回放以及云转推项目。

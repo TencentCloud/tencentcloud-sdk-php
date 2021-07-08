@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片详情位置信息
  *
- * @method float getX() 获取x坐标
+ * @method float getX() 获取该参数用于标识OCR检测框左上角位置的**横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setX(float $X) 设置x坐标
+ * @method void setX(float $X) 设置该参数用于标识OCR检测框左上角位置的**横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getY() 获取y坐标
+ * @method float getY() 获取该参数用于标识OCR检测框左上角位置的**纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setY(float $Y) 设置y坐标
+ * @method void setY(float $Y) 设置该参数用于标识OCR检测框左上角位置的**纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWidth() 获取宽度
+ * @method integer getWidth() 获取该参数用于标识OCR检测框的宽度（**由左上角出发在x轴向右延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWidth(integer $Width) 设置宽度
+ * @method void setWidth(integer $Width) 设置该参数用于标识OCR检测框的宽度（**由左上角出发在x轴向右延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHeight() 获取高度
+ * @method integer getHeight() 获取该参数用于标识OCR检测框的高度（**由左上角出发在y轴向下延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeight(integer $Height) 设置高度
+ * @method void setHeight(integer $Height) 设置该参数用于标识OCR检测框的高度（**由左上角出发在y轴向下延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getRotate() 获取旋转角度
+ * @method float getRotate() 获取该参数用于标识OCR检测框的旋转角度，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：0-360（**角度制**），方向为**逆时针旋**转。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRotate(float $Rotate) 设置旋转角度
+ * @method void setRotate(float $Rotate) 设置该参数用于标识OCR检测框的旋转角度，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：0-360（**角度制**），方向为**逆时针旋**转。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageResultsResultDetailLocation extends AbstractModel
 {
     /**
-     * @var float x坐标
+     * @var float 该参数用于标识OCR检测框左上角位置的**横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
-     * @var float y坐标
+     * @var float 该参数用于标识OCR检测框左上角位置的**纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
-     * @var integer 宽度
+     * @var integer 该参数用于标识OCR检测框的宽度（**由左上角出发在x轴向右延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
-     * @var integer 高度
+     * @var integer 该参数用于标识OCR检测框的高度（**由左上角出发在y轴向下延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
-     * @var float 旋转角度
+     * @var float 该参数用于标识OCR检测框的旋转角度，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：0-360（**角度制**），方向为**逆时针旋**转。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rotate;
 
     /**
-     * @param float $X x坐标
+     * @param float $X 该参数用于标识OCR检测框左上角位置的**横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Y y坐标
+     * @param float $Y 该参数用于标识OCR检测框左上角位置的**纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Width 宽度
+     * @param integer $Width 该参数用于标识OCR检测框的宽度（**由左上角出发在x轴向右延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Height 高度
+     * @param integer $Height 该参数用于标识OCR检测框的高度（**由左上角出发在y轴向下延伸的长度**）。结合剩余参数可唯一确定检测框的大小和位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Rotate 旋转角度
+     * @param float $Rotate 该参数用于标识OCR检测框的旋转角度，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：0-360（**角度制**），方向为**逆时针旋**转。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务筛选器
  *
- * @method string getBizType() 获取任务业务类型
- * @method void setBizType(string $BizType) 设置任务业务类型
- * @method string getType() 获取任务类型，可选：VIDEO，AUDIO， LIVE_VIDEO, LIVE_AUDIO
- * @method void setType(string $Type) 设置任务类型，可选：VIDEO，AUDIO， LIVE_VIDEO, LIVE_AUDIO
- * @method string getSuggestion() 获取建议，可选：Pass, Review,Block
- * @method void setSuggestion(string $Suggestion) 设置建议，可选：Pass, Review,Block
- * @method string getTaskStatus() 获取状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
- * @method void setTaskStatus(string $TaskStatus) 设置状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
+ * @method string getBizType() 获取该字段用于传入任务对应的业务类型供筛选器进行筛选。Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与审核策略，调用前请确认正确的Biztype。Biztype仅为**数字、字母与下划线的组合**，长度为3-32个字符。<br>备注：在不传入该参数时筛选器默认不筛选业务类型。
+ * @method void setBizType(string $BizType) 设置该字段用于传入任务对应的业务类型供筛选器进行筛选。Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与审核策略，调用前请确认正确的Biztype。Biztype仅为**数字、字母与下划线的组合**，长度为3-32个字符。<br>备注：在不传入该参数时筛选器默认不筛选业务类型。
+ * @method string getType() 获取该字段用于传入音频审核对应的任务类型供筛选器进行筛选，取值为：**VIDEO**（点播视频审核），**AUDIO**（点播音频审核）， **LIVE_VIDEO**（直播视频审核）, **LIVE_AUDIO**（直播音频审核）。<br>备注：在不传入该参数时筛选器默认不筛选任务类型。
+ * @method void setType(string $Type) 设置该字段用于传入音频审核对应的任务类型供筛选器进行筛选，取值为：**VIDEO**（点播视频审核），**AUDIO**（点播音频审核）， **LIVE_VIDEO**（直播视频审核）, **LIVE_AUDIO**（直播音频审核）。<br>备注：在不传入该参数时筛选器默认不筛选任务类型。
+ * @method string getSuggestion() 获取该字段用于传入音频审核对应的建议操作供筛选器进行筛选，取值为：**Block**：建议屏蔽，**Review**：建议人工复审，**Pass**：建议通过。<br>备注：在不传入该参数时筛选器默认不筛选建议操作。
+ * @method void setSuggestion(string $Suggestion) 设置该字段用于传入音频审核对应的建议操作供筛选器进行筛选，取值为：**Block**：建议屏蔽，**Review**：建议人工复审，**Pass**：建议通过。<br>备注：在不传入该参数时筛选器默认不筛选建议操作。
+ * @method string getTaskStatus() 获取该字段用于传入审核任务的任务状态供筛选器进行筛选，取值为：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。<br>备注：在不传入该参数时筛选器默认不筛选任务状态。
+ * @method void setTaskStatus(string $TaskStatus) 设置该字段用于传入审核任务的任务状态供筛选器进行筛选，取值为：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。<br>备注：在不传入该参数时筛选器默认不筛选任务状态。
  */
 class TaskFilter extends AbstractModel
 {
     /**
-     * @var string 任务业务类型
+     * @var string 该字段用于传入任务对应的业务类型供筛选器进行筛选。Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与审核策略，调用前请确认正确的Biztype。Biztype仅为**数字、字母与下划线的组合**，长度为3-32个字符。<br>备注：在不传入该参数时筛选器默认不筛选业务类型。
      */
     public $BizType;
 
     /**
-     * @var string 任务类型，可选：VIDEO，AUDIO， LIVE_VIDEO, LIVE_AUDIO
+     * @var string 该字段用于传入音频审核对应的任务类型供筛选器进行筛选，取值为：**VIDEO**（点播视频审核），**AUDIO**（点播音频审核）， **LIVE_VIDEO**（直播视频审核）, **LIVE_AUDIO**（直播音频审核）。<br>备注：在不传入该参数时筛选器默认不筛选任务类型。
      */
     public $Type;
 
     /**
-     * @var string 建议，可选：Pass, Review,Block
+     * @var string 该字段用于传入音频审核对应的建议操作供筛选器进行筛选，取值为：**Block**：建议屏蔽，**Review**：建议人工复审，**Pass**：建议通过。<br>备注：在不传入该参数时筛选器默认不筛选建议操作。
      */
     public $Suggestion;
 
     /**
-     * @var string 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
+     * @var string 该字段用于传入审核任务的任务状态供筛选器进行筛选，取值为：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。<br>备注：在不传入该参数时筛选器默认不筛选任务状态。
      */
     public $TaskStatus;
 
     /**
-     * @param string $BizType 任务业务类型
-     * @param string $Type 任务类型，可选：VIDEO，AUDIO， LIVE_VIDEO, LIVE_AUDIO
-     * @param string $Suggestion 建议，可选：Pass, Review,Block
-     * @param string $TaskStatus 状态，可选：PENDING，RUNNING，ERROR，FINISH，CANCELLED
+     * @param string $BizType 该字段用于传入任务对应的业务类型供筛选器进行筛选。Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与审核策略，调用前请确认正确的Biztype。Biztype仅为**数字、字母与下划线的组合**，长度为3-32个字符。<br>备注：在不传入该参数时筛选器默认不筛选业务类型。
+     * @param string $Type 该字段用于传入音频审核对应的任务类型供筛选器进行筛选，取值为：**VIDEO**（点播视频审核），**AUDIO**（点播音频审核）， **LIVE_VIDEO**（直播视频审核）, **LIVE_AUDIO**（直播音频审核）。<br>备注：在不传入该参数时筛选器默认不筛选任务类型。
+     * @param string $Suggestion 该字段用于传入音频审核对应的建议操作供筛选器进行筛选，取值为：**Block**：建议屏蔽，**Review**：建议人工复审，**Pass**：建议通过。<br>备注：在不传入该参数时筛选器默认不筛选建议操作。
+     * @param string $TaskStatus 该字段用于传入审核任务的任务状态供筛选器进行筛选，取值为：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。<br>备注：在不传入该参数时筛选器默认不筛选任务状态。
      */
     function __construct()
     {

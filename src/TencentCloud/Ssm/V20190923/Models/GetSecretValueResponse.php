@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretName(string $SecretName) 设置凭据的名称。
  * @method string getVersionId() 获取该凭据对应的版本号。
  * @method void setVersionId(string $VersionId) 设置该凭据对应的版本号。
- * @method string getSecretBinary() 获取在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。SecretBinary和SecretString只有一个不为空。
- * @method void setSecretBinary(string $SecretBinary) 设置在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。SecretBinary和SecretString只有一个不为空。
- * @method string getSecretString() 获取在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。SecretBinary和SecretString只有一个不为空。
- * @method void setSecretString(string $SecretString) 设置在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。SecretBinary和SecretString只有一个不为空。
+ * @method string getSecretBinary() 获取在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。
+SecretBinary和SecretString只有一个不为空。
+ * @method void setSecretBinary(string $SecretBinary) 设置在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。
+SecretBinary和SecretString只有一个不为空。
+ * @method string getSecretString() 获取在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。
+SecretBinary和SecretString只有一个不为空。
+ * @method void setSecretString(string $SecretString) 设置在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。
+SecretBinary和SecretString只有一个不为空。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -44,12 +48,14 @@ class GetSecretValueResponse extends AbstractModel
     public $VersionId;
 
     /**
-     * @var string 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。SecretBinary和SecretString只有一个不为空。
+     * @var string 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。
+SecretBinary和SecretString只有一个不为空。
      */
     public $SecretBinary;
 
     /**
-     * @var string 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。SecretBinary和SecretString只有一个不为空。
+     * @var string 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。
+SecretBinary和SecretString只有一个不为空。
      */
     public $SecretString;
 
@@ -61,8 +67,10 @@ class GetSecretValueResponse extends AbstractModel
     /**
      * @param string $SecretName 凭据的名称。
      * @param string $VersionId 该凭据对应的版本号。
-     * @param string $SecretBinary 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。SecretBinary和SecretString只有一个不为空。
-     * @param string $SecretString 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。SecretBinary和SecretString只有一个不为空。
+     * @param string $SecretBinary 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。
+SecretBinary和SecretString只有一个不为空。
+     * @param string $SecretString 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。
+SecretBinary和SecretString只有一个不为空。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

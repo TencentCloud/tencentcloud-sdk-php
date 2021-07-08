@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretName(string $SecretName) 设置指定需要更新凭据内容的名称。
  * @method string getVersionId() 获取指定需要更新凭据内容的版本号。
  * @method void setVersionId(string $VersionId) 设置指定需要更新凭据内容的版本号。
- * @method string getSecretBinary() 获取新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
- * @method void setSecretBinary(string $SecretBinary) 设置新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
- * @method string getSecretString() 获取新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
- * @method void setSecretString(string $SecretString) 设置新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
+ * @method string getSecretBinary() 获取新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
+SecretBinary 和 SecretString 只能一个不为空。
+ * @method void setSecretBinary(string $SecretBinary) 设置新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
+SecretBinary 和 SecretString 只能一个不为空。
+ * @method string getSecretString() 获取新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
+ * @method void setSecretString(string $SecretString) 设置新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
  */
 class UpdateSecretRequest extends AbstractModel
 {
@@ -42,20 +44,22 @@ class UpdateSecretRequest extends AbstractModel
     public $VersionId;
 
     /**
-     * @var string 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
+     * @var string 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
+SecretBinary 和 SecretString 只能一个不为空。
      */
     public $SecretBinary;
 
     /**
-     * @var string 新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
+     * @var string 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
      */
     public $SecretString;
 
     /**
      * @param string $SecretName 指定需要更新凭据内容的名称。
      * @param string $VersionId 指定需要更新凭据内容的版本号。
-     * @param string $SecretBinary 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
-     * @param string $SecretString 新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
+     * @param string $SecretBinary 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
+SecretBinary 和 SecretString 只能一个不为空。
+     * @param string $SecretString 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
      */
     function __construct()
     {

@@ -18,36 +18,36 @@ namespace TencentCloud\Ams\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 音视频任务结构
+ * 音视频任务数据结构
  *
- * @method string getDataId() 获取数据ID
- * @method void setDataId(string $DataId) 设置数据ID
- * @method string getName() 获取任务名
- * @method void setName(string $Name) 设置任务名
- * @method StorageInfo getInput() 获取任务输入
- * @method void setInput(StorageInfo $Input) 设置任务输入
+ * @method string getDataId() 获取选填参数，该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
+ * @method void setDataId(string $DataId) 设置选填参数，该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
+ * @method string getName() 获取选填参数，该字段表示音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
+ * @method void setName(string $Name) 设置选填参数，该字段表示音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
+ * @method StorageInfo getInput() 获取必填参数，该字段表示审核文件的访问参数，用于获取审核媒体文件，该参数内包括访问类型和访问地址。
+ * @method void setInput(StorageInfo $Input) 设置必填参数，该字段表示审核文件的访问参数，用于获取审核媒体文件，该参数内包括访问类型和访问地址。
  */
 class TaskInput extends AbstractModel
 {
     /**
-     * @var string 数据ID
+     * @var string 选填参数，该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
      */
     public $DataId;
 
     /**
-     * @var string 任务名
+     * @var string 选填参数，该字段表示音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
      */
     public $Name;
 
     /**
-     * @var StorageInfo 任务输入
+     * @var StorageInfo 必填参数，该字段表示审核文件的访问参数，用于获取审核媒体文件，该参数内包括访问类型和访问地址。
      */
     public $Input;
 
     /**
-     * @param string $DataId 数据ID
-     * @param string $Name 任务名
-     * @param StorageInfo $Input 任务输入
+     * @param string $DataId 选填参数，该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
+     * @param string $Name 选填参数，该字段表示音频审核任务所对应的任务名称，方便后续查询和管理审核任务。
+     * @param StorageInfo $Input 必填参数，该字段表示审核文件的访问参数，用于获取审核媒体文件，该参数内包括访问类型和访问地址。
      */
     function __construct()
     {

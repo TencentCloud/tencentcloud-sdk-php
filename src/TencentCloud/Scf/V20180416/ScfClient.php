@@ -52,6 +52,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(Models\GetProvisionedConcurrencyConfigRequest $req) 获取函数或函数某一版本的预置并发详情。
  * @method Models\GetReservedConcurrencyConfigResponse GetReservedConcurrencyConfig(Models\GetReservedConcurrencyConfigRequest $req) 获取函数的保留并发详情。
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 该接口用于运行函数。
+ * @method Models\InvokeFunctionResponse InvokeFunction(Models\InvokeFunctionRequest $req)  SCF同步调用函数接口
  * @method Models\ListAliasesResponse ListAliases(Models\ListAliasesRequest $req) 返回一个函数下的全部别名，可以根据特定函数版本过滤。
  * @method Models\ListAsyncEventsResponse ListAsyncEvents(Models\ListAsyncEventsRequest $req) 拉取函数异步事件列表
  * @method Models\ListFunctionsResponse ListFunctions(Models\ListFunctionsRequest $req) 该接口根据传入的查询参数返回相关函数信息。

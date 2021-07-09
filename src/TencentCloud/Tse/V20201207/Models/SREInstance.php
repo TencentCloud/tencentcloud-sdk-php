@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置集群创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEnvInfos() 获取环境配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvInfos(array $EnvInfos) 设置环境配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -150,6 +154,12 @@ class SREInstance extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var array 环境配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnvInfos;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -171,6 +181,8 @@ class SREInstance extends AbstractModel
      * @param string $EKSClusterID EKS集群的ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 集群创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $EnvInfos 环境配置信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +256,15 @@ class SREInstance extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("EnvInfos",$param) and $param["EnvInfos"] !== null) {
+            $this->EnvInfos = [];
+            foreach ($param["EnvInfos"] as $key => $value){
+                $obj = new EnvInfo();
+                $obj->deserialize($value);
+                array_push($this->EnvInfos, $obj);
+            }
         }
     }
 }

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTokenizer(string $Tokenizer) 设置字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
  * @method boolean getSqlFlag() 获取字段是否开启分析功能
  * @method void setSqlFlag(boolean $SqlFlag) 设置字段是否开启分析功能
+ * @method boolean getContainZH() 获取是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainZH(boolean $ContainZH) 设置是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ValueInfo extends AbstractModel
 {
@@ -45,9 +49,17 @@ class ValueInfo extends AbstractModel
     public $SqlFlag;
 
     /**
+     * @var boolean 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainZH;
+
+    /**
      * @param string $Type 字段类型，目前支持的类型有：long、text、double
      * @param string $Tokenizer 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
      * @param boolean $SqlFlag 字段是否开启分析功能
+     * @param boolean $ContainZH 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class ValueInfo extends AbstractModel
 
         if (array_key_exists("SqlFlag",$param) and $param["SqlFlag"] !== null) {
             $this->SqlFlag = $param["SqlFlag"];
+        }
+
+        if (array_key_exists("ContainZH",$param) and $param["ContainZH"] !== null) {
+            $this->ContainZH = $param["ContainZH"];
         }
     }
 }

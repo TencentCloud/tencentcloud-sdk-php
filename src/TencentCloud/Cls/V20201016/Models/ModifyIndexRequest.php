@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取日志主题ID
  * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method boolean getStatus() 获取是否生效
- * @method void setStatus(boolean $Status) 设置是否生效
+ * @method boolean getStatus() 获取默认不生效
+ * @method void setStatus(boolean $Status) 设置默认不生效
  * @method RuleInfo getRule() 获取索引规则，Rule和Effective两个必须有一个参数存在
  * @method void setRule(RuleInfo $Rule) 设置索引规则，Rule和Effective两个必须有一个参数存在
  */
@@ -35,7 +35,7 @@ class ModifyIndexRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var boolean 是否生效
+     * @var boolean 默认不生效
      */
     public $Status;
 
@@ -46,7 +46,7 @@ class ModifyIndexRequest extends AbstractModel
 
     /**
      * @param string $TopicId 日志主题ID
-     * @param boolean $Status 是否生效
+     * @param boolean $Status 默认不生效
      * @param RuleInfo $Rule 索引规则，Rule和Effective两个必须有一个参数存在
      */
     function __construct()

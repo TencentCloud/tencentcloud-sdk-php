@@ -70,6 +70,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(Models\InquiryPriceCreateInstanceRequest $req) 查询新购实例价格
  * @method Models\InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(Models\InquiryPriceRenewInstanceRequest $req) 查询实例续费价格（包年包月）
  * @method Models\InquiryPriceUpgradeInstanceResponse InquiryPriceUpgradeInstance(Models\InquiryPriceUpgradeInstanceRequest $req) 查询实例扩容价格
+ * @method Models\KillMasterGroupResponse KillMasterGroup(Models\KillMasterGroupRequest $req) 模拟故障
  * @method Models\ManualBackupInstanceResponse ManualBackupInstance(Models\ManualBackupInstanceRequest $req) 手动备份Redis实例
  * @method Models\ModfiyInstancePasswordResponse ModfiyInstancePassword(Models\ModfiyInstancePasswordRequest $req) 修改redis密码
  * @method Models\ModifyAutoBackupConfigResponse ModifyAutoBackupConfig(Models\ModifyAutoBackupConfigRequest $req) 设置自动备份时间

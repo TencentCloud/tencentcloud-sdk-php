@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUserType() 获取用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
- * @method void setUserType(integer $UserType) 设置用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
+ * @method integer getUserType() 获取用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
+ * @method void setUserType(integer $UserType) 设置用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
  * @method string getLastLoginIp() 获取最近登录IP
  * @method void setLastLoginIp(string $LastLoginIp) 设置最近登录IP
  * @method string getLastLoginTime() 获取最近登录时间
@@ -70,7 +70,7 @@ class SubAccountUser extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
+     * @var integer 用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
      */
     public $UserType;
 
@@ -92,7 +92,7 @@ class SubAccountUser extends AbstractModel
      * @param string $Remark 子用户备注
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UserType 用户类型(1:主账号;2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
+     * @param integer $UserType 用户类型(2:子用户;3:企业微信子用户;4:协作者;5:消息接收人)
      * @param string $LastLoginIp 最近登录IP
      * @param string $LastLoginTime 最近登录时间
 注意：此字段可能返回 null，表示取不到有效值。

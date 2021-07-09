@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiZoneSubnetPolicy(string $MultiZoneSubnetPolicy) 设置多可用区/子网策略。
 <br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
 <br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
+ * @method string getHealthCheckType() 获取伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
+ * @method void setHealthCheckType(string $HealthCheckType) 设置伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
+ * @method integer getLoadBalancerHealthCheckGracePeriod() 获取CLB健康检查宽限期
+ * @method void setLoadBalancerHealthCheckGracePeriod(integer $LoadBalancerHealthCheckGracePeriod) 设置CLB健康检查宽限期
  */
 class AutoScalingGroup extends AbstractModel
 {
@@ -212,6 +216,16 @@ class AutoScalingGroup extends AbstractModel
     public $MultiZoneSubnetPolicy;
 
     /**
+     * @var string 伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
+     */
+    public $HealthCheckType;
+
+    /**
+     * @var integer CLB健康检查宽限期
+     */
+    public $LoadBalancerHealthCheckGracePeriod;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称
      * @param string $AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
@@ -240,6 +254,8 @@ class AutoScalingGroup extends AbstractModel
      * @param string $MultiZoneSubnetPolicy 多可用区/子网策略。
 <br><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。
 <br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
+     * @param string $HealthCheckType 伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
+     * @param integer $LoadBalancerHealthCheckGracePeriod CLB健康检查宽限期
      */
     function __construct()
     {
@@ -367,6 +383,14 @@ class AutoScalingGroup extends AbstractModel
 
         if (array_key_exists("MultiZoneSubnetPolicy",$param) and $param["MultiZoneSubnetPolicy"] !== null) {
             $this->MultiZoneSubnetPolicy = $param["MultiZoneSubnetPolicy"];
+        }
+
+        if (array_key_exists("HealthCheckType",$param) and $param["HealthCheckType"] !== null) {
+            $this->HealthCheckType = $param["HealthCheckType"];
+        }
+
+        if (array_key_exists("LoadBalancerHealthCheckGracePeriod",$param) and $param["LoadBalancerHealthCheckGracePeriod"] !== null) {
+            $this->LoadBalancerHealthCheckGracePeriod = $param["LoadBalancerHealthCheckGracePeriod"];
         }
     }
 }

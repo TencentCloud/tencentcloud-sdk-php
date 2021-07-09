@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCaseSensitive(boolean $CaseSensitive) 设置是否大小写敏感
  * @method string getTokenizer() 获取全文索引的分词符，字符串中每个字符代表一个分词符
  * @method void setTokenizer(string $Tokenizer) 设置全文索引的分词符，字符串中每个字符代表一个分词符
+ * @method boolean getContainZH() 获取是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainZH(boolean $ContainZH) 设置是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FullTextInfo extends AbstractModel
 {
@@ -38,8 +42,16 @@ class FullTextInfo extends AbstractModel
     public $Tokenizer;
 
     /**
+     * @var boolean 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainZH;
+
+    /**
      * @param boolean $CaseSensitive 是否大小写敏感
      * @param string $Tokenizer 全文索引的分词符，字符串中每个字符代表一个分词符
+     * @param boolean $ContainZH 是否包含中文
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class FullTextInfo extends AbstractModel
 
         if (array_key_exists("Tokenizer",$param) and $param["Tokenizer"] !== null) {
             $this->Tokenizer = $param["Tokenizer"];
+        }
+
+        if (array_key_exists("ContainZH",$param) and $param["ContainZH"] !== null) {
+            $this->ContainZH = $param["ContainZH"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSnapshotIds() 获取要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
  * @method void setSnapshotIds(array $SnapshotIds) 设置要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
+ * @method boolean getDeleteBindImages() 获取是否强制删除快照关联的镜像
+ * @method void setDeleteBindImages(boolean $DeleteBindImages) 设置是否强制删除快照关联的镜像
  */
 class DeleteSnapshotsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteSnapshotsRequest extends AbstractModel
     public $SnapshotIds;
 
     /**
+     * @var boolean 是否强制删除快照关联的镜像
+     */
+    public $DeleteBindImages;
+
+    /**
      * @param array $SnapshotIds 要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
+     * @param boolean $DeleteBindImages 是否强制删除快照关联的镜像
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteSnapshotsRequest extends AbstractModel
         }
         if (array_key_exists("SnapshotIds",$param) and $param["SnapshotIds"] !== null) {
             $this->SnapshotIds = $param["SnapshotIds"];
+        }
+
+        if (array_key_exists("DeleteBindImages",$param) and $param["DeleteBindImages"] !== null) {
+            $this->DeleteBindImages = $param["DeleteBindImages"];
         }
     }
 }

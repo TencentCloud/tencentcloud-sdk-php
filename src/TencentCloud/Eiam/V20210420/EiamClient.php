@@ -27,7 +27,6 @@ use TencentCloud\Eiam\V20210420\Models as Models;
  * @method Models\CreateOrgNodeResponse CreateOrgNode(Models\CreateOrgNodeRequest $req) 新建一个机构节点
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 新建一个用户
  * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) 新建用户组
- * @method Models\DecribePublicKeyResponse DecribePublicKey(Models\DecribePublicKeyRequest $req) 获取JWT公钥信息
  * @method Models\DeleteOrgNodeResponse DeleteOrgNode(Models\DeleteOrgNodeRequest $req) 删除一个机构节点
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 通过用户名或用户 id 删除用户。
  * @method Models\DeleteUserGroupResponse DeleteUserGroup(Models\DeleteUserGroupRequest $req) 删除一个用户组

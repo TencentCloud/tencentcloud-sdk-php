@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Eiam\V20210420\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DecribePublicKey请求参数结构体
+ * 私有网络信息
  *
- * @method string getApplicationId() 获取应用ID，是应用的全局唯一标识。
- * @method void setApplicationId(string $ApplicationId) 设置应用ID，是应用的全局唯一标识。
+ * @method string getVpcId() 获取Vpc Id
+ * @method void setVpcId(string $VpcId) 设置Vpc Id
+ * @method string getSubnetId() 获取子网ID
+ * @method void setSubnetId(string $SubnetId) 设置子网ID
  */
-class DecribePublicKeyRequest extends AbstractModel
+class VpcInfo extends AbstractModel
 {
     /**
-     * @var string 应用ID，是应用的全局唯一标识。
+     * @var string Vpc Id
      */
-    public $ApplicationId;
+    public $VpcId;
 
     /**
-     * @param string $ApplicationId 应用ID，是应用的全局唯一标识。
+     * @var string 子网ID
+     */
+    public $SubnetId;
+
+    /**
+     * @param string $VpcId Vpc Id
+     * @param string $SubnetId 子网ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DecribePublicKeyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

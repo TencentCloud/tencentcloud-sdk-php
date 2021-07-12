@@ -104,6 +104,14 @@ pause
  * @method void setServerlessStatus(string $ServerlessStatus) 设置serverless实例状态, 可选值：
 resume
 pause
+ * @method integer getStoragePayMode() 获取存储付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStoragePayMode(integer $StoragePayMode) 设置存储付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStorageId() 获取预付费存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorageId(string $StorageId) 设置预付费存储Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -310,6 +318,18 @@ pause
     public $ServerlessStatus;
 
     /**
+     * @var integer 存储付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StoragePayMode;
+
+    /**
+     * @var string 预付费存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StorageId;
+
+    /**
      * @param string $Uin 用户Uin
      * @param integer $AppId 用户AppId
      * @param string $ClusterId 集群ID
@@ -352,6 +372,10 @@ pause
      * @param string $ServerlessStatus serverless实例状态, 可选值：
 resume
 pause
+     * @param integer $StoragePayMode 存储付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StorageId 预付费存储Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -524,6 +548,14 @@ pause
 
         if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
             $this->ServerlessStatus = $param["ServerlessStatus"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("StorageId",$param) and $param["StorageId"] !== null) {
+            $this->StorageId = $param["StorageId"];
         }
     }
 }

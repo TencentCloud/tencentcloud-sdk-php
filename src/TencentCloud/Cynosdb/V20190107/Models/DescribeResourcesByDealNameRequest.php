@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourcesByDealName请求参数结构体
  *
- * @method string getDealName() 获取计费订单id
- * @method void setDealName(string $DealName) 设置计费订单id
+ * @method string getDealName() 获取计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
+ * @method void setDealName(string $DealName) 设置计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
  */
 class DescribeResourcesByDealNameRequest extends AbstractModel
 {
     /**
-     * @var string 计费订单id
+     * @var string 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
      */
     public $DealName;
 
     /**
-     * @param string $DealName 计费订单id
+     * @param string $DealName 计费订单id（如果计费还没回调业务发货，可能出现错误码InvalidParameterValue.DealNameNotFound，这种情况需要业务重试DescribeResourcesByDealName接口直到成功）
      */
     function __construct()
     {

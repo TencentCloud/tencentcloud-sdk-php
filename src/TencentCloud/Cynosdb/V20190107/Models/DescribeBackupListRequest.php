@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置备份文件列表偏移
  * @method integer getOffset() 获取备份文件列表起始
  * @method void setOffset(integer $Offset) 设置备份文件列表起始
+ * @method string getDbType() 获取数据库类型，取值范围: 
+<li> MYSQL </li>
+ * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
+<li> MYSQL </li>
  */
 class DescribeBackupListRequest extends AbstractModel
 {
@@ -45,9 +49,17 @@ class DescribeBackupListRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 数据库类型，取值范围: 
+<li> MYSQL </li>
+     */
+    public $DbType;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $Limit 备份文件列表偏移
      * @param integer $Offset 备份文件列表起始
+     * @param string $DbType 数据库类型，取值范围: 
+<li> MYSQL </li>
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class DescribeBackupListRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
+            $this->DbType = $param["DbType"];
         }
     }
 }

@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplayUrl(string $ReplayUrl) 设置回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInterrupts() 获取视频流在录制过程中断流次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInterrupts(array $Interrupts) 设置视频流在录制过程中断流次数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -147,6 +151,12 @@ class DescribeOnlineRecordResponse extends AbstractModel
     public $ReplayUrl;
 
     /**
+     * @var array 视频流在录制过程中断流次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Interrupts;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -174,6 +184,8 @@ class DescribeOnlineRecordResponse extends AbstractModel
      * @param array $OmittedDurations 拼接视频中被忽略的时间段，只有开启视频拼接功能的时候，这个参数才是有效的
      * @param array $VideoInfos 录制视频列表
      * @param string $ReplayUrl 回放URL，需配合信令播放器使用。此字段仅适用于`视频生成模式`
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Interrupts 视频流在录制过程中断流次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -250,6 +262,15 @@ class DescribeOnlineRecordResponse extends AbstractModel
 
         if (array_key_exists("ReplayUrl",$param) and $param["ReplayUrl"] !== null) {
             $this->ReplayUrl = $param["ReplayUrl"];
+        }
+
+        if (array_key_exists("Interrupts",$param) and $param["Interrupts"] !== null) {
+            $this->Interrupts = [];
+            foreach ($param["Interrupts"] as $key => $value){
+                $obj = new Interrupt();
+                $obj->deserialize($value);
+                array_push($this->Interrupts, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

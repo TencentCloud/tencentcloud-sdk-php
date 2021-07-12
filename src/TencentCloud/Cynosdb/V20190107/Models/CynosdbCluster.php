@@ -80,6 +80,16 @@ pause
  * @method void setServerlessStatus(string $ServerlessStatus) 设置当Db类型为SERVERLESS时，serverless集群状态，可选值:
 resume
 pause
+ * @method integer getStorage() 获取集群预付费存储值大小
+ * @method void setStorage(integer $Storage) 设置集群预付费存储值大小
+ * @method string getStorageId() 获取集群存储为预付费时的存储ID，用于预付费存储变配
+ * @method void setStorageId(string $StorageId) 设置集群存储为预付费时的存储ID，用于预付费存储变配
+ * @method integer getStoragePayMode() 获取集群存储付费模式。0-按量计费，1-包年包月
+ * @method void setStoragePayMode(integer $StoragePayMode) 设置集群存储付费模式。0-按量计费，1-包年包月
+ * @method integer getMinStorageSize() 获取集群计算规格对应的最小存储值
+ * @method void setMinStorageSize(integer $MinStorageSize) 设置集群计算规格对应的最小存储值
+ * @method integer getMaxStorageSize() 获取集群计算规格对应的最大存储值
+ * @method void setMaxStorageSize(integer $MaxStorageSize) 设置集群计算规格对应的最大存储值
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -226,6 +236,31 @@ pause
     public $ServerlessStatus;
 
     /**
+     * @var integer 集群预付费存储值大小
+     */
+    public $Storage;
+
+    /**
+     * @var string 集群存储为预付费时的存储ID，用于预付费存储变配
+     */
+    public $StorageId;
+
+    /**
+     * @var integer 集群存储付费模式。0-按量计费，1-包年包月
+     */
+    public $StoragePayMode;
+
+    /**
+     * @var integer 集群计算规格对应的最小存储值
+     */
+    public $MinStorageSize;
+
+    /**
+     * @var integer 集群计算规格对应的最大存储值
+     */
+    public $MaxStorageSize;
+
+    /**
      * @param string $Status 集群状态
      * @param string $UpdateTime 更新时间
      * @param string $Zone 可用区
@@ -256,6 +291,11 @@ pause
      * @param string $ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
 resume
 pause
+     * @param integer $Storage 集群预付费存储值大小
+     * @param string $StorageId 集群存储为预付费时的存储ID，用于预付费存储变配
+     * @param integer $StoragePayMode 集群存储付费模式。0-按量计费，1-包年包月
+     * @param integer $MinStorageSize 集群计算规格对应的最小存储值
+     * @param integer $MaxStorageSize 集群计算规格对应的最大存储值
      */
     function __construct()
     {
@@ -390,6 +430,26 @@ pause
 
         if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
             $this->ServerlessStatus = $param["ServerlessStatus"];
+        }
+
+        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+            $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("StorageId",$param) and $param["StorageId"] !== null) {
+            $this->StorageId = $param["StorageId"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("MinStorageSize",$param) and $param["MinStorageSize"] !== null) {
+            $this->MinStorageSize = $param["MinStorageSize"];
+        }
+
+        if (array_key_exists("MaxStorageSize",$param) and $param["MaxStorageSize"] !== null) {
+            $this->MaxStorageSize = $param["MaxStorageSize"];
         }
     }
 }

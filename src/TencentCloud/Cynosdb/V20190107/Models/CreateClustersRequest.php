@@ -38,14 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置所属项目ID
  * @method integer getCpu() 获取普通实例Cpu核数
  * @method void setCpu(integer $Cpu) 设置普通实例Cpu核数
- * @method integer getMemory() 获取普通实例内存
- * @method void setMemory(integer $Memory) 设置普通实例内存
- * @method integer getStorage() 获取存储
- * @method void setStorage(integer $Storage) 设置存储
+ * @method integer getMemory() 获取普通实例内存,单位G
+ * @method void setMemory(integer $Memory) 设置普通实例内存,单位G
+ * @method integer getStorage() 获取存储大小，单位G
+ * @method void setStorage(integer $Storage) 设置存储大小，单位G
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getAdminPassword() 获取账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种)
- * @method void setAdminPassword(string $AdminPassword) 设置账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种)
+ * @method string getAdminPassword() 获取账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
+ * @method void setAdminPassword(string $AdminPassword) 设置账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
  * @method integer getPort() 获取端口，默认5432
  * @method void setPort(integer $Port) 设置端口，默认5432
  * @method integer getPayMode() 获取计费模式，按量计费：0，包年包月：1。默认按量计费。
@@ -69,7 +69,9 @@ timeRollback，时间点回档
  * @method integer getExpectTimeThresh() 获取时间点回档，指定时间允许范围
  * @method void setExpectTimeThresh(integer $ExpectTimeThresh) 设置时间点回档，指定时间允许范围
  * @method integer getStorageLimit() 获取普通实例存储上限，单位GB
+当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
  * @method void setStorageLimit(integer $StorageLimit) 设置普通实例存储上限，单位GB
+当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
  * @method integer getInstanceCount() 获取实例数量
  * @method void setInstanceCount(integer $InstanceCount) 设置实例数量
  * @method integer getTimeSpan() 获取包年包月购买时长
@@ -114,6 +116,12 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 默认值:600
  * @method void setAutoPauseDelay(integer $AutoPauseDelay) 设置当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600
+ * @method integer getStoragePayMode() 获取集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
+当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
+回档与克隆均不支持包年包月存储
+ * @method void setStoragePayMode(integer $StoragePayMode) 设置集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
+当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
+回档与克隆均不支持包年包月存储
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -155,12 +163,12 @@ class CreateClustersRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer 普通实例内存
+     * @var integer 普通实例内存,单位G
      */
     public $Memory;
 
     /**
-     * @var integer 存储
+     * @var integer 存储大小，单位G
      */
     public $Storage;
 
@@ -170,7 +178,7 @@ class CreateClustersRequest extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string 账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种)
+     * @var string 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
      */
     public $AdminPassword;
 
@@ -219,6 +227,7 @@ timeRollback，时间点回档
 
     /**
      * @var integer 普通实例存储上限，单位GB
+当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
      */
     public $StorageLimit;
 
@@ -297,6 +306,13 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $AutoPauseDelay;
 
     /**
+     * @var integer 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
+当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
+回档与克隆均不支持包年包月存储
+     */
+    public $StoragePayMode;
+
+    /**
      * @param string $Zone 可用区
      * @param string $VpcId 所属VPC网络ID
      * @param string $SubnetId 所属子网ID
@@ -306,10 +322,10 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 <li> MYSQL可选值：5.7 </li>
      * @param integer $ProjectId 所属项目ID
      * @param integer $Cpu 普通实例Cpu核数
-     * @param integer $Memory 普通实例内存
-     * @param integer $Storage 存储
+     * @param integer $Memory 普通实例内存,单位G
+     * @param integer $Storage 存储大小，单位G
      * @param string $ClusterName 集群名称
-     * @param string $AdminPassword 账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种)
+     * @param string $AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
      * @param integer $Port 端口，默认5432
      * @param integer $PayMode 计费模式，按量计费：0，包年包月：1。默认按量计费。
      * @param integer $Count 购买个数，目前只支持传1（不传默认为1）
@@ -322,6 +338,7 @@ timeRollback，时间点回档
      * @param string $ExpectTime 时间点回档，指定时间；快照回档，快照时间
      * @param integer $ExpectTimeThresh 时间点回档，指定时间允许范围
      * @param integer $StorageLimit 普通实例存储上限，单位GB
+当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
      * @param integer $InstanceCount 实例数量
      * @param integer $TimeSpan 包年包月购买时长
      * @param string $TimeUnit 包年包月购买时长单位
@@ -344,6 +361,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 默认值:yes
      * @param integer $AutoPauseDelay 当DbMode为SEVERLESS时，指定集群自动暂停的延迟，单位秒，可选范围[600,691200]
 默认值:600
+     * @param integer $StoragePayMode 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
+当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
+回档与克隆均不支持包年包月存储
      */
     function __construct()
     {
@@ -493,6 +513,10 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
         if (array_key_exists("AutoPauseDelay",$param) and $param["AutoPauseDelay"] !== null) {
             $this->AutoPauseDelay = $param["AutoPauseDelay"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
         }
     }
 }

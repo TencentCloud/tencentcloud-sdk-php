@@ -82,6 +82,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCynosVersion(string $CynosVersion) 设置Cynos内核版本
  * @method integer getRenewFlag() 获取续费标志
  * @method void setRenewFlag(integer $RenewFlag) 设置续费标志
+ * @method float getMinCpu() 获取serverless实例cpu下限
+ * @method void setMinCpu(float $MinCpu) 设置serverless实例cpu下限
+ * @method float getMaxCpu() 获取serverless实例cpu上限
+ * @method void setMaxCpu(float $MaxCpu) 设置serverless实例cpu上限
+ * @method string getServerlessStatus() 获取serverless实例状态, 可能值：
+resume
+pause
+ * @method void setServerlessStatus(string $ServerlessStatus) 设置serverless实例状态, 可能值：
+resume
+pause
  */
 class CynosdbInstanceDetail extends AbstractModel
 {
@@ -241,6 +251,23 @@ class CynosdbInstanceDetail extends AbstractModel
     public $RenewFlag;
 
     /**
+     * @var float serverless实例cpu下限
+     */
+    public $MinCpu;
+
+    /**
+     * @var float serverless实例cpu上限
+     */
+    public $MaxCpu;
+
+    /**
+     * @var string serverless实例状态, 可能值：
+resume
+pause
+     */
+    public $ServerlessStatus;
+
+    /**
      * @param string $Uin 用户Uin
      * @param integer $AppId 用户AppId
      * @param string $ClusterId 集群ID
@@ -272,6 +299,11 @@ class CynosdbInstanceDetail extends AbstractModel
      * @param string $Charset 字符集
      * @param string $CynosVersion Cynos内核版本
      * @param integer $RenewFlag 续费标志
+     * @param float $MinCpu serverless实例cpu下限
+     * @param float $MaxCpu serverless实例cpu上限
+     * @param string $ServerlessStatus serverless实例状态, 可能值：
+resume
+pause
      */
     function __construct()
     {
@@ -408,6 +440,18 @@ class CynosdbInstanceDetail extends AbstractModel
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("MinCpu",$param) and $param["MinCpu"] !== null) {
+            $this->MinCpu = $param["MinCpu"];
+        }
+
+        if (array_key_exists("MaxCpu",$param) and $param["MaxCpu"] !== null) {
+            $this->MaxCpu = $param["MaxCpu"];
+        }
+
+        if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
+            $this->ServerlessStatus = $param["ServerlessStatus"];
         }
     }
 }

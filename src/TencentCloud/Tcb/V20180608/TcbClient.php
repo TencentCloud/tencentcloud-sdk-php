@@ -35,6 +35,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\CreateWxCloudBaseRunEnvResponse CreateWxCloudBaseRunEnv(Models\CreateWxCloudBaseRunEnvRequest $req) 创建微信云托管
  * @method Models\CreateWxCloudBaseRunServerDBClusterResponse CreateWxCloudBaseRunServerDBCluster(Models\CreateWxCloudBaseRunServerDBClusterRequest $req) 开通微信云托管MySQL数据库服务
  * @method Models\DeleteCloudBaseProjectLatestVersionResponse DeleteCloudBaseProjectLatestVersion(Models\DeleteCloudBaseProjectLatestVersionRequest $req) 删除云项目
+ * @method Models\DeleteCloudBaseRunServerVersionResponse DeleteCloudBaseRunServerVersion(Models\DeleteCloudBaseRunServerVersionRequest $req) 删除服务版本
  * @method Models\DeleteEndUserResponse DeleteEndUser(Models\DeleteEndUserRequest $req) 删除终端用户
  * @method Models\DeleteWxGatewayRouteResponse DeleteWxGatewayRoute(Models\DeleteWxGatewayRouteRequest $req) 删除安全网关路由
  * @method Models\DescribeAuthDomainsResponse DescribeAuthDomains(Models\DescribeAuthDomainsRequest $req) 获取安全域名列表

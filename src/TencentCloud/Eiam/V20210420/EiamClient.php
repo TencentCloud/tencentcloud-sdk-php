@@ -32,12 +32,17 @@ use TencentCloud\Eiam\V20210420\Models as Models;
  * @method Models\DeleteUserGroupResponse DeleteUserGroup(Models\DeleteUserGroupRequest $req) 删除一个用户组
  * @method Models\DescribeApplicationResponse DescribeApplication(Models\DescribeApplicationRequest $req) 获取一个应用的信息。
  * @method Models\DescribeOrgNodeResponse DescribeOrgNode(Models\DescribeOrgNodeRequest $req) 根据机构节点ID读取机构节点信息
+ * @method Models\DescribePublicKeyResponse DescribePublicKey(Models\DescribePublicKeyRequest $req) 获取JWT公钥信息。
  * @method Models\DescribeUserGroupResponse DescribeUserGroup(Models\DescribeUserGroupRequest $req) 获取用户组信息
  * @method Models\DescribeUserInfoResponse DescribeUserInfo(Models\DescribeUserInfoRequest $req) 通过用户名或用户 id 搜索用户
+ * @method Models\ListApplicationAuthorizationsResponse ListApplicationAuthorizations(Models\ListApplicationAuthorizationsRequest $req) 应用授权关系列表（含搜索条件匹配）。
+ * @method Models\ListApplicationsResponse ListApplications(Models\ListApplicationsRequest $req) 获取应用列表信息。
  * @method Models\ListAuthorizedApplicationsToOrgNodeResponse ListAuthorizedApplicationsToOrgNode(Models\ListAuthorizedApplicationsToOrgNodeRequest $req) 通过机构节点ID获得被授权访问的应用列表。
  * @method Models\ListAuthorizedApplicationsToUserResponse ListAuthorizedApplicationsToUser(Models\ListAuthorizedApplicationsToUserRequest $req) 通过用户ID获得被授权访问的应用列表。
  * @method Models\ListAuthorizedApplicationsToUserGroupResponse ListAuthorizedApplicationsToUserGroup(Models\ListAuthorizedApplicationsToUserGroupRequest $req) 通过用户组ID获得被授权访问的应用列表。
+ * @method Models\ListUserGroupsResponse ListUserGroups(Models\ListUserGroupsRequest $req) 获取用户组列表信息（包含查询条件）。
  * @method Models\ListUserGroupsOfUserResponse ListUserGroupsOfUser(Models\ListUserGroupsOfUserRequest $req) 获取用户所在的用户组列表
+ * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) 获取用户列表信息。
  * @method Models\ListUsersInOrgNodeResponse ListUsersInOrgNode(Models\ListUsersInOrgNodeRequest $req) 根据机构节点ID读取节点下用户
  * @method Models\ListUsersInUserGroupResponse ListUsersInUserGroup(Models\ListUsersInUserGroupRequest $req) 获取用户组中的用户列表
  * @method Models\ModifyUserInfoResponse ModifyUserInfo(Models\ModifyUserInfoRequest $req) 通过用户名或用户 id 冻结用户

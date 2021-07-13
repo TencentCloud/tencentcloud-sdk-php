@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置导入目标实例ID
  * @method string getBackupMigrationId() 获取备份导入任务ID，由CreateBackupMigration接口返回
  * @method void setBackupMigrationId(string $BackupMigrationId) 设置备份导入任务ID，由CreateBackupMigration接口返回
- * @method string getIncrementalMigrationId() 获取增量导入任务ID
- * @method void setIncrementalMigrationId(string $IncrementalMigrationId) 设置增量导入任务ID
- * @method string getIsRecovery() 获取是否需要恢复，NO-不需要，YES-需要
- * @method void setIsRecovery(string $IsRecovery) 设置是否需要恢复，NO-不需要，YES-需要
+ * @method string getIncrementalMigrationId() 获取增量导入任务ID，由CreateIncrementalMigration接口返回
+ * @method void setIncrementalMigrationId(string $IncrementalMigrationId) 设置增量导入任务ID，由CreateIncrementalMigration接口返回
+ * @method string getIsRecovery() 获取是否需要恢复，NO-不需要，YES-需要，默认不修改增量备份导入任务是否需要恢复的属性。
+ * @method void setIsRecovery(string $IsRecovery) 设置是否需要恢复，NO-不需要，YES-需要，默认不修改增量备份导入任务是否需要恢复的属性。
  * @method array getBackupFiles() 获取UploadType是COS_URL时这里时URL，COS_UPLOAD这里填备份文件的名字；只支持1个备份文件，但1个备份文件内可包含多个库
  * @method void setBackupFiles(array $BackupFiles) 设置UploadType是COS_URL时这里时URL，COS_UPLOAD这里填备份文件的名字；只支持1个备份文件，但1个备份文件内可包含多个库
  */
@@ -44,12 +44,12 @@ class ModifyIncrementalMigrationRequest extends AbstractModel
     public $BackupMigrationId;
 
     /**
-     * @var string 增量导入任务ID
+     * @var string 增量导入任务ID，由CreateIncrementalMigration接口返回
      */
     public $IncrementalMigrationId;
 
     /**
-     * @var string 是否需要恢复，NO-不需要，YES-需要
+     * @var string 是否需要恢复，NO-不需要，YES-需要，默认不修改增量备份导入任务是否需要恢复的属性。
      */
     public $IsRecovery;
 
@@ -61,8 +61,8 @@ class ModifyIncrementalMigrationRequest extends AbstractModel
     /**
      * @param string $InstanceId 导入目标实例ID
      * @param string $BackupMigrationId 备份导入任务ID，由CreateBackupMigration接口返回
-     * @param string $IncrementalMigrationId 增量导入任务ID
-     * @param string $IsRecovery 是否需要恢复，NO-不需要，YES-需要
+     * @param string $IncrementalMigrationId 增量导入任务ID，由CreateIncrementalMigration接口返回
+     * @param string $IsRecovery 是否需要恢复，NO-不需要，YES-需要，默认不修改增量备份导入任务是否需要恢复的属性。
      * @param array $BackupFiles UploadType是COS_URL时这里时URL，COS_UPLOAD这里填备份文件的名字；只支持1个备份文件，但1个备份文件内可包含多个库
      */
     function __construct()

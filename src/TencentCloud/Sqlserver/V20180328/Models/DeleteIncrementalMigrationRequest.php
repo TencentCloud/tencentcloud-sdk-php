@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取目标实例ID
  * @method void setInstanceId(string $InstanceId) 设置目标实例ID
- * @method string getBackupMigrationId() 获取备份导入任务ID
- * @method void setBackupMigrationId(string $BackupMigrationId) 设置备份导入任务ID
- * @method string getIncrementalMigrationId() 获取增量备份导入任务ID
- * @method void setIncrementalMigrationId(string $IncrementalMigrationId) 设置增量备份导入任务ID
+ * @method string getBackupMigrationId() 获取备份导入任务ID，由CreateBackupMigration接口返回
+ * @method void setBackupMigrationId(string $BackupMigrationId) 设置备份导入任务ID，由CreateBackupMigration接口返回
+ * @method string getIncrementalMigrationId() 获取增量备份导入任务ID，由CreateIncrementalMigration接口返回
+ * @method void setIncrementalMigrationId(string $IncrementalMigrationId) 设置增量备份导入任务ID，由CreateIncrementalMigration接口返回
  */
 class DeleteIncrementalMigrationRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeleteIncrementalMigrationRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 备份导入任务ID
+     * @var string 备份导入任务ID，由CreateBackupMigration接口返回
      */
     public $BackupMigrationId;
 
     /**
-     * @var string 增量备份导入任务ID
+     * @var string 增量备份导入任务ID，由CreateIncrementalMigration接口返回
      */
     public $IncrementalMigrationId;
 
     /**
      * @param string $InstanceId 目标实例ID
-     * @param string $BackupMigrationId 备份导入任务ID
-     * @param string $IncrementalMigrationId 增量备份导入任务ID
+     * @param string $BackupMigrationId 备份导入任务ID，由CreateBackupMigration接口返回
+     * @param string $IncrementalMigrationId 增量备份导入任务ID，由CreateIncrementalMigration接口返回
      */
     function __construct()
     {

@@ -64,6 +64,10 @@ SDK 设置方式参考：
 Config = Json.stringify({"CopyWarn":true,"ReshootWarn":true})
 API 3.0 Explorer 设置方式参考：
 Config = {"CopyWarn":true,"ReshootWarn":true}
+ * @method boolean getIsEncrypt() 获取是否需要对返回中的敏感信息进行加密。默认false。
+其中敏感信息包括：Response.IdNum、Response.Name
+ * @method void setIsEncrypt(boolean $IsEncrypt) 设置是否需要对返回中的敏感信息进行加密。默认false。
+其中敏感信息包括：Response.IdNum、Response.Name
  */
 class CheckIdCardInformationRequest extends AbstractModel
 {
@@ -102,6 +106,12 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
     public $Config;
 
     /**
+     * @var boolean 是否需要对返回中的敏感信息进行加密。默认false。
+其中敏感信息包括：Response.IdNum、Response.Name
+     */
+    public $IsEncrypt;
+
+    /**
      * @param string $ImageBase64 身份证人像面的 Base64 值
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。
@@ -124,6 +134,8 @@ SDK 设置方式参考：
 Config = Json.stringify({"CopyWarn":true,"ReshootWarn":true})
 API 3.0 Explorer 设置方式参考：
 Config = {"CopyWarn":true,"ReshootWarn":true}
+     * @param boolean $IsEncrypt 是否需要对返回中的敏感信息进行加密。默认false。
+其中敏感信息包括：Response.IdNum、Response.Name
      */
     function __construct()
     {
@@ -148,6 +160,10 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
 
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = $param["Config"];
+        }
+
+        if (array_key_exists("IsEncrypt",$param) and $param["IsEncrypt"] !== null) {
+            $this->IsEncrypt = $param["IsEncrypt"];
         }
     }
 }

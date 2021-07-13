@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupFileName(string $BackupFileName) 设置备份文件名称
  * @method array getStatusSet() 获取导入任务状态集合
  * @method void setStatusSet(array $StatusSet) 设置导入任务状态集合
- * @method integer getLimit() 获取分页，页大小
- * @method void setLimit(integer $Limit) 设置分页，页大小
- * @method integer getOffset() 获取分页，页数
- * @method void setOffset(integer $Offset) 设置分页，页数
- * @method string getOrderBy() 获取排序字段，name,createTime,startTime,endTime
- * @method void setOrderBy(string $OrderBy) 设置排序字段，name,createTime,startTime,endTime
- * @method string getOrderByType() 获取排序方式，desc,asc
- * @method void setOrderByType(string $OrderByType) 设置排序方式，desc,asc
- * @method string getIncrementalMigrationId() 获取增量备份导入任务ID
- * @method void setIncrementalMigrationId(string $IncrementalMigrationId) 设置增量备份导入任务ID
+ * @method integer getLimit() 获取分页，页大小，默认值：100
+ * @method void setLimit(integer $Limit) 设置分页，页大小，默认值：100
+ * @method integer getOffset() 获取分页，页数，默认值：0
+ * @method void setOffset(integer $Offset) 设置分页，页数，默认值：0
+ * @method string getOrderBy() 获取排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
+ * @method void setOrderBy(string $OrderBy) 设置排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
+ * @method string getOrderByType() 获取排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
+ * @method void setOrderByType(string $OrderByType) 设置排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
+ * @method string getIncrementalMigrationId() 获取增量备份导入任务ID，由CreateIncrementalMigration接口返回
+ * @method void setIncrementalMigrationId(string $IncrementalMigrationId) 设置增量备份导入任务ID，由CreateIncrementalMigration接口返回
  */
 class DescribeIncrementalMigrationRequest extends AbstractModel
 {
@@ -62,27 +62,27 @@ class DescribeIncrementalMigrationRequest extends AbstractModel
     public $StatusSet;
 
     /**
-     * @var integer 分页，页大小
+     * @var integer 分页，页大小，默认值：100
      */
     public $Limit;
 
     /**
-     * @var integer 分页，页数
+     * @var integer 分页，页数，默认值：0
      */
     public $Offset;
 
     /**
-     * @var string 排序字段，name,createTime,startTime,endTime
+     * @var string 排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
      */
     public $OrderBy;
 
     /**
-     * @var string 排序方式，desc,asc
+     * @var string 排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
      */
     public $OrderByType;
 
     /**
-     * @var string 增量备份导入任务ID
+     * @var string 增量备份导入任务ID，由CreateIncrementalMigration接口返回
      */
     public $IncrementalMigrationId;
 
@@ -91,11 +91,11 @@ class DescribeIncrementalMigrationRequest extends AbstractModel
      * @param string $InstanceId 导入目标实例ID
      * @param string $BackupFileName 备份文件名称
      * @param array $StatusSet 导入任务状态集合
-     * @param integer $Limit 分页，页大小
-     * @param integer $Offset 分页，页数
-     * @param string $OrderBy 排序字段，name,createTime,startTime,endTime
-     * @param string $OrderByType 排序方式，desc,asc
-     * @param string $IncrementalMigrationId 增量备份导入任务ID
+     * @param integer $Limit 分页，页大小，默认值：100
+     * @param integer $Offset 分页，页数，默认值：0
+     * @param string $OrderBy 排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
+     * @param string $OrderByType 排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
+     * @param string $IncrementalMigrationId 增量备份导入任务ID，由CreateIncrementalMigration接口返回
      */
     function __construct()
     {

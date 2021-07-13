@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置环境id
  * @method string getProjectName() 获取项目名
  * @method void setProjectName(string $ProjectName) 设置项目名
+ * @method boolean getKeepResource() 获取是否保留资源
+ * @method void setKeepResource(boolean $KeepResource) 设置是否保留资源
  */
 class DeleteCloudBaseProjectLatestVersionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteCloudBaseProjectLatestVersionRequest extends AbstractModel
     public $ProjectName;
 
     /**
+     * @var boolean 是否保留资源
+     */
+    public $KeepResource;
+
+    /**
      * @param string $EnvId 环境id
      * @param string $ProjectName 项目名
+     * @param boolean $KeepResource 是否保留资源
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteCloudBaseProjectLatestVersionRequest extends AbstractModel
 
         if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
             $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("KeepResource",$param) and $param["KeepResource"] !== null) {
+            $this->KeepResource = $param["KeepResource"];
         }
     }
 }

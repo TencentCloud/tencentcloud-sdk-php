@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiagType(string $DiagType) 设置诊断类型。
  * @method integer getEventId() 获取事件 ID 。
  * @method void setEventId(integer $EventId) 设置事件 ID 。
- * @method string getExplanation() 获取事件详情。
- * @method void setExplanation(string $Explanation) 设置事件详情。
- * @method string getOutline() 获取概要。
- * @method void setOutline(string $Outline) 设置概要。
+ * @method string getExplanation() 获取诊断事件详情，若无附加解释信息则输出为空。
+ * @method void setExplanation(string $Explanation) 设置诊断事件详情，若无附加解释信息则输出为空。
+ * @method string getOutline() 获取诊断概要。
+ * @method void setOutline(string $Outline) 设置诊断概要。
  * @method string getProblem() 获取诊断出的问题。
  * @method void setProblem(string $Problem) 设置诊断出的问题。
  * @method integer getSeverity() 获取严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
  * @method void setSeverity(integer $Severity) 设置严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
  * @method string getStartTime() 获取开始时间
  * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getSuggestions() 获取建议。
- * @method void setSuggestions(string $Suggestions) 设置建议。
+ * @method string getSuggestions() 获取诊断建议，若无建议则输出为空。
+ * @method void setSuggestions(string $Suggestions) 设置诊断建议，若无建议则输出为空。
  * @method string getMetric() 获取保留字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetric(string $Metric) 设置保留字段。
@@ -65,12 +65,12 @@ class DescribeDBDiagEventResponse extends AbstractModel
     public $EventId;
 
     /**
-     * @var string 事件详情。
+     * @var string 诊断事件详情，若无附加解释信息则输出为空。
      */
     public $Explanation;
 
     /**
-     * @var string 概要。
+     * @var string 诊断概要。
      */
     public $Outline;
 
@@ -90,7 +90,7 @@ class DescribeDBDiagEventResponse extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 建议。
+     * @var string 诊断建议，若无建议则输出为空。
      */
     public $Suggestions;
 
@@ -114,12 +114,12 @@ class DescribeDBDiagEventResponse extends AbstractModel
      * @param string $DiagItem 诊断项。
      * @param string $DiagType 诊断类型。
      * @param integer $EventId 事件 ID 。
-     * @param string $Explanation 事件详情。
-     * @param string $Outline 概要。
+     * @param string $Explanation 诊断事件详情，若无附加解释信息则输出为空。
+     * @param string $Outline 诊断概要。
      * @param string $Problem 诊断出的问题。
      * @param integer $Severity 严重程度。严重程度分为5级，按影响程度从高至低分别为：1：致命，2：严重，3：告警，4：提示，5：健康。
      * @param string $StartTime 开始时间
-     * @param string $Suggestions 建议。
+     * @param string $Suggestions 诊断建议，若无建议则输出为空。
      * @param string $Metric 保留字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间。

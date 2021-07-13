@@ -34,14 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecoveryType(string $RecoveryType) 设置导入任务恢复类型，FULL,FULL_LOG,FULL_DIFF
  * @method string getUploadType() 获取COS_URL-备份放在用户的对象存储上，提供URL。COS_UPLOAD-备份放在业务的对象存储上，用户上传
  * @method void setUploadType(string $UploadType) 设置COS_URL-备份放在用户的对象存储上，提供URL。COS_UPLOAD-备份放在业务的对象存储上，用户上传
- * @method integer getLimit() 获取分页，页大小
- * @method void setLimit(integer $Limit) 设置分页，页大小
- * @method integer getOffset() 获取分页，页数
- * @method void setOffset(integer $Offset) 设置分页，页数
- * @method string getOrderBy() 获取排序字段，name,createTime,startTime,endTime
- * @method void setOrderBy(string $OrderBy) 设置排序字段，name,createTime,startTime,endTime
- * @method string getOrderByType() 获取排序方式，desc,asc
- * @method void setOrderByType(string $OrderByType) 设置排序方式，desc,asc
+ * @method integer getLimit() 获取分页，页大小，默认值：100
+ * @method void setLimit(integer $Limit) 设置分页，页大小，默认值：100
+ * @method integer getOffset() 获取分页，页数，默认值：0
+ * @method void setOffset(integer $Offset) 设置分页，页数，默认值：0
+ * @method string getOrderBy() 获取排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
+ * @method void setOrderBy(string $OrderBy) 设置排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
+ * @method string getOrderByType() 获取排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
+ * @method void setOrderByType(string $OrderByType) 设置排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
  */
 class DescribeBackupMigrationRequest extends AbstractModel
 {
@@ -81,22 +81,22 @@ class DescribeBackupMigrationRequest extends AbstractModel
     public $UploadType;
 
     /**
-     * @var integer 分页，页大小
+     * @var integer 分页，页大小，默认值：100
      */
     public $Limit;
 
     /**
-     * @var integer 分页，页数
+     * @var integer 分页，页数，默认值：0
      */
     public $Offset;
 
     /**
-     * @var string 排序字段，name,createTime,startTime,endTime
+     * @var string 排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
      */
     public $OrderBy;
 
     /**
-     * @var string 排序方式，desc,asc
+     * @var string 排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
      */
     public $OrderByType;
 
@@ -108,10 +108,10 @@ class DescribeBackupMigrationRequest extends AbstractModel
      * @param array $StatusSet 导入任务状态集合
      * @param string $RecoveryType 导入任务恢复类型，FULL,FULL_LOG,FULL_DIFF
      * @param string $UploadType COS_URL-备份放在用户的对象存储上，提供URL。COS_UPLOAD-备份放在业务的对象存储上，用户上传
-     * @param integer $Limit 分页，页大小
-     * @param integer $Offset 分页，页数
-     * @param string $OrderBy 排序字段，name,createTime,startTime,endTime
-     * @param string $OrderByType 排序方式，desc,asc
+     * @param integer $Limit 分页，页大小，默认值：100
+     * @param integer $Offset 分页，页数，默认值：0
+     * @param string $OrderBy 排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
+     * @param string $OrderByType 排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
      */
     function __construct()
     {

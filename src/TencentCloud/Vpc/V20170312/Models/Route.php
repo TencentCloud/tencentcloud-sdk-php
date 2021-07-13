@@ -47,7 +47,9 @@ LOCAL_GATEWAY：本地网关。
  * @method void setGatewayId(string $GatewayId) 设置下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
  * @method integer getRouteId() 获取路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+该字段在删除时必填，其他字段无需填写。
  * @method void setRouteId(integer $RouteId) 设置路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+该字段在删除时必填，其他字段无需填写。
  * @method string getRouteDescription() 获取路由策略描述。
  * @method void setRouteDescription(string $RouteDescription) 设置路由策略描述。
  * @method boolean getEnabled() 获取是否启用
@@ -104,6 +106,7 @@ LOCAL_GATEWAY：本地网关。
 
     /**
      * @var integer 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+该字段在删除时必填，其他字段无需填写。
      */
     public $RouteId;
 
@@ -167,6 +170,7 @@ LOCAL_GATEWAY：本地网关。
      * @param string $GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
      * @param integer $RouteId 路由策略ID。IPv4路由策略ID是有意义的值，IPv6路由策略是无意义的值0。后续建议完全使用字符串唯一ID `RouteItemId`操作路由策略。
+该字段在删除时必填，其他字段无需填写。
      * @param string $RouteDescription 路由策略描述。
      * @param boolean $Enabled 是否启用
      * @param string $RouteType 路由类型，目前我们支持的类型有：

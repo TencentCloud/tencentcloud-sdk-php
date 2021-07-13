@@ -46,6 +46,8 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 {
 "BestFrameNum": 2  //需要返回多张最佳截图，取值范围2-10
 }
+ * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
 class LivenessRecognitionRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     public $Optional;
 
     /**
+     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public $Encryption;
+
+    /**
      * @param string $IdCard 身份证号
      * @param string $Name 姓名。中文请使用UTF-8编码。
      * @param string $VideoBase64 用于活体检测的视频，视频的BASE64值；
@@ -100,6 +107,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 {
 "BestFrameNum": 2  //需要返回多张最佳截图，取值范围2-10
 }
+     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()
     {
@@ -136,6 +144,11 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
 
         if (array_key_exists("Optional",$param) and $param["Optional"] !== null) {
             $this->Optional = $param["Optional"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = new Encryption();
+            $this->Encryption->deserialize($param["Encryption"]);
         }
     }
 }

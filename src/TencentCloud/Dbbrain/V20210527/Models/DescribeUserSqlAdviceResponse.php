@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserSqlAdvice返回参数结构体
  *
- * @method string getAdvices() 获取SQL优化建议，可解析为JSON数组。
- * @method void setAdvices(string $Advices) 设置SQL优化建议，可解析为JSON数组。
- * @method string getComments() 获取SQL优化建议备注，可解析为String数组。
- * @method void setComments(string $Comments) 设置SQL优化建议备注，可解析为String数组。
+ * @method string getAdvices() 获取SQL优化建议，可解析为JSON数组，无需优化时输出为空。
+ * @method void setAdvices(string $Advices) 设置SQL优化建议，可解析为JSON数组，无需优化时输出为空。
+ * @method string getComments() 获取SQL优化建议备注，可解析为String数组，无需优化时输出为空。
+ * @method void setComments(string $Comments) 设置SQL优化建议备注，可解析为String数组，无需优化时输出为空。
  * @method string getSqlText() 获取SQL语句。
  * @method void setSqlText(string $SqlText) 设置SQL语句。
  * @method string getSchema() 获取库名。
  * @method void setSchema(string $Schema) 设置库名。
  * @method string getTables() 获取相关表的DDL信息，可解析为JSON数组。
  * @method void setTables(string $Tables) 设置相关表的DDL信息，可解析为JSON数组。
- * @method string getSqlPlan() 获取SQL执行计划，可解析为JSON。
- * @method void setSqlPlan(string $SqlPlan) 设置SQL执行计划，可解析为JSON。
- * @method string getCost() 获取SQL优化后的成本节约详情，可解析为JSON。
- * @method void setCost(string $Cost) 设置SQL优化后的成本节约详情，可解析为JSON。
+ * @method string getSqlPlan() 获取SQL执行计划，可解析为JSON，无需优化时输出为空。
+ * @method void setSqlPlan(string $SqlPlan) 设置SQL执行计划，可解析为JSON，无需优化时输出为空。
+ * @method string getCost() 获取SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
+ * @method void setCost(string $Cost) 设置SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUserSqlAdviceResponse extends AbstractModel
 {
     /**
-     * @var string SQL优化建议，可解析为JSON数组。
+     * @var string SQL优化建议，可解析为JSON数组，无需优化时输出为空。
      */
     public $Advices;
 
     /**
-     * @var string SQL优化建议备注，可解析为String数组。
+     * @var string SQL优化建议备注，可解析为String数组，无需优化时输出为空。
      */
     public $Comments;
 
@@ -65,12 +65,12 @@ class DescribeUserSqlAdviceResponse extends AbstractModel
     public $Tables;
 
     /**
-     * @var string SQL执行计划，可解析为JSON。
+     * @var string SQL执行计划，可解析为JSON，无需优化时输出为空。
      */
     public $SqlPlan;
 
     /**
-     * @var string SQL优化后的成本节约详情，可解析为JSON。
+     * @var string SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
      */
     public $Cost;
 
@@ -80,13 +80,13 @@ class DescribeUserSqlAdviceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Advices SQL优化建议，可解析为JSON数组。
-     * @param string $Comments SQL优化建议备注，可解析为String数组。
+     * @param string $Advices SQL优化建议，可解析为JSON数组，无需优化时输出为空。
+     * @param string $Comments SQL优化建议备注，可解析为String数组，无需优化时输出为空。
      * @param string $SqlText SQL语句。
      * @param string $Schema 库名。
      * @param string $Tables 相关表的DDL信息，可解析为JSON数组。
-     * @param string $SqlPlan SQL执行计划，可解析为JSON。
-     * @param string $Cost SQL优化后的成本节约详情，可解析为JSON。
+     * @param string $SqlPlan SQL执行计划，可解析为JSON，无需优化时输出为空。
+     * @param string $Cost SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

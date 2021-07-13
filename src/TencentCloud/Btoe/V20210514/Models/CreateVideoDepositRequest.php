@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEvidenceName(string $EvidenceName) 设置存证名称(长度最大30)
  * @method string getFileContent() 获取数据Base64编码，大小不超过5M
  * @method void setFileContent(string $FileContent) 设置数据Base64编码，大小不超过5M
- * @method string getFileName() 获取对应数据Base64文件名称
- * @method void setFileName(string $FileName) 设置对应数据Base64文件名称
+ * @method string getFileName() 获取带后缀的文件名称，如music.mkv
+ * @method void setFileName(string $FileName) 设置带后缀的文件名称，如music.mkv
  * @method string getEvidenceHash() 获取文件hash
  * @method void setEvidenceHash(string $EvidenceHash) 设置文件hash
  * @method string getBusinessId() 获取业务ID 透传 长度最大不超过64
@@ -48,7 +48,7 @@ class CreateVideoDepositRequest extends AbstractModel
     public $FileContent;
 
     /**
-     * @var string 对应数据Base64文件名称
+     * @var string 带后缀的文件名称，如music.mkv
      */
     public $FileName;
 
@@ -75,7 +75,7 @@ class CreateVideoDepositRequest extends AbstractModel
     /**
      * @param string $EvidenceName 存证名称(长度最大30)
      * @param string $FileContent 数据Base64编码，大小不超过5M
-     * @param string $FileName 对应数据Base64文件名称
+     * @param string $FileName 带后缀的文件名称，如music.mkv
      * @param string $EvidenceHash 文件hash
      * @param string $BusinessId 业务ID 透传 长度最大不超过64
      * @param integer $HashType 算法类型 0 SM3, 1 SHA256, 2 SHA384 默认0

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method string getZoneName() 获取可用区中文名称
  * @method void setZoneName(string $ZoneName) 设置可用区中文名称
+ * @method string getInstanceDisplayLabel() 获取实例购买页可用区展示标签
+ * @method void setInstanceDisplayLabel(string $InstanceDisplayLabel) 设置实例购买页可用区展示标签
  */
 class ZoneInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ZoneInfo extends AbstractModel
     public $ZoneName;
 
     /**
+     * @var string 实例购买页可用区展示标签
+     */
+    public $InstanceDisplayLabel;
+
+    /**
      * @param string $Zone 可用区
      * @param string $ZoneName 可用区中文名称
+     * @param string $InstanceDisplayLabel 实例购买页可用区展示标签
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ZoneInfo extends AbstractModel
 
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("InstanceDisplayLabel",$param) and $param["InstanceDisplayLabel"] !== null) {
+            $this->InstanceDisplayLabel = $param["InstanceDisplayLabel"];
         }
     }
 }

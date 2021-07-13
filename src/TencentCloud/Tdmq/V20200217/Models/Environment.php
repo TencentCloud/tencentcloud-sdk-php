@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
  * @method string getNamespaceName() 获取命名空间名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
+ * @method integer getTopicNum() 获取Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicNum(integer $TopicNum) 设置Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Environment extends AbstractModel
 {
@@ -73,6 +77,12 @@ class Environment extends AbstractModel
     public $NamespaceName;
 
     /**
+     * @var integer Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicNum;
+
+    /**
      * @param string $EnvironmentId 命名空间名称
      * @param string $Remark 说明
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，最大1296000（15天）
@@ -80,6 +90,8 @@ class Environment extends AbstractModel
      * @param string $UpdateTime 最近修改时间
      * @param string $NamespaceId 命名空间ID
      * @param string $NamespaceName 命名空间名称
+     * @param integer $TopicNum Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class Environment extends AbstractModel
 
         if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
             $this->NamespaceName = $param["NamespaceName"];
+        }
+
+        if (array_key_exists("TopicNum",$param) and $param["TopicNum"] !== null) {
+            $this->TopicNum = $param["TopicNum"];
         }
     }
 }

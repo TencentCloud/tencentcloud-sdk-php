@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取需要获取健康得分的实例ID。
  * @method void setInstanceId(string $InstanceId) 设置需要获取健康得分的实例ID。
- * @method string getTime() 获取获取健康得分的时间。
- * @method void setTime(string $Time) 设置获取健康得分的时间。
+ * @method string getTime() 获取获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
+ * @method void setTime(string $Time) 设置获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
  * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
  */
@@ -35,7 +35,7 @@ class DescribeHealthScoreRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 获取健康得分的时间。
+     * @var string 获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
      */
     public $Time;
 
@@ -46,7 +46,7 @@ class DescribeHealthScoreRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 需要获取健康得分的实例ID。
-     * @param string $Time 获取健康得分的时间。
+     * @param string $Time 获取健康得分的时间，时间格式如：2019-09-10 12:13:14。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
      */
     function __construct()

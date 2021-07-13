@@ -32,6 +32,8 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
  * @method string getOptional() 获取本接口不需要传递此参数。
  * @method void setOptional(string $Optional) 设置本接口不需要传递此参数。
+ * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
 class ImageRecognitionRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     public $Optional;
 
     /**
+     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public $Encryption;
+
+    /**
      * @param string $IdCard 身份证号
      * @param string $Name 姓名。中文请使用UTF-8编码。
      * @param string $ImageBase64 用于人脸比对的照片，图片的Base64值；
 Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      * @param string $Optional 本接口不需要传递此参数。
+     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()
     {
@@ -92,6 +100,11 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
 
         if (array_key_exists("Optional",$param) and $param["Optional"] !== null) {
             $this->Optional = $param["Optional"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = new Encryption();
+            $this->Encryption->deserialize($param["Encryption"]);
         }
     }
 }

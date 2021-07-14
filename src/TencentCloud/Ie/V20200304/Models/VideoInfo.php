@@ -83,14 +83,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVideoCodec() 获取编码器支持选项，可选值：
 h264,
 h265,
-av1
-。
+av1。
 不填默认h264。
  * @method void setVideoCodec(string $VideoCodec) 设置编码器支持选项，可选值：
 h264,
 h265,
-av1
-。
+av1。
 不填默认h264。
  * @method array getPicMarkInfo() 获取图片水印。
  * @method void setPicMarkInfo(array $PicMarkInfo) 设置图片水印。
@@ -173,8 +171,7 @@ class VideoInfo extends AbstractModel
      * @var string 编码器支持选项，可选值：
 h264,
 h265,
-av1
-。
+av1。
 不填默认h264。
      */
     public $VideoCodec;
@@ -241,8 +238,7 @@ hlg。
      * @param string $VideoCodec 编码器支持选项，可选值：
 h264,
 h265,
-av1
-。
+av1。
 不填默认h264。
      * @param array $PicMarkInfo 图片水印。
      * @param DarInfo $DarInfo 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。

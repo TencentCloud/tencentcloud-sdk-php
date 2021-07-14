@@ -74,6 +74,10 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
  * @method array getTags() 获取如果保存命令，可为命令设置标签。列表长度不超过10。
  * @method void setTags(array $Tags) 设置如果保存命令，可为命令设置标签。列表长度不超过10。
+ * @method string getUsername() 获取在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+ * @method void setUsername(string $Username) 设置在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
  */
 class RunCommandRequest extends AbstractModel
 {
@@ -153,6 +157,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     public $Tags;
 
     /**
+     * @var string 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+     */
+    public $Username;
+
+    /**
      * @param string $Content Base64编码后的命令内容，长度不可超过64KB。
      * @param array $InstanceIds 待执行命令的实例ID列表。 支持实例类型：
 <li> CVM
@@ -180,6 +190,8 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      * @param array $Tags 如果保存命令，可为命令设置标签。列表长度不超过10。
+     * @param string $Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
      */
     function __construct()
     {
@@ -245,6 +257,10 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
+            $this->Username = $param["Username"];
         }
     }
 }

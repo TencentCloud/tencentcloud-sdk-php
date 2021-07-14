@@ -22,9 +22,7 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskName() 获取子任务名称。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskName(string $TaskName) 设置子任务名称。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatusCode() 获取子任务状态。
 0：成功；
@@ -38,34 +36,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusMsg(string $StatusMsg) 设置子任务状态描述。
  * @method integer getProgressRate() 获取子任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgressRate(integer $ProgressRate) 设置子任务进度。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDownloadUrl() 获取画质重生处理后文件的下载地址。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadUrl(string $DownloadUrl) 设置画质重生处理后文件的下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMd5() 获取画质重生处理后文件的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMd5(string $Md5) 设置画质重生处理后文件的MD5。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method FileInfo getFileInfo() 获取画质重生处理后文件的详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileInfo(FileInfo $FileInfo) 设置画质重生处理后文件的详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubTaskResultItem extends AbstractModel
 {
     /**
      * @var string 子任务名称。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
@@ -86,13 +75,11 @@ class SubTaskResultItem extends AbstractModel
     /**
      * @var integer 子任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProgressRate;
 
     /**
      * @var string 画质重生处理后文件的下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadUrl;
@@ -100,20 +87,17 @@ class SubTaskResultItem extends AbstractModel
     /**
      * @var string 画质重生处理后文件的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Md5;
 
     /**
      * @var FileInfo 画质重生处理后文件的详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileInfo;
 
     /**
      * @param string $TaskName 子任务名称。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StatusCode 子任务状态。
 0：成功；
@@ -122,15 +106,11 @@ class SubTaskResultItem extends AbstractModel
      * @param string $StatusMsg 子任务状态描述。
      * @param integer $ProgressRate 子任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DownloadUrl 画质重生处理后文件的下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Md5 画质重生处理后文件的MD5。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileInfo $FileInfo 画质重生处理后文件的详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

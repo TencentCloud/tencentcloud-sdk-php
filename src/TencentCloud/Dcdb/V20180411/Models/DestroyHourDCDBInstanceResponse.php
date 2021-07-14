@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DestroyHourDCDBInstance返回参数结构体
  *
- * @method integer getFlowId() 获取异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
- * @method void setFlowId(integer $FlowId) 设置异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+ * @method integer getFlowId() 获取异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
+ * @method void setFlowId(integer $FlowId) 设置异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
  * @method string getInstanceId() 获取实例 ID，与入参InstanceId一致。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，与入参InstanceId一致。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DestroyHourDCDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+     * @var integer 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
      */
     public $FlowId;
 
@@ -45,7 +45,7 @@ class DestroyHourDCDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+     * @param integer $FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
      * @param string $InstanceId 实例 ID，与入参InstanceId一致。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

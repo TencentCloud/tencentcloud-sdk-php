@@ -21,54 +21,40 @@ use TencentCloud\Common\AbstractModel;
  * 画质重生处理后文件的详细信息
  *
  * @method integer getFileSize() 获取任务结束后生成的文件大小。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSize(integer $FileSize) 设置任务结束后生成的文件大小。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileType() 获取任务结束后生成的文件格式，例如：mp4,flv等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置任务结束后生成的文件格式，例如：mp4,flv等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBitrate() 获取任务结束后生成的文件整体码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitrate(integer $Bitrate) 设置任务结束后生成的文件整体码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDuration() 获取任务结束后生成的文件时长，单位：ms。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(integer $Duration) 设置任务结束后生成的文件时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVideoInfoResult() 获取任务结束后生成的文件视频信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoInfoResult(array $VideoInfoResult) 设置任务结束后生成的文件视频信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAudioInfoResult() 获取任务结束后生成的文件音频信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioInfoResult(array $AudioInfoResult) 设置任务结束后生成的文件音频信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileInfo extends AbstractModel
 {
     /**
      * @var integer 任务结束后生成的文件大小。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
      * @var string 任务结束后生成的文件格式，例如：mp4,flv等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileType;
@@ -76,13 +62,11 @@ class FileInfo extends AbstractModel
     /**
      * @var integer 任务结束后生成的文件整体码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bitrate;
 
     /**
      * @var integer 任务结束后生成的文件时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
@@ -90,35 +74,27 @@ class FileInfo extends AbstractModel
     /**
      * @var array 任务结束后生成的文件视频信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoInfoResult;
 
     /**
      * @var array 任务结束后生成的文件音频信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioInfoResult;
 
     /**
      * @param integer $FileSize 任务结束后生成的文件大小。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileType 任务结束后生成的文件格式，例如：mp4,flv等等。
-注意：此字段可能返回 null，表示取不到有效值 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bitrate 任务结束后生成的文件整体码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 任务结束后生成的文件时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VideoInfoResult 任务结束后生成的文件视频信息。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AudioInfoResult 任务结束后生成的文件音频信息。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

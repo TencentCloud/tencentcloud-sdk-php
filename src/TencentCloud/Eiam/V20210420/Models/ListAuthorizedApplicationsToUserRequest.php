@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserId() 获取用户 ID。
  * @method void setUserId(string $UserId) 设置用户 ID。
- * @method boolean getIncludeInheritedAuthorizations() 获取查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传0表示不查询该范围，传1表示应用查询该范围。
- * @method void setIncludeInheritedAuthorizations(boolean $IncludeInheritedAuthorizations) 设置查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传0表示不查询该范围，传1表示应用查询该范围。
+ * @method boolean getIncludeInheritedAuthorizations() 获取查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传false表示不查询该范围，传true表示应用查询该范围。
+ * @method void setIncludeInheritedAuthorizations(boolean $IncludeInheritedAuthorizations) 设置查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传false表示不查询该范围，传true表示应用查询该范围。
  */
 class ListAuthorizedApplicationsToUserRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ListAuthorizedApplicationsToUserRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var boolean 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传0表示不查询该范围，传1表示应用查询该范围。
+     * @var boolean 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传false表示不查询该范围，传true表示应用查询该范围。
      */
     public $IncludeInheritedAuthorizations;
 
     /**
      * @param string $UserId 用户 ID。
-     * @param boolean $IncludeInheritedAuthorizations 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传0表示不查询该范围，传1表示应用查询该范围。
+     * @param boolean $IncludeInheritedAuthorizations 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 。传false表示不查询该范围，传true表示应用查询该范围。
      */
     function __construct()
     {

@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(string $StorageType) 设置日主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPeriod() 获取生命周期，单位为天
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPeriod(integer $Period) 设置生命周期，单位为天
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicInfo extends AbstractModel
 {
@@ -113,6 +117,12 @@ class TopicInfo extends AbstractModel
     public $StorageType;
 
     /**
+     * @var integer 生命周期，单位为天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Period;
+
+    /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
@@ -127,6 +137,8 @@ class TopicInfo extends AbstractModel
      * @param integer $MaxSplitPartitions 若开启自动分裂的话，该主题能够允许的最大分区数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StorageType 日主题的存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Period 生命周期，单位为天
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +201,10 @@ class TopicInfo extends AbstractModel
 
         if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
             $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

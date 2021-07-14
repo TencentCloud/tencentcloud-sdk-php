@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getShardInstanceIds() 获取分片ID数组
  * @method void setShardInstanceIds(array $ShardInstanceIds) 设置分片ID数组
- * @method integer getSplitRate() 获取数据切分比例
- * @method void setSplitRate(integer $SplitRate) 设置数据切分比例
+ * @method integer getSplitRate() 获取数据切分比例，固定50%
+ * @method void setSplitRate(integer $SplitRate) 设置数据切分比例，固定50%
  * @method integer getShardMemory() 获取分片内存大小，单位 GB
  * @method void setShardMemory(integer $ShardMemory) 设置分片内存大小，单位 GB
  * @method integer getShardStorage() 获取分片存储大小，单位 GB
@@ -37,7 +37,7 @@ class SplitShardConfig extends AbstractModel
     public $ShardInstanceIds;
 
     /**
-     * @var integer 数据切分比例
+     * @var integer 数据切分比例，固定50%
      */
     public $SplitRate;
 
@@ -53,7 +53,7 @@ class SplitShardConfig extends AbstractModel
 
     /**
      * @param array $ShardInstanceIds 分片ID数组
-     * @param integer $SplitRate 数据切分比例
+     * @param integer $SplitRate 数据切分比例，固定50%
      * @param integer $ShardMemory 分片内存大小，单位 GB
      * @param integer $ShardStorage 分片存储大小，单位 GB
      */

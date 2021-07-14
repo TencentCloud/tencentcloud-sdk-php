@@ -148,6 +148,10 @@ Public：公网属性， Private：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerPassToTarget(integer $LoadBalancerPassToTarget) 设置负载均衡安全组上移特性是否开启标识。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetHealth() 获取后端目标健康状态。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetHealth(string $TargetHealth) 设置后端目标健康状态。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -344,6 +348,12 @@ Public：公网属性， Private：内网属性。
     public $LoadBalancerPassToTarget;
 
     /**
+     * @var string 后端目标健康状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetHealth;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -407,6 +417,8 @@ Public：公网属性， Private：内网属性。
      * @param array $SecurityGroup 负载均衡绑定的安全组列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LoadBalancerPassToTarget 负载均衡安全组上移特性是否开启标识。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetHealth 后端目标健康状态。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -556,6 +568,10 @@ Public：公网属性， Private：内网属性。
 
         if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
             $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
+        }
+
+        if (array_key_exists("TargetHealth",$param) and $param["TargetHealth"] !== null) {
+            $this->TargetHealth = $param["TargetHealth"];
         }
     }
 }

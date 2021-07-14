@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalPrice(integer $OriginalPrice) 设置原价，单位：分
  * @method integer getPrice() 获取实际价格，单位：分。受折扣等影响，可能和原价不同。
  * @method void setPrice(integer $Price) 设置实际价格，单位：分。受折扣等影响，可能和原价不同。
+ * @method string getFormula() 获取变配明细计算公式
+ * @method void setFormula(string $Formula) 设置变配明细计算公式
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeDCDBUpgradePriceResponse extends AbstractModel
     public $Price;
 
     /**
+     * @var string 变配明细计算公式
+     */
+    public $Formula;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeDCDBUpgradePriceResponse extends AbstractModel
     /**
      * @param integer $OriginalPrice 原价，单位：分
      * @param integer $Price 实际价格，单位：分。受折扣等影响，可能和原价不同。
+     * @param string $Formula 变配明细计算公式
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class DescribeDCDBUpgradePriceResponse extends AbstractModel
 
         if (array_key_exists("Price",$param) and $param["Price"] !== null) {
             $this->Price = $param["Price"];
+        }
+
+        if (array_key_exists("Formula",$param) and $param["Formula"] !== null) {
+            $this->Formula = $param["Formula"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

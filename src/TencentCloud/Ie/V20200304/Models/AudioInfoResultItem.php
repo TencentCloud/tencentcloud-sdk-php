@@ -20,49 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务结束后生成的文件音频信息
  *
- * @method integer getStream() 获取音频流的流id
- * @method void setStream(integer $Stream) 设置音频流的流id
+ * @method integer getStream() 获取音频流的流id。
+ * @method void setStream(integer $Stream) 设置音频流的流id。
  * @method integer getSample() 获取音频采样率 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSample(integer $Sample) 设置音频采样率 。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannel() 获取音频声道数。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannel(integer $Channel) 设置音频声道数。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCodec() 获取编码格式，如aac, mp3等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodec(string $Codec) 设置编码格式，如aac, mp3等。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBitrate() 获取码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitrate(integer $Bitrate) 设置码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDuration() 获取音频时长，单位：ms。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(integer $Duration) 设置音频时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioInfoResultItem extends AbstractModel
 {
     /**
-     * @var integer 音频流的流id
+     * @var integer 音频流的流id。
      */
     public $Stream;
 
     /**
      * @var integer 音频采样率 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sample;
@@ -70,13 +59,11 @@ class AudioInfoResultItem extends AbstractModel
     /**
      * @var integer 音频声道数。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Channel;
 
     /**
      * @var string 编码格式，如aac, mp3等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Codec;
@@ -84,33 +71,26 @@ class AudioInfoResultItem extends AbstractModel
     /**
      * @var integer 码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bitrate;
 
     /**
      * @var integer 音频时长，单位：ms。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
-     * @param integer $Stream 音频流的流id
+     * @param integer $Stream 音频流的流id。
      * @param integer $Sample 音频采样率 。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Channel 音频声道数。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Codec 编码格式，如aac, mp3等。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Bitrate 码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 音频时长，单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

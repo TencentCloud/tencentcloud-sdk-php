@@ -60,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupSet(array $SecurityGroupSet) 设置NAT网关绑定的安全组列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSourceIpTranslationNatRuleSet() 获取NAT网关的SNAT转发规则。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceIpTranslationNatRuleSet(array $SourceIpTranslationNatRuleSet) 设置NAT网关的SNAT转发规则。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsExclusive() 获取是否独享型NAT。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsExclusive(boolean $IsExclusive) 设置是否独享型NAT。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExclusiveGatewayBandwidth() 获取独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExclusiveGatewayBandwidth(integer $ExclusiveGatewayBandwidth) 设置独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatGateway extends AbstractModel
 {
@@ -144,6 +156,24 @@ class NatGateway extends AbstractModel
     public $SecurityGroupSet;
 
     /**
+     * @var array NAT网关的SNAT转发规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceIpTranslationNatRuleSet;
+
+    /**
+     * @var boolean 是否独享型NAT。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsExclusive;
+
+    /**
+     * @var integer 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExclusiveGatewayBandwidth;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
@@ -163,6 +193,12 @@ class NatGateway extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。
      * @param array $SecurityGroupSet NAT网关绑定的安全组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SourceIpTranslationNatRuleSet NAT网关的SNAT转发规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsExclusive 是否独享型NAT。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExclusiveGatewayBandwidth 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -251,6 +287,23 @@ class NatGateway extends AbstractModel
 
         if (array_key_exists("SecurityGroupSet",$param) and $param["SecurityGroupSet"] !== null) {
             $this->SecurityGroupSet = $param["SecurityGroupSet"];
+        }
+
+        if (array_key_exists("SourceIpTranslationNatRuleSet",$param) and $param["SourceIpTranslationNatRuleSet"] !== null) {
+            $this->SourceIpTranslationNatRuleSet = [];
+            foreach ($param["SourceIpTranslationNatRuleSet"] as $key => $value){
+                $obj = new SourceIpTranslationNatRule();
+                $obj->deserialize($value);
+                array_push($this->SourceIpTranslationNatRuleSet, $obj);
+            }
+        }
+
+        if (array_key_exists("IsExclusive",$param) and $param["IsExclusive"] !== null) {
+            $this->IsExclusive = $param["IsExclusive"];
+        }
+
+        if (array_key_exists("ExclusiveGatewayBandwidth",$param) and $param["ExclusiveGatewayBandwidth"] !== null) {
+            $this->ExclusiveGatewayBandwidth = $param["ExclusiveGatewayBandwidth"];
         }
     }
 }

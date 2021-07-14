@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedBy(string $CreatedBy) 设置命令创建者。TAT 代表公共命令，USER 代表个人命令。
  * @method array getTags() 获取命令关联的标签列表。
  * @method void setTags(array $Tags) 设置命令关联的标签列表。
+ * @method string getUsername() 获取在实例上执行命令的用户名。
+ * @method void setUsername(string $Username) 设置在实例上执行命令的用户名。
  */
 class Command extends AbstractModel
 {
@@ -122,6 +124,11 @@ class Command extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 在实例上执行命令的用户名。
+     */
+    public $Username;
+
+    /**
      * @param string $CommandId 命令ID。
      * @param string $CommandName 命令名称。
      * @param string $Description 命令描述。
@@ -136,6 +143,7 @@ class Command extends AbstractModel
      * @param string $FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
      * @param string $CreatedBy 命令创建者。TAT 代表公共命令，USER 代表个人命令。
      * @param array $Tags 命令关联的标签列表。
+     * @param string $Username 在实例上执行命令的用户名。
      */
     function __construct()
     {
@@ -209,6 +217,10 @@ class Command extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
+            $this->Username = $param["Username"];
         }
     }
 }

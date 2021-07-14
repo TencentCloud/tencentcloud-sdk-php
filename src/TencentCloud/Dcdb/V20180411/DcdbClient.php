@@ -45,7 +45,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\DescribeDCDBRenewalPriceResponse DescribeDCDBRenewalPrice(Models\DescribeDCDBRenewalPriceRequest $req) 本接口（DescribeDCDBRenewalPrice）用于在续费分布式数据库实例时，查询续费的价格。
  * @method Models\DescribeDCDBSaleInfoResponse DescribeDCDBSaleInfo(Models\DescribeDCDBSaleInfoRequest $req) 本接口(DescribeDCDBSaleInfo)用于查询分布式数据库可售卖的地域和可用区信息。
  * @method Models\DescribeDCDBShardsResponse DescribeDCDBShards(Models\DescribeDCDBShardsRequest $req) 本接口（DescribeDCDBShards）用于查询云数据库实例的分片信息。
- * @method Models\DescribeDCDBUpgradePriceResponse DescribeDCDBUpgradePrice(Models\DescribeDCDBUpgradePriceRequest $req) 本接口（DescribeDCDBUpgradePrice）用于查询升级分布式数据库实例价格。
+ * @method Models\DescribeDCDBUpgradePriceResponse DescribeDCDBUpgradePrice(Models\DescribeDCDBUpgradePriceRequest $req) 本接口（DescribeDCDBUpgradePrice）用于查询变配分布式数据库实例价格。
  * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) 本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
  * @method Models\DescribeDatabaseTableResponse DescribeDatabaseTable(Models\DescribeDatabaseTableRequest $req) 本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。

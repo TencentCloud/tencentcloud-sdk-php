@@ -42,6 +42,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDcnFlag(integer $DcnFlag) 设置实例DCN标志，1-主，2-备
  * @method integer getDcnStatus() 获取实例DCN状态，0-无，1-创建中，2-同步中，3-已断开
  * @method void setDcnStatus(integer $DcnStatus) 设置实例DCN状态，0-无，1-创建中，2-同步中，3-已断开
+ * @method integer getCpu() 获取实例CPU核数
+ * @method void setCpu(integer $Cpu) 设置实例CPU核数
+ * @method integer getMemory() 获取实例内存大小，单位 GB
+ * @method void setMemory(integer $Memory) 设置实例内存大小，单位 GB
+ * @method integer getStorage() 获取实例存储大小，单位 GB
+ * @method void setStorage(integer $Storage) 设置实例存储大小，单位 GB
+ * @method integer getPayMode() 获取付费模式
+ * @method void setPayMode(integer $PayMode) 设置付费模式
+ * @method string getCreateTime() 获取实例创建时间，格式为 2006-01-02 15:04:05
+ * @method void setCreateTime(string $CreateTime) 设置实例创建时间，格式为 2006-01-02 15:04:05
+ * @method string getPeriodEndTime() 获取实例到期时间，格式为 2006-01-02 15:04:05
+ * @method void setPeriodEndTime(string $PeriodEndTime) 设置实例到期时间，格式为 2006-01-02 15:04:05
+ * @method integer getInstanceType() 获取1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+ * @method void setInstanceType(integer $InstanceType) 设置1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
  */
 class DcnDetailItem extends AbstractModel
 {
@@ -101,6 +115,41 @@ class DcnDetailItem extends AbstractModel
     public $DcnStatus;
 
     /**
+     * @var integer 实例CPU核数
+     */
+    public $Cpu;
+
+    /**
+     * @var integer 实例内存大小，单位 GB
+     */
+    public $Memory;
+
+    /**
+     * @var integer 实例存储大小，单位 GB
+     */
+    public $Storage;
+
+    /**
+     * @var integer 付费模式
+     */
+    public $PayMode;
+
+    /**
+     * @var string 实例创建时间，格式为 2006-01-02 15:04:05
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 实例到期时间，格式为 2006-01-02 15:04:05
+     */
+    public $PeriodEndTime;
+
+    /**
+     * @var integer 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 实例地域
@@ -112,6 +161,13 @@ class DcnDetailItem extends AbstractModel
      * @param string $StatusDesc 实例状态描述
      * @param integer $DcnFlag 实例DCN标志，1-主，2-备
      * @param integer $DcnStatus 实例DCN状态，0-无，1-创建中，2-同步中，3-已断开
+     * @param integer $Cpu 实例CPU核数
+     * @param integer $Memory 实例内存大小，单位 GB
+     * @param integer $Storage 实例存储大小，单位 GB
+     * @param integer $PayMode 付费模式
+     * @param string $CreateTime 实例创建时间，格式为 2006-01-02 15:04:05
+     * @param string $PeriodEndTime 实例到期时间，格式为 2006-01-02 15:04:05
+     * @param integer $InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
      */
     function __construct()
     {
@@ -168,6 +224,34 @@ class DcnDetailItem extends AbstractModel
 
         if (array_key_exists("DcnStatus",$param) and $param["DcnStatus"] !== null) {
             $this->DcnStatus = $param["DcnStatus"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
+            $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+            $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("PeriodEndTime",$param) and $param["PeriodEndTime"] !== null) {
+            $this->PeriodEndTime = $param["PeriodEndTime"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

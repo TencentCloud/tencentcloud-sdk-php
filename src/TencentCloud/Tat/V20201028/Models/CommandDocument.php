@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) 设置超时时间。
  * @method string getWorkingDirectory() 获取执行路径。
  * @method void setWorkingDirectory(string $WorkingDirectory) 设置执行路径。
+ * @method string getUsername() 获取执行用户。
+ * @method void setUsername(string $Username) 设置执行用户。
  */
 class CommandDocument extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CommandDocument extends AbstractModel
     public $WorkingDirectory;
 
     /**
+     * @var string 执行用户。
+     */
+    public $Username;
+
+    /**
      * @param string $Content Base64 编码后的执行命令。
      * @param string $CommandType 命令类型。
      * @param integer $Timeout 超时时间。
      * @param string $WorkingDirectory 执行路径。
+     * @param string $Username 执行用户。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CommandDocument extends AbstractModel
 
         if (array_key_exists("WorkingDirectory",$param) and $param["WorkingDirectory"] !== null) {
             $this->WorkingDirectory = $param["WorkingDirectory"];
+        }
+
+        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
+            $this->Username = $param["Username"];
         }
     }
 }

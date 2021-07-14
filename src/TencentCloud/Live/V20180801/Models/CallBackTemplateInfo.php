@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述信息。
  * @method string getStreamBeginNotifyUrl() 获取开播回调 URL。
  * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) 设置开播回调 URL。
+ * @method string getStreamMixNotifyUrl() 获取混流回调 URL。(参数已弃用)。
+ * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) 设置混流回调 URL。(参数已弃用)。
  * @method string getStreamEndNotifyUrl() 获取断流回调 URL。
  * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) 设置断流回调 URL。
- * @method string getStreamMixNotifyUrl() 获取混流回调 URL。
- * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) 设置混流回调 URL。
  * @method string getRecordNotifyUrl() 获取录制回调 URL。
  * @method void setRecordNotifyUrl(string $RecordNotifyUrl) 设置录制回调 URL。
  * @method string getSnapshotNotifyUrl() 获取截图回调 URL。
@@ -64,14 +64,14 @@ class CallBackTemplateInfo extends AbstractModel
     public $StreamBeginNotifyUrl;
 
     /**
+     * @var string 混流回调 URL。(参数已弃用)。
+     */
+    public $StreamMixNotifyUrl;
+
+    /**
      * @var string 断流回调 URL。
      */
     public $StreamEndNotifyUrl;
-
-    /**
-     * @var string 混流回调 URL。
-     */
-    public $StreamMixNotifyUrl;
 
     /**
      * @var string 录制回调 URL。
@@ -98,8 +98,8 @@ class CallBackTemplateInfo extends AbstractModel
      * @param string $TemplateName 模板名称。
      * @param string $Description 描述信息。
      * @param string $StreamBeginNotifyUrl 开播回调 URL。
+     * @param string $StreamMixNotifyUrl 混流回调 URL。(参数已弃用)。
      * @param string $StreamEndNotifyUrl 断流回调 URL。
-     * @param string $StreamMixNotifyUrl 混流回调 URL。
      * @param string $RecordNotifyUrl 录制回调 URL。
      * @param string $SnapshotNotifyUrl 截图回调 URL。
      * @param string $PornCensorshipNotifyUrl 鉴黄回调 URL。
@@ -134,12 +134,12 @@ class CallBackTemplateInfo extends AbstractModel
             $this->StreamBeginNotifyUrl = $param["StreamBeginNotifyUrl"];
         }
 
-        if (array_key_exists("StreamEndNotifyUrl",$param) and $param["StreamEndNotifyUrl"] !== null) {
-            $this->StreamEndNotifyUrl = $param["StreamEndNotifyUrl"];
-        }
-
         if (array_key_exists("StreamMixNotifyUrl",$param) and $param["StreamMixNotifyUrl"] !== null) {
             $this->StreamMixNotifyUrl = $param["StreamMixNotifyUrl"];
+        }
+
+        if (array_key_exists("StreamEndNotifyUrl",$param) and $param["StreamEndNotifyUrl"] !== null) {
+            $this->StreamEndNotifyUrl = $param["StreamEndNotifyUrl"];
         }
 
         if (array_key_exists("RecordNotifyUrl",$param) and $param["RecordNotifyUrl"] !== null) {

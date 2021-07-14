@@ -14,37 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mariadb\V20170312\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeUpgradePrice返回参数结构体
+ * ReleaseFileConfig返回参数结构体
  *
- * @method integer getOriginalPrice() 获取原价，单位：分
- * @method void setOriginalPrice(integer $OriginalPrice) 设置原价，单位：分
- * @method integer getPrice() 获取实际价格，单位：分。受折扣等影响，可能和原价不同。
- * @method void setPrice(integer $Price) 设置实际价格，单位：分。受折扣等影响，可能和原价不同。
- * @method string getFormula() 获取变配明细计算公式
- * @method void setFormula(string $Formula) 设置变配明细计算公式
+ * @method boolean getResult() 获取发布结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(boolean $Result) 设置发布结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeUpgradePriceResponse extends AbstractModel
+class ReleaseFileConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 原价，单位：分
+     * @var boolean 发布结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $OriginalPrice;
-
-    /**
-     * @var integer 实际价格，单位：分。受折扣等影响，可能和原价不同。
-     */
-    public $Price;
-
-    /**
-     * @var string 变配明细计算公式
-     */
-    public $Formula;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +41,8 @@ class DescribeUpgradePriceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $OriginalPrice 原价，单位：分
-     * @param integer $Price 实际价格，单位：分。受折扣等影响，可能和原价不同。
-     * @param string $Formula 变配明细计算公式
+     * @param boolean $Result 发布结果
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +58,8 @@ class DescribeUpgradePriceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
-            $this->OriginalPrice = $param["OriginalPrice"];
-        }
-
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
-        }
-
-        if (array_key_exists("Formula",$param) and $param["Formula"] !== null) {
-            $this->Formula = $param["Formula"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

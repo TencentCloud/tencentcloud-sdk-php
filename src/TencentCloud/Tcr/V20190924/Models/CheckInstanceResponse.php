@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mariadb\V20170312\Models;
+namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeUpgradePrice返回参数结构体
+ * CheckInstance返回参数结构体
  *
- * @method integer getOriginalPrice() 获取原价，单位：分
- * @method void setOriginalPrice(integer $OriginalPrice) 设置原价，单位：分
- * @method integer getPrice() 获取实际价格，单位：分。受折扣等影响，可能和原价不同。
- * @method void setPrice(integer $Price) 设置实际价格，单位：分。受折扣等影响，可能和原价不同。
- * @method string getFormula() 获取变配明细计算公式
- * @method void setFormula(string $Formula) 设置变配明细计算公式
+ * @method boolean getIsValidated() 获取检查结果，true为合法，false为非法
+ * @method void setIsValidated(boolean $IsValidated) 设置检查结果，true为合法，false为非法
+ * @method integer getRegionId() 获取实例所在的RegionId
+ * @method void setRegionId(integer $RegionId) 设置实例所在的RegionId
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeUpgradePriceResponse extends AbstractModel
+class CheckInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 原价，单位：分
+     * @var boolean 检查结果，true为合法，false为非法
      */
-    public $OriginalPrice;
+    public $IsValidated;
 
     /**
-     * @var integer 实际价格，单位：分。受折扣等影响，可能和原价不同。
+     * @var integer 实例所在的RegionId
      */
-    public $Price;
-
-    /**
-     * @var string 变配明细计算公式
-     */
-    public $Formula;
+    public $RegionId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DescribeUpgradePriceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $OriginalPrice 原价，单位：分
-     * @param integer $Price 实际价格，单位：分。受折扣等影响，可能和原价不同。
-     * @param string $Formula 变配明细计算公式
+     * @param boolean $IsValidated 检查结果，true为合法，false为非法
+     * @param integer $RegionId 实例所在的RegionId
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +62,12 @@ class DescribeUpgradePriceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
-            $this->OriginalPrice = $param["OriginalPrice"];
+        if (array_key_exists("IsValidated",$param) and $param["IsValidated"] !== null) {
+            $this->IsValidated = $param["IsValidated"];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
-        }
-
-        if (array_key_exists("Formula",$param) and $param["Formula"] !== null) {
-            $this->Formula = $param["Formula"];
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -36,6 +36,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建集群
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建配置项
  * @method Models\CreateContainGroupResponse CreateContainGroup(Models\CreateContainGroupRequest $req) 创建容器部署组
+ * @method Models\CreateFileConfigResponse CreateFileConfig(Models\CreateFileConfigRequest $req) 创建文件配置项
  * @method Models\CreateGatewayApiResponse CreateGatewayApi(Models\CreateGatewayApiRequest $req) 批量导入API至api分组(也支持新建API到分组)
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 创建虚拟机部署组
  * @method Models\CreateLaneResponse CreateLane(Models\CreateLaneRequest $req) 创建泳道
@@ -93,6 +94,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeDownloadInfoResponse DescribeDownloadInfo(Models\DescribeDownloadInfoRequest $req) TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeEnabledUnitRuleResponse DescribeEnabledUnitRule(Models\DescribeEnabledUnitRuleRequest $req) 查询生效的单元化规则
+ * @method Models\DescribeFileConfigsResponse DescribeFileConfigs(Models\DescribeFileConfigsRequest $req) 查询文件配置项列表
  * @method Models\DescribeFlowLastBatchStateResponse DescribeFlowLastBatchState(Models\DescribeFlowLastBatchStateRequest $req) 查询工作流最新一个批次的状态信息
  * @method Models\DescribeGatewayAllGroupApisResponse DescribeGatewayAllGroupApis(Models\DescribeGatewayAllGroupApisRequest $req) 查询网关所有分组下Api列表
  * @method Models\DescribeGatewayMonitorOverviewResponse DescribeGatewayMonitorOverview(Models\DescribeGatewayMonitorOverviewRequest $req) 查询网关监控概览
@@ -166,6 +168,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\RedoTaskFlowBatchResponse RedoTaskFlowBatch(Models\RedoTaskFlowBatchRequest $req) 重新执行工作流批次
  * @method Models\ReleaseApiGroupResponse ReleaseApiGroup(Models\ReleaseApiGroupRequest $req) 发布Api分组
  * @method Models\ReleaseConfigResponse ReleaseConfig(Models\ReleaseConfigRequest $req) 发布配置
+ * @method Models\ReleaseFileConfigResponse ReleaseFileConfig(Models\ReleaseFileConfigRequest $req) 发布文件配置
  * @method Models\ReleasePublicConfigResponse ReleasePublicConfig(Models\ReleasePublicConfigRequest $req) 发布公共配置
  * @method Models\RemoveInstancesResponse RemoveInstances(Models\RemoveInstancesRequest $req) 从 TSF 集群中批量移除云主机节点
  * @method Models\RevocationConfigResponse RevocationConfig(Models\RevocationConfigRequest $req) 撤回已发布的配置

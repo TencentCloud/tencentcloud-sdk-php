@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSplit(boolean $AutoSplit) 设置是否开启自动分裂
  * @method integer getMaxSplitPartitions() 获取若开启最大分裂，该主题能够能够允许的最大分区数
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置若开启最大分裂，该主题能够能够允许的最大分区数
+ * @method integer getPeriod() 获取生命周期，单位天；可取值范围1~366
+ * @method void setPeriod(integer $Period) 设置生命周期，单位天；可取值范围1~366
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyTopicRequest extends AbstractModel
     public $MaxSplitPartitions;
 
     /**
+     * @var integer 生命周期，单位天；可取值范围1~366
+     */
+    public $Period;
+
+    /**
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
      * @param boolean $Status 该日志主题是否开始采集
      * @param boolean $AutoSplit 是否开启自动分裂
      * @param integer $MaxSplitPartitions 若开启最大分裂，该主题能够能够允许的最大分区数
+     * @param integer $Period 生命周期，单位天；可取值范围1~366
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("MaxSplitPartitions",$param) and $param["MaxSplitPartitions"] !== null) {
             $this->MaxSplitPartitions = $param["MaxSplitPartitions"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

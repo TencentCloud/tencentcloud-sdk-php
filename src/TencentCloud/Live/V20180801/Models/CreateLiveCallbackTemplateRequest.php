@@ -56,10 +56,8 @@ use TencentCloud\Common\AbstractModel;
 [事件消息通知](/document/product/267/32744)。
  * @method void setCallbackKey(string $CallbackKey) 设置回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
 [事件消息通知](/document/product/267/32744)。
- * @method string getStreamMixNotifyUrl() 获取混流回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
- * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) 设置混流回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
+ * @method string getStreamMixNotifyUrl() 获取参数已弃用。
+ * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) 设置参数已弃用。
  */
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -114,8 +112,7 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
     public $CallbackKey;
 
     /**
-     * @var string 混流回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @var string 参数已弃用。
      */
     public $StreamMixNotifyUrl;
 
@@ -138,8 +135,7 @@ class CreateLiveCallbackTemplateRequest extends AbstractModel
 相关协议文档：[事件消息通知](/document/product/267/32741)。
      * @param string $CallbackKey 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
 [事件消息通知](/document/product/267/32744)。
-     * @param string $StreamMixNotifyUrl 混流回调 URL，
-相关协议文档：[事件消息通知](/document/product/267/32744)。
+     * @param string $StreamMixNotifyUrl 参数已弃用。
      */
     function __construct()
     {

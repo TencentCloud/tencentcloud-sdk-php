@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCommId() 获取通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）例：1400353843_218695_1590065777。通过 DescribeRoomInformation（查询房间列表）接口获取（链接：https://cloud.tencent.com/document/product/647/44050）
  * @method void setCommId(string $CommId) 设置通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）例：1400353843_218695_1590065777。通过 DescribeRoomInformation（查询房间列表）接口获取（链接：https://cloud.tencent.com/document/product/647/44050）
- * @method integer getStartTime() 获取查询开始时间，14天内。本地unix时间戳（1588031999s）
- * @method void setStartTime(integer $StartTime) 设置查询开始时间，14天内。本地unix时间戳（1588031999s）
+ * @method integer getStartTime() 获取查询开始时间，14天内。本地unix时间戳（1588031999s），查询实时数据时，查询起止时间不超过1个小时。
+ * @method void setStartTime(integer $StartTime) 设置查询开始时间，14天内。本地unix时间戳（1588031999s），查询实时数据时，查询起止时间不超过1个小时。
  * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1588031999s）
  * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1588031999s）
  * @method string getSdkAppId() 获取用户SDKAppID（1400188366）
@@ -71,7 +71,7 @@ class DescribeCallDetailRequest extends AbstractModel
     public $CommId;
 
     /**
-     * @var integer 查询开始时间，14天内。本地unix时间戳（1588031999s）
+     * @var integer 查询开始时间，14天内。本地unix时间戳（1588031999s），查询实时数据时，查询起止时间不超过1个小时。
      */
     public $StartTime;
 
@@ -120,7 +120,7 @@ bigvHeight：上/下行分辨率高
 
     /**
      * @param string $CommId 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）例：1400353843_218695_1590065777。通过 DescribeRoomInformation（查询房间列表）接口获取（链接：https://cloud.tencent.com/document/product/647/44050）
-     * @param integer $StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
+     * @param integer $StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s），查询实时数据时，查询起止时间不超过1个小时。
      * @param integer $EndTime 查询结束时间，本地unix时间戳（1588031999s）
      * @param string $SdkAppId 用户SDKAppID（1400188366）
      * @param array $UserIds 需查询的用户数组，不填默认返回6个用户,最多可填6个用户

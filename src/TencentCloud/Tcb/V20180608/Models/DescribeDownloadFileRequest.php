@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDownloadFile请求参数结构体
  *
- * @method string getCodeUri() 获取代码uri
- * @method void setCodeUri(string $CodeUri) 设置代码uri
+ * @method string getCodeUri() 获取代码uri，格式如：extension://abcdefhhxxx.zip，对应 DescribeExtensionUploadInfo 接口的返回值
+ * @method void setCodeUri(string $CodeUri) 设置代码uri，格式如：extension://abcdefhhxxx.zip，对应 DescribeExtensionUploadInfo 接口的返回值
  */
 class DescribeDownloadFileRequest extends AbstractModel
 {
     /**
-     * @var string 代码uri
+     * @var string 代码uri，格式如：extension://abcdefhhxxx.zip，对应 DescribeExtensionUploadInfo 接口的返回值
      */
     public $CodeUri;
 
     /**
-     * @param string $CodeUri 代码uri
+     * @param string $CodeUri 代码uri，格式如：extension://abcdefhhxxx.zip，对应 DescribeExtensionUploadInfo 接口的返回值
      */
     function __construct()
     {

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContent() 获取Base64编码后的命令内容，长度不可超过64KB。
  * @method void setContent(string $Content) 设置Base64编码后的命令内容，长度不可超过64KB。
- * @method array getInstanceIds() 获取待执行命令的实例ID列表。 支持实例类型：
+ * @method array getInstanceIds() 获取待执行命令的实例ID列表，上限100。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
- * @method void setInstanceIds(array $InstanceIds) 设置待执行命令的实例ID列表。 支持实例类型：
+ * @method void setInstanceIds(array $InstanceIds) 设置待执行命令的实例ID列表，上限100。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
  * @method string getCommandName() 获取命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
@@ -87,7 +87,7 @@ class RunCommandRequest extends AbstractModel
     public $Content;
 
     /**
-     * @var array 待执行命令的实例ID列表。 支持实例类型：
+     * @var array 待执行命令的实例ID列表，上限100。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
      */
@@ -164,7 +164,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * @param string $Content Base64编码后的命令内容，长度不可超过64KB。
-     * @param array $InstanceIds 待执行命令的实例ID列表。 支持实例类型：
+     * @param array $InstanceIds 待执行命令的实例ID列表，上限100。支持实例类型：
 <li> CVM
 <li> LIGHTHOUSE
      * @param string $CommandName 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。

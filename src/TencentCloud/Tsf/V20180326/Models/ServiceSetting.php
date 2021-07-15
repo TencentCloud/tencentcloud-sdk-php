@@ -32,6 +32,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDisableService() 获取是否创建 k8s service，默认为 false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisableService(boolean $DisableService) 设置是否创建 k8s service，默认为 false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHeadlessService() 获取service 是否为 headless 类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeadlessService(boolean $HeadlessService) 设置service 是否为 headless 类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAllowDeleteService() 获取当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAllowDeleteService(boolean $AllowDeleteService) 设置当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceSetting extends AbstractModel
 {
@@ -54,11 +66,35 @@ class ServiceSetting extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var boolean 是否创建 k8s service，默认为 false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisableService;
+
+    /**
+     * @var boolean service 是否为 headless 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HeadlessService;
+
+    /**
+     * @var boolean 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AllowDeleteService;
+
+    /**
      * @param integer $AccessType 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProtocolPorts 容器端口映射
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DisableService 是否创建 k8s service，默认为 false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HeadlessService service 是否为 headless 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AllowDeleteService 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -89,6 +125,18 @@ class ServiceSetting extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("DisableService",$param) and $param["DisableService"] !== null) {
+            $this->DisableService = $param["DisableService"];
+        }
+
+        if (array_key_exists("HeadlessService",$param) and $param["HeadlessService"] !== null) {
+            $this->HeadlessService = $param["HeadlessService"];
+        }
+
+        if (array_key_exists("AllowDeleteService",$param) and $param["AllowDeleteService"] !== null) {
+            $this->AllowDeleteService = $param["AllowDeleteService"];
         }
     }
 }

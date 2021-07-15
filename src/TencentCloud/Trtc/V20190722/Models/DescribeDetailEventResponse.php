@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDetailEvent返回参数结构体
  *
- * @method array getData() 获取返回的事件列表
- * @method void setData(array $Data) 设置返回的事件列表
+ * @method array getData() 获取返回的事件列表，若没有数据，会返回空数组。
+ * @method void setData(array $Data) 设置返回的事件列表，若没有数据，会返回空数组。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDetailEventResponse extends AbstractModel
 {
     /**
-     * @var array 返回的事件列表
+     * @var array 返回的事件列表，若没有数据，会返回空数组。
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeDetailEventResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 返回的事件列表
+     * @param array $Data 返回的事件列表，若没有数据，会返回空数组。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

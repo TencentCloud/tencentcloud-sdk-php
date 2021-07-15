@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDownloadFile返回参数结构体
  *
- * @method string getFilePath() 获取文件路径
+ * @method string getFilePath() 获取文件路径，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFilePath(string $FilePath) 设置文件路径
+ * @method void setFilePath(string $FilePath) 设置文件路径，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCustomKey() 获取加密key
+ * @method string getCustomKey() 获取加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomKey(string $CustomKey) 设置加密key
+ * @method void setCustomKey(string $CustomKey) 设置加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDownloadUrl() 获取下载链接
 注意：此字段可能返回 null，表示取不到有效值。
@@ -38,13 +38,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDownloadFileResponse extends AbstractModel
 {
     /**
-     * @var string 文件路径
+     * @var string 文件路径，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilePath;
 
     /**
-     * @var string 加密key
+     * @var string 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomKey;
@@ -61,9 +61,9 @@ class DescribeDownloadFileResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FilePath 文件路径
+     * @param string $FilePath 文件路径，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CustomKey 加密key
+     * @param string $CustomKey 加密key，用于计算下载加密文件的header。参考SSE-C https://cloud.tencent.com/document/product/436/7728#sse-c
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DownloadUrl 下载链接
 注意：此字段可能返回 null，表示取不到有效值。

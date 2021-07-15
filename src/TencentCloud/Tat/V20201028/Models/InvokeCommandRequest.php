@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCommandId() 获取待触发的命令ID。
  * @method void setCommandId(string $CommandId) 设置待触发的命令ID。
- * @method array getInstanceIds() 获取待执行命令的实例ID列表。
- * @method void setInstanceIds(array $InstanceIds) 设置待执行命令的实例ID列表。
+ * @method array getInstanceIds() 获取待执行命令的实例ID列表，上限100。
+ * @method void setInstanceIds(array $InstanceIds) 设置待执行命令的实例ID列表，上限100。
  * @method string getParameters() 获取Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
@@ -47,7 +47,7 @@ class InvokeCommandRequest extends AbstractModel
     public $CommandId;
 
     /**
-     * @var array 待执行命令的实例ID列表。
+     * @var array 待执行命令的实例ID列表，上限100。
      */
     public $InstanceIds;
 
@@ -68,7 +68,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
     /**
      * @param string $CommandId 待触发的命令ID。
-     * @param array $InstanceIds 待执行命令的实例ID列表。
+     * @param array $InstanceIds 待执行命令的实例ID列表，上限100。
      * @param string $Parameters Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。

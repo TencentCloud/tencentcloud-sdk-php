@@ -24,6 +24,7 @@ use TencentCloud\Apigateway\V20180808\Models as Models;
 
 /**
  * @method Models\AttachPluginResponse AttachPlugin(Models\AttachPluginRequest $req) 绑定插件到API上。
+ * @method Models\BindApiAppResponse BindApiApp(Models\BindApiAppRequest $req) 本接口（BindApiApp）用于绑定应用到API。
  * @method Models\BindEnvironmentResponse BindEnvironment(Models\BindEnvironmentRequest $req) 本接口（BindEnvironment）用于绑定使用计划到服务或API。
 用户在发布服务到某个环境中后，如果 API 需要鉴权，还需要绑定使用计划才能进行调用，此接口用户将使用计划绑定到特定环境。
 目前支持绑定使用计划到API，但是同一个服务不能同时存在绑定到服务的使用计划和绑定到API的使用计划，所以对已经绑定过服务级别使用计划的环境，请先使用 服务级别使用计划降级 接口进行降级操作。
@@ -35,6 +36,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
  * @method Models\BuildAPIDocResponse BuildAPIDoc(Models\BuildAPIDocRequest $req) 构建 API 文档
  * @method Models\CreateAPIDocResponse CreateAPIDoc(Models\CreateAPIDocRequest $req) 创建 API 文档
  * @method Models\CreateApiResponse CreateApi(Models\CreateApiRequest $req) 本接口（CreateApi）用于创建 API 接口，创建 API 前，用户需要先创建服务，每个 API 都有自己归属的服务。
+ * @method Models\CreateApiAppResponse CreateApiApp(Models\CreateApiAppRequest $req) 本接口（CreateApiApp）用于创建应用。
  * @method Models\CreateApiKeyResponse CreateApiKey(Models\CreateApiKeyRequest $req) 本接口（CreateApiKey）用于创建一对新的 API 密钥。
  * @method Models\CreateIPStrategyResponse CreateIPStrategy(Models\CreateIPStrategyRequest $req) 本接口（CreateIPStrategy）用于创建服务IP策略。
  * @method Models\CreatePluginResponse CreatePlugin(Models\CreatePluginRequest $req) 创建API网关插件。
@@ -44,6 +46,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
 用户在使用 API 网关时，需要创建使用计划并将其绑定到服务的环境中使用。
  * @method Models\DeleteAPIDocResponse DeleteAPIDoc(Models\DeleteAPIDocRequest $req) 删除 API 文档
  * @method Models\DeleteApiResponse DeleteApi(Models\DeleteApiRequest $req) 本接口（DeleteApi）用于删除已经创建的API。
+ * @method Models\DeleteApiAppResponse DeleteApiApp(Models\DeleteApiAppRequest $req) 本接口（DeleteApiApp）用于删除已经创建的应用。
  * @method Models\DeleteApiKeyResponse DeleteApiKey(Models\DeleteApiKeyRequest $req) 本接口（DeleteApiKey）用于删除一对 API 密钥。
  * @method Models\DeleteIPStrategyResponse DeleteIPStrategy(Models\DeleteIPStrategyRequest $req) 本接口（DeleteIPStrategy）用于删除服务IP策略。
  * @method Models\DeletePluginResponse DeletePlugin(Models\DeletePluginRequest $req) 删除API网关插件
@@ -58,6 +61,10 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribeAPIDocsResponse DescribeAPIDocs(Models\DescribeAPIDocsRequest $req) 查询 API 文档列表
  * @method Models\DescribeAllPluginApisResponse DescribeAllPluginApis(Models\DescribeAllPluginApisRequest $req) 展示插件相关的API列表，包括已绑定的和未绑定的API信息。
  * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) 本接口（DescribeApi）用于查询用户 API 网关的 API 接口的详细信息。​
+ * @method Models\DescribeApiAppResponse DescribeApiApp(Models\DescribeApiAppRequest $req) 本接口（DescribeApiApp）用于根据应用ID搜索应用。
+ * @method Models\DescribeApiAppBindApisStatusResponse DescribeApiAppBindApisStatus(Models\DescribeApiAppBindApisStatusRequest $req) 本接口（DescribeApiAppBindApisStatus）查询应用绑定的Api列表。
+ * @method Models\DescribeApiAppsStatusResponse DescribeApiAppsStatus(Models\DescribeApiAppsStatusRequest $req) 本接口（DescribeApiAppsStatus）查询应用列表。
+ * @method Models\DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatus(Models\DescribeApiBindApiAppsStatusRequest $req) 本接口（DescribeApiBindApiAppsStatus）查询Api绑定的应用列表。
  * @method Models\DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(Models\DescribeApiEnvironmentStrategyRequest $req) 本接口（DescribeApiEnvironmentStrategy）用于展示API绑定的限流策略。
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) 本接口（DescribeApiKey）用于查询密钥详情。
 用户在创建密钥后，可用此接口查询一个 API 密钥的详情，该接口会显示密钥 Key。
@@ -78,6 +85,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(Models\DescribeServiceEnvironmentReleaseHistoryRequest $req) 本接口（DescribeServiceEnvironmentReleaseHistory）用于查询服务环境的发布历史。
 用户在创建好服务后需要发布到某个环境中才能进行使用，本接口用于查询一个服务某个环境的发布记录。
  * @method Models\DescribeServiceEnvironmentStrategyResponse DescribeServiceEnvironmentStrategy(Models\DescribeServiceEnvironmentStrategyRequest $req) 本接口（DescribeServiceEnvironmentStrategy）用于展示服务限流策略。
+ * @method Models\DescribeServiceForApiAppResponse DescribeServiceForApiApp(Models\DescribeServiceForApiAppRequest $req) 本接口（DescribeServiceForApiApp）用于应用使用者查询一个服务的详细信息、包括服务的描述、域名、协议等信息。
  * @method Models\DescribeServiceReleaseVersionResponse DescribeServiceReleaseVersion(Models\DescribeServiceReleaseVersionRequest $req) 本接口（DescribeServiceReleaseVersion）查询一个服务下面所有已经发布的版本列表。
 用户在发布服务时，常有多个版本发布，可使用本接口查询已发布的版本。
  * @method Models\DescribeServiceSubDomainMappingsResponse DescribeServiceSubDomainMappings(Models\DescribeServiceSubDomainMappingsRequest $req) 本接口（DescribeServiceSubDomainMappings）用于查询自定义域名的路径映射。
@@ -99,6 +107,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
  * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) 本接口（GenerateApiDocument）用于自动生成 API 文档和 SDK，一个服务的一个环境生成一份文档和 SDK。
  * @method Models\ModifyAPIDocResponse ModifyAPIDoc(Models\ModifyAPIDocRequest $req) 修改 API 文档
  * @method Models\ModifyApiResponse ModifyApi(Models\ModifyApiRequest $req) 本接口（ModifyApi）用于修改 API 接口，可调用此接口对已经配置的 API 接口进行编辑修改。修改后的 API 需要重新发布 API 所在的服务到对应环境方能生效。
+ * @method Models\ModifyApiAppResponse ModifyApiApp(Models\ModifyApiAppRequest $req) 本接口（ModifyApiApp）用于修改已经创建的应用。
  * @method Models\ModifyApiEnvironmentStrategyResponse ModifyApiEnvironmentStrategy(Models\ModifyApiEnvironmentStrategyRequest $req) 本接口（ModifyApiEnvironmentStrategy）用于修改API限流策略
  * @method Models\ModifyApiIncrementResponse ModifyApiIncrement(Models\ModifyApiIncrementRequest $req) 提供增量更新API能力，主要是给程序调用（区别于ModifyApi，该接口是需要传入API的全量参数，对console使用较友好）
  * @method Models\ModifyIPStrategyResponse ModifyIPStrategy(Models\ModifyIPStrategyRequest $req) 本接口（ModifyIPStrategy）用于修改服务IP策略。
@@ -117,6 +126,8 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
 用户使用 API 网关绑定了自定义域名到服务中后，若想要解绑此自定义域名，可使用此接口。
  * @method Models\UnReleaseServiceResponse UnReleaseService(Models\UnReleaseServiceRequest $req) 本接口（UnReleaseService）用于下线服务。
 用户发布服务到某个环境后，此服务中的 API 方可被调用者进行调用，当用户需要将此服务从发布环境中下线时，可调用此 API。下线后的服务不可被调用。
+ * @method Models\UnbindApiAppResponse UnbindApiApp(Models\UnbindApiAppRequest $req) 本接口（UnbindApiApp）用于解除应用和API绑定。
+ * @method Models\UpdateApiAppKeyResponse UpdateApiAppKey(Models\UpdateApiAppKeyRequest $req) 本接口（UpdateApiAppKey）用于更新应用秘钥。
  * @method Models\UpdateApiKeyResponse UpdateApiKey(Models\UpdateApiKeyRequest $req) 本接口（UpdateApiKey）用于更换用户已创建的一对 API 密钥。
  * @method Models\UpdateServiceResponse UpdateService(Models\UpdateServiceRequest $req) 本接口（UpdateService）用于从服务发布的环境中运行版本切换到特定版本。用户在使用 API 网关创建服务并发布服务到某个环境后，多因为开发过程会产生多个版本，此时可调用本接口。
  */

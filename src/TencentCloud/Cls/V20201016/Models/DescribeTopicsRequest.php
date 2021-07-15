@@ -58,8 +58,15 @@ use TencentCloud\Common\AbstractModel;
 
 必选：否
 
+<br><li> storageType
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+按照【日志主题的存储类型】进行过滤。可选值 hot（实时存储），cold（离线存储）
+类型：String
+
+必选：否
+
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method void setFilters(array $Filters) 设置<br><li> topicName
 
 按照【日志主题名称】进行过滤。
@@ -98,8 +105,15 @@ use TencentCloud\Common\AbstractModel;
 
 必选：否
 
+<br><li> storageType
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+按照【日志主题的存储类型】进行过滤。可选值 hot（实时存储），cold（离线存储）
+类型：String
+
+必选：否
+
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method integer getOffset() 获取分页的偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
  * @method integer getLimit() 获取分页单页限制数目，默认值为20，最大值100。
@@ -146,8 +160,15 @@ class DescribeTopicsRequest extends AbstractModel
 
 必选：否
 
+<br><li> storageType
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+按照【日志主题的存储类型】进行过滤。可选值 hot（实时存储），cold（离线存储）
+类型：String
+
+必选：否
+
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
     public $Filters;
 
@@ -200,8 +221,15 @@ class DescribeTopicsRequest extends AbstractModel
 
 必选：否
 
+<br><li> storageType
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+按照【日志主题的存储类型】进行过滤。可选值 hot（实时存储），cold（离线存储）
+类型：String
+
+必选：否
+
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param integer $Offset 分页的偏移量，默认值为0。
      * @param integer $Limit 分页单页限制数目，默认值为20，最大值100。
      */

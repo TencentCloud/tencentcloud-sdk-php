@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置视频处理输出文件的目标存储。
  * @method string getOutputObjectPath() 获取视频处理输出文件的目标路径。
  * @method void setOutputObjectPath(string $OutputObjectPath) 设置视频处理输出文件的目标路径。
+ * @method EditMediaOutputConfig getOutputConfig() 获取编辑后生成的文件配置。
+ * @method void setOutputConfig(EditMediaOutputConfig $OutputConfig) 设置编辑后生成的文件配置。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，不填代表不获取事件通知。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息，不填代表不获取事件通知。
  * @method integer getTasksPriority() 获取任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
@@ -53,6 +55,11 @@ class EditMediaRequest extends AbstractModel
     public $OutputObjectPath;
 
     /**
+     * @var EditMediaOutputConfig 编辑后生成的文件配置。
+     */
+    public $OutputConfig;
+
+    /**
      * @var TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
     public $TaskNotifyConfig;
@@ -76,6 +83,7 @@ class EditMediaRequest extends AbstractModel
      * @param array $FileInfos 输入的视频文件信息。
      * @param TaskOutputStorage $OutputStorage 视频处理输出文件的目标存储。
      * @param string $OutputObjectPath 视频处理输出文件的目标路径。
+     * @param EditMediaOutputConfig $OutputConfig 编辑后生成的文件配置。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      * @param integer $TasksPriority 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
@@ -110,6 +118,11 @@ class EditMediaRequest extends AbstractModel
 
         if (array_key_exists("OutputObjectPath",$param) and $param["OutputObjectPath"] !== null) {
             $this->OutputObjectPath = $param["OutputObjectPath"];
+        }
+
+        if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
+            $this->OutputConfig = new EditMediaOutputConfig();
+            $this->OutputConfig->deserialize($param["OutputConfig"]);
         }
 
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {

@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployVersion(string $DeployVersion) 设置部署版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRestartCount() 获取重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRestartCount(integer $RestartCount) 设置重启次数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunVersionPod extends AbstractModel
 {
@@ -79,6 +83,12 @@ class RunVersionPod extends AbstractModel
     public $DeployVersion;
 
     /**
+     * @var integer 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RestartCount;
+
+    /**
      * @param string $Webshell shell地址
      * @param string $PodId pod的id
      * @param string $Status 状态
@@ -87,6 +97,8 @@ class RunVersionPod extends AbstractModel
      * @param string $Zone 可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeployVersion 部署版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RestartCount 重启次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -128,6 +140,10 @@ class RunVersionPod extends AbstractModel
 
         if (array_key_exists("DeployVersion",$param) and $param["DeployVersion"] !== null) {
             $this->DeployVersion = $param["DeployVersion"];
+        }
+
+        if (array_key_exists("RestartCount",$param) and $param["RestartCount"] !== null) {
+            $this->RestartCount = $param["RestartCount"];
         }
     }
 }

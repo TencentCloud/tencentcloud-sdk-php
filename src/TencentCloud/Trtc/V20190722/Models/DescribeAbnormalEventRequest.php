@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSdkAppId() 获取用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
  * @method void setSdkAppId(string $SdkAppId) 设置用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
- * @method integer getStartTime() 获取查询开始时间
- * @method void setStartTime(integer $StartTime) 设置查询开始时间
- * @method integer getEndTime() 获取查询结束时间
- * @method void setEndTime(integer $EndTime) 设置查询结束时间
+ * @method integer getStartTime() 获取查询开始时间,本地unix时间戳（1588031999s）
+ * @method void setStartTime(integer $StartTime) 设置查询开始时间,本地unix时间戳（1588031999s）
+ * @method integer getEndTime() 获取查询结束时间,本地unix时间戳（1588031999s）
+ * @method void setEndTime(integer $EndTime) 设置查询结束时间,本地unix时间戳（1588031999s）
  * @method string getRoomId() 获取房间号，查询房间内任意20条以内异常体验事件
  * @method void setRoomId(string $RoomId) 设置房间号，查询房间内任意20条以内异常体验事件
  */
@@ -37,12 +37,12 @@ class DescribeAbnormalEventRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer 查询开始时间
+     * @var integer 查询开始时间,本地unix时间戳（1588031999s）
      */
     public $StartTime;
 
     /**
-     * @var integer 查询结束时间
+     * @var integer 查询结束时间,本地unix时间戳（1588031999s）
      */
     public $EndTime;
 
@@ -53,8 +53,8 @@ class DescribeAbnormalEventRequest extends AbstractModel
 
     /**
      * @param string $SdkAppId 用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
-     * @param integer $StartTime 查询开始时间
-     * @param integer $EndTime 查询结束时间
+     * @param integer $StartTime 查询开始时间,本地unix时间戳（1588031999s）
+     * @param integer $EndTime 查询结束时间,本地unix时间戳（1588031999s）
      * @param string $RoomId 房间号，查询房间内任意20条以内异常体验事件
      */
     function __construct()

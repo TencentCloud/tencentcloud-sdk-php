@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 多云盘参数
  *
- * @method string getDiskType() 获取云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
- * @method void setDiskType(string $DiskType) 设置云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
+ * @method string getDiskType() 获取云盘类型
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
+ * @method void setDiskType(string $DiskType) 设置云盘类型
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
  * @method integer getVolume() 获取云盘大小
  * @method void setVolume(integer $Volume) 设置云盘大小
  * @method integer getCount() 获取该类型云盘个数
@@ -30,7 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class MultiDisk extends AbstractModel
 {
     /**
-     * @var string 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
+     * @var string 云盘类型
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
      */
     public $DiskType;
 
@@ -45,7 +54,10 @@ class MultiDisk extends AbstractModel
     public $Count;
 
     /**
-     * @param string $DiskType 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
+     * @param string $DiskType 云盘类型
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
      * @param integer $Volume 云盘大小
      * @param integer $Count 该类型云盘个数
      */

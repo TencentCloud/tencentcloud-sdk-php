@@ -178,6 +178,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDynamicPodSpec(string $DynamicPodSpec) 设置浮动规格值json字符串
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSupportModifyPayMode() 获取是否支持变更计费类型 1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportModifyPayMode(integer $SupportModifyPayMode) 设置是否支持变更计费类型 1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -417,6 +421,12 @@ class NodeHardwareInfo extends AbstractModel
     public $DynamicPodSpec;
 
     /**
+     * @var integer 是否支持变更计费类型 1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportModifyPayMode;
+
+    /**
      * @param integer $AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNo 序列号
@@ -495,6 +505,8 @@ class NodeHardwareInfo extends AbstractModel
      * @param integer $IsDynamicSpec 是否浮动规格，1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DynamicPodSpec 浮动规格值json字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SupportModifyPayMode 是否支持变更计费类型 1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -675,6 +687,10 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("DynamicPodSpec",$param) and $param["DynamicPodSpec"] !== null) {
             $this->DynamicPodSpec = $param["DynamicPodSpec"];
+        }
+
+        if (array_key_exists("SupportModifyPayMode",$param) and $param["SupportModifyPayMode"] !== null) {
+            $this->SupportModifyPayMode = $param["SupportModifyPayMode"];
         }
     }
 }

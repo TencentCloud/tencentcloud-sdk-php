@@ -55,6 +55,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeEndUsersResponse DescribeEndUsers(Models\DescribeEndUsersRequest $req) 获取终端用户列表
  * @method Models\DescribeEnvFreeQuotaResponse DescribeEnvFreeQuota(Models\DescribeEnvFreeQuotaRequest $req) 查询后付费免费配额信息
  * @method Models\DescribeEnvLimitResponse DescribeEnvLimit(Models\DescribeEnvLimitRequest $req) 查询环境个数上限
+ * @method Models\DescribeEnvPostpaidDeductResponse DescribeEnvPostpaidDeduct(Models\DescribeEnvPostpaidDeductRequest $req) 查询环境后付费计费详情
  * @method Models\DescribeEnvsResponse DescribeEnvs(Models\DescribeEnvsRequest $req) 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
  * @method Models\DescribeExtensionUploadInfoResponse DescribeExtensionUploadInfo(Models\DescribeExtensionUploadInfoRequest $req) 描述扩展上传文件信息
  * @method Models\DescribeExtraPkgBillingInfoResponse DescribeExtraPkgBillingInfo(Models\DescribeExtraPkgBillingInfoRequest $req) 获取增值包计费相关信息
@@ -66,6 +67,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
 1 有免费包的返回SmsFreeQuota结构所有字段
 2 没有免费包，有付费包，付费返回复用SmsFreeQuota结构，其中只有 TodayUsedQuota 字段有效
 3 都没有返回为空数组
+ * @method Models\DescribeSpecialCostItemsResponse DescribeSpecialCostItems(Models\DescribeSpecialCostItemsRequest $req) 查询环境1分钱抵扣信息
  * @method Models\DescribeWxCloudBaseRunEnvsResponse DescribeWxCloudBaseRunEnvs(Models\DescribeWxCloudBaseRunEnvsRequest $req) 查询微信云托管环境信息
  * @method Models\DescribeWxCloudBaseRunSubNetsResponse DescribeWxCloudBaseRunSubNets(Models\DescribeWxCloudBaseRunSubNetsRequest $req) 查询微信云托管子网
  * @method Models\DestroyEnvResponse DestroyEnv(Models\DestroyEnvRequest $req) 销毁环境

@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstances请求参数结构体
  *
- * @method integer getZoneId() 获取实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
- * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
  * @method integer getTypeId() 获取实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
  * @method void setTypeId(integer $TypeId) 设置实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
  * @method integer getMemSize() 获取内存容量，单位为MB， 数值需为1024的整数倍，具体规格以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
@@ -34,6 +32,8 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
  * @method void setPeriod(integer $Period) 设置购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
  * @method integer getBillingMode() 获取付费方式:0-按量计费，1-包年包月。
  * @method void setBillingMode(integer $BillingMode) 设置付费方式:0-按量计费，1-包年包月。
+ * @method integer getZoneId() 获取实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+ * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
  * @method string getPassword() 获取实例密码，当输入参数NoAuth为true且使用私有网络VPC时，Password为非必填，否则Password为必填参数。
 当实例类型TypeId为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；
 当实例类型TypeId为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字 且 不包含其他字符。
@@ -66,14 +66,13 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
  * @method void setNodeSet(array $NodeSet) 设置实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
  * @method array getResourceTags() 获取购买实例绑定标签
  * @method void setResourceTags(array $ResourceTags) 设置购买实例绑定标签
+ * @method string getZoneName() 获取实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+ * @method void setZoneName(string $ZoneName) 设置实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+ * @method string getTemplateId() 获取创建实例需要应用的参数模板ID，不传则应用默认的参数模板
+ * @method void setTemplateId(string $TemplateId) 设置创建实例需要应用的参数模板ID，不传则应用默认的参数模板
  */
 class CreateInstancesRequest extends AbstractModel
 {
-    /**
-     * @var integer 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     */
-    public $ZoneId;
-
     /**
      * @var integer 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
      */
@@ -99,6 +98,11 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      * @var integer 付费方式:0-按量计费，1-包年包月。
      */
     public $BillingMode;
+
+    /**
+     * @var integer 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     */
+    public $ZoneId;
 
     /**
      * @var string 实例密码，当输入参数NoAuth为true且使用私有网络VPC时，Password为非必填，否则Password为必填参数。
@@ -173,13 +177,23 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     public $ResourceTags;
 
     /**
-     * @param integer $ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * @var string 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     */
+    public $ZoneName;
+
+    /**
+     * @var string 创建实例需要应用的参数模板ID，不传则应用默认的参数模板
+     */
+    public $TemplateId;
+
+    /**
      * @param integer $TypeId 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
      * @param integer $MemSize 内存容量，单位为MB， 数值需为1024的整数倍，具体规格以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
 TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架构时，MemSize是单分片内存容量。
      * @param integer $GoodsNum 实例数量，单次购买实例数量以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
      * @param integer $Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      * @param integer $BillingMode 付费方式:0-按量计费，1-包年包月。
+     * @param integer $ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
      * @param string $Password 实例密码，当输入参数NoAuth为true且使用私有网络VPC时，Password为非必填，否则Password为必填参数。
 当实例类型TypeId为Redis2.8、4.0和5.0时，其密码格式为：8-30个字符，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头；
 当实例类型TypeId为CKV 3.2时，其密码格式为：8-30个字符，必须包含字母和数字 且 不包含其他字符。
@@ -196,6 +210,8 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      * @param boolean $NoAuth 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例，仅VPC网络的实例支持免密码访问。
      * @param array $NodeSet 实例的节点信息，目前支持传入节点的类型（主节点或者副本节点），节点的可用区。单可用区部署不需要传递此参数。
      * @param array $ResourceTags 购买实例绑定标签
+     * @param string $ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * @param string $TemplateId 创建实例需要应用的参数模板ID，不传则应用默认的参数模板
      */
     function __construct()
     {
@@ -210,10 +226,6 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
-        }
-
         if (array_key_exists("TypeId",$param) and $param["TypeId"] !== null) {
             $this->TypeId = $param["TypeId"];
         }
@@ -232,6 +244,10 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 
         if (array_key_exists("BillingMode",$param) and $param["BillingMode"] !== null) {
             $this->BillingMode = $param["BillingMode"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
@@ -298,6 +314,14 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

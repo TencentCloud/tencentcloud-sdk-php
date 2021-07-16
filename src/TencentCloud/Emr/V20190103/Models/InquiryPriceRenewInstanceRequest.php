@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li>CNY：表示人民币。</li>
  * @method void setCurrency(string $Currency) 设置货币种类。取值范围：
 <li>CNY：表示人民币。</li>
+ * @method integer getModifyPayMode() 获取是否按量转包年包月。0：否，1：是。
+ * @method void setModifyPayMode(integer $ModifyPayMode) 设置是否按量转包年包月。0：否，1：是。
  */
 class InquiryPriceRenewInstanceRequest extends AbstractModel
 {
@@ -72,6 +74,11 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
     public $Currency;
 
     /**
+     * @var integer 是否按量转包年包月。0：否，1：是。
+     */
+    public $ModifyPayMode;
+
+    /**
      * @param integer $TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
      * @param array $ResourceIds 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr/static/hardware)查询。
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
@@ -80,6 +87,7 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
 <li>m：表示月份。</li>
      * @param string $Currency 货币种类。取值范围：
 <li>CNY：表示人民币。</li>
+     * @param integer $ModifyPayMode 是否按量转包年包月。0：否，1：是。
      */
     function __construct()
     {
@@ -117,6 +125,10 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
 
         if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
             $this->Currency = $param["Currency"];
+        }
+
+        if (array_key_exists("ModifyPayMode",$param) and $param["ModifyPayMode"] !== null) {
+            $this->ModifyPayMode = $param["ModifyPayMode"];
         }
     }
 }

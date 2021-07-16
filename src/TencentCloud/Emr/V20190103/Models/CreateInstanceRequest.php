@@ -25,23 +25,49 @@ use TencentCloud\Common\AbstractModel;
 <li>2：表示EMR-V2.0.1。</li>
 <li>4：表示EMR-V2.1.0。</li>
 <li>7：表示EMR-V3.0.0。</li>
+<li>9：表示EMR-V2.2.0。</li>
+<li>11：表示CLICKHOUSE-V1.0.0。</li>
+<li>13：表示DRUID-V1.0.0。</li>
+<li>15：表示EMR-V2.2.1。</li>
+<li>16：表示EMR-V2.3.0。</li>
+<li>17：表示CLICKHOUSE-V1.1.0。</li>
+<li>19：表示EMR-V2.4.0。</li>
+<li>20：表示EMR-V2.5.0。</li>
+<li>22：表示CLICKHOUSE-V1.2.0。</li>
+<li>24：表示EMR-TianQiong-V1.0.0。</li>
+<li>25：表示EMR-V3.1.0。</li>
+<li>26：表示DORIS-V1.0.0。</li>
+<li>27：表示KAFKA-V1.0.0。</li>
+<li>28：表示EMR-V3.2.0。</li>
+<li>29：表示EMR-V2.5.1。</li>
+<li>30：表示EMR-V2.6.0。</li>
  * @method void setProductId(integer $ProductId) 设置产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
 <li>4：表示EMR-V2.1.0。</li>
 <li>7：表示EMR-V3.0.0。</li>
+<li>9：表示EMR-V2.2.0。</li>
+<li>11：表示CLICKHOUSE-V1.0.0。</li>
+<li>13：表示DRUID-V1.0.0。</li>
+<li>15：表示EMR-V2.2.1。</li>
+<li>16：表示EMR-V2.3.0。</li>
+<li>17：表示CLICKHOUSE-V1.1.0。</li>
+<li>19：表示EMR-V2.4.0。</li>
+<li>20：表示EMR-V2.5.0。</li>
+<li>22：表示CLICKHOUSE-V1.2.0。</li>
+<li>24：表示EMR-TianQiong-V1.0.0。</li>
+<li>25：表示EMR-V3.1.0。</li>
+<li>26：表示DORIS-V1.0.0。</li>
+<li>27：表示KAFKA-V1.0.0。</li>
+<li>28：表示EMR-V3.2.0。</li>
+<li>29：表示EMR-V2.5.1。</li>
+<li>30：表示EMR-V2.6.0。</li>
  * @method VPCSettings getVPCSettings() 获取私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
  * @method void setVPCSettings(VPCSettings $VPCSettings) 设置私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
- * @method array getSoftware() 获取部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
-<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
- * @method void setSoftware(array $Software) 设置部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
-<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
+ * @method array getSoftware() 获取部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
+填写实例值：hive、flink。
+ * @method void setSoftware(array $Software) 设置部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
+填写实例值：hive、flink。
  * @method NewResourceSpec getResourceSpec() 获取节点资源的规格。
  * @method void setResourceSpec(NewResourceSpec $ResourceSpec) 设置节点资源的规格。
  * @method integer getSupportHA() 获取是否开启节点高可用。取值范围：
@@ -86,8 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCOSSettings(COSSettings $COSSettings) 设置开启COS访问需要设置的参数。
  * @method string getSgId() 获取实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
  * @method void setSgId(string $SgId) 设置实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
- * @method array getPreExecutedFileSettings() 获取引导操作脚本设置。
- * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) 设置引导操作脚本设置。
+ * @method array getPreExecutedFileSettings() 获取[引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
+ * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) 设置[引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
  * @method integer getAutoRenew() 获取包年包月实例是否自动续费。取值范围：
 <li>0：表示不自动续费。</li>
 <li>1：表示自动续费。</li>
@@ -111,16 +137,18 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTags() 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
  * @method void setTags(array $Tags) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
  * @method array getDisasterRecoverGroupIds() 获取分散置放群组ID列表，当前只支持指定一个。
+该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/213/15486 ) 的返回值中的SecurityGroupId字段来获取。
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置分散置放群组ID列表，当前只支持指定一个。
+该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/213/15486 ) 的返回值中的SecurityGroupId字段来获取。
  * @method integer getCbsEncrypt() 获取集群维度CBS加密盘，默认0表示不加密，1表示加密
  * @method void setCbsEncrypt(integer $CbsEncrypt) 设置集群维度CBS加密盘，默认0表示不加密，1表示加密
  * @method string getMetaType() 获取hive共享元数据库类型。取值范围：
 <li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
  * @method void setMetaType(string $MetaType) 设置hive共享元数据库类型。取值范围：
 <li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
  * @method string getUnifyMetaInstanceId() 获取EMR-MetaDB实例
  * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) 设置EMR-MetaDB实例
@@ -137,6 +165,22 @@ class CreateInstanceRequest extends AbstractModel
 <li>2：表示EMR-V2.0.1。</li>
 <li>4：表示EMR-V2.1.0。</li>
 <li>7：表示EMR-V3.0.0。</li>
+<li>9：表示EMR-V2.2.0。</li>
+<li>11：表示CLICKHOUSE-V1.0.0。</li>
+<li>13：表示DRUID-V1.0.0。</li>
+<li>15：表示EMR-V2.2.1。</li>
+<li>16：表示EMR-V2.3.0。</li>
+<li>17：表示CLICKHOUSE-V1.1.0。</li>
+<li>19：表示EMR-V2.4.0。</li>
+<li>20：表示EMR-V2.5.0。</li>
+<li>22：表示CLICKHOUSE-V1.2.0。</li>
+<li>24：表示EMR-TianQiong-V1.0.0。</li>
+<li>25：表示EMR-V3.1.0。</li>
+<li>26：表示DORIS-V1.0.0。</li>
+<li>27：表示KAFKA-V1.0.0。</li>
+<li>28：表示EMR-V3.2.0。</li>
+<li>29：表示EMR-V2.5.1。</li>
+<li>30：表示EMR-V2.6.0。</li>
      */
     public $ProductId;
 
@@ -146,11 +190,8 @@ class CreateInstanceRequest extends AbstractModel
     public $VPCSettings;
 
     /**
-     * @var array 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
-<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
+     * @var array 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
+填写实例值：hive、flink。
      */
     public $Software;
 
@@ -217,7 +258,7 @@ class CreateInstanceRequest extends AbstractModel
     public $SgId;
 
     /**
-     * @var array 引导操作脚本设置。
+     * @var array [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
      */
     public $PreExecutedFileSettings;
 
@@ -262,6 +303,7 @@ class CreateInstanceRequest extends AbstractModel
 
     /**
      * @var array 分散置放群组ID列表，当前只支持指定一个。
+该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/213/15486 ) 的返回值中的SecurityGroupId字段来获取。
      */
     public $DisasterRecoverGroupIds;
 
@@ -273,7 +315,7 @@ class CreateInstanceRequest extends AbstractModel
     /**
      * @var string hive共享元数据库类型。取值范围：
 <li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
      */
     public $MetaType;
@@ -299,12 +341,25 @@ class CreateInstanceRequest extends AbstractModel
 <li>2：表示EMR-V2.0.1。</li>
 <li>4：表示EMR-V2.1.0。</li>
 <li>7：表示EMR-V3.0.0。</li>
+<li>9：表示EMR-V2.2.0。</li>
+<li>11：表示CLICKHOUSE-V1.0.0。</li>
+<li>13：表示DRUID-V1.0.0。</li>
+<li>15：表示EMR-V2.2.1。</li>
+<li>16：表示EMR-V2.3.0。</li>
+<li>17：表示CLICKHOUSE-V1.1.0。</li>
+<li>19：表示EMR-V2.4.0。</li>
+<li>20：表示EMR-V2.5.0。</li>
+<li>22：表示CLICKHOUSE-V1.2.0。</li>
+<li>24：表示EMR-TianQiong-V1.0.0。</li>
+<li>25：表示EMR-V3.1.0。</li>
+<li>26：表示DORIS-V1.0.0。</li>
+<li>27：表示KAFKA-V1.0.0。</li>
+<li>28：表示EMR-V3.2.0。</li>
+<li>29：表示EMR-V2.5.1。</li>
+<li>30：表示EMR-V2.6.0。</li>
      * @param VPCSettings $VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
-     * @param array $Software 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
-<li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
-<li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
+     * @param array $Software 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
+填写实例值：hive、flink。
      * @param NewResourceSpec $ResourceSpec 节点资源的规格。
      * @param integer $SupportHA 是否开启节点高可用。取值范围：
 <li>0：表示不开启节点高可用。</li>
@@ -327,7 +382,7 @@ class CreateInstanceRequest extends AbstractModel
 <li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
      * @param COSSettings $COSSettings 开启COS访问需要设置的参数。
      * @param string $SgId 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
-     * @param array $PreExecutedFileSettings 引导操作脚本设置。
+     * @param array $PreExecutedFileSettings [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
      * @param integer $AutoRenew 包年包月实例是否自动续费。取值范围：
 <li>0：表示不自动续费。</li>
 <li>1：表示自动续费。</li>
@@ -340,10 +395,11 @@ class CreateInstanceRequest extends AbstractModel
      * @param string $ExtendFsField 访问外部文件系统。
      * @param array $Tags 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
      * @param array $DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
+该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/213/15486 ) 的返回值中的SecurityGroupId字段来获取。
      * @param integer $CbsEncrypt 集群维度CBS加密盘，默认0表示不加密，1表示加密
      * @param string $MetaType hive共享元数据库类型。取值范围：
 <li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
      * @param string $UnifyMetaInstanceId EMR-MetaDB实例
      * @param CustomMetaInfo $MetaDBInfo 自定义MetaDB信息

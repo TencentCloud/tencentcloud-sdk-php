@@ -20,17 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源详情
  *
- * @method string getSpec() 获取节点规格描述
+ * @method string getSpec() 获取节点规格描述，如CVM.SA2。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSpec(string $Spec) 设置节点规格描述
+ * @method void setSpec(string $Spec) 设置节点规格描述，如CVM.SA2。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStorageType() 获取存储类型
+取值范围：
+<li>4：表示云SSD。</li>
+<li>5：表示高效云盘。</li>
+<li>6：表示增强型SSD云硬盘。</li>
+<li>11：表示吞吐型云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(integer $StorageType) 设置存储类型
+取值范围：
+<li>4：表示云SSD。</li>
+<li>5：表示高效云盘。</li>
+<li>6：表示增强型SSD云硬盘。</li>
+<li>11：表示吞吐型云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取磁盘类型
+取值范围：
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_BASIC：表示云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置磁盘类型
+取值范围：
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_BASIC：表示云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMemSize() 获取内存容量,单位为M
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,35 +76,45 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置需要绑定的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取规格类型
+ * @method string getInstanceType() 获取规格类型，如S2.MEDIUM8
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceType(string $InstanceType) 设置规格类型
+ * @method void setInstanceType(string $InstanceType) 设置规格类型，如S2.MEDIUM8
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLocalDiskNum() 获取本地盘数量
+ * @method integer getLocalDiskNum() 获取本地盘数量，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLocalDiskNum(integer $LocalDiskNum) 设置本地盘数量
+ * @method void setLocalDiskNum(integer $LocalDiskNum) 设置本地盘数量，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDiskNum() 获取盘数量
+ * @method integer getDiskNum() 获取本地盘数量，如2
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskNum(integer $DiskNum) 设置盘数量
+ * @method void setDiskNum(integer $DiskNum) 设置本地盘数量，如2
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
     /**
-     * @var string 节点规格描述
+     * @var string 节点规格描述，如CVM.SA2。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Spec;
 
     /**
      * @var integer 存储类型
+取值范围：
+<li>4：表示云SSD。</li>
+<li>5：表示高效云盘。</li>
+<li>6：表示增强型SSD云硬盘。</li>
+<li>11：表示吞吐型云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageType;
 
     /**
      * @var string 磁盘类型
+取值范围：
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_BASIC：表示云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
@@ -126,29 +156,39 @@ class Resource extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 规格类型
+     * @var string 规格类型，如S2.MEDIUM8
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
-     * @var integer 本地盘数量
+     * @var integer 本地盘数量，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalDiskNum;
 
     /**
-     * @var integer 盘数量
+     * @var integer 本地盘数量，如2
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskNum;
 
     /**
-     * @param string $Spec 节点规格描述
+     * @param string $Spec 节点规格描述，如CVM.SA2。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StorageType 存储类型
+取值范围：
+<li>4：表示云SSD。</li>
+<li>5：表示高效云盘。</li>
+<li>6：表示增强型SSD云硬盘。</li>
+<li>11：表示吞吐型云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 磁盘类型
+取值范围：
+<li>CLOUD_SSD：表示云SSD。</li>
+<li>CLOUD_PREMIUM：表示高效云盘。</li>
+<li>CLOUD_BASIC：表示云硬盘。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MemSize 内存容量,单位为M
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,11 +202,11 @@ class Resource extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 需要绑定的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType 规格类型
+     * @param string $InstanceType 规格类型，如S2.MEDIUM8
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LocalDiskNum 本地盘数量
+     * @param integer $LocalDiskNum 本地盘数量，该字段已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DiskNum 盘数量
+     * @param integer $DiskNum 本地盘数量，如2
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

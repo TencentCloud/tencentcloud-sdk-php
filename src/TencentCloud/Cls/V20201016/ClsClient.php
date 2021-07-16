@@ -31,6 +31,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) 本接口用于创建索引
  * @method Models\CreateLogsetResponse CreateLogset(Models\CreateLogsetRequest $req) 本接口用于创建日志集，返回新创建的日志集的 ID。
  * @method Models\CreateMachineGroupResponse CreateMachineGroup(Models\CreateMachineGroupRequest $req) 创建机器组
+ * @method Models\CreateShipperResponse CreateShipper(Models\CreateShipperRequest $req) 创建新的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 本接口用于创建日志主题。
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) 本接口用于删除告警策略。
  * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) 该接口用于删除告警通知模板
@@ -40,6 +41,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteIndexResponse DeleteIndex(Models\DeleteIndexRequest $req) 本接口用于日志主题的索引配置
  * @method Models\DeleteLogsetResponse DeleteLogset(Models\DeleteLogsetRequest $req) 本接口用于删除日志集。
  * @method Models\DeleteMachineGroupResponse DeleteMachineGroup(Models\DeleteMachineGroupRequest $req) 删除机器组
+ * @method Models\DeleteShipperResponse DeleteShipper(Models\DeleteShipperRequest $req) 删除投递规则
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 本接口用于删除日志主题。
  * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) 该接口用于获取告警通知模板列表
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) 本接口用于获取告警策略。
@@ -53,6 +55,8 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DescribeMachineGroupsResponse DescribeMachineGroups(Models\DescribeMachineGroupsRequest $req) 获取机器组信息列表
  * @method Models\DescribeMachinesResponse DescribeMachines(Models\DescribeMachinesRequest $req) 获取制定机器组下的机器状态
  * @method Models\DescribePartitionsResponse DescribePartitions(Models\DescribePartitionsRequest $req) 本接口用于获取主题分区列表。
+ * @method Models\DescribeShipperTasksResponse DescribeShipperTasks(Models\DescribeShipperTasksRequest $req) 获取投递任务列表
+ * @method Models\DescribeShippersResponse DescribeShippers(Models\DescribeShippersRequest $req) 获取投递规则信息列表
  * @method Models\DescribeTopicsResponse DescribeTopics(Models\DescribeTopicsRequest $req)  本接口用于获取日志主题列表，支持分页
  * @method Models\GetAlarmLogResponse GetAlarmLog(Models\GetAlarmLogRequest $req) 本接口用于获取告警任务历史
  * @method Models\MergePartitionResponse MergePartition(Models\MergePartitionRequest $req) 本接口用于合并一个读写态的主题分区，合并时指定一个主题分区 ID，日志服务会自动合并范围右相邻的分区。
@@ -63,7 +67,9 @@ use TencentCloud\Cls\V20201016\Models as Models;
 
  * @method Models\ModifyLogsetResponse ModifyLogset(Models\ModifyLogsetRequest $req) 本接口用于修改日志集信息
  * @method Models\ModifyMachineGroupResponse ModifyMachineGroup(Models\ModifyMachineGroupRequest $req) 修改机器组
+ * @method Models\ModifyShipperResponse ModifyShipper(Models\ModifyShipperRequest $req) 修改现有的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 本接口用于修改日志主题。
+ * @method Models\RetryShipperTaskResponse RetryShipperTask(Models\RetryShipperTaskRequest $req) 重试失败的投递任务
  * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 本接口用于搜索日志
  * @method Models\SplitPartitionResponse SplitPartition(Models\SplitPartitionRequest $req) 本接口用于分裂主题分区
  */

@@ -274,6 +274,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuic(Quic $Quic) 设置Quic配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OssPrivateAccess getOssPrivateAccess() 获取回源OSS私有鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置回源OSS私有鉴权
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -629,6 +633,12 @@ off：不支持
     public $Quic;
 
     /**
+     * @var OssPrivateAccess 回源OSS私有鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OssPrivateAccess;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -755,6 +765,8 @@ off：不支持
      * @param PostSize $PostMaxSize POST上传配置项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Quic $Quic Quic配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1042,6 +1054,11 @@ off：不支持
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
             $this->Quic = new Quic();
             $this->Quic->deserialize($param["Quic"]);
+        }
+
+        if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
+            $this->OssPrivateAccess = new OssPrivateAccess();
+            $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
         }
     }
 }

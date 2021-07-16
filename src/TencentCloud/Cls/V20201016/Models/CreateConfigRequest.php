@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置采集配置名称
  * @method string getOutput() 获取采集配置所属日志主题ID即TopicId
  * @method void setOutput(string $Output) 设置采集配置所属日志主题ID即TopicId
- * @method string getPath() 获取通配符日志采集路径列表，以/**/分隔文件目录和文件名
- * @method void setPath(string $Path) 设置通配符日志采集路径列表，以/**/分隔文件目录和文件名
+ * @method string getPath() 获取日志采集路径,包含文件名
+ * @method void setPath(string $Path) 设置日志采集路径,包含文件名
  * @method string getLogType() 获取采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
  * @method void setLogType(string $LogType) 设置采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
  * @method ExtractRuleInfo getExtractRule() 获取提取规则，如果设置了ExtractRule，则必须设置LogType
@@ -46,7 +46,7 @@ class CreateConfigRequest extends AbstractModel
     public $Output;
 
     /**
-     * @var string 通配符日志采集路径列表，以/**/分隔文件目录和文件名
+     * @var string 日志采集路径,包含文件名
      */
     public $Path;
 
@@ -68,7 +68,7 @@ class CreateConfigRequest extends AbstractModel
     /**
      * @param string $Name 采集配置名称
      * @param string $Output 采集配置所属日志主题ID即TopicId
-     * @param string $Path 通配符日志采集路径列表，以/**/分隔文件目录和文件名
+     * @param string $Path 日志采集路径,包含文件名
      * @param string $LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
      * @param ExtractRuleInfo $ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType
      * @param array $ExcludePaths 采集黑名单路径列表

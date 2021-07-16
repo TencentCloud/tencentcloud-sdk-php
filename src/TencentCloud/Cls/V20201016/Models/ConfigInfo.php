@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogFormat(string $LogFormat) 设置日志格式化方式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPath() 获取通配符日志采集路径列表，以/**/分隔文件目录和文件名
+ * @method string getPath() 获取日志采集路径
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPath(string $Path) 设置通配符日志采集路径列表，以/**/分隔文件目录和文件名
+ * @method void setPath(string $Path) 设置日志采集路径
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogType() 获取采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。
@@ -65,7 +65,7 @@ class ConfigInfo extends AbstractModel
     public $LogFormat;
 
     /**
-     * @var string 通配符日志采集路径列表，以/**/分隔文件目录和文件名
+     * @var string 日志采集路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
@@ -108,7 +108,7 @@ class ConfigInfo extends AbstractModel
      * @param string $ConfigId 采集规则配置ID
      * @param string $LogFormat 日志格式化方式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Path 通配符日志采集路径列表，以/**/分隔文件目录和文件名
+     * @param string $Path 日志采集路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志，multiline_log代表多行日志，fullregex_log代表完整正则，默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。

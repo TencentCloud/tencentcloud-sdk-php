@@ -23,9 +23,225 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterId() 获取TKE或EKS集群ID
  * @method void setClusterId(string $ClusterId) 设置TKE或EKS集群ID
  * @method string getConfig() 获取自定义权限
+如：
+{
+  "apiVersion": "v1",
+  "clusters": [
+    {
+      "cluster": {
+        "certificate-authority-data": "xxxxxx==",
+        "server": "https://xxxxx.com"
+      },
+      "name": "cls-xxxxx"
+    }
+  ],
+  "contexts": [
+    {
+      "context": {
+        "cluster": "cls-xxxxx",
+        "user": "100014xxxxx"
+      },
+      "name": "cls-a44yhcxxxxxxxxxx"
+    }
+  ],
+  "current-context": "cls-a4xxxx-context-default",
+  "kind": "Config",
+  "preferences": {},
+  "users": [
+    {
+      "name": "100014xxxxx",
+      "user": {
+        "client-certificate-data": "xxxxxx",
+        "client-key-data": "xxxxxx"
+      }
+    }
+  ]
+}
  * @method void setConfig(string $Config) 设置自定义权限
+如：
+{
+  "apiVersion": "v1",
+  "clusters": [
+    {
+      "cluster": {
+        "certificate-authority-data": "xxxxxx==",
+        "server": "https://xxxxx.com"
+      },
+      "name": "cls-xxxxx"
+    }
+  ],
+  "contexts": [
+    {
+      "context": {
+        "cluster": "cls-xxxxx",
+        "user": "100014xxxxx"
+      },
+      "name": "cls-a44yhcxxxxxxxxxx"
+    }
+  ],
+  "current-context": "cls-a4xxxx-context-default",
+  "kind": "Config",
+  "preferences": {},
+  "users": [
+    {
+      "name": "100014xxxxx",
+      "user": {
+        "client-certificate-data": "xxxxxx",
+        "client-key-data": "xxxxxx"
+      }
+    }
+  ]
+}
  * @method string getParameter() 获取自定义参数
+如：
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "test-deployment",
+      "labels": {
+        "app": "test"
+      }
+    },
+    "spec": {
+      "replicas": 3,
+      "selector": {
+        "matchLabels": {
+          "app": "test-app"
+        }
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "your-organization.com/department-v1": "test-example-v1",
+            "your-organization.com/department-v2": "test-example-v2"
+          },
+          "labels": {
+            "app": "test-app",
+            "environment": "production"
+          }
+        },
+        "spec": {
+          "nodeSelector": {
+            "your-organization/node-test": "test-node"
+          },
+          "containers": [
+            {
+              "name": "nginx",
+              "image": "nginx:1.14.2",
+              "ports": [
+                {
+                  "containerPort": 80
+                }
+              ]
+            }
+          ],
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "disk-type",
+                        "operator": "In",
+                        "values": [
+                          "ssd",
+                          "sas"
+                        ]
+                      },
+                      {
+                        "key": "cpu-num",
+                        "operator": "Gt",
+                        "values": [
+                          "6"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
  * @method void setParameter(string $Parameter) 设置自定义参数
+如：
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "test-deployment",
+      "labels": {
+        "app": "test"
+      }
+    },
+    "spec": {
+      "replicas": 3,
+      "selector": {
+        "matchLabels": {
+          "app": "test-app"
+        }
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "your-organization.com/department-v1": "test-example-v1",
+            "your-organization.com/department-v2": "test-example-v2"
+          },
+          "labels": {
+            "app": "test-app",
+            "environment": "production"
+          }
+        },
+        "spec": {
+          "nodeSelector": {
+            "your-organization/node-test": "test-node"
+          },
+          "containers": [
+            {
+              "name": "nginx",
+              "image": "nginx:1.14.2",
+              "ports": [
+                {
+                  "containerPort": 80
+                }
+              ]
+            }
+          ],
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "disk-type",
+                        "operator": "In",
+                        "values": [
+                          "ssd",
+                          "sas"
+                        ]
+                      },
+                      {
+                        "key": "cpu-num",
+                        "operator": "Gt",
+                        "values": [
+                          "6"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
  */
 class PodParameter extends AbstractModel
 {
@@ -36,18 +252,234 @@ class PodParameter extends AbstractModel
 
     /**
      * @var string 自定义权限
+如：
+{
+  "apiVersion": "v1",
+  "clusters": [
+    {
+      "cluster": {
+        "certificate-authority-data": "xxxxxx==",
+        "server": "https://xxxxx.com"
+      },
+      "name": "cls-xxxxx"
+    }
+  ],
+  "contexts": [
+    {
+      "context": {
+        "cluster": "cls-xxxxx",
+        "user": "100014xxxxx"
+      },
+      "name": "cls-a44yhcxxxxxxxxxx"
+    }
+  ],
+  "current-context": "cls-a4xxxx-context-default",
+  "kind": "Config",
+  "preferences": {},
+  "users": [
+    {
+      "name": "100014xxxxx",
+      "user": {
+        "client-certificate-data": "xxxxxx",
+        "client-key-data": "xxxxxx"
+      }
+    }
+  ]
+}
      */
     public $Config;
 
     /**
      * @var string 自定义参数
+如：
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "test-deployment",
+      "labels": {
+        "app": "test"
+      }
+    },
+    "spec": {
+      "replicas": 3,
+      "selector": {
+        "matchLabels": {
+          "app": "test-app"
+        }
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "your-organization.com/department-v1": "test-example-v1",
+            "your-organization.com/department-v2": "test-example-v2"
+          },
+          "labels": {
+            "app": "test-app",
+            "environment": "production"
+          }
+        },
+        "spec": {
+          "nodeSelector": {
+            "your-organization/node-test": "test-node"
+          },
+          "containers": [
+            {
+              "name": "nginx",
+              "image": "nginx:1.14.2",
+              "ports": [
+                {
+                  "containerPort": 80
+                }
+              ]
+            }
+          ],
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "disk-type",
+                        "operator": "In",
+                        "values": [
+                          "ssd",
+                          "sas"
+                        ]
+                      },
+                      {
+                        "key": "cpu-num",
+                        "operator": "Gt",
+                        "values": [
+                          "6"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
      */
     public $Parameter;
 
     /**
      * @param string $ClusterId TKE或EKS集群ID
      * @param string $Config 自定义权限
+如：
+{
+  "apiVersion": "v1",
+  "clusters": [
+    {
+      "cluster": {
+        "certificate-authority-data": "xxxxxx==",
+        "server": "https://xxxxx.com"
+      },
+      "name": "cls-xxxxx"
+    }
+  ],
+  "contexts": [
+    {
+      "context": {
+        "cluster": "cls-xxxxx",
+        "user": "100014xxxxx"
+      },
+      "name": "cls-a44yhcxxxxxxxxxx"
+    }
+  ],
+  "current-context": "cls-a4xxxx-context-default",
+  "kind": "Config",
+  "preferences": {},
+  "users": [
+    {
+      "name": "100014xxxxx",
+      "user": {
+        "client-certificate-data": "xxxxxx",
+        "client-key-data": "xxxxxx"
+      }
+    }
+  ]
+}
      * @param string $Parameter 自定义参数
+如：
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "test-deployment",
+      "labels": {
+        "app": "test"
+      }
+    },
+    "spec": {
+      "replicas": 3,
+      "selector": {
+        "matchLabels": {
+          "app": "test-app"
+        }
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "your-organization.com/department-v1": "test-example-v1",
+            "your-organization.com/department-v2": "test-example-v2"
+          },
+          "labels": {
+            "app": "test-app",
+            "environment": "production"
+          }
+        },
+        "spec": {
+          "nodeSelector": {
+            "your-organization/node-test": "test-node"
+          },
+          "containers": [
+            {
+              "name": "nginx",
+              "image": "nginx:1.14.2",
+              "ports": [
+                {
+                  "containerPort": 80
+                }
+              ]
+            }
+          ],
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "disk-type",
+                        "operator": "In",
+                        "values": [
+                          "ssd",
+                          "sas"
+                        ]
+                      },
+                      {
+                        "key": "cpu-num",
+                        "operator": "Gt",
+                        "values": [
+                          "6"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
      */
     function __construct()
     {

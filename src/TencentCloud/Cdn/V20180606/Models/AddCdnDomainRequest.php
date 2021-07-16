@@ -104,6 +104,10 @@ global：全球加速
  * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存
  * @method Quic getQuic() 获取QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
  * @method void setQuic(Quic $Quic) 设置QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+ * @method AwsPrivateAccess getAwsPrivateAccess() 获取回源S3私有鉴权
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3私有鉴权
+ * @method OssPrivateAccess getOssPrivateAccess() 获取回源OSS私有鉴权
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置回源OSS私有鉴权
  */
 class AddCdnDomainRequest extends AbstractModel
 {
@@ -286,6 +290,16 @@ global：全球加速
     public $Quic;
 
     /**
+     * @var AwsPrivateAccess 回源S3私有鉴权
+     */
+    public $AwsPrivateAccess;
+
+    /**
+     * @var OssPrivateAccess 回源OSS私有鉴权
+     */
+    public $OssPrivateAccess;
+
+    /**
      * @param string $Domain 域名
      * @param string $ServiceType 加速域名业务类型
 web：静态加速
@@ -328,6 +342,8 @@ global：全球加速
      * @param Ipv6Access $Ipv6Access Ipv6 访问配置
      * @param OfflineCache $OfflineCache 离线缓存
      * @param Quic $Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     * @param AwsPrivateAccess $AwsPrivateAccess 回源S3私有鉴权
+     * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
      */
     function __construct()
     {
@@ -510,6 +526,16 @@ global：全球加速
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
             $this->Quic = new Quic();
             $this->Quic->deserialize($param["Quic"]);
+        }
+
+        if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
+            $this->AwsPrivateAccess = new AwsPrivateAccess();
+            $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
+        }
+
+        if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
+            $this->OssPrivateAccess = new OssPrivateAccess();
+            $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
         }
     }
 }

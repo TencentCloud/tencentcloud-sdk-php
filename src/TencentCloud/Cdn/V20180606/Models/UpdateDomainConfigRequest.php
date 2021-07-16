@@ -114,6 +114,8 @@ global：全球加速
  * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源
  * @method Quic getQuic() 获取QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
  * @method void setQuic(Quic $Quic) 设置QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+ * @method OssPrivateAccess getOssPrivateAccess() 获取回源OSS私有鉴权
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置回源OSS私有鉴权
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -325,6 +327,11 @@ global：全球加速
     public $Quic;
 
     /**
+     * @var OssPrivateAccess 回源OSS私有鉴权
+     */
+    public $OssPrivateAccess;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -372,6 +379,7 @@ global：全球加速
      * @param OfflineCache $OfflineCache 离线缓存
      * @param OriginCombine $OriginCombine 合并回源
      * @param Quic $Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
      */
     function __construct()
     {
@@ -579,6 +587,11 @@ global：全球加速
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
             $this->Quic = new Quic();
             $this->Quic->deserialize($param["Quic"]);
+        }
+
+        if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
+            $this->OssPrivateAccess = new OssPrivateAccess();
+            $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
         }
     }
 }

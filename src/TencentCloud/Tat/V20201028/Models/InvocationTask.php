@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间。
  * @method CommandDocument getCommandDocument() 获取执行任务所执行的命令详情。
  * @method void setCommandDocument(CommandDocument $CommandDocument) 设置执行任务所执行的命令详情。
+ * @method string getErrorInfo() 获取执行任务失败时的错误信息。
+ * @method void setErrorInfo(string $ErrorInfo) 设置执行任务失败时的错误信息。
  */
 class InvocationTask extends AbstractModel
 {
@@ -128,6 +130,11 @@ class InvocationTask extends AbstractModel
     public $CommandDocument;
 
     /**
+     * @var string 执行任务失败时的错误信息。
+     */
+    public $ErrorInfo;
+
+    /**
      * @param string $InvocationId 执行活动ID。
      * @param string $InvocationTaskId 执行任务ID。
      * @param string $CommandId 命令ID。
@@ -148,6 +155,7 @@ class InvocationTask extends AbstractModel
      * @param string $CreatedTime 创建时间。
      * @param string $UpdatedTime 更新时间。
      * @param CommandDocument $CommandDocument 执行任务所执行的命令详情。
+     * @param string $ErrorInfo 执行任务失败时的错误信息。
      */
     function __construct()
     {
@@ -206,6 +214,10 @@ class InvocationTask extends AbstractModel
         if (array_key_exists("CommandDocument",$param) and $param["CommandDocument"] !== null) {
             $this->CommandDocument = new CommandDocument();
             $this->CommandDocument->deserialize($param["CommandDocument"]);
+        }
+
+        if (array_key_exists("ErrorInfo",$param) and $param["ErrorInfo"] !== null) {
+            $this->ErrorInfo = $param["ErrorInfo"];
         }
     }
 }

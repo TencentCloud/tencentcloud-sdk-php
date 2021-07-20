@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vm\V20201229\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateVideoModerationTask返回参数结构体
+ * CancelDcnJob返回参数结构体
  *
- * @method array getResults() 获取该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResults(array $Results) 设置该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFlowId() 获取流程ID
+ * @method void setFlowId(integer $FlowId) 设置流程ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateVideoModerationTaskResponse extends AbstractModel
+class CancelDcnJobResponse extends AbstractModel
 {
     /**
-     * @var array 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 流程ID
      */
-    public $Results;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class CreateVideoModerationTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Results 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FlowId 流程ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,13 +54,8 @@ class CreateVideoModerationTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
-            $this->Results = [];
-            foreach ($param["Results"] as $key => $value){
-                $obj = new TaskResult();
-                $obj->deserialize($value);
-                array_push($this->Results, $obj);
-            }
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

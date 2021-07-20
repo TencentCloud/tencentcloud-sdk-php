@@ -30,14 +30,12 @@ use TencentCloud\Common\AbstractModel;
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
-4 ：死信队列；
-5 ：事务消息。
+4 ：死信队列。
  * @method void setTopicType(integer $TopicType) 设置0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
-4 ：死信队列；
-5 ：事务消息。
+4 ：死信队列。
  * @method string getRemark() 获取备注，128字符以内。
  * @method void setRemark(string $Remark) 设置备注，128字符以内。
  * @method string getClusterId() 获取Pulsar 集群的ID
@@ -65,8 +63,7 @@ class CreateTopicRequest extends AbstractModel
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
-4 ：死信队列；
-5 ：事务消息。
+4 ：死信队列。
      */
     public $TopicType;
 
@@ -88,8 +85,7 @@ class CreateTopicRequest extends AbstractModel
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
-4 ：死信队列；
-5 ：事务消息。
+4 ：死信队列。
      * @param string $Remark 备注，128字符以内。
      * @param string $ClusterId Pulsar 集群的ID
      */

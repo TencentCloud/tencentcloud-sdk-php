@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvokeType(string $InvokeType) 设置调用类型
  * @method string getQualifier() 获取函数版本
  * @method void setQualifier(string $Qualifier) 设置函数版本
- * @method string getStatus() 获取事件状态
- * @method void setStatus(string $Status) 设置事件状态
+ * @method string getStatus() 获取事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败
+ * @method void setStatus(string $Status) 设置事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败
  * @method string getStartTime() 获取调用开始时间，格式: "%Y-%m-%d %H:%M:%S.%f"
  * @method void setStartTime(string $StartTime) 设置调用开始时间，格式: "%Y-%m-%d %H:%M:%S.%f"
  * @method string getEndTime() 获取调用结束时间，格式: "%Y-%m-%d %H:%M:%S.%f"
@@ -51,7 +51,7 @@ class AsyncEvent extends AbstractModel
     public $Qualifier;
 
     /**
-     * @var string 事件状态
+     * @var string 事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败
      */
     public $Status;
 
@@ -69,7 +69,7 @@ class AsyncEvent extends AbstractModel
      * @param string $InvokeRequestId 调用请求id
      * @param string $InvokeType 调用类型
      * @param string $Qualifier 函数版本
-     * @param string $Status 事件状态
+     * @param string $Status 事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败
      * @param string $StartTime 调用开始时间，格式: "%Y-%m-%d %H:%M:%S.%f"
      * @param string $EndTime 调用结束时间，格式: "%Y-%m-%d %H:%M:%S.%f"
      */

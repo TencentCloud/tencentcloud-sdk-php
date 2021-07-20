@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAudioModerationTask返回参数结构体
  *
- * @method array getResults() 获取任务创建结果
+ * @method array getResults() 获取该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResults(array $Results) 设置任务创建结果
+ * @method void setResults(array $Results) 设置该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAudioModerationTaskResponse extends AbstractModel
 {
     /**
-     * @var array 任务创建结果
+     * @var array 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
@@ -41,7 +41,7 @@ class CreateAudioModerationTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Results 任务创建结果
+     * @param array $Results 该字段用于返回任务创建的结果，具体输出内容请参见TaskResult数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

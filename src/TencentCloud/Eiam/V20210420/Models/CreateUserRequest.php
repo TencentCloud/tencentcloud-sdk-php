@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置用户备注，长度限制：512个字符。
  * @method array getUserGroupIds() 获取用户所属用户组ID列表。
  * @method void setUserGroupIds(array $UserGroupIds) 设置用户所属用户组ID列表。
- * @method string getPhone() 获取用户手机号。
- * @method void setPhone(string $Phone) 设置用户手机号。
+ * @method string getPhone() 获取用户手机号。例如：+86-1xxxxxxxxxx。
+ * @method void setPhone(string $Phone) 设置用户手机号。例如：+86-1xxxxxxxxxx。
  * @method string getOrgNodeId() 获取用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
  * @method void setOrgNodeId(string $OrgNodeId) 设置用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
  * @method string getExpirationTime() 获取用户过期时间，遵循 ISO 8601 标准。
@@ -69,7 +69,7 @@ class CreateUserRequest extends AbstractModel
     public $UserGroupIds;
 
     /**
-     * @var string 用户手机号。
+     * @var string 用户手机号。例如：+86-1xxxxxxxxxx。
      */
     public $Phone;
 
@@ -99,7 +99,7 @@ class CreateUserRequest extends AbstractModel
      * @param string $DisplayName 昵称，长度限制：64个字符。 默认与用户名相同。
      * @param string $Description 用户备注，长度限制：512个字符。
      * @param array $UserGroupIds 用户所属用户组ID列表。
-     * @param string $Phone 用户手机号。
+     * @param string $Phone 用户手机号。例如：+86-1xxxxxxxxxx。
      * @param string $OrgNodeId 用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
      * @param string $ExpirationTime 用户过期时间，遵循 ISO 8601 标准。
      * @param string $Email 用户邮箱。

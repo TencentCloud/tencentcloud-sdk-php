@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateStatus(array $CertificateStatus) 设置证书状态。
  * @method integer getDeployable() 获取是否可部署，可选值：1 = 可部署，0 =  不可部署。
  * @method void setDeployable(integer $Deployable) 设置是否可部署，可选值：1 = 可部署，0 =  不可部署。
+ * @method integer getUpload() 获取是否筛选上传托管的 1筛选，0不筛选
+ * @method void setUpload(integer $Upload) 设置是否筛选上传托管的 1筛选，0不筛选
+ * @method integer getRenew() 获取是否筛选可续期证书 1筛选 0不筛选
+ * @method void setRenew(integer $Renew) 设置是否筛选可续期证书 1筛选 0不筛选
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class DescribeCertificatesRequest extends AbstractModel
     public $Deployable;
 
     /**
+     * @var integer 是否筛选上传托管的 1筛选，0不筛选
+     */
+    public $Upload;
+
+    /**
+     * @var integer 是否筛选可续期证书 1筛选 0不筛选
+     */
+    public $Renew;
+
+    /**
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量，默认20。
      * @param string $SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
@@ -88,6 +102,8 @@ class DescribeCertificatesRequest extends AbstractModel
      * @param string $ExpirationSort 按到期时间排序：DESC = 降序， ASC = 升序。
      * @param array $CertificateStatus 证书状态。
      * @param integer $Deployable 是否可部署，可选值：1 = 可部署，0 =  不可部署。
+     * @param integer $Upload 是否筛选上传托管的 1筛选，0不筛选
+     * @param integer $Renew 是否筛选可续期证书 1筛选 0不筛选
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class DescribeCertificatesRequest extends AbstractModel
 
         if (array_key_exists("Deployable",$param) and $param["Deployable"] !== null) {
             $this->Deployable = $param["Deployable"];
+        }
+
+        if (array_key_exists("Upload",$param) and $param["Upload"] !== null) {
+            $this->Upload = $param["Upload"];
+        }
+
+        if (array_key_exists("Renew",$param) and $param["Renew"] !== null) {
+            $this->Renew = $param["Renew"];
         }
     }
 }

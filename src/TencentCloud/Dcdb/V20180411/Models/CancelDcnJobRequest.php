@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vm\V20201229\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CancelTask请求参数结构体
+ * CancelDcnJob请求参数结构体
  *
- * @method string getTaskId() 获取该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
- * @method void setTaskId(string $TaskId) 设置该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+ * @method string getInstanceId() 获取灾备实例ID
+ * @method void setInstanceId(string $InstanceId) 设置灾备实例ID
  */
-class CancelTaskRequest extends AbstractModel
+class CancelDcnJobRequest extends AbstractModel
 {
     /**
-     * @var string 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+     * @var string 灾备实例ID
      */
-    public $TaskId;
+    public $InstanceId;
 
     /**
-     * @param string $TaskId 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+     * @param string $InstanceId 灾备实例ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class CancelTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

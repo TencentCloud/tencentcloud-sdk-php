@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks返回参数结构体
  *
- * @method string getTotal() 获取任务总量，为 int 字符串
+ * @method string getTotal() 获取该字段用于返回当前查询的任务总量，格式为int字符串。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(string $Total) 设置任务总量，为 int 字符串
+ * @method void setTotal(string $Total) 设置该字段用于返回当前查询的任务总量，格式为int字符串。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getData() 获取当前页数据
+ * @method array getData() 获取该字段用于返回当前页的任务详细数据，具体输出内容请参见TaskData数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置当前页数据
+ * @method void setData(array $Data) 设置该字段用于返回当前页的任务详细数据，具体输出内容请参见TaskData数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPageToken() 获取翻页Token，当已经到最后一页时，该字段为空
+ * @method string getPageToken() 获取该字段用于返回翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageToken(string $PageToken) 设置翻页Token，当已经到最后一页时，该字段为空
+ * @method void setPageToken(string $PageToken) 设置该字段用于返回翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTasksResponse extends AbstractModel
 {
     /**
-     * @var string 任务总量，为 int 字符串
+     * @var string 该字段用于返回当前查询的任务总量，格式为int字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @var array 当前页数据
+     * @var array 该字段用于返回当前页的任务详细数据，具体输出内容请参见TaskData数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
-     * @var string 翻页Token，当已经到最后一页时，该字段为空
+     * @var string 该字段用于返回翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageToken;
@@ -61,11 +61,11 @@ class DescribeTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Total 任务总量，为 int 字符串
+     * @param string $Total 该字段用于返回当前查询的任务总量，格式为int字符串。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Data 当前页数据
+     * @param array $Data 该字段用于返回当前页的任务详细数据，具体输出内容请参见TaskData数据结构的详细描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PageToken 翻页Token，当已经到最后一页时，该字段为空
+     * @param string $PageToken 该字段用于返回翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

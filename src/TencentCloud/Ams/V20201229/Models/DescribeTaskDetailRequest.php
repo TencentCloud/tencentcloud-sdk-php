@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskDetail请求参数结构体
  *
- * @method string getTaskId() 获取任务ID，创建任务后返回的TaskId字段
- * @method void setTaskId(string $TaskId) 设置任务ID，创建任务后返回的TaskId字段
- * @method boolean getShowAllSegments() 获取是否展示所有分片，默认只展示命中规则的分片
- * @method void setShowAllSegments(boolean $ShowAllSegments) 设置是否展示所有分片，默认只展示命中规则的分片
+ * @method string getTaskId() 获取该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
+<br>备注：查询接口单次最大查询量为**20条每次**。
+ * @method void setTaskId(string $TaskId) 设置该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
+<br>备注：查询接口单次最大查询量为**20条每次**。
+ * @method boolean getShowAllSegments() 获取该布尔字段表示是否展示全部的音频片段，取值：True(展示全部的音频分片)、False(只展示命中审核规则的音频分片)；默认值为False。
+ * @method void setShowAllSegments(boolean $ShowAllSegments) 设置该布尔字段表示是否展示全部的音频片段，取值：True(展示全部的音频分片)、False(只展示命中审核规则的音频分片)；默认值为False。
  */
 class DescribeTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID，创建任务后返回的TaskId字段
+     * @var string 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
+<br>备注：查询接口单次最大查询量为**20条每次**。
      */
     public $TaskId;
 
     /**
-     * @var boolean 是否展示所有分片，默认只展示命中规则的分片
+     * @var boolean 该布尔字段表示是否展示全部的音频片段，取值：True(展示全部的音频分片)、False(只展示命中审核规则的音频分片)；默认值为False。
      */
     public $ShowAllSegments;
 
     /**
-     * @param string $TaskId 任务ID，创建任务后返回的TaskId字段
-     * @param boolean $ShowAllSegments 是否展示所有分片，默认只展示命中规则的分片
+     * @param string $TaskId 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
+<br>备注：查询接口单次最大查询量为**20条每次**。
+     * @param boolean $ShowAllSegments 该布尔字段表示是否展示全部的音频片段，取值：True(展示全部的音频分片)、False(只展示命中审核规则的音频分片)；默认值为False。
      */
     function __construct()
     {

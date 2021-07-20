@@ -80,6 +80,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckType(string $HealthCheckType) 设置伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
  * @method integer getLoadBalancerHealthCheckGracePeriod() 获取CLB健康检查宽限期
  * @method void setLoadBalancerHealthCheckGracePeriod(integer $LoadBalancerHealthCheckGracePeriod) 设置CLB健康检查宽限期
+ * @method string getInstanceAllocationPolicy() 获取实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
+<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
+<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+ * @method void setInstanceAllocationPolicy(string $InstanceAllocationPolicy) 设置实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
+<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
+<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+ * @method SpotMixedAllocationPolicy getSpotMixedAllocationPolicy() 获取竞价混合模式下，各计费类型实例的分配策略。
+仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
+ * @method void setSpotMixedAllocationPolicy(SpotMixedAllocationPolicy $SpotMixedAllocationPolicy) 设置竞价混合模式下，各计费类型实例的分配策略。
+仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
+ * @method boolean getCapacityRebalance() 获取容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
+<br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
+<br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+ * @method void setCapacityRebalance(boolean $CapacityRebalance) 设置容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
+<br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
+<br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
  */
 class AutoScalingGroup extends AbstractModel
 {
@@ -226,6 +242,26 @@ class AutoScalingGroup extends AbstractModel
     public $LoadBalancerHealthCheckGracePeriod;
 
     /**
+     * @var string 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
+<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
+<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+     */
+    public $InstanceAllocationPolicy;
+
+    /**
+     * @var SpotMixedAllocationPolicy 竞价混合模式下，各计费类型实例的分配策略。
+仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
+     */
+    public $SpotMixedAllocationPolicy;
+
+    /**
+     * @var boolean 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
+<br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
+<br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+     */
+    public $CapacityRebalance;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称
      * @param string $AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
@@ -256,6 +292,14 @@ class AutoScalingGroup extends AbstractModel
 <br><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。
      * @param string $HealthCheckType 伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
      * @param integer $LoadBalancerHealthCheckGracePeriod CLB健康检查宽限期
+     * @param string $InstanceAllocationPolicy 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
+<br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
+<br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+     * @param SpotMixedAllocationPolicy $SpotMixedAllocationPolicy 竞价混合模式下，各计费类型实例的分配策略。
+仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
+     * @param boolean $CapacityRebalance 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
+<br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
+<br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
      */
     function __construct()
     {
@@ -391,6 +435,19 @@ class AutoScalingGroup extends AbstractModel
 
         if (array_key_exists("LoadBalancerHealthCheckGracePeriod",$param) and $param["LoadBalancerHealthCheckGracePeriod"] !== null) {
             $this->LoadBalancerHealthCheckGracePeriod = $param["LoadBalancerHealthCheckGracePeriod"];
+        }
+
+        if (array_key_exists("InstanceAllocationPolicy",$param) and $param["InstanceAllocationPolicy"] !== null) {
+            $this->InstanceAllocationPolicy = $param["InstanceAllocationPolicy"];
+        }
+
+        if (array_key_exists("SpotMixedAllocationPolicy",$param) and $param["SpotMixedAllocationPolicy"] !== null) {
+            $this->SpotMixedAllocationPolicy = new SpotMixedAllocationPolicy();
+            $this->SpotMixedAllocationPolicy->deserialize($param["SpotMixedAllocationPolicy"]);
+        }
+
+        if (array_key_exists("CapacityRebalance",$param) and $param["CapacityRebalance"] !== null) {
+            $this->CapacityRebalance = $param["CapacityRebalance"];
         }
     }
 }

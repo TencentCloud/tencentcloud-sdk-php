@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CancelTask请求参数结构体
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getTaskId() 获取该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
+ * @method void setTaskId(string $TaskId) 设置该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
  */
 class CancelTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 任务ID
+     * @param string $TaskId 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
      */
     function __construct()
     {

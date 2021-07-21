@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 转发监听器
  *
- * @method integer getFrontendPort() 获取转发监听端口，取值1~65535
- * @method void setFrontendPort(integer $FrontendPort) 设置转发监听端口，取值1~65535
+ * @method integer getFrontendPort() 获取转发监听端口下限，取值1~65535
+ * @method void setFrontendPort(integer $FrontendPort) 设置转发监听端口下限，取值1~65535
  * @method string getForwardProtocol() 获取转发协议，取值[
 TCP
 UDP
@@ -30,11 +30,13 @@ UDP
 TCP
 UDP
 ]
+ * @method integer getFrontendPortEnd() 获取转发监听端口上限，取值1~65535
+ * @method void setFrontendPortEnd(integer $FrontendPortEnd) 设置转发监听端口上限，取值1~65535
  */
 class ForwardListener extends AbstractModel
 {
     /**
-     * @var integer 转发监听端口，取值1~65535
+     * @var integer 转发监听端口下限，取值1~65535
      */
     public $FrontendPort;
 
@@ -47,11 +49,17 @@ UDP
     public $ForwardProtocol;
 
     /**
-     * @param integer $FrontendPort 转发监听端口，取值1~65535
+     * @var integer 转发监听端口上限，取值1~65535
+     */
+    public $FrontendPortEnd;
+
+    /**
+     * @param integer $FrontendPort 转发监听端口下限，取值1~65535
      * @param string $ForwardProtocol 转发协议，取值[
 TCP
 UDP
 ]
+     * @param integer $FrontendPortEnd 转发监听端口上限，取值1~65535
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ UDP
 
         if (array_key_exists("ForwardProtocol",$param) and $param["ForwardProtocol"] !== null) {
             $this->ForwardProtocol = $param["ForwardProtocol"];
+        }
+
+        if (array_key_exists("FrontendPortEnd",$param) and $param["FrontendPortEnd"] !== null) {
+            $this->FrontendPortEnd = $param["FrontendPortEnd"];
         }
     }
 }

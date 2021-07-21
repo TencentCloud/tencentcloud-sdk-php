@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置新账户的密码。
  * @method string getDescription() 获取备注信息。
  * @method void setDescription(string $Description) 设置备注信息。
- * @method integer getMaxUserConnections() 获取新账户最大可用连接数。
- * @method void setMaxUserConnections(integer $MaxUserConnections) 设置新账户最大可用连接数。
+ * @method integer getMaxUserConnections() 获取新账户最大可用连接数，默认值为10240，最大可设置值为10240。
+ * @method void setMaxUserConnections(integer $MaxUserConnections) 设置新账户最大可用连接数，默认值为10240，最大可设置值为10240。
  */
 class CreateAccountsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class CreateAccountsRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 新账户最大可用连接数。
+     * @var integer 新账户最大可用连接数，默认值为10240，最大可设置值为10240。
      */
     public $MaxUserConnections;
 
@@ -63,7 +63,7 @@ class CreateAccountsRequest extends AbstractModel
      * @param array $Accounts 云数据库账号。
      * @param string $Password 新账户的密码。
      * @param string $Description 备注信息。
-     * @param integer $MaxUserConnections 新账户最大可用连接数。
+     * @param integer $MaxUserConnections 新账户最大可用连接数，默认值为10240，最大可设置值为10240。
      */
     function __construct()
     {

@@ -48,6 +48,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageRetentionTime(integer $MessageRetentionTime) 设置消息保留时间
  * @method integer getMaxStorageCapacity() 获取最大存储容量
  * @method void setMaxStorageCapacity(integer $MaxStorageCapacity) 设置最大存储容量
+ * @method string getVersion() 获取集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersion(string $Version) 设置集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublicEndPoint() 获取公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicEndPoint(string $PublicEndPoint) 设置公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcEndPoint() 获取VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcEndPoint(string $VpcEndPoint) 设置VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNamespaceNum() 获取命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceNum(integer $NamespaceNum) 设置命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -118,6 +134,30 @@ class Cluster extends AbstractModel
     public $MaxStorageCapacity;
 
     /**
+     * @var string 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Version;
+
+    /**
+     * @var string 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicEndPoint;
+
+    /**
+     * @var string VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcEndPoint;
+
+    /**
+     * @var integer 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceNum;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -132,6 +172,14 @@ class Cluster extends AbstractModel
      * @param integer $MaxQps 最大QPS
      * @param integer $MessageRetentionTime 消息保留时间
      * @param integer $MaxStorageCapacity 最大存储容量
+     * @param string $Version 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicEndPoint 公网访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcEndPoint VPC访问接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NamespaceNum 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -196,6 +244,22 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("MaxStorageCapacity",$param) and $param["MaxStorageCapacity"] !== null) {
             $this->MaxStorageCapacity = $param["MaxStorageCapacity"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("PublicEndPoint",$param) and $param["PublicEndPoint"] !== null) {
+            $this->PublicEndPoint = $param["PublicEndPoint"];
+        }
+
+        if (array_key_exists("VpcEndPoint",$param) and $param["VpcEndPoint"] !== null) {
+            $this->VpcEndPoint = $param["VpcEndPoint"];
+        }
+
+        if (array_key_exists("NamespaceNum",$param) and $param["NamespaceNum"] !== null) {
+            $this->NamespaceNum = $param["NamespaceNum"];
         }
     }
 }

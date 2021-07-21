@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomains(array $Domains) 设置要过户的域名。
  * @method string getNewOwnerUin() 获取转入账户的uin。
  * @method void setNewOwnerUin(string $NewOwnerUin) 设置转入账户的uin。
+ * @method boolean getTransferDns() 获取是否同时转移对应的 DNS 解析域名，默认false
+ * @method void setTransferDns(boolean $TransferDns) 设置是否同时转移对应的 DNS 解析域名，默认false
  */
 class ModifyDomainOwnerBatchRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyDomainOwnerBatchRequest extends AbstractModel
     public $NewOwnerUin;
 
     /**
+     * @var boolean 是否同时转移对应的 DNS 解析域名，默认false
+     */
+    public $TransferDns;
+
+    /**
      * @param array $Domains 要过户的域名。
      * @param string $NewOwnerUin 转入账户的uin。
+     * @param boolean $TransferDns 是否同时转移对应的 DNS 解析域名，默认false
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyDomainOwnerBatchRequest extends AbstractModel
 
         if (array_key_exists("NewOwnerUin",$param) and $param["NewOwnerUin"] !== null) {
             $this->NewOwnerUin = $param["NewOwnerUin"];
+        }
+
+        if (array_key_exists("TransferDns",$param) and $param["TransferDns"] !== null) {
+            $this->TransferDns = $param["TransferDns"];
         }
     }
 }

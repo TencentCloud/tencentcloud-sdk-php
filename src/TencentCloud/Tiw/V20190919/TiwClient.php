@@ -23,11 +23,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tiw\V20190919\Models as Models;
 
 /**
+ * @method Models\CreateSnapshotTaskResponse CreateSnapshotTask(Models\CreateSnapshotTaskRequest $req) 创建白板板书生成任务, 在任务结束后，如果提供了回调地址，将通过回调地址通知板书生成结果
  * @method Models\CreateTranscodeResponse CreateTranscode(Models\CreateTranscodeRequest $req) 创建一个文档转码任务
  * @method Models\CreateVideoGenerationTaskResponse CreateVideoGenerationTask(Models\CreateVideoGenerationTaskRequest $req) 创建视频生成任务
  * @method Models\DescribeOnlineRecordResponse DescribeOnlineRecord(Models\DescribeOnlineRecordRequest $req) 查询录制任务状态与结果
  * @method Models\DescribeOnlineRecordCallbackResponse DescribeOnlineRecordCallback(Models\DescribeOnlineRecordCallbackRequest $req) 查询实时录制回调地址
  * @method Models\DescribeQualityMetricsResponse DescribeQualityMetrics(Models\DescribeQualityMetricsRequest $req) 查询互动白板质量数据
+ * @method Models\DescribeSnapshotTaskResponse DescribeSnapshotTask(Models\DescribeSnapshotTaskRequest $req) 获取指定白板板书生成任务信息
  * @method Models\DescribeTranscodeResponse DescribeTranscode(Models\DescribeTranscodeRequest $req) 查询文档转码任务的执行进度与转码结果
  * @method Models\DescribeTranscodeCallbackResponse DescribeTranscodeCallback(Models\DescribeTranscodeCallbackRequest $req) 查询文档转码回调地址
  * @method Models\DescribeVideoGenerationTaskResponse DescribeVideoGenerationTask(Models\DescribeVideoGenerationTaskRequest $req) 查询录制视频生成任务状态与结果

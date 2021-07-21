@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccounts(array $Accounts) 设置云数据库账号。
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method integer getMaxUserConnections() 获取设置账户最大可用连接数。
- * @method void setMaxUserConnections(integer $MaxUserConnections) 设置设置账户最大可用连接数。
+ * @method integer getMaxUserConnections() 获取设置账户最大可用连接数，最大可设置值为10240。
+ * @method void setMaxUserConnections(integer $MaxUserConnections) 设置设置账户最大可用连接数，最大可设置值为10240。
  */
 class ModifyAccountMaxUserConnectionsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyAccountMaxUserConnectionsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 设置账户最大可用连接数。
+     * @var integer 设置账户最大可用连接数，最大可设置值为10240。
      */
     public $MaxUserConnections;
 
     /**
      * @param array $Accounts 云数据库账号。
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param integer $MaxUserConnections 设置账户最大可用连接数。
+     * @param integer $MaxUserConnections 设置账户最大可用连接数，最大可设置值为10240。
      */
     function __construct()
     {

@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSmsTemplateList请求参数结构体
  *
  * @method array getTemplateIdSet() 获取模板 ID 数组。
-注：默认数组长度最大100。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
  * @method void setTemplateIdSet(array $TemplateIdSet) 设置模板 ID 数组。
-注：默认数组长度最大100。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
  * @method integer getInternational() 获取是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
@@ -35,7 +35,7 @@ class DescribeSmsTemplateListRequest extends AbstractModel
 {
     /**
      * @var array 模板 ID 数组。
-注：默认数组长度最大100。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
      */
     public $TemplateIdSet;
 
@@ -48,7 +48,7 @@ class DescribeSmsTemplateListRequest extends AbstractModel
 
     /**
      * @param array $TemplateIdSet 模板 ID 数组。
-注：默认数组长度最大100。
+<dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
      * @param integer $International 是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。

@@ -14,36 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Iotcloud\V20210408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DisableCaches返回参数结构体
+ * DescribePrivateCA返回参数结构体
  *
- * @method CacheOptResult getCacheOptResult() 获取提交结果
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCacheOptResult(CacheOptResult $CacheOptResult) 设置提交结果
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskId() 获取任务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(string $TaskId) 设置任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method CertInfo getCA() 获取私有化CA详情
+ * @method void setCA(CertInfo $CA) 设置私有化CA详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DisableCachesResponse extends AbstractModel
+class DescribePrivateCAResponse extends AbstractModel
 {
     /**
-     * @var CacheOptResult 提交结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var CertInfo 私有化CA详情
      */
-    public $CacheOptResult;
-
-    /**
-     * @var string 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TaskId;
+    public $CA;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +38,7 @@ class DisableCachesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CacheOptResult $CacheOptResult 提交结果
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertInfo $CA 私有化CA详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,13 +54,9 @@ class DisableCachesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CacheOptResult",$param) and $param["CacheOptResult"] !== null) {
-            $this->CacheOptResult = new CacheOptResult();
-            $this->CacheOptResult->deserialize($param["CacheOptResult"]);
-        }
-
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("CA",$param) and $param["CA"] !== null) {
+            $this->CA = new CertInfo();
+            $this->CA->deserialize($param["CA"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

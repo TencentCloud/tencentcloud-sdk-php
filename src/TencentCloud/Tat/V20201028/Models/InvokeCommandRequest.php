@@ -38,6 +38,10 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。若不填，默认以 Command 配置的 Username 执行。
  * @method void setUsername(string $Username) 设置在 CVM 或 Lighthouse 实例中执行命令的用户名称。
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。若不填，默认以 Command 配置的 Username 执行。
+ * @method string getWorkingDirectory() 获取命令执行路径, 默认以Command配置的WorkingDirectory执行。
+ * @method void setWorkingDirectory(string $WorkingDirectory) 设置命令执行路径, 默认以Command配置的WorkingDirectory执行。
+ * @method integer getTimeout() 获取命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
+ * @method void setTimeout(integer $Timeout) 设置命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
  */
 class InvokeCommandRequest extends AbstractModel
 {
@@ -67,6 +71,16 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     public $Username;
 
     /**
+     * @var string 命令执行路径, 默认以Command配置的WorkingDirectory执行。
+     */
+    public $WorkingDirectory;
+
+    /**
+     * @var integer 命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
+     */
+    public $Timeout;
+
+    /**
      * @param string $CommandId 待触发的命令ID。
      * @param array $InstanceIds 待执行命令的实例ID列表，上限100。
      * @param string $Parameters Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
@@ -76,6 +90,8 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
      * @param string $Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。若不填，默认以 Command 配置的 Username 执行。
+     * @param string $WorkingDirectory 命令执行路径, 默认以Command配置的WorkingDirectory执行。
+     * @param integer $Timeout 命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
      */
     function __construct()
     {
@@ -104,6 +120,14 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
         if (array_key_exists("Username",$param) and $param["Username"] !== null) {
             $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("WorkingDirectory",$param) and $param["WorkingDirectory"] !== null) {
+            $this->WorkingDirectory = $param["WorkingDirectory"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
         }
     }
 }

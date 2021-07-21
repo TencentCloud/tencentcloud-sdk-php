@@ -56,7 +56,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 4. 支持创建主实例、灾备实例和只读实例；
 5. 当入参指定 Port，ParamList 或 Password 时，该实例会进行初始化操作（暂不支持基础版实例）；
  * @method Models\CreateDeployGroupResponse CreateDeployGroup(Models\CreateDeployGroupRequest $req) 本接口(CreateDeployGroup)用于创建放置实例的置放群组
- * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) 该接口（CreateParamTemplate）用于创建参数模板。
+ * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) 该接口（CreateParamTemplate）用于创建参数模板，全地域公共参数Region均为ap-guangzhou。
  * @method Models\CreateRoInstanceIpResponse CreateRoInstanceIp(Models\CreateRoInstanceIpRequest $req) 本接口(CreateRoInstanceIp)用于创建云数据库只读实例的独立VIP。
  * @method Models\DeleteAccountsResponse DeleteAccounts(Models\DeleteAccountsRequest $req) 本接口(DeleteAccounts)用于删除云数据库的账户。
  * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
@@ -64,7 +64,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DeleteAuditRuleResponse DeleteAuditRule(Models\DeleteAuditRuleRequest $req) 本接口(DeleteAuditRule)用于删除用户的审计规则。
  * @method Models\DeleteBackupResponse DeleteBackup(Models\DeleteBackupRequest $req) 本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
  * @method Models\DeleteDeployGroupsResponse DeleteDeployGroups(Models\DeleteDeployGroupsRequest $req) 根据置放群组ID删除置放群组（置放群组中有资源存在时不能删除该置放群组）
- * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) 该接口（DeleteParamTemplate）用于删除参数模板。
+ * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) 该接口（DeleteParamTemplate）用于删除参数模板，全地域公共参数Region均为ap-guangzhou。
  * @method Models\DeleteTimeWindowResponse DeleteTimeWindow(Models\DeleteTimeWindowRequest $req) 本接口(DeleteTimeWindow)用于删除云数据库实例的维护时间窗口。删除实例维护时间窗口之后，默认的维护时间窗为 03:00-04:00，即当选择在维护时间窗口内切换访问新实例时，默认会在 03:00-04:00 点进行切换访问新实例。
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 本接口(DescribeAccountPrivileges)用于查询云数据库账户支持的权限信息。
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口(DescribeAccounts)用于查询云数据库的所有账户信息。
@@ -107,7 +107,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeErrorLogDataResponse DescribeErrorLogData(Models\DescribeErrorLogDataRequest $req) 根据检索条件查询实例错误日志详情。只能查询一个月之内的错误日志。
  * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 该接口（DescribeInstanceParams）用于查询实例的参数列表。
- * @method Models\DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(Models\DescribeParamTemplateInfoRequest $req) 该接口（DescribeParamTemplateInfo）用于查询参数模板详情。
+ * @method Models\DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(Models\DescribeParamTemplateInfoRequest $req) 该接口（DescribeParamTemplateInfo）用于查询参数模板详情，全地域公共参数Region均为ap-guangzhou。
  * @method Models\DescribeParamTemplatesResponse DescribeParamTemplates(Models\DescribeParamTemplatesRequest $req) 该接口（DescribeParamTemplates）查询参数模板列表。
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
  * @method Models\DescribeRoGroupsResponse DescribeRoGroups(Models\DescribeRoGroupsRequest $req) 本接口(DescribeRoGroups)用于查询云数据库实例的所有的RO组的信息。
@@ -144,7 +144,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口(ModifyInstanceParam)用于修改云数据库实例的参数。
  * @method Models\ModifyInstanceTagResponse ModifyInstanceTag(Models\ModifyInstanceTagRequest $req) 本接口(ModifyInstanceTag)用于对实例标签进行添加、修改或者删除。
  * @method Models\ModifyNameOrDescByDpIdResponse ModifyNameOrDescByDpId(Models\ModifyNameOrDescByDpIdRequest $req) 修改置放群组的名称或者描述
- * @method Models\ModifyParamTemplateResponse ModifyParamTemplate(Models\ModifyParamTemplateRequest $req) 该接口（ModifyParamTemplate）用于修改参数模板。
+ * @method Models\ModifyParamTemplateResponse ModifyParamTemplate(Models\ModifyParamTemplateRequest $req) 该接口（ModifyParamTemplate）用于修改参数模板，全地域公共参数Region均为ap-guangzhou。
  * @method Models\ModifyRoGroupInfoResponse ModifyRoGroupInfo(Models\ModifyRoGroupInfoRequest $req) 本接口（ModifyRoGroupInfo）用于更新云数据库只读组的信息。包括设置实例延迟超限剔除策略，设置只读实例读权重等。
  * @method Models\ModifyRoReplicationDelayResponse ModifyRoReplicationDelay(Models\ModifyRoReplicationDelayRequest $req) 修改延迟只读实例的延迟复制时间。
  * @method Models\ModifyRoTypeResponse ModifyRoType(Models\ModifyRoTypeRequest $req) 修改只读实例类型，可以将普通只读实例变为延迟只读实例，或者将延迟只读实例变为普通只读实例。

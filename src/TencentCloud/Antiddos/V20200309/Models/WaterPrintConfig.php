@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListeners(array $Listeners) 设置水印所属的转发监听器列表
  * @method array getKeys() 获取水印添加成功后生成的水印密钥列表，一条水印最少1个密钥，最多2个密钥
  * @method void setKeys(array $Keys) 设置水印添加成功后生成的水印密钥列表，一条水印最少1个密钥，最多2个密钥
+ * @method string getVerify() 获取水印检查模式, 取值[
+checkall（普通模式）
+shortfpcheckall（精简模式）
+]
+ * @method void setVerify(string $Verify) 设置水印检查模式, 取值[
+checkall（普通模式）
+shortfpcheckall（精简模式）
+]
  */
 class WaterPrintConfig extends AbstractModel
 {
@@ -61,6 +69,14 @@ class WaterPrintConfig extends AbstractModel
     public $Keys;
 
     /**
+     * @var string 水印检查模式, 取值[
+checkall（普通模式）
+shortfpcheckall（精简模式）
+]
+     */
+    public $Verify;
+
+    /**
      * @param integer $Offset 水印偏移量，取值范围[0, 100)
      * @param integer $OpenStatus 是否开启，取值[
 0（手动开启）
@@ -68,6 +84,10 @@ class WaterPrintConfig extends AbstractModel
 ]
      * @param array $Listeners 水印所属的转发监听器列表
      * @param array $Keys 水印添加成功后生成的水印密钥列表，一条水印最少1个密钥，最多2个密钥
+     * @param string $Verify 水印检查模式, 取值[
+checkall（普通模式）
+shortfpcheckall（精简模式）
+]
      */
     function __construct()
     {
@@ -106,6 +126,10 @@ class WaterPrintConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Keys, $obj);
             }
+        }
+
+        if (array_key_exists("Verify",$param) and $param["Verify"] !== null) {
+            $this->Verify = $param["Verify"];
         }
     }
 }

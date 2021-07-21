@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDisableRecords请求参数结构体
  *
+ * @method string getUrl() 获取指定 URL 查询
+ * @method void setUrl(string $Url) 设置指定 URL 查询
  * @method string getStartTime() 获取开始时间，如：2018-12-12 10:24:00。
  * @method void setStartTime(string $StartTime) 设置开始时间，如：2018-12-12 10:24:00。
  * @method string getEndTime() 获取结束时间，如：2018-12-14 10:24:00。
  * @method void setEndTime(string $EndTime) 设置结束时间，如：2018-12-14 10:24:00。
- * @method string getUrl() 获取指定 URL 查询
- * @method void setUrl(string $Url) 设置指定 URL 查询
  * @method string getStatus() 获取URL 当前状态
 disable：当前仍为禁用状态，访问返回 403
 enable：当前为可用状态，已解禁，可正常访问
@@ -36,9 +36,16 @@ enable：当前为可用状态，已解禁，可正常访问
  * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0
  * @method integer getLimit() 获取分页查询限制数目，默认为20。
  * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为20。
+ * @method string getTaskId() 获取任务ID，任务ID和起始时间需要至少填写一项。
+ * @method void setTaskId(string $TaskId) 设置任务ID，任务ID和起始时间需要至少填写一项。
  */
 class GetDisableRecordsRequest extends AbstractModel
 {
+    /**
+     * @var string 指定 URL 查询
+     */
+    public $Url;
+
     /**
      * @var string 开始时间，如：2018-12-12 10:24:00。
      */
@@ -48,11 +55,6 @@ class GetDisableRecordsRequest extends AbstractModel
      * @var string 结束时间，如：2018-12-14 10:24:00。
      */
     public $EndTime;
-
-    /**
-     * @var string 指定 URL 查询
-     */
-    public $Url;
 
     /**
      * @var string URL 当前状态
@@ -72,14 +74,20 @@ enable：当前为可用状态，已解禁，可正常访问
     public $Limit;
 
     /**
+     * @var string 任务ID，任务ID和起始时间需要至少填写一项。
+     */
+    public $TaskId;
+
+    /**
+     * @param string $Url 指定 URL 查询
      * @param string $StartTime 开始时间，如：2018-12-12 10:24:00。
      * @param string $EndTime 结束时间，如：2018-12-14 10:24:00。
-     * @param string $Url 指定 URL 查询
      * @param string $Status URL 当前状态
 disable：当前仍为禁用状态，访问返回 403
 enable：当前为可用状态，已解禁，可正常访问
      * @param integer $Offset 分页查询偏移量，默认为 0
      * @param integer $Limit 分页查询限制数目，默认为20。
+     * @param string $TaskId 任务ID，任务ID和起始时间需要至少填写一项。
      */
     function __construct()
     {
@@ -94,16 +102,16 @@ enable：当前为可用状态，已解禁，可正常访问
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
-        }
-
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
@@ -116,6 +124,10 @@ enable：当前为可用状态，已解禁，可正常访问
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

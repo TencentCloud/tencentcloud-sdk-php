@@ -50,6 +50,8 @@ BU4M：上行带宽保障4Mbps
  * @method void setDuration(integer $Duration) 设置期望加速时长（单位分钟），默认值30分钟
  * @method Capacity getCapacity() 获取接口能力扩展，如果是电信用户，必须填充CTCC Token字段
  * @method void setCapacity(Capacity $Capacity) 设置接口能力扩展，如果是电信用户，必须填充CTCC Token字段
+ * @method string getTemplateId() 获取应用模板ID
+ * @method void setTemplateId(string $TemplateId) 设置应用模板ID
  */
 class CreateQosRequest extends AbstractModel
 {
@@ -93,6 +95,11 @@ BU4M：上行带宽保障4Mbps
     public $Capacity;
 
     /**
+     * @var string 应用模板ID
+     */
+    public $TemplateId;
+
+    /**
      * @param SrcAddressInfo $SrcAddressInfo 加速业务源地址信息，SrcIpv6和（SrcIpv4+SrcPublicIpv4）二选一，目前Ipv6不可用，全部填写以Ipv4参数为准。
      * @param DestAddressInfo $DestAddressInfo 加速业务目标地址信息
      * @param string $QosMenu 加速套餐
@@ -108,6 +115,7 @@ BU4M：上行带宽保障4Mbps
      * @param DeviceInfo $DeviceInfo 申请加速的设备信息，包括运营商，操作系统，设备唯一标识等。
      * @param integer $Duration 期望加速时长（单位分钟），默认值30分钟
      * @param Capacity $Capacity 接口能力扩展，如果是电信用户，必须填充CTCC Token字段
+     * @param string $TemplateId 应用模板ID
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ BU4M：上行带宽保障4Mbps
         if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
             $this->Capacity = new Capacity();
             $this->Capacity->deserialize($param["Capacity"]);
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

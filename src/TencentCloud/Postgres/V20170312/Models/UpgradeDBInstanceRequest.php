@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券
  * @method integer getActivityId() 获取活动ID
  * @method void setActivityId(integer $ActivityId) 设置活动ID
+ * @method integer getSwitchTag() 获取指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+ * @method void setSwitchTag(integer $SwitchTag) 设置指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+ * @method string getSwitchStartTime() 获取切换开始时间
+ * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间
+ * @method string getSwitchEndTime() 获取切换截止时间
+ * @method void setSwitchEndTime(string $SwitchEndTime) 设置切换截止时间
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -66,12 +72,30 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $ActivityId;
 
     /**
+     * @var integer 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+     */
+    public $SwitchTag;
+
+    /**
+     * @var string 切换开始时间
+     */
+    public $SwitchStartTime;
+
+    /**
+     * @var string 切换截止时间
+     */
+    public $SwitchEndTime;
+
+    /**
      * @param integer $Memory 升级后的实例内存大小，单位GB
      * @param integer $Storage 升级后的实例磁盘大小，单位GB
      * @param string $DBInstanceId 实例ID，形如postgres-lnp6j617
      * @param integer $AutoVoucher 是否自动使用代金券,1是,0否，默认不使用
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券
      * @param integer $ActivityId 活动ID
+     * @param integer $SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+     * @param string $SwitchStartTime 切换开始时间
+     * @param string $SwitchEndTime 切换截止时间
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
             $this->ActivityId = $param["ActivityId"];
+        }
+
+        if (array_key_exists("SwitchTag",$param) and $param["SwitchTag"] !== null) {
+            $this->SwitchTag = $param["SwitchTag"];
+        }
+
+        if (array_key_exists("SwitchStartTime",$param) and $param["SwitchStartTime"] !== null) {
+            $this->SwitchStartTime = $param["SwitchStartTime"];
+        }
+
+        if (array_key_exists("SwitchEndTime",$param) and $param["SwitchEndTime"] !== null) {
+            $this->SwitchEndTime = $param["SwitchEndTime"];
         }
     }
 }

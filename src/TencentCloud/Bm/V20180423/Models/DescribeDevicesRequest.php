@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method string getDeviceClassCode() 获取机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询
  * @method void setDeviceClassCode(string $DeviceClassCode) 设置机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询
  * @method array getInstanceIds() 获取设备ID数组
@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderField(string $OrderField) 设置排序字段
  * @method integer getOrder() 获取排序方式，取值：0:增序(默认)，1:降序
  * @method void setOrder(integer $Order) 设置排序方式，取值：0:增序(默认)，1:降序
+ * @method string getMaintainStatus() 获取按照维保方式过滤。可取值为 Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+ * @method void setMaintainStatus(string $MaintainStatus) 设置按照维保方式过滤。可取值为 Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
  */
 class DescribeDevicesRequest extends AbstractModel
 {
@@ -65,7 +67,7 @@ class DescribeDevicesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
@@ -150,8 +152,13 @@ class DescribeDevicesRequest extends AbstractModel
     public $Order;
 
     /**
+     * @var string 按照维保方式过滤。可取值为 Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+     */
+    public $MaintainStatus;
+
+    /**
      * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param string $DeviceClassCode 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询
      * @param array $InstanceIds 设备ID数组
      * @param array $WanIps 外网IP数组
@@ -168,6 +175,7 @@ class DescribeDevicesRequest extends AbstractModel
      * @param integer $IsLuckyDevice 竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。
      * @param string $OrderField 排序字段
      * @param integer $Order 排序方式，取值：0:增序(默认)，1:降序
+     * @param string $MaintainStatus 按照维保方式过滤。可取值为 Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class DescribeDevicesRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("MaintainStatus",$param) and $param["MaintainStatus"] !== null) {
+            $this->MaintainStatus = $param["MaintainStatus"];
         }
     }
 }

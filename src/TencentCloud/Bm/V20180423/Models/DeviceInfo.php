@@ -70,6 +70,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetCidrBlock(string $SubnetCidrBlock) 设置所在子网CIDR
  * @method integer getIsLuckyDevice() 获取标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
  * @method void setIsLuckyDevice(integer $IsLuckyDevice) 设置标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
+ * @method string getMaintainStatus() 获取标识机器维保状态。Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaintainStatus(string $MaintainStatus) 设置标识机器维保状态。Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMaintainMessage() 获取维保信息描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaintainMessage(string $MaintainMessage) 设置维保信息描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceInfo extends AbstractModel
 {
@@ -195,6 +203,18 @@ class DeviceInfo extends AbstractModel
     public $IsLuckyDevice;
 
     /**
+     * @var string 标识机器维保状态。Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaintainStatus;
+
+    /**
+     * @var string 维保信息描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaintainMessage;
+
+    /**
      * @param string $InstanceId 设备唯一ID
      * @param string $VpcId 私有网络ID
      * @param string $SubnetId 子网ID
@@ -220,6 +240,10 @@ class DeviceInfo extends AbstractModel
      * @param string $VpcCidrBlock 所在私有网络CIDR
      * @param string $SubnetCidrBlock 所在子网CIDR
      * @param integer $IsLuckyDevice 标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
+     * @param string $MaintainStatus 标识机器维保状态。Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MaintainMessage 维保信息描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -333,6 +357,14 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("IsLuckyDevice",$param) and $param["IsLuckyDevice"] !== null) {
             $this->IsLuckyDevice = $param["IsLuckyDevice"];
+        }
+
+        if (array_key_exists("MaintainStatus",$param) and $param["MaintainStatus"] !== null) {
+            $this->MaintainStatus = $param["MaintainStatus"];
+        }
+
+        if (array_key_exists("MaintainMessage",$param) and $param["MaintainMessage"] !== null) {
+            $this->MaintainMessage = $param["MaintainMessage"];
         }
     }
 }

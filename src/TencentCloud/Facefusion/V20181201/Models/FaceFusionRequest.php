@@ -24,16 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置活动 ID，请在人脸融合控制台查看。
  * @method string getModelId() 获取素材 ID，请在人脸融合控制台查看。
  * @method void setModelId(string $ModelId) 设置素材 ID，请在人脸融合控制台查看。
+ * @method string getRspImgType() 获取返回图像方式（url 或 base64) ，二选一。url有效期为7天。
+ * @method void setRspImgType(string $RspImgType) 设置返回图像方式（url 或 base64) ，二选一。url有效期为7天。
  * @method string getImage() 获取图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
  * @method void setImage(string $Image) 设置图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
- * @method string getRspImgType() 获取返回图像方式（url 或 base64) ，二选一。url有效期为30天。
- * @method void setRspImgType(string $RspImgType) 设置返回图像方式（url 或 base64) ，二选一。url有效期为30天。
  * @method integer getPornDetect() 获取历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
  * @method void setPornDetect(integer $PornDetect) 设置历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
  * @method integer getCelebrityIdentify() 获取0表示不需要不适宜内容识别，1表示需要不适宜内容识别。默认值为0。
 请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
  * @method void setCelebrityIdentify(integer $CelebrityIdentify) 设置0表示不需要不适宜内容识别，1表示需要不适宜内容识别。默认值为0。
 请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
+ * @method string getUrl() 获取图片Url地址
+ * @method void setUrl(string $Url) 设置图片Url地址
  */
 class FaceFusionRequest extends AbstractModel
 {
@@ -48,14 +50,14 @@ class FaceFusionRequest extends AbstractModel
     public $ModelId;
 
     /**
+     * @var string 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
+     */
+    public $RspImgType;
+
+    /**
      * @var string 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
      */
     public $Image;
-
-    /**
-     * @var string 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
-     */
-    public $RspImgType;
 
     /**
      * @var integer 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
@@ -69,13 +71,19 @@ class FaceFusionRequest extends AbstractModel
     public $CelebrityIdentify;
 
     /**
+     * @var string 图片Url地址
+     */
+    public $Url;
+
+    /**
      * @param string $ProjectId 活动 ID，请在人脸融合控制台查看。
      * @param string $ModelId 素材 ID，请在人脸融合控制台查看。
+     * @param string $RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
      * @param string $Image 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
-     * @param string $RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
      * @param integer $PornDetect 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      * @param integer $CelebrityIdentify 0表示不需要不适宜内容识别，1表示需要不适宜内容识别。默认值为0。
 请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
+     * @param string $Url 图片Url地址
      */
     function __construct()
     {
@@ -98,12 +106,12 @@ class FaceFusionRequest extends AbstractModel
             $this->ModelId = $param["ModelId"];
         }
 
-        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
-            $this->Image = $param["Image"];
-        }
-
         if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
             $this->RspImgType = $param["RspImgType"];
+        }
+
+        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
+            $this->Image = $param["Image"];
         }
 
         if (array_key_exists("PornDetect",$param) and $param["PornDetect"] !== null) {
@@ -112,6 +120,10 @@ class FaceFusionRequest extends AbstractModel
 
         if (array_key_exists("CelebrityIdentify",$param) and $param["CelebrityIdentify"] !== null) {
             $this->CelebrityIdentify = $param["CelebrityIdentify"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

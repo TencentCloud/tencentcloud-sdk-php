@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulCategories(array $VulCategories) 设置漏洞类型：1: web应用漏洞 2:系统组件漏洞, 以数组方式传参[1,2]
  * @method array getVulLevels() 获取危害等级：1-低危；2-中危；3-高危；4-严重,以数组方式传参[1,2,3]
  * @method void setVulLevels(array $VulLevels) 设置危害等级：1-低危；2-中危；3-高危；4-严重,以数组方式传参[1,2,3]
- * @method string getTimerTime() 获取定期检测时间
- * @method void setTimerTime(string $TimerTime) 设置定期检测时间
+ * @method string getTimerTime() 获取定期检测时间，如：02:10:50
+ * @method void setTimerTime(string $TimerTime) 设置定期检测时间，如：02:10:50
  * @method integer getVulEmergency() 获取是否是应急漏洞 0 否 1 是
  * @method void setVulEmergency(integer $VulEmergency) 设置是否是应急漏洞 0 否 1 是
- * @method string getStartTime() 获取扫描开始时间
- * @method void setStartTime(string $StartTime) 设置扫描开始时间
- * @method string getEndTime() 获取扫描结束时间
- * @method void setEndTime(string $EndTime) 设置扫描结束时间
+ * @method string getStartTime() 获取扫描开始时间，如：00:00
+ * @method void setStartTime(string $StartTime) 设置扫描开始时间，如：00:00
+ * @method string getEndTime() 获取扫描结束时间，如：08:00
+ * @method void setEndTime(string $EndTime) 设置扫描结束时间，如：08:00
  * @method integer getEnableScan() 获取是否开启扫描 1开启 0不开启
  * @method void setEnableScan(integer $EnableScan) 设置是否开启扫描 1开启 0不开启
  */
@@ -55,7 +55,7 @@ class ScanVulSettingRequest extends AbstractModel
     public $VulLevels;
 
     /**
-     * @var string 定期检测时间
+     * @var string 定期检测时间，如：02:10:50
      */
     public $TimerTime;
 
@@ -65,12 +65,12 @@ class ScanVulSettingRequest extends AbstractModel
     public $VulEmergency;
 
     /**
-     * @var string 扫描开始时间
+     * @var string 扫描开始时间，如：00:00
      */
     public $StartTime;
 
     /**
-     * @var string 扫描结束时间
+     * @var string 扫描结束时间，如：08:00
      */
     public $EndTime;
 
@@ -83,10 +83,10 @@ class ScanVulSettingRequest extends AbstractModel
      * @param integer $TimerInterval 定期检测间隔时间（天）
      * @param array $VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞, 以数组方式传参[1,2]
      * @param array $VulLevels 危害等级：1-低危；2-中危；3-高危；4-严重,以数组方式传参[1,2,3]
-     * @param string $TimerTime 定期检测时间
+     * @param string $TimerTime 定期检测时间，如：02:10:50
      * @param integer $VulEmergency 是否是应急漏洞 0 否 1 是
-     * @param string $StartTime 扫描开始时间
-     * @param string $EndTime 扫描结束时间
+     * @param string $StartTime 扫描开始时间，如：00:00
+     * @param string $EndTime 扫描结束时间，如：08:00
      * @param integer $EnableScan 是否开启扫描 1开启 0不开启
      */
     function __construct()

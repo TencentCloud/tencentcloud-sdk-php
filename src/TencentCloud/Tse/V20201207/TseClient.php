@@ -23,10 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tse\V20201207\Models as Models;
 
 /**
- * @method Models\DescribeConfigResponse DescribeConfig(Models\DescribeConfigRequest $req) 查看配置项
  * @method Models\DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddress(Models\DescribeSREInstanceAccessAddressRequest $req) 查询微服务注册引擎实例访问地址
  * @method Models\DescribeSREInstancesResponse DescribeSREInstances(Models\DescribeSREInstancesRequest $req) 用于查询微服务引擎实例列表
- * @method Models\ManageConfigResponse ManageConfig(Models\ManageConfigRequest $req) 管理配置
  */
 
 class TseClient extends AbstractClient

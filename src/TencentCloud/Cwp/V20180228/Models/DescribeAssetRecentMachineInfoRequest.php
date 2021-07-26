@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetRecentMachineInfo请求参数结构体
  *
- * @method string getBeginDate() 获取开始时间。
- * @method void setBeginDate(string $BeginDate) 设置开始时间。
- * @method string getEndDate() 获取结束时间。
- * @method void setEndDate(string $EndDate) 设置结束时间。
+ * @method string getBeginDate() 获取开始时间，如：2020-09-22
+ * @method void setBeginDate(string $BeginDate) 设置开始时间，如：2020-09-22
+ * @method string getEndDate() 获取结束时间，如：2020-09-22
+ * @method void setEndDate(string $EndDate) 设置结束时间，如：2020-09-22
  */
 class DescribeAssetRecentMachineInfoRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间。
+     * @var string 开始时间，如：2020-09-22
      */
     public $BeginDate;
 
     /**
-     * @var string 结束时间。
+     * @var string 结束时间，如：2020-09-22
      */
     public $EndDate;
 
     /**
-     * @param string $BeginDate 开始时间。
-     * @param string $EndDate 结束时间。
+     * @param string $BeginDate 开始时间，如：2020-09-22
+     * @param string $EndDate 结束时间，如：2020-09-22
      */
     function __construct()
     {

@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBaseLine(SecurityEventInfo $BaseLine) 设置安全基线相关风险事件
  * @method SecurityEventInfo getAttackLogs() 获取攻击检测相关风险事件
  * @method void setAttackLogs(SecurityEventInfo $AttackLogs) 设置攻击检测相关风险事件
+ * @method integer getEffectMachineCount() 获取受影响机器数
+ * @method void setEffectMachineCount(integer $EffectMachineCount) 设置受影响机器数
+ * @method integer getEventsCount() 获取所有事件总数
+ * @method void setEventsCount(integer $EventsCount) 设置所有事件总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -110,6 +114,16 @@ class DescribeSecurityEventsCntResponse extends AbstractModel
     public $AttackLogs;
 
     /**
+     * @var integer 受影响机器数
+     */
+    public $EffectMachineCount;
+
+    /**
+     * @var integer 所有事件总数
+     */
+    public $EventsCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -127,6 +141,8 @@ class DescribeSecurityEventsCntResponse extends AbstractModel
      * @param SecurityEventInfo $EmergencyVul 应急漏洞相关风险事件
      * @param SecurityEventInfo $BaseLine 安全基线相关风险事件
      * @param SecurityEventInfo $AttackLogs 攻击检测相关风险事件
+     * @param integer $EffectMachineCount 受影响机器数
+     * @param integer $EventsCount 所有事件总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -200,6 +216,14 @@ class DescribeSecurityEventsCntResponse extends AbstractModel
         if (array_key_exists("AttackLogs",$param) and $param["AttackLogs"] !== null) {
             $this->AttackLogs = new SecurityEventInfo();
             $this->AttackLogs->deserialize($param["AttackLogs"]);
+        }
+
+        if (array_key_exists("EffectMachineCount",$param) and $param["EffectMachineCount"] !== null) {
+            $this->EffectMachineCount = $param["EffectMachineCount"];
+        }
+
+        if (array_key_exists("EventsCount",$param) and $param["EventsCount"] !== null) {
+            $this->EventsCount = $param["EventsCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

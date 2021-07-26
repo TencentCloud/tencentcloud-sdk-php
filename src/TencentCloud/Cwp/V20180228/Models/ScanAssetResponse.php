@@ -18,26 +18,22 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SeparateMalwares返回参数结构体
+ * ScanAsset返回参数结构体
  *
- * @method array getSuccessIds() 获取隔离成功的id数组，若无则返回空数组
- * @method void setSuccessIds(array $SuccessIds) 设置隔离成功的id数组，若无则返回空数组
- * @method array getFailedIds() 获取隔离失败的id数组，若无则返回空数组
- * @method void setFailedIds(array $FailedIds) 设置隔离失败的id数组，若无则返回空数组
+ * @method integer getTaskId() 获取任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskId(integer $TaskId) 设置任务id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class SeparateMalwaresResponse extends AbstractModel
+class ScanAssetResponse extends AbstractModel
 {
     /**
-     * @var array 隔离成功的id数组，若无则返回空数组
+     * @var integer 任务id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SuccessIds;
-
-    /**
-     * @var array 隔离失败的id数组，若无则返回空数组
-     */
-    public $FailedIds;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +41,8 @@ class SeparateMalwaresResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SuccessIds 隔离成功的id数组，若无则返回空数组
-     * @param array $FailedIds 隔离失败的id数组，若无则返回空数组
+     * @param integer $TaskId 任务id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +58,8 @@ class SeparateMalwaresResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SuccessIds",$param) and $param["SuccessIds"] !== null) {
-            $this->SuccessIds = $param["SuccessIds"];
-        }
-
-        if (array_key_exists("FailedIds",$param) and $param["FailedIds"] !== null) {
-            $this->FailedIds = $param["FailedIds"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

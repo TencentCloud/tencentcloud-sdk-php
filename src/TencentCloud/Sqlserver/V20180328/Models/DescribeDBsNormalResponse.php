@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取表示当前实例下的数据库总个数
  * @method void setTotalCount(integer $TotalCount) 设置表示当前实例下的数据库总个数
- * @method array getDBList() 获取返回数据库的详细配置信息，比如：数据库是否开启CDC、CT等
- * @method void setDBList(array $DBList) 设置返回数据库的详细配置信息，比如：数据库是否开启CDC、CT等
+ * @method array getDBList() 获取返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
+ * @method void setDBList(array $DBList) 设置返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeDBsNormalResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 返回数据库的详细配置信息，比如：数据库是否开启CDC、CT等
+     * @var array 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
      */
     public $DBList;
 
@@ -46,7 +46,7 @@ class DescribeDBsNormalResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 表示当前实例下的数据库总个数
-     * @param array $DBList 返回数据库的详细配置信息，比如：数据库是否开启CDC、CT等
+     * @param array $DBList 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

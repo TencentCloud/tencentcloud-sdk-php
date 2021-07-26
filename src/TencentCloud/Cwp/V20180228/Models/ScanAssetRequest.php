@@ -18,28 +18,28 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSecurityTrends请求参数结构体
+ * ScanAsset请求参数结构体
  *
- * @method string getBeginDate() 获取开始时间，如：2021-07-10
- * @method void setBeginDate(string $BeginDate) 设置开始时间，如：2021-07-10
- * @method string getEndDate() 获取结束时间，如：2021-07-10
- * @method void setEndDate(string $EndDate) 设置结束时间，如：2021-07-10
+ * @method array getAssetTypeIds() 获取资产指纹类型id列表
+ * @method void setAssetTypeIds(array $AssetTypeIds) 设置资产指纹类型id列表
+ * @method array getQuuids() 获取Quuid列表
+ * @method void setQuuids(array $Quuids) 设置Quuid列表
  */
-class DescribeSecurityTrendsRequest extends AbstractModel
+class ScanAssetRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间，如：2021-07-10
+     * @var array 资产指纹类型id列表
      */
-    public $BeginDate;
+    public $AssetTypeIds;
 
     /**
-     * @var string 结束时间，如：2021-07-10
+     * @var array Quuid列表
      */
-    public $EndDate;
+    public $Quuids;
 
     /**
-     * @param string $BeginDate 开始时间，如：2021-07-10
-     * @param string $EndDate 结束时间，如：2021-07-10
+     * @param array $AssetTypeIds 资产指纹类型id列表
+     * @param array $Quuids Quuid列表
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeSecurityTrendsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BeginDate",$param) and $param["BeginDate"] !== null) {
-            $this->BeginDate = $param["BeginDate"];
+        if (array_key_exists("AssetTypeIds",$param) and $param["AssetTypeIds"] !== null) {
+            $this->AssetTypeIds = $param["AssetTypeIds"];
         }
 
-        if (array_key_exists("EndDate",$param) and $param["EndDate"] !== null) {
-            $this->EndDate = $param["EndDate"];
+        if (array_key_exists("Quuids",$param) and $param["Quuids"] !== null) {
+            $this->Quuids = $param["Quuids"];
         }
     }
 }

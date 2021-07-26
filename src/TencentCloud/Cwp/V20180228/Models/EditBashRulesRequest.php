@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostIp(string $HostIp) 设置主机IP
  * @method integer getLevel() 获取危险等级(0:无，1: 高危 2:中危 3: 低危)
  * @method void setLevel(integer $Level) 设置危险等级(0:无，1: 高危 2:中危 3: 低危)
- * @method integer getIsGlobal() 获取是否全局规则(默认否)
- * @method void setIsGlobal(integer $IsGlobal) 设置是否全局规则(默认否)
+ * @method integer getIsGlobal() 获取是否全局规则(默认否)：1-全局，0-非全局
+ * @method void setIsGlobal(integer $IsGlobal) 设置是否全局规则(默认否)：1-全局，0-非全局
  * @method integer getWhite() 获取0=黑名单， 1=白名单
  * @method void setWhite(integer $White) 设置0=黑名单， 1=白名单
  * @method integer getEventId() 获取事件列表点击“加入白名单”时,需要传EventId 事件的id
@@ -74,7 +74,7 @@ class EditBashRulesRequest extends AbstractModel
     public $Level;
 
     /**
-     * @var integer 是否全局规则(默认否)
+     * @var integer 是否全局规则(默认否)：1-全局，0-非全局
      */
     public $IsGlobal;
 
@@ -100,7 +100,7 @@ class EditBashRulesRequest extends AbstractModel
      * @param array $Uuids 客户端ID数组
      * @param string $HostIp 主机IP
      * @param integer $Level 危险等级(0:无，1: 高危 2:中危 3: 低危)
-     * @param integer $IsGlobal 是否全局规则(默认否)
+     * @param integer $IsGlobal 是否全局规则(默认否)：1-全局，0-非全局
      * @param integer $White 0=黑名单， 1=白名单
      * @param integer $EventId 事件列表点击“加入白名单”时,需要传EventId 事件的id
      * @param integer $DealOldEvents 是否处理旧事件为白名单 0=不处理 1=处理

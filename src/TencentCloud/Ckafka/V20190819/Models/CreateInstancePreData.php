@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealNames(array $DealNames) 设置订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取实例Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置实例Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateInstancePreData extends AbstractModel
 {
@@ -44,9 +48,17 @@ class CreateInstancePreData extends AbstractModel
     public $DealNames;
 
     /**
+     * @var string 实例Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
      * @param integer $FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DealNames 订单号列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 实例Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class CreateInstancePreData extends AbstractModel
 
         if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
             $this->DealNames = $param["DealNames"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulLevels(string $VulLevels) 设置危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文逗号分隔)
  * @method integer getTimerInterval() 获取定期检测间隔时间（天）
  * @method void setTimerInterval(integer $TimerInterval) 设置定期检测间隔时间（天）
- * @method string getTimerTime() 获取定期检测时间
- * @method void setTimerTime(string $TimerTime) 设置定期检测时间
- * @method integer getVulEmergency() 获取是否紧急漏洞
- * @method void setVulEmergency(integer $VulEmergency) 设置是否紧急漏洞
+ * @method string getTimerTime() 获取定期检测时间，如：00:00
+ * @method void setTimerTime(string $TimerTime) 设置定期检测时间，如：00:00
+ * @method integer getVulEmergency() 获取是否紧急漏洞：0-否 1-是
+ * @method void setVulEmergency(integer $VulEmergency) 设置是否紧急漏洞：0-否 1-是
  * @method string getStartTime() 获取开始时间
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method integer getEnableScan() 获取是否开启
  * @method void setEnableScan(integer $EnableScan) 设置是否开启
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- * @method integer getClickTimeout() 获取一键扫描超时时长
- * @method void setClickTimeout(integer $ClickTimeout) 设置一键扫描超时时长
+ * @method integer getClickTimeout() 获取一键扫描超时时长，如：1800秒（s）
+ * @method void setClickTimeout(integer $ClickTimeout) 设置一键扫描超时时长，如：1800秒（s）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -59,12 +59,12 @@ class DescribeScanVulSettingResponse extends AbstractModel
     public $TimerInterval;
 
     /**
-     * @var string 定期检测时间
+     * @var string 定期检测时间，如：00:00
      */
     public $TimerTime;
 
     /**
-     * @var integer 是否紧急漏洞
+     * @var integer 是否紧急漏洞：0-否 1-是
      */
     public $VulEmergency;
 
@@ -84,7 +84,7 @@ class DescribeScanVulSettingResponse extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 一键扫描超时时长
+     * @var integer 一键扫描超时时长，如：1800秒（s）
      */
     public $ClickTimeout;
 
@@ -97,12 +97,12 @@ class DescribeScanVulSettingResponse extends AbstractModel
      * @param string $VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文逗号分隔)
      * @param string $VulLevels 危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文逗号分隔)
      * @param integer $TimerInterval 定期检测间隔时间（天）
-     * @param string $TimerTime 定期检测时间
-     * @param integer $VulEmergency 是否紧急漏洞
+     * @param string $TimerTime 定期检测时间，如：00:00
+     * @param integer $VulEmergency 是否紧急漏洞：0-否 1-是
      * @param string $StartTime 开始时间
      * @param integer $EnableScan 是否开启
      * @param string $EndTime 结束时间
-     * @param integer $ClickTimeout 一键扫描超时时长
+     * @param integer $ClickTimeout 一键扫描超时时长，如：1800秒（s）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

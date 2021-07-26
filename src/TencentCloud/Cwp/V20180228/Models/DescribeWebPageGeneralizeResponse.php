@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTamperFileNum(integer $TamperFileNum) 设置篡改文件数
  * @method integer getTamperNum() 获取篡改数
  * @method void setTamperNum(integer $TamperNum) 设置篡改数
- * @method integer getProtectToday() 获取今日防护
- * @method void setProtectToday(integer $ProtectToday) 设置今日防护
+ * @method integer getProtectToday() 获取今日防护数
+ * @method void setProtectToday(integer $ProtectToday) 设置今日防护数
  * @method integer getProtectHostNum() 获取防护主机数
  * @method void setProtectHostNum(integer $ProtectHostNum) 设置防护主机数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -65,7 +65,7 @@ class DescribeWebPageGeneralizeResponse extends AbstractModel
     public $TamperNum;
 
     /**
-     * @var integer 今日防护
+     * @var integer 今日防护数
      */
     public $ProtectToday;
 
@@ -85,7 +85,7 @@ class DescribeWebPageGeneralizeResponse extends AbstractModel
      * @param integer $ProtectFileNum 防护文件数
      * @param integer $TamperFileNum 篡改文件数
      * @param integer $TamperNum 篡改数
-     * @param integer $ProtectToday 今日防护
+     * @param integer $ProtectToday 今日防护数
      * @param integer $ProtectHostNum 防护主机数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

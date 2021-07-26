@@ -58,6 +58,8 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeDBsNormalResponse DescribeDBsNormal(Models\DescribeDBsNormalRequest $req) 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
  * @method Models\DescribeFlowStatusResponse DescribeFlowStatus(Models\DescribeFlowStatusRequest $req) 本接口(DescribeFlowStatus)用于查询流程状态。
  * @method Models\DescribeIncrementalMigrationResponse DescribeIncrementalMigration(Models\DescribeIncrementalMigrationRequest $req) 本接口（DescribeIncrementalMigration）用于查询增量备份导入任务。
+ * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
+ * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 该接口（DescribeInstanceParams）用于查询实例的参数列表。
  * @method Models\DescribeMaintenanceSpanResponse DescribeMaintenanceSpan(Models\DescribeMaintenanceSpanRequest $req) 本接口（DescribeMaintenanceSpan）根据实例ID查询该实例的可维护时间窗。
  * @method Models\DescribeMigrationDatabasesResponse DescribeMigrationDatabases(Models\DescribeMigrationDatabasesRequest $req) 本接口（DescribeMigrationDatabases）的作用是查询待迁移数据库列表
  * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) 本接口（DescribeMigrationDetail）用于查询迁移任务的详细情况
@@ -95,6 +97,9 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyDatabaseCTResponse ModifyDatabaseCT(Models\ModifyDatabaseCTRequest $req) 本接口(ModifyDatabaseCT)用于启用、禁用数据库数据变更跟踪(CT)
  * @method Models\ModifyDatabaseMdfResponse ModifyDatabaseMdf(Models\ModifyDatabaseMdfRequest $req) 本接口(ModifyDatabaseMdf)用于收缩数据库mdf(Shrink mdf)
  * @method Models\ModifyIncrementalMigrationResponse ModifyIncrementalMigration(Models\ModifyIncrementalMigrationRequest $req) 本接口（ModifyIncrementalMigration）用于修改增量备份导入任务。
+ * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口(ModifyInstanceParam)用于修改云数据库实例的参数。
+<b>注意</b>：如果修改的参数是需要<b>重启实例</b>的，那么实例将会按照WaitSwitch参数的设置(可能是立即执行也可能在可维护时间窗内自动执行)在执行参数修改时<b>重启实例</b>。
+您可以通过DescribeInstanceParams接口查询修改参数时是否会重启实例，以免导致您的实例不符合预期重启。
  * @method Models\ModifyMaintenanceSpanResponse ModifyMaintenanceSpan(Models\ModifyMaintenanceSpanRequest $req) 本接口（ModifyMaintenanceSpan）用于修改实例的可维护时间窗
  * @method Models\ModifyMigrationResponse ModifyMigration(Models\ModifyMigrationRequest $req) 本接口（ModifyMigration）可以修改已有的迁移任务信息
  * @method Models\ModifyPublishSubscribeNameResponse ModifyPublishSubscribeName(Models\ModifyPublishSubscribeNameRequest $req) 本接口（ModifyPublishSubscribeName）修改发布订阅的名称。

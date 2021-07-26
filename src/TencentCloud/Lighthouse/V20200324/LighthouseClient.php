@@ -130,7 +130,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * Action 字段只允许输入 ACCEPT 或 DROP。
 * FirewallRuleDescription 字段长度不得超过 64。
  * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) 本接口（ModifyInstancesAttribute）用于修改实例的属性。
-* “实例名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行实例管理操作的依据。
+* “实例名称”仅为方便用户自己管理之用。
 * 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
  * @method Models\ModifyInstancesLoginKeyPairAttributeResponse ModifyInstancesLoginKeyPairAttribute(Models\ModifyInstancesLoginKeyPairAttributeRequest $req) 本接口用于设置实例默认登录密钥对属性。
@@ -142,7 +142,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * 支持批量操作。每次请求批量实例的上限为100。
 * 实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
  * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
-<li>“快照名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行快照管理操作的依据。</li>
+<li>“快照名称”仅为方便用户自己管理之用。</li>
  * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) 本接口（RebootInstances）用于重启实例。
 
 * 只有状态为 RUNNING 的实例才可以进行此操作。

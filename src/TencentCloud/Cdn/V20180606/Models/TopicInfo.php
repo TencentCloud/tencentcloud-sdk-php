@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChannel() 获取归属于cdn或ecdn
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannel(string $Channel) 设置归属于cdn或ecdn
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicInfo extends AbstractModel
 {
@@ -55,10 +59,18 @@ class TopicInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 归属于cdn或ecdn
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Channel;
+
+    /**
      * @param string $TopicId 主题ID
      * @param string $TopicName 主题名字
      * @param integer $Enabled 是否启用投递
      * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Channel 归属于cdn或ecdn
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -88,6 +100,10 @@ class TopicInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
+            $this->Channel = $param["Channel"];
         }
     }
 }

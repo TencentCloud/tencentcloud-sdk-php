@@ -18,15 +18,15 @@ namespace TencentCloud\Ams\V20201229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 音频小语种检测结果
+ * 音频语言种类检测结果
  *
- * @method string getLabel() 获取该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
+ * @method string getLabel() 获取该字段用于返回对应的语言种类信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
+ * @method void setLabel(string $Label) 设置该字段用于返回对应的语言种类信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScore() 获取该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
+ * @method integer getScore() 获取该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScore(integer $Score) 设置该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
+ * @method void setScore(integer $Score) 设置该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getStartTime() 获取该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,13 +44,13 @@ use TencentCloud\Common\AbstractModel;
 class AudioResultDetailLanguageResult extends AbstractModel
 {
     /**
-     * @var string 该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
+     * @var string 该字段用于返回对应的语言种类信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
-     * @var integer 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
+     * @var integer 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
@@ -74,9 +74,9 @@ class AudioResultDetailLanguageResult extends AbstractModel
     public $SubLabelCode;
 
     /**
-     * @param string $Label 该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
+     * @param string $Label 该字段用于返回对应的语言种类信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Score 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
+     * @param integer $Score 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
 注意：此字段可能返回 null，表示取不到有效值。

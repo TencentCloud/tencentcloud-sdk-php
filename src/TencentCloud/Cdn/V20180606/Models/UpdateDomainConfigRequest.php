@@ -116,6 +116,8 @@ global：全球加速
  * @method void setQuic(Quic $Quic) 设置QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
  * @method OssPrivateAccess getOssPrivateAccess() 获取回源OSS私有鉴权
  * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置回源OSS私有鉴权
+ * @method WebSocket getWebSocket() 获取WebSocket配置
+ * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -332,6 +334,11 @@ global：全球加速
     public $OssPrivateAccess;
 
     /**
+     * @var WebSocket WebSocket配置
+     */
+    public $WebSocket;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -380,6 +387,7 @@ global：全球加速
      * @param OriginCombine $OriginCombine 合并回源
      * @param Quic $Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
      * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
+     * @param WebSocket $WebSocket WebSocket配置
      */
     function __construct()
     {
@@ -592,6 +600,11 @@ global：全球加速
         if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
             $this->OssPrivateAccess = new OssPrivateAccess();
             $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
+        }
+
+        if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
+            $this->WebSocket = new WebSocket();
+            $this->WebSocket->deserialize($param["WebSocket"]);
         }
     }
 }

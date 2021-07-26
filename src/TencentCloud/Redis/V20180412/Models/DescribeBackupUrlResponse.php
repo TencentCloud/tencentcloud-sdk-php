@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDownloadUrl(array $DownloadUrl) 设置外网下载地址（6小时）
  * @method array getInnerDownloadUrl() 获取内网下载地址（6小时）
  * @method void setInnerDownloadUrl(array $InnerDownloadUrl) 设置内网下载地址（6小时）
+ * @method array getFilenames() 获取文件名称（仅tendis实例有值）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFilenames(array $Filenames) 设置文件名称（仅tendis实例有值）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBackupInfos() 获取备份文件信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupInfos(array $BackupInfos) 设置备份文件信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +48,18 @@ class DescribeBackupUrlResponse extends AbstractModel
     public $InnerDownloadUrl;
 
     /**
+     * @var array 文件名称（仅tendis实例有值）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Filenames;
+
+    /**
+     * @var array 备份文件信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupInfos;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +67,10 @@ class DescribeBackupUrlResponse extends AbstractModel
     /**
      * @param array $DownloadUrl 外网下载地址（6小时）
      * @param array $InnerDownloadUrl 内网下载地址（6小时）
+     * @param array $Filenames 文件名称（仅tendis实例有值）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BackupInfos 备份文件信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +92,19 @@ class DescribeBackupUrlResponse extends AbstractModel
 
         if (array_key_exists("InnerDownloadUrl",$param) and $param["InnerDownloadUrl"] !== null) {
             $this->InnerDownloadUrl = $param["InnerDownloadUrl"];
+        }
+
+        if (array_key_exists("Filenames",$param) and $param["Filenames"] !== null) {
+            $this->Filenames = $param["Filenames"];
+        }
+
+        if (array_key_exists("BackupInfos",$param) and $param["BackupInfos"] !== null) {
+            $this->BackupInfos = [];
+            foreach ($param["BackupInfos"] as $key => $value){
+                $obj = new BackupDownloadInfo();
+                $obj->deserialize($value);
+                array_push($this->BackupInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) 设置当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
  * @method string getNotifyMode() 获取工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
  * @method void setNotifyMode(string $NotifyMode) 设置工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
+ * @method string getNotifyType() 获取通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+ * @method void setNotifyType(string $NotifyType) 设置通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+ * @method string getNotifyUrl() 获取HTTP回调地址，NotifyType为URL时必填。
+ * @method void setNotifyUrl(string $NotifyUrl) 设置HTTP回调地址，NotifyType为URL时必填。
  */
 class TaskNotifyConfig extends AbstractModel
 {
@@ -59,11 +63,23 @@ class TaskNotifyConfig extends AbstractModel
     public $NotifyMode;
 
     /**
+     * @var string 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+     */
+    public $NotifyType;
+
+    /**
+     * @var string HTTP回调地址，NotifyType为URL时必填。
+     */
+    public $NotifyUrl;
+
+    /**
      * @param string $CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
      * @param string $CmqRegion CMQ 的园区，如 sh，bj 等。
      * @param string $QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
      * @param string $TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
      * @param string $NotifyMode 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
+     * @param string $NotifyType 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+     * @param string $NotifyUrl HTTP回调地址，NotifyType为URL时必填。
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class TaskNotifyConfig extends AbstractModel
 
         if (array_key_exists("NotifyMode",$param) and $param["NotifyMode"] !== null) {
             $this->NotifyMode = $param["NotifyMode"];
+        }
+
+        if (array_key_exists("NotifyType",$param) and $param["NotifyType"] !== null) {
+            $this->NotifyType = $param["NotifyType"];
+        }
+
+        if (array_key_exists("NotifyUrl",$param) and $param["NotifyUrl"] !== null) {
+            $this->NotifyUrl = $param["NotifyUrl"];
         }
     }
 }

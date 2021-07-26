@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) 设置转码后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method HeadTailParameter getHeadTailParameter() 获取片头片尾参数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeadTailParameter(HeadTailParameter $HeadTailParameter) 设置片头片尾参数。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TranscodeTaskInput extends AbstractModel
 {
@@ -143,6 +147,12 @@ class TranscodeTaskInput extends AbstractModel
     public $ObjectNumberFormat;
 
     /**
+     * @var HeadTailParameter 片头片尾参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HeadTailParameter;
+
+    /**
      * @param integer $Definition 视频转码模板 ID。
      * @param RawTranscodeParameter $RawParameter 视频转码自定义参数，当 Definition 填 0 时有效。
 该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
@@ -167,6 +177,8 @@ class TranscodeTaskInput extends AbstractModel
      * @param string $OutputObjectPath 转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
      * @param string $SegmentObjectName 转码后分片文件的输出路径（转码 HLS 时 ts 的路径），只能为相对路径。如果不填，则默认为：`{inputName}_transcode_{definition}_{number}.{format}`。
      * @param NumberFormat $ObjectNumberFormat 转码后输出路径中的`{number}`变量的规则。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeadTailParameter $HeadTailParameter 片头片尾参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -238,6 +250,11 @@ class TranscodeTaskInput extends AbstractModel
         if (array_key_exists("ObjectNumberFormat",$param) and $param["ObjectNumberFormat"] !== null) {
             $this->ObjectNumberFormat = new NumberFormat();
             $this->ObjectNumberFormat->deserialize($param["ObjectNumberFormat"]);
+        }
+
+        if (array_key_exists("HeadTailParameter",$param) and $param["HeadTailParameter"] !== null) {
+            $this->HeadTailParameter = new HeadTailParameter();
+            $this->HeadTailParameter->deserialize($param["HeadTailParameter"]);
         }
     }
 }

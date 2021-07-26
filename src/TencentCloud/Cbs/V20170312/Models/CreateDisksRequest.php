@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncrypt(string $Encrypt) 设置传入该参数用于创建加密云盘，取值固定为ENCRYPT。
  * @method DiskChargePrepaid getDiskChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
  * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
- * @method integer getDeleteSnapshot() 获取销毁云盘时删除关联的非永久快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁。
- * @method void setDeleteSnapshot(integer $DeleteSnapshot) 设置销毁云盘时删除关联的非永久快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁。
+ * @method integer getDeleteSnapshot() 获取销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+ * @method void setDeleteSnapshot(integer $DeleteSnapshot) 设置销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
  */
 class CreateDisksRequest extends AbstractModel
 {
@@ -117,7 +117,7 @@ class CreateDisksRequest extends AbstractModel
     public $DiskChargePrepaid;
 
     /**
-     * @var integer 销毁云盘时删除关联的非永久快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁。
+     * @var integer 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
      */
     public $DeleteSnapshot;
 
@@ -135,7 +135,7 @@ class CreateDisksRequest extends AbstractModel
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param string $Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
      * @param DiskChargePrepaid $DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
-     * @param integer $DeleteSnapshot 销毁云盘时删除关联的非永久快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁。
+     * @param integer $DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
      */
     function __construct()
     {

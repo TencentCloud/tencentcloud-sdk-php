@@ -278,6 +278,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置回源OSS私有鉴权
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method WebSocket getWebSocket() 获取WebSocket配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -639,6 +643,12 @@ off：不支持
     public $OssPrivateAccess;
 
     /**
+     * @var WebSocket WebSocket配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WebSocket;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -767,6 +777,8 @@ off：不支持
      * @param Quic $Quic Quic配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebSocket $WebSocket WebSocket配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1059,6 +1071,11 @@ off：不支持
         if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
             $this->OssPrivateAccess = new OssPrivateAccess();
             $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
+        }
+
+        if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
+            $this->WebSocket = new WebSocket();
+            $this->WebSocket->deserialize($param["WebSocket"]);
         }
     }
 }

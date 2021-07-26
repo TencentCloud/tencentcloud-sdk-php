@@ -74,6 +74,8 @@ bandwidth：计费带宽
 flux：计费流量
 bandwidth：计费带宽
 默认为 bandwidth
+ * @method string getProduct() 获取指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+ * @method void setProduct(string $Product) 设置指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
  */
 class DescribeBillingDataRequest extends AbstractModel
 {
@@ -137,6 +139,11 @@ bandwidth：计费带宽
     public $Metric;
 
     /**
+     * @var string 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     */
+    public $Product;
+
+    /**
      * @param string $StartTime 查询起始时间，如：2018-09-04 10:40:00，返回结果大于等于指定时间
 根据指定时间粒度参数不同，会进行向前取整，如指定起始时间为 2018-09-04 10:40:00 按小时粒度查询，返回的第一个数据对应时间点为 2018-09-04 10:00:00
 起始时间与结束时间间隔小于等于 90 天
@@ -164,6 +171,7 @@ overseas：中国境外
 flux：计费流量
 bandwidth：计费带宽
 默认为 bandwidth
+     * @param string $Product 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ bandwidth：计费带宽
 
         if (array_key_exists("Metric",$param) and $param["Metric"] !== null) {
             $this->Metric = $param["Metric"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

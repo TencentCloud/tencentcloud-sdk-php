@@ -28,6 +28,8 @@ overseas：境外计费方式查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
 未填充时默认为 mainland
+ * @method string getProduct() 获取指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+ * @method void setProduct(string $Product) 设置指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
  */
 class DescribePayTypeRequest extends AbstractModel
 {
@@ -40,10 +42,16 @@ overseas：境外计费方式查询
     public $Area;
 
     /**
+     * @var string 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+     */
+    public $Product;
+
+    /**
      * @param string $Area 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
 未填充时默认为 mainland
+     * @param string $Product 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ overseas：境外计费方式查询
         }
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

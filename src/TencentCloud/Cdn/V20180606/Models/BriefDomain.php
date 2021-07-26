@@ -90,6 +90,8 @@ normal：未锁定
 mainland：中国境内锁定
 overseas：中国境外锁定
 global：全球锁定
+ * @method string getProduct() 获取域名所属产品，cdn/ecdn
+ * @method void setProduct(string $Product) 设置域名所属产品，cdn/ecdn
  */
 class BriefDomain extends AbstractModel
 {
@@ -181,6 +183,11 @@ global：全球锁定
     public $Readonly;
 
     /**
+     * @var string 域名所属产品，cdn/ecdn
+     */
+    public $Product;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号 ID
      * @param string $Domain 加速域名
@@ -216,6 +223,7 @@ normal：未锁定
 mainland：中国境内锁定
 overseas：中国境外锁定
 global：全球锁定
+     * @param string $Product 域名所属产品，cdn/ecdn
      */
     function __construct()
     {
@@ -281,6 +289,10 @@ global：全球锁定
 
         if (array_key_exists("Readonly",$param) and $param["Readonly"] !== null) {
             $this->Readonly = $param["Readonly"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

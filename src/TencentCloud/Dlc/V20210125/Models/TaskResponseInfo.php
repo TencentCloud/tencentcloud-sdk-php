@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputPath(string $OutputPath) 设置任务输出路径。
  * @method string getCreateTime() 获取任务创建时间。
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间。
- * @method integer getState() 获取任务状态, 0 初始化， 1 执行中， 2 执行成功，3 数据写入中，-1 执行失败。
- * @method void setState(integer $State) 设置任务状态, 0 初始化， 1 执行中， 2 执行成功，3 数据写入中，-1 执行失败。
+ * @method integer getState() 获取任务状态：0 初始化， 1 执行中， 2 执行成功，-1 执行失败，-3 已取消。
+ * @method void setState(integer $State) 设置任务状态：0 初始化， 1 执行中， 2 执行成功，-1 执行失败，-3 已取消。
  * @method string getSQLType() 获取任务SQL类型，DDL|DML等
  * @method void setSQLType(string $SQLType) 设置任务SQL类型，DDL|DML等
  * @method string getSQL() 获取任务SQL语句
@@ -88,7 +88,7 @@ class TaskResponseInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 任务状态, 0 初始化， 1 执行中， 2 执行成功，3 数据写入中，-1 执行失败。
+     * @var integer 任务状态：0 初始化， 1 执行中， 2 执行成功，-1 执行失败，-3 已取消。
      */
     public $State;
 
@@ -145,7 +145,7 @@ class TaskResponseInfo extends AbstractModel
      * @param integer $UsedTime 计算时长，单位： ms。
      * @param string $OutputPath 任务输出路径。
      * @param string $CreateTime 任务创建时间。
-     * @param integer $State 任务状态, 0 初始化， 1 执行中， 2 执行成功，3 数据写入中，-1 执行失败。
+     * @param integer $State 任务状态：0 初始化， 1 执行中， 2 执行成功，-1 执行失败，-3 已取消。
      * @param string $SQLType 任务SQL类型，DDL|DML等
      * @param string $SQL 任务SQL语句
      * @param boolean $ResultExpired 结果是否过期。

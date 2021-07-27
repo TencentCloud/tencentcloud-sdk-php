@@ -58,6 +58,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsServiceLinkedPolicy(integer $IsServiceLinkedPolicy) 设置是否是服务相关角色策略
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAttachEntityCount() 获取关联策略实体数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttachEntityCount(integer $AttachEntityCount) 设置关联策略实体数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAttachEntityBoundaryCount() 获取关联权限边界实体数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttachEntityBoundaryCount(integer $AttachEntityBoundaryCount) 设置关联权限边界实体数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateTime() 获取最后编辑时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(string $UpdateTime) 设置最后编辑时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StrategyInfo extends AbstractModel
 {
@@ -129,6 +141,24 @@ class StrategyInfo extends AbstractModel
     public $IsServiceLinkedPolicy;
 
     /**
+     * @var integer 关联策略实体数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttachEntityCount;
+
+    /**
+     * @var integer 关联权限边界实体数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttachEntityBoundaryCount;
+
+    /**
+     * @var string 最后编辑时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
+
+    /**
      * @param integer $PolicyId 策略ID。
      * @param string $PolicyName 策略名称。
      * @param string $AddTime 策略创建时间。
@@ -147,6 +177,12 @@ class StrategyInfo extends AbstractModel
      * @param array $DeactivedDetail 已下线产品列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsServiceLinkedPolicy 是否是服务相关角色策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AttachEntityCount 关联策略实体数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AttachEntityBoundaryCount 关联权限边界实体数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateTime 最后编辑时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +244,18 @@ class StrategyInfo extends AbstractModel
 
         if (array_key_exists("IsServiceLinkedPolicy",$param) and $param["IsServiceLinkedPolicy"] !== null) {
             $this->IsServiceLinkedPolicy = $param["IsServiceLinkedPolicy"];
+        }
+
+        if (array_key_exists("AttachEntityCount",$param) and $param["AttachEntityCount"] !== null) {
+            $this->AttachEntityCount = $param["AttachEntityCount"];
+        }
+
+        if (array_key_exists("AttachEntityBoundaryCount",$param) and $param["AttachEntityBoundaryCount"] !== null) {
+            $this->AttachEntityBoundaryCount = $param["AttachEntityBoundaryCount"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

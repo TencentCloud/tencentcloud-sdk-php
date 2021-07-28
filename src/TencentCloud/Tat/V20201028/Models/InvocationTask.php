@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandDocument(CommandDocument $CommandDocument) 设置执行任务所执行的命令详情。
  * @method string getErrorInfo() 获取执行任务失败时的错误信息。
  * @method void setErrorInfo(string $ErrorInfo) 设置执行任务失败时的错误信息。
+ * @method string getInvocationSource() 获取调用来源。
+ * @method void setInvocationSource(string $InvocationSource) 设置调用来源。
  */
 class InvocationTask extends AbstractModel
 {
@@ -135,6 +137,11 @@ class InvocationTask extends AbstractModel
     public $ErrorInfo;
 
     /**
+     * @var string 调用来源。
+     */
+    public $InvocationSource;
+
+    /**
      * @param string $InvocationId 执行活动ID。
      * @param string $InvocationTaskId 执行任务ID。
      * @param string $CommandId 命令ID。
@@ -156,6 +163,7 @@ class InvocationTask extends AbstractModel
      * @param string $UpdatedTime 更新时间。
      * @param CommandDocument $CommandDocument 执行任务所执行的命令详情。
      * @param string $ErrorInfo 执行任务失败时的错误信息。
+     * @param string $InvocationSource 调用来源。
      */
     function __construct()
     {
@@ -218,6 +226,10 @@ class InvocationTask extends AbstractModel
 
         if (array_key_exists("ErrorInfo",$param) and $param["ErrorInfo"] !== null) {
             $this->ErrorInfo = $param["ErrorInfo"];
+        }
+
+        if (array_key_exists("InvocationSource",$param) and $param["InvocationSource"] !== null) {
+            $this->InvocationSource = $param["InvocationSource"];
         }
     }
 }

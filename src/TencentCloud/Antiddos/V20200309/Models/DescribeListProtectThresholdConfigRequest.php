@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterInstanceId(string $FilterInstanceId) 设置资源实例ID搜索, 支持资源实例前缀通配搜索，例如bgp-*表示获取高防包类型的资源实例
  * @method string getFilterIp() 获取IP搜索
  * @method void setFilterIp(string $FilterIp) 设置IP搜索
- * @method string getFilterDomain() 获取域名搜索（查询域名与协议的CC防护阈值时使用）
- * @method void setFilterDomain(string $FilterDomain) 设置域名搜索（查询域名与协议的CC防护阈值时使用）
+ * @method string getFilterDomain() 获取域名搜索(查询域名与协议的CC防护阈值时使用）
+ * @method void setFilterDomain(string $FilterDomain) 设置域名搜索(查询域名与协议的CC防护阈值时使用）
  * @method string getFilterProtocol() 获取协议搜索(查询域名与协议的CC防护阈值时使用）
  * @method void setFilterProtocol(string $FilterProtocol) 设置协议搜索(查询域名与协议的CC防护阈值时使用）
  */
@@ -56,7 +56,7 @@ class DescribeListProtectThresholdConfigRequest extends AbstractModel
     public $FilterIp;
 
     /**
-     * @var string 域名搜索（查询域名与协议的CC防护阈值时使用）
+     * @var string 域名搜索(查询域名与协议的CC防护阈值时使用）
      */
     public $FilterDomain;
 
@@ -70,7 +70,7 @@ class DescribeListProtectThresholdConfigRequest extends AbstractModel
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为100;最大取值为100
      * @param string $FilterInstanceId 资源实例ID搜索, 支持资源实例前缀通配搜索，例如bgp-*表示获取高防包类型的资源实例
      * @param string $FilterIp IP搜索
-     * @param string $FilterDomain 域名搜索（查询域名与协议的CC防护阈值时使用）
+     * @param string $FilterDomain 域名搜索(查询域名与协议的CC防护阈值时使用）
      * @param string $FilterProtocol 协议搜索(查询域名与协议的CC防护阈值时使用）
      */
     function __construct()

@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricsInfo(array $MetricsInfo) 设置指标信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDimensions() 获取告警实例的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDimensions(string $Dimensions) 设置告警实例的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmHistory extends AbstractModel
 {
@@ -188,6 +192,12 @@ class AlarmHistory extends AbstractModel
     public $MetricsInfo;
 
     /**
+     * @var string 告警实例的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Dimensions;
+
+    /**
      * @param string $AlarmId 告警历史Id
      * @param string $MonitorType 监控类型
      * @param string $Namespace 策略类型
@@ -211,6 +221,8 @@ class AlarmHistory extends AbstractModel
      * @param string $Region 地域
      * @param integer $PolicyExists 策略是否存在 0=不存在 1=存在
      * @param array $MetricsInfo 指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Dimensions 告警实例的维度信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -326,6 +338,10 @@ class AlarmHistory extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MetricsInfo, $obj);
             }
+        }
+
+        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
+            $this->Dimensions = $param["Dimensions"];
         }
     }
 }

@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceKind(string $InstanceKind) 设置执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
  * @method string getUsername() 获取在实例上执行命令时使用的用户名。
  * @method void setUsername(string $Username) 设置在实例上执行命令时使用的用户名。
+ * @method string getInvocationSource() 获取调用来源。
+ * @method void setInvocationSource(string $InvocationSource) 设置调用来源。
  */
 class Invocation extends AbstractModel
 {
@@ -133,6 +135,11 @@ class Invocation extends AbstractModel
     public $Username;
 
     /**
+     * @var string 调用来源。
+     */
+    public $InvocationSource;
+
+    /**
      * @param string $InvocationId 执行活动ID。
      * @param string $CommandId 命令ID。
      * @param string $InvocationStatus 执行任务状态。取值范围：
@@ -152,6 +159,7 @@ class Invocation extends AbstractModel
      * @param string $DefaultParameters 自定义参数的默认取值。
      * @param string $InstanceKind 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
      * @param string $Username 在实例上执行命令时使用的用户名。
+     * @param string $InvocationSource 调用来源。
      */
     function __construct()
     {
@@ -221,6 +229,10 @@ class Invocation extends AbstractModel
 
         if (array_key_exists("Username",$param) and $param["Username"] !== null) {
             $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("InvocationSource",$param) and $param["InvocationSource"] !== null) {
+            $this->InvocationSource = $param["InvocationSource"];
         }
     }
 }

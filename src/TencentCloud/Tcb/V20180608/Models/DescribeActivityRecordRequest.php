@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannel(string $Channel) 设置渠道来源，每个来源对应不同secretKey
  * @method array getActivityIdList() 获取活动id列表
  * @method void setActivityIdList(array $ActivityIdList) 设置活动id列表
- * @method integer getStatus() 获取过滤状态码
- * @method void setStatus(integer $Status) 设置过滤状态码
+ * @method integer getStatus() 获取过滤状态码，已废弃
+ * @method void setStatus(integer $Status) 设置过滤状态码，已废弃
+ * @method array getStatuses() 获取状态码过滤数组，空数组时不过滤
+ * @method void setStatuses(array $Statuses) 设置状态码过滤数组，空数组时不过滤
  */
 class DescribeActivityRecordRequest extends AbstractModel
 {
@@ -47,15 +49,21 @@ class DescribeActivityRecordRequest extends AbstractModel
     public $ActivityIdList;
 
     /**
-     * @var integer 过滤状态码
+     * @var integer 过滤状态码，已废弃
      */
     public $Status;
+
+    /**
+     * @var array 状态码过滤数组，空数组时不过滤
+     */
+    public $Statuses;
 
     /**
      * @param string $ChannelToken 渠道加密token
      * @param string $Channel 渠道来源，每个来源对应不同secretKey
      * @param array $ActivityIdList 活动id列表
-     * @param integer $Status 过滤状态码
+     * @param integer $Status 过滤状态码，已废弃
+     * @param array $Statuses 状态码过滤数组，空数组时不过滤
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeActivityRecordRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Statuses",$param) and $param["Statuses"] !== null) {
+            $this->Statuses = $param["Statuses"];
         }
     }
 }

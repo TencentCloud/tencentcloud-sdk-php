@@ -66,6 +66,10 @@ ANONYMOUS: 匿名类型 USER_ID
  * @method void setUserType(string $UserType) 设置USER_ID: 用户ID
 ANONYMOUS: 匿名类型 USER_ID
 默认值为 USER_ID
+ * @method string getContractMethod() 获取签约方式
+ * @method void setContractMethod(string $ContractMethod) 设置签约方式
+ * @method string getMigrateMode() 获取签约代扣穿透查询存量数据迁移模式
+ * @method void setMigrateMode(string $MigrateMode) 设置签约代扣穿透查询存量数据迁移模式
  */
 class TerminateContractRequest extends AbstractModel
 {
@@ -149,6 +153,16 @@ ANONYMOUS: 匿名类型 USER_ID
     public $UserType;
 
     /**
+     * @var string 签约方式
+     */
+    public $ContractMethod;
+
+    /**
+     * @var string 签约代扣穿透查询存量数据迁移模式
+     */
+    public $MigrateMode;
+
+    /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param string $UserId 用户ID，长度不小于5位，仅支持字母和数字的组合
      * @param string $Channel 指定渠道：  wechat：微信支付  qqwallet：QQ钱包 
@@ -172,6 +186,8 @@ development: 开发环境
      * @param string $UserType USER_ID: 用户ID
 ANONYMOUS: 匿名类型 USER_ID
 默认值为 USER_ID
+     * @param string $ContractMethod 签约方式
+     * @param string $MigrateMode 签约代扣穿透查询存量数据迁移模式
      */
     function __construct()
     {
@@ -240,6 +256,14 @@ ANONYMOUS: 匿名类型 USER_ID
 
         if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
             $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("ContractMethod",$param) and $param["ContractMethod"] !== null) {
+            $this->ContractMethod = $param["ContractMethod"];
+        }
+
+        if (array_key_exists("MigrateMode",$param) and $param["MigrateMode"] !== null) {
+            $this->MigrateMode = $param["MigrateMode"];
         }
     }
 }

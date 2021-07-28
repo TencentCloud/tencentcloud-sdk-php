@@ -32,6 +32,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\CloseProxyGroupResponse CloseProxyGroup(Models\CloseProxyGroupRequest $req) 本接口（CloseProxyGroup）用于关闭通道组。通道组关闭后，不再产生流量，但每天仍然收取通道基础配置费用。
  * @method Models\CloseSecurityPolicyResponse CloseSecurityPolicy(Models\CloseSecurityPolicyRequest $req) 关闭安全策略
  * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) 本接口（CreateCertificate）用于创建Gaap相关证书和配置文件，包括基础认证配置文件，客户端CA证书，服务器SSL证书，Gaap SSL证书以及源站CA证书。
+ * @method Models\CreateCustomHeaderResponse CreateCustomHeader(Models\CreateCustomHeaderRequest $req) 本接口（CreateCustomHeader）用于创建HTTP/HTTPS监听器的自定义header，客户端请求通过访问该监听器时，会将监听器中配置的header信息发送到源站。
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 本接口（CreateDomain）用于创建HTTP/HTTPS监听器的访问域名，客户端请求通过访问该域名来请求后端业务。
 该接口仅支持version3.0的通道。
  * @method Models\CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(Models\CreateDomainErrorPageInfoRequest $req) 定制域名指定错误码的错误响应
@@ -55,9 +56,11 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DeleteSecurityRulesResponse DeleteSecurityRules(Models\DeleteSecurityRulesRequest $req) 删除安全策略规则
  * @method Models\DescribeAccessRegionsResponse DescribeAccessRegions(Models\DescribeAccessRegionsRequest $req) 本接口（DescribeAccessRegions）用于查询加速区域，即客户端接入区域。
  * @method Models\DescribeAccessRegionsByDestRegionResponse DescribeAccessRegionsByDestRegion(Models\DescribeAccessRegionsByDestRegionRequest $req) 本接口（DescribeAccessRegionsByDestRegion）根据源站区域查询可用的加速区域列表
+ * @method Models\DescribeBlackHeaderResponse DescribeBlackHeader(Models\DescribeBlackHeaderRequest $req) 本接口（DescribeBlackHeader）用于查询禁用的自定义header 名称
  * @method Models\DescribeCertificateDetailResponse DescribeCertificateDetail(Models\DescribeCertificateDetailRequest $req) 本接口（DescribeCertificateDetail）用于查询证书详情，包括证书ID，证书名字，证书类型，证书内容以及密钥等信息。
  * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) 本接口（DescribeCertificates）用来查询可以使用的证书列表。
  * @method Models\DescribeCountryAreaMappingResponse DescribeCountryAreaMapping(Models\DescribeCountryAreaMappingRequest $req) 本接口（DescribeCountryAreaMapping）用于获取国家地区编码映射表。
+ * @method Models\DescribeCustomHeaderResponse DescribeCustomHeader(Models\DescribeCustomHeaderRequest $req) 本接口（DescribeCustomHeader）用于自定义header列表
  * @method Models\DescribeDestRegionsResponse DescribeDestRegions(Models\DescribeDestRegionsRequest $req) 本接口（DescribeDestRegions）用于查询源站区域，即源站服务器所在区域。
  * @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) 查询目前定制域名的错误响应
  * @method Models\DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIds(Models\DescribeDomainErrorPageInfoByIdsRequest $req) 根据定制错误ID查询错误响应

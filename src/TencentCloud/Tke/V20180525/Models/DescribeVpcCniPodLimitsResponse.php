@@ -14,30 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeUsers返回参数结构体
+ * DescribeVpcCniPodLimits返回参数结构体
  *
- * @method integer getTotalCount() 获取查询到的用户总数
- * @method void setTotalCount(integer $TotalCount) 设置查询到的用户总数
- * @method array getUserSet() 获取查询到的授权用户信息集合
- * @method void setUserSet(array $UserSet) 设置查询到的授权用户信息集合
+ * @method integer getTotalCount() 获取机型数据数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置机型数据数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPodLimitsInstanceSet() 获取机型信息及其可支持的最大VPC-CNI模式Pod数量信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodLimitsInstanceSet(array $PodLimitsInstanceSet) 设置机型信息及其可支持的最大VPC-CNI模式Pod数量信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeUsersResponse extends AbstractModel
+class DescribeVpcCniPodLimitsResponse extends AbstractModel
 {
     /**
-     * @var integer 查询到的用户总数
+     * @var integer 机型数据数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
-     * @var array 查询到的授权用户信息集合
+     * @var array 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $UserSet;
+    public $PodLimitsInstanceSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +51,10 @@ class DescribeUsersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 查询到的用户总数
-     * @param array $UserSet 查询到的授权用户信息集合
+     * @param integer $TotalCount 机型数据数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PodLimitsInstanceSet 机型信息及其可支持的最大VPC-CNI模式Pod数量信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +74,12 @@ class DescribeUsersResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("UserSet",$param) and $param["UserSet"] !== null) {
-            $this->UserSet = [];
-            foreach ($param["UserSet"] as $key => $value){
-                $obj = new UserInfo();
+        if (array_key_exists("PodLimitsInstanceSet",$param) and $param["PodLimitsInstanceSet"] !== null) {
+            $this->PodLimitsInstanceSet = [];
+            foreach ($param["PodLimitsInstanceSet"] as $key => $value){
+                $obj = new PodLimitsInstance();
                 $obj->deserialize($value);
-                array_push($this->UserSet, $obj);
+                array_push($this->PodLimitsInstanceSet, $obj);
             }
         }
 

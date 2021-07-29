@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceArea(string $InstanceArea) 设置关联实例所属的大地域，如: CHINA_MAINLAND
  * @method string getDescription() 获取备注
  * @method void setDescription(string $Description) 设置备注
+ * @method string getRouteTableId() 获取路由表ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRouteTableId(string $RouteTableId) 设置路由表ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRouteTableName() 获取路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRouteTableName(string $RouteTableName) 设置路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnAttachedInstance extends AbstractModel
 {
@@ -144,6 +152,18 @@ class CcnAttachedInstance extends AbstractModel
     public $Description;
 
     /**
+     * @var string 路由表ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RouteTableId;
+
+    /**
+     * @var string 路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RouteTableName;
+
+    /**
      * @param string $CcnId 云联网实例ID。
      * @param string $InstanceType 关联实例类型：
 <li>`VPC`：私有网络</li>
@@ -168,6 +188,10 @@ class CcnAttachedInstance extends AbstractModel
      * @param string $CcnUin 云联网所属UIN（根账号）。
      * @param string $InstanceArea 关联实例所属的大地域，如: CHINA_MAINLAND
      * @param string $Description 备注
+     * @param string $RouteTableId 路由表ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RouteTableName 路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -228,6 +252,14 @@ class CcnAttachedInstance extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
+            $this->RouteTableId = $param["RouteTableId"];
+        }
+
+        if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
+            $this->RouteTableName = $param["RouteTableName"];
         }
     }
 }

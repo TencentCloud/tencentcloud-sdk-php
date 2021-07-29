@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getVpcIds() 获取`VPC`实例`ID`数组。形如：[`vpc-6v2ht8q5`]
  * @method void setVpcIds(array $VpcIds) 设置`VPC`实例`ID`数组。形如：[`vpc-6v2ht8q5`]
- * @method array getFilters() 获取过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+ * @method array getFilters() 获取过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+ * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
@@ -39,7 +39,7 @@ class DescribeAssistantCidrRequest extends AbstractModel
     public $VpcIds;
 
     /**
-     * @var array 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+     * @var array 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
      */
     public $Filters;
@@ -56,7 +56,7 @@ class DescribeAssistantCidrRequest extends AbstractModel
 
     /**
      * @param array $VpcIds `VPC`实例`ID`数组。形如：[`vpc-6v2ht8q5`]
-     * @param array $Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+     * @param array $Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。

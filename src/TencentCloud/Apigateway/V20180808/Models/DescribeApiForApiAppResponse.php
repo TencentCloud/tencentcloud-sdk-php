@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeUsers返回参数结构体
+ * DescribeApiForApiApp返回参数结构体
  *
- * @method integer getTotalCount() 获取查询到的用户总数
- * @method void setTotalCount(integer $TotalCount) 设置查询到的用户总数
- * @method array getUserSet() 获取查询到的授权用户信息集合
- * @method void setUserSet(array $UserSet) 设置查询到的授权用户信息集合
+ * @method ApiInfo getResult() 获取API 详情。
+ * @method void setResult(ApiInfo $Result) 设置API 详情。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeUsersResponse extends AbstractModel
+class DescribeApiForApiAppResponse extends AbstractModel
 {
     /**
-     * @var integer 查询到的用户总数
+     * @var ApiInfo API 详情。
      */
-    public $TotalCount;
-
-    /**
-     * @var array 查询到的授权用户信息集合
-     */
-    public $UserSet;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeUsersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 查询到的用户总数
-     * @param array $UserSet 查询到的授权用户信息集合
+     * @param ApiInfo $Result API 详情。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,9 @@ class DescribeUsersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("UserSet",$param) and $param["UserSet"] !== null) {
-            $this->UserSet = [];
-            foreach ($param["UserSet"] as $key => $value){
-                $obj = new UserInfo();
-                $obj->deserialize($value);
-                array_push($this->UserSet, $obj);
-            }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new ApiInfo();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

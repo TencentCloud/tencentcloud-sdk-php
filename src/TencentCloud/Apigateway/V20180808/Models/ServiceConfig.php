@@ -18,10 +18,10 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ServiceConfig
+ * ServiceConfig配置
  *
- * @method string getProduct() 获取后端类型。启用vpc时生效，目前支持的类型为clb。
- * @method void setProduct(string $Product) 设置后端类型。启用vpc时生效，目前支持的类型为clb。
+ * @method string getProduct() 获取后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道
+ * @method void setProduct(string $Product) 设置后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道
  * @method string getUniqVpcId() 获取vpc 的唯一ID。
  * @method void setUniqVpcId(string $UniqVpcId) 设置vpc 的唯一ID。
  * @method string getUrl() 获取API 的后端服务url。如果ServiceType是HTTP，则此参数必传。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ServiceConfig extends AbstractModel
 {
     /**
-     * @var string 后端类型。启用vpc时生效，目前支持的类型为clb。
+     * @var string 后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道
      */
     public $Product;
 
@@ -59,7 +59,7 @@ class ServiceConfig extends AbstractModel
     public $Method;
 
     /**
-     * @param string $Product 后端类型。启用vpc时生效，目前支持的类型为clb。
+     * @param string $Product 后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道
      * @param string $UniqVpcId vpc 的唯一ID。
      * @param string $Url API 的后端服务url。如果ServiceType是HTTP，则此参数必传。
      * @param string $Path API 的后端服务路径，如 /path。如果 ServiceType 是 HTTP，则此参数必传。前后端路径可不同。

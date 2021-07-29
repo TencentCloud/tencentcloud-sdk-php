@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  * @method boolean getAutoCreatePolicyTopic() 获取是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
  * @method void setAutoCreatePolicyTopic(boolean $AutoCreatePolicyTopic) 设置是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
+ * @method string getPostFixPattern() 获取指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
+ * @method void setPostFixPattern(string $PostFixPattern) 设置指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
  */
 class CreateSubscriptionRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateSubscriptionRequest extends AbstractModel
     public $AutoCreatePolicyTopic;
 
     /**
+     * @var string 指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
+     */
+    public $PostFixPattern;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名称。
      * @param string $SubscriptionName 订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。
@@ -80,6 +87,7 @@ class CreateSubscriptionRequest extends AbstractModel
      * @param string $Remark 备注，128个字符以内。
      * @param string $ClusterId Pulsar 集群的ID
      * @param boolean $AutoCreatePolicyTopic 是否自动创建死信和重试主题，True 表示创建，False表示不创建，默认自动创建死信和重试主题。
+     * @param string $PostFixPattern 指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateSubscriptionRequest extends AbstractModel
 
         if (array_key_exists("AutoCreatePolicyTopic",$param) and $param["AutoCreatePolicyTopic"] !== null) {
             $this->AutoCreatePolicyTopic = $param["AutoCreatePolicyTopic"];
+        }
+
+        if (array_key_exists("PostFixPattern",$param) and $param["PostFixPattern"] !== null) {
+            $this->PostFixPattern = $param["PostFixPattern"];
         }
     }
 }

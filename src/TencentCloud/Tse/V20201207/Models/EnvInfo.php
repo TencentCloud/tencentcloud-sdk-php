@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminServiceIp(string $AdminServiceIp) 设置Admin service 访问地址
  * @method string getConfigServiceIp() 获取Config service访问地址
  * @method void setConfigServiceIp(string $ConfigServiceIp) 设置Config service访问地址
+ * @method boolean getEnableConfigInternet() 获取是否开启config-server公网
+ * @method void setEnableConfigInternet(boolean $EnableConfigInternet) 设置是否开启config-server公网
+ * @method string getConfigInternetServiceIp() 获取config-server公网访问地址
+ * @method void setConfigInternetServiceIp(string $ConfigInternetServiceIp) 设置config-server公网访问地址
  */
 class EnvInfo extends AbstractModel
 {
@@ -66,12 +70,24 @@ class EnvInfo extends AbstractModel
     public $ConfigServiceIp;
 
     /**
+     * @var boolean 是否开启config-server公网
+     */
+    public $EnableConfigInternet;
+
+    /**
+     * @var string config-server公网访问地址
+     */
+    public $ConfigInternetServiceIp;
+
+    /**
      * @param string $EnvName 环境名称
      * @param array $VpcInfos 环境对应的网络信息
      * @param integer $StorageCapacity 云硬盘容量
      * @param string $Status 运行状态
      * @param string $AdminServiceIp Admin service 访问地址
      * @param string $ConfigServiceIp Config service访问地址
+     * @param boolean $EnableConfigInternet 是否开启config-server公网
+     * @param string $ConfigInternetServiceIp config-server公网访问地址
      */
     function __construct()
     {
@@ -113,6 +129,14 @@ class EnvInfo extends AbstractModel
 
         if (array_key_exists("ConfigServiceIp",$param) and $param["ConfigServiceIp"] !== null) {
             $this->ConfigServiceIp = $param["ConfigServiceIp"];
+        }
+
+        if (array_key_exists("EnableConfigInternet",$param) and $param["EnableConfigInternet"] !== null) {
+            $this->EnableConfigInternet = $param["EnableConfigInternet"];
+        }
+
+        if (array_key_exists("ConfigInternetServiceIp",$param) and $param["ConfigInternetServiceIp"] !== null) {
+            $this->ConfigInternetServiceIp = $param["ConfigInternetServiceIp"];
         }
     }
 }

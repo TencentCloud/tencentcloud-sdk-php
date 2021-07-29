@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作组部分信息
  *
- * @method integer getWorkGroupId() 获取工作组Id
- * @method void setWorkGroupId(integer $WorkGroupId) 设置工作组Id
+ * @method integer getWorkGroupId() 获取工作组唯一Id
+ * @method void setWorkGroupId(integer $WorkGroupId) 设置工作组唯一Id
  * @method string getWorkGroupName() 获取工作组名称
  * @method void setWorkGroupName(string $WorkGroupName) 设置工作组名称
  * @method string getWorkGroupDescription() 获取工作组描述
@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreator() 获取创建者
  * @method void setCreator(string $Creator) 设置创建者
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getCreateTime() 获取工作组创建的时间，形如2021-07-28 16:19:32
+ * @method void setCreateTime(string $CreateTime) 设置工作组创建的时间，形如2021-07-28 16:19:32
  */
 class WorkGroupMessage extends AbstractModel
 {
     /**
-     * @var integer 工作组Id
+     * @var integer 工作组唯一Id
      */
     public $WorkGroupId;
 
@@ -57,17 +57,17 @@ class WorkGroupMessage extends AbstractModel
     public $Creator;
 
     /**
-     * @var string 创建时间
+     * @var string 工作组创建的时间，形如2021-07-28 16:19:32
      */
     public $CreateTime;
 
     /**
-     * @param integer $WorkGroupId 工作组Id
+     * @param integer $WorkGroupId 工作组唯一Id
      * @param string $WorkGroupName 工作组名称
      * @param string $WorkGroupDescription 工作组描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator 创建者
-     * @param string $CreateTime 创建时间
+     * @param string $CreateTime 工作组创建的时间，形如2021-07-28 16:19:32
      */
     function __construct()
     {

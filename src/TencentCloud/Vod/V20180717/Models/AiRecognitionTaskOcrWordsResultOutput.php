@@ -21,17 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * 文本关键词识别输出。
  *
  * @method array getResultSet() 获取文本关键词识别结果集。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 ResultSetFileUrl 对应的文件中获取。
  * @method void setResultSet(array $ResultSet) 设置文本关键词识别结果集。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 ResultSetFileUrl 对应的文件中获取。
+ * @method string getResultSetFileUrl() 获取文本关键词识别结果集文件 URL。文件的内容为 JSON，数据结构与 ResultSet 字段一致。 （文件不会永久存储，到达ResultSetFileUrlExpireTime 时间点后文件将被删除）。
+ * @method void setResultSetFileUrl(string $ResultSetFileUrl) 设置文本关键词识别结果集文件 URL。文件的内容为 JSON，数据结构与 ResultSet 字段一致。 （文件不会永久存储，到达ResultSetFileUrlExpireTime 时间点后文件将被删除）。
+ * @method string getResultSetFileUrlExpireTime() 获取文本关键词识别结果集文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setResultSetFileUrlExpireTime(string $ResultSetFileUrlExpireTime) 设置文本关键词识别结果集文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class AiRecognitionTaskOcrWordsResultOutput extends AbstractModel
 {
     /**
      * @var array 文本关键词识别结果集。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 ResultSetFileUrl 对应的文件中获取。
      */
     public $ResultSet;
 
     /**
+     * @var string 文本关键词识别结果集文件 URL。文件的内容为 JSON，数据结构与 ResultSet 字段一致。 （文件不会永久存储，到达ResultSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public $ResultSetFileUrl;
+
+    /**
+     * @var string 文本关键词识别结果集文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $ResultSetFileUrlExpireTime;
+
+    /**
      * @param array $ResultSet 文本关键词识别结果集。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 ResultSetFileUrl 对应的文件中获取。
+     * @param string $ResultSetFileUrl 文本关键词识别结果集文件 URL。文件的内容为 JSON，数据结构与 ResultSet 字段一致。 （文件不会永久存储，到达ResultSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param string $ResultSetFileUrlExpireTime 文本关键词识别结果集文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {
@@ -53,6 +73,14 @@ class AiRecognitionTaskOcrWordsResultOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResultSet, $obj);
             }
+        }
+
+        if (array_key_exists("ResultSetFileUrl",$param) and $param["ResultSetFileUrl"] !== null) {
+            $this->ResultSetFileUrl = $param["ResultSetFileUrl"];
+        }
+
+        if (array_key_exists("ResultSetFileUrlExpireTime",$param) and $param["ResultSetFileUrlExpireTime"] !== null) {
+            $this->ResultSetFileUrlExpireTime = $param["ResultSetFileUrlExpireTime"];
         }
     }
 }

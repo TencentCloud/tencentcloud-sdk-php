@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户部分信息
  *
- * @method string getUserId() 获取用户Id，和CAM侧Uin匹配
- * @method void setUserId(string $UserId) 设置用户Id，和CAM侧Uin匹配
+ * @method string getUserId() 获取用户Id，和CAM侧子用户Uin匹配
+ * @method void setUserId(string $UserId) 设置用户Id，和CAM侧子用户Uin匹配
  * @method string getUserDescription() 获取用户描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserDescription(string $UserDescription) 设置用户描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreator() 获取创建者
- * @method void setCreator(string $Creator) 设置创建者
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getCreator() 获取当前用户的创建者
+ * @method void setCreator(string $Creator) 设置当前用户的创建者
+ * @method string getCreateTime() 获取当前用户的创建时间，形如2021-07-28 16:19:32
+ * @method void setCreateTime(string $CreateTime) 设置当前用户的创建时间，形如2021-07-28 16:19:32
  */
 class UserMessage extends AbstractModel
 {
     /**
-     * @var string 用户Id，和CAM侧Uin匹配
+     * @var string 用户Id，和CAM侧子用户Uin匹配
      */
     public $UserId;
 
@@ -45,21 +45,21 @@ class UserMessage extends AbstractModel
     public $UserDescription;
 
     /**
-     * @var string 创建者
+     * @var string 当前用户的创建者
      */
     public $Creator;
 
     /**
-     * @var string 创建时间
+     * @var string 当前用户的创建时间，形如2021-07-28 16:19:32
      */
     public $CreateTime;
 
     /**
-     * @param string $UserId 用户Id，和CAM侧Uin匹配
+     * @param string $UserId 用户Id，和CAM侧子用户Uin匹配
      * @param string $UserDescription 用户描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Creator 创建者
-     * @param string $CreateTime 创建时间
+     * @param string $Creator 当前用户的创建者
+     * @param string $CreateTime 当前用户的创建时间，形如2021-07-28 16:19:32
      */
     function __construct()
     {

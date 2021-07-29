@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tse\V20201207\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSREInstanceAccessAddress返回参数结构体
+ * CreateTasks返回参数结构体
  *
- * @method string getIntranetAddress() 获取内网访问地址
- * @method void setIntranetAddress(string $IntranetAddress) 设置内网访问地址
- * @method string getInternetAddress() 获取公网访问地址
- * @method void setInternetAddress(string $InternetAddress) 设置公网访问地址
- * @method array getEnvAddressInfos() 获取apollo多环境公网ip
- * @method void setEnvAddressInfos(array $EnvAddressInfos) 设置apollo多环境公网ip
+ * @method string getBatchId() 获取本批次提交的任务的批次Id
+ * @method void setBatchId(string $BatchId) 设置本批次提交的任务的批次Id
+ * @method array getTaskIdSet() 获取任务Id集合，按照执行顺序排列
+ * @method void setTaskIdSet(array $TaskIdSet) 设置任务Id集合，按照执行顺序排列
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSREInstanceAccessAddressResponse extends AbstractModel
+class CreateTasksResponse extends AbstractModel
 {
     /**
-     * @var string 内网访问地址
+     * @var string 本批次提交的任务的批次Id
      */
-    public $IntranetAddress;
+    public $BatchId;
 
     /**
-     * @var string 公网访问地址
+     * @var array 任务Id集合，按照执行顺序排列
      */
-    public $InternetAddress;
-
-    /**
-     * @var array apollo多环境公网ip
-     */
-    public $EnvAddressInfos;
+    public $TaskIdSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $IntranetAddress 内网访问地址
-     * @param string $InternetAddress 公网访问地址
-     * @param array $EnvAddressInfos apollo多环境公网ip
+     * @param string $BatchId 本批次提交的任务的批次Id
+     * @param array $TaskIdSet 任务Id集合，按照执行顺序排列
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +62,12 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IntranetAddress",$param) and $param["IntranetAddress"] !== null) {
-            $this->IntranetAddress = $param["IntranetAddress"];
+        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
+            $this->BatchId = $param["BatchId"];
         }
 
-        if (array_key_exists("InternetAddress",$param) and $param["InternetAddress"] !== null) {
-            $this->InternetAddress = $param["InternetAddress"];
-        }
-
-        if (array_key_exists("EnvAddressInfos",$param) and $param["EnvAddressInfos"] !== null) {
-            $this->EnvAddressInfos = [];
-            foreach ($param["EnvAddressInfos"] as $key => $value){
-                $obj = new EnvAddressInfo();
-                $obj->deserialize($value);
-                array_push($this->EnvAddressInfos, $obj);
-            }
+        if (array_key_exists("TaskIdSet",$param) and $param["TaskIdSet"] !== null) {
+            $this->TaskIdSet = $param["TaskIdSet"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

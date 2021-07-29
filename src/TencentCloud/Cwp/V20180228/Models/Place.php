@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProvinceId(integer $ProvinceId) 设置省份 ID。
  * @method integer getCountryId() 获取国家ID，暂只支持国内：1。
  * @method void setCountryId(integer $CountryId) 设置国家ID，暂只支持国内：1。
+ * @method string getLocation() 获取位置名称
+ * @method void setLocation(string $Location) 设置位置名称
  */
 class Place extends AbstractModel
 {
@@ -45,9 +47,15 @@ class Place extends AbstractModel
     public $CountryId;
 
     /**
+     * @var string 位置名称
+     */
+    public $Location;
+
+    /**
      * @param integer $CityId 城市 ID。
      * @param integer $ProvinceId 省份 ID。
      * @param integer $CountryId 国家ID，暂只支持国内：1。
+     * @param string $Location 位置名称
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class Place extends AbstractModel
 
         if (array_key_exists("CountryId",$param) and $param["CountryId"] !== null) {
             $this->CountryId = $param["CountryId"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
         }
     }
 }

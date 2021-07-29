@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginTime(integer $LoginTime) 设置设备最后上线时间
  * @method string getDevicePsk() 获取设备密钥
  * @method void setDevicePsk(string $DevicePsk) 设置设备密钥
- * @method integer getEnableState() 获取设备启用状态
- * @method void setEnableState(integer $EnableState) 设置设备启用状态
+ * @method integer getEnableState() 获取设备启用状态 0为停用 1为可用
+ * @method void setEnableState(integer $EnableState) 设置设备启用状态 0为停用 1为可用
  * @method integer getExpireTime() 获取设备过期时间
  * @method void setExpireTime(integer $ExpireTime) 设置设备过期时间
  */
@@ -56,7 +56,7 @@ class DeviceInfo extends AbstractModel
     public $DevicePsk;
 
     /**
-     * @var integer 设备启用状态
+     * @var integer 设备启用状态 0为停用 1为可用
      */
     public $EnableState;
 
@@ -70,7 +70,7 @@ class DeviceInfo extends AbstractModel
      * @param integer $Online 设备是否在线，0不在线，1在线，2获取失败，3未激活
      * @param integer $LoginTime 设备最后上线时间
      * @param string $DevicePsk 设备密钥
-     * @param integer $EnableState 设备启用状态
+     * @param integer $EnableState 设备启用状态 0为停用 1为可用
      * @param integer $ExpireTime 设备过期时间
      */
     function __construct()

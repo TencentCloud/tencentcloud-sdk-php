@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachUserPolicy请求参数结构体
  *
- * @method string getUserId() 获取用户Id，和CAM侧Uin匹配
- * @method void setUserId(string $UserId) 设置用户Id，和CAM侧Uin匹配
+ * @method string getUserId() 获取用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
+ * @method void setUserId(string $UserId) 设置用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
  * @method array getPolicySet() 获取鉴权策略集合
  * @method void setPolicySet(array $PolicySet) 设置鉴权策略集合
  */
 class AttachUserPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 用户Id，和CAM侧Uin匹配
+     * @var string 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
      */
     public $UserId;
 
@@ -38,7 +38,7 @@ class AttachUserPolicyRequest extends AbstractModel
     public $PolicySet;
 
     /**
-     * @param string $UserId 用户Id，和CAM侧Uin匹配
+     * @param string $UserId 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
      * @param array $PolicySet 鉴权策略集合
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsers请求参数结构体
  *
- * @method string getUserId() 获取查询的用户Id，和CAM侧Uin匹配
- * @method void setUserId(string $UserId) 设置查询的用户Id，和CAM侧Uin匹配
+ * @method string getUserId() 获取指定查询的子用户uin，用户需要通过CreateUser接口创建。
+ * @method void setUserId(string $UserId) 设置指定查询的子用户uin，用户需要通过CreateUser接口创建。
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认20，最大值100
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUsersRequest extends AbstractModel
 {
     /**
-     * @var string 查询的用户Id，和CAM侧Uin匹配
+     * @var string 指定查询的子用户uin，用户需要通过CreateUser接口创建。
      */
     public $UserId;
 
@@ -59,7 +59,7 @@ class DescribeUsersRequest extends AbstractModel
     public $Sorting;
 
     /**
-     * @param string $UserId 查询的用户Id，和CAM侧Uin匹配
+     * @param string $UserId 指定查询的子用户uin，用户需要通过CreateUser接口创建。
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认20，最大值100
      * @param string $SortBy 排序字段，支持如下字段类型，create-time

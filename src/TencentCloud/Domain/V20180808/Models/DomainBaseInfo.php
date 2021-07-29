@@ -29,11 +29,13 @@ NotUpload：未实名认证
 InAudit：实名审核中
 Approved：实名审核通过
 Reject：实名审核失败
+NoAudit: 无需实名认证
  * @method void setRealNameAuditStatus(string $RealNameAuditStatus) 设置域名实名认证状态。
 NotUpload：未实名认证
 InAudit：实名审核中
 Approved：实名审核通过
 Reject：实名审核失败
+NoAudit: 无需实名认证
  * @method string getRealNameAuditUnpassReason() 获取域名实名认证不通过原因。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealNameAuditUnpassReason(string $RealNameAuditUnpassReason) 设置域名实名认证不通过原因。
@@ -149,6 +151,7 @@ NotUpload：未实名认证
 InAudit：实名审核中
 Approved：实名审核通过
 Reject：实名审核失败
+NoAudit: 无需实名认证
      */
     public $RealNameAuditStatus;
 
@@ -252,6 +255,7 @@ NotUpload：未实名认证
 InAudit：实名审核中
 Approved：实名审核通过
 Reject：实名审核失败
+NoAudit: 无需实名认证
      * @param string $RealNameAuditUnpassReason 域名实名认证不通过原因。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DomainNameAuditStatus 域名命名审核状态。

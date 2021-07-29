@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailureTolerance(string $FailureTolerance) 设置容错策略。Proceed：前面任务出错/取消后继续执行后面的任务。Terminate：前面的任务出错/取消之后终止后面任务的执行，后面的任务全部标记为已取消。
  * @method string getSQL() 获取base64加密后的SQL语句，用";"号分隔每个SQL语句，一次最多提交50个任务。严格按照前后顺序执行
  * @method void setSQL(string $SQL) 设置base64加密后的SQL语句，用";"号分隔每个SQL语句，一次最多提交50个任务。严格按照前后顺序执行
- * @method array getConfig() 获取任务的配置信息
- * @method void setConfig(array $Config) 设置任务的配置信息
+ * @method array getConfig() 获取任务的配置信息，当前仅支持SparkSQLTask任务。
+ * @method void setConfig(array $Config) 设置任务的配置信息，当前仅支持SparkSQLTask任务。
  */
 class TasksInfo extends AbstractModel
 {
@@ -47,7 +47,7 @@ class TasksInfo extends AbstractModel
     public $SQL;
 
     /**
-     * @var array 任务的配置信息
+     * @var array 任务的配置信息，当前仅支持SparkSQLTask任务。
      */
     public $Config;
 
@@ -55,7 +55,7 @@ class TasksInfo extends AbstractModel
      * @param string $TaskType 任务类型，SQLTask：SQL查询任务。SparkSQLTask：Spark SQL查询任务
      * @param string $FailureTolerance 容错策略。Proceed：前面任务出错/取消后继续执行后面的任务。Terminate：前面的任务出错/取消之后终止后面任务的执行，后面的任务全部标记为已取消。
      * @param string $SQL base64加密后的SQL语句，用";"号分隔每个SQL语句，一次最多提交50个任务。严格按照前后顺序执行
-     * @param array $Config 任务的配置信息
+     * @param array $Config 任务的配置信息，当前仅支持SparkSQLTask任务。
      */
     function __construct()
     {

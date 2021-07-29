@@ -66,6 +66,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribeApiAppsStatusResponse DescribeApiAppsStatus(Models\DescribeApiAppsStatusRequest $req) 本接口（DescribeApiAppsStatus）查询应用列表。
  * @method Models\DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatus(Models\DescribeApiBindApiAppsStatusRequest $req) 本接口（DescribeApiBindApiAppsStatus）查询Api绑定的应用列表。
  * @method Models\DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(Models\DescribeApiEnvironmentStrategyRequest $req) 本接口（DescribeApiEnvironmentStrategy）用于展示API绑定的限流策略。
+ * @method Models\DescribeApiForApiAppResponse DescribeApiForApiApp(Models\DescribeApiForApiAppRequest $req) 本接口（DescribeApiForApiApp）用于应用使用者查询部署于 API 网关的 API 接口的详细信息。​
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) 本接口（DescribeApiKey）用于查询密钥详情。
 用户在创建密钥后，可用此接口查询一个 API 密钥的详情，该接口会显示密钥 Key。
  * @method Models\DescribeApiKeysStatusResponse DescribeApiKeysStatus(Models\DescribeApiKeysStatusRequest $req) 本接口（DescribeApiKeysStatus）用于查询密钥列表。

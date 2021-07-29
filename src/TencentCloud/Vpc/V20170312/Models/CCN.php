@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSet(array $TagSet) 设置标签键值对。
  * @method boolean getRoutePriorityFlag() 获取是否支持云联网路由优先级的功能。False：不支持，True：支持。
  * @method void setRoutePriorityFlag(boolean $RoutePriorityFlag) 设置是否支持云联网路由优先级的功能。False：不支持，True：支持。
+ * @method integer getRouteTableCount() 获取实例关联的路由表个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRouteTableCount(integer $RouteTableCount) 设置实例关联的路由表个数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getRouteTableFlag() 获取是否开启云联网多路由表特性。False：未开启，True：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRouteTableFlag(boolean $RouteTableFlag) 设置是否开启云联网多路由表特性。False：未开启，True：开启。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCN extends AbstractModel
 {
@@ -107,6 +115,18 @@ class CCN extends AbstractModel
     public $RoutePriorityFlag;
 
     /**
+     * @var integer 实例关联的路由表个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RouteTableCount;
+
+    /**
+     * @var boolean 是否开启云联网多路由表特性。False：未开启，True：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RouteTableFlag;
+
+    /**
      * @param string $CcnId 云联网唯一ID
      * @param string $CcnName 云联网名称
      * @param string $CcnDescription 云联网描述信息
@@ -120,6 +140,10 @@ class CCN extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。
      * @param boolean $RoutePriorityFlag 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+     * @param integer $RouteTableCount 实例关联的路由表个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $RouteTableFlag 是否开启云联网多路由表特性。False：未开启，True：开启。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -181,6 +205,14 @@ class CCN extends AbstractModel
 
         if (array_key_exists("RoutePriorityFlag",$param) and $param["RoutePriorityFlag"] !== null) {
             $this->RoutePriorityFlag = $param["RoutePriorityFlag"];
+        }
+
+        if (array_key_exists("RouteTableCount",$param) and $param["RouteTableCount"] !== null) {
+            $this->RouteTableCount = $param["RouteTableCount"];
+        }
+
+        if (array_key_exists("RouteTableFlag",$param) and $param["RouteTableFlag"] !== null) {
+            $this->RouteTableFlag = $param["RouteTableFlag"];
         }
     }
 }

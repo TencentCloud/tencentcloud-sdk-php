@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 权限对象
  *
- * @method string getCatalog() 获取需要授权的数据源名称，*代表拥有全部数据源权限
- * @method void setCatalog(string $Catalog) 设置需要授权的数据源名称，*代表拥有全部数据源权限
- * @method string getDatabase() 获取需要授权的数据库名称，*代表拥有全部数据库名称
- * @method void setDatabase(string $Database) 设置需要授权的数据库名称，*代表拥有全部数据库名称
- * @method string getTable() 获取需要授权的表名称，*代表拥有全部表权限
- * @method void setTable(string $Table) 设置需要授权的表名称，*代表拥有全部表权限
- * @method string getOperation() 获取授权的操作，当前只支持“ALL”
- * @method void setOperation(string $Operation) 设置授权的操作，当前只支持“ALL”
+ * @method string getCatalog() 获取需要授权的数据源名称，当前仅支持COSDataCatalog或者*
+ * @method void setCatalog(string $Catalog) 设置需要授权的数据源名称，当前仅支持COSDataCatalog或者*
+ * @method string getDatabase() 获取需要授权的数据库名，填*代表当前Catalog下所有数据库
+ * @method void setDatabase(string $Database) 设置需要授权的数据库名，填*代表当前Catalog下所有数据库
+ * @method string getTable() 获取需要授权的表名，填*代表当前Database下所有表
+ * @method void setTable(string $Table) 设置需要授权的表名，填*代表当前Database下所有表
+ * @method string getOperation() 获取授权粒度，当前只支持ALL，即全部权限
+ * @method void setOperation(string $Operation) 设置授权粒度，当前只支持ALL，即全部权限
  */
 class Policy extends AbstractModel
 {
     /**
-     * @var string 需要授权的数据源名称，*代表拥有全部数据源权限
+     * @var string 需要授权的数据源名称，当前仅支持COSDataCatalog或者*
      */
     public $Catalog;
 
     /**
-     * @var string 需要授权的数据库名称，*代表拥有全部数据库名称
+     * @var string 需要授权的数据库名，填*代表当前Catalog下所有数据库
      */
     public $Database;
 
     /**
-     * @var string 需要授权的表名称，*代表拥有全部表权限
+     * @var string 需要授权的表名，填*代表当前Database下所有表
      */
     public $Table;
 
     /**
-     * @var string 授权的操作，当前只支持“ALL”
+     * @var string 授权粒度，当前只支持ALL，即全部权限
      */
     public $Operation;
 
     /**
-     * @param string $Catalog 需要授权的数据源名称，*代表拥有全部数据源权限
-     * @param string $Database 需要授权的数据库名称，*代表拥有全部数据库名称
-     * @param string $Table 需要授权的表名称，*代表拥有全部表权限
-     * @param string $Operation 授权的操作，当前只支持“ALL”
+     * @param string $Catalog 需要授权的数据源名称，当前仅支持COSDataCatalog或者*
+     * @param string $Database 需要授权的数据库名，填*代表当前Catalog下所有数据库
+     * @param string $Table 需要授权的表名，填*代表当前Database下所有表
+     * @param string $Operation 授权粒度，当前只支持ALL，即全部权限
      */
     function __construct()
     {

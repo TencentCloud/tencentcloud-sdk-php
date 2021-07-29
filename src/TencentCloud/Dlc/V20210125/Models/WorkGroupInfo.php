@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 工作组信息
  *
- * @method integer getWorkGroupId() 获取工作组Id
- * @method void setWorkGroupId(integer $WorkGroupId) 设置工作组Id
+ * @method integer getWorkGroupId() 获取查询到的工作组唯一Id
+ * @method void setWorkGroupId(integer $WorkGroupId) 设置查询到的工作组唯一Id
  * @method string getWorkGroupName() 获取工作组名称
  * @method void setWorkGroupName(string $WorkGroupName) 设置工作组名称
  * @method string getWorkGroupDescription() 获取工作组描述
@@ -38,15 +38,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicySet(array $PolicySet) 设置工作组绑定的权限集合
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreator() 获取创建者
- * @method void setCreator(string $Creator) 设置创建者
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getCreator() 获取工作组的创建人
+ * @method void setCreator(string $Creator) 设置工作组的创建人
+ * @method string getCreateTime() 获取工作组的创建时间，形如2021-07-28 16:19:32
+ * @method void setCreateTime(string $CreateTime) 设置工作组的创建时间，形如2021-07-28 16:19:32
  */
 class WorkGroupInfo extends AbstractModel
 {
     /**
-     * @var integer 工作组Id
+     * @var integer 查询到的工作组唯一Id
      */
     public $WorkGroupId;
 
@@ -79,17 +79,17 @@ class WorkGroupInfo extends AbstractModel
     public $PolicySet;
 
     /**
-     * @var string 创建者
+     * @var string 工作组的创建人
      */
     public $Creator;
 
     /**
-     * @var string 创建时间
+     * @var string 工作组的创建时间，形如2021-07-28 16:19:32
      */
     public $CreateTime;
 
     /**
-     * @param integer $WorkGroupId 工作组Id
+     * @param integer $WorkGroupId 查询到的工作组唯一Id
      * @param string $WorkGroupName 工作组名称
      * @param string $WorkGroupDescription 工作组描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -98,8 +98,8 @@ class WorkGroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PolicySet 工作组绑定的权限集合
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Creator 创建者
-     * @param string $CreateTime 创建时间
+     * @param string $Creator 工作组的创建人
+     * @param string $CreateTime 工作组的创建时间，形如2021-07-28 16:19:32
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUser请求参数结构体
  *
- * @method string getUserId() 获取用户Id，当前主账号的子账号Uin，和CAM侧匹配
- * @method void setUserId(string $UserId) 设置用户Id，当前主账号的子账号Uin，和CAM侧匹配
- * @method string getUserDescription() 获取用户描述
- * @method void setUserDescription(string $UserDescription) 设置用户描述
+ * @method string getUserId() 获取需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
+ * @method void setUserId(string $UserId) 设置需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
+ * @method string getUserDescription() 获取用户描述信息，方便区分不同用户
+ * @method void setUserDescription(string $UserDescription) 设置用户描述信息，方便区分不同用户
  * @method array getPolicySet() 获取绑定到用户的权限集合
  * @method void setPolicySet(array $PolicySet) 设置绑定到用户的权限集合
  */
 class CreateUserRequest extends AbstractModel
 {
     /**
-     * @var string 用户Id，当前主账号的子账号Uin，和CAM侧匹配
+     * @var string 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
      */
     public $UserId;
 
     /**
-     * @var string 用户描述
+     * @var string 用户描述信息，方便区分不同用户
      */
     public $UserDescription;
 
@@ -45,8 +45,8 @@ class CreateUserRequest extends AbstractModel
     public $PolicySet;
 
     /**
-     * @param string $UserId 用户Id，当前主账号的子账号Uin，和CAM侧匹配
-     * @param string $UserDescription 用户描述
+     * @param string $UserId 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
+     * @param string $UserDescription 用户描述信息，方便区分不同用户
      * @param array $PolicySet 绑定到用户的权限集合
      */
     function __construct()

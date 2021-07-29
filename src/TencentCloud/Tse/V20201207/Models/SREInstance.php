@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvInfos(array $EnvInfos) 设置环境配置信息列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineRegion() 获取引擎所在的区域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineRegion(string $EngineRegion) 设置引擎所在的区域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableInternet() 获取注册引擎是否开启公网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableInternet(boolean $EnableInternet) 设置注册引擎是否开启公网
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -160,6 +168,18 @@ class SREInstance extends AbstractModel
     public $EnvInfos;
 
     /**
+     * @var string 引擎所在的区域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineRegion;
+
+    /**
+     * @var boolean 注册引擎是否开启公网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableInternet;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -183,6 +203,10 @@ class SREInstance extends AbstractModel
      * @param string $CreateTime 集群创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EnvInfos 环境配置信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineRegion 引擎所在的区域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableInternet 注册引擎是否开启公网
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -265,6 +289,14 @@ class SREInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EnvInfos, $obj);
             }
+        }
+
+        if (array_key_exists("EngineRegion",$param) and $param["EngineRegion"] !== null) {
+            $this->EngineRegion = $param["EngineRegion"];
+        }
+
+        if (array_key_exists("EnableInternet",$param) and $param["EnableInternet"] !== null) {
+            $this->EnableInternet = $param["EnableInternet"];
         }
     }
 }

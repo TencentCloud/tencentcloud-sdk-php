@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWorkGroups请求参数结构体
  *
- * @method integer getWorkGroupId() 获取查询的工作组Id
- * @method void setWorkGroupId(integer $WorkGroupId) 设置查询的工作组Id
+ * @method integer getWorkGroupId() 获取查询的工作组Id，不填或填0表示不过滤。
+ * @method void setWorkGroupId(integer $WorkGroupId) 设置查询的工作组Id，不填或填0表示不过滤。
  * @method array getFilters() 获取过滤条件，当前仅支持按照工作组名称进行模糊搜索。Key为workgroup-name
  * @method void setFilters(array $Filters) 设置过滤条件，当前仅支持按照工作组名称进行模糊搜索。Key为workgroup-name
  * @method integer getOffset() 获取偏移量，默认为0
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeWorkGroupsRequest extends AbstractModel
 {
     /**
-     * @var integer 查询的工作组Id
+     * @var integer 查询的工作组Id，不填或填0表示不过滤。
      */
     public $WorkGroupId;
 
@@ -66,7 +66,7 @@ class DescribeWorkGroupsRequest extends AbstractModel
     public $Sorting;
 
     /**
-     * @param integer $WorkGroupId 查询的工作组Id
+     * @param integer $WorkGroupId 查询的工作组Id，不填或填0表示不过滤。
      * @param array $Filters 过滤条件，当前仅支持按照工作组名称进行模糊搜索。Key为workgroup-name
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认20，最大值100

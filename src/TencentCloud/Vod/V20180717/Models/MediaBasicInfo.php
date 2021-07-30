@@ -67,11 +67,11 @@ use TencentCloud\Common\AbstractModel;
 
 *注意：此字段暂不支持。
  * @method string getStorageClass() 获取媒体文件的存储类别：
-<li>STANDARD：标准存储。</li>
-<li>STANDARD_IA：低频存储。</li>
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
  * @method void setStorageClass(string $StorageClass) 设置媒体文件的存储类别：
-<li>STANDARD：标准存储。</li>
-<li>STANDARD_IA：低频存储。</li>
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -168,8 +168,8 @@ class MediaBasicInfo extends AbstractModel
 
     /**
      * @var string 媒体文件的存储类别：
-<li>STANDARD：标准存储。</li>
-<li>STANDARD_IA：低频存储。</li>
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
      */
     public $StorageClass;
 
@@ -198,8 +198,8 @@ class MediaBasicInfo extends AbstractModel
 
 *注意：此字段暂不支持。
      * @param string $StorageClass 媒体文件的存储类别：
-<li>STANDARD：标准存储。</li>
-<li>STANDARD_IA：低频存储。</li>
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
      */
     function __construct()
     {

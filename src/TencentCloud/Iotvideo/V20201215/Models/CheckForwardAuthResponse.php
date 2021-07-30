@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductid(string $Productid) 设置产品ID
  * @method string getErrMsg() 获取错误消息
  * @method void setErrMsg(string $ErrMsg) 设置错误消息
- * @method integer getQueueType() 获取队列类型
- * @method void setQueueType(integer $QueueType) 设置队列类型
+ * @method integer getQueueType() 获取队列类型 0.CMQ  1.Ckafka
+ * @method void setQueueType(integer $QueueType) 设置队列类型 0.CMQ  1.Ckafka
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,7 +56,7 @@ class CheckForwardAuthResponse extends AbstractModel
     public $ErrMsg;
 
     /**
-     * @var integer 队列类型
+     * @var integer 队列类型 0.CMQ  1.Ckafka
      */
     public $QueueType;
 
@@ -70,7 +70,7 @@ class CheckForwardAuthResponse extends AbstractModel
      * @param integer $Result 结果
      * @param string $Productid 产品ID
      * @param string $ErrMsg 错误消息
-     * @param integer $QueueType 队列类型
+     * @param integer $QueueType 队列类型 0.CMQ  1.Ckafka
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

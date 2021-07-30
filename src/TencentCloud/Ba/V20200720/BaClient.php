@@ -24,6 +24,7 @@ use TencentCloud\Ba\V20200720\Models as Models;
 
 /**
  * @method Models\CreateWeappQRUrlResponse CreateWeappQRUrl(Models\CreateWeappQRUrlRequest $req) 创建渠道备案小程序二维码
+ * @method Models\DescribeGetAuthInfoResponse DescribeGetAuthInfo(Models\DescribeGetAuthInfoRequest $req) 获取实名认证信息
  * @method Models\SyncIcpOrderWebInfoResponse SyncIcpOrderWebInfo(Models\SyncIcpOrderWebInfoRequest $req) 将备案ICP订单下的一个网站信息 同步给订单下其他网站，需要被同步的网站被检查通过(isCheck:true)；
 只有指定的网站信息字段能被同步
  */

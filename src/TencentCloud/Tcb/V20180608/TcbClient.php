@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tcb\V20180608\Models as Models;
 
 /**
+ * @method Models\BindEnvGatewayResponse BindEnvGateway(Models\BindEnvGatewayRequest $req) 绑定另外一个环境下的网关，callContainer请求可以访问到该网关
  * @method Models\CheckTcbServiceResponse CheckTcbService(Models\CheckTcbServiceRequest $req) 检查是否开通Tcb服务
  * @method Models\CommonServiceAPIResponse CommonServiceAPI(Models\CommonServiceAPIRequest $req) TCB云API统一入口
  * @method Models\CreateAndDeployCloudBaseProjectResponse CreateAndDeployCloudBaseProject(Models\CreateAndDeployCloudBaseProjectRequest $req) 创建云开发项目

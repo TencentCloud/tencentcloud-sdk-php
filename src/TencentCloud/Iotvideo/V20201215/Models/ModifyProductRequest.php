@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProductId() 获取产品id
  * @method void setProductId(string $ProductId) 设置产品id
- * @method string getProductName() 获取修改的产品名称
- * @method void setProductName(string $ProductName) 设置修改的产品名称
- * @method string getProductDescription() 获取修改的产品描述
- * @method void setProductDescription(string $ProductDescription) 设置修改的产品描述
+ * @method string getProductName() 获取修改的产品名称 （支持中文、英文、数字、下划线组合，最多不超过20个字符）
+ * @method void setProductName(string $ProductName) 设置修改的产品名称 （支持中文、英文、数字、下划线组合，最多不超过20个字符）
+ * @method string getProductDescription() 获取修改的产品描述 （最多不超过128个字符）
+ * @method void setProductDescription(string $ProductDescription) 设置修改的产品描述 （最多不超过128个字符）
  */
 class ModifyProductRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyProductRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var string 修改的产品名称
+     * @var string 修改的产品名称 （支持中文、英文、数字、下划线组合，最多不超过20个字符）
      */
     public $ProductName;
 
     /**
-     * @var string 修改的产品描述
+     * @var string 修改的产品描述 （最多不超过128个字符）
      */
     public $ProductDescription;
 
     /**
      * @param string $ProductId 产品id
-     * @param string $ProductName 修改的产品名称
-     * @param string $ProductDescription 修改的产品描述
+     * @param string $ProductName 修改的产品名称 （支持中文、英文、数字、下划线组合，最多不超过20个字符）
+     * @param string $ProductDescription 修改的产品描述 （最多不超过128个字符）
      */
     function __construct()
     {

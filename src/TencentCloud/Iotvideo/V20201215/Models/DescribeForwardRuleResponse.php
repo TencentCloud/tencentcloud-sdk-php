@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) 设置队列名称
  * @method string getProductID() 获取产品ID
  * @method void setProductID(string $ProductID) 设置产品ID
- * @method integer getMsgType() 获取消息类型
- * @method void setMsgType(integer $MsgType) 设置消息类型
- * @method integer getResult() 获取结果
- * @method void setResult(integer $Result) 设置结果
+ * @method integer getMsgType() 获取消息类型 1设备上报信息 2设备状态变化通知 3为全选
+ * @method void setMsgType(integer $MsgType) 设置消息类型 1设备上报信息 2设备状态变化通知 3为全选
+ * @method integer getResult() 获取结果 2表示禁用 其他为成功
+ * @method void setResult(integer $Result) 设置结果 2表示禁用 其他为成功
  * @method string getRoleName() 获取角色名
  * @method void setRoleName(string $RoleName) 设置角色名
  * @method integer getRoleID() 获取角色ID
@@ -65,12 +65,12 @@ class DescribeForwardRuleResponse extends AbstractModel
     public $ProductID;
 
     /**
-     * @var integer 消息类型
+     * @var integer 消息类型 1设备上报信息 2设备状态变化通知 3为全选
      */
     public $MsgType;
 
     /**
-     * @var integer 结果
+     * @var integer 结果 2表示禁用 其他为成功
      */
     public $Result;
 
@@ -118,8 +118,8 @@ class DescribeForwardRuleResponse extends AbstractModel
      * @param string $Endpoint 腾讯云账号
      * @param string $QueueName 队列名称
      * @param string $ProductID 产品ID
-     * @param integer $MsgType 消息类型
-     * @param integer $Result 结果
+     * @param integer $MsgType 消息类型 1设备上报信息 2设备状态变化通知 3为全选
+     * @param integer $Result 结果 2表示禁用 其他为成功
      * @param string $RoleName 角色名
      * @param integer $RoleID 角色ID
      * @param string $QueueRegion 队列区域

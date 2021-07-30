@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) 设置队列名称
  * @method string getProductID() 获取产品ID
  * @method void setProductID(string $ProductID) 设置产品ID
- * @method integer getResult() 获取删除结果
- * @method void setResult(integer $Result) 设置删除结果
+ * @method integer getResult() 获取删除结果 0成功 其他不成功
+ * @method void setResult(integer $Result) 设置删除结果 0成功 其他不成功
  * @method string getErrMsg() 获取错误消息
  * @method void setErrMsg(string $ErrMsg) 设置错误消息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,7 +51,7 @@ class DeleteForwardRuleResponse extends AbstractModel
     public $ProductID;
 
     /**
-     * @var integer 删除结果
+     * @var integer 删除结果 0成功 其他不成功
      */
     public $Result;
 
@@ -69,7 +69,7 @@ class DeleteForwardRuleResponse extends AbstractModel
      * @param string $Endpoint 腾讯云账号
      * @param string $QueueName 队列名称
      * @param string $ProductID 产品ID
-     * @param integer $Result 删除结果
+     * @param integer $Result 删除结果 0成功 其他不成功
      * @param string $ErrMsg 错误消息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

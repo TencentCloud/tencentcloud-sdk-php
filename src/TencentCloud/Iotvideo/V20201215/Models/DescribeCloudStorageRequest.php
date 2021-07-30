@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
+ * @method string getUserId() 获取云存用户ID
+ * @method void setUserId(string $UserId) 设置云存用户ID
  */
 class DescribeCloudStorageRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeCloudStorageRequest extends AbstractModel
     public $DeviceName;
 
     /**
+     * @var string 云存用户ID
+     */
+    public $UserId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
+     * @param string $UserId 云存用户ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeCloudStorageRequest extends AbstractModel
 
         if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
             $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

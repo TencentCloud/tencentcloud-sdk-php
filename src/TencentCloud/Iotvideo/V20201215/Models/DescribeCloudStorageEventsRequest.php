@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置单次获取的历史数据项目的最大数量, 缺省10
  * @method string getEventId() 获取事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
  * @method void setEventId(string $EventId) 设置事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
+ * @method string getUserId() 获取用户ID
+ * @method void setUserId(string $UserId) 设置用户ID
  */
 class DescribeCloudStorageEventsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeCloudStorageEventsRequest extends AbstractModel
     public $EventId;
 
     /**
+     * @var string 用户ID
+     */
+    public $UserId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param integer $StartTime 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
@@ -80,6 +87,7 @@ class DescribeCloudStorageEventsRequest extends AbstractModel
      * @param string $Context 请求上下文, 用作查询游标
      * @param integer $Size 单次获取的历史数据项目的最大数量, 缺省10
      * @param string $EventId 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
+     * @param string $UserId 用户ID
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeCloudStorageEventsRequest extends AbstractModel
 
         if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
             $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

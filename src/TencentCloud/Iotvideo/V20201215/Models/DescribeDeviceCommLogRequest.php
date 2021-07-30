@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceCommLog请求参数结构体
  *
- * @method integer getMinTime() 获取开始时间
- * @method void setMinTime(integer $MinTime) 设置开始时间
- * @method integer getMaxTime() 获取结束时间
- * @method void setMaxTime(integer $MaxTime) 设置结束时间
+ * @method integer getMinTime() 获取开始时间 13位时间戳 单位毫秒
+ * @method void setMinTime(integer $MinTime) 设置开始时间 13位时间戳 单位毫秒
+ * @method integer getMaxTime() 获取结束时间 13位时间戳 单位毫秒
+ * @method void setMaxTime(integer $MaxTime) 设置结束时间 13位时间戳 单位毫秒
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
- * @method integer getLimit() 获取返回条数
- * @method void setLimit(integer $Limit) 设置返回条数
+ * @method integer getLimit() 获取返回条数 默认为50
+ * @method void setLimit(integer $Limit) 设置返回条数 默认为50
  * @method string getContext() 获取检索上下文
  * @method void setContext(string $Context) 设置检索上下文
- * @method string getType() 获取类型：shadow 下行，device 上行
- * @method void setType(string $Type) 设置类型：shadow 下行，device 上行
+ * @method string getType() 获取类型：shadow 下行，device 上行 默认为空则全部查询
+ * @method void setType(string $Type) 设置类型：shadow 下行，device 上行 默认为空则全部查询
  */
 class DescribeDeviceCommLogRequest extends AbstractModel
 {
     /**
-     * @var integer 开始时间
+     * @var integer 开始时间 13位时间戳 单位毫秒
      */
     public $MinTime;
 
     /**
-     * @var integer 结束时间
+     * @var integer 结束时间 13位时间戳 单位毫秒
      */
     public $MaxTime;
 
@@ -58,7 +58,7 @@ class DescribeDeviceCommLogRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @var integer 返回条数
+     * @var integer 返回条数 默认为50
      */
     public $Limit;
 
@@ -68,18 +68,18 @@ class DescribeDeviceCommLogRequest extends AbstractModel
     public $Context;
 
     /**
-     * @var string 类型：shadow 下行，device 上行
+     * @var string 类型：shadow 下行，device 上行 默认为空则全部查询
      */
     public $Type;
 
     /**
-     * @param integer $MinTime 开始时间
-     * @param integer $MaxTime 结束时间
+     * @param integer $MinTime 开始时间 13位时间戳 单位毫秒
+     * @param integer $MaxTime 结束时间 13位时间戳 单位毫秒
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
-     * @param integer $Limit 返回条数
+     * @param integer $Limit 返回条数 默认为50
      * @param string $Context 检索上下文
-     * @param string $Type 类型：shadow 下行，device 上行
+     * @param string $Type 类型：shadow 下行，device 上行 默认为空则全部查询
      */
     function __construct()
     {

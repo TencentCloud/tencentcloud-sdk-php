@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirmwareVersion(string $FirmwareVersion) 设置固件版本
  * @method array getFilters() 获取筛选条件
  * @method void setFilters(array $Filters) 设置筛选条件
- * @method integer getOffset() 获取查询偏移量
- * @method void setOffset(integer $Offset) 设置查询偏移量
- * @method integer getLimit() 获取查询的数量
- * @method void setLimit(integer $Limit) 设置查询的数量
+ * @method integer getOffset() 获取查询偏移量 默认为0
+ * @method void setOffset(integer $Offset) 设置查询偏移量 默认为0
+ * @method integer getLimit() 获取查询的数量 默认为50
+ * @method void setLimit(integer $Limit) 设置查询的数量 默认为50
  */
 class DescribeFirmwareTaskDevicesRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class DescribeFirmwareTaskDevicesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 查询偏移量
+     * @var integer 查询偏移量 默认为0
      */
     public $Offset;
 
     /**
-     * @var integer 查询的数量
+     * @var integer 查询的数量 默认为50
      */
     public $Limit;
 
@@ -62,8 +62,8 @@ class DescribeFirmwareTaskDevicesRequest extends AbstractModel
      * @param string $ProductID 产品ID
      * @param string $FirmwareVersion 固件版本
      * @param array $Filters 筛选条件
-     * @param integer $Offset 查询偏移量
-     * @param integer $Limit 查询的数量
+     * @param integer $Offset 查询偏移量 默认为0
+     * @param integer $Limit 查询的数量 默认为50
      */
     function __construct()
     {

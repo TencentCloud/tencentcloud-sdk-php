@@ -22,22 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProductName() 获取产品名称
  * @method void setProductName(string $ProductName) 设置产品名称
- * @method integer getDeviceType() 获取产品设备类型
- * @method void setDeviceType(integer $DeviceType) 设置产品设备类型
+ * @method integer getDeviceType() 获取产品设备类型 1.普通设备 2.NVR设备
+ * @method void setDeviceType(integer $DeviceType) 设置产品设备类型 1.普通设备 2.NVR设备
  * @method integer getProductVaildYears() 获取产品有效期
  * @method void setProductVaildYears(integer $ProductVaildYears) 设置产品有效期
- * @method array getFeatures() 获取设备功能码
- * @method void setFeatures(array $Features) 设置设备功能码
- * @method string getChipOs() 获取设备操作系统
- * @method void setChipOs(string $ChipOs) 设置设备操作系统
+ * @method array getFeatures() 获取设备功能码 ypsxth音频双向通话 spdxth视频单向通话
+ * @method void setFeatures(array $Features) 设置设备功能码 ypsxth音频双向通话 spdxth视频单向通话
+ * @method string getChipOs() 获取设备操作系统 android linux liteos
+ * @method void setChipOs(string $ChipOs) 设置设备操作系统 android linux liteos
  * @method string getChipManufactureId() 获取芯片厂商id
  * @method void setChipManufactureId(string $ChipManufactureId) 设置芯片厂商id
  * @method string getChipId() 获取芯片id
  * @method void setChipId(string $ChipId) 设置芯片id
  * @method string getProductDescription() 获取产品描述信息
  * @method void setProductDescription(string $ProductDescription) 设置产品描述信息
- * @method integer getEncryptionType() 获取认证方式。2 PSK
- * @method void setEncryptionType(integer $EncryptionType) 设置认证方式。2 PSK
+ * @method integer getEncryptionType() 获取认证方式 只支持取值为2 psk认证
+ * @method void setEncryptionType(integer $EncryptionType) 设置认证方式 只支持取值为2 psk认证
  */
 class CreateProductRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CreateProductRequest extends AbstractModel
     public $ProductName;
 
     /**
-     * @var integer 产品设备类型
+     * @var integer 产品设备类型 1.普通设备 2.NVR设备
      */
     public $DeviceType;
 
@@ -57,12 +57,12 @@ class CreateProductRequest extends AbstractModel
     public $ProductVaildYears;
 
     /**
-     * @var array 设备功能码
+     * @var array 设备功能码 ypsxth音频双向通话 spdxth视频单向通话
      */
     public $Features;
 
     /**
-     * @var string 设备操作系统
+     * @var string 设备操作系统 android linux liteos
      */
     public $ChipOs;
 
@@ -82,20 +82,20 @@ class CreateProductRequest extends AbstractModel
     public $ProductDescription;
 
     /**
-     * @var integer 认证方式。2 PSK
+     * @var integer 认证方式 只支持取值为2 psk认证
      */
     public $EncryptionType;
 
     /**
      * @param string $ProductName 产品名称
-     * @param integer $DeviceType 产品设备类型
+     * @param integer $DeviceType 产品设备类型 1.普通设备 2.NVR设备
      * @param integer $ProductVaildYears 产品有效期
-     * @param array $Features 设备功能码
-     * @param string $ChipOs 设备操作系统
+     * @param array $Features 设备功能码 ypsxth音频双向通话 spdxth视频单向通话
+     * @param string $ChipOs 设备操作系统 android linux liteos
      * @param string $ChipManufactureId 芯片厂商id
      * @param string $ChipId 芯片id
      * @param string $ProductDescription 产品描述信息
-     * @param integer $EncryptionType 认证方式。2 PSK
+     * @param integer $EncryptionType 认证方式 只支持取值为2 psk认证
      */
     function __construct()
     {

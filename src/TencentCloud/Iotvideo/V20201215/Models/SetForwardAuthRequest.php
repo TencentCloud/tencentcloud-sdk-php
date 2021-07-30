@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSkey() 获取控制台Skey
  * @method void setSkey(string $Skey) 设置控制台Skey
- * @method integer getQueueType() 获取消息队列类型
- * @method void setQueueType(integer $QueueType) 设置消息队列类型
+ * @method integer getQueueType() 获取消息队列类型  0.CMQ 1.CKafka
+ * @method void setQueueType(integer $QueueType) 设置消息队列类型  0.CMQ 1.CKafka
  */
 class SetForwardAuthRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SetForwardAuthRequest extends AbstractModel
     public $Skey;
 
     /**
-     * @var integer 消息队列类型
+     * @var integer 消息队列类型  0.CMQ 1.CKafka
      */
     public $QueueType;
 
     /**
      * @param string $Skey 控制台Skey
-     * @param integer $QueueType 消息队列类型
+     * @param integer $QueueType 消息队列类型  0.CMQ 1.CKafka
      */
     function __construct()
     {

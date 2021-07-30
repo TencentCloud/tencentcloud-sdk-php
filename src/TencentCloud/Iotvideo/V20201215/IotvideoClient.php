@@ -25,6 +25,7 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
 /**
  * @method Models\ApplyAIModelResponse ApplyAIModel(Models\ApplyAIModelRequest $req) 申请AI模型
  * @method Models\BatchUpdateFirmwareResponse BatchUpdateFirmware(Models\BatchUpdateFirmwareRequest $req) 本接口（BatchUpdateFirmware）用于批量更新设备固件 
+ * @method Models\BindCloudStorageUserResponse BindCloudStorageUser(Models\BindCloudStorageUserRequest $req) 绑定云存用户
  * @method Models\CancelAIModelApplicationResponse CancelAIModelApplication(Models\CancelAIModelApplicationRequest $req) 取消AI模型申请
  * @method Models\CancelDeviceFirmwareTaskResponse CancelDeviceFirmwareTask(Models\CancelDeviceFirmwareTaskRequest $req) 本接口用于取消设备升级任务
  * @method Models\CheckForwardAuthResponse CheckForwardAuth(Models\CheckForwardAuthRequest $req) 判断是否开启的转发的权限
@@ -33,6 +34,7 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\CreateBatchResponse CreateBatch(Models\CreateBatchRequest $req) 创建批次
  * @method Models\CreateCOSCredentialsResponse CreateCOSCredentials(Models\CreateCOSCredentialsRequest $req) 创建COS上传密钥
  * @method Models\CreateCloudStorageResponse CreateCloudStorage(Models\CreateCloudStorageRequest $req) 开通云存服务
+ * @method Models\CreateDataForwardResponse CreateDataForward(Models\CreateDataForwardRequest $req) 创建数据转发
  * @method Models\CreateForwardRuleResponse CreateForwardRule(Models\CreateForwardRuleRequest $req) 创建转发规则
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 创建产品
  * @method Models\CreateTaskFileUrlResponse CreateTaskFileUrl(Models\CreateTaskFileUrlRequest $req) 本接口（CreateTaskFileUrl）用于获取产品级任务文件上传链接
@@ -54,12 +56,15 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\DescribeCloudStorageEventsResponse DescribeCloudStorageEvents(Models\DescribeCloudStorageEventsRequest $req) 拉取云存事件列表
  * @method Models\DescribeCloudStorageThumbnailResponse DescribeCloudStorageThumbnail(Models\DescribeCloudStorageThumbnailRequest $req) 拉取云存事件缩略图
  * @method Models\DescribeCloudStorageTimeResponse DescribeCloudStorageTime(Models\DescribeCloudStorageTimeRequest $req) 获取某一天云存时间轴
+ * @method Models\DescribeCloudStorageUsersResponse DescribeCloudStorageUsers(Models\DescribeCloudStorageUsersRequest $req) 拉取云存用户列表
+ * @method Models\DescribeDataForwardListResponse DescribeDataForwardList(Models\DescribeDataForwardListRequest $req) 获取数据转发列表
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) 查看设备详情
  * @method Models\DescribeDeviceActionHistoryResponse DescribeDeviceActionHistory(Models\DescribeDeviceActionHistoryRequest $req) 为用户提供获取动作历史的能力。
  * @method Models\DescribeDeviceCommLogResponse DescribeDeviceCommLog(Models\DescribeDeviceCommLogRequest $req) 获取设备在指定时间范围内的通讯日志
  * @method Models\DescribeDeviceDataResponse DescribeDeviceData(Models\DescribeDeviceDataRequest $req) 获取设备属性数据
  * @method Models\DescribeDeviceDataHistoryResponse DescribeDeviceDataHistory(Models\DescribeDeviceDataHistoryRequest $req) 获取设备在指定时间范围内上报的历史数据。
  * @method Models\DescribeDeviceEventHistoryResponse DescribeDeviceEventHistory(Models\DescribeDeviceEventHistoryRequest $req) 获取设备的历史事件
+ * @method Models\DescribeDeviceStatusLogResponse DescribeDeviceStatusLog(Models\DescribeDeviceStatusLogRequest $req) 获取设备上下线日志
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 获取设备列表
  * @method Models\DescribeFirmwareResponse DescribeFirmware(Models\DescribeFirmwareRequest $req) 本接口（DescribeFirmware）用于查询固件信息
  * @method Models\DescribeFirmwareTaskResponse DescribeFirmwareTask(Models\DescribeFirmwareTaskRequest $req) 此接口查询固件升级任务详情
@@ -71,13 +76,18 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\DescribeModelDefinitionResponse DescribeModelDefinition(Models\DescribeModelDefinitionRequest $req) 查询产品配置的数据模板信息
  * @method Models\DescribeProductResponse DescribeProduct(Models\DescribeProductRequest $req) 获取产品详情
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 获取产品列表
+ * @method Models\DescribeSDKLogResponse DescribeSDKLog(Models\DescribeSDKLogRequest $req) 获取设备sdk日志
  * @method Models\EditFirmwareResponse EditFirmware(Models\EditFirmwareRequest $req) 本接口用于编辑固件信息
  * @method Models\GenerateSignedVideoURLResponse GenerateSignedVideoURL(Models\GenerateSignedVideoURLRequest $req) 获取视频防盗链播放URL
  * @method Models\GetAllFirmwareVersionResponse GetAllFirmwareVersion(Models\GetAllFirmwareVersionRequest $req) 本接口（GetAllFirmwareVersion）用于获取所有的版本列表 
  * @method Models\GetFirmwareURLResponse GetFirmwareURL(Models\GetFirmwareURLRequest $req) 本接口（GetFirmwareURL）用于获取固件存储的URL 
  * @method Models\ImportModelDefinitionResponse ImportModelDefinition(Models\ImportModelDefinitionRequest $req) 导入其它产品的数据模板，覆盖现有数据模板的物模型和产品分类信息
+ * @method Models\InheritCloudStorageUserResponse InheritCloudStorageUser(Models\InheritCloudStorageUserRequest $req) 继承云存用户
  * @method Models\ListFirmwaresResponse ListFirmwares(Models\ListFirmwaresRequest $req) 本接口（ListFirmwares）用于获取固件列表 
+ * @method Models\ModifyDataForwardResponse ModifyDataForward(Models\ModifyDataForwardRequest $req) 修改数据转发
+ * @method Models\ModifyDataForwardStatusResponse ModifyDataForwardStatus(Models\ModifyDataForwardStatusRequest $req) 设置数据转发状态
  * @method Models\ModifyDeviceResponse ModifyDevice(Models\ModifyDeviceRequest $req) 修改设备信息
+ * @method Models\ModifyDeviceLogLevelResponse ModifyDeviceLogLevel(Models\ModifyDeviceLogLevelRequest $req) 更新设备日志级别
  * @method Models\ModifyForwardRuleResponse ModifyForwardRule(Models\ModifyForwardRuleRequest $req) 修改转发规则
  * @method Models\ModifyModelDefinitionResponse ModifyModelDefinition(Models\ModifyModelDefinitionRequest $req) 提供修改产品的数据模板的能力
  * @method Models\ModifyProductResponse ModifyProduct(Models\ModifyProductRequest $req) 修改产品信息
@@ -89,6 +99,7 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\TransferCloudStorageResponse TransferCloudStorage(Models\TransferCloudStorageRequest $req) 转移云存服务
  * @method Models\UpdateAIModelChannelResponse UpdateAIModelChannel(Models\UpdateAIModelChannelRequest $req) 更新AI推理结果推送配置
  * @method Models\UploadFirmwareResponse UploadFirmware(Models\UploadFirmwareRequest $req) 本接口（UploadFirmware）用于上传设备固件信息 
+ * @method Models\WakeUpDeviceResponse WakeUpDevice(Models\WakeUpDeviceRequest $req) 设备唤醒
  */
 
 class IotvideoClient extends AbstractClient

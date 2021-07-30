@@ -40,10 +40,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeatCategory(string $SeatCategory) 设置席别
  * @method string getID() 获取身份证号
  * @method void setID(string $ID) 设置身份证号
- * @method string getInvoiceType() 获取发票消费类型
- * @method void setInvoiceType(string $InvoiceType) 设置发票消费类型
+ * @method string getInvoiceType() 获取发票消费类型：交通
+ * @method void setInvoiceType(string $InvoiceType) 设置发票消费类型：交通
  * @method string getSerialNumber() 获取序列号
  * @method void setSerialNumber(string $SerialNumber) 设置序列号
+ * @method string getAdditionalCost() 获取加收票价
+ * @method void setAdditionalCost(string $AdditionalCost) 设置加收票价
+ * @method string getHandlingFee() 获取手续费
+ * @method void setHandlingFee(string $HandlingFee) 设置手续费
+ * @method string getLegalAmount() 获取大写金额（票面有大写金额该字段才有值）
+ * @method void setLegalAmount(string $LegalAmount) 设置大写金额（票面有大写金额该字段才有值）
+ * @method string getTicketStation() 获取售票站
+ * @method void setTicketStation(string $TicketStation) 设置售票站
+ * @method string getOriginalPrice() 获取原票价（一般有手续费的才有原始票价字段）
+ * @method void setOriginalPrice(string $OriginalPrice) 设置原票价（一般有手续费的才有原始票价字段）
+ * @method string getInvoiceStyle() 获取发票类型：火车票、火车票补票、火车票退票凭证
+ * @method void setInvoiceStyle(string $InvoiceStyle) 设置发票类型：火车票、火车票补票、火车票退票凭证
+ * @method string getReceiptNumber() 获取收据号码
+ * @method void setReceiptNumber(string $ReceiptNumber) 设置收据号码
+ * @method string getIsReceipt() 获取仅供报销使用：1为是，0为否
+ * @method void setIsReceipt(string $IsReceipt) 设置仅供报销使用：1为是，0为否
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -100,7 +116,7 @@ class TrainTicketOCRResponse extends AbstractModel
     public $ID;
 
     /**
-     * @var string 发票消费类型
+     * @var string 发票消费类型：交通
      */
     public $InvoiceType;
 
@@ -108,6 +124,46 @@ class TrainTicketOCRResponse extends AbstractModel
      * @var string 序列号
      */
     public $SerialNumber;
+
+    /**
+     * @var string 加收票价
+     */
+    public $AdditionalCost;
+
+    /**
+     * @var string 手续费
+     */
+    public $HandlingFee;
+
+    /**
+     * @var string 大写金额（票面有大写金额该字段才有值）
+     */
+    public $LegalAmount;
+
+    /**
+     * @var string 售票站
+     */
+    public $TicketStation;
+
+    /**
+     * @var string 原票价（一般有手续费的才有原始票价字段）
+     */
+    public $OriginalPrice;
+
+    /**
+     * @var string 发票类型：火车票、火车票补票、火车票退票凭证
+     */
+    public $InvoiceStyle;
+
+    /**
+     * @var string 收据号码
+     */
+    public $ReceiptNumber;
+
+    /**
+     * @var string 仅供报销使用：1为是，0为否
+     */
+    public $IsReceipt;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -125,8 +181,16 @@ class TrainTicketOCRResponse extends AbstractModel
      * @param string $Price 票价
      * @param string $SeatCategory 席别
      * @param string $ID 身份证号
-     * @param string $InvoiceType 发票消费类型
+     * @param string $InvoiceType 发票消费类型：交通
      * @param string $SerialNumber 序列号
+     * @param string $AdditionalCost 加收票价
+     * @param string $HandlingFee 手续费
+     * @param string $LegalAmount 大写金额（票面有大写金额该字段才有值）
+     * @param string $TicketStation 售票站
+     * @param string $OriginalPrice 原票价（一般有手续费的才有原始票价字段）
+     * @param string $InvoiceStyle 发票类型：火车票、火车票补票、火车票退票凭证
+     * @param string $ReceiptNumber 收据号码
+     * @param string $IsReceipt 仅供报销使用：1为是，0为否
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -188,6 +252,38 @@ class TrainTicketOCRResponse extends AbstractModel
 
         if (array_key_exists("SerialNumber",$param) and $param["SerialNumber"] !== null) {
             $this->SerialNumber = $param["SerialNumber"];
+        }
+
+        if (array_key_exists("AdditionalCost",$param) and $param["AdditionalCost"] !== null) {
+            $this->AdditionalCost = $param["AdditionalCost"];
+        }
+
+        if (array_key_exists("HandlingFee",$param) and $param["HandlingFee"] !== null) {
+            $this->HandlingFee = $param["HandlingFee"];
+        }
+
+        if (array_key_exists("LegalAmount",$param) and $param["LegalAmount"] !== null) {
+            $this->LegalAmount = $param["LegalAmount"];
+        }
+
+        if (array_key_exists("TicketStation",$param) and $param["TicketStation"] !== null) {
+            $this->TicketStation = $param["TicketStation"];
+        }
+
+        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
+            $this->OriginalPrice = $param["OriginalPrice"];
+        }
+
+        if (array_key_exists("InvoiceStyle",$param) and $param["InvoiceStyle"] !== null) {
+            $this->InvoiceStyle = $param["InvoiceStyle"];
+        }
+
+        if (array_key_exists("ReceiptNumber",$param) and $param["ReceiptNumber"] !== null) {
+            $this->ReceiptNumber = $param["ReceiptNumber"];
+        }
+
+        if (array_key_exists("IsReceipt",$param) and $param["IsReceipt"] !== null) {
+            $this->IsReceipt = $param["IsReceipt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

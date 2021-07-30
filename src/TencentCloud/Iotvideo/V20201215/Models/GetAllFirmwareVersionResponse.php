@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetAllFirmwareVersion返回参数结构体
  *
- * @method array getVersion() 获取无
- * @method void setVersion(array $Version) 设置无
+ * @method array getVersion() 获取固件可用版本列表
+ * @method void setVersion(array $Version) 设置固件可用版本列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class GetAllFirmwareVersionResponse extends AbstractModel
 {
     /**
-     * @var array 无
+     * @var array 固件可用版本列表
      */
     public $Version;
 
@@ -38,7 +38,7 @@ class GetAllFirmwareVersionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Version 无
+     * @param array $Version 固件可用版本列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

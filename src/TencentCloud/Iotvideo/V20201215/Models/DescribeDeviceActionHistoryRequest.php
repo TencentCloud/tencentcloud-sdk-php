@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxTime(integer $MaxTime) 设置结束范围的 unix 毫秒时间戳
  * @method string getActionId() 获取动作Id
  * @method void setActionId(string $ActionId) 设置动作Id
- * @method integer getLimit() 获取查询条数
- * @method void setLimit(integer $Limit) 设置查询条数
+ * @method integer getLimit() 获取查询条数 默认为0 最大不超过500
+ * @method void setLimit(integer $Limit) 设置查询条数 默认为0 最大不超过500
  * @method string getContext() 获取游标，标识查询位置。
  * @method void setContext(string $Context) 设置游标，标识查询位置。
  */
@@ -63,7 +63,7 @@ class DescribeDeviceActionHistoryRequest extends AbstractModel
     public $ActionId;
 
     /**
-     * @var integer 查询条数
+     * @var integer 查询条数 默认为0 最大不超过500
      */
     public $Limit;
 
@@ -78,7 +78,7 @@ class DescribeDeviceActionHistoryRequest extends AbstractModel
      * @param integer $MinTime 开始范围的 unix 毫秒时间戳
      * @param integer $MaxTime 结束范围的 unix 毫秒时间戳
      * @param string $ActionId 动作Id
-     * @param integer $Limit 查询条数
+     * @param integer $Limit 查询条数 默认为0 最大不超过500
      * @param string $Context 游标，标识查询位置。
      */
     function __construct()

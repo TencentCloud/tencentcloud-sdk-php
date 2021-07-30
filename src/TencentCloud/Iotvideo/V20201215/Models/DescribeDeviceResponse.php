@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableState(integer $EnableState) 设置设备启用状态
  * @method integer getExpireTime() 获取设备过期时间
  * @method void setExpireTime(integer $ExpireTime) 设置设备过期时间
+ * @method integer getLogLevel() 获取设备的sdk日志等级，0：关闭，1：错误，2：告警，3：信息，4：调试
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogLevel(integer $LogLevel) 设置设备的sdk日志等级，0：关闭，1：错误，2：告警，3：信息，4：调试
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +72,12 @@ class DescribeDeviceResponse extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var integer 设备的sdk日志等级，0：关闭，1：错误，2：告警，3：信息，4：调试
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogLevel;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +89,8 @@ class DescribeDeviceResponse extends AbstractModel
      * @param string $DevicePsk 设备密钥
      * @param integer $EnableState 设备启用状态
      * @param integer $ExpireTime 设备过期时间
+     * @param integer $LogLevel 设备的sdk日志等级，0：关闭，1：错误，2：告警，3：信息，4：调试
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +128,10 @@ class DescribeDeviceResponse extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("LogLevel",$param) and $param["LogLevel"] !== null) {
+            $this->LogLevel = $param["LogLevel"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

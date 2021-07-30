@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkey(string $Skey) 设置控制台Skey
  * @method string getQueueRegion() 获取队列区域
  * @method void setQueueRegion(string $QueueRegion) 设置队列区域
- * @method integer getQueueType() 获取队列类型
- * @method void setQueueType(integer $QueueType) 设置队列类型
+ * @method integer getQueueType() 获取队列类型 0.CMQ 1.CKafka
+ * @method void setQueueType(integer $QueueType) 设置队列类型 0.CMQ 1.CKafka
  * @method string getConsecretid() 获取临时密钥
  * @method void setConsecretid(string $Consecretid) 设置临时密钥
  * @method string getInstanceId() 获取实例ID
@@ -64,7 +64,7 @@ class ModifyForwardRuleRequest extends AbstractModel
     public $QueueRegion;
 
     /**
-     * @var integer 队列类型
+     * @var integer 队列类型 0.CMQ 1.CKafka
      */
     public $QueueType;
 
@@ -98,7 +98,7 @@ class ModifyForwardRuleRequest extends AbstractModel
      * @param integer $MsgType 消息类型
      * @param string $Skey 控制台Skey
      * @param string $QueueRegion 队列区域
-     * @param integer $QueueType 队列类型
+     * @param integer $QueueType 队列类型 0.CMQ 1.CKafka
      * @param string $Consecretid 临时密钥
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(integer $ExpireTime) 设置云存套餐过期时间
  * @method integer getShiftDuration() 获取云存回看时长
  * @method void setShiftDuration(integer $ShiftDuration) 设置云存回看时长
+ * @method string getUserId() 获取云存用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserId(string $UserId) 设置云存用户ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +58,12 @@ class DescribeCloudStorageResponse extends AbstractModel
     public $ShiftDuration;
 
     /**
+     * @var string 云存用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +73,8 @@ class DescribeCloudStorageResponse extends AbstractModel
      * @param integer $Type 云存类型，1为全时云存，2为事件云存
      * @param integer $ExpireTime 云存套餐过期时间
      * @param integer $ShiftDuration 云存回看时长
+     * @param string $UserId 云存用户ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +104,10 @@ class DescribeCloudStorageResponse extends AbstractModel
 
         if (array_key_exists("ShiftDuration",$param) and $param["ShiftDuration"] !== null) {
             $this->ShiftDuration = $param["ShiftDuration"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

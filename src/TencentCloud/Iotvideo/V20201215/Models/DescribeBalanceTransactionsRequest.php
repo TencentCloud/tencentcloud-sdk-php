@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页游标开始，默认为0开始拉取第一条。
  * @method integer getLimit() 获取分页每页数量。
  * @method void setLimit(integer $Limit) 设置分页每页数量。
- * @method string getOperation() 获取流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。
- * @method void setOperation(string $Operation) 设置流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。
+ * @method string getOperation() 获取流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。默认为All
+ * @method void setOperation(string $Operation) 设置流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。默认为All
  */
 class DescribeBalanceTransactionsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeBalanceTransactionsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。
+     * @var string 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。默认为All
      */
     public $Operation;
 
@@ -55,7 +55,7 @@ class DescribeBalanceTransactionsRequest extends AbstractModel
      * @param integer $AccountType 账户类型：1-设备接入；2-云存。
      * @param integer $Offset 分页游标开始，默认为0开始拉取第一条。
      * @param integer $Limit 分页每页数量。
-     * @param string $Operation 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。
+     * @param string $Operation 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。默认为All
      */
     function __construct()
     {

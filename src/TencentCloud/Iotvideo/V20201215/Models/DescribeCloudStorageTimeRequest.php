@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getDate() 获取云存日期，例如"2020-01-05"
  * @method void setDate(string $Date) 设置云存日期，例如"2020-01-05"
+ * @method integer getStartTime() 获取开始时间，unix时间
+ * @method void setStartTime(integer $StartTime) 设置开始时间，unix时间
+ * @method integer getEndTime() 获取结束时间，unix时间
+ * @method void setEndTime(integer $EndTime) 设置结束时间，unix时间
+ * @method string getUserId() 获取用户ID
+ * @method void setUserId(string $UserId) 设置用户ID
  */
 class DescribeCloudStorageTimeRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class DescribeCloudStorageTimeRequest extends AbstractModel
     public $Date;
 
     /**
+     * @var integer 开始时间，unix时间
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 结束时间，unix时间
+     */
+    public $EndTime;
+
+    /**
+     * @var string 用户ID
+     */
+    public $UserId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $Date 云存日期，例如"2020-01-05"
+     * @param integer $StartTime 开始时间，unix时间
+     * @param integer $EndTime 结束时间，unix时间
+     * @param string $UserId 用户ID
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class DescribeCloudStorageTimeRequest extends AbstractModel
 
         if (array_key_exists("Date",$param) and $param["Date"] !== null) {
             $this->Date = $param["Date"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

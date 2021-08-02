@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 通用混流输入参数。
  *
  * @method string getInputStreamName() 获取输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
+当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。
  * @method void setInputStreamName(string $InputStreamName) 设置输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
+当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。
  * @method CommonMixLayoutParams getLayoutParams() 获取输入流布局参数。
  * @method void setLayoutParams(CommonMixLayoutParams $LayoutParams) 设置输入流布局参数。
  * @method CommonMixCropParams getCropParams() 获取输入流裁剪参数。
@@ -31,6 +35,8 @@ class CommonMixInputParam extends AbstractModel
 {
     /**
      * @var string 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
+当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。
      */
     public $InputStreamName;
 
@@ -46,6 +52,8 @@ class CommonMixInputParam extends AbstractModel
 
     /**
      * @param string $InputStreamName 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
+当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。
      * @param CommonMixLayoutParams $LayoutParams 输入流布局参数。
      * @param CommonMixCropParams $CropParams 输入流裁剪参数。
      */

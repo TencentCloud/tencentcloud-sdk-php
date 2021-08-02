@@ -31,11 +31,17 @@ SourceType 为直播（PullLivePushLive）只可以填1个，
 SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
 当前支持的拉流协议：http，https，rtmp。
+注意：
+1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
+2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
  * @method void setSourceUrls(array $SourceUrls) 设置拉流源 url 列表。
 SourceType 为直播（PullLivePushLive）只可以填1个，
 SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
 当前支持的拉流协议：http，https，rtmp。
+注意：
+1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
+2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
  * @method string getDomainName() 获取推流域名。
 将拉取过来的流推到该域名。
 注意：请使用已在云直播配置的推流域名。
@@ -140,6 +146,9 @@ SourceType 为直播（PullLivePushLive）只可以填1个，
 SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
 当前支持的拉流协议：http，https，rtmp。
+注意：
+1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
+2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
      */
     public $SourceUrls;
 
@@ -248,6 +257,9 @@ SourceType 为直播（PullLivePushLive）只可以填1个，
 SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
 当前支持的拉流协议：http，https，rtmp。
+注意：
+1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
+2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
      * @param string $DomainName 推流域名。
 将拉取过来的流推到该域名。
 注意：请使用已在云直播配置的推流域名。

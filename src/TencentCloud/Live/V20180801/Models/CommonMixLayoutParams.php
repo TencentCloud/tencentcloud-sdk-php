@@ -40,16 +40,6 @@ use TencentCloud\Common\AbstractModel;
 3表示输入流为画布。 
 4表示输入流为音频。
 5表示输入流为纯视频。
- * @method float getImageWidth() 获取输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
- * @method void setImageWidth(float $ImageWidth) 设置输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
  * @method float getImageHeight() 获取输入画面在输出时的高度。取值范围：
 像素：[0，2000]
 百分比：[0.01，0.99]
@@ -60,6 +50,16 @@ use TencentCloud\Common\AbstractModel;
 百分比：[0.01，0.99]
 不填默认为输入流的高度。
 使用百分比时，期望输出为（百分比 * 背景高）。
+ * @method float getImageWidth() 获取输入画面在输出时的宽度。取值范围：
+像素：[0，2000]
+百分比：[0.01，0.99]
+不填默认为输入流的宽度。
+使用百分比时，期望输出为（百分比 * 背景宽）。
+ * @method void setImageWidth(float $ImageWidth) 设置输入画面在输出时的宽度。取值范围：
+像素：[0，2000]
+百分比：[0.01，0.99]
+不填默认为输入流的宽度。
+使用百分比时，期望输出为（百分比 * 背景宽）。
  * @method float getLocationX() 获取输入在输出画面的X偏移。取值范围：
 像素：[0，2000]
 百分比：[0.01，0.99]
@@ -126,15 +126,6 @@ class CommonMixLayoutParams extends AbstractModel
     public $InputType;
 
     /**
-     * @var float 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
-     */
-    public $ImageWidth;
-
-    /**
      * @var float 输入画面在输出时的高度。取值范围：
 像素：[0，2000]
 百分比：[0.01，0.99]
@@ -142,6 +133,15 @@ class CommonMixLayoutParams extends AbstractModel
 使用百分比时，期望输出为（百分比 * 背景高）。
      */
     public $ImageHeight;
+
+    /**
+     * @var float 输入画面在输出时的宽度。取值范围：
+像素：[0，2000]
+百分比：[0.01，0.99]
+不填默认为输入流的宽度。
+使用百分比时，期望输出为（百分比 * 背景宽）。
+     */
+    public $ImageWidth;
 
     /**
      * @var float 输入在输出画面的X偏移。取值范围：
@@ -192,16 +192,16 @@ class CommonMixLayoutParams extends AbstractModel
 3表示输入流为画布。 
 4表示输入流为音频。
 5表示输入流为纯视频。
-     * @param float $ImageWidth 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
      * @param float $ImageHeight 输入画面在输出时的高度。取值范围：
 像素：[0，2000]
 百分比：[0.01，0.99]
 不填默认为输入流的高度。
 使用百分比时，期望输出为（百分比 * 背景高）。
+     * @param float $ImageWidth 输入画面在输出时的宽度。取值范围：
+像素：[0，2000]
+百分比：[0.01，0.99]
+不填默认为输入流的宽度。
+使用百分比时，期望输出为（百分比 * 背景宽）。
      * @param float $LocationX 输入在输出画面的X偏移。取值范围：
 像素：[0，2000]
 百分比：[0.01，0.99]
@@ -246,12 +246,12 @@ class CommonMixLayoutParams extends AbstractModel
             $this->InputType = $param["InputType"];
         }
 
-        if (array_key_exists("ImageWidth",$param) and $param["ImageWidth"] !== null) {
-            $this->ImageWidth = $param["ImageWidth"];
-        }
-
         if (array_key_exists("ImageHeight",$param) and $param["ImageHeight"] !== null) {
             $this->ImageHeight = $param["ImageHeight"];
+        }
+
+        if (array_key_exists("ImageWidth",$param) and $param["ImageWidth"] !== null) {
+            $this->ImageWidth = $param["ImageWidth"];
         }
 
         if (array_key_exists("LocationX",$param) and $param["LocationX"] !== null) {

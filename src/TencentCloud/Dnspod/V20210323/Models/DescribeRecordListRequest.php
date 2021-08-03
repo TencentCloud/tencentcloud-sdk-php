@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) 设置获取某个分组下的解析记录时，传这个分组Id
  * @method string getKeyword() 获取通过关键字搜索解析记录，当前支持搜索主机头和记录值
  * @method void setKeyword(string $Keyword) 设置通过关键字搜索解析记录，当前支持搜索主机头和记录值
- * @method string getSortField() 获取排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
- * @method void setSortField(string $SortField) 设置排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
+ * @method string getSortField() 获取排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
+ * @method void setSortField(string $SortField) 设置排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
  * @method string getSortType() 获取排序方式，正序：ASC，逆序：DESC。默认值为ASC。
  * @method void setSortType(string $SortType) 设置排序方式，正序：ASC，逆序：DESC。默认值为ASC。
  * @method integer getOffset() 获取偏移量，默认值为0。
@@ -88,7 +88,7 @@ class DescribeRecordListRequest extends AbstractModel
     public $Keyword;
 
     /**
-     * @var string 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
+     * @var string 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
      */
     public $SortField;
 
@@ -116,7 +116,7 @@ class DescribeRecordListRequest extends AbstractModel
      * @param string $RecordLineId 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数
      * @param integer $GroupId 获取某个分组下的解析记录时，传这个分组Id
      * @param string $Keyword 通过关键字搜索解析记录，当前支持搜索主机头和记录值
-     * @param string $SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
+     * @param string $SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
      * @param string $SortType 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
      * @param integer $Offset 偏移量，默认值为0。
      * @param integer $Limit 限制数量，当前Limit最大支持3000。默认值为100。

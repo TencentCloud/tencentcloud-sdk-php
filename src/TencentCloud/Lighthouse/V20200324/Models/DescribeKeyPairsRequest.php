@@ -26,8 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100。
- * @method array getFilters() 获取过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
- * @method void setFilters(array $Filters) 设置过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+ * @method array getFilters() 获取过滤器列表。
+<li>key-id</li>按照【密钥对ID】进行过滤。
+类型：String
+必选：否
+<li>key-name</li>按照【密钥对名称】进行过滤。
+类型：String
+必选：否
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
+ * @method void setFilters(array $Filters) 设置过滤器列表。
+<li>key-id</li>按照【密钥对ID】进行过滤。
+类型：String
+必选：否
+<li>key-name</li>按照【密钥对名称】进行过滤。
+类型：String
+必选：否
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
  */
 class DescribeKeyPairsRequest extends AbstractModel
 {
@@ -47,7 +61,14 @@ class DescribeKeyPairsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+     * @var array 过滤器列表。
+<li>key-id</li>按照【密钥对ID】进行过滤。
+类型：String
+必选：否
+<li>key-name</li>按照【密钥对名称】进行过滤。
+类型：String
+必选：否
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
      */
     public $Filters;
 
@@ -55,7 +76,14 @@ class DescribeKeyPairsRequest extends AbstractModel
      * @param array $KeyIds 密钥对 ID 列表。
      * @param integer $Offset 偏移量，默认为 0。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
-     * @param array $Filters 过滤条件，每次请求的 Filters 的上限为10， Filters.Values 的上限为5。参数不可以同时指定 KeyIds 和 Filters 。详细的过滤条件如下： key-id - String - 是否必填： 否 - （过滤条件）按照KeyID进行过滤; key-name - String - 是否必填： 否 - （过滤条件）按照KeyName进行过滤。
+     * @param array $Filters 过滤器列表。
+<li>key-id</li>按照【密钥对ID】进行过滤。
+类型：String
+必选：否
+<li>key-name</li>按照【密钥对名称】进行过滤。
+类型：String
+必选：否
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 KeyIds 和 Filters。
      */
     function __construct()
     {

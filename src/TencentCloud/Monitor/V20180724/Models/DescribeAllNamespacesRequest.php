@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllNamespaces请求参数结构体
  *
- * @method string getSceneType() 获取根据使用场景过滤 "ST_DASHBOARD"=Dashboard类型 或 "ST_ALARM"=告警类型
- * @method void setSceneType(string $SceneType) 设置根据使用场景过滤 "ST_DASHBOARD"=Dashboard类型 或 "ST_ALARM"=告警类型
+ * @method string getSceneType() 获取根据使用场景过滤 目前仅有"ST_ALARM"=告警类型
+ * @method void setSceneType(string $SceneType) 设置根据使用场景过滤 目前仅有"ST_ALARM"=告警类型
  * @method string getModule() 获取固定值，为"monitor"
  * @method void setModule(string $Module) 设置固定值，为"monitor"
  * @method array getMonitorTypes() 获取根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAllNamespacesRequest extends AbstractModel
 {
     /**
-     * @var string 根据使用场景过滤 "ST_DASHBOARD"=Dashboard类型 或 "ST_ALARM"=告警类型
+     * @var string 根据使用场景过滤 目前仅有"ST_ALARM"=告警类型
      */
     public $SceneType;
 
@@ -52,7 +52,7 @@ class DescribeAllNamespacesRequest extends AbstractModel
     public $Ids;
 
     /**
-     * @param string $SceneType 根据使用场景过滤 "ST_DASHBOARD"=Dashboard类型 或 "ST_ALARM"=告警类型
+     * @param string $SceneType 根据使用场景过滤 目前仅有"ST_ALARM"=告警类型
      * @param string $Module 固定值，为"monitor"
      * @param array $MonitorTypes 根据监控类型过滤 不填默认查所有类型 "MT_QCE"=云产品监控
      * @param array $Ids 根据namespace的Id过滤 不填默认查询所有

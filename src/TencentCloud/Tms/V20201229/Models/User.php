@@ -46,6 +46,12 @@ use TencentCloud\Common\AbstractModel;
 备注：请保持手机号格式的统一，如区号格式（086/+86）等。
  * @method void setPhone(string $Phone) 设置该字段表示业务用户对应账号的手机号信息，支持全球各地区手机号的记录。<br>
 备注：请保持手机号格式的统一，如区号格式（086/+86）等。
+ * @method string getHeadUrl() 获取该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
+备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
+ * @method void setHeadUrl(string $HeadUrl) 设置该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
+备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
+ * @method string getDesc() 获取该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
+ * @method void setDesc(string $Desc) 设置该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
  */
 class User extends AbstractModel
 {
@@ -91,6 +97,17 @@ class User extends AbstractModel
     public $Phone;
 
     /**
+     * @var string 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
+备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
+     */
+    public $HeadUrl;
+
+    /**
+     * @var string 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
+     */
+    public $Desc;
+
+    /**
      * @param string $UserId 该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
 备注：该字段可传入微信openid、QQopenid、字符串等账号信息，与账号类别参数（AccountType）配合使用可确定唯一账号。
      * @param string $Nickname 该字段表示业务用户对应的账号昵称信息。
@@ -104,6 +121,9 @@ class User extends AbstractModel
 取值：**0**（默认值，代表等级未知）、**1**（等级较低）、**2**（等级中等）、**3**（等级较高），目前**暂不支持自定义等级**。
      * @param string $Phone 该字段表示业务用户对应账号的手机号信息，支持全球各地区手机号的记录。<br>
 备注：请保持手机号格式的统一，如区号格式（086/+86）等。
+     * @param string $HeadUrl 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
+备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
+     * @param string $Desc 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
      */
     function __construct()
     {
@@ -144,6 +164,14 @@ class User extends AbstractModel
 
         if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
             $this->Phone = $param["Phone"];
+        }
+
+        if (array_key_exists("HeadUrl",$param) and $param["HeadUrl"] !== null) {
+            $this->HeadUrl = $param["HeadUrl"];
+        }
+
+        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
+            $this->Desc = $param["Desc"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getImageName() 获取镜像名称
  * @method void setImageName(string $ImageName) 设置镜像名称
- * @method string getInstanceId() 获取需要制作镜像的实例ID。
- * @method void setInstanceId(string $InstanceId) 设置需要制作镜像的实例ID。
+ * @method string getInstanceId() 获取需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
+ * @method void setInstanceId(string $InstanceId) 设置需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
  * @method string getImageDescription() 获取镜像描述
  * @method void setImageDescription(string $ImageDescription) 设置镜像描述
  * @method string getForcePoweroff() 获取是否执行强制关机以制作镜像。
@@ -47,7 +47,7 @@ class CreateImageRequest extends AbstractModel
     public $ImageName;
 
     /**
-     * @var string 需要制作镜像的实例ID。
+     * @var string 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
      */
     public $InstanceId;
 
@@ -84,7 +84,7 @@ class CreateImageRequest extends AbstractModel
 
     /**
      * @param string $ImageName 镜像名称
-     * @param string $InstanceId 需要制作镜像的实例ID。
+     * @param string $InstanceId 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
      * @param string $ImageDescription 镜像描述
      * @param string $ForcePoweroff 是否执行强制关机以制作镜像。
 取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。

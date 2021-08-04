@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID。
  * @method string getDeviceName() 获取设备名称。
  * @method void setDeviceName(string $DeviceName) 设置设备名称。
+ * @method boolean getForceDelete() 获取是否删除绑定设备
+ * @method void setForceDelete(boolean $ForceDelete) 设置是否删除绑定设备
  */
 class DeleteDeviceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteDeviceRequest extends AbstractModel
     public $DeviceName;
 
     /**
+     * @var boolean 是否删除绑定设备
+     */
+    public $ForceDelete;
+
+    /**
      * @param string $ProductId 产品ID。
      * @param string $DeviceName 设备名称。
+     * @param boolean $ForceDelete 是否删除绑定设备
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteDeviceRequest extends AbstractModel
 
         if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
             $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("ForceDelete",$param) and $param["ForceDelete"] !== null) {
+            $this->ForceDelete = $param["ForceDelete"];
         }
     }
 }

@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 <li>包含所指定的头尾时间点。</li>
  * @method void setCreateTime(TimeRange $CreateTime) 设置匹配创建时间在此时间段内的文件。
 <li>包含所指定的头尾时间点。</li>
+ * @method TimeRange getExpireTime() 获取匹配过期时间在此时间段内的文件，无法检索到已过期文件。
+<li>包含所指定的头尾时间点。</li>
+ * @method void setExpireTime(TimeRange $ExpireTime) 设置匹配过期时间在此时间段内的文件，无法检索到已过期文件。
+<li>包含所指定的头尾时间点。</li>
  * @method SortBy getSort() 获取排序方式。
 <li>Sort.Field 可选 CreateTime 。</li>
 <li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
@@ -122,6 +126,16 @@ use TencentCloud\Common\AbstractModel;
 <li>数组长度限制：20。</li>
  * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+ * @method array getStorageClasses() 获取存储类型数组。可选值有：
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
+ * @method void setStorageClasses(array $StorageClasses) 设置存储类型数组。可选值有：
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
  * @method string getText() 获取（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
  * @method void setText(string $Text) 设置（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -235,6 +249,12 @@ class SearchMediaRequest extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var TimeRange 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
+<li>包含所指定的头尾时间点。</li>
+     */
+    public $ExpireTime;
+
+    /**
      * @var SortBy 排序方式。
 <li>Sort.Field 可选 CreateTime 。</li>
 <li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
@@ -279,6 +299,15 @@ class SearchMediaRequest extends AbstractModel
      * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public $SubAppId;
+
+    /**
+     * @var array 存储类型数组。可选值有：
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
+     */
+    public $StorageClasses;
 
     /**
      * @var string （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -352,6 +381,8 @@ class SearchMediaRequest extends AbstractModel
 <li>数组长度限制：10。</li>
      * @param TimeRange $CreateTime 匹配创建时间在此时间段内的文件。
 <li>包含所指定的头尾时间点。</li>
+     * @param TimeRange $ExpireTime 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
+<li>包含所指定的头尾时间点。</li>
      * @param SortBy $Sort 排序方式。
 <li>Sort.Field 可选 CreateTime 。</li>
 <li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
@@ -374,6 +405,11 @@ class SearchMediaRequest extends AbstractModel
 <li>单个存储地区长度限制：20个字符。</li>
 <li>数组长度限制：20。</li>
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @param array $StorageClasses 存储类型数组。可选值有：
+<li> STANDARD：标准存储。</li>
+<li> STANDARD_IA：低频存储。</li>
+<li> ARCHIVE：归档存储。</li>
+<li> DEEP_ARCHIVE：深度归档存储。</li>
      * @param string $Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
      * @param string $SourceType （不推荐：应使用 SourceTypes 替代）
@@ -451,6 +487,11 @@ class SearchMediaRequest extends AbstractModel
             $this->CreateTime->deserialize($param["CreateTime"]);
         }
 
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = new TimeRange();
+            $this->ExpireTime->deserialize($param["ExpireTime"]);
+        }
+
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
             $this->Sort = new SortBy();
             $this->Sort->deserialize($param["Sort"]);
@@ -474,6 +515,10 @@ class SearchMediaRequest extends AbstractModel
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("StorageClasses",$param) and $param["StorageClasses"] !== null) {
+            $this->StorageClasses = $param["StorageClasses"];
         }
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {

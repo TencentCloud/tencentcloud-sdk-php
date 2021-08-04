@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperatorRemark(string $OperatorRemark) 设置操作备注
  * @method string getServerPath() 获取服务路径（只会第一次生效）
  * @method void setServerPath(string $ServerPath) 设置服务路径（只会第一次生效）
+ * @method boolean getIsUpdateCls() 获取是否更新Cls
+ * @method void setIsUpdateCls(boolean $IsUpdateCls) 设置是否更新Cls
  */
 class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -248,6 +250,11 @@ class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel
     public $ServerPath;
 
     /**
+     * @var boolean 是否更新Cls
+     */
+    public $IsUpdateCls;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $VersionName 要替换的版本名称，可以为latest
      * @param string $UploadType 枚举（package/repository/image)
@@ -280,6 +287,7 @@ class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param boolean $EnableUnion 是否启用统一域名
      * @param string $OperatorRemark 操作备注
      * @param string $ServerPath 服务路径（只会第一次生效）
+     * @param boolean $IsUpdateCls 是否更新Cls
      */
     function __construct()
     {
@@ -427,6 +435,10 @@ class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel
 
         if (array_key_exists("ServerPath",$param) and $param["ServerPath"] !== null) {
             $this->ServerPath = $param["ServerPath"];
+        }
+
+        if (array_key_exists("IsUpdateCls",$param) and $param["IsUpdateCls"] !== null) {
+            $this->IsUpdateCls = $param["IsUpdateCls"];
         }
     }
 }

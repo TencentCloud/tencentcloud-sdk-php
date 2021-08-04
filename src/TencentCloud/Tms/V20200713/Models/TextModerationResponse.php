@@ -20,41 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TextModeration返回参数结构体
  *
- * @method string getBizType() 获取您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
- * @method void setBizType(string $BizType) 设置您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
- * @method integer getEvilFlag() 获取数据是否属于恶意类型。
- 0：正常 1：可疑
- * @method void setEvilFlag(integer $EvilFlag) 设置数据是否属于恶意类型。
- 0：正常 1：可疑
- * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
- * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
- * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
+ * @method string getBizType() 获取您在入参时所填入的Biztype参数
+ * @method void setBizType(string $BizType) 设置您在入参时所填入的Biztype参数
+ * @method integer getEvilFlag() 获取数据是否属于恶意类型，0：正常 1：可疑
+ * @method void setEvilFlag(integer $EvilFlag) 设置数据是否属于恶意类型，0：正常 1：可疑
+ * @method string getLabel() 获取恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库，以及令人反感、不安全或不适宜的内容类型
+ * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库，以及令人反感、不安全或不适宜的内容类型
+ * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
- * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
+ * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
  * @method array getKeywords() 获取文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
-如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
+如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeywords(array $Keywords) 设置文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
-如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
+如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
 （如：色情 99.99，则该样本属于色情的置信度非常高。）
  * @method void setScore(integer $Score) 设置机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
 （如：色情 99.99，则该样本属于色情的置信度非常高。）
- * @method array getDetailResults() 获取接口识别样本后返回的详细结果。
+ * @method array getDetailResults() 获取接口识别样本后返回的详细结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDetailResults(array $DetailResults) 设置接口识别样本后返回的详细结果。
+ * @method void setDetailResults(array $DetailResults) 设置接口识别样本后返回的详细结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRiskDetails() 获取接口识别样本中存在违规账号风险的检测结果。
+ * @method array getRiskDetails() 获取接口识别样本中存在违规账号风险的检测结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskDetails(array $RiskDetails) 设置接口识别样本中存在违规账号风险的检测结果。
+ * @method void setRiskDetails(array $RiskDetails) 设置接口识别样本中存在违规账号风险的检测结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtra() 获取扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
+ * @method string getExtra() 获取扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtra(string $Extra) 设置扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
+ * @method void setExtra(string $Extra) 设置扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataId() 获取请求参数中的DataId
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,31 +62,29 @@ use TencentCloud\Common\AbstractModel;
 class TextModerationResponse extends AbstractModel
 {
     /**
-     * @var string 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
+     * @var string 您在入参时所填入的Biztype参数
      */
     public $BizType;
 
     /**
-     * @var integer 数据是否属于恶意类型。
- 0：正常 1：可疑
+     * @var integer 数据是否属于恶意类型，0：正常 1：可疑
      */
     public $EvilFlag;
 
     /**
-     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
+     * @var string 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库，以及令人反感、不安全或不适宜的内容类型
      */
     public $Label;
 
     /**
-     * @var string 建议您拿到判断结果后的执行操作。
+     * @var string 建议您拿到判断结果后的执行操作
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      */
     public $Suggestion;
 
     /**
      * @var array 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
-如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
+如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keywords;
@@ -102,19 +96,19 @@ class TextModerationResponse extends AbstractModel
     public $Score;
 
     /**
-     * @var array 接口识别样本后返回的详细结果。
+     * @var array 接口识别样本后返回的详细结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetailResults;
 
     /**
-     * @var array 接口识别样本中存在违规账号风险的检测结果。
+     * @var array 接口识别样本中存在违规账号风险的检测结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskDetails;
 
     /**
-     * @var string 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
+     * @var string 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
@@ -131,23 +125,21 @@ class TextModerationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BizType 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
-     * @param integer $EvilFlag 数据是否属于恶意类型。
- 0：正常 1：可疑
-     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-以及令人反感、不安全或不适宜的内容类型。
-     * @param string $Suggestion 建议您拿到判断结果后的执行操作。
+     * @param string $BizType 您在入参时所填入的Biztype参数
+     * @param integer $EvilFlag 数据是否属于恶意类型，0：正常 1：可疑
+     * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库，以及令人反感、不安全或不适宜的内容类型
+     * @param string $Suggestion 建议您拿到判断结果后的执行操作
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      * @param array $Keywords 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
-如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
+如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 机器判断当前分类的置信度，取值范围：0.00~100.00。分数越高，表示越有可能属于当前分类。
 （如：色情 99.99，则该样本属于色情的置信度非常高。）
-     * @param array $DetailResults 接口识别样本后返回的详细结果。
+     * @param array $DetailResults 接口识别样本后返回的详细结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RiskDetails 接口识别样本中存在违规账号风险的检测结果。
+     * @param array $RiskDetails 接口识别样本中存在违规账号风险的检测结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Extra 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
+     * @param string $Extra 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataId 请求参数中的DataId
 注意：此字段可能返回 null，表示取不到有效值。

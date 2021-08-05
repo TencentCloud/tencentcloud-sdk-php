@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置环境标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCustomLogServices() 获取自定义日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomLogServices(array $CustomLogServices) 设置自定义日志服务
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvInfo extends AbstractModel
 {
@@ -205,6 +209,12 @@ class EnvInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var array 自定义日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomLogServices;
+
+    /**
      * @param string $EnvId 账户下该环境唯一标识
      * @param string $Source 环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
@@ -239,6 +249,8 @@ class EnvInfo extends AbstractModel
      * @param string $Region 环境所属地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 环境标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CustomLogServices 自定义日志服务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -357,6 +369,15 @@ class EnvInfo extends AbstractModel
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("CustomLogServices",$param) and $param["CustomLogServices"] !== null) {
+            $this->CustomLogServices = [];
+            foreach ($param["CustomLogServices"] as $key => $value){
+                $obj = new ClsInfo();
+                $obj->deserialize($value);
+                array_push($this->CustomLogServices, $obj);
             }
         }
     }

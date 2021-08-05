@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) 设置标签键值对数组
  * @method array getInitParams() 获取参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
  * @method void setInitParams(array $InitParams) 设置参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+ * @method string getDcnRegion() 获取DCN源地域
+ * @method void setDcnRegion(string $DcnRegion) 设置DCN源地域
+ * @method string getDcnInstanceId() 获取DCN源实例ID
+ * @method void setDcnInstanceId(string $DcnInstanceId) 设置DCN源实例ID
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -159,6 +163,16 @@ class CreateDBInstanceRequest extends AbstractModel
     public $InitParams;
 
     /**
+     * @var string DCN源地域
+     */
+    public $DcnRegion;
+
+    /**
+     * @var string DCN源实例ID
+     */
+    public $DcnInstanceId;
+
+    /**
      * @param array $Zones 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      * @param integer $NodeCount 节点个数大小，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -180,6 +194,8 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $Ipv6Flag 是否支持IPv6
      * @param array $ResourceTags 标签键值对数组
      * @param array $InitParams 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+     * @param string $DcnRegion DCN源地域
+     * @param string $DcnInstanceId DCN源实例ID
      */
     function __construct()
     {
@@ -274,6 +290,14 @@ class CreateDBInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InitParams, $obj);
             }
+        }
+
+        if (array_key_exists("DcnRegion",$param) and $param["DcnRegion"] !== null) {
+            $this->DcnRegion = $param["DcnRegion"];
+        }
+
+        if (array_key_exists("DcnInstanceId",$param) and $param["DcnInstanceId"] !== null) {
+            $this->DcnInstanceId = $param["DcnInstanceId"];
         }
     }
 }

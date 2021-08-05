@@ -48,8 +48,10 @@ use TencentCloud\Live\V20180801\Models as Models;
 1. 源流视频编码目前只支持: H264, H265。其他编码格式建议先进行转码处理。
 2. 源流音频编码目前只支持: AAC。其他编码格式建议先进行转码处理。
 3. 默认支持任务数上限20个，如有特殊需求，可通过提单到售后进行评估增加上限。
-4. 拉流转推功能为计费增值服务，计费规则详情可参见[计费文档](https://cloud.tencent.com/document/product/267/53308)。
-5. 拉流转推功能仅提供内容拉取与推送服务，请确保内容已获得授权并符合内容传播相关的法律法规。若内容有侵权或违规相关问题，云直播会停止相关的功能服务并保留追究法律责任的权利。
+4. 目前仅支持推流到腾讯云直播，暂不支持推到第三方。
+5. 过期不用的任务需自行清理，未清理的过期任务也会占用上限额度，如需要自动清理过期任务，可提单给售后进行配置。
+6. 拉流转推功能为计费增值服务，计费规则详情可参见[计费文档](https://cloud.tencent.com/document/product/267/53308)。
+7. 拉流转推功能仅提供内容拉取与推送服务，请确保内容已获得授权并符合内容传播相关的法律法规。若内容有侵权或违规相关问题，云直播会停止相关的功能服务并保留追究法律责任的权利。
 
  * @method Models\CreateLiveRecordResponse CreateLiveRecord(Models\CreateLiveRecordRequest $req) - 使用前提
   1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
@@ -173,6 +175,8 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeProIspPlaySumInfoListResponse DescribeProIspPlaySumInfoList(Models\DescribeProIspPlaySumInfoListRequest $req) 查询某段时间内每个国家地区每个省份每个运营商的平均每秒流量，总流量，总请求数信息。
  * @method Models\DescribeProvinceIspPlayInfoListResponse DescribeProvinceIspPlayInfoList(Models\DescribeProvinceIspPlayInfoListRequest $req) 查询某省份某运营商下行播放数据，包括带宽，流量，请求数，并发连接数信息。
  * @method Models\DescribePullStreamConfigsResponse DescribePullStreamConfigs(Models\DescribePullStreamConfigsRequest $req) 查询直播拉流配置。
+ * @method Models\DescribePushBandwidthAndFluxListResponse DescribePushBandwidthAndFluxList(Models\DescribePushBandwidthAndFluxListRequest $req) 直播推流带宽和流量数据查询。
+推流计费会先取全球推流用量和全球播放用量进行比较，满足计费条件后再按各地区用量出账。详情参见[计费文档](https://cloud.tencent.com/document/product/267/34175)。
  * @method Models\DescribeRecordTaskResponse DescribeRecordTask(Models\DescribeRecordTaskRequest $req) 查询指定时间段范围内启动和结束的录制任务列表。
 - 使用前提
 1. 仅用于查询由 CreateRecordTask 接口创建的录制任务。

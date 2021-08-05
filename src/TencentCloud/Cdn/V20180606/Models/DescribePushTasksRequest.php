@@ -46,10 +46,12 @@ global：全球
 fail：预热失败
 done：预热成功
 process：预热中
+invalid: 预热无效(源站返回4xx或5xx状态码)
  * @method void setStatus(string $Status) 设置指定任务状态查询
 fail：预热失败
 done：预热成功
 process：预热中
+invalid: 预热无效(源站返回4xx或5xx状态码)
  */
 class DescribePushTasksRequest extends AbstractModel
 {
@@ -97,6 +99,7 @@ global：全球
 fail：预热失败
 done：预热成功
 process：预热中
+invalid: 预热无效(源站返回4xx或5xx状态码)
      */
     public $Status;
 
@@ -116,6 +119,7 @@ global：全球
 fail：预热失败
 done：预热成功
 process：预热中
+invalid: 预热无效(源站返回4xx或5xx状态码)
      */
     function __construct()
     {

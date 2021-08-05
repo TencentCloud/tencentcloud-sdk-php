@@ -43,6 +43,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CheckAcctResponse CheckAcct(Models\CheckAcctRequest $req) 商户绑定提现银行卡的验证接口
  * @method Models\CheckAmountResponse CheckAmount(Models\CheckAmountRequest $req) 验证鉴权金额。此接口可受理BindRelateAcctSmallAmount接口发起的转账金额（往账鉴权方式）的验证处理。若所回填的验证金额验证通过，则会绑定原申请中的银行账户作为提现账户。通过此接口也可以查得BindRelateAcctSmallAmount接口发起的来账鉴权方式的申请的当前状态。
  * @method Models\CloseOrderResponse CloseOrder(Models\CloseOrderRequest $req) 通过此接口关闭此前已创建的订单，关闭后，用户将无法继续付款。仅能关闭创建后未支付的订单
+ * @method Models\ConfirmOrderResponse ConfirmOrder(Models\ConfirmOrderRequest $req) 云鉴-消费订单确认接口
  * @method Models\ContractOrderResponse ContractOrder(Models\ContractOrderRequest $req) 应用需要先带上签约信息调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
  * @method Models\CreateAcctResponse CreateAcct(Models\CreateAcctRequest $req) 子商户入驻聚鑫平台
  * @method Models\CreateAgentTaxPaymentInfosResponse CreateAgentTaxPaymentInfos(Models\CreateAgentTaxPaymentInfosRequest $req) 直播平台-代理商完税信息录入
@@ -51,6 +52,8 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateInvoiceResponse CreateInvoice(Models\CreateInvoiceRequest $req) 智慧零售-发票开具
  * @method Models\CreateInvoiceV2Response CreateInvoiceV2(Models\CreateInvoiceV2Request $req) 智慧零售-发票开具V2
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 智慧零售-商户注册
+ * @method Models\CreateOrderResponse CreateOrder(Models\CreateOrderRequest $req) 云鉴-消费订单发起的接口
+ * @method Models\CreatePayMerchantResponse CreatePayMerchant(Models\CreatePayMerchantRequest $req) 商户新增的接口
  * @method Models\CreateRedInvoiceResponse CreateRedInvoice(Models\CreateRedInvoiceRequest $req) 智慧零售-发票红冲
  * @method Models\CreateRedInvoiceV2Response CreateRedInvoiceV2(Models\CreateRedInvoiceV2Request $req) 智慧零售-发票红冲V2
  * @method Models\CreateSinglePayResponse CreateSinglePay(Models\CreateSinglePayRequest $req) 银企直连-单笔支付接口
@@ -64,6 +67,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\MigrateOrderRefundResponse MigrateOrderRefund(Models\MigrateOrderRefundRequest $req) 山姆聚合支付项目-存量订单退款接口。可以通过本接口将支付款全部或部分退还给付款方，在收到用户退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。
  * @method Models\MigrateOrderRefundQueryResponse MigrateOrderRefundQuery(Models\MigrateOrderRefundQueryRequest $req) 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时。
  * @method Models\ModifyAgentTaxPaymentInfoResponse ModifyAgentTaxPaymentInfo(Models\ModifyAgentTaxPaymentInfoRequest $req) 直播平台-修改代理商完税信息
+ * @method Models\ModifyMerchantResponse ModifyMerchant(Models\ModifyMerchantRequest $req) 云鉴-商户信息修改的接口
  * @method Models\ModifyMntMbrBindRelateAcctBankCodeResponse ModifyMntMbrBindRelateAcctBankCode(Models\ModifyMntMbrBindRelateAcctBankCodeRequest $req) 维护会员绑定提现账户联行号。此接口可以支持市场修改会员的提现账户的开户行信息，具体包括开户行行名、开户行的银行联行号（大小额联行号）和超级网银行号。
  * @method Models\QueryAcctBindingResponse QueryAcctBinding(Models\QueryAcctBindingRequest $req) 聚鑫-查询子账户绑定银行卡
  * @method Models\QueryAcctInfoResponse QueryAcctInfo(Models\QueryAcctInfoRequest $req) 聚鑫-开户信息查询
@@ -86,8 +90,10 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryMemberBindResponse QueryMemberBind(Models\QueryMemberBindRequest $req) 会员绑定信息查询。查询标志为“单个会员”的情况下，返回该会员的有效的绑定账户信息。
 查询标志为“全部会员”的情况下，返回市场下的全部的有效的绑定账户信息。查询标志为“单个会员的证件信息”的情况下，返回市场下的指定的会员的留存在电商见证宝系统的证件信息。
  * @method Models\QueryMemberTransactionResponse QueryMemberTransaction(Models\QueryMemberTransactionRequest $req) 会员间交易-不验证。此接口可以实现会员间的余额的交易，实现资金在会员之间流动。
+ * @method Models\QueryMerchantResponse QueryMerchant(Models\QueryMerchantRequest $req) 云鉴-商户信息查询接口
  * @method Models\QueryMerchantBalanceResponse QueryMerchantBalance(Models\QueryMerchantBalanceRequest $req) 跨境-对接方账户余额查询
  * @method Models\QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagement(Models\QueryMerchantInfoForManagementRequest $req) 智慧零售-查询管理端商户
+ * @method Models\QueryMerchantOrderResponse QueryMerchantOrder(Models\QueryMerchantOrderRequest $req) 云鉴-消费订单查询接口
  * @method Models\QueryOrderResponse QueryOrder(Models\QueryOrderRequest $req) 根据订单号，或者用户Id，查询支付订单状态 
  * @method Models\QueryOutwardOrderResponse QueryOutwardOrder(Models\QueryOutwardOrderRequest $req) 跨境-查询汇出结果
  * @method Models\QueryPayerInfoResponse QueryPayerInfo(Models\QueryPayerInfoRequest $req) 跨境-付款人查询
@@ -104,6 +110,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\RechargeMemberThirdPayResponse RechargeMemberThirdPay(Models\RechargeMemberThirdPayRequest $req) 见证宝-会员在途充值(经第三方支付渠道)
  * @method Models\RefundResponse Refund(Models\RefundRequest $req) 如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。 
  * @method Models\RefundMemberTransactionResponse RefundMemberTransaction(Models\RefundMemberTransactionRequest $req) 会员间交易退款
+ * @method Models\RefundOrderResponse RefundOrder(Models\RefundOrderRequest $req) 云鉴-消费订单退款的接口
  * @method Models\RegisterBehaviorResponse RegisterBehavior(Models\RegisterBehaviorRequest $req) 商户查询是否签约和签约行为上报
  * @method Models\RegisterBillResponse RegisterBill(Models\RegisterBillRequest $req) 登记挂账(支持撤销)
  * @method Models\RegisterBillSupportWithdrawResponse RegisterBillSupportWithdraw(Models\RegisterBillSupportWithdrawRequest $req) 登记挂账(支持撤销)。此接口可实现把不明来账或自有资金等已登记在挂账子账户下的资金调整到普通会员子账户。即通过申请调用此接口，将会减少挂账子账户的资金，调增指定的普通会员子账户的可提现余额及可用余额。此接口不支持把挂账子账户资金清分到功能子账户。

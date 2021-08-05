@@ -66,6 +66,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\ModifyDDoSGeoIPBlockConfigResponse ModifyDDoSGeoIPBlockConfig(Models\ModifyDDoSGeoIPBlockConfigRequest $req) 修改DDoS防护的区域封禁配置
  * @method Models\ModifyDDoSSpeedLimitConfigResponse ModifyDDoSSpeedLimitConfig(Models\ModifyDDoSSpeedLimitConfigRequest $req) 修改DDoS防护的访问限速配置
  * @method Models\ModifyDomainUsrNameResponse ModifyDomainUsrName(Models\ModifyDomainUsrNameRequest $req) 修改智能解析域名名称
+ * @method Models\ModifyL7RulesEdgeResponse ModifyL7RulesEdge(Models\ModifyL7RulesEdgeRequest $req) 修改边界防护L7转发规则
  * @method Models\ModifyPacketFilterConfigResponse ModifyPacketFilterConfig(Models\ModifyPacketFilterConfigRequest $req) 修改DDoS防护的特征过滤规则
  * @method Models\SwitchWaterPrintConfigResponse SwitchWaterPrintConfig(Models\SwitchWaterPrintConfigRequest $req) 开启或关闭DDoS防护的水印防护配置
  */

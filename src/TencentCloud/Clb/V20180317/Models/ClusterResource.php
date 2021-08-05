@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取集群名称。
  * @method void setClusterName(string $ClusterName) 设置集群名称。
- * @method string getIsp() 获取互联网服务供应商
+ * @method string getIsp() 获取集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsp(string $Isp) 设置互联网服务供应商
+ * @method void setIsp(string $Isp) 设置集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterResource extends AbstractModel
@@ -69,7 +69,7 @@ class ClusterResource extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string 互联网服务供应商
+     * @var string 集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Isp;
@@ -82,7 +82,7 @@ class ClusterResource extends AbstractModel
      * @param string $Idle 资源是否闲置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名称。
-     * @param string $Isp 互联网服务供应商
+     * @param string $Isp 集群的Isp属性，如："BGP","CMCC","CUCC","CTCC","INTERNAL"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

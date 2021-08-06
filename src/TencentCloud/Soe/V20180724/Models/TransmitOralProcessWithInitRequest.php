@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * TransmitOralProcessWithInit请求参数结构体
  *
  * @method integer getSeqId() 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+注意：序号上限为3000，不能超过上限。
  * @method void setSeqId(integer $SeqId) 设置流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+注意：序号上限为3000，不能超过上限。
  * @method integer getIsEnd() 获取是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
  * @method void setIsEnd(integer $IsEnd) 设置是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
  * @method integer getVoiceFileType() 获取语音文件类型
@@ -139,6 +141,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 {
     /**
      * @var integer 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+注意：序号上限为3000，不能超过上限。
      */
     public $SeqId;
 
@@ -264,6 +267,7 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
 
     /**
      * @param integer $SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+注意：序号上限为3000，不能超过上限。
      * @param integer $IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      * @param integer $VoiceFileType 语音文件类型
 1: raw

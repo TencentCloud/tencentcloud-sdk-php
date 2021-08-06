@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method VatInvoice getInvoice() 获取增值税发票信息，详情请点击左侧链接。
  * @method void setInvoice(VatInvoice $Invoice) 设置增值税发票信息，详情请点击左侧链接。
+ * @method VehicleInvoiceInfo getVehicleInvoiceInfo() 获取机动车销售统一发票信息
+ * @method void setVehicleInvoiceInfo(VehicleInvoiceInfo $VehicleInvoiceInfo) 设置机动车销售统一发票信息
+ * @method UsedVehicleInvoiceInfo getUsedVehicleInvoiceInfo() 获取二手车销售统一发票信息
+ * @method void setUsedVehicleInvoiceInfo(UsedVehicleInvoiceInfo $UsedVehicleInvoiceInfo) 设置二手车销售统一发票信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,24 @@ class VatInvoiceVerifyResponse extends AbstractModel
     public $Invoice;
 
     /**
+     * @var VehicleInvoiceInfo 机动车销售统一发票信息
+     */
+    public $VehicleInvoiceInfo;
+
+    /**
+     * @var UsedVehicleInvoiceInfo 二手车销售统一发票信息
+     */
+    public $UsedVehicleInvoiceInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param VatInvoice $Invoice 增值税发票信息，详情请点击左侧链接。
+     * @param VehicleInvoiceInfo $VehicleInvoiceInfo 机动车销售统一发票信息
+     * @param UsedVehicleInvoiceInfo $UsedVehicleInvoiceInfo 二手车销售统一发票信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -57,6 +73,16 @@ class VatInvoiceVerifyResponse extends AbstractModel
         if (array_key_exists("Invoice",$param) and $param["Invoice"] !== null) {
             $this->Invoice = new VatInvoice();
             $this->Invoice->deserialize($param["Invoice"]);
+        }
+
+        if (array_key_exists("VehicleInvoiceInfo",$param) and $param["VehicleInvoiceInfo"] !== null) {
+            $this->VehicleInvoiceInfo = new VehicleInvoiceInfo();
+            $this->VehicleInvoiceInfo->deserialize($param["VehicleInvoiceInfo"]);
+        }
+
+        if (array_key_exists("UsedVehicleInvoiceInfo",$param) and $param["UsedVehicleInvoiceInfo"] !== null) {
+            $this->UsedVehicleInvoiceInfo = new UsedVehicleInvoiceInfo();
+            $this->UsedVehicleInvoiceInfo->deserialize($param["UsedVehicleInvoiceInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

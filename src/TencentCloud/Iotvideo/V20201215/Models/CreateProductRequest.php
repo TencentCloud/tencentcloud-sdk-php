@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductVaildYears(integer $ProductVaildYears) 设置产品有效期
  * @method array getFeatures() 获取设备功能码 ypsxth音频双向通话 spdxth视频单向通话
  * @method void setFeatures(array $Features) 设置设备功能码 ypsxth音频双向通话 spdxth视频单向通话
- * @method string getChipOs() 获取设备操作系统 android linux liteos
- * @method void setChipOs(string $ChipOs) 设置设备操作系统 android linux liteos
+ * @method string getChipOs() 获取设备操作系统 Linux
+ * @method void setChipOs(string $ChipOs) 设置设备操作系统 Linux
  * @method string getChipManufactureId() 获取芯片厂商id
  * @method void setChipManufactureId(string $ChipManufactureId) 设置芯片厂商id
  * @method string getChipId() 获取芯片id
@@ -62,7 +62,7 @@ class CreateProductRequest extends AbstractModel
     public $Features;
 
     /**
-     * @var string 设备操作系统 android linux liteos
+     * @var string 设备操作系统 Linux
      */
     public $ChipOs;
 
@@ -91,7 +91,7 @@ class CreateProductRequest extends AbstractModel
      * @param integer $DeviceType 产品设备类型 1.普通设备 2.NVR设备
      * @param integer $ProductVaildYears 产品有效期
      * @param array $Features 设备功能码 ypsxth音频双向通话 spdxth视频单向通话
-     * @param string $ChipOs 设备操作系统 android linux liteos
+     * @param string $ChipOs 设备操作系统 Linux
      * @param string $ChipManufactureId 芯片厂商id
      * @param string $ChipId 芯片id
      * @param string $ProductDescription 产品描述信息

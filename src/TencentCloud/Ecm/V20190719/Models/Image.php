@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageSource(string $ImageSource) 设置镜像来源类型
  * @method string getTaskId() 获取中间态和失败时候的任务ID
  * @method void setTaskId(string $TaskId) 设置中间态和失败时候的任务ID
+ * @method boolean getIsSupportCloudInit() 获取是否支持CloudInit
+ * @method void setIsSupportCloudInit(boolean $IsSupportCloudInit) 设置是否支持CloudInit
  */
 class Image extends AbstractModel
 {
@@ -136,6 +138,11 @@ class Image extends AbstractModel
     public $TaskId;
 
     /**
+     * @var boolean 是否支持CloudInit
+     */
+    public $IsSupportCloudInit;
+
+    /**
      * @param string $ImageId 镜像ID
      * @param string $ImageName 镜像名称
      * @param string $ImageState 镜像状态
@@ -152,6 +159,7 @@ class Image extends AbstractModel
      * @param SrcImage $SrcImage 镜像来源信息
      * @param string $ImageSource 镜像来源类型
      * @param string $TaskId 中间态和失败时候的任务ID
+     * @param boolean $IsSupportCloudInit 是否支持CloudInit
      */
     function __construct()
     {
@@ -229,6 +237,10 @@ class Image extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("IsSupportCloudInit",$param) and $param["IsSupportCloudInit"] !== null) {
+            $this->IsSupportCloudInit = $param["IsSupportCloudInit"];
         }
     }
 }

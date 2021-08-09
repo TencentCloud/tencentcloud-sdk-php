@@ -110,6 +110,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificationState(integer $CertificationState) 设置实名认证 0:无 1:未实名 2:已实名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getOtherData() 获取其他流量信息,流量分离统计其他流量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOtherData(float $OtherData) 设置其他流量信息,流量分离统计其他流量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CardInfo extends AbstractModel
 {
@@ -267,6 +271,12 @@ class CardInfo extends AbstractModel
     public $CertificationState;
 
     /**
+     * @var float 其他流量信息,流量分离统计其他流量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OtherData;
+
+    /**
      * @param string $Iccid 卡片ID
      * @param string $Msisdn 卡电话号码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,6 +321,8 @@ class CardInfo extends AbstractModel
      * @param integer $NeedSms 是否开通短信0:未开短信 1:开通短信
      * @param integer $Provider 供应商
      * @param integer $CertificationState 实名认证 0:无 1:未实名 2:已实名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $OtherData 其他流量信息,流量分离统计其他流量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -432,6 +444,10 @@ class CardInfo extends AbstractModel
 
         if (array_key_exists("CertificationState",$param) and $param["CertificationState"] !== null) {
             $this->CertificationState = $param["CertificationState"];
+        }
+
+        if (array_key_exists("OtherData",$param) and $param["OtherData"] !== null) {
+            $this->OtherData = $param["OtherData"];
         }
     }
 }

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSamplingRate(integer $SamplingRate) 设置音频流的采样率，单位：hz。
  * @method string getCodec() 获取音频流的编码格式，例如 aac。
  * @method void setCodec(string $Codec) 设置音频流的编码格式，例如 aac。
+ * @method integer getChannel() 获取音频声道数，例如 2。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannel(integer $Channel) 设置音频声道数，例如 2。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaAudioStreamItem extends AbstractModel
 {
@@ -45,9 +49,17 @@ class MediaAudioStreamItem extends AbstractModel
     public $Codec;
 
     /**
+     * @var integer 音频声道数，例如 2。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Channel;
+
+    /**
      * @param integer $Bitrate 音频流的码率，单位：bps。
      * @param integer $SamplingRate 音频流的采样率，单位：hz。
      * @param string $Codec 音频流的编码格式，例如 aac。
+     * @param integer $Channel 音频声道数，例如 2。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class MediaAudioStreamItem extends AbstractModel
 
         if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
             $this->Codec = $param["Codec"];
+        }
+
+        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
+            $this->Channel = $param["Channel"];
         }
     }
 }

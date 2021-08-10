@@ -45,14 +45,13 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CreateLiveCertResponse CreateLiveCert(Models\CreateLiveCertRequest $req) 添加证书
  * @method Models\CreateLivePullStreamTaskResponse CreateLivePullStreamTask(Models\CreateLivePullStreamTaskRequest $req) 创建直播拉流任务。支持将外部已有的点播文件，或者直播源拉取过来转推到直播系统。
 注意：
-1. 源流视频编码目前只支持: H264, H265。其他编码格式建议先进行转码处理。
-2. 源流音频编码目前只支持: AAC。其他编码格式建议先进行转码处理。
-3. 默认支持任务数上限20个，如有特殊需求，可通过提单到售后进行评估增加上限。
-4. 目前仅支持推流到腾讯云直播，暂不支持推到第三方。
+1. 默认支持任务数上限20个，如有特殊需求，可通过提单到售后进行评估增加上限。
+2. 目前仅支持推流到腾讯云直播，暂不支持推到第三方。
+3. 源流视频编码目前只支持: H264, H265。其他编码格式建议先进行转码处理。
+4. 源流音频编码目前只支持: AAC。其他编码格式建议先进行转码处理。
 5. 过期不用的任务需自行清理，未清理的过期任务也会占用上限额度，如需要自动清理过期任务，可提单给售后进行配置。
 6. 拉流转推功能为计费增值服务，计费规则详情可参见[计费文档](https://cloud.tencent.com/document/product/267/53308)。
 7. 拉流转推功能仅提供内容拉取与推送服务，请确保内容已获得授权并符合内容传播相关的法律法规。若内容有侵权或违规相关问题，云直播会停止相关的功能服务并保留追究法律责任的权利。
-
  * @method Models\CreateLiveRecordResponse CreateLiveRecord(Models\CreateLiveRecordRequest $req) - 使用前提
   1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
   2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 [对应文档](https://cloud.tencent.com/document/product/266/2838)。

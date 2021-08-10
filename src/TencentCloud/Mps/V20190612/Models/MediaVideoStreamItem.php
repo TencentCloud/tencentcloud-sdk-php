@@ -30,6 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodec(string $Codec) 设置视频流的编码格式，例如 h264。
  * @method integer getFps() 获取帧率，单位：hz。
  * @method void setFps(integer $Fps) 设置帧率，单位：hz。
+ * @method string getColorPrimaries() 获取色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColorPrimaries(string $ColorPrimaries) 设置色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getColorSpace() 获取色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColorSpace(string $ColorSpace) 设置色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getColorTransfer() 获取色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColorTransfer(string $ColorTransfer) 设置色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -59,11 +71,35 @@ class MediaVideoStreamItem extends AbstractModel
     public $Fps;
 
     /**
+     * @var string 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColorPrimaries;
+
+    /**
+     * @var string 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColorSpace;
+
+    /**
+     * @var string 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColorTransfer;
+
+    /**
      * @param integer $Bitrate 视频流的码率，单位：bps。
      * @param integer $Height 视频流的高度，单位：px。
      * @param integer $Width 视频流的宽度，单位：px。
      * @param string $Codec 视频流的编码格式，例如 h264。
      * @param integer $Fps 帧率，单位：hz。
+     * @param string $ColorPrimaries 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ColorSpace 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ColorTransfer 色彩空间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +132,18 @@ class MediaVideoStreamItem extends AbstractModel
 
         if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
             $this->Fps = $param["Fps"];
+        }
+
+        if (array_key_exists("ColorPrimaries",$param) and $param["ColorPrimaries"] !== null) {
+            $this->ColorPrimaries = $param["ColorPrimaries"];
+        }
+
+        if (array_key_exists("ColorSpace",$param) and $param["ColorSpace"] !== null) {
+            $this->ColorSpace = $param["ColorSpace"];
+        }
+
+        if (array_key_exists("ColorTransfer",$param) and $param["ColorTransfer"] !== null) {
+            $this->ColorTransfer = $param["ColorTransfer"];
         }
     }
 }

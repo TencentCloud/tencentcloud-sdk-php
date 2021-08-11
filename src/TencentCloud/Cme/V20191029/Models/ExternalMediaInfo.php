@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
 <li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
 
 注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
- * @method string getMediaKey() 获取媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 <code> 'https://' </code>或者<code> 'http://' </code>去掉。
- * @method void setMediaKey(string $MediaKey) 设置媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 <code> 'https://' </code>或者<code> 'http://' </code>去掉。
+ * @method string getMediaKey() 获取媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
+原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
+ * @method void setMediaKey(string $MediaKey) 设置媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
+原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
  */
 class ExternalMediaInfo extends AbstractModel
 {
@@ -45,7 +47,8 @@ class ExternalMediaInfo extends AbstractModel
     public $Definition;
 
     /**
-     * @var string 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 <code> 'https://' </code>或者<code> 'http://' </code>去掉。
+     * @var string 媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
+原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
      */
     public $MediaKey;
 
@@ -55,7 +58,8 @@ class ExternalMediaInfo extends AbstractModel
 <li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
 
 注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
-     * @param string $MediaKey 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 <code> 'https://' </code>或者<code> 'http://' </code>去掉。
+     * @param string $MediaKey 媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
+原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
      */
     function __construct()
     {

@@ -32,8 +32,26 @@ use TencentCloud\Common\AbstractModel;
 <li>CME ：视频来源于制作云媒体文件 ；</li>
 <li>EXTERNAL ：视频来源于媒资绑定，如果媒体不是存储在腾讯云点播中或者云创中，都需要使用媒资绑定。</li>
 </ul>
- * @method string getSourceMedia() 获取注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉<code> 'https://' </code>；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉<code> 'http://'</code>。
- * @method void setSourceMedia(string $SourceMedia) 设置注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉<code> 'https://' </code>；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉<code> 'http://'</code>。
+ * @method string getSourceMedia() 获取音频媒体，可取值为：
+<ul>
+<li>当 SourceType 为 VOD 时，参数填云点播 FileId ；</li>
+<li>当 SourceType 为 CME 时，参数填云剪媒体 Id；</li>
+<li>当 SourceType 为 EXTERNAL 时，目前仅支持外部媒体 URL(如`https://www.example.com/a.mp3`)，参数填写规则请参见注意事项。</li>
+</ul>
+
+注意：
+<li>当 SourceType 为 EXTERNAL 并且媒体 URL Scheme 为 `https` 时(如：`https://www.example.com/a.mp3`)，参数为：`1000000:www.example.com/a.mp3`。</li>
+<li>当 SourceType 为 EXTERNAL 并且媒体 URL Scheme 为 `http` 时(如：`http://www.example.com/b.mp3`)，参数为：`1000001:www.example.com/b.mp3`。</li>
+ * @method void setSourceMedia(string $SourceMedia) 设置音频媒体，可取值为：
+<ul>
+<li>当 SourceType 为 VOD 时，参数填云点播 FileId ；</li>
+<li>当 SourceType 为 CME 时，参数填云剪媒体 Id；</li>
+<li>当 SourceType 为 EXTERNAL 时，目前仅支持外部媒体 URL(如`https://www.example.com/a.mp3`)，参数填写规则请参见注意事项。</li>
+</ul>
+
+注意：
+<li>当 SourceType 为 EXTERNAL 并且媒体 URL Scheme 为 `https` 时(如：`https://www.example.com/a.mp3`)，参数为：`1000000:www.example.com/a.mp3`。</li>
+<li>当 SourceType 为 EXTERNAL 并且媒体 URL Scheme 为 `http` 时(如：`http://www.example.com/b.mp3`)，参数为：`1000001:www.example.com/b.mp3`。</li>
  * @method float getSourceMediaStartTime() 获取音频片段取自媒体文件的起始时间，单位为秒。0 表示从媒体开始位置截取。默认为0。
  * @method void setSourceMediaStartTime(float $SourceMediaStartTime) 设置音频片段取自媒体文件的起始时间，单位为秒。0 表示从媒体开始位置截取。默认为0。
  * @method float getDuration() 获取音频片段的时长，单位为秒。默认和媒体本身长度一致，表示截取全部媒体。
@@ -52,7 +70,16 @@ class AudioTrackItem extends AbstractModel
     public $SourceType;
 
     /**
-     * @var string 注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉<code> 'https://' </code>；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉<code> 'http://'</code>。
+     * @var string 音频媒体，可取值为：
+<ul>
+<li>当 SourceType 为 VOD 时，参数填云点播 FileId ；</li>
+<li>当 SourceType 为 CME 时，参数填云剪媒体 Id；</li>
+<li>当 SourceType 为 EXTERNAL 时，目前仅支持外部媒体 URL(如`https://www.example.com/a.mp3`)，参数填写规则请参见注意事项。</li>
+</ul>
+
+注意：
+<li>当 SourceType 为 EXTERNAL 并且媒体 URL Scheme 为 `https` 时(如：`https://www.example.com/a.mp3`)，参数为：`1000000:www.example.com/a.mp3`。</li>
+<li>当 SourceType 为 EXTERNAL 并且媒体 URL Scheme 为 `http` 时(如：`http://www.example.com/b.mp3`)，参数为：`1000001:www.example.com/b.mp3`。</li>
      */
     public $SourceMedia;
 
@@ -73,7 +100,16 @@ class AudioTrackItem extends AbstractModel
 <li>CME ：视频来源于制作云媒体文件 ；</li>
 <li>EXTERNAL ：视频来源于媒资绑定，如果媒体不是存储在腾讯云点播中或者云创中，都需要使用媒资绑定。</li>
 </ul>
-     * @param string $SourceMedia 注：当 SourceType 为 EXTERNAL 时，目前仅支持外部 URL 的媒体直接导入项目中。当外部 URL Scheme 为 https 时，Definiton 为 1000000，MediaKey 为 URL 去掉<code> 'https://' </code>；当外部 URL Scheme 为 http 时，Definiton 为 1000001，MediaKey 为 URL 去掉<code> 'http://'</code>。
+     * @param string $SourceMedia 音频媒体，可取值为：
+<ul>
+<li>当 SourceType 为 VOD 时，参数填云点播 FileId ；</li>
+<li>当 SourceType 为 CME 时，参数填云剪媒体 Id；</li>
+<li>当 SourceType 为 EXTERNAL 时，目前仅支持外部媒体 URL(如`https://www.example.com/a.mp3`)，参数填写规则请参见注意事项。</li>
+</ul>
+
+注意：
+<li>当 SourceType 为 EXTERNAL 并且媒体 URL Scheme 为 `https` 时(如：`https://www.example.com/a.mp3`)，参数为：`1000000:www.example.com/a.mp3`。</li>
+<li>当 SourceType 为 EXTERNAL 并且媒体 URL Scheme 为 `http` 时(如：`http://www.example.com/b.mp3`)，参数为：`1000001:www.example.com/b.mp3`。</li>
      * @param float $SourceMediaStartTime 音频片段取自媒体文件的起始时间，单位为秒。0 表示从媒体开始位置截取。默认为0。
      * @param float $Duration 音频片段的时长，单位为秒。默认和媒体本身长度一致，表示截取全部媒体。
      */

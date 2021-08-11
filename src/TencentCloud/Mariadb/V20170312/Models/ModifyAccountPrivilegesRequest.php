@@ -32,25 +32,25 @@ use TencentCloud\Common\AbstractModel;
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
  * @method void setDatabasePrivileges(array $DatabasePrivileges) 设置数据库的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
- * @method array getTablePrivileges() 获取数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+ * @method array getTablePrivileges() 获取数据库中表的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
- * @method void setTablePrivileges(array $TablePrivileges) 设置数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+ * @method void setTablePrivileges(array $TablePrivileges) 设置数据库中表的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
  * @method array getColumnPrivileges() 获取数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
  * @method void setColumnPrivileges(array $ColumnPrivileges) 设置数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
- * @method array getViewPrivileges() 获取数据库视图的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+ * @method array getViewPrivileges() 获取数据库视图的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
- * @method void setViewPrivileges(array $ViewPrivileges) 设置数据库视图的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+ * @method void setViewPrivileges(array $ViewPrivileges) 设置数据库视图的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
- * @method array getFunctionPrivileges() 获取数据库函数的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+ * @method array getFunctionPrivileges() 获取数据库函数的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
- * @method void setFunctionPrivileges(array $FunctionPrivileges) 设置数据库函数的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+ * @method void setFunctionPrivileges(array $FunctionPrivileges) 设置数据库函数的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
- * @method array getProcedurePrivileges() 获取数据库存储过程的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+ * @method array getProcedurePrivileges() 获取数据库存储过程的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
- * @method void setProcedurePrivileges(array $ProcedurePrivileges) 设置数据库存储过程的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+ * @method void setProcedurePrivileges(array $ProcedurePrivileges) 设置数据库存储过程的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
  */
 class ModifyAccountPrivilegesRequest extends AbstractModel
@@ -78,7 +78,7 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
     public $DatabasePrivileges;
 
     /**
-     * @var array 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * @var array 数据库中表的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public $TablePrivileges;
@@ -90,19 +90,19 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
     public $ColumnPrivileges;
 
     /**
-     * @var array 数据库视图的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * @var array 数据库视图的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public $ViewPrivileges;
 
     /**
-     * @var array 数据库函数的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * @var array 数据库函数的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public $FunctionPrivileges;
 
     /**
-     * @var array 数据库存储过程的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * @var array 数据库存储过程的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     public $ProcedurePrivileges;
@@ -114,15 +114,15 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
 注意，不传该参数表示保留现有权限，如需清除，该字段传空数组。
      * @param array $DatabasePrivileges 数据库的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
-     * @param array $TablePrivileges 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * @param array $TablePrivileges 数据库中表的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      * @param array $ColumnPrivileges 数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
-     * @param array $ViewPrivileges 数据库视图的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+     * @param array $ViewPrivileges 数据库视图的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
-     * @param array $FunctionPrivileges 数据库函数的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * @param array $FunctionPrivileges 数据库函数的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
-     * @param array $ProcedurePrivileges 数据库存储过程的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+     * @param array $ProcedurePrivileges 数据库存储过程的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
      */
     function __construct()

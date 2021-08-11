@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * TextToVoice请求参数结构体
  *
  * @method string getText() 获取合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持110个汉字（全角标点符号算一个汉字）；英文最大支持350个字母（半角标点符号算一个字母）。
+中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
  * @method void setText(string $Text) 设置合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持110个汉字（全角标点符号算一个汉字）；英文最大支持350个字母（半角标点符号算一个字母）。
+中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
  * @method string getSessionId() 获取一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
  * @method void setSessionId(string $SessionId) 设置一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
  * @method integer getModelType() 获取模型类型，1-默认模型。
@@ -49,7 +49,7 @@ class TextToVoiceRequest extends AbstractModel
 {
     /**
      * @var string 合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持110个汉字（全角标点符号算一个汉字）；英文最大支持350个字母（半角标点符号算一个字母）。
+中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
      */
     public $Text;
 
@@ -101,7 +101,7 @@ class TextToVoiceRequest extends AbstractModel
 
     /**
      * @param string $Text 合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持110个汉字（全角标点符号算一个汉字）；英文最大支持350个字母（半角标点符号算一个字母）。
+中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
      * @param string $SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
      * @param integer $ModelType 模型类型，1-默认模型。
      * @param float $Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。

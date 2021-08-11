@@ -60,9 +60,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStaticPackRelation(StaticPackRelation $StaticPackRelation) 设置资产实例所属的三网套餐包详情，
 注意：当资产实例不是三网套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getZoneId() 获取区分高防IP海外线路
+ * @method integer getZoneId() 获取区分高防IP境外线路
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneId(integer $ZoneId) 设置区分高防IP海外线路
+ * @method void setZoneId(integer $ZoneId) 设置区分高防IP境外线路
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTgw() 获取区分集群
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,6 +87,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEipAddressInfo(EipAddressRelation $EipAddressInfo) 设置高防弹性公网IP关联的实例信息。
 注意：当资产实例不是高防弹性公网IP实例时，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDomain() 获取建议客户接入的域名，客户可使用域名接入。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomain(string $Domain) 设置建议客户接入的域名，客户可使用域名接入。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPIPInstance extends AbstractModel
@@ -152,7 +156,7 @@ class BGPIPInstance extends AbstractModel
     public $StaticPackRelation;
 
     /**
-     * @var integer 区分高防IP海外线路
+     * @var integer 区分高防IP境外线路
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
@@ -190,6 +194,12 @@ class BGPIPInstance extends AbstractModel
     public $EipAddressInfo;
 
     /**
+     * @var string 建议客户接入的域名，客户可使用域名接入。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domain;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPIPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPIPInstanceUsages $Usage 资产实例的使用统计信息
@@ -210,7 +220,7 @@ class BGPIPInstance extends AbstractModel
      * @param StaticPackRelation $StaticPackRelation 资产实例所属的三网套餐包详情，
 注意：当资产实例不是三网套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ZoneId 区分高防IP海外线路
+     * @param integer $ZoneId 区分高防IP境外线路
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Tgw 区分集群
 注意：此字段可能返回 null，表示取不到有效值。
@@ -223,6 +233,8 @@ class BGPIPInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EipAddressRelation $EipAddressInfo 高防弹性公网IP关联的实例信息。
 注意：当资产实例不是高防弹性公网IP实例时，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Domain 建议客户接入的域名，客户可使用域名接入。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -308,6 +320,10 @@ class BGPIPInstance extends AbstractModel
         if (array_key_exists("EipAddressInfo",$param) and $param["EipAddressInfo"] !== null) {
             $this->EipAddressInfo = new EipAddressRelation();
             $this->EipAddressInfo->deserialize($param["EipAddressInfo"]);
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

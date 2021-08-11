@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 高防IP资产实例的规格信息
  *
- * @method integer getProtectBandwidth() 获取保底防护峰值，单位Gbps
- * @method void setProtectBandwidth(integer $ProtectBandwidth) 设置保底防护峰值，单位Gbps
+ * @method integer getProtectBandwidth() 获取保底防护峰值，单位Mbps
+ * @method void setProtectBandwidth(integer $ProtectBandwidth) 设置保底防护峰值，单位Mbps
  * @method integer getProtectCCQPS() 获取CC防护峰值，单位qps
  * @method void setProtectCCQPS(integer $ProtectCCQPS) 设置CC防护峰值，单位qps
  * @method integer getNormalBandwidth() 获取正常业务带宽，单位Mbps
@@ -50,13 +50,13 @@ use TencentCloud\Common\AbstractModel;
 4：移动
 99：第三方合作线路
 ]
- * @method integer getElasticBandwidth() 获取弹性防护峰值，单位Gbps
- * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置弹性防护峰值，单位Gbps
+ * @method integer getElasticBandwidth() 获取弹性防护峰值，单位Mbps
+ * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置弹性防护峰值，单位Mbps
  */
 class BGPIPInstanceSpecification extends AbstractModel
 {
     /**
-     * @var integer 保底防护峰值，单位Gbps
+     * @var integer 保底防护峰值，单位Mbps
      */
     public $ProtectBandwidth;
 
@@ -95,12 +95,12 @@ class BGPIPInstanceSpecification extends AbstractModel
     public $Line;
 
     /**
-     * @var integer 弹性防护峰值，单位Gbps
+     * @var integer 弹性防护峰值，单位Mbps
      */
     public $ElasticBandwidth;
 
     /**
-     * @param integer $ProtectBandwidth 保底防护峰值，单位Gbps
+     * @param integer $ProtectBandwidth 保底防护峰值，单位Mbps
      * @param integer $ProtectCCQPS CC防护峰值，单位qps
      * @param integer $NormalBandwidth 正常业务带宽，单位Mbps
      * @param integer $ForwardRulesLimit 转发规则数，单位条
@@ -115,7 +115,7 @@ class BGPIPInstanceSpecification extends AbstractModel
 4：移动
 99：第三方合作线路
 ]
-     * @param integer $ElasticBandwidth 弹性防护峰值，单位Gbps
+     * @param integer $ElasticBandwidth 弹性防护峰值，单位Mbps
      */
     function __construct()
     {

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) 设置实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。
  * @method integer getCpu() 获取升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
  * @method void setCpu(integer $Cpu) 设置升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+ * @method integer getFastUpgrade() 获取是否急速变配。0-普通升级，1-急速变配。选择急速变配会根据资源状况校验是否可以进行急速变配，满足条件则进行急速变配，不满足条件会返回报错信息。
+ * @method void setFastUpgrade(integer $FastUpgrade) 设置是否急速变配。0-普通升级，1-急速变配。选择急速变配会根据资源状况校验是否可以进行急速变配，满足条件则进行急速变配，不满足条件会返回报错信息。
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $Cpu;
 
     /**
+     * @var integer 是否急速变配。0-普通升级，1-急速变配。选择急速变配会根据资源状况校验是否可以进行急速变配，满足条件则进行急速变配，不满足条件会返回报错信息。
+     */
+    public $FastUpgrade;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param integer $Memory 升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可升级的内存规格。
      * @param integer $Volume 升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可升级的硬盘范围。
@@ -120,6 +127,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param string $InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
      * @param string $DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。
      * @param integer $Cpu 升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+     * @param integer $FastUpgrade 是否急速变配。0-普通升级，1-急速变配。选择急速变配会根据资源状况校验是否可以进行急速变配，满足条件则进行急速变配，不满足条件会返回报错信息。
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("FastUpgrade",$param) and $param["FastUpgrade"] !== null) {
+            $this->FastUpgrade = $param["FastUpgrade"];
         }
     }
 }

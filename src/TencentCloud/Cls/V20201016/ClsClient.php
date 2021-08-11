@@ -26,6 +26,8 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroup(Models\ApplyConfigToMachineGroupRequest $req) 应用采集配置到指定机器组
  * @method Models\CreateAlarmResponse CreateAlarm(Models\CreateAlarmRequest $req) 本接口用于创建告警策略。
  * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) 该接口用户创建告警通知模板。
+ * @method Models\CreateAsyncContextTaskResponse CreateAsyncContextTask(Models\CreateAsyncContextTaskRequest $req) 本接口用于创建异步上下文任务
+ * @method Models\CreateAsyncSearchTaskResponse CreateAsyncSearchTask(Models\CreateAsyncSearchTaskRequest $req) 本接口用于创建异步检索任务
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建采集规则配置
  * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) 本接口用于创建日志导出
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) 本接口用于创建索引
@@ -35,6 +37,8 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 本接口用于创建日志主题。
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) 本接口用于删除告警策略。
  * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) 该接口用于删除告警通知模板
+ * @method Models\DeleteAsyncContextTaskResponse DeleteAsyncContextTask(Models\DeleteAsyncContextTaskRequest $req) 本接口用于删除异步上下文任务
+ * @method Models\DeleteAsyncSearchTaskResponse DeleteAsyncSearchTask(Models\DeleteAsyncSearchTaskRequest $req) 本接口用于删除异步检索任务
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除采集规则配置
  * @method Models\DeleteConfigFromMachineGroupResponse DeleteConfigFromMachineGroup(Models\DeleteConfigFromMachineGroupRequest $req) 删除应用到机器组的采集配置
  * @method Models\DeleteExportResponse DeleteExport(Models\DeleteExportRequest $req) 本接口用于删除日志导出
@@ -45,6 +49,10 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 本接口用于删除日志主题。
  * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) 该接口用于获取告警通知模板列表
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) 本接口用于获取告警策略。
+ * @method Models\DescribeAsyncContextResultResponse DescribeAsyncContextResult(Models\DescribeAsyncContextResultRequest $req) 本接口用户获取异步上下文任务的结果
+ * @method Models\DescribeAsyncContextTasksResponse DescribeAsyncContextTasks(Models\DescribeAsyncContextTasksRequest $req) 本接口用于获取异步上下文任务列表
+ * @method Models\DescribeAsyncSearchResultResponse DescribeAsyncSearchResult(Models\DescribeAsyncSearchResultRequest $req) 本接口用户获取异步检索任务的结果
+ * @method Models\DescribeAsyncSearchTasksResponse DescribeAsyncSearchTasks(Models\DescribeAsyncSearchTasksRequest $req) 本接口用户获取异步检索任务列表
  * @method Models\DescribeConfigMachineGroupsResponse DescribeConfigMachineGroups(Models\DescribeConfigMachineGroupsRequest $req) 获取采集规则配置所绑定的机器组
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 获取采集规则配置
  * @method Models\DescribeExportsResponse DescribeExports(Models\DescribeExportsRequest $req) 本接口用于获取日志导出列表

@@ -18,7 +18,7 @@ namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 版本pod
+ * 应用实例
  *
  * @method string getWebshell() 获取shell地址
  * @method void setWebshell(string $Webshell) 设置shell地址
@@ -41,6 +41,14 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRestartCount() 获取重启次数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestartCount(integer $RestartCount) 设置重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getReady() 获取pod是否就绪
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReady(boolean $Ready) 设置pod是否就绪
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerState() 获取容器状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerState(string $ContainerState) 设置容器状态
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunVersionPod extends AbstractModel
@@ -89,6 +97,18 @@ class RunVersionPod extends AbstractModel
     public $RestartCount;
 
     /**
+     * @var boolean pod是否就绪
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ready;
+
+    /**
+     * @var string 容器状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerState;
+
+    /**
      * @param string $Webshell shell地址
      * @param string $PodId pod的id
      * @param string $Status 状态
@@ -99,6 +119,10 @@ class RunVersionPod extends AbstractModel
      * @param string $DeployVersion 部署版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RestartCount 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Ready pod是否就绪
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerState 容器状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -144,6 +168,14 @@ class RunVersionPod extends AbstractModel
 
         if (array_key_exists("RestartCount",$param) and $param["RestartCount"] !== null) {
             $this->RestartCount = $param["RestartCount"];
+        }
+
+        if (array_key_exists("Ready",$param) and $param["Ready"] !== null) {
+            $this->Ready = $param["Ready"];
+        }
+
+        if (array_key_exists("ContainerState",$param) and $param["ContainerState"] !== null) {
+            $this->ContainerState = $param["ContainerState"];
         }
     }
 }

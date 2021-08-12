@@ -64,6 +64,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizeUrl(string $AuthorizeUrl) 设置授权地址。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIconUrl() 获取应用图标图片访问地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIconUrl(string $IconUrl) 设置应用图标图片访问地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSecureLevel() 获取安全等级。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecureLevel(string $SecureLevel) 设置安全等级。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAppStatus() 获取应用状态。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppStatus(boolean $AppStatus) 设置应用状态。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取描述。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置描述。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -136,6 +152,30 @@ class DescribeApplicationResponse extends AbstractModel
     public $AuthorizeUrl;
 
     /**
+     * @var string 应用图标图片访问地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IconUrl;
+
+    /**
+     * @var string 安全等级。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecureLevel;
+
+    /**
+     * @var boolean 应用状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppStatus;
+
+    /**
+     * @var string 描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -162,6 +202,14 @@ class DescribeApplicationResponse extends AbstractModel
      * @param string $PublicKey 公钥信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthorizeUrl 授权地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IconUrl 应用图标图片访问地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SecureLevel 安全等级。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AppStatus 应用状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -220,6 +268,22 @@ class DescribeApplicationResponse extends AbstractModel
 
         if (array_key_exists("AuthorizeUrl",$param) and $param["AuthorizeUrl"] !== null) {
             $this->AuthorizeUrl = $param["AuthorizeUrl"];
+        }
+
+        if (array_key_exists("IconUrl",$param) and $param["IconUrl"] !== null) {
+            $this->IconUrl = $param["IconUrl"];
+        }
+
+        if (array_key_exists("SecureLevel",$param) and $param["SecureLevel"] !== null) {
+            $this->SecureLevel = $param["SecureLevel"];
+        }
+
+        if (array_key_exists("AppStatus",$param) and $param["AppStatus"] !== null) {
+            $this->AppStatus = $param["AppStatus"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

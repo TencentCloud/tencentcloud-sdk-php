@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchIndex(integer $BatchIndex) 设置批次id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOldPods() 获取旧实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOldPods(array $OldPods) 设置旧实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNewPods() 获取新实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNewPods(array $NewPods) 设置新实例列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeployServiceBatchDetail extends AbstractModel
 {
@@ -74,6 +82,18 @@ class DeployServiceBatchDetail extends AbstractModel
     public $BatchIndex;
 
     /**
+     * @var array 旧实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OldPods;
+
+    /**
+     * @var array 新实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NewPods;
+
+    /**
      * @param DeployServicePodDetail $OldPodList 旧实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployServicePodDetail $NewPodList 新实例列表
@@ -83,6 +103,10 @@ class DeployServiceBatchDetail extends AbstractModel
      * @param integer $PodNum 该批次预计旧实例数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BatchIndex 批次id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OldPods 旧实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NewPods 新实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -118,6 +142,24 @@ class DeployServiceBatchDetail extends AbstractModel
 
         if (array_key_exists("BatchIndex",$param) and $param["BatchIndex"] !== null) {
             $this->BatchIndex = $param["BatchIndex"];
+        }
+
+        if (array_key_exists("OldPods",$param) and $param["OldPods"] !== null) {
+            $this->OldPods = [];
+            foreach ($param["OldPods"] as $key => $value){
+                $obj = new DeployServicePodDetail();
+                $obj->deserialize($value);
+                array_push($this->OldPods, $obj);
+            }
+        }
+
+        if (array_key_exists("NewPods",$param) and $param["NewPods"] !== null) {
+            $this->NewPods = [];
+            foreach ($param["NewPods"] as $key => $value){
+                $obj = new DeployServicePodDetail();
+                $obj->deserialize($value);
+                array_push($this->NewPods, $obj);
+            }
         }
     }
 }

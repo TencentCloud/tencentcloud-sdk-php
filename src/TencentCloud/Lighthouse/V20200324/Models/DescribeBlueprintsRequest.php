@@ -41,6 +41,9 @@ use TencentCloud\Common\AbstractModel;
 <li>blueprint-name</li>按照【镜像名称】进行过滤。
 类型：String
 必选：否
+<li>blueprint-state</li>按照【镜像状态】进行过滤。
+类型：String
+必选：否
 
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BlueprintIds 和 Filters 。
  * @method void setFilters(array $Filters) 设置过滤器列表。
@@ -56,6 +59,9 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
 <li>blueprint-name</li>按照【镜像名称】进行过滤。
+类型：String
+必选：否
+<li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
 
@@ -94,6 +100,9 @@ class DescribeBlueprintsRequest extends AbstractModel
 <li>blueprint-name</li>按照【镜像名称】进行过滤。
 类型：String
 必选：否
+<li>blueprint-state</li>按照【镜像状态】进行过滤。
+类型：String
+必选：否
 
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BlueprintIds 和 Filters 。
      */
@@ -116,6 +125,9 @@ class DescribeBlueprintsRequest extends AbstractModel
 类型：String
 必选：否
 <li>blueprint-name</li>按照【镜像名称】进行过滤。
+类型：String
+必选：否
+<li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
 

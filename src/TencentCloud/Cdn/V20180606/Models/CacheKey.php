@@ -18,14 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 缓存键配置（过滤参数配置）
+ * 缓存键配置（忽略参数配置）
  *
  * @method string getFullUrlCache() 获取是否开启全路径缓存
-on：开启全路径缓存（即关闭参数过滤）
-off：关闭全路径缓存（即开启参数过滤）
+on：开启全路径缓存（即关闭参数忽略）
+off：关闭全路径缓存（即开启参数忽略）
  * @method void setFullUrlCache(string $FullUrlCache) 设置是否开启全路径缓存
-on：开启全路径缓存（即关闭参数过滤）
-off：关闭全路径缓存（即开启参数过滤）
+on：开启全路径缓存（即关闭参数忽略）
+off：关闭全路径缓存（即开启参数忽略）
  * @method string getIgnoreCase() 获取是否忽略大小写缓存
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoreCase(string $IgnoreCase) 设置是否忽略大小写缓存
@@ -59,8 +59,8 @@ class CacheKey extends AbstractModel
 {
     /**
      * @var string 是否开启全路径缓存
-on：开启全路径缓存（即关闭参数过滤）
-off：关闭全路径缓存（即开启参数过滤）
+on：开启全路径缓存（即关闭参数忽略）
+off：关闭全路径缓存（即开启参数忽略）
      */
     public $FullUrlCache;
 
@@ -108,8 +108,8 @@ off：关闭全路径缓存（即开启参数过滤）
 
     /**
      * @param string $FullUrlCache 是否开启全路径缓存
-on：开启全路径缓存（即关闭参数过滤）
-off：关闭全路径缓存（即开启参数过滤）
+on：开启全路径缓存（即关闭参数忽略）
+off：关闭全路径缓存（即开启参数忽略）
      * @param string $IgnoreCase 是否忽略大小写缓存
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QueryStringKey $QueryString CacheKey中包含请求参数

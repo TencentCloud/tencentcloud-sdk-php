@@ -69,9 +69,13 @@ statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 �
 5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
  * @method array getDomains() 获取指定查询域名列表
-最多可一次性查询 30 个加速域名明细
+查询单域名：指定单个域名
+查询多个域名：指定多个域名，最多可一次性查询 30 个
+查询账号下所有域名：不传参，默认查询账号维度
  * @method void setDomains(array $Domains) 设置指定查询域名列表
-最多可一次性查询 30 个加速域名明细
+查询单域名：指定单个域名
+查询多个域名：指定多个域名，最多可一次性查询 30 个
+查询账号下所有域名：不传参，默认查询账号维度
  * @method integer getProject() 获取指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
  * @method void setProject(integer $Project) 设置指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
@@ -181,7 +185,9 @@ statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 �
 
     /**
      * @var array 指定查询域名列表
-最多可一次性查询 30 个加速域名明细
+查询单域名：指定单个域名
+查询多个域名：指定多个域名，最多可一次性查询 30 个
+查询账号下所有域名：不传参，默认查询账号维度
      */
     public $Domains;
 
@@ -289,7 +295,9 @@ statusCode：状态码，返回 2xx、3xx、4xx、5xx 汇总数据，单位为 �
 5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 个
 支持指定具体状态码查询，若未产生过，则返回为空
      * @param array $Domains 指定查询域名列表
-最多可一次性查询 30 个加速域名明细
+查询单域名：指定单个域名
+查询多个域名：指定多个域名，最多可一次性查询 30 个
+查询账号下所有域名：不传参，默认查询账号维度
      * @param integer $Project 指定要查询的项目 ID，[前往查看项目 ID](https://console.cloud.tencent.com/project)
 未填充域名情况下，指定项目查询，若填充了具体域名信息，以域名为主
      * @param string $Interval 时间粒度，支持以下几种模式：

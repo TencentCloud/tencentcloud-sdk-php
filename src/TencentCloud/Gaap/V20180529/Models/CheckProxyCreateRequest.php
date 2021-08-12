@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置如果在通道组下创建通道，需要填写通道组的ID
  * @method string getIPAddressVersion() 获取IP版本，可取值：IPv4、IPv6，默认值IPv4
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
+ * @method string getNetworkType() 获取网络类型，可取值：normal、cn2，默认值normal
+ * @method void setNetworkType(string $NetworkType) 设置网络类型，可取值：normal、cn2，默认值normal
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CheckProxyCreateRequest extends AbstractModel
     public $IPAddressVersion;
 
     /**
+     * @var string 网络类型，可取值：normal、cn2，默认值normal
+     */
+    public $NetworkType;
+
+    /**
      * @param string $AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
      * @param string $RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
      * @param integer $Bandwidth 通道带宽上限，单位：Mbps。
      * @param integer $Concurrent 通道并发量上限，表示同时在线的连接数，单位：万。
      * @param string $GroupId 如果在通道组下创建通道，需要填写通道组的ID
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @param string $NetworkType 网络类型，可取值：normal、cn2，默认值normal
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CheckProxyCreateRequest extends AbstractModel
 
         if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
             $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
         }
     }
 }

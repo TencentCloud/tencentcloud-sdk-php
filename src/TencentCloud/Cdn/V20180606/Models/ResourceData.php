@@ -21,15 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * 查询对象及其对应的访问明细数据
  *
  * @method string getResource() 获取资源名称，根据查询条件不同分为以下几类：
-具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+单域名：指定单域名查询，表示该域名明细数据，当传入参数 detail 指定为 true 时，显示该域名（ detail 参数默认为 false ）
+多域名：指定多个域名查询，表示多域名汇总明细数据，显示 multiDomains
+项目 ID：指定项目查询时，表示该项目下的域名汇总明细数据，显示该项目 ID
+all：账号维度明细数据，即账号下所有域名的汇总明细数据
  * @method void setResource(string $Resource) 设置资源名称，根据查询条件不同分为以下几类：
-具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+单域名：指定单域名查询，表示该域名明细数据，当传入参数 detail 指定为 true 时，显示该域名（ detail 参数默认为 false ）
+多域名：指定多个域名查询，表示多域名汇总明细数据，显示 multiDomains
+项目 ID：指定项目查询时，表示该项目下的域名汇总明细数据，显示该项目 ID
+all：账号维度明细数据，即账号下所有域名的汇总明细数据
  * @method array getCdnData() 获取资源对应的数据明细
  * @method void setCdnData(array $CdnData) 设置资源对应的数据明细
  */
@@ -37,10 +37,10 @@ class ResourceData extends AbstractModel
 {
     /**
      * @var string 资源名称，根据查询条件不同分为以下几类：
-具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+单域名：指定单域名查询，表示该域名明细数据，当传入参数 detail 指定为 true 时，显示该域名（ detail 参数默认为 false ）
+多域名：指定多个域名查询，表示多域名汇总明细数据，显示 multiDomains
+项目 ID：指定项目查询时，表示该项目下的域名汇总明细数据，显示该项目 ID
+all：账号维度明细数据，即账号下所有域名的汇总明细数据
      */
     public $Resource;
 
@@ -51,10 +51,10 @@ all：账号维度明细数据
 
     /**
      * @param string $Resource 资源名称，根据查询条件不同分为以下几类：
-具体域名：表示该域名明细数据
-multiDomains：表示多域名汇总明细数据
-项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+单域名：指定单域名查询，表示该域名明细数据，当传入参数 detail 指定为 true 时，显示该域名（ detail 参数默认为 false ）
+多域名：指定多个域名查询，表示多域名汇总明细数据，显示 multiDomains
+项目 ID：指定项目查询时，表示该项目下的域名汇总明细数据，显示该项目 ID
+all：账号维度明细数据，即账号下所有域名的汇总明细数据
      * @param array $CdnData 资源对应的数据明细
      */
     function __construct()

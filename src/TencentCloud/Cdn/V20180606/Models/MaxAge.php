@@ -18,7 +18,7 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 浏览器缓存规则配置，用于设置 MaxAge 默认值，默认为关闭状态（功能灰度中，尚未全量）
+ * 浏览器缓存规则配置，用于设置 MaxAge 默认值，默认为关闭状态
  *
  * @method string getSwitch() 获取浏览器缓存配置开关
 on：开启

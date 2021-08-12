@@ -45,7 +45,10 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DeleteWaterPrintConfigResponse DeleteWaterPrintConfig(Models\DeleteWaterPrintConfigRequest $req) 删除DDoS防护的水印防护配置
  * @method Models\DeleteWaterPrintKeyResponse DeleteWaterPrintKey(Models\DeleteWaterPrintKeyRequest $req) 删除DDoS防护的水印防护密钥
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) 获取基础防护攻击状态
+ * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) 获取业务流量曲线
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) 获取DDoS防护的IP黑白名单
+ * @method Models\DescribeCCTrendResponse DescribeCCTrend(Models\DescribeCCTrendRequest $req) 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)
+ * @method Models\DescribeDDoSTrendResponse DescribeDDoSTrend(Models\DescribeDDoSTrendRequest $req) 获取DDoS攻击流量带宽和攻击包速率数据
  * @method Models\DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(Models\DescribeDefaultAlarmThresholdRequest $req) 获取单IP默认告警阈值配置
  * @method Models\DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(Models\DescribeL7RulesBySSLCertIdRequest $req) 查询与证书ID对于域名匹配的七层规则
  * @method Models\DescribeListBGPIPInstancesResponse DescribeListBGPIPInstances(Models\DescribeListBGPIPInstancesRequest $req) 获取高防IP资产实例列表

@@ -114,9 +114,9 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyConfigTime(integer $ModifyConfigTime) 设置配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProxyType() 获取通道类型，104表示新的银牌质量通道类型
+ * @method integer getProxyType() 获取通道类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxyType(integer $ProxyType) 设置通道类型，104表示新的银牌质量通道类型
+ * @method void setProxyType(integer $ProxyType) 设置通道类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClientIPMethod() 获取通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
 注意：此字段可能返回 null，表示取不到有效值。
@@ -125,6 +125,10 @@ UNKNOWN表示未知状态。
  * @method string getIPAddressVersion() 获取IP版本：IPv4、IPv6
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本：IPv4、IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNetworkType() 获取网络类型：normal、cn2
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkType(string $NetworkType) 设置网络类型：normal、cn2
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
@@ -277,7 +281,7 @@ UNKNOWN表示未知状态。
     public $ModifyConfigTime;
 
     /**
-     * @var integer 通道类型，104表示新的银牌质量通道类型
+     * @var integer 通道类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyType;
@@ -293,6 +297,12 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPAddressVersion;
+
+    /**
+     * @var string 网络类型：normal、cn2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkType;
 
     /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -342,11 +352,13 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ModifyConfigTime 配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ProxyType 通道类型，104表示新的银牌质量通道类型
+     * @param integer $ProxyType 通道类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本：IPv4、IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NetworkType 网络类型：normal、cn2
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -479,6 +491,10 @@ UNKNOWN表示未知状态。
 
         if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
             $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
         }
     }
 }

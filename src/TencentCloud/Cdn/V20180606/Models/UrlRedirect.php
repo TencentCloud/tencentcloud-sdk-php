@@ -18,39 +18,39 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * URL重定向配置
+ * 访问URL重写配置
  *
- * @method string getSwitch() 获取URL重定向配置开关
+ * @method string getSwitch() 获取访问URL重写配置开关
 on：开启
 off：关闭
- * @method void setSwitch(string $Switch) 设置URL重定向配置开关
+ * @method void setSwitch(string $Switch) 设置访问URL重写配置开关
 on：开启
 off：关闭
- * @method array getPathRules() 获取URL重定向规则，当Switch为on时必填，规则数量最大为10个。
+ * @method array getPathRules() 获取访问URL重写规则，当Switch为on时必填，规则数量最大为10个。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPathRules(array $PathRules) 设置URL重定向规则，当Switch为on时必填，规则数量最大为10个。
+ * @method void setPathRules(array $PathRules) 设置访问URL重写规则，当Switch为on时必填，规则数量最大为10个。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UrlRedirect extends AbstractModel
 {
     /**
-     * @var string URL重定向配置开关
+     * @var string 访问URL重写配置开关
 on：开启
 off：关闭
      */
     public $Switch;
 
     /**
-     * @var array URL重定向规则，当Switch为on时必填，规则数量最大为10个。
+     * @var array 访问URL重写规则，当Switch为on时必填，规则数量最大为10个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PathRules;
 
     /**
-     * @param string $Switch URL重定向配置开关
+     * @param string $Switch 访问URL重写配置开关
 on：开启
 off：关闭
-     * @param array $PathRules URL重定向规则，当Switch为on时必填，规则数量最大为10个。
+     * @param array $PathRules 访问URL重写规则，当Switch为on时必填，规则数量最大为10个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -45,6 +45,7 @@ use TencentCloud\Eiam\V20210420\Models as Models;
  * @method Models\ListUsersResponse ListUsers(Models\ListUsersRequest $req) 获取用户列表信息。
  * @method Models\ListUsersInOrgNodeResponse ListUsersInOrgNode(Models\ListUsersInOrgNodeRequest $req) 根据机构节点ID读取节点下用户
  * @method Models\ListUsersInUserGroupResponse ListUsersInUserGroup(Models\ListUsersInUserGroupRequest $req) 获取用户组中的用户列表
+ * @method Models\ModifyApplicationResponse ModifyApplication(Models\ModifyApplicationRequest $req) 更新一个应用的信息
  * @method Models\ModifyUserInfoResponse ModifyUserInfo(Models\ModifyUserInfoRequest $req) 通过用户名或用户 id 冻结用户
  * @method Models\RemoveUserFromUserGroupResponse RemoveUserFromUserGroup(Models\RemoveUserFromUserGroupRequest $req) 从用户组中移除用户
  * @method Models\UpdateOrgNodeResponse UpdateOrgNode(Models\UpdateOrgNodeRequest $req) 新建一个机构节点，

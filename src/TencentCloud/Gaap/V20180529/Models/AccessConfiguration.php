@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) 设置通道带宽上限，单位：Mbps。
  * @method integer getConcurrent() 获取通道并发量上限，表示同时在线的连接数，单位：万。
  * @method void setConcurrent(integer $Concurrent) 设置通道并发量上限，表示同时在线的连接数，单位：万。
+ * @method string getNetworkType() 获取网络类型，可取值：normal、cn2，默认值为normal
+ * @method void setNetworkType(string $NetworkType) 设置网络类型，可取值：normal、cn2，默认值为normal
  */
 class AccessConfiguration extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AccessConfiguration extends AbstractModel
     public $Concurrent;
 
     /**
+     * @var string 网络类型，可取值：normal、cn2，默认值为normal
+     */
+    public $NetworkType;
+
+    /**
      * @param string $AccessRegion 加速地域。
      * @param integer $Bandwidth 通道带宽上限，单位：Mbps。
      * @param integer $Concurrent 通道并发量上限，表示同时在线的连接数，单位：万。
+     * @param string $NetworkType 网络类型，可取值：normal、cn2，默认值为normal
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AccessConfiguration extends AbstractModel
 
         if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
             $this->Concurrent = $param["Concurrent"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
         }
     }
 }

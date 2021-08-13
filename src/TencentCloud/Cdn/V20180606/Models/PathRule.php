@@ -58,6 +58,14 @@ OV：中国境外
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRequestHeaders(array $RequestHeaders) 设置路径匹配时回源的头部设置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getFullMatch() 获取当Regex为false时，Path是否开启完全匹配。
+false：关闭
+true：开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFullMatch(boolean $FullMatch) 设置当Regex为false时，Path是否开启完全匹配。
+false：关闭
+true：开启
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PathRule extends AbstractModel
 {
@@ -109,6 +117,14 @@ OV：中国境外
     public $RequestHeaders;
 
     /**
+     * @var boolean 当Regex为false时，Path是否开启完全匹配。
+false：关闭
+true：开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FullMatch;
+
+    /**
      * @param boolean $Regex 是否开启通配符“*”匹配：
 false：关闭
 true：开启
@@ -127,6 +143,10 @@ OV：中国境外
      * @param string $ForwardUri 路径匹配时回源的URI路径，必须以“/”开头，不包含参数部分。最大长度为1024个字符。可使用$1, $2, $3, $4, $5分别捕获匹配路径中的通配符号“*”，最多支持10个捕获值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RequestHeaders 路径匹配时回源的头部设置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $FullMatch 当Regex为false时，Path是否开启完全匹配。
+false：关闭
+true：开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -173,6 +193,10 @@ OV：中国境外
                 $obj->deserialize($value);
                 array_push($this->RequestHeaders, $obj);
             }
+        }
+
+        if (array_key_exists("FullMatch",$param) and $param["FullMatch"] !== null) {
+            $this->FullMatch = $param["FullMatch"];
         }
     }
 }

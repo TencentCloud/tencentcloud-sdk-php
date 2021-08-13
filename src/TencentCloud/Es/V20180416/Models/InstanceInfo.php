@@ -168,6 +168,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKibanaNodeInfo(KibanaNodeInfo $KibanaNodeInfo) 设置Kibana节点信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method WebNodeTypeInfo getWebNodeTypeInfo() 获取可视化节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) 设置可视化节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJdk() 获取JDK类型，oracle或kona
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJdk(string $Jdk) 设置JDK类型，oracle或kona
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -466,6 +474,18 @@ class InstanceInfo extends AbstractModel
     public $KibanaNodeInfo;
 
     /**
+     * @var WebNodeTypeInfo 可视化节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WebNodeTypeInfo;
+
+    /**
+     * @var string JDK类型，oracle或kona
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Jdk;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -539,6 +559,10 @@ class InstanceInfo extends AbstractModel
      * @param string $KibanaConfig Kibana配置项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KibanaNodeInfo $KibanaNodeInfo Kibana节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebNodeTypeInfo $WebNodeTypeInfo 可视化节点配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Jdk JDK类型，oracle或kona
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -793,6 +817,15 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("KibanaNodeInfo",$param) and $param["KibanaNodeInfo"] !== null) {
             $this->KibanaNodeInfo = new KibanaNodeInfo();
             $this->KibanaNodeInfo->deserialize($param["KibanaNodeInfo"]);
+        }
+
+        if (array_key_exists("WebNodeTypeInfo",$param) and $param["WebNodeTypeInfo"] !== null) {
+            $this->WebNodeTypeInfo = new WebNodeTypeInfo();
+            $this->WebNodeTypeInfo->deserialize($param["WebNodeTypeInfo"]);
+        }
+
+        if (array_key_exists("Jdk",$param) and $param["Jdk"] !== null) {
+            $this->Jdk = $param["Jdk"];
         }
     }
 }

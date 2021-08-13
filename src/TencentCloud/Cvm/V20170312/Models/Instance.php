@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
  * @method SystemDisk getSystemDisk() 获取实例系统盘信息。
  * @method void setSystemDisk(SystemDisk $SystemDisk) 设置实例系统盘信息。
- * @method array getDataDisks() 获取实例数据盘信息。只包含随实例购买的数据盘。
- * @method void setDataDisks(array $DataDisks) 设置实例数据盘信息。只包含随实例购买的数据盘。
+ * @method array getDataDisks() 获取实例数据盘信息。
+ * @method void setDataDisks(array $DataDisks) 设置实例数据盘信息。
  * @method array getPrivateIpAddresses() 获取实例主网卡的内网`IP`列表。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置实例主网卡的内网`IP`列表。
  * @method array getPublicIpAddresses() 获取实例主网卡的公网`IP`列表。
@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRdmaIpAddresses(array $RdmaIpAddresses) 设置高性能计算集群`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsolatedSource() 获取实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolatedSource(string $IsolatedSource) 设置实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -157,7 +161,7 @@ class Instance extends AbstractModel
     public $SystemDisk;
 
     /**
-     * @var array 实例数据盘信息。只包含随实例购买的数据盘。
+     * @var array 实例数据盘信息。
      */
     public $DataDisks;
 
@@ -288,6 +292,12 @@ class Instance extends AbstractModel
     public $RdmaIpAddresses;
 
     /**
+     * @var string 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolatedSource;
+
+    /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
      * @param string $InstanceType 实例机型。
@@ -297,7 +307,7 @@ class Instance extends AbstractModel
      * @param string $InstanceName 实例名称。
      * @param string $InstanceChargeType 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
      * @param SystemDisk $SystemDisk 实例系统盘信息。
-     * @param array $DataDisks 实例数据盘信息。只包含随实例购买的数据盘。
+     * @param array $DataDisks 实例数据盘信息。
      * @param array $PrivateIpAddresses 实例主网卡的内网`IP`列表。
      * @param array $PublicIpAddresses 实例主网卡的公网`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -331,6 +341,8 @@ class Instance extends AbstractModel
      * @param string $HpcClusterId 高性能计算集群`ID`。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RdmaIpAddresses 高性能计算集群`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -491,6 +503,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("RdmaIpAddresses",$param) and $param["RdmaIpAddresses"] !== null) {
             $this->RdmaIpAddresses = $param["RdmaIpAddresses"];
+        }
+
+        if (array_key_exists("IsolatedSource",$param) and $param["IsolatedSource"] !== null) {
+            $this->IsolatedSource = $param["IsolatedSource"];
         }
     }
 }

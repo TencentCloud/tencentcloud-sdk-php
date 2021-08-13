@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMode(integer $Mode) 设置0：cfw新增模式，1：cfw接入模式。
  * @method string getOperationType() 获取操作类型，可选值：add，del，modify。
  * @method void setOperationType(string $OperationType) 设置操作类型，可选值：add，del，modify。
- * @method string getCfwInstance() 获取防火墙实例id。
- * @method void setCfwInstance(string $CfwInstance) 设置防火墙实例id。
+ * @method string getCfwInstance() 获取防火墙实例id，该字段必须传递。
+ * @method void setCfwInstance(string $CfwInstance) 设置防火墙实例id，该字段必须传递。
  * @method array getAddOrDelDnatRules() 获取添加或删除操作的Dnat规则列表。
  * @method void setAddOrDelDnatRules(array $AddOrDelDnatRules) 设置添加或删除操作的Dnat规则列表。
  * @method CfwNatDnatRule getOriginDnat() 获取修改操作的原始Dnat规则
@@ -46,7 +46,7 @@ class SetNatFwDnatRuleRequest extends AbstractModel
     public $OperationType;
 
     /**
-     * @var string 防火墙实例id。
+     * @var string 防火墙实例id，该字段必须传递。
      */
     public $CfwInstance;
 
@@ -68,7 +68,7 @@ class SetNatFwDnatRuleRequest extends AbstractModel
     /**
      * @param integer $Mode 0：cfw新增模式，1：cfw接入模式。
      * @param string $OperationType 操作类型，可选值：add，del，modify。
-     * @param string $CfwInstance 防火墙实例id。
+     * @param string $CfwInstance 防火墙实例id，该字段必须传递。
      * @param array $AddOrDelDnatRules 添加或删除操作的Dnat规则列表。
      * @param CfwNatDnatRule $OriginDnat 修改操作的原始Dnat规则
      * @param CfwNatDnatRule $NewDnat 修改操作的新的Dnat规则

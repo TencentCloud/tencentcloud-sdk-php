@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmTargets(array $AlarmTargets) 设置监控对象列表。
  * @method boolean getStatus() 获取是否开启告警策略。
  * @method void setStatus(boolean $Status) 设置是否开启告警策略。
+ * @method string getMessageTemplate() 获取用户自定义告警内容
+ * @method void setMessageTemplate(string $MessageTemplate) 设置用户自定义告警内容
+ * @method CallBackInfo getCallBack() 获取用户自定义回调
+ * @method void setCallBack(CallBackInfo $CallBack) 设置用户自定义回调
+ * @method array getAnalysis() 获取多维分析
+ * @method void setAnalysis(array $Analysis) 设置多维分析
  */
 class ModifyAlarmRequest extends AbstractModel
 {
@@ -87,6 +93,21 @@ class ModifyAlarmRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var string 用户自定义告警内容
+     */
+    public $MessageTemplate;
+
+    /**
+     * @var CallBackInfo 用户自定义回调
+     */
+    public $CallBack;
+
+    /**
+     * @var array 多维分析
+     */
+    public $Analysis;
+
+    /**
      * @param string $AlarmId 告警策略ID。
      * @param string $Name 告警策略名称
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
@@ -96,6 +117,9 @@ class ModifyAlarmRequest extends AbstractModel
      * @param array $AlarmNoticeIds 关联的告警通知模板列表。
      * @param array $AlarmTargets 监控对象列表。
      * @param boolean $Status 是否开启告警策略。
+     * @param string $MessageTemplate 用户自定义告警内容
+     * @param CallBackInfo $CallBack 用户自定义回调
+     * @param array $Analysis 多维分析
      */
     function __construct()
     {
@@ -150,6 +174,24 @@ class ModifyAlarmRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("MessageTemplate",$param) and $param["MessageTemplate"] !== null) {
+            $this->MessageTemplate = $param["MessageTemplate"];
+        }
+
+        if (array_key_exists("CallBack",$param) and $param["CallBack"] !== null) {
+            $this->CallBack = new CallBackInfo();
+            $this->CallBack->deserialize($param["CallBack"]);
+        }
+
+        if (array_key_exists("Analysis",$param) and $param["Analysis"] !== null) {
+            $this->Analysis = [];
+            foreach ($param["Analysis"] as $key => $value){
+                $obj = new AnalysisDimensional();
+                $obj->deserialize($value);
+                array_push($this->Analysis, $obj);
+            }
         }
     }
 }

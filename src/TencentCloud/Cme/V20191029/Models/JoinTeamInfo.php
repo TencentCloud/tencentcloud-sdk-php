@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTeamId(string $TeamId) 设置团队 ID。
  * @method string getName() 获取团队名称。
  * @method void setName(string $Name) 设置团队名称。
- * @method integer getMemberCount() 获取团队成员个数
- * @method void setMemberCount(integer $MemberCount) 设置团队成员个数
+ * @method integer getMemberCount() 获取团队成员个数。
+ * @method void setMemberCount(integer $MemberCount) 设置团队成员个数。
  * @method string getRole() 获取成员在团队中的角色，取值有：
 <li>Owner：团队所有者，添加团队成员及修改团队成员解决时不能填此角色；</li>
 <li>Admin：团队管理员；</li>
@@ -48,7 +48,7 @@ class JoinTeamInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 团队成员个数
+     * @var integer 团队成员个数。
      */
     public $MemberCount;
 
@@ -63,7 +63,7 @@ class JoinTeamInfo extends AbstractModel
     /**
      * @param string $TeamId 团队 ID。
      * @param string $Name 团队名称。
-     * @param integer $MemberCount 团队成员个数
+     * @param integer $MemberCount 团队成员个数。
      * @param string $Role 成员在团队中的角色，取值有：
 <li>Owner：团队所有者，添加团队成员及修改团队成员解决时不能填此角色；</li>
 <li>Admin：团队管理员；</li>

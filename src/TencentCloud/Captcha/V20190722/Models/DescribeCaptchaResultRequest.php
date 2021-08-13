@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCaptchaType(integer $CaptchaType) 设置固定填值：9。可在控制台配置不同验证码类型。
  * @method string getTicket() 获取前端回调函数返回的用户验证票据
  * @method void setTicket(string $Ticket) 设置前端回调函数返回的用户验证票据
- * @method string getUserIp() 获取透传业务侧获取到的验证码使用者的IP
- * @method void setUserIp(string $UserIp) 设置透传业务侧获取到的验证码使用者的IP
+ * @method string getUserIp() 获取业务侧获取到的验证码使用者的外网IP
+ * @method void setUserIp(string $UserIp) 设置业务侧获取到的验证码使用者的外网IP
  * @method string getRandstr() 获取前端回调函数返回的随机字符串
  * @method void setRandstr(string $Randstr) 设置前端回调函数返回的随机字符串
  * @method integer getCaptchaAppId() 获取验证码应用ID
@@ -56,7 +56,7 @@ class DescribeCaptchaResultRequest extends AbstractModel
     public $Ticket;
 
     /**
-     * @var string 透传业务侧获取到的验证码使用者的IP
+     * @var string 业务侧获取到的验证码使用者的外网IP
      */
     public $UserIp;
 
@@ -103,7 +103,7 @@ class DescribeCaptchaResultRequest extends AbstractModel
     /**
      * @param integer $CaptchaType 固定填值：9。可在控制台配置不同验证码类型。
      * @param string $Ticket 前端回调函数返回的用户验证票据
-     * @param string $UserIp 透传业务侧获取到的验证码使用者的IP
+     * @param string $UserIp 业务侧获取到的验证码使用者的外网IP
      * @param string $Randstr 前端回调函数返回的随机字符串
      * @param integer $CaptchaAppId 验证码应用ID
      * @param string $AppSecretKey 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方

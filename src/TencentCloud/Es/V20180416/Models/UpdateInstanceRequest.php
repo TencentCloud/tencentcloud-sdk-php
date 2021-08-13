@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSceneType(integer $SceneType) 设置场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
  * @method string getKibanaConfig() 获取Kibana配置项（JSON格式字符串）
  * @method void setKibanaConfig(string $KibanaConfig) 设置Kibana配置项（JSON格式字符串）
+ * @method WebNodeTypeInfo getWebNodeTypeInfo() 获取可视化节点配置
+ * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) 设置可视化节点配置
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -210,6 +212,11 @@ class UpdateInstanceRequest extends AbstractModel
     public $KibanaConfig;
 
     /**
+     * @var WebNodeTypeInfo 可视化节点配置
+     */
+    public $WebNodeTypeInfo;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -240,6 +247,7 @@ class UpdateInstanceRequest extends AbstractModel
      * @param array $MultiZoneInfo 多可用区部署
      * @param integer $SceneType 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
      * @param string $KibanaConfig Kibana配置项（JSON格式字符串）
+     * @param WebNodeTypeInfo $WebNodeTypeInfo 可视化节点配置
      */
     function __construct()
     {
@@ -361,6 +369,11 @@ class UpdateInstanceRequest extends AbstractModel
 
         if (array_key_exists("KibanaConfig",$param) and $param["KibanaConfig"] !== null) {
             $this->KibanaConfig = $param["KibanaConfig"];
+        }
+
+        if (array_key_exists("WebNodeTypeInfo",$param) and $param["WebNodeTypeInfo"] !== null) {
+            $this->WebNodeTypeInfo = new WebNodeTypeInfo();
+            $this->WebNodeTypeInfo->deserialize($param["WebNodeTypeInfo"]);
         }
     }
 }

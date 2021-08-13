@@ -20,18 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全组列表数据
  *
- * @method integer getId() 获取规则ID
- * @method void setId(integer $Id) 设置规则ID
  * @method integer getOrderIndex() 获取执行顺序
  * @method void setOrderIndex(integer $OrderIndex) 设置执行顺序
  * @method string getSourceId() 获取访问源
  * @method void setSourceId(string $SourceId) 设置访问源
- * @method integer getSourceType() 获取访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
- * @method void setSourceType(integer $SourceType) 设置访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+ * @method integer getSourceType() 获取访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+ * @method void setSourceType(integer $SourceType) 设置访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
  * @method string getTargetId() 获取访问目的
  * @method void setTargetId(string $TargetId) 设置访问目的
- * @method integer getTargetType() 获取访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
- * @method void setTargetType(integer $TargetType) 设置访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+ * @method integer getTargetType() 获取访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+ * @method void setTargetType(integer $TargetType) 设置访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
  * @method string getProtocol() 获取协议
  * @method void setProtocol(string $Protocol) 设置协议
  * @method string getPort() 获取目的端口
@@ -40,12 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategy(integer $Strategy) 设置策略, 1：阻断，2：放行
  * @method string getDetail() 获取描述
  * @method void setDetail(string $Detail) 设置描述
+ * @method integer getBothWay() 获取单/双向下发，0:单向下发，1：双向下发
+ * @method void setBothWay(integer $BothWay) 设置单/双向下发，0:单向下发，1：双向下发
+ * @method integer getId() 获取规则ID
+ * @method void setId(integer $Id) 设置规则ID
  * @method integer getStatus() 获取是否开关开启，0：未开启，1：开启
  * @method void setStatus(integer $Status) 设置是否开关开启，0：未开启，1：开启
  * @method integer getIsNew() 获取是否是正常规则，0：正常，1：异常
  * @method void setIsNew(integer $IsNew) 设置是否是正常规则，0：正常，1：异常
- * @method integer getBothWay() 获取单/双向下发，0:单向下发，1：双向下发
- * @method void setBothWay(integer $BothWay) 设置单/双向下发，0:单向下发，1：双向下发
  * @method string getVpcId() 获取私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络ID
@@ -70,14 +70,19 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCidr(string $Cidr) 设置掩码地址，多个以英文逗号分隔
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServiceTemplateId() 获取端口协议类型参数模板id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBothWayInfo() 获取当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBothWayInfo(array $BothWayInfo) 设置当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDirection() 获取方向，0：出站，1：入站，默认1
+ * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站，默认1
  */
 class SecurityGroupListData extends AbstractModel
 {
-    /**
-     * @var integer 规则ID
-     */
-    public $Id;
-
     /**
      * @var integer 执行顺序
      */
@@ -89,7 +94,7 @@ class SecurityGroupListData extends AbstractModel
     public $SourceId;
 
     /**
-     * @var integer 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+     * @var integer 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
      */
     public $SourceType;
 
@@ -99,7 +104,7 @@ class SecurityGroupListData extends AbstractModel
     public $TargetId;
 
     /**
-     * @var integer 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+     * @var integer 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
      */
     public $TargetType;
 
@@ -124,6 +129,16 @@ class SecurityGroupListData extends AbstractModel
     public $Detail;
 
     /**
+     * @var integer 单/双向下发，0:单向下发，1：双向下发
+     */
+    public $BothWay;
+
+    /**
+     * @var integer 规则ID
+     */
+    public $Id;
+
+    /**
      * @var integer 是否开关开启，0：未开启，1：开启
      */
     public $Status;
@@ -132,11 +147,6 @@ class SecurityGroupListData extends AbstractModel
      * @var integer 是否是正常规则，0：正常，1：异常
      */
     public $IsNew;
-
-    /**
-     * @var integer 单/双向下发，0:单向下发，1：双向下发
-     */
-    public $BothWay;
 
     /**
      * @var string 私有网络ID
@@ -175,19 +185,36 @@ class SecurityGroupListData extends AbstractModel
     public $Cidr;
 
     /**
-     * @param integer $Id 规则ID
+     * @var string 端口协议类型参数模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceTemplateId;
+
+    /**
+     * @var array 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BothWayInfo;
+
+    /**
+     * @var integer 方向，0：出站，1：入站，默认1
+     */
+    public $Direction;
+
+    /**
      * @param integer $OrderIndex 执行顺序
      * @param string $SourceId 访问源
-     * @param integer $SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+     * @param integer $SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
      * @param string $TargetId 访问目的
-     * @param integer $TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+     * @param integer $TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
      * @param string $Protocol 协议
      * @param string $Port 目的端口
      * @param integer $Strategy 策略, 1：阻断，2：放行
      * @param string $Detail 描述
+     * @param integer $BothWay 单/双向下发，0:单向下发，1：双向下发
+     * @param integer $Id 规则ID
      * @param integer $Status 是否开关开启，0：未开启，1：开启
      * @param integer $IsNew 是否是正常规则，0：正常，1：异常
-     * @param integer $BothWay 单/双向下发，0:单向下发，1：双向下发
      * @param string $VpcId 私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID
@@ -200,6 +227,11 @@ class SecurityGroupListData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cidr 掩码地址，多个以英文逗号分隔
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServiceTemplateId 端口协议类型参数模板id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BothWayInfo 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Direction 方向，0：出站，1：入站，默认1
      */
     function __construct()
     {
@@ -214,10 +246,6 @@ class SecurityGroupListData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
-        }
-
         if (array_key_exists("OrderIndex",$param) and $param["OrderIndex"] !== null) {
             $this->OrderIndex = $param["OrderIndex"];
         }
@@ -254,16 +282,20 @@ class SecurityGroupListData extends AbstractModel
             $this->Detail = $param["Detail"];
         }
 
+        if (array_key_exists("BothWay",$param) and $param["BothWay"] !== null) {
+            $this->BothWay = $param["BothWay"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
         }
 
         if (array_key_exists("IsNew",$param) and $param["IsNew"] !== null) {
             $this->IsNew = $param["IsNew"];
-        }
-
-        if (array_key_exists("BothWay",$param) and $param["BothWay"] !== null) {
-            $this->BothWay = $param["BothWay"];
         }
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
@@ -288,6 +320,23 @@ class SecurityGroupListData extends AbstractModel
 
         if (array_key_exists("Cidr",$param) and $param["Cidr"] !== null) {
             $this->Cidr = $param["Cidr"];
+        }
+
+        if (array_key_exists("ServiceTemplateId",$param) and $param["ServiceTemplateId"] !== null) {
+            $this->ServiceTemplateId = $param["ServiceTemplateId"];
+        }
+
+        if (array_key_exists("BothWayInfo",$param) and $param["BothWayInfo"] !== null) {
+            $this->BothWayInfo = [];
+            foreach ($param["BothWayInfo"] as $key => $value){
+                $obj = new SecurityGroupBothWayInfo();
+                $obj->deserialize($value);
+                array_push($this->BothWayInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
+            $this->Direction = $param["Direction"];
         }
     }
 }

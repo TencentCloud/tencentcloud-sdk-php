@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallBack(CallBackInfo $CallBack) 设置自定义回调模板
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAnalysis() 获取多维分析设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnalysis(array $Analysis) 设置多维分析设置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmInfo extends AbstractModel
 {
@@ -121,6 +125,12 @@ class AlarmInfo extends AbstractModel
     public $CallBack;
 
     /**
+     * @var array 多维分析设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Analysis;
+
+    /**
      * @param string $Name 告警策略名称。
      * @param array $AlarmTargets 监控对象列表。
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
@@ -135,6 +145,8 @@ class AlarmInfo extends AbstractModel
      * @param string $MessageTemplate 自定义通知模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CallBackInfo $CallBack 自定义回调模板
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Analysis 多维分析设置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -207,6 +219,15 @@ class AlarmInfo extends AbstractModel
         if (array_key_exists("CallBack",$param) and $param["CallBack"] !== null) {
             $this->CallBack = new CallBackInfo();
             $this->CallBack->deserialize($param["CallBack"]);
+        }
+
+        if (array_key_exists("Analysis",$param) and $param["Analysis"] !== null) {
+            $this->Analysis = [];
+            foreach ($param["Analysis"] as $key => $value){
+                $obj = new AnalysisDimensional();
+                $obj->deserialize($value);
+                array_push($this->Analysis, $obj);
+            }
         }
     }
 }

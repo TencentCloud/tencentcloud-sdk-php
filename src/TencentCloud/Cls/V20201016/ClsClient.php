@@ -281,4 +281,9 @@ class ClsClient extends AbstractClient
         $obj->deserialize($response);
         return $obj;
     }
+
+    public function UploadLog($req, $options)
+    {
+        return $this->doRequestWithOptions("UploadLog", $req, $options);
+    }
 }

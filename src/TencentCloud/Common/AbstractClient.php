@@ -261,15 +261,25 @@ abstract class AbstractClient
             $rsam = $am->invoke($request, $rs);
             $canonicalQueryString = http_build_query($rsam);
             $payload = "";
-        } else if (isset($options["IsMultipart"]) && $options["IsMultipart"] === true) {
-            $boundary = uniqid();
-            $headers["Content-Type"] = "multipart/form-data; boundary=".$boundary;
-            $canonicalQueryString = "";
-            $payload = $this->getMultipartPayload($request, $boundary, $options);
-        } else {
-            $headers["Content-Type"] = "application/json";
-            $canonicalQueryString = "";
-            $payload = $request->toJsonString();
+        }
+        if (HttpProfile::$REQ_POST == $reqmethod)  {
+             if (isset($options["IsMultipart"]) && $options["IsMultipart"] === true) {
+                 $boundary = uniqid();
+                 $headers["Content-Type"] = "multipart/form-data; boundary=" . $boundary;
+                 $canonicalQueryString = "";
+                 $payload = $this->getMultipartPayload($request, $boundary, $options);
+             } else if (isset($options["IsOctetStream"]) && $options["IsOctetStream"] === true) {
+                 $headers["Content-Type"] = "application/octet-stream";
+                 $canonicalQueryString = "";
+                 if (isset($options["TopicId"])) {
+                     $headers["X-CLS-TopicId"] = $options["TopicId"];
+                 }
+                 $payload = $request->toJsonString();
+             } else {
+                 $headers["Content-Type"] = "application/json";
+                 $canonicalQueryString = "";
+                 $payload = $request->toJsonString();
+             }
         }
 
         if ($this->profile->getUnsignedPayload() == true) {

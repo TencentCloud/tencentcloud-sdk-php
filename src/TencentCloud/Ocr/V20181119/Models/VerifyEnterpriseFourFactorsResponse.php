@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VerifyEnterpriseFourFactors返回参数结构体
  *
- * @method integer getState() 获取核验一致性（1:一致，2:不一致）
- * @method void setState(integer $State) 设置核验一致性（1:一致，2:不一致）
+ * @method integer getState() 获取核验一致性（1:一致，2:不一致，3:查询无记录）
+ * @method void setState(integer $State) 设置核验一致性（1:一致，2:不一致，3:查询无记录）
  * @method Detail getDetail() 获取返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(Detail $Detail) 设置返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class VerifyEnterpriseFourFactorsResponse extends AbstractModel
 {
     /**
-     * @var integer 核验一致性（1:一致，2:不一致）
+     * @var integer 核验一致性（1:一致，2:不一致，3:查询无记录）
      */
     public $State;
 
@@ -48,7 +48,7 @@ class VerifyEnterpriseFourFactorsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $State 核验一致性（1:一致，2:不一致）
+     * @param integer $State 核验一致性（1:一致，2:不一致，3:查询无记录）
      * @param Detail $Detail 返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

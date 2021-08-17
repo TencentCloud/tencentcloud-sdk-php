@@ -20,6 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云盘操作日志。
  *
+ * @method string getOperationState() 获取操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。
+ * @method void setOperationState(string $OperationState) 设置操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。
+ * @method string getStartTime() 获取开始时间。
+ * @method void setStartTime(string $StartTime) 设置开始时间。
  * @method string getOperator() 获取操作者的UIN。
  * @method void setOperator(string $Operator) 设置操作者的UIN。
  * @method string getOperation() 获取操作类型。取值范围：
@@ -42,23 +52,26 @@ CBS_OPERATION_ISOLATE：隔离
 CBS_OPERATION_MODIFY：修改云硬盘属性
 ASP_OPERATION_BIND：关联定期快照策略
 ASP_OPERATION_UNBIND：取消关联定期快照策略
- * @method string getDiskId() 获取操作的云盘ID。
- * @method void setDiskId(string $DiskId) 设置操作的云盘ID。
- * @method string getOperationState() 获取操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。
- * @method void setOperationState(string $OperationState) 设置操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。
- * @method string getStartTime() 获取开始时间。
- * @method void setStartTime(string $StartTime) 设置开始时间。
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getDiskId() 获取操作的云盘ID。
+ * @method void setDiskId(string $DiskId) 设置操作的云盘ID。
  */
 class DiskOperationLog extends AbstractModel
 {
+    /**
+     * @var string 操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。
+     */
+    public $OperationState;
+
+    /**
+     * @var string 开始时间。
+     */
+    public $StartTime;
+
     /**
      * @var string 操作者的UIN。
      */
@@ -79,29 +92,21 @@ ASP_OPERATION_UNBIND：取消关联定期快照策略
     public $Operation;
 
     /**
-     * @var string 操作的云盘ID。
-     */
-    public $DiskId;
-
-    /**
-     * @var string 操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。
-     */
-    public $OperationState;
-
-    /**
-     * @var string 开始时间。
-     */
-    public $StartTime;
-
-    /**
      * @var string 结束时间。
      */
     public $EndTime;
 
     /**
+     * @var string 操作的云盘ID。
+     */
+    public $DiskId;
+
+    /**
+     * @param string $OperationState 操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。
+     * @param string $StartTime 开始时间。
      * @param string $Operator 操作者的UIN。
      * @param string $Operation 操作类型。取值范围：
 CBS_OPERATION_ATTACH：挂载云硬盘
@@ -113,13 +118,8 @@ CBS_OPERATION_ISOLATE：隔离
 CBS_OPERATION_MODIFY：修改云硬盘属性
 ASP_OPERATION_BIND：关联定期快照策略
 ASP_OPERATION_UNBIND：取消关联定期快照策略
-     * @param string $DiskId 操作的云盘ID。
-     * @param string $OperationState 操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。
-     * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
+     * @param string $DiskId 操作的云盘ID。
      */
     function __construct()
     {
@@ -134,18 +134,6 @@ PROCESSING :表示操作中。
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = $param["Operator"];
-        }
-
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
-        }
-
-        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
-            $this->DiskId = $param["DiskId"];
-        }
-
         if (array_key_exists("OperationState",$param) and $param["OperationState"] !== null) {
             $this->OperationState = $param["OperationState"];
         }
@@ -154,8 +142,20 @@ PROCESSING :表示操作中。
             $this->StartTime = $param["StartTime"];
         }
 
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
+            $this->Operation = $param["Operation"];
+        }
+
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
+            $this->DiskId = $param["DiskId"];
         }
     }
 }

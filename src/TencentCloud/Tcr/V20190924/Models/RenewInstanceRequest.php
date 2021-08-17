@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegistryId() 获取实例Id
  * @method void setRegistryId(string $RegistryId) 设置实例Id
- * @method RegistryChargePrepaid getRegistryChargePrepaid() 获取预付费自动续费标识和购买时长
- * @method void setRegistryChargePrepaid(RegistryChargePrepaid $RegistryChargePrepaid) 设置预付费自动续费标识和购买时长
+ * @method RegistryChargePrepaid getRegistryChargePrepaid() 获取预付费自动续费标识和购买时长,0：手动续费，1：自动续费，2：不续费并且不通知;单位为月
+ * @method void setRegistryChargePrepaid(RegistryChargePrepaid $RegistryChargePrepaid) 设置预付费自动续费标识和购买时长,0：手动续费，1：自动续费，2：不续费并且不通知;单位为月
  * @method integer getFlag() 获取0 续费， 1按量转包年包月
  * @method void setFlag(integer $Flag) 设置0 续费， 1按量转包年包月
  */
@@ -35,7 +35,7 @@ class RenewInstanceRequest extends AbstractModel
     public $RegistryId;
 
     /**
-     * @var RegistryChargePrepaid 预付费自动续费标识和购买时长
+     * @var RegistryChargePrepaid 预付费自动续费标识和购买时长,0：手动续费，1：自动续费，2：不续费并且不通知;单位为月
      */
     public $RegistryChargePrepaid;
 
@@ -46,7 +46,7 @@ class RenewInstanceRequest extends AbstractModel
 
     /**
      * @param string $RegistryId 实例Id
-     * @param RegistryChargePrepaid $RegistryChargePrepaid 预付费自动续费标识和购买时长
+     * @param RegistryChargePrepaid $RegistryChargePrepaid 预付费自动续费标识和购买时长,0：手动续费，1：自动续费，2：不续费并且不通知;单位为月
      * @param integer $Flag 0 续费， 1按量转包年包月
      */
     function __construct()

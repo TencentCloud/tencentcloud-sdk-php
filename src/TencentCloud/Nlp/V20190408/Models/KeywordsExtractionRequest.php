@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * KeywordsExtraction请求参数结构体
  *
- * @method string getText() 获取待处理的文本（仅支持UTF-8格式，不超过10000字）
- * @method void setText(string $Text) 设置待处理的文本（仅支持UTF-8格式，不超过10000字）
+ * @method string getText() 获取待处理的文本（仅支持UTF-8格式，不超过10000字符）
+ * @method void setText(string $Text) 设置待处理的文本（仅支持UTF-8格式，不超过10000字符）
  * @method integer getNum() 获取指定关键词个数上限（默认值为5）
  * @method void setNum(integer $Num) 设置指定关键词个数上限（默认值为5）
  */
 class KeywordsExtractionRequest extends AbstractModel
 {
     /**
-     * @var string 待处理的文本（仅支持UTF-8格式，不超过10000字）
+     * @var string 待处理的文本（仅支持UTF-8格式，不超过10000字符）
      */
     public $Text;
 
@@ -38,7 +38,7 @@ class KeywordsExtractionRequest extends AbstractModel
     public $Num;
 
     /**
-     * @param string $Text 待处理的文本（仅支持UTF-8格式，不超过10000字）
+     * @param string $Text 待处理的文本（仅支持UTF-8格式，不超过10000字符）
      * @param integer $Num 指定关键词个数上限（默认值为5）
      */
     function __construct()

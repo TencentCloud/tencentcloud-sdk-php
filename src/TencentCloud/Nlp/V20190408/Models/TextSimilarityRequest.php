@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSrcText() 获取需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
  * @method void setSrcText(string $SrcText) 设置需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
- * @method array getTargetText() 获取目标句子
- * @method void setTargetText(array $TargetText) 设置目标句子
+ * @method array getTargetText() 获取目标句子（以句子数量为单位消耗资源包）
+ * @method void setTargetText(array $TargetText) 设置目标句子（以句子数量为单位消耗资源包）
  */
 class TextSimilarityRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class TextSimilarityRequest extends AbstractModel
     public $SrcText;
 
     /**
-     * @var array 目标句子
+     * @var array 目标句子（以句子数量为单位消耗资源包）
      */
     public $TargetText;
 
     /**
      * @param string $SrcText 需要与目标句子计算相似度的源句子（仅支持UTF-8格式，不超过500字符）
-     * @param array $TargetText 目标句子
+     * @param array $TargetText 目标句子（以句子数量为单位消耗资源包）
      */
     function __construct()
     {

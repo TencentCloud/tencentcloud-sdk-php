@@ -25,12 +25,6 @@ use TencentCloud\Mrs\V20200910\Models as Models;
 /**
  * @method Models\ImageToClassResponse ImageToClass(Models\ImageToClassRequest $req) 图片分类
  * @method Models\ImageToObjectResponse ImageToObject(Models\ImageToObjectRequest $req) 图片转结构化对象
- * @method Models\ReportImageStructuredResponse ReportImageStructured(Models\ReportImageStructuredRequest $req) 接口没有流量
-
-将输入的图片类型报告结构化
- * @method Models\ReportTextStructuredResponse ReportTextStructured(Models\ReportTextStructuredRequest $req) 接口还未上线
-
-将输入的医疗报告文本内容进行结构化输出
  * @method Models\TextToClassResponse TextToClass(Models\TextToClassRequest $req) 文本分类
  * @method Models\TextToObjectResponse TextToObject(Models\TextToObjectRequest $req) 文本转结构化对象
  */

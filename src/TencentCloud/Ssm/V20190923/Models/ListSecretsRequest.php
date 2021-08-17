@@ -48,10 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagFilters(array $TagFilters) 设置标签过滤条件。
  * @method integer getSecretType() 获取0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
-这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+2 -- 表示SSH密钥对凭据。
  * @method void setSecretType(integer $SecretType) 设置0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
-这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+2 -- 表示SSH密钥对凭据。
  */
 class ListSecretsRequest extends AbstractModel
 {
@@ -95,7 +95,7 @@ class ListSecretsRequest extends AbstractModel
     /**
      * @var integer 0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
-这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+2 -- 表示SSH密钥对凭据。
      */
     public $SecretType;
 
@@ -115,7 +115,7 @@ class ListSecretsRequest extends AbstractModel
      * @param array $TagFilters 标签过滤条件。
      * @param integer $SecretType 0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
-这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+2 -- 表示SSH密钥对凭据。
      */
     function __construct()
     {

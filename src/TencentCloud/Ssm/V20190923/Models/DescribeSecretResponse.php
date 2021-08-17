@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeleteTime(integer $DeleteTime) 设置删除日期，uinx 时间戳，非计划删除状态的凭据为0。
  * @method integer getCreateTime() 获取创建日期。
  * @method void setCreateTime(integer $CreateTime) 设置创建日期。
- * @method integer getSecretType() 获取0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+ * @method integer getSecretType() 获取0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecretType(integer $SecretType) 设置0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+ * @method void setSecretType(integer $SecretType) 设置0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取云产品名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -53,6 +53,18 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRotationFrequency() 获取轮转周期，默认以天为单位。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRotationFrequency(integer $RotationFrequency) 设置轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceName() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceName(string $ResourceName) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProjectID() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectID(integer $ProjectID) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAssociatedInstanceIDs() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssociatedInstanceIDs(array $AssociatedInstanceIDs) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -95,7 +107,7 @@ class DescribeSecretResponse extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+     * @var integer 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretType;
@@ -125,6 +137,24 @@ class DescribeSecretResponse extends AbstractModel
     public $RotationFrequency;
 
     /**
+     * @var string 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceName;
+
+    /**
+     * @var integer 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectID;
+
+    /**
+     * @var array 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssociatedInstanceIDs;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -137,7 +167,7 @@ class DescribeSecretResponse extends AbstractModel
      * @param string $Status 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
      * @param integer $DeleteTime 删除日期，uinx 时间戳，非计划删除状态的凭据为0。
      * @param integer $CreateTime 创建日期。
-     * @param integer $SecretType 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+     * @param integer $SecretType 0 --  用户自定义凭据类型；1 -- 数据库凭据类型；2 -- SSH密钥对凭据类型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 云产品名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,6 +176,12 @@ class DescribeSecretResponse extends AbstractModel
      * @param boolean $RotationStatus 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RotationFrequency 轮转周期，默认以天为单位。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceName 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -208,6 +244,18 @@ class DescribeSecretResponse extends AbstractModel
 
         if (array_key_exists("RotationFrequency",$param) and $param["RotationFrequency"] !== null) {
             $this->RotationFrequency = $param["RotationFrequency"];
+        }
+
+        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
+            $this->ResourceName = $param["ResourceName"];
+        }
+
+        if (array_key_exists("ProjectID",$param) and $param["ProjectID"] !== null) {
+            $this->ProjectID = $param["ProjectID"];
+        }
+
+        if (array_key_exists("AssociatedInstanceIDs",$param) and $param["AssociatedInstanceIDs"] !== null) {
+            $this->AssociatedInstanceIDs = $param["AssociatedInstanceIDs"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

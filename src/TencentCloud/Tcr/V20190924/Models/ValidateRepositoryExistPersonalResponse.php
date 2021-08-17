@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ValidateRepositoryExistPersonal返回参数结构体
  *
- * @method RepoIsExistResp getData() 获取仓库是否存在
- * @method void setData(RepoIsExistResp $Data) 设置仓库是否存在
+ * @method RepoIsExistResp getData() 获取验证个人版仓库是否存在返回信息
+ * @method void setData(RepoIsExistResp $Data) 设置验证个人版仓库是否存在返回信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ValidateRepositoryExistPersonalResponse extends AbstractModel
 {
     /**
-     * @var RepoIsExistResp 仓库是否存在
+     * @var RepoIsExistResp 验证个人版仓库是否存在返回信息
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class ValidateRepositoryExistPersonalResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param RepoIsExistResp $Data 仓库是否存在
+     * @param RepoIsExistResp $Data 验证个人版仓库是否存在返回信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

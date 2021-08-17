@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRotationDetail返回参数结构体
  *
- * @method boolean getEnableRotation() 获取否允许轮转，True表示开启轮转，False表示禁止轮转。
- * @method void setEnableRotation(boolean $EnableRotation) 设置否允许轮转，True表示开启轮转，False表示禁止轮转。
+ * @method boolean getEnableRotation() 获取否允许轮转，true表示开启轮转，false表示禁止轮转。
+ * @method void setEnableRotation(boolean $EnableRotation) 设置否允许轮转，true表示开启轮转，false表示禁止轮转。
  * @method integer getFrequency() 获取轮转的频率，以天为单位，默认为1天。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrequency(integer $Frequency) 设置轮转的频率，以天为单位，默认为1天。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRotationDetailResponse extends AbstractModel
 {
     /**
-     * @var boolean 否允许轮转，True表示开启轮转，False表示禁止轮转。
+     * @var boolean 否允许轮转，true表示开启轮转，false表示禁止轮转。
      */
     public $EnableRotation;
 
@@ -68,7 +68,7 @@ class DescribeRotationDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $EnableRotation 否允许轮转，True表示开启轮转，False表示禁止轮转。
+     * @param boolean $EnableRotation 否允许轮转，true表示开启轮转，false表示禁止轮转。
      * @param integer $Frequency 轮转的频率，以天为单位，默认为1天。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestRotateTime 最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(boolean $Enable) 设置启用或禁用实例长期访问凭证
  * @method string getDesc() 获取访问凭证描述
  * @method void setDesc(string $Desc) 设置访问凭证描述
- * @method integer getModifyFlag() 获取1为修改描述 2为启动禁用，不填写默认为修改启动禁用
- * @method void setModifyFlag(integer $ModifyFlag) 设置1为修改描述 2为启动禁用，不填写默认为修改启动禁用
+ * @method integer getModifyFlag() 获取1为修改描述 2为操作启动禁用，默认值为2
+ * @method void setModifyFlag(integer $ModifyFlag) 设置1为修改描述 2为操作启动禁用，默认值为2
  */
 class ModifyInstanceTokenRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyInstanceTokenRequest extends AbstractModel
     public $Desc;
 
     /**
-     * @var integer 1为修改描述 2为启动禁用，不填写默认为修改启动禁用
+     * @var integer 1为修改描述 2为操作启动禁用，默认值为2
      */
     public $ModifyFlag;
 
@@ -63,7 +63,7 @@ class ModifyInstanceTokenRequest extends AbstractModel
      * @param string $RegistryId 实例 ID
      * @param boolean $Enable 启用或禁用实例长期访问凭证
      * @param string $Desc 访问凭证描述
-     * @param integer $ModifyFlag 1为修改描述 2为启动禁用，不填写默认为修改启动禁用
+     * @param integer $ModifyFlag 1为修改描述 2为操作启动禁用，默认值为2
      */
     function __construct()
     {

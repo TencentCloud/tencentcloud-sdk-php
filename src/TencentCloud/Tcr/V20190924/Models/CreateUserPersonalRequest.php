@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserPersonal请求参数结构体
  *
- * @method string getPassword() 获取用户密码
- * @method void setPassword(string $Password) 设置用户密码
+ * @method string getPassword() 获取用户密码，密码必须为8到16位
+ * @method void setPassword(string $Password) 设置用户密码，密码必须为8到16位
  */
 class CreateUserPersonalRequest extends AbstractModel
 {
     /**
-     * @var string 用户密码
+     * @var string 用户密码，密码必须为8到16位
      */
     public $Password;
 
     /**
-     * @param string $Password 用户密码
+     * @param string $Password 用户密码，密码必须为8到16位
      */
     function __construct()
     {

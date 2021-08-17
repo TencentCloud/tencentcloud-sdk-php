@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImageFilterPersonal返回参数结构体
  *
- * @method SameImagesResp getData() 获取payload
- * @method void setData(SameImagesResp $Data) 设置payload
+ * @method SameImagesResp getData() 获取返回tag镜像内容相同的tag列表
+ * @method void setData(SameImagesResp $Data) 设置返回tag镜像内容相同的tag列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeImageFilterPersonalResponse extends AbstractModel
 {
     /**
-     * @var SameImagesResp payload
+     * @var SameImagesResp 返回tag镜像内容相同的tag列表
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeImageFilterPersonalResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SameImagesResp $Data payload
+     * @param SameImagesResp $Data 返回tag镜像内容相同的tag列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

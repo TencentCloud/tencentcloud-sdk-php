@@ -29,6 +29,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\ApplyReWithdrawalResponse ApplyReWithdrawal(Models\ApplyReWithdrawalRequest $req) 正常结算提现失败情况下，发起重新提现的请求接口
  * @method Models\ApplyTradeResponse ApplyTrade(Models\ApplyTradeRequest $req) 跨境-提交贸易材料。通过提交贸易材料接口可为对接方累计贸易额度，在额度范围内可发起汇兑汇出交易。
  * @method Models\ApplyWithdrawalResponse ApplyWithdrawal(Models\ApplyWithdrawalRequest $req) 商户提现
+ * @method Models\BindAccountResponse BindAccount(Models\BindAccountRequest $req) 灵云-绑定账号
  * @method Models\BindAcctResponse BindAcct(Models\BindAcctRequest $req) 商户绑定提现银行卡，每个商户只能绑定一张提现银行卡
  * @method Models\BindRelateAccReUnionPayResponse BindRelateAccReUnionPay(Models\BindRelateAccReUnionPayRequest $req) 会员绑定提现账户-回填银联鉴权短信码。用于会员填写动态验证码后，发往银行进行验证，验证成功则完成绑定。
  * @method Models\BindRelateAcctSmallAmountResponse BindRelateAcctSmallAmount(Models\BindRelateAcctSmallAmountRequest $req) 会员绑定提现账户-小额鉴权。会员申请绑定提现账户，绑定后从会员子账户中提现到绑定账户。
@@ -49,6 +50,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateAgentTaxPaymentInfosResponse CreateAgentTaxPaymentInfos(Models\CreateAgentTaxPaymentInfosRequest $req) 直播平台-代理商完税信息录入
  * @method Models\CreateCustAcctIdResponse CreateCustAcctId(Models\CreateCustAcctIdRequest $req) 会员子账户开立。会员在银行注册，并开立会员子账户，交易网会员代码即会员在平台端系统的会员编号。
 平台需保存银行返回的子账户账号，后续交易接口都会用到。会员属性字段为预留扩展字段，当前必须送默认值。
+ * @method Models\CreateExternalAnchorResponse CreateExternalAnchor(Models\CreateExternalAnchorRequest $req) 灵云-主播入驻
  * @method Models\CreateInvoiceResponse CreateInvoice(Models\CreateInvoiceRequest $req) 智慧零售-发票开具
  * @method Models\CreateInvoiceV2Response CreateInvoiceV2(Models\CreateInvoiceV2Request $req) 智慧零售-发票开具V2
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 智慧零售-商户注册
@@ -67,6 +69,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\MigrateOrderRefundResponse MigrateOrderRefund(Models\MigrateOrderRefundRequest $req) 山姆聚合支付项目-存量订单退款接口。可以通过本接口将支付款全部或部分退还给付款方，在收到用户退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。
  * @method Models\MigrateOrderRefundQueryResponse MigrateOrderRefundQuery(Models\MigrateOrderRefundQueryRequest $req) 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时。
  * @method Models\ModifyAgentTaxPaymentInfoResponse ModifyAgentTaxPaymentInfo(Models\ModifyAgentTaxPaymentInfoRequest $req) 直播平台-修改代理商完税信息
+ * @method Models\ModifyBindedAccountResponse ModifyBindedAccount(Models\ModifyBindedAccountRequest $req) 灵云-重新绑定账号
  * @method Models\ModifyMerchantResponse ModifyMerchant(Models\ModifyMerchantRequest $req) 云鉴-商户信息修改的接口
  * @method Models\ModifyMntMbrBindRelateAcctBankCodeResponse ModifyMntMbrBindRelateAcctBankCode(Models\ModifyMntMbrBindRelateAcctBankCodeRequest $req) 维护会员绑定提现账户联行号。此接口可以支持市场修改会员的提现账户的开户行信息，具体包括开户行行名、开户行的银行联行号（大小额联行号）和超级网银行号。
  * @method Models\QueryAcctBindingResponse QueryAcctBinding(Models\QueryAcctBindingRequest $req) 聚鑫-查询子账户绑定银行卡
@@ -125,6 +128,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\UnBindAcctResponse UnBindAcct(Models\UnBindAcctRequest $req) 商户解除绑定的提现银行卡
  * @method Models\UnbindRelateAcctResponse UnbindRelateAcct(Models\UnbindRelateAcctRequest $req) 会员解绑提现账户。此接口可以支持会员解除名下的绑定账户关系。
  * @method Models\UnifiedOrderResponse UnifiedOrder(Models\UnifiedOrderRequest $req) 应用需要先调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
+ * @method Models\UploadExternalAnchorInfoResponse UploadExternalAnchorInfo(Models\UploadExternalAnchorInfoRequest $req) 灵云-上传主播信息
  * @method Models\UploadTaxListResponse UploadTaxList(Models\UploadTaxListRequest $req) 直播平台-上传代理商完税列表
  * @method Models\UploadTaxPaymentResponse UploadTaxPayment(Models\UploadTaxPaymentRequest $req) 直播平台-上传代理商完税证明
  * @method Models\WithdrawCashMembershipResponse WithdrawCashMembership(Models\WithdrawCashMembershipRequest $req) 会员提现-不验证。此接口受理会员发起的提现申请。会员子账户的可提现余额、可用余额会减少，市场的资金汇总账户(监管账户)会减少相应的发生金额，提现到会员申请的收款账户。		

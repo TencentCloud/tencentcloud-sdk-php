@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryId(string $RegistryId) 设置实例Id
  * @method string getNamespaceName() 获取命名空间的名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间的名称
- * @method string getRepositoryName() 获取仓库名称的名称
- * @method void setRepositoryName(string $RepositoryName) 设置仓库名称的名称
+ * @method string getRepositoryName() 获取镜像仓库的名称
+ * @method void setRepositoryName(string $RepositoryName) 设置镜像仓库的名称
  */
 class DeleteRepositoryRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteRepositoryRequest extends AbstractModel
     public $NamespaceName;
 
     /**
-     * @var string 仓库名称的名称
+     * @var string 镜像仓库的名称
      */
     public $RepositoryName;
 
     /**
      * @param string $RegistryId 实例Id
      * @param string $NamespaceName 命名空间的名称
-     * @param string $RepositoryName 仓库名称的名称
+     * @param string $RepositoryName 镜像仓库的名称
      */
     function __construct()
     {

@@ -76,12 +76,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置地域信息
  * @method string getInstanceState() 获取实例状态 TERMINATED_PRO_VERSION 已销毁
  * @method void setInstanceState(string $InstanceState) 设置实例状态 TERMINATED_PRO_VERSION 已销毁
- * @method integer getLicenseStatus() 获取授权状态 1 授权 0 未授权
- * @method void setLicenseStatus(integer $LicenseStatus) 设置授权状态 1 授权 0 未授权
+ * @method integer getLicenseStatus() 获取防篡改 授权状态 1 授权 0 未授权
+ * @method void setLicenseStatus(integer $LicenseStatus) 设置防篡改 授权状态 1 授权 0 未授权
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method integer getHasAssetScan() 获取是否有资产扫描接口，0无，1有
  * @method void setHasAssetScan(integer $HasAssetScan) 设置是否有资产扫描接口，0无，1有
+ * @method string getMachineType() 获取机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+ * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  */
 class Machine extends AbstractModel
 {
@@ -186,7 +188,7 @@ class Machine extends AbstractModel
     public $InstanceState;
 
     /**
-     * @var integer 授权状态 1 授权 0 未授权
+     * @var integer 防篡改 授权状态 1 授权 0 未授权
      */
     public $LicenseStatus;
 
@@ -199,6 +201,11 @@ class Machine extends AbstractModel
      * @var integer 是否有资产扫描接口，0无，1有
      */
     public $HasAssetScan;
+
+    /**
+     * @var string 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     */
+    public $MachineType;
 
     /**
      * @param string $MachineName 主机名称。
@@ -229,9 +236,10 @@ class Machine extends AbstractModel
      * @param integer $InvasionNum 入侵事件数
      * @param RegionInfo $RegionInfo 地域信息
      * @param string $InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
-     * @param integer $LicenseStatus 授权状态 1 授权 0 未授权
+     * @param integer $LicenseStatus 防篡改 授权状态 1 授权 0 未授权
      * @param integer $ProjectId 项目ID
      * @param integer $HasAssetScan 是否有资产扫描接口，0无，1有
+     * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
      */
     function __construct()
     {
@@ -334,6 +342,10 @@ class Machine extends AbstractModel
 
         if (array_key_exists("HasAssetScan",$param) and $param["HasAssetScan"] !== null) {
             $this->HasAssetScan = $param["HasAssetScan"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

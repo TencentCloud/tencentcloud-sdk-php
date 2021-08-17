@@ -60,6 +60,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentBatchStatus(string $CurrentBatchStatus) 设置当前批次状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNewDeployVersion() 获取新版本version
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNewDeployVersion(string $NewDeployVersion) 设置新版本version
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOldDeployVersion() 获取旧版本version
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOldDeployVersion(string $OldDeployVersion) 设置旧版本version
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNewVersionPackageInfo() 获取包名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNewVersionPackageInfo(string $NewVersionPackageInfo) 设置包名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNextBatchStartTime() 获取下一批次开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNextBatchStartTime(integer $NextBatchStartTime) 设置下一批次开始时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemDeployApplicationDetailInfo extends AbstractModel
 {
@@ -124,6 +140,30 @@ class TemDeployApplicationDetailInfo extends AbstractModel
     public $CurrentBatchStatus;
 
     /**
+     * @var string 新版本version
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NewDeployVersion;
+
+    /**
+     * @var string 旧版本version
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OldDeployVersion;
+
+    /**
+     * @var string 包名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NewVersionPackageInfo;
+
+    /**
+     * @var integer 下一批次开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NextBatchStartTime;
+
+    /**
      * @param DeployStrategyConf $DeployStrategyConf 分批发布策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 开始时间
@@ -143,6 +183,14 @@ class TemDeployApplicationDetailInfo extends AbstractModel
      * @param string $ErrorMessage 错误原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentBatchStatus 当前批次状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NewDeployVersion 新版本version
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OldDeployVersion 旧版本version
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NewVersionPackageInfo 包名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NextBatchStartTime 下一批次开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -204,6 +252,22 @@ class TemDeployApplicationDetailInfo extends AbstractModel
 
         if (array_key_exists("CurrentBatchStatus",$param) and $param["CurrentBatchStatus"] !== null) {
             $this->CurrentBatchStatus = $param["CurrentBatchStatus"];
+        }
+
+        if (array_key_exists("NewDeployVersion",$param) and $param["NewDeployVersion"] !== null) {
+            $this->NewDeployVersion = $param["NewDeployVersion"];
+        }
+
+        if (array_key_exists("OldDeployVersion",$param) and $param["OldDeployVersion"] !== null) {
+            $this->OldDeployVersion = $param["OldDeployVersion"];
+        }
+
+        if (array_key_exists("NewVersionPackageInfo",$param) and $param["NewVersionPackageInfo"] !== null) {
+            $this->NewVersionPackageInfo = $param["NewVersionPackageInfo"];
+        }
+
+        if (array_key_exists("NextBatchStartTime",$param) and $param["NextBatchStartTime"] !== null) {
+            $this->NextBatchStartTime = $param["NextBatchStartTime"];
         }
     }
 }

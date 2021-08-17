@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCommId() 获取通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）例：1400353843_218695_1590065777。通过 DescribeRoomInformation（查询房间列表）接口获取（链接：https://cloud.tencent.com/document/product/647/44050）
  * @method void setCommId(string $CommId) 设置通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）例：1400353843_218695_1590065777。通过 DescribeRoomInformation（查询房间列表）接口获取（链接：https://cloud.tencent.com/document/product/647/44050）
- * @method integer getStartTime() 获取查询开始时间，14天内。本地unix时间戳（1588031999s）
- * @method void setStartTime(integer $StartTime) 设置查询开始时间，14天内。本地unix时间戳（1588031999s）
- * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1588031999s）
- * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1588031999s）
- * @method string getSdkAppId() 获取用户SDKAppID（1400188366）
- * @method void setSdkAppId(string $SdkAppId) 设置用户SDKAppID（1400188366）
+ * @method integer getStartTime() 获取查询开始时间，14天内。本地unix时间戳（1590065777）
+ * @method void setStartTime(integer $StartTime) 设置查询开始时间，14天内。本地unix时间戳（1590065777）
+ * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1590065877）
+ * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1590065877）
+ * @method string getSdkAppId() 获取用户SDKAppID（1400353843）
+ * @method void setSdkAppId(string $SdkAppId) 设置用户SDKAppID（1400353843）
  * @method array getUserIds() 获取需查询的用户数组，不填默认返回6个用户,最多可填6个用户
  * @method void setUserIds(array $UserIds) 设置需查询的用户数组，不填默认返回6个用户,最多可填6个用户
  * @method string getPageNumber() 获取设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
@@ -43,17 +43,17 @@ class DescribeUserInformationRequest extends AbstractModel
     public $CommId;
 
     /**
-     * @var integer 查询开始时间，14天内。本地unix时间戳（1588031999s）
+     * @var integer 查询开始时间，14天内。本地unix时间戳（1590065777）
      */
     public $StartTime;
 
     /**
-     * @var integer 查询结束时间，本地unix时间戳（1588031999s）
+     * @var integer 查询结束时间，本地unix时间戳（1590065877）
      */
     public $EndTime;
 
     /**
-     * @var string 用户SDKAppID（1400188366）
+     * @var string 用户SDKAppID（1400353843）
      */
     public $SdkAppId;
 
@@ -74,9 +74,9 @@ class DescribeUserInformationRequest extends AbstractModel
 
     /**
      * @param string $CommId 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位为s）例：1400353843_218695_1590065777。通过 DescribeRoomInformation（查询房间列表）接口获取（链接：https://cloud.tencent.com/document/product/647/44050）
-     * @param integer $StartTime 查询开始时间，14天内。本地unix时间戳（1588031999s）
-     * @param integer $EndTime 查询结束时间，本地unix时间戳（1588031999s）
-     * @param string $SdkAppId 用户SDKAppID（1400188366）
+     * @param integer $StartTime 查询开始时间，14天内。本地unix时间戳（1590065777）
+     * @param integer $EndTime 查询结束时间，本地unix时间戳（1590065877）
+     * @param string $SdkAppId 用户SDKAppID（1400353843）
      * @param array $UserIds 需查询的用户数组，不填默认返回6个用户,最多可填6个用户
      * @param string $PageNumber 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
      * @param string $PageSize 设置分页大小（PageNumber和PageSize 其中一个不填均默认返回6条数据,PageSize最大不超过100）

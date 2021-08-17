@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegistryId() 获取实例ID
  * @method void setRegistryId(string $RegistryId) 设置实例ID
- * @method string getNamespaceName() 获取命名空间的名称
- * @method void setNamespaceName(string $NamespaceName) 设置命名空间的名称
+ * @method string getNamespaceName() 获取命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
+ * @method void setNamespaceName(string $NamespaceName) 设置命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
  * @method boolean getIsPublic() 获取是否公开，true为公开，fale为私有
  * @method void setIsPublic(boolean $IsPublic) 设置是否公开，true为公开，fale为私有
  */
@@ -35,7 +35,7 @@ class CreateNamespaceRequest extends AbstractModel
     public $RegistryId;
 
     /**
-     * @var string 命名空间的名称
+     * @var string 命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
      */
     public $NamespaceName;
 
@@ -46,7 +46,7 @@ class CreateNamespaceRequest extends AbstractModel
 
     /**
      * @param string $RegistryId 实例ID
-     * @param string $NamespaceName 命名空间的名称
+     * @param string $NamespaceName 命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
      * @param boolean $IsPublic 是否公开，true为公开，fale为私有
      */
     function __construct()

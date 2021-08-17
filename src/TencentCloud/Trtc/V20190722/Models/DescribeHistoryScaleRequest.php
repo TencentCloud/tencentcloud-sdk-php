@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHistoryScale请求参数结构体
  *
- * @method string getSdkAppId() 获取用户sdkappid
- * @method void setSdkAppId(string $SdkAppId) 设置用户sdkappid
- * @method integer getStartTime() 获取查询开始时间，5天内。本地unix时间戳（1588031999s）
- * @method void setStartTime(integer $StartTime) 设置查询开始时间，5天内。本地unix时间戳（1588031999s）
- * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1588031999s）
- * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1588031999s）
+ * @method string getSdkAppId() 获取用户sdkappid(1400188366)
+ * @method void setSdkAppId(string $SdkAppId) 设置用户sdkappid(1400188366)
+ * @method integer getStartTime() 获取查询开始时间，5天内。本地unix时间戳（1587571000s）
+ * @method void setStartTime(integer $StartTime) 设置查询开始时间，5天内。本地unix时间戳（1587571000s）
+ * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1588034999s）
+ * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1588034999s）
  */
 class DescribeHistoryScaleRequest extends AbstractModel
 {
     /**
-     * @var string 用户sdkappid
+     * @var string 用户sdkappid(1400188366)
      */
     public $SdkAppId;
 
     /**
-     * @var integer 查询开始时间，5天内。本地unix时间戳（1588031999s）
+     * @var integer 查询开始时间，5天内。本地unix时间戳（1587571000s）
      */
     public $StartTime;
 
     /**
-     * @var integer 查询结束时间，本地unix时间戳（1588031999s）
+     * @var integer 查询结束时间，本地unix时间戳（1588034999s）
      */
     public $EndTime;
 
     /**
-     * @param string $SdkAppId 用户sdkappid
-     * @param integer $StartTime 查询开始时间，5天内。本地unix时间戳（1588031999s）
-     * @param integer $EndTime 查询结束时间，本地unix时间戳（1588031999s）
+     * @param string $SdkAppId 用户sdkappid(1400188366)
+     * @param integer $StartTime 查询开始时间，5天内。本地unix时间戳（1587571000s）
+     * @param integer $EndTime 查询结束时间，本地unix时间戳（1588034999s）
      */
     function __construct()
     {

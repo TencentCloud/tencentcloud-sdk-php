@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getItemId() 获取歌曲ID
  * @method void setItemId(string $ItemId) 设置歌曲ID
- * @method string getSubItemType() 获取歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
- * @method void setSubItemType(string $SubItemType) 设置歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
+ * @method string getSubItemType() 获取格式，可选项，可不填写，默认值为：LRC-LRC。
+<li>LRC-LRC：歌词；</li>
+<li>JSON-ST：波形图。</li>
+ * @method void setSubItemType(string $SubItemType) 设置格式，可选项，可不填写，默认值为：LRC-LRC。
+<li>LRC-LRC：歌词；</li>
+<li>JSON-ST：波形图。</li>
  */
 class DescribeLyricRequest extends AbstractModel
 {
@@ -33,13 +37,17 @@ class DescribeLyricRequest extends AbstractModel
     public $ItemId;
 
     /**
-     * @var string 歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
+     * @var string 格式，可选项，可不填写，默认值为：LRC-LRC。
+<li>LRC-LRC：歌词；</li>
+<li>JSON-ST：波形图。</li>
      */
     public $SubItemType;
 
     /**
      * @param string $ItemId 歌曲ID
-     * @param string $SubItemType 歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
+     * @param string $SubItemType 格式，可选项，可不填写，默认值为：LRC-LRC。
+<li>LRC-LRC：歌词；</li>
+<li>JSON-ST：波形图。</li>
      */
     function __construct()
     {

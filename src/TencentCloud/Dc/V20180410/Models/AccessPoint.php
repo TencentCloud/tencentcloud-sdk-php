@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArea(string $Area) 设置接入点地域名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccessPointType() 获取接入点类型。VXLAN/QCPL/QCAR
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccessPointType(string $AccessPointType) 设置接入点类型。VXLAN/QCPL/QCAR
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessPoint extends AbstractModel
 {
@@ -106,6 +110,12 @@ class AccessPoint extends AbstractModel
     public $Area;
 
     /**
+     * @var string 接入点类型。VXLAN/QCPL/QCAR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccessPointType;
+
+    /**
      * @param string $AccessPointName 接入点的名称。
      * @param string $AccessPointId 接入点唯一ID。
      * @param string $State 接入点的状态。可用，不可用。
@@ -119,6 +129,8 @@ class AccessPoint extends AbstractModel
      * @param string $City 接入点所在城市
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Area 接入点地域名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccessPointType 接入点类型。VXLAN/QCPL/QCAR
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -173,6 +185,10 @@ class AccessPoint extends AbstractModel
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("AccessPointType",$param) and $param["AccessPointType"] !== null) {
+            $this->AccessPointType = $param["AccessPointType"];
         }
     }
 }

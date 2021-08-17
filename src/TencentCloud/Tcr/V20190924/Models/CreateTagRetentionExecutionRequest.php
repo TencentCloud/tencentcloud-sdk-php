@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryId(string $RegistryId) 设置主实例iD
  * @method integer getRetentionId() 获取版本保留规则Id
  * @method void setRetentionId(integer $RetentionId) 设置版本保留规则Id
- * @method boolean getDryRun() 获取是否模拟执行
- * @method void setDryRun(boolean $DryRun) 设置是否模拟执行
+ * @method boolean getDryRun() 获取是否模拟执行，默认值为false，即非模拟执行
+ * @method void setDryRun(boolean $DryRun) 设置是否模拟执行，默认值为false，即非模拟执行
  */
 class CreateTagRetentionExecutionRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateTagRetentionExecutionRequest extends AbstractModel
     public $RetentionId;
 
     /**
-     * @var boolean 是否模拟执行
+     * @var boolean 是否模拟执行，默认值为false，即非模拟执行
      */
     public $DryRun;
 
     /**
      * @param string $RegistryId 主实例iD
      * @param integer $RetentionId 版本保留规则Id
-     * @param boolean $DryRun 是否模拟执行
+     * @param boolean $DryRun 是否模拟执行，默认值为false，即非模拟执行
      */
     function __construct()
     {

@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLyricUrl(string $LyricUrl) 设置歌词url
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWaveformUrl() 获取波形图url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWaveformUrl(string $WaveformUrl) 设置波形图url
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MusicOpenDetail extends AbstractModel
 {
@@ -114,6 +118,12 @@ class MusicOpenDetail extends AbstractModel
     public $LyricUrl;
 
     /**
+     * @var string 波形图url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WaveformUrl;
+
+    /**
      * @param string $MusicId 音乐Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlbumName 专辑名称
@@ -131,6 +141,8 @@ class MusicOpenDetail extends AbstractModel
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LyricUrl 歌词url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WaveformUrl 波形图url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class MusicOpenDetail extends AbstractModel
 
         if (array_key_exists("LyricUrl",$param) and $param["LyricUrl"] !== null) {
             $this->LyricUrl = $param["LyricUrl"];
+        }
+
+        if (array_key_exists("WaveformUrl",$param) and $param["WaveformUrl"] !== null) {
+            $this->WaveformUrl = $param["WaveformUrl"];
         }
     }
 }

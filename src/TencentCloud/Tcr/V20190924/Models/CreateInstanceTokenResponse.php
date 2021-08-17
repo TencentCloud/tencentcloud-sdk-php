@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getToken() 获取访问凭证
  * @method void setToken(string $Token) 设置访问凭证
- * @method integer getExpTime() 获取访问凭证过期时间戳
- * @method void setExpTime(integer $ExpTime) 设置访问凭证过期时间戳
+ * @method integer getExpTime() 获取访问凭证过期时间戳，是一个时间戳数字，无单位
+ * @method void setExpTime(integer $ExpTime) 设置访问凭证过期时间戳，是一个时间戳数字，无单位
  * @method string getTokenId() 获取长期凭证的TokenId，短期凭证没有TokenId
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTokenId(string $TokenId) 设置长期凭证的TokenId，短期凭证没有TokenId
@@ -49,7 +49,7 @@ class CreateInstanceTokenResponse extends AbstractModel
     public $Token;
 
     /**
-     * @var integer 访问凭证过期时间戳
+     * @var integer 访问凭证过期时间戳，是一个时间戳数字，无单位
      */
     public $ExpTime;
 
@@ -68,7 +68,7 @@ class CreateInstanceTokenResponse extends AbstractModel
      * @param string $Username 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Token 访问凭证
-     * @param integer $ExpTime 访问凭证过期时间戳
+     * @param integer $ExpTime 访问凭证过期时间戳，是一个时间戳数字，无单位
      * @param string $TokenId 长期凭证的TokenId，短期凭证没有TokenId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ValidateNamespaceExistPersonal返回参数结构体
  *
- * @method NamespaceIsExistsResp getData() 获取命名空间是否存在
- * @method void setData(NamespaceIsExistsResp $Data) 设置命名空间是否存在
+ * @method NamespaceIsExistsResp getData() 获取验证命名空间是否存在返回信息
+ * @method void setData(NamespaceIsExistsResp $Data) 设置验证命名空间是否存在返回信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ValidateNamespaceExistPersonalResponse extends AbstractModel
 {
     /**
-     * @var NamespaceIsExistsResp 命名空间是否存在
+     * @var NamespaceIsExistsResp 验证命名空间是否存在返回信息
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class ValidateNamespaceExistPersonalResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param NamespaceIsExistsResp $Data 命名空间是否存在
+     * @param NamespaceIsExistsResp $Data 验证命名空间是否存在返回信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

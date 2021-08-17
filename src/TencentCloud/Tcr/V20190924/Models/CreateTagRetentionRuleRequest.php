@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionRule(RetentionRule $RetentionRule) 设置保留策略
  * @method string getCronSetting() 获取执行周期，当前只能选择： manual;daily;weekly;monthly
  * @method void setCronSetting(string $CronSetting) 设置执行周期，当前只能选择： manual;daily;weekly;monthly
- * @method boolean getDisabled() 获取是否禁用规则
- * @method void setDisabled(boolean $Disabled) 设置是否禁用规则
+ * @method boolean getDisabled() 获取是否禁用规则，默认值为false
+ * @method void setDisabled(boolean $Disabled) 设置是否禁用规则，默认值为false
  */
 class CreateTagRetentionRuleRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class CreateTagRetentionRuleRequest extends AbstractModel
     public $CronSetting;
 
     /**
-     * @var boolean 是否禁用规则
+     * @var boolean 是否禁用规则，默认值为false
      */
     public $Disabled;
 
@@ -63,7 +63,7 @@ class CreateTagRetentionRuleRequest extends AbstractModel
      * @param integer $NamespaceId 命名空间的Id
      * @param RetentionRule $RetentionRule 保留策略
      * @param string $CronSetting 执行周期，当前只能选择： manual;daily;weekly;monthly
-     * @param boolean $Disabled 是否禁用规则
+     * @param boolean $Disabled 是否禁用规则，默认值为false
      */
     function __construct()
     {

@@ -23,17 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSecretName() 获取云产品凭据名称。
  * @method void setSecretName(string $SecretName) 设置云产品凭据名称。
  * @method boolean getEnableRotation() 获取是否开启轮转。
-True -- 开启轮转；
-False -- 禁止轮转。
+true -- 开启轮转；
+false -- 禁止轮转。
  * @method void setEnableRotation(boolean $EnableRotation) 设置是否开启轮转。
-True -- 开启轮转；
-False -- 禁止轮转。
+true -- 开启轮转；
+false -- 禁止轮转。
  * @method integer getFrequency() 获取轮转周期，以天为单位，最小为30天，最大为365天。
  * @method void setFrequency(integer $Frequency) 设置轮转周期，以天为单位，最小为30天，最大为365天。
  * @method string getRotationBeginTime() 获取用户设置的期望开始轮转时间，格式为：2006-01-02 15:04:05。
-当EnableRotation为True时，如果不填RotationBeginTime，则默认填充为当前时间。
+当EnableRotation为true时，如果不填RotationBeginTime，则默认填充为当前时间。
  * @method void setRotationBeginTime(string $RotationBeginTime) 设置用户设置的期望开始轮转时间，格式为：2006-01-02 15:04:05。
-当EnableRotation为True时，如果不填RotationBeginTime，则默认填充为当前时间。
+当EnableRotation为true时，如果不填RotationBeginTime，则默认填充为当前时间。
  */
 class UpdateRotationStatusRequest extends AbstractModel
 {
@@ -44,8 +44,8 @@ class UpdateRotationStatusRequest extends AbstractModel
 
     /**
      * @var boolean 是否开启轮转。
-True -- 开启轮转；
-False -- 禁止轮转。
+true -- 开启轮转；
+false -- 禁止轮转。
      */
     public $EnableRotation;
 
@@ -56,18 +56,18 @@ False -- 禁止轮转。
 
     /**
      * @var string 用户设置的期望开始轮转时间，格式为：2006-01-02 15:04:05。
-当EnableRotation为True时，如果不填RotationBeginTime，则默认填充为当前时间。
+当EnableRotation为true时，如果不填RotationBeginTime，则默认填充为当前时间。
      */
     public $RotationBeginTime;
 
     /**
      * @param string $SecretName 云产品凭据名称。
      * @param boolean $EnableRotation 是否开启轮转。
-True -- 开启轮转；
-False -- 禁止轮转。
+true -- 开启轮转；
+false -- 禁止轮转。
      * @param integer $Frequency 轮转周期，以天为单位，最小为30天，最大为365天。
      * @param string $RotationBeginTime 用户设置的期望开始轮转时间，格式为：2006-01-02 15:04:05。
-当EnableRotation为True时，如果不填RotationBeginTime，则默认填充为当前时间。
+当EnableRotation为true时，如果不填RotationBeginTime，则默认填充为当前时间。
      */
     function __construct()
     {

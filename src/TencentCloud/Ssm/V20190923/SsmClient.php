@@ -24,6 +24,7 @@ use TencentCloud\Ssm\V20190923\Models as Models;
 
 /**
  * @method Models\CreateProductSecretResponse CreateProductSecret(Models\CreateProductSecretRequest $req) 创建云产品凭据
+ * @method Models\CreateSSHKeyPairSecretResponse CreateSSHKeyPairSecret(Models\CreateSSHKeyPairSecretRequest $req) 创建用于托管SSH密钥对的凭据
  * @method Models\CreateSecretResponse CreateSecret(Models\CreateSecretRequest $req) 创建新的凭据信息，通过KMS进行加密保护。每个Region最多可创建存储1000个凭据信息。
  * @method Models\DeleteSecretResponse DeleteSecret(Models\DeleteSecretRequest $req) 删除指定的凭据信息，可以通过RecoveryWindowInDays参数设置立即删除或者计划删除。对于计划删除的凭据，在删除日期到达之前状态为 PendingDelete，并可以通过RestoreSecret 进行恢复，超出指定删除日期之后会被彻底删除。您必须先通过 DisableSecret 停用凭据后才可以进行（计划）删除操作。
  * @method Models\DeleteSecretVersionResponse DeleteSecretVersion(Models\DeleteSecretVersionRequest $req) 该接口用于直接删除指定凭据下的单个版本凭据，删除操作立即生效，对所有状态下的凭据版本都可以删除。
@@ -38,6 +39,7 @@ use TencentCloud\Ssm\V20190923\Models as Models;
  * @method Models\DisableSecretResponse DisableSecret(Models\DisableSecretRequest $req) 停用指定的凭据，停用后状态为 Disabled，无法通过接口获取该凭据的明文。
  * @method Models\EnableSecretResponse EnableSecret(Models\EnableSecretRequest $req) 该接口用于开启凭据，状态为Enabled。可以通过 GetSecretValue 接口获取凭据明文。处于PendingDelete状态的凭据不能直接开启，需要通过RestoreSecret 恢复后再开启使用。
  * @method Models\GetRegionsResponse GetRegions(Models\GetRegionsRequest $req) 获取控制台展示region列表
+ * @method Models\GetSSHKeyPairValueResponse GetSSHKeyPairValue(Models\GetSSHKeyPairValueRequest $req) 获取SSH密钥对凭据明文信息。
  * @method Models\GetSecretValueResponse GetSecretValue(Models\GetSecretValueRequest $req) 对于用户自定义凭据，通过指定凭据名称和版本来获取凭据的明文信息；
 对于云产品凭据如Mysql凭据，通过指定凭据名称和历史版本号来获取历史轮转凭据的明文信息，如果要获取当前正在使用的凭据版本的明文，需要将版本号指定为：SSM_Current。
  * @method Models\GetServiceStatusResponse GetServiceStatus(Models\GetServiceStatusRequest $req) 该接口用户获取用户SecretsManager服务开通状态。

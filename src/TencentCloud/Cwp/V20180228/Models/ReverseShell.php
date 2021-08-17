@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 反弹Shell数据
  *
- * @method integer getId() 获取ID
- * @method void setId(integer $Id) 设置ID
+ * @method integer getId() 获取ID 主键
+ * @method void setId(integer $Id) 设置ID 主键
  * @method string getUuid() 获取云镜UUID
  * @method void setUuid(string $Uuid) 设置云镜UUID
  * @method string getQuuid() 获取主机ID
@@ -50,19 +50,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentProcGroup(string $ParentProcGroup) 设置父进程用户组
  * @method string getParentProcPath() 获取父进程路径
  * @method void setParentProcPath(string $ParentProcPath) 设置父进程路径
- * @method integer getStatus() 获取处理状态
- * @method void setStatus(integer $Status) 设置处理状态
+ * @method integer getStatus() 获取处理状态：0-待处理 2-白名单
+ * @method void setStatus(integer $Status) 设置处理状态：0-待处理 2-白名单
  * @method string getCreateTime() 获取产生时间
  * @method void setCreateTime(string $CreateTime) 设置产生时间
  * @method string getMachineName() 获取主机名
  * @method void setMachineName(string $MachineName) 设置主机名
  * @method string getProcTree() 获取进程树
  * @method void setProcTree(string $ProcTree) 设置进程树
+ * @method integer getDetectBy() 获取检测方法
+ * @method void setDetectBy(integer $DetectBy) 设置检测方法
  */
 class ReverseShell extends AbstractModel
 {
     /**
-     * @var integer ID
+     * @var integer ID 主键
      */
     public $Id;
 
@@ -137,7 +139,7 @@ class ReverseShell extends AbstractModel
     public $ParentProcPath;
 
     /**
-     * @var integer 处理状态
+     * @var integer 处理状态：0-待处理 2-白名单
      */
     public $Status;
 
@@ -157,7 +159,12 @@ class ReverseShell extends AbstractModel
     public $ProcTree;
 
     /**
-     * @param integer $Id ID
+     * @var integer 检测方法
+     */
+    public $DetectBy;
+
+    /**
+     * @param integer $Id ID 主键
      * @param string $Uuid 云镜UUID
      * @param string $Quuid 主机ID
      * @param string $Hostip 主机内网IP
@@ -172,10 +179,11 @@ class ReverseShell extends AbstractModel
      * @param string $ParentProcUser 父进程用户
      * @param string $ParentProcGroup 父进程用户组
      * @param string $ParentProcPath 父进程路径
-     * @param integer $Status 处理状态
+     * @param integer $Status 处理状态：0-待处理 2-白名单
      * @param string $CreateTime 产生时间
      * @param string $MachineName 主机名
      * @param string $ProcTree 进程树
+     * @param integer $DetectBy 检测方法
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class ReverseShell extends AbstractModel
 
         if (array_key_exists("ProcTree",$param) and $param["ProcTree"] !== null) {
             $this->ProcTree = $param["ProcTree"];
+        }
+
+        if (array_key_exists("DetectBy",$param) and $param["DetectBy"] !== null) {
+            $this->DetectBy = $param["DetectBy"];
         }
     }
 }

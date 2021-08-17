@@ -42,9 +42,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcIp(string $SrcIp) 设置来源ip
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取失败：FAILED；成功：SUCCESS
+ * @method string getStatus() 获取SUCCESS：破解成功；FAILED：破解失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置失败：FAILED；成功：SUCCESS
+ * @method void setStatus(string $Status) 设置SUCCESS：破解成功；FAILED：破解失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCountry() 获取国家id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,9 +62,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBanStatus() 获取阻断状态：0-未阻断；1-已阻断；2-阻断失败；3-内网攻击暂不支持阻断；4-安平暂不支持阻断
+ * @method integer getBanStatus() 获取阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBanStatus(integer $BanStatus) 设置阻断状态：0-未阻断；1-已阻断；2-阻断失败；3-内网攻击暂不支持阻断；4-安平暂不支持阻断
+ * @method void setBanStatus(integer $BanStatus) 设置阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventType() 获取事件类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -93,6 +93,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getModifyTime() 获取最近攻击时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置最近攻击时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BruteAttackInfo extends AbstractModel
@@ -133,7 +137,7 @@ class BruteAttackInfo extends AbstractModel
     public $SrcIp;
 
     /**
-     * @var string 失败：FAILED；成功：SUCCESS
+     * @var string SUCCESS：破解成功；FAILED：破解失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -163,7 +167,7 @@ class BruteAttackInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 阻断状态：0-未阻断；1-已阻断；2-阻断失败；3-内网攻击暂不支持阻断；4-安平暂不支持阻断
+     * @var integer 阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BanStatus;
@@ -211,6 +215,12 @@ class BruteAttackInfo extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var string 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
      * @param integer $Id 唯一Id
      * @param string $Uuid 云镜客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -222,7 +232,7 @@ class BruteAttackInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SrcIp 来源ip
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 失败：FAILED；成功：SUCCESS
+     * @param string $Status SUCCESS：破解成功；FAILED：破解失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Country 国家id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -232,7 +242,7 @@ class BruteAttackInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BanStatus 阻断状态：0-未阻断；1-已阻断；2-阻断失败；3-内网攻击暂不支持阻断；4-安平暂不支持阻断
+     * @param integer $BanStatus 阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventType 事件类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -247,6 +257,8 @@ class BruteAttackInfo extends AbstractModel
      * @param integer $Port 端口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 最近攻击时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -336,6 +348,10 @@ class BruteAttackInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

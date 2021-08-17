@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewPods(array $NewPods) 设置新实例列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNextBatchStartTime() 获取=0：手动确认批次；>0：下一批次开始时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNextBatchStartTime(integer $NextBatchStartTime) 设置=0：手动确认批次；>0：下一批次开始时间戳
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeployServiceBatchDetail extends AbstractModel
 {
@@ -94,6 +98,12 @@ class DeployServiceBatchDetail extends AbstractModel
     public $NewPods;
 
     /**
+     * @var integer =0：手动确认批次；>0：下一批次开始时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NextBatchStartTime;
+
+    /**
      * @param DeployServicePodDetail $OldPodList 旧实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployServicePodDetail $NewPodList 新实例列表
@@ -107,6 +117,8 @@ class DeployServiceBatchDetail extends AbstractModel
      * @param array $OldPods 旧实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NewPods 新实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NextBatchStartTime =0：手动确认批次；>0：下一批次开始时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -160,6 +172,10 @@ class DeployServiceBatchDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->NewPods, $obj);
             }
+        }
+
+        if (array_key_exists("NextBatchStartTime",$param) and $param["NextBatchStartTime"] !== null) {
+            $this->NextBatchStartTime = $param["NextBatchStartTime"];
         }
     }
 }

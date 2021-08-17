@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRepoName() 获取触发器关联的镜像仓库，library/test格式
  * @method void setRepoName(string $RepoName) 设置触发器关联的镜像仓库，library/test格式
- * @method string getTriggerName() 获取触发器名称
- * @method void setTriggerName(string $TriggerName) 设置触发器名称
+ * @method string getTriggerName() 获取触发器名称，必填参数
+ * @method void setTriggerName(string $TriggerName) 设置触发器名称，必填参数
  * @method string getInvokeMethod() 获取触发方式，"all"全部触发，"taglist"指定tag触发，"regex"正则触发
  * @method void setInvokeMethod(string $InvokeMethod) 设置触发方式，"all"全部触发，"taglist"指定tag触发，"regex"正则触发
  * @method string getInvokeExpr() 获取触发方式对应的表达式
@@ -51,7 +51,7 @@ class ModifyApplicationTriggerPersonalRequest extends AbstractModel
     public $RepoName;
 
     /**
-     * @var string 触发器名称
+     * @var string 触发器名称，必填参数
      */
     public $TriggerName;
 
@@ -102,7 +102,7 @@ class ModifyApplicationTriggerPersonalRequest extends AbstractModel
 
     /**
      * @param string $RepoName 触发器关联的镜像仓库，library/test格式
-     * @param string $TriggerName 触发器名称
+     * @param string $TriggerName 触发器名称，必填参数
      * @param string $InvokeMethod 触发方式，"all"全部触发，"taglist"指定tag触发，"regex"正则触发
      * @param string $InvokeExpr 触发方式对应的表达式
      * @param string $ClusterId 应用所在TKE集群ID

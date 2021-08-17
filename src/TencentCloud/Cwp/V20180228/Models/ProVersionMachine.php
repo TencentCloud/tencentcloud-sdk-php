@@ -21,26 +21,35 @@ use TencentCloud\Common\AbstractModel;
  * 需要开通专业版机器信息。
  *
  * @method string getMachineType() 获取主机类型。
-<li>CVM: 虚拟主机</li>
+<li>CVM: 云服务器</li>
 <li>BM: 黑石物理机</li>
+<li>ECM: 边缘计算服务器</li>
+<li>LH: 轻量应用服务器</li>
+<li>Other: 混合云机器</li>
  * @method void setMachineType(string $MachineType) 设置主机类型。
-<li>CVM: 虚拟主机</li>
+<li>CVM: 云服务器</li>
 <li>BM: 黑石物理机</li>
+<li>ECM: 边缘计算服务器</li>
+<li>LH: 轻量应用服务器</li>
+<li>Other: 混合云机器</li>
  * @method string getMachineRegion() 获取主机所在地域。
 如：ap-guangzhou、ap-beijing
  * @method void setMachineRegion(string $MachineRegion) 设置主机所在地域。
 如：ap-guangzhou、ap-beijing
- * @method string getQuuid() 获取主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
- * @method void setQuuid(string $Quuid) 设置主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+ * @method string getQuuid() 获取主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
+ * @method void setQuuid(string $Quuid) 设置主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
  */
 class ProVersionMachine extends AbstractModel
 {
     /**
      * @var string 主机类型。
-<li>CVM: 虚拟主机</li>
+<li>CVM: 云服务器</li>
 <li>BM: 黑石物理机</li>
+<li>ECM: 边缘计算服务器</li>
+<li>LH: 轻量应用服务器</li>
+<li>Other: 混合云机器</li>
      */
     public $MachineType;
 
@@ -51,19 +60,22 @@ class ProVersionMachine extends AbstractModel
     public $MachineRegion;
 
     /**
-     * @var string 主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+     * @var string 主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      */
     public $Quuid;
 
     /**
      * @param string $MachineType 主机类型。
-<li>CVM: 虚拟主机</li>
+<li>CVM: 云服务器</li>
 <li>BM: 黑石物理机</li>
+<li>ECM: 边缘计算服务器</li>
+<li>LH: 轻量应用服务器</li>
+<li>Other: 混合云机器</li>
      * @param string $MachineRegion 主机所在地域。
 如：ap-guangzhou、ap-beijing
-     * @param string $Quuid 主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+     * @param string $Quuid 主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      */
     function __construct()
     {

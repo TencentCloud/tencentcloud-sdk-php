@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRepoName() 获取仓库名称
  * @method void setRepoName(string $RepoName) 设置仓库名称
- * @method integer getPublic() 获取默认值为0
- * @method void setPublic(integer $Public) 设置默认值为0
+ * @method integer getPublic() 获取默认值为0, 1公共，0私有
+ * @method void setPublic(integer $Public) 设置默认值为0, 1公共，0私有
  */
 class ModifyRepositoryAccessPersonalRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyRepositoryAccessPersonalRequest extends AbstractModel
     public $RepoName;
 
     /**
-     * @var integer 默认值为0
+     * @var integer 默认值为0, 1公共，0私有
      */
     public $Public;
 
     /**
      * @param string $RepoName 仓库名称
-     * @param integer $Public 默认值为0
+     * @param integer $Public 默认值为0, 1公共，0私有
      */
     function __construct()
     {

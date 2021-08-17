@@ -93,25 +93,15 @@ ResetTaskConfig：任务更新回调。
  * @method void setCallbackUrl(string $CallbackUrl) 设置自定义回调地址。
 相关事件会回调到该地址。
  * @method integer getFileIndex() 获取指定播放文件索引。
-注意：
-1. 从1开始，不大于SourceUrls中文件个数。
-2. 只有VodRefreshType为ContinueBeginPoint时指定才有效。
-3. 只有当前任务处于暂停时，指定后启动任务才会生效。
+注意： 从1开始，不大于SourceUrls中文件个数。
  * @method void setFileIndex(integer $FileIndex) 设置指定播放文件索引。
-注意：
-1. 从1开始，不大于SourceUrls中文件个数。
-2. 只有VodRefreshType为ContinueBeginPoint时指定才有效。
-3. 只有当前任务处于暂停时，指定后启动任务才会生效。
+注意： 从1开始，不大于SourceUrls中文件个数。
  * @method integer getOffsetTime() 获取指定播放文件偏移。
 注意：
 1. 单位：秒，配合FileIndex使用。
-2. 只有VodRefreshType为ContinueBeginPoint时指定才有效。
-3. 只有当前任务处于暂停时，指定后启动任务才会生效。
  * @method void setOffsetTime(integer $OffsetTime) 设置指定播放文件偏移。
 注意：
 1. 单位：秒，配合FileIndex使用。
-2. 只有VodRefreshType为ContinueBeginPoint时指定才有效。
-3. 只有当前任务处于暂停时，指定后启动任务才会生效。
  * @method string getComment() 获取任务备注。
  * @method void setComment(string $Comment) 设置任务备注。
  */
@@ -195,10 +185,7 @@ ResetTaskConfig：任务更新回调。
 
     /**
      * @var integer 指定播放文件索引。
-注意：
-1. 从1开始，不大于SourceUrls中文件个数。
-2. 只有VodRefreshType为ContinueBeginPoint时指定才有效。
-3. 只有当前任务处于暂停时，指定后启动任务才会生效。
+注意： 从1开始，不大于SourceUrls中文件个数。
      */
     public $FileIndex;
 
@@ -206,8 +193,6 @@ ResetTaskConfig：任务更新回调。
      * @var integer 指定播放文件偏移。
 注意：
 1. 单位：秒，配合FileIndex使用。
-2. 只有VodRefreshType为ContinueBeginPoint时指定才有效。
-3. 只有当前任务处于暂停时，指定后启动任务才会生效。
      */
     public $OffsetTime;
 
@@ -254,15 +239,10 @@ ResetTaskConfig：任务更新回调。
      * @param string $CallbackUrl 自定义回调地址。
 相关事件会回调到该地址。
      * @param integer $FileIndex 指定播放文件索引。
-注意：
-1. 从1开始，不大于SourceUrls中文件个数。
-2. 只有VodRefreshType为ContinueBeginPoint时指定才有效。
-3. 只有当前任务处于暂停时，指定后启动任务才会生效。
+注意： 从1开始，不大于SourceUrls中文件个数。
      * @param integer $OffsetTime 指定播放文件偏移。
 注意：
 1. 单位：秒，配合FileIndex使用。
-2. 只有VodRefreshType为ContinueBeginPoint时指定才有效。
-3. 只有当前任务处于暂停时，指定后启动任务才会生效。
      * @param string $Comment 任务备注。
      */
     function __construct()

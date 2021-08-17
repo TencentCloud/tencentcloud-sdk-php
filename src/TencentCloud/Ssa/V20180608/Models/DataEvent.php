@@ -148,6 +148,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSsaEventId(string $SsaEventId) 设置事件Id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsNewCfwEvent() 获取是否新接入的云防事件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsNewCfwEvent(boolean $IsNewCfwEvent) 设置是否新接入的云防事件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDirection() 获取出入站方向
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDirection(string $Direction) 设置出入站方向
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEvent extends AbstractModel
 {
@@ -348,6 +356,18 @@ class DataEvent extends AbstractModel
     public $SsaEventId;
 
     /**
+     * @var boolean 是否新接入的云防事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsNewCfwEvent;
+
+    /**
+     * @var string 出入站方向
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Direction;
+
+    /**
      * @param string $OldIdMd5 Md5值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventName 事件名称
@@ -411,6 +431,10 @@ class DataEvent extends AbstractModel
      * @param string $SoarRunId 剧本任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SsaEventId 事件Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsNewCfwEvent 是否新接入的云防事件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Direction 出入站方向
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -556,6 +580,14 @@ class DataEvent extends AbstractModel
 
         if (array_key_exists("SsaEventId",$param) and $param["SsaEventId"] !== null) {
             $this->SsaEventId = $param["SsaEventId"];
+        }
+
+        if (array_key_exists("IsNewCfwEvent",$param) and $param["IsNewCfwEvent"] !== null) {
+            $this->IsNewCfwEvent = $param["IsNewCfwEvent"];
+        }
+
+        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
+            $this->Direction = $param["Direction"];
         }
     }
 }

@@ -53,13 +53,9 @@ try {
     // 实例化要请求产品(以cls为例)的client对象,clientProfile是可选的
     $client = new ClsClient($cred, "ap-guangzhou", $clientProfile);
 
-    $req = new UploadLogRequest();
-    $req ->setLogBody($pb_str);
-
-    $resp = $client->UploadLog($req, array(
-        "IsOctetStream" => true,
-        "TopicId"=> "【TopicID】"
-    ));
+    $resp = $client->call_octet_stream("UploadLog", array(
+        "X-CLS-TopicId" => "[TopicID]",
+    ), $pb_str);
 
     // 输出json格式的字符串回包
     print_r($resp->toJsonString());

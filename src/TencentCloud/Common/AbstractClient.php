@@ -175,6 +175,45 @@ abstract class AbstractClient
         return $this->doRequestWithOptions($action, $request[0], array());
     }
 
+    /**
+     * @param string $action  方法名
+     * @param array  $headers  自定义headers
+     * @param string $body     content
+     * @return mixed
+     * @throws TencentCloudSDKException
+     */
+    public function call_octet_stream($action, $headers, $body) {
+        try {
+            $responseData = null;
+            $options = array(
+                "IsOctetStream" => true,
+            );
+            switch ($this->profile->getSignMethod()) {
+                case ClientProfile::$SIGN_TC3_SHA256:
+                    $responseData = $this->doRequestWithTC3($action, Null, $options, $headers, $body);
+                    break;
+                default:
+                    throw new TencentCloudSDKException("ClientError", "Invalid sign method");
+                    break;
+            }
+            if ($responseData->getStatusCode() !== AbstractClient::$HTTP_RSP_OK) {
+                throw new TencentCloudSDKException($responseData->getReasonPhrase(), $responseData->getBody());
+            }
+            $tmpResp = json_decode($responseData->getBody(), true)["Response"];
+            if (array_key_exists("Error", $tmpResp)) {
+                throw new TencentCloudSDKException($tmpResp["Error"]["Code"], $tmpResp["Error"]["Message"], $tmpResp["RequestId"]);
+            }
+
+            return $this->returnResponse($action, $tmpResp);
+        } catch (\Exception $e) {
+            if (!($e instanceof TencentCloudSDKException)) {
+                throw new TencentCloudSDKException("", $e->getMessage());
+            } else {
+                throw $e;
+            }
+        }
+    }
+
     protected function doRequestWithOptions($action, $request, $options)
     {
         try {
@@ -188,7 +227,7 @@ abstract class AbstractClient
                     $responseData = $this->doRequest($action, $serializeRequest);
                     break;
                 case ClientProfile::$SIGN_TC3_SHA256:
-                    $responseData = $this->doRequestWithTC3($action, $request, $options);
+                    $responseData = $this->doRequestWithTC3($action, $request, $options, array(), "");
                     break;
                 default:
                     throw new TencentCloudSDKException("ClientError", "Invalid sign method");
@@ -227,10 +266,8 @@ abstract class AbstractClient
         }
     }
 
-    private function doRequestWithTC3($action, $request, $options)
+    private function doRequestWithTC3($action, $request, $options, $headers, $payload)
     {
-        $headers = array();
-
         $endpoint = $this->getRefreshedEndpoint();
         $headers["Host"] = $endpoint;
         $headers["X-TC-Action"] = ucfirst($action);
@@ -271,10 +308,6 @@ abstract class AbstractClient
              } else if (isset($options["IsOctetStream"]) && $options["IsOctetStream"] === true) {
                  $headers["Content-Type"] = "application/octet-stream";
                  $canonicalQueryString = "";
-                 if (isset($options["TopicId"])) {
-                     $headers["X-CLS-TopicId"] = $options["TopicId"];
-                 }
-                 $payload = $request->toJsonString();
              } else {
                  $headers["Content-Type"] = "application/json";
                  $canonicalQueryString = "";

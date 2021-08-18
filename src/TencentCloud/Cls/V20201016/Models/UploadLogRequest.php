@@ -19,15 +19,10 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * UploadLog请求参数结构体
- *
- * @method string getLogBody() 获取日LogBody
- * @method void setLogBody(string $LogBody) 设置LogBody
+ * 
  */
 class UploadLogRequest extends AbstractModel
 {
-
-    public $LogBody;
-
     /**
 
      */
@@ -44,14 +39,6 @@ class UploadLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
-        if (array_key_exists("LogBody",$param) and $param["LogBody"] !== null) {
-            $this->LogBody = $param["LogBody"];
-        }
     }
 
-    public function toJsonString()
-    {
-        return $this->getLogBody();
-    }
 }

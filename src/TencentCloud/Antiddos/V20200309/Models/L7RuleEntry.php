@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSSLId() 获取当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
  * @method void setSSLId(string $SSLId) 设置当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
+ * @method string getId() 获取同ruleId
+ * @method void setId(string $Id) 设置同ruleId
  */
 class L7RuleEntry extends AbstractModel
 {
@@ -170,6 +172,11 @@ class L7RuleEntry extends AbstractModel
     public $SSLId;
 
     /**
+     * @var string 同ruleId
+     */
+    public $Id;
+
+    /**
      * @param integer $KeepTime 会话保持时间，单位秒
      * @param string $Domain 转发域名
      * @param string $Protocol 转发协议，取值[http, https]
@@ -192,6 +199,7 @@ class L7RuleEntry extends AbstractModel
      * @param integer $VirtualPort 接入端口值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
+     * @param string $Id 同ruleId
      */
     function __construct()
     {
@@ -289,6 +297,10 @@ class L7RuleEntry extends AbstractModel
 
         if (array_key_exists("SSLId",$param) and $param["SSLId"] !== null) {
             $this->SSLId = $param["SSLId"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

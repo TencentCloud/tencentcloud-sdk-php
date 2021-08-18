@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置pulsar集群Id。
  * @method string getEnvironmentId() 获取环境（命名空间）名称。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
+ * @method boolean getForce() 获取是否强制删除，默认为false
+ * @method void setForce(boolean $Force) 设置是否强制删除，默认为false
  */
 class DeleteTopicsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteTopicsRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
+     * @var boolean 是否强制删除，默认为false
+     */
+    public $Force;
+
+    /**
      * @param array $TopicSets 主题集合，每次最多删除20个。
      * @param string $ClusterId pulsar集群Id。
      * @param string $EnvironmentId 环境（命名空间）名称。
+     * @param boolean $Force 是否强制删除，默认为false
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DeleteTopicsRequest extends AbstractModel
 
         if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
             $this->EnvironmentId = $param["EnvironmentId"];
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

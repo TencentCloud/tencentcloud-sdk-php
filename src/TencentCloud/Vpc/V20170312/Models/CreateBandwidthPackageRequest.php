@@ -20,14 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBandwidthPackage请求参数结构体
  *
- * @method string getNetworkType() 获取带宽包类型，包括'HIGH_QUALITY_BGP', 'BGP'，'SINGLEISP'，'ANYCAST'
- * @method void setNetworkType(string $NetworkType) 设置带宽包类型，包括'HIGH_QUALITY_BGP', 'BGP'，'SINGLEISP'，'ANYCAST'
- * @method string getChargeType() 获取带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
- * @method void setChargeType(string $ChargeType) 设置带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
- * @method string getBandwidthPackageName() 获取带宽包名字
- * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名字
- * @method integer getBandwidthPackageCount() 获取带宽包数量(传统账户类型只能填1)
- * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) 设置带宽包数量(传统账户类型只能填1)
+ * @method string getNetworkType() 获取带宽包类型, 默认值: BGP, 可选值:
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+ * @method void setNetworkType(string $NetworkType) 设置带宽包类型, 默认值: BGP, 可选值:
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+ * @method string getChargeType() 获取带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+<li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
+<li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
+ * @method void setChargeType(string $ChargeType) 设置带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+<li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
+<li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
+ * @method string getBandwidthPackageName() 获取带宽包名称。
+ * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名称。
+ * @method integer getBandwidthPackageCount() 获取带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
+ * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) 设置带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
  * @method integer getInternetMaxBandwidth() 获取带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
  * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) 设置带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
  * @method array getTags() 获取需要关联的标签列表。
@@ -38,22 +48,27 @@ use TencentCloud\Common\AbstractModel;
 class CreateBandwidthPackageRequest extends AbstractModel
 {
     /**
-     * @var string 带宽包类型，包括'HIGH_QUALITY_BGP', 'BGP'，'SINGLEISP'，'ANYCAST'
+     * @var string 带宽包类型, 默认值: BGP, 可选值:
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
      */
     public $NetworkType;
 
     /**
-     * @var string 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
+     * @var string 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+<li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
+<li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
      */
     public $ChargeType;
 
     /**
-     * @var string 带宽包名字
+     * @var string 带宽包名称。
      */
     public $BandwidthPackageName;
 
     /**
-     * @var integer 带宽包数量(传统账户类型只能填1)
+     * @var integer 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
      */
     public $BandwidthPackageCount;
 
@@ -73,10 +88,15 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @param string $NetworkType 带宽包类型，包括'HIGH_QUALITY_BGP', 'BGP'，'SINGLEISP'，'ANYCAST'
-     * @param string $ChargeType 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
-     * @param string $BandwidthPackageName 带宽包名字
-     * @param integer $BandwidthPackageCount 带宽包数量(传统账户类型只能填1)
+     * @param string $NetworkType 带宽包类型, 默认值: BGP, 可选值:
+<li>BGP: 普通BGP共享带宽包</li>
+<li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li>
+     * @param string $ChargeType 带宽包计费类型, 默认为: TOP5_POSTPAID_BY_MONTH, 可选值:
+<li>TOP5_POSTPAID_BY_MONTH: 按月后付费TOP5计费</li>
+<li>PERCENT95_POSTPAID_BY_MONTH: 按月后付费月95计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 包月预付费计费</li>
+     * @param string $BandwidthPackageName 带宽包名称。
+     * @param integer $BandwidthPackageCount 带宽包数量(传统账户类型只能填1), 标准账户类型取值范围为1~20。
      * @param integer $InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。该功能当前内测中，暂不对外开放。
      * @param array $Tags 需要关联的标签列表。
      * @param string $Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。

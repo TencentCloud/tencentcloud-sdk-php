@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注，字符串最长不超过128。
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method RetentionPolicy getRetentionPolicy() 获取消息保留策略
+ * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) 设置消息保留策略
  */
 class ModifyEnvironmentAttributesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var RetentionPolicy 消息保留策略
+     */
+    public $RetentionPolicy;
+
+    /**
      * @param string $EnvironmentId 命名空间名称。
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，最大1296000。
      * @param string $Remark 备注，字符串最长不超过128。
      * @param string $ClusterId 集群ID
+     * @param RetentionPolicy $RetentionPolicy 消息保留策略
      */
     function __construct()
     {
@@ -84,6 +92,11 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("RetentionPolicy",$param) and $param["RetentionPolicy"] !== null) {
+            $this->RetentionPolicy = new RetentionPolicy();
+            $this->RetentionPolicy->deserialize($param["RetentionPolicy"]);
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppSKey(string $AppSKey) 设置LoRaWAN 应用会话密钥
  * @method string getNwkSKey() 获取LoRaWAN 网络会话密钥
  * @method void setNwkSKey(string $NwkSKey) 设置LoRaWAN 网络会话密钥
+ * @method string getDefinedPsk() 获取手动指定设备的PSK密钥
+ * @method void setDefinedPsk(string $DefinedPsk) 设置手动指定设备的PSK密钥
  */
 class CreateDeviceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateDeviceRequest extends AbstractModel
     public $NwkSKey;
 
     /**
+     * @var string 手动指定设备的PSK密钥
+     */
+    public $DefinedPsk;
+
+    /**
      * @param string $ProductId 产品ID。
      * @param string $DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
      * @param string $DevAddr LoRaWAN 设备地址
@@ -80,6 +87,7 @@ class CreateDeviceRequest extends AbstractModel
      * @param string $DevEUI LoRaWAN 设备唯一标识
      * @param string $AppSKey LoRaWAN 应用会话密钥
      * @param string $NwkSKey LoRaWAN 网络会话密钥
+     * @param string $DefinedPsk 手动指定设备的PSK密钥
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateDeviceRequest extends AbstractModel
 
         if (array_key_exists("NwkSKey",$param) and $param["NwkSKey"] !== null) {
             $this->NwkSKey = $param["NwkSKey"];
+        }
+
+        if (array_key_exists("DefinedPsk",$param) and $param["DefinedPsk"] !== null) {
+            $this->DefinedPsk = $param["DefinedPsk"];
         }
     }
 }

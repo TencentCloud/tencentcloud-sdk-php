@@ -14,30 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBandwidthPackage返回参数结构体
+ * CreateSinglePayment返回参数结构体
  *
- * @method string getBandwidthPackageId() 获取带宽包唯一ID。
- * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一ID。
- * @method array getBandwidthPackageIds() 获取带宽包唯一ID列表(申请数量大于1时有效)。
- * @method void setBandwidthPackageIds(array $BandwidthPackageIds) 设置带宽包唯一ID列表(申请数量大于1时有效)。
+ * @method string getErrCode() 获取错误码
+ * @method void setErrCode(string $ErrCode) 设置错误码
+ * @method string getErrMessage() 获取响应消息
+ * @method void setErrMessage(string $ErrMessage) 设置响应消息
+ * @method CreateSinglePaymentData getResult() 获取返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(CreateSinglePaymentData $Result) 设置返回数据
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateBandwidthPackageResponse extends AbstractModel
+class CreateSinglePaymentResponse extends AbstractModel
 {
     /**
-     * @var string 带宽包唯一ID。
+     * @var string 错误码
      */
-    public $BandwidthPackageId;
+    public $ErrCode;
 
     /**
-     * @var array 带宽包唯一ID列表(申请数量大于1时有效)。
+     * @var string 响应消息
      */
-    public $BandwidthPackageIds;
+    public $ErrMessage;
+
+    /**
+     * @var CreateSinglePaymentData 返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +55,10 @@ class CreateBandwidthPackageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BandwidthPackageId 带宽包唯一ID。
-     * @param array $BandwidthPackageIds 带宽包唯一ID列表(申请数量大于1时有效)。
+     * @param string $ErrCode 错误码
+     * @param string $ErrMessage 响应消息
+     * @param CreateSinglePaymentData $Result 返回数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +74,17 @@ class CreateBandwidthPackageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
-            $this->BandwidthPackageId = $param["BandwidthPackageId"];
+        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
+            $this->ErrCode = $param["ErrCode"];
         }
 
-        if (array_key_exists("BandwidthPackageIds",$param) and $param["BandwidthPackageIds"] !== null) {
-            $this->BandwidthPackageIds = $param["BandwidthPackageIds"];
+        if (array_key_exists("ErrMessage",$param) and $param["ErrMessage"] !== null) {
+            $this->ErrMessage = $param["ErrMessage"];
+        }
+
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new CreateSinglePaymentData();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

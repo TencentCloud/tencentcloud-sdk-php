@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getImageTags() 获取镜像版本数组
  * @method void setImageTags(array $ImageTags) 设置镜像版本数组
+ * @method string getRepoType() 获取企业: tcr ；个人: personal或者不填
+ * @method void setRepoType(string $RepoType) 设置企业: tcr ；个人: personal或者不填
  */
 class DeleteImageTagsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteImageTagsRequest extends AbstractModel
     public $ImageTags;
 
     /**
+     * @var string 企业: tcr ；个人: personal或者不填
+     */
+    public $RepoType;
+
+    /**
      * @param array $ImageTags 镜像版本数组
+     * @param string $RepoType 企业: tcr ；个人: personal或者不填
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class DeleteImageTagsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ImageTags, $obj);
             }
+        }
+
+        if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
+            $this->RepoType = $param["RepoType"];
         }
     }
 }

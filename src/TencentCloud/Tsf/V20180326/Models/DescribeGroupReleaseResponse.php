@@ -14,26 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceCreateInstance返回参数结构体
+ * DescribeGroupRelease返回参数结构体
  *
- * @method float getPrice() 获取价格，单位：元
+ * @method GroupRelease getResult() 获取部署组发布的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrice(float $Price) 设置价格，单位：元
+ * @method void setResult(GroupRelease $Result) 设置部署组发布的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class InquiryPriceCreateInstanceResponse extends AbstractModel
+class DescribeGroupReleaseResponse extends AbstractModel
 {
     /**
-     * @var float 价格，单位：元
+     * @var GroupRelease 部署组发布的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Price;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +41,7 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Price 价格，单位：元
+     * @param GroupRelease $Result 部署组发布的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,8 +58,9 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new GroupRelease();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

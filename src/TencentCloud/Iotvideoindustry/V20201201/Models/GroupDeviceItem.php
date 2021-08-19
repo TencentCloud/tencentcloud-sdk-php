@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordable(integer $Recordable) 设置该设备是否可录制
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocol() 获取设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtocol(string $Protocol) 设置设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupDeviceItem extends AbstractModel
 {
@@ -114,6 +118,12 @@ class GroupDeviceItem extends AbstractModel
     public $Recordable;
 
     /**
+     * @var string 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Protocol;
+
+    /**
      * @param string $DeviceId 设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NickName 设备名称
@@ -131,6 +141,8 @@ class GroupDeviceItem extends AbstractModel
      * @param integer $IsRecord 是否存在录像
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Recordable 该设备是否可录制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Protocol 设备接入协议
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class GroupDeviceItem extends AbstractModel
 
         if (array_key_exists("Recordable",$param) and $param["Recordable"] !== null) {
             $this->Recordable = $param["Recordable"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

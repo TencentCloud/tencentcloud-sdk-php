@@ -34,12 +34,12 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
  * @method void setBillingMode(integer $BillingMode) 设置付费方式:0-按量计费，1-包年包月。
  * @method integer getZoneId() 获取实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
  * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
- * @method integer getRedisShardNum() 获取实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
- * @method void setRedisShardNum(integer $RedisShardNum) 设置实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
- * @method integer getRedisReplicasNum() 获取实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
- * @method boolean getReplicasReadonly() 获取是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
- * @method void setReplicasReadonly(boolean $ReplicasReadonly) 设置是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+ * @method integer getRedisShardNum() 获取实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
+ * @method integer getRedisReplicasNum() 获取实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+ * @method boolean getReplicasReadonly() 获取是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+ * @method void setReplicasReadonly(boolean $ReplicasReadonly) 设置是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
  * @method string getZoneName() 获取实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
  * @method void setZoneName(string $ZoneName) 设置实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
  */
@@ -77,17 +77,17 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     public $ZoneId;
 
     /**
-     * @var integer 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
+     * @var integer 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * @var integer 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
      */
     public $RedisReplicasNum;
 
     /**
-     * @var boolean 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * @var boolean 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
      */
     public $ReplicasReadonly;
 
@@ -104,9 +104,9 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      * @param integer $Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      * @param integer $BillingMode 付费方式:0-按量计费，1-包年包月。
      * @param integer $ZoneId 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-     * @param integer $RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
-     * @param integer $RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
-     * @param boolean $ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * @param integer $RedisShardNum 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
+     * @param integer $RedisReplicasNum 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+     * @param boolean $ReplicasReadonly 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
      * @param string $ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
      */
     function __construct()

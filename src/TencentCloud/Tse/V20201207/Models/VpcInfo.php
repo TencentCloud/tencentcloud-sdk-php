@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置Vpc Id
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method string getIntranetAddress() 获取内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntranetAddress(string $IntranetAddress) 设置内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcInfo extends AbstractModel
 {
@@ -38,8 +42,16 @@ class VpcInfo extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string 内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IntranetAddress;
+
+    /**
      * @param string $VpcId Vpc Id
      * @param string $SubnetId 子网ID
+     * @param string $IntranetAddress 内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class VpcInfo extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("IntranetAddress",$param) and $param["IntranetAddress"] !== null) {
+            $this->IntranetAddress = $param["IntranetAddress"];
         }
     }
 }

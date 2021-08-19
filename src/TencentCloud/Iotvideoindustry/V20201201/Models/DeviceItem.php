@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChannelId() 获取通道唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelId(string $ChannelId) 设置通道唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceItem extends AbstractModel
 {
@@ -34,7 +38,15 @@ class DeviceItem extends AbstractModel
     public $DeviceId;
 
     /**
+     * @var string 通道唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelId;
+
+    /**
      * @param string $DeviceId 设备唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChannelId 通道唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +64,10 @@ class DeviceItem extends AbstractModel
         }
         if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
             $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
     }
 }

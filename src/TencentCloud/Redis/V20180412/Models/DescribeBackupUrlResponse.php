@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupUrl返回参数结构体
  *
- * @method array getDownloadUrl() 获取外网下载地址（6小时）
- * @method void setDownloadUrl(array $DownloadUrl) 设置外网下载地址（6小时）
- * @method array getInnerDownloadUrl() 获取内网下载地址（6小时）
- * @method void setInnerDownloadUrl(array $InnerDownloadUrl) 设置内网下载地址（6小时）
- * @method array getFilenames() 获取文件名称（仅tendis实例有值）
+ * @method array getDownloadUrl() 获取外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+ * @method void setDownloadUrl(array $DownloadUrl) 设置外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+ * @method array getInnerDownloadUrl() 获取内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+ * @method void setInnerDownloadUrl(array $InnerDownloadUrl) 设置内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+ * @method array getFilenames() 获取文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFilenames(array $Filenames) 设置文件名称（仅tendis实例有值）
+ * @method void setFilenames(array $Filenames) 设置文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBackupInfos() 获取备份文件信息列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -38,17 +38,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBackupUrlResponse extends AbstractModel
 {
     /**
-     * @var array 外网下载地址（6小时）
+     * @var array 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
      */
     public $DownloadUrl;
 
     /**
-     * @var array 内网下载地址（6小时）
+     * @var array 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
      */
     public $InnerDownloadUrl;
 
     /**
-     * @var array 文件名称（仅tendis实例有值）
+     * @var array 文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Filenames;
@@ -65,9 +65,9 @@ class DescribeBackupUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DownloadUrl 外网下载地址（6小时）
-     * @param array $InnerDownloadUrl 内网下载地址（6小时）
-     * @param array $Filenames 文件名称（仅tendis实例有值）
+     * @param array $DownloadUrl 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+     * @param array $InnerDownloadUrl 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+     * @param array $Filenames 文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BackupInfos 备份文件信息列表
 注意：此字段可能返回 null，表示取不到有效值。

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Rum\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstanceShards请求参数结构体
+ * DescribeError请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method boolean getFilterSlave() 获取是否过滤掉从节信息
- * @method void setFilterSlave(boolean $FilterSlave) 设置是否过滤掉从节信息
+ * @method string getDate() 获取日期
+ * @method void setDate(string $Date) 设置日期
+ * @method integer getID() 获取项目ID
+ * @method void setID(integer $ID) 设置项目ID
  */
-class DescribeInstanceShardsRequest extends AbstractModel
+class DescribeErrorRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 日期
      */
-    public $InstanceId;
+    public $Date;
 
     /**
-     * @var boolean 是否过滤掉从节信息
+     * @var integer 项目ID
      */
-    public $FilterSlave;
+    public $ID;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param boolean $FilterSlave 是否过滤掉从节信息
+     * @param string $Date 日期
+     * @param integer $ID 项目ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeInstanceShardsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
+            $this->Date = $param["Date"];
         }
 
-        if (array_key_exists("FilterSlave",$param) and $param["FilterSlave"] !== null) {
-            $this->FilterSlave = $param["FilterSlave"];
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
         }
     }
 }

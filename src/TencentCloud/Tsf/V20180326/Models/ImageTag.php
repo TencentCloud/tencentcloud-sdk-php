@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPushTime(string $PushTime) 设置push时间
  * @method integer getSizeByte() 获取单位为字节
  * @method void setSizeByte(integer $SizeByte) 设置单位为字节
+ * @method TcrRepoInfo getTcrRepoInfo() 获取TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageTag extends AbstractModel
 {
@@ -118,6 +122,12 @@ class ImageTag extends AbstractModel
     public $SizeByte;
 
     /**
+     * @var TcrRepoInfo TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TcrRepoInfo;
+
+    /**
      * @param string $RepoName 仓库名
      * @param string $TagName 版本名称
      * @param string $TagId 版本ID
@@ -132,6 +142,8 @@ class ImageTag extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PushTime push时间
      * @param integer $SizeByte 单位为字节
+     * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -196,6 +208,11 @@ class ImageTag extends AbstractModel
 
         if (array_key_exists("SizeByte",$param) and $param["SizeByte"] !== null) {
             $this->SizeByte = $param["SizeByte"];
+        }
+
+        if (array_key_exists("TcrRepoInfo",$param) and $param["TcrRepoInfo"] !== null) {
+            $this->TcrRepoInfo = new TcrRepoInfo();
+            $this->TcrRepoInfo->deserialize($param["TcrRepoInfo"]);
         }
     }
 }

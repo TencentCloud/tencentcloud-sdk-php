@@ -20,39 +20,107 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 监控的域名站点信息
  *
- * @method integer getId() 获取ID
- * @method void setId(integer $Id) 设置ID
+ * @method integer getId() 获取ID标识
+ * @method void setId(integer $Id) 设置ID标识
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getIp() 获取IP地址
  * @method void setIp(string $Ip) 设置IP地址
- * @method boolean getAutoIP() 获取是否自动获取IP
- * @method void setAutoIP(boolean $AutoIP) 设置是否自动获取IP
- * @method integer getServerType() 获取监控服务类型
- * @method void setServerType(integer $ServerType) 设置监控服务类型
+ * @method boolean getAutoIP() 获取是否自动获取IP：true：是，false:否
+ * @method void setAutoIP(boolean $AutoIP) 设置是否自动获取IP：true：是，false:否
+ * @method string getGrade() 获取评级
+"A+"，
+ "A"，
+"A-"，
+"B"，
+"C"，
+"D"，
+ "E"，
+ "F"，
+"T"，
+ * @method void setGrade(string $Grade) 设置评级
+"A+"，
+ "A"，
+"A-"，
+"B"，
+"C"，
+"D"，
+ "E"，
+ "F"，
+"T"，
  * @method string getBrand() 获取证书品牌
  * @method void setBrand(string $Brand) 设置证书品牌
- * @method string getGrade() 获取评级
- * @method void setGrade(string $Grade) 设置评级
+ * @method integer getServerType() 获取监控服务类型
+0 :Web
+1: SMTP
+2: IMAP
+3: POP3
+ * @method void setServerType(integer $ServerType) 设置监控服务类型
+0 :Web
+1: SMTP
+2: IMAP
+3: POP3
  * @method integer getGradeCode() 获取评级Code
+0："unknown"，
+1："A+"，
+2： "A"，
+3："A-"，
+4："B"，
+5："C"，
+6："D"，
+7： "E"，
+8： "F"，
+9："T"，
  * @method void setGradeCode(integer $GradeCode) 设置评级Code
- * @method boolean getNotice() 获取是否监控告警
- * @method void setNotice(boolean $Notice) 设置是否监控告警
+0："unknown"，
+1："A+"，
+2： "A"，
+3："A-"，
+4："B"，
+5："C"，
+6："D"，
+7： "E"，
+8： "F"，
+9："T"，
+ * @method boolean getNotice() 获取是否监控告警；true：是，false:否
+ * @method void setNotice(boolean $Notice) 设置是否监控告警；true：是，false:否
  * @method integer getAccountDomainId() 获取账号域名关系ID
  * @method void setAccountDomainId(integer $AccountDomainId) 设置账号域名关系ID
  * @method array getTags() 获取标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取域名状态
- * @method void setStatus(string $Status) 设置域名状态
+ * @method string getStatus() 获取域名状态:
+连接异常，
+证书已过期，
+证书已吊销，
+证书黑名单，
+证书域名不匹配，
+证书不可信，
+证书密钥弱，
+证书即将过期，少于7天，
+证书即将过期，少于30天，
+正常，
+部分异常
+ * @method void setStatus(string $Status) 设置域名状态:
+连接异常，
+证书已过期，
+证书已吊销，
+证书黑名单，
+证书域名不匹配，
+证书不可信，
+证书密钥弱，
+证书即将过期，少于7天，
+证书即将过期，少于30天，
+正常，
+部分异常
  * @method string getPort() 获取域名端口
  * @method void setPort(string $Port) 设置域名端口
  */
 class DomainSiteInfo extends AbstractModel
 {
     /**
-     * @var integer ID
+     * @var integer ID标识
      */
     public $Id;
 
@@ -67,14 +135,23 @@ class DomainSiteInfo extends AbstractModel
     public $Ip;
 
     /**
-     * @var boolean 是否自动获取IP
+     * @var boolean 是否自动获取IP：true：是，false:否
      */
     public $AutoIP;
 
     /**
-     * @var integer 监控服务类型
+     * @var string 评级
+"A+"，
+ "A"，
+"A-"，
+"B"，
+"C"，
+"D"，
+ "E"，
+ "F"，
+"T"，
      */
-    public $ServerType;
+    public $Grade;
 
     /**
      * @var string 证书品牌
@@ -82,17 +159,31 @@ class DomainSiteInfo extends AbstractModel
     public $Brand;
 
     /**
-     * @var string 评级
+     * @var integer 监控服务类型
+0 :Web
+1: SMTP
+2: IMAP
+3: POP3
      */
-    public $Grade;
+    public $ServerType;
 
     /**
      * @var integer 评级Code
+0："unknown"，
+1："A+"，
+2： "A"，
+3："A-"，
+4："B"，
+5："C"，
+6："D"，
+7： "E"，
+8： "F"，
+9："T"，
      */
     public $GradeCode;
 
     /**
-     * @var boolean 是否监控告警
+     * @var boolean 是否监控告警；true：是，false:否
      */
     public $Notice;
 
@@ -108,7 +199,18 @@ class DomainSiteInfo extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 域名状态
+     * @var string 域名状态:
+连接异常，
+证书已过期，
+证书已吊销，
+证书黑名单，
+证书域名不匹配，
+证书不可信，
+证书密钥弱，
+证书即将过期，少于7天，
+证书即将过期，少于30天，
+正常，
+部分异常
      */
     public $Status;
 
@@ -118,19 +220,53 @@ class DomainSiteInfo extends AbstractModel
     public $Port;
 
     /**
-     * @param integer $Id ID
+     * @param integer $Id ID标识
      * @param string $Domain 域名
      * @param string $Ip IP地址
-     * @param boolean $AutoIP 是否自动获取IP
-     * @param integer $ServerType 监控服务类型
-     * @param string $Brand 证书品牌
+     * @param boolean $AutoIP 是否自动获取IP：true：是，false:否
      * @param string $Grade 评级
+"A+"，
+ "A"，
+"A-"，
+"B"，
+"C"，
+"D"，
+ "E"，
+ "F"，
+"T"，
+     * @param string $Brand 证书品牌
+     * @param integer $ServerType 监控服务类型
+0 :Web
+1: SMTP
+2: IMAP
+3: POP3
      * @param integer $GradeCode 评级Code
-     * @param boolean $Notice 是否监控告警
+0："unknown"，
+1："A+"，
+2： "A"，
+3："A-"，
+4："B"，
+5："C"，
+6："D"，
+7： "E"，
+8： "F"，
+9："T"，
+     * @param boolean $Notice 是否监控告警；true：是，false:否
      * @param integer $AccountDomainId 账号域名关系ID
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 域名状态
+     * @param string $Status 域名状态:
+连接异常，
+证书已过期，
+证书已吊销，
+证书黑名单，
+证书域名不匹配，
+证书不可信，
+证书密钥弱，
+证书即将过期，少于7天，
+证书即将过期，少于30天，
+正常，
+部分异常
      * @param string $Port 域名端口
      */
     function __construct()
@@ -162,16 +298,16 @@ class DomainSiteInfo extends AbstractModel
             $this->AutoIP = $param["AutoIP"];
         }
 
-        if (array_key_exists("ServerType",$param) and $param["ServerType"] !== null) {
-            $this->ServerType = $param["ServerType"];
+        if (array_key_exists("Grade",$param) and $param["Grade"] !== null) {
+            $this->Grade = $param["Grade"];
         }
 
         if (array_key_exists("Brand",$param) and $param["Brand"] !== null) {
             $this->Brand = $param["Brand"];
         }
 
-        if (array_key_exists("Grade",$param) and $param["Grade"] !== null) {
-            $this->Grade = $param["Grade"];
+        if (array_key_exists("ServerType",$param) and $param["ServerType"] !== null) {
+            $this->ServerType = $param["ServerType"];
         }
 
         if (array_key_exists("GradeCode",$param) and $param["GradeCode"] !== null) {

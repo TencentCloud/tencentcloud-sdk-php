@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceId(string $DeviceId) 设置设备唯一标识
  * @method integer getExpireTime() 获取流地址失效时间
  * @method void setExpireTime(integer $ExpireTime) 设置流地址失效时间
+ * @method string getChannelId() 获取通道唯一标识
+ * @method void setChannelId(string $ChannelId) 设置通道唯一标识
  */
 class DescribeDeviceStreamsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDeviceStreamsRequest extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var string 通道唯一标识
+     */
+    public $ChannelId;
+
+    /**
      * @param string $DeviceId 设备唯一标识
      * @param integer $ExpireTime 流地址失效时间
+     * @param string $ChannelId 通道唯一标识
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDeviceStreamsRequest extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
     }
 }

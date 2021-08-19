@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间：2019-09-09 12:12:41
  * @method integer getMinQueryTime() 获取慢查询阈值（毫秒）
  * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询阈值（毫秒）
- * @method integer getLimit() 获取页面大小：20
- * @method void setLimit(integer $Limit) 设置页面大小：20
+ * @method integer getLimit() 获取页面大小：默认20
+ * @method void setLimit(integer $Limit) 设置页面大小：默认20
  * @method integer getOffset() 获取偏移量，取Limit整数倍
  * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍
  */
@@ -56,7 +56,7 @@ class DescribeTendisSlowLogRequest extends AbstractModel
     public $MinQueryTime;
 
     /**
-     * @var integer 页面大小：20
+     * @var integer 页面大小：默认20
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DescribeTendisSlowLogRequest extends AbstractModel
      * @param string $BeginTime 开始时间：2019-09-08 12:12:41
      * @param string $EndTime 结束时间：2019-09-09 12:12:41
      * @param integer $MinQueryTime 慢查询阈值（毫秒）
-     * @param integer $Limit 页面大小：20
+     * @param integer $Limit 页面大小：默认20
      * @param integer $Offset 偏移量，取Limit整数倍
      */
     function __construct()

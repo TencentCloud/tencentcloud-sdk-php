@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，取值从0开始
  * @method integer getLimit() 获取分页个数，默认为20， 取值应为1~100
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~100
+ * @method string getRepoType() 获取企业: tcr ；个人: personal或者不填
+ * @method void setRepoType(string $RepoType) 设置企业: tcr ；个人: personal或者不填
+ * @method string getApplicationId() 获取应用id
+ * @method void setApplicationId(string $ApplicationId) 设置应用id
+ * @method TcrRepoInfo getTcrRepoInfo() 获取TcrRepoInfo值
+ * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
  */
 class DescribeImageRepositoryRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class DescribeImageRepositoryRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 企业: tcr ；个人: personal或者不填
+     */
+    public $RepoType;
+
+    /**
+     * @var string 应用id
+     */
+    public $ApplicationId;
+
+    /**
+     * @var TcrRepoInfo TcrRepoInfo值
+     */
+    public $TcrRepoInfo;
+
+    /**
      * @param string $SearchWord 仓库名，搜索关键字,不带命名空间的
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~100
+     * @param string $RepoType 企业: tcr ；个人: personal或者不填
+     * @param string $ApplicationId 应用id
+     * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
      */
     function __construct()
     {
@@ -72,6 +96,19 @@ class DescribeImageRepositoryRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
+            $this->RepoType = $param["RepoType"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("TcrRepoInfo",$param) and $param["TcrRepoInfo"] !== null) {
+            $this->TcrRepoInfo = new TcrRepoInfo();
+            $this->TcrRepoInfo->deserialize($param["TcrRepoInfo"]);
         }
     }
 }

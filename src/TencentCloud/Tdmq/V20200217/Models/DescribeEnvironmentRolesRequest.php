@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  * @method string getRoleName() 获取角色名称
  * @method void setRoleName(string $RoleName) 设置角色名称
+ * @method array getFilters() 获取* RoleName
+按照角色名进行过滤，精确查询。
+类型：String
+必选：否
+ * @method void setFilters(array $Filters) 设置* RoleName
+按照角色名进行过滤，精确查询。
+类型：String
+必选：否
  */
 class DescribeEnvironmentRolesRequest extends AbstractModel
 {
@@ -59,11 +67,23 @@ class DescribeEnvironmentRolesRequest extends AbstractModel
     public $RoleName;
 
     /**
+     * @var array * RoleName
+按照角色名进行过滤，精确查询。
+类型：String
+必选：否
+     */
+    public $Filters;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param string $ClusterId Pulsar 集群的ID
      * @param string $RoleName 角色名称
+     * @param array $Filters * RoleName
+按照角色名进行过滤，精确查询。
+类型：String
+必选：否
      */
     function __construct()
     {
@@ -96,6 +116,15 @@ class DescribeEnvironmentRolesRequest extends AbstractModel
 
         if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
             $this->RoleName = $param["RoleName"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

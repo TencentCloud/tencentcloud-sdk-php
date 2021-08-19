@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认0
  * @method integer getLimit() 获取限制量，默认200
  * @method void setLimit(integer $Limit) 设置限制量，默认200
+ * @method string getChannelId() 获取通道唯一标识
+ * @method void setChannelId(string $ChannelId) 设置通道唯一标识
+ * @method integer getType() 获取1: 云端录制 2: 本地录制
+ * @method void setType(integer $Type) 设置1: 云端录制 2: 本地录制
  */
 class GetRecordDatesByDevRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class GetRecordDatesByDevRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 通道唯一标识
+     */
+    public $ChannelId;
+
+    /**
+     * @var integer 1: 云端录制 2: 本地录制
+     */
+    public $Type;
+
+    /**
      * @param string $DeviceId 设备唯一标识
      * @param integer $Offset 偏移量，默认0
      * @param integer $Limit 限制量，默认200
+     * @param string $ChannelId 通道唯一标识
+     * @param integer $Type 1: 云端录制 2: 本地录制
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class GetRecordDatesByDevRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(array $Enable) 设置告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
  * @method integer getNotBindingNoticeRule() 获取传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
  * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) 设置传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
+ * @method integer getInstanceGroupId() 获取实例分组id
+ * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组id
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $NotBindingNoticeRule;
 
     /**
+     * @var integer 实例分组id
+     */
+    public $InstanceGroupId;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -188,6 +195,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param array $RuleTypes 根据触发条件筛选 不传展示全部策略 STATIC=展示静态阈值策略 DYNAMIC=展示动态阈值策略
      * @param array $Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
      * @param integer $NotBindingNoticeRule 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
+     * @param integer $InstanceGroupId 实例分组id
      */
     function __construct()
     {
@@ -268,6 +276,10 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 
         if (array_key_exists("NotBindingNoticeRule",$param) and $param["NotBindingNoticeRule"] !== null) {
             $this->NotBindingNoticeRule = $param["NotBindingNoticeRule"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
         }
     }
 }

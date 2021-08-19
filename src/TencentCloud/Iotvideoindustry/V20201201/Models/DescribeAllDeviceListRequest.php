@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNickName(string $NickName) 设置设备名称，需要模糊匹配设备名称时为必填
  * @method array getDeviceIds() 获取DeviceId列表，需要精确查找设备时为必填
  * @method void setDeviceIds(array $DeviceIds) 设置DeviceId列表，需要精确查找设备时为必填
+ * @method array getDeviceTypes() 获取设备类型过滤
+ * @method void setDeviceTypes(array $DeviceTypes) 设置设备类型过滤
  */
 class DescribeAllDeviceListRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeAllDeviceListRequest extends AbstractModel
     public $DeviceIds;
 
     /**
+     * @var array 设备类型过滤
+     */
+    public $DeviceTypes;
+
+    /**
      * @param integer $Offset 偏移量，默认0
      * @param integer $Limit 限制，默认200
      * @param string $NickName 设备名称，需要模糊匹配设备名称时为必填
      * @param array $DeviceIds DeviceId列表，需要精确查找设备时为必填
+     * @param array $DeviceTypes 设备类型过滤
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeAllDeviceListRequest extends AbstractModel
 
         if (array_key_exists("DeviceIds",$param) and $param["DeviceIds"] !== null) {
             $this->DeviceIds = $param["DeviceIds"];
+        }
+
+        if (array_key_exists("DeviceTypes",$param) and $param["DeviceTypes"] !== null) {
+            $this->DeviceTypes = $param["DeviceTypes"];
         }
     }
 }

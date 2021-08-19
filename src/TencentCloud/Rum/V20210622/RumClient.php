@@ -25,6 +25,7 @@ use TencentCloud\Rum\V20210622\Models as Models;
 /**
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建项目（归属于某个团队）
  * @method Models\DescribeDataPerformancePageResponse DescribeDataPerformancePage(Models\DescribeDataPerformancePageRequest $req) 获取PerformancePage信息
+ * @method Models\DescribeErrorResponse DescribeError(Models\DescribeErrorRequest $req) 获取首页错误信息
  */
 
 class RumClient extends AbstractClient

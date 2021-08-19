@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method array getWeekDays() 获取日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday
- * @method void setWeekDays(array $WeekDays) 设置日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday
+ * @method array getWeekDays() 获取日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，该参数暂不支持修改。
+ * @method void setWeekDays(array $WeekDays) 设置日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，该参数暂不支持修改。
  * @method string getTimePeriod() 获取时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
  * @method void setTimePeriod(string $TimePeriod) 设置时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
  * @method integer getAutoBackupType() 获取自动备份类型： 1 “定时回档”
@@ -37,7 +37,7 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday
+     * @var array 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，该参数暂不支持修改。
      */
     public $WeekDays;
 
@@ -53,7 +53,7 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID
-     * @param array $WeekDays 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday
+     * @param array $WeekDays 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，该参数暂不支持修改。
      * @param string $TimePeriod 时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
      * @param integer $AutoBackupType 自动备份类型： 1 “定时回档”
      */

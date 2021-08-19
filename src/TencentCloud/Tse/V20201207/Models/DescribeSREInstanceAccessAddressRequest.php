@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取注册引擎实例Id
  * @method void setInstanceId(string $InstanceId) 设置注册引擎实例Id
+ * @method string getVpcId() 获取VPC ID
+ * @method void setVpcId(string $VpcId) 设置VPC ID
+ * @method string getSubnetId() 获取子网ID
+ * @method void setSubnetId(string $SubnetId) 设置子网ID
  */
 class DescribeSREInstanceAccessAddressRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeSREInstanceAccessAddressRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string VPC ID
+     */
+    public $VpcId;
+
+    /**
+     * @var string 子网ID
+     */
+    public $SubnetId;
+
+    /**
      * @param string $InstanceId 注册引擎实例Id
+     * @param string $VpcId VPC ID
+     * @param string $SubnetId 子网ID
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeSREInstanceAccessAddressRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

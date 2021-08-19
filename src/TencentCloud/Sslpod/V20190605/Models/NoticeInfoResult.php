@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取通知ID
  * @method void setId(integer $Id) 设置通知ID
- * @method integer getNoticeType() 获取通知开关信息
- * @method void setNoticeType(integer $NoticeType) 设置通知开关信息
+ * @method integer getNoticeType() 获取通知开关信息；0：关闭；15开启
+ * @method void setNoticeType(integer $NoticeType) 设置通知开关信息；0：关闭；15开启
  * @method array getLimitInfos() 获取额度信息
  * @method void setLimitInfos(array $LimitInfos) 设置额度信息
  */
@@ -35,7 +35,7 @@ class NoticeInfoResult extends AbstractModel
     public $Id;
 
     /**
-     * @var integer 通知开关信息
+     * @var integer 通知开关信息；0：关闭；15开启
      */
     public $NoticeType;
 
@@ -46,7 +46,7 @@ class NoticeInfoResult extends AbstractModel
 
     /**
      * @param integer $Id 通知ID
-     * @param integer $NoticeType 通知开关信息
+     * @param integer $NoticeType 通知开关信息；0：关闭；15开启
      * @param array $LimitInfos 额度信息
      */
     function __construct()

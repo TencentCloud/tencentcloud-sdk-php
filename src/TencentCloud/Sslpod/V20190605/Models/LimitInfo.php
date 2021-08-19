@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通知额度限制信息
  *
- * @method string getType() 获取通知类型
- * @method void setType(string $Type) 设置通知类型
+ * @method string getType() 获取通知类型：
+limit_emai：邮件
+limit_wechat：微信
+limit_phone：手机
+ * @method void setType(string $Type) 设置通知类型：
+limit_emai：邮件
+limit_wechat：微信
+limit_phone：手机
  * @method integer getTotal() 获取总量
  * @method void setTotal(integer $Total) 设置总量
  * @method integer getSent() 获取已发送
@@ -30,7 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class LimitInfo extends AbstractModel
 {
     /**
-     * @var string 通知类型
+     * @var string 通知类型：
+limit_emai：邮件
+limit_wechat：微信
+limit_phone：手机
      */
     public $Type;
 
@@ -45,7 +54,10 @@ class LimitInfo extends AbstractModel
     public $Sent;
 
     /**
-     * @param string $Type 通知类型
+     * @param string $Type 通知类型：
+limit_emai：邮件
+limit_wechat：微信
+limit_phone：手机
      * @param integer $Total 总量
      * @param integer $Sent 已发送
      */

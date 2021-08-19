@@ -14,26 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Rum\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceCreateInstance返回参数结构体
+ * DescribeError返回参数结构体
  *
- * @method float getPrice() 获取价格，单位：元
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrice(float $Price) 设置价格，单位：元
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContent() 获取内容
+ * @method void setContent(string $Content) 设置内容
+ * @method integer getID() 获取项目ID
+ * @method void setID(integer $ID) 设置项目ID
+ * @method string getCreateTime() 获取时间
+ * @method void setCreateTime(string $CreateTime) 设置时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class InquiryPriceCreateInstanceResponse extends AbstractModel
+class DescribeErrorResponse extends AbstractModel
 {
     /**
-     * @var float 价格，单位：元
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 内容
      */
-    public $Price;
+    public $Content;
+
+    /**
+     * @var integer 项目ID
+     */
+    public $ID;
+
+    /**
+     * @var string 时间
+     */
+    public $CreateTime;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +52,9 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Price 价格，单位：元
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Content 内容
+     * @param integer $ID 项目ID
+     * @param string $CreateTime 时间
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +70,16 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(integer $EventId) 设置触发录制的事件类别 1:全部
  * @method array getDevices() 获取该录制计划绑定的设备列表
  * @method void setDevices(array $Devices) 设置该录制计划绑定的设备列表
+ * @method integer getRecordStorageTime() 获取存储周期
+ * @method void setRecordStorageTime(integer $RecordStorageTime) 设置存储周期
  */
 class CreateRecordPlanRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateRecordPlanRequest extends AbstractModel
     public $Devices;
 
     /**
+     * @var integer 存储周期
+     */
+    public $RecordStorageTime;
+
+    /**
      * @param string $Name 计划名称
      * @param string $TimeTemplateId 时间模板ID
      * @param integer $EventId 触发录制的事件类别 1:全部
      * @param array $Devices 该录制计划绑定的设备列表
+     * @param integer $RecordStorageTime 存储周期
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateRecordPlanRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Devices, $obj);
             }
+        }
+
+        if (array_key_exists("RecordStorageTime",$param) and $param["RecordStorageTime"] !== null) {
+            $this->RecordStorageTime = $param["RecordStorageTime"];
         }
     }
 }

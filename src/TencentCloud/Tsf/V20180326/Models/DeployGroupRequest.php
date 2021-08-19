@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartScript(string $StartScript) 设置启动脚本 base64编码
  * @method string getStopScript() 获取停止脚本 base64编码
  * @method void setStopScript(string $StopScript) 设置停止脚本 base64编码
+ * @method boolean getIncrementalDeployment() 获取是否进行增量部署，默认为false，全量更新
+ * @method void setIncrementalDeployment(boolean $IncrementalDeployment) 设置是否进行增量部署，默认为false，全量更新
  */
 class DeployGroupRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class DeployGroupRequest extends AbstractModel
     public $StopScript;
 
     /**
+     * @var boolean 是否进行增量部署，默认为false，全量更新
+     */
+    public $IncrementalDeployment;
+
+    /**
      * @param string $GroupId 部署组ID
      * @param string $PkgId 程序包ID
      * @param string $StartupParameters 部署组启动参数
@@ -136,6 +143,7 @@ class DeployGroupRequest extends AbstractModel
      * @param integer $DeployWaitTime 滚动发布每个批次的时间间隔
      * @param string $StartScript 启动脚本 base64编码
      * @param string $StopScript 停止脚本 base64编码
+     * @param boolean $IncrementalDeployment 是否进行增量部署，默认为false，全量更新
      */
     function __construct()
     {
@@ -205,6 +213,10 @@ class DeployGroupRequest extends AbstractModel
 
         if (array_key_exists("StopScript",$param) and $param["StopScript"] !== null) {
             $this->StopScript = $param["StopScript"];
+        }
+
+        if (array_key_exists("IncrementalDeployment",$param) and $param["IncrementalDeployment"] !== null) {
+            $this->IncrementalDeployment = $param["IncrementalDeployment"];
         }
     }
 }

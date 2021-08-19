@@ -54,6 +54,8 @@ irisIn - 光圈缩小
 irisOut - 光圈放大
 focusIn - 焦距变近
 focusOut - 焦距变远
+ * @method string getChannelId() 获取通道唯一标识
+ * @method void setChannelId(string $ChannelId) 设置通道唯一标识
  */
 class ControlDevicePTZRequest extends AbstractModel
 {
@@ -83,6 +85,11 @@ focusOut - 焦距变远
     public $Command;
 
     /**
+     * @var string 通道唯一标识
+     */
+    public $ChannelId;
+
+    /**
      * @param string $DeviceId 设备唯一标识
      * @param string $Command PTZ控制命令类型：
 stop - 停止当前PTZ信令
@@ -100,6 +107,7 @@ irisIn - 光圈缩小
 irisOut - 光圈放大
 focusIn - 焦距变近
 focusOut - 焦距变远
+     * @param string $ChannelId 通道唯一标识
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ focusOut - 焦距变远
 
         if (array_key_exists("Command",$param) and $param["Command"] !== null) {
             $this->Command = $param["Command"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
     }
 }

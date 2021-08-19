@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getMemSize() 获取分片大小 单位 MB
- * @method void setMemSize(integer $MemSize) 设置分片大小 单位 MB
- * @method integer getRedisShardNum() 获取分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
- * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
- * @method integer getRedisReplicasNum() 获取副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+ * @method integer getMemSize() 获取分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
+ * @method void setMemSize(integer $MemSize) 设置分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
+ * @method integer getRedisShardNum() 获取分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
+ * @method integer getRedisReplicasNum() 获取副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
  * @method array getNodeSet() 获取多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
  * @method void setNodeSet(array $NodeSet) 设置多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
  */
@@ -39,17 +39,17 @@ class UpgradeInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 分片大小 单位 MB
+     * @var integer 分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
      */
     public $MemSize;
 
     /**
-     * @var integer 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @var integer 分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @var integer 副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
      */
     public $RedisReplicasNum;
 
@@ -60,9 +60,9 @@ class UpgradeInstanceRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID
-     * @param integer $MemSize 分片大小 单位 MB
-     * @param integer $RedisShardNum 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
-     * @param integer $RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * @param integer $MemSize 分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
+     * @param integer $RedisShardNum 分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
+     * @param integer $RedisReplicasNum 副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
      * @param array $NodeSet 多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
      */
     function __construct()

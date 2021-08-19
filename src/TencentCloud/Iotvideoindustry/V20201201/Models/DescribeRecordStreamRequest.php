@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置录像流开始时间，当录像文件Id为空时有效
  * @method integer getEndTime() 获取录像流结束时间，当录像文件Id为空时有效
  * @method void setEndTime(integer $EndTime) 设置录像流结束时间，当录像文件Id为空时有效
+ * @method string getChannelId() 获取通道唯一标识
+ * @method void setChannelId(string $ChannelId) 设置通道唯一标识
  */
 class DescribeRecordStreamRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeRecordStreamRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 通道唯一标识
+     */
+    public $ChannelId;
+
+    /**
      * @param string $DeviceId 设备Id
      * @param integer $ExpireTime 流失效时间
      * @param string $RecordId 录像文件Id
      * @param integer $StartTime 录像流开始时间，当录像文件Id为空时有效
      * @param integer $EndTime 录像流结束时间，当录像文件Id为空时有效
+     * @param string $ChannelId 通道唯一标识
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeRecordStreamRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
     }
 }

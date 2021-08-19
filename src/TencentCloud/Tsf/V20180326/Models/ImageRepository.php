@@ -64,6 +64,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TcrRepoInfo getTcrRepoInfo() 获取TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTcrBindingId() 获取TcrBindingId值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTcrBindingId(integer $TcrBindingId) 设置TcrBindingId值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取applicationid值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置applicationid值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ScalableRule getApplicationName() 获取ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationName(ScalableRule $ApplicationName) 设置ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageRepository extends AbstractModel
 {
@@ -134,6 +150,30 @@ class ImageRepository extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var TcrRepoInfo TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TcrRepoInfo;
+
+    /**
+     * @var integer TcrBindingId值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TcrBindingId;
+
+    /**
+     * @var string applicationid值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
+     * @var ScalableRule ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationName;
+
+    /**
      * @param string $Reponame 仓库名,含命名空间,如tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Repotype 仓库类型
@@ -155,6 +195,14 @@ class ImageRepository extends AbstractModel
      * @param string $CreationTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TcrBindingId TcrBindingId值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId applicationid值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScalableRule $ApplicationName ApplicationName值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +260,24 @@ class ImageRepository extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("TcrRepoInfo",$param) and $param["TcrRepoInfo"] !== null) {
+            $this->TcrRepoInfo = new TcrRepoInfo();
+            $this->TcrRepoInfo->deserialize($param["TcrRepoInfo"]);
+        }
+
+        if (array_key_exists("TcrBindingId",$param) and $param["TcrBindingId"] !== null) {
+            $this->TcrBindingId = $param["TcrBindingId"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = new ScalableRule();
+            $this->ApplicationName->deserialize($param["ApplicationName"]);
         }
     }
 }

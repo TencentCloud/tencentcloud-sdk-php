@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryImageIdFlag(integer $QueryImageIdFlag) 设置不填和0:查询 1:不查询
  * @method string getSearchWord() 获取可用于搜索的 tag 名字
  * @method void setSearchWord(string $SearchWord) 设置可用于搜索的 tag 名字
+ * @method string getRepoType() 获取企业: tcr ；个人: personal或者不填
+ * @method void setRepoType(string $RepoType) 设置企业: tcr ；个人: personal或者不填
+ * @method TcrRepoInfo getTcrRepoInfo() 获取TcrRepoInfo值
+ * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
  */
 class DescribeImageTagsRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DescribeImageTagsRequest extends AbstractModel
     public $SearchWord;
 
     /**
+     * @var string 企业: tcr ；个人: personal或者不填
+     */
+    public $RepoType;
+
+    /**
+     * @var TcrRepoInfo TcrRepoInfo值
+     */
+    public $TcrRepoInfo;
+
+    /**
      * @param string $ApplicationId 应用Id
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~100
      * @param integer $QueryImageIdFlag 不填和0:查询 1:不查询
      * @param string $SearchWord 可用于搜索的 tag 名字
+     * @param string $RepoType 企业: tcr ；个人: personal或者不填
+     * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
      */
     function __construct()
     {
@@ -96,6 +112,15 @@ class DescribeImageTagsRequest extends AbstractModel
 
         if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
             $this->SearchWord = $param["SearchWord"];
+        }
+
+        if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
+            $this->RepoType = $param["RepoType"];
+        }
+
+        if (array_key_exists("TcrRepoInfo",$param) and $param["TcrRepoInfo"] !== null) {
+            $this->TcrRepoInfo = new TcrRepoInfo();
+            $this->TcrRepoInfo->deserialize($param["TcrRepoInfo"]);
         }
     }
 }

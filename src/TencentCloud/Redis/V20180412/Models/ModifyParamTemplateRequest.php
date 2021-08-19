@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateId() 获取源参数模板 ID。
  * @method void setTemplateId(string $TemplateId) 设置源参数模板 ID。
- * @method string getName() 获取参数模板名称。
- * @method void setName(string $Name) 设置参数模板名称。
- * @method string getDescription() 获取参数模板描述。
- * @method void setDescription(string $Description) 设置参数模板描述。
- * @method array getParamList() 获取参数列表。
- * @method void setParamList(array $ParamList) 设置参数列表。
+ * @method string getName() 获取参数模板修改后的新名称。
+ * @method void setName(string $Name) 设置参数模板修改后的新名称。
+ * @method string getDescription() 获取参数模板修改后的新描述。
+ * @method void setDescription(string $Description) 设置参数模板修改后的新描述。
+ * @method array getParamList() 获取修改后的新参数列表。
+ * @method void setParamList(array $ParamList) 设置修改后的新参数列表。
  */
 class ModifyParamTemplateRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class ModifyParamTemplateRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 参数模板名称。
+     * @var string 参数模板修改后的新名称。
      */
     public $Name;
 
     /**
-     * @var string 参数模板描述。
+     * @var string 参数模板修改后的新描述。
      */
     public $Description;
 
     /**
-     * @var array 参数列表。
+     * @var array 修改后的新参数列表。
      */
     public $ParamList;
 
     /**
      * @param string $TemplateId 源参数模板 ID。
-     * @param string $Name 参数模板名称。
-     * @param string $Description 参数模板描述。
-     * @param array $ParamList 参数列表。
+     * @param string $Name 参数模板修改后的新名称。
+     * @param string $Description 参数模板修改后的新描述。
+     * @param array $ParamList 修改后的新参数列表。
      */
     function __construct()
     {

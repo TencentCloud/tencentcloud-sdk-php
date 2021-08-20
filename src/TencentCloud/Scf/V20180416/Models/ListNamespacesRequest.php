@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderby(string $Orderby) 设置根据哪个字段进行返回结果排序,支持以下字段：Name,Updatetime
  * @method string getOrder() 获取以升序还是降序的方式返回结果，可选值 ASC 和 DESC
  * @method void setOrder(string $Order) 设置以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+ * @method array getSearchKey() 获取关键字匹配搜索，Key 可选值为 Namespace 和 Description，多个搜索条件之间是与的关系
+ * @method void setSearchKey(array $SearchKey) 设置关键字匹配搜索，Key 可选值为 Namespace 和 Description，多个搜索条件之间是与的关系
  */
 class ListNamespacesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ListNamespacesRequest extends AbstractModel
     public $Order;
 
     /**
+     * @var array 关键字匹配搜索，Key 可选值为 Namespace 和 Description，多个搜索条件之间是与的关系
+     */
+    public $SearchKey;
+
+    /**
      * @param integer $Limit 返回数据长度，默认值为 20
      * @param integer $Offset 数据的偏移量，默认值为 0
      * @param string $Orderby 根据哪个字段进行返回结果排序,支持以下字段：Name,Updatetime
      * @param string $Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+     * @param array $SearchKey 关键字匹配搜索，Key 可选值为 Namespace 和 Description，多个搜索条件之间是与的关系
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class ListNamespacesRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
+            $this->SearchKey = [];
+            foreach ($param["SearchKey"] as $key => $value){
+                $obj = new SearchKey();
+                $obj->deserialize($value);
+                array_push($this->SearchKey, $obj);
+            }
         }
     }
 }

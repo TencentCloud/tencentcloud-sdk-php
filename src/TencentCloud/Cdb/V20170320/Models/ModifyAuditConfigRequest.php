@@ -23,12 +23,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
  * @method integer getLogExpireDay() 获取审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
 1825 - 五年；
  * @method void setLogExpireDay(integer $LogExpireDay) 设置审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
@@ -50,6 +52,7 @@ class ModifyAuditConfigRequest extends AbstractModel
 
     /**
      * @var integer 审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
@@ -68,6 +71,7 @@ CloseAudit、LogExpireDay必须至少提供一个，如果两个都提供则按�
     /**
      * @param string $InstanceId 实例 ID。
      * @param integer $LogExpireDay 审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；

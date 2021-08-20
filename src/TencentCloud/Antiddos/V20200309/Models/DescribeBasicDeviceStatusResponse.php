@@ -20,15 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBasicDeviceStatus返回参数结构体
  *
- * @method array getData() 获取返回资源及状态
- * @method void setData(array $Data) 设置返回资源及状态
+ * @method array getData() 获取返回资源及状态，状态码：
+1 - 封堵状态
+2 - 正常状态
+3 - 攻击状态
+ * @method void setData(array $Data) 设置返回资源及状态，状态码：
+1 - 封堵状态
+2 - 正常状态
+3 - 攻击状态
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBasicDeviceStatusResponse extends AbstractModel
 {
     /**
-     * @var array 返回资源及状态
+     * @var array 返回资源及状态，状态码：
+1 - 封堵状态
+2 - 正常状态
+3 - 攻击状态
      */
     public $Data;
 
@@ -38,7 +47,10 @@ class DescribeBasicDeviceStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 返回资源及状态
+     * @param array $Data 返回资源及状态，状态码：
+1 - 封堵状态
+2 - 正常状态
+3 - 攻击状态
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

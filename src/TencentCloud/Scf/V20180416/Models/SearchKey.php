@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Pds\V20210701\Models;
+namespace TencentCloud\Scf\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 信誉分，1-5从低到高
+ * 包含搜索关键字和对应的内容
  *
- * @method integer getStar() 获取信誉分，1-5从低到高
- * @method void setStar(integer $Star) 设置信誉分，1-5从低到高
+ * @method string getKey() 获取搜索关键字
+ * @method void setKey(string $Key) 设置搜索关键字
+ * @method string getValue() 获取搜索内容
+ * @method void setValue(string $Value) 设置搜索内容
  */
-class Score extends AbstractModel
+class SearchKey extends AbstractModel
 {
     /**
-     * @var integer 信誉分，1-5从低到高
+     * @var string 搜索关键字
      */
-    public $Star;
+    public $Key;
 
     /**
-     * @param integer $Star 信誉分，1-5从低到高
+     * @var string 搜索内容
+     */
+    public $Value;
+
+    /**
+     * @param string $Key 搜索关键字
+     * @param string $Value 搜索内容
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class Score extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Star",$param) and $param["Star"] !== null) {
-            $this->Star = $param["Star"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

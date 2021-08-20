@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Pds\V20210701\Models;
+namespace TencentCloud\Rum\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeNewUserAcquisition返回参数结构体
+ * DescribeDataLogUrlStatistics返回参数结构体
  *
- * @method Score getServiceRsp() 获取用户信誉分，1-5从低到高
- * @method void setServiceRsp(Score $ServiceRsp) 设置用户信誉分，1-5从低到高
+ * @method string getResult() 获取返回值
+ * @method void setResult(string $Result) 设置返回值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeNewUserAcquisitionResponse extends AbstractModel
+class DescribeDataLogUrlStatisticsResponse extends AbstractModel
 {
     /**
-     * @var Score 用户信誉分，1-5从低到高
+     * @var string 返回值
      */
-    public $ServiceRsp;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DescribeNewUserAcquisitionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Score $ServiceRsp 用户信誉分，1-5从低到高
+     * @param string $Result 返回值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,8 @@ class DescribeNewUserAcquisitionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ServiceRsp",$param) and $param["ServiceRsp"] !== null) {
-            $this->ServiceRsp = new Score();
-            $this->ServiceRsp->deserialize($param["ServiceRsp"]);
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

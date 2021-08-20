@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStockEstimation返回参数结构体
  *
- * @method Score getServiceRsp() 获取用户信誉值
- * @method void setServiceRsp(Score $ServiceRsp) 设置用户信誉值
+ * @method Score getServiceRsp() 获取用户信誉分，1-5从低到高
+ * @method void setServiceRsp(Score $ServiceRsp) 设置用户信誉分，1-5从低到高
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeStockEstimationResponse extends AbstractModel
 {
     /**
-     * @var Score 用户信誉值
+     * @var Score 用户信誉分，1-5从低到高
      */
     public $ServiceRsp;
 
@@ -38,7 +38,7 @@ class DescribeStockEstimationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Score $ServiceRsp 用户信誉值
+     * @param Score $ServiceRsp 用户信誉分，1-5从低到高
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

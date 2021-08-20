@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDirection() 获取方向，0：出站，1：入站，默认1
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站，默认1
+ * @method integer getProtocolPortType() 获取是否使用端口协议模板，0：否，1：是
+ * @method void setProtocolPortType(integer $ProtocolPortType) 设置是否使用端口协议模板，0：否，1：是
  */
 class SecurityGroupListData extends AbstractModel
 {
@@ -202,6 +204,11 @@ class SecurityGroupListData extends AbstractModel
     public $Direction;
 
     /**
+     * @var integer 是否使用端口协议模板，0：否，1：是
+     */
+    public $ProtocolPortType;
+
+    /**
      * @param integer $OrderIndex 执行顺序
      * @param string $SourceId 访问源
      * @param integer $SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
@@ -232,6 +239,7 @@ class SecurityGroupListData extends AbstractModel
      * @param array $BothWayInfo 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Direction 方向，0：出站，1：入站，默认1
+     * @param integer $ProtocolPortType 是否使用端口协议模板，0：否，1：是
      */
     function __construct()
     {
@@ -337,6 +345,10 @@ class SecurityGroupListData extends AbstractModel
 
         if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
             $this->Direction = $param["Direction"];
+        }
+
+        if (array_key_exists("ProtocolPortType",$param) and $param["ProtocolPortType"] !== null) {
+            $this->ProtocolPortType = $param["ProtocolPortType"];
         }
     }
 }

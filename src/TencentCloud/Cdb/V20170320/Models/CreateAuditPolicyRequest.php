@@ -27,6 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method integer getLogExpireDay() 获取审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
@@ -34,6 +35,7 @@ use TencentCloud\Common\AbstractModel;
 1825 - 五年；
 实例首次开通审计策略时，可传该值，用于设置存储日志保存天数，默认为 30 天。若实例已存在审计策略，则此参数无效，可使用 更改审计服务配置 接口修改日志存储时长。
  * @method void setLogExpireDay(integer $LogExpireDay) 设置审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
@@ -60,6 +62,7 @@ class CreateAuditPolicyRequest extends AbstractModel
 
     /**
      * @var integer 审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；
@@ -74,6 +77,7 @@ class CreateAuditPolicyRequest extends AbstractModel
      * @param string $RuleId 审计规则 ID。
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param integer $LogExpireDay 审计日志保存时长。支持值包括：
+7 - 一周
 30 - 一个月；
 180 - 六个月；
 365 - 一年；

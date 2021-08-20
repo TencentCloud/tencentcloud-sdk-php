@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProtocolPortType() 获取是否使用端口协议模板，0：否，1：是
+ * @method void setProtocolPortType(integer $ProtocolPortType) 设置是否使用端口协议模板，0：否，1：是
  */
 class SecurityGroupBothWayInfo extends AbstractModel
 {
@@ -231,6 +233,11 @@ class SecurityGroupBothWayInfo extends AbstractModel
     public $ServiceTemplateId;
 
     /**
+     * @var integer 是否使用端口协议模板，0：否，1：是
+     */
+    public $ProtocolPortType;
+
+    /**
      * @param integer $OrderIndex 执行顺序
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceId 访问源
@@ -272,6 +279,7 @@ class SecurityGroupBothWayInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceTemplateId 端口协议类型参数模板id
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProtocolPortType 是否使用端口协议模板，0：否，1：是
      */
     function __construct()
     {
@@ -368,6 +376,10 @@ class SecurityGroupBothWayInfo extends AbstractModel
 
         if (array_key_exists("ServiceTemplateId",$param) and $param["ServiceTemplateId"] !== null) {
             $this->ServiceTemplateId = $param["ServiceTemplateId"];
+        }
+
+        if (array_key_exists("ProtocolPortType",$param) and $param["ProtocolPortType"] !== null) {
+            $this->ProtocolPortType = $param["ProtocolPortType"];
         }
     }
 }

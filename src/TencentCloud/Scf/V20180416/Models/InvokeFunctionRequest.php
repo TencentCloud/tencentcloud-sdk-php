@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) 设置函数名称
  * @method string getQualifier() 获取触发函数的版本号或别名，默认值为$DEFAULT
  * @method void setQualifier(string $Qualifier) 设置触发函数的版本号或别名，默认值为$DEFAULT
- * @method string getEvent() 获取运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
- * @method void setEvent(string $Event) 设置运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
- * @method string getLogType() 获取同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
- * @method void setLogType(string $LogType) 设置同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
- * @method string getNamespace() 获取命名空间
- * @method void setNamespace(string $Namespace) 设置命名空间
+ * @method string getEvent() 获取运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
+ * @method void setEvent(string $Event) 设置运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
+ * @method string getLogType() 获取返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
+ * @method void setLogType(string $LogType) 设置返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
+ * @method string getNamespace() 获取命名空间，不填默认为 default
+ * @method void setNamespace(string $Namespace) 设置命名空间，不填默认为 default
  * @method string getRoutingKey() 获取函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
  * @method void setRoutingKey(string $RoutingKey) 设置函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
  */
@@ -46,17 +46,17 @@ class InvokeFunctionRequest extends AbstractModel
     public $Qualifier;
 
     /**
-     * @var string 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
+     * @var string 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
      */
     public $Event;
 
     /**
-     * @var string 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
+     * @var string 返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
      */
     public $LogType;
 
     /**
-     * @var string 命名空间
+     * @var string 命名空间，不填默认为 default
      */
     public $Namespace;
 
@@ -68,9 +68,9 @@ class InvokeFunctionRequest extends AbstractModel
     /**
      * @param string $FunctionName 函数名称
      * @param string $Qualifier 触发函数的版本号或别名，默认值为$DEFAULT
-     * @param string $Event 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
-     * @param string $LogType 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
-     * @param string $Namespace 命名空间
+     * @param string $Event 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
+     * @param string $LogType 返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
+     * @param string $Namespace 命名空间，不填默认为 default
      * @param string $RoutingKey 函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节
      */
     function __construct()

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getApplicationId() 获取应用ID。
  * @method void setApplicationId(string $ApplicationId) 设置应用ID。
- * @method string getUserId() 获取用户ID。
- * @method void setUserId(string $UserId) 设置用户ID。
- * @method string getUserName() 获取用户名。
- * @method void setUserName(string $UserName) 设置用户名。
+ * @method string getUserId() 获取用户ID。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
+ * @method void setUserId(string $UserId) 设置用户ID。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
+ * @method string getUserName() 获取用户名。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
+ * @method void setUserName(string $UserName) 设置用户名。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
  * @method boolean getIncludeInheritedAuthorizations() 获取查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 ，传false表示不查询该范围，传true查询该范围。
  * @method void setIncludeInheritedAuthorizations(boolean $IncludeInheritedAuthorizations) 设置查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 ，传false表示不查询该范围，传true查询该范围。
  */
@@ -37,12 +37,12 @@ class DescribeUserResourcesAuthorizationRequest extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @var string 用户ID。
+     * @var string 用户ID。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
      */
     public $UserId;
 
     /**
-     * @var string 用户名。
+     * @var string 用户名。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
      */
     public $UserName;
 
@@ -53,8 +53,8 @@ class DescribeUserResourcesAuthorizationRequest extends AbstractModel
 
     /**
      * @param string $ApplicationId 应用ID。
-     * @param string $UserId 用户ID。
-     * @param string $UserName 用户名。
+     * @param string $UserId 用户ID。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
+     * @param string $UserName 用户名。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
      * @param boolean $IncludeInheritedAuthorizations 查询范围是否包括用户关联的用户组、组织机构的应用访问权限。默认为不查询 ，传false表示不查询该范围，传true查询该范围。
      */
     function __construct()

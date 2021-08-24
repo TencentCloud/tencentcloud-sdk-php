@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
  * @method integer getRouteId() 获取路由ID
  * @method void setRouteId(integer $RouteId) 设置路由ID
- * @method integer getVipType() 获取vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:腾讯云支持环境(一般用于内部实例) 5:SSL外网访问方式访问 6:黑石环境vpc）
- * @method void setVipType(integer $VipType) 设置vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:腾讯云支持环境(一般用于内部实例) 5:SSL外网访问方式访问 6:黑石环境vpc）
+ * @method integer getVipType() 获取vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)）
+ * @method void setVipType(integer $VipType) 设置vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)）
  * @method array getVipList() 获取虚拟IP列表
  * @method void setVipList(array $VipList) 设置虚拟IP列表
  * @method string getDomain() 获取域名
@@ -43,6 +43,10 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDomainPort() 获取域名port
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainPort(integer $DomainPort) 设置域名port
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeleteTimestamp() 获取时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeleteTimestamp(string $DeleteTimestamp) 设置时间戳
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Route extends AbstractModel
@@ -62,7 +66,7 @@ class Route extends AbstractModel
     public $RouteId;
 
     /**
-     * @var integer vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:腾讯云支持环境(一般用于内部实例) 5:SSL外网访问方式访问 6:黑石环境vpc）
+     * @var integer vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)）
      */
     public $VipType;
 
@@ -84,17 +88,25 @@ class Route extends AbstractModel
     public $DomainPort;
 
     /**
+     * @var string 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeleteTimestamp;
+
+    /**
      * @param integer $AccessType 实例接入方式
 0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
 2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
 3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
      * @param integer $RouteId 路由ID
-     * @param integer $VipType vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:腾讯云支持环境(一般用于内部实例) 5:SSL外网访问方式访问 6:黑石环境vpc）
+     * @param integer $VipType vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)）
      * @param array $VipList 虚拟IP列表
      * @param string $Domain 域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DomainPort 域名port
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeleteTimestamp 时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -137,6 +149,10 @@ class Route extends AbstractModel
 
         if (array_key_exists("DomainPort",$param) and $param["DomainPort"] !== null) {
             $this->DomainPort = $param["DomainPort"];
+        }
+
+        if (array_key_exists("DeleteTimestamp",$param) and $param["DeleteTimestamp"] !== null) {
+            $this->DeleteTimestamp = $param["DeleteTimestamp"];
         }
     }
 }

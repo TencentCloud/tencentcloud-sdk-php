@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecureLevel(string $SecureLevel) 设置安全级别。
  * @method string getDisplayName() 获取应用展示名称，长度限制：32个字符。 默认与应用名字相同。
  * @method void setDisplayName(string $DisplayName) 设置应用展示名称，长度限制：32个字符。 默认与应用名字相同。
- * @method boolean getAppStatus() 获取应用状态
- * @method void setAppStatus(boolean $AppStatus) 设置应用状态
+ * @method boolean getAppStatus() 获取应用状态，true表示启用，false表示禁用。
+ * @method void setAppStatus(boolean $AppStatus) 设置应用状态，true表示启用，false表示禁用。
  * @method string getIconUrl() 获取应用图标图片访问地址。
  * @method void setIconUrl(string $IconUrl) 设置应用图标图片访问地址。
  * @method string getDescription() 获取描述。长度不超过128。
@@ -51,7 +51,7 @@ class ModifyApplicationRequest extends AbstractModel
     public $DisplayName;
 
     /**
-     * @var boolean 应用状态
+     * @var boolean 应用状态，true表示启用，false表示禁用。
      */
     public $AppStatus;
 
@@ -69,7 +69,7 @@ class ModifyApplicationRequest extends AbstractModel
      * @param string $ApplicationId 应用ID，是应用的全局唯一标识。
      * @param string $SecureLevel 安全级别。
      * @param string $DisplayName 应用展示名称，长度限制：32个字符。 默认与应用名字相同。
-     * @param boolean $AppStatus 应用状态
+     * @param boolean $AppStatus 应用状态，true表示启用，false表示禁用。
      * @param string $IconUrl 应用图标图片访问地址。
      * @param string $Description 描述。长度不超过128。
      */

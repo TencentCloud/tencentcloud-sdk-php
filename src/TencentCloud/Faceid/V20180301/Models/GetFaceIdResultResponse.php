@@ -42,6 +42,28 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtra(string $Extra) 设置获取token时透传的信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceInfoTag() 获取设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+202、5001：设备疑似被Root
+203、5004：设备疑似被注入
+205：设备疑似被Hook
+206：设备疑似虚拟运行环境
+5007、1005：设备疑似摄像头被劫持
+8000：设备疑似存在异常篡改行为
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceInfoTag(string $DeviceInfoTag) 设置设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+202、5001：设备疑似被Root
+203、5004：设备疑似被注入
+205：设备疑似被Hook
+206：设备疑似虚拟运行环境
+5007、1005：设备疑似摄像头被劫持
+8000：设备疑似存在异常篡改行为
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRiskInfoTag() 获取行为风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+02：攻击风险
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskInfoTag(string $RiskInfoTag) 设置行为风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+02：攻击风险
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,6 +113,25 @@ class GetFaceIdResultResponse extends AbstractModel
     public $Extra;
 
     /**
+     * @var string 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+202、5001：设备疑似被Root
+203、5004：设备疑似被注入
+205：设备疑似被Hook
+206：设备疑似虚拟运行环境
+5007、1005：设备疑似摄像头被劫持
+8000：设备疑似存在异常篡改行为
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceInfoTag;
+
+    /**
+     * @var string 行为风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+02：攻击风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskInfoTag;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -106,6 +147,17 @@ class GetFaceIdResultResponse extends AbstractModel
      * @param string $BestFrameBase64 用户核验视频的截帧
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 获取token时透传的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceInfoTag 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+202、5001：设备疑似被Root
+203、5004：设备疑似被注入
+205：设备疑似被Hook
+206：设备疑似虚拟运行环境
+5007、1005：设备疑似摄像头被劫持
+8000：设备疑似存在异常篡改行为
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RiskInfoTag 行为风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+02：攻击风险
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -152,6 +204,14 @@ class GetFaceIdResultResponse extends AbstractModel
 
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
             $this->Extra = $param["Extra"];
+        }
+
+        if (array_key_exists("DeviceInfoTag",$param) and $param["DeviceInfoTag"] !== null) {
+            $this->DeviceInfoTag = $param["DeviceInfoTag"];
+        }
+
+        if (array_key_exists("RiskInfoTag",$param) and $param["RiskInfoTag"] !== null) {
+            $this->RiskInfoTag = $param["RiskInfoTag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuditionBegin(integer $AuditionBegin) 设置试听开始时间
  * @method integer getAuditionEnd() 获取试听结束时间
  * @method void setAuditionEnd(integer $AuditionEnd) 设置试听结束时间
+ * @method array getTagNames() 获取标签名称
+ * @method void setTagNames(array $TagNames) 设置标签名称
  */
 class DataInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DataInfo extends AbstractModel
     public $AuditionEnd;
 
     /**
+     * @var array 标签名称
+     */
+    public $TagNames;
+
+    /**
      * @param string $Name Song Name
      * @param string $Version 歌曲版本
      * @param string $Duration 歌曲总时长（非试听时长）
      * @param integer $AuditionBegin 试听开始时间
      * @param integer $AuditionEnd 试听结束时间
+     * @param array $TagNames 标签名称
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DataInfo extends AbstractModel
 
         if (array_key_exists("AuditionEnd",$param) and $param["AuditionEnd"] !== null) {
             $this->AuditionEnd = $param["AuditionEnd"];
+        }
+
+        if (array_key_exists("TagNames",$param) and $param["TagNames"] !== null) {
+            $this->TagNames = $param["TagNames"];
         }
     }
 }

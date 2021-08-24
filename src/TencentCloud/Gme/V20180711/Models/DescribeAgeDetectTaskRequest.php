@@ -18,28 +18,28 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实时语音配置数据
+ * DescribeAgeDetectTask请求参数结构体
  *
- * @method string getStatus() 获取实时语音服务开关，取值：open/close
- * @method void setStatus(string $Status) 设置实时语音服务开关，取值：open/close
- * @method string getQuality() 获取实时语音音质类型，取值：high-高音质
- * @method void setQuality(string $Quality) 设置实时语音音质类型，取值：high-高音质
+ * @method integer getBizId() 获取应用id
+ * @method void setBizId(integer $BizId) 设置应用id
+ * @method string getTaskId() 获取创建年龄语音识别任务时返回的taskid
+ * @method void setTaskId(string $TaskId) 设置创建年龄语音识别任务时返回的taskid
  */
-class RealtimeSpeechConf extends AbstractModel
+class DescribeAgeDetectTaskRequest extends AbstractModel
 {
     /**
-     * @var string 实时语音服务开关，取值：open/close
+     * @var integer 应用id
      */
-    public $Status;
+    public $BizId;
 
     /**
-     * @var string 实时语音音质类型，取值：high-高音质
+     * @var string 创建年龄语音识别任务时返回的taskid
      */
-    public $Quality;
+    public $TaskId;
 
     /**
-     * @param string $Status 实时语音服务开关，取值：open/close
-     * @param string $Quality 实时语音音质类型，取值：high-高音质
+     * @param integer $BizId 应用id
+     * @param string $TaskId 创建年龄语音识别任务时返回的taskid
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class RealtimeSpeechConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
+            $this->BizId = $param["BizId"];
         }
 
-        if (array_key_exists("Quality",$param) and $param["Quality"] !== null) {
-            $this->Quality = $param["Quality"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

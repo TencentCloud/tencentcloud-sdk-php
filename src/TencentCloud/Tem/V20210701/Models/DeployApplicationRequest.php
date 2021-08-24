@@ -100,6 +100,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) 设置弹性策略
  * @method array getCronHorizontalAutoscaler() 获取定时弹性策略
  * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) 设置定时弹性策略
+ * @method integer getLogEnable() 获取是否启用log，1为启用，0为不启用
+ * @method void setLogEnable(integer $LogEnable) 设置是否启用log，1为启用，0为不启用
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -280,6 +282,11 @@ class DeployApplicationRequest extends AbstractModel
     public $CronHorizontalAutoscaler;
 
     /**
+     * @var integer 是否启用log，1为启用，0为不启用
+     */
+    public $LogEnable;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param integer $InitPodNum 初始化 pod 数
      * @param float $CpuSpec cpu规格
@@ -320,6 +327,7 @@ class DeployApplicationRequest extends AbstractModel
      * @param DeployStrategyConf $DeployStrategyConf 分批发布策略配置
      * @param array $HorizontalAutoscaler 弹性策略
      * @param array $CronHorizontalAutoscaler 定时弹性策略
+     * @param integer $LogEnable 是否启用log，1为启用，0为不启用
      */
     function __construct()
     {
@@ -504,6 +512,10 @@ class DeployApplicationRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CronHorizontalAutoscaler, $obj);
             }
+        }
+
+        if (array_key_exists("LogEnable",$param) and $param["LogEnable"] !== null) {
+            $this->LogEnable = $param["LogEnable"];
         }
     }
 }

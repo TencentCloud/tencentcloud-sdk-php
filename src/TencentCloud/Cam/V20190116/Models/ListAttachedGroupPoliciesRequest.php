@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置页码，默认值是 1，从 1 开始
  * @method integer getRp() 获取每页大小，默认值是 20
  * @method void setRp(integer $Rp) 设置每页大小，默认值是 20
+ * @method string getKeyword() 获取搜索关键字
+ * @method void setKeyword(string $Keyword) 设置搜索关键字
  */
 class ListAttachedGroupPoliciesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ListAttachedGroupPoliciesRequest extends AbstractModel
     public $Rp;
 
     /**
+     * @var string 搜索关键字
+     */
+    public $Keyword;
+
+    /**
      * @param integer $TargetGroupId 用户组ID
      * @param integer $Page 页码，默认值是 1，从 1 开始
      * @param integer $Rp 每页大小，默认值是 20
+     * @param string $Keyword 搜索关键字
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ListAttachedGroupPoliciesRequest extends AbstractModel
 
         if (array_key_exists("Rp",$param) and $param["Rp"] !== null) {
             $this->Rp = $param["Rp"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnalysisResults(array $AnalysisResults) 设置日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAnalysisRecords() 获取新的日志分析结果; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnalysisRecords(array $AnalysisRecords) 设置新的日志分析结果; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getColumns() 获取日志分析的列属性; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColumns(array $Columns) 设置日志分析的列属性; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -77,6 +85,18 @@ class SearchLogResponse extends AbstractModel
     public $AnalysisResults;
 
     /**
+     * @var array 新的日志分析结果; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnalysisRecords;
+
+    /**
+     * @var array 日志分析的列属性; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Columns;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -90,6 +110,10 @@ class SearchLogResponse extends AbstractModel
      * @param array $Results 日志查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AnalysisResults 日志分析结果；当Analysis为False时，可能返回为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AnalysisRecords 新的日志分析结果; UseNewAnalysis为true有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Columns 日志分析的列属性; UseNewAnalysis为true有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -137,6 +161,19 @@ class SearchLogResponse extends AbstractModel
                 $obj = new LogItems();
                 $obj->deserialize($value);
                 array_push($this->AnalysisResults, $obj);
+            }
+        }
+
+        if (array_key_exists("AnalysisRecords",$param) and $param["AnalysisRecords"] !== null) {
+            $this->AnalysisRecords = $param["AnalysisRecords"];
+        }
+
+        if (array_key_exists("Columns",$param) and $param["Columns"] !== null) {
+            $this->Columns = [];
+            foreach ($param["Columns"] as $key => $value){
+                $obj = new Column();
+                $obj->deserialize($value);
+                array_push($this->Columns, $obj);
             }
         }
 

@@ -14,40 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Tbaas\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveDomains返回参数结构体
+ * QueryChainMakerTransaction返回参数结构体
  *
- * @method integer getAllCount() 获取总记录数。
- * @method void setAllCount(integer $AllCount) 设置总记录数。
- * @method array getDomainList() 获取域名详细信息列表。
- * @method void setDomainList(array $DomainList) 设置域名详细信息列表。
- * @method integer getCreateLimitCount() 获取可继续添加域名数量。
+ * @method ChainMakerTransactionResult getResult() 获取交易结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateLimitCount(integer $CreateLimitCount) 设置可继续添加域名数量。
+ * @method void setResult(ChainMakerTransactionResult $Result) 设置交易结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLiveDomainsResponse extends AbstractModel
+class QueryChainMakerTransactionResponse extends AbstractModel
 {
     /**
-     * @var integer 总记录数。
-     */
-    public $AllCount;
-
-    /**
-     * @var array 域名详细信息列表。
-     */
-    public $DomainList;
-
-    /**
-     * @var integer 可继续添加域名数量。
+     * @var ChainMakerTransactionResult 交易结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $CreateLimitCount;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -55,9 +41,7 @@ class DescribeLiveDomainsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $AllCount 总记录数。
-     * @param array $DomainList 域名详细信息列表。
-     * @param integer $CreateLimitCount 可继续添加域名数量。
+     * @param ChainMakerTransactionResult $Result 交易结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -74,21 +58,9 @@ class DescribeLiveDomainsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AllCount",$param) and $param["AllCount"] !== null) {
-            $this->AllCount = $param["AllCount"];
-        }
-
-        if (array_key_exists("DomainList",$param) and $param["DomainList"] !== null) {
-            $this->DomainList = [];
-            foreach ($param["DomainList"] as $key => $value){
-                $obj = new DomainInfo();
-                $obj->deserialize($value);
-                array_push($this->DomainList, $obj);
-            }
-        }
-
-        if (array_key_exists("CreateLimitCount",$param) and $param["CreateLimitCount"] !== null) {
-            $this->CreateLimitCount = $param["CreateLimitCount"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new ChainMakerTransactionResult();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

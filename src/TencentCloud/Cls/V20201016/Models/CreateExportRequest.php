@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置日志主题
  * @method string getQuery() 获取日志导出检索语句
  * @method void setQuery(string $Query) 设置日志导出检索语句
- * @method integer getCount() 获取日志导出数量
- * @method void setCount(integer $Count) 设置日志导出数量
+ * @method integer getCount() 获取日志导出数量,  最大值1000万
+ * @method void setCount(integer $Count) 设置日志导出数量,  最大值1000万
  * @method integer getFrom() 获取日志导出起始时间，毫秒时间戳
  * @method void setFrom(integer $From) 设置日志导出起始时间，毫秒时间戳
  * @method integer getTo() 获取日志导出结束时间，毫秒时间戳
@@ -48,7 +48,7 @@ class CreateExportRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var integer 日志导出数量
+     * @var integer 日志导出数量,  最大值1000万
      */
     public $Count;
 
@@ -75,7 +75,7 @@ class CreateExportRequest extends AbstractModel
     /**
      * @param string $TopicId 日志主题
      * @param string $Query 日志导出检索语句
-     * @param integer $Count 日志导出数量
+     * @param integer $Count 日志导出数量,  最大值1000万
      * @param integer $From 日志导出起始时间，毫秒时间戳
      * @param integer $To 日志导出结束时间，毫秒时间戳
      * @param string $Order 日志导出时间排序。desc，asc，默认为desc

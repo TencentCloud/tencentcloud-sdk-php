@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPackageType() 获取通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPackageType(string $PackageType) 设置通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -173,6 +177,12 @@ class ProxyGroupDetail extends AbstractModel
     public $IPAddressVersion;
 
     /**
+     * @var string 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PackageType;
+
+    /**
      * @param integer $CreateTime 创建时间
      * @param integer $ProjectId 项目ID
      * @param integer $ProxyNum 通道组中通道数量
@@ -199,6 +209,8 @@ class ProxyGroupDetail extends AbstractModel
      * @param array $ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PackageType 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -286,6 +298,10 @@ class ProxyGroupDetail extends AbstractModel
 
         if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
             $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

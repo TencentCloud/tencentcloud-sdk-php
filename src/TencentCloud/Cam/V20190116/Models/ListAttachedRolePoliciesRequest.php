@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleName(string $RoleName) 设置角色名。用于指定角色，入参 RoleId 与 RoleName 二选一
  * @method string getPolicyType() 获取按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
  * @method void setPolicyType(string $PolicyType) 设置按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
+ * @method string getKeyword() 获取搜索关键字
+ * @method void setKeyword(string $Keyword) 设置搜索关键字
  */
 class ListAttachedRolePoliciesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ListAttachedRolePoliciesRequest extends AbstractModel
     public $PolicyType;
 
     /**
+     * @var string 搜索关键字
+     */
+    public $Keyword;
+
+    /**
      * @param integer $Page 页码，从 1 开始
      * @param integer $Rp 每页行数，不能大于200
      * @param string $RoleId 角色 ID。用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param string $RoleName 角色名。用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param string $PolicyType 按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
+     * @param string $Keyword 搜索关键字
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ListAttachedRolePoliciesRequest extends AbstractModel
 
         if (array_key_exists("PolicyType",$param) and $param["PolicyType"] !== null) {
             $this->PolicyType = $param["PolicyType"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

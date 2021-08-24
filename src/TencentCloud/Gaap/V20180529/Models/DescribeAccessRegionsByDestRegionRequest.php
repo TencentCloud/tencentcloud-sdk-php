@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestRegion(string $DestRegion) 设置源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
  * @method string getIPAddressVersion() 获取IP版本，可取值：IPv4、IPv6，默认值IPv4
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
+ * @method string getPackageType() 获取通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+ * @method void setPackageType(string $PackageType) 设置通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
  */
 class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
     public $IPAddressVersion;
 
     /**
+     * @var string 通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     */
+    public $PackageType;
+
+    /**
      * @param string $DestRegion 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @param string $PackageType 通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
 
         if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
             $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

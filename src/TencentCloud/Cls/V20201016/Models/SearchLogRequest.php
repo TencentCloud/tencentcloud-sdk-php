@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
  * @method string getSort() 获取日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
  * @method void setSort(string $Sort) 设置日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+ * @method boolean getUseNewAnalysis() 获取为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+ * @method void setUseNewAnalysis(boolean $UseNewAnalysis) 设置为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
  */
 class SearchLogRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class SearchLogRequest extends AbstractModel
     public $Sort;
 
     /**
+     * @var boolean 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+     */
+    public $UseNewAnalysis;
+
+    /**
      * @param string $TopicId 要查询的日志主题ID
      * @param integer $From 要查询的日志的起始时间，Unix时间戳，单位ms
      * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
@@ -80,6 +87,7 @@ class SearchLogRequest extends AbstractModel
      * @param integer $Limit 单次查询返回的日志条数，最大值为100
      * @param string $Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
      * @param string $Sort 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
+     * @param boolean $UseNewAnalysis 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class SearchLogRequest extends AbstractModel
 
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
             $this->Sort = $param["Sort"];
+        }
+
+        if (array_key_exists("UseNewAnalysis",$param) and $param["UseNewAnalysis"] !== null) {
+            $this->UseNewAnalysis = $param["UseNewAnalysis"];
         }
     }
 }

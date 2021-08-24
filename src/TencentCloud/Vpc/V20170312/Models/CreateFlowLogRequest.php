@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowLog请求参数结构体
  *
- * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID
- * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID
  * @method string getFlowLogName() 获取流日志实例名字
  * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字
- * @method string getResourceType() 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
- * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+ * @method string getResourceType() 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
+ * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
  * @method string getResourceId() 获取资源唯一ID
  * @method void setResourceId(string $ResourceId) 设置资源唯一ID
  * @method string getTrafficType() 获取流日志采集类型，ACCEPT|REJECT|ALL
  * @method void setTrafficType(string $TrafficType) 设置流日志采集类型，ACCEPT|REJECT|ALL
  * @method string getCloudLogId() 获取流日志存储ID
  * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID
+ * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
+ * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
  * @method string getFlowLogDescription() 获取流日志实例描述
  * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
@@ -40,17 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateFlowLogRequest extends AbstractModel
 {
     /**
-     * @var string 私用网络ID或者统一ID，建议使用统一ID
-     */
-    public $VpcId;
-
-    /**
      * @var string 流日志实例名字
      */
     public $FlowLogName;
 
     /**
-     * @var string 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * @var string 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
      */
     public $ResourceType;
 
@@ -70,6 +65,11 @@ class CreateFlowLogRequest extends AbstractModel
     public $CloudLogId;
 
     /**
+     * @var string 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
+     */
+    public $VpcId;
+
+    /**
      * @var string 流日志实例描述
      */
     public $FlowLogDescription;
@@ -80,12 +80,12 @@ class CreateFlowLogRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID
      * @param string $FlowLogName 流日志实例名字
-     * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
      * @param string $ResourceId 资源唯一ID
      * @param string $TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
      * @param string $CloudLogId 流日志存储ID
+     * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
      * @param string $FlowLogDescription 流日志实例描述
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
@@ -102,10 +102,6 @@ class CreateFlowLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
-        }
-
         if (array_key_exists("FlowLogName",$param) and $param["FlowLogName"] !== null) {
             $this->FlowLogName = $param["FlowLogName"];
         }
@@ -124,6 +120,10 @@ class CreateFlowLogRequest extends AbstractModel
 
         if (array_key_exists("CloudLogId",$param) and $param["CloudLogId"] !== null) {
             $this->CloudLogId = $param["CloudLogId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
         if (array_key_exists("FlowLogDescription",$param) and $param["FlowLogDescription"] !== null) {

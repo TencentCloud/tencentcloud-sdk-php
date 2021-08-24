@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFlowLogAttribute请求参数结构体
  *
- * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID
- * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID
  * @method string getFlowLogId() 获取流日志唯一ID
  * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID
+ * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
+ * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
  * @method string getFlowLogName() 获取流日志实例名字
  * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字
  * @method string getFlowLogDescription() 获取流日志实例描述
@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
 class ModifyFlowLogAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 私用网络ID或者统一ID，建议使用统一ID
-     */
-    public $VpcId;
-
-    /**
      * @var string 流日志唯一ID
      */
     public $FlowLogId;
+
+    /**
+     * @var string 私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
+     */
+    public $VpcId;
 
     /**
      * @var string 流日志实例名字
@@ -52,8 +52,8 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
     public $FlowLogDescription;
 
     /**
-     * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID
      * @param string $FlowLogId 流日志唯一ID
+     * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID，修改云联网流日志属性时可不填，其他流日志类型必填。
      * @param string $FlowLogName 流日志实例名字
      * @param string $FlowLogDescription 流日志实例描述
      */
@@ -70,12 +70,12 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
-        }
-
         if (array_key_exists("FlowLogId",$param) and $param["FlowLogId"] !== null) {
             $this->FlowLogId = $param["FlowLogId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
         if (array_key_exists("FlowLogName",$param) and $param["FlowLogName"] !== null) {

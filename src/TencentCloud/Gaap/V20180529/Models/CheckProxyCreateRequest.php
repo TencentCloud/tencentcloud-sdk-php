@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
  * @method string getNetworkType() 获取网络类型，可取值：normal、cn2，默认值normal
  * @method void setNetworkType(string $NetworkType) 设置网络类型，可取值：normal、cn2，默认值normal
+ * @method string getPackageType() 获取通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+ * @method void setPackageType(string $PackageType) 设置通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CheckProxyCreateRequest extends AbstractModel
     public $NetworkType;
 
     /**
+     * @var string 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     */
+    public $PackageType;
+
+    /**
      * @param string $AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
      * @param string $RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
      * @param integer $Bandwidth 通道带宽上限，单位：Mbps。
@@ -80,6 +87,7 @@ class CheckProxyCreateRequest extends AbstractModel
      * @param string $GroupId 如果在通道组下创建通道，需要填写通道组的ID
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
      * @param string $NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     * @param string $PackageType 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CheckProxyCreateRequest extends AbstractModel
 
         if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
             $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

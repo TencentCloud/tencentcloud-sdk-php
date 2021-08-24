@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessRegionSet(array $AccessRegionSet) 设置加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
  * @method string getIPAddressVersion() 获取IP版本，可取值：IPv4、IPv6，默认值IPv4
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
+ * @method string getPackageType() 获取通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+ * @method void setPackageType(string $PackageType) 设置通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
  */
 class CreateProxyGroupRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateProxyGroupRequest extends AbstractModel
     public $IPAddressVersion;
 
     /**
+     * @var string 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+     */
+    public $PackageType;
+
+    /**
      * @param integer $ProjectId 通道组所属项目ID
      * @param string $GroupName 通道组别名
      * @param string $RealServerRegion 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
      * @param array $TagSet 标签列表
      * @param array $AccessRegionSet 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * @param string $PackageType 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
      */
     function __construct()
     {
@@ -118,6 +126,10 @@ class CreateProxyGroupRequest extends AbstractModel
 
         if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
             $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

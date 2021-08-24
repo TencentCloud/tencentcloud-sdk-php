@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
  * @method string getNetworkType() 获取网络类型，可取值：normal、cn2，默认值normal
  * @method void setNetworkType(string $NetworkType) 设置网络类型，可取值：normal、cn2，默认值normal
+ * @method string getPackageType() 获取通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+ * @method void setPackageType(string $PackageType) 设置通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
  */
 class InquiryPriceCreateProxyRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
     public $NetworkType;
 
     /**
+     * @var string 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     */
+    public $PackageType;
+
+    /**
      * @param string $AccessRegion 加速区域名称。
      * @param integer $Bandwidth 通道带宽上限，单位：Mbps。
      * @param string $DestRegion （旧参数，请切换到RealServerRegion）源站区域名称。
@@ -96,6 +103,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
      * @param integer $BillingType 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
      * @param string $NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     * @param string $PackageType 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
 
         if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
             $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

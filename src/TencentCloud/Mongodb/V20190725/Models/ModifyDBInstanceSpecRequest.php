@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolume(integer $Volume) 设置实例配置变更后的硬盘大小，单位：GB。内存和磁盘必须同时升配或同时降配。降配时，新的磁盘参数必须大于已用磁盘容量的1.2倍
  * @method integer getOplogSize() 获取实例配置变更后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
  * @method void setOplogSize(integer $OplogSize) 设置实例配置变更后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
+ * @method integer getNodeNum() 获取实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+ * @method void setNodeNum(integer $NodeNum) 设置实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+ * @method integer getReplicateSetNum() 获取实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) 设置实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+ * @method integer getInMaintenance() 获取实例配置变更的切换时间，参数为：0(默认)、1。0-调整完成时，1-维护时间内。注：调整节点数和分片数不支持在【维护时间内】变更。
+ * @method void setInMaintenance(integer $InMaintenance) 设置实例配置变更的切换时间，参数为：0(默认)、1。0-调整完成时，1-维护时间内。注：调整节点数和分片数不支持在【维护时间内】变更。
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $OplogSize;
 
     /**
+     * @var integer 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+     */
+    public $NodeNum;
+
+    /**
+     * @var integer 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+     */
+    public $ReplicateSetNum;
+
+    /**
+     * @var integer 实例配置变更的切换时间，参数为：0(默认)、1。0-调整完成时，1-维护时间内。注：调整节点数和分片数不支持在【维护时间内】变更。
+     */
+    public $InMaintenance;
+
+    /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param integer $Memory 实例配置变更后的内存大小，单位：GB。内存和磁盘必须同时升配或同时降配
      * @param integer $Volume 实例配置变更后的硬盘大小，单位：GB。内存和磁盘必须同时升配或同时降配。降配时，新的磁盘参数必须大于已用磁盘容量的1.2倍
      * @param integer $OplogSize 实例配置变更后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
+     * @param integer $NodeNum 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+     * @param integer $ReplicateSetNum 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+     * @param integer $InMaintenance 实例配置变更的切换时间，参数为：0(默认)、1。0-调整完成时，1-维护时间内。注：调整节点数和分片数不支持在【维护时间内】变更。
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("OplogSize",$param) and $param["OplogSize"] !== null) {
             $this->OplogSize = $param["OplogSize"];
+        }
+
+        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
+            $this->NodeNum = $param["NodeNum"];
+        }
+
+        if (array_key_exists("ReplicateSetNum",$param) and $param["ReplicateSetNum"] !== null) {
+            $this->ReplicateSetNum = $param["ReplicateSetNum"];
+        }
+
+        if (array_key_exists("InMaintenance",$param) and $param["InMaintenance"] !== null) {
+            $this->InMaintenance = $param["InMaintenance"];
         }
     }
 }

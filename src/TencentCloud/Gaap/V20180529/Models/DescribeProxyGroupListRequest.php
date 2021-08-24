@@ -32,16 +32,18 @@ use TencentCloud\Common\AbstractModel;
 -1，该用户下所有项目
 0，默认项目
 其他值，指定的项目
+ * @method array getFilters() 获取过滤条件。   
+每次请求的Filter.Values的上限为5。
+RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+ * @method void setFilters(array $Filters) 设置过滤条件。   
+每次请求的Filter.Values的上限为5。
+RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
  * @method array getTagSet() 获取标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
  * @method void setTagSet(array $TagSet) 设置标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
- * @method array getFilters() 获取过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
- * @method void setFilters(array $Filters) 设置过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
  */
 class DescribeProxyGroupListRequest extends AbstractModel
 {
@@ -64,17 +66,18 @@ class DescribeProxyGroupListRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var array 过滤条件。   
+每次请求的Filter.Values的上限为5。
+RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     */
+    public $Filters;
+
+    /**
      * @var array 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
      */
     public $TagSet;
-
-    /**
-     * @var array 过滤条件。   
-每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
-     */
-    public $Filters;
 
     /**
      * @param integer $Offset 偏移量，默认值为0。
@@ -83,11 +86,12 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
 -1，该用户下所有项目
 0，默认项目
 其他值，指定的项目
-     * @param array $TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
      * @param array $Filters 过滤条件。   
 每次请求的Filter.Values的上限为5。
 RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     * @param array $TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
+最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
      */
     function __construct()
     {
@@ -114,21 +118,21 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
             $this->ProjectId = $param["ProjectId"];
         }
 
-        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
-            $this->TagSet = [];
-            foreach ($param["TagSet"] as $key => $value){
-                $obj = new TagPair();
-                $obj->deserialize($value);
-                array_push($this->TagSet, $obj);
-            }
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
                 $obj = new Filter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new TagPair();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
             }
         }
     }

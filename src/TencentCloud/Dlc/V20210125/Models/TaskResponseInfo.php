@@ -18,7 +18,7 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 任务实例。
+ * 任务实例
  *
  * @method string getDatabaseName() 获取任务所属Database的名称。
  * @method void setDatabaseName(string $DatabaseName) 设置任务所属Database的名称。
@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputMessage(string $OutputMessage) 设置任务执行输出信息。
  * @method string getTaskType() 获取执行SQL的引擎类型
  * @method void setTaskType(string $TaskType) 设置执行SQL的引擎类型
+ * @method string getProgressDetail() 获取任务进度明细
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProgressDetail(string $ProgressDetail) 设置任务进度明细
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -139,6 +143,12 @@ class TaskResponseInfo extends AbstractModel
     public $TaskType;
 
     /**
+     * @var string 任务进度明细
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProgressDetail;
+
+    /**
      * @param string $DatabaseName 任务所属Database的名称。
      * @param integer $DataAmount 任务数据量。
      * @param string $Id 任务Id。
@@ -156,6 +166,8 @@ class TaskResponseInfo extends AbstractModel
      * @param integer $Percentage 任务执行进度num/100(%)
      * @param string $OutputMessage 任务执行输出信息。
      * @param string $TaskType 执行SQL的引擎类型
+     * @param string $ProgressDetail 任务进度明细
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -232,6 +244,10 @@ class TaskResponseInfo extends AbstractModel
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("ProgressDetail",$param) and $param["ProgressDetail"] !== null) {
+            $this->ProgressDetail = $param["ProgressDetail"];
         }
     }
 }

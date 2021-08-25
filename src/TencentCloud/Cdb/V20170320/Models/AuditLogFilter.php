@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecTime(integer $ExecTime) 设置执行时间。单位为：ms。表示筛选执行时间大于该值的审计日志。
  * @method integer getAffectRows() 获取影响行数。表示筛选影响行数大于该值的审计日志。
  * @method void setAffectRows(integer $AffectRows) 设置影响行数。表示筛选影响行数大于该值的审计日志。
+ * @method array getSqlTypes() 获取SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+ * @method void setSqlTypes(array $SqlTypes) 设置SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+ * @method array getSqls() 获取SQL 语句。支持传递多个sql语句。
+ * @method void setSqls(array $Sqls) 设置SQL 语句。支持传递多个sql语句。
  */
 class AuditLogFilter extends AbstractModel
 {
@@ -87,6 +91,16 @@ class AuditLogFilter extends AbstractModel
     public $AffectRows;
 
     /**
+     * @var array SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+     */
+    public $SqlTypes;
+
+    /**
+     * @var array SQL 语句。支持传递多个sql语句。
+     */
+    public $Sqls;
+
+    /**
      * @param array $Host 客户端地址。
      * @param array $User 用户名。
      * @param array $DBName 数据库名称。
@@ -96,6 +110,8 @@ class AuditLogFilter extends AbstractModel
      * @param string $SqlType SQL 类型。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
      * @param integer $ExecTime 执行时间。单位为：ms。表示筛选执行时间大于该值的审计日志。
      * @param integer $AffectRows 影响行数。表示筛选影响行数大于该值的审计日志。
+     * @param array $SqlTypes SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+     * @param array $Sqls SQL 语句。支持传递多个sql语句。
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class AuditLogFilter extends AbstractModel
 
         if (array_key_exists("AffectRows",$param) and $param["AffectRows"] !== null) {
             $this->AffectRows = $param["AffectRows"];
+        }
+
+        if (array_key_exists("SqlTypes",$param) and $param["SqlTypes"] !== null) {
+            $this->SqlTypes = $param["SqlTypes"];
+        }
+
+        if (array_key_exists("Sqls",$param) and $param["Sqls"] !== null) {
+            $this->Sqls = $param["Sqls"];
         }
     }
 }

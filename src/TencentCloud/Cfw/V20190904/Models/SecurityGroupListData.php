@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderIndex(integer $OrderIndex) 设置执行顺序
  * @method string getSourceId() 获取访问源
  * @method void setSourceId(string $SourceId) 设置访问源
- * @method integer getSourceType() 获取访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
- * @method void setSourceType(integer $SourceType) 设置访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+ * @method integer getSourceType() 获取访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
+ * @method void setSourceType(integer $SourceType) 设置访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
  * @method string getTargetId() 获取访问目的
  * @method void setTargetId(string $TargetId) 设置访问目的
- * @method integer getTargetType() 获取访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
- * @method void setTargetType(integer $TargetType) 设置访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+ * @method integer getTargetType() 获取访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100:资源组
+ * @method void setTargetType(integer $TargetType) 设置访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100:资源组
  * @method string getProtocol() 获取协议
  * @method void setProtocol(string $Protocol) 设置协议
  * @method string getPort() 获取目的端口
@@ -74,9 +74,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBothWayInfo() 获取当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+ * @method array getBothWayInfo() 获取生成双向下发规则
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBothWayInfo(array $BothWayInfo) 设置当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+ * @method void setBothWayInfo(array $BothWayInfo) 设置生成双向下发规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDirection() 获取方向，0：出站，1：入站，默认1
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站，默认1
@@ -96,7 +96,7 @@ class SecurityGroupListData extends AbstractModel
     public $SourceId;
 
     /**
-     * @var integer 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * @var integer 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
      */
     public $SourceType;
 
@@ -106,7 +106,7 @@ class SecurityGroupListData extends AbstractModel
     public $TargetId;
 
     /**
-     * @var integer 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * @var integer 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100:资源组
      */
     public $TargetType;
 
@@ -193,7 +193,7 @@ class SecurityGroupListData extends AbstractModel
     public $ServiceTemplateId;
 
     /**
-     * @var array 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+     * @var array 生成双向下发规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BothWayInfo;
@@ -211,9 +211,9 @@ class SecurityGroupListData extends AbstractModel
     /**
      * @param integer $OrderIndex 执行顺序
      * @param string $SourceId 访问源
-     * @param integer $SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * @param integer $SourceType 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
      * @param string $TargetId 访问目的
-     * @param integer $TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+     * @param integer $TargetType 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100:资源组
      * @param string $Protocol 协议
      * @param string $Port 目的端口
      * @param integer $Strategy 策略, 1：阻断，2：放行
@@ -236,7 +236,7 @@ class SecurityGroupListData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceTemplateId 端口协议类型参数模板id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BothWayInfo 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+     * @param array $BothWayInfo 生成双向下发规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Direction 方向，0：出站，1：入站，默认1
      * @param integer $ProtocolPortType 是否使用端口协议模板，0：否，1：是

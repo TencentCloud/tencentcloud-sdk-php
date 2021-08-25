@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredPodNumber(integer $DesiredPodNumber) 设置该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPreStartUserScript() 获取base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreStartUserScript(string $PreStartUserScript) 设置base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAdvancedSettings extends AbstractModel
 {
@@ -104,6 +108,12 @@ class InstanceAdvancedSettings extends AbstractModel
     public $DesiredPodNumber;
 
     /**
+     * @var string base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreStartUserScript;
+
+    /**
      * @param string $MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
 注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -119,6 +129,8 @@ class InstanceAdvancedSettings extends AbstractModel
      * @param InstanceExtraArgs $ExtraArgs 节点相关的自定义参数信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -175,6 +187,10 @@ class InstanceAdvancedSettings extends AbstractModel
 
         if (array_key_exists("DesiredPodNumber",$param) and $param["DesiredPodNumber"] !== null) {
             $this->DesiredPodNumber = $param["DesiredPodNumber"];
+        }
+
+        if (array_key_exists("PreStartUserScript",$param) and $param["PreStartUserScript"] !== null) {
+            $this->PreStartUserScript = $param["PreStartUserScript"];
         }
     }
 }

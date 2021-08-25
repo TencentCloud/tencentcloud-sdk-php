@@ -33,6 +33,7 @@ use TencentCloud\Ame\V20190916\Models as Models;
  * @method Models\DescribeKTVPlaylistsResponse DescribeKTVPlaylists(Models\DescribeKTVPlaylistsRequest $req) 获取即时广播曲库推荐歌单列表。
  * @method Models\DescribeLyricResponse DescribeLyric(Models\DescribeLyricRequest $req) 根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
  * @method Models\DescribeMusicResponse DescribeMusic(Models\DescribeMusicRequest $req) 获取曲库包歌曲播放信息接口
+ * @method Models\DescribeMusicSaleStatusResponse DescribeMusicSaleStatus(Models\DescribeMusicSaleStatusRequest $req) 根据音乐信息查询音乐是否在售
  * @method Models\DescribePackageItemsResponse DescribePackageItems(Models\DescribePackageItemsRequest $req) 获取曲库包下已核销歌曲列表接口
  * @method Models\DescribePackagesResponse DescribePackages(Models\DescribePackagesRequest $req) 获取已购曲库包列表接口
  * @method Models\DescribeStationsResponse DescribeStations(Models\DescribeStationsRequest $req) 该服务后续会停用，不再建议使用

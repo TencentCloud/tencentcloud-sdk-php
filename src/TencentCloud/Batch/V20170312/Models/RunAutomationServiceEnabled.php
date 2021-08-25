@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述了 “云自动化助手” 服务相关的信息
  *
-
+ * @method boolean getEnabled() 获取是否开启云自动化助手。取值范围：<br><li>TRUE：表示开启云自动化助手服务<br><li>FALSE：表示不开启云自动化助手服务<br><br>默认取值：FALSE。
+ * @method void setEnabled(boolean $Enabled) 设置是否开启云自动化助手。取值范围：<br><li>TRUE：表示开启云自动化助手服务<br><li>FALSE：表示不开启云自动化助手服务<br><br>默认取值：FALSE。
  */
 class RunAutomationServiceEnabled extends AbstractModel
 {
-
+    /**
+     * @var boolean 是否开启云自动化助手。取值范围：<br><li>TRUE：表示开启云自动化助手服务<br><li>FALSE：表示不开启云自动化助手服务<br><br>默认取值：FALSE。
+     */
+    public $Enabled;
 
     /**
-
+     * @param boolean $Enabled 是否开启云自动化助手。取值范围：<br><li>TRUE：表示开启云自动化助手服务<br><li>FALSE：表示不开启云自动化助手服务<br><br>默认取值：FALSE。
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class RunAutomationServiceEnabled extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
+        }
     }
 }

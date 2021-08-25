@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
  * @method boolean getSnatPro() 获取是否开启SnatPro
  * @method void setSnatPro(boolean $SnatPro) 设置是否开启SnatPro
+ * @method boolean getDeleteProtect() 获取是否开启删除保护
+ * @method void setDeleteProtect(boolean $DeleteProtect) 设置是否开启删除保护
  */
 class ModifyLoadBalancerAttributesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $SnatPro;
 
     /**
+     * @var boolean 是否开启删除保护
+     */
+    public $DeleteProtect;
+
+    /**
      * @param string $LoadBalancerId 负载均衡的唯一ID
      * @param string $LoadBalancerName 负载均衡实例名称
      * @param TargetRegionInfo $TargetRegionInfo 负载均衡绑定的后端服务的地域信息
      * @param InternetAccessible $InternetChargeInfo 网络计费相关参数
      * @param boolean $LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
      * @param boolean $SnatPro 是否开启SnatPro
+     * @param boolean $DeleteProtect 是否开启删除保护
      */
     function __construct()
     {
@@ -110,6 +118,10 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
 
         if (array_key_exists("SnatPro",$param) and $param["SnatPro"] !== null) {
             $this->SnatPro = $param["SnatPro"];
+        }
+
+        if (array_key_exists("DeleteProtect",$param) and $param["DeleteProtect"] !== null) {
+            $this->DeleteProtect = $param["DeleteProtect"];
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Sslpod\V20190605\Models;
+namespace TencentCloud\Organization\V20210331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteDomain请求参数结构体
+ * BindOrganizationMemberAuthAccount返回参数结构体
  *
- * @method integer getDomainId() 获取域名ID，可通过<a href="https://cloud.tencent.com/document/api/1084/49339">搜索域名</a>接口获得
- * @method void setDomainId(integer $DomainId) 设置域名ID，可通过<a href="https://cloud.tencent.com/document/api/1084/49339">搜索域名</a>接口获得
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteDomainRequest extends AbstractModel
+class BindOrganizationMemberAuthAccountResponse extends AbstractModel
 {
     /**
-     * @var integer 域名ID，可通过<a href="https://cloud.tencent.com/document/api/1084/49339">搜索域名</a>接口获得
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $DomainId;
+    public $RequestId;
 
     /**
-     * @param integer $DomainId 域名ID，可通过<a href="https://cloud.tencent.com/document/api/1084/49339">搜索域名</a>接口获得
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteDomainRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
-            $this->DomainId = $param["DomainId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

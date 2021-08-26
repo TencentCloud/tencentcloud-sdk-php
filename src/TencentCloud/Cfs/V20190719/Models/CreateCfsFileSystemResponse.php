@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationToken(string $CreationToken) 设置用户自定义文件系统名称
  * @method string getFileSystemId() 获取文件系统 ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- * @method string getLifeCycleState() 获取文件系统状态
- * @method void setLifeCycleState(string $LifeCycleState) 设置文件系统状态
- * @method integer getSizeByte() 获取文件系统已使用容量大小
- * @method void setSizeByte(integer $SizeByte) 设置文件系统已使用容量大小
+ * @method string getLifeCycleState() 获取文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
+ * @method void setLifeCycleState(string $LifeCycleState) 设置文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
+ * @method integer getSizeByte() 获取文件系统已使用容量大小，单位为 Byte
+ * @method void setSizeByte(integer $SizeByte) 设置文件系统已使用容量大小，单位为 Byte
  * @method integer getZoneId() 获取可用区 ID
  * @method void setZoneId(integer $ZoneId) 设置可用区 ID
  * @method string getFsName() 获取用户自定义文件系统名称
@@ -57,12 +57,12 @@ class CreateCfsFileSystemResponse extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var string 文件系统状态
+     * @var string 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
      */
     public $LifeCycleState;
 
     /**
-     * @var integer 文件系统已使用容量大小
+     * @var integer 文件系统已使用容量大小，单位为 Byte
      */
     public $SizeByte;
 
@@ -90,8 +90,8 @@ class CreateCfsFileSystemResponse extends AbstractModel
      * @param string $CreationTime 文件系统创建时间
      * @param string $CreationToken 用户自定义文件系统名称
      * @param string $FileSystemId 文件系统 ID
-     * @param string $LifeCycleState 文件系统状态
-     * @param integer $SizeByte 文件系统已使用容量大小
+     * @param string $LifeCycleState 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
+     * @param integer $SizeByte 文件系统已使用容量大小，单位为 Byte
      * @param integer $ZoneId 可用区 ID
      * @param string $FsName 用户自定义文件系统名称
      * @param boolean $Encrypted 文件系统是否加密

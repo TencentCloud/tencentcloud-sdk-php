@@ -24,6 +24,16 @@ use TencentCloud\Gme\V20180711\Models as Models;
 
 /**
  * @method Models\CreateAgeDetectTaskResponse CreateAgeDetectTask(Models\CreateAgeDetectTaskRequest $req) 用于创建年龄语音识别任务的接口，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
+</br>
+<h4><b>接口功能说明：</b></h4>
+<li>支持对语音文件进行检测，判断是否为未成年人。</li>
+<li>支持批量提交检测子任务。检测子任务列表最多支持100个。</li>
+</br>
+<h4><b>音频文件限制说明：</b></h4>
+<li>音频文件大小限制：10 M</li>
+<li>音频文件时长限制：3分钟</li>
+<li>音频文件格式支持的类型：.wav、.m4a、.amr、.mp3、.aac、.wma、.ogg</li>
+</br>
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 本接口(CreateApp)用于创建一个GME应用。
  * @method Models\DescribeAgeDetectTaskResponse DescribeAgeDetectTask(Models\DescribeAgeDetectTaskRequest $req) 查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
  * @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近30天。

@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置应用ID
  * @method float getBandwidthLimit() 获取文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
  * @method void setBandwidthLimit(float $BandwidthLimit) 设置文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
+ * @method integer getCapacity() 获取文件系统总容量
+ * @method void setCapacity(integer $Capacity) 设置文件系统总容量
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -150,6 +152,11 @@ class FileSystemInfo extends AbstractModel
     public $BandwidthLimit;
 
     /**
+     * @var integer 文件系统总容量
+     */
+    public $Capacity;
+
+    /**
      * @param string $CreationTime 创建时间
      * @param string $CreationToken 用户自定义名称
      * @param string $FileSystemId 文件系统 ID
@@ -168,6 +175,7 @@ class FileSystemInfo extends AbstractModel
      * @param string $KmsKeyId 加密所使用的密钥，可以为密钥的 ID 或者 ARN
      * @param integer $AppId 应用ID
      * @param float $BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定
+     * @param integer $Capacity 文件系统总容量
      */
     function __construct()
     {
@@ -253,6 +261,10 @@ class FileSystemInfo extends AbstractModel
 
         if (array_key_exists("BandwidthLimit",$param) and $param["BandwidthLimit"] !== null) {
             $this->BandwidthLimit = $param["BandwidthLimit"];
+        }
+
+        if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
+            $this->Capacity = $param["Capacity"];
         }
     }
 }

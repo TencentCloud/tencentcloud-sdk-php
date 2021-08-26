@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdCardFront(string $IdCardFront) 设置身份证正面图片下载链接
  * @method string getIdCardReverse() 获取身份证反面图片下载链接
  * @method void setIdCardReverse(string $IdCardReverse) 设置身份证反面图片下载链接
+ * @method string getAgentId() 获取指定分配的代理商ID
+ * @method void setAgentId(string $AgentId) 设置指定分配的代理商ID
  */
 class CreateExternalAnchorRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateExternalAnchorRequest extends AbstractModel
     public $IdCardReverse;
 
     /**
+     * @var string 指定分配的代理商ID
+     */
+    public $AgentId;
+
+    /**
      * @param string $Uid 平台业务系统唯一标示的主播id
      * @param string $Name 主播名称
      * @param string $IdNo 身份证号
      * @param string $IdCardFront 身份证正面图片下载链接
      * @param string $IdCardReverse 身份证反面图片下载链接
+     * @param string $AgentId 指定分配的代理商ID
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateExternalAnchorRequest extends AbstractModel
 
         if (array_key_exists("IdCardReverse",$param) and $param["IdCardReverse"] !== null) {
             $this->IdCardReverse = $param["IdCardReverse"];
+        }
+
+        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
+            $this->AgentId = $param["AgentId"];
         }
     }
 }

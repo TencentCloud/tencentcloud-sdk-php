@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProductId() 获取产品ID。
  * @method void setProductId(string $ProductId) 设置产品ID。
- * @method string getForwardAddr() 获取转发地址。
- * @method void setForwardAddr(string $ForwardAddr) 设置转发地址。
+ * @method string getForwardAddr() 获取转发地址。如果有鉴权Token，则需要自行传入，例如 [{\"forward\":{\"api\":\"http://123.207.117.108:1080/sub.php\",\"token\":\"testtoken\"}}]
+ * @method void setForwardAddr(string $ForwardAddr) 设置转发地址。如果有鉴权Token，则需要自行传入，例如 [{\"forward\":{\"api\":\"http://123.207.117.108:1080/sub.php\",\"token\":\"testtoken\"}}]
  * @method integer getDataChose() 获取1-数据信息转发 2-设备上下线状态转发 3-数据信息转发&设备上下线状态转发
  * @method void setDataChose(integer $DataChose) 设置1-数据信息转发 2-设备上下线状态转发 3-数据信息转发&设备上下线状态转发
  */
@@ -35,7 +35,7 @@ class CreateDataForwardRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var string 转发地址。
+     * @var string 转发地址。如果有鉴权Token，则需要自行传入，例如 [{\"forward\":{\"api\":\"http://123.207.117.108:1080/sub.php\",\"token\":\"testtoken\"}}]
      */
     public $ForwardAddr;
 
@@ -46,7 +46,7 @@ class CreateDataForwardRequest extends AbstractModel
 
     /**
      * @param string $ProductId 产品ID。
-     * @param string $ForwardAddr 转发地址。
+     * @param string $ForwardAddr 转发地址。如果有鉴权Token，则需要自行传入，例如 [{\"forward\":{\"api\":\"http://123.207.117.108:1080/sub.php\",\"token\":\"testtoken\"}}]
      * @param integer $DataChose 1-数据信息转发 2-设备上下线状态转发 3-数据信息转发&设备上下线状态转发
      */
     function __construct()

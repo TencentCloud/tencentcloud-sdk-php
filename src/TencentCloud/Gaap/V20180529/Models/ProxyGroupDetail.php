@@ -74,9 +74,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageType() 获取通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+ * @method string getPackageType() 获取通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageType(string $PackageType) 设置通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+ * @method void setPackageType(string $PackageType) 设置通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupDetail extends AbstractModel
@@ -177,7 +177,7 @@ class ProxyGroupDetail extends AbstractModel
     public $IPAddressVersion;
 
     /**
-     * @var string 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+     * @var string 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
@@ -210,7 +210,7 @@ class ProxyGroupDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageType 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+     * @param string $PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

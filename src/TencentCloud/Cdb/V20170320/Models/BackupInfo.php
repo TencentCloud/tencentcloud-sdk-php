@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置备份文件大小，单位：Byte
  * @method string getDate() 获取备份快照时间，时间格式：2016-03-17 02:10:37
  * @method void setDate(string $Date) 设置备份快照时间，时间格式：2016-03-17 02:10:37
- * @method string getIntranetUrl() 获取内网下载地址
- * @method void setIntranetUrl(string $IntranetUrl) 设置内网下载地址
- * @method string getInternetUrl() 获取外网下载地址
- * @method void setInternetUrl(string $InternetUrl) 设置外网下载地址
+ * @method string getIntranetUrl() 获取下载地址
+ * @method void setIntranetUrl(string $IntranetUrl) 设置下载地址
+ * @method string getInternetUrl() 获取下载地址
+ * @method void setInternetUrl(string $InternetUrl) 设置下载地址
  * @method string getType() 获取日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
  * @method void setType(string $Type) 设置日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
  * @method integer getBackupId() 获取备份子任务的ID，删除备份文件时使用
@@ -65,12 +65,12 @@ class BackupInfo extends AbstractModel
     public $Date;
 
     /**
-     * @var string 内网下载地址
+     * @var string 下载地址
      */
     public $IntranetUrl;
 
     /**
-     * @var string 外网下载地址
+     * @var string 下载地址
      */
     public $InternetUrl;
 
@@ -118,8 +118,8 @@ class BackupInfo extends AbstractModel
      * @param string $Name 备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
      * @param string $Date 备份快照时间，时间格式：2016-03-17 02:10:37
-     * @param string $IntranetUrl 内网下载地址
-     * @param string $InternetUrl 外网下载地址
+     * @param string $IntranetUrl 下载地址
+     * @param string $InternetUrl 下载地址
      * @param string $Type 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
      * @param integer $BackupId 备份子任务的ID，删除备份文件时使用
      * @param string $Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。

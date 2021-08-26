@@ -88,6 +88,14 @@ lc表示最小连接数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) 设置不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFailoverSwitch() 获取源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailoverSwitch(integer $FailoverSwitch) 设置源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSessionPersist() 获取是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionPersist(integer $SessionPersist) 设置是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TCPListener extends AbstractModel
 {
@@ -194,6 +202,18 @@ lc表示最小连接数。
     public $UnhealthyThreshold;
 
     /**
+     * @var integer 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailoverSwitch;
+
+    /**
+     * @var integer 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionPersist;
+
+    /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
@@ -227,6 +247,10 @@ lc表示最小连接数。
      * @param integer $HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -313,6 +337,14 @@ lc表示最小连接数。
 
         if (array_key_exists("UnhealthyThreshold",$param) and $param["UnhealthyThreshold"] !== null) {
             $this->UnhealthyThreshold = $param["UnhealthyThreshold"];
+        }
+
+        if (array_key_exists("FailoverSwitch",$param) and $param["FailoverSwitch"] !== null) {
+            $this->FailoverSwitch = $param["FailoverSwitch"];
+        }
+
+        if (array_key_exists("SessionPersist",$param) and $param["SessionPersist"] !== null) {
+            $this->SessionPersist = $param["SessionPersist"];
         }
     }
 }

@@ -130,6 +130,10 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkType(string $NetworkType) 设置网络类型：normal、cn2
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPackageType() 获取通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPackageType(string $PackageType) 设置通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
 {
@@ -305,6 +309,12 @@ UNKNOWN表示未知状态。
     public $NetworkType;
 
     /**
+     * @var string 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PackageType;
+
+    /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
@@ -359,6 +369,8 @@ UNKNOWN表示未知状态。
      * @param string $IPAddressVersion IP版本：IPv4、IPv6
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkType 网络类型：normal、cn2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -495,6 +507,10 @@ UNKNOWN表示未知状态。
 
         if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
             $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

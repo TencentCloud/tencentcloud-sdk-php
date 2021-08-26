@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerSet(array $RealServerSet) 设置监听器绑定的源站信息
  * @method integer getCreateTime() 获取监听器创建时间，Unix时间戳
  * @method void setCreateTime(integer $CreateTime) 设置监听器创建时间，Unix时间戳
+ * @method integer getSessionPersist() 获取是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionPersist(integer $SessionPersist) 设置是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UDPListener extends AbstractModel
 {
@@ -119,6 +123,12 @@ class UDPListener extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionPersist;
+
+    /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
@@ -136,6 +146,8 @@ class UDPListener extends AbstractModel
      * @param integer $BindStatus 监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常
      * @param array $RealServerSet 监听器绑定的源站信息
      * @param integer $CreateTime 监听器创建时间，Unix时间戳
+     * @param integer $SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -197,6 +209,10 @@ class UDPListener extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("SessionPersist",$param) and $param["SessionPersist"] !== null) {
+            $this->SessionPersist = $param["SessionPersist"];
         }
     }
 }

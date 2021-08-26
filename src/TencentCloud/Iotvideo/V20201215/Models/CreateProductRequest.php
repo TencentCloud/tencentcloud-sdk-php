@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductVaildYears(integer $ProductVaildYears) 设置产品有效期
  * @method array getFeatures() 获取设备功能码 ypsxth音频双向通话 spdxth视频单向通话
  * @method void setFeatures(array $Features) 设置设备功能码 ypsxth音频双向通话 spdxth视频单向通话
- * @method string getChipOs() 获取设备操作系统 Linux
- * @method void setChipOs(string $ChipOs) 设置设备操作系统 Linux
- * @method string getChipManufactureId() 获取芯片厂商id
- * @method void setChipManufactureId(string $ChipManufactureId) 设置芯片厂商id
- * @method string getChipId() 获取芯片id
- * @method void setChipId(string $ChipId) 设置芯片id
+ * @method string getChipOs() 获取设备操作系统，通用设备填default
+ * @method void setChipOs(string $ChipOs) 设置设备操作系统，通用设备填default
+ * @method string getChipManufactureId() 获取芯片厂商id，通用设备填default
+ * @method void setChipManufactureId(string $ChipManufactureId) 设置芯片厂商id，通用设备填default
+ * @method string getChipId() 获取芯片id，通用设备填default
+ * @method void setChipId(string $ChipId) 设置芯片id，通用设备填default
  * @method string getProductDescription() 获取产品描述信息
  * @method void setProductDescription(string $ProductDescription) 设置产品描述信息
  * @method integer getEncryptionType() 获取认证方式 只支持取值为2 psk认证
@@ -62,17 +62,17 @@ class CreateProductRequest extends AbstractModel
     public $Features;
 
     /**
-     * @var string 设备操作系统 Linux
+     * @var string 设备操作系统，通用设备填default
      */
     public $ChipOs;
 
     /**
-     * @var string 芯片厂商id
+     * @var string 芯片厂商id，通用设备填default
      */
     public $ChipManufactureId;
 
     /**
-     * @var string 芯片id
+     * @var string 芯片id，通用设备填default
      */
     public $ChipId;
 
@@ -91,9 +91,9 @@ class CreateProductRequest extends AbstractModel
      * @param integer $DeviceType 产品设备类型 1.普通设备 2.NVR设备
      * @param integer $ProductVaildYears 产品有效期
      * @param array $Features 设备功能码 ypsxth音频双向通话 spdxth视频单向通话
-     * @param string $ChipOs 设备操作系统 Linux
-     * @param string $ChipManufactureId 芯片厂商id
-     * @param string $ChipId 芯片id
+     * @param string $ChipOs 设备操作系统，通用设备填default
+     * @param string $ChipManufactureId 芯片厂商id，通用设备填default
+     * @param string $ChipId 芯片id，通用设备填default
      * @param string $ProductDescription 产品描述信息
      * @param integer $EncryptionType 认证方式 只支持取值为2 psk认证
      */

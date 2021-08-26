@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置备份文件大小，单位：Byte
  * @method string getDate() 获取文件存储时间，时间格式：2016-03-17 02:10:37
  * @method void setDate(string $Date) 设置文件存储时间，时间格式：2016-03-17 02:10:37
- * @method string getIntranetUrl() 获取内网下载地址
- * @method void setIntranetUrl(string $IntranetUrl) 设置内网下载地址
- * @method string getInternetUrl() 获取外网下载地址
- * @method void setInternetUrl(string $InternetUrl) 设置外网下载地址
+ * @method string getIntranetUrl() 获取下载地址
+ * @method void setIntranetUrl(string $IntranetUrl) 设置下载地址
+ * @method string getInternetUrl() 获取下载地址
+ * @method void setInternetUrl(string $InternetUrl) 设置下载地址
  * @method string getType() 获取日志具体类型，可能的值有：binlog - 二进制日志
  * @method void setType(string $Type) 设置日志具体类型，可能的值有：binlog - 二进制日志
  * @method string getBinlogStartTime() 获取binlog 文件起始时间
@@ -55,12 +55,12 @@ class BinlogInfo extends AbstractModel
     public $Date;
 
     /**
-     * @var string 内网下载地址
+     * @var string 下载地址
      */
     public $IntranetUrl;
 
     /**
-     * @var string 外网下载地址
+     * @var string 下载地址
      */
     public $InternetUrl;
 
@@ -83,8 +83,8 @@ class BinlogInfo extends AbstractModel
      * @param string $Name binlog 日志备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
      * @param string $Date 文件存储时间，时间格式：2016-03-17 02:10:37
-     * @param string $IntranetUrl 内网下载地址
-     * @param string $InternetUrl 外网下载地址
+     * @param string $IntranetUrl 下载地址
+     * @param string $InternetUrl 下载地址
      * @param string $Type 日志具体类型，可能的值有：binlog - 二进制日志
      * @param string $BinlogStartTime binlog 文件起始时间
      * @param string $BinlogFinishTime binlog 文件截止时间

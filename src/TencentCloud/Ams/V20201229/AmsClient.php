@@ -23,9 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ams\V20201229\Models as Models;
 
 /**
- * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 取消音频审核任务
-
-<br>默认接口请求频率限制：**20次/秒**。
+ * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 可使用该接口取消审核任务。请求成功后，接口返回RequestId则说明取消成功。<br>默认接口请求频率限制：**20次/秒**。
  * @method Models\CreateAudioModerationSyncTaskResponse CreateAudioModerationSyncTask(Models\CreateAudioModerationSyncTaskRequest $req) 本接口（CreateAudioModerationSyncTask） 用于提交短音频内容进行智能审核任务，使用前请您登录控制台开通音频内容安全服务。
 
 功能使用说明：
@@ -64,12 +62,8 @@ use TencentCloud\Ams\V20201229\Models as Models;
 - 音频流支持的传输协议：RTMP、HTTP、HTTPS；
 - 音频流格式支持的类型：rtp、srtp、rtmp、rtmps、mmsh、 mmst、hls、http、tcp、https、m3u8；
 - （**当输入为视频流时**）支持提取视频流音轨，并对音频内容进行独立审核。
- * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 用于查看音频审核任务的详细信息
-
-<br>默认接口请求频率限制：**100次/秒**。
- * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 查看审核任务列表
-
-<br>默认接口请求频率限制：**20次/秒**。
+ * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 通过该接口可查看音频审核任务的详情信息，包括任务状态、检测结果、音频文件识别出的对应文本内容、检测结果所对应的恶意标签及推荐的后续操作等，具体输出内容可查看输出参数示例。<br>默认接口请求频率限制：**100次/秒**。
+ * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 通过该接口可查看审核任务列表；您也可根据多种业务信息（业务类型、审核结果、任务状态等）筛选审核任务列表。任务列表输出内容包括当前查询的任务总量、任务名称、任务状态、音频审核类型、基于检测结果的恶意标签及其后续操作等，具体输出内容可查看输出参数示例。<br>默认接口请求频率限制：**20次/秒**。
  */
 
 class AmsClient extends AbstractClient

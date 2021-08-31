@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportAttackLogs返回参数结构体
  *
- * @method string getDownloadUrl() 获取导出文件下载链接地址。
- * @method void setDownloadUrl(string $DownloadUrl) 设置导出文件下载链接地址。
- * @method string getTaskId() 获取导出任务ID
- * @method void setTaskId(string $TaskId) 设置导出任务ID
+ * @method string getDownloadUrl() 获取已废弃
+ * @method void setDownloadUrl(string $DownloadUrl) 设置已废弃
+ * @method string getTaskId() 获取导出任务ID 可通过ExportTasks接口下载
+ * @method void setTaskId(string $TaskId) 设置导出任务ID 可通过ExportTasks接口下载
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ExportAttackLogsResponse extends AbstractModel
 {
     /**
-     * @var string 导出文件下载链接地址。
+     * @var string 已废弃
      */
     public $DownloadUrl;
 
     /**
-     * @var string 导出任务ID
+     * @var string 导出任务ID 可通过ExportTasks接口下载
      */
     public $TaskId;
 
@@ -45,8 +45,8 @@ class ExportAttackLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl 导出文件下载链接地址。
-     * @param string $TaskId 导出任务ID
+     * @param string $DownloadUrl 已废弃
+     * @param string $TaskId 导出任务ID 可通过ExportTasks接口下载
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

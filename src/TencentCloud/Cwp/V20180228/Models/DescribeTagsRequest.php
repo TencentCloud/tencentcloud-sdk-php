@@ -21,13 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * DescribeTags请求参数结构体
  *
  * @method string getMachineType() 获取云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示云服务器</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云服务器</li>
  * @method void setMachineType(string $MachineType) 设置云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示云服务器</li>
 <li>BM:  表示黑石物理机</li>
- * @method string getMachineRegion() 获取机器所属地域。如：ap-guangzhou，ap-shanghai
- * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。如：ap-guangzhou，ap-shanghai
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云服务器</li>
+ * @method string getMachineRegion() 获取机器所属地域。如：ap-guangzhou
+ * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。如：ap-guangzhou
  * @method array getFilters() 获取过滤条件。
 <li>Keywords - String - 是否必填：否 - 查询关键字(机器名称/机器IP </li>
 <li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装 | SHUTDOWN 已关机）</li>
@@ -47,13 +53,16 @@ class DescribeTagsRequest extends AbstractModel
 {
     /**
      * @var string 云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示云服务器</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云服务器</li>
      */
     public $MachineType;
 
     /**
-     * @var string 机器所属地域。如：ap-guangzhou，ap-shanghai
+     * @var string 机器所属地域。如：ap-guangzhou
      */
     public $MachineRegion;
 
@@ -70,9 +79,12 @@ class DescribeTagsRequest extends AbstractModel
 
     /**
      * @param string $MachineType 云主机类型。
-<li>CVM：表示虚拟主机</li>
+<li>CVM：表示云服务器</li>
 <li>BM:  表示黑石物理机</li>
-     * @param string $MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云服务器</li>
+     * @param string $MachineRegion 机器所属地域。如：ap-guangzhou
      * @param array $Filters 过滤条件。
 <li>Keywords - String - 是否必填：否 - 查询关键字(机器名称/机器IP </li>
 <li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线 | ONLINE: 在线 | UNINSTALLED：未安装 | SHUTDOWN 已关机）</li>

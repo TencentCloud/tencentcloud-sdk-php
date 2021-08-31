@@ -30,6 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnhancedService(EnhancedService $EnhancedService) 设置是否开启云监控和云镜服务，未指定时默认开启。
  * @method string getKeepData() 获取是否保留数据盘数据，取值"true"/"false"。默认为"true"
  * @method void setKeepData(string $KeepData) 设置是否保留数据盘数据，取值"true"/"false"。默认为"true"
+ * @method string getKeepImageLogin() 获取保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeepImageLogin(string $KeepImageLogin) 设置保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResetInstancesRequest extends AbstractModel
 {
@@ -59,11 +71,27 @@ class ResetInstancesRequest extends AbstractModel
     public $KeepData;
 
     /**
+     * @var string 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KeepImageLogin;
+
+    /**
      * @param array $InstanceIdSet 待重装的实例ID列表。
      * @param string $ImageId 重装使用的镜像ID，若未指定，则使用各个实例当前的镜像进行重装。
      * @param string $Password 密码设置，若未指定，则后续将以站内信的形式通知密码。
      * @param EnhancedService $EnhancedService 是否开启云监控和云镜服务，未指定时默认开启。
      * @param string $KeepData 是否保留数据盘数据，取值"true"/"false"。默认为"true"
+     * @param string $KeepImageLogin 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+TRUE：表示保持镜像的登录设置
+FALSE：表示不保持镜像的登录设置
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -97,6 +125,10 @@ class ResetInstancesRequest extends AbstractModel
 
         if (array_key_exists("KeepData",$param) and $param["KeepData"] !== null) {
             $this->KeepData = $param["KeepData"];
+        }
+
+        if (array_key_exists("KeepImageLogin",$param) and $param["KeepImageLogin"] !== null) {
+            $this->KeepImageLogin = $param["KeepImageLogin"];
         }
     }
 }

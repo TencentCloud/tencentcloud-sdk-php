@@ -20,12 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachines请求参数结构体
  *
- * @method string getMachineType() 获取云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
- * @method void setMachineType(string $MachineType) 设置云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
+ * @method string getMachineType() 获取机器所属专区类型 
+CVM 云服务器
+BM 黑石
+ECM 边缘计算
+LH 轻量应用服务器
+Other 混合云专区
+ * @method void setMachineType(string $MachineType) 设置机器所属专区类型 
+CVM 云服务器
+BM 黑石
+ECM 边缘计算
+LH 轻量应用服务器
+Other 混合云专区
  * @method string getMachineRegion() 获取机器所属地域。如：ap-guangzhou，ap-shanghai
  * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。如：ap-guangzhou，ap-shanghai
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
@@ -52,9 +58,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeMachinesRequest extends AbstractModel
 {
     /**
-     * @var string 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
+     * @var string 机器所属专区类型 
+CVM 云服务器
+BM 黑石
+ECM 边缘计算
+LH 轻量应用服务器
+Other 混合云专区
      */
     public $MachineType;
 
@@ -90,9 +99,12 @@ class DescribeMachinesRequest extends AbstractModel
     public $ProjectIds;
 
     /**
-     * @param string $MachineType 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
+     * @param string $MachineType 机器所属专区类型 
+CVM 云服务器
+BM 黑石
+ECM 边缘计算
+LH 轻量应用服务器
+Other 混合云专区
      * @param string $MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。

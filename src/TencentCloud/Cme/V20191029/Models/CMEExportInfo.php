@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置导出的媒体名称，不得超过30个字符。
  * @method string getDescription() 获取导出的媒体信息，不得超过50个字符。
  * @method void setDescription(string $Description) 设置导出的媒体信息，不得超过50个字符。
- * @method string getClassPath() 获取导出的媒体分类路径，长度不能超过15字符。
- * @method void setClassPath(string $ClassPath) 设置导出的媒体分类路径，长度不能超过15字符。
+ * @method string getClassPath() 获取导出的媒体分类路径，长度不能超过15字符。不存在默认创建。
+ * @method void setClassPath(string $ClassPath) 设置导出的媒体分类路径，长度不能超过15字符。不存在默认创建。
  * @method array getTagSet() 获取导出的媒体标签，单个标签不得超过10个字符。
  * @method void setTagSet(array $TagSet) 设置导出的媒体标签，单个标签不得超过10个字符。
  * @method array getThirdPartyPublishInfos() 获取第三方平台发布信息列表。暂未正式对外，请勿使用。
@@ -51,7 +51,7 @@ class CMEExportInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string 导出的媒体分类路径，长度不能超过15字符。
+     * @var string 导出的媒体分类路径，长度不能超过15字符。不存在默认创建。
      */
     public $ClassPath;
 
@@ -69,7 +69,7 @@ class CMEExportInfo extends AbstractModel
      * @param Entity $Owner 导出媒体归属，个人或团队。
      * @param string $Name 导出的媒体名称，不得超过30个字符。
      * @param string $Description 导出的媒体信息，不得超过50个字符。
-     * @param string $ClassPath 导出的媒体分类路径，长度不能超过15字符。
+     * @param string $ClassPath 导出的媒体分类路径，长度不能超过15字符。不存在默认创建。
      * @param array $TagSet 导出的媒体标签，单个标签不得超过10个字符。
      * @param array $ThirdPartyPublishInfos 第三方平台发布信息列表。暂未正式对外，请勿使用。
      */

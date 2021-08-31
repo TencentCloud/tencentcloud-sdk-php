@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsRedWashed(integer $IsRedWashed) 设置是否被红冲
  * @method string getPdfUrl() 获取pdf地址
  * @method void setPdfUrl(string $PdfUrl) 设置pdf地址
+ * @method string getImageUrl() 获取png地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageUrl(string $ImageUrl) 设置png地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueryInvoiceResultData extends AbstractModel
 {
@@ -115,6 +119,12 @@ class QueryInvoiceResultData extends AbstractModel
     public $PdfUrl;
 
     /**
+     * @var string png地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageUrl;
+
+    /**
      * @param string $OrderId 订单号
      * @param string $OrderSn 业务开票号
      * @param integer $Status 发票状态
@@ -128,6 +138,8 @@ class QueryInvoiceResultData extends AbstractModel
      * @param string $TaxAmount 税额(元)
      * @param integer $IsRedWashed 是否被红冲
      * @param string $PdfUrl pdf地址
+     * @param string $ImageUrl png地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -192,6 +204,10 @@ class QueryInvoiceResultData extends AbstractModel
 
         if (array_key_exists("PdfUrl",$param) and $param["PdfUrl"] !== null) {
             $this->PdfUrl = $param["PdfUrl"];
+        }
+
+        if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
+            $this->ImageUrl = $param["ImageUrl"];
         }
     }
 }

@@ -20,19 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoginWhiteList请求参数结构体
  *
- * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
+ * @method integer getLimit() 获取返回数量，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
-<li>Keywords - String - 是否必填：否 - 查询关键字 </li>
+<li>IpOrAlias - String - 是否必填：否 - 查询关键字 </li>
+<li>UserName - String - 是否必填：否 - 用户名筛选 </li>
+<li>ModifyBeginTime - String - 是否必填：否 - 按照修改时间段筛选，开始时间 </li>
+<li>ModifyEndTime - String - 是否必填：否 - 按照修改时间段筛选，结束时间 </li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li>Keywords - String - 是否必填：否 - 查询关键字 </li>
+<li>IpOrAlias - String - 是否必填：否 - 查询关键字 </li>
+<li>UserName - String - 是否必填：否 - 用户名筛选 </li>
+<li>ModifyBeginTime - String - 是否必填：否 - 按照修改时间段筛选，开始时间 </li>
+<li>ModifyEndTime - String - 是否必填：否 - 按照修改时间段筛选，结束时间 </li>
  */
 class DescribeLoginWhiteListRequest extends AbstractModel
 {
     /**
-     * @var integer 返回数量，默认为10，最大值为100。
+     * @var integer 返回数量，最大值为100。
      */
     public $Limit;
 
@@ -43,15 +49,21 @@ class DescribeLoginWhiteListRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-<li>Keywords - String - 是否必填：否 - 查询关键字 </li>
+<li>IpOrAlias - String - 是否必填：否 - 查询关键字 </li>
+<li>UserName - String - 是否必填：否 - 用户名筛选 </li>
+<li>ModifyBeginTime - String - 是否必填：否 - 按照修改时间段筛选，开始时间 </li>
+<li>ModifyEndTime - String - 是否必填：否 - 按照修改时间段筛选，结束时间 </li>
      */
     public $Filters;
 
     /**
-     * @param integer $Limit 返回数量，默认为10，最大值为100。
+     * @param integer $Limit 返回数量，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
-<li>Keywords - String - 是否必填：否 - 查询关键字 </li>
+<li>IpOrAlias - String - 是否必填：否 - 查询关键字 </li>
+<li>UserName - String - 是否必填：否 - 用户名筛选 </li>
+<li>ModifyBeginTime - String - 是否必填：否 - 按照修改时间段筛选，开始时间 </li>
+<li>ModifyEndTime - String - 是否必填：否 - 按照修改时间段筛选，结束时间 </li>
      */
     function __construct()
     {

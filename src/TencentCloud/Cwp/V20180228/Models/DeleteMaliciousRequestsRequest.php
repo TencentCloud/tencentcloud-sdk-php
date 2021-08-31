@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteMaliciousRequests请求参数结构体
  *
- * @method array getIds() 获取恶意请求记录ID数组，最大100条。
- * @method void setIds(array $Ids) 设置恶意请求记录ID数组，最大100条。
+ * @method array getIds() 获取恶意请求记录ID数组，(最大100条)
+ * @method void setIds(array $Ids) 设置恶意请求记录ID数组，(最大100条)
  */
 class DeleteMaliciousRequestsRequest extends AbstractModel
 {
     /**
-     * @var array 恶意请求记录ID数组，最大100条。
+     * @var array 恶意请求记录ID数组，(最大100条)
      */
     public $Ids;
 
     /**
-     * @param array $Ids 恶意请求记录ID数组，最大100条。
+     * @param array $Ids 恶意请求记录ID数组，(最大100条)
      */
     function __construct()
     {

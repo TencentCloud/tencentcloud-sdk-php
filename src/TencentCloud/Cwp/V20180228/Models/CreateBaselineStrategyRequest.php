@@ -30,10 +30,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCategoryIds(array $CategoryIds) 设置该策略下选择的基线id数组. 示例: [1,3,5,7]
  * @method integer getIsGlobal() 获取扫描范围是否全部服务器, 1:是  0:否, 为1则为全部专业版主机
  * @method void setIsGlobal(integer $IsGlobal) 设置扫描范围是否全部服务器, 1:是  0:否, 为1则为全部专业版主机
- * @method string getMachineType() 获取云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
- * @method void setMachineType(string $MachineType) 设置云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
- * @method string getRegionCode() 获取主机地域. 示例: "ap-bj"
- * @method void setRegionCode(string $RegionCode) 设置主机地域. 示例: "ap-bj"
+ * @method string getMachineType() 获取云主机类型：
+CVM：虚拟主机
+BM：裸金属
+ECM：边缘计算主机
+LH：轻量应用服务器
+Other：混合云机器
+ * @method void setMachineType(string $MachineType) 设置云主机类型：
+CVM：虚拟主机
+BM：裸金属
+ECM：边缘计算主机
+LH：轻量应用服务器
+Other：混合云机器
+ * @method string getRegionCode() 获取主机地域. 示例: "ap-guangzhou"
+ * @method void setRegionCode(string $RegionCode) 设置主机地域. 示例: "ap-guangzhou"
  * @method array getQuuids() 获取主机id数组. 示例: ["quuid1","quuid2"]
  * @method void setQuuids(array $Quuids) 设置主机id数组. 示例: ["quuid1","quuid2"]
  */
@@ -65,12 +75,17 @@ class CreateBaselineStrategyRequest extends AbstractModel
     public $IsGlobal;
 
     /**
-     * @var string 云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
+     * @var string 云主机类型：
+CVM：虚拟主机
+BM：裸金属
+ECM：边缘计算主机
+LH：轻量应用服务器
+Other：混合云机器
      */
     public $MachineType;
 
     /**
-     * @var string 主机地域. 示例: "ap-bj"
+     * @var string 主机地域. 示例: "ap-guangzhou"
      */
     public $RegionCode;
 
@@ -85,8 +100,13 @@ class CreateBaselineStrategyRequest extends AbstractModel
      * @param string $ScanAt 定期检测时间，该时间下发扫描. 示例:“22:00”, 表示在22:00下发检测
      * @param array $CategoryIds 该策略下选择的基线id数组. 示例: [1,3,5,7]
      * @param integer $IsGlobal 扫描范围是否全部服务器, 1:是  0:否, 为1则为全部专业版主机
-     * @param string $MachineType 云主机类型：“CVM”：虚拟主机，"BMS"：裸金属，"ECM"：边缘计算主机
-     * @param string $RegionCode 主机地域. 示例: "ap-bj"
+     * @param string $MachineType 云主机类型：
+CVM：虚拟主机
+BM：裸金属
+ECM：边缘计算主机
+LH：轻量应用服务器
+Other：混合云机器
+     * @param string $RegionCode 主机地域. 示例: "ap-guangzhou"
      * @param array $Quuids 主机id数组. 示例: ["quuid1","quuid2"]
      */
     function __construct()

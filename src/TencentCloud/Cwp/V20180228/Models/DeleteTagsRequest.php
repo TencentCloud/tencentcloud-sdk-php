@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTags请求参数结构体
  *
- * @method array getIds() 获取标签ID
- * @method void setIds(array $Ids) 设置标签ID
+ * @method array getIds() 获取标签ID (最大100 条)
+ * @method void setIds(array $Ids) 设置标签ID (最大100 条)
  */
 class DeleteTagsRequest extends AbstractModel
 {
     /**
-     * @var array 标签ID
+     * @var array 标签ID (最大100 条)
      */
     public $Ids;
 
     /**
-     * @param array $Ids 标签ID
+     * @param array $Ids 标签ID (最大100 条)
      */
     function __construct()
     {

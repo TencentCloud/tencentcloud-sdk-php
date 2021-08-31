@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLoginWhiteList请求参数结构体
  *
- * @method array getIds() 获取白名单ID
- * @method void setIds(array $Ids) 设置白名单ID
+ * @method array getIds() 获取白名单ID (最大 100 条)
+ * @method void setIds(array $Ids) 设置白名单ID (最大 100 条)
  */
 class DeleteLoginWhiteListRequest extends AbstractModel
 {
     /**
-     * @var array 白名单ID
+     * @var array 白名单ID (最大 100 条)
      */
     public $Ids;
 
     /**
-     * @param array $Ids 白名单ID
+     * @param array $Ids 白名单ID (最大 100 条)
      */
     function __construct()
     {

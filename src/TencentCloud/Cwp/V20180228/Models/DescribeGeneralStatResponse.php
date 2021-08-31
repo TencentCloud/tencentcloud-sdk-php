@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentsAll(integer $AgentsAll) 设置主机安全客户端总数的总数
  * @method integer getAgentsOnline() 获取主机安全客户端在线的总数
  * @method void setAgentsOnline(integer $AgentsOnline) 设置主机安全客户端在线的总数
- * @method integer getAgentsOffline() 获取主机安全客户端离线的总数
- * @method void setAgentsOffline(integer $AgentsOffline) 设置主机安全客户端离线的总数
+ * @method integer getAgentsOffline() 获取主机安全客户端 离线+关机 的总数
+ * @method void setAgentsOffline(integer $AgentsOffline) 设置主机安全客户端 离线+关机 的总数
  * @method integer getAgentsPro() 获取主机安全客户端专业版的总数
  * @method void setAgentsPro(integer $AgentsPro) 设置主机安全客户端专业版的总数
  * @method integer getAgentsBasic() 获取主机安全客户端基础版的总数
@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentsProExpireWithInSevenDays(integer $AgentsProExpireWithInSevenDays) 设置7天内到期的预付费专业版总数
  * @method integer getRiskMachine() 获取风险主机总数
  * @method void setRiskMachine(integer $RiskMachine) 设置风险主机总数
+ * @method integer getShutdown() 获取已关机总数
+ * @method void setShutdown(integer $Shutdown) 设置已关机总数
+ * @method integer getOffline() 获取已离线总数
+ * @method void setOffline(integer $Offline) 设置已离线总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -64,7 +68,7 @@ class DescribeGeneralStatResponse extends AbstractModel
     public $AgentsOnline;
 
     /**
-     * @var integer 主机安全客户端离线的总数
+     * @var integer 主机安全客户端 离线+关机 的总数
      */
     public $AgentsOffline;
 
@@ -89,6 +93,16 @@ class DescribeGeneralStatResponse extends AbstractModel
     public $RiskMachine;
 
     /**
+     * @var integer 已关机总数
+     */
+    public $Shutdown;
+
+    /**
+     * @var integer 已离线总数
+     */
+    public $Offline;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -98,11 +112,13 @@ class DescribeGeneralStatResponse extends AbstractModel
      * @param integer $MachinesUninstalled 云主机没有安装主机安全客户端的总数
      * @param integer $AgentsAll 主机安全客户端总数的总数
      * @param integer $AgentsOnline 主机安全客户端在线的总数
-     * @param integer $AgentsOffline 主机安全客户端离线的总数
+     * @param integer $AgentsOffline 主机安全客户端 离线+关机 的总数
      * @param integer $AgentsPro 主机安全客户端专业版的总数
      * @param integer $AgentsBasic 主机安全客户端基础版的总数
      * @param integer $AgentsProExpireWithInSevenDays 7天内到期的预付费专业版总数
      * @param integer $RiskMachine 风险主机总数
+     * @param integer $Shutdown 已关机总数
+     * @param integer $Offline 已离线总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -152,6 +168,14 @@ class DescribeGeneralStatResponse extends AbstractModel
 
         if (array_key_exists("RiskMachine",$param) and $param["RiskMachine"] !== null) {
             $this->RiskMachine = $param["RiskMachine"];
+        }
+
+        if (array_key_exists("Shutdown",$param) and $param["Shutdown"] !== null) {
+            $this->Shutdown = $param["Shutdown"];
+        }
+
+        if (array_key_exists("Offline",$param) and $param["Offline"] !== null) {
+            $this->Offline = $param["Offline"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

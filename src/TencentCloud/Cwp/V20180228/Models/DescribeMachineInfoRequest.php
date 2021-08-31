@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUuid() 获取云镜客户端唯一Uuid。
  * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid。
- * @method string getQuuid() 获取cvm id， quuid、uuid必填一个
- * @method void setQuuid(string $Quuid) 设置cvm id， quuid、uuid必填一个
+ * @method string getQuuid() 获取Quuid , Uuid 必填一项
+ * @method void setQuuid(string $Quuid) 设置Quuid , Uuid 必填一项
  */
 class DescribeMachineInfoRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeMachineInfoRequest extends AbstractModel
     public $Uuid;
 
     /**
-     * @var string cvm id， quuid、uuid必填一个
+     * @var string Quuid , Uuid 必填一项
      */
     public $Quuid;
 
     /**
      * @param string $Uuid 云镜客户端唯一Uuid。
-     * @param string $Quuid cvm id， quuid、uuid必填一个
+     * @param string $Quuid Quuid , Uuid 必填一项
      */
     function __construct()
     {

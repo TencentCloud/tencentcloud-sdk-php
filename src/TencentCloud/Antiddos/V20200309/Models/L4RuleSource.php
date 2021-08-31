@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置回源IP或域名
  * @method integer getWeight() 获取权重值，取值[0,100]
  * @method void setWeight(integer $Weight) 设置权重值，取值[0,100]
+ * @method integer getPort() 获取8000
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPort(integer $Port) 设置8000
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class L4RuleSource extends AbstractModel
 {
@@ -38,8 +42,16 @@ class L4RuleSource extends AbstractModel
     public $Weight;
 
     /**
+     * @var integer 8000
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Port;
+
+    /**
      * @param string $Source 回源IP或域名
      * @param integer $Weight 权重值，取值[0,100]
+     * @param integer $Port 8000
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class L4RuleSource extends AbstractModel
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
             $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
     }
 }

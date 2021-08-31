@@ -51,11 +51,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProVersionOpenDate() 获取专业版开通时间。
  * @method void setProVersionOpenDate(string $ProVersionOpenDate) 设置专业版开通时间。
  * @method string getMachineType() 获取云主机类型。
-<li>CVM: 虚拟主机</li>
+<li>CVM: 腾讯云服务器</li>
 <li>BM: 黑石物理机</li>
+<li>ECM: 边缘计算服务器</li>
+<li>LH: 轻量应用服务器</li>
+<li>Other: 混合云机器</li>
  * @method void setMachineType(string $MachineType) 设置云主机类型。
-<li>CVM: 虚拟主机</li>
+<li>CVM: 腾讯云服务器</li>
 <li>BM: 黑石物理机</li>
+<li>ECM: 边缘计算服务器</li>
+<li>LH: 轻量应用服务器</li>
+<li>Other: 混合云机器</li>
  * @method string getMachineRegion() 获取机器所属地域。如：ap-guangzhou，ap-shanghai
  * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。如：ap-guangzhou，ap-shanghai
  * @method string getPayMode() 获取主机状态。
@@ -140,8 +146,11 @@ class DescribeMachineInfoResponse extends AbstractModel
 
     /**
      * @var string 云主机类型。
-<li>CVM: 虚拟主机</li>
+<li>CVM: 腾讯云服务器</li>
 <li>BM: 黑石物理机</li>
+<li>ECM: 边缘计算服务器</li>
+<li>LH: 轻量应用服务器</li>
+<li>Other: 混合云机器</li>
      */
     public $MachineType;
 
@@ -204,8 +213,11 @@ class DescribeMachineInfoResponse extends AbstractModel
 <li>false：否</li>
      * @param string $ProVersionOpenDate 专业版开通时间。
      * @param string $MachineType 云主机类型。
-<li>CVM: 虚拟主机</li>
+<li>CVM: 腾讯云服务器</li>
 <li>BM: 黑石物理机</li>
+<li>ECM: 边缘计算服务器</li>
+<li>LH: 轻量应用服务器</li>
+<li>Other: 混合云机器</li>
      * @param string $MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
      * @param string $PayMode 主机状态。
 <li>POSTPAY: 表示后付费，即按量计费  </li>

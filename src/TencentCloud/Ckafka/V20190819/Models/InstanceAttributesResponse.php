@@ -96,6 +96,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) 设置动态消息保留策略
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxConnection() 获取最大连接数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxConnection(integer $MaxConnection) 设置最大连接数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPublicNetwork() 获取公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeleteRouteTimestamp() 获取时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) 设置时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -254,6 +266,24 @@ class InstanceAttributesResponse extends AbstractModel
     public $RetentionTimeConfig;
 
     /**
+     * @var integer 最大连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxConnection;
+
+    /**
+     * @var integer 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicNetwork;
+
+    /**
+     * @var string 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeleteRouteTimestamp;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param array $VipList 接入点 VIP 列表信息
@@ -291,6 +321,12 @@ class InstanceAttributesResponse extends AbstractModel
      * @param array $Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DynamicRetentionTime $RetentionTimeConfig 动态消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxConnection 最大连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PublicNetwork 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeleteRouteTimestamp 时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -432,6 +468,18 @@ class InstanceAttributesResponse extends AbstractModel
         if (array_key_exists("RetentionTimeConfig",$param) and $param["RetentionTimeConfig"] !== null) {
             $this->RetentionTimeConfig = new DynamicRetentionTime();
             $this->RetentionTimeConfig->deserialize($param["RetentionTimeConfig"]);
+        }
+
+        if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
+            $this->MaxConnection = $param["MaxConnection"];
+        }
+
+        if (array_key_exists("PublicNetwork",$param) and $param["PublicNetwork"] !== null) {
+            $this->PublicNetwork = $param["PublicNetwork"];
+        }
+
+        if (array_key_exists("DeleteRouteTimestamp",$param) and $param["DeleteRouteTimestamp"] !== null) {
+            $this->DeleteRouteTimestamp = $param["DeleteRouteTimestamp"];
         }
     }
 }

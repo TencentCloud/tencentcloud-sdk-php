@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getType() 获取0-系统规则; 1-用户规则
  * @method void setType(integer $Type) 设置0-系统规则; 1-用户规则
- * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
+ * @method integer getLimit() 获取返回数量，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
@@ -39,7 +39,7 @@ class DescribeBashRulesRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 返回数量，默认为10，最大值为100。
+     * @var integer 返回数量，最大值为100。
      */
     public $Limit;
 
@@ -56,7 +56,7 @@ class DescribeBashRulesRequest extends AbstractModel
 
     /**
      * @param integer $Type 0-系统规则; 1-用户规则
-     * @param integer $Limit 返回数量，默认为10，最大值为100。
+     * @param integer $Limit 返回数量，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
 <li>Keywords - String - 是否必填：否 - 关键字(规则名称)</li>

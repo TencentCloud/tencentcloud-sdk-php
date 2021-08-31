@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePrivilegeEvents请求参数结构体
  *
- * @method array getIds() 获取ID数组，最大100条。
- * @method void setIds(array $Ids) 设置ID数组，最大100条。
+ * @method array getIds() 获取ID数组. (最大100条)
+ * @method void setIds(array $Ids) 设置ID数组. (最大100条)
  */
 class DeletePrivilegeEventsRequest extends AbstractModel
 {
     /**
-     * @var array ID数组，最大100条。
+     * @var array ID数组. (最大100条)
      */
     public $Ids;
 
     /**
-     * @param array $Ids ID数组，最大100条。
+     * @param array $Ids ID数组. (最大100条)
      */
     function __construct()
     {

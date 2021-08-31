@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceAttributes返回参数结构体
  *
- * @method InstanceAttributesResponse getResult() 获取实例属性返回结果对象
- * @method void setResult(InstanceAttributesResponse $Result) 设置实例属性返回结果对象
+ * @method InstanceAttributesResponse getResult() 获取实例属性返回结果对象。
+ * @method void setResult(InstanceAttributesResponse $Result) 设置实例属性返回结果对象。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceAttributesResponse extends AbstractModel
 {
     /**
-     * @var InstanceAttributesResponse 实例属性返回结果对象
+     * @var InstanceAttributesResponse 实例属性返回结果对象。
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeInstanceAttributesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param InstanceAttributesResponse $Result 实例属性返回结果对象
+     * @param InstanceAttributesResponse $Result 实例属性返回结果对象。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

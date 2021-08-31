@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAttackLogs请求参数结构体
  *
- * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
+ * @method integer getLimit() 获取返回数量，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAttackLogsRequest extends AbstractModel
 {
     /**
-     * @var integer 返回数量，默认为10，最大值为100。
+     * @var integer 返回数量，最大值为100。
      */
     public $Limit;
 
@@ -80,7 +80,7 @@ class DescribeAttackLogsRequest extends AbstractModel
     public $Quuid;
 
     /**
-     * @param integer $Limit 返回数量，默认为10，最大值为100。
+     * @param integer $Limit 返回数量，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
 <li>HttpMethod - String - 是否必填：否 - 攻击方法(POST|GET)</li>

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setECM(array $ECM) 设置ECM 边缘计算服务器地域列表
  * @method array getOther() 获取Other 混合云地域列表
  * @method void setOther(array $Other) 设置Other 混合云地域列表
+ * @method array getALL() 获取所有地域列表(包含以上所有地域)
+ * @method void setALL(array $ALL) 设置所有地域列表(包含以上所有地域)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribeMachineRegionsResponse extends AbstractModel
     public $Other;
 
     /**
+     * @var array 所有地域列表(包含以上所有地域)
+     */
+    public $ALL;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribeMachineRegionsResponse extends AbstractModel
      * @param array $LH LH 轻量应用服务器地域列表
      * @param array $ECM ECM 边缘计算服务器地域列表
      * @param array $Other Other 混合云地域列表
+     * @param array $ALL 所有地域列表(包含以上所有地域)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +136,15 @@ class DescribeMachineRegionsResponse extends AbstractModel
                 $obj = new RegionInfo();
                 $obj->deserialize($value);
                 array_push($this->Other, $obj);
+            }
+        }
+
+        if (array_key_exists("ALL",$param) and $param["ALL"] !== null) {
+            $this->ALL = [];
+            foreach ($param["ALL"] as $key => $value){
+                $obj = new RegionInfo();
+                $obj->deserialize($value);
+                array_push($this->ALL, $obj);
             }
         }
 

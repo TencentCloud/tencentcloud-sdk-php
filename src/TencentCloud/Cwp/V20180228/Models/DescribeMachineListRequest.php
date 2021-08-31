@@ -23,9 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineType() 获取云主机类型。
 <li>CVM：表示虚拟主机</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云机器</li>
  * @method void setMachineType(string $MachineType) 设置云主机类型。
 <li>CVM：表示虚拟主机</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云机器</li>
  * @method string getMachineRegion() 获取机器所属地域。如：ap-guangzhou，ap-shanghai
  * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。如：ap-guangzhou，ap-shanghai
  * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
@@ -49,6 +55,9 @@ class DescribeMachineListRequest extends AbstractModel
      * @var string 云主机类型。
 <li>CVM：表示虚拟主机</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云机器</li>
      */
     public $MachineType;
 
@@ -80,6 +89,9 @@ class DescribeMachineListRequest extends AbstractModel
      * @param string $MachineType 云主机类型。
 <li>CVM：表示虚拟主机</li>
 <li>BM:  表示黑石物理机</li>
+<li>ECM:  表示边缘计算服务器</li>
+<li>LH:  表示轻量应用服务器</li>
+<li>Other:  表示混合云机器</li>
      * @param string $MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。

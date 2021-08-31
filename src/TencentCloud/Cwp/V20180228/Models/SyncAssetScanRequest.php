@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncAssetScan请求参数结构体
  *
- * @method boolean getSync() 获取是否同步
- * @method void setSync(boolean $Sync) 设置是否同步
+ * @method boolean getSync() 获取是否同步：true-是 false-否；默认false
+ * @method void setSync(boolean $Sync) 设置是否同步：true-是 false-否；默认false
  */
 class SyncAssetScanRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否同步
+     * @var boolean 是否同步：true-是 false-否；默认false
      */
     public $Sync;
 
     /**
-     * @param boolean $Sync 是否同步
+     * @param boolean $Sync 是否同步：true-是 false-否；默认false
      */
     function __construct()
     {

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDynamicRetentionConfig(DynamicRetentionTime $DynamicRetentionConfig) 设置动态消息保留策略配置
  * @method integer getRebalanceTime() 获取修改升配置rebalance时间
  * @method void setRebalanceTime(integer $RebalanceTime) 设置修改升配置rebalance时间
+ * @method integer getPublicNetwork() 获取时间戳
+ * @method void setPublicNetwork(integer $PublicNetwork) 设置时间戳
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $RebalanceTime;
 
     /**
+     * @var integer 时间戳
+     */
+    public $PublicNetwork;
+
+    /**
      * @param string $InstanceId 实例id
      * @param integer $MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大30天，0代表不开启日志保留时间回收策略
      * @param string $InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param ModifyInstanceAttributesConfig $Config 实例配置
      * @param DynamicRetentionTime $DynamicRetentionConfig 动态消息保留策略配置
      * @param integer $RebalanceTime 修改升配置rebalance时间
+     * @param integer $PublicNetwork 时间戳
      */
     function __construct()
     {
@@ -110,6 +118,10 @@ class ModifyInstanceAttributesRequest extends AbstractModel
 
         if (array_key_exists("RebalanceTime",$param) and $param["RebalanceTime"] !== null) {
             $this->RebalanceTime = $param["RebalanceTime"];
+        }
+
+        if (array_key_exists("PublicNetwork",$param) and $param["PublicNetwork"] !== null) {
+            $this->PublicNetwork = $param["PublicNetwork"];
         }
     }
 }

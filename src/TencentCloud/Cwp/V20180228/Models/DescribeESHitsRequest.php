@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置ES查询条件JSON
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
+ * @method integer getLimit() 获取返回数量，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，最大值为100。
  */
 class DescribeESHitsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeESHitsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为10，最大值为100。
+     * @var integer 返回数量，最大值为100。
      */
     public $Limit;
 
     /**
      * @param string $Query ES查询条件JSON
      * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 返回数量，默认为10，最大值为100。
+     * @param integer $Limit 返回数量，最大值为100。
      */
     function __construct()
     {

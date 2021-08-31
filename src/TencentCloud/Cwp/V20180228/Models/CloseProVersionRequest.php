@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseProVersion请求参数结构体
  *
- * @method string getQuuid() 获取主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
- * @method void setQuuid(string $Quuid) 设置主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+ * @method string getQuuid() 获取主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
+ * @method void setQuuid(string $Quuid) 设置主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
  */
 class CloseProVersionRequest extends AbstractModel
 {
     /**
-     * @var string 主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+     * @var string 主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      */
     public $Quuid;
 
     /**
-     * @param string $Quuid 主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+     * @param string $Quuid 主机唯一标识Uuid数组。
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      */
     function __construct()
     {

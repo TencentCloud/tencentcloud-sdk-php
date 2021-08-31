@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuuidList(array $QuuidList) 设置自选服务器时生效，主机quuid的string数组
  * @method integer getVulEmergency() 获取是否是应急漏洞 0 否 1 是
  * @method void setVulEmergency(integer $VulEmergency) 设置是否是应急漏洞 0 否 1 是
- * @method integer getTimeoutPeriod() 获取超时时长 单位秒
- * @method void setTimeoutPeriod(integer $TimeoutPeriod) 设置超时时长 单位秒
+ * @method integer getTimeoutPeriod() 获取超时时长 单位秒 默认 3600 秒
+ * @method void setTimeoutPeriod(integer $TimeoutPeriod) 设置超时时长 单位秒 默认 3600 秒
  * @method array getVulIds() 获取需要扫描的漏洞id
  * @method void setVulIds(array $VulIds) 设置需要扫描的漏洞id
  */
@@ -63,7 +63,7 @@ class ScanVulRequest extends AbstractModel
     public $VulEmergency;
 
     /**
-     * @var integer 超时时长 单位秒
+     * @var integer 超时时长 单位秒 默认 3600 秒
      */
     public $TimeoutPeriod;
 
@@ -78,7 +78,7 @@ class ScanVulRequest extends AbstractModel
      * @param integer $HostType 服务器分类：1:专业版服务器；2:自选服务器
      * @param array $QuuidList 自选服务器时生效，主机quuid的string数组
      * @param integer $VulEmergency 是否是应急漏洞 0 否 1 是
-     * @param integer $TimeoutPeriod 超时时长 单位秒
+     * @param integer $TimeoutPeriod 超时时长 单位秒 默认 3600 秒
      * @param array $VulIds 需要扫描的漏洞id
      */
     function __construct()

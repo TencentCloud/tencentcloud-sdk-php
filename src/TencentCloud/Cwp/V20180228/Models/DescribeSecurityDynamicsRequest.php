@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityDynamics请求参数结构体
  *
- * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
+ * @method integer getLimit() 获取返回数量，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  */
 class DescribeSecurityDynamicsRequest extends AbstractModel
 {
     /**
-     * @var integer 返回数量，默认为10，最大值为100。
+     * @var integer 返回数量，最大值为100。
      */
     public $Limit;
 
@@ -38,7 +38,7 @@ class DescribeSecurityDynamicsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param integer $Limit 返回数量，默认为10，最大值为100。
+     * @param integer $Limit 返回数量，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      */
     function __construct()

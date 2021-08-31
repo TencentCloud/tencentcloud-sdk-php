@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 操作类型返回的Data结构
  *
- * @method integer getFlowId() 获取FlowId
+ * @method integer getFlowId() 获取FlowId11
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFlowId(integer $FlowId) 设置FlowId
+ * @method void setFlowId(integer $FlowId) 设置FlowId11
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class OperateResponseData extends AbstractModel
 {
     /**
-     * @var integer FlowId
+     * @var integer FlowId11
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
     /**
-     * @param integer $FlowId FlowId
+     * @param integer $FlowId FlowId11
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

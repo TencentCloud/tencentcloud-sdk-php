@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSearchLogs返回参数结构体
  *
- * @method array getData() 获取历史搜索记录
- * @method void setData(array $Data) 设置历史搜索记录
+ * @method array getData() 获取历史搜索记录 保留最新的10条
+ * @method void setData(array $Data) 设置历史搜索记录 保留最新的10条
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSearchLogsResponse extends AbstractModel
 {
     /**
-     * @var array 历史搜索记录
+     * @var array 历史搜索记录 保留最新的10条
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeSearchLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 历史搜索记录
+     * @param array $Data 历史搜索记录 保留最新的10条
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

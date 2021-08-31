@@ -20,41 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenProVersion请求参数结构体
  *
- * @method string getMachineType() 获取云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
- * @method void setMachineType(string $MachineType) 设置云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
- * @method string getMachineRegion() 获取机器所属地域。
-如：ap-guangzhou，ap-shanghai
- * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。
-如：ap-guangzhou，ap-shanghai
+ * @method string getMachineType() 获取云主机类型。(当前参数已作废,可以留空值 )
+ * @method void setMachineType(string $MachineType) 设置云主机类型。(当前参数已作废,可以留空值 )
+ * @method string getMachineRegion() 获取机器所属地域。(当前参数已作废,可以留空值 )
+ * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。(当前参数已作废,可以留空值 )
  * @method array getQuuids() 获取主机唯一标识Uuid数组。
-黑石的InstanceId，CVM的Uuid
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
  * @method void setQuuids(array $Quuids) 设置主机唯一标识Uuid数组。
-黑石的InstanceId，CVM的Uuid
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
  * @method integer getActivityId() 获取活动ID。
  * @method void setActivityId(integer $ActivityId) 设置活动ID。
  */
 class OpenProVersionRequest extends AbstractModel
 {
     /**
-     * @var string 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
+     * @var string 云主机类型。(当前参数已作废,可以留空值 )
      */
     public $MachineType;
 
     /**
-     * @var string 机器所属地域。
-如：ap-guangzhou，ap-shanghai
+     * @var string 机器所属地域。(当前参数已作废,可以留空值 )
      */
     public $MachineRegion;
 
     /**
      * @var array 主机唯一标识Uuid数组。
-黑石的InstanceId，CVM的Uuid
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      */
     public $Quuids;
 
@@ -64,13 +55,10 @@ class OpenProVersionRequest extends AbstractModel
     public $ActivityId;
 
     /**
-     * @param string $MachineType 云主机类型。
-<li>CVM：表示虚拟主机</li>
-<li>BM:  表示黑石物理机</li>
-     * @param string $MachineRegion 机器所属地域。
-如：ap-guangzhou，ap-shanghai
+     * @param string $MachineType 云主机类型。(当前参数已作废,可以留空值 )
+     * @param string $MachineRegion 机器所属地域。(当前参数已作废,可以留空值 )
      * @param array $Quuids 主机唯一标识Uuid数组。
-黑石的InstanceId，CVM的Uuid
+黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
      * @param integer $ActivityId 活动ID。
      */
     function __construct()

@@ -102,6 +102,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\ManageReplicationResponse ManageReplication(Models\ManageReplicationRequest $req) 管理实例同步
  * @method Models\ModifyApplicationTriggerPersonalResponse ModifyApplicationTriggerPersonal(Models\ModifyApplicationTriggerPersonalRequest $req) 用于修改应用更新触发器
  * @method Models\ModifyImmutableTagRulesResponse ModifyImmutableTagRules(Models\ModifyImmutableTagRulesRequest $req) 更新镜像不可变规则
+ * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 更新实例信息
  * @method Models\ModifyInstanceTokenResponse ModifyInstanceToken(Models\ModifyInstanceTokenRequest $req) 更新实例内指定长期访问凭证的启用状态
  * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 更新命名空间信息，当前仅支持修改命名空间访问级别
  * @method Models\ModifyRepositoryResponse ModifyRepository(Models\ModifyRepositoryRequest $req) 更新镜像仓库信息，可修改仓库描述信息

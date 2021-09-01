@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAppStatistics返回参数结构体
+ * ModifyInstance返回参数结构体
  *
- * @method DescribeAppStatisticsResp getData() 获取应用用量统计数据
- * @method void setData(DescribeAppStatisticsResp $Data) 设置应用用量统计数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAppStatisticsResponse extends AbstractModel
+class ModifyInstanceResponse extends AbstractModel
 {
-    /**
-     * @var DescribeAppStatisticsResp 应用用量统计数据
-     */
-    public $Data;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param DescribeAppStatisticsResp $Data 应用用量统计数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,11 +46,6 @@ class DescribeAppStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new DescribeAppStatisticsResp();
-            $this->Data->deserialize($param["Data"]);
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

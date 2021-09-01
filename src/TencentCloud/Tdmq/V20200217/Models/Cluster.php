@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceNum(integer $NamespaceNum) 设置命名空间数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUsedStorageBudget() 获取已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsedStorageBudget(integer $UsedStorageBudget) 设置已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -158,6 +162,12 @@ class Cluster extends AbstractModel
     public $NamespaceNum;
 
     /**
+     * @var integer 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UsedStorageBudget;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -179,6 +189,8 @@ class Cluster extends AbstractModel
      * @param string $VpcEndPoint VPC访问接入点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NamespaceNum 命名空间数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UsedStorageBudget 已使用存储限制，MB为单位
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("NamespaceNum",$param) and $param["NamespaceNum"] !== null) {
             $this->NamespaceNum = $param["NamespaceNum"];
+        }
+
+        if (array_key_exists("UsedStorageBudget",$param) and $param["UsedStorageBudget"] !== null) {
+            $this->UsedStorageBudget = $param["UsedStorageBudget"];
         }
     }
 }

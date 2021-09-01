@@ -18,28 +18,28 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyAppStatus接口输出参数
+ * ModifyAppStatus返回参数结构体
  *
- * @method integer getBizId() 获取GME应用ID
- * @method void setBizId(integer $BizId) 设置GME应用ID
- * @method string getStatus() 获取应用状态，取值：open/close
- * @method void setStatus(string $Status) 设置应用状态，取值：open/close
+ * @method ModifyAppStatusResp getData() 获取修改应用开关状态返回数据
+ * @method void setData(ModifyAppStatusResp $Data) 设置修改应用开关状态返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyAppStatusResponse extends AbstractModel
 {
     /**
-     * @var integer GME应用ID
+     * @var ModifyAppStatusResp 修改应用开关状态返回数据
      */
-    public $BizId;
+    public $Data;
 
     /**
-     * @var string 应用状态，取值：open/close
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Status;
+    public $RequestId;
 
     /**
-     * @param integer $BizId GME应用ID
-     * @param string $Status 应用状态，取值：open/close
+     * @param ModifyAppStatusResp $Data 修改应用开关状态返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +54,13 @@ class ModifyAppStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new ModifyAppStatusResp();
+            $this->Data->deserialize($param["Data"]);
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

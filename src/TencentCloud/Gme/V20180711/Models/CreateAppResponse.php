@@ -18,76 +18,28 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateApp的输出参数
+ * CreateApp返回参数结构体
  *
- * @method integer getBizId() 获取应用ID，由后台自动生成。
- * @method void setBizId(integer $BizId) 设置应用ID，由后台自动生成。
- * @method string getAppName() 获取应用名称，透传输入参数的AppName
- * @method void setAppName(string $AppName) 设置应用名称，透传输入参数的AppName
- * @method integer getProjectId() 获取项目ID，透传输入的ProjectId
- * @method void setProjectId(integer $ProjectId) 设置项目ID，透传输入的ProjectId
- * @method string getSecretKey() 获取应用密钥，GME SDK初始化时使用
- * @method void setSecretKey(string $SecretKey) 设置应用密钥，GME SDK初始化时使用
- * @method integer getCreateTime() 获取服务创建时间戳
- * @method void setCreateTime(integer $CreateTime) 设置服务创建时间戳
- * @method RealtimeSpeechConf getRealtimeSpeechConf() 获取实时语音服务配置数据
- * @method void setRealtimeSpeechConf(RealtimeSpeechConf $RealtimeSpeechConf) 设置实时语音服务配置数据
- * @method VoiceMessageConf getVoiceMessageConf() 获取语音消息及转文本服务配置数据
- * @method void setVoiceMessageConf(VoiceMessageConf $VoiceMessageConf) 设置语音消息及转文本服务配置数据
- * @method VoiceFilterConf getVoiceFilterConf() 获取语音分析服务配置数据
- * @method void setVoiceFilterConf(VoiceFilterConf $VoiceFilterConf) 设置语音分析服务配置数据
+ * @method CreateAppResp getData() 获取创建应用返回数据
+ * @method void setData(CreateAppResp $Data) 设置创建应用返回数据
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAppResponse extends AbstractModel
 {
     /**
-     * @var integer 应用ID，由后台自动生成。
+     * @var CreateAppResp 创建应用返回数据
      */
-    public $BizId;
+    public $Data;
 
     /**
-     * @var string 应用名称，透传输入参数的AppName
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $AppName;
+    public $RequestId;
 
     /**
-     * @var integer 项目ID，透传输入的ProjectId
-     */
-    public $ProjectId;
-
-    /**
-     * @var string 应用密钥，GME SDK初始化时使用
-     */
-    public $SecretKey;
-
-    /**
-     * @var integer 服务创建时间戳
-     */
-    public $CreateTime;
-
-    /**
-     * @var RealtimeSpeechConf 实时语音服务配置数据
-     */
-    public $RealtimeSpeechConf;
-
-    /**
-     * @var VoiceMessageConf 语音消息及转文本服务配置数据
-     */
-    public $VoiceMessageConf;
-
-    /**
-     * @var VoiceFilterConf 语音分析服务配置数据
-     */
-    public $VoiceFilterConf;
-
-    /**
-     * @param integer $BizId 应用ID，由后台自动生成。
-     * @param string $AppName 应用名称，透传输入参数的AppName
-     * @param integer $ProjectId 项目ID，透传输入的ProjectId
-     * @param string $SecretKey 应用密钥，GME SDK初始化时使用
-     * @param integer $CreateTime 服务创建时间戳
-     * @param RealtimeSpeechConf $RealtimeSpeechConf 实时语音服务配置数据
-     * @param VoiceMessageConf $VoiceMessageConf 语音消息及转文本服务配置数据
-     * @param VoiceFilterConf $VoiceFilterConf 语音分析服务配置数据
+     * @param CreateAppResp $Data 创建应用返回数据
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -102,39 +54,13 @@ class CreateAppResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new CreateAppResp();
+            $this->Data->deserialize($param["Data"]);
         }
 
-        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
-            $this->AppName = $param["AppName"];
-        }
-
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
-        if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
-            $this->SecretKey = $param["SecretKey"];
-        }
-
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
-        }
-
-        if (array_key_exists("RealtimeSpeechConf",$param) and $param["RealtimeSpeechConf"] !== null) {
-            $this->RealtimeSpeechConf = new RealtimeSpeechConf();
-            $this->RealtimeSpeechConf->deserialize($param["RealtimeSpeechConf"]);
-        }
-
-        if (array_key_exists("VoiceMessageConf",$param) and $param["VoiceMessageConf"] !== null) {
-            $this->VoiceMessageConf = new VoiceMessageConf();
-            $this->VoiceMessageConf->deserialize($param["VoiceMessageConf"]);
-        }
-
-        if (array_key_exists("VoiceFilterConf",$param) and $param["VoiceFilterConf"] !== null) {
-            $this->VoiceFilterConf = new VoiceFilterConf();
-            $this->VoiceFilterConf->deserialize($param["VoiceFilterConf"]);
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

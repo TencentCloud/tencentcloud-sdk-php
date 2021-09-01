@@ -57,6 +57,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeEndUserLoginStatisticResponse DescribeEndUserLoginStatistic(Models\DescribeEndUserLoginStatisticRequest $req) 获取环境终端用户新增与登录信息
  * @method Models\DescribeEndUserStatisticResponse DescribeEndUserStatistic(Models\DescribeEndUserStatisticRequest $req) 获取终端用户总量与平台分布情况
  * @method Models\DescribeEndUsersResponse DescribeEndUsers(Models\DescribeEndUsersRequest $req) 获取终端用户列表
+ * @method Models\DescribeEnvDealRegionResponse DescribeEnvDealRegion(Models\DescribeEnvDealRegionRequest $req) 获取环境下单地域
  * @method Models\DescribeEnvFreeQuotaResponse DescribeEnvFreeQuota(Models\DescribeEnvFreeQuotaRequest $req) 查询后付费免费配额信息
  * @method Models\DescribeEnvLimitResponse DescribeEnvLimit(Models\DescribeEnvLimitRequest $req) 查询环境个数上限
  * @method Models\DescribeEnvPostpaidDeductResponse DescribeEnvPostpaidDeduct(Models\DescribeEnvPostpaidDeductRequest $req) 查询环境后付费计费详情

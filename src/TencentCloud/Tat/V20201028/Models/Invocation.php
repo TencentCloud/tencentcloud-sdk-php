@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) 设置在实例上执行命令时使用的用户名。
  * @method string getInvocationSource() 获取调用来源。
  * @method void setInvocationSource(string $InvocationSource) 设置调用来源。
+ * @method string getCommandContent() 获取base64编码的命令内容
+ * @method void setCommandContent(string $CommandContent) 设置base64编码的命令内容
+ * @method string getCommandType() 获取命令类型
+ * @method void setCommandType(string $CommandType) 设置命令类型
+ * @method integer getTimeout() 获取执行命令过期时间， 单位秒
+ * @method void setTimeout(integer $Timeout) 设置执行命令过期时间， 单位秒
+ * @method string getWorkingDirectory() 获取执行命令的工作路径
+ * @method void setWorkingDirectory(string $WorkingDirectory) 设置执行命令的工作路径
  */
 class Invocation extends AbstractModel
 {
@@ -140,6 +148,26 @@ class Invocation extends AbstractModel
     public $InvocationSource;
 
     /**
+     * @var string base64编码的命令内容
+     */
+    public $CommandContent;
+
+    /**
+     * @var string 命令类型
+     */
+    public $CommandType;
+
+    /**
+     * @var integer 执行命令过期时间， 单位秒
+     */
+    public $Timeout;
+
+    /**
+     * @var string 执行命令的工作路径
+     */
+    public $WorkingDirectory;
+
+    /**
      * @param string $InvocationId 执行活动ID。
      * @param string $CommandId 命令ID。
      * @param string $InvocationStatus 执行任务状态。取值范围：
@@ -160,6 +188,10 @@ class Invocation extends AbstractModel
      * @param string $InstanceKind 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
      * @param string $Username 在实例上执行命令时使用的用户名。
      * @param string $InvocationSource 调用来源。
+     * @param string $CommandContent base64编码的命令内容
+     * @param string $CommandType 命令类型
+     * @param integer $Timeout 执行命令过期时间， 单位秒
+     * @param string $WorkingDirectory 执行命令的工作路径
      */
     function __construct()
     {
@@ -233,6 +265,22 @@ class Invocation extends AbstractModel
 
         if (array_key_exists("InvocationSource",$param) and $param["InvocationSource"] !== null) {
             $this->InvocationSource = $param["InvocationSource"];
+        }
+
+        if (array_key_exists("CommandContent",$param) and $param["CommandContent"] !== null) {
+            $this->CommandContent = $param["CommandContent"];
+        }
+
+        if (array_key_exists("CommandType",$param) and $param["CommandType"] !== null) {
+            $this->CommandType = $param["CommandType"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("WorkingDirectory",$param) and $param["WorkingDirectory"] !== null) {
+            $this->WorkingDirectory = $param["WorkingDirectory"];
         }
     }
 }

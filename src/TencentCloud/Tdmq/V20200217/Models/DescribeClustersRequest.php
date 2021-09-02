@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置起始下标，不填默认为0。
  * @method integer getLimit() 获取返回数量，不填则默认为10，最大值为20。
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为10，最大值为20。
+ * @method array getClusterIdList() 获取集群ID列表过滤
+ * @method void setClusterIdList(array $ClusterIdList) 设置集群ID列表过滤
  */
 class DescribeClustersRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeClustersRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 集群ID列表过滤
+     */
+    public $ClusterIdList;
+
+    /**
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
+     * @param array $ClusterIdList 集群ID列表过滤
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeClustersRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ClusterIdList",$param) and $param["ClusterIdList"] !== null) {
+            $this->ClusterIdList = $param["ClusterIdList"];
         }
     }
 }

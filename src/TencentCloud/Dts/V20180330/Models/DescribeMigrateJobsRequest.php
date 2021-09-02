@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回实例数量，默认20，有效区间[1,100]
  * @method void setLimit(integer $Limit) 设置返回实例数量，默认20，有效区间[1,100]
+ * @method array getTagFilters() 获取标签过滤条件
+ * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
  */
 class DescribeMigrateJobsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeMigrateJobsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 标签过滤条件
+     */
+    public $TagFilters;
+
+    /**
      * @param string $JobId 数据迁移任务ID
      * @param string $JobName 数据迁移任务名称
      * @param string $Order 排序字段，可以取值为JobId、Status、JobName、MigrateType、RunMode、CreateTime
      * @param string $OrderSeq 排序方式，升序为ASC，降序为DESC
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回实例数量，默认20，有效区间[1,100]
+     * @param array $TagFilters 标签过滤条件
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class DescribeMigrateJobsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

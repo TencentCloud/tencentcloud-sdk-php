@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置默认为\*，表示任何host都可以访问，当前ckafka不支持host为\*，但是后面开源kafka的产品化会直接支持
  * @method string getPrincipal() 获取用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入时需要加 User: 前缀,如用户A则传入User:A。
  * @method void setPrincipal(string $Principal) 设置用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入时需要加 User: 前缀,如用户A则传入User:A。
+ * @method string getResourceNameList() 获取资源名称列表,Json字符串格式。ResourceName和resourceNameList只能指定其中一个。
+ * @method void setResourceNameList(string $ResourceNameList) 设置资源名称列表,Json字符串格式。ResourceName和resourceNameList只能指定其中一个。
  */
 class CreateAclRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateAclRequest extends AbstractModel
     public $Principal;
 
     /**
+     * @var string 资源名称列表,Json字符串格式。ResourceName和resourceNameList只能指定其中一个。
+     */
+    public $ResourceNameList;
+
+    /**
      * @param string $InstanceId 实例id信息
      * @param integer $ResourceType Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
      * @param integer $Operation Acl操作方式，(0:UNKNOWN，1:ANY，2:ALL，3:READ，4:WRITE，5:CREATE，6:DELETE，7:ALTER，8:DESCRIBE，9:CLUSTER_ACTION，10:DESCRIBE_CONFIGS，11:ALTER_CONFIGS)
@@ -80,6 +87,7 @@ class CreateAclRequest extends AbstractModel
      * @param string $ResourceName 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
      * @param string $Host 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\*，但是后面开源kafka的产品化会直接支持
      * @param string $Principal 用户列表，默认为User:*，表示任何user都可以访问，当前用户只能是用户列表中包含的用户。传入时需要加 User: 前缀,如用户A则传入User:A。
+     * @param string $ResourceNameList 资源名称列表,Json字符串格式。ResourceName和resourceNameList只能指定其中一个。
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateAclRequest extends AbstractModel
 
         if (array_key_exists("Principal",$param) and $param["Principal"] !== null) {
             $this->Principal = $param["Principal"];
+        }
+
+        if (array_key_exists("ResourceNameList",$param) and $param["ResourceNameList"] !== null) {
+            $this->ResourceNameList = $param["ResourceNameList"];
         }
     }
 }

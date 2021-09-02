@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) 设置函数名称
  * @method string getQualifier() 获取触发函数的版本号或别名，默认值为$DEFAULT
  * @method void setQualifier(string $Qualifier) 设置触发函数的版本号或别名，默认值为$DEFAULT
- * @method string getEvent() 获取运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
- * @method void setEvent(string $Event) 设置运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
+ * @method string getEvent() 获取运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB。该字段信息对应函数 [event 入参](https://cloud.tencent.com/document/product/583/9210#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E)。
+ * @method void setEvent(string $Event) 设置运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB。该字段信息对应函数 [event 入参](https://cloud.tencent.com/document/product/583/9210#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E)。
  * @method string getLogType() 获取返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
  * @method void setLogType(string $LogType) 设置返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
  * @method string getNamespace() 获取命名空间，不填默认为 default
@@ -46,7 +46,7 @@ class InvokeFunctionRequest extends AbstractModel
     public $Qualifier;
 
     /**
-     * @var string 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
+     * @var string 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB。该字段信息对应函数 [event 入参](https://cloud.tencent.com/document/product/583/9210#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E)。
      */
     public $Event;
 
@@ -68,7 +68,7 @@ class InvokeFunctionRequest extends AbstractModel
     /**
      * @param string $FunctionName 函数名称
      * @param string $Qualifier 触发函数的版本号或别名，默认值为$DEFAULT
-     * @param string $Event 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB
+     * @param string $Event 运行函数时的参数，以json格式传入，最大支持的参数长度是 6MB。该字段信息对应函数 [event 入参](https://cloud.tencent.com/document/product/583/9210#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E)。
      * @param string $LogType 返回值会包含4KB的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
      * @param string $Namespace 命名空间，不填默认为 default
      * @param string $RoutingKey 函数灰度流量控制调用，以json格式传入，例如{"k":"v"}，注意kv都需要是字符串类型，最大支持的参数长度是1024字节

@@ -46,9 +46,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置合约返回信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTimestamp() 获取交易时间
+ * @method integer getTimestamp() 获取交易时间，单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimestamp(integer $Timestamp) 设置交易时间
+ * @method void setTimestamp(integer $Timestamp) 设置交易时间，单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChainMakerTransactionResult extends AbstractModel
@@ -95,7 +95,7 @@ class ChainMakerTransactionResult extends AbstractModel
     public $Message;
 
     /**
-     * @var integer 交易时间
+     * @var integer 交易时间，单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
@@ -114,7 +114,7 @@ class ChainMakerTransactionResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 合约返回信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Timestamp 交易时间
+     * @param integer $Timestamp 交易时间，单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

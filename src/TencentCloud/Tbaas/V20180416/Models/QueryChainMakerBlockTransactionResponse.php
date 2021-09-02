@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTxCount(integer $TxCount) 设置交易数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBlockTimestamp() 获取区块时间戳
- * @method void setBlockTimestamp(integer $BlockTimestamp) 设置区块时间戳
+ * @method integer getBlockTimestamp() 获取区块时间戳，单位是秒
+ * @method void setBlockTimestamp(integer $BlockTimestamp) 设置区块时间戳，单位是秒
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -55,7 +55,7 @@ class QueryChainMakerBlockTransactionResponse extends AbstractModel
     public $TxCount;
 
     /**
-     * @var integer 区块时间戳
+     * @var integer 区块时间戳，单位是秒
      */
     public $BlockTimestamp;
 
@@ -70,7 +70,7 @@ class QueryChainMakerBlockTransactionResponse extends AbstractModel
      * @param integer $BlockHeight 区块高度
      * @param integer $TxCount 交易数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BlockTimestamp 区块时间戳
+     * @param integer $BlockTimestamp 区块时间戳，单位是秒
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 目的实例信息，具体内容跟迁移任务类型相关
  *
- * @method string getInstanceId() 获取目标实例ID，如cdb-jd92ijd8
- * @method void setInstanceId(string $InstanceId) 设置目标实例ID，如cdb-jd92ijd8
  * @method string getRegion() 获取目标实例地域，如ap-guangzhou
  * @method void setRegion(string $Region) 设置目标实例地域，如ap-guangzhou
+ * @method string getInstanceId() 获取目标实例ID，如cdb-jd92ijd8
+ * @method void setInstanceId(string $InstanceId) 设置目标实例ID，如cdb-jd92ijd8
  * @method string getIp() 获取目标实例vip。已废弃，无需填写
  * @method void setIp(string $Ip) 设置目标实例vip。已废弃，无需填写
  * @method integer getPort() 获取目标实例vport。已废弃，无需填写
@@ -38,14 +38,14 @@ use TencentCloud\Common\AbstractModel;
 class DstInfo extends AbstractModel
 {
     /**
-     * @var string 目标实例ID，如cdb-jd92ijd8
-     */
-    public $InstanceId;
-
-    /**
      * @var string 目标实例地域，如ap-guangzhou
      */
     public $Region;
+
+    /**
+     * @var string 目标实例ID，如cdb-jd92ijd8
+     */
+    public $InstanceId;
 
     /**
      * @var string 目标实例vip。已废弃，无需填写
@@ -73,8 +73,8 @@ class DstInfo extends AbstractModel
     public $Password;
 
     /**
-     * @param string $InstanceId 目标实例ID，如cdb-jd92ijd8
      * @param string $Region 目标实例地域，如ap-guangzhou
+     * @param string $InstanceId 目标实例ID，如cdb-jd92ijd8
      * @param string $Ip 目标实例vip。已废弃，无需填写
      * @param integer $Port 目标实例vport。已废弃，无需填写
      * @param integer $ReadOnly 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
@@ -94,12 +94,12 @@ class DstInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {

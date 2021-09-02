@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGateWayStatus(string $GateWayStatus) 设置网关状态
  * @method BackendServiceInfo getServiceInfo() 获取服务信息
  * @method void setServiceInfo(BackendServiceInfo $ServiceInfo) 设置服务信息
+ * @method string getPublicClbIp() 获取公网CLBIP
+ * @method void setPublicClbIp(string $PublicClbIp) 设置公网CLBIP
+ * @method string getInternalClbIp() 获取内网CLBIP
+ * @method void setInternalClbIp(string $InternalClbIp) 设置内网CLBIP
  */
 class StandaloneGatewayInfo extends AbstractModel
 {
@@ -94,6 +98,16 @@ class StandaloneGatewayInfo extends AbstractModel
     public $ServiceInfo;
 
     /**
+     * @var string 公网CLBIP
+     */
+    public $PublicClbIp;
+
+    /**
+     * @var string 内网CLBIP
+     */
+    public $InternalClbIp;
+
+    /**
      * @param string $GatewayName 独立网关名称
      * @param float $CPU CPU核心数
      * @param integer $Mem 内存大小，单位MB
@@ -104,6 +118,8 @@ class StandaloneGatewayInfo extends AbstractModel
      * @param string $GatewayDesc 网关描述
      * @param string $GateWayStatus 网关状态
      * @param BackendServiceInfo $ServiceInfo 服务信息
+     * @param string $PublicClbIp 公网CLBIP
+     * @param string $InternalClbIp 内网CLBIP
      */
     function __construct()
     {
@@ -157,6 +173,14 @@ class StandaloneGatewayInfo extends AbstractModel
         if (array_key_exists("ServiceInfo",$param) and $param["ServiceInfo"] !== null) {
             $this->ServiceInfo = new BackendServiceInfo();
             $this->ServiceInfo->deserialize($param["ServiceInfo"]);
+        }
+
+        if (array_key_exists("PublicClbIp",$param) and $param["PublicClbIp"] !== null) {
+            $this->PublicClbIp = $param["PublicClbIp"];
+        }
+
+        if (array_key_exists("InternalClbIp",$param) and $param["InternalClbIp"] !== null) {
+            $this->InternalClbIp = $param["InternalClbIp"];
         }
     }
 }

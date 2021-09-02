@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetail(MigrateDetailInfo $Detail) 设置任务详情
  * @method array getErrorInfo() 获取任务错误信息提示，当任务发生错误时，不为null或者空值
  * @method void setErrorInfo(array $ErrorInfo) 设置任务错误信息提示，当任务发生错误时，不为null或者空值
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MigrateJobInfo extends AbstractModel
 {
@@ -136,6 +140,12 @@ class MigrateJobInfo extends AbstractModel
     public $ErrorInfo;
 
     /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $JobId 数据迁移任务ID
      * @param string $JobName 数据迁移任务名称
      * @param MigrateOption $MigrateOption 迁移任务配置选项
@@ -152,6 +162,8 @@ class MigrateJobInfo extends AbstractModel
      * @param integer $Status 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
      * @param MigrateDetailInfo $Detail 任务详情
      * @param array $ErrorInfo 任务错误信息提示，当任务发生错误时，不为null或者空值
+     * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -236,6 +248,15 @@ class MigrateJobInfo extends AbstractModel
                 $obj = new ErrorInfo();
                 $obj->deserialize($value);
                 array_push($this->ErrorInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

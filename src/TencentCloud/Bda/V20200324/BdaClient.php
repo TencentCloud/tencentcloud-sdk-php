@@ -56,6 +56,7 @@ use TencentCloud\Bda\V20200324\Models as Models;
 
  * @method Models\GetGroupListResponse GetGroupList(Models\GetGroupListRequest $req) 获取人体库列表。
  * @method Models\GetPersonListResponse GetPersonList(Models\GetPersonListRequest $req) 获取指定人体库中的人员列表。
+ * @method Models\GetSummaryInfoResponse GetSummaryInfo(Models\GetSummaryInfoRequest $req) 获取人体库汇总信息。
  * @method Models\ModifyGroupResponse ModifyGroup(Models\ModifyGroupRequest $req) 修改人体库名称、备注。
  * @method Models\ModifyPersonInfoResponse ModifyPersonInfo(Models\ModifyPersonInfoRequest $req) 修改人员信息。
  * @method Models\SearchTraceResponse SearchTrace(Models\SearchTraceRequest $req) 本接口用于对一组待识别的人体轨迹（Trace）图片，在人体库中识别出最相似的 TopK 人体，按照相似度从大到小排列。

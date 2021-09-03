@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePlugin请求参数结构体
  *
- * @method string getPluginName() 获取用户自定义的插件名称。最长50个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
- * @method void setPluginName(string $PluginName) 设置用户自定义的插件名称。最长50个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
+ * @method string getPluginName() 获取用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
+ * @method void setPluginName(string $PluginName) 设置用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
  * @method string getPluginType() 获取插件类型。目前支持IPControl。
  * @method void setPluginType(string $PluginType) 设置插件类型。目前支持IPControl。
  * @method string getPluginData() 获取插件定义语句，支持json。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreatePluginRequest extends AbstractModel
 {
     /**
-     * @var string 用户自定义的插件名称。最长50个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
+     * @var string 用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
      */
     public $PluginName;
 
@@ -52,7 +52,7 @@ class CreatePluginRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param string $PluginName 用户自定义的插件名称。最长50个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
+     * @param string $PluginName 用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
      * @param string $PluginType 插件类型。目前支持IPControl。
      * @param string $PluginData 插件定义语句，支持json。
      * @param string $Description 插件描述，限定200字以内。

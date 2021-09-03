@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getUserDefineRule() 获取用户自定义解析字符串
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserDefineRule(string $UserDefineRule) 设置用户自定义解析字符串
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigInfo extends AbstractModel
 {
@@ -105,6 +109,12 @@ class ConfigInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 用户自定义解析字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserDefineRule;
+
+    /**
      * @param string $ConfigId 采集规则配置ID
      * @param string $LogFormat 日志格式化方式
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,6 +130,8 @@ class ConfigInfo extends AbstractModel
      * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
+     * @param string $UserDefineRule 用户自定义解析字符串
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -174,6 +186,10 @@ class ConfigInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UserDefineRule",$param) and $param["UserDefineRule"] !== null) {
+            $this->UserDefineRule = $param["UserDefineRule"];
         }
     }
 }

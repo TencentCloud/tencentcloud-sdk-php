@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置过滤状态码，已废弃
  * @method array getStatuses() 获取状态码过滤数组，空数组时不过滤
  * @method void setStatuses(array $Statuses) 设置状态码过滤数组，空数组时不过滤
+ * @method array getIsDeletedList() 获取根据是否软删除进行过滤，[0]未删除, [1] 删除，不传不过滤
+ * @method void setIsDeletedList(array $IsDeletedList) 设置根据是否软删除进行过滤，[0]未删除, [1] 删除，不传不过滤
  */
 class DescribeActivityRecordRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeActivityRecordRequest extends AbstractModel
     public $Statuses;
 
     /**
+     * @var array 根据是否软删除进行过滤，[0]未删除, [1] 删除，不传不过滤
+     */
+    public $IsDeletedList;
+
+    /**
      * @param string $ChannelToken 渠道加密token
      * @param string $Channel 渠道来源，每个来源对应不同secretKey
      * @param array $ActivityIdList 活动id列表
      * @param integer $Status 过滤状态码，已废弃
      * @param array $Statuses 状态码过滤数组，空数组时不过滤
+     * @param array $IsDeletedList 根据是否软删除进行过滤，[0]未删除, [1] 删除，不传不过滤
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeActivityRecordRequest extends AbstractModel
 
         if (array_key_exists("Statuses",$param) and $param["Statuses"] !== null) {
             $this->Statuses = $param["Statuses"];
+        }
+
+        if (array_key_exists("IsDeletedList",$param) and $param["IsDeletedList"] !== null) {
+            $this->IsDeletedList = $param["IsDeletedList"];
         }
     }
 }

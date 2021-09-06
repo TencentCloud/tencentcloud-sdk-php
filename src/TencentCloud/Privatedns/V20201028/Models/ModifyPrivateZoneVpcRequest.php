@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置私有域ID
  * @method array getVpcSet() 获取私有域关联的全部VPC列表
  * @method void setVpcSet(array $VpcSet) 设置私有域关联的全部VPC列表
+ * @method array getAccountVpcSet() 获取私有域账号关联的全部VPC列表
+ * @method void setAccountVpcSet(array $AccountVpcSet) 设置私有域账号关联的全部VPC列表
  */
 class ModifyPrivateZoneVpcRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyPrivateZoneVpcRequest extends AbstractModel
     public $VpcSet;
 
     /**
+     * @var array 私有域账号关联的全部VPC列表
+     */
+    public $AccountVpcSet;
+
+    /**
      * @param string $ZoneId 私有域ID
      * @param array $VpcSet 私有域关联的全部VPC列表
+     * @param array $AccountVpcSet 私有域账号关联的全部VPC列表
      */
     function __construct()
     {
@@ -64,6 +72,15 @@ class ModifyPrivateZoneVpcRequest extends AbstractModel
                 $obj = new VpcInfo();
                 $obj->deserialize($value);
                 array_push($this->VpcSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AccountVpcSet",$param) and $param["AccountVpcSet"] !== null) {
+            $this->AccountVpcSet = [];
+            foreach ($param["AccountVpcSet"] as $key => $value){
+                $obj = new AccountVpcInfo();
+                $obj->deserialize($value);
+                array_push($this->AccountVpcSet, $obj);
             }
         }
     }

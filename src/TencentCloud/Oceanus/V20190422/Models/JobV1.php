@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunningCu(float $RunningCu) 设置细粒度下的运行的CU数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFlinkVersion() 获取作业运行的 Flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFlinkVersion(string $FlinkVersion) 设置作业运行的 Flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobV1 extends AbstractModel
 {
@@ -304,6 +308,12 @@ class JobV1 extends AbstractModel
     public $RunningCu;
 
     /**
+     * @var string 作业运行的 Flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FlinkVersion;
+
+    /**
      * @param string $JobId 作业ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
@@ -359,6 +369,8 @@ class JobV1 extends AbstractModel
      * @param integer $ClusterStatus 作业所在集群状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RunningCu 细粒度下的运行的CU数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FlinkVersion 作业运行的 Flink 版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -484,6 +496,10 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("RunningCu",$param) and $param["RunningCu"] !== null) {
             $this->RunningCu = $param["RunningCu"];
+        }
+
+        if (array_key_exists("FlinkVersion",$param) and $param["FlinkVersion"] !== null) {
+            $this->FlinkVersion = $param["FlinkVersion"];
         }
     }
 }

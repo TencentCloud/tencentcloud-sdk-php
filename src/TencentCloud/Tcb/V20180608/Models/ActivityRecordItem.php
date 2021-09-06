@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubStatus(string $SubStatus) 设置自定义子状态码
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubStatusInt() 获取整型子状态码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubStatusInt(integer $SubStatusInt) 设置整型子状态码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsDeleted() 获取是否软删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDeleted(boolean $IsDeleted) 设置是否软删除
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ActivityRecordItem extends AbstractModel
 {
@@ -64,6 +72,18 @@ class ActivityRecordItem extends AbstractModel
     public $SubStatus;
 
     /**
+     * @var integer 整型子状态码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubStatusInt;
+
+    /**
+     * @var boolean 是否软删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsDeleted;
+
+    /**
      * @param string $Uin 用户uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActivityId 活动id
@@ -71,6 +91,10 @@ class ActivityRecordItem extends AbstractModel
      * @param integer $Status 自定义状态码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubStatus 自定义子状态码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubStatusInt 整型子状态码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsDeleted 是否软删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +124,14 @@ class ActivityRecordItem extends AbstractModel
 
         if (array_key_exists("SubStatus",$param) and $param["SubStatus"] !== null) {
             $this->SubStatus = $param["SubStatus"];
+        }
+
+        if (array_key_exists("SubStatusInt",$param) and $param["SubStatusInt"] !== null) {
+            $this->SubStatusInt = $param["SubStatusInt"];
+        }
+
+        if (array_key_exists("IsDeleted",$param) and $param["IsDeleted"] !== null) {
+            $this->IsDeleted = $param["IsDeleted"];
         }
     }
 }

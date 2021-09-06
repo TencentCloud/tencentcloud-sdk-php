@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Privatedns\V20201028\Models;
+namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyPrivateZoneVpc返回参数结构体
+ * DescribePkgOfflineMusic返回参数结构体
  *
- * @method string getZoneId() 获取私有域ID, zone-xxxxxx
- * @method void setZoneId(string $ZoneId) 设置私有域ID, zone-xxxxxx
- * @method array getVpcSet() 获取解析域关联的VPC列表
- * @method void setVpcSet(array $VpcSet) 设置解析域关联的VPC列表
- * @method array getAccountVpcSet() 获取私有域账号关联的全部VPC列表
- * @method void setAccountVpcSet(array $AccountVpcSet) 设置私有域账号关联的全部VPC列表
+ * @method array getOfflineMusicSet() 获取曲库包中不可用歌曲信息
+ * @method void setOfflineMusicSet(array $OfflineMusicSet) 设置曲库包中不可用歌曲信息
+ * @method integer getTotalCount() 获取返回总量
+ * @method void setTotalCount(integer $TotalCount) 设置返回总量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyPrivateZoneVpcResponse extends AbstractModel
+class DescribePkgOfflineMusicResponse extends AbstractModel
 {
     /**
-     * @var string 私有域ID, zone-xxxxxx
+     * @var array 曲库包中不可用歌曲信息
      */
-    public $ZoneId;
+    public $OfflineMusicSet;
 
     /**
-     * @var array 解析域关联的VPC列表
+     * @var integer 返回总量
      */
-    public $VpcSet;
-
-    /**
-     * @var array 私有域账号关联的全部VPC列表
-     */
-    public $AccountVpcSet;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class ModifyPrivateZoneVpcResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ZoneId 私有域ID, zone-xxxxxx
-     * @param array $VpcSet 解析域关联的VPC列表
-     * @param array $AccountVpcSet 私有域账号关联的全部VPC列表
+     * @param array $OfflineMusicSet 曲库包中不可用歌曲信息
+     * @param integer $TotalCount 返回总量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,26 +62,17 @@ class ModifyPrivateZoneVpcResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
-        }
-
-        if (array_key_exists("VpcSet",$param) and $param["VpcSet"] !== null) {
-            $this->VpcSet = [];
-            foreach ($param["VpcSet"] as $key => $value){
-                $obj = new VpcInfo();
+        if (array_key_exists("OfflineMusicSet",$param) and $param["OfflineMusicSet"] !== null) {
+            $this->OfflineMusicSet = [];
+            foreach ($param["OfflineMusicSet"] as $key => $value){
+                $obj = new OfflineMusicDetail();
                 $obj->deserialize($value);
-                array_push($this->VpcSet, $obj);
+                array_push($this->OfflineMusicSet, $obj);
             }
         }
 
-        if (array_key_exists("AccountVpcSet",$param) and $param["AccountVpcSet"] !== null) {
-            $this->AccountVpcSet = [];
-            foreach ($param["AccountVpcSet"] as $key => $value){
-                $obj = new AccountVpcInfoOutput();
-                $obj->deserialize($value);
-                array_push($this->AccountVpcSet, $obj);
-            }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

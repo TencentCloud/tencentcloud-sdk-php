@@ -40,6 +40,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DeleteCloudBaseRunServerVersionResponse DeleteCloudBaseRunServerVersion(Models\DeleteCloudBaseRunServerVersionRequest $req) 删除服务版本
  * @method Models\DeleteEndUserResponse DeleteEndUser(Models\DeleteEndUserRequest $req) 删除终端用户
  * @method Models\DeleteWxGatewayRouteResponse DeleteWxGatewayRoute(Models\DeleteWxGatewayRouteRequest $req) 删除安全网关路由
+ * @method Models\DescribeActivityInfoResponse DescribeActivityInfo(Models\DescribeActivityInfoRequest $req) 查询活动信息
  * @method Models\DescribeActivityRecordResponse DescribeActivityRecord(Models\DescribeActivityRecordRequest $req) 查询活动记录信息
  * @method Models\DescribeAuthDomainsResponse DescribeAuthDomains(Models\DescribeAuthDomainsRequest $req) 获取安全域名列表
  * @method Models\DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildService(Models\DescribeCloudBaseBuildServiceRequest $req) 获取云托管代码上传url
@@ -75,6 +76,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeSpecialCostItemsResponse DescribeSpecialCostItems(Models\DescribeSpecialCostItemsRequest $req) 查询环境1分钱抵扣信息
  * @method Models\DescribeStandaloneGatewayResponse DescribeStandaloneGateway(Models\DescribeStandaloneGatewayRequest $req) 本接口（DescribeStandaloneGateway）查询小租户网关套餐信息。
  * @method Models\DescribeStandaloneGatewayPackageResponse DescribeStandaloneGatewayPackage(Models\DescribeStandaloneGatewayPackageRequest $req) 本接口（DescribeStandaloneGatewayPackage）用于查询小租户网关套餐信息。
+ * @method Models\DescribeUserActivityInfoResponse DescribeUserActivityInfo(Models\DescribeUserActivityInfoRequest $req) 查询用户活动信息
  * @method Models\DescribeWxCloudBaseRunEnvsResponse DescribeWxCloudBaseRunEnvs(Models\DescribeWxCloudBaseRunEnvsRequest $req) 查询微信云托管环境信息
  * @method Models\DescribeWxCloudBaseRunSubNetsResponse DescribeWxCloudBaseRunSubNets(Models\DescribeWxCloudBaseRunSubNetsRequest $req) 查询微信云托管子网
  * @method Models\DestroyEnvResponse DestroyEnv(Models\DestroyEnvRequest $req) 销毁环境

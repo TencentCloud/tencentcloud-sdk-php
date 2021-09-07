@@ -28,10 +28,14 @@ use TencentCloud\Common\AbstractModel;
 如果IsStaticPPT为False，后缀名为.ppt或.pptx的文档会动态转码成HTML5页面，其他格式的文档会静态转码成图片；如果IsStaticPPT为True，所有格式的文档会静态转码成图片；
  * @method void setIsStaticPPT(boolean $IsStaticPPT) 设置是否为静态PPT，默认为False；
 如果IsStaticPPT为False，后缀名为.ppt或.pptx的文档会动态转码成HTML5页面，其他格式的文档会静态转码成图片；如果IsStaticPPT为True，所有格式的文档会静态转码成图片；
- * @method string getMinResolution() 获取转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+ * @method string getMinResolution() 获取注意: 该参数已废弃, 请使用 MinScaleResolution
+
+转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
 注意分辨率宽高中间为英文字母"xyz"的"x"
- * @method void setMinResolution(string $MinResolution) 设置转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+ * @method void setMinResolution(string $MinResolution) 设置注意: 该参数已废弃, 请使用 MinScaleResolution
+
+转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
 注意分辨率宽高中间为英文字母"xyz"的"x"
  * @method string getThumbnailResolution() 获取动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
@@ -56,6 +60,12 @@ tar.gz： 生成`.tar.gz`压缩包
 - 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码
 <br/>
 注意：对于PDF等静态文件转码，无论是正常优先级或者低优先级，最大只能支持200MB
+ * @method string getMinScaleResolution() 获取转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+
+注意分辨率宽高中间为英文字母"xyz"的"x"
+ * @method void setMinScaleResolution(string $MinScaleResolution) 设置转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+
+注意分辨率宽高中间为英文字母"xyz"的"x"
  */
 class CreateTranscodeRequest extends AbstractModel
 {
@@ -76,7 +86,9 @@ class CreateTranscodeRequest extends AbstractModel
     public $IsStaticPPT;
 
     /**
-     * @var string 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+     * @var string 注意: 该参数已废弃, 请使用 MinScaleResolution
+
+转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
 注意分辨率宽高中间为英文字母"xyz"的"x"
      */
@@ -110,11 +122,20 @@ tar.gz： 生成`.tar.gz`压缩包
     public $Priority;
 
     /**
+     * @var string 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+
+注意分辨率宽高中间为英文字母"xyz"的"x"
+     */
+    public $MinScaleResolution;
+
+    /**
      * @param integer $SdkAppId 客户的SdkAppId
      * @param string $Url 经过URL编码后的转码文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pdf，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pdf。为了提高URL解析的成功率，请对URL进行编码。
      * @param boolean $IsStaticPPT 是否为静态PPT，默认为False；
 如果IsStaticPPT为False，后缀名为.ppt或.pptx的文档会动态转码成HTML5页面，其他格式的文档会静态转码成图片；如果IsStaticPPT为True，所有格式的文档会静态转码成图片；
-     * @param string $MinResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+     * @param string $MinResolution 注意: 该参数已废弃, 请使用 MinScaleResolution
+
+转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
 注意分辨率宽高中间为英文字母"xyz"的"x"
      * @param string $ThumbnailResolution 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
@@ -128,6 +149,9 @@ tar.gz： 生成`.tar.gz`压缩包
 - 不填表示正常优先级转码，支持200MB文件（下载超时时间2分钟），500页以内的文档进行转码
 <br/>
 注意：对于PDF等静态文件转码，无论是正常优先级或者低优先级，最大只能支持200MB
+     * @param string $MinScaleResolution 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+
+注意分辨率宽高中间为英文字母"xyz"的"x"
      */
     function __construct()
     {
@@ -172,6 +196,10 @@ tar.gz： 生成`.tar.gz`压缩包
 
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
             $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("MinScaleResolution",$param) and $param["MinScaleResolution"] !== null) {
+            $this->MinScaleResolution = $param["MinScaleResolution"];
         }
     }
 }

@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReservedConcurrencyMem(integer $ReservedConcurrencyMem) 设置函数并发保留内存
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAsyncRunEnable() 获取函数异步属性，取值 TRUE 或者 FALSE
+ * @method void setAsyncRunEnable(string $AsyncRunEnable) 设置函数异步属性，取值 TRUE 或者 FALSE
+ * @method string getTraceEnable() 获取异步函数是否开启调用追踪，取值 TRUE 或者 FALSE
+ * @method void setTraceEnable(string $TraceEnable) 设置异步函数是否开启调用追踪，取值 TRUE 或者 FALSE
  */
 class FunctionInfo extends AbstractModel
 {
@@ -128,6 +132,16 @@ class FunctionInfo extends AbstractModel
     public $ReservedConcurrencyMem;
 
     /**
+     * @var string 函数异步属性，取值 TRUE 或者 FALSE
+     */
+    public $AsyncRunEnable;
+
+    /**
+     * @var string 异步函数是否开启调用追踪，取值 TRUE 或者 FALSE
+     */
+    public $TraceEnable;
+
+    /**
      * @param string $ModTime 修改时间
      * @param string $AddTime 创建时间
      * @param string $Runtime 运行时
@@ -144,6 +158,8 @@ class FunctionInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReservedConcurrencyMem 函数并发保留内存
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AsyncRunEnable 函数异步属性，取值 TRUE 或者 FALSE
+     * @param string $TraceEnable 异步函数是否开启调用追踪，取值 TRUE 或者 FALSE
      */
     function __construct()
     {
@@ -222,6 +238,14 @@ class FunctionInfo extends AbstractModel
 
         if (array_key_exists("ReservedConcurrencyMem",$param) and $param["ReservedConcurrencyMem"] !== null) {
             $this->ReservedConcurrencyMem = $param["ReservedConcurrencyMem"];
+        }
+
+        if (array_key_exists("AsyncRunEnable",$param) and $param["AsyncRunEnable"] !== null) {
+            $this->AsyncRunEnable = $param["AsyncRunEnable"];
+        }
+
+        if (array_key_exists("TraceEnable",$param) and $param["TraceEnable"] !== null) {
+            $this->TraceEnable = $param["TraceEnable"];
         }
     }
 }

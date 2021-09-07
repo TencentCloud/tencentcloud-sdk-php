@@ -139,6 +139,8 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 webrtc 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
  * @method Models\DescribeLiveDomainsResponse DescribeLiveDomains(Models\DescribeLiveDomainsRequest $req) 根据域名状态、类型等信息查询用户的域名信息。
  * @method Models\DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(Models\DescribeLiveForbidStreamListRequest $req) 获取禁推流列表。
+
+注意：该接口仅作为直播辅助查询接口，重要业务场景不可强依赖该接口。
  * @method Models\DescribeLivePackageInfoResponse DescribeLivePackageInfo(Models\DescribeLivePackageInfoRequest $req) 查询用户套餐包总量、使用量、剩余量、包状态、购买时间和过期时间等。
  * @method Models\DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(Models\DescribeLivePlayAuthKeyRequest $req) 查询播放鉴权key。
  * @method Models\DescribeLivePullStreamTasksResponse DescribeLivePullStreamTasks(Models\DescribeLivePullStreamTasksRequest $req) 查询使用 CreateLivePullStreamTask 接口创建的直播拉流任务。
@@ -152,13 +154,27 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveSnapshotTemplatesResponse DescribeLiveSnapshotTemplates(Models\DescribeLiveSnapshotTemplatesRequest $req) 获取截图模板列表。
  * @method Models\DescribeLiveStreamEventListResponse DescribeLiveStreamEventList(Models\DescribeLiveStreamEventListRequest $req) 用于查询推断流事件。<br>
 
-注意：该接口可通过使用IsFilter进行过滤，返回推流历史记录。
+注意：
+1. 该接口提供离线推断流记录查询功能，不可作为重要业务场景强依赖接口。
+2. 该接口可通过使用IsFilter进行过滤，返回推流历史记录。
  * @method Models\DescribeLiveStreamOnlineListResponse DescribeLiveStreamOnlineList(Models\DescribeLiveStreamOnlineListRequest $req) 返回正在直播中的流列表。适用于推流成功后查询在线流信息。
-注意：该接口仅适用于流数少于2万路的情况，对于流数较大用户请联系售后。
+
+注意：
+1. 该接口仅提供辅助查询在线流列表功能，业务重要场景不可强依赖该接口。
+2. 该接口仅适用于流数少于2万路的情况，对于流数较大用户请联系售后。
+
  * @method Models\DescribeLiveStreamPublishedListResponse DescribeLiveStreamPublishedList(Models\DescribeLiveStreamPublishedListRequest $req) 返回已经推过流的流列表。<br>
 注意：分页最多支持查询1万条记录，可通过调整查询时间范围来获取更多数据。
  * @method Models\DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(Models\DescribeLiveStreamPushInfoListRequest $req) 查询所有实时流的推流信息，包括客户端IP，服务端IP，帧率，码率，域名，开始推流时间。
- * @method Models\DescribeLiveStreamStateResponse DescribeLiveStreamState(Models\DescribeLiveStreamStateRequest $req) 返回直播中、无推流或者禁播等状态
+ * @method Models\DescribeLiveStreamStateResponse DescribeLiveStreamState(Models\DescribeLiveStreamStateRequest $req) 返回直播中、无推流或者禁播等状态。
+注意：该接口仅提供辅助查询流状态功能，业务重要场景不要强依赖该接口！
+
+使用建议：
+1. 去除将该接口的返回结果作为开播、关播等重要业务场景的依赖。
+2. 如业务需要该状态,可通过[推断流事件通知](/document/product/267/47025)进行存储维护直播间状态。
+3. 自行维护的直播间状态,可通过定时(>1 min)[查询直播中的流接口](/document/product/267/20472),进行状态校准。
+4. 如使用了流状态查询接口查询到流不活跃,可通过上述多种方案综合判定流状态。
+5. 接口查询时,如发生访问异常或解析异常等,可默认为活跃,减少对业务影响。
  * @method Models\DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(Models\DescribeLiveTranscodeDetailInfoRequest $req) 支持查询某天或某段时间的转码详细信息。
  * @method Models\DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(Models\DescribeLiveTranscodeRulesRequest $req) 获取转码规则列表
  * @method Models\DescribeLiveTranscodeTemplateResponse DescribeLiveTranscodeTemplate(Models\DescribeLiveTranscodeTemplateRequest $req) 获取单个转码模板。

@@ -49,6 +49,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
 * 可以指定内网IP地址申请，内网IP地址类型不能为主IP，主IP已存在，不能修改，内网IP必须要弹性网卡所在子网内，而且不能被占用。
 * 在弹性网卡上申请一个到多个辅助内网IP，接口会在弹性网卡所在子网网段内返回指定数量的辅助内网IP。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
  * @method Models\AssociateAddressResponse AssociateAddress(Models\AssociateAddressRequest $req) 本接口 (AssociateAddress) 用于将[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）绑定到实例或弹性网卡的指定内网 IP 上。
 * 将 EIP 绑定到实例（CVM）上，其本质是将 EIP 绑定到实例上主网卡的主内网 IP 上。
 * 将 EIP 绑定到主网卡的主内网IP上，绑定过程会把其上绑定的普通公网 IP 自动解绑并释放。
@@ -57,6 +59,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * EIP 如果欠费或被封堵，则不能被绑定。
 * 只有状态为 UNBIND 的 EIP 才能够被绑定。
  * @method Models\AssociateDhcpIpWithAddressIpResponse AssociateDhcpIpWithAddressIp(Models\AssociateDhcpIpWithAddressIpRequest $req) 本接口（AssociateDhcpIpWithAddressIp）用于DhcpIp绑定弹性公网IP（EIP）。<br />
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
  * @method Models\AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(Models\AssociateDirectConnectGatewayNatGatewayRequest $req) 将专线网关与NAT网关绑定，专线网关默认路由指向NAT网关
  * @method Models\AssociateNatGatewayAddressResponse AssociateNatGatewayAddress(Models\AssociateNatGatewayAddressRequest $req) 本接口(AssociateNatGatewayAddress)用于NAT网关绑定弹性IP（EIP）。
  * @method Models\AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnets(Models\AssociateNetworkAclSubnetsRequest $req) 本接口（AssociateNetworkAclSubnets）用于网络ACL关联vpc下的子网。
@@ -66,6 +70,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\AttachClassicLinkVpcResponse AttachClassicLinkVpc(Models\AttachClassicLinkVpcRequest $req) 本接口(AttachClassicLinkVpc)用于创建私有网络和基础网络设备互通。
 * 私有网络和基础网络设备必须在同一个地域。
 * 私有网络和基础网络的区别详见vpc产品文档-<a href="https://cloud.tencent.com/document/product/215/30720">私有网络与基础网络</a>。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
  * @method Models\AttachNetworkInterfaceResponse AttachNetworkInterface(Models\AttachNetworkInterfaceRequest $req) 本接口（AttachNetworkInterface）用于弹性网卡绑定云服务器。
 * 一个云服务器可以绑定多个弹性网卡，但只能绑定一个主网卡。更多限制信息详见<a href="https://cloud.tencent.com/document/product/576/18527">弹性网卡使用限制</a>。
 * 一个弹性网卡只能同时绑定一个云服务器。
@@ -91,6 +97,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
 * 创建弹性网卡同时可以绑定已有安全组。
 * 创建弹性网卡同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
  * @method Models\CreateAssistantCidrResponse CreateAssistantCidr(Models\CreateAssistantCidrRequest $req) 本接口(CreateAssistantCidr)用于批量创建辅助CIDR。（接口灰度中，如需使用请提工单。）
  * @method Models\CreateBandwidthPackageResponse CreateBandwidthPackage(Models\CreateBandwidthPackageRequest $req) 本接口 (CreateBandwidthPackage) 支持创建[设备带宽包](https://cloud.tencent.com/document/product/684/15245#bwptype)和[IP带宽包](https://cloud.tencent.com/document/product/684/15245#bwptype)。
  * @method Models\CreateCcnResponse CreateCcn(Models\CreateCcnRequest $req) 本接口（CreateCcn）用于创建云联网（CCN）。<br />
@@ -131,6 +139,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
 * 创建弹性网卡同时可以绑定已有安全组。
 * 创建弹性网卡同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
  * @method Models\CreateRouteTableResponse CreateRouteTable(Models\CreateRouteTableRequest $req) 本接口(CreateRouteTable)用于创建路由表。
 * 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
 * 创建路由表同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
@@ -193,6 +203,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreateVpcEndPointServiceResponse CreateVpcEndPointService(Models\CreateVpcEndPointServiceRequest $req) 创建终端节点服务。
  * @method Models\CreateVpcEndPointServiceWhiteListResponse CreateVpcEndPointServiceWhiteList(Models\CreateVpcEndPointServiceWhiteListRequest $req) 创建终端服务白名单。
  * @method Models\CreateVpnConnectionResponse CreateVpnConnection(Models\CreateVpnConnectionRequest $req) 本接口（CreateVpnConnection）用于创建VPN通道。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
  * @method Models\CreateVpnGatewayResponse CreateVpnGateway(Models\CreateVpnGatewayRequest $req) 本接口（CreateVpnGateway）用于创建VPN网关。
  * @method Models\CreateVpnGatewayRoutesResponse CreateVpnGatewayRoutes(Models\CreateVpnGatewayRoutesRequest $req) 创建路由型VPN网关的目的路由
  * @method Models\DeleteAddressTemplateResponse DeleteAddressTemplate(Models\DeleteAddressTemplateRequest $req) 本接口（DeleteAddressTemplate）用于删除IP地址模板
@@ -204,7 +216,9 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 删除云联网是不可逆的操作，请谨慎处理。
 
  * @method Models\DeleteCustomerGatewayResponse DeleteCustomerGateway(Models\DeleteCustomerGatewayRequest $req) 本接口（DeleteCustomerGateway）用于删除对端网关。
- * @method Models\DeleteDhcpIpResponse DeleteDhcpIp(Models\DeleteDhcpIpRequest $req) 本接口（DeleteDhcpIp）用于删除DhcpIp
+ * @method Models\DeleteDhcpIpResponse DeleteDhcpIp(Models\DeleteDhcpIpRequest $req) 本接口（DeleteDhcpIp）用于删除DhcpIp。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
  * @method Models\DeleteDirectConnectGatewayResponse DeleteDirectConnectGateway(Models\DeleteDirectConnectGatewayRequest $req) 本接口（DeleteDirectConnectGateway）用于删除专线网关。
 <li>如果是 NAT 网关，删除专线网关后，NAT 规则以及 ACL 策略都被清理了。</li>
 <li>删除专线网关后，系统会删除路由表中跟该专线网关相关的路由策略。</li>
@@ -357,6 +371,8 @@ LimitTypes取值范围：
  * @method Models\DetachCcnInstancesResponse DetachCcnInstances(Models\DetachCcnInstancesRequest $req) 本接口（DetachCcnInstances）用于从云联网实例中解关联指定的网络实例。<br />
 解关联网络实例后，相应的路由策略会一并删除。
  * @method Models\DetachClassicLinkVpcResponse DetachClassicLinkVpc(Models\DetachClassicLinkVpcRequest $req) 本接口(DetachClassicLinkVpc)用于删除私有网络和基础网络设备互通。
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
  * @method Models\DetachNetworkInterfaceResponse DetachNetworkInterface(Models\DetachNetworkInterfaceRequest $req) 本接口（DetachNetworkInterface）用于弹性网卡解绑云服务器。
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
  * @method Models\DisableCcnRoutesResponse DisableCcnRoutes(Models\DisableCcnRoutesRequest $req) 本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由
@@ -368,6 +384,8 @@ LimitTypes取值范围：
 * 只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
 * EIP 如果被封堵，则不能进行解绑定操作。
  * @method Models\DisassociateDhcpIpWithAddressIpResponse DisassociateDhcpIpWithAddressIp(Models\DisassociateDhcpIpWithAddressIpRequest $req) 本接口（DisassociateDhcpIpWithAddressIp）用于将DhcpIp已绑定的弹性公网IP（EIP）解除绑定。<br />
+>?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
+>
  * @method Models\DisassociateDirectConnectGatewayNatGatewayResponse DisassociateDirectConnectGatewayNatGateway(Models\DisassociateDirectConnectGatewayNatGatewayRequest $req) 将专线网关与NAT网关解绑，解绑之后，专线网关将不能通过NAT网关访问公网
  * @method Models\DisassociateNatGatewayAddressResponse DisassociateNatGatewayAddress(Models\DisassociateNatGatewayAddressRequest $req) 本接口（DisassociateNatGatewayAddress）用于NAT网关解绑弹性IP。
  * @method Models\DisassociateNetworkAclSubnetsResponse DisassociateNetworkAclSubnets(Models\DisassociateNetworkAclSubnetsRequest $req) 本接口（DisassociateNetworkAclSubnets）用于网络ACL解关联vpc下的子网。

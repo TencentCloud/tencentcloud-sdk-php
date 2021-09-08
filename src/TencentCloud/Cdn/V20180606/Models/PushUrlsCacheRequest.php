@@ -36,8 +36,10 @@ mainland：预热至境内节点
 overseas：预热至境外节点
 global：预热全球节点
 不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
- * @method string getLayer() 获取填写"middle"或不填充时预热至中间层节点
- * @method void setLayer(string $Layer) 设置填写"middle"或不填充时预热至中间层节点
+ * @method string getLayer() 获取填写"middle"或不填充时预热至中间层节点。
+注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
+ * @method void setLayer(string $Layer) 设置填写"middle"或不填充时预热至中间层节点。
+注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
  * @method boolean getParseM3U8() 获取是否递归解析m3u8文件中的ts分片预热
 注意事项：
 1. 该功能要求m3u8索引文件能直接请求获取
@@ -72,7 +74,8 @@ global：预热全球节点
     public $Area;
 
     /**
-     * @var string 填写"middle"或不填充时预热至中间层节点
+     * @var string 填写"middle"或不填充时预热至中间层节点。
+注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
      */
     public $Layer;
 
@@ -94,7 +97,8 @@ mainland：预热至境内节点
 overseas：预热至境外节点
 global：预热全球节点
 不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
-     * @param string $Layer 填写"middle"或不填充时预热至中间层节点
+     * @param string $Layer 填写"middle"或不填充时预热至中间层节点。
+注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
      * @param boolean $ParseM3U8 是否递归解析m3u8文件中的ts分片预热
 注意事项：
 1. 该功能要求m3u8索引文件能直接请求获取

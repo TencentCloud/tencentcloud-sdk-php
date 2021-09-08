@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteReservedConcurrencyConfig请求参数结构体
  *
- * @method string getFunctionName() 获取需要删除预置并发的函数的名称
- * @method void setFunctionName(string $FunctionName) 设置需要删除预置并发的函数的名称
+ * @method string getFunctionName() 获取需要删除最大独占配额的函数的名称
+ * @method void setFunctionName(string $FunctionName) 设置需要删除最大独占配额的函数的名称
  * @method string getNamespace() 获取函数所属命名空间，默认为default
  * @method void setNamespace(string $Namespace) 设置函数所属命名空间，默认为default
  */
 class DeleteReservedConcurrencyConfigRequest extends AbstractModel
 {
     /**
-     * @var string 需要删除预置并发的函数的名称
+     * @var string 需要删除最大独占配额的函数的名称
      */
     public $FunctionName;
 
@@ -38,7 +38,7 @@ class DeleteReservedConcurrencyConfigRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @param string $FunctionName 需要删除预置并发的函数的名称
+     * @param string $FunctionName 需要删除最大独占配额的函数的名称
      * @param string $Namespace 函数所属命名空间，默认为default
      */
     function __construct()

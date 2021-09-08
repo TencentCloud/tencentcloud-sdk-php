@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetReservedConcurrencyConfig请求参数结构体
  *
- * @method string getFunctionName() 获取需要获取预置并发详情的函数名称。
- * @method void setFunctionName(string $FunctionName) 设置需要获取预置并发详情的函数名称。
+ * @method string getFunctionName() 获取需要获取最大独占配额详情的函数名称。
+ * @method void setFunctionName(string $FunctionName) 设置需要获取最大独占配额详情的函数名称。
  * @method string getNamespace() 获取函数所在的命名空间，默认为default。
  * @method void setNamespace(string $Namespace) 设置函数所在的命名空间，默认为default。
  */
 class GetReservedConcurrencyConfigRequest extends AbstractModel
 {
     /**
-     * @var string 需要获取预置并发详情的函数名称。
+     * @var string 需要获取最大独占配额详情的函数名称。
      */
     public $FunctionName;
 
@@ -38,7 +38,7 @@ class GetReservedConcurrencyConfigRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @param string $FunctionName 需要获取预置并发详情的函数名称。
+     * @param string $FunctionName 需要获取最大独占配额详情的函数名称。
      * @param string $Namespace 函数所在的命名空间，默认为default。
      */
     function __construct()

@@ -22,20 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getVpcIds() 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
  * @method void setVpcIds(array $VpcIds) 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
- * @method array getFilters() 获取过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - String - （过滤条件）是否默认VPC。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - String - （过滤条件）是否默认VPC。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+ * @method array getFilters() 获取过滤条件，不支持同时指定VpcIds和Filters参数。
+支持的过滤条件如下：
+<li>vpc-name：VPC实例名称。</li>
+<li>is-default ：是否默认VPC。</li>
+<li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
+<li>cidr-block：VPC的CIDR。</li>
+<li>tag-key ：按照标签键进行过滤，非必填参数。</li>
+<li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>
+  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。
+ * @method void setFilters(array $Filters) 设置过滤条件，不支持同时指定VpcIds和Filters参数。
+支持的过滤条件如下：
+<li>vpc-name：VPC实例名称。</li>
+<li>is-default ：是否默认VPC。</li>
+<li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
+<li>cidr-block：VPC的CIDR。</li>
+<li>tag-key ：按照标签键进行过滤，非必填参数。</li>
+<li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>
+  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。
  * @method string getOffset() 获取偏移量，默认为0。
  * @method void setOffset(string $Offset) 设置偏移量，默认为0。
  * @method string getLimit() 获取返回数量，默认为20，最大值为100。
@@ -49,13 +53,15 @@ class DescribeVpcsRequest extends AbstractModel
     public $VpcIds;
 
     /**
-     * @var array 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - String - （过滤条件）是否默认VPC。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+     * @var array 过滤条件，不支持同时指定VpcIds和Filters参数。
+支持的过滤条件如下：
+<li>vpc-name：VPC实例名称。</li>
+<li>is-default ：是否默认VPC。</li>
+<li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
+<li>cidr-block：VPC的CIDR。</li>
+<li>tag-key ：按照标签键进行过滤，非必填参数。</li>
+<li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>
+  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。
      */
     public $Filters;
 
@@ -71,13 +77,15 @@ class DescribeVpcsRequest extends AbstractModel
 
     /**
      * @param array $VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
-     * @param array $Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-name - String - （过滤条件）VPC实例名称。</li>
-<li>is-default - String - （过滤条件）是否默认VPC。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）vpc的cidr。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+     * @param array $Filters 过滤条件，不支持同时指定VpcIds和Filters参数。
+支持的过滤条件如下：
+<li>vpc-name：VPC实例名称。</li>
+<li>is-default ：是否默认VPC。</li>
+<li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
+<li>cidr-block：VPC的CIDR。</li>
+<li>tag-key ：按照标签键进行过滤，非必填参数。</li>
+<li>tag:tag-key：按照标签键值对进行过滤，非必填参数。 其中 tag-key 请使用具体的标签键进行替换，可参考示例2。</li>
+  **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。
      * @param string $Offset 偏移量，默认为0。
      * @param string $Limit 返回数量，默认为20，最大值为100。
      */

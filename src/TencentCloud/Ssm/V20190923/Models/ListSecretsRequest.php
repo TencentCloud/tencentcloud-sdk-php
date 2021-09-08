@@ -52,6 +52,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretType(integer $SecretType) 设置0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
 2 -- 表示SSH密钥对凭据。
+ * @method string getProductName() 获取此参数仅在SecretType参数值为1时生效，
+当SecretType值为1时：
+如果ProductName值为空，则表示查询所有类型的云产品凭据
+如果ProductName值为Mysql，则表示查询Mysql数据库凭据
+如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+ * @method void setProductName(string $ProductName) 设置此参数仅在SecretType参数值为1时生效，
+当SecretType值为1时：
+如果ProductName值为空，则表示查询所有类型的云产品凭据
+如果ProductName值为Mysql，则表示查询Mysql数据库凭据
+如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
  */
 class ListSecretsRequest extends AbstractModel
 {
@@ -100,6 +110,15 @@ class ListSecretsRequest extends AbstractModel
     public $SecretType;
 
     /**
+     * @var string 此参数仅在SecretType参数值为1时生效，
+当SecretType值为1时：
+如果ProductName值为空，则表示查询所有类型的云产品凭据
+如果ProductName值为Mysql，则表示查询Mysql数据库凭据
+如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+     */
+    public $ProductName;
+
+    /**
      * @param integer $Offset 查询列表的起始位置，以0开始，不设置默认为0。
      * @param integer $Limit 单次查询返回的最大数量，0或不设置则使用默认值 20。
      * @param integer $OrderType 根据创建时间的排序方式，0或者不设置则使用降序排序， 1 表示升序排序。
@@ -116,6 +135,11 @@ class ListSecretsRequest extends AbstractModel
      * @param integer $SecretType 0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
 2 -- 表示SSH密钥对凭据。
+     * @param string $ProductName 此参数仅在SecretType参数值为1时生效，
+当SecretType值为1时：
+如果ProductName值为空，则表示查询所有类型的云产品凭据
+如果ProductName值为Mysql，则表示查询Mysql数据库凭据
+如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
      */
     function __construct()
     {
@@ -161,6 +185,10 @@ class ListSecretsRequest extends AbstractModel
 
         if (array_key_exists("SecretType",$param) and $param["SecretType"] !== null) {
             $this->SecretType = $param["SecretType"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
         }
     }
 }

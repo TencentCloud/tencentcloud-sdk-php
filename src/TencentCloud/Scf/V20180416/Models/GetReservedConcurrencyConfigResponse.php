@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetReservedConcurrencyConfig返回参数结构体
  *
- * @method integer getReservedMem() 获取该函数的保留并发内存。
+ * @method integer getReservedMem() 获取该函数的最大独占配额。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReservedMem(integer $ReservedMem) 设置该函数的保留并发内存。
+ * @method void setReservedMem(integer $ReservedMem) 设置该函数的最大独占配额。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GetReservedConcurrencyConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 该函数的保留并发内存。
+     * @var integer 该函数的最大独占配额。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReservedMem;
@@ -41,7 +41,7 @@ class GetReservedConcurrencyConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ReservedMem 该函数的保留并发内存。
+     * @param integer $ReservedMem 该函数的最大独占配额。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

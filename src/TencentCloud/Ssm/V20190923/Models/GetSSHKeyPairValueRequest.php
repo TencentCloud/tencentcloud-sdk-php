@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSecretName() 获取凭据名称，此凭据只能为SSH密钥对凭据类型。
  * @method void setSecretName(string $SecretName) 设置凭据名称，此凭据只能为SSH密钥对凭据类型。
+ * @method string getSSHKeyId() 获取密钥对ID，是云服务器中密钥对的唯一标识。
+ * @method void setSSHKeyId(string $SSHKeyId) 设置密钥对ID，是云服务器中密钥对的唯一标识。
  */
 class GetSSHKeyPairValueRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class GetSSHKeyPairValueRequest extends AbstractModel
     public $SecretName;
 
     /**
+     * @var string 密钥对ID，是云服务器中密钥对的唯一标识。
+     */
+    public $SSHKeyId;
+
+    /**
      * @param string $SecretName 凭据名称，此凭据只能为SSH密钥对凭据类型。
+     * @param string $SSHKeyId 密钥对ID，是云服务器中密钥对的唯一标识。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class GetSSHKeyPairValueRequest extends AbstractModel
         }
         if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
             $this->SecretName = $param["SecretName"];
+        }
+
+        if (array_key_exists("SSHKeyId",$param) and $param["SSHKeyId"] !== null) {
+            $this->SSHKeyId = $param["SSHKeyId"];
         }
     }
 }

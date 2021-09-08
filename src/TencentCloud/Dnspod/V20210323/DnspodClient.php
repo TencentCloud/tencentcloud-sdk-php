@@ -58,6 +58,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\ModifyRecordBatchResponse ModifyRecordBatch(Models\ModifyRecordBatchRequest $req) 批量修改记录
  * @method Models\ModifyRecordRemarkResponse ModifyRecordRemark(Models\ModifyRecordRemarkRequest $req) 设置记录备注
  * @method Models\ModifyRecordStatusResponse ModifyRecordStatus(Models\ModifyRecordStatusRequest $req) 修改解析记录的状态
+ * @method Models\ModifySubdomainStatusResponse ModifySubdomainStatus(Models\ModifySubdomainStatusRequest $req) 暂停子域名的解析记录
  */
 
 class DnspodClient extends AbstractClient

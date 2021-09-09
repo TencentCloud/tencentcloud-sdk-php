@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
  * @method string getStartTime() 获取开始时间，如“2019-09-10 12:13:14”。
  * @method void setStartTime(string $StartTime) 设置开始时间，如“2019-09-10 12:13:14”。
- * @method string getEndTime() 获取截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
- * @method void setEndTime(string $EndTime) 设置截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
+ * @method string getEndTime() 获取截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
+ * @method void setEndTime(string $EndTime) 设置截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
  * @method string getSortBy() 获取排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。
  * @method void setSortBy(string $SortBy) 设置排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。
  * @method string getOrderBy() 获取排序方式，支持ASC（升序）以及DESC（降序），默认为DESC。
@@ -52,7 +52,7 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
+     * @var string 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
      */
     public $EndTime;
 
@@ -89,7 +89,7 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例 ID 。
      * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”。
-     * @param string $EndTime 截止时间，如“2019-09-10 12:13:14”，截止时间与开始时间的间隔最大可为7天。
+     * @param string $EndTime 截止时间，如“2019-09-11 10:13:14”，截止时间与开始时间的间隔小于7天。
      * @param string $SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。
      * @param string $OrderBy 排序方式，支持ASC（升序）以及DESC（降序），默认为DESC。
      * @param integer $Limit 返回数量，默认为20，最大值为100。

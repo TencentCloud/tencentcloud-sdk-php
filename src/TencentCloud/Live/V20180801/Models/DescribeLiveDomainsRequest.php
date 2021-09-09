@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDelayLive(integer $IsDelayLive) 设置0 普通直播 1慢直播 默认0。
  * @method string getDomainPrefix() 获取域名前缀。
  * @method void setDomainPrefix(string $DomainPrefix) 设置域名前缀。
+ * @method integer getPlayType() 获取播放区域，只在 DomainType=1 时该参数有意义。
+1: 国内。
+2: 全球。
+3: 海外。
+ * @method void setPlayType(integer $PlayType) 设置播放区域，只在 DomainType=1 时该参数有意义。
+1: 国内。
+2: 全球。
+3: 海外。
  */
 class DescribeLiveDomainsRequest extends AbstractModel
 {
@@ -66,12 +74,24 @@ class DescribeLiveDomainsRequest extends AbstractModel
     public $DomainPrefix;
 
     /**
+     * @var integer 播放区域，只在 DomainType=1 时该参数有意义。
+1: 国内。
+2: 全球。
+3: 海外。
+     */
+    public $PlayType;
+
+    /**
      * @param integer $DomainStatus 域名状态过滤。0-停用，1-启用。
      * @param integer $DomainType 域名类型过滤。0-推流，1-播放。
      * @param integer $PageSize 分页大小，范围：10~100。默认10。
      * @param integer $PageNum 取第几页，范围：1~100000。默认1。
      * @param integer $IsDelayLive 0 普通直播 1慢直播 默认0。
      * @param string $DomainPrefix 域名前缀。
+     * @param integer $PlayType 播放区域，只在 DomainType=1 时该参数有意义。
+1: 国内。
+2: 全球。
+3: 海外。
      */
     function __construct()
     {
@@ -108,6 +128,10 @@ class DescribeLiveDomainsRequest extends AbstractModel
 
         if (array_key_exists("DomainPrefix",$param) and $param["DomainPrefix"] !== null) {
             $this->DomainPrefix = $param["DomainPrefix"];
+        }
+
+        if (array_key_exists("PlayType",$param) and $param["PlayType"] !== null) {
+            $this->PlayType = $param["PlayType"];
         }
     }
 }

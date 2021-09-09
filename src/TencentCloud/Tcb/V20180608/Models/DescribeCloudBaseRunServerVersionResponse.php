@@ -130,6 +130,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemSize(float $MemSize) 设置MEM 大小
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHasDockerfile() 获取是否有Dockerfile：0-default has, 1-has, 2-has not
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasDockerfile(integer $HasDockerfile) 设置是否有Dockerfile：0-default has, 1-has, 2-has not
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBaseImage() 获取基础镜像
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBaseImage(string $BaseImage) 设置基础镜像
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEntryPoint() 获取容器启动入口命令
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEntryPoint(string $EntryPoint) 设置容器启动入口命令
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRepoLanguage() 获取仓库语言
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRepoLanguage(string $RepoLanguage) 设置仓库语言
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -319,6 +335,30 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
     public $MemSize;
 
     /**
+     * @var integer 是否有Dockerfile：0-default has, 1-has, 2-has not
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasDockerfile;
+
+    /**
+     * @var string 基础镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BaseImage;
+
+    /**
+     * @var string 容器启动入口命令
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EntryPoint;
+
+    /**
+     * @var string 仓库语言
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RepoLanguage;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -378,6 +418,14 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
      * @param float $CpuSize CPU 大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MemSize MEM 大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HasDockerfile 是否有Dockerfile：0-default has, 1-has, 2-has not
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BaseImage 基础镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EntryPoint 容器启动入口命令
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RepoLanguage 仓库语言
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -520,6 +568,22 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
 
         if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
             $this->MemSize = $param["MemSize"];
+        }
+
+        if (array_key_exists("HasDockerfile",$param) and $param["HasDockerfile"] !== null) {
+            $this->HasDockerfile = $param["HasDockerfile"];
+        }
+
+        if (array_key_exists("BaseImage",$param) and $param["BaseImage"] !== null) {
+            $this->BaseImage = $param["BaseImage"];
+        }
+
+        if (array_key_exists("EntryPoint",$param) and $param["EntryPoint"] !== null) {
+            $this->EntryPoint = $param["EntryPoint"];
+        }
+
+        if (array_key_exists("RepoLanguage",$param) and $param["RepoLanguage"] !== null) {
+            $this->RepoLanguage = $param["RepoLanguage"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

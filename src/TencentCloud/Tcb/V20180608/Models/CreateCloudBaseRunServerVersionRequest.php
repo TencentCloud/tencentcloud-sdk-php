@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvId() 获取环境ID
  * @method void setEnvId(string $EnvId) 设置环境ID
- * @method string getUploadType() 获取枚举（package/repository/image)
- * @method void setUploadType(string $UploadType) 设置枚举（package/repository/image)
+ * @method string getUploadType() 获取枚举（package/repository/image/jar/war)
+ * @method void setUploadType(string $UploadType) 设置枚举（package/repository/image/jar/war)
  * @method integer getFlowRatio() 获取流量占比
  * @method void setFlowRatio(integer $FlowRatio) 设置流量占比
  * @method float getCpu() 获取Cpu的大小，单位：核
@@ -96,6 +96,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCreateJnsGw(integer $IsCreateJnsGw) 设置是否创建JnsGw 0未传默认创建 1创建 2不创建
  * @method array getServiceVolumeMounts() 获取数据卷挂载参数
  * @method void setServiceVolumeMounts(array $ServiceVolumeMounts) 设置数据卷挂载参数
+ * @method integer getHasDockerfile() 获取是否有Dockerfile：0-default has, 1-has, 2-has not
+ * @method void setHasDockerfile(integer $HasDockerfile) 设置是否有Dockerfile：0-default has, 1-has, 2-has not
+ * @method string getBaseImage() 获取基础镜像
+ * @method void setBaseImage(string $BaseImage) 设置基础镜像
+ * @method string getEntryPoint() 获取容器启动入口命令
+ * @method void setEntryPoint(string $EntryPoint) 设置容器启动入口命令
+ * @method string getRepoLanguage() 获取仓库语言
+ * @method void setRepoLanguage(string $RepoLanguage) 设置仓库语言
+ * @method string getUploadFilename() 获取用户实际上传文件名（仅UploadType为jar/war时必填）
+ * @method void setUploadFilename(string $UploadFilename) 设置用户实际上传文件名（仅UploadType为jar/war时必填）
  */
 class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -105,7 +115,7 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
     public $EnvId;
 
     /**
-     * @var string 枚举（package/repository/image)
+     * @var string 枚举（package/repository/image/jar/war)
      */
     public $UploadType;
 
@@ -290,8 +300,33 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
     public $ServiceVolumeMounts;
 
     /**
+     * @var integer 是否有Dockerfile：0-default has, 1-has, 2-has not
+     */
+    public $HasDockerfile;
+
+    /**
+     * @var string 基础镜像
+     */
+    public $BaseImage;
+
+    /**
+     * @var string 容器启动入口命令
+     */
+    public $EntryPoint;
+
+    /**
+     * @var string 仓库语言
+     */
+    public $RepoLanguage;
+
+    /**
+     * @var string 用户实际上传文件名（仅UploadType为jar/war时必填）
+     */
+    public $UploadFilename;
+
+    /**
      * @param string $EnvId 环境ID
-     * @param string $UploadType 枚举（package/repository/image)
+     * @param string $UploadType 枚举（package/repository/image/jar/war)
      * @param integer $FlowRatio 流量占比
      * @param float $Cpu Cpu的大小，单位：核
      * @param float $Mem Mem的大小，单位：G
@@ -328,6 +363,11 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param array $ServiceVolumes 服务磁盘挂载
      * @param integer $IsCreateJnsGw 是否创建JnsGw 0未传默认创建 1创建 2不创建
      * @param array $ServiceVolumeMounts 数据卷挂载参数
+     * @param integer $HasDockerfile 是否有Dockerfile：0-default has, 1-has, 2-has not
+     * @param string $BaseImage 基础镜像
+     * @param string $EntryPoint 容器启动入口命令
+     * @param string $RepoLanguage 仓库语言
+     * @param string $UploadFilename 用户实际上传文件名（仅UploadType为jar/war时必填）
      */
     function __construct()
     {
@@ -517,6 +557,26 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ServiceVolumeMounts, $obj);
             }
+        }
+
+        if (array_key_exists("HasDockerfile",$param) and $param["HasDockerfile"] !== null) {
+            $this->HasDockerfile = $param["HasDockerfile"];
+        }
+
+        if (array_key_exists("BaseImage",$param) and $param["BaseImage"] !== null) {
+            $this->BaseImage = $param["BaseImage"];
+        }
+
+        if (array_key_exists("EntryPoint",$param) and $param["EntryPoint"] !== null) {
+            $this->EntryPoint = $param["EntryPoint"];
+        }
+
+        if (array_key_exists("RepoLanguage",$param) and $param["RepoLanguage"] !== null) {
+            $this->RepoLanguage = $param["RepoLanguage"];
+        }
+
+        if (array_key_exists("UploadFilename",$param) and $param["UploadFilename"] !== null) {
+            $this->UploadFilename = $param["UploadFilename"];
         }
     }
 }

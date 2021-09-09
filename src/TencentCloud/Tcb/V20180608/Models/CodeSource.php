@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置coding项目ID，type为coding时需要填写
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectName() 获取coding项目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectName(string $ProjectName) 设置coding项目
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CodeSource extends AbstractModel
 {
@@ -114,6 +118,12 @@ class CodeSource extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string coding项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectName;
+
+    /**
      * @param string $Type 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 下载链接
@@ -131,6 +141,8 @@ class CodeSource extends AbstractModel
      * @param string $Branch 代码分支
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId coding项目ID，type为coding时需要填写
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectName coding项目
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +192,10 @@ class CodeSource extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
         }
     }
 }

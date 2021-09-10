@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetIp(string $TargetIp) 设置访问目的
  * @method string getProtocol() 获取协议
  * @method void setProtocol(string $Protocol) 设置协议
- * @method string getStrategy() 获取策略
- * @method void setStrategy(string $Strategy) 设置策略
+ * @method string getStrategy() 获取策略, 0：观察，1：阻断，2：放行
+ * @method void setStrategy(string $Strategy) 设置策略, 0：观察，1：阻断，2：放行
  * @method integer getSourceType() 获取访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
  * @method void setSourceType(integer $SourceType) 设置访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
  * @method integer getDirection() 获取方向，0：出站，1：入站
@@ -80,7 +80,7 @@ class RuleInfoData extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string 策略
+     * @var string 策略, 0：观察，1：阻断，2：放行
      */
     public $Strategy;
 
@@ -154,7 +154,7 @@ class RuleInfoData extends AbstractModel
      * @param string $SourceIp 访问源
      * @param string $TargetIp 访问目的
      * @param string $Protocol 协议
-     * @param string $Strategy 策略
+     * @param string $Strategy 策略, 0：观察，1：阻断，2：放行
      * @param integer $SourceType 访问源类型，1是IP，3是域名，4是IP地址模版，5是域名地址模版
      * @param integer $Direction 方向，0：出站，1：入站
      * @param string $Detail 描述

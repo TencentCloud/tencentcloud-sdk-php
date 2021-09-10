@@ -43,7 +43,7 @@ use TencentCloud\Iotvideoindustry\V20201201\Models as Models;
  * @method Models\DescribeGroupByPathResponse DescribeGroupByPath(Models\DescribeGroupByPathRequest $req) 根据分组路径查询分组
  * @method Models\DescribeGroupDevicesResponse DescribeGroupDevices(Models\DescribeGroupDevicesRequest $req) 本接口(DescribeGroupDevices)用于查询分组下的设备列表。
  * @method Models\DescribeGroupsResponse DescribeGroups(Models\DescribeGroupsRequest $req) 本接口(DescribeGroups)用于批量查询分组信息。
- * @method Models\DescribeIPCChannelsResponse DescribeIPCChannels(Models\DescribeIPCChannelsRequest $req) 获取设备下属通道
+ * @method Models\DescribeIPCChannelsResponse DescribeIPCChannels(Models\DescribeIPCChannelsRequest $req) 获取IPC设备下属通道
  * @method Models\DescribeRecordStreamResponse DescribeRecordStream(Models\DescribeRecordStreamRequest $req) 获取回放视频流(NVR录制用)
 RecordId和StartTime/EndTime互斥
 当存在RecordId时，StartTime和EndTime无效

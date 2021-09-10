@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectType(string $ProjectType) 设置项目类型: framework-oneclick,qci-extension-cicd
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
+ * @method string getCiId() 获取ci的id
+ * @method void setCiId(string $CiId) 设置ci的id
  */
 class DescribeCloudBaseProjectLatestVersionListRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeCloudBaseProjectLatestVersionListRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string ci的id
+     */
+    public $CiId;
+
+    /**
      * @param integer $Offset 偏移量
      * @param integer $PageSize 个数
      * @param string $EnvId 环境id, 非必填
      * @param string $ProjectName 项目名称, 非必填
      * @param string $ProjectType 项目类型: framework-oneclick,qci-extension-cicd
      * @param array $Tags 标签
+     * @param string $CiId ci的id
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeCloudBaseProjectLatestVersionListRequest extends AbstractModel
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = $param["Tags"];
+        }
+
+        if (array_key_exists("CiId",$param) and $param["CiId"] !== null) {
+            $this->CiId = $param["CiId"];
         }
     }
 }

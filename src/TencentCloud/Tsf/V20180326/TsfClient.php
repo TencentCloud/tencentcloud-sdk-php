@@ -88,7 +88,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeConfigSummaryResponse DescribeConfigSummary(Models\DescribeConfigSummaryRequest $req) 查询配置汇总列表
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 查询配置项列表
  * @method Models\DescribeContainerEventsResponse DescribeContainerEvents(Models\DescribeContainerEventsRequest $req) 获取容器事件列表
- * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req)  容器部署组详情
+ * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req)  容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
  * @method Models\DescribeContainerGroupsResponse DescribeContainerGroups(Models\DescribeContainerGroupsRequest $req) 容器部署组列表
  * @method Models\DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(Models\DescribeCreateGatewayApiStatusRequest $req) 查询一键导入API分组任务的状态
  * @method Models\DescribeDownloadInfoResponse DescribeDownloadInfo(Models\DescribeDownloadInfoRequest $req) TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。

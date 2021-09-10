@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIds(array $UserIds) 设置接收对象列表
  * @method array getGroupIds() 获取接收组列表
  * @method void setGroupIds(array $GroupIds) 设置接收组列表
+ * @method array getNoticeIds() 获取根据通知模板 id 过滤，空数组/不传则不过滤
+ * @method void setNoticeIds(array $NoticeIds) 设置根据通知模板 id 过滤，空数组/不传则不过滤
  */
 class DescribeAlarmNoticesRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeAlarmNoticesRequest extends AbstractModel
     public $GroupIds;
 
     /**
+     * @var array 根据通知模板 id 过滤，空数组/不传则不过滤
+     */
+    public $NoticeIds;
+
+    /**
      * @param string $Module 模块名，这里填“monitor”
      * @param integer $PageNumber 页码 最小为1
      * @param integer $PageSize 分页大小 1～200
@@ -96,6 +103,7 @@ class DescribeAlarmNoticesRequest extends AbstractModel
      * @param string $ReceiverType 根据接收人过滤告警通知模板需要选定通知用户类型 USER=用户 GROUP=用户组 传空=不按接收人过滤
      * @param array $UserIds 接收对象列表
      * @param array $GroupIds 接收组列表
+     * @param array $NoticeIds 根据通知模板 id 过滤，空数组/不传则不过滤
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeAlarmNoticesRequest extends AbstractModel
 
         if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
             $this->GroupIds = $param["GroupIds"];
+        }
+
+        if (array_key_exists("NoticeIds",$param) and $param["NoticeIds"] !== null) {
+            $this->NoticeIds = $param["NoticeIds"];
         }
     }
 }

@@ -122,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoDeployOnCodeChange(boolean $AutoDeployOnCodeChange) 设置是否私有仓库代码变更触发自动部署
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBuildPercent() 获取ci部署进度（%）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBuildPercent(integer $BuildPercent) 设置ci部署进度（%）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseProjectVersion extends AbstractModel
 {
@@ -261,6 +265,12 @@ class CloudBaseProjectVersion extends AbstractModel
     public $AutoDeployOnCodeChange;
 
     /**
+     * @var integer ci部署进度（%）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BuildPercent;
+
+    /**
      * @param string $Name 项目名
      * @param string $Sam SAM json
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,6 +321,8 @@ class CloudBaseProjectVersion extends AbstractModel
      * @param string $RepoUrl 私有仓库地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoDeployOnCodeChange 是否私有仓库代码变更触发自动部署
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BuildPercent ci部署进度（%）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -414,6 +426,10 @@ class CloudBaseProjectVersion extends AbstractModel
 
         if (array_key_exists("AutoDeployOnCodeChange",$param) and $param["AutoDeployOnCodeChange"] !== null) {
             $this->AutoDeployOnCodeChange = $param["AutoDeployOnCodeChange"];
+        }
+
+        if (array_key_exists("BuildPercent",$param) and $param["BuildPercent"] !== null) {
+            $this->BuildPercent = $param["BuildPercent"];
         }
     }
 }

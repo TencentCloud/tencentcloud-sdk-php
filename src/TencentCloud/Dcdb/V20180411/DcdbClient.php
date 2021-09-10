@@ -31,6 +31,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
 注意：相同用户名，不同Host是不同的账号，Readonly属性相同的账号之间才能复制权限。
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 本接口（CreateAccount）用于创建云数据库账号。一个实例可以创建多个不同的账号，相同的用户名+不同的host是不同的账号。
  * @method Models\CreateDCDBInstanceResponse CreateDCDBInstance(Models\CreateDCDBInstanceRequest $req) 本接口（CreateDCDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
+ * @method Models\CreateDedicatedClusterDCDBInstanceResponse CreateDedicatedClusterDCDBInstance(Models\CreateDedicatedClusterDCDBInstanceRequest $req) 创建独享集群DCDB实例
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 本接口（DescribeAccountPrivileges）用于查询云数据库账号权限。
 注意：注意：相同用户名，不同Host是不同的账号。

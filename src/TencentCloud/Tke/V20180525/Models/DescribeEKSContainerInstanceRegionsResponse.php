@@ -14,43 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBaselineRule返回参数结构体
+ * DescribeEKSContainerInstanceRegions返回参数结构体
  *
- * @method integer getTotalCount() 获取分页查询记录总数
- * @method void setTotalCount(integer $TotalCount) 设置分页查询记录总数
- * @method array getBaselineRuleList() 获取基线检测项列表
+ * @method array getRegions() 获取EKS Container Instance支持的地域信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBaselineRuleList(array $BaselineRuleList) 设置基线检测项列表
+ * @method void setRegions(array $Regions) 设置EKS Container Instance支持的地域信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getShowRuleRemark() 获取是否显示说明列：true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShowRuleRemark(boolean $ShowRuleRemark) 设置是否显示说明列：true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取总数
+ * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeBaselineRuleResponse extends AbstractModel
+class DescribeEKSContainerInstanceRegionsResponse extends AbstractModel
 {
     /**
-     * @var integer 分页查询记录总数
+     * @var array EKS Container Instance支持的地域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Regions;
+
+    /**
+     * @var integer 总数
      */
     public $TotalCount;
-
-    /**
-     * @var array 基线检测项列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $BaselineRuleList;
-
-    /**
-     * @var boolean 是否显示说明列：true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ShowRuleRemark;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -58,11 +48,9 @@ class DescribeBaselineRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 分页查询记录总数
-     * @param array $BaselineRuleList 基线检测项列表
+     * @param array $Regions EKS Container Instance支持的地域信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $ShowRuleRemark 是否显示说明列：true-是，false-否
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,21 +66,17 @@ class DescribeBaselineRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("BaselineRuleList",$param) and $param["BaselineRuleList"] !== null) {
-            $this->BaselineRuleList = [];
-            foreach ($param["BaselineRuleList"] as $key => $value){
-                $obj = new BaselineRuleInfo();
+        if (array_key_exists("Regions",$param) and $param["Regions"] !== null) {
+            $this->Regions = [];
+            foreach ($param["Regions"] as $key => $value){
+                $obj = new EksCiRegionInfo();
                 $obj->deserialize($value);
-                array_push($this->BaselineRuleList, $obj);
+                array_push($this->Regions, $obj);
             }
         }
 
-        if (array_key_exists("ShowRuleRemark",$param) and $param["ShowRuleRemark"] !== null) {
-            $this->ShowRuleRemark = $param["ShowRuleRemark"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

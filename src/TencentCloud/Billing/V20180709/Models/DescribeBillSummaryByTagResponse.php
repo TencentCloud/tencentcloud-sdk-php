@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSummaryOverview(array $SummaryOverview) 设置各标签值花费分布详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SummaryTotal getSummaryTotal() 获取总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSummaryTotal(SummaryTotal $SummaryTotal) 设置总数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,6 +47,12 @@ class DescribeBillSummaryByTagResponse extends AbstractModel
     public $SummaryOverview;
 
     /**
+     * @var SummaryTotal 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SummaryTotal;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -50,6 +60,8 @@ class DescribeBillSummaryByTagResponse extends AbstractModel
     /**
      * @param integer $Ready 数据是否准备好，0未准备好，1准备好
      * @param array $SummaryOverview 各标签值花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SummaryTotal $SummaryTotal 总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -77,6 +89,11 @@ class DescribeBillSummaryByTagResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SummaryOverview, $obj);
             }
+        }
+
+        if (array_key_exists("SummaryTotal",$param) and $param["SummaryTotal"] !== null) {
+            $this->SummaryTotal = new SummaryTotal();
+            $this->SummaryTotal->deserialize($param["SummaryTotal"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

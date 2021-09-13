@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWebPageServiceInfo返回参数结构体
  *
- * @method boolean getStatus() 获取是否已购服务
- * @method void setStatus(boolean $Status) 设置是否已购服务
+ * @method boolean getStatus() 获取是否已购服务：true-是，false-否
+ * @method void setStatus(boolean $Status) 设置是否已购服务：true-是，false-否
  * @method integer getUsedNum() 获取已使用授权数
  * @method void setUsedNum(integer $UsedNum) 设置已使用授权数
  * @method integer getResidueNum() 获取剩余授权数
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeWebPageServiceInfoResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否已购服务
+     * @var boolean 是否已购服务：true-是，false-否
      */
     public $Status;
 
@@ -94,7 +94,7 @@ class DescribeWebPageServiceInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Status 是否已购服务
+     * @param boolean $Status 是否已购服务：true-是，false-否
      * @param integer $UsedNum 已使用授权数
      * @param integer $ResidueNum 剩余授权数
      * @param integer $BuyNum 已购授权数

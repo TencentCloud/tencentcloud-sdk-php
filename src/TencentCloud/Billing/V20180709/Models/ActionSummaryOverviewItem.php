@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券金额
  * @method string getBillMonth() 获取账单月份，格式2019-08
  * @method void setBillMonth(string $BillMonth) 设置账单月份，格式2019-08
+ * @method string getTotalCost() 获取原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+ * @method void setTotalCost(string $TotalCost) 设置原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
  */
 class ActionSummaryOverviewItem extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ActionSummaryOverviewItem extends AbstractModel
     public $BillMonth;
 
     /**
+     * @var string 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+     */
+    public $TotalCost;
+
+    /**
      * @param string $ActionType 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
      * @param string $ActionTypeName 交易类型名称
      * @param string $RealTotalCost 实际花费
@@ -88,6 +95,7 @@ class ActionSummaryOverviewItem extends AbstractModel
      * @param string $IncentivePayAmount 赠送金金额
      * @param string $VoucherPayAmount 代金券金额
      * @param string $BillMonth 账单月份，格式2019-08
+     * @param string $TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ActionSummaryOverviewItem extends AbstractModel
 
         if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
             $this->BillMonth = $param["BillMonth"];
+        }
+
+        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
+            $this->TotalCost = $param["TotalCost"];
         }
     }
 }

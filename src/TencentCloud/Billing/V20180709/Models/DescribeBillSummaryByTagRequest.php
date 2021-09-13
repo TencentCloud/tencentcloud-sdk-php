@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) 设置分账标签键
  * @method string getPayerUin() 获取查询账单数据的用户UIN
  * @method void setPayerUin(string $PayerUin) 设置查询账单数据的用户UIN
+ * @method string getTagValue() 获取分账标签值
+ * @method void setTagValue(string $TagValue) 设置分账标签值
  */
 class DescribeBillSummaryByTagRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
     public $PayerUin;
 
     /**
+     * @var string 分账标签值
+     */
+    public $TagValue;
+
+    /**
      * @param string $BeginTime 目前必须和EndTime相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
      * @param string $EndTime 目前必须和BeginTime为相同月份，不支持跨月查询，且查询结果是整月数据，例如 BeginTime为2018-09，EndTime 为 2018-09，查询结果是 2018 年 9 月数据。
      * @param string $TagKey 分账标签键
      * @param string $PayerUin 查询账单数据的用户UIN
+     * @param string $TagValue 分账标签值
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
 
         if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
             $this->PayerUin = $param["PayerUin"];
+        }
+
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

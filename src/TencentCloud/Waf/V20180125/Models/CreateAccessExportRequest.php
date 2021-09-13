@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTo(integer $To) 设置要查询的日志的结束时间，Unix时间戳，单位ms
  * @method string getQuery() 获取日志导出检索语句
  * @method void setQuery(string $Query) 设置日志导出检索语句
- * @method integer getCount() 获取日志导出数量
- * @method void setCount(integer $Count) 设置日志导出数量
+ * @method integer getCount() 获取日志导出数量，最大值100w
+ * @method void setCount(integer $Count) 设置日志导出数量，最大值100w
  * @method string getFormat() 获取日志导出数据格式。json，csv，默认为json
  * @method void setFormat(string $Format) 设置日志导出数据格式。json，csv，默认为json
  * @method string getOrder() 获取日志导出时间排序。desc，asc，默认为desc
@@ -58,7 +58,7 @@ class CreateAccessExportRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var integer 日志导出数量
+     * @var integer 日志导出数量，最大值100w
      */
     public $Count;
 
@@ -77,7 +77,7 @@ class CreateAccessExportRequest extends AbstractModel
      * @param integer $From 要查询的日志的起始时间，Unix时间戳，单位ms
      * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
      * @param string $Query 日志导出检索语句
-     * @param integer $Count 日志导出数量
+     * @param integer $Count 日志导出数量，最大值100w
      * @param string $Format 日志导出数据格式。json，csv，默认为json
      * @param string $Order 日志导出时间排序。desc，asc，默认为desc
      */

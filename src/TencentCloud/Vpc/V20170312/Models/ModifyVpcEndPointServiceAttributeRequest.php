@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPCID。
  * @method string getEndPointServiceName() 获取终端节点服务名称。
  * @method void setEndPointServiceName(string $EndPointServiceName) 设置终端节点服务名称。
- * @method boolean getAutoAcceptFlag() 获取是否自动接受。
- * @method void setAutoAcceptFlag(boolean $AutoAcceptFlag) 设置是否自动接受。
+ * @method boolean getAutoAcceptFlag() 获取是否自动接受终端节点的连接请求。<ui><li>true：自动接受<li>false：不自动接受</ul>
+ * @method void setAutoAcceptFlag(boolean $AutoAcceptFlag) 设置是否自动接受终端节点的连接请求。<ui><li>true：自动接受<li>false：不自动接受</ul>
  * @method string getServiceInstanceId() 获取后端服务的ID，比如lb-xxx。
  * @method void setServiceInstanceId(string $ServiceInstanceId) 设置后端服务的ID，比如lb-xxx。
  */
@@ -49,7 +49,7 @@ class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel
     public $EndPointServiceName;
 
     /**
-     * @var boolean 是否自动接受。
+     * @var boolean 是否自动接受终端节点的连接请求。<ui><li>true：自动接受<li>false：不自动接受</ul>
      */
     public $AutoAcceptFlag;
 
@@ -62,7 +62,7 @@ class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel
      * @param string $EndPointServiceId 终端节点服务ID。
      * @param string $VpcId VPCID。
      * @param string $EndPointServiceName 终端节点服务名称。
-     * @param boolean $AutoAcceptFlag 是否自动接受。
+     * @param boolean $AutoAcceptFlag 是否自动接受终端节点的连接请求。<ui><li>true：自动接受<li>false：不自动接受</ul>
      * @param string $ServiceInstanceId 后端服务的ID，比如lb-xxx。
      */
     function __construct()

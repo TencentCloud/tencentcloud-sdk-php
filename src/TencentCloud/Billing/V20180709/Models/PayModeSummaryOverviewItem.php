@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金金额
  * @method string getVoucherPayAmount() 获取代金券金额
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券金额
+ * @method string getTotalCost() 获取原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+ * @method void setTotalCost(string $TotalCost) 设置原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
  */
 class PayModeSummaryOverviewItem extends AbstractModel
 {
@@ -80,6 +82,11 @@ class PayModeSummaryOverviewItem extends AbstractModel
     public $VoucherPayAmount;
 
     /**
+     * @var string 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+     */
+    public $TotalCost;
+
+    /**
      * @param string $PayMode 付费模式
      * @param string $PayModeName 付费模式名称
      * @param string $RealTotalCost 实际花费
@@ -88,6 +95,7 @@ class PayModeSummaryOverviewItem extends AbstractModel
      * @param string $CashPayAmount 现金金额
      * @param string $IncentivePayAmount 赠送金金额
      * @param string $VoucherPayAmount 代金券金额
+     * @param string $TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class PayModeSummaryOverviewItem extends AbstractModel
 
         if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
             $this->VoucherPayAmount = $param["VoucherPayAmount"];
+        }
+
+        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
+            $this->TotalCost = $param["TotalCost"];
         }
     }
 }

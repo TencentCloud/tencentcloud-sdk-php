@@ -27,6 +27,7 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribeDataLogUrlStatisticsResponse DescribeDataLogUrlStatistics(Models\DescribeDataLogUrlStatisticsRequest $req) 获取LogUrlStatistics信息
  * @method Models\DescribeDataPerformancePageResponse DescribeDataPerformancePage(Models\DescribeDataPerformancePageRequest $req) 获取PerformancePage信息
  * @method Models\DescribeErrorResponse DescribeError(Models\DescribeErrorRequest $req) 获取首页错误信息
+ * @method Models\DescribeLogListResponse DescribeLogList(Models\DescribeLogListRequest $req) 获取项目下的日志列表（实例创建的项目下的日志列表）
  */
 
 class RumClient extends AbstractClient

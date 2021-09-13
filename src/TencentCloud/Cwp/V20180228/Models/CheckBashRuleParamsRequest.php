@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(integer $EventId) 设置在事件列表中新增白名时需要提交事件ID
  * @method string getName() 获取填入的规则名称
  * @method void setName(string $Name) 设置填入的规则名称
- * @method string getRule() 获取用户填入的正则表达式
- * @method void setRule(string $Rule) 设置用户填入的正则表达式
+ * @method string getRule() 获取用户填入的正则表达式：“正则表达式“需与“提交EventId对应的命令内容”相匹配
+ * @method void setRule(string $Rule) 设置用户填入的正则表达式：“正则表达式“需与“提交EventId对应的命令内容”相匹配
  * @method integer getId() 获取编辑时传的规则id
  * @method void setId(integer $Id) 设置编辑时传的规则id
  */
@@ -49,7 +49,7 @@ class CheckBashRuleParamsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 用户填入的正则表达式
+     * @var string 用户填入的正则表达式：“正则表达式“需与“提交EventId对应的命令内容”相匹配
      */
     public $Rule;
 
@@ -62,7 +62,7 @@ class CheckBashRuleParamsRequest extends AbstractModel
      * @param string $CheckField 校验内容 Name或Rule ，两个都要校验时逗号分割
      * @param integer $EventId 在事件列表中新增白名时需要提交事件ID
      * @param string $Name 填入的规则名称
-     * @param string $Rule 用户填入的正则表达式
+     * @param string $Rule 用户填入的正则表达式：“正则表达式“需与“提交EventId对应的命令内容”相匹配
      * @param integer $Id 编辑时传的规则id
      */
     function __construct()

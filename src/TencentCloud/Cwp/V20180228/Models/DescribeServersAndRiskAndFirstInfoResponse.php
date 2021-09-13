@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddRiskFileCount(integer $AddRiskFileCount) 设置今日新增风险文件数
  * @method integer getServersCount() 获取受影响服务器台数
  * @method void setServersCount(integer $ServersCount) 设置受影响服务器台数
- * @method boolean getIsFirstCheck() 获取是否试用
- * @method void setIsFirstCheck(boolean $IsFirstCheck) 设置是否试用
+ * @method boolean getIsFirstCheck() 获取是否试用：true-是，false-否
+ * @method void setIsFirstCheck(boolean $IsFirstCheck) 设置是否试用：true-是，false-否
  * @method string getScanTime() 获取木马最近检测时间
  * @method void setScanTime(string $ScanTime) 设置木马最近检测时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,7 +51,7 @@ class DescribeServersAndRiskAndFirstInfoResponse extends AbstractModel
     public $ServersCount;
 
     /**
-     * @var boolean 是否试用
+     * @var boolean 是否试用：true-是，false-否
      */
     public $IsFirstCheck;
 
@@ -69,7 +69,7 @@ class DescribeServersAndRiskAndFirstInfoResponse extends AbstractModel
      * @param integer $RiskFileCount 风险文件数
      * @param integer $AddRiskFileCount 今日新增风险文件数
      * @param integer $ServersCount 受影响服务器台数
-     * @param boolean $IsFirstCheck 是否试用
+     * @param boolean $IsFirstCheck 是否试用：true-是，false-否
      * @param string $ScanTime 木马最近检测时间
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

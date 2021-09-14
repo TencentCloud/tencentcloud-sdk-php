@@ -70,6 +70,7 @@ use TencentCloud\Clb\V20180317\Models as Models;
  * @method Models\DescribeCustomizedConfigAssociateListResponse DescribeCustomizedConfigAssociateList(Models\DescribeCustomizedConfigAssociateListRequest $req) 拉取配置绑定的 server 或 location，如果 domain 存在，结果将根据 domain 过滤。或拉取配置绑定的 loadbalancer。
  * @method Models\DescribeCustomizedConfigListResponse DescribeCustomizedConfigList(Models\DescribeCustomizedConfigListRequest $req) 拉取个性化配置列表，返回用户 AppId 下指定类型的配置。
  * @method Models\DescribeExclusiveClustersResponse DescribeExclusiveClusters(Models\DescribeExclusiveClustersRequest $req) 查询集群信息列表，支持以集群类型、集群唯一ID、集群名字、集群标签、集群内vip、集群内负载均衡唯一id、集群网络类型、可用区等条件进行检索
+ * @method Models\DescribeLBListenersResponse DescribeLBListeners(Models\DescribeLBListenersRequest $req) 查询后端云主机或弹性网卡绑定的负载均衡，支持弹性网卡和cvm查询。
  * @method Models\DescribeListenersResponse DescribeListeners(Models\DescribeListenersRequest $req) DescribeListeners 接口可根据负载均衡器 ID、监听器的协议或端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回该负载均衡实例下的所有监听器。
  * @method Models\DescribeLoadBalancerListByCertIdResponse DescribeLoadBalancerListByCertId(Models\DescribeLoadBalancerListByCertIdRequest $req) 根据证书ID查询其在一个地域中所关联到负载均衡实例列表
  * @method Models\DescribeLoadBalancerTrafficResponse DescribeLoadBalancerTraffic(Models\DescribeLoadBalancerTrafficRequest $req) 查询账号下的高流量负载均衡，返回前10个负载均衡。如果是子账号登录，只返回子账号有权限的负载均衡。

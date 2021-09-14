@@ -146,6 +146,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepoLanguage(string $RepoLanguage) 设置仓库语言
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPolicyDetail() 获取自动扩缩容策略组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicyDetail(array $PolicyDetail) 设置自动扩缩容策略组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -359,6 +363,12 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
     public $RepoLanguage;
 
     /**
+     * @var array 自动扩缩容策略组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolicyDetail;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -426,6 +436,8 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
      * @param string $EntryPoint 容器启动入口命令
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepoLanguage 仓库语言
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PolicyDetail 自动扩缩容策略组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -584,6 +596,15 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
 
         if (array_key_exists("RepoLanguage",$param) and $param["RepoLanguage"] !== null) {
             $this->RepoLanguage = $param["RepoLanguage"];
+        }
+
+        if (array_key_exists("PolicyDetail",$param) and $param["PolicyDetail"] !== null) {
+            $this->PolicyDetail = [];
+            foreach ($param["PolicyDetail"] as $key => $value){
+                $obj = new HpaPolicy();
+                $obj->deserialize($value);
+                array_push($this->PolicyDetail, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

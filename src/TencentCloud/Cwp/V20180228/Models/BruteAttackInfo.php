@@ -66,9 +66,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBanStatus(integer $BanStatus) 设置阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEventType() 获取事件类型
+ * @method integer getEventType() 获取事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventType(integer $EventType) 设置事件类型
+ * @method void setEventType(integer $EventType) 设置事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取发生次数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -173,7 +173,7 @@ class BruteAttackInfo extends AbstractModel
     public $BanStatus;
 
     /**
-     * @var integer 事件类型
+     * @var integer 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventType;
@@ -244,7 +244,7 @@ class BruteAttackInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BanStatus 阻断状态：1-阻断成功；非1-阻断失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EventType 事件类型
+     * @param integer $EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 发生次数
 注意：此字段可能返回 null，表示取不到有效值。

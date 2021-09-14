@@ -64,6 +64,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
  * @method ExclusiveCluster getExclusiveCluster() 获取独占集群信息。若创建独占集群负载均衡实例，则此参数必填。
  * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) 设置独占集群信息。若创建独占集群负载均衡实例，则此参数必填。
+ * @method string getSlaType() 获取创建性能独享型CLB，传SLA。
+ * @method void setSlaType(string $SlaType) 设置创建性能独享型CLB，传SLA。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method boolean getSnatPro() 获取是否支持绑定跨地域/跨Vpc绑定IP的功能。
@@ -168,6 +170,11 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ExclusiveCluster;
 
     /**
+     * @var string 创建性能独享型CLB，传SLA。
+     */
+    public $SlaType;
+
+    /**
      * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public $ClientToken;
@@ -221,6 +228,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 </li></ul>
      * @param string $BandwidthPackageId 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
      * @param ExclusiveCluster $ExclusiveCluster 独占集群信息。若创建独占集群负载均衡实例，则此参数必填。
+     * @param string $SlaType 创建性能独享型CLB，传SLA。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param boolean $SnatPro 是否支持绑定跨地域/跨Vpc绑定IP的功能。
      * @param array $SnatIps 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
@@ -311,6 +319,10 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (array_key_exists("ExclusiveCluster",$param) and $param["ExclusiveCluster"] !== null) {
             $this->ExclusiveCluster = new ExclusiveCluster();
             $this->ExclusiveCluster->deserialize($param["ExclusiveCluster"]);
+        }
+
+        if (array_key_exists("SlaType",$param) and $param["SlaType"] !== null) {
+            $this->SlaType = $param["SlaType"];
         }
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {

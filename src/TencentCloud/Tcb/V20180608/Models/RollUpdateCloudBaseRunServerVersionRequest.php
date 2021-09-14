@@ -86,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerPath(string $ServerPath) 设置服务路径（只会第一次生效）
  * @method boolean getIsUpdateCls() 获取是否更新Cls
  * @method void setIsUpdateCls(boolean $IsUpdateCls) 设置是否更新Cls
+ * @method array getPolicyDetail() 获取自动扩缩容策略组
+ * @method void setPolicyDetail(array $PolicyDetail) 设置自动扩缩容策略组
  */
 class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -255,6 +257,11 @@ class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel
     public $IsUpdateCls;
 
     /**
+     * @var array 自动扩缩容策略组
+     */
+    public $PolicyDetail;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $VersionName 要替换的版本名称，可以为latest
      * @param string $UploadType 枚举（package/repository/image)
@@ -288,6 +295,7 @@ class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param string $OperatorRemark 操作备注
      * @param string $ServerPath 服务路径（只会第一次生效）
      * @param boolean $IsUpdateCls 是否更新Cls
+     * @param array $PolicyDetail 自动扩缩容策略组
      */
     function __construct()
     {
@@ -439,6 +447,15 @@ class RollUpdateCloudBaseRunServerVersionRequest extends AbstractModel
 
         if (array_key_exists("IsUpdateCls",$param) and $param["IsUpdateCls"] !== null) {
             $this->IsUpdateCls = $param["IsUpdateCls"];
+        }
+
+        if (array_key_exists("PolicyDetail",$param) and $param["PolicyDetail"] !== null) {
+            $this->PolicyDetail = [];
+            foreach ($param["PolicyDetail"] as $key => $value){
+                $obj = new HpaPolicy();
+                $obj->deserialize($value);
+                array_push($this->PolicyDetail, $obj);
+            }
         }
     }
 }

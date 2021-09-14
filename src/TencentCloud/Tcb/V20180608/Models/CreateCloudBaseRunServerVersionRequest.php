@@ -106,6 +106,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepoLanguage(string $RepoLanguage) 设置仓库语言
  * @method string getUploadFilename() 获取用户实际上传文件名（仅UploadType为jar/war时必填）
  * @method void setUploadFilename(string $UploadFilename) 设置用户实际上传文件名（仅UploadType为jar/war时必填）
+ * @method array getPolicyDetail() 获取自动扩缩容策略组
+ * @method void setPolicyDetail(array $PolicyDetail) 设置自动扩缩容策略组
  */
 class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 {
@@ -325,6 +327,11 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
     public $UploadFilename;
 
     /**
+     * @var array 自动扩缩容策略组
+     */
+    public $PolicyDetail;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $UploadType 枚举（package/repository/image/jar/war)
      * @param integer $FlowRatio 流量占比
@@ -368,6 +375,7 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
      * @param string $EntryPoint 容器启动入口命令
      * @param string $RepoLanguage 仓库语言
      * @param string $UploadFilename 用户实际上传文件名（仅UploadType为jar/war时必填）
+     * @param array $PolicyDetail 自动扩缩容策略组
      */
     function __construct()
     {
@@ -577,6 +585,15 @@ class CreateCloudBaseRunServerVersionRequest extends AbstractModel
 
         if (array_key_exists("UploadFilename",$param) and $param["UploadFilename"] !== null) {
             $this->UploadFilename = $param["UploadFilename"];
+        }
+
+        if (array_key_exists("PolicyDetail",$param) and $param["PolicyDetail"] !== null) {
+            $this->PolicyDetail = [];
+            foreach ($param["PolicyDetail"] as $key => $value){
+                $obj = new HpaPolicy();
+                $obj->deserialize($value);
+                array_push($this->PolicyDetail, $obj);
+            }
         }
     }
 }

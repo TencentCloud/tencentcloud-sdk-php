@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置0:正常状态， 1: 正在创建
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNatIp() 获取nat公网ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNatIp(string $NatIp) 设置nat公网ip
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatFwInstance extends AbstractModel
 {
@@ -68,6 +72,12 @@ class NatFwInstance extends AbstractModel
     public $Status;
 
     /**
+     * @var string nat公网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NatIp;
+
+    /**
      * @param string $NatinsId nat实例id
      * @param string $NatinsName nat实例名称
      * @param string $Region 实例所在地域
@@ -75,6 +85,8 @@ class NatFwInstance extends AbstractModel
      * @param integer $FwMode 0:新增模式，1:接入模式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 0:正常状态， 1: 正在创建
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NatIp nat公网ip
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -108,6 +120,10 @@ class NatFwInstance extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("NatIp",$param) and $param["NatIp"] !== null) {
+            $this->NatIp = $param["NatIp"];
         }
     }
 }

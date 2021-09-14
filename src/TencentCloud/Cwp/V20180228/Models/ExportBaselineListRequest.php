@@ -20,19 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportBaselineList请求参数结构体
  *
- * @method array getFilters() 获取过滤条件。
+ * @method array getFilters() 获取过滤条件：
 <li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 处理状态1已通过 0未通过</li>BaselineName 
+<li>Status - Uint64 - 事件状态：0-未通过，1-忽略，3-通过，5-检测中</li>
 <li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
+<li>AliasName- String - 服务器名称/服务器ip</li>
 <li>Uuid- String - 主机uuid</li>
- * @method void setFilters(array $Filters) 设置过滤条件。
+ * @method void setFilters(array $Filters) 设置过滤条件：
 <li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 处理状态1已通过 0未通过</li>BaselineName 
+<li>Status - Uint64 - 事件状态：0-未通过，1-忽略，3-通过，5-检测中</li>
 <li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
+<li>AliasName- String - 服务器名称/服务器ip</li>
 <li>Uuid- String - 主机uuid</li>
  * @method integer getIfDetail() 获取已废弃
  * @method void setIfDetail(integer $IfDetail) 设置已废弃
@@ -40,12 +38,11 @@ use TencentCloud\Common\AbstractModel;
 class ExportBaselineListRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件。
+     * @var array 过滤条件：
 <li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 处理状态1已通过 0未通过</li>BaselineName 
+<li>Status - Uint64 - 事件状态：0-未通过，1-忽略，3-通过，5-检测中</li>
 <li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
+<li>AliasName- String - 服务器名称/服务器ip</li>
 <li>Uuid- String - 主机uuid</li>
      */
     public $Filters;
@@ -56,12 +53,11 @@ class ExportBaselineListRequest extends AbstractModel
     public $IfDetail;
 
     /**
-     * @param array $Filters 过滤条件。
+     * @param array $Filters 过滤条件：
 <li>StrategyId- Uint64 - 基线策略id</li>
-<li>Status - Uint64 - 处理状态1已通过 0未通过</li>
-<li>Level - Uint64[] - 处理状态1已通过 0未通过</li>BaselineName 
+<li>Status - Uint64 - 事件状态：0-未通过，1-忽略，3-通过，5-检测中</li>
 <li>BaselineName  - String - 基线名称</li>
-<li>Quuid- String - 主机quuid</li>
+<li>AliasName- String - 服务器名称/服务器ip</li>
 <li>Uuid- String - 主机uuid</li>
      * @param integer $IfDetail 已废弃
      */

@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVodSubAppId(integer $VodSubAppId) 设置云点播子应用 Id。
  * @method string getLicenseId() 获取平台绑定的 license Id。
  * @method void setLicenseId(string $LicenseId) 设置平台绑定的 license Id。
+ * @method string getStatus() 获取平台状态，可取值为：
+<li>Normal：正常，可使用。；</li>
+<li>Stopped：已停用，暂无法使用；</li>
+<li>Expired：已过期，需要重新购买会员包。</li>
+ * @method void setStatus(string $Status) 设置平台状态，可取值为：
+<li>Normal：正常，可使用。；</li>
+<li>Stopped：已停用，暂无法使用；</li>
+<li>Expired：已过期，需要重新购买会员包。</li>
  * @method string getCreateTime() 获取创建时间，格式按照 ISO 8601 标准表示。
  * @method void setCreateTime(string $CreateTime) 设置创建时间，格式按照 ISO 8601 标准表示。
  * @method string getUpdateTime() 获取更新时间，格式按照 ISO 8601 标准表示。
@@ -56,6 +64,14 @@ class PlatformInfo extends AbstractModel
     public $LicenseId;
 
     /**
+     * @var string 平台状态，可取值为：
+<li>Normal：正常，可使用。；</li>
+<li>Stopped：已停用，暂无法使用；</li>
+<li>Expired：已过期，需要重新购买会员包。</li>
+     */
+    public $Status;
+
+    /**
      * @var string 创建时间，格式按照 ISO 8601 标准表示。
      */
     public $CreateTime;
@@ -70,6 +86,10 @@ class PlatformInfo extends AbstractModel
      * @param string $Description 平台描述。
      * @param integer $VodSubAppId 云点播子应用 Id。
      * @param string $LicenseId 平台绑定的 license Id。
+     * @param string $Status 平台状态，可取值为：
+<li>Normal：正常，可使用。；</li>
+<li>Stopped：已停用，暂无法使用；</li>
+<li>Expired：已过期，需要重新购买会员包。</li>
      * @param string $CreateTime 创建时间，格式按照 ISO 8601 标准表示。
      * @param string $UpdateTime 更新时间，格式按照 ISO 8601 标准表示。
      */
@@ -100,6 +120,10 @@ class PlatformInfo extends AbstractModel
 
         if (array_key_exists("LicenseId",$param) and $param["LicenseId"] !== null) {
             $this->LicenseId = $param["LicenseId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>FAIL：失败。</li>
  * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。
- * @method integer getLimit() 获取分页返回的记录条数，默认值：10。
- * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：10。
+ * @method integer getLimit() 获取分页返回的记录条数，默认值：10。最大值：20。
+ * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：10。最大值：20。
  * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
  * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
  */
@@ -75,7 +75,7 @@ class DescribeTasksRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页返回的记录条数，默认值：10。
+     * @var integer 分页返回的记录条数，默认值：10。最大值：20。
      */
     public $Limit;
 
@@ -94,7 +94,7 @@ class DescribeTasksRequest extends AbstractModel
 <li>SUCCESS：成功；</li>
 <li>FAIL：失败。</li>
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。
-     * @param integer $Limit 分页返回的记录条数，默认值：10。
+     * @param integer $Limit 分页返回的记录条数，默认值：10。最大值：20。
      * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
      */
     function __construct()

@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskInfo(array $RiskInfo) 设置扩展字段，对风险类型的说明
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOtherModelScores() 获取多模型返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOtherModelScores(array $OtherModelScores) 设置多模型返回结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCode() 获取业务侧错误码。成功时返回0，错误时返回非0值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置业务侧错误码。成功时返回0，错误时返回非0值
@@ -74,6 +78,12 @@ class FinanceAntiFraudRecord extends AbstractModel
     public $RiskInfo;
 
     /**
+     * @var array 多模型返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OtherModelScores;
+
+    /**
      * @var string 业务侧错误码。成功时返回0，错误时返回非0值
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -94,6 +104,8 @@ class FinanceAntiFraudRecord extends AbstractModel
      * @param string $RiskScore 评分0~100;值越高 欺诈可能性越大
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RiskInfo 扩展字段，对风险类型的说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OtherModelScores 多模型返回结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 业务侧错误码。成功时返回0，错误时返回非0值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,6 +144,15 @@ class FinanceAntiFraudRecord extends AbstractModel
                 $obj = new RiskDetailInfo();
                 $obj->deserialize($value);
                 array_push($this->RiskInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("OtherModelScores",$param) and $param["OtherModelScores"] !== null) {
+            $this->OtherModelScores = [];
+            foreach ($param["OtherModelScores"] as $key => $value){
+                $obj = new FinanceOtherModelScores();
+                $obj->deserialize($value);
+                array_push($this->OtherModelScores, $obj);
             }
         }
 

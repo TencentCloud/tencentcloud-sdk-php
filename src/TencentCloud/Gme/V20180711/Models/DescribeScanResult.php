@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Start: 任务开始</li>
 <li>Success: 成功结束</li>
 <li>Error: 异常</li>
+ * @method integer getBizId() 获取提交检测的应用 ID
+ * @method void setBizId(integer $BizId) 设置提交检测的应用 ID
  */
 class DescribeScanResult extends AbstractModel
 {
@@ -123,6 +125,11 @@ class DescribeScanResult extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 提交检测的应用 ID
+     */
+    public $BizId;
+
+    /**
      * @param integer $Code 业务返回码
      * @param string $DataId 数据唯一 ID
      * @param integer $ScanFinishTime 检测完成的时间戳
@@ -140,6 +147,7 @@ class DescribeScanResult extends AbstractModel
 <li>Start: 任务开始</li>
 <li>Success: 成功结束</li>
 <li>Error: 异常</li>
+     * @param integer $BizId 提交检测的应用 ID
      */
     function __construct()
     {
@@ -205,6 +213,10 @@ class DescribeScanResult extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
+            $this->BizId = $param["BizId"];
         }
     }
 }

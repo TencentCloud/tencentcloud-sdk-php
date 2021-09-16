@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，格式如：mssql-3l3fgqn7
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：mssql-3l3fgqn7
- * @method integer getBackupId() 获取要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
- * @method void setBackupId(integer $BackupId) 设置要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
  * @method string getBackupName() 获取修改的备份名称
  * @method void setBackupName(string $BackupName) 设置修改的备份名称
+ * @method integer getBackupId() 获取要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
+ * @method void setBackupId(integer $BackupId) 设置要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
+ * @method string getGroupId() 获取备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+ BackupId 和 GroupId 同时存在，按照BackupId进行修改。
+ * @method void setGroupId(string $GroupId) 设置备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+ BackupId 和 GroupId 同时存在，按照BackupId进行修改。
  */
 class ModifyBackupNameRequest extends AbstractModel
 {
@@ -35,19 +39,27 @@ class ModifyBackupNameRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
-     */
-    public $BackupId;
-
-    /**
      * @var string 修改的备份名称
      */
     public $BackupName;
 
     /**
+     * @var integer 要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
+     */
+    public $BackupId;
+
+    /**
+     * @var string 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+ BackupId 和 GroupId 同时存在，按照BackupId进行修改。
+     */
+    public $GroupId;
+
+    /**
      * @param string $InstanceId 实例ID，格式如：mssql-3l3fgqn7
-     * @param integer $BackupId 要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
      * @param string $BackupName 修改的备份名称
+     * @param integer $BackupId 要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
+     * @param string $GroupId 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+ BackupId 和 GroupId 同时存在，按照BackupId进行修改。
      */
     function __construct()
     {
@@ -66,12 +78,16 @@ class ModifyBackupNameRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
+        if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
+            $this->BackupName = $param["BackupName"];
+        }
+
         if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
             $this->BackupId = $param["BackupId"];
         }
 
-        if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
-            $this->BackupName = $param["BackupName"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

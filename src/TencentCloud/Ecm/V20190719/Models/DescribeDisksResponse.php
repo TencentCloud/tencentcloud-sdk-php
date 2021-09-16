@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Partners\V20180321\Models;
+namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClientBaseInfo返回参数结构体
+ * DescribeDisks返回参数结构体
  *
- * @method array getClientBaseSet() 获取代客基础信息数组
- * @method void setClientBaseSet(array $ClientBaseSet) 设置代客基础信息数组
- * @method integer getTotalCount() 获取符合条件的代客数
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的代客数
+ * @method integer getTotalCount() 获取符合条件的云硬盘数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的云硬盘数量。
+ * @method array getDiskSet() 获取云硬盘的详细信息列表。
+ * @method void setDiskSet(array $DiskSet) 设置云硬盘的详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeClientBaseInfoResponse extends AbstractModel
+class DescribeDisksResponse extends AbstractModel
 {
     /**
-     * @var array 代客基础信息数组
-     */
-    public $ClientBaseSet;
-
-    /**
-     * @var integer 符合条件的代客数
+     * @var integer 符合条件的云硬盘数量。
      */
     public $TotalCount;
+
+    /**
+     * @var array 云硬盘的详细信息列表。
+     */
+    public $DiskSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeClientBaseInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ClientBaseSet 代客基础信息数组
-     * @param integer $TotalCount 符合条件的代客数
+     * @param integer $TotalCount 符合条件的云硬盘数量。
+     * @param array $DiskSet 云硬盘的详细信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,17 @@ class DescribeClientBaseInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientBaseSet",$param) and $param["ClientBaseSet"] !== null) {
-            $this->ClientBaseSet = [];
-            foreach ($param["ClientBaseSet"] as $key => $value){
-                $obj = new ClientBaseElem();
-                $obj->deserialize($value);
-                array_push($this->ClientBaseSet, $obj);
-            }
-        }
-
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("DiskSet",$param) and $param["DiskSet"] !== null) {
+            $this->DiskSet = [];
+            foreach ($param["DiskSet"] as $key => $value){
+                $obj = new Disk();
+                $obj->deserialize($value);
+                array_push($this->DiskSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

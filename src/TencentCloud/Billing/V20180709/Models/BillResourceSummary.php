@@ -55,7 +55,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTotalCost() 获取原价，单位为元
  * @method void setTotalCost(string $TotalCost) 设置原价，单位为元
  * @method string getDiscount() 获取折扣率
+当聚合之后折扣不唯一或者合同价的情况下，返回“-”
  * @method void setDiscount(string $Discount) 设置折扣率
+当聚合之后折扣不唯一或者合同价的情况下，返回“-”
  * @method string getReduceType() 获取优惠类型
  * @method void setReduceType(string $ReduceType) 设置优惠类型
  * @method string getRealTotalCost() 获取优惠后总价，单位为元
@@ -178,6 +180,7 @@ class BillResourceSummary extends AbstractModel
 
     /**
      * @var string 折扣率
+当聚合之后折扣不唯一或者合同价的情况下，返回“-”
      */
     public $Discount;
 
@@ -276,6 +279,7 @@ class BillResourceSummary extends AbstractModel
      * @param string $ExtendField2 扩展字段2
      * @param string $TotalCost 原价，单位为元
      * @param string $Discount 折扣率
+当聚合之后折扣不唯一或者合同价的情况下，返回“-”
      * @param string $ReduceType 优惠类型
      * @param string $RealTotalCost 优惠后总价，单位为元
      * @param string $VoucherPayAmount 代金券支付金额，单位为元

@@ -47,6 +47,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于拉取实例账户列表。
  * @method Models\DescribeBackupByFlowIdResponse DescribeBackupByFlowId(Models\DescribeBackupByFlowIdRequest $req) 本接口(DescribeBackupByFlowId)用于通过备份创建流程的ID查询创建的备份详情，流程ID可从接口CreateBackup中获得。
  * @method Models\DescribeBackupCommandResponse DescribeBackupCommand(Models\DescribeBackupCommandRequest $req) 本接口（DescribeBackupCommand）用于查询以规范的格式创建备份的命令。
+ * @method Models\DescribeBackupFilesResponse DescribeBackupFiles(Models\DescribeBackupFilesRequest $req) 本接口(DescribeBackupFiles)用于在非打包备份模式下单个库对应的备份文件
  * @method Models\DescribeBackupMigrationResponse DescribeBackupMigration(Models\DescribeBackupMigrationRequest $req) 本接口（DescribeBackupMigration）用于创建增量备份导入任务。
  * @method Models\DescribeBackupUploadSizeResponse DescribeBackupUploadSize(Models\DescribeBackupUploadSizeRequest $req) 本接口（DescribeBackupUploadSize）用于查询上传的备份文件大小。在备份上传类型是COS_UPLOAD(备份放在业务的对象存储上)时有效。
  * @method Models\DescribeBackupsResponse DescribeBackups(Models\DescribeBackupsRequest $req) 本接口(DescribeBackups)用于查询备份列表。
@@ -84,7 +85,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyAccountPrivilegeResponse ModifyAccountPrivilege(Models\ModifyAccountPrivilegeRequest $req) 本接口（ModifyAccountPrivilege）用于修改实例账户权限。
  * @method Models\ModifyAccountRemarkResponse ModifyAccountRemark(Models\ModifyAccountRemarkRequest $req) 本接口（ModifyAccountRemark）用于修改账户备注。
  * @method Models\ModifyBackupMigrationResponse ModifyBackupMigration(Models\ModifyBackupMigrationRequest $req) 本接口（ModifyBackupMigration）用于修改备份导入任务。
- * @method Models\ModifyBackupNameResponse ModifyBackupName(Models\ModifyBackupNameRequest $req) 本接口(ModifyBackupName)用于修改备份名称。
+ * @method Models\ModifyBackupNameResponse ModifyBackupName(Models\ModifyBackupNameRequest $req) 本接口(ModifyBackupName)用于修改备份任务名称。
  * @method Models\ModifyBackupStrategyResponse ModifyBackupStrategy(Models\ModifyBackupStrategyRequest $req) 本接口（ModifyBackupStrategy）用于修改备份策略
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) 本接口（ModifyDBInstanceName）用于修改实例名字。
  * @method Models\ModifyDBInstanceNetworkResponse ModifyDBInstanceNetwork(Models\ModifyDBInstanceNetworkRequest $req) 本接口（ModifyDBInstanceNetwork）用于修改运行中实例的网络，仅支持从VPC网络到VPC网络的转换

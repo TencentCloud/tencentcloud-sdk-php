@@ -31,10 +31,19 @@ use TencentCloud\Ecm\V20190719\Models as Models;
 将 EIP 绑定到指定网卡的内网 IP上，内网IP已经绑定了EIP或普通公网IP，则反馈失败。必须先解绑该 EIP，才能再绑定新的。
 只有状态为 UNBIND 的 EIP 才能够绑定内网IP。
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 绑定安全组
+ * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) 本接口（AttachDisks）用于挂载云硬盘。
+ 
+* 支持批量操作，将多块云盘挂载到同一云主机。如果多个云盘中存在不允许挂载的云盘，则操作不执行，返回特定的错误码。
+* 本接口为异步接口，当挂载云盘的请求成功返回时，表示后台已发起挂载云盘的操作，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHING”变为“ATTACHED”，则为挂载成功。
  * @method Models\AttachNetworkInterfaceResponse AttachNetworkInterface(Models\AttachNetworkInterfaceRequest $req) 弹性网卡绑定云主机
  * @method Models\BatchDeregisterTargetsResponse BatchDeregisterTargets(Models\BatchDeregisterTargetsRequest $req) 批量解绑后端服务。
  * @method Models\BatchModifyTargetWeightResponse BatchModifyTargetWeight(Models\BatchModifyTargetWeightRequest $req) 批量修改监听器绑定的后端机器的转发权重。
  * @method Models\BatchRegisterTargetsResponse BatchRegisterTargets(Models\BatchRegisterTargetsRequest $req) 批量绑定后端目标。
+ * @method Models\CreateDisksResponse CreateDisks(Models\CreateDisksRequest $req) 本接口（CreateDisks）用于创建云硬盘。
+
+* 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。
+* 本接口支持传入数据盘快照来创建云盘，实现将快照数据复制到新购云盘上。
+* 本接口为异步接口，当创建请求下发成功后会返回一个新建的云盘ID列表，此时云盘的创建并未立即完成。可以通过调用[DescribeDisks](/document/product/362/16315)接口根据DiskId查询对应云盘，如果能查到云盘，且状态为'UNATTACHED'或'ATTACHED'，则表示创建成功。
  * @method Models\CreateHaVipResponse CreateHaVip(Models\CreateHaVipRequest $req) 本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
  * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
  * @method Models\CreateListenerResponse CreateListener(Models\CreateListenerRequest $req) 创建负载均衡监听器。
@@ -73,6 +82,10 @@ use TencentCloud\Ecm\V20190719\Models as Models;
 安全组实例ID如果在其他安全组的规则中被引用，则无法直接删除。这种情况下，需要先进行规则修改，再删除安全组。
 删除的安全组无法再找回，请谨慎调用。
  * @method Models\DeleteSecurityGroupPoliciesResponse DeleteSecurityGroupPolicies(Models\DeleteSecurityGroupPoliciesRequest $req) SecurityGroupPolicySet.Version 用于指定要操作的安全组的版本。传入 Version 版本号若不等于当前安全组的最新版本，将返回失败；若不传 Version 则直接删除指定PolicyIndex的规则。
+ * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) 本接口（DeleteSnapshots）用于删除快照。
+
+* 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
+* 支持批量操作。如果多个快照存在无法删除的快照，则操作不执行，以返回特定的错误码返回。
  * @method Models\DeleteSubnetResponse DeleteSubnet(Models\DeleteSubnetRequest $req) 删除子网，若子网为可用区下的默认子网，则默认子网会回退到系统自动创建的默认子网，非用户最新创建的子网。若默认子网不满足需求，可调用设置默认子网接口设置。
  * @method Models\DeleteVpcResponse DeleteVpc(Models\DeleteVpcRequest $req) 删除私有网络
  * @method Models\DescribeAddressQuotaResponse DescribeAddressQuota(Models\DescribeAddressQuotaRequest $req) 查询您账户的弹性公网IP（简称 EIP）在当前地域的配额信息
@@ -81,6 +94,10 @@ use TencentCloud\Ecm\V20190719\Models as Models;
  * @method Models\DescribeConfigResponse DescribeConfig(Models\DescribeConfigRequest $req) 获取带宽硬盘等数据的限制
  * @method Models\DescribeCustomImageTaskResponse DescribeCustomImageTask(Models\DescribeCustomImageTaskRequest $req) 查询导入镜像任务
  * @method Models\DescribeDefaultSubnetResponse DescribeDefaultSubnet(Models\DescribeDefaultSubnetRequest $req) 查询可用区的默认子网
+ * @method Models\DescribeDisksResponse DescribeDisks(Models\DescribeDisksRequest $req) 本接口（DescribeDisks）用于查询云硬盘列表。
+
+* 可以根据云硬盘ID、云硬盘类型或者云硬盘状态等信息来查询云硬盘的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
+* 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的云硬盘列表。
  * @method Models\DescribeHaVipsResponse DescribeHaVips(Models\DescribeHaVipsRequest $req) 用于查询高可用虚拟IP（HAVIP）列表。
  * @method Models\DescribeImageResponse DescribeImage(Models\DescribeImageRequest $req) 展示镜像列表
  * @method Models\DescribeImportImageOsResponse DescribeImportImageOs(Models\DescribeImportImageOsRequest $req) 查询外部导入镜像支持的OS列表
@@ -104,12 +121,20 @@ use TencentCloud\Ecm\V20190719\Models as Models;
  * @method Models\DescribeSecurityGroupLimitsResponse DescribeSecurityGroupLimits(Models\DescribeSecurityGroupLimitsRequest $req) 查询用户安全组配额
  * @method Models\DescribeSecurityGroupPoliciesResponse DescribeSecurityGroupPolicies(Models\DescribeSecurityGroupPoliciesRequest $req) 查询安全组规则
  * @method Models\DescribeSecurityGroupsResponse DescribeSecurityGroups(Models\DescribeSecurityGroupsRequest $req) 查看安全组
+ * @method Models\DescribeSnapshotsResponse DescribeSnapshots(Models\DescribeSnapshotsRequest $req) 本接口（DescribeSnapshots）用于查询快照的详细信息。
+
+* 根据快照ID、创建快照的云硬盘ID、创建快照的云硬盘类型等对结果进行过滤，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
+*  如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的快照列表。
  * @method Models\DescribeSubnetsResponse DescribeSubnets(Models\DescribeSubnetsRequest $req) 查询子网列表
  * @method Models\DescribeTargetHealthResponse DescribeTargetHealth(Models\DescribeTargetHealthRequest $req) 获取负载均衡后端服务的健康检查状态。
  * @method Models\DescribeTargetsResponse DescribeTargets(Models\DescribeTargetsRequest $req) 查询负载均衡绑定的后端服务列表。
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询EIP异步任务执行结果
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 本接口(DescribeTaskStatus)用于获取异步任务状态
  * @method Models\DescribeVpcsResponse DescribeVpcs(Models\DescribeVpcsRequest $req) 查询私有网络列表
+ * @method Models\DetachDisksResponse DetachDisks(Models\DetachDisksRequest $req) 本接口（DetachDisks）用于卸载云硬盘。
+
+* 支持批量操作，卸载挂载在同一主机上的多块云盘。如果多块云盘中存在不允许卸载的云盘，则操作不执行，返回特定的错误码。
+* 本接口为异步接口，当请求成功返回时，云盘并未立即从主机卸载，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHED”变为“UNATTACHED”，则为卸载成功。
  * @method Models\DetachNetworkInterfaceResponse DetachNetworkInterface(Models\DetachNetworkInterfaceRequest $req) 弹性网卡解绑云主机
  * @method Models\DisableRoutesResponse DisableRoutes(Models\DisableRoutesRequest $req) 禁用已启用的子网路由
  * @method Models\DisassociateAddressResponse DisassociateAddress(Models\DisassociateAddressRequest $req) 解绑弹性公网IP（简称 EIP）
@@ -170,6 +195,11 @@ EIP 如果被封堵，则不能进行解绑定操作。
  * @method Models\StopInstancesResponse StopInstances(Models\StopInstancesRequest $req) 只有处于"RUNNING"状态的实例才能够进行关机操作；
 调用成功时，实例会进入STOPPING状态；关闭实例成功时，实例会进入STOPPED状态；
 支持强制关闭，强制关机的效果等同于关闭物理计算机的电源开关，强制关机可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常关机时使用。
+ * @method Models\TerminateDisksResponse TerminateDisks(Models\TerminateDisksRequest $req) 本接口（TerminateDisks）用于退还云硬盘。
+
+* 不再使用的云盘，可通过本接口主动退还。
+* 本接口支持退还预付费云盘和按小时后付费云盘。按小时后付费云盘可直接退还，预付费云盘需符合退还规则。
+* 支持批量操作，每次请求批量云硬盘的上限为50。如果批量云盘存在不允许操作的，请求会以特定错误码返回。
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) 销毁实例
  */
 

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupId(integer $BackupId) 设置按照备份ID筛选，不填则不筛选此项
  * @method string getDatabaseName() 获取按照备份的库名称筛选，不填则不筛选此项
  * @method void setDatabaseName(string $DatabaseName) 设置按照备份的库名称筛选，不填则不筛选此项
+ * @method integer getGroup() 获取是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
+ * @method void setGroup(integer $Group) 设置是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
  */
 class DescribeBackupsRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeBackupsRequest extends AbstractModel
     public $DatabaseName;
 
     /**
+     * @var integer 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
+     */
+    public $Group;
+
+    /**
      * @param string $StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
      * @param string $InstanceId 实例ID，形如mssql-njj2mtpl
@@ -104,6 +111,7 @@ class DescribeBackupsRequest extends AbstractModel
      * @param integer $BackupWay 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
      * @param integer $BackupId 按照备份ID筛选，不填则不筛选此项
      * @param string $DatabaseName 按照备份的库名称筛选，不填则不筛选此项
+     * @param integer $Group 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeBackupsRequest extends AbstractModel
 
         if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
             $this->DatabaseName = $param["DatabaseName"];
+        }
+
+        if (array_key_exists("Group",$param) and $param["Group"] !== null) {
+            $this->Group = $param["Group"];
         }
     }
 }

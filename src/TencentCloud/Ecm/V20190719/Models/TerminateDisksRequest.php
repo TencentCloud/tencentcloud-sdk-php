@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Partners\V20180321\Models;
+namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClientBaseInfo请求参数结构体
+ * TerminateDisks请求参数结构体
  *
- * @method string getClientUin() 获取代客UIN
- * @method void setClientUin(string $ClientUin) 设置代客UIN
+ * @method array getDiskIds() 获取需退还的云盘ID列表。
+ * @method void setDiskIds(array $DiskIds) 设置需退还的云盘ID列表。
  */
-class DescribeClientBaseInfoRequest extends AbstractModel
+class TerminateDisksRequest extends AbstractModel
 {
     /**
-     * @var string 代客UIN
+     * @var array 需退还的云盘ID列表。
      */
-    public $ClientUin;
+    public $DiskIds;
 
     /**
-     * @param string $ClientUin 代客UIN
+     * @param array $DiskIds 需退还的云盘ID列表。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeClientBaseInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {
-            $this->ClientUin = $param["ClientUin"];
+        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
+            $this->DiskIds = $param["DiskIds"];
         }
     }
 }

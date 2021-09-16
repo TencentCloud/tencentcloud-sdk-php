@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(integer $VpcId) 设置实例所在私有网络ID，基础网络时为 0
  * @method integer getSubnetId() 获取实例所在私有网络子网ID，基础网络时为 0
  * @method void setSubnetId(integer $SubnetId) 设置实例所在私有网络子网ID，基础网络时为 0
- * @method integer getStatus() 获取实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>
- * @method void setStatus(integer $Status) 设置实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>
+ * @method integer getStatus() 获取实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
+ * @method void setStatus(integer $Status) 设置实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
  * @method string getVip() 获取实例访问IP
  * @method void setVip(string $Vip) 设置实例访问IP
  * @method integer getVport() 获取实例访问端口
@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceTags(array $ResourceTags) 设置实例绑定的标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBackupModel() 获取备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupModel(string $BackupModel) 设置备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -143,7 +147,7 @@ class DBInstance extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>
+     * @var integer 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
      */
     public $Status;
 
@@ -298,6 +302,12 @@ class DBInstance extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupModel;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
      * @param integer $ProjectId 实例所在项目ID
@@ -305,7 +315,7 @@ class DBInstance extends AbstractModel
      * @param integer $ZoneId 实例所在可用区ID
      * @param integer $VpcId 实例所在私有网络ID，基础网络时为 0
      * @param integer $SubnetId 实例所在私有网络子网ID，基础网络时为 0
-     * @param integer $Status 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>
+     * @param integer $Status 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>  <li>13：实例修改中且待切换</li> <li>14：订阅发布创建中</li> <li>15：订阅发布修改中</li> <li>16：实例修改中且切换中</li> <li>17：创建RO副本中</li>
      * @param string $Vip 实例访问IP
      * @param integer $Vport 实例访问端口
      * @param string $CreateTime 实例创建时间
@@ -339,6 +349,8 @@ class DBInstance extends AbstractModel
      * @param string $HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceTags 实例绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BackupModel 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -505,6 +517,10 @@ class DBInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("BackupModel",$param) and $param["BackupModel"] !== null) {
+            $this->BackupModel = $param["BackupModel"];
         }
     }
 }

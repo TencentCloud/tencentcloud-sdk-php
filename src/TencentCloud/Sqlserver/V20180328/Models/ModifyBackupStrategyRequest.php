@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupTime(integer $BackupTime) 设置备份时间点，取值为0-23的整数
  * @method integer getBackupDay() 获取BackupType取值为daily时，表示备份间隔天数。当前取值只能为1
  * @method void setBackupDay(integer $BackupDay) 设置BackupType取值为daily时，表示备份间隔天数。当前取值只能为1
+ * @method string getBackupModel() 获取备份模式，master_pkg-主节点上打包备份文件；master_no_pkg-主节点单库备份文件；slave_pkg-从节点上打包备份文件；slave_no_pkg-从节点上单库备份文件，从节点上备份只有在always on容灾模式下支持。
+ * @method void setBackupModel(string $BackupModel) 设置备份模式，master_pkg-主节点上打包备份文件；master_no_pkg-主节点单库备份文件；slave_pkg-从节点上打包备份文件；slave_no_pkg-从节点上单库备份文件，从节点上备份只有在always on容灾模式下支持。
  */
 class ModifyBackupStrategyRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyBackupStrategyRequest extends AbstractModel
     public $BackupDay;
 
     /**
+     * @var string 备份模式，master_pkg-主节点上打包备份文件；master_no_pkg-主节点单库备份文件；slave_pkg-从节点上打包备份文件；slave_no_pkg-从节点上单库备份文件，从节点上备份只有在always on容灾模式下支持。
+     */
+    public $BackupModel;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $BackupType 备份类型，当前只支持按天备份，取值为daily
      * @param integer $BackupTime 备份时间点，取值为0-23的整数
      * @param integer $BackupDay BackupType取值为daily时，表示备份间隔天数。当前取值只能为1
+     * @param string $BackupModel 备份模式，master_pkg-主节点上打包备份文件；master_no_pkg-主节点单库备份文件；slave_pkg-从节点上打包备份文件；slave_no_pkg-从节点上单库备份文件，从节点上备份只有在always on容灾模式下支持。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyBackupStrategyRequest extends AbstractModel
 
         if (array_key_exists("BackupDay",$param) and $param["BackupDay"] !== null) {
             $this->BackupDay = $param["BackupDay"];
+        }
+
+        if (array_key_exists("BackupModel",$param) and $param["BackupModel"] !== null) {
+            $this->BackupModel = $param["BackupModel"];
         }
     }
 }

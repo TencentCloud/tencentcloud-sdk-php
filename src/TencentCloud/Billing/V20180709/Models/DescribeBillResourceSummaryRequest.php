@@ -32,8 +32,66 @@ use TencentCloud\Common\AbstractModel;
 1-表示需要， 0-表示不需要
  * @method void setNeedRecordNum(integer $NeedRecordNum) 设置是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
- * @method string getActionType() 获取查询交易类型。如 按量计费日结，按量计费小时结 等
- * @method void setActionType(string $ActionType) 设置查询交易类型。如 按量计费日结，按量计费小时结 等
+ * @method string getActionType() 获取查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+ * @method void setActionType(string $ActionType) 设置查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
  * @method string getResourceId() 获取查询指定资源信息
  * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
  * @method string getPayMode() 获取付费模式 prePay/postPay
@@ -68,7 +126,36 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $NeedRecordNum;
 
     /**
-     * @var string 查询交易类型。如 按量计费日结，按量计费小时结 等
+     * @var string 查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
      */
     public $ActionType;
 
@@ -89,7 +176,36 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
      * @param string $PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
      * @param integer $NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
-     * @param string $ActionType 查询交易类型。如 按量计费日结，按量计费小时结 等
+     * @param string $ActionType 查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
      * @param string $ResourceId 查询指定资源信息
      * @param string $PayMode 付费模式 prePay/postPay
      */

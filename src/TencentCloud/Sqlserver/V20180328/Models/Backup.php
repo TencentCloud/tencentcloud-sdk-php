@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份文件详细信息
  *
- * @method string getFileName() 获取文件名
- * @method void setFileName(string $FileName) 设置文件名
- * @method integer getSize() 获取文件大小，单位 KB
- * @method void setSize(integer $Size) 设置文件大小，单位 KB
+ * @method string getFileName() 获取文件名，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件名
+ * @method void setFileName(string $FileName) 设置文件名，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件名
+ * @method integer getSize() 获取文件大小，单位 KB，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件大小
+ * @method void setSize(integer $Size) 设置文件大小，单位 KB，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件大小
  * @method string getStartTime() 获取备份开始时间
  * @method void setStartTime(string $StartTime) 设置备份开始时间
  * @method string getEndTime() 获取备份结束时间
  * @method void setEndTime(string $EndTime) 设置备份结束时间
- * @method string getInternalAddr() 获取内网下载地址
- * @method void setInternalAddr(string $InternalAddr) 设置内网下载地址
- * @method string getExternalAddr() 获取外网下载地址
- * @method void setExternalAddr(string $ExternalAddr) 设置外网下载地址
- * @method integer getId() 获取备份文件唯一标识，RestoreInstance接口会用到该字段
- * @method void setId(integer $Id) 设置备份文件唯一标识，RestoreInstance接口会用到该字段
+ * @method string getInternalAddr() 获取内网下载地址，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取下载地址
+ * @method void setInternalAddr(string $InternalAddr) 设置内网下载地址，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取下载地址
+ * @method string getExternalAddr() 获取外网下载地址，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取下载地址
+ * @method void setExternalAddr(string $ExternalAddr) 设置外网下载地址，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取下载地址
+ * @method integer getId() 获取备份文件唯一标识，RestoreInstance接口会用到该字段，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取可回档的ID
+ * @method void setId(integer $Id) 设置备份文件唯一标识，RestoreInstance接口会用到该字段，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取可回档的ID
  * @method integer getStatus() 获取备份文件状态（0-创建中；1-成功；2-失败）
  * @method void setStatus(integer $Status) 设置备份文件状态（0-创建中；1-成功；2-失败）
  * @method array getDBs() 获取多库备份时的DB列表
@@ -42,18 +42,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategy(integer $Strategy) 设置备份策略（0-实例备份；1-多库备份）
  * @method integer getBackupWay() 获取备份方式，0-定时备份；1-手动临时备份
  * @method void setBackupWay(integer $BackupWay) 设置备份方式，0-定时备份；1-手动临时备份
- * @method string getBackupName() 获取备份名称，可自定义
- * @method void setBackupName(string $BackupName) 设置备份名称，可自定义
+ * @method string getBackupName() 获取备份任务名称，可自定义
+ * @method void setBackupName(string $BackupName) 设置备份任务名称，可自定义
+ * @method string getGroupId() 获取聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
+ * @method void setGroupId(string $GroupId) 设置聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
  */
 class Backup extends AbstractModel
 {
     /**
-     * @var string 文件名
+     * @var string 文件名，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件名
      */
     public $FileName;
 
     /**
-     * @var integer 文件大小，单位 KB
+     * @var integer 文件大小，单位 KB，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件大小
      */
     public $Size;
 
@@ -68,17 +70,17 @@ class Backup extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 内网下载地址
+     * @var string 内网下载地址，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取下载地址
      */
     public $InternalAddr;
 
     /**
-     * @var string 外网下载地址
+     * @var string 外网下载地址，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取下载地址
      */
     public $ExternalAddr;
 
     /**
-     * @var integer 备份文件唯一标识，RestoreInstance接口会用到该字段
+     * @var integer 备份文件唯一标识，RestoreInstance接口会用到该字段，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取可回档的ID
      */
     public $Id;
 
@@ -103,23 +105,29 @@ class Backup extends AbstractModel
     public $BackupWay;
 
     /**
-     * @var string 备份名称，可自定义
+     * @var string 备份任务名称，可自定义
      */
     public $BackupName;
 
     /**
-     * @param string $FileName 文件名
-     * @param integer $Size 文件大小，单位 KB
+     * @var string 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
+     */
+    public $GroupId;
+
+    /**
+     * @param string $FileName 文件名，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件名
+     * @param integer $Size 文件大小，单位 KB，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件大小
      * @param string $StartTime 备份开始时间
      * @param string $EndTime 备份结束时间
-     * @param string $InternalAddr 内网下载地址
-     * @param string $ExternalAddr 外网下载地址
-     * @param integer $Id 备份文件唯一标识，RestoreInstance接口会用到该字段
+     * @param string $InternalAddr 内网下载地址，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取下载地址
+     * @param string $ExternalAddr 外网下载地址，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取下载地址
+     * @param integer $Id 备份文件唯一标识，RestoreInstance接口会用到该字段，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取可回档的ID
      * @param integer $Status 备份文件状态（0-创建中；1-成功；2-失败）
      * @param array $DBs 多库备份时的DB列表
      * @param integer $Strategy 备份策略（0-实例备份；1-多库备份）
      * @param integer $BackupWay 备份方式，0-定时备份；1-手动临时备份
-     * @param string $BackupName 备份名称，可自定义
+     * @param string $BackupName 备份任务名称，可自定义
+     * @param string $GroupId 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class Backup extends AbstractModel
 
         if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
             $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

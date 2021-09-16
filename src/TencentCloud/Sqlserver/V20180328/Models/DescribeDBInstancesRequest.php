@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeys(array $TagKeys) 设置实例标签列表
  * @method string getSearchKey() 获取模糊查询关键字，支持实例id、实例名、内网ip
  * @method void setSearchKey(string $SearchKey) 设置模糊查询关键字，支持实例id、实例名、内网ip
+ * @method array getUidSet() 获取实例唯一Uid列表
+ * @method void setUidSet(array $UidSet) 设置实例唯一Uid列表
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -158,6 +160,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $SearchKey;
 
     /**
+     * @var array 实例唯一Uid列表
+     */
+    public $UidSet;
+
+    /**
      * @param integer $ProjectId 项目ID
      * @param integer $Status 实例状态。取值范围：
 <li>1：申请中</li>
@@ -184,6 +191,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $Zone 实例可用区，格式如：ap-guangzhou-2
      * @param array $TagKeys 实例标签列表
      * @param string $SearchKey 模糊查询关键字，支持实例id、实例名、内网ip
+     * @param array $UidSet 实例唯一Uid列表
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
             $this->SearchKey = $param["SearchKey"];
+        }
+
+        if (array_key_exists("UidSet",$param) and $param["UidSet"] !== null) {
+            $this->UidSet = $param["UidSet"];
         }
     }
 }

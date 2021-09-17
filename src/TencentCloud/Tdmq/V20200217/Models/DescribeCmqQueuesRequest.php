@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
  * @method string getQueueName() 获取根据QueueName进行过滤
  * @method void setQueueName(string $QueueName) 设置根据QueueName进行过滤
+ * @method array getQueueNameList() 获取CMQ 队列名称列表过滤
+ * @method void setQueueNameList(array $QueueNameList) 设置CMQ 队列名称列表过滤
+ * @method boolean getIsTagFilter() 获取标签过滤查找时，需要设置为 true
+ * @method void setIsTagFilter(boolean $IsTagFilter) 设置标签过滤查找时，需要设置为 true
  */
 class DescribeCmqQueuesRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeCmqQueuesRequest extends AbstractModel
     public $QueueName;
 
     /**
+     * @var array CMQ 队列名称列表过滤
+     */
+    public $QueueNameList;
+
+    /**
+     * @var boolean 标签过滤查找时，需要设置为 true
+     */
+    public $IsTagFilter;
+
+    /**
      * @param integer $Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
      * @param integer $Limit 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
      * @param string $QueueName 根据QueueName进行过滤
+     * @param array $QueueNameList CMQ 队列名称列表过滤
+     * @param boolean $IsTagFilter 标签过滤查找时，需要设置为 true
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeCmqQueuesRequest extends AbstractModel
 
         if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
             $this->QueueName = $param["QueueName"];
+        }
+
+        if (array_key_exists("QueueNameList",$param) and $param["QueueNameList"] !== null) {
+            $this->QueueNameList = $param["QueueNameList"];
+        }
+
+        if (array_key_exists("IsTagFilter",$param) and $param["IsTagFilter"] !== null) {
+            $this->IsTagFilter = $param["IsTagFilter"];
         }
     }
 }

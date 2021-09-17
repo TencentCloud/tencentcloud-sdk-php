@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadline(integer $Deadline) 设置签署截止时间
  * @method string getCallbackUrl() 获取签署完回调url
  * @method void setCallbackUrl(string $CallbackUrl) 设置签署完回调url
+ * @method string getApproverType() 获取签署人类型，PERSON和ORGANIZATION
+ * @method void setApproverType(string $ApproverType) 设置签署人类型，PERSON和ORGANIZATION
+ * @method string getOpenId() 获取用户侧第三方id
+ * @method void setOpenId(string $OpenId) 设置用户侧第三方id
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -66,12 +70,24 @@ class FlowApproverInfo extends AbstractModel
     public $CallbackUrl;
 
     /**
+     * @var string 签署人类型，PERSON和ORGANIZATION
+     */
+    public $ApproverType;
+
+    /**
+     * @var string 用户侧第三方id
+     */
+    public $OpenId;
+
+    /**
      * @param string $Name 签署人姓名
      * @param string $Mobile 签署人手机号，脱敏显示
      * @param string $IdCardNumber 经办人身份证号
      * @param string $JumpUrl 签署完前端跳转的url，暂未使用
      * @param integer $Deadline 签署截止时间
      * @param string $CallbackUrl 签署完回调url
+     * @param string $ApproverType 签署人类型，PERSON和ORGANIZATION
+     * @param string $OpenId 用户侧第三方id
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class FlowApproverInfo extends AbstractModel
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("ApproverType",$param) and $param["ApproverType"] !== null) {
+            $this->ApproverType = $param["ApproverType"];
+        }
+
+        if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
+            $this->OpenId = $param["OpenId"];
         }
     }
 }

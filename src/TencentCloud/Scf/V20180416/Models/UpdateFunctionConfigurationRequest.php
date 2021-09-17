@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) 设置公网访问配置
  * @method CfsConfig getCfsConfig() 获取文件系统配置入参，用于云函数绑定CFS文件系统
  * @method void setCfsConfig(CfsConfig $CfsConfig) 设置文件系统配置入参，用于云函数绑定CFS文件系统
- * @method integer getInitTimeout() 获取函数初始化执行超时时间，默认15秒
- * @method void setInitTimeout(integer $InitTimeout) 设置函数初始化执行超时时间，默认15秒
+ * @method integer getInitTimeout() 获取函数初始化执行超时时间
+ * @method void setInitTimeout(integer $InitTimeout) 设置函数初始化执行超时时间
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -145,7 +145,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $CfsConfig;
 
     /**
-     * @var integer 函数初始化执行超时时间，默认15秒
+     * @var integer 函数初始化执行超时时间
      */
     public $InitTimeout;
 
@@ -167,7 +167,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param DeadLetterConfig $DeadLetterConfig 函数关联的死信队列信息
      * @param PublicNetConfigIn $PublicNetConfig 公网访问配置
      * @param CfsConfig $CfsConfig 文件系统配置入参，用于云函数绑定CFS文件系统
-     * @param integer $InitTimeout 函数初始化执行超时时间，默认15秒
+     * @param integer $InitTimeout 函数初始化执行超时时间
      */
     function __construct()
     {

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
  * @method integer getLimit() 获取返回数量，不填则默认 10，最大值20，取值要大于0
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认 10，最大值20，取值要大于0
+ * @method string getAclRuleName() 获取Acl预设策略名称
+ * @method void setAclRuleName(string $AclRuleName) 设置Acl预设策略名称
  */
 class DescribeTopicDetailRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeTopicDetailRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string Acl预设策略名称
+     */
+    public $AclRuleName;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $SearchWord （过滤条件）按照topicName过滤，支持模糊查询
      * @param integer $Offset 偏移量，不填默认为0
      * @param integer $Limit 返回数量，不填则默认 10，最大值20，取值要大于0
+     * @param string $AclRuleName Acl预设策略名称
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeTopicDetailRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
+            $this->AclRuleName = $param["AclRuleName"];
         }
     }
 }

@@ -39,6 +39,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreateClusterRouteResponse CreateClusterRoute(Models\CreateClusterRouteRequest $req) 创建集群路由
  * @method Models\CreateClusterRouteTableResponse CreateClusterRouteTable(Models\CreateClusterRouteTableRequest $req) 创建集群路由表
  * @method Models\CreateEKSClusterResponse CreateEKSCluster(Models\CreateEKSClusterRequest $req) 创建弹性集群
+ * @method Models\CreateEKSContainerInstancesResponse CreateEKSContainerInstances(Models\CreateEKSContainerInstancesRequest $req) 创建容器实例
  * @method Models\CreatePrometheusAlertRuleResponse CreatePrometheusAlertRule(Models\CreatePrometheusAlertRuleRequest $req) 创建告警规则
  * @method Models\CreatePrometheusDashboardResponse CreatePrometheusDashboard(Models\CreatePrometheusDashboardRequest $req) 创建grafana监控面板
  * @method Models\CreatePrometheusTemplateResponse CreatePrometheusTemplate(Models\CreatePrometheusTemplateRequest $req) 创建一个云原生Prometheus模板实例
@@ -51,6 +52,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DeleteClusterRouteResponse DeleteClusterRoute(Models\DeleteClusterRouteRequest $req) 删除集群路由
  * @method Models\DeleteClusterRouteTableResponse DeleteClusterRouteTable(Models\DeleteClusterRouteTableRequest $req) 删除集群路由表
  * @method Models\DeleteEKSClusterResponse DeleteEKSCluster(Models\DeleteEKSClusterRequest $req) 删除弹性集群(yunapiv3)
+ * @method Models\DeleteEKSContainerInstancesResponse DeleteEKSContainerInstances(Models\DeleteEKSContainerInstancesRequest $req) 删除容器实例，可批量删除
  * @method Models\DeletePrometheusAlertRuleResponse DeletePrometheusAlertRule(Models\DeletePrometheusAlertRuleRequest $req) 删除告警规则
  * @method Models\DeletePrometheusTemplateResponse DeletePrometheusTemplate(Models\DeletePrometheusTemplateRequest $req) 删除一个云原生Prometheus配置模板
  * @method Models\DeletePrometheusTemplateSyncResponse DeletePrometheusTemplateSync(Models\DeletePrometheusTemplateSyncRequest $req) 取消模板同步，这将会删除目标中该模板所生产的配置
@@ -71,7 +73,10 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 查询集群列表
  * @method Models\DescribeEKSClusterCredentialResponse DescribeEKSClusterCredential(Models\DescribeEKSClusterCredentialRequest $req) 获取弹性容器集群的接入认证信息
  * @method Models\DescribeEKSClustersResponse DescribeEKSClusters(Models\DescribeEKSClustersRequest $req) 查询弹性集群列表
+ * @method Models\DescribeEKSContainerInstanceEventResponse DescribeEKSContainerInstanceEvent(Models\DescribeEKSContainerInstanceEventRequest $req) 查询容器实例的事件
  * @method Models\DescribeEKSContainerInstanceRegionsResponse DescribeEKSContainerInstanceRegions(Models\DescribeEKSContainerInstanceRegionsRequest $req) 查询容器实例支持的地域
+ * @method Models\DescribeEKSContainerInstancesResponse DescribeEKSContainerInstances(Models\DescribeEKSContainerInstancesRequest $req) 查询容器实例
+ * @method Models\DescribeEksContainerInstanceLogResponse DescribeEksContainerInstanceLog(Models\DescribeEksContainerInstanceLogRequest $req) 查询容器实例中容器日志
  * @method Models\DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgress(Models\DescribeEnableVpcCniProgressRequest $req) 本接口用于查询开启vpc-cni模式的任务进度
  * @method Models\DescribeExistedInstancesResponse DescribeExistedInstances(Models\DescribeExistedInstancesRequest $req) 查询已经存在的节点，判断是否可以加入集群
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取镜像信息
@@ -101,10 +106,12 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyPrometheusAlertRuleResponse ModifyPrometheusAlertRule(Models\ModifyPrometheusAlertRuleRequest $req) 修改告警规则 
  * @method Models\ModifyPrometheusTemplateResponse ModifyPrometheusTemplate(Models\ModifyPrometheusTemplateRequest $req) 修改模板内容
  * @method Models\RemoveNodeFromNodePoolResponse RemoveNodeFromNodePool(Models\RemoveNodeFromNodePoolRequest $req) 移出节点池节点，但保留在集群内
+ * @method Models\RestartEKSContainerInstancesResponse RestartEKSContainerInstances(Models\RestartEKSContainerInstancesRequest $req) 重启弹性容器实例，支持批量操作
  * @method Models\SetNodePoolNodeProtectionResponse SetNodePoolNodeProtection(Models\SetNodePoolNodeProtectionRequest $req) 仅能设置节点池中处于伸缩组的节点
  * @method Models\SyncPrometheusTemplateResponse SyncPrometheusTemplate(Models\SyncPrometheusTemplateRequest $req) 同步模板到实例或者集群
  * @method Models\UpdateClusterVersionResponse UpdateClusterVersion(Models\UpdateClusterVersionRequest $req) 升级集群 Master 组件到指定版本
  * @method Models\UpdateEKSClusterResponse UpdateEKSCluster(Models\UpdateEKSClusterRequest $req) 修改弹性集群名称等属性 
+ * @method Models\UpdateEKSContainerInstanceResponse UpdateEKSContainerInstance(Models\UpdateEKSContainerInstanceRequest $req) 更新容器实例
  * @method Models\UpgradeClusterInstancesResponse UpgradeClusterInstances(Models\UpgradeClusterInstancesRequest $req) 给集群的一批work节点进行升级 
  */
 

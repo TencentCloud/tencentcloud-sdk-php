@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
 <li>VOD：云点播，即导出为云点播媒资。</li>
  * @method string getCoverData() 获取视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
  * @method void setCoverData(string $CoverData) 设置视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
- * @method CMEExportInfo getCMEExportInfo() 获取导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
- * @method void setCMEExportInfo(CMEExportInfo $CMEExportInfo) 设置导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
- * @method VODExportInfo getVODExportInfo() 获取导出的云点播媒资信息。指定 ExportDestination = VOD 时有效。
- * @method void setVODExportInfo(VODExportInfo $VODExportInfo) 设置导出的云点播媒资信息。指定 ExportDestination = VOD 时有效。
+ * @method CMEExportInfo getCMEExportInfo() 获取导出的云剪媒体信息。当导出目标为 CME 时必填。
+ * @method void setCMEExportInfo(CMEExportInfo $CMEExportInfo) 设置导出的云剪媒体信息。当导出目标为 CME 时必填。
+ * @method VODExportInfo getVODExportInfo() 获取导出的云点播媒资信息。当导出目标为 VOD 时必填。
+ * @method void setVODExportInfo(VODExportInfo $VODExportInfo) 设置导出的云点播媒资信息。当导出目标为 VOD 时必填。
  * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
  * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
  */
@@ -80,12 +80,12 @@ class ExportVideoEditProjectRequest extends AbstractModel
     public $CoverData;
 
     /**
-     * @var CMEExportInfo 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
+     * @var CMEExportInfo 导出的云剪媒体信息。当导出目标为 CME 时必填。
      */
     public $CMEExportInfo;
 
     /**
-     * @var VODExportInfo 导出的云点播媒资信息。指定 ExportDestination = VOD 时有效。
+     * @var VODExportInfo 导出的云点播媒资信息。当导出目标为 VOD 时必填。
      */
     public $VODExportInfo;
 
@@ -105,8 +105,8 @@ class ExportVideoEditProjectRequest extends AbstractModel
 <li>CME：云剪，即导出为云剪媒体；</li>
 <li>VOD：云点播，即导出为云点播媒资。</li>
      * @param string $CoverData 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
-     * @param CMEExportInfo $CMEExportInfo 导出的云剪媒体信息。指定 ExportDestination = CME 时有效。
-     * @param VODExportInfo $VODExportInfo 导出的云点播媒资信息。指定 ExportDestination = VOD 时有效。
+     * @param CMEExportInfo $CMEExportInfo 导出的云剪媒体信息。当导出目标为 CME 时必填。
+     * @param VODExportInfo $VODExportInfo 导出的云点播媒资信息。当导出目标为 VOD 时必填。
      * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
      */
     function __construct()

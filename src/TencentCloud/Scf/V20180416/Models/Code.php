@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGitCommitId(string $GitCommitId) 设置指定要拉取的版本
  * @method string getGitUserNameSecret() 获取加密后的Git用户名，一般无需指定
  * @method void setGitUserNameSecret(string $GitUserNameSecret) 设置加密后的Git用户名，一般无需指定
+ * @method ImageConfig getImageConfig() 获取镜像部署时配置TCR镜像信息
+ * @method void setImageConfig(ImageConfig $ImageConfig) 设置镜像部署时配置TCR镜像信息
  */
 class Code extends AbstractModel
 {
@@ -122,6 +124,11 @@ class Code extends AbstractModel
     public $GitUserNameSecret;
 
     /**
+     * @var ImageConfig 镜像部署时配置TCR镜像信息
+     */
+    public $ImageConfig;
+
+    /**
      * @param string $CosBucketName 对象存储桶名称（填写存储桶名称自定义部分，不包含-appid）
      * @param string $CosObjectName 对象存储对象路径
      * @param string $ZipFile 包含函数代码文件及其依赖项的 zip 格式文件，zip包大小上限为 50MB，使用该接口时要求将 zip 文件的内容转成 base64 编码
@@ -136,6 +143,7 @@ class Code extends AbstractModel
      * @param string $GitDirectory 代码在Git仓库中的路径
      * @param string $GitCommitId 指定要拉取的版本
      * @param string $GitUserNameSecret 加密后的Git用户名，一般无需指定
+     * @param ImageConfig $ImageConfig 镜像部署时配置TCR镜像信息
      */
     function __construct()
     {
@@ -204,6 +212,11 @@ class Code extends AbstractModel
 
         if (array_key_exists("GitUserNameSecret",$param) and $param["GitUserNameSecret"] !== null) {
             $this->GitUserNameSecret = $param["GitUserNameSecret"];
+        }
+
+        if (array_key_exists("ImageConfig",$param) and $param["ImageConfig"] !== null) {
+            $this->ImageConfig = new ImageConfig();
+            $this->ImageConfig->deserialize($param["ImageConfig"]);
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowIds(array $FlowIds) 设置所签署合同ID数组
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method string getEndpoint() 获取签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面
- * @method void setEndpoint(string $Endpoint) 设置签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面
+ * @method string getEndpoint() 获取签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
+ * @method void setEndpoint(string $Endpoint) 设置签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
  * @method string getJumpUrl() 获取签署完成后H5引导页跳转URL
  * @method void setJumpUrl(string $JumpUrl) 设置签署完成后H5引导页跳转URL
  */
@@ -49,7 +49,7 @@ class CreateSignUrlsRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面
+     * @var string 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
      */
     public $Endpoint;
 
@@ -62,7 +62,7 @@ class CreateSignUrlsRequest extends AbstractModel
      * @param Agent $Agent 渠道应用相关信息
      * @param array $FlowIds 所签署合同ID数组
      * @param UserInfo $Operator 操作者的信息
-     * @param string $Endpoint 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面
+     * @param string $Endpoint 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
      * @param string $JumpUrl 签署完成后H5引导页跳转URL
      */
     function __construct()

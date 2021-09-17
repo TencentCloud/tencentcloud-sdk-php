@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfig(Config $Config) 设置topic 配置数组
  * @method array getPartitions() 获取分区详情
  * @method void setPartitions(array $Partitions) 设置分区详情
+ * @method integer getEnableAclRule() 获取ACL预设策略开关，1：打开； 0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableAclRule(integer $EnableAclRule) 设置ACL预设策略开关，1：打开； 0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAclRuleList() 获取预设策略列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAclRuleList(array $AclRuleList) 设置预设策略列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicAttributesResponse extends AbstractModel
 {
@@ -83,6 +91,18 @@ class TopicAttributesResponse extends AbstractModel
     public $Partitions;
 
     /**
+     * @var integer ACL预设策略开关，1：打开； 0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableAclRule;
+
+    /**
+     * @var array 预设策略列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AclRuleList;
+
+    /**
      * @param string $TopicId 主题 ID
      * @param integer $CreateTime 创建时间
      * @param string $Note 主题备注
@@ -92,6 +112,10 @@ class TopicAttributesResponse extends AbstractModel
      * @param array $IpWhiteList IP 白名单列表
      * @param Config $Config topic 配置数组
      * @param array $Partitions 分区详情
+     * @param integer $EnableAclRule ACL预设策略开关，1：打开； 0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AclRuleList 预设策略列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -141,6 +165,19 @@ class TopicAttributesResponse extends AbstractModel
                 $obj = new TopicPartitionDO();
                 $obj->deserialize($value);
                 array_push($this->Partitions, $obj);
+            }
+        }
+
+        if (array_key_exists("EnableAclRule",$param) and $param["EnableAclRule"] !== null) {
+            $this->EnableAclRule = $param["EnableAclRule"];
+        }
+
+        if (array_key_exists("AclRuleList",$param) and $param["AclRuleList"] !== null) {
+            $this->AclRuleList = [];
+            foreach ($param["AclRuleList"] as $key => $value){
+                $obj = new AclRule();
+                $obj->deserialize($value);
+                array_push($this->AclRuleList, $obj);
             }
         }
     }

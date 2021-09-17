@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionMs(integer $RetentionMs) 设置可消息选。保留时间，单位ms，当前最小值为60000ms
  * @method integer getSegmentMs() 获取Segment分片滚动的时长，单位ms，当前最小为3600000ms
  * @method void setSegmentMs(integer $SegmentMs) 设置Segment分片滚动的时长，单位ms，当前最小为3600000ms
+ * @method integer getEnableAclRule() 获取预设ACL规则, 1:打开  0:关闭，默认不打开
+ * @method void setEnableAclRule(integer $EnableAclRule) 设置预设ACL规则, 1:打开  0:关闭，默认不打开
+ * @method string getAclRuleName() 获取预设ACL规则的名称
+ * @method void setAclRuleName(string $AclRuleName) 设置预设ACL规则的名称
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateTopicRequest extends AbstractModel
     public $SegmentMs;
 
     /**
+     * @var integer 预设ACL规则, 1:打开  0:关闭，默认不打开
+     */
+    public $EnableAclRule;
+
+    /**
+     * @var string 预设ACL规则的名称
+     */
+    public $AclRuleName;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $TopicName 主题名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param integer $PartitionNum Partition个数，大于0
@@ -120,6 +134,8 @@ class CreateTopicRequest extends AbstractModel
      * @param integer $UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
      * @param integer $RetentionMs 可消息选。保留时间，单位ms，当前最小值为60000ms
      * @param integer $SegmentMs Segment分片滚动的时长，单位ms，当前最小为3600000ms
+     * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
+     * @param string $AclRuleName 预设ACL规则的名称
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
             $this->SegmentMs = $param["SegmentMs"];
+        }
+
+        if (array_key_exists("EnableAclRule",$param) and $param["EnableAclRule"] !== null) {
+            $this->EnableAclRule = $param["EnableAclRule"];
+        }
+
+        if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
+            $this->AclRuleName = $param["AclRuleName"];
         }
     }
 }

@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最大值为8388608Byte（即8MB）。
  * @method string getCleanUpPolicy() 获取消息删除策略，可以选择delete 或者compact
  * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置消息删除策略，可以选择delete 或者compact
+ * @method array getIpWhiteList() 获取Ip白名单列表，配额限制，enableWhileList=1时必选
+ * @method void setIpWhiteList(array $IpWhiteList) 设置Ip白名单列表，配额限制，enableWhileList=1时必选
+ * @method integer getEnableAclRule() 获取预设ACL规则, 1:打开  0:关闭，默认不打开
+ * @method void setEnableAclRule(integer $EnableAclRule) 设置预设ACL规则, 1:打开  0:关闭，默认不打开
+ * @method string getAclRuleName() 获取预设ACL规则的名称
+ * @method void setAclRuleName(string $AclRuleName) 设置预设ACL规则的名称
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -94,6 +100,21 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $CleanUpPolicy;
 
     /**
+     * @var array Ip白名单列表，配额限制，enableWhileList=1时必选
+     */
+    public $IpWhiteList;
+
+    /**
+     * @var integer 预设ACL规则, 1:打开  0:关闭，默认不打开
+     */
+    public $EnableAclRule;
+
+    /**
+     * @var string 预设ACL规则的名称
+     */
+    public $AclRuleName;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $TopicName 主题名称。
      * @param string $Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
@@ -104,6 +125,9 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param integer $SegmentMs Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
      * @param integer $MaxMessageBytes 主题消息最大值，单位为 Byte，最大值为8388608Byte（即8MB）。
      * @param string $CleanUpPolicy 消息删除策略，可以选择delete 或者compact
+     * @param array $IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
+     * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
+     * @param string $AclRuleName 预设ACL规则的名称
      */
     function __construct()
     {
@@ -156,6 +180,18 @@ class ModifyTopicAttributesRequest extends AbstractModel
 
         if (array_key_exists("CleanUpPolicy",$param) and $param["CleanUpPolicy"] !== null) {
             $this->CleanUpPolicy = $param["CleanUpPolicy"];
+        }
+
+        if (array_key_exists("IpWhiteList",$param) and $param["IpWhiteList"] !== null) {
+            $this->IpWhiteList = $param["IpWhiteList"];
+        }
+
+        if (array_key_exists("EnableAclRule",$param) and $param["EnableAclRule"] !== null) {
+            $this->EnableAclRule = $param["EnableAclRule"];
+        }
+
+        if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
+            $this->AclRuleName = $param["AclRuleName"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomainName() 获取域名名称。
  * @method void setDomainName(string $DomainName) 设置域名名称。
- * @method integer getStatus() 获取域名解析状态。True 表示正常解析，False 表示解析失败。
- * @method void setStatus(integer $Status) 设置域名解析状态。True 表示正常解析，False 表示解析失败。
+ * @method integer getStatus() 获取域名解析状态。1 表示正常解析，0 表示解析失败。
+ * @method void setStatus(integer $Status) 设置域名解析状态。1 表示正常解析，0 表示解析失败。
  * @method string getCertificateId() 获取证书ID。
  * @method void setCertificateId(string $CertificateId) 设置证书ID。
  * @method boolean getIsDefaultMapping() 获取是否使用默认路径映射。
@@ -45,7 +45,7 @@ class DomainSetList extends AbstractModel
     public $DomainName;
 
     /**
-     * @var integer 域名解析状态。True 表示正常解析，False 表示解析失败。
+     * @var integer 域名解析状态。1 表示正常解析，0 表示解析失败。
      */
     public $Status;
 
@@ -81,7 +81,7 @@ class DomainSetList extends AbstractModel
 
     /**
      * @param string $DomainName 域名名称。
-     * @param integer $Status 域名解析状态。True 表示正常解析，False 表示解析失败。
+     * @param integer $Status 域名解析状态。1 表示正常解析，0 表示解析失败。
      * @param string $CertificateId 证书ID。
      * @param boolean $IsDefaultMapping 是否使用默认路径映射。
      * @param string $Protocol 自定义域名协议类型。

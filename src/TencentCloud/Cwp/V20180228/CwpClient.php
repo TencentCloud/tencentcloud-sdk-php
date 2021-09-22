@@ -62,26 +62,40 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeAttackLogInfoResponse DescribeAttackLogInfo(Models\DescribeAttackLogInfoRequest $req) 网络攻击日志详情
  * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) 按分页形式展示网络攻击日志列表
  * @method Models\DescribeAttackVulTypeListResponse DescribeAttackVulTypeList(Models\DescribeAttackVulTypeListRequest $req) 获取网络攻击威胁类型列表
+ * @method Models\DescribeAvailableExpertServiceDetailResponse DescribeAvailableExpertServiceDetail(Models\DescribeAvailableExpertServiceDetailRequest $req) 专家服务-可用订单详情
  * @method Models\DescribeBanModeResponse DescribeBanMode(Models\DescribeBanModeRequest $req) 获取爆破阻断模式
  * @method Models\DescribeBanRegionsResponse DescribeBanRegions(Models\DescribeBanRegionsRequest $req) 获取阻断地域
  * @method Models\DescribeBanStatusResponse DescribeBanStatus(Models\DescribeBanStatusRequest $req) 获取阻断按钮状态
+ * @method Models\DescribeBanWhiteListResponse DescribeBanWhiteList(Models\DescribeBanWhiteListRequest $req) 获取阻断白名单列表
+ * @method Models\DescribeBaselineAnalysisDataResponse DescribeBaselineAnalysisData(Models\DescribeBaselineAnalysisDataRequest $req) 根据基线策略id查询基线策略数据概览统计
  * @method Models\DescribeBaselineBasicInfoResponse DescribeBaselineBasicInfo(Models\DescribeBaselineBasicInfoRequest $req) 查询基线基础信息列表
  * @method Models\DescribeBaselineDetailResponse DescribeBaselineDetail(Models\DescribeBaselineDetailRequest $req) 根据基线id查询基线详情接口
+ * @method Models\DescribeBaselineEffectHostListResponse DescribeBaselineEffectHostList(Models\DescribeBaselineEffectHostListRequest $req) 根据基线id查询基线影响主机列表
+ * @method Models\DescribeBaselineHostTopResponse DescribeBaselineHostTop(Models\DescribeBaselineHostTopRequest $req) 接口返回TopN的风险服务器
+ * @method Models\DescribeBaselineListResponse DescribeBaselineList(Models\DescribeBaselineListRequest $req) 查询基线列表信息
  * @method Models\DescribeBaselineRuleResponse DescribeBaselineRule(Models\DescribeBaselineRuleRequest $req) 根据基线id查询下属检测项信息
  * @method Models\DescribeBaselineScanScheduleResponse DescribeBaselineScanSchedule(Models\DescribeBaselineScanScheduleRequest $req) 根据任务id查询基线检测进度
+ * @method Models\DescribeBaselineStrategyDetailResponse DescribeBaselineStrategyDetail(Models\DescribeBaselineStrategyDetailRequest $req) 根据基线策略id查询策略详情
+ * @method Models\DescribeBaselineStrategyListResponse DescribeBaselineStrategyList(Models\DescribeBaselineStrategyListRequest $req) 查询一个用户下的基线策略信息
+ * @method Models\DescribeBaselineTopResponse DescribeBaselineTop(Models\DescribeBaselineTopRequest $req) 根据策略id查询基线检测项TOP
  * @method Models\DescribeBashEventsResponse DescribeBashEvents(Models\DescribeBashEventsRequest $req) 获取高危命令列表
  * @method Models\DescribeBashRulesResponse DescribeBashRules(Models\DescribeBashRulesRequest $req) 获取高危命令规则列表
  * @method Models\DescribeBruteAttackListResponse DescribeBruteAttackList(Models\DescribeBruteAttackListRequest $req) 获取密码破解列表
+ * @method Models\DescribeBruteAttackRulesResponse DescribeBruteAttackRules(Models\DescribeBruteAttackRulesRequest $req) 获取爆破破解规则
  * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
  * @method Models\DescribeESAggregationsResponse DescribeESAggregations(Models\DescribeESAggregationsRequest $req) 获取ES字段聚合结果
  * @method Models\DescribeESHitsResponse DescribeESHits(Models\DescribeESHitsRequest $req) 获取ES查询文档列表
+ * @method Models\DescribeEmergencyResponseListResponse DescribeEmergencyResponseList(Models\DescribeEmergencyResponseListRequest $req) 专家服务-应急响应列表
  * @method Models\DescribeEmergencyVulListResponse DescribeEmergencyVulList(Models\DescribeEmergencyVulListRequest $req) 获取应急漏洞列表
+ * @method Models\DescribeExpertServiceListResponse DescribeExpertServiceList(Models\DescribeExpertServiceListRequest $req) 专家服务-安全管家列表
+ * @method Models\DescribeExpertServiceOrderListResponse DescribeExpertServiceOrderList(Models\DescribeExpertServiceOrderListRequest $req) 专家服务-专家服务订单列表
  * @method Models\DescribeExportMachinesResponse DescribeExportMachines(Models\DescribeExportMachinesRequest $req) 本接口 (DescribeExportMachines) 用于导出区域主机列表。
  * @method Models\DescribeGeneralStatResponse DescribeGeneralStat(Models\DescribeGeneralStatRequest $req) 获取主机相关统计
  * @method Models\DescribeHistoryAccountsResponse DescribeHistoryAccounts(Models\DescribeHistoryAccountsRequest $req) 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
  * @method Models\DescribeHistoryServiceResponse DescribeHistoryService(Models\DescribeHistoryServiceRequest $req) 查询日志检索服务信息
  * @method Models\DescribeHostLoginListResponse DescribeHostLoginList(Models\DescribeHostLoginListRequest $req) 获取登录审计列表
  * @method Models\DescribeIgnoreBaselineRuleResponse DescribeIgnoreBaselineRule(Models\DescribeIgnoreBaselineRuleRequest $req) 查询已经忽略的检测项信息
+ * @method Models\DescribeIgnoreRuleEffectHostListResponse DescribeIgnoreRuleEffectHostList(Models\DescribeIgnoreRuleEffectHostListRequest $req) 根据检测项id与筛选条件查询忽略检测项影响主机列表信息
  * @method Models\DescribeImportMachineInfoResponse DescribeImportMachineInfo(Models\DescribeImportMachineInfoRequest $req) 查询批量导入机器信息
  * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 获取日志检索容量使用统计
@@ -93,6 +107,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeMachineRegionsResponse DescribeMachineRegions(Models\DescribeMachineRegionsRequest $req) 获取机器地域列表
  * @method Models\DescribeMachinesResponse DescribeMachines(Models\DescribeMachinesRequest $req) 本接口 (DescribeMachines) 用于获取区域主机列表。
  * @method Models\DescribeMalWareListResponse DescribeMalWareList(Models\DescribeMalWareListRequest $req) 入侵检测获取木马列表
+ * @method Models\DescribeMaliciousRequestWhiteListResponse DescribeMaliciousRequestWhiteList(Models\DescribeMaliciousRequestWhiteListRequest $req) 查询恶意请求白名单列表
  * @method Models\DescribeMalwareFileResponse DescribeMalwareFile(Models\DescribeMalwareFileRequest $req) 获取木马文件下载地址
  * @method Models\DescribeMalwareInfoResponse DescribeMalwareInfo(Models\DescribeMalwareInfoRequest $req) 查看恶意文件详情
  * @method Models\DescribeMalwareRiskWarningResponse DescribeMalwareRiskWarning(Models\DescribeMalwareRiskWarningRequest $req) 打开入侵检测-恶意文件检测,弹出风险预警内容
@@ -107,6 +122,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeProcessStatisticsResponse DescribeProcessStatistics(Models\DescribeProcessStatisticsRequest $req) 本接口 (DescribeProcessStatistics) 用于获取进程统计列表数据。
  * @method Models\DescribeProtectDirListResponse DescribeProtectDirList(Models\DescribeProtectDirListRequest $req) 网页防篡改防护目录列表
  * @method Models\DescribeProtectDirRelatedServerResponse DescribeProtectDirRelatedServer(Models\DescribeProtectDirRelatedServerRequest $req) 查询防护目录关联服务器列表信息
+ * @method Models\DescribeProtectNetListResponse DescribeProtectNetList(Models\DescribeProtectNetListRequest $req) 专家服务-旗舰护网列表
  * @method Models\DescribeReverseShellEventsResponse DescribeReverseShellEvents(Models\DescribeReverseShellEventsRequest $req) 获取反弹Shell列表
  * @method Models\DescribeReverseShellRulesResponse DescribeReverseShellRules(Models\DescribeReverseShellRulesRequest $req) 获取反弹Shell规则列表
  * @method Models\DescribeRiskDnsListResponse DescribeRiskDnsList(Models\DescribeRiskDnsListRequest $req) 入侵检测，获取恶意请求列表
@@ -115,6 +131,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeScanScheduleResponse DescribeScanSchedule(Models\DescribeScanScheduleRequest $req) 根据taskid查询检测进度
  * @method Models\DescribeScanStateResponse DescribeScanState(Models\DescribeScanStateRequest $req) DescribeScanState 该接口能查询对应模块正在进行的扫描任务状态
  * @method Models\DescribeScanTaskDetailsResponse DescribeScanTaskDetails(Models\DescribeScanTaskDetailsRequest $req) DescribeScanTaskDetails 查询扫描任务详情 , 可以查询扫描进度信息/异常;
+ * @method Models\DescribeScanTaskStatusResponse DescribeScanTaskStatus(Models\DescribeScanTaskStatusRequest $req) DescribeScanTaskStatus 查询机器扫描状态列表用于过滤筛选
  * @method Models\DescribeScanVulSettingResponse DescribeScanVulSetting(Models\DescribeScanVulSettingRequest $req) 查询定期检测的配置
  * @method Models\DescribeSearchExportListResponse DescribeSearchExportList(Models\DescribeSearchExportListRequest $req) 导出ES查询文档列表
  * @method Models\DescribeSearchLogsResponse DescribeSearchLogs(Models\DescribeSearchLogsRequest $req) 获取历史搜索记录
@@ -132,6 +149,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeVersionStatisticsResponse DescribeVersionStatistics(Models\DescribeVersionStatisticsRequest $req) 用于统计专业版和基础版机器数。
  * @method Models\DescribeVulCountByDatesResponse DescribeVulCountByDates(Models\DescribeVulCountByDatesRequest $req) 漏洞管理模块，获取近日指定类型的漏洞数量和主机数量
  * @method Models\DescribeVulHostCountScanTimeResponse DescribeVulHostCountScanTime(Models\DescribeVulHostCountScanTimeRequest $req) 获取待处理漏洞数+影响主机数
+ * @method Models\DescribeVulHostTopResponse DescribeVulHostTop(Models\DescribeVulHostTopRequest $req) 获取服务器风险top列表
  * @method Models\DescribeVulInfoCvssResponse DescribeVulInfoCvss(Models\DescribeVulInfoCvssRequest $req) 漏洞详情，带CVSS版本
  * @method Models\DescribeVulLevelCountResponse DescribeVulLevelCount(Models\DescribeVulLevelCountRequest $req) 漏洞数量等级分布统计
  * @method Models\DescribeVulTopResponse DescribeVulTop(Models\DescribeVulTopRequest $req) 漏洞top统计
@@ -158,6 +176,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportProtectDirListResponse ExportProtectDirList(Models\ExportProtectDirListRequest $req) 导出网页防篡改防护目录列表
  * @method Models\ExportReverseShellEventsResponse ExportReverseShellEvents(Models\ExportReverseShellEventsRequest $req) 导出反弹Shell事件
  * @method Models\ExportScanTaskDetailsResponse ExportScanTaskDetails(Models\ExportScanTaskDetailsRequest $req) 根据任务id导出指定扫描任务详情 
+ * @method Models\ExportSecurityTrendsResponse ExportSecurityTrends(Models\ExportSecurityTrendsRequest $req) 导出风险趋势
  * @method Models\ExportTasksResponse ExportTasks(Models\ExportTasksRequest $req) 用于异步导出数据量大的日志文件
  * @method Models\ExportVulDetectionExcelResponse ExportVulDetectionExcel(Models\ExportVulDetectionExcelRequest $req) 导出本次漏洞检测Excel
  * @method Models\ExportVulDetectionReportResponse ExportVulDetectionReport(Models\ExportVulDetectionReportRequest $req) 导出漏洞检测报告。

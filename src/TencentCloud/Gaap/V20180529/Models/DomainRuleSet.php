@@ -110,6 +110,10 @@ use TencentCloud\Common\AbstractModel;
 1表示变更中，
 2表示删除中。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBanStatus() 获取封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBanStatus(string $BanStatus) 设置封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -235,6 +239,12 @@ class DomainRuleSet extends AbstractModel
     public $DomainStatus;
 
     /**
+     * @var string 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BanStatus;
+
+    /**
      * @param string $Domain 转发规则域名。
      * @param array $RuleSet 该域名对应的转发规则列表。
      * @param string $CertificateId 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
@@ -279,6 +289,8 @@ class DomainRuleSet extends AbstractModel
 0表示运行中，
 1表示变更中，
 2表示删除中。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -383,6 +395,10 @@ class DomainRuleSet extends AbstractModel
 
         if (array_key_exists("DomainStatus",$param) and $param["DomainStatus"] !== null) {
             $this->DomainStatus = $param["DomainStatus"];
+        }
+
+        if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
+            $this->BanStatus = $param["BanStatus"];
         }
     }
 }

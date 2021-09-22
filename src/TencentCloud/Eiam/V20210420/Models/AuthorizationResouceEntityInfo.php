@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置授权的资源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceName() 获取资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceName(string $ResourceName) 设置资源名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuthorizationResouceEntityInfo extends AbstractModel
 {
@@ -54,11 +58,19 @@ class AuthorizationResouceEntityInfo extends AbstractModel
     public $Resource;
 
     /**
+     * @var string 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceName;
+
+    /**
      * @param string $ResourceId 授权关系的唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceType 资源授权类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource 授权的资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceName 资源名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class AuthorizationResouceEntityInfo extends AbstractModel
 
         if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
             $this->Resource = $param["Resource"];
+        }
+
+        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
+            $this->ResourceName = $param["ResourceName"];
         }
     }
 }

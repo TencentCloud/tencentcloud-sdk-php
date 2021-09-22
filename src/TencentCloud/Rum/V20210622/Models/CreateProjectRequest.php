@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取创建的项目名(不为空且最长为 200)
  * @method void setName(string $Name) 设置创建的项目名(不为空且最长为 200)
- * @method string getInstanceID() 获取项目对应实例 id
- * @method void setInstanceID(string $InstanceID) 设置项目对应实例 id
+ * @method string getInstanceID() 获取业务系统 ID
+ * @method void setInstanceID(string $InstanceID) 设置业务系统 ID
  * @method string getRate() 获取项目抽样率(大于等于 0)
  * @method void setRate(string $Rate) 设置项目抽样率(大于等于 0)
  * @method integer getEnableURLGroup() 获取是否开启聚类
@@ -45,7 +45,7 @@ class CreateProjectRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 项目对应实例 id
+     * @var string 业务系统 ID
      */
     public $InstanceID;
 
@@ -81,7 +81,7 @@ class CreateProjectRequest extends AbstractModel
 
     /**
      * @param string $Name 创建的项目名(不为空且最长为 200)
-     * @param string $InstanceID 项目对应实例 id
+     * @param string $InstanceID 业务系统 ID
      * @param string $Rate 项目抽样率(大于等于 0)
      * @param integer $EnableURLGroup 是否开启聚类
      * @param string $Type 项目类型("web", "mp", "android", "ios", "node", "hippy", "weex", "viola", "rn")

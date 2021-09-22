@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationAccounts(array $ApplicationAccounts) 设置应用账户
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceName() 获取资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceName(string $ResourceName) 设置资源名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuthorizationUserResouceInfo extends AbstractModel
 {
@@ -74,6 +78,12 @@ class AuthorizationUserResouceInfo extends AbstractModel
     public $ApplicationAccounts;
 
     /**
+     * @var string 资源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceName;
+
+    /**
      * @param string $ResourceId 资源ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceType 资源类型
@@ -83,6 +93,8 @@ class AuthorizationUserResouceInfo extends AbstractModel
      * @param InheritedForm $InheritedForm 继承关系
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ApplicationAccounts 应用账户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceName 资源名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -117,6 +129,10 @@ class AuthorizationUserResouceInfo extends AbstractModel
 
         if (array_key_exists("ApplicationAccounts",$param) and $param["ApplicationAccounts"] !== null) {
             $this->ApplicationAccounts = $param["ApplicationAccounts"];
+        }
+
+        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
+            $this->ResourceName = $param["ResourceName"];
         }
     }
 }

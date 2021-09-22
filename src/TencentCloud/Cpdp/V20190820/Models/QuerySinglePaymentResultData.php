@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgentName(string $AgentName) 设置代理商名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTradeStatusDesc() 获取交易状态描述。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTradeStatusDesc(string $TradeStatusDesc) 设置交易状态描述。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QuerySinglePaymentResultData extends AbstractModel
 {
@@ -114,6 +118,12 @@ class QuerySinglePaymentResultData extends AbstractModel
     public $AgentName;
 
     /**
+     * @var string 交易状态描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TradeStatusDesc;
+
+    /**
      * @param string $TradeSerialNo 平台交易流水号，唯一
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderId 订单号
@@ -135,6 +145,8 @@ class QuerySinglePaymentResultData extends AbstractModel
      * @param string $AgentId 代理商ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AgentName 代理商名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TradeStatusDesc 交易状态描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +184,10 @@ class QuerySinglePaymentResultData extends AbstractModel
 
         if (array_key_exists("AgentName",$param) and $param["AgentName"] !== null) {
             $this->AgentName = $param["AgentName"];
+        }
+
+        if (array_key_exists("TradeStatusDesc",$param) and $param["TradeStatusDesc"] !== null) {
+            $this->TradeStatusDesc = $param["TradeStatusDesc"];
         }
     }
 }

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigs请求参数结构体
  *
- * @method array getFilters() 获取<br><li> name
+ * @method array getFilters() 获取<br><li> configName
 
-按照【采集配置名称】进行过滤。
+按照【采集配置名称】进行模糊匹配过滤。
 类型：String
 
 必选：否
@@ -43,9 +43,9 @@ use TencentCloud\Common\AbstractModel;
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
- * @method void setFilters(array $Filters) 设置<br><li> name
+ * @method void setFilters(array $Filters) 设置<br><li> configName
 
-按照【采集配置名称】进行过滤。
+按照【采集配置名称】进行模糊匹配过滤。
 类型：String
 
 必选：否
@@ -74,9 +74,9 @@ use TencentCloud\Common\AbstractModel;
 class DescribeConfigsRequest extends AbstractModel
 {
     /**
-     * @var array <br><li> name
+     * @var array <br><li> configName
 
-按照【采集配置名称】进行过滤。
+按照【采集配置名称】进行模糊匹配过滤。
 类型：String
 
 必选：否
@@ -111,9 +111,9 @@ class DescribeConfigsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters <br><li> name
+     * @param array $Filters <br><li> configName
 
-按照【采集配置名称】进行过滤。
+按照【采集配置名称】进行模糊匹配过滤。
 类型：String
 
 必选：否

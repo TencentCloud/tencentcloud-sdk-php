@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method string getTemplateId() 获取模版唯一标识,可以通过模版列表处获取
- * @method void setTemplateId(string $TemplateId) 设置模版唯一标识,可以通过模版列表处获取
+ * @method string getTemplateId() 获取模版唯一标识
+ * @method void setTemplateId(string $TemplateId) 设置模版唯一标识
  */
 class DescribeTemplatesRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeTemplatesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 模版唯一标识,可以通过模版列表处获取
+     * @var string 模版唯一标识
      */
     public $TemplateId;
 
     /**
      * @param Agent $Agent 渠道应用相关信息
      * @param UserInfo $Operator 操作者的信息
-     * @param string $TemplateId 模版唯一标识,可以通过模版列表处获取
+     * @param string $TemplateId 模版唯一标识
      */
     function __construct()
     {

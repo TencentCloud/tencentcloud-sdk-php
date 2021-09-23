@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuality(float $Quality) 设置图片质量分
  * @method string getStructureResult() 获取由结构化算法结构化json转换的字符串，具体协议参见算法结构化结果协议
  * @method void setStructureResult(string $StructureResult) 设置由结构化算法结构化json转换的字符串，具体协议参见算法结构化结果协议
+ * @method array getReportType() 获取报告分类信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReportType(array $ReportType) 设置报告分类信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResultObject extends AbstractModel
 {
@@ -38,8 +42,16 @@ class ResultObject extends AbstractModel
     public $StructureResult;
 
     /**
+     * @var array 报告分类信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReportType;
+
+    /**
      * @param float $Quality 图片质量分
      * @param string $StructureResult 由结构化算法结构化json转换的字符串，具体协议参见算法结构化结果协议
+     * @param array $ReportType 报告分类信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,15 @@ class ResultObject extends AbstractModel
 
         if (array_key_exists("StructureResult",$param) and $param["StructureResult"] !== null) {
             $this->StructureResult = $param["StructureResult"];
+        }
+
+        if (array_key_exists("ReportType",$param) and $param["ReportType"] !== null) {
+            $this->ReportType = [];
+            foreach ($param["ReportType"] as $key => $value){
+                $obj = new ClassifyInfo();
+                $obj->deserialize($value);
+                array_push($this->ReportType, $obj);
+            }
         }
     }
 }

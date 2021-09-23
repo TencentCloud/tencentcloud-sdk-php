@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置AccountName
  * @method string getHost() 获取可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
  * @method void setHost(string $Host) 设置可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
- * @method string getPassword() 获取账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
- * @method void setPassword(string $Password) 设置账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+ * @method string getPassword() 获取账号密码，密码需要 8-32 个字符，不能以 '/' 开头，并且必须包含小写字母、大写字母、数字和符号()~!@#$%^&*-+=_|{}[]:<>,.?/。
+ * @method void setPassword(string $Password) 设置账号密码，密码需要 8-32 个字符，不能以 '/' 开头，并且必须包含小写字母、大写字母、数字和符号()~!@#$%^&*-+=_|{}[]:<>,.?/。
  * @method integer getReadOnly() 获取是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败，3：只从备机读取。
  * @method void setReadOnly(integer $ReadOnly) 设置是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败，3：只从备机读取。
  * @method string getDescription() 获取账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
@@ -55,7 +55,7 @@ class CreateAccountRequest extends AbstractModel
     public $Host;
 
     /**
-     * @var string 账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * @var string 账号密码，密码需要 8-32 个字符，不能以 '/' 开头，并且必须包含小写字母、大写字母、数字和符号()~!@#$%^&*-+=_|{}[]:<>,.?/。
      */
     public $Password;
 
@@ -79,7 +79,7 @@ class CreateAccountRequest extends AbstractModel
      * @param string $InstanceId 实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param string $UserName AccountName
      * @param string $Host 可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
-     * @param string $Password 账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * @param string $Password 账号密码，密码需要 8-32 个字符，不能以 '/' 开头，并且必须包含小写字母、大写字母、数字和符号()~!@#$%^&*-+=_|{}[]:<>,.?/。
      * @param integer $ReadOnly 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败，3：只从备机读取。
      * @param string $Description 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
      * @param integer $DelayThresh 如果备机延迟超过本参数设置值，系统将认为备机发生故障

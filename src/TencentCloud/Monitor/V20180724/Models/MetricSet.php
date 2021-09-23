@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMeaning(MetricObjectMeaning $Meaning) 设置统计指标含义解释
  * @method array getDimensions() 获取维度描述信息
  * @method void setDimensions(array $Dimensions) 设置维度描述信息
+ * @method string getMetricCName() 获取指标中文名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetricCName(string $MetricCName) 设置指标中文名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMetricEName() 获取指标英文名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetricEName(string $MetricEName) 设置指标英文名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetricSet extends AbstractModel
 {
@@ -80,6 +88,18 @@ class MetricSet extends AbstractModel
     public $Dimensions;
 
     /**
+     * @var string 指标中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetricCName;
+
+    /**
+     * @var string 指标英文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetricEName;
+
+    /**
      * @param string $Namespace 命名空间，每个云产品会有一个命名空间
      * @param string $MetricName 指标名称
      * @param string $Unit 指标使用的单位
@@ -88,6 +108,10 @@ class MetricSet extends AbstractModel
      * @param array $Periods 统计周期内指标方式
      * @param MetricObjectMeaning $Meaning 统计指标含义解释
      * @param array $Dimensions 维度描述信息
+     * @param string $MetricCName 指标中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MetricEName 指标英文名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -143,6 +167,14 @@ class MetricSet extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Dimensions, $obj);
             }
+        }
+
+        if (array_key_exists("MetricCName",$param) and $param["MetricCName"] !== null) {
+            $this->MetricCName = $param["MetricCName"];
+        }
+
+        if (array_key_exists("MetricEName",$param) and $param["MetricEName"] !== null) {
+            $this->MetricEName = $param["MetricEName"];
         }
     }
 }

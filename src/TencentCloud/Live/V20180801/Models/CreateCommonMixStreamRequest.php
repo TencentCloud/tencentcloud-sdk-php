@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCommonMixStream请求参数结构体
  *
- * @method string getMixStreamSessionId() 获取混流会话（申请混流开始到取消混流结束）标识 ID。
- * @method void setMixStreamSessionId(string $MixStreamSessionId) 设置混流会话（申请混流开始到取消混流结束）标识 ID。
+ * @method string getMixStreamSessionId() 获取混流会话（申请混流开始到取消混流结束）标识 ID。80字节以内，仅含字母、数字以及下划线的字符串。
+ * @method void setMixStreamSessionId(string $MixStreamSessionId) 设置混流会话（申请混流开始到取消混流结束）标识 ID。80字节以内，仅含字母、数字以及下划线的字符串。
  * @method array getInputStreamList() 获取混流输入流列表。
  * @method void setInputStreamList(array $InputStreamList) 设置混流输入流列表。
  * @method CommonMixOutputParams getOutputParams() 获取混流输出流参数。
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateCommonMixStreamRequest extends AbstractModel
 {
     /**
-     * @var string 混流会话（申请混流开始到取消混流结束）标识 ID。
+     * @var string 混流会话（申请混流开始到取消混流结束）标识 ID。80字节以内，仅含字母、数字以及下划线的字符串。
      */
     public $MixStreamSessionId;
 
@@ -77,7 +77,7 @@ class CreateCommonMixStreamRequest extends AbstractModel
     public $ControlParams;
 
     /**
-     * @param string $MixStreamSessionId 混流会话（申请混流开始到取消混流结束）标识 ID。
+     * @param string $MixStreamSessionId 混流会话（申请混流开始到取消混流结束）标识 ID。80字节以内，仅含字母、数字以及下划线的字符串。
      * @param array $InputStreamList 混流输入流列表。
      * @param CommonMixOutputParams $OutputParams 混流输出流参数。
      * @param integer $MixStreamTemplateId 输入模板 ID，若设置该参数，将按默认模板布局输出，无需填入自定义位置参数。

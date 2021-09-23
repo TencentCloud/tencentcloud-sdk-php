@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
  * @method array getInstanceIds() 获取实例ID。
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID。
- * @method boolean getProtectedFromScaleIn() 获取实例是否需要移出保护。
- * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) 设置实例是否需要移出保护。
+ * @method boolean getProtectedFromScaleIn() 获取实例是否需要设置保护。
+ * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) 设置实例是否需要设置保护。
  */
 class SetInstancesProtectionRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SetInstancesProtectionRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var boolean 实例是否需要移出保护。
+     * @var boolean 实例是否需要设置保护。
      */
     public $ProtectedFromScaleIn;
 
     /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param array $InstanceIds 实例ID。
-     * @param boolean $ProtectedFromScaleIn 实例是否需要移出保护。
+     * @param boolean $ProtectedFromScaleIn 实例是否需要设置保护。
      */
     function __construct()
     {

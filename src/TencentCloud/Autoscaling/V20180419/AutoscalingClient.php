@@ -144,8 +144,8 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 * 伸缩组需要未处于活动中
 * 接口会增加期望实例数，新的期望实例数需要小于等于最大实例数
 * 扩容如果失败或者部分成功，最后期望实例数只会增加实际成功的实例数量
- * @method Models\SetInstancesProtectionResponse SetInstancesProtection(Models\SetInstancesProtectionRequest $req) 本接口（SetInstancesProtection）用于设置实例移除保护。
-子机设置为移除保护之后，当发生不健康替换、报警策略、期望值变更等触发缩容时，将不对此子机缩容操作。
+ * @method Models\SetInstancesProtectionResponse SetInstancesProtection(Models\SetInstancesProtectionRequest $req) 本接口（SetInstancesProtection）用于设置实例保护。
+实例设置保护之后，当发生不健康替换、报警策略、期望值变更等触发缩容时，将不对此实例缩容操作。
  * @method Models\StartAutoScalingInstancesResponse StartAutoScalingInstances(Models\StartAutoScalingInstancesRequest $req) 本接口（StartAutoScalingInstances）用于开启伸缩组内 CVM 实例。
 * 开机成功，实例转为`IN_SERVICE`状态后，会增加期望实例数，期望实例数不可超过设置的最大值
 * 本接口支持批量操作，每次请求开机实例的上限为100

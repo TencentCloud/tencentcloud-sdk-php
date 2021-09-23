@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArea(string $Area) 设置域名加速区域，取值global | mainland |  overseas
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWafLevel() 获取waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWafLevel(integer $WafLevel) 设置waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScdnDomain extends AbstractModel
 {
@@ -97,6 +101,12 @@ class ScdnDomain extends AbstractModel
     public $Area;
 
     /**
+     * @var integer waf规则等级，可取100|200|300
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WafLevel;
+
+    /**
      * @param string $Domain 域名
      * @param string $Status 当前状态，取值online | offline | process
      * @param string $Waf Waf 状态默认为‘/’，取值 close | intercept | observe
@@ -107,6 +117,8 @@ class ScdnDomain extends AbstractModel
      * @param integer $AclRuleNumbers Acl 规则数
      * @param string $Bot Bot 状态默认为‘/’，取值 close | open
      * @param string $Area 域名加速区域，取值global | mainland |  overseas
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WafLevel waf规则等级，可取100|200|300
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -160,6 +172,10 @@ class ScdnDomain extends AbstractModel
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("WafLevel",$param) and $param["WafLevel"] !== null) {
+            $this->WafLevel = $param["WafLevel"];
         }
     }
 }

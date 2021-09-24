@@ -32,8 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentStatus(string $AgentStatus) 设置Agent状态，取值范围：
 <li> Online：在线
 <li> Offline：离线
- * @method string getEnvironment() 获取Agent运行环境
- * @method void setEnvironment(string $Environment) 设置Agent运行环境
+ * @method string getEnvironment() 获取Agent运行环境，取值范围：
+<li> Linux：Linux实例
+<li> Windows：Windows实例
+ * @method void setEnvironment(string $Environment) 设置Agent运行环境，取值范围：
+<li> Linux：Linux实例
+<li> Windows：Windows实例
  */
 class AutomationAgentInfo extends AbstractModel
 {
@@ -60,7 +64,9 @@ class AutomationAgentInfo extends AbstractModel
     public $AgentStatus;
 
     /**
-     * @var string Agent运行环境
+     * @var string Agent运行环境，取值范围：
+<li> Linux：Linux实例
+<li> Windows：Windows实例
      */
     public $Environment;
 
@@ -71,7 +77,9 @@ class AutomationAgentInfo extends AbstractModel
      * @param string $AgentStatus Agent状态，取值范围：
 <li> Online：在线
 <li> Offline：离线
-     * @param string $Environment Agent运行环境
+     * @param string $Environment Agent运行环境，取值范围：
+<li> Linux：Linux实例
+<li> Windows：Windows实例
      */
     function __construct()
     {

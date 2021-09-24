@@ -79,6 +79,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeEksContainerInstanceLogResponse DescribeEksContainerInstanceLog(Models\DescribeEksContainerInstanceLogRequest $req) 查询容器实例中容器日志
  * @method Models\DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgress(Models\DescribeEnableVpcCniProgressRequest $req) 本接口用于查询开启vpc-cni模式的任务进度
  * @method Models\DescribeExistedInstancesResponse DescribeExistedInstances(Models\DescribeExistedInstancesRequest $req) 查询已经存在的节点，判断是否可以加入集群
+ * @method Models\DescribeExternalClusterSpecResponse DescribeExternalClusterSpec(Models\DescribeExternalClusterSpecRequest $req) 获取导入第三方集群YAML定义
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取镜像信息
  * @method Models\DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(Models\DescribePrometheusAgentInstancesRequest $req) 获取关联目标集群的实例列表
  * @method Models\DescribePrometheusAgentsResponse DescribePrometheusAgents(Models\DescribePrometheusAgentsRequest $req) 获取被关联集群列表

@@ -33,6 +33,7 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 删除TcaplusDB集群，必须在集群所属所有资源（包括表格组，表）都已经释放的情况下才会成功。
  * @method Models\DeleteIdlFilesResponse DeleteIdlFiles(Models\DeleteIdlFilesRequest $req) 指定集群ID和待删除IDL文件的信息，删除目标文件，如果文件正在被表关联则删除失败。
  * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) 删除表格的快照
+ * @method Models\DeleteTableDataFlowResponse DeleteTableDataFlow(Models\DeleteTableDataFlowRequest $req) 删除表格的数据订阅
  * @method Models\DeleteTableGroupResponse DeleteTableGroup(Models\DeleteTableGroupRequest $req) 删除表格组
  * @method Models\DeleteTableIndexResponse DeleteTableIndex(Models\DeleteTableIndexRequest $req) 删除表格的分布式索引
  * @method Models\DeleteTablesResponse DeleteTables(Models\DeleteTablesRequest $req) 删除指定的表,第一次调用此接口代表将表移动至回收站，再次调用代表将此表格从回收站中彻底删除。
@@ -68,6 +69,7 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\ModifyTablesResponse ModifyTables(Models\ModifyTablesRequest $req) 根据用户选定的表定义IDL文件，批量修改指定的表
  * @method Models\RecoverRecycleTablesResponse RecoverRecycleTables(Models\RecoverRecycleTablesRequest $req) 恢复回收站中，用户自行删除的表。对欠费待释放的表无效。
  * @method Models\RollbackTablesResponse RollbackTables(Models\RollbackTablesRequest $req) 表格数据回档
+ * @method Models\SetTableDataFlowResponse SetTableDataFlow(Models\SetTableDataFlowRequest $req) 新增、修改表格数据订阅
  * @method Models\SetTableIndexResponse SetTableIndex(Models\SetTableIndexRequest $req) 设置表格分布式索引
  * @method Models\UpdateApplyResponse UpdateApply(Models\UpdateApplyRequest $req) 更新申请单状态
  * @method Models\VerifyIdlFilesResponse VerifyIdlFiles(Models\VerifyIdlFilesRequest $req) 上传并校验创建表格文件，返回校验合法的表格定义

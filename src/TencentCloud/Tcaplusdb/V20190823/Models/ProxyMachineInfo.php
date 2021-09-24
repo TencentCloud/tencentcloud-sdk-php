@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyUid(string $ProxyUid) 设置唯一id
  * @method string getMachineType() 获取机器类型
  * @method void setMachineType(string $MachineType) 设置机器类型
+ * @method integer getAvailableCount() 获取可分配proxy资源数
+ * @method void setAvailableCount(integer $AvailableCount) 设置可分配proxy资源数
  */
 class ProxyMachineInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ProxyMachineInfo extends AbstractModel
     public $MachineType;
 
     /**
+     * @var integer 可分配proxy资源数
+     */
+    public $AvailableCount;
+
+    /**
      * @param string $ProxyUid 唯一id
      * @param string $MachineType 机器类型
+     * @param integer $AvailableCount 可分配proxy资源数
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ProxyMachineInfo extends AbstractModel
 
         if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
             $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("AvailableCount",$param) and $param["AvailableCount"] !== null) {
+            $this->AvailableCount = $param["AvailableCount"];
         }
     }
 }

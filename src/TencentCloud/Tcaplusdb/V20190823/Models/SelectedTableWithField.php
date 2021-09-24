@@ -30,10 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableIdlType(string $TableIdlType) 设置表格描述语言类型：`PROTO`或`TDR`
  * @method string getTableType() 获取表格数据结构类型：`GENERIC`或`LIST`
  * @method void setTableType(string $TableType) 设置表格数据结构类型：`GENERIC`或`LIST`
- * @method array getSelectedFields() 获取待创建索引的字段列表
- * @method void setSelectedFields(array $SelectedFields) 设置待创建索引的字段列表
+ * @method array getSelectedFields() 获取待创建索引、缓写、数据订阅的字段列表
+ * @method void setSelectedFields(array $SelectedFields) 设置待创建索引、缓写、数据订阅的字段列表
  * @method integer getShardNum() 获取索引分片数
  * @method void setShardNum(integer $ShardNum) 设置索引分片数
+ * @method KafkaInfo getKafkaInfo() 获取ckafka实例信息
+ * @method void setKafkaInfo(KafkaInfo $KafkaInfo) 设置ckafka实例信息
  */
 class SelectedTableWithField extends AbstractModel
 {
@@ -63,7 +65,7 @@ class SelectedTableWithField extends AbstractModel
     public $TableType;
 
     /**
-     * @var array 待创建索引的字段列表
+     * @var array 待创建索引、缓写、数据订阅的字段列表
      */
     public $SelectedFields;
 
@@ -73,13 +75,19 @@ class SelectedTableWithField extends AbstractModel
     public $ShardNum;
 
     /**
+     * @var KafkaInfo ckafka实例信息
+     */
+    public $KafkaInfo;
+
+    /**
      * @param string $TableGroupId 表所属表格组ID
      * @param string $TableName 表格名称
      * @param string $TableInstanceId 表实例ID
      * @param string $TableIdlType 表格描述语言类型：`PROTO`或`TDR`
      * @param string $TableType 表格数据结构类型：`GENERIC`或`LIST`
-     * @param array $SelectedFields 待创建索引的字段列表
+     * @param array $SelectedFields 待创建索引、缓写、数据订阅的字段列表
      * @param integer $ShardNum 索引分片数
+     * @param KafkaInfo $KafkaInfo ckafka实例信息
      */
     function __construct()
     {
@@ -125,6 +133,11 @@ class SelectedTableWithField extends AbstractModel
 
         if (array_key_exists("ShardNum",$param) and $param["ShardNum"] !== null) {
             $this->ShardNum = $param["ShardNum"];
+        }
+
+        if (array_key_exists("KafkaInfo",$param) and $param["KafkaInfo"] !== null) {
+            $this->KafkaInfo = new KafkaInfo();
+            $this->KafkaInfo->deserialize($param["KafkaInfo"]);
         }
     }
 }

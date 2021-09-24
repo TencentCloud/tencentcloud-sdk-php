@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getStartTime() 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
  * @method void setStartTime(string $StartTime) 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
- * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。
- * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。
+ * @method string getEndTime() 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS，支持查询最近7天数据，建议查询时间跨度在3小时之内。
+ * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS，支持查询最近7天数据，建议查询时间跨度在3小时之内。
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
@@ -44,7 +44,7 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。
+     * @var string 结束时间点，格式为yyyy-mm-dd HH:MM:SS，支持查询最近7天数据，建议查询时间跨度在3小时之内。
      */
     public $EndTime;
 
@@ -61,7 +61,7 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
     /**
      * @param string $StreamName 流名称。
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。
+     * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，支持查询最近7天数据，建议查询时间跨度在3小时之内。
      * @param string $PushDomain 推流域名。
      * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */

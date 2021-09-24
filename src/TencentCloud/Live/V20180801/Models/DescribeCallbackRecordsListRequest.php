@@ -26,20 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过1天。
  * @method string getStreamName() 获取流名称，精确匹配。
  * @method void setStreamName(string $StreamName) 设置流名称，精确匹配。
- * @method integer getPageNum() 获取页码
- * @method void setPageNum(integer $PageNum) 设置页码
- * @method integer getPageSize() 获取每页条数
- * @method void setPageSize(integer $PageSize) 设置每页条数
+ * @method integer getPageNum() 获取页码。
+ * @method void setPageNum(integer $PageNum) 设置页码。
+ * @method integer getPageSize() 获取每页条数。
+ * @method void setPageSize(integer $PageSize) 设置每页条数。
  * @method integer getEventType() 获取事件类型。
 0: "断流",
 1: "推流",
-100: "录制"
+100: "录制"。
  * @method void setEventType(integer $EventType) 设置事件类型。
 0: "断流",
 1: "推流",
-100: "录制"
- * @method integer getResultCode() 获取回调结果。0为成功，其他为失败
- * @method void setResultCode(integer $ResultCode) 设置回调结果。0为成功，其他为失败
+100: "录制"。
+ * @method integer getResultCode() 获取回调结果。
+0为成功，其他为失败。
+ * @method void setResultCode(integer $ResultCode) 设置回调结果。
+0为成功，其他为失败。
  */
 class DescribeCallbackRecordsListRequest extends AbstractModel
 {
@@ -59,12 +61,12 @@ class DescribeCallbackRecordsListRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var integer 页码
+     * @var integer 页码。
      */
     public $PageNum;
 
     /**
-     * @var integer 每页条数
+     * @var integer 每页条数。
      */
     public $PageSize;
 
@@ -72,12 +74,13 @@ class DescribeCallbackRecordsListRequest extends AbstractModel
      * @var integer 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"
+100: "录制"。
      */
     public $EventType;
 
     /**
-     * @var integer 回调结果。0为成功，其他为失败
+     * @var integer 回调结果。
+0为成功，其他为失败。
      */
     public $ResultCode;
 
@@ -85,13 +88,14 @@ class DescribeCallbackRecordsListRequest extends AbstractModel
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过1天。
      * @param string $StreamName 流名称，精确匹配。
-     * @param integer $PageNum 页码
-     * @param integer $PageSize 每页条数
+     * @param integer $PageNum 页码。
+     * @param integer $PageSize 每页条数。
      * @param integer $EventType 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"
-     * @param integer $ResultCode 回调结果。0为成功，其他为失败
+100: "录制"。
+     * @param integer $ResultCode 回调结果。
+0为成功，其他为失败。
      */
     function __construct()
     {

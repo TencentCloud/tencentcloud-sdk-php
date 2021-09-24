@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setYear(integer $Year) 设置年份，没识别出年份的时候返回0
  * @method array getCarLocation() 获取车辆在图片中的坐标信息
  * @method void setCarLocation(array $CarLocation) 设置车辆在图片中的坐标信息
+ * @method CarPlateContent getPlateContent() 获取车牌信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPlateContent(CarPlateContent $PlateContent) 设置车牌信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CarTagItem extends AbstractModel
 {
@@ -73,6 +77,12 @@ class CarTagItem extends AbstractModel
     public $CarLocation;
 
     /**
+     * @var CarPlateContent 车牌信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PlateContent;
+
+    /**
      * @param string $Serial 车系
      * @param string $Brand 车辆品牌
      * @param string $Type 车辆类型
@@ -80,6 +90,8 @@ class CarTagItem extends AbstractModel
      * @param integer $Confidence 置信度，0-100
      * @param integer $Year 年份，没识别出年份的时候返回0
      * @param array $CarLocation 车辆在图片中的坐标信息
+     * @param CarPlateContent $PlateContent 车牌信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -125,6 +137,11 @@ class CarTagItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CarLocation, $obj);
             }
+        }
+
+        if (array_key_exists("PlateContent",$param) and $param["PlateContent"] !== null) {
+            $this->PlateContent = new CarPlateContent();
+            $this->PlateContent->deserialize($param["PlateContent"]);
         }
     }
 }

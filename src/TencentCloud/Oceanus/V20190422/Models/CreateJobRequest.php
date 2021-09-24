@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置作业的备注信息，可以随意设置
  * @method string getFolderId() 获取作业名所属文件夹ID，根目录为"root"
  * @method void setFolderId(string $FolderId) 设置作业名所属文件夹ID，根目录为"root"
+ * @method string getFlinkVersion() 获取作业运行的Flink版本
+ * @method void setFlinkVersion(string $FlinkVersion) 设置作业运行的Flink版本
  */
 class CreateJobRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateJobRequest extends AbstractModel
     public $FolderId;
 
     /**
+     * @var string 作业运行的Flink版本
+     */
+    public $FlinkVersion;
+
+    /**
      * @param string $Name 作业名称，允许输入长度小于等于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名
      * @param integer $JobType 作业的类型，1 表示 SQL 作业，2 表示 JAR 作业
      * @param integer $ClusterType 集群的类型，1 表示共享集群，2 表示独享集群
@@ -80,6 +87,7 @@ class CreateJobRequest extends AbstractModel
      * @param integer $CuMem 设置每 CU 的内存规格，单位为 GB，支持 2、4、8、16（需申请开通白名单后使用）。默认为 4，即 1 CU 对应 4 GB 的运行内存
      * @param string $Remark 作业的备注信息，可以随意设置
      * @param string $FolderId 作业名所属文件夹ID，根目录为"root"
+     * @param string $FlinkVersion 作业运行的Flink版本
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateJobRequest extends AbstractModel
 
         if (array_key_exists("FolderId",$param) and $param["FolderId"] !== null) {
             $this->FolderId = $param["FolderId"];
+        }
+
+        if (array_key_exists("FlinkVersion",$param) and $param["FlinkVersion"] !== null) {
+            $this->FlinkVersion = $param["FlinkVersion"];
         }
     }
 }

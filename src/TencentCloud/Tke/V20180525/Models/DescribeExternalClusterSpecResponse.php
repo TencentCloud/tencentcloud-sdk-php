@@ -14,46 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cii\V20210408\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStructureResult返回参数结构体
+ * DescribeExternalClusterSpec返回参数结构体
  *
- * @method integer getStatus() 获取结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
- * @method void setStatus(integer $Status) 设置结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
- * @method array getResults() 获取结构化结果
- * @method void setResults(array $Results) 设置结构化结果
- * @method string getMainTaskId() 获取主任务ID
- * @method void setMainTaskId(string $MainTaskId) 设置主任务ID
+ * @method string getSpec() 获取导入第三方集群YAML定义
+ * @method void setSpec(string $Spec) 设置导入第三方集群YAML定义
+ * @method string getExpiration() 获取agent.yaml文件过期时间字符串，时区UTC
+ * @method void setExpiration(string $Expiration) 设置agent.yaml文件过期时间字符串，时区UTC
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeStructureResultResponse extends AbstractModel
+class DescribeExternalClusterSpecResponse extends AbstractModel
 {
     /**
-     * @var integer 结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
+     * @var string 导入第三方集群YAML定义
      */
-    public $Status;
+    public $Spec;
 
     /**
-     * @var array 结构化结果
+     * @var string agent.yaml文件过期时间字符串，时区UTC
      */
-    public $Results;
-
-    /**
-     * @var string 主任务ID
-     */
-    public $MainTaskId;
+    public $Expiration;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,12 +45,8 @@ class DescribeStructureResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
-     * @param array $Results 结构化结果
-     * @param string $MainTaskId 主任务ID
+     * @param string $Spec 导入第三方集群YAML定义
+     * @param string $Expiration agent.yaml文件过期时间字符串，时区UTC
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -82,21 +62,12 @@ class DescribeStructureResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("Spec",$param) and $param["Spec"] !== null) {
+            $this->Spec = $param["Spec"];
         }
 
-        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
-            $this->Results = [];
-            foreach ($param["Results"] as $key => $value){
-                $obj = new StructureResultObject();
-                $obj->deserialize($value);
-                array_push($this->Results, $obj);
-            }
-        }
-
-        if (array_key_exists("MainTaskId",$param) and $param["MainTaskId"] !== null) {
-            $this->MainTaskId = $param["MainTaskId"];
+        if (array_key_exists("Expiration",$param) and $param["Expiration"] !== null) {
+            $this->Expiration = $param["Expiration"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

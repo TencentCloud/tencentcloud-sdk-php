@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(string $TaskType) 设置报告类型
  * @method string getStructureResult() 获取结构化结果
  * @method void setStructureResult(string $StructureResult) 设置结构化结果
+ * @method string getSubTaskId() 获取子任务ID
+ * @method void setSubTaskId(string $SubTaskId) 设置子任务ID
  */
 class StructureResultObject extends AbstractModel
 {
@@ -45,9 +47,15 @@ class StructureResultObject extends AbstractModel
     public $StructureResult;
 
     /**
+     * @var string 子任务ID
+     */
+    public $SubTaskId;
+
+    /**
      * @param integer $Code 0表示正常返回
      * @param string $TaskType 报告类型
      * @param string $StructureResult 结构化结果
+     * @param string $SubTaskId 子任务ID
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class StructureResultObject extends AbstractModel
 
         if (array_key_exists("StructureResult",$param) and $param["StructureResult"] !== null) {
             $this->StructureResult = $param["StructureResult"];
+        }
+
+        if (array_key_exists("SubTaskId",$param) and $param["SubTaskId"] !== null) {
+            $this->SubTaskId = $param["SubTaskId"];
         }
     }
 }

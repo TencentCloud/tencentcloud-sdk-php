@@ -28,8 +28,66 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量,默认0
  * @method integer getLimit() 获取最大输出条数，默认20，最大为100
  * @method void setLimit(integer $Limit) 设置最大输出条数，默认20，最大为100
- * @method array getFilters() 获取过滤条件,当前只支持按照单个条件ClusterName进行过滤
- * @method void setFilters(array $Filters) 设置过滤条件,当前只支持按照单个条件ClusterName进行过滤
+ * @method array getFilters() 获取·  ClusterName
+    按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  Tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  vpc-id
+    按照【VPC】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-key
+    按照【标签键】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-value
+    按照【标签值】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+ * @method void setFilters(array $Filters) 设置·  ClusterName
+    按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  Tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  vpc-id
+    按照【VPC】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-key
+    按照【标签键】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-value
+    按照【标签值】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+ * @method string getClusterType() 获取集群类型，例如：MANAGED_CLUSTER
+ * @method void setClusterType(string $ClusterType) 设置集群类型，例如：MANAGED_CLUSTER
  */
 class DescribeClustersRequest extends AbstractModel
 {
@@ -50,16 +108,78 @@ class DescribeClustersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * @var array ·  ClusterName
+    按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  Tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  vpc-id
+    按照【VPC】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-key
+    按照【标签键】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-value
+    按照【标签值】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
      */
     public $Filters;
+
+    /**
+     * @var string 集群类型，例如：MANAGED_CLUSTER
+     */
+    public $ClusterType;
 
     /**
      * @param array $ClusterIds 集群ID列表(为空时，
 表示获取账号下所有集群)
      * @param integer $Offset 偏移量,默认0
      * @param integer $Limit 最大输出条数，默认20，最大为100
-     * @param array $Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * @param array $Filters ·  ClusterName
+    按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  Tags
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+
+·  vpc-id
+    按照【VPC】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-key
+    按照【标签键】进行过滤。
+    类型：String
+    必选：否
+
+·  tag-value
+    按照【标签值】进行过滤。
+    类型：String
+    必选：否
+
+·  tag:tag-key
+    按照【标签键值对】进行过滤。
+    类型：String
+    必选：否
+     * @param string $ClusterType 集群类型，例如：MANAGED_CLUSTER
      */
     function __construct()
     {
@@ -93,6 +213,10 @@ class DescribeClustersRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

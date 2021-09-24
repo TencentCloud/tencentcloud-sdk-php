@@ -88,6 +88,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbaUins(array $DbaUins) 设置审批人uin列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDataFlowStatus() 获取是否开启了数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataFlowStatus(integer $DataFlowStatus) 设置是否开启了数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method KafkaInfo getKafkaInfo() 获取数据订阅的kafka信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKafkaInfo(KafkaInfo $KafkaInfo) 设置数据订阅的kafka信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInfo extends AbstractModel
 {
@@ -222,6 +230,18 @@ class ClusterInfo extends AbstractModel
     public $DbaUins;
 
     /**
+     * @var integer 是否开启了数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataFlowStatus;
+
+    /**
+     * @var KafkaInfo 数据订阅的kafka信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KafkaInfo;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterId 集群ID
      * @param string $Region 集群所在地域
@@ -255,6 +275,10 @@ class ClusterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Censorship 是否开启审核 0-不开启 1-开启
      * @param array $DbaUins 审批人uin列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DataFlowStatus 是否开启了数据订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaInfo $KafkaInfo 数据订阅的kafka信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -374,6 +398,15 @@ class ClusterInfo extends AbstractModel
 
         if (array_key_exists("DbaUins",$param) and $param["DbaUins"] !== null) {
             $this->DbaUins = $param["DbaUins"];
+        }
+
+        if (array_key_exists("DataFlowStatus",$param) and $param["DataFlowStatus"] !== null) {
+            $this->DataFlowStatus = $param["DataFlowStatus"];
+        }
+
+        if (array_key_exists("KafkaInfo",$param) and $param["KafkaInfo"] !== null) {
+            $this->KafkaInfo = new KafkaInfo();
+            $this->KafkaInfo->deserialize($param["KafkaInfo"]);
         }
     }
 }

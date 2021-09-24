@@ -14,46 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cii\V20210408\Models;
+namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStructureResult返回参数结构体
+ * SetTableDataFlow返回参数结构体
  *
- * @method integer getStatus() 获取结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
- * @method void setStatus(integer $Status) 设置结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
- * @method array getResults() 获取结构化结果
- * @method void setResults(array $Results) 设置结构化结果
- * @method string getMainTaskId() 获取主任务ID
- * @method void setMainTaskId(string $MainTaskId) 设置主任务ID
+ * @method integer getTotalCount() 获取表格数据订阅创建结果数量
+ * @method void setTotalCount(integer $TotalCount) 设置表格数据订阅创建结果数量
+ * @method array getTableResults() 获取表格数据订阅创建结果列表
+ * @method void setTableResults(array $TableResults) 设置表格数据订阅创建结果列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeStructureResultResponse extends AbstractModel
+class SetTableDataFlowResponse extends AbstractModel
 {
     /**
-     * @var integer 结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
+     * @var integer 表格数据订阅创建结果数量
      */
-    public $Status;
+    public $TotalCount;
 
     /**
-     * @var array 结构化结果
+     * @var array 表格数据订阅创建结果列表
      */
-    public $Results;
-
-    /**
-     * @var string 主任务ID
-     */
-    public $MainTaskId;
+    public $TableResults;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,12 +45,8 @@ class DescribeStructureResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 结果状态：
-0：返回成功
-1：结果未生成
-2：结果生成失败
-     * @param array $Results 结构化结果
-     * @param string $MainTaskId 主任务ID
+     * @param integer $TotalCount 表格数据订阅创建结果数量
+     * @param array $TableResults 表格数据订阅创建结果列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -82,21 +62,17 @@ class DescribeStructureResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
-            $this->Results = [];
-            foreach ($param["Results"] as $key => $value){
-                $obj = new StructureResultObject();
+        if (array_key_exists("TableResults",$param) and $param["TableResults"] !== null) {
+            $this->TableResults = [];
+            foreach ($param["TableResults"] as $key => $value){
+                $obj = new TableResultNew();
                 $obj->deserialize($value);
-                array_push($this->Results, $obj);
+                array_push($this->TableResults, $obj);
             }
-        }
-
-        if (array_key_exists("MainTaskId",$param) and $param["MainTaskId"] !== null) {
-            $this->MainTaskId = $param["MainTaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

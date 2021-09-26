@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
  * @method integer getAutoSyncFlag() 获取是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
  * @method void setAutoSyncFlag(integer $AutoSyncFlag) 设置是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
+ * @method string getCageId() 获取金融围拢 ID 。
+ * @method void setCageId(string $CageId) 设置金融围拢 ID 。
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -241,6 +243,11 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $AutoSyncFlag;
 
     /**
+     * @var string 金融围拢 ID 。
+     */
+    public $CageId;
+
+    /**
      * @param integer $GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param integer $Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @param integer $Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
@@ -272,6 +279,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param integer $InstanceNodes 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
      * @param integer $Cpu 实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
      * @param integer $AutoSyncFlag 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
+     * @param string $CageId 金融围拢 ID 。
      */
     function __construct()
     {
@@ -419,6 +427,10 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("AutoSyncFlag",$param) and $param["AutoSyncFlag"] !== null) {
             $this->AutoSyncFlag = $param["AutoSyncFlag"];
+        }
+
+        if (array_key_exists("CageId",$param) and $param["CageId"] !== null) {
+            $this->CageId = $param["CageId"];
         }
     }
 }

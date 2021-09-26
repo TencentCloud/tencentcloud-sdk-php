@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployGroupIds(array $DeployGroupIds) 设置置放群组ID列表。
  * @method array getTagKeysForSearch() 获取是否以标签键为过滤条件。
  * @method void setTagKeysForSearch(array $TagKeysForSearch) 设置是否以标签键为过滤条件。
+ * @method array getCageIds() 获取金融围拢 ID 。
+ * @method void setCageIds(array $CageIds) 设置金融围拢 ID 。
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -213,6 +215,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $TagKeysForSearch;
 
     /**
+     * @var array 金融围拢 ID 。
+     */
+    public $CageIds;
+
+    /**
      * @param integer $ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      * @param array $InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
      * @param array $Vips 实例的内网 IP 地址。
@@ -240,6 +247,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $WithMaster 是否包含主实例，可取值：0 - 不包含，1 - 包含。默认取值为1。
      * @param array $DeployGroupIds 置放群组ID列表。
      * @param array $TagKeysForSearch 是否以标签键为过滤条件。
+     * @param array $CageIds 金融围拢 ID 。
      */
     function __construct()
     {
@@ -360,6 +368,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("TagKeysForSearch",$param) and $param["TagKeysForSearch"] !== null) {
             $this->TagKeysForSearch = $param["TagKeysForSearch"];
+        }
+
+        if (array_key_exists("CageIds",$param) and $param["CageIds"] !== null) {
+            $this->CageIds = $param["CageIds"];
         }
     }
 }

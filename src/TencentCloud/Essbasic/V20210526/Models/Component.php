@@ -60,8 +60,8 @@ SIGN_SIGNATURE - 用户签名控件；
 SIGN_PERSONAL_SEAL - 个人签署印章控件；
 
 表单域的控件不能作为印章和签名控件
- * @method string getComponentName() 获取控件名称
- * @method void setComponentName(string $ComponentName) 设置控件名称
+ * @method string getComponentName() 获取控件简称
+ * @method void setComponentName(string $ComponentName) 设置控件简称
  * @method boolean getComponentRequired() 获取定义控件是否为必填项，默认为false
  * @method void setComponentRequired(boolean $ComponentRequired) 设置定义控件是否为必填项，默认为false
  * @method integer getFileIndex() 获取控件所属文件的序号 (文档中文件的排列序号)
@@ -142,7 +142,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
     public $ComponentType;
 
     /**
-     * @var string 控件名称
+     * @var string 控件简称
      */
     public $ComponentName;
 
@@ -243,7 +243,7 @@ SIGN_SIGNATURE - 用户签名控件；
 SIGN_PERSONAL_SEAL - 个人签署印章控件；
 
 表单域的控件不能作为印章和签名控件
-     * @param string $ComponentName 控件名称
+     * @param string $ComponentName 控件简称
      * @param boolean $ComponentRequired 定义控件是否为必填项，默认为false
      * @param integer $FileIndex 控件所属文件的序号 (文档中文件的排列序号)
      * @param string $GenerateMode 控件生成的方式：

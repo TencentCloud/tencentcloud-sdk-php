@@ -23,10 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cfw\V20190904\Models as Models;
 
 /**
+ * @method Models\AddAcRuleResponse AddAcRule(Models\AddAcRuleRequest $req) 添加互联网边界规则
  * @method Models\CreateAcRulesResponse CreateAcRules(Models\CreateAcRulesRequest $req) 创建规则
  * @method Models\CreateChooseVpcsResponse CreateChooseVpcs(Models\CreateChooseVpcsRequest $req) 创建、选择vpc
  * @method Models\CreateDatabaseWhiteListRulesResponse CreateDatabaseWhiteListRules(Models\CreateDatabaseWhiteListRulesRequest $req) 创建暴露数据库白名单规则
  * @method Models\CreateNatFwInstanceResponse CreateNatFwInstance(Models\CreateNatFwInstanceRequest $req) 创建防火墙实例
+ * @method Models\CreateNatFwInstanceWithDomainResponse CreateNatFwInstanceWithDomain(Models\CreateNatFwInstanceWithDomainRequest $req) 创建防火墙实例和接入域名
  * @method Models\CreateSecurityGroupApiRulesResponse CreateSecurityGroupApiRules(Models\CreateSecurityGroupApiRulesRequest $req) 创建安全组API规则
  * @method Models\CreateSecurityGroupRulesResponse CreateSecurityGroupRules(Models\CreateSecurityGroupRulesRequest $req) 创建企业安全组规则
  * @method Models\DeleteAcRuleResponse DeleteAcRule(Models\DeleteAcRuleRequest $req) 删除规则
@@ -93,6 +95,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\ModifySequenceRulesResponse ModifySequenceRules(Models\ModifySequenceRulesRequest $req) 修改规则执行顺序
  * @method Models\ModifyTableStatusResponse ModifyTableStatus(Models\ModifyTableStatusRequest $req) 修改规则表状态
  * @method Models\ModifyVPCSwitchStatusResponse ModifyVPCSwitchStatus(Models\ModifyVPCSwitchStatusRequest $req) 单个修改VPC火墙开关
+ * @method Models\RemoveAcRuleResponse RemoveAcRule(Models\RemoveAcRuleRequest $req) 删除互联网边界规则
  * @method Models\RunSyncAssetResponse RunSyncAsset(Models\RunSyncAssetRequest $req) 同步资产-互联网&VPC
  * @method Models\SetNatFwDnatRuleResponse SetNatFwDnatRule(Models\SetNatFwDnatRuleRequest $req) 配置防火墙Dnat规则
  * @method Models\SetNatFwEipResponse SetNatFwEip(Models\SetNatFwEipRequest $req) 设置防火墙实例弹性公网ip，目前仅支持新增模式的防火墙实例

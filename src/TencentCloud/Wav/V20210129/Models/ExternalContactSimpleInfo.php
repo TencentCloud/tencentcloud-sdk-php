@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesName(string $SalesName) 设置添加了此外部联系人的企业成员的姓名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDepartmentIdList() 获取添加了此外部联系人的企业成员的归属部门id列表
+ * @method void setDepartmentIdList(array $DepartmentIdList) 设置添加了此外部联系人的企业成员的归属部门id列表
  */
 class ExternalContactSimpleInfo extends AbstractModel
 {
@@ -48,10 +50,16 @@ class ExternalContactSimpleInfo extends AbstractModel
     public $SalesName;
 
     /**
+     * @var array 添加了此外部联系人的企业成员的归属部门id列表
+     */
+    public $DepartmentIdList;
+
+    /**
      * @param string $ExternalUserId 外部联系人的userId
      * @param string $UserId 添加了此外部联系人的企业成员userId
      * @param string $SalesName 添加了此外部联系人的企业成员的姓名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DepartmentIdList 添加了此外部联系人的企业成员的归属部门id列表
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class ExternalContactSimpleInfo extends AbstractModel
 
         if (array_key_exists("SalesName",$param) and $param["SalesName"] !== null) {
             $this->SalesName = $param["SalesName"];
+        }
+
+        if (array_key_exists("DepartmentIdList",$param) and $param["DepartmentIdList"] !== null) {
+            $this->DepartmentIdList = $param["DepartmentIdList"];
         }
     }
 }

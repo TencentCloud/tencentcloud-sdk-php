@@ -244,8 +244,8 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\ModifySubAppIdStatusResponse ModifySubAppIdStatus(Models\ModifySubAppIdStatusRequest $req) 该接口用于启用、停用子应用。被停用的子应用将封停对应域名，并限制控制台访问。
  * @method Models\ModifySuperPlayerConfigResponse ModifySuperPlayerConfig(Models\ModifySuperPlayerConfigRequest $req) 修改超级播放器配置。
  * @method Models\ModifyTranscodeTemplateResponse ModifyTranscodeTemplate(Models\ModifyTranscodeTemplateRequest $req) 修改用户自定义转码模板信息。
- * @method Models\ModifyVodDomainAccelerateConfigResponse ModifyVodDomainAccelerateConfig(Models\ModifyVodDomainAccelerateConfigRequest $req) 该接口用于开启或者关闭点播域名的加速区域。
-1、域名部署状态为 Online 状态时才允许开启或者关闭域名加速区域。
+ * @method Models\ModifyVodDomainAccelerateConfigResponse ModifyVodDomainAccelerateConfig(Models\ModifyVodDomainAccelerateConfigRequest $req) 该接口用于修改点播域名的加速区域。
+1、域名部署状态为 Online 状态时才允许修改加速区域。
  * @method Models\ModifyVodDomainConfigResponse ModifyVodDomainConfig(Models\ModifyVodDomainConfigRequest $req) 该接口用于修改域名配置，可以修改域名的防盗链配置。
 1、域名部署状态为 Online 状态时才允许修改域名的配置。
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) 修改用户自定义水印模板，水印类型不允许修改。

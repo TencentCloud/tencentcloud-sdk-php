@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIpGeolocationInfos返回参数结构体
  *
- * @method array getAddressInfo() 获取IP地址信息列表
- * @method void setAddressInfo(array $AddressInfo) 设置IP地址信息列表
- * @method integer getTotal() 获取IP地址信息个数
- * @method void setTotal(integer $Total) 设置IP地址信息个数
+ * @method array getAddressInfo() 获取IP地址信息列表。
+ * @method void setAddressInfo(array $AddressInfo) 设置IP地址信息列表。
+ * @method integer getTotal() 获取IP地址信息个数。
+ * @method void setTotal(integer $Total) 设置IP地址信息个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeIpGeolocationInfosResponse extends AbstractModel
 {
     /**
-     * @var array IP地址信息列表
+     * @var array IP地址信息列表。
      */
     public $AddressInfo;
 
     /**
-     * @var integer IP地址信息个数
+     * @var integer IP地址信息个数。
      */
     public $Total;
 
@@ -45,8 +45,8 @@ class DescribeIpGeolocationInfosResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AddressInfo IP地址信息列表
-     * @param integer $Total IP地址信息个数
+     * @param array $AddressInfo IP地址信息列表。
+     * @param integer $Total IP地址信息个数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

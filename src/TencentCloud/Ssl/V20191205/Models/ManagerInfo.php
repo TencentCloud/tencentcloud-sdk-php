@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyTime(string $VerifyTime) 设置审核通过时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getStatusInfo() 获取具体审核状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatusInfo(array $StatusInfo) 设置具体审核状态信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ManagerInfo extends AbstractModel
 {
@@ -134,6 +138,12 @@ class ManagerInfo extends AbstractModel
     public $VerifyTime;
 
     /**
+     * @var array 具体审核状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatusInfo;
+
+    /**
      * @param string $Status 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期
      * @param string $ManagerFirstName 管理人姓名
      * @param string $ManagerLastName 管理人姓名
@@ -151,6 +161,8 @@ class ManagerInfo extends AbstractModel
      * @param string $SubmitAuditTime 最近一次提交审核时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VerifyTime 审核通过时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $StatusInfo 具体审核状态信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -220,6 +232,15 @@ class ManagerInfo extends AbstractModel
 
         if (array_key_exists("VerifyTime",$param) and $param["VerifyTime"] !== null) {
             $this->VerifyTime = $param["VerifyTime"];
+        }
+
+        if (array_key_exists("StatusInfo",$param) and $param["StatusInfo"] !== null) {
+            $this->StatusInfo = [];
+            foreach ($param["StatusInfo"] as $key => $value){
+                $obj = new ManagerStatusInfo();
+                $obj->deserialize($value);
+                array_push($this->StatusInfo, $obj);
+            }
         }
     }
 }

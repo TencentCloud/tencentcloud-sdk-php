@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgramId(string $ProgramId) 设置需要绑定的数据集ID
  * @method array getServiceConfigList() 获取服务配置信息列表
  * @method void setServiceConfigList(array $ServiceConfigList) 设置服务配置信息列表
+ * @method boolean getIgnoreCreateImageRepository() 获取忽略创建镜像仓库
+ * @method void setIgnoreCreateImageRepository(boolean $IgnoreCreateImageRepository) 设置忽略创建镜像仓库
  */
 class CreateApplicationRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateApplicationRequest extends AbstractModel
     public $ServiceConfigList;
 
     /**
+     * @var boolean 忽略创建镜像仓库
+     */
+    public $IgnoreCreateImageRepository;
+
+    /**
      * @param string $ApplicationName 应用名称
      * @param string $ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
      * @param string $MicroserviceType 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
@@ -96,6 +103,7 @@ class CreateApplicationRequest extends AbstractModel
      * @param string $ApplicationRuntimeType 应用runtime类型
      * @param string $ProgramId 需要绑定的数据集ID
      * @param array $ServiceConfigList 服务配置信息列表
+     * @param boolean $IgnoreCreateImageRepository 忽略创建镜像仓库
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class CreateApplicationRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ServiceConfigList, $obj);
             }
+        }
+
+        if (array_key_exists("IgnoreCreateImageRepository",$param) and $param["IgnoreCreateImageRepository"] !== null) {
+            $this->IgnoreCreateImageRepository = $param["IgnoreCreateImageRepository"];
         }
     }
 }

@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVersionStatistics返回参数结构体
  *
+ * @method integer getBasicVersionNum() 获取基础版数量
+ * @method void setBasicVersionNum(integer $BasicVersionNum) 设置基础版数量
+ * @method integer getProVersionNum() 获取专业版数量
+ * @method void setProVersionNum(integer $ProVersionNum) 设置专业版数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeVersionStatisticsResponse extends AbstractModel
 {
     /**
+     * @var integer 基础版数量
+     */
+    public $BasicVersionNum;
+
+    /**
+     * @var integer 专业版数量
+     */
+    public $ProVersionNum;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $BasicVersionNum 基础版数量
+     * @param integer $ProVersionNum 专业版数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,14 @@ class DescribeVersionStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("BasicVersionNum",$param) and $param["BasicVersionNum"] !== null) {
+            $this->BasicVersionNum = $param["BasicVersionNum"];
+        }
+
+        if (array_key_exists("ProVersionNum",$param) and $param["ProVersionNum"] !== null) {
+            $this->ProVersionNum = $param["ProVersionNum"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

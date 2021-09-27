@@ -57,8 +57,33 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 该接口已废弃
 
 本接口 (DescribeAccounts) 用于获取帐号列表数据。
+ * @method Models\DescribeAssetAppListResponse DescribeAssetAppList(Models\DescribeAssetAppListRequest $req) 查询应用列表
+ * @method Models\DescribeAssetAppProcessListResponse DescribeAssetAppProcessList(Models\DescribeAssetAppProcessListRequest $req) 获取软件关联进程列表
+ * @method Models\DescribeAssetCoreModuleInfoResponse DescribeAssetCoreModuleInfo(Models\DescribeAssetCoreModuleInfoRequest $req) 获取内核模块详情
+ * @method Models\DescribeAssetCoreModuleListResponse DescribeAssetCoreModuleList(Models\DescribeAssetCoreModuleListRequest $req) 查询资产管理内核模块列表
+ * @method Models\DescribeAssetDatabaseInfoResponse DescribeAssetDatabaseInfo(Models\DescribeAssetDatabaseInfoRequest $req) 获取资产管理数据库详情
+ * @method Models\DescribeAssetDatabaseListResponse DescribeAssetDatabaseList(Models\DescribeAssetDatabaseListRequest $req) 查询资产管理数据库列表
+ * @method Models\DescribeAssetEnvListResponse DescribeAssetEnvList(Models\DescribeAssetEnvListRequest $req) 查询资产管理环境变量列表
  * @method Models\DescribeAssetInfoResponse DescribeAssetInfo(Models\DescribeAssetInfoRequest $req) 获取资产数量： 主机数、账号数、端口数、进程数、软件数、数据库数、Web应用数、Web框架数、Web服务数、Web站点数
+ * @method Models\DescribeAssetInitServiceListResponse DescribeAssetInitServiceList(Models\DescribeAssetInitServiceListRequest $req) 查询资产管理启动服务列表
+ * @method Models\DescribeAssetJarInfoResponse DescribeAssetJarInfo(Models\DescribeAssetJarInfoRequest $req) 获取Jar包详情
+ * @method Models\DescribeAssetJarListResponse DescribeAssetJarList(Models\DescribeAssetJarListRequest $req) 查询Jar包列表
+ * @method Models\DescribeAssetMachineDetailResponse DescribeAssetMachineDetail(Models\DescribeAssetMachineDetailRequest $req) 获取资产管理主机资源详细信息
+ * @method Models\DescribeAssetMachineListResponse DescribeAssetMachineList(Models\DescribeAssetMachineListRequest $req) 获取资产指纹页面的资源监控列表
+ * @method Models\DescribeAssetPlanTaskListResponse DescribeAssetPlanTaskList(Models\DescribeAssetPlanTaskListRequest $req) 查询资产管理计划任务列表
+ * @method Models\DescribeAssetPortInfoListResponse DescribeAssetPortInfoList(Models\DescribeAssetPortInfoListRequest $req) 获取资产管理端口列表
+ * @method Models\DescribeAssetProcessInfoListResponse DescribeAssetProcessInfoList(Models\DescribeAssetProcessInfoListRequest $req) 获取资产管理进程列表
  * @method Models\DescribeAssetRecentMachineInfoResponse DescribeAssetRecentMachineInfo(Models\DescribeAssetRecentMachineInfoRequest $req) 获取主机最近趋势情况
+ * @method Models\DescribeAssetSystemPackageListResponse DescribeAssetSystemPackageList(Models\DescribeAssetSystemPackageListRequest $req) 获取资产管理系统安装包列表
+ * @method Models\DescribeAssetUserInfoResponse DescribeAssetUserInfo(Models\DescribeAssetUserInfoRequest $req) 获取主机账号详情
+ * @method Models\DescribeAssetUserListResponse DescribeAssetUserList(Models\DescribeAssetUserListRequest $req) 获取账号列表
+ * @method Models\DescribeAssetWebAppListResponse DescribeAssetWebAppList(Models\DescribeAssetWebAppListRequest $req) 获取资产管理Web应用列表
+ * @method Models\DescribeAssetWebAppPluginListResponse DescribeAssetWebAppPluginList(Models\DescribeAssetWebAppPluginListRequest $req) 获取资产管理Web应用插件列表
+ * @method Models\DescribeAssetWebFrameListResponse DescribeAssetWebFrameList(Models\DescribeAssetWebFrameListRequest $req) 获取资产管理Web框架列表
+ * @method Models\DescribeAssetWebLocationInfoResponse DescribeAssetWebLocationInfo(Models\DescribeAssetWebLocationInfoRequest $req) 获取Web站点详情
+ * @method Models\DescribeAssetWebLocationListResponse DescribeAssetWebLocationList(Models\DescribeAssetWebLocationListRequest $req) 获取Web站点列表
+ * @method Models\DescribeAssetWebServiceInfoListResponse DescribeAssetWebServiceInfoList(Models\DescribeAssetWebServiceInfoListRequest $req) 查询资产管理Web服务列表
+ * @method Models\DescribeAssetWebServiceProcessListResponse DescribeAssetWebServiceProcessList(Models\DescribeAssetWebServiceProcessListRequest $req) 获取Web服务关联进程列表
  * @method Models\DescribeAttackLogInfoResponse DescribeAttackLogInfo(Models\DescribeAttackLogInfoRequest $req) 网络攻击日志详情
  * @method Models\DescribeAttackLogsResponse DescribeAttackLogs(Models\DescribeAttackLogsRequest $req) 按分页形式展示网络攻击日志列表
  * @method Models\DescribeAttackVulTypeListResponse DescribeAttackVulTypeList(Models\DescribeAttackVulTypeListRequest $req) 获取网络攻击威胁类型列表

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 'invalid'  审核失败
 'expiring'  即将过期
 'expired' 已过期
+ * @method string getSearchKey() 获取管理人姓名/邮箱/部门精准匹配
+ * @method void setSearchKey(string $SearchKey) 设置管理人姓名/邮箱/部门精准匹配
  */
 class DescribeManagersRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeManagersRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var string 管理人姓名/邮箱/部门精准匹配
+     */
+    public $SearchKey;
+
+    /**
      * @param integer $CompanyId 公司ID
      * @param integer $Offset 分页偏移量
      * @param integer $Limit 分页每页数量
@@ -100,6 +107,7 @@ class DescribeManagersRequest extends AbstractModel
 'invalid'  审核失败
 'expiring'  即将过期
 'expired' 已过期
+     * @param string $SearchKey 管理人姓名/邮箱/部门精准匹配
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ class DescribeManagersRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
+            $this->SearchKey = $param["SearchKey"];
         }
     }
 }

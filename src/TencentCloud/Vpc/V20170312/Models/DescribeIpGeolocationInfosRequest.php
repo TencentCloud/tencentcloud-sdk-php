@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIpGeolocationInfos请求参数结构体
  *
- * @method array getAddressIps() 获取查询IP地址列表，支持IPv4和IPv6。
- * @method void setAddressIps(array $AddressIps) 设置查询IP地址列表，支持IPv4和IPv6。
- * @method IpField getFields() 获取查询IP地址的字段信息，包括"Country","Province","City","Region","Isp","AsName","AsId"
- * @method void setFields(IpField $Fields) 设置查询IP地址的字段信息，包括"Country","Province","City","Region","Isp","AsName","AsId"
+ * @method array getAddressIps() 获取需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
+ * @method void setAddressIps(array $AddressIps) 设置需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
+ * @method IpField getFields() 获取需查询的IP地址的字段信息。
+ * @method void setFields(IpField $Fields) 设置需查询的IP地址的字段信息。
  */
 class DescribeIpGeolocationInfosRequest extends AbstractModel
 {
     /**
-     * @var array 查询IP地址列表，支持IPv4和IPv6。
+     * @var array 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
      */
     public $AddressIps;
 
     /**
-     * @var IpField 查询IP地址的字段信息，包括"Country","Province","City","Region","Isp","AsName","AsId"
+     * @var IpField 需查询的IP地址的字段信息。
      */
     public $Fields;
 
     /**
-     * @param array $AddressIps 查询IP地址列表，支持IPv4和IPv6。
-     * @param IpField $Fields 查询IP地址的字段信息，包括"Country","Province","City","Region","Isp","AsName","AsId"
+     * @param array $AddressIps 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
+     * @param IpField $Fields 需查询的IP地址的字段信息。
      */
     function __construct()
     {

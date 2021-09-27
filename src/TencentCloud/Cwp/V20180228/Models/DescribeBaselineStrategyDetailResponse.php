@@ -40,14 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsGlobal(integer $IsGlobal) 设置扫描范围是否全部服务器, 1:是  0:否, 为1则为全部专业版主机
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMachineType() 获取云主机类型：
+ * @method string getMachineType() 获取云服务器类型：
 cvm：腾讯云服务器
 bm：裸金属
 ecm：边缘计算主机
 lh: 轻量应用服务器
 ohter: 混合云机器
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMachineType(string $MachineType) 设置云主机类型：
+ * @method void setMachineType(string $MachineType) 设置云服务器类型：
 cvm：腾讯云服务器
 bm：裸金属
 ecm：边缘计算主机
@@ -106,7 +106,7 @@ class DescribeBaselineStrategyDetailResponse extends AbstractModel
     public $IsGlobal;
 
     /**
-     * @var string 云主机类型：
+     * @var string 云服务器类型：
 cvm：腾讯云服务器
 bm：裸金属
 ecm：边缘计算主机
@@ -156,7 +156,7 @@ ohter: 混合云机器
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsGlobal 扫描范围是否全部服务器, 1:是  0:否, 为1则为全部专业版主机
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MachineType 云主机类型：
+     * @param string $MachineType 云服务器类型：
 cvm：腾讯云服务器
 bm：裸金属
 ecm：边缘计算主机

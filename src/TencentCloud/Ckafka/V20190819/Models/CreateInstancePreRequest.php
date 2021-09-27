@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(integer $ClusterId) 设置创建实例时可以选择集群Id, 该入参表示集群Id
  * @method integer getRenewFlag() 获取预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
  * @method void setRenewFlag(integer $RenewFlag) 设置预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method string getKafkaVersion() 获取支持指定版本Kafka版本（0.10.2/1.1.1/2.4.2） 。指定专业版参数specificationsType=pro
- * @method void setKafkaVersion(string $KafkaVersion) 设置支持指定版本Kafka版本（0.10.2/1.1.1/2.4.2） 。指定专业版参数specificationsType=pro
+ * @method string getKafkaVersion() 获取支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
+ * @method void setKafkaVersion(string $KafkaVersion) 设置支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
  * @method string getSpecificationsType() 获取专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
  * @method void setSpecificationsType(string $SpecificationsType) 设置专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
  * @method integer getDiskSize() 获取磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
@@ -101,7 +101,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.2） 。指定专业版参数specificationsType=pro
+     * @var string 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
      */
     public $KafkaVersion;
 
@@ -145,7 +145,7 @@ class CreateInstancePreRequest extends AbstractModel
      * @param integer $MsgRetentionTime 可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
      * @param integer $ClusterId 创建实例时可以选择集群Id, 该入参表示集群Id
      * @param integer $RenewFlag 预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param string $KafkaVersion 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.2） 。指定专业版参数specificationsType=pro
+     * @param string $KafkaVersion 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
      * @param string $SpecificationsType 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
      * @param integer $DiskSize 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
      * @param integer $BandWidth 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算

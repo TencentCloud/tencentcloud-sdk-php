@@ -78,9 +78,11 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
  * @method Models\ReplaceTopicRuleResponse ReplaceTopicRule(Models\ReplaceTopicRuleRequest $req) 本接口（ReplaceTopicRule）用于修改替换规则 
  * @method Models\ResetDeviceStateResponse ResetDeviceState(Models\ResetDeviceStateRequest $req) 重置设备的连接状态 
  * @method Models\RetryDeviceFirmwareTaskResponse RetryDeviceFirmwareTask(Models\RetryDeviceFirmwareTaskRequest $req) 重试设备升级任务
+ * @method Models\SetProductsForbiddenStatusResponse SetProductsForbiddenStatus(Models\SetProductsForbiddenStatusRequest $req) 批量设置产品禁用状态
  * @method Models\UnbindDevicesResponse UnbindDevices(Models\UnbindDevicesRequest $req) 本接口（UnbindDevices）用于网关设备批量解绑子设备 
  * @method Models\UpdateDeviceAvailableStateResponse UpdateDeviceAvailableState(Models\UpdateDeviceAvailableStateRequest $req) 启用或者禁用设备 
  * @method Models\UpdateDeviceShadowResponse UpdateDeviceShadow(Models\UpdateDeviceShadowRequest $req) 本接口（UpdateDeviceShadow）用于更新虚拟设备信息。
+ * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) 批量启用或者禁用设备 
  * @method Models\UpdateTopicPolicyResponse UpdateTopicPolicy(Models\UpdateTopicPolicyRequest $req) 本接口（UpdateTopicPolicy）用于更新Topic信息
  * @method Models\UploadFirmwareResponse UploadFirmware(Models\UploadFirmwareRequest $req) 本接口（UploadFirmware）用于上传设备固件信息 
  */

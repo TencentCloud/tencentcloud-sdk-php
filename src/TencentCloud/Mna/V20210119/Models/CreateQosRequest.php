@@ -25,25 +25,25 @@ use TencentCloud\Common\AbstractModel;
  * @method DestAddressInfo getDestAddressInfo() 获取加速业务目标地址信息
  * @method void setDestAddressInfo(DestAddressInfo $DestAddressInfo) 设置加速业务目标地址信息
  * @method string getQosMenu() 获取加速套餐
-T100K：上/下行保障 100kbps
-T200K：上/下行保障 200kbps
-T400K：上/下行保障 400kbps
-BD1M：下行带宽保障1Mbps
-BD2M：下行带宽保障2Mbps
-BD4M：下行带宽保障4Mbps
-BU1M：上行带宽保障1Mbps
-BU2M：上行带宽保障2Mbps
-BU4M：上行带宽保障4Mbps
+T100K：时延性保障 + 带宽保障上下行保障 100kbps
+T200K：时延性保障 + 带宽保障上下行保障 200kbps
+T400K：时延性保障 + 带宽保障上下行保障  400kbps
+BD1M：带宽型保障 + 下行带宽保障1Mbps
+BD2M：带宽型保障 + 下行带宽保障2Mbps
+BD4M：带宽型保障 + 下行带宽保障4Mbps
+BU1M：带宽型保障 + 上行带宽保障1Mbps
+BU2M：带宽型保障 + 上行带宽保障2Mbps
+BU4M：带宽型保障 + 上行带宽保障4Mbps
  * @method void setQosMenu(string $QosMenu) 设置加速套餐
-T100K：上/下行保障 100kbps
-T200K：上/下行保障 200kbps
-T400K：上/下行保障 400kbps
-BD1M：下行带宽保障1Mbps
-BD2M：下行带宽保障2Mbps
-BD4M：下行带宽保障4Mbps
-BU1M：上行带宽保障1Mbps
-BU2M：上行带宽保障2Mbps
-BU4M：上行带宽保障4Mbps
+T100K：时延性保障 + 带宽保障上下行保障 100kbps
+T200K：时延性保障 + 带宽保障上下行保障 200kbps
+T400K：时延性保障 + 带宽保障上下行保障  400kbps
+BD1M：带宽型保障 + 下行带宽保障1Mbps
+BD2M：带宽型保障 + 下行带宽保障2Mbps
+BD4M：带宽型保障 + 下行带宽保障4Mbps
+BU1M：带宽型保障 + 上行带宽保障1Mbps
+BU2M：带宽型保障 + 上行带宽保障2Mbps
+BU4M：带宽型保障 + 上行带宽保障4Mbps
  * @method DeviceInfo getDeviceInfo() 获取申请加速的设备信息，包括运营商，操作系统，设备唯一标识等。
  * @method void setDeviceInfo(DeviceInfo $DeviceInfo) 设置申请加速的设备信息，包括运营商，操作系统，设备唯一标识等。
  * @method integer getDuration() 获取期望加速时长（单位分钟），默认值30分钟
@@ -52,6 +52,14 @@ BU4M：上行带宽保障4Mbps
  * @method void setCapacity(Capacity $Capacity) 设置接口能力扩展，如果是电信用户，必须填充CTCC Token字段
  * @method string getTemplateId() 获取应用模板ID
  * @method void setTemplateId(string $TemplateId) 设置应用模板ID
+ * @method integer getProtocol() 获取针对特殊协议进行加速
+1. IP （默认值）
+2. UDP
+3. TCP
+ * @method void setProtocol(integer $Protocol) 设置针对特殊协议进行加速
+1. IP （默认值）
+2. UDP
+3. TCP
  */
 class CreateQosRequest extends AbstractModel
 {
@@ -67,15 +75,15 @@ class CreateQosRequest extends AbstractModel
 
     /**
      * @var string 加速套餐
-T100K：上/下行保障 100kbps
-T200K：上/下行保障 200kbps
-T400K：上/下行保障 400kbps
-BD1M：下行带宽保障1Mbps
-BD2M：下行带宽保障2Mbps
-BD4M：下行带宽保障4Mbps
-BU1M：上行带宽保障1Mbps
-BU2M：上行带宽保障2Mbps
-BU4M：上行带宽保障4Mbps
+T100K：时延性保障 + 带宽保障上下行保障 100kbps
+T200K：时延性保障 + 带宽保障上下行保障 200kbps
+T400K：时延性保障 + 带宽保障上下行保障  400kbps
+BD1M：带宽型保障 + 下行带宽保障1Mbps
+BD2M：带宽型保障 + 下行带宽保障2Mbps
+BD4M：带宽型保障 + 下行带宽保障4Mbps
+BU1M：带宽型保障 + 上行带宽保障1Mbps
+BU2M：带宽型保障 + 上行带宽保障2Mbps
+BU4M：带宽型保障 + 上行带宽保障4Mbps
      */
     public $QosMenu;
 
@@ -100,22 +108,34 @@ BU4M：上行带宽保障4Mbps
     public $TemplateId;
 
     /**
+     * @var integer 针对特殊协议进行加速
+1. IP （默认值）
+2. UDP
+3. TCP
+     */
+    public $Protocol;
+
+    /**
      * @param SrcAddressInfo $SrcAddressInfo 加速业务源地址信息，SrcIpv6和（SrcIpv4+SrcPublicIpv4）二选一，目前Ipv6不可用，全部填写以Ipv4参数为准。
      * @param DestAddressInfo $DestAddressInfo 加速业务目标地址信息
      * @param string $QosMenu 加速套餐
-T100K：上/下行保障 100kbps
-T200K：上/下行保障 200kbps
-T400K：上/下行保障 400kbps
-BD1M：下行带宽保障1Mbps
-BD2M：下行带宽保障2Mbps
-BD4M：下行带宽保障4Mbps
-BU1M：上行带宽保障1Mbps
-BU2M：上行带宽保障2Mbps
-BU4M：上行带宽保障4Mbps
+T100K：时延性保障 + 带宽保障上下行保障 100kbps
+T200K：时延性保障 + 带宽保障上下行保障 200kbps
+T400K：时延性保障 + 带宽保障上下行保障  400kbps
+BD1M：带宽型保障 + 下行带宽保障1Mbps
+BD2M：带宽型保障 + 下行带宽保障2Mbps
+BD4M：带宽型保障 + 下行带宽保障4Mbps
+BU1M：带宽型保障 + 上行带宽保障1Mbps
+BU2M：带宽型保障 + 上行带宽保障2Mbps
+BU4M：带宽型保障 + 上行带宽保障4Mbps
      * @param DeviceInfo $DeviceInfo 申请加速的设备信息，包括运营商，操作系统，设备唯一标识等。
      * @param integer $Duration 期望加速时长（单位分钟），默认值30分钟
      * @param Capacity $Capacity 接口能力扩展，如果是电信用户，必须填充CTCC Token字段
      * @param string $TemplateId 应用模板ID
+     * @param integer $Protocol 针对特殊协议进行加速
+1. IP （默认值）
+2. UDP
+3. TCP
      */
     function __construct()
     {
@@ -160,6 +180,10 @@ BU4M：上行带宽保障4Mbps
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRules(array $Rules) 设置自定义 cc 防护规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAdvancedRules() 获取增强自定义 cc 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvancedRules(array $AdvancedRules) 设置增强自定义 cc 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScdnConfig extends AbstractModel
 {
@@ -41,8 +45,16 @@ class ScdnConfig extends AbstractModel
     public $Rules;
 
     /**
+     * @var array 增强自定义 cc 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvancedRules;
+
+    /**
      * @param string $Switch on | off
      * @param array $Rules 自定义 cc 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AdvancedRules 增强自定义 cc 防护规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,15 @@ class ScdnConfig extends AbstractModel
                 $obj = new ScdnCCRules();
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
+            }
+        }
+
+        if (array_key_exists("AdvancedRules",$param) and $param["AdvancedRules"] !== null) {
+            $this->AdvancedRules = [];
+            foreach ($param["AdvancedRules"] as $key => $value){
+                $obj = new AdvancedCCRules();
+                $obj->deserialize($value);
+                array_push($this->AdvancedRules, $obj);
             }
         }
     }

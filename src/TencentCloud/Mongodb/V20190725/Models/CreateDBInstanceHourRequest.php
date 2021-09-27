@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB
  * @method integer getReplicateSetNum() 获取副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
  * @method void setReplicateSetNum(integer $ReplicateSetNum) 设置副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
- * @method integer getNodeNum() 获取每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
- * @method void setNodeNum(integer $NodeNum) 设置每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
- * @method string getMongoVersion() 获取版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
- * @method void setMongoVersion(string $MongoVersion) 设置版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
+ * @method integer getNodeNum() 获取每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
+ * @method void setNodeNum(integer $NodeNum) 设置每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
+ * @method string getMongoVersion() 获取版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本
+ * @method void setMongoVersion(string $MongoVersion) 设置版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本
  * @method string getMachineCode() 获取机器类型，HIO：高IO型；HIO10G：高IO万兆
  * @method void setMachineCode(string $MachineCode) 设置机器类型，HIO：高IO型；HIO10G：高IO万兆
  * @method integer getGoodsNum() 获取实例数量，最小值1，最大值为10
  * @method void setGoodsNum(integer $GoodsNum) 设置实例数量，最小值1，最大值为10
- * @method string getZone() 获取可用区信息，格式如：ap-guangzhou-2
- * @method void setZone(string $Zone) 设置可用区信息，格式如：ap-guangzhou-2
+ * @method string getZone() 获取可用区信息，格式如：ap-guangzhou-2。注：此参数填写的是主可用区，如果选择多可用区部署，Zone必须是AvailabilityZoneList中的一个
+ * @method void setZone(string $Zone) 设置可用区信息，格式如：ap-guangzhou-2。注：此参数填写的是主可用区，如果选择多可用区部署，Zone必须是AvailabilityZoneList中的一个
  * @method string getClusterType() 获取实例类型，REPLSET-副本集，SHARD-分片集群
  * @method void setClusterType(string $ClusterType) 设置实例类型，REPLSET-副本集，SHARD-分片集群
  * @method string getVpcId() 获取私有网络ID，如果不设置该参数则默认选择基础网络
@@ -48,12 +48,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID，不设置为默认项目
  * @method array getTags() 获取实例标签信息
  * @method void setTags(array $Tags) 设置实例标签信息
- * @method integer getClone() 获取1:正式实例,2:临时实例,3:只读实例，4：灾备实例
- * @method void setClone(integer $Clone) 设置1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+ * @method integer getClone() 获取1:正式实例,2:临时实例,3:只读实例,4:灾备实例,5:克隆实例
+ * @method void setClone(integer $Clone) 设置1:正式实例,2:临时实例,3:只读实例,4:灾备实例,5:克隆实例
  * @method string getFather() 获取父实例Id，当Clone为3或者4时，这个必须填
  * @method void setFather(string $Father) 设置父实例Id，当Clone为3或者4时，这个必须填
  * @method array getSecurityGroup() 获取安全组
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组
+ * @method string getRestoreTime() 获取克隆实例回档时间。若是克隆实例，则必须填写，示例：2021-08-13 16:30:00。注：只能回档7天内的时间点
+ * @method void setRestoreTime(string $RestoreTime) 设置克隆实例回档时间。若是克隆实例，则必须填写，示例：2021-08-13 16:30:00。注：只能回档7天内的时间点
+ * @method string getInstanceName() 获取实例名称。注：名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。注：名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-
+ * @method array getAvailabilityZoneList() 获取多可用区部署的节点列表，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：1、多可用区部署节点只能部署在3个不同可用区；2、为了保障跨可用区切换，不支持将集群的大多数节点部署在同一个可用区（如3节点集群不支持2个节点部署在同一个区）；3、不支持4.2及以上版本；4、不支持只读灾备实例；5、不能选择基础网络
+ * @method void setAvailabilityZoneList(array $AvailabilityZoneList) 设置多可用区部署的节点列表，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：1、多可用区部署节点只能部署在3个不同可用区；2、为了保障跨可用区切换，不支持将集群的大多数节点部署在同一个可用区（如3节点集群不支持2个节点部署在同一个区）；3、不支持4.2及以上版本；4、不支持只读灾备实例；5、不能选择基础网络
+ * @method integer getMongosCpu() 获取mongos cpu数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
+ * @method void setMongosCpu(integer $MongosCpu) 设置mongos cpu数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
+ * @method integer getMongosMemory() 获取mongos 内存大小，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
+ * @method void setMongosMemory(integer $MongosMemory) 设置mongos 内存大小，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
+ * @method integer getMongosNodeNum() 获取mongos 数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：为了保障高可用，最低需要购买3个mongos，上限为32个
+ * @method void setMongosNodeNum(integer $MongosNodeNum) 设置mongos 数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：为了保障高可用，最低需要购买3个mongos，上限为32个
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -73,12 +85,12 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $ReplicateSetNum;
 
     /**
-     * @var integer 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+     * @var integer 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
      */
     public $NodeNum;
 
     /**
-     * @var string 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
+     * @var string 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本
      */
     public $MongoVersion;
 
@@ -93,7 +105,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var string 可用区信息，格式如：ap-guangzhou-2
+     * @var string 可用区信息，格式如：ap-guangzhou-2。注：此参数填写的是主可用区，如果选择多可用区部署，Zone必须是AvailabilityZoneList中的一个
      */
     public $Zone;
 
@@ -128,7 +140,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+     * @var integer 1:正式实例,2:临时实例,3:只读实例,4:灾备实例,5:克隆实例
      */
     public $Clone;
 
@@ -143,23 +155,59 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $SecurityGroup;
 
     /**
+     * @var string 克隆实例回档时间。若是克隆实例，则必须填写，示例：2021-08-13 16:30:00。注：只能回档7天内的时间点
+     */
+    public $RestoreTime;
+
+    /**
+     * @var string 实例名称。注：名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-
+     */
+    public $InstanceName;
+
+    /**
+     * @var array 多可用区部署的节点列表，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：1、多可用区部署节点只能部署在3个不同可用区；2、为了保障跨可用区切换，不支持将集群的大多数节点部署在同一个可用区（如3节点集群不支持2个节点部署在同一个区）；3、不支持4.2及以上版本；4、不支持只读灾备实例；5、不能选择基础网络
+     */
+    public $AvailabilityZoneList;
+
+    /**
+     * @var integer mongos cpu数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
+     */
+    public $MongosCpu;
+
+    /**
+     * @var integer mongos 内存大小，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
+     */
+    public $MongosMemory;
+
+    /**
+     * @var integer mongos 数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：为了保障高可用，最低需要购买3个mongos，上限为32个
+     */
+    public $MongosNodeNum;
+
+    /**
      * @param integer $Memory 实例内存大小，单位：GB
      * @param integer $Volume 实例硬盘大小，单位：GB
      * @param integer $ReplicateSetNum 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
-     * @param integer $NodeNum 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
-     * @param string $MongoVersion 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
+     * @param integer $NodeNum 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
+     * @param string $MongoVersion 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本
      * @param string $MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆
      * @param integer $GoodsNum 实例数量，最小值1，最大值为10
-     * @param string $Zone 可用区信息，格式如：ap-guangzhou-2
+     * @param string $Zone 可用区信息，格式如：ap-guangzhou-2。注：此参数填写的是主可用区，如果选择多可用区部署，Zone必须是AvailabilityZoneList中的一个
      * @param string $ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群
      * @param string $VpcId 私有网络ID，如果不设置该参数则默认选择基础网络
      * @param string $SubnetId 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
      * @param string $Password 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
      * @param integer $ProjectId 项目ID，不设置为默认项目
      * @param array $Tags 实例标签信息
-     * @param integer $Clone 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+     * @param integer $Clone 1:正式实例,2:临时实例,3:只读实例,4:灾备实例,5:克隆实例
      * @param string $Father 父实例Id，当Clone为3或者4时，这个必须填
      * @param array $SecurityGroup 安全组
+     * @param string $RestoreTime 克隆实例回档时间。若是克隆实例，则必须填写，示例：2021-08-13 16:30:00。注：只能回档7天内的时间点
+     * @param string $InstanceName 实例名称。注：名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-
+     * @param array $AvailabilityZoneList 多可用区部署的节点列表，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：1、多可用区部署节点只能部署在3个不同可用区；2、为了保障跨可用区切换，不支持将集群的大多数节点部署在同一个可用区（如3节点集群不支持2个节点部署在同一个区）；3、不支持4.2及以上版本；4、不支持只读灾备实例；5、不能选择基础网络
+     * @param integer $MongosCpu mongos cpu数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
+     * @param integer $MongosMemory mongos 内存大小，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
+     * @param integer $MongosNodeNum mongos 数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：为了保障高可用，最低需要购买3个mongos，上限为32个
      */
     function __construct()
     {
@@ -245,6 +293,30 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
             $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("RestoreTime",$param) and $param["RestoreTime"] !== null) {
+            $this->RestoreTime = $param["RestoreTime"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("AvailabilityZoneList",$param) and $param["AvailabilityZoneList"] !== null) {
+            $this->AvailabilityZoneList = $param["AvailabilityZoneList"];
+        }
+
+        if (array_key_exists("MongosCpu",$param) and $param["MongosCpu"] !== null) {
+            $this->MongosCpu = $param["MongosCpu"];
+        }
+
+        if (array_key_exists("MongosMemory",$param) and $param["MongosMemory"] !== null) {
+            $this->MongosMemory = $param["MongosMemory"];
+        }
+
+        if (array_key_exists("MongosNodeNum",$param) and $param["MongosNodeNum"] !== null) {
+            $this->MongosNodeNum = $param["MongosNodeNum"];
         }
     }
 }

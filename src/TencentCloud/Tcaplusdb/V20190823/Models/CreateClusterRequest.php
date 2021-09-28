@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyList(array $ProxyList) 设置独占集群占用的proxy机器
  * @method integer getClusterType() 获取集群类型1共享2独占
  * @method void setClusterType(integer $ClusterType) 设置集群类型1共享2独占
+ * @method integer getAuthType() 获取密码认证类型，0 静态认证， 1 签名认证
+ * @method void setAuthType(integer $AuthType) 设置密码认证类型，0 静态认证， 1 签名认证
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateClusterRequest extends AbstractModel
     public $ClusterType;
 
     /**
+     * @var integer 密码认证类型，0 静态认证， 1 签名认证
+     */
+    public $AuthType;
+
+    /**
      * @param string $IdlType 集群数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      * @param string $ClusterName 集群名称，可使用中文或英文字符，最大长度32个字符
      * @param string $VpcId 集群所绑定的私有网络实例ID，形如：vpc-f49l6u0z
@@ -104,6 +111,7 @@ class CreateClusterRequest extends AbstractModel
      * @param array $ServerList 独占集群占用的svr机器
      * @param array $ProxyList 独占集群占用的proxy机器
      * @param integer $ClusterType 集群类型1共享2独占
+     * @param integer $AuthType 密码认证类型，0 静态认证， 1 签名认证
      */
     function __construct()
     {
@@ -171,6 +179,10 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
             $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
+            $this->AuthType = $param["AuthType"];
         }
     }
 }

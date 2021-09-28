@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method array getFilters() 获取过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,每个过滤参数支持的过滤值不超过5个。
-task-id - String - （任务ID过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
+ * @method array getFilters() 获取过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
+task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
-task-sql-keyword - String - （SQL语句关键字）取值形如：DROP TABLE。
- * @method void setFilters(array $Filters) 设置过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,每个过滤参数支持的过滤值不超过5个。
-task-id - String - （任务ID过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
+task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
+ * @method void setFilters(array $Filters) 设置过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
+task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
-task-sql-keyword - String - （SQL语句关键字）取值形如：DROP TABLE。
+task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
  * @method string getSortBy() 获取排序字段，支持如下字段类型，create-time
  * @method void setSortBy(string $SortBy) 设置排序字段，支持如下字段类型，create-time
  * @method string getSorting() 获取排序方式，desc表示正序，asc表示反序， 默认为asc。
@@ -54,10 +54,10 @@ class DescribeTasksRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,每个过滤参数支持的过滤值不超过5个。
-task-id - String - （任务ID过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
+     * @var array 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
+task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
-task-sql-keyword - String - （SQL语句关键字）取值形如：DROP TABLE。
+task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
      */
     public $Filters;
 
@@ -84,10 +84,10 @@ task-sql-keyword - String - （SQL语句关键字）取值形如：DROP TABLE。
     /**
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
-     * @param array $Filters 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,每个过滤参数支持的过滤值不超过5个。
-task-id - String - （任务ID过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
+     * @param array $Filters 过滤条件，如下支持的过滤类型，传参Name应为以下其中一个,其中task-id支持最大50个过滤个数，其他过滤参数支持的总数不超过5个。
+task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
 task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
-task-sql-keyword - String - （SQL语句关键字）取值形如：DROP TABLE。
+task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
      * @param string $SortBy 排序字段，支持如下字段类型，create-time
      * @param string $Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc。
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻

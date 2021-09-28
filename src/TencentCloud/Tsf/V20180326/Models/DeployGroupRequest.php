@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStopScript(string $StopScript) 设置停止脚本 base64编码
  * @method boolean getIncrementalDeployment() 获取是否进行增量部署，默认为false，全量更新
  * @method void setIncrementalDeployment(boolean $IncrementalDeployment) 设置是否进行增量部署，默认为false，全量更新
+ * @method string getJdkName() 获取JDK名称: konaJDK或openJDK
+ * @method void setJdkName(string $JdkName) 设置JDK名称: konaJDK或openJDK
+ * @method string getJdkVersion() 获取JDK版本: 8或11 (openJDK只支持8)
+ * @method void setJdkVersion(string $JdkVersion) 设置JDK版本: 8或11 (openJDK只支持8)
  */
 class DeployGroupRequest extends AbstractModel
 {
@@ -129,6 +133,16 @@ class DeployGroupRequest extends AbstractModel
     public $IncrementalDeployment;
 
     /**
+     * @var string JDK名称: konaJDK或openJDK
+     */
+    public $JdkName;
+
+    /**
+     * @var string JDK版本: 8或11 (openJDK只支持8)
+     */
+    public $JdkVersion;
+
+    /**
      * @param string $GroupId 部署组ID
      * @param string $PkgId 程序包ID
      * @param string $StartupParameters 部署组启动参数
@@ -144,6 +158,8 @@ class DeployGroupRequest extends AbstractModel
      * @param string $StartScript 启动脚本 base64编码
      * @param string $StopScript 停止脚本 base64编码
      * @param boolean $IncrementalDeployment 是否进行增量部署，默认为false，全量更新
+     * @param string $JdkName JDK名称: konaJDK或openJDK
+     * @param string $JdkVersion JDK版本: 8或11 (openJDK只支持8)
      */
     function __construct()
     {
@@ -217,6 +233,14 @@ class DeployGroupRequest extends AbstractModel
 
         if (array_key_exists("IncrementalDeployment",$param) and $param["IncrementalDeployment"] !== null) {
             $this->IncrementalDeployment = $param["IncrementalDeployment"];
+        }
+
+        if (array_key_exists("JdkName",$param) and $param["JdkName"] !== null) {
+            $this->JdkName = $param["JdkName"];
+        }
+
+        if (array_key_exists("JdkVersion",$param) and $param["JdkVersion"] !== null) {
+            $this->JdkVersion = $param["JdkVersion"];
         }
     }
 }

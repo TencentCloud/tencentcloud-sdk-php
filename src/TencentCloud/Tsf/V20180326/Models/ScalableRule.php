@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置备注
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScalableRule extends AbstractModel
 {
@@ -84,6 +88,12 @@ class ScalableRule extends AbstractModel
     public $Desc;
 
     /**
+     * @var string 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @param string $RuleId RuleId值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name Name值
@@ -95,6 +105,8 @@ class ScalableRule extends AbstractModel
      * @param integer $GroupCount GroupCount值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class ScalableRule extends AbstractModel
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
             $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

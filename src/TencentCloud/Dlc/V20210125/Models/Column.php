@@ -30,6 +30,18 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置对该类的注释。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPrecision() 获取表示整个 numeric 的长度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrecision(integer $Precision) 设置表示整个 numeric 的长度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScale() 获取表示小数部分的长度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScale(integer $Scale) 设置表示小数部分的长度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNullable() 获取是否为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNullable(string $Nullable) 设置是否为null
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Column extends AbstractModel
 {
@@ -51,10 +63,34 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     public $Comment;
 
     /**
+     * @var integer 表示整个 numeric 的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Precision;
+
+    /**
+     * @var integer 表示小数部分的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Scale;
+
+    /**
+     * @var string 是否为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Nullable;
+
+    /**
      * @param string $Name 列名称，不区分大小写，最大支持25个字符。
      * @param string $Type 列类型，支持如下类型定义:
 string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>。
      * @param string $Comment 对该类的注释。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Precision 表示整个 numeric 的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Scale 表示小数部分的长度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Nullable 是否为null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -80,6 +116,18 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Precision",$param) and $param["Precision"] !== null) {
+            $this->Precision = $param["Precision"];
+        }
+
+        if (array_key_exists("Scale",$param) and $param["Scale"] !== null) {
+            $this->Scale = $param["Scale"];
+        }
+
+        if (array_key_exists("Nullable",$param) and $param["Nullable"] !== null) {
+            $this->Nullable = $param["Nullable"];
         }
     }
 }

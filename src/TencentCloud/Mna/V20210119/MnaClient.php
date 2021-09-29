@@ -25,6 +25,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
 /**
  * @method Models\CreateQosResponse CreateQos(Models\CreateQosRequest $req) 移动网络发起Qos加速过程
  * @method Models\DeleteQosResponse DeleteQos(Models\DeleteQosRequest $req) 移动网络停止Qos加速过程
+ * @method Models\DescribeQosResponse DescribeQos(Models\DescribeQosRequest $req) 获取Qos加速状态
  */
 
 class MnaClient extends AbstractClient

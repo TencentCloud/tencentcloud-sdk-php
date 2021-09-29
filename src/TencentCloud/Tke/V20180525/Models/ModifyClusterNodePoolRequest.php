@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsName(string $OsName) 设置操作系统名称
  * @method string getOsCustomizeType() 获取镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+ * @method InstanceExtraArgs getExtraArgs() 获取节点自定义参数
+ * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置节点自定义参数
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $OsCustomizeType;
 
     /**
+     * @var InstanceExtraArgs 节点自定义参数
+     */
+    public $ExtraArgs;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $NodePoolId 节点池ID
      * @param string $Name 名称
@@ -104,6 +111,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param boolean $EnableAutoscale 是否开启伸缩
      * @param string $OsName 操作系统名称
      * @param string $OsCustomizeType 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * @param InstanceExtraArgs $ExtraArgs 节点自定义参数
      */
     function __construct()
     {
@@ -166,6 +174,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
             $this->OsCustomizeType = $param["OsCustomizeType"];
+        }
+
+        if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
+            $this->ExtraArgs = new InstanceExtraArgs();
+            $this->ExtraArgs->deserialize($param["ExtraArgs"]);
         }
     }
 }

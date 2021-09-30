@@ -18,20 +18,20 @@ namespace TencentCloud\Cii\V20210408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStructureTaskResultTest请求参数结构体
+ * DescribeMachineUnderwrite请求参数结构体
  *
- * @method string getMainTaskId() 获取结构化任务ID
- * @method void setMainTaskId(string $MainTaskId) 设置结构化任务ID
+ * @method string getUnderwriteTaskId() 获取核保任务ID
+ * @method void setUnderwriteTaskId(string $UnderwriteTaskId) 设置核保任务ID
  */
-class DescribeStructureTaskResultTestRequest extends AbstractModel
+class DescribeMachineUnderwriteRequest extends AbstractModel
 {
     /**
-     * @var string 结构化任务ID
+     * @var string 核保任务ID
      */
-    public $MainTaskId;
+    public $UnderwriteTaskId;
 
     /**
-     * @param string $MainTaskId 结构化任务ID
+     * @param string $UnderwriteTaskId 核保任务ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeStructureTaskResultTestRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MainTaskId",$param) and $param["MainTaskId"] !== null) {
-            $this->MainTaskId = $param["MainTaskId"];
+        if (array_key_exists("UnderwriteTaskId",$param) and $param["UnderwriteTaskId"] !== null) {
+            $this->UnderwriteTaskId = $param["UnderwriteTaskId"];
         }
     }
 }

@@ -24,11 +24,12 @@ use TencentCloud\Cii\V20210408\Models as Models;
 
 /**
  * @method Models\CreateStructureTaskResponse CreateStructureTask(Models\CreateStructureTaskRequest $req) 本接口(CreateStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
- * @method Models\CreateStructureTaskTestResponse CreateStructureTaskTest(Models\CreateStructureTaskTestRequest $req) 本接口(CreateStructureTaskTest)基于提供的客户及保单信息，创建并启动结构化识别任务。用于路由到测试环境。
+ * @method Models\CreateUnderwriteTaskByIdResponse CreateUnderwriteTaskById(Models\CreateUnderwriteTaskByIdRequest $req) 本接口(CreateUnderwriteTaskById)用于根据结构化任务ID创建核保任务
+ * @method Models\DescribeMachineUnderwriteResponse DescribeMachineUnderwrite(Models\DescribeMachineUnderwriteRequest $req) 本接口(DescribeMachineUnderwrite)用于查询机器核保任务数据
  * @method Models\DescribeStructCompareDataResponse DescribeStructCompareData(Models\DescribeStructCompareDataRequest $req) 结构化对比查询接口，对比结构化复核前后数据差异，查询识别正确率，召回率。
+ * @method Models\DescribeStructureDifferenceResponse DescribeStructureDifference(Models\DescribeStructureDifferenceRequest $req) 结构化复核差异查询接口，对比结构化复核前后数据差异，返回差异的部分。
  * @method Models\DescribeStructureResultResponse DescribeStructureResult(Models\DescribeStructureResultRequest $req) 本接口(DescribeStructureResult)用于查询结构化结果接口
  * @method Models\DescribeStructureTaskResultResponse DescribeStructureTaskResult(Models\DescribeStructureTaskResultRequest $req) 依据任务ID获取结构化结果接口。
- * @method Models\DescribeStructureTaskResultTestResponse DescribeStructureTaskResultTest(Models\DescribeStructureTaskResultTestRequest $req) 依据任务ID获取结构化结果接口，该接口用于路由到测试环境。
  */
 
 class CiiClient extends AbstractClient

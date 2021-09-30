@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuggestScheme(string $SuggestScheme) 设置建议方案
  * @method array getTags() 获取标签特性
  * @method void setTags(array $Tags) 设置标签特性
+ * @method string getMachineWanIp() 获取外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineWanIp(string $MachineWanIp) 设置外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMachineStatus() 获取主机在线状态 OFFLINE  ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineStatus(string $MachineStatus) 设置主机在线状态 OFFLINE  ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskDnsList extends AbstractModel
 {
@@ -164,6 +172,18 @@ class RiskDnsList extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineWanIp;
+
+    /**
+     * @var string 主机在线状态 OFFLINE  ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineStatus;
+
+    /**
      * @param string $Url 对外访问域名
      * @param integer $AccessCount 访问次数
      * @param string $ProcessName 进程名
@@ -184,6 +204,10 @@ class RiskDnsList extends AbstractModel
      * @param string $Uuid 唯一UUID
      * @param string $SuggestScheme 建议方案
      * @param array $Tags 标签特性
+     * @param string $MachineWanIp 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MachineStatus 主机在线状态 OFFLINE  ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -276,6 +300,14 @@ class RiskDnsList extends AbstractModel
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = $param["Tags"];
+        }
+
+        if (array_key_exists("MachineWanIp",$param) and $param["MachineWanIp"] !== null) {
+            $this->MachineWanIp = $param["MachineWanIp"];
+        }
+
+        if (array_key_exists("MachineStatus",$param) and $param["MachineStatus"] !== null) {
+            $this->MachineStatus = $param["MachineStatus"];
         }
     }
 }

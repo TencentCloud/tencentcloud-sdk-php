@@ -42,6 +42,7 @@ use TencentCloud\Es\V20180416\Models as Models;
 - EsAcl：修改访问控制列表
 - CosBackUp: 设置集群COS自动备份信息
 以上参数组合只能传递一种，多传或少传均会导致请求失败
+ * @method Models\UpdateJdkResponse UpdateJdk(Models\UpdateJdkRequest $req) 更新实例Jdk配置
  * @method Models\UpdatePluginsResponse UpdatePlugins(Models\UpdatePluginsRequest $req) 变更插件列表
  * @method Models\UpdateRequestTargetNodeTypesResponse UpdateRequestTargetNodeTypes(Models\UpdateRequestTargetNodeTypesRequest $req) 更新接收客户端请求的节点类型
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) 升级ES集群版本

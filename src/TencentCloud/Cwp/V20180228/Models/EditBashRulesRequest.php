@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EditBashRules请求参数结构体
  *
- * @method string getName() 获取规则名称
- * @method void setName(string $Name) 设置规则名称
- * @method string getRule() 获取正则表达式
- * @method void setRule(string $Rule) 设置正则表达式
  * @method integer getId() 获取规则ID（新增时不填）
  * @method void setId(integer $Id) 设置规则ID（新增时不填）
  * @method array getUuids() 获取客户端ID数组
  * @method void setUuids(array $Uuids) 设置客户端ID数组
  * @method string getHostIp() 获取主机IP
  * @method void setHostIp(string $HostIp) 设置主机IP
+ * @method string getName() 获取规则名称，编辑时不可修改规则名称
+ * @method void setName(string $Name) 设置规则名称，编辑时不可修改规则名称
  * @method integer getLevel() 获取危险等级(0:无，1: 高危 2:中危 3: 低危)
  * @method void setLevel(integer $Level) 设置危险等级(0:无，1: 高危 2:中危 3: 低危)
+ * @method string getRule() 获取正则表达式 ，编辑时不可修改正则表达式，需要对内容QueryEscape后再base64
+ * @method void setRule(string $Rule) 设置正则表达式 ，编辑时不可修改正则表达式，需要对内容QueryEscape后再base64
  * @method integer getIsGlobal() 获取是否全局规则(默认否)：1-全局，0-非全局
  * @method void setIsGlobal(integer $IsGlobal) 设置是否全局规则(默认否)：1-全局，0-非全局
  * @method integer getWhite() 获取0=黑名单， 1=白名单
@@ -43,16 +43,6 @@ use TencentCloud\Common\AbstractModel;
  */
 class EditBashRulesRequest extends AbstractModel
 {
-    /**
-     * @var string 规则名称
-     */
-    public $Name;
-
-    /**
-     * @var string 正则表达式
-     */
-    public $Rule;
-
     /**
      * @var integer 规则ID（新增时不填）
      */
@@ -69,9 +59,19 @@ class EditBashRulesRequest extends AbstractModel
     public $HostIp;
 
     /**
+     * @var string 规则名称，编辑时不可修改规则名称
+     */
+    public $Name;
+
+    /**
      * @var integer 危险等级(0:无，1: 高危 2:中危 3: 低危)
      */
     public $Level;
+
+    /**
+     * @var string 正则表达式 ，编辑时不可修改正则表达式，需要对内容QueryEscape后再base64
+     */
+    public $Rule;
 
     /**
      * @var integer 是否全局规则(默认否)：1-全局，0-非全局
@@ -94,12 +94,12 @@ class EditBashRulesRequest extends AbstractModel
     public $DealOldEvents;
 
     /**
-     * @param string $Name 规则名称
-     * @param string $Rule 正则表达式
      * @param integer $Id 规则ID（新增时不填）
      * @param array $Uuids 客户端ID数组
      * @param string $HostIp 主机IP
+     * @param string $Name 规则名称，编辑时不可修改规则名称
      * @param integer $Level 危险等级(0:无，1: 高危 2:中危 3: 低危)
+     * @param string $Rule 正则表达式 ，编辑时不可修改正则表达式，需要对内容QueryEscape后再base64
      * @param integer $IsGlobal 是否全局规则(默认否)：1-全局，0-非全局
      * @param integer $White 0=黑名单， 1=白名单
      * @param integer $EventId 事件列表点击“加入白名单”时,需要传EventId 事件的id
@@ -118,14 +118,6 @@ class EditBashRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
-            $this->Rule = $param["Rule"];
-        }
-
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
         }
@@ -138,8 +130,16 @@ class EditBashRulesRequest extends AbstractModel
             $this->HostIp = $param["HostIp"];
         }
 
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {
             $this->Level = $param["Level"];
+        }
+
+        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
+            $this->Rule = $param["Rule"];
         }
 
         if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {

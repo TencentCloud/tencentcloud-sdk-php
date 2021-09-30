@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cii\V20210408\Models;
+namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateStructureTaskTest返回参数结构体
+ * UpdateJdk返回参数结构体
  *
- * @method string getMainTaskId() 获取创建的主任务号，用于查询结果
- * @method void setMainTaskId(string $MainTaskId) 设置创建的主任务号，用于查询结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateStructureTaskTestResponse extends AbstractModel
+class UpdateJdkResponse extends AbstractModel
 {
-    /**
-     * @var string 创建的主任务号，用于查询结果
-     */
-    public $MainTaskId;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $MainTaskId 创建的主任务号，用于查询结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,10 +46,6 @@ class CreateStructureTaskTestResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MainTaskId",$param) and $param["MainTaskId"] !== null) {
-            $this->MainTaskId = $param["MainTaskId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

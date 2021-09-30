@@ -18,36 +18,43 @@ namespace TencentCloud\Cii\V20210408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStructureTaskResultTest返回参数结构体
+ * DescribeStructureDifference返回参数结构体
  *
+ * @method string getMainTaskId() 获取主任务号
+ * @method void setMainTaskId(string $MainTaskId) 设置主任务号
  * @method integer getStatus() 获取结果状态：
 0：返回成功
 1：结果未生成
 2：结果生成失败
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置结果状态：
 0：返回成功
 1：结果未生成
 2：结果生成失败
- * @method array getResults() 获取结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResults(array $Results) 设置结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResults() 获取差异的结果数组
+ * @method void setResults(array $Results) 设置差异的结果数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeStructureTaskResultTestResponse extends AbstractModel
+class DescribeStructureDifferenceResponse extends AbstractModel
 {
+    /**
+     * @var string 主任务号
+     */
+    public $MainTaskId;
+
     /**
      * @var integer 结果状态：
 0：返回成功
 1：结果未生成
 2：结果生成失败
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var array 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 差异的结果数组
      */
     public $Results;
 
@@ -57,12 +64,13 @@ class DescribeStructureTaskResultTestResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param string $MainTaskId 主任务号
      * @param integer $Status 结果状态：
 0：返回成功
 1：结果未生成
 2：结果生成失败
-     * @param array $Results 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Results 差异的结果数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,6 +86,10 @@ class DescribeStructureTaskResultTestResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MainTaskId",$param) and $param["MainTaskId"] !== null) {
+            $this->MainTaskId = $param["MainTaskId"];
+        }
+
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
         }
@@ -85,7 +97,7 @@ class DescribeStructureTaskResultTestResponse extends AbstractModel
         if (array_key_exists("Results",$param) and $param["Results"] !== null) {
             $this->Results = [];
             foreach ($param["Results"] as $key => $value){
-                $obj = new ResultObject();
+                $obj = new PerStructDifference();
                 $obj->deserialize($value);
                 array_push($this->Results, $obj);
             }

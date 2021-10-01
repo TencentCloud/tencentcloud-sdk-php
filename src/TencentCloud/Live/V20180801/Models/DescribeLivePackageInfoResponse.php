@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
 204: 日结流量
 205: 日结时长
 206: 月结时长
-304: 日结流量
+304: 日结流量。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageBillMode(integer $PackageBillMode) 设置套餐包当前计费方式:
 -1: 无计费方式或获取失败
@@ -44,23 +44,23 @@ use TencentCloud\Common\AbstractModel;
 204: 日结流量
 205: 日结时长
 206: 月结时长
-304: 日结流量
+304: 日结流量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalPage() 获取总页数
+ * @method integer getTotalPage() 获取总页数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalPage(integer $TotalPage) 设置总页数
+ * @method void setTotalPage(integer $TotalPage) 设置总页数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalNum() 获取数据总条数
+ * @method integer getTotalNum() 获取数据总条数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalNum(integer $TotalNum) 设置数据总条数
+ * @method void setTotalNum(integer $TotalNum) 设置数据总条数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageNum() 获取当前页数
+ * @method integer getPageNum() 获取当前页数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageNum(integer $PageNum) 设置当前页数
+ * @method void setPageNum(integer $PageNum) 设置当前页数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageSize() 获取当前每页数量
+ * @method integer getPageSize() 获取当前每页数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageSize(integer $PageSize) 设置当前每页数量
+ * @method void setPageSize(integer $PageSize) 设置当前每页数量。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -83,31 +83,31 @@ class DescribeLivePackageInfoResponse extends AbstractModel
 204: 日结流量
 205: 日结时长
 206: 月结时长
-304: 日结流量
+304: 日结流量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageBillMode;
 
     /**
-     * @var integer 总页数
+     * @var integer 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalPage;
 
     /**
-     * @var integer 数据总条数
+     * @var integer 数据总条数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalNum;
 
     /**
-     * @var integer 当前页数
+     * @var integer 当前页数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageNum;
 
     /**
-     * @var integer 当前每页数量
+     * @var integer 当前每页数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageSize;
@@ -129,15 +129,15 @@ class DescribeLivePackageInfoResponse extends AbstractModel
 204: 日结流量
 205: 日结时长
 206: 月结时长
-304: 日结流量
+304: 日结流量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalPage 总页数
+     * @param integer $TotalPage 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalNum 数据总条数
+     * @param integer $TotalNum 数据总条数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageNum 当前页数
+     * @param integer $PageNum 当前页数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageSize 当前每页数量
+     * @param integer $PageSize 当前每页数量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

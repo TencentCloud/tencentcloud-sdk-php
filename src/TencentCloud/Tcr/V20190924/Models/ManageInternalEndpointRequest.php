@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置需要接入的用户vpcid
  * @method string getSubnetId() 获取需要接入的用户子网id
  * @method void setSubnetId(string $SubnetId) 设置需要接入的用户子网id
- * @method integer getRegionId() 获取请求的地域ID
- * @method void setRegionId(integer $RegionId) 设置请求的地域ID
+ * @method integer getRegionId() 获取请求的地域ID，用于实例复制地域
+ * @method void setRegionId(integer $RegionId) 设置请求的地域ID，用于实例复制地域
+ * @method string getRegionName() 获取请求的地域名称，用于实例复制地域
+ * @method void setRegionName(string $RegionName) 设置请求的地域名称，用于实例复制地域
  */
 class ManageInternalEndpointRequest extends AbstractModel
 {
@@ -54,16 +56,22 @@ class ManageInternalEndpointRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 请求的地域ID
+     * @var integer 请求的地域ID，用于实例复制地域
      */
     public $RegionId;
+
+    /**
+     * @var string 请求的地域名称，用于实例复制地域
+     */
+    public $RegionName;
 
     /**
      * @param string $RegistryId 实例Id
      * @param string $Operation Create/Delete
      * @param string $VpcId 需要接入的用户vpcid
      * @param string $SubnetId 需要接入的用户子网id
-     * @param integer $RegionId 请求的地域ID
+     * @param integer $RegionId 请求的地域ID，用于实例复制地域
+     * @param string $RegionName 请求的地域名称，用于实例复制地域
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ManageInternalEndpointRequest extends AbstractModel
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
+            $this->RegionName = $param["RegionName"];
         }
     }
 }

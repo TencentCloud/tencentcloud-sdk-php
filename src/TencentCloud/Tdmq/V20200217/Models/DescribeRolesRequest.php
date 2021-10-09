@@ -18,18 +18,16 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeEnvironmentRoles请求参数结构体
+ * DescribeRoles请求参数结构体
  *
- * @method string getEnvironmentId() 获取必填字段，环境（命名空间）名称。
- * @method void setEnvironmentId(string $EnvironmentId) 设置必填字段，环境（命名空间）名称。
+ * @method string getRoleName() 获取角色名称，模糊查询
+ * @method void setRoleName(string $RoleName) 设置角色名称，模糊查询
  * @method integer getOffset() 获取起始下标，不填默认为0。
  * @method void setOffset(integer $Offset) 设置起始下标，不填默认为0。
  * @method integer getLimit() 获取返回数量，不填则默认为10，最大值为20。
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为10，最大值为20。
- * @method string getClusterId() 获取必填字段，Pulsar 集群的ID
- * @method void setClusterId(string $ClusterId) 设置必填字段，Pulsar 集群的ID
- * @method string getRoleName() 获取角色名称
- * @method void setRoleName(string $RoleName) 设置角色名称
+ * @method string getClusterId() 获取必填字段，集群Id
+ * @method void setClusterId(string $ClusterId) 设置必填字段，集群Id
  * @method array getFilters() 获取* RoleName
 按照角色名进行过滤，精确查询。
 类型：String
@@ -39,12 +37,12 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
  */
-class DescribeEnvironmentRolesRequest extends AbstractModel
+class DescribeRolesRequest extends AbstractModel
 {
     /**
-     * @var string 必填字段，环境（命名空间）名称。
+     * @var string 角色名称，模糊查询
      */
-    public $EnvironmentId;
+    public $RoleName;
 
     /**
      * @var integer 起始下标，不填默认为0。
@@ -57,14 +55,9 @@ class DescribeEnvironmentRolesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 必填字段，Pulsar 集群的ID
+     * @var string 必填字段，集群Id
      */
     public $ClusterId;
-
-    /**
-     * @var string 角色名称
-     */
-    public $RoleName;
 
     /**
      * @var array * RoleName
@@ -75,11 +68,10 @@ class DescribeEnvironmentRolesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $EnvironmentId 必填字段，环境（命名空间）名称。
+     * @param string $RoleName 角色名称，模糊查询
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
-     * @param string $ClusterId 必填字段，Pulsar 集群的ID
-     * @param string $RoleName 角色名称
+     * @param string $ClusterId 必填字段，集群Id
      * @param array $Filters * RoleName
 按照角色名进行过滤，精确查询。
 类型：String
@@ -98,8 +90,8 @@ class DescribeEnvironmentRolesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
-            $this->EnvironmentId = $param["EnvironmentId"];
+        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
+            $this->RoleName = $param["RoleName"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
@@ -112,10 +104,6 @@ class DescribeEnvironmentRolesRequest extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
-        }
-
-        if (array_key_exists("RoleName",$param) and $param["RoleName"] !== null) {
-            $this->RoleName = $param["RoleName"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryId(string $RegistryId) 设置主实例iD
  * @method integer getReplicationRegionId() 获取复制实例地域ID
  * @method void setReplicationRegionId(integer $ReplicationRegionId) 设置复制实例地域ID
+ * @method string getReplicationRegionName() 获取复制实例地域名称
+ * @method void setReplicationRegionName(string $ReplicationRegionName) 设置复制实例地域名称
  */
 class CreateReplicationInstanceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateReplicationInstanceRequest extends AbstractModel
     public $ReplicationRegionId;
 
     /**
+     * @var string 复制实例地域名称
+     */
+    public $ReplicationRegionName;
+
+    /**
      * @param string $RegistryId 主实例iD
      * @param integer $ReplicationRegionId 复制实例地域ID
+     * @param string $ReplicationRegionName 复制实例地域名称
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateReplicationInstanceRequest extends AbstractModel
 
         if (array_key_exists("ReplicationRegionId",$param) and $param["ReplicationRegionId"] !== null) {
             $this->ReplicationRegionId = $param["ReplicationRegionId"];
+        }
+
+        if (array_key_exists("ReplicationRegionName",$param) and $param["ReplicationRegionName"] !== null) {
+            $this->ReplicationRegionName = $param["ReplicationRegionName"];
         }
     }
 }

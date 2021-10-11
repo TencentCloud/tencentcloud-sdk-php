@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name - String - 是否必填：否 - 进程名</li>
@@ -61,7 +61,7 @@ use TencentCloud\Common\AbstractModel;
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method string getQuuid() 获取查询指定Quuid主机的信息
  * @method void setQuuid(string $Quuid) 设置查询指定Quuid主机的信息
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
@@ -100,7 +100,7 @@ class DescribeAssetProcessInfoListRequest extends AbstractModel
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public $Filters;
 
@@ -140,7 +140,7 @@ class DescribeAssetProcessInfoListRequest extends AbstractModel
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
 <li>InstallByPackage - uint64 - 是否必填：否 - 是否包安装：0否，1是</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param string $Quuid 查询指定Quuid主机的信息
      * @param string $Order 排序方式，asc升序 或 desc降序
      * @param string $By 排序方式：StartTime

@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Port - uint64 - 是否必填：否 - 端口</li>
 <li>Ip - String - 是否必填：否 - 绑定IP</li>
@@ -49,7 +49,7 @@ use TencentCloud\Common\AbstractModel;
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
  * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
  * @method string getBy() 获取排序方式：StartTime
@@ -82,7 +82,7 @@ class DescribeAssetPortInfoListRequest extends AbstractModel
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public $Filters;
 
@@ -116,7 +116,7 @@ class DescribeAssetPortInfoListRequest extends AbstractModel
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
 <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
 <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param string $Order 排序方式，asc升序 或 desc降序
      * @param string $By 排序方式：StartTime
      * @param string $Quuid 查询指定Quuid主机的信息

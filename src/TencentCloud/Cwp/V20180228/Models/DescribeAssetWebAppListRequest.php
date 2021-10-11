@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 8:IHS
 9:Tengine</li>
 <li>OsType - String - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name - String - 是否必填：否 - 应用名</li>
@@ -57,7 +57,7 @@ use TencentCloud\Common\AbstractModel;
 8:IHS
 9:Tengine</li>
 <li>OsType - String - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
  * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
  * @method string getBy() 获取可选排序：PluginCount
@@ -94,7 +94,7 @@ class DescribeAssetWebAppListRequest extends AbstractModel
 8:IHS
 9:Tengine</li>
 <li>OsType - String - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public $Filters;
 
@@ -132,7 +132,7 @@ class DescribeAssetWebAppListRequest extends AbstractModel
 8:IHS
 9:Tengine</li>
 <li>OsType - String - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param string $Order 排序方式，asc升序 或 desc降序
      * @param string $By 可选排序：PluginCount
      * @param string $Quuid 查询指定Quuid主机的信息

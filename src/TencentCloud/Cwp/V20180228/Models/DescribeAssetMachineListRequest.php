@@ -39,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
 2: 20%～50%  3: 50%～80%
 4: 80%～100%</li>
 <li>Quuid：主机Quuid</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>OsType - String - 是否必填：否 - windows或linux</li>
@@ -55,7 +55,7 @@ use TencentCloud\Common\AbstractModel;
 2: 20%～50%  3: 50%～80%
 4: 80%～100%</li>
 <li>Quuid：主机Quuid</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method string getBy() 获取可选排序：PartitionCount
  * @method void setBy(string $By) 设置可选排序：PartitionCount
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
@@ -89,7 +89,7 @@ class DescribeAssetMachineListRequest extends AbstractModel
 2: 20%～50%  3: 50%～80%
 4: 80%～100%</li>
 <li>Quuid：主机Quuid</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public $Filters;
 
@@ -121,7 +121,7 @@ class DescribeAssetMachineListRequest extends AbstractModel
 2: 20%～50%  3: 50%～80%
 4: 80%～100%</li>
 <li>Quuid：主机Quuid</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param string $By 可选排序：PartitionCount
      * @param string $Order 排序方式，asc升序 或 desc降序
      */

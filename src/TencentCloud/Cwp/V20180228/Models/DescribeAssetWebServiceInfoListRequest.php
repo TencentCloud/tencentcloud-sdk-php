@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 9:IHS
 10:Tengine</li>
 <li>OsType- string - 是否必填：否 - Windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>User- string - 是否必填：否 - 运行用户</li>
 <li>Name- string - 是否必填：否 - Web服务名：
@@ -55,7 +55,7 @@ use TencentCloud\Common\AbstractModel;
 9:IHS
 10:Tengine</li>
 <li>OsType- string - 是否必填：否 - Windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
  * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
  * @method string getBy() 获取可选排序：ProcessCount
@@ -91,7 +91,7 @@ class DescribeAssetWebServiceInfoListRequest extends AbstractModel
 9:IHS
 10:Tengine</li>
 <li>OsType- string - 是否必填：否 - Windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public $Filters;
 
@@ -128,7 +128,7 @@ class DescribeAssetWebServiceInfoListRequest extends AbstractModel
 9:IHS
 10:Tengine</li>
 <li>OsType- string - 是否必填：否 - Windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param string $Order 排序方式，asc升序 或 desc降序
      * @param string $By 可选排序：ProcessCount
      * @param string $Quuid 查询指定Quuid主机的信息

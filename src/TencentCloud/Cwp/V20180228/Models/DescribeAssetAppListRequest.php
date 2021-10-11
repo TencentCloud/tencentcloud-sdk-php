@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 7 : WEB服务
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>AppName- string - 是否必填：否 - 应用名搜索</li>
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
@@ -53,7 +53,7 @@ use TencentCloud\Common\AbstractModel;
 7 : WEB服务
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method string getBy() 获取排序方式：ProcessCount
  * @method void setBy(string $By) 设置排序方式：ProcessCount
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
@@ -88,7 +88,7 @@ class DescribeAssetAppListRequest extends AbstractModel
 7 : WEB服务
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public $Filters;
 
@@ -124,7 +124,7 @@ class DescribeAssetAppListRequest extends AbstractModel
 7 : WEB服务
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param string $By 排序方式：ProcessCount
      * @param string $Order 排序方式，asc升序 或 desc降序
      * @param string $Quuid 查询指定Quuid主机的信息

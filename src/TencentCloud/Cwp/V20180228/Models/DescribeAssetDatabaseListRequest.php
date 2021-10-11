@@ -43,7 +43,7 @@ use TencentCloud\Common\AbstractModel;
 10:TiDB</li>
 <li>Proto - String - 是否必填：否 - 协议：1:TCP, 2:UDP, 3:未知</li>
 <li>OsType - String - 是否必填：否 - 操作系统: linux/windows</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>User- string - 是否必填：否 - 运行用户</li>
@@ -63,7 +63,7 @@ use TencentCloud\Common\AbstractModel;
 10:TiDB</li>
 <li>Proto - String - 是否必填：否 - 协议：1:TCP, 2:UDP, 3:未知</li>
 <li>OsType - String - 是否必填：否 - 操作系统: linux/windows</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
  * @method string getQuuid() 获取查询指定Quuid主机的信息
  * @method void setQuuid(string $Quuid) 设置查询指定Quuid主机的信息
  */
@@ -99,7 +99,7 @@ class DescribeAssetDatabaseListRequest extends AbstractModel
 10:TiDB</li>
 <li>Proto - String - 是否必填：否 - 协议：1:TCP, 2:UDP, 3:未知</li>
 <li>OsType - String - 是否必填：否 - 操作系统: linux/windows</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      */
     public $Filters;
 
@@ -130,7 +130,7 @@ class DescribeAssetDatabaseListRequest extends AbstractModel
 10:TiDB</li>
 <li>Proto - String - 是否必填：否 - 协议：1:TCP, 2:UDP, 3:未知</li>
 <li>OsType - String - 是否必填：否 - 操作系统: linux/windows</li>
-<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+<li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
      * @param string $Quuid 查询指定Quuid主机的信息
      */
     function __construct()

@@ -26,6 +26,10 @@ off：关闭
  * @method void setSwitch(string $Switch) 设置分片回源配置开关
 on：开启
 off：关闭
+ * @method array getRangeRules() 获取分路径分片回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRangeRules(array $RangeRules) 设置分路径分片回源配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RangeOriginPull extends AbstractModel
 {
@@ -37,9 +41,17 @@ off：关闭
     public $Switch;
 
     /**
+     * @var array 分路径分片回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RangeRules;
+
+    /**
      * @param string $Switch 分片回源配置开关
 on：开启
 off：关闭
+     * @param array $RangeRules 分路径分片回源配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -56,6 +68,15 @@ off：关闭
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("RangeRules",$param) and $param["RangeRules"] !== null) {
+            $this->RangeRules = [];
+            foreach ($param["RangeRules"] as $key => $value){
+                $obj = new RangeOriginPullRule();
+                $obj->deserialize($value);
+                array_push($this->RangeRules, $obj);
+            }
         }
     }
 }

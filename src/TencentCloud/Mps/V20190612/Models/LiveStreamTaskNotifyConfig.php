@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) 设置当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
  * @method string getTopicName() 获取当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
  * @method void setTopicName(string $TopicName) 设置当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+ * @method string getNotifyType() 获取通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+ * @method void setNotifyType(string $NotifyType) 设置通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+ * @method string getNotifyUrl() 获取HTTP回调地址，NotifyType为URL时必填。
+ * @method void setNotifyUrl(string $NotifyUrl) 设置HTTP回调地址，NotifyType为URL时必填。
  */
 class LiveStreamTaskNotifyConfig extends AbstractModel
 {
@@ -52,10 +56,22 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
     public $TopicName;
 
     /**
+     * @var string 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+     */
+    public $NotifyType;
+
+    /**
+     * @var string HTTP回调地址，NotifyType为URL时必填。
+     */
+    public $NotifyUrl;
+
+    /**
      * @param string $CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
      * @param string $CmqRegion CMQ 的园区，如 sh，bj 等。
      * @param string $QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
      * @param string $TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+     * @param string $NotifyType 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+     * @param string $NotifyUrl HTTP回调地址，NotifyType为URL时必填。
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
 
         if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
             $this->TopicName = $param["TopicName"];
+        }
+
+        if (array_key_exists("NotifyType",$param) and $param["NotifyType"] !== null) {
+            $this->NotifyType = $param["NotifyType"];
+        }
+
+        if (array_key_exists("NotifyUrl",$param) and $param["NotifyUrl"] !== null) {
+            $this->NotifyUrl = $param["NotifyUrl"];
         }
     }
 }

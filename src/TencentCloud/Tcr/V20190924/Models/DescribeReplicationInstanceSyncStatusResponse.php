@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplicationStatus(string $ReplicationStatus) 设置同步状态
  * @method string getReplicationTime() 获取同步完成时间
  * @method void setReplicationTime(string $ReplicationTime) 设置同步完成时间
+ * @method ReplicationLog getReplicationLog() 获取同步日志
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplicationLog(ReplicationLog $ReplicationLog) 设置同步日志
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,12 @@ class DescribeReplicationInstanceSyncStatusResponse extends AbstractModel
     public $ReplicationTime;
 
     /**
+     * @var ReplicationLog 同步日志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplicationLog;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class DescribeReplicationInstanceSyncStatusResponse extends AbstractModel
     /**
      * @param string $ReplicationStatus 同步状态
      * @param string $ReplicationTime 同步完成时间
+     * @param ReplicationLog $ReplicationLog 同步日志
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +80,11 @@ class DescribeReplicationInstanceSyncStatusResponse extends AbstractModel
 
         if (array_key_exists("ReplicationTime",$param) and $param["ReplicationTime"] !== null) {
             $this->ReplicationTime = $param["ReplicationTime"];
+        }
+
+        if (array_key_exists("ReplicationLog",$param) and $param["ReplicationLog"] !== null) {
+            $this->ReplicationLog = new ReplicationLog();
+            $this->ReplicationLog->deserialize($param["ReplicationLog"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

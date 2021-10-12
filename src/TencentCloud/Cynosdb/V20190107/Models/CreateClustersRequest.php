@@ -122,6 +122,16 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
  * @method void setStoragePayMode(integer $StoragePayMode) 设置集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
 当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
 回档与克隆均不支持包年包月存储
+ * @method array getSecurityGroupIds() 获取安全组id数组
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组id数组
+ * @method array getAlarmPolicyIds() 获取告警策略Id数组
+ * @method void setAlarmPolicyIds(array $AlarmPolicyIds) 设置告警策略Id数组
+ * @method array getClusterParams() 获取参数数组
+ * @method void setClusterParams(array $ClusterParams) 设置参数数组
+ * @method integer getDealMode() 获取交易模式，0-下单且支付，1-下单
+ * @method void setDealMode(integer $DealMode) 设置交易模式，0-下单且支付，1-下单
+ * @method integer getParamTemplateId() 获取参数模版ID
+ * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模版ID
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -313,6 +323,31 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $StoragePayMode;
 
     /**
+     * @var array 安全组id数组
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @var array 告警策略Id数组
+     */
+    public $AlarmPolicyIds;
+
+    /**
+     * @var array 参数数组
+     */
+    public $ClusterParams;
+
+    /**
+     * @var integer 交易模式，0-下单且支付，1-下单
+     */
+    public $DealMode;
+
+    /**
+     * @var integer 参数模版ID
+     */
+    public $ParamTemplateId;
+
+    /**
      * @param string $Zone 可用区
      * @param string $VpcId 所属VPC网络ID
      * @param string $SubnetId 所属子网ID
@@ -364,6 +399,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param integer $StoragePayMode 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
 当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
 回档与克隆均不支持包年包月存储
+     * @param array $SecurityGroupIds 安全组id数组
+     * @param array $AlarmPolicyIds 告警策略Id数组
+     * @param array $ClusterParams 参数数组
+     * @param integer $DealMode 交易模式，0-下单且支付，1-下单
+     * @param integer $ParamTemplateId 参数模版ID
      */
     function __construct()
     {
@@ -517,6 +557,31 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
         if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
             $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("AlarmPolicyIds",$param) and $param["AlarmPolicyIds"] !== null) {
+            $this->AlarmPolicyIds = $param["AlarmPolicyIds"];
+        }
+
+        if (array_key_exists("ClusterParams",$param) and $param["ClusterParams"] !== null) {
+            $this->ClusterParams = [];
+            foreach ($param["ClusterParams"] as $key => $value){
+                $obj = new ParamItem();
+                $obj->deserialize($value);
+                array_push($this->ClusterParams, $obj);
+            }
+        }
+
+        if (array_key_exists("DealMode",$param) and $param["DealMode"] !== null) {
+            $this->DealMode = $param["DealMode"];
+        }
+
+        if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
+            $this->ParamTemplateId = $param["ParamTemplateId"];
         }
     }
 }

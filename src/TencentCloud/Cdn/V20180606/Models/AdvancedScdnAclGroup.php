@@ -29,11 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取规则是否生效，active|inactive
  * @method void setStatus(string $Status) 设置规则是否生效，active|inactive
  * @method ScdnErrorPage getErrorPage() 获取错误页面配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorPage(ScdnErrorPage $ErrorPage) 设置错误页面配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
-class ScdnAclGroup extends AbstractModel
+class AdvancedScdnAclGroup extends AbstractModel
 {
     /**
      * @var string 规则名称
@@ -57,7 +55,6 @@ class ScdnAclGroup extends AbstractModel
 
     /**
      * @var ScdnErrorPage 错误页面配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorPage;
 
@@ -67,7 +64,6 @@ class ScdnAclGroup extends AbstractModel
      * @param string $Result 执行动作，intercept|redirect
      * @param string $Status 规则是否生效，active|inactive
      * @param ScdnErrorPage $ErrorPage 错误页面配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -89,7 +85,7 @@ class ScdnAclGroup extends AbstractModel
         if (array_key_exists("Configure",$param) and $param["Configure"] !== null) {
             $this->Configure = [];
             foreach ($param["Configure"] as $key => $value){
-                $obj = new ScdnAclRule();
+                $obj = new AdvancedScdnAclRule();
                 $obj->deserialize($value);
                 array_push($this->Configure, $obj);
             }

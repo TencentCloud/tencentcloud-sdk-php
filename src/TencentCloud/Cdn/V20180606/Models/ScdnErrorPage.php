@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * acl的错误页面
  *
  * @method integer getRedirectCode() 获取状态码
+执行动作为：intercept 默认传值 403
+执行动作为：redirect 默认传值 301
  * @method void setRedirectCode(integer $RedirectCode) 设置状态码
+执行动作为：intercept 默认传值 403
+执行动作为：redirect 默认传值 301
  * @method string getRedirectUrl() 获取重定向url
  * @method void setRedirectUrl(string $RedirectUrl) 设置重定向url
  */
@@ -29,6 +33,8 @@ class ScdnErrorPage extends AbstractModel
 {
     /**
      * @var integer 状态码
+执行动作为：intercept 默认传值 403
+执行动作为：redirect 默认传值 301
      */
     public $RedirectCode;
 
@@ -39,6 +45,8 @@ class ScdnErrorPage extends AbstractModel
 
     /**
      * @param integer $RedirectCode 状态码
+执行动作为：intercept 默认传值 403
+执行动作为：redirect 默认传值 301
      * @param string $RedirectUrl 重定向url
      */
     function __construct()

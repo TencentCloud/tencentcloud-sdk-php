@@ -18,17 +18,11 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 压缩规则配置，最多可设置 100 条
+ * 智能压缩规则配置
  *
  * @method boolean getCompress() 获取true：需要设置为 ture，启用压缩
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompress(boolean $Compress) 设置true：需要设置为 ture，启用压缩
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFileExtensions() 获取根据文件后缀类型压缩
-例如 jpg、txt
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileExtensions(array $FileExtensions) 设置根据文件后缀类型压缩
-例如 jpg、txt
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinLength() 获取触发压缩的文件长度最小值，单位为字节数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,6 +42,42 @@ brotli：指定Brotli压缩
 gzip：指定 GZIP 压缩
 brotli：指定Brotli压缩
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFileExtensions() 获取根据文件后缀类型压缩
+例如 jpg、txt
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileExtensions(array $FileExtensions) 设置根据文件后缀类型压缩
+例如 jpg、txt
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleType() 获取规则类型：
+all：所有文件生效
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+contentType：指定Content-Type头为特定值时生效
+当指定了此字段时，FileExtensions字段不生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleType(string $RuleType) 设置规则类型：
+all：所有文件生效
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+contentType：指定Content-Type头为特定值时生效
+当指定了此字段时，FileExtensions字段不生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRulePaths() 获取CacheType 对应类型下的匹配内容：
+all 时填充 *
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+contentType 时填充 text/html
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRulePaths(array $RulePaths) 设置CacheType 对应类型下的匹配内容：
+all 时填充 *
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+contentType 时填充 text/html
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompressionRule extends AbstractModel
 {
@@ -56,13 +86,6 @@ class CompressionRule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Compress;
-
-    /**
-     * @var array 根据文件后缀类型压缩
-例如 jpg、txt
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $FileExtensions;
 
     /**
      * @var integer 触发压缩的文件长度最小值，单位为字节数
@@ -86,10 +109,37 @@ brotli：指定Brotli压缩
     public $Algorithms;
 
     /**
-     * @param boolean $Compress true：需要设置为 ture，启用压缩
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FileExtensions 根据文件后缀类型压缩
+     * @var array 根据文件后缀类型压缩
 例如 jpg、txt
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileExtensions;
+
+    /**
+     * @var string 规则类型：
+all：所有文件生效
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+contentType：指定Content-Type头为特定值时生效
+当指定了此字段时，FileExtensions字段不生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleType;
+
+    /**
+     * @var array CacheType 对应类型下的匹配内容：
+all 时填充 *
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+contentType 时填充 text/html
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RulePaths;
+
+    /**
+     * @param boolean $Compress true：需要设置为 ture，启用压缩
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinLength 触发压缩的文件长度最小值，单位为字节数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -99,6 +149,24 @@ brotli：指定Brotli压缩
      * @param array $Algorithms 文件压缩算法
 gzip：指定 GZIP 压缩
 brotli：指定Brotli压缩
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FileExtensions 根据文件后缀类型压缩
+例如 jpg、txt
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleType 规则类型：
+all：所有文件生效
+file：指定文件后缀生效
+directory：指定路径生效
+path：指定绝对路径生效
+contentType：指定Content-Type头为特定值时生效
+当指定了此字段时，FileExtensions字段不生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RulePaths CacheType 对应类型下的匹配内容：
+all 时填充 *
+file 时填充后缀名，如 jpg、txt
+directory 时填充路径，如 /xxx/test
+path 时填充绝对路径，如 /xxx/test.html
+contentType 时填充 text/html
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -118,10 +186,6 @@ brotli：指定Brotli压缩
             $this->Compress = $param["Compress"];
         }
 
-        if (array_key_exists("FileExtensions",$param) and $param["FileExtensions"] !== null) {
-            $this->FileExtensions = $param["FileExtensions"];
-        }
-
         if (array_key_exists("MinLength",$param) and $param["MinLength"] !== null) {
             $this->MinLength = $param["MinLength"];
         }
@@ -132,6 +196,18 @@ brotli：指定Brotli压缩
 
         if (array_key_exists("Algorithms",$param) and $param["Algorithms"] !== null) {
             $this->Algorithms = $param["Algorithms"];
+        }
+
+        if (array_key_exists("FileExtensions",$param) and $param["FileExtensions"] !== null) {
+            $this->FileExtensions = $param["FileExtensions"];
+        }
+
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("RulePaths",$param) and $param["RulePaths"] !== null) {
+            $this->RulePaths = $param["RulePaths"];
         }
     }
 }

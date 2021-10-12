@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 精准访问控制匹配规则
  *
- * @method string getMatchKey() 获取匹配关键字, params | url | ip | referer | user-agent
- * @method void setMatchKey(string $MatchKey) 设置匹配关键字, params | url | ip | referer | user-agent
- * @method string getLogiOperator() 获取逻辑操作符，取值 exclude, include, notequal, equal, len-less, len-equal, len-more
- * @method void setLogiOperator(string $LogiOperator) 设置逻辑操作符，取值 exclude, include, notequal, equal, len-less, len-equal, len-more
- * @method string getMatchValue() 获取匹配值
- * @method void setMatchValue(string $MatchValue) 设置匹配值
+ * @method string getMatchKey() 获取匹配关键字
+ * @method void setMatchKey(string $MatchKey) 设置匹配关键字
+ * @method string getLogiOperator() 获取逻辑操作符，取值如下
+ * @method void setLogiOperator(string $LogiOperator) 设置逻辑操作符，取值如下
+ * @method string getMatchValue() 获取匹配值。
+ * @method void setMatchValue(string $MatchValue) 设置匹配值。
  */
 class ScdnAclRule extends AbstractModel
 {
     /**
-     * @var string 匹配关键字, params | url | ip | referer | user-agent
+     * @var string 匹配关键字
      */
     public $MatchKey;
 
     /**
-     * @var string 逻辑操作符，取值 exclude, include, notequal, equal, len-less, len-equal, len-more
+     * @var string 逻辑操作符，取值如下
      */
     public $LogiOperator;
 
     /**
-     * @var string 匹配值
+     * @var string 匹配值。
      */
     public $MatchValue;
 
     /**
-     * @param string $MatchKey 匹配关键字, params | url | ip | referer | user-agent
-     * @param string $LogiOperator 逻辑操作符，取值 exclude, include, notequal, equal, len-less, len-equal, len-more
-     * @param string $MatchValue 匹配值
+     * @param string $MatchKey 匹配关键字
+     * @param string $LogiOperator 逻辑操作符，取值如下
+     * @param string $MatchValue 匹配值。
      */
     function __construct()
     {

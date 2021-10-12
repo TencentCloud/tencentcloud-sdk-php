@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSignUrlInfos() 获取签署参与者签署H5链接信息数组
  * @method void setSignUrlInfos(array $SignUrlInfos) 设置签署参与者签署H5链接信息数组
+ * @method array getErrorMessages() 获取生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+ * @method void setErrorMessages(array $ErrorMessages) 设置生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class CreateSignUrlsResponse extends AbstractModel
     public $SignUrlInfos;
 
     /**
+     * @var array 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+     */
+    public $ErrorMessages;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $SignUrlInfos 签署参与者签署H5链接信息数组
+     * @param array $ErrorMessages 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +69,10 @@ class CreateSignUrlsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SignUrlInfos, $obj);
             }
+        }
+
+        if (array_key_exists("ErrorMessages",$param) and $param["ErrorMessages"] !== null) {
+            $this->ErrorMessages = $param["ErrorMessages"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

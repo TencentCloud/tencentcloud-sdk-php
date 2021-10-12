@@ -22,13 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() 获取是否开启，on | off
  * @method void setSwitch(string $Switch) 设置是否开启，on | off
- * @method array getScriptData() 获取Acl规则组，switch为on时必填
+ * @method array getScriptData() 获取新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScriptData(array $ScriptData) 设置Acl规则组，switch为on时必填
+ * @method void setScriptData(array $ScriptData) 设置新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ScdnErrorPage getErrorPage() 获取错误页面配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorPage(ScdnErrorPage $ErrorPage) 设置错误页面配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAdvancedScriptData() 获取Acl规则组，switch为on时必填
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvancedScriptData(array $AdvancedScriptData) 设置Acl规则组，switch为on时必填
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScdnAclConfig extends AbstractModel
@@ -39,7 +43,7 @@ class ScdnAclConfig extends AbstractModel
     public $Switch;
 
     /**
-     * @var array Acl规则组，switch为on时必填
+     * @var array 新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScriptData;
@@ -51,10 +55,18 @@ class ScdnAclConfig extends AbstractModel
     public $ErrorPage;
 
     /**
+     * @var array Acl规则组，switch为on时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvancedScriptData;
+
+    /**
      * @param string $Switch 是否开启，on | off
-     * @param array $ScriptData Acl规则组，switch为on时必填
+     * @param array $ScriptData 新版本请使用AdvancedScriptData
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScdnErrorPage $ErrorPage 错误页面配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AdvancedScriptData Acl规则组，switch为on时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -86,6 +98,15 @@ class ScdnAclConfig extends AbstractModel
         if (array_key_exists("ErrorPage",$param) and $param["ErrorPage"] !== null) {
             $this->ErrorPage = new ScdnErrorPage();
             $this->ErrorPage->deserialize($param["ErrorPage"]);
+        }
+
+        if (array_key_exists("AdvancedScriptData",$param) and $param["AdvancedScriptData"] !== null) {
+            $this->AdvancedScriptData = [];
+            foreach ($param["AdvancedScriptData"] as $key => $value){
+                $obj = new AdvancedScdnAclGroup();
+                $obj->deserialize($value);
+                array_push($this->AdvancedScriptData, $obj);
+            }
         }
     }
 }

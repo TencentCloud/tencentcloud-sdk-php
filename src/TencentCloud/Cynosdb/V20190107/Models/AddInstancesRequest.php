@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 <li> MYSQL </li>
  * @method string getOrderSource() 获取订单来源
  * @method void setOrderSource(string $OrderSource) 设置订单来源
+ * @method integer getDealMode() 获取交易模式 0-下单并支付 1-下单
+ * @method void setDealMode(integer $DealMode) 设置交易模式 0-下单并支付 1-下单
  */
 class AddInstancesRequest extends AbstractModel
 {
@@ -111,6 +113,11 @@ class AddInstancesRequest extends AbstractModel
     public $OrderSource;
 
     /**
+     * @var integer 交易模式 0-下单并支付 1-下单
+     */
+    public $DealMode;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $Cpu Cpu核数
      * @param integer $Memory 内存
@@ -124,6 +131,7 @@ class AddInstancesRequest extends AbstractModel
      * @param string $DbType 数据库类型，取值范围: 
 <li> MYSQL </li>
      * @param string $OrderSource 订单来源
+     * @param integer $DealMode 交易模式 0-下单并支付 1-下单
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ class AddInstancesRequest extends AbstractModel
 
         if (array_key_exists("OrderSource",$param) and $param["OrderSource"] !== null) {
             $this->OrderSource = $param["OrderSource"];
+        }
+
+        if (array_key_exists("DealMode",$param) and $param["DealMode"] !== null) {
+            $this->DealMode = $param["DealMode"];
         }
     }
 }

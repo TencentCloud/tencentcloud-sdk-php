@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenId(string $OpenId) 设置收单系统分配的开放ID
  * @method string getOpenKey() 获取收单系统分配的密钥
  * @method void setOpenKey(string $OpenKey) 设置收单系统分配的密钥
- * @method string getPayType() 获取支付类型，逗号分隔
- * @method void setPayType(string $PayType) 设置支付类型，逗号分隔
+ * @method string getPayType() 获取支付类型，逗号分隔。1-现金，2-主扫，3-被扫，4-JSAPI。
+ * @method void setPayType(string $PayType) 设置支付类型，逗号分隔。1-现金，2-主扫，3-被扫，4-JSAPI。
  * @method string getProfile() 获取沙箱环境填sandbox，正式环境不填
  * @method void setProfile(string $Profile) 设置沙箱环境填sandbox，正式环境不填
  */
@@ -42,7 +42,7 @@ class QueryMerchantPayWayListRequest extends AbstractModel
     public $OpenKey;
 
     /**
-     * @var string 支付类型，逗号分隔
+     * @var string 支付类型，逗号分隔。1-现金，2-主扫，3-被扫，4-JSAPI。
      */
     public $PayType;
 
@@ -54,7 +54,7 @@ class QueryMerchantPayWayListRequest extends AbstractModel
     /**
      * @param string $OpenId 收单系统分配的开放ID
      * @param string $OpenKey 收单系统分配的密钥
-     * @param string $PayType 支付类型，逗号分隔
+     * @param string $PayType 支付类型，逗号分隔。1-现金，2-主扫，3-被扫，4-JSAPI。
      * @param string $Profile 沙箱环境填sandbox，正式环境不填
      */
     function __construct()

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlayToken(string $PlayToken) 设置播放凭证
  * @method string getLyricsUrl() 获取歌词下载地址
  * @method void setLyricsUrl(string $LyricsUrl) 设置歌词下载地址
+ * @method array getDefinitionInfoSet() 获取歌曲规格信息列表
+ * @method void setDefinitionInfoSet(array $DefinitionInfoSet) 设置歌曲规格信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class DescribeKTVMusicDetailResponse extends AbstractModel
     public $LyricsUrl;
 
     /**
+     * @var array 歌曲规格信息列表
+     */
+    public $DefinitionInfoSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class DescribeKTVMusicDetailResponse extends AbstractModel
      * @param KTVMusicBaseInfo $KTVMusicBaseInfo 歌曲基础信息
      * @param string $PlayToken 播放凭证
      * @param string $LyricsUrl 歌词下载地址
+     * @param array $DefinitionInfoSet 歌曲规格信息列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -81,6 +89,15 @@ class DescribeKTVMusicDetailResponse extends AbstractModel
 
         if (array_key_exists("LyricsUrl",$param) and $param["LyricsUrl"] !== null) {
             $this->LyricsUrl = $param["LyricsUrl"];
+        }
+
+        if (array_key_exists("DefinitionInfoSet",$param) and $param["DefinitionInfoSet"] !== null) {
+            $this->DefinitionInfoSet = [];
+            foreach ($param["DefinitionInfoSet"] as $key => $value){
+                $obj = new KTVMusicDefinitionInfo();
+                $obj->deserialize($value);
+                array_push($this->DefinitionInfoSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

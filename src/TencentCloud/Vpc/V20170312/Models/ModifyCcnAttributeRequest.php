@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCcnId() 获取CCN实例ID。形如：ccn-f49l6u0z。
  * @method void setCcnId(string $CcnId) 设置CCN实例ID。形如：ccn-f49l6u0z。
- * @method string getCcnName() 获取CCN名称，最大长度不能超过60个字节。
- * @method void setCcnName(string $CcnName) 设置CCN名称，最大长度不能超过60个字节。
- * @method string getCcnDescription() 获取CCN描述信息，最大长度不能超过100个字节。
- * @method void setCcnDescription(string $CcnDescription) 设置CCN描述信息，最大长度不能超过100个字节。
+ * @method string getCcnName() 获取CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
+ * @method void setCcnName(string $CcnName) 设置CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
+ * @method string getCcnDescription() 获取CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
+ * @method void setCcnDescription(string $CcnDescription) 设置CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
  */
 class ModifyCcnAttributeRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyCcnAttributeRequest extends AbstractModel
     public $CcnId;
 
     /**
-     * @var string CCN名称，最大长度不能超过60个字节。
+     * @var string CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
      */
     public $CcnName;
 
     /**
-     * @var string CCN描述信息，最大长度不能超过100个字节。
+     * @var string CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
      */
     public $CcnDescription;
 
     /**
      * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
-     * @param string $CcnName CCN名称，最大长度不能超过60个字节。
-     * @param string $CcnDescription CCN描述信息，最大长度不能超过100个字节。
+     * @param string $CcnName CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
+     * @param string $CcnDescription CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
      */
     function __construct()
     {

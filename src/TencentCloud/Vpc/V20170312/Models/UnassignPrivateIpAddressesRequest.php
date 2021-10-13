@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置弹性网卡实例ID，例如：eni-m6dyj72l。
  * @method array getPrivateIpAddresses() 获取指定的内网IP信息，单次最多指定10个。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
+ * @method string getInstanceId() 获取网卡绑定的子机实例ID，该参数仅用于指定网卡退还IP并解绑子机的场景，如果不涉及解绑子机，请勿填写。
+ * @method void setInstanceId(string $InstanceId) 设置网卡绑定的子机实例ID，该参数仅用于指定网卡退还IP并解绑子机的场景，如果不涉及解绑子机，请勿填写。
  */
 class UnassignPrivateIpAddressesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UnassignPrivateIpAddressesRequest extends AbstractModel
     public $PrivateIpAddresses;
 
     /**
+     * @var string 网卡绑定的子机实例ID，该参数仅用于指定网卡退还IP并解绑子机的场景，如果不涉及解绑子机，请勿填写。
+     */
+    public $InstanceId;
+
+    /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
+     * @param string $InstanceId 网卡绑定的子机实例ID，该参数仅用于指定网卡退还IP并解绑子机的场景，如果不涉及解绑子机，请勿填写。
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class UnassignPrivateIpAddressesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PrivateIpAddresses, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

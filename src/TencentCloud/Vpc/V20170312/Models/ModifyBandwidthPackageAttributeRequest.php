@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名称
  * @method string getChargeType() 获取带宽包计费模式
  * @method void setChargeType(string $ChargeType) 设置带宽包计费模式
+ * @method boolean getMigrateOnRefund() 获取退款时迁移为后付费带宽包。默认值：否
+ * @method void setMigrateOnRefund(boolean $MigrateOnRefund) 设置退款时迁移为后付费带宽包。默认值：否
  */
 class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
     public $ChargeType;
 
     /**
+     * @var boolean 退款时迁移为后付费带宽包。默认值：否
+     */
+    public $MigrateOnRefund;
+
+    /**
      * @param string $BandwidthPackageId 带宽包唯一标识ID
      * @param string $BandwidthPackageName 带宽包名称
      * @param string $ChargeType 带宽包计费模式
+     * @param boolean $MigrateOnRefund 退款时迁移为后付费带宽包。默认值：否
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("MigrateOnRefund",$param) and $param["MigrateOnRefund"] !== null) {
+            $this->MigrateOnRefund = $param["MigrateOnRefund"];
         }
     }
 }

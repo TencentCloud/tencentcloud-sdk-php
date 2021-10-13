@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicNum(integer $TopicNum) 设置Topic数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RetentionPolicy getRetentionPolicy() 获取消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) 设置消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Environment extends AbstractModel
 {
@@ -83,6 +87,12 @@ class Environment extends AbstractModel
     public $TopicNum;
 
     /**
+     * @var RetentionPolicy 消息保留策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetentionPolicy;
+
+    /**
      * @param string $EnvironmentId 命名空间名称
      * @param string $Remark 说明
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，最大1296000（15天）
@@ -91,6 +101,8 @@ class Environment extends AbstractModel
      * @param string $NamespaceId 命名空间ID
      * @param string $NamespaceName 命名空间名称
      * @param integer $TopicNum Topic数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetentionPolicy $RetentionPolicy 消息保留策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -136,6 +148,11 @@ class Environment extends AbstractModel
 
         if (array_key_exists("TopicNum",$param) and $param["TopicNum"] !== null) {
             $this->TopicNum = $param["TopicNum"];
+        }
+
+        if (array_key_exists("RetentionPolicy",$param) and $param["RetentionPolicy"] !== null) {
+            $this->RetentionPolicy = new RetentionPolicy();
+            $this->RetentionPolicy->deserialize($param["RetentionPolicy"]);
         }
     }
 }

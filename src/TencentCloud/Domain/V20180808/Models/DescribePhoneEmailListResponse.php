@@ -14,57 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Domain\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EncryptedPhoneVerification返回参数结构体
+ * DescribePhoneEmailList返回参数结构体
  *
- * @method string getResult() 获取认证结果码:
-【收费结果码】
-0: 认证通过
--4: 信息不一致
-
-【不收费结果码】
--7: 身份证号码有误
--8: 参数错误
--9: 没有记录
--11: 验证中心服务繁忙
- * @method void setResult(string $Result) 设置认证结果码:
-【收费结果码】
-0: 认证通过
--4: 信息不一致
-
-【不收费结果码】
--7: 身份证号码有误
--8: 参数错误
--9: 没有记录
--11: 验证中心服务繁忙
- * @method string getDescription() 获取业务结果描述。
- * @method void setDescription(string $Description) 设置业务结果描述。
+ * @method array getPhoneEmailList() 获取手机或者邮箱列表
+ * @method void setPhoneEmailList(array $PhoneEmailList) 设置手机或者邮箱列表
+ * @method integer getTotalCount() 获取总数量。
+ * @method void setTotalCount(integer $TotalCount) 设置总数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class EncryptedPhoneVerificationResponse extends AbstractModel
+class DescribePhoneEmailListResponse extends AbstractModel
 {
     /**
-     * @var string 认证结果码:
-【收费结果码】
-0: 认证通过
--4: 信息不一致
-
-【不收费结果码】
--7: 身份证号码有误
--8: 参数错误
--9: 没有记录
--11: 验证中心服务繁忙
+     * @var array 手机或者邮箱列表
      */
-    public $Result;
+    public $PhoneEmailList;
 
     /**
-     * @var string 业务结果描述。
+     * @var integer 总数量。
      */
-    public $Description;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -72,17 +45,8 @@ class EncryptedPhoneVerificationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 认证结果码:
-【收费结果码】
-0: 认证通过
--4: 信息不一致
-
-【不收费结果码】
--7: 身份证号码有误
--8: 参数错误
--9: 没有记录
--11: 验证中心服务繁忙
-     * @param string $Description 业务结果描述。
+     * @param array $PhoneEmailList 手机或者邮箱列表
+     * @param integer $TotalCount 总数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -98,12 +62,17 @@ class EncryptedPhoneVerificationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("PhoneEmailList",$param) and $param["PhoneEmailList"] !== null) {
+            $this->PhoneEmailList = [];
+            foreach ($param["PhoneEmailList"] as $key => $value){
+                $obj = new PhoneEmailData();
+                $obj->deserialize($value);
+                array_push($this->PhoneEmailList, $obj);
+            }
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

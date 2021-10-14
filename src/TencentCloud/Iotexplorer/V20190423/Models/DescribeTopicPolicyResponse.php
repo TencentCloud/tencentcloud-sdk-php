@@ -14,57 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EncryptedPhoneVerification返回参数结构体
+ * DescribeTopicPolicy返回参数结构体
  *
- * @method string getResult() 获取认证结果码:
-【收费结果码】
-0: 认证通过
--4: 信息不一致
-
-【不收费结果码】
--7: 身份证号码有误
--8: 参数错误
--9: 没有记录
--11: 验证中心服务繁忙
- * @method void setResult(string $Result) 设置认证结果码:
-【收费结果码】
-0: 认证通过
--4: 信息不一致
-
-【不收费结果码】
--7: 身份证号码有误
--8: 参数错误
--9: 没有记录
--11: 验证中心服务繁忙
- * @method string getDescription() 获取业务结果描述。
- * @method void setDescription(string $Description) 设置业务结果描述。
+ * @method string getProductId() 获取产品ID
+ * @method void setProductId(string $ProductId) 设置产品ID
+ * @method string getTopicName() 获取Topic名称
+ * @method void setTopicName(string $TopicName) 设置Topic名称
+ * @method integer getPrivilege() 获取Topic权限
+ * @method void setPrivilege(integer $Privilege) 设置Topic权限
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class EncryptedPhoneVerificationResponse extends AbstractModel
+class DescribeTopicPolicyResponse extends AbstractModel
 {
     /**
-     * @var string 认证结果码:
-【收费结果码】
-0: 认证通过
--4: 信息不一致
-
-【不收费结果码】
--7: 身份证号码有误
--8: 参数错误
--9: 没有记录
--11: 验证中心服务繁忙
+     * @var string 产品ID
      */
-    public $Result;
+    public $ProductId;
 
     /**
-     * @var string 业务结果描述。
+     * @var string Topic名称
      */
-    public $Description;
+    public $TopicName;
+
+    /**
+     * @var integer Topic权限
+     */
+    public $Privilege;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -72,17 +52,9 @@ class EncryptedPhoneVerificationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 认证结果码:
-【收费结果码】
-0: 认证通过
--4: 信息不一致
-
-【不收费结果码】
--7: 身份证号码有误
--8: 参数错误
--9: 没有记录
--11: 验证中心服务繁忙
-     * @param string $Description 业务结果描述。
+     * @param string $ProductId 产品ID
+     * @param string $TopicName Topic名称
+     * @param integer $Privilege Topic权限
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -98,12 +70,16 @@ class EncryptedPhoneVerificationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
 
-        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
-            $this->Description = $param["Description"];
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
+        }
+
+        if (array_key_exists("Privilege",$param) and $param["Privilege"] !== null) {
+            $this->Privilege = $param["Privilege"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

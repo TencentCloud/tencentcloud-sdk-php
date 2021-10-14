@@ -46,6 +46,12 @@ blacklist：黑名单
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterRules(array $FilterRules) 设置IP 黑白名单分路径配置，白名单功能
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReturnCode() 获取IP 黑白名单验证失败时返回的 HTTP Code
+合法值: 400~499
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReturnCode(integer $ReturnCode) 设置IP 黑白名单验证失败时返回的 HTTP Code
+合法值: 400~499
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpFilter extends AbstractModel
 {
@@ -79,6 +85,13 @@ blacklist：黑名单
     public $FilterRules;
 
     /**
+     * @var integer IP 黑白名单验证失败时返回的 HTTP Code
+合法值: 400~499
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReturnCode;
+
+    /**
      * @param string $Switch IP 黑白名单配置开关
 on：开启
 off：关闭
@@ -91,6 +104,9 @@ blacklist：黑名单
 最多可填充 50 个白名单或 50 个黑名单
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FilterRules IP 黑白名单分路径配置，白名单功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReturnCode IP 黑白名单验证失败时返回的 HTTP Code
+合法值: 400~499
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -125,6 +141,10 @@ blacklist：黑名单
                 $obj->deserialize($value);
                 array_push($this->FilterRules, $obj);
             }
+        }
+
+        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
+            $this->ReturnCode = $param["ReturnCode"];
         }
     }
 }

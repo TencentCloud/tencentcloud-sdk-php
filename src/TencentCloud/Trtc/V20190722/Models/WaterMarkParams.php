@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationX(integer $LocationX) 设置水印在输出时的X偏移。单位为像素值。
  * @method integer getLocationY() 获取水印在输出时的Y偏移。单位为像素值。
  * @method void setLocationY(integer $LocationY) 设置水印在输出时的Y偏移。单位为像素值。
+ * @method string getWaterMarkUrl() 获取混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+ * @method void setWaterMarkUrl(string $WaterMarkUrl) 设置混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
  */
 class WaterMarkParams extends AbstractModel
 {
@@ -59,11 +61,17 @@ class WaterMarkParams extends AbstractModel
     public $LocationY;
 
     /**
+     * @var string 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+     */
+    public $WaterMarkUrl;
+
+    /**
      * @param integer $WaterMarkId 混流-水印图片ID。取值为实时音视频控制台上传的图片ID。
      * @param integer $WaterMarkWidth 混流-水印宽。单位为像素值。
      * @param integer $WaterMarkHeight 混流-水印高。单位为像素值。
      * @param integer $LocationX 水印在输出时的X偏移。单位为像素值。
      * @param integer $LocationY 水印在输出时的Y偏移。单位为像素值。
+     * @param string $WaterMarkUrl 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class WaterMarkParams extends AbstractModel
 
         if (array_key_exists("LocationY",$param) and $param["LocationY"] !== null) {
             $this->LocationY = $param["LocationY"];
+        }
+
+        if (array_key_exists("WaterMarkUrl",$param) and $param["WaterMarkUrl"] !== null) {
+            $this->WaterMarkUrl = $param["WaterMarkUrl"];
         }
     }
 }

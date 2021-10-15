@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerIp(string $ServerIp) 设置接流服务器 IP。
  * @method integer getVideoFps() 获取推流视频帧率，单位: Hz。
  * @method void setVideoFps(integer $VideoFps) 设置推流视频帧率，单位: Hz。
- * @method integer getVideoSpeed() 获取推流视频码率，单位: bps。
- * @method void setVideoSpeed(integer $VideoSpeed) 设置推流视频码率，单位: bps。
+ * @method integer getVideoSpeed() 获取推流视频码率，单位: Kbps。
+ * @method void setVideoSpeed(integer $VideoSpeed) 设置推流视频码率，单位: Kbps。
  * @method integer getAudioFps() 获取推流音频帧率，单位: Hz。
  * @method void setAudioFps(integer $AudioFps) 设置推流音频帧率，单位: Hz。
- * @method integer getAudioSpeed() 获取推流音频码率，单位: bps。
- * @method void setAudioSpeed(integer $AudioSpeed) 设置推流音频码率，单位: bps。
+ * @method integer getAudioSpeed() 获取推流音频码率，单位: Kbps。
+ * @method void setAudioSpeed(integer $AudioSpeed) 设置推流音频码率，单位: Kbps。
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getBeginPushTime() 获取推流开始时间。
@@ -87,7 +87,7 @@ class PushDataInfo extends AbstractModel
     public $VideoFps;
 
     /**
-     * @var integer 推流视频码率，单位: bps。
+     * @var integer 推流视频码率，单位: Kbps。
      */
     public $VideoSpeed;
 
@@ -97,7 +97,7 @@ class PushDataInfo extends AbstractModel
     public $AudioFps;
 
     /**
-     * @var integer 推流音频码率，单位: bps。
+     * @var integer 推流音频码率，单位: Kbps。
      */
     public $AudioSpeed;
 
@@ -154,9 +154,9 @@ class PushDataInfo extends AbstractModel
      * @param string $ClientIp 推流客户端 IP。
      * @param string $ServerIp 接流服务器 IP。
      * @param integer $VideoFps 推流视频帧率，单位: Hz。
-     * @param integer $VideoSpeed 推流视频码率，单位: bps。
+     * @param integer $VideoSpeed 推流视频码率，单位: Kbps。
      * @param integer $AudioFps 推流音频帧率，单位: Hz。
-     * @param integer $AudioSpeed 推流音频码率，单位: bps。
+     * @param integer $AudioSpeed 推流音频码率，单位: Kbps。
      * @param string $PushDomain 推流域名。
      * @param string $BeginPushTime 推流开始时间。
      * @param string $Acodec 音频编码格式，

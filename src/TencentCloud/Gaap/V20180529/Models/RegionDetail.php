@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(string $RegionId) 设置区域ID
  * @method string getRegionName() 获取区域英文名或中文名
  * @method void setRegionName(string $RegionName) 设置区域英文名或中文名
+ * @method string getRegionArea() 获取机房所属大区
+ * @method void setRegionArea(string $RegionArea) 设置机房所属大区
+ * @method string getRegionAreaName() 获取机房所属大区名
+ * @method void setRegionAreaName(string $RegionAreaName) 设置机房所属大区名
+ * @method string getIDCType() 获取机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
+ * @method void setIDCType(string $IDCType) 设置机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
  */
 class RegionDetail extends AbstractModel
 {
@@ -38,8 +44,26 @@ class RegionDetail extends AbstractModel
     public $RegionName;
 
     /**
+     * @var string 机房所属大区
+     */
+    public $RegionArea;
+
+    /**
+     * @var string 机房所属大区名
+     */
+    public $RegionAreaName;
+
+    /**
+     * @var string 机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
+     */
+    public $IDCType;
+
+    /**
      * @param string $RegionId 区域ID
      * @param string $RegionName 区域英文名或中文名
+     * @param string $RegionArea 机房所属大区
+     * @param string $RegionAreaName 机房所属大区名
+     * @param string $IDCType 机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class RegionDetail extends AbstractModel
 
         if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
             $this->RegionName = $param["RegionName"];
+        }
+
+        if (array_key_exists("RegionArea",$param) and $param["RegionArea"] !== null) {
+            $this->RegionArea = $param["RegionArea"];
+        }
+
+        if (array_key_exists("RegionAreaName",$param) and $param["RegionAreaName"] !== null) {
+            $this->RegionAreaName = $param["RegionAreaName"];
+        }
+
+        if (array_key_exists("IDCType",$param) and $param["IDCType"] !== null) {
+            $this->IDCType = $param["IDCType"];
         }
     }
 }

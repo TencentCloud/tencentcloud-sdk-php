@@ -52,6 +52,26 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
  * @method void setIndependent(integer $Independent) 设置当该字段为1时，仅拉取非通道组的通道，
 当该字段为0时，仅拉取通道组的通道，
 不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
+ * @method string getOrder() 获取输出通道列表的排列顺序。取值范围：
+asc：升序排列
+desc：降序排列。
+默认为降序。
+ * @method void setOrder(string $Order) 设置输出通道列表的排列顺序。取值范围：
+asc：升序排列
+desc：降序排列。
+默认为降序。
+ * @method string getOrderField() 获取通道列表排序的依据字段。取值范围：
+create_time：依据通道的创建时间排序
+proxy_id：依据通道的ID排序
+bandwidth：依据通道带宽上限排序
+concurrent_connections：依据通道并发排序
+默认按通道创建时间排序。
+ * @method void setOrderField(string $OrderField) 设置通道列表排序的依据字段。取值范围：
+create_time：依据通道的创建时间排序
+proxy_id：依据通道的ID排序
+bandwidth：依据通道带宽上限排序
+concurrent_connections：依据通道并发排序
+默认按通道创建时间排序。
  */
 class DescribeProxiesRequest extends AbstractModel
 {
@@ -100,6 +120,24 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
     public $Independent;
 
     /**
+     * @var string 输出通道列表的排列顺序。取值范围：
+asc：升序排列
+desc：降序排列。
+默认为降序。
+     */
+    public $Order;
+
+    /**
+     * @var string 通道列表排序的依据字段。取值范围：
+create_time：依据通道的创建时间排序
+proxy_id：依据通道的ID排序
+bandwidth：依据通道带宽上限排序
+concurrent_connections：依据通道并发排序
+默认按通道创建时间排序。
+     */
+    public $OrderField;
+
+    /**
      * @param array $InstanceIds （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
@@ -116,6 +154,16 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
      * @param integer $Independent 当该字段为1时，仅拉取非通道组的通道，
 当该字段为0时，仅拉取通道组的通道，
 不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
+     * @param string $Order 输出通道列表的排列顺序。取值范围：
+asc：升序排列
+desc：降序排列。
+默认为降序。
+     * @param string $OrderField 通道列表排序的依据字段。取值范围：
+create_time：依据通道的创建时间排序
+proxy_id：依据通道的ID排序
+bandwidth：依据通道带宽上限排序
+concurrent_connections：依据通道并发排序
+默认按通道创建时间排序。
      */
     function __construct()
     {
@@ -166,6 +214,14 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
 
         if (array_key_exists("Independent",$param) and $param["Independent"] !== null) {
             $this->Independent = $param["Independent"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
         }
     }
 }

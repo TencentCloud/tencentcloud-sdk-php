@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConcurrentList(array $ConcurrentList) 设置可选的并发量取值数组
  * @method array getBandwidthList() 获取可选的带宽取值数组
  * @method void setBandwidthList(array $BandwidthList) 设置可选的带宽取值数组
+ * @method string getRegionArea() 获取机房所属大区
+ * @method void setRegionArea(string $RegionArea) 设置机房所属大区
+ * @method string getRegionAreaName() 获取机房所属大区名
+ * @method void setRegionAreaName(string $RegionAreaName) 设置机房所属大区名
+ * @method string getIDCType() 获取机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
+ * @method void setIDCType(string $IDCType) 设置机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
  */
 class AccessRegionDetial extends AbstractModel
 {
@@ -52,10 +58,28 @@ class AccessRegionDetial extends AbstractModel
     public $BandwidthList;
 
     /**
+     * @var string 机房所属大区
+     */
+    public $RegionArea;
+
+    /**
+     * @var string 机房所属大区名
+     */
+    public $RegionAreaName;
+
+    /**
+     * @var string 机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
+     */
+    public $IDCType;
+
+    /**
      * @param string $RegionId 区域ID
      * @param string $RegionName 区域的中文或英文名称
      * @param array $ConcurrentList 可选的并发量取值数组
      * @param array $BandwidthList 可选的带宽取值数组
+     * @param string $RegionArea 机房所属大区
+     * @param string $RegionAreaName 机房所属大区名
+     * @param string $IDCType 机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class AccessRegionDetial extends AbstractModel
 
         if (array_key_exists("BandwidthList",$param) and $param["BandwidthList"] !== null) {
             $this->BandwidthList = $param["BandwidthList"];
+        }
+
+        if (array_key_exists("RegionArea",$param) and $param["RegionArea"] !== null) {
+            $this->RegionArea = $param["RegionArea"];
+        }
+
+        if (array_key_exists("RegionAreaName",$param) and $param["RegionAreaName"] !== null) {
+            $this->RegionAreaName = $param["RegionAreaName"];
+        }
+
+        if (array_key_exists("IDCType",$param) and $param["IDCType"] !== null) {
+            $this->IDCType = $param["IDCType"];
         }
     }
 }

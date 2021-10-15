@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExflag(string $Exflag) 设置额外标识
  * @method string getSoldOut() 获取json对象，key为机型，value true为售罄，false为未售罄
  * @method void setSoldOut(string $SoldOut) 设置json对象，key为机型，value true为售罄，false为未售罄
+ * @method array getSalesInfo() 获取标准版售罄信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSalesInfo(array $SalesInfo) 设置标准版售罄信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneInfo extends AbstractModel
 {
@@ -80,6 +84,12 @@ class ZoneInfo extends AbstractModel
     public $SoldOut;
 
     /**
+     * @var array 标准版售罄信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SalesInfo;
+
+    /**
      * @param string $ZoneId zone的id
      * @param integer $IsInternalApp 是否内部APP
      * @param integer $AppId app id
@@ -88,6 +98,8 @@ class ZoneInfo extends AbstractModel
      * @param integer $ZoneStatus zone状态
      * @param string $Exflag 额外标识
      * @param string $SoldOut json对象，key为机型，value true为售罄，false为未售罄
+     * @param array $SalesInfo 标准版售罄信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +144,15 @@ class ZoneInfo extends AbstractModel
 
         if (array_key_exists("SoldOut",$param) and $param["SoldOut"] !== null) {
             $this->SoldOut = $param["SoldOut"];
+        }
+
+        if (array_key_exists("SalesInfo",$param) and $param["SalesInfo"] !== null) {
+            $this->SalesInfo = [];
+            foreach ($param["SalesInfo"] as $key => $value){
+                $obj = new SaleInfo();
+                $obj->deserialize($value);
+                array_push($this->SalesInfo, $obj);
+            }
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUrl() 获取需诊断的url，形如：http://www.test.com/test.txt。
  * @method void setUrl(string $Url) 设置需诊断的url，形如：http://www.test.com/test.txt。
+ * @method string getOrigin() 获取请求源带协议头，形如：https://console.cloud.tencent.com
+ * @method void setOrigin(string $Origin) 设置请求源带协议头，形如：https://console.cloud.tencent.com
  */
 class CreateDiagnoseUrlRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateDiagnoseUrlRequest extends AbstractModel
     public $Url;
 
     /**
+     * @var string 请求源带协议头，形如：https://console.cloud.tencent.com
+     */
+    public $Origin;
+
+    /**
      * @param string $Url 需诊断的url，形如：http://www.test.com/test.txt。
+     * @param string $Origin 请求源带协议头，形如：https://console.cloud.tencent.com
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateDiagnoseUrlRequest extends AbstractModel
         }
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Origin",$param) and $param["Origin"] !== null) {
+            $this->Origin = $param["Origin"];
         }
     }
 }

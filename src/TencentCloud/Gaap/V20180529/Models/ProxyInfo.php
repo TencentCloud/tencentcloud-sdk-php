@@ -48,8 +48,7 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中；
-UNKNOWN表示未知状态。
+CLONING表示复制中。
  * @method void setStatus(string $Status) 设置通道状态。其中：
 RUNNING表示运行中；
 CREATING表示创建中；
@@ -60,8 +59,7 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中；
-UNKNOWN表示未知状态。
+CLONING表示复制中。
  * @method string getDomain() 获取接入域名。
  * @method void setDomain(string $Domain) 设置接入域名。
  * @method string getIP() 获取接入IP。
@@ -126,9 +124,9 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本：IPv4、IPv6
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNetworkType() 获取网络类型：normal、cn2
+ * @method string getNetworkType() 获取网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetworkType(string $NetworkType) 设置网络类型：normal、cn2
+ * @method void setNetworkType(string $NetworkType) 设置网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageType() 获取通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -137,6 +135,10 @@ UNKNOWN表示未知状态。
  * @method string getBanStatus() 获取封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBanStatus(string $BanStatus) 设置封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIPList() 获取IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIPList(array $IPList) 设置IP列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
@@ -193,8 +195,7 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中；
-UNKNOWN表示未知状态。
+CLONING表示复制中。
      */
     public $Status;
 
@@ -307,7 +308,7 @@ UNKNOWN表示未知状态。
     public $IPAddressVersion;
 
     /**
-     * @var string 网络类型：normal、cn2
+     * @var string 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkType;
@@ -323,6 +324,12 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BanStatus;
+
+    /**
+     * @var array IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IPList;
 
     /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -344,8 +351,7 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中；
-UNKNOWN表示未知状态。
+CLONING表示复制中。
      * @param string $Domain 接入域名。
      * @param string $IP 接入IP。
      * @param string $Version 通道版本号：1.0，2.0，3.0。
@@ -378,11 +384,13 @@ UNKNOWN表示未知状态。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本：IPv4、IPv6
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NetworkType 网络类型：normal、cn2
+     * @param string $NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IPList IP列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -527,6 +535,15 @@ UNKNOWN表示未知状态。
 
         if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
             $this->BanStatus = $param["BanStatus"];
+        }
+
+        if (array_key_exists("IPList",$param) and $param["IPList"] !== null) {
+            $this->IPList = [];
+            foreach ($param["IPList"] as $key => $value){
+                $obj = new IPDetail();
+                $obj->deserialize($value);
+                array_push($this->IPList, $obj);
+            }
         }
     }
 }

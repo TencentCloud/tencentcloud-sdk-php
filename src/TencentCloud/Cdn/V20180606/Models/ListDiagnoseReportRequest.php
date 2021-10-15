@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyWords(string $KeyWords) 设置用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
  * @method string getDiagnoseLink() 获取用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
  * @method void setDiagnoseLink(string $DiagnoseLink) 设置用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
+ * @method string getOrigin() 获取请求源带协议头，形如：https://console.cloud.tencent.com
+ * @method void setOrigin(string $Origin) 设置请求源带协议头，形如：https://console.cloud.tencent.com
  */
 class ListDiagnoseReportRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ListDiagnoseReportRequest extends AbstractModel
     public $DiagnoseLink;
 
     /**
+     * @var string 请求源带协议头，形如：https://console.cloud.tencent.com
+     */
+    public $Origin;
+
+    /**
      * @param string $KeyWords 用于搜索诊断URL的关键字，不填时返回用户所有的诊断任务。
      * @param string $DiagnoseLink 用于搜索诊断系统返回的诊断链接，形如：http://cdn.cloud.tencent.com/self_diagnose/xxxxx
+     * @param string $Origin 请求源带协议头，形如：https://console.cloud.tencent.com
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ListDiagnoseReportRequest extends AbstractModel
 
         if (array_key_exists("DiagnoseLink",$param) and $param["DiagnoseLink"] !== null) {
             $this->DiagnoseLink = $param["DiagnoseLink"];
+        }
+
+        if (array_key_exists("Origin",$param) and $param["Origin"] !== null) {
+            $this->Origin = $param["Origin"];
         }
     }
 }

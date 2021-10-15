@@ -39,7 +39,9 @@ domain：域名类型
 cos：对象存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
-ip_ipv6：源站列表为多个 IPv4 地址和一个 IPv6 地址
+ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 出参增加以下几种类型：
 image：数据万象源站
 ftp：历史 FTP 托管源源站，现已不维护
@@ -52,7 +54,9 @@ domain：域名类型
 cos：对象存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
-ip_ipv6：源站列表为多个 IPv4 地址和一个 IPv6 地址
+ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 出参增加以下几种类型：
 image：数据万象源站
 ftp：历史 FTP 托管源源站，现已不维护
@@ -91,11 +95,21 @@ https：强制 https 回源，https 回源时仅支持源站 443 端口
 domain：域名类型
 ip：IP 列表作为源站
 修改 BackupOrigins 时需要同时填充对应的 BackupOriginType
+以下备源源站类型尚未全量支持，需要申请试用：
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupOriginType(string $BackupOriginType) 设置备源站类型，支持以下类型：
 domain：域名类型
 ip：IP 列表作为源站
 修改 BackupOrigins 时需要同时填充对应的 BackupOriginType
+以下备源源站类型尚未全量支持，需要申请试用：
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackupServerName() 获取回备源站时 Host 头部，不填充则默认为主源站的 ServerName
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,7 +144,9 @@ domain：域名类型
 cos：对象存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
-ip_ipv6：源站列表为多个 IPv4 地址和一个 IPv6 地址
+ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 出参增加以下几种类型：
 image：数据万象源站
 ftp：历史 FTP 托管源源站，现已不维护
@@ -175,6 +191,11 @@ https：强制 https 回源，https 回源时仅支持源站 443 端口
 domain：域名类型
 ip：IP 列表作为源站
 修改 BackupOrigins 时需要同时填充对应的 BackupOriginType
+以下备源源站类型尚未全量支持，需要申请试用：
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupOriginType;
@@ -213,7 +234,9 @@ domain：域名类型
 cos：对象存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
-ip_ipv6：源站列表为多个 IPv4 地址和一个 IPv6 地址
+ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 出参增加以下几种类型：
 image：数据万象源站
 ftp：历史 FTP 托管源源站，现已不维护
@@ -238,6 +261,11 @@ https：强制 https 回源，https 回源时仅支持源站 443 端口
 domain：域名类型
 ip：IP 列表作为源站
 修改 BackupOrigins 时需要同时填充对应的 BackupOriginType
+以下备源源站类型尚未全量支持，需要申请试用：
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ipv6_domain: 源站列表为多个 IPv6 地址以及域名
+ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupServerName 回备源站时 Host 头部，不填充则默认为主源站的 ServerName
 注意：此字段可能返回 null，表示取不到有效值。

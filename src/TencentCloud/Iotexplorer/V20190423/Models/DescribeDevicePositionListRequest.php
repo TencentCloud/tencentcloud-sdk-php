@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDevicePositionList请求参数结构体
  *
-
+ * @method array getProductIdList() 获取产品标识列表
+ * @method void setProductIdList(array $ProductIdList) 设置产品标识列表
+ * @method integer getCoordinateType() 获取坐标类型
+ * @method void setCoordinateType(integer $CoordinateType) 设置坐标类型
+ * @method integer getOffset() 获取分页偏移
+ * @method void setOffset(integer $Offset) 设置分页偏移
+ * @method integer getLimit() 获取分页的大小
+ * @method void setLimit(integer $Limit) 设置分页的大小
  */
 class DescribeDevicePositionListRequest extends AbstractModel
 {
-
+    /**
+     * @var array 产品标识列表
+     */
+    public $ProductIdList;
 
     /**
+     * @var integer 坐标类型
+     */
+    public $CoordinateType;
 
+    /**
+     * @var integer 分页偏移
+     */
+    public $Offset;
+
+    /**
+     * @var integer 分页的大小
+     */
+    public $Limit;
+
+    /**
+     * @param array $ProductIdList 产品标识列表
+     * @param integer $CoordinateType 坐标类型
+     * @param integer $Offset 分页偏移
+     * @param integer $Limit 分页的大小
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class DescribeDevicePositionListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ProductIdList",$param) and $param["ProductIdList"] !== null) {
+            $this->ProductIdList = $param["ProductIdList"];
+        }
 
+        if (array_key_exists("CoordinateType",$param) and $param["CoordinateType"] !== null) {
+            $this->CoordinateType = $param["CoordinateType"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
     }
 }

@@ -53,24 +53,24 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
 当该字段为0时，仅拉取通道组的通道，
 不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
  * @method string getOrder() 获取输出通道列表的排列顺序。取值范围：
-asc：升序排列
+asc：升序排列；
 desc：降序排列。
 默认为降序。
  * @method void setOrder(string $Order) 设置输出通道列表的排列顺序。取值范围：
-asc：升序排列
+asc：升序排列；
 desc：降序排列。
 默认为降序。
  * @method string getOrderField() 获取通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序
-proxy_id：依据通道的ID排序
-bandwidth：依据通道带宽上限排序
-concurrent_connections：依据通道并发排序
+create_time：依据通道的创建时间排序；
+proxy_id：依据通道的ID排序；
+bandwidth：依据通道带宽上限排序；
+concurrent_connections：依据通道并发排序；
 默认按通道创建时间排序。
  * @method void setOrderField(string $OrderField) 设置通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序
-proxy_id：依据通道的ID排序
-bandwidth：依据通道带宽上限排序
-concurrent_connections：依据通道并发排序
+create_time：依据通道的创建时间排序；
+proxy_id：依据通道的ID排序；
+bandwidth：依据通道带宽上限排序；
+concurrent_connections：依据通道并发排序；
 默认按通道创建时间排序。
  */
 class DescribeProxiesRequest extends AbstractModel
@@ -121,7 +121,7 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
 
     /**
      * @var string 输出通道列表的排列顺序。取值范围：
-asc：升序排列
+asc：升序排列；
 desc：降序排列。
 默认为降序。
      */
@@ -129,10 +129,10 @@ desc：降序排列。
 
     /**
      * @var string 通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序
-proxy_id：依据通道的ID排序
-bandwidth：依据通道带宽上限排序
-concurrent_connections：依据通道并发排序
+create_time：依据通道的创建时间排序；
+proxy_id：依据通道的ID排序；
+bandwidth：依据通道带宽上限排序；
+concurrent_connections：依据通道并发排序；
 默认按通道创建时间排序。
      */
     public $OrderField;
@@ -155,14 +155,14 @@ IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版�
 当该字段为0时，仅拉取通道组的通道，
 不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
      * @param string $Order 输出通道列表的排列顺序。取值范围：
-asc：升序排列
+asc：升序排列；
 desc：降序排列。
 默认为降序。
      * @param string $OrderField 通道列表排序的依据字段。取值范围：
-create_time：依据通道的创建时间排序
-proxy_id：依据通道的ID排序
-bandwidth：依据通道带宽上限排序
-concurrent_connections：依据通道并发排序
+create_time：依据通道的创建时间排序；
+proxy_id：依据通道的ID排序；
+bandwidth：依据通道带宽上限排序；
+concurrent_connections：依据通道并发排序；
 默认按通道创建时间排序。
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog返回参数结构体
  *
- * @method string getContext() 获取加载后续内容的Context
- * @method void setContext(string $Context) 设置加载后续内容的Context
+ * @method string getContext() 获取加载后续内容的Context，过期时间1小时
+ * @method void setContext(string $Context) 设置加载后续内容的Context，过期时间1小时
  * @method boolean getListOver() 获取原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
  * @method void setListOver(boolean $ListOver) 设置原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
  * @method boolean getAnalysis() 获取返回的是否为分析结果
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class SearchLogResponse extends AbstractModel
 {
     /**
-     * @var string 加载后续内容的Context
+     * @var string 加载后续内容的Context，过期时间1小时
      */
     public $Context;
 
@@ -102,7 +102,7 @@ class SearchLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Context 加载后续内容的Context
+     * @param string $Context 加载后续内容的Context，过期时间1小时
      * @param boolean $ListOver 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
      * @param boolean $Analysis 返回的是否为分析结果
      * @param array $ColNames 如果Analysis为True，则返回分析结果的列名，否则为空

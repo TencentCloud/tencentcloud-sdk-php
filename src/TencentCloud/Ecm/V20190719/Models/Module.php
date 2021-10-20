@@ -56,6 +56,10 @@ DELETEFAILED：删除失败。
  * @method void setDefaultBandwidthIn(integer $DefaultBandwidthIn) 设置默认入带宽。
  * @method string getUserData() 获取自定义脚本数据
  * @method void setUserData(string $UserData) 设置自定义脚本数据
+ * @method SystemDisk getSystemDisk() 获取系统盘信息。
+ * @method void setSystemDisk(SystemDisk $SystemDisk) 设置系统盘信息。
+ * @method array getDataDisks() 获取数据盘信息。
+ * @method void setDataDisks(array $DataDisks) 设置数据盘信息。
  */
 class Module extends AbstractModel
 {
@@ -134,6 +138,16 @@ DELETEFAILED：删除失败。
     public $UserData;
 
     /**
+     * @var SystemDisk 系统盘信息。
+     */
+    public $SystemDisk;
+
+    /**
+     * @var array 数据盘信息。
+     */
+    public $DataDisks;
+
+    /**
      * @param string $ModuleId 模块Id。
      * @param string $ModuleName 模块名称。
      * @param string $ModuleState 模块状态：
@@ -152,6 +166,8 @@ DELETEFAILED：删除失败。
      * @param array $SecurityGroupIds 默认安全组id列表。
      * @param integer $DefaultBandwidthIn 默认入带宽。
      * @param string $UserData 自定义脚本数据
+     * @param SystemDisk $SystemDisk 系统盘信息。
+     * @param array $DataDisks 数据盘信息。
      */
     function __construct()
     {
@@ -227,6 +243,20 @@ DELETEFAILED：删除失败。
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("SystemDisk",$param) and $param["SystemDisk"] !== null) {
+            $this->SystemDisk = new SystemDisk();
+            $this->SystemDisk->deserialize($param["SystemDisk"]);
+        }
+
+        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+            $this->DataDisks = [];
+            foreach ($param["DataDisks"] as $key => $value){
+                $obj = new DataDisk();
+                $obj->deserialize($value);
+                array_push($this->DataDisks, $obj);
+            }
         }
     }
 }

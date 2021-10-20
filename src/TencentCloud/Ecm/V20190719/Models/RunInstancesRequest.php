@@ -104,6 +104,10 @@ FALSE：表示不保持镜像的登录设置
 
 默认取值：FALSE。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SystemDisk getSystemDisk() 获取系统盘信息。
+ * @method void setSystemDisk(SystemDisk $SystemDisk) 设置系统盘信息。
+ * @method array getDataDisks() 获取数据盘信息。
+ * @method void setDataDisks(array $DataDisks) 设置数据盘信息。
  */
 class RunInstancesRequest extends AbstractModel
 {
@@ -226,6 +230,16 @@ FALSE：表示不保持镜像的登录设置
     public $KeepImageLogin;
 
     /**
+     * @var SystemDisk 系统盘信息。
+     */
+    public $SystemDisk;
+
+    /**
+     * @var array 数据盘信息。
+     */
+    public $DataDisks;
+
+    /**
      * @param array $ZoneInstanceCountISPSet 需要创建实例的可用区及创建数目及运营商的列表。在单次请求的过程中，单个region下的请求创建实例数上限为100
      * @param string $Password 实例登录密码。不同操作系统类型密码复杂度限制不一样，具体如下：
 Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? / ]中的特殊符。Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) ` ~ ! @ # $ % ^ & - + = | { } [ ] : ; ' , . ? /]中的特殊符号。
@@ -268,6 +282,8 @@ FALSE：表示不保持镜像的登录设置
 
 默认取值：FALSE。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param SystemDisk $SystemDisk 系统盘信息。
+     * @param array $DataDisks 数据盘信息。
      */
     function __construct()
     {
@@ -367,6 +383,20 @@ FALSE：表示不保持镜像的登录设置
 
         if (array_key_exists("KeepImageLogin",$param) and $param["KeepImageLogin"] !== null) {
             $this->KeepImageLogin = $param["KeepImageLogin"];
+        }
+
+        if (array_key_exists("SystemDisk",$param) and $param["SystemDisk"] !== null) {
+            $this->SystemDisk = new SystemDisk();
+            $this->SystemDisk->deserialize($param["SystemDisk"]);
+        }
+
+        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+            $this->DataDisks = [];
+            foreach ($param["DataDisks"] as $key => $value){
+                $obj = new DataDisk();
+                $obj->deserialize($value);
+                array_push($this->DataDisks, $obj);
+            }
         }
     }
 }

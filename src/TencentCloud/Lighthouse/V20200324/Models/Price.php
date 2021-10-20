@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method InstancePrice getInstancePrice() 获取实例价格。
  * @method void setInstancePrice(InstancePrice $InstancePrice) 设置实例价格。
+ * @method array getDataDiskPrices() 获取数据盘价格。
+ * @method void setDataDiskPrices(array $DataDiskPrices) 设置数据盘价格。
  */
 class Price extends AbstractModel
 {
@@ -31,7 +33,13 @@ class Price extends AbstractModel
     public $InstancePrice;
 
     /**
+     * @var array 数据盘价格。
+     */
+    public $DataDiskPrices;
+
+    /**
      * @param InstancePrice $InstancePrice 实例价格。
+     * @param array $DataDiskPrices 数据盘价格。
      */
     function __construct()
     {
@@ -49,6 +57,15 @@ class Price extends AbstractModel
         if (array_key_exists("InstancePrice",$param) and $param["InstancePrice"] !== null) {
             $this->InstancePrice = new InstancePrice();
             $this->InstancePrice->deserialize($param["InstancePrice"]);
+        }
+
+        if (array_key_exists("DataDiskPrices",$param) and $param["DataDiskPrices"] !== null) {
+            $this->DataDiskPrices = [];
+            foreach ($param["DataDiskPrices"] as $key => $value){
+                $obj = new DataDiskPrice();
+                $obj->deserialize($value);
+                array_push($this->DataDiskPrices, $obj);
+            }
         }
     }
 }

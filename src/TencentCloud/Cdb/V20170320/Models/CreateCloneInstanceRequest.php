@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) 设置克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
  * @method integer getInstanceNodes() 获取新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
  * @method void setInstanceNodes(integer $InstanceNodes) 设置新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
+ * @method string getDeployGroupId() 获取置放群组 ID。
+ * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID。
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $InstanceNodes;
 
     /**
+     * @var string 置放群组 ID。
+     */
+    public $DeployGroupId;
+
+    /**
      * @param string $InstanceId 克隆源实例Id。
      * @param string $SpecifiedRollbackTime 如果需要克隆实例回档到指定时间，则指定该值。时间格式为： yyyy-mm-dd hh:mm:ss 。
      * @param integer $SpecifiedBackupId 如果需要克隆实例回档到指定备份的时间点，则指定该值为物理备份的Id。请使用 [查询数据备份文件列表](/document/api/236/15842) 。
@@ -160,6 +167,7 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param string $BackupZone 备库 2 的可用区信息，默认为空，克隆强同步主实例时可指定该参数。
      * @param string $DeviceType 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
      * @param integer $InstanceNodes 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
+     * @param string $DeployGroupId 置放群组 ID。
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class CreateCloneInstanceRequest extends AbstractModel
 
         if (array_key_exists("InstanceNodes",$param) and $param["InstanceNodes"] !== null) {
             $this->InstanceNodes = $param["InstanceNodes"];
+        }
+
+        if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
+            $this->DeployGroupId = $param["DeployGroupId"];
         }
     }
 }

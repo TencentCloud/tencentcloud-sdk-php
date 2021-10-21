@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxTopicNum(integer $MaxTopicNum) 设置最大Topic数量
  * @method integer getMaxQps() 获取最大QPS
  * @method void setMaxQps(integer $MaxQps) 设置最大QPS
- * @method integer getMessageRetentionTime() 获取消息保留时间
- * @method void setMessageRetentionTime(integer $MessageRetentionTime) 设置消息保留时间
+ * @method integer getMessageRetentionTime() 获取最大消息保留时间，分钟为单位
+ * @method void setMessageRetentionTime(integer $MessageRetentionTime) 设置最大消息保留时间，分钟为单位
  * @method integer getMaxStorageCapacity() 获取最大存储容量
  * @method void setMaxStorageCapacity(integer $MaxStorageCapacity) 设置最大存储容量
  * @method string getVersion() 获取集群版本
@@ -67,6 +67,38 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getUsedStorageBudget() 获取已使用存储限制，MB为单位
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedStorageBudget(integer $UsedStorageBudget) 设置已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxPublishRateInMessages() 获取最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxPublishRateInMessages(integer $MaxPublishRateInMessages) 设置最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxDispatchRateInMessages() 获取最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxDispatchRateInMessages(integer $MaxDispatchRateInMessages) 设置最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxPublishRateInBytes() 获取最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxPublishRateInBytes(integer $MaxPublishRateInBytes) 设置最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxDispatchRateInBytes() 获取最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxDispatchRateInBytes(integer $MaxDispatchRateInBytes) 设置最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTopicNum() 获取已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicNum(integer $TopicNum) 设置已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxMessageDelayInSeconds() 获取最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxMessageDelayInSeconds(integer $MaxMessageDelayInSeconds) 设置最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getPublicAccessEnabled() 获取是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) 设置是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
@@ -128,7 +160,7 @@ class Cluster extends AbstractModel
     public $MaxQps;
 
     /**
-     * @var integer 消息保留时间
+     * @var integer 最大消息保留时间，分钟为单位
      */
     public $MessageRetentionTime;
 
@@ -168,6 +200,54 @@ class Cluster extends AbstractModel
     public $UsedStorageBudget;
 
     /**
+     * @var integer 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxPublishRateInMessages;
+
+    /**
+     * @var integer 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxDispatchRateInMessages;
+
+    /**
+     * @var integer 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxPublishRateInBytes;
+
+    /**
+     * @var integer 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxDispatchRateInBytes;
+
+    /**
+     * @var integer 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicNum;
+
+    /**
+     * @var integer 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxMessageDelayInSeconds;
+
+    /**
+     * @var boolean 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicAccessEnabled;
+
+    /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -180,7 +260,7 @@ class Cluster extends AbstractModel
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $MaxTopicNum 最大Topic数量
      * @param integer $MaxQps 最大QPS
-     * @param integer $MessageRetentionTime 消息保留时间
+     * @param integer $MessageRetentionTime 最大消息保留时间，分钟为单位
      * @param integer $MaxStorageCapacity 最大存储容量
      * @param string $Version 集群版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,6 +271,22 @@ class Cluster extends AbstractModel
      * @param integer $NamespaceNum 命名空间数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedStorageBudget 已使用存储限制，MB为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxPublishRateInMessages 最大生产消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxDispatchRateInMessages 最大推送消息速率，以条数为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxPublishRateInBytes 最大生产消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxDispatchRateInBytes 最大推送消息速率，以字节为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TopicNum 已创建主题数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxMessageDelayInSeconds 最长消息延时，以秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $PublicAccessEnabled 是否开启公网访问，不填时默认开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +372,43 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("UsedStorageBudget",$param) and $param["UsedStorageBudget"] !== null) {
             $this->UsedStorageBudget = $param["UsedStorageBudget"];
+        }
+
+        if (array_key_exists("MaxPublishRateInMessages",$param) and $param["MaxPublishRateInMessages"] !== null) {
+            $this->MaxPublishRateInMessages = $param["MaxPublishRateInMessages"];
+        }
+
+        if (array_key_exists("MaxDispatchRateInMessages",$param) and $param["MaxDispatchRateInMessages"] !== null) {
+            $this->MaxDispatchRateInMessages = $param["MaxDispatchRateInMessages"];
+        }
+
+        if (array_key_exists("MaxPublishRateInBytes",$param) and $param["MaxPublishRateInBytes"] !== null) {
+            $this->MaxPublishRateInBytes = $param["MaxPublishRateInBytes"];
+        }
+
+        if (array_key_exists("MaxDispatchRateInBytes",$param) and $param["MaxDispatchRateInBytes"] !== null) {
+            $this->MaxDispatchRateInBytes = $param["MaxDispatchRateInBytes"];
+        }
+
+        if (array_key_exists("TopicNum",$param) and $param["TopicNum"] !== null) {
+            $this->TopicNum = $param["TopicNum"];
+        }
+
+        if (array_key_exists("MaxMessageDelayInSeconds",$param) and $param["MaxMessageDelayInSeconds"] !== null) {
+            $this->MaxMessageDelayInSeconds = $param["MaxMessageDelayInSeconds"];
+        }
+
+        if (array_key_exists("PublicAccessEnabled",$param) and $param["PublicAccessEnabled"] !== null) {
+            $this->PublicAccessEnabled = $param["PublicAccessEnabled"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

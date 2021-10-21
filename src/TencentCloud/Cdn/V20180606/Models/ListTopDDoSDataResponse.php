@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListTopDDoSData返回参数结构体
  *
- * @method array getData() 获取DDoS Top数据
- * @method void setData(array $Data) 设置DDoS Top数据
+ * @method array getData() 获取DDoS 攻击类型的top数据，当Metric=AttackType的时候返回攻击类型的统计数据，IPData为空
+ * @method void setData(array $Data) 设置DDoS 攻击类型的top数据，当Metric=AttackType的时候返回攻击类型的统计数据，IPData为空
+ * @method array getIPData() 获取ddos攻击ip的top数据，Metric=AttackIP的时候返回IPData，Data为空
+ * @method void setIPData(array $IPData) 设置ddos攻击ip的top数据，Metric=AttackIP的时候返回IPData，Data为空
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ListTopDDoSDataResponse extends AbstractModel
 {
     /**
-     * @var array DDoS Top数据
+     * @var array DDoS 攻击类型的top数据，当Metric=AttackType的时候返回攻击类型的统计数据，IPData为空
      */
     public $Data;
+
+    /**
+     * @var array ddos攻击ip的top数据，Metric=AttackIP的时候返回IPData，Data为空
+     */
+    public $IPData;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ListTopDDoSDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data DDoS Top数据
+     * @param array $Data DDoS 攻击类型的top数据，当Metric=AttackType的时候返回攻击类型的统计数据，IPData为空
+     * @param array $IPData ddos攻击ip的top数据，Metric=AttackIP的时候返回IPData，Data为空
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,15 @@ class ListTopDDoSDataResponse extends AbstractModel
                 $obj = new DDoSTopData();
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
+            }
+        }
+
+        if (array_key_exists("IPData",$param) and $param["IPData"] !== null) {
+            $this->IPData = [];
+            foreach ($param["IPData"] as $key => $value){
+                $obj = new DDoSAttackIPTopData();
+                $obj->deserialize($value);
+                array_push($this->IPData, $obj);
             }
         }
 

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) 设置更新后的集群名称。
  * @method string getRemark() 获取说明信息。
  * @method void setRemark(string $Remark) 设置说明信息。
+ * @method boolean getPublicAccessEnabled() 获取开启公网访问，只能为true
+ * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) 设置开启公网访问，只能为true
  */
 class ModifyClusterRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyClusterRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var boolean 开启公网访问，只能为true
+     */
+    public $PublicAccessEnabled;
+
+    /**
      * @param string $ClusterId Pulsar 集群的ID，需要更新的集群Id。
      * @param string $ClusterName 更新后的集群名称。
      * @param string $Remark 说明信息。
+     * @param boolean $PublicAccessEnabled 开启公网访问，只能为true
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyClusterRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PublicAccessEnabled",$param) and $param["PublicAccessEnabled"] !== null) {
+            $this->PublicAccessEnabled = $param["PublicAccessEnabled"];
         }
     }
 }

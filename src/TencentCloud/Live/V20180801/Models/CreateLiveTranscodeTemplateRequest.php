@@ -63,9 +63,11 @@ origin: 保持原始编码格式
  * @method integer getHeight() 获取高，默认0。
 范围[0-3000]
 数值必须是2的倍数，0是原始高度。
+极速高清模板（AiTransCode = 1 的时候）必须传。
  * @method void setHeight(integer $Height) 设置高，默认0。
 范围[0-3000]
 数值必须是2的倍数，0是原始高度。
+极速高清模板（AiTransCode = 1 的时候）必须传。
  * @method integer getFps() 获取帧率，默认0。
 范围0-60fps
  * @method void setFps(integer $Fps) 设置帧率，默认0。
@@ -177,6 +179,7 @@ origin: 保持原始编码格式
      * @var integer 高，默认0。
 范围[0-3000]
 数值必须是2的倍数，0是原始高度。
+极速高清模板（AiTransCode = 1 的时候）必须传。
      */
     public $Height;
 
@@ -268,6 +271,7 @@ origin: 保持原始编码格式
      * @param integer $Height 高，默认0。
 范围[0-3000]
 数值必须是2的倍数，0是原始高度。
+极速高清模板（AiTransCode = 1 的时候）必须传。
      * @param integer $Fps 帧率，默认0。
 范围0-60fps
      * @param integer $Gop 关键帧间隔，单位：秒。

@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSurgery(Surgery $Surgery) 设置手术记录
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Electrocardiogram getElectrocardiogram() 获取心电图报告
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElectrocardiogram(Electrocardiogram $Electrocardiogram) 设置心电图报告
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
@@ -144,6 +148,12 @@ class Template extends AbstractModel
     public $Surgery;
 
     /**
+     * @var Electrocardiogram 心电图报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Electrocardiogram;
+
+    /**
      * @param PatientInfo $PatientInfo 患者信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportInfo $ReportInfo 报告信息
@@ -167,6 +177,8 @@ class Template extends AbstractModel
      * @param Hospitalization $Hospitalization 出入院信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Surgery $Surgery 手术记录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Electrocardiogram $Electrocardiogram 心电图报告
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -239,6 +251,11 @@ class Template extends AbstractModel
         if (array_key_exists("Surgery",$param) and $param["Surgery"] !== null) {
             $this->Surgery = new Surgery();
             $this->Surgery->deserialize($param["Surgery"]);
+        }
+
+        if (array_key_exists("Electrocardiogram",$param) and $param["Electrocardiogram"] !== null) {
+            $this->Electrocardiogram = new Electrocardiogram();
+            $this->Electrocardiogram->deserialize($param["Electrocardiogram"]);
         }
     }
 }

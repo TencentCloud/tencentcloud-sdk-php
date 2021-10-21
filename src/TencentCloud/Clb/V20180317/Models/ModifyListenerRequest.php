@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeepaliveEnable(integer $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
  * @method boolean getDeregisterTargetRst() 获取解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
  * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+ * @method string getSessionType() 获取会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+ * @method void setSessionType(string $SessionType) 设置会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
  */
 class ModifyListenerRequest extends AbstractModel
 {
@@ -97,6 +99,11 @@ class ModifyListenerRequest extends AbstractModel
     public $DeregisterTargetRst;
 
     /**
+     * @var string 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+     */
+    public $SessionType;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例ID。
      * @param string $ListenerId 负载均衡监听器ID。
      * @param string $ListenerName 新的监听器名称。
@@ -108,6 +115,7 @@ class ModifyListenerRequest extends AbstractModel
      * @param integer $SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
      * @param integer $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
      * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     * @param string $SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class ModifyListenerRequest extends AbstractModel
 
         if (array_key_exists("DeregisterTargetRst",$param) and $param["DeregisterTargetRst"] !== null) {
             $this->DeregisterTargetRst = $param["DeregisterTargetRst"];
+        }
+
+        if (array_key_exists("SessionType",$param) and $param["SessionType"] !== null) {
+            $this->SessionType = $param["SessionType"];
         }
     }
 }

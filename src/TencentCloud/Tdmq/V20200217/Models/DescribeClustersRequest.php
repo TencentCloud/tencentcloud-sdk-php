@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为10，最大值为20。
  * @method array getClusterIdList() 获取集群ID列表过滤
  * @method void setClusterIdList(array $ClusterIdList) 设置集群ID列表过滤
+ * @method boolean getIsTagFilter() 获取是否标签过滤
+ * @method void setIsTagFilter(boolean $IsTagFilter) 设置是否标签过滤
+ * @method array getFilters() 获取过滤器。目前支持按标签过滤。
+ * @method void setFilters(array $Filters) 设置过滤器。目前支持按标签过滤。
  */
 class DescribeClustersRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeClustersRequest extends AbstractModel
     public $ClusterIdList;
 
     /**
+     * @var boolean 是否标签过滤
+     */
+    public $IsTagFilter;
+
+    /**
+     * @var array 过滤器。目前支持按标签过滤。
+     */
+    public $Filters;
+
+    /**
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param array $ClusterIdList 集群ID列表过滤
+     * @param boolean $IsTagFilter 是否标签过滤
+     * @param array $Filters 过滤器。目前支持按标签过滤。
      */
     function __construct()
     {
@@ -72,6 +88,19 @@ class DescribeClustersRequest extends AbstractModel
 
         if (array_key_exists("ClusterIdList",$param) and $param["ClusterIdList"] !== null) {
             $this->ClusterIdList = $param["ClusterIdList"];
+        }
+
+        if (array_key_exists("IsTagFilter",$param) and $param["IsTagFilter"] !== null) {
+            $this->IsTagFilter = $param["IsTagFilter"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

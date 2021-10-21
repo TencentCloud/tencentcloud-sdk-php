@@ -84,6 +84,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedicalInsuranceType(string $MedicalInsuranceType) 设置医保类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAgeNorm() 获取标准化年龄
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgeNorm(string $AgeNorm) 设置标准化年龄
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNation() 获取民族
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNation(string $Nation) 设置民族
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMarriedCode() 获取婚姻代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMarriedCode(string $MarriedCode) 设置婚姻代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProfessionCode() 获取职业代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProfessionCode(string $ProfessionCode) 设置职业代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMedicalInsuranceTypeCode() 获取居民医保代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMedicalInsuranceTypeCode(string $MedicalInsuranceTypeCode) 设置居民医保代码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PatientInfo extends AbstractModel
 {
@@ -184,6 +204,36 @@ class PatientInfo extends AbstractModel
     public $MedicalInsuranceType;
 
     /**
+     * @var string 标准化年龄
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgeNorm;
+
+    /**
+     * @var string 民族
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Nation;
+
+    /**
+     * @var string 婚姻代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MarriedCode;
+
+    /**
+     * @var string 职业代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProfessionCode;
+
+    /**
+     * @var string 居民医保代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MedicalInsuranceTypeCode;
+
+    /**
      * @param string $Name 患者姓名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sex 患者性别
@@ -215,6 +265,16 @@ class PatientInfo extends AbstractModel
      * @param string $BirthPlace 籍贯
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MedicalInsuranceType 医保类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AgeNorm 标准化年龄
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Nation 民族
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MarriedCode 婚姻代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProfessionCode 职业代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MedicalInsuranceTypeCode 居民医保代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -292,6 +352,26 @@ class PatientInfo extends AbstractModel
 
         if (array_key_exists("MedicalInsuranceType",$param) and $param["MedicalInsuranceType"] !== null) {
             $this->MedicalInsuranceType = $param["MedicalInsuranceType"];
+        }
+
+        if (array_key_exists("AgeNorm",$param) and $param["AgeNorm"] !== null) {
+            $this->AgeNorm = $param["AgeNorm"];
+        }
+
+        if (array_key_exists("Nation",$param) and $param["Nation"] !== null) {
+            $this->Nation = $param["Nation"];
+        }
+
+        if (array_key_exists("MarriedCode",$param) and $param["MarriedCode"] !== null) {
+            $this->MarriedCode = $param["MarriedCode"];
+        }
+
+        if (array_key_exists("ProfessionCode",$param) and $param["ProfessionCode"] !== null) {
+            $this->ProfessionCode = $param["ProfessionCode"];
+        }
+
+        if (array_key_exists("MedicalInsuranceTypeCode",$param) and $param["MedicalInsuranceTypeCode"] !== null) {
+            $this->MedicalInsuranceTypeCode = $param["MedicalInsuranceTypeCode"];
         }
     }
 }

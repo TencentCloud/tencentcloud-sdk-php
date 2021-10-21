@@ -60,6 +60,33 @@ use TencentCloud\As\V20180419\Models as Models;
 }
 ```
  * @method Models\CreateNotificationConfigurationResponse CreateNotificationConfiguration(Models\CreateNotificationConfigurationRequest $req) 本接口（CreateNotificationConfiguration）用于创建通知。
+通知到 CMQ 主题或队列时，消息内容如下：
+```
+{
+    "Service": "Tencent Cloud Auto Scaling",
+    "CreatedTime": "2021-10-11T10:15:11Z", // 活动创建时间
+    "AppId": "100000000",
+    "ActivityId": "asa-fznnvrja", // 伸缩活动ID
+    "AutoScalingGroupId": "asg-pc2oqu2z", // 伸缩组ID
+    "ActivityType": "SCALE_OUT",  // 伸缩活动类型
+    "StatusCode": "SUCCESSFUL",   // 伸缩活动结果
+    "Description": "Activity was launched in response to a difference between desired capacity and actual capacity,
+    scale out 1 instance(s).", // 伸缩活动描述
+    "StartTime": "2021-10-11T10:15:11Z",  // 活动开始时间
+    "EndTime": "2021-10-11T10:15:32Z",    // 活动结束时间
+    "DetailedStatusMessageSet": [ // 活动内部错误集合（非空不代表活动失败）
+        {
+            "Code": "InvalidInstanceType",
+            "Zone": "ap-guangzhou-2",
+            "InstanceId": "",
+            "InstanceChargeType": "POSTPAID_BY_HOUR",
+            "SubnetId": "subnet-4t5mgeuu",
+            "Message": "The specified instance type `S5.LARGE8` is invalid in `subnet-4t5mgeuu`, `ap-guangzhou-2`.",
+            "InstanceType": "S5.LARGE8"
+        }
+    ]
+}
+```
  * @method Models\CreatePaiInstanceResponse CreatePaiInstance(Models\CreatePaiInstanceRequest $req) 本接口 (CreatePaiInstance) 用于创建一个指定配置的PAI实例。
  * @method Models\CreateScalingPolicyResponse CreateScalingPolicy(Models\CreateScalingPolicyRequest $req) 本接口（CreateScalingPolicy）用于创建告警触发策略。
  * @method Models\CreateScheduledActionResponse CreateScheduledAction(Models\CreateScheduledActionRequest $req) 本接口（CreateScheduledAction）用于创建定时任务。
@@ -126,6 +153,7 @@ use TencentCloud\As\V20180419\Models as Models;
 * 如果要为伸缩组清空负载均衡器，则在调用本接口时仅指定伸缩组ID，不指定具体负载均衡器。
 * 本接口会立即修改伸缩组的负载均衡器，并生成一个伸缩活动，异步修改存量实例的负载均衡器。
  * @method Models\ModifyNotificationConfigurationResponse ModifyNotificationConfiguration(Models\ModifyNotificationConfigurationRequest $req) 本接口（ModifyNotificationConfiguration）用于修改通知。
+* 通知的接收端类型不支持修改。
  * @method Models\ModifyScalingPolicyResponse ModifyScalingPolicy(Models\ModifyScalingPolicyRequest $req) 本接口（ModifyScalingPolicy）用于修改告警触发策略。
  * @method Models\ModifyScheduledActionResponse ModifyScheduledAction(Models\ModifyScheduledActionRequest $req) 本接口（ModifyScheduledAction）用于修改定时任务。
  * @method Models\PreviewPaiDomainNameResponse PreviewPaiDomainName(Models\PreviewPaiDomainNameRequest $req) 本接口（PreviewPaiDomainName）用于预览PAI实例域名。

@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
  * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+ * @method string getTargetType() 获取通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+ * @method void setTargetType(string $TargetType) 设置通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+ * @method string getQueueName() 获取CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+ * @method void setQueueName(string $QueueName) 设置CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+ * @method string getTopicName() 获取CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+ * @method void setTopicName(string $TopicName) 设置CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
  */
 class CreateNotificationConfigurationRequest extends AbstractModel
 {
@@ -63,6 +69,21 @@ class CreateNotificationConfigurationRequest extends AbstractModel
     public $NotificationUserGroupIds;
 
     /**
+     * @var string 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+     */
+    public $TargetType;
+
+    /**
+     * @var string CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+     */
+    public $QueueName;
+
+    /**
+     * @var string CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+     */
+    public $TopicName;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param array $NotificationTypes 通知类型，即为需要订阅的通知类型集合，取值范围如下：
 <li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
@@ -72,6 +93,9 @@ class CreateNotificationConfigurationRequest extends AbstractModel
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
      * @param array $NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+     * @param string $TargetType 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+     * @param string $QueueName CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+     * @param string $TopicName CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
      */
     function __construct()
     {
@@ -96,6 +120,18 @@ class CreateNotificationConfigurationRequest extends AbstractModel
 
         if (array_key_exists("NotificationUserGroupIds",$param) and $param["NotificationUserGroupIds"] !== null) {
             $this->NotificationUserGroupIds = $param["NotificationUserGroupIds"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

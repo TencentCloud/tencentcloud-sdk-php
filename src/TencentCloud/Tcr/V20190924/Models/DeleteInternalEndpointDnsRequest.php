@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 false:  使用带有vpc的域名
  * @method void setUsePublicDomain(boolean $UsePublicDomain) 设置true：使用默认域名
 false:  使用带有vpc的域名
+ * @method string getRegionName() 获取解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
+ * @method void setRegionName(string $RegionName) 设置解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
  */
 class DeleteInternalEndpointDnsRequest extends AbstractModel
 {
@@ -55,11 +57,17 @@ false:  使用带有vpc的域名
     public $UsePublicDomain;
 
     /**
+     * @var string 解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
+     */
+    public $RegionName;
+
+    /**
      * @param string $InstanceId tcr实例id
      * @param string $VpcId 私有网络id
      * @param string $EniLBIp tcr内网访问链路ip
      * @param boolean $UsePublicDomain true：使用默认域名
 false:  使用带有vpc的域名
+     * @param string $RegionName 解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ false:  使用带有vpc的域名
 
         if (array_key_exists("UsePublicDomain",$param) and $param["UsePublicDomain"] !== null) {
             $this->UsePublicDomain = $param["UsePublicDomain"];
+        }
+
+        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
+            $this->RegionName = $param["RegionName"];
         }
     }
 }

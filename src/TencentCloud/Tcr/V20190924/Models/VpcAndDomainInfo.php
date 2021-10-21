@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 false: use instancename+"-vpc" as subdomain
  * @method void setUsePublicDomain(boolean $UsePublicDomain) 设置true：use instance name as subdomain
 false: use instancename+"-vpc" as subdomain
+ * @method string getRegionName() 获取解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
+ * @method void setRegionName(string $RegionName) 设置解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
  */
 class VpcAndDomainInfo extends AbstractModel
 {
@@ -55,11 +57,17 @@ false: use instancename+"-vpc" as subdomain
     public $UsePublicDomain;
 
     /**
+     * @var string 解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
+     */
+    public $RegionName;
+
+    /**
      * @param string $InstanceId tcr实例id
      * @param string $VpcId 私有网络id
      * @param string $EniLBIp tcr内网访问链路ip
      * @param boolean $UsePublicDomain true：use instance name as subdomain
 false: use instancename+"-vpc" as subdomain
+     * @param string $RegionName 解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ false: use instancename+"-vpc" as subdomain
 
         if (array_key_exists("UsePublicDomain",$param) and $param["UsePublicDomain"] !== null) {
             $this->UsePublicDomain = $param["UsePublicDomain"];
+        }
+
+        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
+            $this->RegionName = $param["RegionName"];
         }
     }
 }

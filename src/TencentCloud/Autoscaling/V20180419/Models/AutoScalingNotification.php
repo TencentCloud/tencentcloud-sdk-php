@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationTypes(array $NotificationTypes) 设置通知事件列表。
  * @method string getAutoScalingNotificationId() 获取事件通知ID。
  * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) 设置事件通知ID。
+ * @method string getTargetType() 获取通知接收端类型。
+ * @method void setTargetType(string $TargetType) 设置通知接收端类型。
+ * @method string getQueueName() 获取CMQ 队列名。
+ * @method void setQueueName(string $QueueName) 设置CMQ 队列名。
+ * @method string getTopicName() 获取CMQ 主题名。
+ * @method void setTopicName(string $TopicName) 设置CMQ 主题名。
  */
 class AutoScalingNotification extends AbstractModel
 {
@@ -52,10 +58,28 @@ class AutoScalingNotification extends AbstractModel
     public $AutoScalingNotificationId;
 
     /**
+     * @var string 通知接收端类型。
+     */
+    public $TargetType;
+
+    /**
+     * @var string CMQ 队列名。
+     */
+    public $QueueName;
+
+    /**
+     * @var string CMQ 主题名。
+     */
+    public $TopicName;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param array $NotificationUserGroupIds 用户组ID列表。
      * @param array $NotificationTypes 通知事件列表。
      * @param string $AutoScalingNotificationId 事件通知ID。
+     * @param string $TargetType 通知接收端类型。
+     * @param string $QueueName CMQ 队列名。
+     * @param string $TopicName CMQ 主题名。
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class AutoScalingNotification extends AbstractModel
 
         if (array_key_exists("AutoScalingNotificationId",$param) and $param["AutoScalingNotificationId"] !== null) {
             $this->AutoScalingNotificationId = $param["AutoScalingNotificationId"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

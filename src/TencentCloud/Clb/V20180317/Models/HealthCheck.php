@@ -81,6 +81,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpVersion(string $HttpVersion) 设置自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSourceIpType() 获取自定义探测相关参数。健康检查原IP类型：0（使用LB的VIP做为源IP），1（使用100.64网段IP做为源IP），默认值：0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceIpType(integer $SourceIpType) 设置自定义探测相关参数。健康检查原IP类型：0（使用LB的VIP做为源IP），1（使用100.64网段IP做为源IP），默认值：0
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HealthCheck extends AbstractModel
 {
@@ -175,6 +179,12 @@ class HealthCheck extends AbstractModel
     public $HttpVersion;
 
     /**
+     * @var integer 自定义探测相关参数。健康检查原IP类型：0（使用LB的VIP做为源IP），1（使用100.64网段IP做为源IP），默认值：0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceIpType;
+
+    /**
      * @param integer $HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
      * @param integer $TimeOut 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -204,6 +214,8 @@ class HealthCheck extends AbstractModel
      * @param string $CheckType 自定义探测相关参数。健康检查使用的协议：TCP | HTTP | CUSTOM（仅适用于TCP/UDP监听器，其中UDP监听器只支持CUSTOM；如果使用自定义健康检查功能，则必传）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HttpVersion 自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SourceIpType 自定义探测相关参数。健康检查原IP类型：0（使用LB的VIP做为源IP），1（使用100.64网段IP做为源IP），默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -277,6 +289,10 @@ class HealthCheck extends AbstractModel
 
         if (array_key_exists("HttpVersion",$param) and $param["HttpVersion"] !== null) {
             $this->HttpVersion = $param["HttpVersion"];
+        }
+
+        if (array_key_exists("SourceIpType",$param) and $param["SourceIpType"] !== null) {
+            $this->SourceIpType = $param["SourceIpType"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置说明，128个字符以内。
  * @method array getTags() 获取集群的标签列表
  * @method void setTags(array $Tags) 设置集群的标签列表
+ * @method boolean getPublicAccessEnabled() 获取是否开启公网访问，不填时默认开启
+ * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) 设置是否开启公网访问，不填时默认开启
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateClusterRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean 是否开启公网访问，不填时默认开启
+     */
+    public $PublicAccessEnabled;
+
+    /**
      * @param string $ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
      * @param integer $BindClusterId 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
      * @param string $Remark 说明，128个字符以内。
      * @param array $Tags 集群的标签列表
+     * @param boolean $PublicAccessEnabled 是否开启公网访问，不填时默认开启
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateClusterRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PublicAccessEnabled",$param) and $param["PublicAccessEnabled"] !== null) {
+            $this->PublicAccessEnabled = $param["PublicAccessEnabled"];
         }
     }
 }

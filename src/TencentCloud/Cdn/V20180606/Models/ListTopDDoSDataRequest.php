@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 支持 90 天内数据查询，时间跨度要小于等于7天
  * @method integer getTopCount() 获取查询Top的数量，不填默认值为10
  * @method void setTopCount(integer $TopCount) 设置查询Top的数量，不填默认值为10
+ * @method string getMetric() 获取AttackIP表示查询攻击ip的top排行，AttackType表示攻击类型的top排行，为空默认为AttackType
+ * @method void setMetric(string $Metric) 设置AttackIP表示查询攻击ip的top排行，AttackType表示攻击类型的top排行，为空默认为AttackType
  */
 class ListTopDDoSDataRequest extends AbstractModel
 {
@@ -48,10 +50,16 @@ class ListTopDDoSDataRequest extends AbstractModel
     public $TopCount;
 
     /**
+     * @var string AttackIP表示查询攻击ip的top排行，AttackType表示攻击类型的top排行，为空默认为AttackType
+     */
+    public $Metric;
+
+    /**
      * @param string $StartTime 查询Top数据的开始时间，格式为：2020-01-01 00:00:00
      * @param string $EndTime 查询Top数据的结束时间，格式为：2020-01-01 23:59:59
 支持 90 天内数据查询，时间跨度要小于等于7天
      * @param integer $TopCount 查询Top的数量，不填默认值为10
+     * @param string $Metric AttackIP表示查询攻击ip的top排行，AttackType表示攻击类型的top排行，为空默认为AttackType
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class ListTopDDoSDataRequest extends AbstractModel
 
         if (array_key_exists("TopCount",$param) and $param["TopCount"] !== null) {
             $this->TopCount = $param["TopCount"];
+        }
+
+        if (array_key_exists("Metric",$param) and $param["Metric"] !== null) {
+            $this->Metric = $param["Metric"];
         }
     }
 }

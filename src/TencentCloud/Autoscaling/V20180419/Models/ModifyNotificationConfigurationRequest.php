@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
  * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+ * @method string getQueueName() 获取CMQ 队列名。
+ * @method void setQueueName(string $QueueName) 设置CMQ 队列名。
+ * @method string getTopicName() 获取CMQ 主题名。
+ * @method void setTopicName(string $TopicName) 设置CMQ 主题名。
  */
 class ModifyNotificationConfigurationRequest extends AbstractModel
 {
@@ -63,6 +67,16 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
     public $NotificationUserGroupIds;
 
     /**
+     * @var string CMQ 队列名。
+     */
+    public $QueueName;
+
+    /**
+     * @var string CMQ 主题名。
+     */
+    public $TopicName;
+
+    /**
      * @param string $AutoScalingNotificationId 待修改的通知ID。
      * @param array $NotificationTypes 通知类型，即为需要订阅的通知类型集合，取值范围如下：
 <li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
@@ -72,6 +86,8 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
      * @param array $NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+     * @param string $QueueName CMQ 队列名。
+     * @param string $TopicName CMQ 主题名。
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
 
         if (array_key_exists("NotificationUserGroupIds",$param) and $param["NotificationUserGroupIds"] !== null) {
             $this->NotificationUserGroupIds = $param["NotificationUserGroupIds"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

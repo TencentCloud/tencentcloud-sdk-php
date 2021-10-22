@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIpGeolocationInfos请求参数结构体
  *
- * @method array getAddressIps() 获取需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
- * @method void setAddressIps(array $AddressIps) 设置需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
+ * @method array getAddressIps() 获取需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。
+ * @method void setAddressIps(array $AddressIps) 设置需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。
  * @method IpField getFields() 获取需查询的IP地址的字段信息。
  * @method void setFields(IpField $Fields) 设置需查询的IP地址的字段信息。
  */
 class DescribeIpGeolocationInfosRequest extends AbstractModel
 {
     /**
-     * @var array 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
+     * @var array 需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。
      */
     public $AddressIps;
 
@@ -38,7 +38,7 @@ class DescribeIpGeolocationInfosRequest extends AbstractModel
     public $Fields;
 
     /**
-     * @param array $AddressIps 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
+     * @param array $AddressIps 需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。
      * @param IpField $Fields 需查询的IP地址的字段信息。
      */
     function __construct()

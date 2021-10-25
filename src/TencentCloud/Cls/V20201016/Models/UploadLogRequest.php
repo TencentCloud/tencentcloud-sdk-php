@@ -19,13 +19,10 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * UploadLog请求参数结构体
- *
-
+ * 
  */
 class UploadLogRequest extends AbstractModel
 {
-
-
     /**
 
      */
@@ -42,6 +39,6 @@ class UploadLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
     }
+
 }

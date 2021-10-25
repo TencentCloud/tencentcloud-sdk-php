@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节点信息
  *
- * @method ZoneInfo getZoneInfo() 获取zone信息
- * @method void setZoneInfo(ZoneInfo $ZoneInfo) 设置zone信息
- * @method Country getCountry() 获取国家信息
- * @method void setCountry(Country $Country) 设置国家信息
- * @method Area getArea() 获取区域信息
- * @method void setArea(Area $Area) 设置区域信息
- * @method Province getProvince() 获取省份信息
- * @method void setProvince(Province $Province) 设置省份信息
- * @method City getCity() 获取城市信息
- * @method void setCity(City $City) 设置城市信息
- * @method RegionInfo getRegionInfo() 获取Region信息
- * @method void setRegionInfo(RegionInfo $RegionInfo) 设置Region信息
- * @method array getISPSet() 获取运营商列表
- * @method void setISPSet(array $ISPSet) 设置运营商列表
- * @method integer getISPNum() 获取运营商数量
- * @method void setISPNum(integer $ISPNum) 设置运营商数量
+ * @method ZoneInfo getZoneInfo() 获取zone信息。
+ * @method void setZoneInfo(ZoneInfo $ZoneInfo) 设置zone信息。
+ * @method Country getCountry() 获取国家信息。
+ * @method void setCountry(Country $Country) 设置国家信息。
+ * @method Area getArea() 获取区域信息。
+ * @method void setArea(Area $Area) 设置区域信息。
+ * @method Province getProvince() 获取省份信息。
+ * @method void setProvince(Province $Province) 设置省份信息。
+ * @method City getCity() 获取城市信息。
+ * @method void setCity(City $City) 设置城市信息。
+ * @method RegionInfo getRegionInfo() 获取Region信息。
+ * @method void setRegionInfo(RegionInfo $RegionInfo) 设置Region信息。
+ * @method array getISPSet() 获取运营商列表。
+ * @method void setISPSet(array $ISPSet) 设置运营商列表。
+ * @method integer getISPNum() 获取运营商数量。
+ * @method void setISPNum(integer $ISPNum) 设置运营商数量。
  */
 class Node extends AbstractModel
 {
     /**
-     * @var ZoneInfo zone信息
+     * @var ZoneInfo zone信息。
      */
     public $ZoneInfo;
 
     /**
-     * @var Country 国家信息
+     * @var Country 国家信息。
      */
     public $Country;
 
     /**
-     * @var Area 区域信息
+     * @var Area 区域信息。
      */
     public $Area;
 
     /**
-     * @var Province 省份信息
+     * @var Province 省份信息。
      */
     public $Province;
 
     /**
-     * @var City 城市信息
+     * @var City 城市信息。
      */
     public $City;
 
     /**
-     * @var RegionInfo Region信息
+     * @var RegionInfo Region信息。
      */
     public $RegionInfo;
 
     /**
-     * @var array 运营商列表
+     * @var array 运营商列表。
      */
     public $ISPSet;
 
     /**
-     * @var integer 运营商数量
+     * @var integer 运营商数量。
      */
     public $ISPNum;
 
     /**
-     * @param ZoneInfo $ZoneInfo zone信息
-     * @param Country $Country 国家信息
-     * @param Area $Area 区域信息
-     * @param Province $Province 省份信息
-     * @param City $City 城市信息
-     * @param RegionInfo $RegionInfo Region信息
-     * @param array $ISPSet 运营商列表
-     * @param integer $ISPNum 运营商数量
+     * @param ZoneInfo $ZoneInfo zone信息。
+     * @param Country $Country 国家信息。
+     * @param Area $Area 区域信息。
+     * @param Province $Province 省份信息。
+     * @param City $City 城市信息。
+     * @param RegionInfo $RegionInfo Region信息。
+     * @param array $ISPSet 运营商列表。
+     * @param integer $ISPNum 运营商数量。
      */
     function __construct()
     {

@@ -46,6 +46,10 @@ false：表示开通IP直通
  * @method void setDefaultBandWidthIn(integer $DefaultBandWidthIn) 设置默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
  * @method boolean getDisableWanIp() 获取是否禁止分配外网IP
  * @method void setDisableWanIp(boolean $DisableWanIp) 设置是否禁止分配外网IP
+ * @method SystemDisk getSystemDisk() 获取系统盘信息。
+ * @method void setSystemDisk(SystemDisk $SystemDisk) 设置系统盘信息。
+ * @method array getDataDisks() 获取数据盘信息。
+ * @method void setDataDisks(array $DataDisks) 设置数据盘信息。
  */
 class CreateModuleRequest extends AbstractModel
 {
@@ -107,6 +111,16 @@ false：表示开通IP直通
     public $DisableWanIp;
 
     /**
+     * @var SystemDisk 系统盘信息。
+     */
+    public $SystemDisk;
+
+    /**
+     * @var array 数据盘信息。
+     */
+    public $DataDisks;
+
+    /**
      * @param string $ModuleName 模块名称，如视频直播模块。限制：模块名称不得以空格开头，长度不得超过60个字符。
      * @param integer $DefaultBandWidth 默认带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
      * @param string $DefaultImageId 默认镜像，如img-qsdf3ff2。
@@ -120,6 +134,8 @@ false：表示开通IP直通
      * @param array $SecurityGroups 模块默认安全组列表
      * @param integer $DefaultBandWidthIn 默认入带宽，单位：M。范围不得超过带宽上下限，详看DescribeConfig。
      * @param boolean $DisableWanIp 是否禁止分配外网IP
+     * @param SystemDisk $SystemDisk 系统盘信息。
+     * @param array $DataDisks 数据盘信息。
      */
     function __construct()
     {
@@ -181,6 +197,20 @@ false：表示开通IP直通
 
         if (array_key_exists("DisableWanIp",$param) and $param["DisableWanIp"] !== null) {
             $this->DisableWanIp = $param["DisableWanIp"];
+        }
+
+        if (array_key_exists("SystemDisk",$param) and $param["SystemDisk"] !== null) {
+            $this->SystemDisk = new SystemDisk();
+            $this->SystemDisk->deserialize($param["SystemDisk"]);
+        }
+
+        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+            $this->DataDisks = [];
+            foreach ($param["DataDisks"] as $key => $value){
+                $obj = new DataDisk();
+                $obj->deserialize($value);
+                array_push($this->DataDisks, $obj);
+            }
         }
     }
 }

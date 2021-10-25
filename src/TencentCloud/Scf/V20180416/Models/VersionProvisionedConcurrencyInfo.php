@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusReason(string $StatusReason) 设置对预置任务状态Status的说明。
  * @method string getQualifier() 获取函数版本号
  * @method void setQualifier(string $Qualifier) 设置函数版本号
+ * @method array getTriggerActions() 获取预置并发定时任务。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerActions(array $TriggerActions) 设置预置并发定时任务。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VersionProvisionedConcurrencyInfo extends AbstractModel
 {
@@ -59,11 +63,19 @@ class VersionProvisionedConcurrencyInfo extends AbstractModel
     public $Qualifier;
 
     /**
+     * @var array 预置并发定时任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerActions;
+
+    /**
      * @param integer $AllocatedProvisionedConcurrencyNum 设置的预置并发数。
      * @param integer $AvailableProvisionedConcurrencyNum 当前已完成预置的并发数。
      * @param string $Status 预置任务状态，Done表示已完成，InProgress表示进行中，Failed表示部分或全部失败。
      * @param string $StatusReason 对预置任务状态Status的说明。
      * @param string $Qualifier 函数版本号
+     * @param array $TriggerActions 预置并发定时任务。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,15 @@ class VersionProvisionedConcurrencyInfo extends AbstractModel
 
         if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
             $this->Qualifier = $param["Qualifier"];
+        }
+
+        if (array_key_exists("TriggerActions",$param) and $param["TriggerActions"] !== null) {
+            $this->TriggerActions = [];
+            foreach ($param["TriggerActions"] as $key => $value){
+                $obj = new TriggerAction();
+                $obj->deserialize($value);
+                array_push($this->TriggerActions, $obj);
+            }
         }
     }
 }

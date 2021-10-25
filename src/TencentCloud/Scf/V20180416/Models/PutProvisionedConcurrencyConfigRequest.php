@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionProvisionedConcurrencyNum(integer $VersionProvisionedConcurrencyNum) 设置预置并发数量，注：所有版本的预置并发数总和存在上限限制，当前的上限是：函数最大并发配额 - 100
  * @method string getNamespace() 获取函数所属命名空间，默认为default
  * @method void setNamespace(string $Namespace) 设置函数所属命名空间，默认为default
+ * @method array getTriggerActions() 获取定时预置任务
+ * @method void setTriggerActions(array $TriggerActions) 设置定时预置任务
  */
 class PutProvisionedConcurrencyConfigRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class PutProvisionedConcurrencyConfigRequest extends AbstractModel
     public $Namespace;
 
     /**
+     * @var array 定时预置任务
+     */
+    public $TriggerActions;
+
+    /**
      * @param string $FunctionName 需要设置预置并发的函数的名称
      * @param string $Qualifier 函数的版本号，注：$LATEST版本不支持预置并发
      * @param integer $VersionProvisionedConcurrencyNum 预置并发数量，注：所有版本的预置并发数总和存在上限限制，当前的上限是：函数最大并发配额 - 100
      * @param string $Namespace 函数所属命名空间，默认为default
+     * @param array $TriggerActions 定时预置任务
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class PutProvisionedConcurrencyConfigRequest extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("TriggerActions",$param) and $param["TriggerActions"] !== null) {
+            $this->TriggerActions = [];
+            foreach ($param["TriggerActions"] as $key => $value){
+                $obj = new TriggerAction();
+                $obj->deserialize($value);
+                array_push($this->TriggerActions, $obj);
+            }
         }
     }
 }

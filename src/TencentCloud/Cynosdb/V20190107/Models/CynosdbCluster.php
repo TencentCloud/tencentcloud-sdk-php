@@ -90,6 +90,8 @@ pause
  * @method void setMinStorageSize(integer $MinStorageSize) 设置集群计算规格对应的最小存储值
  * @method integer getMaxStorageSize() 获取集群计算规格对应的最大存储值
  * @method void setMaxStorageSize(integer $MaxStorageSize) 设置集群计算规格对应的最大存储值
+ * @method array getNetAddrs() 获取集群网络信息
+ * @method void setNetAddrs(array $NetAddrs) 设置集群网络信息
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -261,6 +263,11 @@ pause
     public $MaxStorageSize;
 
     /**
+     * @var array 集群网络信息
+     */
+    public $NetAddrs;
+
+    /**
      * @param string $Status 集群状态
      * @param string $UpdateTime 更新时间
      * @param string $Zone 可用区
@@ -296,6 +303,7 @@ pause
      * @param integer $StoragePayMode 集群存储付费模式。0-按量计费，1-包年包月
      * @param integer $MinStorageSize 集群计算规格对应的最小存储值
      * @param integer $MaxStorageSize 集群计算规格对应的最大存储值
+     * @param array $NetAddrs 集群网络信息
      */
     function __construct()
     {
@@ -450,6 +458,15 @@ pause
 
         if (array_key_exists("MaxStorageSize",$param) and $param["MaxStorageSize"] !== null) {
             $this->MaxStorageSize = $param["MaxStorageSize"];
+        }
+
+        if (array_key_exists("NetAddrs",$param) and $param["NetAddrs"] !== null) {
+            $this->NetAddrs = [];
+            foreach ($param["NetAddrs"] as $key => $value){
+                $obj = new NetAddr();
+                $obj->deserialize($value);
+                array_push($this->NetAddrs, $obj);
+            }
         }
     }
 }

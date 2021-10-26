@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceTemplateName() 获取协议端口模板名称
  * @method void setServiceTemplateName(string $ServiceTemplateName) 设置协议端口模板名称
- * @method array getServices() 获取支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
- * @method void setServices(array $Services) 设置支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+ * @method array getServices() 获取支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+ * @method void setServices(array $Services) 设置支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+ * @method array getServicesExtra() 获取支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+ * @method void setServicesExtra(array $ServicesExtra) 设置支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
  */
 class CreateServiceTemplateRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class CreateServiceTemplateRequest extends AbstractModel
     public $ServiceTemplateName;
 
     /**
-     * @var array 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * @var array 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
      */
     public $Services;
 
     /**
+     * @var array 支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+     */
+    public $ServicesExtra;
+
+    /**
      * @param string $ServiceTemplateName 协议端口模板名称
-     * @param array $Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * @param array $Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+     * @param array $ServicesExtra 支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateServiceTemplateRequest extends AbstractModel
 
         if (array_key_exists("Services",$param) and $param["Services"] !== null) {
             $this->Services = $param["Services"];
+        }
+
+        if (array_key_exists("ServicesExtra",$param) and $param["ServicesExtra"] !== null) {
+            $this->ServicesExtra = [];
+            foreach ($param["ServicesExtra"] as $key => $value){
+                $obj = new ServicesInfo();
+                $obj->deserialize($value);
+                array_push($this->ServicesExtra, $obj);
+            }
         }
     }
 }

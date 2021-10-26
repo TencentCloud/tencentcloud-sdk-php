@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceSet(array $ServiceSet) 设置协议端口信息。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method array getServiceExtraSet() 获取带备注的协议端口信息。
+ * @method void setServiceExtraSet(array $ServiceExtraSet) 设置带备注的协议端口信息。
  */
 class ServiceTemplate extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ServiceTemplate extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var array 带备注的协议端口信息。
+     */
+    public $ServiceExtraSet;
+
+    /**
      * @param string $ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
      * @param string $ServiceTemplateName 模板名称。
      * @param array $ServiceSet 协议端口信息。
      * @param string $CreatedTime 创建时间。
+     * @param array $ServiceExtraSet 带备注的协议端口信息。
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class ServiceTemplate extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("ServiceExtraSet",$param) and $param["ServiceExtraSet"] !== null) {
+            $this->ServiceExtraSet = [];
+            foreach ($param["ServiceExtraSet"] as $key => $value){
+                $obj = new ServicesInfo();
+                $obj->deserialize($value);
+                array_push($this->ServiceExtraSet, $obj);
+            }
         }
     }
 }

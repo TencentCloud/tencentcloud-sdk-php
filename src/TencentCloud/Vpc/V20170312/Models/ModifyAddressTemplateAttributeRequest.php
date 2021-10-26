@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP地址模板名称。
  * @method array getAddresses() 获取地址信息，支持 IP、CIDR、IP 范围。
  * @method void setAddresses(array $Addresses) 设置地址信息，支持 IP、CIDR、IP 范围。
+ * @method array getAddressesExtra() 获取支持添加备注的地址信息，支持 IP、CIDR、IP 范围。
+ * @method void setAddressesExtra(array $AddressesExtra) 设置支持添加备注的地址信息，支持 IP、CIDR、IP 范围。
  */
 class ModifyAddressTemplateAttributeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyAddressTemplateAttributeRequest extends AbstractModel
     public $Addresses;
 
     /**
+     * @var array 支持添加备注的地址信息，支持 IP、CIDR、IP 范围。
+     */
+    public $AddressesExtra;
+
+    /**
      * @param string $AddressTemplateId IP地址模板实例ID，例如：ipm-mdunqeb6。
      * @param string $AddressTemplateName IP地址模板名称。
      * @param array $Addresses 地址信息，支持 IP、CIDR、IP 范围。
+     * @param array $AddressesExtra 支持添加备注的地址信息，支持 IP、CIDR、IP 范围。
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class ModifyAddressTemplateAttributeRequest extends AbstractModel
 
         if (array_key_exists("Addresses",$param) and $param["Addresses"] !== null) {
             $this->Addresses = $param["Addresses"];
+        }
+
+        if (array_key_exists("AddressesExtra",$param) and $param["AddressesExtra"] !== null) {
+            $this->AddressesExtra = [];
+            foreach ($param["AddressesExtra"] as $key => $value){
+                $obj = new AddressInfo();
+                $obj->deserialize($value);
+                array_push($this->AddressesExtra, $obj);
+            }
         }
     }
 }

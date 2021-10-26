@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceTemplateName(string $ServiceTemplateName) 设置协议端口模板名称。
  * @method array getServices() 获取支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
  * @method void setServices(array $Services) 设置支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+ * @method array getServicesExtra() 获取支持添加备注的协议端口信息，支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+ * @method void setServicesExtra(array $ServicesExtra) 设置支持添加备注的协议端口信息，支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
  */
 class ModifyServiceTemplateAttributeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyServiceTemplateAttributeRequest extends AbstractModel
     public $Services;
 
     /**
+     * @var array 支持添加备注的协议端口信息，支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     */
+    public $ServicesExtra;
+
+    /**
      * @param string $ServiceTemplateId 协议端口模板实例ID，例如：ppm-529nwwj8。
      * @param string $ServiceTemplateName 协议端口模板名称。
      * @param array $Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * @param array $ServicesExtra 支持添加备注的协议端口信息，支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class ModifyServiceTemplateAttributeRequest extends AbstractModel
 
         if (array_key_exists("Services",$param) and $param["Services"] !== null) {
             $this->Services = $param["Services"];
+        }
+
+        if (array_key_exists("ServicesExtra",$param) and $param["ServicesExtra"] !== null) {
+            $this->ServicesExtra = [];
+            foreach ($param["ServicesExtra"] as $key => $value){
+                $obj = new ServicesInfo();
+                $obj->deserialize($value);
+                array_push($this->ServicesExtra, $obj);
+            }
         }
     }
 }

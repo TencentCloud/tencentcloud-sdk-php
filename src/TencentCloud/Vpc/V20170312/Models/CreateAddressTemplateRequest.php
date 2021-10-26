@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAddressTemplateName() 获取IP地址模版名称
  * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP地址模版名称
- * @method array getAddresses() 获取地址信息，支持 IP、CIDR、IP 范围。
- * @method void setAddresses(array $Addresses) 设置地址信息，支持 IP、CIDR、IP 范围。
+ * @method array getAddresses() 获取地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+ * @method void setAddresses(array $Addresses) 设置地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+ * @method array getAddressesExtra() 获取地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+ * @method void setAddressesExtra(array $AddressesExtra) 设置地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
  */
 class CreateAddressTemplateRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class CreateAddressTemplateRequest extends AbstractModel
     public $AddressTemplateName;
 
     /**
-     * @var array 地址信息，支持 IP、CIDR、IP 范围。
+     * @var array 地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
      */
     public $Addresses;
 
     /**
+     * @var array 地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+     */
+    public $AddressesExtra;
+
+    /**
      * @param string $AddressTemplateName IP地址模版名称
-     * @param array $Addresses 地址信息，支持 IP、CIDR、IP 范围。
+     * @param array $Addresses 地址信息，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
+     * @param array $AddressesExtra 地址信息，支持携带备注，支持 IP、CIDR、IP 范围。Addresses与AddressesExtra必填其一。
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateAddressTemplateRequest extends AbstractModel
 
         if (array_key_exists("Addresses",$param) and $param["Addresses"] !== null) {
             $this->Addresses = $param["Addresses"];
+        }
+
+        if (array_key_exists("AddressesExtra",$param) and $param["AddressesExtra"] !== null) {
+            $this->AddressesExtra = [];
+            foreach ($param["AddressesExtra"] as $key => $value){
+                $obj = new AddressInfo();
+                $obj->deserialize($value);
+                array_push($this->AddressesExtra, $obj);
+            }
         }
     }
 }

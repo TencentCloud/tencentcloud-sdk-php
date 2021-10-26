@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UploadLog请求参数结构体
+ * DescribeParamsEvent请求参数结构体
  *
-
+ * @method string getDBInstanceId() 获取实例DB ID
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例DB ID
  */
-class UploadLogRequest extends AbstractModel
+class DescribeParamsEventRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例DB ID
+     */
+    public $DBInstanceId;
 
     /**
-
+     * @param string $DBInstanceId 实例DB ID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class UploadLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
+            $this->DBInstanceId = $param["DBInstanceId"];
+        }
     }
 }

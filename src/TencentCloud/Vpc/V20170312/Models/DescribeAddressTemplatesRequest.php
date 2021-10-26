@@ -21,11 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAddressTemplates请求参数结构体
  *
  * @method array getFilters() 获取过滤条件。
-<li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
-<li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-template-name - IP地址模板名称。</li>
+<li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-ip - IP地址。</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
-<li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-template-name - IP地址模板名称。</li>
+<li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-ip - IP地址。</li>
  * @method string getOffset() 获取偏移量，默认为0。
  * @method void setOffset(string $Offset) 设置偏移量，默认为0。
  * @method string getLimit() 获取返回数量，默认为20，最大值为100。
@@ -35,8 +37,9 @@ class DescribeAddressTemplatesRequest extends AbstractModel
 {
     /**
      * @var array 过滤条件。
-<li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
-<li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-template-name - IP地址模板名称。</li>
+<li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-ip - IP地址。</li>
      */
     public $Filters;
 
@@ -52,8 +55,9 @@ class DescribeAddressTemplatesRequest extends AbstractModel
 
     /**
      * @param array $Filters 过滤条件。
-<li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
-<li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-template-name - IP地址模板名称。</li>
+<li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+<li>address-ip - IP地址。</li>
      * @param string $Offset 偏移量，默认为0。
      * @param string $Limit 返回数量，默认为20，最大值为100。
      */

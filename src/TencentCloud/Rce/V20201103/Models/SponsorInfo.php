@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 网赚防刷相关参数
  *
- * @method string getSponsorOpenId() 获取助力场景建议填写：活动发起人微信OpenID。
- * @method void setSponsorOpenId(string $SponsorOpenId) 设置助力场景建议填写：活动发起人微信OpenID。
- * @method string getSponsorDeviceNumber() 获取助力场景建议填写：发起人设备号。
- * @method void setSponsorDeviceNumber(string $SponsorDeviceNumber) 设置助力场景建议填写：发起人设备号。
- * @method string getSponsorPhone() 获取助力场景建议填写：发起人手机号。
- * @method void setSponsorPhone(string $SponsorPhone) 设置助力场景建议填写：发起人手机号。
- * @method string getSponsorIp() 获取助力场景建议填写：发起人IP。
- * @method void setSponsorIp(string $SponsorIp) 设置助力场景建议填写：发起人IP。
- * @method string getCampaignUrl() 获取助力场景建议填写：活动链接。
- * @method void setCampaignUrl(string $CampaignUrl) 设置助力场景建议填写：活动链接。
+ * @method string getSponsorOpenId() 获取OpenID
+ * @method void setSponsorOpenId(string $SponsorOpenId) 设置OpenID
+ * @method string getSponsorDeviceNumber() 获取设备号
+ * @method void setSponsorDeviceNumber(string $SponsorDeviceNumber) 设置设备号
+ * @method string getSponsorPhone() 获取手机号
+ * @method void setSponsorPhone(string $SponsorPhone) 设置手机号
+ * @method string getSponsorIp() 获取IP
+ * @method void setSponsorIp(string $SponsorIp) 设置IP
+ * @method string getCampaignUrl() 获取链接
+ * @method void setCampaignUrl(string $CampaignUrl) 设置链接
  */
 class SponsorInfo extends AbstractModel
 {
     /**
-     * @var string 助力场景建议填写：活动发起人微信OpenID。
+     * @var string OpenID
      */
     public $SponsorOpenId;
 
     /**
-     * @var string 助力场景建议填写：发起人设备号。
+     * @var string 设备号
      */
     public $SponsorDeviceNumber;
 
     /**
-     * @var string 助力场景建议填写：发起人手机号。
+     * @var string 手机号
      */
     public $SponsorPhone;
 
     /**
-     * @var string 助力场景建议填写：发起人IP。
+     * @var string IP
      */
     public $SponsorIp;
 
     /**
-     * @var string 助力场景建议填写：活动链接。
+     * @var string 链接
      */
     public $CampaignUrl;
 
     /**
-     * @param string $SponsorOpenId 助力场景建议填写：活动发起人微信OpenID。
-     * @param string $SponsorDeviceNumber 助力场景建议填写：发起人设备号。
-     * @param string $SponsorPhone 助力场景建议填写：发起人手机号。
-     * @param string $SponsorIp 助力场景建议填写：发起人IP。
-     * @param string $CampaignUrl 助力场景建议填写：活动链接。
+     * @param string $SponsorOpenId OpenID
+     * @param string $SponsorDeviceNumber 设备号
+     * @param string $SponsorPhone 手机号
+     * @param string $SponsorIp IP
+     * @param string $CampaignUrl 链接
      */
     function __construct()
     {

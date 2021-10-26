@@ -170,10 +170,12 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeUsualLoginPlacesResponse DescribeUsualLoginPlaces(Models\DescribeUsualLoginPlacesRequest $req) 此接口（DescribeUsualLoginPlaces）用于查询常用登录地。
  * @method Models\DescribeVersionStatisticsResponse DescribeVersionStatistics(Models\DescribeVersionStatisticsRequest $req) 用于统计专业版和基础版机器数。
  * @method Models\DescribeVulCountByDatesResponse DescribeVulCountByDates(Models\DescribeVulCountByDatesRequest $req) 漏洞管理模块，获取近日指定类型的漏洞数量和主机数量
+ * @method Models\DescribeVulEffectHostListResponse DescribeVulEffectHostList(Models\DescribeVulEffectHostListRequest $req) 漏洞影响主机列表
  * @method Models\DescribeVulHostCountScanTimeResponse DescribeVulHostCountScanTime(Models\DescribeVulHostCountScanTimeRequest $req) 获取待处理漏洞数+影响主机数
  * @method Models\DescribeVulHostTopResponse DescribeVulHostTop(Models\DescribeVulHostTopRequest $req) 获取服务器风险top列表
  * @method Models\DescribeVulInfoCvssResponse DescribeVulInfoCvss(Models\DescribeVulInfoCvssRequest $req) 漏洞详情，带CVSS版本
  * @method Models\DescribeVulLevelCountResponse DescribeVulLevelCount(Models\DescribeVulLevelCountRequest $req) 漏洞数量等级分布统计
+ * @method Models\DescribeVulListResponse DescribeVulList(Models\DescribeVulListRequest $req) 获取漏洞列表数据
  * @method Models\DescribeVulTopResponse DescribeVulTop(Models\DescribeVulTopRequest $req) 漏洞top统计
  * @method Models\DescribeWarningListResponse DescribeWarningList(Models\DescribeWarningListRequest $req) 获取当前用户告警列表
  * @method Models\DescribeWebPageEventListResponse DescribeWebPageEventList(Models\DescribeWebPageEventListRequest $req) 查询篡改事件列表

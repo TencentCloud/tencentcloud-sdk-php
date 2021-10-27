@@ -46,6 +46,7 @@ use TencentCloud\Ecm\V20190719\Models as Models;
 * 本接口为异步接口，当创建请求下发成功后会返回一个新建的云盘ID列表，此时云盘的创建并未立即完成。可以通过调用[DescribeDisks](/document/product/362/16315)接口根据DiskId查询对应云盘，如果能查到云盘，且状态为'UNATTACHED'或'ATTACHED'，则表示创建成功。
  * @method Models\CreateHaVipResponse CreateHaVip(Models\CreateHaVipRequest $req) 本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
  * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
+ * @method Models\CreateKeyPairResponse CreateKeyPair(Models\CreateKeyPairRequest $req) 用于创建一个 OpenSSH RSA 密钥对，可以用于登录 Linux 实例。
  * @method Models\CreateListenerResponse CreateListener(Models\CreateListenerRequest $req) 创建负载均衡监听器。
  * @method Models\CreateLoadBalancerResponse CreateLoadBalancer(Models\CreateLoadBalancerRequest $req) 购买负载均衡实例。
  * @method Models\CreateModuleResponse CreateModule(Models\CreateModuleRequest $req) 创建模块
@@ -141,6 +142,7 @@ use TencentCloud\Ecm\V20190719\Models as Models;
  * @method Models\DisassociateAddressResponse DisassociateAddress(Models\DisassociateAddressRequest $req) 解绑弹性公网IP（简称 EIP）
 只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
 EIP 如果被封堵，则不能进行解绑定操作。
+ * @method Models\DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(Models\DisassociateInstancesKeyPairsRequest $req) 用于解除实例的密钥绑定关系。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 解绑安全组
  * @method Models\EnableRoutesResponse EnableRoutes(Models\EnableRoutesRequest $req) 启用已禁用的子网路由。
 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。

@@ -80,6 +80,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatorNickName(string $CreatorNickName) 设置创建人昵称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableState() 获取启用/禁用状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableState(integer $EnableState) 设置启用/禁用状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductId() 获取产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductId(string $ProductId) 设置产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductName() 获取产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductName(string $ProductName) 设置产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceType() 获取设备类型（设备、子设备、网关）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceType(string $DeviceType) 设置设备类型（设备、子设备、网关）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceInfo extends AbstractModel
 {
@@ -178,6 +194,30 @@ class DeviceInfo extends AbstractModel
     public $CreatorNickName;
 
     /**
+     * @var integer 启用/禁用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableState;
+
+    /**
+     * @var string 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductId;
+
+    /**
+     * @var string 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductName;
+
+    /**
+     * @var string 设备类型（设备、子设备、网关）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceType;
+
+    /**
      * @param string $DeviceName 设备名
      * @param integer $Status 0: 离线, 1: 在线, 2: 获取失败, 3 未激活
      * @param string $DevicePsk 设备密钥，密钥加密的设备返回
@@ -207,6 +247,14 @@ class DeviceInfo extends AbstractModel
      * @param integer $CreateUserId 创建人Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatorNickName 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableState 启用/禁用状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductId 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductName 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceType 设备类型（设备、子设备、网关）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -284,6 +332,22 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("CreatorNickName",$param) and $param["CreatorNickName"] !== null) {
             $this->CreatorNickName = $param["CreatorNickName"];
+        }
+
+        if (array_key_exists("EnableState",$param) and $param["EnableState"] !== null) {
+            $this->EnableState = $param["EnableState"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method InputManageMarketingRisk getBusinessSecurityData() 获取业务入参
  * @method void setBusinessSecurityData(InputManageMarketingRisk $BusinessSecurityData) 设置业务入参
+ * @method InputCryptoManageMarketingRisk getBusinessCryptoData() 获取业务入参
+ * @method void setBusinessCryptoData(InputCryptoManageMarketingRisk $BusinessCryptoData) 设置业务入参
  */
 class ManageMarketingRiskRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ManageMarketingRiskRequest extends AbstractModel
     public $BusinessSecurityData;
 
     /**
+     * @var InputCryptoManageMarketingRisk 业务入参
+     */
+    public $BusinessCryptoData;
+
+    /**
      * @param InputManageMarketingRisk $BusinessSecurityData 业务入参
+     * @param InputCryptoManageMarketingRisk $BusinessCryptoData 业务入参
      */
     function __construct()
     {
@@ -49,6 +57,11 @@ class ManageMarketingRiskRequest extends AbstractModel
         if (array_key_exists("BusinessSecurityData",$param) and $param["BusinessSecurityData"] !== null) {
             $this->BusinessSecurityData = new InputManageMarketingRisk();
             $this->BusinessSecurityData->deserialize($param["BusinessSecurityData"]);
+        }
+
+        if (array_key_exists("BusinessCryptoData",$param) and $param["BusinessCryptoData"] !== null) {
+            $this->BusinessCryptoData = new InputCryptoManageMarketingRisk();
+            $this->BusinessCryptoData->deserialize($param["BusinessCryptoData"]);
         }
     }
 }

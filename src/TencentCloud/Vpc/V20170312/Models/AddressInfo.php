@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP地址模板信息
  *
- * @method string getAddress() 获取ip地址
- * @method void setAddress(string $Address) 设置ip地址
- * @method string getDescription() 获取备注
+ * @method string getAddress() 获取ip地址。
+ * @method void setAddress(string $Address) 设置ip地址。
+ * @method string getDescription() 获取备注。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置备注
+ * @method void setDescription(string $Description) 设置备注。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AddressInfo extends AbstractModel
 {
     /**
-     * @var string ip地址
+     * @var string ip地址。
      */
     public $Address;
 
     /**
-     * @var string 备注
+     * @var string 备注。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
-     * @param string $Address ip地址
-     * @param string $Description 备注
+     * @param string $Address ip地址。
+     * @param string $Description 备注。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

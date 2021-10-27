@@ -14,36 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeNatFwInstancesInfo返回参数结构体
+ * CreateKeyPair返回参数结构体
  *
- * @method array getNatinsLst() 获取实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNatinsLst(array $NatinsLst) 设置实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取nat 防火墙个数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置nat 防火墙个数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method KeyPair getKeyPair() 获取密钥对信息。
+ * @method void setKeyPair(KeyPair $KeyPair) 设置密钥对信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeNatFwInstancesInfoResponse extends AbstractModel
+class CreateKeyPairResponse extends AbstractModel
 {
     /**
-     * @var array 实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var KeyPair 密钥对信息。
      */
-    public $NatinsLst;
-
-    /**
-     * @var integer nat 防火墙个数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Total;
+    public $KeyPair;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +38,7 @@ class DescribeNatFwInstancesInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $NatinsLst 实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total nat 防火墙个数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeyPair $KeyPair 密钥对信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,17 +54,9 @@ class DescribeNatFwInstancesInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NatinsLst",$param) and $param["NatinsLst"] !== null) {
-            $this->NatinsLst = [];
-            foreach ($param["NatinsLst"] as $key => $value){
-                $obj = new NatInstanceInfo();
-                $obj->deserialize($value);
-                array_push($this->NatinsLst, $obj);
-            }
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("KeyPair",$param) and $param["KeyPair"] !== null) {
+            $this->KeyPair = new KeyPair();
+            $this->KeyPair->deserialize($param["KeyPair"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

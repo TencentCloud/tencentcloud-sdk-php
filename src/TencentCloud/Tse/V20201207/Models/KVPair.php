@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cbs\V20170312\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 镜像。
+ * 键值对
  *
- * @method string getImageName() 获取镜像名称。
- * @method void setImageName(string $ImageName) 设置镜像名称。
- * @method string getImageId() 获取镜像实例ID。
- * @method void setImageId(string $ImageId) 设置镜像实例ID。
+ * @method string getKey() 获取键
+ * @method void setKey(string $Key) 设置键
+ * @method string getValue() 获取值
+ * @method void setValue(string $Value) 设置值
  */
-class Image extends AbstractModel
+class KVPair extends AbstractModel
 {
     /**
-     * @var string 镜像名称。
+     * @var string 键
      */
-    public $ImageName;
+    public $Key;
 
     /**
-     * @var string 镜像实例ID。
+     * @var string 值
      */
-    public $ImageId;
+    public $Value;
 
     /**
-     * @param string $ImageName 镜像名称。
-     * @param string $ImageId 镜像实例ID。
+     * @param string $Key 键
+     * @param string $Value 值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Image extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
-            $this->ImageName = $param["ImageName"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
-            $this->ImageId = $param["ImageId"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * tcr仓库信息
  *
- * @method string getRegion() 获取地域
+ * @method string getRegion() 获取地域（填数字）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
+ * @method void setRegion(string $Region) 设置地域（填数字）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegistryId() 获取实例id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class TcrRepoInfo extends AbstractModel
 {
     /**
-     * @var string 地域
+     * @var string 地域（填数字）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
@@ -74,7 +74,7 @@ class TcrRepoInfo extends AbstractModel
     public $RepoName;
 
     /**
-     * @param string $Region 地域
+     * @param string $Region 地域（填数字）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegistryId 实例id
 注意：此字段可能返回 null，表示取不到有效值。

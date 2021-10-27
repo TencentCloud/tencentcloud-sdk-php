@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceGovernanceInfos(array $ServiceGovernanceInfos) 设置服务治理相关信息列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -200,6 +204,12 @@ class SREInstance extends AbstractModel
     public $ServiceGovernanceInfos;
 
     /**
+     * @var array 实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -231,6 +241,8 @@ class SREInstance extends AbstractModel
      * @param array $VpcInfos 私有网络列表信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServiceGovernanceInfos 服务治理相关信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 实例的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -338,6 +350,15 @@ class SREInstance extends AbstractModel
                 $obj = new ServiceGovernanceInfo();
                 $obj->deserialize($value);
                 array_push($this->ServiceGovernanceInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new KVPair();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

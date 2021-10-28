@@ -48,14 +48,36 @@ disabled：未启用
  * @method void setAutoExtension(boolean $AutoExtension) 设置流量包是否自动续订
  * @method string getChannel() 获取流量包来源
  * @method void setChannel(string $Channel) 设置流量包来源
- * @method string getArea() 获取流量包生效区域，目前仅支持mainland
- * @method void setArea(string $Area) 设置流量包生效区域，目前仅支持mainland
+ * @method string getArea() 获取流量包生效区域，mainland或overseas
+ * @method void setArea(string $Area) 设置流量包生效区域，mainland或overseas
  * @method integer getLifeTimeMonth() 获取流量包生命周期月数
  * @method void setLifeTimeMonth(integer $LifeTimeMonth) 设置流量包生命周期月数
  * @method boolean getExtensionAvailable() 获取流量包是否支持续订
  * @method void setExtensionAvailable(boolean $ExtensionAvailable) 设置流量包是否支持续订
  * @method boolean getRefundAvailable() 获取流量包是否支持退费
  * @method void setRefundAvailable(boolean $RefundAvailable) 设置流量包是否支持退费
+ * @method integer getRegion() 获取流量包生效区域
+0：中国大陆
+1：亚太一区
+2：亚太二区
+3：亚太三区
+4：中东
+5：北美
+6：欧洲
+7：南美
+8：非洲
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(integer $Region) 设置流量包生效区域
+0：中国大陆
+1：亚太一区
+2：亚太二区
+3：亚太三区
+4：中东
+5：北美
+6：欧洲
+7：南美
+8：非洲
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrafficPackage extends AbstractModel
 {
@@ -118,7 +140,7 @@ disabled：未启用
     public $Channel;
 
     /**
-     * @var string 流量包生效区域，目前仅支持mainland
+     * @var string 流量包生效区域，mainland或overseas
      */
     public $Area;
 
@@ -138,6 +160,21 @@ disabled：未启用
     public $RefundAvailable;
 
     /**
+     * @var integer 流量包生效区域
+0：中国大陆
+1：亚太一区
+2：亚太二区
+3：亚太三区
+4：中东
+5：北美
+6：欧洲
+7：南美
+8：非洲
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
      * @param integer $Id 流量包 Id
      * @param string $Type 流量包类型
      * @param integer $Bytes 流量包大小（单位为 Byte）
@@ -152,10 +189,21 @@ disabled：未启用
      * @param boolean $ContractExtension 流量包是否续订
      * @param boolean $AutoExtension 流量包是否自动续订
      * @param string $Channel 流量包来源
-     * @param string $Area 流量包生效区域，目前仅支持mainland
+     * @param string $Area 流量包生效区域，mainland或overseas
      * @param integer $LifeTimeMonth 流量包生命周期月数
      * @param boolean $ExtensionAvailable 流量包是否支持续订
      * @param boolean $RefundAvailable 流量包是否支持退费
+     * @param integer $Region 流量包生效区域
+0：中国大陆
+1：亚太一区
+2：亚太二区
+3：亚太三区
+4：中东
+5：北美
+6：欧洲
+7：南美
+8：非洲
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -228,6 +276,10 @@ disabled：未启用
 
         if (array_key_exists("RefundAvailable",$param) and $param["RefundAvailable"] !== null) {
             $this->RefundAvailable = $param["RefundAvailable"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

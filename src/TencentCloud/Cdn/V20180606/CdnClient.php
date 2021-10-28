@@ -86,9 +86,22 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribePushTasksResponse DescribePushTasks(Models\DescribePushTasksRequest $req) DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
 接口灰度中，暂未全量开放，敬请期待。
  * @method Models\DescribeReportDataResponse DescribeReportData(Models\DescribeReportDataRequest $req) DescribeReportData 用于查询域名/项目维度的日/周/月报表数据。
+ * @method Models\DescribeScdnBotRecordsResponse DescribeScdnBotRecords(Models\DescribeScdnBotRecordsRequest $req) 查询BOT会话记录列表
  * @method Models\DescribeScdnConfigResponse DescribeScdnConfig(Models\DescribeScdnConfigRequest $req) DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
  * @method Models\DescribeScdnIpStrategyResponse DescribeScdnIpStrategy(Models\DescribeScdnIpStrategyRequest $req) 查询在SCDN IP安全策略
  * @method Models\DescribeScdnTopDataResponse DescribeScdnTopData(Models\DescribeScdnTopDataRequest $req) 获取SCDN的Top数据
+ * @method Models\DescribeTopDataResponse DescribeTopData(Models\DescribeTopDataRequest $req) DescribeTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
+
++ 依据总流量、总请求数对访问 IP 排序，从大至小返回 TOP 100 IP
++ 依据总流量、总请求数对访问 Refer 排序，从大至小返回 TOP 100 Refer
++ 依据总流量、总请求数对访问 设备 排序，从大至小返回 设备类型
++ 依据总流量、总请求数对访问 操作系统 排序，从大至小返回 操作系统
++ 依据总流量、总请求数对访问 浏览器 排序，从大至小返回 浏览器
+
+注意：
++ 仅支持 90 天内数据查询，且从2021年09月20日开始有数据
++ 本接口为beta版，尚未正式全量发布
+
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) DescribeTrafficPackages 用于查询中国境内 CDN 流量包详情。
  * @method Models\DescribeUrlViolationsResponse DescribeUrlViolations(Models\DescribeUrlViolationsRequest $req) DescribeUrlViolations 用于查询被 CDN 系统扫描到的域名违规 URL 列表及当前状态。
 对应内容分发网络控制台【图片鉴黄】页面。
@@ -105,6 +118,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\ListDiagnoseReportResponse ListDiagnoseReport(Models\ListDiagnoseReportRequest $req) ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
  * @method Models\ListScdnDomainsResponse ListScdnDomains(Models\ListScdnDomainsRequest $req) ListScdnDomains 用于查询 SCDN 安全加速域名列表，及域名基本配置信息
  * @method Models\ListScdnLogTasksResponse ListScdnLogTasks(Models\ListScdnLogTasksRequest $req) ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任务基本信息
+ * @method Models\ListScdnTopBotDataResponse ListScdnTopBotData(Models\ListScdnTopBotDataRequest $req) 获取Bot攻击的Top数据列表
  * @method Models\ListTopBotDataResponse ListTopBotData(Models\ListTopBotDataRequest $req) 获取Bot攻击的Top信息
  * @method Models\ListTopCcDataResponse ListTopCcData(Models\ListTopCcDataRequest $req) 获取CC攻击Top数据
  * @method Models\ListTopClsLogDataResponse ListTopClsLogData(Models\ListTopClsLogDataRequest $req) 通过CLS日志计算Top信息。支持近7天的日志数据。

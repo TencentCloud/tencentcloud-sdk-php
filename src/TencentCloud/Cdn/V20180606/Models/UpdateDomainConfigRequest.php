@@ -86,10 +86,12 @@ media：流媒体点播加速
 mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
+从mainland/overseas修改至global时，域名的配置将被同步至overseas/mainland。若域名含有后端特殊配置，此类配置的同步过程有一定延时，请耐心等待
  * @method void setArea(string $Area) 设置域名加速区域
 mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
+从mainland/overseas修改至global时，域名的配置将被同步至overseas/mainland。若域名含有后端特殊配置，此类配置的同步过程有一定延时，请耐心等待
  * @method OriginPullTimeout getOriginPullTimeout() 获取回源超时配置
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) 设置回源超时配置
  * @method AwsPrivateAccess getAwsPrivateAccess() 获取回源S3私有鉴权
@@ -98,8 +100,8 @@ global：全球加速
  * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) 设置UA黑白名单配置
  * @method AccessControl getAccessControl() 获取访问控制
  * @method void setAccessControl(AccessControl $AccessControl) 设置访问控制
- * @method UrlRedirect getUrlRedirect() 获取URL重定向配置
- * @method void setUrlRedirect(UrlRedirect $UrlRedirect) 设置URL重定向配置
+ * @method UrlRedirect getUrlRedirect() 获取访问URL重写配置
+ * @method void setUrlRedirect(UrlRedirect $UrlRedirect) 设置访问URL重写配置
  * @method array getAccessPort() 获取访问端口配置
  * @method void setAccessPort(array $AccessPort) 设置访问端口配置
  * @method AdvancedAuthentication getAdvancedAuthentication() 获取时间戳防盗链高级版配置，白名单功能
@@ -118,6 +120,8 @@ global：全球加速
  * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置回源OSS私有鉴权
  * @method WebSocket getWebSocket() 获取WebSocket配置
  * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置
+ * @method RemoteAuthentication getRemoteAuthentication() 获取远程鉴权配置
+ * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) 设置远程鉴权配置
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -265,6 +269,7 @@ media：流媒体点播加速
 mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
+从mainland/overseas修改至global时，域名的配置将被同步至overseas/mainland。若域名含有后端特殊配置，此类配置的同步过程有一定延时，请耐心等待
      */
     public $Area;
 
@@ -289,7 +294,7 @@ global：全球加速
     public $AccessControl;
 
     /**
-     * @var UrlRedirect URL重定向配置
+     * @var UrlRedirect 访问URL重写配置
      */
     public $UrlRedirect;
 
@@ -339,6 +344,11 @@ global：全球加速
     public $WebSocket;
 
     /**
+     * @var RemoteAuthentication 远程鉴权配置
+     */
+    public $RemoteAuthentication;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -374,11 +384,12 @@ media：流媒体点播加速
 mainland：中国境内加速
 overseas：中国境外加速
 global：全球加速
+从mainland/overseas修改至global时，域名的配置将被同步至overseas/mainland。若域名含有后端特殊配置，此类配置的同步过程有一定延时，请耐心等待
      * @param OriginPullTimeout $OriginPullTimeout 回源超时配置
      * @param AwsPrivateAccess $AwsPrivateAccess 回源S3私有鉴权
      * @param UserAgentFilter $UserAgentFilter UA黑白名单配置
      * @param AccessControl $AccessControl 访问控制
-     * @param UrlRedirect $UrlRedirect URL重定向配置
+     * @param UrlRedirect $UrlRedirect 访问URL重写配置
      * @param array $AccessPort 访问端口配置
      * @param AdvancedAuthentication $AdvancedAuthentication 时间戳防盗链高级版配置，白名单功能
      * @param OriginAuthentication $OriginAuthentication 回源鉴权高级版配置，白名单功能
@@ -388,6 +399,7 @@ global：全球加速
      * @param Quic $Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
      * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
      * @param WebSocket $WebSocket WebSocket配置
+     * @param RemoteAuthentication $RemoteAuthentication 远程鉴权配置
      */
     function __construct()
     {
@@ -605,6 +617,11 @@ global：全球加速
         if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
             $this->WebSocket = new WebSocket();
             $this->WebSocket->deserialize($param["WebSocket"]);
+        }
+
+        if (array_key_exists("RemoteAuthentication",$param) and $param["RemoteAuthentication"] !== null) {
+            $this->RemoteAuthentication = new RemoteAuthentication();
+            $this->RemoteAuthentication->deserialize($param["RemoteAuthentication"]);
         }
     }
 }

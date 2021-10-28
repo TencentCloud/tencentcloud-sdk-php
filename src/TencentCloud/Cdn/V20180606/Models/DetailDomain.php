@@ -84,9 +84,9 @@ media：流媒体点播加速
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFollowRedirect(FollowRedirect $FollowRedirect) 设置301/302 回源自动跟随配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ErrorPage getErrorPage() 获取自定义错误页面配置（功能灰度中，敬请期待）
+ * @method ErrorPage getErrorPage() 获取自定义错误页面配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorPage(ErrorPage $ErrorPage) 设置自定义错误页面配置（功能灰度中，敬请期待）
+ * @method void setErrorPage(ErrorPage $ErrorPage) 设置自定义错误页面配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method RequestHeader getRequestHeader() 获取自定义请求头部配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -254,17 +254,17 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6Access(Ipv6Access $Ipv6Access) 设置Ipv6访问配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAdvanceSet() 获取高级配置集合。
+ * @method array getAdvanceSet() 获取高级配置集合
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAdvanceSet(array $AdvanceSet) 设置高级配置集合。
+ * @method void setAdvanceSet(array $AdvanceSet) 设置高级配置集合
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OfflineCache getOfflineCache() 获取离线缓存
+ * @method OfflineCache getOfflineCache() 获取离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存
+ * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OriginCombine getOriginCombine() 获取合并回源
+ * @method OriginCombine getOriginCombine() 获取合并回源（白名单功能）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源
+ * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源（白名单功能）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method PostSize getPostMaxSize() 获取POST上传配置项
 注意：此字段可能返回 null，表示取不到有效值。
@@ -281,6 +281,10 @@ off：不支持
  * @method WebSocket getWebSocket() 获取WebSocket配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method RemoteAuthentication getRemoteAuthentication() 获取远程鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) 设置远程鉴权配置
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
@@ -386,7 +390,7 @@ media：流媒体点播加速
     public $FollowRedirect;
 
     /**
-     * @var ErrorPage 自定义错误页面配置（功能灰度中，敬请期待）
+     * @var ErrorPage 自定义错误页面配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorPage;
@@ -607,19 +611,19 @@ off：不支持
     public $Ipv6Access;
 
     /**
-     * @var array 高级配置集合。
+     * @var array 高级配置集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdvanceSet;
 
     /**
-     * @var OfflineCache 离线缓存
+     * @var OfflineCache 离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfflineCache;
 
     /**
-     * @var OriginCombine 合并回源
+     * @var OriginCombine 合并回源（白名单功能）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginCombine;
@@ -647,6 +651,12 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebSocket;
+
+    /**
+     * @var RemoteAuthentication 远程鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemoteAuthentication;
 
     /**
      * @param string $ResourceId 域名 ID
@@ -681,7 +691,7 @@ media：流媒体点播加速
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FollowRedirect $FollowRedirect 301/302 回源自动跟随配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorPage $ErrorPage 自定义错误页面配置（功能灰度中，敬请期待）
+     * @param ErrorPage $ErrorPage 自定义错误页面配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RequestHeader $RequestHeader 自定义请求头部配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -766,11 +776,11 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6Access $Ipv6Access Ipv6访问配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AdvanceSet 高级配置集合。
+     * @param array $AdvanceSet 高级配置集合
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OfflineCache $OfflineCache 离线缓存
+     * @param OfflineCache $OfflineCache 离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginCombine $OriginCombine 合并回源
+     * @param OriginCombine $OriginCombine 合并回源（白名单功能）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PostSize $PostMaxSize POST上传配置项
 注意：此字段可能返回 null，表示取不到有效值。
@@ -779,6 +789,8 @@ off：不支持
      * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WebSocket $WebSocket WebSocket配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemoteAuthentication $RemoteAuthentication 远程鉴权配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1076,6 +1088,11 @@ off：不支持
         if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
             $this->WebSocket = new WebSocket();
             $this->WebSocket->deserialize($param["WebSocket"]);
+        }
+
+        if (array_key_exists("RemoteAuthentication",$param) and $param["RemoteAuthentication"] !== null) {
+            $this->RemoteAuthentication = new RemoteAuthentication();
+            $this->RemoteAuthentication->deserialize($param["RemoteAuthentication"]);
         }
     }
 }

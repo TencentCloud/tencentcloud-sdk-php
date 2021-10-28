@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpertServiceBuy(boolean $ExpertServiceBuy) 设置是否购买过安全管家
  * @method boolean getEmergencyResponseBuy() 获取是否购买过应急响应
  * @method void setEmergencyResponseBuy(boolean $EmergencyResponseBuy) 设置是否购买过应急响应
- * @method boolean getProtectNetBuy() 获取是否哦购买过旗舰护网
- * @method void setProtectNetBuy(boolean $ProtectNetBuy) 设置是否哦购买过旗舰护网
+ * @method boolean getProtectNetBuy() 获取是否购买过旗舰护网
+ * @method void setProtectNetBuy(boolean $ProtectNetBuy) 设置是否购买过旗舰护网
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,7 +63,7 @@ class DescribeAvailableExpertServiceDetailResponse extends AbstractModel
     public $EmergencyResponseBuy;
 
     /**
-     * @var boolean 是否哦购买过旗舰护网
+     * @var boolean 是否购买过旗舰护网
      */
     public $ProtectNetBuy;
 
@@ -78,7 +78,7 @@ class DescribeAvailableExpertServiceDetailResponse extends AbstractModel
      * @param integer $ProtectNet 旗舰护网可用次数
      * @param boolean $ExpertServiceBuy 是否购买过安全管家
      * @param boolean $EmergencyResponseBuy 是否购买过应急响应
-     * @param boolean $ProtectNetBuy 是否哦购买过旗舰护网
+     * @param boolean $ProtectNetBuy 是否购买过旗舰护网
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

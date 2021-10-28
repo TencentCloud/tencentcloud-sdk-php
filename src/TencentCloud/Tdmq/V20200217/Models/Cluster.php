@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxTopicNum(integer $MaxTopicNum) 设置最大Topic数量
  * @method integer getMaxQps() 获取最大QPS
  * @method void setMaxQps(integer $MaxQps) 设置最大QPS
- * @method integer getMessageRetentionTime() 获取最大消息保留时间，分钟为单位
- * @method void setMessageRetentionTime(integer $MessageRetentionTime) 设置最大消息保留时间，分钟为单位
+ * @method integer getMessageRetentionTime() 获取最大消息保留时间，秒为单位
+ * @method void setMessageRetentionTime(integer $MessageRetentionTime) 设置最大消息保留时间，秒为单位
  * @method integer getMaxStorageCapacity() 获取最大存储容量
  * @method void setMaxStorageCapacity(integer $MaxStorageCapacity) 设置最大存储容量
  * @method string getVersion() 获取集群版本
@@ -160,7 +160,7 @@ class Cluster extends AbstractModel
     public $MaxQps;
 
     /**
-     * @var integer 最大消息保留时间，分钟为单位
+     * @var integer 最大消息保留时间，秒为单位
      */
     public $MessageRetentionTime;
 
@@ -260,7 +260,7 @@ class Cluster extends AbstractModel
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $MaxTopicNum 最大Topic数量
      * @param integer $MaxQps 最大QPS
-     * @param integer $MessageRetentionTime 最大消息保留时间，分钟为单位
+     * @param integer $MessageRetentionTime 最大消息保留时间，秒为单位
      * @param integer $MaxStorageCapacity 最大存储容量
      * @param string $Version 集群版本
 注意：此字段可能返回 null，表示取不到有效值。

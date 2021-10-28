@@ -74,11 +74,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociateAccount(string $AssociateAccount) 设置accountType是QQ或微信开放账号时，用于标识QQ或微信用户登录后关联业务自身的账号ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUid() 获取用户ID 
-accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+ * @method string getUid() 获取uid值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUid(string $Uid) 设置用户ID 
-accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+ * @method void setUid(string $Uid) 设置uid值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRootId() 获取用户操作的目的ID 
 比如：点赞，该字段就是被点 赞的消息 id，如果是投票，就是被投号码的 ID
@@ -143,8 +141,7 @@ class QueryActivityAntiRushResponse extends AbstractModel
     public $AssociateAccount;
 
     /**
-     * @var string 用户ID 
-accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+     * @var string uid值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uid;
@@ -195,8 +192,7 @@ accountType不同对应不同的用户ID。如果是QQ或微信用户则填入�
 206，设备异常，该设备存在异常的使用行为
      * @param string $AssociateAccount accountType是QQ或微信开放账号时，用于标识QQ或微信用户登录后关联业务自身的账号ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Uid 用户ID 
-accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+     * @param string $Uid uid值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RootId 用户操作的目的ID 
 比如：点赞，该字段就是被点 赞的消息 id，如果是投票，就是被投号码的 ID

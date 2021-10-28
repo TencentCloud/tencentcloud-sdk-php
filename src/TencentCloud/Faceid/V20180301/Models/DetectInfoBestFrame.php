@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 核身最佳帧信息
  *
- * @method string getBestFrame() 获取活体比对最佳帧。
+ * @method string getBestFrame() 获取活体比对最佳帧Base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBestFrame(string $BestFrame) 设置活体比对最佳帧。
+ * @method void setBestFrame(string $BestFrame) 设置活体比对最佳帧Base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBestFrames() 获取自截帧。
+ * @method array getBestFrames() 获取自截帧Base64编码数组。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBestFrames(array $BestFrames) 设置自截帧。
+ * @method void setBestFrames(array $BestFrames) 设置自截帧Base64编码数组。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectInfoBestFrame extends AbstractModel
 {
     /**
-     * @var string 活体比对最佳帧。
+     * @var string 活体比对最佳帧Base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BestFrame;
 
     /**
-     * @var array 自截帧。
+     * @var array 自截帧Base64编码数组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BestFrames;
 
     /**
-     * @param string $BestFrame 活体比对最佳帧。
+     * @param string $BestFrame 活体比对最佳帧Base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BestFrames 自截帧。
+     * @param array $BestFrames 自截帧Base64编码数组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

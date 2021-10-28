@@ -20,20 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryActivityAntiRush请求参数结构体
  *
- * @method string getAccountType() 获取用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
-1：QQ 开放帐号。
-2：微信开放账号。
-4：手机号。
-0：其他。
-10004：手机号 MD5。
- * @method void setAccountType(string $AccountType) 设置用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
-1：QQ 开放帐号。
-2：微信开放账号。
-4：手机号。
-0：其他。
-10004：手机号 MD5。
- * @method string getUid() 获取用户 ID 不同的 accountType 对应不同的用户 ID。如果是 QQ，则填入对应的 openid，微信用户则填入对应的 openid/unionid，手机号则填入对应真实用户手机号（如13123456789）。
- * @method void setUid(string $Uid) 设置用户 ID 不同的 accountType 对应不同的用户 ID。如果是 QQ，则填入对应的 openid，微信用户则填入对应的 openid/unionid，手机号则填入对应真实用户手机号（如13123456789）。
+ * @method string getAccountType() 获取账号类型
+ * @method void setAccountType(string $AccountType) 设置账号类型
+ * @method string getUid() 获取uid值
+ * @method void setUid(string $Uid) 设置uid值
  * @method string getUserIp() 获取用户的真实外网 IP。若填入非外网有效ip，会返回level=0的风控结果，risktype中会有205的风险码返回作为标识
  * @method void setUserIp(string $UserIp) 设置用户的真实外网 IP。若填入非外网有效ip，会返回level=0的风控结果，risktype中会有205的风险码返回作为标识
  * @method string getPostTime() 获取用户操作时间戳。
@@ -42,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppIdU(string $AppIdU) 设置accountType 是QQ开放账号时，该参数必填，表示 QQ 开放平台分配给网站或应用的 AppID，用来唯一标识网站或应用。
  * @method string getNickName() 获取昵称，UTF-8 编码。
  * @method void setNickName(string $NickName) 设置昵称，UTF-8 编码。
- * @method string getPhoneNumber() 获取手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）。accountType为1或2时，该字段支持MD5值；
- * @method void setPhoneNumber(string $PhoneNumber) 设置手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）。accountType为1或2时，该字段支持MD5值；
+ * @method string getPhoneNumber() 获取手机号
+ * @method void setPhoneNumber(string $PhoneNumber) 设置手机号
  * @method string getEmailAddress() 获取用户邮箱地址。
  * @method void setEmailAddress(string $EmailAddress) 设置用户邮箱地址。
  * @method string getRegisterTime() 获取注册时间戳。
@@ -116,10 +106,8 @@ use TencentCloud\Common\AbstractModel;
 2：微信小程序。
  * @method string getRandNum() 获取Token 签名随机数，WxSubType为微信小程序时必填，建议16个字符。
  * @method void setRandNum(string $RandNum) 设置Token 签名随机数，WxSubType为微信小程序时必填，建议16个字符。
- * @method string getWxToken() 获取如果 accountType为2而且wxSubType有填，该字段必选，否则不需要填写；
-如果是微信小程序（WxSubType=2），该字段为以ssesion_key为key去签名随机数radnNum得到的值（ hmac_sha256签名算法）；如果是微信公众号或第三方登录，则为授权的access_token（网页版本的access_Token,而且获取token的scope字段必需填写snsapi_userinfo；）
- * @method void setWxToken(string $WxToken) 设置如果 accountType为2而且wxSubType有填，该字段必选，否则不需要填写；
-如果是微信小程序（WxSubType=2），该字段为以ssesion_key为key去签名随机数radnNum得到的值（ hmac_sha256签名算法）；如果是微信公众号或第三方登录，则为授权的access_token（网页版本的access_Token,而且获取token的scope字段必需填写snsapi_userinfo；）
+ * @method string getWxToken() 获取token
+ * @method void setWxToken(string $WxToken) 设置token
  * @method string getCheckDevice() 获取是否识别设备异常：
 0：不识别。
 1：识别。
@@ -130,17 +118,12 @@ use TencentCloud\Common\AbstractModel;
 class QueryActivityAntiRushRequest extends AbstractModel
 {
     /**
-     * @var string 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
-1：QQ 开放帐号。
-2：微信开放账号。
-4：手机号。
-0：其他。
-10004：手机号 MD5。
+     * @var string 账号类型
      */
     public $AccountType;
 
     /**
-     * @var string 用户 ID 不同的 accountType 对应不同的用户 ID。如果是 QQ，则填入对应的 openid，微信用户则填入对应的 openid/unionid，手机号则填入对应真实用户手机号（如13123456789）。
+     * @var string uid值
      */
     public $Uid;
 
@@ -165,7 +148,7 @@ class QueryActivityAntiRushRequest extends AbstractModel
     public $NickName;
 
     /**
-     * @var string 手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）。accountType为1或2时，该字段支持MD5值；
+     * @var string 手机号
      */
     public $PhoneNumber;
 
@@ -294,8 +277,7 @@ class QueryActivityAntiRushRequest extends AbstractModel
     public $RandNum;
 
     /**
-     * @var string 如果 accountType为2而且wxSubType有填，该字段必选，否则不需要填写；
-如果是微信小程序（WxSubType=2），该字段为以ssesion_key为key去签名随机数radnNum得到的值（ hmac_sha256签名算法）；如果是微信公众号或第三方登录，则为授权的access_token（网页版本的access_Token,而且获取token的scope字段必需填写snsapi_userinfo；）
+     * @var string token
      */
     public $WxToken;
 
@@ -307,18 +289,13 @@ class QueryActivityAntiRushRequest extends AbstractModel
     public $CheckDevice;
 
     /**
-     * @param string $AccountType 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
-1：QQ 开放帐号。
-2：微信开放账号。
-4：手机号。
-0：其他。
-10004：手机号 MD5。
-     * @param string $Uid 用户 ID 不同的 accountType 对应不同的用户 ID。如果是 QQ，则填入对应的 openid，微信用户则填入对应的 openid/unionid，手机号则填入对应真实用户手机号（如13123456789）。
+     * @param string $AccountType 账号类型
+     * @param string $Uid uid值
      * @param string $UserIp 用户的真实外网 IP。若填入非外网有效ip，会返回level=0的风控结果，risktype中会有205的风险码返回作为标识
      * @param string $PostTime 用户操作时间戳。
      * @param string $AppIdU accountType 是QQ开放账号时，该参数必填，表示 QQ 开放平台分配给网站或应用的 AppID，用来唯一标识网站或应用。
      * @param string $NickName 昵称，UTF-8 编码。
-     * @param string $PhoneNumber 手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）。accountType为1或2时，该字段支持MD5值；
+     * @param string $PhoneNumber 手机号
      * @param string $EmailAddress 用户邮箱地址。
      * @param string $RegisterTime 注册时间戳。
      * @param string $RegisterIp 注册来源的外网 IP。
@@ -355,8 +332,7 @@ class QueryActivityAntiRushRequest extends AbstractModel
      * @param string $WxSubType 1：微信公众号。
 2：微信小程序。
      * @param string $RandNum Token 签名随机数，WxSubType为微信小程序时必填，建议16个字符。
-     * @param string $WxToken 如果 accountType为2而且wxSubType有填，该字段必选，否则不需要填写；
-如果是微信小程序（WxSubType=2），该字段为以ssesion_key为key去签名随机数radnNum得到的值（ hmac_sha256签名算法）；如果是微信公众号或第三方登录，则为授权的access_token（网页版本的access_Token,而且获取token的scope字段必需填写snsapi_userinfo；）
+     * @param string $WxToken token
      * @param string $CheckDevice 是否识别设备异常：
 0：不识别。
 1：识别。

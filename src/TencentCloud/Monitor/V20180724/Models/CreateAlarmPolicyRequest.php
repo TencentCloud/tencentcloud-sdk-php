@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyName(string $PolicyName) 设置策略名称，不超过20字符
  * @method string getMonitorType() 获取监控类型 MT_QCE=云产品监控
  * @method void setMonitorType(string $MonitorType) 设置监控类型 MT_QCE=云产品监控
- * @method string getNamespace() 获取告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得，例如 cvm_device
- * @method void setNamespace(string $Namespace) 设置告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得，例如 cvm_device
+ * @method string getNamespace() 获取告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
+ * @method void setNamespace(string $Namespace) 设置告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
  * @method string getRemark() 获取备注，不超过100字符，仅支持中英文、数字、下划线、-
  * @method void setRemark(string $Remark) 设置备注，不超过100字符，仅支持中英文、数字、下划线、-
  * @method integer getEnable() 获取是否启用 0=停用 1=启用，可不传 默认为1
@@ -67,7 +67,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $MonitorType;
 
     /**
-     * @var string 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得，例如 cvm_device
+     * @var string 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
      */
     public $Namespace;
 
@@ -125,7 +125,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param string $Module 固定值，为"monitor"
      * @param string $PolicyName 策略名称，不超过20字符
      * @param string $MonitorType 监控类型 MT_QCE=云产品监控
-     * @param string $Namespace 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得，例如 cvm_device
+     * @param string $Namespace 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
      * @param string $Remark 备注，不超过100字符，仅支持中英文、数字、下划线、-
      * @param integer $Enable 是否启用 0=停用 1=启用，可不传 默认为1
      * @param integer $ProjectId 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。

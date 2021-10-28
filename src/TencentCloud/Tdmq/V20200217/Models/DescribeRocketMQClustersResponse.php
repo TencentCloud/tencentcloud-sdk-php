@@ -14,40 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CallDeviceActionSync返回参数结构体
+ * DescribeRocketMQClusters返回参数结构体
  *
- * @method string getClientToken() 获取调用Id
- * @method void setClientToken(string $ClientToken) 设置调用Id
- * @method string getOutputParams() 获取输出参数
+ * @method array getClusterList() 获取集群信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputParams(string $OutputParams) 设置输出参数
+ * @method void setClusterList(array $ClusterList) 设置集群信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取返回状态，当设备不在线等部分情况，会通过该 Status 返回。
- * @method void setStatus(string $Status) 设置返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+ * @method integer getTotalCount() 获取总条数
+ * @method void setTotalCount(integer $TotalCount) 设置总条数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CallDeviceActionSyncResponse extends AbstractModel
+class DescribeRocketMQClustersResponse extends AbstractModel
 {
     /**
-     * @var string 调用Id
-     */
-    public $ClientToken;
-
-    /**
-     * @var string 输出参数
+     * @var array 集群信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $OutputParams;
+    public $ClusterList;
 
     /**
-     * @var string 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+     * @var integer 总条数
      */
-    public $Status;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -55,10 +48,9 @@ class CallDeviceActionSyncResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ClientToken 调用Id
-     * @param string $OutputParams 输出参数
+     * @param array $ClusterList 集群信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+     * @param integer $TotalCount 总条数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,16 +66,17 @@ class CallDeviceActionSyncResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists("ClusterList",$param) and $param["ClusterList"] !== null) {
+            $this->ClusterList = [];
+            foreach ($param["ClusterList"] as $key => $value){
+                $obj = new RocketMQClusterDetail();
+                $obj->deserialize($value);
+                array_push($this->ClusterList, $obj);
+            }
         }
 
-        if (array_key_exists("OutputParams",$param) and $param["OutputParams"] !== null) {
-            $this->OutputParams = $param["OutputParams"];
-        }
-
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

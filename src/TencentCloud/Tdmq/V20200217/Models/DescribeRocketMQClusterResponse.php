@@ -14,40 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CallDeviceActionSync返回参数结构体
+ * DescribeRocketMQCluster返回参数结构体
  *
- * @method string getClientToken() 获取调用Id
- * @method void setClientToken(string $ClientToken) 设置调用Id
- * @method string getOutputParams() 获取输出参数
+ * @method RocketMQClusterInfo getClusterInfo() 获取集群信息
+ * @method void setClusterInfo(RocketMQClusterInfo $ClusterInfo) 设置集群信息
+ * @method RocketMQClusterConfig getClusterConfig() 获取集群配置
+ * @method void setClusterConfig(RocketMQClusterConfig $ClusterConfig) 设置集群配置
+ * @method RocketMQClusterRecentStats getClusterStats() 获取集群最近使用量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputParams(string $OutputParams) 设置输出参数
+ * @method void setClusterStats(RocketMQClusterRecentStats $ClusterStats) 设置集群最近使用量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取返回状态，当设备不在线等部分情况，会通过该 Status 返回。
- * @method void setStatus(string $Status) 设置返回状态，当设备不在线等部分情况，会通过该 Status 返回。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CallDeviceActionSyncResponse extends AbstractModel
+class DescribeRocketMQClusterResponse extends AbstractModel
 {
     /**
-     * @var string 调用Id
+     * @var RocketMQClusterInfo 集群信息
      */
-    public $ClientToken;
+    public $ClusterInfo;
 
     /**
-     * @var string 输出参数
+     * @var RocketMQClusterConfig 集群配置
+     */
+    public $ClusterConfig;
+
+    /**
+     * @var RocketMQClusterRecentStats 集群最近使用量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $OutputParams;
-
-    /**
-     * @var string 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
-     */
-    public $Status;
+    public $ClusterStats;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -55,10 +55,10 @@ class CallDeviceActionSyncResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ClientToken 调用Id
-     * @param string $OutputParams 输出参数
+     * @param RocketMQClusterInfo $ClusterInfo 集群信息
+     * @param RocketMQClusterConfig $ClusterConfig 集群配置
+     * @param RocketMQClusterRecentStats $ClusterStats 集群最近使用量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,16 +74,19 @@ class CallDeviceActionSyncResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists("ClusterInfo",$param) and $param["ClusterInfo"] !== null) {
+            $this->ClusterInfo = new RocketMQClusterInfo();
+            $this->ClusterInfo->deserialize($param["ClusterInfo"]);
         }
 
-        if (array_key_exists("OutputParams",$param) and $param["OutputParams"] !== null) {
-            $this->OutputParams = $param["OutputParams"];
+        if (array_key_exists("ClusterConfig",$param) and $param["ClusterConfig"] !== null) {
+            $this->ClusterConfig = new RocketMQClusterConfig();
+            $this->ClusterConfig->deserialize($param["ClusterConfig"]);
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("ClusterStats",$param) and $param["ClusterStats"] !== null) {
+            $this->ClusterStats = new RocketMQClusterRecentStats();
+            $this->ClusterStats->deserialize($param["ClusterStats"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

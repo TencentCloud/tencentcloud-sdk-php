@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastScanTime(string $LastScanTime) 设置最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取处理状态
+ * @method integer getStatus() 获取风险项处理状态状态：0-未通过，1-通过
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置处理状态
+ * @method void setStatus(integer $Status) 设置风险项处理状态状态：0-未通过，1-通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuid() 获取主机Quuid
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,7 +88,7 @@ class BaselineEffectHost extends AbstractModel
     public $LastScanTime;
 
     /**
-     * @var integer 处理状态
+     * @var integer 风险项处理状态状态：0-未通过，1-通过
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -132,7 +132,7 @@ class BaselineEffectHost extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastScanTime 最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 处理状态
+     * @param integer $Status 风险项处理状态状态：0-未通过，1-通过
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 主机Quuid
 注意：此字段可能返回 null，表示取不到有效值。

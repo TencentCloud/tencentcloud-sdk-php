@@ -14,23 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRealtimeQuality返回参数结构体
+ * SearchImage返回参数结构体
  *
- * @method array getData() 获取返回的数据类型
- * @method void setData(array $Data) 设置返回的数据类型
+ * @method integer getCount() 获取返回结果数量。
+ * @method void setCount(integer $Count) 设置返回结果数量。
+ * @method array getImageInfos() 获取图片信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageInfos(array $ImageInfos) 设置图片信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRealtimeQualityResponse extends AbstractModel
+class SearchImageResponse extends AbstractModel
 {
     /**
-     * @var array 返回的数据类型
+     * @var integer 返回结果数量。
      */
-    public $Data;
+    public $Count;
+
+    /**
+     * @var array 图片信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageInfos;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +48,9 @@ class DescribeRealtimeQualityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 返回的数据类型
+     * @param integer $Count 返回结果数量。
+     * @param array $ImageInfos 图片信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +66,16 @@ class DescribeRealtimeQualityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new RealtimeData();
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("ImageInfos",$param) and $param["ImageInfos"] !== null) {
+            $this->ImageInfos = [];
+            foreach ($param["ImageInfos"] as $key => $value){
+                $obj = new ImageInfo();
                 $obj->deserialize($value);
-                array_push($this->Data, $obj);
+                array_push($this->ImageInfos, $obj);
             }
         }
 

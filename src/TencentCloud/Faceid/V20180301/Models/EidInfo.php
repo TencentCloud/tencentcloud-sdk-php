@@ -18,12 +18,16 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Eid出参
+ * Eid出参，包括商户方用户的标识和加密的用户姓名身份证信息。
  *
  * @method string getEidCode() 获取商户方 appeIDcode 的数字证书
  * @method void setEidCode(string $EidCode) 设置商户方 appeIDcode 的数字证书
- * @method string getEidSign() 获取eID 中心针对商户方EidCode的电子签名
- * @method void setEidSign(string $EidSign) 设置eID 中心针对商户方EidCode的电子签名
+ * @method string getEidSign() 获取Eid中心针对商户方EidCode的电子签名
+ * @method void setEidSign(string $EidSign) 设置Eid中心针对商户方EidCode的电子签名
+ * @method string getDesKey() 获取商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+ * @method void setDesKey(string $DesKey) 设置商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+ * @method string getUserInfo() 获取会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+ * @method void setUserInfo(string $UserInfo) 设置会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
  */
 class EidInfo extends AbstractModel
 {
@@ -33,13 +37,25 @@ class EidInfo extends AbstractModel
     public $EidCode;
 
     /**
-     * @var string eID 中心针对商户方EidCode的电子签名
+     * @var string Eid中心针对商户方EidCode的电子签名
      */
     public $EidSign;
 
     /**
+     * @var string 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     */
+    public $DesKey;
+
+    /**
+     * @var string 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     */
+    public $UserInfo;
+
+    /**
      * @param string $EidCode 商户方 appeIDcode 的数字证书
-     * @param string $EidSign eID 中心针对商户方EidCode的电子签名
+     * @param string $EidSign Eid中心针对商户方EidCode的电子签名
+     * @param string $DesKey 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     * @param string $UserInfo 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class EidInfo extends AbstractModel
 
         if (array_key_exists("EidSign",$param) and $param["EidSign"] !== null) {
             $this->EidSign = $param["EidSign"];
+        }
+
+        if (array_key_exists("DesKey",$param) and $param["DesKey"] !== null) {
+            $this->DesKey = $param["DesKey"];
+        }
+
+        if (array_key_exists("UserInfo",$param) and $param["UserInfo"] !== null) {
+            $this->UserInfo = $param["UserInfo"];
         }
     }
 }

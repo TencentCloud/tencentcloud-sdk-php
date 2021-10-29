@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMeta(string $Meta) 设置SDK中生成的Meta字符串
  * @method string getExtra() 获取透传参数 1000长度字符串
  * @method void setExtra(string $Extra) 设置透传参数 1000长度字符串
+ * @method boolean getUseCos() 获取默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
+【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+ * @method void setUseCos(boolean $UseCos) 设置默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
+【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
  */
 class GetFaceIdTokenRequest extends AbstractModel
 {
@@ -69,6 +73,12 @@ class GetFaceIdTokenRequest extends AbstractModel
     public $Extra;
 
     /**
+     * @var boolean 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
+【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+     */
+    public $UseCos;
+
+    /**
      * @param string $CompareLib 本地上传照片(LOCAL)、商业库(BUSINESS)
      * @param string $IdCard CompareLib为商业库时必传。
      * @param string $Name CompareLib为商业库库时必传。
@@ -76,6 +86,8 @@ class GetFaceIdTokenRequest extends AbstractModel
 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      * @param string $Meta SDK中生成的Meta字符串
      * @param string $Extra 透传参数 1000长度字符串
+     * @param boolean $UseCos 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
+【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
      */
     function __construct()
     {
@@ -112,6 +124,10 @@ class GetFaceIdTokenRequest extends AbstractModel
 
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
             $this->Extra = $param["Extra"];
+        }
+
+        if (array_key_exists("UseCos",$param) and $param["UseCos"] !== null) {
+            $this->UseCos = $param["UseCos"];
         }
     }
 }

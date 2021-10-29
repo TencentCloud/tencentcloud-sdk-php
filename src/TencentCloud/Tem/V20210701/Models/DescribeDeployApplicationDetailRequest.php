@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置服务id
  * @method string getEnvironmentId() 获取环境id
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境id
+ * @method string getVersionId() 获取版本部署id
+ * @method void setVersionId(string $VersionId) 设置版本部署id
  */
 class DescribeDeployApplicationDetailRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDeployApplicationDetailRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
+     * @var string 版本部署id
+     */
+    public $VersionId;
+
+    /**
      * @param string $ApplicationId 服务id
      * @param string $EnvironmentId 环境id
+     * @param string $VersionId 版本部署id
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDeployApplicationDetailRequest extends AbstractModel
 
         if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
             $this->EnvironmentId = $param["EnvironmentId"];
+        }
+
+        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
+            $this->VersionId = $param["VersionId"];
         }
     }
 }

@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRealtimeNetwork返回参数结构体
+ * DeleteImages返回参数结构体
  *
- * @method array getData() 获取查询返回的数据
- * @method void setData(array $Data) 设置查询返回的数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRealtimeNetworkResponse extends AbstractModel
+class DeleteImagesResponse extends AbstractModel
 {
-    /**
-     * @var array 查询返回的数据
-     */
-    public $Data;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $Data 查询返回的数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class DescribeRealtimeNetworkResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new RealtimeData();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getType() 获取类型：
-0
- * @method void setType(integer $Type) 设置类型：
-0
+ * @method integer getType() 获取该字段已废弃，由Filters代替
+ * @method void setType(integer $Type) 设置该字段已废弃，由Filters代替
  * @method array getFilters() 获取过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name- string - 是否必填：否 - 环境变量名</li>
@@ -54,8 +52,7 @@ class DescribeAssetEnvListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 类型：
-0
+     * @var integer 该字段已废弃，由Filters代替
      */
     public $Type;
 
@@ -80,8 +77,7 @@ class DescribeAssetEnvListRequest extends AbstractModel
     /**
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Type 类型：
-0
+     * @param integer $Type 该字段已废弃，由Filters代替
      * @param array $Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name- string - 是否必填：否 - 环境变量名</li>

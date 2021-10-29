@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
  * @method void setBackupDBTableList(array $BackupDBTableList) 设置需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
 例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
+ * @method string getManualBackupName() 获取手动备份别名
+ * @method void setManualBackupName(string $ManualBackupName) 设置手动备份别名
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -48,10 +50,16 @@ class CreateBackupRequest extends AbstractModel
     public $BackupDBTableList;
 
     /**
+     * @var string 手动备份别名
+     */
+    public $ManualBackupName;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
      * @param array $BackupDBTableList 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
 例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
+     * @param string $ManualBackupName 手动备份别名
      */
     function __construct()
     {
@@ -81,6 +89,10 @@ class CreateBackupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->BackupDBTableList, $obj);
             }
+        }
+
+        if (array_key_exists("ManualBackupName",$param) and $param["ManualBackupName"] !== null) {
+            $this->ManualBackupName = $param["ManualBackupName"];
         }
     }
 }

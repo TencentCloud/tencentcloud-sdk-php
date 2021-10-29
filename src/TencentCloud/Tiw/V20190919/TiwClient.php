@@ -30,6 +30,10 @@ use TencentCloud\Tiw\V20190919\Models as Models;
  * @method Models\DescribeOnlineRecordCallbackResponse DescribeOnlineRecordCallback(Models\DescribeOnlineRecordCallbackRequest $req) 查询实时录制回调地址
  * @method Models\DescribeQualityMetricsResponse DescribeQualityMetrics(Models\DescribeQualityMetricsRequest $req) 查询互动白板质量数据
  * @method Models\DescribeSnapshotTaskResponse DescribeSnapshotTask(Models\DescribeSnapshotTaskRequest $req) 获取指定白板板书生成任务信息
+ * @method Models\DescribeTIWDailyUsageResponse DescribeTIWDailyUsage(Models\DescribeTIWDailyUsageRequest $req) 查询互动白板天维度计费用量。
+1. 单次查询统计区间最多不能超过31天。
+2. 由于统计延迟等原因，暂时不支持查询当天数据，建议在次日上午7点以后再来查询前一天的用量，例如在10月27日上午7点后，再来查询到10月26日整天的用量
+
  * @method Models\DescribeTranscodeResponse DescribeTranscode(Models\DescribeTranscodeRequest $req) 查询文档转码任务的执行进度与转码结果
  * @method Models\DescribeTranscodeCallbackResponse DescribeTranscodeCallback(Models\DescribeTranscodeCallbackRequest $req) 查询文档转码回调地址
  * @method Models\DescribeVideoGenerationTaskResponse DescribeVideoGenerationTask(Models\DescribeVideoGenerationTaskRequest $req) 查询录制视频生成任务状态与结果

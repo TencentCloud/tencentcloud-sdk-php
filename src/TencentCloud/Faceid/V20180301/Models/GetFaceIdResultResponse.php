@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置业务核验描述
  * @method float getSimilarity() 获取相似度，0-100，数值越大相似度越高
  * @method void setSimilarity(float $Similarity) 设置相似度，0-100，数值越大相似度越高
- * @method string getVideoBase64() 获取用户核验的视频
+ * @method string getVideoBase64() 获取用户核验的视频base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVideoBase64(string $VideoBase64) 设置用户核验的视频
+ * @method void setVideoBase64(string $VideoBase64) 设置用户核验的视频base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBestFrameBase64() 获取用户核验视频的截帧
+ * @method string getBestFrameBase64() 获取用户核验视频的截帧base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBestFrameBase64(string $BestFrameBase64) 设置用户核验视频的截帧
+ * @method void setBestFrameBase64(string $BestFrameBase64) 设置用户核验视频的截帧base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtra() 获取获取token时透传的信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,13 +95,13 @@ class GetFaceIdResultResponse extends AbstractModel
     public $Similarity;
 
     /**
-     * @var string 用户核验的视频
+     * @var string 用户核验的视频base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoBase64;
 
     /**
-     * @var string 用户核验视频的截帧
+     * @var string 用户核验视频的截帧base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BestFrameBase64;
@@ -142,9 +142,9 @@ class GetFaceIdResultResponse extends AbstractModel
      * @param string $Result 业务核验结果，参考https://cloud.tencent.com/document/product/1007/47912
      * @param string $Description 业务核验描述
      * @param float $Similarity 相似度，0-100，数值越大相似度越高
-     * @param string $VideoBase64 用户核验的视频
+     * @param string $VideoBase64 用户核验的视频base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $BestFrameBase64 用户核验视频的截帧
+     * @param string $BestFrameBase64 用户核验视频的截帧base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 获取token时透传的信息
 注意：此字段可能返回 null，表示取不到有效值。

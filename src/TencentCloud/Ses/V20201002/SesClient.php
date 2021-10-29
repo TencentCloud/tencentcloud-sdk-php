@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ses\V20201002\Models as Models;
 
 /**
+ * @method Models\BatchSendEmailResponse BatchSendEmail(Models\BatchSendEmailRequest $req) 您可以通过此API批量发送TEXT或者HTML邮件，适用于营销类、通知类邮件。默认仅支持使用模板发送邮件，如需发送自定义内容，请单独联系商务开通此功能。批量发送之前，需先创建收件人列表，和收件人地址，并通过收件人列表id来进行发送。批量发送任务支持定时发送和周期重复发送，定时发送需传TimedParam，周期重复发送需传CycleParam
  * @method Models\CreateEmailAddressResponse CreateEmailAddress(Models\CreateEmailAddressRequest $req) 在验证了发信域名之后，您需要一个发信地址来发送邮件。例如发信域名是mail.qcloud.com，那么发信地址可以为 service@mail.qcloud.com。如果您想要收件人在收件箱列表中显示您的别名，例如"腾讯云邮件通知"。那么发信地址为： 别名 空格 尖括号 邮箱地址。请注意中间需要有空格
  * @method Models\CreateEmailIdentityResponse CreateEmailIdentity(Models\CreateEmailIdentityRequest $req) 在使用身份发送电子邮件之前，您需要有一个电子邮件域名，该域名可以是您的网站或者移动应用的域名。您首先必须进行验证，证明自己是该域名的所有者，并且授权给腾讯云SES发送许可，才可以从该域名发送电子邮件。
  * @method Models\CreateEmailTemplateResponse CreateEmailTemplate(Models\CreateEmailTemplateRequest $req) 创建模板，该模板可以是TXT或者HTML，请注意如果HTML不要包含外部文件的CSS。模板中的变量使用 {{变量名}} 表示。
@@ -39,7 +40,7 @@ use TencentCloud\Ses\V20201002\Models as Models;
  * @method Models\ListEmailAddressResponse ListEmailAddress(Models\ListEmailAddressRequest $req) 获取发信地址列表
  * @method Models\ListEmailIdentitiesResponse ListEmailIdentities(Models\ListEmailIdentitiesRequest $req) 获取当前发信域名列表，包含已验证通过与未验证的域名
  * @method Models\ListEmailTemplatesResponse ListEmailTemplates(Models\ListEmailTemplatesRequest $req) 获取当前邮件模板列表
- * @method Models\SendEmailResponse SendEmail(Models\SendEmailRequest $req) 您可以通过此API发送TEXT或者HTML邮件，默认仅支持使用模板发送邮件，如需发送自定义内容，请单独联系商务开通此功能。
+ * @method Models\SendEmailResponse SendEmail(Models\SendEmailRequest $req) 您可以通过此API发送TEXT或者HTML邮件，适用于触发类邮件（验证码、交易类）。默认仅支持使用模板发送邮件，如需发送自定义内容，请单独联系商务开通此功能。
  * @method Models\UpdateEmailIdentityResponse UpdateEmailIdentity(Models\UpdateEmailIdentityRequest $req) 您已经成功配置好了您的DNS，接下来请求腾讯云验证您的DNS配置是否正确
  * @method Models\UpdateEmailTemplateResponse UpdateEmailTemplate(Models\UpdateEmailTemplateRequest $req) 更新邮件模板，更新后需再次审核
  */

@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNodes(integer $InstanceNodes) 设置新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
  * @method string getDeployGroupId() 获取置放群组 ID。
  * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID。
+ * @method boolean getDryRun() 获取是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+ * @method void setDryRun(boolean $DryRun) 设置是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $DeployGroupId;
 
     /**
+     * @var boolean 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+     */
+    public $DryRun;
+
+    /**
      * @param string $InstanceId 克隆源实例Id。
      * @param string $SpecifiedRollbackTime 如果需要克隆实例回档到指定时间，则指定该值。时间格式为： yyyy-mm-dd hh:mm:ss 。
      * @param integer $SpecifiedBackupId 如果需要克隆实例回档到指定备份的时间点，则指定该值为物理备份的Id。请使用 [查询数据备份文件列表](/document/api/236/15842) 。
@@ -168,6 +175,7 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param string $DeviceType 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
      * @param integer $InstanceNodes 新克隆实例节点数。如果需要克隆出三节点实例， 请将该值设置为3 或指定 BackupZone 参数。如果需要克隆出两节点实例，请将该值设置为2。默认克隆出两节点实例。
      * @param string $DeployGroupId 置放群组 ID。
+     * @param boolean $DryRun 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class CreateCloneInstanceRequest extends AbstractModel
 
         if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
             $this->DeployGroupId = $param["DeployGroupId"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

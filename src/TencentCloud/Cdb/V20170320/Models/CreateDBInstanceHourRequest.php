@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSyncFlag(integer $AutoSyncFlag) 设置是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
  * @method string getCageId() 获取金融围拢 ID 。
  * @method void setCageId(string $CageId) 设置金融围拢 ID 。
+ * @method array getAlarmPolicyIdList() 获取告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
+ * @method void setAlarmPolicyIdList(array $AlarmPolicyIdList) 设置告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
+ * @method boolean getDryRun() 获取是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+ * @method void setDryRun(boolean $DryRun) 设置是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -248,6 +252,16 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $CageId;
 
     /**
+     * @var array 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
+     */
+    public $AlarmPolicyIdList;
+
+    /**
+     * @var boolean 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+     */
+    public $DryRun;
+
+    /**
      * @param integer $GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param integer $Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @param integer $Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
@@ -280,6 +294,8 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param integer $Cpu 实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
      * @param integer $AutoSyncFlag 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
      * @param string $CageId 金融围拢 ID 。
+     * @param array $AlarmPolicyIdList 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
+     * @param boolean $DryRun 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
      */
     function __construct()
     {
@@ -431,6 +447,14 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("CageId",$param) and $param["CageId"] !== null) {
             $this->CageId = $param["CageId"];
+        }
+
+        if (array_key_exists("AlarmPolicyIdList",$param) and $param["AlarmPolicyIdList"] !== null) {
+            $this->AlarmPolicyIdList = $param["AlarmPolicyIdList"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

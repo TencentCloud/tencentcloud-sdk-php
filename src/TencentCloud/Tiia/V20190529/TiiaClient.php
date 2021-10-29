@@ -26,11 +26,17 @@ use TencentCloud\Tiia\V20190529\Models as Models;
  * @method Models\AssessQualityResponse AssessQuality(Models\AssessQualityRequest $req) 评估输入图片在视觉上的质量，从多个方面评估，并同时给出综合的、客观的清晰度评分，和主观的美观度评分。
 >     
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+ * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 用于创建一个空的图片库，如果图片库已存在则返回错误。
+
+ * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 创建图片，并添加对应图片的自定义信息。
  * @method Models\CropImageResponse CropImage(Models\CropImageRequest $req) 根据输入的裁剪比例，智能判断一张图片的最佳裁剪区域，确保原图的主体区域不受影响。
 
 可以自动裁剪图片，适应不同平台、设备的展示要求，避免简单拉伸带来的变形。
 >     
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+ * @method Models\DeleteImagesResponse DeleteImages(Models\DeleteImagesRequest $req) 删除图片。
+ * @method Models\DescribeGroupsResponse DescribeGroups(Models\DescribeGroupsRequest $req) 查询所有的图库信息。
+ * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取指定图片库中的图片列表。
  * @method Models\DetectCelebrityResponse DetectCelebrity(Models\DetectCelebrityRequest $req) 传入一张图片，可以识别图片中包含的人物是否为公众人物，如果是，输出人物的姓名、基本信息、脸部坐标。
 
 支持识别一张图片中存在的多个人脸，针对每个人脸，会给出与之最相似的公众人物。
@@ -90,6 +96,7 @@ use TencentCloud\Tiia\V20190529\Models as Models;
  * @method Models\RecognizeCarResponse RecognizeCar(Models\RecognizeCarRequest $req) 腾讯云车辆属性识别可对汽车车身及车辆属性进行检测与识别，目前支持11种车身颜色、20多种车型、300多种品牌、4000多种车系+年款的识别，同时支持对车辆的位置进行检测。如果图片中存在多辆车，会分别输出每辆车的车型和坐标。
 >     
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+ * @method Models\SearchImageResponse SearchImage(Models\SearchImageRequest $req) 本接口用于对一张待识别的商品图片，在指定图片库中检索出最相似的图片列表。
  */
 
 class TiiaClient extends AbstractClient

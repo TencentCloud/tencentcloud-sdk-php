@@ -14,36 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询秒级监控返回的数据
+ * DescribeGroups返回参数结构体
  *
- * @method array getContent() 获取返回的数据
+ * @method array getGroups() 获取图库信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContent(array $Content) 设置返回的数据
+ * @method void setGroups(array $Groups) 设置图库信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDataType() 获取数据类型字段
- * @method void setDataType(string $DataType) 设置数据类型字段
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class RealtimeData extends AbstractModel
+class DescribeGroupsResponse extends AbstractModel
 {
     /**
-     * @var array 返回的数据
+     * @var array 图库信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Content;
+    public $Groups;
 
     /**
-     * @var string 数据类型字段
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $DataType;
+    public $RequestId;
 
     /**
-     * @param array $Content 返回的数据
+     * @param array $Groups 图库信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DataType 数据类型字段
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -58,17 +58,17 @@ class RealtimeData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = [];
-            foreach ($param["Content"] as $key => $value){
-                $obj = new TimeValue();
+        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
+            $this->Groups = [];
+            foreach ($param["Groups"] as $key => $value){
+                $obj = new GroupInfo();
                 $obj->deserialize($value);
-                array_push($this->Content, $obj);
+                array_push($this->Groups, $obj);
             }
         }
 
-        if (array_key_exists("DataType",$param) and $param["DataType"] !== null) {
-            $this->DataType = $param["DataType"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

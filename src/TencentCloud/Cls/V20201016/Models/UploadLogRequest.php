@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadLog请求参数结构体
  *
-
+ * @method string getTopicId() 获取主题id
+ * @method void setTopicId(string $TopicId) 设置主题id
+ * @method string getHashKey() 获取根据 hashkey 写入相应范围的主题分区
+ * @method void setHashKey(string $HashKey) 设置根据 hashkey 写入相应范围的主题分区
+ * @method string getCompressType() 获取压缩方法
+ * @method void setCompressType(string $CompressType) 设置压缩方法
  */
 class UploadLogRequest extends AbstractModel
 {
-
+    /**
+     * @var string 主题id
+     */
+    public $TopicId;
 
     /**
+     * @var string 根据 hashkey 写入相应范围的主题分区
+     */
+    public $HashKey;
 
+    /**
+     * @var string 压缩方法
+     */
+    public $CompressType;
+
+    /**
+     * @param string $TopicId 主题id
+     * @param string $HashKey 根据 hashkey 写入相应范围的主题分区
+     * @param string $CompressType 压缩方法
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class UploadLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
+        }
 
+        if (array_key_exists("HashKey",$param) and $param["HashKey"] !== null) {
+            $this->HashKey = $param["HashKey"];
+        }
+
+        if (array_key_exists("CompressType",$param) and $param["CompressType"] !== null) {
+            $this->CompressType = $param["CompressType"];
+        }
     }
 }

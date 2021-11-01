@@ -182,6 +182,14 @@ notInService       不在服务区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionId(string $SessionId) 设置会话 ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtectedCaller() 获取主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtectedCaller(string $ProtectedCaller) 设置主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtectedCallee() 获取被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtectedCallee(string $ProtectedCallee) 设置被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -363,6 +371,18 @@ notInService       不在服务区
     public $SessionId;
 
     /**
+     * @var string 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProtectedCaller;
+
+    /**
+     * @var string 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProtectedCallee;
+
+    /**
      * @param string $Caller 主叫号码
      * @param string $Callee 被叫号码
      * @param integer $Time 呼叫发起时间戳，Unix 时间戳
@@ -443,6 +463,10 @@ notInService       不在服务区
      * @param integer $QueuedSkillGroupId 排队技能组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId 会话 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProtectedCaller 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProtectedCallee 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -563,6 +587,14 @@ notInService       不在服务区
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("ProtectedCaller",$param) and $param["ProtectedCaller"] !== null) {
+            $this->ProtectedCaller = $param["ProtectedCaller"];
+        }
+
+        if (array_key_exists("ProtectedCallee",$param) and $param["ProtectedCallee"] !== null) {
+            $this->ProtectedCallee = $param["ProtectedCallee"];
         }
     }
 }

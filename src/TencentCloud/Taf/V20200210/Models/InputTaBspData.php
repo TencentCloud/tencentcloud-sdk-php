@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgeCeil(integer $AgeCeil) 设置年龄上限
  * @method integer getGender() 获取性别[1：男；2：女]
  * @method void setGender(integer $Gender) 设置性别[1：男；2：女]
- * @method integer getUserTime() 获取用户操作时间
- * @method void setUserTime(integer $UserTime) 设置用户操作时间
+ * @method integer getUserTime() 获取用户操作时间,uinux时间戳，精确到秒
+ * @method void setUserTime(integer $UserTime) 设置用户操作时间,uinux时间戳，精确到秒
  * @method string getImei() 获取Imei [在(Imei|ImeiMd5|Idfa|IdfaMd5)里面4选1]
  * @method void setImei(string $Imei) 设置Imei [在(Imei|ImeiMd5|Idfa|IdfaMd5)里面4选1]
  * @method string getImeiMd5() 获取Imei小写后加密Md5 [在(Imei|ImeiMd5|Idfa|IdfaMd5)里面4选1]
@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLongitude(string $Longitude) 设置精度
  * @method string getContext() 获取辅助区分信息
  * @method void setContext(string $Context) 设置辅助区分信息
+ * @method integer getIsAuthorized() 获取是否授权
+ * @method void setIsAuthorized(integer $IsAuthorized) 设置是否授权
  */
 class InputTaBspData extends AbstractModel
 {
@@ -99,7 +101,7 @@ class InputTaBspData extends AbstractModel
     public $Gender;
 
     /**
-     * @var integer 用户操作时间
+     * @var integer 用户操作时间,uinux时间戳，精确到秒
      */
     public $UserTime;
 
@@ -199,12 +201,17 @@ class InputTaBspData extends AbstractModel
     public $Context;
 
     /**
+     * @var integer 是否授权
+     */
+    public $IsAuthorized;
+
+    /**
      * @param integer $Seq 请求序列号
      * @param string $OsType 操作系统类型[0：未知；1：android；2：ios；3：windows]
      * @param integer $AgeFloor 年龄下限
      * @param integer $AgeCeil 年龄上限
      * @param integer $Gender 性别[1：男；2：女]
-     * @param integer $UserTime 用户操作时间
+     * @param integer $UserTime 用户操作时间,uinux时间戳，精确到秒
      * @param string $Imei Imei [在(Imei|ImeiMd5|Idfa|IdfaMd5)里面4选1]
      * @param string $ImeiMd5 Imei小写后加密Md5 [在(Imei|ImeiMd5|Idfa|IdfaMd5)里面4选1]
      * @param string $Idfa Idfa [在(Imei|ImeiMd5|Idfa|IdfaMd5)里面4选1]
@@ -224,6 +231,7 @@ class InputTaBspData extends AbstractModel
      * @param string $Latitude 纬度
      * @param string $Longitude 精度
      * @param string $Context 辅助区分信息
+     * @param integer $IsAuthorized 是否授权
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class InputTaBspData extends AbstractModel
 
         if (array_key_exists("Context",$param) and $param["Context"] !== null) {
             $this->Context = $param["Context"];
+        }
+
+        if (array_key_exists("IsAuthorized",$param) and $param["IsAuthorized"] !== null) {
+            $this->IsAuthorized = $param["IsAuthorized"];
         }
     }
 }

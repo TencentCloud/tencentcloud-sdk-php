@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDirection(integer $Direction) 设置会话呼叫方向， 0 呼入 | 1 - 呼出
  * @method integer getRingTimestamp() 获取振铃时间，Unix 时间戳
  * @method void setRingTimestamp(integer $RingTimestamp) 设置振铃时间，Unix 时间戳
+ * @method string getProtectedCaller() 获取主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+ * @method void setProtectedCaller(string $ProtectedCaller) 设置主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+ * @method string getProtectedCallee() 获取被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+ * @method void setProtectedCallee(string $ProtectedCallee) 设置被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
  */
 class PSTNSessionInfo extends AbstractModel
 {
@@ -101,6 +105,16 @@ class PSTNSessionInfo extends AbstractModel
     public $RingTimestamp;
 
     /**
+     * @var string 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+     */
+    public $ProtectedCaller;
+
+    /**
+     * @var string 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+     */
+    public $ProtectedCallee;
+
+    /**
      * @param string $SessionID 会话 ID
      * @param string $RoomID 会话临时房间 ID
      * @param string $Caller 主叫
@@ -112,6 +126,8 @@ class PSTNSessionInfo extends AbstractModel
      * @param string $SessionStatus 坐席状态 inProgress 进行中
      * @param integer $Direction 会话呼叫方向， 0 呼入 | 1 - 呼出
      * @param integer $RingTimestamp 振铃时间，Unix 时间戳
+     * @param string $ProtectedCaller 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+     * @param string $ProtectedCallee 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class PSTNSessionInfo extends AbstractModel
 
         if (array_key_exists("RingTimestamp",$param) and $param["RingTimestamp"] !== null) {
             $this->RingTimestamp = $param["RingTimestamp"];
+        }
+
+        if (array_key_exists("ProtectedCaller",$param) and $param["ProtectedCaller"] !== null) {
+            $this->ProtectedCaller = $param["ProtectedCaller"];
+        }
+
+        if (array_key_exists("ProtectedCallee",$param) and $param["ProtectedCallee"] !== null) {
+            $this->ProtectedCallee = $param["ProtectedCallee"];
         }
     }
 }

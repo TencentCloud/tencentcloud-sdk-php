@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method InputTaBspData getBspData() 获取业务数据
  * @method void setBspData(InputTaBspData $BspData) 设置业务数据
+ * @method InputBusinessEncryptData getBusinessEncryptData() 获取业务加密数据
+ * @method void setBusinessEncryptData(InputBusinessEncryptData $BusinessEncryptData) 设置业务加密数据
  */
 class EnhanceTaDegreeRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class EnhanceTaDegreeRequest extends AbstractModel
     public $BspData;
 
     /**
+     * @var InputBusinessEncryptData 业务加密数据
+     */
+    public $BusinessEncryptData;
+
+    /**
      * @param InputTaBspData $BspData 业务数据
+     * @param InputBusinessEncryptData $BusinessEncryptData 业务加密数据
      */
     function __construct()
     {
@@ -49,6 +57,11 @@ class EnhanceTaDegreeRequest extends AbstractModel
         if (array_key_exists("BspData",$param) and $param["BspData"] !== null) {
             $this->BspData = new InputTaBspData();
             $this->BspData->deserialize($param["BspData"]);
+        }
+
+        if (array_key_exists("BusinessEncryptData",$param) and $param["BusinessEncryptData"] !== null) {
+            $this->BusinessEncryptData = new InputBusinessEncryptData();
+            $this->BusinessEncryptData->deserialize($param["BusinessEncryptData"]);
         }
     }
 }

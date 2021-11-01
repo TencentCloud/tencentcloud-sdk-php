@@ -54,6 +54,10 @@ finished 已完成
  * @method void setOutBoundCaller(string $OutBoundCaller) 设置转外线使用的号码（转外线主叫）
  * @method string getOutBoundCallee() 获取转外线被叫
  * @method void setOutBoundCallee(string $OutBoundCallee) 设置转外线被叫
+ * @method string getProtectedCaller() 获取主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+ * @method void setProtectedCaller(string $ProtectedCaller) 设置主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+ * @method string getProtectedCallee() 获取被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+ * @method void setProtectedCallee(string $ProtectedCallee) 设置被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
  */
 class PSTNSession extends AbstractModel
 {
@@ -127,6 +131,16 @@ finished 已完成
     public $OutBoundCallee;
 
     /**
+     * @var string 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+     */
+    public $ProtectedCaller;
+
+    /**
+     * @var string 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+     */
+    public $ProtectedCallee;
+
+    /**
      * @param string $SessionID 会话 ID
      * @param string $RoomID 会话临时房间 ID
      * @param string $Caller 主叫
@@ -144,6 +158,8 @@ finished 已完成
      * @param integer $Direction 会话呼叫方向， 0 呼入 | 1 - 呼出
      * @param string $OutBoundCaller 转外线使用的号码（转外线主叫）
      * @param string $OutBoundCallee 转外线被叫
+     * @param string $ProtectedCaller 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+     * @param string $ProtectedCallee 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
      */
     function __construct()
     {
@@ -208,6 +224,14 @@ finished 已完成
 
         if (array_key_exists("OutBoundCallee",$param) and $param["OutBoundCallee"] !== null) {
             $this->OutBoundCallee = $param["OutBoundCallee"];
+        }
+
+        if (array_key_exists("ProtectedCaller",$param) and $param["ProtectedCaller"] !== null) {
+            $this->ProtectedCaller = $param["ProtectedCaller"];
+        }
+
+        if (array_key_exists("ProtectedCallee",$param) and $param["ProtectedCallee"] !== null) {
+            $this->ProtectedCallee = $param["ProtectedCallee"];
         }
     }
 }

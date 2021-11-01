@@ -20,26 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeChatMessages请求参数结构体
  *
- * @method string getCdrId() 获取服务记录ID
- * @method void setCdrId(string $CdrId) 设置服务记录ID
  * @method integer getInstanceId() 获取实例ID
  * @method void setInstanceId(integer $InstanceId) 设置实例ID
  * @method integer getSdkAppId() 获取应用ID
  * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
+ * @method string getCdrId() 获取服务记录ID
+ * @method void setCdrId(string $CdrId) 设置服务记录ID
  * @method integer getLimit() 获取返回记录条数 最大为100默认20
  * @method void setLimit(integer $Limit) 设置返回记录条数 最大为100默认20
  * @method integer getOffset() 获取返回记录偏移 默认为0
  * @method void setOffset(integer $Offset) 设置返回记录偏移 默认为0
  * @method integer getOrder() 获取1为从早到晚，2为从晚到早，默认为2
  * @method void setOrder(integer $Order) 设置1为从早到晚，2为从晚到早，默认为2
+ * @method string getSessionId() 获取服务记录SessionID
+ * @method void setSessionId(string $SessionId) 设置服务记录SessionID
  */
 class DescribeChatMessagesRequest extends AbstractModel
 {
-    /**
-     * @var string 服务记录ID
-     */
-    public $CdrId;
-
     /**
      * @var integer 实例ID
      */
@@ -49,6 +46,11 @@ class DescribeChatMessagesRequest extends AbstractModel
      * @var integer 应用ID
      */
     public $SdkAppId;
+
+    /**
+     * @var string 服务记录ID
+     */
+    public $CdrId;
 
     /**
      * @var integer 返回记录条数 最大为100默认20
@@ -66,12 +68,18 @@ class DescribeChatMessagesRequest extends AbstractModel
     public $Order;
 
     /**
-     * @param string $CdrId 服务记录ID
+     * @var string 服务记录SessionID
+     */
+    public $SessionId;
+
+    /**
      * @param integer $InstanceId 实例ID
      * @param integer $SdkAppId 应用ID
+     * @param string $CdrId 服务记录ID
      * @param integer $Limit 返回记录条数 最大为100默认20
      * @param integer $Offset 返回记录偏移 默认为0
      * @param integer $Order 1为从早到晚，2为从晚到早，默认为2
+     * @param string $SessionId 服务记录SessionID
      */
     function __construct()
     {
@@ -86,16 +94,16 @@ class DescribeChatMessagesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CdrId",$param) and $param["CdrId"] !== null) {
-            $this->CdrId = $param["CdrId"];
-        }
-
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
             $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("CdrId",$param) and $param["CdrId"] !== null) {
+            $this->CdrId = $param["CdrId"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
@@ -108,6 +116,10 @@ class DescribeChatMessagesRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置分页页码，从 0 开始
  * @method array getPhones() 获取按手机号筛选
  * @method void setPhones(array $Phones) 设置按手机号筛选
+ * @method array getSessionIds() 获取按SessionId筛选
+ * @method void setSessionIds(array $SessionIds) 设置按SessionId筛选
  */
 class DescribeTelCdrRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeTelCdrRequest extends AbstractModel
     public $Phones;
 
     /**
+     * @var array 按SessionId筛选
+     */
+    public $SessionIds;
+
+    /**
      * @param integer $StartTimeStamp 起始时间戳，Unix 时间戳
      * @param integer $EndTimeStamp 结束时间戳，Unix 时间戳
      * @param integer $Limit 返回数据条数，上限（deprecated）
@@ -96,6 +103,7 @@ class DescribeTelCdrRequest extends AbstractModel
      * @param integer $PageSize 分页尺寸，上限 100
      * @param integer $PageNumber 分页页码，从 0 开始
      * @param array $Phones 按手机号筛选
+     * @param array $SessionIds 按SessionId筛选
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeTelCdrRequest extends AbstractModel
 
         if (array_key_exists("Phones",$param) and $param["Phones"] !== null) {
             $this->Phones = $param["Phones"];
+        }
+
+        if (array_key_exists("SessionIds",$param) and $param["SessionIds"] !== null) {
+            $this->SessionIds = $param["SessionIds"];
         }
     }
 }

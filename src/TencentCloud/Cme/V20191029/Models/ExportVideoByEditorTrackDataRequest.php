@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>VOD：云点播，即导出为云点播媒资。</li>
  * @method string getTrackData() 获取在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
  * @method void setTrackData(string $TrackData) 设置在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
+ * @method string getAspectRatio() 获取轨道数据对应的画布宽高比。
+ * @method void setAspectRatio(string $AspectRatio) 设置轨道数据对应的画布宽高比。
  * @method string getCoverData() 获取视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
  * @method void setCoverData(string $CoverData) 设置视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
  * @method CMEExportInfo getCMEExportInfo() 获取导出的云剪媒体信息。当导出目标为 CME 时必填。
@@ -75,6 +77,11 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
     public $TrackData;
 
     /**
+     * @var string 轨道数据对应的画布宽高比。
+     */
+    public $AspectRatio;
+
+    /**
      * @var string 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
      */
     public $CoverData;
@@ -104,6 +111,7 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
 <li>CME：云剪，即导出为云剪素材；</li>
 <li>VOD：云点播，即导出为云点播媒资。</li>
      * @param string $TrackData 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
+     * @param string $AspectRatio 轨道数据对应的画布宽高比。
      * @param string $CoverData 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
      * @param CMEExportInfo $CMEExportInfo 导出的云剪媒体信息。当导出目标为 CME 时必填。
      * @param VODExportInfo $VODExportInfo 导出的云点播媒资信息。当导出目标为 VOD 时必填。
@@ -136,6 +144,10 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
 
         if (array_key_exists("TrackData",$param) and $param["TrackData"] !== null) {
             $this->TrackData = $param["TrackData"];
+        }
+
+        if (array_key_exists("AspectRatio",$param) and $param["AspectRatio"] !== null) {
+            $this->AspectRatio = $param["AspectRatio"];
         }
 
         if (array_key_exists("CoverData",$param) and $param["CoverData"] !== null) {

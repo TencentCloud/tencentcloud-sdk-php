@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li>其他值：失败。</li>
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
+ * @method integer getProgress() 获取制作媒体文件任务进度，取值范围 [0-100] 。
+ * @method void setProgress(integer $Progress) 设置制作媒体文件任务进度，取值范围 [0-100] 。
  * @method ComposeMediaTaskInput getInput() 获取制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(ComposeMediaTaskInput $Input) 设置制作媒体文件任务的输入。
@@ -48,10 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+ * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  */
 class ComposeMediaTask extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ComposeMediaTask extends AbstractModel
     public $Message;
 
     /**
+     * @var integer 制作媒体文件任务进度，取值范围 [0-100] 。
+     */
+    public $Progress;
+
+    /**
      * @var ComposeMediaTaskInput 制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -98,14 +105,14 @@ class ComposeMediaTask extends AbstractModel
     public $MetaData;
 
     /**
-     * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     */
-    public $SessionContext;
-
-    /**
      * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public $SessionId;
+
+    /**
+     * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     */
+    public $SessionContext;
 
     /**
      * @param string $TaskId 任务 ID。
@@ -116,14 +123,15 @@ class ComposeMediaTask extends AbstractModel
 <li>0：成功；</li>
 <li>其他值：失败。</li>
      * @param string $Message 错误信息。
+     * @param integer $Progress 制作媒体文件任务进度，取值范围 [0-100] 。
      * @param ComposeMediaTaskInput $Input 制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ComposeMediaTaskOutput $Output 制作媒体文件任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     function __construct()
     {
@@ -154,6 +162,10 @@ class ComposeMediaTask extends AbstractModel
             $this->Message = $param["Message"];
         }
 
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
+        }
+
         if (array_key_exists("Input",$param) and $param["Input"] !== null) {
             $this->Input = new ComposeMediaTaskInput();
             $this->Input->deserialize($param["Input"]);
@@ -169,12 +181,12 @@ class ComposeMediaTask extends AbstractModel
             $this->MetaData->deserialize($param["MetaData"]);
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
-        }
-
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
         }
     }
 }

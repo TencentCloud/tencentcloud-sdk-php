@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置云镜Uuid
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKernelVersion() 获取内核版本号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKernelVersion(string $KernelVersion) 设置内核版本号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMachineStatus() 获取在线状态 OFFLINE，ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineStatus(string $MachineStatus) 设置在线状态 OFFLINE，ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EffectiveMachineInfo extends AbstractModel
 {
@@ -84,6 +92,18 @@ class EffectiveMachineInfo extends AbstractModel
     public $Uuid;
 
     /**
+     * @var string 内核版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KernelVersion;
+
+    /**
+     * @var string 在线状态 OFFLINE，ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineStatus;
+
+    /**
      * @param string $MachineName 机器名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachinePublicIp 机器公网ip
@@ -95,6 +115,10 @@ class EffectiveMachineInfo extends AbstractModel
      * @param string $Quuid 机器Quuid
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 云镜Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KernelVersion 内核版本号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MachineStatus 在线状态 OFFLINE，ONLINE
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -137,6 +161,14 @@ class EffectiveMachineInfo extends AbstractModel
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("KernelVersion",$param) and $param["KernelVersion"] !== null) {
+            $this->KernelVersion = $param["KernelVersion"];
+        }
+
+        if (array_key_exists("MachineStatus",$param) and $param["MachineStatus"] !== null) {
+            $this->MachineStatus = $param["MachineStatus"];
         }
     }
 }

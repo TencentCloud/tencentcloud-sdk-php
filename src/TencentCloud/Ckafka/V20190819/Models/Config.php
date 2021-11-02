@@ -50,6 +50,10 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置最大消息字节数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetentionBytes() 获取消息保留文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置消息保留文件大小
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Config extends AbstractModel
 {
@@ -97,6 +101,12 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     public $MaxMessageBytes;
 
     /**
+     * @var integer 消息保留文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetentionBytes;
+
+    /**
      * @param integer $Retention 消息保留时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinInsyncReplicas 最小同步复制数
@@ -111,6 +121,8 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
      * @param integer $SegmentBytes Segment 分片滚动的字节数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMessageBytes 最大消息字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RetentionBytes 消息保留文件大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -152,6 +164,10 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
 
         if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
             $this->MaxMessageBytes = $param["MaxMessageBytes"];
+        }
+
+        if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
+            $this->RetentionBytes = $param["RetentionBytes"];
         }
     }
 }

@@ -40,6 +40,7 @@ cos：对象存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ip_domain: 支持IP和域名形式源站混填（白名单功能）
 ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 出参增加以下几种类型：
@@ -55,6 +56,7 @@ cos：对象存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ip_domain: 支持IP和域名形式源站混填（白名单功能）
 ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 出参增加以下几种类型：
@@ -145,6 +147,7 @@ cos：对象存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ip_domain: 支持IP和域名形式源站混填（白名单功能）
 ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 出参增加以下几种类型：
@@ -235,6 +238,7 @@ cos：对象存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
+ip_domain: 支持IP和域名形式源站混填（白名单功能）
 ipv6_domain: 源站列表为多个 IPv6 地址以及域名
 ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 出参增加以下几种类型：

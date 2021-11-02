@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getFileName() 获取文件名称。该文件是指用户已上传到腾讯云的文件。
- * @method void setFileName(string $FileName) 设置文件名称。该文件是指用户已上传到腾讯云的文件。
+ * @method string getFileName() 获取文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
+ * @method void setFileName(string $FileName) 设置文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
  * @method string getUser() 获取云数据库的用户名。
  * @method void setUser(string $User) 设置云数据库的用户名。
  * @method string getPassword() 获取云数据库实例 User 账号的密码。
@@ -39,7 +39,7 @@ class CreateDBImportJobRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 文件名称。该文件是指用户已上传到腾讯云的文件。
+     * @var string 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
      */
     public $FileName;
 
@@ -60,7 +60,7 @@ class CreateDBImportJobRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $FileName 文件名称。该文件是指用户已上传到腾讯云的文件。
+     * @param string $FileName 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
      * @param string $User 云数据库的用户名。
      * @param string $Password 云数据库实例 User 账号的密码。
      * @param string $DbName 导入的目标数据库名，不传表示不指定数据库。

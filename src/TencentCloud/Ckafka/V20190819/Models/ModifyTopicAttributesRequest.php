@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAclRule(integer $EnableAclRule) 设置预设ACL规则, 1:打开  0:关闭，默认不打开
  * @method string getAclRuleName() 获取预设ACL规则的名称
  * @method void setAclRuleName(string $AclRuleName) 设置预设ACL规则的名称
+ * @method integer getRetentionBytes() 获取可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $AclRuleName;
 
     /**
+     * @var integer 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     */
+    public $RetentionBytes;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $TopicName 主题名称。
      * @param string $Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
@@ -128,6 +135,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param array $IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
      * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
      * @param string $AclRuleName 预设ACL规则的名称
+     * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class ModifyTopicAttributesRequest extends AbstractModel
 
         if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
             $this->AclRuleName = $param["AclRuleName"];
+        }
+
+        if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
+            $this->RetentionBytes = $param["RetentionBytes"];
         }
     }
 }

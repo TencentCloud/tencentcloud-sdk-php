@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHasAssetScan(integer $HasAssetScan) 设置是否有资产扫描接口，0无，1有
  * @method string getMachineType() 获取机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+ * @method string getKernelVersion() 获取内核版本
+ * @method void setKernelVersion(string $KernelVersion) 设置内核版本
  */
 class Machine extends AbstractModel
 {
@@ -208,6 +210,11 @@ class Machine extends AbstractModel
     public $MachineType;
 
     /**
+     * @var string 内核版本
+     */
+    public $KernelVersion;
+
+    /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
      * @param string $MachineStatus 主机状态。
@@ -240,6 +247,7 @@ class Machine extends AbstractModel
      * @param integer $ProjectId 项目ID
      * @param integer $HasAssetScan 是否有资产扫描接口，0无，1有
      * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     * @param string $KernelVersion 内核版本
      */
     function __construct()
     {
@@ -346,6 +354,10 @@ class Machine extends AbstractModel
 
         if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
             $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("KernelVersion",$param) and $param["KernelVersion"] !== null) {
+            $this->KernelVersion = $param["KernelVersion"];
         }
     }
 }

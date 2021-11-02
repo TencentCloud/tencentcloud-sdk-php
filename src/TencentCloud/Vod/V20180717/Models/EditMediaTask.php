@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCodeExt(string $ErrCodeExt) 设置错误码，空字符串表示成功，其他值表示失败，取值请参考 [视频处理类错误码](https://cloud.tencent.com/document/product/266/50368#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
+ * @method integer getProgress() 获取编辑视频任务进度，取值范围 [0-100] 。
+ * @method void setProgress(integer $Progress) 设置编辑视频任务进度，取值范围 [0-100] 。
  * @method EditMediaTaskInput getInput() 获取视频编辑任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(EditMediaTaskInput $Input) 设置视频编辑任务的输入。
@@ -48,14 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(EditMediaTaskOutput $Output) 设置视频编辑任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProcedureTaskId() 获取若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
- * @method void setProcedureTaskId(string $ProcedureTaskId) 设置若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
- * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
- * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
- * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method MediaMetaData getMetaData() 获取原始视频的元信息。
  * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
+ * @method string getProcedureTaskId() 获取若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+ * @method void setProcedureTaskId(string $ProcedureTaskId) 设置若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+ * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+ * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  */
 class EditMediaTask extends AbstractModel
 {
@@ -90,6 +92,11 @@ class EditMediaTask extends AbstractModel
     public $Message;
 
     /**
+     * @var integer 编辑视频任务进度，取值范围 [0-100] 。
+     */
+    public $Progress;
+
+    /**
      * @var EditMediaTaskInput 视频编辑任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -102,14 +109,14 @@ class EditMediaTask extends AbstractModel
     public $Output;
 
     /**
+     * @var MediaMetaData 原始视频的元信息。
+     */
+    public $MetaData;
+
+    /**
      * @var string 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
      */
     public $ProcedureTaskId;
-
-    /**
-     * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     */
-    public $SessionContext;
 
     /**
      * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
@@ -117,9 +124,9 @@ class EditMediaTask extends AbstractModel
     public $SessionId;
 
     /**
-     * @var MediaMetaData 原始视频的元信息。
+     * @var string 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
-    public $MetaData;
+    public $SessionContext;
 
     /**
      * @param string $TaskId 任务 ID。
@@ -132,14 +139,15 @@ class EditMediaTask extends AbstractModel
 <li>70000：内部服务错误，建议重试。</li>
      * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [视频处理类错误码](https://cloud.tencent.com/document/product/266/50368#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
      * @param string $Message 错误信息。
+     * @param integer $Progress 编辑视频任务进度，取值范围 [0-100] 。
      * @param EditMediaTaskInput $Input 视频编辑任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTaskOutput $Output 视频编辑任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProcedureTaskId 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
-     * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param MediaMetaData $MetaData 原始视频的元信息。
+     * @param string $ProcedureTaskId 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+     * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class EditMediaTask extends AbstractModel
             $this->Message = $param["Message"];
         }
 
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
+        }
+
         if (array_key_exists("Input",$param) and $param["Input"] !== null) {
             $this->Input = new EditMediaTaskInput();
             $this->Input->deserialize($param["Input"]);
@@ -184,21 +196,21 @@ class EditMediaTask extends AbstractModel
             $this->Output->deserialize($param["Output"]);
         }
 
-        if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
-            $this->ProcedureTaskId = $param["ProcedureTaskId"];
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = new MediaMetaData();
+            $this->MetaData->deserialize($param["MetaData"]);
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
+            $this->ProcedureTaskId = $param["ProcedureTaskId"];
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
-            $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
         }
     }
 }

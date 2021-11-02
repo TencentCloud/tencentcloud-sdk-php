@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡唯一性ID，例如：lb-12345678。
  * @method array getSnatIps() 获取添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
  * @method void setSnatIps(array $SnatIps) 设置添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
+ * @method integer getNumber() 获取添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+ * @method void setNumber(integer $Number) 设置添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
  */
 class CreateLoadBalancerSnatIpsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
     public $SnatIps;
 
     /**
+     * @var integer 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+     */
+    public $Number;
+
+    /**
      * @param string $LoadBalancerId 负载均衡唯一性ID，例如：lb-12345678。
      * @param array $SnatIps 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
+     * @param integer $Number 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SnatIps, $obj);
             }
+        }
+
+        if (array_key_exists("Number",$param) and $param["Number"] !== null) {
+            $this->Number = $param["Number"];
         }
     }
 }

@@ -90,12 +90,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReqMd5(string $ReqMd5) 设置请求ID的md5值
  * @method integer getAdType() 获取ad_type
  * @method void setAdType(integer $AdType) 设置ad_type
- * @method string getAppName() 获取app name
- * @method void setAppName(string $AppName) 设置app name
- * @method string getAppVer() 获取appVer
- * @method void setAppVer(string $AppVer) 设置appVer
+ * @method string getAppName() 获取app名称
+ * @method void setAppName(string $AppName) 设置app名称
+ * @method string getAppVer() 获取app版本描述
+ * @method void setAppVer(string $AppVer) 设置app版本描述
  * @method integer getReqType() 获取竞价模式1：rtb 2:pd
  * @method void setReqType(integer $ReqType) 设置竞价模式1：rtb 2:pd
+ * @method integer getIsAuthorized() 获取用户是否授权,1为授权，0为未授权
+ * @method void setIsAuthorized(integer $IsAuthorized) 设置用户是否授权,1为授权，0为未授权
  */
 class InputRecognizeTargetAudience extends AbstractModel
 {
@@ -275,12 +277,12 @@ class InputRecognizeTargetAudience extends AbstractModel
     public $AdType;
 
     /**
-     * @var string app name
+     * @var string app名称
      */
     public $AppName;
 
     /**
-     * @var string appVer
+     * @var string app版本描述
      */
     public $AppVer;
 
@@ -288,6 +290,11 @@ class InputRecognizeTargetAudience extends AbstractModel
      * @var integer 竞价模式1：rtb 2:pd
      */
     public $ReqType;
+
+    /**
+     * @var integer 用户是否授权,1为授权，0为未授权
+     */
+    public $IsAuthorized;
 
     /**
      * @param string $Uid 设备ID，AccountType指定的类型
@@ -325,9 +332,10 @@ class InputRecognizeTargetAudience extends AbstractModel
      * @param string $ReqId 请求ID
      * @param string $ReqMd5 请求ID的md5值
      * @param integer $AdType ad_type
-     * @param string $AppName app name
-     * @param string $AppVer appVer
+     * @param string $AppName app名称
+     * @param string $AppVer app版本描述
      * @param integer $ReqType 竞价模式1：rtb 2:pd
+     * @param integer $IsAuthorized 用户是否授权,1为授权，0为未授权
      */
     function __construct()
     {
@@ -492,6 +500,10 @@ class InputRecognizeTargetAudience extends AbstractModel
 
         if (array_key_exists("ReqType",$param) and $param["ReqType"] !== null) {
             $this->ReqType = $param["ReqType"];
+        }
+
+        if (array_key_exists("IsAuthorized",$param) and $param["IsAuthorized"] !== null) {
+            $this->IsAuthorized = $param["IsAuthorized"];
         }
     }
 }

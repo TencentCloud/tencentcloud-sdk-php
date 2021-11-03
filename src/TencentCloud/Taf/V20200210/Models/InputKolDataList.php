@@ -18,7 +18,7 @@ namespace TencentCloud\Taf\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CheckKol
+ * CheckKOL
  *
  * @method integer getType() 获取账号类型[1：微信；2：qq；3：微博]
  * @method void setType(integer $Type) 设置账号类型[1：微信；2：qq；3：微博]
@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhone(string $Phone) 设置手机号
  * @method string getAgentInfo() 获取代理商名称
  * @method void setAgentInfo(string $AgentInfo) 设置代理商名称
+ * @method integer getIsAuthorized() 获取是否授权
+ * @method void setIsAuthorized(integer $IsAuthorized) 设置是否授权
  */
 class InputKolDataList extends AbstractModel
 {
@@ -59,11 +61,17 @@ class InputKolDataList extends AbstractModel
     public $AgentInfo;
 
     /**
+     * @var integer 是否授权
+     */
+    public $IsAuthorized;
+
+    /**
      * @param integer $Type 账号类型[1：微信；2：qq；3：微博]
      * @param string $Id KOL账号ID[比如微信公众号ID]
      * @param string $Name KOL名称
      * @param string $Phone 手机号
      * @param string $AgentInfo 代理商名称
+     * @param integer $IsAuthorized 是否授权
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class InputKolDataList extends AbstractModel
 
         if (array_key_exists("AgentInfo",$param) and $param["AgentInfo"] !== null) {
             $this->AgentInfo = $param["AgentInfo"];
+        }
+
+        if (array_key_exists("IsAuthorized",$param) and $param["IsAuthorized"] !== null) {
+            $this->IsAuthorized = $param["IsAuthorized"];
         }
     }
 }

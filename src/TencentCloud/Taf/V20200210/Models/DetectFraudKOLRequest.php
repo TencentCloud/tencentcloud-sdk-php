@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method InputKolBspData getBspData() 获取业务数据
  * @method void setBspData(InputKolBspData $BspData) 设置业务数据
+ * @method InputBusinessEncryptData getBusinessEncryptData() 获取业务加密数据
+ * @method void setBusinessEncryptData(InputBusinessEncryptData $BusinessEncryptData) 设置业务加密数据
  */
 class DetectFraudKOLRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DetectFraudKOLRequest extends AbstractModel
     public $BspData;
 
     /**
+     * @var InputBusinessEncryptData 业务加密数据
+     */
+    public $BusinessEncryptData;
+
+    /**
      * @param InputKolBspData $BspData 业务数据
+     * @param InputBusinessEncryptData $BusinessEncryptData 业务加密数据
      */
     function __construct()
     {
@@ -49,6 +57,11 @@ class DetectFraudKOLRequest extends AbstractModel
         if (array_key_exists("BspData",$param) and $param["BspData"] !== null) {
             $this->BspData = new InputKolBspData();
             $this->BspData->deserialize($param["BspData"]);
+        }
+
+        if (array_key_exists("BusinessEncryptData",$param) and $param["BusinessEncryptData"] !== null) {
+            $this->BusinessEncryptData = new InputBusinessEncryptData();
+            $this->BusinessEncryptData->deserialize($param["BusinessEncryptData"]);
         }
     }
 }

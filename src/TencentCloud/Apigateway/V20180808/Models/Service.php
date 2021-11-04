@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetType(string $SetType) 设置集群类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeploymentType() 获取服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeploymentType(string $DeploymentType) 设置服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Service extends AbstractModel
 {
@@ -204,6 +208,12 @@ class Service extends AbstractModel
     public $SetType;
 
     /**
+     * @var string 服务部署的集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeploymentType;
+
+    /**
      * @param integer $InnerHttpsPort 内网访问https端口。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceDesc 用户自定义的服务描述。
@@ -239,6 +249,8 @@ class Service extends AbstractModel
      * @param string $InstanceId 独享实例
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SetType 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeploymentType 服务部署的集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -329,6 +341,10 @@ class Service extends AbstractModel
 
         if (array_key_exists("SetType",$param) and $param["SetType"] !== null) {
             $this->SetType = $param["SetType"];
+        }
+
+        if (array_key_exists("DeploymentType",$param) and $param["DeploymentType"] !== null) {
+            $this->DeploymentType = $param["DeploymentType"];
         }
     }
 }

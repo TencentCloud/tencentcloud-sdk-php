@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getData() 获取返回树形结构
  * @method void setData(string $Data) 设置返回树形结构
- * @method integer getUnResourceNum() 获取无
- * @method void setUnResourceNum(integer $UnResourceNum) 设置无
- * @method string getReturnMsg() 获取无
- * @method void setReturnMsg(string $ReturnMsg) 设置无
- * @method integer getReturnCode() 获取无
- * @method void setReturnCode(integer $ReturnCode) 设置无
+ * @method integer getUnResourceNum() 获取未分类实例数量
+ * @method void setUnResourceNum(integer $UnResourceNum) 设置未分类实例数量
+ * @method string getReturnMsg() 获取接口返回消息
+ * @method void setReturnMsg(string $ReturnMsg) 设置接口返回消息
+ * @method integer getReturnCode() 获取返回码；0为请求成功
+ * @method void setReturnCode(integer $ReturnCode) 设置返回码；0为请求成功
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,17 +39,17 @@ class DescribeResourceGroupNewResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var integer 无
+     * @var integer 未分类实例数量
      */
     public $UnResourceNum;
 
     /**
-     * @var string 无
+     * @var string 接口返回消息
      */
     public $ReturnMsg;
 
     /**
-     * @var integer 无
+     * @var integer 返回码；0为请求成功
      */
     public $ReturnCode;
 
@@ -60,9 +60,9 @@ class DescribeResourceGroupNewResponse extends AbstractModel
 
     /**
      * @param string $Data 返回树形结构
-     * @param integer $UnResourceNum 无
-     * @param string $ReturnMsg 无
-     * @param integer $ReturnCode 无
+     * @param integer $UnResourceNum 未分类实例数量
+     * @param string $ReturnMsg 接口返回消息
+     * @param integer $ReturnCode 返回码；0为请求成功
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

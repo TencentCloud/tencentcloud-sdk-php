@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTemplateID() 获取模板ID。如果没有模板，请先新建一个
  * @method void setTemplateID(integer $TemplateID) 设置模板ID。如果没有模板，请先新建一个
  * @method string getTemplateData() 获取模板中的变量参数，请使用json.dump将json对象格式化为string类型。该对象是一组键值对，每个Key代表模板中的一个变量，模板中的变量使用{{键}}表示，相应的值在发送时会被替换为{{值}}。
+示例：{"name":"xxx","age":"xx"}
  * @method void setTemplateData(string $TemplateData) 设置模板中的变量参数，请使用json.dump将json对象格式化为string类型。该对象是一组键值对，每个Key代表模板中的一个变量，模板中的变量使用{{键}}表示，相应的值在发送时会被替换为{{值}}。
+示例：{"name":"xxx","age":"xx"}
  */
 class Template extends AbstractModel
 {
@@ -34,12 +36,14 @@ class Template extends AbstractModel
 
     /**
      * @var string 模板中的变量参数，请使用json.dump将json对象格式化为string类型。该对象是一组键值对，每个Key代表模板中的一个变量，模板中的变量使用{{键}}表示，相应的值在发送时会被替换为{{值}}。
+示例：{"name":"xxx","age":"xx"}
      */
     public $TemplateData;
 
     /**
      * @param integer $TemplateID 模板ID。如果没有模板，请先新建一个
      * @param string $TemplateData 模板中的变量参数，请使用json.dump将json对象格式化为string类型。该对象是一组键值对，每个Key代表模板中的一个变量，模板中的变量使用{{键}}表示，相应的值在发送时会被替换为{{值}}。
+示例：{"name":"xxx","age":"xx"}
      */
     function __construct()
     {

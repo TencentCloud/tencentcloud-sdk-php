@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFuzzySearch(string $FuzzySearch) 设置模糊查询
  * @method string getInsType() 获取资产类型 1公网 2内网
  * @method void setInsType(string $InsType) 设置资产类型 1公网 2内网
- * @method string getChooseType() 获取是否未分组 1是
- * @method void setChooseType(string $ChooseType) 设置是否未分组 1是
+ * @method string getChooseType() 获取ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
+ * @method void setChooseType(string $ChooseType) 设置ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
  * @method string getZone() 获取地域
  * @method void setZone(string $Zone) 设置地域
- * @method integer getLimit() 获取页大小
- * @method void setLimit(integer $Limit) 设置页大小
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getLimit() 获取查询单页的最大值；eg：10；则最多返回10条结果
+ * @method void setLimit(integer $Limit) 设置查询单页的最大值；eg：10；则最多返回10条结果
+ * @method integer getOffset() 获取查询结果的偏移量
+ * @method void setOffset(integer $Offset) 设置查询结果的偏移量
  */
 class DescribeSourceAssetRequest extends AbstractModel
 {
@@ -46,7 +46,7 @@ class DescribeSourceAssetRequest extends AbstractModel
     public $InsType;
 
     /**
-     * @var string 是否未分组 1是
+     * @var string ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
      */
     public $ChooseType;
 
@@ -56,22 +56,22 @@ class DescribeSourceAssetRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer 页大小
+     * @var integer 查询单页的最大值；eg：10；则最多返回10条结果
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer 查询结果的偏移量
      */
     public $Offset;
 
     /**
      * @param string $FuzzySearch 模糊查询
      * @param string $InsType 资产类型 1公网 2内网
-     * @param string $ChooseType 是否未分组 1是
+     * @param string $ChooseType ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
      * @param string $Zone 地域
-     * @param integer $Limit 页大小
-     * @param integer $Offset 偏移量
+     * @param integer $Limit 查询单页的最大值；eg：10；则最多返回10条结果
+     * @param integer $Offset 查询结果的偏移量
      */
     function __construct()
     {

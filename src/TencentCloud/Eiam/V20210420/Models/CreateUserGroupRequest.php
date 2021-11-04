@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserGroup请求参数结构体
  *
- * @method string getDisplayName() 获取昵称，长度限制：64个字符。 DisplayName是唯一的。
- * @method void setDisplayName(string $DisplayName) 设置昵称，长度限制：64个字符。 DisplayName是唯一的。
- * @method string getDescription() 获取用户备注，长度限制：512个字符。
- * @method void setDescription(string $Description) 设置用户备注，长度限制：512个字符。
+ * @method string getDisplayName() 获取用户组昵称，长度限制：64个字符。 DisplayName是唯一的。
+ * @method void setDisplayName(string $DisplayName) 设置用户组昵称，长度限制：64个字符。 DisplayName是唯一的。
+ * @method string getDescription() 获取用户组备注，长度限制：512个字符。
+ * @method void setDescription(string $Description) 设置用户组备注，长度限制：512个字符。
  */
 class CreateUserGroupRequest extends AbstractModel
 {
     /**
-     * @var string 昵称，长度限制：64个字符。 DisplayName是唯一的。
+     * @var string 用户组昵称，长度限制：64个字符。 DisplayName是唯一的。
      */
     public $DisplayName;
 
     /**
-     * @var string 用户备注，长度限制：512个字符。
+     * @var string 用户组备注，长度限制：512个字符。
      */
     public $Description;
 
     /**
-     * @param string $DisplayName 昵称，长度限制：64个字符。 DisplayName是唯一的。
-     * @param string $Description 用户备注，长度限制：512个字符。
+     * @param string $DisplayName 用户组昵称，长度限制：64个字符。 DisplayName是唯一的。
+     * @param string $Description 用户组备注，长度限制：512个字符。
      */
     function __construct()
     {

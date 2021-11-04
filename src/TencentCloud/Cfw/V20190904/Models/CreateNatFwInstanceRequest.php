@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置主可用区，为空则选择默认可用区
  * @method string getZoneBak() 获取备可用区，为空则选择默认可用区
  * @method void setZoneBak(string $ZoneBak) 设置备可用区，为空则选择默认可用区
- * @method integer getCrossAZone() 获取异地灾备 1：使用异地灾备；0：不使用异地灾备
- * @method void setCrossAZone(integer $CrossAZone) 设置异地灾备 1：使用异地灾备；0：不使用异地灾备
+ * @method integer getCrossAZone() 获取异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
+ * @method void setCrossAZone(integer $CrossAZone) 设置异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
  */
 class CreateNatFwInstanceRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class CreateNatFwInstanceRequest extends AbstractModel
     public $ZoneBak;
 
     /**
-     * @var integer 异地灾备 1：使用异地灾备；0：不使用异地灾备
+     * @var integer 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
      */
     public $CrossAZone;
 
@@ -87,7 +87,7 @@ class CreateNatFwInstanceRequest extends AbstractModel
      * @param array $NatGwList 接入模式接入的nat网关列表，其中NewModeItems和NatgwList至少传递一种。
      * @param string $Zone 主可用区，为空则选择默认可用区
      * @param string $ZoneBak 备可用区，为空则选择默认可用区
-     * @param integer $CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备
+     * @param integer $CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
      */
     function __construct()
     {

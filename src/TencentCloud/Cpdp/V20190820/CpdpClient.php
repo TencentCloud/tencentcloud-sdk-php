@@ -95,6 +95,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryExchangeRateResponse QueryExchangeRate(Models\QueryExchangeRateRequest $req) 跨境-查询汇率
  * @method Models\QueryInvoiceResponse QueryInvoice(Models\QueryInvoiceRequest $req) 智慧零售-发票查询
  * @method Models\QueryInvoiceV2Response QueryInvoiceV2(Models\QueryInvoiceV2Request $req) 智慧零售-发票查询V2
+ * @method Models\QueryMaliciousRegistrationResponse QueryMaliciousRegistration(Models\QueryMaliciousRegistrationRequest $req) 商户恶意注册接口
  * @method Models\QueryMemberBindResponse QueryMemberBind(Models\QueryMemberBindRequest $req) 会员绑定信息查询。查询标志为“单个会员”的情况下，返回该会员的有效的绑定账户信息。
 查询标志为“全部会员”的情况下，返回市场下的全部的有效的绑定账户信息。查询标志为“单个会员的证件信息”的情况下，返回市场下的指定的会员的留存在电商见证宝系统的证件信息。
  * @method Models\QueryMemberTransactionResponse QueryMemberTransaction(Models\QueryMemberTransactionRequest $req) 会员间交易-不验证。此接口可以实现会员间的余额的交易，实现资金在会员之间流动。
@@ -136,7 +137,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\UnBindAcctResponse UnBindAcct(Models\UnBindAcctRequest $req) 商户解除绑定的提现银行卡
  * @method Models\UnbindRelateAcctResponse UnbindRelateAcct(Models\UnbindRelateAcctRequest $req) 会员解绑提现账户。此接口可以支持会员解除名下的绑定账户关系。
  * @method Models\UnifiedOrderResponse UnifiedOrder(Models\UnifiedOrderRequest $req) 应用需要先调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
- * @method Models\UnifiedTlinxOrderResponse UnifiedTlinxOrder(Models\UnifiedTlinxOrderRequest $req) 云支付Tlinx统一下单接口
+ * @method Models\UnifiedTlinxOrderResponse UnifiedTlinxOrder(Models\UnifiedTlinxOrderRequest $req) 云支付-统一下单接口
  * @method Models\UploadExternalAnchorInfoResponse UploadExternalAnchorInfo(Models\UploadExternalAnchorInfoRequest $req) 灵云-上传主播信息
  * @method Models\UploadTaxListResponse UploadTaxList(Models\UploadTaxListRequest $req) 直播平台-上传代理商完税列表
  * @method Models\UploadTaxPaymentResponse UploadTaxPayment(Models\UploadTaxPaymentRequest $req) 直播平台-上传代理商完税证明

@@ -18,36 +18,33 @@ namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UnifiedTlinxOrder返回参数结构体
+ * QueryMaliciousRegistration返回参数结构体
  *
- * @method string getErrMessage() 获取业务系统返回消息
+ * @method string getErrCode() 获取错误码
+ * @method void setErrCode(string $ErrCode) 设置错误码
+ * @method string getErrMsg() 获取错误消息
+ * @method void setErrMsg(string $ErrMsg) 设置错误消息
+ * @method MerchantRiskInfo getResult() 获取商户风险信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrMessage(string $ErrMessage) 设置业务系统返回消息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrCode() 获取业务系统返回码
- * @method void setErrCode(string $ErrCode) 设置业务系统返回码
- * @method PayOrderResult getResult() 获取统一下单响应对象
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(PayOrderResult $Result) 设置统一下单响应对象
+ * @method void setResult(MerchantRiskInfo $Result) 设置商户风险信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class UnifiedTlinxOrderResponse extends AbstractModel
+class QueryMaliciousRegistrationResponse extends AbstractModel
 {
     /**
-     * @var string 业务系统返回消息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ErrMessage;
-
-    /**
-     * @var string 业务系统返回码
+     * @var string 错误码
      */
     public $ErrCode;
 
     /**
-     * @var PayOrderResult 统一下单响应对象
+     * @var string 错误消息
+     */
+    public $ErrMsg;
+
+    /**
+     * @var MerchantRiskInfo 商户风险信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
@@ -58,10 +55,9 @@ class UnifiedTlinxOrderResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ErrMessage 业务系统返回消息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ErrCode 业务系统返回码
-     * @param PayOrderResult $Result 统一下单响应对象
+     * @param string $ErrCode 错误码
+     * @param string $ErrMsg 错误消息
+     * @param MerchantRiskInfo $Result 商户风险信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -78,16 +74,16 @@ class UnifiedTlinxOrderResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrMessage",$param) and $param["ErrMessage"] !== null) {
-            $this->ErrMessage = $param["ErrMessage"];
-        }
-
         if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
             $this->ErrCode = $param["ErrCode"];
         }
 
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
+        }
+
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new PayOrderResult();
+            $this->Result = new MerchantRiskInfo();
             $this->Result->deserialize($param["Result"]);
         }
 

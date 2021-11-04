@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneList(array $ZoneList) 设置地域集合
  * @method array getData() 获取数据
  * @method void setData(array $Data) 设置数据
- * @method integer getTotal() 获取10
- * @method void setTotal(integer $Total) 设置10
+ * @method integer getTotal() 获取返回数据总数
+ * @method void setTotal(integer $Total) 设置返回数据总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,7 +42,7 @@ class DescribeSourceAssetResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var integer 10
+     * @var integer 返回数据总数
      */
     public $Total;
 
@@ -54,7 +54,7 @@ class DescribeSourceAssetResponse extends AbstractModel
     /**
      * @param array $ZoneList 地域集合
      * @param array $Data 数据
-     * @param integer $Total 10
+     * @param integer $Total 返回数据总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

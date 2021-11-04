@@ -14,36 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EnableReplicaReadonly返回参数结构体
+ * ModifyDBInstanceSpec返回参数结构体
  *
- * @method string getStatus() 获取错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskId() 获取任务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskId(integer $TaskId) 设置任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDealName() 获取订单号。
+ * @method void setDealName(string $DealName) 设置订单号。
+ * @method string getBillId() 获取冻结流水号。
+ * @method void setBillId(string $BillId) 设置冻结流水号。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class EnableReplicaReadonlyResponse extends AbstractModel
+class ModifyDBInstanceSpecResponse extends AbstractModel
 {
     /**
-     * @var string 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 订单号。
      */
-    public $Status;
+    public $DealName;
 
     /**
-     * @var integer 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 冻结流水号。
      */
-    public $TaskId;
+    public $BillId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +45,8 @@ class EnableReplicaReadonlyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 错误：ERROR，正确OK（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DealName 订单号。
+     * @param string $BillId 冻结流水号。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,12 +62,12 @@ class EnableReplicaReadonlyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
         }
 
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("BillId",$param) and $param["BillId"] !== null) {
+            $this->BillId = $param["BillId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceGroupNew请求参数结构体
  *
- * @method string getQueryType() 获取查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
- * @method void setQueryType(string $QueryType) 设置查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
+ * @method string getQueryType() 获取查询类型 网络结构-vpc，业务识别-resource ，资源标签-tag
+ * @method void setQueryType(string $QueryType) 设置查询类型 网络结构-vpc，业务识别-resource ，资源标签-tag
  * @method string getGroupId() 获取资产组id  全部传0
  * @method void setGroupId(string $GroupId) 设置资产组id  全部传0
  * @method string getShowType() 获取all  包含子组 own自己
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeResourceGroupNewRequest extends AbstractModel
 {
     /**
-     * @var string 查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
+     * @var string 查询类型 网络结构-vpc，业务识别-resource ，资源标签-tag
      */
     public $QueryType;
 
@@ -45,7 +45,7 @@ class DescribeResourceGroupNewRequest extends AbstractModel
     public $ShowType;
 
     /**
-     * @param string $QueryType 查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
+     * @param string $QueryType 查询类型 网络结构-vpc，业务识别-resource ，资源标签-tag
      * @param string $GroupId 资产组id  全部传0
      * @param string $ShowType all  包含子组 own自己
      */

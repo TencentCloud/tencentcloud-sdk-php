@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserGroup返回参数结构体
  *
- * @method string getDisplayName() 获取昵称，长度限制：64个字符。 DisplayName不唯一。
+ * @method string getDisplayName() 获取用户组昵称，长度限制：64个字符。 DisplayName不唯一。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisplayName(string $DisplayName) 设置昵称，长度限制：64个字符。 DisplayName不唯一。
+ * @method void setDisplayName(string $DisplayName) 设置用户组昵称，长度限制：64个字符。 DisplayName不唯一。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDescription() 获取用户备注，长度限制：512个字符。
+ * @method string getDescription() 获取用户组备注，长度限制：512个字符。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDescription(string $Description) 设置用户备注，长度限制：512个字符。
+ * @method void setDescription(string $Description) 设置用户组备注，长度限制：512个字符。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserGroupId() 获取用户组ID，是用户组的全局唯一标识。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -38,13 +38,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUserGroupResponse extends AbstractModel
 {
     /**
-     * @var string 昵称，长度限制：64个字符。 DisplayName不唯一。
+     * @var string 用户组昵称，长度限制：64个字符。 DisplayName不唯一。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisplayName;
 
     /**
-     * @var string 用户备注，长度限制：512个字符。
+     * @var string 用户组备注，长度限制：512个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
@@ -61,9 +61,9 @@ class DescribeUserGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DisplayName 昵称，长度限制：64个字符。 DisplayName不唯一。
+     * @param string $DisplayName 用户组昵称，长度限制：64个字符。 DisplayName不唯一。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Description 用户备注，长度限制：512个字符。
+     * @param string $Description 用户组备注，长度限制：512个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserGroupId 用户组ID，是用户组的全局唯一标识。
 注意：此字段可能返回 null，表示取不到有效值。

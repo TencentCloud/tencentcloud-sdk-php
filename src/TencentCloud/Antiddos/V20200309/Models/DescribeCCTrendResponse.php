@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置资源ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMetricName() 获取指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
- * @method void setMetricName(string $MetricName) 设置指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
+ * @method string getMetricName() 获取指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
+ * @method void setMetricName(string $MetricName) 设置指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -87,7 +87,7 @@ class DescribeCCTrendResponse extends AbstractModel
     public $Id;
 
     /**
-     * @var string 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
+     * @var string 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
      */
     public $MetricName;
 
@@ -106,7 +106,7 @@ class DescribeCCTrendResponse extends AbstractModel
      * @param array $Data 值数组
      * @param string $Id 资源ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MetricName 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
+     * @param string $MetricName 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

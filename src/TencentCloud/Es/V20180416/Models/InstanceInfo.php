@@ -176,6 +176,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJdk(string $Jdk) 设置JDK类型，oracle或kona
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocol() 获取集群网络通讯协议
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtocol(string $Protocol) 设置集群网络通讯协议
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecurityGroups() 获取安全组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroups(array $SecurityGroups) 设置安全组id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -486,6 +494,18 @@ class InstanceInfo extends AbstractModel
     public $Jdk;
 
     /**
+     * @var string 集群网络通讯协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Protocol;
+
+    /**
+     * @var array 安全组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroups;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -563,6 +583,10 @@ class InstanceInfo extends AbstractModel
      * @param WebNodeTypeInfo $WebNodeTypeInfo 可视化节点配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Jdk JDK类型，oracle或kona
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Protocol 集群网络通讯协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecurityGroups 安全组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -826,6 +850,14 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("Jdk",$param) and $param["Jdk"] !== null) {
             $this->Jdk = $param["Jdk"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
+            $this->SecurityGroups = $param["SecurityGroups"];
         }
     }
 }

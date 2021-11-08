@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCfsConfig(CfsConfig $CfsConfig) 设置文件系统配置入参，用于云函数绑定CFS文件系统
  * @method integer getInitTimeout() 获取函数初始化执行超时时间
  * @method void setInitTimeout(integer $InitTimeout) 设置函数初始化执行超时时间
+ * @method ProtocolParams getProtocolParams() 获取HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
+ * @method void setProtocolParams(ProtocolParams $ProtocolParams) 设置HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $InitTimeout;
 
     /**
+     * @var ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
+     */
+    public $ProtocolParams;
+
+    /**
      * @param string $FunctionName 要修改的函数名称
      * @param string $Description 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
      * @param integer $MemorySize 函数运行时内存大小，默认为 128 M，可选范64M、128 M-3072 M，以 128MB 为阶梯。
@@ -168,6 +175,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param PublicNetConfigIn $PublicNetConfig 公网访问配置
      * @param CfsConfig $CfsConfig 文件系统配置入参，用于云函数绑定CFS文件系统
      * @param integer $InitTimeout 函数初始化执行超时时间
+     * @param ProtocolParams $ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
      */
     function __construct()
     {
@@ -262,6 +270,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
 
         if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
             $this->InitTimeout = $param["InitTimeout"];
+        }
+
+        if (array_key_exists("ProtocolParams",$param) and $param["ProtocolParams"] !== null) {
+            $this->ProtocolParams = new ProtocolParams();
+            $this->ProtocolParams->deserialize($param["ProtocolParams"]);
         }
     }
 }

@@ -35,12 +35,7 @@ use TencentCloud\Dts\V20180330\Models as Models;
 
 如果是金融区链路, 请使用域名: dts.ap-shenzhen-fsi.tencentcloudapi.com
  * @method Models\CreateSubscribeResponse CreateSubscribe(Models\CreateSubscribeRequest $req) 本接口(CreateSubscribe)用于创建一个数据订阅实例。
- * @method Models\CreateSyncCheckJobResponse CreateSyncCheckJob(Models\CreateSyncCheckJobRequest $req) 在调用 StartSyncJob 接口启动灾备同步前, 必须调用本接口创建校验, 且校验成功后才能开始同步数据. 校验的结果可以通过 DescribeSyncCheckJob 查看.
-校验成功后才能启动同步.
- * @method Models\CreateSyncJobResponse CreateSyncJob(Models\CreateSyncJobRequest $req) 本接口(CreateSyncJob)用于创建灾备同步任务。
-创建同步任务后，可以通过 CreateSyncCheckJob 接口发起校验任务。校验成功后才可以通过 StartSyncJob 接口启动同步任务。
  * @method Models\DeleteMigrateJobResponse DeleteMigrateJob(Models\DeleteMigrateJobRequest $req) 本接口（DeleteMigrationJob）用于删除数据迁移任务。当通过DescribeMigrateJobs接口查询到任务的状态为：检验中（status=3）、运行中（status=7）、准备完成（status=8）、撤销中（status=11）或者完成中（status=12）时，不允许删除任务。
- * @method Models\DeleteSyncJobResponse DeleteSyncJob(Models\DeleteSyncJobRequest $req) 删除灾备同步任务 （运行中的同步任务不能删除）。
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) 本接口（DescribeAsyncRequestInfo）用于查询任务执行结果
  * @method Models\DescribeMigrateCheckJobResponse DescribeMigrateCheckJob(Models\DescribeMigrateCheckJobRequest $req) 本接口用于创建校验后,获取校验的结果. 能查询到当前校验的状态和进度. 
 若通过校验, 则可调用'StartMigrateJob' 开始迁移.
@@ -56,7 +51,6 @@ use TencentCloud\Dts\V20180330\Models as Models;
 校验任务需要大概约30秒，当返回的 Status 不为 finished 时表示尚未校验完成，需要轮询该接口。
 如果 Status=finished 且 CheckFlag=1 时表示校验成功。
 如果 Status=finished 且 CheckFlag !=1 时表示校验失败。
- * @method Models\DescribeSyncJobsResponse DescribeSyncJobs(Models\DescribeSyncJobsRequest $req) 查询在迁移平台发起的灾备同步任务
  * @method Models\IsolateSubscribeResponse IsolateSubscribe(Models\IsolateSubscribeRequest $req) 本接口（IsolateSubscribe）用于隔离小时计费的订阅实例。调用后，订阅实例将不能使用，同时停止计费。
  * @method Models\ModifyMigrateJobResponse ModifyMigrateJob(Models\ModifyMigrateJobRequest $req) 本接口（ModifyMigrateJob）用于修改数据迁移任务。
 当迁移任务处于下述状态时，允许调用本接口修改迁移任务：迁移创建中（status=1）、 校验成功(status=4)、校验失败(status=5)、迁移失败(status=10)。但源实例、目标实例类型和目标实例地域不允许修改。
@@ -74,10 +68,8 @@ use TencentCloud\Dts\V20180330\Models as Models;
  * @method Models\ResetSubscribeResponse ResetSubscribe(Models\ResetSubscribeRequest $req) 本接口(ResetSubscribe)用于重置数据订阅实例，已经激活的数据订阅实例，重置后可以使用ActivateSubscribe接口绑定其他的数据库实例
  * @method Models\StartMigrateJobResponse StartMigrateJob(Models\StartMigrateJobRequest $req) 本接口（StartMigrationJob）用于启动迁移任务。非定时迁移任务会在调用后立即开始迁移，定时任务则会开始倒计时。
 调用此接口前，请务必先使用CreateMigrateCheckJob校验数据迁移任务，并通过DescribeMigrateJobs接口查询到任务状态为校验通过（status=4）时，才能启动数据迁移任务。
- * @method Models\StartSyncJobResponse StartSyncJob(Models\StartSyncJobRequest $req) 创建的灾备同步任务在通过 CreateSyncCheckJob 和 DescribeSyncCheckJob 确定校验成功后，可以调用该接口启动同步
  * @method Models\StopMigrateJobResponse StopMigrateJob(Models\StopMigrateJobRequest $req) 本接口（StopMigrateJob）用于撤销数据迁移任务。
 在迁移过程中允许调用该接口撤销迁移, 撤销迁移的任务会失败。通过DescribeMigrateJobs接口查询到任务状态为运行中（status=7）或准备完成（status=8）时，才能撤销数据迁移任务。
- * @method Models\SwitchDrToMasterResponse SwitchDrToMaster(Models\SwitchDrToMasterRequest $req) 将灾备升级为主实例，停止从原来所属主实例的同步，断开主备关系。
  */
 
 class DtsClient extends AbstractClient

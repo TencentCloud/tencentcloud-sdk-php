@@ -123,7 +123,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\RefundResponse Refund(Models\RefundRequest $req) 如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。 
  * @method Models\RefundMemberTransactionResponse RefundMemberTransaction(Models\RefundMemberTransactionRequest $req) 会员间交易退款
  * @method Models\RefundOrderResponse RefundOrder(Models\RefundOrderRequest $req) 云鉴-消费订单退款的接口
- * @method Models\RefundTlinxOrderResponse RefundTlinxOrder(Models\RefundTlinxOrderRequest $req) 云支付Tlinx退款接口
+ * @method Models\RefundTlinxOrderResponse RefundTlinxOrder(Models\RefundTlinxOrderRequest $req) 云支付订单退款接口
  * @method Models\RegisterBehaviorResponse RegisterBehavior(Models\RegisterBehaviorRequest $req) 商户查询是否签约和签约行为上报
  * @method Models\RegisterBillResponse RegisterBill(Models\RegisterBillRequest $req) 登记挂账(支持撤销)
  * @method Models\RegisterBillSupportWithdrawResponse RegisterBillSupportWithdraw(Models\RegisterBillSupportWithdrawRequest $req) 登记挂账(支持撤销)。此接口可实现把不明来账或自有资金等已登记在挂账子账户下的资金调整到普通会员子账户。即通过申请调用此接口，将会减少挂账子账户的资金，调增指定的普通会员子账户的可提现余额及可用余额。此接口不支持把挂账子账户资金清分到功能子账户。

@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsyncRunEnable(string $AsyncRunEnable) 设置是否开启异步属性，TRUE 为开启，FALSE为关闭
  * @method string getTraceEnable() 获取是否开启事件追踪，TRUE 为开启，FALSE为关闭
  * @method void setTraceEnable(string $TraceEnable) 设置是否开启事件追踪，TRUE 为开启，FALSE为关闭
+ * @method string getProtocolType() 获取HTTP函数支持的访问协议。当前支持WebSockets协议，值为WS
+ * @method void setProtocolType(string $ProtocolType) 设置HTTP函数支持的访问协议。当前支持WebSockets协议，值为WS
+ * @method ProtocolParams getProtocolParams() 获取HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
+ * @method void setProtocolParams(ProtocolParams $ProtocolParams) 设置HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -185,6 +189,16 @@ class CreateFunctionRequest extends AbstractModel
     public $TraceEnable;
 
     /**
+     * @var string HTTP函数支持的访问协议。当前支持WebSockets协议，值为WS
+     */
+    public $ProtocolType;
+
+    /**
+     * @var ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
+     */
+    public $ProtocolParams;
+
+    /**
      * @param string $FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      * @param Code $Code 函数代码. 注意：不能同时指定Cos、ZipFile或 DemoId。
      * @param string $Handler 函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式（java 名称格式 包名.类名::方法名），文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
@@ -208,6 +222,8 @@ class CreateFunctionRequest extends AbstractModel
      * @param array $Tags 函数 Tag 参数，以键值对数组形式传入
      * @param string $AsyncRunEnable 是否开启异步属性，TRUE 为开启，FALSE为关闭
      * @param string $TraceEnable 是否开启事件追踪，TRUE 为开启，FALSE为关闭
+     * @param string $ProtocolType HTTP函数支持的访问协议。当前支持WebSockets协议，值为WS
+     * @param ProtocolParams $ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
      */
     function __construct()
     {
@@ -328,6 +344,15 @@ class CreateFunctionRequest extends AbstractModel
 
         if (array_key_exists("TraceEnable",$param) and $param["TraceEnable"] !== null) {
             $this->TraceEnable = $param["TraceEnable"];
+        }
+
+        if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
+            $this->ProtocolType = $param["ProtocolType"];
+        }
+
+        if (array_key_exists("ProtocolParams",$param) and $param["ProtocolParams"] !== null) {
+            $this->ProtocolParams = new ProtocolParams();
+            $this->ProtocolParams->deserialize($param["ProtocolParams"]);
         }
     }
 }

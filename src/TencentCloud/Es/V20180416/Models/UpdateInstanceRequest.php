@@ -82,6 +82,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKibanaConfig(string $KibanaConfig) 设置Kibana配置项（JSON格式字符串）
  * @method WebNodeTypeInfo getWebNodeTypeInfo() 获取可视化节点配置
  * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) 设置可视化节点配置
+ * @method string getSwitchPrivateLink() 获取切换到新网络架构
+ * @method void setSwitchPrivateLink(string $SwitchPrivateLink) 设置切换到新网络架构
+ * @method boolean getEnableCerebro() 获取启用Cerebro
+ * @method void setEnableCerebro(boolean $EnableCerebro) 设置启用Cerebro
+ * @method string getCerebroPublicAccess() 获取Cerebro公网访问状态
+ * @method void setCerebroPublicAccess(string $CerebroPublicAccess) 设置Cerebro公网访问状态
+ * @method string getCerebroPrivateAccess() 获取Cerebro内网访问状态
+ * @method void setCerebroPrivateAccess(string $CerebroPrivateAccess) 设置Cerebro内网访问状态
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -217,6 +225,26 @@ class UpdateInstanceRequest extends AbstractModel
     public $WebNodeTypeInfo;
 
     /**
+     * @var string 切换到新网络架构
+     */
+    public $SwitchPrivateLink;
+
+    /**
+     * @var boolean 启用Cerebro
+     */
+    public $EnableCerebro;
+
+    /**
+     * @var string Cerebro公网访问状态
+     */
+    public $CerebroPublicAccess;
+
+    /**
+     * @var string Cerebro内网访问状态
+     */
+    public $CerebroPrivateAccess;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -248,6 +276,10 @@ class UpdateInstanceRequest extends AbstractModel
      * @param integer $SceneType 场景化模板类型 -1：不启用 1：通用 2：日志 3：搜索
      * @param string $KibanaConfig Kibana配置项（JSON格式字符串）
      * @param WebNodeTypeInfo $WebNodeTypeInfo 可视化节点配置
+     * @param string $SwitchPrivateLink 切换到新网络架构
+     * @param boolean $EnableCerebro 启用Cerebro
+     * @param string $CerebroPublicAccess Cerebro公网访问状态
+     * @param string $CerebroPrivateAccess Cerebro内网访问状态
      */
     function __construct()
     {
@@ -374,6 +406,22 @@ class UpdateInstanceRequest extends AbstractModel
         if (array_key_exists("WebNodeTypeInfo",$param) and $param["WebNodeTypeInfo"] !== null) {
             $this->WebNodeTypeInfo = new WebNodeTypeInfo();
             $this->WebNodeTypeInfo->deserialize($param["WebNodeTypeInfo"]);
+        }
+
+        if (array_key_exists("SwitchPrivateLink",$param) and $param["SwitchPrivateLink"] !== null) {
+            $this->SwitchPrivateLink = $param["SwitchPrivateLink"];
+        }
+
+        if (array_key_exists("EnableCerebro",$param) and $param["EnableCerebro"] !== null) {
+            $this->EnableCerebro = $param["EnableCerebro"];
+        }
+
+        if (array_key_exists("CerebroPublicAccess",$param) and $param["CerebroPublicAccess"] !== null) {
+            $this->CerebroPublicAccess = $param["CerebroPublicAccess"];
+        }
+
+        if (array_key_exists("CerebroPrivateAccess",$param) and $param["CerebroPrivateAccess"] !== null) {
+            $this->CerebroPrivateAccess = $param["CerebroPrivateAccess"];
         }
     }
 }

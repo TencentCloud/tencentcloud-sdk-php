@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDate(string $Date) 设置日期，当需要汇总数据时日期为空
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProxyOrganizationName() 获取渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UsageDetail extends AbstractModel
 {
@@ -48,9 +52,17 @@ class UsageDetail extends AbstractModel
     public $Date;
 
     /**
+     * @var string 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxyOrganizationName;
+
+    /**
      * @param string $ProxyOrganizationOpenId 渠道侧合作企业唯一标识
      * @param integer $Usage 消耗量
      * @param string $Date 日期，当需要汇总数据时日期为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProxyOrganizationName 渠道侧合作企业名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -76,6 +88,10 @@ class UsageDetail extends AbstractModel
 
         if (array_key_exists("Date",$param) and $param["Date"] !== null) {
             $this->Date = $param["Date"];
+        }
+
+        if (array_key_exists("ProxyOrganizationName",$param) and $param["ProxyOrganizationName"] !== null) {
+            $this->ProxyOrganizationName = $param["ProxyOrganizationName"];
         }
     }
 }

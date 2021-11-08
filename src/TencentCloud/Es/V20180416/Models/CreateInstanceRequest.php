@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSceneType(integer $SceneType) 设置场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
  * @method WebNodeTypeInfo getWebNodeTypeInfo() 获取可视化节点配置
  * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) 设置可视化节点配置
+ * @method string getProtocol() 获取创建https集群，默认是http
+ * @method void setProtocol(string $Protocol) 设置创建https集群，默认是http
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -251,6 +253,11 @@ class CreateInstanceRequest extends AbstractModel
     public $WebNodeTypeInfo;
 
     /**
+     * @var string 创建https集群，默认是http
+     */
+    public $Protocol;
+
+    /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      * @param string $VpcId 私有网络ID
@@ -288,6 +295,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param integer $BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      * @param integer $SceneType 场景化模板类型 0：不启用 1：通用 2：日志 3：搜索
      * @param WebNodeTypeInfo $WebNodeTypeInfo 可视化节点配置
+     * @param string $Protocol 创建https集群，默认是http
      */
     function __construct()
     {
@@ -432,6 +440,10 @@ class CreateInstanceRequest extends AbstractModel
         if (array_key_exists("WebNodeTypeInfo",$param) and $param["WebNodeTypeInfo"] !== null) {
             $this->WebNodeTypeInfo = new WebNodeTypeInfo();
             $this->WebNodeTypeInfo->deserialize($param["WebNodeTypeInfo"]);
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

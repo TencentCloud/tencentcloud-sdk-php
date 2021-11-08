@@ -120,6 +120,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTraceEnable(string $TraceEnable) 设置是否开启事件追踪
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocolType() 获取HTTP函数支持的访问协议。当前支持WebSockets协议。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtocolType(string $ProtocolType) 设置HTTP函数支持的访问协议。当前支持WebSockets协议。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ProtocolParams getProtocolParams() 获取HTTP函数配置ProtocolType访问协议，当前协议配置的参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtocolParams(ProtocolParams $ProtocolParams) 设置HTTP函数配置ProtocolType访问协议，当前协议配置的参数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -344,6 +352,18 @@ class GetFunctionResponse extends AbstractModel
     public $TraceEnable;
 
     /**
+     * @var string HTTP函数支持的访问协议。当前支持WebSockets协议。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProtocolType;
+
+    /**
+     * @var ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议配置的参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProtocolParams;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -398,6 +418,10 @@ class GetFunctionResponse extends AbstractModel
      * @param string $AsyncRunEnable 是否开启异步属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TraceEnable 是否开启事件追踪
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProtocolType HTTP函数支持的访问协议。当前支持WebSockets协议。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProtocolParams $ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议配置的参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -607,6 +631,15 @@ class GetFunctionResponse extends AbstractModel
 
         if (array_key_exists("TraceEnable",$param) and $param["TraceEnable"] !== null) {
             $this->TraceEnable = $param["TraceEnable"];
+        }
+
+        if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
+            $this->ProtocolType = $param["ProtocolType"];
+        }
+
+        if (array_key_exists("ProtocolParams",$param) and $param["ProtocolParams"] !== null) {
+            $this->ProtocolParams = new ProtocolParams();
+            $this->ProtocolParams->deserialize($param["ProtocolParams"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -78,6 +78,10 @@ disabled：未启用
 7：南美
 8：非洲
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConfigId() 获取流量包类型id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigId(integer $ConfigId) 设置流量包类型id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrafficPackage extends AbstractModel
 {
@@ -175,6 +179,12 @@ disabled：未启用
     public $Region;
 
     /**
+     * @var integer 流量包类型id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigId;
+
+    /**
      * @param integer $Id 流量包 Id
      * @param string $Type 流量包类型
      * @param integer $Bytes 流量包大小（单位为 Byte）
@@ -203,6 +213,8 @@ disabled：未启用
 6：欧洲
 7：南美
 8：非洲
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConfigId 流量包类型id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -280,6 +292,10 @@ disabled：未启用
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
+            $this->ConfigId = $param["ConfigId"];
         }
     }
 }

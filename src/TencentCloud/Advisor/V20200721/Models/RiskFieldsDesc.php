@@ -34,6 +34,10 @@ string: 字符串类型，例如"aa"
 int: 整形，例如 111
 stringSlice : 字符串数组类型，例如["a", "b"]
 tags: 标签类型, 例如: [{"Key":"kkk","Value":"vvv"},{"Key":"kkk2","Value":"vvv2"}]
+ * @method array getFieldDict() 获取字段值对应字典
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFieldDict(array $FieldDict) 设置字段值对应字典
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskFieldsDesc extends AbstractModel
 {
@@ -57,6 +61,12 @@ tags: 标签类型, 例如: [{"Key":"kkk","Value":"vvv"},{"Key":"kkk2","Value":"
     public $FieldType;
 
     /**
+     * @var array 字段值对应字典
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FieldDict;
+
+    /**
      * @param string $Field 字段ID
      * @param string $FieldName 字段名称
      * @param string $FieldType 字段类型, 
@@ -64,6 +74,8 @@ string: 字符串类型，例如"aa"
 int: 整形，例如 111
 stringSlice : 字符串数组类型，例如["a", "b"]
 tags: 标签类型, 例如: [{"Key":"kkk","Value":"vvv"},{"Key":"kkk2","Value":"vvv2"}]
+     * @param array $FieldDict 字段值对应字典
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -88,6 +100,15 @@ tags: 标签类型, 例如: [{"Key":"kkk","Value":"vvv"},{"Key":"kkk2","Value":"
 
         if (array_key_exists("FieldType",$param) and $param["FieldType"] !== null) {
             $this->FieldType = $param["FieldType"];
+        }
+
+        if (array_key_exists("FieldDict",$param) and $param["FieldDict"] !== null) {
+            $this->FieldDict = [];
+            foreach ($param["FieldDict"] as $key => $value){
+                $obj = new KeyValue();
+                $obj->deserialize($value);
+                array_push($this->FieldDict, $obj);
+            }
         }
     }
 }

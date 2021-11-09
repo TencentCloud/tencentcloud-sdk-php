@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMaliciousRequestWhiteList请求参数结构体
  *
- * @method integer getLimit() 获取分页参数
- * @method void setLimit(integer $Limit) 设置分页参数
- * @method integer getOffset() 获取分页参数
- * @method void setOffset(integer $Offset) 设置分页参数
+ * @method integer getLimit() 获取返回数量，默认为10，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大值为100。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
 
 <li>Domain  - String - 基线名称</li>
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeMaliciousRequestWhiteListRequest extends AbstractModel
 {
     /**
-     * @var integer 分页参数
+     * @var integer 返回数量，默认为10，最大值为100。
      */
     public $Limit;
 
     /**
-     * @var integer 分页参数
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
@@ -51,8 +51,8 @@ class DescribeMaliciousRequestWhiteListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $Limit 分页参数
-     * @param integer $Offset 分页参数
+     * @param integer $Limit 返回数量，默认为10，最大值为100。
+     * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
 
 <li>Domain  - String - 基线名称</li>

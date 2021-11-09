@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20180330\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSyncCheckJob请求参数结构体
+ * DescribeCloudBaseRunOneClickTaskExternal请求参数结构体
  *
- * @method string getJobId() 获取要查询的灾备同步任务ID
- * @method void setJobId(string $JobId) 设置要查询的灾备同步任务ID
+ * @method string getExternalId() 获取外部任务Id 最长64字节
+ * @method void setExternalId(string $ExternalId) 设置外部任务Id 最长64字节
  */
-class DescribeSyncCheckJobRequest extends AbstractModel
+class DescribeCloudBaseRunOneClickTaskExternalRequest extends AbstractModel
 {
     /**
-     * @var string 要查询的灾备同步任务ID
+     * @var string 外部任务Id 最长64字节
      */
-    public $JobId;
+    public $ExternalId;
 
     /**
-     * @param string $JobId 要查询的灾备同步任务ID
+     * @param string $ExternalId 外部任务Id 最长64字节
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeSyncCheckJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
+            $this->ExternalId = $param["ExternalId"];
         }
     }
 }

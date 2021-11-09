@@ -86,6 +86,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribePushTasksResponse DescribePushTasks(Models\DescribePushTasksRequest $req) DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
 接口灰度中，暂未全量开放，敬请期待。
  * @method Models\DescribeReportDataResponse DescribeReportData(Models\DescribeReportDataRequest $req) DescribeReportData 用于查询域名/项目维度的日/周/月报表数据。
+ * @method Models\DescribeScdnBotDataResponse DescribeScdnBotData(Models\DescribeScdnBotDataRequest $req) 获取BOT统计数据列表
  * @method Models\DescribeScdnBotRecordsResponse DescribeScdnBotRecords(Models\DescribeScdnBotRecordsRequest $req) 查询BOT会话记录列表
  * @method Models\DescribeScdnConfigResponse DescribeScdnConfig(Models\DescribeScdnConfigRequest $req) DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
  * @method Models\DescribeScdnIpStrategyResponse DescribeScdnIpStrategy(Models\DescribeScdnIpStrategyRequest $req) 查询在SCDN IP安全策略

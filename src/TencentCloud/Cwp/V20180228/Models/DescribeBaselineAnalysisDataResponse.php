@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestScanTime(string $LatestScanTime) 设置最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsGlobal() 获取是否全部服务器
+ * @method integer getIsGlobal() 获取是否全部服务器：1-是 0-否
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsGlobal(integer $IsGlobal) 设置是否全部服务器
+ * @method void setIsGlobal(integer $IsGlobal) 设置是否全部服务器：1-是 0-否
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanHostCount() 获取服务器总数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,7 +52,7 @@ class DescribeBaselineAnalysisDataResponse extends AbstractModel
     public $LatestScanTime;
 
     /**
-     * @var integer 是否全部服务器
+     * @var integer 是否全部服务器：1-是 0-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsGlobal;
@@ -83,7 +83,7 @@ class DescribeBaselineAnalysisDataResponse extends AbstractModel
     /**
      * @param string $LatestScanTime 最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsGlobal 是否全部服务器
+     * @param integer $IsGlobal 是否全部服务器：1-是 0-否
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanHostCount 服务器总数
 注意：此字段可能返回 null，表示取不到有效值。

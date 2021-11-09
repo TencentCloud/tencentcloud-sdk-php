@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 与ImageUrl同时存在时优先使用ImageUrl字段。
  * @method void setImageBase64(string $ImageBase64) 设置图片经过base64编码的内容。最大不超过1M，分辨率在25万到100万之间。 
 与ImageUrl同时存在时优先使用ImageUrl字段。
+ * @method integer getNeedLemma() 获取是否需要百科信息 1：是，0: 否，默认是0
+ * @method void setNeedLemma(integer $NeedLemma) 设置是否需要百科信息 1：是，0: 否，默认是0
  */
 class DetectProductBetaRequest extends AbstractModel
 {
@@ -44,10 +46,16 @@ class DetectProductBetaRequest extends AbstractModel
     public $ImageBase64;
 
     /**
+     * @var integer 是否需要百科信息 1：是，0: 否，默认是0
+     */
+    public $NeedLemma;
+
+    /**
      * @param string $ImageUrl 图片限制：内测版仅支持jpg、jpeg，图片大小不超过1M，分辨率在25万到100万之间。 
 建议先对图片进行压缩，以便提升处理速度。
      * @param string $ImageBase64 图片经过base64编码的内容。最大不超过1M，分辨率在25万到100万之间。 
 与ImageUrl同时存在时优先使用ImageUrl字段。
+     * @param integer $NeedLemma 是否需要百科信息 1：是，0: 否，默认是0
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ class DetectProductBetaRequest extends AbstractModel
 
         if (array_key_exists("ImageBase64",$param) and $param["ImageBase64"] !== null) {
             $this->ImageBase64 = $param["ImageBase64"];
+        }
+
+        if (array_key_exists("NeedLemma",$param) and $param["NeedLemma"] !== null) {
+            $this->NeedLemma = $param["NeedLemma"];
         }
     }
 }

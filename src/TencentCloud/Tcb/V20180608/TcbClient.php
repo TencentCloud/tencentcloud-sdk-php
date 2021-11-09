@@ -48,11 +48,13 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeCloudBaseProjectVersionListResponse DescribeCloudBaseProjectVersionList(Models\DescribeCloudBaseProjectVersionListRequest $req) 云项目部署列表
  * @method Models\DescribeCloudBaseRunAllVpcsResponse DescribeCloudBaseRunAllVpcs(Models\DescribeCloudBaseRunAllVpcsRequest $req) 查询环境下所有的vpc列表
  * @method Models\DescribeCloudBaseRunConfForGateWayResponse DescribeCloudBaseRunConfForGateWay(Models\DescribeCloudBaseRunConfForGateWayRequest $req) 独立网关中拉取云托管服务对应的配置信息
+ * @method Models\DescribeCloudBaseRunOneClickTaskExternalResponse DescribeCloudBaseRunOneClickTaskExternal(Models\DescribeCloudBaseRunOneClickTaskExternalRequest $req) 查询一键部署任务 （特定接口：外部查询使用）
  * @method Models\DescribeCloudBaseRunOperationTypesResponse DescribeCloudBaseRunOperationTypes(Models\DescribeCloudBaseRunOperationTypesRequest $req) 查询服务、版本和操作类型
  * @method Models\DescribeCloudBaseRunPodListResponse DescribeCloudBaseRunPodList(Models\DescribeCloudBaseRunPodListRequest $req) 查询云应用服务版本容器列表
  * @method Models\DescribeCloudBaseRunResourceResponse DescribeCloudBaseRunResource(Models\DescribeCloudBaseRunResourceRequest $req) 查看容器托管的集群状态
  * @method Models\DescribeCloudBaseRunResourceForExtendResponse DescribeCloudBaseRunResourceForExtend(Models\DescribeCloudBaseRunResourceForExtendRequest $req) 查看容器托管的集群状态扩展使用
  * @method Models\DescribeCloudBaseRunServerResponse DescribeCloudBaseRunServer(Models\DescribeCloudBaseRunServerRequest $req) 查询单个服务的详情，版本以及详情
+ * @method Models\DescribeCloudBaseRunServerDomainNameResponse DescribeCloudBaseRunServerDomainName(Models\DescribeCloudBaseRunServerDomainNameRequest $req) 查询微信云托管服务域名
  * @method Models\DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersion(Models\DescribeCloudBaseRunServerVersionRequest $req) 查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
  * @method Models\DescribeCloudBaseRunVersionResponse DescribeCloudBaseRunVersion(Models\DescribeCloudBaseRunVersionRequest $req) 查询服务版本详情(新)
  * @method Models\DescribeCloudBaseRunVersionRsByConditionResponse DescribeCloudBaseRunVersionRsByCondition(Models\DescribeCloudBaseRunVersionRsByConditionRequest $req) DescribeCloudBaseRunVersionRsByCondition 获取云托管详情

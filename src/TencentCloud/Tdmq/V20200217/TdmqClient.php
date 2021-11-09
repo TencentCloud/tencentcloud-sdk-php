@@ -93,6 +93,8 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\ResetMsgSubOffsetByTimestampResponse ResetMsgSubOffsetByTimestamp(Models\ResetMsgSubOffsetByTimestampRequest $req) 根据时间戳进行消息回溯，精确到毫秒
  * @method Models\RewindCmqQueueResponse RewindCmqQueue(Models\RewindCmqQueueRequest $req) 回溯cmq队列
  * @method Models\SendBatchMessagesResponse SendBatchMessages(Models\SendBatchMessagesRequest $req) 批量发送消息
+
+注意：TDMQ 批量发送消息的接口是在 TDMQ-HTTP 的服务侧将消息打包为一个 Batch，然后将该 Batch 在服务内部当作一次 TCP 请求发送出去。所以在使用过程中，用户还是按照单条消息发送的逻辑，每一条消息是一个独立的 HTTP 的请求，在 TDMQ-HTTP 的服务内部，会将多个 HTTP 的请求聚合为一个 Batch 发送到服务端。即，批量发送消息在使用上与发送单条消息是一致的，batch 的聚合是在 TDMQ-HTTP 的服务内部完成的。
  * @method Models\SendCmqMsgResponse SendCmqMsg(Models\SendCmqMsgRequest $req) 发送cmq消息
  * @method Models\SendMessagesResponse SendMessages(Models\SendMessagesRequest $req) 发送单条消息
  * @method Models\SendMsgResponse SendMsg(Models\SendMsgRequest $req) 此接口仅用于测试发生消息，不能作为现网正式生产使用

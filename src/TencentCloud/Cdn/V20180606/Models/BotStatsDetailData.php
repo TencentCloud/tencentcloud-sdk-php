@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cam\V20190116\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AddUserToGroup请求参数结构体
+ * BOT统计结果数据详细数据
  *
- * @method array getInfo() 获取添加的子用户 UIN/UID 和用户组 ID 关联关系
- * @method void setInfo(array $Info) 设置添加的子用户 UIN/UID 和用户组 ID 关联关系
+ * @method string getTime() 获取时间
+ * @method void setTime(string $Time) 设置时间
+ * @method integer getValue() 获取数据值
+ * @method void setValue(integer $Value) 设置数据值
  */
-class AddUserToGroupRequest extends AbstractModel
+class BotStatsDetailData extends AbstractModel
 {
     /**
-     * @var array 添加的子用户 UIN/UID 和用户组 ID 关联关系
+     * @var string 时间
      */
-    public $Info;
+    public $Time;
 
     /**
-     * @param array $Info 添加的子用户 UIN/UID 和用户组 ID 关联关系
+     * @var integer 数据值
+     */
+    public $Value;
+
+    /**
+     * @param string $Time 时间
+     * @param integer $Value 数据值
      */
     function __construct()
     {
@@ -46,13 +54,12 @@ class AddUserToGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
-            $this->Info = [];
-            foreach ($param["Info"] as $key => $value){
-                $obj = new GroupIdOfUidInfo();
-                $obj->deserialize($value);
-                array_push($this->Info, $obj);
-            }
+        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
+            $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 平台信息。
  *
- * @method string getPlatform() 获取平台名称。
- * @method void setPlatform(string $Platform) 设置平台名称。
+ * @method string getPlatform() 获取平台标识。
+ * @method void setPlatform(string $Platform) 设置平台标识。
  * @method string getDescription() 获取平台描述。
  * @method void setDescription(string $Description) 设置平台描述。
  * @method integer getVodSubAppId() 获取云点播子应用 Id。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class PlatformInfo extends AbstractModel
 {
     /**
-     * @var string 平台名称。
+     * @var string 平台标识。
      */
     public $Platform;
 
@@ -82,7 +82,7 @@ class PlatformInfo extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param string $Platform 平台名称。
+     * @param string $Platform 平台标识。
      * @param string $Description 平台描述。
      * @param integer $VodSubAppId 云点播子应用 Id。
      * @param string $LicenseId 平台绑定的 license Id。

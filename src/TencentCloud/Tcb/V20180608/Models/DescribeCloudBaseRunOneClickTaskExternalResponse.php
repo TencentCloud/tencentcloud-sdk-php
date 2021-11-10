@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getExternalId() 获取外部任务Id
  * @method void setExternalId(string $ExternalId) 设置外部任务Id
- * @method string getEnvId() 获取环境Id
- * @method void setEnvId(string $EnvId) 设置环境Id
+ * @method string getEnvId() 获取弃用
+ * @method void setEnvId(string $EnvId) 设置弃用
  * @method string getUserUin() 获取用户uin
  * @method void setUserUin(string $UserUin) 设置用户uin
  * @method string getServerName() 获取服务名
@@ -52,6 +52,8 @@ failed
 finished
  * @method string getFailReason() 获取失败原因
  * @method void setFailReason(string $FailReason) 设置失败原因
+ * @method string getUserEnvId() 获取用户envId
+ * @method void setUserEnvId(string $UserEnvId) 设置用户envId
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,7 +65,7 @@ class DescribeCloudBaseRunOneClickTaskExternalResponse extends AbstractModel
     public $ExternalId;
 
     /**
-     * @var string 环境Id
+     * @var string 弃用
      */
     public $EnvId;
 
@@ -110,13 +112,18 @@ finished
     public $FailReason;
 
     /**
+     * @var string 用户envId
+     */
+    public $UserEnvId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $ExternalId 外部任务Id
-     * @param string $EnvId 环境Id
+     * @param string $EnvId 弃用
      * @param string $UserUin 用户uin
      * @param string $ServerName 服务名
      * @param string $VersionName 版本名
@@ -131,6 +138,7 @@ stopped
 failed
 finished
      * @param string $FailReason 失败原因
+     * @param string $UserEnvId 用户envId
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -180,6 +188,10 @@ finished
 
         if (array_key_exists("FailReason",$param) and $param["FailReason"] !== null) {
             $this->FailReason = $param["FailReason"];
+        }
+
+        if (array_key_exists("UserEnvId",$param) and $param["UserEnvId"] !== null) {
+            $this->UserEnvId = $param["UserEnvId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

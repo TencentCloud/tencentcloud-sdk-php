@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContext(string $Context) 设置请求上下文, 用作查询游标
  * @method boolean getListover() 获取拉取结果是否已经结束
  * @method void setListover(boolean $Listover) 设置拉取结果是否已经结束
- * @method integer getTotal() 获取拉取结果数量
- * @method void setTotal(integer $Total) 设置拉取结果数量
+ * @method integer getTotal() 获取内部结果数量，并不等同于事件总数。
+ * @method void setTotal(integer $Total) 设置内部结果数量，并不等同于事件总数。
  * @method string getVideoURL() 获取视频播放URL
  * @method void setVideoURL(string $VideoURL) 设置视频播放URL
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,7 +51,7 @@ class DescribeCloudStorageEventsResponse extends AbstractModel
     public $Listover;
 
     /**
-     * @var integer 拉取结果数量
+     * @var integer 内部结果数量，并不等同于事件总数。
      */
     public $Total;
 
@@ -69,7 +69,7 @@ class DescribeCloudStorageEventsResponse extends AbstractModel
      * @param array $Events 云存事件列表
      * @param string $Context 请求上下文, 用作查询游标
      * @param boolean $Listover 拉取结果是否已经结束
-     * @param integer $Total 拉取结果数量
+     * @param integer $Total 内部结果数量，并不等同于事件总数。
      * @param string $VideoURL 视频播放URL
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取实例ID，形如：postgres-6bwgamo3。
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如：postgres-6bwgamo3。
- * @method integer getMemory() 获取升级后的实例内存大小，单位GiB。
- * @method void setMemory(integer $Memory) 设置升级后的实例内存大小，单位GiB。
- * @method integer getStorage() 获取升级后的实例磁盘大小，单位GiB。
- * @method void setStorage(integer $Storage) 设置升级后的实例磁盘大小，单位GiB。
+ * @method integer getMemory() 获取修改后的实例内存大小，单位GiB。
+ * @method void setMemory(integer $Memory) 设置修改后的实例内存大小，单位GiB。
+ * @method integer getStorage() 获取修改后的实例磁盘大小，单位GiB。
+ * @method void setStorage(integer $Storage) 设置修改后的实例磁盘大小，单位GiB。
  * @method integer getAutoVoucher() 获取是否自动使用代金券,1是,0否，默认不使用。
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动使用代金券,1是,0否，默认不使用。
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
@@ -47,12 +47,12 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var integer 升级后的实例内存大小，单位GiB。
+     * @var integer 修改后的实例内存大小，单位GiB。
      */
     public $Memory;
 
     /**
-     * @var integer 升级后的实例磁盘大小，单位GiB。
+     * @var integer 修改后的实例磁盘大小，单位GiB。
      */
     public $Storage;
 
@@ -88,8 +88,8 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
 
     /**
      * @param string $DBInstanceId 实例ID，形如：postgres-6bwgamo3。
-     * @param integer $Memory 升级后的实例内存大小，单位GiB。
-     * @param integer $Storage 升级后的实例磁盘大小，单位GiB。
+     * @param integer $Memory 修改后的实例内存大小，单位GiB。
+     * @param integer $Storage 修改后的实例磁盘大小，单位GiB。
      * @param integer $AutoVoucher 是否自动使用代金券,1是,0否，默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      * @param integer $ActivityId 活动ID。

@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionType(string $SessionType) 设置监听器的会话类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEndPort() 获取端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndPort(integer $EndPort) 设置端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Listener extends AbstractModel
 {
@@ -114,6 +118,12 @@ class Listener extends AbstractModel
     public $SessionType;
 
     /**
+     * @var integer 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndPort;
+
+    /**
      * @param string $ListenerId 负载均衡监听器 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 监听器协议
@@ -131,6 +141,8 @@ class Listener extends AbstractModel
      * @param string $CreateTime 监听器的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionType 监听器的会话类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EndPort 端口段结束端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -181,6 +193,10 @@ class Listener extends AbstractModel
 
         if (array_key_exists("SessionType",$param) and $param["SessionType"] !== null) {
             $this->SessionType = $param["SessionType"];
+        }
+
+        if (array_key_exists("EndPort",$param) and $param["EndPort"] !== null) {
+            $this->EndPort = $param["EndPort"];
         }
     }
 }

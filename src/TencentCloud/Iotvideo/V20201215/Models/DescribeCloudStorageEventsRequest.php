@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(string $EventId) 设置事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
  * @method string getUserId() 获取用户ID
  * @method void setUserId(string $UserId) 设置用户ID
+ * @method integer getChannelId() 获取通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+ * @method void setChannelId(integer $ChannelId) 设置通道ID 非NVR设备则不填 NVR设备则必填 默认为无
  */
 class DescribeCloudStorageEventsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeCloudStorageEventsRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     */
+    public $ChannelId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param integer $StartTime 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
@@ -88,6 +95,7 @@ class DescribeCloudStorageEventsRequest extends AbstractModel
      * @param integer $Size 单次获取的历史数据项目的最大数量, 缺省10
      * @param string $EventId 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
      * @param string $UserId 用户ID
+     * @param integer $ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeCloudStorageEventsRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
     }
 }

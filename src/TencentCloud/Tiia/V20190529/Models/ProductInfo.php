@@ -45,6 +45,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScore(float $Score) 设置输入图片中的主体物品和输出结果的相似度。分值越大，输出结果与输入图片是同款的可能性越高。
  * @method string getImage() 获取搜索到的商品配图URL。
  * @method void setImage(string $Image) 设置搜索到的商品配图URL。
+ * @method array getLemmaInfoList() 获取百科词条列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLemmaInfoList(array $LemmaInfoList) 设置百科词条列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductInfo extends AbstractModel
 {
@@ -93,6 +97,12 @@ class ProductInfo extends AbstractModel
     public $Image;
 
     /**
+     * @var array 百科词条列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LemmaInfoList;
+
+    /**
      * @param integer $FindSKU 1表示找到同款商品，以下字段为同款商品信息； 
 0表示未找到同款商品， 具体商品信息为空（参考价格、名称、品牌等），仅提供商品类目和参考图片（商品库中找到的最相似图片，供参考）。  
 是否找到同款的判断依据为Score分值，分值越大则同款的可能性越大。
@@ -105,6 +115,8 @@ class ProductInfo extends AbstractModel
 当类别为“非商品”时，除Location、Score和本字段之外的商品信息为空。
      * @param float $Score 输入图片中的主体物品和输出结果的相似度。分值越大，输出结果与输入图片是同款的可能性越高。
      * @param string $Image 搜索到的商品配图URL。
+     * @param array $LemmaInfoList 百科词条列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -150,6 +162,15 @@ class ProductInfo extends AbstractModel
 
         if (array_key_exists("Image",$param) and $param["Image"] !== null) {
             $this->Image = $param["Image"];
+        }
+
+        if (array_key_exists("LemmaInfoList",$param) and $param["LemmaInfoList"] !== null) {
+            $this->LemmaInfoList = [];
+            foreach ($param["LemmaInfoList"] as $key => $value){
+                $obj = new LemmaInfo();
+                $obj->deserialize($value);
+                array_push($this->LemmaInfoList, $obj);
+            }
         }
     }
 }

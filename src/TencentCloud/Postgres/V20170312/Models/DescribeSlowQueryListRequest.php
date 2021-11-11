@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
  * @method string getStartTime() 获取查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
  * @method void setStartTime(string $StartTime) 设置查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
- * @method string getEndTime() 获取查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
- * @method void setEndTime(string $EndTime) 设置查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+ * @method string getEndTime() 获取查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+ * @method void setEndTime(string $EndTime) 设置查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
  * @method string getDatabaseName() 获取根据数据库名进行筛选，可以为空。
  * @method void setDatabaseName(string $DatabaseName) 设置根据数据库名进行筛选，可以为空。
  * @method string getOrderByType() 获取排序类型。升序asc、降序desc。默认为desc。
@@ -50,7 +50,7 @@ class DescribeSlowQueryListRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * @var string 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
      */
     public $EndTime;
 
@@ -82,7 +82,7 @@ class DescribeSlowQueryListRequest extends AbstractModel
     /**
      * @param string $DBInstanceId 实例ID。
      * @param string $StartTime 查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
-     * @param string $EndTime 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * @param string $EndTime 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
      * @param string $DatabaseName 根据数据库名进行筛选，可以为空。
      * @param string $OrderByType 排序类型。升序asc、降序desc。默认为desc。
      * @param string $OrderBy 排序维度。 可选参数，取值范围[SessionStartTime,Duration]，默认为SessionStartTime。

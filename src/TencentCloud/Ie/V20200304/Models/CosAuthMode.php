@@ -21,12 +21,12 @@ use TencentCloud\Common\AbstractModel;
  * 任务视频cos授权信息
  *
  * @method integer getType() 获取授权类型，可选值： 
-0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
+0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271和100012301793），否则会读写cos失败； 
 1：key托管，把cos的账号id和key托管于本服务，本服务会提供一个托管id； 
 3：临时key授权。
 注意：目前智能编辑还不支持临时key授权；画质重生目前只支持bucket授权
  * @method void setType(integer $Type) 设置授权类型，可选值： 
-0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
+0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271和100012301793），否则会读写cos失败； 
 1：key托管，把cos的账号id和key托管于本服务，本服务会提供一个托管id； 
 3：临时key授权。
 注意：目前智能编辑还不支持临时key授权；画质重生目前只支持bucket授权
@@ -43,7 +43,7 @@ class CosAuthMode extends AbstractModel
 {
     /**
      * @var integer 授权类型，可选值： 
-0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
+0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271和100012301793），否则会读写cos失败； 
 1：key托管，把cos的账号id和key托管于本服务，本服务会提供一个托管id； 
 3：临时key授权。
 注意：目前智能编辑还不支持临时key授权；画质重生目前只支持bucket授权
@@ -72,7 +72,7 @@ class CosAuthMode extends AbstractModel
 
     /**
      * @param integer $Type 授权类型，可选值： 
-0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271），否则会读写cos失败； 
+0：bucket授权，需要将对应bucket授权给本服务帐号（3020447271和100012301793），否则会读写cos失败； 
 1：key托管，把cos的账号id和key托管于本服务，本服务会提供一个托管id； 
 3：临时key授权。
 注意：目前智能编辑还不支持临时key授权；画质重生目前只支持bucket授权

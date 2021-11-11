@@ -28,9 +28,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置参数名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getParamValueType() 获取参数值类型：integer（整型）、real（浮点型）、bool（布尔型）、enum（枚举类型）、mutil_enum（枚举类型、支持多选）
+ * @method string getParamValueType() 获取参数值类型：integer（整型）、real（浮点型）、bool（布尔型）、enum（枚举类型）、mutil_enum（枚举类型、支持多选）。
+当参数类型为integer（整型）、real（浮点型）时，参数的取值范围根据返回值的Max、Min确定； 
+当参数类型为bool（布尔型）时，参数设置值取值范围是true | false； 
+当参数类型为enum（枚举类型）、mutil_enum（多枚举类型）时，参数的取值范围由返回值中的EnumValue确定。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParamValueType(string $ParamValueType) 设置参数值类型：integer（整型）、real（浮点型）、bool（布尔型）、enum（枚举类型）、mutil_enum（枚举类型、支持多选）
+ * @method void setParamValueType(string $ParamValueType) 设置参数值类型：integer（整型）、real（浮点型）、bool（布尔型）、enum（枚举类型）、mutil_enum（枚举类型、支持多选）。
+当参数类型为integer（整型）、real（浮点型）时，参数的取值范围根据返回值的Max、Min确定； 
+当参数类型为bool（布尔型）时，参数设置值取值范围是true | false； 
+当参数类型为enum（枚举类型）、mutil_enum（多枚举类型）时，参数的取值范围由返回值中的EnumValue确定。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取参数值 单位。参数没有单位是，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,7 +110,10 @@ class ParamInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var string 参数值类型：integer（整型）、real（浮点型）、bool（布尔型）、enum（枚举类型）、mutil_enum（枚举类型、支持多选）
+     * @var string 参数值类型：integer（整型）、real（浮点型）、bool（布尔型）、enum（枚举类型）、mutil_enum（枚举类型、支持多选）。
+当参数类型为integer（整型）、real（浮点型）时，参数的取值范围根据返回值的Max、Min确定； 
+当参数类型为bool（布尔型）时，参数设置值取值范围是true | false； 
+当参数类型为enum（枚举类型）、mutil_enum（多枚举类型）时，参数的取值范围由返回值中的EnumValue确定。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamValueType;
@@ -198,7 +207,10 @@ class ParamInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 参数名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ParamValueType 参数值类型：integer（整型）、real（浮点型）、bool（布尔型）、enum（枚举类型）、mutil_enum（枚举类型、支持多选）
+     * @param string $ParamValueType 参数值类型：integer（整型）、real（浮点型）、bool（布尔型）、enum（枚举类型）、mutil_enum（枚举类型、支持多选）。
+当参数类型为integer（整型）、real（浮点型）时，参数的取值范围根据返回值的Max、Min确定； 
+当参数类型为bool（布尔型）时，参数设置值取值范围是true | false； 
+当参数类型为enum（枚举类型）、mutil_enum（多枚举类型）时，参数的取值范围由返回值中的EnumValue确定。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 参数值 单位。参数没有单位是，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。

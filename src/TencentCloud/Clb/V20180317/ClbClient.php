@@ -98,6 +98,7 @@ use TencentCloud\Clb\V20180317\Models as Models;
  * @method Models\ModifyListenerResponse ModifyListener(Models\ModifyListenerRequest $req) ModifyListener接口用来修改负载均衡监听器的属性，包括监听器名称、健康检查参数、证书信息、转发策略等。本接口不支持传统型负载均衡。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
  * @method Models\ModifyLoadBalancerAttributesResponse ModifyLoadBalancerAttributes(Models\ModifyLoadBalancerAttributesRequest $req) 修改负载均衡实例的属性。支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
+ * @method Models\ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(Models\ModifyLoadBalancerSlaRequest $req) 升、降配接口。支持共享型clb升级到性能保障型clb。支持性能保障型提升等级。支持性能保障降低规格。（不支持性能保障降级到共享型）。
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) ModifyRule 接口用来修改负载均衡七层监听器下的转发规则的各项属性，包括转发路径、健康检查属性、转发策略等。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
  * @method Models\ModifyTargetGroupAttributeResponse ModifyTargetGroupAttribute(Models\ModifyTargetGroupAttributeRequest $req) 修改目标组的名称或者默认端口属性

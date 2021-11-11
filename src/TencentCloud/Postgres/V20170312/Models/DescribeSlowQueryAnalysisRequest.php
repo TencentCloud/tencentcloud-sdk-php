@@ -24,18 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
  * @method string getStartTime() 获取查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
  * @method void setStartTime(string $StartTime) 设置查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
- * @method string getEndTime() 获取查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
- * @method void setEndTime(string $EndTime) 设置查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+ * @method string getEndTime() 获取查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+ * @method void setEndTime(string $EndTime) 设置查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
  * @method string getDatabaseName() 获取根据数据库名进行筛选，可以为空。
  * @method void setDatabaseName(string $DatabaseName) 设置根据数据库名进行筛选，可以为空。
- * @method string getOrderBy() 获取排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。
- * @method void setOrderBy(string $OrderBy) 设置排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。
- * @method string getOrderByType() 获取排序类型。升序asc、降序desc。
- * @method void setOrderByType(string $OrderByType) 设置排序类型。升序asc、降序desc。
- * @method integer getLimit() 获取分页大小。取值范围[1,100]。
- * @method void setLimit(integer $Limit) 设置分页大小。取值范围[1,100]。
- * @method integer getOffset() 获取分页偏移。取值范围[0,INF)。
- * @method void setOffset(integer $Offset) 设置分页偏移。取值范围[0,INF)。
+ * @method string getOrderBy() 获取排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
+ * @method void setOrderBy(string $OrderBy) 设置排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
+ * @method string getOrderByType() 获取排序类型。升序asc、降序desc。默认desc。
+ * @method void setOrderByType(string $OrderByType) 设置排序类型。升序asc、降序desc。默认desc。
+ * @method integer getLimit() 获取分页大小。取值范围[1,100]。默认50。
+ * @method void setLimit(integer $Limit) 设置分页大小。取值范围[1,100]。默认50。
+ * @method integer getOffset() 获取分页偏移。取值范围[0,INF)。默认0。
+ * @method void setOffset(integer $Offset) 设置分页偏移。取值范围[0,INF)。默认0。
  */
 class DescribeSlowQueryAnalysisRequest extends AbstractModel
 {
@@ -50,7 +50,7 @@ class DescribeSlowQueryAnalysisRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * @var string 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
      */
     public $EndTime;
 
@@ -60,34 +60,34 @@ class DescribeSlowQueryAnalysisRequest extends AbstractModel
     public $DatabaseName;
 
     /**
-     * @var string 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。
+     * @var string 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
      */
     public $OrderBy;
 
     /**
-     * @var string 排序类型。升序asc、降序desc。
+     * @var string 排序类型。升序asc、降序desc。默认desc。
      */
     public $OrderByType;
 
     /**
-     * @var integer 分页大小。取值范围[1,100]。
+     * @var integer 分页大小。取值范围[1,100]。默认50。
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移。取值范围[0,INF)。
+     * @var integer 分页偏移。取值范围[0,INF)。默认0。
      */
     public $Offset;
 
     /**
      * @param string $DBInstanceId 实例ID。
      * @param string $StartTime 查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
-     * @param string $EndTime 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * @param string $EndTime 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
      * @param string $DatabaseName 根据数据库名进行筛选，可以为空。
-     * @param string $OrderBy 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。
-     * @param string $OrderByType 排序类型。升序asc、降序desc。
-     * @param integer $Limit 分页大小。取值范围[1,100]。
-     * @param integer $Offset 分页偏移。取值范围[0,INF)。
+     * @param string $OrderBy 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
+     * @param string $OrderByType 排序类型。升序asc、降序desc。默认desc。
+     * @param integer $Limit 分页大小。取值范围[1,100]。默认50。
+     * @param integer $Offset 分页偏移。取值范围[0,INF)。默认0。
      */
     function __construct()
     {

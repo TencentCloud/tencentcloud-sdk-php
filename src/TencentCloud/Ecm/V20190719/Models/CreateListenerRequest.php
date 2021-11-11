@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 分别表示按权重轮询、最小连接数， 默认为 WRR。
  * @method string getSessionType() 获取会话保持类型。不传或传NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
  * @method void setSessionType(string $SessionType) 设置会话保持类型。不传或传NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+ * @method array getEndPorts() 获取批量端口段的结束端口，必须和Ports长度一样。
+ * @method void setEndPorts(array $EndPorts) 设置批量端口段的结束端口，必须和Ports长度一样。
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -83,6 +85,11 @@ class CreateListenerRequest extends AbstractModel
     public $SessionType;
 
     /**
+     * @var array 批量端口段的结束端口，必须和Ports长度一样。
+     */
+    public $EndPorts;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID
      * @param array $Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器
      * @param string $Protocol 监听器协议： TCP | UDP
@@ -92,6 +99,7 @@ class CreateListenerRequest extends AbstractModel
      * @param string $Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
      * @param string $SessionType 会话保持类型。不传或传NORMAL表示默认会话保持类型。QUIC_CID 表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
+     * @param array $EndPorts 批量端口段的结束端口，必须和Ports长度一样。
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class CreateListenerRequest extends AbstractModel
 
         if (array_key_exists("SessionType",$param) and $param["SessionType"] !== null) {
             $this->SessionType = $param["SessionType"];
+        }
+
+        if (array_key_exists("EndPorts",$param) and $param["EndPorts"] !== null) {
+            $this->EndPorts = $param["EndPorts"];
         }
     }
 }

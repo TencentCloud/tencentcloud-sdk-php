@@ -33,29 +33,29 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDataType() 获取需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
 sysCpu：系统 CPU使用率；
-aBit：上/下行音频码率；
-aBlock：音频卡顿时长；
-bigvBit：上/下行视频码率；
+aBit：上/下行音频码率；单位：bps
+aBlock：音频卡顿时长；单位：ms
+bigvBit：上/下行视频码率；单位：bps
 bigvCapFps：视频采集帧率；
 bigvEncFps：视频发送帧率；
 bigvDecFps：渲染帧率；
-bigvBlock：视频卡顿时长；
-aLoss：上/下行音频丢包；
-bigvLoss：上/下行视频丢包；
+bigvBlock：视频卡顿时长；单位：ms
+aLoss：上/下行音频丢包率；
+bigvLoss：上/下行视频丢包率；
 bigvWidth：上/下行分辨率宽；
 bigvHeight：上/下行分辨率高
  * @method void setDataType(array $DataType) 设置需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
 sysCpu：系统 CPU使用率；
-aBit：上/下行音频码率；
-aBlock：音频卡顿时长；
-bigvBit：上/下行视频码率；
+aBit：上/下行音频码率；单位：bps
+aBlock：音频卡顿时长；单位：ms
+bigvBit：上/下行视频码率；单位：bps
 bigvCapFps：视频采集帧率；
 bigvEncFps：视频发送帧率；
 bigvDecFps：渲染帧率；
-bigvBlock：视频卡顿时长；
-aLoss：上/下行音频丢包；
-bigvLoss：上/下行视频丢包；
+bigvBlock：视频卡顿时长；单位：ms
+aLoss：上/下行音频丢包率；
+bigvLoss：上/下行视频丢包率；
 bigvWidth：上/下行分辨率宽；
 bigvHeight：上/下行分辨率高
  * @method string getPageNumber() 获取设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）
@@ -94,15 +94,15 @@ class DescribeCallDetailRequest extends AbstractModel
      * @var array 需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
 sysCpu：系统 CPU使用率；
-aBit：上/下行音频码率；
-aBlock：音频卡顿时长；
-bigvBit：上/下行视频码率；
+aBit：上/下行音频码率；单位：bps
+aBlock：音频卡顿时长；单位：ms
+bigvBit：上/下行视频码率；单位：bps
 bigvCapFps：视频采集帧率；
 bigvEncFps：视频发送帧率；
 bigvDecFps：渲染帧率；
-bigvBlock：视频卡顿时长；
-aLoss：上/下行音频丢包；
-bigvLoss：上/下行视频丢包；
+bigvBlock：视频卡顿时长；单位：ms
+aLoss：上/下行音频丢包率；
+bigvLoss：上/下行视频丢包率；
 bigvWidth：上/下行分辨率宽；
 bigvHeight：上/下行分辨率高
      */
@@ -127,15 +127,15 @@ bigvHeight：上/下行分辨率高
      * @param array $DataType 需查询的指标，不填则只返回用户列表，填all则返回所有指标。
 appCpu：APP CPU使用率；
 sysCpu：系统 CPU使用率；
-aBit：上/下行音频码率；
-aBlock：音频卡顿时长；
-bigvBit：上/下行视频码率；
+aBit：上/下行音频码率；单位：bps
+aBlock：音频卡顿时长；单位：ms
+bigvBit：上/下行视频码率；单位：bps
 bigvCapFps：视频采集帧率；
 bigvEncFps：视频发送帧率；
 bigvDecFps：渲染帧率；
-bigvBlock：视频卡顿时长；
-aLoss：上/下行音频丢包；
-bigvLoss：上/下行视频丢包；
+bigvBlock：视频卡顿时长；单位：ms
+aLoss：上/下行音频丢包率；
+bigvLoss：上/下行视频丢包率；
 bigvWidth：上/下行分辨率宽；
 bigvHeight：上/下行分辨率高
      * @param string $PageNumber 设置分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回6条数据）

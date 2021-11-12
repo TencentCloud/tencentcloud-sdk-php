@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置翻页偏移量
  * @method string getSearchWord() 获取搜索关键字
  * @method void setSearchWord(string $SearchWord) 设置搜索关键字
+ * @method array getLaneIdList() 获取无
+ * @method void setLaneIdList(array $LaneIdList) 设置无
+ * @method boolean getDisableProgramAuthCheck() 获取无
+ * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置无
  */
 class DescribeLanesRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeLanesRequest extends AbstractModel
     public $SearchWord;
 
     /**
+     * @var array 无
+     */
+    public $LaneIdList;
+
+    /**
+     * @var boolean 无
+     */
+    public $DisableProgramAuthCheck;
+
+    /**
      * @param integer $Limit 每页展示的条数
      * @param integer $Offset 翻页偏移量
      * @param string $SearchWord 搜索关键字
+     * @param array $LaneIdList 无
+     * @param boolean $DisableProgramAuthCheck 无
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeLanesRequest extends AbstractModel
 
         if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
             $this->SearchWord = $param["SearchWord"];
+        }
+
+        if (array_key_exists("LaneIdList",$param) and $param["LaneIdList"] !== null) {
+            $this->LaneIdList = $param["LaneIdList"];
+        }
+
+        if (array_key_exists("DisableProgramAuthCheck",$param) and $param["DisableProgramAuthCheck"] !== null) {
+            $this->DisableProgramAuthCheck = $param["DisableProgramAuthCheck"];
         }
     }
 }

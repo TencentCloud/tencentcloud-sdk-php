@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxClusterServiceNum(integer $MaxClusterServiceNum) 设置集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
  * @method string getProgramId() 获取需要绑定的数据集ID
  * @method void setProgramId(string $ProgramId) 设置需要绑定的数据集ID
+ * @method string getKuberneteApiServer() 获取api地址
+ * @method void setKuberneteApiServer(string $KuberneteApiServer) 设置api地址
+ * @method string getKuberneteNativeType() 获取K : kubeconfig, S : service account
+ * @method void setKuberneteNativeType(string $KuberneteNativeType) 设置K : kubeconfig, S : service account
+ * @method string getKuberneteNativeSecret() 获取native secret
+ * @method void setKuberneteNativeSecret(string $KuberneteNativeSecret) 设置native secret
+ * @method array getProgramIdList() 获取无
+ * @method void setProgramIdList(array $ProgramIdList) 设置无
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -108,6 +116,26 @@ class CreateClusterRequest extends AbstractModel
     public $ProgramId;
 
     /**
+     * @var string api地址
+     */
+    public $KuberneteApiServer;
+
+    /**
+     * @var string K : kubeconfig, S : service account
+     */
+    public $KuberneteNativeType;
+
+    /**
+     * @var string native secret
+     */
+    public $KuberneteNativeSecret;
+
+    /**
+     * @var array 无
+     */
+    public $ProgramIdList;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterType 集群类型
      * @param string $VpcId 私有网络ID
@@ -120,6 +148,10 @@ class CreateClusterRequest extends AbstractModel
      * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
      * @param integer $MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。
      * @param string $ProgramId 需要绑定的数据集ID
+     * @param string $KuberneteApiServer api地址
+     * @param string $KuberneteNativeType K : kubeconfig, S : service account
+     * @param string $KuberneteNativeSecret native secret
+     * @param array $ProgramIdList 无
      */
     function __construct()
     {
@@ -180,6 +212,22 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("ProgramId",$param) and $param["ProgramId"] !== null) {
             $this->ProgramId = $param["ProgramId"];
+        }
+
+        if (array_key_exists("KuberneteApiServer",$param) and $param["KuberneteApiServer"] !== null) {
+            $this->KuberneteApiServer = $param["KuberneteApiServer"];
+        }
+
+        if (array_key_exists("KuberneteNativeType",$param) and $param["KuberneteNativeType"] !== null) {
+            $this->KuberneteNativeType = $param["KuberneteNativeType"];
+        }
+
+        if (array_key_exists("KuberneteNativeSecret",$param) and $param["KuberneteNativeSecret"] !== null) {
+            $this->KuberneteNativeSecret = $param["KuberneteNativeSecret"];
+        }
+
+        if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
+            $this->ProgramIdList = $param["ProgramIdList"];
         }
     }
 }

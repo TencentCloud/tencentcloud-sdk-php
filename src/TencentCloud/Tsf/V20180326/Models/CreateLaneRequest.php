@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置泳道备注
  * @method array getLaneGroupList() 获取泳道部署组信息
  * @method void setLaneGroupList(array $LaneGroupList) 设置泳道部署组信息
+ * @method array getProgramIdList() 获取无
+ * @method void setProgramIdList(array $ProgramIdList) 设置无
  */
 class CreateLaneRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateLaneRequest extends AbstractModel
     public $LaneGroupList;
 
     /**
+     * @var array 无
+     */
+    public $ProgramIdList;
+
+    /**
      * @param string $LaneName 泳道名称
      * @param string $Remark 泳道备注
      * @param array $LaneGroupList 泳道部署组信息
+     * @param array $ProgramIdList 无
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class CreateLaneRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LaneGroupList, $obj);
             }
+        }
+
+        if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
+            $this->ProgramIdList = $param["ProgramIdList"];
         }
     }
 }

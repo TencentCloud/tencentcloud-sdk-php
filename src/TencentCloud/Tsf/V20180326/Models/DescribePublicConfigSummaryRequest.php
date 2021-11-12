@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置按时间排序：creation_time；按名称排序：config_name
  * @method integer getOrderType() 获取升序传 0，降序传 1
  * @method void setOrderType(integer $OrderType) 设置升序传 0，降序传 1
+ * @method array getConfigTagList() 获取无
+ * @method void setConfigTagList(array $ConfigTagList) 设置无
+ * @method boolean getDisableProgramAuthCheck() 获取无
+ * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置无
+ * @method array getConfigIdList() 获取无
+ * @method void setConfigIdList(array $ConfigIdList) 设置无
  */
 class DescribePublicConfigSummaryRequest extends AbstractModel
 {
@@ -59,11 +65,29 @@ class DescribePublicConfigSummaryRequest extends AbstractModel
     public $OrderType;
 
     /**
+     * @var array 无
+     */
+    public $ConfigTagList;
+
+    /**
+     * @var boolean 无
+     */
+    public $DisableProgramAuthCheck;
+
+    /**
+     * @var array 无
+     */
+    public $ConfigIdList;
+
+    /**
      * @param string $SearchWord 查询关键字，模糊查询：配置项名称，不传入时查询全量
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 每页条数，默认为20
      * @param string $OrderBy 按时间排序：creation_time；按名称排序：config_name
      * @param integer $OrderType 升序传 0，降序传 1
+     * @param array $ConfigTagList 无
+     * @param boolean $DisableProgramAuthCheck 无
+     * @param array $ConfigIdList 无
      */
     function __construct()
     {
@@ -96,6 +120,18 @@ class DescribePublicConfigSummaryRequest extends AbstractModel
 
         if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
             $this->OrderType = $param["OrderType"];
+        }
+
+        if (array_key_exists("ConfigTagList",$param) and $param["ConfigTagList"] !== null) {
+            $this->ConfigTagList = $param["ConfigTagList"];
+        }
+
+        if (array_key_exists("DisableProgramAuthCheck",$param) and $param["DisableProgramAuthCheck"] !== null) {
+            $this->DisableProgramAuthCheck = $param["DisableProgramAuthCheck"];
+        }
+
+        if (array_key_exists("ConfigIdList",$param) and $param["ConfigIdList"] !== null) {
+            $this->ConfigIdList = $param["ConfigIdList"];
         }
     }
 }

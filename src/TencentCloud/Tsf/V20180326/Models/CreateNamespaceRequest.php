@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsHaEnable(string $IsHaEnable) 设置是否开启高可用
  * @method string getProgramId() 获取需要绑定的数据集ID
  * @method void setProgramId(string $ProgramId) 设置需要绑定的数据集ID
+ * @method array getProgramIdList() 获取无
+ * @method void setProgramIdList(array $ProgramIdList) 设置无
  */
 class CreateNamespaceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateNamespaceRequest extends AbstractModel
     public $ProgramId;
 
     /**
+     * @var array 无
+     */
+    public $ProgramIdList;
+
+    /**
      * @param string $NamespaceName 命名空间名称
      * @param string $ClusterId 集群ID
      * @param string $NamespaceDesc 命名空间描述
@@ -88,6 +95,7 @@ class CreateNamespaceRequest extends AbstractModel
      * @param string $NamespaceId 命名空间ID
      * @param string $IsHaEnable 是否开启高可用
      * @param string $ProgramId 需要绑定的数据集ID
+     * @param array $ProgramIdList 无
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateNamespaceRequest extends AbstractModel
 
         if (array_key_exists("ProgramId",$param) and $param["ProgramId"] !== null) {
             $this->ProgramId = $param["ProgramId"];
+        }
+
+        if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
+            $this->ProgramIdList = $param["ProgramIdList"];
         }
     }
 }

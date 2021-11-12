@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupResourceTypeList(array $GroupResourceTypeList) 设置部署组资源类型列表
  * @method string getStatus() 获取部署组状态过滤字段
  * @method void setStatus(string $Status) 设置部署组状态过滤字段
+ * @method array getGroupIdList() 获取无
+ * @method void setGroupIdList(array $GroupIdList) 设置无
  */
 class DescribeGroupsRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeGroupsRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var array 无
+     */
+    public $GroupIdList;
+
+    /**
      * @param string $SearchWord 搜索字段
      * @param string $ApplicationId 应用ID
      * @param string $OrderBy 排序字段
@@ -104,6 +111,7 @@ class DescribeGroupsRequest extends AbstractModel
      * @param string $ClusterId 集群ID
      * @param array $GroupResourceTypeList 部署组资源类型列表
      * @param string $Status 部署组状态过滤字段
+     * @param array $GroupIdList 无
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeGroupsRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("GroupIdList",$param) and $param["GroupIdList"] !== null) {
+            $this->GroupIdList = $param["GroupIdList"];
         }
     }
 }

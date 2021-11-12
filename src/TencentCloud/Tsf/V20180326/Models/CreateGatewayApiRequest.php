@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置API 分组ID
  * @method array getApiList() 获取Api信息
  * @method void setApiList(array $ApiList) 设置Api信息
+ * @method array getProgramIdList() 获取无
+ * @method void setProgramIdList(array $ProgramIdList) 设置无
  */
 class CreateGatewayApiRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateGatewayApiRequest extends AbstractModel
     public $ApiList;
 
     /**
+     * @var array 无
+     */
+    public $ProgramIdList;
+
+    /**
      * @param string $GroupId API 分组ID
      * @param array $ApiList Api信息
+     * @param array $ProgramIdList 无
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class CreateGatewayApiRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ApiList, $obj);
             }
+        }
+
+        if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
+            $this->ProgramIdList = $param["ProgramIdList"];
         }
     }
 }

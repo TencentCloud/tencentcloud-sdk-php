@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置搜索关键词
  * @method string getRuleId() 获取泳道规则ID（用于精确搜索）
  * @method void setRuleId(string $RuleId) 设置泳道规则ID（用于精确搜索）
+ * @method array getRuleIdList() 获取无
+ * @method void setRuleIdList(array $RuleIdList) 设置无
  */
 class DescribeLaneRulesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeLaneRulesRequest extends AbstractModel
     public $RuleId;
 
     /**
+     * @var array 无
+     */
+    public $RuleIdList;
+
+    /**
      * @param integer $Limit 每页展示的条数
      * @param integer $Offset 翻页偏移量
      * @param string $SearchWord 搜索关键词
      * @param string $RuleId 泳道规则ID（用于精确搜索）
+     * @param array $RuleIdList 无
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeLaneRulesRequest extends AbstractModel
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("RuleIdList",$param) and $param["RuleIdList"] !== null) {
+            $this->RuleIdList = $param["RuleIdList"];
         }
     }
 }

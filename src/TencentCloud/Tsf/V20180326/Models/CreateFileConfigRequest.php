@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigPostCmd(string $ConfigPostCmd) 设置后置命令
  * @method boolean getEncodeWithBase64() 获取Base64编码的配置项
  * @method void setEncodeWithBase64(boolean $EncodeWithBase64) 设置Base64编码的配置项
+ * @method array getProgramIdList() 获取无
+ * @method void setProgramIdList(array $ProgramIdList) 设置无
  */
 class CreateFileConfigRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateFileConfigRequest extends AbstractModel
     public $EncodeWithBase64;
 
     /**
+     * @var array 无
+     */
+    public $ProgramIdList;
+
+    /**
      * @param string $ConfigName 配置项名称
      * @param string $ConfigVersion 配置项版本
      * @param string $ConfigFileName 配置项文件名
@@ -104,6 +111,7 @@ class CreateFileConfigRequest extends AbstractModel
      * @param string $ConfigFileCode 配置项文件编码，utf-8 或 gbk。注：如果选择 gbk，需要新版本 tsf-consul-template （公有云虚拟机需要使用 1.32 tsf-agent，容器需要从文档中获取最新的 tsf-consul-template-docker.tar.gz）的支持
      * @param string $ConfigPostCmd 后置命令
      * @param boolean $EncodeWithBase64 Base64编码的配置项
+     * @param array $ProgramIdList 无
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateFileConfigRequest extends AbstractModel
 
         if (array_key_exists("EncodeWithBase64",$param) and $param["EncodeWithBase64"] !== null) {
             $this->EncodeWithBase64 = $param["EncodeWithBase64"];
+        }
+
+        if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
+            $this->ProgramIdList = $param["ProgramIdList"];
         }
     }
 }

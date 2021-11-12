@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceId(string $NamespaceId) 设置分组所属名字空间ID
  * @method string getClusterId() 获取分组所属集群ID
  * @method void setClusterId(string $ClusterId) 设置分组所属集群ID
+ * @method array getGroupIdList() 获取无
+ * @method void setGroupIdList(array $GroupIdList) 设置无
  */
 class DescribeServerlessGroupsRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeServerlessGroupsRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var array 无
+     */
+    public $GroupIdList;
+
+    /**
      * @param string $SearchWord 搜索字段，模糊搜索groupName字段
      * @param string $ApplicationId 分组所属应用ID
      * @param string $OrderBy 排序字段，默认为 createTime字段，支持id， name， createTime
@@ -88,6 +95,7 @@ class DescribeServerlessGroupsRequest extends AbstractModel
      * @param integer $Limit 分页个数，默认为20， 取值应为1~50
      * @param string $NamespaceId 分组所属名字空间ID
      * @param string $ClusterId 分组所属集群ID
+     * @param array $GroupIdList 无
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeServerlessGroupsRequest extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("GroupIdList",$param) and $param["GroupIdList"] !== null) {
+            $this->GroupIdList = $param["GroupIdList"];
         }
     }
 }

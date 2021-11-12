@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置资源类型数组
  * @method string getSearchWord() 获取通过id和name进行关键词过滤
  * @method void setSearchWord(string $SearchWord) 设置通过id和name进行关键词过滤
+ * @method boolean getDisableProgramAuthCheck() 获取无
+ * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置无
  */
 class DescribeSimpleApplicationsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
     public $SearchWord;
 
     /**
+     * @var boolean 无
+     */
+    public $DisableProgramAuthCheck;
+
+    /**
      * @param array $ApplicationIdList 应用ID列表
      * @param string $ApplicationType 应用类型
      * @param integer $Limit 每页条数
@@ -80,6 +87,7 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
      * @param string $MicroserviceType 微服务类型
      * @param array $ApplicationResourceTypeList 资源类型数组
      * @param string $SearchWord 通过id和name进行关键词过滤
+     * @param boolean $DisableProgramAuthCheck 无
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
 
         if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
             $this->SearchWord = $param["SearchWord"];
+        }
+
+        if (array_key_exists("DisableProgramAuthCheck",$param) and $param["DisableProgramAuthCheck"] !== null) {
+            $this->DisableProgramAuthCheck = $param["DisableProgramAuthCheck"];
         }
     }
 }

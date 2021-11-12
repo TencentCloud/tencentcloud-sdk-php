@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleTagRelationship(string $RuleTagRelationship) 设置泳道规则标签关系
  * @method string getLaneId() 获取泳道Id
  * @method void setLaneId(string $LaneId) 设置泳道Id
+ * @method array getProgramIdList() 获取无
+ * @method void setProgramIdList(array $ProgramIdList) 设置无
  */
 class CreateLaneRuleRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateLaneRuleRequest extends AbstractModel
     public $LaneId;
 
     /**
+     * @var array 无
+     */
+    public $ProgramIdList;
+
+    /**
      * @param string $RuleName 泳道规则名称
      * @param string $Remark 泳道规则备注
      * @param array $RuleTagList 泳道规则标签列表
      * @param string $RuleTagRelationship 泳道规则标签关系
      * @param string $LaneId 泳道Id
+     * @param array $ProgramIdList 无
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class CreateLaneRuleRequest extends AbstractModel
 
         if (array_key_exists("LaneId",$param) and $param["LaneId"] !== null) {
             $this->LaneId = $param["LaneId"];
+        }
+
+        if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
+            $this->ProgramIdList = $param["ProgramIdList"];
         }
     }
 }

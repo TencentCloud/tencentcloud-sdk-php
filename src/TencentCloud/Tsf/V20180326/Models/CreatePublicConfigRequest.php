@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigType(string $ConfigType) 设置配置项类型
  * @method boolean getEncodeWithBase64() 获取Base64编码的配置项
  * @method void setEncodeWithBase64(boolean $EncodeWithBase64) 设置Base64编码的配置项
+ * @method array getProgramIdList() 获取无
+ * @method void setProgramIdList(array $ProgramIdList) 设置无
  */
 class CreatePublicConfigRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreatePublicConfigRequest extends AbstractModel
     public $EncodeWithBase64;
 
     /**
+     * @var array 无
+     */
+    public $ProgramIdList;
+
+    /**
      * @param string $ConfigName 配置项名称
      * @param string $ConfigVersion 配置项版本
      * @param string $ConfigValue 配置项值，总是接收yaml格式的内容
      * @param string $ConfigVersionDesc 配置项版本描述
      * @param string $ConfigType 配置项类型
      * @param boolean $EncodeWithBase64 Base64编码的配置项
+     * @param array $ProgramIdList 无
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreatePublicConfigRequest extends AbstractModel
 
         if (array_key_exists("EncodeWithBase64",$param) and $param["EncodeWithBase64"] !== null) {
             $this->EncodeWithBase64 = $param["EncodeWithBase64"];
+        }
+
+        if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
+            $this->ProgramIdList = $param["ProgramIdList"];
         }
     }
 }

@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentReplicas(integer $CurrentReplicas) 设置当前副本数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArchitecture() 获取Monolithic，Microservice
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArchitecture(string $Architecture) 设置Monolithic，Microservice
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunServerVersionItem extends AbstractModel
 {
@@ -188,6 +192,12 @@ class CloudBaseRunServerVersionItem extends AbstractModel
     public $CurrentReplicas;
 
     /**
+     * @var string Monolithic，Microservice
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Architecture;
+
+    /**
      * @param string $VersionName 版本名称
      * @param string $Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,6 +229,8 @@ class CloudBaseRunServerVersionItem extends AbstractModel
      * @param integer $Percent 进度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentReplicas 当前副本数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Architecture Monolithic，Microservice
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -306,6 +318,10 @@ class CloudBaseRunServerVersionItem extends AbstractModel
 
         if (array_key_exists("CurrentReplicas",$param) and $param["CurrentReplicas"] !== null) {
             $this->CurrentReplicas = $param["CurrentReplicas"];
+        }
+
+        if (array_key_exists("Architecture",$param) and $param["Architecture"] !== null) {
+            $this->Architecture = $param["Architecture"];
         }
     }
 }

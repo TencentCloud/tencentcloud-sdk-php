@@ -87,7 +87,6 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
     ]
 }
 ```
- * @method Models\CreatePaiInstanceResponse CreatePaiInstance(Models\CreatePaiInstanceRequest $req) 本接口 (CreatePaiInstance) 用于创建一个指定配置的PAI实例。
  * @method Models\CreateScalingPolicyResponse CreateScalingPolicy(Models\CreateScalingPolicyRequest $req) 本接口（CreateScalingPolicy）用于创建告警触发策略。
  * @method Models\CreateScheduledActionResponse CreateScheduledAction(Models\CreateScheduledActionRequest $req) 本接口（CreateScheduledAction）用于创建定时任务。
  * @method Models\DeleteAutoScalingGroupResponse DeleteAutoScalingGroup(Models\DeleteAutoScalingGroupRequest $req) 本接口（DeleteAutoScalingGroup）用于删除指定伸缩组，删除前提是伸缩组内无实例且当前未在执行伸缩活动。

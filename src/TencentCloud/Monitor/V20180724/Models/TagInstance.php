@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceType(string $ServiceType) 设置产品类型，如：cvm
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegionId() 获取地域ID
+ * @method integer getRegionId() 获取地域ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionId(string $RegionId) 设置地域ID
+ * @method void setRegionId(integer $RegionId) 设置地域ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBindingStatus() 获取绑定状态，2：绑定成功，1：绑定中
 注意：此字段可能返回 null，表示取不到有效值。
@@ -76,7 +76,7 @@ class TagInstance extends AbstractModel
     public $ServiceType;
 
     /**
-     * @var string 地域ID
+     * @var integer 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
@@ -102,7 +102,7 @@ class TagInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceType 产品类型，如：cvm
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegionId 地域ID
+     * @param integer $RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BindingStatus 绑定状态，2：绑定成功，1：绑定中
 注意：此字段可能返回 null，表示取不到有效值。

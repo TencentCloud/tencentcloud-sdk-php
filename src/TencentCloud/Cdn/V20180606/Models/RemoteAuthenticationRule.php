@@ -20,55 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 远程鉴权规则。
  *
- * @method string getServer() 获取远程鉴权服务http url
- * @method void setServer(string $Server) 设置远程鉴权服务http url
- * @method string getAuthMethod() 获取请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; all 表示不限制请求方法；
-all: 不指定访问访问方法；
- * @method void setAuthMethod(string $AuthMethod) 设置请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; all 表示不限制请求方法；
-all: 不指定访问访问方法；
+ * @method string getServer() 获取远程鉴权Server。
+默认值:和上层配置的"Server"一致；
+ * @method void setServer(string $Server) 设置远程鉴权Server。
+默认值:和上层配置的"Server"一致；
+ * @method string getAuthMethod() 获取请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; 
+all: 表示"遵循终端用户请求方法"
+默认值: all
+ * @method void setAuthMethod(string $AuthMethod) 设置请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; 
+all: 表示"遵循终端用户请求方法"
+默认值: all
  * @method string getRuleType() 获取规则类型：
 all：所有文件生效
 file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+directory：指定目录生效
+path：指定文件绝对路径生效
+默认值:all
  * @method void setRuleType(string $RuleType) 设置规则类型：
 all：所有文件生效
 file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+directory：指定目录生效
+path：指定文件绝对路径生效
+默认值:all
  * @method array getRulePaths() 获取对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+默认值:*
  * @method void setRulePaths(array $RulePaths) 设置对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+默认值:*
  * @method integer getAuthTimeout() 获取请求远程鉴权服务器超时时间，单位毫秒；
 取值范围：[1,30 000]
+默认值:20000
  * @method void setAuthTimeout(integer $AuthTimeout) 设置请求远程鉴权服务器超时时间，单位毫秒；
 取值范围：[1,30 000]
+默认值:20000
  * @method string getAuthTimeoutAction() 获取请求远程鉴权服务器超时后执行拦截或者放行；
 RETURN_200: 超时后放行；
-RETURN_403:超时返回403；
+RETURN_403:超时拦截；
+默认值:RETURN_200
  * @method void setAuthTimeoutAction(string $AuthTimeoutAction) 设置请求远程鉴权服务器超时后执行拦截或者放行；
 RETURN_200: 超时后放行；
-RETURN_403:超时返回403；
+RETURN_403:超时拦截；
+默认值:RETURN_200
  */
 class RemoteAuthenticationRule extends AbstractModel
 {
     /**
-     * @var string 远程鉴权服务http url
+     * @var string 远程鉴权Server。
+默认值:和上层配置的"Server"一致；
      */
     public $Server;
 
     /**
-     * @var string 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; all 表示不限制请求方法；
-all: 不指定访问访问方法；
+     * @var string 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; 
+all: 表示"遵循终端用户请求方法"
+默认值: all
      */
     public $AuthMethod;
 
@@ -76,8 +90,9 @@ all: 不指定访问访问方法；
      * @var string 规则类型：
 all：所有文件生效
 file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+directory：指定目录生效
+path：指定文件绝对路径生效
+默认值:all
      */
     public $RuleType;
 
@@ -88,42 +103,51 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+默认值:*
      */
     public $RulePaths;
 
     /**
      * @var integer 请求远程鉴权服务器超时时间，单位毫秒；
 取值范围：[1,30 000]
+默认值:20000
      */
     public $AuthTimeout;
 
     /**
      * @var string 请求远程鉴权服务器超时后执行拦截或者放行；
 RETURN_200: 超时后放行；
-RETURN_403:超时返回403；
+RETURN_403:超时拦截；
+默认值:RETURN_200
      */
     public $AuthTimeoutAction;
 
     /**
-     * @param string $Server 远程鉴权服务http url
-     * @param string $AuthMethod 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; all 表示不限制请求方法；
-all: 不指定访问访问方法；
+     * @param string $Server 远程鉴权Server。
+默认值:和上层配置的"Server"一致；
+     * @param string $AuthMethod 请求远程鉴权服务器的http方法；取值范围[get,post,head,all]; 
+all: 表示"遵循终端用户请求方法"
+默认值: all
      * @param string $RuleType 规则类型：
 all：所有文件生效
 file：指定文件后缀生效
-directory：指定路径生效
-path：指定绝对路径生效
+directory：指定目录生效
+path：指定文件绝对路径生效
+默认值:all
      * @param array $RulePaths 对应类型下的匹配内容：
 all 时填充 *
 file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test
 path 时填充绝对路径，如 /xxx/test.html
 index 时填充 /
+默认值:*
      * @param integer $AuthTimeout 请求远程鉴权服务器超时时间，单位毫秒；
 取值范围：[1,30 000]
+默认值:20000
      * @param string $AuthTimeoutAction 请求远程鉴权服务器超时后执行拦截或者放行；
 RETURN_200: 超时后放行；
-RETURN_403:超时返回403；
+RETURN_403:超时拦截；
+默认值:RETURN_200
      */
     function __construct()
     {

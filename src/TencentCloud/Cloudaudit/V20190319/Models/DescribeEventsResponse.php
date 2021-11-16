@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvents(array $Events) 设置日志集合
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置总数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,6 +54,12 @@ class DescribeEventsResponse extends AbstractModel
     public $Events;
 
     /**
+     * @var integer 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -58,6 +68,8 @@ class DescribeEventsResponse extends AbstractModel
      * @param boolean $ListOver 日志集合是否结束
      * @param integer $NextToken 查看更多日志的凭证
      * @param array $Events 日志集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -89,6 +101,10 @@ class DescribeEventsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Events, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

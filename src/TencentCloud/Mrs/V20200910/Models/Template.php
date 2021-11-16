@@ -72,6 +72,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElectrocardiogram(Electrocardiogram $Electrocardiogram) 设置心电图报告
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Endoscopy getEndoscopy() 获取内窥镜报告
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndoscopy(Endoscopy $Endoscopy) 设置内窥镜报告
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Prescription getPrescription() 获取处方单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrescription(Prescription $Prescription) 设置处方单
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
@@ -154,6 +162,18 @@ class Template extends AbstractModel
     public $Electrocardiogram;
 
     /**
+     * @var Endoscopy 内窥镜报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Endoscopy;
+
+    /**
+     * @var Prescription 处方单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Prescription;
+
+    /**
      * @param PatientInfo $PatientInfo 患者信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportInfo $ReportInfo 报告信息
@@ -179,6 +199,10 @@ class Template extends AbstractModel
      * @param Surgery $Surgery 手术记录
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Electrocardiogram $Electrocardiogram 心电图报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Endoscopy $Endoscopy 内窥镜报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Prescription $Prescription 处方单
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -256,6 +280,16 @@ class Template extends AbstractModel
         if (array_key_exists("Electrocardiogram",$param) and $param["Electrocardiogram"] !== null) {
             $this->Electrocardiogram = new Electrocardiogram();
             $this->Electrocardiogram->deserialize($param["Electrocardiogram"]);
+        }
+
+        if (array_key_exists("Endoscopy",$param) and $param["Endoscopy"] !== null) {
+            $this->Endoscopy = new Endoscopy();
+            $this->Endoscopy->deserialize($param["Endoscopy"]);
+        }
+
+        if (array_key_exists("Prescription",$param) and $param["Prescription"] !== null) {
+            $this->Prescription = new Prescription();
+            $this->Prescription->deserialize($param["Prescription"]);
         }
     }
 }

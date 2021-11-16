@@ -88,6 +88,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置实例的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableConsoleInternet() 获取引擎实例是否开启控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableConsoleInternet(boolean $EnableConsoleInternet) 设置引擎实例是否开启控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableConsoleIntranet() 获取引擎实例是否开启控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableConsoleIntranet(boolean $EnableConsoleIntranet) 设置引擎实例是否开启控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -210,6 +218,18 @@ class SREInstance extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean 引擎实例是否开启控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableConsoleInternet;
+
+    /**
+     * @var boolean 引擎实例是否开启控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableConsoleIntranet;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -243,6 +263,10 @@ class SREInstance extends AbstractModel
      * @param array $ServiceGovernanceInfos 服务治理相关信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 实例的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableConsoleInternet 引擎实例是否开启控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableConsoleIntranet 引擎实例是否开启控制台内网访问地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -360,6 +384,14 @@ class SREInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("EnableConsoleInternet",$param) and $param["EnableConsoleInternet"] !== null) {
+            $this->EnableConsoleInternet = $param["EnableConsoleInternet"];
+        }
+
+        if (array_key_exists("EnableConsoleIntranet",$param) and $param["EnableConsoleIntranet"] !== null) {
+            $this->EnableConsoleIntranet = $param["EnableConsoleIntranet"];
         }
     }
 }

@@ -19,8 +19,8 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 远程鉴权规则配置，可以包含多种规则配置。
-RemoteAuthenticationRule 和Server 互斥，配置其中一个。
-若只配置Server ，规则参数将采用默认参数；
+RemoteAuthenticationRules和Server 互斥，只需要配置其中一个。
+若只配置Server ，RemoteAuthenticationRules中详细规则参数将采用默认参数；默认参数值见各个配置项中说明；
  *
  * @method string getSwitch() 获取远程鉴权开关；
 on : 开启;

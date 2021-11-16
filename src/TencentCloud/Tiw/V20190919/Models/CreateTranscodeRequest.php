@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
 如果IsStaticPPT为False，后缀名为.ppt或.pptx的文档会动态转码成HTML5页面，其他格式的文档会静态转码成图片；如果IsStaticPPT为True，所有格式的文档会静态转码成图片；
  * @method void setIsStaticPPT(boolean $IsStaticPPT) 设置是否为静态PPT，默认为False；
 如果IsStaticPPT为False，后缀名为.ppt或.pptx的文档会动态转码成HTML5页面，其他格式的文档会静态转码成图片；如果IsStaticPPT为True，所有格式的文档会静态转码成图片；
- * @method string getMinResolution() 获取注意: 该参数已废弃, 请使用 MinScaleResolution
+ * @method string getMinResolution() 获取注意: 该参数已废弃, 请使用最新的 [云API SDK](https://cloud.tencent.com/document/api/1137/40060#SDK) ，使用 MinScaleResolution字段传递分辨率
 
 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
-注意分辨率宽高中间为英文字母"xyz"的"x"
- * @method void setMinResolution(string $MinResolution) 设置注意: 该参数已废弃, 请使用 MinScaleResolution
+示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
+ * @method void setMinResolution(string $MinResolution) 设置注意: 该参数已废弃, 请使用最新的 [云API SDK](https://cloud.tencent.com/document/api/1137/40060#SDK) ，使用 MinScaleResolution字段传递分辨率
 
 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
-注意分辨率宽高中间为英文字母"xyz"的"x"
+示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
  * @method string getThumbnailResolution() 获取动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
  * @method void setThumbnailResolution(string $ThumbnailResolution) 设置动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
  * @method string getCompressFileType() 获取转码文件压缩格式，不传、传空字符串或不是指定的格式则不生成压缩文件，目前支持如下压缩格式：
@@ -88,11 +88,11 @@ class CreateTranscodeRequest extends AbstractModel
     public $IsStaticPPT;
 
     /**
-     * @var string 注意: 该参数已废弃, 请使用 MinScaleResolution
+     * @var string 注意: 该参数已废弃, 请使用最新的 [云API SDK](https://cloud.tencent.com/document/api/1137/40060#SDK) ，使用 MinScaleResolution字段传递分辨率
 
 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
-注意分辨率宽高中间为英文字母"xyz"的"x"
+示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
      */
     public $MinResolution;
 
@@ -136,11 +136,11 @@ tar.gz： 生成`.tar.gz`压缩包
      * @param string $Url 经过URL编码后的转码文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pdf，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pdf。为了提高URL解析的成功率，请对URL进行编码。
      * @param boolean $IsStaticPPT 是否为静态PPT，默认为False；
 如果IsStaticPPT为False，后缀名为.ppt或.pptx的文档会动态转码成HTML5页面，其他格式的文档会静态转码成图片；如果IsStaticPPT为True，所有格式的文档会静态转码成图片；
-     * @param string $MinResolution 注意: 该参数已废弃, 请使用 MinScaleResolution
+     * @param string $MinResolution 注意: 该参数已废弃, 请使用最新的 [云API SDK](https://cloud.tencent.com/document/api/1137/40060#SDK) ，使用 MinScaleResolution字段传递分辨率
 
 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
 
-注意分辨率宽高中间为英文字母"xyz"的"x"
+示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
      * @param string $ThumbnailResolution 动态PPT转码可以为文件生成该分辨率的缩略图，不传、传空字符串或分辨率格式错误则不生成缩略图，分辨率格式同MinResolution
      * @param string $CompressFileType 转码文件压缩格式，不传、传空字符串或不是指定的格式则不生成压缩文件，目前支持如下压缩格式：
 

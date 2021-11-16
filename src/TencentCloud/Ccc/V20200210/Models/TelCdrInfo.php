@@ -190,6 +190,10 @@ notInService       不在服务区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtectedCallee(string $ProtectedCallee) 设置被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUui() 获取客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUui(string $Uui) 设置客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -383,6 +387,12 @@ notInService       不在服务区
     public $ProtectedCallee;
 
     /**
+     * @var string 客户自定义数据（User-to-User Interface）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uui;
+
+    /**
      * @param string $Caller 主叫号码
      * @param string $Callee 被叫号码
      * @param integer $Time 呼叫发起时间戳，Unix 时间戳
@@ -467,6 +477,8 @@ notInService       不在服务区
      * @param string $ProtectedCaller 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProtectedCallee 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uui 客户自定义数据（User-to-User Interface）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -595,6 +607,10 @@ notInService       不在服务区
 
         if (array_key_exists("ProtectedCallee",$param) and $param["ProtectedCallee"] !== null) {
             $this->ProtectedCallee = $param["ProtectedCallee"];
+        }
+
+        if (array_key_exists("Uui",$param) and $param["Uui"] !== null) {
+            $this->Uui = $param["Uui"];
         }
     }
 }

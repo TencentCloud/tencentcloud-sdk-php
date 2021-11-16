@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetAddress(string $InternetAddress) 设置公网访问地址
  * @method array getEnvAddressInfos() 获取apollo多环境公网ip
  * @method void setEnvAddressInfos(array $EnvAddressInfos) 设置apollo多环境公网ip
+ * @method string getConsoleInternetAddress() 获取控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsoleInternetAddress(string $ConsoleInternetAddress) 设置控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConsoleIntranetAddress() 获取控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsoleIntranetAddress(string $ConsoleIntranetAddress) 设置控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +55,18 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
     public $EnvAddressInfos;
 
     /**
+     * @var string 控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsoleInternetAddress;
+
+    /**
+     * @var string 控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsoleIntranetAddress;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +75,10 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
      * @param string $IntranetAddress 内网访问地址
      * @param string $InternetAddress 公网访问地址
      * @param array $EnvAddressInfos apollo多环境公网ip
+     * @param string $ConsoleInternetAddress 控制台公网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConsoleIntranetAddress 控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -85,6 +109,14 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EnvAddressInfos, $obj);
             }
+        }
+
+        if (array_key_exists("ConsoleInternetAddress",$param) and $param["ConsoleInternetAddress"] !== null) {
+            $this->ConsoleInternetAddress = $param["ConsoleInternetAddress"];
+        }
+
+        if (array_key_exists("ConsoleIntranetAddress",$param) and $param["ConsoleIntranetAddress"] !== null) {
+            $this->ConsoleIntranetAddress = $param["ConsoleIntranetAddress"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

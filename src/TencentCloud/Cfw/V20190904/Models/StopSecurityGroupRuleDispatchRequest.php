@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopSecurityGroupRuleDispatch请求参数结构体
  *
-
+ * @method integer getStopType() 获取值为1，中止全部
+ * @method void setStopType(integer $StopType) 设置值为1，中止全部
  */
 class StopSecurityGroupRuleDispatchRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 值为1，中止全部
+     */
+    public $StopType;
 
     /**
-
+     * @param integer $StopType 值为1，中止全部
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class StopSecurityGroupRuleDispatchRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("StopType",$param) and $param["StopType"] !== null) {
+            $this->StopType = $param["StopType"];
+        }
     }
 }

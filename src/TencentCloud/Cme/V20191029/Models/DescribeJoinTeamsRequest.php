@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
  * @method string getMemberId() 获取团队成员　ID。
  * @method void setMemberId(string $MemberId) 设置团队成员　ID。
- * @method integer getOffset() 获取分页偏移量，默认值：0
- * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0
+ * @method integer getOffset() 获取分页偏移量，默认值：0。
+ * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：30，最大值：30。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：30，最大值：30。
  */
@@ -42,7 +42,7 @@ class DescribeJoinTeamsRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var integer 分页偏移量，默认值：0
+     * @var integer 分页偏移量，默认值：0。
      */
     public $Offset;
 
@@ -54,7 +54,7 @@ class DescribeJoinTeamsRequest extends AbstractModel
     /**
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $MemberId 团队成员　ID。
-     * @param integer $Offset 分页偏移量，默认值：0
+     * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：30，最大值：30。
      */
     function __construct()

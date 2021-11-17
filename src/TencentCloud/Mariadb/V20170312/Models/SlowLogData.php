@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExampleSql(string $ExampleSql) 设置样例Sql
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHost() 获取账户的域名
+ * @method void setHost(string $Host) 设置账户的域名
  */
 class SlowLogData extends AbstractModel
 {
@@ -153,6 +155,11 @@ class SlowLogData extends AbstractModel
     public $ExampleSql;
 
     /**
+     * @var string 账户的域名
+     */
+    public $Host;
+
+    /**
      * @param string $CheckSum 语句校验和，用于查询详情
      * @param string $Db 数据库名称
      * @param string $FingerPrint 抽象的SQL语句
@@ -172,6 +179,7 @@ class SlowLogData extends AbstractModel
      * @param string $User 帐号
      * @param string $ExampleSql 样例Sql
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Host 账户的域名
      */
     function __construct()
     {
@@ -256,6 +264,10 @@ class SlowLogData extends AbstractModel
 
         if (array_key_exists("ExampleSql",$param) and $param["ExampleSql"] !== null) {
             $this->ExampleSql = $param["ExampleSql"];
+        }
+
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
         }
     }
 }

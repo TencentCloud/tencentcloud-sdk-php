@@ -23,6 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cpdp\V20190820\Models as Models;
 
 /**
+ * @method Models\AddContractResponse AddContract(Models\AddContractRequest $req) 云支付-添加合同接口
+ * @method Models\AddMerchantResponse AddMerchant(Models\AddMerchantRequest $req) 云支付-添加商户接口
+ * @method Models\AddShopResponse AddShop(Models\AddShopRequest $req) 云支付-添加门店接口
  * @method Models\ApplyApplicationMaterialResponse ApplyApplicationMaterial(Models\ApplyApplicationMaterialRequest $req) 跨境-提交申报材料。申报材料的主体是付款人，需要提前调用【跨境-付款人申请】接口提交付款人信息且审核通过后调用。
  * @method Models\ApplyOutwardOrderResponse ApplyOutwardOrder(Models\ApplyOutwardOrderRequest $req) 跨境-汇出指令申请。通过该接口可将对接方账户中的人民币余额汇兑成外币，再汇出至指定银行账户。
  * @method Models\ApplyPayerInfoResponse ApplyPayerInfo(Models\ApplyPayerInfoRequest $req) 跨境-付款人申请。通过该接口提交付款人信息并进行 kyc 审核。
@@ -67,7 +70,16 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\DeleteAgentTaxPaymentInfosResponse DeleteAgentTaxPaymentInfos(Models\DeleteAgentTaxPaymentInfosRequest $req) 直播平台-删除代理商完税信息
  * @method Models\DescribeChargeDetailResponse DescribeChargeDetail(Models\DescribeChargeDetailRequest $req) 查询充值明细接口
  * @method Models\DescribeOrderStatusResponse DescribeOrderStatus(Models\DescribeOrderStatusRequest $req) 查询单笔订单交易状态
+ * @method Models\DistributeAccreditQueryResponse DistributeAccreditQuery(Models\DistributeAccreditQueryRequest $req) 云支付-分账授权申请查询接口
+ * @method Models\DistributeAccreditTlinxResponse DistributeAccreditTlinx(Models\DistributeAccreditTlinxRequest $req) 云支付-分账授权申请接口
+ * @method Models\DistributeAddReceiverResponse DistributeAddReceiver(Models\DistributeAddReceiverRequest $req) 云支付-分账添加分账接收方接口
+ * @method Models\DistributeApplyResponse DistributeApply(Models\DistributeApplyRequest $req) 云支付-分账请求接口
+ * @method Models\DistributeCancelResponse DistributeCancel(Models\DistributeCancelRequest $req) 云支付-分账撤销接口
+ * @method Models\DistributeQueryResponse DistributeQuery(Models\DistributeQueryRequest $req) 云支付-分账结果查询接口
+ * @method Models\DistributeQueryReceiverResponse DistributeQueryReceiver(Models\DistributeQueryReceiverRequest $req) 云支付-T查询已添加分账接收方接口
+ * @method Models\DistributeRemoveReceiverResponse DistributeRemoveReceiver(Models\DistributeRemoveReceiverRequest $req) 云支付-分账解除分账接收方接口
  * @method Models\DownloadBillResponse DownloadBill(Models\DownloadBillRequest $req) 账单下载接口，根据本接口返回的URL地址，在D+1日下载对账单。注意，本接口返回的URL地址有时效，请尽快下载。URL超时时效后，请重新调用本接口再次获取。
+ * @method Models\DownloadOrgFileResponse DownloadOrgFile(Models\DownloadOrgFileRequest $req) 云支付-下载机构文件接口
  * @method Models\DownloadReconciliationUrlResponse DownloadReconciliationUrl(Models\DownloadReconciliationUrlRequest $req) 获取对账中心账单下载地址的接口
  * @method Models\ExecuteMemberTransactionResponse ExecuteMemberTransaction(Models\ExecuteMemberTransactionRequest $req) 会员间交易接口
  * @method Models\MigrateOrderRefundResponse MigrateOrderRefund(Models\MigrateOrderRefundRequest $req) 山姆聚合支付项目-存量订单退款接口。可以通过本接口将支付款全部或部分退还给付款方，在收到用户退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。
@@ -89,8 +101,12 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryBankWithdrawCashDetailsResponse QueryBankWithdrawCashDetails(Models\QueryBankWithdrawCashDetailsRequest $req) 查询银行时间段内清分提现明细。查询银行时间段内清分提现明细接口：若为“见证+收单退款”“见证+收单充值”记录时备注Note为“见证+收单充值,订单号”“见证+收单退款,订单号”，此接口可以查到T0/T1的充值明细和退款记录。查询标志：充值记录仍用3清分选项查询，退款记录同提现用2选项查询。
  * @method Models\QueryBatchPaymentResultResponse QueryBatchPaymentResult(Models\QueryBatchPaymentResultRequest $req) 灵云-批量转账结果查询
  * @method Models\QueryBillDownloadURLResponse QueryBillDownloadURL(Models\QueryBillDownloadURLRequest $req) 获取单笔代发转账对账单下载URL
+ * @method Models\QueryCityCodeResponse QueryCityCode(Models\QueryCityCodeRequest $req) 云支付-查询城市编码接口
  * @method Models\QueryCommonTransferRechargeResponse QueryCommonTransferRecharge(Models\QueryCommonTransferRechargeRequest $req) 查询普通转账充值明细。接口用于查询会员主动转账进资金汇总账户的明细情况。若会员使用绑定账号转入，则直接入账到会员子账户。若未使用绑定账号转入，则系统无法自动清分到对应子账户，则转入挂账子账户由平台自行清分。若是 “见证+收单充值”T0充值记录时备注Note为“见证+收单充值,订单号” 此接口可以查到T0到账的“见证+收单充值”充值记录。
  * @method Models\QueryContractResponse QueryContract(Models\QueryContractRequest $req) 通过此接口查询签约数据
+ * @method Models\QueryContractPayFeeResponse QueryContractPayFee(Models\QueryContractPayFeeRequest $req) 云支付-查询支付方式费率及自定义表单项接口
+ * @method Models\QueryContractPayWayListResponse QueryContractPayWayList(Models\QueryContractPayWayListRequest $req) 云支付-查询合同支付方式列表接口
+ * @method Models\QueryContractRelateShopResponse QueryContractRelateShop(Models\QueryContractRelateShopRequest $req) 云支付-查询合同可关联门店接口
  * @method Models\QueryCustAcctIdBalanceResponse QueryCustAcctIdBalance(Models\QueryCustAcctIdBalanceRequest $req) 查询银行子账户余额。查询会员子账户以及平台的功能子账户的余额。
  * @method Models\QueryDownloadBillURLResponse QueryDownloadBillURL(Models\QueryDownloadBillURLRequest $req) 云鉴-查询对账单下载地址的接口
  * @method Models\QueryExchangeRateResponse QueryExchangeRate(Models\QueryExchangeRateRequest $req) 跨境-查询汇率
@@ -102,6 +118,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryMemberTransactionResponse QueryMemberTransaction(Models\QueryMemberTransactionRequest $req) 会员间交易-不验证。此接口可以实现会员间的余额的交易，实现资金在会员之间流动。
  * @method Models\QueryMerchantResponse QueryMerchant(Models\QueryMerchantRequest $req) 云鉴-商户信息查询接口
  * @method Models\QueryMerchantBalanceResponse QueryMerchantBalance(Models\QueryMerchantBalanceRequest $req) 跨境-对接方账户余额查询
+ * @method Models\QueryMerchantClassificationResponse QueryMerchantClassification(Models\QueryMerchantClassificationRequest $req) 云支付-查询商户分类接口
  * @method Models\QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagement(Models\QueryMerchantInfoForManagementRequest $req) 智慧零售-查询管理端商户
  * @method Models\QueryMerchantOrderResponse QueryMerchantOrder(Models\QueryMerchantOrderRequest $req) 云鉴-消费订单查询接口
  * @method Models\QueryMerchantPayWayListResponse QueryMerchantPayWayList(Models\QueryMerchantPayWayListRequest $req) 商户查询已开通的支付方式列表
@@ -111,6 +128,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryPayerInfoResponse QueryPayerInfo(Models\QueryPayerInfoRequest $req) 跨境-付款人查询
  * @method Models\QueryReconciliationDocumentResponse QueryReconciliationDocument(Models\QueryReconciliationDocumentRequest $req) 查询对账文件信息。平台调用该接口获取需下载对账文件的文件名称以及密钥。 平台获取到信息后， 可以再调用OPENAPI的文件下载功能。
  * @method Models\QueryRefundResponse QueryRefund(Models\QueryRefundRequest $req) 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时，用微信零钱支付的退款约20分钟内到账，银行卡支付的退款约3个工作日后到账。
+ * @method Models\QueryShopOpenIdResponse QueryShopOpenId(Models\QueryShopOpenIdRequest $req) 云支付-获取门店OpenId接口
  * @method Models\QuerySinglePayResponse QuerySinglePay(Models\QuerySinglePayRequest $req) 银企直连-单笔支付状态查询接口
  * @method Models\QuerySinglePaymentResultResponse QuerySinglePaymentResult(Models\QuerySinglePaymentResultRequest $req) 灵云-单笔转账结果查询
  * @method Models\QuerySingleTransactionStatusResponse QuerySingleTransactionStatus(Models\QuerySingleTransactionStatusRequest $req) 查询银行单笔交易状态。查询单笔交易的状态。
@@ -141,8 +159,12 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\UnifiedTlinxOrderResponse UnifiedTlinxOrder(Models\UnifiedTlinxOrderRequest $req) 云支付-统一下单接口
  * @method Models\UploadExternalAnchorInfoResponse UploadExternalAnchorInfo(Models\UploadExternalAnchorInfoRequest $req) 灵云-上传主播信息
  * @method Models\UploadFileResponse UploadFile(Models\UploadFileRequest $req) 直播平台-文件上传
+ * @method Models\UploadOrgFileResponse UploadOrgFile(Models\UploadOrgFileRequest $req) 云支付-上传机构文件接口
  * @method Models\UploadTaxListResponse UploadTaxList(Models\UploadTaxListRequest $req) 直播平台-上传代理商完税列表
  * @method Models\UploadTaxPaymentResponse UploadTaxPayment(Models\UploadTaxPaymentRequest $req) 直播平台-上传代理商完税证明
+ * @method Models\ViewContractResponse ViewContract(Models\ViewContractRequest $req) 云支付-查询合同明细接口
+ * @method Models\ViewMerchantResponse ViewMerchant(Models\ViewMerchantRequest $req) 云支付-查询商户明细接口
+ * @method Models\ViewShopResponse ViewShop(Models\ViewShopRequest $req) 云支付-查询门店明细接口
  * @method Models\WithdrawCashMembershipResponse WithdrawCashMembership(Models\WithdrawCashMembershipRequest $req) 会员提现-不验证。此接口受理会员发起的提现申请。会员子账户的可提现余额、可用余额会减少，市场的资金汇总账户(监管账户)会减少相应的发生金额，提现到会员申请的收款账户。		
  */
 

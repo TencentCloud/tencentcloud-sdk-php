@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) 设置函数所属命名空间
  * @method string getRole() 获取函数绑定的角色
  * @method void setRole(string $Role) 设置函数绑定的角色
+ * @method string getInstallDependency() 获取[在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
+ * @method void setInstallDependency(string $InstallDependency) 设置[在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
  * @method string getClsLogsetId() 获取函数日志投递到的CLS LogsetID
  * @method void setClsLogsetId(string $ClsLogsetId) 设置函数日志投递到的CLS LogsetID
  * @method string getClsTopicId() 获取函数日志投递到的CLS TopicID
@@ -129,6 +131,11 @@ class CreateFunctionRequest extends AbstractModel
     public $Role;
 
     /**
+     * @var string [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
+     */
+    public $InstallDependency;
+
+    /**
      * @var string 函数日志投递到的CLS LogsetID
      */
     public $ClsLogsetId;
@@ -210,6 +217,7 @@ class CreateFunctionRequest extends AbstractModel
      * @param VpcConfig $VpcConfig 函数的私有网络配置
      * @param string $Namespace 函数所属命名空间
      * @param string $Role 函数绑定的角色
+     * @param string $InstallDependency [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。
      * @param string $ClsLogsetId 函数日志投递到的CLS LogsetID
      * @param string $ClsTopicId 函数日志投递到的CLS TopicID
      * @param string $Type 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
@@ -283,6 +291,10 @@ class CreateFunctionRequest extends AbstractModel
 
         if (array_key_exists("Role",$param) and $param["Role"] !== null) {
             $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("InstallDependency",$param) and $param["InstallDependency"] !== null) {
+            $this->InstallDependency = $param["InstallDependency"];
         }
 
         if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {

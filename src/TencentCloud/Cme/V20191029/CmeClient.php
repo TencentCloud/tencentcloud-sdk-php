@@ -32,6 +32,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <b>若需使用云转推功能，请先咨询 [智能客服](https://cloud.tencent.com/act/event/smarty-service?from=doc_1138) 或 [提交工单](https://console.cloud.tencent.com/workorder/category) 。</b>
 
  * @method Models\CreateTeamResponse CreateTeam(Models\CreateTeamRequest $req) 创建一个团队。
+ * @method Models\CreateVideoEncodingPresetResponse CreateVideoEncodingPreset(Models\CreateVideoEncodingPresetRequest $req) 指定导出的参数，创建一个视频编码配置
  * @method Models\DeleteClassResponse DeleteClass(Models\DeleteClassRequest $req) 删除分类信息，删除时检验下述限制：
 <li>分类路径必须存在；</li>
 <li>分类下没有绑定素材。</li>
@@ -42,6 +43,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 <li>要删除的团队必须没有归属的素材；</li>
 <li>要删除的团队必须没有归属的分类。</li>
  * @method Models\DeleteTeamMembersResponse DeleteTeamMembers(Models\DeleteTeamMembersRequest $req) 将团队成员从团队中删除，默认只有 Owner 及管理员才有此权限。
+ * @method Models\DeleteVideoEncodingPresetResponse DeleteVideoEncodingPreset(Models\DeleteVideoEncodingPresetRequest $req) 删除指定 ID 的视频编码配置
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 获取用户账号信息。
  * @method Models\DescribeClassResponse DescribeClass(Models\DescribeClassRequest $req) 获取指定归属者下所有的分类信息。
  * @method Models\DescribeJoinTeamsResponse DescribeJoinTeams(Models\DescribeJoinTeamsRequest $req) 获取指定的团队成员所加入的团队列表。
@@ -60,6 +62,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 获取任务列表，支持条件筛选，返回对应的任务基础信息列表。
  * @method Models\DescribeTeamMembersResponse DescribeTeamMembers(Models\DescribeTeamMembersRequest $req) 获取指定成员 ID 的信息，同时支持拉取所有团队成员信息。
  * @method Models\DescribeTeamsResponse DescribeTeams(Models\DescribeTeamsRequest $req) 获取指定团队的信息，拉取团队信息列表。
+ * @method Models\DescribeVideoEncodingPresetsResponse DescribeVideoEncodingPresets(Models\DescribeVideoEncodingPresetsRequest $req) 查询视频编码配置信息。
  * @method Models\ExportVideoByEditorTrackDataResponse ExportVideoByEditorTrackData(Models\ExportVideoByEditorTrackDataRequest $req) 使用视频合成协议导出视频，支持导出到CME云媒资和VOD云媒资。
  * @method Models\ExportVideoByTemplateResponse ExportVideoByTemplate(Models\ExportVideoByTemplateRequest $req) 使用视频编辑模板直接导出视频。
  * @method Models\ExportVideoByVideoSegmentationDataResponse ExportVideoByVideoSegmentationData(Models\ExportVideoByVideoSegmentationDataRequest $req) 使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
@@ -92,6 +95,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\ModifyTeamResponse ModifyTeam(Models\ModifyTeamRequest $req) 修改团队信息，目前支持修改的操作有：
 <li>修改团队名称。</li>
  * @method Models\ModifyTeamMemberResponse ModifyTeamMember(Models\ModifyTeamMemberRequest $req) 修改团队成员信息，包括成员备注、角色等。
+ * @method Models\ModifyVideoEncodingPresetResponse ModifyVideoEncodingPreset(Models\ModifyVideoEncodingPresetRequest $req) 修改视频编码配置信息。
  * @method Models\MoveClassResponse MoveClass(Models\MoveClassRequest $req) 移动某一个分类到另外一个分类下，也可用于分类重命名。
 如果 SourceClassPath = /素材/视频/NBA，DestinationClassPath = /素材/视频/篮球
 <li>当 DestinationClassPath 不存在时候，操作结果为重命名 ClassPath；</li>

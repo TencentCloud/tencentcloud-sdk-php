@@ -40,8 +40,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
  * @method string getDbType() 获取引擎类型：目前支持“MYSQL”， “POSTGRESQL”
  * @method void setDbType(string $DbType) 设置引擎类型：目前支持“MYSQL”， “POSTGRESQL”
- * @method string getStatus() 获取实例状态
- * @method void setStatus(string $Status) 设置实例状态
+ * @method string getStatus() 获取实例状态, 可选值:
+creating 创建中
+running 运行中
+isolating 隔离中
+isolated 已隔离
+activating 恢复中
+offlining 下线中
+offlined 已下线
+ * @method void setStatus(string $Status) 设置实例状态, 可选值:
+creating 创建中
+running 运行中
+isolating 隔离中
+isolated 已隔离
+activating 恢复中
+offlining 下线中
+offlined 已下线
  * @method array getInstanceIds() 获取实例id列表
  * @method void setInstanceIds(array $InstanceIds) 设置实例id列表
  */
@@ -82,7 +96,14 @@ class DescribeInstancesRequest extends AbstractModel
     public $DbType;
 
     /**
-     * @var string 实例状态
+     * @var string 实例状态, 可选值:
+creating 创建中
+running 运行中
+isolating 隔离中
+isolated 已隔离
+activating 恢复中
+offlining 下线中
+offlined 已下线
      */
     public $Status;
 
@@ -102,7 +123,14 @@ class DescribeInstancesRequest extends AbstractModel
 <li> DESC：降序排序 </li>
      * @param array $Filters 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
      * @param string $DbType 引擎类型：目前支持“MYSQL”， “POSTGRESQL”
-     * @param string $Status 实例状态
+     * @param string $Status 实例状态, 可选值:
+creating 创建中
+running 运行中
+isolating 隔离中
+isolated 已隔离
+activating 恢复中
+offlining 下线中
+offlined 已下线
      * @param array $InstanceIds 实例id列表
      */
     function __construct()

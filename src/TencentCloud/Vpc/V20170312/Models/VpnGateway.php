@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) 设置网关实例版本信息
  * @method string getNetworkInstanceId() 获取Type值为CCN时，该值表示云联网实例ID
  * @method void setNetworkInstanceId(string $NetworkInstanceId) 设置Type值为CCN时，该值表示云联网实例ID
+ * @method string getCdcId() 获取CDC 实例ID
+ * @method void setCdcId(string $CdcId) 设置CDC 实例ID
+ * @method integer getMaxConnection() 获取SSL-VPN 客户端连接数。
+ * @method void setMaxConnection(integer $MaxConnection) 设置SSL-VPN 客户端连接数。
  */
 class VpnGateway extends AbstractModel
 {
@@ -150,6 +154,16 @@ class VpnGateway extends AbstractModel
     public $NetworkInstanceId;
 
     /**
+     * @var string CDC 实例ID
+     */
+    public $CdcId;
+
+    /**
+     * @var integer SSL-VPN 客户端连接数。
+     */
+    public $MaxConnection;
+
+    /**
      * @param string $VpnGatewayId 网关实例ID。
      * @param string $VpcId VPC实例ID。
      * @param string $VpnGatewayName 网关实例名称。
@@ -168,6 +182,8 @@ class VpnGateway extends AbstractModel
      * @param array $VpnGatewayQuotaSet 网关带宽配额信息
      * @param string $Version 网关实例版本信息
      * @param string $NetworkInstanceId Type值为CCN时，该值表示云联网实例ID
+     * @param string $CdcId CDC 实例ID
+     * @param integer $MaxConnection SSL-VPN 客户端连接数。
      */
     function __construct()
     {
@@ -257,6 +273,14 @@ class VpnGateway extends AbstractModel
 
         if (array_key_exists("NetworkInstanceId",$param) and $param["NetworkInstanceId"] !== null) {
             $this->NetworkInstanceId = $param["NetworkInstanceId"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
+            $this->MaxConnection = $param["MaxConnection"];
         }
     }
 }

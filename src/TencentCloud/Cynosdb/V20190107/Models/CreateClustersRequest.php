@@ -36,12 +36,18 @@ use TencentCloud\Common\AbstractModel;
 <li> MYSQL可选值：5.7 </li>
  * @method integer getProjectId() 获取所属项目ID
  * @method void setProjectId(integer $ProjectId) 设置所属项目ID
- * @method integer getCpu() 获取普通实例Cpu核数
- * @method void setCpu(integer $Cpu) 设置普通实例Cpu核数
- * @method integer getMemory() 获取普通实例内存,单位G
- * @method void setMemory(integer $Memory) 设置普通实例内存,单位G
- * @method integer getStorage() 获取存储大小，单位G
- * @method void setStorage(integer $Storage) 设置存储大小，单位G
+ * @method integer getCpu() 获取当DbMode为NORMAL或不填时必选
+普通实例Cpu核数
+ * @method void setCpu(integer $Cpu) 设置当DbMode为NORMAL或不填时必选
+普通实例Cpu核数
+ * @method integer getMemory() 获取当DbMode为NORMAL或不填时必选
+普通实例内存,单位G
+ * @method void setMemory(integer $Memory) 设置当DbMode为NORMAL或不填时必选
+普通实例内存,单位G
+ * @method integer getStorage() 获取该参数无实际意义，已废弃。
+存储大小，单位G。
+ * @method void setStorage(integer $Storage) 设置该参数无实际意义，已废弃。
+存储大小，单位G。
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getAdminPassword() 获取账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
@@ -66,8 +72,10 @@ timeRollback，时间点回档
  * @method void setOriginalClusterId(string $OriginalClusterId) 设置回档时，传入源集群ID，用于查找源poolId
  * @method string getExpectTime() 获取时间点回档，指定时间；快照回档，快照时间
  * @method void setExpectTime(string $ExpectTime) 设置时间点回档，指定时间；快照回档，快照时间
- * @method integer getExpectTimeThresh() 获取时间点回档，指定时间允许范围
- * @method void setExpectTimeThresh(integer $ExpectTimeThresh) 设置时间点回档，指定时间允许范围
+ * @method integer getExpectTimeThresh() 获取该参数无实际意义，已废弃。
+时间点回档，指定时间允许范围
+ * @method void setExpectTimeThresh(integer $ExpectTimeThresh) 设置该参数无实际意义，已废弃。
+时间点回档，指定时间允许范围
  * @method integer getStorageLimit() 获取普通实例存储上限，单位GB
 当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
  * @method void setStorageLimit(integer $StorageLimit) 设置普通实例存储上限，单位GB
@@ -168,17 +176,20 @@ class CreateClustersRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 普通实例Cpu核数
+     * @var integer 当DbMode为NORMAL或不填时必选
+普通实例Cpu核数
      */
     public $Cpu;
 
     /**
-     * @var integer 普通实例内存,单位G
+     * @var integer 当DbMode为NORMAL或不填时必选
+普通实例内存,单位G
      */
     public $Memory;
 
     /**
-     * @var integer 存储大小，单位G
+     * @var integer 该参数无实际意义，已废弃。
+存储大小，单位G。
      */
     public $Storage;
 
@@ -231,7 +242,8 @@ timeRollback，时间点回档
     public $ExpectTime;
 
     /**
-     * @var integer 时间点回档，指定时间允许范围
+     * @var integer 该参数无实际意义，已废弃。
+时间点回档，指定时间允许范围
      */
     public $ExpectTimeThresh;
 
@@ -356,9 +368,12 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param string $DbVersion 数据库版本，取值范围: 
 <li> MYSQL可选值：5.7 </li>
      * @param integer $ProjectId 所属项目ID
-     * @param integer $Cpu 普通实例Cpu核数
-     * @param integer $Memory 普通实例内存,单位G
-     * @param integer $Storage 存储大小，单位G
+     * @param integer $Cpu 当DbMode为NORMAL或不填时必选
+普通实例Cpu核数
+     * @param integer $Memory 当DbMode为NORMAL或不填时必选
+普通实例内存,单位G
+     * @param integer $Storage 该参数无实际意义，已废弃。
+存储大小，单位G。
      * @param string $ClusterName 集群名称
      * @param string $AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
      * @param integer $Port 端口，默认5432
@@ -371,7 +386,8 @@ timeRollback，时间点回档
      * @param integer $RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
      * @param string $OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
      * @param string $ExpectTime 时间点回档，指定时间；快照回档，快照时间
-     * @param integer $ExpectTimeThresh 时间点回档，指定时间允许范围
+     * @param integer $ExpectTimeThresh 该参数无实际意义，已废弃。
+时间点回档，指定时间允许范围
      * @param integer $StorageLimit 普通实例存储上限，单位GB
 当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
      * @param integer $InstanceCount 实例数量

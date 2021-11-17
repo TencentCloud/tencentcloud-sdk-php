@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPlatform() 获取平台名称，指定访问的平台。
  * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method integer getDefinition() 获取导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+ * @method integer getDefinition() 获取导出视频编码配置 Id，推荐优先使用下面的预置模板 Id，有其他需求可通过接口定制视频编码配置。
 <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
- * @method void setDefinition(integer $Definition) 设置导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+ * @method void setDefinition(integer $Definition) 设置导出视频编码配置 Id，推荐优先使用下面的预置模板 Id，有其他需求可通过接口定制视频编码配置。
 <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
@@ -38,8 +38,12 @@ use TencentCloud\Common\AbstractModel;
 <li>VOD：云点播，即导出为云点播媒资。</li>
  * @method string getTrackData() 获取在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
  * @method void setTrackData(string $TrackData) 设置在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
- * @method string getAspectRatio() 获取轨道数据对应的画布宽高比。
- * @method void setAspectRatio(string $AspectRatio) 设置轨道数据对应的画布宽高比。
+ * @method string getAspectRatio() 获取轨道数据对应的画布宽高比，配合视频编码配置中的视频短边尺寸，可决定导出画面的尺寸。例：
+<li>如果 AspectRatio 取值 16:9，视频编码配置选为12（短边1080），则导出尺寸为 1920 * 1080；</li>
+<li>如果 AspectRatio 取值 9:16，视频编码配置选为11（短边720），则导出尺寸为 720 *1280。</li>
+ * @method void setAspectRatio(string $AspectRatio) 设置轨道数据对应的画布宽高比，配合视频编码配置中的视频短边尺寸，可决定导出画面的尺寸。例：
+<li>如果 AspectRatio 取值 16:9，视频编码配置选为12（短边1080），则导出尺寸为 1920 * 1080；</li>
+<li>如果 AspectRatio 取值 9:16，视频编码配置选为11（短边720），则导出尺寸为 720 *1280。</li>
  * @method string getCoverData() 获取视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
  * @method void setCoverData(string $CoverData) 设置视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
  * @method CMEExportInfo getCMEExportInfo() 获取导出的云剪媒体信息。当导出目标为 CME 时必填。
@@ -57,7 +61,7 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var integer 导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+     * @var integer 导出视频编码配置 Id，推荐优先使用下面的预置模板 Id，有其他需求可通过接口定制视频编码配置。
 <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
@@ -77,7 +81,9 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
     public $TrackData;
 
     /**
-     * @var string 轨道数据对应的画布宽高比。
+     * @var string 轨道数据对应的画布宽高比，配合视频编码配置中的视频短边尺寸，可决定导出画面的尺寸。例：
+<li>如果 AspectRatio 取值 16:9，视频编码配置选为12（短边1080），则导出尺寸为 1920 * 1080；</li>
+<li>如果 AspectRatio 取值 9:16，视频编码配置选为11（短边720），则导出尺寸为 720 *1280。</li>
      */
     public $AspectRatio;
 
@@ -103,7 +109,7 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
 
     /**
      * @param string $Platform 平台名称，指定访问的平台。
-     * @param integer $Definition 导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+     * @param integer $Definition 导出视频编码配置 Id，推荐优先使用下面的预置模板 Id，有其他需求可通过接口定制视频编码配置。
 <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
@@ -111,7 +117,9 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
 <li>CME：云剪，即导出为云剪素材；</li>
 <li>VOD：云点播，即导出为云点播媒资。</li>
      * @param string $TrackData 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
-     * @param string $AspectRatio 轨道数据对应的画布宽高比。
+     * @param string $AspectRatio 轨道数据对应的画布宽高比，配合视频编码配置中的视频短边尺寸，可决定导出画面的尺寸。例：
+<li>如果 AspectRatio 取值 16:9，视频编码配置选为12（短边1080），则导出尺寸为 1920 * 1080；</li>
+<li>如果 AspectRatio 取值 9:16，视频编码配置选为11（短边720），则导出尺寸为 720 *1280。</li>
      * @param string $CoverData 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
      * @param CMEExportInfo $CMEExportInfo 导出的云剪媒体信息。当导出目标为 CME 时必填。
      * @param VODExportInfo $VODExportInfo 导出的云点播媒资信息。当导出目标为 VOD 时必填。

@@ -32,10 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method string getZone() 获取可用区，如：ap-guangzhou-2。
  * @method void setZone(string $Zone) 设置可用区，如：ap-guangzhou-2。
- * @method string getType() 获取VPN网关类型。值“CCN”云联网类型VPN网关
- * @method void setType(string $Type) 设置VPN网关类型。值“CCN”云联网类型VPN网关
+ * @method string getType() 获取VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
+ * @method void setType(string $Type) 设置VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method string getCdcId() 获取CDC实例ID
+ * @method void setCdcId(string $CdcId) 设置CDC实例ID
+ * @method integer getMaxConnection() 获取SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
+ * @method void setMaxConnection(integer $MaxConnection) 设置SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
  */
 class CreateVpnGatewayRequest extends AbstractModel
 {
@@ -70,7 +74,7 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string VPN网关类型。值“CCN”云联网类型VPN网关
+     * @var string VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
      */
     public $Type;
 
@@ -80,14 +84,26 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string CDC实例ID
+     */
+    public $CdcId;
+
+    /**
+     * @var integer SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
+     */
+    public $MaxConnection;
+
+    /**
      * @param string $VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      * @param string $VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
      * @param integer $InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
      * @param string $InstanceChargeType VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      * @param string $Zone 可用区，如：ap-guangzhou-2。
-     * @param string $Type VPN网关类型。值“CCN”云联网类型VPN网关
+     * @param string $Type VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param string $CdcId CDC实例ID
+     * @param integer $MaxConnection SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
      */
     function __construct()
     {
@@ -138,6 +154,14 @@ class CreateVpnGatewayRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
+            $this->MaxConnection = $param["MaxConnection"];
         }
     }
 }

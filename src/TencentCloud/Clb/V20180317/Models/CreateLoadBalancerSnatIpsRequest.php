@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() 获取负载均衡唯一性ID，例如：lb-12345678。
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡唯一性ID，例如：lb-12345678。
- * @method array getSnatIps() 获取添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
- * @method void setSnatIps(array $SnatIps) 设置添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
- * @method integer getNumber() 获取添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
- * @method void setNumber(integer $Number) 设置添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+ * @method array getSnatIps() 获取添加的SnatIp信息，可指定IP申请，或者指定子网自动申请。单个CLB实例可申请的默认上限为10个。
+ * @method void setSnatIps(array $SnatIps) 设置添加的SnatIp信息，可指定IP申请，或者指定子网自动申请。单个CLB实例可申请的默认上限为10个。
+ * @method integer getNumber() 获取添加的SnatIp的个数，可与SnatIps一起使用，但若指定IP时，则不能指定创建的SnatIp个数。默认值为1，数量上限与用户配置有关，默认上限为10。
+ * @method void setNumber(integer $Number) 设置添加的SnatIp的个数，可与SnatIps一起使用，但若指定IP时，则不能指定创建的SnatIp个数。默认值为1，数量上限与用户配置有关，默认上限为10。
  */
 class CreateLoadBalancerSnatIpsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var array 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
+     * @var array 添加的SnatIp信息，可指定IP申请，或者指定子网自动申请。单个CLB实例可申请的默认上限为10个。
      */
     public $SnatIps;
 
     /**
-     * @var integer 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+     * @var integer 添加的SnatIp的个数，可与SnatIps一起使用，但若指定IP时，则不能指定创建的SnatIp个数。默认值为1，数量上限与用户配置有关，默认上限为10。
      */
     public $Number;
 
     /**
      * @param string $LoadBalancerId 负载均衡唯一性ID，例如：lb-12345678。
-     * @param array $SnatIps 添加SnatIp信息，可指定IP申请，或者指定子网自动申请。
-     * @param integer $Number 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+     * @param array $SnatIps 添加的SnatIp信息，可指定IP申请，或者指定子网自动申请。单个CLB实例可申请的默认上限为10个。
+     * @param integer $Number 添加的SnatIp的个数，可与SnatIps一起使用，但若指定IP时，则不能指定创建的SnatIp个数。默认值为1，数量上限与用户配置有关，默认上限为10。
      */
     function __construct()
     {

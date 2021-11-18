@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivilegeRules(SecurityEventInfo $PrivilegeRules) 设置本地提权相关风险事件
  * @method SecurityEventInfo getReverseShell() 获取反弹Shell相关风险事件
  * @method void setReverseShell(SecurityEventInfo $ReverseShell) 设置反弹Shell相关风险事件
- * @method SecurityEventInfo getSysVul() 获取系统组件相关风险事件
- * @method void setSysVul(SecurityEventInfo $SysVul) 设置系统组件相关风险事件
+ * @method SecurityEventInfo getSysVul() 获取应用漏洞风险事件
+ * @method void setSysVul(SecurityEventInfo $SysVul) 设置应用漏洞风险事件
  * @method SecurityEventInfo getWebVul() 获取Web应用漏洞相关风险事件
  * @method void setWebVul(SecurityEventInfo $WebVul) 设置Web应用漏洞相关风险事件
  * @method SecurityEventInfo getEmergencyVul() 获取应急漏洞相关风险事件
@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEffectMachineCount(integer $EffectMachineCount) 设置受影响机器数
  * @method integer getEventsCount() 获取所有事件总数
  * @method void setEventsCount(integer $EventsCount) 设置所有事件总数
+ * @method SecurityEventInfo getWindowVul() 获取window 系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWindowVul(SecurityEventInfo $WindowVul) 设置window 系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SecurityEventInfo getLinuxVul() 获取linux系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLinuxVul(SecurityEventInfo $LinuxVul) 设置linux系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,7 +97,7 @@ class DescribeSecurityEventsCntResponse extends AbstractModel
     public $ReverseShell;
 
     /**
-     * @var SecurityEventInfo 系统组件相关风险事件
+     * @var SecurityEventInfo 应用漏洞风险事件
      */
     public $SysVul;
 
@@ -124,6 +132,18 @@ class DescribeSecurityEventsCntResponse extends AbstractModel
     public $EventsCount;
 
     /**
+     * @var SecurityEventInfo window 系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WindowVul;
+
+    /**
+     * @var SecurityEventInfo linux系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LinuxVul;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -136,13 +156,17 @@ class DescribeSecurityEventsCntResponse extends AbstractModel
      * @param SecurityEventInfo $Bash 高危命令相关风险事件
      * @param SecurityEventInfo $PrivilegeRules 本地提权相关风险事件
      * @param SecurityEventInfo $ReverseShell 反弹Shell相关风险事件
-     * @param SecurityEventInfo $SysVul 系统组件相关风险事件
+     * @param SecurityEventInfo $SysVul 应用漏洞风险事件
      * @param SecurityEventInfo $WebVul Web应用漏洞相关风险事件
      * @param SecurityEventInfo $EmergencyVul 应急漏洞相关风险事件
      * @param SecurityEventInfo $BaseLine 安全基线相关风险事件
      * @param SecurityEventInfo $AttackLogs 攻击检测相关风险事件
      * @param integer $EffectMachineCount 受影响机器数
      * @param integer $EventsCount 所有事件总数
+     * @param SecurityEventInfo $WindowVul window 系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityEventInfo $LinuxVul linux系统漏洞事件总数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -224,6 +248,16 @@ class DescribeSecurityEventsCntResponse extends AbstractModel
 
         if (array_key_exists("EventsCount",$param) and $param["EventsCount"] !== null) {
             $this->EventsCount = $param["EventsCount"];
+        }
+
+        if (array_key_exists("WindowVul",$param) and $param["WindowVul"] !== null) {
+            $this->WindowVul = new SecurityEventInfo();
+            $this->WindowVul->deserialize($param["WindowVul"]);
+        }
+
+        if (array_key_exists("LinuxVul",$param) and $param["LinuxVul"] !== null) {
+            $this->LinuxVul = new SecurityEventInfo();
+            $this->LinuxVul->deserialize($param["LinuxVul"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

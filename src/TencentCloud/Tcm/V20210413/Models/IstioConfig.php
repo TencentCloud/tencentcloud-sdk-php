@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutboundTrafficPolicy(string $OutboundTrafficPolicy) 设置外部流量策略
  * @method TracingConfig getTracing() 获取调用链配置
  * @method void setTracing(TracingConfig $Tracing) 设置调用链配置
+ * @method boolean getDisablePolicyChecks() 获取禁用策略检查功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisablePolicyChecks(boolean $DisablePolicyChecks) 设置禁用策略检查功能
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IstioConfig extends AbstractModel
 {
@@ -38,8 +42,16 @@ class IstioConfig extends AbstractModel
     public $Tracing;
 
     /**
+     * @var boolean 禁用策略检查功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisablePolicyChecks;
+
+    /**
      * @param string $OutboundTrafficPolicy 外部流量策略
      * @param TracingConfig $Tracing 调用链配置
+     * @param boolean $DisablePolicyChecks 禁用策略检查功能
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -61,6 +73,10 @@ class IstioConfig extends AbstractModel
         if (array_key_exists("Tracing",$param) and $param["Tracing"] !== null) {
             $this->Tracing = new TracingConfig();
             $this->Tracing->deserialize($param["Tracing"]);
+        }
+
+        if (array_key_exists("DisablePolicyChecks",$param) and $param["DisablePolicyChecks"] !== null) {
+            $this->DisablePolicyChecks = $param["DisablePolicyChecks"];
         }
     }
 }

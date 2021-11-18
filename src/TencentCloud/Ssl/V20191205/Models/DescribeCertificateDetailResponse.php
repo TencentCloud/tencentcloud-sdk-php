@@ -120,9 +120,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusName(string $StatusName) 设置状态描述。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSubjectAltName() 获取证书包含的多个域名（包含主域名）
+ * @method array getSubjectAltName() 获取证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubjectAltName(array $SubjectAltName) 设置证书包含的多个域名（包含主域名）
+ * @method void setSubjectAltName(array $SubjectAltName) 设置证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsVip() 获取是否为 VIP 客户。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -312,7 +312,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $StatusName;
 
     /**
-     * @var array 证书包含的多个域名（包含主域名）
+     * @var array 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubjectAltName;
@@ -421,7 +421,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusName 状态描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SubjectAltName 证书包含的多个域名（包含主域名）
+     * @param array $SubjectAltName 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsVip 是否为 VIP 客户。
 注意：此字段可能返回 null，表示取不到有效值。

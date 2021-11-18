@@ -30,6 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulId(array $VulId) 设置任务扫描的漏洞id
  * @method integer getType() 获取0一键检测 1定时检测
  * @method void setType(integer $Type) 设置0一键检测 1定时检测
+ * @method string getScanBeginTime() 获取开始扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScanBeginTime(string $ScanBeginTime) 设置开始扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRiskEventCount() 获取扫描漏洞数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskEventCount(integer $RiskEventCount) 设置扫描漏洞数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScanEndTime() 获取扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +73,24 @@ class DescribeScanStateResponse extends AbstractModel
     public $Type;
 
     /**
+     * @var string 开始扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScanBeginTime;
+
+    /**
+     * @var integer 扫描漏洞数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskEventCount;
+
+    /**
+     * @var string 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScanEndTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +101,12 @@ class DescribeScanStateResponse extends AbstractModel
      * @param integer $TaskId 任务Id
      * @param array $VulId 任务扫描的漏洞id
      * @param integer $Type 0一键检测 1定时检测
+     * @param string $ScanBeginTime 开始扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RiskEventCount 扫描漏洞数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScanEndTime 扫描结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +140,18 @@ class DescribeScanStateResponse extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("ScanBeginTime",$param) and $param["ScanBeginTime"] !== null) {
+            $this->ScanBeginTime = $param["ScanBeginTime"];
+        }
+
+        if (array_key_exists("RiskEventCount",$param) and $param["RiskEventCount"] !== null) {
+            $this->RiskEventCount = $param["RiskEventCount"];
+        }
+
+        if (array_key_exists("ScanEndTime",$param) and $param["ScanEndTime"] !== null) {
+            $this->ScanEndTime = $param["ScanEndTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

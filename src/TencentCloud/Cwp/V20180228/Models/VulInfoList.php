@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIds(string $Ids) 设置漏洞包含的事件id串，多个用“,”分割
  * @method string getName() 获取漏洞名
  * @method void setName(string $Name) 设置漏洞名
- * @method integer getStatus() 获取0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 控制台仅处理0,1,3,5,6四种状态
- * @method void setStatus(integer $Status) 设置0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 控制台仅处理0,1,3,5,6四种状态
+ * @method integer getStatus() 获取0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
+ * @method void setStatus(integer $Status) 设置0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
  * @method integer getVulId() 获取漏洞id
  * @method void setVulId(integer $VulId) 设置漏洞id
  * @method string getPublishTime() 获取漏洞披露事件
@@ -60,6 +60,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusStr(string $StatusStr) 设置聚合后事件状态串
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCveId() 获取cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCveId(string $CveId) 设置cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getCvssScore() 获取CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCvssScore(float $CvssScore) 设置CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLabels() 获取漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabels(string $Labels) 设置漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFixSwitch() 获取是否能自动修复且包含能自动修复的主机， 0=否  1=是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFixSwitch(integer $FixSwitch) 设置是否能自动修复且包含能自动修复的主机， 0=否  1=是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskId() 获取最后扫描任务的id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskId(integer $TaskId) 设置最后扫描任务的id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulInfoList extends AbstractModel
 {
@@ -74,7 +94,7 @@ class VulInfoList extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 控制台仅处理0,1,3,5,6四种状态
+     * @var integer 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
      */
     public $Status;
 
@@ -140,9 +160,39 @@ class VulInfoList extends AbstractModel
     public $StatusStr;
 
     /**
+     * @var string cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CveId;
+
+    /**
+     * @var float CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CvssScore;
+
+    /**
+     * @var string 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Labels;
+
+    /**
+     * @var integer 是否能自动修复且包含能自动修复的主机， 0=否  1=是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FixSwitch;
+
+    /**
+     * @var integer 最后扫描任务的id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskId;
+
+    /**
      * @param string $Ids 漏洞包含的事件id串，多个用“,”分割
      * @param string $Name 漏洞名
-     * @param integer $Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 控制台仅处理0,1,3,5,6四种状态
+     * @param integer $Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
      * @param integer $VulId 漏洞id
      * @param string $PublishTime 漏洞披露事件
      * @param string $LastTime 最后检测时间
@@ -159,6 +209,16 @@ class VulInfoList extends AbstractModel
      * @param string $DescriptWisteria 废弃字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusStr 聚合后事件状态串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CveId cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $CvssScore CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Labels 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FixSwitch 是否能自动修复且包含能自动修复的主机， 0=否  1=是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskId 最后扫描任务的id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +288,26 @@ class VulInfoList extends AbstractModel
 
         if (array_key_exists("StatusStr",$param) and $param["StatusStr"] !== null) {
             $this->StatusStr = $param["StatusStr"];
+        }
+
+        if (array_key_exists("CveId",$param) and $param["CveId"] !== null) {
+            $this->CveId = $param["CveId"];
+        }
+
+        if (array_key_exists("CvssScore",$param) and $param["CvssScore"] !== null) {
+            $this->CvssScore = $param["CvssScore"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = $param["Labels"];
+        }
+
+        if (array_key_exists("FixSwitch",$param) and $param["FixSwitch"] !== null) {
+            $this->FixSwitch = $param["FixSwitch"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

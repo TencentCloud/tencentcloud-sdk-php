@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessLog(AccessLogConfig $AccessLog) 设置AccessLog配置
  * @method PrometheusConfig getPrometheus() 获取Prometheus配置
  * @method void setPrometheus(PrometheusConfig $Prometheus) 设置Prometheus配置
+ * @method InjectConfig getInject() 获取自动注入配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInject(InjectConfig $Inject) 设置自动注入配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MeshConfig extends AbstractModel
 {
@@ -45,9 +49,17 @@ class MeshConfig extends AbstractModel
     public $Prometheus;
 
     /**
+     * @var InjectConfig 自动注入配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Inject;
+
+    /**
      * @param IstioConfig $Istio Istio配置
      * @param AccessLogConfig $AccessLog AccessLog配置
      * @param PrometheusConfig $Prometheus Prometheus配置
+     * @param InjectConfig $Inject 自动注入配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -75,6 +87,11 @@ class MeshConfig extends AbstractModel
         if (array_key_exists("Prometheus",$param) and $param["Prometheus"] !== null) {
             $this->Prometheus = new PrometheusConfig();
             $this->Prometheus->deserialize($param["Prometheus"]);
+        }
+
+        if (array_key_exists("Inject",$param) and $param["Inject"] !== null) {
+            $this->Inject = new InjectConfig();
+            $this->Inject->deserialize($param["Inject"]);
         }
     }
 }

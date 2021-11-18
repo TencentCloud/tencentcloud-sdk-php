@@ -36,6 +36,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastScanTime(string $LastScanTime) 设置最后扫描时间
  * @method integer getProgress() 获取扫描进度
  * @method void setProgress(integer $Progress) 设置扫描进度
+ * @method string getCveId() 获取cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCveId(string $CveId) 设置cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getCvssScore() 获取CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCvssScore(float $CvssScore) 设置CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLabels() 获取漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabels(string $Labels) 设置漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHostCount() 获取影响机器数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostCount(integer $HostCount) 设置影响机器数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmergencyVul extends AbstractModel
 {
@@ -80,6 +96,30 @@ class EmergencyVul extends AbstractModel
     public $Progress;
 
     /**
+     * @var string cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CveId;
+
+    /**
+     * @var float CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CvssScore;
+
+    /**
+     * @var string 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Labels;
+
+    /**
+     * @var integer 影响机器数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostCount;
+
+    /**
      * @param integer $VulId 漏洞id
      * @param integer $Level 漏洞级别
      * @param string $VulName 漏洞名称
@@ -88,6 +128,14 @@ class EmergencyVul extends AbstractModel
      * @param integer $Status 漏洞状态 0未检测 1有风险 ，2无风险 ，3 检查中展示progress
      * @param string $LastScanTime 最后扫描时间
      * @param integer $Progress 扫描进度
+     * @param string $CveId cve编号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $CvssScore CVSS评分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Labels 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HostCount 影响机器数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +180,22 @@ class EmergencyVul extends AbstractModel
 
         if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
             $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("CveId",$param) and $param["CveId"] !== null) {
+            $this->CveId = $param["CveId"];
+        }
+
+        if (array_key_exists("CvssScore",$param) and $param["CvssScore"] !== null) {
+            $this->CvssScore = $param["CvssScore"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = $param["Labels"];
+        }
+
+        if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
+            $this->HostCount = $param["HostCount"];
         }
     }
 }

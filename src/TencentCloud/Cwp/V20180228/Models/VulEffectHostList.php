@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(integer $EventId) 设置事件id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中
+ * @method integer getStatus() 获取状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中
+ * @method void setStatus(integer $Status) 设置状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastTime() 获取最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置说明
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHostVersion() 获取版本信息 0=普通版本 1=专业版 2=旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostVersion(integer $HostVersion) 设置版本信息 0=普通版本 1=专业版 2=旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSupportAutoFix() 获取是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportAutoFix(integer $IsSupportAutoFix) 设置是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFixStatusMsg() 获取失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFixStatusMsg(string $FixStatusMsg) 设置失败原因
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulEffectHostList extends AbstractModel
 {
@@ -70,7 +82,7 @@ class VulEffectHostList extends AbstractModel
     public $EventId;
 
     /**
-     * @var integer 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中
+     * @var integer 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -124,9 +136,27 @@ class VulEffectHostList extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 版本信息 0=普通版本 1=专业版 2=旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostVersion;
+
+    /**
+     * @var integer 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportAutoFix;
+
+    /**
+     * @var string 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FixStatusMsg;
+
+    /**
      * @param integer $EventId 事件id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中
+     * @param integer $Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastTime 最后检测时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,6 +173,12 @@ class VulEffectHostList extends AbstractModel
      * @param array $Tags 主机标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HostVersion 版本信息 0=普通版本 1=专业版 2=旗舰版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSupportAutoFix 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FixStatusMsg 失败原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +232,18 @@ class VulEffectHostList extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("HostVersion",$param) and $param["HostVersion"] !== null) {
+            $this->HostVersion = $param["HostVersion"];
+        }
+
+        if (array_key_exists("IsSupportAutoFix",$param) and $param["IsSupportAutoFix"] !== null) {
+            $this->IsSupportAutoFix = $param["IsSupportAutoFix"];
+        }
+
+        if (array_key_exists("FixStatusMsg",$param) and $param["FixStatusMsg"] !== null) {
+            $this->FixStatusMsg = $param["FixStatusMsg"];
         }
     }
 }

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Afc\V20200226\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeVulLevelCount请求参数结构体
+ * 扩展字段，包含多个模型的结果
  *
- * @method integer getVulCategory() 获取1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
- * @method void setVulCategory(integer $VulCategory) 设置1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
+ * @method string getModelId() 获取模型类型
+ * @method void setModelId(string $ModelId) 设置模型类型
+ * @method string getModelScore() 获取该模型评分
+ * @method void setModelScore(string $ModelScore) 设置该模型评分
  */
-class DescribeVulLevelCountRequest extends AbstractModel
+class OtherModelScores extends AbstractModel
 {
     /**
-     * @var integer 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
+     * @var string 模型类型
      */
-    public $VulCategory;
+    public $ModelId;
 
     /**
-     * @param integer $VulCategory 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
+     * @var string 该模型评分
+     */
+    public $ModelScore;
+
+    /**
+     * @param string $ModelId 模型类型
+     * @param string $ModelScore 该模型评分
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeVulLevelCountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulCategory",$param) and $param["VulCategory"] !== null) {
-            $this->VulCategory = $param["VulCategory"];
+        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
+            $this->ModelId = $param["ModelId"];
+        }
+
+        if (array_key_exists("ModelScore",$param) and $param["ModelScore"] !== null) {
+            $this->ModelScore = $param["ModelScore"];
         }
     }
 }

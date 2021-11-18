@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScanVul请求参数结构体
  *
- * @method string getVulCategories() 获取漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔)
- * @method void setVulCategories(string $VulCategories) 设置漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔)
  * @method string getVulLevels() 获取危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文;分隔)
  * @method void setVulLevels(string $VulLevels) 设置危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文;分隔)
  * @method integer getHostType() 获取服务器分类：1:专业版服务器；2:自选服务器
  * @method void setHostType(integer $HostType) 设置服务器分类：1:专业版服务器；2:自选服务器
+ * @method string getVulCategories() 获取漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔)
+ * @method void setVulCategories(string $VulCategories) 设置漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔)
  * @method array getQuuidList() 获取自选服务器时生效，主机quuid的string数组
  * @method void setQuuidList(array $QuuidList) 设置自选服务器时生效，主机quuid的string数组
  * @method integer getVulEmergency() 获取是否是应急漏洞 0 否 1 是
@@ -38,11 +38,6 @@ use TencentCloud\Common\AbstractModel;
 class ScanVulRequest extends AbstractModel
 {
     /**
-     * @var string 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔)
-     */
-    public $VulCategories;
-
-    /**
      * @var string 危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文;分隔)
      */
     public $VulLevels;
@@ -51,6 +46,11 @@ class ScanVulRequest extends AbstractModel
      * @var integer 服务器分类：1:专业版服务器；2:自选服务器
      */
     public $HostType;
+
+    /**
+     * @var string 漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔)
+     */
+    public $VulCategories;
 
     /**
      * @var array 自选服务器时生效，主机quuid的string数组
@@ -73,9 +73,9 @@ class ScanVulRequest extends AbstractModel
     public $VulIds;
 
     /**
-     * @param string $VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔)
      * @param string $VulLevels 危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文;分隔)
      * @param integer $HostType 服务器分类：1:专业版服务器；2:自选服务器
+     * @param string $VulCategories 漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔)
      * @param array $QuuidList 自选服务器时生效，主机quuid的string数组
      * @param integer $VulEmergency 是否是应急漏洞 0 否 1 是
      * @param integer $TimeoutPeriod 超时时长 单位秒 默认 3600 秒
@@ -94,16 +94,16 @@ class ScanVulRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulCategories",$param) and $param["VulCategories"] !== null) {
-            $this->VulCategories = $param["VulCategories"];
-        }
-
         if (array_key_exists("VulLevels",$param) and $param["VulLevels"] !== null) {
             $this->VulLevels = $param["VulLevels"];
         }
 
         if (array_key_exists("HostType",$param) and $param["HostType"] !== null) {
             $this->HostType = $param["HostType"];
+        }
+
+        if (array_key_exists("VulCategories",$param) and $param["VulCategories"] !== null) {
+            $this->VulCategories = $param["VulCategories"];
         }
 
         if (array_key_exists("QuuidList",$param) and $param["QuuidList"] !== null) {

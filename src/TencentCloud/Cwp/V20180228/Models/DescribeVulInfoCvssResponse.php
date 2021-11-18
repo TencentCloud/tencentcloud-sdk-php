@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulLevel(integer $VulLevel) 设置危害等级：1-低危；2-中危；3-高危；4-严重
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVulType() 获取漏洞分类 1: web应用漏洞 2:系统组件漏洞
+ * @method integer getVulType() 获取漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVulType(integer $VulType) 设置漏洞分类 1: web应用漏洞 2:系统组件漏洞
+ * @method void setVulType(integer $VulType) 设置漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取漏洞描述信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvssScoreFloat(float $CvssScoreFloat) 设置cvss 分数 浮点型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLabels() 获取漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabels(string $Labels) 设置漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -96,7 +100,7 @@ class DescribeVulInfoCvssResponse extends AbstractModel
     public $VulLevel;
 
     /**
-     * @var integer 漏洞分类 1: web应用漏洞 2:系统组件漏洞
+     * @var integer 漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulType;
@@ -156,6 +160,12 @@ class DescribeVulInfoCvssResponse extends AbstractModel
     public $CvssScoreFloat;
 
     /**
+     * @var string 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Labels;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -167,7 +177,7 @@ class DescribeVulInfoCvssResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulLevel 危害等级：1-低危；2-中危；3-高危；4-严重
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VulType 漏洞分类 1: web应用漏洞 2:系统组件漏洞
+     * @param integer $VulType 漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 漏洞描述信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,6 +196,8 @@ class DescribeVulInfoCvssResponse extends AbstractModel
      * @param string $CveInfo cvss详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $CvssScoreFloat cvss 分数 浮点型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Labels 漏洞标签 多个逗号分割
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -252,6 +264,10 @@ class DescribeVulInfoCvssResponse extends AbstractModel
 
         if (array_key_exists("CvssScoreFloat",$param) and $param["CvssScoreFloat"] !== null) {
             $this->CvssScoreFloat = $param["CvssScoreFloat"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = $param["Labels"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTop() 获取漏洞风险服务器top，1-100
  * @method void setTop(integer $Top) 设置漏洞风险服务器top，1-100
- * @method integer getVulCategory() 获取1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁，传0的时候表示查应急漏洞
- * @method void setVulCategory(integer $VulCategory) 设置1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁，传0的时候表示查应急漏洞
+ * @method integer getVulCategory() 获取1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
+ * @method void setVulCategory(integer $VulCategory) 设置1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
  */
 class DescribeVulTopRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeVulTopRequest extends AbstractModel
     public $Top;
 
     /**
-     * @var integer 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁，传0的时候表示查应急漏洞
+     * @var integer 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
      */
     public $VulCategory;
 
     /**
      * @param integer $Top 漏洞风险服务器top，1-100
-     * @param integer $VulCategory 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁，传0的时候表示查应急漏洞
+     * @param integer $VulCategory 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
      */
     function __construct()
     {

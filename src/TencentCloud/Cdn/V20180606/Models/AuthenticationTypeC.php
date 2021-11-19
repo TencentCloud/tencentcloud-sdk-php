@@ -49,6 +49,12 @@ hex：十六进制
 dec：十进制
 hex：十六进制
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBackupSecretKey() 获取计算签名的备用密钥
+仅允许大小写字母与数字，长度 6~32 位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupSecretKey(string $BackupSecretKey) 设置计算签名的备用密钥
+仅允许大小写字母与数字，长度 6~32 位
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuthenticationTypeC extends AbstractModel
 {
@@ -86,6 +92,13 @@ hex：十六进制
     public $TimeFormat;
 
     /**
+     * @var string 计算签名的备用密钥
+仅允许大小写字母与数字，长度 6~32 位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupSecretKey;
+
+    /**
      * @param string $SecretKey 计算签名的密钥
 仅允许大小写字母与数字，长度 6~32 位
 注意：此字段可能返回 null，表示取不到有效值。
@@ -98,6 +111,9 @@ blacklist：黑名单，表示仅对 FileExtensions 中的类型进行鉴权
      * @param string $TimeFormat 时间戳进制设置
 dec：十进制
 hex：十六进制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BackupSecretKey 计算签名的备用密钥
+仅允许大小写字母与数字，长度 6~32 位
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -131,6 +147,10 @@ hex：十六进制
 
         if (array_key_exists("TimeFormat",$param) and $param["TimeFormat"] !== null) {
             $this->TimeFormat = $param["TimeFormat"];
+        }
+
+        if (array_key_exists("BackupSecretKey",$param) and $param["BackupSecretKey"] !== null) {
+            $this->BackupSecretKey = $param["BackupSecretKey"];
         }
     }
 }

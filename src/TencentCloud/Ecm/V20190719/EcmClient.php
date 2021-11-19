@@ -117,6 +117,7 @@ use TencentCloud\Ecm\V20190719\Models as Models;
  * @method Models\DescribePackingQuotaGroupResponse DescribePackingQuotaGroup(Models\DescribePackingQuotaGroupRequest $req) 使用本接口获取某种机型在某些区域的装箱配额（当使用虚拟机型时，返回的是一组相互关联的装箱配额）。
  * @method Models\DescribePeakBaseOverviewResponse DescribePeakBaseOverview(Models\DescribePeakBaseOverviewRequest $req) CPU 内存 硬盘等基础信息峰值数据
  * @method Models\DescribePeakNetworkOverviewResponse DescribePeakNetworkOverview(Models\DescribePeakNetworkOverviewRequest $req) 获取网络峰值数据
+ * @method Models\DescribePriceRunInstanceResponse DescribePriceRunInstance(Models\DescribePriceRunInstanceRequest $req) 查询实例价格
  * @method Models\DescribeRouteConflictsResponse DescribeRouteConflicts(Models\DescribeRouteConflictsRequest $req) 查询自定义路由策略与云联网路由策略冲突列表
  * @method Models\DescribeRouteTablesResponse DescribeRouteTables(Models\DescribeRouteTablesRequest $req) 查询路由表对象列表
  * @method Models\DescribeSecurityGroupAssociationStatisticsResponse DescribeSecurityGroupAssociationStatistics(Models\DescribeSecurityGroupAssociationStatisticsRequest $req) 查询安全组关联实例统计

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Ssa\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeVulLevelCount请求参数结构体
+ * 排序的字段
  *
- * @method integer getVulCategory() 获取1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
- * @method void setVulCategory(integer $VulCategory) 设置1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+ * @method string getSortKey() 获取排序字段
+ * @method void setSortKey(string $SortKey) 设置排序字段
+ * @method integer getSortType() 获取顺序，1升序2降序
+ * @method void setSortType(integer $SortType) 设置顺序，1升序2降序
  */
-class DescribeVulLevelCountRequest extends AbstractModel
+class QuerySort extends AbstractModel
 {
     /**
-     * @var integer 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+     * @var string 排序字段
      */
-    public $VulCategory;
+    public $SortKey;
 
     /**
-     * @param integer $VulCategory 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+     * @var integer 顺序，1升序2降序
+     */
+    public $SortType;
+
+    /**
+     * @param string $SortKey 排序字段
+     * @param integer $SortType 顺序，1升序2降序
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeVulLevelCountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulCategory",$param) and $param["VulCategory"] !== null) {
-            $this->VulCategory = $param["VulCategory"];
+        if (array_key_exists("SortKey",$param) and $param["SortKey"] !== null) {
+            $this->SortKey = $param["SortKey"];
+        }
+
+        if (array_key_exists("SortType",$param) and $param["SortType"] !== null) {
+            $this->SortType = $param["SortType"];
         }
     }
 }

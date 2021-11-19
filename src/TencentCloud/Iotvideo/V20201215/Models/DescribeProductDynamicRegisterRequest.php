@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Iotvideo\V20201215\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeVulLevelCount请求参数结构体
+ * DescribeProductDynamicRegister请求参数结构体
  *
- * @method integer getVulCategory() 获取1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
- * @method void setVulCategory(integer $VulCategory) 设置1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+ * @method string getProductId() 获取产品ID
+ * @method void setProductId(string $ProductId) 设置产品ID
  */
-class DescribeVulLevelCountRequest extends AbstractModel
+class DescribeProductDynamicRegisterRequest extends AbstractModel
 {
     /**
-     * @var integer 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+     * @var string 产品ID
      */
-    public $VulCategory;
+    public $ProductId;
 
     /**
-     * @param integer $VulCategory 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+     * @param string $ProductId 产品ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeVulLevelCountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VulCategory",$param) and $param["VulCategory"] !== null) {
-            $this->VulCategory = $param["VulCategory"];
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

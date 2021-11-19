@@ -286,6 +286,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) 设置远程鉴权配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ShareCname getShareCname() 获取共享CNAME配置（白名单功能）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShareCname(ShareCname $ShareCname) 设置共享CNAME配置（白名单功能）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -659,6 +663,12 @@ off：不支持
     public $RemoteAuthentication;
 
     /**
+     * @var ShareCname 共享CNAME配置（白名单功能）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShareCname;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -791,6 +801,8 @@ off：不支持
      * @param WebSocket $WebSocket WebSocket配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoteAuthentication $RemoteAuthentication 远程鉴权配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShareCname $ShareCname 共享CNAME配置（白名单功能）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1093,6 +1105,11 @@ off：不支持
         if (array_key_exists("RemoteAuthentication",$param) and $param["RemoteAuthentication"] !== null) {
             $this->RemoteAuthentication = new RemoteAuthentication();
             $this->RemoteAuthentication->deserialize($param["RemoteAuthentication"]);
+        }
+
+        if (array_key_exists("ShareCname",$param) and $param["ShareCname"] !== null) {
+            $this->ShareCname = new ShareCname();
+            $this->ShareCname->deserialize($param["ShareCname"]);
         }
     }
 }

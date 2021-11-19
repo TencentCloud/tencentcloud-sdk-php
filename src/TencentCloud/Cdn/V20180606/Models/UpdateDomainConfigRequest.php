@@ -122,6 +122,8 @@ global：全球加速
  * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置
  * @method RemoteAuthentication getRemoteAuthentication() 获取远程鉴权配置
  * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) 设置远程鉴权配置
+ * @method ShareCname getShareCname() 获取共享CNAME配置，白名单功能
+ * @method void setShareCname(ShareCname $ShareCname) 设置共享CNAME配置，白名单功能
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -349,6 +351,11 @@ global：全球加速
     public $RemoteAuthentication;
 
     /**
+     * @var ShareCname 共享CNAME配置，白名单功能
+     */
+    public $ShareCname;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -400,6 +407,7 @@ global：全球加速
      * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
      * @param WebSocket $WebSocket WebSocket配置
      * @param RemoteAuthentication $RemoteAuthentication 远程鉴权配置
+     * @param ShareCname $ShareCname 共享CNAME配置，白名单功能
      */
     function __construct()
     {
@@ -622,6 +630,11 @@ global：全球加速
         if (array_key_exists("RemoteAuthentication",$param) and $param["RemoteAuthentication"] !== null) {
             $this->RemoteAuthentication = new RemoteAuthentication();
             $this->RemoteAuthentication->deserialize($param["RemoteAuthentication"]);
+        }
+
+        if (array_key_exists("ShareCname",$param) and $param["ShareCname"] !== null) {
+            $this->ShareCname = new ShareCname();
+            $this->ShareCname->deserialize($param["ShareCname"]);
         }
     }
 }

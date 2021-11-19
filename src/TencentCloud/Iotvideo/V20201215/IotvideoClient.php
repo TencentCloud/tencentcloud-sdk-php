@@ -75,6 +75,7 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\DescribeForwardRuleResponse DescribeForwardRule(Models\DescribeForwardRuleRequest $req) 获取产品转发规则
  * @method Models\DescribeModelDefinitionResponse DescribeModelDefinition(Models\DescribeModelDefinitionRequest $req) 查询产品配置的数据模板信息
  * @method Models\DescribeProductResponse DescribeProduct(Models\DescribeProductRequest $req) 获取产品详情
+ * @method Models\DescribeProductDynamicRegisterResponse DescribeProductDynamicRegister(Models\DescribeProductDynamicRegisterRequest $req) 获取产品动态注册详情
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 获取产品列表
  * @method Models\DescribeSDKLogResponse DescribeSDKLog(Models\DescribeSDKLogRequest $req) 获取设备sdk日志
  * @method Models\EditFirmwareResponse EditFirmware(Models\EditFirmwareRequest $req) 本接口用于编辑固件信息
@@ -91,6 +92,7 @@ use TencentCloud\Iotvideo\V20201215\Models as Models;
  * @method Models\ModifyForwardRuleResponse ModifyForwardRule(Models\ModifyForwardRuleRequest $req) 修改转发规则
  * @method Models\ModifyModelDefinitionResponse ModifyModelDefinition(Models\ModifyModelDefinitionRequest $req) 提供修改产品的数据模板的能力
  * @method Models\ModifyProductResponse ModifyProduct(Models\ModifyProductRequest $req) 修改产品信息
+ * @method Models\ModifyProductDynamicRegisterResponse ModifyProductDynamicRegister(Models\ModifyProductDynamicRegisterRequest $req) 修改产品动态注册
  * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 本接口（PublishMessage）用于使用自定义透传协议进行设备远控
  * @method Models\ReportAliveDeviceResponse ReportAliveDevice(Models\ReportAliveDeviceRequest $req) 上报活跃设备
  * @method Models\ResetCloudStorageResponse ResetCloudStorage(Models\ResetCloudStorageRequest $req) 重置云存服务

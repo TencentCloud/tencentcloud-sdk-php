@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取客户的SdkAppId
  * @method void setSdkAppId(integer $SdkAppId) 设置客户的SdkAppId
- * @method integer getRoomId() 获取需要推流白板的房间号，取值范围: (1, 4294967295)
- * @method void setRoomId(integer $RoomId) 设置需要推流白板的房间号，取值范围: (1, 4294967295)
+ * @method integer getRoomId() 获取需要推流的白板房间号，取值范围: (1, 4294967295)。
+
+在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。
+ * @method void setRoomId(integer $RoomId) 设置需要推流的白板房间号，取值范围: (1, 4294967295)。
+
+在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。
  * @method string getPushUserId() 获取用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
  * @method void setPushUserId(string $PushUserId) 设置用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
  * @method string getPushUserSig() 获取与PushUserId对应的签名
@@ -124,6 +128,30 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
 那么：StreamID = 12345678_12345_push_user_1_main
  * @method string getExtraData() 获取内部参数，不需要关注此参数
  * @method void setExtraData(string $ExtraData) 设置内部参数，不需要关注此参数
+ * @method integer getTRTCRoomId() 获取**内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+
+当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
+ * @method void setTRTCRoomId(integer $TRTCRoomId) 设置**内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+
+当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
+ * @method string getTRTCRoomIdStr() 获取**内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC字符串类型房间号。
+
+在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
+ * @method void setTRTCRoomIdStr(string $TRTCRoomIdStr) 设置**内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC字符串类型房间号。
+
+在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
  */
 class StartWhiteboardPushRequest extends AbstractModel
 {
@@ -133,7 +161,9 @@ class StartWhiteboardPushRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer 需要推流白板的房间号，取值范围: (1, 4294967295)
+     * @var integer 需要推流的白板房间号，取值范围: (1, 4294967295)。
+
+在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。
      */
     public $RoomId;
 
@@ -244,8 +274,30 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
     public $ExtraData;
 
     /**
+     * @var integer **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+
+当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
+     */
+    public $TRTCRoomId;
+
+    /**
+     * @var string **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC字符串类型房间号。
+
+在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
+     */
+    public $TRTCRoomIdStr;
+
+    /**
      * @param integer $SdkAppId 客户的SdkAppId
-     * @param integer $RoomId 需要推流白板的房间号，取值范围: (1, 4294967295)
+     * @param integer $RoomId 需要推流的白板房间号，取值范围: (1, 4294967295)。
+
+在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。
      * @param string $PushUserId 用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
      * @param string $PushUserSig 与PushUserId对应的签名
      * @param Whiteboard $Whiteboard 白板参数，例如白板宽高、背景颜色等
@@ -296,6 +348,18 @@ urlencode(SdkAppID_RoomID_PushUserID_main)
 SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
 那么：StreamID = 12345678_12345_push_user_1_main
      * @param string $ExtraData 内部参数，不需要关注此参数
+     * @param integer $TRTCRoomId **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC数字类型房间号，取值范围: (1, 4294967295)。
+
+在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+
+当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
+     * @param string $TRTCRoomIdStr **内部体验字段，若需要体验可以提工单申请开通体验**
+
+TRTC字符串类型房间号。
+
+在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
      */
     function __construct()
     {
@@ -374,6 +438,14 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
 
         if (array_key_exists("ExtraData",$param) and $param["ExtraData"] !== null) {
             $this->ExtraData = $param["ExtraData"];
+        }
+
+        if (array_key_exists("TRTCRoomId",$param) and $param["TRTCRoomId"] !== null) {
+            $this->TRTCRoomId = $param["TRTCRoomId"];
+        }
+
+        if (array_key_exists("TRTCRoomIdStr",$param) and $param["TRTCRoomIdStr"] !== null) {
+            $this->TRTCRoomIdStr = $param["TRTCRoomIdStr"];
         }
     }
 }

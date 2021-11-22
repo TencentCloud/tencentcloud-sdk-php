@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 2:dpkg
 3:java
 4:system</li>
- * @method string getOrder() 获取排序方式，asc-升序 或 desc-降序
- * @method void setOrder(string $Order) 设置排序方式，asc-升序 或 desc-降序
+ * @method string getOrder() 获取排序方式，asc-升序 或 desc-降序。默认：desc-降序
+ * @method void setOrder(string $Order) 设置排序方式，asc-升序 或 desc-降序。默认：desc-降序
  * @method string getBy() 获取排序方式可选：InstallTime 安装时间
  * @method void setBy(string $By) 设置排序方式可选：InstallTime 安装时间
  */
@@ -87,7 +87,7 @@ class DescribeAssetSystemPackageListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 排序方式，asc-升序 或 desc-降序
+     * @var string 排序方式，asc-升序 或 desc-降序。默认：desc-降序
      */
     public $Order;
 
@@ -110,7 +110,7 @@ class DescribeAssetSystemPackageListRequest extends AbstractModel
 2:dpkg
 3:java
 4:system</li>
-     * @param string $Order 排序方式，asc-升序 或 desc-降序
+     * @param string $Order 排序方式，asc-升序 或 desc-降序。默认：desc-降序
      * @param string $By 排序方式可选：InstallTime 安装时间
      */
     function __construct()

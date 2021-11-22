@@ -56,22 +56,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCbuItem(string $CbuItem) 设置一般经营项目
  * @method string getApprDate() 获取核准时间
  * @method void setApprDate(string $ApprDate) 设置核准时间
- * @method string getProvince() 获取省
- * @method void setProvince(string $Province) 设置省
- * @method string getCity() 获取地级市
- * @method void setCity(string $City) 设置地级市
- * @method string getCounty() 获取区\县
- * @method void setCounty(string $County) 设置区\县
- * @method string getAreaCode() 获取住所所在行政区划代码
- * @method void setAreaCode(string $AreaCode) 设置住所所在行政区划代码
- * @method string getIndustryPhyCode() 获取行业门类代码
- * @method void setIndustryPhyCode(string $IndustryPhyCode) 设置行业门类代码
- * @method string getIndustryPhyName() 获取行业门类名称
- * @method void setIndustryPhyName(string $IndustryPhyName) 设置行业门类名称
- * @method string getIndustryCode() 获取国民经济行业代码
- * @method void setIndustryCode(string $IndustryCode) 设置国民经济行业代码
- * @method string getIndustryName() 获取国民经济行业名称
- * @method void setIndustryName(string $IndustryName) 设置国民经济行业名称
+ * @method string getProvince() 获取省（返回空值）
+ * @method void setProvince(string $Province) 设置省（返回空值）
+ * @method string getCity() 获取地级市（返回空值）
+ * @method void setCity(string $City) 设置地级市（返回空值）
+ * @method string getCounty() 获取区\县（返回空值）
+ * @method void setCounty(string $County) 设置区\县（返回空值）
+ * @method string getAreaCode() 获取住所所在行政区划代码（返回空值）
+ * @method void setAreaCode(string $AreaCode) 设置住所所在行政区划代码（返回空值）
+ * @method string getIndustryPhyCode() 获取行业门类代码（返回空值）
+ * @method void setIndustryPhyCode(string $IndustryPhyCode) 设置行业门类代码（返回空值）
+ * @method string getIndustryPhyName() 获取行业门类名称（返回空值）
+ * @method void setIndustryPhyName(string $IndustryPhyName) 设置行业门类名称（返回空值）
+ * @method string getIndustryCode() 获取国民经济行业代码（返回空值）
+ * @method void setIndustryCode(string $IndustryCode) 设置国民经济行业代码（返回空值）
+ * @method string getIndustryName() 获取国民经济行业名称（返回空值）
+ * @method void setIndustryName(string $IndustryName) 设置国民经济行业名称（返回空值）
  * @method string getOperateScope() 获取经营（业务）范围
  * @method void setOperateScope(string $OperateScope) 设置经营（业务）范围
  * @method string getVerifyRegNo() 获取要核验的工商注册号
@@ -184,42 +184,42 @@ class VerifyBizLicenseResponse extends AbstractModel
     public $ApprDate;
 
     /**
-     * @var string 省
+     * @var string 省（返回空值）
      */
     public $Province;
 
     /**
-     * @var string 地级市
+     * @var string 地级市（返回空值）
      */
     public $City;
 
     /**
-     * @var string 区\县
+     * @var string 区\县（返回空值）
      */
     public $County;
 
     /**
-     * @var string 住所所在行政区划代码
+     * @var string 住所所在行政区划代码（返回空值）
      */
     public $AreaCode;
 
     /**
-     * @var string 行业门类代码
+     * @var string 行业门类代码（返回空值）
      */
     public $IndustryPhyCode;
 
     /**
-     * @var string 行业门类名称
+     * @var string 行业门类名称（返回空值）
      */
     public $IndustryPhyName;
 
     /**
-     * @var string 国民经济行业代码
+     * @var string 国民经济行业代码（返回空值）
      */
     public $IndustryCode;
 
     /**
-     * @var string 国民经济行业名称
+     * @var string 国民经济行业名称（返回空值）
      */
     public $IndustryName;
 
@@ -287,14 +287,14 @@ class VerifyBizLicenseResponse extends AbstractModel
      * @param string $AbuItem 许可经营项目
      * @param string $CbuItem 一般经营项目
      * @param string $ApprDate 核准时间
-     * @param string $Province 省
-     * @param string $City 地级市
-     * @param string $County 区\县
-     * @param string $AreaCode 住所所在行政区划代码
-     * @param string $IndustryPhyCode 行业门类代码
-     * @param string $IndustryPhyName 行业门类名称
-     * @param string $IndustryCode 国民经济行业代码
-     * @param string $IndustryName 国民经济行业名称
+     * @param string $Province 省（返回空值）
+     * @param string $City 地级市（返回空值）
+     * @param string $County 区\县（返回空值）
+     * @param string $AreaCode 住所所在行政区划代码（返回空值）
+     * @param string $IndustryPhyCode 行业门类代码（返回空值）
+     * @param string $IndustryPhyName 行业门类名称（返回空值）
+     * @param string $IndustryCode 国民经济行业代码（返回空值）
+     * @param string $IndustryName 国民经济行业名称（返回空值）
      * @param string $OperateScope 经营（业务）范围
      * @param string $VerifyRegNo 要核验的工商注册号
      * @param string $RegNo 工商注册号

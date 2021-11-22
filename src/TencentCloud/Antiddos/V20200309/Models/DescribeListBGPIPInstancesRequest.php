@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterEipType(integer $FilterEipType) 设置是否只获取高防弹性公网IP实例。填写时，只能填写1或者0。当填写1时，表示返回高防弹性公网IP实例。当填写0时，表示返回非高防弹性公网IP实例。
  * @method array getFilterEipEipAddressStatus() 获取高防弹性公网IP实例的绑定状态搜索条件，取值范围 [BINDING、 BIND、UNBINDING、UNBIND]。该搜索条件只在FilterEipType=1时才有效。
  * @method void setFilterEipEipAddressStatus(array $FilterEipEipAddressStatus) 设置高防弹性公网IP实例的绑定状态搜索条件，取值范围 [BINDING、 BIND、UNBINDING、UNBIND]。该搜索条件只在FilterEipType=1时才有效。
+ * @method integer getFilterDamDDoSStatus() 获取是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
+ * @method void setFilterDamDDoSStatus(integer $FilterDamDDoSStatus) 设置是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
  */
 class DescribeListBGPIPInstancesRequest extends AbstractModel
 {
@@ -105,6 +107,11 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterEipEipAddressStatus;
 
     /**
+     * @var integer 是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
+     */
+    public $FilterDamDDoSStatus;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -120,6 +127,7 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
      * @param string $FilterName 名称搜索
      * @param integer $FilterEipType 是否只获取高防弹性公网IP实例。填写时，只能填写1或者0。当填写1时，表示返回高防弹性公网IP实例。当填写0时，表示返回非高防弹性公网IP实例。
      * @param array $FilterEipEipAddressStatus 高防弹性公网IP实例的绑定状态搜索条件，取值范围 [BINDING、 BIND、UNBINDING、UNBIND]。该搜索条件只在FilterEipType=1时才有效。
+     * @param integer $FilterDamDDoSStatus 是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterEipEipAddressStatus",$param) and $param["FilterEipEipAddressStatus"] !== null) {
             $this->FilterEipEipAddressStatus = $param["FilterEipEipAddressStatus"];
+        }
+
+        if (array_key_exists("FilterDamDDoSStatus",$param) and $param["FilterDamDDoSStatus"] !== null) {
+            $this->FilterDamDDoSStatus = $param["FilterDamDDoSStatus"];
         }
     }
 }

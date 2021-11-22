@@ -92,6 +92,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置建议客户接入的域名，客户可使用域名接入。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDamDDoSStatus() 获取是否开启安全加速，是为1，否为0。
+ * @method void setDamDDoSStatus(integer $DamDDoSStatus) 设置是否开启安全加速，是为1，否为0。
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -200,6 +202,11 @@ class BGPIPInstance extends AbstractModel
     public $Domain;
 
     /**
+     * @var integer 是否开启安全加速，是为1，否为0。
+     */
+    public $DamDDoSStatus;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPIPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPIPInstanceUsages $Usage 资产实例的使用统计信息
@@ -236,6 +243,7 @@ class BGPIPInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 建议客户接入的域名，客户可使用域名接入。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DamDDoSStatus 是否开启安全加速，是为1，否为0。
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class BGPIPInstance extends AbstractModel
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("DamDDoSStatus",$param) and $param["DamDDoSStatus"] !== null) {
+            $this->DamDDoSStatus = $param["DamDDoSStatus"];
         }
     }
 }

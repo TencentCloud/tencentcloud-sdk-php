@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
+ * @method integer getChannelId() 获取通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+ * @method void setChannelId(integer $ChannelId) 设置通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+ * @method string getUserId() 获取云存用户Id，为空则为默认云存空间。
+ * @method void setUserId(string $UserId) 设置云存用户Id，为空则为默认云存空间。
  */
 class ResetCloudStorageRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ResetCloudStorageRequest extends AbstractModel
     public $DeviceName;
 
     /**
+     * @var integer 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     */
+    public $ChannelId;
+
+    /**
+     * @var string 云存用户Id，为空则为默认云存空间。
+     */
+    public $UserId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
+     * @param integer $ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * @param string $UserId 云存用户Id，为空则为默认云存空间。
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ResetCloudStorageRequest extends AbstractModel
 
         if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
             $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

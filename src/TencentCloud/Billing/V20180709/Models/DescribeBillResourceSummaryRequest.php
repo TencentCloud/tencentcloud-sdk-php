@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
  * @method string getPayMode() 获取付费模式 prePay/postPay
  * @method void setPayMode(string $PayMode) 设置付费模式 prePay/postPay
+ * @method string getBusinessCode() 获取商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+ * @method void setBusinessCode(string $BusinessCode) 设置商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
@@ -170,6 +174,12 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $PayMode;
 
     /**
+     * @var string 商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+     */
+    public $BusinessCode;
+
+    /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量，最大值为1000
      * @param string $Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
@@ -208,6 +218,8 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 按量计费冲正
      * @param string $ResourceId 查询指定资源信息
      * @param string $PayMode 付费模式 prePay/postPay
+     * @param string $BusinessCode 商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      */
     function __construct()
     {
@@ -252,6 +264,10 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
         }
     }
 }

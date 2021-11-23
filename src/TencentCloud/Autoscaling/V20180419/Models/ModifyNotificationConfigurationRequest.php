@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
  * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
- * @method string getQueueName() 获取CMQ 队列名。
- * @method void setQueueName(string $QueueName) 设置CMQ 队列名。
- * @method string getTopicName() 获取CMQ 主题名。
- * @method void setTopicName(string $TopicName) 设置CMQ 主题名。
+ * @method string getQueueName() 获取CMQ 队列或 TDMQ CMQ 队列名。
+ * @method void setQueueName(string $QueueName) 设置CMQ 队列或 TDMQ CMQ 队列名。
+ * @method string getTopicName() 获取CMQ 主题或 TDMQ CMQ 主题名。
+ * @method void setTopicName(string $TopicName) 设置CMQ 主题或 TDMQ CMQ 主题名。
  */
 class ModifyNotificationConfigurationRequest extends AbstractModel
 {
@@ -67,12 +67,12 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
     public $NotificationUserGroupIds;
 
     /**
-     * @var string CMQ 队列名。
+     * @var string CMQ 队列或 TDMQ CMQ 队列名。
      */
     public $QueueName;
 
     /**
-     * @var string CMQ 主题名。
+     * @var string CMQ 主题或 TDMQ CMQ 主题名。
      */
     public $TopicName;
 
@@ -86,8 +86,8 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
      * @param array $NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-     * @param string $QueueName CMQ 队列名。
-     * @param string $TopicName CMQ 主题名。
+     * @param string $QueueName CMQ 队列或 TDMQ CMQ 队列名。
+     * @param string $TopicName CMQ 主题或 TDMQ CMQ 主题名。
      */
     function __construct()
     {

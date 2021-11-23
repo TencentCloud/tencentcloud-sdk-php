@@ -30,6 +30,7 @@ use TencentCloud\Cii\V20210408\Models as Models;
  * @method Models\DescribeStructureDifferenceResponse DescribeStructureDifference(Models\DescribeStructureDifferenceRequest $req) 结构化复核差异查询接口，对比结构化复核前后数据差异，返回差异的部分。
  * @method Models\DescribeStructureResultResponse DescribeStructureResult(Models\DescribeStructureResultRequest $req) 本接口(DescribeStructureResult)用于查询结构化结果接口
  * @method Models\DescribeStructureTaskResultResponse DescribeStructureTaskResult(Models\DescribeStructureTaskResultRequest $req) 依据任务ID获取结构化结果接口。
+ * @method Models\UploadMedicalFileResponse UploadMedicalFile(Models\UploadMedicalFileRequest $req) 上传医疗影像文件，可以用来做结构化。
  */
 
 class CiiClient extends AbstractClient
@@ -66,5 +67,14 @@ class CiiClient extends AbstractClient
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;
+    }
+
+    public function UploadMedicalFile($req)
+    {
+        $options = array(
+            "IsMultipart" => true,
+            "BinaryParams" => array("File"),
+        );
+        return $this->doRequestWithOptions("UploadMedicalFile", $req, $options);
     }
 }

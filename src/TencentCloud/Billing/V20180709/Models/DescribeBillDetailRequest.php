@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 1-表示需要， 0-表示不需要
  * @method void setNeedRecordNum(integer $NeedRecordNum) 设置是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
- * @method string getProductCode() 获取查询指定产品信息（暂时未开放获取）
- * @method void setProductCode(string $ProductCode) 设置查询指定产品信息（暂时未开放获取）
+ * @method string getProductCode() 获取已废弃参数，未开放
+ * @method void setProductCode(string $ProductCode) 设置已废弃参数，未开放
  * @method string getPayMode() 获取付费模式 prePay/postPay
  * @method void setPayMode(string $PayMode) 设置付费模式 prePay/postPay
  * @method string getResourceId() 获取查询指定资源信息
@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionType(string $ActionType) 设置查询交易类型。如 按量计费日结，按量计费小时结 等
  * @method integer getProjectId() 获取项目ID:资源所属项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID:资源所属项目ID
+ * @method string getBusinessCode() 获取商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+ * @method void setBusinessCode(string $BusinessCode) 设置商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
  */
 class DescribeBillDetailRequest extends AbstractModel
 {
@@ -86,7 +90,7 @@ class DescribeBillDetailRequest extends AbstractModel
     public $NeedRecordNum;
 
     /**
-     * @var string 查询指定产品信息（暂时未开放获取）
+     * @var string 已废弃参数，未开放
      */
     public $ProductCode;
 
@@ -111,6 +115,12 @@ class DescribeBillDetailRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+     */
+    public $BusinessCode;
+
+    /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 数量，最大值为100
      * @param string $PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
@@ -119,11 +129,13 @@ class DescribeBillDetailRequest extends AbstractModel
      * @param string $EndTime 周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。（不支持跨月查询）
      * @param integer $NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
-     * @param string $ProductCode 查询指定产品信息（暂时未开放获取）
+     * @param string $ProductCode 已废弃参数，未开放
      * @param string $PayMode 付费模式 prePay/postPay
      * @param string $ResourceId 查询指定资源信息
      * @param string $ActionType 查询交易类型。如 按量计费日结，按量计费小时结 等
      * @param integer $ProjectId 项目ID:资源所属项目ID
+     * @param string $BusinessCode 商品名称代码
+备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      */
     function __construct()
     {
@@ -184,6 +196,10 @@ class DescribeBillDetailRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
         }
     }
 }

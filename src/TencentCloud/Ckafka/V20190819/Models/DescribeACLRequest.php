@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method integer getResourceType() 获取Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
- * @method void setResourceType(integer $ResourceType) 设置Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
- * @method string getResourceName() 获取资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
- * @method void setResourceName(string $ResourceName) 设置资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
+ * @method integer getResourceType() 获取Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
+ * @method void setResourceType(integer $ResourceType) 设置Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
+ * @method string getResourceName() 获取资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
+ * @method void setResourceName(string $ResourceName) 设置资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
  * @method integer getOffset() 获取偏移位置
  * @method void setOffset(integer $Offset) 设置偏移位置
  * @method integer getLimit() 获取个数限制
@@ -41,12 +41,12 @@ class DescribeACLRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
+     * @var integer Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
      */
     public $ResourceType;
 
     /**
-     * @var string 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
+     * @var string 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
      */
     public $ResourceName;
 
@@ -67,8 +67,8 @@ class DescribeACLRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例Id
-     * @param integer $ResourceType Acl资源类型，(0:UNKNOWN，1:ANY，2:TOPIC，3:GROUP，4:CLUSTER，5:TRANSACTIONAL_ID)，当前只有TOPIC，其它字段用于后续兼容开源kafka的acl时使用
-     * @param string $ResourceName 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称
+     * @param integer $ResourceType Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
+     * @param string $ResourceName 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
      * @param integer $Offset 偏移位置
      * @param integer $Limit 个数限制
      * @param string $SearchWord 关键字匹配

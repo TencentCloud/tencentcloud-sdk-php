@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceVersion(string $DBInstanceVersion) 设置实例版本，目前只支持standard（双机高可用版, 一主一从）
  * @method string getDBCharset() 获取实例DB字符集
  * @method void setDBCharset(string $DBCharset) 设置实例DB字符集
- * @method string getDBVersion() 获取PostgreSQL内核版本
- * @method void setDBVersion(string $DBVersion) 设置PostgreSQL内核版本
+ * @method string getDBVersion() 获取PostgreSQL主版本
+ * @method void setDBVersion(string $DBVersion) 设置PostgreSQL主版本
  * @method string getCreateTime() 获取实例创建时间
  * @method void setCreateTime(string $CreateTime) 设置实例创建时间
  * @method string getUpdateTime() 获取实例执行最后一次更新的时间
@@ -93,6 +93,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOfflineTime() 获取下线时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOfflineTime(string $OfflineTime) 设置下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDBKernelVersion() 获取数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDBKernelVersion(string $DBKernelVersion) 设置数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNetworkAccessList() 获取实例网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkAccessList(array $NetworkAccessList) 设置实例网络信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
@@ -173,7 +181,7 @@ class DBInstance extends AbstractModel
     public $DBCharset;
 
     /**
-     * @var string PostgreSQL内核版本
+     * @var string PostgreSQL主版本
      */
     public $DBVersion;
 
@@ -263,6 +271,18 @@ class DBInstance extends AbstractModel
     public $OfflineTime;
 
     /**
+     * @var string 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DBKernelVersion;
+
+    /**
+     * @var array 实例网络信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkAccessList;
+
+    /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      * @param integer $ProjectId 项目ID
@@ -278,7 +298,7 @@ class DBInstance extends AbstractModel
      * @param string $DBInstanceType 实例类型，类型有：1、primary（主实例）；2、readonly（只读实例）；3、guard（灾备实例）；4、temp（临时实例）
      * @param string $DBInstanceVersion 实例版本，目前只支持standard（双机高可用版, 一主一从）
      * @param string $DBCharset 实例DB字符集
-     * @param string $DBVersion PostgreSQL内核版本
+     * @param string $DBVersion PostgreSQL主版本
      * @param string $CreateTime 实例创建时间
      * @param string $UpdateTime 实例执行最后一次更新的时间
      * @param string $ExpireTime 实例到期时间
@@ -299,6 +319,10 @@ class DBInstance extends AbstractModel
      * @param string $StatusInReadonlyGroup 只读实例在只读组中的状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OfflineTime 下线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DBKernelVersion 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NetworkAccessList 实例网络信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -450,6 +474,19 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
             $this->OfflineTime = $param["OfflineTime"];
+        }
+
+        if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
+            $this->DBKernelVersion = $param["DBKernelVersion"];
+        }
+
+        if (array_key_exists("NetworkAccessList",$param) and $param["NetworkAccessList"] !== null) {
+            $this->NetworkAccessList = [];
+            foreach ($param["NetworkAccessList"] as $key => $value){
+                $obj = new NetworkAccess();
+                $obj->deserialize($value);
+                array_push($this->NetworkAccessList, $obj);
+            }
         }
     }
 }

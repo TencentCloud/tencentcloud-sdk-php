@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置实例绑定的标签数组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDBKernelVersion() 获取数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDBKernelVersion(string $DBKernelVersion) 设置数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessDBInstance extends AbstractModel
 {
@@ -174,6 +178,12 @@ class ServerlessDBInstance extends AbstractModel
     public $TagList;
 
     /**
+     * @var string 数据库内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DBKernelVersion;
+
+    /**
      * @param string $DBInstanceId 实例id，唯一标识符
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBInstanceName 实例名称
@@ -203,6 +213,8 @@ class ServerlessDBInstance extends AbstractModel
      * @param array $DBDatabaseList 实例下的db信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 实例绑定的标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DBKernelVersion 数据库内核版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -291,6 +303,10 @@ class ServerlessDBInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
+            $this->DBKernelVersion = $param["DBKernelVersion"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPluginName() 获取用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
  * @method void setPluginName(string $PluginName) 设置用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
- * @method string getPluginType() 获取插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth。
- * @method void setPluginType(string $PluginType) 设置插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth。
+ * @method string getPluginType() 获取插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
+ * @method void setPluginType(string $PluginType) 设置插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
  * @method string getPluginData() 获取插件定义语句，支持json。
  * @method void setPluginData(string $PluginData) 设置插件定义语句，支持json。
  * @method string getDescription() 获取插件描述，限定200字以内。
@@ -37,7 +37,7 @@ class CreatePluginRequest extends AbstractModel
     public $PluginName;
 
     /**
-     * @var string 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth。
+     * @var string 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
      */
     public $PluginType;
 
@@ -53,7 +53,7 @@ class CreatePluginRequest extends AbstractModel
 
     /**
      * @param string $PluginName 用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
-     * @param string $PluginType 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth。
+     * @param string $PluginType 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
      * @param string $PluginData 插件定义语句，支持json。
      * @param string $Description 插件描述，限定200字以内。
      */

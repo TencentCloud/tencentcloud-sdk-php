@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取项目名称，不可超过30个字符。
  * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
  * @method Entity getOwner() 获取项目归属者。
+注：云转推项目，仅支持个人归属。
  * @method void setOwner(Entity $Owner) 设置项目归属者。
+注：云转推项目，仅支持个人归属。
  * @method string getCategory() 获取项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
@@ -79,6 +81,7 @@ class CreateProjectRequest extends AbstractModel
 
     /**
      * @var Entity 项目归属者。
+注：云转推项目，仅支持个人归属。
      */
     public $Owner;
 
@@ -145,6 +148,7 @@ class CreateProjectRequest extends AbstractModel
      * @param string $Platform 平台名称，指定访问的平台。
      * @param string $Name 项目名称，不可超过30个字符。
      * @param Entity $Owner 项目归属者。
+注：云转推项目，仅支持个人归属。
      * @param string $Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>

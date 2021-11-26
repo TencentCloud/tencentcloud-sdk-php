@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccounts请求参数结构体
  *
- * @method string getPlatform() 获取平台唯一标识。
- * @method void setPlatform(string $Platform) 设置平台唯一标识。
- * @method string getPhone() 获取手机号码。
- * @method void setPhone(string $Phone) 设置手机号码。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method string getPhone() 获取手机号码。指定手机号获取账号信息，目前仅支持国内手机号，且号码不加地区码 `+86` 等。
+ * @method void setPhone(string $Phone) 设置手机号码。指定手机号获取账号信息，目前仅支持国内手机号，且号码不加地区码 `+86` 等。
  * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。
  * @method integer getLimit() 获取分页返回的记录条数，默认值：10，最大值：20。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccountsRequest extends AbstractModel
 {
     /**
-     * @var string 平台唯一标识。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
     /**
-     * @var string 手机号码。
+     * @var string 手机号码。指定手机号获取账号信息，目前仅支持国内手机号，且号码不加地区码 `+86` 等。
      */
     public $Phone;
 
@@ -52,8 +52,8 @@ class DescribeAccountsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $Platform 平台唯一标识。
-     * @param string $Phone 手机号码。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param string $Phone 手机号码。指定手机号获取账号信息，目前仅支持国内手机号，且号码不加地区码 `+86` 等。
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。
      * @param integer $Limit 分页返回的记录条数，默认值：10，最大值：20。
      */

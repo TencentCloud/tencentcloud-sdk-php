@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券进行支付，默认不使用。
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
+ * @method array getZones() 获取变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+ * @method void setZones(array $Zones) 设置变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
  */
 class UpgradeDCDBInstanceRequest extends AbstractModel
 {
@@ -82,6 +84,11 @@ class UpgradeDCDBInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
+     * @var array 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+     */
+    public $Zones;
+
+    /**
      * @param string $InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param string $UpgradeType 升级类型，取值范围: 
 <li> ADD: 新增分片 </li> 
@@ -92,6 +99,7 @@ class UpgradeDCDBInstanceRequest extends AbstractModel
      * @param SplitShardConfig $SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
      * @param boolean $AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
+     * @param array $Zones 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
      */
     function __construct()
     {
@@ -135,6 +143,10 @@ class UpgradeDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
             $this->VoucherIds = $param["VoucherIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

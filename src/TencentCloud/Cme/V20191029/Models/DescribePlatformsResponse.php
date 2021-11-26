@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePlatforms返回参数结构体
  *
- * @method integer getTotalCount() 获取符合搜索条件的记录总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合搜索条件的记录总数。
+ * @method integer getTotalCount() 获取符合查询条件的记录总数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的记录总数。
  * @method array getPlatformInfoSet() 获取平台信息列表。
  * @method void setPlatformInfoSet(array $PlatformInfoSet) 设置平台信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePlatformsResponse extends AbstractModel
 {
     /**
-     * @var integer 符合搜索条件的记录总数。
+     * @var integer 符合查询条件的记录总数。
      */
     public $TotalCount;
 
@@ -45,7 +45,7 @@ class DescribePlatformsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合搜索条件的记录总数。
+     * @param integer $TotalCount 符合查询条件的记录总数。
      * @param array $PlatformInfoSet 平台信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

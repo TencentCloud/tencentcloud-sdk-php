@@ -20,44 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method string getProjectId() 获取项目 Id。
- * @method void setProjectId(string $ProjectId) 设置项目 Id。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method string getProjectId() 获取项目 Id，使用项目 Id 进行过滤。
+ * @method void setProjectId(string $ProjectId) 设置项目 Id，使用项目 Id 进行过滤。
  * @method array getTaskTypeSet() 获取任务类型集合，取值有：
 <li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li>
+
+注：不填不使用任务类型进行过滤。
  * @method void setTaskTypeSet(array $TaskTypeSet) 设置任务类型集合，取值有：
 <li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li>
+
+注：不填不使用任务类型进行过滤。
  * @method array getStatusSet() 获取任务状态集合，取值有：
 <li>PROCESSING：处理中；</li>
 <li>SUCCESS：成功；</li>
 <li>FAIL：失败。</li>
+
+注：不填则不使用任务状态进行过滤。
  * @method void setStatusSet(array $StatusSet) 设置任务状态集合，取值有：
 <li>PROCESSING：处理中；</li>
 <li>SUCCESS：成功；</li>
 <li>FAIL：失败。</li>
+
+注：不填则不使用任务状态进行过滤。
  * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。
  * @method integer getLimit() 获取分页返回的记录条数，默认值：10。最大值：20。
  * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：10。最大值：20。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取所有任务信息。如果指定操作者，则操作者需要是任务发起者。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取所有任务信息。如果指定操作者，则操作者需要是任务发起者。
  */
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
     /**
-     * @var string 项目 Id。
+     * @var string 项目 Id，使用项目 Id 进行过滤。
      */
     public $ProjectId;
 
     /**
      * @var array 任务类型集合，取值有：
 <li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li>
+
+注：不填不使用任务类型进行过滤。
      */
     public $TaskTypeSet;
 
@@ -66,6 +76,8 @@ class DescribeTasksRequest extends AbstractModel
 <li>PROCESSING：处理中；</li>
 <li>SUCCESS：成功；</li>
 <li>FAIL：失败。</li>
+
+注：不填则不使用任务状态进行过滤。
      */
     public $StatusSet;
 
@@ -80,22 +92,26 @@ class DescribeTasksRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取所有任务信息。如果指定操作者，则操作者需要是任务发起者。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
-     * @param string $ProjectId 项目 Id。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param string $ProjectId 项目 Id，使用项目 Id 进行过滤。
      * @param array $TaskTypeSet 任务类型集合，取值有：
 <li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li>
+
+注：不填不使用任务类型进行过滤。
      * @param array $StatusSet 任务状态集合，取值有：
 <li>PROCESSING：处理中；</li>
 <li>SUCCESS：成功；</li>
 <li>FAIL：失败。</li>
+
+注：不填则不使用任务状态进行过滤。
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。
      * @param integer $Limit 分页返回的记录条数，默认值：10。最大值：20。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取所有任务信息。如果指定操作者，则操作者需要是任务发起者。
      */
     function __construct()
     {

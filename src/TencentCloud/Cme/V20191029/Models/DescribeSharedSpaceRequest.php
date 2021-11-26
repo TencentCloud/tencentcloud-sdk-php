@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSharedSpace请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method Entity getAuthorizee() 获取被授权目标,，个人或团队。
- * @method void setAuthorizee(Entity $Authorizee) 设置被授权目标,，个人或团队。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method Entity getAuthorizee() 获取被授权目标，个人或团队。
+ * @method void setAuthorizee(Entity $Authorizee) 设置被授权目标，个人或团队。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询任意个人或者团队的共享空间。如果指定操作者，则操作者必须本人或者团队成员。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询任意个人或者团队的共享空间。如果指定操作者，则操作者必须本人或者团队成员。
  */
 class DescribeSharedSpaceRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
     /**
-     * @var Entity 被授权目标,，个人或团队。
+     * @var Entity 被授权目标，个人或团队。
      */
     public $Authorizee;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询任意个人或者团队的共享空间。如果指定操作者，则操作者必须本人或者团队成员。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
-     * @param Entity $Authorizee 被授权目标,，个人或团队。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param Entity $Authorizee 被授权目标，个人或团队。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询任意个人或者团队的共享空间。如果指定操作者，则操作者必须本人或者团队成员。
      */
     function __construct()
     {

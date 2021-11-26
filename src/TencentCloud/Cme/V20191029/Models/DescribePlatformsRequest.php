@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePlatforms请求参数结构体
  *
- * @method array getPlatforms() 获取平台集合。
- * @method void setPlatforms(array $Platforms) 设置平台集合。
- * @method array getLicenseIds() 获取平台绑定的 license Id 集合。
- * @method void setLicenseIds(array $LicenseIds) 设置平台绑定的 license Id 集合。
+ * @method array getPlatforms() 获取平台 Id 列表。如果不填，则不按平台 Id 进行过滤。
+ * @method void setPlatforms(array $Platforms) 设置平台 Id 列表。如果不填，则不按平台 Id 进行过滤。
+ * @method array getLicenseIds() 获取平台绑定的 License Id 列表。如果不填，则不按平台绑定的 License Id 进行过滤。
+ * @method void setLicenseIds(array $LicenseIds) 设置平台绑定的 License Id 列表。如果不填，则不按平台绑定的 License Id 进行过滤。
  * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。
- * @method integer getLimit() 获取分页返回的记录条数，默认值：10。
- * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：10。
+ * @method integer getLimit() 获取分页返回的记录条数，默认值：10，最大值：20。
+ * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：10，最大值：20。
  */
 class DescribePlatformsRequest extends AbstractModel
 {
     /**
-     * @var array 平台集合。
+     * @var array 平台 Id 列表。如果不填，则不按平台 Id 进行过滤。
      */
     public $Platforms;
 
     /**
-     * @var array 平台绑定的 license Id 集合。
+     * @var array 平台绑定的 License Id 列表。如果不填，则不按平台绑定的 License Id 进行过滤。
      */
     public $LicenseIds;
 
@@ -47,15 +47,15 @@ class DescribePlatformsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页返回的记录条数，默认值：10。
+     * @var integer 分页返回的记录条数，默认值：10，最大值：20。
      */
     public $Limit;
 
     /**
-     * @param array $Platforms 平台集合。
-     * @param array $LicenseIds 平台绑定的 license Id 集合。
+     * @param array $Platforms 平台 Id 列表。如果不填，则不按平台 Id 进行过滤。
+     * @param array $LicenseIds 平台绑定的 License Id 列表。如果不填，则不按平台绑定的 License Id 进行过滤。
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。
-     * @param integer $Limit 分页返回的记录条数，默认值：10。
+     * @param integer $Limit 分页返回的记录条数，默认值：10，最大值：20。
      */
     function __construct()
     {

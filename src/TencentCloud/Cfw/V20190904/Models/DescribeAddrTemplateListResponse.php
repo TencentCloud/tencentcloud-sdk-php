@@ -14,30 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cme\V20191029\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSharedSpace返回参数结构体
+ * DescribeAddrTemplateList返回参数结构体
  *
- * @method integer getTotalCount() 获取查询到的共享空间总数。
- * @method void setTotalCount(integer $TotalCount) 设置查询到的共享空间总数。
- * @method array getAuthorizerSet() 获取各个共享空间对应的授权者信息。
- * @method void setAuthorizerSet(array $AuthorizerSet) 设置各个共享空间对应的授权者信息。
+ * @method integer getTotal() 获取模版总数
+ * @method void setTotal(integer $Total) 设置模版总数
+ * @method array getData() 获取模版列表数据
+ * @method void setData(array $Data) 设置模版列表数据
+ * @method array getNameList() 获取模版名称列表
+ * @method void setNameList(array $NameList) 设置模版名称列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSharedSpaceResponse extends AbstractModel
+class DescribeAddrTemplateListResponse extends AbstractModel
 {
     /**
-     * @var integer 查询到的共享空间总数。
+     * @var integer 模版总数
      */
-    public $TotalCount;
+    public $Total;
 
     /**
-     * @var array 各个共享空间对应的授权者信息。
+     * @var array 模版列表数据
      */
-    public $AuthorizerSet;
+    public $Data;
+
+    /**
+     * @var array 模版名称列表
+     */
+    public $NameList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeSharedSpaceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 查询到的共享空间总数。
-     * @param array $AuthorizerSet 各个共享空间对应的授权者信息。
+     * @param integer $Total 模版总数
+     * @param array $Data 模版列表数据
+     * @param array $NameList 模版名称列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +70,21 @@ class DescribeSharedSpaceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
-        if (array_key_exists("AuthorizerSet",$param) and $param["AuthorizerSet"] !== null) {
-            $this->AuthorizerSet = [];
-            foreach ($param["AuthorizerSet"] as $key => $value){
-                $obj = new Authorizer();
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new TemplateListInfo();
                 $obj->deserialize($value);
-                array_push($this->AuthorizerSet, $obj);
+                array_push($this->Data, $obj);
             }
+        }
+
+        if (array_key_exists("NameList",$param) and $param["NameList"] !== null) {
+            $this->NameList = $param["NameList"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

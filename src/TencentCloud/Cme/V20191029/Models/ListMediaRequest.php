@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListMedia请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method string getClassPath() 获取媒体分类路径，例如填写"/a/b"，则代表浏览该分类路径下的媒体和子分类信息。
  * @method void setClassPath(string $ClassPath) 设置媒体分类路径，例如填写"/a/b"，则代表浏览该分类路径下的媒体和子分类信息。
  * @method Entity getOwner() 获取媒体和分类的归属者。
@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：50。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：50。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验对媒体的访问权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验对媒体的访问权限。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以浏览任意分类的信息。如果指定操作者，则操作者必须对分类有读权限。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以浏览任意分类的信息。如果指定操作者，则操作者必须对分类有读权限。
  */
 class ListMediaRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
@@ -61,17 +61,17 @@ class ListMediaRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验对媒体的访问权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以浏览任意分类的信息。如果指定操作者，则操作者必须对分类有读权限。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      * @param string $ClassPath 媒体分类路径，例如填写"/a/b"，则代表浏览该分类路径下的媒体和子分类信息。
      * @param Entity $Owner 媒体和分类的归属者。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：50。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验对媒体的访问权限。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以浏览任意分类的信息。如果指定操作者，则操作者必须对分类有读权限。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RevokeResourceAuthorization请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method Entity getOwner() 获取资源所属实体。
  * @method void setOwner(Entity $Owner) 设置资源所属实体。
  * @method array getResources() 获取被授权资源。
@@ -38,13 +38,13 @@ use TencentCloud\Common\AbstractModel;
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li>
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，撤销任意资源的授权权限。如果指定操作者，则操作者必须对被授权资源有写权限。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，撤销任意资源的授权权限。如果指定操作者，则操作者必须对被授权资源有写权限。
  */
 class RevokeResourceAuthorizationRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
@@ -73,12 +73,12 @@ class RevokeResourceAuthorizationRequest extends AbstractModel
     public $Permissions;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，撤销任意资源的授权权限。如果指定操作者，则操作者必须对被授权资源有写权限。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      * @param Entity $Owner 资源所属实体。
      * @param array $Resources 被授权资源。
      * @param array $Authorizees 被授权目标实体。
@@ -87,7 +87,7 @@ class RevokeResourceAuthorizationRequest extends AbstractModel
 <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
 <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
 <li>W：可修改、删除媒资。</li>
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，撤销任意资源的授权权限。如果指定操作者，则操作者必须对被授权资源有写权限。
      */
     function __construct()
     {

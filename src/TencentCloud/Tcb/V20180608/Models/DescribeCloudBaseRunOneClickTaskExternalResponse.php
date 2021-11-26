@@ -54,6 +54,10 @@ finished
  * @method void setFailReason(string $FailReason) 设置失败原因
  * @method string getUserEnvId() 获取用户envId
  * @method void setUserEnvId(string $UserEnvId) 设置用户envId
+ * @method string getStartTime() 获取创建时间
+ * @method void setStartTime(string $StartTime) 设置创建时间
+ * @method array getSteps() 获取步骤信息
+ * @method void setSteps(array $Steps) 设置步骤信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -117,6 +121,16 @@ finished
     public $UserEnvId;
 
     /**
+     * @var string 创建时间
+     */
+    public $StartTime;
+
+    /**
+     * @var array 步骤信息
+     */
+    public $Steps;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -139,6 +153,8 @@ failed
 finished
      * @param string $FailReason 失败原因
      * @param string $UserEnvId 用户envId
+     * @param string $StartTime 创建时间
+     * @param array $Steps 步骤信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -192,6 +208,19 @@ finished
 
         if (array_key_exists("UserEnvId",$param) and $param["UserEnvId"] !== null) {
             $this->UserEnvId = $param["UserEnvId"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("Steps",$param) and $param["Steps"] !== null) {
+            $this->Steps = [];
+            foreach ($param["Steps"] as $key => $value){
+                $obj = new OneClickTaskStepInfo();
+                $obj->deserialize($value);
+                array_push($this->Steps, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

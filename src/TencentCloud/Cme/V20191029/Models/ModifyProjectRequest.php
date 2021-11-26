@@ -20,33 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyProject请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method string getProjectId() 获取项目 Id。
  * @method void setProjectId(string $ProjectId) 设置项目 Id。
  * @method string getName() 获取项目名称，不可超过30个字符。
  * @method void setName(string $Name) 设置项目名称，不可超过30个字符。
- * @method string getAspectRatio() 获取画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
- * @method void setAspectRatio(string $AspectRatio) 设置画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
- * @method Entity getOwner() 获取项目归属者。
- * @method void setOwner(Entity $Owner) 设置项目归属者。
+ * @method string getAspectRatio() 获取画布宽高比，值为视频编辑项目画布宽与高的像素值的比值，如 16:9、9:16 等。
+ * @method void setAspectRatio(string $AspectRatio) 设置画布宽高比，值为视频编辑项目画布宽与高的像素值的比值，如 16:9、9:16 等。
+ * @method Entity getOwner() 获取项目所有者。目前仅支持个人项目，不支持团队项目。
+ * @method void setOwner(Entity $Owner) 设置项目所有者。目前仅支持个人项目，不支持团队项目。
  * @method string getMode() 获取项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Defualt：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
  * @method void setMode(string $Mode) 设置项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Defualt：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
  */
 class ModifyProjectRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
@@ -61,37 +57,33 @@ class ModifyProjectRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
+     * @var string 画布宽高比，值为视频编辑项目画布宽与高的像素值的比值，如 16:9、9:16 等。
      */
     public $AspectRatio;
 
     /**
-     * @var Entity 项目归属者。
+     * @var Entity 项目所有者。目前仅支持个人项目，不支持团队项目。
      */
     public $Owner;
 
     /**
      * @var string 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Defualt：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
      */
     public $Mode;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      * @param string $ProjectId 项目 Id。
      * @param string $Name 项目名称，不可超过30个字符。
-     * @param string $AspectRatio 画布宽高比，取值有：
-<li>16:9；</li>
-<li>9:16。</li>
-     * @param Entity $Owner 项目归属者。
+     * @param string $AspectRatio 画布宽高比，值为视频编辑项目画布宽与高的像素值的比值，如 16:9、9:16 等。
+     * @param Entity $Owner 项目所有者。目前仅支持个人项目，不支持团队项目。
      * @param string $Mode 项目模式，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
-<li>Defualt：默认模式。</li>
-<li>VideoEditTemplate：视频编辑模板制作模式。</li>
+<li>Default：默认模式，即普通视频编辑项目。</li>
+<li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
      */
     function __construct()
     {

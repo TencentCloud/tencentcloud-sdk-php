@@ -20,91 +20,109 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjects请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method array getProjectIds() 获取项目 Id 列表，N 从 0 开始取值，最大 19。
- * @method void setProjectIds(array $ProjectIds) 设置项目 Id 列表，N 从 0 开始取值，最大 19。
- * @method array getAspectRatioSet() 获取画布宽高比集合。
- * @method void setAspectRatioSet(array $AspectRatioSet) 设置画布宽高比集合。
- * @method array getCategorySet() 获取项目类别，取值有：
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method array getProjectIds() 获取项目 Id 过滤参数列表，最大支持20个项目 Id 过滤。如果不填不需要项目 Id 进行过滤。
+ * @method void setProjectIds(array $ProjectIds) 设置项目 Id 过滤参数列表，最大支持20个项目 Id 过滤。如果不填不需要项目 Id 进行过滤。
+ * @method array getAspectRatioSet() 获取画布宽高比过滤参数列表。如果不填则不用画布宽高比进行过滤。
+ * @method void setAspectRatioSet(array $AspectRatioSet) 设置画布宽高比过滤参数列表。如果不填则不用画布宽高比进行过滤。
+ * @method array getCategorySet() 获取项目类型过滤参数列表，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
- * @method void setCategorySet(array $CategorySet) 设置项目类别，取值有：
+
+注：如果不填则不使用项目类型进行过滤。
+ * @method void setCategorySet(array $CategorySet) 设置项目类型过滤参数列表，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
- * @method array getModes() 获取项目模式，一个项目可以有多种模式并相互切换。
+
+注：如果不填则不使用项目类型进行过滤。
+ * @method array getModes() 获取项目模式过滤参数列表，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
 <li>Default：默认模式。</li>
 <li>VideoEditTemplate：视频编辑模板制作模式。</li>
- * @method void setModes(array $Modes) 设置项目模式，一个项目可以有多种模式并相互切换。
+
+注：不填不使用项目模式进行过滤。
+ * @method void setModes(array $Modes) 设置项目模式过滤参数列表，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
 <li>Default：默认模式。</li>
 <li>VideoEditTemplate：视频编辑模板制作模式。</li>
- * @method SortBy getSort() 获取列表排序，支持下列排序字段：
+
+注：不填不使用项目模式进行过滤。
+ * @method SortBy getSort() 获取结果排序方式，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
- * @method void setSort(SortBy $Sort) 设置列表排序，支持下列排序字段：
+
+注：如不填，则使用项目创建时间倒序排列。
+ * @method void setSort(SortBy $Sort) 设置结果排序方式，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
- * @method Entity getOwner() 获取项目归属者。
- * @method void setOwner(Entity $Owner) 设置项目归属者。
+
+注：如不填，则使用项目创建时间倒序排列。
+ * @method Entity getOwner() 获取项目所有者，目前仅支持个人项目过滤。
+ * @method void setOwner(Entity $Owner) 设置项目所有者，目前仅支持个人项目过滤。
  * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。
  * @method integer getLimit() 获取分页返回的记录条数，默认值：10。
  * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：10。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询一切用户项目信息。如果指定操作者，则操作者必须为项目所有者。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询一切用户项目信息。如果指定操作者，则操作者必须为项目所有者。
  */
 class DescribeProjectsRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
     /**
-     * @var array 项目 Id 列表，N 从 0 开始取值，最大 19。
+     * @var array 项目 Id 过滤参数列表，最大支持20个项目 Id 过滤。如果不填不需要项目 Id 进行过滤。
      */
     public $ProjectIds;
 
     /**
-     * @var array 画布宽高比集合。
+     * @var array 画布宽高比过滤参数列表。如果不填则不用画布宽高比进行过滤。
      */
     public $AspectRatioSet;
 
     /**
-     * @var array 项目类别，取值有：
+     * @var array 项目类型过滤参数列表，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+
+注：如果不填则不使用项目类型进行过滤。
      */
     public $CategorySet;
 
     /**
-     * @var array 项目模式，一个项目可以有多种模式并相互切换。
+     * @var array 项目模式过滤参数列表，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
 <li>Default：默认模式。</li>
 <li>VideoEditTemplate：视频编辑模板制作模式。</li>
+
+注：不填不使用项目模式进行过滤。
      */
     public $Modes;
 
     /**
-     * @var SortBy 列表排序，支持下列排序字段：
+     * @var SortBy 结果排序方式，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
+
+注：如不填，则使用项目创建时间倒序排列。
      */
     public $Sort;
 
     /**
-     * @var Entity 项目归属者。
+     * @var Entity 项目所有者，目前仅支持个人项目过滤。
      */
     public $Owner;
 
@@ -119,31 +137,37 @@ class DescribeProjectsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询一切用户项目信息。如果指定操作者，则操作者必须为项目所有者。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
-     * @param array $ProjectIds 项目 Id 列表，N 从 0 开始取值，最大 19。
-     * @param array $AspectRatioSet 画布宽高比集合。
-     * @param array $CategorySet 项目类别，取值有：
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param array $ProjectIds 项目 Id 过滤参数列表，最大支持20个项目 Id 过滤。如果不填不需要项目 Id 进行过滤。
+     * @param array $AspectRatioSet 画布宽高比过滤参数列表。如果不填则不用画布宽高比进行过滤。
+     * @param array $CategorySet 项目类型过滤参数列表，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
-     * @param array $Modes 项目模式，一个项目可以有多种模式并相互切换。
+
+注：如果不填则不使用项目类型进行过滤。
+     * @param array $Modes 项目模式过滤参数列表，一个项目可以有多种模式并相互切换。
 当 Category 为 VIDEO_EDIT 时，可选模式有：
 <li>Default：默认模式。</li>
 <li>VideoEditTemplate：视频编辑模板制作模式。</li>
-     * @param SortBy $Sort 列表排序，支持下列排序字段：
+
+注：不填不使用项目模式进行过滤。
+     * @param SortBy $Sort 结果排序方式，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
-     * @param Entity $Owner 项目归属者。
+
+注：如不填，则使用项目创建时间倒序排列。
+     * @param Entity $Owner 项目所有者，目前仅支持个人项目过滤。
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。
      * @param integer $Limit 分页返回的记录条数，默认值：10。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询一切用户项目信息。如果指定操作者，则操作者必须为项目所有者。
      */
     function __construct()
     {

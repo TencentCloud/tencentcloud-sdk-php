@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteProject请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method string getProjectId() 获取项目 Id。
- * @method void setProjectId(string $ProjectId) 设置项目 Id。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验对项目删除操作权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验对项目删除操作权限。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method string getProjectId() 获取要删除的项目 Id。
+ * @method void setProjectId(string $ProjectId) 设置要删除的项目 Id。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以删除一切项目。如果指定操作者，则操作者必须为项目所有者。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以删除一切项目。如果指定操作者，则操作者必须为项目所有者。
  */
 class DeleteProjectRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
     /**
-     * @var string 项目 Id。
+     * @var string 要删除的项目 Id。
      */
     public $ProjectId;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验对项目删除操作权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以删除一切项目。如果指定操作者，则操作者必须为项目所有者。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
-     * @param string $ProjectId 项目 Id。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验对项目删除操作权限。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param string $ProjectId 要删除的项目 Id。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以删除一切项目。如果指定操作者，则操作者必须为项目所有者。
      */
     function __construct()
     {

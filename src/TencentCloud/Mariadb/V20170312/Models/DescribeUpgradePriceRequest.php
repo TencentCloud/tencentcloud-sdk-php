@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
  * @method void setStorage(integer $Storage) 设置存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
+ * @method integer getNodeCount() 获取新节点数，传0表示节点数不变
+ * @method void setNodeCount(integer $NodeCount) 设置新节点数，传0表示节点数不变
  */
 class DescribeUpgradePriceRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ class DescribeUpgradePriceRequest extends AbstractModel
     public $Storage;
 
     /**
+     * @var integer 新节点数，传0表示节点数不变
+     */
+    public $NodeCount;
+
+    /**
      * @param string $InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param integer $Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      * @param integer $Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
+     * @param integer $NodeCount 新节点数，传0表示节点数不变
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ class DescribeUpgradePriceRequest extends AbstractModel
 
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
+            $this->NodeCount = $param["NodeCount"];
         }
     }
 }

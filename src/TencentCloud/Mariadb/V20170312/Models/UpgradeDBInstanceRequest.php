@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券进行支付，默认不使用。
  * @method array getVoucherIds() 获取代金券ID列表，目前仅支持指定一张代金券。
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
+ * @method array getZones() 获取变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+ * @method void setZones(array $Zones) 设置变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
+     * @var array 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+     */
+    public $Zones;
+
+    /**
      * @param string $InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param integer $Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -72,6 +79,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      * @param boolean $AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
+     * @param array $Zones 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("VoucherIds",$param) and $param["VoucherIds"] !== null) {
             $this->VoucherIds = $param["VoucherIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
     }
 }

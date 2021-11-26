@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchMaterial请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method array getSearchScopes() 获取指定搜索空间，数组长度不得超过5。
  * @method void setSearchScopes(array $SearchScopes) 设置指定搜索空间，数组长度不得超过5。
- * @method array getMaterialTypes() 获取媒体类型，取值：
+ * @method array getMaterialTypes() 获取媒体类型，可取值有：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
-<li>IMAGE：图片。</li>
- * @method void setMaterialTypes(array $MaterialTypes) 设置媒体类型，取值：
+<li>IMAGE：图片；</li>
+<li>VIDEO_EDIT_TEMPLATE：剪辑模板。</li>
+ * @method void setMaterialTypes(array $MaterialTypes) 设置媒体类型，可取值有：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
-<li>IMAGE：图片。</li>
+<li>IMAGE：图片；</li>
+<li>VIDEO_EDIT_TEMPLATE：剪辑模板。</li>
  * @method string getText() 获取搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
  * @method void setText(string $Text) 设置搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
  * @method string getResolution() 获取按画质检索，取值为：LD/SD/HD/FHD/2K/4K。
@@ -48,13 +50,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：50。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：50。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以搜索任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以搜索任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
  */
 class SearchMaterialRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
@@ -64,10 +66,11 @@ class SearchMaterialRequest extends AbstractModel
     public $SearchScopes;
 
     /**
-     * @var array 媒体类型，取值：
+     * @var array 媒体类型，可取值有：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
-<li>IMAGE：图片。</li>
+<li>IMAGE：图片；</li>
+<li>VIDEO_EDIT_TEMPLATE：剪辑模板。</li>
      */
     public $MaterialTypes;
 
@@ -112,17 +115,18 @@ class SearchMaterialRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以搜索任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      * @param array $SearchScopes 指定搜索空间，数组长度不得超过5。
-     * @param array $MaterialTypes 媒体类型，取值：
+     * @param array $MaterialTypes 媒体类型，可取值有：
 <li>AUDIO：音频；</li>
 <li>VIDEO：视频 ；</li>
-<li>IMAGE：图片。</li>
+<li>IMAGE：图片；</li>
+<li>VIDEO_EDIT_TEMPLATE：剪辑模板。</li>
      * @param string $Text 搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
      * @param string $Resolution 按画质检索，取值为：LD/SD/HD/FHD/2K/4K。
      * @param IntegerRange $DurationRange 按媒体时长检索，单位s。
@@ -131,7 +135,7 @@ class SearchMaterialRequest extends AbstractModel
      * @param SortBy $Sort 排序方式。Sort.Field 可选值：CreateTime。指定 Text 搜索时，将根据匹配度排序，该字段无效。
      * @param integer $Offset 偏移量。默认值：0。
      * @param integer $Limit 返回记录条数，默认值：50。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以搜索任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
      */
     function __construct()
     {

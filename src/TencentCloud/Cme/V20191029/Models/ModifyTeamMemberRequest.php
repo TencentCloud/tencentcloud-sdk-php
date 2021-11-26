@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTeamMember请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method string getTeamId() 获取团队 ID。
  * @method void setTeamId(string $TeamId) 设置团队 ID。
  * @method string getMemberId() 获取团队成员 ID。
  * @method void setMemberId(string $MemberId) 设置团队成员 ID。
- * @method string getRemark() 获取成员备注，允许设置备注为空，不为空时长度不能超过15个字符。
- * @method void setRemark(string $Remark) 设置成员备注，允许设置备注为空，不为空时长度不能超过15个字符。
- * @method string getRole() 获取成员角色，取值：
+ * @method string getRemark() 获取成员备注，长度不能超过15个字符。
+ * @method void setRemark(string $Remark) 设置成员备注，长度不能超过15个字符。
+ * @method string getRole() 获取成员角色，可取值有：
 <li>Admin：团队管理员；</li>
 <li>Member：普通成员。</li>
- * @method void setRole(string $Role) 设置成员角色，取值：
+ * @method void setRole(string $Role) 设置成员角色，可取值有：
 <li>Admin：团队管理员；</li>
 <li>Member：普通成员。</li>
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以个改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以个改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
  */
 class ModifyTeamMemberRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
@@ -55,31 +55,31 @@ class ModifyTeamMemberRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var string 成员备注，允许设置备注为空，不为空时长度不能超过15个字符。
+     * @var string 成员备注，长度不能超过15个字符。
      */
     public $Remark;
 
     /**
-     * @var string 成员角色，取值：
+     * @var string 成员角色，可取值有：
 <li>Admin：团队管理员；</li>
 <li>Member：普通成员。</li>
      */
     public $Role;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以个改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      * @param string $TeamId 团队 ID。
      * @param string $MemberId 团队成员 ID。
-     * @param string $Remark 成员备注，允许设置备注为空，不为空时长度不能超过15个字符。
-     * @param string $Role 成员角色，取值：
+     * @param string $Remark 成员备注，长度不能超过15个字符。
+     * @param string $Role 成员角色，可取值有：
 <li>Admin：团队管理员；</li>
 <li>Member：普通成员。</li>
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以个改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
      */
     function __construct()
     {

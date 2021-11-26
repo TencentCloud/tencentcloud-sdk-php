@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTeams请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method array getTeamIds() 获取团队 ID 列表，限30个。若不填，则默认获取平台下所有团队。
  * @method void setTeamIds(array $TeamIds) 设置团队 ID 列表，限30个。若不填，则默认获取平台下所有团队。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTeamsRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
@@ -52,7 +52,7 @@ class DescribeTeamsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      * @param array $TeamIds 团队 ID 列表，限30个。若不填，则默认获取平台下所有团队。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：20，最大值：30。

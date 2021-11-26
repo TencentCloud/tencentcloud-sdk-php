@@ -78,6 +78,10 @@ drop：拒绝
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getId() 获取规则对应的唯一id
+ * @method void setId(string $Id) 设置规则对应的唯一id
+ * @method string getEnable() 获取规则状态，true表示启用，false表示禁用
+ * @method void setEnable(string $Enable) 设置规则状态，true表示启用，false表示禁用
  */
 class SecurityGroupRule extends AbstractModel
 {
@@ -151,6 +155,16 @@ drop：拒绝
     public $ServiceTemplateId;
 
     /**
+     * @var string 规则对应的唯一id
+     */
+    public $Id;
+
+    /**
+     * @var string 规则状态，true表示启用，false表示禁用
+     */
+    public $Enable;
+
+    /**
      * @param string $SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -180,6 +194,8 @@ drop：拒绝
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceTemplateId 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Id 规则对应的唯一id
+     * @param string $Enable 规则状态，true表示启用，false表示禁用
      */
     function __construct()
     {
@@ -232,6 +248,14 @@ drop：拒绝
 
         if (array_key_exists("ServiceTemplateId",$param) and $param["ServiceTemplateId"] !== null) {
             $this->ServiceTemplateId = $param["ServiceTemplateId"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
         }
     }
 }

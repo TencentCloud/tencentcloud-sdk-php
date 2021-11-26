@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoginStatus请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method array getUserIds() 获取用户 Id 列表，N 从 0 开始取值，最大 19。
- * @method void setUserIds(array $UserIds) 设置用户 Id 列表，N 从 0 开始取值，最大 19。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method array getUserIds() 获取用户 Id 列表，N 从0开始取值，最大19。
+ * @method void setUserIds(array $UserIds) 设置用户 Id 列表，N 从0开始取值，最大19。
  */
 class DescribeLoginStatusRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
     /**
-     * @var array 用户 Id 列表，N 从 0 开始取值，最大 19。
+     * @var array 用户 Id 列表，N 从0开始取值，最大19。
      */
     public $UserIds;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
-     * @param array $UserIds 用户 Id 列表，N 从 0 开始取值，最大 19。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param array $UserIds 用户 Id 列表，N 从0开始取值，最大19。
      */
     function __construct()
     {

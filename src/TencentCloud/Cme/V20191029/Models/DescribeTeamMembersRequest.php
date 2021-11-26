@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTeamMembers请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method string getTeamId() 获取团队 ID。
  * @method void setTeamId(string $TeamId) 设置团队 ID。
  * @method array getMemberIds() 获取成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0
  * @method integer getLimit() 获取返回记录条数，默认值：30，最大值：30。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：30，最大值：30。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验操作权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以拉取任意团队成员的信息。如果指定操作者，则操作者必须为团队成员。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以拉取任意团队成员的信息。如果指定操作者，则操作者必须为团队成员。
  */
 class DescribeTeamMembersRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
@@ -61,17 +61,17 @@ class DescribeTeamMembersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以拉取任意团队成员的信息。如果指定操作者，则操作者必须为团队成员。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      * @param string $TeamId 团队 ID。
      * @param array $MemberIds 成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
      * @param integer $Offset 分页偏移量，默认值：0
      * @param integer $Limit 返回记录条数，默认值：30，最大值：30。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以拉取任意团队成员的信息。如果指定操作者，则操作者必须为团队成员。
      */
     function __construct()
     {

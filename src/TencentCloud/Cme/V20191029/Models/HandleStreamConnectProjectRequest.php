@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HandleStreamConnectProject请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method string getProjectId() 获取云转推项目Id 。
- * @method void setProjectId(string $ProjectId) 设置云转推项目Id 。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method string getProjectId() 获取云转推项目 Id 。
+ * @method void setProjectId(string $ProjectId) 设置云转推项目 Id 。
  * @method string getOperation() 获取请参考 [操作类型](#Operation)
  * @method void setOperation(string $Operation) 设置请参考 [操作类型](#Operation)
  * @method StreamInputInfo getInputInfo() 获取转推输入源操作参数。具体操作方式详见 [操作类型](#Operation) 及下文示例。
@@ -38,16 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputInfo(StreamConnectOutput $OutputInfo) 设置转推输出源操作参数。具体操作方式详见 [操作类型](#Operation) 及下文示例。
  * @method string getCurrentStopTime() 获取云转推当前预计结束时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。具体操作方式详见 [操作类型](#Operation) 及下文示例。
  * @method void setCurrentStopTime(string $CurrentStopTime) 设置云转推当前预计结束时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。具体操作方式详见 [操作类型](#Operation) 及下文示例。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有云转推项目。如果指定操作者，则操作者必须为项目所有者。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有云转推项目。如果指定操作者，则操作者必须为项目所有者。
  */
 class HandleStreamConnectProjectRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
     /**
-     * @var string 云转推项目Id 。
+     * @var string 云转推项目 Id 。
      */
     public $ProjectId;
 
@@ -79,8 +81,13 @@ class HandleStreamConnectProjectRequest extends AbstractModel
     public $CurrentStopTime;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
-     * @param string $ProjectId 云转推项目Id 。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有云转推项目。如果指定操作者，则操作者必须为项目所有者。
+     */
+    public $Operator;
+
+    /**
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param string $ProjectId 云转推项目 Id 。
      * @param string $Operation 请参考 [操作类型](#Operation)
      * @param StreamInputInfo $InputInfo 转推输入源操作参数。具体操作方式详见 [操作类型](#Operation) 及下文示例。
      * @param string $InputEndpoint 主备输入源标识，取值有：
@@ -88,6 +95,7 @@ class HandleStreamConnectProjectRequest extends AbstractModel
 <li> Backup ：备源。</li>
      * @param StreamConnectOutput $OutputInfo 转推输出源操作参数。具体操作方式详见 [操作类型](#Operation) 及下文示例。
      * @param string $CurrentStopTime 云转推当前预计结束时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。具体操作方式详见 [操作类型](#Operation) 及下文示例。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有云转推项目。如果指定操作者，则操作者必须为项目所有者。
      */
     function __construct()
     {
@@ -130,6 +138,10 @@ class HandleStreamConnectProjectRequest extends AbstractModel
 
         if (array_key_exists("CurrentStopTime",$param) and $param["CurrentStopTime"] !== null) {
             $this->CurrentStopTime = $param["CurrentStopTime"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

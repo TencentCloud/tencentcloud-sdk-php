@@ -40,6 +40,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DeleteSecurityGroupRuleResponse DeleteSecurityGroupRule(Models\DeleteSecurityGroupRuleRequest $req) 删除规则
  * @method Models\DeleteVpcInstanceResponse DeleteVpcInstance(Models\DeleteVpcInstanceRequest $req) 删除防火墙实例
  * @method Models\DescribeAcListsResponse DescribeAcLists(Models\DescribeAcListsRequest $req) 访问控制列表
+ * @method Models\DescribeAddrTemplateListResponse DescribeAddrTemplateList(Models\DescribeAddrTemplateListRequest $req) 获取地址模版列表
  * @method Models\DescribeAssociatedInstanceListResponse DescribeAssociatedInstanceList(Models\DescribeAssociatedInstanceListRequest $req) 获取安全组关联实例列表
  * @method Models\DescribeBlockByIpTimesListResponse DescribeBlockByIpTimesList(Models\DescribeBlockByIpTimesListRequest $req) DescribeBlockByIpTimesList 告警中心阻断IP折线图
 

@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMaterials请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
- * @method array getMaterialIds() 获取媒体 ID 列表，N 从 0 开始取值，最大 19。
- * @method void setMaterialIds(array $MaterialIds) 设置媒体 ID 列表，N 从 0 开始取值，最大 19。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method array getMaterialIds() 获取媒体 ID 列表，一次最多可拉取20个媒体的信息。
+ * @method void setMaterialIds(array $MaterialIds) 设置媒体 ID 列表，一次最多可拉取20个媒体的信息。
  * @method SortBy getSort() 获取列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
  * @method void setSort(SortBy $Sort) 设置列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
  */
 class DescribeMaterialsRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
     /**
-     * @var array 媒体 ID 列表，N 从 0 开始取值，最大 19。
+     * @var array 媒体 ID 列表，一次最多可拉取20个媒体的信息。
      */
     public $MaterialIds;
 
@@ -53,17 +53,17 @@ class DescribeMaterialsRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
-     * @param array $MaterialIds 媒体 ID 列表，N 从 0 开始取值，最大 19。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+     * @param array $MaterialIds 媒体 ID 列表，一次最多可拉取20个媒体的信息。
      * @param SortBy $Sort 列表排序，支持下列排序字段：
 <li>CreateTime：创建时间；</li>
 <li>UpdateTime：更新时间。</li>
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取任意媒体的信息。如果指定操作者，则操作者必须对媒体有读权限。
      */
     function __construct()
     {

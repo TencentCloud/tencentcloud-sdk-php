@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MoveResource请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getPlatform() 获取平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method ResourceInfo getSourceResource() 获取待移动的原始资源信息，包含原始媒体或分类资源，以及资源归属。
  * @method void setSourceResource(ResourceInfo $SourceResource) 设置待移动的原始资源信息，包含原始媒体或分类资源，以及资源归属。
  * @method ResourceInfo getDestinationResource() 获取目标信息，包含分类及归属，仅支持移动资源到分类。
  * @method void setDestinationResource(ResourceInfo $DestinationResource) 设置目标信息，包含分类及归属，仅支持移动资源到分类。
- * @method string getOperator() 获取操作者。填写用户的 Id，用于标识调用者及校验资源访问以及写权限。
- * @method void setOperator(string $Operator) 设置操作者。填写用户的 Id，用于标识调用者及校验资源访问以及写权限。
+ * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以移动任务资源。如果指定操作者，则操作者必须对源及目标资源有写权限。
+ * @method void setOperator(string $Operator) 设置操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以移动任务资源。如果指定操作者，则操作者必须对源及目标资源有写权限。
  */
 class MoveResourceRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
@@ -47,15 +47,15 @@ class MoveResourceRequest extends AbstractModel
     public $DestinationResource;
 
     /**
-     * @var string 操作者。填写用户的 Id，用于标识调用者及校验资源访问以及写权限。
+     * @var string 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以移动任务资源。如果指定操作者，则操作者必须对源及目标资源有写权限。
      */
     public $Operator;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Platform 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      * @param ResourceInfo $SourceResource 待移动的原始资源信息，包含原始媒体或分类资源，以及资源归属。
      * @param ResourceInfo $DestinationResource 目标信息，包含分类及归属，仅支持移动资源到分类。
-     * @param string $Operator 操作者。填写用户的 Id，用于标识调用者及校验资源访问以及写权限。
+     * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以移动任务资源。如果指定操作者，则操作者必须对源及目标资源有写权限。
      */
     function __construct()
     {

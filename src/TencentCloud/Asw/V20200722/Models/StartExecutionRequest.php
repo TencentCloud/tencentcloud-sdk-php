@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStateMachineResourceName() 获取状态机资源名
  * @method void setStateMachineResourceName(string $StateMachineResourceName) 设置状态机资源名
- * @method string getInput() 获取输入参数
- * @method void setInput(string $Input) 设置输入参数
+ * @method string getInput() 获取输入参数，内容为JsonObject，长度不大于524288字符。
+ * @method void setInput(string $Input) 设置输入参数，内容为JsonObject，长度不大于524288字符。
  * @method string getName() 获取本次执行名。如果不填，系统会自动生成。如果填，应保证状态机下唯一
  * @method void setName(string $Name) 设置本次执行名。如果不填，系统会自动生成。如果填，应保证状态机下唯一
  */
@@ -35,7 +35,7 @@ class StartExecutionRequest extends AbstractModel
     public $StateMachineResourceName;
 
     /**
-     * @var string 输入参数
+     * @var string 输入参数，内容为JsonObject，长度不大于524288字符。
      */
     public $Input;
 
@@ -46,7 +46,7 @@ class StartExecutionRequest extends AbstractModel
 
     /**
      * @param string $StateMachineResourceName 状态机资源名
-     * @param string $Input 输入参数
+     * @param string $Input 输入参数，内容为JsonObject，长度不大于524288字符。
      * @param string $Name 本次执行名。如果不填，系统会自动生成。如果填，应保证状态机下唯一
      */
     function __construct()

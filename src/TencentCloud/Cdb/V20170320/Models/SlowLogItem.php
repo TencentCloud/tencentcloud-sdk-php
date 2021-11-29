@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置Sql的执行时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getQueryTime() 获取Sql的执行时长。
+ * @method float getQueryTime() 获取Sql的执行时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQueryTime(float $QueryTime) 设置Sql的执行时长。
+ * @method void setQueryTime(float $QueryTime) 设置Sql的执行时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSqlText() 获取Sql语句。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,9 +44,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabase(string $Database) 设置数据库名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getLockTime() 获取锁时长。
+ * @method float getLockTime() 获取锁时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLockTime(float $LockTime) 设置锁时长。
+ * @method void setLockTime(float $LockTime) 设置锁时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRowsExamined() 获取扫描行数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ class SlowLogItem extends AbstractModel
     public $Timestamp;
 
     /**
-     * @var float Sql的执行时长。
+     * @var float Sql的执行时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueryTime;
@@ -104,7 +104,7 @@ class SlowLogItem extends AbstractModel
     public $Database;
 
     /**
-     * @var float 锁时长。
+     * @var float 锁时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LockTime;
@@ -136,7 +136,7 @@ class SlowLogItem extends AbstractModel
     /**
      * @param integer $Timestamp Sql的执行时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $QueryTime Sql的执行时长。
+     * @param float $QueryTime Sql的执行时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SqlText Sql语句。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,7 +146,7 @@ class SlowLogItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Database 数据库名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $LockTime 锁时长。
+     * @param float $LockTime 锁时长（秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RowsExamined 扫描行数。
 注意：此字段可能返回 null，表示取不到有效值。

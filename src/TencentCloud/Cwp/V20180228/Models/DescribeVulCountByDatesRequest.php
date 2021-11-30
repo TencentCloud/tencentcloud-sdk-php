@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getLastDays() 获取需要查询最近几天的数据，需要都 -1后传入
  * @method void setLastDays(array $LastDays) 设置需要查询最近几天的数据，需要都 -1后传入
- * @method integer getVulCategory() 获取漏洞的分类，最小值为1最大值为5
- * @method void setVulCategory(integer $VulCategory) 设置漏洞的分类，最小值为1最大值为5
+ * @method integer getVulCategory() 获取漏洞的分类: 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+ * @method void setVulCategory(integer $VulCategory) 设置漏洞的分类: 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
  * @method string getIfEmergency() 获取是否为应急漏洞筛选  是: yes
  * @method void setIfEmergency(string $IfEmergency) 设置是否为应急漏洞筛选  是: yes
  */
@@ -35,7 +35,7 @@ class DescribeVulCountByDatesRequest extends AbstractModel
     public $LastDays;
 
     /**
-     * @var integer 漏洞的分类，最小值为1最大值为5
+     * @var integer 漏洞的分类: 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      */
     public $VulCategory;
 
@@ -46,7 +46,7 @@ class DescribeVulCountByDatesRequest extends AbstractModel
 
     /**
      * @param array $LastDays 需要查询最近几天的数据，需要都 -1后传入
-     * @param integer $VulCategory 漏洞的分类，最小值为1最大值为5
+     * @param integer $VulCategory 漏洞的分类: 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      * @param string $IfEmergency 是否为应急漏洞筛选  是: yes
      */
     function __construct()

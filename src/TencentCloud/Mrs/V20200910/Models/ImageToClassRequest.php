@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImageToClass请求参数结构体
  *
- * @method array getImageInfoList() 获取图片列表，允许传入多张图片，支持传入图片的url或base64编码
- * @method void setImageInfoList(array $ImageInfoList) 设置图片列表，允许传入多张图片，支持传入图片的url或base64编码
+ * @method array getImageInfoList() 获取图片列表，允许传入多张图片，支持传入图片的base64编码，暂不支持图片url
+ * @method void setImageInfoList(array $ImageInfoList) 设置图片列表，允许传入多张图片，支持传入图片的base64编码，暂不支持图片url
  * @method HandleParam getHandleParam() 获取图片处理参数
  * @method void setHandleParam(HandleParam $HandleParam) 设置图片处理参数
- * @method integer getType() 获取图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
- * @method void setType(integer $Type) 设置图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
+ * @method integer getType() 获取不填，默认为0
+ * @method void setType(integer $Type) 设置不填，默认为0
  */
 class ImageToClassRequest extends AbstractModel
 {
     /**
-     * @var array 图片列表，允许传入多张图片，支持传入图片的url或base64编码
+     * @var array 图片列表，允许传入多张图片，支持传入图片的base64编码，暂不支持图片url
      */
     public $ImageInfoList;
 
@@ -40,14 +40,14 @@ class ImageToClassRequest extends AbstractModel
     public $HandleParam;
 
     /**
-     * @var integer 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
+     * @var integer 不填，默认为0
      */
     public $Type;
 
     /**
-     * @param array $ImageInfoList 图片列表，允许传入多张图片，支持传入图片的url或base64编码
+     * @param array $ImageInfoList 图片列表，允许传入多张图片，支持传入图片的base64编码，暂不支持图片url
      * @param HandleParam $HandleParam 图片处理参数
-     * @param integer $Type 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
+     * @param integer $Type 不填，默认为0
      */
     function __construct()
     {

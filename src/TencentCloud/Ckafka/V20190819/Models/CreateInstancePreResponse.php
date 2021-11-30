@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(CreateInstancePreData $Data) 设置操作型返回的Data数据
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeleteRouteTimestamp() 获取删除是时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) 设置删除是时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateInstancePreResponse extends AbstractModel
 {
@@ -48,9 +52,17 @@ class CreateInstancePreResponse extends AbstractModel
     public $Data;
 
     /**
+     * @var string 删除是时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeleteRouteTimestamp;
+
+    /**
      * @param string $ReturnCode 返回的code，0为正常，非0为错误
      * @param string $ReturnMessage 成功消息
      * @param CreateInstancePreData $Data 操作型返回的Data数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeleteRouteTimestamp 删除是时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -77,6 +89,10 @@ class CreateInstancePreResponse extends AbstractModel
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = new CreateInstancePreData();
             $this->Data->deserialize($param["Data"]);
+        }
+
+        if (array_key_exists("DeleteRouteTimestamp",$param) and $param["DeleteRouteTimestamp"] !== null) {
+            $this->DeleteRouteTimestamp = $param["DeleteRouteTimestamp"];
         }
     }
 }

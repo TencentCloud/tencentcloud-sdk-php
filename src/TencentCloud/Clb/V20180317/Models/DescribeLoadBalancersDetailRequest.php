@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回负载均衡列表数目，默认20，最大值100。
  * @method integer getOffset() 获取返回负载均衡列表起始偏移量，默认0。
  * @method void setOffset(integer $Offset) 设置返回负载均衡列表起始偏移量，默认0。
- * @method array getFields() 获取选择返回的Fields列表，默认添加LoadBalancerId和LoadBalancerName。
- * @method void setFields(array $Fields) 设置选择返回的Fields列表，默认添加LoadBalancerId和LoadBalancerName。
+ * @method array getFields() 获取选择返回的Fields列表，系统仅会返回Fileds中填写的字段，可填写的字段详情请参见<a href="https://cloud.tencent.com/document/api/214/30694#LoadBalancerDetail">LoadBalancerDetail</a>。若未在Fileds填写相关字段，则此字段返回null。Fileds中默认添加LoadBalancerId和LoadBalancerName字段。
+ * @method void setFields(array $Fields) 设置选择返回的Fields列表，系统仅会返回Fileds中填写的字段，可填写的字段详情请参见<a href="https://cloud.tencent.com/document/api/214/30694#LoadBalancerDetail">LoadBalancerDetail</a>。若未在Fileds填写相关字段，则此字段返回null。Fileds中默认添加LoadBalancerId和LoadBalancerName字段。
  * @method string getTargetType() 获取当Fields包含TargetId、TargetAddress、TargetPort、TargetWeight等Fields时，必选选择导出目标组的Target或者非目标组Target，值范围NODE、GROUP。
  * @method void setTargetType(string $TargetType) 设置当Fields包含TargetId、TargetAddress、TargetPort、TargetWeight等Fields时，必选选择导出目标组的Target或者非目标组Target，值范围NODE、GROUP。
  * @method array getFilters() 获取查询负载均衡详细信息列表条件，详细的过滤条件如下：
@@ -64,7 +64,7 @@ class DescribeLoadBalancersDetailRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 选择返回的Fields列表，默认添加LoadBalancerId和LoadBalancerName。
+     * @var array 选择返回的Fields列表，系统仅会返回Fileds中填写的字段，可填写的字段详情请参见<a href="https://cloud.tencent.com/document/api/214/30694#LoadBalancerDetail">LoadBalancerDetail</a>。若未在Fileds填写相关字段，则此字段返回null。Fileds中默认添加LoadBalancerId和LoadBalancerName字段。
      */
     public $Fields;
 
@@ -91,7 +91,7 @@ class DescribeLoadBalancersDetailRequest extends AbstractModel
     /**
      * @param integer $Limit 返回负载均衡列表数目，默认20，最大值100。
      * @param integer $Offset 返回负载均衡列表起始偏移量，默认0。
-     * @param array $Fields 选择返回的Fields列表，默认添加LoadBalancerId和LoadBalancerName。
+     * @param array $Fields 选择返回的Fields列表，系统仅会返回Fileds中填写的字段，可填写的字段详情请参见<a href="https://cloud.tencent.com/document/api/214/30694#LoadBalancerDetail">LoadBalancerDetail</a>。若未在Fileds填写相关字段，则此字段返回null。Fileds中默认添加LoadBalancerId和LoadBalancerName字段。
      * @param string $TargetType 当Fields包含TargetId、TargetAddress、TargetPort、TargetWeight等Fields时，必选选择导出目标组的Target或者非目标组Target，值范围NODE、GROUP。
      * @param array $Filters 查询负载均衡详细信息列表条件，详细的过滤条件如下：
 <li> loadbalancer-id - String - 是否必填：否 - （过滤条件）按照 负载均衡ID 过滤，如："lb-12345678"。</li>

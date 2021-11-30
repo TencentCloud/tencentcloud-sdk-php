@@ -101,6 +101,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeGatewayApisResponse DescribeGatewayApis(Models\DescribeGatewayApisRequest $req) 查询API分组下的Api列表信息
  * @method Models\DescribeGatewayMonitorOverviewResponse DescribeGatewayMonitorOverview(Models\DescribeGatewayMonitorOverviewRequest $req) 查询网关监控概览
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 查询虚拟机部署组详情
+ * @method Models\DescribeGroupAttributeResponse DescribeGroupAttribute(Models\DescribeGroupAttributeRequest $req) 获取部署组其他属性
  * @method Models\DescribeGroupBindedGatewaysResponse DescribeGroupBindedGateways(Models\DescribeGroupBindedGatewaysRequest $req) 查询某个API分组已绑定的网关部署组信息列表
  * @method Models\DescribeGroupGatewaysResponse DescribeGroupGateways(Models\DescribeGroupGatewaysRequest $req) 查询某个网关绑定的API 分组信息列表
  * @method Models\DescribeGroupInstancesResponse DescribeGroupInstances(Models\DescribeGroupInstancesRequest $req) 查询虚拟机部署组云主机列表

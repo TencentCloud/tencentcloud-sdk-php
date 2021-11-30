@@ -74,6 +74,7 @@ use TencentCloud\Clb\V20180317\Models as Models;
  * @method Models\DescribeLBListenersResponse DescribeLBListeners(Models\DescribeLBListenersRequest $req) 查询后端云主机或弹性网卡绑定的负载均衡，支持弹性网卡和cvm查询。
  * @method Models\DescribeListenersResponse DescribeListeners(Models\DescribeListenersRequest $req) DescribeListeners 接口可根据负载均衡器 ID、监听器的协议或端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回该负载均衡实例下的所有监听器。
  * @method Models\DescribeLoadBalancerListByCertIdResponse DescribeLoadBalancerListByCertId(Models\DescribeLoadBalancerListByCertIdRequest $req) 根据证书ID查询其在一个地域中所关联到负载均衡实例列表
+ * @method Models\DescribeLoadBalancerOverviewResponse DescribeLoadBalancerOverview(Models\DescribeLoadBalancerOverviewRequest $req) 查询运行中、隔离中、即将到期和负载均衡总数。
  * @method Models\DescribeLoadBalancerTrafficResponse DescribeLoadBalancerTraffic(Models\DescribeLoadBalancerTrafficRequest $req) 查询账号下的高流量负载均衡，返回前10个负载均衡。如果是子账号登录，只返回子账号有权限的负载均衡。
  * @method Models\DescribeLoadBalancersResponse DescribeLoadBalancers(Models\DescribeLoadBalancersRequest $req) 查询一个地域的负载均衡实例列表。
 

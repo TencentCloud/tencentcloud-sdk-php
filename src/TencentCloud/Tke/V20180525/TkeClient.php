@@ -99,6 +99,8 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DisableVpcCniNetworkTypeResponse DisableVpcCniNetworkType(Models\DisableVpcCniNetworkTypeRequest $req) 提供给附加了VPC-CNI能力的Global-Route集群关闭VPC-CNI
  * @method Models\EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(Models\EnableClusterDeletionProtectionRequest $req) 启用集群删除保护
  * @method Models\EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(Models\EnableVpcCniNetworkTypeRequest $req) GR集群可以通过本接口附加vpc-cni容器网络插件，开启vpc-cni容器网络能力
+ * @method Models\ForwardApplicationRequestV3Response ForwardApplicationRequestV3(Models\ForwardApplicationRequestV3Request $req) 操作TKE集群的addon
+ * @method Models\GetTkeAppChartListResponse GetTkeAppChartList(Models\GetTkeAppChartListRequest $req) 获取TKE支持的App列表
  * @method Models\GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(Models\GetUpgradeInstanceProgressRequest $req) 获得节点升级当前的进度 
  * @method Models\ModifyClusterAsGroupAttributeResponse ModifyClusterAsGroupAttribute(Models\ModifyClusterAsGroupAttributeRequest $req) 修改集群伸缩组属性
  * @method Models\ModifyClusterAsGroupOptionAttributeResponse ModifyClusterAsGroupOptionAttribute(Models\ModifyClusterAsGroupOptionAttributeRequest $req) 修改集群弹性伸缩属性

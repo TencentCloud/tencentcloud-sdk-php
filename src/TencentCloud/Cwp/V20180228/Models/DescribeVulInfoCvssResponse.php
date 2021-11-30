@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulLevel(integer $VulLevel) 设置危害等级：1-低危；2-中危；3-高危；4-严重
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVulType() 获取漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
+ * @method integer getVulType() 获取漏洞分类 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVulType(integer $VulType) 设置漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
+ * @method void setVulType(integer $VulType) 设置漏洞分类 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取漏洞描述信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,7 +100,7 @@ class DescribeVulInfoCvssResponse extends AbstractModel
     public $VulLevel;
 
     /**
-     * @var integer 漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
+     * @var integer 漏洞分类 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulType;
@@ -177,7 +177,7 @@ class DescribeVulInfoCvssResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulLevel 危害等级：1-低危；2-中危；3-高危；4-严重
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VulType 漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
+     * @param integer $VulType 漏洞分类 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 漏洞描述信息
 注意：此字段可能返回 null，表示取不到有效值。

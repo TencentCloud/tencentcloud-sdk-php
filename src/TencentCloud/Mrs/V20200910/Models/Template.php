@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrescription(Prescription $Prescription) 设置处方单
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method VaccineCertificate getVaccineCertificate() 获取免疫接种证明
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVaccineCertificate(VaccineCertificate $VaccineCertificate) 设置免疫接种证明
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
@@ -174,6 +178,12 @@ class Template extends AbstractModel
     public $Prescription;
 
     /**
+     * @var VaccineCertificate 免疫接种证明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VaccineCertificate;
+
+    /**
      * @param PatientInfo $PatientInfo 患者信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportInfo $ReportInfo 报告信息
@@ -203,6 +213,8 @@ class Template extends AbstractModel
      * @param Endoscopy $Endoscopy 内窥镜报告
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Prescription $Prescription 处方单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VaccineCertificate $VaccineCertificate 免疫接种证明
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -290,6 +302,11 @@ class Template extends AbstractModel
         if (array_key_exists("Prescription",$param) and $param["Prescription"] !== null) {
             $this->Prescription = new Prescription();
             $this->Prescription->deserialize($param["Prescription"]);
+        }
+
+        if (array_key_exists("VaccineCertificate",$param) and $param["VaccineCertificate"] !== null) {
+            $this->VaccineCertificate = new VaccineCertificate();
+            $this->VaccineCertificate->deserialize($param["VaccineCertificate"]);
         }
     }
 }

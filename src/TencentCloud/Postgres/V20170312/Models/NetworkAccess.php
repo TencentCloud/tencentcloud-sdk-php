@@ -18,31 +18,31 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 网络类型信息，用于实例查询接口和RO组查询接口的返回。
+ * 网络相关信息。
  *
- * @method string getResourceId() 获取网络资源id，实例id或RO组id
+ * @method string getResourceId() 获取网络资源id，实例id或RO组id(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceId(string $ResourceId) 设置网络资源id，实例id或RO组id
+ * @method void setResourceId(string $ResourceId) 设置网络资源id，实例id或RO组id(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResourceType() 获取资源类型，1-实例 2-RO组
+ * @method integer getResourceType() 获取资源类型，1-实例 2-RO组(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceType(integer $ResourceType) 设置资源类型，1-实例 2-RO组
+ * @method void setResourceType(integer $ResourceType) 设置资源类型，1-实例 2-RO组(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVip() 获取IP地址
+ * @method string getVip() 获取IPV4地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVip(string $Vip) 设置IP地址
+ * @method void setVip(string $Vip) 设置IPV4地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVip6() 获取ipv6的IP地址
+ * @method string getVip6() 获取IPV6地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVip6(string $Vip6) 设置ipv6的IP地址
+ * @method void setVip6(string $Vip6) 设置IPV6地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVport() 获取连接Port地址
+ * @method integer getVport() 获取访问端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVport(integer $Vport) 设置连接Port地址
+ * @method void setVport(integer $Vport) 设置访问端口
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,13 +56,13 @@ use TencentCloud\Common\AbstractModel;
 class NetworkAccess extends AbstractModel
 {
     /**
-     * @var string 网络资源id，实例id或RO组id
+     * @var string 网络资源id，实例id或RO组id(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
-     * @var integer 资源类型，1-实例 2-RO组
+     * @var integer 资源类型，1-实例 2-RO组(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
@@ -74,19 +74,19 @@ class NetworkAccess extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string IP地址
+     * @var string IPV4地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip;
 
     /**
-     * @var string ipv6的IP地址
+     * @var string IPV6地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip6;
 
     /**
-     * @var integer 连接Port地址
+     * @var integer 访问端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vport;
@@ -104,17 +104,17 @@ class NetworkAccess extends AbstractModel
     public $VpcStatus;
 
     /**
-     * @param string $ResourceId 网络资源id，实例id或RO组id
+     * @param string $ResourceId 网络资源id，实例id或RO组id(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ResourceType 资源类型，1-实例 2-RO组
+     * @param integer $ResourceType 资源类型，1-实例 2-RO组(此字段已废弃)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Vip IP地址
+     * @param string $Vip IPV4地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Vip6 ipv6的IP地址
+     * @param string $Vip6 IPV6地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Vport 连接Port地址
+     * @param integer $Vport 访问端口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID
 注意：此字段可能返回 null，表示取不到有效值。

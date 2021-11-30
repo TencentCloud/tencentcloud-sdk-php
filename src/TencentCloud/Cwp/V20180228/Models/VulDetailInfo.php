@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置漏洞名称
  * @method string getCveId() 获取cve编号
  * @method void setCveId(string $CveId) 设置cve编号
- * @method integer getVulCategory() 获取漏洞分类
- * @method void setVulCategory(integer $VulCategory) 设置漏洞分类
+ * @method integer getVulCategory() 获取1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 0= 应急漏洞
+ * @method void setVulCategory(integer $VulCategory) 设置1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 0= 应急漏洞
  * @method string getDescript() 获取漏洞描述
  * @method void setDescript(string $Descript) 设置漏洞描述
  * @method string getFix() 获取修复建议
@@ -66,7 +66,7 @@ class VulDetailInfo extends AbstractModel
     public $CveId;
 
     /**
-     * @var integer 漏洞分类
+     * @var integer 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 0= 应急漏洞
      */
     public $VulCategory;
 
@@ -105,7 +105,7 @@ class VulDetailInfo extends AbstractModel
      * @param integer $Level 漏洞级别
      * @param string $Name 漏洞名称
      * @param string $CveId cve编号
-     * @param integer $VulCategory 漏洞分类
+     * @param integer $VulCategory 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 0= 应急漏洞
      * @param string $Descript 漏洞描述
      * @param string $Fix 修复建议
      * @param string $Reference 参考链接

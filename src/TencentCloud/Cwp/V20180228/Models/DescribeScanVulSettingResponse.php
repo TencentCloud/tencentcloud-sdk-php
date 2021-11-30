@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScanVulSetting返回参数结构体
  *
- * @method string getVulCategories() 获取漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文逗号分隔)
- * @method void setVulCategories(string $VulCategories) 设置漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文逗号分隔)
+ * @method string getVulCategories() 获取漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+ * @method void setVulCategories(string $VulCategories) 设置漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
  * @method string getVulLevels() 获取危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文逗号分隔)
  * @method void setVulLevels(string $VulLevels) 设置危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文逗号分隔)
  * @method integer getTimerInterval() 获取定期检测间隔时间（天）
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScanVulSettingResponse extends AbstractModel
 {
     /**
-     * @var string 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文逗号分隔)
+     * @var string 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      */
     public $VulCategories;
 
@@ -94,7 +94,7 @@ class DescribeScanVulSettingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $VulCategories 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文逗号分隔)
+     * @param string $VulCategories 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      * @param string $VulLevels 危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文逗号分隔)
      * @param integer $TimerInterval 定期检测间隔时间（天）
      * @param string $TimerTime 定期检测时间，如：00:00

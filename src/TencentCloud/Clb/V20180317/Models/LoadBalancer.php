@@ -218,6 +218,14 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthLogTopicId(string $HealthLogTopicId) 设置负载均衡日志服务(CLS)的健康检查日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClusterIds() 获取集群ID.
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterIds(array $ClusterIds) 设置集群ID.
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAttributeFlags() 获取负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttributeFlags(array $AttributeFlags) 设置负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -525,6 +533,18 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $HealthLogTopicId;
 
     /**
+     * @var array 集群ID.
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterIds;
+
+    /**
+     * @var array 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttributeFlags;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
@@ -623,6 +643,10 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $HealthLogSetId 负载均衡日志服务(CLS)的健康检查日志集ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HealthLogTopicId 负载均衡日志服务(CLS)的健康检查日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClusterIds 集群ID.
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AttributeFlags 负载均衡的属性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -861,6 +885,14 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("HealthLogTopicId",$param) and $param["HealthLogTopicId"] !== null) {
             $this->HealthLogTopicId = $param["HealthLogTopicId"];
+        }
+
+        if (array_key_exists("ClusterIds",$param) and $param["ClusterIds"] !== null) {
+            $this->ClusterIds = $param["ClusterIds"];
+        }
+
+        if (array_key_exists("AttributeFlags",$param) and $param["AttributeFlags"] !== null) {
+            $this->AttributeFlags = $param["AttributeFlags"];
         }
     }
 }

@@ -23,10 +23,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Privatedns\V20201028\Models as Models;
 
 /**
+ * @method Models\CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(Models\CreatePrivateDNSAccountRequest $req) 创建私有域解析账号
  * @method Models\CreatePrivateZoneResponse CreatePrivateZone(Models\CreatePrivateZoneRequest $req) 创建私有域
  * @method Models\CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(Models\CreatePrivateZoneRecordRequest $req) 添加私有域解析记录
+ * @method Models\DeletePrivateDNSAccountResponse DeletePrivateDNSAccount(Models\DeletePrivateDNSAccountRequest $req) 删除私有域解析账号
  * @method Models\DeletePrivateZoneResponse DeletePrivateZone(Models\DeletePrivateZoneRequest $req) 删除私有域并停止解析
  * @method Models\DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(Models\DeletePrivateZoneRecordRequest $req) 删除私有域解析记录
+ * @method Models\DescribeAccountVpcListResponse DescribeAccountVpcList(Models\DescribeAccountVpcListRequest $req) 获取私有域解析账号的VPC列表
  * @method Models\DescribeAuditLogResponse DescribeAuditLog(Models\DescribeAuditLogRequest $req) 获取操作日志列表
  * @method Models\DescribeDashboardResponse DescribeDashboard(Models\DescribeDashboardRequest $req) 获取私有域解析概览
  * @method Models\DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(Models\DescribePrivateDNSAccountListRequest $req) 获取私有域解析账号列表

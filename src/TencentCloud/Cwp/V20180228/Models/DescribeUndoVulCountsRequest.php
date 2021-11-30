@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUndoVulCounts请求参数结构体
  *
- * @method integer getVulCategory() 获取漏洞分类，最小值为1，最大值为5
- * @method void setVulCategory(integer $VulCategory) 设置漏洞分类，最小值为1，最大值为5
+ * @method integer getVulCategory() 获取漏洞分类，1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+ * @method void setVulCategory(integer $VulCategory) 设置漏洞分类，1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
  * @method string getIfEmergency() 获取是否应急漏洞筛选, 是 : yes
  * @method void setIfEmergency(string $IfEmergency) 设置是否应急漏洞筛选, 是 : yes
  */
 class DescribeUndoVulCountsRequest extends AbstractModel
 {
     /**
-     * @var integer 漏洞分类，最小值为1，最大值为5
+     * @var integer 漏洞分类，1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      */
     public $VulCategory;
 
@@ -38,7 +38,7 @@ class DescribeUndoVulCountsRequest extends AbstractModel
     public $IfEmergency;
 
     /**
-     * @param integer $VulCategory 漏洞分类，最小值为1，最大值为5
+     * @param integer $VulCategory 漏洞分类，1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
      * @param string $IfEmergency 是否应急漏洞筛选, 是 : yes
      */
     function __construct()

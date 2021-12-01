@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Ivld\V20210903\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 价格信息
+ * DescribeTaskDetail请求参数结构体
  *
- * @method InstancePrice getInstancePrice() 获取实例价格。
- * @method void setInstancePrice(InstancePrice $InstancePrice) 设置实例价格。
+ * @method string getTaskId() 获取创建任务返回的TaskId
+ * @method void setTaskId(string $TaskId) 设置创建任务返回的TaskId
  */
-class Price extends AbstractModel
+class DescribeTaskDetailRequest extends AbstractModel
 {
     /**
-     * @var InstancePrice 实例价格。
+     * @var string 创建任务返回的TaskId
      */
-    public $InstancePrice;
+    public $TaskId;
 
     /**
-     * @param InstancePrice $InstancePrice 实例价格。
+     * @param string $TaskId 创建任务返回的TaskId
      */
     function __construct()
     {
@@ -46,9 +46,8 @@ class Price extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstancePrice",$param) and $param["InstancePrice"] !== null) {
-            $this->InstancePrice = new InstancePrice();
-            $this->InstancePrice->deserialize($param["InstancePrice"]);
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

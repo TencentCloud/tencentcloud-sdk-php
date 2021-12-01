@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Apm\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 价格信息
+ * 维度（标签）对象
  *
- * @method InstancePrice getInstancePrice() 获取实例价格。
- * @method void setInstancePrice(InstancePrice $InstancePrice) 设置实例价格。
+ * @method string getKey() 获取维度Key(列名，标签Key)
+ * @method void setKey(string $Key) 设置维度Key(列名，标签Key)
+ * @method string getValue() 获取维度值（标签值）
+ * @method void setValue(string $Value) 设置维度值（标签值）
  */
-class Price extends AbstractModel
+class ApmTag extends AbstractModel
 {
     /**
-     * @var InstancePrice 实例价格。
+     * @var string 维度Key(列名，标签Key)
      */
-    public $InstancePrice;
+    public $Key;
 
     /**
-     * @param InstancePrice $InstancePrice 实例价格。
+     * @var string 维度值（标签值）
+     */
+    public $Value;
+
+    /**
+     * @param string $Key 维度Key(列名，标签Key)
+     * @param string $Value 维度值（标签值）
      */
     function __construct()
     {
@@ -46,9 +54,12 @@ class Price extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstancePrice",$param) and $param["InstancePrice"] !== null) {
-            $this->InstancePrice = new InstancePrice();
-            $this->InstancePrice->deserialize($param["InstancePrice"]);
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

@@ -131,7 +131,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
  * @method Models\UnReleaseServiceResponse UnReleaseService(Models\UnReleaseServiceRequest $req) 本接口（UnReleaseService）用于下线服务。
 用户发布服务到某个环境后，此服务中的 API 方可被调用者进行调用，当用户需要将此服务从发布环境中下线时，可调用此 API。下线后的服务不可被调用。
  * @method Models\UnbindApiAppResponse UnbindApiApp(Models\UnbindApiAppRequest $req) 本接口（UnbindApiApp）用于解除应用和API绑定。
- * @method Models\UpdateApiAppKeyResponse UpdateApiAppKey(Models\UpdateApiAppKeyRequest $req) 本接口（UpdateApiAppKey）用于更新应用秘钥。
+ * @method Models\UpdateApiAppKeyResponse UpdateApiAppKey(Models\UpdateApiAppKeyRequest $req) 本接口（UpdateApiAppKey）用于更新应用密钥。
  * @method Models\UpdateApiKeyResponse UpdateApiKey(Models\UpdateApiKeyRequest $req) 本接口（UpdateApiKey）用于更换用户已创建的一对 API 密钥。
  * @method Models\UpdateServiceResponse UpdateService(Models\UpdateServiceRequest $req) 本接口（UpdateService）用于从服务发布的环境中运行版本切换到特定版本。用户在使用 API 网关创建服务并发布服务到某个环境后，多因为开发过程会产生多个版本，此时可调用本接口。
  */

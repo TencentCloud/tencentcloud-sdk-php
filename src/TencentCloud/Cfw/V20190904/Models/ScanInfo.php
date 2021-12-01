@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method ScanResultInfo getScanResultInfo() 获取扫描结果信息
  * @method void setScanResultInfo(ScanResultInfo $ScanResultInfo) 设置扫描结果信息
- * @method integer getScanStatus() 获取扫描状态 0扫描中 1完成   2没赠送过扫描显示开启界面
- * @method void setScanStatus(integer $ScanStatus) 设置扫描状态 0扫描中 1完成   2没赠送过扫描显示开启界面
+ * @method integer getScanStatus() 获取扫描状态 0扫描中 1完成  2未勾选自动扫描
+ * @method void setScanStatus(integer $ScanStatus) 设置扫描状态 0扫描中 1完成  2未勾选自动扫描
  * @method float getScanPercent() 获取进度
  * @method void setScanPercent(float $ScanPercent) 设置进度
  * @method string getScanTime() 获取预计完成时间
@@ -37,7 +37,7 @@ class ScanInfo extends AbstractModel
     public $ScanResultInfo;
 
     /**
-     * @var integer 扫描状态 0扫描中 1完成   2没赠送过扫描显示开启界面
+     * @var integer 扫描状态 0扫描中 1完成  2未勾选自动扫描
      */
     public $ScanStatus;
 
@@ -53,7 +53,7 @@ class ScanInfo extends AbstractModel
 
     /**
      * @param ScanResultInfo $ScanResultInfo 扫描结果信息
-     * @param integer $ScanStatus 扫描状态 0扫描中 1完成   2没赠送过扫描显示开启界面
+     * @param integer $ScanStatus 扫描状态 0扫描中 1完成  2未勾选自动扫描
      * @param float $ScanPercent 进度
      * @param string $ScanTime 预计完成时间
      */

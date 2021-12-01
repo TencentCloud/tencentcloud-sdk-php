@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Ivld\V20210903\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 价格信息
+ * 排序条件
  *
- * @method InstancePrice getInstancePrice() 获取实例价格。
- * @method void setInstancePrice(InstancePrice $InstancePrice) 设置实例价格。
+ * @method string getBy() 获取排序字段，默认为CreateTime
+ * @method void setBy(string $By) 设置排序字段，默认为CreateTime
+ * @method boolean getDescend() 获取true表示降序，false表示升序
+ * @method void setDescend(boolean $Descend) 设置true表示降序，false表示升序
  */
-class Price extends AbstractModel
+class SortBy extends AbstractModel
 {
     /**
-     * @var InstancePrice 实例价格。
+     * @var string 排序字段，默认为CreateTime
      */
-    public $InstancePrice;
+    public $By;
 
     /**
-     * @param InstancePrice $InstancePrice 实例价格。
+     * @var boolean true表示降序，false表示升序
+     */
+    public $Descend;
+
+    /**
+     * @param string $By 排序字段，默认为CreateTime
+     * @param boolean $Descend true表示降序，false表示升序
      */
     function __construct()
     {
@@ -46,9 +54,12 @@ class Price extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstancePrice",$param) and $param["InstancePrice"] !== null) {
-            $this->InstancePrice = new InstancePrice();
-            $this->InstancePrice->deserialize($param["InstancePrice"]);
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
+        }
+
+        if (array_key_exists("Descend",$param) and $param["Descend"] !== null) {
+            $this->Descend = $param["Descend"];
         }
     }
 }

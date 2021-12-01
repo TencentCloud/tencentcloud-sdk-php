@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Ivld\V20210903\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 价格信息
+ * 任务结果数据
  *
- * @method InstancePrice getInstancePrice() 获取实例价格。
- * @method void setInstancePrice(InstancePrice $InstancePrice) 设置实例价格。
+ * @method ShowInfo getShowInfo() 获取节目粒度结构化结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShowInfo(ShowInfo $ShowInfo) 设置节目粒度结构化结果
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class Price extends AbstractModel
+class Data extends AbstractModel
 {
     /**
-     * @var InstancePrice 实例价格。
+     * @var ShowInfo 节目粒度结构化结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $InstancePrice;
+    public $ShowInfo;
 
     /**
-     * @param InstancePrice $InstancePrice 实例价格。
+     * @param ShowInfo $ShowInfo 节目粒度结构化结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,9 +50,9 @@ class Price extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstancePrice",$param) and $param["InstancePrice"] !== null) {
-            $this->InstancePrice = new InstancePrice();
-            $this->InstancePrice->deserialize($param["InstancePrice"]);
+        if (array_key_exists("ShowInfo",$param) and $param["ShowInfo"] !== null) {
+            $this->ShowInfo = new ShowInfo();
+            $this->ShowInfo->deserialize($param["ShowInfo"]);
         }
     }
 }

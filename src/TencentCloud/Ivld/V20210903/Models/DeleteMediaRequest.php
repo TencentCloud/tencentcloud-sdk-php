@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Ivld\V20210903\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 价格信息
+ * DeleteMedia请求参数结构体
  *
- * @method InstancePrice getInstancePrice() 获取实例价格。
- * @method void setInstancePrice(InstancePrice $InstancePrice) 设置实例价格。
+ * @method string getMediaId() 获取媒资文件在系统中的ID
+ * @method void setMediaId(string $MediaId) 设置媒资文件在系统中的ID
  */
-class Price extends AbstractModel
+class DeleteMediaRequest extends AbstractModel
 {
     /**
-     * @var InstancePrice 实例价格。
+     * @var string 媒资文件在系统中的ID
      */
-    public $InstancePrice;
+    public $MediaId;
 
     /**
-     * @param InstancePrice $InstancePrice 实例价格。
+     * @param string $MediaId 媒资文件在系统中的ID
      */
     function __construct()
     {
@@ -46,9 +46,8 @@ class Price extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstancePrice",$param) and $param["InstancePrice"] !== null) {
-            $this->InstancePrice = new InstancePrice();
-            $this->InstancePrice->deserialize($param["InstancePrice"]);
+        if (array_key_exists("MediaId",$param) and $param["MediaId"] !== null) {
+            $this->MediaId = $param["MediaId"];
         }
     }
 }

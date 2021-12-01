@@ -24,6 +24,7 @@ use TencentCloud\Apm\V20210622\Models as Models;
 
 /**
  * @method Models\DescribeApmAgentResponse DescribeApmAgent(Models\DescribeApmAgentRequest $req) 获取Apm Agent信息
+ * @method Models\DescribeApmInstancesResponse DescribeApmInstances(Models\DescribeApmInstancesRequest $req) APM实例列表拉取
  */
 
 class ApmClient extends AbstractClient

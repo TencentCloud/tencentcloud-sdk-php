@@ -18,12 +18,12 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 直播推流信息，包括推流地址有效时长，云剪后端生成直播推流地址。
+ * 直播推流信息，包括推流地址有效时长，多媒体创作引擎后端生成直播推流地址。
  *
  * @method integer getExpiredSecond() 获取直播推流地址有效期，单位：秒 。
  * @method void setExpiredSecond(integer $ExpiredSecond) 设置直播推流地址有效期，单位：秒 。
- * @method string getPushUrl() 获取直播推流地址，入参不填默认由云剪生成。
- * @method void setPushUrl(string $PushUrl) 设置直播推流地址，入参不填默认由云剪生成。
+ * @method string getPushUrl() 获取直播推流地址，入参不填默认由多媒体创作引擎生成。
+ * @method void setPushUrl(string $PushUrl) 设置直播推流地址，入参不填默认由多媒体创作引擎生成。
  */
 class RtmpPushInputInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RtmpPushInputInfo extends AbstractModel
     public $ExpiredSecond;
 
     /**
-     * @var string 直播推流地址，入参不填默认由云剪生成。
+     * @var string 直播推流地址，入参不填默认由多媒体创作引擎生成。
      */
     public $PushUrl;
 
     /**
      * @param integer $ExpiredSecond 直播推流地址有效期，单位：秒 。
-     * @param string $PushUrl 直播推流地址，入参不填默认由云剪生成。
+     * @param string $PushUrl 直播推流地址，入参不填默认由多媒体创作引擎生成。
      */
     function __construct()
     {

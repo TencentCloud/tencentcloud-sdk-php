@@ -50,6 +50,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\GetFunctionLogsResponse GetFunctionLogs(Models\GetFunctionLogsRequest $req) 该接口根据指定的日志查询条件返回函数运行日志。
  * @method Models\GetLayerVersionResponse GetLayerVersion(Models\GetLayerVersionRequest $req) 获取层版本详细信息，包括用于下载层中文件的链接。
  * @method Models\GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(Models\GetProvisionedConcurrencyConfigRequest $req) 获取函数或函数某一版本的预置并发详情。
+ * @method Models\GetRequestStatusResponse GetRequestStatus(Models\GetRequestStatusRequest $req) 该接口根据指定的查询条件返回函数单个请求运行状态。
  * @method Models\GetReservedConcurrencyConfigResponse GetReservedConcurrencyConfig(Models\GetReservedConcurrencyConfigRequest $req) 获取函数的最大独占配额详情。
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 该接口用于运行函数。
  * @method Models\InvokeFunctionResponse InvokeFunction(Models\InvokeFunctionRequest $req)  SCF同步调用函数接口

@@ -78,6 +78,16 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
  * @method void setUsername(string $Username) 设置在 CVM 或 Lighthouse 实例中执行命令的用户名称。
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+ * @method string getOutputCOSBucketUrl() 获取指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+ * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) 设置指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+ * @method string getOutputCOSKeyPrefix() 获取指定日志在cos bucket中的目录，目录命名有如下规则：
+1. 可用数字、中英文和可见字符的组合，长度最多为60。
+2. 用 / 分割路径，可快速创建子目录。
+3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+ * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) 设置指定日志在cos bucket中的目录，目录命名有如下规则：
+1. 可用数字、中英文和可见字符的组合，长度最多为60。
+2. 用 / 分割路径，可快速创建子目录。
+3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
  */
 class RunCommandRequest extends AbstractModel
 {
@@ -163,6 +173,19 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     public $Username;
 
     /**
+     * @var string 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+     */
+    public $OutputCOSBucketUrl;
+
+    /**
+     * @var string 指定日志在cos bucket中的目录，目录命名有如下规则：
+1. 可用数字、中英文和可见字符的组合，长度最多为60。
+2. 用 / 分割路径，可快速创建子目录。
+3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+     */
+    public $OutputCOSKeyPrefix;
+
+    /**
      * @param string $Content Base64编码后的命令内容，长度不可超过64KB。
      * @param array $InstanceIds 待执行命令的实例ID列表，上限100。支持实例类型：
 <li> CVM
@@ -192,6 +215,11 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
      * @param array $Tags 如果保存命令，可为命令设置标签。列表长度不超过10。
      * @param string $Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+     * @param string $OutputCOSBucketUrl 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+     * @param string $OutputCOSKeyPrefix 指定日志在cos bucket中的目录，目录命名有如下规则：
+1. 可用数字、中英文和可见字符的组合，长度最多为60。
+2. 用 / 分割路径，可快速创建子目录。
+3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
      */
     function __construct()
     {
@@ -261,6 +289,14 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
         if (array_key_exists("Username",$param) and $param["Username"] !== null) {
             $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("OutputCOSBucketUrl",$param) and $param["OutputCOSBucketUrl"] !== null) {
+            $this->OutputCOSBucketUrl = $param["OutputCOSBucketUrl"];
+        }
+
+        if (array_key_exists("OutputCOSKeyPrefix",$param) and $param["OutputCOSKeyPrefix"] !== null) {
+            $this->OutputCOSKeyPrefix = $param["OutputCOSKeyPrefix"];
         }
     }
 }

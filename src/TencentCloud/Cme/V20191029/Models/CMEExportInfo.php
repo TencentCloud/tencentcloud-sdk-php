@@ -18,7 +18,7 @@ namespace TencentCloud\Cme\V20191029\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 云剪导出信息。
+ * 多媒体创作引擎导出信息。
  *
  * @method Entity getOwner() 获取导出媒体归属，个人或团队。
  * @method void setOwner(Entity $Owner) 设置导出媒体归属，个人或团队。

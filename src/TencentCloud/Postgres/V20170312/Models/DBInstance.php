@@ -98,9 +98,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBKernelVersion(string $DBKernelVersion) 设置数据库内核版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNetworkAccessList() 获取实例网络信息列表
+ * @method array getNetworkAccessList() 获取实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetworkAccessList(array $NetworkAccessList) 设置实例网络信息列表
+ * @method void setNetworkAccessList(array $NetworkAccessList) 设置实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
@@ -277,7 +277,7 @@ class DBInstance extends AbstractModel
     public $DBKernelVersion;
 
     /**
-     * @var array 实例网络信息列表
+     * @var array 实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkAccessList;
@@ -322,7 +322,7 @@ class DBInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBKernelVersion 数据库内核版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NetworkAccessList 实例网络信息列表
+     * @param array $NetworkAccessList 实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

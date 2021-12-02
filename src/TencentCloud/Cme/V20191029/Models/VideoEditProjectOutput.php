@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 项目导出信息。
  *
- * @method string getMaterialId() 获取导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
- * @method void setMaterialId(string $MaterialId) 设置导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+ * @method string getMaterialId() 获取导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
+ * @method void setMaterialId(string $MaterialId) 设置导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
  * @method string getVodFileId() 获取云点播媒资 FileId。
  * @method void setVodFileId(string $VodFileId) 设置云点播媒资 FileId。
  * @method string getURL() 获取导出的媒资 URL。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class VideoEditProjectOutput extends AbstractModel
 {
     /**
-     * @var string 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+     * @var string 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
      */
     public $MaterialId;
 
@@ -55,7 +55,7 @@ class VideoEditProjectOutput extends AbstractModel
     public $MetaData;
 
     /**
-     * @param string $MaterialId 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+     * @param string $MaterialId 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
      * @param string $VodFileId 云点播媒资 FileId。
      * @param string $URL 导出的媒资 URL。
      * @param MediaMetaData $MetaData 元信息。

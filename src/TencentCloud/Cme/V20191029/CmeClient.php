@@ -27,7 +27,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\CopyProjectResponse CopyProject(Models\CopyProjectRequest $req) 复制一个项目，包括项目素材及轨道数据。目前仅普通剪辑及模板制作项目可复制，其它类型的项目不支持复制。
  * @method Models\CreateClassResponse CreateClass(Models\CreateClassRequest $req) 新增分类，用于管理素材。分类层数不能超过20。
  * @method Models\CreateLinkResponse CreateLink(Models\CreateLinkRequest $req)  创建媒体链接或分类路径链接，将源资源信息链接到目标。
- * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建云剪项目，目前支持的项目类型有：
+ * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建多媒体创作引擎项目，目前支持的项目类型有：
 <li>视频剪辑项目：用于普通视频剪辑；</li>
 <li>直播剪辑项目：用于直播流剪辑；</li>
 <li>导播台项目：用于云导播台；</li>
@@ -39,7 +39,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
  * @method Models\DeleteClassResponse DeleteClass(Models\DeleteClassRequest $req) 删除分类信息，删除时检验下述限制：
 <li>分类路径必须存在；</li>
 <li>分类下没有绑定素材。</li>
- * @method Models\DeleteLoginStatusResponse DeleteLoginStatus(Models\DeleteLoginStatusRequest $req) 删除用户登录态，使用户登出云剪平台。
+ * @method Models\DeleteLoginStatusResponse DeleteLoginStatus(Models\DeleteLoginStatusRequest $req) 删除用户登录态，使用户登出多媒体创作引擎平台。
  * @method Models\DeleteMaterialResponse DeleteMaterial(Models\DeleteMaterialRequest $req) 根据媒体 Id 删除媒体。
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 删除项目。
  * @method Models\DeleteTeamResponse DeleteTeam(Models\DeleteTeamRequest $req) 删除一个团队。要删除团队，必须满足以下条件：
@@ -92,7 +92,7 @@ use TencentCloud\Cme\V20191029\Models as Models;
 - `Stop`（停止转推），参见 [示例11](#.E7.A4.BA.E4.BE.8B11-.E5.81.9C.E6.AD.A2.E4.BA.91.E8.BD.AC.E6.8E.A8)；
 - `SwitchInput`（切换输入源），参见 [示例12](#.E7.A4.BA.E4.BE.8B12-.E5.88.87.E6.8D.A2.E8.BE.93.E5.85.A5.E6.BA.90)；
 - `ModifyCurrentStopTime`（修改当前计划结束时间），参见 [示例13](#.E7.A4.BA.E4.BE.8B13-.E4.BF.AE.E6.94.B9.E8.BD.AC.E6.8E.A8.E7.BB.93.E6.9D.9F.E6.97.B6.E9.97.B4)。
- * @method Models\ImportMaterialResponse ImportMaterial(Models\ImportMaterialRequest $req) 将云点播媒资文件导入到云剪媒体资源库。支持导入媒体归属团队或者个人。
+ * @method Models\ImportMaterialResponse ImportMaterial(Models\ImportMaterialRequest $req) 将云点播媒资文件导入到多媒体创作引擎媒体资源库。支持导入媒体归属团队或者个人。
  * @method Models\ImportMediaToProjectResponse ImportMediaToProject(Models\ImportMediaToProjectRequest $req) 将云点播中的媒资或者用户自有媒资文件添加到项目中与项目关联，供后续视频编辑使用。目前仅视频编辑项目和智能视频拆条项目有效。
  * @method Models\ListMediaResponse ListMedia(Models\ListMediaRequest $req)  浏览当前分类路径下的资源，包括媒体文件和子分类，返回媒资基础信息和分类信息。
  * @method Models\ModifyMaterialResponse ModifyMaterial(Models\ModifyMaterialRequest $req) 修改媒体信息，支持修改媒体名称、分类路径、标签等信息。

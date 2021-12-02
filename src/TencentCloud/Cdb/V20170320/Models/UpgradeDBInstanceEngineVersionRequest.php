@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWaitSwitch(integer $WaitSwitch) 设置切换访问新实例的方式，默认为 0。支持值包括：0 - 立刻切换，1 - 时间窗切换；当该值为 1 时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口 [切换访问新实例](https://cloud.tencent.com/document/product/236/15864) 触发该流程。
  * @method integer getUpgradeSubversion() 获取是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
  * @method void setUpgradeSubversion(integer $UpgradeSubversion) 设置是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+ * @method integer getMaxDelayTime() 获取延迟阈值。取值范围1~10
+ * @method void setMaxDelayTime(integer $MaxDelayTime) 设置延迟阈值。取值范围1~10
  */
 class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
     public $UpgradeSubversion;
 
     /**
+     * @var integer 延迟阈值。取值范围1~10
+     */
+    public $MaxDelayTime;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param string $EngineVersion 主实例数据库引擎版本，支持值包括：5.6 和 5.7。
      * @param integer $WaitSwitch 切换访问新实例的方式，默认为 0。支持值包括：0 - 立刻切换，1 - 时间窗切换；当该值为 1 时，升级中过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口 [切换访问新实例](https://cloud.tencent.com/document/product/236/15864) 触发该流程。
      * @param integer $UpgradeSubversion 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+     * @param integer $MaxDelayTime 延迟阈值。取值范围1~10
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
 
         if (array_key_exists("UpgradeSubversion",$param) and $param["UpgradeSubversion"] !== null) {
             $this->UpgradeSubversion = $param["UpgradeSubversion"];
+        }
+
+        if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
+            $this->MaxDelayTime = $param["MaxDelayTime"];
         }
     }
 }

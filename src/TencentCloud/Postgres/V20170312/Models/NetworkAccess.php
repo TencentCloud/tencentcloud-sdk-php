@@ -18,15 +18,15 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 网络相关信息。
+ * 网络相关信息。（该数据结构已废弃，网络相关信息使用DBInstanceNetInfo）
  *
- * @method string getResourceId() 获取网络资源id，实例id或RO组id(此字段已废弃)
+ * @method string getResourceId() 获取网络资源id，实例id或RO组id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceId(string $ResourceId) 设置网络资源id，实例id或RO组id(此字段已废弃)
+ * @method void setResourceId(string $ResourceId) 设置网络资源id，实例id或RO组id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getResourceType() 获取资源类型，1-实例 2-RO组(此字段已废弃)
+ * @method integer getResourceType() 获取资源类型，1-实例 2-RO组
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceType(integer $ResourceType) 设置资源类型，1-实例 2-RO组(此字段已废弃)
+ * @method void setResourceType(integer $ResourceType) 设置资源类型，1-实例 2-RO组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,13 +56,13 @@ use TencentCloud\Common\AbstractModel;
 class NetworkAccess extends AbstractModel
 {
     /**
-     * @var string 网络资源id，实例id或RO组id(此字段已废弃)
+     * @var string 网络资源id，实例id或RO组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
-     * @var integer 资源类型，1-实例 2-RO组(此字段已废弃)
+     * @var integer 资源类型，1-实例 2-RO组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
@@ -104,9 +104,9 @@ class NetworkAccess extends AbstractModel
     public $VpcStatus;
 
     /**
-     * @param string $ResourceId 网络资源id，实例id或RO组id(此字段已废弃)
+     * @param string $ResourceId 网络资源id，实例id或RO组id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ResourceType 资源类型，1-实例 2-RO组(此字段已废弃)
+     * @param integer $ResourceType 资源类型，1-实例 2-RO组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。

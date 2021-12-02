@@ -31,11 +31,11 @@ use TencentCloud\Common\AbstractModel;
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
  * @method string getExportDestination() 获取导出目标，指定导出视频的目标媒资库，可取值有：
-<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
-<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
+<li>CME：多媒体创建引擎，即导出到多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
  * @method void setExportDestination(string $ExportDestination) 设置导出目标，指定导出视频的目标媒资库，可取值有：
-<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
-<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
+<li>CME：多媒体创建引擎，即导出到多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
  * @method string getTrackData() 获取在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
  * @method void setTrackData(string $TrackData) 设置在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
  * @method string getAspectRatio() 获取轨道数据对应的画布宽高比，配合预设配置中的视频短边尺寸，可决定导出画面的尺寸。例：
@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 <li>如果 AspectRatio 取值 9:16，预设配置选为11（短边720），则导出尺寸为 720 *1280。</li>
  * @method string getCoverData() 获取视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
  * @method void setCoverData(string $CoverData) 设置视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
- * @method CMEExportInfo getCMEExportInfo() 获取导出的云剪媒体信息。当导出目标为 CME 时必填。
- * @method void setCMEExportInfo(CMEExportInfo $CMEExportInfo) 设置导出的云剪媒体信息。当导出目标为 CME 时必填。
+ * @method CMEExportInfo getCMEExportInfo() 获取导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
+ * @method void setCMEExportInfo(CMEExportInfo $CMEExportInfo) 设置导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
  * @method VODExportInfo getVODExportInfo() 获取导出的云点播媒资信息。当导出目标为 VOD 时必填。
  * @method void setVODExportInfo(VODExportInfo $VODExportInfo) 设置导出的云点播媒资信息。当导出目标为 VOD 时必填。
  * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使的媒资该操作者需要拥有使用权限。
@@ -70,8 +70,8 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
 
     /**
      * @var string 导出目标，指定导出视频的目标媒资库，可取值有：
-<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
-<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
+<li>CME：多媒体创建引擎，即导出到多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
      */
     public $ExportDestination;
 
@@ -93,7 +93,7 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
     public $CoverData;
 
     /**
-     * @var CMEExportInfo 导出的云剪媒体信息。当导出目标为 CME 时必填。
+     * @var CMEExportInfo 导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
      */
     public $CMEExportInfo;
 
@@ -114,14 +114,14 @@ class ExportVideoByEditorTrackDataRequest extends AbstractModel
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
      * @param string $ExportDestination 导出目标，指定导出视频的目标媒资库，可取值有：
-<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
-<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
+<li>CME：多媒体创建引擎，即导出到多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
      * @param string $TrackData 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
      * @param string $AspectRatio 轨道数据对应的画布宽高比，配合预设配置中的视频短边尺寸，可决定导出画面的尺寸。例：
 <li>如果 AspectRatio 取值 16:9，预设配置选为12（短边1080），则导出尺寸为 1920 * 1080；</li>
 <li>如果 AspectRatio 取值 9:16，预设配置选为11（短边720），则导出尺寸为 720 *1280。</li>
      * @param string $CoverData 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
-     * @param CMEExportInfo $CMEExportInfo 导出的云剪媒体信息。当导出目标为 CME 时必填。
+     * @param CMEExportInfo $CMEExportInfo 导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
      * @param VODExportInfo $VODExportInfo 导出的云点播媒资信息。当导出目标为 VOD 时必填。
      * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，轨道数据中使的媒资该操作者需要拥有使用权限。
      */

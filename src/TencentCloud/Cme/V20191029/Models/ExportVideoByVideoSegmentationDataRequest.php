@@ -37,13 +37,13 @@ use TencentCloud\Common\AbstractModel;
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
  * @method string getExportDestination() 获取导出目标，指定导出视频的目标媒资库，可取值有：
-<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
-<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
+<li>CME：多媒体创作引擎，即导出为多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
  * @method void setExportDestination(string $ExportDestination) 设置导出目标，指定导出视频的目标媒资库，可取值有：
-<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
-<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
- * @method CMEExportInfo getCMEExportInfo() 获取导出的云剪媒体信息。当导出目标为 CME 时必填。
- * @method void setCMEExportInfo(CMEExportInfo $CMEExportInfo) 设置导出的云剪媒体信息。当导出目标为 CME 时必填。
+<li>CME：多媒体创作引擎，即导出为多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
+ * @method CMEExportInfo getCMEExportInfo() 获取导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
+ * @method void setCMEExportInfo(CMEExportInfo $CMEExportInfo) 设置导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
  * @method VODExportInfo getVODExportInfo() 获取导出的云点播媒资信息。当导出目标为 VOD 时必填。
  * @method void setVODExportInfo(VODExportInfo $VODExportInfo) 设置导出的云点播媒资信息。当导出目标为 VOD 时必填。
  * @method string getOperator() 获取操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作任意智能拆条项目。如果指定操作者，则操作者必须为项目所有。
@@ -81,13 +81,13 @@ class ExportVideoByVideoSegmentationDataRequest extends AbstractModel
 
     /**
      * @var string 导出目标，指定导出视频的目标媒资库，可取值有：
-<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
-<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
+<li>CME：多媒体创作引擎，即导出为多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
      */
     public $ExportDestination;
 
     /**
-     * @var CMEExportInfo 导出的云剪媒体信息。当导出目标为 CME 时必填。
+     * @var CMEExportInfo 导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
      */
     public $CMEExportInfo;
 
@@ -111,9 +111,9 @@ class ExportVideoByVideoSegmentationDataRequest extends AbstractModel
 <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
 <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
      * @param string $ExportDestination 导出目标，指定导出视频的目标媒资库，可取值有：
-<li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
-<li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
-     * @param CMEExportInfo $CMEExportInfo 导出的云剪媒体信息。当导出目标为 CME 时必填。
+<li>CME：多媒体创作引擎，即导出为多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+<li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
+     * @param CMEExportInfo $CMEExportInfo 导出的多媒体创作引擎媒体信息。当导出目标为 CME 时必填。
      * @param VODExportInfo $VODExportInfo 导出的云点播媒资信息。当导出目标为 VOD 时必填。
      * @param string $Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作任意智能拆条项目。如果指定操作者，则操作者必须为项目所有。
      */

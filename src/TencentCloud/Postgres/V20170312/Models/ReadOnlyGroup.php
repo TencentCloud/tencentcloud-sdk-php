@@ -66,9 +66,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRebalance(integer $Rebalance) 设置自动负载均衡开关
  * @method array getDBInstanceNetInfo() 获取网络信息
  * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) 设置网络信息
- * @method array getNetworkAccessList() 获取只读组网络信息列表
+ * @method array getNetworkAccessList() 获取只读组网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetworkAccessList(array $NetworkAccessList) 设置只读组网络信息列表
+ * @method void setNetworkAccessList(array $NetworkAccessList) 设置只读组网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReadOnlyGroup extends AbstractModel
@@ -165,7 +165,7 @@ class ReadOnlyGroup extends AbstractModel
     public $DBInstanceNetInfo;
 
     /**
-     * @var array 只读组网络信息列表
+     * @var array 只读组网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkAccessList;
@@ -194,7 +194,7 @@ class ReadOnlyGroup extends AbstractModel
      * @param array $ReadOnlyDBInstanceList 实例详细信息
      * @param integer $Rebalance 自动负载均衡开关
      * @param array $DBInstanceNetInfo 网络信息
-     * @param array $NetworkAccessList 只读组网络信息列表
+     * @param array $NetworkAccessList 只读组网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

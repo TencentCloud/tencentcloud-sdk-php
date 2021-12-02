@@ -28,8 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置连接Port地址
  * @method string getNetType() 获取网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
  * @method void setNetType(string $NetType) 设置网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
- * @method string getStatus() 获取网络连接状态
- * @method void setStatus(string $Status) 设置网络连接状态
+ * @method string getStatus() 获取网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
+ * @method void setStatus(string $Status) 设置网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
+ * @method string getVpcId() 获取私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubnetId() 获取子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubnetId(string $SubnetId) 设置子网ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstanceNetInfo extends AbstractModel
 {
@@ -54,16 +62,32 @@ class DBInstanceNetInfo extends AbstractModel
     public $NetType;
 
     /**
-     * @var string 网络连接状态
+     * @var string 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
      */
     public $Status;
+
+    /**
+     * @var string 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcId;
+
+    /**
+     * @var string 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubnetId;
 
     /**
      * @param string $Address DNS域名
      * @param string $Ip IP地址
      * @param integer $Port 连接Port地址
      * @param string $NetType 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
-     * @param string $Status 网络连接状态
+     * @param string $Status 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
+     * @param string $VpcId 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +120,14 @@ class DBInstanceNetInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

@@ -42,6 +42,16 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
  * @method void setWorkingDirectory(string $WorkingDirectory) 设置命令执行路径, 默认以Command配置的WorkingDirectory执行。
  * @method integer getTimeout() 获取命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
  * @method void setTimeout(integer $Timeout) 设置命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
+ * @method string getOutputCOSBucketUrl() 获取指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+ * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) 设置指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+ * @method string getOutputCOSKeyPrefix() 获取指定日志在cos bucket中的目录，目录命名有如下规则：
+1. 可用数字、中英文和可见字符的组合，长度最多为60。
+2. 用 / 分割路径，可快速创建子目录。
+3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+ * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) 设置指定日志在cos bucket中的目录，目录命名有如下规则：
+1. 可用数字、中英文和可见字符的组合，长度最多为60。
+2. 用 / 分割路径，可快速创建子目录。
+3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
  */
 class InvokeCommandRequest extends AbstractModel
 {
@@ -81,6 +91,19 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     public $Timeout;
 
     /**
+     * @var string 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+     */
+    public $OutputCOSBucketUrl;
+
+    /**
+     * @var string 指定日志在cos bucket中的目录，目录命名有如下规则：
+1. 可用数字、中英文和可见字符的组合，长度最多为60。
+2. 用 / 分割路径，可快速创建子目录。
+3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+     */
+    public $OutputCOSKeyPrefix;
+
+    /**
      * @param string $CommandId 待触发的命令ID。
      * @param array $InstanceIds 待执行命令的实例ID列表，上限100。
      * @param string $Parameters Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
@@ -92,6 +115,11 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。若不填，默认以 Command 配置的 Username 执行。
      * @param string $WorkingDirectory 命令执行路径, 默认以Command配置的WorkingDirectory执行。
      * @param integer $Timeout 命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
+     * @param string $OutputCOSBucketUrl 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+     * @param string $OutputCOSKeyPrefix 指定日志在cos bucket中的目录，目录命名有如下规则：
+1. 可用数字、中英文和可见字符的组合，长度最多为60。
+2. 用 / 分割路径，可快速创建子目录。
+3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
      */
     function __construct()
     {
@@ -128,6 +156,14 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
 
         if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
             $this->Timeout = $param["Timeout"];
+        }
+
+        if (array_key_exists("OutputCOSBucketUrl",$param) and $param["OutputCOSBucketUrl"] !== null) {
+            $this->OutputCOSBucketUrl = $param["OutputCOSBucketUrl"];
+        }
+
+        if (array_key_exists("OutputCOSKeyPrefix",$param) and $param["OutputCOSKeyPrefix"] !== null) {
+            $this->OutputCOSKeyPrefix = $param["OutputCOSKeyPrefix"];
         }
     }
 }

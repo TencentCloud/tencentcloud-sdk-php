@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) 设置执行命令过期时间， 单位秒
  * @method string getWorkingDirectory() 获取执行命令的工作路径
  * @method void setWorkingDirectory(string $WorkingDirectory) 设置执行命令的工作路径
+ * @method string getOutputCOSBucketUrl() 获取日志上传的cos bucket 地址。
+ * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) 设置日志上传的cos bucket 地址。
+ * @method string getOutputCOSKeyPrefix() 获取日志在cos bucket中的目录。
+ * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) 设置日志在cos bucket中的目录。
  */
 class Invocation extends AbstractModel
 {
@@ -168,6 +172,16 @@ class Invocation extends AbstractModel
     public $WorkingDirectory;
 
     /**
+     * @var string 日志上传的cos bucket 地址。
+     */
+    public $OutputCOSBucketUrl;
+
+    /**
+     * @var string 日志在cos bucket中的目录。
+     */
+    public $OutputCOSKeyPrefix;
+
+    /**
      * @param string $InvocationId 执行活动ID。
      * @param string $CommandId 命令ID。
      * @param string $InvocationStatus 执行任务状态。取值范围：
@@ -192,6 +206,8 @@ class Invocation extends AbstractModel
      * @param string $CommandType 命令类型
      * @param integer $Timeout 执行命令过期时间， 单位秒
      * @param string $WorkingDirectory 执行命令的工作路径
+     * @param string $OutputCOSBucketUrl 日志上传的cos bucket 地址。
+     * @param string $OutputCOSKeyPrefix 日志在cos bucket中的目录。
      */
     function __construct()
     {
@@ -281,6 +297,14 @@ class Invocation extends AbstractModel
 
         if (array_key_exists("WorkingDirectory",$param) and $param["WorkingDirectory"] !== null) {
             $this->WorkingDirectory = $param["WorkingDirectory"];
+        }
+
+        if (array_key_exists("OutputCOSBucketUrl",$param) and $param["OutputCOSBucketUrl"] !== null) {
+            $this->OutputCOSBucketUrl = $param["OutputCOSBucketUrl"];
+        }
+
+        if (array_key_exists("OutputCOSKeyPrefix",$param) and $param["OutputCOSKeyPrefix"] !== null) {
+            $this->OutputCOSKeyPrefix = $param["OutputCOSKeyPrefix"];
         }
     }
 }

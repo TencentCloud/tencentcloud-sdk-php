@@ -26,8 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamId(string $StreamId) 设置流Id，流的唯一标识
  * @method string getCommand() 获取|控制参数，CmdJson结构转义的json字符串。| Action  | string  |是|控制动作，play(用于暂停后恢复播放)、pause（暂停）、teardown(停止)、jump(拖动播放)
 | Offset  | uint  |否|拖动播放时的时间偏移量（相对于起始时间）,单位：秒
+目前支持的command：
+"Command": "{"Action":"PAUSE"}" 暂停
+"Command": "{"Action":"PLAY"}" 暂停恢复
+"Command": "{"Action":"PLAY","Offset":"15"}" 位置偏移，可以替代jump操作
  * @method void setCommand(string $Command) 设置|控制参数，CmdJson结构转义的json字符串。| Action  | string  |是|控制动作，play(用于暂停后恢复播放)、pause（暂停）、teardown(停止)、jump(拖动播放)
 | Offset  | uint  |否|拖动播放时的时间偏移量（相对于起始时间）,单位：秒
+目前支持的command：
+"Command": "{"Action":"PAUSE"}" 暂停
+"Command": "{"Action":"PLAY"}" 暂停恢复
+"Command": "{"Action":"PLAY","Offset":"15"}" 位置偏移，可以替代jump操作
  * @method string getChannelId() 获取通道唯一标识
  * @method void setChannelId(string $ChannelId) 设置通道唯一标识
  */
@@ -46,6 +54,10 @@ class ControlRecordStreamRequest extends AbstractModel
     /**
      * @var string |控制参数，CmdJson结构转义的json字符串。| Action  | string  |是|控制动作，play(用于暂停后恢复播放)、pause（暂停）、teardown(停止)、jump(拖动播放)
 | Offset  | uint  |否|拖动播放时的时间偏移量（相对于起始时间）,单位：秒
+目前支持的command：
+"Command": "{"Action":"PAUSE"}" 暂停
+"Command": "{"Action":"PLAY"}" 暂停恢复
+"Command": "{"Action":"PLAY","Offset":"15"}" 位置偏移，可以替代jump操作
      */
     public $Command;
 
@@ -59,6 +71,10 @@ class ControlRecordStreamRequest extends AbstractModel
      * @param string $StreamId 流Id，流的唯一标识
      * @param string $Command |控制参数，CmdJson结构转义的json字符串。| Action  | string  |是|控制动作，play(用于暂停后恢复播放)、pause（暂停）、teardown(停止)、jump(拖动播放)
 | Offset  | uint  |否|拖动播放时的时间偏移量（相对于起始时间）,单位：秒
+目前支持的command：
+"Command": "{"Action":"PAUSE"}" 暂停
+"Command": "{"Action":"PLAY"}" 暂停恢复
+"Command": "{"Action":"PLAY","Offset":"15"}" 位置偏移，可以替代jump操作
      * @param string $ChannelId 通道唯一标识
      */
     function __construct()

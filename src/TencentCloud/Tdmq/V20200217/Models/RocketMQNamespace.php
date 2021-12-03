@@ -20,14 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RocketMQ命名空间信息
  *
-
+ * @method string getNamespaceId() 获取命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_”
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_”
+ * @method integer getTtl() 获取未消费消息的保留时间，以毫秒单位，范围60秒到15天
+ * @method void setTtl(integer $Ttl) 设置未消费消息的保留时间，以毫秒单位，范围60秒到15天
+ * @method integer getRetentionTime() 获取消息持久化后保留的时间，以毫秒单位
+ * @method void setRetentionTime(integer $RetentionTime) 设置消息持久化后保留的时间，以毫秒单位
+ * @method string getRemark() 获取说明
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置说明
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQNamespace extends AbstractModel
 {
-
+    /**
+     * @var string 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_”
+     */
+    public $NamespaceId;
 
     /**
+     * @var integer 未消费消息的保留时间，以毫秒单位，范围60秒到15天
+     */
+    public $Ttl;
 
+    /**
+     * @var integer 消息持久化后保留的时间，以毫秒单位
+     */
+    public $RetentionTime;
+
+    /**
+     * @var string 说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
+     * @param string $NamespaceId 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_”
+     * @param integer $Ttl 未消费消息的保留时间，以毫秒单位，范围60秒到15天
+     * @param integer $RetentionTime 消息持久化后保留的时间，以毫秒单位
+     * @param string $Remark 说明
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +74,20 @@ class RocketMQNamespace extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
+            $this->NamespaceId = $param["NamespaceId"];
+        }
 
+        if (array_key_exists("Ttl",$param) and $param["Ttl"] !== null) {
+            $this->Ttl = $param["Ttl"];
+        }
+
+        if (array_key_exists("RetentionTime",$param) and $param["RetentionTime"] !== null) {
+            $this->RetentionTime = $param["RetentionTime"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
     }
 }

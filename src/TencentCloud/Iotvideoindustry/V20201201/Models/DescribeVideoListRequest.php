@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsRecording(integer $IsRecording) 设置录制状态 99: 录制方已经回写状态 1: 开始录制了，等待回写 2: 已经到了时间模板的停止时间，在等待录制方回写
  * @method string getChannelId() 获取通道ID默认必传
  * @method void setChannelId(string $ChannelId) 设置通道ID默认必传
+ * @method string getPlanId() 获取录制计划ID
+ * @method void setPlanId(string $PlanId) 设置录制计划ID
+ * @method integer getSceneId() 获取场景ID
+ * @method void setSceneId(integer $SceneId) 设置场景ID
+ * @method integer getWarnId() 获取告警ID
+ * @method void setWarnId(integer $WarnId) 设置告警ID
+ * @method array getRecordType() 获取录制类型 1: 联动计划录制 2: 告警录制
+ * @method void setRecordType(array $RecordType) 设置录制类型 1: 联动计划录制 2: 告警录制
  */
 class DescribeVideoListRequest extends AbstractModel
 {
@@ -115,6 +123,26 @@ class DescribeVideoListRequest extends AbstractModel
     public $ChannelId;
 
     /**
+     * @var string 录制计划ID
+     */
+    public $PlanId;
+
+    /**
+     * @var integer 场景ID
+     */
+    public $SceneId;
+
+    /**
+     * @var integer 告警ID
+     */
+    public $WarnId;
+
+    /**
+     * @var array 录制类型 1: 联动计划录制 2: 告警录制
+     */
+    public $RecordType;
+
+    /**
      * @param integer $Offset 偏移
      * @param integer $Limit 限制
      * @param integer $StartTime 开始时间戳，秒级
@@ -128,6 +156,10 @@ class DescribeVideoListRequest extends AbstractModel
      * @param integer $EndFileSize 文件大小范围 结束 单位byte
      * @param integer $IsRecording 录制状态 99: 录制方已经回写状态 1: 开始录制了，等待回写 2: 已经到了时间模板的停止时间，在等待录制方回写
      * @param string $ChannelId 通道ID默认必传
+     * @param string $PlanId 录制计划ID
+     * @param integer $SceneId 场景ID
+     * @param integer $WarnId 告警ID
+     * @param array $RecordType 录制类型 1: 联动计划录制 2: 告警录制
      */
     function __construct()
     {
@@ -192,6 +224,22 @@ class DescribeVideoListRequest extends AbstractModel
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
             $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("PlanId",$param) and $param["PlanId"] !== null) {
+            $this->PlanId = $param["PlanId"];
+        }
+
+        if (array_key_exists("SceneId",$param) and $param["SceneId"] !== null) {
+            $this->SceneId = $param["SceneId"];
+        }
+
+        if (array_key_exists("WarnId",$param) and $param["WarnId"] !== null) {
+            $this->WarnId = $param["WarnId"];
+        }
+
+        if (array_key_exists("RecordType",$param) and $param["RecordType"] !== null) {
+            $this->RecordType = $param["RecordType"];
         }
     }
 }

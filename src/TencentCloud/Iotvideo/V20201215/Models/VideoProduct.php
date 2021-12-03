@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置创建时间unix时间戳
  * @method integer getUpdateTime() 获取修改时间unix时间戳
  * @method void setUpdateTime(integer $UpdateTime) 设置修改时间unix时间戳
+ * @method string getNetType() 获取连接类型，wifi表示WIFI连接，cellular表示4G连接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetType(string $NetType) 设置连接类型，wifi表示WIFI连接，cellular表示4G连接
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoProduct extends AbstractModel
 {
@@ -101,6 +105,12 @@ class VideoProduct extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 连接类型，wifi表示WIFI连接，cellular表示4G连接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetType;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param integer $DeviceType 产品设备类型（普通设备)	1.普通设备
@@ -112,6 +122,8 @@ class VideoProduct extends AbstractModel
      * @param string $ProductDescription 产品描述信息
      * @param integer $CreateTime 创建时间unix时间戳
      * @param integer $UpdateTime 修改时间unix时间戳
+     * @param string $NetType 连接类型，wifi表示WIFI连接，cellular表示4G连接
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class VideoProduct extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
+            $this->NetType = $param["NetType"];
         }
     }
 }

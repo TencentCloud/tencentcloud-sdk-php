@@ -69,6 +69,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeAMQPQueuesResponse DescribeAMQPQueues(Models\DescribeAMQPQueuesRequest $req) 获取Amqp队列列表
  * @method Models\DescribeAMQPRouteRelationsResponse DescribeAMQPRouteRelations(Models\DescribeAMQPRouteRelationsRequest $req) 获取Amqp路由关系列表
  * @method Models\DescribeAMQPVHostsResponse DescribeAMQPVHosts(Models\DescribeAMQPVHostsRequest $req) 获取Amqp Vhost 列表
+ * @method Models\DescribeAllTenantsResponse DescribeAllTenants(Models\DescribeAllTenantsRequest $req) 获取某个租户的虚拟集群列表
  * @method Models\DescribeBindClustersResponse DescribeBindClusters(Models\DescribeBindClustersRequest $req) 获取用户绑定的专享集群列表
  * @method Models\DescribeBindVpcsResponse DescribeBindVpcs(Models\DescribeBindVpcsRequest $req) 获取租户VPC绑定关系
  * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) 获取集群的详细信息

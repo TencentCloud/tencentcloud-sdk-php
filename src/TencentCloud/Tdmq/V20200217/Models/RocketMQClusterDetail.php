@@ -20,14 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 租户RocketMQ集群详细信息
  *
-
+ * @method RocketMQClusterInfo getInfo() 获取集群基本信息
+ * @method void setInfo(RocketMQClusterInfo $Info) 设置集群基本信息
+ * @method RocketMQClusterConfig getConfig() 获取集群配置信息
+ * @method void setConfig(RocketMQClusterConfig $Config) 设置集群配置信息
+ * @method integer getStatus() 获取集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQClusterDetail extends AbstractModel
 {
-
+    /**
+     * @var RocketMQClusterInfo 集群基本信息
+     */
+    public $Info;
 
     /**
+     * @var RocketMQClusterConfig 集群配置信息
+     */
+    public $Config;
 
+    /**
+     * @var integer 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @param RocketMQClusterInfo $Info 集群基本信息
+     * @param RocketMQClusterConfig $Config 集群配置信息
+     * @param integer $Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +66,18 @@ class RocketMQClusterDetail extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
+            $this->Info = new RocketMQClusterInfo();
+            $this->Info->deserialize($param["Info"]);
+        }
 
+        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+            $this->Config = new RocketMQClusterConfig();
+            $this->Config->deserialize($param["Config"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
     }
 }

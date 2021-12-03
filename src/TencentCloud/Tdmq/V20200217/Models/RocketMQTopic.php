@@ -20,14 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RocketMQ主题信息
  *
-
+ * @method string getName() 获取主题名称
+ * @method void setName(string $Name) 设置主题名称
+ * @method string getRemark() 获取说明
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置说明
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPartitionNum() 获取读写分区数
+ * @method void setPartitionNum(integer $PartitionNum) 设置读写分区数
+ * @method integer getCreateTime() 获取创建时间，以毫秒为单位
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间，以毫秒为单位
+ * @method integer getUpdateTime() 获取创建时间，以毫秒为单位
+ * @method void setUpdateTime(integer $UpdateTime) 设置创建时间，以毫秒为单位
  */
 class RocketMQTopic extends AbstractModel
 {
-
+    /**
+     * @var string 主题名称
+     */
+    public $Name;
 
     /**
+     * @var string 说明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
 
+    /**
+     * @var integer 读写分区数
+     */
+    public $PartitionNum;
+
+    /**
+     * @var integer 创建时间，以毫秒为单位
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer 创建时间，以毫秒为单位
+     */
+    public $UpdateTime;
+
+    /**
+     * @param string $Name 主题名称
+     * @param string $Remark 说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PartitionNum 读写分区数
+     * @param integer $CreateTime 创建时间，以毫秒为单位
+     * @param integer $UpdateTime 创建时间，以毫秒为单位
      */
     function __construct()
     {
@@ -42,6 +82,24 @@ class RocketMQTopic extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
 
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PartitionNum",$param) and $param["PartitionNum"] !== null) {
+            $this->PartitionNum = $param["PartitionNum"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
     }
 }

@@ -31,6 +31,7 @@ use TencentCloud\Common\AbstractModel;
 4.已用存储容量总数：StorageUsage
 5. X-P2P分享流量: P2PFluxTotal
 6. X-P2P峰值带宽: P2PPeakValue
+7. RTMP推流路数(直播推流): LivePushTotal
  * @method void setStatisticField(string $StatisticField) 设置统计项。取值范围：
 1.录制设备数：RecordingDevice
 2.非录制设备数：NonRecordingDevice
@@ -38,6 +39,7 @@ use TencentCloud\Common\AbstractModel;
 4.已用存储容量总数：StorageUsage
 5. X-P2P分享流量: P2PFluxTotal
 6. X-P2P峰值带宽: P2PPeakValue
+7. RTMP推流路数(直播推流): LivePushTotal
  */
 class DescribeStatisticDetailsRequest extends AbstractModel
 {
@@ -59,6 +61,7 @@ class DescribeStatisticDetailsRequest extends AbstractModel
 4.已用存储容量总数：StorageUsage
 5. X-P2P分享流量: P2PFluxTotal
 6. X-P2P峰值带宽: P2PPeakValue
+7. RTMP推流路数(直播推流): LivePushTotal
      */
     public $StatisticField;
 
@@ -72,6 +75,7 @@ class DescribeStatisticDetailsRequest extends AbstractModel
 4.已用存储容量总数：StorageUsage
 5. X-P2P分享流量: P2PFluxTotal
 6. X-P2P峰值带宽: P2PPeakValue
+7. RTMP推流路数(直播推流): LivePushTotal
      */
     function __construct()
     {

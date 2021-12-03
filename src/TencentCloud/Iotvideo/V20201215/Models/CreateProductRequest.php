@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductDescription(string $ProductDescription) 设置产品描述信息
  * @method integer getEncryptionType() 获取认证方式 只支持取值为2 psk认证
  * @method void setEncryptionType(integer $EncryptionType) 设置认证方式 只支持取值为2 psk认证
+ * @method string getNetType() 获取连接类型，wifi表示WIFI连接，cellular表示4G连接
+ * @method void setNetType(string $NetType) 设置连接类型，wifi表示WIFI连接，cellular表示4G连接
  */
 class CreateProductRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateProductRequest extends AbstractModel
     public $EncryptionType;
 
     /**
+     * @var string 连接类型，wifi表示WIFI连接，cellular表示4G连接
+     */
+    public $NetType;
+
+    /**
      * @param string $ProductName 产品名称
      * @param integer $DeviceType 产品设备类型 1.普通设备 2.NVR设备
      * @param integer $ProductVaildYears 产品有效期
@@ -96,6 +103,7 @@ class CreateProductRequest extends AbstractModel
      * @param string $ChipId 芯片id，通用设备填default
      * @param string $ProductDescription 产品描述信息
      * @param integer $EncryptionType 认证方式 只支持取值为2 psk认证
+     * @param string $NetType 连接类型，wifi表示WIFI连接，cellular表示4G连接
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateProductRequest extends AbstractModel
 
         if (array_key_exists("EncryptionType",$param) and $param["EncryptionType"] !== null) {
             $this->EncryptionType = $param["EncryptionType"];
+        }
+
+        if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
+            $this->NetType = $param["NetType"];
         }
     }
 }

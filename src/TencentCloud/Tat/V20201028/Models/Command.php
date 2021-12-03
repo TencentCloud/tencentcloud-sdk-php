@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置命令关联的标签列表。
  * @method string getUsername() 获取在实例上执行命令的用户名。
  * @method void setUsername(string $Username) 设置在实例上执行命令的用户名。
+ * @method string getOutputCOSBucketUrl() 获取日志上传的cos bucket 地址。
+ * @method void setOutputCOSBucketUrl(string $OutputCOSBucketUrl) 设置日志上传的cos bucket 地址。
+ * @method string getOutputCOSKeyPrefix() 获取日志在cos bucket中的目录。
+ * @method void setOutputCOSKeyPrefix(string $OutputCOSKeyPrefix) 设置日志在cos bucket中的目录。
  */
 class Command extends AbstractModel
 {
@@ -129,6 +133,16 @@ class Command extends AbstractModel
     public $Username;
 
     /**
+     * @var string 日志上传的cos bucket 地址。
+     */
+    public $OutputCOSBucketUrl;
+
+    /**
+     * @var string 日志在cos bucket中的目录。
+     */
+    public $OutputCOSKeyPrefix;
+
+    /**
      * @param string $CommandId 命令ID。
      * @param string $CommandName 命令名称。
      * @param string $Description 命令描述。
@@ -144,6 +158,8 @@ class Command extends AbstractModel
      * @param string $CreatedBy 命令创建者。TAT 代表公共命令，USER 代表个人命令。
      * @param array $Tags 命令关联的标签列表。
      * @param string $Username 在实例上执行命令的用户名。
+     * @param string $OutputCOSBucketUrl 日志上传的cos bucket 地址。
+     * @param string $OutputCOSKeyPrefix 日志在cos bucket中的目录。
      */
     function __construct()
     {
@@ -221,6 +237,14 @@ class Command extends AbstractModel
 
         if (array_key_exists("Username",$param) and $param["Username"] !== null) {
             $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("OutputCOSBucketUrl",$param) and $param["OutputCOSBucketUrl"] !== null) {
+            $this->OutputCOSBucketUrl = $param["OutputCOSBucketUrl"];
+        }
+
+        if (array_key_exists("OutputCOSKeyPrefix",$param) and $param["OutputCOSKeyPrefix"] !== null) {
+            $this->OutputCOSKeyPrefix = $param["OutputCOSKeyPrefix"];
         }
     }
 }

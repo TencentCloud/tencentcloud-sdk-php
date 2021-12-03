@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setP2PPeakValue(float $P2PPeakValue) 设置X-P2P峰值带宽。 单位bps
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLivePushTotal() 获取RTMP推流路数 ( 直播推流)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLivePushTotal(integer $LivePushTotal) 设置RTMP推流路数 ( 直播推流)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -86,6 +90,12 @@ class DescribeStatisticSummaryResponse extends AbstractModel
     public $P2PPeakValue;
 
     /**
+     * @var integer RTMP推流路数 ( 直播推流)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LivePushTotal;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -102,6 +112,8 @@ class DescribeStatisticSummaryResponse extends AbstractModel
      * @param float $P2PFluxTotal X-P2P分享流量。单位 Byte
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $P2PPeakValue X-P2P峰值带宽。 单位bps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LivePushTotal RTMP推流路数 ( 直播推流)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -140,6 +152,10 @@ class DescribeStatisticSummaryResponse extends AbstractModel
 
         if (array_key_exists("P2PPeakValue",$param) and $param["P2PPeakValue"] !== null) {
             $this->P2PPeakValue = $param["P2PPeakValue"];
+        }
+
+        if (array_key_exists("LivePushTotal",$param) and $param["LivePushTotal"] !== null) {
+            $this->LivePushTotal = $param["LivePushTotal"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

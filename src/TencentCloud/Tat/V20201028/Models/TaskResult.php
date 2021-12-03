@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecEndTime(string $ExecEndTime) 设置命令执行结束时间。
  * @method integer getDropped() 获取命令最终输出被截断的字节数。
  * @method void setDropped(integer $Dropped) 设置命令最终输出被截断的字节数。
+ * @method string getOutputUrl() 获取日志在cos中的地址
+ * @method void setOutputUrl(string $OutputUrl) 设置日志在cos中的地址
+ * @method string getOutputUploadCOSErrorInfo() 获取日志上传cos的错误信息。
+ * @method void setOutputUploadCOSErrorInfo(string $OutputUploadCOSErrorInfo) 设置日志上传cos的错误信息。
  */
 class TaskResult extends AbstractModel
 {
@@ -59,11 +63,23 @@ class TaskResult extends AbstractModel
     public $Dropped;
 
     /**
+     * @var string 日志在cos中的地址
+     */
+    public $OutputUrl;
+
+    /**
+     * @var string 日志上传cos的错误信息。
+     */
+    public $OutputUploadCOSErrorInfo;
+
+    /**
      * @param integer $ExitCode 命令执行ExitCode。
      * @param string $Output Base64编码后的命令输出。最大长度24KB。
      * @param string $ExecStartTime 命令执行开始时间。
      * @param string $ExecEndTime 命令执行结束时间。
      * @param integer $Dropped 命令最终输出被截断的字节数。
+     * @param string $OutputUrl 日志在cos中的地址
+     * @param string $OutputUploadCOSErrorInfo 日志上传cos的错误信息。
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class TaskResult extends AbstractModel
 
         if (array_key_exists("Dropped",$param) and $param["Dropped"] !== null) {
             $this->Dropped = $param["Dropped"];
+        }
+
+        if (array_key_exists("OutputUrl",$param) and $param["OutputUrl"] !== null) {
+            $this->OutputUrl = $param["OutputUrl"];
+        }
+
+        if (array_key_exists("OutputUploadCOSErrorInfo",$param) and $param["OutputUploadCOSErrorInfo"] !== null) {
+            $this->OutputUploadCOSErrorInfo = $param["OutputUploadCOSErrorInfo"];
         }
     }
 }

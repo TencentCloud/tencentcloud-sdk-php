@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) 设置函数所属命名空间
  * @method string getCosBucketRegion() 获取对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
  * @method void setCosBucketRegion(string $CosBucketRegion) 设置对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
+ * @method string getInstallDependency() 获取是否自动安装依赖
+ * @method void setInstallDependency(string $InstallDependency) 设置是否自动安装依赖
  * @method string getEnvId() 获取函数所属环境
  * @method void setEnvId(string $EnvId) 设置函数所属环境
  * @method string getPublish() 获取在更新时是否同步发布新版本，默认为：FALSE，不发布
@@ -81,6 +83,11 @@ class UpdateFunctionCodeRequest extends AbstractModel
     public $CosBucketRegion;
 
     /**
+     * @var string 是否自动安装依赖
+     */
+    public $InstallDependency;
+
+    /**
      * @var string 函数所属环境
      */
     public $EnvId;
@@ -108,6 +115,7 @@ class UpdateFunctionCodeRequest extends AbstractModel
      * @param string $ZipFile 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
      * @param string $Namespace 函数所属命名空间
      * @param string $CosBucketRegion 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
+     * @param string $InstallDependency 是否自动安装依赖
      * @param string $EnvId 函数所属环境
      * @param string $Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
      * @param Code $Code 函数代码
@@ -152,6 +160,10 @@ class UpdateFunctionCodeRequest extends AbstractModel
 
         if (array_key_exists("CosBucketRegion",$param) and $param["CosBucketRegion"] !== null) {
             $this->CosBucketRegion = $param["CosBucketRegion"];
+        }
+
+        if (array_key_exists("InstallDependency",$param) and $param["InstallDependency"] !== null) {
+            $this->InstallDependency = $param["InstallDependency"];
         }
 
         if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实时录制白板参数，例如白板宽高等
  *
- * @method integer getWidth() 获取实时录制结果里白板视频宽，默认为1280
- * @method void setWidth(integer $Width) 设置实时录制结果里白板视频宽，默认为1280
- * @method integer getHeight() 获取实时录制结果里白板视频高，默认为960
- * @method void setHeight(integer $Height) 设置实时录制结果里白板视频高，默认为960
+ * @method integer getWidth() 获取实时录制结果里白板视频宽，取值必须大于等于2，默认为1280
+ * @method void setWidth(integer $Width) 设置实时录制结果里白板视频宽，取值必须大于等于2，默认为1280
+ * @method integer getHeight() 获取实时录制结果里白板视频高，取值必须大于等于2，默认为960
+ * @method void setHeight(integer $Height) 设置实时录制结果里白板视频高，取值必须大于等于2，默认为960
  * @method string getInitParam() 获取白板初始化参数，透传到白板 SDK
  * @method void setInitParam(string $InitParam) 设置白板初始化参数，透传到白板 SDK
  */
 class Whiteboard extends AbstractModel
 {
     /**
-     * @var integer 实时录制结果里白板视频宽，默认为1280
+     * @var integer 实时录制结果里白板视频宽，取值必须大于等于2，默认为1280
      */
     public $Width;
 
     /**
-     * @var integer 实时录制结果里白板视频高，默认为960
+     * @var integer 实时录制结果里白板视频高，取值必须大于等于2，默认为960
      */
     public $Height;
 
@@ -45,8 +45,8 @@ class Whiteboard extends AbstractModel
     public $InitParam;
 
     /**
-     * @param integer $Width 实时录制结果里白板视频宽，默认为1280
-     * @param integer $Height 实时录制结果里白板视频高，默认为960
+     * @param integer $Width 实时录制结果里白板视频宽，取值必须大于等于2，默认为1280
+     * @param integer $Height 实时录制结果里白板视频高，取值必须大于等于2，默认为960
      * @param string $InitParam 白板初始化参数，透传到白板 SDK
      */
     function __construct()

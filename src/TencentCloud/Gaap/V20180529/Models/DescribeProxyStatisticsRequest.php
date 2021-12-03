@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 当时间范围不超过3天，支持最小粒度60秒；
 当时间范围不超过7天，支持最小粒度300秒；
 当时间范围不超过30天，支持最小粒度3600秒。
+ * @method string getIsp() 获取运营商（通道为三网通道时有效），支持CMCC，CUCC，CTCC，传空值或不传则合并三个运营商数据
+ * @method void setIsp(string $Isp) 设置运营商（通道为三网通道时有效），支持CMCC，CUCC，CTCC，传空值或不传则合并三个运营商数据
  */
 class DescribeProxyStatisticsRequest extends AbstractModel
 {
@@ -68,6 +70,11 @@ class DescribeProxyStatisticsRequest extends AbstractModel
     public $Granularity;
 
     /**
+     * @var string 运营商（通道为三网通道时有效），支持CMCC，CUCC，CTCC，传空值或不传则合并三个运营商数据
+     */
+    public $Isp;
+
+    /**
      * @param string $ProxyId 通道ID
      * @param string $StartTime 起始时间(2019-03-25 12:00:00)
      * @param string $EndTime 结束时间(2019-03-25 12:00:00)
@@ -76,6 +83,7 @@ class DescribeProxyStatisticsRequest extends AbstractModel
 当时间范围不超过3天，支持最小粒度60秒；
 当时间范围不超过7天，支持最小粒度300秒；
 当时间范围不超过30天，支持最小粒度3600秒。
+     * @param string $Isp 运营商（通道为三网通道时有效），支持CMCC，CUCC，CTCC，传空值或不传则合并三个运营商数据
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeProxyStatisticsRequest extends AbstractModel
 
         if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
             $this->Granularity = $param["Granularity"];
+        }
+
+        if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
+            $this->Isp = $param["Isp"];
         }
     }
 }

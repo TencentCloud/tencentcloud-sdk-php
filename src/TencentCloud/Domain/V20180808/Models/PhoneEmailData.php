@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置1：手机  2：邮箱
  * @method string getCreatedOn() 获取创建时间
  * @method void setCreatedOn(string $CreatedOn) 设置创建时间
+ * @method integer getCheckStatus() 获取1=控制台校验，2=第三方校验
+ * @method void setCheckStatus(integer $CheckStatus) 设置1=控制台校验，2=第三方校验
  */
 class PhoneEmailData extends AbstractModel
 {
@@ -45,9 +47,15 @@ class PhoneEmailData extends AbstractModel
     public $CreatedOn;
 
     /**
+     * @var integer 1=控制台校验，2=第三方校验
+     */
+    public $CheckStatus;
+
+    /**
      * @param string $Code 手机号或者邮箱
      * @param integer $Type 1：手机  2：邮箱
      * @param string $CreatedOn 创建时间
+     * @param integer $CheckStatus 1=控制台校验，2=第三方校验
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class PhoneEmailData extends AbstractModel
 
         if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
             $this->CreatedOn = $param["CreatedOn"];
+        }
+
+        if (array_key_exists("CheckStatus",$param) and $param["CheckStatus"] !== null) {
+            $this->CheckStatus = $param["CheckStatus"];
         }
     }
 }

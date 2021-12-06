@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannel(string $Channel) 设置归属于cdn或ecdn
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeleted() 获取cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeleted(string $Deleted) 设置cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicInfo extends AbstractModel
 {
@@ -65,12 +69,20 @@ class TopicInfo extends AbstractModel
     public $Channel;
 
     /**
+     * @var string cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Deleted;
+
+    /**
      * @param string $TopicId 主题ID
      * @param string $TopicName 主题名字
      * @param integer $Enabled 是否启用投递
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Channel 归属于cdn或ecdn
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Deleted cls侧是否已经被删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,6 +116,10 @@ class TopicInfo extends AbstractModel
 
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("Deleted",$param) and $param["Deleted"] !== null) {
+            $this->Deleted = $param["Deleted"];
         }
     }
 }

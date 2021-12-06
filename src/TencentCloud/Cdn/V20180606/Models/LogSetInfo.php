@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建日期
  * @method string getRegion() 获取区域
  * @method void setRegion(string $Region) 设置区域
+ * @method string getDeleted() 获取cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeleted(string $Deleted) 设置cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionEn() 获取英文区域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionEn(string $RegionEn) 设置英文区域
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogSetInfo extends AbstractModel
 {
@@ -83,6 +91,18 @@ class LogSetInfo extends AbstractModel
     public $Region;
 
     /**
+     * @var string cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Deleted;
+
+    /**
+     * @var string 英文区域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionEn;
+
+    /**
      * @param integer $AppId 开发者ID
      * @param string $Channel 渠道
 注意：此字段可能返回 null，表示取不到有效值。
@@ -92,6 +112,10 @@ class LogSetInfo extends AbstractModel
      * @param integer $LogsetSavePeriod 日志保存时间，单位为天
      * @param string $CreateTime 创建日期
      * @param string $Region 区域
+     * @param string $Deleted cls侧是否已经被删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionEn 英文区域
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -136,6 +160,14 @@ class LogSetInfo extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Deleted",$param) and $param["Deleted"] !== null) {
+            $this->Deleted = $param["Deleted"];
+        }
+
+        if (array_key_exists("RegionEn",$param) and $param["RegionEn"] !== null) {
+            $this->RegionEn = $param["RegionEn"];
         }
     }
 }

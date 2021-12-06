@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 1 表示开启，将自动续费
  * @method string getPackageResourceId() 获取使用的特惠包ID，PayMode为2时必填
  * @method void setPackageResourceId(string $PackageResourceId) 设置使用的特惠包ID，PayMode为2时必填
+ * @method integer getUpdateProhibition() 获取是否开启更新锁：0=默认不开启，1=开启
+ * @method void setUpdateProhibition(integer $UpdateProhibition) 设置是否开启更新锁：0=默认不开启，1=开启
+ * @method integer getTransferProhibition() 获取是否开启转移锁：0=默认不开启，1=开启
+ * @method void setTransferProhibition(integer $TransferProhibition) 设置是否开启转移锁：0=默认不开启，1=开启
  */
 class CreateDomainBatchRequest extends AbstractModel
 {
@@ -72,6 +76,16 @@ class CreateDomainBatchRequest extends AbstractModel
     public $PackageResourceId;
 
     /**
+     * @var integer 是否开启更新锁：0=默认不开启，1=开启
+     */
+    public $UpdateProhibition;
+
+    /**
+     * @var integer 是否开启转移锁：0=默认不开启，1=开启
+     */
+    public $TransferProhibition;
+
+    /**
      * @param string $TemplateId 模板ID。详情请查看：[获取模板列表](https://cloud.tencent.com/document/product/242/48940)
      * @param integer $Period 购买域名的年限，可选值：[1-10]
      * @param array $Domains 批量购买的域名,最多为4000个
@@ -80,6 +94,8 @@ class CreateDomainBatchRequest extends AbstractModel
 0 表示关闭，不自动续费（默认值）
 1 表示开启，将自动续费
      * @param string $PackageResourceId 使用的特惠包ID，PayMode为2时必填
+     * @param integer $UpdateProhibition 是否开启更新锁：0=默认不开启，1=开启
+     * @param integer $TransferProhibition 是否开启转移锁：0=默认不开启，1=开启
      */
     function __construct()
     {
@@ -116,6 +132,14 @@ class CreateDomainBatchRequest extends AbstractModel
 
         if (array_key_exists("PackageResourceId",$param) and $param["PackageResourceId"] !== null) {
             $this->PackageResourceId = $param["PackageResourceId"];
+        }
+
+        if (array_key_exists("UpdateProhibition",$param) and $param["UpdateProhibition"] !== null) {
+            $this->UpdateProhibition = $param["UpdateProhibition"];
+        }
+
+        if (array_key_exists("TransferProhibition",$param) and $param["TransferProhibition"] !== null) {
+            $this->TransferProhibition = $param["TransferProhibition"];
         }
     }
 }

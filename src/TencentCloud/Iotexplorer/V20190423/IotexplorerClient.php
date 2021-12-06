@@ -67,6 +67,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DirectBindDeviceInFamilyResponse DirectBindDeviceInFamily(Models\DirectBindDeviceInFamilyRequest $req) 直接绑定设备和家庭
  * @method Models\DisableTopicRuleResponse DisableTopicRule(Models\DisableTopicRuleRequest $req) 禁用规则
  * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 启用规则
+ * @method Models\GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublic(Models\GenSingleDeviceSignatureOfPublicRequest $req) 无
  * @method Models\GetBatchProductionsListResponse GetBatchProductionsList(Models\GetBatchProductionsListRequest $req) 列出量产数据列表信息。
  * @method Models\GetCOSURLResponse GetCOSURL(Models\GetCOSURLRequest $req) 本接口（GetCOSURL）用于获取固件存储在COS的URL 
  * @method Models\GetDeviceListResponse GetDeviceList(Models\GetDeviceListRequest $req) 用于查询某个产品下的设备列表

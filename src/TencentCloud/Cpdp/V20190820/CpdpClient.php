@@ -66,6 +66,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateSinglePayResponse CreateSinglePay(Models\CreateSinglePayRequest $req) 银企直连-单笔支付接口
  * @method Models\CreateSinglePaymentResponse CreateSinglePayment(Models\CreateSinglePaymentRequest $req) 灵云-单笔主播转账接口
  * @method Models\CreateTransferBatchResponse CreateTransferBatch(Models\CreateTransferBatchRequest $req) 微信商户发起批量转账
+ * @method Models\DeduceQuotaResponse DeduceQuota(Models\DeduceQuotaRequest $req) 直播平台-扣减额度
  * @method Models\DeleteAgentTaxPaymentInfoResponse DeleteAgentTaxPaymentInfo(Models\DeleteAgentTaxPaymentInfoRequest $req) 直播平台-删除代理商完税信息
  * @method Models\DeleteAgentTaxPaymentInfosResponse DeleteAgentTaxPaymentInfos(Models\DeleteAgentTaxPaymentInfosRequest $req) 直播平台-删除代理商完税信息
  * @method Models\DescribeChargeDetailResponse DescribeChargeDetail(Models\DescribeChargeDetailRequest $req) 查询充值明细接口
@@ -95,6 +96,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryAgentTaxPaymentBatchResponse QueryAgentTaxPaymentBatch(Models\QueryAgentTaxPaymentBatchRequest $req) 直播平台-查询批次信息
  * @method Models\QueryAnchorContractInfoResponse QueryAnchorContractInfo(Models\QueryAnchorContractInfoRequest $req) 直播平台-查询主播签约信息
  * @method Models\QueryApplicationMaterialResponse QueryApplicationMaterial(Models\QueryApplicationMaterialRequest $req) 跨境-成功申报材料查询。查询成功入库的申报材料。
+ * @method Models\QueryAssignmentResponse QueryAssignment(Models\QueryAssignmentRequest $req) 直播平台-查询分配关系
  * @method Models\QueryBalanceResponse QueryBalance(Models\QueryBalanceRequest $req) 子商户余额查询
  * @method Models\QueryBankClearResponse QueryBankClear(Models\QueryBankClearRequest $req) 查询银行在途清算结果。查询时间段内交易网的在途清算结果。
  * @method Models\QueryBankTransactionDetailsResponse QueryBankTransactionDetails(Models\QueryBankTransactionDetailsRequest $req) 查询银行时间段内交易明细。查询时间段的会员成功交易。

@@ -40,6 +40,10 @@ false：关闭60天内禁止转移注册商锁定
  * @method void setLockTransfer(boolean $LockTransfer) 设置true： 开启60天内禁止转移注册商锁定
 false：关闭60天内禁止转移注册商锁定
 默认 true
+ * @method integer getUpdateProhibition() 获取是否开启更新锁：0=默认不开启，1=开启
+ * @method void setUpdateProhibition(integer $UpdateProhibition) 设置是否开启更新锁：0=默认不开启，1=开启
+ * @method integer getTransferProhibition() 获取是否开启转移锁：0=默认不开启，1=开启
+ * @method void setTransferProhibition(integer $TransferProhibition) 设置是否开启转移锁：0=默认不开启，1=开启
  */
 class TransferInDomainBatchRequest extends AbstractModel
 {
@@ -78,6 +82,16 @@ false：关闭60天内禁止转移注册商锁定
     public $LockTransfer;
 
     /**
+     * @var integer 是否开启更新锁：0=默认不开启，1=开启
+     */
+    public $UpdateProhibition;
+
+    /**
+     * @var integer 是否开启转移锁：0=默认不开启，1=开启
+     */
+    public $TransferProhibition;
+
+    /**
      * @param array $Domains 转入的域名名称数组。
      * @param array $PassWords 域名转移码数组。
      * @param string $TemplateId 模板ID。
@@ -88,6 +102,8 @@ false：关闭60天内禁止转移注册商锁定
      * @param boolean $LockTransfer true： 开启60天内禁止转移注册商锁定
 false：关闭60天内禁止转移注册商锁定
 默认 true
+     * @param integer $UpdateProhibition 是否开启更新锁：0=默认不开启，1=开启
+     * @param integer $TransferProhibition 是否开启转移锁：0=默认不开启，1=开启
      */
     function __construct()
     {
@@ -124,6 +140,14 @@ false：关闭60天内禁止转移注册商锁定
 
         if (array_key_exists("LockTransfer",$param) and $param["LockTransfer"] !== null) {
             $this->LockTransfer = $param["LockTransfer"];
+        }
+
+        if (array_key_exists("UpdateProhibition",$param) and $param["UpdateProhibition"] !== null) {
+            $this->UpdateProhibition = $param["UpdateProhibition"];
+        }
+
+        if (array_key_exists("TransferProhibition",$param) and $param["TransferProhibition"] !== null) {
+            $this->TransferProhibition = $param["TransferProhibition"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setService(string $Service) 设置Service名，需要转发访问的接口名
  * @method string getJSONData() 获取需要转发的云API参数，要转成JSON格式
  * @method void setJSONData(string $JSONData) 设置需要转发的云API参数，要转成JSON格式
+ * @method string getApiRole() 获取指定角色
+ * @method void setApiRole(string $ApiRole) 设置指定角色
  */
 class CommonServiceAPIRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CommonServiceAPIRequest extends AbstractModel
     public $JSONData;
 
     /**
+     * @var string 指定角色
+     */
+    public $ApiRole;
+
+    /**
      * @param string $Service Service名，需要转发访问的接口名
      * @param string $JSONData 需要转发的云API参数，要转成JSON格式
+     * @param string $ApiRole 指定角色
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CommonServiceAPIRequest extends AbstractModel
 
         if (array_key_exists("JSONData",$param) and $param["JSONData"] !== null) {
             $this->JSONData = $param["JSONData"];
+        }
+
+        if (array_key_exists("ApiRole",$param) and $param["ApiRole"] !== null) {
+            $this->ApiRole = $param["ApiRole"];
         }
     }
 }

@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobManagerSpec(float $JobManagerSpec) 设置JobManager规格
  * @method float getTaskManagerSpec() 获取TaskManager规格
  * @method void setTaskManagerSpec(float $TaskManagerSpec) 设置TaskManager规格
+ * @method string getClsLogsetId() 获取CLS日志集ID
+ * @method void setClsLogsetId(string $ClsLogsetId) 设置CLS日志集ID
+ * @method string getClsTopicId() 获取CLS日志主题ID
+ * @method void setClsTopicId(string $ClsTopicId) 设置CLS日志主题ID
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateJobConfigRequest extends AbstractModel
     public $TaskManagerSpec;
 
     /**
+     * @var string CLS日志集ID
+     */
+    public $ClsLogsetId;
+
+    /**
+     * @var string CLS日志主题ID
+     */
+    public $ClsTopicId;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -120,6 +134,8 @@ class CreateJobConfigRequest extends AbstractModel
      * @param boolean $LogCollect 是否采集作业日志
      * @param float $JobManagerSpec JobManager规格
      * @param float $TaskManagerSpec TaskManager规格
+     * @param string $ClsLogsetId CLS日志集ID
+     * @param string $ClsTopicId CLS日志主题ID
      */
     function __construct()
     {
@@ -190,6 +206,14 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("TaskManagerSpec",$param) and $param["TaskManagerSpec"] !== null) {
             $this->TaskManagerSpec = $param["TaskManagerSpec"];
+        }
+
+        if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
+            $this->ClsLogsetId = $param["ClsLogsetId"];
+        }
+
+        if (array_key_exists("ClsTopicId",$param) and $param["ClsTopicId"] !== null) {
+            $this->ClsTopicId = $param["ClsTopicId"];
         }
     }
 }

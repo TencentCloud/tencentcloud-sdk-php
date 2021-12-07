@@ -1,0 +1,245 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Tcss\V20201101\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 容器安全运行时高危系统调用信息
+ *
+ * @method string getProcessName() 获取进程名称
+ * @method void setProcessName(string $ProcessName) 设置进程名称
+ * @method string getProcessPath() 获取进程路径
+ * @method void setProcessPath(string $ProcessPath) 设置进程路径
+ * @method string getImageId() 获取镜像id
+ * @method void setImageId(string $ImageId) 设置镜像id
+ * @method string getContainerId() 获取容器id
+ * @method void setContainerId(string $ContainerId) 设置容器id
+ * @method string getImageName() 获取镜像名
+ * @method void setImageName(string $ImageName) 设置镜像名
+ * @method string getContainerName() 获取容器名
+ * @method void setContainerName(string $ContainerName) 设置容器名
+ * @method string getFoundTime() 获取生成时间
+ * @method void setFoundTime(string $FoundTime) 设置生成时间
+ * @method string getSolution() 获取事件解决方案
+ * @method void setSolution(string $Solution) 设置事件解决方案
+ * @method string getDescription() 获取事件详细描述
+ * @method void setDescription(string $Description) 设置事件详细描述
+ * @method string getStatus() 获取状态，EVENT_UNDEAL:事件未处理
+    EVENT_DEALED:事件已经处理
+    EVENT_INGNORE：事件已经忽略
+    EVENT_ADD_WHITE：时间已经加白
+ * @method void setStatus(string $Status) 设置状态，EVENT_UNDEAL:事件未处理
+    EVENT_DEALED:事件已经处理
+    EVENT_INGNORE：事件已经忽略
+    EVENT_ADD_WHITE：时间已经加白
+ * @method string getEventId() 获取事件id
+ * @method void setEventId(string $EventId) 设置事件id
+ * @method string getRemark() 获取备注
+ * @method void setRemark(string $Remark) 设置备注
+ * @method string getPProcessName() 获取父进程名
+ * @method void setPProcessName(string $PProcessName) 设置父进程名
+ * @method integer getEventCount() 获取事件数量
+ * @method void setEventCount(integer $EventCount) 设置事件数量
+ * @method string getLatestFoundTime() 获取最近生成时间
+ * @method void setLatestFoundTime(string $LatestFoundTime) 设置最近生成时间
+ * @method string getDstAddress() 获取目标地址
+ * @method void setDstAddress(string $DstAddress) 设置目标地址
+ */
+class ReverseShellEventInfo extends AbstractModel
+{
+    /**
+     * @var string 进程名称
+     */
+    public $ProcessName;
+
+    /**
+     * @var string 进程路径
+     */
+    public $ProcessPath;
+
+    /**
+     * @var string 镜像id
+     */
+    public $ImageId;
+
+    /**
+     * @var string 容器id
+     */
+    public $ContainerId;
+
+    /**
+     * @var string 镜像名
+     */
+    public $ImageName;
+
+    /**
+     * @var string 容器名
+     */
+    public $ContainerName;
+
+    /**
+     * @var string 生成时间
+     */
+    public $FoundTime;
+
+    /**
+     * @var string 事件解决方案
+     */
+    public $Solution;
+
+    /**
+     * @var string 事件详细描述
+     */
+    public $Description;
+
+    /**
+     * @var string 状态，EVENT_UNDEAL:事件未处理
+    EVENT_DEALED:事件已经处理
+    EVENT_INGNORE：事件已经忽略
+    EVENT_ADD_WHITE：时间已经加白
+     */
+    public $Status;
+
+    /**
+     * @var string 事件id
+     */
+    public $EventId;
+
+    /**
+     * @var string 备注
+     */
+    public $Remark;
+
+    /**
+     * @var string 父进程名
+     */
+    public $PProcessName;
+
+    /**
+     * @var integer 事件数量
+     */
+    public $EventCount;
+
+    /**
+     * @var string 最近生成时间
+     */
+    public $LatestFoundTime;
+
+    /**
+     * @var string 目标地址
+     */
+    public $DstAddress;
+
+    /**
+     * @param string $ProcessName 进程名称
+     * @param string $ProcessPath 进程路径
+     * @param string $ImageId 镜像id
+     * @param string $ContainerId 容器id
+     * @param string $ImageName 镜像名
+     * @param string $ContainerName 容器名
+     * @param string $FoundTime 生成时间
+     * @param string $Solution 事件解决方案
+     * @param string $Description 事件详细描述
+     * @param string $Status 状态，EVENT_UNDEAL:事件未处理
+    EVENT_DEALED:事件已经处理
+    EVENT_INGNORE：事件已经忽略
+    EVENT_ADD_WHITE：时间已经加白
+     * @param string $EventId 事件id
+     * @param string $Remark 备注
+     * @param string $PProcessName 父进程名
+     * @param integer $EventCount 事件数量
+     * @param string $LatestFoundTime 最近生成时间
+     * @param string $DstAddress 目标地址
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
+            $this->ProcessName = $param["ProcessName"];
+        }
+
+        if (array_key_exists("ProcessPath",$param) and $param["ProcessPath"] !== null) {
+            $this->ProcessPath = $param["ProcessPath"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("ContainerId",$param) and $param["ContainerId"] !== null) {
+            $this->ContainerId = $param["ContainerId"];
+        }
+
+        if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
+            $this->ImageName = $param["ImageName"];
+        }
+
+        if (array_key_exists("ContainerName",$param) and $param["ContainerName"] !== null) {
+            $this->ContainerName = $param["ContainerName"];
+        }
+
+        if (array_key_exists("FoundTime",$param) and $param["FoundTime"] !== null) {
+            $this->FoundTime = $param["FoundTime"];
+        }
+
+        if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
+            $this->Solution = $param["Solution"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PProcessName",$param) and $param["PProcessName"] !== null) {
+            $this->PProcessName = $param["PProcessName"];
+        }
+
+        if (array_key_exists("EventCount",$param) and $param["EventCount"] !== null) {
+            $this->EventCount = $param["EventCount"];
+        }
+
+        if (array_key_exists("LatestFoundTime",$param) and $param["LatestFoundTime"] !== null) {
+            $this->LatestFoundTime = $param["LatestFoundTime"];
+        }
+
+        if (array_key_exists("DstAddress",$param) and $param["DstAddress"] !== null) {
+            $this->DstAddress = $param["DstAddress"];
+        }
+    }
+}

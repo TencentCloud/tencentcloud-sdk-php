@@ -78,6 +78,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskManagerSpec(float $TaskManagerSpec) 设置TaskManager规格
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClsLogsetId() 获取CLS日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClsLogsetId(string $ClsLogsetId) 设置CLS日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClsTopicId() 获取CLS日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClsTopicId(string $ClsTopicId) 设置CLS日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobConfig extends AbstractModel
 {
@@ -175,6 +183,18 @@ class JobConfig extends AbstractModel
     public $TaskManagerSpec;
 
     /**
+     * @var string CLS日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClsLogsetId;
+
+    /**
+     * @var string CLS日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClsTopicId;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,6 +223,10 @@ class JobConfig extends AbstractModel
      * @param float $JobManagerSpec JobManager规格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TaskManagerSpec TaskManager规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClsLogsetId CLS日志集ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClsTopicId CLS日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -290,6 +314,14 @@ class JobConfig extends AbstractModel
 
         if (array_key_exists("TaskManagerSpec",$param) and $param["TaskManagerSpec"] !== null) {
             $this->TaskManagerSpec = $param["TaskManagerSpec"];
+        }
+
+        if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
+            $this->ClsLogsetId = $param["ClsLogsetId"];
+        }
+
+        if (array_key_exists("ClsTopicId",$param) and $param["ClsTopicId"] !== null) {
+            $this->ClsTopicId = $param["ClsTopicId"];
         }
     }
 }

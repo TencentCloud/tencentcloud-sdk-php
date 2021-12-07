@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TrylockWorker请求参数结构体
  *
- * @method string getUserId() 获取游戏用户ID
- * @method void setUserId(string $UserId) 设置游戏用户ID
+ * @method string getUserId() 获取唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
+ * @method void setUserId(string $UserId) 设置唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
  * @method string getGameId() 获取游戏ID
  * @method void setGameId(string $GameId) 设置游戏ID
  * @method string getGameRegion() 获取游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等，如果不为空，优先按照该区域进行调度分配机器
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class TrylockWorkerRequest extends AbstractModel
 {
     /**
-     * @var string 游戏用户ID
+     * @var string 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      */
     public $UserId;
 
@@ -66,7 +66,7 @@ class TrylockWorkerRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @param string $UserId 游戏用户ID
+     * @param string $UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      * @param string $GameId 游戏ID
      * @param string $GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等，如果不为空，优先按照该区域进行调度分配机器
      * @param integer $SetNo 【废弃】资源池编号

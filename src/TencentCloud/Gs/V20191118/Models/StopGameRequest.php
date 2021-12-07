@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopGame请求参数结构体
  *
- * @method string getUserId() 获取游戏用户ID
- * @method void setUserId(string $UserId) 设置游戏用户ID
+ * @method string getUserId() 获取唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
+ * @method void setUserId(string $UserId) 设置唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
  * @method string getHostUserId() 获取【多人游戏】游戏主机用户ID
  * @method void setHostUserId(string $HostUserId) 设置【多人游戏】游戏主机用户ID
  */
 class StopGameRequest extends AbstractModel
 {
     /**
-     * @var string 游戏用户ID
+     * @var string 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      */
     public $UserId;
 
@@ -38,7 +38,7 @@ class StopGameRequest extends AbstractModel
     public $HostUserId;
 
     /**
-     * @param string $UserId 游戏用户ID
+     * @param string $UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      * @param string $HostUserId 【多人游戏】游戏主机用户ID
      */
     function __construct()

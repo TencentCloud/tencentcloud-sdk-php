@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetCheckMode返回参数结构体
  *
- * @method string getSetCheckResult() 获取“Succ"表示设置成功，"Failed"表示设置失败
- * @method void setSetCheckResult(string $SetCheckResult) 设置“Succ"表示设置成功，"Failed"表示设置失败
+ * @method string getSetCheckResult() 获取"Succ"表示设置成功，"Failed"表示设置失败
+ * @method void setSetCheckResult(string $SetCheckResult) 设置"Succ"表示设置成功，"Failed"表示设置失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class SetCheckModeResponse extends AbstractModel
 {
     /**
-     * @var string “Succ"表示设置成功，"Failed"表示设置失败
+     * @var string "Succ"表示设置成功，"Failed"表示设置失败
      */
     public $SetCheckResult;
 
@@ -38,7 +38,7 @@ class SetCheckModeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SetCheckResult “Succ"表示设置成功，"Failed"表示设置失败
+     * @param string $SetCheckResult "Succ"表示设置成功，"Failed"表示设置失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

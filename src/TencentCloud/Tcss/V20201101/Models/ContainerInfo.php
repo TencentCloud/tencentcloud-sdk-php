@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method string getHostName() 获取主机名称
  * @method void setHostName(string $HostName) 设置主机名称
+ * @method string getPublicIp() 获取外网ip
+ * @method void setPublicIp(string $PublicIp) 设置外网ip
  */
 class ContainerInfo extends AbstractModel
 {
@@ -129,6 +131,11 @@ class ContainerInfo extends AbstractModel
     public $HostName;
 
     /**
+     * @var string 外网ip
+     */
+    public $PublicIp;
+
+    /**
      * @param string $ContainerID 容器id
      * @param string $ContainerName 容器名称
      * @param string $Status 容器运行状态
@@ -144,6 +151,7 @@ class ContainerInfo extends AbstractModel
      * @param string $HostIP 主机ip
      * @param string $UpdateTime 更新时间
      * @param string $HostName 主机名称
+     * @param string $PublicIp 外网ip
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class ContainerInfo extends AbstractModel
 
         if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
             $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
+            $this->PublicIp = $param["PublicIp"];
         }
     }
 }

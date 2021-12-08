@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostIP(string $HostIP) 设置主机ip
  * @method string getProcessName() 获取进程名称
  * @method void setProcessName(string $ProcessName) 设置进程名称
+ * @method string getHostName() 获取主机名称
+ * @method void setHostName(string $HostName) 设置主机名称
+ * @method string getPublicIp() 获取外网ip
+ * @method void setPublicIp(string $PublicIp) 设置外网ip
  */
 class ProcessInfo extends AbstractModel
 {
@@ -94,6 +98,16 @@ class ProcessInfo extends AbstractModel
     public $ProcessName;
 
     /**
+     * @var string 主机名称
+     */
+    public $HostName;
+
+    /**
+     * @var string 外网ip
+     */
+    public $PublicIp;
+
+    /**
      * @param string $StartTime 进程启动时间
      * @param string $RunAs 运行用户
      * @param string $CmdLine 命令行参数
@@ -104,6 +118,8 @@ class ProcessInfo extends AbstractModel
      * @param string $HostID 主机id
      * @param string $HostIP 主机ip
      * @param string $ProcessName 进程名称
+     * @param string $HostName 主机名称
+     * @param string $PublicIp 外网ip
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class ProcessInfo extends AbstractModel
 
         if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
             $this->ProcessName = $param["ProcessName"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
+            $this->PublicIp = $param["PublicIp"];
         }
     }
 }

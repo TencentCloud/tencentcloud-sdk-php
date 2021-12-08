@@ -194,6 +194,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置地区ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSceneName() 获取场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSceneName(string $SceneName) 设置场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSceneServiceClass() 获取场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSceneServiceClass(string $SceneServiceClass) 设置场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSceneEmrVersion() 获取场景化EMR版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSceneEmrVersion(string $SceneEmrVersion) 设置场景化EMR版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDisplayName() 获取场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisplayName(string $DisplayName) 设置场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcName() 获取vpc name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcName(string $VpcName) 设置vpc name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubnetName() 获取subnet name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubnetName(string $SubnetName) 设置subnet name
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -405,6 +429,42 @@ class ClusterInstancesInfo extends AbstractModel
     public $Zone;
 
     /**
+     * @var string 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SceneName;
+
+    /**
+     * @var string 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SceneServiceClass;
+
+    /**
+     * @var string 场景化EMR版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SceneEmrVersion;
+
+    /**
+     * @var string 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisplayName;
+
+    /**
+     * @var string vpc name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcName;
+
+    /**
+     * @var string subnet name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubnetName;
+
+    /**
      * @param integer $Id ID号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
@@ -491,6 +551,18 @@ class ClusterInstancesInfo extends AbstractModel
      * @param integer $ProductId 集群版本Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 地区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SceneName 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SceneServiceClass 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SceneEmrVersion 场景化EMR版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DisplayName 场景化集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcName vpc name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubnetName subnet name
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -630,6 +702,30 @@ class ClusterInstancesInfo extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("SceneName",$param) and $param["SceneName"] !== null) {
+            $this->SceneName = $param["SceneName"];
+        }
+
+        if (array_key_exists("SceneServiceClass",$param) and $param["SceneServiceClass"] !== null) {
+            $this->SceneServiceClass = $param["SceneServiceClass"];
+        }
+
+        if (array_key_exists("SceneEmrVersion",$param) and $param["SceneEmrVersion"] !== null) {
+            $this->SceneEmrVersion = $param["SceneEmrVersion"];
+        }
+
+        if (array_key_exists("DisplayName",$param) and $param["DisplayName"] !== null) {
+            $this->DisplayName = $param["DisplayName"];
+        }
+
+        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
+            $this->VpcName = $param["VpcName"];
+        }
+
+        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
+            $this->SubnetName = $param["SubnetName"];
         }
     }
 }

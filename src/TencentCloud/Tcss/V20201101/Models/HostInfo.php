@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getHostID() 获取主机id
  * @method void setHostID(string $HostID) 设置主机id
- * @method string getHostIP() 获取主机ip
- * @method void setHostIP(string $HostIP) 设置主机ip
+ * @method string getHostIP() 获取主机ip即内网ip
+ * @method void setHostIP(string $HostIP) 设置主机ip即内网ip
  * @method string getHostName() 获取主机名称
  * @method void setHostName(string $HostName) 设置主机名称
  * @method string getGroup() 获取业务组
@@ -36,8 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageCnt(integer $ImageCnt) 设置镜像个数
  * @method integer getContainerCnt() 获取容器个数
  * @method void setContainerCnt(integer $ContainerCnt) 设置容器个数
- * @method string getStatus() 获取主机运行状态
- * @method void setStatus(string $Status) 设置主机运行状态
+ * @method string getStatus() 获取agent运行状态
+ * @method void setStatus(string $Status) 设置agent运行状态
+ * @method boolean getIsContainerd() 获取是否是Containerd
+ * @method void setIsContainerd(boolean $IsContainerd) 设置是否是Containerd
+ * @method string getMachineType() 获取主机来源
+ * @method void setMachineType(string $MachineType) 设置主机来源
+ * @method string getPublicIp() 获取外网ip
+ * @method void setPublicIp(string $PublicIp) 设置外网ip
+ * @method string getUuid() 获取主机uuid
+ * @method void setUuid(string $Uuid) 设置主机uuid
  */
 class HostInfo extends AbstractModel
 {
@@ -47,7 +55,7 @@ class HostInfo extends AbstractModel
     public $HostID;
 
     /**
-     * @var string 主机ip
+     * @var string 主机ip即内网ip
      */
     public $HostIP;
 
@@ -82,20 +90,44 @@ class HostInfo extends AbstractModel
     public $ContainerCnt;
 
     /**
-     * @var string 主机运行状态
+     * @var string agent运行状态
      */
     public $Status;
 
     /**
+     * @var boolean 是否是Containerd
+     */
+    public $IsContainerd;
+
+    /**
+     * @var string 主机来源
+     */
+    public $MachineType;
+
+    /**
+     * @var string 外网ip
+     */
+    public $PublicIp;
+
+    /**
+     * @var string 主机uuid
+     */
+    public $Uuid;
+
+    /**
      * @param string $HostID 主机id
-     * @param string $HostIP 主机ip
+     * @param string $HostIP 主机ip即内网ip
      * @param string $HostName 主机名称
      * @param string $Group 业务组
      * @param string $DockerVersion docker 版本
      * @param string $DockerFileSystemDriver docker 文件系统类型
      * @param integer $ImageCnt 镜像个数
      * @param integer $ContainerCnt 容器个数
-     * @param string $Status 主机运行状态
+     * @param string $Status agent运行状态
+     * @param boolean $IsContainerd 是否是Containerd
+     * @param string $MachineType 主机来源
+     * @param string $PublicIp 外网ip
+     * @param string $Uuid 主机uuid
      */
     function __construct()
     {
@@ -144,6 +176,22 @@ class HostInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("IsContainerd",$param) and $param["IsContainerd"] !== null) {
+            $this->IsContainerd = $param["IsContainerd"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
+            $this->PublicIp = $param["PublicIp"];
+        }
+
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
         }
     }
 }

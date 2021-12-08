@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenHost(string $ListenHost) 设置容器外监听地址
  * @method string getRunAs() 获取运行账号
  * @method void setRunAs(string $RunAs) 设置运行账号
+ * @method string getHostName() 获取主机名称
+ * @method void setHostName(string $HostName) 设置主机名称
+ * @method string getPublicIp() 获取外网ip
+ * @method void setPublicIp(string $PublicIp) 设置外网ip
  */
 class PortInfo extends AbstractModel
 {
@@ -108,6 +112,16 @@ class PortInfo extends AbstractModel
     public $RunAs;
 
     /**
+     * @var string 主机名称
+     */
+    public $HostName;
+
+    /**
+     * @var string 外网ip
+     */
+    public $PublicIp;
+
+    /**
      * @param string $Type 类型
      * @param string $PublicIP 对外ip
      * @param integer $PublicPort 主机端口
@@ -120,6 +134,8 @@ class PortInfo extends AbstractModel
      * @param string $ListenContainer 容器内监听地址
      * @param string $ListenHost 容器外监听地址
      * @param string $RunAs 运行账号
+     * @param string $HostName 主机名称
+     * @param string $PublicIp 外网ip
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class PortInfo extends AbstractModel
 
         if (array_key_exists("RunAs",$param) and $param["RunAs"] !== null) {
             $this->RunAs = $param["RunAs"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
+            $this->PublicIp = $param["PublicIp"];
         }
     }
 }

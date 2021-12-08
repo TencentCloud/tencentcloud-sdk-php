@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSpecCode() 获取售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
  * @method void setSpecCode(string $SpecCode) 设置售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
- * @method string getDBVersion() 获取PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
- * @method void setDBVersion(string $DBVersion) 设置PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
+ * @method string getDBVersion() 获取PostgreSQL主版本，目前支持：9.3、9.5、10、11、12、13以及9.3.5、9.5.4、10.4、11.8、12.4版本。
+ * @method void setDBVersion(string $DBVersion) 设置PostgreSQL主版本，目前支持：9.3、9.5、10、11、12、13以及9.3.5、9.5.4、10.4、11.8、12.4版本。
  * @method integer getStorage() 获取实例容量大小，单位：GB。
  * @method void setStorage(integer $Storage) 设置实例容量大小，单位：GB。
  * @method integer getInstanceCount() 获取一次性购买的实例数量。取值1-10。
@@ -71,7 +71,7 @@ class CreateInstancesRequest extends AbstractModel
     public $SpecCode;
 
     /**
-     * @var string PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
+     * @var string PostgreSQL主版本，目前支持：9.3、9.5、10、11、12、13以及9.3.5、9.5.4、10.4、11.8、12.4版本。
      */
     public $DBVersion;
 
@@ -172,7 +172,7 @@ class CreateInstancesRequest extends AbstractModel
 
     /**
      * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
-     * @param string $DBVersion PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4、11.8、12.4五种版本。
+     * @param string $DBVersion PostgreSQL主版本，目前支持：9.3、9.5、10、11、12、13以及9.3.5、9.5.4、10.4、11.8、12.4版本。
      * @param integer $Storage 实例容量大小，单位：GB。
      * @param integer $InstanceCount 一次性购买的实例数量。取值1-10。
      * @param integer $Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。

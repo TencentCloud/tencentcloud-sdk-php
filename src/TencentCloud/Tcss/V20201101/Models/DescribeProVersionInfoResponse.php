@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置专业版结束时间，补充购买时才不为空
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCoresCnt() 获取需购买的虚拟机核数
- * @method void setCoresCnt(integer $CoresCnt) 设置需购买的虚拟机核数
+ * @method integer getCoresCnt() 获取需购买的机器核数
+ * @method void setCoresCnt(integer $CoresCnt) 设置需购买的机器核数
  * @method integer getMaxPostPayCoresCnt() 获取弹性计费上限
  * @method void setMaxPostPayCoresCnt(integer $MaxPostPayCoresCnt) 设置弹性计费上限
  * @method string getResourceId() 获取资源ID
@@ -54,7 +54,7 @@ class DescribeProVersionInfoResponse extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 需购买的虚拟机核数
+     * @var integer 需购买的机器核数
      */
     public $CoresCnt;
 
@@ -79,7 +79,7 @@ class DescribeProVersionInfoResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 专业版结束时间，补充购买时才不为空
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CoresCnt 需购买的虚拟机核数
+     * @param integer $CoresCnt 需购买的机器核数
      * @param integer $MaxPostPayCoresCnt 弹性计费上限
      * @param string $ResourceId 资源ID
 注意：此字段可能返回 null，表示取不到有效值。

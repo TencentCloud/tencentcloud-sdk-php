@@ -50,14 +50,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageCnt(integer $ImageCnt) 设置镜像数
  * @method integer getContainerCnt() 获取容器数
  * @method void setContainerCnt(integer $ContainerCnt) 设置容器数
- * @method string getK8sMasterIP() 获取k8s ip
- * @method void setK8sMasterIP(string $K8sMasterIP) 设置k8s ip
+ * @method string getK8sMasterIP() 获取k8s IP
+ * @method void setK8sMasterIP(string $K8sMasterIP) 设置k8s IP
  * @method string getK8sVersion() 获取k8s version
  * @method void setK8sVersion(string $K8sVersion) 设置k8s version
  * @method string getKubeProxyVersion() 获取kube proxy
  * @method void setKubeProxyVersion(string $KubeProxyVersion) 设置kube proxy
- * @method string getStatus() 获取主机运行状态 offline,online,pause
- * @method void setStatus(string $Status) 设置主机运行状态 offline,online,pause
+ * @method string getStatus() 获取"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中
+ * @method void setStatus(string $Status) 设置"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中
+ * @method boolean getIsContainerd() 获取是否Containerd
+ * @method void setIsContainerd(boolean $IsContainerd) 设置是否Containerd
+ * @method string getMachineType() 获取主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
+ * @method void setMachineType(string $MachineType) 设置主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
+ * @method string getPublicIp() 获取外网ip
+ * @method void setPublicIp(string $PublicIp) 设置外网ip
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -139,7 +145,7 @@ class DescribeAssetHostDetailResponse extends AbstractModel
     public $ContainerCnt;
 
     /**
-     * @var string k8s ip
+     * @var string k8s IP
      */
     public $K8sMasterIP;
 
@@ -154,9 +160,24 @@ class DescribeAssetHostDetailResponse extends AbstractModel
     public $KubeProxyVersion;
 
     /**
-     * @var string 主机运行状态 offline,online,pause
+     * @var string "UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中
      */
     public $Status;
+
+    /**
+     * @var boolean 是否Containerd
+     */
+    public $IsContainerd;
+
+    /**
+     * @var string 主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
+     */
+    public $MachineType;
+
+    /**
+     * @var string 外网ip
+     */
+    public $PublicIp;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -179,10 +200,13 @@ class DescribeAssetHostDetailResponse extends AbstractModel
      * @param string $DockerRootDir docker root 目录
      * @param integer $ImageCnt 镜像数
      * @param integer $ContainerCnt 容器数
-     * @param string $K8sMasterIP k8s ip
+     * @param string $K8sMasterIP k8s IP
      * @param string $K8sVersion k8s version
      * @param string $KubeProxyVersion kube proxy
-     * @param string $Status 主机运行状态 offline,online,pause
+     * @param string $Status "UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中
+     * @param boolean $IsContainerd 是否Containerd
+     * @param string $MachineType 主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
+     * @param string $PublicIp 外网ip
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -272,6 +296,18 @@ class DescribeAssetHostDetailResponse extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("IsContainerd",$param) and $param["IsContainerd"] !== null) {
+            $this->IsContainerd = $param["IsContainerd"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
+            $this->PublicIp = $param["PublicIp"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParameter(string $Parameter) 设置服务命令行参数
  * @method string getContainerId() 获取容器id
  * @method void setContainerId(string $ContainerId) 设置容器id
+ * @method string getHostName() 获取主机名称
+ * @method void setHostName(string $HostName) 设置主机名称
+ * @method string getPublicIp() 获取外网ip
+ * @method void setPublicIp(string $PublicIp) 设置外网ip
  */
 class ServiceInfo extends AbstractModel
 {
@@ -157,6 +161,16 @@ class ServiceInfo extends AbstractModel
     public $ContainerId;
 
     /**
+     * @var string 主机名称
+     */
+    public $HostName;
+
+    /**
+     * @var string 外网ip
+     */
+    public $PublicIp;
+
+    /**
      * @param string $ServiceID 服务id
      * @param string $HostID 主机id
      * @param string $HostIP 主机ip
@@ -176,6 +190,8 @@ class ServiceInfo extends AbstractModel
      * @param string $Exe 执行文件
      * @param string $Parameter 服务命令行参数
      * @param string $ContainerId 容器id
+     * @param string $HostName 主机名称
+     * @param string $PublicIp 外网ip
      */
     function __construct()
     {
@@ -264,6 +280,14 @@ class ServiceInfo extends AbstractModel
 
         if (array_key_exists("ContainerId",$param) and $param["ContainerId"] !== null) {
             $this->ContainerId = $param["ContainerId"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
+            $this->PublicIp = $param["PublicIp"];
         }
     }
 }

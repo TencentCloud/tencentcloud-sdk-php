@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaceMorphOutput(FaceMorphOutput $FaceMorphOutput) 设置人像渐变输出的结果信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getJobStatusCode() 获取当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobStatusCode(integer $JobStatusCode) 设置当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,6 +47,12 @@ class QueryFaceMorphJobResponse extends AbstractModel
     public $FaceMorphOutput;
 
     /**
+     * @var integer 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobStatusCode;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -50,6 +60,8 @@ class QueryFaceMorphJobResponse extends AbstractModel
     /**
      * @param string $JobStatus 当前任务状态：排队中、处理中、处理失败或者处理完成
      * @param FaceMorphOutput $FaceMorphOutput 人像渐变输出的结果信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $JobStatusCode 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -73,6 +85,10 @@ class QueryFaceMorphJobResponse extends AbstractModel
         if (array_key_exists("FaceMorphOutput",$param) and $param["FaceMorphOutput"] !== null) {
             $this->FaceMorphOutput = new FaceMorphOutput();
             $this->FaceMorphOutput->deserialize($param["FaceMorphOutput"]);
+        }
+
+        if (array_key_exists("JobStatusCode",$param) and $param["JobStatusCode"] !== null) {
+            $this->JobStatusCode = $param["JobStatusCode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

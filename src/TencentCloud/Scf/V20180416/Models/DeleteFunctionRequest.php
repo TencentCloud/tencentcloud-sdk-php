@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) 设置要删除的函数名称
  * @method string getNamespace() 获取函数所属命名空间
  * @method void setNamespace(string $Namespace) 设置函数所属命名空间
- * @method string getQualifier() 获取函数版本
- * @method void setQualifier(string $Qualifier) 设置函数版本
+ * @method string getQualifier() 获取函数版本，如果删除版本的话传入版本号，不传入改字段删除函数下的所有版本
+ * @method void setQualifier(string $Qualifier) 设置函数版本，如果删除版本的话传入版本号，不传入改字段删除函数下的所有版本
  */
 class DeleteFunctionRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteFunctionRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 函数版本
+     * @var string 函数版本，如果删除版本的话传入版本号，不传入改字段删除函数下的所有版本
      */
     public $Qualifier;
 
     /**
      * @param string $FunctionName 要删除的函数名称
      * @param string $Namespace 函数所属命名空间
-     * @param string $Qualifier 函数版本
+     * @param string $Qualifier 函数版本，如果删除版本的话传入版本号，不传入改字段删除函数下的所有版本
      */
     function __construct()
     {

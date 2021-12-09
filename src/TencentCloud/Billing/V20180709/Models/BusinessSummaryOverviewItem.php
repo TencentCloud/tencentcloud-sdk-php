@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 按产品汇总产品详情
  *
- * @method string getBusinessCode() 获取产品码
+ * @method string getBusinessCode() 获取产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBusinessCode(string $BusinessCode) 设置产品码
+ * @method void setBusinessCode(string $BusinessCode) 设置产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessCodeName() 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：云产品大类，如云服务器CVM、云数据库MySQL
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class BusinessSummaryOverviewItem extends AbstractModel
 {
     /**
-     * @var string 产品码
+     * @var string 产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCode;
@@ -90,7 +90,7 @@ class BusinessSummaryOverviewItem extends AbstractModel
     public $TotalCost;
 
     /**
-     * @param string $BusinessCode 产品码
+     * @param string $BusinessCode 产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @param string $RealTotalCost 实际花费

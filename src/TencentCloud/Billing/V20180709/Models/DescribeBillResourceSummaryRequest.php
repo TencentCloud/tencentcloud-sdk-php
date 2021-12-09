@@ -62,6 +62,7 @@ use TencentCloud\Common\AbstractModel;
 按量计费冲正
 按量计费冲正
 按量计费冲正
+包年包月转按量
  * @method void setActionType(string $ActionType) 设置查询交易类型，如下：
 包年包月新购
 包年包月续费
@@ -92,13 +93,14 @@ use TencentCloud\Common\AbstractModel;
 按量计费冲正
 按量计费冲正
 按量计费冲正
+包年包月转按量
  * @method string getResourceId() 获取查询指定资源信息
  * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
  * @method string getPayMode() 获取付费模式 prePay/postPay
  * @method void setPayMode(string $PayMode) 设置付费模式 prePay/postPay
- * @method string getBusinessCode() 获取商品名称代码
+ * @method string getBusinessCode() 获取产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
- * @method void setBusinessCode(string $BusinessCode) 设置商品名称代码
+ * @method void setBusinessCode(string $BusinessCode) 设置产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
@@ -160,6 +162,7 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 按量计费冲正
 按量计费冲正
 按量计费冲正
+包年包月转按量
      */
     public $ActionType;
 
@@ -174,7 +177,7 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string 商品名称代码
+     * @var string 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      */
     public $BusinessCode;
@@ -216,9 +219,10 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 按量计费冲正
 按量计费冲正
 按量计费冲正
+包年包月转按量
      * @param string $ResourceId 查询指定资源信息
      * @param string $PayMode 付费模式 prePay/postPay
-     * @param string $BusinessCode 商品名称代码
+     * @param string $BusinessCode 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      */
     function __construct()

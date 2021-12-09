@@ -37,6 +37,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\DescribeRelatedIngressesResponse DescribeRelatedIngresses(Models\DescribeRelatedIngressesRequest $req) 查询应用关联的 Ingress 规则列表
  * @method Models\GenerateApplicationPackageDownloadUrlResponse GenerateApplicationPackageDownloadUrl(Models\GenerateApplicationPackageDownloadUrlRequest $req) 生成应用程序包预签名下载链接
  * @method Models\ModifyApplicationInfoResponse ModifyApplicationInfo(Models\ModifyApplicationInfoRequest $req) 修改应用基本信息
+ * @method Models\ModifyApplicationReplicasResponse ModifyApplicationReplicas(Models\ModifyApplicationReplicasRequest $req) 修改应用实例数量
  * @method Models\ModifyEnvironmentResponse ModifyEnvironment(Models\ModifyEnvironmentRequest $req) 编辑环境
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 创建或者更新 Ingress 规则
  * @method Models\RestartApplicationPodResponse RestartApplicationPod(Models\RestartApplicationPodRequest $req) 重启应用实例

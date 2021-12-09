@@ -21,17 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * 智能封面结果信息
  *
  * @method array getCoverSet() 获取智能封面列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 CoverSetFileUrl 对应的文件中获取。
  * @method void setCoverSet(array $CoverSet) 设置智能封面列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 CoverSetFileUrl 对应的文件中获取。
+ * @method string getCoverSetFileUrl() 获取智能封面列表文件 URL。文件的内容为 JSON，数据结构与 CoverSet 字段一致。 （文件不会永久存储，到达 CoverSetFileUrlExpireTime 时间点后文件将被删除）。
+ * @method void setCoverSetFileUrl(string $CoverSetFileUrl) 设置智能封面列表文件 URL。文件的内容为 JSON，数据结构与 CoverSet 字段一致。 （文件不会永久存储，到达 CoverSetFileUrlExpireTime 时间点后文件将被删除）。
+ * @method string getCoverSetFileUrlExpireTime() 获取智能封面列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setCoverSetFileUrlExpireTime(string $CoverSetFileUrlExpireTime) 设置智能封面列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class AiAnalysisTaskCoverOutput extends AbstractModel
 {
     /**
      * @var array 智能封面列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 CoverSetFileUrl 对应的文件中获取。
      */
     public $CoverSet;
 
     /**
+     * @var string 智能封面列表文件 URL。文件的内容为 JSON，数据结构与 CoverSet 字段一致。 （文件不会永久存储，到达 CoverSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public $CoverSetFileUrl;
+
+    /**
+     * @var string 智能封面列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $CoverSetFileUrlExpireTime;
+
+    /**
      * @param array $CoverSet 智能封面列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 CoverSetFileUrl 对应的文件中获取。
+     * @param string $CoverSetFileUrl 智能封面列表文件 URL。文件的内容为 JSON，数据结构与 CoverSet 字段一致。 （文件不会永久存储，到达 CoverSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param string $CoverSetFileUrlExpireTime 智能封面列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {
@@ -53,6 +73,14 @@ class AiAnalysisTaskCoverOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CoverSet, $obj);
             }
+        }
+
+        if (array_key_exists("CoverSetFileUrl",$param) and $param["CoverSetFileUrl"] !== null) {
+            $this->CoverSetFileUrl = $param["CoverSetFileUrl"];
+        }
+
+        if (array_key_exists("CoverSetFileUrlExpireTime",$param) and $param["CoverSetFileUrlExpireTime"] !== null) {
+            $this->CoverSetFileUrlExpireTime = $param["CoverSetFileUrlExpireTime"];
         }
     }
 }

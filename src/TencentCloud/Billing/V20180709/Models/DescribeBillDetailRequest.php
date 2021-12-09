@@ -42,13 +42,73 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置付费模式 prePay/postPay
  * @method string getResourceId() 获取查询指定资源信息
  * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
- * @method string getActionType() 获取查询交易类型。如 按量计费日结，按量计费小时结 等
- * @method void setActionType(string $ActionType) 设置查询交易类型。如 按量计费日结，按量计费小时结 等
+ * @method string getActionType() 获取查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+包年包月转按量
+ * @method void setActionType(string $ActionType) 设置查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+包年包月转按量
  * @method integer getProjectId() 获取项目ID:资源所属项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID:资源所属项目ID
- * @method string getBusinessCode() 获取商品名称代码
+ * @method string getBusinessCode() 获取产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
- * @method void setBusinessCode(string $BusinessCode) 设置商品名称代码
+ * @method void setBusinessCode(string $BusinessCode) 设置产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
  */
 class DescribeBillDetailRequest extends AbstractModel
@@ -105,7 +165,37 @@ class DescribeBillDetailRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 查询交易类型。如 按量计费日结，按量计费小时结 等
+     * @var string 查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+包年包月转按量
      */
     public $ActionType;
 
@@ -115,7 +205,7 @@ class DescribeBillDetailRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string 商品名称代码
+     * @var string 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      */
     public $BusinessCode;
@@ -132,9 +222,39 @@ class DescribeBillDetailRequest extends AbstractModel
      * @param string $ProductCode 已废弃参数，未开放
      * @param string $PayMode 付费模式 prePay/postPay
      * @param string $ResourceId 查询指定资源信息
-     * @param string $ActionType 查询交易类型。如 按量计费日结，按量计费小时结 等
+     * @param string $ActionType 查询交易类型，如下：
+包年包月新购
+包年包月续费
+包年包月配置变更
+包年包月退款
+按量计费扣费
+按量计费小时结
+按量计费日结
+按量计费月结
+线下项目扣费
+线下产品扣费
+调账扣费
+调账补偿
+竞价实例小时结
+线下项目调账补偿
+线下产品调账补偿
+优惠扣费
+优惠补偿
+按量计费迁入资源
+按量计费迁出资源
+包年包月迁入资源
+包年包月迁出资源
+预付费用
+小时费用
+预留实例退款
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+按量计费冲正
+包年包月转按量
      * @param integer $ProjectId 项目ID:资源所属项目ID
-     * @param string $BusinessCode 商品名称代码
+     * @param string $BusinessCode 产品名称代码
 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
      */
     function __construct()

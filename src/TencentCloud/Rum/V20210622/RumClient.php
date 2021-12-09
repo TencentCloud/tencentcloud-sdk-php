@@ -24,8 +24,10 @@ use TencentCloud\Rum\V20210622\Models as Models;
 
 /**
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 创建项目（归属于某个团队）
+ * @method Models\DescribeDataEventUrlResponse DescribeDataEventUrl(Models\DescribeDataEventUrlRequest $req) 获取DescribeDataEventUrl信息
  * @method Models\DescribeDataLogUrlStatisticsResponse DescribeDataLogUrlStatistics(Models\DescribeDataLogUrlStatisticsRequest $req) 获取LogUrlStatistics信息
  * @method Models\DescribeDataPerformancePageResponse DescribeDataPerformancePage(Models\DescribeDataPerformancePageRequest $req) 获取PerformancePage信息
+ * @method Models\DescribeDataPvUrlStatisticsResponse DescribeDataPvUrlStatistics(Models\DescribeDataPvUrlStatisticsRequest $req) 获取DescribeDataPvUrlStatistics信息
  * @method Models\DescribeErrorResponse DescribeError(Models\DescribeErrorRequest $req) 获取首页错误信息
  * @method Models\DescribeLogListResponse DescribeLogList(Models\DescribeLogListRequest $req) 获取项目下的日志列表（实例创建的项目下的日志列表）
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) 获取项目列表（实例创建的团队下的项目列表）

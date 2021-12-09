@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultDetail(array $ResultDetail) 设置识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getAudioDuration() 获取音频时长(秒)。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioDuration(float $AudioDuration) 设置音频时长(秒)。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskStatus extends AbstractModel
 {
@@ -69,12 +73,20 @@ class TaskStatus extends AbstractModel
     public $ResultDetail;
 
     /**
+     * @var float 音频时长(秒)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AudioDuration;
+
+    /**
      * @param integer $TaskId 任务标识。
      * @param integer $Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
      * @param string $StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
      * @param string $Result 识别结果。
      * @param string $ErrorMsg 失败原因说明。
      * @param array $ResultDetail 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $AudioDuration 音频时长(秒)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -117,6 +129,10 @@ class TaskStatus extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResultDetail, $obj);
             }
+        }
+
+        if (array_key_exists("AudioDuration",$param) and $param["AudioDuration"] !== null) {
+            $this->AudioDuration = $param["AudioDuration"];
         }
     }
 }

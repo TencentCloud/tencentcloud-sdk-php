@@ -107,15 +107,16 @@ use TencentCloud\Vod\V20180717\Models as Models;
     3. CDN 日志下载链接的有效期为24小时。
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) 根据视频内容智能识别模板唯一标识，获取视频内容智能识别模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容智能识别模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
  * @method Models\DescribeDailyMediaPlayStatResponse DescribeDailyMediaPlayStat(Models\DescribeDailyMediaPlayStatRequest $req) 该接口用于查询指定日期范围内每天的播放统计数据。
-* 可以查询最近30天的播放统计数据。
+* 可以查询最近一年的播放统计数据。
+* 结束日期和起始日期的时间跨度最大为90天。
  * @method Models\DescribeDailyMostPlayedStatResponse DescribeDailyMostPlayedStat(Models\DescribeDailyMostPlayedStatRequest $req) 该接口用于查询每日播放Top100 的媒体文件的播放统计数据。
-* 可以查询最近30天的播放统计数据。
+* 可以查询最近一年的播放统计数据。
 * 可以按播放次数或者播放流量查询。
 * 播放次数统计说明：
     1. HLS 文件：访问 M3U8 文件时统计播放次数；访问 TS 文件不统计播放次数。
     2. 其它文件（如 MP4 文件）：播放请求带有 range 参数且 range 的 start 参数不等于0时不统计播放次数，其它情况统计播放次数。
  * @method Models\DescribeDailyPlayStatFileListResponse DescribeDailyPlayStatFileList(Models\DescribeDailyPlayStatFileListRequest $req) 该接口用于查询播放统计文件的下载地址。
-* 可以查询最近30天的播放统计文件下载地址。
+* 可以查询最近一年的播放统计文件下载地址，查询的起始日期和结束日期的时间跨度不超过90天。
 * 云点播每天对前一天的 CDN 请求日志进行分析处理，生成播放统计文件。
 * 播放统计文件内容包含媒体文件的播放次数、播放流量等统计信息。
 * 播放次数统计说明：

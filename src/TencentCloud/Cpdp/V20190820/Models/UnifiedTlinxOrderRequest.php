@@ -60,6 +60,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayName(string $PayName) 设置付款方式名称(当PayTag为Diy时，PayName不能为空)
  * @method string getRoyalty() 获取0-不分账，1-需分账。为1时标记为待分账订单，待分账订单不会进行清算。不传默认为不分账。
  * @method void setRoyalty(string $Royalty) 设置0-不分账，1-需分账。为1时标记为待分账订单，待分账订单不会进行清算。不传默认为不分账。
+ * @method string getJsapi() 获取小程序支付参数：填默认值 1
+ * @method void setJsapi(string $Jsapi) 设置小程序支付参数：填默认值 1
+ * @method string getSubAppId() 获取小程序支付参数：
+当前调起支付的小程序APPID
+ * @method void setSubAppId(string $SubAppId) 设置小程序支付参数：
+当前调起支付的小程序APPID
+ * @method string getSubOpenId() 获取小程序支付参数:
+用户在子商户appid下的唯一标识。
+ * @method void setSubOpenId(string $SubOpenId) 设置小程序支付参数:
+用户在子商户appid下的唯一标识。
  */
 class UnifiedTlinxOrderRequest extends AbstractModel
 {
@@ -164,6 +174,23 @@ class UnifiedTlinxOrderRequest extends AbstractModel
     public $Royalty;
 
     /**
+     * @var string 小程序支付参数：填默认值 1
+     */
+    public $Jsapi;
+
+    /**
+     * @var string 小程序支付参数：
+当前调起支付的小程序APPID
+     */
+    public $SubAppId;
+
+    /**
+     * @var string 小程序支付参数:
+用户在子商户appid下的唯一标识。
+     */
+    public $SubOpenId;
+
+    /**
      * @param string $DeveloperNo 开发者流水号
      * @param string $OpenId 收单系统分配的开放ID
      * @param string $NotifyUrl 交易结果异步通知url地址
@@ -184,6 +211,11 @@ class UnifiedTlinxOrderRequest extends AbstractModel
      * @param string $DiscountAmount 折扣金额（以分为单位，没有小数点）
      * @param string $PayName 付款方式名称(当PayTag为Diy时，PayName不能为空)
      * @param string $Royalty 0-不分账，1-需分账。为1时标记为待分账订单，待分账订单不会进行清算。不传默认为不分账。
+     * @param string $Jsapi 小程序支付参数：填默认值 1
+     * @param string $SubAppId 小程序支付参数：
+当前调起支付的小程序APPID
+     * @param string $SubOpenId 小程序支付参数:
+用户在子商户appid下的唯一标识。
      */
     function __construct()
     {
@@ -276,6 +308,18 @@ class UnifiedTlinxOrderRequest extends AbstractModel
 
         if (array_key_exists("Royalty",$param) and $param["Royalty"] !== null) {
             $this->Royalty = $param["Royalty"];
+        }
+
+        if (array_key_exists("Jsapi",$param) and $param["Jsapi"] !== null) {
+            $this->Jsapi = $param["Jsapi"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("SubOpenId",$param) and $param["SubOpenId"] !== null) {
+            $this->SubOpenId = $param["SubOpenId"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTimeRange() 获取只支持6和12两个值
  * @method void setTimeRange(integer $TimeRange) 设置只支持6和12两个值
- * @method string getBusinessCode() 获取产品编码
- * @method void setBusinessCode(string $BusinessCode) 设置产品编码
+ * @method string getBusinessCode() 获取产品名称代码
+ * @method void setBusinessCode(string $BusinessCode) 设置产品名称代码
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method integer getRegionId() 获取地域ID
@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置付费模式，可选prePay和postPay
  * @method string getResourceKeyword() 获取资源关键字
  * @method void setResourceKeyword(string $ResourceKeyword) 设置资源关键字
- * @method array getBusinessCodes() 获取产品编码
- * @method void setBusinessCodes(array $BusinessCodes) 设置产品编码
- * @method array getProductCodes() 获取子产品编码
- * @method void setProductCodes(array $ProductCodes) 设置子产品编码
+ * @method array getBusinessCodes() 获取产品名称代码
+ * @method void setBusinessCodes(array $BusinessCodes) 设置产品名称代码
+ * @method array getProductCodes() 获取子产品名称代码
+ * @method void setProductCodes(array $ProductCodes) 设置子产品名称代码
  * @method array getRegionIds() 获取地域ID
  * @method void setRegionIds(array $RegionIds) 设置地域ID
  * @method array getProjectIds() 获取项目ID
@@ -67,7 +67,7 @@ class Conditions extends AbstractModel
     public $TimeRange;
 
     /**
-     * @var string 产品编码
+     * @var string 产品名称代码
      */
     public $BusinessCode;
 
@@ -92,12 +92,12 @@ class Conditions extends AbstractModel
     public $ResourceKeyword;
 
     /**
-     * @var array 产品编码
+     * @var array 产品名称代码
      */
     public $BusinessCodes;
 
     /**
-     * @var array 子产品编码
+     * @var array 子产品名称代码
      */
     public $ProductCodes;
 
@@ -158,13 +158,13 @@ class Conditions extends AbstractModel
 
     /**
      * @param integer $TimeRange 只支持6和12两个值
-     * @param string $BusinessCode 产品编码
+     * @param string $BusinessCode 产品名称代码
      * @param integer $ProjectId 项目ID
      * @param integer $RegionId 地域ID
      * @param string $PayMode 付费模式，可选prePay和postPay
      * @param string $ResourceKeyword 资源关键字
-     * @param array $BusinessCodes 产品编码
-     * @param array $ProductCodes 子产品编码
+     * @param array $BusinessCodes 产品名称代码
+     * @param array $ProductCodes 子产品名称代码
      * @param array $RegionIds 地域ID
      * @param array $ProjectIds 项目ID
      * @param array $PayModes 付费模式，可选prePay和postPay

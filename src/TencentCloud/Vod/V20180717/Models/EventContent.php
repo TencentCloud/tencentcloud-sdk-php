@@ -110,6 +110,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent) 设置微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RestoreMediaTask getRestoreMediaCompleteEvent() 获取视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) 设置视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventContent extends AbstractModel
 {
@@ -223,6 +227,12 @@ class EventContent extends AbstractModel
     public $WechatMiniProgramPublishCompleteEvent;
 
     /**
+     * @var RestoreMediaTask 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RestoreMediaCompleteEvent;
+
+    /**
      * @param string $EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      * @param string $EventType <b>支持事件类型：</b>
 <li>NewFileUpload：视频上传完成；</li>
@@ -267,6 +277,8 @@ class EventContent extends AbstractModel
      * @param WechatPublishTask $WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RestoreMediaTask $RestoreMediaCompleteEvent 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -358,6 +370,11 @@ class EventContent extends AbstractModel
         if (array_key_exists("WechatMiniProgramPublishCompleteEvent",$param) and $param["WechatMiniProgramPublishCompleteEvent"] !== null) {
             $this->WechatMiniProgramPublishCompleteEvent = new WechatMiniProgramPublishTask();
             $this->WechatMiniProgramPublishCompleteEvent->deserialize($param["WechatMiniProgramPublishCompleteEvent"]);
+        }
+
+        if (array_key_exists("RestoreMediaCompleteEvent",$param) and $param["RestoreMediaCompleteEvent"] !== null) {
+            $this->RestoreMediaCompleteEvent = new RestoreMediaTask();
+            $this->RestoreMediaCompleteEvent->deserialize($param["RestoreMediaCompleteEvent"]);
         }
     }
 }

@@ -76,6 +76,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTradeQrcode(string $TradeQrcode) 设置二维码字符串
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWechatAppId() 获取微信返回调起小程序/原生JS支付的appid参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWechatAppId(string $WechatAppId) 设置微信返回调起小程序/原生JS支付的appid参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWechatTimeStamp() 获取微信返回调起小程序/原生JS支付的timeStamp参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWechatTimeStamp(string $WechatTimeStamp) 设置微信返回调起小程序/原生JS支付的timeStamp参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWechatNonceStr() 获取微信返回调起小程序/原生JS支付的nonceStr参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWechatNonceStr(string $WechatNonceStr) 设置微信返回调起小程序/原生JS支付的nonceStr参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWechatSignType() 获取微信返回调起小程序/原生JS支付的signType参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWechatSignType(string $WechatSignType) 设置微信返回调起小程序/原生JS支付的signType参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWechatPackage() 获取微信返回调起小程序/原生JS支付的package参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWechatPackage(string $WechatPackage) 设置微信返回调起小程序/原生JS支付的package参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWechatPaySign() 获取微信返回调起小程序/原生JS支付的paySign参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWechatPaySign(string $WechatPaySign) 设置微信返回调起小程序/原生JS支付的paySign参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PayOrderResult extends AbstractModel
 {
@@ -164,6 +188,42 @@ class PayOrderResult extends AbstractModel
     public $TradeQrcode;
 
     /**
+     * @var string 微信返回调起小程序/原生JS支付的appid参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WechatAppId;
+
+    /**
+     * @var string 微信返回调起小程序/原生JS支付的timeStamp参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WechatTimeStamp;
+
+    /**
+     * @var string 微信返回调起小程序/原生JS支付的nonceStr参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WechatNonceStr;
+
+    /**
+     * @var string 微信返回调起小程序/原生JS支付的signType参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WechatSignType;
+
+    /**
+     * @var string 微信返回调起小程序/原生JS支付的package参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WechatPackage;
+
+    /**
+     * @var string 微信返回调起小程序/原生JS支付的paySign参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WechatPaySign;
+
+    /**
      * @param string $OrderNo 付款订单号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeveloperNo 开发者流水号
@@ -191,6 +251,18 @@ class PayOrderResult extends AbstractModel
      * @param string $OrderCurrency 币种代码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TradeQrcode 二维码字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WechatAppId 微信返回调起小程序/原生JS支付的appid参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WechatTimeStamp 微信返回调起小程序/原生JS支付的timeStamp参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WechatNonceStr 微信返回调起小程序/原生JS支付的nonceStr参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WechatSignType 微信返回调起小程序/原生JS支付的signType参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WechatPackage 微信返回调起小程序/原生JS支付的package参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WechatPaySign 微信返回调起小程序/原生JS支付的paySign参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +332,30 @@ class PayOrderResult extends AbstractModel
 
         if (array_key_exists("TradeQrcode",$param) and $param["TradeQrcode"] !== null) {
             $this->TradeQrcode = $param["TradeQrcode"];
+        }
+
+        if (array_key_exists("WechatAppId",$param) and $param["WechatAppId"] !== null) {
+            $this->WechatAppId = $param["WechatAppId"];
+        }
+
+        if (array_key_exists("WechatTimeStamp",$param) and $param["WechatTimeStamp"] !== null) {
+            $this->WechatTimeStamp = $param["WechatTimeStamp"];
+        }
+
+        if (array_key_exists("WechatNonceStr",$param) and $param["WechatNonceStr"] !== null) {
+            $this->WechatNonceStr = $param["WechatNonceStr"];
+        }
+
+        if (array_key_exists("WechatSignType",$param) and $param["WechatSignType"] !== null) {
+            $this->WechatSignType = $param["WechatSignType"];
+        }
+
+        if (array_key_exists("WechatPackage",$param) and $param["WechatPackage"] !== null) {
+            $this->WechatPackage = $param["WechatPackage"];
+        }
+
+        if (array_key_exists("WechatPaySign",$param) and $param["WechatPaySign"] !== null) {
+            $this->WechatPaySign = $param["WechatPaySign"];
         }
     }
 }

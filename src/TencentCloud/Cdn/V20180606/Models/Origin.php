@@ -129,6 +129,10 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathBasedOrigin(array $PathBasedOrigin) 设置分路径回源配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AdvanceHttps getAdvanceHttps() 获取HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvanceHttps(AdvanceHttps $AdvanceHttps) 设置HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Origin extends AbstractModel
 {
@@ -228,6 +232,12 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
     public $PathBasedOrigin;
 
     /**
+     * @var AdvanceHttps HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvanceHttps;
+
+    /**
      * @param array $Origins 主源站列表
 修改源站时，需要同时填充对应的 OriginType
 注意：此字段可能返回 null，表示取不到有效值。
@@ -278,6 +288,8 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
      * @param array $PathRules 回源路径重写规则配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PathBasedOrigin 分路径回源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvanceHttps $AdvanceHttps HTTPS回源高级配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -345,6 +357,11 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
                 $obj->deserialize($value);
                 array_push($this->PathBasedOrigin, $obj);
             }
+        }
+
+        if (array_key_exists("AdvanceHttps",$param) and $param["AdvanceHttps"] !== null) {
+            $this->AdvanceHttps = new AdvanceHttps();
+            $this->AdvanceHttps->deserialize($param["AdvanceHttps"]);
         }
     }
 }

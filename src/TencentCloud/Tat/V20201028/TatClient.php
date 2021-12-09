@@ -23,6 +23,10 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tat\V20201028\Models as Models;
 
 /**
+ * @method Models\CancelInvocationResponse CancelInvocation(Models\CancelInvocationRequest $req) 取消一台或多台CVM实例执行的命令
+
+* 如果命令还未下发到agent，任务状态处于处于PENDING、DELIVERING、DELIVER_DELAYED，取消后任务状态是CANCELLED
+* 如果命令已下发到agent，任务状态处于RUNNING， 取消后任务状态是TERMINATED
  * @method Models\CreateCommandResponse CreateCommand(Models\CreateCommandRequest $req) 此接口用于创建命令。
  * @method Models\CreateInvokerResponse CreateInvoker(Models\CreateInvokerRequest $req) 此接口用于创建执行器。
  * @method Models\DeleteCommandResponse DeleteCommand(Models\DeleteCommandRequest $req) 此接口用于删除命令。

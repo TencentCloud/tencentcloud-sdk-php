@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPayerUin() 获取支付者uin
  * @method void setPayerUin(string $PayerUin) 设置支付者uin
- * @method string getBusinessCodeName() 获取业务名称
- * @method void setBusinessCodeName(string $BusinessCodeName) 设置业务名称
- * @method string getProductCodeName() 获取产品名称
- * @method void setProductCodeName(string $ProductCodeName) 设置产品名称
+ * @method string getBusinessCodeName() 获取产品名称
+ * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称
+ * @method string getProductCodeName() 获取子产品名称
+ * @method void setProductCodeName(string $ProductCodeName) 设置子产品名称
  * @method string getPayModeName() 获取计费模式名称
  * @method void setPayModeName(string $PayModeName) 设置计费模式名称
  * @method string getProjectName() 获取项目名称
@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFeeEndTime(string $FeeEndTime) 设置费用结束时间
  * @method array getComponentSet() 获取组件明细
  * @method void setComponentSet(array $ComponentSet) 设置组件明细
- * @method string getProductCode() 获取产品代码
- * @method void setProductCode(string $ProductCode) 设置产品代码
+ * @method string getProductCode() 获取子产品名称代码
+ * @method void setProductCode(string $ProductCode) 设置子产品名称代码
  */
 class CostDetail extends AbstractModel
 {
@@ -63,12 +63,12 @@ class CostDetail extends AbstractModel
     public $PayerUin;
 
     /**
-     * @var string 业务名称
+     * @var string 产品名称
      */
     public $BusinessCodeName;
 
     /**
-     * @var string 产品名称
+     * @var string 子产品名称
      */
     public $ProductCodeName;
 
@@ -134,14 +134,14 @@ class CostDetail extends AbstractModel
     public $ComponentSet;
 
     /**
-     * @var string 产品代码
+     * @var string 子产品名称代码
      */
     public $ProductCode;
 
     /**
      * @param string $PayerUin 支付者uin
-     * @param string $BusinessCodeName 业务名称
-     * @param string $ProductCodeName 产品名称
+     * @param string $BusinessCodeName 产品名称
+     * @param string $ProductCodeName 子产品名称
      * @param string $PayModeName 计费模式名称
      * @param string $ProjectName 项目名称
      * @param string $RegionName 区域名称
@@ -155,7 +155,7 @@ class CostDetail extends AbstractModel
      * @param string $FeeBeginTime 费用开始时间
      * @param string $FeeEndTime 费用结束时间
      * @param array $ComponentSet 组件明细
-     * @param string $ProductCode 产品代码
+     * @param string $ProductCode 子产品名称代码
      */
     function __construct()
     {

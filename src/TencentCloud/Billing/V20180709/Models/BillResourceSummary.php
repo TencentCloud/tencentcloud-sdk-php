@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusinessCodeName() 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：云产品大类，如云服务器CVM、云数据库MySQL
- * @method string getProductCodeName() 获取子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
- * @method void setProductCodeName(string $ProductCodeName) 设置子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+ * @method string getProductCodeName() 获取子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+ * @method void setProductCodeName(string $ProductCodeName) 设置子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
  * @method string getPayModeName() 获取计费模式：包年包月和按量计费
  * @method void setPayModeName(string $PayModeName) 设置计费模式：包年包月和按量计费
  * @method string getProjectName() 获取项目
@@ -84,10 +84,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) 设置资源所有者uin,无值则返回"-"
  * @method string getOperateUin() 获取操作者uin,无值则返回"-"
  * @method void setOperateUin(string $OperateUin) 设置操作者uin,无值则返回"-"
- * @method string getBusinessCode() 获取商品名称代码
- * @method void setBusinessCode(string $BusinessCode) 设置商品名称代码
- * @method string getProductCode() 获取子商品名称代码
- * @method void setProductCode(string $ProductCode) 设置子商品名称代码
+ * @method string getBusinessCode() 获取产品名称代码
+ * @method void setBusinessCode(string $BusinessCode) 设置产品名称代码
+ * @method string getProductCode() 获取子产品名称代码
+ * @method void setProductCode(string $ProductCode) 设置子产品名称代码
  * @method integer getRegionId() 获取区域ID
  * @method void setRegionId(integer $RegionId) 设置区域ID
  */
@@ -99,7 +99,7 @@ class BillResourceSummary extends AbstractModel
     public $BusinessCodeName;
 
     /**
-     * @var string 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+     * @var string 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
      */
     public $ProductCodeName;
 
@@ -246,12 +246,12 @@ class BillResourceSummary extends AbstractModel
     public $OperateUin;
 
     /**
-     * @var string 商品名称代码
+     * @var string 产品名称代码
      */
     public $BusinessCode;
 
     /**
-     * @var string 子商品名称代码
+     * @var string 子产品名称代码
      */
     public $ProductCode;
 
@@ -262,7 +262,7 @@ class BillResourceSummary extends AbstractModel
 
     /**
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
-     * @param string $ProductCodeName 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+     * @param string $ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
      * @param string $PayModeName 计费模式：包年包月和按量计费
      * @param string $ProjectName 项目
      * @param string $RegionName 地域
@@ -293,8 +293,8 @@ class BillResourceSummary extends AbstractModel
      * @param string $PayerUin 付款方uin
      * @param string $OwnerUin 资源所有者uin,无值则返回"-"
      * @param string $OperateUin 操作者uin,无值则返回"-"
-     * @param string $BusinessCode 商品名称代码
-     * @param string $ProductCode 子商品名称代码
+     * @param string $BusinessCode 产品名称代码
+     * @param string $ProductCode 子产品名称代码
      * @param integer $RegionId 区域ID
      */
     function __construct()

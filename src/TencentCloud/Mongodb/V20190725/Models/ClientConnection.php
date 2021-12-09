@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIP(string $IP) 设置连接的客户端IP
  * @method integer getCount() 获取对应客户端IP的连接数
  * @method void setCount(integer $Count) 设置对应客户端IP的连接数
+ * @method boolean getInternalService() 获取是否为内部ip
+ * @method void setInternalService(boolean $InternalService) 设置是否为内部ip
  */
 class ClientConnection extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ClientConnection extends AbstractModel
     public $Count;
 
     /**
+     * @var boolean 是否为内部ip
+     */
+    public $InternalService;
+
+    /**
      * @param string $IP 连接的客户端IP
      * @param integer $Count 对应客户端IP的连接数
+     * @param boolean $InternalService 是否为内部ip
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ClientConnection extends AbstractModel
 
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("InternalService",$param) and $param["InternalService"] !== null) {
+            $this->InternalService = $param["InternalService"];
         }
     }
 }

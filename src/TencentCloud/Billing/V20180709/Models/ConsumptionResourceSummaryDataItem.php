@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置付费模式
  * @method string getPayModeName() 获取付费模式名称
  * @method void setPayModeName(string $PayModeName) 设置付费模式名称
- * @method string getBusinessCode() 获取产品码
- * @method void setBusinessCode(string $BusinessCode) 设置产品码
+ * @method string getBusinessCode() 获取产品名称代码
+ * @method void setBusinessCode(string $BusinessCode) 设置产品名称代码
  * @method string getBusinessCodeName() 获取产品名称
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称
  * @method string getConsumptionTypeName() 获取消耗类型
@@ -100,7 +100,7 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
     public $PayModeName;
 
     /**
-     * @var string 产品码
+     * @var string 产品名称代码
      */
     public $BusinessCode;
 
@@ -125,7 +125,7 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
      * @param string $RegionName 地域名称
      * @param string $PayMode 付费模式
      * @param string $PayModeName 付费模式名称
-     * @param string $BusinessCode 产品码
+     * @param string $BusinessCode 产品名称代码
      * @param string $BusinessCodeName 产品名称
      * @param string $ConsumptionTypeName 消耗类型
      */

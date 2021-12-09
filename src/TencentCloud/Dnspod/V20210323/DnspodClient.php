@@ -38,6 +38,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DeleteShareDomainResponse DeleteShareDomain(Models\DeleteShareDomainRequest $req) 删除域名共享
  * @method Models\DescribeBatchTaskResponse DescribeBatchTask(Models\DescribeBatchTaskRequest $req) 获取任务详情
  * @method Models\DescribeDomainResponse DescribeDomain(Models\DescribeDomainRequest $req) 获取域名信息
+ * @method Models\DescribeDomainAliasListResponse DescribeDomainAliasList(Models\DescribeDomainAliasListRequest $req) 获取域名别名列表
  * @method Models\DescribeDomainListResponse DescribeDomainList(Models\DescribeDomainListRequest $req) 获取域名列表
  * @method Models\DescribeDomainLogListResponse DescribeDomainLogList(Models\DescribeDomainLogListRequest $req) 获取域名日志
  * @method Models\DescribeDomainPurviewResponse DescribeDomainPurview(Models\DescribeDomainPurviewRequest $req) 获取域名权限

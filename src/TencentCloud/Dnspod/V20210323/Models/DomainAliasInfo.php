@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Billing\V20180709\Models;
+namespace TencentCloud\Dnspod\V20210323\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 产品过滤条件
+ * 域名别名信息
  *
- * @method string getBusinessCode() 获取产品名称代码
- * @method void setBusinessCode(string $BusinessCode) 设置产品名称代码
- * @method string getBusinessCodeName() 获取产品名称
- * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称
+ * @method integer getId() 获取域名别名ID
+ * @method void setId(integer $Id) 设置域名别名ID
+ * @method string getDomainAlias() 获取域名别名
+ * @method void setDomainAlias(string $DomainAlias) 设置域名别名
  */
-class ConditionBusiness extends AbstractModel
+class DomainAliasInfo extends AbstractModel
 {
     /**
-     * @var string 产品名称代码
+     * @var integer 域名别名ID
      */
-    public $BusinessCode;
+    public $Id;
 
     /**
-     * @var string 产品名称
+     * @var string 域名别名
      */
-    public $BusinessCodeName;
+    public $DomainAlias;
 
     /**
-     * @param string $BusinessCode 产品名称代码
-     * @param string $BusinessCodeName 产品名称
+     * @param integer $Id 域名别名ID
+     * @param string $DomainAlias 域名别名
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ConditionBusiness extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
-            $this->BusinessCode = $param["BusinessCode"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
-        if (array_key_exists("BusinessCodeName",$param) and $param["BusinessCodeName"] !== null) {
-            $this->BusinessCodeName = $param["BusinessCodeName"];
+        if (array_key_exists("DomainAlias",$param) and $param["DomainAlias"] !== null) {
+            $this->DomainAlias = $param["DomainAlias"];
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModTime(string $ModTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置版本状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FunctionVersion extends AbstractModel
 {
@@ -61,12 +65,20 @@ class FunctionVersion extends AbstractModel
     public $ModTime;
 
     /**
+     * @var string 版本状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $Version 函数版本名称
      * @param string $Description 版本描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 版本状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -96,6 +108,10 @@ class FunctionVersion extends AbstractModel
 
         if (array_key_exists("ModTime",$param) and $param["ModTime"] !== null) {
             $this->ModTime = $param["ModTime"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

@@ -31,7 +31,13 @@ use TencentCloud\Common\AbstractModel;
 <li>review。</li>
 <li>block。</li>
  * @method array getSegmentSet() 获取Asr 文字有涉违禁嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
  * @method void setSegmentSet(array $SegmentSet) 设置Asr 文字有涉违禁嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
+ * @method string getSegmentSetFileUrl() 获取Asr 文字有涉违禁嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) 设置Asr 文字有涉违禁嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+ * @method string getSegmentSetFileUrlExpireTime() 获取Asr 文字有涉违禁嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) 设置Asr 文字有涉违禁嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class AiReviewProhibitedAsrTaskOutput extends AbstractModel
 {
@@ -50,8 +56,19 @@ class AiReviewProhibitedAsrTaskOutput extends AbstractModel
 
     /**
      * @var array Asr 文字有涉违禁嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public $SegmentSet;
+
+    /**
+     * @var string Asr 文字有涉违禁嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     */
+    public $SegmentSetFileUrl;
+
+    /**
+     * @var string Asr 文字有涉违禁嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $SegmentSetFileUrlExpireTime;
 
     /**
      * @param float $Confidence Asr 文字涉违禁评分，分值为0到100。
@@ -60,6 +77,9 @@ class AiReviewProhibitedAsrTaskOutput extends AbstractModel
 <li>review。</li>
 <li>block。</li>
      * @param array $SegmentSet Asr 文字有涉违禁嫌疑的视频片段列表。
+<font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
+     * @param string $SegmentSetFileUrl Asr 文字有涉违禁嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param string $SegmentSetFileUrlExpireTime Asr 文字有涉违禁嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {
@@ -89,6 +109,14 @@ class AiReviewProhibitedAsrTaskOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("SegmentSetFileUrl",$param) and $param["SegmentSetFileUrl"] !== null) {
+            $this->SegmentSetFileUrl = $param["SegmentSetFileUrl"];
+        }
+
+        if (array_key_exists("SegmentSetFileUrlExpireTime",$param) and $param["SegmentSetFileUrlExpireTime"] !== null) {
+            $this->SegmentSetFileUrlExpireTime = $param["SegmentSetFileUrlExpireTime"];
         }
     }
 }

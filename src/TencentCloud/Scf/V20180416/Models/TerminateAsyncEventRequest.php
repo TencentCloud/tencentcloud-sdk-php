@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvokeRequestId(string $InvokeRequestId) 设置终止的调用请求id
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
- * @method boolean getGraceShutdown() 获取优雅关停
- * @method void setGraceShutdown(boolean $GraceShutdown) 设置优雅关停
+ * @method boolean getGraceShutdown() 获取该参数已下线
+ * @method void setGraceShutdown(boolean $GraceShutdown) 设置该参数已下线
  */
 class TerminateAsyncEventRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class TerminateAsyncEventRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var boolean 优雅关停
+     * @var boolean 该参数已下线
      */
     public $GraceShutdown;
 
@@ -55,7 +55,7 @@ class TerminateAsyncEventRequest extends AbstractModel
      * @param string $FunctionName 函数名称
      * @param string $InvokeRequestId 终止的调用请求id
      * @param string $Namespace 命名空间
-     * @param boolean $GraceShutdown 优雅关停
+     * @param boolean $GraceShutdown 该参数已下线
      */
     function __construct()
     {

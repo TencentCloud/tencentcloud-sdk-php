@@ -106,6 +106,10 @@ Pending是创建中，Running是 运行中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoCreatedEipId(string $AutoCreatedEipId) 设置自动为用户创建的EipId
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getPersistStatus() 获取容器状态是否持久化
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPersistStatus(boolean $PersistStatus) 设置容器状态是否持久化
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EksCi extends AbstractModel
 {
@@ -241,6 +245,12 @@ Pending是创建中，Running是 运行中。
     public $AutoCreatedEipId;
 
     /**
+     * @var boolean 容器状态是否持久化
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PersistStatus;
+
+    /**
      * @param string $EksCiId EKS Cotainer Instance Id
      * @param string $EksCiName EKS Cotainer Instance Name
      * @param float $Memory 内存大小
@@ -283,6 +293,8 @@ Pending是创建中，Running是 运行中。
      * @param string $CamRoleName 为容器实例关联 CAM 角色，value 填写 CAM 角色名称，容器实例可获取该 CAM 角色包含的权限策略，方便 容器实例 内的程序进行如购买资源、读写存储等云资源操作。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoCreatedEipId 自动为用户创建的EipId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $PersistStatus 容器状态是否持久化
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -396,6 +408,10 @@ Pending是创建中，Running是 运行中。
 
         if (array_key_exists("AutoCreatedEipId",$param) and $param["AutoCreatedEipId"] !== null) {
             $this->AutoCreatedEipId = $param["AutoCreatedEipId"];
+        }
+
+        if (array_key_exists("PersistStatus",$param) and $param["PersistStatus"] !== null) {
+            $this->PersistStatus = $param["PersistStatus"];
         }
     }
 }

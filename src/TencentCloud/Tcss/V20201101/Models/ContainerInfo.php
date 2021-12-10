@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunAs(string $RunAs) 设置运行用户
  * @method string getCmd() 获取命令行
  * @method void setCmd(string $Cmd) 设置命令行
- * @method integer getCPUUsage() 获取cpu 使用率 *1000
- * @method void setCPUUsage(integer $CPUUsage) 设置cpu 使用率 *1000
+ * @method integer getCPUUsage() 获取CPU使用率 *1000
+ * @method void setCPUUsage(integer $CPUUsage) 设置CPU使用率 *1000
  * @method integer getRamUsage() 获取内存使用 kb
  * @method void setRamUsage(integer $RamUsage) 设置内存使用 kb
  * @method string getImageName() 获取镜像名称
@@ -86,7 +86,7 @@ class ContainerInfo extends AbstractModel
     public $Cmd;
 
     /**
-     * @var integer cpu 使用率 *1000
+     * @var integer CPU使用率 *1000
      */
     public $CPUUsage;
 
@@ -142,7 +142,7 @@ class ContainerInfo extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $RunAs 运行用户
      * @param string $Cmd 命令行
-     * @param integer $CPUUsage cpu 使用率 *1000
+     * @param integer $CPUUsage CPU使用率 *1000
      * @param integer $RamUsage 内存使用 kb
      * @param string $ImageName 镜像名称
      * @param string $ImageID 镜像id

@@ -86,6 +86,16 @@ use TencentCloud\Common\AbstractModel;
 <li>2：表示EMR-V2.0.1。</li>
 <li>4：表示EMR-V2.1.0。</li>
 <li>7：表示EMR-V3.0.0。</li>
+ * @method string getSceneName() 获取场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+ * @method void setSceneName(string $SceneName) 设置场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
@@ -175,6 +185,15 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
     public $ProductId;
 
     /**
+     * @var string 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public $SceneName;
+
+    /**
      * @param string $TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -208,6 +227,11 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 <li>2：表示EMR-V2.0.1。</li>
 <li>4：表示EMR-V2.1.0。</li>
 <li>7：表示EMR-V3.0.0。</li>
+     * @param string $SceneName 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
      */
     function __construct()
     {
@@ -276,6 +300,10 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("SceneName",$param) and $param["SceneName"] !== null) {
+            $this->SceneName = $param["SceneName"];
         }
     }
 }

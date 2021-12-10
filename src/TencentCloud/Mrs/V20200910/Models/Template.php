@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVaccineCertificate(VaccineCertificate $VaccineCertificate) 设置免疫接种证明
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOcrText() 获取OCR文本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOcrText(string $OcrText) 设置OCR文本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
@@ -184,6 +188,12 @@ class Template extends AbstractModel
     public $VaccineCertificate;
 
     /**
+     * @var string OCR文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OcrText;
+
+    /**
      * @param PatientInfo $PatientInfo 患者信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportInfo $ReportInfo 报告信息
@@ -215,6 +225,8 @@ class Template extends AbstractModel
      * @param Prescription $Prescription 处方单
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VaccineCertificate $VaccineCertificate 免疫接种证明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OcrText OCR文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -307,6 +319,10 @@ class Template extends AbstractModel
         if (array_key_exists("VaccineCertificate",$param) and $param["VaccineCertificate"] !== null) {
             $this->VaccineCertificate = new VaccineCertificate();
             $this->VaccineCertificate->deserialize($param["VaccineCertificate"]);
+        }
+
+        if (array_key_exists("OcrText",$param) and $param["OcrText"] !== null) {
+            $this->OcrText = $param["OcrText"];
         }
     }
 }

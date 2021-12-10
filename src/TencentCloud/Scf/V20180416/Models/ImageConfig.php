@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryId(string $RegistryId) 设置用于企业版TCR获取镜像拉取临时凭证，ImageType为"enterprise"时必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEntryPoint() 获取应用的ENTRYPOINT
+ * @method string getEntryPoint() 获取参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEntryPoint(string $EntryPoint) 设置应用的ENTRYPOINT
+ * @method void setEntryPoint(string $EntryPoint) 设置参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCommand() 获取entrypoint执行命令
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,7 +60,7 @@ class ImageConfig extends AbstractModel
     public $RegistryId;
 
     /**
-     * @var string 应用的ENTRYPOINT
+     * @var string 参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EntryPoint;
@@ -82,7 +82,7 @@ class ImageConfig extends AbstractModel
      * @param string $ImageUri {domain}/{namespace}/{imageName}:{tag}@{digest}
      * @param string $RegistryId 用于企业版TCR获取镜像拉取临时凭证，ImageType为"enterprise"时必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EntryPoint 应用的ENTRYPOINT
+     * @param string $EntryPoint 参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Command entrypoint执行命令
 注意：此字段可能返回 null，表示取不到有效值。

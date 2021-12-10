@@ -156,6 +156,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) 设置自定义MetaDB信息
  * @method string getApplicationRole() 获取自定义应用角色。
  * @method void setApplicationRole(string $ApplicationRole) 设置自定义应用角色。
+ * @method string getSceneName() 获取场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+ * @method void setSceneName(string $SceneName) 设置场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -336,6 +346,15 @@ class CreateInstanceRequest extends AbstractModel
     public $ApplicationRole;
 
     /**
+     * @var string 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public $SceneName;
+
+    /**
      * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
@@ -404,6 +423,11 @@ class CreateInstanceRequest extends AbstractModel
      * @param string $UnifyMetaInstanceId EMR-MetaDB实例
      * @param CustomMetaInfo $MetaDBInfo 自定义MetaDB信息
      * @param string $ApplicationRole 自定义应用角色。
+     * @param string $SceneName 场景化取值：
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
      */
     function __construct()
     {
@@ -540,6 +564,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("ApplicationRole",$param) and $param["ApplicationRole"] !== null) {
             $this->ApplicationRole = $param["ApplicationRole"];
+        }
+
+        if (array_key_exists("SceneName",$param) and $param["SceneName"] !== null) {
+            $this->SceneName = $param["SceneName"];
         }
     }
 }

@@ -72,6 +72,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\GetCOSURLResponse GetCOSURL(Models\GetCOSURLRequest $req) 本接口（GetCOSURL）用于获取固件存储在COS的URL 
  * @method Models\GetDeviceListResponse GetDeviceList(Models\GetDeviceListRequest $req) 用于查询某个产品下的设备列表
  * @method Models\GetDeviceLocationHistoryResponse GetDeviceLocationHistory(Models\GetDeviceLocationHistoryRequest $req) 获取设备历史位置
+ * @method Models\GetFamilyDeviceUserListResponse GetFamilyDeviceUserList(Models\GetFamilyDeviceUserListRequest $req) 用于获取设备绑定的用户列表
  * @method Models\GetLoRaGatewayListResponse GetLoRaGatewayList(Models\GetLoRaGatewayListRequest $req) 获取 LoRa 网关列表接口
  * @method Models\GetPositionSpaceListResponse GetPositionSpaceList(Models\GetPositionSpaceListRequest $req) 获取位置空间列表
  * @method Models\GetProjectListResponse GetProjectList(Models\GetProjectListRequest $req) 提供查询用户所创建的项目列表查询功能。

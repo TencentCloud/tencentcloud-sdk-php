@@ -20,10 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 取回视频任务信息
  *
- * @method integer getStatus() 获取取回任务状态，0表示取回完成，其他值表示取回还未完成。
- * @method void setStatus(integer $Status) 设置取回任务状态，0表示取回完成，其他值表示取回还未完成。
- * @method string getMessage() 获取提示信息。
- * @method void setMessage(string $Message) 设置提示信息。
  * @method string getFileId() 获取文件ID。
  * @method void setFileId(string $FileId) 设置文件ID。
  * @method string getOriginalStorageClass() 获取文件原始存储类型。
@@ -39,22 +35,14 @@ use TencentCloud\Common\AbstractModel;
 <li>Standard：标准模式</li>
 <li>Bulk：批量模式</li>
  * @method integer getRestoreDay() 获取临时取回副本有效期，单位：天。对于永久取回，取值为0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestoreDay(integer $RestoreDay) 设置临时取回副本有效期，单位：天。对于永久取回，取值为0。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取该字段已废弃。
+ * @method void setStatus(integer $Status) 设置该字段已废弃。
+ * @method string getMessage() 获取该字段已废弃。
+ * @method void setMessage(string $Message) 设置该字段已废弃。
  */
 class RestoreMediaTask extends AbstractModel
 {
-    /**
-     * @var integer 取回任务状态，0表示取回完成，其他值表示取回还未完成。
-     */
-    public $Status;
-
-    /**
-     * @var string 提示信息。
-     */
-    public $Message;
-
     /**
      * @var string 文件ID。
      */
@@ -80,13 +68,20 @@ class RestoreMediaTask extends AbstractModel
 
     /**
      * @var integer 临时取回副本有效期，单位：天。对于永久取回，取值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RestoreDay;
 
     /**
-     * @param integer $Status 取回任务状态，0表示取回完成，其他值表示取回还未完成。
-     * @param string $Message 提示信息。
+     * @var integer 该字段已废弃。
+     */
+    public $Status;
+
+    /**
+     * @var string 该字段已废弃。
+     */
+    public $Message;
+
+    /**
      * @param string $FileId 文件ID。
      * @param string $OriginalStorageClass 文件原始存储类型。
      * @param string $TargetStorageClass 文件目标存储类型。对于临时取回，目标存储类型与原始存储类型相同。
@@ -95,7 +90,8 @@ class RestoreMediaTask extends AbstractModel
 <li>Standard：标准模式</li>
 <li>Bulk：批量模式</li>
      * @param integer $RestoreDay 临时取回副本有效期，单位：天。对于永久取回，取值为0。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 该字段已废弃。
+     * @param string $Message 该字段已废弃。
      */
     function __construct()
     {
@@ -110,14 +106,6 @@ class RestoreMediaTask extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
-        }
-
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
         }
@@ -136,6 +124,14 @@ class RestoreMediaTask extends AbstractModel
 
         if (array_key_exists("RestoreDay",$param) and $param["RestoreDay"] !== null) {
             $this->RestoreDay = $param["RestoreDay"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

@@ -56,6 +56,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setAccountType(string $AccountType) 设置域名字服务类型。目前仅支持NIS域名字服务。
  * @method string getClusterName() 获取集群显示名称。
  * @method void setClusterName(string $ClusterName) 设置集群显示名称。
+ * @method StorageOption getStorageOption() 获取集群存储选项
+ * @method void setStorageOption(StorageOption $StorageOption) 设置集群存储选项
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -134,6 +136,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $ClusterName;
 
     /**
+     * @var StorageOption 集群存储选项
+     */
+    public $StorageOption;
+
+    /**
      * @param Placement $Placement 集群中实例所在的位置。
      * @param ManagerNode $ManagerNode 指定管理节点。
      * @param integer $ManagerNodeCount 指定管理节点的数量。目前仅支持一个管理节点。
@@ -152,6 +159,7 @@ true：发送检查请求，不会创建实例。检查项包括是否填写了�
 false（默认）：发送正常请求，通过检查后直接创建实例
      * @param string $AccountType 域名字服务类型。目前仅支持NIS域名字服务。
      * @param string $ClusterName 集群显示名称。
+     * @param StorageOption $StorageOption 集群存储选项
      */
     function __construct()
     {
@@ -225,6 +233,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("StorageOption",$param) and $param["StorageOption"] !== null) {
+            $this->StorageOption = new StorageOption();
+            $this->StorageOption->deserialize($param["StorageOption"]);
         }
     }
 }

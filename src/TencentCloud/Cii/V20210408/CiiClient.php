@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cii\V20210408\Models as Models;
 
 /**
+ * @method Models\CreateAutoClassifyStructureTaskResponse CreateAutoClassifyStructureTask(Models\CreateAutoClassifyStructureTaskRequest $req) 本接口(CreateAutoClassifyStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
  * @method Models\CreateStructureTaskResponse CreateStructureTask(Models\CreateStructureTaskRequest $req) 本接口(CreateStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
  * @method Models\CreateUnderwriteTaskByIdResponse CreateUnderwriteTaskById(Models\CreateUnderwriteTaskByIdRequest $req) 本接口(CreateUnderwriteTaskById)用于根据结构化任务ID创建核保任务
  * @method Models\DescribeMachineUnderwriteResponse DescribeMachineUnderwrite(Models\DescribeMachineUnderwriteRequest $req) 本接口(DescribeMachineUnderwrite)用于查询机器核保任务数据

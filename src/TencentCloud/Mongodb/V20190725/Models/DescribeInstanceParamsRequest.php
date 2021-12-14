@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Clb\V20180317\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyLoadBalancerSla请求参数结构体
+ * DescribeInstanceParams请求参数结构体
  *
- * @method array getLoadBalancerSla() 获取负载均衡实例信息
- * @method void setLoadBalancerSla(array $LoadBalancerSla) 设置负载均衡实例信息
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  */
-class ModifyLoadBalancerSlaRequest extends AbstractModel
+class DescribeInstanceParamsRequest extends AbstractModel
 {
     /**
-     * @var array 负载均衡实例信息
+     * @var string 实例ID
      */
-    public $LoadBalancerSla;
+    public $InstanceId;
 
     /**
-     * @param array $LoadBalancerSla 负载均衡实例信息
+     * @param string $InstanceId 实例ID
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class ModifyLoadBalancerSlaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerSla",$param) and $param["LoadBalancerSla"] !== null) {
-            $this->LoadBalancerSla = [];
-            foreach ($param["LoadBalancerSla"] as $key => $value){
-                $obj = new SlaUpdateParam();
-                $obj->deserialize($value);
-                array_push($this->LoadBalancerSla, $obj);
-            }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

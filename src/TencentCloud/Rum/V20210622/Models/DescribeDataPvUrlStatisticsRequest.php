@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOs(string $Os) 设置操作系统
  * @method string getBrowser() 获取浏览器
  * @method void setBrowser(string $Browser) 设置浏览器
+ * @method string getEnv() 获取环境
+ * @method void setEnv(string $Env) 设置环境
  */
 class DescribeDataPvUrlStatisticsRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
     public $Browser;
 
     /**
+     * @var string 环境
+     */
+    public $Env;
+
+    /**
      * @param integer $StartTime 开始时间
      * @param string $Type 类型:"allcount", "falls", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
      * @param integer $EndTime 结束时间
@@ -184,6 +191,7 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
      * @param string $IsAbroad 是否海外
      * @param string $Os 操作系统
      * @param string $Browser 浏览器
+     * @param string $Env 环境
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class DescribeDataPvUrlStatisticsRequest extends AbstractModel
 
         if (array_key_exists("Browser",$param) and $param["Browser"] !== null) {
             $this->Browser = $param["Browser"];
+        }
+
+        if (array_key_exists("Env",$param) and $param["Env"] !== null) {
+            $this->Env = $param["Env"];
         }
     }
 }

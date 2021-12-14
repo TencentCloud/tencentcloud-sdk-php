@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒资绑定资源信息，包含媒资绑定模板 ID 和文件信息。
  *
- * @method integer getDefinition() 获取媒资绑定模板 ID，可取值为：
-<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
-<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
-
-注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
- * @method void setDefinition(integer $Definition) 设置媒资绑定模板 ID，可取值为：
-<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
-<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
-
-注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
- * @method string getMediaKey() 获取媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
-原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
- * @method void setMediaKey(string $MediaKey) 设置媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
-原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
+ * @method string getMediaKey() 获取目前仅支持绑定 COS 桶的媒体，请填写存储对象 Key 值，例如：`example-folder/example.mp4`。
+ * @method void setMediaKey(string $MediaKey) 设置目前仅支持绑定 COS 桶的媒体，请填写存储对象 Key 值，例如：`example-folder/example.mp4`。
+ * @method integer getDefinition() 获取该字段废弃，请勿使用。
+ * @method void setDefinition(integer $Definition) 设置该字段废弃，请勿使用。
+ * @method string getStorageId() 获取媒资挂载的存储 Id。
+ * @method void setStorageId(string $StorageId) 设置媒资挂载的存储 Id。
  */
 class ExternalMediaInfo extends AbstractModel
 {
     /**
-     * @var integer 媒资绑定模板 ID，可取值为：
-<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
-<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
-
-注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
-     */
-    public $Definition;
-
-    /**
-     * @var string 媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
-原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
+     * @var string 目前仅支持绑定 COS 桶的媒体，请填写存储对象 Key 值，例如：`example-folder/example.mp4`。
      */
     public $MediaKey;
 
     /**
-     * @param integer $Definition 媒资绑定模板 ID，可取值为：
-<li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
-<li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+     * @var integer 该字段废弃，请勿使用。
+     */
+    public $Definition;
 
-注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
-     * @param string $MediaKey 媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
-原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
+    /**
+     * @var string 媒资挂载的存储 Id。
+     */
+    public $StorageId;
+
+    /**
+     * @param string $MediaKey 目前仅支持绑定 COS 桶的媒体，请填写存储对象 Key 值，例如：`example-folder/example.mp4`。
+     * @param integer $Definition 该字段废弃，请勿使用。
+     * @param string $StorageId 媒资挂载的存储 Id。
      */
     function __construct()
     {
@@ -74,12 +62,16 @@ class ExternalMediaInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MediaKey",$param) and $param["MediaKey"] !== null) {
+            $this->MediaKey = $param["MediaKey"];
+        }
+
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
         }
 
-        if (array_key_exists("MediaKey",$param) and $param["MediaKey"] !== null) {
-            $this->MediaKey = $param["MediaKey"];
+        if (array_key_exists("StorageId",$param) and $param["StorageId"] !== null) {
+            $this->StorageId = $param["StorageId"];
         }
     }
 }

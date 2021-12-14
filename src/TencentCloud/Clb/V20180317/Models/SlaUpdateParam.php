@@ -18,12 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 性能保障变配参数
+ * 性能容量型变配参数
  *
  * @method string getLoadBalancerId() 获取lb的字符串ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置lb的字符串ID
- * @method string getSlaType() 获取需要变更的性能保障级别
- * @method void setSlaType(string $SlaType) 设置需要变更的性能保障级别
+ * @method string getSlaType() 获取变更为性能容量型，固定为SLA
+ * @method void setSlaType(string $SlaType) 设置变更为性能容量型，固定为SLA
  */
 class SlaUpdateParam extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SlaUpdateParam extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string 需要变更的性能保障级别
+     * @var string 变更为性能容量型，固定为SLA
      */
     public $SlaType;
 
     /**
      * @param string $LoadBalancerId lb的字符串ID
-     * @param string $SlaType 需要变更的性能保障级别
+     * @param string $SlaType 变更为性能容量型，固定为SLA
      */
     function __construct()
     {

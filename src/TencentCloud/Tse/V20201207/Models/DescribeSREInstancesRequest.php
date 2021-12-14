@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置翻页单页偏移量，默认值0
  * @method string getQueryType() 获取查询类型
  * @method void setQueryType(string $QueryType) 设置查询类型
+ * @method string getQuerySource() 获取调用方来源
+ * @method void setQuerySource(string $QuerySource) 设置调用方来源
  */
 class DescribeSREInstancesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeSREInstancesRequest extends AbstractModel
     public $QueryType;
 
     /**
+     * @var string 调用方来源
+     */
+    public $QuerySource;
+
+    /**
      * @param array $Filters 请求过滤参数
      * @param integer $Limit 翻页单页查询限制数量[0,1000], 默认值0
      * @param integer $Offset 翻页单页偏移量，默认值0
      * @param string $QueryType 查询类型
+     * @param string $QuerySource 调用方来源
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeSREInstancesRequest extends AbstractModel
 
         if (array_key_exists("QueryType",$param) and $param["QueryType"] !== null) {
             $this->QueryType = $param["QueryType"];
+        }
+
+        if (array_key_exists("QuerySource",$param) and $param["QuerySource"] !== null) {
+            $this->QuerySource = $param["QuerySource"];
         }
     }
 }

@@ -28,6 +28,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisplayName(string $DisplayName) 设置昵称，长度限制：64个字符。 默认与用户名相同。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserName() 获取用户名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserName(string $UserName) 设置用户名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPhone() 获取用户手机号。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPhone(string $Phone) 设置用户手机号。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEmail() 获取邮箱地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmail(string $Email) 设置邮箱地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取用户状态。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置用户状态。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataSource() 获取数据来源。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataSource(string $DataSource) 设置数据来源。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserInfo extends AbstractModel
 {
@@ -44,9 +64,49 @@ class UserInfo extends AbstractModel
     public $DisplayName;
 
     /**
+     * @var string 用户名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserName;
+
+    /**
+     * @var string 用户手机号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Phone;
+
+    /**
+     * @var string 邮箱地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Email;
+
+    /**
+     * @var string 用户状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var string 数据来源。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataSource;
+
+    /**
      * @param string $UserId 用户ID，是用户全局唯一标识，长度限制：64个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisplayName 昵称，长度限制：64个字符。 默认与用户名相同。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserName 用户名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Phone 用户手机号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Email 邮箱地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 用户状态。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataSource 数据来源。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +128,26 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("DisplayName",$param) and $param["DisplayName"] !== null) {
             $this->DisplayName = $param["DisplayName"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("Phone",$param) and $param["Phone"] !== null) {
+            $this->Phone = $param["Phone"];
+        }
+
+        if (array_key_exists("Email",$param) and $param["Email"] !== null) {
+            $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("DataSource",$param) and $param["DataSource"] !== null) {
+            $this->DataSource = $param["DataSource"];
         }
     }
 }

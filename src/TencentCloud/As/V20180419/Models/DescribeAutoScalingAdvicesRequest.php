@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Clb\V20180317\Models;
+namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyLoadBalancerSla请求参数结构体
+ * DescribeAutoScalingAdvices请求参数结构体
  *
- * @method array getLoadBalancerSla() 获取负载均衡实例信息
- * @method void setLoadBalancerSla(array $LoadBalancerSla) 设置负载均衡实例信息
+ * @method array getAutoScalingGroupIds() 获取待查询的伸缩组列表，上限100。
+ * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) 设置待查询的伸缩组列表，上限100。
  */
-class ModifyLoadBalancerSlaRequest extends AbstractModel
+class DescribeAutoScalingAdvicesRequest extends AbstractModel
 {
     /**
-     * @var array 负载均衡实例信息
+     * @var array 待查询的伸缩组列表，上限100。
      */
-    public $LoadBalancerSla;
+    public $AutoScalingGroupIds;
 
     /**
-     * @param array $LoadBalancerSla 负载均衡实例信息
+     * @param array $AutoScalingGroupIds 待查询的伸缩组列表，上限100。
      */
     function __construct()
     {
@@ -46,13 +46,8 @@ class ModifyLoadBalancerSlaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerSla",$param) and $param["LoadBalancerSla"] !== null) {
-            $this->LoadBalancerSla = [];
-            foreach ($param["LoadBalancerSla"] as $key => $value){
-                $obj = new SlaUpdateParam();
-                $obj->deserialize($value);
-                array_push($this->LoadBalancerSla, $obj);
-            }
+        if (array_key_exists("AutoScalingGroupIds",$param) and $param["AutoScalingGroupIds"] !== null) {
+            $this->AutoScalingGroupIds = $param["AutoScalingGroupIds"];
         }
     }
 }

@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrowser(string $Browser) 设置浏览器
  * @method string getName() 获取筛选条件
  * @method void setName(string $Name) 设置筛选条件
+ * @method string getEnv() 获取环境
+ * @method void setEnv(string $Env) 设置环境
  */
 class DescribeDataEventUrlRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class DescribeDataEventUrlRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string 环境
+     */
+    public $Env;
+
+    /**
      * @param integer $StartTime 开始时间
      * @param string $Type 类型
      * @param integer $EndTime 结束时间
@@ -192,6 +199,7 @@ class DescribeDataEventUrlRequest extends AbstractModel
      * @param string $Os 操作系统
      * @param string $Browser 浏览器
      * @param string $Name 筛选条件
+     * @param string $Env 环境
      */
     function __construct()
     {
@@ -288,6 +296,10 @@ class DescribeDataEventUrlRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Env",$param) and $param["Env"] !== null) {
+            $this->Env = $param["Env"];
         }
     }
 }

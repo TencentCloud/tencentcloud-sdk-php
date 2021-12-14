@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrText(string $OcrText) 设置OCR文本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOcrResult() 获取OCR拼接后文本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOcrResult(string $OcrResult) 设置OCR拼接后文本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
@@ -194,6 +198,12 @@ class Template extends AbstractModel
     public $OcrText;
 
     /**
+     * @var string OCR拼接后文本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OcrResult;
+
+    /**
      * @param PatientInfo $PatientInfo 患者信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportInfo $ReportInfo 报告信息
@@ -227,6 +237,8 @@ class Template extends AbstractModel
      * @param VaccineCertificate $VaccineCertificate 免疫接种证明
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OcrText OCR文本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OcrResult OCR拼接后文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -323,6 +335,10 @@ class Template extends AbstractModel
 
         if (array_key_exists("OcrText",$param) and $param["OcrText"] !== null) {
             $this->OcrText = $param["OcrText"];
+        }
+
+        if (array_key_exists("OcrResult",$param) and $param["OcrResult"] !== null) {
+            $this->OcrResult = $param["OcrResult"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置主题名称
  * @method string getRemark() 获取说明信息，最大128个字符
  * @method void setRemark(string $Remark) 设置说明信息，最大128个字符
+ * @method integer getPartitionNum() 获取分区数，全局类型无效，不可小于当前分区数
+ * @method void setPartitionNum(integer $PartitionNum) 设置分区数，全局类型无效，不可小于当前分区数
  */
 class ModifyRocketMQTopicRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyRocketMQTopicRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var integer 分区数，全局类型无效，不可小于当前分区数
+     */
+    public $PartitionNum;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $NamespaceId 命名空间名称
      * @param string $Topic 主题名称
      * @param string $Remark 说明信息，最大128个字符
+     * @param integer $PartitionNum 分区数，全局类型无效，不可小于当前分区数
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyRocketMQTopicRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PartitionNum",$param) and $param["PartitionNum"] !== null) {
+            $this->PartitionNum = $param["PartitionNum"];
         }
     }
 }

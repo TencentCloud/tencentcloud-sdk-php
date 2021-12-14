@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
  * @method integer getLimit() 获取返回数量，不填则默认10，最大值100
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值100
- * @method string getTagKey() 获取匹配标签key值。
- * @method void setTagKey(string $TagKey) 设置匹配标签key值。
+ * @method string getTagKey() 获取已废弃。匹配标签key值。
+ * @method void setTagKey(string $TagKey) 设置已废弃。匹配标签key值。
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 匹配标签key值。
+     * @var string 已废弃。匹配标签key值。
      */
     public $TagKey;
 
@@ -71,7 +71,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
      * @param integer $Offset 偏移量，不填默认为0
      * @param integer $Limit 返回数量，不填则默认10，最大值100
-     * @param string $TagKey 匹配标签key值。
+     * @param string $TagKey 已废弃。匹配标签key值。
      */
     function __construct()
     {

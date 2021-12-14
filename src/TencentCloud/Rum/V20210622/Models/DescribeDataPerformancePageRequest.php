@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(string $From) 设置来源页面
  * @method string getCostType() 获取耗时计算方式
  * @method void setCostType(string $CostType) 设置耗时计算方式
+ * @method string getEnv() 获取环境变量
+ * @method void setEnv(string $Env) 设置环境变量
  */
 class DescribeDataPerformancePageRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class DescribeDataPerformancePageRequest extends AbstractModel
     public $CostType;
 
     /**
+     * @var string 环境变量
+     */
+    public $Env;
+
+    /**
      * @param integer $ID 项目ID
      * @param integer $StartTime 开始时间
      * @param integer $EndTime 结束时间
@@ -192,6 +199,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
      * @param string $Brand 品牌
      * @param string $From 来源页面
      * @param string $CostType 耗时计算方式
+     * @param string $Env 环境变量
      */
     function __construct()
     {
@@ -288,6 +296,10 @@ class DescribeDataPerformancePageRequest extends AbstractModel
 
         if (array_key_exists("CostType",$param) and $param["CostType"] !== null) {
             $this->CostType = $param["CostType"];
+        }
+
+        if (array_key_exists("Env",$param) and $param["Env"] !== null) {
+            $this->Env = $param["Env"];
         }
     }
 }

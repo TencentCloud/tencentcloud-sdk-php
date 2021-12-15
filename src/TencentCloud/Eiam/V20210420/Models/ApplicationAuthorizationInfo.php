@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInheritedForm(InheritedForm $InheritedForm) 设置展示用户所在的用户组、机构节点拥有该应用的访问权限的ID信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationName() 获取应用名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationName(string $ApplicationName) 设置应用名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedDate() 获取应用创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedDate(string $CreatedDate) 设置应用创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationAuthorizationInfo extends AbstractModel
 {
@@ -54,11 +62,27 @@ class ApplicationAuthorizationInfo extends AbstractModel
     public $InheritedForm;
 
     /**
+     * @var string 应用名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationName;
+
+    /**
+     * @var string 应用创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedDate;
+
+    /**
      * @param array $ApplicationAccounts 用户在被授权应用下对应的账号列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId 应用ID，是应用的全局唯一标识。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InheritedForm $InheritedForm 展示用户所在的用户组、机构节点拥有该应用的访问权限的ID信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationName 应用名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedDate 应用创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -85,6 +109,14 @@ class ApplicationAuthorizationInfo extends AbstractModel
         if (array_key_exists("InheritedForm",$param) and $param["InheritedForm"] !== null) {
             $this->InheritedForm = new InheritedForm();
             $this->InheritedForm->deserialize($param["InheritedForm"]);
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
+        }
+
+        if (array_key_exists("CreatedDate",$param) and $param["CreatedDate"] !== null) {
+            $this->CreatedDate = $param["CreatedDate"];
         }
     }
 }

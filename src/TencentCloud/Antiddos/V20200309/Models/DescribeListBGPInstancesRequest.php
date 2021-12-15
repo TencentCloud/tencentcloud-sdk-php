@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterName(string $FilterName) 设置名称搜索
  * @method integer getFilterLine() 获取按照线路搜索, 1: BGP; 2: 三网
  * @method void setFilterLine(integer $FilterLine) 设置按照线路搜索, 1: BGP; 2: 三网
+ * @method string getFilterStatus() 获取状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+ * @method void setFilterStatus(string $FilterStatus) 设置状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+ * @method string getFilterBoundStatus() 获取高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
+ * @method void setFilterBoundStatus(string $FilterBoundStatus) 设置高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterLine;
 
     /**
+     * @var string 状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+     */
+    public $FilterStatus;
+
+    /**
+     * @var string 高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
+     */
+    public $FilterBoundStatus;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -80,6 +94,8 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param string $FilterRegion 地域搜索，例如，ap-guangzhou
      * @param string $FilterName 名称搜索
      * @param integer $FilterLine 按照线路搜索, 1: BGP; 2: 三网
+     * @param string $FilterStatus 状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+     * @param string $FilterBoundStatus 高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class DescribeListBGPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterLine",$param) and $param["FilterLine"] !== null) {
             $this->FilterLine = $param["FilterLine"];
+        }
+
+        if (array_key_exists("FilterStatus",$param) and $param["FilterStatus"] !== null) {
+            $this->FilterStatus = $param["FilterStatus"];
+        }
+
+        if (array_key_exists("FilterBoundStatus",$param) and $param["FilterBoundStatus"] !== null) {
+            $this->FilterBoundStatus = $param["FilterBoundStatus"];
         }
     }
 }

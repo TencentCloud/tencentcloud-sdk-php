@@ -62,6 +62,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPageSize(integer $PageSize) 设置当前每页数量。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFluxPackageBillMode() 获取当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
+标准直播，中国大陆（境内全地区）计费方式。
+标准直播，国际/港澳台（境外多地区）计费方式。
+快直播，中国大陆（境内全地区）计费方式。
+快直播，国际/港澳台（境外多地区）计费方式。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFluxPackageBillMode(string $FluxPackageBillMode) 设置当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
+标准直播，中国大陆（境内全地区）计费方式。
+标准直播，国际/港澳台（境外多地区）计费方式。
+快直播，中国大陆（境内全地区）计费方式。
+快直播，国际/港澳台（境外多地区）计费方式。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -113,6 +125,16 @@ class DescribeLivePackageInfoResponse extends AbstractModel
     public $PageSize;
 
     /**
+     * @var string 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
+标准直播，中国大陆（境内全地区）计费方式。
+标准直播，国际/港澳台（境外多地区）计费方式。
+快直播，中国大陆（境内全地区）计费方式。
+快直播，国际/港澳台（境外多地区）计费方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FluxPackageBillMode;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -138,6 +160,12 @@ class DescribeLivePackageInfoResponse extends AbstractModel
      * @param integer $PageNum 当前页数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PageSize 当前每页数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FluxPackageBillMode 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
+标准直播，中国大陆（境内全地区）计费方式。
+标准直播，国际/港澳台（境外多地区）计费方式。
+快直播，中国大陆（境内全地区）计费方式。
+快直播，国际/港澳台（境外多地区）计费方式。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -181,6 +209,10 @@ class DescribeLivePackageInfoResponse extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("FluxPackageBillMode",$param) and $param["FluxPackageBillMode"] !== null) {
+            $this->FluxPackageBillMode = $param["FluxPackageBillMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

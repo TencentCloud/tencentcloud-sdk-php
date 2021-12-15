@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSubTaskId() 获取子任务ID
  * @method void setSubTaskId(string $SubTaskId) 设置子任务ID
- * @method string getTaskType() 获取任务类型
- * @method void setTaskType(string $TaskType) 设置任务类型
+ * @method string getTaskType() 获取任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
+ * @method void setTaskType(string $TaskType) 设置任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
  * @method array getModifyItems() 获取修改的项
  * @method void setModifyItems(array $ModifyItems) 设置修改的项
  * @method array getNewItems() 获取新增的项
@@ -39,7 +39,7 @@ class PerStructDifference extends AbstractModel
     public $SubTaskId;
 
     /**
-     * @var string 任务类型
+     * @var string 任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
      */
     public $TaskType;
 
@@ -60,7 +60,7 @@ class PerStructDifference extends AbstractModel
 
     /**
      * @param string $SubTaskId 子任务ID
-     * @param string $TaskType 任务类型
+     * @param string $TaskType 任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
      * @param array $ModifyItems 修改的项
      * @param array $NewItems 新增的项
      * @param array $RemoveItems 删除的项

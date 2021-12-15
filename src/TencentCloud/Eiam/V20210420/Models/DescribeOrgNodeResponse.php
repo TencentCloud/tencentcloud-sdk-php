@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgNodeChildInfo(array $OrgNodeChildInfo) 设置当前机构节点下的子节点列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -106,6 +110,12 @@ class DescribeOrgNodeResponse extends AbstractModel
     public $OrgNodeChildInfo;
 
     /**
+     * @var string 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -126,6 +136,8 @@ class DescribeOrgNodeResponse extends AbstractModel
      * @param string $CreatedDate 机构节点创建时间，符合 ISO8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OrgNodeChildInfo 当前机构节点下的子节点列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 机构节点描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -177,6 +189,10 @@ class DescribeOrgNodeResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OrgNodeChildInfo, $obj);
             }
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

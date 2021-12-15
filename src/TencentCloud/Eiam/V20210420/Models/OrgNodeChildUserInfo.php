@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalUserNum(integer $TotalUserNum) 设置当前机构节点下的用户总数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrgNodeIdPath() 获取组织机构ID路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrgNodeIdPath(string $OrgNodeIdPath) 设置组织机构ID路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrgNodeNamePath() 获取组织机构名称路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrgNodeNamePath(string $OrgNodeNamePath) 设置组织机构名称路径。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgNodeChildUserInfo extends AbstractModel
 {
@@ -54,11 +62,27 @@ class OrgNodeChildUserInfo extends AbstractModel
     public $TotalUserNum;
 
     /**
+     * @var string 组织机构ID路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrgNodeIdPath;
+
+    /**
+     * @var string 组织机构名称路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrgNodeNamePath;
+
+    /**
      * @param string $OrgNodeId 机构ID，是机构节点全局唯一标识，长度限制：64个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UserInfo 用户信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalUserNum 当前机构节点下的用户总数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrgNodeIdPath 组织机构ID路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrgNodeNamePath 组织机构名称路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -89,6 +113,14 @@ class OrgNodeChildUserInfo extends AbstractModel
 
         if (array_key_exists("TotalUserNum",$param) and $param["TotalUserNum"] !== null) {
             $this->TotalUserNum = $param["TotalUserNum"];
+        }
+
+        if (array_key_exists("OrgNodeIdPath",$param) and $param["OrgNodeIdPath"] !== null) {
+            $this->OrgNodeIdPath = $param["OrgNodeIdPath"];
+        }
+
+        if (array_key_exists("OrgNodeNamePath",$param) and $param["OrgNodeNamePath"] !== null) {
+            $this->OrgNodeNamePath = $param["OrgNodeNamePath"];
         }
     }
 }

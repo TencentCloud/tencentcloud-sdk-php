@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubTaskId(string $SubTaskId) 设置子任务号
  * @method string getTaskName() 获取任务名
  * @method void setTaskName(string $TaskName) 设置任务名
- * @method string getTaskType() 获取任务类型
- * @method void setTaskType(string $TaskType) 设置任务类型
+ * @method string getTaskType() 获取任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
+ * @method void setTaskType(string $TaskType) 设置任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
  */
 class ReviewDataTaskInfo extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ReviewDataTaskInfo extends AbstractModel
     public $TaskName;
 
     /**
-     * @var string 任务类型
+     * @var string 任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
      */
     public $TaskType;
 
@@ -55,7 +55,7 @@ class ReviewDataTaskInfo extends AbstractModel
      * @param string $MainTaskId 主任务号
      * @param string $SubTaskId 子任务号
      * @param string $TaskName 任务名
-     * @param string $TaskType 任务类型
+     * @param string $TaskType 任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
      */
     function __construct()
     {

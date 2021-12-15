@@ -128,28 +128,20 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
 那么：StreamID = 12345678_12345_push_user_1_main
  * @method string getExtraData() 获取内部参数，不需要关注此参数
  * @method void setExtraData(string $ExtraData) 设置内部参数，不需要关注此参数
- * @method integer getTRTCRoomId() 获取**内部体验字段，若需要体验可以提工单申请开通体验**
-
-TRTC数字类型房间号，取值范围: (1, 4294967295)。
+ * @method integer getTRTCRoomId() 获取TRTC数字类型房间号，取值范围: (1, 4294967295)。
 
 在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
 
 当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
- * @method void setTRTCRoomId(integer $TRTCRoomId) 设置**内部体验字段，若需要体验可以提工单申请开通体验**
-
-TRTC数字类型房间号，取值范围: (1, 4294967295)。
+ * @method void setTRTCRoomId(integer $TRTCRoomId) 设置TRTC数字类型房间号，取值范围: (1, 4294967295)。
 
 在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
 
 当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
- * @method string getTRTCRoomIdStr() 获取**内部体验字段，若需要体验可以提工单申请开通体验**
-
-TRTC字符串类型房间号。
+ * @method string getTRTCRoomIdStr() 获取TRTC字符串类型房间号。
 
 在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
- * @method void setTRTCRoomIdStr(string $TRTCRoomIdStr) 设置**内部体验字段，若需要体验可以提工单申请开通体验**
-
-TRTC字符串类型房间号。
+ * @method void setTRTCRoomIdStr(string $TRTCRoomIdStr) 设置TRTC字符串类型房间号。
 
 在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
  */
@@ -274,9 +266,7 @@ SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
     public $ExtraData;
 
     /**
-     * @var integer **内部体验字段，若需要体验可以提工单申请开通体验**
-
-TRTC数字类型房间号，取值范围: (1, 4294967295)。
+     * @var integer TRTC数字类型房间号，取值范围: (1, 4294967295)。
 
 在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
 
@@ -285,9 +275,7 @@ TRTC数字类型房间号，取值范围: (1, 4294967295)。
     public $TRTCRoomId;
 
     /**
-     * @var string **内部体验字段，若需要体验可以提工单申请开通体验**
-
-TRTC字符串类型房间号。
+     * @var string TRTC字符串类型房间号。
 
 在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
      */
@@ -348,16 +336,12 @@ urlencode(SdkAppID_RoomID_PushUserID_main)
 SdkAppID = 12345678，RoomID = 12345，PushUserID = push_user_1
 那么：StreamID = 12345678_12345_push_user_1_main
      * @param string $ExtraData 内部参数，不需要关注此参数
-     * @param integer $TRTCRoomId **内部体验字段，若需要体验可以提工单申请开通体验**
-
-TRTC数字类型房间号，取值范围: (1, 4294967295)。
+     * @param integer $TRTCRoomId TRTC数字类型房间号，取值范围: (1, 4294967295)。
 
 在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
 
 当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
-     * @param string $TRTCRoomIdStr **内部体验字段，若需要体验可以提工单申请开通体验**
-
-TRTC字符串类型房间号。
+     * @param string $TRTCRoomIdStr TRTC字符串类型房间号。
 
 在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
      */

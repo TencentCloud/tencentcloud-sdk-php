@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户ID，是用户的全局唯一标识。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getUserGroupInfoList() 获取用户所属的用户组信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserGroupInfoList(array $UserGroupInfoList) 设置用户所属的用户组信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取返回的用户组信息总数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置返回的用户组信息总数。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +54,18 @@ class ListUserGroupsOfUserResponse extends AbstractModel
     public $UserId;
 
     /**
+     * @var array 用户所属的用户组信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserGroupInfoList;
+
+    /**
+     * @var integer 返回的用户组信息总数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -54,6 +74,10 @@ class ListUserGroupsOfUserResponse extends AbstractModel
      * @param array $UserGroupIds 用户所属的用户组ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserId 用户ID，是用户的全局唯一标识。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $UserGroupInfoList 用户所属的用户组信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 返回的用户组信息总数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -76,6 +100,19 @@ class ListUserGroupsOfUserResponse extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("UserGroupInfoList",$param) and $param["UserGroupInfoList"] !== null) {
+            $this->UserGroupInfoList = [];
+            foreach ($param["UserGroupInfoList"] as $key => $value){
+                $obj = new UserGroupInfo();
+                $obj->deserialize($value);
+                array_push($this->UserGroupInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

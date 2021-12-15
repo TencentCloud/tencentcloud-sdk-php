@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建结构化任务子任务信息
  *
- * @method string getTaskType() 获取任务类型
- * @method void setTaskType(string $TaskType) 设置任务类型
+ * @method string getTaskType() 获取任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
+ * @method void setTaskType(string $TaskType) 设置任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
  * @method array getFileList() 获取报告文件上传的地址列表，需按顺序排列。如果使用ImageList参数，置为空数组即可
  * @method void setFileList(array $FileList) 设置报告文件上传的地址列表，需按顺序排列。如果使用ImageList参数，置为空数组即可
  * @method string getCustomerId() 获取客户号
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateStructureTaskInfo extends AbstractModel
 {
     /**
-     * @var string 任务类型
+     * @var string 任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
      */
     public $TaskType;
 
@@ -66,7 +66,7 @@ class CreateStructureTaskInfo extends AbstractModel
     public $Year;
 
     /**
-     * @param string $TaskType 任务类型
+     * @param string $TaskType 任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
      * @param array $FileList 报告文件上传的地址列表，需按顺序排列。如果使用ImageList参数，置为空数组即可
      * @param string $CustomerId 客户号
      * @param string $CustomerName 客户姓名

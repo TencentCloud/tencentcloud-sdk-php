@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterEipEipAddressStatus(array $FilterEipEipAddressStatus) 设置高防弹性公网IP实例的绑定状态搜索条件，取值范围 [BINDING、 BIND、UNBINDING、UNBIND]。该搜索条件只在FilterEipType=1时才有效。
  * @method integer getFilterDamDDoSStatus() 获取是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
  * @method void setFilterDamDDoSStatus(integer $FilterDamDDoSStatus) 设置是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
+ * @method string getFilterStatus() 获取获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+ * @method void setFilterStatus(string $FilterStatus) 设置获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
  */
 class DescribeListBGPIPInstancesRequest extends AbstractModel
 {
@@ -112,6 +114,11 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterDamDDoSStatus;
 
     /**
+     * @var string 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+     */
+    public $FilterStatus;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -128,6 +135,7 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
      * @param integer $FilterEipType 是否只获取高防弹性公网IP实例。填写时，只能填写1或者0。当填写1时，表示返回高防弹性公网IP实例。当填写0时，表示返回非高防弹性公网IP实例。
      * @param array $FilterEipEipAddressStatus 高防弹性公网IP实例的绑定状态搜索条件，取值范围 [BINDING、 BIND、UNBINDING、UNBIND]。该搜索条件只在FilterEipType=1时才有效。
      * @param integer $FilterDamDDoSStatus 是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
+     * @param string $FilterStatus 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterDamDDoSStatus",$param) and $param["FilterDamDDoSStatus"] !== null) {
             $this->FilterDamDDoSStatus = $param["FilterDamDDoSStatus"];
+        }
+
+        if (array_key_exists("FilterStatus",$param) and $param["FilterStatus"] !== null) {
+            $this->FilterStatus = $param["FilterStatus"];
         }
     }
 }

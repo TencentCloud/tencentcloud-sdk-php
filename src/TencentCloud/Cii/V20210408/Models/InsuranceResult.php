@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 包含险种的各个核保结论
  *
- * @method string getInsuranceType() 获取险种
- * @method void setInsuranceType(string $InsuranceType) 设置险种
+ * @method string getInsuranceType() 获取险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险)
+ * @method void setInsuranceType(string $InsuranceType) 设置险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险)
  * @method array getResult() 获取对应险种的机器核保结果
  * @method void setResult(array $Result) 设置对应险种的机器核保结果
  */
 class InsuranceResult extends AbstractModel
 {
     /**
-     * @var string 险种
+     * @var string 险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险)
      */
     public $InsuranceType;
 
@@ -38,7 +38,7 @@ class InsuranceResult extends AbstractModel
     public $Result;
 
     /**
-     * @param string $InsuranceType 险种
+     * @param string $InsuranceType 险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险)
      * @param array $Result 对应险种的机器核保结果
      */
     function __construct()

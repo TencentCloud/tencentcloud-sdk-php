@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivationTime(string $ActivationTime) 设置用户激活时间，遵循 ISO 8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getPwdNeedReset() 获取当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPwdNeedReset(boolean $PwdNeedReset) 设置当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -146,6 +150,12 @@ class DescribeUserInfoResponse extends AbstractModel
     public $ActivationTime;
 
     /**
+     * @var boolean 当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PwdNeedReset;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -174,6 +184,8 @@ class DescribeUserInfoResponse extends AbstractModel
      * @param string $ExpirationTime 用户过期时间，遵循 ISO 8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActivationTime 用户激活时间，遵循 ISO 8601 标准。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $PwdNeedReset 当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -236,6 +248,10 @@ class DescribeUserInfoResponse extends AbstractModel
 
         if (array_key_exists("ActivationTime",$param) and $param["ActivationTime"] !== null) {
             $this->ActivationTime = $param["ActivationTime"];
+        }
+
+        if (array_key_exists("PwdNeedReset",$param) and $param["PwdNeedReset"] !== null) {
+            $this->PwdNeedReset = $param["PwdNeedReset"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

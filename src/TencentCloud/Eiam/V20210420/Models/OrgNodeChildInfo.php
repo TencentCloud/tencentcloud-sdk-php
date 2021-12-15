@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedDate(string $CreatedDate) 设置机构节点创建时间，符合 ISO8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgNodeChildInfo extends AbstractModel
 {
@@ -94,6 +98,12 @@ class OrgNodeChildInfo extends AbstractModel
     public $CreatedDate;
 
     /**
+     * @var string 机构节点描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @param string $DisplayName 机构节点展示名称，长度限制：64个字符。 默认与机构名相同。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastModifiedDate 机构节点最后修改时间，符合 ISO8601 标准。
@@ -107,6 +117,8 @@ class OrgNodeChildInfo extends AbstractModel
      * @param string $DataSource 数据来源。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedDate 机构节点创建时间，符合 ISO8601 标准。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 机构节点描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class OrgNodeChildInfo extends AbstractModel
 
         if (array_key_exists("CreatedDate",$param) and $param["CreatedDate"] !== null) {
             $this->CreatedDate = $param["CreatedDate"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

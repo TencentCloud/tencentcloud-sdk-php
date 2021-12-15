@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEmail(string $Email) 设置用户邮箱。
  * @method boolean getPwdNeedReset() 获取密码是否需要重置，为空默认为false不需要重置密码。
  * @method void setPwdNeedReset(boolean $PwdNeedReset) 设置密码是否需要重置，为空默认为false不需要重置密码。
+ * @method string getOrgNodeId() 获取用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+ * @method void setOrgNodeId(string $OrgNodeId) 设置用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
  */
 class ModifyUserInfoRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ModifyUserInfoRequest extends AbstractModel
     public $PwdNeedReset;
 
     /**
+     * @var string 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+     */
+    public $OrgNodeId;
+
+    /**
      * @param string $UserName 用户名，长度限制：32个字符。 Username 和 UserId 需选择一个作为搜索条件；如两个条件同时使用则默认使用Username作为搜索条件。
      * @param string $DisplayName 昵称，长度限制：64个字符。 默认与用户名相同。
      * @param string $Description 用户备注，长度限制：512个字符。
@@ -104,6 +111,7 @@ class ModifyUserInfoRequest extends AbstractModel
      * @param string $Password 用户密码， 需要符合密码策略的配置。
      * @param string $Email 用户邮箱。
      * @param boolean $PwdNeedReset 密码是否需要重置，为空默认为false不需要重置密码。
+     * @param string $OrgNodeId 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ModifyUserInfoRequest extends AbstractModel
 
         if (array_key_exists("PwdNeedReset",$param) and $param["PwdNeedReset"] !== null) {
             $this->PwdNeedReset = $param["PwdNeedReset"];
+        }
+
+        if (array_key_exists("OrgNodeId",$param) and $param["OrgNodeId"] !== null) {
+            $this->OrgNodeId = $param["OrgNodeId"];
         }
     }
 }

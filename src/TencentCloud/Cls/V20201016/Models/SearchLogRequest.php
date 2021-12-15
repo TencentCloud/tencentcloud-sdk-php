@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置查询语句，语句长度最大为4096
  * @method integer getLimit() 获取单次查询返回的原始日志条数，最大值为100。查询语句(Query)包含SQL时，针对SQL的结果条数需在Query中指定，参考https://cloud.tencent.com/document/product/614/58977
  * @method void setLimit(integer $Limit) 设置单次查询返回的原始日志条数，最大值为100。查询语句(Query)包含SQL时，针对SQL的结果条数需在Query中指定，参考https://cloud.tencent.com/document/product/614/58977
- * @method string getContext() 获取加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
- * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+ * @method string getContext() 获取加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
+ * @method void setContext(string $Context) 设置加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
  * @method string getSort() 获取日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
  * @method void setSort(string $Sort) 设置日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
  * @method boolean getUseNewAnalysis() 获取为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
@@ -65,7 +65,7 @@ class SearchLogRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+     * @var string 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
      */
     public $Context;
 
@@ -85,7 +85,7 @@ class SearchLogRequest extends AbstractModel
      * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
      * @param string $Query 查询语句，语句长度最大为4096
      * @param integer $Limit 单次查询返回的原始日志条数，最大值为100。查询语句(Query)包含SQL时，针对SQL的结果条数需在Query中指定，参考https://cloud.tencent.com/document/product/614/58977
-     * @param string $Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+     * @param string $Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
      * @param string $Sort 日志接口是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
      * @param boolean $UseNewAnalysis 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
      */

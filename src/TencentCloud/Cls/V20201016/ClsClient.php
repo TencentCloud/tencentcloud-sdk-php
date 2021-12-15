@@ -25,7 +25,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
 /**
  * @method Models\ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroup(Models\ApplyConfigToMachineGroupRequest $req) 应用采集配置到指定机器组
  * @method Models\CreateAlarmResponse CreateAlarm(Models\CreateAlarmRequest $req) 本接口用于创建告警策略。
- * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) 该接口用户创建告警通知模板。
+ * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) 该接口用户创建通知渠道组。
  * @method Models\CreateAsyncContextTaskResponse CreateAsyncContextTask(Models\CreateAsyncContextTaskRequest $req) 本接口用于创建离线上下文任务
  * @method Models\CreateAsyncSearchTaskResponse CreateAsyncSearchTask(Models\CreateAsyncSearchTaskRequest $req) 本接口用于创建离线检索任务
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建采集规则配置
@@ -36,7 +36,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateShipperResponse CreateShipper(Models\CreateShipperRequest $req) 创建新的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 本接口用于创建日志主题。
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) 本接口用于删除告警策略。
- * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) 该接口用于删除告警通知模板
+ * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) 该接口用于删除通知渠道组
  * @method Models\DeleteAsyncContextTaskResponse DeleteAsyncContextTask(Models\DeleteAsyncContextTaskRequest $req) 本接口用于删除离线上下文任务
  * @method Models\DeleteAsyncSearchTaskResponse DeleteAsyncSearchTask(Models\DeleteAsyncSearchTaskRequest $req) 本接口用于删除离线检索任务
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除采集规则配置
@@ -47,8 +47,8 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteMachineGroupResponse DeleteMachineGroup(Models\DeleteMachineGroupRequest $req) 删除机器组
  * @method Models\DeleteShipperResponse DeleteShipper(Models\DeleteShipperRequest $req) 删除投递规则
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 本接口用于删除日志主题。
- * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) 该接口用于获取告警通知模板列表
- * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) 本接口用于获取告警策略。
+ * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) 该接口用于获取通知渠道组列表
+ * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) 本接口用于获取告警策略列表。
  * @method Models\DescribeAsyncContextResultResponse DescribeAsyncContextResult(Models\DescribeAsyncContextResultRequest $req) 本接口用户获取离线上下文任务的结果
  * @method Models\DescribeAsyncContextTasksResponse DescribeAsyncContextTasks(Models\DescribeAsyncContextTasksRequest $req) 本接口用于获取离线上下文任务列表
  * @method Models\DescribeAsyncSearchResultResponse DescribeAsyncSearchResult(Models\DescribeAsyncSearchResultRequest $req) 本接口用户获取离线检索任务的结果
@@ -69,7 +69,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\GetAlarmLogResponse GetAlarmLog(Models\GetAlarmLogRequest $req) 本接口用于获取告警任务历史
  * @method Models\MergePartitionResponse MergePartition(Models\MergePartitionRequest $req) 本接口用于合并一个读写态的主题分区，合并时指定一个主题分区 ID，日志服务会自动合并范围右相邻的分区。
  * @method Models\ModifyAlarmResponse ModifyAlarm(Models\ModifyAlarmRequest $req) 本接口用于修改告警策略。需要至少修改一项有效内容。
- * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 该接口用于修改告警通知模板。
+ * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 该接口用于修改通知渠道组
  * @method Models\ModifyConfigResponse ModifyConfig(Models\ModifyConfigRequest $req) 修改采集规则配置
  * @method Models\ModifyIndexResponse ModifyIndex(Models\ModifyIndexRequest $req) 本接口用于修改索引配置
 
@@ -78,7 +78,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\ModifyShipperResponse ModifyShipper(Models\ModifyShipperRequest $req) 修改现有的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 本接口用于修改日志主题。
  * @method Models\RetryShipperTaskResponse RetryShipperTask(Models\RetryShipperTaskRequest $req) 重试失败的投递任务
- * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 本接口用于搜索日志
+ * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 本接口用于搜索日志, 该接口除受默认接口请求频率限制外，针对单个日志主题，并发数不能超过15
  * @method Models\SplitPartitionResponse SplitPartition(Models\SplitPartitionRequest $req) 本接口用于分裂主题分区
  * @method Models\UploadLogResponse UploadLog(Models\UploadLogRequest $req) ## 功能描述
 

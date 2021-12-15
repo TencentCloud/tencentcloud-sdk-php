@@ -33,11 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEventType() 获取事件类型。
 0: "断流",
 1: "推流",
-100: "录制"。
+100: "录制"
+200: "截图回调"。
  * @method void setEventType(integer $EventType) 设置事件类型。
 0: "断流",
 1: "推流",
-100: "录制"。
+100: "录制"
+200: "截图回调"。
  * @method integer getResultCode() 获取回调结果。
 0为成功，其他为失败。
  * @method void setResultCode(integer $ResultCode) 设置回调结果。
@@ -74,7 +76,8 @@ class DescribeCallbackRecordsListRequest extends AbstractModel
      * @var integer 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"。
+100: "录制"
+200: "截图回调"。
      */
     public $EventType;
 
@@ -93,7 +96,8 @@ class DescribeCallbackRecordsListRequest extends AbstractModel
      * @param integer $EventType 事件类型。
 0: "断流",
 1: "推流",
-100: "录制"。
+100: "录制"
+200: "截图回调"。
      * @param integer $ResultCode 回调结果。
 0为成功，其他为失败。
      */

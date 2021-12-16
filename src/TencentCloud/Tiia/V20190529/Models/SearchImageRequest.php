@@ -48,6 +48,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
  * @method void setLimit(integer $Limit) 设置返回数量，默认值为10，最大值为100。
  * @method string getFilter() 获取针对入库时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
  * @method void setFilter(string $Filter) 设置针对入库时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+ * @method ImageRect getImageRect() 获取图像主体区域。
+ * @method void setImageRect(ImageRect $ImageRect) 设置图像主体区域。
  */
 class SearchImageRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $Filter;
 
     /**
+     * @var ImageRect 图像主体区域。
+     */
+    public $ImageRect;
+
+    /**
      * @param string $GroupId 图库名称。
      * @param string $ImageUrl 图片的 Url 。对应图片 base64 编码后大小不可超过2M。 
 图片分辨率不超过1920*1080。 
@@ -108,6 +115,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @param integer $Offset 起始序号，默认值为0。
      * @param integer $Limit 返回数量，默认值为10，最大值为100。
      * @param string $Filter 针对入库时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+     * @param ImageRect $ImageRect 图像主体区域。
      */
     function __construct()
     {
@@ -148,6 +156,11 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
             $this->Filter = $param["Filter"];
+        }
+
+        if (array_key_exists("ImageRect",$param) and $param["ImageRect"] !== null) {
+            $this->ImageRect = new ImageRect();
+            $this->ImageRect->deserialize($param["ImageRect"]);
         }
     }
 }

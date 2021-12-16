@@ -34,10 +34,12 @@ use TencentCloud\Common\AbstractModel;
 类型： 
 1: 通用图库，以用户输入图提取特征。
 2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+3: 针对电商（通用品类）和logo优化。
  * @method void setGroupType(integer $GroupType) 设置图库类型， 默认为通用。
 类型： 
 1: 通用图库，以用户输入图提取特征。
 2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+3: 针对电商（通用品类）和logo优化。
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -71,6 +73,7 @@ class CreateGroupRequest extends AbstractModel
 类型： 
 1: 通用图库，以用户输入图提取特征。
 2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+3: 针对电商（通用品类）和logo优化。
      */
     public $GroupType;
 
@@ -84,6 +87,7 @@ class CreateGroupRequest extends AbstractModel
 类型： 
 1: 通用图库，以用户输入图提取特征。
 2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+3: 针对电商（通用品类）和logo优化。
      */
     function __construct()
     {

@@ -56,8 +56,8 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
  * @method void setAuditLogsetId(string $AuditLogsetId) 设置审计日志上传到的logset日志集
  * @method string getAuditLogTopicId() 获取审计日志上传到的topic
  * @method void setAuditLogTopicId(string $AuditLogTopicId) 设置审计日志上传到的topic
- * @method string getVpcCniType() 获取区分单网卡多IP模式和独立网卡模式
- * @method void setVpcCniType(string $VpcCniType) 设置区分单网卡多IP模式和独立网卡模式
+ * @method string getVpcCniType() 获取区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
+ * @method void setVpcCniType(string $VpcCniType) 设置区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
  * @method string getRuntimeVersion() 获取运行时版本
  * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
  * @method boolean getEnableCustomizedPodCIDR() 获取是否开节点podCIDR大小的自定义模式
@@ -136,7 +136,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     public $AuditLogTopicId;
 
     /**
-     * @var string 区分单网卡多IP模式和独立网卡模式
+     * @var string 区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
      */
     public $VpcCniType;
 
@@ -179,7 +179,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
      * @param boolean $AuditEnabled 是否开启审计开关
      * @param string $AuditLogsetId 审计日志上传到的logset日志集
      * @param string $AuditLogTopicId 审计日志上传到的topic
-     * @param string $VpcCniType 区分单网卡多IP模式和独立网卡模式
+     * @param string $VpcCniType 区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
      * @param string $RuntimeVersion 运行时版本
      * @param boolean $EnableCustomizedPodCIDR 是否开节点podCIDR大小的自定义模式
      * @param integer $BasePodNumber 自定义模式下的基础pod数量

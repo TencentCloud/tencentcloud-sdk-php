@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTitle() 获取核保引擎名称
  * @method void setTitle(string $Title) 设置核保引擎名称
- * @method string getConclusion() 获取核保结论
- * @method void setConclusion(string $Conclusion) 设置核保结论
+ * @method string getConclusion() 获取核保结论：加费、承保、拒保、延期、除外、加费+除外
+ * @method void setConclusion(string $Conclusion) 设置核保结论：加费、承保、拒保、延期、除外、加费+除外
  * @method array getExplanation() 获取AI决策树解释
  * @method void setExplanation(array $Explanation) 设置AI决策树解释
  * @method array getDisease() 获取疾病指标
@@ -39,7 +39,7 @@ class MachinePredict extends AbstractModel
     public $Title;
 
     /**
-     * @var string 核保结论
+     * @var string 核保结论：加费、承保、拒保、延期、除外、加费+除外
      */
     public $Conclusion;
 
@@ -60,7 +60,7 @@ class MachinePredict extends AbstractModel
 
     /**
      * @param string $Title 核保引擎名称
-     * @param string $Conclusion 核保结论
+     * @param string $Conclusion 核保结论：加费、承保、拒保、延期、除外、加费+除外
      * @param array $Explanation AI决策树解释
      * @param array $Disease 疾病指标
      * @param array $Laboratory 检查异常

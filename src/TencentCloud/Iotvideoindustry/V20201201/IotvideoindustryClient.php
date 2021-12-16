@@ -30,6 +30,7 @@ use TencentCloud\Iotvideoindustry\V20201201\Models as Models;
  * @method Models\CreateDeviceGroupResponse CreateDeviceGroup(Models\CreateDeviceGroupRequest $req) 本接口(CreateDeviceGroup) 用于创建设备管理分组。
  * @method Models\CreateLiveChannelResponse CreateLiveChannel(Models\CreateLiveChannelRequest $req) 创建直播频道
  * @method Models\CreateLiveRecordPlanResponse CreateLiveRecordPlan(Models\CreateLiveRecordPlanRequest $req) 创建直播录制计划
+ * @method Models\CreateMessageForwardResponse CreateMessageForward(Models\CreateMessageForwardRequest $req) 创建消息转发配置
  * @method Models\CreateRecordPlanResponse CreateRecordPlan(Models\CreateRecordPlanRequest $req) 本接口(CreateRecordPlan) 用于创建录制计划，使设备与时间模板绑定，以便及时启动录制
  * @method Models\CreateSceneResponse CreateScene(Models\CreateSceneRequest $req) 创建场景
  * @method Models\CreateTimeTemplateResponse CreateTimeTemplate(Models\CreateTimeTemplateRequest $req) 本接口(CreateTimeTemplate) 用于根据模板描述的具体录制时间片段，创建定制化的时间模板。
@@ -39,6 +40,7 @@ use TencentCloud\Iotvideoindustry\V20201201\Models as Models;
  * @method Models\DeleteLiveChannelResponse DeleteLiveChannel(Models\DeleteLiveChannelRequest $req) 删除直播接口
  * @method Models\DeleteLiveRecordPlanResponse DeleteLiveRecordPlan(Models\DeleteLiveRecordPlanRequest $req) 删除直播录制计划
  * @method Models\DeleteLiveVideoListResponse DeleteLiveVideoList(Models\DeleteLiveVideoListRequest $req) 直播录像删除
+ * @method Models\DeleteMessageForwardResponse DeleteMessageForward(Models\DeleteMessageForwardRequest $req) 删除消息转发配置
  * @method Models\DeleteRecordPlanResponse DeleteRecordPlan(Models\DeleteRecordPlanRequest $req) 本接口(DeleteRecordPlan)用于删除录制计划
 录制计划删除的同时，会停止该录制计划下的全部录制任务。
  * @method Models\DeleteSceneResponse DeleteScene(Models\DeleteSceneRequest $req) 删除场景
@@ -61,6 +63,8 @@ use TencentCloud\Iotvideoindustry\V20201201\Models as Models;
  * @method Models\DescribeLiveRecordPlanIdsResponse DescribeLiveRecordPlanIds(Models\DescribeLiveRecordPlanIdsRequest $req) 获取直播录制计划列表
  * @method Models\DescribeLiveStreamResponse DescribeLiveStream(Models\DescribeLiveStreamRequest $req) 直播拉流接口
  * @method Models\DescribeLiveVideoListResponse DescribeLiveVideoList(Models\DescribeLiveVideoListRequest $req) 直播录像回放列表
+ * @method Models\DescribeMessageForwardResponse DescribeMessageForward(Models\DescribeMessageForwardRequest $req) 查看消息转发配置详情
+ * @method Models\DescribeMessageForwardsResponse DescribeMessageForwards(Models\DescribeMessageForwardsRequest $req) 查看消息转发配置列表
  * @method Models\DescribeRecordDatesByLiveResponse DescribeRecordDatesByLive(Models\DescribeRecordDatesByLiveRequest $req) 直播录像存储日期列表
  * @method Models\DescribeRecordStreamResponse DescribeRecordStream(Models\DescribeRecordStreamRequest $req) 获取回放视频流(NVR录制用)
 RecordId和StartTime/EndTime互斥
@@ -85,6 +89,7 @@ RecordId和StartTime/EndTime互斥
  * @method Models\ModifyLiveChannelResponse ModifyLiveChannel(Models\ModifyLiveChannelRequest $req) 编辑直播接口
  * @method Models\ModifyLiveRecordPlanResponse ModifyLiveRecordPlan(Models\ModifyLiveRecordPlanRequest $req) 编辑直播录制计划
  * @method Models\ModifyLiveVideoResponse ModifyLiveVideo(Models\ModifyLiveVideoRequest $req) 直播录像编辑
+ * @method Models\ModifyMessageForwardResponse ModifyMessageForward(Models\ModifyMessageForwardRequest $req) 修改消息转发配置
  * @method Models\ModifySubscriptionStatusResponse ModifySubscriptionStatus(Models\ModifySubscriptionStatusRequest $req) 编辑设备订阅状态
  * @method Models\ModifyVideoInfoResponse ModifyVideoInfo(Models\ModifyVideoInfoRequest $req) 修改录像存储列表
  * @method Models\UpdateDeviceGroupResponse UpdateDeviceGroup(Models\UpdateDeviceGroupRequest $req) 本接口(UpdateDeviceGroup)用于修改分组信息。

@@ -65,9 +65,9 @@ cdn业务：
 100763 视频直播流量(海外)
 100762 视频直播宽带(海外)
  * @method string getDomain() 获取查询域名 例如 www.qq.com
-非CDN业务查询时值为空
+非CDN业务查询时传入空字符串，返回的值为空
  * @method void setDomain(string $Domain) 设置查询域名 例如 www.qq.com
-非CDN业务查询时值为空
+非CDN业务查询时传入空字符串，返回的值为空
  * @method string getInstanceID() 获取1、如果为空，则返回EIP或CLB所有实例的明细；
 2、如果传入实例名，则返回该实例明细
  * @method void setInstanceID(string $InstanceID) 设置1、如果为空，则返回EIP或CLB所有实例的明细；
@@ -111,7 +111,7 @@ cdn业务：
 
     /**
      * @var string 查询域名 例如 www.qq.com
-非CDN业务查询时值为空
+非CDN业务查询时传入空字符串，返回的值为空
      */
     public $Domain;
 
@@ -145,7 +145,7 @@ cdn业务：
 100763 视频直播流量(海外)
 100762 视频直播宽带(海外)
      * @param string $Domain 查询域名 例如 www.qq.com
-非CDN业务查询时值为空
+非CDN业务查询时传入空字符串，返回的值为空
      * @param string $InstanceID 1、如果为空，则返回EIP或CLB所有实例的明细；
 2、如果传入实例名，则返回该实例明细
      */

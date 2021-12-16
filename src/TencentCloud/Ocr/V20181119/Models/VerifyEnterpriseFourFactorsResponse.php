@@ -22,9 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getState() 获取核验一致性（1:一致，2:不一致，3:查询无记录）
  * @method void setState(integer $State) 设置核验一致性（1:一致，2:不一致，3:查询无记录）
- * @method Detail getDetail() 获取返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
+ * @method Detail getDetail() 获取核验结果明细，7：企业法人/负责人，6：企业股东，5：企
+业管理人员，-21：企业名称与企业标识不符，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDetail(Detail $Detail) 设置返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
+ * @method void setDetail(Detail $Detail) 设置核验结果明细，7：企业法人/负责人，6：企业股东，5：企
+业管理人员，-21：企业名称与企业标识不符，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +39,8 @@ class VerifyEnterpriseFourFactorsResponse extends AbstractModel
     public $State;
 
     /**
-     * @var Detail 返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
+     * @var Detail 核验结果明细，7：企业法人/负责人，6：企业股东，5：企
+业管理人员，-21：企业名称与企业标识不符，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
@@ -49,7 +52,8 @@ class VerifyEnterpriseFourFactorsResponse extends AbstractModel
 
     /**
      * @param integer $State 核验一致性（1:一致，2:不一致，3:查询无记录）
-     * @param Detail $Detail 返回不一致时，返回明细，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
+     * @param Detail $Detail 核验结果明细，7：企业法人/负责人，6：企业股东，5：企
+业管理人员，-21：企业名称与企业标识不符，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

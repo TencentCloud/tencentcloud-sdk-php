@@ -18,60 +18,60 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 磁盘配置
+ * 云硬盘配置
  *
- * @method string getZone() 获取可用区
- * @method void setZone(string $Zone) 设置可用区
- * @method string getDiskType() 获取磁盘类型
- * @method void setDiskType(string $DiskType) 设置磁盘类型
- * @method string getDiskSalesState() 获取磁盘可售卖状态
- * @method void setDiskSalesState(string $DiskSalesState) 设置磁盘可售卖状态
- * @method integer getMaxDiskSize() 获取最大磁盘大小
- * @method void setMaxDiskSize(integer $MaxDiskSize) 设置最大磁盘大小
- * @method integer getMinDiskSize() 获取最小磁盘大小
- * @method void setMinDiskSize(integer $MinDiskSize) 设置最小磁盘大小
- * @method integer getDiskStepSize() 获取磁盘步长
- * @method void setDiskStepSize(integer $DiskStepSize) 设置磁盘步长
+ * @method string getZone() 获取可用区。
+ * @method void setZone(string $Zone) 设置可用区。
+ * @method string getDiskType() 获取云硬盘类型。
+ * @method void setDiskType(string $DiskType) 设置云硬盘类型。
+ * @method string getDiskSalesState() 获取云硬盘可售卖状态。
+ * @method void setDiskSalesState(string $DiskSalesState) 设置云硬盘可售卖状态。
+ * @method integer getMaxDiskSize() 获取最大云硬盘大小。
+ * @method void setMaxDiskSize(integer $MaxDiskSize) 设置最大云硬盘大小。
+ * @method integer getMinDiskSize() 获取最小云硬盘大小。
+ * @method void setMinDiskSize(integer $MinDiskSize) 设置最小云硬盘大小。
+ * @method integer getDiskStepSize() 获取云硬盘步长。
+ * @method void setDiskStepSize(integer $DiskStepSize) 设置云硬盘步长。
  */
 class DiskConfig extends AbstractModel
 {
     /**
-     * @var string 可用区
+     * @var string 可用区。
      */
     public $Zone;
 
     /**
-     * @var string 磁盘类型
+     * @var string 云硬盘类型。
      */
     public $DiskType;
 
     /**
-     * @var string 磁盘可售卖状态
+     * @var string 云硬盘可售卖状态。
      */
     public $DiskSalesState;
 
     /**
-     * @var integer 最大磁盘大小
+     * @var integer 最大云硬盘大小。
      */
     public $MaxDiskSize;
 
     /**
-     * @var integer 最小磁盘大小
+     * @var integer 最小云硬盘大小。
      */
     public $MinDiskSize;
 
     /**
-     * @var integer 磁盘步长
+     * @var integer 云硬盘步长。
      */
     public $DiskStepSize;
 
     /**
-     * @param string $Zone 可用区
-     * @param string $DiskType 磁盘类型
-     * @param string $DiskSalesState 磁盘可售卖状态
-     * @param integer $MaxDiskSize 最大磁盘大小
-     * @param integer $MinDiskSize 最小磁盘大小
-     * @param integer $DiskStepSize 磁盘步长
+     * @param string $Zone 可用区。
+     * @param string $DiskType 云硬盘类型。
+     * @param string $DiskSalesState 云硬盘可售卖状态。
+     * @param integer $MaxDiskSize 最大云硬盘大小。
+     * @param integer $MinDiskSize 最小云硬盘大小。
+     * @param integer $DiskStepSize 云硬盘步长。
      */
     function __construct()
     {

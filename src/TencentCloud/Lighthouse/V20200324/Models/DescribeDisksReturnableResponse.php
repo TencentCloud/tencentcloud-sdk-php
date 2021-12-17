@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDisksReturnable返回参数结构体
  *
- * @method array getDiskReturnableSet() 获取可退还磁盘详细信息列表。
- * @method void setDiskReturnableSet(array $DiskReturnableSet) 设置可退还磁盘详细信息列表。
- * @method integer getTotalCount() 获取符合条件的磁盘数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的磁盘数量。
+ * @method array getDiskReturnableSet() 获取可退还云硬盘详细信息列表。
+ * @method void setDiskReturnableSet(array $DiskReturnableSet) 设置可退还云硬盘详细信息列表。
+ * @method integer getTotalCount() 获取符合条件的云硬盘数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的云硬盘数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDisksReturnableResponse extends AbstractModel
 {
     /**
-     * @var array 可退还磁盘详细信息列表。
+     * @var array 可退还云硬盘详细信息列表。
      */
     public $DiskReturnableSet;
 
     /**
-     * @var integer 符合条件的磁盘数量。
+     * @var integer 符合条件的云硬盘数量。
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeDisksReturnableResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DiskReturnableSet 可退还磁盘详细信息列表。
-     * @param integer $TotalCount 符合条件的磁盘数量。
+     * @param array $DiskReturnableSet 可退还云硬盘详细信息列表。
+     * @param integer $TotalCount 符合条件的云硬盘数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

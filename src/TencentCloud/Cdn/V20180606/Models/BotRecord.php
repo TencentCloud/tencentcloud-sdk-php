@@ -96,6 +96,10 @@ BotType=UCB时，为二期接口，暂时未定义内容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取BOT记录唯一ID，用于查询访问详情
  * @method void setId(string $Id) 设置BOT记录唯一ID，用于查询访问详情
+ * @method string getDomain() 获取域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomain(string $Domain) 设置域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotRecord extends AbstractModel
 {
@@ -182,6 +186,12 @@ BotType=UCB时，为二期接口，暂时未定义内容
     public $Id;
 
     /**
+     * @var string 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domain;
+
+    /**
      * @param string $Action 动作，取值为以为3个类型中的一个："intercept","permit","monitor"，分别表示： 拦截， 放行，监控
      * @param integer $Nums 会话总次数
      * @param string $RuleName BotType=UB时，表示预测标签，取值如下：
@@ -220,6 +230,8 @@ BotType=UCB时，为二期接口，暂时未定义内容
      * @param string $TcbDetail BotType=TCB，表示TCB名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id BOT记录唯一ID，用于查询访问详情
+     * @param string $Domain 域名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -276,6 +288,10 @@ BotType=UCB时，为二期接口，暂时未定义内容
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

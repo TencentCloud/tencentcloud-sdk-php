@@ -24,24 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordType(string $RecordType) 设置记录类型, 详见 DescribeRecordType 接口。
  * @method string getValue() 获取记录值。
  * @method void setValue(string $Value) 设置记录值。
- * @method string getSubDomain() 获取子域名(主机记录)。
- * @method void setSubDomain(string $SubDomain) 设置子域名(主机记录)。
- * @method string getRecordLine() 获取解析记录的线路，详见 DescribeRecordLineList 接口。
- * @method void setRecordLine(string $RecordLine) 设置解析记录的线路，详见 DescribeRecordLineList 接口。
- * @method string getRecordLineId() 获取解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId
- * @method void setRecordLineId(string $RecordLineId) 设置解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId
- * @method integer getWeight() 获取记录权重值。
+ * @method string getSubDomain() 获取子域名(主机记录)，默认为@。
+ * @method void setSubDomain(string $SubDomain) 设置子域名(主机记录)，默认为@。
+ * @method string getRecordLine() 获取解析记录的线路，详见 DescribeRecordLineList 接口，RecordLine和RecordLineId都未填时，默认为「默认」线路。
+ * @method void setRecordLine(string $RecordLine) 设置解析记录的线路，详见 DescribeRecordLineList 接口，RecordLine和RecordLineId都未填时，默认为「默认」线路。
+ * @method string getRecordLineId() 获取解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId。
+ * @method void setRecordLineId(string $RecordLineId) 设置解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId。
+ * @method integer getWeight() 获取记录权重值(暂未支持)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeight(integer $Weight) 设置记录权重值。
+ * @method void setWeight(integer $Weight) 设置记录权重值(暂未支持)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMX() 获取记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选
- * @method void setMX(integer $MX) 设置记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选
- * @method integer getTTL() 获取记录的 TTL 值，默认600
- * @method void setTTL(integer $TTL) 设置记录的 TTL 值，默认600
- * @method integer getEnabled() 获取记录状态。0表示禁用，1表示启用，默认启用
- * @method void setEnabled(integer $Enabled) 设置记录状态。0表示禁用，1表示启用，默认启用
- * @method string getRemark() 获取记录别名
- * @method void setRemark(string $Remark) 设置记录别名
+ * @method integer getMX() 获取记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
+ * @method void setMX(integer $MX) 设置记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
+ * @method integer getTTL() 获取记录的 TTL 值，默认600。
+ * @method void setTTL(integer $TTL) 设置记录的 TTL 值，默认600。
+ * @method integer getEnabled() 获取记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
+ * @method void setEnabled(integer $Enabled) 设置记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
+ * @method string getRemark() 获取记录备注(暂未支持)。
+ * @method void setRemark(string $Remark) 设置记录备注(暂未支持)。
  */
 class AddRecordBatch extends AbstractModel
 {
@@ -56,58 +56,58 @@ class AddRecordBatch extends AbstractModel
     public $Value;
 
     /**
-     * @var string 子域名(主机记录)。
+     * @var string 子域名(主机记录)，默认为@。
      */
     public $SubDomain;
 
     /**
-     * @var string 解析记录的线路，详见 DescribeRecordLineList 接口。
+     * @var string 解析记录的线路，详见 DescribeRecordLineList 接口，RecordLine和RecordLineId都未填时，默认为「默认」线路。
      */
     public $RecordLine;
 
     /**
-     * @var string 解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId
+     * @var string 解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId。
      */
     public $RecordLineId;
 
     /**
-     * @var integer 记录权重值。
+     * @var integer 记录权重值(暂未支持)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
-     * @var integer 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选
+     * @var integer 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
      */
     public $MX;
 
     /**
-     * @var integer 记录的 TTL 值，默认600
+     * @var integer 记录的 TTL 值，默认600。
      */
     public $TTL;
 
     /**
-     * @var integer 记录状态。0表示禁用，1表示启用，默认启用
+     * @var integer 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
      */
     public $Enabled;
 
     /**
-     * @var string 记录别名
+     * @var string 记录备注(暂未支持)。
      */
     public $Remark;
 
     /**
      * @param string $RecordType 记录类型, 详见 DescribeRecordType 接口。
      * @param string $Value 记录值。
-     * @param string $SubDomain 子域名(主机记录)。
-     * @param string $RecordLine 解析记录的线路，详见 DescribeRecordLineList 接口。
-     * @param string $RecordLineId 解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId
-     * @param integer $Weight 记录权重值。
+     * @param string $SubDomain 子域名(主机记录)，默认为@。
+     * @param string $RecordLine 解析记录的线路，详见 DescribeRecordLineList 接口，RecordLine和RecordLineId都未填时，默认为「默认」线路。
+     * @param string $RecordLineId 解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId。
+     * @param integer $Weight 记录权重值(暂未支持)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MX 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选
-     * @param integer $TTL 记录的 TTL 值，默认600
-     * @param integer $Enabled 记录状态。0表示禁用，1表示启用，默认启用
-     * @param string $Remark 记录别名
+     * @param integer $MX 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
+     * @param integer $TTL 记录的 TTL 值，默认600。
+     * @param integer $Enabled 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
+     * @param string $Remark 记录备注(暂未支持)。
      */
     function __construct()
     {

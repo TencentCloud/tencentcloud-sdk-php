@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDisksRenewFlag请求参数结构体
  *
- * @method array getDiskIds() 获取磁盘ID列表
- * @method void setDiskIds(array $DiskIds) 设置磁盘ID列表
- * @method string getRenewFlag() 获取续费标识
- * @method void setRenewFlag(string $RenewFlag) 设置续费标识
+ * @method array getDiskIds() 获取云硬盘ID列表。
+ * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。
+ * @method string getRenewFlag() 获取续费标识。
+ * @method void setRenewFlag(string $RenewFlag) 设置续费标识。
  */
 class ModifyDisksRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array 磁盘ID列表
+     * @var array 云硬盘ID列表。
      */
     public $DiskIds;
 
     /**
-     * @var string 续费标识
+     * @var string 续费标识。
      */
     public $RenewFlag;
 
     /**
-     * @param array $DiskIds 磁盘ID列表
-     * @param string $RenewFlag 续费标识
+     * @param array $DiskIds 云硬盘ID列表。
+     * @param string $RenewFlag 续费标识。
      */
     function __construct()
     {

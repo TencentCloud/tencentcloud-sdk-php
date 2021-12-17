@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDisksDeniedActions请求参数结构体
  *
- * @method array getDiskIds() 获取磁盘ID列表
- * @method void setDiskIds(array $DiskIds) 设置磁盘ID列表
+ * @method array getDiskIds() 获取云硬盘ID列表。
+ * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。
  */
 class DescribeDisksDeniedActionsRequest extends AbstractModel
 {
     /**
-     * @var array 磁盘ID列表
+     * @var array 云硬盘ID列表。
      */
     public $DiskIds;
 
     /**
-     * @param array $DiskIds 磁盘ID列表
+     * @param array $DiskIds 云硬盘ID列表。
      */
     function __construct()
     {

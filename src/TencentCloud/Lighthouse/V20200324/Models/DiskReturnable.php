@@ -18,44 +18,44 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 可退还磁盘详细信息
+ * 可退还云硬盘详细信息
  *
- * @method string getDiskId() 获取磁盘ID
- * @method void setDiskId(string $DiskId) 设置磁盘ID
- * @method boolean getIsReturnable() 获取磁盘是否可退还。
- * @method void setIsReturnable(boolean $IsReturnable) 设置磁盘是否可退还。
- * @method integer getReturnFailCode() 获取实例退还失败错误码。
- * @method void setReturnFailCode(integer $ReturnFailCode) 设置实例退还失败错误码。
- * @method string getReturnFailMessage() 获取实例退还失败错误信息。
- * @method void setReturnFailMessage(string $ReturnFailMessage) 设置实例退还失败错误信息。
+ * @method string getDiskId() 获取云硬盘ID。
+ * @method void setDiskId(string $DiskId) 设置云硬盘ID。
+ * @method boolean getIsReturnable() 获取云硬盘是否可退还。
+ * @method void setIsReturnable(boolean $IsReturnable) 设置云硬盘是否可退还。
+ * @method integer getReturnFailCode() 获取云硬盘退还失败错误码。
+ * @method void setReturnFailCode(integer $ReturnFailCode) 设置云硬盘退还失败错误码。
+ * @method string getReturnFailMessage() 获取云硬盘退还失败错误信息。
+ * @method void setReturnFailMessage(string $ReturnFailMessage) 设置云硬盘退还失败错误信息。
  */
 class DiskReturnable extends AbstractModel
 {
     /**
-     * @var string 磁盘ID
+     * @var string 云硬盘ID。
      */
     public $DiskId;
 
     /**
-     * @var boolean 磁盘是否可退还。
+     * @var boolean 云硬盘是否可退还。
      */
     public $IsReturnable;
 
     /**
-     * @var integer 实例退还失败错误码。
+     * @var integer 云硬盘退还失败错误码。
      */
     public $ReturnFailCode;
 
     /**
-     * @var string 实例退还失败错误信息。
+     * @var string 云硬盘退还失败错误信息。
      */
     public $ReturnFailMessage;
 
     /**
-     * @param string $DiskId 磁盘ID
-     * @param boolean $IsReturnable 磁盘是否可退还。
-     * @param integer $ReturnFailCode 实例退还失败错误码。
-     * @param string $ReturnFailMessage 实例退还失败错误信息。
+     * @param string $DiskId 云硬盘ID。
+     * @param boolean $IsReturnable 云硬盘是否可退还。
+     * @param integer $ReturnFailCode 云硬盘退还失败错误码。
+     * @param string $ReturnFailMessage 云硬盘退还失败错误信息。
      */
     function __construct()
     {

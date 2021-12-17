@@ -18,44 +18,44 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 续费磁盘包年包月相关参数设置
+ * 续费云硬盘包年包月相关参数设置
  *
- * @method integer getPeriod() 获取新购周期
- * @method void setPeriod(integer $Period) 设置新购周期
- * @method string getRenewFlag() 获取续费标识
- * @method void setRenewFlag(string $RenewFlag) 设置续费标识
- * @method string getTimeUnit() 获取周期单位. 默认值: "m"
- * @method void setTimeUnit(string $TimeUnit) 设置周期单位. 默认值: "m"
- * @method string getCurInstanceDeadline() 获取当前实例到期时间
- * @method void setCurInstanceDeadline(string $CurInstanceDeadline) 设置当前实例到期时间
+ * @method integer getPeriod() 获取新购周期。
+ * @method void setPeriod(integer $Period) 设置新购周期。
+ * @method string getRenewFlag() 获取续费标识。
+ * @method void setRenewFlag(string $RenewFlag) 设置续费标识。
+ * @method string getTimeUnit() 获取周期单位. 默认值: "m"。
+ * @method void setTimeUnit(string $TimeUnit) 设置周期单位. 默认值: "m"。
+ * @method string getCurInstanceDeadline() 获取当前实例到期时间。
+ * @method void setCurInstanceDeadline(string $CurInstanceDeadline) 设置当前实例到期时间。
  */
 class RenewDiskChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer 新购周期
+     * @var integer 新购周期。
      */
     public $Period;
 
     /**
-     * @var string 续费标识
+     * @var string 续费标识。
      */
     public $RenewFlag;
 
     /**
-     * @var string 周期单位. 默认值: "m"
+     * @var string 周期单位. 默认值: "m"。
      */
     public $TimeUnit;
 
     /**
-     * @var string 当前实例到期时间
+     * @var string 当前实例到期时间。
      */
     public $CurInstanceDeadline;
 
     /**
-     * @param integer $Period 新购周期
-     * @param string $RenewFlag 续费标识
-     * @param string $TimeUnit 周期单位. 默认值: "m"
-     * @param string $CurInstanceDeadline 当前实例到期时间
+     * @param integer $Period 新购周期。
+     * @param string $RenewFlag 续费标识。
+     * @param string $TimeUnit 周期单位. 默认值: "m"。
+     * @param string $CurInstanceDeadline 当前实例到期时间。
      */
     function __construct()
     {

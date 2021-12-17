@@ -26,8 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始，默认为0。
  * @method string getKeyWord() 获取模糊匹配，库名关键字。
  * @method void setKeyWord(string $KeyWord) 设置模糊匹配，库名关键字。
- * @method string getDatasourceConnectionName() 获取数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
- * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
+ * @method string getDatasourceConnectionName() 获取数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
+ * @method string getSort() 获取排序字段，当前版本仅支持按库名排序
+ * @method void setSort(string $Sort) 设置排序字段，当前版本仅支持按库名排序
+ * @method boolean getAsc() 获取排序类型：false：降序（默认）、true：升序
+ * @method void setAsc(boolean $Asc) 设置排序类型：false：降序（默认）、true：升序
  */
 class DescribeDatabasesRequest extends AbstractModel
 {
@@ -47,15 +51,27 @@ class DescribeDatabasesRequest extends AbstractModel
     public $KeyWord;
 
     /**
-     * @var string 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
+     * @var string 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
      */
     public $DatasourceConnectionName;
+
+    /**
+     * @var string 排序字段，当前版本仅支持按库名排序
+     */
+    public $Sort;
+
+    /**
+     * @var boolean 排序类型：false：降序（默认）、true：升序
+     */
+    public $Asc;
 
     /**
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 数据偏移量，从0开始，默认为0。
      * @param string $KeyWord 模糊匹配，库名关键字。
-     * @param string $DatasourceConnectionName 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
+     * @param string $DatasourceConnectionName 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
+     * @param string $Sort 排序字段，当前版本仅支持按库名排序
+     * @param boolean $Asc 排序类型：false：降序（默认）、true：升序
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class DescribeDatabasesRequest extends AbstractModel
 
         if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
             $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = $param["Sort"];
+        }
+
+        if (array_key_exists("Asc",$param) and $param["Asc"] !== null) {
+            $this->Asc = $param["Asc"];
         }
     }
 }

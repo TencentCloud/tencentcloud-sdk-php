@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置数据库描述信息，长度 0~256。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getProperties() 获取数据库属性列表。
+ * @method array getProperties() 获取允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProperties(array $Properties) 设置数据库属性列表。
+ * @method void setProperties(array $Properties) 设置允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取数据库创建时间戳，单位：s。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -53,7 +53,7 @@ class DatabaseResponseInfo extends AbstractModel
     public $Comment;
 
     /**
-     * @var array 数据库属性列表。
+     * @var array 允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Properties;
@@ -74,7 +74,7 @@ class DatabaseResponseInfo extends AbstractModel
      * @param string $DatabaseName 数据库名称。
      * @param string $Comment 数据库描述信息，长度 0~256。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Properties 数据库属性列表。
+     * @param array $Properties 允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 数据库创建时间戳，单位：s。
 注意：此字段可能返回 null，表示取不到有效值。

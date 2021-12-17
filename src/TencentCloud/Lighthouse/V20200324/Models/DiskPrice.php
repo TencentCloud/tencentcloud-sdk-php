@@ -18,44 +18,44 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 磁盘价格
+ * 云硬盘价格
  *
- * @method float getOriginalDiskPrice() 获取磁盘单价
- * @method void setOriginalDiskPrice(float $OriginalDiskPrice) 设置磁盘单价
- * @method float getOriginalPrice() 获取磁盘总价
- * @method void setOriginalPrice(float $OriginalPrice) 设置磁盘总价
- * @method float getDiscount() 获取折扣
- * @method void setDiscount(float $Discount) 设置折扣
- * @method float getDiscountPrice() 获取折后总价
- * @method void setDiscountPrice(float $DiscountPrice) 设置折后总价
+ * @method float getOriginalDiskPrice() 获取云硬盘单价。
+ * @method void setOriginalDiskPrice(float $OriginalDiskPrice) 设置云硬盘单价。
+ * @method float getOriginalPrice() 获取云硬盘总价。
+ * @method void setOriginalPrice(float $OriginalPrice) 设置云硬盘总价。
+ * @method float getDiscount() 获取折扣。
+ * @method void setDiscount(float $Discount) 设置折扣。
+ * @method float getDiscountPrice() 获取折后总价。
+ * @method void setDiscountPrice(float $DiscountPrice) 设置折后总价。
  */
 class DiskPrice extends AbstractModel
 {
     /**
-     * @var float 磁盘单价
+     * @var float 云硬盘单价。
      */
     public $OriginalDiskPrice;
 
     /**
-     * @var float 磁盘总价
+     * @var float 云硬盘总价。
      */
     public $OriginalPrice;
 
     /**
-     * @var float 折扣
+     * @var float 折扣。
      */
     public $Discount;
 
     /**
-     * @var float 折后总价
+     * @var float 折后总价。
      */
     public $DiscountPrice;
 
     /**
-     * @param float $OriginalDiskPrice 磁盘单价
-     * @param float $OriginalPrice 磁盘总价
-     * @param float $Discount 折扣
-     * @param float $DiscountPrice 折后总价
+     * @param float $OriginalDiskPrice 云硬盘单价。
+     * @param float $OriginalPrice 云硬盘总价。
+     * @param float $Discount 折扣。
+     * @param float $DiscountPrice 折后总价。
      */
     function __construct()
     {

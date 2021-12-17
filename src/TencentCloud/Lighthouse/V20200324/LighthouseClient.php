@@ -35,7 +35,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * 支持批量操作。每次请求批量实例的上限为 100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
  * @method Models\AttachCcnResponse AttachCcn(Models\AttachCcnRequest $req) 本接口 (AttachCcn) 用于建立与云联网的关联。
- * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) 本接口（AttachDisks）用于挂载一个或多个弹性云盘。
+ * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) 本接口（AttachDisks）用于挂载一个或多个云硬盘。
  * @method Models\CreateBlueprintResponse CreateBlueprint(Models\CreateBlueprintRequest $req) 本接口 (CreateBlueprint) 用于创建镜像。
  * @method Models\CreateFirewallRulesResponse CreateFirewallRules(Models\CreateFirewallRulesRequest $req) 本接口（CreateFirewallRules）用于在实例上添加防火墙规则。
 
@@ -70,10 +70,10 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\DescribeBundlesResponse DescribeBundles(Models\DescribeBundlesRequest $req) 本接口（DescribeBundles）用于查询套餐信息。
  * @method Models\DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstances(Models\DescribeCcnAttachedInstancesRequest $req) 本接口 (DescribeCcnAttachedInstances) 用于查询云联网关联的实例信息。
  * @method Models\DescribeDiskConfigsResponse DescribeDiskConfigs(Models\DescribeDiskConfigsRequest $req) 本接口（DescribeDiskConfigs）用于查询磁盘配置。
- * @method Models\DescribeDiskDiscountResponse DescribeDiskDiscount(Models\DescribeDiskDiscountRequest $req) 本接口(DescribeDiskDiscount)用于查询云硬盘折扣信息
- * @method Models\DescribeDisksResponse DescribeDisks(Models\DescribeDisksRequest $req) 本接口（DescribeDisks）用于查询磁盘信息。
- * @method Models\DescribeDisksDeniedActionsResponse DescribeDisksDeniedActions(Models\DescribeDisksDeniedActionsRequest $req) 本接口（DescribeDisksDeniedActions）用于查询一个或多个磁盘的操作限制列表信息
- * @method Models\DescribeDisksReturnableResponse DescribeDisksReturnable(Models\DescribeDisksReturnableRequest $req) 本接口（DescribeDisksReturnable）用于查询磁盘是否可退还。
+ * @method Models\DescribeDiskDiscountResponse DescribeDiskDiscount(Models\DescribeDiskDiscountRequest $req) 本接口(DescribeDiskDiscount)用于查询云硬盘折扣信息。
+ * @method Models\DescribeDisksResponse DescribeDisks(Models\DescribeDisksRequest $req) 本接口（DescribeDisks）用于查询云硬盘信息。
+ * @method Models\DescribeDisksDeniedActionsResponse DescribeDisksDeniedActions(Models\DescribeDisksDeniedActionsRequest $req) 本接口（DescribeDisksDeniedActions）用于查询一个或多个云硬盘的操作限制列表信息。
+ * @method Models\DescribeDisksReturnableResponse DescribeDisksReturnable(Models\DescribeDisksReturnableRequest $req) 本接口（DescribeDisksReturnable）用于查询云硬盘是否可退还。
  * @method Models\DescribeFirewallRulesResponse DescribeFirewallRules(Models\DescribeFirewallRulesRequest $req) 本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
  * @method Models\DescribeFirewallRulesTemplateResponse DescribeFirewallRulesTemplate(Models\DescribeFirewallRulesTemplateRequest $req) 本接口（DescribeFirewallRulesTemplate）用于查询防火墙规则模版。
  * @method Models\DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotas(Models\DescribeGeneralResourceQuotasRequest $req) 本接口（DescribeGeneralResourceQuotas）用于查询通用资源配额信息。
@@ -91,7 +91,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * 如果参数为空，返回当前用户一定数量（Limit 所指定的数量，默认为 20）的实例。
 * 支持查询实例的最新操作（LatestOperation）以及最新操作状态（LatestOperationState）。
  * @method Models\DescribeInstancesDeniedActionsResponse DescribeInstancesDeniedActions(Models\DescribeInstancesDeniedActionsRequest $req) 本接口（DescribeInstancesDeniedActions）用于查询一个或多个实例的操作限制列表信息。
- * @method Models\DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(Models\DescribeInstancesDiskNumRequest $req) 本接口(DescribeInstancesDiskNum)用于查询实例挂载云盘数量。
+ * @method Models\DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(Models\DescribeInstancesDiskNumRequest $req) 本接口(DescribeInstancesDiskNum)用于查询实例挂载云硬盘数量。
  * @method Models\DescribeInstancesReturnableResponse DescribeInstancesReturnable(Models\DescribeInstancesReturnableRequest $req) 本接口（DescribeInstancesReturnable）用于查询实例是否可退还。
  * @method Models\DescribeInstancesTrafficPackagesResponse DescribeInstancesTrafficPackages(Models\DescribeInstancesTrafficPackagesRequest $req) 本接口（DescribeInstancesTrafficPackages）用于查询一个或多个实例的流量包详情。
  * @method Models\DescribeKeyPairsResponse DescribeKeyPairs(Models\DescribeKeyPairsRequest $req) 本接口 (DescribeKeyPairs) 用于查询用户密钥对信息。
@@ -102,7 +102,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\DescribeSnapshotsDeniedActionsResponse DescribeSnapshotsDeniedActions(Models\DescribeSnapshotsDeniedActionsRequest $req) 本接口（DescribeSnapshotsDeniedActions）用于查询一个或多个快照的操作限制列表信息。
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 查询地域下可用区
  * @method Models\DetachCcnResponse DetachCcn(Models\DetachCcnRequest $req) 本接口 (AttachCcn) 用于解除与云联网的关联。
- * @method Models\DetachDisksResponse DetachDisks(Models\DetachDisksRequest $req) 本接口（DetachDisks）用于卸载一个或多个弹性云盘。
+ * @method Models\DetachDisksResponse DetachDisks(Models\DetachDisksRequest $req) 本接口（DetachDisks）用于卸载一个或多个云硬盘。
  * @method Models\DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(Models\DisassociateInstancesKeyPairsRequest $req) 本接口（DisassociateInstancesKeyPairs）用于解除实例与指定密钥对的绑定关系。
 
 * 只支持 [RUNNING, STOPPED] 状态的 LINUX_UNIX 操作系统的实例。处于 RUNNING 状态的实例会强制关机，然后解绑。
@@ -114,11 +114,11 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\InquirePriceCreateBlueprintResponse InquirePriceCreateBlueprint(Models\InquirePriceCreateBlueprintRequest $req) 本接口 (InquirePriceCreateBlueprint) 用于创建镜像询价。
  * @method Models\InquirePriceCreateDisksResponse InquirePriceCreateDisks(Models\InquirePriceCreateDisksRequest $req) 本接口（InquirePriceCreateDisks）用于新购磁盘询价。
  * @method Models\InquirePriceCreateInstancesResponse InquirePriceCreateInstances(Models\InquirePriceCreateInstancesRequest $req) 本接口（InquiryPriceCreateInstances）用于创建实例询价。
- * @method Models\InquirePriceRenewDisksResponse InquirePriceRenewDisks(Models\InquirePriceRenewDisksRequest $req) 本接口（InquirePriceRenewDisks）用于续费磁盘询价。
+ * @method Models\InquirePriceRenewDisksResponse InquirePriceRenewDisks(Models\InquirePriceRenewDisksRequest $req) 本接口（InquirePriceRenewDisks）用于续费云硬盘询价。
  * @method Models\InquirePriceRenewInstancesResponse InquirePriceRenewInstances(Models\InquirePriceRenewInstancesRequest $req) 本接口（InquirePriceCreateInstances）用于续费实例询价。
  * @method Models\ModifyBlueprintAttributeResponse ModifyBlueprintAttribute(Models\ModifyBlueprintAttributeRequest $req) 本接口 (ModifyBlueprintAttribute) 用于修改镜像属性。
- * @method Models\ModifyDisksAttributeResponse ModifyDisksAttribute(Models\ModifyDisksAttributeRequest $req) 本接口(ModifyDisksAttribute)用于修改磁盘属性
- * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) 本接口（ModifyDisksRenewFlag）用于修改磁盘续费标识。
+ * @method Models\ModifyDisksAttributeResponse ModifyDisksAttribute(Models\ModifyDisksAttributeRequest $req) 本接口(ModifyDisksAttribute)用于修改云硬盘属性。
+ * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识。
  * @method Models\ModifyFirewallRuleDescriptionResponse ModifyFirewallRuleDescription(Models\ModifyFirewallRuleDescriptionRequest $req) 本接口（ModifyFirewallRuleDescription）用于修改单条防火墙规则描述。
 
 * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接修改防火墙规则备注。
@@ -185,7 +185,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * 接口调用成功时，实例会进入 STOPPING 状态；关闭实例成功时，实例会进入 STOPPED 状态。
 * 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
- * @method Models\TerminateDisksResponse TerminateDisks(Models\TerminateDisksRequest $req) 本接口（TerminateDisks）用于销毁一个或多个磁盘。
+ * @method Models\TerminateDisksResponse TerminateDisks(Models\TerminateDisksRequest $req) 本接口（TerminateDisks）用于销毁一个或多个云硬盘。
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) 本接口 (TerminateInstances) 用于销毁实例。
 
 * 处于 SHUTDOWN 状态的实例，可通过本接口销毁，且不可恢复。

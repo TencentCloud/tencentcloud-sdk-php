@@ -18,36 +18,36 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 磁盘包年包月相关参数设置
+ * 云硬盘包年包月相关参数设置
  *
- * @method integer getPeriod() 获取新购周期
- * @method void setPeriod(integer $Period) 设置新购周期
- * @method string getRenewFlag() 获取续费标识
- * @method void setRenewFlag(string $RenewFlag) 设置续费标识
- * @method string getTimeUnit() 获取新购单位. 默认值: "m"
- * @method void setTimeUnit(string $TimeUnit) 设置新购单位. 默认值: "m"
+ * @method integer getPeriod() 获取新购周期。
+ * @method void setPeriod(integer $Period) 设置新购周期。
+ * @method string getRenewFlag() 获取续费标识。
+ * @method void setRenewFlag(string $RenewFlag) 设置续费标识。
+ * @method string getTimeUnit() 获取新购单位. 默认值: "m"。
+ * @method void setTimeUnit(string $TimeUnit) 设置新购单位. 默认值: "m"。
  */
 class DiskChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer 新购周期
+     * @var integer 新购周期。
      */
     public $Period;
 
     /**
-     * @var string 续费标识
+     * @var string 续费标识。
      */
     public $RenewFlag;
 
     /**
-     * @var string 新购单位. 默认值: "m"
+     * @var string 新购单位. 默认值: "m"。
      */
     public $TimeUnit;
 
     /**
-     * @param integer $Period 新购周期
-     * @param string $RenewFlag 续费标识
-     * @param string $TimeUnit 新购单位. 默认值: "m"
+     * @param integer $Period 新购周期。
+     * @param string $RenewFlag 续费标识。
+     * @param string $TimeUnit 新购单位. 默认值: "m"。
      */
     function __construct()
     {

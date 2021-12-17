@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDisks返回参数结构体
  *
- * @method array getDiskSet() 获取磁盘信息列表
- * @method void setDiskSet(array $DiskSet) 设置磁盘信息列表
- * @method integer getTotalCount() 获取符合条件的磁盘信息数量
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的磁盘信息数量
+ * @method array getDiskSet() 获取云硬盘信息列表。
+ * @method void setDiskSet(array $DiskSet) 设置云硬盘信息列表。
+ * @method integer getTotalCount() 获取符合条件的云硬盘信息数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的云硬盘信息数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDisksResponse extends AbstractModel
 {
     /**
-     * @var array 磁盘信息列表
+     * @var array 云硬盘信息列表。
      */
     public $DiskSet;
 
     /**
-     * @var integer 符合条件的磁盘信息数量
+     * @var integer 符合条件的云硬盘信息数量。
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeDisksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DiskSet 磁盘信息列表
-     * @param integer $TotalCount 符合条件的磁盘信息数量
+     * @param array $DiskSet 云硬盘信息列表。
+     * @param integer $TotalCount 符合条件的云硬盘信息数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

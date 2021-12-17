@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDisksDeniedActions返回参数结构体
  *
- * @method array getDiskDeniedActionSet() 获取磁盘操作限制列表详细信息。
- * @method void setDiskDeniedActionSet(array $DiskDeniedActionSet) 设置磁盘操作限制列表详细信息。
+ * @method array getDiskDeniedActionSet() 获取云硬盘操作限制列表详细信息。
+ * @method void setDiskDeniedActionSet(array $DiskDeniedActionSet) 设置云硬盘操作限制列表详细信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDisksDeniedActionsResponse extends AbstractModel
 {
     /**
-     * @var array 磁盘操作限制列表详细信息。
+     * @var array 云硬盘操作限制列表详细信息。
      */
     public $DiskDeniedActionSet;
 
@@ -38,7 +38,7 @@ class DescribeDisksDeniedActionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DiskDeniedActionSet 磁盘操作限制列表详细信息。
+     * @param array $DiskDeniedActionSet 云硬盘操作限制列表详细信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

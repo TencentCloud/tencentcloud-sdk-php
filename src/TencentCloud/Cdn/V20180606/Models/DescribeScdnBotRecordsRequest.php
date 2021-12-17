@@ -168,6 +168,8 @@ IDC-IP Google
 "captcha" 验证码
  * @method string getFilterIp() 获取过滤的IP
  * @method void setFilterIp(string $FilterIp) 设置过滤的IP
+ * @method array getDomains() 获取域名列表，为空表示查询AppID维度数据
+ * @method void setDomains(array $Domains) 设置域名列表，为空表示查询AppID维度数据
  */
 class DescribeScdnBotRecordsRequest extends AbstractModel
 {
@@ -290,6 +292,11 @@ IDC-IP Google
     public $FilterIp;
 
     /**
+     * @var array 域名列表，为空表示查询AppID维度数据
+     */
+    public $Domains;
+
+    /**
      * @param string $BotType BOT类型，取值为"UB","UCB","TCB"，分别表示：未知类型，自定义类型，公开类型
      * @param string $Domain 域名
      * @param string $StartTime 开始时间
@@ -364,6 +371,7 @@ IDC-IP Google
 尚未支持的Action
 "captcha" 验证码
      * @param string $FilterIp 过滤的IP
+     * @param array $Domains 域名列表，为空表示查询AppID维度数据
      */
     function __construct()
     {
@@ -425,6 +433,10 @@ IDC-IP Google
 
         if (array_key_exists("FilterIp",$param) and $param["FilterIp"] !== null) {
             $this->FilterIp = $param["FilterIp"];
+        }
+
+        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+            $this->Domains = $param["Domains"];
         }
     }
 }

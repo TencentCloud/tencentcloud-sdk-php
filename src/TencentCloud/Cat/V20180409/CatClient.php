@@ -25,8 +25,10 @@ use TencentCloud\Cat\V20180409\Models as Models;
 /**
  * @method Models\BindAlarmPolicyResponse BindAlarmPolicy(Models\BindAlarmPolicyRequest $req) 绑定拨测任务和告警策略组
  * @method Models\CreateAgentGroupResponse CreateAgentGroup(Models\CreateAgentGroupRequest $req) 添加拨测分组
+ * @method Models\CreateProbeTasksResponse CreateProbeTasks(Models\CreateProbeTasksRequest $req) 批量创建探测任务
  * @method Models\CreateTaskExResponse CreateTaskEx(Models\CreateTaskExRequest $req) 创建拨测任务(扩展)
  * @method Models\DeleteAgentGroupResponse DeleteAgentGroup(Models\DeleteAgentGroupRequest $req) 删除拨测分组
+ * @method Models\DeleteProbeTaskResponse DeleteProbeTask(Models\DeleteProbeTaskRequest $req) 删除拨测任务
  * @method Models\DeleteTasksResponse DeleteTasks(Models\DeleteTasksRequest $req) 删除多个拨测任务
  * @method Models\DescribeAgentGroupsResponse DescribeAgentGroups(Models\DescribeAgentGroupsRequest $req) 查询拨测分组列表
  * @method Models\DescribeAgentsResponse DescribeAgents(Models\DescribeAgentsRequest $req) 查询本用户可选的拨测点列表
@@ -34,6 +36,9 @@ use TencentCloud\Cat\V20180409\Models as Models;
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) 查询拨测告警列表
  * @method Models\DescribeAlarmsByTaskResponse DescribeAlarmsByTask(Models\DescribeAlarmsByTaskRequest $req) 按任务查询拨测告警列表
  * @method Models\DescribeCatLogsResponse DescribeCatLogs(Models\DescribeCatLogsRequest $req) 查询拨测流水
+ * @method Models\DescribeDetailedSingleProbeDataResponse DescribeDetailedSingleProbeData(Models\DescribeDetailedSingleProbeDataRequest $req) 根据时间范围、任务ID、运营商等条件查询单次拨测详情数据
+ * @method Models\DescribeProbeNodesResponse DescribeProbeNodes(Models\DescribeProbeNodesRequest $req) 查询拨测节点
+ * @method Models\DescribeProbeTasksResponse DescribeProbeTasks(Models\DescribeProbeTasksRequest $req) 查询探测任务列表
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 查询拨测任务信息
  * @method Models\DescribeTasksByTypeResponse DescribeTasksByType(Models\DescribeTasksByTypeRequest $req) 按类型查询拨测任务列表
  * @method Models\DescribeUserLimitResponse DescribeUserLimit(Models\DescribeUserLimitRequest $req) 获取用户可用资源限制
@@ -48,7 +53,10 @@ use TencentCloud\Cat\V20180409\Models as Models;
  * @method Models\ModifyAgentGroupResponse ModifyAgentGroup(Models\ModifyAgentGroupRequest $req) 修改拨测分组
  * @method Models\ModifyTaskExResponse ModifyTaskEx(Models\ModifyTaskExRequest $req) 修改拨测任务(扩展)
  * @method Models\PauseTaskResponse PauseTask(Models\PauseTaskRequest $req) 暂停拨测任务
+ * @method Models\ResumeProbeTaskResponse ResumeProbeTask(Models\ResumeProbeTaskRequest $req) 恢复拨测任务
  * @method Models\RunTaskResponse RunTask(Models\RunTaskRequest $req) 运行拨测任务
+ * @method Models\SuspendProbeTaskResponse SuspendProbeTask(Models\SuspendProbeTaskRequest $req) 暂停拨测任务
+ * @method Models\UpdateProbeTaskConfigurationListResponse UpdateProbeTaskConfigurationList(Models\UpdateProbeTaskConfigurationListRequest $req) 批量更新拨测任务配置
  * @method Models\VerifyResultResponse VerifyResult(Models\VerifyResultRequest $req) 验证拨测任务，结果验证查询（验证成功的，才建议创建拨测任务）
  */
 

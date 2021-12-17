@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDiskDiscount请求参数结构体
  *
- * @method string getDiskType() 获取磁盘类型, 取值: "CLOUD_PREMIUM"
- * @method void setDiskType(string $DiskType) 设置磁盘类型, 取值: "CLOUD_PREMIUM"
- * @method integer getDiskSize() 获取磁盘大小
- * @method void setDiskSize(integer $DiskSize) 设置磁盘大小
+ * @method string getDiskType() 获取云硬盘类型, 取值: "CLOUD_PREMIUM"。
+ * @method void setDiskType(string $DiskType) 设置云硬盘类型, 取值: "CLOUD_PREMIUM"。
+ * @method integer getDiskSize() 获取云硬盘大小。
+ * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小。
  */
 class DescribeDiskDiscountRequest extends AbstractModel
 {
     /**
-     * @var string 磁盘类型, 取值: "CLOUD_PREMIUM"
+     * @var string 云硬盘类型, 取值: "CLOUD_PREMIUM"。
      */
     public $DiskType;
 
     /**
-     * @var integer 磁盘大小
+     * @var integer 云硬盘大小。
      */
     public $DiskSize;
 
     /**
-     * @param string $DiskType 磁盘类型, 取值: "CLOUD_PREMIUM"
-     * @param integer $DiskSize 磁盘大小
+     * @param string $DiskType 云硬盘类型, 取值: "CLOUD_PREMIUM"。
+     * @param integer $DiskSize 云硬盘大小。
      */
     function __construct()
     {

@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库。
  * @method TasksInfo getTasks() 获取SQL任务信息
  * @method void setTasks(TasksInfo $Tasks) 设置SQL任务信息
- * @method string getDatasourceConnectionName() 获取数据源名称，默认为COSDataCatalog
- * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源名称，默认为COSDataCatalog
+ * @method string getDatasourceConnectionName() 获取数据源名称，默认为DataLakeCatalog
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源名称，默认为DataLakeCatalog
+ * @method string getDataEngineName() 获取计算引擎名称，不填任务提交到默认集群
+ * @method void setDataEngineName(string $DataEngineName) 设置计算引擎名称，不填任务提交到默认集群
  */
 class CreateTasksRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class CreateTasksRequest extends AbstractModel
     public $Tasks;
 
     /**
-     * @var string 数据源名称，默认为COSDataCatalog
+     * @var string 数据源名称，默认为DataLakeCatalog
      */
     public $DatasourceConnectionName;
 
     /**
+     * @var string 计算引擎名称，不填任务提交到默认集群
+     */
+    public $DataEngineName;
+
+    /**
      * @param string $DatabaseName 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库。
      * @param TasksInfo $Tasks SQL任务信息
-     * @param string $DatasourceConnectionName 数据源名称，默认为COSDataCatalog
+     * @param string $DatasourceConnectionName 数据源名称，默认为DataLakeCatalog
+     * @param string $DataEngineName 计算引擎名称，不填任务提交到默认集群
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class CreateTasksRequest extends AbstractModel
 
         if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
             $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
+        }
+
+        if (array_key_exists("DataEngineName",$param) and $param["DataEngineName"] !== null) {
+            $this->DataEngineName = $param["DataEngineName"];
         }
     }
 }

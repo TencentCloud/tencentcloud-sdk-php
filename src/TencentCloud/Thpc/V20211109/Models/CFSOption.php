@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemotePath(string $RemotePath) 设置文件系统远程挂载ip及路径
  * @method string getProtocol() 获取文件系统协议类型，默认值NFS 3.0
  * @method void setProtocol(string $Protocol) 设置文件系统协议类型，默认值NFS 3.0
- * @method string getStorageType() 获取文件系统存储类型，默认值SD
- * @method void setStorageType(string $StorageType) 设置文件系统存储类型，默认值SD
+ * @method string getStorageType() 获取文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
+ * @method void setStorageType(string $StorageType) 设置文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
  */
 class CFSOption extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CFSOption extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string 文件系统存储类型，默认值SD
+     * @var string 文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
      */
     public $StorageType;
 
@@ -55,7 +55,7 @@ class CFSOption extends AbstractModel
      * @param string $LocalPath 文件系统本地挂载路径
      * @param string $RemotePath 文件系统远程挂载ip及路径
      * @param string $Protocol 文件系统协议类型，默认值NFS 3.0
-     * @param string $StorageType 文件系统存储类型，默认值SD
+     * @param string $StorageType 文件系统存储类型，默认值SD；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
      */
     function __construct()
     {

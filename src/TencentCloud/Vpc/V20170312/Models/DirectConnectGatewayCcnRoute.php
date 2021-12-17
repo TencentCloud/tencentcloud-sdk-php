@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置IDC网段。
  * @method array getASPath() 获取`BGP`的`AS-Path`属性。
  * @method void setASPath(array $ASPath) 设置`BGP`的`AS-Path`属性。
+ * @method string getDescription() 获取备注
+ * @method void setDescription(string $Description) 设置备注
+ * @method string getUpdateTime() 获取最后更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置最后更新时间
  */
 class DirectConnectGatewayCcnRoute extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DirectConnectGatewayCcnRoute extends AbstractModel
     public $ASPath;
 
     /**
+     * @var string 备注
+     */
+    public $Description;
+
+    /**
+     * @var string 最后更新时间
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $RouteId 路由ID。
      * @param string $DestinationCidrBlock IDC网段。
      * @param array $ASPath `BGP`的`AS-Path`属性。
+     * @param string $Description 备注
+     * @param string $UpdateTime 最后更新时间
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DirectConnectGatewayCcnRoute extends AbstractModel
 
         if (array_key_exists("ASPath",$param) and $param["ASPath"] !== null) {
             $this->ASPath = $param["ASPath"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method boolean getNeedWorkSecurityGroup() 获取是否开启节点的默认安全组(默认: 否，Aphla特性)
  * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) 设置是否开启节点的默认安全组(默认: 否，Aphla特性)
+ * @method string getSubnetId() 获取当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+ * @method void setSubnetId(string $SubnetId) 设置当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
  */
 class ClusterBasicSettings extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ClusterBasicSettings extends AbstractModel
     public $NeedWorkSecurityGroup;
 
     /**
+     * @var string 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+     */
+    public $SubnetId;
+
+    /**
      * @param string $ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      * @param string $ClusterVersion 集群版本,默认值为1.10.5
      * @param string $ClusterName 集群名称
@@ -96,6 +103,7 @@ class ClusterBasicSettings extends AbstractModel
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
      * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      * @param boolean $NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Aphla特性)
+     * @param string $SubnetId 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class ClusterBasicSettings extends AbstractModel
 
         if (array_key_exists("NeedWorkSecurityGroup",$param) and $param["NeedWorkSecurityGroup"] !== null) {
             $this->NeedWorkSecurityGroup = $param["NeedWorkSecurityGroup"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

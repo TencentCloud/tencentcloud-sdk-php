@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDisksAttribute请求参数结构体
  *
- * @method array getDiskIds() 获取磁盘ID列表
- * @method void setDiskIds(array $DiskIds) 设置磁盘ID列表
- * @method string getDiskName() 获取磁盘名称
- * @method void setDiskName(string $DiskName) 设置磁盘名称
+ * @method array getDiskIds() 获取云硬盘ID列表。
+ * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表。
+ * @method string getDiskName() 获取云硬盘名称。
+ * @method void setDiskName(string $DiskName) 设置云硬盘名称。
  */
 class ModifyDisksAttributeRequest extends AbstractModel
 {
     /**
-     * @var array 磁盘ID列表
+     * @var array 云硬盘ID列表。
      */
     public $DiskIds;
 
     /**
-     * @var string 磁盘名称
+     * @var string 云硬盘名称。
      */
     public $DiskName;
 
     /**
-     * @param array $DiskIds 磁盘ID列表
-     * @param string $DiskName 磁盘名称
+     * @param array $DiskIds 云硬盘ID列表。
+     * @param string $DiskName 云硬盘名称。
      */
     function __construct()
     {

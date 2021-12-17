@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 磁盘操作限制列表详细信息
  *
- * @method string getDiskId() 获取磁盘ID
- * @method void setDiskId(string $DiskId) 设置磁盘ID
- * @method array getDeniedActions() 获取操作限制列表
- * @method void setDeniedActions(array $DeniedActions) 设置操作限制列表
+ * @method string getDiskId() 获取云硬盘ID。
+ * @method void setDiskId(string $DiskId) 设置云硬盘ID。
+ * @method array getDeniedActions() 获取操作限制列表。
+ * @method void setDeniedActions(array $DeniedActions) 设置操作限制列表。
  */
 class DiskDeniedActions extends AbstractModel
 {
     /**
-     * @var string 磁盘ID
+     * @var string 云硬盘ID。
      */
     public $DiskId;
 
     /**
-     * @var array 操作限制列表
+     * @var array 操作限制列表。
      */
     public $DeniedActions;
 
     /**
-     * @param string $DiskId 磁盘ID
-     * @param array $DeniedActions 操作限制列表
+     * @param string $DiskId 云硬盘ID。
+     * @param array $DeniedActions 操作限制列表。
      */
     function __construct()
     {

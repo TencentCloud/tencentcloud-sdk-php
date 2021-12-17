@@ -27,13 +27,13 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) 绑定鉴权策略到用户
  * @method Models\AttachWorkGroupPolicyResponse AttachWorkGroupPolicy(Models\AttachWorkGroupPolicyRequest $req) 绑定鉴权策略到工作组
  * @method Models\BindWorkGroupsToUserResponse BindWorkGroupsToUser(Models\BindWorkGroupsToUserRequest $req) 绑定工作组到用户
- * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 取消任务执行
+ * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 本接口（CancelTask），用于取消任务执行
  * @method Models\CreateDatabaseResponse CreateDatabase(Models\CreateDatabaseRequest $req) 本接口（CreateDatabase）用于生成建库SQL语句。
  * @method Models\CreateScriptResponse CreateScript(Models\CreateScriptRequest $req) 该接口（CreateScript）用于创建sql脚本。
  * @method Models\CreateStoreLocationResponse CreateStoreLocation(Models\CreateStoreLocationRequest $req) 该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口（CreateTable）用于生成建表SQL。
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 本接口（CreateTask）用于创建sql查询任务。（推荐使用CreateTasks接口）
- * @method Models\CreateTasksResponse CreateTasks(Models\CreateTasksRequest $req) 批量创建任务
+ * @method Models\CreateTasksResponse CreateTasks(Models\CreateTasksRequest $req) 本接口（CreateTasks），用于批量创建任务
  * @method Models\CreateTasksInOrderResponse CreateTasksInOrder(Models\CreateTasksInOrderRequest $req) 按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
  * @method Models\CreateWorkGroupResponse CreateWorkGroup(Models\CreateWorkGroupRequest $req) 创建工作组
@@ -44,8 +44,8 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询数据库列表。
  * @method Models\DescribeScriptsResponse DescribeScripts(Models\DescribeScriptsRequest $req) 该接口（DescribeScripts）用于获取所有SQL查询。
  * @method Models\DescribeStoreLocationResponse DescribeStoreLocation(Models\DescribeStoreLocationRequest $req) 查询计算结果存储位置。
- * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 查询单个表的详细信息。
- * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口（DescribleTables）用于查询数据表列表。
+ * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 本接口（DescribeTable），用于查询单个表的详细信息。
+ * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口（DescribeTables）用于查询数据表列表。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 该接口（DescribleTasks）用于查询任务列表
  * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) 获取用户列表信息
  * @method Models\DescribeViewsResponse DescribeViews(Models\DescribeViewsRequest $req) 本接口（DescribeViews）用于查询数据视图列表。

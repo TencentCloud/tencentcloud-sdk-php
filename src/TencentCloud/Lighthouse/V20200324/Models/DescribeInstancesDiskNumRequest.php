@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstancesDiskNum请求参数结构体
  *
- * @method array getInstanceIds() 获取实例ID列表
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表
+ * @method array getInstanceIds() 获取实例ID列表。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表。
  */
 class DescribeInstancesDiskNumRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID列表
+     * @var array 实例ID列表。
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds 实例ID列表
+     * @param array $InstanceIds 实例ID列表。
      */
     function __construct()
     {

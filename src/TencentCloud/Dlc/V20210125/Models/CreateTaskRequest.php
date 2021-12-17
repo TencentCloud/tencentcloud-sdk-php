@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名称。任务在执行前均会USE该数据库， 除了首次建库时，其他情况建议均添加上。
  * @method string getDatasourceConnectionName() 获取默认数据源名称。
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置默认数据源名称。
+ * @method string getDataEngineName() 获取数据引擎名称，不填提交到默认集群
+ * @method void setDataEngineName(string $DataEngineName) 设置数据引擎名称，不填提交到默认集群
  */
 class CreateTaskRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateTaskRequest extends AbstractModel
     public $DatasourceConnectionName;
 
     /**
+     * @var string 数据引擎名称，不填提交到默认集群
+     */
+    public $DataEngineName;
+
+    /**
      * @param Task $Task 计算任务，该参数中包含任务类型及其相关配置信息
      * @param string $DatabaseName 数据库名称。任务在执行前均会USE该数据库， 除了首次建库时，其他情况建议均添加上。
      * @param string $DatasourceConnectionName 默认数据源名称。
+     * @param string $DataEngineName 数据引擎名称，不填提交到默认集群
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class CreateTaskRequest extends AbstractModel
 
         if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
             $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
+        }
+
+        if (array_key_exists("DataEngineName",$param) and $param["DataEngineName"] !== null) {
+            $this->DataEngineName = $param["DataEngineName"];
         }
     }
 }

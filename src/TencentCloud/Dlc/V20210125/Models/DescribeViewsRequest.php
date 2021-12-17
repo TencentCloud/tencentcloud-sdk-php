@@ -34,6 +34,14 @@ view-name - String - （过滤条件）数据表名称,形如：view-001。
 view-id - String - （过滤条件）view id形如：12342。
  * @method string getDatasourceConnectionName() 获取数据库所属的数据源名称
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据库所属的数据源名称
+ * @method string getSort() 获取排序字段
+ * @method void setSort(string $Sort) 设置排序字段
+ * @method boolean getAsc() 获取排序规则
+ * @method void setAsc(boolean $Asc) 设置排序规则
+ * @method string getStartTime() 获取开始时间
+ * @method void setStartTime(string $StartTime) 设置开始时间
+ * @method string getEndTime() 获取结束时间
+ * @method void setEndTime(string $EndTime) 设置结束时间
  */
 class DescribeViewsRequest extends AbstractModel
 {
@@ -65,6 +73,26 @@ view-id - String - （过滤条件）view id形如：12342。
     public $DatasourceConnectionName;
 
     /**
+     * @var string 排序字段
+     */
+    public $Sort;
+
+    /**
+     * @var boolean 排序规则
+     */
+    public $Asc;
+
+    /**
+     * @var string 开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 结束时间
+     */
+    public $EndTime;
+
+    /**
      * @param string $DatabaseName 列出该数据库下所属数据表。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 数据偏移量，从0开始，默认为0。
@@ -72,6 +100,10 @@ view-id - String - （过滤条件）view id形如：12342。
 view-name - String - （过滤条件）数据表名称,形如：view-001。
 view-id - String - （过滤条件）view id形如：12342。
      * @param string $DatasourceConnectionName 数据库所属的数据源名称
+     * @param string $Sort 排序字段
+     * @param boolean $Asc 排序规则
+     * @param string $StartTime 开始时间
+     * @param string $EndTime 结束时间
      */
     function __construct()
     {
@@ -109,6 +141,22 @@ view-id - String - （过滤条件）view id形如：12342。
 
         if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
             $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = $param["Sort"];
+        }
+
+        if (array_key_exists("Asc",$param) and $param["Asc"] !== null) {
+            $this->Asc = $param["Asc"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

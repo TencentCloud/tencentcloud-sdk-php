@@ -48,7 +48,7 @@ use TencentCloud\Scf\V20180416\Models as Models;
  * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) 该接口获取某个函数的详细信息，包括名称、代码、处理方法、关联触发器和超时时间等字段。
  * @method Models\GetFunctionAddressResponse GetFunctionAddress(Models\GetFunctionAddressRequest $req) 该接口用于获取函数代码包的下载地址。
  * @method Models\GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfig(Models\GetFunctionEventInvokeConfigRequest $req) 获取函数异步重试配置，包括重试次数和消息保留时间
- * @method Models\GetFunctionLogsResponse GetFunctionLogs(Models\GetFunctionLogsRequest $req) 该接口根据指定的日志查询条件返回函数运行日志。
+ * @method Models\GetFunctionLogsResponse GetFunctionLogs(Models\GetFunctionLogsRequest $req) 该接口根据指定的日志查询条件返回函数运行日志。该接口已下线，查询函数请求运行的返回信息，请使用 [GetRequestStatus](https://cloud.tencent.com/document/product/583/65348)。查询函数运行日志，请参考[日志检索教程](https://cloud.tencent.com/document/product/583/52637)。
  * @method Models\GetLayerVersionResponse GetLayerVersion(Models\GetLayerVersionRequest $req) 获取层版本详细信息，包括用于下载层中文件的链接。
  * @method Models\GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(Models\GetProvisionedConcurrencyConfigRequest $req) 获取函数或函数某一版本的预置并发详情。
  * @method Models\GetRequestStatusResponse GetRequestStatus(Models\GetRequestStatusRequest $req) 该接口根据指定的查询条件返回函数单个请求运行状态。

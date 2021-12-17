@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionRequestId(string $FunctionRequestId) 设置需要查询状态的请求 id
  * @method string getNamespace() 获取函数的所在的命名空间
  * @method void setNamespace(string $Namespace) 设置函数的所在的命名空间
- * @method string getStartTime() 获取查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 24小时
- * @method void setStartTime(string $StartTime) 设置查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 24小时
+ * @method string getStartTime() 获取查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 15min
+ * @method void setStartTime(string $StartTime) 设置查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 15min
  * @method string getEndTime() 获取查询的结束时间，例如：2017-05-16 20:59:59，不填默认为当前时间。EndTime 需要晚于 StartTime。
  * @method void setEndTime(string $EndTime) 设置查询的结束时间，例如：2017-05-16 20:59:59，不填默认为当前时间。EndTime 需要晚于 StartTime。
  */
@@ -49,7 +49,7 @@ class GetRequestStatusRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 24小时
+     * @var string 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 15min
      */
     public $StartTime;
 
@@ -62,7 +62,7 @@ class GetRequestStatusRequest extends AbstractModel
      * @param string $FunctionName 函数名称
      * @param string $FunctionRequestId 需要查询状态的请求 id
      * @param string $Namespace 函数的所在的命名空间
-     * @param string $StartTime 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 24小时
+     * @param string $StartTime 查询的开始时间，例如：2017-05-16 20:00:00，不填默认为当前时间 - 15min
      * @param string $EndTime 查询的结束时间，例如：2017-05-16 20:59:59，不填默认为当前时间。EndTime 需要晚于 StartTime。
      */
     function __construct()

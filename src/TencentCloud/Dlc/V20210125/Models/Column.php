@@ -42,6 +42,18 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNullable(string $Nullable) 设置是否为null
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPosition() 获取字段位置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPosition(integer $Position) 设置字段位置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取字段创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置字段创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModifiedTime() 获取字段修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifiedTime(string $ModifiedTime) 设置字段修改时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Column extends AbstractModel
 {
@@ -81,6 +93,24 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     public $Nullable;
 
     /**
+     * @var integer 字段位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Position;
+
+    /**
+     * @var string 字段创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 字段修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifiedTime;
+
+    /**
      * @param string $Name 列名称，不区分大小写，最大支持25个字符。
      * @param string $Type 列类型，支持如下类型定义:
 string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>。
@@ -91,6 +121,12 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
      * @param integer $Scale 表示小数部分的长度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nullable 是否为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Position 字段位置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 字段创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModifiedTime 字段修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -128,6 +164,18 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
 
         if (array_key_exists("Nullable",$param) and $param["Nullable"] !== null) {
             $this->Nullable = $param["Nullable"];
+        }
+
+        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
+            $this->Position = $param["Position"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
+            $this->ModifiedTime = $param["ModifiedTime"];
         }
     }
 }

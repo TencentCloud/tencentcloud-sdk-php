@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterAdvancedSettings(ClusterAdvancedSettings $ClusterAdvancedSettings) 设置集群高级配置信息
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取节点高级配置信息
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置节点高级配置信息
- * @method array getExistedInstancesForNode() 获取已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
- * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) 设置已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+ * @method array getExistedInstancesForNode() 获取已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
+ * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) 设置已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
  * @method array getInstanceDataDiskMountSettings() 获取CVM类型和其对应的数据盘挂载配置信息
  * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) 设置CVM类型和其对应的数据盘挂载配置信息
  * @method array getExtensionAddons() 获取需要安装的扩展组件信息
@@ -72,7 +72,7 @@ class CreateClusterRequest extends AbstractModel
     public $InstanceAdvancedSettings;
 
     /**
-     * @var array 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+     * @var array 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
      */
     public $ExistedInstancesForNode;
 
@@ -93,7 +93,7 @@ class CreateClusterRequest extends AbstractModel
      * @param ClusterBasicSettings $ClusterBasicSettings 集群的基本配置信息
      * @param ClusterAdvancedSettings $ClusterAdvancedSettings 集群高级配置信息
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 节点高级配置信息
-     * @param array $ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+     * @param array $ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
      * @param array $InstanceDataDiskMountSettings CVM类型和其对应的数据盘挂载配置信息
      * @param array $ExtensionAddons 需要安装的扩展组件信息
      */

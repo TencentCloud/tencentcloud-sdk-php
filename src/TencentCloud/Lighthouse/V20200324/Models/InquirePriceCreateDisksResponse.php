@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceCreateDisks返回参数结构体
  *
- * @method DiskPrice getDiskPrice() 获取磁盘价格
- * @method void setDiskPrice(DiskPrice $DiskPrice) 设置磁盘价格
+ * @method DiskPrice getDiskPrice() 获取云硬盘价格。
+ * @method void setDiskPrice(DiskPrice $DiskPrice) 设置云硬盘价格。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class InquirePriceCreateDisksResponse extends AbstractModel
 {
     /**
-     * @var DiskPrice 磁盘价格
+     * @var DiskPrice 云硬盘价格。
      */
     public $DiskPrice;
 
@@ -38,7 +38,7 @@ class InquirePriceCreateDisksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DiskPrice $DiskPrice 磁盘价格
+     * @param DiskPrice $DiskPrice 云硬盘价格。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

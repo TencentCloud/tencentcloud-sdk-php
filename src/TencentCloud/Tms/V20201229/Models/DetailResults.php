@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLibName(string $LibName) 设置该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubLabel() 获取该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailResults extends AbstractModel
 {
@@ -91,6 +95,12 @@ class DetailResults extends AbstractModel
     public $LibName;
 
     /**
+     * @var string 该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubLabel;
+
+    /**
      * @param string $Label 该字段用于返回检测结果所对应的全部恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      * @param string $Suggestion 该字段用于返回对应当前标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,6 +113,8 @@ class DetailResults extends AbstractModel
      * @param string $LibId 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LibName 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubLabel 该字段用于返回当前标签（Label）下的二级标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -144,6 +156,10 @@ class DetailResults extends AbstractModel
 
         if (array_key_exists("LibName",$param) and $param["LibName"] !== null) {
             $this->LibName = $param["LibName"];
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
         }
     }
 }

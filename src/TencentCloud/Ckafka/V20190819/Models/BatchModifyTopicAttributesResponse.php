@@ -14,33 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquirePriceRenewInstances返回参数结构体
+ * BatchModifyTopicAttributes返回参数结构体
  *
- * @method Price getPrice() 获取询价信息。
- * @method void setPrice(Price $Price) 设置询价信息。
- * @method array getDataDiskPriceSet() 获取数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataDiskPriceSet(array $DataDiskPriceSet) 设置数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResult() 获取返回结果
+ * @method void setResult(array $Result) 设置返回结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class InquirePriceRenewInstancesResponse extends AbstractModel
+class BatchModifyTopicAttributesResponse extends AbstractModel
 {
     /**
-     * @var Price 询价信息。
+     * @var array 返回结果
      */
-    public $Price;
-
-    /**
-     * @var array 数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $DataDiskPriceSet;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +38,7 @@ class InquirePriceRenewInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Price $Price 询价信息。
-     * @param array $DataDiskPriceSet 数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Result 返回结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +54,12 @@ class InquirePriceRenewInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = new Price();
-            $this->Price->deserialize($param["Price"]);
-        }
-
-        if (array_key_exists("DataDiskPriceSet",$param) and $param["DataDiskPriceSet"] !== null) {
-            $this->DataDiskPriceSet = [];
-            foreach ($param["DataDiskPriceSet"] as $key => $value){
-                $obj = new DataDiskPrice();
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = [];
+            foreach ($param["Result"] as $key => $value){
+                $obj = new BatchModifyTopicResultDTO();
                 $obj->deserialize($value);
-                array_push($this->DataDiskPriceSet, $obj);
+                array_push($this->Result, $obj);
             }
         }
 

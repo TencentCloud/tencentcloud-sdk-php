@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDiskConfigs返回参数结构体
  *
- * @method array getDiskConfigSet() 获取磁盘配置列表
- * @method void setDiskConfigSet(array $DiskConfigSet) 设置磁盘配置列表
+ * @method array getDiskConfigSet() 获取云硬盘配置列表。
+ * @method void setDiskConfigSet(array $DiskConfigSet) 设置云硬盘配置列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDiskConfigsResponse extends AbstractModel
 {
     /**
-     * @var array 磁盘配置列表
+     * @var array 云硬盘配置列表。
      */
     public $DiskConfigSet;
 
@@ -38,7 +38,7 @@ class DescribeDiskConfigsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DiskConfigSet 磁盘配置列表
+     * @param array $DiskConfigSet 云硬盘配置列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

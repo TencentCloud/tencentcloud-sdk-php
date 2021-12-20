@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhysical(string $Physical) 设置购买物理独占版配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublicNetwork() 获取公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicNetwork(string $PublicNetwork) 设置公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublicNetworkLimit() 获取公网带宽配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicNetworkLimit(string $PublicNetworkLimit) 设置公网带宽配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneResponse extends AbstractModel
 {
@@ -109,6 +117,18 @@ class ZoneResponse extends AbstractModel
     public $Physical;
 
     /**
+     * @var string 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicNetwork;
+
+    /**
+     * @var string 公网带宽配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicNetworkLimit;
+
+    /**
      * @param array $ZoneList zone列表
      * @param integer $MaxBuyInstanceNum 最大购买实例个数
      * @param integer $MaxBandwidth 最大购买带宽 单位Mb/s
@@ -123,6 +143,10 @@ class ZoneResponse extends AbstractModel
      * @param string $Profession 购买专业版配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Physical 购买物理独占版配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicNetwork 公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicNetworkLimit 公网带宽配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +212,14 @@ class ZoneResponse extends AbstractModel
 
         if (array_key_exists("Physical",$param) and $param["Physical"] !== null) {
             $this->Physical = $param["Physical"];
+        }
+
+        if (array_key_exists("PublicNetwork",$param) and $param["PublicNetwork"] !== null) {
+            $this->PublicNetwork = $param["PublicNetwork"];
+        }
+
+        if (array_key_exists("PublicNetworkLimit",$param) and $param["PublicNetworkLimit"] !== null) {
+            $this->PublicNetworkLimit = $param["PublicNetworkLimit"];
         }
     }
 }

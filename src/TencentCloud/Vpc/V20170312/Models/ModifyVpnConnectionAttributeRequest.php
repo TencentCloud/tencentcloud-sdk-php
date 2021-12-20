@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) 设置本端通道探测ip
  * @method string getHealthCheckRemoteIp() 获取对端通道探测ip
  * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) 设置对端通道探测ip
+ * @method string getNegotiationType() 获取协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+ * @method void setNegotiationType(string $NegotiationType) 设置协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+ * @method integer getDpdEnable() 获取DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+ * @method void setDpdEnable(integer $DpdEnable) 设置DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+ * @method string getDpdTimeout() 获取DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+ * @method void setDpdTimeout(string $DpdTimeout) 设置DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+ * @method string getDpdAction() 获取DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+ * @method void setDpdAction(string $DpdAction) 设置DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
  */
 class ModifyVpnConnectionAttributeRequest extends AbstractModel
 {
@@ -87,6 +95,26 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
     public $HealthCheckRemoteIp;
 
     /**
+     * @var string 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+     */
+    public $NegotiationType;
+
+    /**
+     * @var integer DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     */
+    public $DpdEnable;
+
+    /**
+     * @var string DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+     */
+    public $DpdTimeout;
+
+    /**
+     * @var string DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     */
+    public $DpdAction;
+
+    /**
      * @param string $VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
      * @param string $VpnConnectionName VPN通道名称，可任意命名，但不得超过60个字符。
      * @param string $PreShareKey 预共享密钥。
@@ -96,6 +124,10 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
      * @param boolean $EnableHealthCheck 是否启用通道健康检查
      * @param string $HealthCheckLocalIp 本端通道探测ip
      * @param string $HealthCheckRemoteIp 对端通道探测ip
+     * @param string $NegotiationType 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+     * @param integer $DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     * @param string $DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+     * @param string $DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
      */
     function __construct()
     {
@@ -151,6 +183,22 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
 
         if (array_key_exists("HealthCheckRemoteIp",$param) and $param["HealthCheckRemoteIp"] !== null) {
             $this->HealthCheckRemoteIp = $param["HealthCheckRemoteIp"];
+        }
+
+        if (array_key_exists("NegotiationType",$param) and $param["NegotiationType"] !== null) {
+            $this->NegotiationType = $param["NegotiationType"];
+        }
+
+        if (array_key_exists("DpdEnable",$param) and $param["DpdEnable"] !== null) {
+            $this->DpdEnable = $param["DpdEnable"];
+        }
+
+        if (array_key_exists("DpdTimeout",$param) and $param["DpdTimeout"] !== null) {
+            $this->DpdTimeout = $param["DpdTimeout"];
+        }
+
+        if (array_key_exists("DpdAction",$param) and $param["DpdAction"] !== null) {
+            $this->DpdAction = $param["DpdAction"];
         }
     }
 }

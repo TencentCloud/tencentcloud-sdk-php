@@ -48,6 +48,14 @@ CCN VPN 形的通道 可以不传VPCID
  * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) 设置健康检查对端地址
  * @method string getRouteType() 获取通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
  * @method void setRouteType(string $RouteType) 设置通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
+ * @method string getNegotiationType() 获取协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+ * @method void setNegotiationType(string $NegotiationType) 设置协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+ * @method integer getDpdEnable() 获取DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+ * @method void setDpdEnable(integer $DpdEnable) 设置DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+ * @method string getDpdTimeout() 获取DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+ * @method void setDpdTimeout(string $DpdTimeout) 设置DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+ * @method string getDpdAction() 获取DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+ * @method void setDpdAction(string $DpdAction) 设置DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
  */
 class CreateVpnConnectionRequest extends AbstractModel
 {
@@ -118,6 +126,26 @@ CCN VPN 形的通道 可以不传VPCID
     public $RouteType;
 
     /**
+     * @var string 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+     */
+    public $NegotiationType;
+
+    /**
+     * @var integer DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     */
+    public $DpdEnable;
+
+    /**
+     * @var string DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+     */
+    public $DpdTimeout;
+
+    /**
+     * @var string DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+     */
+    public $DpdAction;
+
+    /**
      * @param string $VpnGatewayId VPN网关实例ID。
      * @param string $CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
      * @param string $VpnConnectionName 通道名称，可任意命名，但不得超过60个字符。
@@ -132,6 +160,10 @@ CCN VPN 形的通道 可以不传VPCID
      * @param string $HealthCheckLocalIp 健康检查本端地址
      * @param string $HealthCheckRemoteIp 健康检查对端地址
      * @param string $RouteType 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
+     * @param string $NegotiationType 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+     * @param integer $DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+     * @param string $DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+     * @param string $DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
      */
     function __construct()
     {
@@ -208,6 +240,22 @@ CCN VPN 形的通道 可以不传VPCID
 
         if (array_key_exists("RouteType",$param) and $param["RouteType"] !== null) {
             $this->RouteType = $param["RouteType"];
+        }
+
+        if (array_key_exists("NegotiationType",$param) and $param["NegotiationType"] !== null) {
+            $this->NegotiationType = $param["NegotiationType"];
+        }
+
+        if (array_key_exists("DpdEnable",$param) and $param["DpdEnable"] !== null) {
+            $this->DpdEnable = $param["DpdEnable"];
+        }
+
+        if (array_key_exists("DpdTimeout",$param) and $param["DpdTimeout"] !== null) {
+            $this->DpdTimeout = $param["DpdTimeout"];
+        }
+
+        if (array_key_exists("DpdAction",$param) and $param["DpdAction"] !== null) {
+            $this->DpdAction = $param["DpdAction"];
         }
     }
 }

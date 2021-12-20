@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateComplianceTask请求参数结构体
  *
- * @method array getAssetTypeSet() 获取指定要扫描的资产类型列表。若不填，对所有资产触发扫描。
+ * @method array getAssetTypeSet() 获取指定要扫描的资产类型列表。
 ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
 ASSET_K8S, K8S资产
- * @method void setAssetTypeSet(array $AssetTypeSet) 设置指定要扫描的资产类型列表。若不填，对所有资产触发扫描。
+ * @method void setAssetTypeSet(array $AssetTypeSet) 设置指定要扫描的资产类型列表。
 ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
@@ -38,7 +38,7 @@ ASSET_K8S, K8S资产
 class CreateComplianceTaskRequest extends AbstractModel
 {
     /**
-     * @var array 指定要扫描的资产类型列表。若不填，对所有资产触发扫描。
+     * @var array 指定要扫描的资产类型列表。
 ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
@@ -57,7 +57,7 @@ ASSET_K8S, K8S资产
     public $PeriodTaskId;
 
     /**
-     * @param array $AssetTypeSet 指定要扫描的资产类型列表。若不填，对所有资产触发扫描。
+     * @param array $AssetTypeSet 指定要扫描的资产类型列表。
 ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机

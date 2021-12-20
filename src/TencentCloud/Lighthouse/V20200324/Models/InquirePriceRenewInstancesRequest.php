@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) 设置待续费的实例。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+ * @method boolean getRenewDataDisk() 获取是否续费数据盘
+ * @method void setRenewDataDisk(boolean $RenewDataDisk) 设置是否续费数据盘
+ * @method boolean getAlignInstanceExpiredTime() 获取数据盘是否对齐实例到期时间
+ * @method void setAlignInstanceExpiredTime(boolean $AlignInstanceExpiredTime) 设置数据盘是否对齐实例到期时间
  */
 class InquirePriceRenewInstancesRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class InquirePriceRenewInstancesRequest extends AbstractModel
     public $InstanceChargePrepaid;
 
     /**
+     * @var boolean 是否续费数据盘
+     */
+    public $RenewDataDisk;
+
+    /**
+     * @var boolean 数据盘是否对齐实例到期时间
+     */
+    public $AlignInstanceExpiredTime;
+
+    /**
      * @param array $InstanceIds 待续费的实例。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * @param boolean $RenewDataDisk 是否续费数据盘
+     * @param boolean $AlignInstanceExpiredTime 数据盘是否对齐实例到期时间
      */
     function __construct()
     {
@@ -61,6 +77,14 @@ class InquirePriceRenewInstancesRequest extends AbstractModel
         if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
             $this->InstanceChargePrepaid = new InstanceChargePrepaid();
             $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+        }
+
+        if (array_key_exists("RenewDataDisk",$param) and $param["RenewDataDisk"] !== null) {
+            $this->RenewDataDisk = $param["RenewDataDisk"];
+        }
+
+        if (array_key_exists("AlignInstanceExpiredTime",$param) and $param["AlignInstanceExpiredTime"] !== null) {
+            $this->AlignInstanceExpiredTime = $param["AlignInstanceExpiredTime"];
         }
     }
 }

@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataId(string $DataId) 设置该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubLabel() 获取该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -104,6 +108,12 @@ class TextModerationResponse extends AbstractModel
     public $DataId;
 
     /**
+     * @var string 该字段用于返回当前标签（Label）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubLabel;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -122,6 +132,8 @@ class TextModerationResponse extends AbstractModel
      * @param string $Extra 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataId 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubLabel 该字段用于返回当前标签（Label）下的二级标签。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -182,6 +194,10 @@ class TextModerationResponse extends AbstractModel
 
         if (array_key_exists("DataId",$param) and $param["DataId"] !== null) {
             $this->DataId = $param["DataId"];
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

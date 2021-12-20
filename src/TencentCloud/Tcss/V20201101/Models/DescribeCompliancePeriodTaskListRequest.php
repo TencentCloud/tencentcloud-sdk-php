@@ -20,16 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCompliancePeriodTaskList请求参数结构体
  *
- * @method string getAssetType() 获取资产的类型，传入时，只查询此类型资产的定时任务；不传，则返回所有定时任务。
-
-取值为：
+ * @method string getAssetType() 获取资产的类型，取值为：
 ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
 ASSET_K8S, K8S资产
- * @method void setAssetType(string $AssetType) 设置资产的类型，传入时，只查询此类型资产的定时任务；不传，则返回所有定时任务。
-
-取值为：
+ * @method void setAssetType(string $AssetType) 设置资产的类型，取值为：
 ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
@@ -42,9 +38,7 @@ ASSET_K8S, K8S资产
 class DescribeCompliancePeriodTaskListRequest extends AbstractModel
 {
     /**
-     * @var string 资产的类型，传入时，只查询此类型资产的定时任务；不传，则返回所有定时任务。
-
-取值为：
+     * @var string 资产的类型，取值为：
 ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
@@ -63,9 +57,7 @@ ASSET_K8S, K8S资产
     public $Limit;
 
     /**
-     * @param string $AssetType 资产的类型，传入时，只查询此类型资产的定时任务；不传，则返回所有定时任务。
-
-取值为：
+     * @param string $AssetType 资产的类型，取值为：
 ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机

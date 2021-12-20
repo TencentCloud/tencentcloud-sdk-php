@@ -20,22 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDiskConfigs请求参数结构体
  *
- * @method array getFilters() 获取- zone:
-可用区
- * @method void setFilters(array $Filters) 设置- zone:
-可用区
+ * @method array getFilters() 获取过滤器列表。
+<li>zone</li>按照【可用区】进行过滤。
+类型：String
+必选：否
+ * @method void setFilters(array $Filters) 设置过滤器列表。
+<li>zone</li>按照【可用区】进行过滤。
+类型：String
+必选：否
  */
 class DescribeDiskConfigsRequest extends AbstractModel
 {
     /**
-     * @var array - zone:
-可用区
+     * @var array 过滤器列表。
+<li>zone</li>按照【可用区】进行过滤。
+类型：String
+必选：否
      */
     public $Filters;
 
     /**
-     * @param array $Filters - zone:
-可用区
+     * @param array $Filters 过滤器列表。
+<li>zone</li>按照【可用区】进行过滤。
+类型：String
+必选：否
      */
     function __construct()
     {

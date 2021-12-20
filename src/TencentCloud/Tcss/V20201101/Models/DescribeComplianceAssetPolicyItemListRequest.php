@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeComplianceAssetPolicyItemList请求参数结构体
  *
- * @method integer getCustomerAssetId() 获取资产的ID。
- * @method void setCustomerAssetId(integer $CustomerAssetId) 设置资产的ID。
+ * @method integer getCustomerAssetId() 获取客户资产的ID。
+ * @method void setCustomerAssetId(integer $CustomerAssetId) 设置客户资产的ID。
  * @method integer getOffset() 获取起始偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置起始偏移量，默认为0。
  * @method integer getLimit() 获取要获取的数据量，默认为10，最大为100。
@@ -34,7 +34,7 @@ RiskLevel
 class DescribeComplianceAssetPolicyItemListRequest extends AbstractModel
 {
     /**
-     * @var integer 资产的ID。
+     * @var integer 客户资产的ID。
      */
     public $CustomerAssetId;
 
@@ -55,7 +55,7 @@ RiskLevel
     public $Filters;
 
     /**
-     * @param integer $CustomerAssetId 资产的ID。
+     * @param integer $CustomerAssetId 客户资产的ID。
      * @param integer $Offset 起始偏移量，默认为0。
      * @param integer $Limit 要获取的数据量，默认为10，最大为100。
      * @param array $Filters 过滤器列表。Name字段支持

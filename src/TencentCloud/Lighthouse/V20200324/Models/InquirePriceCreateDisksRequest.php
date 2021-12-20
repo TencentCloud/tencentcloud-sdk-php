@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceCreateDisks请求参数结构体
  *
- * @method integer getDiskSize() 获取磁盘大小
- * @method void setDiskSize(integer $DiskSize) 设置磁盘大小
- * @method string getDiskType() 获取硬盘介质类型
- * @method void setDiskType(string $DiskType) 设置硬盘介质类型
- * @method DiskChargePrepaid getDiskChargePrepaid() 获取新购磁盘包年包月相关参数设置
- * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置新购磁盘包年包月相关参数设置
- * @method integer getDiskCount() 获取磁盘个数, 默认值: 1
- * @method void setDiskCount(integer $DiskCount) 设置磁盘个数, 默认值: 1
+ * @method integer getDiskSize() 获取云硬盘大小, 单位: GB。
+ * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小, 单位: GB。
+ * @method string getDiskType() 获取云硬盘介质类型。取值: "CLOUD_PREMIUM"(高性能云盘), "CLOUD_SSD"(SSD云硬盘)。
+ * @method void setDiskType(string $DiskType) 设置云硬盘介质类型。取值: "CLOUD_PREMIUM"(高性能云盘), "CLOUD_SSD"(SSD云硬盘)。
+ * @method DiskChargePrepaid getDiskChargePrepaid() 获取新购云硬盘包年包月相关参数设置。
+ * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) 设置新购云硬盘包年包月相关参数设置。
+ * @method integer getDiskCount() 获取云硬盘个数, 默认值: 1。
+ * @method void setDiskCount(integer $DiskCount) 设置云硬盘个数, 默认值: 1。
  */
 class InquirePriceCreateDisksRequest extends AbstractModel
 {
     /**
-     * @var integer 磁盘大小
+     * @var integer 云硬盘大小, 单位: GB。
      */
     public $DiskSize;
 
     /**
-     * @var string 硬盘介质类型
+     * @var string 云硬盘介质类型。取值: "CLOUD_PREMIUM"(高性能云盘), "CLOUD_SSD"(SSD云硬盘)。
      */
     public $DiskType;
 
     /**
-     * @var DiskChargePrepaid 新购磁盘包年包月相关参数设置
+     * @var DiskChargePrepaid 新购云硬盘包年包月相关参数设置。
      */
     public $DiskChargePrepaid;
 
     /**
-     * @var integer 磁盘个数, 默认值: 1
+     * @var integer 云硬盘个数, 默认值: 1。
      */
     public $DiskCount;
 
     /**
-     * @param integer $DiskSize 磁盘大小
-     * @param string $DiskType 硬盘介质类型
-     * @param DiskChargePrepaid $DiskChargePrepaid 新购磁盘包年包月相关参数设置
-     * @param integer $DiskCount 磁盘个数, 默认值: 1
+     * @param integer $DiskSize 云硬盘大小, 单位: GB。
+     * @param string $DiskType 云硬盘介质类型。取值: "CLOUD_PREMIUM"(高性能云盘), "CLOUD_SSD"(SSD云硬盘)。
+     * @param DiskChargePrepaid $DiskChargePrepaid 新购云硬盘包年包月相关参数设置。
+     * @param integer $DiskCount 云硬盘个数, 默认值: 1。
      */
     function __construct()
     {

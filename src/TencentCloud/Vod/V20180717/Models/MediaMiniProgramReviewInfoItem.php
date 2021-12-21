@@ -18,22 +18,22 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 小程序审核信息单元
+ * 小程序智能识别信息单元
  *
  * @method integer getDefinition() 获取模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
  * @method void setDefinition(integer $Definition) 设置模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
  * @method MediaMetaData getMetaData() 获取视频元信息。
  * @method void setMetaData(MediaMetaData $MetaData) 设置视频元信息。
- * @method string getUrl() 获取小程序审核视频播放地址。
- * @method void setUrl(string $Url) 设置小程序审核视频播放地址。
+ * @method string getUrl() 获取小程序智能识别视频播放地址。
+ * @method void setUrl(string $Url) 设置小程序智能识别视频播放地址。
  * @method string getReviewResult() 获取小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
  * @method void setReviewResult(string $ReviewResult) 设置小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
- * @method array getReviewSummary() 获取小程序审核元素。
- * @method void setReviewSummary(array $ReviewSummary) 设置小程序审核元素。
+ * @method array getReviewSummary() 获取小程序智能识别元素。
+ * @method void setReviewSummary(array $ReviewSummary) 设置小程序智能识别元素。
  */
 class MediaMiniProgramReviewInfoItem extends AbstractModel
 {
@@ -48,7 +48,7 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
     public $MetaData;
 
     /**
-     * @var string 小程序审核视频播放地址。
+     * @var string 小程序智能识别视频播放地址。
      */
     public $Url;
 
@@ -60,18 +60,18 @@ class MediaMiniProgramReviewInfoItem extends AbstractModel
     public $ReviewResult;
 
     /**
-     * @var array 小程序审核元素。
+     * @var array 小程序智能识别元素。
      */
     public $ReviewSummary;
 
     /**
      * @param integer $Definition 模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
      * @param MediaMetaData $MetaData 视频元信息。
-     * @param string $Url 小程序审核视频播放地址。
+     * @param string $Url 小程序智能识别视频播放地址。
      * @param string $ReviewResult 小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
-     * @param array $ReviewSummary 小程序审核元素。
+     * @param array $ReviewSummary 小程序智能识别元素。
      */
     function __construct()
     {

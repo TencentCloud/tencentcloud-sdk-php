@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAclRuleName(string $AclRuleName) 设置预设ACL规则的名称
  * @method integer getRetentionBytes() 获取可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
  * @method void setRetentionBytes(integer $RetentionBytes) 设置可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+ * @method array getTags() 获取标签列表
+ * @method void setTags(array $Tags) 设置标签列表
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateTopicRequest extends AbstractModel
     public $RetentionBytes;
 
     /**
+     * @var array 标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $TopicName 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param integer $PartitionNum Partition个数，大于0
@@ -144,6 +151,7 @@ class CreateTopicRequest extends AbstractModel
      * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
      * @param string $AclRuleName 预设ACL规则的名称
      * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     * @param array $Tags 标签列表
      */
     function __construct()
     {
@@ -216,6 +224,15 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
             $this->RetentionBytes = $param["RetentionBytes"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

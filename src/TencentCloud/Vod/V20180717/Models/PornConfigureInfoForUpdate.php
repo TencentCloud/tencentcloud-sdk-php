@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 鉴黄任务控制参数。
+ * 鉴别涉及令人反感的信息的任务控制参数。
  *
- * @method PornImgReviewTemplateInfoForUpdate getImgReviewInfo() 获取画面鉴黄控制参数。
- * @method void setImgReviewInfo(PornImgReviewTemplateInfoForUpdate $ImgReviewInfo) 设置画面鉴黄控制参数。
- * @method PornAsrReviewTemplateInfoForUpdate getAsrReviewInfo() 获取语音鉴黄控制参数。
- * @method void setAsrReviewInfo(PornAsrReviewTemplateInfoForUpdate $AsrReviewInfo) 设置语音鉴黄控制参数。
- * @method PornOcrReviewTemplateInfoForUpdate getOcrReviewInfo() 获取文本鉴黄控制参数。
- * @method void setOcrReviewInfo(PornOcrReviewTemplateInfoForUpdate $OcrReviewInfo) 设置文本鉴黄控制参数。
+ * @method PornImgReviewTemplateInfoForUpdate getImgReviewInfo() 获取画面鉴别涉及令人反感的信息的控制参数。
+ * @method void setImgReviewInfo(PornImgReviewTemplateInfoForUpdate $ImgReviewInfo) 设置画面鉴别涉及令人反感的信息的控制参数。
+ * @method PornAsrReviewTemplateInfoForUpdate getAsrReviewInfo() 获取语音鉴别涉及令人反感的信息的控制参数。
+ * @method void setAsrReviewInfo(PornAsrReviewTemplateInfoForUpdate $AsrReviewInfo) 设置语音鉴别涉及令人反感的信息的控制参数。
+ * @method PornOcrReviewTemplateInfoForUpdate getOcrReviewInfo() 获取文本鉴别涉及令人反感的信息的控制参数。
+ * @method void setOcrReviewInfo(PornOcrReviewTemplateInfoForUpdate $OcrReviewInfo) 设置文本鉴别涉及令人反感的信息的控制参数。
  */
 class PornConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var PornImgReviewTemplateInfoForUpdate 画面鉴黄控制参数。
+     * @var PornImgReviewTemplateInfoForUpdate 画面鉴别涉及令人反感的信息的控制参数。
      */
     public $ImgReviewInfo;
 
     /**
-     * @var PornAsrReviewTemplateInfoForUpdate 语音鉴黄控制参数。
+     * @var PornAsrReviewTemplateInfoForUpdate 语音鉴别涉及令人反感的信息的控制参数。
      */
     public $AsrReviewInfo;
 
     /**
-     * @var PornOcrReviewTemplateInfoForUpdate 文本鉴黄控制参数。
+     * @var PornOcrReviewTemplateInfoForUpdate 文本鉴别涉及令人反感的信息的控制参数。
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PornImgReviewTemplateInfoForUpdate $ImgReviewInfo 画面鉴黄控制参数。
-     * @param PornAsrReviewTemplateInfoForUpdate $AsrReviewInfo 语音鉴黄控制参数。
-     * @param PornOcrReviewTemplateInfoForUpdate $OcrReviewInfo 文本鉴黄控制参数。
+     * @param PornImgReviewTemplateInfoForUpdate $ImgReviewInfo 画面鉴别涉及令人反感的信息的控制参数。
+     * @param PornAsrReviewTemplateInfoForUpdate $AsrReviewInfo 语音鉴别涉及令人反感的信息的控制参数。
+     * @param PornOcrReviewTemplateInfoForUpdate $OcrReviewInfo 文本鉴别涉及令人反感的信息的控制参数。
      */
     function __construct()
     {

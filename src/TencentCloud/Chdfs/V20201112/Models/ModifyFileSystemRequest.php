@@ -26,14 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSystemName(string $FileSystemName) 设置文件系统名称
  * @method string getDescription() 获取文件系统描述
  * @method void setDescription(string $Description) 设置文件系统描述
- * @method integer getCapacityQuota() 获取文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+ * @method integer getCapacityQuota() 获取文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
 注意：修改的文件系统容量不能小于当前使用量
- * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+ * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
 注意：修改的文件系统容量不能小于当前使用量
  * @method array getSuperUsers() 获取超级用户名列表，可以为空数组
  * @method void setSuperUsers(array $SuperUsers) 设置超级用户名列表，可以为空数组
  * @method boolean getPosixAcl() 获取是否校验POSIX ACL
  * @method void setPosixAcl(boolean $PosixAcl) 设置是否校验POSIX ACL
+ * @method boolean getEnableRanger() 获取是否打开Ranger地址校验
+ * @method void setEnableRanger(boolean $EnableRanger) 设置是否打开Ranger地址校验
+ * @method array getRangerServiceAddresses() 获取Ranger地址列表，可以为空数组
+ * @method void setRangerServiceAddresses(array $RangerServiceAddresses) 设置Ranger地址列表，可以为空数组
  */
 class ModifyFileSystemRequest extends AbstractModel
 {
@@ -53,7 +57,7 @@ class ModifyFileSystemRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * @var integer 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
 注意：修改的文件系统容量不能小于当前使用量
      */
     public $CapacityQuota;
@@ -69,13 +73,25 @@ class ModifyFileSystemRequest extends AbstractModel
     public $PosixAcl;
 
     /**
+     * @var boolean 是否打开Ranger地址校验
+     */
+    public $EnableRanger;
+
+    /**
+     * @var array Ranger地址列表，可以为空数组
+     */
+    public $RangerServiceAddresses;
+
+    /**
      * @param string $FileSystemId 文件系统ID
      * @param string $FileSystemName 文件系统名称
      * @param string $Description 文件系统描述
-     * @param integer $CapacityQuota 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * @param integer $CapacityQuota 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
 注意：修改的文件系统容量不能小于当前使用量
      * @param array $SuperUsers 超级用户名列表，可以为空数组
      * @param boolean $PosixAcl 是否校验POSIX ACL
+     * @param boolean $EnableRanger 是否打开Ranger地址校验
+     * @param array $RangerServiceAddresses Ranger地址列表，可以为空数组
      */
     function __construct()
     {
@@ -112,6 +128,14 @@ class ModifyFileSystemRequest extends AbstractModel
 
         if (array_key_exists("PosixAcl",$param) and $param["PosixAcl"] !== null) {
             $this->PosixAcl = $param["PosixAcl"];
+        }
+
+        if (array_key_exists("EnableRanger",$param) and $param["EnableRanger"] !== null) {
+            $this->EnableRanger = $param["EnableRanger"];
+        }
+
+        if (array_key_exists("RangerServiceAddresses",$param) and $param["RangerServiceAddresses"] !== null) {
+            $this->RangerServiceAddresses = $param["RangerServiceAddresses"];
         }
     }
 }

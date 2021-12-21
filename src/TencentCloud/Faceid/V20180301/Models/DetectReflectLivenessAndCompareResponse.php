@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetectReflectLivenessAndCompare返回参数结构体
  *
- * @method string getBestFrameUrl() 获取验证通过后的视频最佳截图照片资源地址，jpg格式。
- * @method void setBestFrameUrl(string $BestFrameUrl) 设置验证通过后的视频最佳截图照片资源地址，jpg格式。
- * @method string getBestFrameMd5() 获取验证通过后的视频最佳截图照片资源Md5。
- * @method void setBestFrameMd5(string $BestFrameMd5) 设置验证通过后的视频最佳截图照片资源Md5。
- * @method string getResult() 获取业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
- * @method void setResult(string $Result) 设置业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+ * @method string getBestFrameUrl() 获取验证通过后的视频最佳截图资源临时地址，jpg格式，资源和链接有效期2小时，务必在有效期内下载。
+ * @method void setBestFrameUrl(string $BestFrameUrl) 设置验证通过后的视频最佳截图资源临时地址，jpg格式，资源和链接有效期2小时，务必在有效期内下载。
+ * @method string getBestFrameMd5() 获取验证通过后的视频最佳截图资源MD5（32位，用于校验BestFrame的一致性）。
+ * @method void setBestFrameMd5(string $BestFrameMd5) 设置验证通过后的视频最佳截图资源MD5（32位，用于校验BestFrame的一致性）。
+ * @method string getResult() 获取业务错误码，成功情况返回Success，错误情况请参考下方错误码 列表中FailedOperation部分。
+ * @method void setResult(string $Result) 设置业务错误码，成功情况返回Success，错误情况请参考下方错误码 列表中FailedOperation部分。
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
  * @method float getSim() 获取相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
 class DetectReflectLivenessAndCompareResponse extends AbstractModel
 {
     /**
-     * @var string 验证通过后的视频最佳截图照片资源地址，jpg格式。
+     * @var string 验证通过后的视频最佳截图资源临时地址，jpg格式，资源和链接有效期2小时，务必在有效期内下载。
      */
     public $BestFrameUrl;
 
     /**
-     * @var string 验证通过后的视频最佳截图照片资源Md5。
+     * @var string 验证通过后的视频最佳截图资源MD5（32位，用于校验BestFrame的一致性）。
      */
     public $BestFrameMd5;
 
     /**
-     * @var string 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * @var string 业务错误码，成功情况返回Success，错误情况请参考下方错误码 列表中FailedOperation部分。
      */
     public $Result;
 
@@ -66,9 +66,9 @@ class DetectReflectLivenessAndCompareResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BestFrameUrl 验证通过后的视频最佳截图照片资源地址，jpg格式。
-     * @param string $BestFrameMd5 验证通过后的视频最佳截图照片资源Md5。
-     * @param string $Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * @param string $BestFrameUrl 验证通过后的视频最佳截图资源临时地址，jpg格式，资源和链接有效期2小时，务必在有效期内下载。
+     * @param string $BestFrameMd5 验证通过后的视频最佳截图资源MD5（32位，用于校验BestFrame的一致性）。
+     * @param string $Result 业务错误码，成功情况返回Success，错误情况请参考下方错误码 列表中FailedOperation部分。
      * @param string $Description 业务结果描述。
      * @param float $Sim 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

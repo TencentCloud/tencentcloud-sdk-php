@@ -22,13 +22,21 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method FileSystem getFileSystem() 获取文件系统
  * @method void setFileSystem(FileSystem $FileSystem) 设置文件系统
- * @method integer getCapacityUsed() 获取已使用容量（byte），包括标准和归档存储
+ * @method integer getCapacityUsed() 获取文件系统已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCapacityUsed(integer $CapacityUsed) 设置已使用容量（byte），包括标准和归档存储
+ * @method void setCapacityUsed(integer $CapacityUsed) 设置文件系统已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getArchiveCapacityUsed() 获取已使用归档存储容量（byte）
+ * @method integer getArchiveCapacityUsed() 获取已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArchiveCapacityUsed(integer $ArchiveCapacityUsed) 设置已使用归档存储容量（byte）
+ * @method void setArchiveCapacityUsed(integer $ArchiveCapacityUsed) 设置已使用COS归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStandardCapacityUsed() 获取已使用COS标准存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStandardCapacityUsed(integer $StandardCapacityUsed) 设置已使用COS标准存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDegradeCapacityUsed() 获取已使用COS低频存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDegradeCapacityUsed(integer $DegradeCapacityUsed) 设置已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,16 +49,28 @@ class DescribeFileSystemResponse extends AbstractModel
     public $FileSystem;
 
     /**
-     * @var integer 已使用容量（byte），包括标准和归档存储
+     * @var integer 文件系统已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CapacityUsed;
 
     /**
-     * @var integer 已使用归档存储容量（byte）
+     * @var integer 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ArchiveCapacityUsed;
+
+    /**
+     * @var integer 已使用COS标准存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StandardCapacityUsed;
+
+    /**
+     * @var integer 已使用COS低频存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DegradeCapacityUsed;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,9 +79,13 @@ class DescribeFileSystemResponse extends AbstractModel
 
     /**
      * @param FileSystem $FileSystem 文件系统
-     * @param integer $CapacityUsed 已使用容量（byte），包括标准和归档存储
+     * @param integer $CapacityUsed 文件系统已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ArchiveCapacityUsed 已使用归档存储容量（byte）
+     * @param integer $ArchiveCapacityUsed 已使用COS归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StandardCapacityUsed 已使用COS标准存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DegradeCapacityUsed 已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -89,6 +113,14 @@ class DescribeFileSystemResponse extends AbstractModel
 
         if (array_key_exists("ArchiveCapacityUsed",$param) and $param["ArchiveCapacityUsed"] !== null) {
             $this->ArchiveCapacityUsed = $param["ArchiveCapacityUsed"];
+        }
+
+        if (array_key_exists("StandardCapacityUsed",$param) and $param["StandardCapacityUsed"] !== null) {
+            $this->StandardCapacityUsed = $param["StandardCapacityUsed"];
+        }
+
+        if (array_key_exists("DegradeCapacityUsed",$param) and $param["DegradeCapacityUsed"] !== null) {
+            $this->DegradeCapacityUsed = $param["DegradeCapacityUsed"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

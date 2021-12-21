@@ -18,25 +18,25 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 内容审核模板详情
+ * 智能识别模板详情
  *
- * @method integer getDefinition() 获取内容审核模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置内容审核模板唯一标识。
- * @method string getName() 获取内容审核模板名称，长度限制：64 个字符。
- * @method void setName(string $Name) 设置内容审核模板名称，长度限制：64 个字符。
- * @method string getComment() 获取内容审核模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置内容审核模板描述信息，长度限制：256 个字符。
- * @method PornConfigureInfo getPornConfigure() 获取鉴黄控制参数。
+ * @method integer getDefinition() 获取智能识别模板唯一标识。
+ * @method void setDefinition(integer $Definition) 设置智能识别模板唯一标识。
+ * @method string getName() 获取智能识别模板名称，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置智能识别模板名称，长度限制：64 个字符。
+ * @method string getComment() 获取智能识别模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置智能识别模板描述信息，长度限制：256 个字符。
+ * @method PornConfigureInfo getPornConfigure() 获取鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPornConfigure(PornConfigureInfo $PornConfigure) 设置鉴黄控制参数。
+ * @method void setPornConfigure(PornConfigureInfo $PornConfigure) 设置鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method TerrorismConfigureInfo getTerrorismConfigure() 获取鉴恐控制参数。
+ * @method TerrorismConfigureInfo getTerrorismConfigure() 获取鉴别涉及令人不安全的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) 设置鉴恐控制参数。
+ * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) 设置鉴别涉及令人不安全的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PoliticalConfigureInfo getPoliticalConfigure() 获取鉴政控制参数。
+ * @method PoliticalConfigureInfo getPoliticalConfigure() 获取鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) 设置鉴政控制参数。
+ * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) 设置鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ProhibitedConfigureInfo getProhibitedConfigure() 获取违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
@@ -46,14 +46,14 @@ use TencentCloud\Common\AbstractModel;
 <li>谩骂；</li>
 <li>涉毒违法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义内容审核控制参数。
+ * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义内容审核控制参数。
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReviewWallSwitch() 获取审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
+ * @method string getReviewWallSwitch() 获取智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) 设置审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) 设置智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
@@ -66,34 +66,34 @@ use TencentCloud\Common\AbstractModel;
 class ContentReviewTemplateItem extends AbstractModel
 {
     /**
-     * @var integer 内容审核模板唯一标识。
+     * @var integer 智能识别模板唯一标识。
      */
     public $Definition;
 
     /**
-     * @var string 内容审核模板名称，长度限制：64 个字符。
+     * @var string 智能识别模板名称，长度限制：64 个字符。
      */
     public $Name;
 
     /**
-     * @var string 内容审核模板描述信息，长度限制：256 个字符。
+     * @var string 智能识别模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
 
     /**
-     * @var PornConfigureInfo 鉴黄控制参数。
+     * @var PornConfigureInfo 鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfo 鉴恐控制参数。
+     * @var TerrorismConfigureInfo 鉴别涉及令人不安全的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfo 鉴政控制参数。
+     * @var PoliticalConfigureInfo 鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoliticalConfigure;
@@ -107,13 +107,13 @@ class ContentReviewTemplateItem extends AbstractModel
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo 用户自定义内容审核控制参数。
+     * @var UserDefineConfigureInfo 用户自定义智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserDefineConfigure;
 
     /**
-     * @var string 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
+     * @var string 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      */
@@ -135,22 +135,22 @@ class ContentReviewTemplateItem extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 内容审核模板唯一标识。
-     * @param string $Name 内容审核模板名称，长度限制：64 个字符。
-     * @param string $Comment 内容审核模板描述信息，长度限制：256 个字符。
-     * @param PornConfigureInfo $PornConfigure 鉴黄控制参数。
+     * @param integer $Definition 智能识别模板唯一标识。
+     * @param string $Name 智能识别模板名称，长度限制：64 个字符。
+     * @param string $Comment 智能识别模板描述信息，长度限制：256 个字符。
+     * @param PornConfigureInfo $PornConfigure 鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TerrorismConfigureInfo $TerrorismConfigure 鉴恐控制参数。
+     * @param TerrorismConfigureInfo $TerrorismConfigure 鉴别涉及令人不安全的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PoliticalConfigureInfo $PoliticalConfigure 鉴政控制参数。
+     * @param PoliticalConfigureInfo $PoliticalConfigure 鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProhibitedConfigureInfo $ProhibitedConfigure 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义内容审核控制参数。
+     * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReviewWallSwitch 审核结果是否进入审核墙（对审核结果进行人工复核）的开关。
+     * @param string $ReviewWallSwitch 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      * @param float $ScreenshotInterval 截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。

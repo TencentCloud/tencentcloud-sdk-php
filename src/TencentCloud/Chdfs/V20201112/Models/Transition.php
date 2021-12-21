@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDays() 获取触发时间（单位天）
  * @method void setDays(integer $Days) 设置触发时间（单位天）
- * @method integer getType() 获取转换类型（1：归档；2：删除）
- * @method void setType(integer $Type) 设置转换类型（1：归档；2：删除）
+ * @method integer getType() 获取转换类型（1：归档；2：删除；3：低频）
+ * @method void setType(integer $Type) 设置转换类型（1：归档；2：删除；3：低频）
  */
 class Transition extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Transition extends AbstractModel
     public $Days;
 
     /**
-     * @var integer 转换类型（1：归档；2：删除）
+     * @var integer 转换类型（1：归档；2：删除；3：低频）
      */
     public $Type;
 
     /**
      * @param integer $Days 触发时间（单位天）
-     * @param integer $Type 转换类型（1：归档；2：删除）
+     * @param integer $Type 转换类型（1：归档；2：删除；3：低频）
      */
     function __construct()
     {

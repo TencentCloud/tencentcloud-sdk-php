@@ -43,6 +43,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\RestartApplicationPodResponse RestartApplicationPod(Models\RestartApplicationPodRequest $req) 重启应用实例
  * @method Models\ResumeDeployApplicationResponse ResumeDeployApplication(Models\ResumeDeployApplicationRequest $req) 开始下一批次发布
  * @method Models\RevertDeployApplicationResponse RevertDeployApplication(Models\RevertDeployApplicationRequest $req) 回滚分批发布
+ * @method Models\RollingUpdateApplicationByVersionResponse RollingUpdateApplicationByVersion(Models\RollingUpdateApplicationByVersionRequest $req) 更新应用部署版本
  */
 
 class TemClient extends AbstractClient

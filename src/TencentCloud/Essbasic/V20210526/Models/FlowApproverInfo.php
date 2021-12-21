@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverType(string $ApproverType) 设置签署人类型，PERSON和ORGANIZATION
  * @method string getOpenId() 获取用户侧第三方id
  * @method void setOpenId(string $OpenId) 设置用户侧第三方id
+ * @method integer getPreReadTime() 获取合同的强制预览时间：3~300s，未指定则按合同页数计算
+ * @method void setPreReadTime(integer $PreReadTime) 设置合同的强制预览时间：3~300s，未指定则按合同页数计算
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class FlowApproverInfo extends AbstractModel
     public $OpenId;
 
     /**
+     * @var integer 合同的强制预览时间：3~300s，未指定则按合同页数计算
+     */
+    public $PreReadTime;
+
+    /**
      * @param string $Name 签署人姓名
      * @param string $Mobile 签署人手机号，脱敏显示
      * @param string $IdCardNumber 经办人身份证号
@@ -88,6 +95,7 @@ class FlowApproverInfo extends AbstractModel
      * @param string $CallbackUrl 签署完回调url
      * @param string $ApproverType 签署人类型，PERSON和ORGANIZATION
      * @param string $OpenId 用户侧第三方id
+     * @param integer $PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class FlowApproverInfo extends AbstractModel
 
         if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
             $this->OpenId = $param["OpenId"];
+        }
+
+        if (array_key_exists("PreReadTime",$param) and $param["PreReadTime"] !== null) {
+            $this->PreReadTime = $param["PreReadTime"];
         }
     }
 }

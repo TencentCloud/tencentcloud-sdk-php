@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 语音鉴黄任务控制参数。
+ * 语音鉴别涉及令人反感的信息的任务控制参数。
  *
- * @method string getSwitch() 获取语音鉴黄任务开关，可选值：
-<li>ON：开启语音鉴黄任务；</li>
-<li>OFF：关闭语音鉴黄任务。</li>
- * @method void setSwitch(string $Switch) 设置语音鉴黄任务开关，可选值：
-<li>ON：开启语音鉴黄任务；</li>
-<li>OFF：关闭语音鉴黄任务。</li>
- * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
- * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
- * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
- * @method void setReviewConfidence(integer $ReviewConfidence) 设置判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
+ * @method string getSwitch() 获取语音鉴别涉及令人反感的信息的任务开关，可选值：
+<li>ON：开启语音鉴别涉及令人反感的信息的任务；</li>
+<li>OFF：关闭语音鉴别涉及令人反感的信息的任务。</li>
+ * @method void setSwitch(string $Switch) 设置语音鉴别涉及令人反感的信息的任务开关，可选值：
+<li>ON：开启语音鉴别涉及令人反感的信息的任务；</li>
+<li>OFF：关闭语音鉴别涉及令人反感的信息的任务。</li>
+ * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
+ * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
+ * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
+ * @method void setReviewConfidence(integer $ReviewConfidence) 设置判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
  */
 class PornAsrReviewTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string 语音鉴黄任务开关，可选值：
-<li>ON：开启语音鉴黄任务；</li>
-<li>OFF：关闭语音鉴黄任务。</li>
+     * @var string 语音鉴别涉及令人反感的信息的任务开关，可选值：
+<li>ON：开启语音鉴别涉及令人反感的信息的任务；</li>
+<li>OFF：关闭语音鉴别涉及令人反感的信息的任务。</li>
      */
     public $Switch;
 
     /**
-     * @var integer 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
+     * @var integer 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
      */
     public $BlockConfidence;
 
     /**
-     * @var integer 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
+     * @var integer 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch 语音鉴黄任务开关，可选值：
-<li>ON：开启语音鉴黄任务；</li>
-<li>OFF：关闭语音鉴黄任务。</li>
-     * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
-     * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
+     * @param string $Switch 语音鉴别涉及令人反感的信息的任务开关，可选值：
+<li>ON：开启语音鉴别涉及令人反感的信息的任务；</li>
+<li>OFF：关闭语音鉴别涉及令人反感的信息的任务。</li>
+     * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
+     * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
      */
     function __construct()
     {

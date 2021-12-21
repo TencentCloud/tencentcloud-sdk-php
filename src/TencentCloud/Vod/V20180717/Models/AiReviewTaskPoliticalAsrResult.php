@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 内容审核 Asr 文字鉴政、敏感任务结果类型
+ * 智能识别 Asr 文字涉及令人不适宜信息、违规任务结果类型
  *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) 设置错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
- * @method AiReviewPoliticalAsrTaskInput getInput() 获取内容审核 Asr 文字鉴政任务输入。
- * @method void setInput(AiReviewPoliticalAsrTaskInput $Input) 设置内容审核 Asr 文字鉴政任务输入。
- * @method AiReviewPoliticalAsrTaskOutput getOutput() 获取内容审核 Asr 文字鉴政任务输出。
- * @method void setOutput(AiReviewPoliticalAsrTaskOutput $Output) 设置内容审核 Asr 文字鉴政任务输出。
+ * @method AiReviewPoliticalAsrTaskInput getInput() 获取智能识别 Asr 文字涉及令人不适宜信息的任务输入。
+ * @method void setInput(AiReviewPoliticalAsrTaskInput $Input) 设置智能识别 Asr 文字涉及令人不适宜信息的任务输入。
+ * @method AiReviewPoliticalAsrTaskOutput getOutput() 获取智能识别 Asr 文字涉及令人不适宜信息的任务输出。
+ * @method void setOutput(AiReviewPoliticalAsrTaskOutput $Output) 设置智能识别 Asr 文字涉及令人不适宜信息的任务输出。
  */
 class AiReviewTaskPoliticalAsrResult extends AbstractModel
 {
@@ -56,12 +56,12 @@ class AiReviewTaskPoliticalAsrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewPoliticalAsrTaskInput 内容审核 Asr 文字鉴政任务输入。
+     * @var AiReviewPoliticalAsrTaskInput 智能识别 Asr 文字涉及令人不适宜信息的任务输入。
      */
     public $Input;
 
     /**
-     * @var AiReviewPoliticalAsrTaskOutput 内容审核 Asr 文字鉴政任务输出。
+     * @var AiReviewPoliticalAsrTaskOutput 智能识别 Asr 文字涉及令人不适宜信息的任务输出。
      */
     public $Output;
 
@@ -70,8 +70,8 @@ class AiReviewTaskPoliticalAsrResult extends AbstractModel
      * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [视频处理类错误码](https://cloud.tencent.com/document/product/266/50368#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
      * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
      * @param string $Message 错误信息。
-     * @param AiReviewPoliticalAsrTaskInput $Input 内容审核 Asr 文字鉴政任务输入。
-     * @param AiReviewPoliticalAsrTaskOutput $Output 内容审核 Asr 文字鉴政任务输出。
+     * @param AiReviewPoliticalAsrTaskInput $Input 智能识别 Asr 文字涉及令人不适宜信息的任务输入。
+     * @param AiReviewPoliticalAsrTaskOutput $Output 智能识别 Asr 文字涉及令人不适宜信息的任务输出。
      */
     function __construct()
     {

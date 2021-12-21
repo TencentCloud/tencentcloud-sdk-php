@@ -25,35 +25,35 @@ use TencentCloud\Common\AbstractModel;
 <li>Traffic：流量资源包。</li>
 <li>Transcode：普通转码资源包。</li>
 <li>TESHD：极速高清转码资源包。</li>
-<li>Review：视频审核转码资源包。</li>
+<li>Review：视频智能识别转码资源包。</li>
  * @method void setResourceType(string $ResourceType) 设置资源类型。
 <li>Storage：存储资源包。</li>
 <li>Traffic：流量资源包。</li>
 <li>Transcode：普通转码资源包。</li>
 <li>TESHD：极速高清转码资源包。</li>
-<li>Review：视频审核转码资源包。</li>
+<li>Review：视频智能识别转码资源包。</li>
  * @method integer getAmount() 获取资源包额度。
 <li>视频存储资源包，单位为字节。</li>
 <li>视频转码资源包，单位为秒。</li>
-<li>视频审核资源包，单位为秒。</li>
+<li>视频智能识别资源包，单位为秒。</li>
 <li>视频极速高清资源包，单位为秒。</li>
 <li>视频加速资源包，单位为字节。</li>
  * @method void setAmount(integer $Amount) 设置资源包额度。
 <li>视频存储资源包，单位为字节。</li>
 <li>视频转码资源包，单位为秒。</li>
-<li>视频审核资源包，单位为秒。</li>
+<li>视频智能识别资源包，单位为秒。</li>
 <li>视频极速高清资源包，单位为秒。</li>
 <li>视频加速资源包，单位为字节。</li>
  * @method integer getLeft() 获取资源包余量。
 <li>视频存储资源包，单位为字节。</li>
 <li>视频转码资源包，单位为秒。</li>
-<li>视频审核资源包，单位为秒。</li>
+<li>视频智能识别资源包，单位为秒。</li>
 <li>视频极速高清资源包，单位为秒。</li>
 <li>视频加速资源包，单位为字节。</li>
  * @method void setLeft(integer $Left) 设置资源包余量。
 <li>视频存储资源包，单位为字节。</li>
 <li>视频转码资源包，单位为秒。</li>
-<li>视频审核资源包，单位为秒。</li>
+<li>视频智能识别资源包，单位为秒。</li>
 <li>视频极速高清资源包，单位为秒。</li>
 <li>视频加速资源包，单位为字节。</li>
  */
@@ -65,7 +65,7 @@ class ProductInstanceRecource extends AbstractModel
 <li>Traffic：流量资源包。</li>
 <li>Transcode：普通转码资源包。</li>
 <li>TESHD：极速高清转码资源包。</li>
-<li>Review：视频审核转码资源包。</li>
+<li>Review：视频智能识别转码资源包。</li>
      */
     public $ResourceType;
 
@@ -73,7 +73,7 @@ class ProductInstanceRecource extends AbstractModel
      * @var integer 资源包额度。
 <li>视频存储资源包，单位为字节。</li>
 <li>视频转码资源包，单位为秒。</li>
-<li>视频审核资源包，单位为秒。</li>
+<li>视频智能识别资源包，单位为秒。</li>
 <li>视频极速高清资源包，单位为秒。</li>
 <li>视频加速资源包，单位为字节。</li>
      */
@@ -83,7 +83,7 @@ class ProductInstanceRecource extends AbstractModel
      * @var integer 资源包余量。
 <li>视频存储资源包，单位为字节。</li>
 <li>视频转码资源包，单位为秒。</li>
-<li>视频审核资源包，单位为秒。</li>
+<li>视频智能识别资源包，单位为秒。</li>
 <li>视频极速高清资源包，单位为秒。</li>
 <li>视频加速资源包，单位为字节。</li>
      */
@@ -95,17 +95,17 @@ class ProductInstanceRecource extends AbstractModel
 <li>Traffic：流量资源包。</li>
 <li>Transcode：普通转码资源包。</li>
 <li>TESHD：极速高清转码资源包。</li>
-<li>Review：视频审核转码资源包。</li>
+<li>Review：视频智能识别转码资源包。</li>
      * @param integer $Amount 资源包额度。
 <li>视频存储资源包，单位为字节。</li>
 <li>视频转码资源包，单位为秒。</li>
-<li>视频审核资源包，单位为秒。</li>
+<li>视频智能识别资源包，单位为秒。</li>
 <li>视频极速高清资源包，单位为秒。</li>
 <li>视频加速资源包，单位为字节。</li>
      * @param integer $Left 资源包余量。
 <li>视频存储资源包，单位为字节。</li>
 <li>视频转码资源包，单位为秒。</li>
-<li>视频审核资源包，单位为秒。</li>
+<li>视频智能识别资源包，单位为秒。</li>
 <li>视频极速高清资源包，单位为秒。</li>
 <li>视频加速资源包，单位为字节。</li>
      */

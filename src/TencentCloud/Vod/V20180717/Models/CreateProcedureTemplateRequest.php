@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
  * @method MediaProcessTaskInput getMediaProcessTask() 获取视频处理类型任务参数。
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置视频处理类型任务参数。
- * @method AiContentReviewTaskInput getAiContentReviewTask() 获取AI 智能内容审核类型任务参数。
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置AI 智能内容审核类型任务参数。
+ * @method AiContentReviewTaskInput getAiContentReviewTask() 获取AI 智能识别类型任务参数。
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置AI 智能识别类型任务参数。
  * @method AiAnalysisTaskInput getAiAnalysisTask() 获取AI 智能内容分析类型任务参数。
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置AI 智能内容分析类型任务参数。
  * @method AiRecognitionTaskInput getAiRecognitionTask() 获取AI 内容识别类型任务参数。
@@ -53,7 +53,7 @@ class CreateProcedureTemplateRequest extends AbstractModel
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput AI 智能内容审核类型任务参数。
+     * @var AiContentReviewTaskInput AI 智能识别类型任务参数。
      */
     public $AiContentReviewTask;
 
@@ -76,7 +76,7 @@ class CreateProcedureTemplateRequest extends AbstractModel
      * @param string $Name 任务流名字（支持中文，不超过20个字）。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
-     * @param AiContentReviewTaskInput $AiContentReviewTask AI 智能内容审核类型任务参数。
+     * @param AiContentReviewTaskInput $AiContentReviewTask AI 智能识别类型任务参数。
      * @param AiAnalysisTaskInput $AiAnalysisTask AI 智能内容分析类型任务参数。
      * @param AiRecognitionTaskInput $AiRecognitionTask AI 内容识别类型任务参数。
      * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。

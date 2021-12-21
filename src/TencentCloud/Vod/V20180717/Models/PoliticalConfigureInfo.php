@@ -18,47 +18,47 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 鉴政任务控制参数
+ * 鉴别涉及令人不适宜的信息的任务控制参数
  *
- * @method PoliticalImgReviewTemplateInfo getImgReviewInfo() 获取画面鉴政控制参数。
+ * @method PoliticalImgReviewTemplateInfo getImgReviewInfo() 获取画面鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfo $ImgReviewInfo) 设置画面鉴政控制参数。
+ * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfo $ImgReviewInfo) 设置画面鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PoliticalAsrReviewTemplateInfo getAsrReviewInfo() 获取语音鉴政控制参数。
+ * @method PoliticalAsrReviewTemplateInfo getAsrReviewInfo() 获取语音鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo $AsrReviewInfo) 设置语音鉴政控制参数。
+ * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo $AsrReviewInfo) 设置语音鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PoliticalOcrReviewTemplateInfo getOcrReviewInfo() 获取文本鉴政控制参数。
+ * @method PoliticalOcrReviewTemplateInfo getOcrReviewInfo() 获取文本鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo $OcrReviewInfo) 设置文本鉴政控制参数。
+ * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo $OcrReviewInfo) 设置文本鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PoliticalConfigureInfo extends AbstractModel
 {
     /**
-     * @var PoliticalImgReviewTemplateInfo 画面鉴政控制参数。
+     * @var PoliticalImgReviewTemplateInfo 画面鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImgReviewInfo;
 
     /**
-     * @var PoliticalAsrReviewTemplateInfo 语音鉴政控制参数。
+     * @var PoliticalAsrReviewTemplateInfo 语音鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrReviewInfo;
 
     /**
-     * @var PoliticalOcrReviewTemplateInfo 文本鉴政控制参数。
+     * @var PoliticalOcrReviewTemplateInfo 文本鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PoliticalImgReviewTemplateInfo $ImgReviewInfo 画面鉴政控制参数。
+     * @param PoliticalImgReviewTemplateInfo $ImgReviewInfo 画面鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PoliticalAsrReviewTemplateInfo $AsrReviewInfo 语音鉴政控制参数。
+     * @param PoliticalAsrReviewTemplateInfo $AsrReviewInfo 语音鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PoliticalOcrReviewTemplateInfo $OcrReviewInfo 文本鉴政控制参数。
+     * @param PoliticalOcrReviewTemplateInfo $OcrReviewInfo 文本鉴别涉及令人不适宜的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

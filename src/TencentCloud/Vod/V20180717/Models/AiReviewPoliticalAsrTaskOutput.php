@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Asr 文字涉政信息
+ * Asr 文字涉及令人不适宜的信息
  *
- * @method float getConfidence() 获取Asr 文字涉政、敏感评分，分值为0到100。
- * @method void setConfidence(float $Confidence) 设置Asr 文字涉政、敏感评分，分值为0到100。
- * @method string getSuggestion() 获取Asr 文字涉政、敏感结果建议，取值范围：
+ * @method float getConfidence() 获取Asr 文字涉及令人不适宜的信息、违规评分，分值为0到100。
+ * @method void setConfidence(float $Confidence) 设置Asr 文字涉及令人不适宜的信息、违规评分，分值为0到100。
+ * @method string getSuggestion() 获取Asr 文字涉及令人不适宜的信息、违规结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method void setSuggestion(string $Suggestion) 设置Asr 文字涉政、敏感结果建议，取值范围：
+ * @method void setSuggestion(string $Suggestion) 设置Asr 文字涉及令人不适宜的信息、违规结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method array getSegmentSet() 获取Asr 文字有涉政、敏感嫌疑的视频片段列表。
+ * @method array getSegmentSet() 获取Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
- * @method void setSegmentSet(array $SegmentSet) 设置Asr 文字有涉政、敏感嫌疑的视频片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
- * @method string getSegmentSetFileUrl() 获取Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) 设置Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
- * @method string getSegmentSetFileUrlExpireTime() 获取Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) 设置Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getSegmentSetFileUrl() 获取Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) 设置Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+ * @method string getSegmentSetFileUrlExpireTime() 获取Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) 设置Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class AiReviewPoliticalAsrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Asr 文字涉政、敏感评分，分值为0到100。
+     * @var float Asr 文字涉及令人不适宜的信息、违规评分，分值为0到100。
      */
     public $Confidence;
 
     /**
-     * @var string Asr 文字涉政、敏感结果建议，取值范围：
+     * @var string Asr 文字涉及令人不适宜的信息、违规结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -55,31 +55,31 @@ class AiReviewPoliticalAsrTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array Asr 文字有涉政、敏感嫌疑的视频片段列表。
+     * @var array Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public $SegmentSet;
 
     /**
-     * @var string Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @var string Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param float $Confidence Asr 文字涉政、敏感评分，分值为0到100。
-     * @param string $Suggestion Asr 文字涉政、敏感结果建议，取值范围：
+     * @param float $Confidence Asr 文字涉及令人不适宜的信息、违规评分，分值为0到100。
+     * @param string $Suggestion Asr 文字涉及令人不适宜的信息、违规结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param array $SegmentSet Asr 文字有涉政、敏感嫌疑的视频片段列表。
+     * @param array $SegmentSet Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
-     * @param string $SegmentSetFileUrl Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
-     * @param string $SegmentSetFileUrlExpireTime Asr 文字有涉政、敏感嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $SegmentSetFileUrl Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达 SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param string $SegmentSetFileUrlExpireTime Asr 文字有涉及令人不适宜的信息、违规嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {

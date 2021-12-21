@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例启动模板，通过该参数可使用实例模板中的预设参数创建实例。
  *
-
+ * @method string getLaunchTemplateId() 获取实例启动模板ID，通过该参数可使用实例模板中的预设参数创建实例。
+ * @method void setLaunchTemplateId(string $LaunchTemplateId) 设置实例启动模板ID，通过该参数可使用实例模板中的预设参数创建实例。
+ * @method integer getLaunchTemplateVersion() 获取实例启动模板版本号，若给定，新实例启动模板将基于给定的版本号创建
+ * @method void setLaunchTemplateVersion(integer $LaunchTemplateVersion) 设置实例启动模板版本号，若给定，新实例启动模板将基于给定的版本号创建
  */
 class LaunchTemplate extends AbstractModel
 {
-
+    /**
+     * @var string 实例启动模板ID，通过该参数可使用实例模板中的预设参数创建实例。
+     */
+    public $LaunchTemplateId;
 
     /**
+     * @var integer 实例启动模板版本号，若给定，新实例启动模板将基于给定的版本号创建
+     */
+    public $LaunchTemplateVersion;
 
+    /**
+     * @param string $LaunchTemplateId 实例启动模板ID，通过该参数可使用实例模板中的预设参数创建实例。
+     * @param integer $LaunchTemplateVersion 实例启动模板版本号，若给定，新实例启动模板将基于给定的版本号创建
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class LaunchTemplate extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("LaunchTemplateId",$param) and $param["LaunchTemplateId"] !== null) {
+            $this->LaunchTemplateId = $param["LaunchTemplateId"];
+        }
 
+        if (array_key_exists("LaunchTemplateVersion",$param) and $param["LaunchTemplateVersion"] !== null) {
+            $this->LaunchTemplateVersion = $param["LaunchTemplateVersion"];
+        }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileSystemName() 获取文件系统名称
  * @method void setFileSystemName(string $FileSystemName) 设置文件系统名称
- * @method integer getCapacityQuota() 获取文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
- * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+ * @method integer getCapacityQuota() 获取文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
+ * @method void setCapacityQuota(integer $CapacityQuota) 设置文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
  * @method boolean getPosixAcl() 获取是否校验POSIX ACL
  * @method void setPosixAcl(boolean $PosixAcl) 设置是否校验POSIX ACL
  * @method string getDescription() 获取文件系统描述，默认为空字符串
@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRootInodeUser(string $RootInodeUser) 设置根目录Inode用户名，默认为hadoop
  * @method string getRootInodeGroup() 获取根目录Inode组名，默认为supergroup
  * @method void setRootInodeGroup(string $RootInodeGroup) 设置根目录Inode组名，默认为supergroup
+ * @method boolean getEnableRanger() 获取是否打开Ranger地址校验
+ * @method void setEnableRanger(boolean $EnableRanger) 设置是否打开Ranger地址校验
+ * @method array getRangerServiceAddresses() 获取Ranger地址列表，默认为空数组
+ * @method void setRangerServiceAddresses(array $RangerServiceAddresses) 设置Ranger地址列表，默认为空数组
  */
 class CreateFileSystemRequest extends AbstractModel
 {
@@ -43,7 +47,7 @@ class CreateFileSystemRequest extends AbstractModel
     public $FileSystemName;
 
     /**
-     * @var integer 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * @var integer 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
      */
     public $CapacityQuota;
 
@@ -73,13 +77,25 @@ class CreateFileSystemRequest extends AbstractModel
     public $RootInodeGroup;
 
     /**
+     * @var boolean 是否打开Ranger地址校验
+     */
+    public $EnableRanger;
+
+    /**
+     * @var array Ranger地址列表，默认为空数组
+     */
+    public $RangerServiceAddresses;
+
+    /**
      * @param string $FileSystemName 文件系统名称
-     * @param integer $CapacityQuota 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+     * @param integer $CapacityQuota 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
      * @param boolean $PosixAcl 是否校验POSIX ACL
      * @param string $Description 文件系统描述，默认为空字符串
      * @param array $SuperUsers 超级用户名列表，默认为空数组
      * @param string $RootInodeUser 根目录Inode用户名，默认为hadoop
      * @param string $RootInodeGroup 根目录Inode组名，默认为supergroup
+     * @param boolean $EnableRanger 是否打开Ranger地址校验
+     * @param array $RangerServiceAddresses Ranger地址列表，默认为空数组
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class CreateFileSystemRequest extends AbstractModel
 
         if (array_key_exists("RootInodeGroup",$param) and $param["RootInodeGroup"] !== null) {
             $this->RootInodeGroup = $param["RootInodeGroup"];
+        }
+
+        if (array_key_exists("EnableRanger",$param) and $param["EnableRanger"] !== null) {
+            $this->EnableRanger = $param["EnableRanger"];
+        }
+
+        if (array_key_exists("RangerServiceAddresses",$param) and $param["RangerServiceAddresses"] !== null) {
+            $this->RangerServiceAddresses = $param["RangerServiceAddresses"];
         }
     }
 }

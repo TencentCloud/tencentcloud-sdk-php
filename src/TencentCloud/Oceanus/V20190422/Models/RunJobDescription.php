@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartMode(string $StartMode) 设置已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
  * @method integer getJobConfigVersion() 获取当前作业的某个版本
  * @method void setJobConfigVersion(integer $JobConfigVersion) 设置当前作业的某个版本
+ * @method string getSavepointPath() 获取Savepoint路径
+ * @method void setSavepointPath(string $SavepointPath) 设置Savepoint路径
+ * @method string getSavepointId() 获取Savepoint的Id
+ * @method void setSavepointId(string $SavepointId) 设置Savepoint的Id
  */
 class RunJobDescription extends AbstractModel
 {
@@ -52,10 +56,22 @@ class RunJobDescription extends AbstractModel
     public $JobConfigVersion;
 
     /**
+     * @var string Savepoint路径
+     */
+    public $SavepointPath;
+
+    /**
+     * @var string Savepoint的Id
+     */
+    public $SavepointId;
+
+    /**
      * @param string $JobId 作业Id
      * @param integer $RunType 运行类型，1：启动，2：恢复
      * @param string $StartMode 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
      * @param integer $JobConfigVersion 当前作业的某个版本
+     * @param string $SavepointPath Savepoint路径
+     * @param string $SavepointId Savepoint的Id
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class RunJobDescription extends AbstractModel
 
         if (array_key_exists("JobConfigVersion",$param) and $param["JobConfigVersion"] !== null) {
             $this->JobConfigVersion = $param["JobConfigVersion"];
+        }
+
+        if (array_key_exists("SavepointPath",$param) and $param["SavepointPath"] !== null) {
+            $this->SavepointPath = $param["SavepointPath"];
+        }
+
+        if (array_key_exists("SavepointId",$param) and $param["SavepointId"] !== null) {
+            $this->SavepointId = $param["SavepointId"];
         }
     }
 }

@@ -18,46 +18,46 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 鉴黄结果信息
+ * 鉴别涉及令人反感的信息的结果信息
  *
- * @method float getConfidence() 获取视频鉴黄评分，分值为0到100。
- * @method void setConfidence(float $Confidence) 设置视频鉴黄评分，分值为0到100。
- * @method string getSuggestion() 获取鉴黄结果建议，取值范围：
+ * @method float getConfidence() 获取视频鉴别涉及令人反感的信息的评分，分值为0到100。
+ * @method void setConfidence(float $Confidence) 设置视频鉴别涉及令人反感的信息的评分，分值为0到100。
+ * @method string getSuggestion() 获取鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method void setSuggestion(string $Suggestion) 设置鉴黄结果建议，取值范围：
+ * @method void setSuggestion(string $Suggestion) 设置鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method string getLabel() 获取视频鉴黄结果标签，取值范围：
+ * @method string getLabel() 获取视频鉴别涉及令人反感的信息的结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
- * @method void setLabel(string $Label) 设置视频鉴黄结果标签，取值范围：
+ * @method void setLabel(string $Label) 设置视频鉴别涉及令人反感的信息的结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
- * @method array getSegmentSet() 获取有涉黄嫌疑的视频片段列表。
+ * @method array getSegmentSet() 获取有涉及令人反感的信息的嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
- * @method void setSegmentSet(array $SegmentSet) 设置有涉黄嫌疑的视频片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置有涉及令人反感的信息的嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
- * @method string getSegmentSetFileUrl() 获取涉黄嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) 设置涉黄嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
- * @method string getSegmentSetFileUrlExpireTime() 获取涉黄嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) 设置涉黄嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getSegmentSetFileUrl() 获取涉及令人反感的信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) 设置涉及令人反感的信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+ * @method string getSegmentSetFileUrlExpireTime() 获取涉及令人反感的信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) 设置涉及令人反感的信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class AiReviewPornTaskOutput extends AbstractModel
 {
     /**
-     * @var float 视频鉴黄评分，分值为0到100。
+     * @var float 视频鉴别涉及令人反感的信息的评分，分值为0到100。
      */
     public $Confidence;
 
     /**
-     * @var string 鉴黄结果建议，取值范围：
+     * @var string 鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -65,7 +65,7 @@ class AiReviewPornTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string 视频鉴黄结果标签，取值范围：
+     * @var string 视频鉴别涉及令人反感的信息的结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
@@ -74,36 +74,36 @@ class AiReviewPornTaskOutput extends AbstractModel
     public $Label;
 
     /**
-     * @var array 有涉黄嫌疑的视频片段列表。
+     * @var array 有涉及令人反感的信息的嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      */
     public $SegmentSet;
 
     /**
-     * @var string 涉黄嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @var string 涉及令人反感的信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string 涉黄嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @var string 涉及令人反感的信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param float $Confidence 视频鉴黄评分，分值为0到100。
-     * @param string $Suggestion 鉴黄结果建议，取值范围：
+     * @param float $Confidence 视频鉴别涉及令人反感的信息的评分，分值为0到100。
+     * @param string $Suggestion 鉴别涉及令人反感的信息的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param string $Label 视频鉴黄结果标签，取值范围：
+     * @param string $Label 视频鉴别涉及令人反感的信息的结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
 <li>intimacy：亲密行为。</li>
-     * @param array $SegmentSet 有涉黄嫌疑的视频片段列表。
+     * @param array $SegmentSet 有涉及令人反感的信息的嫌疑的视频片段列表。
 <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
-     * @param string $SegmentSetFileUrl 涉黄嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
-     * @param string $SegmentSetFileUrlExpireTime 涉黄嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $SegmentSetFileUrl 涉及令人反感的信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+     * @param string $SegmentSetFileUrlExpireTime 涉及令人反感的信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {

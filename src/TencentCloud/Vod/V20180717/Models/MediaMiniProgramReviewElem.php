@@ -18,51 +18,51 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 小程序审核概要元信息
+ * 小程序智能识别概要元信息
  *
- * @method string getType() 获取审核类型。 
-<li>Porn：画面涉黄，</li>
-<li>Porn.Ocr：文字涉黄，</li>
-<li>Porn.Asr：声音涉黄，</li>
-<li>Terrorism：画面涉暴恐，</li>
-<li>Political：画面涉政，</li>
-<li>Political.Ocr：文字涉政，</li>
-<li>Political.Asr：声音涉政。</li>
- * @method void setType(string $Type) 设置审核类型。 
-<li>Porn：画面涉黄，</li>
-<li>Porn.Ocr：文字涉黄，</li>
-<li>Porn.Asr：声音涉黄，</li>
-<li>Terrorism：画面涉暴恐，</li>
-<li>Political：画面涉政，</li>
-<li>Political.Ocr：文字涉政，</li>
-<li>Political.Asr：声音涉政。</li>
- * @method string getSuggestion() 获取审核意见。
+ * @method string getType() 获取智能识别类型。 
+<li>Porn：画面涉及令人反感的信息，</li>
+<li>Porn.Ocr：文字涉及令人反感的信息，</li>
+<li>Porn.Asr：声音涉及令人反感的信息，</li>
+<li>Terrorism：画面涉及令人不安全的信息，</li>
+<li>Political：画面涉及令人不适宜的信息，</li>
+<li>Political.Ocr：文字涉及令人不适宜的信息，</li>
+<li>Political.Asr：声音涉及令人不适宜的信息。</li>
+ * @method void setType(string $Type) 设置智能识别类型。 
+<li>Porn：画面涉及令人反感的信息，</li>
+<li>Porn.Ocr：文字涉及令人反感的信息，</li>
+<li>Porn.Asr：声音涉及令人反感的信息，</li>
+<li>Terrorism：画面涉及令人不安全的信息，</li>
+<li>Political：画面涉及令人不适宜的信息，</li>
+<li>Political.Ocr：文字涉及令人不适宜的信息，</li>
+<li>Political.Asr：声音涉及令人不适宜的信息。</li>
+ * @method string getSuggestion() 获取智能识别意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
- * @method void setSuggestion(string $Suggestion) 设置审核意见。
+ * @method void setSuggestion(string $Suggestion) 设置智能识别意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
- * @method float getConfidence() 获取审核结果置信度。取值 0~100。
- * @method void setConfidence(float $Confidence) 设置审核结果置信度。取值 0~100。
+ * @method float getConfidence() 获取智能识别结果置信度。取值 0~100。
+ * @method void setConfidence(float $Confidence) 设置智能识别结果置信度。取值 0~100。
  */
 class MediaMiniProgramReviewElem extends AbstractModel
 {
     /**
-     * @var string 审核类型。 
-<li>Porn：画面涉黄，</li>
-<li>Porn.Ocr：文字涉黄，</li>
-<li>Porn.Asr：声音涉黄，</li>
-<li>Terrorism：画面涉暴恐，</li>
-<li>Political：画面涉政，</li>
-<li>Political.Ocr：文字涉政，</li>
-<li>Political.Asr：声音涉政。</li>
+     * @var string 智能识别类型。 
+<li>Porn：画面涉及令人反感的信息，</li>
+<li>Porn.Ocr：文字涉及令人反感的信息，</li>
+<li>Porn.Asr：声音涉及令人反感的信息，</li>
+<li>Terrorism：画面涉及令人不安全的信息，</li>
+<li>Political：画面涉及令人不适宜的信息，</li>
+<li>Political.Ocr：文字涉及令人不适宜的信息，</li>
+<li>Political.Asr：声音涉及令人不适宜的信息。</li>
      */
     public $Type;
 
     /**
-     * @var string 审核意见。
+     * @var string 智能识别意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
@@ -70,24 +70,24 @@ class MediaMiniProgramReviewElem extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var float 审核结果置信度。取值 0~100。
+     * @var float 智能识别结果置信度。取值 0~100。
      */
     public $Confidence;
 
     /**
-     * @param string $Type 审核类型。 
-<li>Porn：画面涉黄，</li>
-<li>Porn.Ocr：文字涉黄，</li>
-<li>Porn.Asr：声音涉黄，</li>
-<li>Terrorism：画面涉暴恐，</li>
-<li>Political：画面涉政，</li>
-<li>Political.Ocr：文字涉政，</li>
-<li>Political.Asr：声音涉政。</li>
-     * @param string $Suggestion 审核意见。
+     * @param string $Type 智能识别类型。 
+<li>Porn：画面涉及令人反感的信息，</li>
+<li>Porn.Ocr：文字涉及令人反感的信息，</li>
+<li>Porn.Asr：声音涉及令人反感的信息，</li>
+<li>Terrorism：画面涉及令人不安全的信息，</li>
+<li>Political：画面涉及令人不适宜的信息，</li>
+<li>Political.Ocr：文字涉及令人不适宜的信息，</li>
+<li>Political.Asr：声音涉及令人不适宜的信息。</li>
+     * @param string $Suggestion 智能识别意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
-     * @param float $Confidence 审核结果置信度。取值 0~100。
+     * @param float $Confidence 智能识别结果置信度。取值 0~100。
      */
     function __construct()
     {

@@ -33,10 +33,8 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubLabelCode() 获取*内测中，敬请期待*
  * @method void setSubLabelCode(string $SubLabelCode) 设置*内测中，敬请期待*
  * @method string getSubLabel() 获取该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioResultDetailMoanResult extends AbstractModel
@@ -69,7 +67,6 @@ class AudioResultDetailMoanResult extends AbstractModel
 
     /**
      * @var string 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabel;
@@ -82,7 +79,6 @@ class AudioResultDetailMoanResult extends AbstractModel
      * @param float $EndTime 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
      * @param string $SubLabelCode *内测中，敬请期待*
      * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

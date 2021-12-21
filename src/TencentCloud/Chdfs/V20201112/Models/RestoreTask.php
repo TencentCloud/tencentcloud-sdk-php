@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestoreTaskId(integer $RestoreTaskId) 设置回热任务ID
  * @method string getFilePath() 获取回热任务文件路径
  * @method void setFilePath(string $FilePath) 设置回热任务文件路径
- * @method integer getType() 获取回热任务类型（1：标准；2：极速；3：批量）
- * @method void setType(integer $Type) 设置回热任务类型（1：标准；2：极速；3：批量）
+ * @method integer getType() 获取回热任务类型（1：标准；2：极速；3：批量，暂时仅支持极速）
+ * @method void setType(integer $Type) 设置回热任务类型（1：标准；2：极速；3：批量，暂时仅支持极速）
  * @method integer getDays() 获取指定恢复出的临时副本的有效时长（单位天）
  * @method void setDays(integer $Days) 设置指定恢复出的临时副本的有效时长（单位天）
  * @method integer getStatus() 获取回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）
@@ -46,7 +46,7 @@ class RestoreTask extends AbstractModel
     public $FilePath;
 
     /**
-     * @var integer 回热任务类型（1：标准；2：极速；3：批量）
+     * @var integer 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持极速）
      */
     public $Type;
 
@@ -68,7 +68,7 @@ class RestoreTask extends AbstractModel
     /**
      * @param integer $RestoreTaskId 回热任务ID
      * @param string $FilePath 回热任务文件路径
-     * @param integer $Type 回热任务类型（1：标准；2：极速；3：批量）
+     * @param integer $Type 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持极速）
      * @param integer $Days 指定恢复出的临时副本的有效时长（单位天）
      * @param integer $Status 回热任务状态（1：绑定文件中；2：绑定文件完成；3：文件回热中；4：文件回热完成）
      * @param string $CreateTime 创建时间

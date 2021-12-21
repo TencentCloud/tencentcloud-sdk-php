@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMediaProcessResultSet() 获取视频处理任务的执行状态与结果。
  * @method void setMediaProcessResultSet(array $MediaProcessResultSet) 设置视频处理任务的执行状态与结果。
- * @method array getAiContentReviewResultSet() 获取视频内容审核任务的执行状态与结果。
- * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) 设置视频内容审核任务的执行状态与结果。
+ * @method array getAiContentReviewResultSet() 获取视频智能识别任务的执行状态与结果。
+ * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) 设置视频智能识别任务的执行状态与结果。
  * @method array getAiAnalysisResultSet() 获取视频内容分析任务的执行状态与结果。
  * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) 设置视频内容分析任务的执行状态与结果。
  * @method array getAiRecognitionResultSet() 获取视频内容识别任务的执行状态与结果。
@@ -134,7 +134,7 @@ class ProcedureTask extends AbstractModel
     public $MediaProcessResultSet;
 
     /**
-     * @var array 视频内容审核任务的执行状态与结果。
+     * @var array 视频智能识别任务的执行状态与结果。
      */
     public $AiContentReviewResultSet;
 
@@ -190,7 +190,7 @@ class ProcedureTask extends AbstractModel
      * @param MediaMetaData $MetaData 原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MediaProcessResultSet 视频处理任务的执行状态与结果。
-     * @param array $AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
+     * @param array $AiContentReviewResultSet 视频智能识别任务的执行状态与结果。
      * @param array $AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
      * @param array $AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
      * @param integer $TasksPriority 任务流的优先级，取值范围为 [-10, 10]。

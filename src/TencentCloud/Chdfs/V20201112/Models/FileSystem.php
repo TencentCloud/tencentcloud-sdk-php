@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuperUsers(array $SuperUsers) 设置超级用户名列表
  * @method boolean getPosixAcl() 获取POSIX权限控制
  * @method void setPosixAcl(boolean $PosixAcl) 设置POSIX权限控制
+ * @method boolean getEnableRanger() 获取是否打开Ranger地址校验
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableRanger(boolean $EnableRanger) 设置是否打开Ranger地址校验
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRangerServiceAddresses() 获取Ranger地址列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRangerServiceAddresses(array $RangerServiceAddresses) 设置Ranger地址列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileSystem extends AbstractModel
 {
@@ -101,6 +109,18 @@ class FileSystem extends AbstractModel
     public $PosixAcl;
 
     /**
+     * @var boolean 是否打开Ranger地址校验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableRanger;
+
+    /**
+     * @var array Ranger地址列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RangerServiceAddresses;
+
+    /**
      * @param integer $AppId 资源所属用户AppId
      * @param string $FileSystemName 文件系统名称
      * @param string $Description 文件系统描述
@@ -112,6 +132,10 @@ class FileSystem extends AbstractModel
      * @param integer $Status 文件系统状态（1：创建中；2：创建成功；3：创建失败）
      * @param array $SuperUsers 超级用户名列表
      * @param boolean $PosixAcl POSIX权限控制
+     * @param boolean $EnableRanger 是否打开Ranger地址校验
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RangerServiceAddresses Ranger地址列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +192,14 @@ class FileSystem extends AbstractModel
 
         if (array_key_exists("PosixAcl",$param) and $param["PosixAcl"] !== null) {
             $this->PosixAcl = $param["PosixAcl"];
+        }
+
+        if (array_key_exists("EnableRanger",$param) and $param["EnableRanger"] !== null) {
+            $this->EnableRanger = $param["EnableRanger"];
+        }
+
+        if (array_key_exists("RangerServiceAddresses",$param) and $param["RangerServiceAddresses"] !== null) {
+            $this->RangerServiceAddresses = $param["RangerServiceAddresses"];
         }
     }
 }

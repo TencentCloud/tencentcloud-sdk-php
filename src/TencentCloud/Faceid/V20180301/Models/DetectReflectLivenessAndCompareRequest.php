@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetectReflectLivenessAndCompare请求参数结构体
  *
- * @method string getLiveDataUrl() 获取SDK生成的数据包活体数据包的资源地址。
- * @method void setLiveDataUrl(string $LiveDataUrl) 设置SDK生成的数据包活体数据包的资源地址。
- * @method string getLiveDataMd5() 获取SDK生成的数据包活体数据包的资源Md5。
- * @method void setLiveDataMd5(string $LiveDataMd5) 设置SDK生成的数据包活体数据包的资源Md5。
+ * @method string getLiveDataUrl() 获取SDK生成的活体检测数据包的资源地址。
+ * @method void setLiveDataUrl(string $LiveDataUrl) 设置SDK生成的活体检测数据包的资源地址。
+ * @method string getLiveDataMd5() 获取SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。
+ * @method void setLiveDataMd5(string $LiveDataMd5) 设置SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。
  * @method string getImageUrl() 获取用于比对的目标图片的资源地址。
  * @method void setImageUrl(string $ImageUrl) 设置用于比对的目标图片的资源地址。
- * @method string getImageMd5() 获取用于比对的目标图片的资源Md5。
- * @method void setImageMd5(string $ImageMd5) 设置用于比对的目标图片的资源Md5。
+ * @method string getImageMd5() 获取用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。
+ * @method void setImageMd5(string $ImageMd5) 设置用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。
  */
 class DetectReflectLivenessAndCompareRequest extends AbstractModel
 {
     /**
-     * @var string SDK生成的数据包活体数据包的资源地址。
+     * @var string SDK生成的活体检测数据包的资源地址。
      */
     public $LiveDataUrl;
 
     /**
-     * @var string SDK生成的数据包活体数据包的资源Md5。
+     * @var string SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。
      */
     public $LiveDataMd5;
 
@@ -47,15 +47,15 @@ class DetectReflectLivenessAndCompareRequest extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var string 用于比对的目标图片的资源Md5。
+     * @var string 用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。
      */
     public $ImageMd5;
 
     /**
-     * @param string $LiveDataUrl SDK生成的数据包活体数据包的资源地址。
-     * @param string $LiveDataMd5 SDK生成的数据包活体数据包的资源Md5。
+     * @param string $LiveDataUrl SDK生成的活体检测数据包的资源地址。
+     * @param string $LiveDataMd5 SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。
      * @param string $ImageUrl 用于比对的目标图片的资源地址。
-     * @param string $ImageMd5 用于比对的目标图片的资源Md5。
+     * @param string $ImageMd5 用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。
      */
     function __construct()
     {

@@ -18,47 +18,47 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 用户自定义审核任务控制参数
+ * 用户自定义智能识别任务控制参数
  *
- * @method UserDefineFaceReviewTemplateInfo getFaceReviewInfo() 获取用户自定义人物审核控制参数。
+ * @method UserDefineFaceReviewTemplateInfo getFaceReviewInfo() 获取用户自定义人物智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo $FaceReviewInfo) 设置用户自定义人物审核控制参数。
+ * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo $FaceReviewInfo) 设置用户自定义人物智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() 获取用户自定义语音审核控制参数。
+ * @method UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() 获取用户自定义语音智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo) 设置用户自定义语音审核控制参数。
+ * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo) 设置用户自定义语音智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() 获取用户自定义文本审核控制参数。
+ * @method UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() 获取用户自定义文本智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo) 设置用户自定义文本审核控制参数。
+ * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo) 设置用户自定义文本智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserDefineConfigureInfo extends AbstractModel
 {
     /**
-     * @var UserDefineFaceReviewTemplateInfo 用户自定义人物审核控制参数。
+     * @var UserDefineFaceReviewTemplateInfo 用户自定义人物智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaceReviewInfo;
 
     /**
-     * @var UserDefineAsrTextReviewTemplateInfo 用户自定义语音审核控制参数。
+     * @var UserDefineAsrTextReviewTemplateInfo 用户自定义语音智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrReviewInfo;
 
     /**
-     * @var UserDefineOcrTextReviewTemplateInfo 用户自定义文本审核控制参数。
+     * @var UserDefineOcrTextReviewTemplateInfo 用户自定义文本智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrReviewInfo;
 
     /**
-     * @param UserDefineFaceReviewTemplateInfo $FaceReviewInfo 用户自定义人物审核控制参数。
+     * @param UserDefineFaceReviewTemplateInfo $FaceReviewInfo 用户自定义人物智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo 用户自定义语音审核控制参数。
+     * @param UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo 用户自定义语音智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo 用户自定义文本审核控制参数。
+     * @param UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo 用户自定义文本智能识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 内容审核 Ocr 文字审核嫌疑片段
+ * 智能识别 Ocr 文字的嫌疑片段
  *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。
@@ -26,11 +26,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置嫌疑片段结束的偏移时间，单位：秒。
  * @method float getConfidence() 获取嫌疑片段置信度。
  * @method void setConfidence(float $Confidence) 设置嫌疑片段置信度。
- * @method string getSuggestion() 获取嫌疑片段审核结果建议，取值范围：
+ * @method string getSuggestion() 获取嫌疑片段智能识别的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method void setSuggestion(string $Suggestion) 设置嫌疑片段审核结果建议，取值范围：
+ * @method void setSuggestion(string $Suggestion) 设置嫌疑片段智能识别的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -63,7 +63,7 @@ class MediaContentReviewOcrTextSegmentItem extends AbstractModel
     public $Confidence;
 
     /**
-     * @var string 嫌疑片段审核结果建议，取值范围：
+     * @var string 嫌疑片段智能识别的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -95,7 +95,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
      * @param float $Confidence 嫌疑片段置信度。
-     * @param string $Suggestion 嫌疑片段审核结果建议，取值范围：
+     * @param string $Suggestion 嫌疑片段智能识别的结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>

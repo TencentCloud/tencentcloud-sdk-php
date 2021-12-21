@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeNode(ComputeNode $ComputeNode) 设置指定计算节点。
  * @method integer getComputeNodeCount() 获取指定计算节点的数量。默认取值：0。
  * @method void setComputeNodeCount(integer $ComputeNodeCount) 设置指定计算节点的数量。默认取值：0。
- * @method string getSchedulerType() 获取调度器类型。目前仅支持SGE调度器。
- * @method void setSchedulerType(string $SchedulerType) 设置调度器类型。目前仅支持SGE调度器。
+ * @method string getSchedulerType() 获取调度器类型。<br><li>SGE：SGE调度器。
+ * @method void setSchedulerType(string $SchedulerType) 设置调度器类型。<br><li>SGE：SGE调度器。
  * @method string getImageId() 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
  * @method void setImageId(string $ImageId) 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
  * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取私有网络相关信息配置。
@@ -52,8 +52,8 @@ true：发送检查请求，不会创建实例。检查项包括是否填写了�
 如果检查不通过，则返回对应错误码；
 如果检查通过，则返回RequestId.
 false（默认）：发送正常请求，通过检查后直接创建实例
- * @method string getAccountType() 获取域名字服务类型。目前仅支持NIS域名字服务。
- * @method void setAccountType(string $AccountType) 设置域名字服务类型。目前仅支持NIS域名字服务。
+ * @method string getAccountType() 获取域名字服务类型。<br><li>NIS：NIS域名字服务。
+ * @method void setAccountType(string $AccountType) 设置域名字服务类型。<br><li>NIS：NIS域名字服务。
  * @method string getClusterName() 获取集群显示名称。
  * @method void setClusterName(string $ClusterName) 设置集群显示名称。
  * @method StorageOption getStorageOption() 获取集群存储选项
@@ -87,7 +87,7 @@ class CreateClusterRequest extends AbstractModel
     public $ComputeNodeCount;
 
     /**
-     * @var string 调度器类型。目前仅支持SGE调度器。
+     * @var string 调度器类型。<br><li>SGE：SGE调度器。
      */
     public $SchedulerType;
 
@@ -126,7 +126,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $DryRun;
 
     /**
-     * @var string 域名字服务类型。目前仅支持NIS域名字服务。
+     * @var string 域名字服务类型。<br><li>NIS：NIS域名字服务。
      */
     public $AccountType;
 
@@ -146,7 +146,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param integer $ManagerNodeCount 指定管理节点的数量。目前仅支持一个管理节点。
      * @param ComputeNode $ComputeNode 指定计算节点。
      * @param integer $ComputeNodeCount 指定计算节点的数量。默认取值：0。
-     * @param string $SchedulerType 调度器类型。目前仅支持SGE调度器。
+     * @param string $SchedulerType 调度器类型。<br><li>SGE：SGE调度器。
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
      * @param VirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息配置。
      * @param LoginSettings $LoginSettings 集群登录设置。
@@ -157,7 +157,7 @@ true：发送检查请求，不会创建实例。检查项包括是否填写了�
 如果检查不通过，则返回对应错误码；
 如果检查通过，则返回RequestId.
 false（默认）：发送正常请求，通过检查后直接创建实例
-     * @param string $AccountType 域名字服务类型。目前仅支持NIS域名字服务。
+     * @param string $AccountType 域名字服务类型。<br><li>NIS：NIS域名字服务。
      * @param string $ClusterName 集群显示名称。
      * @param StorageOption $StorageOption 集群存储选项
      */

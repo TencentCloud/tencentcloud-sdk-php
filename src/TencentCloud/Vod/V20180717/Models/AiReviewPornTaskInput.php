@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 内容审核鉴黄任务输入参数类型
+ * 只能识别涉及令人反感的信息的任务输入参数类型
  *
- * @method integer getDefinition() 获取鉴黄模板 ID。
- * @method void setDefinition(integer $Definition) 设置鉴黄模板 ID。
+ * @method integer getDefinition() 获取鉴别涉及令人反感的信息的模板 ID。
+ * @method void setDefinition(integer $Definition) 设置鉴别涉及令人反感的信息的模板 ID。
  */
 class AiReviewPornTaskInput extends AbstractModel
 {
     /**
-     * @var integer 鉴黄模板 ID。
+     * @var integer 鉴别涉及令人反感的信息的模板 ID。
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 鉴黄模板 ID。
+     * @param integer $Definition 鉴别涉及令人反感的信息的模板 ID。
      */
     function __construct()
     {

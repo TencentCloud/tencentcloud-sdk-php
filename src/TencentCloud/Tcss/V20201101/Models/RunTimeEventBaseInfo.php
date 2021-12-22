@@ -78,6 +78,14 @@ MountNamespace逃逸、
  * @method void setEventCount(integer $EventCount) 设置事件数量
  * @method string getLatestFoundTime() 获取最近生成时间
  * @method void setLatestFoundTime(string $LatestFoundTime) 设置最近生成时间
+ * @method string getHostIP() 获取内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostIP(string $HostIP) 设置内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientIP() 获取外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientIP(string $ClientIP) 设置外网ip
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunTimeEventBaseInfo extends AbstractModel
 {
@@ -163,6 +171,18 @@ MountNamespace逃逸、
     public $LatestFoundTime;
 
     /**
+     * @var string 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostIP;
+
+    /**
+     * @var string 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientIP;
+
+    /**
      * @param string $EventId 事件唯一ID
      * @param string $FoundTime 事件发现时间
      * @param string $ContainerId 容器id
@@ -192,6 +212,10 @@ MountNamespace逃逸、
    ESCAPE_SYSCALL:Syscall逃逸
      * @param integer $EventCount 事件数量
      * @param string $LatestFoundTime 最近生成时间
+     * @param string $HostIP 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientIP 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -256,6 +280,14 @@ MountNamespace逃逸、
 
         if (array_key_exists("LatestFoundTime",$param) and $param["LatestFoundTime"] !== null) {
             $this->LatestFoundTime = $param["LatestFoundTime"];
+        }
+
+        if (array_key_exists("HostIP",$param) and $param["HostIP"] !== null) {
+            $this->HostIP = $param["HostIP"];
+        }
+
+        if (array_key_exists("ClientIP",$param) and $param["ClientIP"] !== null) {
+            $this->ClientIP = $param["ClientIP"];
         }
     }
 }

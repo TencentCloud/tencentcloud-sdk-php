@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Thpc\V20211109\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyRoReplicationDelay返回参数结构体
+ * 管控节点概览。
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getNodeId() 获取管控节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeId(string $NodeId) 设置管控节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class ModifyRoReplicationDelayResponse extends AbstractModel
+class ManagerNodeOverview extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 管控节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RequestId;
+    public $NodeId;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param string $NodeId 管控节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class ModifyRoReplicationDelayResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
         }
     }
 }

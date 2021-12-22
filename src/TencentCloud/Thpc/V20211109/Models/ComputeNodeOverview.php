@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Thpc\V20211109\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopDelayReplication请求参数结构体
+ * 计算节点概览。
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getNodeId() 获取计算节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeId(string $NodeId) 设置计算节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class StopDelayReplicationRequest extends AbstractModel
+class ComputeNodeOverview extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 计算节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $InstanceId;
+    public $NodeId;
 
     /**
-     * @param string $InstanceId 实例 ID。
+     * @param string $NodeId 计算节点ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class StopDelayReplicationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
         }
     }
 }

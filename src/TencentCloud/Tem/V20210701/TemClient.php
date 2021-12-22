@@ -27,6 +27,10 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\CreateCosTokenResponse CreateCosToken(Models\CreateCosTokenRequest $req) 生成Cos临时秘钥
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 创建环境
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 绑定云资源
+ * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) 服务删除
+  - 停止当前运行服务
+  - 删除服务相关资源
+  - 删除服务
  * @method Models\DeleteIngressResponse DeleteIngress(Models\DeleteIngressRequest $req) 删除 Ingress 规则
  * @method Models\DeployApplicationResponse DeployApplication(Models\DeployApplicationRequest $req) 应用部署
  * @method Models\DescribeApplicationPodsResponse DescribeApplicationPods(Models\DescribeApplicationPodsRequest $req) 获取应用实例列表

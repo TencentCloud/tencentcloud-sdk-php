@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskIDs(array $TaskIDs) 设置任务 ID  列表
  * @method string getTaskName() 获取任务名
  * @method void setTaskName(string $TaskName) 设置任务名
- * @method string getTargetAddress() 获取探测目标
- * @method void setTargetAddress(string $TargetAddress) 设置探测目标
+ * @method string getTargetAddress() 获取拨测目标
+ * @method void setTargetAddress(string $TargetAddress) 设置拨测目标
  * @method array getTaskStatus() 获取任务状态列表
  * @method void setTaskStatus(array $TaskStatus) 设置任务状态列表
  * @method integer getOffset() 获取偏移量，默认为0
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderBy(string $OrderBy) 设置排序的列
  * @method boolean getAscend() 获取是否正序
  * @method void setAscend(boolean $Ascend) 设置是否正序
+ * @method array getTagFilters() 获取资源标签值
+ * @method void setTagFilters(array $TagFilters) 设置资源标签值
  */
 class DescribeProbeTasksRequest extends AbstractModel
 {
@@ -66,7 +68,7 @@ class DescribeProbeTasksRequest extends AbstractModel
     public $TaskName;
 
     /**
-     * @var string 探测目标
+     * @var string 拨测目标
      */
     public $TargetAddress;
 
@@ -120,9 +122,14 @@ class DescribeProbeTasksRequest extends AbstractModel
     public $Ascend;
 
     /**
+     * @var array 资源标签值
+     */
+    public $TagFilters;
+
+    /**
      * @param array $TaskIDs 任务 ID  列表
      * @param string $TaskName 任务名
-     * @param string $TargetAddress 探测目标
+     * @param string $TargetAddress 拨测目标
      * @param array $TaskStatus 任务状态列表
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大值为100
@@ -136,6 +143,7 @@ class DescribeProbeTasksRequest extends AbstractModel
      * @param array $TaskCategory 节点类型
      * @param string $OrderBy 排序的列
      * @param boolean $Ascend 是否正序
+     * @param array $TagFilters 资源标签值
      */
     function __construct()
     {
@@ -196,6 +204,15 @@ class DescribeProbeTasksRequest extends AbstractModel
 
         if (array_key_exists("Ascend",$param) and $param["Ascend"] !== null) {
             $this->Ascend = $param["Ascend"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new KeyValuePair();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

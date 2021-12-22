@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFastUpgrade(integer $FastUpgrade) 设置是否极速变配。0-普通升级，1-极速变配。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
  * @method integer getMaxDelayTime() 获取延迟阈值。取值范围1~10，默认值为10。
  * @method void setMaxDelayTime(integer $MaxDelayTime) 设置延迟阈值。取值范围1~10，默认值为10。
+ * @method integer getCrossCluster() 获取是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
+ * @method void setCrossCluster(integer $CrossCluster) 设置是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
+ * @method string getZoneId() 获取主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
+ * @method void setZoneId(string $ZoneId) 设置主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $MaxDelayTime;
 
     /**
+     * @var integer 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
+     */
+    public $CrossCluster;
+
+    /**
+     * @var string 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
+     */
+    public $ZoneId;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param integer $Memory 升级后的内存大小，单位：MB，为保证传入 Memory 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可升级的内存规格。
      * @param integer $Volume 升级后的硬盘大小，单位：GB，为保证传入 Volume 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可升级的硬盘范围。
@@ -136,6 +150,8 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param integer $Cpu 升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
      * @param integer $FastUpgrade 是否极速变配。0-普通升级，1-极速变配。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
      * @param integer $MaxDelayTime 延迟阈值。取值范围1~10，默认值为10。
+     * @param integer $CrossCluster 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
+     * @param string $ZoneId 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
             $this->MaxDelayTime = $param["MaxDelayTime"];
+        }
+
+        if (array_key_exists("CrossCluster",$param) and $param["CrossCluster"] !== null) {
+            $this->CrossCluster = $param["CrossCluster"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

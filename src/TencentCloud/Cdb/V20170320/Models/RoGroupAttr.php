@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinRoInGroup(integer $MinRoInGroup) 设置最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
  * @method string getWeightMode() 获取权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
  * @method void setWeightMode(string $WeightMode) 设置权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
+ * @method integer getReplicationDelayTime() 获取延迟复制时间。
+ * @method void setReplicationDelayTime(integer $ReplicationDelayTime) 设置延迟复制时间。
  */
 class RoGroupAttr extends AbstractModel
 {
@@ -59,11 +61,17 @@ class RoGroupAttr extends AbstractModel
     public $WeightMode;
 
     /**
+     * @var integer 延迟复制时间。
+     */
+    public $ReplicationDelayTime;
+
+    /**
      * @param string $RoGroupName RO 组名称。
      * @param integer $RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
      * @param integer $RoOfflineDelay 是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。
      * @param integer $MinRoInGroup 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
      * @param string $WeightMode 权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
+     * @param integer $ReplicationDelayTime 延迟复制时间。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class RoGroupAttr extends AbstractModel
 
         if (array_key_exists("WeightMode",$param) and $param["WeightMode"] !== null) {
             $this->WeightMode = $param["WeightMode"];
+        }
+
+        if (array_key_exists("ReplicationDelayTime",$param) and $param["ReplicationDelayTime"] !== null) {
+            $this->ReplicationDelayTime = $param["ReplicationDelayTime"];
         }
     }
 }

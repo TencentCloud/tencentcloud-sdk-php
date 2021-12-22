@@ -14,26 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StartDelayReplication返回参数结构体
+ * DescribeTaskResult返回参数结构体
  *
- * @method string getAsyncRequestId() 获取延迟复制任务 ID。DelayReplicationType不为DEFAULT时返回，可用来查询回放任务状态。
+ * @method TaskResultInfo getTaskInfo() 获取查询的任务信息，返回为空表示输入任务ID对应的任务不存在。只有当任务状态为成功（2）的时候，才会返回任务的结果。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置延迟复制任务 ID。DelayReplicationType不为DEFAULT时返回，可用来查询回放任务状态。
+ * @method void setTaskInfo(TaskResultInfo $TaskInfo) 设置查询的任务信息，返回为空表示输入任务ID对应的任务不存在。只有当任务状态为成功（2）的时候，才会返回任务的结果。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class StartDelayReplicationResponse extends AbstractModel
+class DescribeTaskResultResponse extends AbstractModel
 {
     /**
-     * @var string 延迟复制任务 ID。DelayReplicationType不为DEFAULT时返回，可用来查询回放任务状态。
+     * @var TaskResultInfo 查询的任务信息，返回为空表示输入任务ID对应的任务不存在。只有当任务状态为成功（2）的时候，才会返回任务的结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $AsyncRequestId;
+    public $TaskInfo;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +41,7 @@ class StartDelayReplicationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId 延迟复制任务 ID。DelayReplicationType不为DEFAULT时返回，可用来查询回放任务状态。
+     * @param TaskResultInfo $TaskInfo 查询的任务信息，返回为空表示输入任务ID对应的任务不存在。只有当任务状态为成功（2）的时候，才会返回任务的结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,8 +58,9 @@ class StartDelayReplicationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("TaskInfo",$param) and $param["TaskInfo"] !== null) {
+            $this->TaskInfo = new TaskResultInfo();
+            $this->TaskInfo->deserialize($param["TaskInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

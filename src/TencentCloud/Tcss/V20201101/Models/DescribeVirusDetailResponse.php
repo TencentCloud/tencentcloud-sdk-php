@@ -176,6 +176,14 @@ BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHostIP() 获取内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostIP(string $HostIP) 设置内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientIP() 获取外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientIP(string $ClientIP) 设置外网ip
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -388,6 +396,18 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     public $SubStatus;
 
     /**
+     * @var string 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostIP;
+
+    /**
+     * @var string 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientIP;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -470,6 +490,10 @@ FILE_ABNORMAL_DEAL_RECOVER:恢复文件时，文件异常
 BACKUP_FILE_NOT_FOUND:备份文件不存在
 CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
 CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HostIP 内网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientIP 外网ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -612,6 +636,14 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
         if (array_key_exists("SubStatus",$param) and $param["SubStatus"] !== null) {
             $this->SubStatus = $param["SubStatus"];
+        }
+
+        if (array_key_exists("HostIP",$param) and $param["HostIP"] !== null) {
+            $this->HostIP = $param["HostIP"];
+        }
+
+        if (array_key_exists("ClientIP",$param) and $param["ClientIP"] !== null) {
+            $this->ClientIP = $param["ClientIP"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

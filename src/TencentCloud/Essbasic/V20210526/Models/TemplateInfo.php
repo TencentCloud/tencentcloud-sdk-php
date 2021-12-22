@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；2-静默签授权；3-普通模版
  * @method array getRecipients() 获取模板中的流程参与人信息
  * @method void setRecipients(array $Recipients) 设置模板中的流程参与人信息
+ * @method boolean getIsPromoter() 获取是否是发起人
+ * @method void setIsPromoter(boolean $IsPromoter) 设置是否是发起人
  */
 class TemplateInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class TemplateInfo extends AbstractModel
     public $Recipients;
 
     /**
+     * @var boolean 是否是发起人
+     */
+    public $IsPromoter;
+
+    /**
      * @param string $TemplateId 模板ID
      * @param string $TemplateName 模板名字
      * @param string $Description 模板描述信息
@@ -96,6 +103,7 @@ class TemplateInfo extends AbstractModel
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
      * @param integer $TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模版
      * @param array $Recipients 模板中的流程参与人信息
+     * @param boolean $IsPromoter 是否是发起人
      */
     function __construct()
     {
@@ -159,6 +167,10 @@ class TemplateInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Recipients, $obj);
             }
+        }
+
+        if (array_key_exists("IsPromoter",$param) and $param["IsPromoter"] !== null) {
+            $this->IsPromoter = $param["IsPromoter"];
         }
     }
 }

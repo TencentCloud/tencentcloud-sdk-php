@@ -14,26 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Thpc\V20211109\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyRoGroupInfo返回参数结构体
+ * DescribeClusters返回参数结构体
  *
- * @method string getAsyncRequestId() 获取异步任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClusterSet() 获取集群概览信息列表。
+ * @method void setClusterSet(array $ClusterSet) 设置集群概览信息列表。
+ * @method integer getTotalCount() 获取集群数量。
+ * @method void setTotalCount(integer $TotalCount) 设置集群数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyRoGroupInfoResponse extends AbstractModel
+class DescribeClustersResponse extends AbstractModel
 {
     /**
-     * @var string 异步任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 集群概览信息列表。
      */
-    public $AsyncRequestId;
+    public $ClusterSet;
+
+    /**
+     * @var integer 集群数量。
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class ModifyRoGroupInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId 异步任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClusterSet 集群概览信息列表。
+     * @param integer $TotalCount 集群数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +62,17 @@ class ModifyRoGroupInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("ClusterSet",$param) and $param["ClusterSet"] !== null) {
+            $this->ClusterSet = [];
+            foreach ($param["ClusterSet"] as $key => $value){
+                $obj = new ClusterOverview();
+                $obj->deserialize($value);
+                array_push($this->ClusterSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

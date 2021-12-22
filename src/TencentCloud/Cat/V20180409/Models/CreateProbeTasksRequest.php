@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchTasks(array $BatchTasks) 设置批量任务名-地址
  * @method integer getTaskType() 获取任务类型
  * @method void setTaskType(integer $TaskType) 设置任务类型
- * @method array getNodes() 获取探测节点
- * @method void setNodes(array $Nodes) 设置探测节点
- * @method integer getInterval() 获取探测间隔
- * @method void setInterval(integer $Interval) 设置探测间隔
- * @method string getParameters() 获取探测参数
- * @method void setParameters(string $Parameters) 设置探测参数
+ * @method array getNodes() 获取拨测节点
+ * @method void setNodes(array $Nodes) 设置拨测节点
+ * @method integer getInterval() 获取拨测间隔
+ * @method void setInterval(integer $Interval) 设置拨测间隔
+ * @method string getParameters() 获取拨测参数
+ * @method void setParameters(string $Parameters) 设置拨测参数
  * @method integer getTaskCategory() 获取任务分类
 <li>1 = PC</li>
 <li> 2 = Mobile </li>
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li> 2 = Mobile </li>
  * @method string getCron() 获取定时任务cron表达式
  * @method void setCron(string $Cron) 设置定时任务cron表达式
+ * @method array getTag() 获取资源标签值
+ * @method void setTag(array $Tag) 设置资源标签值
  */
 class CreateProbeTasksRequest extends AbstractModel
 {
@@ -52,17 +54,17 @@ class CreateProbeTasksRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var array 探测节点
+     * @var array 拨测节点
      */
     public $Nodes;
 
     /**
-     * @var integer 探测间隔
+     * @var integer 拨测间隔
      */
     public $Interval;
 
     /**
-     * @var string 探测参数
+     * @var string 拨测参数
      */
     public $Parameters;
 
@@ -79,15 +81,21 @@ class CreateProbeTasksRequest extends AbstractModel
     public $Cron;
 
     /**
+     * @var array 资源标签值
+     */
+    public $Tag;
+
+    /**
      * @param array $BatchTasks 批量任务名-地址
      * @param integer $TaskType 任务类型
-     * @param array $Nodes 探测节点
-     * @param integer $Interval 探测间隔
-     * @param string $Parameters 探测参数
+     * @param array $Nodes 拨测节点
+     * @param integer $Interval 拨测间隔
+     * @param string $Parameters 拨测参数
      * @param integer $TaskCategory 任务分类
 <li>1 = PC</li>
 <li> 2 = Mobile </li>
      * @param string $Cron 定时任务cron表达式
+     * @param array $Tag 资源标签值
      */
     function __construct()
     {
@@ -133,6 +141,15 @@ class CreateProbeTasksRequest extends AbstractModel
 
         if (array_key_exists("Cron",$param) and $param["Cron"] !== null) {
             $this->Cron = $param["Cron"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

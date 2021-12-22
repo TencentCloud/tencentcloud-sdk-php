@@ -32,13 +32,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEntryPoint(string $EntryPoint) 设置参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCommand() 获取entrypoint执行命令
+ * @method string getCommand() 获取容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCommand(string $Command) 设置entrypoint执行命令
+ * @method void setCommand(string $Command) 设置容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getArgs() 获取命令参数
+ * @method string getArgs() 获取容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setArgs(string $Args) 设置命令参数
+ * @method void setArgs(string $Args) 设置容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageConfig extends AbstractModel
@@ -66,13 +66,13 @@ class ImageConfig extends AbstractModel
     public $EntryPoint;
 
     /**
-     * @var string entrypoint执行命令
+     * @var string 容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Command;
 
     /**
-     * @var string 命令参数
+     * @var string 容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Args;
@@ -84,9 +84,9 @@ class ImageConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EntryPoint 参数已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Command entrypoint执行命令
+     * @param string $Command 容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Args 命令参数
+     * @param string $Args 容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

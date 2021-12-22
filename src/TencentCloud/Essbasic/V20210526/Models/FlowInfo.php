@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowDescription(string $FlowDescription) 设置合同描述
  * @method string getCustomerData() 获取渠道的业务信息，限制1024字符
  * @method void setCustomerData(string $CustomerData) 设置渠道的业务信息，限制1024字符
+ * @method array getCcInfos() 获取被抄送人的信息列表
+ * @method void setCcInfos(array $CcInfos) 设置被抄送人的信息列表
  */
 class FlowInfo extends AbstractModel
 {
@@ -99,6 +101,11 @@ class FlowInfo extends AbstractModel
     public $CustomerData;
 
     /**
+     * @var array 被抄送人的信息列表
+     */
+    public $CcInfos;
+
+    /**
      * @param string $FlowName 合同名字
      * @param integer $Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败
      * @param string $TemplateId 模版ID
@@ -112,6 +119,7 @@ class FlowInfo extends AbstractModel
      * @param array $FormFields 表单K-V对列表
      * @param string $FlowDescription 合同描述
      * @param string $CustomerData 渠道的业务信息，限制1024字符
+     * @param array $CcInfos 被抄送人的信息列表
      */
     function __construct()
     {
@@ -170,6 +178,15 @@ class FlowInfo extends AbstractModel
 
         if (array_key_exists("CustomerData",$param) and $param["CustomerData"] !== null) {
             $this->CustomerData = $param["CustomerData"];
+        }
+
+        if (array_key_exists("CcInfos",$param) and $param["CcInfos"] !== null) {
+            $this->CcInfos = [];
+            foreach ($param["CcInfos"] as $key => $value){
+                $obj = new CcInfo();
+                $obj->deserialize($value);
+                array_push($this->CcInfos, $obj);
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 探测任务
+ * 拨测任务
  *
  * @method string getName() 获取任务名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务 ID
  * @method integer getTaskType() 获取任务类型
  * @method void setTaskType(integer $TaskType) 设置任务类型
- * @method array getNodes() 获取探测节点列表
- * @method void setNodes(array $Nodes) 设置探测节点列表
- * @method integer getInterval() 获取探测间隔
- * @method void setInterval(integer $Interval) 设置探测间隔
- * @method string getParameters() 获取探测参数
- * @method void setParameters(string $Parameters) 设置探测参数
+ * @method array getNodes() 获取拨测节点列表
+ * @method void setNodes(array $Nodes) 设置拨测节点列表
+ * @method integer getInterval() 获取拨测间隔
+ * @method void setInterval(integer $Interval) 设置拨测间隔
+ * @method string getParameters() 获取拨测参数
+ * @method void setParameters(string $Parameters) 设置拨测参数
  * @method integer getStatus() 获取任务状态
  * @method void setStatus(integer $Status) 设置任务状态
  * @method string getTargetAddress() 获取目标地址
@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCronState(integer $CronState) 设置定时任务启动状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagInfoList() 获取任务当前绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagInfoList(array $TagInfoList) 设置任务当前绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProbeTask extends AbstractModel
 {
@@ -86,17 +90,17 @@ class ProbeTask extends AbstractModel
     public $TaskType;
 
     /**
-     * @var array 探测节点列表
+     * @var array 拨测节点列表
      */
     public $Nodes;
 
     /**
-     * @var integer 探测间隔
+     * @var integer 拨测间隔
      */
     public $Interval;
 
     /**
-     * @var string 探测参数
+     * @var string 拨测参数
      */
     public $Parameters;
 
@@ -149,13 +153,19 @@ class ProbeTask extends AbstractModel
     public $CronState;
 
     /**
+     * @var array 任务当前绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagInfoList;
+
+    /**
      * @param string $Name 任务名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 任务 ID
      * @param integer $TaskType 任务类型
-     * @param array $Nodes 探测节点列表
-     * @param integer $Interval 探测间隔
-     * @param string $Parameters 探测参数
+     * @param array $Nodes 拨测节点列表
+     * @param integer $Interval 拨测间隔
+     * @param string $Parameters 拨测参数
      * @param integer $Status 任务状态
      * @param string $TargetAddress 目标地址
      * @param integer $PayMode 付费模式
@@ -171,6 +181,8 @@ class ProbeTask extends AbstractModel
      * @param string $Cron 定时任务cron表达式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CronState 定时任务启动状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagInfoList 任务当前绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -240,6 +252,15 @@ class ProbeTask extends AbstractModel
 
         if (array_key_exists("CronState",$param) and $param["CronState"] !== null) {
             $this->CronState = $param["CronState"];
+        }
+
+        if (array_key_exists("TagInfoList",$param) and $param["TagInfoList"] !== null) {
+            $this->TagInfoList = [];
+            foreach ($param["TagInfoList"] as $key => $value){
+                $obj = new KeyValuePair();
+                $obj->deserialize($value);
+                array_push($this->TagInfoList, $obj);
+            }
         }
     }
 }

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 名人识别的标签
  *
- * @method string getFirstLabel() 获取公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
+ * @method string getFirstLabel() 获取公众人物身份标签的一级分类，例如体育明星、娱乐明星等；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFirstLabel(string $FirstLabel) 设置公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
+ * @method void setFirstLabel(string $FirstLabel) 设置公众人物身份标签的一级分类，例如体育明星、娱乐明星等；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecondLabel() 获取公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class Labels extends AbstractModel
 {
     /**
-     * @var string 公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
+     * @var string 公众人物身份标签的一级分类，例如体育明星、娱乐明星等；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstLabel;
@@ -44,7 +44,7 @@ class Labels extends AbstractModel
     public $SecondLabel;
 
     /**
-     * @param string $FirstLabel 公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
+     * @param string $FirstLabel 公众人物身份标签的一级分类，例如体育明星、娱乐明星等；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecondLabel 公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
 注意：此字段可能返回 null，表示取不到有效值。

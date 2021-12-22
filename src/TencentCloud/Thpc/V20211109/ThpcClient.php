@@ -26,6 +26,7 @@ use TencentCloud\Thpc\V20211109\Models as Models;
  * @method Models\BindAutoScalingGroupResponse BindAutoScalingGroup(Models\BindAutoScalingGroupRequest $req) 本接口(BindAutoScalingGroup)用于为集群队列绑定弹性伸缩组
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 本接口 (CreateCluster) 用于创建并启动集群。
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 本接口（DeleteCluster）用于删除一个指定的集群。
+ * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。
  */
 
 class ThpcClient extends AbstractClient

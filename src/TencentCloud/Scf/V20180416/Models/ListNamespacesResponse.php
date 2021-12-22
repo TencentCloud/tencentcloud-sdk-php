@@ -65,7 +65,8 @@ class ListNamespacesResponse extends AbstractModel
         if (array_key_exists("Namespaces",$param) and $param["Namespaces"] !== null) {
             $this->Namespaces = [];
             foreach ($param["Namespaces"] as $key => $value){
-                $obj = new Namespace();
+                $dynamicClassNameAvoidKeywordConflict = "Namespace";
+                $obj = new $dynamicClassNameAvoidKeywordConflict();
                 $obj->deserialize($value);
                 array_push($this->Namespaces, $obj);
             }

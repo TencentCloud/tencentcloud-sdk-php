@@ -25,7 +25,7 @@ use TencentCloud\Cat\V20180409\Models as Models;
 /**
  * @method Models\BindAlarmPolicyResponse BindAlarmPolicy(Models\BindAlarmPolicyRequest $req) 绑定拨测任务和告警策略组
  * @method Models\CreateAgentGroupResponse CreateAgentGroup(Models\CreateAgentGroupRequest $req) 添加拨测分组
- * @method Models\CreateProbeTasksResponse CreateProbeTasks(Models\CreateProbeTasksRequest $req) 批量创建探测任务
+ * @method Models\CreateProbeTasksResponse CreateProbeTasks(Models\CreateProbeTasksRequest $req) 批量创建拨测任务
  * @method Models\CreateTaskExResponse CreateTaskEx(Models\CreateTaskExRequest $req) 创建拨测任务(扩展)
  * @method Models\DeleteAgentGroupResponse DeleteAgentGroup(Models\DeleteAgentGroupRequest $req) 删除拨测分组
  * @method Models\DeleteProbeTaskResponse DeleteProbeTask(Models\DeleteProbeTaskRequest $req) 删除拨测任务
@@ -38,7 +38,7 @@ use TencentCloud\Cat\V20180409\Models as Models;
  * @method Models\DescribeCatLogsResponse DescribeCatLogs(Models\DescribeCatLogsRequest $req) 查询拨测流水
  * @method Models\DescribeDetailedSingleProbeDataResponse DescribeDetailedSingleProbeData(Models\DescribeDetailedSingleProbeDataRequest $req) 根据时间范围、任务ID、运营商等条件查询单次拨测详情数据
  * @method Models\DescribeProbeNodesResponse DescribeProbeNodes(Models\DescribeProbeNodesRequest $req) 查询拨测节点
- * @method Models\DescribeProbeTasksResponse DescribeProbeTasks(Models\DescribeProbeTasksRequest $req) 查询探测任务列表
+ * @method Models\DescribeProbeTasksResponse DescribeProbeTasks(Models\DescribeProbeTasksRequest $req) 查询拨测任务列表
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 查询拨测任务信息
  * @method Models\DescribeTasksByTypeResponse DescribeTasksByType(Models\DescribeTasksByTypeRequest $req) 按类型查询拨测任务列表
  * @method Models\DescribeUserLimitResponse DescribeUserLimit(Models\DescribeUserLimitRequest $req) 获取用户可用资源限制

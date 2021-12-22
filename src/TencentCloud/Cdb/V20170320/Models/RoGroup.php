@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoGroupZone(string $RoGroupZone) 设置只读组所在的可用区。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDelayReplicationTime() 获取延迟复制时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDelayReplicationTime(integer $DelayReplicationTime) 设置延迟复制时间。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoGroup extends AbstractModel
 {
@@ -141,6 +145,12 @@ class RoGroup extends AbstractModel
     public $RoGroupZone;
 
     /**
+     * @var integer 延迟复制时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DelayReplicationTime;
+
+    /**
      * @param string $RoGroupMode 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
      * @param string $RoGroupId 只读组 ID。
      * @param string $RoGroupName 只读组名称。
@@ -159,6 +169,8 @@ class RoGroup extends AbstractModel
      * @param string $RoGroupRegion 只读组所在的地域。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoGroupZone 只读组所在的可用区。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DelayReplicationTime 延迟复制时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -237,6 +249,10 @@ class RoGroup extends AbstractModel
 
         if (array_key_exists("RoGroupZone",$param) and $param["RoGroupZone"] !== null) {
             $this->RoGroupZone = $param["RoGroupZone"];
+        }
+
+        if (array_key_exists("DelayReplicationTime",$param) and $param["DelayReplicationTime"] !== null) {
+            $this->DelayReplicationTime = $param["DelayReplicationTime"];
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(array $Status) 设置状态过滤，online、offline、single_online
  * @method array getMicroserviceIdList() 获取IdList
  * @method void setMicroserviceIdList(array $MicroserviceIdList) 设置IdList
+ * @method array getMicroserviceNameList() 获取搜索的服务名列表
+ * @method void setMicroserviceNameList(array $MicroserviceNameList) 设置搜索的服务名列表
  */
 class DescribeMicroservicesRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeMicroservicesRequest extends AbstractModel
     public $MicroserviceIdList;
 
     /**
+     * @var array 搜索的服务名列表
+     */
+    public $MicroserviceNameList;
+
+    /**
      * @param string $NamespaceId 命名空间ID
      * @param string $SearchWord 搜索字段
      * @param string $OrderBy 排序字段
@@ -88,6 +95,7 @@ class DescribeMicroservicesRequest extends AbstractModel
      * @param integer $Limit 分页个数
      * @param array $Status 状态过滤，online、offline、single_online
      * @param array $MicroserviceIdList IdList
+     * @param array $MicroserviceNameList 搜索的服务名列表
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeMicroservicesRequest extends AbstractModel
 
         if (array_key_exists("MicroserviceIdList",$param) and $param["MicroserviceIdList"] !== null) {
             $this->MicroserviceIdList = $param["MicroserviceIdList"];
+        }
+
+        if (array_key_exists("MicroserviceNameList",$param) and $param["MicroserviceNameList"] !== null) {
+            $this->MicroserviceNameList = $param["MicroserviceNameList"];
         }
     }
 }

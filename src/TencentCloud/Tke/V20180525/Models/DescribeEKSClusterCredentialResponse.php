@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicLB(ClusterPublicLB $PublicLB) 设置集群的公网访问信息
  * @method ClusterInternalLB getInternalLB() 获取集群的内网访问信息
  * @method void setInternalLB(ClusterInternalLB $InternalLB) 设置集群的内网访问信息
+ * @method boolean getProxyLB() 获取标记是否新的内外网功能
+ * @method void setProxyLB(boolean $ProxyLB) 设置标记是否新的内外网功能
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribeEKSClusterCredentialResponse extends AbstractModel
     public $InternalLB;
 
     /**
+     * @var boolean 标记是否新的内外网功能
+     */
+    public $ProxyLB;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeEKSClusterCredentialResponse extends AbstractModel
      * @param ClusterCredential $Credential 集群的认证信息
      * @param ClusterPublicLB $PublicLB 集群的公网访问信息
      * @param ClusterInternalLB $InternalLB 集群的内网访问信息
+     * @param boolean $ProxyLB 标记是否新的内外网功能
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -100,6 +108,10 @@ class DescribeEKSClusterCredentialResponse extends AbstractModel
         if (array_key_exists("InternalLB",$param) and $param["InternalLB"] !== null) {
             $this->InternalLB = new ClusterInternalLB();
             $this->InternalLB->deserialize($param["InternalLB"]);
+        }
+
+        if (array_key_exists("ProxyLB",$param) and $param["ProxyLB"] !== null) {
+            $this->ProxyLB = $param["ProxyLB"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

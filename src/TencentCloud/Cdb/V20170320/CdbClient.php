@@ -169,7 +169,9 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 1、本接口只支持主实例进行重启操作；
 2、实例状态必须为正常，并且没有其他异步任务在执行中。
  * @method Models\StartBatchRollbackResponse StartBatchRollback(Models\StartBatchRollbackRequest $req) 该接口（StartBatchRollback）用于批量回档云数据库实例的库表。
+ * @method Models\StartReplicationResponse StartReplication(Models\StartReplicationRequest $req) 开启 RO 复制，从主实例同步数据。
  * @method Models\StopDBImportJobResponse StopDBImportJob(Models\StopDBImportJobRequest $req) 本接口(StopDBImportJob)用于终止数据导入任务。
+ * @method Models\StopReplicationResponse StopReplication(Models\StopReplicationRequest $req) 停止 RO 复制，中断从主实例同步数据。
  * @method Models\StopRollbackResponse StopRollback(Models\StopRollbackRequest $req) 本接口(StopRollback) 用于撤销实例正在进行的回档任务，该接口返回一个异步任务id。 撤销结果可以通过 DescribeAsyncRequestInfo 查询任务的执行情况。
  * @method Models\SwitchDBInstanceMasterSlaveResponse SwitchDBInstanceMasterSlave(Models\SwitchDBInstanceMasterSlaveRequest $req) 该接口 (SwitchDBInstanceMasterSlave) 支持用户主动切换实例主从角色。
  * @method Models\SwitchDrInstanceToMasterResponse SwitchDrInstanceToMaster(Models\SwitchDrInstanceToMasterRequest $req) 本接口(SwitchDrInstanceToMaster)用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。

@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReqType(integer $ReqType) 设置竞价模式1：rtb 2:pd
  * @method integer getIsAuthorized() 获取用户是否授权,1为授权，0为未授权
  * @method void setIsAuthorized(integer $IsAuthorized) 设置用户是否授权,1为授权，0为未授权
+ * @method array getDeviceList() 获取设备信息
+ * @method void setDeviceList(array $DeviceList) 设置设备信息
  */
 class InputRecognizeTargetAudience extends AbstractModel
 {
@@ -297,6 +299,11 @@ class InputRecognizeTargetAudience extends AbstractModel
     public $IsAuthorized;
 
     /**
+     * @var array 设备信息
+     */
+    public $DeviceList;
+
+    /**
      * @param string $Uid 设备ID，AccountType指定的类型
      * @param integer $AccountType 设备号类型，1.imei 2.imeiMd5（小写后转MD5转小写）3.idfa， 4.idfaMd5（大写后转MD5转小写），5.手机号,256.其它
      * @param array $ModelIdList 模型ID列表
@@ -336,6 +343,7 @@ class InputRecognizeTargetAudience extends AbstractModel
      * @param string $AppVer app版本描述
      * @param integer $ReqType 竞价模式1：rtb 2:pd
      * @param integer $IsAuthorized 用户是否授权,1为授权，0为未授权
+     * @param array $DeviceList 设备信息
      */
     function __construct()
     {
@@ -504,6 +512,15 @@ class InputRecognizeTargetAudience extends AbstractModel
 
         if (array_key_exists("IsAuthorized",$param) and $param["IsAuthorized"] !== null) {
             $this->IsAuthorized = $param["IsAuthorized"];
+        }
+
+        if (array_key_exists("DeviceList",$param) and $param["DeviceList"] !== null) {
+            $this->DeviceList = [];
+            foreach ($param["DeviceList"] as $key => $value){
+                $obj = new Device();
+                $obj->deserialize($value);
+                array_push($this->DeviceList, $obj);
+            }
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityPolicies(array $SecurityPolicies) 设置安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
  * @method string getExtraParam() 获取外网访问相关的扩展参数，格式为json
  * @method void setExtraParam(string $ExtraParam) 设置外网访问相关的扩展参数，格式为json
+ * @method string getSecurityGroup() 获取新内外网功能，需要传递安全组
+ * @method void setSecurityGroup(string $SecurityGroup) 设置新内外网功能，需要传递安全组
  */
 class ClusterPublicLB extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ClusterPublicLB extends AbstractModel
     public $ExtraParam;
 
     /**
+     * @var string 新内外网功能，需要传递安全组
+     */
+    public $SecurityGroup;
+
+    /**
      * @param boolean $Enabled 是否开启公网访问LB
      * @param array $AllowFromCidrs 允许访问的来源CIDR列表
      * @param array $SecurityPolicies 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
      * @param string $ExtraParam 外网访问相关的扩展参数，格式为json
+     * @param string $SecurityGroup 新内外网功能，需要传递安全组
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ClusterPublicLB extends AbstractModel
 
         if (array_key_exists("ExtraParam",$param) and $param["ExtraParam"] !== null) {
             $this->ExtraParam = $param["ExtraParam"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
         }
     }
 }

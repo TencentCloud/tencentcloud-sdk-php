@@ -44,10 +44,12 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\ModifyApplicationReplicasResponse ModifyApplicationReplicas(Models\ModifyApplicationReplicasRequest $req) 修改应用实例数量
  * @method Models\ModifyEnvironmentResponse ModifyEnvironment(Models\ModifyEnvironmentRequest $req) 编辑环境
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 创建或者更新 Ingress 规则
+ * @method Models\RestartApplicationResponse RestartApplication(Models\RestartApplicationRequest $req) 服务重启
  * @method Models\RestartApplicationPodResponse RestartApplicationPod(Models\RestartApplicationPodRequest $req) 重启应用实例
  * @method Models\ResumeDeployApplicationResponse ResumeDeployApplication(Models\ResumeDeployApplicationRequest $req) 开始下一批次发布
  * @method Models\RevertDeployApplicationResponse RevertDeployApplication(Models\RevertDeployApplicationRequest $req) 回滚分批发布
  * @method Models\RollingUpdateApplicationByVersionResponse RollingUpdateApplicationByVersion(Models\RollingUpdateApplicationByVersionRequest $req) 更新应用部署版本
+ * @method Models\StopApplicationResponse StopApplication(Models\StopApplicationRequest $req) 服务停止
  */
 
 class TemClient extends AbstractClient

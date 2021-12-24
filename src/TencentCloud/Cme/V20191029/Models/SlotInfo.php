@@ -22,16 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取卡槽 Id。
  * @method void setId(integer $Id) 设置卡槽 Id。
- * @method string getType() 获取素材类型，同素材素材，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
- * @method void setType(string $Type) 设置素材类型，同素材素材，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
- * @method string getDefaultMaterialId() 获取默认素材 Id。
- * @method void setDefaultMaterialId(string $DefaultMaterialId) 设置默认素材 Id。
+ * @method string getType() 获取卡槽类型，可取值有：
+<li> AUDIO：音频卡槽，可替换素材类型为 AUDIO 的音频素材;</li>
+<li> VIDEO：视频卡槽，可替换素材类型为 VIDEO 的视频素材;</li>
+<li> IMAGE：图片卡槽，可替换素材类型为 IMAGE 的图片素材;</li>
+<li> TEXT：文本卡槽，可替换文本内容。</li>
+ * @method void setType(string $Type) 设置卡槽类型，可取值有：
+<li> AUDIO：音频卡槽，可替换素材类型为 AUDIO 的音频素材;</li>
+<li> VIDEO：视频卡槽，可替换素材类型为 VIDEO 的视频素材;</li>
+<li> IMAGE：图片卡槽，可替换素材类型为 IMAGE 的图片素材;</li>
+<li> TEXT：文本卡槽，可替换文本内容。</li>
+ * @method string getDefaultMaterialId() 获取默认素材ID。当卡槽类型为 AUDIO，VIDEO，或 IMAGE 中的一种时有效。
+ * @method void setDefaultMaterialId(string $DefaultMaterialId) 设置默认素材ID。当卡槽类型为 AUDIO，VIDEO，或 IMAGE 中的一种时有效。
+ * @method TextSlotInfo getDefaultTextSlotInfo() 获取默认文本卡槽信息。当卡槽类型为 TEXT 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultTextSlotInfo(TextSlotInfo $DefaultTextSlotInfo) 设置默认文本卡槽信息。当卡槽类型为 TEXT 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDuration() 获取素材时长，单位秒。
  * @method void setDuration(float $Duration) 设置素材时长，单位秒。
  */
@@ -43,17 +49,24 @@ class SlotInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var string 素材类型，同素材素材，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
+     * @var string 卡槽类型，可取值有：
+<li> AUDIO：音频卡槽，可替换素材类型为 AUDIO 的音频素材;</li>
+<li> VIDEO：视频卡槽，可替换素材类型为 VIDEO 的视频素材;</li>
+<li> IMAGE：图片卡槽，可替换素材类型为 IMAGE 的图片素材;</li>
+<li> TEXT：文本卡槽，可替换文本内容。</li>
      */
     public $Type;
 
     /**
-     * @var string 默认素材 Id。
+     * @var string 默认素材ID。当卡槽类型为 AUDIO，VIDEO，或 IMAGE 中的一种时有效。
      */
     public $DefaultMaterialId;
+
+    /**
+     * @var TextSlotInfo 默认文本卡槽信息。当卡槽类型为 TEXT 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultTextSlotInfo;
 
     /**
      * @var float 素材时长，单位秒。
@@ -62,11 +75,14 @@ class SlotInfo extends AbstractModel
 
     /**
      * @param integer $Id 卡槽 Id。
-     * @param string $Type 素材类型，同素材素材，可取值有：
-<li> AUDIO :音频;</li>
-<li> VIDEO :视频;</li>
-<li> IMAGE :图片。</li>
-     * @param string $DefaultMaterialId 默认素材 Id。
+     * @param string $Type 卡槽类型，可取值有：
+<li> AUDIO：音频卡槽，可替换素材类型为 AUDIO 的音频素材;</li>
+<li> VIDEO：视频卡槽，可替换素材类型为 VIDEO 的视频素材;</li>
+<li> IMAGE：图片卡槽，可替换素材类型为 IMAGE 的图片素材;</li>
+<li> TEXT：文本卡槽，可替换文本内容。</li>
+     * @param string $DefaultMaterialId 默认素材ID。当卡槽类型为 AUDIO，VIDEO，或 IMAGE 中的一种时有效。
+     * @param TextSlotInfo $DefaultTextSlotInfo 默认文本卡槽信息。当卡槽类型为 TEXT 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Duration 素材时长，单位秒。
      */
     function __construct()
@@ -92,6 +108,11 @@ class SlotInfo extends AbstractModel
 
         if (array_key_exists("DefaultMaterialId",$param) and $param["DefaultMaterialId"] !== null) {
             $this->DefaultMaterialId = $param["DefaultMaterialId"];
+        }
+
+        if (array_key_exists("DefaultTextSlotInfo",$param) and $param["DefaultTextSlotInfo"] !== null) {
+            $this->DefaultTextSlotInfo = new TextSlotInfo();
+            $this->DefaultTextSlotInfo->deserialize($param["DefaultTextSlotInfo"]);
         }
 
         if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {

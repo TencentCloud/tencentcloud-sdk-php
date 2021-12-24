@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceVersion(string $DBInstanceVersion) 设置实例版本，目前只支持standard（双机高可用版, 一主一从）
  * @method string getDBCharset() 获取实例DB字符集
  * @method void setDBCharset(string $DBCharset) 设置实例DB字符集
- * @method string getDBVersion() 获取PostgreSQL主版本
- * @method void setDBVersion(string $DBVersion) 设置PostgreSQL主版本
+ * @method string getDBVersion() 获取PostgreSQL版本
+ * @method void setDBVersion(string $DBVersion) 设置PostgreSQL版本
  * @method string getCreateTime() 获取实例创建时间
  * @method void setCreateTime(string $CreateTime) 设置实例创建时间
  * @method string getUpdateTime() 获取实例执行最后一次更新的时间
@@ -101,6 +101,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getNetworkAccessList() 获取实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkAccessList(array $NetworkAccessList) 设置实例网络信息列表（此字段已废弃）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDBMajorVersion() 获取PostgreSQL主要版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDBMajorVersion(string $DBMajorVersion) 设置PostgreSQL主要版本
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
@@ -181,7 +185,7 @@ class DBInstance extends AbstractModel
     public $DBCharset;
 
     /**
-     * @var string PostgreSQL主版本
+     * @var string PostgreSQL版本
      */
     public $DBVersion;
 
@@ -283,6 +287,12 @@ class DBInstance extends AbstractModel
     public $NetworkAccessList;
 
     /**
+     * @var string PostgreSQL主要版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DBMajorVersion;
+
+    /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      * @param integer $ProjectId 项目ID
@@ -298,7 +308,7 @@ class DBInstance extends AbstractModel
      * @param string $DBInstanceType 实例类型，类型有：1、primary（主实例）；2、readonly（只读实例）；3、guard（灾备实例）；4、temp（临时实例）
      * @param string $DBInstanceVersion 实例版本，目前只支持standard（双机高可用版, 一主一从）
      * @param string $DBCharset 实例DB字符集
-     * @param string $DBVersion PostgreSQL主版本
+     * @param string $DBVersion PostgreSQL版本
      * @param string $CreateTime 实例创建时间
      * @param string $UpdateTime 实例执行最后一次更新的时间
      * @param string $ExpireTime 实例到期时间
@@ -323,6 +333,8 @@ class DBInstance extends AbstractModel
      * @param string $DBKernelVersion 数据库内核版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NetworkAccessList 实例网络信息列表（此字段已废弃）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DBMajorVersion PostgreSQL主要版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -487,6 +499,10 @@ class DBInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->NetworkAccessList, $obj);
             }
+        }
+
+        if (array_key_exists("DBMajorVersion",$param) and $param["DBMajorVersion"] !== null) {
+            $this->DBMajorVersion = $param["DBMajorVersion"];
         }
     }
 }

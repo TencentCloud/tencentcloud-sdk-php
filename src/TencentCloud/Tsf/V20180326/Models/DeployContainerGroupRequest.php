@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncrementalDeployment(boolean $IncrementalDeployment) 设置是否进行增量部署，默认为false，全量更新
  * @method string getRepoType() 获取tcr或者不填
  * @method void setRepoType(string $RepoType) 设置tcr或者不填
+ * @method VolumeInfo getVolumeInfos() 获取数据卷信息
+ * @method void setVolumeInfos(VolumeInfo $VolumeInfos) 设置数据卷信息
+ * @method VolumeMountInfo getVolumeMountInfos() 获取数据卷挂载点信息
+ * @method void setVolumeMountInfos(VolumeMountInfo $VolumeMountInfos) 设置数据卷挂载点信息
  */
 class DeployContainerGroupRequest extends AbstractModel
 {
@@ -241,6 +245,16 @@ class DeployContainerGroupRequest extends AbstractModel
     public $RepoType;
 
     /**
+     * @var VolumeInfo 数据卷信息
+     */
+    public $VolumeInfos;
+
+    /**
+     * @var VolumeMountInfo 数据卷挂载点信息
+     */
+    public $VolumeMountInfos;
+
+    /**
      * @param string $GroupId 部署组ID，分组唯一标识
      * @param string $TagName 镜像版本名称,如v1
      * @param integer $InstanceNum 实例数量
@@ -272,6 +286,8 @@ class DeployContainerGroupRequest extends AbstractModel
      * @param SchedulingStrategy $SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
      * @param boolean $IncrementalDeployment 是否进行增量部署，默认为false，全量更新
      * @param string $RepoType tcr或者不填
+     * @param VolumeInfo $VolumeInfos 数据卷信息
+     * @param VolumeMountInfo $VolumeMountInfos 数据卷挂载点信息
      */
     function __construct()
     {
@@ -416,6 +432,16 @@ class DeployContainerGroupRequest extends AbstractModel
 
         if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
             $this->RepoType = $param["RepoType"];
+        }
+
+        if (array_key_exists("VolumeInfos",$param) and $param["VolumeInfos"] !== null) {
+            $this->VolumeInfos = new VolumeInfo();
+            $this->VolumeInfos->deserialize($param["VolumeInfos"]);
+        }
+
+        if (array_key_exists("VolumeMountInfos",$param) and $param["VolumeMountInfos"] !== null) {
+            $this->VolumeMountInfos = new VolumeMountInfo();
+            $this->VolumeMountInfos->deserialize($param["VolumeMountInfos"]);
         }
     }
 }

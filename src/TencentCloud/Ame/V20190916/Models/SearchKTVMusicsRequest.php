@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyWord() 获取搜索关键词
  * @method void setKeyWord(string $KeyWord) 设置搜索关键词
- * @method integer getOffset() 获取分页游标
- * @method void setOffset(integer $Offset) 设置分页游标
- * @method integer getLimit() 获取分页页长
- * @method void setLimit(integer $Limit) 设置分页页长
+ * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。取值范围：小于5000
+ * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。取值范围：小于5000
+ * @method integer getLimit() 获取分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。
+ * @method void setLimit(integer $Limit) 设置分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。
  */
 class SearchKTVMusicsRequest extends AbstractModel
 {
@@ -35,19 +39,23 @@ class SearchKTVMusicsRequest extends AbstractModel
     public $KeyWord;
 
     /**
-     * @var integer 分页游标
+     * @var integer 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。取值范围：小于5000
      */
     public $Offset;
 
     /**
-     * @var integer 分页页长
+     * @var integer 分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。
      */
     public $Limit;
 
     /**
      * @param string $KeyWord 搜索关键词
-     * @param integer $Offset 分页游标
-     * @param integer $Limit 分页页长
+     * @param integer $Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。取值范围：小于5000
+     * @param integer $Limit 分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000。
      */
     function __construct()
     {

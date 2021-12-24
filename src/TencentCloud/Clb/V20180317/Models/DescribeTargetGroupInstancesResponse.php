@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTargetGroupInstances返回参数结构体
  *
- * @method integer getTotalCount() 获取本次查询的结果数量
- * @method void setTotalCount(integer $TotalCount) 设置本次查询的结果数量
- * @method array getTargetGroupInstanceSet() 获取绑定的服务器信息
- * @method void setTargetGroupInstanceSet(array $TargetGroupInstanceSet) 设置绑定的服务器信息
- * @method integer getRealCount() 获取实际统计数量，不受Limit，Offset，CAM的影响
- * @method void setRealCount(integer $RealCount) 设置实际统计数量，不受Limit，Offset，CAM的影响
+ * @method integer getTotalCount() 获取本次查询的结果数量。
+ * @method void setTotalCount(integer $TotalCount) 设置本次查询的结果数量。
+ * @method array getTargetGroupInstanceSet() 获取绑定的服务器信息。
+ * @method void setTargetGroupInstanceSet(array $TargetGroupInstanceSet) 设置绑定的服务器信息。
+ * @method integer getRealCount() 获取实际统计数量，不受Limit、Offset、CAM的影响。
+ * @method void setRealCount(integer $RealCount) 设置实际统计数量，不受Limit、Offset、CAM的影响。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTargetGroupInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer 本次查询的结果数量
+     * @var integer 本次查询的结果数量。
      */
     public $TotalCount;
 
     /**
-     * @var array 绑定的服务器信息
+     * @var array 绑定的服务器信息。
      */
     public $TargetGroupInstanceSet;
 
     /**
-     * @var integer 实际统计数量，不受Limit，Offset，CAM的影响
+     * @var integer 实际统计数量，不受Limit、Offset、CAM的影响。
      */
     public $RealCount;
 
@@ -52,9 +52,9 @@ class DescribeTargetGroupInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 本次查询的结果数量
-     * @param array $TargetGroupInstanceSet 绑定的服务器信息
-     * @param integer $RealCount 实际统计数量，不受Limit，Offset，CAM的影响
+     * @param integer $TotalCount 本次查询的结果数量。
+     * @param array $TargetGroupInstanceSet 绑定的服务器信息。
+     * @param integer $RealCount 实际统计数量，不受Limit、Offset、CAM的影响。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

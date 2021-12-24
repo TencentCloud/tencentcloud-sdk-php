@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 过滤结果
  *
- * @method integer getType() 获取过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+ * @method integer getType() 获取过滤类型，1：色情，2：涉毒，3：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+ * @method void setType(integer $Type) 设置过滤类型，1：色情，2：涉毒，3：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWord() 获取过滤命中关键词
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class VoiceFilter extends AbstractModel
 {
     /**
-     * @var integer 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * @var integer 过滤类型，1：色情，2：涉毒，3：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -44,7 +44,7 @@ class VoiceFilter extends AbstractModel
     public $Word;
 
     /**
-     * @param integer $Type 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * @param integer $Type 过滤类型，1：色情，2：涉毒，3：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Word 过滤命中关键词
 注意：此字段可能返回 null，表示取不到有效值。

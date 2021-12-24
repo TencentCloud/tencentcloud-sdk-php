@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取默认default，TCB表示是小程序云开发创建的
  * @method void setType(string $Type) 设置默认default，TCB表示是小程序云开发创建的
  */
-class Namespace extends AbstractModel
+class NamespaceInfo extends AbstractModel
 {
     /**
      * @var string 命名空间创建时间

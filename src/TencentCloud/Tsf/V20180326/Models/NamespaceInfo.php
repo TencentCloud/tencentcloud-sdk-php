@@ -77,7 +77,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsHaEnable(string $IsHaEnable) 设置是否开启高可用
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Namespace extends AbstractModel
+class NamespaceInfo extends AbstractModel
 {
     /**
      * @var string 命名空间ID

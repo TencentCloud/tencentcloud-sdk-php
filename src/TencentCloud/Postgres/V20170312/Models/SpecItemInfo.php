@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSpecCode() 获取规格ID
  * @method void setSpecCode(string $SpecCode) 设置规格ID
- * @method string getVersion() 获取PostgreSQL的内核版本编号
- * @method void setVersion(string $Version) 设置PostgreSQL的内核版本编号
+ * @method string getVersion() 获取PostgreSQL的版本编号
+ * @method void setVersion(string $Version) 设置PostgreSQL的版本编号
  * @method string getVersionName() 获取内核编号对应的完整版本名称
  * @method void setVersionName(string $VersionName) 设置内核编号对应的完整版本名称
  * @method integer getCpu() 获取CPU核数
@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) 设置该规格对应的计费ID
  * @method string getType() 获取机器类型
  * @method void setType(string $Type) 设置机器类型
+ * @method string getMajorVersion() 获取PostgreSQL的主要版本编号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMajorVersion(string $MajorVersion) 设置PostgreSQL的主要版本编号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKernelVersion() 获取PostgreSQL的内核版本编号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKernelVersion(string $KernelVersion) 设置PostgreSQL的内核版本编号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpecItemInfo extends AbstractModel
 {
@@ -49,7 +57,7 @@ class SpecItemInfo extends AbstractModel
     public $SpecCode;
 
     /**
-     * @var string PostgreSQL的内核版本编号
+     * @var string PostgreSQL的版本编号
      */
     public $Version;
 
@@ -94,8 +102,20 @@ class SpecItemInfo extends AbstractModel
     public $Type;
 
     /**
+     * @var string PostgreSQL的主要版本编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MajorVersion;
+
+    /**
+     * @var string PostgreSQL的内核版本编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KernelVersion;
+
+    /**
      * @param string $SpecCode 规格ID
-     * @param string $Version PostgreSQL的内核版本编号
+     * @param string $Version PostgreSQL的版本编号
      * @param string $VersionName 内核编号对应的完整版本名称
      * @param integer $Cpu CPU核数
      * @param integer $Memory 内存大小，单位：MB
@@ -104,6 +124,10 @@ class SpecItemInfo extends AbstractModel
      * @param integer $Qps 该规格的预估QPS
      * @param integer $Pid 该规格对应的计费ID
      * @param string $Type 机器类型
+     * @param string $MajorVersion PostgreSQL的主要版本编号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KernelVersion PostgreSQL的内核版本编号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -156,6 +180,14 @@ class SpecItemInfo extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("MajorVersion",$param) and $param["MajorVersion"] !== null) {
+            $this->MajorVersion = $param["MajorVersion"];
+        }
+
+        if (array_key_exists("KernelVersion",$param) and $param["KernelVersion"] !== null) {
+            $this->KernelVersion = $param["KernelVersion"];
         }
     }
 }

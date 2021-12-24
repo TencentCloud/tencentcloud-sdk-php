@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBizId() 获取应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
  * @method void setBizId(integer $BizId) 设置应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
- * @method array getScenes() 获取语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
- * @method void setScenes(array $Scenes) 设置语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+ * @method array getScenes() 获取语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+ * @method void setScenes(array $Scenes) 设置语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
  * @method boolean getLive() 获取是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
  * @method void setLive(boolean $Live) 设置是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
  * @method array getTasks() 获取语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
  * @method string getCallback() 获取异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
  * @method void setCallback(string $Callback) 设置异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
+ * @method string getLang() 获取语言，目前jp代表日语
+ * @method void setLang(string $Lang) 设置语言，目前jp代表日语
  */
 class ScanVoiceRequest extends AbstractModel
 {
@@ -43,7 +45,7 @@ class ScanVoiceRequest extends AbstractModel
     public $BizId;
 
     /**
-     * @var array 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+     * @var array 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
      */
     public $Scenes;
 
@@ -65,13 +67,19 @@ class ScanVoiceRequest extends AbstractModel
     public $Callback;
 
     /**
+     * @var string 语言，目前jp代表日语
+     */
+    public $Lang;
+
+    /**
      * @param integer $BizId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
-     * @param array $Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+     * @param array $Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
      * @param boolean $Live 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
      * @param array $Tasks 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
 <li>DataId：数据的唯一ID</li>
 <li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
      * @param string $Callback 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
+     * @param string $Lang 语言，目前jp代表日语
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class ScanVoiceRequest extends AbstractModel
 
         if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
             $this->Callback = $param["Callback"];
+        }
+
+        if (array_key_exists("Lang",$param) and $param["Lang"] !== null) {
+            $this->Lang = $param["Lang"];
         }
     }
 }

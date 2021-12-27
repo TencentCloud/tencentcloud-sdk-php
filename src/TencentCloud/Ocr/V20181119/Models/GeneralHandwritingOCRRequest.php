@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
  * @method boolean getEnableWordPolygon() 获取是否开启单字的四点定位坐标输出，默认值为false。
  * @method void setEnableWordPolygon(boolean $EnableWordPolygon) 设置是否开启单字的四点定位坐标输出，默认值为false。
+ * @method boolean getEnableDetectText() 获取文本检测开关，默认值为true。
+设置为false表示直接进行单行识别，可适用于识别单行手写体签名场景。
+ * @method void setEnableDetectText(boolean $EnableDetectText) 设置文本检测开关，默认值为true。
+设置为false表示直接进行单行识别，可适用于识别单行手写体签名场景。
  */
 class GeneralHandwritingOCRRequest extends AbstractModel
 {
@@ -76,6 +80,12 @@ class GeneralHandwritingOCRRequest extends AbstractModel
     public $EnableWordPolygon;
 
     /**
+     * @var boolean 文本检测开关，默认值为true。
+设置为false表示直接进行单行识别，可适用于识别单行手写体签名场景。
+     */
+    public $EnableDetectText;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -88,6 +98,8 @@ class GeneralHandwritingOCRRequest extends AbstractModel
      * @param string $Scene 场景字段，默认不用填写。
 可选值:only_hw  表示只输出手写体识别结果，过滤印刷体。
      * @param boolean $EnableWordPolygon 是否开启单字的四点定位坐标输出，默认值为false。
+     * @param boolean $EnableDetectText 文本检测开关，默认值为true。
+设置为false表示直接进行单行识别，可适用于识别单行手写体签名场景。
      */
     function __construct()
     {
@@ -116,6 +128,10 @@ class GeneralHandwritingOCRRequest extends AbstractModel
 
         if (array_key_exists("EnableWordPolygon",$param) and $param["EnableWordPolygon"] !== null) {
             $this->EnableWordPolygon = $param["EnableWordPolygon"];
+        }
+
+        if (array_key_exists("EnableDetectText",$param) and $param["EnableDetectText"] !== null) {
+            $this->EnableDetectText = $param["EnableDetectText"];
         }
     }
 }

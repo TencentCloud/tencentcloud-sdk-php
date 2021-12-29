@@ -188,6 +188,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGrant(PrometheusInstanceGrantInfo $Grant) 设置实例的授权信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGrafanaInstanceId() 获取绑定的 Grafana 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGrafanaInstanceId(string $GrafanaInstanceId) 设置绑定的 Grafana 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusInstancesItem extends AbstractModel
 {
@@ -380,6 +384,12 @@ class PrometheusInstancesItem extends AbstractModel
     public $Grant;
 
     /**
+     * @var string 绑定的 Grafana 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GrafanaInstanceId;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $InstanceName 实例名称。
      * @param integer $InstanceChargeType 实例计费模式。取值范围：
@@ -463,6 +473,8 @@ class PrometheusInstancesItem extends AbstractModel
      * @param string $GrafanaIpWhiteList Grafana IP 白名单列表，使用英文分号分隔
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PrometheusInstanceGrantInfo $Grant 实例的授权信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GrafanaInstanceId 绑定的 Grafana 实例 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -586,6 +598,10 @@ class PrometheusInstancesItem extends AbstractModel
         if (array_key_exists("Grant",$param) and $param["Grant"] !== null) {
             $this->Grant = new PrometheusInstanceGrantInfo();
             $this->Grant->deserialize($param["Grant"]);
+        }
+
+        if (array_key_exists("GrafanaInstanceId",$param) and $param["GrafanaInstanceId"] !== null) {
+            $this->GrafanaInstanceId = $param["GrafanaInstanceId"];
         }
     }
 }

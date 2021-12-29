@@ -85,7 +85,6 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 获取租户下命名空间列表
  * @method Models\DescribeNamespaceBundlesOptResponse DescribeNamespaceBundlesOpt(Models\DescribeNamespaceBundlesOptRequest $req) 运营端获取命名空间bundle列表
  * @method Models\DescribeNodeHealthOptResponse DescribeNodeHealthOpt(Models\DescribeNodeHealthOptRequest $req) 运营端获节点健康状态
- * @method Models\DescribeProducersResponse DescribeProducers(Models\DescribeProducersRequest $req) 获取生产者列表，仅显示在线的生产者
  * @method Models\DescribePublisherSummaryResponse DescribePublisherSummary(Models\DescribePublisherSummaryRequest $req) 获取消息生产概览信息
  * @method Models\DescribePublishersResponse DescribePublishers(Models\DescribePublishersRequest $req) 获取生产者信息列表
  * @method Models\DescribeRocketMQClusterResponse DescribeRocketMQCluster(Models\DescribeRocketMQClusterRequest $req) 获取单个RocketMQ集群信息

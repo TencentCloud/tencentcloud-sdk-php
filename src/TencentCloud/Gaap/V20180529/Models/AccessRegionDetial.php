@@ -18,7 +18,7 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 根据源站查询的可用加速区域信息及对应的可选带宽和并发量
+ * 根据源站查询的可用加速区域信息及对应的可选带宽和并发量。
  *
  * @method string getRegionId() 获取区域ID
  * @method void setRegionId(string $RegionId) 设置区域ID

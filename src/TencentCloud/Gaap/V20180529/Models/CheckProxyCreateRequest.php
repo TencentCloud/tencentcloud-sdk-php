@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
  * @method string getNetworkType() 获取网络类型，可取值：normal、cn2，默认值normal
  * @method void setNetworkType(string $NetworkType) 设置网络类型，可取值：normal、cn2，默认值normal
- * @method string getPackageType() 获取通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
- * @method void setPackageType(string $PackageType) 设置通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+ * @method string getPackageType() 获取通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+ * @method void setPackageType(string $PackageType) 设置通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class CheckProxyCreateRequest extends AbstractModel
     public $NetworkType;
 
     /**
-     * @var string 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     * @var string 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
      */
     public $PackageType;
 
@@ -87,7 +87,7 @@ class CheckProxyCreateRequest extends AbstractModel
      * @param string $GroupId 如果在通道组下创建通道，需要填写通道组的ID
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
      * @param string $NetworkType 网络类型，可取值：normal、cn2，默认值normal
-     * @param string $PackageType 通道组类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+     * @param string $PackageType 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
      */
     function __construct()
     {

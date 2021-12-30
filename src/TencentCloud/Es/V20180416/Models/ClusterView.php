@@ -58,6 +58,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInitializingShardNum(integer $InitializingShardNum) 设置初始化中的分片个数
  * @method integer getUnassignedShardNum() 获取未分配的分片个数
  * @method void setUnassignedShardNum(integer $UnassignedShardNum) 设置未分配的分片个数
+ * @method integer getTotalCosStorage() 获取企业版COS存储容量大小，单位GB
+ * @method void setTotalCosStorage(integer $TotalCosStorage) 设置企业版COS存储容量大小，单位GB
+ * @method string getSearchableSnapshotCosBucket() 获取企业版集群可搜索快照cos存放的bucket名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSearchableSnapshotCosBucket(string $SearchableSnapshotCosBucket) 设置企业版集群可搜索快照cos存放的bucket名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSearchableSnapshotCosAppId() 获取企业版集群可搜索快照cos所属appid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSearchableSnapshotCosAppId(string $SearchableSnapshotCosAppId) 设置企业版集群可搜索快照cos所属appid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterView extends AbstractModel
 {
@@ -157,6 +167,23 @@ class ClusterView extends AbstractModel
     public $UnassignedShardNum;
 
     /**
+     * @var integer 企业版COS存储容量大小，单位GB
+     */
+    public $TotalCosStorage;
+
+    /**
+     * @var string 企业版集群可搜索快照cos存放的bucket名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SearchableSnapshotCosBucket;
+
+    /**
+     * @var string 企业版集群可搜索快照cos所属appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SearchableSnapshotCosAppId;
+
+    /**
      * @param float $Health 集群健康状态
      * @param float $Visible 集群是否可见
      * @param float $Break 集群是否熔断
@@ -176,6 +203,11 @@ class ClusterView extends AbstractModel
      * @param integer $RelocatingShardNum 迁移中的分片个数
      * @param integer $InitializingShardNum 初始化中的分片个数
      * @param integer $UnassignedShardNum 未分配的分片个数
+     * @param integer $TotalCosStorage 企业版COS存储容量大小，单位GB
+     * @param string $SearchableSnapshotCosBucket 企业版集群可搜索快照cos存放的bucket名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SearchableSnapshotCosAppId 企业版集群可搜索快照cos所属appid
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -264,6 +296,18 @@ class ClusterView extends AbstractModel
 
         if (array_key_exists("UnassignedShardNum",$param) and $param["UnassignedShardNum"] !== null) {
             $this->UnassignedShardNum = $param["UnassignedShardNum"];
+        }
+
+        if (array_key_exists("TotalCosStorage",$param) and $param["TotalCosStorage"] !== null) {
+            $this->TotalCosStorage = $param["TotalCosStorage"];
+        }
+
+        if (array_key_exists("SearchableSnapshotCosBucket",$param) and $param["SearchableSnapshotCosBucket"] !== null) {
+            $this->SearchableSnapshotCosBucket = $param["SearchableSnapshotCosBucket"];
+        }
+
+        if (array_key_exists("SearchableSnapshotCosAppId",$param) and $param["SearchableSnapshotCosAppId"] !== null) {
+            $this->SearchableSnapshotCosAppId = $param["SearchableSnapshotCosAppId"];
         }
     }
 }

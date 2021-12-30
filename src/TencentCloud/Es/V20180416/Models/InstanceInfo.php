@@ -94,29 +94,29 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableHotWarmMode(boolean $EnableHotWarmMode) 设置是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWarmNodeType() 获取冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method string getWarmNodeType() 获取温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmNodeType(string $WarmNodeType) 设置冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+ * @method void setWarmNodeType(string $WarmNodeType) 设置温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWarmNodeNum() 获取冷节点个数
+ * @method integer getWarmNodeNum() 获取温节点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmNodeNum(integer $WarmNodeNum) 设置冷节点个数
+ * @method void setWarmNodeNum(integer $WarmNodeNum) 设置温节点个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWarmCpuNum() 获取冷节点CPU核数
+ * @method integer getWarmCpuNum() 获取温节点CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmCpuNum(integer $WarmCpuNum) 设置冷节点CPU核数
+ * @method void setWarmCpuNum(integer $WarmCpuNum) 设置温节点CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWarmMemSize() 获取冷节点内存内存大小，单位GB
+ * @method integer getWarmMemSize() 获取温节点内存内存大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmMemSize(integer $WarmMemSize) 设置冷节点内存内存大小，单位GB
+ * @method void setWarmMemSize(integer $WarmMemSize) 设置温节点内存内存大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWarmDiskType() 获取冷节点磁盘类型
+ * @method string getWarmDiskType() 获取温节点磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmDiskType(string $WarmDiskType) 设置冷节点磁盘类型
+ * @method void setWarmDiskType(string $WarmDiskType) 设置温节点磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWarmDiskSize() 获取冷节点磁盘大小，单位GB
+ * @method integer getWarmDiskSize() 获取温节点磁盘大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWarmDiskSize(integer $WarmDiskSize) 设置冷节点磁盘大小，单位GB
+ * @method void setWarmDiskSize(integer $WarmDiskSize) 设置温节点磁盘大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNodeInfoList() 获取集群节点信息列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -183,6 +183,54 @@ use TencentCloud\Common\AbstractModel;
  * @method array getSecurityGroups() 获取安全组id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroups(array $SecurityGroups) 设置安全组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getColdNodeType() 获取冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColdNodeType(string $ColdNodeType) 设置冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getColdNodeNum() 获取冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColdNodeNum(integer $ColdNodeNum) 设置冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getColdCpuNum() 获取冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColdCpuNum(integer $ColdCpuNum) 设置冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getColdMemSize() 获取冷节点内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColdMemSize(integer $ColdMemSize) 设置冷节点内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getColdDiskType() 获取冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColdDiskType(string $ColdDiskType) 设置冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getColdDiskSize() 获取冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColdDiskSize(integer $ColdDiskSize) 设置冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFrozenNodeType() 获取冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrozenNodeType(string $FrozenNodeType) 设置冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFrozenNodeNum() 获取冻节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrozenNodeNum(integer $FrozenNodeNum) 设置冻节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFrozenCpuNum() 获取冻节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrozenCpuNum(integer $FrozenCpuNum) 设置冻节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFrozenMemSize() 获取冻节点内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrozenMemSize(integer $FrozenMemSize) 设置冻节点内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFrozenDiskType() 获取冻节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrozenDiskType(string $FrozenDiskType) 设置冻节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFrozenDiskSize() 获取冻节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrozenDiskSize(integer $FrozenDiskSize) 设置冻节点磁盘大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
@@ -369,37 +417,37 @@ class InstanceInfo extends AbstractModel
     public $EnableHotWarmMode;
 
     /**
-     * @var string 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @var string 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmNodeType;
 
     /**
-     * @var integer 冷节点个数
+     * @var integer 温节点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmNodeNum;
 
     /**
-     * @var integer 冷节点CPU核数
+     * @var integer 温节点CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmCpuNum;
 
     /**
-     * @var integer 冷节点内存内存大小，单位GB
+     * @var integer 温节点内存内存大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmMemSize;
 
     /**
-     * @var string 冷节点磁盘类型
+     * @var string 温节点磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmDiskType;
 
     /**
-     * @var integer 冷节点磁盘大小，单位GB
+     * @var integer 温节点磁盘大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmDiskSize;
@@ -506,6 +554,78 @@ class InstanceInfo extends AbstractModel
     public $SecurityGroups;
 
     /**
+     * @var string 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColdNodeType;
+
+    /**
+     * @var integer 冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColdNodeNum;
+
+    /**
+     * @var integer 冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColdCpuNum;
+
+    /**
+     * @var integer 冷节点内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColdMemSize;
+
+    /**
+     * @var string 冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColdDiskType;
+
+    /**
+     * @var integer 冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColdDiskSize;
+
+    /**
+     * @var string 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrozenNodeType;
+
+    /**
+     * @var integer 冻节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrozenNodeNum;
+
+    /**
+     * @var integer 冻节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrozenCpuNum;
+
+    /**
+     * @var integer 冻节点内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrozenMemSize;
+
+    /**
+     * @var string 冻节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrozenDiskType;
+
+    /**
+     * @var integer 冻节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FrozenDiskSize;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -543,17 +663,17 @@ class InstanceInfo extends AbstractModel
      * @param string $LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      * @param boolean $EnableHotWarmMode 是否为冷热集群<li>true: 冷热集群</li><li>false: 非冷热集群</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WarmNodeType 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * @param string $WarmNodeType 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WarmNodeNum 冷节点个数
+     * @param integer $WarmNodeNum 温节点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WarmCpuNum 冷节点CPU核数
+     * @param integer $WarmCpuNum 温节点CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WarmMemSize 冷节点内存内存大小，单位GB
+     * @param integer $WarmMemSize 温节点内存内存大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WarmDiskType 冷节点磁盘类型
+     * @param string $WarmDiskType 温节点磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WarmDiskSize 冷节点磁盘大小，单位GB
+     * @param integer $WarmDiskSize 温节点磁盘大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NodeInfoList 集群节点信息列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -587,6 +707,30 @@ class InstanceInfo extends AbstractModel
      * @param string $Protocol 集群网络通讯协议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroups 安全组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ColdNodeType 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ColdNodeNum 冷节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ColdCpuNum 冷节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ColdMemSize 冷节点内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ColdDiskType 冷节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ColdDiskSize 冷节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FrozenNodeType 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FrozenNodeNum 冻节点个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FrozenCpuNum 冻节点CPU核数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FrozenMemSize 冻节点内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FrozenDiskType 冻节点磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FrozenDiskSize 冻节点磁盘大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -858,6 +1002,54 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
             $this->SecurityGroups = $param["SecurityGroups"];
+        }
+
+        if (array_key_exists("ColdNodeType",$param) and $param["ColdNodeType"] !== null) {
+            $this->ColdNodeType = $param["ColdNodeType"];
+        }
+
+        if (array_key_exists("ColdNodeNum",$param) and $param["ColdNodeNum"] !== null) {
+            $this->ColdNodeNum = $param["ColdNodeNum"];
+        }
+
+        if (array_key_exists("ColdCpuNum",$param) and $param["ColdCpuNum"] !== null) {
+            $this->ColdCpuNum = $param["ColdCpuNum"];
+        }
+
+        if (array_key_exists("ColdMemSize",$param) and $param["ColdMemSize"] !== null) {
+            $this->ColdMemSize = $param["ColdMemSize"];
+        }
+
+        if (array_key_exists("ColdDiskType",$param) and $param["ColdDiskType"] !== null) {
+            $this->ColdDiskType = $param["ColdDiskType"];
+        }
+
+        if (array_key_exists("ColdDiskSize",$param) and $param["ColdDiskSize"] !== null) {
+            $this->ColdDiskSize = $param["ColdDiskSize"];
+        }
+
+        if (array_key_exists("FrozenNodeType",$param) and $param["FrozenNodeType"] !== null) {
+            $this->FrozenNodeType = $param["FrozenNodeType"];
+        }
+
+        if (array_key_exists("FrozenNodeNum",$param) and $param["FrozenNodeNum"] !== null) {
+            $this->FrozenNodeNum = $param["FrozenNodeNum"];
+        }
+
+        if (array_key_exists("FrozenCpuNum",$param) and $param["FrozenCpuNum"] !== null) {
+            $this->FrozenCpuNum = $param["FrozenCpuNum"];
+        }
+
+        if (array_key_exists("FrozenMemSize",$param) and $param["FrozenMemSize"] !== null) {
+            $this->FrozenMemSize = $param["FrozenMemSize"];
+        }
+
+        if (array_key_exists("FrozenDiskType",$param) and $param["FrozenDiskType"] !== null) {
+            $this->FrozenDiskType = $param["FrozenDiskType"];
+        }
+
+        if (array_key_exists("FrozenDiskSize",$param) and $param["FrozenDiskSize"] !== null) {
+            $this->FrozenDiskSize = $param["FrozenDiskSize"];
         }
     }
 }

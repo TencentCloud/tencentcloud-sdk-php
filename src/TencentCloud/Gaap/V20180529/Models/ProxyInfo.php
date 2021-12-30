@@ -128,9 +128,11 @@ CLONING表示复制中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkType(string $NetworkType) 设置网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageType() 获取通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+ * @method string getPackageType() 获取通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageType(string $PackageType) 设置通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+ * @method void setPackageType(string $PackageType) 设置通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBanStatus() 获取封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -314,7 +316,8 @@ CLONING表示复制中。
     public $NetworkType;
 
     /**
-     * @var string 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+     * @var string 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
@@ -386,7 +389,8 @@ CLONING表示复制中。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+     * @param string $PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
 注意：此字段可能返回 null，表示取不到有效值。

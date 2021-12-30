@@ -33,6 +33,7 @@ AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地�
 RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
 GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
 IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
+PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。
  * @method void setFilters(array $Filters) 设置过滤条件。   
 每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
 ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。   
@@ -40,6 +41,7 @@ AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地�
 RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
 GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
 IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
+PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。
  * @method array getProxyIds() 获取（新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
  * @method void setProxyIds(array $ProxyIds) 设置（新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
  * @method array getTagSet() 获取标签列表，当存在该字段时，拉取对应标签下的资源列表。
@@ -98,6 +100,7 @@ AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地�
 RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
 GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
 IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
+PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。
      */
     public $Filters;
 
@@ -148,6 +151,7 @@ AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地�
 RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
 GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
 IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
+PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。
      * @param array $ProxyIds （新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      * @param array $TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。

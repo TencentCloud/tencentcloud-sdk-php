@@ -55,7 +55,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DeleteSecurityPolicyResponse DeleteSecurityPolicy(Models\DeleteSecurityPolicyRequest $req) 删除安全策略
  * @method Models\DeleteSecurityRulesResponse DeleteSecurityRules(Models\DeleteSecurityRulesRequest $req) 删除安全策略规则
  * @method Models\DescribeAccessRegionsResponse DescribeAccessRegions(Models\DescribeAccessRegionsRequest $req) 本接口（DescribeAccessRegions）用于查询加速区域，即客户端接入区域。
- * @method Models\DescribeAccessRegionsByDestRegionResponse DescribeAccessRegionsByDestRegion(Models\DescribeAccessRegionsByDestRegionRequest $req) 本接口（DescribeAccessRegionsByDestRegion）根据源站区域查询可用的加速区域列表
+ * @method Models\DescribeAccessRegionsByDestRegionResponse DescribeAccessRegionsByDestRegion(Models\DescribeAccessRegionsByDestRegionRequest $req) 本接口（DescribeAccessRegionsByDestRegion）根据源站区域查询可用的加速区域列表。
  * @method Models\DescribeBlackHeaderResponse DescribeBlackHeader(Models\DescribeBlackHeaderRequest $req) 本接口（DescribeBlackHeader）用于查询禁用的自定义header 名称
  * @method Models\DescribeCertificateDetailResponse DescribeCertificateDetail(Models\DescribeCertificateDetailRequest $req) 本接口（DescribeCertificateDetail）用于查询证书详情，包括证书ID，证书名字，证书类型，证书内容以及密钥等信息。
  * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) 本接口（DescribeCertificates）用来查询可以使用的证书列表。

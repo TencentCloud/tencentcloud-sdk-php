@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启
  * @method boolean getForceUpdate() 获取是否重新安装
  * @method void setForceUpdate(boolean $ForceUpdate) 设置是否重新安装
+ * @method integer getPluginType() 获取0：系统插件
+ * @method void setPluginType(integer $PluginType) 设置0：系统插件
  */
 class UpdatePluginsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UpdatePluginsRequest extends AbstractModel
     public $ForceUpdate;
 
     /**
+     * @var integer 0：系统插件
+     */
+    public $PluginType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param array $InstallPluginList 需要安装的插件名列表
      * @param array $RemovePluginList 需要卸载的插件名列表
      * @param boolean $ForceRestart 是否强制重启
      * @param boolean $ForceUpdate 是否重新安装
+     * @param integer $PluginType 0：系统插件
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpdatePluginsRequest extends AbstractModel
 
         if (array_key_exists("ForceUpdate",$param) and $param["ForceUpdate"] !== null) {
             $this->ForceUpdate = $param["ForceUpdate"];
+        }
+
+        if (array_key_exists("PluginType",$param) and $param["PluginType"] !== null) {
+            $this->PluginType = $param["PluginType"];
         }
     }
 }

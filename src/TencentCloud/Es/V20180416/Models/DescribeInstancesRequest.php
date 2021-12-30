@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) 设置节点标签信息列表
  * @method array getIpList() 获取私有网络vip列表
  * @method void setIpList(array $IpList) 设置私有网络vip列表
+ * @method array getZoneList() 获取可用区列表
+ * @method void setZoneList(array $ZoneList) 设置可用区列表
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $IpList;
 
     /**
+     * @var array 可用区列表
+     */
+    public $ZoneList;
+
+    /**
      * @param string $Zone 集群实例所属可用区，不传则默认所有可用区
      * @param array $InstanceIds 集群实例ID列表
      * @param array $InstanceNames 集群实例名称列表
@@ -96,6 +103,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      * @param array $TagList 节点标签信息列表
      * @param array $IpList 私有网络vip列表
+     * @param array $ZoneList 可用区列表
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
             $this->IpList = $param["IpList"];
+        }
+
+        if (array_key_exists("ZoneList",$param) and $param["ZoneList"] !== null) {
+            $this->ZoneList = $param["ZoneList"];
         }
     }
 }

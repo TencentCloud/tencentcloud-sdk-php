@@ -32,14 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserGroupIds(array $UserGroupIds) 设置用户所属用户组ID列表。
  * @method string getPhone() 获取用户手机号。例如：+86-1xxxxxxxxxx。
  * @method void setPhone(string $Phone) 设置用户手机号。例如：+86-1xxxxxxxxxx。
- * @method string getOrgNodeId() 获取用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
- * @method void setOrgNodeId(string $OrgNodeId) 设置用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+ * @method string getOrgNodeId() 获取用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+ * @method void setOrgNodeId(string $OrgNodeId) 设置用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
  * @method string getExpirationTime() 获取用户过期时间，遵循 ISO 8601 标准。
  * @method void setExpirationTime(string $ExpirationTime) 设置用户过期时间，遵循 ISO 8601 标准。
  * @method string getEmail() 获取用户邮箱。
  * @method void setEmail(string $Email) 设置用户邮箱。
  * @method boolean getPwdNeedReset() 获取密码是否需要重置，为空默认为false不需要重置密码。
  * @method void setPwdNeedReset(boolean $PwdNeedReset) 设置密码是否需要重置，为空默认为false不需要重置密码。
+ * @method array getSecondaryOrgNodeIdList() 获取用户所属的次要组织机构ID列表。
+ * @method void setSecondaryOrgNodeIdList(array $SecondaryOrgNodeIdList) 设置用户所属的次要组织机构ID列表。
  */
 class CreateUserRequest extends AbstractModel
 {
@@ -74,7 +76,7 @@ class CreateUserRequest extends AbstractModel
     public $Phone;
 
     /**
-     * @var string 用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+     * @var string 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
      */
     public $OrgNodeId;
 
@@ -94,16 +96,22 @@ class CreateUserRequest extends AbstractModel
     public $PwdNeedReset;
 
     /**
+     * @var array 用户所属的次要组织机构ID列表。
+     */
+    public $SecondaryOrgNodeIdList;
+
+    /**
      * @param string $UserName 用户名，长度限制：64个字符。
      * @param string $Password 用户密码， 需要符合密码策略的配置。
      * @param string $DisplayName 昵称，长度限制：64个字符。 默认与用户名相同。
      * @param string $Description 用户备注，长度限制：512个字符。
      * @param array $UserGroupIds 用户所属用户组ID列表。
      * @param string $Phone 用户手机号。例如：+86-1xxxxxxxxxx。
-     * @param string $OrgNodeId 用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+     * @param string $OrgNodeId 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
      * @param string $ExpirationTime 用户过期时间，遵循 ISO 8601 标准。
      * @param string $Email 用户邮箱。
      * @param boolean $PwdNeedReset 密码是否需要重置，为空默认为false不需要重置密码。
+     * @param array $SecondaryOrgNodeIdList 用户所属的次要组织机构ID列表。
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateUserRequest extends AbstractModel
 
         if (array_key_exists("PwdNeedReset",$param) and $param["PwdNeedReset"] !== null) {
             $this->PwdNeedReset = $param["PwdNeedReset"];
+        }
+
+        if (array_key_exists("SecondaryOrgNodeIdList",$param) and $param["SecondaryOrgNodeIdList"] !== null) {
+            $this->SecondaryOrgNodeIdList = $param["SecondaryOrgNodeIdList"];
         }
     }
 }

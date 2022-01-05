@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodePoolOs(string $NodePoolOs) 设置节点池os
  * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+ * @method array getTags() 获取资源标签
+ * @method void setTags(array $Tags) 设置资源标签
  */
 class CreateClusterNodePoolRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $OsCustomizeType;
 
     /**
+     * @var array 资源标签
+     */
+    public $Tags;
+
+    /**
      * @param string $ClusterId cluster id
      * @param string $AutoScalingGroupPara AutoScalingGroupPara AS组参数
      * @param string $LaunchConfigurePara LaunchConfigurePara 运行参数
@@ -104,6 +111,7 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param array $Taints Taints互斥
      * @param string $NodePoolOs 节点池os
      * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * @param array $Tags 资源标签
      */
     function __construct()
     {
@@ -167,6 +175,15 @@ class CreateClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
             $this->OsCustomizeType = $param["OsCustomizeType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

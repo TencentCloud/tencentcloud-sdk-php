@@ -88,6 +88,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlowRequestSavedThreshold(integer $SlowRequestSavedThreshold) 设置慢调用保存阈值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogRegion() 获取cls日志所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogRegion(string $LogRegion) 设置cls日志所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogSource() 获取日志来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogSource(string $LogSource) 设置日志来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsRelatedLog() 获取日志功能开关 0 关 | 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsRelatedLog(integer $IsRelatedLog) 设置日志功能开关 0 关 | 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogTopicID() 获取日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogTopicID(string $LogTopicID) 设置日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -198,6 +214,30 @@ class ApmInstanceDetail extends AbstractModel
     public $SlowRequestSavedThreshold;
 
     /**
+     * @var string cls日志所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogRegion;
+
+    /**
+     * @var string 日志来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogSource;
+
+    /**
+     * @var integer 日志功能开关 0 关 | 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsRelatedLog;
+
+    /**
+     * @var string 日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogTopicID;
+
+    /**
      * @param float $AmountOfUsedStorage 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 实例名
@@ -231,6 +271,14 @@ class ApmInstanceDetail extends AbstractModel
      * @param integer $ErrorSample 是否开启错误采样 0  关 1 开
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SlowRequestSavedThreshold 慢调用保存阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogRegion cls日志所在地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogSource 日志来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsRelatedLog 日志功能开关 0 关 | 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogTopicID 日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -321,6 +369,22 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("SlowRequestSavedThreshold",$param) and $param["SlowRequestSavedThreshold"] !== null) {
             $this->SlowRequestSavedThreshold = $param["SlowRequestSavedThreshold"];
+        }
+
+        if (array_key_exists("LogRegion",$param) and $param["LogRegion"] !== null) {
+            $this->LogRegion = $param["LogRegion"];
+        }
+
+        if (array_key_exists("LogSource",$param) and $param["LogSource"] !== null) {
+            $this->LogSource = $param["LogSource"];
+        }
+
+        if (array_key_exists("IsRelatedLog",$param) and $param["IsRelatedLog"] !== null) {
+            $this->IsRelatedLog = $param["IsRelatedLog"];
+        }
+
+        if (array_key_exists("LogTopicID",$param) and $param["LogTopicID"] !== null) {
+            $this->LogTopicID = $param["LogTopicID"];
         }
     }
 }

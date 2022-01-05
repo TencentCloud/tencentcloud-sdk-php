@@ -44,9 +44,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreationTime(string $CreationTime) 设置用户创建时间，遵循 ISO 8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrgPath() 获取用户所属组织机构路径。
+ * @method string getOrgPath() 获取用户所属主组织机构的路径ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrgPath(string $OrgPath) 设置用户所属组织机构路径。
+ * @method void setOrgPath(string $OrgPath) 设置用户所属主组织机构的路径ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhone() 获取带国家号的用户手机号，例如+86-00000000000。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -108,7 +108,7 @@ class UserInformation extends AbstractModel
     public $CreationTime;
 
     /**
-     * @var string 用户所属组织机构路径。
+     * @var string 用户所属主组织机构的路径ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgPath;
@@ -156,7 +156,7 @@ class UserInformation extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreationTime 用户创建时间，遵循 ISO 8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrgPath 用户所属组织机构路径。
+     * @param string $OrgPath 用户所属主组织机构的路径ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 带国家号的用户手机号，例如+86-00000000000。
 注意：此字段可能返回 null，表示取不到有效值。

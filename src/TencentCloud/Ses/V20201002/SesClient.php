@@ -31,7 +31,7 @@ use TencentCloud\Ses\V20201002\Models as Models;
  * @method Models\DeleteBlackListResponse DeleteBlackList(Models\DeleteBlackListRequest $req) 邮箱被拉黑之后，用户如果确认收件邮箱有效或者已经处于激活状态，可以从腾讯云地址库中删除该黑名单之后继续投递。
  * @method Models\DeleteEmailAddressResponse DeleteEmailAddress(Models\DeleteEmailAddressRequest $req) 删除发信人地址
  * @method Models\DeleteEmailIdentityResponse DeleteEmailIdentity(Models\DeleteEmailIdentityRequest $req) 删除发信域名，删除后，将不可再使用该域名进行发信
- * @method Models\DeleteEmailTemplateResponse DeleteEmailTemplate(Models\DeleteEmailTemplateRequest $req) 删除发信模版
+ * @method Models\DeleteEmailTemplateResponse DeleteEmailTemplate(Models\DeleteEmailTemplateRequest $req) 删除发信模板
  * @method Models\GetEmailIdentityResponse GetEmailIdentity(Models\GetEmailIdentityRequest $req) 获取某个发信域名的配置详情
  * @method Models\GetEmailTemplateResponse GetEmailTemplate(Models\GetEmailTemplateRequest $req) 根据模板ID获取模板详情
  * @method Models\GetSendEmailStatusResponse GetSendEmailStatus(Models\GetSendEmailStatusRequest $req) 获取邮件发送状态。仅支持查询180天之内的数据

@@ -23,11 +23,9 @@ use TencentCloud\Common\AbstractModel;
 + 支持上传 PEM 格式的证书进行部署
 注意：上传 PEM 证书时，需要进行 Base 64 编码
  *
- * @method string getCertId() 获取服务器证书 ID
-在 SSL 证书管理进行证书托管时自动生成
+ * @method string getCertId() 获取服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertId(string $CertId) 设置服务器证书 ID
-在 SSL 证书管理进行证书托管时自动生成
+ * @method void setCertId(string $CertId) 设置服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertName() 获取服务器证书名称
 在 SSL 证书管理进行证书托管时自动生成
@@ -67,8 +65,7 @@ use TencentCloud\Common\AbstractModel;
 class ServerCert extends AbstractModel
 {
     /**
-     * @var string 服务器证书 ID
-在 SSL 证书管理进行证书托管时自动生成
+     * @var string 服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
@@ -115,8 +112,7 @@ class ServerCert extends AbstractModel
     public $Message;
 
     /**
-     * @param string $CertId 服务器证书 ID
-在 SSL 证书管理进行证书托管时自动生成
+     * @param string $CertId 服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertName 服务器证书名称
 在 SSL 证书管理进行证书托管时自动生成

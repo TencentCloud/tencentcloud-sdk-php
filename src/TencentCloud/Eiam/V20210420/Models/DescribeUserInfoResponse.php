@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhone(string $Phone) 设置用户手机号。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrgNodeId() 获取用户所属组织机构 Id。
+ * @method string getOrgNodeId() 获取用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrgNodeId(string $OrgNodeId) 设置用户所属组织机构 Id。
+ * @method void setOrgNodeId(string $OrgNodeId) 设置用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSource() 获取数据来源
 注意：此字段可能返回 null，表示取不到有效值。
@@ -71,6 +71,10 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getPwdNeedReset() 获取当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPwdNeedReset(boolean $PwdNeedReset) 设置当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecondaryOrgNodeIdList() 获取用户所属的次要组织机构ID列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecondaryOrgNodeIdList(array $SecondaryOrgNodeIdList) 设置用户所属的次要组织机构ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -126,7 +130,7 @@ class DescribeUserInfoResponse extends AbstractModel
     public $Phone;
 
     /**
-     * @var string 用户所属组织机构 Id。
+     * @var string 用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgNodeId;
@@ -156,6 +160,12 @@ class DescribeUserInfoResponse extends AbstractModel
     public $PwdNeedReset;
 
     /**
+     * @var array 用户所属的次要组织机构ID列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecondaryOrgNodeIdList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -177,7 +187,7 @@ class DescribeUserInfoResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 用户手机号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrgNodeId 用户所属组织机构 Id。
+     * @param string $OrgNodeId 用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSource 数据来源
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,6 +196,8 @@ class DescribeUserInfoResponse extends AbstractModel
      * @param string $ActivationTime 用户激活时间，遵循 ISO 8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PwdNeedReset 当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecondaryOrgNodeIdList 用户所属的次要组织机构ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -252,6 +264,10 @@ class DescribeUserInfoResponse extends AbstractModel
 
         if (array_key_exists("PwdNeedReset",$param) and $param["PwdNeedReset"] !== null) {
             $this->PwdNeedReset = $param["PwdNeedReset"];
+        }
+
+        if (array_key_exists("SecondaryOrgNodeIdList",$param) and $param["SecondaryOrgNodeIdList"] !== null) {
+            $this->SecondaryOrgNodeIdList = $param["SecondaryOrgNodeIdList"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -122,6 +122,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoSeek(VideoSeek $VideoSeek) 设置视频拖拽配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AwsPrivateAccess getAwsPrivateAccess() 获取回源S3私有鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3私有鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OssPrivateAccess getOssPrivateAccess() 获取回源OSS私有鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置回源OSS私有鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OverseaConfig extends AbstractModel
 {
@@ -270,6 +278,18 @@ class OverseaConfig extends AbstractModel
     public $VideoSeek;
 
     /**
+     * @var AwsPrivateAccess 回源S3私有鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AwsPrivateAccess;
+
+    /**
+     * @var OssPrivateAccess 回源OSS私有鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OssPrivateAccess;
+
+    /**
      * @param Authentication $Authentication 时间戳防盗链配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BandwidthAlert $BandwidthAlert 带宽封顶配置。
@@ -317,6 +337,10 @@ class OverseaConfig extends AbstractModel
      * @param StatusCodeCache $StatusCodeCache 状态码缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoSeek $VideoSeek 视频拖拽配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AwsPrivateAccess $AwsPrivateAccess 回源S3私有鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -449,6 +473,16 @@ class OverseaConfig extends AbstractModel
         if (array_key_exists("VideoSeek",$param) and $param["VideoSeek"] !== null) {
             $this->VideoSeek = new VideoSeek();
             $this->VideoSeek->deserialize($param["VideoSeek"]);
+        }
+
+        if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
+            $this->AwsPrivateAccess = new AwsPrivateAccess();
+            $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
+        }
+
+        if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
+            $this->OssPrivateAccess = new OssPrivateAccess();
+            $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
         }
     }
 }

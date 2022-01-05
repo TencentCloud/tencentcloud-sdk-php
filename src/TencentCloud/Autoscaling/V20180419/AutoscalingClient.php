@@ -25,6 +25,7 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 /**
  * @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) 本接口（AttachInstances）用于将 CVM 实例添加到伸缩组。
 
+ * @method Models\AttachLoadBalancersResponse AttachLoadBalancers(Models\AttachLoadBalancersRequest $req) 此接口（AttachLoadBalancers）用于将负载均衡器添加到伸缩组。
  * @method Models\ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(Models\ClearLaunchConfigurationAttributesRequest $req) 本接口（ClearLaunchConfigurationAttributes）用于将启动配置内的特定属性完全清空。
  * @method Models\CompleteLifecycleActionResponse CompleteLifecycleAction(Models\CompleteLifecycleActionRequest $req) 本接口（CompleteLifecycleAction）用于完成生命周期动作。
 
@@ -135,6 +136,7 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 * 如果移出指定实例后，伸缩组内处于`IN_SERVICE`状态的实例数量小于伸缩组最小值，接口将报错
 * 如果伸缩组处于`DISABLED`状态，移出操作不校验`IN_SERVICE`实例数量和最小值的关系
 * 对于伸缩组配置的 CLB，实例在离开伸缩组时，AS 会进行解挂载动作
+ * @method Models\DetachLoadBalancersResponse DetachLoadBalancers(Models\DetachLoadBalancersRequest $req) 本接口（DetachLoadBalancers）用于从伸缩组移出负载均衡器，本接口不会销毁负载均衡器。
  * @method Models\DisableAutoScalingGroupResponse DisableAutoScalingGroup(Models\DisableAutoScalingGroupRequest $req) 本接口（DisableAutoScalingGroup）用于停用指定伸缩组。
  * @method Models\EnableAutoScalingGroupResponse EnableAutoScalingGroup(Models\EnableAutoScalingGroupRequest $req) 本接口（EnableAutoScalingGroup）用于启用指定伸缩组。
  * @method Models\ExecuteScalingPolicyResponse ExecuteScalingPolicy(Models\ExecuteScalingPolicyRequest $req) 本接口（ExecuteScalingPolicy）用于执行伸缩策略。
@@ -147,6 +149,7 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 
 * 修改启动配置后，已经使用该启动配置扩容的存量实例不会发生变更，此后使用该启动配置的新增实例会按照新的配置进行扩容。
 * 本接口支持修改部分简单类型。
+ * @method Models\ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributes(Models\ModifyLoadBalancerTargetAttributesRequest $req) 本接口（ModifyLoadBalancerTargetAttributes）用于修改伸缩组内负载均衡器的目标规则属性。
  * @method Models\ModifyLoadBalancersResponse ModifyLoadBalancers(Models\ModifyLoadBalancersRequest $req) 本接口（ModifyLoadBalancers）用于修改伸缩组的负载均衡器。
 
 * 本接口用于为伸缩组指定新的负载均衡器配置，采用`完全覆盖`风格，无论之前配置如何，`统一按照接口参数配置为新的负载均衡器`。

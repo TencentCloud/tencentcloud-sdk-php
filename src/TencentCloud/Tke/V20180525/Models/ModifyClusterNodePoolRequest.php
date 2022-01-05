@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method InstanceExtraArgs getExtraArgs() 获取节点自定义参数
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置节点自定义参数
+ * @method array getTags() 获取资源标签
+ * @method void setTags(array $Tags) 设置资源标签
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $ExtraArgs;
 
     /**
+     * @var array 资源标签
+     */
+    public $Tags;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $NodePoolId 节点池ID
      * @param string $Name 名称
@@ -112,6 +119,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param string $OsName 操作系统名称
      * @param string $OsCustomizeType 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      * @param InstanceExtraArgs $ExtraArgs 节点自定义参数
+     * @param array $Tags 资源标签
      */
     function __construct()
     {
@@ -179,6 +187,15 @@ class ModifyClusterNodePoolRequest extends AbstractModel
         if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
             $this->ExtraArgs = new InstanceExtraArgs();
             $this->ExtraArgs->deserialize($param["ExtraArgs"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

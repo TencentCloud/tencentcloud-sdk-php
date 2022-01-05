@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAsyncSearchResult返回参数结构体
+ * DetachLoadBalancers返回参数结构体
  *
- * @method string getContext() 获取加载后续内容的Context
- * @method void setContext(string $Context) 设置加载后续内容的Context
- * @method boolean getListOver() 获取日志查询结果是否全部返回
- * @method void setListOver(boolean $ListOver) 设置日志查询结果是否全部返回
- * @method array getResults() 获取日志内容
- * @method void setResults(array $Results) 设置日志内容
+ * @method string getActivityId() 获取伸缩活动ID
+ * @method void setActivityId(string $ActivityId) 设置伸缩活动ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAsyncSearchResultResponse extends AbstractModel
+class DetachLoadBalancersResponse extends AbstractModel
 {
     /**
-     * @var string 加载后续内容的Context
+     * @var string 伸缩活动ID
      */
-    public $Context;
-
-    /**
-     * @var boolean 日志查询结果是否全部返回
-     */
-    public $ListOver;
-
-    /**
-     * @var array 日志内容
-     */
-    public $Results;
+    public $ActivityId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class DescribeAsyncSearchResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Context 加载后续内容的Context
-     * @param boolean $ListOver 日志查询结果是否全部返回
-     * @param array $Results 日志内容
+     * @param string $ActivityId 伸缩活动ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +54,8 @@ class DescribeAsyncSearchResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
-            $this->Context = $param["Context"];
-        }
-
-        if (array_key_exists("ListOver",$param) and $param["ListOver"] !== null) {
-            $this->ListOver = $param["ListOver"];
-        }
-
-        if (array_key_exists("Results",$param) and $param["Results"] !== null) {
-            $this->Results = [];
-            foreach ($param["Results"] as $key => $value){
-                $obj = new LogInfo();
-                $obj->deserialize($value);
-                array_push($this->Results, $obj);
-            }
+        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
+            $this->ActivityId = $param["ActivityId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

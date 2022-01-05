@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置输入图片url
  * @method FaceRect getInputImageFaceRect() 获取上传的图片人脸位置信息（人脸框）
  * @method void setInputImageFaceRect(FaceRect $InputImageFaceRect) 设置上传的图片人脸位置信息（人脸框）
- * @method string getTemplateFaceID() 获取控制台上传的素材人脸ID
- * @method void setTemplateFaceID(string $TemplateFaceID) 设置控制台上传的素材人脸ID
+ * @method string getTemplateFaceID() 获取控制台上传的素材人脸ID，不填默认取最大人脸
+ * @method void setTemplateFaceID(string $TemplateFaceID) 设置控制台上传的素材人脸ID，不填默认取最大人脸
  */
 class MergeInfo extends AbstractModel
 {
@@ -47,7 +47,7 @@ class MergeInfo extends AbstractModel
     public $InputImageFaceRect;
 
     /**
-     * @var string 控制台上传的素材人脸ID
+     * @var string 控制台上传的素材人脸ID，不填默认取最大人脸
      */
     public $TemplateFaceID;
 
@@ -55,7 +55,7 @@ class MergeInfo extends AbstractModel
      * @param string $Image 输入图片base64
      * @param string $Url 输入图片url
      * @param FaceRect $InputImageFaceRect 上传的图片人脸位置信息（人脸框）
-     * @param string $TemplateFaceID 控制台上传的素材人脸ID
+     * @param string $TemplateFaceID 控制台上传的素材人脸ID，不填默认取最大人脸
      */
     function __construct()
     {

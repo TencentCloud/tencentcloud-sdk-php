@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Autoscaling\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAsyncContextTask返回参数结构体
+ * ModifyLoadBalancerTargetAttributes返回参数结构体
  *
- * @method string getAsyncContextTaskId() 获取异步上下文任务ID
- * @method void setAsyncContextTaskId(string $AsyncContextTaskId) 设置异步上下文任务ID
+ * @method string getActivityId() 获取伸缩活动ID
+ * @method void setActivityId(string $ActivityId) 设置伸缩活动ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAsyncContextTaskResponse extends AbstractModel
+class ModifyLoadBalancerTargetAttributesResponse extends AbstractModel
 {
     /**
-     * @var string 异步上下文任务ID
+     * @var string 伸缩活动ID
      */
-    public $AsyncContextTaskId;
+    public $ActivityId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateAsyncContextTaskResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncContextTaskId 异步上下文任务ID
+     * @param string $ActivityId 伸缩活动ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateAsyncContextTaskResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncContextTaskId",$param) and $param["AsyncContextTaskId"] !== null) {
-            $this->AsyncContextTaskId = $param["AsyncContextTaskId"];
+        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
+            $this->ActivityId = $param["ActivityId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

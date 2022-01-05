@@ -44,6 +44,26 @@ Oversea：则查询国际/港澳台（境外）数据，
 60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
 默认值：5。
+ * @method array getRegionNames() 获取大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
+ * @method void setRegionNames(array $RegionNames) 设置大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
  */
 class DescribePushBandwidthAndFluxListRequest extends AbstractModel
 {
@@ -80,6 +100,20 @@ Oversea：则查询国际/港澳台（境外）数据，
     public $Granularity;
 
     /**
+     * @var array 大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
+     */
+    public $RegionNames;
+
+    /**
      * @param string $StartTime 起始时间点，格式为 yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为 yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
      * @param array $PushDomains 域名，可以填多个，若不填，表示总体数据。
@@ -92,6 +126,16 @@ Oversea：则查询国际/港澳台（境外）数据，
 60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
 默认值：5。
+     * @param array $RegionNames 大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
      */
     function __construct()
     {
@@ -124,6 +168,10 @@ Oversea：则查询国际/港澳台（境外）数据，
 
         if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
             $this->Granularity = $param["Granularity"];
+        }
+
+        if (array_key_exists("RegionNames",$param) and $param["RegionNames"] !== null) {
+            $this->RegionNames = $param["RegionNames"];
         }
     }
 }

@@ -82,10 +82,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncrementalDeployment(boolean $IncrementalDeployment) 设置是否进行增量部署，默认为false，全量更新
  * @method string getRepoType() 获取tcr或者不填
  * @method void setRepoType(string $RepoType) 设置tcr或者不填
- * @method VolumeInfo getVolumeInfos() 获取数据卷信息
- * @method void setVolumeInfos(VolumeInfo $VolumeInfos) 设置数据卷信息
- * @method VolumeMountInfo getVolumeMountInfos() 获取数据卷挂载点信息
- * @method void setVolumeMountInfos(VolumeMountInfo $VolumeMountInfos) 设置数据卷挂载点信息
+ * @method VolumeInfo getVolumeInfos() 获取数据卷信息-废弃，请用VolumeInfoList参数
+ * @method void setVolumeInfos(VolumeInfo $VolumeInfos) 设置数据卷信息-废弃，请用VolumeInfoList参数
+ * @method VolumeMountInfo getVolumeMountInfos() 获取数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
+ * @method void setVolumeMountInfos(VolumeMountInfo $VolumeMountInfos) 设置数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
+ * @method array getVolumeInfoList() 获取数据卷信息，list
+ * @method void setVolumeInfoList(array $VolumeInfoList) 设置数据卷信息，list
+ * @method array getVolumeMountInfoList() 获取数据卷挂载点信息，list
+ * @method void setVolumeMountInfoList(array $VolumeMountInfoList) 设置数据卷挂载点信息，list
  */
 class DeployContainerGroupRequest extends AbstractModel
 {
@@ -245,14 +249,24 @@ class DeployContainerGroupRequest extends AbstractModel
     public $RepoType;
 
     /**
-     * @var VolumeInfo 数据卷信息
+     * @var VolumeInfo 数据卷信息-废弃，请用VolumeInfoList参数
      */
     public $VolumeInfos;
 
     /**
-     * @var VolumeMountInfo 数据卷挂载点信息
+     * @var VolumeMountInfo 数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
      */
     public $VolumeMountInfos;
+
+    /**
+     * @var array 数据卷信息，list
+     */
+    public $VolumeInfoList;
+
+    /**
+     * @var array 数据卷挂载点信息，list
+     */
+    public $VolumeMountInfoList;
 
     /**
      * @param string $GroupId 部署组ID，分组唯一标识
@@ -286,8 +300,10 @@ class DeployContainerGroupRequest extends AbstractModel
      * @param SchedulingStrategy $SchedulingStrategy 节点调度策略。若不指定改参数，则默认不使用节点调度策略。
      * @param boolean $IncrementalDeployment 是否进行增量部署，默认为false，全量更新
      * @param string $RepoType tcr或者不填
-     * @param VolumeInfo $VolumeInfos 数据卷信息
-     * @param VolumeMountInfo $VolumeMountInfos 数据卷挂载点信息
+     * @param VolumeInfo $VolumeInfos 数据卷信息-废弃，请用VolumeInfoList参数
+     * @param VolumeMountInfo $VolumeMountInfos 数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
+     * @param array $VolumeInfoList 数据卷信息，list
+     * @param array $VolumeMountInfoList 数据卷挂载点信息，list
      */
     function __construct()
     {
@@ -442,6 +458,24 @@ class DeployContainerGroupRequest extends AbstractModel
         if (array_key_exists("VolumeMountInfos",$param) and $param["VolumeMountInfos"] !== null) {
             $this->VolumeMountInfos = new VolumeMountInfo();
             $this->VolumeMountInfos->deserialize($param["VolumeMountInfos"]);
+        }
+
+        if (array_key_exists("VolumeInfoList",$param) and $param["VolumeInfoList"] !== null) {
+            $this->VolumeInfoList = [];
+            foreach ($param["VolumeInfoList"] as $key => $value){
+                $obj = new VolumeInfo();
+                $obj->deserialize($value);
+                array_push($this->VolumeInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("VolumeMountInfoList",$param) and $param["VolumeMountInfoList"] !== null) {
+            $this->VolumeMountInfoList = [];
+            foreach ($param["VolumeMountInfoList"] as $key => $value){
+                $obj = new VolumeMountInfo();
+                $obj->deserialize($value);
+                array_push($this->VolumeMountInfoList, $obj);
+            }
         }
     }
 }

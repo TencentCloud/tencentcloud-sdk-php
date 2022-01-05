@@ -48,6 +48,26 @@ Oversea：则查询国外数据，
 默认值：5。
  * @method string getServiceName() 获取服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
  * @method void setServiceName(string $ServiceName) 设置服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+ * @method array getRegionNames() 获取大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
+ * @method void setRegionNames(array $RegionNames) 设置大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
  */
 class DescribeBillBandwidthAndFluxListRequest extends AbstractModel
 {
@@ -90,6 +110,20 @@ Oversea：则查询国外数据，
     public $ServiceName;
 
     /**
+     * @var array 大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
+     */
+    public $RegionNames;
+
+    /**
      * @param string $StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。支持最近3年的数据查询
      * @param array $PlayDomains 直播播放域名，若不填，表示总体数据。
@@ -104,6 +138,16 @@ Oversea：则查询国外数据，
 1440：天粒度（跨度不支持超过一个月）。
 默认值：5。
      * @param string $ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+     * @param array $RegionNames 大区，映射表如下：
+China Mainland 中国大陆
+Asia Pacific I 亚太一区
+Asia Pacific II 亚太二区
+Asia Pacific III 亚太三区
+Europe 欧洲
+North America 北美
+South America 南美
+Middle East 中东
+Africa 非洲。
      */
     function __construct()
     {
@@ -140,6 +184,10 @@ Oversea：则查询国外数据，
 
         if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
             $this->ServiceName = $param["ServiceName"];
+        }
+
+        if (array_key_exists("RegionNames",$param) and $param["RegionNames"] !== null) {
+            $this->RegionNames = $param["RegionNames"];
         }
     }
 }

@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 验真接口
  *
  * @method string getRegNum() 获取“0“：一致
-“-1”：此号未查询到结果
+“-1”：不一致
  * @method void setRegNum(string $RegNum) 设置“0“：一致
-“-1”：此号未查询到结果
+“-1”：不一致
  * @method string getName() 获取“0“：一致
 “-1”：不一致
 “”：不验真
@@ -41,7 +41,7 @@ class BizLicenseVerifyResult extends AbstractModel
 {
     /**
      * @var string “0“：一致
-“-1”：此号未查询到结果
+“-1”：不一致
      */
     public $RegNum;
 
@@ -61,7 +61,7 @@ class BizLicenseVerifyResult extends AbstractModel
 
     /**
      * @param string $RegNum “0“：一致
-“-1”：此号未查询到结果
+“-1”：不一致
      * @param string $Name “0“：一致
 “-1”：不一致
 “”：不验真

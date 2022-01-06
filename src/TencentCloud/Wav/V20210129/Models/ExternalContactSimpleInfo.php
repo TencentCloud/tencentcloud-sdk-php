@@ -18,7 +18,7 @@ namespace TencentCloud\Wav\V20210129\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 列部联系人简短信息
+ * 外部联系人简短信息
  *
  * @method string getExternalUserId() 获取外部联系人的userId
  * @method void setExternalUserId(string $ExternalUserId) 设置外部联系人的userId

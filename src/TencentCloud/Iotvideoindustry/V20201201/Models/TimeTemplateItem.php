@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置模板名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsAllWeek() 获取是否全时录制，即7*24小时录制
+ * @method integer getIsAllWeek() 获取是否全时录制，即7*24小时录制 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsAllWeek(integer $IsAllWeek) 设置是否全时录制，即7*24小时录制
+ * @method void setIsAllWeek(integer $IsAllWeek) 设置是否全时录制，即7*24小时录制 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getType() 获取是否为自定义模板
+ * @method integer getType() 获取是否为自定义模板 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置是否为自定义模板
+ * @method void setType(integer $Type) 设置是否为自定义模板 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTimeTemplateSpecs() 获取时间片段详情
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,13 +56,13 @@ class TimeTemplateItem extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 是否全时录制，即7*24小时录制
+     * @var integer 是否全时录制，即7*24小时录制 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAllWeek;
 
     /**
-     * @var integer 是否为自定义模板
+     * @var integer 是否为自定义模板 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -78,9 +78,9 @@ class TimeTemplateItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsAllWeek 是否全时录制，即7*24小时录制
+     * @param integer $IsAllWeek 是否全时录制，即7*24小时录制 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Type 是否为自定义模板
+     * @param integer $Type 是否为自定义模板 0-否 1-是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TimeTemplateSpecs 时间片段详情
 注意：此字段可能返回 null，表示取不到有效值。

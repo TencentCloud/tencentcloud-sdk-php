@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认0
  * @method integer getLimit() 获取限制量，默认200
  * @method void setLimit(integer $Limit) 设置限制量，默认200
+ * @method string getChannelId() 获取通道唯一标识
+ * @method void setChannelId(string $ChannelId) 设置通道唯一标识
  * @method integer getLatestDay() 获取0：查询指定日期的录像；1：查询最近一天的录像；默认0
  * @method void setLatestDay(integer $LatestDay) 设置0：查询指定日期的录像；1：查询最近一天的录像；默认0
  * @method string getDate() 获取指定某天。取值【YYYY-MM-DD】
-当LatestDay为空或为0时，本参数不允许为空。
+为空时默认查询最近一天的记录
  * @method void setDate(string $Date) 设置指定某天。取值【YYYY-MM-DD】
-当LatestDay为空或为0时，本参数不允许为空。
- * @method string getChannelId() 获取通道唯一标识
- * @method void setChannelId(string $ChannelId) 设置通道唯一标识
+为空时默认查询最近一天的记录
  * @method integer getType() 获取1: 云端录制 2: 本地录制
  * @method void setType(integer $Type) 设置1: 云端录制 2: 本地录制
  */
@@ -55,20 +55,20 @@ class GetVideoListByConRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 通道唯一标识
+     */
+    public $ChannelId;
+
+    /**
      * @var integer 0：查询指定日期的录像；1：查询最近一天的录像；默认0
      */
     public $LatestDay;
 
     /**
      * @var string 指定某天。取值【YYYY-MM-DD】
-当LatestDay为空或为0时，本参数不允许为空。
+为空时默认查询最近一天的记录
      */
     public $Date;
-
-    /**
-     * @var string 通道唯一标识
-     */
-    public $ChannelId;
 
     /**
      * @var integer 1: 云端录制 2: 本地录制
@@ -79,10 +79,10 @@ class GetVideoListByConRequest extends AbstractModel
      * @param string $DeviceId 设备唯一标识
      * @param integer $Offset 偏移量，默认0
      * @param integer $Limit 限制量，默认200
+     * @param string $ChannelId 通道唯一标识
      * @param integer $LatestDay 0：查询指定日期的录像；1：查询最近一天的录像；默认0
      * @param string $Date 指定某天。取值【YYYY-MM-DD】
-当LatestDay为空或为0时，本参数不允许为空。
-     * @param string $ChannelId 通道唯一标识
+为空时默认查询最近一天的记录
      * @param integer $Type 1: 云端录制 2: 本地录制
      */
     function __construct()
@@ -110,16 +110,16 @@ class GetVideoListByConRequest extends AbstractModel
             $this->Limit = $param["Limit"];
         }
 
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
+        }
+
         if (array_key_exists("LatestDay",$param) and $param["LatestDay"] !== null) {
             $this->LatestDay = $param["LatestDay"];
         }
 
         if (array_key_exists("Date",$param) and $param["Date"] !== null) {
             $this->Date = $param["Date"];
-        }
-
-        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
-            $this->ChannelId = $param["ChannelId"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {

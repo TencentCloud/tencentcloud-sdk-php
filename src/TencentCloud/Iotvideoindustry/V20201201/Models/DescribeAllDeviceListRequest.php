@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNickName(string $NickName) 设置设备名称，需要模糊匹配设备名称时为必填
  * @method array getDeviceIds() 获取DeviceId列表，需要精确查找设备时为必填
  * @method void setDeviceIds(array $DeviceIds) 设置DeviceId列表，需要精确查找设备时为必填
- * @method array getDeviceTypes() 获取设备类型过滤
- * @method void setDeviceTypes(array $DeviceTypes) 设置设备类型过滤
+ * @method array getDeviceTypes() 获取设备类型过滤，设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
+ * @method void setDeviceTypes(array $DeviceTypes) 设置设备类型过滤，设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
  */
 class DescribeAllDeviceListRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeAllDeviceListRequest extends AbstractModel
     public $DeviceIds;
 
     /**
-     * @var array 设备类型过滤
+     * @var array 设备类型过滤，设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
      */
     public $DeviceTypes;
 
@@ -63,7 +63,7 @@ class DescribeAllDeviceListRequest extends AbstractModel
      * @param integer $Limit 限制，默认200
      * @param string $NickName 设备名称，需要模糊匹配设备名称时为必填
      * @param array $DeviceIds DeviceId列表，需要精确查找设备时为必填
-     * @param array $DeviceTypes 设备类型过滤
+     * @param array $DeviceTypes 设备类型过滤，设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
      */
     function __construct()
     {

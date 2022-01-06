@@ -60,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置设备接入协议
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTime() 获取设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getChannelNum() 获取设备通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelNum(integer $ChannelNum) 设置设备通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVideoChannelNum() 获取设备视频通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVideoChannelNum(integer $VideoChannelNum) 设置设备视频通道总数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupDeviceItem extends AbstractModel
 {
@@ -124,6 +136,24 @@ class GroupDeviceItem extends AbstractModel
     public $Protocol;
 
     /**
+     * @var integer 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer 设备通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelNum;
+
+    /**
+     * @var integer 设备视频通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VideoChannelNum;
+
+    /**
      * @param string $DeviceId 设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NickName 设备名称
@@ -143,6 +173,12 @@ class GroupDeviceItem extends AbstractModel
      * @param integer $Recordable 该设备是否可录制
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 设备接入协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTime 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ChannelNum 设备通道总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VideoChannelNum 设备视频通道总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +232,18 @@ class GroupDeviceItem extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ChannelNum",$param) and $param["ChannelNum"] !== null) {
+            $this->ChannelNum = $param["ChannelNum"];
+        }
+
+        if (array_key_exists("VideoChannelNum",$param) and $param["VideoChannelNum"] !== null) {
+            $this->VideoChannelNum = $param["VideoChannelNum"];
         }
     }
 }

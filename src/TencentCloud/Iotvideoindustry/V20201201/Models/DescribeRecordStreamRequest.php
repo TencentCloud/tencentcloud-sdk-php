@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeviceId() 获取设备Id
  * @method void setDeviceId(string $DeviceId) 设置设备Id
- * @method integer getExpireTime() 获取流失效时间
- * @method void setExpireTime(integer $ExpireTime) 设置流失效时间
- * @method string getRecordId() 获取录像文件Id
- * @method void setRecordId(string $RecordId) 设置录像文件Id
- * @method integer getStartTime() 获取录像流开始时间，当录像文件Id为空时有效
- * @method void setStartTime(integer $StartTime) 设置录像流开始时间，当录像文件Id为空时有效
- * @method integer getEndTime() 获取录像流结束时间，当录像文件Id为空时有效
- * @method void setEndTime(integer $EndTime) 设置录像流结束时间，当录像文件Id为空时有效
+ * @method integer getExpireTime() 获取流失效时间，UNIX时间戳，30天内
+ * @method void setExpireTime(integer $ExpireTime) 设置流失效时间，UNIX时间戳，30天内
+ * @method string getRecordId() 获取录像文件ID
+ * @method void setRecordId(string $RecordId) 设置录像文件ID
+ * @method integer getStartTime() 获取录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
+ * @method void setStartTime(integer $StartTime) 设置录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
+ * @method integer getEndTime() 获取录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
+ * @method void setEndTime(integer $EndTime) 设置录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
  * @method string getChannelId() 获取通道唯一标识
  * @method void setChannelId(string $ChannelId) 设置通道唯一标识
  */
@@ -41,22 +41,22 @@ class DescribeRecordStreamRequest extends AbstractModel
     public $DeviceId;
 
     /**
-     * @var integer 流失效时间
+     * @var integer 流失效时间，UNIX时间戳，30天内
      */
     public $ExpireTime;
 
     /**
-     * @var string 录像文件Id
+     * @var string 录像文件ID
      */
     public $RecordId;
 
     /**
-     * @var integer 录像流开始时间，当录像文件Id为空时有效
+     * @var integer 录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
      */
     public $StartTime;
 
     /**
-     * @var integer 录像流结束时间，当录像文件Id为空时有效
+     * @var integer 录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
      */
     public $EndTime;
 
@@ -67,10 +67,10 @@ class DescribeRecordStreamRequest extends AbstractModel
 
     /**
      * @param string $DeviceId 设备Id
-     * @param integer $ExpireTime 流失效时间
-     * @param string $RecordId 录像文件Id
-     * @param integer $StartTime 录像流开始时间，当录像文件Id为空时有效
-     * @param integer $EndTime 录像流结束时间，当录像文件Id为空时有效
+     * @param integer $ExpireTime 流失效时间，UNIX时间戳，30天内
+     * @param string $RecordId 录像文件ID
+     * @param integer $StartTime 录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
+     * @param integer $EndTime 录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
      * @param string $ChannelId 通道唯一标识
      */
     function __construct()

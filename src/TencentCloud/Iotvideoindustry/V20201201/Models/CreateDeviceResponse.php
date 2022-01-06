@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVirtualGroupId() 获取设备虚拟组信息，仅在创建NVR/VMS时返回该值
+ * @method string getVirtualGroupId() 获取设备虚拟组信息，仅在创建NVR时返回该值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVirtualGroupId(string $VirtualGroupId) 设置设备虚拟组信息，仅在创建NVR/VMS时返回该值
+ * @method void setVirtualGroupId(string $VirtualGroupId) 设置设备虚拟组信息，仅在创建NVR时返回该值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,7 +50,7 @@ class CreateDeviceResponse extends AbstractModel
     public $DeviceId;
 
     /**
-     * @var string 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+     * @var string 设备虚拟组信息，仅在创建NVR时返回该值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualGroupId;
@@ -65,7 +65,7 @@ class CreateDeviceResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceId 设备唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VirtualGroupId 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+     * @param string $VirtualGroupId 设备虚拟组信息，仅在创建NVR时返回该值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

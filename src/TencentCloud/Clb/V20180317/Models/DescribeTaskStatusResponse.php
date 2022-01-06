@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() 获取任务的当前状态。 0：成功，1：失败，2：进行中。
  * @method void setStatus(integer $Status) 设置任务的当前状态。 0：成功，1：失败，2：进行中。
+ * @method array getLoadBalancerIds() 获取由负载均衡实例唯一 ID 组成的数组。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置由负载均衡实例唯一 ID 组成的数组。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class DescribeTaskStatusResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var array 由负载均衡实例唯一 ID 组成的数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoadBalancerIds;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $Status 任务的当前状态。 0：成功，1：失败，2：进行中。
+     * @param array $LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,10 @@ class DescribeTaskStatusResponse extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
+            $this->LoadBalancerIds = $param["LoadBalancerIds"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

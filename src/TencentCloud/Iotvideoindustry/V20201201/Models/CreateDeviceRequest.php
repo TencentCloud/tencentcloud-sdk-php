@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNickName(string $NickName) 设置设备名称
  * @method string getPassWord() 获取设备密码
  * @method void setPassWord(string $PassWord) 设置设备密码
- * @method integer getDeviceType() 获取设备类型 2:国标IPC设备; 3:NVR设备
- * @method void setDeviceType(integer $DeviceType) 设置设备类型 2:国标IPC设备; 3:NVR设备
+ * @method integer getDeviceType() 获取设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
+ * @method void setDeviceType(integer $DeviceType) 设置设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
  * @method string getGroupId() 获取设备需要绑定的分组ID，参数为空则默认绑定到根分组
  * @method void setGroupId(string $GroupId) 设置设备需要绑定的分组ID，参数为空则默认绑定到根分组
  */
@@ -42,7 +42,7 @@ class CreateDeviceRequest extends AbstractModel
     public $PassWord;
 
     /**
-     * @var integer 设备类型 2:国标IPC设备; 3:NVR设备
+     * @var integer 设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
      */
     public $DeviceType;
 
@@ -54,7 +54,7 @@ class CreateDeviceRequest extends AbstractModel
     /**
      * @param string $NickName 设备名称
      * @param string $PassWord 设备密码
-     * @param integer $DeviceType 设备类型 2:国标IPC设备; 3:NVR设备
+     * @param integer $DeviceType 设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
      * @param string $GroupId 设备需要绑定的分组ID，参数为空则默认绑定到根分组
      */
     function __construct()

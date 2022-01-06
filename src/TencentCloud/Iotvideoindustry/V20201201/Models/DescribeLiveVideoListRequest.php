@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取分页的每页数量
  * @method void setLimit(integer $Limit) 设置分页的每页数量
- * @method string getLiveChannelId() 获取直播ID
- * @method void setLiveChannelId(string $LiveChannelId) 设置直播ID
+ * @method string getLiveChannelId() 获取直播频道ID
+ * @method void setLiveChannelId(string $LiveChannelId) 设置直播频道ID
  * @method integer getStartRecordTime() 获取开始录制开始时间
  * @method void setStartRecordTime(integer $StartRecordTime) 设置开始录制开始时间
  * @method integer getEndRecordTime() 获取开始录制结束时间
@@ -54,7 +54,7 @@ class DescribeLiveVideoListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 直播ID
+     * @var string 直播频道ID
      */
     public $LiveChannelId;
 
@@ -96,7 +96,7 @@ class DescribeLiveVideoListRequest extends AbstractModel
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 分页的每页数量
-     * @param string $LiveChannelId 直播ID
+     * @param string $LiveChannelId 直播频道ID
      * @param integer $StartRecordTime 开始录制开始时间
      * @param integer $EndRecordTime 开始录制结束时间
      * @param integer $StartExpireTime 过期开始时间

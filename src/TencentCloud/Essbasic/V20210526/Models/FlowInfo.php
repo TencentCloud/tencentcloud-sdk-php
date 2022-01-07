@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowDescription(string $FlowDescription) 设置合同描述
  * @method string getCustomerData() 获取渠道的业务信息，限制1024字符
  * @method void setCustomerData(string $CustomerData) 设置渠道的业务信息，限制1024字符
- * @method array getCcInfos() 获取被抄送人的信息列表
- * @method void setCcInfos(array $CcInfos) 设置被抄送人的信息列表
+ * @method array getCcInfos() 获取被抄送人的信息列表，抄送功能暂不开放
+ * @method void setCcInfos(array $CcInfos) 设置被抄送人的信息列表，抄送功能暂不开放
  */
 class FlowInfo extends AbstractModel
 {
@@ -101,7 +101,7 @@ class FlowInfo extends AbstractModel
     public $CustomerData;
 
     /**
-     * @var array 被抄送人的信息列表
+     * @var array 被抄送人的信息列表，抄送功能暂不开放
      */
     public $CcInfos;
 
@@ -119,7 +119,7 @@ class FlowInfo extends AbstractModel
      * @param array $FormFields 表单K-V对列表
      * @param string $FlowDescription 合同描述
      * @param string $CustomerData 渠道的业务信息，限制1024字符
-     * @param array $CcInfos 被抄送人的信息列表
+     * @param array $CcInfos 被抄送人的信息列表，抄送功能暂不开放
      */
     function __construct()
     {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateStartTime(string $UpdateStartTime) 设置机器组自动升级功能预设开始时间
  * @method string getUpdateEndTime() 获取机器组自动升级功能预设结束时间
  * @method void setUpdateEndTime(string $UpdateEndTime) 设置机器组自动升级功能预设结束时间
- * @method string getLatestAgentVersion() 获取当前用户可用最新的Loglistener版本
- * @method void setLatestAgentVersion(string $LatestAgentVersion) 设置当前用户可用最新的Loglistener版本
+ * @method string getLatestAgentVersion() 获取当前用户可用最新的Loglistener版本
+ * @method void setLatestAgentVersion(string $LatestAgentVersion) 设置当前用户可用最新的Loglistener版本
  * @method boolean getServiceLogging() 获取是否开启服务日志
  * @method void setServiceLogging(boolean $ServiceLogging) 设置是否开启服务日志
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -58,7 +58,7 @@ class DescribeMachinesResponse extends AbstractModel
     public $UpdateEndTime;
 
     /**
-     * @var string 当前用户可用最新的Loglistener版本
+     * @var string 当前用户可用最新的Loglistener版本
      */
     public $LatestAgentVersion;
 
@@ -77,7 +77,7 @@ class DescribeMachinesResponse extends AbstractModel
      * @param integer $AutoUpdate 机器组是否开启自动升级功能
      * @param string $UpdateStartTime 机器组自动升级功能预设开始时间
      * @param string $UpdateEndTime 机器组自动升级功能预设结束时间
-     * @param string $LatestAgentVersion 当前用户可用最新的Loglistener版本
+     * @param string $LatestAgentVersion 当前用户可用最新的Loglistener版本
      * @param boolean $ServiceLogging 是否开启服务日志
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

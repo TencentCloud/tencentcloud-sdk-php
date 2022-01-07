@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeChannelStreamURL请求参数结构体
  *
- * @method string getDeviceId() 获取设备唯一标识
- * @method void setDeviceId(string $DeviceId) 设置设备唯一标识
- * @method string getChannelId() 获取通道唯一标识（接口升级字段为必填）
- * @method void setChannelId(string $ChannelId) 设置通道唯一标识（接口升级字段为必填）
+ * @method string getDeviceId() 获取设备唯一标识，必填参数
+ * @method void setDeviceId(string $DeviceId) 设置设备唯一标识，必填参数
+ * @method integer getExpireTime() 获取流地址失效时间，固定值填写0，其他参数无效，必填参数
+ * @method void setExpireTime(integer $ExpireTime) 设置流地址失效时间，固定值填写0，其他参数无效，必填参数
+ * @method string getChannelId() 获取通道唯一标识（接口升级字段为必填），必填参数
+ * @method void setChannelId(string $ChannelId) 设置通道唯一标识（接口升级字段为必填），必填参数
  */
 class DescribeChannelStreamURLRequest extends AbstractModel
 {
     /**
-     * @var string 设备唯一标识
+     * @var string 设备唯一标识，必填参数
      */
     public $DeviceId;
 
     /**
-     * @var string 通道唯一标识（接口升级字段为必填）
+     * @var integer 流地址失效时间，固定值填写0，其他参数无效，必填参数
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string 通道唯一标识（接口升级字段为必填），必填参数
      */
     public $ChannelId;
 
     /**
-     * @param string $DeviceId 设备唯一标识
-     * @param string $ChannelId 通道唯一标识（接口升级字段为必填）
+     * @param string $DeviceId 设备唯一标识，必填参数
+     * @param integer $ExpireTime 流地址失效时间，固定值填写0，其他参数无效，必填参数
+     * @param string $ChannelId 通道唯一标识（接口升级字段为必填），必填参数
      */
     function __construct()
     {
@@ -56,6 +64,10 @@ class DescribeChannelStreamURLRequest extends AbstractModel
         }
         if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
             $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {

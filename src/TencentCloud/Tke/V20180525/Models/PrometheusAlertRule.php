@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnnotations(array $Annotations) 设置参考prometheus rule中的annotations
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleState() 获取告警规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleState(integer $RuleState) 设置告警规则状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusAlertRule extends AbstractModel
 {
@@ -79,6 +83,12 @@ class PrometheusAlertRule extends AbstractModel
     public $Annotations;
 
     /**
+     * @var integer 告警规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleState;
+
+    /**
      * @param string $Name 规则名称
      * @param string $Rule prometheus语句
      * @param array $Labels 额外标签
@@ -87,6 +97,8 @@ class PrometheusAlertRule extends AbstractModel
      * @param string $Describe 该条规则的描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Annotations 参考prometheus rule中的annotations
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleState 告警规则状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -138,6 +150,10 @@ class PrometheusAlertRule extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Annotations, $obj);
             }
+        }
+
+        if (array_key_exists("RuleState",$param) and $param["RuleState"] !== null) {
+            $this->RuleState = $param["RuleState"];
         }
     }
 }

@@ -148,6 +148,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVolumeInfos() 获取数据卷信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVolumeInfos(array $VolumeInfos) 设置数据卷信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVolumeMountInfos() 获取数据卷挂载信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVolumeMountInfos(array $VolumeMountInfos) 设置数据卷挂载信息，list
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDeploy extends AbstractModel
 {
@@ -344,6 +352,18 @@ class ContainerGroupDeploy extends AbstractModel
     public $TcrRepoInfo;
 
     /**
+     * @var array 数据卷信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VolumeInfos;
+
+    /**
+     * @var array 数据卷挂载信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VolumeMountInfos;
+
+    /**
      * @param string $GroupId 部署组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -407,6 +427,10 @@ class ContainerGroupDeploy extends AbstractModel
      * @param boolean $HeadlessService service 是否为 headless 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VolumeInfos 数据卷信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VolumeMountInfos 数据卷挂载信息，list
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -560,6 +584,24 @@ class ContainerGroupDeploy extends AbstractModel
         if (array_key_exists("TcrRepoInfo",$param) and $param["TcrRepoInfo"] !== null) {
             $this->TcrRepoInfo = new TcrRepoInfo();
             $this->TcrRepoInfo->deserialize($param["TcrRepoInfo"]);
+        }
+
+        if (array_key_exists("VolumeInfos",$param) and $param["VolumeInfos"] !== null) {
+            $this->VolumeInfos = [];
+            foreach ($param["VolumeInfos"] as $key => $value){
+                $obj = new VolumeInfo();
+                $obj->deserialize($value);
+                array_push($this->VolumeInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("VolumeMountInfos",$param) and $param["VolumeMountInfos"] !== null) {
+            $this->VolumeMountInfos = [];
+            foreach ($param["VolumeMountInfos"] as $key => $value){
+                $obj = new VolumeMountInfo();
+                $obj->deserialize($value);
+                array_push($this->VolumeMountInfos, $obj);
+            }
         }
     }
 }

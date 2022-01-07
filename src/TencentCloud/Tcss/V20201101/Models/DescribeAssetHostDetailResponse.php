@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineType(string $MachineType) 设置主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
  * @method string getPublicIp() 获取外网ip
  * @method void setPublicIp(string $PublicIp) 设置外网ip
+ * @method string getInstanceID() 获取主机实例ID
+ * @method void setInstanceID(string $InstanceID) 设置主机实例ID
+ * @method integer getRegionID() 获取地域ID
+ * @method void setRegionID(integer $RegionID) 设置地域ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -180,6 +184,16 @@ class DescribeAssetHostDetailResponse extends AbstractModel
     public $PublicIp;
 
     /**
+     * @var string 主机实例ID
+     */
+    public $InstanceID;
+
+    /**
+     * @var integer 地域ID
+     */
+    public $RegionID;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -207,6 +221,8 @@ class DescribeAssetHostDetailResponse extends AbstractModel
      * @param boolean $IsContainerd 是否Containerd
      * @param string $MachineType 主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
      * @param string $PublicIp 外网ip
+     * @param string $InstanceID 主机实例ID
+     * @param integer $RegionID 地域ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -308,6 +324,14 @@ class DescribeAssetHostDetailResponse extends AbstractModel
 
         if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
             $this->PublicIp = $param["PublicIp"];
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("RegionID",$param) and $param["RegionID"] !== null) {
+            $this->RegionID = $param["RegionID"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

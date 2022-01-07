@@ -104,6 +104,8 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
  * @method EnhancedService getEnhancedService() 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
  * @method void setEnhancedService(EnhancedService $EnhancedService) 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
+ * @method string getCamRoleName() 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+ * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -218,6 +220,11 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     public $EnhancedService;
 
     /**
+     * @var string CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public $CamRoleName;
+
+    /**
      * @param string $LaunchConfigurationId 启动配置ID
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param array $InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
@@ -260,6 +267,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
 新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
+     * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      */
     function __construct()
     {
@@ -352,6 +360,10 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         if (array_key_exists("EnhancedService",$param) and $param["EnhancedService"] !== null) {
             $this->EnhancedService = new EnhancedService();
             $this->EnhancedService->deserialize($param["EnhancedService"]);
+        }
+
+        if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
+            $this->CamRoleName = $param["CamRoleName"];
         }
     }
 }

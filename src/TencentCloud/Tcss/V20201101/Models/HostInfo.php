@@ -40,12 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置agent运行状态
  * @method boolean getIsContainerd() 获取是否是Containerd
  * @method void setIsContainerd(boolean $IsContainerd) 设置是否是Containerd
- * @method string getMachineType() 获取主机来源
- * @method void setMachineType(string $MachineType) 设置主机来源
+ * @method string getMachineType() 获取主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
+ * @method void setMachineType(string $MachineType) 设置主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
  * @method string getPublicIp() 获取外网ip
  * @method void setPublicIp(string $PublicIp) 设置外网ip
  * @method string getUuid() 获取主机uuid
  * @method void setUuid(string $Uuid) 设置主机uuid
+ * @method string getInstanceID() 获取主机实例ID
+ * @method void setInstanceID(string $InstanceID) 设置主机实例ID
+ * @method integer getRegionID() 获取地域ID
+ * @method void setRegionID(integer $RegionID) 设置地域ID
  */
 class HostInfo extends AbstractModel
 {
@@ -100,7 +104,7 @@ class HostInfo extends AbstractModel
     public $IsContainerd;
 
     /**
-     * @var string 主机来源
+     * @var string 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
      */
     public $MachineType;
 
@@ -115,6 +119,16 @@ class HostInfo extends AbstractModel
     public $Uuid;
 
     /**
+     * @var string 主机实例ID
+     */
+    public $InstanceID;
+
+    /**
+     * @var integer 地域ID
+     */
+    public $RegionID;
+
+    /**
      * @param string $HostID 主机id
      * @param string $HostIP 主机ip即内网ip
      * @param string $HostName 主机名称
@@ -125,9 +139,11 @@ class HostInfo extends AbstractModel
      * @param integer $ContainerCnt 容器个数
      * @param string $Status agent运行状态
      * @param boolean $IsContainerd 是否是Containerd
-     * @param string $MachineType 主机来源
+     * @param string $MachineType 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
      * @param string $PublicIp 外网ip
      * @param string $Uuid 主机uuid
+     * @param string $InstanceID 主机实例ID
+     * @param integer $RegionID 地域ID
      */
     function __construct()
     {
@@ -192,6 +208,14 @@ class HostInfo extends AbstractModel
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("RegionID",$param) and $param["RegionID"] !== null) {
+            $this->RegionID = $param["RegionID"];
         }
     }
 }

@@ -47,6 +47,7 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\GetRealNameAuthResultResponse GetRealNameAuthResult(Models\GetRealNameAuthResultRequest $req) 获取微信实名认证结果
  * @method Models\GetRealNameAuthTokenResponse GetRealNameAuthToken(Models\GetRealNameAuthTokenRequest $req) 该接口仅限微信公众号中使用，传入姓名和身份证号获取回调URL，在微信公众号中打开验证姓名和身份证号与微信实名的信息是否一致。
 
+ * @method Models\GetWeChatBillDetailsResponse GetWeChatBillDetails(Models\GetWeChatBillDetailsRequest $req) 查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
  * @method Models\IdCardOCRVerificationResponse IdCardOCRVerification(Models\IdCardOCRVerificationRequest $req) 本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
  * @method Models\IdCardVerificationResponse IdCardVerification(Models\IdCardVerificationRequest $req) 传入姓名和身份证号，校验两者的真实性和一致性。
  * @method Models\ImageRecognitionResponse ImageRecognition(Models\ImageRecognitionRequest $req) 传入照片和身份信息，判断该照片与公安权威库的证件照是否属于同一个人。

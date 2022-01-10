@@ -33,8 +33,8 @@ use TencentCloud\Wav\V20210129\Models as Models;
  * @method Models\QueryChatArchivingListResponse QueryChatArchivingList(Models\QueryChatArchivingListRequest $req) 根据游标拉取会话存档列表信息
  * @method Models\QueryClueInfoListResponse QueryClueInfoList(Models\QueryClueInfoListRequest $req) 企业可通过此接口获取线索列表。
  * @method Models\QueryDealerInfoListResponse QueryDealerInfoList(Models\QueryDealerInfoListRequest $req) 企业可通过此接口获取录入在企微SaaS平台上的经销商信息。
- * @method Models\QueryExternalContactDetailResponse QueryExternalContactDetail(Models\QueryExternalContactDetailRequest $req) 企业可通过此接口，根据外部联系人的userid，拉取客户详情
- * @method Models\QueryExternalContactListResponse QueryExternalContactList(Models\QueryExternalContactListRequest $req) 企业可通过此接口获取指定成员添加的客户列表。客户是指配置了客户联系功能的成员所添加的外部联系人。没有配置客户联系功能的成员，所添加的外部联系人将不会作为客户返回。
+ * @method Models\QueryExternalContactDetailResponse QueryExternalContactDetail(Models\QueryExternalContactDetailRequest $req) 企业可通过此接口，根据外部联系人的userid，拉取外部联系人详情
+ * @method Models\QueryExternalContactListResponse QueryExternalContactList(Models\QueryExternalContactListRequest $req) 企业可通过此接口基于外部联系人获取指定成员添加的客户列表。客户是指配置了客户联系功能的成员所添加的外部联系人。没有配置客户联系功能的成员，所添加的外部联系人将不会作为客户返回。
  * @method Models\QueryExternalUserMappingInfoResponse QueryExternalUserMappingInfo(Models\QueryExternalUserMappingInfoRequest $req) 企业可通过此接口将企业主体对应的外部联系人id转换为乐销车应用主体对应的外部联系人。
  * @method Models\QueryLicenseInfoResponse QueryLicenseInfo(Models\QueryLicenseInfoRequest $req) 该接口获取license对应的详细信息
  * @method Models\QueryMiniAppCodeListResponse QueryMiniAppCodeList(Models\QueryMiniAppCodeListRequest $req) 查询小程序码列表接口

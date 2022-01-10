@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplyDate(integer $ApplyDate) 设置调用时间戳，精确到秒
  * @method string getUserId() 获取客户业务侧标识用户的唯一ID
  * @method void setUserId(string $UserId) 设置客户业务侧标识用户的唯一ID
+ * @method integer getIsTest() 获取是否为测试流量
+ * @method void setIsTest(integer $IsTest) 设置是否为测试流量
  */
 class InputDescribeRiskModelData extends AbstractModel
 {
@@ -45,9 +47,15 @@ class InputDescribeRiskModelData extends AbstractModel
     public $UserId;
 
     /**
+     * @var integer 是否为测试流量
+     */
+    public $IsTest;
+
+    /**
      * @param string $UserData 业务参数加密后的签名值
      * @param integer $ApplyDate 调用时间戳，精确到秒
      * @param string $UserId 客户业务侧标识用户的唯一ID
+     * @param integer $IsTest 是否为测试流量
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class InputDescribeRiskModelData extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("IsTest",$param) and $param["IsTest"] !== null) {
+            $this->IsTest = $param["IsTest"];
         }
     }
 }

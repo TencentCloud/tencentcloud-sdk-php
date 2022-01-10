@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewSubnetId(string $NewSubnetId) 设置新子网Id
  * @method integer getOldIpRetainTime() 获取原vip保留时长，单位小时，默认为0，代表立即回收，最大为168小时
  * @method void setOldIpRetainTime(integer $OldIpRetainTime) 设置原vip保留时长，单位小时，默认为0，代表立即回收，最大为168小时
+ * @method string getVip() 获取指定VIP地址
+ * @method void setVip(string $Vip) 设置指定VIP地址
  */
 class ModifyDBInstanceNetworkRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyDBInstanceNetworkRequest extends AbstractModel
     public $OldIpRetainTime;
 
     /**
+     * @var string 指定VIP地址
+     */
+    public $Vip;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $NewVpcId 新VPC网络Id
      * @param string $NewSubnetId 新子网Id
      * @param integer $OldIpRetainTime 原vip保留时长，单位小时，默认为0，代表立即回收，最大为168小时
+     * @param string $Vip 指定VIP地址
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyDBInstanceNetworkRequest extends AbstractModel
 
         if (array_key_exists("OldIpRetainTime",$param) and $param["OldIpRetainTime"] !== null) {
             $this->OldIpRetainTime = $param["OldIpRetainTime"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
         }
     }
 }

@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShutdown(integer $Shutdown) 设置已关机总数
  * @method integer getOffline() 获取已离线总数
  * @method void setOffline(integer $Offline) 设置已离线总数
+ * @method integer getFlagshipMachineCnt() 获取旗舰版主机数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFlagshipMachineCnt(integer $FlagshipMachineCnt) 设置旗舰版主机数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProtectDays() 获取保护天数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtectDays(integer $ProtectDays) 设置保护天数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -103,6 +111,18 @@ class DescribeGeneralStatResponse extends AbstractModel
     public $Offline;
 
     /**
+     * @var integer 旗舰版主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FlagshipMachineCnt;
+
+    /**
+     * @var integer 保护天数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProtectDays;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -119,6 +139,10 @@ class DescribeGeneralStatResponse extends AbstractModel
      * @param integer $RiskMachine 风险主机总数
      * @param integer $Shutdown 已关机总数
      * @param integer $Offline 已离线总数
+     * @param integer $FlagshipMachineCnt 旗舰版主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProtectDays 保护天数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -176,6 +200,14 @@ class DescribeGeneralStatResponse extends AbstractModel
 
         if (array_key_exists("Offline",$param) and $param["Offline"] !== null) {
             $this->Offline = $param["Offline"];
+        }
+
+        if (array_key_exists("FlagshipMachineCnt",$param) and $param["FlagshipMachineCnt"] !== null) {
+            $this->FlagshipMachineCnt = $param["FlagshipMachineCnt"];
+        }
+
+        if (array_key_exists("ProtectDays",$param) and $param["ProtectDays"] !== null) {
+            $this->ProtectDays = $param["ProtectDays"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

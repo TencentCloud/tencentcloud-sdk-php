@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBMajorVersion(string $DBMajorVersion) 设置PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
  * @method string getDBKernelVersion() 获取PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
  * @method void setDBKernelVersion(string $DBKernelVersion) 设置PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
+ * @method array getDBNodeSet() 获取实例节点信息，购买跨可用区实例时填写。
+ * @method void setDBNodeSet(array $DBNodeSet) 设置实例节点信息，购买跨可用区实例时填写。
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -185,6 +187,11 @@ class CreateInstancesRequest extends AbstractModel
     public $DBKernelVersion;
 
     /**
+     * @var array 实例节点信息，购买跨可用区实例时填写。
+     */
+    public $DBNodeSet;
+
+    /**
      * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      * @param integer $Storage 实例容量大小，单位：GB。
      * @param integer $InstanceCount 一次性购买的实例数量。取值1-10。
@@ -208,6 +215,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param array $SecurityGroupIds 安全组ID。
      * @param string $DBMajorVersion PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
      * @param string $DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
+     * @param array $DBNodeSet 实例节点信息，购买跨可用区实例时填写。
      */
     function __construct()
     {
@@ -317,6 +325,15 @@ class CreateInstancesRequest extends AbstractModel
 
         if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
             $this->DBKernelVersion = $param["DBKernelVersion"];
+        }
+
+        if (array_key_exists("DBNodeSet",$param) and $param["DBNodeSet"] !== null) {
+            $this->DBNodeSet = [];
+            foreach ($param["DBNodeSet"] as $key => $value){
+                $obj = new DBNode();
+                $obj->deserialize($value);
+                array_push($this->DBNodeSet, $obj);
+            }
         }
     }
 }

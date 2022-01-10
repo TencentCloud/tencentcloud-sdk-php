@@ -26,10 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneName(string $ZoneName) 设置该可用区的中文名称
  * @method integer getZoneId() 获取该可用区对应的数字编号
  * @method void setZoneId(integer $ZoneId) 设置该可用区对应的数字编号
- * @method string getZoneState() 获取可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
- * @method void setZoneState(string $ZoneState) 设置可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+ * @method string getZoneState() 获取可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
+ * @method void setZoneState(string $ZoneState) 设置可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
  * @method integer getZoneSupportIpv6() 获取该可用区是否支持Ipv6
  * @method void setZoneSupportIpv6(integer $ZoneSupportIpv6) 设置该可用区是否支持Ipv6
+ * @method array getStandbyZoneSet() 获取该可用区对应的备可用区集合
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStandbyZoneSet(array $StandbyZoneSet) 设置该可用区对应的备可用区集合
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneInfo extends AbstractModel
 {
@@ -49,7 +53,7 @@ class ZoneInfo extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+     * @var string 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
      */
     public $ZoneState;
 
@@ -59,11 +63,19 @@ class ZoneInfo extends AbstractModel
     public $ZoneSupportIpv6;
 
     /**
+     * @var array 该可用区对应的备可用区集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StandbyZoneSet;
+
+    /**
      * @param string $Zone 该可用区的英文名称
      * @param string $ZoneName 该可用区的中文名称
      * @param integer $ZoneId 该可用区对应的数字编号
-     * @param string $ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+     * @param string $ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
      * @param integer $ZoneSupportIpv6 该可用区是否支持Ipv6
+     * @param array $StandbyZoneSet 该可用区对应的备可用区集合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class ZoneInfo extends AbstractModel
 
         if (array_key_exists("ZoneSupportIpv6",$param) and $param["ZoneSupportIpv6"] !== null) {
             $this->ZoneSupportIpv6 = $param["ZoneSupportIpv6"];
+        }
+
+        if (array_key_exists("StandbyZoneSet",$param) and $param["StandbyZoneSet"] !== null) {
+            $this->StandbyZoneSet = $param["StandbyZoneSet"];
         }
     }
 }

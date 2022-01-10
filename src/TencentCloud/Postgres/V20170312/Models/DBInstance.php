@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBMajorVersion(string $DBMajorVersion) 设置PostgreSQL主要版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDBNodeSet() 获取实例的节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDBNodeSet(array $DBNodeSet) 设置实例的节点信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -293,6 +297,12 @@ class DBInstance extends AbstractModel
     public $DBMajorVersion;
 
     /**
+     * @var array 实例的节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DBNodeSet;
+
+    /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      * @param integer $ProjectId 项目ID
@@ -335,6 +345,8 @@ class DBInstance extends AbstractModel
      * @param array $NetworkAccessList 实例网络信息列表（此字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DBMajorVersion PostgreSQL主要版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DBNodeSet 实例的节点信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -503,6 +515,15 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("DBMajorVersion",$param) and $param["DBMajorVersion"] !== null) {
             $this->DBMajorVersion = $param["DBMajorVersion"];
+        }
+
+        if (array_key_exists("DBNodeSet",$param) and $param["DBNodeSet"] !== null) {
+            $this->DBNodeSet = [];
+            foreach ($param["DBNodeSet"] as $key => $value){
+                $obj = new DBNode();
+                $obj->deserialize($value);
+                array_push($this->DBNodeSet, $obj);
+            }
         }
     }
 }

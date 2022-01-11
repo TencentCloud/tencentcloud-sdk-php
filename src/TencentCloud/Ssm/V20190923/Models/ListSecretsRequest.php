@@ -49,9 +49,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSecretType() 获取0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
 2 -- 表示SSH密钥对凭据。
+3 -- 表示云API密钥对凭据。
  * @method void setSecretType(integer $SecretType) 设置0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
 2 -- 表示SSH密钥对凭据。
+3 -- 表示云API密钥对凭据。
  * @method string getProductName() 获取此参数仅在SecretType参数值为1时生效，
 当SecretType值为1时：
 如果ProductName值为空，则表示查询所有类型的云产品凭据
@@ -106,6 +108,7 @@ class ListSecretsRequest extends AbstractModel
      * @var integer 0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
 2 -- 表示SSH密钥对凭据。
+3 -- 表示云API密钥对凭据。
      */
     public $SecretType;
 
@@ -135,6 +138,7 @@ class ListSecretsRequest extends AbstractModel
      * @param integer $SecretType 0  -- 表示用户自定义凭据，默认为0。
 1  -- 表示用户云产品凭据。
 2 -- 表示SSH密钥对凭据。
+3 -- 表示云API密钥对凭据。
      * @param string $ProductName 此参数仅在SecretType参数值为1时生效，
 当SecretType值为1时：
 如果ProductName值为空，则表示查询所有类型的云产品凭据

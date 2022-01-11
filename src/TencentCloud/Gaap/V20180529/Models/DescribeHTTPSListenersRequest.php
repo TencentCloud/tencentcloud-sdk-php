@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchValue(string $SearchValue) 设置过滤条件，支持按照端口或监听器名称进行模糊查询
  * @method string getGroupId() 获取过滤条件，通道组ID
  * @method void setGroupId(string $GroupId) 设置过滤条件，通道组ID
+ * @method integer getHttp3Supported() 获取支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+该功能的启停无法在监听器创建完毕后再修改。
+ * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+该功能的启停无法在监听器创建完毕后再修改。
  */
 class DescribeHTTPSListenersRequest extends AbstractModel
 {
@@ -80,6 +90,15 @@ class DescribeHTTPSListenersRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer 支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+该功能的启停无法在监听器创建完毕后再修改。
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $ProxyId 过滤条件，通道ID
      * @param string $ListenerId 过滤条件，根据监听器ID进行精确查询。
      * @param string $ListenerName 过滤条件，根据监听器名称进行精确查询。
@@ -88,6 +107,11 @@ class DescribeHTTPSListenersRequest extends AbstractModel
      * @param integer $Limit 限制数量，默认为20
      * @param string $SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询
      * @param string $GroupId 过滤条件，通道组ID
+     * @param integer $Http3Supported 支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+该功能的启停无法在监听器创建完毕后再修改。
      */
     function __construct()
     {
@@ -132,6 +156,10 @@ class DescribeHTTPSListenersRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

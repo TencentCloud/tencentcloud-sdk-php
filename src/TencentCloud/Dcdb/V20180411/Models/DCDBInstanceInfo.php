@@ -136,6 +136,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(integer $InstanceType) 设置1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResourceTags() 获取实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceTags(array $ResourceTags) 设置实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DCDBInstanceInfo extends AbstractModel
 {
@@ -390,6 +394,12 @@ class DCDBInstanceInfo extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var array 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param integer $AppId 应用ID
@@ -447,6 +457,8 @@ class DCDBInstanceInfo extends AbstractModel
      * @param integer $DcnDstNum DCN灾备实例数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ResourceTags 实例标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -657,6 +669,15 @@ class DCDBInstanceInfo extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

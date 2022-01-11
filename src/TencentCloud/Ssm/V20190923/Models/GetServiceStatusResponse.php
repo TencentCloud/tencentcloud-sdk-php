@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceEnabled(boolean $ServiceEnabled) 设置true表示服务已开通，false 表示服务尚未开通。
  * @method integer getInvalidType() 获取服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
  * @method void setInvalidType(integer $InvalidType) 设置服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
+ * @method boolean getAccessKeyEscrowEnabled() 获取true表示用户已经可以使用云API密钥安全托管功能，
+false表示用户暂时不能使用云API密钥安全托管功能。
+ * @method void setAccessKeyEscrowEnabled(boolean $AccessKeyEscrowEnabled) 设置true表示用户已经可以使用云API密钥安全托管功能，
+false表示用户暂时不能使用云API密钥安全托管功能。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,12 @@ class GetServiceStatusResponse extends AbstractModel
     public $InvalidType;
 
     /**
+     * @var boolean true表示用户已经可以使用云API密钥安全托管功能，
+false表示用户暂时不能使用云API密钥安全托管功能。
+     */
+    public $AccessKeyEscrowEnabled;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class GetServiceStatusResponse extends AbstractModel
     /**
      * @param boolean $ServiceEnabled true表示服务已开通，false 表示服务尚未开通。
      * @param integer $InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放。
+     * @param boolean $AccessKeyEscrowEnabled true表示用户已经可以使用云API密钥安全托管功能，
+false表示用户暂时不能使用云API密钥安全托管功能。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +80,10 @@ class GetServiceStatusResponse extends AbstractModel
 
         if (array_key_exists("InvalidType",$param) and $param["InvalidType"] !== null) {
             $this->InvalidType = $param["InvalidType"];
+        }
+
+        if (array_key_exists("AccessKeyEscrowEnabled",$param) and $param["AccessKeyEscrowEnabled"] !== null) {
+            $this->AccessKeyEscrowEnabled = $param["AccessKeyEscrowEnabled"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

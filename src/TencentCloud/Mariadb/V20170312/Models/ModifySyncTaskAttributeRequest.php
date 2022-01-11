@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySyncTaskAttribute请求参数结构体
  *
- * @method array getTaskIds() 获取一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。
- * @method void setTaskIds(array $TaskIds) 设置一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。
+ * @method array getTaskIds() 获取一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的任务数量上限是100。
+ * @method void setTaskIds(array $TaskIds) 设置一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的任务数量上限是100。
  * @method string getTaskName() 获取任务名称。可任意命名，但不得超过100个字符。
  * @method void setTaskName(string $TaskName) 设置任务名称。可任意命名，但不得超过100个字符。
  */
 class ModifySyncTaskAttributeRequest extends AbstractModel
 {
     /**
-     * @var array 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。
+     * @var array 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的任务数量上限是100。
      */
     public $TaskIds;
 
@@ -38,7 +38,7 @@ class ModifySyncTaskAttributeRequest extends AbstractModel
     public $TaskName;
 
     /**
-     * @param array $TaskIds 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。
+     * @param array $TaskIds 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的任务数量上限是100。
      * @param string $TaskName 任务名称。可任意命名，但不得超过100个字符。
      */
     function __construct()

@@ -21,17 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * DescribeComplianceTaskAssetSummary请求参数结构体
  *
  * @method array getAssetTypeSet() 获取资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
  * @method void setAssetTypeSet(array $AssetTypeSet) 设置资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
  */
 class DescribeComplianceTaskAssetSummaryRequest extends AbstractModel
 {
     /**
      * @var array 资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
      */
     public $AssetTypeSet;
 
     /**
      * @param array $AssetTypeSet 资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
      */
     function __construct()
     {

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkType(string $NetworkType) 设置网络类型，可取值：normal、cn2，默认值normal
  * @method string getPackageType() 获取通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
  * @method void setPackageType(string $PackageType) 设置通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+ * @method integer getHttp3Supported() 获取支持Http3的开关，其中：0，表示不需要支持Http3接入；1，表示需要支持Http3接入。注意：如果开启了Http3的功能，那么该通道就不再支持TCP/UDP接入的功能。该功能的启停无法在通道创建完毕后再修改。
+ * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3的开关，其中：0，表示不需要支持Http3接入；1，表示需要支持Http3接入。注意：如果开启了Http3的功能，那么该通道就不再支持TCP/UDP接入的功能。该功能的启停无法在通道创建完毕后再修改。
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CheckProxyCreateRequest extends AbstractModel
     public $PackageType;
 
     /**
+     * @var integer 支持Http3的开关，其中：0，表示不需要支持Http3接入；1，表示需要支持Http3接入。注意：如果开启了Http3的功能，那么该通道就不再支持TCP/UDP接入的功能。该功能的启停无法在通道创建完毕后再修改。
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
      * @param string $RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
      * @param integer $Bandwidth 通道带宽上限，单位：Mbps。
@@ -88,6 +95,7 @@ class CheckProxyCreateRequest extends AbstractModel
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
      * @param string $NetworkType 网络类型，可取值：normal、cn2，默认值normal
      * @param string $PackageType 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+     * @param integer $Http3Supported 支持Http3的开关，其中：0，表示不需要支持Http3接入；1，表示需要支持Http3接入。注意：如果开启了Http3的功能，那么该通道就不再支持TCP/UDP接入的功能。该功能的启停无法在通道创建完毕后再修改。
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CheckProxyCreateRequest extends AbstractModel
 
         if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
             $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

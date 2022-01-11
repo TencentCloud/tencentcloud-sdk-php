@@ -44,6 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) 设置新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
  * @method string getGroupId() 获取通道组ID，与ProxyId之间只能设置一个。表示创建通道组的监听器。
  * @method void setGroupId(string $GroupId) 设置通道组ID，与ProxyId之间只能设置一个。表示创建通道组的监听器。
+ * @method integer getHttp3Supported() 获取支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+该功能的启停无法在监听器创建完毕后再修改。
+ * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+该功能的启停无法在监听器创建完毕后再修改。
  */
 class CreateHTTPSListenerRequest extends AbstractModel
 {
@@ -96,6 +106,15 @@ class CreateHTTPSListenerRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer 支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+该功能的启停无法在监听器创建完毕后再修改。
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
      * @param string $CertificateId 服务器证书ID
@@ -108,6 +127,11 @@ class CreateHTTPSListenerRequest extends AbstractModel
      * @param string $ClientCertificateId 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
      * @param array $PolyClientCertificateIds 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
      * @param string $GroupId 通道组ID，与ProxyId之间只能设置一个。表示创建通道组的监听器。
+     * @param integer $Http3Supported 支持Http3的开关，其中：
+0，表示不需要支持Http3接入；
+1，表示需要支持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+该功能的启停无法在监听器创建完毕后再修改。
      */
     function __construct()
     {
@@ -156,6 +180,10 @@ class CreateHTTPSListenerRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

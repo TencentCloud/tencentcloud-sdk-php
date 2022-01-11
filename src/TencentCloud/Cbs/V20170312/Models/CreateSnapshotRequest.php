@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskId(string $DiskId) 设置需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
  * @method string getSnapshotName() 获取快照名称，不传则新快照名称默认为“未命名”。
  * @method void setSnapshotName(string $SnapshotName) 设置快照名称，不传则新快照名称默认为“未命名”。
- * @method string getDeadline() 获取快照的到期时间，到期后该快照将会自动删除
- * @method void setDeadline(string $Deadline) 设置快照的到期时间，到期后该快照将会自动删除
+ * @method string getDeadline() 获取快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00
+ * @method void setDeadline(string $Deadline) 设置快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00
  */
 class CreateSnapshotRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateSnapshotRequest extends AbstractModel
     public $SnapshotName;
 
     /**
-     * @var string 快照的到期时间，到期后该快照将会自动删除
+     * @var string 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00
      */
     public $Deadline;
 
     /**
      * @param string $DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      * @param string $SnapshotName 快照名称，不传则新快照名称默认为“未命名”。
-     * @param string $Deadline 快照的到期时间，到期后该快照将会自动删除
+     * @param string $Deadline 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00
      */
     function __construct()
     {

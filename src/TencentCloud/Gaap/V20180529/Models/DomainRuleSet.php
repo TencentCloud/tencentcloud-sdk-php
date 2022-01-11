@@ -114,6 +114,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBanStatus(string $BanStatus) 设置封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHttp3Supported() 获取Http3特性标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttp3Supported(integer $Http3Supported) 设置Http3特性标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -245,6 +253,14 @@ class DomainRuleSet extends AbstractModel
     public $BanStatus;
 
     /**
+     * @var integer Http3特性标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $Domain 转发规则域名。
      * @param array $RuleSet 该域名对应的转发规则列表。
      * @param string $CertificateId 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
@@ -291,6 +307,10 @@ class DomainRuleSet extends AbstractModel
 2表示删除中。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Http3Supported Http3特性标识，其中：
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -399,6 +419,10 @@ class DomainRuleSet extends AbstractModel
 
         if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
             $this->BanStatus = $param["BanStatus"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

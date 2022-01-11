@@ -70,6 +70,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayMode() 获取付费模式：prePay 预付费 postPay后付费 riPay预留实例
  * @method void setPayMode(string $PayMode) 设置付费模式：prePay 预付费 postPay后付费 riPay预留实例
+ * @method string getAction() 获取交易类型
+modifyNetworkMode 调整带宽模式
+modifyNetworkSize 调整带宽大小
+refund 退款
+downgrade 降配
+upgrade 升配
+renew 续费
+purchase 购买
+preMoveOut 包年包月迁出资源
+preMoveIn 包年包月迁入资源
+preToPost 预付费转后付费
+postMoveOut 按量计费迁出资源
+postMoveIn 按量计费迁入资源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAction(string $Action) 设置交易类型
+modifyNetworkMode 调整带宽模式
+modifyNetworkSize 调整带宽大小
+refund 退款
+downgrade 降配
+upgrade 升配
+renew 续费
+purchase 购买
+preMoveOut 包年包月迁出资源
+preMoveIn 包年包月迁入资源
+preToPost 预付费转后付费
+postMoveOut 按量计费迁出资源
+postMoveIn 按量计费迁入资源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Deal extends AbstractModel
 {
@@ -187,6 +215,24 @@ class Deal extends AbstractModel
     public $PayMode;
 
     /**
+     * @var string 交易类型
+modifyNetworkMode 调整带宽模式
+modifyNetworkSize 调整带宽大小
+refund 退款
+downgrade 降配
+upgrade 升配
+renew 续费
+purchase 购买
+preMoveOut 包年包月迁出资源
+preMoveIn 包年包月迁入资源
+preToPost 预付费转后付费
+postMoveOut 按量计费迁出资源
+postMoveIn 按量计费迁入资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Action;
+
+    /**
      * @param string $OrderId 订单号
      * @param integer $Status 订单状态
      * @param string $Payer 支付者
@@ -212,6 +258,20 @@ class Deal extends AbstractModel
      * @param string $RefReturnDeals 退费涉及订单信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayMode 付费模式：prePay 预付费 postPay后付费 riPay预留实例
+     * @param string $Action 交易类型
+modifyNetworkMode 调整带宽模式
+modifyNetworkSize 调整带宽大小
+refund 退款
+downgrade 降配
+upgrade 升配
+renew 续费
+purchase 购买
+preMoveOut 包年包月迁出资源
+preMoveIn 包年包月迁入资源
+preToPost 预付费转后付费
+postMoveOut 按量计费迁出资源
+postMoveIn 按量计费迁入资源
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -317,6 +377,10 @@ class Deal extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
+            $this->Action = $param["Action"];
         }
     }
 }

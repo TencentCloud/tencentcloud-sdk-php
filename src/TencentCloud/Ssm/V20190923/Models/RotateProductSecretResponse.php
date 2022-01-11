@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RotateProductSecret返回参数结构体
  *
- * @method integer getFlowID() 获取轮转异步任务ID号。
- * @method void setFlowID(integer $FlowID) 设置轮转异步任务ID号。
+ * @method integer getFlowID() 获取当凭据类型为云产品凭据时（即SecretType为1，如Mysq、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
+ * @method void setFlowID(integer $FlowID) 设置当凭据类型为云产品凭据时（即SecretType为1，如Mysq、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class RotateProductSecretResponse extends AbstractModel
 {
     /**
-     * @var integer 轮转异步任务ID号。
+     * @var integer 当凭据类型为云产品凭据时（即SecretType为1，如Mysq、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
      */
     public $FlowID;
 
@@ -38,7 +38,7 @@ class RotateProductSecretResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowID 轮转异步任务ID号。
+     * @param integer $FlowID 当凭据类型为云产品凭据时（即SecretType为1，如Mysq、Tdsql等托管凭据）此字段有效，返回轮转异步任务ID号。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

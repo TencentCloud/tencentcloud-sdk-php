@@ -74,9 +74,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageType() 获取通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
+ * @method string getPackageType() 获取通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageType(string $PackageType) 设置通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
+ * @method void setPackageType(string $PackageType) 设置通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHttp3Supported() 获取支持Http3特性的标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3特性的标识，其中：
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupDetail extends AbstractModel
@@ -177,10 +185,18 @@ class ProxyGroupDetail extends AbstractModel
     public $IPAddressVersion;
 
     /**
-     * @var string 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
+     * @var string 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
+
+    /**
+     * @var integer 支持Http3特性的标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Http3Supported;
 
     /**
      * @param integer $CreateTime 创建时间
@@ -210,7 +226,11 @@ class ProxyGroupDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组。
+     * @param string $PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Http3Supported 支持Http3特性的标识，其中：
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -302,6 +322,10 @@ class ProxyGroupDetail extends AbstractModel
 
         if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
             $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

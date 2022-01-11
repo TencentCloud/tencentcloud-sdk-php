@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignType(integer $SignType) 设置签署类型
  * @method integer getRoutingOrder() 获取签署顺序：数字越小优先级越高
  * @method void setRoutingOrder(integer $RoutingOrder) 设置签署顺序：数字越小优先级越高
+ * @method boolean getIsPromoter() 获取是否是发起方
+ * @method void setIsPromoter(boolean $IsPromoter) 设置是否是发起方
  */
 class Recipient extends AbstractModel
 {
@@ -80,6 +82,11 @@ class Recipient extends AbstractModel
     public $RoutingOrder;
 
     /**
+     * @var boolean 是否是发起方
+     */
+    public $IsPromoter;
+
+    /**
      * @param string $RecipientId 签署人唯一标识
      * @param string $RecipientType 签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人
      * @param string $Description 描述
@@ -88,6 +95,7 @@ class Recipient extends AbstractModel
      * @param boolean $RequireSign 是否必须填写
      * @param integer $SignType 签署类型
      * @param integer $RoutingOrder 签署顺序：数字越小优先级越高
+     * @param boolean $IsPromoter 是否是发起方
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class Recipient extends AbstractModel
 
         if (array_key_exists("RoutingOrder",$param) and $param["RoutingOrder"] !== null) {
             $this->RoutingOrder = $param["RoutingOrder"];
+        }
+
+        if (array_key_exists("IsPromoter",$param) and $param["IsPromoter"] !== null) {
+            $this->IsPromoter = $param["IsPromoter"];
         }
     }
 }

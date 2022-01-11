@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddEditReverseShellWhiteList请求参数结构体
  *
- * @method ReverseShellWhiteListInfo getWhiteListInfo() 获取增加白名单信息，白名单id为空，编辑白名单id不能为空
- * @method void setWhiteListInfo(ReverseShellWhiteListInfo $WhiteListInfo) 设置增加白名单信息，白名单id为空，编辑白名单id不能为空
- * @method string getEventId() 获取仅在添加白名单时候使用
- * @method void setEventId(string $EventId) 设置仅在添加白名单时候使用
+ * @method ReverseShellWhiteListInfo getWhiteListInfo() 获取增加或编辑白名单信息。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空。
+ * @method void setWhiteListInfo(ReverseShellWhiteListInfo $WhiteListInfo) 设置增加或编辑白名单信息。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空。
+ * @method string getEventId() 获取仅在添加事件白名单时候使用
+ * @method void setEventId(string $EventId) 设置仅在添加事件白名单时候使用
  */
 class AddEditReverseShellWhiteListRequest extends AbstractModel
 {
     /**
-     * @var ReverseShellWhiteListInfo 增加白名单信息，白名单id为空，编辑白名单id不能为空
+     * @var ReverseShellWhiteListInfo 增加或编辑白名单信息。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空。
      */
     public $WhiteListInfo;
 
     /**
-     * @var string 仅在添加白名单时候使用
+     * @var string 仅在添加事件白名单时候使用
      */
     public $EventId;
 
     /**
-     * @param ReverseShellWhiteListInfo $WhiteListInfo 增加白名单信息，白名单id为空，编辑白名单id不能为空
-     * @param string $EventId 仅在添加白名单时候使用
+     * @param ReverseShellWhiteListInfo $WhiteListInfo 增加或编辑白名单信息。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空。
+     * @param string $EventId 仅在添加事件白名单时候使用
      */
     function __construct()
     {

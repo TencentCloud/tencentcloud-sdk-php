@@ -44,9 +44,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNextRotationTime(integer $NextRotationTime) 设置下一次轮转开始时间，uinx 时间戳
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSecretType() 获取0 -- 用户自定义凭据；1 -- 云产品凭据
+ * @method integer getSecretType() 获取0 -- 用户自定义凭据；
+1 -- 云产品凭据；
+2 -- SSH密钥对凭据；
+3 -- 云API密钥对凭据；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecretType(integer $SecretType) 设置0 -- 用户自定义凭据；1 -- 云产品凭据
+ * @method void setSecretType(integer $SecretType) 设置0 -- 用户自定义凭据；
+1 -- 云产品凭据；
+2 -- SSH密钥对凭据；
+3 -- 云API密钥对凭据；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -63,6 +69,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAssociatedInstanceIDs() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedInstanceIDs(array $AssociatedInstanceIDs) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTargetUin() 获取当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetUin(integer $TargetUin) 设置当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecretMetadata extends AbstractModel
@@ -120,7 +130,10 @@ class SecretMetadata extends AbstractModel
     public $NextRotationTime;
 
     /**
-     * @var integer 0 -- 用户自定义凭据；1 -- 云产品凭据
+     * @var integer 0 -- 用户自定义凭据；
+1 -- 云产品凭据；
+2 -- SSH密钥对凭据；
+3 -- 云API密钥对凭据；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretType;
@@ -150,6 +163,12 @@ class SecretMetadata extends AbstractModel
     public $AssociatedInstanceIDs;
 
     /**
+     * @var integer 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetUin;
+
+    /**
      * @param string $SecretName 凭据名称
      * @param string $Description 凭据的描述信息
      * @param string $KmsKeyId 用于加密凭据的KMS KeyId
@@ -162,7 +181,10 @@ class SecretMetadata extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NextRotationTime 下一次轮转开始时间，uinx 时间戳
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SecretType 0 -- 用户自定义凭据；1 -- 云产品凭据
+     * @param integer $SecretType 0 -- 用户自定义凭据；
+1 -- 云产品凭据；
+2 -- SSH密钥对凭据；
+3 -- 云API密钥对凭据；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,6 +193,8 @@ class SecretMetadata extends AbstractModel
      * @param integer $ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +268,10 @@ class SecretMetadata extends AbstractModel
 
         if (array_key_exists("AssociatedInstanceIDs",$param) and $param["AssociatedInstanceIDs"] !== null) {
             $this->AssociatedInstanceIDs = $param["AssociatedInstanceIDs"];
+        }
+
+        if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
+            $this->TargetUin = $param["TargetUin"];
         }
     }
 }

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全出入口规则
  *
- * @method string getAction() 获取策略，ACCEPT 或者 DROP
- * @method void setAction(string $Action) 设置策略，ACCEPT 或者 DROP
  * @method string getCidrIp() 获取来源 IP 或 IP 段，例如192.168.0.0/16
  * @method void setCidrIp(string $CidrIp) 设置来源 IP 或 IP 段，例如192.168.0.0/16
+ * @method string getAction() 获取策略，ACCEPT 或者 DROP
+ * @method void setAction(string $Action) 设置策略，ACCEPT 或者 DROP
  * @method string getPortRange() 获取端口
  * @method void setPortRange(string $PortRange) 设置端口
  * @method string getIpProtocol() 获取网络协议，支持 UDP、TCP 等
@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
 class SecurityGroupBound extends AbstractModel
 {
     /**
-     * @var string 策略，ACCEPT 或者 DROP
-     */
-    public $Action;
-
-    /**
      * @var string 来源 IP 或 IP 段，例如192.168.0.0/16
      */
     public $CidrIp;
+
+    /**
+     * @var string 策略，ACCEPT 或者 DROP
+     */
+    public $Action;
 
     /**
      * @var string 端口
@@ -52,8 +52,8 @@ class SecurityGroupBound extends AbstractModel
     public $IpProtocol;
 
     /**
-     * @param string $Action 策略，ACCEPT 或者 DROP
      * @param string $CidrIp 来源 IP 或 IP 段，例如192.168.0.0/16
+     * @param string $Action 策略，ACCEPT 或者 DROP
      * @param string $PortRange 端口
      * @param string $IpProtocol 网络协议，支持 UDP、TCP 等
      */
@@ -70,12 +70,12 @@ class SecurityGroupBound extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
-        }
-
         if (array_key_exists("CidrIp",$param) and $param["CidrIp"] !== null) {
             $this->CidrIp = $param["CidrIp"];
+        }
+
+        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
+            $this->Action = $param["Action"];
         }
 
         if (array_key_exists("PortRange",$param) and $param["PortRange"] !== null) {

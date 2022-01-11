@@ -104,6 +104,8 @@ FAILED：表示操作失败
  * @method void setOsName(string $OsName) 设置操作系统名称。
  * @method string getZone() 获取可用区。
  * @method void setZone(string $Zone) 设置可用区。
+ * @method array getTags() 获取实例绑定的标签列表。
+ * @method void setTags(array $Tags) 设置实例绑定的标签列表。
  */
 class Instance extends AbstractModel
 {
@@ -250,6 +252,11 @@ FAILED：表示操作失败
     public $Zone;
 
     /**
+     * @var array 实例绑定的标签列表。
+     */
+    public $Tags;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $BundleId 套餐 ID。
      * @param string $BlueprintId 镜像 ID。
@@ -292,6 +299,7 @@ FAILED：表示操作失败
      * @param string $Platform 操作系统平台。
      * @param string $OsName 操作系统名称。
      * @param string $Zone 可用区。
+     * @param array $Tags 实例绑定的标签列表。
      */
     function __construct()
     {
@@ -407,6 +415,15 @@ FAILED：表示操作失败
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

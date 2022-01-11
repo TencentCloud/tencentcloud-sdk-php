@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getImageLayer() 获取输入图层。取值范围[1，16]。
 1)背景流（即大主播画面或画布）的 image_layer 填1。
 2)纯音频混流，该参数也需填。
+注意：不同输入，该值不可重复
  * @method void setImageLayer(integer $ImageLayer) 设置输入图层。取值范围[1，16]。
 1)背景流（即大主播画面或画布）的 image_layer 填1。
 2)纯音频混流，该参数也需填。
+注意：不同输入，该值不可重复
  * @method integer getInputType() 获取输入类型。取值范围[0，5]。
 不填默认为0。
 0表示输入流为音视频。
@@ -111,6 +113,7 @@ class CommonMixLayoutParams extends AbstractModel
      * @var integer 输入图层。取值范围[1，16]。
 1)背景流（即大主播画面或画布）的 image_layer 填1。
 2)纯音频混流，该参数也需填。
+注意：不同输入，该值不可重复
      */
     public $ImageLayer;
 
@@ -185,6 +188,7 @@ class CommonMixLayoutParams extends AbstractModel
      * @param integer $ImageLayer 输入图层。取值范围[1，16]。
 1)背景流（即大主播画面或画布）的 image_layer 填1。
 2)纯音频混流，该参数也需填。
+注意：不同输入，该值不可重复
      * @param integer $InputType 输入类型。取值范围[0，5]。
 不填默认为0。
 0表示输入流为音视频。

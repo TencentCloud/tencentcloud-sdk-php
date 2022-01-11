@@ -48,7 +48,8 @@ use TencentCloud\Ssm\V20190923\Models as Models;
  * @method Models\PutSecretValueResponse PutSecretValue(Models\PutSecretValueRequest $req) 该接口在指定名称的凭据下增加新版本的凭据内容，一个凭据下最多可以支持10个版本。只能对处于Enabled 和 Disabled 状态的凭据添加新的版本。
 本接口仅适用于用户自定义凭据，对云产品凭据不能操作。
  * @method Models\RestoreSecretResponse RestoreSecret(Models\RestoreSecretRequest $req) 该接口用于恢复计划删除（PendingDelete状态）中的凭据，取消计划删除。取消计划删除的凭据将处于Disabled 状态，如需恢复使用，通过EnableSecret 接口开启凭据。
- * @method Models\RotateProductSecretResponse RotateProductSecret(Models\RotateProductSecretRequest $req) 轮转云产品凭据。该接口仅适用于处于Enabled状态的云产品凭据，对于其他状态的云产品凭据或用户自定义凭据不适用。
+ * @method Models\RotateProductSecretResponse RotateProductSecret(Models\RotateProductSecretRequest $req) 轮转云产品凭据或云API密钥对凭据。
+该接口仅适用于处于Enabled状态的云产品凭据或处于Enable状态的云API密钥对凭据，对于其他状态的云产品凭据或云API密钥对凭据或用户自定义凭据不适用。
  * @method Models\UpdateDescriptionResponse UpdateDescription(Models\UpdateDescriptionRequest $req) 该接口用于修改指定凭据的描述信息，仅能修改Enabled 和 Disabled 状态的凭据。
  * @method Models\UpdateRotationStatusResponse UpdateRotationStatus(Models\UpdateRotationStatusRequest $req) 设置云产品凭据轮转策略，可以设置：
 是否开启轮转

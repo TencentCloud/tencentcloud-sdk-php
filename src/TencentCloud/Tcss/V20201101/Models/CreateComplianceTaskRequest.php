@@ -25,11 +25,13 @@ ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
 ASSET_K8S, K8S资产
+AssetTypeSet, PolicySetId, PeriodTaskId三个参数，必须要给其中一个参数填写有效的值。
  * @method void setAssetTypeSet(array $AssetTypeSet) 设置指定要扫描的资产类型列表。
 ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
 ASSET_K8S, K8S资产
+AssetTypeSet, PolicySetId, PeriodTaskId三个参数，必须要给其中一个参数填写有效的值。
  * @method integer getPolicySetId() 获取按照策略集ID指定的策略执行合规检查。
  * @method void setPolicySetId(integer $PolicySetId) 设置按照策略集ID指定的策略执行合规检查。
  * @method integer getPeriodTaskId() 获取按照定时任务ID指定的策略执行合规检查。
@@ -43,6 +45,7 @@ ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
 ASSET_K8S, K8S资产
+AssetTypeSet, PolicySetId, PeriodTaskId三个参数，必须要给其中一个参数填写有效的值。
      */
     public $AssetTypeSet;
 
@@ -62,6 +65,7 @@ ASSET_CONTAINER, 容器
 ASSET_IMAGE, 镜像
 ASSET_HOST, 主机
 ASSET_K8S, K8S资产
+AssetTypeSet, PolicySetId, PeriodTaskId三个参数，必须要给其中一个参数填写有效的值。
      * @param integer $PolicySetId 按照策略集ID指定的策略执行合规检查。
      * @param integer $PeriodTaskId 按照定时任务ID指定的策略执行合规检查。
      */

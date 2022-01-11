@@ -142,6 +142,14 @@ CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPList(array $IPList) 设置IP列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHttp3Supported() 获取支持Http3协议的标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3协议的标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
 {
@@ -335,6 +343,14 @@ CrossBorder表示跨境通道。
     public $IPList;
 
     /**
+     * @var integer 支持Http3协议的标识，其中：
+0表示关闭；
+1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
@@ -395,6 +411,10 @@ CrossBorder表示跨境通道。
      * @param string $BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IPList IP列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Http3Supported 支持Http3协议的标识，其中：
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -548,6 +568,10 @@ CrossBorder表示跨境通道。
                 $obj->deserialize($value);
                 array_push($this->IPList, $obj);
             }
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

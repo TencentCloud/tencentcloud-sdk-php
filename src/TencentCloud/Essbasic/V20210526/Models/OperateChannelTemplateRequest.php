@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method string getAuthTag() 获取模板可见性, 全部可见-"all", 部分可见-"part"
  * @method void setAuthTag(string $AuthTag) 设置模板可见性, 全部可见-"all", 部分可见-"part"
- * @method string getProxyOrganizationOpenIds() 获取合作企业方第三方机构唯一标识数据
- * @method void setProxyOrganizationOpenIds(string $ProxyOrganizationOpenIds) 设置合作企业方第三方机构唯一标识数据
+ * @method string getProxyOrganizationOpenIds() 获取合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+ * @method void setProxyOrganizationOpenIds(string $ProxyOrganizationOpenIds) 设置合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
  */
 class OperateChannelTemplateRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class OperateChannelTemplateRequest extends AbstractModel
     public $AuthTag;
 
     /**
-     * @var string 合作企业方第三方机构唯一标识数据
+     * @var string 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
      */
     public $ProxyOrganizationOpenIds;
 
@@ -71,7 +71,7 @@ class OperateChannelTemplateRequest extends AbstractModel
      * @param string $OperateType 操作类型，查询:"SELECT"，删除:"DELETE"，更新:"UPDATE"
      * @param UserInfo $Operator 操作者的信息
      * @param string $AuthTag 模板可见性, 全部可见-"all", 部分可见-"part"
-     * @param string $ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据
+     * @param string $ProxyOrganizationOpenIds 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
      */
     function __construct()
     {

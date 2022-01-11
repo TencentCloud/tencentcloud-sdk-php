@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDcnInstanceId(string $DcnInstanceId) 设置DCN源实例ID
  * @method integer getAutoRenewFlag() 获取自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+ * @method array getSecurityGroupIds() 获取安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
  */
 class CreateDCDBInstanceRequest extends AbstractModel
 {
@@ -195,6 +197,11 @@ class CreateDCDBInstanceRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
+     * @var array 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param array $Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
      * @param integer $Period 欲购买的时长，单位：月。
@@ -224,6 +231,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
      * @param string $DcnRegion DCN源地域
      * @param string $DcnInstanceId DCN源实例ID
      * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+     * @param array $SecurityGroupIds 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
      */
     function __construct()
     {
@@ -330,6 +338,10 @@ class CreateDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

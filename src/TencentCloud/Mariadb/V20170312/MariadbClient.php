@@ -32,6 +32,7 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 本接口（CreateAccount）用于创建云数据库账号。一个实例可以创建多个不同的账号，相同的用户名+不同的host是不同的账号。
  * @method Models\CreateDBInstanceResponse CreateDBInstance(Models\CreateDBInstanceRequest $req) 本接口（CreateDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长和数量等信息创建云数据库实例。
  * @method Models\CreateDedicatedClusterDBInstanceResponse CreateDedicatedClusterDBInstance(Models\CreateDedicatedClusterDBInstanceRequest $req) 创建独享集群Mariadb实例
+ * @method Models\CreateHourDBInstanceResponse CreateHourDBInstance(Models\CreateHourDBInstanceRequest $req) 创建后付费实例
  * @method Models\CreateTmpInstancesResponse CreateTmpInstances(Models\CreateTmpInstancesRequest $req) 本接口（CreateTmpInstances）用于创建临时实例。
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 本接口（DescribeAccountPrivileges）用于查询云数据库账号权限。

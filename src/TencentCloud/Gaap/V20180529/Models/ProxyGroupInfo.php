@@ -60,6 +60,14 @@ MOVING表示通道迁移中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyType(integer $ProxyType) 设置通道组是否包含微软通道
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHttp3Supported() 获取支持Http3特性的标识，其中：
+0，表示不支持Http3；
+1，表示支持Http3。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3特性的标识，其中：
+0，表示不支持Http3；
+1，表示支持Http3。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -124,6 +132,14 @@ MOVING表示通道迁移中。
     public $ProxyType;
 
     /**
+     * @var integer 支持Http3特性的标识，其中：
+0，表示不支持Http3；
+1，表示支持Http3。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $GroupId 通道组id
      * @param string $Domain 通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,6 +159,10 @@ MOVING表示通道迁移中。
      * @param integer $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxyType 通道组是否包含微软通道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Http3Supported 支持Http3特性的标识，其中：
+0，表示不支持Http3；
+1，表示支持Http3。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -202,6 +222,10 @@ MOVING表示通道迁移中。
 
         if (array_key_exists("ProxyType",$param) and $param["ProxyType"] !== null) {
             $this->ProxyType = $param["ProxyType"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

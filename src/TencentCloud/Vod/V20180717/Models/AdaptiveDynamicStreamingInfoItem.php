@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDrmType(string $DrmType) 设置加密类型。
  * @method string getUrl() 获取播放地址。
  * @method void setUrl(string $Url) 设置播放地址。
+ * @method integer getSize() 获取媒体文件大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
+<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
+<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+ * @method void setSize(integer $Size) 设置媒体文件大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
+<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
+<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
@@ -52,10 +60,22 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $Url;
 
     /**
+     * @var integer 媒体文件大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
+<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
+<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+     */
+    public $Size;
+
+    /**
      * @param integer $Definition 转自适应码流规格。
      * @param string $Package 打包格式，只能为 HLS。
      * @param string $DrmType 加密类型。
      * @param string $Url 播放地址。
+     * @param integer $Size 媒体文件大小，单位：字节。
+<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
+<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
+<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
      */
     function __construct()
     {
@@ -84,6 +104,10 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
+            $this->Size = $param["Size"];
         }
     }
 }

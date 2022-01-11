@@ -46,9 +46,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceID(string $ResourceID) 设置云产品实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getRotationStatus() 获取是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+ * @method boolean getRotationStatus() 获取是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRotationStatus(boolean $RotationStatus) 设置是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+ * @method void setRotationStatus(boolean $RotationStatus) 设置是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRotationFrequency() 获取轮转周期，默认以天为单位。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -65,6 +65,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAssociatedInstanceIDs() 获取当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedInstanceIDs(array $AssociatedInstanceIDs) 设置当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTargetUin() 获取当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetUin(integer $TargetUin) 设置当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -125,7 +129,7 @@ class DescribeSecretResponse extends AbstractModel
     public $ResourceID;
 
     /**
-     * @var boolean 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+     * @var boolean 是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RotationStatus;
@@ -155,6 +159,12 @@ class DescribeSecretResponse extends AbstractModel
     public $AssociatedInstanceIDs;
 
     /**
+     * @var integer 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetUin;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -173,7 +183,7 @@ class DescribeSecretResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceID 云产品实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $RotationStatus 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+     * @param boolean $RotationStatus 是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RotationFrequency 轮转周期，默认以天为单位。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -182,6 +192,8 @@ class DescribeSecretResponse extends AbstractModel
      * @param integer $ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -256,6 +268,10 @@ class DescribeSecretResponse extends AbstractModel
 
         if (array_key_exists("AssociatedInstanceIDs",$param) and $param["AssociatedInstanceIDs"] !== null) {
             $this->AssociatedInstanceIDs = $param["AssociatedInstanceIDs"];
+        }
+
+        if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
+            $this->TargetUin = $param["TargetUin"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

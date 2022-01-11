@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getGroups() 获取安全组详情。
  * @method void setGroups(array $Groups) 设置安全组详情。
+ * @method integer getTotal() 获取安全组个数。
+ * @method void setTotal(integer $Total) 设置安全组个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
     public $Groups;
 
     /**
+     * @var integer 安全组个数。
+     */
+    public $Total;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $Groups 安全组详情。
+     * @param integer $Total 安全组个数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +69,10 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Groups, $obj);
             }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

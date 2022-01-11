@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindClusterId(integer $BindClusterId) 设置用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
  * @method string getRemark() 获取说明，128个字符以内。
  * @method void setRemark(string $Remark) 设置说明，128个字符以内。
- * @method array getTags() 获取集群的标签列表
- * @method void setTags(array $Tags) 设置集群的标签列表
+ * @method array getTags() 获取集群的标签列表(已废弃)
+ * @method void setTags(array $Tags) 设置集群的标签列表(已废弃)
  * @method boolean getPublicAccessEnabled() 获取是否开启公网访问，不填时默认开启
  * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) 设置是否开启公网访问，不填时默认开启
  */
@@ -49,7 +49,7 @@ class CreateClusterRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var array 集群的标签列表
+     * @var array 集群的标签列表(已废弃)
      */
     public $Tags;
 
@@ -62,7 +62,7 @@ class CreateClusterRequest extends AbstractModel
      * @param string $ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
      * @param integer $BindClusterId 用户专享物理集群ID，如果不传，则默认在公共集群上创建用户集群资源。
      * @param string $Remark 说明，128个字符以内。
-     * @param array $Tags 集群的标签列表
+     * @param array $Tags 集群的标签列表(已废弃)
      * @param boolean $PublicAccessEnabled 是否开启公网访问，不填时默认开启
      */
     function __construct()

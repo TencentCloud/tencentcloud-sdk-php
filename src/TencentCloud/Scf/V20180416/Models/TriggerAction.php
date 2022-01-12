@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerCronConfig(string $TriggerCronConfig) 设置设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProvisionedType() 获取预置类型 Default
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProvisionedType(string $ProvisionedType) 设置预置类型 Default
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerAction extends AbstractModel
 {
@@ -54,11 +58,19 @@ class TriggerAction extends AbstractModel
     public $TriggerCronConfig;
 
     /**
+     * @var string 预置类型 Default
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProvisionedType;
+
+    /**
      * @param string $TriggerName 定时预置名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TriggerProvisionedConcurrencyNum 定时预置并发数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerCronConfig 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProvisionedType 预置类型 Default
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class TriggerAction extends AbstractModel
 
         if (array_key_exists("TriggerCronConfig",$param) and $param["TriggerCronConfig"] !== null) {
             $this->TriggerCronConfig = $param["TriggerCronConfig"];
+        }
+
+        if (array_key_exists("ProvisionedType",$param) and $param["ProvisionedType"] !== null) {
+            $this->ProvisionedType = $param["ProvisionedType"];
         }
     }
 }

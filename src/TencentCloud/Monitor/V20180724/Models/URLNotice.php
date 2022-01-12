@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidationCode(string $ValidationCode) 设置验证码
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStartTime() 获取通知开始时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartTime(integer $StartTime) 设置通知开始时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEndTime() 获取通知结束时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndTime(integer $EndTime) 设置通知结束时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class URLNotice extends AbstractModel
 {
@@ -54,11 +62,27 @@ class URLNotice extends AbstractModel
     public $ValidationCode;
 
     /**
+     * @var integer 通知开始时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 通知结束时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndTime;
+
+    /**
      * @param string $URL 回调 url（限长256字符）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsValid 是否通过验证 0=否 1=是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidationCode 验证码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StartTime 通知开始时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EndTime 通知结束时间 一天开始的秒数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +108,14 @@ class URLNotice extends AbstractModel
 
         if (array_key_exists("ValidationCode",$param) and $param["ValidationCode"] !== null) {
             $this->ValidationCode = $param["ValidationCode"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

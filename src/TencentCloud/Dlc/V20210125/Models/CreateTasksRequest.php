@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTasks请求参数结构体
  *
- * @method string getDatabaseName() 获取数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库。
- * @method void setDatabaseName(string $DatabaseName) 设置数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库。
+ * @method string getDatabaseName() 获取数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
+ * @method void setDatabaseName(string $DatabaseName) 设置数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
  * @method TasksInfo getTasks() 获取SQL任务信息
  * @method void setTasks(TasksInfo $Tasks) 设置SQL任务信息
  * @method string getDatasourceConnectionName() 获取数据源名称，默认为DataLakeCatalog
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateTasksRequest extends AbstractModel
 {
     /**
-     * @var string 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库。
+     * @var string 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
      */
     public $DatabaseName;
 
@@ -52,7 +52,7 @@ class CreateTasksRequest extends AbstractModel
     public $DataEngineName;
 
     /**
-     * @param string $DatabaseName 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库。
+     * @param string $DatabaseName 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
      * @param TasksInfo $Tasks SQL任务信息
      * @param string $DatasourceConnectionName 数据源名称，默认为DataLakeCatalog
      * @param string $DataEngineName 计算引擎名称，不填任务提交到默认集群

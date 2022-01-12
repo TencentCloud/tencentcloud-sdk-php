@@ -61,11 +61,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPkgName() 获取包名。使用 JAR 包或者 WAR 包部署的时候必填。
  * @method void setPkgName(string $PkgName) 设置包名。使用 JAR 包或者 WAR 包部署的时候必填。
  * @method string getJdkVersion() 获取JDK 版本。
-- KONA：使用 kona jdk。
-- OPEN：使用 open jdk。
+- KONA:8：使用 kona jdk 8。
+- OPEN:8：使用 open jdk 8。
+- KONA:11：使用 kona jdk 11。
+- OPEN:11：使用 open jdk 11。
  * @method void setJdkVersion(string $JdkVersion) 设置JDK 版本。
-- KONA：使用 kona jdk。
-- OPEN：使用 open jdk。
+- KONA:8：使用 kona jdk 8。
+- OPEN:8：使用 open jdk 8。
+- KONA:11：使用 kona jdk 11。
+- OPEN:11：使用 open jdk 11。
  * @method array getSecurityGroupIds() 获取安全组ID s
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID s
  * @method LogOutputConf getLogOutputConf() 获取日志输出配置
@@ -102,6 +106,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) 设置定时弹性策略
  * @method integer getLogEnable() 获取是否启用log，1为启用，0为不启用
  * @method void setLogEnable(integer $LogEnable) 设置是否启用log，1为启用，0为不启用
+ * @method boolean getConfEdited() 获取（除开镜像配置）配置是否修改
+ * @method void setConfEdited(boolean $ConfEdited) 设置（除开镜像配置）配置是否修改
+ * @method boolean getSpeedUp() 获取是否开启应用加速
+ * @method void setSpeedUp(boolean $SpeedUp) 设置是否开启应用加速
+ * @method HealthCheckConfig getStartupProbe() 获取启动探针配置
+ * @method void setStartupProbe(HealthCheckConfig $StartupProbe) 设置启动探针配置
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -191,8 +201,10 @@ class DeployApplicationRequest extends AbstractModel
 
     /**
      * @var string JDK 版本。
-- KONA：使用 kona jdk。
-- OPEN：使用 open jdk。
+- KONA:8：使用 kona jdk 8。
+- OPEN:8：使用 open jdk 8。
+- KONA:11：使用 kona jdk 11。
+- OPEN:11：使用 open jdk 11。
      */
     public $JdkVersion;
 
@@ -287,6 +299,21 @@ class DeployApplicationRequest extends AbstractModel
     public $LogEnable;
 
     /**
+     * @var boolean （除开镜像配置）配置是否修改
+     */
+    public $ConfEdited;
+
+    /**
+     * @var boolean 是否开启应用加速
+     */
+    public $SpeedUp;
+
+    /**
+     * @var HealthCheckConfig 启动探针配置
+     */
+    public $StartupProbe;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param integer $InitPodNum 初始化 pod 数
      * @param float $CpuSpec cpu规格
@@ -308,8 +335,10 @@ class DeployApplicationRequest extends AbstractModel
 部署类型为 JAR/WAR 时，该参数表示包版本号。
      * @param string $PkgName 包名。使用 JAR 包或者 WAR 包部署的时候必填。
      * @param string $JdkVersion JDK 版本。
-- KONA：使用 kona jdk。
-- OPEN：使用 open jdk。
+- KONA:8：使用 kona jdk 8。
+- OPEN:8：使用 open jdk 8。
+- KONA:11：使用 kona jdk 11。
+- OPEN:11：使用 open jdk 11。
      * @param array $SecurityGroupIds 安全组ID s
      * @param LogOutputConf $LogOutputConf 日志输出配置
      * @param integer $SourceChannel 来源渠道
@@ -328,6 +357,9 @@ class DeployApplicationRequest extends AbstractModel
      * @param array $HorizontalAutoscaler 弹性策略
      * @param array $CronHorizontalAutoscaler 定时弹性策略
      * @param integer $LogEnable 是否启用log，1为启用，0为不启用
+     * @param boolean $ConfEdited （除开镜像配置）配置是否修改
+     * @param boolean $SpeedUp 是否开启应用加速
+     * @param HealthCheckConfig $StartupProbe 启动探针配置
      */
     function __construct()
     {
@@ -516,6 +548,19 @@ class DeployApplicationRequest extends AbstractModel
 
         if (array_key_exists("LogEnable",$param) and $param["LogEnable"] !== null) {
             $this->LogEnable = $param["LogEnable"];
+        }
+
+        if (array_key_exists("ConfEdited",$param) and $param["ConfEdited"] !== null) {
+            $this->ConfEdited = $param["ConfEdited"];
+        }
+
+        if (array_key_exists("SpeedUp",$param) and $param["SpeedUp"] !== null) {
+            $this->SpeedUp = $param["SpeedUp"];
+        }
+
+        if (array_key_exists("StartupProbe",$param) and $param["StartupProbe"] !== null) {
+            $this->StartupProbe = new HealthCheckConfig();
+            $this->StartupProbe->deserialize($param["StartupProbe"]);
         }
     }
 }

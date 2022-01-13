@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItems(array $Items) 设置参数详情
  * @method string getDescription() 获取参数模板描述
  * @method void setDescription(string $Description) 设置参数模板描述
+ * @method string getTemplateType() 获取参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+ * @method void setTemplateType(string $TemplateType) 设置参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +70,11 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     public $Description;
 
     /**
+     * @var string 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     */
+    public $TemplateType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +86,7 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
      * @param integer $TotalCount 参数模板中的参数数量
      * @param array $Items 参数详情
      * @param string $Description 参数模板描述
+     * @param string $TemplateType 参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -121,6 +129,10 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
+            $this->TemplateType = $param["TemplateType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendEmail请求参数结构体
  *
- * @method string getFromEmailAddress() 获取发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
- * @method void setFromEmailAddress(string $FromEmailAddress) 设置发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+ * @method string getFromEmailAddress() 获取发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人说明，请按照如下方式： 
+别名 <邮箱地址>
+ * @method void setFromEmailAddress(string $FromEmailAddress) 设置发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人说明，请按照如下方式： 
+别名 <邮箱地址>
  * @method array getDestination() 获取收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
  * @method void setDestination(array $Destination) 设置收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
  * @method string getSubject() 获取邮件主题
@@ -38,13 +38,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSimple(Simple $Simple) 设置使用API直接发送内容时，填写的邮件内容
  * @method array getAttachments() 获取需要发送附件时，填写附件相关参数。
  * @method void setAttachments(array $Attachments) 设置需要发送附件时，填写附件相关参数。
+ * @method string getUnsubscribe() 获取是否加入退订链接
+ * @method void setUnsubscribe(string $Unsubscribe) 设置是否加入退订链接
  */
 class SendEmailRequest extends AbstractModel
 {
     /**
-     * @var string 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+     * @var string 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人说明，请按照如下方式： 
+别名 <邮箱地址>
      */
     public $FromEmailAddress;
 
@@ -79,15 +81,21 @@ class SendEmailRequest extends AbstractModel
     public $Attachments;
 
     /**
-     * @param string $FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照 
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+     * @var string 是否加入退订链接
+     */
+    public $Unsubscribe;
+
+    /**
+     * @param string $FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com
+如需填写发件人说明，请按照如下方式： 
+别名 <邮箱地址>
      * @param array $Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
      * @param string $Subject 邮件主题
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
      * @param Template $Template 使用模板发送时，填写的模板相关参数
      * @param Simple $Simple 使用API直接发送内容时，填写的邮件内容
      * @param array $Attachments 需要发送附件时，填写附件相关参数。
+     * @param string $Unsubscribe 是否加入退订链接
      */
     function __construct()
     {
@@ -135,6 +143,10 @@ class SendEmailRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Attachments, $obj);
             }
+        }
+
+        if (array_key_exists("Unsubscribe",$param) and $param["Unsubscribe"] !== null) {
+            $this->Unsubscribe = $param["Unsubscribe"];
         }
     }
 }

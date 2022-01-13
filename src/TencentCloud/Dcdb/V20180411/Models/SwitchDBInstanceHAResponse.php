@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateNatFwInstanceWithDomain返回参数结构体
+ * SwitchDBInstanceHA返回参数结构体
  *
- * @method string getCfwInsId() 获取nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCfwInsId(string $CfwInsId) 设置nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFlowId() 获取异步流程Id
+ * @method void setFlowId(integer $FlowId) 设置异步流程Id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateNatFwInstanceWithDomainResponse extends AbstractModel
+class SwitchDBInstanceHAResponse extends AbstractModel
 {
     /**
-     * @var string nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 异步流程Id
      */
-    public $CfwInsId;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class CreateNatFwInstanceWithDomainResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CfwInsId nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FlowId 异步流程Id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,8 @@ class CreateNatFwInstanceWithDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CfwInsId",$param) and $param["CfwInsId"] !== null) {
-            $this->CfwInsId = $param["CfwInsId"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -133,7 +133,7 @@ class DescribeOrgResourcesAuthorizationResponse extends AbstractModel
         if (array_key_exists("AuthorizationOrgResourceList",$param) and $param["AuthorizationOrgResourceList"] !== null) {
             $this->AuthorizationOrgResourceList = [];
             foreach ($param["AuthorizationOrgResourceList"] as $key => $value){
-                $obj = new AuthorizationResouceEntityInfo();
+                $obj = new AuthorizationResourceEntityInfo();
                 $obj->deserialize($value);
                 array_push($this->AuthorizationOrgResourceList, $obj);
             }

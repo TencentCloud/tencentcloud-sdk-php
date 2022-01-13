@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeParamTemplates请求参数结构体
+ * InitializeDisks请求参数结构体
  *
- * @method array getEngineVersions() 获取引擎版本，缺省则查询所有
- * @method void setEngineVersions(array $EngineVersions) 设置引擎版本，缺省则查询所有
+ * @method array getDiskIds() 获取待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
+ * @method void setDiskIds(array $DiskIds) 设置待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
  */
-class DescribeParamTemplatesRequest extends AbstractModel
+class InitializeDisksRequest extends AbstractModel
 {
     /**
-     * @var array 引擎版本，缺省则查询所有
+     * @var array 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
      */
-    public $EngineVersions;
+    public $DiskIds;
 
     /**
-     * @param array $EngineVersions 引擎版本，缺省则查询所有
+     * @param array $DiskIds 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeParamTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
-            $this->EngineVersions = $param["EngineVersions"];
+        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
+            $this->DiskIds = $param["DiskIds"];
         }
     }
 }

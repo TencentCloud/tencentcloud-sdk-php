@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) 设置源参数模板 ID。
  * @method array getParamList() 获取参数列表。
  * @method void setParamList(array $ParamList) 设置参数列表。
+ * @method string getTemplateType() 获取默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+ * @method void setTemplateType(string $TemplateType) 设置默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
  */
 class CreateParamTemplateRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateParamTemplateRequest extends AbstractModel
     public $ParamList;
 
     /**
+     * @var string 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+     */
+    public $TemplateType;
+
+    /**
      * @param string $Name 参数模板名称。
      * @param string $Description 参数模板描述。
      * @param string $EngineVersion MySQL 版本号。
      * @param integer $TemplateId 源参数模板 ID。
      * @param array $ParamList 参数列表。
+     * @param string $TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class CreateParamTemplateRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ParamList, $obj);
             }
+        }
+
+        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
+            $this->TemplateType = $param["TemplateType"];
         }
     }
 }

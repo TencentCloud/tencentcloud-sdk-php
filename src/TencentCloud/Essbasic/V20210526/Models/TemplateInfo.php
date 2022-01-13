@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreator(string $Creator) 设置模板的创建者信息
  * @method integer getCreatedOn() 获取模板创建的时间戳（精确到秒）
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳（精确到秒）
- * @method integer getTemplateType() 获取模板类型：1-静默签；2-静默签授权；3-普通模版
- * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；2-静默签授权；3-普通模版
+ * @method integer getTemplateType() 获取模板类型：1-静默签；2-静默签授权；3-普通模板
+ * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；2-静默签授权；3-普通模板
  * @method array getRecipients() 获取模板中的流程参与人信息
  * @method void setRecipients(array $Recipients) 设置模板中的流程参与人信息
  * @method boolean getIsPromoter() 获取是否是发起人
@@ -79,7 +79,7 @@ class TemplateInfo extends AbstractModel
     public $CreatedOn;
 
     /**
-     * @var integer 模板类型：1-静默签；2-静默签授权；3-普通模版
+     * @var integer 模板类型：1-静默签；2-静默签授权；3-普通模板
      */
     public $TemplateType;
 
@@ -101,7 +101,7 @@ class TemplateInfo extends AbstractModel
      * @param array $SignComponents 签署区模板信息结构
      * @param string $Creator 模板的创建者信息
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
-     * @param integer $TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模版
+     * @param integer $TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模板
      * @param array $Recipients 模板中的流程参与人信息
      * @param boolean $IsPromoter 是否是发起人
      */

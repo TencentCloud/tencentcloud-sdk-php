@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置参数模板描述
  * @method string getEngineVersion() 获取实例引擎版本
  * @method void setEngineVersion(string $EngineVersion) 设置实例引擎版本
+ * @method string getTemplateType() 获取参数模板类型
+ * @method void setTemplateType(string $TemplateType) 设置参数模板类型
  */
 class ParamTemplateInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ParamTemplateInfo extends AbstractModel
     public $EngineVersion;
 
     /**
+     * @var string 参数模板类型
+     */
+    public $TemplateType;
+
+    /**
      * @param integer $TemplateId 参数模板ID
      * @param string $Name 参数模板名称
      * @param string $Description 参数模板描述
      * @param string $EngineVersion 实例引擎版本
+     * @param string $TemplateType 参数模板类型
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ParamTemplateInfo extends AbstractModel
 
         if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
             $this->EngineVersion = $param["EngineVersion"];
+        }
+
+        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
+            $this->TemplateType = $param["TemplateType"];
         }
     }
 }

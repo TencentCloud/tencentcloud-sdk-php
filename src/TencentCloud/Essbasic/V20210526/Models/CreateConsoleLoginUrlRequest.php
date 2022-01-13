@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyOperatorName(string $ProxyOperatorName) 设置渠道侧合作企业经办人的姓名
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method string getModule() 获取控制台指定模块，文件/合同管理:"DOCUMENT"，模版管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
- * @method void setModule(string $Module) 设置控制台指定模块，文件/合同管理:"DOCUMENT"，模版管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
+ * @method string getModule() 获取控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
+ * @method void setModule(string $Module) 设置控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
  * @method string getModuleId() 获取控制台指定模块Id
  * @method void setModuleId(string $ModuleId) 设置控制台指定模块Id
  */
@@ -66,7 +66,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 控制台指定模块，文件/合同管理:"DOCUMENT"，模版管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
+     * @var string 控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
      */
     public $Module;
 
@@ -82,7 +82,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $UniformSocialCreditCode 渠道侧合作企业统一社会信用代码
      * @param string $ProxyOperatorName 渠道侧合作企业经办人的姓名
      * @param UserInfo $Operator 操作者的信息
-     * @param string $Module 控制台指定模块，文件/合同管理:"DOCUMENT"，模版管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
+     * @param string $Module 控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
      * @param string $ModuleId 控制台指定模块Id
      */
     function __construct()

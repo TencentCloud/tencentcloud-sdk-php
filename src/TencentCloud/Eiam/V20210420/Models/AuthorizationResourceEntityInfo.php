@@ -37,7 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceName(string $ResourceName) 设置资源名称
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AuthorizationResouceEntityInfo extends AbstractModel
+class AuthorizationResourceEntityInfo extends AbstractModel
 {
     /**
      * @var string 授权关系的唯一ID

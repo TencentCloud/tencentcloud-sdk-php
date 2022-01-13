@@ -99,6 +99,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\ReinstateEnvResponse ReinstateEnv(Models\ReinstateEnvRequest $req) 针对已隔离的免费环境，可以通过本接口将其恢复访问。
  * @method Models\ReplaceActivityRecordResponse ReplaceActivityRecord(Models\ReplaceActivityRecordRequest $req) 更新活动详情
  * @method Models\RollUpdateCloudBaseRunServerVersionResponse RollUpdateCloudBaseRunServerVersion(Models\RollUpdateCloudBaseRunServerVersionRequest $req) 针对特定的版本，进行滚动更新
+ * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) 搜索CLS日志，TCB角色秘钥访问
  * @method Models\TurnOffStandaloneGatewayResponse TurnOffStandaloneGateway(Models\TurnOffStandaloneGatewayRequest $req) 本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
  * @method Models\TurnOnStandaloneGatewayResponse TurnOnStandaloneGateway(Models\TurnOnStandaloneGatewayRequest $req) 本接口（TurnOnStandaloneGateway）用于开启小租户网关。
  */

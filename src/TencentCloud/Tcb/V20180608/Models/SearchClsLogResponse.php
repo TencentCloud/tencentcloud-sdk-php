@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateNatFwInstanceWithDomain返回参数结构体
+ * SearchClsLog返回参数结构体
  *
- * @method string getCfwInsId() 获取nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCfwInsId(string $CfwInsId) 设置nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method LogResObject getLogResults() 获取日志内容结果
+ * @method void setLogResults(LogResObject $LogResults) 设置日志内容结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateNatFwInstanceWithDomainResponse extends AbstractModel
+class SearchClsLogResponse extends AbstractModel
 {
     /**
-     * @var string nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var LogResObject 日志内容结果
      */
-    public $CfwInsId;
+    public $LogResults;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class CreateNatFwInstanceWithDomainResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CfwInsId nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogResObject $LogResults 日志内容结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,9 @@ class CreateNatFwInstanceWithDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CfwInsId",$param) and $param["CfwInsId"] !== null) {
-            $this->CfwInsId = $param["CfwInsId"];
+        if (array_key_exists("LogResults",$param) and $param["LogResults"] !== null) {
+            $this->LogResults = new LogResObject();
+            $this->LogResults->deserialize($param["LogResults"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

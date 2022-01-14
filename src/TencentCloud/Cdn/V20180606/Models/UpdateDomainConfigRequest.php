@@ -114,8 +114,8 @@ global：全球加速
  * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存
  * @method OriginCombine getOriginCombine() 获取合并回源
  * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源
- * @method Quic getQuic() 获取QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
- * @method void setQuic(Quic $Quic) 设置QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+ * @method Quic getQuic() 获取Quic访问（收费服务，详见计费说明和产品文档）
+ * @method void setQuic(Quic $Quic) 设置Quic访问（收费服务，详见计费说明和产品文档）
  * @method OssPrivateAccess getOssPrivateAccess() 获取回源OSS私有鉴权
  * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置回源OSS私有鉴权
  * @method WebSocket getWebSocket() 获取WebSocket配置
@@ -331,7 +331,7 @@ global：全球加速
     public $OriginCombine;
 
     /**
-     * @var Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     * @var Quic Quic访问（收费服务，详见计费说明和产品文档）
      */
     public $Quic;
 
@@ -403,7 +403,7 @@ global：全球加速
      * @param Ipv6Access $Ipv6Access Ipv6 访问配置
      * @param OfflineCache $OfflineCache 离线缓存
      * @param OriginCombine $OriginCombine 合并回源
-     * @param Quic $Quic QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+     * @param Quic $Quic Quic访问（收费服务，详见计费说明和产品文档）
      * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
      * @param WebSocket $WebSocket WebSocket配置
      * @param RemoteAuthentication $RemoteAuthentication 远程鉴权配置

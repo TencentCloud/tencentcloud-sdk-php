@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthyInfo(string $HealthyInfo) 设置集群健康信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取集群状态，0:创建中，1:正常，2:删除中，3:已删除，5:创建失败，6: 删除失败
- * @method void setStatus(integer $Status) 设置集群状态，0:创建中，1:正常，2:删除中，3:已删除，5:创建失败，6: 删除失败
+ * @method integer getStatus() 获取集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+ * @method void setStatus(integer $Status) 设置集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
  * @method integer getMaxNamespaceNum() 获取最大命名空间数量
  * @method void setMaxNamespaceNum(integer $MaxNamespaceNum) 设置最大命名空间数量
  * @method integer getMaxTopicNum() 获取最大Topic数量
@@ -140,7 +140,7 @@ class Cluster extends AbstractModel
     public $HealthyInfo;
 
     /**
-     * @var integer 集群状态，0:创建中，1:正常，2:删除中，3:已删除，5:创建失败，6: 删除失败
+     * @var integer 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
      */
     public $Status;
 
@@ -256,7 +256,7 @@ class Cluster extends AbstractModel
      * @param integer $Healthy 集群是否健康，1表示健康，0表示异常
      * @param string $HealthyInfo 集群健康信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 集群状态，0:创建中，1:正常，2:删除中，3:已删除，5:创建失败，6: 删除失败
+     * @param integer $Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $MaxTopicNum 最大Topic数量
      * @param integer $MaxQps 最大QPS

@@ -41,7 +41,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getScanPath() 获取自选排除或扫描的地址
  * @method void setScanPath(array $ScanPath) 设置自选排除或扫描的地址
  * @method integer getClickTimeout() 获取一键检测的超时设置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClickTimeout(integer $ClickTimeout) 设置一键检测的超时设置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -99,6 +101,7 @@ class DescribeVirusScanSettingResponse extends AbstractModel
 
     /**
      * @var integer 一键检测的超时设置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClickTimeout;
 
@@ -119,6 +122,7 @@ class DescribeVirusScanSettingResponse extends AbstractModel
      * @param array $ScanIds 自选扫描范围的容器id或者主机id 根据ScanRangeType决定
      * @param array $ScanPath 自选排除或扫描的地址
      * @param integer $ClickTimeout 一键检测的超时设置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

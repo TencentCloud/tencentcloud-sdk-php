@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkerReplica(integer $WorkerReplica) 设置运行时资源配置，worker副本数
  * @method integer getRunningInstanceCount() 获取正在运行的应用实例数量
  * @method void setRunningInstanceCount(integer $RunningInstanceCount) 设置正在运行的应用实例数量
+ * @method float getCpuUsed() 获取已使用cpu核数
+ * @method void setCpuUsed(float $CpuUsed) 设置已使用cpu核数
+ * @method float getCpuLimit() 获取cpu核数上限
+ * @method void setCpuLimit(float $CpuLimit) 设置cpu核数上限
+ * @method float getMemoryUsed() 获取已使用内存 MB
+ * @method void setMemoryUsed(float $MemoryUsed) 设置已使用内存 MB
+ * @method float getMemoryLimit() 获取内存上限 MB
+ * @method void setMemoryLimit(float $MemoryLimit) 设置内存上限 MB
  */
 class RuntimeMC extends AbstractModel
 {
@@ -101,6 +109,26 @@ class RuntimeMC extends AbstractModel
     public $RunningInstanceCount;
 
     /**
+     * @var float 已使用cpu核数
+     */
+    public $CpuUsed;
+
+    /**
+     * @var float cpu核数上限
+     */
+    public $CpuLimit;
+
+    /**
+     * @var float 已使用内存 MB
+     */
+    public $MemoryUsed;
+
+    /**
+     * @var float 内存上限 MB
+     */
+    public $MemoryLimit;
+
+    /**
      * @param integer $RuntimeId 运行时id
      * @param string $Uin 主账号uin
      * @param string $DisplayName 运行时名称，用户输入，同一uin内唯一
@@ -112,6 +140,10 @@ class RuntimeMC extends AbstractModel
      * @param integer $WorkerSize 运行时资源配置，worker总配额，0:0vCore0G, 1:1vCore2G, 2:2vCore4G, 4:4vCore8G, 8:8vCore16G, 12:12vCore24G, 16:16vCore32G, 100:unlimited
      * @param integer $WorkerReplica 运行时资源配置，worker副本数
      * @param integer $RunningInstanceCount 正在运行的应用实例数量
+     * @param float $CpuUsed 已使用cpu核数
+     * @param float $CpuLimit cpu核数上限
+     * @param float $MemoryUsed 已使用内存 MB
+     * @param float $MemoryLimit 内存上限 MB
      */
     function __construct()
     {
@@ -168,6 +200,22 @@ class RuntimeMC extends AbstractModel
 
         if (array_key_exists("RunningInstanceCount",$param) and $param["RunningInstanceCount"] !== null) {
             $this->RunningInstanceCount = $param["RunningInstanceCount"];
+        }
+
+        if (array_key_exists("CpuUsed",$param) and $param["CpuUsed"] !== null) {
+            $this->CpuUsed = $param["CpuUsed"];
+        }
+
+        if (array_key_exists("CpuLimit",$param) and $param["CpuLimit"] !== null) {
+            $this->CpuLimit = $param["CpuLimit"];
+        }
+
+        if (array_key_exists("MemoryUsed",$param) and $param["MemoryUsed"] !== null) {
+            $this->MemoryUsed = $param["MemoryUsed"];
+        }
+
+        if (array_key_exists("MemoryLimit",$param) and $param["MemoryLimit"] !== null) {
+            $this->MemoryLimit = $param["MemoryLimit"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置环境ID
  * @method string getWxAppId() 获取微信appid
  * @method void setWxAppId(string $WxAppId) 设置微信appid
+ * @method string getDbVersion() 获取mysql内核版本，支持5.7,8.0
+ * @method void setDbVersion(string $DbVersion) 设置mysql内核版本，支持5.7,8.0
  */
 class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel
     public $WxAppId;
 
     /**
+     * @var string mysql内核版本，支持5.7,8.0
+     */
+    public $DbVersion;
+
+    /**
      * @param string $AccountPassword 账户密码
      * @param string $EnvId 环境ID
      * @param string $WxAppId 微信appid
+     * @param string $DbVersion mysql内核版本，支持5.7,8.0
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel
 
         if (array_key_exists("WxAppId",$param) and $param["WxAppId"] !== null) {
             $this->WxAppId = $param["WxAppId"];
+        }
+
+        if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
+            $this->DbVersion = $param["DbVersion"];
         }
     }
 }

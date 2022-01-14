@@ -116,6 +116,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsBase64Trigger(boolean $IsBase64Trigger) 设置是否开启Base64编码的header触发，只有后端为scf时才会生效。
  * @method array getBase64EncodedTriggerRules() 获取Header触发规则，总规则数不能超过10。
  * @method void setBase64EncodedTriggerRules(array $Base64EncodedTriggerRules) 设置Header触发规则，总规则数不能超过10。
+ * @method string getEventBusId() 获取事件总线ID。
+ * @method void setEventBusId(string $EventBusId) 设置事件总线ID。
+ * @method string getServiceScfFunctionType() 获取scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+ * @method void setServiceScfFunctionType(string $ServiceScfFunctionType) 设置scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+ * @method string getEIAMAppType() 获取EIAM应用类型。
+ * @method void setEIAMAppType(string $EIAMAppType) 设置EIAM应用类型。
+ * @method string getEIAMAuthType() 获取EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+ * @method void setEIAMAuthType(string $EIAMAuthType) 设置EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+ * @method string getEIAMAppId() 获取EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+ * @method void setEIAMAppId(string $EIAMAppId) 设置EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+ * @method integer getTokenTimeout() 获取EIAM应用ID。
+ * @method void setTokenTimeout(integer $TokenTimeout) 设置EIAM应用ID。
  */
 class ModifyApiRequest extends AbstractModel
 {
@@ -360,6 +372,36 @@ class ModifyApiRequest extends AbstractModel
     public $Base64EncodedTriggerRules;
 
     /**
+     * @var string 事件总线ID。
+     */
+    public $EventBusId;
+
+    /**
+     * @var string scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+     */
+    public $ServiceScfFunctionType;
+
+    /**
+     * @var string EIAM应用类型。
+     */
+    public $EIAMAppType;
+
+    /**
+     * @var string EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+     */
+    public $EIAMAuthType;
+
+    /**
+     * @var string EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+     */
+    public $EIAMAppId;
+
+    /**
+     * @var integer EIAM应用ID。
+     */
+    public $TokenTimeout;
+
+    /**
      * @param string $ServiceId API 所在的服务唯一 ID。
      * @param string $ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、CLB、SCF、WEBSOCKET、TARGET（内测）。
      * @param RequestConfig $RequestConfig 请求的前端配置。
@@ -408,6 +450,12 @@ class ModifyApiRequest extends AbstractModel
      * @param boolean $IsBase64Encoded 是否开启Base64编码，只有后端为scf时才会生效。
      * @param boolean $IsBase64Trigger 是否开启Base64编码的header触发，只有后端为scf时才会生效。
      * @param array $Base64EncodedTriggerRules Header触发规则，总规则数不能超过10。
+     * @param string $EventBusId 事件总线ID。
+     * @param string $ServiceScfFunctionType scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+     * @param string $EIAMAppType EIAM应用类型。
+     * @param string $EIAMAuthType EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+     * @param string $EIAMAppId EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+     * @param integer $TokenTimeout EIAM应用ID。
      */
     function __construct()
     {
@@ -649,6 +697,30 @@ class ModifyApiRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Base64EncodedTriggerRules, $obj);
             }
+        }
+
+        if (array_key_exists("EventBusId",$param) and $param["EventBusId"] !== null) {
+            $this->EventBusId = $param["EventBusId"];
+        }
+
+        if (array_key_exists("ServiceScfFunctionType",$param) and $param["ServiceScfFunctionType"] !== null) {
+            $this->ServiceScfFunctionType = $param["ServiceScfFunctionType"];
+        }
+
+        if (array_key_exists("EIAMAppType",$param) and $param["EIAMAppType"] !== null) {
+            $this->EIAMAppType = $param["EIAMAppType"];
+        }
+
+        if (array_key_exists("EIAMAuthType",$param) and $param["EIAMAuthType"] !== null) {
+            $this->EIAMAuthType = $param["EIAMAuthType"];
+        }
+
+        if (array_key_exists("EIAMAppId",$param) and $param["EIAMAppId"] !== null) {
+            $this->EIAMAppId = $param["EIAMAppId"];
+        }
+
+        if (array_key_exists("TokenTimeout",$param) and $param["TokenTimeout"] !== null) {
+            $this->TokenTimeout = $param["TokenTimeout"];
         }
     }
 }

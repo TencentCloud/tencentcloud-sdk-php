@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientId(string $ClientId) 设置客户端id。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getApplicationType() 获取应用类型，即创建应用时所选择的应用模版类型。
+ * @method string getApplicationType() 获取应用类型，即创建应用时所选择的应用模板类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApplicationType(string $ApplicationType) 设置应用类型，即创建应用时所选择的应用模版类型。
+ * @method void setApplicationType(string $ApplicationType) 设置应用类型，即创建应用时所选择的应用模板类型。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedDate() 获取应用创建时间，符合 ISO8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,7 +110,7 @@ class DescribeApplicationResponse extends AbstractModel
     public $ClientId;
 
     /**
-     * @var string 应用类型，即创建应用时所选择的应用模版类型。
+     * @var string 应用类型，即创建应用时所选择的应用模板类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationType;
@@ -189,7 +189,7 @@ class DescribeApplicationResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientId 客户端id。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ApplicationType 应用类型，即创建应用时所选择的应用模版类型。
+     * @param string $ApplicationType 应用类型，即创建应用时所选择的应用模板类型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedDate 应用创建时间，符合 ISO8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnhandledAbnormalProcessCnt(integer $UnhandledAbnormalProcessCnt) 设置未处理异常进程
  * @method integer getUnhandledFileCnt() 获取未处理文件篡改
  * @method void setUnhandledFileCnt(integer $UnhandledFileCnt) 设置未处理文件篡改
+ * @method integer getUnhandledVirusEventCnt() 获取未处理木马事件
+ * @method void setUnhandledVirusEventCnt(integer $UnhandledVirusEventCnt) 设置未处理木马事件
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribeContainerSecEventSummaryResponse extends AbstractModel
     public $UnhandledFileCnt;
 
     /**
+     * @var integer 未处理木马事件
+     */
+    public $UnhandledVirusEventCnt;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribeContainerSecEventSummaryResponse extends AbstractModel
      * @param integer $UnhandledRiskSyscallCnt 未处理高危系统调用
      * @param integer $UnhandledAbnormalProcessCnt 未处理异常进程
      * @param integer $UnhandledFileCnt 未处理文件篡改
+     * @param integer $UnhandledVirusEventCnt 未处理木马事件
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +112,10 @@ class DescribeContainerSecEventSummaryResponse extends AbstractModel
 
         if (array_key_exists("UnhandledFileCnt",$param) and $param["UnhandledFileCnt"] !== null) {
             $this->UnhandledFileCnt = $param["UnhandledFileCnt"];
+        }
+
+        if (array_key_exists("UnhandledVirusEventCnt",$param) and $param["UnhandledVirusEventCnt"] !== null) {
+            $this->UnhandledVirusEventCnt = $param["UnhandledVirusEventCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

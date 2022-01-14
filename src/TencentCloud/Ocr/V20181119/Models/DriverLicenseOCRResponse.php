@@ -66,6 +66,10 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
  * @method string getIssuingAuthority() 获取发证单位
  * @method void setIssuingAuthority(string $IssuingAuthority) 设置发证单位
+ * @method string getState() 获取状态（仅电子驾驶证支持返回该字段）
+ * @method void setState(string $State) 设置状态（仅电子驾驶证支持返回该字段）
+ * @method string getCumulativeScore() 获取累积记分（仅电子驾驶证支持返回该字段）
+ * @method void setCumulativeScore(string $CumulativeScore) 设置累积记分（仅电子驾驶证支持返回该字段）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -155,6 +159,16 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     public $IssuingAuthority;
 
     /**
+     * @var string 状态（仅电子驾驶证支持返回该字段）
+     */
+    public $State;
+
+    /**
+     * @var string 累积记分（仅电子驾驶证支持返回该字段）
+     */
+    public $CumulativeScore;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -183,6 +197,8 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
 WARN_DRIVER_LICENSE_PS_CARD ps告警
 注：告警信息可以同时存在多个
      * @param string $IssuingAuthority 发证单位
+     * @param string $State 状态（仅电子驾驶证支持返回该字段）
+     * @param string $CumulativeScore 累积记分（仅电子驾驶证支持返回该字段）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -256,6 +272,14 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
 
         if (array_key_exists("IssuingAuthority",$param) and $param["IssuingAuthority"] !== null) {
             $this->IssuingAuthority = $param["IssuingAuthority"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
+        }
+
+        if (array_key_exists("CumulativeScore",$param) and $param["CumulativeScore"] !== null) {
+            $this->CumulativeScore = $param["CumulativeScore"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

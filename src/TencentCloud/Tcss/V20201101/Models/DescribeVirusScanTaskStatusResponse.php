@@ -30,12 +30,14 @@ SCAN_SCANNING:正在扫描中，
 SCAN_FINISH：扫描完成， 
 SCAN_TIMEOUT：扫描超时
 SCAN_CANCELING: 取消中
+SCAN_CANCELED:已取消
  * @method void setStatus(string $Status) 设置扫描状态 任务状态:
 SCAN_NONE:无， 
 SCAN_SCANNING:正在扫描中，
 SCAN_FINISH：扫描完成， 
 SCAN_TIMEOUT：扫描超时
 SCAN_CANCELING: 取消中
+SCAN_CANCELED:已取消
  * @method integer getSchedule() 获取扫描进度 I
  * @method void setSchedule(integer $Schedule) 设置扫描进度 I
  * @method integer getContainerScanCnt() 获取已经扫描了的容器个数
@@ -72,6 +74,7 @@ SCAN_SCANNING:正在扫描中，
 SCAN_FINISH：扫描完成， 
 SCAN_TIMEOUT：扫描超时
 SCAN_CANCELING: 取消中
+SCAN_CANCELED:已取消
      */
     public $Status;
 
@@ -124,6 +127,7 @@ SCAN_SCANNING:正在扫描中，
 SCAN_FINISH：扫描完成， 
 SCAN_TIMEOUT：扫描超时
 SCAN_CANCELING: 取消中
+SCAN_CANCELED:已取消
      * @param integer $Schedule 扫描进度 I
      * @param integer $ContainerScanCnt 已经扫描了的容器个数
      * @param integer $RiskCnt 风险个数

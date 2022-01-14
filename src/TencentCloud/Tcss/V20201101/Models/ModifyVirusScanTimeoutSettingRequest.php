@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVirusScanTimeoutSetting请求参数结构体
  *
- * @method integer getTimeout() 获取超时时长单位小时
- * @method void setTimeout(integer $Timeout) 设置超时时长单位小时
+ * @method integer getTimeout() 获取超时时长单位小时(5~24h)
+ * @method void setTimeout(integer $Timeout) 设置超时时长单位小时(5~24h)
  * @method integer getScanType() 获取设置类型0一键检测，1定时检测
  * @method void setScanType(integer $ScanType) 设置设置类型0一键检测，1定时检测
  */
 class ModifyVirusScanTimeoutSettingRequest extends AbstractModel
 {
     /**
-     * @var integer 超时时长单位小时
+     * @var integer 超时时长单位小时(5~24h)
      */
     public $Timeout;
 
@@ -38,7 +38,7 @@ class ModifyVirusScanTimeoutSettingRequest extends AbstractModel
     public $ScanType;
 
     /**
-     * @param integer $Timeout 超时时长单位小时
+     * @param integer $Timeout 超时时长单位小时(5~24h)
      * @param integer $ScanType 设置类型0一键检测，1定时检测
      */
     function __construct()

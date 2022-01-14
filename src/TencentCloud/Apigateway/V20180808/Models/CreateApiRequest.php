@@ -112,6 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserType(string $UserType) 设置用户类型。
  * @method boolean getIsBase64Encoded() 获取是否打开Base64编码，只有后端是scf时才会生效。
  * @method void setIsBase64Encoded(boolean $IsBase64Encoded) 设置是否打开Base64编码，只有后端是scf时才会生效。
+ * @method string getEventBusId() 获取事件总线ID。
+ * @method void setEventBusId(string $EventBusId) 设置事件总线ID。
  * @method string getServiceScfFunctionType() 获取scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
  * @method void setServiceScfFunctionType(string $ServiceScfFunctionType) 设置scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
  * @method string getEIAMAppType() 获取EIAM应用类型。
@@ -356,6 +358,11 @@ class CreateApiRequest extends AbstractModel
     public $IsBase64Encoded;
 
     /**
+     * @var string 事件总线ID。
+     */
+    public $EventBusId;
+
+    /**
      * @var string scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
      */
     public $ServiceScfFunctionType;
@@ -427,6 +434,7 @@ class CreateApiRequest extends AbstractModel
      * @param string $TargetNamespaceId tsf serverless 命名空间ID。（内测中）
      * @param string $UserType 用户类型。
      * @param boolean $IsBase64Encoded 是否打开Base64编码，只有后端是scf时才会生效。
+     * @param string $EventBusId 事件总线ID。
      * @param string $ServiceScfFunctionType scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
      * @param string $EIAMAppType EIAM应用类型。
      * @param string $EIAMAuthType EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
@@ -664,6 +672,10 @@ class CreateApiRequest extends AbstractModel
 
         if (array_key_exists("IsBase64Encoded",$param) and $param["IsBase64Encoded"] !== null) {
             $this->IsBase64Encoded = $param["IsBase64Encoded"];
+        }
+
+        if (array_key_exists("EventBusId",$param) and $param["EventBusId"] !== null) {
+            $this->EventBusId = $param["EventBusId"];
         }
 
         if (array_key_exists("ServiceScfFunctionType",$param) and $param["ServiceScfFunctionType"] !== null) {

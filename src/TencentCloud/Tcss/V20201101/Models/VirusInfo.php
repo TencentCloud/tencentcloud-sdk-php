@@ -76,6 +76,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 TIMEOUT: 超时
 TOO_MANY: 任务过多
 OFFLINE: 离线
+INTERNAL: 服务内部错误
+VALIDATION: 参数非法
  * @method void setSubStatus(string $SubStatus) 设置失败子状态:
 FILE_NOT_FOUND:文件不存在
 FILE_ABNORMAL:文件异常
@@ -86,6 +88,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 TIMEOUT: 超时
 TOO_MANY: 任务过多
 OFFLINE: 离线
+INTERNAL: 服务内部错误
+VALIDATION: 参数非法
  */
 class VirusInfo extends AbstractModel
 {
@@ -179,6 +183,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 TIMEOUT: 超时
 TOO_MANY: 任务过多
 OFFLINE: 离线
+INTERNAL: 服务内部错误
+VALIDATION: 参数非法
      */
     public $SubStatus;
 
@@ -216,6 +222,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 TIMEOUT: 超时
 TOO_MANY: 任务过多
 OFFLINE: 离线
+INTERNAL: 服务内部错误
+VALIDATION: 参数非法
      */
     function __construct()
     {

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Api\V20201106\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRegions请求参数结构体
+ * 共用自建组件参数
  *
- * @method string getProduct() 获取待查询产品的名称，例如cvm
- * @method void setProduct(string $Product) 设置待查询产品的名称，例如cvm
+ * @method string getName() 获取自定义参数key
+ * @method void setName(string $Name) 设置自定义参数key
+ * @method string getValue() 获取自定义参数value
+ * @method void setValue(string $Value) 设置自定义参数value
  */
-class DescribeRegionsRequest extends AbstractModel
+class CustomServiceDefine extends AbstractModel
 {
     /**
-     * @var string 待查询产品的名称，例如cvm
+     * @var string 自定义参数key
      */
-    public $Product;
+    public $Name;
 
     /**
-     * @param string $Product 待查询产品的名称，例如cvm
+     * @var string 自定义参数value
+     */
+    public $Value;
+
+    /**
+     * @param string $Name 自定义参数key
+     * @param string $Value 自定义参数value
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeRegionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

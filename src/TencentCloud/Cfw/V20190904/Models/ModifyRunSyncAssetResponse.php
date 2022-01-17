@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetDownloadFlowUrl返回参数结构体
+ * ModifyRunSyncAsset返回参数结构体
  *
- * @method string getDownLoadUrl() 获取合同（流程）下载地址
- * @method void setDownLoadUrl(string $DownLoadUrl) 设置合同（流程）下载地址
+ * @method integer getStatus() 获取0：同步成功，1：资产更新中，2：后台同步调用失败
+ * @method void setStatus(integer $Status) 设置0：同步成功，1：资产更新中，2：后台同步调用失败
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GetDownloadFlowUrlResponse extends AbstractModel
+class ModifyRunSyncAssetResponse extends AbstractModel
 {
     /**
-     * @var string 合同（流程）下载地址
+     * @var integer 0：同步成功，1：资产更新中，2：后台同步调用失败
      */
-    public $DownLoadUrl;
+    public $Status;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class GetDownloadFlowUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownLoadUrl 合同（流程）下载地址
+     * @param integer $Status 0：同步成功，1：资产更新中，2：后台同步调用失败
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class GetDownloadFlowUrlResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DownLoadUrl",$param) and $param["DownLoadUrl"] !== null) {
-            $this->DownLoadUrl = $param["DownLoadUrl"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

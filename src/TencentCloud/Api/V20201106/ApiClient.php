@@ -23,8 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Api\V20201106\Models as Models;
 
 /**
- * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口(DescribeRegions)用于查询各个产品支持地域信息，当前只支持cvm。
- * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口(DescribeZones)用于查询产品可用区信息，当前只支持cvm。
+ * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口(DescribeRegions)用于查询各个产品支持地域信息。
+ * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口(DescribeZones)用于查询产品可用区信息。
  */
 
 class ApiClient extends AbstractClient

@@ -94,6 +94,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomLogServices(array $CustomLogServices) 设置自定义日志服务
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnvType() 获取环境类型：baas, run, hoting, weda
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvType(string $EnvType) 设置环境类型：baas, run, hoting, weda
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvInfo extends AbstractModel
 {
@@ -215,6 +219,12 @@ class EnvInfo extends AbstractModel
     public $CustomLogServices;
 
     /**
+     * @var string 环境类型：baas, run, hoting, weda
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnvType;
+
+    /**
      * @param string $EnvId 账户下该环境唯一标识
      * @param string $Source 环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
@@ -251,6 +261,8 @@ class EnvInfo extends AbstractModel
      * @param array $Tags 环境标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CustomLogServices 自定义日志服务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EnvType 环境类型：baas, run, hoting, weda
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -379,6 +391,10 @@ class EnvInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CustomLogServices, $obj);
             }
+        }
+
+        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
+            $this->EnvType = $param["EnvType"];
         }
     }
 }

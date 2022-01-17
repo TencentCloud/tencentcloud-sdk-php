@@ -14,47 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Apm\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 房间内用户信息
+ * Apm通用KV结构
  *
- * @method integer getRoomId() 获取房间id
- * @method void setRoomId(integer $RoomId) 设置房间id
- * @method array getUins() 获取房间里用户uin列表
+ * @method string getKey() 获取Key值定义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUins(array $Uins) 设置房间里用户uin列表
+ * @method void setKey(string $Key) 设置Key值定义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStrRoomId() 获取字符串房间id
+ * @method string getValue() 获取Value值定义
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStrRoomId(string $StrRoomId) 设置字符串房间id
+ * @method void setValue(string $Value) 设置Value值定义
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class RoomUser extends AbstractModel
+class APMKVItem extends AbstractModel
 {
     /**
-     * @var integer 房间id
-     */
-    public $RoomId;
-
-    /**
-     * @var array 房间里用户uin列表
+     * @var string Key值定义
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Uins;
+    public $Key;
 
     /**
-     * @var string 字符串房间id
+     * @var string Value值定义
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $StrRoomId;
+    public $Value;
 
     /**
-     * @param integer $RoomId 房间id
-     * @param array $Uins 房间里用户uin列表
+     * @param string $Key Key值定义
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StrRoomId 字符串房间id
+     * @param string $Value Value值定义
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,16 +62,12 @@ class RoomUser extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
-            $this->RoomId = $param["RoomId"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
 
-        if (array_key_exists("Uins",$param) and $param["Uins"] !== null) {
-            $this->Uins = $param["Uins"];
-        }
-
-        if (array_key_exists("StrRoomId",$param) and $param["StrRoomId"] !== null) {
-            $this->StrRoomId = $param["StrRoomId"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

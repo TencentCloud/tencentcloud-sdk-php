@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Api\V20201106\Models;
+namespace TencentCloud\Apm\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRegions请求参数结构体
+ * sql排序字段
  *
- * @method string getProduct() 获取待查询产品的名称，例如cvm
- * @method void setProduct(string $Product) 设置待查询产品的名称，例如cvm
+ * @method string getKey() 获取需要排序的字段
+ * @method void setKey(string $Key) 设置需要排序的字段
+ * @method string getValue() 获取顺序排序/倒序排序
+ * @method void setValue(string $Value) 设置顺序排序/倒序排序
  */
-class DescribeRegionsRequest extends AbstractModel
+class OrderBy extends AbstractModel
 {
     /**
-     * @var string 待查询产品的名称，例如cvm
+     * @var string 需要排序的字段
      */
-    public $Product;
+    public $Key;
 
     /**
-     * @param string $Product 待查询产品的名称，例如cvm
+     * @var string 顺序排序/倒序排序
+     */
+    public $Value;
+
+    /**
+     * @param string $Key 需要排序的字段
+     * @param string $Value 顺序排序/倒序排序
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeRegionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReference(string $Reference) 设置参考链接
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCVSS() 获取CVSS信息，wiki:http://tapd.oa.com/Teneyes/markdown_wikis/view/#1010131751011792303
+ * @method string getCVSS() 获取CVSS信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCVSS(string $CVSS) 设置CVSS信息，wiki:http://tapd.oa.com/Teneyes/markdown_wikis/view/#1010131751011792303
+ * @method void setCVSS(string $CVSS) 设置CVSS信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicDate() 获取发布时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,7 +130,7 @@ class DescribeVulInfoCvssResponse extends AbstractModel
     public $Reference;
 
     /**
-     * @var string CVSS信息，wiki:http://tapd.oa.com/Teneyes/markdown_wikis/view/#1010131751011792303
+     * @var string CVSS信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVSS;
@@ -187,7 +187,7 @@ class DescribeVulInfoCvssResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reference 参考链接
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CVSS CVSS信息，wiki:http://tapd.oa.com/Teneyes/markdown_wikis/view/#1010131751011792303
+     * @param string $CVSS CVSS信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicDate 发布时间
 注意：此字段可能返回 null，表示取不到有效值。

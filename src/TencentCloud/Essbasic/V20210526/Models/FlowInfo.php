@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowName(string $FlowName) 设置合同名字
  * @method integer getDeadline() 获取签署截止时间戳，超过有效签署时间则该签署流程失败
  * @method void setDeadline(integer $Deadline) 设置签署截止时间戳，超过有效签署时间则该签署流程失败
- * @method string getTemplateId() 获取模版ID
- * @method void setTemplateId(string $TemplateId) 设置模版ID
+ * @method string getTemplateId() 获取模板ID
+ * @method void setTemplateId(string $TemplateId) 设置模板ID
  * @method string getFlowType() 获取合同类型：
 1. “劳务”
 2. “销售”
@@ -62,7 +62,7 @@ class FlowInfo extends AbstractModel
     public $Deadline;
 
     /**
-     * @var string 模版ID
+     * @var string 模板ID
      */
     public $TemplateId;
 
@@ -108,7 +108,7 @@ class FlowInfo extends AbstractModel
     /**
      * @param string $FlowName 合同名字
      * @param integer $Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败
-     * @param string $TemplateId 模版ID
+     * @param string $TemplateId 模板ID
      * @param string $FlowType 合同类型：
 1. “劳务”
 2. “销售”

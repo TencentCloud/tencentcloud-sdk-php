@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectionPoolInfo(ConnectionPoolInfo $ConnectionPoolInfo) 设置连接池信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCount() 获取代理数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCount(integer $Count) 设置代理数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProxyGroup() 获取代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxyGroup(array $ProxyGroup) 设置代理信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -76,6 +84,18 @@ class DescribeCDBProxyResponse extends AbstractModel
     public $ConnectionPoolInfo;
 
     /**
+     * @var integer 代理数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Count;
+
+    /**
+     * @var array 代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxyGroup;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -90,6 +110,10 @@ class DescribeCDBProxyResponse extends AbstractModel
      * @param RWInfo $RWInstInfo 读写分析信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectionPoolInfo $ConnectionPoolInfo 连接池信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Count 代理数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ProxyGroup 代理信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -129,6 +153,19 @@ class DescribeCDBProxyResponse extends AbstractModel
         if (array_key_exists("ConnectionPoolInfo",$param) and $param["ConnectionPoolInfo"] !== null) {
             $this->ConnectionPoolInfo = new ConnectionPoolInfo();
             $this->ConnectionPoolInfo->deserialize($param["ConnectionPoolInfo"]);
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("ProxyGroup",$param) and $param["ProxyGroup"] !== null) {
+            $this->ProxyGroup = [];
+            foreach ($param["ProxyGroup"] as $key => $value){
+                $obj = new ProxyGroup();
+                $obj->deserialize($value);
+                array_push($this->ProxyGroup, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

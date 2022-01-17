@@ -18,12 +18,12 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 标签索引配置信息
+ * 元字段索引配置
  *
  * @method boolean getCaseSensitive() 获取是否大小写敏感
  * @method void setCaseSensitive(boolean $CaseSensitive) 设置是否大小写敏感
- * @method array getKeyValues() 获取标签索引配置中的字段信息
- * @method void setKeyValues(array $KeyValues) 设置标签索引配置中的字段信息
+ * @method array getKeyValues() 获取元字段索引配置中的字段信息
+ * @method void setKeyValues(array $KeyValues) 设置元字段索引配置中的字段信息
  */
 class RuleTagInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RuleTagInfo extends AbstractModel
     public $CaseSensitive;
 
     /**
-     * @var array 标签索引配置中的字段信息
+     * @var array 元字段索引配置中的字段信息
      */
     public $KeyValues;
 
     /**
      * @param boolean $CaseSensitive 是否大小写敏感
-     * @param array $KeyValues 标签索引配置中的字段信息
+     * @param array $KeyValues 元字段索引配置中的字段信息
      */
     function __construct()
     {

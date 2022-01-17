@@ -14,36 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dbbrain\V20210527\Models;
+namespace TencentCloud\Apm\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMailProfile返回参数结构体
+ * DescribeMetricRecords返回参数结构体
  *
- * @method array getProfileList() 获取邮件配置详情。
+ * @method array getRecords() 获取指标结果集
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProfileList(array $ProfileList) 设置邮件配置详情。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取邮件配置总数。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置邮件配置总数。
+ * @method void setRecords(array $Records) 设置指标结果集
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMailProfileResponse extends AbstractModel
+class DescribeMetricRecordsResponse extends AbstractModel
 {
     /**
-     * @var array 邮件配置详情。
+     * @var array 指标结果集
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ProfileList;
-
-    /**
-     * @var integer 邮件配置总数。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TotalCount;
+    public $Records;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,9 +41,7 @@ class DescribeMailProfileResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ProfileList 邮件配置详情。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 邮件配置总数。
+     * @param array $Records 指标结果集
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -70,17 +58,13 @@ class DescribeMailProfileResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProfileList",$param) and $param["ProfileList"] !== null) {
-            $this->ProfileList = [];
-            foreach ($param["ProfileList"] as $key => $value){
-                $obj = new UserProfile();
+        if (array_key_exists("Records",$param) and $param["Records"] !== null) {
+            $this->Records = [];
+            foreach ($param["Records"] as $key => $value){
+                $obj = new ApmMetricRecord();
                 $obj->deserialize($value);
-                array_push($this->ProfileList, $obj);
+                array_push($this->Records, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

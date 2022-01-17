@@ -26,6 +26,7 @@ use TencentCloud\Apm\V20210622\Models as Models;
  * @method Models\CreateApmInstanceResponse CreateApmInstance(Models\CreateApmInstanceRequest $req) 业务购买APM实例，调用该接口创建
  * @method Models\DescribeApmAgentResponse DescribeApmAgent(Models\DescribeApmAgentRequest $req) 获取Apm Agent信息
  * @method Models\DescribeApmInstancesResponse DescribeApmInstances(Models\DescribeApmInstancesRequest $req) APM实例列表拉取
+ * @method Models\DescribeMetricRecordsResponse DescribeMetricRecords(Models\DescribeMetricRecordsRequest $req) 拉取通用指标列表
  */
 
 class ApmClient extends AbstractClient

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Api\V20201106\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRegions请求参数结构体
+ * ModifyRunSyncAsset请求参数结构体
  *
- * @method string getProduct() 获取待查询产品的名称，例如cvm
- * @method void setProduct(string $Product) 设置待查询产品的名称，例如cvm
+ * @method integer getType() 获取0: 互联网防火墙开关，1：vpc 防火墙开关
+ * @method void setType(integer $Type) 设置0: 互联网防火墙开关，1：vpc 防火墙开关
  */
-class DescribeRegionsRequest extends AbstractModel
+class ModifyRunSyncAssetRequest extends AbstractModel
 {
     /**
-     * @var string 待查询产品的名称，例如cvm
+     * @var integer 0: 互联网防火墙开关，1：vpc 防火墙开关
      */
-    public $Product;
+    public $Type;
 
     /**
-     * @param string $Product 待查询产品的名称，例如cvm
+     * @param integer $Type 0: 互联网防火墙开关，1：vpc 防火墙开关
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeRegionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

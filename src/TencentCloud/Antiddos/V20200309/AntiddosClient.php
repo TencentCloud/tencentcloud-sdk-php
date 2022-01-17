@@ -35,6 +35,8 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateIPAlarmThresholdConfigResponse CreateIPAlarmThresholdConfig(Models\CreateIPAlarmThresholdConfigRequest $req) 设置单IP告警阈值配置
  * @method Models\CreateL7RuleCertsResponse CreateL7RuleCerts(Models\CreateL7RuleCertsRequest $req) 批量配置L7转发规则的证书供SSL测调用
  * @method Models\CreatePacketFilterConfigResponse CreatePacketFilterConfig(Models\CreatePacketFilterConfigRequest $req) 添加DDoS防护的特征过滤规则
+ * @method Models\CreatePortAclConfigResponse CreatePortAclConfig(Models\CreatePortAclConfigRequest $req) 添加DDoS防护的端口acl策略
+ * @method Models\CreatePortAclConfigListResponse CreatePortAclConfigList(Models\CreatePortAclConfigListRequest $req) 批量添加DDoS防护的端口acl策略
  * @method Models\CreateProtocolBlockConfigResponse CreateProtocolBlockConfig(Models\CreateProtocolBlockConfigRequest $req) 设置DDoS防护的协议封禁配置
  * @method Models\CreateSchedulingDomainResponse CreateSchedulingDomain(Models\CreateSchedulingDomainRequest $req) 创建一个域名，可用于在封堵时调度切换IP
  * @method Models\CreateWaterPrintConfigResponse CreateWaterPrintConfig(Models\CreateWaterPrintConfigRequest $req) 添加DDoS防护的水印防护配置

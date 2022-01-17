@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 键值或者元字段索引的字段信息
  *
- * @method string getKey() 获取需要配置键值或者元字段索引的字段
- * @method void setKey(string $Key) 设置需要配置键值或者元字段索引的字段
+ * @method string getKey() 获取需要配置键值或者元字段索引的字段，元字段Key无需额外添加`__TAG__.`前缀，与上传日志时对应的字段Key一致即可，腾讯云控制台展示时将自动添加`__TAG__.`前缀
+ * @method void setKey(string $Key) 设置需要配置键值或者元字段索引的字段，元字段Key无需额外添加`__TAG__.`前缀，与上传日志时对应的字段Key一致即可，腾讯云控制台展示时将自动添加`__TAG__.`前缀
  * @method ValueInfo getValue() 获取字段的索引描述信息
  * @method void setValue(ValueInfo $Value) 设置字段的索引描述信息
  */
 class KeyValueInfo extends AbstractModel
 {
     /**
-     * @var string 需要配置键值或者元字段索引的字段
+     * @var string 需要配置键值或者元字段索引的字段，元字段Key无需额外添加`__TAG__.`前缀，与上传日志时对应的字段Key一致即可，腾讯云控制台展示时将自动添加`__TAG__.`前缀
      */
     public $Key;
 
@@ -38,7 +38,7 @@ class KeyValueInfo extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Key 需要配置键值或者元字段索引的字段
+     * @param string $Key 需要配置键值或者元字段索引的字段，元字段Key无需额外添加`__TAG__.`前缀，与上传日志时对应的字段Key一致即可，腾讯云控制台展示时将自动添加`__TAG__.`前缀
      * @param ValueInfo $Value 字段的索引描述信息
      */
     function __construct()

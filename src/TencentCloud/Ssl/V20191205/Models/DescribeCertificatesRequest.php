@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpload(integer $Upload) 设置是否筛选上传托管的 1筛选，0不筛选
  * @method integer getRenew() 获取是否筛选可续期证书 1筛选 0不筛选
  * @method void setRenew(integer $Renew) 设置是否筛选可续期证书 1筛选 0不筛选
+ * @method string getFilterSource() 获取筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
+ * @method void setFilterSource(string $FilterSource) 设置筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeCertificatesRequest extends AbstractModel
     public $Renew;
 
     /**
+     * @var string 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
+     */
+    public $FilterSource;
+
+    /**
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量，默认20。
      * @param string $SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
@@ -104,6 +111,7 @@ class DescribeCertificatesRequest extends AbstractModel
      * @param integer $Deployable 是否可部署，可选值：1 = 可部署，0 =  不可部署。
      * @param integer $Upload 是否筛选上传托管的 1筛选，0不筛选
      * @param integer $Renew 是否筛选可续期证书 1筛选 0不筛选
+     * @param string $FilterSource 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeCertificatesRequest extends AbstractModel
 
         if (array_key_exists("Renew",$param) and $param["Renew"] !== null) {
             $this->Renew = $param["Renew"];
+        }
+
+        if (array_key_exists("FilterSource",$param) and $param["FilterSource"] !== null) {
+            $this->FilterSource = $param["FilterSource"];
         }
     }
 }

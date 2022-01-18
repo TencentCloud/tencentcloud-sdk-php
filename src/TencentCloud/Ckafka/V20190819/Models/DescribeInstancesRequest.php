@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值100
  * @method string getTagKey() 获取已废弃。匹配标签key值。
  * @method void setTagKey(string $TagKey) 设置已废弃。匹配标签key值。
+ * @method string getVpcId() 获取私有网络Id
+ * @method void setVpcId(string $VpcId) 设置私有网络Id
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeInstancesRequest extends AbstractModel
     public $TagKey;
 
     /**
+     * @var string 私有网络Id
+     */
+    public $VpcId;
+
+    /**
      * @param string $InstanceId （过滤条件）按照实例ID过滤
      * @param string $SearchWord （过滤条件）按照实例名称过滤，支持模糊查询
      * @param array $Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
      * @param integer $Offset 偏移量，不填默认为0
      * @param integer $Limit 返回数量，不填则默认10，最大值100
      * @param string $TagKey 已废弃。匹配标签key值。
+     * @param string $VpcId 私有网络Id
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
             $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
     }
 }

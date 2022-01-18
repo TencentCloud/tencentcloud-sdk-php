@@ -68,6 +68,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAllowQuit(string $IsAllowQuit) 设置是否允许成员退出。允许：Allow，不允许：Denied。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayUin() 获取代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayUin(string $PayUin) 设置代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayName() 获取代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayName(string $PayName) 设置代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOrgIdentity() 获取管理身份
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrgIdentity(array $OrgIdentity) 设置管理身份
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgMember extends AbstractModel
 {
@@ -144,6 +156,24 @@ class OrgMember extends AbstractModel
     public $IsAllowQuit;
 
     /**
+     * @var string 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayUin;
+
+    /**
+     * @var string 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayName;
+
+    /**
+     * @var array 管理身份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrgIdentity;
+
+    /**
      * @param integer $MemberUin 成员Uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 成员名
@@ -167,6 +197,12 @@ class OrgMember extends AbstractModel
      * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsAllowQuit 是否允许成员退出。允许：Allow，不允许：Denied。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayUin 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayName 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OrgIdentity 管理身份
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -233,6 +269,23 @@ class OrgMember extends AbstractModel
 
         if (array_key_exists("IsAllowQuit",$param) and $param["IsAllowQuit"] !== null) {
             $this->IsAllowQuit = $param["IsAllowQuit"];
+        }
+
+        if (array_key_exists("PayUin",$param) and $param["PayUin"] !== null) {
+            $this->PayUin = $param["PayUin"];
+        }
+
+        if (array_key_exists("PayName",$param) and $param["PayName"] !== null) {
+            $this->PayName = $param["PayName"];
+        }
+
+        if (array_key_exists("OrgIdentity",$param) and $param["OrgIdentity"] !== null) {
+            $this->OrgIdentity = [];
+            foreach ($param["OrgIdentity"] as $key => $value){
+                $obj = new MemberIdentity();
+                $obj->deserialize($value);
+                array_push($this->OrgIdentity, $obj);
+            }
         }
     }
 }

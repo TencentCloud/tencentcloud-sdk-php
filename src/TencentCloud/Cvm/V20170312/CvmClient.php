@@ -221,6 +221,9 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 密钥对名称不能和已经存在的密钥对的名称重复。
 * 密钥对ID是密钥对的唯一标识，不可修改。
  * @method Models\ModifyLaunchTemplateDefaultVersionResponse ModifyLaunchTemplateDefaultVersion(Models\ModifyLaunchTemplateDefaultVersionRequest $req) 本接口（ModifyLaunchTemplateDefaultVersion）用于修改实例启动模板默认版本。
+ * @method Models\ProgramFpgaImageResponse ProgramFpgaImage(Models\ProgramFpgaImageRequest $req) 本接口(ProgramFpgaImage)用于在线烧录由客户提供的FPGA镜像文件到指定实例的指定FPGA卡上。
+* 只支持对单个实例发起在线烧录FPGA镜像的操作。
+* 支持对单个实例的多块FPGA卡同时烧录FPGA镜像，DBDFs参数为空时，默认对指定实例的所有FPGA卡进行烧录。
  * @method Models\PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOffering(Models\PurchaseReservedInstancesOfferingRequest $req) 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例
  * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) 本接口 (RebootInstances) 用于重启实例。
 

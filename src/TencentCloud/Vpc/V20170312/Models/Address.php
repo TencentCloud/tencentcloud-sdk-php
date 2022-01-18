@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsBlocked(boolean $IsBlocked) 设置资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
  * @method boolean getIsEipDirectConnection() 获取eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
  * @method void setIsEipDirectConnection(boolean $IsEipDirectConnection) 设置eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
- * @method string getAddressType() 获取eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
- * @method void setAddressType(string $AddressType) 设置eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+ * @method string getAddressType() 获取EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP。其中：CalcIP 表示设备 IP，WanIP 表示普通公网 IP，EIP 表示弹性公网 IP，AnycastEip 表示加速 EIP。
+ * @method void setAddressType(string $AddressType) 设置EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP。其中：CalcIP 表示设备 IP，WanIP 表示普通公网 IP，EIP 表示弹性公网 IP，AnycastEip 表示加速 EIP。
  * @method boolean getCascadeRelease() 获取eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
  * @method void setCascadeRelease(boolean $CascadeRelease) 设置eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
  * @method AlgType getEipAlgType() 获取EIP ALG开启的协议类型。
@@ -58,7 +58,27 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInternetChargeType() 获取弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
+包括：
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">表示包月带宽预付费。</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">表示按小时流量后付费。</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">表示按小时带宽后付费。</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">表示共享带宽包。</p>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetChargeType(string $InternetChargeType) 设置弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+包括：
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">表示包月带宽预付费。</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">表示按小时流量后付费。</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">表示按小时带宽后付费。</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取弹性公网IP关联的标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,7 +143,7 @@ class Address extends AbstractModel
     public $IsEipDirectConnection;
 
     /**
-     * @var string eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * @var string EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP。其中：CalcIP 表示设备 IP，WanIP 表示普通公网 IP，EIP 表示弹性公网 IP，AnycastEip 表示加速 EIP。
      */
     public $AddressType;
 
@@ -156,6 +176,16 @@ class Address extends AbstractModel
     /**
      * @var string 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
+包括：
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">表示包月带宽预付费。</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">表示按小时流量后付费。</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">表示按小时带宽后付费。</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">表示共享带宽包。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternetChargeType;
 
@@ -177,7 +207,7 @@ class Address extends AbstractModel
      * @param boolean $IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
      * @param boolean $IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
      * @param boolean $IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
-     * @param string $AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * @param string $AddressType EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP。其中：CalcIP 表示设备 IP，WanIP 表示普通公网 IP，EIP 表示弹性公网 IP，AnycastEip 表示加速 EIP。
      * @param boolean $CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
      * @param AlgType $EipAlgType EIP ALG开启的协议类型。
      * @param string $InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
@@ -185,6 +215,16 @@ class Address extends AbstractModel
      * @param integer $Bandwidth 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InternetChargeType 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
+注意：此字段可能返回 null，表示取不到有效值。
+包括：
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">表示包月带宽预付费。</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">表示按小时流量后付费。</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">表示按小时带宽后付费。</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 弹性公网IP关联的标签列表。
 注意：此字段可能返回 null，表示取不到有效值。

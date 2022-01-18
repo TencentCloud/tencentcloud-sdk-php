@@ -24,24 +24,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCageId(string $CageId) 设置独享集群围笼ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCdcState() 获取独享集群状态。取值范围：<br><li>NORMAL:正常<br><li>CLOSED：关闭售卖<br><li>FAULT：状态异常<br><li>ISOLATED：已隔离。
- * @method void setCdcState(string $CdcState) 设置独享集群状态。取值范围：<br><li>NORMAL:正常<br><li>CLOSED：关闭售卖<br><li>FAULT：状态异常<br><li>ISOLATED：已隔离。
- * @method string getZone() 获取独享集群所属的[可用区](/document/api/213/9452#zone)ID。
+ * @method string getCdcState() 获取独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
+ * @method void setCdcState(string $CdcState) 设置独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
+ * @method string getZone() 获取独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZone(string $Zone) 设置独享集群所属的[可用区](/document/api/213/9452#zone)ID。
+ * @method void setZone(string $Zone) 设置独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdcName() 获取独享集群实例名称。
  * @method void setCdcName(string $CdcName) 设置独享集群实例名称。
- * @method CdcSize getCdcResource() 获取独享集群的资源大小。
+ * @method CdcSize getCdcResource() 获取独享集群的资源容量大小。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCdcResource(CdcSize $CdcResource) 设置独享集群的资源大小。
+ * @method void setCdcResource(CdcSize $CdcResource) 设置独享集群的资源容量大小。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdcId() 获取独享集群实例id。
  * @method void setCdcId(string $CdcId) 设置独享集群实例id。
  * @method string getDiskType() 获取独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群<br><li>CLOUD_PREMIUM：表示高性能云硬盘集群<br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。
  * @method void setDiskType(string $DiskType) 设置独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群<br><li>CLOUD_PREMIUM：表示高性能云硬盘集群<br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。
- * @method string getExpiredTime() 获取独享集群过期时间。
- * @method void setExpiredTime(string $ExpiredTime) 设置独享集群过期时间。
+ * @method string getExpiredTime() 获取独享集群到期时间。
+ * @method void setExpiredTime(string $ExpiredTime) 设置独享集群到期时间。
  */
 class Cdc extends AbstractModel
 {
@@ -52,12 +52,12 @@ class Cdc extends AbstractModel
     public $CageId;
 
     /**
-     * @var string 独享集群状态。取值范围：<br><li>NORMAL:正常<br><li>CLOSED：关闭售卖<br><li>FAULT：状态异常<br><li>ISOLATED：已隔离。
+     * @var string 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
      */
     public $CdcState;
 
     /**
-     * @var string 独享集群所属的[可用区](/document/api/213/9452#zone)ID。
+     * @var string 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
@@ -68,7 +68,7 @@ class Cdc extends AbstractModel
     public $CdcName;
 
     /**
-     * @var CdcSize 独享集群的资源大小。
+     * @var CdcSize 独享集群的资源容量大小。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcResource;
@@ -84,22 +84,22 @@ class Cdc extends AbstractModel
     public $DiskType;
 
     /**
-     * @var string 独享集群过期时间。
+     * @var string 独享集群到期时间。
      */
     public $ExpiredTime;
 
     /**
      * @param string $CageId 独享集群围笼ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CdcState 独享集群状态。取值范围：<br><li>NORMAL:正常<br><li>CLOSED：关闭售卖<br><li>FAULT：状态异常<br><li>ISOLATED：已隔离。
-     * @param string $Zone 独享集群所属的[可用区](/document/api/213/9452#zone)ID。
+     * @param string $CdcState 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
+     * @param string $Zone 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcName 独享集群实例名称。
-     * @param CdcSize $CdcResource 独享集群的资源大小。
+     * @param CdcSize $CdcResource 独享集群的资源容量大小。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcId 独享集群实例id。
      * @param string $DiskType 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群<br><li>CLOUD_PREMIUM：表示高性能云硬盘集群<br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。
-     * @param string $ExpiredTime 独享集群过期时间。
+     * @param string $ExpiredTime 独享集群到期时间。
      */
     function __construct()
     {

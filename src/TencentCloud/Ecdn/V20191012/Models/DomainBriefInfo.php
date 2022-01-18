@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArea(string $Area) 设置加速区域，mainland，oversea或global。
  * @method string getReadonly() 获取域名锁定状态，normal、global，分别表示未被锁定、全球锁定。
  * @method void setReadonly(string $Readonly) 设置域名锁定状态，normal、global，分别表示未被锁定、全球锁定。
+ * @method array getTag() 获取域名标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTag(array $Tag) 设置域名标签。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainBriefInfo extends AbstractModel
 {
@@ -108,6 +112,12 @@ class DomainBriefInfo extends AbstractModel
     public $Readonly;
 
     /**
+     * @var array 域名标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tag;
+
+    /**
      * @param string $ResourceId 域名ID。
      * @param integer $AppId 腾讯云账号ID。
      * @param string $Domain CDN加速域名。
@@ -120,6 +130,8 @@ class DomainBriefInfo extends AbstractModel
      * @param string $Disable 域名封禁状态，normal，overdue，quota，malicious，ddos，idle，unlicensed，capping，readonly分别表示 正常，欠费停服，试用客户流量包耗尽，恶意用户，ddos攻击，无流量域名，未备案，带宽封顶，只读
      * @param string $Area 加速区域，mainland，oversea或global。
      * @param string $Readonly 域名锁定状态，normal、global，分别表示未被锁定、全球锁定。
+     * @param array $Tag 域名标签。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -181,6 +193,15 @@ class DomainBriefInfo extends AbstractModel
 
         if (array_key_exists("Readonly",$param) and $param["Readonly"] !== null) {
             $this->Readonly = $param["Readonly"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDistricts(array $Districts) 设置拨测点地区
  * @method array getErrorTypes() 获取错误类型
  * @method void setErrorTypes(array $ErrorTypes) 设置错误类型
+ * @method array getCity() 获取城市
+ * @method void setCity(array $City) 设置城市
  */
 class DescribeDetailedSingleProbeDataRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class DescribeDetailedSingleProbeDataRequest extends AbstractModel
     public $ErrorTypes;
 
     /**
+     * @var array 城市
+     */
+    public $City;
+
+    /**
      * @param integer $BeginTime 开始时间戳（毫秒级）
      * @param integer $EndTime 结束时间戳（毫秒级）
      * @param string $TaskType 任务类型
@@ -120,6 +127,7 @@ class DescribeDetailedSingleProbeDataRequest extends AbstractModel
      * @param array $Operators 拨测点运营商
      * @param array $Districts 拨测点地区
      * @param array $ErrorTypes 错误类型
+     * @param array $City 城市
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class DescribeDetailedSingleProbeDataRequest extends AbstractModel
 
         if (array_key_exists("ErrorTypes",$param) and $param["ErrorTypes"] !== null) {
             $this->ErrorTypes = $param["ErrorTypes"];
+        }
+
+        if (array_key_exists("City",$param) and $param["City"] !== null) {
+            $this->City = $param["City"];
         }
     }
 }

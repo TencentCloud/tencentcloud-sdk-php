@@ -29,6 +29,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateBoundIPResponse CreateBoundIP(Models\CreateBoundIPRequest $req) 绑定IP到高防包实例，支持独享包、共享包；需要注意的是此接口绑定或解绑IP是异步接口，当处于绑定或解绑中时，则不允许再进行绑定或解绑，需要等待当前绑定或解绑完成。
  * @method Models\CreateDDoSAIResponse CreateDDoSAI(Models\CreateDDoSAIRequest $req) 设置DDoS防护的AI防护开关
  * @method Models\CreateDDoSBlackWhiteIpListResponse CreateDDoSBlackWhiteIpList(Models\CreateDDoSBlackWhiteIpListRequest $req) 添加DDoS防护的IP网段黑白名单
+ * @method Models\CreateDDoSConnectLimitResponse CreateDDoSConnectLimit(Models\CreateDDoSConnectLimitRequest $req) 配置DDoS连接抑制选项
  * @method Models\CreateDDoSGeoIPBlockConfigResponse CreateDDoSGeoIPBlockConfig(Models\CreateDDoSGeoIPBlockConfigRequest $req) 添加DDoS防护的区域封禁配置
  * @method Models\CreateDDoSSpeedLimitConfigResponse CreateDDoSSpeedLimitConfig(Models\CreateDDoSSpeedLimitConfigRequest $req) 添加DDoS防护的访问限速配置
  * @method Models\CreateDefaultAlarmThresholdResponse CreateDefaultAlarmThreshold(Models\CreateDefaultAlarmThresholdRequest $req) 设置单IP默认告警阈值配置

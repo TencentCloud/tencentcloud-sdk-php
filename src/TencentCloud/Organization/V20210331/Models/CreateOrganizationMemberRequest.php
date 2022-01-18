@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取名称
  * @method void setName(string $Name) 设置名称
- * @method string getPolicyType() 获取关系策略
- * @method void setPolicyType(string $PolicyType) 设置关系策略
+ * @method string getPolicyType() 获取关系策略  取值：Financial
+ * @method void setPolicyType(string $PolicyType) 设置关系策略  取值：Financial
  * @method array getPermissionIds() 获取关系权限
  * @method void setPermissionIds(array $PermissionIds) 设置关系权限
  * @method integer getNodeId() 获取需要调节的节点
@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注
  * @method integer getRecordId() 获取重试创建传记录ID
  * @method void setRecordId(integer $RecordId) 设置重试创建传记录ID
+ * @method string getPayUin() 获取代付者Uin
+ * @method void setPayUin(string $PayUin) 设置代付者Uin
+ * @method array getIdentityRoleID() 获取管理身份
+ * @method void setIdentityRoleID(array $IdentityRoleID) 设置管理身份
  */
 class CreateOrganizationMemberRequest extends AbstractModel
 {
@@ -43,7 +47,7 @@ class CreateOrganizationMemberRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 关系策略
+     * @var string 关系策略  取值：Financial
      */
     public $PolicyType;
 
@@ -73,13 +77,25 @@ class CreateOrganizationMemberRequest extends AbstractModel
     public $RecordId;
 
     /**
+     * @var string 代付者Uin
+     */
+    public $PayUin;
+
+    /**
+     * @var array 管理身份
+     */
+    public $IdentityRoleID;
+
+    /**
      * @param string $Name 名称
-     * @param string $PolicyType 关系策略
+     * @param string $PolicyType 关系策略  取值：Financial
      * @param array $PermissionIds 关系权限
      * @param integer $NodeId 需要调节的节点
      * @param string $AccountName 账号名
      * @param string $Remark 备注
      * @param integer $RecordId 重试创建传记录ID
+     * @param string $PayUin 代付者Uin
+     * @param array $IdentityRoleID 管理身份
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class CreateOrganizationMemberRequest extends AbstractModel
 
         if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
             $this->RecordId = $param["RecordId"];
+        }
+
+        if (array_key_exists("PayUin",$param) and $param["PayUin"] !== null) {
+            $this->PayUin = $param["PayUin"];
+        }
+
+        if (array_key_exists("IdentityRoleID",$param) and $param["IdentityRoleID"] !== null) {
+            $this->IdentityRoleID = $param["IdentityRoleID"];
         }
     }
 }

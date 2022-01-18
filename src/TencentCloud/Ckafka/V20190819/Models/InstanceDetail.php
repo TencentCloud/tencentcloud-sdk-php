@@ -90,6 +90,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRebalanceTime(string $RebalanceTime) 设置计划升级配置时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPartitionNumber() 获取实例当前partition数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPartitionNumber(integer $PartitionNumber) 设置实例当前partition数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublicNetworkChargeType() 获取公网带宽类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) 设置公网带宽类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPublicNetwork() 获取公网带宽值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
 {
@@ -237,6 +249,24 @@ class InstanceDetail extends AbstractModel
     public $RebalanceTime;
 
     /**
+     * @var integer 实例当前partition数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PartitionNumber;
+
+    /**
+     * @var string 公网带宽类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicNetworkChargeType;
+
+    /**
+     * @var integer 公网带宽值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicNetwork;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $Vip 访问实例的vip 信息
@@ -271,6 +301,12 @@ class InstanceDetail extends AbstractModel
      * @param integer $MaxPartitionNumber 当前规格最大Partition数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RebalanceTime 计划升级配置时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PartitionNumber 实例当前partition数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicNetworkChargeType 公网带宽类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PublicNetwork 公网带宽值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -402,6 +438,18 @@ class InstanceDetail extends AbstractModel
 
         if (array_key_exists("RebalanceTime",$param) and $param["RebalanceTime"] !== null) {
             $this->RebalanceTime = $param["RebalanceTime"];
+        }
+
+        if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
+            $this->PartitionNumber = $param["PartitionNumber"];
+        }
+
+        if (array_key_exists("PublicNetworkChargeType",$param) and $param["PublicNetworkChargeType"] !== null) {
+            $this->PublicNetworkChargeType = $param["PublicNetworkChargeType"];
+        }
+
+        if (array_key_exists("PublicNetwork",$param) and $param["PublicNetwork"] !== null) {
+            $this->PublicNetwork = $param["PublicNetwork"];
         }
     }
 }

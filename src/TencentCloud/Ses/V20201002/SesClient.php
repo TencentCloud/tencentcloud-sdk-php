@@ -28,6 +28,8 @@ use TencentCloud\Ses\V20201002\Models as Models;
  * @method Models\CreateEmailIdentityResponse CreateEmailIdentity(Models\CreateEmailIdentityRequest $req) 在使用身份发送电子邮件之前，您需要有一个电子邮件域名，该域名可以是您的网站或者移动应用的域名。您首先必须进行验证，证明自己是该域名的所有者，并且授权给腾讯云SES发送许可，才可以从该域名发送电子邮件。
  * @method Models\CreateEmailTemplateResponse CreateEmailTemplate(Models\CreateEmailTemplateRequest $req) 创建模板，该模板可以是TXT或者HTML，请注意如果HTML不要包含外部文件的CSS。模板中的变量使用 {{变量名}} 表示。
 注意：模版需要审核通过才可以使用。
+ * @method Models\CreateReceiverResponse CreateReceiver(Models\CreateReceiverRequest $req) 创建收件人列表，收件人列表是发送批量邮件的目标邮件地址列表。创建列表后，需要上传收件人邮箱地址。之后创建发送任务，关联列表，便可以实现批量发送邮件的功能
+ * @method Models\CreateReceiverDetailResponse CreateReceiverDetail(Models\CreateReceiverDetailRequest $req) 在创建完收件人列表后，向这个收件人列表中批量增加收件人邮箱地址，一次最大支持10W，异步完成处理。收件人列表只可以上传一次，不可追加上传。数据量比较大的时候，上传可能需要一点时间，可以通过查询收件人列表了解上传状态和上传数量
  * @method Models\DeleteBlackListResponse DeleteBlackList(Models\DeleteBlackListRequest $req) 邮箱被拉黑之后，用户如果确认收件邮箱有效或者已经处于激活状态，可以从腾讯云地址库中删除该黑名单之后继续投递。
  * @method Models\DeleteEmailAddressResponse DeleteEmailAddress(Models\DeleteEmailAddressRequest $req) 删除发信人地址
  * @method Models\DeleteEmailIdentityResponse DeleteEmailIdentity(Models\DeleteEmailIdentityRequest $req) 删除发信域名，删除后，将不可再使用该域名进行发信
@@ -40,6 +42,8 @@ use TencentCloud\Ses\V20201002\Models as Models;
  * @method Models\ListEmailAddressResponse ListEmailAddress(Models\ListEmailAddressRequest $req) 获取发信地址列表
  * @method Models\ListEmailIdentitiesResponse ListEmailIdentities(Models\ListEmailIdentitiesRequest $req) 获取当前发信域名列表，包含已验证通过与未验证的域名
  * @method Models\ListEmailTemplatesResponse ListEmailTemplates(Models\ListEmailTemplatesRequest $req) 获取当前邮件模板列表
+ * @method Models\ListReceiversResponse ListReceivers(Models\ListReceiversRequest $req) 根据条件查询收件人列表，支持分页，模糊查询，状态查询
+ * @method Models\ListSendTasksResponse ListSendTasks(Models\ListSendTasksRequest $req) 分页查询批量发送邮件任务，包含即时发送任务，定时发送任务，周期重复发送任务，查询发送情况，包括请求数量，已发数量，缓存数量，任务状态等信息
  * @method Models\SendEmailResponse SendEmail(Models\SendEmailRequest $req) 您可以通过此API发送TEXT或者HTML邮件，适用于触发类邮件（验证码、交易类）。默认仅支持使用模板发送邮件，如需发送自定义内容，请单独联系商务开通此功能。
  * @method Models\UpdateEmailIdentityResponse UpdateEmailIdentity(Models\UpdateEmailIdentityRequest $req) 您已经成功配置好了您的DNS，接下来请求腾讯云验证您的DNS配置是否正确
  * @method Models\UpdateEmailTemplateResponse UpdateEmailTemplate(Models\UpdateEmailTemplateRequest $req) 更新邮件模板，更新后需再次审核

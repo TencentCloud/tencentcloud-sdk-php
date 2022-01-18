@@ -65,6 +65,8 @@ use TencentCloud\Iotvideoindustry\V20201201\Models as Models;
 请使用DescribeDevicesList接口
  * @method Models\DescribeBindSceneChannelsResponse DescribeBindSceneChannels(Models\DescribeBindSceneChannelsRequest $req) 获取场景绑定通道列表
  * @method Models\DescribeBindSceneDevicesResponse DescribeBindSceneDevices(Models\DescribeBindSceneDevicesRequest $req) 获取场景绑定设备列表
+ * @method Models\DescribeChannelLiveStreamURLResponse DescribeChannelLiveStreamURL(Models\DescribeChannelLiveStreamURLRequest $req) 本接口(DescribeChannelLiveStreamURL)用于获取设备指定通道实时流地址，地址是动态生成，如重新播放需要调用此接口重新获取最新播放地址。
+正常推流，如未设置对应录制计划，且180s无人观看此流，将会被自动掐断。
  * @method Models\DescribeChannelLocalRecordURLResponse DescribeChannelLocalRecordURL(Models\DescribeChannelLocalRecordURLRequest $req) 本接口（DescribeChannelLocalRecordURL）用于将NVR等设备对应通道本地回放文件，通过GB28181信令推送至云端，并生成对应的实时视频流URL，流地址URL是动态生成，如需重新播放请重新调用此接口获取最新地址。
 正常推流，如未设置对应录制计划，且180s无人观看此流，将会被自动掐断。
  * @method Models\DescribeChannelStreamURLResponse DescribeChannelStreamURL(Models\DescribeChannelStreamURLRequest $req) 本接口(DescribeChannelStreamURL)用于获取设备指定通道实时流地址，地址是动态生成，如重新播放需要调用此接口重新获取最新播放地址。

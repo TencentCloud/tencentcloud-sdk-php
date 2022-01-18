@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
     b.大写字母A-Z
     c.数字0-9
     d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+ * @method array getShardIds() 获取单AZ实例节点信息
+ * @method void setShardIds(array $ShardIds) 设置单AZ实例节点信息
  */
 class KillMasterGroupRequest extends AbstractModel
 {
@@ -56,6 +58,11 @@ class KillMasterGroupRequest extends AbstractModel
     public $Password;
 
     /**
+     * @var array 单AZ实例节点信息
+     */
+    public $ShardIds;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Password 1.长度8-30位,推荐使用12位以上的密码
 2.不能以"/"开头
@@ -64,6 +71,7 @@ class KillMasterGroupRequest extends AbstractModel
     b.大写字母A-Z
     c.数字0-9
     d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * @param array $ShardIds 单AZ实例节点信息
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class KillMasterGroupRequest extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("ShardIds",$param) and $param["ShardIds"] !== null) {
+            $this->ShardIds = $param["ShardIds"];
         }
     }
 }

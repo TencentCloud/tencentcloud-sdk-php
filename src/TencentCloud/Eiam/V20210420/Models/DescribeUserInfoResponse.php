@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondaryOrgNodeIdList(array $SecondaryOrgNodeIdList) 设置用户所属的次要组织机构ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAdminFlag() 获取是否管理员标志，0为否、1为是。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdminFlag(integer $AdminFlag) 设置是否管理员标志，0为否、1为是。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -166,6 +170,12 @@ class DescribeUserInfoResponse extends AbstractModel
     public $SecondaryOrgNodeIdList;
 
     /**
+     * @var integer 是否管理员标志，0为否、1为是。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdminFlag;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -198,6 +208,8 @@ class DescribeUserInfoResponse extends AbstractModel
      * @param boolean $PwdNeedReset 当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecondaryOrgNodeIdList 用户所属的次要组织机构ID列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AdminFlag 是否管理员标志，0为否、1为是。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -268,6 +280,10 @@ class DescribeUserInfoResponse extends AbstractModel
 
         if (array_key_exists("SecondaryOrgNodeIdList",$param) and $param["SecondaryOrgNodeIdList"] !== null) {
             $this->SecondaryOrgNodeIdList = $param["SecondaryOrgNodeIdList"];
+        }
+
+        if (array_key_exists("AdminFlag",$param) and $param["AdminFlag"] !== null) {
+            $this->AdminFlag = $param["AdminFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

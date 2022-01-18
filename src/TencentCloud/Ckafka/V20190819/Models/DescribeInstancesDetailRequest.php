@@ -26,14 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置（过滤条件）按照实例名称过滤，支持模糊查询
  * @method array getStatus() 获取（过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
  * @method void setStatus(array $Status) 设置（过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
- * @method integer getOffset() 获取偏移量，不填默认为0
- * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
- * @method integer getLimit() 获取返回数量，不填则默认10，最大值20
- * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值20
+ * @method integer getOffset() 获取偏移量，不填默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0。
+ * @method integer getLimit() 获取返回数量，不填则默认10，最大值20。
+ * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值20。
  * @method string getTagKey() 获取匹配标签key值。
  * @method void setTagKey(string $TagKey) 设置匹配标签key值。
- * @method array getFilters() 获取过滤器
- * @method void setFilters(array $Filters) 设置过滤器
+ * @method array getFilters() 获取过滤器。
+ * @method void setFilters(array $Filters) 设置过滤器。
+ * @method string getInstanceIds() 获取按照实例ID过滤
+ * @method void setInstanceIds(string $InstanceIds) 设置按照实例ID过滤
  */
 class DescribeInstancesDetailRequest extends AbstractModel
 {
@@ -53,12 +55,12 @@ class DescribeInstancesDetailRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 偏移量，不填默认为0
+     * @var integer 偏移量，不填默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，不填则默认10，最大值20
+     * @var integer 返回数量，不填则默认10，最大值20。
      */
     public $Limit;
 
@@ -68,18 +70,24 @@ class DescribeInstancesDetailRequest extends AbstractModel
     public $TagKey;
 
     /**
-     * @var array 过滤器
+     * @var array 过滤器。
      */
     public $Filters;
+
+    /**
+     * @var string 按照实例ID过滤
+     */
+    public $InstanceIds;
 
     /**
      * @param string $InstanceId （过滤条件）按照实例ID过滤
      * @param string $SearchWord （过滤条件）按照实例名称过滤，支持模糊查询
      * @param array $Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
-     * @param integer $Offset 偏移量，不填默认为0
-     * @param integer $Limit 返回数量，不填则默认10，最大值20
+     * @param integer $Offset 偏移量，不填默认为0。
+     * @param integer $Limit 返回数量，不填则默认10，最大值20。
      * @param string $TagKey 匹配标签key值。
-     * @param array $Filters 过滤器
+     * @param array $Filters 过滤器。
+     * @param string $InstanceIds 按照实例ID过滤
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class DescribeInstancesDetailRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

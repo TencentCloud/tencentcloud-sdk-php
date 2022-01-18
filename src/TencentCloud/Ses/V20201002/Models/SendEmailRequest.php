@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSimple(Simple $Simple) 设置使用API直接发送内容时，填写的邮件内容
  * @method array getAttachments() 获取需要发送附件时，填写附件相关参数。
  * @method void setAttachments(array $Attachments) 设置需要发送附件时，填写附件相关参数。
- * @method string getUnsubscribe() 获取是否加入退订链接
- * @method void setUnsubscribe(string $Unsubscribe) 设置是否加入退订链接
+ * @method string getUnsubscribe() 获取退订选项 1: 加入退订链接 0: 不加入退订链接
+ * @method void setUnsubscribe(string $Unsubscribe) 设置退订选项 1: 加入退订链接 0: 不加入退订链接
  */
 class SendEmailRequest extends AbstractModel
 {
@@ -81,7 +81,7 @@ class SendEmailRequest extends AbstractModel
     public $Attachments;
 
     /**
-     * @var string 是否加入退订链接
+     * @var string 退订选项 1: 加入退订链接 0: 不加入退订链接
      */
     public $Unsubscribe;
 
@@ -95,7 +95,7 @@ class SendEmailRequest extends AbstractModel
      * @param Template $Template 使用模板发送时，填写的模板相关参数
      * @param Simple $Simple 使用API直接发送内容时，填写的邮件内容
      * @param array $Attachments 需要发送附件时，填写附件相关参数。
-     * @param string $Unsubscribe 是否加入退订链接
+     * @param string $Unsubscribe 退订选项 1: 加入退订链接 0: 不加入退订链接
      */
     function __construct()
     {

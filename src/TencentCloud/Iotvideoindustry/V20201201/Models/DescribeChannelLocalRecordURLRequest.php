@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelId(string $ChannelId) 设置通道唯一标识
  * @method string getRecordId() 获取录像文件Id，通过获取本地录像返回
  * @method void setRecordId(string $RecordId) 设置录像文件Id，通过获取本地录像返回
+ * @method integer getExpireTime() 获取UNIX 时间戳，30天内，URL失效时间，如180s无人观看此流则URL提前失效
+ * @method void setExpireTime(integer $ExpireTime) 设置UNIX 时间戳，30天内，URL失效时间，如180s无人观看此流则URL提前失效
  * @method integer getStartTime() 获取录像文件推送的开始时间，需要在RecordId参数起始时间内，可以通过此参数控制回放流起始点
  * @method void setStartTime(integer $StartTime) 设置录像文件推送的开始时间，需要在RecordId参数起始时间内，可以通过此参数控制回放流起始点
  * @method integer getEndTime() 获取录像文件推送的结束时间，需要在RecordId参数起始时间内，可以通过此参数控制回放流起始点
@@ -49,6 +51,11 @@ class DescribeChannelLocalRecordURLRequest extends AbstractModel
     public $RecordId;
 
     /**
+     * @var integer UNIX 时间戳，30天内，URL失效时间，如180s无人观看此流则URL提前失效
+     */
+    public $ExpireTime;
+
+    /**
      * @var integer 录像文件推送的开始时间，需要在RecordId参数起始时间内，可以通过此参数控制回放流起始点
      */
     public $StartTime;
@@ -62,6 +69,7 @@ class DescribeChannelLocalRecordURLRequest extends AbstractModel
      * @param string $DeviceId 设备唯一标识
      * @param string $ChannelId 通道唯一标识
      * @param string $RecordId 录像文件Id，通过获取本地录像返回
+     * @param integer $ExpireTime UNIX 时间戳，30天内，URL失效时间，如180s无人观看此流则URL提前失效
      * @param integer $StartTime 录像文件推送的开始时间，需要在RecordId参数起始时间内，可以通过此参数控制回放流起始点
      * @param integer $EndTime 录像文件推送的结束时间，需要在RecordId参数起始时间内，可以通过此参数控制回放流起始点
      */
@@ -88,6 +96,10 @@ class DescribeChannelLocalRecordURLRequest extends AbstractModel
 
         if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
             $this->RecordId = $param["RecordId"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {

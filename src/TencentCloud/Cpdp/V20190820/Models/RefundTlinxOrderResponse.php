@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RefundTlinxOrder返回参数结构体
  *
- * @method string getErrCode() 获取业务系统返回码
- * @method void setErrCode(string $ErrCode) 设置业务系统返回码
+ * @method string getErrCode() 获取业务系统返回码，0表示成功，其他表示失败。
+ * @method void setErrCode(string $ErrCode) 设置业务系统返回码，0表示成功，其他表示失败。
  * @method string getErrMessage() 获取业务系统返回消息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMessage(string $ErrMessage) 设置业务系统返回消息
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class RefundTlinxOrderResponse extends AbstractModel
 {
     /**
-     * @var string 业务系统返回码
+     * @var string 业务系统返回码，0表示成功，其他表示失败。
      */
     public $ErrCode;
 
@@ -58,7 +58,7 @@ class RefundTlinxOrderResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ErrCode 业务系统返回码
+     * @param string $ErrCode 业务系统返回码，0表示成功，其他表示失败。
      * @param string $ErrMessage 业务系统返回消息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RefundOrderResult $Result 退款响应对象

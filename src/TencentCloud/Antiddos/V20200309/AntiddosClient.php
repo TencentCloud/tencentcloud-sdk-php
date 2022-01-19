@@ -54,6 +54,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) 获取DDoS防护的IP黑白名单
  * @method Models\DescribeCCTrendResponse DescribeCCTrend(Models\DescribeCCTrendRequest $req) 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
  * @method Models\DescribeDDoSBlackWhiteIpListResponse DescribeDDoSBlackWhiteIpList(Models\DescribeDDoSBlackWhiteIpListRequest $req) 获取DDoS防护的IP网段黑白名单
+ * @method Models\DescribeDDoSConnectLimitListResponse DescribeDDoSConnectLimitList(Models\DescribeDDoSConnectLimitListRequest $req) 获取DDoS连接抑制配置列表
  * @method Models\DescribeDDoSTrendResponse DescribeDDoSTrend(Models\DescribeDDoSTrendRequest $req) 获取DDoS攻击流量带宽和攻击包速率数据
  * @method Models\DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(Models\DescribeDefaultAlarmThresholdRequest $req) 获取单IP默认告警阈值配置
  * @method Models\DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(Models\DescribeL7RulesBySSLCertIdRequest $req) 查询与证书ID对于域名匹配的七层规则
@@ -68,6 +69,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListIPAlarmConfigResponse DescribeListIPAlarmConfig(Models\DescribeListIPAlarmConfigRequest $req) 获取单IP告警阈值配置列表
  * @method Models\DescribeListListenerResponse DescribeListListener(Models\DescribeListListenerRequest $req) 获取转发监听器列表
  * @method Models\DescribeListPacketFilterConfigResponse DescribeListPacketFilterConfig(Models\DescribeListPacketFilterConfigRequest $req) 获取DDoS防护的特征过滤规则列表
+ * @method Models\DescribeListPortAclListResponse DescribeListPortAclList(Models\DescribeListPortAclListRequest $req) 获取DDoS防护的端口acl策略列表
  * @method Models\DescribeListProtectThresholdConfigResponse DescribeListProtectThresholdConfig(Models\DescribeListProtectThresholdConfigRequest $req) 获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等
  * @method Models\DescribeListProtocolBlockConfigResponse DescribeListProtocolBlockConfig(Models\DescribeListProtocolBlockConfigRequest $req) 获取DDoS防护的协议封禁配置列表
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) 获取智能调度域名列表

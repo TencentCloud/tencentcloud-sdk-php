@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页起始点
  * @method integer getEndTime() 获取结束时间
  * @method void setEndTime(integer $EndTime) 设置结束时间
+ * @method string getBusinessName() 获取业务名称（默认值：taw）
+ * @method void setBusinessName(string $BusinessName) 设置业务名称（默认值：taw）
  */
 class DescribeMetricRecordsRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeMetricRecordsRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 业务名称（默认值：taw）
+     */
+    public $BusinessName;
+
+    /**
      * @param array $Filters 过滤条件
      * @param array $Metrics 指标列表
      * @param array $GroupBy 聚合维度
@@ -96,6 +103,7 @@ class DescribeMetricRecordsRequest extends AbstractModel
      * @param integer $StartTime 开始时间
      * @param integer $Offset 分页起始点
      * @param integer $EndTime 结束时间
+     * @param string $BusinessName 业务名称（默认值：taw）
      */
     function __construct()
     {
@@ -155,6 +163,10 @@ class DescribeMetricRecordsRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("BusinessName",$param) and $param["BusinessName"] !== null) {
+            $this->BusinessName = $param["BusinessName"];
         }
     }
 }

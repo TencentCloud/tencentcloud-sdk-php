@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartTime() 获取开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS
  * @method void setStartTime(string $StartTime) 设置开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS
  * @method string getEndTime() 获取结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
-结束时间 和 开始时间跨度不支持超过24小时，支持距当前时间30天内的数据查询。
+结束时间 和 开始时间跨度不支持超过24小时，支持距当前时间15天内的数据查询。
  * @method void setEndTime(string $EndTime) 设置结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
-结束时间 和 开始时间跨度不支持超过24小时，支持距当前时间30天内的数据查询。
+结束时间 和 开始时间跨度不支持超过24小时，支持距当前时间15天内的数据查询。
  * @method string getPlayDomain() 获取播放域名，
 若不填，则为查询所有播放域名的在线流数据。
  * @method void setPlayDomain(string $PlayDomain) 设置播放域名，
@@ -52,7 +52,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
 
     /**
      * @var string 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
-结束时间 和 开始时间跨度不支持超过24小时，支持距当前时间30天内的数据查询。
+结束时间 和 开始时间跨度不支持超过24小时，支持距当前时间15天内的数据查询。
      */
     public $EndTime;
 
@@ -83,7 +83,7 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
     /**
      * @param string $StartTime 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS
      * @param string $EndTime 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
-结束时间 和 开始时间跨度不支持超过24小时，支持距当前时间30天内的数据查询。
+结束时间 和 开始时间跨度不支持超过24小时，支持距当前时间15天内的数据查询。
      * @param string $PlayDomain 播放域名，
 若不填，则为查询所有播放域名的在线流数据。
      * @param string $StreamName 流名称，精确匹配。

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMessage(string $ErrMessage) 设置业务系统返回消息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrCode() 获取业务系统返回码
- * @method void setErrCode(string $ErrCode) 设置业务系统返回码
+ * @method string getErrCode() 获取业务系统返回码，0表示成功，其他表示失败。
+ * @method void setErrCode(string $ErrCode) 设置业务系统返回码，0表示成功，其他表示失败。
  * @method QueryContractPayFeeResult getResult() 获取查询支付方式费率及自定义表单项响应对象
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(QueryContractPayFeeResult $Result) 设置查询支付方式费率及自定义表单项响应对象
@@ -42,7 +42,7 @@ class QueryContractPayFeeResponse extends AbstractModel
     public $ErrMessage;
 
     /**
-     * @var string 业务系统返回码
+     * @var string 业务系统返回码，0表示成功，其他表示失败。
      */
     public $ErrCode;
 
@@ -60,7 +60,7 @@ class QueryContractPayFeeResponse extends AbstractModel
     /**
      * @param string $ErrMessage 业务系统返回消息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ErrCode 业务系统返回码
+     * @param string $ErrCode 业务系统返回码，0表示成功，其他表示失败。
      * @param QueryContractPayFeeResult $Result 查询支付方式费率及自定义表单项响应对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

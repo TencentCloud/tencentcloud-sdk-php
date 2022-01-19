@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrandName(string $BrandName) 设置招牌名称
  * @method string getOpenKey() 获取收单系统分配的密钥
  * @method void setOpenKey(string $OpenKey) 设置收单系统分配的密钥
- * @method string getBusinessLicenseEndDate() 获取营业执照过期时间（yyyy-mm-dd）
- * @method void setBusinessLicenseEndDate(string $BusinessLicenseEndDate) 设置营业执照过期时间（yyyy-mm-dd）
+ * @method string getBusinessLicenseEndDate() 获取营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
+ * @method void setBusinessLicenseEndDate(string $BusinessLicenseEndDate) 设置营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
  * @method string getBossStartDate() 获取法人证件生效时间（yyyy-mm-dd）
  * @method void setBossStartDate(string $BossStartDate) 设置法人证件生效时间（yyyy-mm-dd）
  * @method string getBankNo() 获取清算联行号，开户行行号
@@ -134,8 +134,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOtherPictureFour(string $OtherPictureFour) 设置其他资料4
  * @method string getTaxRegistrationNo() 获取税务登记证号
  * @method void setTaxRegistrationNo(string $TaxRegistrationNo) 设置税务登记证号
- * @method string getType() 获取商户类型：1-个人，2-小微，3-企事业。不传默认为2-小微商户。
- * @method void setType(string $Type) 设置商户类型：1-个人，2-小微，3-企事业。不传默认为2-小微商户。
+ * @method string getType() 获取商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
+ * @method void setType(string $Type) 设置商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
  */
 class AddMerchantRequest extends AbstractModel
 {
@@ -160,7 +160,7 @@ class AddMerchantRequest extends AbstractModel
     public $OpenKey;
 
     /**
-     * @var string 营业执照过期时间（yyyy-mm-dd）
+     * @var string 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
      */
     public $BusinessLicenseEndDate;
 
@@ -425,7 +425,7 @@ class AddMerchantRequest extends AbstractModel
     public $TaxRegistrationNo;
 
     /**
-     * @var string 商户类型：1-个人，2-小微，3-企事业。不传默认为2-小微商户。
+     * @var string 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
      */
     public $Type;
 
@@ -434,7 +434,7 @@ class AddMerchantRequest extends AbstractModel
      * @param string $BusinessLicensePicture 营业执照图片【私密区】（系统返回的图片路径），（小微商户不效验，随意传要有值，公司/个体户必传）
      * @param string $BrandName 招牌名称
      * @param string $OpenKey 收单系统分配的密钥
-     * @param string $BusinessLicenseEndDate 营业执照过期时间（yyyy-mm-dd）
+     * @param string $BusinessLicenseEndDate 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
      * @param string $BossStartDate 法人证件生效时间（yyyy-mm-dd）
      * @param string $BankNo 清算联行号，开户行行号
      * @param string $BankName 开户行名称
@@ -487,7 +487,7 @@ class AddMerchantRequest extends AbstractModel
      * @param string $TaxRegistrationEndDate 税务登记证过期时间（yyyy-mm-dd）
      * @param string $OtherPictureFour 其他资料4
      * @param string $TaxRegistrationNo 税务登记证号
-     * @param string $Type 商户类型：1-个人，2-小微，3-企事业。不传默认为2-小微商户。
+     * @param string $Type 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
      */
     function __construct()
     {

@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolumeInfoList(array $VolumeInfoList) 设置数据卷信息，list
  * @method array getVolumeMountInfoList() 获取数据卷挂载点信息，list
  * @method void setVolumeMountInfoList(array $VolumeMountInfoList) 设置数据卷挂载点信息，list
+ * @method boolean getVolumeClean() 获取是否清除数据卷信息，默认false
+ * @method void setVolumeClean(boolean $VolumeClean) 设置是否清除数据卷信息，默认false
  */
 class DeployContainerGroupRequest extends AbstractModel
 {
@@ -269,6 +271,11 @@ class DeployContainerGroupRequest extends AbstractModel
     public $VolumeMountInfoList;
 
     /**
+     * @var boolean 是否清除数据卷信息，默认false
+     */
+    public $VolumeClean;
+
+    /**
      * @param string $GroupId 部署组ID，分组唯一标识
      * @param string $TagName 镜像版本名称,如v1
      * @param integer $InstanceNum 实例数量
@@ -304,6 +311,7 @@ class DeployContainerGroupRequest extends AbstractModel
      * @param VolumeMountInfo $VolumeMountInfos 数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
      * @param array $VolumeInfoList 数据卷信息，list
      * @param array $VolumeMountInfoList 数据卷挂载点信息，list
+     * @param boolean $VolumeClean 是否清除数据卷信息，默认false
      */
     function __construct()
     {
@@ -476,6 +484,10 @@ class DeployContainerGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VolumeMountInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("VolumeClean",$param) and $param["VolumeClean"] !== null) {
+            $this->VolumeClean = $param["VolumeClean"];
         }
     }
 }

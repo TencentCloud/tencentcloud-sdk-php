@@ -69,7 +69,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 删除任务
  * @method Models\DeleteUnitNamespacesResponse DeleteUnitNamespaces(Models\DeleteUnitNamespacesRequest $req) 删除单元化命名空间
  * @method Models\DeleteUnitRuleResponse DeleteUnitRule(Models\DeleteUnitRuleRequest $req) 删除单元化规则
- * @method Models\DeployContainerGroupResponse DeployContainerGroup(Models\DeployContainerGroupRequest $req) 部署容器应用
+ * @method Models\DeployContainerGroupResponse DeployContainerGroup(Models\DeployContainerGroupRequest $req) 部署容器应用-更新
  * @method Models\DeployGroupResponse DeployGroup(Models\DeployGroupRequest $req) 部署虚拟机部署组应用
  * @method Models\DeployServerlessGroupResponse DeployServerlessGroup(Models\DeployServerlessGroupRequest $req) 部署Serverless应用
  * @method Models\DescribeApiDetailResponse DescribeApiDetail(Models\DescribeApiDetailRequest $req) 查询API详情

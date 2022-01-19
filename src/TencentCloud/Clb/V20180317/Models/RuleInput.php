@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP/HTTPS转发规则（输入）
  *
- * @method string getDomain() 获取转发规则的域名。长度限制为：1~80。
- * @method void setDomain(string $Domain) 设置转发规则的域名。长度限制为：1~80。
  * @method string getUrl() 获取转发规则的路径。长度限制为：1~200。
  * @method void setUrl(string $Url) 设置转发规则的路径。长度限制为：1~200。
+ * @method string getDomain() 获取转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+ * @method void setDomain(string $Domain) 设置转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
  * @method integer getSessionExpireTime() 获取会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
  * @method HealthCheck getHealthCheck() 获取健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
@@ -48,18 +48,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时必填
  * @method boolean getQuic() 获取是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
  * @method void setQuic(boolean $Quic) 设置是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+ * @method array getDomains() 获取转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+ * @method void setDomains(array $Domains) 设置转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
  */
 class RuleInput extends AbstractModel
 {
     /**
-     * @var string 转发规则的域名。长度限制为：1~80。
-     */
-    public $Domain;
-
-    /**
      * @var string 转发规则的路径。长度限制为：1~200。
      */
     public $Url;
+
+    /**
+     * @var string 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     */
+    public $Domain;
 
     /**
      * @var integer 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
@@ -118,8 +120,13 @@ class RuleInput extends AbstractModel
     public $Quic;
 
     /**
-     * @param string $Domain 转发规则的域名。长度限制为：1~80。
+     * @var array 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
+     */
+    public $Domains;
+
+    /**
      * @param string $Url 转发规则的路径。长度限制为：1~200。
+     * @param string $Domain 转发规则的域名。长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
      * @param integer $SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
      * @param HealthCheck $HealthCheck 健康检查信息。详情请参见：[健康检查](https://cloud.tencent.com/document/product/214/6097)
      * @param CertificateInput $Certificate 证书信息
@@ -132,6 +139,7 @@ class RuleInput extends AbstractModel
      * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填
      * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填
      * @param boolean $Quic 是否开启QUIC，注意，只有HTTPS域名才能开启QUIC
+     * @param array $Domains 转发规则的域名列表。每个域名的长度限制为：1~80。Domain和Domains只需要传一个，单域名规则传Domain，多域名规则传Domains。
      */
     function __construct()
     {
@@ -146,12 +154,12 @@ class RuleInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
-        }
-
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
 
         if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
@@ -198,6 +206,10 @@ class RuleInput extends AbstractModel
 
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
             $this->Quic = $param["Quic"];
+        }
+
+        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+            $this->Domains = $param["Domains"];
         }
     }
 }

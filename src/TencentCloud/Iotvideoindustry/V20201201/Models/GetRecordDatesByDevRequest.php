@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制量，默认200
  * @method integer getOffset() 获取偏移量，默认0
  * @method void setOffset(integer $Offset) 设置偏移量，默认0
- * @method string getChannelId() 获取通道唯一标识
- * @method void setChannelId(string $ChannelId) 设置通道唯一标识
+ * @method string getChannelId() 获取通道唯一标识，对于NVR设备，多通道IPC设备，设备编码与通道编码不一致的IPC设备，此字段为必填
+ * @method void setChannelId(string $ChannelId) 设置通道唯一标识，对于NVR设备，多通道IPC设备，设备编码与通道编码不一致的IPC设备，此字段为必填
  * @method integer getType() 获取1: 云端录制 2: 本地录制
  * @method void setType(integer $Type) 设置1: 云端录制 2: 本地录制
  */
@@ -49,7 +49,7 @@ class GetRecordDatesByDevRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 通道唯一标识
+     * @var string 通道唯一标识，对于NVR设备，多通道IPC设备，设备编码与通道编码不一致的IPC设备，此字段为必填
      */
     public $ChannelId;
 
@@ -62,7 +62,7 @@ class GetRecordDatesByDevRequest extends AbstractModel
      * @param string $DeviceId 设备唯一标识
      * @param integer $Limit 限制量，默认200
      * @param integer $Offset 偏移量，默认0
-     * @param string $ChannelId 通道唯一标识
+     * @param string $ChannelId 通道唯一标识，对于NVR设备，多通道IPC设备，设备编码与通道编码不一致的IPC设备，此字段为必填
      * @param integer $Type 1: 云端录制 2: 本地录制
      */
     function __construct()

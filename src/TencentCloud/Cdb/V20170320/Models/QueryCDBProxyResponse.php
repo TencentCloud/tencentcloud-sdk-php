@@ -14,26 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateTaskFlow返回参数结构体
+ * QueryCDBProxy返回参数结构体
  *
- * @method string getResult() 获取工作流 ID
+ * @method integer getCount() 获取代理数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置工作流 ID
+ * @method void setCount(integer $Count) 设置代理数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProxyGroup() 获取代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxyGroup(array $ProxyGroup) 设置代理信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateTaskFlowResponse extends AbstractModel
+class QueryCDBProxyResponse extends AbstractModel
 {
     /**
-     * @var string 工作流 ID
+     * @var integer 代理数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $Count;
+
+    /**
+     * @var array 代理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxyGroup;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +51,9 @@ class CreateTaskFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 工作流 ID
+     * @param integer $Count 代理数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ProxyGroup 代理信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,8 +70,17 @@ class CreateTaskFlowResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("ProxyGroup",$param) and $param["ProxyGroup"] !== null) {
+            $this->ProxyGroup = [];
+            foreach ($param["ProxyGroup"] as $key => $value){
+                $obj = new ProxyGroups();
+                $obj->deserialize($value);
+                array_push($this->ProxyGroup, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

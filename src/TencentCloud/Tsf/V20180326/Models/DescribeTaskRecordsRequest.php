@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(string $TaskType) 设置任务类型。
  * @method string getExecuteType() 获取任务触发类型，UNICAST、BROADCAST。
  * @method void setExecuteType(string $ExecuteType) 设置任务触发类型，UNICAST、BROADCAST。
+ * @method array getIds() 获取无
+ * @method void setIds(array $Ids) 设置无
  */
 class DescribeTaskRecordsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeTaskRecordsRequest extends AbstractModel
     public $ExecuteType;
 
     /**
+     * @var array 无
+     */
+    public $Ids;
+
+    /**
      * @param integer $Offset 翻页偏移量。
      * @param integer $Limit 翻页查询单页数量。
      * @param string $SearchWord 模糊查询关键字，支持任务ID和任务名称。
@@ -80,6 +87,7 @@ class DescribeTaskRecordsRequest extends AbstractModel
      * @param string $GroupId 分组ID。
      * @param string $TaskType 任务类型。
      * @param string $ExecuteType 任务触发类型，UNICAST、BROADCAST。
+     * @param array $Ids 无
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeTaskRecordsRequest extends AbstractModel
 
         if (array_key_exists("ExecuteType",$param) and $param["ExecuteType"] !== null) {
             $this->ExecuteType = $param["ExecuteType"];
+        }
+
+        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
+            $this->Ids = $param["Ids"];
         }
     }
 }

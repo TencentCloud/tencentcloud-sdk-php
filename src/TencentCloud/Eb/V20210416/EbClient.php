@@ -42,7 +42,8 @@ use TencentCloud\Eb\V20210416\Models as Models;
  * @method Models\ListEventBusesResponse ListEventBuses(Models\ListEventBusesRequest $req) 获取事件集列表
  * @method Models\ListRulesResponse ListRules(Models\ListRulesRequest $req) 获取事件规则列表
  * @method Models\ListTargetsResponse ListTargets(Models\ListTargetsRequest $req) 获取事件目标列表
- * @method Models\PublishEventResponse PublishEvent(Models\PublishEventRequest $req) 用于Event事件投递
+ * @method Models\PublishEventResponse PublishEvent(Models\PublishEventRequest $req) （已废弃）用于Event事件投递
+ * @method Models\PutEventsResponse PutEvents(Models\PutEventsRequest $req) 用于Event事件投递
  * @method Models\UpdateConnectionResponse UpdateConnection(Models\UpdateConnectionRequest $req) 更新事件连接器
  * @method Models\UpdateEventBusResponse UpdateEventBus(Models\UpdateEventBusRequest $req) 更新事件集
  * @method Models\UpdateRuleResponse UpdateRule(Models\UpdateRuleRequest $req) 更新事件规则

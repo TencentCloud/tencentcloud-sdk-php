@@ -27,9 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getUid() 获取子用户 UID
  * @method void setUid(integer $Uid) 设置子用户 UID
  * @method string getRemark() 获取子用户备注
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置子用户备注
- * @method integer getConsoleLogin() 获取子用户能否登录控制台
- * @method void setConsoleLogin(integer $ConsoleLogin) 设置子用户能否登录控制台
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConsoleLogin() 获取子用户能否登录控制台 0-无法登录控制台，1-可以登录控制台
+ * @method void setConsoleLogin(integer $ConsoleLogin) 设置子用户能否登录控制台 0-无法登录控制台，1-可以登录控制台
  * @method string getPhoneNum() 获取手机号
  * @method void setPhoneNum(string $PhoneNum) 设置手机号
  * @method string getCountryCode() 获取区号
@@ -58,11 +60,12 @@ class GetUserResponse extends AbstractModel
 
     /**
      * @var string 子用户备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
-     * @var integer 子用户能否登录控制台
+     * @var integer 子用户能否登录控制台 0-无法登录控制台，1-可以登录控制台
      */
     public $ConsoleLogin;
 
@@ -91,7 +94,8 @@ class GetUserResponse extends AbstractModel
      * @param string $Name 子用户用户名
      * @param integer $Uid 子用户 UID
      * @param string $Remark 子用户备注
-     * @param integer $ConsoleLogin 子用户能否登录控制台
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConsoleLogin 子用户能否登录控制台 0-无法登录控制台，1-可以登录控制台
      * @param string $PhoneNum 手机号
      * @param string $CountryCode 区号
      * @param string $Email 邮箱

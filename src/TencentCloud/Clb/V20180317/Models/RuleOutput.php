@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuicStatus(string $QuicStatus) 设置QUIC状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDomains() 获取转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomains(array $Domains) 设置转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleOutput extends AbstractModel
 {
@@ -201,6 +205,12 @@ class RuleOutput extends AbstractModel
     public $QuicStatus;
 
     /**
+     * @var array 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Domains;
+
+    /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -231,6 +241,8 @@ class RuleOutput extends AbstractModel
      * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QuicStatus QUIC状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Domains 转发规则的域名列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -332,6 +344,10 @@ class RuleOutput extends AbstractModel
 
         if (array_key_exists("QuicStatus",$param) and $param["QuicStatus"] !== null) {
             $this->QuicStatus = $param["QuicStatus"];
+        }
+
+        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+            $this->Domains = $param["Domains"];
         }
     }
 }

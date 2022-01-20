@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cam\V20190116\Models;
+namespace TencentCloud\Cii\V20210408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 用户关联策略(随组关联)信息
+ * 报告分类结果
  *
- * @method integer getGroupId() 获取分组ID
- * @method void setGroupId(integer $GroupId) 设置分组ID
- * @method string getGroupName() 获取分组名称
- * @method void setGroupName(string $GroupName) 设置分组名称
+ * @method string getReportType() 获取报告类型
+ * @method void setReportType(string $ReportType) 设置报告类型
+ * @method array getFileList() 获取文件列表
+ * @method void setFileList(array $FileList) 设置文件列表
  */
-class AttachedUserPolicyGroupInfo extends AbstractModel
+class ClassifiedReports extends AbstractModel
 {
     /**
-     * @var integer 分组ID
+     * @var string 报告类型
      */
-    public $GroupId;
+    public $ReportType;
 
     /**
-     * @var string 分组名称
+     * @var array 文件列表
      */
-    public $GroupName;
+    public $FileList;
 
     /**
-     * @param integer $GroupId 分组ID
-     * @param string $GroupName 分组名称
+     * @param string $ReportType 报告类型
+     * @param array $FileList 文件列表
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class AttachedUserPolicyGroupInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("ReportType",$param) and $param["ReportType"] !== null) {
+            $this->ReportType = $param["ReportType"];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists("FileList",$param) and $param["FileList"] !== null) {
+            $this->FileList = $param["FileList"];
         }
     }
 }

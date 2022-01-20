@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID。
  * @method array getLocationIds() 获取要删除的转发规则的ID组成的数组。
  * @method void setLocationIds(array $LocationIds) 设置要删除的转发规则的ID组成的数组。
- * @method string getDomain() 获取要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
- * @method void setDomain(string $Domain) 设置要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+ * @method string getDomain() 获取要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
+ * @method void setDomain(string $Domain) 设置要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
  * @method string getUrl() 获取要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
  * @method void setUrl(string $Url) 设置要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
- * @method string getNewDefaultServerDomain() 获取监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
- * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) 设置监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+ * @method string getNewDefaultServerDomain() 获取监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
+ * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) 设置监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
  */
 class DeleteRuleRequest extends AbstractModel
 {
@@ -51,7 +51,7 @@ class DeleteRuleRequest extends AbstractModel
     public $LocationIds;
 
     /**
-     * @var string 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+     * @var string 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
      */
     public $Domain;
 
@@ -61,7 +61,7 @@ class DeleteRuleRequest extends AbstractModel
     public $Url;
 
     /**
-     * @var string 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+     * @var string 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      */
     public $NewDefaultServerDomain;
 
@@ -69,9 +69,9 @@ class DeleteRuleRequest extends AbstractModel
      * @param string $LoadBalancerId 负载均衡实例ID。
      * @param string $ListenerId 负载均衡监听器ID。
      * @param array $LocationIds 要删除的转发规则的ID组成的数组。
-     * @param string $Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+     * @param string $Domain 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
      * @param string $Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
-     * @param string $NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+     * @param string $NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      */
     function __construct()
     {

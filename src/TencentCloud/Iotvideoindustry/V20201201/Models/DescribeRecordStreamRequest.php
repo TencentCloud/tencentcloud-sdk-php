@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
  * @method integer getEndTime() 获取录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
  * @method void setEndTime(integer $EndTime) 设置录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
- * @method string getChannelId() 获取通道唯一标识
- * @method void setChannelId(string $ChannelId) 设置通道唯一标识
+ * @method string getChannelId() 获取通道唯一标识（此接口升级为必填字段）
+ * @method void setChannelId(string $ChannelId) 设置通道唯一标识（此接口升级为必填字段）
  */
 class DescribeRecordStreamRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeRecordStreamRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 通道唯一标识
+     * @var string 通道唯一标识（此接口升级为必填字段）
      */
     public $ChannelId;
 
@@ -71,7 +71,7 @@ class DescribeRecordStreamRequest extends AbstractModel
      * @param string $RecordId 录像文件ID
      * @param integer $StartTime 录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
      * @param integer $EndTime 录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
-     * @param string $ChannelId 通道唯一标识
+     * @param string $ChannelId 通道唯一标识（此接口升级为必填字段）
      */
     function __construct()
     {

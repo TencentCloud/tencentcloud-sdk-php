@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) 设置匹配标签key值。
  * @method array getFilters() 获取过滤器。
  * @method void setFilters(array $Filters) 设置过滤器。
- * @method string getInstanceIds() 获取按照实例ID过滤
- * @method void setInstanceIds(string $InstanceIds) 设置按照实例ID过滤
+ * @method string getInstanceIds() 获取已经废弃， 使用InstanceIdList
+ * @method void setInstanceIds(string $InstanceIds) 设置已经废弃， 使用InstanceIdList
  */
 class DescribeInstancesDetailRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 按照实例ID过滤
+     * @var string 已经废弃， 使用InstanceIdList
      */
     public $InstanceIds;
 
@@ -87,7 +87,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
      * @param integer $Limit 返回数量，不填则默认10，最大值20。
      * @param string $TagKey 匹配标签key值。
      * @param array $Filters 过滤器。
-     * @param string $InstanceIds 按照实例ID过滤
+     * @param string $InstanceIds 已经废弃， 使用InstanceIdList
      */
     function __construct()
     {

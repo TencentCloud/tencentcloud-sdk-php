@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpList(array $IpList) 设置私有网络vip列表
  * @method array getZoneList() 获取可用区列表
  * @method void setZoneList(array $ZoneList) 设置可用区列表
+ * @method array getHealthStatus() 获取健康状态筛列表
+ * @method void setHealthStatus(array $HealthStatus) 设置健康状态筛列表
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $ZoneList;
 
     /**
+     * @var array 健康状态筛列表
+     */
+    public $HealthStatus;
+
+    /**
      * @param string $Zone 集群实例所属可用区，不传则默认所有可用区
      * @param array $InstanceIds 集群实例ID列表
      * @param array $InstanceNames 集群实例名称列表
@@ -104,6 +111,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $TagList 节点标签信息列表
      * @param array $IpList 私有网络vip列表
      * @param array $ZoneList 可用区列表
+     * @param array $HealthStatus 健康状态筛列表
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("ZoneList",$param) and $param["ZoneList"] !== null) {
             $this->ZoneList = $param["ZoneList"];
+        }
+
+        if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
+            $this->HealthStatus = $param["HealthStatus"];
         }
     }
 }

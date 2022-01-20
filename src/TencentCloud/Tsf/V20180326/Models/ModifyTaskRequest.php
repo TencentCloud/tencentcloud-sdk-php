@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetryInterval(integer $RetryInterval) 设置重试间隔
  * @method string getTaskArgument() 获取任务参数，长度限制10000个字符
  * @method void setTaskArgument(string $TaskArgument) 设置任务参数，长度限制10000个字符
+ * @method array getProgramIdList() 获取无
+ * @method void setProgramIdList(array $ProgramIdList) 设置无
  */
 class ModifyTaskRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class ModifyTaskRequest extends AbstractModel
     public $TaskArgument;
 
     /**
+     * @var array 无
+     */
+    public $ProgramIdList;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $TaskName 任务名称
      * @param string $TaskType 任务类型
@@ -152,6 +159,7 @@ class ModifyTaskRequest extends AbstractModel
      * @param integer $RetryCount 重试次数
      * @param integer $RetryInterval 重试间隔
      * @param string $TaskArgument 任务参数，长度限制10000个字符
+     * @param array $ProgramIdList 无
      */
     function __construct()
     {
@@ -235,6 +243,10 @@ class ModifyTaskRequest extends AbstractModel
 
         if (array_key_exists("TaskArgument",$param) and $param["TaskArgument"] !== null) {
             $this->TaskArgument = $param["TaskArgument"];
+        }
+
+        if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
+            $this->ProgramIdList = $param["ProgramIdList"];
         }
     }
 }

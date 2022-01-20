@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowEdges(array $FlowEdges) 设置工作流任务节点列表
  * @method integer getTimeOut() 获取工作流执行超时时间
  * @method void setTimeOut(integer $TimeOut) 设置工作流执行超时时间
+ * @method array getProgramIdList() 获取无
+ * @method void setProgramIdList(array $ProgramIdList) 设置无
  */
 class CreateTaskFlowRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateTaskFlowRequest extends AbstractModel
     public $TimeOut;
 
     /**
+     * @var array 无
+     */
+    public $ProgramIdList;
+
+    /**
      * @param string $FlowName 工作流名称
      * @param TaskRule $TriggerRule 触发方式
      * @param array $FlowEdges 工作流任务节点列表
      * @param integer $TimeOut 工作流执行超时时间
+     * @param array $ProgramIdList 无
      */
     function __construct()
     {
@@ -90,6 +98,10 @@ class CreateTaskFlowRequest extends AbstractModel
 
         if (array_key_exists("TimeOut",$param) and $param["TimeOut"] !== null) {
             $this->TimeOut = $param["TimeOut"];
+        }
+
+        if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
+            $this->ProgramIdList = $param["ProgramIdList"];
         }
     }
 }

@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(integer $CreatedAt) 设置应用实例部署创建时间
  * @method integer getUpdatedAt() 获取应用实例部署更新时间
  * @method void setUpdatedAt(integer $UpdatedAt) 设置应用实例部署更新时间
- * @method integer getProjectType() 获取应用类型：0:NormalApp普通应用 1:TemplateApp模版应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
- * @method void setProjectType(integer $ProjectType) 设置应用类型：0:NormalApp普通应用 1:TemplateApp模版应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+ * @method integer getProjectType() 获取应用类型：0:NormalApp普通应用 1:TemplateApp模板应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+ * @method void setProjectType(integer $ProjectType) 设置应用类型：0:NormalApp普通应用 1:TemplateApp模板应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
  */
 class RuntimeDeployedInstanceMC extends AbstractModel
 {
@@ -96,7 +96,7 @@ class RuntimeDeployedInstanceMC extends AbstractModel
     public $UpdatedAt;
 
     /**
-     * @var integer 应用类型：0:NormalApp普通应用 1:TemplateApp模版应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+     * @var integer 应用类型：0:NormalApp普通应用 1:TemplateApp模板应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
      */
     public $ProjectType;
 
@@ -111,7 +111,7 @@ class RuntimeDeployedInstanceMC extends AbstractModel
      * @param integer $Status 应用实例部署状态. 0:running, 1:deleting
      * @param integer $CreatedAt 应用实例部署创建时间
      * @param integer $UpdatedAt 应用实例部署更新时间
-     * @param integer $ProjectType 应用类型：0:NormalApp普通应用 1:TemplateApp模版应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+     * @param integer $ProjectType 应用类型：0:NormalApp普通应用 1:TemplateApp模板应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
      */
     function __construct()
     {

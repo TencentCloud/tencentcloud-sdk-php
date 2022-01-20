@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPolicyId() 获取策略ID
  * @method void setPolicyId(integer $PolicyId) 设置策略ID
- * @method integer getVersionId() 获取策略版本号
- * @method void setVersionId(integer $VersionId) 设置策略版本号
+ * @method integer getVersionId() 获取策略版本号，可由ListPolicyVersions获取
+ * @method void setVersionId(integer $VersionId) 设置策略版本号，可由ListPolicyVersions获取
  */
 class GetPolicyVersionRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class GetPolicyVersionRequest extends AbstractModel
     public $PolicyId;
 
     /**
-     * @var integer 策略版本号
+     * @var integer 策略版本号，可由ListPolicyVersions获取
      */
     public $VersionId;
 
     /**
      * @param integer $PolicyId 策略ID
-     * @param integer $VersionId 策略版本号
+     * @param integer $VersionId 策略版本号，可由ListPolicyVersions获取
      */
     function __construct()
     {

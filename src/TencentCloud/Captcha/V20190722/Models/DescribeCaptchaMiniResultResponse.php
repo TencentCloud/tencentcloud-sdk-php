@@ -27,6 +27,7 @@ use TencentCloud\Common\AbstractModel;
 15     ticket decryption failed     票据解密失败
 16     CaptchaAppId wrong format     检查验证码应用APPID错误
 21     ticket error     票据验证错误
+25     invalid ticket     无效票据
 26     system internal error     系统内部错误
 100   param err     参数校验错误
  * @method void setCaptchaCode(integer $CaptchaCode) 设置1       ticket verification succeeded     票据验证成功
@@ -36,6 +37,7 @@ use TencentCloud\Common\AbstractModel;
 15     ticket decryption failed     票据解密失败
 16     CaptchaAppId wrong format     检查验证码应用APPID错误
 21     ticket error     票据验证错误
+25     invalid ticket     无效票据
 26     system internal error     系统内部错误
 100   param err     参数校验错误
  * @method string getCaptchaMsg() 获取状态描述及验证错误信息
@@ -55,6 +57,7 @@ class DescribeCaptchaMiniResultResponse extends AbstractModel
 15     ticket decryption failed     票据解密失败
 16     CaptchaAppId wrong format     检查验证码应用APPID错误
 21     ticket error     票据验证错误
+25     invalid ticket     无效票据
 26     system internal error     系统内部错误
 100   param err     参数校验错误
      */
@@ -79,6 +82,7 @@ class DescribeCaptchaMiniResultResponse extends AbstractModel
 15     ticket decryption failed     票据解密失败
 16     CaptchaAppId wrong format     检查验证码应用APPID错误
 21     ticket error     票据验证错误
+25     invalid ticket     无效票据
 26     system internal error     系统内部错误
 100   param err     参数校验错误
      * @param string $CaptchaMsg 状态描述及验证错误信息

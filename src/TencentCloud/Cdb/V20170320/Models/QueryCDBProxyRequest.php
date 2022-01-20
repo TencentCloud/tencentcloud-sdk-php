@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cam\V20190116\Models;
+namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 用户关联策略(随组关联)信息
+ * QueryCDBProxy请求参数结构体
  *
- * @method integer getGroupId() 获取分组ID
- * @method void setGroupId(integer $GroupId) 设置分组ID
- * @method string getGroupName() 获取分组名称
- * @method void setGroupName(string $GroupName) 设置分组名称
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getProxyGroupId() 获取代理ID
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置代理ID
  */
-class AttachedUserPolicyGroupInfo extends AbstractModel
+class QueryCDBProxyRequest extends AbstractModel
 {
     /**
-     * @var integer 分组ID
+     * @var string 实例ID
      */
-    public $GroupId;
+    public $InstanceId;
 
     /**
-     * @var string 分组名称
+     * @var string 代理ID
      */
-    public $GroupName;
+    public $ProxyGroupId;
 
     /**
-     * @param integer $GroupId 分组ID
-     * @param string $GroupName 分组名称
+     * @param string $InstanceId 实例ID
+     * @param string $ProxyGroupId 代理ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class AttachedUserPolicyGroupInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
-            $this->GroupName = $param["GroupName"];
+        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
+            $this->ProxyGroupId = $param["ProxyGroupId"];
         }
     }
 }

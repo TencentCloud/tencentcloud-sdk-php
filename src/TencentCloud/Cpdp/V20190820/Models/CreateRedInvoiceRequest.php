@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * CreateRedInvoice请求参数结构体
  *
  * @method integer getInvoicePlatformId() 获取开票平台ID
+0 : 高灯
+1 : 票易通
  * @method void setInvoicePlatformId(integer $InvoicePlatformId) 设置开票平台ID
+0 : 高灯
+1 : 票易通
  * @method array getInvoices() 获取红冲明细
  * @method void setInvoices(array $Invoices) 设置红冲明细
  * @method string getProfile() 获取接入环境。沙箱环境填 sandbox。
@@ -33,6 +37,8 @@ class CreateRedInvoiceRequest extends AbstractModel
 {
     /**
      * @var integer 开票平台ID
+0 : 高灯
+1 : 票易通
      */
     public $InvoicePlatformId;
 
@@ -53,6 +59,8 @@ class CreateRedInvoiceRequest extends AbstractModel
 
     /**
      * @param integer $InvoicePlatformId 开票平台ID
+0 : 高灯
+1 : 票易通
      * @param array $Invoices 红冲明细
      * @param string $Profile 接入环境。沙箱环境填 sandbox。
      * @param integer $InvoiceChannel 开票渠道。0：线上渠道，1：线下渠道。不填默认为线上渠道

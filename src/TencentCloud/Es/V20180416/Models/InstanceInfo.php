@@ -232,6 +232,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrozenDiskSize(integer $FrozenDiskSize) 设置冻节点磁盘大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHealthStatus() 获取集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthStatus(integer $HealthStatus) 设置集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -626,6 +630,12 @@ class InstanceInfo extends AbstractModel
     public $FrozenDiskSize;
 
     /**
+     * @var integer 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthStatus;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -731,6 +741,8 @@ class InstanceInfo extends AbstractModel
      * @param string $FrozenDiskType 冻节点磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FrozenDiskSize 冻节点磁盘大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HealthStatus 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1050,6 +1062,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("FrozenDiskSize",$param) and $param["FrozenDiskSize"] !== null) {
             $this->FrozenDiskSize = $param["FrozenDiskSize"];
+        }
+
+        if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
+            $this->HealthStatus = $param["HealthStatus"];
         }
     }
 }

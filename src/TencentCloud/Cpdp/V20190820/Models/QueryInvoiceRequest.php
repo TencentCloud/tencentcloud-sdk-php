@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * QueryInvoice请求参数结构体
  *
  * @method integer getInvoicePlatformId() 获取开票平台ID
+0 : 高灯
+1 : 票易通
  * @method void setInvoicePlatformId(integer $InvoicePlatformId) 设置开票平台ID
+0 : 高灯
+1 : 票易通
  * @method string getOrderId() 获取订单号
  * @method void setOrderId(string $OrderId) 设置订单号
  * @method string getOrderSn() 获取业务开票号
@@ -43,6 +47,8 @@ class QueryInvoiceRequest extends AbstractModel
 {
     /**
      * @var integer 开票平台ID
+0 : 高灯
+1 : 票易通
      */
     public $InvoicePlatformId;
 
@@ -80,6 +86,8 @@ class QueryInvoiceRequest extends AbstractModel
 
     /**
      * @param integer $InvoicePlatformId 开票平台ID
+0 : 高灯
+1 : 票易通
      * @param string $OrderId 订单号
      * @param string $OrderSn 业务开票号
      * @param integer $IsRed 发票种类：

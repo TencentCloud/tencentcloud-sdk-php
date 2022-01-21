@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageName(string $PackageName) 设置JAR/WAR 包名，仅 JAR/WAR 部署时必填
  * @method string getFrom() 获取请求来源平台，含 IntelliJ，Coding
  * @method void setFrom(string $From) 设置请求来源平台，含 IntelliJ，Coding
+ * @method string getDeployStrategyType() 获取部署策略，AUTO 为全自动；BETA 为小批量验证后自动；MANUAL 为全手动；
+ * @method void setDeployStrategyType(string $DeployStrategyType) 设置部署策略，AUTO 为全自动；BETA 为小批量验证后自动；MANUAL 为全手动；
+ * @method integer getTotalBatchCount() 获取发布批次数
+ * @method void setTotalBatchCount(integer $TotalBatchCount) 设置发布批次数
+ * @method integer getBatchInterval() 获取批次间隔时间
+ * @method void setBatchInterval(integer $BatchInterval) 设置批次间隔时间
+ * @method integer getBetaBatchNum() 获取小批量验证批次的实例数
+ * @method void setBetaBatchNum(integer $BetaBatchNum) 设置小批量验证批次的实例数
+ * @method integer getMinAvailable() 获取发布过程中保障的最小可用实例数
+ * @method void setMinAvailable(integer $MinAvailable) 设置发布过程中保障的最小可用实例数
  */
 class RollingUpdateApplicationByVersionRequest extends AbstractModel
 {
@@ -59,11 +69,41 @@ class RollingUpdateApplicationByVersionRequest extends AbstractModel
     public $From;
 
     /**
+     * @var string 部署策略，AUTO 为全自动；BETA 为小批量验证后自动；MANUAL 为全手动；
+     */
+    public $DeployStrategyType;
+
+    /**
+     * @var integer 发布批次数
+     */
+    public $TotalBatchCount;
+
+    /**
+     * @var integer 批次间隔时间
+     */
+    public $BatchInterval;
+
+    /**
+     * @var integer 小批量验证批次的实例数
+     */
+    public $BetaBatchNum;
+
+    /**
+     * @var integer 发布过程中保障的最小可用实例数
+     */
+    public $MinAvailable;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param string $EnvironmentId 环境ID
      * @param string $DeployVersion 更新版本，IMAGE 部署为 tag 值；JAR/WAR 部署 为 Version
      * @param string $PackageName JAR/WAR 包名，仅 JAR/WAR 部署时必填
      * @param string $From 请求来源平台，含 IntelliJ，Coding
+     * @param string $DeployStrategyType 部署策略，AUTO 为全自动；BETA 为小批量验证后自动；MANUAL 为全手动；
+     * @param integer $TotalBatchCount 发布批次数
+     * @param integer $BatchInterval 批次间隔时间
+     * @param integer $BetaBatchNum 小批量验证批次的实例数
+     * @param integer $MinAvailable 发布过程中保障的最小可用实例数
      */
     function __construct()
     {
@@ -96,6 +136,26 @@ class RollingUpdateApplicationByVersionRequest extends AbstractModel
 
         if (array_key_exists("From",$param) and $param["From"] !== null) {
             $this->From = $param["From"];
+        }
+
+        if (array_key_exists("DeployStrategyType",$param) and $param["DeployStrategyType"] !== null) {
+            $this->DeployStrategyType = $param["DeployStrategyType"];
+        }
+
+        if (array_key_exists("TotalBatchCount",$param) and $param["TotalBatchCount"] !== null) {
+            $this->TotalBatchCount = $param["TotalBatchCount"];
+        }
+
+        if (array_key_exists("BatchInterval",$param) and $param["BatchInterval"] !== null) {
+            $this->BatchInterval = $param["BatchInterval"];
+        }
+
+        if (array_key_exists("BetaBatchNum",$param) and $param["BetaBatchNum"] !== null) {
+            $this->BetaBatchNum = $param["BetaBatchNum"];
+        }
+
+        if (array_key_exists("MinAvailable",$param) and $param["MinAvailable"] !== null) {
+            $this->MinAvailable = $param["MinAvailable"];
         }
     }
 }

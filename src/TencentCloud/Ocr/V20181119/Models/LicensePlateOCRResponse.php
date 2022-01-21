@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(integer $Confidence) 设置置信度，0 - 100 之间。
  * @method Rect getRect() 获取文本行在原图片中的像素坐标框。
  * @method void setRect(Rect $Rect) 设置文本行在原图片中的像素坐标框。
+ * @method string getColor() 获取识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
+ * @method void setColor(string $Color) 设置识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class LicensePlateOCRResponse extends AbstractModel
     public $Rect;
 
     /**
+     * @var string 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
+     */
+    public $Color;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class LicensePlateOCRResponse extends AbstractModel
      * @param string $Number 识别出的车牌号码。
      * @param integer $Confidence 置信度，0 - 100 之间。
      * @param Rect $Rect 文本行在原图片中的像素坐标框。
+     * @param string $Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -81,6 +89,10 @@ class LicensePlateOCRResponse extends AbstractModel
         if (array_key_exists("Rect",$param) and $param["Rect"] !== null) {
             $this->Rect = new Rect();
             $this->Rect->deserialize($param["Rect"]);
+        }
+
+        if (array_key_exists("Color",$param) and $param["Color"] !== null) {
+            $this->Color = $param["Color"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

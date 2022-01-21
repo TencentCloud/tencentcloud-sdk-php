@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBy(string $By) 设置排序字段
  * @method string getOrder() 获取排序方式，asc，desc
  * @method void setOrder(string $Order) 设置排序方式，asc，desc
+ * @method boolean getOnlyShowLatest() 获取是否仅展示repository版本最新的镜像，默认为false
+ * @method void setOnlyShowLatest(boolean $OnlyShowLatest) 设置是否仅展示repository版本最新的镜像，默认为false
  */
 class DescribeAssetImageRegistryListExportRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeAssetImageRegistryListExportRequest extends AbstractModel
     public $Order;
 
     /**
+     * @var boolean 是否仅展示repository版本最新的镜像，默认为false
+     */
+    public $OnlyShowLatest;
+
+    /**
      * @param array $ExportField 导出字段
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0
      * @param array $Filters 排序字段
      * @param string $By 排序字段
      * @param string $Order 排序方式，asc，desc
+     * @param boolean $OnlyShowLatest 是否仅展示repository版本最新的镜像，默认为false
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class DescribeAssetImageRegistryListExportRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("OnlyShowLatest",$param) and $param["OnlyShowLatest"] !== null) {
+            $this->OnlyShowLatest = $param["OnlyShowLatest"];
         }
     }
 }

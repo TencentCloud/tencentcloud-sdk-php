@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAll(boolean $All) 设置是否扫描全部镜像
  * @method array getImages() 获取扫描的镜像列表
  * @method void setImages(array $Images) 设置扫描的镜像列表
- * @method array getId() 获取扫描的镜像列表Id
- * @method void setId(array $Id) 设置扫描的镜像列表Id
+ * @method array getId() 获取扫描的镜像列表
+ * @method void setId(array $Id) 设置扫描的镜像列表
+ * @method array getFilters() 获取过滤条件
+ * @method void setFilters(array $Filters) 设置过滤条件
+ * @method array getExcludeImageList() 获取不要扫描的镜像列表，与Filters配合使用
+ * @method void setExcludeImageList(array $ExcludeImageList) 设置不要扫描的镜像列表，与Filters配合使用
+ * @method boolean getOnlyScanLatest() 获取是否仅扫描各repository最新版本的镜像
+ * @method void setOnlyScanLatest(boolean $OnlyScanLatest) 设置是否仅扫描各repository最新版本的镜像
  */
 class ModifyAssetImageRegistryScanStopRequest extends AbstractModel
 {
@@ -40,14 +46,32 @@ class ModifyAssetImageRegistryScanStopRequest extends AbstractModel
     public $Images;
 
     /**
-     * @var array 扫描的镜像列表Id
+     * @var array 扫描的镜像列表
      */
     public $Id;
 
     /**
+     * @var array 过滤条件
+     */
+    public $Filters;
+
+    /**
+     * @var array 不要扫描的镜像列表，与Filters配合使用
+     */
+    public $ExcludeImageList;
+
+    /**
+     * @var boolean 是否仅扫描各repository最新版本的镜像
+     */
+    public $OnlyScanLatest;
+
+    /**
      * @param boolean $All 是否扫描全部镜像
      * @param array $Images 扫描的镜像列表
-     * @param array $Id 扫描的镜像列表Id
+     * @param array $Id 扫描的镜像列表
+     * @param array $Filters 过滤条件
+     * @param array $ExcludeImageList 不要扫描的镜像列表，与Filters配合使用
+     * @param boolean $OnlyScanLatest 是否仅扫描各repository最新版本的镜像
      */
     function __construct()
     {
@@ -77,6 +101,23 @@ class ModifyAssetImageRegistryScanStopRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new AssetFilters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("ExcludeImageList",$param) and $param["ExcludeImageList"] !== null) {
+            $this->ExcludeImageList = $param["ExcludeImageList"];
+        }
+
+        if (array_key_exists("OnlyScanLatest",$param) and $param["OnlyScanLatest"] !== null) {
+            $this->OnlyScanLatest = $param["OnlyScanLatest"];
         }
     }
 }

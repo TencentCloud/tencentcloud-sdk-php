@@ -58,6 +58,9 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\MobileNetworkTimeVerificationResponse MobileNetworkTimeVerification(Models\MobileNetworkTimeVerificationRequest $req) 本接口用于查询手机号在网时长，输入手机号进行查询。
  * @method Models\MobileStatusResponse MobileStatus(Models\MobileStatusRequest $req) 本接口用于验证手机号的状态，您可以输入手机号进行查询。
  * @method Models\PhoneVerificationResponse PhoneVerification(Models\PhoneVerificationRequest $req) 本接口用于校验手机号、姓名和身份证号的真实性和一致性。支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+ * @method Models\PhoneVerificationCMCCResponse PhoneVerificationCMCC(Models\PhoneVerificationCMCCRequest $req) 本接口用于校验中国移动手机号、姓名和身份证号的真实性和一致性。中国移动支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+ * @method Models\PhoneVerificationCTCCResponse PhoneVerificationCTCC(Models\PhoneVerificationCTCCRequest $req) 本接口用于校验中国电信手机号、姓名和身份证号的真实性和一致性。中国电信支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+ * @method Models\PhoneVerificationCUCCResponse PhoneVerificationCUCC(Models\PhoneVerificationCUCCRequest $req) 本接口用于校验中国联通手机号、姓名和身份证号的真实性和一致性。中国联通支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
  */
 
 class FaceidClient extends AbstractClient

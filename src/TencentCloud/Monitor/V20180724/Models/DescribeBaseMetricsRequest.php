@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) 设置业务命名空间，各个云产品的业务命名空间不同。如需获取业务命名空间，请前往各产品监控指标文档，例如云服务器的命名空间，可参见 [云服务器监控指标](https://cloud.tencent.com/document/product/248/6843)
  * @method string getMetricName() 获取指标名，各个云产品的指标名不同。如需获取指标名，请前往各产品监控指标文档，例如云服务器的指标名，可参见 [云服务器监控指标](https://cloud.tencent.com/document/product/248/6843)
  * @method void setMetricName(string $MetricName) 设置指标名，各个云产品的指标名不同。如需获取指标名，请前往各产品监控指标文档，例如云服务器的指标名，可参见 [云服务器监控指标](https://cloud.tencent.com/document/product/248/6843)
+ * @method array getDimensions() 获取可选参数，按照维度过滤
+ * @method void setDimensions(array $Dimensions) 设置可选参数，按照维度过滤
  */
 class DescribeBaseMetricsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeBaseMetricsRequest extends AbstractModel
     public $MetricName;
 
     /**
+     * @var array 可选参数，按照维度过滤
+     */
+    public $Dimensions;
+
+    /**
      * @param string $Namespace 业务命名空间，各个云产品的业务命名空间不同。如需获取业务命名空间，请前往各产品监控指标文档，例如云服务器的命名空间，可参见 [云服务器监控指标](https://cloud.tencent.com/document/product/248/6843)
      * @param string $MetricName 指标名，各个云产品的指标名不同。如需获取指标名，请前往各产品监控指标文档，例如云服务器的指标名，可参见 [云服务器监控指标](https://cloud.tencent.com/document/product/248/6843)
+     * @param array $Dimensions 可选参数，按照维度过滤
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeBaseMetricsRequest extends AbstractModel
 
         if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
             $this->MetricName = $param["MetricName"];
+        }
+
+        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
+            $this->Dimensions = $param["Dimensions"];
         }
     }
 }

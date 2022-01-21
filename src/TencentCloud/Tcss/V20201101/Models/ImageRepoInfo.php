@@ -18,56 +18,36 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAssetImageRegistryDetail返回参数结构体
+ * 容器安全镜像仓库列表
  *
  * @method string getImageDigest() 获取镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageDigest(string $ImageDigest) 设置镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getImageRepoAddress() 获取镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageRepoAddress(string $ImageRepoAddress) 设置镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegistryType() 获取镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegistryType(string $RegistryType) 设置镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getImageName() 获取仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageName(string $ImageName) 设置仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getImageRepoAddress() 获取镜像仓库地址
+ * @method void setImageRepoAddress(string $ImageRepoAddress) 设置镜像仓库地址
+ * @method string getRegistryType() 获取仓库类型
+ * @method void setRegistryType(string $RegistryType) 设置仓库类型
+ * @method string getImageName() 获取镜像名称
+ * @method void setImageName(string $ImageName) 设置镜像名称
  * @method string getImageTag() 获取镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageTag(string $ImageTag) 设置镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScanTime() 获取扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScanTime(string $ScanTime) 设置扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getImageSize() 获取镜像大小
+ * @method void setImageSize(integer $ImageSize) 设置镜像大小
+ * @method string getScanTime() 获取最近扫描时间
+ * @method void setScanTime(string $ScanTime) 设置最近扫描时间
  * @method string getScanStatus() 获取扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanStatus(string $ScanStatus) 设置扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVulCnt() 获取安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulCnt(integer $VulCnt) 设置安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVirusCnt() 获取木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirusCnt(integer $VirusCnt) 设置木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskCnt() 获取风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskCnt(integer $RiskCnt) 设置风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSentiveInfoCnt() 获取敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSentiveInfoCnt(integer $SentiveInfoCnt) 设置敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsTrustImage() 获取是否可信镜像
+ * @method void setIsTrustImage(boolean $IsTrustImage) 设置是否可信镜像
  * @method string getOsName() 获取镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsName(string $OsName) 设置镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanVirusError() 获取木马扫描错误
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanVirusError(string $ScanVirusError) 设置木马扫描错误
@@ -76,37 +56,27 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanVulError(string $ScanVulError) 设置漏洞扫描错误
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLayerInfo() 获取层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLayerInfo(string $LayerInfo) 设置层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanRiskError() 获取高危扫描错误
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanRiskError(string $ScanRiskError) 设置高危扫描错误
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScanVirusProgress() 获取木马信息扫描进度
+ * @method integer getScanVirusProgress() 获取敏感信息扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScanVirusProgress(integer $ScanVirusProgress) 设置木马信息扫描进度
+ * @method void setScanVirusProgress(integer $ScanVirusProgress) 设置敏感信息扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScanVulProgress() 获取漏洞扫描进度
+ * @method integer getScanVulProgress() 获取木马扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScanVulProgress(integer $ScanVulProgress) 设置漏洞扫描进度
+ * @method void setScanVulProgress(integer $ScanVulProgress) 设置木马扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScanRiskProgress() 获取敏感扫描进度
+ * @method integer getScanRiskProgress() 获取漏洞扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScanRiskProgress(integer $ScanRiskProgress) 设置敏感扫描进度
+ * @method void setScanRiskProgress(integer $ScanRiskProgress) 设置漏洞扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanRemainTime() 获取剩余扫描时间秒
 注意：此字段可能返回 null，表示取不到有效值。
@@ -129,99 +99,93 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgress(integer $Progress) 设置总进度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAuthorized() 获取授权状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAuthorized(integer $IsAuthorized) 设置授权状态
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getImageSize() 获取镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageSize(integer $ImageSize) 设置镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegistryRegion() 获取仓库区域
+ * @method void setRegistryRegion(string $RegistryRegion) 设置仓库区域
+ * @method integer getId() 获取列表id
+ * @method void setId(integer $Id) 设置列表id
  * @method string getImageId() 获取镜像Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageId(string $ImageId) 设置镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegistryRegion() 获取镜像区域
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegistryRegion(string $RegistryRegion) 设置镜像区域
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageCreateTime() 获取镜像创建的时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageCreateTime(string $ImageCreateTime) 设置镜像创建的时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method boolean getIsLatestImage() 获取是否为镜像的最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsLatestImage(boolean $IsLatestImage) 设置是否为镜像的最新版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class DescribeAssetImageRegistryDetailResponse extends AbstractModel
+class ImageRepoInfo extends AbstractModel
 {
     /**
      * @var string 镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageDigest;
 
     /**
-     * @var string 镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 镜像仓库地址
      */
     public $ImageRepoAddress;
 
     /**
-     * @var string 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 仓库类型
      */
     public $RegistryType;
 
     /**
-     * @var string 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 镜像名称
      */
     public $ImageName;
 
     /**
      * @var string 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageTag;
 
     /**
-     * @var string 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 镜像大小
+     */
+    public $ImageSize;
+
+    /**
+     * @var string 最近扫描时间
      */
     public $ScanTime;
 
     /**
      * @var string 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanStatus;
 
     /**
      * @var integer 安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulCnt;
 
     /**
      * @var integer 木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirusCnt;
 
     /**
      * @var integer 风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskCnt;
 
     /**
      * @var integer 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SentiveInfoCnt;
 
     /**
+     * @var boolean 是否可信镜像
+     */
+    public $IsTrustImage;
+
+    /**
      * @var string 镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsName;
 
@@ -238,26 +202,17 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
     public $ScanVulError;
 
     /**
-     * @var string 层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $LayerInfo;
-
-    /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
@@ -268,19 +223,19 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
     public $ScanRiskError;
 
     /**
-     * @var integer 木马信息扫描进度
+     * @var integer 敏感信息扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanVirusProgress;
 
     /**
-     * @var integer 漏洞扫描进度
+     * @var integer 木马扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanVulProgress;
 
     /**
-     * @var integer 敏感扫描进度
+     * @var integer 漏洞扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanRiskProgress;
@@ -317,15 +272,18 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
 
     /**
      * @var integer 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAuthorized;
 
     /**
-     * @var integer 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 仓库区域
      */
-    public $ImageSize;
+    public $RegistryRegion;
+
+    /**
+     * @var integer 列表id
+     */
+    public $Id;
 
     /**
      * @var string 镜像Id
@@ -334,66 +292,46 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
     public $ImageId;
 
     /**
-     * @var string 镜像区域
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $RegistryRegion;
-
-    /**
      * @var string 镜像创建的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageCreateTime;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var boolean 是否为镜像的最新版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RequestId;
+    public $IsLatestImage;
 
     /**
      * @param string $ImageDigest 镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ImageRepoAddress 镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegistryType 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ImageName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ImageRepoAddress 镜像仓库地址
+     * @param string $RegistryType 仓库类型
+     * @param string $ImageName 镜像名称
      * @param string $ImageTag 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScanTime 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ImageSize 镜像大小
+     * @param string $ScanTime 最近扫描时间
      * @param string $ScanStatus 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulCnt 安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VirusCnt 木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskCnt 风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SentiveInfoCnt 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsTrustImage 是否可信镜像
      * @param string $OsName 镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanVirusError 木马扫描错误
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanVulError 漏洞扫描错误
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LayerInfo 层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanRiskError 高危扫描错误
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScanVirusProgress 木马信息扫描进度
+     * @param integer $ScanVirusProgress 敏感信息扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScanVulProgress 漏洞扫描进度
+     * @param integer $ScanVulProgress 木马扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScanRiskProgress 敏感扫描进度
+     * @param integer $ScanRiskProgress 漏洞扫描进度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanRemainTime 剩余扫描时间秒
 注意：此字段可能返回 null，表示取不到有效值。
@@ -406,16 +344,14 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
      * @param integer $Progress 总进度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAuthorized 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ImageSize 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegistryRegion 仓库区域
+     * @param integer $Id 列表id
      * @param string $ImageId 镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegistryRegion 镜像区域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageCreateTime 镜像创建的时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param boolean $IsLatestImage 是否为镜像的最新版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -450,6 +386,10 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
             $this->ImageTag = $param["ImageTag"];
         }
 
+        if (array_key_exists("ImageSize",$param) and $param["ImageSize"] !== null) {
+            $this->ImageSize = $param["ImageSize"];
+        }
+
         if (array_key_exists("ScanTime",$param) and $param["ScanTime"] !== null) {
             $this->ScanTime = $param["ScanTime"];
         }
@@ -474,6 +414,10 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
             $this->SentiveInfoCnt = $param["SentiveInfoCnt"];
         }
 
+        if (array_key_exists("IsTrustImage",$param) and $param["IsTrustImage"] !== null) {
+            $this->IsTrustImage = $param["IsTrustImage"];
+        }
+
         if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
             $this->OsName = $param["OsName"];
         }
@@ -484,10 +428,6 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
 
         if (array_key_exists("ScanVulError",$param) and $param["ScanVulError"] !== null) {
             $this->ScanVulError = $param["ScanVulError"];
-        }
-
-        if (array_key_exists("LayerInfo",$param) and $param["LayerInfo"] !== null) {
-            $this->LayerInfo = $param["LayerInfo"];
         }
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
@@ -542,24 +482,24 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
             $this->IsAuthorized = $param["IsAuthorized"];
         }
 
-        if (array_key_exists("ImageSize",$param) and $param["ImageSize"] !== null) {
-            $this->ImageSize = $param["ImageSize"];
+        if (array_key_exists("RegistryRegion",$param) and $param["RegistryRegion"] !== null) {
+            $this->RegistryRegion = $param["RegistryRegion"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
             $this->ImageId = $param["ImageId"];
         }
 
-        if (array_key_exists("RegistryRegion",$param) and $param["RegistryRegion"] !== null) {
-            $this->RegistryRegion = $param["RegistryRegion"];
-        }
-
         if (array_key_exists("ImageCreateTime",$param) and $param["ImageCreateTime"] !== null) {
             $this->ImageCreateTime = $param["ImageCreateTime"];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("IsLatestImage",$param) and $param["IsLatestImage"] !== null) {
+            $this->IsLatestImage = $param["IsLatestImage"];
         }
     }
 }

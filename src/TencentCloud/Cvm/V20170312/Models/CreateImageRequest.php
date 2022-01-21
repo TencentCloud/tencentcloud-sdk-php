@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotIds(array $SnapshotIds) 设置基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
  * @method boolean getDryRun() 获取检测本次请求的是否成功，但不会对操作的资源产生任何影响
  * @method void setDryRun(boolean $DryRun) 设置检测本次请求的是否成功，但不会对操作的资源产生任何影响
+ * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+ * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
  */
 class CreateImageRequest extends AbstractModel
 {
@@ -92,6 +94,11 @@ class CreateImageRequest extends AbstractModel
     public $DryRun;
 
     /**
+     * @var array 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $ImageName 镜像名称
      * @param string $InstanceId 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
      * @param string $ImageDescription 镜像描述
@@ -104,6 +111,7 @@ class CreateImageRequest extends AbstractModel
      * @param array $DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
      * @param array $SnapshotIds 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
      * @param boolean $DryRun 检测本次请求的是否成功，但不会对操作的资源产生任何影响
+     * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
      */
     function __construct()
     {
@@ -148,6 +156,15 @@ class CreateImageRequest extends AbstractModel
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

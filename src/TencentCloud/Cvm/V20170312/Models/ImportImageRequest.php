@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDryRun(boolean $DryRun) 设置只检查参数，不执行任务
  * @method boolean getForce() 获取是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
  * @method void setForce(boolean $Force) 设置是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+ * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+ * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
  */
 class ImportImageRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ImportImageRequest extends AbstractModel
     public $Force;
 
     /**
+     * @var array 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      * @param string $OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
      * @param string $OsVersion 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
@@ -88,6 +95,7 @@ class ImportImageRequest extends AbstractModel
      * @param string $ImageDescription 镜像描述
      * @param boolean $DryRun 只检查参数，不执行任务
      * @param boolean $Force 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+     * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class ImportImageRequest extends AbstractModel
 
         if (array_key_exists("Force",$param) and $param["Force"] !== null) {
             $this->Force = $param["Force"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

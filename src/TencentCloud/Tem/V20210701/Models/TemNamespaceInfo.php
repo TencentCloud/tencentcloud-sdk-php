@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterStatus(string $ClusterStatus) 设置环境集群 status
  * @method boolean getEnableTswTraceService() 获取是否开启tsw
  * @method void setEnableTswTraceService(boolean $EnableTswTraceService) 设置是否开启tsw
+ * @method integer getLocked() 获取环境锁，1为上锁，0则为上锁
+ * @method void setLocked(integer $Locked) 设置环境锁，1为上锁，0则为上锁
  */
 class TemNamespaceInfo extends AbstractModel
 {
@@ -139,6 +141,11 @@ class TemNamespaceInfo extends AbstractModel
     public $EnableTswTraceService;
 
     /**
+     * @var integer 环境锁，1为上锁，0则为上锁
+     */
+    public $Locked;
+
+    /**
      * @param string $EnvironmentId 环境id
      * @param string $Channel 渠道
      * @param string $EnvironmentName 环境名称
@@ -156,6 +163,7 @@ class TemNamespaceInfo extends AbstractModel
      * @param string $SubnetId 子网络
      * @param string $ClusterStatus 环境集群 status
      * @param boolean $EnableTswTraceService 是否开启tsw
+     * @param integer $Locked 环境锁，1为上锁，0则为上锁
      */
     function __construct()
     {
@@ -232,6 +240,10 @@ class TemNamespaceInfo extends AbstractModel
 
         if (array_key_exists("EnableTswTraceService",$param) and $param["EnableTswTraceService"] !== null) {
             $this->EnableTswTraceService = $param["EnableTswTraceService"];
+        }
+
+        if (array_key_exists("Locked",$param) and $param["Locked"] !== null) {
+            $this->Locked = $param["Locked"];
         }
     }
 }

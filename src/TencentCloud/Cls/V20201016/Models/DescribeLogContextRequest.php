@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取要查询的日志主题ID
  * @method void setTopicId(string $TopicId) 设置要查询的日志主题ID
- * @method string getBTime() 获取日志时间,  格式: YYYY-mm-dd HH:MM:SS
- * @method void setBTime(string $BTime) 设置日志时间,  格式: YYYY-mm-dd HH:MM:SS
+ * @method string getBTime() 获取日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
+ * @method void setBTime(string $BTime) 设置日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
  * @method string getPkgId() 获取日志包序号
  * @method void setPkgId(string $PkgId) 设置日志包序号
  * @method integer getPkgLogId() 获取日志包内一条日志的序号
@@ -41,7 +41,7 @@ class DescribeLogContextRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 日志时间,  格式: YYYY-mm-dd HH:MM:SS
+     * @var string 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
      */
     public $BTime;
 
@@ -67,7 +67,7 @@ class DescribeLogContextRequest extends AbstractModel
 
     /**
      * @param string $TopicId 要查询的日志主题ID
-     * @param string $BTime 日志时间,  格式: YYYY-mm-dd HH:MM:SS
+     * @param string $BTime 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
      * @param string $PkgId 日志包序号
      * @param integer $PkgLogId 日志包内一条日志的序号
      * @param integer $PrevLogs 上文日志条数,  默认值10

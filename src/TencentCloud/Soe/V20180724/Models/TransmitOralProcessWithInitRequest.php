@@ -92,18 +92,10 @@ use TencentCloud\Common\AbstractModel;
 4.0：适用于最高年龄段用户，一般对应成人严格打分场景。
  * @method string getSoeAppId() 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。
  * @method void setSoeAppId(string $SoeAppId) 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。
- * @method integer getStorageMode() 获取音频存储模式
-0：不存储
-1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
-2：永久存储音频，需要提工单申请，会产生一定的存储费用；
-3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
-注：对可用性要求较高的用户建议自行存储至腾讯云COS。
- * @method void setStorageMode(integer $StorageMode) 设置音频存储模式
-0：不存储
-1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
-2：永久存储音频，需要提工单申请，会产生一定的存储费用；
-3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
-注：对可用性要求较高的用户建议自行存储至腾讯云COS。
+ * @method integer getStorageMode() 获取音频存储模式，此参数已废弃，无需设置，设置与否都默认为0不存储；
+注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
+ * @method void setStorageMode(integer $StorageMode) 设置音频存储模式，此参数已废弃，无需设置，设置与否都默认为0不存储；
+注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
  * @method integer getSentenceInfoEnabled() 获取输出断句中间结果标识
 0：不输出
 1：输出，通过设置该参数
@@ -222,12 +214,8 @@ class TransmitOralProcessWithInitRequest extends AbstractModel
     public $SoeAppId;
 
     /**
-     * @var integer 音频存储模式
-0：不存储
-1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
-2：永久存储音频，需要提工单申请，会产生一定的存储费用；
-3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
-注：对可用性要求较高的用户建议自行存储至腾讯云COS。
+     * @var integer 音频存储模式，此参数已废弃，无需设置，设置与否都默认为0不存储；
+注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
      */
     public $StorageMode;
 
@@ -305,12 +293,8 @@ ServerType不填默认为0
 1.0：适用于最小年龄段用户，一般对应儿童应用场景；
 4.0：适用于最高年龄段用户，一般对应成人严格打分场景。
      * @param string $SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。如果没有新建SoeAppId，请勿填入该参数，否则会报欠费错误。
-     * @param integer $StorageMode 音频存储模式
-0：不存储
-1：存储到公共对象存储，不会产生费用，存储时间为一个月。输出结果为该会话最后一个分片TransmitOralProcess 返回结果 AudioUrl 字段；
-2：永久存储音频，需要提工单申请，会产生一定的存储费用；
-3：自定义存储，将音频存储到自定义的腾讯云[对象存储](https://cloud.tencent.com/product/cos)中。
-注：对可用性要求较高的用户建议自行存储至腾讯云COS。
+     * @param integer $StorageMode 音频存储模式，此参数已废弃，无需设置，设置与否都默认为0不存储；
+注：有存储需求的用户建议自行存储至腾讯云COS[对象存储](https://cloud.tencent.com/product/cos)使用。
      * @param integer $SentenceInfoEnabled 输出断句中间结果标识
 0：不输出
 1：输出，通过设置该参数

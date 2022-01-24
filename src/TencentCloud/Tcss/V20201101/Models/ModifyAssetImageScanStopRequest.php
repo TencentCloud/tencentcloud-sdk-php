@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAssetImageScanStop请求参数结构体
  *
- * @method string getTaskID() 获取任务id
- * @method void setTaskID(string $TaskID) 设置任务id
- * @method array getImages() 获取镜像id
- * @method void setImages(array $Images) 设置镜像id
+ * @method string getTaskID() 获取任务id；任务id，镜像id和根据过滤条件筛选三选一。
+ * @method void setTaskID(string $TaskID) 设置任务id；任务id，镜像id和根据过滤条件筛选三选一。
+ * @method array getImages() 获取镜像id；任务id，镜像id和根据过滤条件筛选三选一。
+ * @method void setImages(array $Images) 设置镜像id；任务id，镜像id和根据过滤条件筛选三选一。
+ * @method array getFilters() 获取根据过滤条件筛选出镜像；任务id，镜像id和根据过滤条件筛选三选一。
+ * @method void setFilters(array $Filters) 设置根据过滤条件筛选出镜像；任务id，镜像id和根据过滤条件筛选三选一。
+ * @method string getExcludeImageIds() 获取根据过滤条件筛选出镜像，再排除个别镜像
+ * @method void setExcludeImageIds(string $ExcludeImageIds) 设置根据过滤条件筛选出镜像，再排除个别镜像
  */
 class ModifyAssetImageScanStopRequest extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string 任务id；任务id，镜像id和根据过滤条件筛选三选一。
      */
     public $TaskID;
 
     /**
-     * @var array 镜像id
+     * @var array 镜像id；任务id，镜像id和根据过滤条件筛选三选一。
      */
     public $Images;
 
     /**
-     * @param string $TaskID 任务id
-     * @param array $Images 镜像id
+     * @var array 根据过滤条件筛选出镜像；任务id，镜像id和根据过滤条件筛选三选一。
+     */
+    public $Filters;
+
+    /**
+     * @var string 根据过滤条件筛选出镜像，再排除个别镜像
+     */
+    public $ExcludeImageIds;
+
+    /**
+     * @param string $TaskID 任务id；任务id，镜像id和根据过滤条件筛选三选一。
+     * @param array $Images 镜像id；任务id，镜像id和根据过滤条件筛选三选一。
+     * @param array $Filters 根据过滤条件筛选出镜像；任务id，镜像id和根据过滤条件筛选三选一。
+     * @param string $ExcludeImageIds 根据过滤条件筛选出镜像，再排除个别镜像
      */
     function __construct()
     {
@@ -60,6 +76,19 @@ class ModifyAssetImageScanStopRequest extends AbstractModel
 
         if (array_key_exists("Images",$param) and $param["Images"] !== null) {
             $this->Images = $param["Images"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new AssetFilters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("ExcludeImageIds",$param) and $param["ExcludeImageIds"] !== null) {
+            $this->ExcludeImageIds = $param["ExcludeImageIds"];
         }
     }
 }

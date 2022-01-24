@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScannedImageCnt(integer $ScannedImageCnt) 设置已开启扫描镜像数
  * @method integer getNotScannedImageCnt() 获取未开启扫描镜像数
  * @method void setNotScannedImageCnt(integer $NotScannedImageCnt) 设置未开启扫描镜像数
+ * @method integer getNotScannedLocalImageCnt() 获取本地未开启扫描镜像数
+ * @method void setNotScannedLocalImageCnt(integer $NotScannedLocalImageCnt) 设置本地未开启扫描镜像数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribeImageAuthorizedInfoResponse extends AbstractModel
     public $NotScannedImageCnt;
 
     /**
+     * @var integer 本地未开启扫描镜像数
+     */
+    public $NotScannedLocalImageCnt;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeImageAuthorizedInfoResponse extends AbstractModel
      * @param integer $UsedAuthorizedCnt 已使用镜像授权数
      * @param integer $ScannedImageCnt 已开启扫描镜像数
      * @param integer $NotScannedImageCnt 未开启扫描镜像数
+     * @param integer $NotScannedLocalImageCnt 本地未开启扫描镜像数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +100,10 @@ class DescribeImageAuthorizedInfoResponse extends AbstractModel
 
         if (array_key_exists("NotScannedImageCnt",$param) and $param["NotScannedImageCnt"] !== null) {
             $this->NotScannedImageCnt = $param["NotScannedImageCnt"];
+        }
+
+        if (array_key_exists("NotScannedLocalImageCnt",$param) and $param["NotScannedLocalImageCnt"] !== null) {
+            $this->NotScannedLocalImageCnt = $param["NotScannedLocalImageCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

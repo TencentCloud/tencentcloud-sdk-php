@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolatedSource(string $IsolatedSource) 设置实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method GPUInfo getGPUInfo() 获取GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGPUInfo(GPUInfo $GPUInfo) 设置GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -298,6 +302,12 @@ class Instance extends AbstractModel
     public $IsolatedSource;
 
     /**
+     * @var GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GPUInfo;
+
+    /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
      * @param string $InstanceType 实例机型。
@@ -343,6 +353,8 @@ class Instance extends AbstractModel
      * @param array $RdmaIpAddresses 高性能计算集群`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GPUInfo $GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -507,6 +519,11 @@ class Instance extends AbstractModel
 
         if (array_key_exists("IsolatedSource",$param) and $param["IsolatedSource"] !== null) {
             $this->IsolatedSource = $param["IsolatedSource"];
+        }
+
+        if (array_key_exists("GPUInfo",$param) and $param["GPUInfo"] !== null) {
+            $this->GPUInfo = new GPUInfo();
+            $this->GPUInfo->deserialize($param["GPUInfo"]);
         }
     }
 }

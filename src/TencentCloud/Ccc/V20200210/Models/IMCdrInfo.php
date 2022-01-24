@@ -18,14 +18,30 @@ namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 全媒体服务记录信息
+ * 文本会话服务记录信息
  *
  * @method string getId() 获取服务记录ID
  * @method void setId(string $Id) 设置服务记录ID
  * @method integer getDuration() 获取服务时长秒数
  * @method void setDuration(integer $Duration) 设置服务时长秒数
  * @method integer getEndStatus() 获取结束状态
+0 异常结束
+1 正常结束
+3 无坐席在线
+17 坐席放弃接听
+100 黑名单
+101 坐席手动转接
+102 IVR阶段放弃
+108 用户超时自动结束
  * @method void setEndStatus(integer $EndStatus) 设置结束状态
+0 异常结束
+1 正常结束
+3 无坐席在线
+17 坐席放弃接听
+100 黑名单
+101 坐席手动转接
+102 IVR阶段放弃
+108 用户超时自动结束
  * @method string getNickname() 获取用户昵称
  * @method void setNickname(string $Nickname) 设置用户昵称
  * @method integer getType() 获取服务类型 1为全媒体，2为文本客服
@@ -34,6 +50,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStaffId(string $StaffId) 设置客服ID
  * @method integer getTimestamp() 获取服务时间戳
  * @method void setTimestamp(integer $Timestamp) 设置服务时间戳
+ * @method string getSessionId() 获取会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionId(string $SessionId) 设置会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSkillGroupId() 获取技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSkillGroupId(string $SkillGroupId) 设置技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSkillGroupName() 获取技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSkillGroupName(string $SkillGroupName) 设置技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IMCdrInfo extends AbstractModel
 {
@@ -49,6 +77,14 @@ class IMCdrInfo extends AbstractModel
 
     /**
      * @var integer 结束状态
+0 异常结束
+1 正常结束
+3 无坐席在线
+17 坐席放弃接听
+100 黑名单
+101 坐席手动转接
+102 IVR阶段放弃
+108 用户超时自动结束
      */
     public $EndStatus;
 
@@ -73,13 +109,45 @@ class IMCdrInfo extends AbstractModel
     public $Timestamp;
 
     /**
+     * @var string 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionId;
+
+    /**
+     * @var string 技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SkillGroupId;
+
+    /**
+     * @var string 技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SkillGroupName;
+
+    /**
      * @param string $Id 服务记录ID
      * @param integer $Duration 服务时长秒数
      * @param integer $EndStatus 结束状态
+0 异常结束
+1 正常结束
+3 无坐席在线
+17 坐席放弃接听
+100 黑名单
+101 坐席手动转接
+102 IVR阶段放弃
+108 用户超时自动结束
      * @param string $Nickname 用户昵称
      * @param integer $Type 服务类型 1为全媒体，2为文本客服
      * @param string $StaffId 客服ID
      * @param integer $Timestamp 服务时间戳
+     * @param string $SessionId 会话ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SkillGroupId 技能组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SkillGroupName 技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +188,18 @@ class IMCdrInfo extends AbstractModel
 
         if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
             $this->Timestamp = $param["Timestamp"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("SkillGroupId",$param) and $param["SkillGroupId"] !== null) {
+            $this->SkillGroupId = $param["SkillGroupId"];
+        }
+
+        if (array_key_exists("SkillGroupName",$param) and $param["SkillGroupName"] !== null) {
+            $this->SkillGroupName = $param["SkillGroupName"];
         }
     }
 }

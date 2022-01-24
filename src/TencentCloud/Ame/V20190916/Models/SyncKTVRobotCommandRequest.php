@@ -27,6 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Pause：暂停</li>
 <li>SwitchPrevious：上一首</li>
 <li>SwitchNext：下一首</li>
+<li>SetPlayMode：设置播放模式</li>
 <li>Seek：调整播放进度</li>
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
@@ -36,6 +37,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Pause：暂停</li>
 <li>SwitchPrevious：上一首</li>
 <li>SwitchNext：下一首</li>
+<li>SetPlayMode：设置播放模式</li>
 <li>Seek：调整播放进度</li>
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
@@ -50,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetAudioParamCommandInput(SetAudioParamCommandInput $SetAudioParamCommandInput) 设置音频参数，当Command取SetAudioParam时，必填。
  * @method SendMessageCommandInput getSendMessageCommandInput() 获取自定义消息，当Command取SendMessage时，必填。
  * @method void setSendMessageCommandInput(SendMessageCommandInput $SendMessageCommandInput) 设置自定义消息，当Command取SendMessage时，必填。
+ * @method SetPlayModeCommandInput getSetPlayModeCommandInput() 获取播放模式，当Command取SetPlayMode时，必填。
+ * @method void setSetPlayModeCommandInput(SetPlayModeCommandInput $SetPlayModeCommandInput) 设置播放模式，当Command取SetPlayMode时，必填。
  */
 class SyncKTVRobotCommandRequest extends AbstractModel
 {
@@ -64,6 +68,7 @@ class SyncKTVRobotCommandRequest extends AbstractModel
 <li>Pause：暂停</li>
 <li>SwitchPrevious：上一首</li>
 <li>SwitchNext：下一首</li>
+<li>SetPlayMode：设置播放模式</li>
 <li>Seek：调整播放进度</li>
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
@@ -97,12 +102,18 @@ class SyncKTVRobotCommandRequest extends AbstractModel
     public $SendMessageCommandInput;
 
     /**
+     * @var SetPlayModeCommandInput 播放模式，当Command取SetPlayMode时，必填。
+     */
+    public $SetPlayModeCommandInput;
+
+    /**
      * @param string $RobotId 机器人Id。
      * @param string $Command 指令，取值有：
 <li>Play：播放</li>
 <li>Pause：暂停</li>
 <li>SwitchPrevious：上一首</li>
 <li>SwitchNext：下一首</li>
+<li>SetPlayMode：设置播放模式</li>
 <li>Seek：调整播放进度</li>
 <li>SetPlaylist：歌单变更</li>
 <li>SetAudioParam：音频参数变更</li>
@@ -112,6 +123,7 @@ class SyncKTVRobotCommandRequest extends AbstractModel
      * @param SeekCommandInput $SeekCommandInput 播放进度，当Command取Seek时，必填。
      * @param SetAudioParamCommandInput $SetAudioParamCommandInput 音频参数，当Command取SetAudioParam时，必填。
      * @param SendMessageCommandInput $SendMessageCommandInput 自定义消息，当Command取SendMessage时，必填。
+     * @param SetPlayModeCommandInput $SetPlayModeCommandInput 播放模式，当Command取SetPlayMode时，必填。
      */
     function __construct()
     {
@@ -157,6 +169,11 @@ class SyncKTVRobotCommandRequest extends AbstractModel
         if (array_key_exists("SendMessageCommandInput",$param) and $param["SendMessageCommandInput"] !== null) {
             $this->SendMessageCommandInput = new SendMessageCommandInput();
             $this->SendMessageCommandInput->deserialize($param["SendMessageCommandInput"]);
+        }
+
+        if (array_key_exists("SetPlayModeCommandInput",$param) and $param["SetPlayModeCommandInput"] !== null) {
+            $this->SetPlayModeCommandInput = new SetPlayModeCommandInput();
+            $this->SetPlayModeCommandInput->deserialize($param["SetPlayModeCommandInput"]);
         }
     }
 }

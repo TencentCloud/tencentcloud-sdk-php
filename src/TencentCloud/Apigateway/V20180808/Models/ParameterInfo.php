@@ -28,14 +28,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefault(integer $Default) 设置默认值
  * @method string getUnit() 获取单位
  * @method void setUnit(string $Unit) 设置单位
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
+ * @method string getType() 获取类型, integer|string
+ * @method void setType(string $Type) 设置类型, integer|string
  * @method integer getMinimum() 获取最小
  * @method void setMinimum(integer $Minimum) 设置最小
  * @method integer getMaximum() 获取最大
  * @method void setMaximum(integer $Maximum) 设置最大
  * @method string getModifedTime() 获取修改时间
  * @method void setModifedTime(string $ModifedTime) 设置修改时间
+ * @method string getValueString() 获取字符类型的值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValueString(string $ValueString) 设置字符类型的值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDefaultValueString() 获取字符类型的默认值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultValueString(string $DefaultValueString) 设置字符类型的默认值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRange() 获取可调整范围
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRange(string $Range) 设置可调整范围
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParameterInfo extends AbstractModel
 {
@@ -60,7 +72,7 @@ class ParameterInfo extends AbstractModel
     public $Unit;
 
     /**
-     * @var string 类型
+     * @var string 类型, integer|string
      */
     public $Type;
 
@@ -80,14 +92,38 @@ class ParameterInfo extends AbstractModel
     public $ModifedTime;
 
     /**
+     * @var string 字符类型的值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValueString;
+
+    /**
+     * @var string 字符类型的默认值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultValueString;
+
+    /**
+     * @var string 可调整范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Range;
+
+    /**
      * @param string $Name 名字
      * @param integer $Value 当前值
      * @param integer $Default 默认值
      * @param string $Unit 单位
-     * @param string $Type 类型
+     * @param string $Type 类型, integer|string
      * @param integer $Minimum 最小
      * @param integer $Maximum 最大
      * @param string $ModifedTime 修改时间
+     * @param string $ValueString 字符类型的值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DefaultValueString 字符类型的默认值，当Type为string时才有意义
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Range 可调整范围
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +168,18 @@ class ParameterInfo extends AbstractModel
 
         if (array_key_exists("ModifedTime",$param) and $param["ModifedTime"] !== null) {
             $this->ModifedTime = $param["ModifedTime"];
+        }
+
+        if (array_key_exists("ValueString",$param) and $param["ValueString"] !== null) {
+            $this->ValueString = $param["ValueString"];
+        }
+
+        if (array_key_exists("DefaultValueString",$param) and $param["DefaultValueString"] !== null) {
+            $this->DefaultValueString = $param["DefaultValueString"];
+        }
+
+        if (array_key_exists("Range",$param) and $param["Range"] !== null) {
+            $this->Range = $param["Range"];
         }
     }
 }

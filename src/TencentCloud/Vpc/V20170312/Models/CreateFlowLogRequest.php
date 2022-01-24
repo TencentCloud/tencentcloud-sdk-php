@@ -28,14 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置资源唯一ID
  * @method string getTrafficType() 获取流日志采集类型，ACCEPT|REJECT|ALL
  * @method void setTrafficType(string $TrafficType) 设置流日志采集类型，ACCEPT|REJECT|ALL
- * @method string getCloudLogId() 获取流日志存储ID
- * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID
  * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
  * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
  * @method string getFlowLogDescription() 获取流日志实例描述
  * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述
+ * @method string getCloudLogId() 获取流日志存储ID
+ * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method string getStorageType() 获取消费端类型：cls、ckafka
+ * @method void setStorageType(string $StorageType) 设置消费端类型：cls、ckafka
+ * @method FlowLogStorage getFlowLogStorage() 获取流日志消费端信息，当消费端类型为ckafka时，必填。
+ * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) 设置流日志消费端信息，当消费端类型为ckafka时，必填。
  */
 class CreateFlowLogRequest extends AbstractModel
 {
@@ -60,11 +64,6 @@ class CreateFlowLogRequest extends AbstractModel
     public $TrafficType;
 
     /**
-     * @var string 流日志存储ID
-     */
-    public $CloudLogId;
-
-    /**
      * @var string 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
      */
     public $VpcId;
@@ -75,19 +74,36 @@ class CreateFlowLogRequest extends AbstractModel
     public $FlowLogDescription;
 
     /**
+     * @var string 流日志存储ID
+     */
+    public $CloudLogId;
+
+    /**
      * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
+
+    /**
+     * @var string 消费端类型：cls、ckafka
+     */
+    public $StorageType;
+
+    /**
+     * @var FlowLogStorage 流日志消费端信息，当消费端类型为ckafka时，必填。
+     */
+    public $FlowLogStorage;
 
     /**
      * @param string $FlowLogName 流日志实例名字
      * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
      * @param string $ResourceId 资源唯一ID
      * @param string $TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
-     * @param string $CloudLogId 流日志存储ID
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
      * @param string $FlowLogDescription 流日志实例描述
+     * @param string $CloudLogId 流日志存储ID
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param string $StorageType 消费端类型：cls、ckafka
+     * @param FlowLogStorage $FlowLogStorage 流日志消费端信息，当消费端类型为ckafka时，必填。
      */
     function __construct()
     {
@@ -118,16 +134,16 @@ class CreateFlowLogRequest extends AbstractModel
             $this->TrafficType = $param["TrafficType"];
         }
 
-        if (array_key_exists("CloudLogId",$param) and $param["CloudLogId"] !== null) {
-            $this->CloudLogId = $param["CloudLogId"];
-        }
-
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
         }
 
         if (array_key_exists("FlowLogDescription",$param) and $param["FlowLogDescription"] !== null) {
             $this->FlowLogDescription = $param["FlowLogDescription"];
+        }
+
+        if (array_key_exists("CloudLogId",$param) and $param["CloudLogId"] !== null) {
+            $this->CloudLogId = $param["CloudLogId"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
@@ -137,6 +153,15 @@ class CreateFlowLogRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("FlowLogStorage",$param) and $param["FlowLogStorage"] !== null) {
+            $this->FlowLogStorage = new FlowLogStorage();
+            $this->FlowLogStorage->deserialize($param["FlowLogStorage"]);
         }
     }
 }

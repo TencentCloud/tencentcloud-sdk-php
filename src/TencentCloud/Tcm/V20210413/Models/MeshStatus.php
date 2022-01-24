@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanaryVersion(string $CanaryVersion) 设置灰度升级的版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPrometheus() 获取Prometheus状态
+ * @method array getPrometheus() 获取已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrometheus(array $Prometheus) 设置Prometheus状态
+ * @method void setPrometheus(array $Prometheus) 设置已废弃
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStateMessage() 获取状态附带信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -37,6 +37,10 @@ use TencentCloud\Common\AbstractModel;
  * @method array getActiveOperationList() 获取正在执行的异步操作
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActiveOperationList(array $ActiveOperationList) 设置正在执行的异步操作
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PrometheusStatus getTPS() 获取获取TPS信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTPS(PrometheusStatus $TPS) 设置获取TPS信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MeshStatus extends AbstractModel
@@ -53,7 +57,7 @@ class MeshStatus extends AbstractModel
     public $CanaryVersion;
 
     /**
-     * @var array Prometheus状态
+     * @var array 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Prometheus;
@@ -71,14 +75,22 @@ class MeshStatus extends AbstractModel
     public $ActiveOperationList;
 
     /**
+     * @var PrometheusStatus 获取TPS信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TPS;
+
+    /**
      * @param integer $ServiceCount 服务数量
      * @param string $CanaryVersion 灰度升级的版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Prometheus Prometheus状态
+     * @param array $Prometheus 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StateMessage 状态附带信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ActiveOperationList 正在执行的异步操作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrometheusStatus $TPS 获取TPS信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -122,6 +134,11 @@ class MeshStatus extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ActiveOperationList, $obj);
             }
+        }
+
+        if (array_key_exists("TPS",$param) and $param["TPS"] !== null) {
+            $this->TPS = new PrometheusStatus();
+            $this->TPS->deserialize($param["TPS"]);
         }
     }
 }

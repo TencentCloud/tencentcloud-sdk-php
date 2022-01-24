@@ -44,6 +44,16 @@ use TencentCloud\Common\AbstractModel;
 <li>TRTC</li>
  * @method void setRTCSystem(string $RTCSystem) 设置RTC厂商类型，取值有：
 <li>TRTC</li>
+ * @method SetPlayModeCommandInput getSetPlayModeInput() 获取播放模式，PlayMode取值有：
+<li>RepeatPlaylist：列表循环</li>
+<li>Order：顺序播放</li>
+<li>RepeatSingle：单曲循环</li>
+<li>Shuffle：随机播放</li>
+ * @method void setSetPlayModeInput(SetPlayModeCommandInput $SetPlayModeInput) 设置播放模式，PlayMode取值有：
+<li>RepeatPlaylist：列表循环</li>
+<li>Order：顺序播放</li>
+<li>RepeatSingle：单曲循环</li>
+<li>Shuffle：随机播放</li>
  */
 class KTVRobotInfo extends AbstractModel
 {
@@ -92,6 +102,15 @@ class KTVRobotInfo extends AbstractModel
     public $RTCSystem;
 
     /**
+     * @var SetPlayModeCommandInput 播放模式，PlayMode取值有：
+<li>RepeatPlaylist：列表循环</li>
+<li>Order：顺序播放</li>
+<li>RepeatSingle：单曲循环</li>
+<li>Shuffle：随机播放</li>
+     */
+    public $SetPlayModeInput;
+
+    /**
      * @param string $RobotId 机器人Id。
      * @param string $Status 状态，取值有：
 <li>Play：播放</li>
@@ -104,6 +123,11 @@ class KTVRobotInfo extends AbstractModel
      * @param JoinRoomInput $JoinRoomInput 进房信息
      * @param string $RTCSystem RTC厂商类型，取值有：
 <li>TRTC</li>
+     * @param SetPlayModeCommandInput $SetPlayModeInput 播放模式，PlayMode取值有：
+<li>RepeatPlaylist：列表循环</li>
+<li>Order：顺序播放</li>
+<li>RepeatSingle：单曲循环</li>
+<li>Shuffle：随机播放</li>
      */
     function __construct()
     {
@@ -150,6 +174,11 @@ class KTVRobotInfo extends AbstractModel
 
         if (array_key_exists("RTCSystem",$param) and $param["RTCSystem"] !== null) {
             $this->RTCSystem = $param["RTCSystem"];
+        }
+
+        if (array_key_exists("SetPlayModeInput",$param) and $param["SetPlayModeInput"] !== null) {
+            $this->SetPlayModeInput = new SetPlayModeCommandInput();
+            $this->SetPlayModeInput->deserialize($param["SetPlayModeInput"]);
         }
     }
 }

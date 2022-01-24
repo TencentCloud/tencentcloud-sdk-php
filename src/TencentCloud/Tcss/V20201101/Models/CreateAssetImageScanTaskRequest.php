@@ -20,50 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAssetImageScanTask请求参数结构体
  *
- * @method boolean getAll() 获取是否扫描全部镜像
- * @method void setAll(boolean $All) 设置是否扫描全部镜像
- * @method array getImages() 获取需要扫描的镜像列表
- * @method void setImages(array $Images) 设置需要扫描的镜像列表
- * @method boolean getScanVul() 获取扫描漏洞
- * @method void setScanVul(boolean $ScanVul) 设置扫描漏洞
- * @method boolean getScanVirus() 获取扫描木马
- * @method void setScanVirus(boolean $ScanVirus) 设置扫描木马
- * @method boolean getScanRisk() 获取扫描风险
- * @method void setScanRisk(boolean $ScanRisk) 设置扫描风险
+ * @method boolean getAll() 获取是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+ * @method void setAll(boolean $All) 设置是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+ * @method array getImages() 获取需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
+ * @method void setImages(array $Images) 设置需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
+ * @method boolean getScanVul() 获取扫描漏洞；漏洞，木马和风险需选其一
+ * @method void setScanVul(boolean $ScanVul) 设置扫描漏洞；漏洞，木马和风险需选其一
+ * @method boolean getScanVirus() 获取扫描木马；漏洞，木马和风险需选其一
+ * @method void setScanVirus(boolean $ScanVirus) 设置扫描木马；漏洞，木马和风险需选其一
+ * @method boolean getScanRisk() 获取扫描风险；漏洞，木马和风险需选其一
+ * @method void setScanRisk(boolean $ScanRisk) 设置扫描风险；漏洞，木马和风险需选其一
+ * @method array getFilters() 获取根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+ * @method void setFilters(array $Filters) 设置根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+ * @method array getExcludeImageIds() 获取根据过滤条件筛选出镜像，再排除个别镜像
+ * @method void setExcludeImageIds(array $ExcludeImageIds) 设置根据过滤条件筛选出镜像，再排除个别镜像
  */
 class CreateAssetImageScanTaskRequest extends AbstractModel
 {
     /**
-     * @var boolean 是否扫描全部镜像
+     * @var boolean 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
      */
     public $All;
 
     /**
-     * @var array 需要扫描的镜像列表
+     * @var array 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
      */
     public $Images;
 
     /**
-     * @var boolean 扫描漏洞
+     * @var boolean 扫描漏洞；漏洞，木马和风险需选其一
      */
     public $ScanVul;
 
     /**
-     * @var boolean 扫描木马
+     * @var boolean 扫描木马；漏洞，木马和风险需选其一
      */
     public $ScanVirus;
 
     /**
-     * @var boolean 扫描风险
+     * @var boolean 扫描风险；漏洞，木马和风险需选其一
      */
     public $ScanRisk;
 
     /**
-     * @param boolean $All 是否扫描全部镜像
-     * @param array $Images 需要扫描的镜像列表
-     * @param boolean $ScanVul 扫描漏洞
-     * @param boolean $ScanVirus 扫描木马
-     * @param boolean $ScanRisk 扫描风险
+     * @var array 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     */
+    public $Filters;
+
+    /**
+     * @var array 根据过滤条件筛选出镜像，再排除个别镜像
+     */
+    public $ExcludeImageIds;
+
+    /**
+     * @param boolean $All 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @param array $Images 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @param boolean $ScanVul 扫描漏洞；漏洞，木马和风险需选其一
+     * @param boolean $ScanVirus 扫描木马；漏洞，木马和风险需选其一
+     * @param boolean $ScanRisk 扫描风险；漏洞，木马和风险需选其一
+     * @param array $Filters 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+     * @param array $ExcludeImageIds 根据过滤条件筛选出镜像，再排除个别镜像
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class CreateAssetImageScanTaskRequest extends AbstractModel
 
         if (array_key_exists("ScanRisk",$param) and $param["ScanRisk"] !== null) {
             $this->ScanRisk = $param["ScanRisk"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new AssetFilters();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("ExcludeImageIds",$param) and $param["ExcludeImageIds"] !== null) {
+            $this->ExcludeImageIds = $param["ExcludeImageIds"];
         }
     }
 }

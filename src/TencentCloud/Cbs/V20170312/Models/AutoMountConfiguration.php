@@ -18,7 +18,7 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 自动初始化、挂载云盘时指定配置。
+ * 描述了新购云硬盘时自动将云硬盘初始化并挂载至云服务器内部的配置。
  *
  * @method array getInstanceId() 获取要挂载到的实例ID。
  * @method void setInstanceId(array $InstanceId) 设置要挂载到的实例ID。

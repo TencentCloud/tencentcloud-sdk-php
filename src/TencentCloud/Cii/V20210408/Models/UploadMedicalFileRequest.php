@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadMedicalFile请求参数结构体
  *
- * @method string getFile() 获取文件内容的base64的值。FileBase64与FileURL有一个不为空即可，若FileURL同时存在，那么取FileBase64。
- * @method void setFile(string $File) 设置文件内容的base64的值。FileBase64与FileURL有一个不为空即可，若FileURL同时存在，那么取FileBase64。
- * @method string getFileURL() 获取文件的URL地址。FileBase64与FileURL有一个不为空即可，若FileBase64同时存在，那么取FileBase64。
- * @method void setFileURL(string $FileURL) 设置文件的URL地址。FileBase64与FileURL有一个不为空即可，若FileBase64同时存在，那么取FileBase64。
+ * @method string getFile() 获取文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。
+ * @method void setFile(string $File) 设置文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。
+ * @method string getFileURL() 获取文件的URL地址。File与FileURL不能同时为空，若File参数也存在，会只取File的内容。
+ * @method void setFileURL(string $FileURL) 设置文件的URL地址。File与FileURL不能同时为空，若File参数也存在，会只取File的内容。
  */
 class UploadMedicalFileRequest extends AbstractModel
 {
     /**
-     * @var string 文件内容的base64的值。FileBase64与FileURL有一个不为空即可，若FileURL同时存在，那么取FileBase64。
+     * @var string 文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。
      */
     public $File;
 
     /**
-     * @var string 文件的URL地址。FileBase64与FileURL有一个不为空即可，若FileBase64同时存在，那么取FileBase64。
+     * @var string 文件的URL地址。File与FileURL不能同时为空，若File参数也存在，会只取File的内容。
      */
     public $FileURL;
 
     /**
-     * @param string $File 文件内容的base64的值。FileBase64与FileURL有一个不为空即可，若FileURL同时存在，那么取FileBase64。
-     * @param string $FileURL 文件的URL地址。FileBase64与FileURL有一个不为空即可，若FileBase64同时存在，那么取FileBase64。
+     * @param string $File 文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。
+     * @param string $FileURL 文件的URL地址。File与FileURL不能同时为空，若File参数也存在，会只取File的内容。
      */
     function __construct()
     {

@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClsLogsetId(string $ClsLogsetId) 设置CLS日志集ID
  * @method string getClsTopicId() 获取CLS日志主题ID
  * @method void setClsTopicId(string $ClsTopicId) 设置CLS日志主题ID
+ * @method integer getLogCollectType() 获取日志采集类型 2：CLS；3：COS
+ * @method void setLogCollectType(integer $LogCollectType) 设置日志采集类型 2：CLS；3：COS
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CreateJobConfigRequest extends AbstractModel
     public $ClsTopicId;
 
     /**
+     * @var integer 日志采集类型 2：CLS；3：COS
+     */
+    public $LogCollectType;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -136,6 +143,7 @@ class CreateJobConfigRequest extends AbstractModel
      * @param float $TaskManagerSpec TaskManager规格
      * @param string $ClsLogsetId CLS日志集ID
      * @param string $ClsTopicId CLS日志主题ID
+     * @param integer $LogCollectType 日志采集类型 2：CLS；3：COS
      */
     function __construct()
     {
@@ -214,6 +222,10 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("ClsTopicId",$param) and $param["ClsTopicId"] !== null) {
             $this->ClsTopicId = $param["ClsTopicId"];
+        }
+
+        if (array_key_exists("LogCollectType",$param) and $param["LogCollectType"] !== null) {
+            $this->LogCollectType = $param["LogCollectType"];
         }
     }
 }

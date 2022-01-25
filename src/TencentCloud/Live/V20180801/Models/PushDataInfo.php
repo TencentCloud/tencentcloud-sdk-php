@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerIp(string $ServerIp) 设置接流服务器 IP。
  * @method integer getVideoFps() 获取推流视频帧率，单位: Hz。
  * @method void setVideoFps(integer $VideoFps) 设置推流视频帧率，单位: Hz。
- * @method integer getVideoSpeed() 获取推流视频码率，单位: Kbps。
- * @method void setVideoSpeed(integer $VideoSpeed) 设置推流视频码率，单位: Kbps。
+ * @method integer getVideoSpeed() 获取推流视频码率，单位: bps。
+ * @method void setVideoSpeed(integer $VideoSpeed) 设置推流视频码率，单位: bps。
  * @method integer getAudioFps() 获取推流音频帧率，单位: Hz。
  * @method void setAudioFps(integer $AudioFps) 设置推流音频帧率，单位: Hz。
- * @method integer getAudioSpeed() 获取推流音频码率，单位: Kbps。
- * @method void setAudioSpeed(integer $AudioSpeed) 设置推流音频码率，单位: Kbps。
+ * @method integer getAudioSpeed() 获取推流音频码率，单位: bps。
+ * @method void setAudioSpeed(integer $AudioSpeed) 设置推流音频码率，单位: bps。
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getBeginPushTime() 获取推流开始时间。
@@ -52,10 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResolution(string $Resolution) 设置分辨率。
  * @method integer getAsampleRate() 获取采样率。
  * @method void setAsampleRate(integer $AsampleRate) 设置采样率。
- * @method integer getMetaAudioSpeed() 获取metadata 中的音频码率，单位: Kbps。
- * @method void setMetaAudioSpeed(integer $MetaAudioSpeed) 设置metadata 中的音频码率，单位: Kbps。
- * @method integer getMetaVideoSpeed() 获取metadata 中的视频码率，单位: Kbps。
- * @method void setMetaVideoSpeed(integer $MetaVideoSpeed) 设置metadata 中的视频码率，单位: Kbps。
+ * @method integer getMetaAudioSpeed() 获取metadata 中的音频码率，单位: bps。
+ * @method void setMetaAudioSpeed(integer $MetaAudioSpeed) 设置metadata 中的音频码率，单位: bps。
+ * @method integer getMetaVideoSpeed() 获取metadata 中的视频码率，单位: bps。
+ * @method void setMetaVideoSpeed(integer $MetaVideoSpeed) 设置metadata 中的视频码率，单位: bps。
  * @method integer getMetaFps() 获取metadata 中的帧率。
  * @method void setMetaFps(integer $MetaFps) 设置metadata 中的帧率。
  */
@@ -87,7 +87,7 @@ class PushDataInfo extends AbstractModel
     public $VideoFps;
 
     /**
-     * @var integer 推流视频码率，单位: Kbps。
+     * @var integer 推流视频码率，单位: bps。
      */
     public $VideoSpeed;
 
@@ -97,7 +97,7 @@ class PushDataInfo extends AbstractModel
     public $AudioFps;
 
     /**
-     * @var integer 推流音频码率，单位: Kbps。
+     * @var integer 推流音频码率，单位: bps。
      */
     public $AudioSpeed;
 
@@ -134,12 +134,12 @@ class PushDataInfo extends AbstractModel
     public $AsampleRate;
 
     /**
-     * @var integer metadata 中的音频码率，单位: Kbps。
+     * @var integer metadata 中的音频码率，单位: bps。
      */
     public $MetaAudioSpeed;
 
     /**
-     * @var integer metadata 中的视频码率，单位: Kbps。
+     * @var integer metadata 中的视频码率，单位: bps。
      */
     public $MetaVideoSpeed;
 
@@ -154,9 +154,9 @@ class PushDataInfo extends AbstractModel
      * @param string $ClientIp 推流客户端 IP。
      * @param string $ServerIp 接流服务器 IP。
      * @param integer $VideoFps 推流视频帧率，单位: Hz。
-     * @param integer $VideoSpeed 推流视频码率，单位: Kbps。
+     * @param integer $VideoSpeed 推流视频码率，单位: bps。
      * @param integer $AudioFps 推流音频帧率，单位: Hz。
-     * @param integer $AudioSpeed 推流音频码率，单位: Kbps。
+     * @param integer $AudioSpeed 推流音频码率，单位: bps。
      * @param string $PushDomain 推流域名。
      * @param string $BeginPushTime 推流开始时间。
      * @param string $Acodec 音频编码格式，
@@ -165,8 +165,8 @@ class PushDataInfo extends AbstractModel
 例："H264"。
      * @param string $Resolution 分辨率。
      * @param integer $AsampleRate 采样率。
-     * @param integer $MetaAudioSpeed metadata 中的音频码率，单位: Kbps。
-     * @param integer $MetaVideoSpeed metadata 中的视频码率，单位: Kbps。
+     * @param integer $MetaAudioSpeed metadata 中的音频码率，单位: bps。
+     * @param integer $MetaVideoSpeed metadata 中的视频码率，单位: bps。
      * @param integer $MetaFps metadata 中的帧率。
      */
     function __construct()

@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Play：播放</li>
 <li>Pause：暂停</li>
 <li>Destroy：销毁</li>
+ * @method TimeRange getCreateTime() 获取匹配创建时间在此时间段内的机器人。
+<li>包含所指定的头尾时间点。</li>
+ * @method void setCreateTime(TimeRange $CreateTime) 设置匹配创建时间在此时间段内的机器人。
+<li>包含所指定的头尾时间点。</li>
  * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
  * @method integer getLimit() 获取分页返回的起始偏移量，默认值：10。
@@ -51,6 +55,12 @@ class DescribeKTVRobotsRequest extends AbstractModel
     public $Statuses;
 
     /**
+     * @var TimeRange 匹配创建时间在此时间段内的机器人。
+<li>包含所指定的头尾时间点。</li>
+     */
+    public $CreateTime;
+
+    /**
      * @var integer 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
      */
     public $Offset;
@@ -66,6 +76,8 @@ class DescribeKTVRobotsRequest extends AbstractModel
 <li>Play：播放</li>
 <li>Pause：暂停</li>
 <li>Destroy：销毁</li>
+     * @param TimeRange $CreateTime 匹配创建时间在此时间段内的机器人。
+<li>包含所指定的头尾时间点。</li>
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
      * @param integer $Limit 分页返回的起始偏移量，默认值：10。
      */
@@ -88,6 +100,11 @@ class DescribeKTVRobotsRequest extends AbstractModel
 
         if (array_key_exists("Statuses",$param) and $param["Statuses"] !== null) {
             $this->Statuses = $param["Statuses"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = new TimeRange();
+            $this->CreateTime->deserialize($param["CreateTime"]);
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

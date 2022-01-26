@@ -22,18 +22,44 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取播放器配置名称，长度限制：64 个字符。只允许出现 [0-9a-zA-Z] 及 _- 字符（如 test_ABC-123），同一个用户该名称唯一。
  * @method void setName(string $Name) 设置播放器配置名称，长度限制：64 个字符。只允许出现 [0-9a-zA-Z] 及 _- 字符（如 test_ABC-123），同一个用户该名称唯一。
+ * @method string getAudioVideoType() 获取播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+默认为 AdaptiveDynamicStream。
+ * @method void setAudioVideoType(string $AudioVideoType) 设置播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+默认为 AdaptiveDynamicStream。
  * @method string getDrmSwitch() 获取播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
 默认为 OFF。
+当 AudioVideoType 为 AdaptiveDynamicStream 时，此参数有效。
  * @method void setDrmSwitch(string $DrmSwitch) 设置播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
 默认为 OFF。
- * @method integer getAdaptiveDynamicStreamingDefinition() 获取允许输出的未加密的自适应码流模板 ID，当 DrmSwitch 为 OFF 时必填。
- * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) 设置允许输出的未加密的自适应码流模板 ID，当 DrmSwitch 为 OFF 时必填。
- * @method DrmStreamingsInfo getDrmStreamingsInfo() 获取允许输出的 DRM 自适应码流模板内容，当 DrmSwitch 为 ON 时必填。
- * @method void setDrmStreamingsInfo(DrmStreamingsInfo $DrmStreamingsInfo) 设置允许输出的 DRM 自适应码流模板内容，当 DrmSwitch 为 ON 时必填。
+当 AudioVideoType 为 AdaptiveDynamicStream 时，此参数有效。
+ * @method integer getAdaptiveDynamicStreamingDefinition() 获取允许输出的未加密的自适应码流模板 ID。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 OFF 时，此参数为必填。
+ * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) 设置允许输出的未加密的自适应码流模板 ID。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 OFF 时，此参数为必填。
+ * @method DrmStreamingsInfo getDrmStreamingsInfo() 获取允许输出的 DRM 自适应码流模板内容。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 ON 时，此参数为必填。
+ * @method void setDrmStreamingsInfo(DrmStreamingsInfo $DrmStreamingsInfo) 设置允许输出的 DRM 自适应码流模板内容。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 ON 时，此参数为必填。
+ * @method integer getTranscodeDefinition() 获取允许输出的转码模板 ID。
+
+当 AudioVideoType 为 Transcode 时必填。
+ * @method void setTranscodeDefinition(integer $TranscodeDefinition) 设置允许输出的转码模板 ID。
+
+当 AudioVideoType 为 Transcode 时必填。
  * @method integer getImageSpriteDefinition() 获取允许输出的雪碧图模板 ID。
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) 设置允许输出的雪碧图模板 ID。
  * @method array getResolutionNames() 获取播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
@@ -73,22 +99,43 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+默认为 AdaptiveDynamicStream。
+     */
+    public $AudioVideoType;
+
+    /**
      * @var string 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
 默认为 OFF。
+当 AudioVideoType 为 AdaptiveDynamicStream 时，此参数有效。
      */
     public $DrmSwitch;
 
     /**
-     * @var integer 允许输出的未加密的自适应码流模板 ID，当 DrmSwitch 为 OFF 时必填。
+     * @var integer 允许输出的未加密的自适应码流模板 ID。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 OFF 时，此参数为必填。
      */
     public $AdaptiveDynamicStreamingDefinition;
 
     /**
-     * @var DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容，当 DrmSwitch 为 ON 时必填。
+     * @var DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 ON 时，此参数为必填。
      */
     public $DrmStreamingsInfo;
+
+    /**
+     * @var integer 允许输出的转码模板 ID。
+
+当 AudioVideoType 为 Transcode 时必填。
+     */
+    public $TranscodeDefinition;
 
     /**
      * @var integer 允许输出的雪碧图模板 ID。
@@ -131,12 +178,25 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
 
     /**
      * @param string $Name 播放器配置名称，长度限制：64 个字符。只允许出现 [0-9a-zA-Z] 及 _- 字符（如 test_ABC-123），同一个用户该名称唯一。
+     * @param string $AudioVideoType 播放的音视频类型，可选值：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+默认为 AdaptiveDynamicStream。
      * @param string $DrmSwitch 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
 默认为 OFF。
-     * @param integer $AdaptiveDynamicStreamingDefinition 允许输出的未加密的自适应码流模板 ID，当 DrmSwitch 为 OFF 时必填。
-     * @param DrmStreamingsInfo $DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容，当 DrmSwitch 为 ON 时必填。
+当 AudioVideoType 为 AdaptiveDynamicStream 时，此参数有效。
+     * @param integer $AdaptiveDynamicStreamingDefinition 允许输出的未加密的自适应码流模板 ID。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 OFF 时，此参数为必填。
+     * @param DrmStreamingsInfo $DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容。
+
+当 AudioVideoType 为 AdaptiveDynamicStream 并且 DrmSwitch 为 ON 时，此参数为必填。
+     * @param integer $TranscodeDefinition 允许输出的转码模板 ID。
+
+当 AudioVideoType 为 Transcode 时必填。
      * @param integer $ImageSpriteDefinition 允许输出的雪碧图模板 ID。
      * @param array $ResolutionNames 播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
 <li>MinEdgeLength：240，Name：流畅；</li>
@@ -170,6 +230,10 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
             $this->Name = $param["Name"];
         }
 
+        if (array_key_exists("AudioVideoType",$param) and $param["AudioVideoType"] !== null) {
+            $this->AudioVideoType = $param["AudioVideoType"];
+        }
+
         if (array_key_exists("DrmSwitch",$param) and $param["DrmSwitch"] !== null) {
             $this->DrmSwitch = $param["DrmSwitch"];
         }
@@ -181,6 +245,10 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
         if (array_key_exists("DrmStreamingsInfo",$param) and $param["DrmStreamingsInfo"] !== null) {
             $this->DrmStreamingsInfo = new DrmStreamingsInfo();
             $this->DrmStreamingsInfo->deserialize($param["DrmStreamingsInfo"]);
+        }
+
+        if (array_key_exists("TranscodeDefinition",$param) and $param["TranscodeDefinition"] !== null) {
+            $this->TranscodeDefinition = $param["TranscodeDefinition"];
         }
 
         if (array_key_exists("ImageSpriteDefinition",$param) and $param["ImageSpriteDefinition"] !== null) {

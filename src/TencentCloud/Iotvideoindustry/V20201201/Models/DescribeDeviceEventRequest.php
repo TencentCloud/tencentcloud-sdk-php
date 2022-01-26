@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间，秒级时间戳
  * @method string getDeviceId() 获取设备Id
  * @method void setDeviceId(string $DeviceId) 设置设备Id
- * @method array getEventTypes() 获取事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
- * @method void setEventTypes(array $EventTypes) 设置事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
+ * @method array getEventTypes() 获取默认为全部 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
+ * @method void setEventTypes(array $EventTypes) 设置默认为全部 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
  * @method integer getOffset() 获取偏移值
  * @method void setOffset(integer $Offset) 设置偏移值
  * @method integer getLimit() 获取limit限制值
@@ -51,7 +51,7 @@ class DescribeDeviceEventRequest extends AbstractModel
     public $DeviceId;
 
     /**
-     * @var array 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
+     * @var array 默认为全部 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
      */
     public $EventTypes;
 
@@ -69,7 +69,7 @@ class DescribeDeviceEventRequest extends AbstractModel
      * @param integer $StartTime 开始时间，秒级时间戳
      * @param integer $EndTime 结束时间，秒级时间戳
      * @param string $DeviceId 设备Id
-     * @param array $EventTypes 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
+     * @param array $EventTypes 默认为全部 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
      * @param integer $Offset 偏移值
      * @param integer $Limit limit限制值
      */

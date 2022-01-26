@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAllowQuit(string $IsAllowQuit) 设置是否允许退出。允许：Allow，不允许：Denied。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayUin() 获取代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayUin(string $PayUin) 设置代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayName() 获取代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayName(string $PayName) 设置代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -146,6 +154,18 @@ class DescribeOrganizationResponse extends AbstractModel
     public $IsAllowQuit;
 
     /**
+     * @var string 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayUin;
+
+    /**
+     * @var string 代付者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayName;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -174,6 +194,10 @@ class DescribeOrganizationResponse extends AbstractModel
      * @param string $JoinTime 成员加入时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsAllowQuit 是否允许退出。允许：Allow，不允许：Denied。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayUin 代付者Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayName 代付者名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -241,6 +265,14 @@ class DescribeOrganizationResponse extends AbstractModel
 
         if (array_key_exists("IsAllowQuit",$param) and $param["IsAllowQuit"] !== null) {
             $this->IsAllowQuit = $param["IsAllowQuit"];
+        }
+
+        if (array_key_exists("PayUin",$param) and $param["PayUin"] !== null) {
+            $this->PayUin = $param["PayUin"];
+        }
+
+        if (array_key_exists("PayName",$param) and $param["PayName"] !== null) {
+            $this->PayName = $param["PayName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

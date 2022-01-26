@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getP2PAppId() 获取P2P应用ID
  * @method void setP2PAppId(string $P2PAppId) 设置P2P应用ID
- * @method integer getFrom() 获取查询开始时间
- * @method void setFrom(integer $From) 设置查询开始时间
- * @method integer getTo() 获取查询结束时间
- * @method void setTo(integer $To) 设置查询结束时间
+ * @method integer getFrom() 获取查询开始时间，时间戳秒
+ * @method void setFrom(integer $From) 设置查询开始时间，时间戳秒
+ * @method integer getTo() 获取查询结束时间，时间戳秒
+ * @method void setTo(integer $To) 设置查询结束时间，时间戳秒
  * @method string getP2PChannelId() 获取P2P通路ID
  * @method void setP2PChannelId(string $P2PChannelId) 设置P2P通路ID
  */
@@ -37,12 +37,12 @@ class DescribeXP2PDataRequest extends AbstractModel
     public $P2PAppId;
 
     /**
-     * @var integer 查询开始时间
+     * @var integer 查询开始时间，时间戳秒
      */
     public $From;
 
     /**
-     * @var integer 查询结束时间
+     * @var integer 查询结束时间，时间戳秒
      */
     public $To;
 
@@ -53,8 +53,8 @@ class DescribeXP2PDataRequest extends AbstractModel
 
     /**
      * @param string $P2PAppId P2P应用ID
-     * @param integer $From 查询开始时间
-     * @param integer $To 查询结束时间
+     * @param integer $From 查询开始时间，时间戳秒
+     * @param integer $To 查询结束时间，时间戳秒
      * @param string $P2PChannelId P2P通路ID
      */
     function __construct()

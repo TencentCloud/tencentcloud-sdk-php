@@ -24,20 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) 设置云点播文件  Id。
  * @method string getMaterialId() 获取媒体 Id。
  * @method void setMaterialId(string $MaterialId) 设置媒体 Id。
- * @method string getOperator() 获取操作者 Id。
- * @method void setOperator(string $Operator) 设置操作者 Id。
- * @method string getOperationType() 获取操作类型，可取值为：
-<li>Upload：上传；</li>
+ * @method string getOperator() 获取操作者 Id。（废弃，请勿使用）
+ * @method void setOperator(string $Operator) 设置操作者 Id。（废弃，请勿使用）
+ * @method string getOperationType() 获取操作类型，可取值有：
+<li>Upload：本地上传；</li>
 <li>PullUpload：拉取上传；</li>
-<li>Record：直播录制。</li>
- * @method void setOperationType(string $OperationType) 设置操作类型，可取值为：
-<li>Upload：上传；</li>
+<li>VideoEdit：视频剪辑；</li>
+<li>LiveStreamClip：直播流剪辑；</li>
+<li>LiveStreamRecord：直播流录制。</li>
+ * @method void setOperationType(string $OperationType) 设置操作类型，可取值有：
+<li>Upload：本地上传；</li>
 <li>PullUpload：拉取上传；</li>
-<li>Record：直播录制。</li>
+<li>VideoEdit：视频剪辑；</li>
+<li>LiveStreamClip：直播流剪辑；</li>
+<li>LiveStreamRecord：直播流录制。</li>
  * @method Entity getOwner() 获取媒体归属。
  * @method void setOwner(Entity $Owner) 设置媒体归属。
  * @method string getClassPath() 获取媒体分类路径。
  * @method void setClassPath(string $ClassPath) 设置媒体分类路径。
+ * @method string getTaskId() 获取生成文件的任务 Id。当生成新文件是拉取上传、视频剪辑、直播流剪辑时为任务 Id。
+ * @method void setTaskId(string $TaskId) 设置生成文件的任务 Id。当生成新文件是拉取上传、视频剪辑、直播流剪辑时为任务 Id。
+ * @method string getSourceContext() 获取来源上下文信息。视频剪辑生成新文件时此字段为项目 Id；直播流剪辑或者直播流录制生成新文件则为原始流地址。
+ * @method void setSourceContext(string $SourceContext) 设置来源上下文信息。视频剪辑生成新文件时此字段为项目 Id；直播流剪辑或者直播流录制生成新文件则为原始流地址。
  */
 class StorageNewFileCreatedEvent extends AbstractModel
 {
@@ -52,15 +60,17 @@ class StorageNewFileCreatedEvent extends AbstractModel
     public $MaterialId;
 
     /**
-     * @var string 操作者 Id。
+     * @var string 操作者 Id。（废弃，请勿使用）
      */
     public $Operator;
 
     /**
-     * @var string 操作类型，可取值为：
-<li>Upload：上传；</li>
+     * @var string 操作类型，可取值有：
+<li>Upload：本地上传；</li>
 <li>PullUpload：拉取上传；</li>
-<li>Record：直播录制。</li>
+<li>VideoEdit：视频剪辑；</li>
+<li>LiveStreamClip：直播流剪辑；</li>
+<li>LiveStreamRecord：直播流录制。</li>
      */
     public $OperationType;
 
@@ -75,15 +85,29 @@ class StorageNewFileCreatedEvent extends AbstractModel
     public $ClassPath;
 
     /**
+     * @var string 生成文件的任务 Id。当生成新文件是拉取上传、视频剪辑、直播流剪辑时为任务 Id。
+     */
+    public $TaskId;
+
+    /**
+     * @var string 来源上下文信息。视频剪辑生成新文件时此字段为项目 Id；直播流剪辑或者直播流录制生成新文件则为原始流地址。
+     */
+    public $SourceContext;
+
+    /**
      * @param string $FileId 云点播文件  Id。
      * @param string $MaterialId 媒体 Id。
-     * @param string $Operator 操作者 Id。
-     * @param string $OperationType 操作类型，可取值为：
-<li>Upload：上传；</li>
+     * @param string $Operator 操作者 Id。（废弃，请勿使用）
+     * @param string $OperationType 操作类型，可取值有：
+<li>Upload：本地上传；</li>
 <li>PullUpload：拉取上传；</li>
-<li>Record：直播录制。</li>
+<li>VideoEdit：视频剪辑；</li>
+<li>LiveStreamClip：直播流剪辑；</li>
+<li>LiveStreamRecord：直播流录制。</li>
      * @param Entity $Owner 媒体归属。
      * @param string $ClassPath 媒体分类路径。
+     * @param string $TaskId 生成文件的任务 Id。当生成新文件是拉取上传、视频剪辑、直播流剪辑时为任务 Id。
+     * @param string $SourceContext 来源上下文信息。视频剪辑生成新文件时此字段为项目 Id；直播流剪辑或者直播流录制生成新文件则为原始流地址。
      */
     function __construct()
     {
@@ -121,6 +145,14 @@ class StorageNewFileCreatedEvent extends AbstractModel
 
         if (array_key_exists("ClassPath",$param) and $param["ClassPath"] !== null) {
             $this->ClassPath = $param["ClassPath"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("SourceContext",$param) and $param["SourceContext"] !== null) {
+            $this->SourceContext = $param["SourceContext"];
         }
     }
 }

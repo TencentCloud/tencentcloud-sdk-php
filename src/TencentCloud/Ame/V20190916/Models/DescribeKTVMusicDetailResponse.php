@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLyricsUrl(string $LyricsUrl) 设置歌词下载地址
  * @method array getDefinitionInfoSet() 获取歌曲规格信息列表
  * @method void setDefinitionInfoSet(array $DefinitionInfoSet) 设置歌曲规格信息列表
+ * @method string getMidiJsonUrl() 获取音高数据文件下载地址
+ * @method void setMidiJsonUrl(string $MidiJsonUrl) 设置音高数据文件下载地址
+ * @method array getChorusClipSet() 获取副歌片段数据列表
+ * @method void setChorusClipSet(array $ChorusClipSet) 设置副歌片段数据列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +58,16 @@ class DescribeKTVMusicDetailResponse extends AbstractModel
     public $DefinitionInfoSet;
 
     /**
+     * @var string 音高数据文件下载地址
+     */
+    public $MidiJsonUrl;
+
+    /**
+     * @var array 副歌片段数据列表
+     */
+    public $ChorusClipSet;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +77,8 @@ class DescribeKTVMusicDetailResponse extends AbstractModel
      * @param string $PlayToken 播放凭证
      * @param string $LyricsUrl 歌词下载地址
      * @param array $DefinitionInfoSet 歌曲规格信息列表
+     * @param string $MidiJsonUrl 音高数据文件下载地址
+     * @param array $ChorusClipSet 副歌片段数据列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +113,19 @@ class DescribeKTVMusicDetailResponse extends AbstractModel
                 $obj = new KTVMusicDefinitionInfo();
                 $obj->deserialize($value);
                 array_push($this->DefinitionInfoSet, $obj);
+            }
+        }
+
+        if (array_key_exists("MidiJsonUrl",$param) and $param["MidiJsonUrl"] !== null) {
+            $this->MidiJsonUrl = $param["MidiJsonUrl"];
+        }
+
+        if (array_key_exists("ChorusClipSet",$param) and $param["ChorusClipSet"] !== null) {
+            $this->ChorusClipSet = [];
+            foreach ($param["ChorusClipSet"] as $key => $value){
+                $obj = new ChorusClip();
+                $obj->deserialize($value);
+                array_push($this->ChorusClipSet, $obj);
             }
         }
 

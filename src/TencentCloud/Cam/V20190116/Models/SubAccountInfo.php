@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNickName() 获取昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNickName(string $NickName) 设置昵称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubAccountInfo extends AbstractModel
 {
@@ -90,6 +94,12 @@ class SubAccountInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NickName;
+
+    /**
      * @param integer $Uin 子用户用户 ID
      * @param string $Name 子用户用户名
      * @param integer $Uid 子用户 UID
@@ -99,6 +109,8 @@ class SubAccountInfo extends AbstractModel
      * @param string $CountryCode 区号
      * @param string $Email 邮箱
      * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NickName 昵称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class SubAccountInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
+            $this->NickName = $param["NickName"];
         }
     }
 }

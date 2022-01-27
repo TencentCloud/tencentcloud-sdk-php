@@ -33,6 +33,12 @@ use TencentCloud\Ame\V20190916\Models as Models;
  * @method Models\DescribeKTVPlaylistDetailResponse DescribeKTVPlaylistDetail(Models\DescribeKTVPlaylistDetailRequest $req) 根据歌单 Id 获取歌单详情，包括歌单的基础信息以及歌曲列表。
  * @method Models\DescribeKTVPlaylistsResponse DescribeKTVPlaylists(Models\DescribeKTVPlaylistsRequest $req) 获取直播互动曲库推荐歌单列表。
  * @method Models\DescribeKTVRobotsResponse DescribeKTVRobots(Models\DescribeKTVRobotsRequest $req) 查询机器人列表，支持 Id、状态等过滤条件。
+ * @method Models\DescribeKTVSingerCategoriesResponse DescribeKTVSingerCategories(Models\DescribeKTVSingerCategoriesRequest $req) 获取直播互动曲库歌手分类信息
+ * @method Models\DescribeKTVSingerMusicsResponse DescribeKTVSingerMusics(Models\DescribeKTVSingerMusicsRequest $req) 根据歌手id，返回该歌手下歌曲列表。
+
+
+
+ * @method Models\DescribeKTVSingersResponse DescribeKTVSingers(Models\DescribeKTVSingersRequest $req) 根据过滤条件，返回匹配的歌手列表。
  * @method Models\DescribeLyricResponse DescribeLyric(Models\DescribeLyricRequest $req) 根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
  * @method Models\DescribeMusicResponse DescribeMusic(Models\DescribeMusicRequest $req) 获取曲库包歌曲播放信息接口
  * @method Models\DescribeMusicSaleStatusResponse DescribeMusicSaleStatus(Models\DescribeMusicSaleStatusRequest $req) 根据音乐信息查询音乐是否在售

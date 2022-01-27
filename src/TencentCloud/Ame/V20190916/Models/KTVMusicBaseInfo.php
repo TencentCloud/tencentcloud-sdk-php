@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMusicId(string $MusicId) 设置歌曲 Id
  * @method string getName() 获取歌曲名称
  * @method void setName(string $Name) 设置歌曲名称
- * @method array getSingerSet() 获取演唱者列表
- * @method void setSingerSet(array $SingerSet) 设置演唱者列表
+ * @method array getSingerInfoSet() 获取演唱者基础信息列表
+ * @method void setSingerInfoSet(array $SingerInfoSet) 设置演唱者基础信息列表
+ * @method array getSingerSet() 获取已弃用，请使用SingerInfoSet
+ * @method void setSingerSet(array $SingerSet) 设置已弃用，请使用SingerInfoSet
  * @method array getLyricistSet() 获取作词者列表
  * @method void setLyricistSet(array $LyricistSet) 设置作词者列表
  * @method array getComposerSet() 获取作曲者列表
@@ -48,7 +50,12 @@ class KTVMusicBaseInfo extends AbstractModel
     public $Name;
 
     /**
-     * @var array 演唱者列表
+     * @var array 演唱者基础信息列表
+     */
+    public $SingerInfoSet;
+
+    /**
+     * @var array 已弃用，请使用SingerInfoSet
      */
     public $SingerSet;
 
@@ -75,7 +82,8 @@ class KTVMusicBaseInfo extends AbstractModel
     /**
      * @param string $MusicId 歌曲 Id
      * @param string $Name 歌曲名称
-     * @param array $SingerSet 演唱者列表
+     * @param array $SingerInfoSet 演唱者基础信息列表
+     * @param array $SingerSet 已弃用，请使用SingerInfoSet
      * @param array $LyricistSet 作词者列表
      * @param array $ComposerSet 作曲者列表
      * @param array $TagSet 标签列表
@@ -100,6 +108,15 @@ class KTVMusicBaseInfo extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("SingerInfoSet",$param) and $param["SingerInfoSet"] !== null) {
+            $this->SingerInfoSet = [];
+            foreach ($param["SingerInfoSet"] as $key => $value){
+                $obj = new KTVSingerBaseInfo();
+                $obj->deserialize($value);
+                array_push($this->SingerInfoSet, $obj);
+            }
         }
 
         if (array_key_exists("SingerSet",$param) and $param["SingerSet"] !== null) {

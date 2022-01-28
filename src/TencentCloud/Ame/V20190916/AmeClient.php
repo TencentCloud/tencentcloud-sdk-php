@@ -39,6 +39,7 @@ use TencentCloud\Ame\V20190916\Models as Models;
 
 
  * @method Models\DescribeKTVSingersResponse DescribeKTVSingers(Models\DescribeKTVSingersRequest $req) 根据过滤条件，返回匹配的歌手列表。
+ * @method Models\DescribeKTVTopListResponse DescribeKTVTopList(Models\DescribeKTVTopListRequest $req) 获取直播互动曲库歌曲的周榜和月榜
  * @method Models\DescribeLyricResponse DescribeLyric(Models\DescribeLyricRequest $req) 根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
  * @method Models\DescribeMusicResponse DescribeMusic(Models\DescribeMusicRequest $req) 获取曲库包歌曲播放信息接口
  * @method Models\DescribeMusicSaleStatusResponse DescribeMusicSaleStatus(Models\DescribeMusicSaleStatusRequest $req) 根据音乐信息查询音乐是否在售

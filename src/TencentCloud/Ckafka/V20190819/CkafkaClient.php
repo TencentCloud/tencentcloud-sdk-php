@@ -34,6 +34,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 添加用户
  * @method Models\DeleteAclResponse DeleteAcl(Models\DeleteAclRequest $req) 删除ACL
  * @method Models\DeleteAclRuleResponse DeleteAclRule(Models\DeleteAclRuleRequest $req) 删除ACL规则
+ * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除消费组
  * @method Models\DeleteInstancePreResponse DeleteInstancePre(Models\DeleteInstancePreRequest $req) 删除预付费实例
  * @method Models\DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(Models\DeleteRouteTriggerTimeRequest $req) 修改删除路由延迟触发时间
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除ckafka主题

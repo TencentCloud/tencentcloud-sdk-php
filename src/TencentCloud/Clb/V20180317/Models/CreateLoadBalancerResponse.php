@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * CreateLoadBalancer返回参数结构体
  *
  * @method array getLoadBalancerIds() 获取由负载均衡实例唯一 ID 组成的数组。
+存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置由负载均衡实例唯一 ID 组成的数组。
+存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
  * @method string getDealName() 获取订单号。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealName(string $DealName) 设置订单号。
@@ -33,6 +35,7 @@ class CreateLoadBalancerResponse extends AbstractModel
 {
     /**
      * @var array 由负载均衡实例唯一 ID 组成的数组。
+存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
      */
     public $LoadBalancerIds;
 
@@ -49,6 +52,7 @@ class CreateLoadBalancerResponse extends AbstractModel
 
     /**
      * @param array $LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
+存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
      * @param string $DealName 订单号。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

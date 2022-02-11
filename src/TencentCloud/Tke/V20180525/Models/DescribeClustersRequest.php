@@ -33,6 +33,16 @@ use TencentCloud\Common\AbstractModel;
     类型：String
     必选：否
 
+·  ClusterType
+    按照【集群类型】进行过滤。
+    类型：String
+    必选：否
+
+·  ClusterStatus
+    按照【集群状态】进行过滤。
+    类型：String
+    必选：否
+
 ·  Tags
     按照【标签键值对】进行过滤。
     类型：String
@@ -59,6 +69,16 @@ use TencentCloud\Common\AbstractModel;
     必选：否
  * @method void setFilters(array $Filters) 设置·  ClusterName
     按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  ClusterType
+    按照【集群类型】进行过滤。
+    类型：String
+    必选：否
+
+·  ClusterStatus
+    按照【集群状态】进行过滤。
     类型：String
     必选：否
 
@@ -113,6 +133,16 @@ class DescribeClustersRequest extends AbstractModel
     类型：String
     必选：否
 
+·  ClusterType
+    按照【集群类型】进行过滤。
+    类型：String
+    必选：否
+
+·  ClusterStatus
+    按照【集群状态】进行过滤。
+    类型：String
+    必选：否
+
 ·  Tags
     按照【标签键值对】进行过滤。
     类型：String
@@ -152,6 +182,16 @@ class DescribeClustersRequest extends AbstractModel
      * @param integer $Limit 最大输出条数，默认20，最大为100
      * @param array $Filters ·  ClusterName
     按照【集群名】进行过滤。
+    类型：String
+    必选：否
+
+·  ClusterType
+    按照【集群类型】进行过滤。
+    类型：String
+    必选：否
+
+·  ClusterStatus
+    按照【集群状态】进行过滤。
     类型：String
     必选：否
 

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) 设置数量
  * @method string getType() 获取资源标识:clb,cdn,live,waf,antiddos
  * @method void setType(string $Type) 设置资源标识:clb,cdn,live,waf,antiddos
+ * @method array getResourceIds() 获取关联资源ID或关联域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceIds(array $ResourceIds) 设置关联资源ID或关联域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeployedResources extends AbstractModel
 {
@@ -45,9 +49,17 @@ class DeployedResources extends AbstractModel
     public $Type;
 
     /**
+     * @var array 关联资源ID或关联域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceIds;
+
+    /**
      * @param string $CertificateId 证书ID
      * @param integer $Count 数量
      * @param string $Type 资源标识:clb,cdn,live,waf,antiddos
+     * @param array $ResourceIds 关联资源ID或关联域名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class DeployedResources extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
+            $this->ResourceIds = $param["ResourceIds"];
         }
     }
 }

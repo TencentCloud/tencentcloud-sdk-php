@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getFileName() 获取文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
- * @method void setFileName(string $FileName) 设置文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
  * @method string getUser() 获取云数据库的用户名。
  * @method void setUser(string $User) 设置云数据库的用户名。
+ * @method string getFileName() 获取文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
+ * @method void setFileName(string $FileName) 设置文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
  * @method string getPassword() 获取云数据库实例 User 账号的密码。
  * @method void setPassword(string $Password) 设置云数据库实例 User 账号的密码。
  * @method string getDbName() 获取导入的目标数据库名，不传表示不指定数据库。
  * @method void setDbName(string $DbName) 设置导入的目标数据库名，不传表示不指定数据库。
+ * @method string getCosUrl() 获取腾讯云COS文件链接。 用户需要指定 FileName 或者 CosUrl 其中一个。 COS文件需要是 .sql 文件。
+ * @method void setCosUrl(string $CosUrl) 设置腾讯云COS文件链接。 用户需要指定 FileName 或者 CosUrl 其中一个。 COS文件需要是 .sql 文件。
  */
 class CreateDBImportJobRequest extends AbstractModel
 {
@@ -39,14 +41,14 @@ class CreateDBImportJobRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
-     */
-    public $FileName;
-
-    /**
      * @var string 云数据库的用户名。
      */
     public $User;
+
+    /**
+     * @var string 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
+     */
+    public $FileName;
 
     /**
      * @var string 云数据库实例 User 账号的密码。
@@ -59,11 +61,17 @@ class CreateDBImportJobRequest extends AbstractModel
     public $DbName;
 
     /**
+     * @var string 腾讯云COS文件链接。 用户需要指定 FileName 或者 CosUrl 其中一个。 COS文件需要是 .sql 文件。
+     */
+    public $CosUrl;
+
+    /**
      * @param string $InstanceId 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $FileName 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
      * @param string $User 云数据库的用户名。
+     * @param string $FileName 文件名称。该文件是指用户已上传到腾讯云的文件，仅支持.sql文件。
      * @param string $Password 云数据库实例 User 账号的密码。
      * @param string $DbName 导入的目标数据库名，不传表示不指定数据库。
+     * @param string $CosUrl 腾讯云COS文件链接。 用户需要指定 FileName 或者 CosUrl 其中一个。 COS文件需要是 .sql 文件。
      */
     function __construct()
     {
@@ -82,12 +90,12 @@ class CreateDBImportJobRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
-        }
-
         if (array_key_exists("User",$param) and $param["User"] !== null) {
             $this->User = $param["User"];
+        }
+
+        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
+            $this->FileName = $param["FileName"];
         }
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
@@ -96,6 +104,10 @@ class CreateDBImportJobRequest extends AbstractModel
 
         if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
             $this->DbName = $param["DbName"];
+        }
+
+        if (array_key_exists("CosUrl",$param) and $param["CosUrl"] !== null) {
+            $this->CosUrl = $param["CosUrl"];
         }
     }
 }

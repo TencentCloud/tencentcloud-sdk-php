@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能识别 Asr 文字鉴任违禁务结果类型
+ * 智能识别 Asr 文字鉴违禁任务结果类型
  *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。

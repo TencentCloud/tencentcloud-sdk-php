@@ -30,8 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMainTaskId(string $MainTaskId) 设置主任务ID
  * @method string getUnderwriteTaskId() 获取核保任务ID
  * @method void setUnderwriteTaskId(string $UnderwriteTaskId) 设置核保任务ID
- * @method integer getStatus() 获取状态码
- * @method void setStatus(integer $Status) 设置状态码
+ * @method integer getStatus() 获取结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
+ * @method void setStatus(integer $Status) 设置结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
  * @method array getUnderwriteResults() 获取核保结果
  * @method void setUnderwriteResults(array $UnderwriteResults) 设置核保结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -65,7 +71,10 @@ class DescribeUnderwriteTaskResponse extends AbstractModel
     public $UnderwriteTaskId;
 
     /**
-     * @var integer 状态码
+     * @var integer 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
      */
     public $Status;
 
@@ -85,7 +94,10 @@ class DescribeUnderwriteTaskResponse extends AbstractModel
      * @param string $PolicyId 保单ID
      * @param string $MainTaskId 主任务ID
      * @param string $UnderwriteTaskId 核保任务ID
-     * @param integer $Status 状态码
+     * @param integer $Status 结果状态：
+0：返回成功
+1：结果未生成
+2：结果生成失败
      * @param array $UnderwriteResults 核保结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

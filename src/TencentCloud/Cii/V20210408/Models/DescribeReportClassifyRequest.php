@@ -20,15 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReportClassify请求参数结构体
  *
- * @method string getServiceType() 获取服务类型（Structured/Underwrite）
- * @method void setServiceType(string $ServiceType) 设置服务类型（Structured/Underwrite）
+ * @method string getServiceType() 获取服务类型
+Structured 仅结构化
+Underwrite 结构化+核保
+ * @method void setServiceType(string $ServiceType) 设置服务类型
+Structured 仅结构化
+Underwrite 结构化+核保
  * @method array getFileList() 获取文件地址数组
  * @method void setFileList(array $FileList) 设置文件地址数组
  */
 class DescribeReportClassifyRequest extends AbstractModel
 {
     /**
-     * @var string 服务类型（Structured/Underwrite）
+     * @var string 服务类型
+Structured 仅结构化
+Underwrite 结构化+核保
      */
     public $ServiceType;
 
@@ -38,7 +44,9 @@ class DescribeReportClassifyRequest extends AbstractModel
     public $FileList;
 
     /**
-     * @param string $ServiceType 服务类型（Structured/Underwrite）
+     * @param string $ServiceType 服务类型
+Structured 仅结构化
+Underwrite 结构化+核保
      * @param array $FileList 文件地址数组
      */
     function __construct()

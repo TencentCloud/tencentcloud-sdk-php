@@ -27,6 +27,9 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancer(Models\AssociateDDoSEipLoadBalancerRequest $req) 本接口 (AssociateDDoSEipLoadBalancer) 用于将高防弹性公网IP绑定到负载均衡指定内网 IP 上。
  * @method Models\CreateBlackWhiteIpListResponse CreateBlackWhiteIpList(Models\CreateBlackWhiteIpListRequest $req) 添加DDoS防护的IP黑白名单
  * @method Models\CreateBoundIPResponse CreateBoundIP(Models\CreateBoundIPRequest $req) 绑定IP到高防包实例，支持独享包、共享包；需要注意的是此接口绑定或解绑IP是异步接口，当处于绑定或解绑中时，则不允许再进行绑定或解绑，需要等待当前绑定或解绑完成。
+ * @method Models\CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicy(Models\CreateCCPrecisionPolicyRequest $req) 新增CC精准防护策略
+ * @method Models\CreateCCReqLimitPolicyResponse CreateCCReqLimitPolicy(Models\CreateCCReqLimitPolicyRequest $req) 新增CC频率限制策略
+ * @method Models\CreateCcGeoIPBlockConfigResponse CreateCcGeoIPBlockConfig(Models\CreateCcGeoIPBlockConfigRequest $req) 新建cc防护的地域封禁配置
  * @method Models\CreateDDoSAIResponse CreateDDoSAI(Models\CreateDDoSAIRequest $req) 设置DDoS防护的AI防护开关
  * @method Models\CreateDDoSBlackWhiteIpListResponse CreateDDoSBlackWhiteIpList(Models\CreateDDoSBlackWhiteIpListRequest $req) 添加DDoS防护的IP网段黑白名单
  * @method Models\CreateDDoSConnectLimitResponse CreateDDoSConnectLimit(Models\CreateDDoSConnectLimitRequest $req) 配置DDoS连接抑制选项
@@ -43,16 +46,25 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateWaterPrintConfigResponse CreateWaterPrintConfig(Models\CreateWaterPrintConfigRequest $req) 添加DDoS防护的水印防护配置
  * @method Models\CreateWaterPrintKeyResponse CreateWaterPrintKey(Models\CreateWaterPrintKeyRequest $req) 添加DDoS防护的水印防护密钥
  * @method Models\DeleteBlackWhiteIpListResponse DeleteBlackWhiteIpList(Models\DeleteBlackWhiteIpListRequest $req) 删除DDoS防护的IP黑白名单
+ * @method Models\DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicy(Models\DeleteCCPrecisionPolicyRequest $req) 删除CC精准防护策略
+ * @method Models\DeleteCCRequestLimitPolicyResponse DeleteCCRequestLimitPolicy(Models\DeleteCCRequestLimitPolicyRequest $req) 删除CC频率限制策略
+ * @method Models\DeleteCcBlackWhiteIpListResponse DeleteCcBlackWhiteIpList(Models\DeleteCcBlackWhiteIpListRequest $req) 删除CC四层黑白名单
+ * @method Models\DeleteCcGeoIPBlockConfigResponse DeleteCcGeoIPBlockConfig(Models\DeleteCcGeoIPBlockConfigRequest $req) 删除CC防护的区域封禁配置
  * @method Models\DeleteDDoSBlackWhiteIpListResponse DeleteDDoSBlackWhiteIpList(Models\DeleteDDoSBlackWhiteIpListRequest $req) 删除DDoS防护的IP网段黑白名单
  * @method Models\DeleteDDoSGeoIPBlockConfigResponse DeleteDDoSGeoIPBlockConfig(Models\DeleteDDoSGeoIPBlockConfigRequest $req) 删除DDoS防护的区域封禁配置
  * @method Models\DeleteDDoSSpeedLimitConfigResponse DeleteDDoSSpeedLimitConfig(Models\DeleteDDoSSpeedLimitConfigRequest $req) 删除DDoS防护的访问限速配置
  * @method Models\DeletePacketFilterConfigResponse DeletePacketFilterConfig(Models\DeletePacketFilterConfigRequest $req) 删除DDoS防护的特征过滤规则
+ * @method Models\DeletePortAclConfigResponse DeletePortAclConfig(Models\DeletePortAclConfigRequest $req) 删除DDoS防护的端口acl策略
  * @method Models\DeleteWaterPrintConfigResponse DeleteWaterPrintConfig(Models\DeleteWaterPrintConfigRequest $req) 删除DDoS防护的水印防护配置
  * @method Models\DeleteWaterPrintKeyResponse DeleteWaterPrintKey(Models\DeleteWaterPrintKeyRequest $req) 删除DDoS防护的水印防护密钥
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) 获取基础防护攻击状态
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) 获取业务流量曲线
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) 获取DDoS防护的IP黑白名单
+ * @method Models\DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(Models\DescribeCCPrecisionPlyListRequest $req) 获取CC精准防护列表
+ * @method Models\DescribeCCReqLimitPolicyListResponse DescribeCCReqLimitPolicyList(Models\DescribeCCReqLimitPolicyListRequest $req) 获取CC频率限制策略列表
  * @method Models\DescribeCCTrendResponse DescribeCCTrend(Models\DescribeCCTrendRequest $req) 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
+ * @method Models\DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpList(Models\DescribeCcBlackWhiteIpListRequest $req) 获取CC四层黑白名单列表
+ * @method Models\DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigList(Models\DescribeCcGeoIPBlockConfigListRequest $req) 获取CC防护的区域封禁配置列表
  * @method Models\DescribeDDoSBlackWhiteIpListResponse DescribeDDoSBlackWhiteIpList(Models\DescribeDDoSBlackWhiteIpListRequest $req) 获取DDoS防护的IP网段黑白名单
  * @method Models\DescribeDDoSConnectLimitListResponse DescribeDDoSConnectLimitList(Models\DescribeDDoSConnectLimitListRequest $req) 获取DDoS连接抑制配置列表
  * @method Models\DescribeDDoSTrendResponse DescribeDDoSTrend(Models\DescribeDDoSTrendRequest $req) 获取DDoS攻击流量带宽和攻击包速率数据
@@ -75,12 +87,21 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) 获取智能调度域名列表
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) 获取DDoS防护的水印防护配置列表
  * @method Models\DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(Models\DisassociateDDoSEipAddressRequest $req) 本接口 (DisassociateDDoSEipAddress) 用于解绑高防弹性公网IP。
+ * @method Models\ModifyCCLevelPolicyResponse ModifyCCLevelPolicy(Models\ModifyCCLevelPolicyRequest $req) 修改CC防护等级
+ * @method Models\ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(Models\ModifyCCPrecisionPolicyRequest $req) 修改CC精准防护策略
+ * @method Models\ModifyCCReqLimitPolicyResponse ModifyCCReqLimitPolicy(Models\ModifyCCReqLimitPolicyRequest $req) 修改CC频率限制策略
+ * @method Models\ModifyCCThresholdPolicyResponse ModifyCCThresholdPolicy(Models\ModifyCCThresholdPolicyRequest $req) 修改CC清洗阈值
+ * @method Models\ModifyCcBlackWhiteIpListResponse ModifyCcBlackWhiteIpList(Models\ModifyCcBlackWhiteIpListRequest $req) 修改CC四层黑白名单
+ * @method Models\ModifyDDoSBlackWhiteIpListResponse ModifyDDoSBlackWhiteIpList(Models\ModifyDDoSBlackWhiteIpListRequest $req) 修改DDoS黑白名单列表
  * @method Models\ModifyDDoSGeoIPBlockConfigResponse ModifyDDoSGeoIPBlockConfig(Models\ModifyDDoSGeoIPBlockConfigRequest $req) 修改DDoS防护的区域封禁配置
+ * @method Models\ModifyDDoSLevelResponse ModifyDDoSLevel(Models\ModifyDDoSLevelRequest $req) 读取或修改DDoS的防护等级
  * @method Models\ModifyDDoSSpeedLimitConfigResponse ModifyDDoSSpeedLimitConfig(Models\ModifyDDoSSpeedLimitConfigRequest $req) 修改DDoS防护的访问限速配置
+ * @method Models\ModifyDDoSThresholdResponse ModifyDDoSThreshold(Models\ModifyDDoSThresholdRequest $req) 修改DDoS清洗阈值
  * @method Models\ModifyDomainUsrNameResponse ModifyDomainUsrName(Models\ModifyDomainUsrNameRequest $req) 修改智能解析域名名称
  * @method Models\ModifyL7RulesEdgeResponse ModifyL7RulesEdge(Models\ModifyL7RulesEdgeRequest $req) 修改边界防护L7转发规则
  * @method Models\ModifyNewDomainRulesResponse ModifyNewDomainRules(Models\ModifyNewDomainRulesRequest $req) 修改7层转发规则
  * @method Models\ModifyPacketFilterConfigResponse ModifyPacketFilterConfig(Models\ModifyPacketFilterConfigRequest $req) 修改DDoS防护的特征过滤规则
+ * @method Models\ModifyPortAclConfigResponse ModifyPortAclConfig(Models\ModifyPortAclConfigRequest $req) 修改DDoS防护的端口acl策略
  * @method Models\SwitchWaterPrintConfigResponse SwitchWaterPrintConfig(Models\SwitchWaterPrintConfigRequest $req) 开启或关闭DDoS防护的水印防护配置
  */
 

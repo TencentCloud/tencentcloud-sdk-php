@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterName(string $FilterName) 设置名称搜索
  * @method integer getFilterLine() 获取按照线路搜索, 1: BGP; 2: 三网
  * @method void setFilterLine(integer $FilterLine) 设置按照线路搜索, 1: BGP; 2: 三网
- * @method string getFilterStatus() 获取状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
- * @method void setFilterStatus(string $FilterStatus) 设置状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+ * @method string getFilterStatus() 获取状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
+ * @method void setFilterStatus(string $FilterStatus) 设置状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
  * @method string getFilterBoundStatus() 获取高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
  * @method void setFilterBoundStatus(string $FilterBoundStatus) 设置高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
  */
@@ -77,7 +77,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterLine;
 
     /**
-     * @var string 状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+     * @var string 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
      */
     public $FilterStatus;
 
@@ -94,7 +94,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param string $FilterRegion 地域搜索，例如，ap-guangzhou
      * @param string $FilterName 名称搜索
      * @param integer $FilterLine 按照线路搜索, 1: BGP; 2: 三网
-     * @param string $FilterStatus 状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+     * @param string $FilterStatus 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
      * @param string $FilterBoundStatus 高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
      */
     function __construct()

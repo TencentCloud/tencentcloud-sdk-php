@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置名称
  * @method string getPolicyType() 获取关系策略  取值：Financial
  * @method void setPolicyType(string $PolicyType) 设置关系策略  取值：Financial
- * @method array getPermissionIds() 获取关系权限
- * @method void setPermissionIds(array $PermissionIds) 设置关系权限
- * @method integer getNodeId() 获取需要调节的节点
- * @method void setNodeId(integer $NodeId) 设置需要调节的节点
+ * @method array getPermissionIds() 获取关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
+ * @method void setPermissionIds(array $PermissionIds) 设置关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
+ * @method integer getNodeId() 获取成员所属部门的节点ID
+ * @method void setNodeId(integer $NodeId) 设置成员所属部门的节点ID
  * @method string getAccountName() 获取账号名
  * @method void setAccountName(string $AccountName) 设置账号名
  * @method string getRemark() 获取备注
@@ -52,12 +52,12 @@ class CreateOrganizationMemberRequest extends AbstractModel
     public $PolicyType;
 
     /**
-     * @var array 关系权限
+     * @var array 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
      */
     public $PermissionIds;
 
     /**
-     * @var integer 需要调节的节点
+     * @var integer 成员所属部门的节点ID
      */
     public $NodeId;
 
@@ -89,8 +89,8 @@ class CreateOrganizationMemberRequest extends AbstractModel
     /**
      * @param string $Name 名称
      * @param string $PolicyType 关系策略  取值：Financial
-     * @param array $PermissionIds 关系权限
-     * @param integer $NodeId 需要调节的节点
+     * @param array $PermissionIds 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
+     * @param integer $NodeId 成员所属部门的节点ID
      * @param string $AccountName 账号名
      * @param string $Remark 备注
      * @param integer $RecordId 重试创建传记录ID

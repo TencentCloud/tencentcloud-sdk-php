@@ -198,6 +198,10 @@ notInService       不在服务区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIVRKeyPressedEx(array $IVRKeyPressedEx) 设置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAsrUrl() 获取获取录音ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAsrUrl(string $AsrUrl) 设置获取录音ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -403,6 +407,12 @@ notInService       不在服务区
     public $IVRKeyPressedEx;
 
     /**
+     * @var string 获取录音ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AsrUrl;
+
+    /**
      * @param string $Caller 主叫号码
      * @param string $Callee 被叫号码
      * @param integer $Time 呼叫发起时间戳，Unix 时间戳
@@ -491,6 +501,8 @@ notInService       不在服务区
      * @param string $Uui 客户自定义数据（User-to-User Interface）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IVRKeyPressedEx IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AsrUrl 获取录音ASR文本信息地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -632,6 +644,10 @@ notInService       不在服务区
                 $obj->deserialize($value);
                 array_push($this->IVRKeyPressedEx, $obj);
             }
+        }
+
+        if (array_key_exists("AsrUrl",$param) and $param["AsrUrl"] !== null) {
+            $this->AsrUrl = $param["AsrUrl"];
         }
     }
 }

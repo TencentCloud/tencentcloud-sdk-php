@@ -23,13 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getKeyWord() 获取搜索关键词
  * @method void setKeyWord(string $KeyWord) 设置搜索关键词
  * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-取值范围：Offset + Limit 不超过5000。取值范围：小于5000
+取值范围：Offset + Limit 不超过5000。
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-取值范围：Offset + Limit 不超过5000。取值范围：小于5000
+取值范围：Offset + Limit 不超过5000。
  * @method integer getLimit() 获取分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
-取值范围：Offset + Limit 不超过5000。
  * @method void setLimit(integer $Limit) 设置分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
-取值范围：Offset + Limit 不超过5000。
+ * @method SortBy getSort() 获取排序方式。默认按照匹配度排序
+<li> Sort.Field 可选 CreateTime</li>
+<li> Sort.Order 可选 Desc </li>
+<li> 当 KeyWord 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+ * @method void setSort(SortBy $Sort) 设置排序方式。默认按照匹配度排序
+<li> Sort.Field 可选 CreateTime</li>
+<li> Sort.Order 可选 Desc </li>
+<li> 当 KeyWord 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
  */
 class SearchKTVMusicsRequest extends AbstractModel
 {
@@ -40,22 +46,32 @@ class SearchKTVMusicsRequest extends AbstractModel
 
     /**
      * @var integer 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-取值范围：Offset + Limit 不超过5000。取值范围：小于5000
+取值范围：Offset + Limit 不超过5000。
      */
     public $Offset;
 
     /**
      * @var integer 分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
-取值范围：Offset + Limit 不超过5000。
      */
     public $Limit;
 
     /**
+     * @var SortBy 排序方式。默认按照匹配度排序
+<li> Sort.Field 可选 CreateTime</li>
+<li> Sort.Order 可选 Desc </li>
+<li> 当 KeyWord 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+     */
+    public $Sort;
+
+    /**
      * @param string $KeyWord 搜索关键词
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
-取值范围：Offset + Limit 不超过5000。取值范围：小于5000
-     * @param integer $Limit 分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
 取值范围：Offset + Limit 不超过5000。
+     * @param integer $Limit 分页返回的起始偏移量，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+     * @param SortBy $Sort 排序方式。默认按照匹配度排序
+<li> Sort.Field 可选 CreateTime</li>
+<li> Sort.Order 可选 Desc </li>
+<li> 当 KeyWord 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
      */
     function __construct()
     {
@@ -80,6 +96,11 @@ class SearchKTVMusicsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = new SortBy();
+            $this->Sort->deserialize($param["Sort"]);
         }
     }
 }

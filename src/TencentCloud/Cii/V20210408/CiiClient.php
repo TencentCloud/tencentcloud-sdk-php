@@ -23,12 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cii\V20210408\Models as Models;
 
 /**
- * @method Models\AddSubStructureTasksResponse AddSubStructureTasks(Models\AddSubStructureTasksRequest $req) 中银三星需求，基于主任务批量添加结构化子任务
+ * @method Models\AddSubStructureTasksResponse AddSubStructureTasks(Models\AddSubStructureTasksRequest $req) 如果主任务下的报告不满足需求，可以基于主任务批量添加子任务
  * @method Models\CreateAutoClassifyStructureTaskResponse CreateAutoClassifyStructureTask(Models\CreateAutoClassifyStructureTaskRequest $req) 本接口(CreateAutoClassifyStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
  * @method Models\CreateStructureTaskResponse CreateStructureTask(Models\CreateStructureTaskRequest $req) 本接口(CreateStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
  * @method Models\CreateUnderwriteTaskByIdResponse CreateUnderwriteTaskById(Models\CreateUnderwriteTaskByIdRequest $req) 本接口(CreateUnderwriteTaskById)用于根据结构化任务ID创建核保任务
  * @method Models\DescribeMachineUnderwriteResponse DescribeMachineUnderwrite(Models\DescribeMachineUnderwriteRequest $req) 本接口(DescribeMachineUnderwrite)用于查询机器核保任务数据
- * @method Models\DescribeReportClassifyResponse DescribeReportClassify(Models\DescribeReportClassifyRequest $req) saas页面集成了自动分类功能，该接口提供自动分类结果
+ * @method Models\DescribeReportClassifyResponse DescribeReportClassify(Models\DescribeReportClassifyRequest $req) 辅助用户对批量报告自动分类
  * @method Models\DescribeStructCompareDataResponse DescribeStructCompareData(Models\DescribeStructCompareDataRequest $req) 结构化对比查询接口，对比结构化复核前后数据差异，查询识别正确率，召回率。
  * @method Models\DescribeStructureDifferenceResponse DescribeStructureDifference(Models\DescribeStructureDifferenceRequest $req) 结构化复核差异查询接口，对比结构化复核前后数据差异，返回差异的部分。
  * @method Models\DescribeStructureResultResponse DescribeStructureResult(Models\DescribeStructureResultRequest $req) 本接口(DescribeStructureResult)用于查询结构化结果接口

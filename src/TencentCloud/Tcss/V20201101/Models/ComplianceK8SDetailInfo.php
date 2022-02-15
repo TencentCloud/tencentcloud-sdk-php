@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置K8S集群的名称。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterVersion() 获取K8S集群的版本。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterVersion(string $ClusterVersion) 设置K8S集群的版本。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceK8SDetailInfo extends AbstractModel
 {
@@ -34,7 +38,15 @@ class ComplianceK8SDetailInfo extends AbstractModel
     public $ClusterName;
 
     /**
+     * @var string K8S集群的版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterVersion;
+
+    /**
      * @param string $ClusterName K8S集群的名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterVersion K8S集群的版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +64,10 @@ class ComplianceK8SDetailInfo extends AbstractModel
         }
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("ClusterVersion",$param) and $param["ClusterVersion"] !== null) {
+            $this->ClusterVersion = $param["ClusterVersion"];
         }
     }
 }

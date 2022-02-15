@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableScan(boolean $EnableScan) 设置是否开启定期扫描
  * @method boolean getScanPathAll() 获取扫描全部路径
  * @method void setScanPathAll(boolean $ScanPathAll) 设置扫描全部路径
- * @method integer getScanPathType() 获取当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
- * @method void setScanPathType(integer $ScanPathType) 设置当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
+ * @method integer getScanPathType() 获取当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
+ * @method void setScanPathType(integer $ScanPathType) 设置当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
  * @method array getScanPath() 获取自选排除或扫描的地址
  * @method void setScanPath(array $ScanPath) 设置自选排除或扫描的地址
  */
@@ -42,7 +42,7 @@ class ModifyVirusMonitorSettingRequest extends AbstractModel
     public $ScanPathAll;
 
     /**
-     * @var integer 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
+     * @var integer 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
      */
     public $ScanPathType;
 
@@ -54,7 +54,7 @@ class ModifyVirusMonitorSettingRequest extends AbstractModel
     /**
      * @param boolean $EnableScan 是否开启定期扫描
      * @param boolean $ScanPathAll 扫描全部路径
-     * @param integer $ScanPathType 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
+     * @param integer $ScanPathType 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
      * @param array $ScanPath 自选排除或扫描的地址
      */
     function __construct()

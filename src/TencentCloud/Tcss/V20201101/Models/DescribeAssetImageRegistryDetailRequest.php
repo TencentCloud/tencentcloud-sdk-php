@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取仓库列表id
  * @method void setId(integer $Id) 设置仓库列表id
+ * @method string getImageId() 获取镜像ID
+ * @method void setImageId(string $ImageId) 设置镜像ID
  */
 class DescribeAssetImageRegistryDetailRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeAssetImageRegistryDetailRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var string 镜像ID
+     */
+    public $ImageId;
+
+    /**
      * @param integer $Id 仓库列表id
+     * @param string $ImageId 镜像ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeAssetImageRegistryDetailRequest extends AbstractModel
         }
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
         }
     }
 }

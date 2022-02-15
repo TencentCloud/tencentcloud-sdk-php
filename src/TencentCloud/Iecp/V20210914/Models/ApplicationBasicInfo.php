@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述信息
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method boolean getAllowVisualModify() 获取是否允许可视化修改
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAllowVisualModify(boolean $AllowVisualModify) 设置是否允许可视化修改
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationBasicInfo extends AbstractModel
 {
@@ -52,10 +56,18 @@ class ApplicationBasicInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var boolean 是否允许可视化修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AllowVisualModify;
+
+    /**
      * @param string $Name 名称
      * @param string $ManageUrl 管理URL地址
      * @param string $Description 描述信息
      * @param string $CreateTime 创建时间
+     * @param boolean $AllowVisualModify 是否允许可视化修改
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class ApplicationBasicInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("AllowVisualModify",$param) and $param["AllowVisualModify"] !== null) {
+            $this->AllowVisualModify = $param["AllowVisualModify"];
         }
     }
 }

@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setL1Category(string $L1Category) 设置一级自定义人物类型
  * @method string getL2Category() 获取二级自定义人物类型
  * @method void setL2Category(string $L2Category) 设置二级自定义人物类型
+ * @method array getImageInfoSet() 获取自定义人物图片信息
+ * @method void setImageInfoSet(array $ImageInfoSet) 设置自定义人物图片信息
+ * @method string getCreateTime() 获取自定义人物创建时间
+ * @method void setCreateTime(string $CreateTime) 设置自定义人物创建时间
  */
 class CustomPersonInfo extends AbstractModel
 {
@@ -59,11 +63,23 @@ class CustomPersonInfo extends AbstractModel
     public $L2Category;
 
     /**
+     * @var array 自定义人物图片信息
+     */
+    public $ImageInfoSet;
+
+    /**
+     * @var string 自定义人物创建时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $PersonId 自定义人物Id
      * @param string $Name 自定义人物姓名
      * @param string $BasicInfo 自定义人物简介信息
      * @param string $L1Category 一级自定义人物类型
      * @param string $L2Category 二级自定义人物类型
+     * @param array $ImageInfoSet 自定义人物图片信息
+     * @param string $CreateTime 自定义人物创建时间
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class CustomPersonInfo extends AbstractModel
 
         if (array_key_exists("L2Category",$param) and $param["L2Category"] !== null) {
             $this->L2Category = $param["L2Category"];
+        }
+
+        if (array_key_exists("ImageInfoSet",$param) and $param["ImageInfoSet"] !== null) {
+            $this->ImageInfoSet = [];
+            foreach ($param["ImageInfoSet"] as $key => $value){
+                $obj = new PersonImageInfo();
+                $obj->deserialize($value);
+                array_push($this->ImageInfoSet, $obj);
+            }
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

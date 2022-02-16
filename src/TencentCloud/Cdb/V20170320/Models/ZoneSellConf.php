@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 可用区售卖配置
  *
- * @method integer getStatus() 获取可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
- * @method void setStatus(integer $Status) 设置可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
+ * @method integer getStatus() 获取可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+ * @method void setStatus(integer $Status) 设置可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
  * @method string getZoneName() 获取可用区中文名称
  * @method void setZoneName(string $ZoneName) 设置可用区中文名称
  * @method boolean getIsCustom() 获取实例类型是否为自定义类型
@@ -54,11 +54,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteRoZone(array $RemoteRoZone) 设置可支持的跨可用区只读区信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExClusterStatus() 获取独享型可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+ * @method void setExClusterStatus(integer $ExClusterStatus) 设置独享型可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+ * @method array getExClusterRemoteRoZone() 获取独享型可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExClusterRemoteRoZone(array $ExClusterRemoteRoZone) 设置独享型可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ZoneConf getExClusterZoneConf() 获取独享型多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExClusterZoneConf(ZoneConf $ExClusterZoneConf) 设置独享型多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneSellConf extends AbstractModel
 {
     /**
-     * @var integer 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
+     * @var integer 可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
      */
     public $Status;
 
@@ -139,7 +149,24 @@ class ZoneSellConf extends AbstractModel
     public $RemoteRoZone;
 
     /**
-     * @param integer $Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
+     * @var integer 独享型可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+     */
+    public $ExClusterStatus;
+
+    /**
+     * @var array 独享型可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExClusterRemoteRoZone;
+
+    /**
+     * @var ZoneConf 独享型多可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExClusterZoneConf;
+
+    /**
+     * @param integer $Status 可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
      * @param string $ZoneName 可用区中文名称
      * @param boolean $IsCustom 实例类型是否为自定义类型
      * @param boolean $IsSupportDr 是否支持灾备
@@ -155,6 +182,11 @@ class ZoneSellConf extends AbstractModel
      * @param array $DrZone 可支持的灾备可用区信息
      * @param boolean $IsSupportRemoteRo 是否支持跨可用区只读
      * @param array $RemoteRoZone 可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExClusterStatus 独享型可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+     * @param array $ExClusterRemoteRoZone 独享型可支持的跨可用区只读区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneConf $ExClusterZoneConf 独享型多可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -238,6 +270,19 @@ class ZoneSellConf extends AbstractModel
 
         if (array_key_exists("RemoteRoZone",$param) and $param["RemoteRoZone"] !== null) {
             $this->RemoteRoZone = $param["RemoteRoZone"];
+        }
+
+        if (array_key_exists("ExClusterStatus",$param) and $param["ExClusterStatus"] !== null) {
+            $this->ExClusterStatus = $param["ExClusterStatus"];
+        }
+
+        if (array_key_exists("ExClusterRemoteRoZone",$param) and $param["ExClusterRemoteRoZone"] !== null) {
+            $this->ExClusterRemoteRoZone = $param["ExClusterRemoteRoZone"];
+        }
+
+        if (array_key_exists("ExClusterZoneConf",$param) and $param["ExClusterZoneConf"] !== null) {
+            $this->ExClusterZoneConf = new ZoneConf();
+            $this->ExClusterZoneConf->deserialize($param["ExClusterZoneConf"]);
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelectedRange(SelectedRange $SelectedRange) 设置选中的范围
  * @method CLS getCLS() 获取腾讯云日志服务相关参数
  * @method void setCLS(CLS $CLS) 设置腾讯云日志服务相关参数
+ * @method string getEncoding() 获取编码格式，可选值：TEXT、JSON
+ * @method void setEncoding(string $Encoding) 设置编码格式，可选值：TEXT、JSON
+ * @method string getFormat() 获取日志格式
+ * @method void setFormat(string $Format) 设置日志格式
  */
 class AccessLogConfig extends AbstractModel
 {
@@ -52,10 +56,22 @@ class AccessLogConfig extends AbstractModel
     public $CLS;
 
     /**
+     * @var string 编码格式，可选值：TEXT、JSON
+     */
+    public $Encoding;
+
+    /**
+     * @var string 日志格式
+     */
+    public $Format;
+
+    /**
      * @param boolean $Enable 是否启用
      * @param string $Template 采用的模板，可选值：istio（默认）、trace
      * @param SelectedRange $SelectedRange 选中的范围
      * @param CLS $CLS 腾讯云日志服务相关参数
+     * @param string $Encoding 编码格式，可选值：TEXT、JSON
+     * @param string $Format 日志格式
      */
     function __construct()
     {
@@ -86,6 +102,14 @@ class AccessLogConfig extends AbstractModel
         if (array_key_exists("CLS",$param) and $param["CLS"] !== null) {
             $this->CLS = new CLS();
             $this->CLS->deserialize($param["CLS"]);
+        }
+
+        if (array_key_exists("Encoding",$param) and $param["Encoding"] !== null) {
+            $this->Encoding = $param["Encoding"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
     }
 }

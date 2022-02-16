@@ -26,7 +26,9 @@ use TencentCloud\Ecdn\V20191012\Models as Models;
  * @method Models\AddEcdnDomainResponse AddEcdnDomain(Models\AddEcdnDomainRequest $req) 本接口（AddEcdnDomain）用于创建加速域名。
 
 >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41123"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
- * @method Models\CreateVerifyRecordResponse CreateVerifyRecord(Models\CreateVerifyRecordRequest $req) 生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权
+ * @method Models\CreateVerifyRecordResponse CreateVerifyRecord(Models\CreateVerifyRecordRequest $req) 生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权。
+
+>?  若您的业务已迁移至 CDN 控制台，请参考<a href="	https://cloud.tencent.com/document/api/228/48118"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
  * @method Models\DeleteEcdnDomainResponse DeleteEcdnDomain(Models\DeleteEcdnDomainRequest $req) 本接口（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必须处于已停用状态。
 
 >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/570/42471"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
@@ -37,7 +39,9 @@ use TencentCloud\Ecdn\V20191012\Models as Models;
 
 >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41117"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
  * @method Models\DescribeEcdnDomainLogsResponse DescribeEcdnDomainLogs(Models\DescribeEcdnDomainLogsRequest $req) 本接口（DescribeEcdnDomainLogs）用于查询域名的访问日志下载地址。
- * @method Models\DescribeEcdnDomainStatisticsResponse DescribeEcdnDomainStatistics(Models\DescribeEcdnDomainStatisticsRequest $req) 本接口（DescribeEcdnDomainStatistics）用于查询指定时间段内的域名访问统计指标
+ * @method Models\DescribeEcdnDomainStatisticsResponse DescribeEcdnDomainStatistics(Models\DescribeEcdnDomainStatisticsRequest $req) 本接口（DescribeEcdnDomainStatistics）用于查询指定时间段内的域名访问统计指标。
+
+>?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/30986"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
  * @method Models\DescribeEcdnStatisticsResponse DescribeEcdnStatistics(Models\DescribeEcdnStatisticsRequest $req) DescribeEcdnStatistics用于查询 ECDN 实时访问监控数据，支持以下指标查询：
 
 + 流量（单位为 byte）

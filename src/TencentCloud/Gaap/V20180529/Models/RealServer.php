@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerName(string $RealServerName) 设置源站名称
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
+ * @method integer getInBanBlacklist() 获取是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+ * @method void setInBanBlacklist(integer $InBanBlacklist) 设置是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
  */
 class RealServer extends AbstractModel
 {
@@ -52,10 +54,16 @@ class RealServer extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var integer 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+     */
+    public $InBanBlacklist;
+
+    /**
      * @param string $RealServerIP 源站的IP或域名
      * @param string $RealServerId 源站ID
      * @param string $RealServerName 源站名称
      * @param integer $ProjectId 项目ID
+     * @param integer $InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class RealServer extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("InBanBlacklist",$param) and $param["InBanBlacklist"] !== null) {
+            $this->InBanBlacklist = $param["InBanBlacklist"];
         }
     }
 }

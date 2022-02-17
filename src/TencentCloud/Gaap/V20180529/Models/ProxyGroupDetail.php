@@ -74,9 +74,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageType() 获取通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+ * @method string getPackageType() 获取通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageType(string $PackageType) 设置通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+ * @method void setPackageType(string $PackageType) 设置通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHttp3Supported() 获取支持Http3特性的标识，其中：
 0表示关闭；
@@ -185,7 +185,7 @@ class ProxyGroupDetail extends AbstractModel
     public $IPAddressVersion;
 
     /**
-     * @var string 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+     * @var string 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
@@ -226,7 +226,7 @@ class ProxyGroupDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+     * @param string $PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Http3Supported 支持Http3特性的标识，其中：
 0表示关闭；

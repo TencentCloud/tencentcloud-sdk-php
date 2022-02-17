@@ -42,14 +42,18 @@ online：已启动
 offline：已关闭
  * @method integer getProjectId() 获取项目 ID，可前往腾讯云项目管理页面查看
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，可前往腾讯云项目管理页面查看
- * @method string getServiceType() 获取域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
- * @method void setServiceType(string $ServiceType) 设置域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+ * @method string getServiceType() 获取加速域名业务类型
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
+ * @method void setServiceType(string $ServiceType) 设置加速域名业务类型
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
  * @method string getCreateTime() 获取域名创建时间
  * @method void setCreateTime(string $CreateTime) 设置域名创建时间
  * @method string getUpdateTime() 获取域名更新时间
@@ -290,6 +294,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShareCname(ShareCname $ShareCname) 设置共享CNAME配置（白名单功能）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RuleEngine getRuleEngine() 获取规则引擎
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleEngine(RuleEngine $RuleEngine) 设置规则引擎
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -329,10 +337,12 @@ offline：已关闭
     public $ProjectId;
 
     /**
-     * @var string 域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+     * @var string 加速域名业务类型
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
      */
     public $ServiceType;
 
@@ -669,6 +679,12 @@ off：不支持
     public $ShareCname;
 
     /**
+     * @var RuleEngine 规则引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleEngine;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -680,10 +696,12 @@ processing：部署中
 online：已启动
 offline：已关闭
      * @param integer $ProjectId 项目 ID，可前往腾讯云项目管理页面查看
-     * @param string $ServiceType 域名业务类型
-web：静态加速
-download：下载加速
-media：流媒体点播加速
+     * @param string $ServiceType 加速域名业务类型
+web：网页小文件
+download：下载大文件
+media：音视频点播
+hybrid:  动静加速
+dynamic:  动态加速
      * @param string $CreateTime 域名创建时间
      * @param string $UpdateTime 域名更新时间
      * @param Origin $Origin 源站配置
@@ -803,6 +821,8 @@ off：不支持
      * @param RemoteAuthentication $RemoteAuthentication 远程鉴权配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ShareCname $ShareCname 共享CNAME配置（白名单功能）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleEngine $RuleEngine 规则引擎
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1110,6 +1130,11 @@ off：不支持
         if (array_key_exists("ShareCname",$param) and $param["ShareCname"] !== null) {
             $this->ShareCname = new ShareCname();
             $this->ShareCname->deserialize($param["ShareCname"]);
+        }
+
+        if (array_key_exists("RuleEngine",$param) and $param["RuleEngine"] !== null) {
+            $this->RuleEngine = new RuleEngine();
+            $this->RuleEngine->deserialize($param["RuleEngine"]);
         }
     }
 }

@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置通知结束时间 00:00:00 开始的秒数（取值范围0-86399）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNoticeWay() 获取通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信
+ * @method array getNoticeWay() 获取通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信 RTX=企业微信
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeWay(array $NoticeWay) 设置通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信
+ * @method void setNoticeWay(array $NoticeWay) 设置通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信 RTX=企业微信
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUserIds() 获取用户 uid 列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeedPhoneArriveNotice(integer $NeedPhoneArriveNotice) 设置是否需要触达通知 0=否 1=是
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPhoneCallType() 获取电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPhoneCallType(string $PhoneCallType) 设置电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserNotice extends AbstractModel
 {
@@ -86,7 +90,7 @@ class UserNotice extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信
+     * @var array 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信 RTX=企业微信
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeWay;
@@ -134,13 +138,19 @@ class UserNotice extends AbstractModel
     public $NeedPhoneArriveNotice;
 
     /**
+     * @var string 电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PhoneCallType;
+
+    /**
      * @param string $ReceiverType 接收者类型 USER=用户 GROUP=用户组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 通知开始时间 00:00:00 开始的秒数（取值范围0-86399）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 通知结束时间 00:00:00 开始的秒数（取值范围0-86399）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NoticeWay 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信
+     * @param array $NoticeWay 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信 RTX=企业微信
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UserIds 用户 uid 列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,6 +165,8 @@ class UserNotice extends AbstractModel
      * @param integer $PhoneCircleInterval 两次轮询间隔 秒数（取值范围60-900）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NeedPhoneArriveNotice 是否需要触达通知 0=否 1=是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PhoneCallType 电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +224,10 @@ class UserNotice extends AbstractModel
 
         if (array_key_exists("NeedPhoneArriveNotice",$param) and $param["NeedPhoneArriveNotice"] !== null) {
             $this->NeedPhoneArriveNotice = $param["NeedPhoneArriveNotice"];
+        }
+
+        if (array_key_exists("PhoneCallType",$param) and $param["PhoneCallType"] !== null) {
+            $this->PhoneCallType = $param["PhoneCallType"];
         }
     }
 }

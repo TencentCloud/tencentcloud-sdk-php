@@ -142,6 +142,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagInstances(array $TagInstances) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFilterDimensionsParam() 获取策略关联的过滤维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFilterDimensionsParam(string $FilterDimensionsParam) 设置策略关联的过滤维度信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -323,6 +327,12 @@ class AlarmPolicy extends AbstractModel
     public $TagInstances;
 
     /**
+     * @var string 策略关联的过滤维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FilterDimensionsParam;
+
+    /**
      * @param string $PolicyId 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 告警策略名称
@@ -383,6 +393,8 @@ class AlarmPolicy extends AbstractModel
      * @param string $OriginId 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagInstances 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FilterDimensionsParam 策略关联的过滤维度信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -530,6 +542,10 @@ class AlarmPolicy extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagInstances, $obj);
             }
+        }
+
+        if (array_key_exists("FilterDimensionsParam",$param) and $param["FilterDimensionsParam"] !== null) {
+            $this->FilterDimensionsParam = $param["FilterDimensionsParam"];
         }
     }
 }

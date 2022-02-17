@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStructureResult(string $StructureResult) 设置结构化结果
  * @method string getSubTaskId() 获取子任务ID
  * @method void setSubTaskId(string $SubTaskId) 设置子任务ID
+ * @method array getTaskFiles() 获取任务文件列表
+ * @method void setTaskFiles(array $TaskFiles) 设置任务文件列表
  */
 class StructureResultObject extends AbstractModel
 {
@@ -52,10 +54,16 @@ class StructureResultObject extends AbstractModel
     public $SubTaskId;
 
     /**
+     * @var array 任务文件列表
+     */
+    public $TaskFiles;
+
+    /**
      * @param integer $Code 0表示正常返回；1代表结果未生成；2代表任务执行失败
      * @param string $TaskType 报告类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
      * @param string $StructureResult 结构化结果
      * @param string $SubTaskId 子任务ID
+     * @param array $TaskFiles 任务文件列表
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class StructureResultObject extends AbstractModel
 
         if (array_key_exists("SubTaskId",$param) and $param["SubTaskId"] !== null) {
             $this->SubTaskId = $param["SubTaskId"];
+        }
+
+        if (array_key_exists("TaskFiles",$param) and $param["TaskFiles"] !== null) {
+            $this->TaskFiles = $param["TaskFiles"];
         }
     }
 }

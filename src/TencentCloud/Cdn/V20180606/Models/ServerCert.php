@@ -61,6 +61,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置证书备注信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFrom() 获取证书来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFrom(string $From) 设置证书来源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerCert extends AbstractModel
 {
@@ -112,6 +116,12 @@ class ServerCert extends AbstractModel
     public $Message;
 
     /**
+     * @var string 证书来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $From;
+
+    /**
      * @param string $CertId 服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertName 服务器证书名称
@@ -130,6 +140,8 @@ class ServerCert extends AbstractModel
 作为入参配置时无需填充
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 证书备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $From 证书来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -171,6 +183,10 @@ class ServerCert extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("From",$param) and $param["From"] !== null) {
+            $this->From = $param["From"];
         }
     }
 }

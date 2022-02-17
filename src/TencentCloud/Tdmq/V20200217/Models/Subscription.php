@@ -84,6 +84,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最近修改时间。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubType() 获取订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubType(string $SubType) 设置订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getBlockedSubscriptionOnUnackedMsgs() 获取是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBlockedSubscriptionOnUnackedMsgs(boolean $BlockedSubscriptionOnUnackedMsgs) 设置是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxUnackedMsgNum() 获取未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxUnackedMsgNum(integer $MaxUnackedMsgNum) 设置未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Subscription extends AbstractModel
 {
@@ -188,6 +200,24 @@ class Subscription extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubType;
+
+    /**
+     * @var boolean 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BlockedSubscriptionOnUnackedMsgs;
+
+    /**
+     * @var integer 未 ack 消息数上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxUnackedMsgNum;
+
+    /**
      * @param string $TopicName 主题名称。
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $ConnectedSince 消费者开始连接的时间。
@@ -219,6 +249,12 @@ class Subscription extends AbstractModel
      * @param string $CreateTime 创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最近修改时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubType 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $BlockedSubscriptionOnUnackedMsgs 是否由于未 ack 数到达上限而被 block
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxUnackedMsgNum 未 ack 消息数上限
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -310,6 +346,18 @@ class Subscription extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("SubType",$param) and $param["SubType"] !== null) {
+            $this->SubType = $param["SubType"];
+        }
+
+        if (array_key_exists("BlockedSubscriptionOnUnackedMsgs",$param) and $param["BlockedSubscriptionOnUnackedMsgs"] !== null) {
+            $this->BlockedSubscriptionOnUnackedMsgs = $param["BlockedSubscriptionOnUnackedMsgs"];
+        }
+
+        if (array_key_exists("MaxUnackedMsgNum",$param) and $param["MaxUnackedMsgNum"] !== null) {
+            $this->MaxUnackedMsgNum = $param["MaxUnackedMsgNum"];
         }
     }
 }

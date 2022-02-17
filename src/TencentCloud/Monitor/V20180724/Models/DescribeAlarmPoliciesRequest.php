@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) 设置传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
  * @method integer getInstanceGroupId() 获取实例分组id
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组id
+ * @method integer getNeedCorrespondence() 获取是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+ * @method void setNeedCorrespondence(integer $NeedCorrespondence) 设置是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $InstanceGroupId;
 
     /**
+     * @var integer 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+     */
+    public $NeedCorrespondence;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -196,6 +203,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param array $Enable 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
      * @param integer $NotBindingNoticeRule 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
      * @param integer $InstanceGroupId 实例分组id
+     * @param integer $NeedCorrespondence 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
      */
     function __construct()
     {
@@ -280,6 +288,10 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 
         if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
             $this->InstanceGroupId = $param["InstanceGroupId"];
+        }
+
+        if (array_key_exists("NeedCorrespondence",$param) and $param["NeedCorrespondence"] !== null) {
+            $this->NeedCorrespondence = $param["NeedCorrespondence"];
         }
     }
 }

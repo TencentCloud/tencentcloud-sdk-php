@@ -100,6 +100,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPayMode() 获取计费模式：
+0: 按量计费
+1: 包年包月
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayMode(integer $PayMode) 设置计费模式：
+0: 按量计费
+1: 包年包月
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -248,6 +256,14 @@ class Cluster extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 计费模式：
+0: 按量计费
+1: 包年包月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayMode;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -287,6 +303,10 @@ class Cluster extends AbstractModel
      * @param boolean $PublicAccessEnabled 是否开启公网访问，不填时默认开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PayMode 计费模式：
+0: 按量计费
+1: 包年包月
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -409,6 +429,10 @@ class Cluster extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }

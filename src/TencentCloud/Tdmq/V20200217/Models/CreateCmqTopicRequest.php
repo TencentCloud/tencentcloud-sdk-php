@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
  * @method boolean getTrace() 获取是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
  * @method void setTrace(boolean $Trace) 设置是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
+ * @method array getTags() 获取标签数组
+ * @method void setTags(array $Tags) 设置标签数组
  */
 class CreateCmqTopicRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateCmqTopicRequest extends AbstractModel
     public $Trace;
 
     /**
+     * @var array 标签数组
+     */
+    public $Tags;
+
+    /**
      * @param string $TopicName 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
      * @param integer $MaxMsgSize 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
      * @param integer $FilterType 用于指定主题的消息匹配策略。1：表示标签匹配策略；2：表示路由匹配策略，默认值为标签匹配策略。
      * @param integer $MsgRetentionSeconds 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
      * @param boolean $Trace 是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
+     * @param array $Tags 标签数组
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class CreateCmqTopicRequest extends AbstractModel
 
         if (array_key_exists("Trace",$param) and $param["Trace"] !== null) {
             $this->Trace = $param["Trace"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

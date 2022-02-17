@@ -116,6 +116,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerLimit(string $ConsumerLimit) 设置消费者上限。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPulsarTopicType() 获取0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPulsarTopicType(integer $PulsarTopicType) 设置0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Topic extends AbstractModel
 {
@@ -252,6 +262,15 @@ class Topic extends AbstractModel
     public $ConsumerLimit;
 
     /**
+     * @var integer 0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PulsarTopicType;
+
+    /**
      * @param string $AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerCount 消费者数量。
@@ -299,6 +318,11 @@ class Topic extends AbstractModel
      * @param string $ProducerLimit 生产者上限。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerLimit 消费者上限。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PulsarTopicType 0: 非持久非分区
+1: 非持久分区
+2: 持久非分区
+3: 持久分区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -401,6 +425,10 @@ class Topic extends AbstractModel
 
         if (array_key_exists("ConsumerLimit",$param) and $param["ConsumerLimit"] !== null) {
             $this->ConsumerLimit = $param["ConsumerLimit"];
+        }
+
+        if (array_key_exists("PulsarTopicType",$param) and $param["PulsarTopicType"] !== null) {
+            $this->PulsarTopicType = $param["PulsarTopicType"];
         }
     }
 }

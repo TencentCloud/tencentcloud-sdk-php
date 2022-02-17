@@ -128,10 +128,10 @@ CLONING表示复制中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkType(string $NetworkType) 设置网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackageType() 获取通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+ * @method string getPackageType() 获取通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackageType(string $PackageType) 设置通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+ * @method void setPackageType(string $PackageType) 设置通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBanStatus() 获取封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
@@ -149,6 +149,10 @@ CrossBorder表示跨境通道。
  * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3协议的标识，其中：
 0表示关闭；
 1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInBanBlacklist() 获取是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInBanBlacklist(integer $InBanBlacklist) 设置是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
@@ -324,7 +328,7 @@ CLONING表示复制中。
     public $NetworkType;
 
     /**
-     * @var string 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+     * @var string 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -349,6 +353,12 @@ CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Http3Supported;
+
+    /**
+     * @var integer 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InBanBlacklist;
 
     /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
@@ -405,7 +415,7 @@ CLONING表示复制中。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+     * @param string $PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
@@ -415,6 +425,8 @@ CrossBorder表示跨境通道。
      * @param integer $Http3Supported 支持Http3协议的标识，其中：
 0表示关闭；
 1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -572,6 +584,10 @@ CrossBorder表示跨境通道。
 
         if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
             $this->Http3Supported = $param["Http3Supported"];
+        }
+
+        if (array_key_exists("InBanBlacklist",$param) and $param["InBanBlacklist"] !== null) {
+            $this->InBanBlacklist = $param["InBanBlacklist"];
         }
     }
 }

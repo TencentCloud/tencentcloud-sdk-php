@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientVersion(string $ClientVersion) 设置消费者版本。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPartition() 获取消费者连接的主题分区号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPartition(integer $Partition) 设置消费者连接的主题分区号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Consumer extends AbstractModel
 {
@@ -64,6 +68,12 @@ class Consumer extends AbstractModel
     public $ClientVersion;
 
     /**
+     * @var integer 消费者连接的主题分区号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Partition;
+
+    /**
      * @param string $ConnectedSince 消费者开始连接的时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerAddr 消费者地址。
@@ -71,6 +81,8 @@ class Consumer extends AbstractModel
      * @param string $ConsumerName 消费者名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientVersion 消费者版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Partition 消费者连接的主题分区号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class Consumer extends AbstractModel
 
         if (array_key_exists("ClientVersion",$param) and $param["ClientVersion"] !== null) {
             $this->ClientVersion = $param["ClientVersion"];
+        }
+
+        if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
+            $this->Partition = $param["Partition"];
         }
     }
 }

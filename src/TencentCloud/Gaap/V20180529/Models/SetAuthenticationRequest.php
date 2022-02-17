@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGaapCertificateId(string $GaapCertificateId) 设置通道SSL证书ID，从证书管理页获取。
  * @method string getRealServerCertificateId() 获取源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
  * @method void setRealServerCertificateId(string $RealServerCertificateId) 设置源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
- * @method string getRealServerCertificateDomain() 获取源站证书域名。
- * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) 设置源站证书域名。
+ * @method string getRealServerCertificateDomain() 获取该字段已废弃，请使用创建规则和修改规则中的SNI功能。
+ * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) 设置该字段已废弃，请使用创建规则和修改规则中的SNI功能。
  * @method array getPolyRealServerCertificateIds() 获取多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
  * @method void setPolyRealServerCertificateIds(array $PolyRealServerCertificateIds) 设置多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
  */
@@ -111,7 +111,7 @@ class SetAuthenticationRequest extends AbstractModel
     public $RealServerCertificateId;
 
     /**
-     * @var string 源站证书域名。
+     * @var string 该字段已废弃，请使用创建规则和修改规则中的SNI功能。
      */
     public $RealServerCertificateDomain;
 
@@ -138,7 +138,7 @@ class SetAuthenticationRequest extends AbstractModel
      * @param string $BasicAuthConfId 基础认证配置ID，从证书管理页获取。
      * @param string $GaapCertificateId 通道SSL证书ID，从证书管理页获取。
      * @param string $RealServerCertificateId 源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
-     * @param string $RealServerCertificateDomain 源站证书域名。
+     * @param string $RealServerCertificateDomain 该字段已废弃，请使用创建规则和修改规则中的SNI功能。
      * @param array $PolyRealServerCertificateIds 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
      */
     function __construct()

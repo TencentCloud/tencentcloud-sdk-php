@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxTimeToLive(integer $MaxTimeToLive) 设置policy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间msgRetentionSeconds
  * @method boolean getTrace() 获取是否开启消息轨迹追踪，当不设置字段时，默认为不开启，该字段为true表示开启，为false表示不开启
  * @method void setTrace(boolean $Trace) 设置是否开启消息轨迹追踪，当不设置字段时，默认为不开启，该字段为true表示开启，为false表示不开启
+ * @method array getTags() 获取标签数组
+ * @method void setTags(array $Tags) 设置标签数组
  */
 class CreateCmqQueueRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateCmqQueueRequest extends AbstractModel
     public $Trace;
 
     /**
+     * @var array 标签数组
+     */
+    public $Tags;
+
+    /**
      * @param string $QueueName 队列名字，在单个地域同一帐号下唯一。队列名称是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
      * @param integer $MaxMsgHeapNum 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
      * @param integer $PollingWaitSeconds 消息接收长轮询等待时间。取值范围 0-30 秒，默认值 0。
@@ -144,6 +151,7 @@ class CreateCmqQueueRequest extends AbstractModel
      * @param integer $MaxReceiveCount 最大接收次数 1-1000
      * @param integer $MaxTimeToLive policy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间msgRetentionSeconds
      * @param boolean $Trace 是否开启消息轨迹追踪，当不设置字段时，默认为不开启，该字段为true表示开启，为false表示不开启
+     * @param array $Tags 标签数组
      */
     function __construct()
     {
@@ -216,6 +224,15 @@ class CreateCmqQueueRequest extends AbstractModel
 
         if (array_key_exists("Trace",$param) and $param["Trace"] !== null) {
             $this->Trace = $param["Trace"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

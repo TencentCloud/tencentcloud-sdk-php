@@ -28,6 +28,7 @@ use TencentCloud\Cii\V20210408\Models as Models;
  * @method Models\CreateStructureTaskResponse CreateStructureTask(Models\CreateStructureTaskRequest $req) 本接口(CreateStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
  * @method Models\CreateUnderwriteTaskByIdResponse CreateUnderwriteTaskById(Models\CreateUnderwriteTaskByIdRequest $req) 本接口(CreateUnderwriteTaskById)用于根据结构化任务ID创建核保任务
  * @method Models\DescribeMachineUnderwriteResponse DescribeMachineUnderwrite(Models\DescribeMachineUnderwriteRequest $req) 本接口(DescribeMachineUnderwrite)用于查询机器核保任务数据
+ * @method Models\DescribeQualityScoreResponse DescribeQualityScore(Models\DescribeQualityScoreRequest $req) 获取图片质量分
  * @method Models\DescribeReportClassifyResponse DescribeReportClassify(Models\DescribeReportClassifyRequest $req) 辅助用户对批量报告自动分类
  * @method Models\DescribeStructCompareDataResponse DescribeStructCompareData(Models\DescribeStructCompareDataRequest $req) 结构化对比查询接口，对比结构化复核前后数据差异，查询识别正确率，召回率。
  * @method Models\DescribeStructureDifferenceResponse DescribeStructureDifference(Models\DescribeStructureDifferenceRequest $req) 结构化复核差异查询接口，对比结构化复核前后数据差异，返回差异的部分。
@@ -71,6 +72,15 @@ class CiiClient extends AbstractClient
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;
+    }
+
+    public function DescribeQualityScore($req)
+    {
+        $options = array(
+            "IsMultipart" => true,
+            "BinaryParams" => array("File"),
+        );
+        return $this->doRequestWithOptions("DescribeQualityScore", $req, $options);
     }
 
     public function UploadMedicalFile($req)

@@ -18,16 +18,14 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyClusterParam请求参数结构体
+ * ActivateInstance请求参数结构体
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getParamList() 获取修改参数列表
- * @method void setParamList(array $ParamList) 设置修改参数列表
- * @method string getIsInMaintainPeriod() 获取维护期间执行-yes,立即执行-no
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) 设置维护期间执行-yes,立即执行-no
+ * @method array getInstanceIdList() 获取实例ID数组
+ * @method void setInstanceIdList(array $InstanceIdList) 设置实例ID数组
  */
-class ModifyClusterParamRequest extends AbstractModel
+class ActivateInstanceRequest extends AbstractModel
 {
     /**
      * @var string 集群ID
@@ -35,19 +33,13 @@ class ModifyClusterParamRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 修改参数列表
+     * @var array 实例ID数组
      */
-    public $ParamList;
-
-    /**
-     * @var string 维护期间执行-yes,立即执行-no
-     */
-    public $IsInMaintainPeriod;
+    public $InstanceIdList;
 
     /**
      * @param string $ClusterId 集群ID
-     * @param array $ParamList 修改参数列表
-     * @param string $IsInMaintainPeriod 维护期间执行-yes,立即执行-no
+     * @param array $InstanceIdList 实例ID数组
      */
     function __construct()
     {
@@ -66,17 +58,8 @@ class ModifyClusterParamRequest extends AbstractModel
             $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("ParamList",$param) and $param["ParamList"] !== null) {
-            $this->ParamList = [];
-            foreach ($param["ParamList"] as $key => $value){
-                $obj = new ParamItem();
-                $obj->deserialize($value);
-                array_push($this->ParamList, $obj);
-            }
-        }
-
-        if (array_key_exists("IsInMaintainPeriod",$param) and $param["IsInMaintainPeriod"] !== null) {
-            $this->IsInMaintainPeriod = $param["IsInMaintainPeriod"];
+        if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
+            $this->InstanceIdList = $param["InstanceIdList"];
         }
     }
 }

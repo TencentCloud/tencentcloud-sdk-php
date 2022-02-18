@@ -18,16 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyClusterParam请求参数结构体
+ * DescribeClusterParamLogs请求参数结构体
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getParamList() 获取修改参数列表
- * @method void setParamList(array $ParamList) 设置修改参数列表
- * @method string getIsInMaintainPeriod() 获取维护期间执行-yes,立即执行-no
- * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) 设置维护期间执行-yes,立即执行-no
+ * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100
+ * @method integer getOffset() 获取记录偏移量，默认值为0
+ * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0
  */
-class ModifyClusterParamRequest extends AbstractModel
+class DescribeClusterParamLogsRequest extends AbstractModel
 {
     /**
      * @var string 集群ID
@@ -35,19 +35,19 @@ class ModifyClusterParamRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 修改参数列表
+     * @var integer 返回数量，默认为 20，最大值为 100
      */
-    public $ParamList;
+    public $Limit;
 
     /**
-     * @var string 维护期间执行-yes,立即执行-no
+     * @var integer 记录偏移量，默认值为0
      */
-    public $IsInMaintainPeriod;
+    public $Offset;
 
     /**
      * @param string $ClusterId 集群ID
-     * @param array $ParamList 修改参数列表
-     * @param string $IsInMaintainPeriod 维护期间执行-yes,立即执行-no
+     * @param integer $Limit 返回数量，默认为 20，最大值为 100
+     * @param integer $Offset 记录偏移量，默认值为0
      */
     function __construct()
     {
@@ -66,17 +66,12 @@ class ModifyClusterParamRequest extends AbstractModel
             $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("ParamList",$param) and $param["ParamList"] !== null) {
-            $this->ParamList = [];
-            foreach ($param["ParamList"] as $key => $value){
-                $obj = new ParamItem();
-                $obj->deserialize($value);
-                array_push($this->ParamList, $obj);
-            }
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("IsInMaintainPeriod",$param) and $param["IsInMaintainPeriod"] !== null) {
-            $this->IsInMaintainPeriod = $param["IsInMaintainPeriod"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStartTime() 获取开始时间
  * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method string getType() 获取类型
- * @method void setType(string $Type) 设置类型
+ * @method string getType() 获取allcount：性能视图，day：14天数据，condition：条件列表，ckuv：获取uv趋势，ckpv：获取pv趋势，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
+ * @method void setType(string $Type) 设置allcount：性能视图，day：14天数据，condition：条件列表，ckuv：获取uv趋势，ckpv：获取pv趋势，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
  * @method integer getEndTime() 获取结束时间
  * @method void setEndTime(integer $EndTime) 设置结束时间
  * @method integer getID() 获取项目ID
@@ -73,7 +73,7 @@ class DescribeDataEventUrlRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 类型
+     * @var string allcount：性能视图，day：14天数据，condition：条件列表，ckuv：获取uv趋势，ckpv：获取pv趋势，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
      */
     public $Type;
 
@@ -179,7 +179,7 @@ class DescribeDataEventUrlRequest extends AbstractModel
 
     /**
      * @param integer $StartTime 开始时间
-     * @param string $Type 类型
+     * @param string $Type allcount：性能视图，day：14天数据，condition：条件列表，ckuv：获取uv趋势，ckpv：获取pv趋势，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
      * @param integer $EndTime 结束时间
      * @param integer $ID 项目ID
      * @param string $ExtSecond 自定义2

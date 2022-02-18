@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStartTime() 获取开始时间
  * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method string getType() 获取"allcount", "falls", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
- * @method void setType(string $Type) 设置"allcount", "falls", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+ * @method string getType() 获取allcount：性能视图，data：小程序，component：小程序相关，day：14天数据，nettype：网络/平台视图，performance：页面性能TOP视图，version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：ISP视图/地区视图/浏览器视图等
+ * @method void setType(string $Type) 设置allcount：性能视图，data：小程序，component：小程序相关，day：14天数据，nettype：网络/平台视图，performance：页面性能TOP视图，version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：ISP视图/地区视图/浏览器视图等
  * @method integer getEndTime() 获取结束时间
  * @method void setEndTime(integer $EndTime) 设置结束时间
  * @method integer getID() 获取项目ID
@@ -73,7 +73,7 @@ class DescribeDataSetUrlStatisticsRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string "allcount", "falls", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+     * @var string allcount：性能视图，data：小程序，component：小程序相关，day：14天数据，nettype：网络/平台视图，performance：页面性能TOP视图，version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：ISP视图/地区视图/浏览器视图等
      */
     public $Type;
 
@@ -179,7 +179,7 @@ class DescribeDataSetUrlStatisticsRequest extends AbstractModel
 
     /**
      * @param integer $StartTime 开始时间
-     * @param string $Type "allcount", "falls", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+     * @param string $Type allcount：性能视图，data：小程序，component：小程序相关，day：14天数据，nettype：网络/平台视图，performance：页面性能TOP视图，version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：ISP视图/地区视图/浏览器视图等
      * @param integer $EndTime 结束时间
      * @param integer $ID 项目ID
      * @param string $ExtSecond 自定义2

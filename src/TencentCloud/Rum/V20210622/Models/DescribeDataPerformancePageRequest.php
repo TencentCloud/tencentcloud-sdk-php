@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置开始时间
  * @method integer getEndTime() 获取结束时间
  * @method void setEndTime(integer $EndTime) 设置结束时间
- * @method string getType() 获取["pagepv", "allcount"]
- * @method void setType(string $Type) 设置["pagepv", "allcount"]
+ * @method string getType() 获取pagepv：性能视图，allcount：性能视图，falls：页面加载瀑布图，samp：首屏时间，day：14天数据，nettype：网络/平台视图，performance：页面性能TOP视图，version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：ISP视图/地区视图/浏览器视图等
+ * @method void setType(string $Type) 设置pagepv：性能视图，allcount：性能视图，falls：页面加载瀑布图，samp：首屏时间，day：14天数据，nettype：网络/平台视图，performance：页面性能TOP视图，version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：ISP视图/地区视图/浏览器视图等
  * @method string getLevel() 获取日志等级
  * @method void setLevel(string $Level) 设置日志等级
  * @method string getIsp() 获取运营商
@@ -83,7 +83,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string ["pagepv", "allcount"]
+     * @var string pagepv：性能视图，allcount：性能视图，falls：页面加载瀑布图，samp：首屏时间，day：14天数据，nettype：网络/平台视图，performance：页面性能TOP视图，version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：ISP视图/地区视图/浏览器视图等
      */
     public $Type;
 
@@ -181,7 +181,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
      * @param integer $ID 项目ID
      * @param integer $StartTime 开始时间
      * @param integer $EndTime 结束时间
-     * @param string $Type ["pagepv", "allcount"]
+     * @param string $Type pagepv：性能视图，allcount：性能视图，falls：页面加载瀑布图，samp：首屏时间，day：14天数据，nettype：网络/平台视图，performance：页面性能TOP视图，version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：ISP视图/地区视图/浏览器视图等
      * @param string $Level 日志等级
      * @param string $Isp 运营商
      * @param string $Area 地区

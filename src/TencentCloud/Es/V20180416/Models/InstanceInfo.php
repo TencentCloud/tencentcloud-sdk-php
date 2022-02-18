@@ -236,6 +236,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthStatus(integer $HealthStatus) 设置集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEsPrivateUrl() 获取https集群内网url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsPrivateUrl(string $EsPrivateUrl) 设置https集群内网url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEsPrivateDomain() 获取https集群内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsPrivateDomain(string $EsPrivateDomain) 设置https集群内网域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -636,6 +644,18 @@ class InstanceInfo extends AbstractModel
     public $HealthStatus;
 
     /**
+     * @var string https集群内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsPrivateUrl;
+
+    /**
+     * @var string https集群内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsPrivateDomain;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -743,6 +763,10 @@ class InstanceInfo extends AbstractModel
      * @param integer $FrozenDiskSize 冻节点磁盘大小，单位GB
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HealthStatus 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EsPrivateUrl https集群内网url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EsPrivateDomain https集群内网域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1066,6 +1090,14 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
             $this->HealthStatus = $param["HealthStatus"];
+        }
+
+        if (array_key_exists("EsPrivateUrl",$param) and $param["EsPrivateUrl"] !== null) {
+            $this->EsPrivateUrl = $param["EsPrivateUrl"];
+        }
+
+        if (array_key_exists("EsPrivateDomain",$param) and $param["EsPrivateDomain"] !== null) {
+            $this->EsPrivateDomain = $param["EsPrivateDomain"];
         }
     }
 }

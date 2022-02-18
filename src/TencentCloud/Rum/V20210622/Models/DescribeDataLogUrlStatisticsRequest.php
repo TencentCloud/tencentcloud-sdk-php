@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStartTime() 获取开始时间
  * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method string getType() 获取"analysis", "compare", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
- * @method void setType(string $Type) 设置"analysis", "compare", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+ * @method string getType() 获取analysis：异常分析，compare：异常列表对比，allcount：性能视图，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
+ * @method void setType(string $Type) 设置analysis：异常分析，compare：异常列表对比，allcount：性能视图，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
  * @method integer getEndTime() 获取结束时间
  * @method void setEndTime(integer $EndTime) 设置结束时间
  * @method integer getID() 获取项目ID
@@ -71,7 +71,7 @@ class DescribeDataLogUrlStatisticsRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string "analysis", "compare", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+     * @var string analysis：异常分析，compare：异常列表对比，allcount：性能视图，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
      */
     public $Type;
 
@@ -172,7 +172,7 @@ class DescribeDataLogUrlStatisticsRequest extends AbstractModel
 
     /**
      * @param integer $StartTime 开始时间
-     * @param string $Type "analysis", "compare", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+     * @param string $Type analysis：异常分析，compare：异常列表对比，allcount：性能视图，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
      * @param integer $EndTime 结束时间
      * @param integer $ID 项目ID
      * @param string $ExtSecond 自定义2

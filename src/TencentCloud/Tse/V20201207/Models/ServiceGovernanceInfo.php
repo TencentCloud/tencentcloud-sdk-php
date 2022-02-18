@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBoundK8SInfos(array $BoundK8SInfos) 设置服务治理引擎绑定的kubernetes集群信息
  * @method array getVpcInfos() 获取服务治理引擎绑定的网络信息
  * @method void setVpcInfos(array $VpcInfos) 设置服务治理引擎绑定的网络信息
+ * @method boolean getAuthOpen() 获取当前实例鉴权是否开启
+ * @method void setAuthOpen(boolean $AuthOpen) 设置当前实例鉴权是否开启
+ * @method array getFeatures() 获取该实例支持的功能，鉴权就是 Auth
+ * @method void setFeatures(array $Features) 设置该实例支持的功能，鉴权就是 Auth
  */
 class ServiceGovernanceInfo extends AbstractModel
 {
@@ -45,9 +49,21 @@ class ServiceGovernanceInfo extends AbstractModel
     public $VpcInfos;
 
     /**
+     * @var boolean 当前实例鉴权是否开启
+     */
+    public $AuthOpen;
+
+    /**
+     * @var array 该实例支持的功能，鉴权就是 Auth
+     */
+    public $Features;
+
+    /**
      * @param string $EngineRegion 引擎所在的地域
      * @param array $BoundK8SInfos 服务治理引擎绑定的kubernetes集群信息
      * @param array $VpcInfos 服务治理引擎绑定的网络信息
+     * @param boolean $AuthOpen 当前实例鉴权是否开启
+     * @param array $Features 该实例支持的功能，鉴权就是 Auth
      */
     function __construct()
     {
@@ -82,6 +98,14 @@ class ServiceGovernanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VpcInfos, $obj);
             }
+        }
+
+        if (array_key_exists("AuthOpen",$param) and $param["AuthOpen"] !== null) {
+            $this->AuthOpen = $param["AuthOpen"];
+        }
+
+        if (array_key_exists("Features",$param) and $param["Features"] !== null) {
+            $this->Features = $param["Features"];
         }
     }
 }

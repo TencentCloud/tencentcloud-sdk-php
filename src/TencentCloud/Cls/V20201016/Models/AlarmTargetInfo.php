@@ -18,7 +18,7 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 日志告警监控对线
+ * 告警对象
  *
  * @method string getLogsetId() 获取日志集ID。
  * @method void setLogsetId(string $LogsetId) 设置日志集ID。

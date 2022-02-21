@@ -60,6 +60,10 @@ BU4M：带宽型保障 + 上行带宽保障4Mbps
 1. IP （默认值）
 2. UDP
 3. TCP
+ * @method Context getContext() 获取加速策略关键数据
+ * @method void setContext(Context $Context) 设置加速策略关键数据
+ * @method string getExtern() 获取签名
+ * @method void setExtern(string $Extern) 设置签名
  */
 class CreateQosRequest extends AbstractModel
 {
@@ -116,6 +120,16 @@ BU4M：带宽型保障 + 上行带宽保障4Mbps
     public $Protocol;
 
     /**
+     * @var Context 加速策略关键数据
+     */
+    public $Context;
+
+    /**
+     * @var string 签名
+     */
+    public $Extern;
+
+    /**
      * @param SrcAddressInfo $SrcAddressInfo 加速业务源地址信息，SrcIpv6和（SrcIpv4+SrcPublicIpv4）二选一，目前Ipv6不可用，全部填写以Ipv4参数为准。
      * @param DestAddressInfo $DestAddressInfo 加速业务目标地址信息
      * @param string $QosMenu 加速套餐
@@ -136,6 +150,8 @@ BU4M：带宽型保障 + 上行带宽保障4Mbps
 1. IP （默认值）
 2. UDP
 3. TCP
+     * @param Context $Context 加速策略关键数据
+     * @param string $Extern 签名
      */
     function __construct()
     {
@@ -184,6 +200,15 @@ BU4M：带宽型保障 + 上行带宽保障4Mbps
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("Context",$param) and $param["Context"] !== null) {
+            $this->Context = new Context();
+            $this->Context->deserialize($param["Context"]);
+        }
+
+        if (array_key_exists("Extern",$param) and $param["Extern"] !== null) {
+            $this->Extern = $param["Extern"];
         }
     }
 }

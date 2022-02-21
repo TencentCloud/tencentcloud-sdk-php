@@ -34,6 +34,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\ApplyWithdrawalResponse ApplyWithdrawal(Models\ApplyWithdrawalRequest $req) 商户提现
  * @method Models\BindAccountResponse BindAccount(Models\BindAccountRequest $req) 灵云-绑定账号
  * @method Models\BindAcctResponse BindAcct(Models\BindAcctRequest $req) 商户绑定提现银行卡，每个商户只能绑定一张提现银行卡
+ * @method Models\BindOpenBankExternalSubMerchantBankAccountResponse BindOpenBankExternalSubMerchantBankAccount(Models\BindOpenBankExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡绑定
  * @method Models\BindRelateAccReUnionPayResponse BindRelateAccReUnionPay(Models\BindRelateAccReUnionPayRequest $req) 会员绑定提现账户-回填银联鉴权短信码。用于会员填写动态验证码后，发往银行进行验证，验证成功则完成绑定。
  * @method Models\BindRelateAcctSmallAmountResponse BindRelateAcctSmallAmount(Models\BindRelateAcctSmallAmountRequest $req) 会员绑定提现账户-小额鉴权。会员申请绑定提现账户，绑定后从会员子账户中提现到绑定账户。
 转账鉴权有两种形式：往账鉴权和来账鉴权。
@@ -46,6 +47,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
 大小额联行号：单笔转账可超过5万，需具体到支行，不能实时知道对方是否收款成功。金额超过5万的，在工作日的8点30-17点间才会成功。
  * @method Models\CheckAcctResponse CheckAcct(Models\CheckAcctRequest $req) 商户绑定提现银行卡的验证接口
  * @method Models\CheckAmountResponse CheckAmount(Models\CheckAmountRequest $req) 验证鉴权金额。此接口可受理BindRelateAcctSmallAmount接口发起的转账金额（往账鉴权方式）的验证处理。若所回填的验证金额验证通过，则会绑定原申请中的银行账户作为提现账户。通过此接口也可以查得BindRelateAcctSmallAmount接口发起的来账鉴权方式的申请的当前状态。
+ * @method Models\CloseOpenBankPaymentOrderResponse CloseOpenBankPaymentOrder(Models\CloseOpenBankPaymentOrderRequest $req) 云企付-关闭订单
  * @method Models\CloseOrderResponse CloseOrder(Models\CloseOrderRequest $req) 通过此接口关闭此前已创建的订单，关闭后，用户将无法继续付款。仅能关闭创建后未支付的订单
  * @method Models\ConfirmOrderResponse ConfirmOrder(Models\ConfirmOrderRequest $req) 云鉴-消费订单确认接口
  * @method Models\ContractOrderResponse ContractOrder(Models\ContractOrderRequest $req) 应用需要先带上签约信息调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
@@ -59,6 +61,9 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateInvoiceResponse CreateInvoice(Models\CreateInvoiceRequest $req) 智慧零售-发票开具
  * @method Models\CreateInvoiceV2Response CreateInvoiceV2(Models\CreateInvoiceV2Request $req) 智慧零售-发票开具V2
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 智慧零售-商户注册
+ * @method Models\CreateOpenBankExternalSubMerchantRegistrationResponse CreateOpenBankExternalSubMerchantRegistration(Models\CreateOpenBankExternalSubMerchantRegistrationRequest $req) 云企付-子商户进件
+ * @method Models\CreateOpenBankMerchantResponse CreateOpenBankMerchant(Models\CreateOpenBankMerchantRequest $req) 云企付-创建商户
+ * @method Models\CreateOpenBankPaymentOrderResponse CreateOpenBankPaymentOrder(Models\CreateOpenBankPaymentOrderRequest $req) 云企付-创建支付订单
  * @method Models\CreateOrderResponse CreateOrder(Models\CreateOrderRequest $req) 云鉴-消费订单发起的接口
  * @method Models\CreatePayMerchantResponse CreatePayMerchant(Models\CreatePayMerchantRequest $req) 商户新增的接口
  * @method Models\CreateRedInvoiceResponse CreateRedInvoice(Models\CreateRedInvoiceRequest $req) 智慧零售-发票红冲
@@ -124,6 +129,12 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagement(Models\QueryMerchantInfoForManagementRequest $req) 智慧零售-查询管理端商户
  * @method Models\QueryMerchantOrderResponse QueryMerchantOrder(Models\QueryMerchantOrderRequest $req) 云鉴-消费订单查询接口
  * @method Models\QueryMerchantPayWayListResponse QueryMerchantPayWayList(Models\QueryMerchantPayWayListRequest $req) 商户查询已开通的支付方式列表
+ * @method Models\QueryOpenBankBindExternalSubMerchantBankAccountResponse QueryOpenBankBindExternalSubMerchantBankAccount(Models\QueryOpenBankBindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡绑定结果查询
+ * @method Models\QueryOpenBankDownLoadUrlResponse QueryOpenBankDownLoadUrl(Models\QueryOpenBankDownLoadUrlRequest $req) 云企付-查询对账单下载地址
+ * @method Models\QueryOpenBankExternalSubMerchantBankAccountResponse QueryOpenBankExternalSubMerchantBankAccount(Models\QueryOpenBankExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡列表查询
+ * @method Models\QueryOpenBankExternalSubMerchantRegistrationResponse QueryOpenBankExternalSubMerchantRegistration(Models\QueryOpenBankExternalSubMerchantRegistrationRequest $req) 云企付-子商户进件结果查询
+ * @method Models\QueryOpenBankPaymentOrderResponse QueryOpenBankPaymentOrder(Models\QueryOpenBankPaymentOrderRequest $req) 云企付-查询订单支付结果
+ * @method Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResponse QueryOpenBankUnbindExternalSubMerchantBankAccount(Models\QueryOpenBankUnbindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡解绑结果查询
  * @method Models\QueryOrderResponse QueryOrder(Models\QueryOrderRequest $req) 根据订单号，或者用户Id，查询支付订单状态 
  * @method Models\QueryOrderStatusResponse QueryOrderStatus(Models\QueryOrderStatusRequest $req) 云支付-查询订单付款状态
  * @method Models\QueryOutwardOrderResponse QueryOutwardOrder(Models\QueryOutwardOrderRequest $req) 跨境-查询汇出结果
@@ -156,6 +167,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\TerminateContractResponse TerminateContract(Models\TerminateContractRequest $req) 通过此接口进行解约
  * @method Models\TransferSinglePayResponse TransferSinglePay(Models\TransferSinglePayRequest $req) 智能代发-单笔代发转账接口
  * @method Models\UnBindAcctResponse UnBindAcct(Models\UnBindAcctRequest $req) 商户解除绑定的提现银行卡
+ * @method Models\UnbindOpenBankExternalSubMerchantBankAccountResponse UnbindOpenBankExternalSubMerchantBankAccount(Models\UnbindOpenBankExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡解绑
  * @method Models\UnbindRelateAcctResponse UnbindRelateAcct(Models\UnbindRelateAcctRequest $req) 会员解绑提现账户。此接口可以支持会员解除名下的绑定账户关系。
  * @method Models\UnifiedOrderResponse UnifiedOrder(Models\UnifiedOrderRequest $req) 应用需要先调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
  * @method Models\UnifiedTlinxOrderResponse UnifiedTlinxOrder(Models\UnifiedTlinxOrderRequest $req) 云支付-统一下单接口

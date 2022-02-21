@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Eb\V20210416\Models as Models;
 
 /**
- * @method Models\CheckRuleResponse CheckRule(Models\CheckRuleRequest $req) 规则检验
+ * @method Models\CheckRuleResponse CheckRule(Models\CheckRuleRequest $req) 检验规则
  * @method Models\CheckTransformationResponse CheckTransformation(Models\CheckTransformationRequest $req) 用于在ETL配置页面, 测试规则和数据.
  * @method Models\CreateConnectionResponse CreateConnection(Models\CreateConnectionRequest $req) 创建事件连接器
  * @method Models\CreateEventBusResponse CreateEventBus(Models\CreateEventBusRequest $req) 用于创建事件集

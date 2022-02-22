@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getEdgeUnitId() 获取IECP边缘单元ID
  * @method void setEdgeUnitId(integer $EdgeUnitId) 设置IECP边缘单元ID
- * @method integer getNodeUnitTemplateID() 获取NodeUnit模版ID
- * @method void setNodeUnitTemplateID(integer $NodeUnitTemplateID) 设置NodeUnit模版ID
+ * @method integer getNodeUnitTemplateID() 获取NodeUnit模板ID
+ * @method void setNodeUnitTemplateID(integer $NodeUnitTemplateID) 设置NodeUnit模板ID
  * @method array getNodes() 获取包含的节点列表
  * @method void setNodes(array $Nodes) 设置包含的节点列表
  */
@@ -35,7 +35,7 @@ class ModifyNodeUnitTemplateRequest extends AbstractModel
     public $EdgeUnitId;
 
     /**
-     * @var integer NodeUnit模版ID
+     * @var integer NodeUnit模板ID
      */
     public $NodeUnitTemplateID;
 
@@ -46,7 +46,7 @@ class ModifyNodeUnitTemplateRequest extends AbstractModel
 
     /**
      * @param integer $EdgeUnitId IECP边缘单元ID
-     * @param integer $NodeUnitTemplateID NodeUnit模版ID
+     * @param integer $NodeUnitTemplateID NodeUnit模板ID
      * @param array $Nodes 包含的节点列表
      */
     function __construct()

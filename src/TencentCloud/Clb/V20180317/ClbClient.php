@@ -98,6 +98,7 @@ BGP带宽包必须传带宽包id
 
  * @method Models\DescribeLoadBalancersDetailResponse DescribeLoadBalancersDetail(Models\DescribeLoadBalancersDetailRequest $req) 查询负载均衡的详细信息，包括监听器，规则及后端目标。
  * @method Models\DescribeQuotaResponse DescribeQuota(Models\DescribeQuotaRequest $req) 查询用户当前地域下的各项配额
+ * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) 查询用户在当前地域支持可用区列表和资源列表。
  * @method Models\DescribeRewriteResponse DescribeRewrite(Models\DescribeRewriteRequest $req) DescribeRewrite 接口可根据负载均衡实例ID，查询一个负载均衡实例下转发规则的重定向关系。如果不指定监听器ID或转发规则ID，则返回该负载均衡实例下的所有重定向关系。
  * @method Models\DescribeTargetGroupInstancesResponse DescribeTargetGroupInstances(Models\DescribeTargetGroupInstancesRequest $req) 获取目标组绑定的服务器信息
  * @method Models\DescribeTargetGroupListResponse DescribeTargetGroupList(Models\DescribeTargetGroupListRequest $req) 获取目标组列表

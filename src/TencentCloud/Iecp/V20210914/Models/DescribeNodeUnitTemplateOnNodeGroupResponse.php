@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotal() 获取记录总数
  * @method void setTotal(integer $Total) 设置记录总数
- * @method array getNodeUnitTemplates() 获取NodeUnit模版
+ * @method array getNodeUnitTemplates() 获取NodeUnit模板
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeUnitTemplates(array $NodeUnitTemplates) 设置NodeUnit模版
+ * @method void setNodeUnitTemplates(array $NodeUnitTemplates) 设置NodeUnit模板
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +37,7 @@ class DescribeNodeUnitTemplateOnNodeGroupResponse extends AbstractModel
     public $Total;
 
     /**
-     * @var array NodeUnit模版
+     * @var array NodeUnit模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeUnitTemplates;
@@ -49,7 +49,7 @@ class DescribeNodeUnitTemplateOnNodeGroupResponse extends AbstractModel
 
     /**
      * @param integer $Total 记录总数
-     * @param array $NodeUnitTemplates NodeUnit模版
+     * @param array $NodeUnitTemplates NodeUnit模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

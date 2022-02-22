@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerDesc(string $TriggerDesc) 设置触发器对应的参数，可见具体[触发器描述说明](https://cloud.tencent.com/document/product/583/39901)
  * @method string getNamespace() 获取函数的命名空间
  * @method void setNamespace(string $Namespace) 设置函数的命名空间
- * @method string getQualifier() 获取函数的版本
- * @method void setQualifier(string $Qualifier) 设置函数的版本
+ * @method string getQualifier() 获取函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
+ * @method void setQualifier(string $Qualifier) 设置函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
  * @method string getEnable() 获取触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
  * @method void setEnable(string $Enable) 设置触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
  * @method string getCustomArgument() 获取用户自定义参数，仅支持timer触发器
@@ -65,7 +65,7 @@ class CreateTriggerRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 函数的版本
+     * @var string 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
      */
     public $Qualifier;
 
@@ -85,7 +85,7 @@ class CreateTriggerRequest extends AbstractModel
      * @param string $Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka、apigw类型。创建 cls 触发器请参考[CLS 创建投递 SCF 任务](https://cloud.tencent.com/document/product/614/61096)。
      * @param string $TriggerDesc 触发器对应的参数，可见具体[触发器描述说明](https://cloud.tencent.com/document/product/583/39901)
      * @param string $Namespace 函数的命名空间
-     * @param string $Qualifier 函数的版本
+     * @param string $Qualifier 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
      * @param string $Enable 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
      * @param string $CustomArgument 用户自定义参数，仅支持timer触发器
      */

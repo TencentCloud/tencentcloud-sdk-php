@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() 获取需要查询的云数据库产品类型，目前仅支持 "mysql"。
  * @method void setProduct(string $Product) 设置需要查询的云数据库产品类型，目前仅支持 "mysql"。
- * @method integer getOffset() 获取分页查询数据的偏移量。
- * @method void setOffset(integer $Offset) 设置分页查询数据的偏移量。
- * @method integer getLimit() 获取分页查询数据的条目限制，默认值为20。
- * @method void setLimit(integer $Limit) 设置分页查询数据的条目限制，默认值为20。
- * @method string getOrderBy() 获取指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
- * @method void setOrderBy(string $OrderBy) 设置指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
- * @method string getOrderDirection() 获取指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
- * @method void setOrderDirection(string $OrderDirection) 设置指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
+ * @method integer getOffset() 获取分页查询数据的偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置分页查询数据的偏移量，默认为0。
+ * @method integer getLimit() 获取分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
+ * @method void setLimit(integer $Limit) 设置分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
+ * @method string getOrderBy() 获取指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。
+ * @method void setOrderBy(string $OrderBy) 设置指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。
+ * @method string getOrderDirection() 获取指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。默认值为 ASC。
+ * @method void setOrderDirection(string $OrderDirection) 设置指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。默认值为 ASC。
  */
 class DescribeBackupSummariesRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class DescribeBackupSummariesRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var integer 分页查询数据的偏移量。
+     * @var integer 分页查询数据的偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 分页查询数据的条目限制，默认值为20。
+     * @var integer 分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
      */
     public $Limit;
 
     /**
-     * @var string 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
+     * @var string 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。
      */
     public $OrderBy;
 
     /**
-     * @var string 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
+     * @var string 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。默认值为 ASC。
      */
     public $OrderDirection;
 
     /**
      * @param string $Product 需要查询的云数据库产品类型，目前仅支持 "mysql"。
-     * @param integer $Offset 分页查询数据的偏移量。
-     * @param integer $Limit 分页查询数据的条目限制，默认值为20。
-     * @param string $OrderBy 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
-     * @param string $OrderDirection 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
+     * @param integer $Offset 分页查询数据的偏移量，默认为0。
+     * @param integer $Limit 分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
+     * @param string $OrderBy 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。
+     * @param string $OrderDirection 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。默认值为 ASC。
      */
     function __construct()
     {

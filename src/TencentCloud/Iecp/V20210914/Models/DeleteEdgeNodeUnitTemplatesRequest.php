@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getEdgeUnitId() 获取IECP边缘单元ID
  * @method void setEdgeUnitId(integer $EdgeUnitId) 设置IECP边缘单元ID
- * @method array getNodeUnitTemplateIDs() 获取删除的NodeUnit模版ID列表
- * @method void setNodeUnitTemplateIDs(array $NodeUnitTemplateIDs) 设置删除的NodeUnit模版ID列表
+ * @method array getNodeUnitTemplateIDs() 获取删除的NodeUnit模板ID列表
+ * @method void setNodeUnitTemplateIDs(array $NodeUnitTemplateIDs) 设置删除的NodeUnit模板ID列表
  */
 class DeleteEdgeNodeUnitTemplatesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteEdgeNodeUnitTemplatesRequest extends AbstractModel
     public $EdgeUnitId;
 
     /**
-     * @var array 删除的NodeUnit模版ID列表
+     * @var array 删除的NodeUnit模板ID列表
      */
     public $NodeUnitTemplateIDs;
 
     /**
      * @param integer $EdgeUnitId IECP边缘单元ID
-     * @param array $NodeUnitTemplateIDs 删除的NodeUnit模版ID列表
+     * @param array $NodeUnitTemplateIDs 删除的NodeUnit模板ID列表
      */
     function __construct()
     {

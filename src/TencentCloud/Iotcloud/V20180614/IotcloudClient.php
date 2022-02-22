@@ -37,6 +37,7 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
  * @method Models\CreateTopicPolicyResponse CreateTopicPolicy(Models\CreateTopicPolicyRequest $req) 本接口（CreateTopicPolicy）用于创建一个Topic 
  * @method Models\CreateTopicRuleResponse CreateTopicRule(Models\CreateTopicRuleRequest $req) 本接口（CreateTopicRule）用于创建一个规则 
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 本接口（DeleteDevice）用于删除物联网通信设备。 
+ * @method Models\DeleteDeviceResourceResponse DeleteDeviceResource(Models\DeleteDeviceResourceRequest $req) 本接口（DeleteDeviceResource）用于删除设备资源
  * @method Models\DeleteLoraDeviceResponse DeleteLoraDevice(Models\DeleteLoraDeviceRequest $req) 删除lora类型的设备
  * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) 本接口（DeleteProduct）用于删除一个物联网通信产品
  * @method Models\DeleteTopicRuleResponse DeleteTopicRule(Models\DeleteTopicRuleRequest $req) 本接口（DeleteTopicRule）用于删除规则
@@ -66,6 +67,7 @@ use TencentCloud\Iotcloud\V20180614\Models as Models;
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 本接口（DescribeTask）用于查询一个已创建任务的详情，任务保留一个月 
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 本接口（DescribeTasks）用于查询已创建的任务列表，任务保留一个月 
  * @method Models\DisableTopicRuleResponse DisableTopicRule(Models\DisableTopicRuleRequest $req) 本接口（DisableTopicRule）用于禁用规则
+ * @method Models\DownloadDeviceResourceResponse DownloadDeviceResource(Models\DownloadDeviceResourceRequest $req) 本接口（DownloadDeviceResource）用于下载设备资源
  * @method Models\EditFirmwareResponse EditFirmware(Models\EditFirmwareRequest $req) 编辑固件信息
  * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 本接口（EnableTopicRule）用于启用规则 
  * @method Models\GetCOSURLResponse GetCOSURL(Models\GetCOSURLRequest $req) 本接口（GetCOSURL）用于获取固件存储在COS的URL 

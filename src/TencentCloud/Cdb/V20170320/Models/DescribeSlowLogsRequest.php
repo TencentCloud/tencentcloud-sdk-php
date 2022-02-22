@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method integer getOffset() 获取偏移量，最小值为0。
- * @method void setOffset(integer $Offset) 设置偏移量，最小值为0。
+ * @method integer getOffset() 获取偏移量，默认值为0，最小值为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值为0，最小值为0。
  * @method integer getLimit() 获取分页大小，默认值为20，最小值为1，最大值为100。
  * @method void setLimit(integer $Limit) 设置分页大小，默认值为20，最小值为1，最大值为100。
  */
@@ -35,7 +35,7 @@ class DescribeSlowLogsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 偏移量，最小值为0。
+     * @var integer 偏移量，默认值为0，最小值为0。
      */
     public $Offset;
 
@@ -46,7 +46,7 @@ class DescribeSlowLogsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param integer $Offset 偏移量，最小值为0。
+     * @param integer $Offset 偏移量，默认值为0，最小值为0。
      * @param integer $Limit 分页大小，默认值为20，最小值为1，最大值为100。
      */
     function __construct()

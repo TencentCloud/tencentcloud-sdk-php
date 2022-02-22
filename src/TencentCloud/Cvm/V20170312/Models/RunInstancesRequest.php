@@ -86,6 +86,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
  * @method LaunchTemplate getLaunchTemplate() 获取实例启动模板。
  * @method void setLaunchTemplate(LaunchTemplate $LaunchTemplate) 设置实例启动模板。
+ * @method array getChcIds() 获取指定CHC物理服务器来创建CHC云主机。
+ * @method void setChcIds(array $ChcIds) 设置指定CHC物理服务器来创建CHC云主机。
  */
 class RunInstancesRequest extends AbstractModel
 {
@@ -223,6 +225,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $LaunchTemplate;
 
     /**
+     * @var array 指定CHC物理服务器来创建CHC云主机。
+     */
+    public $ChcIds;
+
+    /**
      * @param string $InstanceChargeType 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）<br><li>SPOTPAID：竞价付费<br><li>CDCPAID：专用集群付费<br>默认值：POSTPAID_BY_HOUR。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
@@ -256,6 +263,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param string $CamRoleName CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
      * @param string $HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
      * @param LaunchTemplate $LaunchTemplate 实例启动模板。
+     * @param array $ChcIds 指定CHC物理服务器来创建CHC云主机。
      */
     function __construct()
     {
@@ -388,6 +396,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (array_key_exists("LaunchTemplate",$param) and $param["LaunchTemplate"] !== null) {
             $this->LaunchTemplate = new LaunchTemplate();
             $this->LaunchTemplate->deserialize($param["LaunchTemplate"]);
+        }
+
+        if (array_key_exists("ChcIds",$param) and $param["ChcIds"] !== null) {
+            $this->ChcIds = $param["ChcIds"];
         }
     }
 }

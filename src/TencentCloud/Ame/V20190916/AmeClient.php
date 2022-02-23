@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ame\V20190916\Models as Models;
 
 /**
+ * @method Models\BatchDescribeKTVMusicDetailsResponse BatchDescribeKTVMusicDetails(Models\BatchDescribeKTVMusicDetailsRequest $req) 根据 Id 列表查询歌曲的详细信息，包含基础信息及播放信息。
  * @method Models\CreateKTVRobotResponse CreateKTVRobot(Models\CreateKTVRobotRequest $req) 创建机器人，支持进入 RTC 房间，播放直播互动曲库歌曲。
  * @method Models\DescribeAuthInfoResponse DescribeAuthInfo(Models\DescribeAuthInfoRequest $req) 获取授权项目信息列表
  * @method Models\DescribeCloudMusicResponse DescribeCloudMusic(Models\DescribeCloudMusicRequest $req) 获取云音乐播放信息接口

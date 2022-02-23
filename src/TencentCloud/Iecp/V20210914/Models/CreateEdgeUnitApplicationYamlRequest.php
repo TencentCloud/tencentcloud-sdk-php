@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getEdgeUnitId() 获取单元ID
  * @method void setEdgeUnitId(integer $EdgeUnitId) 设置单元ID
+ * @method string getYaml() 获取base64后的Yaml配置
+ * @method void setYaml(string $Yaml) 设置base64后的Yaml配置
  * @method ApplicationBasicInfo getBasicInfo() 获取基本信息
  * @method void setBasicInfo(ApplicationBasicInfo $BasicInfo) 设置基本信息
- * @method string getYaml() 获取Yaml配置
- * @method void setYaml(string $Yaml) 设置Yaml配置
  */
 class CreateEdgeUnitApplicationYamlRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class CreateEdgeUnitApplicationYamlRequest extends AbstractModel
     public $EdgeUnitId;
 
     /**
+     * @var string base64后的Yaml配置
+     */
+    public $Yaml;
+
+    /**
      * @var ApplicationBasicInfo 基本信息
      */
     public $BasicInfo;
 
     /**
-     * @var string Yaml配置
-     */
-    public $Yaml;
-
-    /**
      * @param integer $EdgeUnitId 单元ID
+     * @param string $Yaml base64后的Yaml配置
      * @param ApplicationBasicInfo $BasicInfo 基本信息
-     * @param string $Yaml Yaml配置
      */
     function __construct()
     {
@@ -66,13 +66,13 @@ class CreateEdgeUnitApplicationYamlRequest extends AbstractModel
             $this->EdgeUnitId = $param["EdgeUnitId"];
         }
 
+        if (array_key_exists("Yaml",$param) and $param["Yaml"] !== null) {
+            $this->Yaml = $param["Yaml"];
+        }
+
         if (array_key_exists("BasicInfo",$param) and $param["BasicInfo"] !== null) {
             $this->BasicInfo = new ApplicationBasicInfo();
             $this->BasicInfo->deserialize($param["BasicInfo"]);
-        }
-
-        if (array_key_exists("Yaml",$param) and $param["Yaml"] !== null) {
-            $this->Yaml = $param["Yaml"];
         }
     }
 }

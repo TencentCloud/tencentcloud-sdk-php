@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAddressTemplates返回参数结构体
+ * CreateHourDCDBInstance返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的实例数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
- * @method array getAddressTemplateSet() 获取IP地址模板。
- * @method void setAddressTemplateSet(array $AddressTemplateSet) 设置IP地址模板。
+ * @method array getInstanceIds() 获取订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
+ * @method void setInstanceIds(array $InstanceIds) 设置订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
+ * @method integer getFlowId() 获取流程id，可以根据流程id查询创建进度
+ * @method void setFlowId(integer $FlowId) 设置流程id，可以根据流程id查询创建进度
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAddressTemplatesResponse extends AbstractModel
+class CreateHourDCDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的实例数量。
+     * @var array 订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
      */
-    public $TotalCount;
+    public $InstanceIds;
 
     /**
-     * @var array IP地址模板。
+     * @var integer 流程id，可以根据流程id查询创建进度
      */
-    public $AddressTemplateSet;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeAddressTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的实例数量。
-     * @param array $AddressTemplateSet IP地址模板。
+     * @param array $InstanceIds 订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
+     * @param integer $FlowId 流程id，可以根据流程id查询创建进度
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,12 @@ class DescribeAddressTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
 
-        if (array_key_exists("AddressTemplateSet",$param) and $param["AddressTemplateSet"] !== null) {
-            $this->AddressTemplateSet = [];
-            foreach ($param["AddressTemplateSet"] as $key => $value){
-                $obj = new AddressTemplate();
-                $obj->deserialize($value);
-                array_push($this->AddressTemplateSet, $obj);
-            }
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

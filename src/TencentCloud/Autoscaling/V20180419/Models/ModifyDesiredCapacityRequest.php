@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method integer getDesiredCapacity() 获取期望实例数
  * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数
+ * @method integer getMinSize() 获取最小实例数，取值范围为0-2000。
+ * @method void setMinSize(integer $MinSize) 设置最小实例数，取值范围为0-2000。
+ * @method integer getMaxSize() 获取最大实例数，取值范围为0-2000。
+ * @method void setMaxSize(integer $MaxSize) 设置最大实例数，取值范围为0-2000。
  */
 class ModifyDesiredCapacityRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ModifyDesiredCapacityRequest extends AbstractModel
     public $DesiredCapacity;
 
     /**
+     * @var integer 最小实例数，取值范围为0-2000。
+     */
+    public $MinSize;
+
+    /**
+     * @var integer 最大实例数，取值范围为0-2000。
+     */
+    public $MaxSize;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param integer $DesiredCapacity 期望实例数
+     * @param integer $MinSize 最小实例数，取值范围为0-2000。
+     * @param integer $MaxSize 最大实例数，取值范围为0-2000。
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ModifyDesiredCapacityRequest extends AbstractModel
 
         if (array_key_exists("DesiredCapacity",$param) and $param["DesiredCapacity"] !== null) {
             $this->DesiredCapacity = $param["DesiredCapacity"];
+        }
+
+        if (array_key_exists("MinSize",$param) and $param["MinSize"] !== null) {
+            $this->MinSize = $param["MinSize"];
+        }
+
+        if (array_key_exists("MaxSize",$param) and $param["MaxSize"] !== null) {
+            $this->MaxSize = $param["MaxSize"];
         }
     }
 }

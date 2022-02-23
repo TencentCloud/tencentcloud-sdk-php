@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置业务结果描述
  * @method string getAccountBank() 获取开户行
  * @method void setAccountBank(string $AccountBank) 设置开户行
- * @method integer getAccountType() 获取卡性质：1. 借记卡；2. 贷记卡
- * @method void setAccountType(integer $AccountType) 设置卡性质：1. 借记卡；2. 贷记卡
+ * @method integer getAccountType() 获取卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
+ * @method void setAccountType(integer $AccountType) 设置卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,7 +67,7 @@ class CheckBankCardInformationResponse extends AbstractModel
     public $AccountBank;
 
     /**
-     * @var integer 卡性质：1. 借记卡；2. 贷记卡
+     * @var integer 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
      */
     public $AccountType;
 
@@ -86,7 +86,7 @@ class CheckBankCardInformationResponse extends AbstractModel
 -3：银行卡不存在
      * @param string $Description 业务结果描述
      * @param string $AccountBank 开户行
-     * @param integer $AccountType 卡性质：1. 借记卡；2. 贷记卡
+     * @param integer $AccountType 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

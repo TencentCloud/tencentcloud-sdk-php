@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Ame\V20190916\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAddressTemplates返回参数结构体
+ * BatchDescribeKTVMusicDetails返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的实例数量。
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
- * @method array getAddressTemplateSet() 获取IP地址模板。
- * @method void setAddressTemplateSet(array $AddressTemplateSet) 设置IP地址模板。
+ * @method array getKTVMusicDetailInfoSet() 获取歌曲详情列表信息
+ * @method void setKTVMusicDetailInfoSet(array $KTVMusicDetailInfoSet) 设置歌曲详情列表信息
+ * @method array getNotExistMusicIdSet() 获取不存在的歌曲 ID 列表。
+ * @method void setNotExistMusicIdSet(array $NotExistMusicIdSet) 设置不存在的歌曲 ID 列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAddressTemplatesResponse extends AbstractModel
+class BatchDescribeKTVMusicDetailsResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的实例数量。
+     * @var array 歌曲详情列表信息
      */
-    public $TotalCount;
+    public $KTVMusicDetailInfoSet;
 
     /**
-     * @var array IP地址模板。
+     * @var array 不存在的歌曲 ID 列表。
      */
-    public $AddressTemplateSet;
+    public $NotExistMusicIdSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeAddressTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的实例数量。
-     * @param array $AddressTemplateSet IP地址模板。
+     * @param array $KTVMusicDetailInfoSet 歌曲详情列表信息
+     * @param array $NotExistMusicIdSet 不存在的歌曲 ID 列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,17 @@ class DescribeAddressTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("KTVMusicDetailInfoSet",$param) and $param["KTVMusicDetailInfoSet"] !== null) {
+            $this->KTVMusicDetailInfoSet = [];
+            foreach ($param["KTVMusicDetailInfoSet"] as $key => $value){
+                $obj = new KTVMusicDetailInfo();
+                $obj->deserialize($value);
+                array_push($this->KTVMusicDetailInfoSet, $obj);
+            }
         }
 
-        if (array_key_exists("AddressTemplateSet",$param) and $param["AddressTemplateSet"] !== null) {
-            $this->AddressTemplateSet = [];
-            foreach ($param["AddressTemplateSet"] as $key => $value){
-                $obj = new AddressTemplate();
-                $obj->deserialize($value);
-                array_push($this->AddressTemplateSet, $obj);
-            }
+        if (array_key_exists("NotExistMusicIdSet",$param) and $param["NotExistMusicIdSet"] !== null) {
+            $this->NotExistMusicIdSet = $param["NotExistMusicIdSet"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) 设置组件版本
  * @method string getWorkloadVisualConfig() 获取组件可视化信息
  * @method void setWorkloadVisualConfig(string $WorkloadVisualConfig) 设置组件可视化信息
+ * @method string getDetailUrl() 获取无
+ * @method void setDetailUrl(string $DetailUrl) 设置无
+ * @method boolean getInstalled() 获取无
+ * @method void setInstalled(boolean $Installed) 设置无
  */
 class MarketComponentInfo extends AbstractModel
 {
@@ -87,6 +91,16 @@ class MarketComponentInfo extends AbstractModel
     public $WorkloadVisualConfig;
 
     /**
+     * @var string 无
+     */
+    public $DetailUrl;
+
+    /**
+     * @var boolean 无
+     */
+    public $Installed;
+
+    /**
      * @param integer $ID 组件ID
      * @param string $AppName 组件名称
      * @param string $Author 发布者
@@ -96,6 +110,8 @@ class MarketComponentInfo extends AbstractModel
      * @param string $Icon 图标链接
      * @param string $Version 组件版本
      * @param string $WorkloadVisualConfig 组件可视化信息
+     * @param string $DetailUrl 无
+     * @param boolean $Installed 无
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class MarketComponentInfo extends AbstractModel
 
         if (array_key_exists("WorkloadVisualConfig",$param) and $param["WorkloadVisualConfig"] !== null) {
             $this->WorkloadVisualConfig = $param["WorkloadVisualConfig"];
+        }
+
+        if (array_key_exists("DetailUrl",$param) and $param["DetailUrl"] !== null) {
+            $this->DetailUrl = $param["DetailUrl"];
+        }
+
+        if (array_key_exists("Installed",$param) and $param["Installed"] !== null) {
+            $this->Installed = $param["Installed"];
         }
     }
 }

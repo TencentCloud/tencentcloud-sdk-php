@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowDeleteService(boolean $AllowDeleteService) 设置当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getOpenSessionAffinity() 获取开启SessionAffinity，true为开启，false为不开启，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOpenSessionAffinity(boolean $OpenSessionAffinity) 设置开启SessionAffinity，true为开启，false为不开启，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSessionAffinityTimeoutSeconds() 获取SessionAffinity会话时间，默认10800
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionAffinityTimeoutSeconds(integer $SessionAffinityTimeoutSeconds) 设置SessionAffinity会话时间，默认10800
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceSetting extends AbstractModel
 {
@@ -84,6 +92,18 @@ class ServiceSetting extends AbstractModel
     public $AllowDeleteService;
 
     /**
+     * @var boolean 开启SessionAffinity，true为开启，false为不开启，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OpenSessionAffinity;
+
+    /**
+     * @var integer SessionAffinity会话时间，默认10800
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionAffinityTimeoutSeconds;
+
+    /**
      * @param integer $AccessType 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProtocolPorts 容器端口映射
@@ -95,6 +115,10 @@ class ServiceSetting extends AbstractModel
      * @param boolean $HeadlessService service 是否为 headless 类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AllowDeleteService 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $OpenSessionAffinity 开启SessionAffinity，true为开启，false为不开启，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SessionAffinityTimeoutSeconds SessionAffinity会话时间，默认10800
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -137,6 +161,14 @@ class ServiceSetting extends AbstractModel
 
         if (array_key_exists("AllowDeleteService",$param) and $param["AllowDeleteService"] !== null) {
             $this->AllowDeleteService = $param["AllowDeleteService"];
+        }
+
+        if (array_key_exists("OpenSessionAffinity",$param) and $param["OpenSessionAffinity"] !== null) {
+            $this->OpenSessionAffinity = $param["OpenSessionAffinity"];
+        }
+
+        if (array_key_exists("SessionAffinityTimeoutSeconds",$param) and $param["SessionAffinityTimeoutSeconds"] !== null) {
+            $this->SessionAffinityTimeoutSeconds = $param["SessionAffinityTimeoutSeconds"];
         }
     }
 }

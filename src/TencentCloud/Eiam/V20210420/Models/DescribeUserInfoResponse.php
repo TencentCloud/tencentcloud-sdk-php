@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置用户状态，取值 NORMAL （正常）、FREEZE （已冻结）、LOCKED （已锁定）或 NOT_ENABLED （未启用）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDisplayName() 获取昵称
+ * @method string getDisplayName() 获取昵称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisplayName(string $DisplayName) 设置昵称
+ * @method void setDisplayName(string $DisplayName) 设置昵称。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取用户备注。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgNodeId(string $OrgNodeId) 设置用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDataSource() 获取数据来源
+ * @method string getDataSource() 获取数据来源。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataSource(string $DataSource) 设置数据来源
+ * @method void setDataSource(string $DataSource) 设置数据来源。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpirationTime() 获取用户过期时间，遵循 ISO 8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -98,7 +98,7 @@ class DescribeUserInfoResponse extends AbstractModel
     public $Status;
 
     /**
-     * @var string 昵称
+     * @var string 昵称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisplayName;
@@ -140,7 +140,7 @@ class DescribeUserInfoResponse extends AbstractModel
     public $OrgNodeId;
 
     /**
-     * @var string 数据来源
+     * @var string 数据来源。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSource;
@@ -185,7 +185,7 @@ class DescribeUserInfoResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 用户状态，取值 NORMAL （正常）、FREEZE （已冻结）、LOCKED （已锁定）或 NOT_ENABLED （未启用）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DisplayName 昵称
+     * @param string $DisplayName 昵称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 用户备注。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,7 +199,7 @@ class DescribeUserInfoResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrgNodeId 用户所属的主组织机构唯一ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DataSource 数据来源
+     * @param string $DataSource 数据来源。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpirationTime 用户过期时间，遵循 ISO 8601 标准。
 注意：此字段可能返回 null，表示取不到有效值。

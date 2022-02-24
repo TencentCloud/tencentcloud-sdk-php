@@ -208,6 +208,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 >
  * @method Models\CreateVpnGatewayResponse CreateVpnGateway(Models\CreateVpnGatewayRequest $req) 本接口（CreateVpnGateway）用于创建VPN网关。
  * @method Models\CreateVpnGatewayRoutesResponse CreateVpnGatewayRoutes(Models\CreateVpnGatewayRoutesRequest $req) 创建路由型VPN网关的目的路由
+ * @method Models\CreateVpnGatewaySslClientResponse CreateVpnGatewaySslClient(Models\CreateVpnGatewaySslClientRequest $req) 创建SSL-VPN-CLIENT
+ * @method Models\CreateVpnGatewaySslServerResponse CreateVpnGatewaySslServer(Models\CreateVpnGatewaySslServerRequest $req) 创建 Server端
  * @method Models\DeleteAddressTemplateResponse DeleteAddressTemplate(Models\DeleteAddressTemplateRequest $req) 本接口（DeleteAddressTemplate）用于删除IP地址模板
  * @method Models\DeleteAddressTemplateGroupResponse DeleteAddressTemplateGroup(Models\DeleteAddressTemplateGroupRequest $req) 本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合
  * @method Models\DeleteAssistantCidrResponse DeleteAssistantCidr(Models\DeleteAssistantCidrRequest $req) 本接口(DeleteAssistantCidr)用于删除辅助CIDR。（接口灰度中，如需使用请提工单。）
@@ -266,6 +268,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeleteVpnConnectionResponse DeleteVpnConnection(Models\DeleteVpnConnectionRequest $req) 本接口(DeleteVpnConnection)用于删除VPN通道。
  * @method Models\DeleteVpnGatewayResponse DeleteVpnGateway(Models\DeleteVpnGatewayRequest $req) 本接口（DeleteVpnGateway）用于删除VPN网关。目前只支持删除运行中的按量计费的IPSEC网关实例。
  * @method Models\DeleteVpnGatewayRoutesResponse DeleteVpnGatewayRoutes(Models\DeleteVpnGatewayRoutesRequest $req) 本接口（DeleteVpnGatewayCcnRoutes）用于删除VPN网关路由
+ * @method Models\DeleteVpnGatewaySslClientResponse DeleteVpnGatewaySslClient(Models\DeleteVpnGatewaySslClientRequest $req) 删除SSL-VPN-CLIENT
+ * @method Models\DeleteVpnGatewaySslServerResponse DeleteVpnGatewaySslServer(Models\DeleteVpnGatewaySslServerRequest $req) 删除SSL-VPN-SERVER 实例
  * @method Models\DescribeAccountAttributesResponse DescribeAccountAttributes(Models\DescribeAccountAttributesRequest $req) 本接口（DescribeAccountAttributes）用于查询用户账号私有属性。
  * @method Models\DescribeAddressQuotaResponse DescribeAddressQuota(Models\DescribeAddressQuotaRequest $req) 本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
  * @method Models\DescribeAddressTemplateGroupsResponse DescribeAddressTemplateGroups(Models\DescribeAddressTemplateGroupsRequest $req) 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合
@@ -371,6 +375,8 @@ LimitTypes取值范围：
  * @method Models\DescribeVpnConnectionsResponse DescribeVpnConnections(Models\DescribeVpnConnectionsRequest $req)  本接口（DescribeVpnConnections）查询VPN通道列表。
  * @method Models\DescribeVpnGatewayCcnRoutesResponse DescribeVpnGatewayCcnRoutes(Models\DescribeVpnGatewayCcnRoutesRequest $req) 本接口（DescribeVpnGatewayCcnRoutes）用于查询VPN网关云联网路由
  * @method Models\DescribeVpnGatewayRoutesResponse DescribeVpnGatewayRoutes(Models\DescribeVpnGatewayRoutesRequest $req) 查询路由型VPN网关的目的路由
+ * @method Models\DescribeVpnGatewaySslClientsResponse DescribeVpnGatewaySslClients(Models\DescribeVpnGatewaySslClientsRequest $req) 查询SSL-VPN-CLIENT 列表
+ * @method Models\DescribeVpnGatewaySslServersResponse DescribeVpnGatewaySslServers(Models\DescribeVpnGatewaySslServersRequest $req) 查询SSL-VPN SERVER 列表信息
  * @method Models\DescribeVpnGatewaysResponse DescribeVpnGateways(Models\DescribeVpnGatewaysRequest $req) 本接口（DescribeVpnGateways）用于查询VPN网关列表。
  * @method Models\DetachCcnInstancesResponse DetachCcnInstances(Models\DetachCcnInstancesRequest $req) 本接口（DetachCcnInstances）用于从云联网实例中解关联指定的网络实例。<br />
 解关联网络实例后，相应的路由策略会一并删除。
@@ -382,6 +388,7 @@ LimitTypes取值范围：
  * @method Models\DisableCcnRoutesResponse DisableCcnRoutes(Models\DisableCcnRoutesRequest $req) 本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由
  * @method Models\DisableGatewayFlowMonitorResponse DisableGatewayFlowMonitor(Models\DisableGatewayFlowMonitorRequest $req) 本接口（DisableGatewayFlowMonitor）用于关闭网关流量监控。
  * @method Models\DisableRoutesResponse DisableRoutes(Models\DisableRoutesRequest $req) 本接口（DisableRoutes）用于禁用已启用的子网路由
+ * @method Models\DisableVpnGatewaySslClientCertResponse DisableVpnGatewaySslClientCert(Models\DisableVpnGatewaySslClientCertRequest $req) 禁用SSL-VPN-CLIENT 证书
  * @method Models\DisassociateAddressResponse DisassociateAddress(Models\DisassociateAddressRequest $req) 本接口 (DisassociateAddress) 用于解绑[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * 支持CVM实例，弹性网卡上的EIP解绑
 * 不支持NAT上的EIP解绑。NAT上的EIP解绑请参考[DisassociateNatGatewayAddress](https://cloud.tencent.com/document/api/215/36716)
@@ -396,12 +403,14 @@ LimitTypes取值范围：
  * @method Models\DisassociateNetworkInterfaceSecurityGroupsResponse DisassociateNetworkInterfaceSecurityGroups(Models\DisassociateNetworkInterfaceSecurityGroupsRequest $req) 本接口（DisassociateNetworkInterfaceSecurityGroups）用于弹性网卡解绑安全组。支持弹性网卡完全解绑安全组。
  * @method Models\DisassociateVpcEndPointSecurityGroupsResponse DisassociateVpcEndPointSecurityGroups(Models\DisassociateVpcEndPointSecurityGroupsRequest $req) 终端节点解绑安全组。
  * @method Models\DownloadCustomerGatewayConfigurationResponse DownloadCustomerGatewayConfiguration(Models\DownloadCustomerGatewayConfigurationRequest $req) 本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
+ * @method Models\DownloadVpnGatewaySslClientCertResponse DownloadVpnGatewaySslClientCert(Models\DownloadVpnGatewaySslClientCertRequest $req) 下载SSL-VPN-CLIENT 客户端证书
  * @method Models\EnableCcnRoutesResponse EnableCcnRoutes(Models\EnableCcnRoutesRequest $req) 本接口（EnableCcnRoutes）用于启用已经加入云联网（CCN）的路由。<br />
 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
  * @method Models\EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitor(Models\EnableGatewayFlowMonitorRequest $req) 本接口（EnableGatewayFlowMonitor）用于开启网关流量监控。
  * @method Models\EnableRoutesResponse EnableRoutes(Models\EnableRoutesRequest $req) 本接口（EnableRoutes）用于启用已禁用的子网路由。<br />
 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
  * @method Models\EnableVpcEndPointConnectResponse EnableVpcEndPointConnect(Models\EnableVpcEndPointConnectRequest $req) 是否接受终端节点连接请求。
+ * @method Models\EnableVpnGatewaySslClientCertResponse EnableVpnGatewaySslClientCert(Models\EnableVpnGatewaySslClientCertRequest $req) 启用SSL-VPN-CLIENT 证书
  * @method Models\GetCcnRegionBandwidthLimitsResponse GetCcnRegionBandwidthLimits(Models\GetCcnRegionBandwidthLimitsRequest $req) 本接口（GetCcnRegionBandwidthLimits）用于查询云联网相关地域带宽信息，其中预付费模式的云联网仅支持地域间限速，后付费模式的云联网支持地域间限速和地域出口限速。
  * @method Models\HaVipAssociateAddressIpResponse HaVipAssociateAddressIp(Models\HaVipAssociateAddressIpRequest $req) 本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）。<br />
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。

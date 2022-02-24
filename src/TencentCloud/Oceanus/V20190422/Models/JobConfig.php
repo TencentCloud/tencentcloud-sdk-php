@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClsTopicId(string $ClsTopicId) 设置CLS日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPythonVersion() 获取pyflink作业运行的python版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPythonVersion(string $PythonVersion) 设置pyflink作业运行的python版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobConfig extends AbstractModel
 {
@@ -195,6 +199,12 @@ class JobConfig extends AbstractModel
     public $ClsTopicId;
 
     /**
+     * @var string pyflink作业运行的python版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PythonVersion;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -227,6 +237,8 @@ class JobConfig extends AbstractModel
      * @param string $ClsLogsetId CLS日志集ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClsTopicId CLS日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PythonVersion pyflink作业运行的python版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -322,6 +334,10 @@ class JobConfig extends AbstractModel
 
         if (array_key_exists("ClsTopicId",$param) and $param["ClsTopicId"] !== null) {
             $this->ClsTopicId = $param["ClsTopicId"];
+        }
+
+        if (array_key_exists("PythonVersion",$param) and $param["PythonVersion"] !== null) {
+            $this->PythonVersion = $param["PythonVersion"];
         }
     }
 }

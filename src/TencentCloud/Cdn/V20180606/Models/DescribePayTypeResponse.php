@@ -24,18 +24,24 @@ use TencentCloud\Common\AbstractModel;
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
  * @method void setPayType(string $PayType) 设置计费类型：
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
  * @method string getBillingCycle() 获取计费周期：
 day：日结计费
 month：月结计费
+hour：小时结计费
  * @method void setBillingCycle(string $BillingCycle) 设置计费周期：
 day：日结计费
 month：月结计费
+hour：小时结计费
  * @method string getStatType() 获取monthMax：日峰值月平均，月结模式
 day95：日 95 带宽，月结模式
 month95：月95带宽，月结模式
@@ -56,10 +62,14 @@ multiple：分地区计费
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
  * @method void setCurrentPayType(string $CurrentPayType) 设置当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -70,6 +80,8 @@ class DescribePayTypeResponse extends AbstractModel
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      */
     public $PayType;
@@ -78,6 +90,7 @@ request：请求数计费
      * @var string 计费周期：
 day：日结计费
 month：月结计费
+hour：小时结计费
      */
     public $BillingCycle;
 
@@ -102,6 +115,8 @@ multiple：分地区计费
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
      */
     public $CurrentPayType;
 
@@ -115,10 +130,13 @@ request：请求数计费
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
      * @param string $BillingCycle 计费周期：
 day：日结计费
 month：月结计费
+hour：小时结计费
      * @param string $StatType monthMax：日峰值月平均，月结模式
 day95：日 95 带宽，月结模式
 month95：月95带宽，月结模式
@@ -131,6 +149,8 @@ multiple：分地区计费
 flux：流量计费
 bandwidth：带宽计费
 request：请求数计费
+flux_sep：动静分离流量计费
+bandwidth_sep：动静分离带宽计费
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

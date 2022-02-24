@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClsTopicId(string $ClsTopicId) 设置CLS日志主题ID
  * @method integer getLogCollectType() 获取日志采集类型 2：CLS；3：COS
  * @method void setLogCollectType(integer $LogCollectType) 设置日志采集类型 2：CLS；3：COS
+ * @method string getPythonVersion() 获取pyflink作业运行时使用的python版本
+ * @method void setPythonVersion(string $PythonVersion) 设置pyflink作业运行时使用的python版本
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateJobConfigRequest extends AbstractModel
     public $LogCollectType;
 
     /**
+     * @var string pyflink作业运行时使用的python版本
+     */
+    public $PythonVersion;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -144,6 +151,7 @@ class CreateJobConfigRequest extends AbstractModel
      * @param string $ClsLogsetId CLS日志集ID
      * @param string $ClsTopicId CLS日志主题ID
      * @param integer $LogCollectType 日志采集类型 2：CLS；3：COS
+     * @param string $PythonVersion pyflink作业运行时使用的python版本
      */
     function __construct()
     {
@@ -226,6 +234,10 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("LogCollectType",$param) and $param["LogCollectType"] !== null) {
             $this->LogCollectType = $param["LogCollectType"];
+        }
+
+        if (array_key_exists("PythonVersion",$param) and $param["PythonVersion"] !== null) {
+            $this->PythonVersion = $param["PythonVersion"];
         }
     }
 }

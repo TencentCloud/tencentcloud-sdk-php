@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisplayName(string $DisplayName) 设置机构节点名称，长度限制：64个字符。
  * @method string getDescription() 获取机构节点描述。
  * @method void setDescription(string $Description) 设置机构节点描述。
- * @method string getCustomizedOrgNodeId() 获取用户自定义可选填的机构节点对外ID，如果非空则校验此ID的唯一性。
- * @method void setCustomizedOrgNodeId(string $CustomizedOrgNodeId) 设置用户自定义可选填的机构节点对外ID，如果非空则校验此ID的唯一性。
+ * @method string getCustomizedOrgNodeId() 获取机构代码。如果非空则校验此ID的唯一性。
+ * @method void setCustomizedOrgNodeId(string $CustomizedOrgNodeId) 设置机构代码。如果非空则校验此ID的唯一性。
  */
 class UpdateOrgNodeRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class UpdateOrgNodeRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 用户自定义可选填的机构节点对外ID，如果非空则校验此ID的唯一性。
+     * @var string 机构代码。如果非空则校验此ID的唯一性。
      */
     public $CustomizedOrgNodeId;
 
@@ -55,7 +55,7 @@ class UpdateOrgNodeRequest extends AbstractModel
      * @param string $OrgNodeId 机构节点ID，是机构节点的全局唯一标识。
      * @param string $DisplayName 机构节点名称，长度限制：64个字符。
      * @param string $Description 机构节点描述。
-     * @param string $CustomizedOrgNodeId 用户自定义可选填的机构节点对外ID，如果非空则校验此ID的唯一性。
+     * @param string $CustomizedOrgNodeId 机构代码。如果非空则校验此ID的唯一性。
      */
     function __construct()
     {

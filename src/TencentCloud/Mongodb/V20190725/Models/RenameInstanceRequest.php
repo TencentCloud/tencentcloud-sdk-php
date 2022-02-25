@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method string getNewName() 获取实例名称
- * @method void setNewName(string $NewName) 设置实例名称
+ * @method string getNewName() 获取自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
+ * @method void setNewName(string $NewName) 设置自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
  */
 class RenameInstanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RenameInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
      */
     public $NewName;
 
     /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param string $NewName 实例名称
+     * @param string $NewName 自定义实例名称，名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符 -
      */
     function __construct()
     {

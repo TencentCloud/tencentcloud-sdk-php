@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网id
  * @method integer getRenewFlag() 获取实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
  * @method void setRenewFlag(integer $RenewFlag) 设置实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
- * @method integer getHealthy() 获取实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
- * @method void setHealthy(integer $Healthy) 设置实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+ * @method integer getHealthy() 获取实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
+ * @method void setHealthy(integer $Healthy) 设置实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
  * @method string getHealthyMessage() 获取实例状态信息
  * @method void setHealthyMessage(string $HealthyMessage) 设置实例状态信息
  * @method integer getCreateTime() 获取实例创建时间时间
@@ -166,7 +166,7 @@ class InstanceDetail extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var integer 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+     * @var integer 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
      */
     public $Healthy;
 
@@ -279,7 +279,7 @@ class InstanceDetail extends AbstractModel
      * @param string $VpcId vpcId，如果为空，说明是基础网络
      * @param string $SubnetId 子网id
      * @param integer $RenewFlag 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
-     * @param integer $Healthy 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+     * @param integer $Healthy 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
      * @param string $HealthyMessage 实例状态信息
      * @param integer $CreateTime 实例创建时间时间
      * @param integer $ExpireTime 实例过期时间

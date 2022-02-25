@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() 获取实例所属区域名称，格式如：ap-guangzhou-2
  * @method void setZone(string $Zone) 设置实例所属区域名称，格式如：ap-guangzhou-2
- * @method integer getNodeNum() 获取每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
- * @method void setNodeNum(integer $NodeNum) 设置每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+ * @method integer getNodeNum() 获取每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
+ * @method void setNodeNum(integer $NodeNum) 设置每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
  * @method integer getMemory() 获取实例内存大小，单位：GB
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位：GB
  * @method integer getVolume() 获取实例硬盘大小，单位：GB
  * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB
  * @method string getMongoVersion() 获取版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本
  * @method void setMongoVersion(string $MongoVersion) 设置版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本
- * @method string getMachineCode() 获取机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
- * @method void setMachineCode(string $MachineCode) 设置机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
+ * @method string getMachineCode() 获取机器类型，HIO：高IO型；HIO10G：高IO万兆型；
+ * @method void setMachineCode(string $MachineCode) 设置机器类型，HIO：高IO型；HIO10G：高IO万兆型；
  * @method integer getGoodsNum() 获取实例数量, 最小值1，最大值为10
  * @method void setGoodsNum(integer $GoodsNum) 设置实例数量, 最小值1，最大值为10
  * @method integer getPeriod() 获取实例时长，单位：月，可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]
@@ -49,7 +49,7 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+     * @var integer 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
      */
     public $NodeNum;
 
@@ -69,7 +69,7 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
     public $MongoVersion;
 
     /**
-     * @var string 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
+     * @var string 机器类型，HIO：高IO型；HIO10G：高IO万兆型；
      */
     public $MachineCode;
 
@@ -95,11 +95,11 @@ class InquirePriceCreateDBInstancesRequest extends AbstractModel
 
     /**
      * @param string $Zone 实例所属区域名称，格式如：ap-guangzhou-2
-     * @param integer $NodeNum 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+     * @param integer $NodeNum 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
      * @param integer $Memory 实例内存大小，单位：GB
      * @param integer $Volume 实例硬盘大小，单位：GB
      * @param string $MongoVersion 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本
-     * @param string $MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
+     * @param string $MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型；
      * @param integer $GoodsNum 实例数量, 最小值1，最大值为10
      * @param integer $Period 实例时长，单位：月，可选值包括[1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      * @param string $ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群，STANDALONE-单节点

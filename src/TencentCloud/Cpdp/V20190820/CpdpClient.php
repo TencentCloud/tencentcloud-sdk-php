@@ -116,6 +116,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryContractRelateShopResponse QueryContractRelateShop(Models\QueryContractRelateShopRequest $req) 云支付-查询合同可关联门店接口
  * @method Models\QueryCustAcctIdBalanceResponse QueryCustAcctIdBalance(Models\QueryCustAcctIdBalanceRequest $req) 查询银行子账户余额。查询会员子账户以及平台的功能子账户的余额。
  * @method Models\QueryDownloadBillURLResponse QueryDownloadBillURL(Models\QueryDownloadBillURLRequest $req) 云鉴-查询对账单下载地址的接口
+ * @method Models\QueryExceedingInfoResponse QueryExceedingInfo(Models\QueryExceedingInfoRequest $req) 灵云-查询超额信息
  * @method Models\QueryExchangeRateResponse QueryExchangeRate(Models\QueryExchangeRateRequest $req) 跨境-查询汇率
  * @method Models\QueryInvoiceResponse QueryInvoice(Models\QueryInvoiceRequest $req) 智慧零售-发票查询
  * @method Models\QueryInvoiceV2Response QueryInvoiceV2(Models\QueryInvoiceV2Request $req) 智慧零售-发票查询V2

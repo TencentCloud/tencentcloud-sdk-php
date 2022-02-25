@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultValue(string $DefaultValue) 设置默认值
  * @method array getEnumValue() 获取枚举值，所有支持的值
  * @method void setEnumValue(array $EnumValue) 设置枚举值，所有支持的值
- * @method string getNeedRestart() 获取是否需要重启后生效，"1"需要，"0"无需重启
- * @method void setNeedRestart(string $NeedRestart) 设置是否需要重启后生效，"1"需要，"0"无需重启
+ * @method string getNeedRestart() 获取是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
+ * @method void setNeedRestart(string $NeedRestart) 设置是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
  * @method string getParamName() 获取参数名称
  * @method void setParamName(string $ParamName) 设置参数名称
  * @method array getTips() 获取中英文说明
  * @method void setTips(array $Tips) 设置中英文说明
  * @method string getValueType() 获取参数值类型说明
  * @method void setValueType(string $ValueType) 设置参数值类型说明
- * @method integer getStatus() 获取是否获取到参数，1为获取，前端正常显示，0:前段显示loading
- * @method void setStatus(integer $Status) 设置是否获取到参数，1为获取，前端正常显示，0:前段显示loading
+ * @method integer getStatus() 获取是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+ * @method void setStatus(integer $Status) 设置是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
  */
 class InstanceEnumParam extends AbstractModel
 {
@@ -55,7 +55,7 @@ class InstanceEnumParam extends AbstractModel
     public $EnumValue;
 
     /**
-     * @var string 是否需要重启后生效，"1"需要，"0"无需重启
+     * @var string 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
      */
     public $NeedRestart;
 
@@ -75,7 +75,7 @@ class InstanceEnumParam extends AbstractModel
     public $ValueType;
 
     /**
-     * @var integer 是否获取到参数，1为获取，前端正常显示，0:前段显示loading
+     * @var integer 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     public $Status;
 
@@ -83,11 +83,11 @@ class InstanceEnumParam extends AbstractModel
      * @param string $CurrentValue 参数当前值
      * @param string $DefaultValue 默认值
      * @param array $EnumValue 枚举值，所有支持的值
-     * @param string $NeedRestart 是否需要重启后生效，"1"需要，"0"无需重启
+     * @param string $NeedRestart 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
      * @param string $ParamName 参数名称
      * @param array $Tips 中英文说明
      * @param string $ValueType 参数值类型说明
-     * @param integer $Status 是否获取到参数，1为获取，前端正常显示，0:前段显示loading
+     * @param integer $Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     function __construct()
     {

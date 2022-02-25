@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cam\V20190116\Models;
+namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetSecurityLastUsed请求参数结构体
+ * 分页参数
  *
- * @method array getSecretIdList() 获取查询密钥ID列表。最多支持10个。
- * @method void setSecretIdList(array $SecretIdList) 设置查询密钥ID列表。最多支持10个。
+ * @method integer getIndex() 获取页码
+ * @method void setIndex(integer $Index) 设置页码
+ * @method integer getCount() 获取页长
+ * @method void setCount(integer $Count) 设置页长
  */
-class GetSecurityLastUsedRequest extends AbstractModel
+class Paging extends AbstractModel
 {
     /**
-     * @var array 查询密钥ID列表。最多支持10个。
+     * @var integer 页码
      */
-    public $SecretIdList;
+    public $Index;
 
     /**
-     * @param array $SecretIdList 查询密钥ID列表。最多支持10个。
+     * @var integer 页长
+     */
+    public $Count;
+
+    /**
+     * @param integer $Index 页码
+     * @param integer $Count 页长
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class GetSecurityLastUsedRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretIdList",$param) and $param["SecretIdList"] !== null) {
-            $this->SecretIdList = $param["SecretIdList"];
+        if (array_key_exists("Index",$param) and $param["Index"] !== null) {
+            $this->Index = $param["Index"];
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
     }
 }

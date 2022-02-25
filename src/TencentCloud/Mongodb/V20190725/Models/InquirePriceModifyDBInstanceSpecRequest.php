@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置变更配置后实例内存大小，单位：GB。
  * @method integer getVolume() 获取变更配置后实例磁盘大小，单位：GB。
  * @method void setVolume(integer $Volume) 设置变更配置后实例磁盘大小，单位：GB。
+ * @method integer getNodeNum() 获取实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+ * @method void setNodeNum(integer $NodeNum) 设置实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+ * @method integer getReplicateSetNum() 获取实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) 设置实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
  */
 class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
     public $Volume;
 
     /**
+     * @var integer 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+     */
+    public $NodeNum;
+
+    /**
+     * @var integer 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+     */
+    public $ReplicateSetNum;
+
+    /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
      * @param integer $Memory 变更配置后实例内存大小，单位：GB。
      * @param integer $Volume 变更配置后实例磁盘大小，单位：GB。
+     * @param integer $NodeNum 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+     * @param integer $ReplicateSetNum 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
             $this->Volume = $param["Volume"];
+        }
+
+        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
+            $this->NodeNum = $param["NodeNum"];
+        }
+
+        if (array_key_exists("ReplicateSetNum",$param) and $param["ReplicateSetNum"] !== null) {
+            $this->ReplicateSetNum = $param["ReplicateSetNum"];
         }
     }
 }

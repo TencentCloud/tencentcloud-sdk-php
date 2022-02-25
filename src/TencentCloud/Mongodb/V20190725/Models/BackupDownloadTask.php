@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpend(integer $TimeSpend) 设置耗时，单位为秒
  * @method string getUrl() 获取备份数据下载链接
  * @method void setUrl(string $Url) 设置备份数据下载链接
+ * @method integer getBackupMethod() 获取备份文件备份类型，0-逻辑备份，1-物理备份
+ * @method void setBackupMethod(integer $BackupMethod) 设置备份文件备份类型，0-逻辑备份，1-物理备份
+ * @method string getBackupDesc() 获取发起备份时指定的备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupDesc(string $BackupDesc) 设置发起备份时指定的备注信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupDownloadTask extends AbstractModel
 {
@@ -80,6 +86,17 @@ class BackupDownloadTask extends AbstractModel
     public $Url;
 
     /**
+     * @var integer 备份文件备份类型，0-逻辑备份，1-物理备份
+     */
+    public $BackupMethod;
+
+    /**
+     * @var string 发起备份时指定的备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupDesc;
+
+    /**
      * @param string $CreateTime 任务创建时间
      * @param string $BackupName 备份文件名
      * @param string $ReplicaSetId 分片名称
@@ -88,6 +105,9 @@ class BackupDownloadTask extends AbstractModel
      * @param integer $Percent 任务进度百分比
      * @param integer $TimeSpend 耗时，单位为秒
      * @param string $Url 备份数据下载链接
+     * @param integer $BackupMethod 备份文件备份类型，0-逻辑备份，1-物理备份
+     * @param string $BackupDesc 发起备份时指定的备注信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +152,14 @@ class BackupDownloadTask extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
+            $this->BackupMethod = $param["BackupMethod"];
+        }
+
+        if (array_key_exists("BackupDesc",$param) and $param["BackupDesc"] !== null) {
+            $this->BackupDesc = $param["BackupDesc"];
         }
     }
 }

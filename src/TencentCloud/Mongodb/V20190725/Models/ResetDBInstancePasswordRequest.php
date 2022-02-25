@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getUserName() 获取实例账号名
  * @method void setUserName(string $UserName) 设置实例账号名
- * @method string getPassword() 获取新密码
- * @method void setPassword(string $Password) 设置新密码
+ * @method string getPassword() 获取新密码，新密码长度不能少于8位
+ * @method void setPassword(string $Password) 设置新密码，新密码长度不能少于8位
  */
 class ResetDBInstancePasswordRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ResetDBInstancePasswordRequest extends AbstractModel
     public $UserName;
 
     /**
-     * @var string 新密码
+     * @var string 新密码，新密码长度不能少于8位
      */
     public $Password;
 
     /**
      * @param string $InstanceId 实例Id
      * @param string $UserName 实例账号名
-     * @param string $Password 新密码
+     * @param string $Password 新密码，新密码长度不能少于8位
      */
     function __construct()
     {

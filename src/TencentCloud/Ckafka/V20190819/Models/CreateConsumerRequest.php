@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method string getGroupName() 获取group名称
  * @method void setGroupName(string $GroupName) 设置group名称
- * @method string getTopicName() 获取topic名称
- * @method void setTopicName(string $TopicName) 设置topic名称
+ * @method string getTopicName() 获取topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
+ * @method void setTopicName(string $TopicName) 设置topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
  * @method array getTopicNameList() 获取topic名称数组
  * @method void setTopicNameList(array $TopicNameList) 设置topic名称数组
  */
@@ -42,7 +42,7 @@ class CreateConsumerRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string topic名称
+     * @var string topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
      */
     public $TopicName;
 
@@ -54,7 +54,7 @@ class CreateConsumerRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例id
      * @param string $GroupName group名称
-     * @param string $TopicName topic名称
+     * @param string $TopicName topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
      * @param array $TopicNameList topic名称数组
      */
     function __construct()

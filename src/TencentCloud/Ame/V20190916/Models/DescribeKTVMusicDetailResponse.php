@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidiJsonUrl(string $MidiJsonUrl) 设置音高数据文件下载地址
  * @method array getChorusClipSet() 获取副歌片段数据列表
  * @method void setChorusClipSet(array $ChorusClipSet) 设置副歌片段数据列表
+ * @method integer getPreludeInterval() 获取前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+ * @method void setPreludeInterval(integer $PreludeInterval) 设置前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +70,11 @@ class DescribeKTVMusicDetailResponse extends AbstractModel
     public $ChorusClipSet;
 
     /**
+     * @var integer 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+     */
+    public $PreludeInterval;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +86,7 @@ class DescribeKTVMusicDetailResponse extends AbstractModel
      * @param array $DefinitionInfoSet 歌曲规格信息列表
      * @param string $MidiJsonUrl 音高数据文件下载地址
      * @param array $ChorusClipSet 副歌片段数据列表
+     * @param integer $PreludeInterval 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -127,6 +135,10 @@ class DescribeKTVMusicDetailResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ChorusClipSet, $obj);
             }
+        }
+
+        if (array_key_exists("PreludeInterval",$param) and $param["PreludeInterval"] !== null) {
+            $this->PreludeInterval = $param["PreludeInterval"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

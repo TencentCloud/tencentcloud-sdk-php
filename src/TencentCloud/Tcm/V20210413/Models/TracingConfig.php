@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method float getSampling() 获取调用链采样率，百分比
  * @method void setSampling(float $Sampling) 设置调用链采样率，百分比
+ * @method boolean getEnable() 获取是否启用调用跟踪
+ * @method void setEnable(boolean $Enable) 设置是否启用调用跟踪
+ * @method APM getAPM() 获取腾讯云 APM 服务相关参数
+ * @method void setAPM(APM $APM) 设置腾讯云 APM 服务相关参数
  */
 class TracingConfig extends AbstractModel
 {
@@ -31,7 +35,19 @@ class TracingConfig extends AbstractModel
     public $Sampling;
 
     /**
+     * @var boolean 是否启用调用跟踪
+     */
+    public $Enable;
+
+    /**
+     * @var APM 腾讯云 APM 服务相关参数
+     */
+    public $APM;
+
+    /**
      * @param float $Sampling 调用链采样率，百分比
+     * @param boolean $Enable 是否启用调用跟踪
+     * @param APM $APM 腾讯云 APM 服务相关参数
      */
     function __construct()
     {
@@ -48,6 +64,15 @@ class TracingConfig extends AbstractModel
         }
         if (array_key_exists("Sampling",$param) and $param["Sampling"] !== null) {
             $this->Sampling = $param["Sampling"];
+        }
+
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("APM",$param) and $param["APM"] !== null) {
+            $this->APM = new APM();
+            $this->APM->deserialize($param["APM"]);
         }
     }
 }

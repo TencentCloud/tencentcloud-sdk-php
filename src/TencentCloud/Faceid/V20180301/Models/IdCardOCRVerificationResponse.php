@@ -29,6 +29,8 @@ use TencentCloud\Common\AbstractModel;
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
+-6: 公安比对系统升级中，请稍后再试
+-7: 认证次数超过当日限制
  * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
 收费结果码：
 0: 姓名和身份证号一致
@@ -38,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
+-6: 公安比对系统升级中，请稍后再试
+-7: 认证次数超过当日限制
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
  * @method string getName() 获取用于验证的姓名
@@ -75,6 +79,8 @@ class IdCardOCRVerificationResponse extends AbstractModel
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
+-6: 公安比对系统升级中，请稍后再试
+-7: 认证次数超过当日限制
      */
     public $Result;
 
@@ -132,6 +138,8 @@ class IdCardOCRVerificationResponse extends AbstractModel
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
+-6: 公安比对系统升级中，请稍后再试
+-7: 认证次数超过当日限制
      * @param string $Description 业务结果描述。
      * @param string $Name 用于验证的姓名
      * @param string $IdCard 用于验证的身份证号

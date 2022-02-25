@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOutboundTrafficPolicy() 获取外部流量策略
  * @method void setOutboundTrafficPolicy(string $OutboundTrafficPolicy) 设置外部流量策略
- * @method TracingConfig getTracing() 获取调用链配置
- * @method void setTracing(TracingConfig $Tracing) 设置调用链配置
+ * @method TracingConfig getTracing() 获取调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置）
+ * @method void setTracing(TracingConfig $Tracing) 设置调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置）
  * @method boolean getDisablePolicyChecks() 获取禁用策略检查功能
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisablePolicyChecks(boolean $DisablePolicyChecks) 设置禁用策略检查功能
@@ -37,7 +37,7 @@ class IstioConfig extends AbstractModel
     public $OutboundTrafficPolicy;
 
     /**
-     * @var TracingConfig 调用链配置
+     * @var TracingConfig 调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置）
      */
     public $Tracing;
 
@@ -49,7 +49,7 @@ class IstioConfig extends AbstractModel
 
     /**
      * @param string $OutboundTrafficPolicy 外部流量策略
-     * @param TracingConfig $Tracing 调用链配置
+     * @param TracingConfig $Tracing 调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置）
      * @param boolean $DisablePolicyChecks 禁用策略检查功能
 注意：此字段可能返回 null，表示取不到有效值。
      */

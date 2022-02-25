@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method string getBackupName() 获取备份文件名，用来过滤指定文件的下载任务
  * @method void setBackupName(string $BackupName) 设置备份文件名，用来过滤指定文件的下载任务
- * @method string getStartTime() 获取指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
- * @method void setStartTime(string $StartTime) 设置指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
- * @method string getEndTime() 获取指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
- * @method void setEndTime(string $EndTime) 设置指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
+ * @method string getStartTime() 获取指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
+ * @method void setStartTime(string $StartTime) 设置指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
+ * @method string getEndTime() 获取指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
+ * @method void setEndTime(string $EndTime) 设置指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
  * @method integer getLimit() 获取此次查询返回的条数，取值范围为1-100，默认为20
  * @method void setLimit(integer $Limit) 设置此次查询返回的条数，取值范围为1-100，默认为20
  * @method integer getOffset() 获取指定此次查询返回的页数，默认为0
@@ -52,12 +52,12 @@ class DescribeBackupDownloadTaskRequest extends AbstractModel
     public $BackupName;
 
     /**
-     * @var string 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
+     * @var string 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
      */
     public $StartTime;
 
     /**
-     * @var string 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
+     * @var string 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
      */
     public $EndTime;
 
@@ -89,8 +89,8 @@ class DescribeBackupDownloadTaskRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param string $BackupName 备份文件名，用来过滤指定文件的下载任务
-     * @param string $StartTime 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
-     * @param string $EndTime 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
+     * @param string $StartTime 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
+     * @param string $EndTime 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
      * @param integer $Limit 此次查询返回的条数，取值范围为1-100，默认为20
      * @param integer $Offset 指定此次查询返回的页数，默认为0
      * @param string $OrderBy 排序字段，取值为createTime，finishTime两种，默认为createTime

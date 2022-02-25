@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMax(string $Max) 设置最大值
  * @method string getMin() 获取最小值
  * @method void setMin(string $Min) 设置最小值
- * @method string getNeedRestart() 获取是否徐亚哦重启后生效 1:需要重启；0:无需重启
- * @method void setNeedRestart(string $NeedRestart) 设置是否徐亚哦重启后生效 1:需要重启；0:无需重启
+ * @method string getNeedRestart() 获取是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
+ * @method void setNeedRestart(string $NeedRestart) 设置是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
  * @method string getParamName() 获取参数名称
  * @method void setParamName(string $ParamName) 设置参数名称
  * @method array getTips() 获取参数说明
  * @method void setTips(array $Tips) 设置参数说明
  * @method string getValueType() 获取参数类型
  * @method void setValueType(string $ValueType) 设置参数类型
- * @method integer getStatus() 获取是否正常获取到，1：未正常获取；0：正常获取，仅对前端有实际意义；
- * @method void setStatus(integer $Status) 设置是否正常获取到，1：未正常获取；0：正常获取，仅对前端有实际意义；
- * @method string getUnit() 获取暂时未用到，前端使用redis侧代码，为了兼容，保留该参数
- * @method void setUnit(string $Unit) 设置暂时未用到，前端使用redis侧代码，为了兼容，保留该参数
+ * @method integer getStatus() 获取是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+ * @method void setStatus(integer $Status) 设置是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+ * @method string getUnit() 获取冗余字段，可忽略
+ * @method void setUnit(string $Unit) 设置冗余字段，可忽略
  */
 class InstanceIntegerParam extends AbstractModel
 {
@@ -64,7 +64,7 @@ class InstanceIntegerParam extends AbstractModel
     public $Min;
 
     /**
-     * @var string 是否徐亚哦重启后生效 1:需要重启；0:无需重启
+     * @var string 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
      */
     public $NeedRestart;
 
@@ -84,12 +84,12 @@ class InstanceIntegerParam extends AbstractModel
     public $ValueType;
 
     /**
-     * @var integer 是否正常获取到，1：未正常获取；0：正常获取，仅对前端有实际意义；
+     * @var integer 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
      */
     public $Status;
 
     /**
-     * @var string 暂时未用到，前端使用redis侧代码，为了兼容，保留该参数
+     * @var string 冗余字段，可忽略
      */
     public $Unit;
 
@@ -98,12 +98,12 @@ class InstanceIntegerParam extends AbstractModel
      * @param string $DefaultValue 默认值
      * @param string $Max 最大值
      * @param string $Min 最小值
-     * @param string $NeedRestart 是否徐亚哦重启后生效 1:需要重启；0:无需重启
+     * @param string $NeedRestart 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
      * @param string $ParamName 参数名称
      * @param array $Tips 参数说明
      * @param string $ValueType 参数类型
-     * @param integer $Status 是否正常获取到，1：未正常获取；0：正常获取，仅对前端有实际意义；
-     * @param string $Unit 暂时未用到，前端使用redis侧代码，为了兼容，保留该参数
+     * @param integer $Status 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
+     * @param string $Unit 冗余字段，可忽略
      */
     function __construct()
     {

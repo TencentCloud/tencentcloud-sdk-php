@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
  * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method integer getLimit() 获取查询返回记录条数，默认为10000。
- * @method void setLimit(integer $Limit) 设置查询返回记录条数，默认为10000。
+ * @method integer getLimit() 获取单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
+ * @method void setLimit(integer $Limit) 设置单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
  * @method integer getOffset() 获取偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。
  */
@@ -35,7 +35,7 @@ class DescribeClientConnectionsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 查询返回记录条数，默认为10000。
+     * @var integer 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
      */
     public $Limit;
 
@@ -46,7 +46,7 @@ class DescribeClientConnectionsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param integer $Limit 查询返回记录条数，默认为10000。
+     * @param integer $Limit 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
      * @param integer $Offset 偏移量，默认值为0。
      */
     function __construct()

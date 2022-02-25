@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidiJsonUrl(string $MidiJsonUrl) 设置音高数据文件下载地址
  * @method array getChorusClipSet() 获取副歌片段数据列表
  * @method void setChorusClipSet(array $ChorusClipSet) 设置副歌片段数据列表
+ * @method integer getPreludeInterval() 获取前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+ * @method void setPreludeInterval(integer $PreludeInterval) 设置前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
  */
 class KTVMusicDetailInfo extends AbstractModel
 {
@@ -66,12 +68,18 @@ class KTVMusicDetailInfo extends AbstractModel
     public $ChorusClipSet;
 
     /**
+     * @var integer 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+     */
+    public $PreludeInterval;
+
+    /**
      * @param KTVMusicBaseInfo $KTVMusicBaseInfo 即使广播曲库歌曲基础信息
      * @param string $PlayToken 播放凭证
      * @param string $LyricsUrl 歌词下载地址
      * @param array $DefinitionInfoSet 歌曲规格信息列表
      * @param string $MidiJsonUrl 音高数据文件下载地址
      * @param array $ChorusClipSet 副歌片段数据列表
+     * @param integer $PreludeInterval 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
      */
     function __construct()
     {
@@ -119,6 +127,10 @@ class KTVMusicDetailInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ChorusClipSet, $obj);
             }
+        }
+
+        if (array_key_exists("PreludeInterval",$param) and $param["PreludeInterval"] !== null) {
+            $this->PreludeInterval = $param["PreludeInterval"];
         }
     }
 }

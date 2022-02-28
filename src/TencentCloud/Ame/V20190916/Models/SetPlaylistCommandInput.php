@@ -23,15 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取变更类型，取值有：
 <li>Add：添加</li>
 <li>Delete：删除</li>
+<li>ClearList：清空歌曲列表</li>
+<li>Move：移动歌曲</li>
  * @method void setType(string $Type) 设置变更类型，取值有：
 <li>Add：添加</li>
 <li>Delete：删除</li>
+<li>ClearList：清空歌曲列表</li>
+<li>Move：移动歌曲</li>
  * @method integer getIndex() 获取歌单索引位置，
 当 Type 取 Add 时，-1表示添加在列表最后位置，大于-1表示要添加的位置；
-当 Type 取 Delete 时，表示要删除的位置。
+当 Type 取 Delete 时，表示待删除歌曲的位置；
+当 Type 取 Move 时，表示待调整歌曲的位置。
  * @method void setIndex(integer $Index) 设置歌单索引位置，
 当 Type 取 Add 时，-1表示添加在列表最后位置，大于-1表示要添加的位置；
-当 Type 取 Delete 时，表示要删除的位置。
+当 Type 取 Delete 时，表示待删除歌曲的位置；
+当 Type 取 Move 时，表示待调整歌曲的位置。
+ * @method integer getChangedIndex() 获取当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
+ * @method void setChangedIndex(integer $ChangedIndex) 设置当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
  * @method array getMusicIds() 获取歌曲 ID 列表，当 Type 取 Add 时，必填。
  * @method void setMusicIds(array $MusicIds) 设置歌曲 ID 列表，当 Type 取 Add 时，必填。
  */
@@ -41,15 +49,23 @@ class SetPlaylistCommandInput extends AbstractModel
      * @var string 变更类型，取值有：
 <li>Add：添加</li>
 <li>Delete：删除</li>
+<li>ClearList：清空歌曲列表</li>
+<li>Move：移动歌曲</li>
      */
     public $Type;
 
     /**
      * @var integer 歌单索引位置，
 当 Type 取 Add 时，-1表示添加在列表最后位置，大于-1表示要添加的位置；
-当 Type 取 Delete 时，表示要删除的位置。
+当 Type 取 Delete 时，表示待删除歌曲的位置；
+当 Type 取 Move 时，表示待调整歌曲的位置。
      */
     public $Index;
+
+    /**
+     * @var integer 当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
+     */
+    public $ChangedIndex;
 
     /**
      * @var array 歌曲 ID 列表，当 Type 取 Add 时，必填。
@@ -60,9 +76,13 @@ class SetPlaylistCommandInput extends AbstractModel
      * @param string $Type 变更类型，取值有：
 <li>Add：添加</li>
 <li>Delete：删除</li>
+<li>ClearList：清空歌曲列表</li>
+<li>Move：移动歌曲</li>
      * @param integer $Index 歌单索引位置，
 当 Type 取 Add 时，-1表示添加在列表最后位置，大于-1表示要添加的位置；
-当 Type 取 Delete 时，表示要删除的位置。
+当 Type 取 Delete 时，表示待删除歌曲的位置；
+当 Type 取 Move 时，表示待调整歌曲的位置。
+     * @param integer $ChangedIndex 当 Type 取 Move 时，必填，表示移动歌曲的目标位置。
      * @param array $MusicIds 歌曲 ID 列表，当 Type 取 Add 时，必填。
      */
     function __construct()
@@ -84,6 +104,10 @@ class SetPlaylistCommandInput extends AbstractModel
 
         if (array_key_exists("Index",$param) and $param["Index"] !== null) {
             $this->Index = $param["Index"];
+        }
+
+        if (array_key_exists("ChangedIndex",$param) and $param["ChangedIndex"] !== null) {
+            $this->ChangedIndex = $param["ChangedIndex"];
         }
 
         if (array_key_exists("MusicIds",$param) and $param["MusicIds"] !== null) {

@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEip(string $Eip) 设置资源实例ID对应的高防弹性公网IP。
  * @method string getLoadBalancerID() 获取要绑定的负载均衡ID。负载均衡 ID 形如：lb-0000002i。可通过登录控制台查询，也可通过 DescribeLoadBalancers 接口返回值中的LoadBalancerId获取。
  * @method void setLoadBalancerID(string $LoadBalancerID) 设置要绑定的负载均衡ID。负载均衡 ID 形如：lb-0000002i。可通过登录控制台查询，也可通过 DescribeLoadBalancers 接口返回值中的LoadBalancerId获取。
- * @method string getLoadBalancerRegion() 获取Clb所在地域，例如：ap-hongkong。
- * @method void setLoadBalancerRegion(string $LoadBalancerRegion) 设置Clb所在地域，例如：ap-hongkong。
+ * @method string getLoadBalancerRegion() 获取CLB所在地域，例如：ap-hongkong。
+ * @method void setLoadBalancerRegion(string $LoadBalancerRegion) 设置CLB所在地域，例如：ap-hongkong。
+ * @method string getVip() 获取CLB内网IP
+ * @method void setVip(string $Vip) 设置CLB内网IP
  */
 class AssociateDDoSEipLoadBalancerRequest extends AbstractModel
 {
@@ -47,15 +49,21 @@ class AssociateDDoSEipLoadBalancerRequest extends AbstractModel
     public $LoadBalancerID;
 
     /**
-     * @var string Clb所在地域，例如：ap-hongkong。
+     * @var string CLB所在地域，例如：ap-hongkong。
      */
     public $LoadBalancerRegion;
+
+    /**
+     * @var string CLB内网IP
+     */
+    public $Vip;
 
     /**
      * @param string $InstanceId 资源实例ID，实例ID形如：bgpip-0000011x。只能填写高防IP实例。
      * @param string $Eip 资源实例ID对应的高防弹性公网IP。
      * @param string $LoadBalancerID 要绑定的负载均衡ID。负载均衡 ID 形如：lb-0000002i。可通过登录控制台查询，也可通过 DescribeLoadBalancers 接口返回值中的LoadBalancerId获取。
-     * @param string $LoadBalancerRegion Clb所在地域，例如：ap-hongkong。
+     * @param string $LoadBalancerRegion CLB所在地域，例如：ap-hongkong。
+     * @param string $Vip CLB内网IP
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class AssociateDDoSEipLoadBalancerRequest extends AbstractModel
 
         if (array_key_exists("LoadBalancerRegion",$param) and $param["LoadBalancerRegion"] !== null) {
             $this->LoadBalancerRegion = $param["LoadBalancerRegion"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
         }
     }
 }

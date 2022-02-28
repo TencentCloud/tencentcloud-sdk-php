@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProtocol() 获取协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
  * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
  * @method string getPort() 获取端口(all, 离散port,  range)。
+说明：如果Protocol设置为ALL，则Port也需要设置为all。
  * @method void setPort(string $Port) 设置端口(all, 离散port,  range)。
+说明：如果Protocol设置为ALL，则Port也需要设置为all。
  * @method ServiceTemplateSpecification getServiceTemplate() 获取协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
  * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
  * @method string getCidrBlock() 获取网段或IP(互斥)。
@@ -57,6 +59,7 @@ class SecurityGroupPolicy extends AbstractModel
 
     /**
      * @var string 端口(all, 离散port,  range)。
+说明：如果Protocol设置为ALL，则Port也需要设置为all。
      */
     public $Port;
 
@@ -104,6 +107,7 @@ class SecurityGroupPolicy extends AbstractModel
      * @param integer $PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
      * @param string $Protocol 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
      * @param string $Port 端口(all, 离散port,  range)。
+说明：如果Protocol设置为ALL，则Port也需要设置为all。
      * @param ServiceTemplateSpecification $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      * @param string $CidrBlock 网段或IP(互斥)。
      * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。

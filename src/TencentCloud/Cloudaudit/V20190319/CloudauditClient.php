@@ -28,7 +28,9 @@ use TencentCloud\Cloudaudit\V20190319\Models as Models;
 2、如果IsEnableCmqNotify的值是1的话，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填参数。
 3、如果IsEnableCmqNotify的值是0的话，IsCreateNewQueue、CmqRegion和CmqQueueName都不能传。
 4、如果IsEnableKmsEncry的值是1的话，KmsRegion和KeyId属于必填项
+ * @method Models\CreateAuditTrackResponse CreateAuditTrack(Models\CreateAuditTrackRequest $req) 创建跟踪集
  * @method Models\DeleteAuditResponse DeleteAudit(Models\DeleteAuditRequest $req) 删除跟踪集
+ * @method Models\DeleteAuditTrackResponse DeleteAuditTrack(Models\DeleteAuditTrackRequest $req) 删除云审计跟踪集
  * @method Models\DescribeAuditResponse DescribeAudit(Models\DescribeAuditRequest $req) 查询跟踪集详情
  * @method Models\DescribeAuditTracksResponse DescribeAuditTracks(Models\DescribeAuditTracksRequest $req) 查询云审计跟踪集列表
  * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) 查询云审计日志
@@ -39,6 +41,7 @@ use TencentCloud\Cloudaudit\V20190319\Models as Models;
  * @method Models\ListCosEnableRegionResponse ListCosEnableRegion(Models\ListCosEnableRegionRequest $req) 查询云审计支持的cos可用区
  * @method Models\ListKeyAliasByRegionResponse ListKeyAliasByRegion(Models\ListKeyAliasByRegionRequest $req) 根据地域获取KMS密钥别名
  * @method Models\LookUpEventsResponse LookUpEvents(Models\LookUpEventsRequest $req) 用于对操作日志进行检索，便于用户进行查询相关的操作信息。
+ * @method Models\ModifyAuditTrackResponse ModifyAuditTrack(Models\ModifyAuditTrackRequest $req) 修改云审计跟踪
  * @method Models\StartLoggingResponse StartLogging(Models\StartLoggingRequest $req) 开启跟踪集
  * @method Models\StopLoggingResponse StopLogging(Models\StopLoggingRequest $req) 关闭跟踪集
  * @method Models\UpdateAuditResponse UpdateAudit(Models\UpdateAuditRequest $req) 参数要求：

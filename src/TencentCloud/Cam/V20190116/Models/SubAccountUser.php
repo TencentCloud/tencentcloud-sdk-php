@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(integer $Uin) 设置子用户用户 ID
  * @method string getName() 获取子用户用户名
  * @method void setName(string $Name) 设置子用户用户名
- * @method integer getUid() 获取子用户 UID
- * @method void setUid(integer $Uid) 设置子用户 UID
+ * @method integer getUid() 获取子用户 UID，UID是用户作为消息接收人时的唯一标识，和 UIN 一样可以唯一标识一个用户，可通过接口https://cloud.tencent.com/document/api/598/53486 获取
+ * @method void setUid(integer $Uid) 设置子用户 UID，UID是用户作为消息接收人时的唯一标识，和 UIN 一样可以唯一标识一个用户，可通过接口https://cloud.tencent.com/document/api/598/53486 获取
  * @method string getRemark() 获取子用户备注
  * @method void setRemark(string $Remark) 设置子用户备注
  * @method string getCreateTime() 获取创建时间
@@ -54,7 +54,7 @@ class SubAccountUser extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 子用户 UID
+     * @var integer 子用户 UID，UID是用户作为消息接收人时的唯一标识，和 UIN 一样可以唯一标识一个用户，可通过接口https://cloud.tencent.com/document/api/598/53486 获取
      */
     public $Uid;
 
@@ -88,7 +88,7 @@ class SubAccountUser extends AbstractModel
     /**
      * @param integer $Uin 子用户用户 ID
      * @param string $Name 子用户用户名
-     * @param integer $Uid 子用户 UID
+     * @param integer $Uid 子用户 UID，UID是用户作为消息接收人时的唯一标识，和 UIN 一样可以唯一标识一个用户，可通过接口https://cloud.tencent.com/document/api/598/53486 获取
      * @param string $Remark 子用户备注
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置RO可用区的正式名称，如ap-shanghai-1
  * @method string getInstanceId() 获取RO实例ID，格式如：cdbro-c1nl9rpv
  * @method void setInstanceId(string $InstanceId) 设置RO实例ID，格式如：cdbro-c1nl9rpv
- * @method integer getStatus() 获取RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
- * @method void setStatus(integer $Status) 设置RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
+ * @method integer getStatus() 获取RO实例状态，可能返回值：0-创建中，1-运行中，3-异地RO（仅在使用DescribeDBInstances查询主实例信息时，返回值中异地RO的状态恒等于3，其他场景下无此值），4-删除中
+ * @method void setStatus(integer $Status) 设置RO实例状态，可能返回值：0-创建中，1-运行中，3-异地RO（仅在使用DescribeDBInstances查询主实例信息时，返回值中异地RO的状态恒等于3，其他场景下无此值），4-删除中
  * @method integer getInstanceType() 获取实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
  * @method void setInstanceType(integer $InstanceType) 设置实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
  * @method string getInstanceName() 获取RO实例名称
@@ -105,7 +105,7 @@ class RoInstanceInfo extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
+     * @var integer RO实例状态，可能返回值：0-创建中，1-运行中，3-异地RO（仅在使用DescribeDBInstances查询主实例信息时，返回值中异地RO的状态恒等于3，其他场景下无此值），4-删除中
      */
     public $Status;
 
@@ -192,7 +192,7 @@ class RoInstanceInfo extends AbstractModel
      * @param string $Region RO实例所在区域名称，如ap-shanghai
      * @param string $Zone RO可用区的正式名称，如ap-shanghai-1
      * @param string $InstanceId RO实例ID，格式如：cdbro-c1nl9rpv
-     * @param integer $Status RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
+     * @param integer $Status RO实例状态，可能返回值：0-创建中，1-运行中，3-异地RO（仅在使用DescribeDBInstances查询主实例信息时，返回值中异地RO的状态恒等于3，其他场景下无此值），4-删除中
      * @param integer $InstanceType 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
      * @param string $InstanceName RO实例名称
      * @param integer $HourFeeStatus 按量计费状态，可能的取值：1-正常，2-欠费

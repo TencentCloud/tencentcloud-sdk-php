@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单次查询返回的原始日志条数，最大值为100
  * @method string getContext() 获取上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
  * @method void setContext(string $Context) 设置上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
- * @method string getQuery() 获取查询语句，语句长度最大为4096
- * @method void setQuery(string $Query) 设置查询语句，语句长度最大为4096
+ * @method string getQuery() 获取查询语句，参考控制台请求参数，语句长度最大为4096
+ * @method void setQuery(string $Query) 设置查询语句，参考控制台请求参数，语句长度最大为4096
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
  */
@@ -70,7 +70,7 @@ class DescribeLogListRequest extends AbstractModel
     public $Context;
 
     /**
-     * @var string 查询语句，语句长度最大为4096
+     * @var string 查询语句，参考控制台请求参数，语句长度最大为4096
      */
     public $Query;
 
@@ -86,7 +86,7 @@ class DescribeLogListRequest extends AbstractModel
      * @param string $StartTime 开始时间
      * @param integer $Limit 单次查询返回的原始日志条数，最大值为100
      * @param string $Context 上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
-     * @param string $Query 查询语句，语句长度最大为4096
+     * @param string $Query 查询语句，参考控制台请求参数，语句长度最大为4096
      * @param string $EndTime 结束时间
      */
     function __construct()

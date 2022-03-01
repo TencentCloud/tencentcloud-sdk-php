@@ -112,11 +112,18 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeGroupsWithPluginResponse DescribeGroupsWithPlugin(Models\DescribeGroupsWithPluginRequest $req) 查询某个插件下绑定或未绑定的API分组
  * @method Models\DescribeImageRepositoryResponse DescribeImageRepository(Models\DescribeImageRepositoryRequest $req) 镜像仓库列表 
  * @method Models\DescribeImageTagsResponse DescribeImageTags(Models\DescribeImageTagsRequest $req) 镜像版本列表
+ * @method Models\DescribeInovcationIndicatorsResponse DescribeInovcationIndicators(Models\DescribeInovcationIndicatorsRequest $req) 查询调用监控指标
+ * @method Models\DescribeInvocationMetricDataCurveResponse DescribeInvocationMetricDataCurve(Models\DescribeInvocationMetricDataCurveRequest $req) 查询调用指标数据变化曲线
+ * @method Models\DescribeInvocationMetricDataDimensionResponse DescribeInvocationMetricDataDimension(Models\DescribeInvocationMetricDataDimensionRequest $req) 查询维度
+ * @method Models\DescribeInvocationMetricDataPointResponse DescribeInvocationMetricDataPoint(Models\DescribeInvocationMetricDataPointRequest $req) 查询单值指标维度
+ * @method Models\DescribeInvocationMetricScatterPlotResponse DescribeInvocationMetricScatterPlot(Models\DescribeInvocationMetricScatterPlotRequest $req) 查询调用指标数据散点图
+ * @method Models\DescribeJvmMonitorResponse DescribeJvmMonitor(Models\DescribeJvmMonitorRequest $req) 查询java实例jvm监控数据,返回数据可选
  * @method Models\DescribeLaneRulesResponse DescribeLaneRules(Models\DescribeLaneRulesRequest $req) 查询泳道规则列表
  * @method Models\DescribeLanesResponse DescribeLanes(Models\DescribeLanesRequest $req) 查询泳道列表
  * @method Models\DescribeMicroserviceResponse DescribeMicroservice(Models\DescribeMicroserviceRequest $req) 查询微服务详情
  * @method Models\DescribeMicroservicesResponse DescribeMicroservices(Models\DescribeMicroservicesRequest $req) 获取微服务列表
  * @method Models\DescribeMsApiListResponse DescribeMsApiList(Models\DescribeMsApiListRequest $req) 查询服务API列表
+ * @method Models\DescribeOverviewInvocationResponse DescribeOverviewInvocation(Models\DescribeOverviewInvocationRequest $req) 服务调用监控统计概览
  * @method Models\DescribePathRewriteResponse DescribePathRewrite(Models\DescribePathRewriteRequest $req) 查询路径重写
  * @method Models\DescribePathRewritesResponse DescribePathRewrites(Models\DescribePathRewritesRequest $req) 查询路径重写列表
  * @method Models\DescribePkgsResponse DescribePkgs(Models\DescribePkgsRequest $req) 无
@@ -136,6 +143,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeSimpleClustersResponse DescribeSimpleClusters(Models\DescribeSimpleClustersRequest $req) 查询简单集群列表
  * @method Models\DescribeSimpleGroupsResponse DescribeSimpleGroups(Models\DescribeSimpleGroupsRequest $req) 查询简单部署组列表
  * @method Models\DescribeSimpleNamespacesResponse DescribeSimpleNamespaces(Models\DescribeSimpleNamespacesRequest $req) 查询简单命名空间列表 
+ * @method Models\DescribeStatisticsResponse DescribeStatistics(Models\DescribeStatisticsRequest $req) 服务统计页面：接口和服务维度
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 查询任务详情
  * @method Models\DescribeTaskLastStatusResponse DescribeTaskLastStatus(Models\DescribeTaskLastStatusRequest $req) 查询任务最近一次执行状态
  * @method Models\DescribeTaskRecordsResponse DescribeTaskRecords(Models\DescribeTaskRecordsRequest $req) 翻页查询任务列表

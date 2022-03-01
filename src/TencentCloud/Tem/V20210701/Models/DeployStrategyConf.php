@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchInterval(integer $BatchInterval) 设置每批暂停间隔
  * @method integer getMinAvailable() 获取最小可用实例数
  * @method void setMinAvailable(integer $MinAvailable) 设置最小可用实例数
+ * @method boolean getForce() 获取是否强制发布
+ * @method void setForce(boolean $Force) 设置是否强制发布
  */
 class DeployStrategyConf extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DeployStrategyConf extends AbstractModel
     public $MinAvailable;
 
     /**
+     * @var boolean 是否强制发布
+     */
+    public $Force;
+
+    /**
      * @param integer $TotalBatchCount 总分批数
      * @param integer $BetaBatchNum beta分批实例数
      * @param integer $DeployStrategyType 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的
      * @param integer $BatchInterval 每批暂停间隔
      * @param integer $MinAvailable 最小可用实例数
+     * @param boolean $Force 是否强制发布
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DeployStrategyConf extends AbstractModel
 
         if (array_key_exists("MinAvailable",$param) and $param["MinAvailable"] !== null) {
             $this->MinAvailable = $param["MinAvailable"];
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

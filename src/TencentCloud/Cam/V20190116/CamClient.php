@@ -65,6 +65,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\GetSecurityLastUsedResponse GetSecurityLastUsed(Models\GetSecurityLastUsedRequest $req) 获取密钥最近使用情况
  * @method Models\GetServiceLinkedRoleDeletionStatusResponse GetServiceLinkedRoleDeletionStatus(Models\GetServiceLinkedRoleDeletionStatusRequest $req) 根据删除TaskId获取服务相关角色删除状态
  * @method Models\GetUserResponse GetUser(Models\GetUserRequest $req) 查询子用户
+ * @method Models\GetUserAppIdResponse GetUserAppId(Models\GetUserAppIdRequest $req) 获取用户AppId
  * @method Models\GetUserPermissionBoundaryResponse GetUserPermissionBoundary(Models\GetUserPermissionBoundaryRequest $req) 获取用户权限边界
  * @method Models\ListAccessKeysResponse ListAccessKeys(Models\ListAccessKeysRequest $req) 列出指定CAM用户的访问密钥
  * @method Models\ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(Models\ListAttachedGroupPoliciesRequest $req) 本接口（ListAttachedGroupPolicies）可用于查询用户组关联的策略列表。

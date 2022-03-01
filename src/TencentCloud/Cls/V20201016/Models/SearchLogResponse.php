@@ -20,31 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog返回参数结构体
  *
- * @method string getContext() 获取加载后续内容的Context，过期时间1小时
- * @method void setContext(string $Context) 设置加载后续内容的Context，过期时间1小时
- * @method boolean getListOver() 获取原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
- * @method void setListOver(boolean $ListOver) 设置原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
- * @method boolean getAnalysis() 获取返回的是否为分析结果
- * @method void setAnalysis(boolean $Analysis) 设置返回的是否为分析结果
- * @method array getColNames() 获取如果Analysis为True，则返回分析结果的列名，否则为空
+ * @method string getContext() 获取透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+ * @method void setContext(string $Context) 设置透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+ * @method boolean getListOver() 获取符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+注意：仅当检索分析语句(Query)不包含SQL时有效
+ * @method void setListOver(boolean $ListOver) 设置符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+注意：仅当检索分析语句(Query)不包含SQL时有效
+ * @method boolean getAnalysis() 获取返回的是否为统计分析（即SQL）结果
+ * @method void setAnalysis(boolean $Analysis) 设置返回的是否为统计分析（即SQL）结果
+ * @method array getResults() 获取匹配检索条件的原始日志
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColNames(array $ColNames) 设置如果Analysis为True，则返回分析结果的列名，否则为空
+ * @method void setResults(array $Results) 设置匹配检索条件的原始日志
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResults() 获取日志查询结果；当Analysis为True时，可能返回为null
+ * @method array getColNames() 获取日志统计分析结果的列名
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResults(array $Results) 设置日志查询结果；当Analysis为True时，可能返回为null
+ * @method void setColNames(array $ColNames) 设置日志统计分析结果的列名
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnalysisResults() 获取日志分析结果；当Analysis为False时，可能返回为null
+ * @method array getAnalysisResults() 获取日志统计分析结果
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnalysisResults(array $AnalysisResults) 设置日志分析结果；当Analysis为False时，可能返回为null
+ * @method void setAnalysisResults(array $AnalysisResults) 设置日志统计分析结果
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAnalysisRecords() 获取新的日志分析结果; UseNewAnalysis为true有效
+ * @method array getAnalysisRecords() 获取日志统计分析结果
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnalysisRecords(array $AnalysisRecords) 设置新的日志分析结果; UseNewAnalysis为true有效
+ * @method void setAnalysisRecords(array $AnalysisRecords) 设置日志统计分析结果
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getColumns() 获取日志分析的列属性; UseNewAnalysis为true有效
+ * @method array getColumns() 获取日志统计分析结果的列属性
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setColumns(array $Columns) 设置日志分析的列属性; UseNewAnalysis为true有效
+ * @method void setColumns(array $Columns) 设置日志统计分析结果的列属性
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,46 +62,51 @@ use TencentCloud\Common\AbstractModel;
 class SearchLogResponse extends AbstractModel
 {
     /**
-     * @var string 加载后续内容的Context，过期时间1小时
+     * @var string 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
      */
     public $Context;
 
     /**
-     * @var boolean 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
+     * @var boolean 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+注意：仅当检索分析语句(Query)不包含SQL时有效
      */
     public $ListOver;
 
     /**
-     * @var boolean 返回的是否为分析结果
+     * @var boolean 返回的是否为统计分析（即SQL）结果
      */
     public $Analysis;
 
     /**
-     * @var array 如果Analysis为True，则返回分析结果的列名，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ColNames;
-
-    /**
-     * @var array 日志查询结果；当Analysis为True时，可能返回为null
+     * @var array 匹配检索条件的原始日志
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
 
     /**
-     * @var array 日志分析结果；当Analysis为False时，可能返回为null
+     * @var array 日志统计分析结果的列名
+当UseNewAnalysis为false时生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColNames;
+
+    /**
+     * @var array 日志统计分析结果
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisResults;
 
     /**
-     * @var array 新的日志分析结果; UseNewAnalysis为true有效
+     * @var array 日志统计分析结果
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalysisRecords;
 
     /**
-     * @var array 日志分析的列属性; UseNewAnalysis为true有效
+     * @var array 日志统计分析结果的列属性
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Columns;
@@ -102,18 +117,23 @@ class SearchLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Context 加载后续内容的Context，过期时间1小时
-     * @param boolean $ListOver 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
-     * @param boolean $Analysis 返回的是否为分析结果
-     * @param array $ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
+     * @param string $Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
+     * @param boolean $ListOver 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+注意：仅当检索分析语句(Query)不包含SQL时有效
+     * @param boolean $Analysis 返回的是否为统计分析（即SQL）结果
+     * @param array $Results 匹配检索条件的原始日志
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Results 日志查询结果；当Analysis为True时，可能返回为null
+     * @param array $ColNames 日志统计分析结果的列名
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AnalysisResults 日志分析结果；当Analysis为False时，可能返回为null
+     * @param array $AnalysisResults 日志统计分析结果
+当UseNewAnalysis为false时生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AnalysisRecords 新的日志分析结果; UseNewAnalysis为true有效
+     * @param array $AnalysisRecords 日志统计分析结果
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Columns 日志分析的列属性; UseNewAnalysis为true有效
+     * @param array $Columns 日志统计分析结果的列属性
+当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -142,10 +162,6 @@ class SearchLogResponse extends AbstractModel
             $this->Analysis = $param["Analysis"];
         }
 
-        if (array_key_exists("ColNames",$param) and $param["ColNames"] !== null) {
-            $this->ColNames = $param["ColNames"];
-        }
-
         if (array_key_exists("Results",$param) and $param["Results"] !== null) {
             $this->Results = [];
             foreach ($param["Results"] as $key => $value){
@@ -153,6 +169,10 @@ class SearchLogResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Results, $obj);
             }
+        }
+
+        if (array_key_exists("ColNames",$param) and $param["ColNames"] !== null) {
+            $this->ColNames = $param["ColNames"];
         }
 
         if (array_key_exists("AnalysisResults",$param) and $param["AnalysisResults"] !== null) {

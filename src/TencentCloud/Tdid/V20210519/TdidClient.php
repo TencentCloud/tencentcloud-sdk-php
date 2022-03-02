@@ -26,6 +26,11 @@ use TencentCloud\Tdid\V20210519\Models as Models;
  * @method Models\CreateCredentialResponse CreateCredential(Models\CreateCredentialRequest $req) 创建凭证
  * @method Models\CreateSelectiveCredentialResponse CreateSelectiveCredential(Models\CreateSelectiveCredentialRequest $req) 创建选择性批露凭证
  * @method Models\CreateTDidResponse CreateTDid(Models\CreateTDidRequest $req) 创建机构DID
+ * @method Models\CreateTDidByPublicKeyResponse CreateTDidByPublicKey(Models\CreateTDidByPublicKeyRequest $req)  新建DID根据公钥生成Tdid
+ * @method Models\GetAuthorityIssuerResponse GetAuthorityIssuer(Models\GetAuthorityIssuerRequest $req) 获取权威机构信息
+ * @method Models\GetDidDocumentResponse GetDidDocument(Models\GetDidDocumentRequest $req) 查看DID文档
+
+ * @method Models\SetCredentialStatusResponse SetCredentialStatus(Models\SetCredentialStatusRequest $req) 设置凭证链上状态
  * @method Models\VerifyCredentialResponse VerifyCredential(Models\VerifyCredentialRequest $req) 验证凭证
  */
 

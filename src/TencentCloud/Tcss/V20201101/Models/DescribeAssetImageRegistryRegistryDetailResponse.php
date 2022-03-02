@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpeedLimit(integer $SpeedLimit) 设置限速
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInsecure() 获取安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInsecure(integer $Insecure) 设置安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -98,6 +102,12 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
     public $SpeedLimit;
 
     /**
+     * @var integer 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Insecure;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -114,6 +124,8 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
      * @param string $RegistryRegion 区域，列表:default（默认）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SpeedLimit 限速
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -164,6 +176,10 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
 
         if (array_key_exists("SpeedLimit",$param) and $param["SpeedLimit"] !== null) {
             $this->SpeedLimit = $param["SpeedLimit"];
+        }
+
+        if (array_key_exists("Insecure",$param) and $param["Insecure"] !== null) {
+            $this->Insecure = $param["Insecure"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

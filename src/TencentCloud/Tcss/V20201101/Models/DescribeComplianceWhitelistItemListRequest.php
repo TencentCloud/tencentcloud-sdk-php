@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetTypeSet(array $AssetTypeSet) 设置资产类型列表。
  * @method array getFilters() 获取查询过滤器
  * @method void setFilters(array $Filters) 设置查询过滤器
+ * @method string getBy() 获取排序字段
+ * @method void setBy(string $By) 设置排序字段
+ * @method string getOrder() 获取排序方式 desc asc
+ * @method void setOrder(string $Order) 设置排序方式 desc asc
  */
 class DescribeComplianceWhitelistItemListRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class DescribeComplianceWhitelistItemListRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 排序字段
+     */
+    public $By;
+
+    /**
+     * @var string 排序方式 desc asc
+     */
+    public $Order;
+
+    /**
      * @param integer $Offset 起始偏移量，默认为0。
      * @param integer $Limit 要获取的数量，默认为10，最大为100。
      * @param array $AssetTypeSet 资产类型列表。
      * @param array $Filters 查询过滤器
+     * @param string $By 排序字段
+     * @param string $Order 排序方式 desc asc
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class DescribeComplianceWhitelistItemListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
         }
     }
 }

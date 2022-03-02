@@ -29,6 +29,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateBoundIPResponse CreateBoundIP(Models\CreateBoundIPRequest $req) 绑定IP到高防包实例，支持独享包、共享包；需要注意的是此接口绑定或解绑IP是异步接口，当处于绑定或解绑中时，则不允许再进行绑定或解绑，需要等待当前绑定或解绑完成。
  * @method Models\CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicy(Models\CreateCCPrecisionPolicyRequest $req) 新增CC精准防护策略
  * @method Models\CreateCCReqLimitPolicyResponse CreateCCReqLimitPolicy(Models\CreateCCReqLimitPolicyRequest $req) 新增CC频率限制策略
+ * @method Models\CreateCcBlackWhiteIpListResponse CreateCcBlackWhiteIpList(Models\CreateCcBlackWhiteIpListRequest $req) 新建CC四层黑白名单
  * @method Models\CreateCcGeoIPBlockConfigResponse CreateCcGeoIPBlockConfig(Models\CreateCcGeoIPBlockConfigRequest $req) 新建cc防护的地域封禁配置
  * @method Models\CreateDDoSAIResponse CreateDDoSAI(Models\CreateDDoSAIRequest $req) 设置DDoS防护的AI防护开关
  * @method Models\CreateDDoSBlackWhiteIpListResponse CreateDDoSBlackWhiteIpList(Models\CreateDDoSBlackWhiteIpListRequest $req) 添加DDoS防护的IP网段黑白名单
@@ -46,8 +47,10 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateWaterPrintConfigResponse CreateWaterPrintConfig(Models\CreateWaterPrintConfigRequest $req) 添加DDoS防护的水印防护配置
  * @method Models\CreateWaterPrintKeyResponse CreateWaterPrintKey(Models\CreateWaterPrintKeyRequest $req) 添加DDoS防护的水印防护密钥
  * @method Models\DeleteBlackWhiteIpListResponse DeleteBlackWhiteIpList(Models\DeleteBlackWhiteIpListRequest $req) 删除DDoS防护的IP黑白名单
+ * @method Models\DeleteCCLevelPolicyResponse DeleteCCLevelPolicy(Models\DeleteCCLevelPolicyRequest $req) 删除CC分级策略
  * @method Models\DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicy(Models\DeleteCCPrecisionPolicyRequest $req) 删除CC精准防护策略
  * @method Models\DeleteCCRequestLimitPolicyResponse DeleteCCRequestLimitPolicy(Models\DeleteCCRequestLimitPolicyRequest $req) 删除CC频率限制策略
+ * @method Models\DeleteCCThresholdPolicyResponse DeleteCCThresholdPolicy(Models\DeleteCCThresholdPolicyRequest $req) 删除CC清洗阈值策略
  * @method Models\DeleteCcBlackWhiteIpListResponse DeleteCcBlackWhiteIpList(Models\DeleteCcBlackWhiteIpListRequest $req) 删除CC四层黑白名单
  * @method Models\DeleteCcGeoIPBlockConfigResponse DeleteCcGeoIPBlockConfig(Models\DeleteCcGeoIPBlockConfigRequest $req) 删除CC防护的区域封禁配置
  * @method Models\DeleteDDoSBlackWhiteIpListResponse DeleteDDoSBlackWhiteIpList(Models\DeleteDDoSBlackWhiteIpListRequest $req) 删除DDoS防护的IP网段黑白名单
@@ -60,8 +63,11 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) 获取基础防护攻击状态
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) 获取业务流量曲线
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) 获取DDoS防护的IP黑白名单
+ * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) 获取CC防护等级列表
+ * @method Models\DescribeCCLevelPolicyResponse DescribeCCLevelPolicy(Models\DescribeCCLevelPolicyRequest $req) 获取CC分级策略
  * @method Models\DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(Models\DescribeCCPrecisionPlyListRequest $req) 获取CC精准防护列表
  * @method Models\DescribeCCReqLimitPolicyListResponse DescribeCCReqLimitPolicyList(Models\DescribeCCReqLimitPolicyListRequest $req) 获取CC频率限制策略列表
+ * @method Models\DescribeCCThresholdListResponse DescribeCCThresholdList(Models\DescribeCCThresholdListRequest $req) 获取CC清洗阈值列表
  * @method Models\DescribeCCTrendResponse DescribeCCTrend(Models\DescribeCCTrendRequest $req) 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
  * @method Models\DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpList(Models\DescribeCcBlackWhiteIpListRequest $req) 获取CC四层黑白名单列表
  * @method Models\DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigList(Models\DescribeCcGeoIPBlockConfigListRequest $req) 获取CC防护的区域封禁配置列表

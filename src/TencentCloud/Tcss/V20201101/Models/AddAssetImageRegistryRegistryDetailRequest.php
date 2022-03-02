@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryRegion(string $RegistryRegion) 设置区域，列表：default（默认）
  * @method integer getSpeedLimit() 获取限速
  * @method void setSpeedLimit(integer $SpeedLimit) 设置限速
+ * @method integer getInsecure() 获取安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+ * @method void setInsecure(integer $Insecure) 设置安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
  */
 class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $SpeedLimit;
 
     /**
+     * @var integer 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+     */
+    public $Insecure;
+
+    /**
      * @param string $Name 仓库名
      * @param string $Username 用户名
      * @param string $Password 密码
@@ -96,6 +103,7 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
      * @param string $RegistryVersion 仓库版本
      * @param string $RegistryRegion 区域，列表：default（默认）
      * @param integer $SpeedLimit 限速
+     * @param integer $Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class AddAssetImageRegistryRegistryDetailRequest extends AbstractModel
 
         if (array_key_exists("SpeedLimit",$param) and $param["SpeedLimit"] !== null) {
             $this->SpeedLimit = $param["SpeedLimit"];
+        }
+
+        if (array_key_exists("Insecure",$param) and $param["Insecure"] !== null) {
+            $this->Insecure = $param["Insecure"];
         }
     }
 }

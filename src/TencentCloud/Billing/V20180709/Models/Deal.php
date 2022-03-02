@@ -98,6 +98,14 @@ preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
 postMoveIn 按量计费迁入资源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductName() 获取产品编码中文名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductName(string $ProductName) 设置产品编码中文名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubProductName() 获取子产品编码中文名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubProductName(string $SubProductName) 设置子产品编码中文名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Deal extends AbstractModel
 {
@@ -233,6 +241,18 @@ postMoveIn 按量计费迁入资源
     public $Action;
 
     /**
+     * @var string 产品编码中文名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductName;
+
+    /**
+     * @var string 子产品编码中文名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubProductName;
+
+    /**
      * @param string $OrderId 订单号
      * @param integer $Status 订单状态
      * @param string $Payer 支付者
@@ -271,6 +291,10 @@ preMoveIn 包年包月迁入资源
 preToPost 预付费转后付费
 postMoveOut 按量计费迁出资源
 postMoveIn 按量计费迁入资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductName 产品编码中文名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubProductName 子产品编码中文名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -381,6 +405,14 @@ postMoveIn 按量计费迁入资源
 
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {
             $this->Action = $param["Action"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("SubProductName",$param) and $param["SubProductName"] !== null) {
+            $this->SubProductName = $param["SubProductName"];
         }
     }
 }

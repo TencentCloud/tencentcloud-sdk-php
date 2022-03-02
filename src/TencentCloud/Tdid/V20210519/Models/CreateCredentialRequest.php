@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransactionArg(TransactionArg $TransactionArg) 设置参数集合，详见示例
  * @method string getVersionCredential() 获取版本
  * @method void setVersionCredential(string $VersionCredential) 设置版本
+ * @method boolean getUnSigned() 获取是否未签名
+ * @method void setUnSigned(boolean $UnSigned) 设置是否未签名
  */
 class CreateCredentialRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateCredentialRequest extends AbstractModel
     public $VersionCredential;
 
     /**
+     * @var boolean 是否未签名
+     */
+    public $UnSigned;
+
+    /**
      * @param FunctionArg $FunctionArg 参数集合，详见示例
      * @param TransactionArg $TransactionArg 参数集合，详见示例
      * @param string $VersionCredential 版本
+     * @param boolean $UnSigned 是否未签名
      */
     function __construct()
     {
@@ -74,6 +82,10 @@ class CreateCredentialRequest extends AbstractModel
 
         if (array_key_exists("VersionCredential",$param) and $param["VersionCredential"] !== null) {
             $this->VersionCredential = $param["VersionCredential"];
+        }
+
+        if (array_key_exists("UnSigned",$param) and $param["UnSigned"] !== null) {
+            $this->UnSigned = $param["UnSigned"];
         }
     }
 }

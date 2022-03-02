@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) 设置是否启用 0=停用 1=启用，可不传 默认为1
  * @method integer getProjectId() 获取项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
  * @method void setProjectId(integer $ProjectId) 设置项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
- * @method integer getConditionTemplateId() 获取触发条件模板 Id ，可不传
- * @method void setConditionTemplateId(integer $ConditionTemplateId) 设置触发条件模板 Id ，可不传
+ * @method integer getConditionTemplateId() 获取触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
+ * @method void setConditionTemplateId(integer $ConditionTemplateId) 设置触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
  * @method AlarmPolicyCondition getCondition() 获取指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
  * @method void setCondition(AlarmPolicyCondition $Condition) 设置指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
  * @method AlarmPolicyEventCondition getEventCondition() 获取事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
@@ -87,7 +87,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 触发条件模板 Id ，可不传
+     * @var integer 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
      */
     public $ConditionTemplateId;
 
@@ -129,7 +129,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param string $Remark 备注，不超过100字符，仅支持中英文、数字、下划线、-
      * @param integer $Enable 是否启用 0=停用 1=启用，可不传 默认为1
      * @param integer $ProjectId 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
-     * @param integer $ConditionTemplateId 触发条件模板 Id ，可不传
+     * @param integer $ConditionTemplateId 触发条件模板 Id，该参数与 Condition 参数二选一。如果策略绑定触发条件模板，则传该参数；否则不传该参数，而是传 Condition 参数。触发条件模板 Id 可以从 [DescribeConditionsTemplateList](https://cloud.tencent.com/document/api/248/70250) 接口获取。
      * @param AlarmPolicyCondition $Condition 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
      * @param AlarmPolicyEventCondition $EventCondition 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
      * @param array $NoticeIds 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得

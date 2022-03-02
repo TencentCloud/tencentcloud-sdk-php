@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRealtimeScanConfig返回参数结构体
  *
- * @method integer getErrorCode() 获取返回结果码
- * @method void setErrorCode(integer $ErrorCode) 设置返回结果码
+ * @method integer getErrorCode() 获取返回结果码，0正常，非0失败
+ * @method void setErrorCode(integer $ErrorCode) 设置返回结果码，0正常，非0失败
  * @method integer getBizId() 获取应用ID
  * @method void setBizId(integer $BizId) 设置应用ID
- * @method integer getAuditType() 获取送检类型
- * @method void setAuditType(integer $AuditType) 设置送检类型
- * @method array getUserIdRegex() 获取用户号正则
- * @method void setUserIdRegex(array $UserIdRegex) 设置用户号正则
- * @method array getRoomIdRegex() 获取房间号正则
- * @method void setRoomIdRegex(array $RoomIdRegex) 设置房间号正则
- * @method string getUserIdString() 获取用户号字符串，逗号分隔
- * @method void setUserIdString(string $UserIdString) 设置用户号字符串，逗号分隔
- * @method string getRoomIdString() 获取房间号字符串，逗号分隔
- * @method void setRoomIdString(string $RoomIdString) 设置房间号字符串，逗号分隔
+ * @method integer getAuditType() 获取送检类型，0: 全量送审，1: 自定义送审
+ * @method void setAuditType(integer $AuditType) 设置送检类型，0: 全量送审，1: 自定义送审
+ * @method array getUserIdRegex() 获取用户号正则表达式
+ * @method void setUserIdRegex(array $UserIdRegex) 设置用户号正则表达式
+ * @method array getRoomIdRegex() 获取房间号正则表达式
+ * @method void setRoomIdRegex(array $RoomIdRegex) 设置房间号正则表达式
+ * @method string getUserIdString() 获取用户号字符串，逗号分隔，示例："0001,0002,0003"
+ * @method void setUserIdString(string $UserIdString) 设置用户号字符串，逗号分隔，示例："0001,0002,0003"
+ * @method string getRoomIdString() 获取房间号字符串，逗号分隔，示例："0001,0002,0003"
+ * @method void setRoomIdString(string $RoomIdString) 设置房间号字符串，逗号分隔，示例："0001,0002,0003"
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRealtimeScanConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 返回结果码
+     * @var integer 返回结果码，0正常，非0失败
      */
     public $ErrorCode;
 
@@ -50,27 +50,27 @@ class DescribeRealtimeScanConfigResponse extends AbstractModel
     public $BizId;
 
     /**
-     * @var integer 送检类型
+     * @var integer 送检类型，0: 全量送审，1: 自定义送审
      */
     public $AuditType;
 
     /**
-     * @var array 用户号正则
+     * @var array 用户号正则表达式
      */
     public $UserIdRegex;
 
     /**
-     * @var array 房间号正则
+     * @var array 房间号正则表达式
      */
     public $RoomIdRegex;
 
     /**
-     * @var string 用户号字符串，逗号分隔
+     * @var string 用户号字符串，逗号分隔，示例："0001,0002,0003"
      */
     public $UserIdString;
 
     /**
-     * @var string 房间号字符串，逗号分隔
+     * @var string 房间号字符串，逗号分隔，示例："0001,0002,0003"
      */
     public $RoomIdString;
 
@@ -80,13 +80,13 @@ class DescribeRealtimeScanConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ErrorCode 返回结果码
+     * @param integer $ErrorCode 返回结果码，0正常，非0失败
      * @param integer $BizId 应用ID
-     * @param integer $AuditType 送检类型
-     * @param array $UserIdRegex 用户号正则
-     * @param array $RoomIdRegex 房间号正则
-     * @param string $UserIdString 用户号字符串，逗号分隔
-     * @param string $RoomIdString 房间号字符串，逗号分隔
+     * @param integer $AuditType 送检类型，0: 全量送审，1: 自定义送审
+     * @param array $UserIdRegex 用户号正则表达式
+     * @param array $RoomIdRegex 房间号正则表达式
+     * @param string $UserIdString 用户号字符串，逗号分隔，示例："0001,0002,0003"
+     * @param string $RoomIdString 房间号字符串，逗号分隔，示例："0001,0002,0003"
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

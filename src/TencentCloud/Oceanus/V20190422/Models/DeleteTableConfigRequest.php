@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDebugId(integer $DebugId) 设置调试作业ID
  * @method string getTableName() 获取表名
  * @method void setTableName(string $TableName) 设置表名
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class DeleteTableConfigRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteTableConfigRequest extends AbstractModel
     public $TableName;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param string $JobId 作业ID
      * @param integer $DebugId 调试作业ID
      * @param string $TableName 表名
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteTableConfigRequest extends AbstractModel
 
         if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
             $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

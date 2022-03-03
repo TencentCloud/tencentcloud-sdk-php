@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(integer $UpdateTime) 设置创建时间，以毫秒为单位
  * @method boolean getInternal() 获取是否为内部Exchange(以amq.前缀开头的)
  * @method void setInternal(boolean $Internal) 设置是否为内部Exchange(以amq.前缀开头的)
+ * @method string getAlternateExchange() 获取备用Exchange名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlternateExchange(string $AlternateExchange) 设置备用Exchange名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAlternateExchangeDeleteMark() 获取备用Exchange是否删除标识: true(已删除)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlternateExchangeDeleteMark(boolean $AlternateExchangeDeleteMark) 设置备用Exchange是否删除标识: true(已删除)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDelayType() 获取延迟Exchange的类别，为枚举类型:Direct, Fanout, Topic
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDelayType(string $DelayType) 设置延迟Exchange的类别，为枚举类型:Direct, Fanout, Topic
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AMQPExchange extends AbstractModel
 {
@@ -83,6 +95,24 @@ class AMQPExchange extends AbstractModel
     public $Internal;
 
     /**
+     * @var string 备用Exchange名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlternateExchange;
+
+    /**
+     * @var boolean 备用Exchange是否删除标识: true(已删除)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlternateExchangeDeleteMark;
+
+    /**
+     * @var string 延迟Exchange的类别，为枚举类型:Direct, Fanout, Topic
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DelayType;
+
+    /**
      * @param string $Name Exchange名称
      * @param string $Type Exchange的类别，为枚举类型:Direct, Fanout, Topic
      * @param integer $SourceBindedNum 主绑定数
@@ -92,6 +122,12 @@ class AMQPExchange extends AbstractModel
      * @param integer $CreateTime 创建时间，以毫秒为单位
      * @param integer $UpdateTime 创建时间，以毫秒为单位
      * @param boolean $Internal 是否为内部Exchange(以amq.前缀开头的)
+     * @param string $AlternateExchange 备用Exchange名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AlternateExchangeDeleteMark 备用Exchange是否删除标识: true(已删除)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DelayType 延迟Exchange的类别，为枚举类型:Direct, Fanout, Topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -136,6 +172,18 @@ class AMQPExchange extends AbstractModel
 
         if (array_key_exists("Internal",$param) and $param["Internal"] !== null) {
             $this->Internal = $param["Internal"];
+        }
+
+        if (array_key_exists("AlternateExchange",$param) and $param["AlternateExchange"] !== null) {
+            $this->AlternateExchange = $param["AlternateExchange"];
+        }
+
+        if (array_key_exists("AlternateExchangeDeleteMark",$param) and $param["AlternateExchangeDeleteMark"] !== null) {
+            $this->AlternateExchangeDeleteMark = $param["AlternateExchangeDeleteMark"];
+        }
+
+        if (array_key_exists("DelayType",$param) and $param["DelayType"] !== null) {
+            $this->DelayType = $param["DelayType"];
         }
     }
 }

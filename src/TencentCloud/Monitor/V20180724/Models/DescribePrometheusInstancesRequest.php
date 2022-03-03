@@ -56,6 +56,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getInstanceChargeType() 获取按照【计费类型】进行过滤。
+<li>2：包年包月</li>
+<li>3：按量</li>
+ * @method void setInstanceChargeType(integer $InstanceChargeType) 设置按照【计费类型】进行过滤。
+<li>2：包年包月</li>
+<li>3：按量</li>
  */
 class DescribePrometheusInstancesRequest extends AbstractModel
 {
@@ -110,6 +116,13 @@ class DescribePrometheusInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var integer 按照【计费类型】进行过滤。
+<li>2：包年包月</li>
+<li>3：按量</li>
+     */
+    public $InstanceChargeType;
+
+    /**
      * @param array $InstanceIds 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
      * @param array $InstanceStatus 按照【实例状态】进行过滤。
 <ul>
@@ -128,6 +141,9 @@ class DescribePrometheusInstancesRequest extends AbstractModel
      * @param array $IPv4Address 按照【实例的IPv4地址】进行过滤。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
+     * @param integer $InstanceChargeType 按照【计费类型】进行过滤。
+<li>2：包年包月</li>
+<li>3：按量</li>
      */
     function __construct()
     {
@@ -177,6 +193,10 @@ class DescribePrometheusInstancesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
         }
     }
 }

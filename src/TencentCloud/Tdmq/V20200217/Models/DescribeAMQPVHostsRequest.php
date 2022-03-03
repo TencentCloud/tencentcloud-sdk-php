@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数目
  * @method string getNameKeyword() 获取按名称搜索
  * @method void setNameKeyword(string $NameKeyword) 设置按名称搜索
+ * @method array getVHostIdList() 获取VHostId 列表过滤
+ * @method void setVHostIdList(array $VHostIdList) 设置VHostId 列表过滤
  */
 class DescribeAMQPVHostsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeAMQPVHostsRequest extends AbstractModel
     public $NameKeyword;
 
     /**
+     * @var array VHostId 列表过滤
+     */
+    public $VHostIdList;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目
      * @param string $NameKeyword 按名称搜索
+     * @param array $VHostIdList VHostId 列表过滤
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeAMQPVHostsRequest extends AbstractModel
 
         if (array_key_exists("NameKeyword",$param) and $param["NameKeyword"] !== null) {
             $this->NameKeyword = $param["NameKeyword"];
+        }
+
+        if (array_key_exists("VHostIdList",$param) and $param["VHostIdList"] !== null) {
+            $this->VHostIdList = $param["VHostIdList"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getStopJobDescriptions() 获取批量停止作业的描述信息
  * @method void setStopJobDescriptions(array $StopJobDescriptions) 设置批量停止作业的描述信息
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class StopJobsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class StopJobsRequest extends AbstractModel
     public $StopJobDescriptions;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param array $StopJobDescriptions 批量停止作业的描述信息
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class StopJobsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->StopJobDescriptions, $obj);
             }
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

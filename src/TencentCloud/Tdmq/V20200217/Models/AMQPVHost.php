@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) 设置用户名
  * @method string getPassword() 获取密码
  * @method void setPassword(string $Password) 设置密码
+ * @method integer getStatus() 获取集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AMQPVHost extends AbstractModel
 {
@@ -76,6 +80,12 @@ class AMQPVHost extends AbstractModel
     public $Password;
 
     /**
+     * @var integer 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $VHostId 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_”
      * @param integer $MsgTtl 未消费消息的保留时间，以毫秒单位，范围60秒到15天
      * @param string $Remark 备注
@@ -84,6 +94,8 @@ class AMQPVHost extends AbstractModel
      * @param integer $UpdateTime 更新时间，以毫秒为单位
      * @param string $Username 用户名
      * @param string $Password 密码
+     * @param integer $Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -124,6 +136,10 @@ class AMQPVHost extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

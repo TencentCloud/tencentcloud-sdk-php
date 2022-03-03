@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHourDBInstance请求参数结构体
  *
- * @method array getZones() 获取节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
- * @method void setZones(array $Zones) 设置节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+ * @method array getZones() 获取节点可用区分布，最多可填两个可用区。
+ * @method void setZones(array $Zones) 设置节点可用区分布，最多可填两个可用区。
  * @method integer getNodeCount() 获取节点个数
  * @method void setNodeCount(integer $NodeCount) 设置节点个数
  * @method integer getMemory() 获取内存大小，单位：GB
@@ -37,14 +37,8 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubnetId() 获取统一子网ID，VpcId有值时需填写
  * @method void setSubnetId(string $SubnetId) 设置统一子网ID，VpcId有值时需填写
  * @method string getDbVersionId() 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
  * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
  * @method string getInstanceName() 获取自定义实例名称
  * @method void setInstanceName(string $InstanceName) 设置自定义实例名称
@@ -58,8 +52,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDcnRegion(string $DcnRegion) 设置DCN源地域
  * @method string getDcnInstanceId() 获取DCN源实例ID
  * @method void setDcnInstanceId(string $DcnInstanceId) 设置DCN源实例ID
- * @method array getInitParams() 获取参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
- * @method void setInitParams(array $InitParams) 设置参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+ * @method array getInitParams() 获取参数列表。本接口的可选值为：
+character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
+innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
+ * @method void setInitParams(array $InitParams) 设置参数列表。本接口的可选值为：
+character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
+innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
  * @method string getRollbackInstanceId() 获取回档源实例ID
  * @method void setRollbackInstanceId(string $RollbackInstanceId) 设置回档源实例ID
  * @method string getRollbackTime() 获取回档时间
@@ -68,7 +66,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateHourDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var array 节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * @var array 节点可用区分布，最多可填两个可用区。
      */
     public $Zones;
 
@@ -109,9 +107,6 @@ class CreateHourDBInstanceRequest extends AbstractModel
 
     /**
      * @var string 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
      */
     public $DbVersionId;
@@ -147,7 +142,9 @@ class CreateHourDBInstanceRequest extends AbstractModel
     public $DcnInstanceId;
 
     /**
-     * @var array 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+     * @var array 参数列表。本接口的可选值为：
+character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
+innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
      */
     public $InitParams;
 
@@ -162,7 +159,7 @@ class CreateHourDBInstanceRequest extends AbstractModel
     public $RollbackTime;
 
     /**
-     * @param array $Zones 节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * @param array $Zones 节点可用区分布，最多可填两个可用区。
      * @param integer $NodeCount 节点个数
      * @param integer $Memory 内存大小，单位：GB
      * @param integer $Storage 储存大小，单位：GB
@@ -171,9 +168,6 @@ class CreateHourDBInstanceRequest extends AbstractModel
      * @param string $VpcId 统一网络ID，不传表示基础网络
      * @param string $SubnetId 统一子网ID，VpcId有值时需填写
      * @param string $DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
-10.0.10 - Mariadb 10.0.10；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
 如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
      * @param string $InstanceName 自定义实例名称
      * @param array $SecurityGroupIds 安全组ID，不传表示不绑定安全组
@@ -181,7 +175,9 @@ class CreateHourDBInstanceRequest extends AbstractModel
      * @param array $ResourceTags 标签键值对数组
      * @param string $DcnRegion DCN源地域
      * @param string $DcnInstanceId DCN源实例ID
-     * @param array $InitParams 参数列表。本接口的可选值为：character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化。默认为强同步可退化）。
+     * @param array $InitParams 参数列表。本接口的可选值为：
+character_set_server（字符集，必传），lower_case_table_names（表名大小写敏感，必传，0 - 敏感；1-不敏感），
+innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0 - 异步； 1 - 强同步；2 - 强同步可退化，默认为强同步可退化）。
      * @param string $RollbackInstanceId 回档源实例ID
      * @param string $RollbackTime 回档时间
      */

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页大小，默认为20，最大值为100
  * @method integer getResourceConfigVersion() 获取资源版本号
  * @method void setResourceConfigVersion(integer $ResourceConfigVersion) 设置资源版本号
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class DescribeResourceRelatedJobsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeResourceRelatedJobsRequest extends AbstractModel
     public $ResourceConfigVersion;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param string $ResourceId 资源ID
      * @param integer $DESCByJobConfigCreateTime 默认0;   1： 按照作业版本创建时间降序
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 分页大小，默认为20，最大值为100
      * @param integer $ResourceConfigVersion 资源版本号
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeResourceRelatedJobsRequest extends AbstractModel
 
         if (array_key_exists("ResourceConfigVersion",$param) and $param["ResourceConfigVersion"] !== null) {
             $this->ResourceConfigVersion = $param["ResourceConfigVersion"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

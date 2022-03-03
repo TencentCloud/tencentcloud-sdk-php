@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签。
  * @method string getInstanceId() 获取独享实例id
  * @method void setInstanceId(string $InstanceId) 设置独享实例id
+ * @method string getUniqVpcId() 获取vpc属性
+ * @method void setUniqVpcId(string $UniqVpcId) 设置vpc属性
  */
 class CreateServiceRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateServiceRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string vpc属性
+     */
+    public $UniqVpcId;
+
+    /**
      * @param string $ServiceName 用户自定义的服务名称。
      * @param string $Protocol 服务的前端请求类型。如 http、https、http&https。
      * @param string $ServiceDesc 用户自定义的服务描述。
@@ -104,6 +111,7 @@ class CreateServiceRequest extends AbstractModel
      * @param string $AppIdType 用户类型。保留类型，serverless用户使用。
      * @param array $Tags 标签。
      * @param string $InstanceId 独享实例id
+     * @param string $UniqVpcId vpc属性
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class CreateServiceRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
         }
     }
 }

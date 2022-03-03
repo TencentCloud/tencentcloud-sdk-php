@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getRunJobDescriptions() 获取批量启动作业的描述信息
  * @method void setRunJobDescriptions(array $RunJobDescriptions) 设置批量启动作业的描述信息
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class RunJobsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class RunJobsRequest extends AbstractModel
     public $RunJobDescriptions;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param array $RunJobDescriptions 批量启动作业的描述信息
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -53,6 +61,10 @@ class RunJobsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->RunJobDescriptions, $obj);
             }
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

@@ -218,6 +218,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetName(string $SubnetName) 设置subnet name
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClusterExternalServiceInfo() 获取集群依赖关系
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterExternalServiceInfo(array $ClusterExternalServiceInfo) 设置集群依赖关系
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -465,6 +469,12 @@ class ClusterInstancesInfo extends AbstractModel
     public $SubnetName;
 
     /**
+     * @var array 集群依赖关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterExternalServiceInfo;
+
+    /**
      * @param integer $Id ID号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
@@ -563,6 +573,8 @@ class ClusterInstancesInfo extends AbstractModel
      * @param string $VpcName vpc name
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetName subnet name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClusterExternalServiceInfo 集群依赖关系
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -726,6 +738,15 @@ class ClusterInstancesInfo extends AbstractModel
 
         if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
             $this->SubnetName = $param["SubnetName"];
+        }
+
+        if (array_key_exists("ClusterExternalServiceInfo",$param) and $param["ClusterExternalServiceInfo"] !== null) {
+            $this->ClusterExternalServiceInfo = [];
+            foreach ($param["ClusterExternalServiceInfo"] as $key => $value){
+                $obj = new ClusterExternalServiceInfo();
+                $obj->deserialize($value);
+                array_push($this->ClusterExternalServiceInfo, $obj);
+            }
         }
     }
 }

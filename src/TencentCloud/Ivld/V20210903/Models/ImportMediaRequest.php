@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMD5(string $MD5) 设置待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32B
  * @method string getName() 获取待分析视频的名称，指定后可支持筛选，最多100个中文字符
  * @method void setName(string $Name) 设置待分析视频的名称，指定后可支持筛选，最多100个中文字符
+ * @method string getWriteBackCosPath() 获取当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)
+ * @method void setWriteBackCosPath(string $WriteBackCosPath) 设置当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)
+ * @method string getLabel() 获取自定义标签，可用于查询
+ * @method void setLabel(string $Label) 设置自定义标签，可用于查询
+ * @method string getCallbackURL() 获取媒资导入完成的回调地址，该设置优先级高于控制台全局的设置；
+ * @method void setCallbackURL(string $CallbackURL) 设置媒资导入完成的回调地址，该设置优先级高于控制台全局的设置；
  */
 class ImportMediaRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class ImportMediaRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string 当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)
+     */
+    public $WriteBackCosPath;
+
+    /**
+     * @var string 自定义标签，可用于查询
+     */
+    public $Label;
+
+    /**
+     * @var string 媒资导入完成的回调地址，该设置优先级高于控制台全局的设置；
+     */
+    public $CallbackURL;
+
+    /**
      * @param string $URL 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB
      * @param string $MD5 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32B
      * @param string $Name 待分析视频的名称，指定后可支持筛选，最多100个中文字符
+     * @param string $WriteBackCosPath 当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)
+     * @param string $Label 自定义标签，可用于查询
+     * @param string $CallbackURL 媒资导入完成的回调地址，该设置优先级高于控制台全局的设置；
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class ImportMediaRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("WriteBackCosPath",$param) and $param["WriteBackCosPath"] !== null) {
+            $this->WriteBackCosPath = $param["WriteBackCosPath"];
+        }
+
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("CallbackURL",$param) and $param["CallbackURL"] !== null) {
+            $this->CallbackURL = $param["CallbackURL"];
         }
     }
 }

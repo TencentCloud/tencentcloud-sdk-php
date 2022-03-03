@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(float $Progress) 设置导入视频进度，取值范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLabel() 获取媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabel(string $Label) 设置媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaInfo extends AbstractModel
 {
@@ -107,6 +111,12 @@ class MediaInfo extends AbstractModel
     public $Progress;
 
     /**
+     * @var string 媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Label;
+
+    /**
      * @param string $MediaId 媒资ID
      * @param string $Name 媒资名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -119,6 +129,8 @@ class MediaInfo extends AbstractModel
      * @param MediaMetadata $Metadata 媒资视频元信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Progress 导入视频进度，取值范围为[0,100]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Label 媒资自定义标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -161,6 +173,10 @@ class MediaInfo extends AbstractModel
 
         if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
             $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = $param["Label"];
         }
     }
 }

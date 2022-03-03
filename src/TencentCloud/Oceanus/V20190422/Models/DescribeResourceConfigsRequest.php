@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobConfigVersion(integer $JobConfigVersion) 设置作业配置版本
  * @method string getJobId() 获取作业ID
  * @method void setJobId(string $JobId) 设置作业ID
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class DescribeResourceConfigsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeResourceConfigsRequest extends AbstractModel
     public $JobId;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param string $ResourceId 资源ID
      * @param integer $Offset 偏移量，仅当设置 Limit 时该参数有效
      * @param integer $Limit 返回值大小，不填则返回全量数据
      * @param array $ResourceConfigVersions 资源配置Versions集合
      * @param integer $JobConfigVersion 作业配置版本
      * @param string $JobId 作业ID
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeResourceConfigsRequest extends AbstractModel
 
         if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
             $this->JobId = $param["JobId"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

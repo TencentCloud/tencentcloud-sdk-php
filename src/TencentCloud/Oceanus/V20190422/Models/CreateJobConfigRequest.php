@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogCollectType(integer $LogCollectType) 设置日志采集类型 2：CLS；3：COS
  * @method string getPythonVersion() 获取pyflink作业运行时使用的python版本
  * @method void setPythonVersion(string $PythonVersion) 设置pyflink作业运行时使用的python版本
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class CreateJobConfigRequest extends AbstractModel
     public $PythonVersion;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参
@@ -152,6 +159,7 @@ class CreateJobConfigRequest extends AbstractModel
      * @param string $ClsTopicId CLS日志主题ID
      * @param integer $LogCollectType 日志采集类型 2：CLS；3：COS
      * @param string $PythonVersion pyflink作业运行时使用的python版本
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -238,6 +246,10 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("PythonVersion",$param) and $param["PythonVersion"] !== null) {
             $this->PythonVersion = $param["PythonVersion"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

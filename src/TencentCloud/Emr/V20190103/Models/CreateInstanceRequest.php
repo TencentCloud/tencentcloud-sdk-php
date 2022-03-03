@@ -166,6 +166,8 @@ Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
+ * @method array getExternalService() 获取共享组件信息
+ * @method void setExternalService(array $ExternalService) 设置共享组件信息
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -355,6 +357,11 @@ Hadoop-Hbase
     public $SceneName;
 
     /**
+     * @var array 共享组件信息
+     */
+    public $ExternalService;
+
+    /**
      * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
@@ -428,6 +435,7 @@ Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
+     * @param array $ExternalService 共享组件信息
      */
     function __construct()
     {
@@ -568,6 +576,15 @@ Hadoop-Hbase
 
         if (array_key_exists("SceneName",$param) and $param["SceneName"] !== null) {
             $this->SceneName = $param["SceneName"];
+        }
+
+        if (array_key_exists("ExternalService",$param) and $param["ExternalService"] !== null) {
+            $this->ExternalService = [];
+            foreach ($param["ExternalService"] as $key => $value){
+                $obj = new ExternalService();
+                $obj->deserialize($value);
+                array_push($this->ExternalService, $obj);
+            }
         }
     }
 }

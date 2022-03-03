@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHourDBInstance返回参数结构体
  *
- * @method string getDealName() 获取长订单号。可以据此调用 DescribeOrders
+ * @method string getDealName() 获取订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
- * @method void setDealName(string $DealName) 设置长订单号。可以据此调用 DescribeOrders
+ * @method void setDealName(string $DealName) 设置订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
  * @method array getInstanceIds() 获取订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateHourDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 长订单号。可以据此调用 DescribeOrders
+     * @var string 订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
      */
     public $DealName;
@@ -51,7 +51,7 @@ class CreateHourDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DealName 长订单号。可以据此调用 DescribeOrders
+     * @param string $DealName 订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
      * @param array $InstanceIds 订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
 注意：此字段可能返回 null，表示取不到有效值。

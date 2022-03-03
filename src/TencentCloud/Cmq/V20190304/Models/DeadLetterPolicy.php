@@ -18,23 +18,23 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeadLetterPolicy
+ * 死信队列策略
  *
- * @method string getDeadLetterQueueName() 获取死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeadLetterQueueName(string $DeadLetterQueueName) 设置死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeadLetterQueue() 获取死信队列。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadLetterQueue(string $DeadLetterQueue) 设置死信队列。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPolicy() 获取死信队列策略。
+ * @method string getDeadLetterQueueName() 获取死信队列名字。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPolicy(integer $Policy) 设置死信队列策略。
+ * @method void setDeadLetterQueueName(string $DeadLetterQueueName) 设置死信队列名字。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxTimeToLive() 获取最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxTimeToLive(integer $MaxTimeToLive) 设置最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPolicy() 获取死信队列策略。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicy(integer $Policy) 设置死信队列策略。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxReceiveCount() 获取最大接收次数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,22 +44,16 @@ use TencentCloud\Common\AbstractModel;
 class DeadLetterPolicy extends AbstractModel
 {
     /**
-     * @var string 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $DeadLetterQueueName;
-
-    /**
      * @var string 死信队列。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadLetterQueue;
 
     /**
-     * @var integer 死信队列策略。
+     * @var string 死信队列名字。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Policy;
+    public $DeadLetterQueueName;
 
     /**
      * @var integer 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
@@ -68,19 +62,25 @@ class DeadLetterPolicy extends AbstractModel
     public $MaxTimeToLive;
 
     /**
+     * @var integer 死信队列策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Policy;
+
+    /**
      * @var integer 最大接收次数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxReceiveCount;
 
     /**
-     * @param string $DeadLetterQueueName 死信队列名字。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeadLetterQueue 死信队列。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Policy 死信队列策略。
+     * @param string $DeadLetterQueueName 死信队列名字。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxTimeToLive 最大未消费过期时间。Policy为1时必选。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Policy 死信队列策略。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxReceiveCount 最大接收次数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -98,20 +98,20 @@ class DeadLetterPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeadLetterQueueName",$param) and $param["DeadLetterQueueName"] !== null) {
-            $this->DeadLetterQueueName = $param["DeadLetterQueueName"];
-        }
-
         if (array_key_exists("DeadLetterQueue",$param) and $param["DeadLetterQueue"] !== null) {
             $this->DeadLetterQueue = $param["DeadLetterQueue"];
         }
 
-        if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
-            $this->Policy = $param["Policy"];
+        if (array_key_exists("DeadLetterQueueName",$param) and $param["DeadLetterQueueName"] !== null) {
+            $this->DeadLetterQueueName = $param["DeadLetterQueueName"];
         }
 
         if (array_key_exists("MaxTimeToLive",$param) and $param["MaxTimeToLive"] !== null) {
             $this->MaxTimeToLive = $param["MaxTimeToLive"];
+        }
+
+        if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
+            $this->Policy = $param["Policy"];
         }
 
         if (array_key_exists("MaxReceiveCount",$param) and $param["MaxReceiveCount"] !== null) {

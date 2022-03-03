@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置任务名称，最长100个中文字符
  * @method boolean getUploadVideo() 获取是否上传转码后的视频，仅设置true时上传，默认为false
  * @method void setUploadVideo(boolean $UploadVideo) 设置是否上传转码后的视频，仅设置true时上传，默认为false
+ * @method string getLabel() 获取自定义标签，可用于查询
+ * @method void setLabel(string $Label) 设置自定义标签，可用于查询
+ * @method string getCallbackURL() 获取任务分析完成的回调地址，该设置优先级高于控制台全局的设置；
+ * @method void setCallbackURL(string $CallbackURL) 设置任务分析完成的回调地址，该设置优先级高于控制台全局的设置；
  */
 class CreateTaskRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class CreateTaskRequest extends AbstractModel
     public $UploadVideo;
 
     /**
+     * @var string 自定义标签，可用于查询
+     */
+    public $Label;
+
+    /**
+     * @var string 任务分析完成的回调地址，该设置优先级高于控制台全局的设置；
+     */
+    public $CallbackURL;
+
+    /**
      * @param string $MediaId 媒资文件ID，最长32B
      * @param MediaPreknownInfo $MediaPreknownInfo 媒资素材先验知识，相关限制参考MediaPreknownInfo
      * @param string $TaskName 任务名称，最长100个中文字符
      * @param boolean $UploadVideo 是否上传转码后的视频，仅设置true时上传，默认为false
+     * @param string $Label 自定义标签，可用于查询
+     * @param string $CallbackURL 任务分析完成的回调地址，该设置优先级高于控制台全局的设置；
      */
     function __construct()
     {
@@ -85,6 +101,14 @@ class CreateTaskRequest extends AbstractModel
 
         if (array_key_exists("UploadVideo",$param) and $param["UploadVideo"] !== null) {
             $this->UploadVideo = $param["UploadVideo"];
+        }
+
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("CallbackURL",$param) and $param["CallbackURL"] !== null) {
+            $this->CallbackURL = $param["CallbackURL"];
         }
     }
 }

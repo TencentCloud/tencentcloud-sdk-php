@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AMQPClusterDetail extends AbstractModel
 {
@@ -48,9 +52,17 @@ class AMQPClusterDetail extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param AMQPClusterInfo $Info 集群基本信息
      * @param AMQPClusterConfig $Config 集群配置信息
      * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -83,6 +95,10 @@ class AMQPClusterDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

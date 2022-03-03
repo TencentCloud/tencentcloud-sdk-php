@@ -24,20 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取获取数量
  * @method void setLimit(integer $Limit) 设置获取数量
- * @method string getSearchType() 获取搜索的类型有：none，tags，grade，brand，code，hash，limit。
+ * @method string getSearchType() 获取搜索的类型有：none，tags，grade，brand，code，hash，limit，domain。
 选tags，入参请填Tag，
 选grade，入参请填Grade，
 选brand，入参请填Brand，
 选code，入参请填Code，
 选hash，入参请填Hash
 选limit，标识只返回数量信息
- * @method void setSearchType(string $SearchType) 设置搜索的类型有：none，tags，grade，brand，code，hash，limit。
+选domain，入参请填Domain
+ * @method void setSearchType(string $SearchType) 设置搜索的类型有：none，tags，grade，brand，code，hash，limit，domain。
 选tags，入参请填Tag，
 选grade，入参请填Grade，
 选brand，入参请填Brand，
 选code，入参请填Code，
 选hash，入参请填Hash
 选limit，标识只返回数量信息
+选domain，入参请填Domain
  * @method string getTag() 获取标签，多个标签用逗号分隔
  * @method void setTag(string $Tag) 设置标签，多个标签用逗号分隔
  * @method string getGrade() 获取等级
@@ -52,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItem(string $Item) 设置搜索图标类型
  * @method string getStatus() 获取搜索图标值
  * @method void setStatus(string $Status) 设置搜索图标值
+ * @method string getDomain() 获取搜索域名
+ * @method void setDomain(string $Domain) 设置搜索域名
  */
 class DescribeDomainsRequest extends AbstractModel
 {
@@ -66,13 +70,14 @@ class DescribeDomainsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+     * @var string 搜索的类型有：none，tags，grade，brand，code，hash，limit，domain。
 选tags，入参请填Tag，
 选grade，入参请填Grade，
 选brand，入参请填Brand，
 选code，入参请填Code，
 选hash，入参请填Hash
 选limit，标识只返回数量信息
+选domain，入参请填Domain
      */
     public $SearchType;
 
@@ -112,15 +117,21 @@ class DescribeDomainsRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var string 搜索域名
+     */
+    public $Domain;
+
+    /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 获取数量
-     * @param string $SearchType 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+     * @param string $SearchType 搜索的类型有：none，tags，grade，brand，code，hash，limit，domain。
 选tags，入参请填Tag，
 选grade，入参请填Grade，
 选brand，入参请填Brand，
 选code，入参请填Code，
 选hash，入参请填Hash
 选limit，标识只返回数量信息
+选domain，入参请填Domain
      * @param string $Tag 标签，多个标签用逗号分隔
      * @param string $Grade 等级
      * @param string $Brand 品牌
@@ -128,6 +139,7 @@ class DescribeDomainsRequest extends AbstractModel
      * @param string $Hash 证书指纹
      * @param string $Item 搜索图标类型
      * @param string $Status 搜索图标值
+     * @param string $Domain 搜索域名
      */
     function __construct()
     {
@@ -180,6 +192,10 @@ class DescribeDomainsRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }

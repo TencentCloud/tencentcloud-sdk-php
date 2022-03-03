@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置资源ID
  * @method array getResourceConfigVersions() 获取资源版本数组
  * @method void setResourceConfigVersions(array $ResourceConfigVersions) 设置资源版本数组
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class DeleteResourceConfigsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteResourceConfigsRequest extends AbstractModel
     public $ResourceConfigVersions;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param string $ResourceId 资源ID
      * @param array $ResourceConfigVersions 资源版本数组
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteResourceConfigsRequest extends AbstractModel
 
         if (array_key_exists("ResourceConfigVersions",$param) and $param["ResourceConfigVersions"] !== null) {
             $this->ResourceConfigVersions = $param["ResourceConfigVersions"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

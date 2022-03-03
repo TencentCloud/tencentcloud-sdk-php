@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceConfigRemark(string $ResourceConfigRemark) 设置资源版本描述
  * @method string getFolderId() 获取目录ID
  * @method void setFolderId(string $FolderId) 设置目录ID
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class CreateResourceRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateResourceRequest extends AbstractModel
     public $FolderId;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param ResourceLoc $ResourceLoc 资源位置
      * @param integer $ResourceType 资源类型。目前只支持 JAR，取值为 1
      * @param string $Remark 资源描述
      * @param string $Name 资源名称
      * @param string $ResourceConfigRemark 资源版本描述
      * @param string $FolderId 目录ID
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class CreateResourceRequest extends AbstractModel
 
         if (array_key_exists("FolderId",$param) and $param["FolderId"] !== null) {
             $this->FolderId = $param["FolderId"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

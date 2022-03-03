@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤条件
  * @method boolean getOnlyDraft() 获取true 表示只展示草稿
  * @method void setOnlyDraft(boolean $OnlyDraft) 设置true 表示只展示草稿
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class DescribeJobConfigsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeJobConfigsRequest extends AbstractModel
     public $OnlyDraft;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param string $JobId 作业Id
      * @param array $JobConfigVersions 作业配置版本
      * @param integer $Offset 偏移量，默认0
      * @param integer $Limit 分页大小，默认20，最大100
      * @param array $Filters 过滤条件
      * @param boolean $OnlyDraft true 表示只展示草稿
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class DescribeJobConfigsRequest extends AbstractModel
 
         if (array_key_exists("OnlyDraft",$param) and $param["OnlyDraft"] !== null) {
             $this->OnlyDraft = $param["OnlyDraft"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

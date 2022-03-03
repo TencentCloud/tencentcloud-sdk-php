@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMediaLangSet(array $MediaLangSet) 设置媒资语言类型
  * @method array getMediaLabelSet() 获取媒资素材一级类型
  * @method void setMediaLabelSet(array $MediaLabelSet) 设置媒资素材一级类型
+ * @method array getLabelSet() 获取媒资自定义标签数组
+ * @method void setLabelSet(array $LabelSet) 设置媒资自定义标签数组
  */
 class TaskFilter extends AbstractModel
 {
@@ -73,6 +75,11 @@ class TaskFilter extends AbstractModel
     public $MediaLabelSet;
 
     /**
+     * @var array 媒资自定义标签数组
+     */
+    public $LabelSet;
+
+    /**
      * @param array $MediaTypeSet 媒资文件类型
      * @param array $TaskStatusSet 待筛选的任务状态列表
      * @param array $TaskNameSet 待筛选的任务名称数组
@@ -80,6 +87,7 @@ class TaskFilter extends AbstractModel
      * @param array $MediaNameSet 媒资文件名数组
      * @param array $MediaLangSet 媒资语言类型
      * @param array $MediaLabelSet 媒资素材一级类型
+     * @param array $LabelSet 媒资自定义标签数组
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class TaskFilter extends AbstractModel
 
         if (array_key_exists("MediaLabelSet",$param) and $param["MediaLabelSet"] !== null) {
             $this->MediaLabelSet = $param["MediaLabelSet"];
+        }
+
+        if (array_key_exists("LabelSet",$param) and $param["LabelSet"] !== null) {
+            $this->LabelSet = $param["LabelSet"];
         }
     }
 }

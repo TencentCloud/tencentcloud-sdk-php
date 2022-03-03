@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlText(string $SqlText) 设置SQL语句。
  * @method string getSchema() 获取库名。
  * @method void setSchema(string $Schema) 设置库名。
+ * @method string getProduct() 获取服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"dbbrain-mysql" - 自建 MySQL，默认为"mysql"。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"dbbrain-mysql" - 自建 MySQL，默认为"mysql"。
  */
 class DescribeUserSqlAdviceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeUserSqlAdviceRequest extends AbstractModel
     public $Schema;
 
     /**
+     * @var string 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"dbbrain-mysql" - 自建 MySQL，默认为"mysql"。
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $SqlText SQL语句。
      * @param string $Schema 库名。
+     * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL；"dbbrain-mysql" - 自建 MySQL，默认为"mysql"。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeUserSqlAdviceRequest extends AbstractModel
 
         if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
             $this->Schema = $param["Schema"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

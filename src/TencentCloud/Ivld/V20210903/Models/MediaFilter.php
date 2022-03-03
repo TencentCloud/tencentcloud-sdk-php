@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaIdSet(array $MediaIdSet) 设置媒资ID数组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLabelSet() 获取媒资自定义标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabelSet(array $LabelSet) 设置媒资自定义标签数组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaFilter extends AbstractModel
 {
@@ -56,11 +60,19 @@ class MediaFilter extends AbstractModel
     public $MediaIdSet;
 
     /**
+     * @var array 媒资自定义标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LabelSet;
+
+    /**
      * @param array $MediaNameSet 媒资名称过滤条件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StatusSet 媒资状态数组，媒资状态可选值参见MediaInfo
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MediaIdSet 媒资ID数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LabelSet 媒资自定义标签数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -86,6 +98,10 @@ class MediaFilter extends AbstractModel
 
         if (array_key_exists("MediaIdSet",$param) and $param["MediaIdSet"] !== null) {
             $this->MediaIdSet = $param["MediaIdSet"];
+        }
+
+        if (array_key_exists("LabelSet",$param) and $param["LabelSet"] !== null) {
+            $this->LabelSet = $param["LabelSet"];
         }
     }
 }

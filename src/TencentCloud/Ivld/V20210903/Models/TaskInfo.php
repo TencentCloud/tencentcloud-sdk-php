@@ -69,6 +69,10 @@ TaskStatus定义如下:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaName(string $MediaName) 设置媒资文件名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLabel() 获取媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLabel(string $Label) 设置媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfo extends AbstractModel
 {
@@ -134,6 +138,12 @@ class TaskInfo extends AbstractModel
     public $MediaName;
 
     /**
+     * @var string 媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Label;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $TaskName 描述任务名称，指定后可根据名称筛选
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,6 +160,8 @@ class TaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaPreknownInfo $MediaPreknownInfo 任务执行时指定的先验知识
      * @param string $MediaName 媒资文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Label 媒资自定义标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +220,10 @@ class TaskInfo extends AbstractModel
 
         if (array_key_exists("MediaName",$param) and $param["MediaName"] !== null) {
             $this->MediaName = $param["MediaName"];
+        }
+
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = $param["Label"];
         }
     }
 }

@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroups(array $SecurityGroups) 设置安全组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublicKeyId() 获取SSH密钥Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicKeyId(string $PublicKeyId) 设置SSH密钥Id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmrProductConfigOutter extends AbstractModel
 {
@@ -204,6 +208,12 @@ class EmrProductConfigOutter extends AbstractModel
     public $SecurityGroups;
 
     /**
+     * @var string SSH密钥Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicKeyId;
+
+    /**
      * @param array $SoftInfo 软件信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MasterNodeSize Master节点个数
@@ -239,6 +249,8 @@ class EmrProductConfigOutter extends AbstractModel
      * @param string $ApplicationRole 自定义应用角色。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroups 安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicKeyId SSH密钥Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -328,6 +340,10 @@ class EmrProductConfigOutter extends AbstractModel
 
         if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
             $this->SecurityGroups = $param["SecurityGroups"];
+        }
+
+        if (array_key_exists("PublicKeyId",$param) and $param["PublicKeyId"] !== null) {
+            $this->PublicKeyId = $param["PublicKeyId"];
         }
     }
 }

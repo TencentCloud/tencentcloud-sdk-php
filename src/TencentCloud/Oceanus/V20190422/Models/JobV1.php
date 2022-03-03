@@ -136,6 +136,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlinkVersion(string $FlinkVersion) 设置作业运行的 Flink 版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWorkSpaceName() 获取工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkSpaceName(string $WorkSpaceName) 设置工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobV1 extends AbstractModel
 {
@@ -314,6 +322,18 @@ class JobV1 extends AbstractModel
     public $FlinkVersion;
 
     /**
+     * @var string 工作空间 SerialId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkSpaceId;
+
+    /**
+     * @var string 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkSpaceName;
+
+    /**
      * @param string $JobId 作业ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
@@ -371,6 +391,10 @@ class JobV1 extends AbstractModel
      * @param float $RunningCu 细粒度下的运行的CU数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlinkVersion 作业运行的 Flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkSpaceId 工作空间 SerialId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WorkSpaceName 工作空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -500,6 +524,14 @@ class JobV1 extends AbstractModel
 
         if (array_key_exists("FlinkVersion",$param) and $param["FlinkVersion"] !== null) {
             $this->FlinkVersion = $param["FlinkVersion"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("WorkSpaceName",$param) and $param["WorkSpaceName"] !== null) {
+            $this->WorkSpaceName = $param["WorkSpaceName"];
         }
     }
 }

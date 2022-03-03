@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置资源描述信息
  * @method integer getAutoDelete() 获取1： 资源版本达到上限，自动删除最早可删除的版本
  * @method void setAutoDelete(integer $AutoDelete) 设置1： 资源版本达到上限，自动删除最早可删除的版本
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class CreateResourceConfigRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateResourceConfigRequest extends AbstractModel
     public $AutoDelete;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param string $ResourceId 资源ID
      * @param ResourceLoc $ResourceLoc 位置信息
      * @param string $Remark 资源描述信息
      * @param integer $AutoDelete 1： 资源版本达到上限，自动删除最早可删除的版本
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class CreateResourceConfigRequest extends AbstractModel
 
         if (array_key_exists("AutoDelete",$param) and $param["AutoDelete"] !== null) {
             $this->AutoDelete = $param["AutoDelete"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Cmq\V20190304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeadLetterSource
+ * 死信源队列信息
  *
  * @method string getQueueId() 获取消息队列ID。
 注意：此字段可能返回 null，表示取不到有效值。

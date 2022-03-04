@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOpenId() 获取收单系统分配的开放ID
  * @method void setOpenId(string $OpenId) 设置收单系统分配的开放ID
+ * @method string getOpenKey() 获取收单系统分配的密钥
+ * @method void setOpenKey(string $OpenKey) 设置收单系统分配的密钥
  * @method string getStorage() 获取存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
  * @method void setStorage(string $Storage) 设置存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
  * @method string getFileMd5() 获取文件的md5值（为防止平台多次上传重复文件，文件名为文件md5,且不会覆盖，重复上传返回第一次上传成功的文件路径）
@@ -30,8 +32,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileContent(string $FileContent) 设置文件内容（先将图片转换成二进制，再进行base64加密）
  * @method string getFileExtension() 获取文件扩展名（png,jpg,gif）
  * @method void setFileExtension(string $FileExtension) 设置文件扩展名（png,jpg,gif）
- * @method string getOpenKey() 获取收单系统分配的密钥
- * @method void setOpenKey(string $OpenKey) 设置收单系统分配的密钥
  * @method string getProfile() 获取沙箱环境填sandbox，正式环境不填
  * @method void setProfile(string $Profile) 设置沙箱环境填sandbox，正式环境不填
  */
@@ -41,6 +41,11 @@ class UploadOrgFileRequest extends AbstractModel
      * @var string 收单系统分配的开放ID
      */
     public $OpenId;
+
+    /**
+     * @var string 收单系统分配的密钥
+     */
+    public $OpenKey;
 
     /**
      * @var string 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
@@ -63,22 +68,17 @@ class UploadOrgFileRequest extends AbstractModel
     public $FileExtension;
 
     /**
-     * @var string 收单系统分配的密钥
-     */
-    public $OpenKey;
-
-    /**
      * @var string 沙箱环境填sandbox，正式环境不填
      */
     public $Profile;
 
     /**
      * @param string $OpenId 收单系统分配的开放ID
+     * @param string $OpenKey 收单系统分配的密钥
      * @param string $Storage 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
      * @param string $FileMd5 文件的md5值（为防止平台多次上传重复文件，文件名为文件md5,且不会覆盖，重复上传返回第一次上传成功的文件路径）
      * @param string $FileContent 文件内容（先将图片转换成二进制，再进行base64加密）
      * @param string $FileExtension 文件扩展名（png,jpg,gif）
-     * @param string $OpenKey 收单系统分配的密钥
      * @param string $Profile 沙箱环境填sandbox，正式环境不填
      */
     function __construct()
@@ -98,6 +98,10 @@ class UploadOrgFileRequest extends AbstractModel
             $this->OpenId = $param["OpenId"];
         }
 
+        if (array_key_exists("OpenKey",$param) and $param["OpenKey"] !== null) {
+            $this->OpenKey = $param["OpenKey"];
+        }
+
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
         }
@@ -112,10 +116,6 @@ class UploadOrgFileRequest extends AbstractModel
 
         if (array_key_exists("FileExtension",$param) and $param["FileExtension"] !== null) {
             $this->FileExtension = $param["FileExtension"];
-        }
-
-        if (array_key_exists("OpenKey",$param) and $param["OpenKey"] !== null) {
-            $this->OpenKey = $param["OpenKey"];
         }
 
         if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {

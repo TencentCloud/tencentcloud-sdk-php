@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DistributeQueryReceiver请求参数结构体
  *
- * @method string getOpenId() 获取收单系统分配的开放ID
- * @method void setOpenId(string $OpenId) 设置收单系统分配的开放ID
- * @method string getOpenKey() 获取收单系统分配的密钥
- * @method void setOpenKey(string $OpenKey) 设置收单系统分配的密钥
+ * @method string getOpenId() 获取使用门店OpenId
+ * @method void setOpenId(string $OpenId) 设置使用门店OpenId
+ * @method string getOpenKey() 获取使用门店OpenKey
+ * @method void setOpenKey(string $OpenKey) 设置使用门店OpenKey
  * @method string getProfile() 获取沙箱环境填sandbox，正式环境不填
  * @method void setProfile(string $Profile) 设置沙箱环境填sandbox，正式环境不填
  */
 class DistributeQueryReceiverRequest extends AbstractModel
 {
     /**
-     * @var string 收单系统分配的开放ID
+     * @var string 使用门店OpenId
      */
     public $OpenId;
 
     /**
-     * @var string 收单系统分配的密钥
+     * @var string 使用门店OpenKey
      */
     public $OpenKey;
 
@@ -45,8 +45,8 @@ class DistributeQueryReceiverRequest extends AbstractModel
     public $Profile;
 
     /**
-     * @param string $OpenId 收单系统分配的开放ID
-     * @param string $OpenKey 收单系统分配的密钥
+     * @param string $OpenId 使用门店OpenId
+     * @param string $OpenKey 使用门店OpenKey
      * @param string $Profile 沙箱环境填sandbox，正式环境不填
      */
     function __construct()

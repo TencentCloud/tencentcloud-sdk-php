@@ -23,14 +23,17 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ckafka\V20190819\Models as Models;
 
 /**
+ * @method Models\AuthorizeTokenResponse AuthorizeToken(Models\AuthorizeTokenRequest $req) 给实例授权token
  * @method Models\BatchCreateAclResponse BatchCreateAcl(Models\BatchCreateAclRequest $req) 批量添加ACL策略
  * @method Models\BatchModifyGroupOffsetsResponse BatchModifyGroupOffsets(Models\BatchModifyGroupOffsetsRequest $req) 批量修改消费组offset
  * @method Models\BatchModifyTopicAttributesResponse BatchModifyTopicAttributes(Models\BatchModifyTopicAttributesRequest $req) 批量设置主题属性
+ * @method Models\CancelAuthorizationTokenResponse CancelAuthorizationToken(Models\CancelAuthorizationTokenRequest $req) 取消授权token
  * @method Models\CreateAclResponse CreateAcl(Models\CreateAclRequest $req) 添加 ACL 策略
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 创建消费者组
  * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) 创建实例(预付费包年包月)
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 本接口用于增加主题中的分区
  * @method Models\CreateRouteResponse CreateRoute(Models\CreateRouteRequest $req) 添加实例路由
+ * @method Models\CreateTokenResponse CreateToken(Models\CreateTokenRequest $req) 创建最高权限的token
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建ckafka主题
  * @method Models\CreateTopicIpWhiteListResponse CreateTopicIpWhiteList(Models\CreateTopicIpWhiteListRequest $req) 创建主题ip白名单
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 添加用户

@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupName(string $SkillGroupName) 设置技能组名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCustomRecordURL() 获取录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomRecordURL(string $CustomRecordURL) 设置录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServeParticipant extends AbstractModel
 {
@@ -184,6 +188,12 @@ class ServeParticipant extends AbstractModel
     public $SkillGroupName;
 
     /**
+     * @var string 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomRecordURL;
+
+    /**
      * @param string $Mail 坐席邮箱
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 坐席电话
@@ -215,6 +225,8 @@ class ServeParticipant extends AbstractModel
      * @param integer $StartTimestamp 开始时间戳，Unix 秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SkillGroupName 技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CustomRecordURL 录音转存第三方COS地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -292,6 +304,10 @@ class ServeParticipant extends AbstractModel
 
         if (array_key_exists("SkillGroupName",$param) and $param["SkillGroupName"] !== null) {
             $this->SkillGroupName = $param["SkillGroupName"];
+        }
+
+        if (array_key_exists("CustomRecordURL",$param) and $param["CustomRecordURL"] !== null) {
+            $this->CustomRecordURL = $param["CustomRecordURL"];
         }
     }
 }

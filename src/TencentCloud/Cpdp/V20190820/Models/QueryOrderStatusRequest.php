@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryOrderStatus请求参数结构体
  *
- * @method string getOpenId() 获取收单系统分配的开放ID
- * @method void setOpenId(string $OpenId) 设置收单系统分配的开放ID
- * @method string getOpenKey() 获取收单系统分配的密钥
- * @method void setOpenKey(string $OpenKey) 设置收单系统分配的密钥
+ * @method string getOpenId() 获取使用门店OpenId
+ * @method void setOpenId(string $OpenId) 设置使用门店OpenId
+ * @method string getOpenKey() 获取使用门店OpenKey
+ * @method void setOpenKey(string $OpenKey) 设置使用门店OpenKey
  * @method string getDeveloperNo() 获取开发者流水号
  * @method void setDeveloperNo(string $DeveloperNo) 设置开发者流水号
  * @method string getOrderNo() 获取付款订单号
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class QueryOrderStatusRequest extends AbstractModel
 {
     /**
-     * @var string 收单系统分配的开放ID
+     * @var string 使用门店OpenId
      */
     public $OpenId;
 
     /**
-     * @var string 收单系统分配的密钥
+     * @var string 使用门店OpenKey
      */
     public $OpenKey;
 
@@ -59,8 +59,8 @@ class QueryOrderStatusRequest extends AbstractModel
     public $Profile;
 
     /**
-     * @param string $OpenId 收单系统分配的开放ID
-     * @param string $OpenKey 收单系统分配的密钥
+     * @param string $OpenId 使用门店OpenId
+     * @param string $OpenKey 使用门店OpenKey
      * @param string $DeveloperNo 开发者流水号
      * @param string $OrderNo 付款订单号
      * @param string $Profile 沙箱环境填sandbox，正式环境不填

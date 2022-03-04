@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenId(string $OpenId) 设置收单系统分配的开放ID
  * @method string getOpenKey() 获取收单系统分配的密钥
  * @method void setOpenKey(string $OpenKey) 设置收单系统分配的密钥
- * @method string getProfile() 获取沙箱环境填sandbox，正式环境不填
- * @method void setProfile(string $Profile) 设置沙箱环境填sandbox，正式环境不填
  * @method string getOutContractId() 获取外部合同主键编号（ContractId或OutContractId必须传一个）
  * @method void setOutContractId(string $OutContractId) 设置外部合同主键编号（ContractId或OutContractId必须传一个）
  * @method string getContractId() 获取合同主键（ContractId或OutContractId必须传一个）
  * @method void setContractId(string $ContractId) 设置合同主键（ContractId或OutContractId必须传一个）
+ * @method string getProfile() 获取沙箱环境填sandbox，正式环境不填
+ * @method void setProfile(string $Profile) 设置沙箱环境填sandbox，正式环境不填
  */
 class ViewContractRequest extends AbstractModel
 {
@@ -44,11 +44,6 @@ class ViewContractRequest extends AbstractModel
     public $OpenKey;
 
     /**
-     * @var string 沙箱环境填sandbox，正式环境不填
-     */
-    public $Profile;
-
-    /**
      * @var string 外部合同主键编号（ContractId或OutContractId必须传一个）
      */
     public $OutContractId;
@@ -59,11 +54,16 @@ class ViewContractRequest extends AbstractModel
     public $ContractId;
 
     /**
+     * @var string 沙箱环境填sandbox，正式环境不填
+     */
+    public $Profile;
+
+    /**
      * @param string $OpenId 收单系统分配的开放ID
      * @param string $OpenKey 收单系统分配的密钥
-     * @param string $Profile 沙箱环境填sandbox，正式环境不填
      * @param string $OutContractId 外部合同主键编号（ContractId或OutContractId必须传一个）
      * @param string $ContractId 合同主键（ContractId或OutContractId必须传一个）
+     * @param string $Profile 沙箱环境填sandbox，正式环境不填
      */
     function __construct()
     {
@@ -86,16 +86,16 @@ class ViewContractRequest extends AbstractModel
             $this->OpenKey = $param["OpenKey"];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
-        }
-
         if (array_key_exists("OutContractId",$param) and $param["OutContractId"] !== null) {
             $this->OutContractId = $param["OutContractId"];
         }
 
         if (array_key_exists("ContractId",$param) and $param["ContractId"] !== null) {
             $this->ContractId = $param["ContractId"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

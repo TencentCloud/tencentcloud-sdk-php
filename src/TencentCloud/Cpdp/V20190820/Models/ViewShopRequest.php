@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenId(string $OpenId) 设置收单系统分配的开放ID
  * @method string getOpenKey() 获取收单系统分配的密钥
  * @method void setOpenKey(string $OpenKey) 设置收单系统分配的密钥
- * @method string getProfile() 获取沙箱环境填sandbox，正式环境不填
- * @method void setProfile(string $Profile) 设置沙箱环境填sandbox，正式环境不填
  * @method string getOutShopId() 获取外部商户主键编号（ShopNo或OutShopId必须传一个）
  * @method void setOutShopId(string $OutShopId) 设置外部商户主键编号（ShopNo或OutShopId必须传一个）
  * @method string getShopNo() 获取门店编号（ShopNo或OutShopId必须传一个）
  * @method void setShopNo(string $ShopNo) 设置门店编号（ShopNo或OutShopId必须传一个）
+ * @method string getProfile() 获取沙箱环境填sandbox，正式环境不填
+ * @method void setProfile(string $Profile) 设置沙箱环境填sandbox，正式环境不填
  */
 class ViewShopRequest extends AbstractModel
 {
@@ -44,11 +44,6 @@ class ViewShopRequest extends AbstractModel
     public $OpenKey;
 
     /**
-     * @var string 沙箱环境填sandbox，正式环境不填
-     */
-    public $Profile;
-
-    /**
      * @var string 外部商户主键编号（ShopNo或OutShopId必须传一个）
      */
     public $OutShopId;
@@ -59,11 +54,16 @@ class ViewShopRequest extends AbstractModel
     public $ShopNo;
 
     /**
+     * @var string 沙箱环境填sandbox，正式环境不填
+     */
+    public $Profile;
+
+    /**
      * @param string $OpenId 收单系统分配的开放ID
      * @param string $OpenKey 收单系统分配的密钥
-     * @param string $Profile 沙箱环境填sandbox，正式环境不填
      * @param string $OutShopId 外部商户主键编号（ShopNo或OutShopId必须传一个）
      * @param string $ShopNo 门店编号（ShopNo或OutShopId必须传一个）
+     * @param string $Profile 沙箱环境填sandbox，正式环境不填
      */
     function __construct()
     {
@@ -86,16 +86,16 @@ class ViewShopRequest extends AbstractModel
             $this->OpenKey = $param["OpenKey"];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
-        }
-
         if (array_key_exists("OutShopId",$param) and $param["OutShopId"] !== null) {
             $this->OutShopId = $param["OutShopId"];
         }
 
         if (array_key_exists("ShopNo",$param) and $param["ShopNo"] !== null) {
             $this->ShopNo = $param["ShopNo"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

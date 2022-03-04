@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenId(string $OpenId) 设置收单系统分配的开放ID
  * @method string getOpenKey() 获取收单系统分配的密钥
  * @method void setOpenKey(string $OpenKey) 设置收单系统分配的密钥
- * @method string getProfile() 获取沙箱环境填sandbox，正式环境不填
- * @method void setProfile(string $Profile) 设置沙箱环境填sandbox，正式环境不填
  * @method string getStorage() 获取存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
  * @method void setStorage(string $Storage) 设置存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
  * @method string getFilePath() 获取文件路径
  * @method void setFilePath(string $FilePath) 设置文件路径
+ * @method string getProfile() 获取沙箱环境填sandbox，正式环境不填
+ * @method void setProfile(string $Profile) 设置沙箱环境填sandbox，正式环境不填
  */
 class DownloadOrgFileRequest extends AbstractModel
 {
@@ -44,11 +44,6 @@ class DownloadOrgFileRequest extends AbstractModel
     public $OpenKey;
 
     /**
-     * @var string 沙箱环境填sandbox，正式环境不填
-     */
-    public $Profile;
-
-    /**
      * @var string 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
      */
     public $Storage;
@@ -59,11 +54,16 @@ class DownloadOrgFileRequest extends AbstractModel
     public $FilePath;
 
     /**
+     * @var string 沙箱环境填sandbox，正式环境不填
+     */
+    public $Profile;
+
+    /**
      * @param string $OpenId 收单系统分配的开放ID
      * @param string $OpenKey 收单系统分配的密钥
-     * @param string $Profile 沙箱环境填sandbox，正式环境不填
      * @param string $Storage 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
      * @param string $FilePath 文件路径
+     * @param string $Profile 沙箱环境填sandbox，正式环境不填
      */
     function __construct()
     {
@@ -86,16 +86,16 @@ class DownloadOrgFileRequest extends AbstractModel
             $this->OpenKey = $param["OpenKey"];
         }
 
-        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
-            $this->Profile = $param["Profile"];
-        }
-
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
         }
 
         if (array_key_exists("FilePath",$param) and $param["FilePath"] !== null) {
             $this->FilePath = $param["FilePath"];
+        }
+
+        if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
+            $this->Profile = $param["Profile"];
         }
     }
 }

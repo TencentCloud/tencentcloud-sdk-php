@@ -30,6 +30,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\ApplyOutwardOrderResponse ApplyOutwardOrder(Models\ApplyOutwardOrderRequest $req) 跨境-汇出指令申请。通过该接口可将对接方账户中的人民币余额汇兑成外币，再汇出至指定银行账户。
  * @method Models\ApplyPayerInfoResponse ApplyPayerInfo(Models\ApplyPayerInfoRequest $req) 跨境-付款人申请。通过该接口提交付款人信息并进行 kyc 审核。
  * @method Models\ApplyReWithdrawalResponse ApplyReWithdrawal(Models\ApplyReWithdrawalRequest $req) 正常结算提现失败情况下，发起重新提现的请求接口
+ * @method Models\ApplyReconciliationFileResponse ApplyReconciliationFile(Models\ApplyReconciliationFileRequest $req) 聚鑫-申请对账文件
  * @method Models\ApplyTradeResponse ApplyTrade(Models\ApplyTradeRequest $req) 跨境-提交贸易材料。通过提交贸易材料接口可为对接方累计贸易额度，在额度范围内可发起汇兑汇出交易。
  * @method Models\ApplyWithdrawalResponse ApplyWithdrawal(Models\ApplyWithdrawalRequest $req) 商户提现
  * @method Models\BindAccountResponse BindAccount(Models\BindAccountRequest $req) 灵云-绑定账号
@@ -82,7 +83,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\DistributeApplyResponse DistributeApply(Models\DistributeApplyRequest $req) 云支付-分账请求接口
  * @method Models\DistributeCancelResponse DistributeCancel(Models\DistributeCancelRequest $req) 云支付-分账撤销接口
  * @method Models\DistributeQueryResponse DistributeQuery(Models\DistributeQueryRequest $req) 云支付-分账结果查询接口
- * @method Models\DistributeQueryReceiverResponse DistributeQueryReceiver(Models\DistributeQueryReceiverRequest $req) 云支付-T查询已添加分账接收方接口
+ * @method Models\DistributeQueryReceiverResponse DistributeQueryReceiver(Models\DistributeQueryReceiverRequest $req) 云支付-查询已添加分账接收方接口
  * @method Models\DistributeRemoveReceiverResponse DistributeRemoveReceiver(Models\DistributeRemoveReceiverRequest $req) 云支付-分账解除分账接收方接口
  * @method Models\DownloadBillResponse DownloadBill(Models\DownloadBillRequest $req) 账单下载接口，根据本接口返回的URL地址，在D+1日下载对账单。注意，本接口返回的URL地址有时效，请尽快下载。URL超时时效后，请重新调用本接口再次获取。
  * @method Models\DownloadOrgFileResponse DownloadOrgFile(Models\DownloadOrgFileRequest $req) 云支付-下载机构文件接口
@@ -118,12 +119,14 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryDownloadBillURLResponse QueryDownloadBillURL(Models\QueryDownloadBillURLRequest $req) 云鉴-查询对账单下载地址的接口
  * @method Models\QueryExceedingInfoResponse QueryExceedingInfo(Models\QueryExceedingInfoRequest $req) 灵云-查询超额信息
  * @method Models\QueryExchangeRateResponse QueryExchangeRate(Models\QueryExchangeRateRequest $req) 跨境-查询汇率
+ * @method Models\QueryFundsTransactionDetailsResponse QueryFundsTransactionDetails(Models\QueryFundsTransactionDetailsRequest $req) 聚鑫-查询会员资金交易信息列表
  * @method Models\QueryInvoiceResponse QueryInvoice(Models\QueryInvoiceRequest $req) 智慧零售-发票查询
  * @method Models\QueryInvoiceV2Response QueryInvoiceV2(Models\QueryInvoiceV2Request $req) 智慧零售-发票查询V2
  * @method Models\QueryMaliciousRegistrationResponse QueryMaliciousRegistration(Models\QueryMaliciousRegistrationRequest $req) 商户恶意注册接口
  * @method Models\QueryMemberBindResponse QueryMemberBind(Models\QueryMemberBindRequest $req) 会员绑定信息查询。查询标志为“单个会员”的情况下，返回该会员的有效的绑定账户信息。
 查询标志为“全部会员”的情况下，返回市场下的全部的有效的绑定账户信息。查询标志为“单个会员的证件信息”的情况下，返回市场下的指定的会员的留存在电商见证宝系统的证件信息。
  * @method Models\QueryMemberTransactionResponse QueryMemberTransaction(Models\QueryMemberTransactionRequest $req) 会员间交易-不验证。此接口可以实现会员间的余额的交易，实现资金在会员之间流动。
+ * @method Models\QueryMemberTransactionDetailsResponse QueryMemberTransactionDetails(Models\QueryMemberTransactionDetailsRequest $req) 聚鑫-查询会员间交易信息列表
  * @method Models\QueryMerchantResponse QueryMerchant(Models\QueryMerchantRequest $req) 云鉴-商户信息查询接口
  * @method Models\QueryMerchantBalanceResponse QueryMerchantBalance(Models\QueryMerchantBalanceRequest $req) 跨境-对接方账户余额查询
  * @method Models\QueryMerchantClassificationResponse QueryMerchantClassification(Models\QueryMerchantClassificationRequest $req) 云支付-查询商户分类接口
@@ -141,6 +144,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryOutwardOrderResponse QueryOutwardOrder(Models\QueryOutwardOrderRequest $req) 跨境-查询汇出结果
  * @method Models\QueryPayerInfoResponse QueryPayerInfo(Models\QueryPayerInfoRequest $req) 跨境-付款人查询
  * @method Models\QueryReconciliationDocumentResponse QueryReconciliationDocument(Models\QueryReconciliationDocumentRequest $req) 查询对账文件信息。平台调用该接口获取需下载对账文件的文件名称以及密钥。 平台获取到信息后， 可以再调用OPENAPI的文件下载功能。
+ * @method Models\QueryReconciliationFileApplyInfoResponse QueryReconciliationFileApplyInfo(Models\QueryReconciliationFileApplyInfoRequest $req) 聚鑫-查询对账文件申请结果
  * @method Models\QueryRefundResponse QueryRefund(Models\QueryRefundRequest $req) 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时，用微信零钱支付的退款约20分钟内到账，银行卡支付的退款约3个工作日后到账。
  * @method Models\QueryShopOpenIdResponse QueryShopOpenId(Models\QueryShopOpenIdRequest $req) 云支付-获取门店OpenId接口
  * @method Models\QuerySinglePayResponse QuerySinglePay(Models\QuerySinglePayRequest $req) 银企直连-单笔支付状态查询接口

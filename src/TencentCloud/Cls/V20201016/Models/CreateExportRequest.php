@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateExport请求参数结构体
  *
- * @method string getTopicId() 获取日志主题
- * @method void setTopicId(string $TopicId) 设置日志主题
- * @method string getQuery() 获取日志导出检索语句
- * @method void setQuery(string $Query) 设置日志导出检索语句
- * @method integer getCount() 获取日志导出数量,  最大值1000万
- * @method void setCount(integer $Count) 设置日志导出数量,  最大值1000万
+ * @method string getTopicId() 获取日志主题ID
+ * @method void setTopicId(string $TopicId) 设置日志主题ID
+ * @method integer getCount() 获取日志导出数量,  最大值5000万
+ * @method void setCount(integer $Count) 设置日志导出数量,  最大值5000万
+ * @method string getQuery() 获取日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+ * @method void setQuery(string $Query) 设置日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
  * @method integer getFrom() 获取日志导出起始时间，毫秒时间戳
  * @method void setFrom(integer $From) 设置日志导出起始时间，毫秒时间戳
  * @method integer getTo() 获取日志导出结束时间，毫秒时间戳
@@ -38,19 +38,19 @@ use TencentCloud\Common\AbstractModel;
 class CreateExportRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题
+     * @var string 日志主题ID
      */
     public $TopicId;
 
     /**
-     * @var string 日志导出检索语句
-     */
-    public $Query;
-
-    /**
-     * @var integer 日志导出数量,  最大值1000万
+     * @var integer 日志导出数量,  最大值5000万
      */
     public $Count;
+
+    /**
+     * @var string 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+     */
+    public $Query;
 
     /**
      * @var integer 日志导出起始时间，毫秒时间戳
@@ -73,9 +73,9 @@ class CreateExportRequest extends AbstractModel
     public $Format;
 
     /**
-     * @param string $TopicId 日志主题
-     * @param string $Query 日志导出检索语句
-     * @param integer $Count 日志导出数量,  最大值1000万
+     * @param string $TopicId 日志主题ID
+     * @param integer $Count 日志导出数量,  最大值5000万
+     * @param string $Query 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
      * @param integer $From 日志导出起始时间，毫秒时间戳
      * @param integer $To 日志导出结束时间，毫秒时间戳
      * @param string $Order 日志导出时间排序。desc，asc，默认为desc
@@ -98,12 +98,12 @@ class CreateExportRequest extends AbstractModel
             $this->TopicId = $param["TopicId"];
         }
 
-        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
-            $this->Query = $param["Query"];
-        }
-
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
+            $this->Query = $param["Query"];
         }
 
         if (array_key_exists("From",$param) and $param["From"] !== null) {

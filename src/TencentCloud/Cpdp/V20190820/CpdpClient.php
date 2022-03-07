@@ -133,11 +133,13 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagement(Models\QueryMerchantInfoForManagementRequest $req) 智慧零售-查询管理端商户
  * @method Models\QueryMerchantOrderResponse QueryMerchantOrder(Models\QueryMerchantOrderRequest $req) 云鉴-消费订单查询接口
  * @method Models\QueryMerchantPayWayListResponse QueryMerchantPayWayList(Models\QueryMerchantPayWayListRequest $req) 商户查询已开通的支付方式列表
+ * @method Models\QueryOpenBankBankBranchListResponse QueryOpenBankBankBranchList(Models\QueryOpenBankBankBranchListRequest $req) 云企付-查询联行号
  * @method Models\QueryOpenBankBindExternalSubMerchantBankAccountResponse QueryOpenBankBindExternalSubMerchantBankAccount(Models\QueryOpenBankBindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡绑定结果查询
  * @method Models\QueryOpenBankDownLoadUrlResponse QueryOpenBankDownLoadUrl(Models\QueryOpenBankDownLoadUrlRequest $req) 云企付-查询对账单下载地址
  * @method Models\QueryOpenBankExternalSubMerchantBankAccountResponse QueryOpenBankExternalSubMerchantBankAccount(Models\QueryOpenBankExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡列表查询
  * @method Models\QueryOpenBankExternalSubMerchantRegistrationResponse QueryOpenBankExternalSubMerchantRegistration(Models\QueryOpenBankExternalSubMerchantRegistrationRequest $req) 云企付-子商户进件结果查询
  * @method Models\QueryOpenBankPaymentOrderResponse QueryOpenBankPaymentOrder(Models\QueryOpenBankPaymentOrderRequest $req) 云企付-查询订单支付结果
+ * @method Models\QueryOpenBankSupportBankListResponse QueryOpenBankSupportBankList(Models\QueryOpenBankSupportBankListRequest $req) 云企付-查询支持银行列表
  * @method Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResponse QueryOpenBankUnbindExternalSubMerchantBankAccount(Models\QueryOpenBankUnbindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡解绑结果查询
  * @method Models\QueryOrderResponse QueryOrder(Models\QueryOrderRequest $req) 根据订单号，或者用户Id，查询支付订单状态 
  * @method Models\QueryOrderStatusResponse QueryOrderStatus(Models\QueryOrderStatusRequest $req) 云支付-查询订单付款状态

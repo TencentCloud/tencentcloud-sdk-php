@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTextInfoSet(array $TextInfoSet) 设置可视文字识别结果列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClassifiedPersonInfoSet() 获取已分类人物信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClassifiedPersonInfoSet(array $ClassifiedPersonInfoSet) 设置已分类人物信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method MultiLevelTag getTextTagSet() 获取文本标签列表，包含标签内容和出现信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTextTagSet(MultiLevelTag $TextTagSet) 设置文本标签列表，包含标签内容和出现信息
@@ -134,6 +138,12 @@ class ShowInfo extends AbstractModel
     public $TextInfoSet;
 
     /**
+     * @var array 已分类人物信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClassifiedPersonInfoSet;
+
+    /**
      * @var MultiLevelTag 文本标签列表，包含标签内容和出现信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,6 +191,8 @@ class ShowInfo extends AbstractModel
      * @param array $AudioInfoSet 音频识别结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TextInfoSet 可视文字识别结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClassifiedPersonInfoSet 已分类人物信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MultiLevelTag $TextTagSet 文本标签列表，包含标签内容和出现信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -249,6 +261,15 @@ class ShowInfo extends AbstractModel
                 $obj = new TextInfo();
                 $obj->deserialize($value);
                 array_push($this->TextInfoSet, $obj);
+            }
+        }
+
+        if (array_key_exists("ClassifiedPersonInfoSet",$param) and $param["ClassifiedPersonInfoSet"] !== null) {
+            $this->ClassifiedPersonInfoSet = [];
+            foreach ($param["ClassifiedPersonInfoSet"] as $key => $value){
+                $obj = new ClassifiedPersonInfo();
+                $obj->deserialize($value);
+                array_push($this->ClassifiedPersonInfoSet, $obj);
             }
         }
 

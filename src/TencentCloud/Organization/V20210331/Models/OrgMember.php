@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgIdentity(array $OrgIdentity) 设置管理身份
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBindStatus() 获取安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBindStatus(string $BindStatus) 设置安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgMember extends AbstractModel
 {
@@ -174,6 +178,12 @@ class OrgMember extends AbstractModel
     public $OrgIdentity;
 
     /**
+     * @var string 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BindStatus;
+
+    /**
      * @param integer $MemberUin 成员Uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 成员名
@@ -203,6 +213,8 @@ class OrgMember extends AbstractModel
      * @param string $PayName 代付者名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OrgIdentity 管理身份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BindStatus 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -286,6 +298,10 @@ class OrgMember extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OrgIdentity, $obj);
             }
+        }
+
+        if (array_key_exists("BindStatus",$param) and $param["BindStatus"] !== null) {
+            $this->BindStatus = $param["BindStatus"];
         }
     }
 }

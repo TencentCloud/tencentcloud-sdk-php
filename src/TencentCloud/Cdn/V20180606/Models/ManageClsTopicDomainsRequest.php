@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
  * @method string getTopicId() 获取日志主题ID
  * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getChannel() 获取接入渠道，默认值为cdn
- * @method void setChannel(string $Channel) 设置接入渠道，默认值为cdn
+ * @method string getChannel() 获取接入渠道，cdn或者ecdn，默认值为cdn
+ * @method void setChannel(string $Channel) 设置接入渠道，cdn或者ecdn，默认值为cdn
  * @method array getDomainAreaConfigs() 获取域名区域配置，注意：如果此字段为空，则表示解绑对应主题下的所有域名
  * @method void setDomainAreaConfigs(array $DomainAreaConfigs) 设置域名区域配置，注意：如果此字段为空，则表示解绑对应主题下的所有域名
  */
@@ -42,7 +42,7 @@ class ManageClsTopicDomainsRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 接入渠道，默认值为cdn
+     * @var string 接入渠道，cdn或者ecdn，默认值为cdn
      */
     public $Channel;
 
@@ -54,7 +54,7 @@ class ManageClsTopicDomainsRequest extends AbstractModel
     /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 日志主题ID
-     * @param string $Channel 接入渠道，默认值为cdn
+     * @param string $Channel 接入渠道，cdn或者ecdn，默认值为cdn
      * @param array $DomainAreaConfigs 域名区域配置，注意：如果此字段为空，则表示解绑对应主题下的所有域名
      */
     function __construct()

@@ -23,28 +23,32 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUrl() 获取回调地址。
  * @method void setUrl(string $Url) 设置回调地址。
  * @method string getCallbackType() 获取回调的类型。可选值：
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
  * @method void setCallbackType(string $CallbackType) 设置回调的类型。可选值：
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
  * @method string getMethod() 获取回调方法。可选值：
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(string $Method) 设置回调方法。可选值：
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeaders() 获取请求头。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaders(array $Headers) 设置请求头。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBody() 获取请求内容。CallbackType为Http时为必选。
+ * @method string getBody() 获取请求内容。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBody(string $Body) 设置请求内容。CallbackType为Http时为必选。
+ * @method void setBody(string $Body) 设置请求内容。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIndex() 获取序号
  * @method void setIndex(integer $Index) 设置序号
@@ -58,15 +62,15 @@ class WebCallback extends AbstractModel
 
     /**
      * @var string 回调的类型。可选值：
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
      */
     public $CallbackType;
 
     /**
      * @var string 回调方法。可选值：
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -74,12 +78,14 @@ class WebCallback extends AbstractModel
 
     /**
      * @var array 请求头。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
 
     /**
-     * @var string 请求内容。CallbackType为Http时为必选。
+     * @var string 请求内容。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Body;
@@ -92,16 +98,18 @@ class WebCallback extends AbstractModel
     /**
      * @param string $Url 回调地址。
      * @param string $CallbackType 回调的类型。可选值：
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
      * @param string $Method 回调方法。可选值：
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 默认值为POST。CallbackType为Http时为必选。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Headers 请求头。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Body 请求内容。CallbackType为Http时为必选。
+     * @param string $Body 请求内容。
+注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Index 序号
      */

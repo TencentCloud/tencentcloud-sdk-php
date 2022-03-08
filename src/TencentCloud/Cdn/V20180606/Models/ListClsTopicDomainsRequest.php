@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
  * @method string getTopicId() 获取日志主题ID
  * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getChannel() 获取接入渠道，默认值为cdn
- * @method void setChannel(string $Channel) 设置接入渠道，默认值为cdn
+ * @method string getChannel() 获取接入渠道，cdn或者ecdn，默认值为cdn
+ * @method void setChannel(string $Channel) 设置接入渠道，cdn或者ecdn，默认值为cdn
  */
 class ListClsTopicDomainsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ListClsTopicDomainsRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 接入渠道，默认值为cdn
+     * @var string 接入渠道，cdn或者ecdn，默认值为cdn
      */
     public $Channel;
 
     /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 日志主题ID
-     * @param string $Channel 接入渠道，默认值为cdn
+     * @param string $Channel 接入渠道，cdn或者ecdn，默认值为cdn
      */
     function __construct()
     {

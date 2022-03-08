@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarmNotice请求参数结构体
  *
- * @method string getName() 获取告警模板名称。
- * @method void setName(string $Name) 设置告警模板名称。
- * @method string getType() 获取告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
- * @method void setType(string $Type) 设置告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
- * @method array getNoticeReceivers() 获取告警模板接收者信息。
- * @method void setNoticeReceivers(array $NoticeReceivers) 设置告警模板接收者信息。
- * @method array getWebCallbacks() 获取告警模板回调信息。
- * @method void setWebCallbacks(array $WebCallbacks) 设置告警模板回调信息。
+ * @method string getName() 获取通知渠道组名称。
+ * @method void setName(string $Name) 设置通知渠道组名称。
+ * @method string getType() 获取通知类型。可选值：
+<li> Trigger - 告警触发
+<li> Recovery - 告警恢复
+<li> All - 告警触发和告警恢复
+ * @method void setType(string $Type) 设置通知类型。可选值：
+<li> Trigger - 告警触发
+<li> Recovery - 告警恢复
+<li> All - 告警触发和告警恢复
+ * @method array getNoticeReceivers() 获取通知接收对象。
+ * @method void setNoticeReceivers(array $NoticeReceivers) 设置通知接收对象。
+ * @method array getWebCallbacks() 获取接口回调信息（包括企业微信）。
+ * @method void setWebCallbacks(array $WebCallbacks) 设置接口回调信息（包括企业微信）。
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string 告警模板名称。
+     * @var string 通知渠道组名称。
      */
     public $Name;
 
     /**
-     * @var string 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
+     * @var string 通知类型。可选值：
+<li> Trigger - 告警触发
+<li> Recovery - 告警恢复
+<li> All - 告警触发和告警恢复
      */
     public $Type;
 
     /**
-     * @var array 告警模板接收者信息。
+     * @var array 通知接收对象。
      */
     public $NoticeReceivers;
 
     /**
-     * @var array 告警模板回调信息。
+     * @var array 接口回调信息（包括企业微信）。
      */
     public $WebCallbacks;
 
     /**
-     * @param string $Name 告警模板名称。
-     * @param string $Type 告警模板的类型。可选值：
-<br><li> Trigger - 告警触发
-<br><li> Recovery - 告警恢复
-<br><li> All - 告警触发和告警恢复
-     * @param array $NoticeReceivers 告警模板接收者信息。
-     * @param array $WebCallbacks 告警模板回调信息。
+     * @param string $Name 通知渠道组名称。
+     * @param string $Type 通知类型。可选值：
+<li> Trigger - 告警触发
+<li> Recovery - 告警恢复
+<li> All - 告警触发和告警恢复
+     * @param array $NoticeReceivers 通知接收对象。
+     * @param array $WebCallbacks 接口回调信息（包括企业微信）。
      */
     function __construct()
     {

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置需要查询的日志的结束时间，格式 YYYY-mm-dd HH:MM:SS
  * @method integer getLimit() 获取单次要返回的日志条数，单次返回的最大条数为100
  * @method void setLimit(integer $Limit) 设置单次要返回的日志条数，单次返回的最大条数为100
- * @method string getChannel() 获取接入渠道，默认值为cdn
- * @method void setChannel(string $Channel) 设置接入渠道，默认值为cdn
+ * @method string getChannel() 获取接入渠道，cdn或者ecdn，默认值为cdn
+ * @method void setChannel(string $Channel) 设置接入渠道，cdn或者ecdn，默认值为cdn
  * @method string getQuery() 获取需要查询的内容，详情请参考https://cloud.tencent.com/document/product/614/16982
  * @method void setQuery(string $Query) 设置需要查询的内容，详情请参考https://cloud.tencent.com/document/product/614/16982
  * @method string getContext() 获取加载更多使用，透传上次返回的 context 值，获取后续的日志内容，通过游标最多可获取10000条，请尽可能缩小时间范围
@@ -67,7 +67,7 @@ class SearchClsLogRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 接入渠道，默认值为cdn
+     * @var string 接入渠道，cdn或者ecdn，默认值为cdn
      */
     public $Channel;
 
@@ -92,7 +92,7 @@ class SearchClsLogRequest extends AbstractModel
      * @param string $StartTime 需要查询的日志的起始时间，格式 YYYY-mm-dd HH:MM:SS
      * @param string $EndTime 需要查询的日志的结束时间，格式 YYYY-mm-dd HH:MM:SS
      * @param integer $Limit 单次要返回的日志条数，单次返回的最大条数为100
-     * @param string $Channel 接入渠道，默认值为cdn
+     * @param string $Channel 接入渠道，cdn或者ecdn，默认值为cdn
      * @param string $Query 需要查询的内容，详情请参考https://cloud.tencent.com/document/product/614/16982
      * @param string $Context 加载更多使用，透传上次返回的 context 值，获取后续的日志内容，通过游标最多可获取10000条，请尽可能缩小时间范围
      * @param string $Sort 按日志时间排序， asc（升序）或者 desc（降序），默认为 desc

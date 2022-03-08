@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSuggest(integer $IsSuggest) 设置是否是重点关注镜像，为0不是，非0是
  * @method integer getIsAuthorized() 获取是否授权，1是0否
  * @method void setIsAuthorized(integer $IsAuthorized) 设置是否授权，1是0否
+ * @method integer getComponentCnt() 获取组件个数
+ * @method void setComponentCnt(integer $ComponentCnt) 设置组件个数
  */
 class ImagesInfo extends AbstractModel
 {
@@ -164,6 +166,11 @@ class ImagesInfo extends AbstractModel
     public $IsAuthorized;
 
     /**
+     * @var integer 组件个数
+     */
+    public $ComponentCnt;
+
+    /**
      * @param string $ImageID 镜像id
      * @param string $ImageName 镜像名称
      * @param string $CreateTime 创建时间
@@ -184,6 +191,7 @@ class ImagesInfo extends AbstractModel
      * @param string $ScanRiskError 风险扫描错误信息
      * @param integer $IsSuggest 是否是重点关注镜像，为0不是，非0是
      * @param integer $IsAuthorized 是否授权，1是0否
+     * @param integer $ComponentCnt 组件个数
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class ImagesInfo extends AbstractModel
 
         if (array_key_exists("IsAuthorized",$param) and $param["IsAuthorized"] !== null) {
             $this->IsAuthorized = $param["IsAuthorized"];
+        }
+
+        if (array_key_exists("ComponentCnt",$param) and $param["ComponentCnt"] !== null) {
+            $this->ComponentCnt = $param["ComponentCnt"];
         }
     }
 }

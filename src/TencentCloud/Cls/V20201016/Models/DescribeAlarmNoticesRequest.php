@@ -20,65 +20,39 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmNotices请求参数结构体
  *
- * @method array getFilters() 获取<br><li> name
-
-按照【告警通知模板名称】进行过滤。
+ * @method array getFilters() 获取<li> name
+按照【通知渠道组名称】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> alarmNoticeId
-
-按照【告警通知模板ID】进行过滤。
+<li> alarmNoticeId
+按照【通知渠道组ID】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> uid
-
+<li> uid
 按照【接收用户ID】进行过滤。
-
 类型：String
-
 必选：否
-
-<br><li> groupId
-
-按照【用户组ID】进行过滤。
-
+<li> groupId
+按照【接收用户组ID】进行过滤。
 类型：String
-
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
- * @method void setFilters(array $Filters) 设置<br><li> name
-
-按照【告警通知模板名称】进行过滤。
+ * @method void setFilters(array $Filters) 设置<li> name
+按照【通知渠道组名称】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> alarmNoticeId
-
-按照【告警通知模板ID】进行过滤。
+<li> alarmNoticeId
+按照【通知渠道组ID】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> uid
-
+<li> uid
 按照【接收用户ID】进行过滤。
-
 类型：String
-
 必选：否
-
-<br><li> groupId
-
-按照【用户组ID】进行过滤。
-
+<li> groupId
+按照【接收用户组ID】进行过滤。
 类型：String
-
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
@@ -90,34 +64,21 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAlarmNoticesRequest extends AbstractModel
 {
     /**
-     * @var array <br><li> name
-
-按照【告警通知模板名称】进行过滤。
+     * @var array <li> name
+按照【通知渠道组名称】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> alarmNoticeId
-
-按照【告警通知模板ID】进行过滤。
+<li> alarmNoticeId
+按照【通知渠道组ID】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> uid
-
+<li> uid
 按照【接收用户ID】进行过滤。
-
 类型：String
-
 必选：否
-
-<br><li> groupId
-
-按照【用户组ID】进行过滤。
-
+<li> groupId
+按照【接收用户组ID】进行过滤。
 类型：String
-
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
@@ -135,34 +96,21 @@ class DescribeAlarmNoticesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters <br><li> name
-
-按照【告警通知模板名称】进行过滤。
+     * @param array $Filters <li> name
+按照【通知渠道组名称】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> alarmNoticeId
-
-按照【告警通知模板ID】进行过滤。
+<li> alarmNoticeId
+按照【通知渠道组ID】进行过滤。
 类型：String
-
 必选：否
-
-<br><li> uid
-
+<li> uid
 按照【接收用户ID】进行过滤。
-
 类型：String
-
 必选：否
-
-<br><li> groupId
-
-按照【用户组ID】进行过滤。
-
+<li> groupId
+按照【接收用户组ID】进行过滤。
 类型：String
-
 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。

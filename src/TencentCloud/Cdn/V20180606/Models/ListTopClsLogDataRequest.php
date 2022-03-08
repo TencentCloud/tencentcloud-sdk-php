@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 如：
 /files/* 表示所有以/files/开头的请求
 *.jpg 表示所有以.jpg结尾的请求
- * @method string getChannel() 获取接入渠道，默认值为cdn
- * @method void setChannel(string $Channel) 设置接入渠道，默认值为cdn
+ * @method string getChannel() 获取接入渠道，cdn或者ecdn，默认值为cdn
+ * @method void setChannel(string $Channel) 设置接入渠道，cdn或者ecdn，默认值为cdn
  * @method integer getLimit() 获取要查询的Top条数，最大值为100，默认为10
  * @method void setLimit(integer $Limit) 设置要查询的Top条数，最大值为100，默认为10
  * @method string getSort() 获取按请求量排序， asc（升序）或者 desc（降序），默认为 desc
@@ -81,7 +81,7 @@ class ListTopClsLogDataRequest extends AbstractModel
     public $Url;
 
     /**
-     * @var string 接入渠道，默认值为cdn
+     * @var string 接入渠道，cdn或者ecdn，默认值为cdn
      */
     public $Channel;
 
@@ -105,7 +105,7 @@ class ListTopClsLogDataRequest extends AbstractModel
 如：
 /files/* 表示所有以/files/开头的请求
 *.jpg 表示所有以.jpg结尾的请求
-     * @param string $Channel 接入渠道，默认值为cdn
+     * @param string $Channel 接入渠道，cdn或者ecdn，默认值为cdn
      * @param integer $Limit 要查询的Top条数，最大值为100，默认为10
      * @param string $Sort 按请求量排序， asc（升序）或者 desc（降序），默认为 desc
      */

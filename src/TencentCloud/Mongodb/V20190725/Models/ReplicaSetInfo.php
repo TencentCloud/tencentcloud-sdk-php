@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分片信息
  *
- * @method string getReplicaSetId() 获取分片名称
- * @method void setReplicaSetId(string $ReplicaSetId) 设置分片名称
+ * @method string getReplicaSetId() 获取副本集ID
+ * @method void setReplicaSetId(string $ReplicaSetId) 设置副本集ID
  */
 class ReplicaSetInfo extends AbstractModel
 {
     /**
-     * @var string 分片名称
+     * @var string 副本集ID
      */
     public $ReplicaSetId;
 
     /**
-     * @param string $ReplicaSetId 分片名称
+     * @param string $ReplicaSetId 副本集ID
      */
     function __construct()
     {

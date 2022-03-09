@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinSize(integer $MinSize) 设置定时任务设置的最小实例数。
  * @method string getCreatedTime() 获取定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setCreatedTime(string $CreatedTime) 设置定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
+ * @method string getScheduledType() 获取定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+ * @method void setScheduledType(string $ScheduledType) 设置定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
  */
 class ScheduledAction extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ScheduledAction extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var string 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+     */
+    public $ScheduledType;
+
+    /**
      * @param string $ScheduledActionId 定时任务ID。
      * @param string $ScheduledActionName 定时任务名称。
      * @param string $AutoScalingGroupId 定时任务所在伸缩组ID。
@@ -104,6 +111,7 @@ class ScheduledAction extends AbstractModel
      * @param integer $DesiredCapacity 定时任务设置的期望实例数。
      * @param integer $MinSize 定时任务设置的最小实例数。
      * @param string $CreatedTime 定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
+     * @param string $ScheduledType 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ScheduledAction extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("ScheduledType",$param) and $param["ScheduledType"] !== null) {
+            $this->ScheduledType = $param["ScheduledType"];
         }
     }
 }

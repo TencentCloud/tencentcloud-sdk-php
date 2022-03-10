@@ -34,10 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverName(string $ApproverName) 设置签署方经办人姓名
  * @method string getApproverMobile() 获取签署方经办人手机号码
  * @method void setApproverMobile(string $ApproverMobile) 设置签署方经办人手机号码
- * @method string getApproverIdCardType() 获取签署方经办人证件类型，ID_CARD表示身份证
- * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署方经办人证件类型，ID_CARD表示身份证
  * @method string getApproverIdCardNumber() 获取签署方经办人证件号码
  * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置签署方经办人证件号码
+ * @method string getApproverIdCardType() 获取签署方经办人证件类型ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+ * @method void setApproverIdCardType(string $ApproverIdCardType) 设置签署方经办人证件类型ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method string getRecipientId() 获取签署方经办人在模板中的角色ID
  * @method void setRecipientId(string $RecipientId) 设置签署方经办人在模板中的角色ID
  * @method string getUserId() 获取签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
@@ -79,14 +83,16 @@ class FlowCreateApprover extends AbstractModel
     public $ApproverMobile;
 
     /**
-     * @var string 签署方经办人证件类型，ID_CARD表示身份证
-     */
-    public $ApproverIdCardType;
-
-    /**
      * @var string 签署方经办人证件号码
      */
     public $ApproverIdCardNumber;
+
+    /**
+     * @var string 签署方经办人证件类型ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+     */
+    public $ApproverIdCardType;
 
     /**
      * @var string 签署方经办人在模板中的角色ID
@@ -121,8 +127,10 @@ class FlowCreateApprover extends AbstractModel
 -  `true`:  需要签署
      * @param string $ApproverName 签署方经办人姓名
      * @param string $ApproverMobile 签署方经办人手机号码
-     * @param string $ApproverIdCardType 签署方经办人证件类型，ID_CARD表示身份证
      * @param string $ApproverIdCardNumber 签署方经办人证件号码
+     * @param string $ApproverIdCardType 签署方经办人证件类型ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param string $RecipientId 签署方经办人在模板中的角色ID
      * @param string $UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
      * @param boolean $IsFullText 签署前置条件：是否需要阅读全文，默认为不需要
@@ -162,12 +170,12 @@ class FlowCreateApprover extends AbstractModel
             $this->ApproverMobile = $param["ApproverMobile"];
         }
 
-        if (array_key_exists("ApproverIdCardType",$param) and $param["ApproverIdCardType"] !== null) {
-            $this->ApproverIdCardType = $param["ApproverIdCardType"];
-        }
-
         if (array_key_exists("ApproverIdCardNumber",$param) and $param["ApproverIdCardNumber"] !== null) {
             $this->ApproverIdCardNumber = $param["ApproverIdCardNumber"];
+        }
+
+        if (array_key_exists("ApproverIdCardType",$param) and $param["ApproverIdCardType"] !== null) {
+            $this->ApproverIdCardType = $param["ApproverIdCardType"];
         }
 
         if (array_key_exists("RecipientId",$param) and $param["RecipientId"] !== null) {

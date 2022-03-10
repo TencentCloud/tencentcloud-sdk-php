@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit $CcnRegionBandwidthLimit) 设置描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMarketId() 获取云市场实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMarketId(string $MarketId) 设置云市场实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnBandwidthInfo extends AbstractModel
 {
@@ -84,6 +88,12 @@ class CcnBandwidthInfo extends AbstractModel
     public $CcnRegionBandwidthLimit;
 
     /**
+     * @var string 云市场实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MarketId;
+
+    /**
      * @param string $CcnId 带宽所属的云联网ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 实例的创建时间。
@@ -95,6 +105,8 @@ class CcnBandwidthInfo extends AbstractModel
      * @param string $RenewFlag 带宽是否自动续费的标记。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnRegionBandwidthLimit $CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MarketId 云市场实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -133,6 +145,10 @@ class CcnBandwidthInfo extends AbstractModel
         if (array_key_exists("CcnRegionBandwidthLimit",$param) and $param["CcnRegionBandwidthLimit"] !== null) {
             $this->CcnRegionBandwidthLimit = new CcnRegionBandwidthLimit();
             $this->CcnRegionBandwidthLimit->deserialize($param["CcnRegionBandwidthLimit"]);
+        }
+
+        if (array_key_exists("MarketId",$param) and $param["MarketId"] !== null) {
+            $this->MarketId = $param["MarketId"];
         }
     }
 }

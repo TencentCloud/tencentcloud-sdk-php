@@ -40,8 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganizationName(string $OrganizationName) 设置如果是企业,则为企业的名字
  * @method string getApproverIdCardNumber() 获取身份证号
  * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置身份证号
- * @method string getApproverIdCardType() 获取证件类型 ID_CARD 身份证
- * @method void setApproverIdCardType(string $ApproverIdCardType) 设置证件类型 ID_CARD 身份证
+ * @method string getApproverIdCardType() 获取证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
+ * @method void setApproverIdCardType(string $ApproverIdCardType) 设置证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method string getNotifyType() 获取sms--短信，none--不通知
  * @method void setNotifyType(string $NotifyType) 设置sms--短信，none--不通知
  * @method integer getApproverRole() 获取1--收款人、2--开具人、3--见证人
@@ -98,7 +104,10 @@ class ApproverInfo extends AbstractModel
     public $ApproverIdCardNumber;
 
     /**
-     * @var string 证件类型 ID_CARD 身份证
+     * @var string 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      */
     public $ApproverIdCardType;
 
@@ -138,7 +147,10 @@ VERIFYCODE - 验证码；
      * @param array $SignComponents 本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。
      * @param string $OrganizationName 如果是企业,则为企业的名字
      * @param string $ApproverIdCardNumber 身份证号
-     * @param string $ApproverIdCardType 证件类型 ID_CARD 身份证
+     * @param string $ApproverIdCardType 证件类型 
+ID_CARD 身份证
+HONGKONG_AND_MACAO 港澳居民来往内地通行证
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param string $NotifyType sms--短信，none--不通知
      * @param integer $ApproverRole 1--收款人、2--开具人、3--见证人
      * @param array $VerifyChannel 认证方式：

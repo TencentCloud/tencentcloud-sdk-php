@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 <li> Sort.Field 可选 CreateTime</li>
 <li> Sort.Order 可选 Desc </li>
 <li> 当 KeyWord 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+ * @method array getTagIds() 获取标签 ID 集合，匹配集合指定所有 ID 。
+<li>数组长度限制：10。</li>
+ * @method void setTagIds(array $TagIds) 设置标签 ID 集合，匹配集合指定所有 ID 。
+<li>数组长度限制：10。</li>
  */
 class SearchKTVMusicsRequest extends AbstractModel
 {
@@ -64,6 +68,12 @@ class SearchKTVMusicsRequest extends AbstractModel
     public $Sort;
 
     /**
+     * @var array 标签 ID 集合，匹配集合指定所有 ID 。
+<li>数组长度限制：10。</li>
+     */
+    public $TagIds;
+
+    /**
      * @param string $KeyWord 搜索关键词
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
 取值范围：Offset + Limit 不超过5000。
@@ -72,6 +82,8 @@ class SearchKTVMusicsRequest extends AbstractModel
 <li> Sort.Field 可选 CreateTime</li>
 <li> Sort.Order 可选 Desc </li>
 <li> 当 KeyWord 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
+     * @param array $TagIds 标签 ID 集合，匹配集合指定所有 ID 。
+<li>数组长度限制：10。</li>
      */
     function __construct()
     {
@@ -101,6 +113,10 @@ class SearchKTVMusicsRequest extends AbstractModel
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
             $this->Sort = new SortBy();
             $this->Sort->deserialize($param["Sort"]);
+        }
+
+        if (array_key_exists("TagIds",$param) and $param["TagIds"] !== null) {
+            $this->TagIds = $param["TagIds"];
         }
     }
 }

@@ -40,11 +40,6 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
  * @method Models\DescribeRoomInformationResponse DescribeRoomInformation(Models\DescribeRoomInformationRequest $req) 查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。
 **注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
- * @method Models\DescribeTrtcInteractiveTimeResponse DescribeTrtcInteractiveTime(Models\DescribeTrtcInteractiveTimeRequest $req) 查询音视频互动计费时长。
-- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
-- 单次查询统计区间最多不能超过31天。
-- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
-- 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
  * @method Models\DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTime(Models\DescribeTrtcMcuTranscodeTimeRequest $req) 查询旁路转码计费时长。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
 - 单次查询统计区间最多不能超过31天。

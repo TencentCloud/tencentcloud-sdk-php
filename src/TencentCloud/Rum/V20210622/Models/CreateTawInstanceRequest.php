@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCountNum(string $CountNum) 设置每天数据上报量
  * @method string getPeriodRetain() 获取数据存储时长计费
  * @method void setPeriodRetain(string $PeriodRetain) 设置数据存储时长计费
+ * @method string getBuyingChannel() 获取实例购买渠道("cdn" 等)
+ * @method void setBuyingChannel(string $BuyingChannel) 设置实例购买渠道("cdn" 等)
  */
 class CreateTawInstanceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateTawInstanceRequest extends AbstractModel
     public $PeriodRetain;
 
     /**
+     * @var string 实例购买渠道("cdn" 等)
+     */
+    public $BuyingChannel;
+
+    /**
      * @param integer $AreaId 片区Id，(至少大于0)
      * @param integer $ChargeType 计费类型, (1=体验，2=预付费，3=后付费)
      * @param integer $DataRetentionDays 数据保存时间，(至少大于0)
@@ -88,6 +95,7 @@ class CreateTawInstanceRequest extends AbstractModel
      * @param string $InstanceDesc 实例描述，(最大长度不超过1024字节)
      * @param string $CountNum 每天数据上报量
      * @param string $PeriodRetain 数据存储时长计费
+     * @param string $BuyingChannel 实例购买渠道("cdn" 等)
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class CreateTawInstanceRequest extends AbstractModel
 
         if (array_key_exists("PeriodRetain",$param) and $param["PeriodRetain"] !== null) {
             $this->PeriodRetain = $param["PeriodRetain"];
+        }
+
+        if (array_key_exists("BuyingChannel",$param) and $param["BuyingChannel"] !== null) {
+            $this->BuyingChannel = $param["BuyingChannel"];
         }
     }
 }

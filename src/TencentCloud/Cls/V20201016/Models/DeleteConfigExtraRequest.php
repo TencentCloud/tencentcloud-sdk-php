@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCDBProxy请求参数结构体
+ * DeleteConfigExtra请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getProxyGroupId() 获取代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
+ * @method string getConfigExtraId() 获取采集规则扩展配置ID
+ * @method void setConfigExtraId(string $ConfigExtraId) 设置采集规则扩展配置ID
  */
-class DescribeCDBProxyRequest extends AbstractModel
+class DeleteConfigExtraRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 采集规则扩展配置ID
      */
-    public $InstanceId;
+    public $ConfigExtraId;
 
     /**
-     * @var string 代理组ID
-     */
-    public $ProxyGroupId;
-
-    /**
-     * @param string $InstanceId 实例ID
-     * @param string $ProxyGroupId 代理组ID
+     * @param string $ConfigExtraId 采集规则扩展配置ID
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DescribeCDBProxyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
-            $this->ProxyGroupId = $param["ProxyGroupId"];
+        if (array_key_exists("ConfigExtraId",$param) and $param["ConfigExtraId"] !== null) {
+            $this->ConfigExtraId = $param["ConfigExtraId"];
         }
     }
 }

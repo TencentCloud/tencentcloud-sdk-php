@@ -88,9 +88,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBigDealId(string $BigDealId) 设置大订单号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClientType() 获取客户类型（new：新拓；old：存量；assign：指派）
+ * @method string getClientType() 获取客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClientType(string $ClientType) 设置客户类型（new：新拓；old：存量；assign：指派）
+ * @method void setClientType(string $ClientType) 设置客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectType() 获取项目类型（self：自拓；repeat：直销；platform：官网合作）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -238,7 +238,7 @@ class AgentDealNewElem extends AbstractModel
     public $BigDealId;
 
     /**
-     * @var string 客户类型（new：新拓；old：存量；assign：指派）
+     * @var string 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientType;
@@ -326,7 +326,7 @@ class AgentDealNewElem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BigDealId 大订单号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClientType 客户类型（new：新拓；old：存量；assign：指派）
+     * @param string $ClientType 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectType 项目类型（self：自拓；repeat：直销；platform：官网合作）
 注意：此字段可能返回 null，表示取不到有效值。

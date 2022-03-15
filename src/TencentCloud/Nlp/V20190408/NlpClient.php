@@ -74,6 +74,11 @@ use TencentCloud\Nlp\V20190408\Models as Models;
 鉴于句子相似度是一个应用非常广泛的功能，腾讯云自然语言处理团队在Bert等领先的深度神经网络模型的基础上，专门针对文本相似任务进行了优化，并持续迭代更新。基于句子相似度，可以轻松实现诸如文本去重、相似推荐等功能。
 
 接口将以句子数量为单位消耗资源包，而不是调用接口次数为单位。
+ * @method Models\TextSimilarityProResponse TextSimilarityPro(Models\TextSimilarityProRequest $req) 句子相似度接口能够基于深度学习技术来计算一个源句子和多个目标句子的相似度，相似度分值越大的两个句子在语义上越相似。目前仅支持短文本（不超过128字符）的相似度计算，长文本的相似度计算也即将推出。
+
+鉴于句子相似度是一个应用非常广泛的功能，腾讯云自然语言处理团队在Bert等领先的深度神经网络模型的基础上，专门针对文本相似任务进行了优化，并持续迭代更新。基于句子相似度，可以轻松实现诸如文本去重、相似推荐等功能。
+
+接口将以句子数量为单位消耗资源包，而不是调用接口次数为单位。
  * @method Models\UpdateDictResponse UpdateDict(Models\UpdateDictRequest $req) 修改自定义词库元数据信息，包括名称、描述。
  * @method Models\WordEmbeddingResponse WordEmbedding(Models\WordEmbeddingRequest $req) 词向量接口能够将输入的词语映射成一个固定维度的词向量，用来表示这个词语的语义特征。词向量是很多自然语言处理技术的基础，能够显著提高它们的效果。
 

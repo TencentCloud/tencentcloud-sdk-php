@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodCIDR(string $PodCIDR) 设置集群pod cidr， 默认  10.1.0.0/16
  * @method string getServiceCIDR() 获取集群service cidr, 默认 10.2.0.0/16
  * @method void setServiceCIDR(string $ServiceCIDR) 设置集群service cidr, 默认 10.2.0.0/16
+ * @method boolean getOpenCloudMonitor() 获取是否开启监控。目前内存中权限开启联系产品开通白名单
+ * @method void setOpenCloudMonitor(boolean $OpenCloudMonitor) 设置是否开启监控。目前内存中权限开启联系产品开通白名单
  */
 class CreateEdgeUnitCloudRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateEdgeUnitCloudRequest extends AbstractModel
     public $ServiceCIDR;
 
     /**
+     * @var boolean 是否开启监控。目前内存中权限开启联系产品开通白名单
+     */
+    public $OpenCloudMonitor;
+
+    /**
      * @param string $Name 集群名称，长度小于32
      * @param string $K8sVersion k8s版本，仅支持1.16.7 和 1.18.2
      * @param string $VpcId 私有网络ID
      * @param string $Description 集群描述
      * @param string $PodCIDR 集群pod cidr， 默认  10.1.0.0/16
      * @param string $ServiceCIDR 集群service cidr, 默认 10.2.0.0/16
+     * @param boolean $OpenCloudMonitor 是否开启监控。目前内存中权限开启联系产品开通白名单
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreateEdgeUnitCloudRequest extends AbstractModel
 
         if (array_key_exists("ServiceCIDR",$param) and $param["ServiceCIDR"] !== null) {
             $this->ServiceCIDR = $param["ServiceCIDR"];
+        }
+
+        if (array_key_exists("OpenCloudMonitor",$param) and $param["OpenCloudMonitor"] !== null) {
+            $this->OpenCloudMonitor = $param["OpenCloudMonitor"];
         }
     }
 }

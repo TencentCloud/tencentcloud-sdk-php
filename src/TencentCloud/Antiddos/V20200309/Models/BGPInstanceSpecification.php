@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 0：没有开启自动续费
 1：开启了自动续费
 ]
+ * @method integer getUnionPackFlag() 获取联合产品标记，0代表普通高防包，1代表联合高防包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnionPackFlag(integer $UnionPackFlag) 设置联合产品标记，0代表普通高防包，1代表联合高防包
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPInstanceSpecification extends AbstractModel
 {
@@ -61,6 +65,12 @@ class BGPInstanceSpecification extends AbstractModel
     public $AutoRenewFlag;
 
     /**
+     * @var integer 联合产品标记，0代表普通高防包，1代表联合高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UnionPackFlag;
+
+    /**
      * @param integer $ProtectBandwidth 保底防护峰值，单位Gbps
      * @param integer $ProtectCountLimit 防护次数，单位次
      * @param integer $ProtectIPNumberLimit 防护IP数，单位个
@@ -68,6 +78,8 @@ class BGPInstanceSpecification extends AbstractModel
 0：没有开启自动续费
 1：开启了自动续费
 ]
+     * @param integer $UnionPackFlag 联合产品标记，0代表普通高防包，1代表联合高防包
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class BGPInstanceSpecification extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("UnionPackFlag",$param) and $param["UnionPackFlag"] !== null) {
+            $this->UnionPackFlag = $param["UnionPackFlag"];
         }
     }
 }

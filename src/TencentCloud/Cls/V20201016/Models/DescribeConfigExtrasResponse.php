@@ -14,40 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cpdp\V20190820\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryOpenBankDownLoadUrl返回参数结构体
+ * DescribeConfigExtras返回参数结构体
  *
- * @method string getErrCode() 获取业务系统返回码，SUCCESS表示成功，其他表示失败。
- * @method void setErrCode(string $ErrCode) 设置业务系统返回码，SUCCESS表示成功，其他表示失败。
- * @method string getErrMessage() 获取业务系统返回消息。
- * @method void setErrMessage(string $ErrMessage) 设置业务系统返回消息。
- * @method QueryOpenBankDownLoadUrlResult getResult() 获取查询对账文件下载响应对象。
+ * @method array getConfigs() 获取采集配置列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(QueryOpenBankDownLoadUrlResult $Result) 设置查询对账文件下载响应对象。
+ * @method void setConfigs(array $Configs) 设置采集配置列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取过滤到的总数目
+ * @method void setTotalCount(integer $TotalCount) 设置过滤到的总数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class QueryOpenBankDownLoadUrlResponse extends AbstractModel
+class DescribeConfigExtrasResponse extends AbstractModel
 {
     /**
-     * @var string 业务系统返回码，SUCCESS表示成功，其他表示失败。
-     */
-    public $ErrCode;
-
-    /**
-     * @var string 业务系统返回消息。
-     */
-    public $ErrMessage;
-
-    /**
-     * @var QueryOpenBankDownLoadUrlResult 查询对账文件下载响应对象。
+     * @var array 采集配置列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $Configs;
+
+    /**
+     * @var integer 过滤到的总数目
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -55,10 +48,9 @@ class QueryOpenBankDownLoadUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ErrCode 业务系统返回码，SUCCESS表示成功，其他表示失败。
-     * @param string $ErrMessage 业务系统返回消息。
-     * @param QueryOpenBankDownLoadUrlResult $Result 查询对账文件下载响应对象。
+     * @param array $Configs 采集配置列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 过滤到的总数目
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,17 +66,17 @@ class QueryOpenBankDownLoadUrlResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
-            $this->ErrCode = $param["ErrCode"];
+        if (array_key_exists("Configs",$param) and $param["Configs"] !== null) {
+            $this->Configs = [];
+            foreach ($param["Configs"] as $key => $value){
+                $obj = new ConfigExtraInfo();
+                $obj->deserialize($value);
+                array_push($this->Configs, $obj);
+            }
         }
 
-        if (array_key_exists("ErrMessage",$param) and $param["ErrMessage"] !== null) {
-            $this->ErrMessage = $param["ErrMessage"];
-        }
-
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new QueryOpenBankDownLoadUrlResult();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

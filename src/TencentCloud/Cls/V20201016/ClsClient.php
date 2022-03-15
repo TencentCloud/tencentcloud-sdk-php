@@ -27,6 +27,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateAlarmResponse CreateAlarm(Models\CreateAlarmRequest $req) 本接口用于创建告警策略。
  * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) 该接口用于创建通知渠道组。
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建采集规则配置
+ * @method Models\CreateConfigExtraResponse CreateConfigExtra(Models\CreateConfigExtraRequest $req) 本接口用于创建特殊采集配置任务
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 本接口用于创建投递任务
  * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) 本接口用于创建日志下载任务，导出原始日志
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) 本接口用于创建索引
@@ -37,6 +38,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) 本接口用于删除告警策略。
  * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) 该接口用于删除通知渠道组
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除采集规则配置
+ * @method Models\DeleteConfigExtraResponse DeleteConfigExtra(Models\DeleteConfigExtraRequest $req) 本接口用于删除特殊采集规则配置
  * @method Models\DeleteConfigFromMachineGroupResponse DeleteConfigFromMachineGroup(Models\DeleteConfigFromMachineGroupRequest $req) 删除应用到机器组的采集配置
  * @method Models\DeleteConsumerResponse DeleteConsumer(Models\DeleteConsumerRequest $req) 本接口用于删除投递配置
  * @method Models\DeleteExportResponse DeleteExport(Models\DeleteExportRequest $req) 本接口用于删除日志下载任务
@@ -47,6 +49,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 本接口用于删除日志主题。
  * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) 该接口用于获取通知渠道组列表
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) 本接口用于获取告警策略列表。
+ * @method Models\DescribeConfigExtrasResponse DescribeConfigExtras(Models\DescribeConfigExtrasRequest $req) 本接口用于获取特殊采集配置
  * @method Models\DescribeConfigMachineGroupsResponse DescribeConfigMachineGroups(Models\DescribeConfigMachineGroupsRequest $req) 获取采集规则配置所绑定的机器组
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 获取采集规则配置
  * @method Models\DescribeConsumerResponse DescribeConsumer(Models\DescribeConsumerRequest $req) 本接口用于获取投递配置
@@ -66,6 +69,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\ModifyAlarmResponse ModifyAlarm(Models\ModifyAlarmRequest $req) 本接口用于修改告警策略。需要至少修改一项有效内容。
  * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 该接口用于修改通知渠道组
  * @method Models\ModifyConfigResponse ModifyConfig(Models\ModifyConfigRequest $req) 修改采集规则配置
+ * @method Models\ModifyConfigExtraResponse ModifyConfigExtra(Models\ModifyConfigExtraRequest $req) 本接口用于修改特殊采集配置任务
  * @method Models\ModifyConsumerResponse ModifyConsumer(Models\ModifyConsumerRequest $req) 本接口用于修改投递任务
  * @method Models\ModifyIndexResponse ModifyIndex(Models\ModifyIndexRequest $req) 本接口用于修改索引配置
 

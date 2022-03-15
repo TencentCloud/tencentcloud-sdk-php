@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableConsoleIntranet(boolean $EnableConsoleIntranet) 设置引擎实例是否开启控制台内网访问地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getConfigInfoVisible() 获取引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigInfoVisible(boolean $ConfigInfoVisible) 设置引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -230,6 +234,12 @@ class SREInstance extends AbstractModel
     public $EnableConsoleIntranet;
 
     /**
+     * @var boolean 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigInfoVisible;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -267,6 +277,8 @@ class SREInstance extends AbstractModel
      * @param boolean $EnableConsoleInternet 引擎实例是否开启控制台公网访问地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableConsoleIntranet 引擎实例是否开启控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ConfigInfoVisible 引擎实例是否展示参数配置页面
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -392,6 +404,10 @@ class SREInstance extends AbstractModel
 
         if (array_key_exists("EnableConsoleIntranet",$param) and $param["EnableConsoleIntranet"] !== null) {
             $this->EnableConsoleIntranet = $param["EnableConsoleIntranet"];
+        }
+
+        if (array_key_exists("ConfigInfoVisible",$param) and $param["ConfigInfoVisible"] !== null) {
+            $this->ConfigInfoVisible = $param["ConfigInfoVisible"];
         }
     }
 }

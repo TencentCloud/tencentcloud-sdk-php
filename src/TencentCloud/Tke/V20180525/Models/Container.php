@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGpuLimit(integer $GpuLimit) 设置Gpu限制
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SecurityContext getSecurityContext() 获取容器的安全上下文
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityContext(SecurityContext $SecurityContext) 设置容器的安全上下文
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Container extends AbstractModel
 {
@@ -143,6 +147,12 @@ class Container extends AbstractModel
     public $GpuLimit;
 
     /**
+     * @var SecurityContext 容器的安全上下文
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityContext;
+
+    /**
      * @param string $Image 镜像
      * @param string $Name 容器名
      * @param array $Commands 容器启动命令
@@ -163,6 +173,8 @@ class Container extends AbstractModel
      * @param LivenessOrReadinessProbe $ReadinessProbe 就绪探针
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GpuLimit Gpu限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityContext $SecurityContext 容器的安全上下文
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -245,6 +257,11 @@ class Container extends AbstractModel
 
         if (array_key_exists("GpuLimit",$param) and $param["GpuLimit"] !== null) {
             $this->GpuLimit = $param["GpuLimit"];
+        }
+
+        if (array_key_exists("SecurityContext",$param) and $param["SecurityContext"] !== null) {
+            $this->SecurityContext = new SecurityContext();
+            $this->SecurityContext->deserialize($param["SecurityContext"]);
         }
     }
 }

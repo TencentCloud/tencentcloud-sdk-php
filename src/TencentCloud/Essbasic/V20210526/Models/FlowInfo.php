@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowName() 获取合同名字
  * @method void setFlowName(string $FlowName) 设置合同名字
- * @method integer getDeadline() 获取签署截止时间戳，超过有效签署时间则该签署流程失败
- * @method void setDeadline(integer $Deadline) 设置签署截止时间戳，超过有效签署时间则该签署流程失败
+ * @method integer getDeadline() 获取签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
+ * @method void setDeadline(integer $Deadline) 设置签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
  * @method string getTemplateId() 获取模板ID
  * @method void setTemplateId(string $TemplateId) 设置模板ID
  * @method string getFlowType() 获取合同类型：
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 4. “其他”
  * @method string getCallbackUrl() 获取回调地址
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
- * @method array getFlowApprovers() 获取多个签署人信息
- * @method void setFlowApprovers(array $FlowApprovers) 设置多个签署人信息
+ * @method array getFlowApprovers() 获取多个签署人信息，渠道侧目前不支持超过5个签署方信息
+ * @method void setFlowApprovers(array $FlowApprovers) 设置多个签署人信息，渠道侧目前不支持超过5个签署方信息
  * @method array getFormFields() 获取表单K-V对列表
  * @method void setFormFields(array $FormFields) 设置表单K-V对列表
  * @method string getFlowDescription() 获取合同描述
@@ -57,7 +57,7 @@ class FlowInfo extends AbstractModel
     public $FlowName;
 
     /**
-     * @var integer 签署截止时间戳，超过有效签署时间则该签署流程失败
+     * @var integer 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
      */
     public $Deadline;
 
@@ -81,7 +81,7 @@ class FlowInfo extends AbstractModel
     public $CallbackUrl;
 
     /**
-     * @var array 多个签署人信息
+     * @var array 多个签署人信息，渠道侧目前不支持超过5个签署方信息
      */
     public $FlowApprovers;
 
@@ -107,7 +107,7 @@ class FlowInfo extends AbstractModel
 
     /**
      * @param string $FlowName 合同名字
-     * @param integer $Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败
+     * @param integer $Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
      * @param string $TemplateId 模板ID
      * @param string $FlowType 合同类型：
 1. “劳务”
@@ -115,7 +115,7 @@ class FlowInfo extends AbstractModel
 3. “租赁”
 4. “其他”
      * @param string $CallbackUrl 回调地址
-     * @param array $FlowApprovers 多个签署人信息
+     * @param array $FlowApprovers 多个签署人信息，渠道侧目前不支持超过5个签署方信息
      * @param array $FormFields 表单K-V对列表
      * @param string $FlowDescription 合同描述
      * @param string $CustomerData 渠道的业务信息，限制1024字符

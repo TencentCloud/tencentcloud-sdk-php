@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStart(integer $Start) 设置查询开始时间
  * @method integer getType() 获取查询类型
  * @method void setType(integer $Type) 设置查询类型
+ * @method integer getEnd() 获取查询结束时间
+ * @method void setEnd(integer $End) 设置查询结束时间
  */
 class DescribeCaptchaMiniOperDataRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeCaptchaMiniOperDataRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var integer 查询结束时间
+     */
+    public $End;
+
+    /**
      * @param integer $CaptchaAppId 验证码应用ID
      * @param integer $Start 查询开始时间
      * @param integer $Type 查询类型
+     * @param integer $End 查询结束时间
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeCaptchaMiniOperDataRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("End",$param) and $param["End"] !== null) {
+            $this->End = $param["End"];
         }
     }
 }

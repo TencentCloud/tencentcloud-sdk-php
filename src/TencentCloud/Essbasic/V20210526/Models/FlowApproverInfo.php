@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganizationName(string $OrganizationName) 设置企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传；
  * @method string getOrganizationOpenId() 获取企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传；
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传；
+ * @method boolean getNotChannelOrganization() 获取指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
+ * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -115,6 +119,12 @@ class FlowApproverInfo extends AbstractModel
     public $OrganizationOpenId;
 
     /**
+     * @var boolean 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
+     */
+    public $NotChannelOrganization;
+
+    /**
      * @param string $Name 签署人姓名
      * @param string $IdCardNumber 经办人身份证号
      * @param string $Mobile 签署人手机号，脱敏显示
@@ -128,6 +138,8 @@ class FlowApproverInfo extends AbstractModel
      * @param string $RecipientId 流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在流程中的位置；
      * @param string $OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传；
      * @param string $OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传；
+     * @param boolean $NotChannelOrganization 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
      */
     function __construct()
     {
@@ -192,6 +204,10 @@ class FlowApproverInfo extends AbstractModel
 
         if (array_key_exists("OrganizationOpenId",$param) and $param["OrganizationOpenId"] !== null) {
             $this->OrganizationOpenId = $param["OrganizationOpenId"];
+        }
+
+        if (array_key_exists("NotChannelOrganization",$param) and $param["NotChannelOrganization"] !== null) {
+            $this->NotChannelOrganization = $param["NotChannelOrganization"];
         }
     }
 }

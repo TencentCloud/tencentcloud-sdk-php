@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method string getEndpoint() 获取签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
  * @method void setEndpoint(string $Endpoint) 设置签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
- * @method string getJumpUrl() 获取签署完成后H5引导页跳转URL
- * @method void setJumpUrl(string $JumpUrl) 设置签署完成后H5引导页跳转URL
+ * @method string getJumpUrl() 获取签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
+ * @method void setJumpUrl(string $JumpUrl) 设置签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
  */
 class CreateSignUrlsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class CreateSignUrlsRequest extends AbstractModel
     public $Endpoint;
 
     /**
-     * @var string 签署完成后H5引导页跳转URL
+     * @var string 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
      */
     public $JumpUrl;
 
@@ -63,7 +63,7 @@ class CreateSignUrlsRequest extends AbstractModel
      * @param array $FlowIds 所签署合同ID数组
      * @param UserInfo $Operator 操作者的信息
      * @param string $Endpoint 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
-     * @param string $JumpUrl 签署完成后H5引导页跳转URL
+     * @param string $JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
      */
     function __construct()
     {

@@ -14,33 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDocument返回参数结构体
+ * DescribeIPStatusList返回参数结构体
  *
- * @method string getDocumentId() 获取返回的电子文档ID
- * @method void setDocumentId(string $DocumentId) 设置返回的电子文档ID
- * @method string getPreviewFileUrl() 获取返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreviewFileUrl(string $PreviewFileUrl) 设置返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getStatusList() 获取ip状态信息
+ * @method void setStatusList(array $StatusList) 设置ip状态信息
+ * @method integer getReturnCode() 获取状态码
+ * @method void setReturnCode(integer $ReturnCode) 设置状态码
+ * @method string getReturnMsg() 获取状态信息
+ * @method void setReturnMsg(string $ReturnMsg) 设置状态信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateDocumentResponse extends AbstractModel
+class DescribeIPStatusListResponse extends AbstractModel
 {
     /**
-     * @var string 返回的电子文档ID
+     * @var array ip状态信息
      */
-    public $DocumentId;
+    public $StatusList;
 
     /**
-     * @var string 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 状态码
      */
-    public $PreviewFileUrl;
+    public $ReturnCode;
+
+    /**
+     * @var string 状态信息
+     */
+    public $ReturnMsg;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +52,9 @@ class CreateDocumentResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DocumentId 返回的电子文档ID
-     * @param string $PreviewFileUrl 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $StatusList ip状态信息
+     * @param integer $ReturnCode 状态码
+     * @param string $ReturnMsg 状态信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +70,21 @@ class CreateDocumentResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DocumentId",$param) and $param["DocumentId"] !== null) {
-            $this->DocumentId = $param["DocumentId"];
+        if (array_key_exists("StatusList",$param) and $param["StatusList"] !== null) {
+            $this->StatusList = [];
+            foreach ($param["StatusList"] as $key => $value){
+                $obj = new IPDefendStatus();
+                $obj->deserialize($value);
+                array_push($this->StatusList, $obj);
+            }
         }
 
-        if (array_key_exists("PreviewFileUrl",$param) and $param["PreviewFileUrl"] !== null) {
-            $this->PreviewFileUrl = $param["PreviewFileUrl"];
+        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
+            $this->ReturnCode = $param["ReturnCode"];
+        }
+
+        if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
+            $this->ReturnMsg = $param["ReturnMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

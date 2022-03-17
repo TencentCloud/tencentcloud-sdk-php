@@ -27,6 +27,7 @@ use TencentCloud\Iecp\V20210914\Models as Models;
  * @method Models\CreateApplicationVisualizationResponse CreateApplicationVisualization(Models\CreateApplicationVisualizationRequest $req) 创建可视化创建应用模板
  * @method Models\CreateConfigMapResponse CreateConfigMap(Models\CreateConfigMapRequest $req) 创建ConfigMap
  * @method Models\CreateEdgeNodeResponse CreateEdgeNode(Models\CreateEdgeNodeRequest $req) 创建边缘节点
+ * @method Models\CreateEdgeNodeBatchResponse CreateEdgeNodeBatch(Models\CreateEdgeNodeBatchRequest $req) 批量预注册节点
  * @method Models\CreateEdgeNodeGroupResponse CreateEdgeNodeGroup(Models\CreateEdgeNodeGroupRequest $req) 创建边缘单元NodeGroup
  * @method Models\CreateEdgeNodeUnitTemplateResponse CreateEdgeNodeUnitTemplate(Models\CreateEdgeNodeUnitTemplateRequest $req) 创建边缘单元NodeUnit模板
  * @method Models\CreateEdgeUnitApplicationVisualizationResponse CreateEdgeUnitApplicationVisualization(Models\CreateEdgeUnitApplicationVisualizationRequest $req) 可视化创建应用
@@ -35,6 +36,7 @@ use TencentCloud\Iecp\V20210914\Models as Models;
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建命名空间
  * @method Models\CreateSecretResponse CreateSecret(Models\CreateSecretRequest $req) 创建Secret
  * @method Models\CreateUpdateNodeUnitResponse CreateUpdateNodeUnit(Models\CreateUpdateNodeUnitRequest $req) 创建或更新边缘单元NodeUnit
+ * @method Models\CreateUserTokenResponse CreateUserToken(Models\CreateUserTokenRequest $req) 创建token
  * @method Models\DeleteApplicationsResponse DeleteApplications(Models\DeleteApplicationsRequest $req) 删除应用模板
  * @method Models\DeleteConfigMapResponse DeleteConfigMap(Models\DeleteConfigMapRequest $req) 删除ConfigMap
  * @method Models\DeleteEdgeNodeGroupResponse DeleteEdgeNodeGroup(Models\DeleteEdgeNodeGroupRequest $req) 删除边缘单元NodeGroup
@@ -59,9 +61,11 @@ use TencentCloud\Iecp\V20210914\Models as Models;
  * @method Models\DescribeEdgeNodeResponse DescribeEdgeNode(Models\DescribeEdgeNodeRequest $req) 获取边缘节点信息
  * @method Models\DescribeEdgeNodePodContainersResponse DescribeEdgeNodePodContainers(Models\DescribeEdgeNodePodContainersRequest $req) 查询节点Pod内的容器列表
  * @method Models\DescribeEdgeNodePodsResponse DescribeEdgeNodePods(Models\DescribeEdgeNodePodsRequest $req) 查询节点Pod列表
+ * @method Models\DescribeEdgeNodeRemarkListResponse DescribeEdgeNodeRemarkList(Models\DescribeEdgeNodeRemarkListRequest $req) 获取节点备注信息列表
  * @method Models\DescribeEdgeNodesResponse DescribeEdgeNodes(Models\DescribeEdgeNodesRequest $req) 查询边缘节点列表
  * @method Models\DescribeEdgeOperationLogsResponse DescribeEdgeOperationLogs(Models\DescribeEdgeOperationLogsRequest $req) 查询边缘操作日志
  * @method Models\DescribeEdgePodResponse DescribeEdgePod(Models\DescribeEdgePodRequest $req) 查询边缘单元Pod
+ * @method Models\DescribeEdgeSnNodesResponse DescribeEdgeSnNodes(Models\DescribeEdgeSnNodesRequest $req) 查询预注册节点列表
  * @method Models\DescribeEdgeUnitApplicationEventsResponse DescribeEdgeUnitApplicationEvents(Models\DescribeEdgeUnitApplicationEventsRequest $req) 获取应用事件列表
  * @method Models\DescribeEdgeUnitApplicationLogsResponse DescribeEdgeUnitApplicationLogs(Models\DescribeEdgeUnitApplicationLogsRequest $req) 获取应用日志
  * @method Models\DescribeEdgeUnitApplicationPodContainersResponse DescribeEdgeUnitApplicationPodContainers(Models\DescribeEdgeUnitApplicationPodContainersRequest $req) 获取应用容器状态
@@ -90,16 +94,19 @@ use TencentCloud\Iecp\V20210914\Models as Models;
  * @method Models\DescribeSecretResponse DescribeSecret(Models\DescribeSecretRequest $req) 获取Secret详情
  * @method Models\DescribeSecretYamlErrorResponse DescribeSecretYamlError(Models\DescribeSecretYamlErrorRequest $req) 校验Secret的Yaml语法
  * @method Models\DescribeSecretsResponse DescribeSecrets(Models\DescribeSecretsRequest $req) 获取Secrets列表
+ * @method Models\DescribeYeheResourceLimitResponse DescribeYeheResourceLimit(Models\DescribeYeheResourceLimitRequest $req) 查询用户的资源限制
  * @method Models\GetMarketComponentResponse GetMarketComponent(Models\GetMarketComponentRequest $req) 获取组件市场的组件信息
  * @method Models\GetMarketComponentListResponse GetMarketComponentList(Models\GetMarketComponentListRequest $req) 获取组件市场组件列表
  * @method Models\ModifyApplicationBasicInfoResponse ModifyApplicationBasicInfo(Models\ModifyApplicationBasicInfoRequest $req) 修改应用模板基本信息
  * @method Models\ModifyApplicationVisualizationResponse ModifyApplicationVisualization(Models\ModifyApplicationVisualizationRequest $req) 修改应用模板配置
  * @method Models\ModifyConfigMapResponse ModifyConfigMap(Models\ModifyConfigMapRequest $req) 修改ConfigMap
+ * @method Models\ModifyEdgeDracoNodeResponse ModifyEdgeDracoNode(Models\ModifyEdgeDracoNodeRequest $req) 编辑draco设备信息
  * @method Models\ModifyEdgeNodeLabelsResponse ModifyEdgeNodeLabels(Models\ModifyEdgeNodeLabelsRequest $req) 编辑边缘节点标签
  * @method Models\ModifyEdgeUnitResponse ModifyEdgeUnit(Models\ModifyEdgeUnitRequest $req) 修改边缘集群
  * @method Models\ModifyEdgeUnitApplicationBasicInfoResponse ModifyEdgeUnitApplicationBasicInfo(Models\ModifyEdgeUnitApplicationBasicInfoRequest $req) 修改单元应用基本信息
  * @method Models\ModifyEdgeUnitApplicationVisualizationResponse ModifyEdgeUnitApplicationVisualization(Models\ModifyEdgeUnitApplicationVisualizationRequest $req) 可视化修改应用配置
  * @method Models\ModifyEdgeUnitApplicationYamlResponse ModifyEdgeUnitApplicationYaml(Models\ModifyEdgeUnitApplicationYamlRequest $req) Yaml方式修改应用配置
+ * @method Models\ModifyEdgeUnitCloudApiResponse ModifyEdgeUnitCloudApi(Models\ModifyEdgeUnitCloudApiRequest $req) 更新边缘单元信息
  * @method Models\ModifyEdgeUnitDeployGridItemResponse ModifyEdgeUnitDeployGridItem(Models\ModifyEdgeUnitDeployGridItemRequest $req) 修改边缘单元Grid部署应用副本数
  * @method Models\ModifyNodeUnitTemplateResponse ModifyNodeUnitTemplate(Models\ModifyNodeUnitTemplateRequest $req) 修改边缘单元NodeUnit模板
  * @method Models\ModifySecretResponse ModifySecret(Models\ModifySecretRequest $req) 修改Secret

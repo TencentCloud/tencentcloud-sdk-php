@@ -18,30 +18,30 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Ocr 文字涉恐信息
+ * Ocr 文字涉敏信息
  *
- * @method float getConfidence() 获取Ocr 文字涉恐评分，分值为0到100。
- * @method void setConfidence(float $Confidence) 设置Ocr 文字涉恐评分，分值为0到100。
- * @method string getSuggestion() 获取Ocr 文字涉恐结果建议，取值范围：
+ * @method float getConfidence() 获取Ocr 文字涉敏评分，分值为0到100。
+ * @method void setConfidence(float $Confidence) 设置Ocr 文字涉敏评分，分值为0到100。
+ * @method string getSuggestion() 获取Ocr 文字涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method void setSuggestion(string $Suggestion) 设置Ocr 文字涉恐结果建议，取值范围：
+ * @method void setSuggestion(string $Suggestion) 设置Ocr 文字涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method array getSegmentSet() 获取Ocr 文字有涉恐嫌疑的视频片段列表。
- * @method void setSegmentSet(array $SegmentSet) 设置Ocr 文字有涉恐嫌疑的视频片段列表。
+ * @method array getSegmentSet() 获取Ocr 文字有涉敏嫌疑的视频片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置Ocr 文字有涉敏嫌疑的视频片段列表。
  */
 class AiReviewTerrorismOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Ocr 文字涉恐评分，分值为0到100。
+     * @var float Ocr 文字涉敏评分，分值为0到100。
      */
     public $Confidence;
 
     /**
-     * @var string Ocr 文字涉恐结果建议，取值范围：
+     * @var string Ocr 文字涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -49,17 +49,17 @@ class AiReviewTerrorismOcrTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array Ocr 文字有涉恐嫌疑的视频片段列表。
+     * @var array Ocr 文字有涉敏嫌疑的视频片段列表。
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Ocr 文字涉恐评分，分值为0到100。
-     * @param string $Suggestion Ocr 文字涉恐结果建议，取值范围：
+     * @param float $Confidence Ocr 文字涉敏评分，分值为0到100。
+     * @param string $Suggestion Ocr 文字涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param array $SegmentSet Ocr 文字有涉恐嫌疑的视频片段列表。
+     * @param array $SegmentSet Ocr 文字有涉敏嫌疑的视频片段列表。
      */
     function __construct()
     {

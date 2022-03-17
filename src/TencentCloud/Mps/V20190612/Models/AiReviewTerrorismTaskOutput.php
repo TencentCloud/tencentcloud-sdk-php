@@ -18,50 +18,50 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 暴恐信息
+ * 涉敏信息
  *
- * @method float getConfidence() 获取视频暴恐评分，分值为0到100。
- * @method void setConfidence(float $Confidence) 设置视频暴恐评分，分值为0到100。
- * @method string getSuggestion() 获取暴恐结果建议，取值范围：
+ * @method float getConfidence() 获取视频涉敏评分，分值为0到100。
+ * @method void setConfidence(float $Confidence) 设置视频涉敏评分，分值为0到100。
+ * @method string getSuggestion() 获取涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method void setSuggestion(string $Suggestion) 设置暴恐结果建议，取值范围：
+ * @method void setSuggestion(string $Suggestion) 设置涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method string getLabel() 获取视频暴恐结果标签，取值范围：
+ * @method string getLabel() 获取视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
-<li>scenario：暴恐画面。</li>
- * @method void setLabel(string $Label) 设置视频暴恐结果标签，取值范围：
+<li>terrorists：涉敏人物。</li>
+<li>scenario：涉敏画面。</li>
+ * @method void setLabel(string $Label) 设置视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
-<li>scenario：暴恐画面。</li>
- * @method array getSegmentSet() 获取有暴恐嫌疑的视频片段列表。
- * @method void setSegmentSet(array $SegmentSet) 设置有暴恐嫌疑的视频片段列表。
+<li>terrorists：涉敏人物。</li>
+<li>scenario：涉敏画面。</li>
+ * @method array getSegmentSet() 获取有涉敏嫌疑的视频片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置有涉敏嫌疑的视频片段列表。
  */
 class AiReviewTerrorismTaskOutput extends AbstractModel
 {
     /**
-     * @var float 视频暴恐评分，分值为0到100。
+     * @var float 视频涉敏评分，分值为0到100。
      */
     public $Confidence;
 
     /**
-     * @var string 暴恐结果建议，取值范围：
+     * @var string 涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -69,41 +69,41 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string 视频暴恐结果标签，取值范围：
+     * @var string 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
-<li>scenario：暴恐画面。</li>
+<li>terrorists：涉敏人物。</li>
+<li>scenario：涉敏画面。</li>
      */
     public $Label;
 
     /**
-     * @var array 有暴恐嫌疑的视频片段列表。
+     * @var array 有涉敏嫌疑的视频片段列表。
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence 视频暴恐评分，分值为0到100。
-     * @param string $Suggestion 暴恐结果建议，取值范围：
+     * @param float $Confidence 视频涉敏评分，分值为0到100。
+     * @param string $Suggestion 涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param string $Label 视频暴恐结果标签，取值范围：
+     * @param string $Label 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
-<li>scenario：暴恐画面。</li>
-     * @param array $SegmentSet 有暴恐嫌疑的视频片段列表。
+<li>terrorists：涉敏人物。</li>
+<li>scenario：涉敏画面。</li>
+     * @param array $SegmentSet 有涉敏嫌疑的视频片段列表。
      */
     function __construct()
     {

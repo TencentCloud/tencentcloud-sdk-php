@@ -18,30 +18,30 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Ocr 文字涉政信息
+ * Ocr 文字敏感信息
  *
- * @method float getConfidence() 获取Ocr 文字涉政、敏感评分，分值为0到100。
- * @method void setConfidence(float $Confidence) 设置Ocr 文字涉政、敏感评分，分值为0到100。
- * @method string getSuggestion() 获取Ocr 文字涉政、敏感结果建议，取值范围：
+ * @method float getConfidence() 获取Ocr 文字敏感评分，分值为0到100。
+ * @method void setConfidence(float $Confidence) 设置Ocr 文字敏感评分，分值为0到100。
+ * @method string getSuggestion() 获取Ocr 文字敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method void setSuggestion(string $Suggestion) 设置Ocr 文字涉政、敏感结果建议，取值范围：
+ * @method void setSuggestion(string $Suggestion) 设置Ocr 文字敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method array getSegmentSet() 获取Ocr 文字有涉政、敏感嫌疑的视频片段列表。
- * @method void setSegmentSet(array $SegmentSet) 设置Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+ * @method array getSegmentSet() 获取Ocr 文字有敏感嫌疑的视频片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置Ocr 文字有敏感嫌疑的视频片段列表。
  */
 class AiReviewPoliticalOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Ocr 文字涉政、敏感评分，分值为0到100。
+     * @var float Ocr 文字敏感评分，分值为0到100。
      */
     public $Confidence;
 
     /**
-     * @var string Ocr 文字涉政、敏感结果建议，取值范围：
+     * @var string Ocr 文字敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -49,17 +49,17 @@ class AiReviewPoliticalOcrTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var array Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+     * @var array Ocr 文字有敏感嫌疑的视频片段列表。
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Ocr 文字涉政、敏感评分，分值为0到100。
-     * @param string $Suggestion Ocr 文字涉政、敏感结果建议，取值范围：
+     * @param float $Confidence Ocr 文字敏感评分，分值为0到100。
+     * @param string $Suggestion Ocr 文字敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param array $SegmentSet Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+     * @param array $SegmentSet Ocr 文字有敏感嫌疑的视频片段列表。
      */
     function __construct()
     {

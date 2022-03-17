@@ -24,17 +24,29 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiId(string $ApiId) 设置api id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPath() 获取path
+ * @method string getPath() 获取路径
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPath(string $Path) 设置path
+ * @method void setPath(string $Path) 设置路径
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMethod() 获取method
+ * @method string getMethod() 获取请求方法
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMethod(string $Method) 设置method
+ * @method void setMethod(string $Method) 设置请求方法
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取导入状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置导入状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErrMsg() 获取异常信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrMsg(string $ErrMsg) 设置异常信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApiName() 获取api name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiName(string $ApiName) 设置api name
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateApiRsp extends AbstractModel
@@ -46,13 +58,13 @@ class CreateApiRsp extends AbstractModel
     public $ApiId;
 
     /**
-     * @var string path
+     * @var string 路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
-     * @var string method
+     * @var string 请求方法
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Method;
@@ -64,13 +76,37 @@ class CreateApiRsp extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var string 导入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var string 异常信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrMsg;
+
+    /**
+     * @var string api name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiName;
+
+    /**
      * @param string $ApiId api id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Path path
+     * @param string $Path 路径
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Method method
+     * @param string $Method 请求方法
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 导入状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrMsg 异常信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApiName api name
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +136,18 @@ class CreateApiRsp extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("ApiName",$param) and $param["ApiName"] !== null) {
+            $this->ApiName = $param["ApiName"];
         }
     }
 }

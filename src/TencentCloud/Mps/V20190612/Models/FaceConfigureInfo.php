@@ -31,11 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDefaultLibraryLabelSet() 获取默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
 <li>entertainment：娱乐明星；</li>
 <li>sport：体育明星；</li>
-<li>politician：政治人物。</li>
+<li>politician：敏感人物。</li>
  * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) 设置默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
 <li>entertainment：娱乐明星；</li>
 <li>sport：体育明星；</li>
-<li>politician：政治人物。</li>
+<li>politician：敏感人物。</li>
  * @method array getUserDefineLibraryLabelSet() 获取用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
 标签个数最多 100 个，每个标签长度最多 16 个字符。
  * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) 设置用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
@@ -69,7 +69,7 @@ class FaceConfigureInfo extends AbstractModel
      * @var array 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
 <li>entertainment：娱乐明星；</li>
 <li>sport：体育明星；</li>
-<li>politician：政治人物。</li>
+<li>politician：敏感人物。</li>
      */
     public $DefaultLibraryLabelSet;
 
@@ -96,7 +96,7 @@ class FaceConfigureInfo extends AbstractModel
      * @param array $DefaultLibraryLabelSet 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
 <li>entertainment：娱乐明星；</li>
 <li>sport：体育明星；</li>
-<li>politician：政治人物。</li>
+<li>politician：敏感人物。</li>
      * @param array $UserDefineLibraryLabelSet 用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
 标签个数最多 100 个，每个标签长度最多 16 个字符。
      * @param string $FaceLibrary 人物库选择，可选值：

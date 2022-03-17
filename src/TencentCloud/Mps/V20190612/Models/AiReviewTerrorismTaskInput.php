@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 内容审核鉴恐任务输入参数类型
+ * 内容审核涉敏任务输入参数类型
  *
- * @method integer getDefinition() 获取鉴恐模板 ID。
- * @method void setDefinition(integer $Definition) 设置鉴恐模板 ID。
+ * @method integer getDefinition() 获取模板 ID。
+ * @method void setDefinition(integer $Definition) 设置模板 ID。
  */
 class AiReviewTerrorismTaskInput extends AbstractModel
 {
     /**
-     * @var integer 鉴恐模板 ID。
+     * @var integer 模板 ID。
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 鉴恐模板 ID。
+     * @param integer $Definition 模板 ID。
      */
     function __construct()
     {

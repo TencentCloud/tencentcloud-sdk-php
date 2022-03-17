@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortBy(string $SortBy) 设置排序字段，支持如下字段类型，create-time
  * @method string getSorting() 获取排序方式，desc表示正序，asc表示反序， 默认为asc
  * @method void setSorting(string $Sorting) 设置排序方式，desc表示正序，asc表示反序， 默认为asc
+ * @method array getFilters() 获取过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+ * @method void setFilters(array $Filters) 设置过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
  */
 class DescribeUsersRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeUsersRequest extends AbstractModel
     public $Sorting;
 
     /**
+     * @var array 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+     */
+    public $Filters;
+
+    /**
      * @param string $UserId 指定查询的子用户uin，用户需要通过CreateUser接口创建。
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认20，最大值100
      * @param string $SortBy 排序字段，支持如下字段类型，create-time
      * @param string $Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc
+     * @param array $Filters 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class DescribeUsersRequest extends AbstractModel
 
         if (array_key_exists("Sorting",$param) and $param["Sorting"] !== null) {
             $this->Sorting = $param["Sorting"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

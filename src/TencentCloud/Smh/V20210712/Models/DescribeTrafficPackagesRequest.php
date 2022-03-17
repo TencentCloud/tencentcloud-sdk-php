@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置页码，整型，配合 PageSize 使用，默认值为 1。
  * @method integer getPageSize() 获取每页数目，整型，配合 PageNumber 使用，默认值为 20，最大值为 100。
  * @method void setPageSize(integer $PageSize) 设置每页数目，整型，配合 PageNumber 使用，默认值为 20，最大值为 100。
+ * @method string getOrderBy() 获取对指定列进行排序
+ * @method void setOrderBy(string $OrderBy) 设置对指定列进行排序
+ * @method string getOrderByType() 获取排序方式
+ * @method void setOrderByType(string $OrderByType) 设置排序方式
+ * @method integer getType() 获取来源类型筛选
+ * @method void setType(integer $Type) 设置来源类型筛选
  */
 class DescribeTrafficPackagesRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class DescribeTrafficPackagesRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var string 对指定列进行排序
+     */
+    public $OrderBy;
+
+    /**
+     * @var string 排序方式
+     */
+    public $OrderByType;
+
+    /**
+     * @var integer 来源类型筛选
+     */
+    public $Type;
+
+    /**
      * @param array $ResourceIds 按照一个或者多个资源 ID 查询，每次请求的上限为 100 个。
      * @param integer $PageNumber 页码，整型，配合 PageSize 使用，默认值为 1。
      * @param integer $PageSize 每页数目，整型，配合 PageNumber 使用，默认值为 20，最大值为 100。
+     * @param string $OrderBy 对指定列进行排序
+     * @param string $OrderByType 排序方式
+     * @param integer $Type 来源类型筛选
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class DescribeTrafficPackagesRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
+            $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

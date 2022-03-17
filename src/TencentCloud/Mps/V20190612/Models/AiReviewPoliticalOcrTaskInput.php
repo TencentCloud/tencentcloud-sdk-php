@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 内容审核 Ocr 文字鉴政任务输入参数类型
+ * 内容审核 Ocr 文字敏感任务输入参数类型
  *
- * @method integer getDefinition() 获取鉴政模板 ID。
- * @method void setDefinition(integer $Definition) 设置鉴政模板 ID。
+ * @method integer getDefinition() 获取模板 ID。
+ * @method void setDefinition(integer $Definition) 设置模板 ID。
  */
 class AiReviewPoliticalOcrTaskInput extends AbstractModel
 {
     /**
-     * @var integer 鉴政模板 ID。
+     * @var integer 模板 ID。
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 鉴政模板 ID。
+     * @param integer $Definition 模板 ID。
      */
     function __construct()
     {

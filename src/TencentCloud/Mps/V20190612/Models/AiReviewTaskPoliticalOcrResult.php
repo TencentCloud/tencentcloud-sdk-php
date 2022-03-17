@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 内容审核 Ocr 文字鉴政、敏感任务结果类型
+ * 内容审核 Ocr 文字敏感任务结果类型
  *
  * @method string getStatus() 获取任务状态，有 PROCESSING，SUCCESS，FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态，有 PROCESSING，SUCCESS，FAIL 三种。
@@ -28,11 +28,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) 设置错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
- * @method AiReviewPoliticalOcrTaskInput getInput() 获取内容审核 Ocr 文字鉴政任务输入。
- * @method void setInput(AiReviewPoliticalOcrTaskInput $Input) 设置内容审核 Ocr 文字鉴政任务输入。
- * @method AiReviewPoliticalOcrTaskOutput getOutput() 获取内容审核 Ocr 文字鉴政任务输出。
+ * @method AiReviewPoliticalOcrTaskInput getInput() 获取内容审核 Ocr 文字敏感任务输入。
+ * @method void setInput(AiReviewPoliticalOcrTaskInput $Input) 设置内容审核 Ocr 文字敏感任务输入。
+ * @method AiReviewPoliticalOcrTaskOutput getOutput() 获取内容审核 Ocr 文字敏感任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) 设置内容审核 Ocr 文字鉴政任务输出。
+ * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) 设置内容审核 Ocr 文字敏感任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiReviewTaskPoliticalOcrResult extends AbstractModel
@@ -58,12 +58,12 @@ class AiReviewTaskPoliticalOcrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewPoliticalOcrTaskInput 内容审核 Ocr 文字鉴政任务输入。
+     * @var AiReviewPoliticalOcrTaskInput 内容审核 Ocr 文字敏感任务输入。
      */
     public $Input;
 
     /**
-     * @var AiReviewPoliticalOcrTaskOutput 内容审核 Ocr 文字鉴政任务输出。
+     * @var AiReviewPoliticalOcrTaskOutput 内容审核 Ocr 文字敏感任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
@@ -73,8 +73,8 @@ class AiReviewTaskPoliticalOcrResult extends AbstractModel
      * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [视频处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
      * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
      * @param string $Message 错误信息。
-     * @param AiReviewPoliticalOcrTaskInput $Input 内容审核 Ocr 文字鉴政任务输入。
-     * @param AiReviewPoliticalOcrTaskOutput $Output 内容审核 Ocr 文字鉴政任务输出。
+     * @param AiReviewPoliticalOcrTaskInput $Input 内容审核 Ocr 文字敏感任务输入。
+     * @param AiReviewPoliticalOcrTaskOutput $Output 内容审核 Ocr 文字敏感任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

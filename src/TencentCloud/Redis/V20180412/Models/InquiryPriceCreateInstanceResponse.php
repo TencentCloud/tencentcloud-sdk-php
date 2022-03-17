@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateInstance返回参数结构体
  *
- * @method float getPrice() 获取价格，单位：元
+ * @method float getPrice() 获取价格，单位：分
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrice(float $Price) 设置价格，单位：元
+ * @method void setPrice(float $Price) 设置价格，单位：分
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceCreateInstanceResponse extends AbstractModel
 {
     /**
-     * @var float 价格，单位：元
+     * @var float 价格，单位：分
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Price;
@@ -41,7 +41,7 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Price 价格，单位：元
+     * @param float $Price 价格，单位：分
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

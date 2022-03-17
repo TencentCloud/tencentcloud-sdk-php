@@ -18,40 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 直播 AI 内容审核图片鉴恐结果
+ * 直播 AI 内容审核图片涉敏结果
  *
  * @method float getStartPtsTime() 获取嫌疑片段起始的 PTS 时间，单位：秒。
  * @method void setStartPtsTime(float $StartPtsTime) 设置嫌疑片段起始的 PTS 时间，单位：秒。
  * @method float getEndPtsTime() 获取嫌疑片段结束的 PTS 时间，单位：秒。
  * @method void setEndPtsTime(float $EndPtsTime) 设置嫌疑片段结束的 PTS 时间，单位：秒。
- * @method float getConfidence() 获取嫌疑片段涉恐分数。
- * @method void setConfidence(float $Confidence) 设置嫌疑片段涉恐分数。
- * @method string getSuggestion() 获取嫌疑片段鉴恐结果建议，取值范围：
+ * @method float getConfidence() 获取嫌疑片段涉敏分数。
+ * @method void setConfidence(float $Confidence) 设置嫌疑片段涉敏分数。
+ * @method string getSuggestion() 获取嫌疑片段涉敏结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method void setSuggestion(string $Suggestion) 设置嫌疑片段鉴恐结果建议，取值范围：
+ * @method void setSuggestion(string $Suggestion) 设置嫌疑片段涉敏结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method string getLabel() 获取视频暴恐结果标签，取值范围：
+ * @method string getLabel() 获取视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
- * @method void setLabel(string $Label) 设置视频暴恐结果标签，取值范围：
+<li>terrorists：涉敏人物。</li>
+ * @method void setLabel(string $Label) 设置视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：涉敏人物。</li>
  * @method string getUrl() 获取嫌疑图片 URL （图片不会永久存储，到达
 PicUrlExpireTime 时间点后图片将被删除）。
  * @method void setUrl(string $Url) 设置嫌疑图片 URL （图片不会永久存储，到达
@@ -72,12 +72,12 @@ class LiveStreamAiReviewImageTerrorismResult extends AbstractModel
     public $EndPtsTime;
 
     /**
-     * @var float 嫌疑片段涉恐分数。
+     * @var float 嫌疑片段涉敏分数。
      */
     public $Confidence;
 
     /**
-     * @var string 嫌疑片段鉴恐结果建议，取值范围：
+     * @var string 嫌疑片段涉敏结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -85,15 +85,15 @@ class LiveStreamAiReviewImageTerrorismResult extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string 视频暴恐结果标签，取值范围：
+     * @var string 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：涉敏人物。</li>
      */
     public $Label;
 
@@ -111,20 +111,20 @@ PicUrlExpireTime 时间点后图片将被删除）。
     /**
      * @param float $StartPtsTime 嫌疑片段起始的 PTS 时间，单位：秒。
      * @param float $EndPtsTime 嫌疑片段结束的 PTS 时间，单位：秒。
-     * @param float $Confidence 嫌疑片段涉恐分数。
-     * @param string $Suggestion 嫌疑片段鉴恐结果建议，取值范围：
+     * @param float $Confidence 嫌疑片段涉敏分数。
+     * @param string $Suggestion 嫌疑片段涉敏结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param string $Label 视频暴恐结果标签，取值范围：
+     * @param string $Label 视频涉敏结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
 <li>bloody：血腥画面。</li>
-<li>banners：暴恐旗帜。</li>
+<li>banners：涉敏旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：涉敏人物。</li>
      * @param string $Url 嫌疑图片 URL （图片不会永久存储，到达
 PicUrlExpireTime 时间点后图片将被删除）。
      * @param string $PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。

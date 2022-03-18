@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组id
  * @method integer getNeedCorrespondence() 获取是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
  * @method void setNeedCorrespondence(integer $NeedCorrespondence) 设置是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+ * @method array getTriggerTasks() 获取按照触发任务（例如弹性伸缩）过滤策略。最多10个
+ * @method void setTriggerTasks(array $TriggerTasks) 设置按照触发任务（例如弹性伸缩）过滤策略。最多10个
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -184,6 +186,11 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $NeedCorrespondence;
 
     /**
+     * @var array 按照触发任务（例如弹性伸缩）过滤策略。最多10个
+     */
+    public $TriggerTasks;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -212,6 +219,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param integer $NotBindingNoticeRule 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
      * @param integer $InstanceGroupId 实例分组id
      * @param integer $NeedCorrespondence 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+     * @param array $TriggerTasks 按照触发任务（例如弹性伸缩）过滤策略。最多10个
      */
     function __construct()
     {
@@ -300,6 +308,15 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 
         if (array_key_exists("NeedCorrespondence",$param) and $param["NeedCorrespondence"] !== null) {
             $this->NeedCorrespondence = $param["NeedCorrespondence"];
+        }
+
+        if (array_key_exists("TriggerTasks",$param) and $param["TriggerTasks"] !== null) {
+            $this->TriggerTasks = [];
+            foreach ($param["TriggerTasks"] as $key => $value){
+                $obj = new AlarmPolicyTriggerTask();
+                $obj->deserialize($value);
+                array_push($this->TriggerTasks, $obj);
+            }
         }
     }
 }

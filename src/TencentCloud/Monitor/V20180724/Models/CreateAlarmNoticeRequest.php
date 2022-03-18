@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserNotices(array $UserNotices) 设置用户通知 最多5个
  * @method array getURLNotices() 获取回调通知 最多3个
  * @method void setURLNotices(array $URLNotices) 设置回调通知 最多3个
+ * @method array getCLSNotices() 获取推送CLS日志服务的操作 最多1个
+ * @method void setCLSNotices(array $CLSNotices) 设置推送CLS日志服务的操作 最多1个
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $URLNotices;
 
     /**
+     * @var array 推送CLS日志服务的操作 最多1个
+     */
+    public $CLSNotices;
+
+    /**
      * @param string $Module 模块名，这里填“monitor”
      * @param string $Name 通知模板名称 60字符以内
      * @param string $NoticeType 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
      * @param string $NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
      * @param array $UserNotices 用户通知 最多5个
      * @param array $URLNotices 回调通知 最多3个
+     * @param array $CLSNotices 推送CLS日志服务的操作 最多1个
      */
     function __construct()
     {
@@ -117,6 +125,15 @@ class CreateAlarmNoticeRequest extends AbstractModel
                 $obj = new URLNotice();
                 $obj->deserialize($value);
                 array_push($this->URLNotices, $obj);
+            }
+        }
+
+        if (array_key_exists("CLSNotices",$param) and $param["CLSNotices"] !== null) {
+            $this->CLSNotices = [];
+            foreach ($param["CLSNotices"] as $key => $value){
+                $obj = new CLSNotice();
+                $obj->deserialize($value);
+                array_push($this->CLSNotices, $obj);
             }
         }
     }

@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSplit(boolean $AutoSplit) 设置是否开启自动分裂，默认值为true
  * @method integer getMaxSplitPartitions() 获取开启自动分裂后，每个主题能够允许的最大分区数，默认值为50
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置开启自动分裂后，每个主题能够允许的最大分区数，默认值为50
- * @method string getStorageType() 获取日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
- * @method void setStorageType(string $StorageType) 设置日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
- * @method integer getPeriod() 获取生命周期，单位天；可取值范围1~366。默认30天
- * @method void setPeriod(integer $Period) 设置生命周期，单位天；可取值范围1~366。默认30天
+ * @method string getStorageType() 获取日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
+ * @method void setStorageType(string $StorageType) 设置日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
+ * @method integer getPeriod() 获取生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+ * @method void setPeriod(integer $Period) 设置生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -70,12 +70,12 @@ class CreateTopicRequest extends AbstractModel
     public $MaxSplitPartitions;
 
     /**
-     * @var string 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
+     * @var string 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
      */
     public $StorageType;
 
     /**
-     * @var integer 生命周期，单位天；可取值范围1~366。默认30天
+     * @var integer 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
      */
     public $Period;
 
@@ -86,8 +86,8 @@ class CreateTopicRequest extends AbstractModel
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
      * @param boolean $AutoSplit 是否开启自动分裂，默认值为true
      * @param integer $MaxSplitPartitions 开启自动分裂后，每个主题能够允许的最大分区数，默认值为50
-     * @param string $StorageType 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
-     * @param integer $Period 生命周期，单位天；可取值范围1~366。默认30天
+     * @param string $StorageType 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
+     * @param integer $Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
      */
     function __construct()
     {

@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterStatus() 获取集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
- * @method void setClusterStatus(string $ClusterStatus) 设置集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+ * @method string getClusterStatus() 获取集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
+ * @method void setClusterStatus(string $ClusterStatus) 设置集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
  * @method string getProperty() 获取集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProperty(string $Property) 设置集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
@@ -129,7 +129,7 @@ class Cluster extends AbstractModel
     public $TagSpecification;
 
     /**
-     * @var string 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+     * @var string 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
      */
     public $ClusterStatus;
 
@@ -192,7 +192,7 @@ class Cluster extends AbstractModel
      * @param integer $ProjectId 集群所属的项目ID
      * @param array $TagSpecification 标签描述列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+     * @param string $ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
      * @param string $Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterMaterNodeNum 集群当前master数量

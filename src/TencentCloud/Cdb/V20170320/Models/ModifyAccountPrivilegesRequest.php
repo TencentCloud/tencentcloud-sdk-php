@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意，不传该参数表示清除该权限。
  * @method void setColumnPrivileges(array $ColumnPrivileges) 设置数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
 注意，不传该参数表示清除该权限。
- * @method string getModifyAction() 获取该参数不为空时，为批量修改权限。可选值为：grant，revoke。
- * @method void setModifyAction(string $ModifyAction) 设置该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+ * @method string getModifyAction() 获取该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
+ * @method void setModifyAction(string $ModifyAction) 设置该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
  */
 class ModifyAccountPrivilegesRequest extends AbstractModel
 {
@@ -80,7 +80,7 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
     public $ColumnPrivileges;
 
     /**
-     * @var string 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+     * @var string 该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
      */
     public $ModifyAction;
 
@@ -95,7 +95,7 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
 注意，不传该参数表示清除该权限。
      * @param array $ColumnPrivileges 数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
 注意，不传该参数表示清除该权限。
-     * @param string $ModifyAction 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+     * @param string $ModifyAction 该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
      */
     function __construct()
     {

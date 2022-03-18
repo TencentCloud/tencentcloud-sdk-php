@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkGroupDescription(string $WorkGroupDescription) 设置工作组描述
  * @method array getPolicySet() 获取工作组绑定的鉴权策略集合
  * @method void setPolicySet(array $PolicySet) 设置工作组绑定的鉴权策略集合
+ * @method array getUserIds() 获取需要绑定到工作组的用户Id集合
+ * @method void setUserIds(array $UserIds) 设置需要绑定到工作组的用户Id集合
  */
 class CreateWorkGroupRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateWorkGroupRequest extends AbstractModel
     public $PolicySet;
 
     /**
+     * @var array 需要绑定到工作组的用户Id集合
+     */
+    public $UserIds;
+
+    /**
      * @param string $WorkGroupName 工作组名称
      * @param string $WorkGroupDescription 工作组描述
      * @param array $PolicySet 工作组绑定的鉴权策略集合
+     * @param array $UserIds 需要绑定到工作组的用户Id集合
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class CreateWorkGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PolicySet, $obj);
             }
+        }
+
+        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
+            $this->UserIds = $param["UserIds"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleName(string $RuleName) 设置审计规则名称。支持按审计规则名称进行模糊匹配查询。
  * @method integer getLimit() 获取分页大小参数。默认值为 20，最小值为 1，最大值为 100。
  * @method void setLimit(integer $Limit) 设置分页大小参数。默认值为 20，最小值为 1，最大值为 100。
- * @method integer getOffset() 获取分页偏移量。
- * @method void setOffset(integer $Offset) 设置分页偏移量。
+ * @method integer getOffset() 获取分页偏移量。默认值为0。
+ * @method void setOffset(integer $Offset) 设置分页偏移量。默认值为0。
  */
 class DescribeAuditRulesRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeAuditRulesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 分页偏移量。
+     * @var integer 分页偏移量。默认值为0。
      */
     public $Offset;
 
@@ -55,7 +55,7 @@ class DescribeAuditRulesRequest extends AbstractModel
      * @param string $RuleId 审计规则 ID。
      * @param string $RuleName 审计规则名称。支持按审计规则名称进行模糊匹配查询。
      * @param integer $Limit 分页大小参数。默认值为 20，最小值为 1，最大值为 100。
-     * @param integer $Offset 分页偏移量。
+     * @param integer $Offset 分页偏移量。默认值为0。
      */
     function __construct()
     {

@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
         Confidence:0.9996
     }
 }
+ * @method string getCodeSet() 获取最下方第一行 MRZ Code 序列
+ * @method void setCodeSet(string $CodeSet) 设置最下方第一行 MRZ Code 序列
+ * @method string getCodeCrc() 获取最下方第二行 MRZ Code 序列
+ * @method void setCodeCrc(string $CodeCrc) 设置最下方第二行 MRZ Code 序列
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -129,6 +133,16 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $AdvancedInfo;
 
     /**
+     * @var string 最下方第一行 MRZ Code 序列
+     */
+    public $CodeSet;
+
+    /**
+     * @var string 最下方第二行 MRZ Code 序列
+     */
+    public $CodeCrc;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -155,6 +169,8 @@ class MLIDPassportOCRResponse extends AbstractModel
         Confidence:0.9996
     }
 }
+     * @param string $CodeSet 最下方第一行 MRZ Code 序列
+     * @param string $CodeCrc 最下方第二行 MRZ Code 序列
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -208,6 +224,14 @@ class MLIDPassportOCRResponse extends AbstractModel
 
         if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
             $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("CodeSet",$param) and $param["CodeSet"] !== null) {
+            $this->CodeSet = $param["CodeSet"];
+        }
+
+        if (array_key_exists("CodeCrc",$param) and $param["CodeCrc"] !== null) {
+            $this->CodeCrc = $param["CodeCrc"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

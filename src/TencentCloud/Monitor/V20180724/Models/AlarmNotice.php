@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyIds(array $PolicyIds) 设置告警通知模板绑定的告警策略ID列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCLSNotices() 获取推送cls渠道
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCLSNotices(array $CLSNotices) 设置推送cls渠道
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmNotice extends AbstractModel
 {
@@ -124,6 +128,12 @@ class AlarmNotice extends AbstractModel
     public $PolicyIds;
 
     /**
+     * @var array 推送cls渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CLSNotices;
+
+    /**
      * @param string $Id 告警通知模板 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 告警通知模板名称
@@ -143,6 +153,8 @@ class AlarmNotice extends AbstractModel
      * @param string $NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PolicyIds 告警通知模板绑定的告警策略ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CLSNotices 推送cls渠道
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -206,6 +218,15 @@ class AlarmNotice extends AbstractModel
 
         if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
             $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("CLSNotices",$param) and $param["CLSNotices"] !== null) {
+            $this->CLSNotices = [];
+            foreach ($param["CLSNotices"] as $key => $value){
+                $obj = new CLSNotice();
+                $obj->deserialize($value);
+                array_push($this->CLSNotices, $obj);
+            }
         }
     }
 }

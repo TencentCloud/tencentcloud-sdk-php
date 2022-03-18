@@ -52,18 +52,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method void setNotifyType(string $NotifyType) 设置sms--短信，none--不通知
  * @method integer getApproverRole() 获取1--收款人、2--开具人、3--见证人
  * @method void setApproverRole(integer $ApproverRole) 设置1--收款人、2--开具人、3--见证人
- * @method array getVerifyChannel() 获取认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
- * @method void setVerifyChannel(array $VerifyChannel) 设置认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
+ * @method array getVerifyChannel() 获取签署意愿确认渠道,WEIXINAPP:人脸识别
+ * @method void setVerifyChannel(array $VerifyChannel) 设置签署意愿确认渠道,WEIXINAPP:人脸识别
  * @method integer getPreReadTime() 获取合同的强制预览时间：3~300s，未指定则按合同页数计算
  * @method void setPreReadTime(integer $PreReadTime) 设置合同的强制预览时间：3~300s，未指定则按合同页数计算
  */
@@ -122,12 +112,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $ApproverRole;
 
     /**
-     * @var array 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
+     * @var array 签署意愿确认渠道,WEIXINAPP:人脸识别
      */
     public $VerifyChannel;
 
@@ -153,12 +138,7 @@ HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param string $NotifyType sms--短信，none--不通知
      * @param integer $ApproverRole 1--收款人、2--开具人、3--见证人
-     * @param array $VerifyChannel 认证方式：
-WEIXINAPP - 微信小程序；
-VERIFYCODE - 验证码；
-
-可以选择多个, 按照顺序进行优先级选择
-注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
+     * @param array $VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      * @param integer $PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
      */
     function __construct()

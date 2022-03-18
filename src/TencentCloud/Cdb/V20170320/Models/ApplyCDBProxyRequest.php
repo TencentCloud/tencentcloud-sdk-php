@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMem(integer $Mem) 设置内存
  * @method array getSecurityGroup() 获取安全组
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组
- * @method string getDesc() 获取描述说明
- * @method void setDesc(string $Desc) 设置描述说明
+ * @method string getDesc() 获取描述说明，最大支持256位。
+ * @method void setDesc(string $Desc) 设置描述说明，最大支持256位。
  */
 class ApplyCDBProxyRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class ApplyCDBProxyRequest extends AbstractModel
     public $SecurityGroup;
 
     /**
-     * @var string 描述说明
+     * @var string 描述说明，最大支持256位。
      */
     public $Desc;
 
@@ -87,7 +87,7 @@ class ApplyCDBProxyRequest extends AbstractModel
      * @param integer $Cpu cpu核数
      * @param integer $Mem 内存
      * @param array $SecurityGroup 安全组
-     * @param string $Desc 描述说明
+     * @param string $Desc 描述说明，最大支持256位。
      */
     function __construct()
     {

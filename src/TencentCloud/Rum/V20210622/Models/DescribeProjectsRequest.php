@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页页码，整型
  * @method array getFilters() 获取过滤条件
  * @method void setFilters(array $Filters) 设置过滤条件
+ * @method integer getIsDemo() 获取是否为demo模式（1=是，2=否）
+ * @method void setIsDemo(integer $IsDemo) 设置是否为demo模式（1=是，2=否）
  */
 class DescribeProjectsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeProjectsRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var integer 是否为demo模式（1=是，2=否）
+     */
+    public $IsDemo;
+
+    /**
      * @param integer $Limit 分页每页数目，整型
      * @param integer $Offset 分页页码，整型
      * @param array $Filters 过滤条件
+     * @param integer $IsDemo 是否为demo模式（1=是，2=否）
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeProjectsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("IsDemo",$param) and $param["IsDemo"] !== null) {
+            $this->IsDemo = $param["IsDemo"];
         }
     }
 }

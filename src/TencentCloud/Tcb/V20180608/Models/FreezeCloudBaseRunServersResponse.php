@@ -14,66 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyClusterAttribute返回参数结构体
+ * FreezeCloudBaseRunServers返回参数结构体
  *
- * @method integer getProjectId() 获取集群所属项目
+ * @method string getResult() 获取批量状态状态
+成功：succ
+失败：fail
+部分：partial（部分成功、部分失败）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectId(integer $ProjectId) 设置集群所属项目
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterName() 获取集群名称
+ * @method void setResult(string $Result) 设置批量状态状态
+成功：succ
+失败：fail
+部分：partial（部分成功、部分失败）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterName(string $ClusterName) 设置集群名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterDesc() 获取集群描述
+ * @method array getFailServerList() 获取冻结失败服务列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterDesc(string $ClusterDesc) 设置集群描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterLevel() 获取集群等级
+ * @method void setFailServerList(array $FailServerList) 设置冻结失败服务列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterLevel(string $ClusterLevel) 设置集群等级
-注意：此字段可能返回 null，表示取不到有效值。
- * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() 获取自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) 设置自动变配集群等级
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyClusterAttributeResponse extends AbstractModel
+class FreezeCloudBaseRunServersResponse extends AbstractModel
 {
     /**
-     * @var integer 集群所属项目
+     * @var string 批量状态状态
+成功：succ
+失败：fail
+部分：partial（部分成功、部分失败）
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ProjectId;
+    public $Result;
 
     /**
-     * @var string 集群名称
+     * @var array 冻结失败服务列表
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ClusterName;
-
-    /**
-     * @var string 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ClusterDesc;
-
-    /**
-     * @var string 集群等级
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ClusterLevel;
-
-    /**
-     * @var AutoUpgradeClusterLevel 自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AutoUpgradeClusterLevel;
+    public $FailServerList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -81,15 +66,14 @@ class ModifyClusterAttributeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ProjectId 集群所属项目
+     * @param string $Result 批量状态状态
+成功：succ
+失败：fail
+部分：partial（部分成功、部分失败）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterDesc 集群描述
+     * @param array $FailServerList 冻结失败服务列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterLevel 集群等级
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,25 +90,12 @@ class ModifyClusterAttributeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
-        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
-            $this->ClusterName = $param["ClusterName"];
-        }
-
-        if (array_key_exists("ClusterDesc",$param) and $param["ClusterDesc"] !== null) {
-            $this->ClusterDesc = $param["ClusterDesc"];
-        }
-
-        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
-            $this->ClusterLevel = $param["ClusterLevel"];
-        }
-
-        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
-            $this->AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel();
-            $this->AutoUpgradeClusterLevel->deserialize($param["AutoUpgradeClusterLevel"]);
+        if (array_key_exists("FailServerList",$param) and $param["FailServerList"] !== null) {
+            $this->FailServerList = $param["FailServerList"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

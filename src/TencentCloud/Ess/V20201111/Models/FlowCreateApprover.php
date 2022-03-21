@@ -52,6 +52,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method void setPreReadTime(integer $PreReadTime) 设置签署前置条件：阅读时长限制，默认为不需要
  * @method string getNotifyType() 获取是否发送短信，sms--短信通知，none--不通知，默认为sms
  * @method void setNotifyType(string $NotifyType) 设置是否发送短信，sms--短信通知，none--不通知，默认为sms
+ * @method array getVerifyChannel() 获取签署意愿确认渠道,WEIXINAPP:人脸识别
+ * @method void setVerifyChannel(array $VerifyChannel) 设置签署意愿确认渠道,WEIXINAPP:人脸识别
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -120,6 +122,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $NotifyType;
 
     /**
+     * @var array 签署意愿确认渠道,WEIXINAPP:人脸识别
+     */
+    public $VerifyChannel;
+
+    /**
      * @param integer $ApproverType 签署方类型 (0为企业/1为个人)
      * @param string $OrganizationName 如果签署方为企业，需要填入企业全称
      * @param boolean $Required 是否需要签署
@@ -136,6 +143,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param boolean $IsFullText 签署前置条件：是否需要阅读全文，默认为不需要
      * @param integer $PreReadTime 签署前置条件：阅读时长限制，默认为不需要
      * @param string $NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms
+     * @param array $VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
         if (array_key_exists("NotifyType",$param) and $param["NotifyType"] !== null) {
             $this->NotifyType = $param["NotifyType"];
+        }
+
+        if (array_key_exists("VerifyChannel",$param) and $param["VerifyChannel"] !== null) {
+            $this->VerifyChannel = $param["VerifyChannel"];
         }
     }
 }

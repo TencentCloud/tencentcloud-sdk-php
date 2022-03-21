@@ -91,6 +91,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DestroyStaticStoreResponse DestroyStaticStore(Models\DestroyStaticStoreRequest $req) 销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
  * @method Models\EstablishCloudBaseRunServerResponse EstablishCloudBaseRunServer(Models\EstablishCloudBaseRunServerRequest $req) 创建云应用服务
  * @method Models\EstablishWxGatewayRouteResponse EstablishWxGatewayRoute(Models\EstablishWxGatewayRouteRequest $req) 创建或修改安全网关路由
+ * @method Models\FreezeCloudBaseRunServersResponse FreezeCloudBaseRunServers(Models\FreezeCloudBaseRunServersRequest $req) 批量冻结
  * @method Models\ModifyCloudBaseRunServerFlowConfResponse ModifyCloudBaseRunServerFlowConf(Models\ModifyCloudBaseRunServerFlowConfRequest $req) 修改容器内的版本流量配置
  * @method Models\ModifyCloudBaseRunServerVersionResponse ModifyCloudBaseRunServerVersion(Models\ModifyCloudBaseRunServerVersionRequest $req) 修改服务版本的副本数，环境变量
  * @method Models\ModifyDatabaseACLResponse ModifyDatabaseACL(Models\ModifyDatabaseACLRequest $req) 修改数据库权限
@@ -102,6 +103,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) 搜索CLS日志，TCB角色秘钥访问
  * @method Models\TurnOffStandaloneGatewayResponse TurnOffStandaloneGateway(Models\TurnOffStandaloneGatewayRequest $req) 本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
  * @method Models\TurnOnStandaloneGatewayResponse TurnOnStandaloneGateway(Models\TurnOnStandaloneGatewayRequest $req) 本接口（TurnOnStandaloneGateway）用于开启小租户网关。
+ * @method Models\UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServers(Models\UnfreezeCloudBaseRunServersRequest $req) 批量解冻服务
  */
 
 class TcbClient extends AbstractClient

@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Privatedns\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProductQuota请求参数结构体
+ * DescribeQuotaUsage请求参数结构体
  *
- * @method string getProduct() 获取查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
- * @method void setProduct(string $Product) 设置查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
+
  */
-class DescribeProductQuotaRequest extends AbstractModel
+class DescribeQuotaUsageRequest extends AbstractModel
 {
-    /**
-     * @var string 查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
-     */
-    public $Product;
+
 
     /**
-     * @param string $Product 查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeProductQuotaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
-        }
+
     }
 }

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProductQuota请求参数结构体
+ * 此结构体 (UploadFile) 用于描述多文件上传的文件信息。
  *
- * @method string getProduct() 获取查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
- * @method void setProduct(string $Product) 设置查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
+ * @method string getFileBody() 获取Base64编码后的文件内容
+ * @method void setFileBody(string $FileBody) 设置Base64编码后的文件内容
+ * @method string getFileName() 获取文件名
+ * @method void setFileName(string $FileName) 设置文件名
  */
-class DescribeProductQuotaRequest extends AbstractModel
+class UploadFile extends AbstractModel
 {
     /**
-     * @var string 查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
+     * @var string Base64编码后的文件内容
      */
-    public $Product;
+    public $FileBody;
 
     /**
-     * @param string $Product 查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
+     * @var string 文件名
+     */
+    public $FileName;
+
+    /**
+     * @param string $FileBody Base64编码后的文件内容
+     * @param string $FileName 文件名
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeProductQuotaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists("FileBody",$param) and $param["FileBody"] !== null) {
+            $this->FileBody = $param["FileBody"];
+        }
+
+        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
+            $this->FileName = $param["FileName"];
         }
     }
 }

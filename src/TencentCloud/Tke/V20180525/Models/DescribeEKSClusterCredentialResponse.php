@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalLB(ClusterInternalLB $InternalLB) 设置集群的内网访问信息
  * @method boolean getProxyLB() 获取标记是否新的内外网功能
  * @method void setProxyLB(boolean $ProxyLB) 设置标记是否新的内外网功能
+ * @method string getKubeconfig() 获取连接用户集群k8s 的Config
+ * @method void setKubeconfig(string $Kubeconfig) 设置连接用户集群k8s 的Config
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribeEKSClusterCredentialResponse extends AbstractModel
     public $ProxyLB;
 
     /**
+     * @var string 连接用户集群k8s 的Config
+     */
+    public $Kubeconfig;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribeEKSClusterCredentialResponse extends AbstractModel
      * @param ClusterPublicLB $PublicLB 集群的公网访问信息
      * @param ClusterInternalLB $InternalLB 集群的内网访问信息
      * @param boolean $ProxyLB 标记是否新的内外网功能
+     * @param string $Kubeconfig 连接用户集群k8s 的Config
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -112,6 +120,10 @@ class DescribeEKSClusterCredentialResponse extends AbstractModel
 
         if (array_key_exists("ProxyLB",$param) and $param["ProxyLB"] !== null) {
             $this->ProxyLB = $param["ProxyLB"];
+        }
+
+        if (array_key_exists("Kubeconfig",$param) and $param["Kubeconfig"] !== null) {
+            $this->Kubeconfig = $param["Kubeconfig"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

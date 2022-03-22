@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInject(InjectConfig $Inject) 设置自动注入配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TracingConfig getTracing() 获取调用跟踪配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTracing(TracingConfig $Tracing) 设置调用跟踪配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ResourceRequirements getSidecarResources() 获取Sidecar自定义资源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSidecarResources(ResourceRequirements $SidecarResources) 设置Sidecar自定义资源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MeshConfig extends AbstractModel
 {
@@ -55,10 +63,26 @@ class MeshConfig extends AbstractModel
     public $Inject;
 
     /**
+     * @var TracingConfig 调用跟踪配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tracing;
+
+    /**
+     * @var ResourceRequirements Sidecar自定义资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SidecarResources;
+
+    /**
      * @param IstioConfig $Istio Istio配置
      * @param AccessLogConfig $AccessLog AccessLog配置
      * @param PrometheusConfig $Prometheus Prometheus配置
      * @param InjectConfig $Inject 自动注入配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TracingConfig $Tracing 调用跟踪配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceRequirements $SidecarResources Sidecar自定义资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -92,6 +116,16 @@ class MeshConfig extends AbstractModel
         if (array_key_exists("Inject",$param) and $param["Inject"] !== null) {
             $this->Inject = new InjectConfig();
             $this->Inject->deserialize($param["Inject"]);
+        }
+
+        if (array_key_exists("Tracing",$param) and $param["Tracing"] !== null) {
+            $this->Tracing = new TracingConfig();
+            $this->Tracing->deserialize($param["Tracing"]);
+        }
+
+        if (array_key_exists("SidecarResources",$param) and $param["SidecarResources"] !== null) {
+            $this->SidecarResources = new ResourceRequirements();
+            $this->SidecarResources->deserialize($param["SidecarResources"]);
         }
     }
 }

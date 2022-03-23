@@ -146,6 +146,10 @@ use TencentCloud\Vod\V20180717\Models as Models;
     8. 视频打点信息（keyFrameDescInfo）：对视频设置的打点信息。
     9. 转自适应码流信息（adaptiveDynamicStreamingInfo）：包括规格、加密类型、打包格式等相关信息。
 2. 可以指定回包只返回部分信息。
+ * @method Models\DescribeMediaPlayStatDetailsResponse DescribeMediaPlayStatDetails(Models\DescribeMediaPlayStatDetailsRequest $req) 该接口用于查询媒体文件按指定时间粒度统计的播放数据
+* 可以查询最近一年的播放统计数据。
+* 时间粒度为小时，结束时间和起始时间的跨度最大为7天。
+* 时间粒度为天，结束时间和起始时间的跨度最大为90天。
  * @method Models\DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(Models\DescribeMediaProcessUsageDataRequest $req) 该接口返回查询时间范围内每天使用的视频处理用量信息。
    1. 可以查询最近365天内的视频处理统计数据。
    2. 查询时间跨度不超过90天。

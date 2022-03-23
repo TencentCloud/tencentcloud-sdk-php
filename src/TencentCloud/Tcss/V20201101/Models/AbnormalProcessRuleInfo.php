@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSystemChildRules() 获取系统策略的子策略数组
  * @method void setSystemChildRules(array $SystemChildRules) 设置系统策略的子策略数组
+ * @method boolean getIsDefault() 获取是否是系统默认策略
+ * @method void setIsDefault(boolean $IsDefault) 设置是否是系统默认策略
  */
 class AbnormalProcessRuleInfo extends AbstractModel
 {
@@ -69,6 +71,11 @@ class AbnormalProcessRuleInfo extends AbstractModel
     public $SystemChildRules;
 
     /**
+     * @var boolean 是否是系统默认策略
+     */
+    public $IsDefault;
+
+    /**
      * @param boolean $IsEnable true:策略启用，false:策略禁用
      * @param array $ImageIds 生效镜像id，空数组代表全部镜像
      * @param array $ChildRules 用户策略的子策略数组
@@ -76,6 +83,7 @@ class AbnormalProcessRuleInfo extends AbstractModel
      * @param string $RuleId 策略id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SystemChildRules 系统策略的子策略数组
+     * @param boolean $IsDefault 是否是系统默认策略
      */
     function __construct()
     {
@@ -122,6 +130,10 @@ class AbnormalProcessRuleInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SystemChildRules, $obj);
             }
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
         }
     }
 }

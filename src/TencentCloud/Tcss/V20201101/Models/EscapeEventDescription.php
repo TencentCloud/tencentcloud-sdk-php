@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置事件备注信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOperationTime() 获取事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperationTime(string $OperationTime) 设置事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EscapeEventDescription extends AbstractModel
 {
@@ -48,9 +52,17 @@ class EscapeEventDescription extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperationTime;
+
+    /**
      * @param string $Description 事件规则
      * @param string $Solution 解决方案
      * @param string $Remark 事件备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OperationTime 事件最后一次处理的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -76,6 +88,10 @@ class EscapeEventDescription extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("OperationTime",$param) and $param["OperationTime"] !== null) {
+            $this->OperationTime = $param["OperationTime"];
         }
     }
 }

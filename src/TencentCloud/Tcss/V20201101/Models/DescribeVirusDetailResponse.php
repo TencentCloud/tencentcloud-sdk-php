@@ -184,6 +184,42 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIP(string $ClientIP) 设置外网ip
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPProcessStartUser() 获取父进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPProcessStartUser(string $PProcessStartUser) 设置父进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPProcessUserGroup() 获取父进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPProcessUserGroup(string $PProcessUserGroup) 设置父进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPProcessPath() 获取父进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPProcessPath(string $PProcessPath) 设置父进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPProcessParam() 获取父进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPProcessParam(string $PProcessParam) 设置父进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAncestorProcessStartUser() 获取祖先进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAncestorProcessStartUser(string $AncestorProcessStartUser) 设置祖先进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAncestorProcessUserGroup() 获取祖先进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAncestorProcessUserGroup(string $AncestorProcessUserGroup) 设置祖先进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAncestorProcessPath() 获取祖先进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAncestorProcessPath(string $AncestorProcessPath) 设置祖先进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAncestorProcessParam() 获取祖先进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAncestorProcessParam(string $AncestorProcessParam) 设置祖先进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOperationTime() 获取事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperationTime(string $OperationTime) 设置事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -408,6 +444,60 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     public $ClientIP;
 
     /**
+     * @var string 父进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PProcessStartUser;
+
+    /**
+     * @var string 父进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PProcessUserGroup;
+
+    /**
+     * @var string 父进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PProcessPath;
+
+    /**
+     * @var string 父进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PProcessParam;
+
+    /**
+     * @var string 祖先进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AncestorProcessStartUser;
+
+    /**
+     * @var string 祖先进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AncestorProcessUserGroup;
+
+    /**
+     * @var string 祖先进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AncestorProcessPath;
+
+    /**
+     * @var string 祖先进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AncestorProcessParam;
+
+    /**
+     * @var string 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperationTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -494,6 +584,24 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
      * @param string $HostIP 内网ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientIP 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PProcessStartUser 父进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PProcessUserGroup 父进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PProcessPath 父进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PProcessParam 父进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AncestorProcessStartUser 祖先进程启动用户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AncestorProcessUserGroup 祖先进程用户组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AncestorProcessPath 祖先进程路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AncestorProcessParam 祖先进程命令行参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OperationTime 事件最后一次处理的时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -644,6 +752,42 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
         if (array_key_exists("ClientIP",$param) and $param["ClientIP"] !== null) {
             $this->ClientIP = $param["ClientIP"];
+        }
+
+        if (array_key_exists("PProcessStartUser",$param) and $param["PProcessStartUser"] !== null) {
+            $this->PProcessStartUser = $param["PProcessStartUser"];
+        }
+
+        if (array_key_exists("PProcessUserGroup",$param) and $param["PProcessUserGroup"] !== null) {
+            $this->PProcessUserGroup = $param["PProcessUserGroup"];
+        }
+
+        if (array_key_exists("PProcessPath",$param) and $param["PProcessPath"] !== null) {
+            $this->PProcessPath = $param["PProcessPath"];
+        }
+
+        if (array_key_exists("PProcessParam",$param) and $param["PProcessParam"] !== null) {
+            $this->PProcessParam = $param["PProcessParam"];
+        }
+
+        if (array_key_exists("AncestorProcessStartUser",$param) and $param["AncestorProcessStartUser"] !== null) {
+            $this->AncestorProcessStartUser = $param["AncestorProcessStartUser"];
+        }
+
+        if (array_key_exists("AncestorProcessUserGroup",$param) and $param["AncestorProcessUserGroup"] !== null) {
+            $this->AncestorProcessUserGroup = $param["AncestorProcessUserGroup"];
+        }
+
+        if (array_key_exists("AncestorProcessPath",$param) and $param["AncestorProcessPath"] !== null) {
+            $this->AncestorProcessPath = $param["AncestorProcessPath"];
+        }
+
+        if (array_key_exists("AncestorProcessParam",$param) and $param["AncestorProcessParam"] !== null) {
+            $this->AncestorProcessParam = $param["AncestorProcessParam"];
+        }
+
+        if (array_key_exists("OperationTime",$param) and $param["OperationTime"] !== null) {
+            $this->OperationTime = $param["OperationTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -46,6 +46,7 @@ use TencentCloud\Iecp\V20210914\Models as Models;
  * @method Models\DeleteEdgeUnitCloudResponse DeleteEdgeUnitCloud(Models\DeleteEdgeUnitCloudRequest $req) 删除边缘单元
  * @method Models\DeleteEdgeUnitDeployGridItemResponse DeleteEdgeUnitDeployGridItem(Models\DeleteEdgeUnitDeployGridItemRequest $req) 重新部署边缘单元指定Grid下应用
  * @method Models\DeleteEdgeUnitPodResponse DeleteEdgeUnitPod(Models\DeleteEdgeUnitPodRequest $req) 删除指定pod
+ * @method Models\DeleteIotDeviceBatchResponse DeleteIotDeviceBatch(Models\DeleteIotDeviceBatchRequest $req) 批量删除设备
  * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) 删除命名空间
  * @method Models\DeleteNodeUnitResponse DeleteNodeUnit(Models\DeleteNodeUnitRequest $req) 删除边缘单元NodeUnit
  * @method Models\DeleteSecretResponse DeleteSecret(Models\DeleteSecretRequest $req) 删除Secret
@@ -56,6 +57,7 @@ use TencentCloud\Iecp\V20210914\Models as Models;
  * @method Models\DescribeConfigMapResponse DescribeConfigMap(Models\DescribeConfigMapRequest $req) 获取ConfigMap详情
  * @method Models\DescribeConfigMapYamlErrorResponse DescribeConfigMapYamlError(Models\DescribeConfigMapYamlErrorRequest $req) 校验ConfigMap的Yaml语法
  * @method Models\DescribeConfigMapsResponse DescribeConfigMaps(Models\DescribeConfigMapsRequest $req) 获取ConfigMap列表
+ * @method Models\DescribeDracoEdgeNodeInstallerResponse DescribeDracoEdgeNodeInstaller(Models\DescribeDracoEdgeNodeInstallerRequest $req) 自动获取Draco设备的安装包
  * @method Models\DescribeEdgeAgentNodeInstallerResponse DescribeEdgeAgentNodeInstaller(Models\DescribeEdgeAgentNodeInstallerRequest $req) 获取节点安装信息
  * @method Models\DescribeEdgeDefaultVpcResponse DescribeEdgeDefaultVpc(Models\DescribeEdgeDefaultVpcRequest $req) 获取边缘集群默认VPC信息
  * @method Models\DescribeEdgeNodeResponse DescribeEdgeNode(Models\DescribeEdgeNodeRequest $req) 获取边缘节点信息

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleName(string $RuleName) 设置命中规则名字
  * @method string getRuleId() 获取命中规则的id
  * @method void setRuleId(string $RuleId) 设置命中规则的id
+ * @method string getOperationTime() 获取事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperationTime(string $OperationTime) 设置事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AbnormalProcessEventDescription extends AbstractModel
 {
@@ -69,6 +73,12 @@ class AbnormalProcessEventDescription extends AbstractModel
     public $RuleId;
 
     /**
+     * @var string 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperationTime;
+
+    /**
      * @param string $Description 事件规则
      * @param string $Solution 解决方案
      * @param string $Remark 事件备注信息
@@ -76,6 +86,8 @@ class AbnormalProcessEventDescription extends AbstractModel
      * @param AbnormalProcessChildRuleInfo $MatchRule 命中规则详细信息
      * @param string $RuleName 命中规则名字
      * @param string $RuleId 命中规则的id
+     * @param string $OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -113,6 +125,10 @@ class AbnormalProcessEventDescription extends AbstractModel
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("OperationTime",$param) and $param["OperationTime"] !== null) {
+            $this->OperationTime = $param["OperationTime"];
         }
     }
 }

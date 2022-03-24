@@ -20,8 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群信息
  *
- * @method string getStatus() 获取集群状态
- * @method void setStatus(string $Status) 设置集群状态
+ * @method string getStatus() 获取集群状态， 可选值如下:
+creating: 创建中
+running:运行中
+isolating:隔离中
+isolated:已隔离
+activating:解隔离中
+offlining:下线中
+offlined:已下线
+deleting:删除中
+deleted:已删除
+ * @method void setStatus(string $Status) 设置集群状态， 可选值如下:
+creating: 创建中
+running:运行中
+isolating:隔离中
+isolated:已隔离
+activating:解隔离中
+offlining:下线中
+offlined:已下线
+deleting:删除中
+deleted:已删除
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method string getZone() 获取可用区
@@ -96,7 +114,16 @@ pause
 class CynosdbCluster extends AbstractModel
 {
     /**
-     * @var string 集群状态
+     * @var string 集群状态， 可选值如下:
+creating: 创建中
+running:运行中
+isolating:隔离中
+isolated:已隔离
+activating:解隔离中
+offlining:下线中
+offlined:已下线
+deleting:删除中
+deleted:已删除
      */
     public $Status;
 
@@ -268,7 +295,16 @@ pause
     public $NetAddrs;
 
     /**
-     * @param string $Status 集群状态
+     * @param string $Status 集群状态， 可选值如下:
+creating: 创建中
+running:运行中
+isolating:隔离中
+isolated:已隔离
+activating:解隔离中
+offlining:下线中
+offlined:已下线
+deleting:删除中
+deleted:已删除
      * @param string $UpdateTime 更新时间
      * @param string $Zone 可用区
      * @param string $ClusterName 集群名称

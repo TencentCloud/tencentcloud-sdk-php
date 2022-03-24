@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Scf\V20180416\Models;
+namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 变量参数
+ * DescribeSecurityEventStat请求参数结构体
  *
- * @method string getKey() 获取变量的名称，不可为空字符
- * @method void setKey(string $Key) 设置变量的名称，不可为空字符
- * @method string getValue() 获取变量的值，不可为空字符
- * @method void setValue(string $Value) 设置变量的值，不可为空字符
+ * @method array getFilters() 获取该接口无过滤条件
+ * @method void setFilters(array $Filters) 设置该接口无过滤条件
  */
-class Variable extends AbstractModel
+class DescribeSecurityEventStatRequest extends AbstractModel
 {
     /**
-     * @var string 变量的名称，不可为空字符
+     * @var array 该接口无过滤条件
      */
-    public $Key;
+    public $Filters;
 
     /**
-     * @var string 变量的值，不可为空字符
-     */
-    public $Value;
-
-    /**
-     * @param string $Key 变量的名称，不可为空字符
-     * @param string $Value 变量的值，不可为空字符
+     * @param array $Filters 该接口无过滤条件
      */
     function __construct()
     {
@@ -54,12 +46,13 @@ class Variable extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

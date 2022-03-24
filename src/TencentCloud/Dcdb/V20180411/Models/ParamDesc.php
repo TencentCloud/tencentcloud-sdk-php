@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConstraint(ParamConstraint $Constraint) 设置参数限制
  * @method boolean getHaveSetValue() 获取是否有设置过值，false:没有设置过值，true:有设置过值。
  * @method void setHaveSetValue(boolean $HaveSetValue) 设置是否有设置过值，false:没有设置过值，true:有设置过值。
+ * @method boolean getNeedRestart() 获取是否需要重启生效，false:不需要重启，
+true:需要重启
+ * @method void setNeedRestart(boolean $NeedRestart) 设置是否需要重启生效，false:不需要重启，
+true:需要重启
  */
 class ParamDesc extends AbstractModel
 {
@@ -69,6 +73,12 @@ class ParamDesc extends AbstractModel
     public $HaveSetValue;
 
     /**
+     * @var boolean 是否需要重启生效，false:不需要重启，
+true:需要重启
+     */
+    public $NeedRestart;
+
+    /**
      * @param string $Param 参数名字
      * @param string $Value 当前参数值
      * @param string $SetValue 设置过的值，参数生效后，该值和value一样。未设置过就不返回该字段。
@@ -76,6 +86,8 @@ class ParamDesc extends AbstractModel
      * @param string $Default 系统默认值
      * @param ParamConstraint $Constraint 参数限制
      * @param boolean $HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
+     * @param boolean $NeedRestart 是否需要重启生效，false:不需要重启，
+true:需要重启
      */
     function __construct()
     {
@@ -113,6 +125,10 @@ class ParamDesc extends AbstractModel
 
         if (array_key_exists("HaveSetValue",$param) and $param["HaveSetValue"] !== null) {
             $this->HaveSetValue = $param["HaveSetValue"];
+        }
+
+        if (array_key_exists("NeedRestart",$param) and $param["NeedRestart"] !== null) {
+            $this->NeedRestart = $param["NeedRestart"];
         }
     }
 }

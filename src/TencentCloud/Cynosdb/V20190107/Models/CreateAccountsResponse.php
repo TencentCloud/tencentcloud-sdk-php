@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Scf\V20180416\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 变量参数
+ * CreateAccounts返回参数结构体
  *
- * @method string getKey() 获取变量的名称，不可为空字符
- * @method void setKey(string $Key) 设置变量的名称，不可为空字符
- * @method string getValue() 获取变量的值，不可为空字符
- * @method void setValue(string $Value) 设置变量的值，不可为空字符
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class Variable extends AbstractModel
+class CreateAccountsResponse extends AbstractModel
 {
     /**
-     * @var string 变量的名称，不可为空字符
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $Key;
+    public $RequestId;
 
     /**
-     * @var string 变量的值，不可为空字符
-     */
-    public $Value;
-
-    /**
-     * @param string $Key 变量的名称，不可为空字符
-     * @param string $Value 变量的值，不可为空字符
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Variable extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

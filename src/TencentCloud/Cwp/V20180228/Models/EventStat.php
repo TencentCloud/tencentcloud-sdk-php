@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Scf\V20180416\Models;
+namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 变量参数
+ * 未处理的安全事件统计信息
  *
- * @method string getKey() 获取变量的名称，不可为空字符
- * @method void setKey(string $Key) 设置变量的名称，不可为空字符
- * @method string getValue() 获取变量的值，不可为空字符
- * @method void setValue(string $Value) 设置变量的值，不可为空字符
+ * @method integer getEventsNum() 获取事件数
+ * @method void setEventsNum(integer $EventsNum) 设置事件数
+ * @method integer getMachineAffectNum() 获取受影响的主机数
+ * @method void setMachineAffectNum(integer $MachineAffectNum) 设置受影响的主机数
  */
-class Variable extends AbstractModel
+class EventStat extends AbstractModel
 {
     /**
-     * @var string 变量的名称，不可为空字符
+     * @var integer 事件数
      */
-    public $Key;
+    public $EventsNum;
 
     /**
-     * @var string 变量的值，不可为空字符
+     * @var integer 受影响的主机数
      */
-    public $Value;
+    public $MachineAffectNum;
 
     /**
-     * @param string $Key 变量的名称，不可为空字符
-     * @param string $Value 变量的值，不可为空字符
+     * @param integer $EventsNum 事件数
+     * @param integer $MachineAffectNum 受影响的主机数
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Variable extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists("EventsNum",$param) and $param["EventsNum"] !== null) {
+            $this->EventsNum = $param["EventsNum"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("MachineAffectNum",$param) and $param["MachineAffectNum"] !== null) {
+            $this->MachineAffectNum = $param["MachineAffectNum"];
         }
     }
 }

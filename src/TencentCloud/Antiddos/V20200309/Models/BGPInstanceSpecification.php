@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnionPackFlag(integer $UnionPackFlag) 设置联合产品标记，0代表普通高防包，1代表联合高防包
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getServiceBandWidth() 获取业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceBandWidth(integer $ServiceBandWidth) 设置业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPInstanceSpecification extends AbstractModel
 {
@@ -71,6 +75,12 @@ class BGPInstanceSpecification extends AbstractModel
     public $UnionPackFlag;
 
     /**
+     * @var integer 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceBandWidth;
+
+    /**
      * @param integer $ProtectBandwidth 保底防护峰值，单位Gbps
      * @param integer $ProtectCountLimit 防护次数，单位次
      * @param integer $ProtectIPNumberLimit 防护IP数，单位个
@@ -79,6 +89,8 @@ class BGPInstanceSpecification extends AbstractModel
 1：开启了自动续费
 ]
      * @param integer $UnionPackFlag 联合产品标记，0代表普通高防包，1代表联合高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ServiceBandWidth 业务带宽
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -112,6 +124,10 @@ class BGPInstanceSpecification extends AbstractModel
 
         if (array_key_exists("UnionPackFlag",$param) and $param["UnionPackFlag"] !== null) {
             $this->UnionPackFlag = $param["UnionPackFlag"];
+        }
+
+        if (array_key_exists("ServiceBandWidth",$param) and $param["ServiceBandWidth"] !== null) {
+            $this->ServiceBandWidth = $param["ServiceBandWidth"];
         }
     }
 }

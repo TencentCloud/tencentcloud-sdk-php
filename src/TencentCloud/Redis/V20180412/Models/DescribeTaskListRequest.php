@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getLimit() 获取分页大小
- * @method void setLimit(integer $Limit) 设置分页大小
+ * @method integer getLimit() 获取分页大小,默认20，上限不大于100
+ * @method void setLimit(integer $Limit) 设置分页大小,默认20，上限不大于100
  * @method integer getOffset() 获取偏移量，取Limit整数倍（自动向下取整）
  * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍（自动向下取整）
  * @method array getProjectIds() 获取项目Id
@@ -52,7 +52,7 @@ class DescribeTaskListRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer 分页大小
+     * @var integer 分页大小,默认20，上限不大于100
      */
     public $Limit;
 
@@ -89,7 +89,7 @@ class DescribeTaskListRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例Id
      * @param string $InstanceName 实例名称
-     * @param integer $Limit 分页大小
+     * @param integer $Limit 分页大小,默认20，上限不大于100
      * @param integer $Offset 偏移量，取Limit整数倍（自动向下取整）
      * @param array $ProjectIds 项目Id
      * @param array $TaskTypes 任务类型

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method integer getGroupId() 获取副本Id
- * @method void setGroupId(integer $GroupId) 设置副本Id
+ * @method integer getGroupId() 获取副本组Id，多AZ实例必填
+ * @method void setGroupId(integer $GroupId) 设置副本组Id，多AZ实例必填
  */
 class ChangeReplicaToMasterRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ChangeReplicaToMasterRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 副本Id
+     * @var integer 副本组Id，多AZ实例必填
      */
     public $GroupId;
 
     /**
      * @param string $InstanceId 实例Id
-     * @param integer $GroupId 副本Id
+     * @param integer $GroupId 副本组Id，多AZ实例必填
      */
     function __construct()
     {

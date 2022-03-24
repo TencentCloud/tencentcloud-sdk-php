@@ -32,6 +32,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备份的备注信息
  * @method integer getLocked() 获取备份是否被锁定，0：未被锁定；1：已被锁定
  * @method void setLocked(integer $Locked) 设置备份是否被锁定，0：未被锁定；1：已被锁定
+ * @method integer getBackupSize() 获取内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupSize(integer $BackupSize) 设置内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFullBackup() 获取内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFullBackup(integer $FullBackup) 设置内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceType() 获取内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(integer $InstanceType) 设置内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RedisBackupSet extends AbstractModel
 {
@@ -66,12 +78,36 @@ class RedisBackupSet extends AbstractModel
     public $Locked;
 
     /**
+     * @var integer 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupSize;
+
+    /**
+     * @var integer 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FullBackup;
+
+    /**
+     * @var integer 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
      * @param string $StartTime 开始备份的时间
      * @param string $BackupId 备份ID
      * @param string $BackupType 备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份
      * @param integer $Status 备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
      * @param string $Remark 备份的备注信息
      * @param integer $Locked 备份是否被锁定，0：未被锁定；1：已被锁定
+     * @param integer $BackupSize 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FullBackup 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceType 内部字段，用户可忽略
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +144,18 @@ class RedisBackupSet extends AbstractModel
 
         if (array_key_exists("Locked",$param) and $param["Locked"] !== null) {
             $this->Locked = $param["Locked"];
+        }
+
+        if (array_key_exists("BackupSize",$param) and $param["BackupSize"] !== null) {
+            $this->BackupSize = $param["BackupSize"];
+        }
+
+        if (array_key_exists("FullBackup",$param) and $param["FullBackup"] !== null) {
+            $this->FullBackup = $param["FullBackup"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

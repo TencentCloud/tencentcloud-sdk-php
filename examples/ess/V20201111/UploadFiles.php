@@ -1,9 +1,9 @@
 <?php
 require_once __DIR__.'/../../../vendor/autoload.php';
-use TencentCloud\Ess\V20201111\EssClient;
-use TencentCloud\Ess\V20201111\Models\UploadFilesRequest;
-use TencentCloud\Ess\V20201111\Models\Caller;
-use TencentCloud\Ess\V20201111\Models\UploadFile;
+use TencentCloud\Essbasic\V20201222\EssbasicClient;
+use TencentCloud\Essbasic\V20201222\Models\UploadFilesRequest;
+use TencentCloud\Essbasic\V20201222\Models\Caller;
+use TencentCloud\Essbasic\V20201222\Models\UploadFile;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
 use TencentCloud\Common\Profile\ClientProfile;
@@ -24,7 +24,7 @@ try {
     $clientProfile->setSignMethod("TC3-HMAC-SHA256");  // 指定签名算法(默认为HmacSHA256)
     $clientProfile->setHttpProfile($httpProfile);
 
-    $client = new EssClient($cred, "ap-guangzhou", $clientProfile);
+    $client = new EssbasicClient($cred, "ap-guangzhou", $clientProfile);
 
     $req = new UploadFilesRequest();
     $req->setBusinessType("FLOW");

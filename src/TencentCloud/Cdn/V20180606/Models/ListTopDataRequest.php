@@ -22,19 +22,19 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() 获取查询起始日期：yyyy-MM-dd HH:mm:ss
 仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
-返回大于等于起始日期当天 00:00:00 点产生的数据
+返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
 仅支持 90 天内数据查询
  * @method void setStartTime(string $StartTime) 设置查询起始日期：yyyy-MM-dd HH:mm:ss
 仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
-返回大于等于起始日期当天 00:00:00 点产生的数据
+返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
 仅支持 90 天内数据查询
  * @method string getEndTime() 获取查询结束日期：yyyy-MM-dd HH:mm:ss
 仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
-返回小于等于结束日期当天 23:59:59 产生的数据
+返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
 EndTime 需要大于等于 StartTime
  * @method void setEndTime(string $EndTime) 设置查询结束日期：yyyy-MM-dd HH:mm:ss
 仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
-返回小于等于结束日期当天 23:59:59 产生的数据
+返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
 EndTime 需要大于等于 StartTime
  * @method string getMetric() 获取排序对象，支持以下几种形式：
 url：访问 URL 排序（无参数的URL），支持的 Filter 为 flux、request
@@ -112,7 +112,7 @@ class ListTopDataRequest extends AbstractModel
     /**
      * @var string 查询起始日期：yyyy-MM-dd HH:mm:ss
 仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
-返回大于等于起始日期当天 00:00:00 点产生的数据
+返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
 仅支持 90 天内数据查询
      */
     public $StartTime;
@@ -120,7 +120,7 @@ class ListTopDataRequest extends AbstractModel
     /**
      * @var string 查询结束日期：yyyy-MM-dd HH:mm:ss
 仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
-返回小于等于结束日期当天 23:59:59 产生的数据
+返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
 EndTime 需要大于等于 StartTime
      */
     public $EndTime;
@@ -203,11 +203,11 @@ client：指定查询客户端地区（用户请求终端所在地区）数据�
     /**
      * @param string $StartTime 查询起始日期：yyyy-MM-dd HH:mm:ss
 仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
-返回大于等于起始日期当天 00:00:00 点产生的数据
+返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
 仅支持 90 天内数据查询
      * @param string $EndTime 查询结束日期：yyyy-MM-dd HH:mm:ss
 仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
-返回小于等于结束日期当天 23:59:59 产生的数据
+返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
 EndTime 需要大于等于 StartTime
      * @param string $Metric 排序对象，支持以下几种形式：
 url：访问 URL 排序（无参数的URL），支持的 Filter 为 flux、request

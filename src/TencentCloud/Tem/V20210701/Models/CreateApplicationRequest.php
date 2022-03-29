@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
 - IMAGE
 - JAR
 - WAR
- * @method integer getEnableTracing() 获取是否启用调用链功能
- * @method void setEnableTracing(integer $EnableTracing) 设置是否启用调用链功能
+ * @method integer getEnableTracing() 获取是否开启 Java 应用的 APM 自动上报功能，1 表示启用；0 表示关闭
+ * @method void setEnableTracing(integer $EnableTracing) 设置是否开启 Java 应用的 APM 自动上报功能，1 表示启用；0 表示关闭
  */
 class CreateApplicationRequest extends AbstractModel
 {
@@ -118,7 +118,7 @@ class CreateApplicationRequest extends AbstractModel
     public $DeployMode;
 
     /**
-     * @var integer 是否启用调用链功能
+     * @var integer 是否开启 Java 应用的 APM 自动上报功能，1 表示启用；0 表示关闭
      */
     public $EnableTracing;
 
@@ -139,7 +139,7 @@ class CreateApplicationRequest extends AbstractModel
 - IMAGE
 - JAR
 - WAR
-     * @param integer $EnableTracing 是否启用调用链功能
+     * @param integer $EnableTracing 是否开启 Java 应用的 APM 自动上报功能，1 表示启用；0 表示关闭
      */
     function __construct()
     {

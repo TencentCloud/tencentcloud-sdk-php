@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置资源 Id
  * @method integer getSourceChannel() 获取来源渠道
  * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
+ * @method string getResourceFrom() 获取资源来源，目前支持：existing，已有资源；creating，自动创建
+ * @method void setResourceFrom(string $ResourceFrom) 设置资源来源，目前支持：existing，已有资源；creating，自动创建
+ * @method string getResourceConfig() 获取设置 resource 的额外配置
+ * @method void setResourceConfig(string $ResourceConfig) 设置设置 resource 的额外配置
  */
 class CreateResourceRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class CreateResourceRequest extends AbstractModel
     public $SourceChannel;
 
     /**
+     * @var string 资源来源，目前支持：existing，已有资源；creating，自动创建
+     */
+    public $ResourceFrom;
+
+    /**
+     * @var string 设置 resource 的额外配置
+     */
+    public $ResourceConfig;
+
+    /**
      * @param string $EnvironmentId 环境 Id
      * @param string $ResourceType 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
      * @param string $ResourceId 资源 Id
      * @param integer $SourceChannel 来源渠道
+     * @param string $ResourceFrom 资源来源，目前支持：existing，已有资源；creating，自动创建
+     * @param string $ResourceConfig 设置 resource 的额外配置
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class CreateResourceRequest extends AbstractModel
 
         if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
             $this->SourceChannel = $param["SourceChannel"];
+        }
+
+        if (array_key_exists("ResourceFrom",$param) and $param["ResourceFrom"] !== null) {
+            $this->ResourceFrom = $param["ResourceFrom"];
+        }
+
+        if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
+            $this->ResourceConfig = $param["ResourceConfig"];
         }
     }
 }

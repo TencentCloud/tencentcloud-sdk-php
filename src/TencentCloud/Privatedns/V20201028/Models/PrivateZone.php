@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountVpcSet(array $AccountVpcSet) 设置绑定的关联账号的vpc列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsCustomTld() 获取是否自定义TLD
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsCustomTld(boolean $IsCustomTld) 设置是否自定义TLD
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrivateZone extends AbstractModel
 {
@@ -114,6 +118,12 @@ class PrivateZone extends AbstractModel
     public $AccountVpcSet;
 
     /**
+     * @var boolean 是否自定义TLD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsCustomTld;
+
+    /**
      * @param string $ZoneId 私有域id: zone-xxxxxxxx
      * @param integer $OwnerUin 域名所有者uin
      * @param string $Domain 私有域名
@@ -127,6 +137,8 @@ class PrivateZone extends AbstractModel
      * @param string $DnsForwardStatus 域名递归解析状态：开通：ENABLED, 关闭，DISABLED
      * @param array $Tags 标签键值对集合
      * @param array $AccountVpcSet 绑定的关联账号的vpc列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsCustomTld 是否自定义TLD
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -203,6 +215,10 @@ class PrivateZone extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AccountVpcSet, $obj);
             }
+        }
+
+        if (array_key_exists("IsCustomTld",$param) and $param["IsCustomTld"] !== null) {
+            $this->IsCustomTld = $param["IsCustomTld"];
         }
     }
 }

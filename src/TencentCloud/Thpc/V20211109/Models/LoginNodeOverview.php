@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iecp\V20210914\Models;
+namespace TencentCloud\Thpc\V20211109\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateUserToken请求参数结构体
+ * 登录节点概览。
  *
- * @method integer getSecond() 获取token过期时间，有效值是1~300秒
- * @method void setSecond(integer $Second) 设置token过期时间，有效值是1~300秒
+ * @method string getNodeId() 获取登录节点ID。
+ * @method void setNodeId(string $NodeId) 设置登录节点ID。
  */
-class CreateUserTokenRequest extends AbstractModel
+class LoginNodeOverview extends AbstractModel
 {
     /**
-     * @var integer token过期时间，有效值是1~300秒
+     * @var string 登录节点ID。
      */
-    public $Second;
+    public $NodeId;
 
     /**
-     * @param integer $Second token过期时间，有效值是1~300秒
+     * @param string $NodeId 登录节点ID。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class CreateUserTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Second",$param) and $param["Second"] !== null) {
-            $this->Second = $param["Second"];
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
         }
     }
 }

@@ -106,6 +106,10 @@ postMoveIn 按量计费迁入资源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubProductName(string $SubProductName) 设置子产品编码中文名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResourceId() 获取订单对应的资源id, 查询参数Limit超过200，将返回null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceId(array $ResourceId) 设置订单对应的资源id, 查询参数Limit超过200，将返回null
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Deal extends AbstractModel
 {
@@ -253,6 +257,12 @@ postMoveIn 按量计费迁入资源
     public $SubProductName;
 
     /**
+     * @var array 订单对应的资源id, 查询参数Limit超过200，将返回null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceId;
+
+    /**
      * @param string $OrderId 订单号
      * @param integer $Status 订单状态
      * @param string $Payer 支付者
@@ -295,6 +305,8 @@ postMoveIn 按量计费迁入资源
      * @param string $ProductName 产品编码中文名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubProductName 子产品编码中文名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ResourceId 订单对应的资源id, 查询参数Limit超过200，将返回null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -413,6 +425,10 @@ postMoveIn 按量计费迁入资源
 
         if (array_key_exists("SubProductName",$param) and $param["SubProductName"] !== null) {
             $this->SubProductName = $param["SubProductName"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
         }
     }
 }

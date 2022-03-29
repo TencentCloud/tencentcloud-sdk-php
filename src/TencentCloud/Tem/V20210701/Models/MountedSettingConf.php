@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMountedPath(string $MountedPath) 设置挂载路径
  * @method array getData() 获取配置内容
  * @method void setData(array $Data) 设置配置内容
+ * @method string getSecretDataName() 获取加密配置名称
+ * @method void setSecretDataName(string $SecretDataName) 设置加密配置名称
  */
 class MountedSettingConf extends AbstractModel
 {
@@ -45,9 +47,15 @@ class MountedSettingConf extends AbstractModel
     public $Data;
 
     /**
+     * @var string 加密配置名称
+     */
+    public $SecretDataName;
+
+    /**
      * @param string $ConfigDataName 配置名称
      * @param string $MountedPath 挂载路径
      * @param array $Data 配置内容
+     * @param string $SecretDataName 加密配置名称
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class MountedSettingConf extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
+        }
+
+        if (array_key_exists("SecretDataName",$param) and $param["SecretDataName"] !== null) {
+            $this->SecretDataName = $param["SecretDataName"];
         }
     }
 }

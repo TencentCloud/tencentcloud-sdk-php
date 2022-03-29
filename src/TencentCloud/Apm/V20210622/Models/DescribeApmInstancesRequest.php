@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置搜索实例名
  * @method array getInstanceIds() 获取过滤实例ID
  * @method void setInstanceIds(array $InstanceIds) 设置过滤实例ID
+ * @method integer getDemoInstanceFlag() 获取是否查询官方demo实例
+ * @method void setDemoInstanceFlag(integer $DemoInstanceFlag) 设置是否查询官方demo实例
  */
 class DescribeApmInstancesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeApmInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var integer 是否查询官方demo实例
+     */
+    public $DemoInstanceFlag;
+
+    /**
      * @param array $Tags Tag列表
      * @param string $InstanceName 搜索实例名
      * @param array $InstanceIds 过滤实例ID
+     * @param integer $DemoInstanceFlag 是否查询官方demo实例
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeApmInstancesRequest extends AbstractModel
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("DemoInstanceFlag",$param) and $param["DemoInstanceFlag"] !== null) {
+            $this->DemoInstanceFlag = $param["DemoInstanceFlag"];
         }
     }
 }

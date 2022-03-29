@@ -126,6 +126,8 @@ use TencentCloud\Common\AbstractModel;
 当选择konajdk时，可选参数：
 - ALPINE
 - TENCENTOS
+ * @method EnablePrometheusConf getEnablePrometheusConf() 获取是否开启prometheus 业务指标监控
+ * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) 设置是否开启prometheus 业务指标监控
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -339,6 +341,11 @@ class DeployApplicationRequest extends AbstractModel
     public $OsFlavour;
 
     /**
+     * @var EnablePrometheusConf 是否开启prometheus 业务指标监控
+     */
+    public $EnablePrometheusConf;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param integer $InitPodNum 初始化 pod 数
      * @param float $CpuSpec cpu规格
@@ -392,6 +399,7 @@ class DeployApplicationRequest extends AbstractModel
 当选择konajdk时，可选参数：
 - ALPINE
 - TENCENTOS
+     * @param EnablePrometheusConf $EnablePrometheusConf 是否开启prometheus 业务指标监控
      */
     function __construct()
     {
@@ -597,6 +605,11 @@ class DeployApplicationRequest extends AbstractModel
 
         if (array_key_exists("OsFlavour",$param) and $param["OsFlavour"] !== null) {
             $this->OsFlavour = $param["OsFlavour"];
+        }
+
+        if (array_key_exists("EnablePrometheusConf",$param) and $param["EnablePrometheusConf"] !== null) {
+            $this->EnablePrometheusConf = new EnablePrometheusConf();
+            $this->EnablePrometheusConf->deserialize($param["EnablePrometheusConf"]);
         }
     }
 }

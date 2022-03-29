@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置数据盘是否随子机销毁。取值范围：<br><li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘<br><li>FALSE：子机销毁时，保留数据盘
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEncrypt() 获取数据盘是否加密。取值范围：<br><li>TRUE：加密<br><li>FALSE：不加密
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncrypt(boolean $Encrypt) 设置数据盘是否加密。取值范围：<br><li>TRUE：加密<br><li>FALSE：不加密
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataDisk extends AbstractModel
 {
@@ -64,6 +68,12 @@ class DataDisk extends AbstractModel
     public $DeleteWithInstance;
 
     /**
+     * @var boolean 数据盘是否加密。取值范围：<br><li>TRUE：加密<br><li>FALSE：不加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Encrypt;
+
+    /**
      * @param string $DiskType 数据盘类型。数据盘类型限制详见[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
@@ -71,6 +81,8 @@ class DataDisk extends AbstractModel
      * @param string $SnapshotId 数据盘快照 ID，类似 `snap-l8psqwnt`。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteWithInstance 数据盘是否随子机销毁。取值范围：<br><li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘<br><li>FALSE：子机销毁时，保留数据盘
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Encrypt 数据盘是否加密。取值范围：<br><li>TRUE：加密<br><li>FALSE：不加密
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class DataDisk extends AbstractModel
 
         if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {
             $this->DeleteWithInstance = $param["DeleteWithInstance"];
+        }
+
+        if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
+            $this->Encrypt = $param["Encrypt"];
         }
     }
 }

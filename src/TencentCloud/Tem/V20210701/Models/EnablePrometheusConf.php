@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iecp\V20210914\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateUserToken请求参数结构体
+ * 开启prometheus监控配置
  *
- * @method integer getSecond() 获取token过期时间，有效值是1~300秒
- * @method void setSecond(integer $Second) 设置token过期时间，有效值是1~300秒
+ * @method integer getPort() 获取应用开放的监听端口
+ * @method void setPort(integer $Port) 设置应用开放的监听端口
+ * @method string getPath() 获取业务指标暴露的url path
+ * @method void setPath(string $Path) 设置业务指标暴露的url path
  */
-class CreateUserTokenRequest extends AbstractModel
+class EnablePrometheusConf extends AbstractModel
 {
     /**
-     * @var integer token过期时间，有效值是1~300秒
+     * @var integer 应用开放的监听端口
      */
-    public $Second;
+    public $Port;
 
     /**
-     * @param integer $Second token过期时间，有效值是1~300秒
+     * @var string 业务指标暴露的url path
+     */
+    public $Path;
+
+    /**
+     * @param integer $Port 应用开放的监听端口
+     * @param string $Path 业务指标暴露的url path
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class CreateUserTokenRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Second",$param) and $param["Second"] !== null) {
-            $this->Second = $param["Second"];
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
     }
 }

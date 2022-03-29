@@ -30,13 +30,7 @@ try {
 
     $userInfo = new UserInfo();
     $userInfo->setUserId("********************************");
-    $userInfo->setClientIp("********************************");
     $req->setOperator($userInfo);
-
-    $agent = new Agent();
-    $agent->setAppId("********************************");
-    $agent->setChannel("********************************");
-    $req->setAgent($agent);
 
     $req->setFlowId("********************************");
 

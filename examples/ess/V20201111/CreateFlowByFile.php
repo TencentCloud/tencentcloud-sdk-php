@@ -3,7 +3,6 @@ require_once __DIR__.'/../../../vendor/autoload.php';
 use TencentCloud\Ess\V20201111\EssClient;
 use TencentCloud\Ess\V20201111\Models\CreateFlowByFilesRequest;
 use TencentCloud\Ess\V20201111\Models\UserInfo;
-use TencentCloud\Ess\V20201111\Models\Agent;
 use TencentCloud\Ess\V20201111\Models\ApproverInfo;
 use TencentCloud\Ess\V20201111\Models\Component;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
@@ -33,12 +32,6 @@ try {
     $userInfo = new UserInfo();
     $userInfo->setUserId("********************************");
     $req->setOperator($userInfo);
-
-    $agent = new Agent();
-    $agent->setAppId("********************************");
-    $agent->setChannel("********************************");
-
-    $req->setAgent($agent);
 
     $req->FileIds = [];
     array_push($req->FileIds, "********************************");

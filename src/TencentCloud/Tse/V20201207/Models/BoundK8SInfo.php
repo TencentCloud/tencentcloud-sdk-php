@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBoundClusterType(string $BoundClusterType) 设置绑定的kubernetes的集群类型，分tke和eks两种
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSyncMode() 获取服务同步模式，all为全量同步，demand为按需同步
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSyncMode(string $SyncMode) 设置服务同步模式，all为全量同步，demand为按需同步
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BoundK8SInfo extends AbstractModel
 {
@@ -41,8 +45,16 @@ class BoundK8SInfo extends AbstractModel
     public $BoundClusterType;
 
     /**
+     * @var string 服务同步模式，all为全量同步，demand为按需同步
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SyncMode;
+
+    /**
      * @param string $BoundClusterId 绑定的kubernetes集群ID
      * @param string $BoundClusterType 绑定的kubernetes的集群类型，分tke和eks两种
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SyncMode 服务同步模式，all为全量同步，demand为按需同步
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -64,6 +76,10 @@ class BoundK8SInfo extends AbstractModel
 
         if (array_key_exists("BoundClusterType",$param) and $param["BoundClusterType"] !== null) {
             $this->BoundClusterType = $param["BoundClusterType"];
+        }
+
+        if (array_key_exists("SyncMode",$param) and $param["SyncMode"] !== null) {
+            $this->SyncMode = $param["SyncMode"];
         }
     }
 }

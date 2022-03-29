@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStockPublicIpAddressesBandwidthOut(integer $StockPublicIpAddressesBandwidthOut) 设置绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
  * @method integer getPublicIpAddressesBandwidthOut() 获取需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
  * @method void setPublicIpAddressesBandwidthOut(integer $PublicIpAddressesBandwidthOut) 设置需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+ * @method boolean getPublicIpFromSameZone() 获取公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+ * @method void setPublicIpFromSameZone(boolean $PublicIpFromSameZone) 设置公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
  */
 class AssociateNatGatewayAddressRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class AssociateNatGatewayAddressRequest extends AbstractModel
     public $PublicIpAddressesBandwidthOut;
 
     /**
+     * @var boolean 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+     */
+    public $PublicIpFromSameZone;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      * @param integer $AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
      * @param array $PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
      * @param string $Zone 弹性IP可用区，自动分配弹性IP时传递。
      * @param integer $StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
      * @param integer $PublicIpAddressesBandwidthOut 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * @param boolean $PublicIpFromSameZone 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class AssociateNatGatewayAddressRequest extends AbstractModel
 
         if (array_key_exists("PublicIpAddressesBandwidthOut",$param) and $param["PublicIpAddressesBandwidthOut"] !== null) {
             $this->PublicIpAddressesBandwidthOut = $param["PublicIpAddressesBandwidthOut"];
+        }
+
+        if (array_key_exists("PublicIpFromSameZone",$param) and $param["PublicIpFromSameZone"] !== null) {
+            $this->PublicIpFromSameZone = $param["PublicIpFromSameZone"];
         }
     }
 }

@@ -82,6 +82,14 @@ CHECK_FAILED, 检测失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method CompliancePeriodTaskRule getPeriodRule() 获取定时检测规则。
  * @method void setPeriodRule(CompliancePeriodTaskRule $PeriodRule) 设置定时检测规则。
+ * @method integer getOpenPolicyItemCount() 获取已开启的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOpenPolicyItemCount(integer $OpenPolicyItemCount) 设置已开启的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIgnoredPolicyItemCount() 获取已忽略的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIgnoredPolicyItemCount(integer $IgnoredPolicyItemCount) 设置已忽略的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceAssetSummary extends AbstractModel
 {
@@ -189,6 +197,18 @@ CHECK_FAILED, 检测失败
     public $PeriodRule;
 
     /**
+     * @var integer 已开启的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OpenPolicyItemCount;
+
+    /**
+     * @var integer 已忽略的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IgnoredPolicyItemCount;
+
+    /**
      * @param string $AssetType 资产类别。
      * @param boolean $IsCustomerFirstCheck 是否为客户的首次检测。与CheckStatus配合使用。
      * @param string $CheckStatus 检测状态
@@ -220,6 +240,10 @@ CHECK_FAILED, 检测失败
      * @param string $LastCheckTime 上次检测的时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CompliancePeriodTaskRule $PeriodRule 定时检测规则。
+     * @param integer $OpenPolicyItemCount 已开启的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IgnoredPolicyItemCount 已忽略的检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -305,6 +329,14 @@ CHECK_FAILED, 检测失败
         if (array_key_exists("PeriodRule",$param) and $param["PeriodRule"] !== null) {
             $this->PeriodRule = new CompliancePeriodTaskRule();
             $this->PeriodRule->deserialize($param["PeriodRule"]);
+        }
+
+        if (array_key_exists("OpenPolicyItemCount",$param) and $param["OpenPolicyItemCount"] !== null) {
+            $this->OpenPolicyItemCount = $param["OpenPolicyItemCount"];
+        }
+
+        if (array_key_exists("IgnoredPolicyItemCount",$param) and $param["IgnoredPolicyItemCount"] !== null) {
+            $this->IgnoredPolicyItemCount = $param["IgnoredPolicyItemCount"];
         }
     }
 }

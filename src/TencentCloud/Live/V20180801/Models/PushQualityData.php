@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMateFps(integer $MateFps) 设置metadata 中的帧率。
  * @method string getStreamParam() 获取推流参数
  * @method void setStreamParam(string $StreamParam) 设置推流参数
+ * @method float getBandwidth() 获取带宽，单位Mbps。
+ * @method void setBandwidth(float $Bandwidth) 设置带宽，单位Mbps。
+ * @method float getFlux() 获取流量，单位MB。
+ * @method void setFlux(float $Flux) 设置流量，单位MB。
  */
 class PushQualityData extends AbstractModel
 {
@@ -164,6 +168,16 @@ class PushQualityData extends AbstractModel
     public $StreamParam;
 
     /**
+     * @var float 带宽，单位Mbps。
+     */
+    public $Bandwidth;
+
+    /**
+     * @var float 流量，单位MB。
+     */
+    public $Flux;
+
+    /**
      * @param string $Time 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      * @param string $PushDomain 推流域名。
      * @param string $AppName 推流路径。
@@ -184,6 +198,8 @@ class PushQualityData extends AbstractModel
      * @param integer $MetaAudioRate metadata 中的音频码率，单位: kbps。
      * @param integer $MateFps metadata 中的帧率。
      * @param string $StreamParam 推流参数
+     * @param float $Bandwidth 带宽，单位Mbps。
+     * @param float $Flux 流量，单位MB。
      */
     function __construct()
     {
@@ -276,6 +292,14 @@ class PushQualityData extends AbstractModel
 
         if (array_key_exists("StreamParam",$param) and $param["StreamParam"] !== null) {
             $this->StreamParam = $param["StreamParam"];
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("Flux",$param) and $param["Flux"] !== null) {
+            $this->Flux = $param["Flux"];
         }
     }
 }

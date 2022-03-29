@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndpoint(string $Endpoint) 设置签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
  * @method string getJumpUrl() 获取签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
  * @method void setJumpUrl(string $JumpUrl) 设置签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
+ * @method boolean getAutoJumpBack() 获取"APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+ * @method void setAutoJumpBack(boolean $AutoJumpBack) 设置"APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
  */
 class CreateSignUrlsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateSignUrlsRequest extends AbstractModel
     public $JumpUrl;
 
     /**
+     * @var boolean "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+     */
+    public $AutoJumpBack;
+
+    /**
      * @param Agent $Agent 渠道应用相关信息
      * @param array $FlowIds 所签署合同ID数组
      * @param UserInfo $Operator 操作者的信息
      * @param string $Endpoint 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
      * @param string $JumpUrl 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
+     * @param boolean $AutoJumpBack "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
      */
     function __construct()
     {
@@ -98,6 +106,10 @@ class CreateSignUrlsRequest extends AbstractModel
 
         if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {
             $this->JumpUrl = $param["JumpUrl"];
+        }
+
+        if (array_key_exists("AutoJumpBack",$param) and $param["AutoJumpBack"] !== null) {
+            $this->AutoJumpBack = $param["AutoJumpBack"];
         }
     }
 }

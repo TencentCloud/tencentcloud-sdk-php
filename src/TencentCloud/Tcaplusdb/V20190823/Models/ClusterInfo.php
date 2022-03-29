@@ -96,6 +96,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaInfo(KafkaInfo $KafkaInfo) 设置数据订阅的kafka信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTxhBackupExpireDay() 获取集群Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) 设置集群Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUlogBackupExpireDay() 获取集群Ulog备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUlogBackupExpireDay(integer $UlogBackupExpireDay) 设置集群Ulog备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsReadOnlyUlogBackupExpireDay() 获取集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsReadOnlyUlogBackupExpireDay(integer $IsReadOnlyUlogBackupExpireDay) 设置集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInfo extends AbstractModel
 {
@@ -242,6 +254,24 @@ class ClusterInfo extends AbstractModel
     public $KafkaInfo;
 
     /**
+     * @var integer 集群Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TxhBackupExpireDay;
+
+    /**
+     * @var integer 集群Ulog备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UlogBackupExpireDay;
+
+    /**
+     * @var integer 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsReadOnlyUlogBackupExpireDay;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterId 集群ID
      * @param string $Region 集群所在地域
@@ -279,6 +309,12 @@ class ClusterInfo extends AbstractModel
      * @param integer $DataFlowStatus 是否开启了数据订阅
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaInfo $KafkaInfo 数据订阅的kafka信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TxhBackupExpireDay 集群Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UlogBackupExpireDay 集群Ulog备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsReadOnlyUlogBackupExpireDay 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -407,6 +443,18 @@ class ClusterInfo extends AbstractModel
         if (array_key_exists("KafkaInfo",$param) and $param["KafkaInfo"] !== null) {
             $this->KafkaInfo = new KafkaInfo();
             $this->KafkaInfo->deserialize($param["KafkaInfo"]);
+        }
+
+        if (array_key_exists("TxhBackupExpireDay",$param) and $param["TxhBackupExpireDay"] !== null) {
+            $this->TxhBackupExpireDay = $param["TxhBackupExpireDay"];
+        }
+
+        if (array_key_exists("UlogBackupExpireDay",$param) and $param["UlogBackupExpireDay"] !== null) {
+            $this->UlogBackupExpireDay = $param["UlogBackupExpireDay"];
+        }
+
+        if (array_key_exists("IsReadOnlyUlogBackupExpireDay",$param) and $param["IsReadOnlyUlogBackupExpireDay"] !== null) {
+            $this->IsReadOnlyUlogBackupExpireDay = $param["IsReadOnlyUlogBackupExpireDay"];
         }
     }
 }

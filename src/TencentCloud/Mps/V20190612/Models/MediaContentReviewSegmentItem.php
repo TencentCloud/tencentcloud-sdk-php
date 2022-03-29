@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 内容审核涉黄/暴恐嫌疑片段
+ * 内容审核涉黄/涉敏嫌疑片段
  *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。

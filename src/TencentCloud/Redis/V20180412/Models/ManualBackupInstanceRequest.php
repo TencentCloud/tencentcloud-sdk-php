@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
  * @method string getRemark() 获取备份的备注信息
  * @method void setRemark(string $Remark) 设置备份的备注信息
+ * @method integer getStorageDays() 获取保存天数。0代表指定默认保留时间
+ * @method void setStorageDays(integer $StorageDays) 设置保存天数。0代表指定默认保留时间
  */
 class ManualBackupInstanceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ManualBackupInstanceRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var integer 保存天数。0代表指定默认保留时间
+     */
+    public $StorageDays;
+
+    /**
      * @param string $InstanceId 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
      * @param string $Remark 备份的备注信息
+     * @param integer $StorageDays 保存天数。0代表指定默认保留时间
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ManualBackupInstanceRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("StorageDays",$param) and $param["StorageDays"] !== null) {
+            $this->StorageDays = $param["StorageDays"];
         }
     }
 }

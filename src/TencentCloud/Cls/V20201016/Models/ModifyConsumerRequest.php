@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取投递任务绑定的日志主题 ID
  * @method void setTopicId(string $TopicId) 设置投递任务绑定的日志主题 ID
- * @method boolean getEffective() 获取投递任务是否生效
- * @method void setEffective(boolean $Effective) 设置投递任务是否生效
+ * @method boolean getEffective() 获取投递任务是否生效，默认不生效
+ * @method void setEffective(boolean $Effective) 设置投递任务是否生效，默认不生效
  * @method boolean getNeedContent() 获取是否投递日志的元数据信息，默认为 false
  * @method void setNeedContent(boolean $NeedContent) 设置是否投递日志的元数据信息，默认为 false
  * @method ConsumerContent getContent() 获取如果需要投递元数据信息，元数据信息的描述
@@ -39,7 +39,7 @@ class ModifyConsumerRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var boolean 投递任务是否生效
+     * @var boolean 投递任务是否生效，默认不生效
      */
     public $Effective;
 
@@ -60,7 +60,7 @@ class ModifyConsumerRequest extends AbstractModel
 
     /**
      * @param string $TopicId 投递任务绑定的日志主题 ID
-     * @param boolean $Effective 投递任务是否生效
+     * @param boolean $Effective 投递任务是否生效，默认不生效
      * @param boolean $NeedContent 是否投递日志的元数据信息，默认为 false
      * @param ConsumerContent $Content 如果需要投递元数据信息，元数据信息的描述
      * @param Ckafka $Ckafka CKafka的描述

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getProxyGroupId() 获取代理ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置代理ID
+ * @method string getProxyGroupId() 获取代理组ID
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
  */
 class DescribeCDBProxyRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeCDBProxyRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 代理ID
+     * @var string 代理组ID
      */
     public $ProxyGroupId;
 
     /**
      * @param string $InstanceId 实例ID
-     * @param string $ProxyGroupId 代理ID
+     * @param string $ProxyGroupId 代理组ID
      */
     function __construct()
     {

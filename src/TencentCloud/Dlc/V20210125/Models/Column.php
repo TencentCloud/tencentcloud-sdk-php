@@ -42,9 +42,9 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNullable(string $Nullable) 设置是否为null
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPosition() 获取字段位置
+ * @method integer getPosition() 获取字段位置，小的在前
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPosition(integer $Position) 设置字段位置
+ * @method void setPosition(integer $Position) 设置字段位置，小的在前
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取字段创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -93,7 +93,7 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     public $Nullable;
 
     /**
-     * @var integer 字段位置
+     * @var integer 字段位置，小的在前
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Position;
@@ -122,7 +122,7 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nullable 是否为null
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Position 字段位置
+     * @param integer $Position 字段位置，小的在前
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 字段创建时间
 注意：此字段可能返回 null，表示取不到有效值。

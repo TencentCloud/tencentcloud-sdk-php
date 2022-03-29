@@ -146,6 +146,10 @@ use TencentCloud\Vod\V20180717\Models as Models;
     8. 视频打点信息（keyFrameDescInfo）：对视频设置的打点信息。
     9. 转自适应码流信息（adaptiveDynamicStreamingInfo）：包括规格、加密类型、打包格式等相关信息。
 2. 可以指定回包只返回部分信息。
+ * @method Models\DescribeMediaPlayStatDetailsResponse DescribeMediaPlayStatDetails(Models\DescribeMediaPlayStatDetailsRequest $req) 该接口用于查询媒体文件按指定时间粒度统计的播放数据
+* 可以查询最近一年的播放统计数据。
+* 时间粒度为小时，结束时间和起始时间的跨度最大为7天。
+* 时间粒度为天，结束时间和起始时间的跨度最大为90天。
  * @method Models\DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(Models\DescribeMediaProcessUsageDataRequest $req) 该接口返回查询时间范围内每天使用的视频处理用量信息。
    1. 可以查询最近365天内的视频处理统计数据。
    2. 查询时间跨度不超过90天。
@@ -238,6 +242,19 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\ModifyHeadTailTemplateResponse ModifyHeadTailTemplate(Models\ModifyHeadTailTemplateRequest $req) 修改片头片尾模板。
  * @method Models\ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(Models\ModifyImageSpriteTemplateRequest $req) 修改用户自定义雪碧图模板。
  * @method Models\ModifyMediaInfoResponse ModifyMediaInfo(Models\ModifyMediaInfoRequest $req) 修改媒体文件的属性，包括分类、名称、描述、标签、过期时间、打点信息、视频封面、字幕信息等。
+ * @method Models\ModifyMediaStorageClassResponse ModifyMediaStorageClass(Models\ModifyMediaStorageClassRequest $req) 修改媒体文件的存储类型。
+当媒体文件的存储类型为标准存储时，可以修改为以下类型：
+<li>低频存储</li>
+<li>归档存储</li>
+<li>深度归档存储</li>
+当媒体文件的当前存储类型为低频存储时，可以修改为以下类型：
+<li>标准存储</li>
+<li>归档存储</li>
+<li>深度归档存储</li>
+当媒体文件的当前存储类型为归档存储时，可以修改为以下类型：
+<li>标准存储</li>
+当媒体文件的当前存储类型为深度归档存储时，可以修改为以下类型：
+<li>标准存储</li>
  * @method Models\ModifyPersonSampleResponse ModifyPersonSample(Models\ModifyPersonSampleRequest $req) 该接口用于根据素材 ID，修改素材样本信息，包括名称、描述的修改，以及五官、标签的添加、删除、重置操作。五官删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
  * @method Models\ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(Models\ModifySampleSnapshotTemplateRequest $req) 修改用户自定义采样截图模板。
  * @method Models\ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(Models\ModifySnapshotByTimeOffsetTemplateRequest $req) 修改用户自定义指定时间点截图模板。
@@ -252,6 +269,14 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) 修改用户自定义水印模板，水印类型不允许修改。
  * @method Models\ModifyWordSampleResponse ModifyWordSample(Models\ModifyWordSampleRequest $req) 该接口用于修改关键词的应用场景、标签，关键词本身不可修改，如需修改，可删除重建。
  * @method Models\ParseStreamingManifestResponse ParseStreamingManifest(Models\ParseStreamingManifestRequest $req) 上传 HLS 视频时，解析索引文件内容，返回待上传的分片文件列表。分片文件路径必须是当前目录或子目录的相对路径，不能是 URL，不能是绝对路径。
+ * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) 对点播中的图片文件发起处理任务，功能包括：
+
+1. 智能识别（令人反感的信息、不安全的信息、不适宜的信息）;
+
+><li>图片文件大小支持：文件 < 5M；</li>
+><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响识别效果；</li>
+><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
+
  * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) 对点播中的音视频媒体发起处理任务，功能包括：
 1. 视频转码（带水印）；
 2. 视频转动图；

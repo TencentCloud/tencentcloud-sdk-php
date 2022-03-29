@@ -42,6 +42,18 @@ DELETE： DeleteObject。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorization(boolean $Authorization) 设置API调用后端COS的签名开关，默认为false。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPathMatchMode() 获取API后端COS的路径匹配模式，可选值：
+BackEndPath ： 后端路径匹配
+FullPath ： 全路径匹配
+
+默认值为：BackEndPath
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPathMatchMode(string $PathMatchMode) 设置API后端COS的路径匹配模式，可选值：
+BackEndPath ： 后端路径匹配
+FullPath ： 全路径匹配
+
+默认值为：BackEndPath
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CosConfig extends AbstractModel
 {
@@ -69,6 +81,16 @@ DELETE： DeleteObject。
     public $Authorization;
 
     /**
+     * @var string API后端COS的路径匹配模式，可选值：
+BackEndPath ： 后端路径匹配
+FullPath ： 全路径匹配
+
+默认值为：BackEndPath
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PathMatchMode;
+
+    /**
      * @param string $Action API调用后端COS的方式，前端请求方法与Action的可选值为：
 GET：GetObject
 PUT：PutObject
@@ -79,6 +101,12 @@ DELETE： DeleteObject。
      * @param string $BucketName API后端COS的存储桶名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Authorization API调用后端COS的签名开关，默认为false。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PathMatchMode API后端COS的路径匹配模式，可选值：
+BackEndPath ： 后端路径匹配
+FullPath ： 全路径匹配
+
+默认值为：BackEndPath
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,6 +132,10 @@ DELETE： DeleteObject。
 
         if (array_key_exists("Authorization",$param) and $param["Authorization"] !== null) {
             $this->Authorization = $param["Authorization"];
+        }
+
+        if (array_key_exists("PathMatchMode",$param) and $param["PathMatchMode"] !== null) {
+            $this->PathMatchMode = $param["PathMatchMode"];
         }
     }
 }

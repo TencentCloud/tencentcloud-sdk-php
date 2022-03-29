@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) 设置端口，默认5432
  * @method integer getPayMode() 获取计费模式，按量计费：0，包年包月：1。默认按量计费。
  * @method void setPayMode(integer $PayMode) 设置计费模式，按量计费：0，包年包月：1。默认按量计费。
- * @method integer getCount() 获取购买个数，目前只支持传1（不传默认为1）
- * @method void setCount(integer $Count) 设置购买个数，目前只支持传1（不传默认为1）
+ * @method integer getCount() 获取购买集群数，可选值范围[1,50]，默认为1
+ * @method void setCount(integer $Count) 设置购买集群数，可选值范围[1,50]，默认为1
  * @method string getRollbackStrategy() 获取回档类型：
 noneRollback：不回档；
 snapRollback，快照回档；
@@ -214,7 +214,7 @@ class CreateClustersRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer 购买个数，目前只支持传1（不传默认为1）
+     * @var integer 购买集群数，可选值范围[1,50]，默认为1
      */
     public $Count;
 
@@ -378,7 +378,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param string $AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
      * @param integer $Port 端口，默认5432
      * @param integer $PayMode 计费模式，按量计费：0，包年包月：1。默认按量计费。
-     * @param integer $Count 购买个数，目前只支持传1（不传默认为1）
+     * @param integer $Count 购买集群数，可选值范围[1,50]，默认为1
      * @param string $RollbackStrategy 回档类型：
 noneRollback：不回档；
 snapRollback，快照回档；

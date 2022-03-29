@@ -20,12 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 极速高清参数配置。
  *
- * @method string getType() 获取极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
-不填代表不启用极速高清。
- * @method void setType(string $Type) 设置极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
-不填代表不启用极速高清。
+ * @method string getType() 获取极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
+ * @method void setType(string $Type) 设置极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
  * @method integer getMaxVideoBitrate() 获取视频码率上限，当 Type 指定了极速高清类型时有效。
 不填或填0表示不设视频码率上限。
  * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) 设置视频码率上限，当 Type 指定了极速高清类型时有效。
@@ -34,9 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class TEHDConfig extends AbstractModel
 {
     /**
-     * @var string 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
-不填代表不启用极速高清。
+     * @var string 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
      */
     public $Type;
 
@@ -47,9 +41,7 @@ class TEHDConfig extends AbstractModel
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
-不填代表不启用极速高清。
+     * @param string $Type 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
      * @param integer $MaxVideoBitrate 视频码率上限，当 Type 指定了极速高清类型时有效。
 不填或填0表示不设视频码率上限。
      */

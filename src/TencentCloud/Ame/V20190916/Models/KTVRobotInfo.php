@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurIndex(integer $CurIndex) 设置当前歌单索引位置。
  * @method integer getPosition() 获取播放进度，单位：毫秒。
  * @method void setPosition(integer $Position) 设置播放进度，单位：毫秒。
- * @method SetAudioParamCommandInput getSetAudioParamInput() 获取音频参数
- * @method void setSetAudioParamInput(SetAudioParamCommandInput $SetAudioParamInput) 设置音频参数
- * @method JoinRoomInput getJoinRoomInput() 获取进房信息
- * @method void setJoinRoomInput(JoinRoomInput $JoinRoomInput) 设置进房信息
+ * @method SetAudioParamCommandInput getSetAudioParamInput() 获取音频参数。
+ * @method void setSetAudioParamInput(SetAudioParamCommandInput $SetAudioParamInput) 设置音频参数。
+ * @method JoinRoomInput getJoinRoomInput() 获取进房信息。
+ * @method void setJoinRoomInput(JoinRoomInput $JoinRoomInput) 设置进房信息。
  * @method string getRTCSystem() 获取RTC厂商类型，取值有：
 <li>TRTC</li>
  * @method void setRTCSystem(string $RTCSystem) 设置RTC厂商类型，取值有：
@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
+ * @method SetVolumeCommandInput getSetVolumeInput() 获取音量，范围 0~100，默认为 50。
+ * @method void setSetVolumeInput(SetVolumeCommandInput $SetVolumeInput) 设置音量，范围 0~100，默认为 50。
  */
 class KTVRobotInfo extends AbstractModel
 {
@@ -86,12 +88,12 @@ class KTVRobotInfo extends AbstractModel
     public $Position;
 
     /**
-     * @var SetAudioParamCommandInput 音频参数
+     * @var SetAudioParamCommandInput 音频参数。
      */
     public $SetAudioParamInput;
 
     /**
-     * @var JoinRoomInput 进房信息
+     * @var JoinRoomInput 进房信息。
      */
     public $JoinRoomInput;
 
@@ -111,6 +113,11 @@ class KTVRobotInfo extends AbstractModel
     public $SetPlayModeInput;
 
     /**
+     * @var SetVolumeCommandInput 音量，范围 0~100，默认为 50。
+     */
+    public $SetVolumeInput;
+
+    /**
      * @param string $RobotId 机器人Id。
      * @param string $Status 状态，取值有：
 <li>Play：播放</li>
@@ -119,8 +126,8 @@ class KTVRobotInfo extends AbstractModel
      * @param array $Playlists 播放列表。
      * @param integer $CurIndex 当前歌单索引位置。
      * @param integer $Position 播放进度，单位：毫秒。
-     * @param SetAudioParamCommandInput $SetAudioParamInput 音频参数
-     * @param JoinRoomInput $JoinRoomInput 进房信息
+     * @param SetAudioParamCommandInput $SetAudioParamInput 音频参数。
+     * @param JoinRoomInput $JoinRoomInput 进房信息。
      * @param string $RTCSystem RTC厂商类型，取值有：
 <li>TRTC</li>
      * @param SetPlayModeCommandInput $SetPlayModeInput 播放模式，PlayMode取值有：
@@ -128,6 +135,7 @@ class KTVRobotInfo extends AbstractModel
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
+     * @param SetVolumeCommandInput $SetVolumeInput 音量，范围 0~100，默认为 50。
      */
     function __construct()
     {
@@ -179,6 +187,11 @@ class KTVRobotInfo extends AbstractModel
         if (array_key_exists("SetPlayModeInput",$param) and $param["SetPlayModeInput"] !== null) {
             $this->SetPlayModeInput = new SetPlayModeCommandInput();
             $this->SetPlayModeInput->deserialize($param["SetPlayModeInput"]);
+        }
+
+        if (array_key_exists("SetVolumeInput",$param) and $param["SetVolumeInput"] !== null) {
+            $this->SetVolumeInput = new SetVolumeCommandInput();
+            $this->SetVolumeInput->deserialize($param["SetVolumeInput"]);
         }
     }
 }

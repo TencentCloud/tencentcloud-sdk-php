@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDocumentId() 获取返回的电子文档ID
  * @method void setDocumentId(string $DocumentId) 设置返回的电子文档ID
+ * @method string getPreviewFileUrl() 获取返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreviewFileUrl(string $PreviewFileUrl) 设置返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class CreateDocumentResponse extends AbstractModel
     public $DocumentId;
 
     /**
+     * @var string 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreviewFileUrl;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $DocumentId 返回的电子文档ID
+     * @param string $PreviewFileUrl 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,10 @@ class CreateDocumentResponse extends AbstractModel
         }
         if (array_key_exists("DocumentId",$param) and $param["DocumentId"] !== null) {
             $this->DocumentId = $param["DocumentId"];
+        }
+
+        if (array_key_exists("PreviewFileUrl",$param) and $param["PreviewFileUrl"] !== null) {
+            $this->PreviewFileUrl = $param["PreviewFileUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

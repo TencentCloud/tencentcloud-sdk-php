@@ -27,26 +27,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEntityId(string $EntityId) 设置物品ID，最多支持64个字符。 
 若EntityId已存在，则对其追加图片。
  * @method string getPicName() 获取图片名称，最多支持64个字符， 
-同一个EntityId，最大支持5张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
  * @method void setPicName(string $PicName) 设置图片名称，最多支持64个字符， 
-同一个EntityId，最大支持5张图。如果图片名称已存在，则会更新库中的图片。
- * @method string getImageUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过2M。  
+同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+ * @method string getImageUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片分辨率不超过1920*1080。
+图片分辨率不超过4096*4096。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 。对应图片 base64 编码后大小不可超过2M。  
+ * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片分辨率不超过1920*1080。
+图片分辨率不超过4096*4096。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getImageBase64() 获取图片 base64 数据，base64 编码后大小不可超过2M。 
-图片分辨率不超过1920*1080。 
+ * @method string getImageBase64() 获取图片 base64 数据，base64 编码后大小不可超过5M。 
+图片分辨率不超过4096*4096。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImageBase64(string $ImageBase64) 设置图片 base64 数据，base64 编码后大小不可超过2M。 
-图片分辨率不超过1920*1080。 
+ * @method void setImageBase64(string $ImageBase64) 设置图片 base64 数据，base64 编码后大小不可超过5M。 
+图片分辨率不超过4096*4096。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method string getCustomContent() 获取用户自定义的内容，最多支持4096个字符，查询时原样带回。
  * @method void setCustomContent(string $CustomContent) 设置用户自定义的内容，最多支持4096个字符，查询时原样带回。
@@ -68,14 +68,14 @@ class CreateImageRequest extends AbstractModel
 
     /**
      * @var string 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持5张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
      */
     public $PicName;
 
     /**
-     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过2M。  
+     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片分辨率不超过1920*1080。
+图片分辨率不超过4096*4096。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -83,8 +83,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $ImageUrl;
 
     /**
-     * @var string 图片 base64 数据，base64 编码后大小不可超过2M。 
-图片分辨率不超过1920*1080。 
+     * @var string 图片 base64 数据，base64 编码后大小不可超过5M。 
+图片分辨率不超过4096*4096。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
     public $ImageBase64;
@@ -104,15 +104,15 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @param string $EntityId 物品ID，最多支持64个字符。 
 若EntityId已存在，则对其追加图片。
      * @param string $PicName 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持5张图。如果图片名称已存在，则会更新库中的图片。
-     * @param string $ImageUrl 图片的 Url 。对应图片 base64 编码后大小不可超过2M。  
+同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+     * @param string $ImageUrl 图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片分辨率不超过1920*1080。
+图片分辨率不超过4096*4096。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $ImageBase64 图片 base64 数据，base64 编码后大小不可超过2M。 
-图片分辨率不超过1920*1080。 
+     * @param string $ImageBase64 图片 base64 数据，base64 编码后大小不可超过5M。 
+图片分辨率不超过4096*4096。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param string $CustomContent 用户自定义的内容，最多支持4096个字符，查询时原样带回。
      * @param string $Tags 图片自定义标签，最多不超过10个，格式为JSON。

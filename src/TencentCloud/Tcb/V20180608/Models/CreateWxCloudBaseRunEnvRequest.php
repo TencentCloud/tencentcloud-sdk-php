@@ -36,6 +36,8 @@ Activity：活动来源
  * @method void setVpcId(string $VpcId) 设置私有网络Id
  * @method array getSubNetIds() 获取子网列表
  * @method void setSubNetIds(array $SubNetIds) 设置子网列表
+ * @method boolean getIsOpenCloudInvoke() 获取是否打开云调用
+ * @method void setIsOpenCloudInvoke(boolean $IsOpenCloudInvoke) 设置是否打开云调用
  */
 class CreateWxCloudBaseRunEnvRequest extends AbstractModel
 {
@@ -72,6 +74,11 @@ Activity：活动来源
     public $SubNetIds;
 
     /**
+     * @var boolean 是否打开云调用
+     */
+    public $IsOpenCloudInvoke;
+
+    /**
      * @param string $WxAppId wx应用Id
      * @param string $Alias 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
      * @param string $FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
@@ -80,6 +87,7 @@ QuickStart：快速启动来源
 Activity：活动来源
      * @param string $VpcId 私有网络Id
      * @param array $SubNetIds 子网列表
+     * @param boolean $IsOpenCloudInvoke 是否打开云调用
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ Activity：活动来源
 
         if (array_key_exists("SubNetIds",$param) and $param["SubNetIds"] !== null) {
             $this->SubNetIds = $param["SubNetIds"];
+        }
+
+        if (array_key_exists("IsOpenCloudInvoke",$param) and $param["IsOpenCloudInvoke"] !== null) {
+            $this->IsOpenCloudInvoke = $param["IsOpenCloudInvoke"];
         }
     }
 }

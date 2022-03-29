@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 <li>TRTC</li>
  * @method JoinRoomInput getJoinRoomInput() 获取进房参数。
  * @method void setJoinRoomInput(JoinRoomInput $JoinRoomInput) 设置进房参数。
+ * @method ApplicationLicenseInput getApplicationLicenseInput() 获取license基础信息
+ * @method void setApplicationLicenseInput(ApplicationLicenseInput $ApplicationLicenseInput) 设置license基础信息
  */
 class CreateKTVRobotRequest extends AbstractModel
 {
@@ -41,9 +43,15 @@ class CreateKTVRobotRequest extends AbstractModel
     public $JoinRoomInput;
 
     /**
+     * @var ApplicationLicenseInput license基础信息
+     */
+    public $ApplicationLicenseInput;
+
+    /**
      * @param string $RTCSystem RTC厂商类型，取值有：
 <li>TRTC</li>
      * @param JoinRoomInput $JoinRoomInput 进房参数。
+     * @param ApplicationLicenseInput $ApplicationLicenseInput license基础信息
      */
     function __construct()
     {
@@ -65,6 +73,11 @@ class CreateKTVRobotRequest extends AbstractModel
         if (array_key_exists("JoinRoomInput",$param) and $param["JoinRoomInput"] !== null) {
             $this->JoinRoomInput = new JoinRoomInput();
             $this->JoinRoomInput->deserialize($param["JoinRoomInput"]);
+        }
+
+        if (array_key_exists("ApplicationLicenseInput",$param) and $param["ApplicationLicenseInput"] !== null) {
+            $this->ApplicationLicenseInput = new ApplicationLicenseInput();
+            $this->ApplicationLicenseInput->deserialize($param["ApplicationLicenseInput"]);
         }
     }
 }

@@ -31,6 +31,7 @@ use TencentCloud\Ame\V20190916\Models as Models;
  * @method Models\DescribeItemByIdResponse DescribeItemById(Models\DescribeItemByIdRequest $req) 根据歌曲ID查询歌曲信息
  * @method Models\DescribeItemsResponse DescribeItems(Models\DescribeItemsRequest $req) 该服务后续会停用，不再建议使用
  * @method Models\DescribeKTVMusicDetailResponse DescribeKTVMusicDetail(Models\DescribeKTVMusicDetailRequest $req) 根据 Id 查询歌曲的详细信息，包含基础信息及播放信息。
+ * @method Models\DescribeKTVMusicTagsResponse DescribeKTVMusicTags(Models\DescribeKTVMusicTagsRequest $req) 获取直播互动曲库标签分组信息和标签信息
  * @method Models\DescribeKTVPlaylistDetailResponse DescribeKTVPlaylistDetail(Models\DescribeKTVPlaylistDetailRequest $req) 根据歌单 Id 获取歌单详情，包括歌单的基础信息以及歌曲列表。
  * @method Models\DescribeKTVPlaylistsResponse DescribeKTVPlaylists(Models\DescribeKTVPlaylistsRequest $req) 获取直播互动曲库推荐歌单列表。
  * @method Models\DescribeKTVRobotsResponse DescribeKTVRobots(Models\DescribeKTVRobotsRequest $req) 获取机器人列表，支持 Id、状态等过滤条件。
@@ -40,6 +41,7 @@ use TencentCloud\Ame\V20190916\Models as Models;
 
 
  * @method Models\DescribeKTVSingersResponse DescribeKTVSingers(Models\DescribeKTVSingersRequest $req) 根据过滤条件，返回匹配的歌手列表。
+ * @method Models\DescribeKTVSuggestionsResponse DescribeKTVSuggestions(Models\DescribeKTVSuggestionsRequest $req) 获取直播互动曲库联想词
  * @method Models\DescribeKTVTopListResponse DescribeKTVTopList(Models\DescribeKTVTopListRequest $req) 获取直播互动曲库歌曲的周榜和月榜
  * @method Models\DescribeLyricResponse DescribeLyric(Models\DescribeLyricRequest $req) 根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
  * @method Models\DescribeMusicResponse DescribeMusic(Models\DescribeMusicRequest $req) 获取曲库包歌曲播放信息接口

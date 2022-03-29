@@ -18,40 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 涉政信息
+ * 涉敏信息
  *
- * @method float getConfidence() 获取视频涉政评分，分值为0到100。
- * @method void setConfidence(float $Confidence) 设置视频涉政评分，分值为0到100。
- * @method string getSuggestion() 获取涉政结果建议，取值范围：
+ * @method float getConfidence() 获取视频涉敏评分，分值为0到100。
+ * @method void setConfidence(float $Confidence) 设置视频涉敏评分，分值为0到100。
+ * @method string getSuggestion() 获取涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method void setSuggestion(string $Suggestion) 设置涉政结果建议，取值范围：
+ * @method void setSuggestion(string $Suggestion) 设置涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
- * @method string getLabel() 获取视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+ * @method string getLabel() 获取视频涉敏结果标签。内容审核模板[画面涉敏任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
-<li>politician：政治人物。</li>
- * @method void setLabel(string $Label) 设置视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+<li>politician：涉敏人物。</li>
+ * @method void setLabel(string $Label) 设置视频涉敏结果标签。内容审核模板[画面涉敏任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
-<li>politician：政治人物。</li>
- * @method array getSegmentSet() 获取有涉政嫌疑的视频片段列表。
- * @method void setSegmentSet(array $SegmentSet) 设置有涉政嫌疑的视频片段列表。
+<li>politician：涉敏人物。</li>
+ * @method array getSegmentSet() 获取有涉敏嫌疑的视频片段列表。
+ * @method void setSegmentSet(array $SegmentSet) 设置有涉敏嫌疑的视频片段列表。
  */
 class AiReviewPoliticalTaskOutput extends AbstractModel
 {
     /**
-     * @var float 视频涉政评分，分值为0到100。
+     * @var float 视频涉敏评分，分值为0到100。
      */
     public $Confidence;
 
     /**
-     * @var string 涉政结果建议，取值范围：
+     * @var string 涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -59,31 +59,31 @@ class AiReviewPoliticalTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string 视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+     * @var string 视频涉敏结果标签。内容审核模板[画面涉敏任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
-<li>politician：政治人物。</li>
+<li>politician：涉敏人物。</li>
      */
     public $Label;
 
     /**
-     * @var array 有涉政嫌疑的视频片段列表。
+     * @var array 有涉敏嫌疑的视频片段列表。
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence 视频涉政评分，分值为0到100。
-     * @param string $Suggestion 涉政结果建议，取值范围：
+     * @param float $Confidence 视频涉敏评分，分值为0到100。
+     * @param string $Suggestion 涉敏结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-     * @param string $Label 视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+     * @param string $Label 视频涉敏结果标签。内容审核模板[画面涉敏任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
 violation_photo：
 <li>violation_photo：违规图标。</li>
 其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
-<li>politician：政治人物。</li>
-     * @param array $SegmentSet 有涉政嫌疑的视频片段列表。
+<li>politician：涉敏人物。</li>
+     * @param array $SegmentSet 有涉敏嫌疑的视频片段列表。
      */
     function __construct()
     {

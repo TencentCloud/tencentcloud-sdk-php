@@ -20,29 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 项目接口限制类型
  *
- * @method integer getID() 获取主键ID
- * @method void setID(integer $ID) 设置主键ID
- * @method integer getProjectID() 获取项目ID
- * @method void setProjectID(integer $ProjectID) 设置项目ID
  * @method string getProjectInterface() 获取接口
  * @method void setProjectInterface(string $ProjectInterface) 设置接口
  * @method integer getReportRate() 获取上报率
  * @method void setReportRate(integer $ReportRate) 设置上报率
  * @method integer getReportType() 获取上报类型 1：上报率  2：上报量限制
  * @method void setReportType(integer $ReportType) 设置上报类型 1：上报率  2：上报量限制
+ * @method integer getID() 获取主键ID
+ * @method void setID(integer $ID) 设置主键ID
+ * @method integer getProjectID() 获取项目ID
+ * @method void setProjectID(integer $ProjectID) 设置项目ID
  */
 class ProjectLimit extends AbstractModel
 {
-    /**
-     * @var integer 主键ID
-     */
-    public $ID;
-
-    /**
-     * @var integer 项目ID
-     */
-    public $ProjectID;
-
     /**
      * @var string 接口
      */
@@ -59,11 +49,21 @@ class ProjectLimit extends AbstractModel
     public $ReportType;
 
     /**
-     * @param integer $ID 主键ID
-     * @param integer $ProjectID 项目ID
+     * @var integer 主键ID
+     */
+    public $ID;
+
+    /**
+     * @var integer 项目ID
+     */
+    public $ProjectID;
+
+    /**
      * @param string $ProjectInterface 接口
      * @param integer $ReportRate 上报率
      * @param integer $ReportType 上报类型 1：上报率  2：上报量限制
+     * @param integer $ID 主键ID
+     * @param integer $ProjectID 项目ID
      */
     function __construct()
     {
@@ -78,14 +78,6 @@ class ProjectLimit extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
-            $this->ID = $param["ID"];
-        }
-
-        if (array_key_exists("ProjectID",$param) and $param["ProjectID"] !== null) {
-            $this->ProjectID = $param["ProjectID"];
-        }
-
         if (array_key_exists("ProjectInterface",$param) and $param["ProjectInterface"] !== null) {
             $this->ProjectInterface = $param["ProjectInterface"];
         }
@@ -96,6 +88,14 @@ class ProjectLimit extends AbstractModel
 
         if (array_key_exists("ReportType",$param) and $param["ReportType"] !== null) {
             $this->ReportType = $param["ReportType"];
+        }
+
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("ProjectID",$param) and $param["ProjectID"] !== null) {
+            $this->ProjectID = $param["ProjectID"];
         }
     }
 }

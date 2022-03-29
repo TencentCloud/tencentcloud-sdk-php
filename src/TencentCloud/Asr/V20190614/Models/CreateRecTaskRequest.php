@@ -74,18 +74,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(string $Data) 设置语音数据base64编码，当SourceType 值为1时必须填写，为0可不写。音频数据要小于5MB。
  * @method integer getDataLen() 获取数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
  * @method void setDataLen(integer $DataLen) 设置数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
- * @method string getHotwordId() 获取热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
- * @method void setHotwordId(string $HotwordId) 设置热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
- * @method integer getFilterDirty() 获取是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
- * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
- * @method integer getFilterModal() 获取是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
- * @method void setFilterModal(integer $FilterModal) 设置是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
  * @method integer getConvertNumMode() 获取是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
  * @method void setConvertNumMode(integer $ConvertNumMode) 设置是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
+ * @method integer getFilterDirty() 获取是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
+ * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
+ * @method string getHotwordId() 获取热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
+ * @method void setHotwordId(string $HotwordId) 设置热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
+ * @method string getCustomizationId() 获取自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+ * @method void setCustomizationId(string $CustomizationId) 设置自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
  * @method string getExtra() 获取附加参数(该参数无意义，忽略即可)
  * @method void setExtra(string $Extra) 设置附加参数(该参数无意义，忽略即可)
  * @method integer getFilterPunc() 获取是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
  * @method void setFilterPunc(integer $FilterPunc) 设置是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
+ * @method integer getFilterModal() 获取是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+ * @method void setFilterModal(integer $FilterModal) 设置是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
  */
 class CreateRecTaskRequest extends AbstractModel
 {
@@ -157,9 +159,9 @@ class CreateRecTaskRequest extends AbstractModel
     public $DataLen;
 
     /**
-     * @var string 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * @var integer 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
      */
-    public $HotwordId;
+    public $ConvertNumMode;
 
     /**
      * @var integer 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
@@ -167,14 +169,14 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterDirty;
 
     /**
-     * @var integer 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+     * @var string 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
      */
-    public $FilterModal;
+    public $HotwordId;
 
     /**
-     * @var integer 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
+     * @var string 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
      */
-    public $ConvertNumMode;
+    public $CustomizationId;
 
     /**
      * @var string 附加参数(该参数无意义，忽略即可)
@@ -185,6 +187,11 @@ class CreateRecTaskRequest extends AbstractModel
      * @var integer 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
      */
     public $FilterPunc;
+
+    /**
+     * @var integer 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+     */
+    public $FilterModal;
 
     /**
      * @param string $EngineModelType 引擎模型类型。
@@ -214,12 +221,13 @@ class CreateRecTaskRequest extends AbstractModel
      * @param string $Url 语音的URL地址，需要公网可下载。长度小于2048字节，当 SourceType 值为 0 时须填写该字段，为 1 时不需要填写。注意：请确保录音文件时长在5个小时之内，否则可能识别失败。请保证文件的下载速度，否则可能下载失败。
      * @param string $Data 语音数据base64编码，当SourceType 值为1时必须填写，为0可不写。音频数据要小于5MB。
      * @param integer $DataLen 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
-     * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
-     * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
-     * @param integer $FilterModal 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
      * @param integer $ConvertNumMode 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
+     * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
+     * @param string $HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
+     * @param string $CustomizationId 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
      * @param string $Extra 附加参数(该参数无意义，忽略即可)
      * @param integer $FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
+     * @param integer $FilterModal 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
      */
     function __construct()
     {
@@ -274,20 +282,20 @@ class CreateRecTaskRequest extends AbstractModel
             $this->DataLen = $param["DataLen"];
         }
 
-        if (array_key_exists("HotwordId",$param) and $param["HotwordId"] !== null) {
-            $this->HotwordId = $param["HotwordId"];
+        if (array_key_exists("ConvertNumMode",$param) and $param["ConvertNumMode"] !== null) {
+            $this->ConvertNumMode = $param["ConvertNumMode"];
         }
 
         if (array_key_exists("FilterDirty",$param) and $param["FilterDirty"] !== null) {
             $this->FilterDirty = $param["FilterDirty"];
         }
 
-        if (array_key_exists("FilterModal",$param) and $param["FilterModal"] !== null) {
-            $this->FilterModal = $param["FilterModal"];
+        if (array_key_exists("HotwordId",$param) and $param["HotwordId"] !== null) {
+            $this->HotwordId = $param["HotwordId"];
         }
 
-        if (array_key_exists("ConvertNumMode",$param) and $param["ConvertNumMode"] !== null) {
-            $this->ConvertNumMode = $param["ConvertNumMode"];
+        if (array_key_exists("CustomizationId",$param) and $param["CustomizationId"] !== null) {
+            $this->CustomizationId = $param["CustomizationId"];
         }
 
         if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
@@ -296,6 +304,10 @@ class CreateRecTaskRequest extends AbstractModel
 
         if (array_key_exists("FilterPunc",$param) and $param["FilterPunc"] !== null) {
             $this->FilterPunc = $param["FilterPunc"];
+        }
+
+        if (array_key_exists("FilterModal",$param) and $param["FilterModal"] !== null) {
+            $this->FilterModal = $param["FilterModal"];
         }
     }
 }

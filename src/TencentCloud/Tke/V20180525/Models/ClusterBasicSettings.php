@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) 设置是否开启节点的默认安全组(默认: 否，Aphla特性)
  * @method string getSubnetId() 获取当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
  * @method void setSubnetId(string $SubnetId) 设置当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+ * @method string getClusterLevel() 获取集群等级，针对托管集群生效
+ * @method void setClusterLevel(string $ClusterLevel) 设置集群等级，针对托管集群生效
+ * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() 获取自动变配集群等级，针对托管集群生效
+ * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) 设置自动变配集群等级，针对托管集群生效
  */
 class ClusterBasicSettings extends AbstractModel
 {
@@ -94,6 +98,16 @@ class ClusterBasicSettings extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string 集群等级，针对托管集群生效
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
      * @param string $ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      * @param string $ClusterVersion 集群版本,默认值为1.10.5
      * @param string $ClusterName 集群名称
@@ -104,6 +118,8 @@ class ClusterBasicSettings extends AbstractModel
      * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      * @param boolean $NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Aphla特性)
      * @param string $SubnetId 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+     * @param string $ClusterLevel 集群等级，针对托管集群生效
+     * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
      */
     function __construct()
     {
@@ -161,6 +177,15 @@ class ClusterBasicSettings extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel();
+            $this->AutoUpgradeClusterLevel->deserialize($param["AutoUpgradeClusterLevel"]);
         }
     }
 }

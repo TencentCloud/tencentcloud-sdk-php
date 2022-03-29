@@ -18,14 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 直播 AI 内容审核图片鉴政结果
+ * 直播 AI 内容审核图片敏感结果
  *
  * @method float getStartPtsTime() 获取嫌疑片段起始的 PTS 时间，单位：秒。
  * @method void setStartPtsTime(float $StartPtsTime) 设置嫌疑片段起始的 PTS 时间，单位：秒。
  * @method float getEndPtsTime() 获取嫌疑片段结束的 PTS 时间，单位：秒。
  * @method void setEndPtsTime(float $EndPtsTime) 设置嫌疑片段结束的 PTS 时间，单位：秒。
- * @method float getConfidence() 获取嫌疑片段涉政分数。
- * @method void setConfidence(float $Confidence) 设置嫌疑片段涉政分数。
+ * @method float getConfidence() 获取嫌疑片段敏感分数。
+ * @method void setConfidence(float $Confidence) 设置嫌疑片段敏感分数。
  * @method string getSuggestion() 获取嫌疑片段鉴黄结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
@@ -34,16 +34,16 @@ use TencentCloud\Common\AbstractModel;
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method string getLabel() 获取视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+ * @method string getLabel() 获取视频敏感结果标签，取值范围：
+<li>politician：敏感人物。</li>
 <li>violation_photo：违规图标。</li>
- * @method void setLabel(string $Label) 设置视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+ * @method void setLabel(string $Label) 设置视频敏感结果标签，取值范围：
+<li>politician：敏感人物。</li>
 <li>violation_photo：违规图标。</li>
- * @method string getName() 获取涉政人物、违规图标名字。
- * @method void setName(string $Name) 设置涉政人物、违规图标名字。
- * @method array getAreaCoordSet() 获取涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
- * @method void setAreaCoordSet(array $AreaCoordSet) 设置涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+ * @method string getName() 获取敏感人物、违规图标名字。
+ * @method void setName(string $Name) 设置敏感人物、违规图标名字。
+ * @method array getAreaCoordSet() 获取敏感人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+ * @method void setAreaCoordSet(array $AreaCoordSet) 设置敏感人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
  * @method string getUrl() 获取嫌疑图片 URL （图片不会永久存储，到达
 PicUrlExpireTime 时间点后图片将被删除）。
  * @method void setUrl(string $Url) 设置嫌疑图片 URL （图片不会永久存储，到达
@@ -64,7 +64,7 @@ class LiveStreamAiReviewImagePoliticalResult extends AbstractModel
     public $EndPtsTime;
 
     /**
-     * @var float 嫌疑片段涉政分数。
+     * @var float 嫌疑片段敏感分数。
      */
     public $Confidence;
 
@@ -77,19 +77,19 @@ class LiveStreamAiReviewImagePoliticalResult extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+     * @var string 视频敏感结果标签，取值范围：
+<li>politician：敏感人物。</li>
 <li>violation_photo：违规图标。</li>
      */
     public $Label;
 
     /**
-     * @var string 涉政人物、违规图标名字。
+     * @var string 敏感人物、违规图标名字。
      */
     public $Name;
 
     /**
-     * @var array 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * @var array 敏感人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      */
     public $AreaCoordSet;
 
@@ -107,16 +107,16 @@ PicUrlExpireTime 时间点后图片将被删除）。
     /**
      * @param float $StartPtsTime 嫌疑片段起始的 PTS 时间，单位：秒。
      * @param float $EndPtsTime 嫌疑片段结束的 PTS 时间，单位：秒。
-     * @param float $Confidence 嫌疑片段涉政分数。
+     * @param float $Confidence 嫌疑片段敏感分数。
      * @param string $Suggestion 嫌疑片段鉴黄结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param string $Label 视频鉴政结果标签，取值范围：
-<li>politician：政治人物。</li>
+     * @param string $Label 视频敏感结果标签，取值范围：
+<li>politician：敏感人物。</li>
 <li>violation_photo：违规图标。</li>
-     * @param string $Name 涉政人物、违规图标名字。
-     * @param array $AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * @param string $Name 敏感人物、违规图标名字。
+     * @param array $AreaCoordSet 敏感人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      * @param string $Url 嫌疑图片 URL （图片不会永久存储，到达
 PicUrlExpireTime 时间点后图片将被删除）。
      * @param string $PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。

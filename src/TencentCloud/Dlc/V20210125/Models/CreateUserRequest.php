@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserDescription(string $UserDescription) 设置用户描述信息，方便区分不同用户
  * @method array getPolicySet() 获取绑定到用户的权限集合
  * @method void setPolicySet(array $PolicySet) 设置绑定到用户的权限集合
+ * @method string getUserType() 获取用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON
+ * @method void setUserType(string $UserType) 设置用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON
+ * @method array getWorkGroupIds() 获取绑定到用户的工作组ID集合。
+ * @method void setWorkGroupIds(array $WorkGroupIds) 设置绑定到用户的工作组ID集合。
  */
 class CreateUserRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class CreateUserRequest extends AbstractModel
     public $PolicySet;
 
     /**
+     * @var string 用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON
+     */
+    public $UserType;
+
+    /**
+     * @var array 绑定到用户的工作组ID集合。
+     */
+    public $WorkGroupIds;
+
+    /**
      * @param string $UserId 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
      * @param string $UserDescription 用户描述信息，方便区分不同用户
      * @param array $PolicySet 绑定到用户的权限集合
+     * @param string $UserType 用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON
+     * @param array $WorkGroupIds 绑定到用户的工作组ID集合。
      */
     function __construct()
     {
@@ -77,6 +93,14 @@ class CreateUserRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PolicySet, $obj);
             }
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("WorkGroupIds",$param) and $param["WorkGroupIds"] !== null) {
+            $this->WorkGroupIds = $param["WorkGroupIds"];
         }
     }
 }

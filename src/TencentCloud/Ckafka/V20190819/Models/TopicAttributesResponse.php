@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAclRuleList(array $AclRuleList) 设置预设策略列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method InstanceQuotaConfigResp getQuotaConfig() 获取topic 限流策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuotaConfig(InstanceQuotaConfigResp $QuotaConfig) 设置topic 限流策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicAttributesResponse extends AbstractModel
 {
@@ -103,6 +107,12 @@ class TopicAttributesResponse extends AbstractModel
     public $AclRuleList;
 
     /**
+     * @var InstanceQuotaConfigResp topic 限流策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QuotaConfig;
+
+    /**
      * @param string $TopicId 主题 ID
      * @param integer $CreateTime 创建时间
      * @param string $Note 主题备注
@@ -115,6 +125,8 @@ class TopicAttributesResponse extends AbstractModel
      * @param integer $EnableAclRule ACL预设策略开关，1：打开； 0：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AclRuleList 预设策略列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceQuotaConfigResp $QuotaConfig topic 限流策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -179,6 +191,11 @@ class TopicAttributesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AclRuleList, $obj);
             }
+        }
+
+        if (array_key_exists("QuotaConfig",$param) and $param["QuotaConfig"] !== null) {
+            $this->QuotaConfig = new InstanceQuotaConfigResp();
+            $this->QuotaConfig->deserialize($param["QuotaConfig"]);
         }
     }
 }

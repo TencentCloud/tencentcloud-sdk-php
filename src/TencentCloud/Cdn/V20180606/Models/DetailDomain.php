@@ -298,6 +298,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleEngine(RuleEngine $RuleEngine) 设置规则引擎
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getParentHost() 获取主域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParentHost(string $ParentHost) 设置主域名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -685,6 +689,12 @@ off：不支持
     public $RuleEngine;
 
     /**
+     * @var string 主域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParentHost;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -823,6 +833,8 @@ off：不支持
      * @param ShareCname $ShareCname 共享CNAME配置（白名单功能）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleEngine $RuleEngine 规则引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ParentHost 主域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1135,6 +1147,10 @@ off：不支持
         if (array_key_exists("RuleEngine",$param) and $param["RuleEngine"] !== null) {
             $this->RuleEngine = new RuleEngine();
             $this->RuleEngine->deserialize($param["RuleEngine"]);
+        }
+
+        if (array_key_exists("ParentHost",$param) and $param["ParentHost"] !== null) {
+            $this->ParentHost = $param["ParentHost"];
         }
     }
 }

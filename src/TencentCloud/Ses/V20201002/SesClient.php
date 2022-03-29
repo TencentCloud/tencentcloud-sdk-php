@@ -35,6 +35,7 @@ use TencentCloud\Ses\V20201002\Models as Models;
  * @method Models\DeleteEmailAddressResponse DeleteEmailAddress(Models\DeleteEmailAddressRequest $req) 删除发信人地址
  * @method Models\DeleteEmailIdentityResponse DeleteEmailIdentity(Models\DeleteEmailIdentityRequest $req) 删除发信域名，删除后，将不可再使用该域名进行发信
  * @method Models\DeleteEmailTemplateResponse DeleteEmailTemplate(Models\DeleteEmailTemplateRequest $req) 删除发信模板
+ * @method Models\DeleteReceiverResponse DeleteReceiver(Models\DeleteReceiverRequest $req) 根据收件id删除收件人列表,同时删除列表中的所有收件邮箱
  * @method Models\GetEmailIdentityResponse GetEmailIdentity(Models\GetEmailIdentityRequest $req) 获取某个发信域名的配置详情
  * @method Models\GetEmailTemplateResponse GetEmailTemplate(Models\GetEmailTemplateRequest $req) 根据模板ID获取模板详情
  * @method Models\GetSendEmailStatusResponse GetSendEmailStatus(Models\GetSendEmailStatusRequest $req) 获取邮件发送状态。仅支持查询30天之内的数据

@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getProxyGroupId() 获取数据库代理ID
  * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理ID
- * @method integer getProxyCount() 获取代理节点个数
- * @method void setProxyCount(integer $ProxyCount) 设置代理节点个数
- * @method integer getCpu() 获取代理节点核数
- * @method void setCpu(integer $Cpu) 设置代理节点核数
+ * @method integer getProxyCount() 获取代理节点个数，实际规格支持数
+ * @method void setProxyCount(integer $ProxyCount) 设置代理节点个数，实际规格支持数
+ * @method integer getCpu() 获取代理节点核数，实际规格支持数
+ * @method void setCpu(integer $Cpu) 设置代理节点核数，实际规格支持数
  * @method integer getMem() 获取代理节点内存大小
  * @method void setMem(integer $Mem) 设置代理节点内存大小
  * @method string getReloadBalance() 获取重新负载均衡：auto（自动），manual（手动）
@@ -48,12 +48,12 @@ class UpgradeCDBProxyRequest extends AbstractModel
     public $ProxyGroupId;
 
     /**
-     * @var integer 代理节点个数
+     * @var integer 代理节点个数，实际规格支持数
      */
     public $ProxyCount;
 
     /**
-     * @var integer 代理节点核数
+     * @var integer 代理节点核数，实际规格支持数
      */
     public $Cpu;
 
@@ -75,8 +75,8 @@ class UpgradeCDBProxyRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID
      * @param string $ProxyGroupId 数据库代理ID
-     * @param integer $ProxyCount 代理节点个数
-     * @param integer $Cpu 代理节点核数
+     * @param integer $ProxyCount 代理节点个数，实际规格支持数
+     * @param integer $Cpu 代理节点核数，实际规格支持数
      * @param integer $Mem 代理节点内存大小
      * @param string $ReloadBalance 重新负载均衡：auto（自动），manual（手动）
      * @param string $UpgradeTime 升级时间 nowTime（升级完成时）timeWindow（实例维护时间）

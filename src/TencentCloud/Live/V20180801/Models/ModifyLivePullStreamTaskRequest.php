@@ -104,6 +104,24 @@ ResetTaskConfig：任务更新回调。
 1. 单位：秒，配合FileIndex使用。
  * @method string getComment() 获取任务备注。
  * @method void setComment(string $Comment) 设置任务备注。
+ * @method string getBackupSourceType() 获取备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+ * @method void setBackupSourceType(string $BackupSourceType) 设置备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+ * @method string getBackupSourceUrl() 获取备源 URL。
+只允许填一个备源 URL
+ * @method void setBackupSourceUrl(string $BackupSourceUrl) 设置备源 URL。
+只允许填一个备源 URL
  */
 class ModifyLivePullStreamTaskRequest extends AbstractModel
 {
@@ -202,6 +220,23 @@ ResetTaskConfig：任务更新回调。
     public $Comment;
 
     /**
+     * @var string 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+     */
+    public $BackupSourceType;
+
+    /**
+     * @var string 备源 URL。
+只允许填一个备源 URL
+     */
+    public $BackupSourceUrl;
+
+    /**
      * @param string $TaskId 任务Id。
      * @param string $Operator 操作人姓名。
      * @param array $SourceUrls 拉流源url列表。
@@ -244,6 +279,15 @@ ResetTaskConfig：任务更新回调。
 注意：
 1. 单位：秒，配合FileIndex使用。
      * @param string $Comment 任务备注。
+     * @param string $BackupSourceType 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+     * @param string $BackupSourceUrl 备源 URL。
+只允许填一个备源 URL
      */
     function __construct()
     {
@@ -308,6 +352,14 @@ ResetTaskConfig：任务更新回调。
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("BackupSourceType",$param) and $param["BackupSourceType"] !== null) {
+            $this->BackupSourceType = $param["BackupSourceType"];
+        }
+
+        if (array_key_exists("BackupSourceUrl",$param) and $param["BackupSourceUrl"] !== null) {
+            $this->BackupSourceUrl = $param["BackupSourceUrl"];
         }
     }
 }

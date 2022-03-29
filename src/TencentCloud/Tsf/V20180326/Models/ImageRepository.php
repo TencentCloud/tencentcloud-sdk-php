@@ -76,9 +76,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置applicationid值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScalableRule getApplicationName() 获取ApplicationName值
+ * @method ScalableRule getApplicationName() 获取ApplicationName值（类型是string）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApplicationName(ScalableRule $ApplicationName) 设置ApplicationName值
+ * @method void setApplicationName(ScalableRule $ApplicationName) 设置ApplicationName值（类型是string）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageRepository extends AbstractModel
@@ -168,7 +168,7 @@ class ImageRepository extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @var ScalableRule ApplicationName值
+     * @var ScalableRule ApplicationName值（类型是string）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
@@ -202,7 +202,7 @@ class ImageRepository extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId applicationid值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScalableRule $ApplicationName ApplicationName值
+     * @param ScalableRule $ApplicationName ApplicationName值（类型是string）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

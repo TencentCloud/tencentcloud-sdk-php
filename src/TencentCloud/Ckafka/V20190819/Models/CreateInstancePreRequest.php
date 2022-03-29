@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签
  * @method string getDiskType() 获取磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
  * @method void setDiskType(string $DiskType) 设置磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+ * @method boolean getMultiZoneFlag() 获取跨可用区，zoneIds必填
+ * @method void setMultiZoneFlag(boolean $MultiZoneFlag) 设置跨可用区，zoneIds必填
+ * @method array getZoneIds() 获取可用区列表
+ * @method void setZoneIds(array $ZoneIds) 设置可用区列表
  */
 class CreateInstancePreRequest extends AbstractModel
 {
@@ -136,6 +140,16 @@ class CreateInstancePreRequest extends AbstractModel
     public $DiskType;
 
     /**
+     * @var boolean 跨可用区，zoneIds必填
+     */
+    public $MultiZoneFlag;
+
+    /**
+     * @var array 可用区列表
+     */
+    public $ZoneIds;
+
+    /**
      * @param string $InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param integer $ZoneId 可用区
      * @param string $Period 预付费购买时长，例如 "1m",就是一个月
@@ -152,6 +166,8 @@ class CreateInstancePreRequest extends AbstractModel
      * @param integer $Partition 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
      * @param array $Tags 标签
      * @param string $DiskType 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+     * @param boolean $MultiZoneFlag 跨可用区，zoneIds必填
+     * @param array $ZoneIds 可用区列表
      */
     function __construct()
     {
@@ -233,6 +249,14 @@ class CreateInstancePreRequest extends AbstractModel
 
         if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
             $this->DiskType = $param["DiskType"];
+        }
+
+        if (array_key_exists("MultiZoneFlag",$param) and $param["MultiZoneFlag"] !== null) {
+            $this->MultiZoneFlag = $param["MultiZoneFlag"];
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
         }
     }
 }

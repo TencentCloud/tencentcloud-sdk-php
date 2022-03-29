@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置页码，整型，配合 PageSize 使用，默认值为 1。
  * @method integer getPageSize() 获取每页数目，整型，配合 PageNumber 使用，默认值为 20，最大值为 100。
  * @method void setPageSize(integer $PageSize) 设置每页数目，整型，配合 PageNumber 使用，默认值为 20，最大值为 100。
+ * @method string getOrderBy() 获取对指定列进行排序
+ * @method void setOrderBy(string $OrderBy) 设置对指定列进行排序
+ * @method string getOrderByType() 获取排序方式
+ * @method void setOrderByType(string $OrderByType) 设置排序方式
+ * @method integer getAutoRenew() 获取续费管理筛选类型
+ * @method void setAutoRenew(integer $AutoRenew) 设置续费管理筛选类型
+ * @method boolean getBindPhone() 获取超级管理管理员账号是否绑定了手机号
+ * @method void setBindPhone(boolean $BindPhone) 设置超级管理管理员账号是否绑定了手机号
  */
 class DescribeOfficialInstancesRequest extends AbstractModel
 {
@@ -52,10 +60,34 @@ class DescribeOfficialInstancesRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var string 对指定列进行排序
+     */
+    public $OrderBy;
+
+    /**
+     * @var string 排序方式
+     */
+    public $OrderByType;
+
+    /**
+     * @var integer 续费管理筛选类型
+     */
+    public $AutoRenew;
+
+    /**
+     * @var boolean 超级管理管理员账号是否绑定了手机号
+     */
+    public $BindPhone;
+
+    /**
      * @param boolean $SuperAdminAccount 是否查询实例绑定的超级管理员账号，默认值为 false。
      * @param array $InstanceIds 按照一个或者多个实例 ID 查询，每次请求的上限为 100 个。
      * @param integer $PageNumber 页码，整型，配合 PageSize 使用，默认值为 1。
      * @param integer $PageSize 每页数目，整型，配合 PageNumber 使用，默认值为 20，最大值为 100。
+     * @param string $OrderBy 对指定列进行排序
+     * @param string $OrderByType 排序方式
+     * @param integer $AutoRenew 续费管理筛选类型
+     * @param boolean $BindPhone 超级管理管理员账号是否绑定了手机号
      */
     function __construct()
     {
@@ -84,6 +116,22 @@ class DescribeOfficialInstancesRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
+            $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
+        }
+
+        if (array_key_exists("BindPhone",$param) and $param["BindPhone"] !== null) {
+            $this->BindPhone = $param["BindPhone"];
         }
     }
 }

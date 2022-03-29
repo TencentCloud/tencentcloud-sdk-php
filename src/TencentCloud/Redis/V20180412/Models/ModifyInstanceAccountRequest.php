@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountPassword(string $AccountPassword) 设置子账号密码
  * @method string getRemark() 获取子账号描述信息
  * @method void setRemark(string $Remark) 设置子账号描述信息
- * @method array getReadonlyPolicy() 获取子账号路由策略：填写master或者slave，表示路由主节点，从节点
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置子账号路由策略：填写master或者slave，表示路由主节点，从节点
+ * @method array getReadonlyPolicy() 获取路由策略：填写master或者replication，表示主节点或者从节点
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置路由策略：填写master或者replication，表示主节点或者从节点
  * @method string getPrivilege() 获取子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
  * @method void setPrivilege(string $Privilege) 设置子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
  * @method boolean getNoAuth() 获取true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
@@ -58,7 +58,7 @@ class ModifyInstanceAccountRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var array 子账号路由策略：填写master或者slave，表示路由主节点，从节点
+     * @var array 路由策略：填写master或者replication，表示主节点或者从节点
      */
     public $ReadonlyPolicy;
 
@@ -77,7 +77,7 @@ class ModifyInstanceAccountRequest extends AbstractModel
      * @param string $AccountName 子账号名称，如果要修改主账号，填root
      * @param string $AccountPassword 子账号密码
      * @param string $Remark 子账号描述信息
-     * @param array $ReadonlyPolicy 子账号路由策略：填写master或者slave，表示路由主节点，从节点
+     * @param array $ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
      * @param string $Privilege 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
      * @param boolean $NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
      */

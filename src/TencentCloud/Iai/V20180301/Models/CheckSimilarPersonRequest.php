@@ -25,11 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupIds(array $GroupIds) 设置待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
  * @method integer getUniquePersonControl() 获取人员查重整理力度的控制。
-1：力度较高的档案整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
-2：力度较低的档案整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
+1：力度较高的人员整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
+2：力度较低的人员整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
  * @method void setUniquePersonControl(integer $UniquePersonControl) 设置人员查重整理力度的控制。
-1：力度较高的档案整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
-2：力度较低的档案整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
+1：力度较高的人员整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
+2：力度较低的人员整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
  */
 class CheckSimilarPersonRequest extends AbstractModel
 {
@@ -41,8 +41,8 @@ class CheckSimilarPersonRequest extends AbstractModel
 
     /**
      * @var integer 人员查重整理力度的控制。
-1：力度较高的档案整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
-2：力度较低的档案整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
+1：力度较高的人员整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
+2：力度较低的人员整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
      */
     public $UniquePersonControl;
 
@@ -50,8 +50,8 @@ class CheckSimilarPersonRequest extends AbstractModel
      * @param array $GroupIds 待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
      * @param integer $UniquePersonControl 人员查重整理力度的控制。
-1：力度较高的档案整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
-2：力度较低的档案整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
+1：力度较高的人员整理，能够消除更多的重复身份，对应稍高的非重复身份误清除率；
+2：力度较低的人员整理，非重复身份的误清除率较低，对应稍低的重复身份消除率。
      */
     function __construct()
     {

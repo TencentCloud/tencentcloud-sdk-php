@@ -18,26 +18,26 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 画面鉴政任务控制参数。
+ * 画面涉敏任务控制参数。
  *
- * @method string getSwitch() 获取画面鉴政任务开关，可选值：
-<li>ON：开启画面鉴政任务；</li>
-<li>OFF：关闭画面鉴政任务。</li>
- * @method void setSwitch(string $Switch) 设置画面鉴政任务开关，可选值：
-<li>ON：开启画面鉴政任务；</li>
-<li>OFF：关闭画面鉴政任务。</li>
- * @method array getLabelSet() 获取画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
+ * @method string getSwitch() 获取画面涉敏任务开关，可选值：
+<li>ON：开启画面涉敏任务；</li>
+<li>OFF：关闭画面涉敏任务。</li>
+ * @method void setSwitch(string $Switch) 设置画面涉敏任务开关，可选值：
+<li>ON：开启画面涉敏任务；</li>
+<li>OFF：关闭画面涉敏任务。</li>
+ * @method array getLabelSet() 获取画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
-<li>politician：政治人物；</li>
+<li>politician：涉敏人物；</li>
 <li>entertainment：娱乐人物；</li>
 <li>sport：体育人物；</li>
 <li>entrepreneur：商业人物；</li>
 <li>scholar：教育学者；</li>
 <li>celebrity：知名人物；</li>
 <li>military：军事人物。</li>
- * @method void setLabelSet(array $LabelSet) 设置画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
+ * @method void setLabelSet(array $LabelSet) 设置画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
-<li>politician：政治人物；</li>
+<li>politician：涉敏人物；</li>
 <li>entertainment：娱乐人物；</li>
 <li>sport：体育人物；</li>
 <li>entrepreneur：商业人物；</li>
@@ -52,16 +52,16 @@ use TencentCloud\Common\AbstractModel;
 class PoliticalImgReviewTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string 画面鉴政任务开关，可选值：
-<li>ON：开启画面鉴政任务；</li>
-<li>OFF：关闭画面鉴政任务。</li>
+     * @var string 画面涉敏任务开关，可选值：
+<li>ON：开启画面涉敏任务；</li>
+<li>OFF：关闭画面涉敏任务。</li>
      */
     public $Switch;
 
     /**
-     * @var array 画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
+     * @var array 画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
-<li>politician：政治人物；</li>
+<li>politician：涉敏人物；</li>
 <li>entertainment：娱乐人物；</li>
 <li>sport：体育人物；</li>
 <li>entrepreneur：商业人物；</li>
@@ -82,12 +82,12 @@ class PoliticalImgReviewTemplateInfoForUpdate extends AbstractModel
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch 画面鉴政任务开关，可选值：
-<li>ON：开启画面鉴政任务；</li>
-<li>OFF：关闭画面鉴政任务。</li>
-     * @param array $LabelSet 画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
+     * @param string $Switch 画面涉敏任务开关，可选值：
+<li>ON：开启画面涉敏任务；</li>
+<li>OFF：关闭画面涉敏任务。</li>
+     * @param array $LabelSet 画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>violation_photo：违规图标；</li>
-<li>politician：政治人物；</li>
+<li>politician：涉敏人物；</li>
 <li>entertainment：娱乐人物；</li>
 <li>sport：体育人物；</li>
 <li>entrepreneur：商业人物；</li>

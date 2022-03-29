@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSyscallName() 获取系统调用名称
  * @method void setSyscallName(string $SyscallName) 设置系统调用名称
+ * @method string getOperationTime() 获取事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperationTime(string $OperationTime) 设置事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskSyscallEventDescription extends AbstractModel
 {
@@ -55,11 +59,19 @@ class RiskSyscallEventDescription extends AbstractModel
     public $SyscallName;
 
     /**
+     * @var string 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperationTime;
+
+    /**
      * @param string $Description 描述信息
      * @param string $Solution 解决方案
      * @param string $Remark 事件备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SyscallName 系统调用名称
+     * @param string $OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -88,6 +100,10 @@ class RiskSyscallEventDescription extends AbstractModel
 
         if (array_key_exists("SyscallName",$param) and $param["SyscallName"] !== null) {
             $this->SyscallName = $param["SyscallName"];
+        }
+
+        if (array_key_exists("OperationTime",$param) and $param["OperationTime"] !== null) {
+            $this->OperationTime = $param["OperationTime"];
         }
     }
 }

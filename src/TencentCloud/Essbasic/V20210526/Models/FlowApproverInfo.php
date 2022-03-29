@@ -32,8 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadline(integer $Deadline) 设置签署截止时间
  * @method string getCallbackUrl() 获取签署完回调url
  * @method void setCallbackUrl(string $CallbackUrl) 设置签署完回调url
- * @method string getApproverType() 获取签署人类型，PERSON和ORGANIZATION
- * @method void setApproverType(string $ApproverType) 设置签署人类型，PERSON和ORGANIZATION
+ * @method string getApproverType() 获取签署人类型，PERSON-个人；ORGANIZATION-企业；
+ENTERPRISESERVER-企业静默签;
+注：ENTERPRISESERVER 类型仅用于使用文件创建流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+ * @method void setApproverType(string $ApproverType) 设置签署人类型，PERSON-个人；ORGANIZATION-企业；
+ENTERPRISESERVER-企业静默签;
+注：ENTERPRISESERVER 类型仅用于使用文件创建流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
  * @method string getOpenId() 获取用户侧第三方id
  * @method void setOpenId(string $OpenId) 设置用户侧第三方id
  * @method integer getPreReadTime() 获取合同的强制预览时间：3~300s，未指定则按合同页数计算
@@ -46,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganizationName(string $OrganizationName) 设置企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传；
  * @method string getOrganizationOpenId() 获取企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传；
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传；
+ * @method boolean getNotChannelOrganization() 获取指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
+ * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
+ * @method array getSignComponents() 获取使用PDF文件直接发起合同时，签署人指定的签署控件
+ * @method void setSignComponents(array $SignComponents) 设置使用PDF文件直接发起合同时，签署人指定的签署控件
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -80,7 +90,9 @@ class FlowApproverInfo extends AbstractModel
     public $CallbackUrl;
 
     /**
-     * @var string 签署人类型，PERSON和ORGANIZATION
+     * @var string 签署人类型，PERSON-个人；ORGANIZATION-企业；
+ENTERPRISESERVER-企业静默签;
+注：ENTERPRISESERVER 类型仅用于使用文件创建流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
      */
     public $ApproverType;
 
@@ -115,19 +127,35 @@ class FlowApproverInfo extends AbstractModel
     public $OrganizationOpenId;
 
     /**
+     * @var boolean 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
+     */
+    public $NotChannelOrganization;
+
+    /**
+     * @var array 使用PDF文件直接发起合同时，签署人指定的签署控件
+     */
+    public $SignComponents;
+
+    /**
      * @param string $Name 签署人姓名
      * @param string $IdCardNumber 经办人身份证号
      * @param string $Mobile 签署人手机号，脱敏显示
      * @param string $JumpUrl 签署完前端跳转的url，暂未使用
      * @param integer $Deadline 签署截止时间
      * @param string $CallbackUrl 签署完回调url
-     * @param string $ApproverType 签署人类型，PERSON和ORGANIZATION
+     * @param string $ApproverType 签署人类型，PERSON-个人；ORGANIZATION-企业；
+ENTERPRISESERVER-企业静默签;
+注：ENTERPRISESERVER 类型仅用于使用文件创建流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
      * @param string $OpenId 用户侧第三方id
      * @param integer $PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
      * @param array $ComponentLimitType 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
      * @param string $RecipientId 流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在流程中的位置；
      * @param string $OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传；
      * @param string $OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传；
+     * @param boolean $NotChannelOrganization 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个渠道应用号下；
+     * @param array $SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件
      */
     function __construct()
     {
@@ -192,6 +220,19 @@ class FlowApproverInfo extends AbstractModel
 
         if (array_key_exists("OrganizationOpenId",$param) and $param["OrganizationOpenId"] !== null) {
             $this->OrganizationOpenId = $param["OrganizationOpenId"];
+        }
+
+        if (array_key_exists("NotChannelOrganization",$param) and $param["NotChannelOrganization"] !== null) {
+            $this->NotChannelOrganization = $param["NotChannelOrganization"];
+        }
+
+        if (array_key_exists("SignComponents",$param) and $param["SignComponents"] !== null) {
+            $this->SignComponents = [];
+            foreach ($param["SignComponents"] as $key => $value){
+                $obj = new Component();
+                $obj->deserialize($value);
+                array_push($this->SignComponents, $obj);
+            }
         }
     }
 }

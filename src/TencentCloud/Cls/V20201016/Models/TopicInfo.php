@@ -50,9 +50,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(string $StorageType) 设置日主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPeriod() 获取生命周期，单位为天
+ * @method integer getPeriod() 获取生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPeriod(integer $Period) 设置生命周期，单位为天
+ * @method void setPeriod(integer $Period) 设置生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicInfo extends AbstractModel
@@ -117,7 +117,7 @@ class TopicInfo extends AbstractModel
     public $StorageType;
 
     /**
-     * @var integer 生命周期，单位为天
+     * @var integer 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
@@ -138,7 +138,7 @@ class TopicInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StorageType 日主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Period 生命周期，单位为天
+     * @param integer $Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

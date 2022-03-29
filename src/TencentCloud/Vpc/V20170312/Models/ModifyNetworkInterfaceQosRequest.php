@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getNetworkInterfaceIds() 获取弹性网卡ID，支持批量修改。
  * @method void setNetworkInterfaceIds(array $NetworkInterfaceIds) 设置弹性网卡ID，支持批量修改。
- * @method string getQosLevel() 获取服务质量，可选值：AU、AG、PT，分别代表金、银、白金三个等级。
- * @method void setQosLevel(string $QosLevel) 设置服务质量，可选值：AU、AG、PT，分别代表金、银、白金三个等级。
+ * @method string getQosLevel() 获取服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+ * @method void setQosLevel(string $QosLevel) 设置服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
  */
 class ModifyNetworkInterfaceQosRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyNetworkInterfaceQosRequest extends AbstractModel
     public $NetworkInterfaceIds;
 
     /**
-     * @var string 服务质量，可选值：AU、AG、PT，分别代表金、银、白金三个等级。
+     * @var string 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
      */
     public $QosLevel;
 
     /**
      * @param array $NetworkInterfaceIds 弹性网卡ID，支持批量修改。
-     * @param string $QosLevel 服务质量，可选值：AU、AG、PT，分别代表金、银、白金三个等级。
+     * @param string $QosLevel 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
      */
     function __construct()
     {

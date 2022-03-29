@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getProxyGroupId() 获取代理组ID
  * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
- * @method boolean getOnlyCloseRW() 获取是否只关闭读写分离，取值："true" | "false"
- * @method void setOnlyCloseRW(boolean $OnlyCloseRW) 设置是否只关闭读写分离，取值："true" | "false"
+ * @method boolean getOnlyCloseRW() 获取是否只关闭读写分离，取值："true" | "false"，默认为"false"
+ * @method void setOnlyCloseRW(boolean $OnlyCloseRW) 设置是否只关闭读写分离，取值："true" | "false"，默认为"false"
  */
 class CloseCDBProxyRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CloseCDBProxyRequest extends AbstractModel
     public $ProxyGroupId;
 
     /**
-     * @var boolean 是否只关闭读写分离，取值："true" | "false"
+     * @var boolean 是否只关闭读写分离，取值："true" | "false"，默认为"false"
      */
     public $OnlyCloseRW;
 
     /**
      * @param string $InstanceId 实例ID
      * @param string $ProxyGroupId 代理组ID
-     * @param boolean $OnlyCloseRW 是否只关闭读写分离，取值："true" | "false"
+     * @param boolean $OnlyCloseRW 是否只关闭读写分离，取值："true" | "false"，默认为"false"
      */
     function __construct()
     {

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterStatus(string $FilterStatus) 设置状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
  * @method string getFilterBoundStatus() 获取高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
  * @method void setFilterBoundStatus(string $FilterBoundStatus) 设置高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
+ * @method array getFilterInstanceIdList() 获取实例id数组
+ * @method void setFilterInstanceIdList(array $FilterInstanceIdList) 设置实例id数组
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterBoundStatus;
 
     /**
+     * @var array 实例id数组
+     */
+    public $FilterInstanceIdList;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -96,6 +103,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param integer $FilterLine 按照线路搜索, 1: BGP; 2: 三网
      * @param string $FilterStatus 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
      * @param string $FilterBoundStatus 高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
+     * @param array $FilterInstanceIdList 实例id数组
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeListBGPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterBoundStatus",$param) and $param["FilterBoundStatus"] !== null) {
             $this->FilterBoundStatus = $param["FilterBoundStatus"];
+        }
+
+        if (array_key_exists("FilterInstanceIdList",$param) and $param["FilterInstanceIdList"] !== null) {
+            $this->FilterInstanceIdList = $param["FilterInstanceIdList"];
         }
     }
 }

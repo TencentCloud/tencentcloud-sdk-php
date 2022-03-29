@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputFormat(string $InputFormat) 设置数据格式。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStorageSize() 获取数据表存储大小（单位：Byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorageSize(integer $StorageSize) 设置数据表存储大小（单位：Byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRecordCount() 获取数据表行数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordCount(integer $RecordCount) 设置数据表行数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableResponseInfo extends AbstractModel
 {
@@ -101,6 +109,18 @@ class TableResponseInfo extends AbstractModel
     public $InputFormat;
 
     /**
+     * @var integer 数据表存储大小（单位：Byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StorageSize;
+
+    /**
+     * @var integer 数据表行数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordCount;
+
+    /**
      * @param TableBaseInfo $TableBaseInfo 数据表基本信息。
      * @param array $Columns 数据表列信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,6 +135,10 @@ class TableResponseInfo extends AbstractModel
      * @param string $CreateTime 数据表创建时间,单位: ms。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputFormat 数据格式。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StorageSize 数据表存储大小（单位：Byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RecordCount 数据表行数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +200,14 @@ class TableResponseInfo extends AbstractModel
 
         if (array_key_exists("InputFormat",$param) and $param["InputFormat"] !== null) {
             $this->InputFormat = $param["InputFormat"];
+        }
+
+        if (array_key_exists("StorageSize",$param) and $param["StorageSize"] !== null) {
+            $this->StorageSize = $param["StorageSize"];
+        }
+
+        if (array_key_exists("RecordCount",$param) and $param["RecordCount"] !== null) {
+            $this->RecordCount = $param["RecordCount"];
         }
     }
 }

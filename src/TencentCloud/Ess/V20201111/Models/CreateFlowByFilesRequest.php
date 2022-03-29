@@ -54,6 +54,8 @@ MULTI_LINE_TEXT - 多行文本控件
 注：默认字体大小为 字号12
  * @method array getCcInfos() 获取被抄送人的信息列表
  * @method void setCcInfos(array $CcInfos) 设置被抄送人的信息列表
+ * @method boolean getNeedPreview() 获取是否需要预览，true：预览模式，false：非预览（默认）
+ * @method void setNeedPreview(boolean $NeedPreview) 设置是否需要预览，true：预览模式，false：非预览（默认）
  */
 class CreateFlowByFilesRequest extends AbstractModel
 {
@@ -119,6 +121,11 @@ MULTI_LINE_TEXT - 多行文本控件
     public $CcInfos;
 
     /**
+     * @var boolean 是否需要预览，true：预览模式，false：非预览（默认）
+     */
+    public $NeedPreview;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息
      * @param string $FlowName 流程名称
      * @param array $FileIds 签署pdf文件的资源编号列表
@@ -136,6 +143,7 @@ TEXT - 内容文本控件
 MULTI_LINE_TEXT - 多行文本控件
 注：默认字体大小为 字号12
      * @param array $CcInfos 被抄送人的信息列表
+     * @param boolean $NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）
      */
     function __construct()
     {
@@ -209,6 +217,10 @@ MULTI_LINE_TEXT - 多行文本控件
                 $obj->deserialize($value);
                 array_push($this->CcInfos, $obj);
             }
+        }
+
+        if (array_key_exists("NeedPreview",$param) and $param["NeedPreview"] !== null) {
+            $this->NeedPreview = $param["NeedPreview"];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 简单加密加解密秘钥对。
+ * 简单加密加解密密钥对。
  *
  * @method string getEdk() 获取加密后的数据密钥。
  * @method void setEdk(string $Edk) 设置加密后的数据密钥。

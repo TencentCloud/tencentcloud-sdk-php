@@ -152,6 +152,24 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
 示例: ignore_region  用于忽略传入地域, 内部按负载分配。
  * @method string getComment() 获取任务描述，限制 512 字节。
  * @method void setComment(string $Comment) 设置任务描述，限制 512 字节。
+ * @method string getBackupSourceType() 获取备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+ * @method void setBackupSourceType(string $BackupSourceType) 设置备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+ * @method string getBackupSourceUrl() 获取备源 URL。
+只允许填一个备源 URL
+ * @method void setBackupSourceUrl(string $BackupSourceUrl) 设置备源 URL。
+只允许填一个备源 URL
  */
 class CreateLivePullStreamTaskRequest extends AbstractModel
 {
@@ -282,6 +300,23 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
     public $Comment;
 
     /**
+     * @var string 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+     */
+    public $BackupSourceType;
+
+    /**
+     * @var string 备源 URL。
+只允许填一个备源 URL
+     */
+    public $BackupSourceUrl;
+
+    /**
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
@@ -348,6 +383,15 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
      * @param string $ExtraCmd 其他参数。
 示例: ignore_region  用于忽略传入地域, 内部按负载分配。
      * @param string $Comment 任务描述，限制 512 字节。
+     * @param string $BackupSourceType 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+     * @param string $BackupSourceUrl 备源 URL。
+只允许填一个备源 URL
      */
     function __construct()
     {
@@ -420,6 +464,14 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("BackupSourceType",$param) and $param["BackupSourceType"] !== null) {
+            $this->BackupSourceType = $param["BackupSourceType"];
+        }
+
+        if (array_key_exists("BackupSourceUrl",$param) and $param["BackupSourceUrl"] !== null) {
+            $this->BackupSourceUrl = $param["BackupSourceUrl"];
         }
     }
 }

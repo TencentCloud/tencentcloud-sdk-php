@@ -18,28 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 鉴恐任务控制参数
+ * 涉敏任务控制参数
  *
- * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() 获取画面鉴恐任务控制参数。
- * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) 设置画面鉴恐任务控制参数。
- * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() 获取文本鉴恐任务控制参数。
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) 设置文本鉴恐任务控制参数。
+ * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() 获取画面涉敏任务控制参数。
+ * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) 设置画面涉敏任务控制参数。
+ * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() 获取文本涉敏任务控制参数。
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) 设置文本涉敏任务控制参数。
  */
 class TerrorismConfigureInfo extends AbstractModel
 {
     /**
-     * @var TerrorismImgReviewTemplateInfo 画面鉴恐任务控制参数。
+     * @var TerrorismImgReviewTemplateInfo 画面涉敏任务控制参数。
      */
     public $ImgReviewInfo;
 
     /**
-     * @var TerrorismOcrReviewTemplateInfo 文本鉴恐任务控制参数。
+     * @var TerrorismOcrReviewTemplateInfo 文本涉敏任务控制参数。
      */
     public $OcrReviewInfo;
 
     /**
-     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo 画面鉴恐任务控制参数。
-     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo 文本鉴恐任务控制参数。
+     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo 画面涉敏任务控制参数。
+     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo 文本涉敏任务控制参数。
      */
     function __construct()
     {

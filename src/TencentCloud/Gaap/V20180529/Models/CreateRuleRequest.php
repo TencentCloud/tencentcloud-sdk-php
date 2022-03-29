@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 不传递该字段时表示使用对应监听器的ForwardProtocol。
  * @method void setForwardProtocol(string $ForwardProtocol) 设置加速通道转发到源站的协议类型：支持HTTP或HTTPS。
 不传递该字段时表示使用对应监听器的ForwardProtocol。
- * @method string getForwardHost() 获取回源Host。加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
- * @method void setForwardHost(string $ForwardHost) 设置回源Host。加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+ * @method string getForwardHost() 获取回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+ * @method void setForwardHost(string $ForwardHost) 设置回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
  * @method string getServerNameIndicationSwitch() 获取服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
  * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) 设置服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
  * @method string getServerNameIndication() 获取服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
@@ -89,7 +89,7 @@ class CreateRuleRequest extends AbstractModel
     public $ForwardProtocol;
 
     /**
-     * @var string 回源Host。加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     * @var string 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
      */
     public $ForwardHost;
 
@@ -113,7 +113,7 @@ class CreateRuleRequest extends AbstractModel
      * @param RuleCheckParams $CheckParams 源站健康检查相关参数
      * @param string $ForwardProtocol 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
 不传递该字段时表示使用对应监听器的ForwardProtocol。
-     * @param string $ForwardHost 回源Host。加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     * @param string $ForwardHost 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
      * @param string $ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
      * @param string $ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
      */

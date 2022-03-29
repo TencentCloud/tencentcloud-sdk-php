@@ -33,9 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBankBranchId() 获取联行号。渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选
  * @method void setBankBranchId(string $BankBranchId) 设置联行号。渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选
  * @method string getBindSerialNo() 获取收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
  * @method void setBindSerialNo(string $BindSerialNo) 设置收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
  */
 class OpenBankPayeeInfo extends AbstractModel
 {
@@ -67,7 +67,7 @@ class OpenBankPayeeInfo extends AbstractModel
 
     /**
      * @var string 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
      */
     public $BindSerialNo;
 
@@ -79,7 +79,7 @@ class OpenBankPayeeInfo extends AbstractModel
      * @param string $BankBranchName 支行名称。
      * @param string $BankBranchId 联行号。渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选
      * @param string $BindSerialNo 收款方绑卡序列号。
-当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
      */
     function __construct()
     {

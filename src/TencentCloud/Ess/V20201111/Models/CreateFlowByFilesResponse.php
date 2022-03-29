@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowId() 获取流程编号
  * @method void setFlowId(string $FlowId) 设置流程编号
+ * @method string getPreviewUrl() 获取合同预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreviewUrl(string $PreviewUrl) 设置合同预览链接
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class CreateFlowByFilesResponse extends AbstractModel
     public $FlowId;
 
     /**
+     * @var string 合同预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreviewUrl;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $FlowId 流程编号
+     * @param string $PreviewUrl 合同预览链接
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,10 @@ class CreateFlowByFilesResponse extends AbstractModel
         }
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
+            $this->PreviewUrl = $param["PreviewUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

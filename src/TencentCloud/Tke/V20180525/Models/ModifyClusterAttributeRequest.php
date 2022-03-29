@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getClusterDesc() 获取集群描述
  * @method void setClusterDesc(string $ClusterDesc) 设置集群描述
+ * @method string getClusterLevel() 获取集群等级
+ * @method void setClusterLevel(string $ClusterLevel) 设置集群等级
+ * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() 获取自动变配集群等级
+ * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) 设置自动变配集群等级
  */
 class ModifyClusterAttributeRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyClusterAttributeRequest extends AbstractModel
     public $ClusterDesc;
 
     /**
+     * @var string 集群等级
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var AutoUpgradeClusterLevel 自动变配集群等级
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $ProjectId 集群所属项目
      * @param string $ClusterName 集群名称
      * @param string $ClusterDesc 集群描述
+     * @param string $ClusterLevel 集群等级
+     * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级
      */
     function __construct()
     {
@@ -84,6 +100,15 @@ class ModifyClusterAttributeRequest extends AbstractModel
 
         if (array_key_exists("ClusterDesc",$param) and $param["ClusterDesc"] !== null) {
             $this->ClusterDesc = $param["ClusterDesc"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel();
+            $this->AutoUpgradeClusterLevel->deserialize($param["AutoUpgradeClusterLevel"]);
         }
     }
 }

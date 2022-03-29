@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowInfos(array $FlowInfos) 设置多个合同（流程）信息
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method boolean getNeedPreview() 获取是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+ * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
  */
 class CreateFlowsByTemplatesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var boolean 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+     */
+    public $NeedPreview;
+
+    /**
      * @param Agent $Agent 渠道应用相关信息
      * @param array $FlowInfos 多个合同（流程）信息
      * @param UserInfo $Operator 操作者的信息
+     * @param boolean $NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
      */
     function __construct()
     {
@@ -79,6 +87,10 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("NeedPreview",$param) and $param["NeedPreview"] !== null) {
+            $this->NeedPreview = $param["NeedPreview"];
         }
     }
 }

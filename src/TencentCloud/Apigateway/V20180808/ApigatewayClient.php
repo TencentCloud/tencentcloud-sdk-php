@@ -72,7 +72,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) 本接口（DescribeApiKey）用于查询密钥详情。
 用户在创建密钥后，可用此接口查询一个 API 密钥的详情，该接口会显示密钥 Key。
  * @method Models\DescribeApiKeysStatusResponse DescribeApiKeysStatus(Models\DescribeApiKeysStatusRequest $req) 本接口（DescribeApiKeysStatus）用于查询密钥列表。
-当用户创建了多个密钥对时，可使用本接口查询一个或多个 API 密钥信息，本接口不会显示密钥 Key。
+当用户创建了多个密钥对时，可使用本接口查询一个或多个 API 密钥信息。
  * @method Models\DescribeApiUsagePlanResponse DescribeApiUsagePlan(Models\DescribeApiUsagePlanRequest $req) 本接口（DescribeApiUsagePlan）用于查询服务中 API 使用计划详情。
 服务若需要鉴权限流生效，则需要绑定使用计划到此服务中，本接口用于查询绑定到一个服务及其中 API 的所有使用计划。
  * @method Models\DescribeApisStatusResponse DescribeApisStatus(Models\DescribeApisStatusRequest $req) 本接口（DescribeApisStatus）用于查看一个服务下的某个 API 或所有 API 列表及其相关信息。

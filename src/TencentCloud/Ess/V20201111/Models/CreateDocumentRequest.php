@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置应用相关信息
  * @method string getClientToken() 获取客户端Token，保持接口幂等性
  * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性
+ * @method boolean getNeedPreview() 获取是否需要生成预览文件 默认不生成
+ * @method void setNeedPreview(boolean $NeedPreview) 设置是否需要生成预览文件 默认不生成
  */
 class CreateDocumentRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateDocumentRequest extends AbstractModel
     public $ClientToken;
 
     /**
+     * @var boolean 是否需要生成预览文件 默认不生成
+     */
+    public $NeedPreview;
+
+    /**
      * @param UserInfo $Operator 无
      * @param string $TemplateId 用户上传的模版ID
      * @param string $FlowId 流程ID
@@ -80,6 +87,7 @@ class CreateDocumentRequest extends AbstractModel
      * @param array $FormFields 内容控件信息数组
      * @param Agent $Agent 应用相关信息
      * @param string $ClientToken 客户端Token，保持接口幂等性
+     * @param boolean $NeedPreview 是否需要生成预览文件 默认不生成
      */
     function __construct()
     {
@@ -127,6 +135,10 @@ class CreateDocumentRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("NeedPreview",$param) and $param["NeedPreview"] !== null) {
+            $this->NeedPreview = $param["NeedPreview"];
         }
     }
 }

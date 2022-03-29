@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAlarmPolicyNotice请求参数结构体
  *
- * @method string getModule() 获取模块名，这里填“monitor”
- * @method void setModule(string $Module) 设置模块名，这里填“monitor”
- * @method string getPolicyId() 获取告警策略 ID
- * @method void setPolicyId(string $PolicyId) 设置告警策略 ID
- * @method array getNoticeIds() 获取告警通知模板 ID 列表
- * @method void setNoticeIds(array $NoticeIds) 设置告警通知模板 ID 列表
+ * @method string getModule() 获取模块名，这里填“monitor”。
+ * @method void setModule(string $Module) 设置模块名，这里填“monitor”。
+ * @method string getPolicyId() 获取告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
+ * @method void setPolicyId(string $PolicyId) 设置告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
+ * @method array getNoticeIds() 获取告警通知模板 ID 列表。
+ * @method void setNoticeIds(array $NoticeIds) 设置告警通知模板 ID 列表。
+ * @method array getPolicyIds() 获取告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
+ * @method void setPolicyIds(array $PolicyIds) 设置告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
  */
 class ModifyAlarmPolicyNoticeRequest extends AbstractModel
 {
     /**
-     * @var string 模块名，这里填“monitor”
+     * @var string 模块名，这里填“monitor”。
      */
     public $Module;
 
     /**
-     * @var string 告警策略 ID
+     * @var string 告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
      */
     public $PolicyId;
 
     /**
-     * @var array 告警通知模板 ID 列表
+     * @var array 告警通知模板 ID 列表。
      */
     public $NoticeIds;
 
     /**
-     * @param string $Module 模块名，这里填“monitor”
-     * @param string $PolicyId 告警策略 ID
-     * @param array $NoticeIds 告警通知模板 ID 列表
+     * @var array 告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
+     */
+    public $PolicyIds;
+
+    /**
+     * @param string $Module 模块名，这里填“monitor”。
+     * @param string $PolicyId 告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
+     * @param array $NoticeIds 告警通知模板 ID 列表。
+     * @param array $PolicyIds 告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyAlarmPolicyNoticeRequest extends AbstractModel
 
         if (array_key_exists("NoticeIds",$param) and $param["NoticeIds"] !== null) {
             $this->NoticeIds = $param["NoticeIds"];
+        }
+
+        if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
+            $this->PolicyIds = $param["PolicyIds"];
         }
     }
 }

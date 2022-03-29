@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 成功为“”,创建失败则对应失败消息
  * @method void setErrorMessages(array $ErrorMessages) 设置创建消息，对应多个合同ID，
 成功为“”,创建失败则对应失败消息
+ * @method array getPreviewUrls() 获取预览模式下返回的预览文件url数组
+ * @method void setPreviewUrls(array $PreviewUrls) 设置预览模式下返回的预览文件url数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,6 +52,11 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
     public $ErrorMessages;
 
     /**
+     * @var array 预览模式下返回的预览文件url数组
+     */
+    public $PreviewUrls;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -59,6 +66,7 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
      * @param array $CustomerData 渠道的业务信息，限制1024字符
      * @param array $ErrorMessages 创建消息，对应多个合同ID，
 成功为“”,创建失败则对应失败消息
+     * @param array $PreviewUrls 预览模式下返回的预览文件url数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -84,6 +92,10 @@ class CreateFlowsByTemplatesResponse extends AbstractModel
 
         if (array_key_exists("ErrorMessages",$param) and $param["ErrorMessages"] !== null) {
             $this->ErrorMessages = $param["ErrorMessages"];
+        }
+
+        if (array_key_exists("PreviewUrls",$param) and $param["PreviewUrls"] !== null) {
+            $this->PreviewUrls = $param["PreviewUrls"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

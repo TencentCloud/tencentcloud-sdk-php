@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionBytes(integer $RetentionBytes) 设置可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
+ * @method integer getQuotaProducerByteRate() 获取生产限流，单位 MB/s
+ * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) 设置生产限流，单位 MB/s
+ * @method integer getQuotaConsumerByteRate() 获取消费限流，单位 MB/s
+ * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) 设置消费限流，单位 MB/s
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -129,6 +133,16 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 生产限流，单位 MB/s
+     */
+    public $QuotaProducerByteRate;
+
+    /**
+     * @var integer 消费限流，单位 MB/s
+     */
+    public $QuotaConsumerByteRate;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $TopicName 主题名称。
      * @param string $Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
@@ -144,6 +158,8 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param string $AclRuleName 预设ACL规则的名称
      * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
      * @param array $Tags 标签列表
+     * @param integer $QuotaProducerByteRate 生产限流，单位 MB/s
+     * @param integer $QuotaConsumerByteRate 消费限流，单位 MB/s
      */
     function __construct()
     {
@@ -221,6 +237,14 @@ class ModifyTopicAttributesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("QuotaProducerByteRate",$param) and $param["QuotaProducerByteRate"] !== null) {
+            $this->QuotaProducerByteRate = $param["QuotaProducerByteRate"];
+        }
+
+        if (array_key_exists("QuotaConsumerByteRate",$param) and $param["QuotaConsumerByteRate"] !== null) {
+            $this->QuotaConsumerByteRate = $param["QuotaConsumerByteRate"];
         }
     }
 }

@@ -68,9 +68,13 @@ OPENBANK_PAYMENT
  * @method void setRedirectInfo(OpenBankRedirectInfo $RedirectInfo) 设置重定向参数，用于客户端跳转，订单未支付时返回该参数
 渠道为TENPAY，付款方式为EBANK_PAYMENT时返回
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExternalReturnData() 获取第三方渠道返回信息，见渠道特殊说明
+ * @method string getExternalReturnData() 获取第三方渠道返回信息，见渠道特殊说明,详情见附录-复杂类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExternalReturnData(string $ExternalReturnData) 设置第三方渠道返回信息，见渠道特殊说明
+ * @method void setExternalReturnData(string $ExternalReturnData) 设置第三方渠道返回信息，见渠道特殊说明,详情见附录-复杂类型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OpenBankApprovalGuideInfo getBankApprovalGuideInfo() 获取银行复核指引。当TENPAY下OPENBANT_PAYMENT时，下单受理成功是返回。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBankApprovalGuideInfo(OpenBankApprovalGuideInfo $BankApprovalGuideInfo) 设置银行复核指引。当TENPAY下OPENBANT_PAYMENT时，下单受理成功是返回。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueryOpenBankPaymentOrderResult extends AbstractModel
@@ -148,10 +152,16 @@ OPENBANK_PAYMENT
     public $RedirectInfo;
 
     /**
-     * @var string 第三方渠道返回信息，见渠道特殊说明
+     * @var string 第三方渠道返回信息，见渠道特殊说明,详情见附录-复杂类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExternalReturnData;
+
+    /**
+     * @var OpenBankApprovalGuideInfo 银行复核指引。当TENPAY下OPENBANT_PAYMENT时，下单受理成功是返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BankApprovalGuideInfo;
 
     /**
      * @param string $ChannelMerchantId 渠道商户号。外部接入平台入驻云企付平台下发
@@ -178,7 +188,9 @@ OPENBANK_PAYMENT
      * @param OpenBankRedirectInfo $RedirectInfo 重定向参数，用于客户端跳转，订单未支付时返回该参数
 渠道为TENPAY，付款方式为EBANK_PAYMENT时返回
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExternalReturnData 第三方渠道返回信息，见渠道特殊说明
+     * @param string $ExternalReturnData 第三方渠道返回信息，见渠道特殊说明,详情见附录-复杂类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OpenBankApprovalGuideInfo $BankApprovalGuideInfo 银行复核指引。当TENPAY下OPENBANT_PAYMENT时，下单受理成功是返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -245,6 +257,11 @@ OPENBANK_PAYMENT
 
         if (array_key_exists("ExternalReturnData",$param) and $param["ExternalReturnData"] !== null) {
             $this->ExternalReturnData = $param["ExternalReturnData"];
+        }
+
+        if (array_key_exists("BankApprovalGuideInfo",$param) and $param["BankApprovalGuideInfo"] !== null) {
+            $this->BankApprovalGuideInfo = new OpenBankApprovalGuideInfo();
+            $this->BankApprovalGuideInfo->deserialize($param["BankApprovalGuideInfo"]);
         }
     }
 }

@@ -18,14 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 文本鉴恐任务控制参数
+ * 文本涉敏任务控制参数
  *
- * @method string getSwitch() 获取文本鉴恐任务开关，可选值：
-<li>ON：开启文本鉴恐任务；</li>
-<li>OFF：关闭文本鉴恐任务。</li>
- * @method void setSwitch(string $Switch) 设置文本鉴恐任务开关，可选值：
-<li>ON：开启文本鉴恐任务；</li>
-<li>OFF：关闭文本鉴恐任务。</li>
+ * @method string getSwitch() 获取文本涉敏任务开关，可选值：
+<li>ON：开启文本涉敏任务；</li>
+<li>OFF：关闭文本涉敏任务。</li>
+ * @method void setSwitch(string $Switch) 设置文本涉敏任务开关，可选值：
+<li>ON：开启文本涉敏任务；</li>
+<li>OFF：关闭文本涉敏任务。</li>
  * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
  * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
  * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class TerrorismOcrReviewTemplateInfo extends AbstractModel
 {
     /**
-     * @var string 文本鉴恐任务开关，可选值：
-<li>ON：开启文本鉴恐任务；</li>
-<li>OFF：关闭文本鉴恐任务。</li>
+     * @var string 文本涉敏任务开关，可选值：
+<li>ON：开启文本涉敏任务；</li>
+<li>OFF：关闭文本涉敏任务。</li>
      */
     public $Switch;
 
@@ -51,9 +51,9 @@ class TerrorismOcrReviewTemplateInfo extends AbstractModel
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch 文本鉴恐任务开关，可选值：
-<li>ON：开启文本鉴恐任务；</li>
-<li>OFF：关闭文本鉴恐任务。</li>
+     * @param string $Switch 文本涉敏任务开关，可选值：
+<li>ON：开启文本涉敏任务；</li>
+<li>OFF：关闭文本涉敏任务。</li>
      * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
      * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
      */

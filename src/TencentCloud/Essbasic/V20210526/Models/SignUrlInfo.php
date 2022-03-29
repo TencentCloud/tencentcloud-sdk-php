@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignUrl(string $SignUrl) 设置签署链接
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeadline() 获取链接失效时间
+ * @method integer getDeadline() 获取链接失效时间,默认30分钟
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeadline(integer $Deadline) 设置链接失效时间
+ * @method void setDeadline(integer $Deadline) 设置链接失效时间,默认30分钟
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSignOrder() 获取当流程为顺序签署此参数有效时，数字越小优先级越高，暂不支持并行签署 可选
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,7 +82,7 @@ class SignUrlInfo extends AbstractModel
     public $SignUrl;
 
     /**
-     * @var integer 链接失效时间
+     * @var integer 链接失效时间,默认30分钟
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deadline;
@@ -152,7 +152,7 @@ PERSON 自然人
     /**
      * @param string $SignUrl 签署链接
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Deadline 链接失效时间
+     * @param integer $Deadline 链接失效时间,默认30分钟
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SignOrder 当流程为顺序签署此参数有效时，数字越小优先级越高，暂不支持并行签署 可选
 注意：此字段可能返回 null，表示取不到有效值。

@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method string getSubnetId() 获取NAT网关所属子网
  * @method void setSubnetId(string $SubnetId) 设置NAT网关所属子网
+ * @method integer getStockPublicIpAddressesBandwidthOut() 获取绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+ * @method void setStockPublicIpAddressesBandwidthOut(integer $StockPublicIpAddressesBandwidthOut) 设置绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+ * @method integer getPublicIpAddressesBandwidthOut() 获取需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+ * @method void setPublicIpAddressesBandwidthOut(integer $PublicIpAddressesBandwidthOut) 设置需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+ * @method boolean getPublicIpFromSameZone() 获取公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+ * @method void setPublicIpFromSameZone(boolean $PublicIpFromSameZone) 设置公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -87,6 +93,21 @@ class CreateNatGatewayRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var integer 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public $StockPublicIpAddressesBandwidthOut;
+
+    /**
+     * @var integer 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     */
+    public $PublicIpAddressesBandwidthOut;
+
+    /**
+     * @var boolean 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+     */
+    public $PublicIpFromSameZone;
+
+    /**
      * @param string $NatGatewayName NAT网关名称
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param integer $InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
@@ -96,6 +117,9 @@ class CreateNatGatewayRequest extends AbstractModel
      * @param string $Zone 可用区，形如：`ap-guangzhou-1`。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      * @param string $SubnetId NAT网关所属子网
+     * @param integer $StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * @param integer $PublicIpAddressesBandwidthOut 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * @param boolean $PublicIpFromSameZone 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
      */
     function __construct()
     {
@@ -149,6 +173,18 @@ class CreateNatGatewayRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("StockPublicIpAddressesBandwidthOut",$param) and $param["StockPublicIpAddressesBandwidthOut"] !== null) {
+            $this->StockPublicIpAddressesBandwidthOut = $param["StockPublicIpAddressesBandwidthOut"];
+        }
+
+        if (array_key_exists("PublicIpAddressesBandwidthOut",$param) and $param["PublicIpAddressesBandwidthOut"] !== null) {
+            $this->PublicIpAddressesBandwidthOut = $param["PublicIpAddressesBandwidthOut"];
+        }
+
+        if (array_key_exists("PublicIpFromSameZone",$param) and $param["PublicIpFromSameZone"] !== null) {
+            $this->PublicIpFromSameZone = $param["PublicIpFromSameZone"];
         }
     }
 }

@@ -128,6 +128,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbClusterInfoStruct(string $DbClusterInfoStruct) 设置表格分布式索引/缓写、kafka数据订阅信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTxhBackupExpireDay() 获取表格Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) 设置表格Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableInfoNew extends AbstractModel
 {
@@ -294,6 +298,12 @@ class TableInfoNew extends AbstractModel
     public $DbClusterInfoStruct;
 
     /**
+     * @var integer 表格Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TxhBackupExpireDay;
+
+    /**
      * @param string $TableName 表格名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableInstanceId 表格实例ID
@@ -347,6 +357,8 @@ class TableInfoNew extends AbstractModel
      * @param integer $SortRule SORTLIST类型表格排序顺序
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbClusterInfoStruct 表格分布式索引/缓写、kafka数据订阅信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TxhBackupExpireDay 表格Txh备份文件多少天后过期删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -474,6 +486,10 @@ class TableInfoNew extends AbstractModel
 
         if (array_key_exists("DbClusterInfoStruct",$param) and $param["DbClusterInfoStruct"] !== null) {
             $this->DbClusterInfoStruct = $param["DbClusterInfoStruct"];
+        }
+
+        if (array_key_exists("TxhBackupExpireDay",$param) and $param["TxhBackupExpireDay"] !== null) {
+            $this->TxhBackupExpireDay = $param["TxhBackupExpireDay"];
         }
     }
 }

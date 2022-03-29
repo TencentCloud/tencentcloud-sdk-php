@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimedParam(TimedEmailParam $TimedParam) 设置定时发送任务的必要参数
  * @method string getUnsubscribe() 获取退订选项 1: 加入退订链接 0: 不加入退订链接
  * @method void setUnsubscribe(string $Unsubscribe) 设置退订选项 1: 加入退订链接 0: 不加入退订链接
+ * @method integer getADLocation() 获取是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+ * @method void setADLocation(integer $ADLocation) 设置是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
  */
 class BatchSendEmailRequest extends AbstractModel
 {
@@ -107,6 +109,11 @@ class BatchSendEmailRequest extends AbstractModel
     public $Unsubscribe;
 
     /**
+     * @var integer 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+     */
+    public $ADLocation;
+
+    /**
      * @param string $FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
 发信人 <邮件地址> 的方式填写，例如：
 腾讯云团队 <noreply@mail.qcloud.com>
@@ -120,6 +127,7 @@ class BatchSendEmailRequest extends AbstractModel
      * @param CycleEmailParam $CycleParam 周期发送任务的必要参数
      * @param TimedEmailParam $TimedParam 定时发送任务的必要参数
      * @param string $Unsubscribe 退订选项 1: 加入退订链接 0: 不加入退订链接
+     * @param integer $ADLocation 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ class BatchSendEmailRequest extends AbstractModel
 
         if (array_key_exists("Unsubscribe",$param) and $param["Unsubscribe"] !== null) {
             $this->Unsubscribe = $param["Unsubscribe"];
+        }
+
+        if (array_key_exists("ADLocation",$param) and $param["ADLocation"] !== null) {
+            $this->ADLocation = $param["ADLocation"];
         }
     }
 }

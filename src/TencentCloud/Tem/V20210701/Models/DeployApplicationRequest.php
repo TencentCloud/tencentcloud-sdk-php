@@ -112,6 +112,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpeedUp(boolean $SpeedUp) 设置是否开启应用加速
  * @method HealthCheckConfig getStartupProbe() 获取启动探针配置
  * @method void setStartupProbe(HealthCheckConfig $StartupProbe) 设置启动探针配置
+ * @method string getOsFlavour() 获取操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
+ * @method void setOsFlavour(string $OsFlavour) 设置操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -314,6 +328,17 @@ class DeployApplicationRequest extends AbstractModel
     public $StartupProbe;
 
     /**
+     * @var string 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
+     */
+    public $OsFlavour;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param integer $InitPodNum 初始化 pod 数
      * @param float $CpuSpec cpu规格
@@ -360,6 +385,13 @@ class DeployApplicationRequest extends AbstractModel
      * @param boolean $ConfEdited （除开镜像配置）配置是否修改
      * @param boolean $SpeedUp 是否开启应用加速
      * @param HealthCheckConfig $StartupProbe 启动探针配置
+     * @param string $OsFlavour 操作系统版本；
+当选择openjdk时，可选参数：
+- ALPINE
+- CENTOS
+当选择konajdk时，可选参数：
+- ALPINE
+- TENCENTOS
      */
     function __construct()
     {
@@ -561,6 +593,10 @@ class DeployApplicationRequest extends AbstractModel
         if (array_key_exists("StartupProbe",$param) and $param["StartupProbe"] !== null) {
             $this->StartupProbe = new HealthCheckConfig();
             $this->StartupProbe->deserialize($param["StartupProbe"]);
+        }
+
+        if (array_key_exists("OsFlavour",$param) and $param["OsFlavour"] !== null) {
+            $this->OsFlavour = $param["OsFlavour"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始备份的时间
  * @method string getBackupId() 获取备份ID
  * @method void setBackupId(string $BackupId) 设置备份ID
- * @method string getBackupType() 获取备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份
- * @method void setBackupType(string $BackupType) 设置备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份
+ * @method string getBackupType() 获取备份类型。1：用户发起的手动备份； 0：凌晨系统发起的备份
+ * @method void setBackupType(string $BackupType) 设置备份类型。1：用户发起的手动备份； 0：凌晨系统发起的备份
  * @method integer getStatus() 获取备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
  * @method void setStatus(integer $Status) 设置备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
  * @method string getRemark() 获取备份的备注信息
@@ -58,7 +58,7 @@ class RedisBackupSet extends AbstractModel
     public $BackupId;
 
     /**
-     * @var string 备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份
+     * @var string 备份类型。1：用户发起的手动备份； 0：凌晨系统发起的备份
      */
     public $BackupType;
 
@@ -98,7 +98,7 @@ class RedisBackupSet extends AbstractModel
     /**
      * @param string $StartTime 开始备份的时间
      * @param string $BackupId 备份ID
-     * @param string $BackupType 备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份
+     * @param string $BackupType 备份类型。1：用户发起的手动备份； 0：凌晨系统发起的备份
      * @param integer $Status 备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
      * @param string $Remark 备份的备注信息
      * @param integer $Locked 备份是否被锁定，0：未被锁定；1：已被锁定

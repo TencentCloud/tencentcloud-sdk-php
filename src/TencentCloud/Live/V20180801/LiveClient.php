@@ -125,7 +125,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DeleteScreenshotTaskResponse DeleteScreenshotTask(Models\DeleteScreenshotTaskRequest $req) 删除截图任务配置。删除操作不影响正在运行当中的任务，仅对删除之后新的推流有效。
  * @method Models\DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(Models\DescribeAllStreamPlayInfoListRequest $req) 输入某个时间点（1分钟维度），查询该时间点所有流的下行信息。
  * @method Models\DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxList(Models\DescribeAreaBillBandwidthAndFluxListRequest $req) 海外分区直播计费带宽和流量数据查询。
- * @method Models\DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(Models\DescribeBillBandwidthAndFluxListRequest $req) 直播计费带宽和流量数据查询。
+ * @method Models\DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(Models\DescribeBillBandwidthAndFluxListRequest $req) 直播播放带宽和流量数据查询。
  * @method Models\DescribeCallbackRecordsListResponse DescribeCallbackRecordsList(Models\DescribeCallbackRecordsListRequest $req) 用于查询回调事件。
  * @method Models\DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(Models\DescribeConcurrentRecordStreamNumRequest $req) 查询并发录制路数，对慢直播和普通直播适用。
  * @method Models\DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthList(Models\DescribeDeliverBandwidthListRequest $req) 查询直播转推计费带宽，查询时间范围最大支持3个月内的数据，时间跨度最长31天。

@@ -34,9 +34,6 @@ use TencentCloud\Nlp\V20190408\Models as Models;
  * @method Models\DependencyParsingResponse DependencyParsing(Models\DependencyParsingRequest $req) 句法依存分析接口能够分析出句子中词与词之间的相互依存关系，并揭示其句法结构，包括主谓关系、动宾关系、核心关系等等，可用于提取句子主干、提取句子核心词等，在机器翻译、自动问答、知识抽取等领域都有很好的应用。
  * @method Models\DescribeDictResponse DescribeDict(Models\DescribeDictRequest $req) 根据id或名称查询自定义词库信息。
  * @method Models\DescribeDictsResponse DescribeDicts(Models\DescribeDictsRequest $req) 返回属于当前用户的所有自定义词库列表。
- * @method Models\DescribeEntityResponse DescribeEntity(Models\DescribeEntityRequest $req) 此接口正在维护升级，后续上线另行通知。
- * @method Models\DescribeRelationResponse DescribeRelation(Models\DescribeRelationRequest $req) 此接口正在维护升级，后续上线另行通知。
- * @method Models\DescribeTripleResponse DescribeTriple(Models\DescribeTripleRequest $req) 此接口正在维护升级，后续上线另行通知。
  * @method Models\DescribeWordItemsResponse DescribeWordItems(Models\DescribeWordItemsRequest $req) 依据自定义词库的ID，查询对应的词条信息。
  * @method Models\KeywordsExtractionResponse KeywordsExtraction(Models\KeywordsExtractionRequest $req) 基于关键词提取平台，通过对文本内容进行深度分析，提取出文本内容中的关键信息，为用户实现诸如新闻内容关键词自动提取、评论关键词提取等提供基础服务。
  * @method Models\LexicalAnalysisResponse LexicalAnalysis(Models\LexicalAnalysisRequest $req) 词法分析接口提供以下三个功能：

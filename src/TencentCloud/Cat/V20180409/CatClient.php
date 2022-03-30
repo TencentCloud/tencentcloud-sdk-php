@@ -37,6 +37,7 @@ use TencentCloud\Cat\V20180409\Models as Models;
  * @method Models\DescribeAlarmsByTaskResponse DescribeAlarmsByTask(Models\DescribeAlarmsByTaskRequest $req) 按任务查询拨测告警列表
  * @method Models\DescribeCatLogsResponse DescribeCatLogs(Models\DescribeCatLogsRequest $req) 查询拨测流水
  * @method Models\DescribeDetailedSingleProbeDataResponse DescribeDetailedSingleProbeData(Models\DescribeDetailedSingleProbeDataRequest $req) 根据时间范围、任务ID、运营商等条件查询单次拨测详情数据
+ * @method Models\DescribeProbeMetricDataResponse DescribeProbeMetricData(Models\DescribeProbeMetricDataRequest $req) 列出云拨测指标详细数据
  * @method Models\DescribeProbeNodesResponse DescribeProbeNodes(Models\DescribeProbeNodesRequest $req) 查询拨测节点
  * @method Models\DescribeProbeTasksResponse DescribeProbeTasks(Models\DescribeProbeTasksRequest $req) 查询拨测任务列表
  * @method Models\DescribeTaskDetailResponse DescribeTaskDetail(Models\DescribeTaskDetailRequest $req) 查询拨测任务信息

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Nlp\V20190408\Models;
+namespace TencentCloud\Cfg\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeEntity请求参数结构体
+ * DescribeTemplate请求参数结构体
  *
- * @method string getEntityName() 获取实体名称
- * @method void setEntityName(string $EntityName) 设置实体名称
+ * @method integer getTemplateId() 获取经验库ID
+ * @method void setTemplateId(integer $TemplateId) 设置经验库ID
  */
-class DescribeEntityRequest extends AbstractModel
+class DescribeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 实体名称
+     * @var integer 经验库ID
      */
-    public $EntityName;
+    public $TemplateId;
 
     /**
-     * @param string $EntityName 实体名称
+     * @param integer $TemplateId 经验库ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeEntityRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EntityName",$param) and $param["EntityName"] !== null) {
-            $this->EntityName = $param["EntityName"];
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

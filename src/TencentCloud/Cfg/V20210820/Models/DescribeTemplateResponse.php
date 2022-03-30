@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Nlp\V20190408\Models;
+namespace TencentCloud\Cfg\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeEntity返回参数结构体
+ * DescribeTemplate返回参数结构体
  *
- * @method string getContent() 获取返回查询实体相关信息
- * @method void setContent(string $Content) 设置返回查询实体相关信息
+ * @method Template getTemplate() 获取经验库详情
+ * @method void setTemplate(Template $Template) 设置经验库详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeEntityResponse extends AbstractModel
+class DescribeTemplateResponse extends AbstractModel
 {
     /**
-     * @var string 返回查询实体相关信息
+     * @var Template 经验库详情
      */
-    public $Content;
+    public $Template;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DescribeEntityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Content 返回查询实体相关信息
+     * @param Template $Template 经验库详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,9 @@ class DescribeEntityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists("Template",$param) and $param["Template"] !== null) {
+            $this->Template = new Template();
+            $this->Template->deserialize($param["Template"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

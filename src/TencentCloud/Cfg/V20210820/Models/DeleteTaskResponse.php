@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Nlp\V20190408\Models;
+namespace TencentCloud\Cfg\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTriple返回参数结构体
+ * DeleteTask返回参数结构体
  *
- * @method array getContent() 获取返回三元组信息
- * @method void setContent(array $Content) 设置返回三元组信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTripleResponse extends AbstractModel
+class DeleteTaskResponse extends AbstractModel
 {
-    /**
-     * @var array 返回三元组信息
-     */
-    public $Content;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $Content 返回三元组信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,15 +46,6 @@ class DescribeTripleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = [];
-            foreach ($param["Content"] as $key => $value){
-                $obj = new TripleContent();
-                $obj->deserialize($value);
-                array_push($this->Content, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

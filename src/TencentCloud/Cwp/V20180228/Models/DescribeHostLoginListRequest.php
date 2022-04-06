@@ -27,20 +27,22 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
 <li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
 <li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白</li>
+<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
 <li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
 <li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白</li>
+<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
  */
 class DescribeHostLoginListRequest extends AbstractModel
@@ -59,11 +61,12 @@ class DescribeHostLoginListRequest extends AbstractModel
      * @var array 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
 <li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
 <li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白</li>
+<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
      */
     public $Filters;
@@ -74,11 +77,12 @@ class DescribeHostLoginListRequest extends AbstractModel
      * @param array $Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
 <li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
 <li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白</li>
+<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
      */
     function __construct()

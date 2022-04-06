@@ -35,6 +35,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\CreateRoleResponse CreateRole(Models\CreateRoleRequest $req) 本接口（CreateRole）用于创建角色。
  * @method Models\CreateSAMLProviderResponse CreateSAMLProvider(Models\CreateSAMLProviderRequest $req) 创建SAML身份提供商
  * @method Models\CreateServiceLinkedRoleResponse CreateServiceLinkedRole(Models\CreateServiceLinkedRoleRequest $req) 创建服务相关角色
+ * @method Models\CreateUserOIDCConfigResponse CreateUserOIDCConfig(Models\CreateUserOIDCConfigRequest $req) 创建用户OIDC配置。只能创建一个用户OIDC身份提供商，并且创建用户OIDC配置之后会自动关闭用户SAML SSO身份提供商。
  * @method Models\CreateUserSAMLConfigResponse CreateUserSAMLConfig(Models\CreateUserSAMLConfigRequest $req) 创建用户SAML配置
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除用户组
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) 本接口（DeletePolicy）可用于删除策略。
@@ -50,10 +51,12 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(Models\DescribeSafeAuthFlagCollRequest $req) 查询安全设置
  * @method Models\DescribeSafeAuthFlagIntlResponse DescribeSafeAuthFlagIntl(Models\DescribeSafeAuthFlagIntlRequest $req) 查询安全设置(国际站)
  * @method Models\DescribeSubAccountsResponse DescribeSubAccounts(Models\DescribeSubAccountsRequest $req) 通过子用户UIN列表查询子用户
+ * @method Models\DescribeUserOIDCConfigResponse DescribeUserOIDCConfig(Models\DescribeUserOIDCConfigRequest $req) 查询用户OIDC配置
  * @method Models\DescribeUserSAMLConfigResponse DescribeUserSAMLConfig(Models\DescribeUserSAMLConfigRequest $req) 查询用户SAML配置
  * @method Models\DetachGroupPolicyResponse DetachGroupPolicy(Models\DetachGroupPolicyRequest $req) 本接口（DetachGroupPolicy）可用于解除绑定到用户组的策略。
  * @method Models\DetachRolePolicyResponse DetachRolePolicy(Models\DetachRolePolicyRequest $req) 本接口（DetachRolePolicy）用于解除绑定角色的策略。
  * @method Models\DetachUserPolicyResponse DetachUserPolicy(Models\DetachUserPolicyRequest $req) 本接口（DetachUserPolicy）可用于解除绑定到用户的策略。
+ * @method Models\DisableUserSSOResponse DisableUserSSO(Models\DisableUserSSORequest $req) 禁用用户SSO
  * @method Models\GetAccountSummaryResponse GetAccountSummary(Models\GetAccountSummaryRequest $req) 查询账户摘要 
  * @method Models\GetCustomMFATokenInfoResponse GetCustomMFATokenInfo(Models\GetCustomMFATokenInfoRequest $req) 获取自定义多因子Token关联信息
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) 查询用户组详情
@@ -96,6 +99,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\UpdateRoleDescriptionResponse UpdateRoleDescription(Models\UpdateRoleDescriptionRequest $req) 本接口（UpdateRoleDescription）用于修改角色的描述信息。
  * @method Models\UpdateSAMLProviderResponse UpdateSAMLProvider(Models\UpdateSAMLProviderRequest $req) 更新SAML身份提供商信息
  * @method Models\UpdateUserResponse UpdateUser(Models\UpdateUserRequest $req) 更新子用户
+ * @method Models\UpdateUserOIDCConfigResponse UpdateUserOIDCConfig(Models\UpdateUserOIDCConfigRequest $req) 修改用户OIDC配置
  * @method Models\UpdateUserSAMLConfigResponse UpdateUserSAMLConfig(Models\UpdateUserSAMLConfigRequest $req) 修改用户SAML配置
  */
 

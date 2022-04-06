@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEffectiveMachineInfoList(array $EffectiveMachineInfoList) 设置有效的机器信息列表：机器名称、机器公网/内网ip、机器标签
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getInvalidMachineList() 获取用户批量导入失败的机器列表（比如机器不存在等...）
+ * @method array getInvalidMachineList() 获取用户批量导入失败的机器列表（例如机器不存在等...）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInvalidMachineList(array $InvalidMachineList) 设置用户批量导入失败的机器列表（比如机器不存在等...）
+ * @method void setInvalidMachineList(array $InvalidMachineList) 设置用户批量导入失败的机器列表（例如机器不存在等...）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ class DescribeImportMachineInfoResponse extends AbstractModel
     public $EffectiveMachineInfoList;
 
     /**
-     * @var array 用户批量导入失败的机器列表（比如机器不存在等...）
+     * @var array 用户批量导入失败的机器列表（例如机器不存在等...）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvalidMachineList;
@@ -53,7 +53,7 @@ class DescribeImportMachineInfoResponse extends AbstractModel
     /**
      * @param array $EffectiveMachineInfoList 有效的机器信息列表：机器名称、机器公网/内网ip、机器标签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $InvalidMachineList 用户批量导入失败的机器列表（比如机器不存在等...）
+     * @param array $InvalidMachineList 用户批量导入失败的机器列表（例如机器不存在等...）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

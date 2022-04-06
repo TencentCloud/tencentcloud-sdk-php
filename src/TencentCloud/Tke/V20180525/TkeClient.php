@@ -68,6 +68,8 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeClusterEndpointVipStatusResponse DescribeClusterEndpointVipStatus(Models\DescribeClusterEndpointVipStatusRequest $req) 查询集群开启端口流程状态(仅支持托管集群外网端口)
  * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req)  查询集群下节点实例信息 
  * @method Models\DescribeClusterKubeconfigResponse DescribeClusterKubeconfig(Models\DescribeClusterKubeconfigRequest $req) 获取集群的kubeconfig文件，不同子账户获取自己的kubeconfig文件，该文件中有每个子账户自己的kube-apiserver的客户端证书，默认首次调此接口时候创建客户端证书，时效20年，未授予任何权限，如果是集群所有者或者主账户，则默认是cluster-admin权限。
+ * @method Models\DescribeClusterLevelAttributeResponse DescribeClusterLevelAttribute(Models\DescribeClusterLevelAttributeRequest $req) 获取集群规模
+ * @method Models\DescribeClusterLevelChangeRecordsResponse DescribeClusterLevelChangeRecords(Models\DescribeClusterLevelChangeRecordsRequest $req) 查询集群变配记录
  * @method Models\DescribeClusterNodePoolDetailResponse DescribeClusterNodePoolDetail(Models\DescribeClusterNodePoolDetailRequest $req) 查询节点池详情
  * @method Models\DescribeClusterNodePoolsResponse DescribeClusterNodePools(Models\DescribeClusterNodePoolsRequest $req) 查询节点池列表
  * @method Models\DescribeClusterRouteTablesResponse DescribeClusterRouteTables(Models\DescribeClusterRouteTablesRequest $req) 查询集群路由表
@@ -96,6 +98,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribePrometheusTemplateSyncResponse DescribePrometheusTemplateSync(Models\DescribePrometheusTemplateSyncRequest $req) 获取模板同步信息
  * @method Models\DescribePrometheusTemplatesResponse DescribePrometheusTemplates(Models\DescribePrometheusTemplatesRequest $req) 拉取模板列表，默认模板将总是在最前面
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 获取容器服务支持的所有地域
+ * @method Models\DescribeResourceUsageResponse DescribeResourceUsage(Models\DescribeResourceUsageRequest $req) 获取集群资源使用量
  * @method Models\DescribeRouteTableConflictsResponse DescribeRouteTableConflicts(Models\DescribeRouteTableConflictsRequest $req) 查询路由表冲突列表
  * @method Models\DescribeTKEEdgeScriptResponse DescribeTKEEdgeScript(Models\DescribeTKEEdgeScriptRequest $req) 获取边缘脚本链接
  * @method Models\DescribeVersionsResponse DescribeVersions(Models\DescribeVersionsRequest $req) 获取集群版本信息
@@ -105,6 +108,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(Models\EnableClusterDeletionProtectionRequest $req) 启用集群删除保护
  * @method Models\EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(Models\EnableVpcCniNetworkTypeRequest $req) GR集群可以通过本接口附加vpc-cni容器网络插件，开启vpc-cni容器网络能力
  * @method Models\ForwardApplicationRequestV3Response ForwardApplicationRequestV3(Models\ForwardApplicationRequestV3Request $req) 操作TKE集群的addon
+ * @method Models\GetClusterLevelPriceResponse GetClusterLevelPrice(Models\GetClusterLevelPriceRequest $req) 获取集群规模价格
  * @method Models\GetMostSuitableImageCacheResponse GetMostSuitableImageCache(Models\GetMostSuitableImageCacheRequest $req) 根据镜像列表，查询匹配的镜像缓存
  * @method Models\GetTkeAppChartListResponse GetTkeAppChartList(Models\GetTkeAppChartListRequest $req) 获取TKE支持的App列表
  * @method Models\GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(Models\GetUpgradeInstanceProgressRequest $req) 获得节点升级当前的进度 

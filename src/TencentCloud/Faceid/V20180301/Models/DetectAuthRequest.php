@@ -40,8 +40,8 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
  * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method string getIntentionVerifyText() 获取意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
- * @method void setIntentionVerifyText(string $IntentionVerifyText) 设置意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+ * @method string getIntentionVerifyText() 获取意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+ * @method void setIntentionVerifyText(string $IntentionVerifyText) 设置意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
  */
 class DetectAuthRequest extends AbstractModel
 {
@@ -88,7 +88,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     public $Encryption;
 
     /**
-     * @var string 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+     * @var string 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
      */
     public $IntentionVerifyText;
 
@@ -103,7 +103,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
      * @param string $ImageBase64 用于人脸比对的照片，图片的Base64值；
 Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param string $IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+     * @param string $IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
      */
     function __construct()
     {

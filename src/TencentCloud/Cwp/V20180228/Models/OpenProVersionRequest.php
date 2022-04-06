@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenProVersion请求参数结构体
  *
- * @method string getMachineType() 获取云主机类型。(当前参数已作废,可以留空值 )
- * @method void setMachineType(string $MachineType) 设置云主机类型。(当前参数已作废,可以留空值 )
+ * @method string getMachineType() 获取云服务器类型。(当前参数已作废,可以留空值 )
+ * @method void setMachineType(string $MachineType) 设置云服务器类型。(当前参数已作废,可以留空值 )
  * @method string getMachineRegion() 获取机器所属地域。(当前参数已作废,可以留空值 )
  * @method void setMachineRegion(string $MachineRegion) 设置机器所属地域。(当前参数已作废,可以留空值 )
  * @method array getQuuids() 获取主机唯一标识Uuid数组。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class OpenProVersionRequest extends AbstractModel
 {
     /**
-     * @var string 云主机类型。(当前参数已作废,可以留空值 )
+     * @var string 云服务器类型。(当前参数已作废,可以留空值 )
      */
     public $MachineType;
 
@@ -55,7 +55,7 @@ class OpenProVersionRequest extends AbstractModel
     public $ActivityId;
 
     /**
-     * @param string $MachineType 云主机类型。(当前参数已作废,可以留空值 )
+     * @param string $MachineType 云服务器类型。(当前参数已作废,可以留空值 )
      * @param string $MachineRegion 机器所属地域。(当前参数已作废,可以留空值 )
      * @param array $Quuids 主机唯一标识Uuid数组。
 黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20

@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleName(string $RuleName) 设置规则名称
  * @method integer getRuleLevel() 获取规则等级：1-高 2-中 3-低
  * @method void setRuleLevel(integer $RuleLevel) 设置规则等级：1-高 2-中 3-低
- * @method integer getStatus() 获取处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
- * @method void setStatus(integer $Status) 设置处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
+ * @method integer getStatus() 获取处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
+ * @method void setStatus(integer $Status) 设置处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
  * @method string getCreateTime() 获取发生时间
  * @method void setCreateTime(string $CreateTime) 设置发生时间
  * @method string getMachineName() 获取主机名
@@ -124,7 +124,7 @@ class BashEvent extends AbstractModel
     public $RuleLevel;
 
     /**
-     * @var integer 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
+     * @var integer 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
      */
     public $Status;
 
@@ -185,7 +185,7 @@ class BashEvent extends AbstractModel
      * @param integer $RuleId 规则ID
      * @param string $RuleName 规则名称
      * @param integer $RuleLevel 规则等级：1-高 2-中 3-低
-     * @param integer $Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
+     * @param integer $Status 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白， 3 = 已忽略
      * @param string $CreateTime 发生时间
      * @param string $MachineName 主机名
      * @param integer $DetectBy 0: bash日志 1: 实时监控(雷霆版)

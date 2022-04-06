@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentProcPath(string $ParentProcPath) 设置父进程路径
  * @method string getProcTree() 获取进程树
  * @method void setProcTree(string $ProcTree) 设置进程树
- * @method integer getStatus() 获取处理状态：0-待处理 2-白名单
- * @method void setStatus(integer $Status) 设置处理状态：0-待处理 2-白名单
+ * @method integer getStatus() 获取处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
+ * @method void setStatus(integer $Status) 设置处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
  * @method string getCreateTime() 获取发生时间
  * @method void setCreateTime(string $CreateTime) 设置发生时间
  * @method string getMachineName() 获取机器名
@@ -135,7 +135,7 @@ class PrivilegeEscalationProcess extends AbstractModel
     public $ProcTree;
 
     /**
-     * @var integer 处理状态：0-待处理 2-白名单
+     * @var integer 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
      */
     public $Status;
 
@@ -165,7 +165,7 @@ class PrivilegeEscalationProcess extends AbstractModel
      * @param string $ParentProcGroup 父进程用户组
      * @param string $ParentProcPath 父进程路径
      * @param string $ProcTree 进程树
-     * @param integer $Status 处理状态：0-待处理 2-白名单
+     * @param integer $Status 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
      * @param string $CreateTime 发生时间
      * @param string $MachineName 机器名
      */

@@ -64,6 +64,12 @@ use TencentCloud\Common\AbstractModel;
 1：自定义黑白库；
 
 2：自定义库；
+ * @method string getSubLabel() 获取该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TextResult extends AbstractModel
 {
@@ -118,6 +124,13 @@ class TextResult extends AbstractModel
     public $LibType;
 
     /**
+     * @var string 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubLabel;
+
+    /**
      * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
 以及其他令人反感、不安全或不适宜的内容类型。
 
@@ -140,6 +153,9 @@ class TextResult extends AbstractModel
 1：自定义黑白库；
 
 2：自定义库；
+     * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -180,6 +196,10 @@ class TextResult extends AbstractModel
 
         if (array_key_exists("LibType",$param) and $param["LibType"] !== null) {
             $this->LibType = $param["LibType"];
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
         }
     }
 }

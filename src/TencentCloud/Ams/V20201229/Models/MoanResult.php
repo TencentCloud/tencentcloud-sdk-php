@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(float $StartTime) 设置违规事件开始时间，单位为毫秒（ms）；
  * @method float getEndTime() 获取违规事件结束时间，单位为毫秒（ms）；
  * @method void setEndTime(float $EndTime) 设置违规事件结束时间，单位为毫秒（ms）；
+ * @method string getSubLabel() 获取该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MoanResult extends AbstractModel
 {
@@ -68,6 +74,13 @@ class MoanResult extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubLabel;
+
+    /**
      * @param string $Label 固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表改音频中无呻吟/娇喘相关违规内容；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
@@ -76,6 +89,9 @@ class MoanResult extends AbstractModel
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
      * @param float $StartTime 违规事件开始时间，单位为毫秒（ms）；
      * @param float $EndTime 违规事件结束时间，单位为毫秒（ms）；
+     * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +124,10 @@ class MoanResult extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
         }
     }
 }

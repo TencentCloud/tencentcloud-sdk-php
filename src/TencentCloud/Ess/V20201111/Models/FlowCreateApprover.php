@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建流程的签署方信息
  *
- * @method integer getApproverType() 获取签署方类型 (0为企业/1为个人)
- * @method void setApproverType(integer $ApproverType) 设置签署方类型 (0为企业/1为个人)
+ * @method integer getApproverType() 获取参与者类型：
+0：企业
+1：个人
+3：企业静默签署
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+ * @method void setApproverType(integer $ApproverType) 设置参与者类型：
+0：企业
+1：个人
+3：企业静默签署
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
  * @method string getOrganizationName() 获取如果签署方为企业，需要填入企业全称
  * @method void setOrganizationName(string $OrganizationName) 设置如果签署方为企业，需要填入企业全称
  * @method boolean getRequired() 获取是否需要签署
@@ -58,7 +66,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 class FlowCreateApprover extends AbstractModel
 {
     /**
-     * @var integer 签署方类型 (0为企业/1为个人)
+     * @var integer 参与者类型：
+0：企业
+1：个人
+3：企业静默签署
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
      */
     public $ApproverType;
 
@@ -127,7 +139,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $VerifyChannel;
 
     /**
-     * @param integer $ApproverType 签署方类型 (0为企业/1为个人)
+     * @param integer $ApproverType 参与者类型：
+0：企业
+1：个人
+3：企业静默签署
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
      * @param string $OrganizationName 如果签署方为企业，需要填入企业全称
      * @param boolean $Required 是否需要签署
 - `false`: 不需要签署

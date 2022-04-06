@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxConcurrentNum(integer $MaxConcurrentNum) 设置任务最大并发数限制，默认没有限制。
  * @method boolean getRestartComputeNode() 获取任务完成后，重启计算节点。适用于指定计算环境执行任务。
  * @method void setRestartComputeNode(boolean $RestartComputeNode) 设置任务完成后，重启计算节点。适用于指定计算环境执行任务。
- * @method integer getResourceMaxRetryCount() 获取启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
- * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) 设置启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+ * @method integer getResourceMaxRetryCount() 获取启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
+ * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) 设置启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
  */
 class Task extends AbstractModel
 {
@@ -145,7 +145,7 @@ class Task extends AbstractModel
     public $RestartComputeNode;
 
     /**
-     * @var integer 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+     * @var integer 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
      */
     public $ResourceMaxRetryCount;
 
@@ -167,7 +167,7 @@ class Task extends AbstractModel
      * @param integer $Timeout 任务启动后的超时时间，单位秒，默认为86400秒
      * @param integer $MaxConcurrentNum 任务最大并发数限制，默认没有限制。
      * @param boolean $RestartComputeNode 任务完成后，重启计算节点。适用于指定计算环境执行任务。
-     * @param integer $ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+     * @param integer $ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。最大值100。
      */
     function __construct()
     {

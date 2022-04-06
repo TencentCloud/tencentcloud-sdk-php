@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowLogName() 获取流日志实例名字
  * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字
- * @method string getResourceType() 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
- * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
+ * @method string getResourceType() 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
+ * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
  * @method string getResourceId() 获取资源唯一ID
  * @method void setResourceId(string $ResourceId) 设置资源唯一ID
  * @method string getTrafficType() 获取流日志采集类型，ACCEPT|REJECT|ALL
@@ -49,7 +49,7 @@ class CreateFlowLogRequest extends AbstractModel
     public $FlowLogName;
 
     /**
-     * @var string 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
+     * @var string 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
      */
     public $ResourceType;
 
@@ -95,7 +95,7 @@ class CreateFlowLogRequest extends AbstractModel
 
     /**
      * @param string $FlowLogName 流日志实例名字
-     * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
+     * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
      * @param string $ResourceId 资源唯一ID
      * @param string $TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。

@@ -57,9 +57,9 @@ NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 。
  * @method LoginSettings getLoginSettings() 获取实例登录设置。
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置。
  * @method string getInstanceState() 获取实例状态。取值范围： 
-<li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li>
+<li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li><li>DELETING：表示删除中</li><li>FREEZING：表示冻结中</li>
  * @method void setInstanceState(string $InstanceState) 设置实例状态。取值范围： 
-<li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li>
+<li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li><li>DELETING：表示删除中</li><li>FREEZING：表示冻结中</li>
  * @method string getUuid() 获取实例全局唯一 ID。
  * @method void setUuid(string $Uuid) 设置实例全局唯一 ID。
  * @method string getLatestOperation() 获取实例的最新操作。例：StopInstances、ResetInstance。注意：此字段可能返回 空值，表示取不到有效值。
@@ -106,6 +106,10 @@ FAILED：表示操作失败
  * @method void setZone(string $Zone) 设置可用区。
  * @method array getTags() 获取实例绑定的标签列表。
  * @method void setTags(array $Tags) 设置实例绑定的标签列表。
+ * @method string getInstanceRestrictState() 获取实例封禁状态。取值范围：
+<li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
+ * @method void setInstanceRestrictState(string $InstanceRestrictState) 设置实例封禁状态。取值范围：
+<li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
  */
 class Instance extends AbstractModel
 {
@@ -181,7 +185,7 @@ NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 。
 
     /**
      * @var string 实例状态。取值范围： 
-<li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li>
+<li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li><li>DELETING：表示删除中</li><li>FREEZING：表示冻结中</li>
      */
     public $InstanceState;
 
@@ -257,6 +261,12 @@ FAILED：表示操作失败
     public $Tags;
 
     /**
+     * @var string 实例封禁状态。取值范围：
+<li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
+     */
+    public $InstanceRestrictState;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $BundleId 套餐 ID。
      * @param string $BlueprintId 镜像 ID。
@@ -276,7 +286,7 @@ NOTIFY_AND_MANUAL_RENEW：表示通知即将过期，但不自动续费
 NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 。
      * @param LoginSettings $LoginSettings 实例登录设置。
      * @param string $InstanceState 实例状态。取值范围： 
-<li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li>
+<li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li><li>DELETING：表示删除中</li><li>FREEZING：表示冻结中</li>
      * @param string $Uuid 实例全局唯一 ID。
      * @param string $LatestOperation 实例的最新操作。例：StopInstances、ResetInstance。注意：此字段可能返回 空值，表示取不到有效值。
      * @param string $LatestOperationState 实例的最新操作状态。取值范围： 
@@ -300,6 +310,8 @@ FAILED：表示操作失败
      * @param string $OsName 操作系统名称。
      * @param string $Zone 可用区。
      * @param array $Tags 实例绑定的标签列表。
+     * @param string $InstanceRestrictState 实例封禁状态。取值范围：
+<li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
      */
     function __construct()
     {
@@ -424,6 +436,10 @@ FAILED：表示操作失败
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceRestrictState",$param) and $param["InstanceRestrictState"] !== null) {
+            $this->InstanceRestrictState = $param["InstanceRestrictState"];
         }
     }
 }

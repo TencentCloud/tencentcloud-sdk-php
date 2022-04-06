@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidNodeInfo(DiagnoseData $MidNodeInfo) 设置中间源节点检测信息
  * @method DiagnoseData getOriginInfo() 获取源站检测信息
  * @method void setOriginInfo(DiagnoseData $OriginInfo) 设置源站检测信息
+ * @method DiagnoseData getPurgeInfo() 获取刷新检测信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPurgeInfo(DiagnoseData $PurgeInfo) 设置刷新检测信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -82,6 +86,12 @@ class DescribeDiagnoseReportResponse extends AbstractModel
     public $OriginInfo;
 
     /**
+     * @var DiagnoseData 刷新检测信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PurgeInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -95,6 +105,8 @@ class DescribeDiagnoseReportResponse extends AbstractModel
      * @param DiagnoseData $OcNodeInfo 边缘节点检测信息
      * @param DiagnoseData $MidNodeInfo 中间源节点检测信息
      * @param DiagnoseData $OriginInfo 源站检测信息
+     * @param DiagnoseData $PurgeInfo 刷新检测信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -148,6 +160,11 @@ class DescribeDiagnoseReportResponse extends AbstractModel
         if (array_key_exists("OriginInfo",$param) and $param["OriginInfo"] !== null) {
             $this->OriginInfo = new DiagnoseData();
             $this->OriginInfo->deserialize($param["OriginInfo"]);
+        }
+
+        if (array_key_exists("PurgeInfo",$param) and $param["PurgeInfo"] !== null) {
+            $this->PurgeInfo = new DiagnoseData();
+            $this->PurgeInfo->deserialize($param["PurgeInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

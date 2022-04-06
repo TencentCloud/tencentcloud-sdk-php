@@ -98,6 +98,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDataStatus() 获取0：待处理，1：忽略，5：已处理，6：加入白名单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataStatus(integer $DataStatus) 设置0：待处理，1：忽略，5：已处理，6：加入白名单
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BruteAttackInfo extends AbstractModel
 {
@@ -221,6 +225,12 @@ class BruteAttackInfo extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 0：待处理，1：忽略，5：已处理，6：加入白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataStatus;
+
+    /**
      * @param integer $Id 唯一Id
      * @param string $Uuid 云镜客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -259,6 +269,8 @@ class BruteAttackInfo extends AbstractModel
      * @param string $ModifyTime 最近攻击时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DataStatus 0：待处理，1：忽略，5：已处理，6：加入白名单
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -352,6 +364,10 @@ class BruteAttackInfo extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("DataStatus",$param) and $param["DataStatus"] !== null) {
+            $this->DataStatus = $param["DataStatus"];
         }
     }
 }

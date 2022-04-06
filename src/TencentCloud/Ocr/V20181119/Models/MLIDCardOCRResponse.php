@@ -40,23 +40,19 @@ use TencentCloud\Common\AbstractModel;
 -9107       模糊图片告警
  * @method string getImage() 获取证件图片
  * @method void setImage(string $Image) 设置证件图片
- * @method string getAdvancedInfo() 获取扩展字段：
+ * @method string getAdvancedInfo() 获取此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展字段：
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
  * @method string getType() 获取证件类型
 MyKad  身份证
@@ -116,14 +112,12 @@ class MLIDCardOCRResponse extends AbstractModel
     public $Image;
 
     /**
-     * @var string 扩展字段：
+     * @var string 此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
      */
     public $AdvancedInfo;
@@ -161,14 +155,12 @@ MyKid 儿童卡
 -9106       证件遮挡告警
 -9107       模糊图片告警
      * @param string $Image 证件图片
-     * @param string $AdvancedInfo 扩展字段：
+     * @param string $AdvancedInfo 此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
      * @param string $Type 证件类型
 MyKad  身份证

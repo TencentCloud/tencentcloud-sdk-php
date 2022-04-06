@@ -124,9 +124,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubjectAltName(array $SubjectAltName) 设置证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsVip() 获取是否为 VIP 客户。
+ * @method boolean getIsVip() 获取是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsVip(boolean $IsVip) 设置是否为 VIP 客户。
+ * @method void setIsVip(boolean $IsVip) 设置是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsWildcard() 获取是否为泛域名证书。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -144,9 +144,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmittedData(SubmittedData $SubmittedData) 设置提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getRenewAble() 获取是否可重颁发证书。
+ * @method boolean getRenewAble() 获取是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenewAble(boolean $RenewAble) 设置是否可重颁发证书。
+ * @method void setRenewAble(boolean $RenewAble) 设置是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeployable() 获取是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -318,7 +318,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $SubjectAltName;
 
     /**
-     * @var boolean 是否为 VIP 客户。
+     * @var boolean 是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsVip;
@@ -348,7 +348,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $SubmittedData;
 
     /**
-     * @var boolean 是否可重颁发证书。
+     * @var boolean 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewAble;
@@ -423,7 +423,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubjectAltName 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsVip 是否为 VIP 客户。
+     * @param boolean $IsVip 是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsWildcard 是否为泛域名证书。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -433,7 +433,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubmittedData $SubmittedData 提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $RenewAble 是否可重颁发证书。
+     * @param boolean $RenewAble 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Deployable 是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -139,11 +139,11 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\ManageClsTopicDomainsResponse ManageClsTopicDomains(Models\ManageClsTopicDomainsRequest $req) ManageClsTopicDomains 用于管理某日志主题下绑定的域名列表。
  * @method Models\ModifyPurgeFetchTaskStatusResponse ModifyPurgeFetchTaskStatus(Models\ModifyPurgeFetchTaskStatusRequest $req) ModifyPurgeFetchTaskStatus 用于上报定时刷新预热任务执行状态
  * @method Models\PurgePathCacheResponse PurgePathCache(Models\PurgePathCacheRequest $req) PurgePathCache 用于批量提交目录刷新，根据域名的加速区域进行对应区域的刷新。
-默认情况下境内、境外加速区域每日目录刷新额度为各 100 条，每次最多可提交 20 条。
+默认情况下境内、境外加速区域每日目录刷新额度为各 100 条，每次最多可提交 500 条。
  * @method Models\PurgeUrlsCacheResponse PurgeUrlsCache(Models\PurgeUrlsCacheRequest $req) PurgeUrlsCache 用于批量提交 URL 进行刷新，根据 URL 中域名的当前加速区域进行对应区域的刷新。
 默认情况下境内、境外加速区域每日 URL 刷新额度各为 10000 条，每次最多可提交 1000 条。
  * @method Models\PushUrlsCacheResponse PushUrlsCache(Models\PushUrlsCacheRequest $req) PushUrlsCache 用于将指定 URL 资源列表加载至 CDN 节点，支持指定加速区域预热。
-默认情况下境内、境外每日预热 URL 限额为各 1000 条，每次最多可提交 20 条。注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
+默认情况下境内、境外每日预热 URL 限额为各 1000 条，每次最多可提交 500 条。注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
  * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) SearchClsLog 用于 CLS 日志检索。支持检索今天，24小时（可选近7中的某一天），近7天的日志数据。
  * @method Models\StartCdnDomainResponse StartCdnDomain(Models\StartCdnDomainRequest $req) StartCdnDomain 用于启用已停用域名的加速服务
  * @method Models\StartScdnDomainResponse StartScdnDomain(Models\StartScdnDomainRequest $req) StartScdnDomain 用于开启域名的安全防护配置

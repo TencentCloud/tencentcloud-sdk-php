@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReferer(Referer $Referer) 设置Referer 防盗链配置
  * @method MaxAge getMaxAge() 获取浏览器缓存配置（功能灰度中，尚未全量）
  * @method void setMaxAge(MaxAge $MaxAge) 设置浏览器缓存配置（功能灰度中，尚未全量）
+ * @method SpecificConfig getSpecificConfig() 获取地域属性特殊配置
+适用于域名境内加速、境外加速配置不一致场景
+ * @method void setSpecificConfig(SpecificConfig $SpecificConfig) 设置地域属性特殊配置
+适用于域名境内加速、境外加速配置不一致场景
  * @method string getServiceType() 获取域名业务类型
 web：静态加速
 download：下载加速
@@ -78,10 +82,6 @@ media：流媒体点播加速
 web：静态加速
 download：下载加速
 media：流媒体点播加速
- * @method SpecificConfig getSpecificConfig() 获取地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景
- * @method void setSpecificConfig(SpecificConfig $SpecificConfig) 设置地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景
  * @method string getArea() 获取域名加速区域
 mainland：中国境内加速
 overseas：中国境外加速
@@ -253,18 +253,18 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $MaxAge;
 
     /**
+     * @var SpecificConfig 地域属性特殊配置
+适用于域名境内加速、境外加速配置不一致场景
+     */
+    public $SpecificConfig;
+
+    /**
      * @var string 域名业务类型
 web：静态加速
 download：下载加速
 media：流媒体点播加速
      */
     public $ServiceType;
-
-    /**
-     * @var SpecificConfig 地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景
-     */
-    public $SpecificConfig;
 
     /**
      * @var string 域名加速区域
@@ -381,12 +381,12 @@ global：全球加速
      * @param ForceRedirect $ForceRedirect 访问协议强制跳转配置
      * @param Referer $Referer Referer 防盗链配置
      * @param MaxAge $MaxAge 浏览器缓存配置（功能灰度中，尚未全量）
+     * @param SpecificConfig $SpecificConfig 地域属性特殊配置
+适用于域名境内加速、境外加速配置不一致场景
      * @param string $ServiceType 域名业务类型
 web：静态加速
 download：下载加速
 media：流媒体点播加速
-     * @param SpecificConfig $SpecificConfig 地域属性特殊配置
-适用于域名境内加速、境外加速配置不一致场景
      * @param string $Area 域名加速区域
 mainland：中国境内加速
 overseas：中国境外加速
@@ -545,13 +545,13 @@ global：全球加速
             $this->MaxAge->deserialize($param["MaxAge"]);
         }
 
-        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
-            $this->ServiceType = $param["ServiceType"];
-        }
-
         if (array_key_exists("SpecificConfig",$param) and $param["SpecificConfig"] !== null) {
             $this->SpecificConfig = new SpecificConfig();
             $this->SpecificConfig->deserialize($param["SpecificConfig"]);
+        }
+
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
         }
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {

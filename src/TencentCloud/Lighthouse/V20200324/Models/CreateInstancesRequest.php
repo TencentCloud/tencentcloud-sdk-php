@@ -48,6 +48,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setLoginConfiguration(LoginConfiguration $LoginConfiguration) 设置实例登录密码信息配置。本字段目前仅支持WINDOWS实例进行密码设置。默认缺失情况下代表用户选择实例创建后设置登录密码。
  * @method array getContainers() 获取要创建的容器配置列表。
  * @method void setContainers(array $Containers) 设置要创建的容器配置列表。
+ * @method boolean getAutoVoucher() 获取是否自动使用代金券。默认不使用。
+ * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券。默认不使用。
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -106,6 +108,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $Containers;
 
     /**
+     * @var boolean 是否自动使用代金券。默认不使用。
+     */
+    public $AutoVoucher;
+
+    /**
      * @param string $BundleId 套餐ID。
      * @param string $BlueprintId 镜像ID。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
@@ -120,6 +127,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param LoginConfiguration $LoginConfiguration 实例登录密码信息配置。本字段目前仅支持WINDOWS实例进行密码设置。默认缺失情况下代表用户选择实例创建后设置登录密码。
      * @param array $Containers 要创建的容器配置列表。
+     * @param boolean $AutoVoucher 是否自动使用代金券。默认不使用。
      */
     function __construct()
     {
@@ -179,6 +187,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
                 $obj->deserialize($value);
                 array_push($this->Containers, $obj);
             }
+        }
+
+        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
+            $this->AutoVoucher = $param["AutoVoucher"];
         }
     }
 }

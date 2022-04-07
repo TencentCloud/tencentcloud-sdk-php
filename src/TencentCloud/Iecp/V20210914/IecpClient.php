@@ -24,6 +24,7 @@ use TencentCloud\Iecp\V20210914\Models as Models;
 
 /**
  * @method Models\ApplyMarketComponentResponse ApplyMarketComponent(Models\ApplyMarketComponentRequest $req) 从组件市场选中组件并添加到应用模板列表
+ * @method Models\BuildMessageRouteResponse BuildMessageRoute(Models\BuildMessageRouteRequest $req) 建立消息路由
  * @method Models\CreateApplicationVisualizationResponse CreateApplicationVisualization(Models\CreateApplicationVisualizationRequest $req) 创建可视化创建应用模板
  * @method Models\CreateConfigMapResponse CreateConfigMap(Models\CreateConfigMapRequest $req) 创建ConfigMap
  * @method Models\CreateEdgeNodeResponse CreateEdgeNode(Models\CreateEdgeNodeRequest $req) 创建边缘节点
@@ -33,6 +34,9 @@ use TencentCloud\Iecp\V20210914\Models as Models;
  * @method Models\CreateEdgeUnitApplicationVisualizationResponse CreateEdgeUnitApplicationVisualization(Models\CreateEdgeUnitApplicationVisualizationRequest $req) 可视化创建应用
  * @method Models\CreateEdgeUnitApplicationYamlResponse CreateEdgeUnitApplicationYaml(Models\CreateEdgeUnitApplicationYamlRequest $req) yaml方式创建应用
  * @method Models\CreateEdgeUnitCloudResponse CreateEdgeUnitCloud(Models\CreateEdgeUnitCloudRequest $req) 创建边缘单元
+ * @method Models\CreateEdgeUnitDevicesResponse CreateEdgeUnitDevices(Models\CreateEdgeUnitDevicesRequest $req) 批量绑定设备到单元
+ * @method Models\CreateIotDeviceResponse CreateIotDevice(Models\CreateIotDeviceRequest $req) 创建子设备
+ * @method Models\CreateMessageRouteResponse CreateMessageRoute(Models\CreateMessageRouteRequest $req) 创建消息路由
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建命名空间
  * @method Models\CreateSecretResponse CreateSecret(Models\CreateSecretRequest $req) 创建Secret
  * @method Models\CreateUpdateNodeUnitResponse CreateUpdateNodeUnit(Models\CreateUpdateNodeUnitRequest $req) 创建或更新边缘单元NodeUnit
@@ -45,8 +49,11 @@ use TencentCloud\Iecp\V20210914\Models as Models;
  * @method Models\DeleteEdgeUnitApplicationsResponse DeleteEdgeUnitApplications(Models\DeleteEdgeUnitApplicationsRequest $req) 删除应用列表
  * @method Models\DeleteEdgeUnitCloudResponse DeleteEdgeUnitCloud(Models\DeleteEdgeUnitCloudRequest $req) 删除边缘单元
  * @method Models\DeleteEdgeUnitDeployGridItemResponse DeleteEdgeUnitDeployGridItem(Models\DeleteEdgeUnitDeployGridItemRequest $req) 重新部署边缘单元指定Grid下应用
+ * @method Models\DeleteEdgeUnitDevicesResponse DeleteEdgeUnitDevices(Models\DeleteEdgeUnitDevicesRequest $req) 批量解绑单元设备
  * @method Models\DeleteEdgeUnitPodResponse DeleteEdgeUnitPod(Models\DeleteEdgeUnitPodRequest $req) 删除指定pod
+ * @method Models\DeleteIotDeviceResponse DeleteIotDevice(Models\DeleteIotDeviceRequest $req) 删除设备
  * @method Models\DeleteIotDeviceBatchResponse DeleteIotDeviceBatch(Models\DeleteIotDeviceBatchRequest $req) 批量删除设备
+ * @method Models\DeleteMessageRouteResponse DeleteMessageRoute(Models\DeleteMessageRouteRequest $req) 删除消息路由
  * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) 删除命名空间
  * @method Models\DeleteNodeUnitResponse DeleteNodeUnit(Models\DeleteNodeUnitRequest $req) 删除边缘单元NodeUnit
  * @method Models\DeleteSecretResponse DeleteSecret(Models\DeleteSecretRequest $req) 删除Secret
@@ -87,6 +94,9 @@ use TencentCloud\Iecp\V20210914\Models as Models;
  * @method Models\DescribeEdgeUnitNodeGroupResponse DescribeEdgeUnitNodeGroup(Models\DescribeEdgeUnitNodeGroupRequest $req) 查询边缘集群NodeGroup
  * @method Models\DescribeEdgeUnitNodeUnitTemplatesResponse DescribeEdgeUnitNodeUnitTemplates(Models\DescribeEdgeUnitNodeUnitTemplatesRequest $req) 查询边缘单元EdgeUnit模板列表
  * @method Models\DescribeEdgeUnitsCloudResponse DescribeEdgeUnitsCloud(Models\DescribeEdgeUnitsCloudRequest $req) 查询边缘单元列表
+ * @method Models\DescribeIotDeviceResponse DescribeIotDevice(Models\DescribeIotDeviceRequest $req) 获取设备信息
+ * @method Models\DescribeIotDevicesResponse DescribeIotDevices(Models\DescribeIotDevicesRequest $req) 获取设备列表信息
+ * @method Models\DescribeMessageRouteListResponse DescribeMessageRouteList(Models\DescribeMessageRouteListRequest $req) 获取消息路由列表
  * @method Models\DescribeMonitorMetricsResponse DescribeMonitorMetrics(Models\DescribeMonitorMetricsRequest $req) 查询边缘单元监控数据
  * @method Models\DescribeNamespaceResponse DescribeNamespace(Models\DescribeNamespaceRequest $req) 获取命名空间
  * @method Models\DescribeNamespaceResourcesResponse DescribeNamespaceResources(Models\DescribeNamespaceResourcesRequest $req) 获取命名空间下的资源信息
@@ -110,9 +120,11 @@ use TencentCloud\Iecp\V20210914\Models as Models;
  * @method Models\ModifyEdgeUnitApplicationYamlResponse ModifyEdgeUnitApplicationYaml(Models\ModifyEdgeUnitApplicationYamlRequest $req) Yaml方式修改应用配置
  * @method Models\ModifyEdgeUnitCloudApiResponse ModifyEdgeUnitCloudApi(Models\ModifyEdgeUnitCloudApiRequest $req) 更新边缘单元信息
  * @method Models\ModifyEdgeUnitDeployGridItemResponse ModifyEdgeUnitDeployGridItem(Models\ModifyEdgeUnitDeployGridItemRequest $req) 修改边缘单元Grid部署应用副本数
+ * @method Models\ModifyIotDeviceResponse ModifyIotDevice(Models\ModifyIotDeviceRequest $req) 修改设备信息
  * @method Models\ModifyNodeUnitTemplateResponse ModifyNodeUnitTemplate(Models\ModifyNodeUnitTemplateRequest $req) 修改边缘单元NodeUnit模板
  * @method Models\ModifySecretResponse ModifySecret(Models\ModifySecretRequest $req) 修改Secret
  * @method Models\RedeployEdgeUnitApplicationResponse RedeployEdgeUnitApplication(Models\RedeployEdgeUnitApplicationRequest $req) 单元应用重部署
+ * @method Models\SetRouteOnOffResponse SetRouteOnOff(Models\SetRouteOnOffRequest $req) 开关消息路由
  */
 
 class IecpClient extends AbstractClient

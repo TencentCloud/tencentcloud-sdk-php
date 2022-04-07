@@ -31,7 +31,7 @@ use TencentCloud\Ecdn\V20191012\Models as Models;
 >?  若您的业务已迁移至 CDN 控制台，请参考<a href="	https://cloud.tencent.com/document/api/228/48118"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
  * @method Models\DeleteEcdnDomainResponse DeleteEcdnDomain(Models\DeleteEcdnDomainRequest $req) 本接口（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必须处于已停用状态。
 
->?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/570/42471"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
+>?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41122"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 本接口（DescribeDomains）用于查询CDN域名基本信息，包括项目id，状态，业务类型，创建时间，更新时间等。
 
 >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41118"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。

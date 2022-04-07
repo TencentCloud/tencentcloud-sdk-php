@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDirection(string $Direction) 设置方向
  * @method string getSource() 获取来源
  * @method void setSource(string $Source) 设置来源
+ * @method string getEdgeId() 获取vpc间防火墙开关边id
+ * @method void setEdgeId(string $EdgeId) 设置vpc间防火墙开关边id
+ * @method string getLogSource() 获取日志来源 move：vpc间防火墙
+ * @method void setLogSource(string $LogSource) 设置日志来源 move：vpc间防火墙
  */
 class DescribeBlockByIpTimesListRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class DescribeBlockByIpTimesListRequest extends AbstractModel
     public $Source;
 
     /**
+     * @var string vpc间防火墙开关边id
+     */
+    public $EdgeId;
+
+    /**
+     * @var string 日志来源 move：vpc间防火墙
+     */
+    public $LogSource;
+
+    /**
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
      * @param string $Ip ip查询条件
      * @param string $Zone 地域
      * @param string $Direction 方向
      * @param string $Source 来源
+     * @param string $EdgeId vpc间防火墙开关边id
+     * @param string $LogSource 日志来源 move：vpc间防火墙
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribeBlockByIpTimesListRequest extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("EdgeId",$param) and $param["EdgeId"] !== null) {
+            $this->EdgeId = $param["EdgeId"];
+        }
+
+        if (array_key_exists("LogSource",$param) and $param["LogSource"] !== null) {
+            $this->LogSource = $param["LogSource"];
         }
     }
 }

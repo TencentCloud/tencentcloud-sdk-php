@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvoiceCode(string $InvoiceCode) 设置发票代码， 一张发票一天只能查询5次。
  * @method string getInvoiceNo() 获取发票号码（8位）。
  * @method void setInvoiceNo(string $InvoiceNo) 设置发票号码（8位）。
- * @method string getInvoiceDate() 获取开票日期（不支持当天发票查询，只支持一年以内），如：2019-12-20。
- * @method void setInvoiceDate(string $InvoiceDate) 设置开票日期（不支持当天发票查询，只支持一年以内），如：2019-12-20。
+ * @method string getInvoiceDate() 获取开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。
+ * @method void setInvoiceDate(string $InvoiceDate) 设置开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。
  * @method string getAdditional() 获取根据票种传递对应值，如果报参数错误，请仔细检查每个票种对应的值
 
 增值税专用发票：开具金额（不含税）
@@ -66,7 +66,7 @@ class VatInvoiceVerifyRequest extends AbstractModel
     public $InvoiceNo;
 
     /**
-     * @var string 开票日期（不支持当天发票查询，只支持一年以内），如：2019-12-20。
+     * @var string 开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。
      */
     public $InvoiceDate;
 
@@ -90,7 +90,7 @@ class VatInvoiceVerifyRequest extends AbstractModel
     /**
      * @param string $InvoiceCode 发票代码， 一张发票一天只能查询5次。
      * @param string $InvoiceNo 发票号码（8位）。
-     * @param string $InvoiceDate 开票日期（不支持当天发票查询，只支持一年以内），如：2019-12-20。
+     * @param string $InvoiceDate 开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。
      * @param string $Additional 根据票种传递对应值，如果报参数错误，请仔细检查每个票种对应的值
 
 增值税专用发票：开具金额（不含税）

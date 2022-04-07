@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置说明
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublicEndpoint() 获取公网接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicEndpoint(string $PublicEndpoint) 设置公网接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcEndpoint() 获取VPC接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcEndpoint(string $VpcEndpoint) 设置VPC接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQNamespace extends AbstractModel
 {
@@ -55,10 +63,26 @@ class RocketMQNamespace extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 公网接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicEndpoint;
+
+    /**
+     * @var string VPC接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcEndpoint;
+
+    /**
      * @param string $NamespaceId 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_”
      * @param integer $Ttl 未消费消息的保留时间，以毫秒单位，范围60秒到15天
      * @param integer $RetentionTime 消息持久化后保留的时间，以毫秒单位
      * @param string $Remark 说明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicEndpoint 公网接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcEndpoint VPC接入点地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -88,6 +112,14 @@ class RocketMQNamespace extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PublicEndpoint",$param) and $param["PublicEndpoint"] !== null) {
+            $this->PublicEndpoint = $param["PublicEndpoint"];
+        }
+
+        if (array_key_exists("VpcEndpoint",$param) and $param["VpcEndpoint"] !== null) {
+            $this->VpcEndpoint = $param["VpcEndpoint"];
         }
     }
 }

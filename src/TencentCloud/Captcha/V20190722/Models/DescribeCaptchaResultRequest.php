@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIp(string $UserIp) 设置业务侧获取到的验证码使用者的外网IP
  * @method string getRandstr() 获取前端回调函数返回的随机字符串
  * @method void setRandstr(string $Randstr) 设置前端回调函数返回的随机字符串
- * @method integer getCaptchaAppId() 获取验证码应用ID
- * @method void setCaptchaAppId(integer $CaptchaAppId) 设置验证码应用ID
- * @method string getAppSecretKey() 获取用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
- * @method void setAppSecretKey(string $AppSecretKey) 设置用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
+ * @method integer getCaptchaAppId() 获取验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
+ * @method void setCaptchaAppId(integer $CaptchaAppId) 设置验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
+ * @method string getAppSecretKey() 获取验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
+ * @method void setAppSecretKey(string $AppSecretKey) 设置验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
  * @method integer getBusinessId() 获取业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
  * @method void setBusinessId(integer $BusinessId) 设置业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
  * @method integer getSceneId() 获取场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
@@ -66,12 +66,12 @@ class DescribeCaptchaResultRequest extends AbstractModel
     public $Randstr;
 
     /**
-     * @var integer 验证码应用ID
+     * @var integer 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
      */
     public $CaptchaAppId;
 
     /**
-     * @var string 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
+     * @var string 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
      */
     public $AppSecretKey;
 
@@ -105,8 +105,8 @@ class DescribeCaptchaResultRequest extends AbstractModel
      * @param string $Ticket 前端回调函数返回的用户验证票据
      * @param string $UserIp 业务侧获取到的验证码使用者的外网IP
      * @param string $Randstr 前端回调函数返回的随机字符串
-     * @param integer $CaptchaAppId 验证码应用ID
-     * @param string $AppSecretKey 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
+     * @param integer $CaptchaAppId 验证码应用ID。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到CaptchaAppId。
+     * @param string $AppSecretKey 验证码应用密钥。登录 [验证码控制台](https://console.cloud.tencent.com/captcha/graphical)，在验证列表的【密钥】列，即可查看到AppSecretKey。AppSecretKey属于服务器端校验验证码票据的密钥，请妥善保密，请勿泄露给第三方。
      * @param integer $BusinessId 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
      * @param integer $SceneId 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
      * @param string $MacAddress mac 地址或设备唯一标识

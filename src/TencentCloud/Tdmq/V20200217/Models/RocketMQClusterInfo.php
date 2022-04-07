@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicEndPoint(string $PublicEndPoint) 设置公网接入地址
  * @method string getVpcEndPoint() 获取VPC接入地址
  * @method void setVpcEndPoint(string $VpcEndPoint) 设置VPC接入地址
+ * @method boolean getSupportNamespaceEndpoint() 获取是否支持命名空间接入点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSupportNamespaceEndpoint(boolean $SupportNamespaceEndpoint) 设置是否支持命名空间接入点
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -76,6 +80,12 @@ class RocketMQClusterInfo extends AbstractModel
     public $VpcEndPoint;
 
     /**
+     * @var boolean 是否支持命名空间接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SupportNamespaceEndpoint;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -84,6 +94,8 @@ class RocketMQClusterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicEndPoint 公网接入地址
      * @param string $VpcEndPoint VPC接入地址
+     * @param boolean $SupportNamespaceEndpoint 是否支持命名空间接入点
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -124,6 +136,10 @@ class RocketMQClusterInfo extends AbstractModel
 
         if (array_key_exists("VpcEndPoint",$param) and $param["VpcEndPoint"] !== null) {
             $this->VpcEndPoint = $param["VpcEndPoint"];
+        }
+
+        if (array_key_exists("SupportNamespaceEndpoint",$param) and $param["SupportNamespaceEndpoint"] !== null) {
+            $this->SupportNamespaceEndpoint = $param["SupportNamespaceEndpoint"];
         }
     }
 }

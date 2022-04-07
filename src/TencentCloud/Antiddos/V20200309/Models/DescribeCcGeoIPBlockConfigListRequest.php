@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置页起始偏移，取值为(页码-1)*一页条数
  * @method integer getLimit() 获取一页条数
  * @method void setLimit(integer $Limit) 设置一页条数
- * @method string getInstanceId() 获取指定特定实例Id
- * @method void setInstanceId(string $InstanceId) 设置指定特定实例Id
- * @method string getIp() 获取IP地址，普通高防ip要传该字段
- * @method void setIp(string $Ip) 设置IP地址，普通高防ip要传该字段
+ * @method string getInstanceId() 获取指定特定实例ID
+ * @method void setInstanceId(string $InstanceId) 设置指定特定实例ID
+ * @method string getIp() 获取IP地址，普通高防IP要传该字段
+ * @method void setIp(string $Ip) 设置IP地址，普通高防IP要传该字段
  * @method string getDomain() 获取域名，普通高防IP要传该字段
  * @method void setDomain(string $Domain) 设置域名，普通高防IP要传该字段
  * @method string getProtocol() 获取协议，普通高防IP要传该字段
@@ -53,12 +53,12 @@ class DescribeCcGeoIPBlockConfigListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 指定特定实例Id
+     * @var string 指定特定实例ID
      */
     public $InstanceId;
 
     /**
-     * @var string IP地址，普通高防ip要传该字段
+     * @var string IP地址，普通高防IP要传该字段
      */
     public $Ip;
 
@@ -76,8 +76,8 @@ class DescribeCcGeoIPBlockConfigListRequest extends AbstractModel
      * @param string $Business 大禹子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数
-     * @param string $InstanceId 指定特定实例Id
-     * @param string $Ip IP地址，普通高防ip要传该字段
+     * @param string $InstanceId 指定特定实例ID
+     * @param string $Ip IP地址，普通高防IP要传该字段
      * @param string $Domain 域名，普通高防IP要传该字段
      * @param string $Protocol 协议，普通高防IP要传该字段
      */

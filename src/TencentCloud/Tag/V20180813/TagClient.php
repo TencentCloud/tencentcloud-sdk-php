@@ -26,8 +26,10 @@ use TencentCloud\Tag\V20180813\Models as Models;
  * @method Models\AddResourceTagResponse AddResourceTag(Models\AddResourceTagRequest $req) 本接口用于给标签关联资源
  * @method Models\AttachResourcesTagResponse AttachResourcesTag(Models\AttachResourcesTagRequest $req) 给多个资源关联某个标签
  * @method Models\CreateTagResponse CreateTag(Models\CreateTagRequest $req) 本接口用于创建一对标签键和标签值
+ * @method Models\CreateTagsResponse CreateTags(Models\CreateTagsRequest $req) 本接口用于创建多对标签键和标签值
  * @method Models\DeleteResourceTagResponse DeleteResourceTag(Models\DeleteResourceTagRequest $req) 本接口用于解除标签和资源的关联关系
  * @method Models\DeleteTagResponse DeleteTag(Models\DeleteTagRequest $req) 本接口用于删除一对标签键和标签值
+ * @method Models\DeleteTagsResponse DeleteTags(Models\DeleteTagsRequest $req) 本接口用于删除一对标签键和标签值
  * @method Models\DescribeResourceTagsResponse DescribeResourceTags(Models\DescribeResourceTagsRequest $req) 查询资源关联标签
  * @method Models\DescribeResourceTagsByResourceIdsResponse DescribeResourceTagsByResourceIds(Models\DescribeResourceTagsByResourceIdsRequest $req) 用于批量查询已有资源关联的标签键值对
  * @method Models\DescribeResourceTagsByResourceIdsSeqResponse DescribeResourceTagsByResourceIdsSeq(Models\DescribeResourceTagsByResourceIdsSeqRequest $req) 按顺序查看资源关联的标签
@@ -43,8 +45,14 @@ use TencentCloud\Tag\V20180813\Models as Models;
  * @method Models\DescribeTagsSeqResponse DescribeTagsSeq(Models\DescribeTagsSeqRequest $req) 用于查询已建立的标签列表。
 
  * @method Models\DetachResourcesTagResponse DetachResourcesTag(Models\DetachResourcesTagRequest $req) 解绑多个资源关联的某个标签
+ * @method Models\GetResourcesResponse GetResources(Models\GetResourcesRequest $req) 查询绑定了标签的资源列表。
+ * @method Models\GetTagKeysResponse GetTagKeys(Models\GetTagKeysRequest $req) 查询标签键列表。
+ * @method Models\GetTagValuesResponse GetTagValues(Models\GetTagValuesRequest $req) 用于查询已建立的标签列表中的标签值。
+ * @method Models\GetTagsResponse GetTags(Models\GetTagsRequest $req) 用于获取已建立的标签列表。
  * @method Models\ModifyResourceTagsResponse ModifyResourceTags(Models\ModifyResourceTagsRequest $req) 本接口用于修改资源关联的所有标签
  * @method Models\ModifyResourcesTagValueResponse ModifyResourcesTagValue(Models\ModifyResourcesTagValueRequest $req) 修改多个资源关联的某个标签键对应的标签值
+ * @method Models\TagResourcesResponse TagResources(Models\TagResourcesRequest $req) 为指定的多个云产品的多个云资源统一创建并绑定标签。
+ * @method Models\UnTagResourcesResponse UnTagResources(Models\UnTagResourcesRequest $req) 指定的多个云产品的多个云资源统一解绑标签。
  * @method Models\UpdateResourceTagValueResponse UpdateResourceTagValue(Models\UpdateResourceTagValueRequest $req) 本接口用于修改资源已关联的标签值（标签键不变）
  */
 

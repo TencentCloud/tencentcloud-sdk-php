@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getReplicas() 获取工作副本数
  * @method void setReplicas(integer $Replicas) 设置工作副本数
- * @method ResourceRequirements getResources() 获取资源限制
- * @method void setResources(ResourceRequirements $Resources) 设置资源限制
+ * @method ResourceRequirements getResources() 获取资源配置
+ * @method void setResources(ResourceRequirements $Resources) 设置资源配置
  * @method HorizontalPodAutoscalerSpec getHorizontalPodAutoscaler() 获取HPA策略
  * @method void setHorizontalPodAutoscaler(HorizontalPodAutoscalerSpec $HorizontalPodAutoscaler) 设置HPA策略
  * @method array getSelectedNodeList() 获取部署到指定节点
@@ -37,7 +37,7 @@ class WorkloadConfig extends AbstractModel
     public $Replicas;
 
     /**
-     * @var ResourceRequirements 资源限制
+     * @var ResourceRequirements 资源配置
      */
     public $Resources;
 
@@ -53,7 +53,7 @@ class WorkloadConfig extends AbstractModel
 
     /**
      * @param integer $Replicas 工作副本数
-     * @param ResourceRequirements $Resources 资源限制
+     * @param ResourceRequirements $Resources 资源配置
      * @param HorizontalPodAutoscalerSpec $HorizontalPodAutoscaler HPA策略
      * @param array $SelectedNodeList 部署到指定节点
      */

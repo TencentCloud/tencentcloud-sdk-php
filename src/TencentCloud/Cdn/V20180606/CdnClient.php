@@ -105,7 +105,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 + 仅支持 90 天内数据查询，且从2021年09月20日开始有数据
 + 本接口为beta版，尚未正式全量发布
 
- * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) DescribeTrafficPackages 用于查询中国境内 CDN 流量包详情。
+ * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) DescribeTrafficPackages 用于查询 CDN 流量包详情。
  * @method Models\DescribeUrlViolationsResponse DescribeUrlViolations(Models\DescribeUrlViolationsRequest $req) DescribeUrlViolations 用于查询被 CDN 系统扫描到的域名违规 URL 列表及当前状态。
 对应内容分发网络控制台【图片鉴黄】页面。
  * @method Models\DescribeWafDataResponse DescribeWafData(Models\DescribeWafDataRequest $req) Waf统计数据查询

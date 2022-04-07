@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Antiddos\V20200309\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSchedulingDomain请求参数结构体
+ * DeleteDataTransform请求参数结构体
  *
- * @method string getProduct() 获取代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
- * @method void setProduct(string $Product) 设置代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+ * @method string getTaskId() 获取数据加工任务id
+ * @method void setTaskId(string $TaskId) 设置数据加工任务id
  */
-class CreateSchedulingDomainRequest extends AbstractModel
+class DeleteDataTransformRequest extends AbstractModel
 {
     /**
-     * @var string 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+     * @var string 数据加工任务id
      */
-    public $Product;
+    public $TaskId;
 
     /**
-     * @param string $Product 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+     * @param string $TaskId 数据加工任务id
      */
     function __construct()
     {
@@ -54,8 +46,8 @@ hybrid: 宙斯盾本地化
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Antiddos\V20200309\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSchedulingDomain请求参数结构体
+ * 数据加工的资源信息
  *
- * @method string getProduct() 获取代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
- * @method void setProduct(string $Product) 设置代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+ * @method string getTopicId() 获取目标主题id
+ * @method void setTopicId(string $TopicId) 设置目标主题id
+ * @method string getAlias() 获取别名
+ * @method void setAlias(string $Alias) 设置别名
  */
-class CreateSchedulingDomainRequest extends AbstractModel
+class DataTransformResouceInfo extends AbstractModel
 {
     /**
-     * @var string 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+     * @var string 目标主题id
      */
-    public $Product;
+    public $TopicId;
 
     /**
-     * @param string $Product 代表是否混合云本地化的产品。
-hybrid: 宙斯盾本地化
-不填写：其他
+     * @var string 别名
+     */
+    public $Alias;
+
+    /**
+     * @param string $TopicId 目标主题id
+     * @param string $Alias 别名
      */
     function __construct()
     {
@@ -54,8 +54,12 @@ hybrid: 宙斯盾本地化
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
-            $this->Product = $param["Product"];
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

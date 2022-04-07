@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getIp() 获取Ip地址
- * @method void setIp(string $Ip) 设置Ip地址
+ * @method string getIp() 获取IP地址
+ * @method void setIp(string $Ip) 设置IP地址
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getProtocol() 获取协议，可取值HTTP，HTTPS
@@ -39,7 +39,7 @@ class ModifyCCLevelPolicyRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Ip地址
+     * @var string IP地址
      */
     public $Ip;
 
@@ -60,7 +60,7 @@ class ModifyCCLevelPolicyRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例Id
-     * @param string $Ip Ip地址
+     * @param string $Ip IP地址
      * @param string $Domain 域名
      * @param string $Protocol 协议，可取值HTTP，HTTPS
      * @param string $Level CC防护等级，可取值loose表示宽松，strict表示严格，normal表示适中， emergency表示攻击紧急， sup_loose表示超级宽松，default表示默认策略（无频控配置下发），customized表示自定义策略

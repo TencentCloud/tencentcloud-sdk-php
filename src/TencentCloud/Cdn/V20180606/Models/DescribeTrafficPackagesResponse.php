@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpiringCount(integer $ExpiringCount) 设置即将过期的流量包个数（7天内）
  * @method integer getEnabledCount() 获取有效流量包个数
  * @method void setEnabledCount(integer $EnabledCount) 设置有效流量包个数
+ * @method integer getPaidCount() 获取付费流量包个数
+ * @method void setPaidCount(integer $PaidCount) 设置付费流量包个数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +56,11 @@ class DescribeTrafficPackagesResponse extends AbstractModel
     public $EnabledCount;
 
     /**
+     * @var integer 付费流量包个数
+     */
+    public $PaidCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeTrafficPackagesResponse extends AbstractModel
      * @param array $TrafficPackages 流量包详情
      * @param integer $ExpiringCount 即将过期的流量包个数（7天内）
      * @param integer $EnabledCount 有效流量包个数
+     * @param integer $PaidCount 付费流量包个数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +105,10 @@ class DescribeTrafficPackagesResponse extends AbstractModel
 
         if (array_key_exists("EnabledCount",$param) and $param["EnabledCount"] !== null) {
             $this->EnabledCount = $param["EnabledCount"];
+        }
+
+        if (array_key_exists("PaidCount",$param) and $param["PaidCount"] !== null) {
+            $this->PaidCount = $param["PaidCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

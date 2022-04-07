@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneIds(array $ZoneIds) 设置可用区的 ID。
  * @method array getSubnetIds() 获取子网 ID。
  * @method void setSubnetIds(array $SubnetIds) 设置子网 ID。
- * @method array getCdbErrors() 获取是否锁定标记。
- * @method void setCdbErrors(array $CdbErrors) 设置是否锁定标记。
+ * @method array getCdbErrors() 获取是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
+ * @method void setCdbErrors(array $CdbErrors) 设置是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
  * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
  * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
  * @method string getOrderDirection() 获取返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
@@ -76,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeysForSearch(array $TagKeysForSearch) 设置是否以标签键为过滤条件。
  * @method array getCageIds() 获取金融围拢 ID 。
  * @method void setCageIds(array $CageIds) 设置金融围拢 ID 。
+ * @method array getTagValues() 获取标签值
+ * @method void setTagValues(array $TagValues) 设置标签值
+ * @method array getUniqueVpcIds() 获取私有网络字符型vpcId
+ * @method void setUniqueVpcIds(array $UniqueVpcIds) 设置私有网络字符型vpcId
+ * @method array getUniqSubnetIds() 获取私有网络字符型subnetId
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置私有网络字符型subnetId
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -150,7 +156,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $SubnetIds;
 
     /**
-     * @var array 是否锁定标记。
+     * @var array 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
      */
     public $CdbErrors;
 
@@ -220,6 +226,21 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $CageIds;
 
     /**
+     * @var array 标签值
+     */
+    public $TagValues;
+
+    /**
+     * @var array 私有网络字符型vpcId
+     */
+    public $UniqueVpcIds;
+
+    /**
+     * @var array 私有网络字符型subnetId
+     */
+    public $UniqSubnetIds;
+
+    /**
      * @param integer $ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      * @param array $InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
      * @param array $Vips 实例的内网 IP 地址。
@@ -234,7 +255,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $VpcIds 私有网络的 ID。
      * @param array $ZoneIds 可用区的 ID。
      * @param array $SubnetIds 子网 ID。
-     * @param array $CdbErrors 是否锁定标记。
+     * @param array $CdbErrors 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
      * @param string $OrderBy 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
      * @param string $OrderDirection 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
      * @param integer $WithSecurityGroup 是否以安全组 ID 为过滤条件。
@@ -248,6 +269,9 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $DeployGroupIds 置放群组ID列表。
      * @param array $TagKeysForSearch 是否以标签键为过滤条件。
      * @param array $CageIds 金融围拢 ID 。
+     * @param array $TagValues 标签值
+     * @param array $UniqueVpcIds 私有网络字符型vpcId
+     * @param array $UniqSubnetIds 私有网络字符型subnetId
      */
     function __construct()
     {
@@ -372,6 +396,18 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("CageIds",$param) and $param["CageIds"] !== null) {
             $this->CageIds = $param["CageIds"];
+        }
+
+        if (array_key_exists("TagValues",$param) and $param["TagValues"] !== null) {
+            $this->TagValues = $param["TagValues"];
+        }
+
+        if (array_key_exists("UniqueVpcIds",$param) and $param["UniqueVpcIds"] !== null) {
+            $this->UniqueVpcIds = $param["UniqueVpcIds"];
+        }
+
+        if (array_key_exists("UniqSubnetIds",$param) and $param["UniqSubnetIds"] !== null) {
+            $this->UniqSubnetIds = $param["UniqSubnetIds"];
         }
     }
 }

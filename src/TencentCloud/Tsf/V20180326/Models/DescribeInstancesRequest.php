@@ -14,48 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetStudioProductList请求参数结构体
+ * DescribeInstances请求参数结构体
  *
- * @method string getProjectId() 获取项目ID
- * @method void setProjectId(string $ProjectId) 设置项目ID
- * @method string getDevStatus() 获取产品DevStatus
- * @method void setDevStatus(string $DevStatus) 设置产品DevStatus
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取数量限制
- * @method void setLimit(integer $Limit) 设置数量限制
+ * @method array getFilters() 获取过滤条件
+ * @method void setFilters(array $Filters) 设置过滤条件
+ * @method integer getOffset() 获取偏移量，默认为0
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0
+ * @method integer getLimit() 获取分页个数，默认为20，最大100
+ * @method void setLimit(integer $Limit) 设置分页个数，默认为20，最大100
  */
-class GetStudioProductListRequest extends AbstractModel
+class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 项目ID
+     * @var array 过滤条件
      */
-    public $ProjectId;
+    public $Filters;
 
     /**
-     * @var string 产品DevStatus
-     */
-    public $DevStatus;
-
-    /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认为0
      */
     public $Offset;
 
     /**
-     * @var integer 数量限制
+     * @var integer 分页个数，默认为20，最大100
      */
     public $Limit;
 
     /**
-     * @param string $ProjectId 项目ID
-     * @param string $DevStatus 产品DevStatus
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 数量限制
+     * @param array $Filters 过滤条件
+     * @param integer $Offset 偏移量，默认为0
+     * @param integer $Limit 分页个数，默认为20，最大100
      */
     function __construct()
     {
@@ -70,12 +62,13 @@ class GetStudioProductListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
-        if (array_key_exists("DevStatus",$param) and $param["DevStatus"] !== null) {
-            $this->DevStatus = $param["DevStatus"];
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

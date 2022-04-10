@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadLetterRoutingKey(string $DeadLetterRoutingKey) 设置死信交换机路由键
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopicName() 获取Queue对应的Topic名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopicName(string $TopicName) 设置Queue对应的Topic名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AMQPQueueDetail extends AbstractModel
 {
@@ -131,6 +135,12 @@ class AMQPQueueDetail extends AbstractModel
     public $DeadLetterRoutingKey;
 
     /**
+     * @var string Queue对应的Topic名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopicName;
+
+    /**
      * @param string $Name Queue名称
      * @param string $Remark 说明
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,6 +161,8 @@ class AMQPQueueDetail extends AbstractModel
      * @param string $DeadLetterExchange 死信交换机
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeadLetterRoutingKey 死信交换机路由键
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopicName Queue对应的Topic名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +220,10 @@ class AMQPQueueDetail extends AbstractModel
 
         if (array_key_exists("DeadLetterRoutingKey",$param) and $param["DeadLetterRoutingKey"] !== null) {
             $this->DeadLetterRoutingKey = $param["DeadLetterRoutingKey"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

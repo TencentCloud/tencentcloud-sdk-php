@@ -50,6 +50,12 @@ global：预热全球节点
 1. 该功能要求m3u8索引文件能直接请求获取
 2. 当前只支持递归解析一级索引和子索引中的ts分片，递归深度不超过3层
 3. 解析获取的ts分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热
+ * @method boolean getDisableRange() 获取是否关闭Range回源
+注意事项：
+此功能灰度发布中，敬请期待
+ * @method void setDisableRange(boolean $DisableRange) 设置是否关闭Range回源
+注意事项：
+此功能灰度发布中，敬请期待
  */
 class PushUrlsCacheRequest extends AbstractModel
 {
@@ -89,6 +95,13 @@ global：预热全球节点
     public $ParseM3U8;
 
     /**
+     * @var boolean 是否关闭Range回源
+注意事项：
+此功能灰度发布中，敬请期待
+     */
+    public $DisableRange;
+
+    /**
      * @param array $Urls URL 列表，需要包含协议头部 http:// 或 https://
      * @param string $UserAgent 指定预热请求回源时 HTTP 请求的 User-Agent 头部
 默认为 TencentCdn
@@ -104,6 +117,9 @@ global：预热全球节点
 1. 该功能要求m3u8索引文件能直接请求获取
 2. 当前只支持递归解析一级索引和子索引中的ts分片，递归深度不超过3层
 3. 解析获取的ts分片会正常累加每日预热用量，当用量超出配额时，会静默处理，不再执行预热
+     * @param boolean $DisableRange 是否关闭Range回源
+注意事项：
+此功能灰度发布中，敬请期待
      */
     function __construct()
     {
@@ -136,6 +152,10 @@ global：预热全球节点
 
         if (array_key_exists("ParseM3U8",$param) and $param["ParseM3U8"] !== null) {
             $this->ParseM3U8 = $param["ParseM3U8"];
+        }
+
+        if (array_key_exists("DisableRange",$param) and $param["DisableRange"] !== null) {
+            $this->DisableRange = $param["DisableRange"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDeviceList请求参数结构体
  *
- * @method string getProductId() 获取需要查看设备列表的产品 ID
- * @method void setProductId(string $ProductId) 设置需要查看设备列表的产品 ID
+ * @method string getProductId() 获取需要查看设备列表的产品ID, -1代表ProjectId来筛选
+ * @method void setProductId(string $ProductId) 设置需要查看设备列表的产品ID, -1代表ProjectId来筛选
  * @method integer getOffset() 获取分页偏移
  * @method void setOffset(integer $Offset) 设置分页偏移
  * @method integer getLimit() 获取分页的大小，数值范围 10-100
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class GetDeviceListRequest extends AbstractModel
 {
     /**
-     * @var string 需要查看设备列表的产品 ID
+     * @var string 需要查看设备列表的产品ID, -1代表ProjectId来筛选
      */
     public $ProductId;
 
@@ -66,7 +66,7 @@ class GetDeviceListRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @param string $ProductId 需要查看设备列表的产品 ID
+     * @param string $ProductId 需要查看设备列表的产品ID, -1代表ProjectId来筛选
      * @param integer $Offset 分页偏移
      * @param integer $Limit 分页的大小，数值范围 10-100
      * @param string $FirmwareVersion 设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备

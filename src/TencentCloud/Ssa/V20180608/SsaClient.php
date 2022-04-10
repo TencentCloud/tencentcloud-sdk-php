@@ -34,6 +34,7 @@ use TencentCloud\Ssa\V20180608\Models as Models;
  * @method Models\DescribeConfigListResponse DescribeConfigList(Models\DescribeConfigListRequest $req) 云配置检查项总览页检查项列表
  * @method Models\DescribeEventDetailResponse DescribeEventDetail(Models\DescribeEventDetailRequest $req) 获取安全事件详情
  * @method Models\DescribeLeakDetectionListResponse DescribeLeakDetectionList(Models\DescribeLeakDetectionListRequest $req) 获取泄露列表
+ * @method Models\DescribeMappingResultsResponse DescribeMappingResults(Models\DescribeMappingResultsRequest $req) 获取测绘列表
  * @method Models\DescribeSafetyEventListResponse DescribeSafetyEventList(Models\DescribeSafetyEventListRequest $req) 获取安全事件列表
  * @method Models\DescribeSocAlertDetailsResponse DescribeSocAlertDetails(Models\DescribeSocAlertDetailsRequest $req) 返回告警详情
  * @method Models\DescribeSocAlertListResponse DescribeSocAlertList(Models\DescribeSocAlertListRequest $req) 拉取告警列表

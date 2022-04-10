@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterKey(string $FilterKey) 设置查询的字段
  * @method string getFilterValue() 获取查询的值
  * @method void setFilterValue(string $FilterValue) 设置查询的值
- * @method integer getFilterOperatorType() 获取匹配类型，枚举见pb
- * @method void setFilterOperatorType(integer $FilterOperatorType) 设置匹配类型，枚举见pb
+ * @method integer getFilterOperatorType() 获取匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
+ * @method void setFilterOperatorType(integer $FilterOperatorType) 设置匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
  */
 class QueryFilter extends AbstractModel
 {
@@ -40,14 +40,14 @@ class QueryFilter extends AbstractModel
     public $FilterValue;
 
     /**
-     * @var integer 匹配类型，枚举见pb
+     * @var integer 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
      */
     public $FilterOperatorType;
 
     /**
      * @param string $FilterKey 查询的字段
      * @param string $FilterValue 查询的值
-     * @param integer $FilterOperatorType 匹配类型，枚举见pb
+     * @param integer $FilterOperatorType 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
      */
     function __construct()
     {

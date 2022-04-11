@@ -96,6 +96,38 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbType(string $DbType) 设置数据库类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getApdex() 获取Apdex值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApdex(float $Apdex) 设置Apdex值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getQps() 获取Qps值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQps(float $Qps) 设置Qps值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceOnlineCount() 获取实例在线数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceOnlineCount(integer $InstanceOnlineCount) 设置实例在线数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceTotalCount() 获取实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceTotalCount(integer $InstanceTotalCount) 设置实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取normal/error
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置normal/error
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErrorRateLevel() 获取normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorRateLevel(string $ErrorRateLevel) 设置normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAvgTimeConsumingLevel() 获取normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvgTimeConsumingLevel(string $AvgTimeConsumingLevel) 设置normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApdexLevel() 获取normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApdexLevel(string $ApdexLevel) 设置normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceStatisticsResult extends AbstractModel
 {
@@ -226,6 +258,54 @@ class ServiceStatisticsResult extends AbstractModel
     public $DbType;
 
     /**
+     * @var float Apdex值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Apdex;
+
+    /**
+     * @var float Qps值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Qps;
+
+    /**
+     * @var integer 实例在线数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceOnlineCount;
+
+    /**
+     * @var integer 实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceTotalCount;
+
+    /**
+     * @var string normal/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var string normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorRateLevel;
+
+    /**
+     * @var string normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvgTimeConsumingLevel;
+
+    /**
+     * @var string normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApdexLevel;
+
+    /**
      * @param string $Path 请求模版路径:type为接口时返回，服务时不返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Method 请求方法:type为接口时返回，服务时不返回
@@ -263,6 +343,22 @@ class ServiceStatisticsResult extends AbstractModel
      * @param string $Script Script值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbType 数据库类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Apdex Apdex值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Qps Qps值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceOnlineCount 实例在线数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceTotalCount 实例总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status normal/error
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrorRateLevel normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AvgTimeConsumingLevel normal/warn/error
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApdexLevel normal/warn/error
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -369,6 +465,38 @@ class ServiceStatisticsResult extends AbstractModel
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
             $this->DbType = $param["DbType"];
+        }
+
+        if (array_key_exists("Apdex",$param) and $param["Apdex"] !== null) {
+            $this->Apdex = $param["Apdex"];
+        }
+
+        if (array_key_exists("Qps",$param) and $param["Qps"] !== null) {
+            $this->Qps = $param["Qps"];
+        }
+
+        if (array_key_exists("InstanceOnlineCount",$param) and $param["InstanceOnlineCount"] !== null) {
+            $this->InstanceOnlineCount = $param["InstanceOnlineCount"];
+        }
+
+        if (array_key_exists("InstanceTotalCount",$param) and $param["InstanceTotalCount"] !== null) {
+            $this->InstanceTotalCount = $param["InstanceTotalCount"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrorRateLevel",$param) and $param["ErrorRateLevel"] !== null) {
+            $this->ErrorRateLevel = $param["ErrorRateLevel"];
+        }
+
+        if (array_key_exists("AvgTimeConsumingLevel",$param) and $param["AvgTimeConsumingLevel"] !== null) {
+            $this->AvgTimeConsumingLevel = $param["AvgTimeConsumingLevel"];
+        }
+
+        if (array_key_exists("ApdexLevel",$param) and $param["ApdexLevel"] !== null) {
+            $this->ApdexLevel = $param["ApdexLevel"];
         }
     }
 }

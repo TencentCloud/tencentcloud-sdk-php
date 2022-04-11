@@ -156,6 +156,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeMountInfos(array $VolumeMountInfos) 设置数据卷挂载信息，list
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getKubeInjectEnable() 获取KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKubeInjectEnable(boolean $KubeInjectEnable) 设置KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDeploy extends AbstractModel
 {
@@ -364,6 +368,12 @@ class ContainerGroupDeploy extends AbstractModel
     public $VolumeMountInfos;
 
     /**
+     * @var boolean KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KubeInjectEnable;
+
+    /**
      * @param string $GroupId 部署组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -431,6 +441,8 @@ class ContainerGroupDeploy extends AbstractModel
      * @param array $VolumeInfos 数据卷信息，list
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VolumeMountInfos 数据卷挂载信息，list
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $KubeInjectEnable KubeInjectEnable值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -602,6 +614,10 @@ class ContainerGroupDeploy extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VolumeMountInfos, $obj);
             }
+        }
+
+        if (array_key_exists("KubeInjectEnable",$param) and $param["KubeInjectEnable"] !== null) {
+            $this->KubeInjectEnable = $param["KubeInjectEnable"];
         }
     }
 }

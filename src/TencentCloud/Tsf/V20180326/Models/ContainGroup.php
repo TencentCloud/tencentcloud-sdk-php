@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getKubeInjectEnable() 获取KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKubeInjectEnable(boolean $KubeInjectEnable) 设置KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainGroup extends AbstractModel
 {
@@ -174,6 +178,12 @@ class ContainGroup extends AbstractModel
     public $Alias;
 
     /**
+     * @var boolean KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KubeInjectEnable;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -203,6 +213,8 @@ class ContainGroup extends AbstractModel
      * @param string $MemLimit 最大分配的内存 MiB 数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $KubeInjectEnable KubeInjectEnable值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +288,10 @@ class ContainGroup extends AbstractModel
 
         if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
             $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("KubeInjectEnable",$param) and $param["KubeInjectEnable"] !== null) {
+            $this->KubeInjectEnable = $param["KubeInjectEnable"];
         }
     }
 }

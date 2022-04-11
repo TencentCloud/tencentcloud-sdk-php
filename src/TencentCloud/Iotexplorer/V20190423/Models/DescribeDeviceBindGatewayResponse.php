@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayDeviceName(string $GatewayDeviceName) 设置网关设备名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGatewayName() 获取网关产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayName(string $GatewayName) 设置网关产品名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +50,12 @@ class DescribeDeviceBindGatewayResponse extends AbstractModel
     public $GatewayDeviceName;
 
     /**
+     * @var string 网关产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayName;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -54,6 +64,8 @@ class DescribeDeviceBindGatewayResponse extends AbstractModel
      * @param string $GatewayProductId 网关产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayDeviceName 网关设备名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GatewayName 网关产品名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -76,6 +88,10 @@ class DescribeDeviceBindGatewayResponse extends AbstractModel
 
         if (array_key_exists("GatewayDeviceName",$param) and $param["GatewayDeviceName"] !== null) {
             $this->GatewayDeviceName = $param["GatewayDeviceName"];
+        }
+
+        if (array_key_exists("GatewayName",$param) and $param["GatewayName"] !== null) {
+            $this->GatewayName = $param["GatewayName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

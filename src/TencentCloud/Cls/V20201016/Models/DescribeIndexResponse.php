@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取索引修改时间，初始值为索引创建时间。
  * @method void setModifyTime(string $ModifyTime) 设置索引修改时间，初始值为索引创建时间。
+ * @method boolean getIncludeInternalFields() 获取全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIncludeInternalFields(boolean $IncludeInternalFields) 设置全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMetadataFlag() 获取元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetadataFlag(integer $MetadataFlag) 设置元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -57,6 +65,18 @@ class DescribeIndexResponse extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var boolean 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IncludeInternalFields;
+
+    /**
+     * @var integer 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MetadataFlag;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -67,6 +87,10 @@ class DescribeIndexResponse extends AbstractModel
      * @param RuleInfo $Rule 索引配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 索引修改时间，初始值为索引创建时间。
+     * @param boolean $IncludeInternalFields 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MetadataFlag 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +121,14 @@ class DescribeIndexResponse extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("IncludeInternalFields",$param) and $param["IncludeInternalFields"] !== null) {
+            $this->IncludeInternalFields = $param["IncludeInternalFields"];
+        }
+
+        if (array_key_exists("MetadataFlag",$param) and $param["MetadataFlag"] !== null) {
+            $this->MetadataFlag = $param["MetadataFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

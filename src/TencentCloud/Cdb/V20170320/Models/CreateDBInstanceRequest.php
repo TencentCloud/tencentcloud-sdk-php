@@ -70,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) 设置实例标签信息。
  * @method string getDeployGroupId() 获取置放群组 ID。
  * @method void setDeployGroupId(string $DeployGroupId) 设置置放群组 ID。
- * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
- * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+ * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+ * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method string getDeviceType() 获取实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
  * @method void setDeviceType(string $DeviceType) 设置实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
  * @method integer getParamTemplateId() 获取参数模板id。
@@ -92,6 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmPolicyIdList(array $AlarmPolicyIdList) 设置告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
  * @method boolean getDryRun() 获取是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
  * @method void setDryRun(boolean $DryRun) 设置是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+ * @method array getVips() 获取指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
+ * @method void setVips(array $Vips) 设置指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -221,7 +223,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $DeployGroupId;
 
     /**
-     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * @var string 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public $ClientToken;
 
@@ -276,6 +278,11 @@ class CreateDBInstanceRequest extends AbstractModel
     public $DryRun;
 
     /**
+     * @var array 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
+     */
+    public $Vips;
+
+    /**
      * @param integer $Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @param integer $Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
      * @param integer $Period 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
@@ -301,7 +308,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $InstanceName 实例名称。
      * @param array $ResourceTags 实例标签信息。
      * @param string $DeployGroupId 置放群组 ID。
-     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param string $DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
      * @param integer $ParamTemplateId 参数模板id。
      * @param array $AlarmPolicyList 告警策略id数组。
@@ -312,6 +319,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $ParamTemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
      * @param array $AlarmPolicyIdList 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
      * @param boolean $DryRun 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+     * @param array $Vips 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
      */
     function __construct()
     {
@@ -479,6 +487,10 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("Vips",$param) and $param["Vips"] !== null) {
+            $this->Vips = $param["Vips"];
         }
     }
 }

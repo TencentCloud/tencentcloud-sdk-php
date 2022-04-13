@@ -176,6 +176,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\ReleaseIsolatedDBInstancesResponse ReleaseIsolatedDBInstances(Models\ReleaseIsolatedDBInstancesRequest $req) 本接口（ReleaseIsolatedDBInstances）用于恢复已隔离云数据库实例。
  * @method Models\ReloadBalanceProxyNodeResponse ReloadBalanceProxyNode(Models\ReloadBalanceProxyNodeRequest $req) 重新负载均衡数据库代理
  * @method Models\RenewDBInstanceResponse RenewDBInstance(Models\RenewDBInstanceRequest $req) 本接口(RenewDBInstance)用于续费云数据库实例，支持付费模式为包年包月的实例。按量计费实例可通过该接口续费为包年包月的实例。
+ * @method Models\ResetRootAccountResponse ResetRootAccount(Models\ResetRootAccountRequest $req) 重置实例ROOT账，初始化账号权限
  * @method Models\RestartDBInstancesResponse RestartDBInstances(Models\RestartDBInstancesRequest $req) 本接口(RestartDBInstances)用于重启云数据库实例。
 
 注意：

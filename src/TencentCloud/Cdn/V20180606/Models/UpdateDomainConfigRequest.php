@@ -124,6 +124,10 @@ global：全球加速
  * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) 设置远程鉴权配置
  * @method ShareCname getShareCname() 获取共享CNAME配置，白名单功能
  * @method void setShareCname(ShareCname $ShareCname) 设置共享CNAME配置，白名单功能
+ * @method HwPrivateAccess getHwPrivateAccess() 获取华为云对象存储回源鉴权
+ * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) 设置华为云对象存储回源鉴权
+ * @method QnPrivateAccess getQnPrivateAccess() 获取七牛云对象存储回源鉴权
+ * @method void setQnPrivateAccess(QnPrivateAccess $QnPrivateAccess) 设置七牛云对象存储回源鉴权
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -356,6 +360,16 @@ global：全球加速
     public $ShareCname;
 
     /**
+     * @var HwPrivateAccess 华为云对象存储回源鉴权
+     */
+    public $HwPrivateAccess;
+
+    /**
+     * @var QnPrivateAccess 七牛云对象存储回源鉴权
+     */
+    public $QnPrivateAccess;
+
+    /**
      * @param string $Domain 域名
      * @param integer $ProjectId 项目 ID
      * @param Origin $Origin 源站配置
@@ -408,6 +422,8 @@ global：全球加速
      * @param WebSocket $WebSocket WebSocket配置
      * @param RemoteAuthentication $RemoteAuthentication 远程鉴权配置
      * @param ShareCname $ShareCname 共享CNAME配置，白名单功能
+     * @param HwPrivateAccess $HwPrivateAccess 华为云对象存储回源鉴权
+     * @param QnPrivateAccess $QnPrivateAccess 七牛云对象存储回源鉴权
      */
     function __construct()
     {
@@ -635,6 +651,16 @@ global：全球加速
         if (array_key_exists("ShareCname",$param) and $param["ShareCname"] !== null) {
             $this->ShareCname = new ShareCname();
             $this->ShareCname->deserialize($param["ShareCname"]);
+        }
+
+        if (array_key_exists("HwPrivateAccess",$param) and $param["HwPrivateAccess"] !== null) {
+            $this->HwPrivateAccess = new HwPrivateAccess();
+            $this->HwPrivateAccess->deserialize($param["HwPrivateAccess"]);
+        }
+
+        if (array_key_exists("QnPrivateAccess",$param) and $param["QnPrivateAccess"] !== null) {
+            $this->QnPrivateAccess = new QnPrivateAccess();
+            $this->QnPrivateAccess->deserialize($param["QnPrivateAccess"]);
         }
     }
 }

@@ -18,28 +18,36 @@ namespace TencentCloud\Ssa\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 自定义泄露事件列表
+ * 云安全配置检查项列表
  *
- * @method integer getCount() 获取数据条数
- * @method void setCount(integer $Count) 设置数据条数
- * @method array getList() 获取自定义泄露事件列表
- * @method void setList(array $List) 设置自定义泄露事件列表
+ * @method array getList() 获取检查项详情列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setList(array $List) 设置检查项详情列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotal() 获取检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotal(integer $Total) 设置检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class SaDivulgeDataQueryPubList extends AbstractModel
+class DescribeSocCheckItemListRspRsp extends AbstractModel
 {
     /**
-     * @var integer 数据条数
-     */
-    public $Count;
-
-    /**
-     * @var array 自定义泄露事件列表
+     * @var array 检查项详情列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
-     * @param integer $Count 数据条数
-     * @param array $List 自定义泄露事件列表
+     * @var integer 检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Total;
+
+    /**
+     * @param array $List 检查项详情列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Total 检查项总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -54,17 +62,17 @@ class SaDivulgeDataQueryPubList extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
-            $this->Count = $param["Count"];
-        }
-
         if (array_key_exists("List",$param) and $param["List"] !== null) {
             $this->List = [];
             foreach ($param["List"] as $key => $value){
-                $obj = new SaDivulgeDataQueryPub();
+                $obj = new SocCheckItemV1();
                 $obj->deserialize($value);
                 array_push($this->List, $obj);
             }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
     }
 }

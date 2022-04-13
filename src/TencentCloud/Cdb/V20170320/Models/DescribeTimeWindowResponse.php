@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(array $Saturday) 设置星期六的可维护时间列表。
  * @method array getSunday() 获取星期日的可维护时间列表。
  * @method void setSunday(array $Sunday) 设置星期日的可维护时间列表。
+ * @method integer getMaxDelayTime() 获取最大数据延迟阈值
+ * @method void setMaxDelayTime(integer $MaxDelayTime) 设置最大数据延迟阈值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +77,11 @@ class DescribeTimeWindowResponse extends AbstractModel
     public $Sunday;
 
     /**
+     * @var integer 最大数据延迟阈值
+     */
+    public $MaxDelayTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +94,7 @@ class DescribeTimeWindowResponse extends AbstractModel
      * @param array $Friday 星期五的可维护时间列表。
      * @param array $Saturday 星期六的可维护时间列表。
      * @param array $Sunday 星期日的可维护时间列表。
+     * @param integer $MaxDelayTime 最大数据延迟阈值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +136,10 @@ class DescribeTimeWindowResponse extends AbstractModel
 
         if (array_key_exists("Sunday",$param) and $param["Sunday"] !== null) {
             $this->Sunday = $param["Sunday"];
+        }
+
+        if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
+            $this->MaxDelayTime = $param["MaxDelayTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

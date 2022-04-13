@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeRanges(array $TimeRanges) 设置修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
  * @method array getWeekdays() 获取指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
  * @method void setWeekdays(array $Weekdays) 设置指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+ * @method integer getMaxDelayTime() 获取数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
+ * @method void setMaxDelayTime(integer $MaxDelayTime) 设置数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
  */
 class ModifyTimeWindowRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyTimeWindowRequest extends AbstractModel
     public $Weekdays;
 
     /**
+     * @var integer 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
+     */
+    public $MaxDelayTime;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $TimeRanges 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
      * @param array $Weekdays 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+     * @param integer $MaxDelayTime 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyTimeWindowRequest extends AbstractModel
 
         if (array_key_exists("Weekdays",$param) and $param["Weekdays"] !== null) {
             $this->Weekdays = $param["Weekdays"];
+        }
+
+        if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
+            $this->MaxDelayTime = $param["MaxDelayTime"];
         }
     }
 }

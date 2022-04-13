@@ -91,6 +91,10 @@ use TencentCloud\Tiia\V20190529\Models as Models;
  * @method Models\RecognizeCarResponse RecognizeCar(Models\RecognizeCarRequest $req) 腾讯云车辆属性识别可对汽车车身及车辆属性进行检测与识别，目前支持11种车身颜色、20多种车型、300多种品牌、4000多种车系+年款的识别，同时支持对车辆的位置进行检测。如果图片中存在多辆车，会分别输出每辆车的车型和坐标。
 >     
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+ * @method Models\RecognizeCarProResponse RecognizeCarPro(Models\RecognizeCarProRequest $req) 车辆识别（增强版）可对图片中汽车的车型和车牌进行识别，可识别7000多种车型，覆盖轿车、SUV、大型客车等市面常见车，输出车辆的车身颜色、品牌、车系、年份、车牌和位置等信息。如果图片中存在多辆车，会分别输出每辆车的车型、车牌和坐标。
+
+>     
+- 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
  * @method Models\SearchImageResponse SearchImage(Models\SearchImageRequest $req) 本接口用于对一张待识别的商品图片，在指定图片库中检索出最相似的图片列表。
  */
 

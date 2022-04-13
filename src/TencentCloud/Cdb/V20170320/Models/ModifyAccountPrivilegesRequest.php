@@ -25,21 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAccounts() 获取数据库的账号，包括用户名和域名。
  * @method void setAccounts(array $Accounts) 设置数据库的账号，包括用户名和域名。
  * @method array getGlobalPrivileges() 获取全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "PROCESS", "DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
  * @method void setGlobalPrivileges(array $GlobalPrivileges) 设置全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "PROCESS", "DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
  * @method array getDatabasePrivileges() 获取数据库的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
  * @method void setDatabasePrivileges(array $DatabasePrivileges) 设置数据库的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
  * @method array getTablePrivileges() 获取数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
  * @method void setTablePrivileges(array $TablePrivileges) 设置数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
  * @method array getColumnPrivileges() 获取数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
  * @method void setColumnPrivileges(array $ColumnPrivileges) 设置数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
  * @method string getModifyAction() 获取该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
  * @method void setModifyAction(string $ModifyAction) 设置该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
  */
@@ -57,25 +57,25 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
 
     /**
      * @var array 全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "PROCESS", "DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
      */
     public $GlobalPrivileges;
 
     /**
      * @var array 数据库的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
      */
     public $DatabasePrivileges;
 
     /**
      * @var array 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
      */
     public $TablePrivileges;
 
     /**
      * @var array 数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
      */
     public $ColumnPrivileges;
 
@@ -88,13 +88,13 @@ class ModifyAccountPrivilegesRequest extends AbstractModel
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $Accounts 数据库的账号，包括用户名和域名。
      * @param array $GlobalPrivileges 全局权限。其中，GlobalPrivileges 中权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "PROCESS", "DROP","REFERENCES","INDEX","ALTER","SHOW DATABASES","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
      * @param array $DatabasePrivileges 数据库的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE TEMPORARY TABLES","LOCK TABLES","EXECUTE","CREATE VIEW","SHOW VIEW","CREATE ROUTINE","ALTER ROUTINE","EVENT","TRIGGER"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
      * @param array $TablePrivileges 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE",	"DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
      * @param array $ColumnPrivileges 数据库表中列的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","REFERENCES"。
-注意，不传该参数表示清除该权限。
+注意，ModifyAction为空时，不传该参数表示清除该权限。
      * @param string $ModifyAction 该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
      */
     function __construct()

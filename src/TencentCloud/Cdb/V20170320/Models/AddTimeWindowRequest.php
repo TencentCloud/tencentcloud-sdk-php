@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(array $Saturday) 设置星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
  * @method array getSunday() 获取星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
  * @method void setSunday(array $Sunday) 设置星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
+ * @method integer getMaxDelayTime() 获取最大延迟阈值，仅对主实例和灾备实例有效
+ * @method void setMaxDelayTime(integer $MaxDelayTime) 设置最大延迟阈值，仅对主实例和灾备实例有效
  */
 class AddTimeWindowRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class AddTimeWindowRequest extends AbstractModel
     public $Sunday;
 
     /**
+     * @var integer 最大延迟阈值，仅对主实例和灾备实例有效
+     */
+    public $MaxDelayTime;
+
+    /**
      * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
      * @param array $Tuesday 星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
@@ -88,6 +95,7 @@ class AddTimeWindowRequest extends AbstractModel
      * @param array $Friday 星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
      * @param array $Saturday 星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
      * @param array $Sunday 星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
+     * @param integer $MaxDelayTime 最大延迟阈值，仅对主实例和灾备实例有效
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class AddTimeWindowRequest extends AbstractModel
 
         if (array_key_exists("Sunday",$param) and $param["Sunday"] !== null) {
             $this->Sunday = $param["Sunday"];
+        }
+
+        if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
+            $this->MaxDelayTime = $param["MaxDelayTime"];
         }
     }
 }

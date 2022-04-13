@@ -18,67 +18,55 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * oss回源鉴权
+ *  华为云对象存储回源鉴权
  *
- * @method string getSwitch() 获取开关， on/off。
- * @method void setSwitch(string $Switch) 设置开关， on/off。
- * @method string getAccessKey() 获取访问ID。
+ * @method string getSwitch() 获取开关 on/off
+ * @method void setSwitch(string $Switch) 设置开关 on/off
+ * @method string getAccessKey() 获取访问 ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessKey(string $AccessKey) 设置访问ID。
+ * @method void setAccessKey(string $AccessKey) 设置访问 ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecretKey() 获取密钥。
+ * @method string getSecretKey() 获取密钥
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecretKey(string $SecretKey) 设置密钥。
+ * @method void setSecretKey(string $SecretKey) 设置密钥
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取地域
+ * @method string getBucket() 获取bucketname
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBucket() 获取Bucketname
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBucket(string $Bucket) 设置Bucketname
+ * @method void setBucket(string $Bucket) 设置bucketname
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class OssPrivateAccess extends AbstractModel
+class HwPrivateAccess extends AbstractModel
 {
     /**
-     * @var string 开关， on/off。
+     * @var string 开关 on/off
      */
     public $Switch;
 
     /**
-     * @var string 访问ID。
+     * @var string 访问 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessKey;
 
     /**
-     * @var string 密钥。
+     * @var string 密钥
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretKey;
 
     /**
-     * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Region;
-
-    /**
-     * @var string Bucketname
+     * @var string bucketname
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
 
     /**
-     * @param string $Switch 开关， on/off。
-     * @param string $AccessKey 访问ID。
+     * @param string $Switch 开关 on/off
+     * @param string $AccessKey 访问 ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SecretKey 密钥。
+     * @param string $SecretKey 密钥
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Bucket Bucketname
+     * @param string $Bucket bucketname
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,10 +92,6 @@ class OssPrivateAccess extends AbstractModel
 
         if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
             $this->SecretKey = $param["SecretKey"];
-        }
-
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
         }
 
         if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {

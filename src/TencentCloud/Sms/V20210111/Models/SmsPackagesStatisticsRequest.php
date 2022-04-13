@@ -31,9 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
 注：拉取套餐包的创建时间不小于起始时间。
  * @method string getEndTime() 获取结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
  */
 class SmsPackagesStatisticsRequest extends AbstractModel
 {
@@ -60,7 +60,7 @@ class SmsPackagesStatisticsRequest extends AbstractModel
 
     /**
      * @var string 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
      */
     public $EndTime;
 
@@ -71,7 +71,7 @@ class SmsPackagesStatisticsRequest extends AbstractModel
      * @param string $BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
 注：拉取套餐包的创建时间不小于起始时间。
      * @param string $EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
      */
     function __construct()
     {

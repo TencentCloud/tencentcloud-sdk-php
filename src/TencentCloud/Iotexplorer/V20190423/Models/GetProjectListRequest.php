@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置个数限制
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getProjectId() 获取按项目D搜索
- * @method void setProjectId(string $ProjectId) 设置按项目D搜索
+ * @method string getProjectId() 获取按项目ID搜索
+ * @method void setProjectId(string $ProjectId) 设置按项目ID搜索
  * @method string getProductId() 获取按产品ID搜索
  * @method void setProductId(string $ProductId) 设置按产品ID搜索
  * @method array getIncludes() 获取加载 ProductCount、DeviceCount、ApplicationCount，可选值：ProductCount、DeviceCount、ApplicationCount，可多选
@@ -53,7 +53,7 @@ class GetProjectListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 按项目D搜索
+     * @var string 按项目ID搜索
      */
     public $ProjectId;
 
@@ -76,7 +76,7 @@ class GetProjectListRequest extends AbstractModel
      * @param integer $Offset 偏移量
      * @param integer $Limit 个数限制
      * @param string $InstanceId 实例ID
-     * @param string $ProjectId 按项目D搜索
+     * @param string $ProjectId 按项目ID搜索
      * @param string $ProductId 按产品ID搜索
      * @param array $Includes 加载 ProductCount、DeviceCount、ApplicationCount，可选值：ProductCount、DeviceCount、ApplicationCount，可多选
      * @param string $ProjectName 按项目名称搜索

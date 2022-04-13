@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) 设置是否需要支持Ipv6，1：是，0：否
  * @method string getReadOnlyGroupId() 获取只读组ID。
  * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID。
- * @method Tag getTagList() 获取实例需要绑定的Tag信息，默认为空
- * @method void setTagList(Tag $TagList) 设置实例需要绑定的Tag信息，默认为空
+ * @method Tag getTagList() 获取实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
+ * @method void setTagList(Tag $TagList) 设置实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
  * @method array getSecurityGroupIds() 获取安全组id
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组id
  */
@@ -154,7 +154,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $ReadOnlyGroupId;
 
     /**
-     * @var Tag 实例需要绑定的Tag信息，默认为空
+     * @var Tag 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
      */
     public $TagList;
 
@@ -182,7 +182,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @param string $Name 实例名(后续支持)
      * @param integer $NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
      * @param string $ReadOnlyGroupId 只读组ID。
-     * @param Tag $TagList 实例需要绑定的Tag信息，默认为空
+     * @param Tag $TagList 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
      * @param array $SecurityGroupIds 安全组id
      */
     function __construct()

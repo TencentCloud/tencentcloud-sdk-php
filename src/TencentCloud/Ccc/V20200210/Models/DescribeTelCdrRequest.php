@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeStamp(integer $StartTimeStamp) 设置起始时间戳，Unix 时间戳
  * @method integer getEndTimeStamp() 获取结束时间戳，Unix 时间戳
  * @method void setEndTimeStamp(integer $EndTimeStamp) 设置结束时间戳，Unix 时间戳
+ * @method integer getInstanceId() 获取实例 ID（deprecated）
+ * @method void setInstanceId(integer $InstanceId) 设置实例 ID（deprecated）
  * @method integer getLimit() 获取返回数据条数，上限（deprecated）
  * @method void setLimit(integer $Limit) 设置返回数据条数，上限（deprecated）
  * @method integer getOffset() 获取偏移（deprecated）
  * @method void setOffset(integer $Offset) 设置偏移（deprecated）
- * @method integer getInstanceId() 获取实例 ID（deprecated）
- * @method void setInstanceId(integer $InstanceId) 设置实例 ID（deprecated）
  * @method integer getSdkAppId() 获取应用 ID
  * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID
  * @method integer getPageSize() 获取分页尺寸，上限 100
@@ -54,6 +54,11 @@ class DescribeTelCdrRequest extends AbstractModel
     public $EndTimeStamp;
 
     /**
+     * @var integer 实例 ID（deprecated）
+     */
+    public $InstanceId;
+
+    /**
      * @var integer 返回数据条数，上限（deprecated）
      */
     public $Limit;
@@ -62,11 +67,6 @@ class DescribeTelCdrRequest extends AbstractModel
      * @var integer 偏移（deprecated）
      */
     public $Offset;
-
-    /**
-     * @var integer 实例 ID（deprecated）
-     */
-    public $InstanceId;
 
     /**
      * @var integer 应用 ID
@@ -96,9 +96,9 @@ class DescribeTelCdrRequest extends AbstractModel
     /**
      * @param integer $StartTimeStamp 起始时间戳，Unix 时间戳
      * @param integer $EndTimeStamp 结束时间戳，Unix 时间戳
+     * @param integer $InstanceId 实例 ID（deprecated）
      * @param integer $Limit 返回数据条数，上限（deprecated）
      * @param integer $Offset 偏移（deprecated）
-     * @param integer $InstanceId 实例 ID（deprecated）
      * @param integer $SdkAppId 应用 ID
      * @param integer $PageSize 分页尺寸，上限 100
      * @param integer $PageNumber 分页页码，从 0 开始
@@ -126,16 +126,16 @@ class DescribeTelCdrRequest extends AbstractModel
             $this->EndTimeStamp = $param["EndTimeStamp"];
         }
 
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {

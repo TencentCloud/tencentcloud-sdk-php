@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKernelVersion(string $KernelVersion) 设置PostgreSQL的内核版本编号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSupportTDE() 获取是否支持TDE数据加密功能，0-不支持，1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportTDE(integer $IsSupportTDE) 设置是否支持TDE数据加密功能，0-不支持，1-支持
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpecItemInfo extends AbstractModel
 {
@@ -114,6 +118,12 @@ class SpecItemInfo extends AbstractModel
     public $KernelVersion;
 
     /**
+     * @var integer 是否支持TDE数据加密功能，0-不支持，1-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportTDE;
+
+    /**
      * @param string $SpecCode 规格ID
      * @param string $Version PostgreSQL的版本编号
      * @param string $VersionName 内核编号对应的完整版本名称
@@ -127,6 +137,8 @@ class SpecItemInfo extends AbstractModel
      * @param string $MajorVersion PostgreSQL的主要版本编号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KernelVersion PostgreSQL的内核版本编号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSupportTDE 是否支持TDE数据加密功能，0-不支持，1-支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +200,10 @@ class SpecItemInfo extends AbstractModel
 
         if (array_key_exists("KernelVersion",$param) and $param["KernelVersion"] !== null) {
             $this->KernelVersion = $param["KernelVersion"];
+        }
+
+        if (array_key_exists("IsSupportTDE",$param) and $param["IsSupportTDE"] !== null) {
+            $this->IsSupportTDE = $param["IsSupportTDE"];
         }
     }
 }

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getOffset() 获取分页
- * @method void setOffset(integer $Offset) 设置分页
- * @method integer getLimit() 获取限制
- * @method void setLimit(integer $Limit) 设置限制
+ * @method integer getOffset() 获取分页查询偏移量
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量
+ * @method integer getLimit() 获取分页查询限制
+ * @method void setLimit(integer $Limit) 设置分页查询限制
  */
 class DescribeProxyConnectionPoolConfRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeProxyConnectionPoolConfRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 分页
+     * @var integer 分页查询偏移量
      */
     public $Offset;
 
     /**
-     * @var integer 限制
+     * @var integer 分页查询限制
      */
     public $Limit;
 
     /**
      * @param string $InstanceId 实例ID
-     * @param integer $Offset 分页
-     * @param integer $Limit 限制
+     * @param integer $Offset 分页查询偏移量
+     * @param integer $Limit 分页查询限制
      */
     function __construct()
     {

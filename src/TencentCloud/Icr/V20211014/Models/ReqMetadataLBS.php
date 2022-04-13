@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 请求参数的lbs
  *
- * @method float getLatitude() 获取无
- * @method void setLatitude(float $Latitude) 设置无
- * @method float getLongitude() 获取无
- * @method void setLongitude(float $Longitude) 设置无
+ * @method float getLatitude() 获取纬度
+ * @method void setLatitude(float $Latitude) 设置纬度
+ * @method float getLongitude() 获取经度
+ * @method void setLongitude(float $Longitude) 设置经度
  */
 class ReqMetadataLBS extends AbstractModel
 {
     /**
-     * @var float 无
+     * @var float 纬度
      */
     public $Latitude;
 
     /**
-     * @var float 无
+     * @var float 经度
      */
     public $Longitude;
 
     /**
-     * @param float $Latitude 无
-     * @param float $Longitude 无
+     * @param float $Latitude 纬度
+     * @param float $Longitude 经度
      */
     function __construct()
     {

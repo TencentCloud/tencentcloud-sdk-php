@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminPassword(string $AdminPassword) 设置实例根账号用户名对应的密码。
  * @method integer getProjectId() 获取项目ID。
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
- * @method string getDBVersion() 获取PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
- * @method void setDBVersion(string $DBVersion) 设置PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+ * @method string getDBVersion() 获取PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
+ * @method void setDBVersion(string $DBVersion) 设置PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
  * @method string getInstanceChargeType() 获取实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
  * @method integer getAutoVoucher() 获取是否自动使用代金券。1（是），0（否），默认不使用。
@@ -62,12 +62,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) 设置实例需要绑定的Tag信息，默认为空。
  * @method array getSecurityGroupIds() 获取安全组ID。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID。
- * @method string getDBMajorVersion() 获取PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
- * @method void setDBMajorVersion(string $DBMajorVersion) 设置PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
- * @method string getDBKernelVersion() 获取PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
- * @method void setDBKernelVersion(string $DBKernelVersion) 设置PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
+ * @method string getDBMajorVersion() 获取PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
+ * @method void setDBMajorVersion(string $DBMajorVersion) 设置PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
+ * @method string getDBKernelVersion() 获取PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
+ * @method void setDBKernelVersion(string $DBKernelVersion) 设置PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
  * @method array getDBNodeSet() 获取实例节点信息，购买跨可用区实例时填写。
  * @method void setDBNodeSet(array $DBNodeSet) 设置实例节点信息，购买跨可用区实例时填写。
+ * @method integer getNeedSupportTDE() 获取是否需要支持数据透明加密，1：是，0：否（默认）。
+ * @method void setNeedSupportTDE(integer $NeedSupportTDE) 设置是否需要支持数据透明加密，1：是，0：否（默认）。
+ * @method string getKMSKeyId() 获取自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+ * @method void setKMSKeyId(string $KMSKeyId) 设置自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+ * @method string getKMSRegion() 获取使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+ * @method void setKMSRegion(string $KMSRegion) 设置使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -117,7 +123,7 @@ class CreateInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+     * @var string PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
      */
     public $DBVersion;
 
@@ -177,12 +183,12 @@ class CreateInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var string PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+     * @var string PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
      */
     public $DBMajorVersion;
 
     /**
-     * @var string PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
+     * @var string PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
      */
     public $DBKernelVersion;
 
@@ -190,6 +196,21 @@ class CreateInstancesRequest extends AbstractModel
      * @var array 实例节点信息，购买跨可用区实例时填写。
      */
     public $DBNodeSet;
+
+    /**
+     * @var integer 是否需要支持数据透明加密，1：是，0：否（默认）。
+     */
+    public $NeedSupportTDE;
+
+    /**
+     * @var string 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+     */
+    public $KMSKeyId;
+
+    /**
+     * @var string 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+     */
+    public $KMSRegion;
 
     /**
      * @param string $SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
@@ -201,7 +222,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param string $AdminName 实例根账号用户名。
      * @param string $AdminPassword 实例根账号用户名对应的密码。
      * @param integer $ProjectId 项目ID。
-     * @param string $DBVersion PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+     * @param string $DBVersion PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
      * @param string $InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
      * @param integer $AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
@@ -213,9 +234,12 @@ class CreateInstancesRequest extends AbstractModel
      * @param integer $NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否（默认）。
      * @param array $TagList 实例需要绑定的Tag信息，默认为空。
      * @param array $SecurityGroupIds 安全组ID。
-     * @param string $DBMajorVersion PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
-     * @param string $DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
+     * @param string $DBMajorVersion PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
+     * @param string $DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
      * @param array $DBNodeSet 实例节点信息，购买跨可用区实例时填写。
+     * @param integer $NeedSupportTDE 是否需要支持数据透明加密，1：是，0：否（默认）。
+     * @param string $KMSKeyId 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+     * @param string $KMSRegion 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
      */
     function __construct()
     {
@@ -334,6 +358,18 @@ class CreateInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DBNodeSet, $obj);
             }
+        }
+
+        if (array_key_exists("NeedSupportTDE",$param) and $param["NeedSupportTDE"] !== null) {
+            $this->NeedSupportTDE = $param["NeedSupportTDE"];
+        }
+
+        if (array_key_exists("KMSKeyId",$param) and $param["KMSKeyId"] !== null) {
+            $this->KMSKeyId = $param["KMSKeyId"];
+        }
+
+        if (array_key_exists("KMSRegion",$param) and $param["KMSRegion"] !== null) {
+            $this->KMSRegion = $param["KMSRegion"];
         }
     }
 }

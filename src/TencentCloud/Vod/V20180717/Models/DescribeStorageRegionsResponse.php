@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dcdb\V20180411\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeOrders返回参数结构体
+ * DescribeStorageRegions返回参数结构体
  *
- * @method array getTotalCount() 获取返回的订单数量。
- * @method void setTotalCount(array $TotalCount) 设置返回的订单数量。
- * @method array getDeals() 获取订单信息列表。
- * @method void setDeals(array $Deals) 设置订单信息列表。
+ * @method array getStorageRegionInfos() 获取存储地域信息列表。
+ * @method void setStorageRegionInfos(array $StorageRegionInfos) 设置存储地域信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeOrdersResponse extends AbstractModel
+class DescribeStorageRegionsResponse extends AbstractModel
 {
     /**
-     * @var array 返回的订单数量。
+     * @var array 存储地域信息列表。
      */
-    public $TotalCount;
-
-    /**
-     * @var array 订单信息列表。
-     */
-    public $Deals;
+    public $StorageRegionInfos;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeOrdersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TotalCount 返回的订单数量。
-     * @param array $Deals 订单信息列表。
+     * @param array $StorageRegionInfos 存储地域信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +54,12 @@ class DescribeOrdersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Deals",$param) and $param["Deals"] !== null) {
-            $this->Deals = [];
-            foreach ($param["Deals"] as $key => $value){
-                $obj = new Deal();
+        if (array_key_exists("StorageRegionInfos",$param) and $param["StorageRegionInfos"] !== null) {
+            $this->StorageRegionInfos = [];
+            foreach ($param["StorageRegionInfos"] as $key => $value){
+                $obj = new StorageRegionInfo();
                 $obj->deserialize($value);
-                array_push($this->Deals, $obj);
+                array_push($this->StorageRegionInfos, $obj);
             }
         }
 

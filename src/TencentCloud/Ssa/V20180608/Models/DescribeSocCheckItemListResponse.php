@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dcdb\V20180411\Models;
+namespace TencentCloud\Ssa\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeOrders请求参数结构体
+ * DescribeSocCheckItemList返回参数结构体
  *
- * @method array getDealNames() 获取待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
- * @method void setDealNames(array $DealNames) 设置待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeOrdersRequest extends AbstractModel
+class DescribeSocCheckItemListResponse extends AbstractModel
 {
     /**
-     * @var array 待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $DealNames;
+    public $RequestId;
 
     /**
-     * @param array $DealNames 待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeOrdersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
-            $this->DealNames = $param["DealNames"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

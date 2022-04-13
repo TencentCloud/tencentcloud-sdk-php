@@ -118,6 +118,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置云硬盘的创建时间。
  * @method integer getDeleteSnapshot() 获取销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
  * @method void setDeleteSnapshot(integer $DeleteSnapshot) 设置销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+ * @method integer getDiskBackupCount() 获取云硬盘备份点已使用的数量。
+ * @method void setDiskBackupCount(integer $DiskBackupCount) 设置云硬盘备份点已使用的数量。
+ * @method string getInstanceType() 获取云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
+ * @method void setInstanceType(string $InstanceType) 设置云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
  */
 class Disk extends AbstractModel
 {
@@ -315,6 +319,16 @@ class Disk extends AbstractModel
     public $DeleteSnapshot;
 
     /**
+     * @var integer 云硬盘备份点已使用的数量。
+     */
+    public $DiskBackupCount;
+
+    /**
+     * @var string 云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
+     */
+    public $InstanceType;
+
+    /**
      * @param boolean $DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
@@ -364,6 +378,8 @@ class Disk extends AbstractModel
      * @param boolean $Shareable 云盘是否为共享型云盘。
      * @param string $CreateTime 云硬盘的创建时间。
      * @param integer $DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+     * @param integer $DiskBackupCount 云硬盘备份点已使用的数量。
+     * @param string $InstanceType 云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
      */
     function __construct()
     {
@@ -526,6 +542,14 @@ class Disk extends AbstractModel
 
         if (array_key_exists("DeleteSnapshot",$param) and $param["DeleteSnapshot"] !== null) {
             $this->DeleteSnapshot = $param["DeleteSnapshot"];
+        }
+
+        if (array_key_exists("DiskBackupCount",$param) and $param["DiskBackupCount"] !== null) {
+            $this->DiskBackupCount = $param["DiskBackupCount"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

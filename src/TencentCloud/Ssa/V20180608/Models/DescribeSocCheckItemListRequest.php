@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mariadb\V20170312\Models;
+namespace TencentCloud\Ssa\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeOrders请求参数结构体
+ * DescribeSocCheckItemList请求参数结构体
  *
- * @method array getDealNames() 获取待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
- * @method void setDealNames(array $DealNames) 设置待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
+
  */
-class DescribeOrdersRequest extends AbstractModel
+class DescribeSocCheckItemListRequest extends AbstractModel
 {
-    /**
-     * @var array 待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
-     */
-    public $DealNames;
+
 
     /**
-     * @param array $DealNames 待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeOrdersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
-            $this->DealNames = $param["DealNames"];
-        }
+
     }
 }

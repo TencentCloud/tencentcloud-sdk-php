@@ -48,6 +48,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
 大小额联行号：单笔转账可超过5万，需具体到支行，不能实时知道对方是否收款成功。金额超过5万的，在工作日的8点30-17点间才会成功。
  * @method Models\CheckAcctResponse CheckAcct(Models\CheckAcctRequest $req) 商户绑定提现银行卡的验证接口
  * @method Models\CheckAmountResponse CheckAmount(Models\CheckAmountRequest $req) 验证鉴权金额。此接口可受理BindRelateAcctSmallAmount接口发起的转账金额（往账鉴权方式）的验证处理。若所回填的验证金额验证通过，则会绑定原申请中的银行账户作为提现账户。通过此接口也可以查得BindRelateAcctSmallAmount接口发起的来账鉴权方式的申请的当前状态。
+ * @method Models\CloseCloudOrderResponse CloseCloudOrder(Models\CloseCloudOrderRequest $req) 通过此接口关闭此前已创建的订单。关闭后，用户将无法继续付款，仅能关闭创建后未支付的订单。
  * @method Models\CloseOpenBankPaymentOrderResponse CloseOpenBankPaymentOrder(Models\CloseOpenBankPaymentOrderRequest $req) 云企付-关闭订单
  * @method Models\CloseOrderResponse CloseOrder(Models\CloseOrderRequest $req) 通过此接口关闭此前已创建的订单，关闭后，用户将无法继续付款。仅能关闭创建后未支付的订单
  * @method Models\ConfirmOrderResponse ConfirmOrder(Models\ConfirmOrderRequest $req) 云鉴-消费订单确认接口
@@ -56,6 +57,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateAgentTaxPaymentInfosResponse CreateAgentTaxPaymentInfos(Models\CreateAgentTaxPaymentInfosRequest $req) 直播平台-代理商完税信息录入
  * @method Models\CreateAnchorResponse CreateAnchor(Models\CreateAnchorRequest $req) 直播平台-主播入驻
  * @method Models\CreateBatchPaymentResponse CreateBatchPayment(Models\CreateBatchPaymentRequest $req) 灵云-批量主播转账接口
+ * @method Models\CreateCloudSubMerchantResponse CreateCloudSubMerchant(Models\CreateCloudSubMerchantRequest $req) 创建子商户
  * @method Models\CreateCustAcctIdResponse CreateCustAcctId(Models\CreateCustAcctIdRequest $req) 会员子账户开立。会员在银行注册，并开立会员子账户，交易网会员代码即会员在平台端系统的会员编号。
 平台需保存银行返回的子账户账号，后续交易接口都会用到。会员属性字段为预留扩展字段，当前必须送默认值。
  * @method Models\CreateExternalAnchorResponse CreateExternalAnchor(Models\CreateExternalAnchorRequest $req) 灵云-主播入驻
@@ -112,6 +114,9 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryBatchPaymentResultResponse QueryBatchPaymentResult(Models\QueryBatchPaymentResultRequest $req) 灵云-批量转账结果查询
  * @method Models\QueryBillDownloadURLResponse QueryBillDownloadURL(Models\QueryBillDownloadURLRequest $req) 获取单笔代发转账对账单下载URL
  * @method Models\QueryCityCodeResponse QueryCityCode(Models\QueryCityCodeRequest $req) 云支付-查询城市编码接口
+ * @method Models\QueryCloudChannelDataResponse QueryCloudChannelData(Models\QueryCloudChannelDataRequest $req) 发起支付等渠道操作后，可以调用该接口查询渠道的数据。
+ * @method Models\QueryCloudOrderResponse QueryCloudOrder(Models\QueryCloudOrderRequest $req) 根据订单号或用户ID，查询支付订单状态。
+ * @method Models\QueryCloudRefundOrderResponse QueryCloudRefundOrder(Models\QueryCloudRefundOrderRequest $req) 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时，用微信零钱支付的退款约20分钟内到账，银行卡支付的退款约3个工作日后到账。
  * @method Models\QueryCommonTransferRechargeResponse QueryCommonTransferRecharge(Models\QueryCommonTransferRechargeRequest $req) 查询普通转账充值明细。接口用于查询会员主动转账进资金汇总账户的明细情况。若会员使用绑定账号转入，则直接入账到会员子账户。若未使用绑定账号转入，则系统无法自动清分到对应子账户，则转入挂账子账户由平台自行清分。若是 “见证+收单充值”T0充值记录时备注Note为“见证+收单充值,订单号” 此接口可以查到T0到账的“见证+收单充值”充值记录。
  * @method Models\QueryContractResponse QueryContract(Models\QueryContractRequest $req) 通过此接口查询签约数据
  * @method Models\QueryContractPayFeeResponse QueryContractPayFee(Models\QueryContractPayFeeRequest $req) 云支付-查询支付方式费率及自定义表单项接口
@@ -164,6 +169,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\RechargeByThirdPayResponse RechargeByThirdPay(Models\RechargeByThirdPayRequest $req) 会员在途充值(经第三方支付渠道)接口
  * @method Models\RechargeMemberThirdPayResponse RechargeMemberThirdPay(Models\RechargeMemberThirdPayRequest $req) 见证宝-会员在途充值(经第三方支付渠道)
  * @method Models\RefundResponse Refund(Models\RefundRequest $req) 如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。 
+ * @method Models\RefundCloudOrderResponse RefundCloudOrder(Models\RefundCloudOrderRequest $req) 如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。 
  * @method Models\RefundMemberTransactionResponse RefundMemberTransaction(Models\RefundMemberTransactionRequest $req) 会员间交易退款
  * @method Models\RefundOrderResponse RefundOrder(Models\RefundOrderRequest $req) 云鉴-消费订单退款的接口
  * @method Models\RefundTlinxOrderResponse RefundTlinxOrder(Models\RefundTlinxOrderRequest $req) 云支付订单退款接口
@@ -180,6 +186,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\UnBindAcctResponse UnBindAcct(Models\UnBindAcctRequest $req) 商户解除绑定的提现银行卡
  * @method Models\UnbindOpenBankExternalSubMerchantBankAccountResponse UnbindOpenBankExternalSubMerchantBankAccount(Models\UnbindOpenBankExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡解绑
  * @method Models\UnbindRelateAcctResponse UnbindRelateAcct(Models\UnbindRelateAcctRequest $req) 会员解绑提现账户。此接口可以支持会员解除名下的绑定账户关系。
+ * @method Models\UnifiedCloudOrderResponse UnifiedCloudOrder(Models\UnifiedCloudOrderRequest $req) 应用需要先调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
  * @method Models\UnifiedOrderResponse UnifiedOrder(Models\UnifiedOrderRequest $req) 应用需要先调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
  * @method Models\UnifiedTlinxOrderResponse UnifiedTlinxOrder(Models\UnifiedTlinxOrderRequest $req) 云支付-统一下单接口
  * @method Models\UploadExternalAnchorInfoResponse UploadExternalAnchorInfo(Models\UploadExternalAnchorInfoRequest $req) 灵云-上传主播信息

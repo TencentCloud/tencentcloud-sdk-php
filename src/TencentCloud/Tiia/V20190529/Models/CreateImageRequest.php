@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEntityId(string $EntityId) 设置物品ID，最多支持64个字符。 
 若EntityId已存在，则对其追加图片。
  * @method string getPicName() 获取图片名称，最多支持64个字符， 
-同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。
  * @method void setPicName(string $PicName) 设置图片名称，最多支持64个字符， 
-同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。
  * @method string getImageUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片分辨率不超过4096*4096。
@@ -68,7 +68,7 @@ class CreateImageRequest extends AbstractModel
 
     /**
      * @var string 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。
      */
     public $PicName;
 
@@ -104,7 +104,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
      * @param string $EntityId 物品ID，最多支持64个字符。 
 若EntityId已存在，则对其追加图片。
      * @param string $PicName 图片名称，最多支持64个字符， 
-同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+同一个EntityId，最大支持10张图。
      * @param string $ImageUrl 图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片分辨率不超过4096*4096。

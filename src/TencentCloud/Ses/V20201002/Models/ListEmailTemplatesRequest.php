@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListEmailTemplates请求参数结构体
  *
- * @method integer getLimit() 获取获取模版数据量，用于分页
- * @method void setLimit(integer $Limit) 设置获取模版数据量，用于分页
- * @method integer getOffset() 获取获取模版偏移值，用于分页
- * @method void setOffset(integer $Offset) 设置获取模版偏移值，用于分页
+ * @method integer getLimit() 获取获取模板数据量，用于分页
+ * @method void setLimit(integer $Limit) 设置获取模板数据量，用于分页
+ * @method integer getOffset() 获取获取模板偏移值，用于分页
+ * @method void setOffset(integer $Offset) 设置获取模板偏移值，用于分页
  */
 class ListEmailTemplatesRequest extends AbstractModel
 {
     /**
-     * @var integer 获取模版数据量，用于分页
+     * @var integer 获取模板数据量，用于分页
      */
     public $Limit;
 
     /**
-     * @var integer 获取模版偏移值，用于分页
+     * @var integer 获取模板偏移值，用于分页
      */
     public $Offset;
 
     /**
-     * @param integer $Limit 获取模版数据量，用于分页
-     * @param integer $Offset 获取模版偏移值，用于分页
+     * @param integer $Limit 获取模板数据量，用于分页
+     * @param integer $Offset 获取模板偏移值，用于分页
      */
     function __construct()
     {

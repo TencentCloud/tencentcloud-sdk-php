@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTelCdr请求参数结构体
  *
- * @method integer getStartTimeStamp() 获取起始时间戳，Unix 时间戳
- * @method void setStartTimeStamp(integer $StartTimeStamp) 设置起始时间戳，Unix 时间戳
- * @method integer getEndTimeStamp() 获取结束时间戳，Unix 时间戳
- * @method void setEndTimeStamp(integer $EndTimeStamp) 设置结束时间戳，Unix 时间戳
- * @method integer getInstanceId() 获取实例 ID（deprecated）
- * @method void setInstanceId(integer $InstanceId) 设置实例 ID（deprecated）
- * @method integer getLimit() 获取返回数据条数，上限（deprecated）
- * @method void setLimit(integer $Limit) 设置返回数据条数，上限（deprecated）
- * @method integer getOffset() 获取偏移（deprecated）
- * @method void setOffset(integer $Offset) 设置偏移（deprecated）
- * @method integer getSdkAppId() 获取应用 ID
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID
- * @method integer getPageSize() 获取分页尺寸，上限 100
- * @method void setPageSize(integer $PageSize) 设置分页尺寸，上限 100
- * @method integer getPageNumber() 获取分页页码，从 0 开始
- * @method void setPageNumber(integer $PageNumber) 设置分页页码，从 0 开始
+ * @method integer getStartTimeStamp() 获取起始时间戳，Unix 秒级时间戳
+ * @method void setStartTimeStamp(integer $StartTimeStamp) 设置起始时间戳，Unix 秒级时间戳
+ * @method integer getEndTimeStamp() 获取结束时间戳，Unix 秒级时间戳
+ * @method void setEndTimeStamp(integer $EndTimeStamp) 设置结束时间戳，Unix 秒级时间戳
+ * @method integer getInstanceId() 获取实例 ID（废弃）
+ * @method void setInstanceId(integer $InstanceId) 设置实例 ID（废弃）
+ * @method integer getLimit() 获取返回数据条数，上限（废弃）
+ * @method void setLimit(integer $Limit) 设置返回数据条数，上限（废弃）
+ * @method integer getOffset() 获取偏移（废弃）
+ * @method void setOffset(integer $Offset) 设置偏移（废弃）
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method integer getPageSize() 获取分页尺寸（必填），上限 100
+ * @method void setPageSize(integer $PageSize) 设置分页尺寸（必填），上限 100
+ * @method integer getPageNumber() 获取分页页码（必填），从 0 开始
+ * @method void setPageNumber(integer $PageNumber) 设置分页页码（必填），从 0 开始
  * @method array getPhones() 获取按手机号筛选
  * @method void setPhones(array $Phones) 设置按手机号筛选
  * @method array getSessionIds() 获取按SessionId筛选
@@ -44,42 +44,42 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTelCdrRequest extends AbstractModel
 {
     /**
-     * @var integer 起始时间戳，Unix 时间戳
+     * @var integer 起始时间戳，Unix 秒级时间戳
      */
     public $StartTimeStamp;
 
     /**
-     * @var integer 结束时间戳，Unix 时间戳
+     * @var integer 结束时间戳，Unix 秒级时间戳
      */
     public $EndTimeStamp;
 
     /**
-     * @var integer 实例 ID（deprecated）
+     * @var integer 实例 ID（废弃）
      */
     public $InstanceId;
 
     /**
-     * @var integer 返回数据条数，上限（deprecated）
+     * @var integer 返回数据条数，上限（废弃）
      */
     public $Limit;
 
     /**
-     * @var integer 偏移（deprecated）
+     * @var integer 偏移（废弃）
      */
     public $Offset;
 
     /**
-     * @var integer 应用 ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
     /**
-     * @var integer 分页尺寸，上限 100
+     * @var integer 分页尺寸（必填），上限 100
      */
     public $PageSize;
 
     /**
-     * @var integer 分页页码，从 0 开始
+     * @var integer 分页页码（必填），从 0 开始
      */
     public $PageNumber;
 
@@ -94,14 +94,14 @@ class DescribeTelCdrRequest extends AbstractModel
     public $SessionIds;
 
     /**
-     * @param integer $StartTimeStamp 起始时间戳，Unix 时间戳
-     * @param integer $EndTimeStamp 结束时间戳，Unix 时间戳
-     * @param integer $InstanceId 实例 ID（deprecated）
-     * @param integer $Limit 返回数据条数，上限（deprecated）
-     * @param integer $Offset 偏移（deprecated）
-     * @param integer $SdkAppId 应用 ID
-     * @param integer $PageSize 分页尺寸，上限 100
-     * @param integer $PageNumber 分页页码，从 0 开始
+     * @param integer $StartTimeStamp 起始时间戳，Unix 秒级时间戳
+     * @param integer $EndTimeStamp 结束时间戳，Unix 秒级时间戳
+     * @param integer $InstanceId 实例 ID（废弃）
+     * @param integer $Limit 返回数据条数，上限（废弃）
+     * @param integer $Offset 偏移（废弃）
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param integer $PageSize 分页尺寸（必填），上限 100
+     * @param integer $PageNumber 分页页码（必填），从 0 开始
      * @param array $Phones 按手机号筛选
      * @param array $SessionIds 按SessionId筛选
      */

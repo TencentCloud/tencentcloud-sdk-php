@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ses\V20201002\Models;
+namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListEmailTemplates返回参数结构体
+ * RefundCloudOrder返回参数结构体
  *
- * @method array getTemplatesMetadata() 获取邮件模板列表
- * @method void setTemplatesMetadata(array $TemplatesMetadata) 设置邮件模板列表
- * @method integer getTotalCount() 获取模板总数量
- * @method void setTotalCount(integer $TotalCount) 设置模板总数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ListEmailTemplatesResponse extends AbstractModel
+class RefundCloudOrderResponse extends AbstractModel
 {
-    /**
-     * @var array 邮件模板列表
-     */
-    public $TemplatesMetadata;
-
-    /**
-     * @var integer 模板总数量
-     */
-    public $TotalCount;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $TemplatesMetadata 邮件模板列表
-     * @param integer $TotalCount 模板总数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,19 +46,6 @@ class ListEmailTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplatesMetadata",$param) and $param["TemplatesMetadata"] !== null) {
-            $this->TemplatesMetadata = [];
-            foreach ($param["TemplatesMetadata"] as $key => $value){
-                $obj = new TemplatesMetadata();
-                $obj->deserialize($value);
-                array_push($this->TemplatesMetadata, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

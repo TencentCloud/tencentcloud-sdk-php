@@ -30,20 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrief(string $Brief) 设置简介。
  * @method integer getMaxQps() 获取该库的访问限频 ，默认10。
  * @method void setMaxQps(integer $MaxQps) 设置该库的访问限频 ，默认10。
- * @method integer getGroupType() 获取图库类型， 默认为通用。
-类型： 
-1: 通用图库，以用户输入图提取特征。
-2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
-3: 针对电商（通用品类）和logo优化。
-4: 通用图库v2。
-5: 电商模型。
- * @method void setGroupType(integer $GroupType) 设置图库类型， 默认为通用。
-类型： 
-1: 通用图库，以用户输入图提取特征。
-2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
-3: 针对电商（通用品类）和logo优化。
-4: 通用图库v2。
-5: 电商模型。
+ * @method integer getGroupType() 获取图库类型，对应不同产品功能，默认为1。建议调整为4或5，1~3为历史版本，不推荐。
+参数值：
+4：相同图像搜索，在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于版权场景。
+5：商品图像搜索，在自建图库中搜索相同或相似的商品图片，适用于电商场景。
+ * @method void setGroupType(integer $GroupType) 设置图库类型，对应不同产品功能，默认为1。建议调整为4或5，1~3为历史版本，不推荐。
+参数值：
+4：相同图像搜索，在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于版权场景。
+5：商品图像搜索，在自建图库中搜索相同或相似的商品图片，适用于电商场景。
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -73,13 +67,10 @@ class CreateGroupRequest extends AbstractModel
     public $MaxQps;
 
     /**
-     * @var integer 图库类型， 默认为通用。
-类型： 
-1: 通用图库，以用户输入图提取特征。
-2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
-3: 针对电商（通用品类）和logo优化。
-4: 通用图库v2。
-5: 电商模型。
+     * @var integer 图库类型，对应不同产品功能，默认为1。建议调整为4或5，1~3为历史版本，不推荐。
+参数值：
+4：相同图像搜索，在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于版权场景。
+5：商品图像搜索，在自建图库中搜索相同或相似的商品图片，适用于电商场景。
      */
     public $GroupType;
 
@@ -89,13 +80,10 @@ class CreateGroupRequest extends AbstractModel
      * @param integer $MaxCapacity 该库的容量限制。
      * @param string $Brief 简介。
      * @param integer $MaxQps 该库的访问限频 ，默认10。
-     * @param integer $GroupType 图库类型， 默认为通用。
-类型： 
-1: 通用图库，以用户输入图提取特征。
-2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
-3: 针对电商（通用品类）和logo优化。
-4: 通用图库v2。
-5: 电商模型。
+     * @param integer $GroupType 图库类型，对应不同产品功能，默认为1。建议调整为4或5，1~3为历史版本，不推荐。
+参数值：
+4：相同图像搜索，在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于版权场景。
+5：商品图像搜索，在自建图库中搜索相同或相似的商品图片，适用于电商场景。
      */
     function __construct()
     {

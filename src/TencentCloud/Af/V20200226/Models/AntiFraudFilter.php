@@ -150,6 +150,8 @@ appid，用来唯一标识网站或应用
 版本；
 0：不加密（默认值）
 1：md5
+ * @method string getOldResponseType() 获取是否使用旧回包
+ * @method void setOldResponseType(string $OldResponseType) 设置是否使用旧回包
  */
 class AntiFraudFilter extends AbstractModel
 {
@@ -331,6 +333,11 @@ appid，用来唯一标识网站或应用
     public $NameCryptoType;
 
     /**
+     * @var string 是否使用旧回包
+     */
+    public $OldResponseType;
+
+    /**
      * @param string $CustomerUin 业务方账号 ID
      * @param string $CustomerAppid 业务方APPID
      * @param string $IdNumber 身份证号
@@ -396,6 +403,7 @@ appid，用来唯一标识网站或应用
 版本；
 0：不加密（默认值）
 1：md5
+     * @param string $OldResponseType 是否使用旧回包
      */
     function __construct()
     {
@@ -520,6 +528,10 @@ appid，用来唯一标识网站或应用
 
         if (array_key_exists("NameCryptoType",$param) and $param["NameCryptoType"] !== null) {
             $this->NameCryptoType = $param["NameCryptoType"];
+        }
+
+        if (array_key_exists("OldResponseType",$param) and $param["OldResponseType"] !== null) {
+            $this->OldResponseType = $param["OldResponseType"];
         }
     }
 }

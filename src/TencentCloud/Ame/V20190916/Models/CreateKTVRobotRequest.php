@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJoinRoomInput(JoinRoomInput $JoinRoomInput) 设置进房参数。
  * @method ApplicationLicenseInput getApplicationLicenseInput() 获取license基础信息
  * @method void setApplicationLicenseInput(ApplicationLicenseInput $ApplicationLicenseInput) 设置license基础信息
+ * @method array getSyncRobotCommands() 获取创建机器人时初始化参数。
+ * @method void setSyncRobotCommands(array $SyncRobotCommands) 设置创建机器人时初始化参数。
  */
 class CreateKTVRobotRequest extends AbstractModel
 {
@@ -48,10 +50,16 @@ class CreateKTVRobotRequest extends AbstractModel
     public $ApplicationLicenseInput;
 
     /**
+     * @var array 创建机器人时初始化参数。
+     */
+    public $SyncRobotCommands;
+
+    /**
      * @param string $RTCSystem RTC厂商类型，取值有：
 <li>TRTC</li>
      * @param JoinRoomInput $JoinRoomInput 进房参数。
      * @param ApplicationLicenseInput $ApplicationLicenseInput license基础信息
+     * @param array $SyncRobotCommands 创建机器人时初始化参数。
      */
     function __construct()
     {
@@ -78,6 +86,15 @@ class CreateKTVRobotRequest extends AbstractModel
         if (array_key_exists("ApplicationLicenseInput",$param) and $param["ApplicationLicenseInput"] !== null) {
             $this->ApplicationLicenseInput = new ApplicationLicenseInput();
             $this->ApplicationLicenseInput->deserialize($param["ApplicationLicenseInput"]);
+        }
+
+        if (array_key_exists("SyncRobotCommands",$param) and $param["SyncRobotCommands"] !== null) {
+            $this->SyncRobotCommands = [];
+            foreach ($param["SyncRobotCommands"] as $key => $value){
+                $obj = new SyncRobotCommand();
+                $obj->deserialize($value);
+                array_push($this->SyncRobotCommands, $obj);
+            }
         }
     }
 }

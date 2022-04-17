@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(integer $ZoneId) 设置可用区
  * @method string getPeriod() 获取预付费购买时长，例如 "1m",就是一个月
  * @method void setPeriod(string $Period) 设置预付费购买时长，例如 "1m",就是一个月
- * @method integer getInstanceType() 获取实例规格，专业版默认填写1。1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
- * @method void setInstanceType(integer $InstanceType) 设置实例规格，专业版默认填写1。1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
+ * @method integer getInstanceType() 获取实例规格说明 专业版实例[所有规格]填写1.
+标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
+ * @method void setInstanceType(integer $InstanceType) 设置实例规格说明 专业版实例[所有规格]填写1.
+标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
  * @method string getVpcId() 获取vpcId，不填默认基础网络
  * @method void setVpcId(string $VpcId) 设置vpcId，不填默认基础网络
  * @method string getSubnetId() 获取子网id，vpc网络需要传该参数，基础网络可以不传
@@ -38,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(integer $ClusterId) 设置创建实例时可以选择集群Id, 该入参表示集群Id
  * @method integer getRenewFlag() 获取预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
  * @method void setRenewFlag(integer $RenewFlag) 设置预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method string getKafkaVersion() 获取支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
- * @method void setKafkaVersion(string $KafkaVersion) 设置支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
- * @method string getSpecificationsType() 获取专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
- * @method void setSpecificationsType(string $SpecificationsType) 设置专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+ * @method string getKafkaVersion() 获取CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
+ * @method void setKafkaVersion(string $KafkaVersion) 设置CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
+ * @method string getSpecificationsType() 获取实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
+ * @method void setSpecificationsType(string $SpecificationsType) 设置实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
  * @method integer getDiskSize() 获取磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
  * @method void setDiskSize(integer $DiskSize) 设置磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
  * @method integer getBandWidth() 获取带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
@@ -75,7 +77,8 @@ class CreateInstancePreRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var integer 实例规格，专业版默认填写1。1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
+     * @var integer 实例规格说明 专业版实例[所有规格]填写1.
+标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
      */
     public $InstanceType;
 
@@ -105,12 +108,12 @@ class CreateInstancePreRequest extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
+     * @var string CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
      */
     public $KafkaVersion;
 
     /**
-     * @var string 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+     * @var string 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
      */
     public $SpecificationsType;
 
@@ -153,14 +156,15 @@ class CreateInstancePreRequest extends AbstractModel
      * @param string $InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param integer $ZoneId 可用区
      * @param string $Period 预付费购买时长，例如 "1m",就是一个月
-     * @param integer $InstanceType 实例规格，专业版默认填写1。1：入门型 ，2： 标准型，3 ：进阶型，4 ：容量型，5： 高阶型1，6：高阶性2, 7： 高阶型3,8： 高阶型4， 9 ：独占型。
+     * @param integer $InstanceType 实例规格说明 专业版实例[所有规格]填写1.
+标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
      * @param string $VpcId vpcId，不填默认基础网络
      * @param string $SubnetId 子网id，vpc网络需要传该参数，基础网络可以不传
      * @param integer $MsgRetentionTime 可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
      * @param integer $ClusterId 创建实例时可以选择集群Id, 该入参表示集群Id
      * @param integer $RenewFlag 预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param string $KafkaVersion 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.1） 。指定专业版参数specificationsType=pro
-     * @param string $SpecificationsType 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+     * @param string $KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
+     * @param string $SpecificationsType 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
      * @param integer $DiskSize 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
      * @param integer $BandWidth 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
      * @param integer $Partition 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionMs(integer $RetentionMs) 设置消息保留时间，单位：ms，当前最小值为60000ms。
  * @method integer getSegmentMs() 获取Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
  * @method void setSegmentMs(integer $SegmentMs) 设置Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
- * @method integer getMaxMessageBytes() 获取主题消息最大值，单位为 Byte，最大值为8388608Byte（即8MB）。
- * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最大值为8388608Byte（即8MB）。
+ * @method integer getMaxMessageBytes() 获取主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
  * @method string getCleanUpPolicy() 获取消息删除策略，可以选择delete 或者compact
  * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置消息删除策略，可以选择delete 或者compact
  * @method array getIpWhiteList() 获取Ip白名单列表，配额限制，enableWhileList=1时必选
@@ -98,7 +98,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $SegmentMs;
 
     /**
-     * @var integer 主题消息最大值，单位为 Byte，最大值为8388608Byte（即8MB）。
+     * @var integer 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
      */
     public $MaxMessageBytes;
 
@@ -151,7 +151,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param integer $UncleanLeaderElectionEnable 默认为 0，0：false；1：true。
      * @param integer $RetentionMs 消息保留时间，单位：ms，当前最小值为60000ms。
      * @param integer $SegmentMs Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
-     * @param integer $MaxMessageBytes 主题消息最大值，单位为 Byte，最大值为8388608Byte（即8MB）。
+     * @param integer $MaxMessageBytes 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
      * @param string $CleanUpPolicy 消息删除策略，可以选择delete 或者compact
      * @param array $IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
      * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开

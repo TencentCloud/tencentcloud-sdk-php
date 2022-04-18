@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取kill会话任务的关联实例ID。
  * @method void setInstanceId(string $InstanceId) 设置kill会话任务的关联实例ID。
- * @method integer getDuration() 获取任务持续时间时间，单位秒，手动关闭任务传-1。
- * @method void setDuration(integer $Duration) 设置任务持续时间时间，单位秒，手动关闭任务传-1。
+ * @method integer getDuration() 获取任务持续时间，单位秒，手动关闭任务传-1。
+ * @method void setDuration(integer $Duration) 设置任务持续时间，单位秒，手动关闭任务传-1。
  * @method string getHost() 获取任务过滤条件，客户端IP。
  * @method void setHost(string $Host) 设置任务过滤条件，客户端IP。
  * @method string getDB() 获取任务过滤条件，数据库库名,多个","隔开。
@@ -47,7 +47,7 @@ class CreateKillTaskRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 任务持续时间时间，单位秒，手动关闭任务传-1。
+     * @var integer 任务持续时间，单位秒，手动关闭任务传-1。
      */
     public $Duration;
 
@@ -88,7 +88,7 @@ class CreateKillTaskRequest extends AbstractModel
 
     /**
      * @param string $InstanceId kill会话任务的关联实例ID。
-     * @param integer $Duration 任务持续时间时间，单位秒，手动关闭任务传-1。
+     * @param integer $Duration 任务持续时间，单位秒，手动关闭任务传-1。
      * @param string $Host 任务过滤条件，客户端IP。
      * @param string $DB 任务过滤条件，数据库库名,多个","隔开。
      * @param string $Command 任务过滤条件，相关命令，多个","隔开。

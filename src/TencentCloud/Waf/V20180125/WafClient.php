@@ -25,6 +25,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
 /**
  * @method Models\AddCustomRuleResponse AddCustomRule(Models\AddCustomRuleRequest $req) 增加自定义策略
  * @method Models\AddDomainWhiteRuleResponse AddDomainWhiteRule(Models\AddDomainWhiteRuleRequest $req) 增加域名规则白名单
+ * @method Models\AddSpartaProtectionResponse AddSpartaProtection(Models\AddSpartaProtectionRequest $req) 添加Spart防护域名
  * @method Models\CreateAccessExportResponse CreateAccessExport(Models\CreateAccessExportRequest $req) 本接口用于创建访问日志导出
  * @method Models\CreateAttackDownloadTaskResponse CreateAttackDownloadTask(Models\CreateAttackDownloadTaskRequest $req) 创建攻击日志下载任务
  * @method Models\DeleteAccessExportResponse DeleteAccessExport(Models\DeleteAccessExportRequest $req) 本接口用于删除访问日志导出

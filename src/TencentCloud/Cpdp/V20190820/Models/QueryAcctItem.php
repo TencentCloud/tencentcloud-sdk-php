@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 缺省： enterprise
  * @method string getSubMchName() 获取子商户名称
  * @method void setSubMchName(string $SubMchName) 设置子商户名称
- * @method string getSubAcctNo() 获取子账号号
- * @method void setSubAcctNo(string $SubAcctNo) 设置子账号号
+ * @method string getSubAcctNo() 获取子账号
+ * @method void setSubAcctNo(string $SubAcctNo) 设置子账号
  * @method string getShortName() 获取不填则默认子商户名称
  * @method void setShortName(string $ShortName) 设置不填则默认子商户名称
  * @method string getSubMchId() 获取业务平台的子商户Id，唯一
@@ -79,7 +79,7 @@ class QueryAcctItem extends AbstractModel
     public $SubMchName;
 
     /**
-     * @var string 子账号号
+     * @var string 子账号
      */
     public $SubAcctNo;
 
@@ -136,7 +136,7 @@ merchant:商户子账户
 企业：enterprise
 缺省： enterprise
      * @param string $SubMchName 子商户名称
-     * @param string $SubAcctNo 子账号号
+     * @param string $SubAcctNo 子账号
      * @param string $ShortName 不填则默认子商户名称
      * @param string $SubMchId 业务平台的子商户Id，唯一
      * @param string $SubAppId 聚鑫计费SubAppId，代表子商户

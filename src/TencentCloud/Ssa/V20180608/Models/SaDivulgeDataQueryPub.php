@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) 设置命中主题集下的规则topic唯一id
  * @method string getRuleWord() 获取命中主题集下的自定义规则策略
  * @method void setRuleWord(string $RuleWord) 设置命中主题集下的自定义规则策略
- * @method string getScanUrl() 获取扫描监测url"
- * @method void setScanUrl(string $ScanUrl) 设置扫描监测url"
+ * @method string getScanUrl() 获取扫描监测url
+ * @method void setScanUrl(string $ScanUrl) 设置扫描监测url
  * @method string getScanCount() 获取扫描监测命中次数
  * @method void setScanCount(string $ScanCount) 设置扫描监测命中次数
  * @method string getLevel() 获取风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
@@ -101,7 +101,7 @@ class SaDivulgeDataQueryPub extends AbstractModel
     public $RuleWord;
 
     /**
-     * @var string 扫描监测url"
+     * @var string 扫描监测url
      */
     public $ScanUrl;
 
@@ -145,7 +145,7 @@ class SaDivulgeDataQueryPub extends AbstractModel
      * @param string $RuleName 命中主题集下的规则topic名称
      * @param string $RuleId 命中主题集下的规则topic唯一id
      * @param string $RuleWord 命中主题集下的自定义规则策略
-     * @param string $ScanUrl 扫描监测url"
+     * @param string $ScanUrl 扫描监测url
      * @param string $ScanCount 扫描监测命中次数
      * @param string $Level 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
      * @param string $Status 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任

@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRefundId() 获取退款订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
  * @method void setRefundId(string $RefundId) 设置退款订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
  * @method integer getTotalRefundAmt() 获取退款金额，单位：分
-当该字段为空或者为0时，系统会默认使用订单当实付金额做为退款金额
+当该字段为空或者为0时，系统会默认使用订单当实付金额作为退款金额
  * @method void setTotalRefundAmt(integer $TotalRefundAmt) 设置退款金额，单位：分
-当该字段为空或者为0时，系统会默认使用订单当实付金额做为退款金额
+当该字段为空或者为0时，系统会默认使用订单当实付金额作为退款金额
  * @method string getOutTradeNo() 获取商品订单，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
  * @method void setOutTradeNo(string $OutTradeNo) 设置商品订单，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
  * @method string getMidasEnvironment() 获取环境类型
@@ -78,7 +78,7 @@ class RefundCloudOrderRequest extends AbstractModel
 
     /**
      * @var integer 退款金额，单位：分
-当该字段为空或者为0时，系统会默认使用订单当实付金额做为退款金额
+当该字段为空或者为0时，系统会默认使用订单当实付金额作为退款金额
      */
     public $TotalRefundAmt;
 
@@ -137,7 +137,7 @@ _不填默认为生产环境_
      * @param string $UserId 用户Id，长度不小于5位，仅支持字母和数字的组合
      * @param string $RefundId 退款订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
      * @param integer $TotalRefundAmt 退款金额，单位：分
-当该字段为空或者为0时，系统会默认使用订单当实付金额做为退款金额
+当该字段为空或者为0时，系统会默认使用订单当实付金额作为退款金额
      * @param string $OutTradeNo 商品订单，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合
      * @param string $MidasEnvironment 环境类型
 __release__:生产环境

@@ -84,8 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSyncFlag(integer $AutoSyncFlag) 设置是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。该值默认为0。
  * @method string getCageId() 获取金融围拢 ID 。
  * @method void setCageId(string $CageId) 设置金融围拢 ID 。
- * @method string getParamTemplateType() 获取默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
- * @method void setParamTemplateType(string $ParamTemplateType) 设置默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+ * @method string getParamTemplateType() 获取默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板，默认值是："HIGH_STABILITY"。
+ * @method void setParamTemplateType(string $ParamTemplateType) 设置默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板，默认值是："HIGH_STABILITY"。
  * @method array getAlarmPolicyIdList() 获取告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
  * @method void setAlarmPolicyIdList(array $AlarmPolicyIdList) 设置告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
  * @method boolean getDryRun() 获取是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
@@ -256,7 +256,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $CageId;
 
     /**
-     * @var string 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     * @var string 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板，默认值是："HIGH_STABILITY"。
      */
     public $ParamTemplateType;
 
@@ -308,7 +308,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param integer $Cpu 实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
      * @param integer $AutoSyncFlag 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。该值默认为0。
      * @param string $CageId 金融围拢 ID 。
-     * @param string $ParamTemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     * @param string $ParamTemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板，默认值是："HIGH_STABILITY"。
      * @param array $AlarmPolicyIdList 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
      * @param boolean $DryRun 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
      * @param array $Vips 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。

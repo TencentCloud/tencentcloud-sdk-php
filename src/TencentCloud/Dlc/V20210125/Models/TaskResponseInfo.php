@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanDownload(boolean $CanDownload) 设置查询数据能不能下载
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserAlias() 获取用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserAlias(string $UserAlias) 设置用户别名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -229,6 +233,12 @@ class TaskResponseInfo extends AbstractModel
     public $CanDownload;
 
     /**
+     * @var string 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserAlias;
+
+    /**
      * @param string $DatabaseName 任务所属Database的名称。
      * @param integer $DataAmount 任务数据量。
      * @param string $Id 任务Id。
@@ -263,6 +273,8 @@ class TaskResponseInfo extends AbstractModel
      * @param integer $DataNumber 数据条数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanDownload 查询数据能不能下载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserAlias 用户别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -376,6 +388,10 @@ class TaskResponseInfo extends AbstractModel
 
         if (array_key_exists("CanDownload",$param) and $param["CanDownload"] !== null) {
             $this->CanDownload = $param["CanDownload"];
+        }
+
+        if (array_key_exists("UserAlias",$param) and $param["UserAlias"] !== null) {
+            $this->UserAlias = $param["UserAlias"];
         }
     }
 }

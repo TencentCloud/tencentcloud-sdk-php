@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUpstream返回参数结构体
  *
- * @method UpstreamInfo getResult() 获取返回修改后的vpc通道信息
+ * @method UpstreamInfo getResult() 获取返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(UpstreamInfo $Result) 设置返回修改后的vpc通道信息
+ * @method void setResult(UpstreamInfo $Result) 设置返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyUpstreamResponse extends AbstractModel
 {
     /**
-     * @var UpstreamInfo 返回修改后的vpc通道信息
+     * @var UpstreamInfo 返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
@@ -41,7 +41,7 @@ class ModifyUpstreamResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param UpstreamInfo $Result 返回修改后的vpc通道信息
+     * @param UpstreamInfo $Result 返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

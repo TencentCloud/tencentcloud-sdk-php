@@ -18,22 +18,22 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VPC通道信息集合
+ * 后端通道详细信息
  *
- * @method string getUpstreamId() 获取VPC通道唯一ID
- * @method void setUpstreamId(string $UpstreamId) 设置VPC通道唯一ID
- * @method string getUpstreamName() 获取VPC通道名字
- * @method void setUpstreamName(string $UpstreamName) 设置VPC通道名字
- * @method string getUpstreamDescription() 获取VPC通道描述
- * @method void setUpstreamDescription(string $UpstreamDescription) 设置VPC通道描述
- * @method string getScheme() 获取写意
- * @method void setScheme(string $Scheme) 设置写意
- * @method string getAlgorithm() 获取负载均衡算法
- * @method void setAlgorithm(string $Algorithm) 设置负载均衡算法
- * @method string getUniqVpcId() 获取vpc唯一ID
- * @method void setUniqVpcId(string $UniqVpcId) 设置vpc唯一ID
- * @method integer getRetries() 获取请求重拾次数
- * @method void setRetries(integer $Retries) 设置请求重拾次数
+ * @method string getUpstreamId() 获取后端通道唯一ID
+ * @method void setUpstreamId(string $UpstreamId) 设置后端通道唯一ID
+ * @method string getUpstreamName() 获取后端通道名字
+ * @method void setUpstreamName(string $UpstreamName) 设置后端通道名字
+ * @method string getUpstreamDescription() 获取后端通道描述
+ * @method void setUpstreamDescription(string $UpstreamDescription) 设置后端通道描述
+ * @method string getScheme() 获取后端协议，取值范围：HTTP, HTTPS
+ * @method void setScheme(string $Scheme) 设置后端协议，取值范围：HTTP, HTTPS
+ * @method string getAlgorithm() 获取负载均衡算法，取值范围：ROUND_ROBIN
+ * @method void setAlgorithm(string $Algorithm) 设置负载均衡算法，取值范围：ROUND_ROBIN
+ * @method string getUniqVpcId() 获取VPC唯一ID
+ * @method void setUniqVpcId(string $UniqVpcId) 设置VPC唯一ID
+ * @method integer getRetries() 获取请求重试次数
+ * @method void setRetries(integer $Retries) 设置请求重试次数
  * @method array getNodes() 获取后端节点
  * @method void setNodes(array $Nodes) 设置后端节点
  * @method string getCreatedTime() 获取创建时间
@@ -46,51 +46,51 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthChecker(UpstreamHealthChecker $HealthChecker) 设置健康检查配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpstreamType() 获取Upstream的类型
- * @method void setUpstreamType(string $UpstreamType) 设置Upstream的类型
- * @method array getK8sServices() 获取k8s服务配置
+ * @method string getUpstreamType() 获取后端的类型，取值范围：IP_PORT, K8S
+ * @method void setUpstreamType(string $UpstreamType) 设置后端的类型，取值范围：IP_PORT, K8S
+ * @method array getK8sServices() 获取K8S容器服务配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setK8sServices(array $K8sServices) 设置k8s服务配置
+ * @method void setK8sServices(array $K8sServices) 设置K8S容器服务配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpstreamHost() 获取vpc通道的Host
+ * @method string getUpstreamHost() 获取网关转发给后端的Host请求头
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpstreamHost(string $UpstreamHost) 设置vpc通道的Host
+ * @method void setUpstreamHost(string $UpstreamHost) 设置网关转发给后端的Host请求头
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpstreamInfo extends AbstractModel
 {
     /**
-     * @var string VPC通道唯一ID
+     * @var string 后端通道唯一ID
      */
     public $UpstreamId;
 
     /**
-     * @var string VPC通道名字
+     * @var string 后端通道名字
      */
     public $UpstreamName;
 
     /**
-     * @var string VPC通道描述
+     * @var string 后端通道描述
      */
     public $UpstreamDescription;
 
     /**
-     * @var string 写意
+     * @var string 后端协议，取值范围：HTTP, HTTPS
      */
     public $Scheme;
 
     /**
-     * @var string 负载均衡算法
+     * @var string 负载均衡算法，取值范围：ROUND_ROBIN
      */
     public $Algorithm;
 
     /**
-     * @var string vpc唯一ID
+     * @var string VPC唯一ID
      */
     public $UniqVpcId;
 
     /**
-     * @var integer 请求重拾次数
+     * @var integer 请求重试次数
      */
     public $Retries;
 
@@ -117,40 +117,40 @@ class UpstreamInfo extends AbstractModel
     public $HealthChecker;
 
     /**
-     * @var string Upstream的类型
+     * @var string 后端的类型，取值范围：IP_PORT, K8S
      */
     public $UpstreamType;
 
     /**
-     * @var array k8s服务配置
+     * @var array K8S容器服务配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $K8sServices;
 
     /**
-     * @var string vpc通道的Host
+     * @var string 网关转发给后端的Host请求头
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamHost;
 
     /**
-     * @param string $UpstreamId VPC通道唯一ID
-     * @param string $UpstreamName VPC通道名字
-     * @param string $UpstreamDescription VPC通道描述
-     * @param string $Scheme 写意
-     * @param string $Algorithm 负载均衡算法
-     * @param string $UniqVpcId vpc唯一ID
-     * @param integer $Retries 请求重拾次数
+     * @param string $UpstreamId 后端通道唯一ID
+     * @param string $UpstreamName 后端通道名字
+     * @param string $UpstreamDescription 后端通道描述
+     * @param string $Scheme 后端协议，取值范围：HTTP, HTTPS
+     * @param string $Algorithm 负载均衡算法，取值范围：ROUND_ROBIN
+     * @param string $UniqVpcId VPC唯一ID
+     * @param integer $Retries 请求重试次数
      * @param array $Nodes 后端节点
      * @param string $CreatedTime 创建时间
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamHealthChecker $HealthChecker 健康检查配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpstreamType Upstream的类型
-     * @param array $K8sServices k8s服务配置
+     * @param string $UpstreamType 后端的类型，取值范围：IP_PORT, K8S
+     * @param array $K8sServices K8S容器服务配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpstreamHost vpc通道的Host
+     * @param string $UpstreamHost 网关转发给后端的Host请求头
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

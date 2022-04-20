@@ -40,10 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) 设置默认为1
  * @method integer getUncleanLeaderElectionEnable() 获取是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
- * @method integer getRetentionMs() 获取可消息选。保留时间，单位ms，当前最小值为60000ms
- * @method void setRetentionMs(integer $RetentionMs) 设置可消息选。保留时间，单位ms，当前最小值为60000ms
+ * @method integer getRetentionMs() 获取可选参数。消息保留时间，单位ms，当前最小值为60000ms
+ * @method void setRetentionMs(integer $RetentionMs) 设置可选参数。消息保留时间，单位ms，当前最小值为60000ms
  * @method integer getSegmentMs() 获取Segment分片滚动的时长，单位ms，当前最小为3600000ms
  * @method void setSegmentMs(integer $SegmentMs) 设置Segment分片滚动的时长，单位ms，当前最小为3600000ms
+ * @method integer getMaxMessageBytes() 获取主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为8388608Byte（即8MB）。
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为8388608Byte（即8MB）。
  * @method integer getEnableAclRule() 获取预设ACL规则, 1:打开  0:关闭，默认不打开
  * @method void setEnableAclRule(integer $EnableAclRule) 设置预设ACL规则, 1:打开  0:关闭，默认不打开
  * @method string getAclRuleName() 获取预设ACL规则的名称
@@ -106,7 +108,7 @@ class CreateTopicRequest extends AbstractModel
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer 可消息选。保留时间，单位ms，当前最小值为60000ms
+     * @var integer 可选参数。消息保留时间，单位ms，当前最小值为60000ms
      */
     public $RetentionMs;
 
@@ -114,6 +116,11 @@ class CreateTopicRequest extends AbstractModel
      * @var integer Segment分片滚动的时长，单位ms，当前最小为3600000ms
      */
     public $SegmentMs;
+
+    /**
+     * @var integer 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为8388608Byte（即8MB）。
+     */
+    public $MaxMessageBytes;
 
     /**
      * @var integer 预设ACL规则, 1:打开  0:关闭，默认不打开
@@ -146,8 +153,9 @@ class CreateTopicRequest extends AbstractModel
      * @param string $Note 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      * @param integer $MinInsyncReplicas 默认为1
      * @param integer $UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
-     * @param integer $RetentionMs 可消息选。保留时间，单位ms，当前最小值为60000ms
+     * @param integer $RetentionMs 可选参数。消息保留时间，单位ms，当前最小值为60000ms
      * @param integer $SegmentMs Segment分片滚动的时长，单位ms，当前最小为3600000ms
+     * @param integer $MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为8388608Byte（即8MB）。
      * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
      * @param string $AclRuleName 预设ACL规则的名称
      * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
@@ -212,6 +220,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
             $this->SegmentMs = $param["SegmentMs"];
+        }
+
+        if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
+            $this->MaxMessageBytes = $param["MaxMessageBytes"];
         }
 
         if (array_key_exists("EnableAclRule",$param) and $param["EnableAclRule"] !== null) {

@@ -44,6 +44,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeDomainWhiteRulesResponse DescribeDomainWhiteRules(Models\DescribeDomainWhiteRulesRequest $req) 获取域名的规则白名单
 
 
+ * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 查询用户所有域名的详细信息
  * @method Models\DescribeFlowTrendResponse DescribeFlowTrend(Models\DescribeFlowTrendRequest $req) 获取waf流量访问趋势
  * @method Models\DescribeIpAccessControlResponse DescribeIpAccessControl(Models\DescribeIpAccessControlRequest $req) Waf ip黑白名单查询
  * @method Models\DescribeIpHitItemsResponse DescribeIpHitItems(Models\DescribeIpHitItemsRequest $req) Waf  IP封堵状态查询

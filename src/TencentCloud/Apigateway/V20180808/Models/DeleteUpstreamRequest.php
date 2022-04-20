@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteUpstream请求参数结构体
  *
- * @method string getUpstreamId() 获取待删除的VPC通道唯一ID
- * @method void setUpstreamId(string $UpstreamId) 设置待删除的VPC通道唯一ID
+ * @method string getUpstreamId() 获取待删除的后端通道ID
+ * @method void setUpstreamId(string $UpstreamId) 设置待删除的后端通道ID
  */
 class DeleteUpstreamRequest extends AbstractModel
 {
     /**
-     * @var string 待删除的VPC通道唯一ID
+     * @var string 待删除的后端通道ID
      */
     public $UpstreamId;
 
     /**
-     * @param string $UpstreamId 待删除的VPC通道唯一ID
+     * @param string $UpstreamId 待删除的后端通道ID
      */
     function __construct()
     {

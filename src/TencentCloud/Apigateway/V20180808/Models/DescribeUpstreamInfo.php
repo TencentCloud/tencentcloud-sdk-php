@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询vpc通道返回信息
+ * 查询后端通道返回信息
  *
  * @method integer getTotalCount() 获取查询总数
  * @method void setTotalCount(integer $TotalCount) 设置查询总数

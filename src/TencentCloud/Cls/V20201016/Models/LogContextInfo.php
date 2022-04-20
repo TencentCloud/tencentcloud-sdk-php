@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPkgLogId(integer $PkgLogId) 设置日志包内一条日志的序号
  * @method integer getBTime() 获取日志时间戳
  * @method void setBTime(integer $BTime) 设置日志时间戳
+ * @method string getHostName() 获取日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostName(string $HostName) 设置日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogContextInfo extends AbstractModel
 {
@@ -66,12 +70,20 @@ class LogContextInfo extends AbstractModel
     public $BTime;
 
     /**
+     * @var string 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostName;
+
+    /**
      * @param string $Source 日志来源设备
      * @param string $Filename 采集路径
      * @param string $Content 日志内容
      * @param string $PkgId 日志包序号
      * @param integer $PkgLogId 日志包内一条日志的序号
      * @param integer $BTime 日志时间戳
+     * @param string $HostName 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class LogContextInfo extends AbstractModel
 
         if (array_key_exists("BTime",$param) and $param["BTime"] !== null) {
             $this->BTime = $param["BTime"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
         }
     }
 }

@@ -92,8 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) 设置实例 IP
  * @method integer getVport() 获取端口号
  * @method void setVport(integer $Vport) 设置端口号
- * @method integer getCdbError() 获取是否锁定标记
- * @method void setCdbError(integer $CdbError) 设置是否锁定标记
+ * @method integer getCdbError() 获取磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
+ * @method void setCdbError(integer $CdbError) 设置磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
  * @method string getUniqVpcId() 获取私有网络描述符，例如：“vpc-5v8wn9mg”
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络描述符，例如：“vpc-5v8wn9mg”
  * @method string getUniqSubnetId() 获取子网描述符，例如：“subnet-1typ0s7d”
@@ -288,7 +288,7 @@ class InstanceInfo extends AbstractModel
     public $Vport;
 
     /**
-     * @var integer 是否锁定标记
+     * @var integer 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
      */
     public $CdbError;
 
@@ -388,7 +388,7 @@ class InstanceInfo extends AbstractModel
      * @param string $CreateTime 实例创建时间
      * @param string $Vip 实例 IP
      * @param integer $Vport 端口号
-     * @param integer $CdbError 是否锁定标记
+     * @param integer $CdbError 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
      * @param string $UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
      * @param string $UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
      * @param string $PhysicalId 物理 ID

@@ -26,6 +26,10 @@ off：关闭
  * @method void setSwitch(string $Switch) 设置遵循源站配置开关
 on：开启
 off：关闭
+ * @method HeuristicCache getHeuristicCache() 获取启发式缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHeuristicCache(HeuristicCache $HeuristicCache) 设置启发式缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheConfigFollowOrigin extends AbstractModel
 {
@@ -37,9 +41,17 @@ off：关闭
     public $Switch;
 
     /**
+     * @var HeuristicCache 启发式缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HeuristicCache;
+
+    /**
      * @param string $Switch 遵循源站配置开关
 on：开启
 off：关闭
+     * @param HeuristicCache $HeuristicCache 启发式缓存配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -56,6 +68,11 @@ off：关闭
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("HeuristicCache",$param) and $param["HeuristicCache"] !== null) {
+            $this->HeuristicCache = new HeuristicCache();
+            $this->HeuristicCache->deserialize($param["HeuristicCache"]);
         }
     }
 }

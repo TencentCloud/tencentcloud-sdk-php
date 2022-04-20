@@ -20,51 +20,60 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUpstream请求参数结构体
  *
- * @method string getUpstreamId() 获取VPC通道唯一ID
- * @method void setUpstreamId(string $UpstreamId) 设置VPC通道唯一ID
- * @method string getUpstreamName() 获取VPC通道名字
- * @method void setUpstreamName(string $UpstreamName) 设置VPC通道名字
- * @method string getUpstreamDescription() 获取VPC通道描述
- * @method void setUpstreamDescription(string $UpstreamDescription) 设置VPC通道描述
- * @method string getScheme() 获取后端协议，HTTP, HTTPS其中之一
- * @method void setScheme(string $Scheme) 设置后端协议，HTTP, HTTPS其中之一
- * @method string getAlgorithm() 获取负载均衡算法目前支持ROUND_ROBIN
- * @method void setAlgorithm(string $Algorithm) 设置负载均衡算法目前支持ROUND_ROBIN
+ * @method string getUpstreamId() 获取后端通道唯一ID
+ * @method void setUpstreamId(string $UpstreamId) 设置后端通道唯一ID
+ * @method string getUpstreamName() 获取后端通道名字
+ * @method void setUpstreamName(string $UpstreamName) 设置后端通道名字
+ * @method string getUpstreamDescription() 获取后端通道描述
+ * @method void setUpstreamDescription(string $UpstreamDescription) 设置后端通道描述
+ * @method string getScheme() 获取后端协议，取值范围：HTTP, HTTPS
+ * @method void setScheme(string $Scheme) 设置后端协议，取值范围：HTTP, HTTPS
+ * @method string getUpstreamType() 获取后端访问类型，取值范围：IP_PORT, K8S
+ * @method void setUpstreamType(string $UpstreamType) 设置后端访问类型，取值范围：IP_PORT, K8S
+ * @method string getAlgorithm() 获取负载均衡算法，取值范围：ROUND_ROBIN
+ * @method void setAlgorithm(string $Algorithm) 设置负载均衡算法，取值范围：ROUND_ROBIN
  * @method string getUniqVpcId() 获取VPC唯一ID
  * @method void setUniqVpcId(string $UniqVpcId) 设置VPC唯一ID
  * @method integer getRetries() 获取请求重试次数，默认3次
  * @method void setRetries(integer $Retries) 设置请求重试次数，默认3次
- * @method string getUpstreamHost() 获取请求到后端的，host头
- * @method void setUpstreamHost(string $UpstreamHost) 设置请求到后端的，host头
+ * @method string getUpstreamHost() 获取网关转发到后端的 Host 请求头
+ * @method void setUpstreamHost(string $UpstreamHost) 设置网关转发到后端的 Host 请求头
  * @method array getNodes() 获取后端节点列表
  * @method void setNodes(array $Nodes) 设置后端节点列表
- * @method array getK8sService() 获取k8s服务配置
- * @method void setK8sService(array $K8sService) 设置k8s服务配置
+ * @method UpstreamHealthChecker getHealthChecker() 获取健康检查配置，目前只支持VPC通道
+ * @method void setHealthChecker(UpstreamHealthChecker $HealthChecker) 设置健康检查配置，目前只支持VPC通道
+ * @method array getK8sService() 获取容器服务配置
+ * @method void setK8sService(array $K8sService) 设置容器服务配置
  */
 class ModifyUpstreamRequest extends AbstractModel
 {
     /**
-     * @var string VPC通道唯一ID
+     * @var string 后端通道唯一ID
      */
     public $UpstreamId;
 
     /**
-     * @var string VPC通道名字
+     * @var string 后端通道名字
      */
     public $UpstreamName;
 
     /**
-     * @var string VPC通道描述
+     * @var string 后端通道描述
      */
     public $UpstreamDescription;
 
     /**
-     * @var string 后端协议，HTTP, HTTPS其中之一
+     * @var string 后端协议，取值范围：HTTP, HTTPS
      */
     public $Scheme;
 
     /**
-     * @var string 负载均衡算法目前支持ROUND_ROBIN
+     * @var string 后端访问类型，取值范围：IP_PORT, K8S
+     */
+    public $UpstreamType;
+
+    /**
+     * @var string 负载均衡算法，取值范围：ROUND_ROBIN
      */
     public $Algorithm;
 
@@ -79,7 +88,7 @@ class ModifyUpstreamRequest extends AbstractModel
     public $Retries;
 
     /**
-     * @var string 请求到后端的，host头
+     * @var string 网关转发到后端的 Host 请求头
      */
     public $UpstreamHost;
 
@@ -89,21 +98,28 @@ class ModifyUpstreamRequest extends AbstractModel
     public $Nodes;
 
     /**
-     * @var array k8s服务配置
+     * @var UpstreamHealthChecker 健康检查配置，目前只支持VPC通道
+     */
+    public $HealthChecker;
+
+    /**
+     * @var array 容器服务配置
      */
     public $K8sService;
 
     /**
-     * @param string $UpstreamId VPC通道唯一ID
-     * @param string $UpstreamName VPC通道名字
-     * @param string $UpstreamDescription VPC通道描述
-     * @param string $Scheme 后端协议，HTTP, HTTPS其中之一
-     * @param string $Algorithm 负载均衡算法目前支持ROUND_ROBIN
+     * @param string $UpstreamId 后端通道唯一ID
+     * @param string $UpstreamName 后端通道名字
+     * @param string $UpstreamDescription 后端通道描述
+     * @param string $Scheme 后端协议，取值范围：HTTP, HTTPS
+     * @param string $UpstreamType 后端访问类型，取值范围：IP_PORT, K8S
+     * @param string $Algorithm 负载均衡算法，取值范围：ROUND_ROBIN
      * @param string $UniqVpcId VPC唯一ID
      * @param integer $Retries 请求重试次数，默认3次
-     * @param string $UpstreamHost 请求到后端的，host头
+     * @param string $UpstreamHost 网关转发到后端的 Host 请求头
      * @param array $Nodes 后端节点列表
-     * @param array $K8sService k8s服务配置
+     * @param UpstreamHealthChecker $HealthChecker 健康检查配置，目前只支持VPC通道
+     * @param array $K8sService 容器服务配置
      */
     function __construct()
     {
@@ -134,6 +150,10 @@ class ModifyUpstreamRequest extends AbstractModel
             $this->Scheme = $param["Scheme"];
         }
 
+        if (array_key_exists("UpstreamType",$param) and $param["UpstreamType"] !== null) {
+            $this->UpstreamType = $param["UpstreamType"];
+        }
+
         if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
             $this->Algorithm = $param["Algorithm"];
         }
@@ -157,6 +177,11 @@ class ModifyUpstreamRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Nodes, $obj);
             }
+        }
+
+        if (array_key_exists("HealthChecker",$param) and $param["HealthChecker"] !== null) {
+            $this->HealthChecker = new UpstreamHealthChecker();
+            $this->HealthChecker->deserialize($param["HealthChecker"]);
         }
 
         if (array_key_exists("K8sService",$param) and $param["K8sService"] !== null) {

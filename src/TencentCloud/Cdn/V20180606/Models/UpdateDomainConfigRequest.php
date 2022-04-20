@@ -114,6 +114,8 @@ global：全球加速
  * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存
  * @method OriginCombine getOriginCombine() 获取合并回源
  * @method void setOriginCombine(OriginCombine $OriginCombine) 设置合并回源
+ * @method PostSize getPostMaxSize() 获取POST请求传输配置
+ * @method void setPostMaxSize(PostSize $PostMaxSize) 设置POST请求传输配置
  * @method Quic getQuic() 获取Quic访问（收费服务，详见计费说明和产品文档）
  * @method void setQuic(Quic $Quic) 设置Quic访问（收费服务，详见计费说明和产品文档）
  * @method OssPrivateAccess getOssPrivateAccess() 获取回源OSS私有鉴权
@@ -335,6 +337,11 @@ global：全球加速
     public $OriginCombine;
 
     /**
+     * @var PostSize POST请求传输配置
+     */
+    public $PostMaxSize;
+
+    /**
      * @var Quic Quic访问（收费服务，详见计费说明和产品文档）
      */
     public $Quic;
@@ -417,6 +424,7 @@ global：全球加速
      * @param Ipv6Access $Ipv6Access Ipv6 访问配置
      * @param OfflineCache $OfflineCache 离线缓存
      * @param OriginCombine $OriginCombine 合并回源
+     * @param PostSize $PostMaxSize POST请求传输配置
      * @param Quic $Quic Quic访问（收费服务，详见计费说明和产品文档）
      * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
      * @param WebSocket $WebSocket WebSocket配置
@@ -626,6 +634,11 @@ global：全球加速
         if (array_key_exists("OriginCombine",$param) and $param["OriginCombine"] !== null) {
             $this->OriginCombine = new OriginCombine();
             $this->OriginCombine->deserialize($param["OriginCombine"]);
+        }
+
+        if (array_key_exists("PostMaxSize",$param) and $param["PostMaxSize"] !== null) {
+            $this->PostMaxSize = new PostSize();
+            $this->PostMaxSize->deserialize($param["PostMaxSize"]);
         }
 
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserType(string $UserType) 设置用户类型。ADMIN：管理员 COMMON：普通用户。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserAlias() 获取用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserAlias(string $UserAlias) 设置用户别名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserInfo extends AbstractModel
 {
@@ -95,6 +99,12 @@ class UserInfo extends AbstractModel
     public $UserType;
 
     /**
+     * @var string 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserAlias;
+
+    /**
      * @param string $UserId 用户Id，和子用户uin相同
      * @param string $UserDescription 用户描述信息，方便区分不同用户
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,6 +117,8 @@ class UserInfo extends AbstractModel
      * @param boolean $IsOwner 是否是主账号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserType 用户类型。ADMIN：管理员 COMMON：普通用户。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserAlias 用户别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -162,6 +174,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
             $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("UserAlias",$param) and $param["UserAlias"] !== null) {
+            $this->UserAlias = $param["UserAlias"];
         }
     }
 }

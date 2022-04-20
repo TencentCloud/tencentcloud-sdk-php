@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getOldIpExpiredTime() 获取原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
  * @method void setOldIpExpiredTime(integer $OldIpExpiredTime) 设置原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
- * @method string getNewUniqVpcId() 获取切换后IP地址所属私有网络统一ID，若为基础网络，该字段为空
- * @method void setNewUniqVpcId(string $NewUniqVpcId) 设置切换后IP地址所属私有网络统一ID，若为基础网络，该字段为空
- * @method string getNewUniqSubnetId() 获取切换后IP地址所属子网统一ID，若为基础网络，该字段为空
- * @method void setNewUniqSubnetId(string $NewUniqSubnetId) 设置切换后IP地址所属子网统一ID，若为基础网络，该字段为空
+ * @method string getNewUniqVpcId() 获取切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
+ * @method void setNewUniqVpcId(string $NewUniqVpcId) 设置切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
+ * @method string getNewUniqSubnetId() 获取切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
+ * @method void setNewUniqSubnetId(string $NewUniqSubnetId) 设置切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
  * @method array getNetworkAddresses() 获取待修改IP信息
  * @method void setNetworkAddresses(array $NetworkAddresses) 设置待修改IP信息
  */
@@ -44,12 +44,12 @@ class ModifyDBInstanceNetworkAddressRequest extends AbstractModel
     public $OldIpExpiredTime;
 
     /**
-     * @var string 切换后IP地址所属私有网络统一ID，若为基础网络，该字段为空
+     * @var string 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
      */
     public $NewUniqVpcId;
 
     /**
-     * @var string 切换后IP地址所属子网统一ID，若为基础网络，该字段为空
+     * @var string 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
      */
     public $NewUniqSubnetId;
 
@@ -61,8 +61,8 @@ class ModifyDBInstanceNetworkAddressRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID
      * @param integer $OldIpExpiredTime 原IP保留时长，单位为分钟；原IP会在约定时间后释放，在释放前原IP和新IP均可访问；0表示立即回收原IP
-     * @param string $NewUniqVpcId 切换后IP地址所属私有网络统一ID，若为基础网络，该字段为空
-     * @param string $NewUniqSubnetId 切换后IP地址所属子网统一ID，若为基础网络，该字段为空
+     * @param string $NewUniqVpcId 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
+     * @param string $NewUniqSubnetId 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
      * @param array $NetworkAddresses 待修改IP信息
      */
     function __construct()

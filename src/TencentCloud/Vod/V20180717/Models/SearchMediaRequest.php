@@ -66,9 +66,9 @@ use TencentCloud\Common\AbstractModel;
 <li>数组长度限制：10。</li>
  * @method void setSourceTypes(array $SourceTypes) 设置媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
 <li>数组长度限制：10。</li>
- * @method array getStreamIds() 获取推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+ * @method array getStreamIds() 获取推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
- * @method void setStreamIds(array $StreamIds) 设置推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+ * @method void setStreamIds(array $StreamIds) 设置推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
  * @method array getVids() 获取直播录制文件的唯一标识。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
@@ -145,9 +145,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceType(string $SourceType) 设置（不推荐：应使用 SourceTypes 替代）
 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
  * @method string getStreamId() 获取（不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
  * @method void setStreamId(string $StreamId) 设置（不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
  * @method string getVid() 获取（不推荐：应使用 Vids 替代）
 直播录制文件的唯一标识。
  * @method void setVid(string $Vid) 设置（不推荐：应使用 Vids 替代）
@@ -231,7 +231,7 @@ class SearchMediaRequest extends AbstractModel
     public $SourceTypes;
 
     /**
-     * @var array 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+     * @var array 推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
      */
     public $StreamIds;
@@ -323,7 +323,7 @@ class SearchMediaRequest extends AbstractModel
 
     /**
      * @var string （不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
      */
     public $StreamId;
 
@@ -375,7 +375,7 @@ class SearchMediaRequest extends AbstractModel
 <li>Image: 图片文件</li>
      * @param array $SourceTypes 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
 <li>数组长度限制：10。</li>
-     * @param array $StreamIds 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+     * @param array $StreamIds 推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
      * @param array $Vids 直播录制文件的唯一标识。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
@@ -415,7 +415,7 @@ class SearchMediaRequest extends AbstractModel
      * @param string $SourceType （不推荐：应使用 SourceTypes 替代）
 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
      * @param string $StreamId （不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
      * @param string $Vid （不推荐：应使用 Vids 替代）
 直播录制文件的唯一标识。
      * @param string $StartTime （不推荐：应使用 CreateTime 替代）

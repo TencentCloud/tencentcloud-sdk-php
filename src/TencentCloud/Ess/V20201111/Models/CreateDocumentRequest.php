@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取无
  * @method void setOperator(UserInfo $Operator) 设置无
- * @method string getTemplateId() 获取用户上传的模版ID
- * @method void setTemplateId(string $TemplateId) 设置用户上传的模版ID
+ * @method string getTemplateId() 获取用户上传的模板ID
+ * @method void setTemplateId(string $TemplateId) 设置用户上传的模板ID
  * @method string getFlowId() 获取流程ID
  * @method void setFlowId(string $FlowId) 设置流程ID
  * @method array getFileNames() 获取文件名列表
@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置应用相关信息
  * @method string getClientToken() 获取客户端Token，保持接口幂等性
  * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性
- * @method boolean getNeedPreview() 获取是否需要生成预览文件 默认不生成
- * @method void setNeedPreview(boolean $NeedPreview) 设置是否需要生成预览文件 默认不生成
+ * @method boolean getNeedPreview() 获取是否需要生成预览文件 默认不生成；
+预览链接有效期300秒；
+ * @method void setNeedPreview(boolean $NeedPreview) 设置是否需要生成预览文件 默认不生成；
+预览链接有效期300秒；
  */
 class CreateDocumentRequest extends AbstractModel
 {
@@ -45,7 +47,7 @@ class CreateDocumentRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 用户上传的模版ID
+     * @var string 用户上传的模板ID
      */
     public $TemplateId;
 
@@ -75,19 +77,21 @@ class CreateDocumentRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var boolean 是否需要生成预览文件 默认不生成
+     * @var boolean 是否需要生成预览文件 默认不生成；
+预览链接有效期300秒；
      */
     public $NeedPreview;
 
     /**
      * @param UserInfo $Operator 无
-     * @param string $TemplateId 用户上传的模版ID
+     * @param string $TemplateId 用户上传的模板ID
      * @param string $FlowId 流程ID
      * @param array $FileNames 文件名列表
      * @param array $FormFields 内容控件信息数组
      * @param Agent $Agent 应用相关信息
      * @param string $ClientToken 客户端Token，保持接口幂等性
-     * @param boolean $NeedPreview 是否需要生成预览文件 默认不生成
+     * @param boolean $NeedPreview 是否需要生成预览文件 默认不生成；
+预览链接有效期300秒；
      */
     function __construct()
     {

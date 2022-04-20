@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGrayAreas(array $GrayAreas) 设置灰度的地区
  * @method string getUpstreamDomain() 获取UpstreamType=1时，填次字段表示回源域名
  * @method void setUpstreamDomain(string $UpstreamDomain) 设置UpstreamType=1时，填次字段表示回源域名
- * @method array getSrcList() 获取UpstreamType=0时，填次字段表示回源ip
- * @method void setSrcList(array $SrcList) 设置UpstreamType=0时，填次字段表示回源ip
+ * @method array getSrcList() 获取UpstreamType=0时，填次字段表示回源IP
+ * @method void setSrcList(array $SrcList) 设置UpstreamType=0时，填次字段表示回源IP
  * @method integer getIsHttp2() 获取是否开启HTTP2,开启HTTP2需要HTTPS支持
  * @method void setIsHttp2(integer $IsHttp2) 设置是否开启HTTP2,开启HTTP2需要HTTPS支持
  * @method integer getHttpsRewrite() 获取表示是否强制跳转到HTTPS，1强制跳转Https，0不强制跳转
@@ -64,8 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsKeepAlive(string $IsKeepAlive) 设置是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效
  * @method string getInstanceID() 获取实例id，上线之后带上此字段
  * @method void setInstanceID(string $InstanceID) 设置实例id，上线之后带上此字段
- * @method integer getAnycast() 获取anycast ip类型开关： 0 普通ip 1 Anycast ip
- * @method void setAnycast(integer $Anycast) 设置anycast ip类型开关： 0 普通ip 1 Anycast ip
+ * @method integer getAnycast() 获取anycast IP类型开关： 0 普通IP 1 Anycast IP
+ * @method void setAnycast(integer $Anycast) 设置anycast IP类型开关： 0 普通IP 1 Anycast IP
+ * @method array getWeights() 获取src权重
+ * @method void setWeights(array $Weights) 设置src权重
  */
 class AddSpartaProtectionRequest extends AbstractModel
 {
@@ -145,7 +147,7 @@ class AddSpartaProtectionRequest extends AbstractModel
     public $UpstreamDomain;
 
     /**
-     * @var array UpstreamType=0时，填次字段表示回源ip
+     * @var array UpstreamType=0时，填次字段表示回源IP
      */
     public $SrcList;
 
@@ -180,9 +182,14 @@ class AddSpartaProtectionRequest extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var integer anycast ip类型开关： 0 普通ip 1 Anycast ip
+     * @var integer anycast IP类型开关： 0 普通IP 1 Anycast IP
      */
     public $Anycast;
+
+    /**
+     * @var array src权重
+     */
+    public $Weights;
 
     /**
      * @param string $Domain 需要防御的域名
@@ -200,14 +207,15 @@ class AddSpartaProtectionRequest extends AbstractModel
      * @param integer $IsGray 是否开启灰度，0表示不开启灰度
      * @param array $GrayAreas 灰度的地区
      * @param string $UpstreamDomain UpstreamType=1时，填次字段表示回源域名
-     * @param array $SrcList UpstreamType=0时，填次字段表示回源ip
+     * @param array $SrcList UpstreamType=0时，填次字段表示回源IP
      * @param integer $IsHttp2 是否开启HTTP2,开启HTTP2需要HTTPS支持
      * @param integer $HttpsRewrite 表示是否强制跳转到HTTPS，1强制跳转Https，0不强制跳转
      * @param array $Ports 服务有多端口需要设置此字段
      * @param string $Edition 版本：sparta-waf、clb-waf、cdn-waf
      * @param string $IsKeepAlive 是否开启长连接，仅IP回源时可以用填次参数，域名回源时这个参数无效
      * @param string $InstanceID 实例id，上线之后带上此字段
-     * @param integer $Anycast anycast ip类型开关： 0 普通ip 1 Anycast ip
+     * @param integer $Anycast anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @param array $Weights src权重
      */
     function __construct()
     {
@@ -317,6 +325,10 @@ class AddSpartaProtectionRequest extends AbstractModel
 
         if (array_key_exists("Anycast",$param) and $param["Anycast"] !== null) {
             $this->Anycast = $param["Anycast"];
+        }
+
+        if (array_key_exists("Weights",$param) and $param["Weights"] !== null) {
+            $this->Weights = $param["Weights"];
         }
     }
 }

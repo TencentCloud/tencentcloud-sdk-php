@@ -22,14 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEventIdSet() 获取处理事件ids
  * @method void setEventIdSet(array $EventIdSet) 设置处理事件ids
- * @method string getStatus() 获取标记事件的状态
-   EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
-     EVENT_DEL:事件删除
- * @method void setStatus(string $Status) 设置标记事件的状态
-   EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
-     EVENT_DEL:事件删除
+ * @method string getStatus() 获取标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
+ * @method void setStatus(string $Status) 设置标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
  */
@@ -41,10 +35,7 @@ class ModifyEscapeEventStatusRequest extends AbstractModel
     public $EventIdSet;
 
     /**
-     * @var string 标记事件的状态
-   EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
-     EVENT_DEL:事件删除
+     * @var string 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
      */
     public $Status;
 
@@ -55,10 +46,7 @@ class ModifyEscapeEventStatusRequest extends AbstractModel
 
     /**
      * @param array $EventIdSet 处理事件ids
-     * @param string $Status 标记事件的状态
-   EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
-     EVENT_DEL:事件删除
+     * @param string $Status 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
      * @param string $Remark 备注
      */
     function __construct()

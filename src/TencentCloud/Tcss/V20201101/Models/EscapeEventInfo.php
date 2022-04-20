@@ -38,14 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerName(string $ContainerName) 设置容器名
  * @method string getImageName() 获取镜像名
  * @method void setImageName(string $ImageName) 设置镜像名
- * @method string getStatus() 获取状态
-     EVENT_UNDEAL:事件未处理
-     EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
- * @method void setStatus(string $Status) 设置状态
-     EVENT_UNDEAL:事件未处理
-     EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
+ * @method string getStatus() 获取状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
+ * @method void setStatus(string $Status) 设置状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
  * @method string getEventId() 获取事件记录的唯一id
  * @method void setEventId(string $EventId) 设置事件记录的唯一id
  * @method string getNodeName() 获取节点名称
@@ -80,6 +74,14 @@ MountNamespace逃逸、
  * @method void setEventCount(integer $EventCount) 设置事件数量
  * @method string getLatestFoundTime() 获取最近生成时间
  * @method void setLatestFoundTime(string $LatestFoundTime) 设置最近生成时间
+ * @method string getNodeIP() 获取节点IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeIP(string $NodeIP) 设置节点IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHostID() 获取主机IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostID(string $HostID) 设置主机IP
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EscapeEventInfo extends AbstractModel
 {
@@ -105,10 +107,7 @@ class EscapeEventInfo extends AbstractModel
     public $ImageName;
 
     /**
-     * @var string 状态
-     EVENT_UNDEAL:事件未处理
-     EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
+     * @var string 状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
      */
     public $Status;
 
@@ -174,6 +173,18 @@ MountNamespace逃逸、
     public $LatestFoundTime;
 
     /**
+     * @var string 节点IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeIP;
+
+    /**
+     * @var string 主机IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostID;
+
+    /**
      * @param string $EventType 事件类型
    ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
    ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
@@ -183,10 +194,7 @@ MountNamespace逃逸、
    ESCAPE_SYSCALL:Syscall逃逸
      * @param string $ContainerName 容器名
      * @param string $ImageName 镜像名
-     * @param string $Status 状态
-     EVENT_UNDEAL:事件未处理
-     EVENT_DEALED:事件已经处理
-     EVENT_INGNORE：事件忽略
+     * @param string $Status 状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
      * @param string $EventId 事件记录的唯一id
      * @param string $NodeName 节点名称
      * @param string $PodName pod(实例)的名字
@@ -204,6 +212,10 @@ MountNamespace逃逸、
      * @param string $Description 事件描述
      * @param integer $EventCount 事件数量
      * @param string $LatestFoundTime 最近生成时间
+     * @param string $NodeIP 节点IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HostID 主机IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -276,6 +288,14 @@ MountNamespace逃逸、
 
         if (array_key_exists("LatestFoundTime",$param) and $param["LatestFoundTime"] !== null) {
             $this->LatestFoundTime = $param["LatestFoundTime"];
+        }
+
+        if (array_key_exists("NodeIP",$param) and $param["NodeIP"] !== null) {
+            $this->NodeIP = $param["NodeIP"];
+        }
+
+        if (array_key_exists("HostID",$param) and $param["HostID"] !== null) {
+            $this->HostID = $param["HostID"];
         }
     }
 }

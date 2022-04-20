@@ -18,12 +18,12 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询vpc通道绑定api列表
+ * 查询后端通道绑定API列表
  *
  * @method integer getTotalCount() 获取总数
  * @method void setTotalCount(integer $TotalCount) 设置总数
- * @method array getBindApiSet() 获取绑定的api信息
- * @method void setBindApiSet(array $BindApiSet) 设置绑定的api信息
+ * @method array getBindApiSet() 获取绑定的API信息
+ * @method void setBindApiSet(array $BindApiSet) 设置绑定的API信息
  */
 class DescribeUpstreamBindApis extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeUpstreamBindApis extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 绑定的api信息
+     * @var array 绑定的API信息
      */
     public $BindApiSet;
 
     /**
      * @param integer $TotalCount 总数
-     * @param array $BindApiSet 绑定的api信息
+     * @param array $BindApiSet 绑定的API信息
      */
     function __construct()
     {

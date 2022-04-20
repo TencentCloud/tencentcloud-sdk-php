@@ -30,13 +30,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AbnormalProcessChildRuleInfo getMatchRule() 获取命中规则详细信息
  * @method void setMatchRule(AbnormalProcessChildRuleInfo $MatchRule) 设置命中规则详细信息
- * @method string getRuleName() 获取命中规则名字
- * @method void setRuleName(string $RuleName) 设置命中规则名字
+ * @method string getRuleName() 获取命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
+ * @method void setRuleName(string $RuleName) 设置命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
  * @method string getRuleId() 获取命中规则的id
  * @method void setRuleId(string $RuleId) 设置命中规则的id
  * @method string getOperationTime() 获取事件最后一次处理的时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationTime(string $OperationTime) 设置事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupName() 获取命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupName(string $GroupName) 设置命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AbnormalProcessEventDescription extends AbstractModel
@@ -63,7 +67,7 @@ class AbnormalProcessEventDescription extends AbstractModel
     public $MatchRule;
 
     /**
-     * @var string 命中规则名字
+     * @var string 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
      */
     public $RuleName;
 
@@ -79,14 +83,22 @@ class AbnormalProcessEventDescription extends AbstractModel
     public $OperationTime;
 
     /**
+     * @var string 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupName;
+
+    /**
      * @param string $Description 事件规则
      * @param string $Solution 解决方案
      * @param string $Remark 事件备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AbnormalProcessChildRuleInfo $MatchRule 命中规则详细信息
-     * @param string $RuleName 命中规则名字
+     * @param string $RuleName 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
      * @param string $RuleId 命中规则的id
      * @param string $OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupName 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -129,6 +141,10 @@ class AbnormalProcessEventDescription extends AbstractModel
 
         if (array_key_exists("OperationTime",$param) and $param["OperationTime"] !== null) {
             $this->OperationTime = $param["OperationTime"];
+        }
+
+        if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
+            $this->GroupName = $param["GroupName"];
         }
     }
 }

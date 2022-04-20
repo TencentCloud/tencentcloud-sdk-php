@@ -50,6 +50,8 @@ MountNamespace逃逸、
 敏感路径挂载
  * @method boolean getIsEnable() 获取是否打开：false否 ，true是
  * @method void setIsEnable(boolean $IsEnable) 设置是否打开：false否 ，true是
+ * @method string getGroup() 获取规则组别。RISK_CONTAINER：风险容器，PROCESS_PRIVILEGE：程序特权，CONTAINER_ESCAPE：容器逃逸
+ * @method void setGroup(string $Group) 设置规则组别。RISK_CONTAINER：风险容器，PROCESS_PRIVILEGE：程序特权，CONTAINER_ESCAPE：容器逃逸
  */
 class EscapeRule extends AbstractModel
 {
@@ -81,6 +83,11 @@ MountNamespace逃逸、
     public $IsEnable;
 
     /**
+     * @var string 规则组别。RISK_CONTAINER：风险容器，PROCESS_PRIVILEGE：程序特权，CONTAINER_ESCAPE：容器逃逸
+     */
+    public $Group;
+
+    /**
      * @param string $Type 规则类型   
 ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
    ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
@@ -96,6 +103,7 @@ MountNamespace逃逸、
 特权容器启动逃逸、
 敏感路径挂载
      * @param boolean $IsEnable 是否打开：false否 ，true是
+     * @param string $Group 规则组别。RISK_CONTAINER：风险容器，PROCESS_PRIVILEGE：程序特权，CONTAINER_ESCAPE：容器逃逸
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ MountNamespace逃逸、
 
         if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
             $this->IsEnable = $param["IsEnable"];
+        }
+
+        if (array_key_exists("Group",$param) and $param["Group"] !== null) {
+            $this->Group = $param["Group"];
         }
     }
 }

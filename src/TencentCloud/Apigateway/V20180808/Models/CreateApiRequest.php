@@ -124,6 +124,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTokenTimeout(integer $TokenTimeout) 设置EIAM应用Token 有效时间，单位为秒，默认为7200秒。
  * @method string getEIAMAppId() 获取EIAM应用ID。
  * @method void setEIAMAppId(string $EIAMAppId) 设置EIAM应用ID。
+ * @method string getOwner() 获取资源的Owner
+ * @method void setOwner(string $Owner) 设置资源的Owner
  */
 class CreateApiRequest extends AbstractModel
 {
@@ -388,6 +390,11 @@ class CreateApiRequest extends AbstractModel
     public $EIAMAppId;
 
     /**
+     * @var string 资源的Owner
+     */
+    public $Owner;
+
+    /**
      * @param string $ServiceId API 所在的服务唯一 ID。
      * @param string $ServiceType API 的后端服务类型。支持HTTP、MOCK、TSF、SCF、WEBSOCKET、TARGET（内测）。
      * @param integer $ServiceTimeout API 的后端服务超时时间，单位是秒。
@@ -440,6 +447,7 @@ class CreateApiRequest extends AbstractModel
      * @param string $EIAMAuthType EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
      * @param integer $TokenTimeout EIAM应用Token 有效时间，单位为秒，默认为7200秒。
      * @param string $EIAMAppId EIAM应用ID。
+     * @param string $Owner 资源的Owner
      */
     function __construct()
     {
@@ -696,6 +704,10 @@ class CreateApiRequest extends AbstractModel
 
         if (array_key_exists("EIAMAppId",$param) and $param["EIAMAppId"] !== null) {
             $this->EIAMAppId = $param["EIAMAppId"];
+        }
+
+        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+            $this->Owner = $param["Owner"];
         }
     }
 }

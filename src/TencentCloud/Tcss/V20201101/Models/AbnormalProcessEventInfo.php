@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessPath(string $ProcessPath) 设置进程目录
  * @method string getEventType() 获取事件类型，MALICE_PROCESS_START:恶意进程启动
  * @method void setEventType(string $EventType) 设置事件类型，MALICE_PROCESS_START:恶意进程启动
- * @method string getMatchRuleName() 获取命中规则
- * @method void setMatchRuleName(string $MatchRuleName) 设置命中规则
+ * @method string getMatchRuleName() 获取命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
+ * @method void setMatchRuleName(string $MatchRuleName) 设置命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
  * @method string getFoundTime() 获取生成时间
  * @method void setFoundTime(string $FoundTime) 设置生成时间
  * @method string getContainerName() 获取容器名
@@ -78,6 +78,10 @@ RULE_MODE_HOLDUP 拦截
  * @method void setLatestFoundTime(string $LatestFoundTime) 设置最近生成时间
  * @method string getRuleId() 获取规则组Id
  * @method void setRuleId(string $RuleId) 设置规则组Id
+ * @method string getMatchGroupName() 获取命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+ * @method void setMatchGroupName(string $MatchGroupName) 设置命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+ * @method string getMatchRuleLevel() 获取命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+ * @method void setMatchRuleLevel(string $MatchRuleLevel) 设置命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
  */
 class AbnormalProcessEventInfo extends AbstractModel
 {
@@ -92,7 +96,7 @@ class AbnormalProcessEventInfo extends AbstractModel
     public $EventType;
 
     /**
-     * @var string 命中规则
+     * @var string 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
      */
     public $MatchRuleName;
 
@@ -191,9 +195,19 @@ RULE_MODE_HOLDUP 拦截
     public $RuleId;
 
     /**
+     * @var string 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+     */
+    public $MatchGroupName;
+
+    /**
+     * @var string 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+     */
+    public $MatchRuleLevel;
+
+    /**
      * @param string $ProcessPath 进程目录
      * @param string $EventType 事件类型，MALICE_PROCESS_START:恶意进程启动
-     * @param string $MatchRuleName 命中规则
+     * @param string $MatchRuleName 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
      * @param string $FoundTime 生成时间
      * @param string $ContainerName 容器名
      * @param string $ImageName 镜像名
@@ -220,6 +234,8 @@ RULE_MODE_HOLDUP 拦截
      * @param integer $EventCount 事件数量
      * @param string $LatestFoundTime 最近生成时间
      * @param string $RuleId 规则组Id
+     * @param string $MatchGroupName 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+     * @param string $MatchRuleLevel 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
      */
     function __construct()
     {
@@ -312,6 +328,14 @@ RULE_MODE_HOLDUP 拦截
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("MatchGroupName",$param) and $param["MatchGroupName"] !== null) {
+            $this->MatchGroupName = $param["MatchGroupName"];
+        }
+
+        if (array_key_exists("MatchRuleLevel",$param) and $param["MatchRuleLevel"] !== null) {
+            $this->MatchRuleLevel = $param["MatchRuleLevel"];
         }
     }
 }

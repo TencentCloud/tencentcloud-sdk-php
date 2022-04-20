@@ -86,6 +86,44 @@ MountNamespace逃逸、
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIP(string $ClientIP) 设置外网ip
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerNetStatus() 获取网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerNetStatus(string $ContainerNetStatus) 设置网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerNetSubStatus() 获取容器子状态
+"AGENT_OFFLINE"       //Agent离线
+"NODE_DESTROYED"      //节点已销毁
+"CONTAINER_EXITED"    //容器已退出
+"CONTAINER_DESTROYED" //容器已销毁
+"SHARED_HOST"         // 容器与主机共享网络
+"RESOURCE_LIMIT"      //隔离操作资源超限
+"UNKNOW"              // 原因未知
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
+"AGENT_OFFLINE"       //Agent离线
+"NODE_DESTROYED"      //节点已销毁
+"CONTAINER_EXITED"    //容器已退出
+"CONTAINER_DESTROYED" //容器已销毁
+"SHARED_HOST"         // 容器与主机共享网络
+"RESOURCE_LIMIT"      //隔离操作资源超限
+"UNKNOW"              // 原因未知
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunTimeEventBaseInfo extends AbstractModel
 {
@@ -183,6 +221,37 @@ MountNamespace逃逸、
     public $ClientIP;
 
     /**
+     * @var string 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerNetStatus;
+
+    /**
+     * @var string 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+"NODE_DESTROYED"      //节点已销毁
+"CONTAINER_EXITED"    //容器已退出
+"CONTAINER_DESTROYED" //容器已销毁
+"SHARED_HOST"         // 容器与主机共享网络
+"RESOURCE_LIMIT"      //隔离操作资源超限
+"UNKNOW"              // 原因未知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerNetSubStatus;
+
+    /**
+     * @var string 容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerIsolateOperationSrc;
+
+    /**
      * @param string $EventId 事件唯一ID
      * @param string $FoundTime 事件发现时间
      * @param string $ContainerId 容器id
@@ -215,6 +284,25 @@ MountNamespace逃逸、
      * @param string $HostIP 内网ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientIP 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerNetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerNetSubStatus 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+"NODE_DESTROYED"      //节点已销毁
+"CONTAINER_EXITED"    //容器已退出
+"CONTAINER_DESTROYED" //容器已销毁
+"SHARED_HOST"         // 容器与主机共享网络
+"RESOURCE_LIMIT"      //隔离操作资源超限
+"UNKNOW"              // 原因未知
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -288,6 +376,18 @@ MountNamespace逃逸、
 
         if (array_key_exists("ClientIP",$param) and $param["ClientIP"] !== null) {
             $this->ClientIP = $param["ClientIP"];
+        }
+
+        if (array_key_exists("ContainerNetStatus",$param) and $param["ContainerNetStatus"] !== null) {
+            $this->ContainerNetStatus = $param["ContainerNetStatus"];
+        }
+
+        if (array_key_exists("ContainerNetSubStatus",$param) and $param["ContainerNetSubStatus"] !== null) {
+            $this->ContainerNetSubStatus = $param["ContainerNetSubStatus"];
+        }
+
+        if (array_key_exists("ContainerIsolateOperationSrc",$param) and $param["ContainerIsolateOperationSrc"] !== null) {
+            $this->ContainerIsolateOperationSrc = $param["ContainerIsolateOperationSrc"];
         }
     }
 }

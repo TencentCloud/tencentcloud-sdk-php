@@ -14,28 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20180301\Models;
+namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EstimateCheckSimilarPersonCostTime请求参数结构体
+ * 云企付-充值跳转参数
  *
- * @method array getGroupIds() 获取待整理的人员库列表。 
-人员库总人数不可超过200万，人员库个数不可超过10个。
- * @method void setGroupIds(array $GroupIds) 设置待整理的人员库列表。 
-人员库总人数不可超过200万，人员库个数不可超过10个。
+ * @method string getUrl() 获取跳转URL
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUrl(string $Url) 设置跳转URL
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class EstimateCheckSimilarPersonCostTimeRequest extends AbstractModel
+class OpenBankRechargeRedirectInfo extends AbstractModel
 {
     /**
-     * @var array 待整理的人员库列表。 
-人员库总人数不可超过200万，人员库个数不可超过10个。
+     * @var string 跳转URL
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $GroupIds;
+    public $Url;
 
     /**
-     * @param array $GroupIds 待整理的人员库列表。 
-人员库总人数不可超过200万，人员库个数不可超过10个。
+     * @param string $Url 跳转URL
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -50,8 +50,8 @@ class EstimateCheckSimilarPersonCostTimeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
-            $this->GroupIds = $param["GroupIds"];
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20180301\Models;
+namespace TencentCloud\Autoscaling\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CheckSimilarPerson返回参数结构体
+ * ModifyLifecycleHook返回参数结构体
  *
- * @method string getJobId() 获取查重任务ID，用于查询、获取查重的进度和结果。
- * @method void setJobId(string $JobId) 设置查重任务ID，用于查询、获取查重的进度和结果。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CheckSimilarPersonResponse extends AbstractModel
+class ModifyLifecycleHookResponse extends AbstractModel
 {
-    /**
-     * @var string 查重任务ID，用于查询、获取查重的进度和结果。
-     */
-    public $JobId;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $JobId 查重任务ID，用于查询、获取查重的进度和结果。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,10 +46,6 @@ class CheckSimilarPersonResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

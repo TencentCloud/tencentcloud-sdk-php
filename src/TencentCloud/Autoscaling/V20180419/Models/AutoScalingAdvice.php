@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupId() 获取伸缩组ID。
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
+ * @method string getLevel() 获取伸缩组警告级别。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+ * @method void setLevel(string $Level) 设置伸缩组警告级别。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
  * @method array getAdvices() 获取伸缩组配置建议集合。
  * @method void setAdvices(array $Advices) 设置伸缩组配置建议集合。
  */
@@ -33,12 +41,24 @@ class AutoScalingAdvice extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
+     * @var string 伸缩组警告级别。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+     */
+    public $Level;
+
+    /**
      * @var array 伸缩组配置建议集合。
      */
     public $Advices;
 
     /**
      * @param string $AutoScalingGroupId 伸缩组ID。
+     * @param string $Level 伸缩组警告级别。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
      * @param array $Advices 伸缩组配置建议集合。
      */
     function __construct()
@@ -56,6 +76,10 @@ class AutoScalingAdvice extends AbstractModel
         }
         if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
             $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
 
         if (array_key_exists("Advices",$param) and $param["Advices"] !== null) {

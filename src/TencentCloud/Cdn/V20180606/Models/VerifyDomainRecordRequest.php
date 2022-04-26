@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
+ * @method string getVerifyType() 获取验证方式
+dns: DNS 解析验证（默认值）
+file: 文件验证
+ * @method void setVerifyType(string $VerifyType) 设置验证方式
+dns: DNS 解析验证（默认值）
+file: 文件验证
  */
 class VerifyDomainRecordRequest extends AbstractModel
 {
@@ -31,7 +37,17 @@ class VerifyDomainRecordRequest extends AbstractModel
     public $Domain;
 
     /**
+     * @var string 验证方式
+dns: DNS 解析验证（默认值）
+file: 文件验证
+     */
+    public $VerifyType;
+
+    /**
      * @param string $Domain 域名
+     * @param string $VerifyType 验证方式
+dns: DNS 解析验证（默认值）
+file: 文件验证
      */
     function __construct()
     {
@@ -48,6 +64,10 @@ class VerifyDomainRecordRequest extends AbstractModel
         }
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("VerifyType",$param) and $param["VerifyType"] !== null) {
+            $this->VerifyType = $param["VerifyType"];
         }
     }
 }

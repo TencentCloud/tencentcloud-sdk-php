@@ -88,7 +88,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeBackupsResponse DescribeBackups(Models\DescribeBackupsRequest $req) 本接口(DescribeBackups)用于查询云数据库实例的备份数据。
  * @method Models\DescribeBinlogBackupOverviewResponse DescribeBinlogBackupOverview(Models\DescribeBinlogBackupOverviewRequest $req) 本接口(DescribeBinlogBackupOverview)用于查询用户在当前地域总的日志备份概览。
  * @method Models\DescribeBinlogsResponse DescribeBinlogs(Models\DescribeBinlogsRequest $req) 本接口(DescribeBinlogs)用于查询云数据库实例的 binlog 文件列表。
- * @method Models\DescribeCDBProxyResponse DescribeCDBProxy(Models\DescribeCDBProxyRequest $req) 查询数据库代理
+ * @method Models\DescribeCDBProxyResponse DescribeCDBProxy(Models\DescribeCDBProxyRequest $req) 查询数据库代理（待下线，替换接口QueryCDBProxy）
  * @method Models\DescribeCloneListResponse DescribeCloneList(Models\DescribeCloneListRequest $req) 本接口(DescribeCloneList) 用于查询用户实例的克隆任务列表。
  * @method Models\DescribeDBImportRecordsResponse DescribeDBImportRecords(Models\DescribeDBImportRecordsRequest $req) 本接口(DescribeDBImportRecords)用于查询云数据库导入任务操作日志。
  * @method Models\DescribeDBInstanceCharsetResponse DescribeDBInstanceCharset(Models\DescribeDBInstanceCharsetRequest $req) 本接口(DescribeDBInstanceCharset)用于查询云数据库实例的字符集，获取字符集的名称。

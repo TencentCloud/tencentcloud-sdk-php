@@ -25,6 +25,7 @@ use TencentCloud\Sts\V20180813\Models as Models;
 /**
  * @method Models\AssumeRoleResponse AssumeRole(Models\AssumeRoleRequest $req) 申请扮演角色
  * @method Models\AssumeRoleWithSAMLResponse AssumeRoleWithSAML(Models\AssumeRoleWithSAMLRequest $req) 本接口（AssumeRoleWithSAML）用于根据 SAML 断言申请角色临时凭证。
+ * @method Models\AssumeRoleWithWebIdentityResponse AssumeRoleWithWebIdentity(Models\AssumeRoleWithWebIdentityRequest $req) 申请OIDC角色临时密钥
  * @method Models\GetCallerIdentityResponse GetCallerIdentity(Models\GetCallerIdentityRequest $req) 获取当前调用者的身份信息。
 接口支持主账号，子账号长期密钥以及AssumeRole，GetFederationToken生成的临时凭据的身份获取。
  * @method Models\GetFederationTokenResponse GetFederationToken(Models\GetFederationTokenRequest $req) 获取联合身份临时访问凭证

@@ -26,8 +26,18 @@ use TencentCloud\Common\AbstractModel;
 付款方入驻云企付商户ID。
  * @method string getPayerName() 获取付款方名称。当TENPAY上送付款方入驻云企付的商户名称。
  * @method void setPayerName(string $PayerName) 设置付款方名称。当TENPAY上送付款方入驻云企付的商户名称。
- * @method string getBindSerialNo() 获取付款方付款账户标识，当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID。
- * @method void setBindSerialNo(string $BindSerialNo) 设置付款方付款账户标识，当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID。
+ * @method string getBindSerialNo() 获取付款方付款账户标识。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+ * @method void setBindSerialNo(string $BindSerialNo) 设置付款方付款账户标识。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+ * @method string getAccountType() 获取付款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID。
+当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
+ * @method void setAccountType(string $AccountType) 设置付款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID。
+当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
  */
 class OpenBankPayerInfo extends AbstractModel
 {
@@ -43,15 +53,29 @@ class OpenBankPayerInfo extends AbstractModel
     public $PayerName;
 
     /**
-     * @var string 付款方付款账户标识，当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID。
+     * @var string 付款方付款账户标识。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
      */
     public $BindSerialNo;
+
+    /**
+     * @var string 付款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID。
+当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
+     */
+    public $AccountType;
 
     /**
      * @param string $PayerId 付款方唯一标识。当TENPAY时，必填上送
 付款方入驻云企付商户ID。
      * @param string $PayerName 付款方名称。当TENPAY上送付款方入驻云企付的商户名称。
-     * @param string $BindSerialNo 付款方付款账户标识，当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID。
+     * @param string $BindSerialNo 付款方付款账户标识。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+     * @param string $AccountType 付款账户标识类型
+BANK_ACCOUNT：绑定银行账户
+ACCOUNT_BOOK_ID：电子记账本ID。
+当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
      */
     function __construct()
     {
@@ -76,6 +100,10 @@ class OpenBankPayerInfo extends AbstractModel
 
         if (array_key_exists("BindSerialNo",$param) and $param["BindSerialNo"] !== null) {
             $this->BindSerialNo = $param["BindSerialNo"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

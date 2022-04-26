@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getCandidates() 获取识别出的最相似候选人。
  * @method void setCandidates(array $Candidates) 设置识别出的最相似候选人。
- * @method integer getInputRetCode() 获取输入的人体轨迹图片中的合法性校验结果。
+ * @method integer getInputRetCode() 获取输入的人体动作轨迹图片中的合法性校验结果。
 只有为0时结果才有意义。
--1001: 输入图片不合法。-1002: 输入图片不能构成轨迹。
- * @method void setInputRetCode(integer $InputRetCode) 设置输入的人体轨迹图片中的合法性校验结果。
+-1001: 输入图片不合法。-1002: 输入图片不能构成动作轨迹。
+ * @method void setInputRetCode(integer $InputRetCode) 设置输入的人体动作轨迹图片中的合法性校验结果。
 只有为0时结果才有意义。
--1001: 输入图片不合法。-1002: 输入图片不能构成轨迹。
- * @method array getInputRetCodeDetails() 获取输入的人体轨迹图片中的合法性校验结果详情。 
--1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:轨迹中有非同人图片。-2024: 轨迹提取失败。-2025: 人体检测失败。
- * @method void setInputRetCodeDetails(array $InputRetCodeDetails) 设置输入的人体轨迹图片中的合法性校验结果详情。 
--1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:轨迹中有非同人图片。-2024: 轨迹提取失败。-2025: 人体检测失败。
+-1001: 输入图片不合法。-1002: 输入图片不能构成动作轨迹。
+ * @method array getInputRetCodeDetails() 获取输入的人体动作轨迹图片中的合法性校验结果详情。 
+-1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:动作轨迹中有非同人图片。-2024: 动作轨迹提取失败。-2025: 人体检测失败。
+ * @method void setInputRetCodeDetails(array $InputRetCodeDetails) 设置输入的人体动作轨迹图片中的合法性校验结果详情。 
+-1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:动作轨迹中有非同人图片。-2024: 动作轨迹提取失败。-2025: 人体检测失败。
  * @method string getBodyModelVersion() 获取人体识别所用的算法模型版本。
  * @method void setBodyModelVersion(string $BodyModelVersion) 设置人体识别所用的算法模型版本。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,15 +45,15 @@ class SearchTraceResponse extends AbstractModel
     public $Candidates;
 
     /**
-     * @var integer 输入的人体轨迹图片中的合法性校验结果。
+     * @var integer 输入的人体动作轨迹图片中的合法性校验结果。
 只有为0时结果才有意义。
--1001: 输入图片不合法。-1002: 输入图片不能构成轨迹。
+-1001: 输入图片不合法。-1002: 输入图片不能构成动作轨迹。
      */
     public $InputRetCode;
 
     /**
-     * @var array 输入的人体轨迹图片中的合法性校验结果详情。 
--1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:轨迹中有非同人图片。-2024: 轨迹提取失败。-2025: 人体检测失败。
+     * @var array 输入的人体动作轨迹图片中的合法性校验结果详情。 
+-1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:动作轨迹中有非同人图片。-2024: 动作轨迹提取失败。-2025: 人体检测失败。
      */
     public $InputRetCodeDetails;
 
@@ -69,11 +69,11 @@ class SearchTraceResponse extends AbstractModel
 
     /**
      * @param array $Candidates 识别出的最相似候选人。
-     * @param integer $InputRetCode 输入的人体轨迹图片中的合法性校验结果。
+     * @param integer $InputRetCode 输入的人体动作轨迹图片中的合法性校验结果。
 只有为0时结果才有意义。
--1001: 输入图片不合法。-1002: 输入图片不能构成轨迹。
-     * @param array $InputRetCodeDetails 输入的人体轨迹图片中的合法性校验结果详情。 
--1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:轨迹中有非同人图片。-2024: 轨迹提取失败。-2025: 人体检测失败。
+-1001: 输入图片不合法。-1002: 输入图片不能构成动作轨迹。
+     * @param array $InputRetCodeDetails 输入的人体动作轨迹图片中的合法性校验结果详情。 
+-1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:动作轨迹中有非同人图片。-2024: 动作轨迹提取失败。-2025: 人体检测失败。
      * @param string $BodyModelVersion 人体识别所用的算法模型版本。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

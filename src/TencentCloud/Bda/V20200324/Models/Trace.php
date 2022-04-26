@@ -18,24 +18,24 @@ namespace TencentCloud\Bda\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 人体轨迹信息
+ * 人体动作轨迹信息
  *
- * @method array getImages() 获取人体轨迹图片 Base64 数组。 
+ * @method array getImages() 获取人体动作轨迹图片 Base64 数组。 
 数组长度最小为1最大为5。 
 单个图片 base64 编码后大小不可超过2M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setImages(array $Images) 设置人体轨迹图片 Base64 数组。 
+ * @method void setImages(array $Images) 设置人体动作轨迹图片 Base64 数组。 
 数组长度最小为1最大为5。 
 单个图片 base64 编码后大小不可超过2M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method array getUrls() 获取人体轨迹图片 Url 数组。 
+ * @method array getUrls() 获取人体动作轨迹图片 Url 数组。 
 数组长度最小为1最大为5。 
 单个图片 base64 编码后大小不可超过2M。 
 Urls、Images必须提供一个，如果都提供，只使用 Urls。 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method void setUrls(array $Urls) 设置人体轨迹图片 Url 数组。 
+ * @method void setUrls(array $Urls) 设置人体动作轨迹图片 Url 数组。 
 数组长度最小为1最大为5。 
 单个图片 base64 编码后大小不可超过2M。 
 Urls、Images必须提供一个，如果都提供，只使用 Urls。 
@@ -54,7 +54,7 @@ Urls、Images必须提供一个，如果都提供，只使用 Urls。
 class Trace extends AbstractModel
 {
     /**
-     * @var array 人体轨迹图片 Base64 数组。 
+     * @var array 人体动作轨迹图片 Base64 数组。 
 数组长度最小为1最大为5。 
 单个图片 base64 编码后大小不可超过2M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -62,7 +62,7 @@ class Trace extends AbstractModel
     public $Images;
 
     /**
-     * @var array 人体轨迹图片 Url 数组。 
+     * @var array 人体动作轨迹图片 Url 数组。 
 数组长度最小为1最大为5。 
 单个图片 base64 编码后大小不可超过2M。 
 Urls、Images必须提供一个，如果都提供，只使用 Urls。 
@@ -81,11 +81,11 @@ Urls、Images必须提供一个，如果都提供，只使用 Urls。
     public $BodyRects;
 
     /**
-     * @param array $Images 人体轨迹图片 Base64 数组。 
+     * @param array $Images 人体动作轨迹图片 Base64 数组。 
 数组长度最小为1最大为5。 
 单个图片 base64 编码后大小不可超过2M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param array $Urls 人体轨迹图片 Url 数组。 
+     * @param array $Urls 人体动作轨迹图片 Url 数组。 
 数组长度最小为1最大为5。 
 单个图片 base64 编码后大小不可超过2M。 
 Urls、Images必须提供一个，如果都提供，只使用 Urls。 

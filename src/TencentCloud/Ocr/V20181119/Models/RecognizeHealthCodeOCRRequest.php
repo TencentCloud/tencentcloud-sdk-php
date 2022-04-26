@@ -38,20 +38,26 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method integer getType() 获取需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+ * @method integer getType() 获取需要识别的健康码类型列表，为空或不填表示默认为自动识别。
+0:自动识别
 
 1:粤康码
 
 2:随申码
 
 3:健康宝
- * @method void setType(integer $Type) 设置需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+
+4.穗康码
+ * @method void setType(integer $Type) 设置需要识别的健康码类型列表，为空或不填表示默认为自动识别。
+0:自动识别
 
 1:粤康码
 
 2:随申码
 
 3:健康宝
+
+4.穗康码
  */
 class RecognizeHealthCodeOCRRequest extends AbstractModel
 {
@@ -73,13 +79,16 @@ class RecognizeHealthCodeOCRRequest extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var integer 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+     * @var integer 需要识别的健康码类型列表，为空或不填表示默认为自动识别。
+0:自动识别
 
 1:粤康码
 
 2:随申码
 
 3:健康宝
+
+4.穗康码
      */
     public $Type;
 
@@ -93,13 +102,16 @@ class RecognizeHealthCodeOCRRequest extends AbstractModel
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param integer $Type 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+     * @param integer $Type 需要识别的健康码类型列表，为空或不填表示默认为自动识别。
+0:自动识别
 
 1:粤康码
 
 2:随申码
 
 3:健康宝
+
+4.穗康码
      */
     function __construct()
     {

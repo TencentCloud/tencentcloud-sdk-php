@@ -27,6 +27,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\AddMerchantResponse AddMerchant(Models\AddMerchantRequest $req) 云支付-添加商户接口
  * @method Models\AddShopResponse AddShop(Models\AddShopRequest $req) 云支付-添加门店接口
  * @method Models\ApplyApplicationMaterialResponse ApplyApplicationMaterial(Models\ApplyApplicationMaterialRequest $req) 跨境-提交申报材料。申报材料的主体是付款人，需要提前调用【跨境-付款人申请】接口提交付款人信息且审核通过后调用。
+ * @method Models\ApplyOpenBankOrderDetailReceiptResponse ApplyOpenBankOrderDetailReceipt(Models\ApplyOpenBankOrderDetailReceiptRequest $req) 云企付-申请单笔交易回单
  * @method Models\ApplyOutwardOrderResponse ApplyOutwardOrder(Models\ApplyOutwardOrderRequest $req) 跨境-汇出指令申请。通过该接口可将对接方账户中的人民币余额汇兑成外币，再汇出至指定银行账户。
  * @method Models\ApplyPayerInfoResponse ApplyPayerInfo(Models\ApplyPayerInfoRequest $req) 跨境-付款人申请。通过该接口提交付款人信息并进行 kyc 审核。
  * @method Models\ApplyReWithdrawalResponse ApplyReWithdrawal(Models\ApplyReWithdrawalRequest $req) 正常结算提现失败情况下，发起重新提现的请求接口
@@ -64,9 +65,11 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateInvoiceResponse CreateInvoice(Models\CreateInvoiceRequest $req) 智慧零售-发票开具
  * @method Models\CreateInvoiceV2Response CreateInvoiceV2(Models\CreateInvoiceV2Request $req) 智慧零售-发票开具V2
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 智慧零售-商户注册
+ * @method Models\CreateOpenBankExternalSubMerchantAccountBookResponse CreateOpenBankExternalSubMerchantAccountBook(Models\CreateOpenBankExternalSubMerchantAccountBookRequest $req) 第三方子商户电子记账本创建接口
  * @method Models\CreateOpenBankExternalSubMerchantRegistrationResponse CreateOpenBankExternalSubMerchantRegistration(Models\CreateOpenBankExternalSubMerchantRegistrationRequest $req) 云企付-子商户进件
  * @method Models\CreateOpenBankMerchantResponse CreateOpenBankMerchant(Models\CreateOpenBankMerchantRequest $req) 云企付-创建商户
  * @method Models\CreateOpenBankPaymentOrderResponse CreateOpenBankPaymentOrder(Models\CreateOpenBankPaymentOrderRequest $req) 云企付-创建支付订单
+ * @method Models\CreateOpenBankRechargeOrderResponse CreateOpenBankRechargeOrder(Models\CreateOpenBankRechargeOrderRequest $req) 云企付-创建充值订单
  * @method Models\CreateOrderResponse CreateOrder(Models\CreateOrderRequest $req) 云鉴-消费订单发起的接口
  * @method Models\CreatePayMerchantResponse CreatePayMerchant(Models\CreatePayMerchantRequest $req) 商户新增的接口
  * @method Models\CreateRedInvoiceResponse CreateRedInvoice(Models\CreateRedInvoiceRequest $req) 智慧零售-发票红冲
@@ -145,8 +148,10 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryOpenBankBindExternalSubMerchantBankAccountResponse QueryOpenBankBindExternalSubMerchantBankAccount(Models\QueryOpenBankBindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡绑定结果查询
  * @method Models\QueryOpenBankDailyReceiptDownloadUrlResponse QueryOpenBankDailyReceiptDownloadUrl(Models\QueryOpenBankDailyReceiptDownloadUrlRequest $req) 云企付-按日期批量查询回单下载地址
  * @method Models\QueryOpenBankDownLoadUrlResponse QueryOpenBankDownLoadUrl(Models\QueryOpenBankDownLoadUrlRequest $req) 云企付-查询对账单下载地址
+ * @method Models\QueryOpenBankExternalSubAccountBookBalanceResponse QueryOpenBankExternalSubAccountBookBalance(Models\QueryOpenBankExternalSubAccountBookBalanceRequest $req) 第三方子商户电子记账本余额查询接口
  * @method Models\QueryOpenBankExternalSubMerchantBankAccountResponse QueryOpenBankExternalSubMerchantBankAccount(Models\QueryOpenBankExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡列表查询
  * @method Models\QueryOpenBankExternalSubMerchantRegistrationResponse QueryOpenBankExternalSubMerchantRegistration(Models\QueryOpenBankExternalSubMerchantRegistrationRequest $req) 云企付-子商户进件结果查询
+ * @method Models\QueryOpenBankOrderDetailReceiptInfoResponse QueryOpenBankOrderDetailReceiptInfo(Models\QueryOpenBankOrderDetailReceiptInfoRequest $req) 云企付-单笔交易回单申请结果查询
  * @method Models\QueryOpenBankPaymentOrderResponse QueryOpenBankPaymentOrder(Models\QueryOpenBankPaymentOrderRequest $req) 云企付-查询订单支付结果
  * @method Models\QueryOpenBankSupportBankListResponse QueryOpenBankSupportBankList(Models\QueryOpenBankSupportBankListRequest $req) 云企付-查询支持银行列表
  * @method Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResponse QueryOpenBankUnbindExternalSubMerchantBankAccount(Models\QueryOpenBankUnbindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡解绑结果查询

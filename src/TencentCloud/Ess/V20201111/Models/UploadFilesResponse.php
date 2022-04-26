@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20180301\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetCheckSimilarPersonJobIdList返回参数结构体
+ * UploadFiles返回参数结构体
  *
- * @method array getJobIdInfos() 获取人员查重任务信息列表。
- * @method void setJobIdInfos(array $JobIdInfos) 设置人员查重任务信息列表。
- * @method integer getJobIdNum() 获取查重任务总数量。
- * @method void setJobIdNum(integer $JobIdNum) 设置查重任务总数量。
+ * @method array getFileIds() 获取文件id数组
+ * @method void setFileIds(array $FileIds) 设置文件id数组
+ * @method integer getTotalCount() 获取上传成功文件数量
+ * @method void setTotalCount(integer $TotalCount) 设置上传成功文件数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
+class UploadFilesResponse extends AbstractModel
 {
     /**
-     * @var array 人员查重任务信息列表。
+     * @var array 文件id数组
      */
-    public $JobIdInfos;
+    public $FileIds;
 
     /**
-     * @var integer 查重任务总数量。
+     * @var integer 上传成功文件数量
      */
-    public $JobIdNum;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $JobIdInfos 人员查重任务信息列表。
-     * @param integer $JobIdNum 查重任务总数量。
+     * @param array $FileIds 文件id数组
+     * @param integer $TotalCount 上传成功文件数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,12 @@ class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobIdInfos",$param) and $param["JobIdInfos"] !== null) {
-            $this->JobIdInfos = [];
-            foreach ($param["JobIdInfos"] as $key => $value){
-                $obj = new JobIdInfo();
-                $obj->deserialize($value);
-                array_push($this->JobIdInfos, $obj);
-            }
+        if (array_key_exists("FileIds",$param) and $param["FileIds"] !== null) {
+            $this->FileIds = $param["FileIds"];
         }
 
-        if (array_key_exists("JobIdNum",$param) and $param["JobIdNum"] !== null) {
-            $this->JobIdNum = $param["JobIdNum"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

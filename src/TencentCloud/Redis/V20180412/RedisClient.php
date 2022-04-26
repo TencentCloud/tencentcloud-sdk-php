@@ -36,7 +36,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\CreateReplicationGroupResponse CreateReplicationGroup(Models\CreateReplicationGroupRequest $req) 创建复制组
  * @method Models\DeleteInstanceAccountResponse DeleteInstanceAccount(Models\DeleteInstanceAccountRequest $req) 删除实例子账号
  * @method Models\DeleteParamTemplateResponse DeleteParamTemplate(Models\DeleteParamTemplateRequest $req) 删除参数模板
- * @method Models\DeleteReplicationInstanceResponse DeleteReplicationInstance(Models\DeleteReplicationInstanceRequest $req) 移除复制组成员
+ * @method Models\DeleteReplicationInstanceResponse DeleteReplicationInstance(Models\DeleteReplicationInstanceRequest $req) 移除复制组成员 注：接口下线中，请使用 RemoveReplicationInstance
  * @method Models\DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(Models\DescribeAutoBackupConfigRequest $req) 获取备份配置
  * @method Models\DescribeBackupUrlResponse DescribeBackupUrl(Models\DescribeBackupUrlRequest $req) 查询备份Rdb下载地址(接口灰度中，需要加白名单使用)
  * @method Models\DescribeCommonDBInstancesResponse DescribeCommonDBInstances(Models\DescribeCommonDBInstancesRequest $req) 查询Redis实例列表信息。该接口已废弃。

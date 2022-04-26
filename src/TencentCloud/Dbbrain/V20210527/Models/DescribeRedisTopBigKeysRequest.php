@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getDate() 获取查询日期，最早可为前30天的日期。
- * @method void setDate(string $Date) 设置查询日期，最早可为前30天的日期。
+ * @method string getDate() 获取查询日期，如2021-05-27，最早可为前30天的日期。
+ * @method void setDate(string $Date) 设置查询日期，如2021-05-27，最早可为前30天的日期。
  * @method string getProduct() 获取服务产品类型，支持值包括 "redis" - 云数据库 Redis。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括 "redis" - 云数据库 Redis。
- * @method string getSortBy() 获取排序字段，取值包括Capacity - 内存，ItemCount - 元素数量。
- * @method void setSortBy(string $SortBy) 设置排序字段，取值包括Capacity - 内存，ItemCount - 元素数量。
+ * @method string getSortBy() 获取排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
+ * @method void setSortBy(string $SortBy) 设置排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
  * @method string getKeyType() 获取key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
  * @method void setKeyType(string $KeyType) 设置key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
  * @method integer getLimit() 获取查询数目，默认为20，最大值为100。
@@ -41,7 +41,7 @@ class DescribeRedisTopBigKeysRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 查询日期，最早可为前30天的日期。
+     * @var string 查询日期，如2021-05-27，最早可为前30天的日期。
      */
     public $Date;
 
@@ -51,7 +51,7 @@ class DescribeRedisTopBigKeysRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量。
+     * @var string 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
      */
     public $SortBy;
 
@@ -67,9 +67,9 @@ class DescribeRedisTopBigKeysRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID。
-     * @param string $Date 查询日期，最早可为前30天的日期。
+     * @param string $Date 查询日期，如2021-05-27，最早可为前30天的日期。
      * @param string $Product 服务产品类型，支持值包括 "redis" - 云数据库 Redis。
-     * @param string $SortBy 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量。
+     * @param string $SortBy 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
      * @param string $KeyType key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
      * @param integer $Limit 查询数目，默认为20，最大值为100。
      */

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20180301\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetSimilarPersonResult请求参数结构体
+ * DescribeEncryptionKeys请求参数结构体
  *
- * @method string getJobId() 获取查重任务ID，用于查询、获取查重的进度和结果。
- * @method void setJobId(string $JobId) 设置查重任务ID，用于查询、获取查重的进度和结果。
+ * @method string getDBInstanceId() 获取实例ID。
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
  */
-class GetSimilarPersonResultRequest extends AbstractModel
+class DescribeEncryptionKeysRequest extends AbstractModel
 {
     /**
-     * @var string 查重任务ID，用于查询、获取查重的进度和结果。
+     * @var string 实例ID。
      */
-    public $JobId;
+    public $DBInstanceId;
 
     /**
-     * @param string $JobId 查重任务ID，用于查询、获取查重的进度和结果。
+     * @param string $DBInstanceId 实例ID。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class GetSimilarPersonResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
+            $this->DBInstanceId = $param["DBInstanceId"];
         }
     }
 }

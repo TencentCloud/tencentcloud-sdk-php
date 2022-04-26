@@ -14,23 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Sts\V20180813\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CheckSimilarPerson返回参数结构体
+ * AssumeRoleWithWebIdentity返回参数结构体
  *
- * @method string getJobId() 获取查重任务ID，用于查询、获取查重的进度和结果。
- * @method void setJobId(string $JobId) 设置查重任务ID，用于查询、获取查重的进度和结果。
+ * @method integer getExpiredTime() 获取临时秘钥过期时间(时间戳)
+ * @method void setExpiredTime(integer $ExpiredTime) 设置临时秘钥过期时间(时间戳)
+ * @method string getExpiration() 获取临时秘钥过期时间
+ * @method void setExpiration(string $Expiration) 设置临时秘钥过期时间
+ * @method Credentials getCredentials() 获取临时秘钥
+ * @method void setCredentials(Credentials $Credentials) 设置临时秘钥
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CheckSimilarPersonResponse extends AbstractModel
+class AssumeRoleWithWebIdentityResponse extends AbstractModel
 {
     /**
-     * @var string 查重任务ID，用于查询、获取查重的进度和结果。
+     * @var integer 临时秘钥过期时间(时间戳)
      */
-    public $JobId;
+    public $ExpiredTime;
+
+    /**
+     * @var string 临时秘钥过期时间
+     */
+    public $Expiration;
+
+    /**
+     * @var Credentials 临时秘钥
+     */
+    public $Credentials;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +52,9 @@ class CheckSimilarPersonResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $JobId 查重任务ID，用于查询、获取查重的进度和结果。
+     * @param integer $ExpiredTime 临时秘钥过期时间(时间戳)
+     * @param string $Expiration 临时秘钥过期时间
+     * @param Credentials $Credentials 临时秘钥
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +70,17 @@ class CheckSimilarPersonResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
+        if (array_key_exists("Expiration",$param) and $param["Expiration"] !== null) {
+            $this->Expiration = $param["Expiration"];
+        }
+
+        if (array_key_exists("Credentials",$param) and $param["Credentials"] !== null) {
+            $this->Credentials = new Credentials();
+            $this->Credentials->deserialize($param["Credentials"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

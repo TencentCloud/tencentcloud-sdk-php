@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getCarCoords() 获取汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
  * @method void setCarCoords(array $CarCoords) 设置汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
  * @method array getCarTags() 获取车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+注意：置信度是指车牌信息置信度。
  * @method void setCarTags(array $CarTags) 设置车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+注意：置信度是指车牌信息置信度。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,6 +38,7 @@ class RecognizeCarProResponse extends AbstractModel
 
     /**
      * @var array 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+注意：置信度是指车牌信息置信度。
      */
     public $CarTags;
 
@@ -47,6 +50,7 @@ class RecognizeCarProResponse extends AbstractModel
     /**
      * @param array $CarCoords 汽车的四个矩形顶点坐标，如果图片中存在多辆车，则输出最大车辆的坐标。
      * @param array $CarTags 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+注意：置信度是指车牌信息置信度。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

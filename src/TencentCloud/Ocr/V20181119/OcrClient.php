@@ -330,7 +330,7 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\QuotaInvoiceOCRResponse QuotaInvoiceOCR(Models\QuotaInvoiceOCRRequest $req) 本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
  * @method Models\RecognizeContainerOCRResponse RecognizeContainerOCR(Models\RecognizeContainerOCRRequest $req) 本接口支持集装箱箱门信息识别，识别字段包括集装箱箱号、类型、总重量、有效承重、容量、自身重量，具备集装箱箱号、类型不完整或者不清晰的告警功能。
 
- * @method Models\RecognizeHealthCodeOCRResponse RecognizeHealthCodeOCR(Models\RecognizeHealthCodeOCRRequest $req) 本接口支持深圳粤康码、上海随申码、北京健康宝的识别，包括持码人姓名、持码人身份证号、健康码更新时间、健康码颜色、核酸检测结果、核酸检测间隔时长、核酸检测时间，七个字段的识别结果输出。不同省市健康码显示的字段信息有所不同，上述字段的识别结果可能为空，以图片上的具体信息为准。
+ * @method Models\RecognizeHealthCodeOCRResponse RecognizeHealthCodeOCR(Models\RecognizeHealthCodeOCRRequest $req) 本接口支持深圳粤康码、广州穗康码、上海随申码、北京健康宝的识别，包括持码人姓名、持码人身份证号、健康码更新时间、健康码颜色、核酸检测结果、核酸检测间隔时长、核酸检测时间，七个字段的识别结果输出。不同省市健康码显示的字段信息有所不同，上述字段的识别结果可能为空，以图片上具体展示的信息为准。
  * @method Models\RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCR(Models\RecognizeOnlineTaxiItineraryOCRRequest $req) 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
  * @method Models\RecognizeTableOCRResponse RecognizeTableOCR(Models\RecognizeTableOCRRequest $req) 本接口支持中英文图片/ PDF内常规表格、无线表格、多表格的检测和识别，支持日文有线表格识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
  * @method Models\RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCR(Models\RecognizeThaiIDCardOCRRequest $req) 本接口支持泰国身份证识别，识别字段包括泰文姓名、英文姓名、地址、出生日期、身份证号码。

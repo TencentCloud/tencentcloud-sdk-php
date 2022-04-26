@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20180301\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EstimateCheckSimilarPersonCostTime返回参数结构体
+ * CreateSealByImage返回参数结构体
  *
- * @method integer getEstimatedTimeCost() 获取人员查重任务预估需要耗费时间。 单位为分钟。
- * @method void setEstimatedTimeCost(integer $EstimatedTimeCost) 设置人员查重任务预估需要耗费时间。 单位为分钟。
+ * @method string getSealId() 获取印章id
+ * @method void setSealId(string $SealId) 设置印章id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel
+class CreateSealByImageResponse extends AbstractModel
 {
     /**
-     * @var integer 人员查重任务预估需要耗费时间。 单位为分钟。
+     * @var string 印章id
      */
-    public $EstimatedTimeCost;
+    public $SealId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $EstimatedTimeCost 人员查重任务预估需要耗费时间。 单位为分钟。
+     * @param string $SealId 印章id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EstimatedTimeCost",$param) and $param["EstimatedTimeCost"] !== null) {
-            $this->EstimatedTimeCost = $param["EstimatedTimeCost"];
+        if (array_key_exists("SealId",$param) and $param["SealId"] !== null) {
+            $this->SealId = $param["SealId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

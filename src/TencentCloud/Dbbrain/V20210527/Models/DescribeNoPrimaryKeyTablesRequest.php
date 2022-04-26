@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getDate() 获取查询日期，最早为30天前的日期。
- * @method void setDate(string $Date) 设置查询日期，最早为30天前的日期。
+ * @method string getDate() 获取查询日期，如2021-05-27，最早为30天前的日期。
+ * @method void setDate(string $Date) 设置查询日期，如2021-05-27，最早为30天前的日期。
  * @method integer getLimit() 获取查询数目，默认为20，最大为100。
  * @method void setLimit(integer $Limit) 设置查询数目，默认为20，最大为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -39,7 +39,7 @@ class DescribeNoPrimaryKeyTablesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 查询日期，最早为30天前的日期。
+     * @var string 查询日期，如2021-05-27，最早为30天前的日期。
      */
     public $Date;
 
@@ -60,7 +60,7 @@ class DescribeNoPrimaryKeyTablesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID。
-     * @param string $Date 查询日期，最早为30天前的日期。
+     * @param string $Date 查询日期，如2021-05-27，最早为30天前的日期。
      * @param integer $Limit 查询数目，默认为20，最大为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param string $Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。

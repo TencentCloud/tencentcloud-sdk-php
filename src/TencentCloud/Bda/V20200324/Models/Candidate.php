@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPersonId() 获取人员ID。
  * @method void setPersonId(string $PersonId) 设置人员ID。
- * @method string getTraceId() 获取人体轨迹ID。
- * @method void setTraceId(string $TraceId) 设置人体轨迹ID。
+ * @method string getTraceId() 获取人体动作轨迹ID。
+ * @method void setTraceId(string $TraceId) 设置人体动作轨迹ID。
  * @method float getScore() 获取候选者的匹配得分。 
 十万人体库下，误识率百分之五对应的分数为70分；误识率百分之二对应的分数为80分；误识率百分之一对应的分数为90分。
  
@@ -45,7 +45,7 @@ class Candidate extends AbstractModel
     public $PersonId;
 
     /**
-     * @var string 人体轨迹ID。
+     * @var string 人体动作轨迹ID。
      */
     public $TraceId;
 
@@ -61,7 +61,7 @@ class Candidate extends AbstractModel
 
     /**
      * @param string $PersonId 人员ID。
-     * @param string $TraceId 人体轨迹ID。
+     * @param string $TraceId 人体动作轨迹ID。
      * @param float $Score 候选者的匹配得分。 
 十万人体库下，误识率百分之五对应的分数为70分；误识率百分之二对应的分数为80分；误识率百分之一对应的分数为90分。
  

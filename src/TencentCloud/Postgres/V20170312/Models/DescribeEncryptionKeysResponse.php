@@ -14,30 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iai\V20200303\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetCheckSimilarPersonJobIdList返回参数结构体
+ * DescribeEncryptionKeys返回参数结构体
  *
- * @method array getJobIdInfos() 获取人员查重任务信息列表。
- * @method void setJobIdInfos(array $JobIdInfos) 设置人员查重任务信息列表。
- * @method integer getJobIdNum() 获取查重任务总数量。
- * @method void setJobIdNum(integer $JobIdNum) 设置查重任务总数量。
+ * @method array getEncryptionKeys() 获取实例密钥信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncryptionKeys(array $EncryptionKeys) 设置实例密钥信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
+class DescribeEncryptionKeysResponse extends AbstractModel
 {
     /**
-     * @var array 人员查重任务信息列表。
+     * @var array 实例密钥信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $JobIdInfos;
-
-    /**
-     * @var integer 查重任务总数量。
-     */
-    public $JobIdNum;
+    public $EncryptionKeys;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +41,8 @@ class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $JobIdInfos 人员查重任务信息列表。
-     * @param integer $JobIdNum 查重任务总数量。
+     * @param array $EncryptionKeys 实例密钥信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +58,13 @@ class GetCheckSimilarPersonJobIdListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobIdInfos",$param) and $param["JobIdInfos"] !== null) {
-            $this->JobIdInfos = [];
-            foreach ($param["JobIdInfos"] as $key => $value){
-                $obj = new JobIdInfo();
+        if (array_key_exists("EncryptionKeys",$param) and $param["EncryptionKeys"] !== null) {
+            $this->EncryptionKeys = [];
+            foreach ($param["EncryptionKeys"] as $key => $value){
+                $obj = new EncryptionKey();
                 $obj->deserialize($value);
-                array_push($this->JobIdInfos, $obj);
+                array_push($this->EncryptionKeys, $obj);
             }
-        }
-
-        if (array_key_exists("JobIdNum",$param) and $param["JobIdNum"] !== null) {
-            $this->JobIdNum = $param["JobIdNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

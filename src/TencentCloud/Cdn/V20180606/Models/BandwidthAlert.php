@@ -66,6 +66,10 @@ off：关闭
 带宽：bandwidth
 流量：flux
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getStatisticItems() 获取累计用量配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatisticItems(array $StatisticItems) 设置累计用量配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BandwidthAlert extends AbstractModel
 {
@@ -125,6 +129,12 @@ off：关闭
     public $Metric;
 
     /**
+     * @var array 累计用量配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StatisticItems;
+
+    /**
      * @param string $Switch 用量封顶配置开关
 on：开启
 off：关闭
@@ -147,6 +157,8 @@ off：关闭
      * @param string $Metric 用量阈值触发的维度
 带宽：bandwidth
 流量：flux
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $StatisticItems 累计用量配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -192,6 +204,15 @@ off：关闭
 
         if (array_key_exists("Metric",$param) and $param["Metric"] !== null) {
             $this->Metric = $param["Metric"];
+        }
+
+        if (array_key_exists("StatisticItems",$param) and $param["StatisticItems"] !== null) {
+            $this->StatisticItems = [];
+            foreach ($param["StatisticItems"] as $key => $value){
+                $obj = new StatisticItem();
+                $obj->deserialize($value);
+                array_push($this->StatisticItems, $obj);
+            }
         }
     }
 }

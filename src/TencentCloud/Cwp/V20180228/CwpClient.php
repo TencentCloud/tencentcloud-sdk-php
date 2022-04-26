@@ -26,7 +26,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\CancelIgnoreVulResponse CancelIgnoreVul(Models\CancelIgnoreVulRequest $req) 取消漏洞忽略
  * @method Models\ChangeRuleEventsIgnoreStatusResponse ChangeRuleEventsIgnoreStatus(Models\ChangeRuleEventsIgnoreStatusRequest $req) 根据检测项id或事件id批量忽略事件或取消忽略
  * @method Models\CheckBashRuleParamsResponse CheckBashRuleParams(Models\CheckBashRuleParamsRequest $req) 校验高危命令用户规则新增和编辑时的参数。
- * @method Models\CloseProVersionResponse CloseProVersion(Models\CloseProVersionRequest $req) 本接口 (CloseProVersion) 用于关闭专业版。
+ * @method Models\CloseProVersionResponse CloseProVersion(Models\CloseProVersionRequest $req) 本接口 (CloseProVersion) 已全面改为授权模式,该接口只能解绑授权.
  * @method Models\CreateBaselineStrategyResponse CreateBaselineStrategy(Models\CreateBaselineStrategyRequest $req) 根据策略信息创建基线策略
  * @method Models\CreateEmergencyVulScanResponse CreateEmergencyVulScan(Models\CreateEmergencyVulScanRequest $req) 创建应急漏洞扫描任务
  * @method Models\CreateProtectServerResponse CreateProtectServer(Models\CreateProtectServerRequest $req) 添加网站防护服务器

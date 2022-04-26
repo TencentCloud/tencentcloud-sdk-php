@@ -55,7 +55,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeSlowLogTopSqlsResponse DescribeSlowLogTopSqls(Models\DescribeSlowLogTopSqlsRequest $req) 按照Sql模板+schema的聚合方式，统计排序指定时间段内的top慢sql。
  * @method Models\DescribeSlowLogUserHostStatsResponse DescribeSlowLogUserHostStats(Models\DescribeSlowLogUserHostStatsRequest $req) 获取慢日志来源地址统计分布图。
  * @method Models\DescribeSqlFiltersResponse DescribeSqlFilters(Models\DescribeSqlFiltersRequest $req) 查询实例SQL限流任务列表。
- * @method Models\DescribeSqlTemplateResponse DescribeSqlTemplate(Models\DescribeSqlTemplateRequest $req) 查询SQL模版。
+ * @method Models\DescribeSqlTemplateResponse DescribeSqlTemplate(Models\DescribeSqlTemplateRequest $req) 查询SQL模板。
  * @method Models\DescribeTopSpaceSchemaTimeSeriesResponse DescribeTopSpaceSchemaTimeSeries(Models\DescribeTopSpaceSchemaTimeSeriesRequest $req) 获取实例占用空间最大的前几个库在指定时间段内的每日由DBbrain定时采集的空间数据，默认返回按大小排序。
  * @method Models\DescribeTopSpaceSchemasResponse DescribeTopSpaceSchemas(Models\DescribeTopSpaceSchemasRequest $req) 获取实例Top库的实时空间统计信息，默认返回按大小排序。
  * @method Models\DescribeTopSpaceTableTimeSeriesResponse DescribeTopSpaceTableTimeSeries(Models\DescribeTopSpaceTableTimeSeriesRequest $req) 获取实例占用空间最大的前几张表在指定时间段内的每日由DBbrain定时采集的空间数据，默认返回按大小排序。

@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateServerlessGroup返回参数结构体
+ * ModifyDBInstanceName返回参数结构体
  *
- * @method string getResult() 获取创建成功的部署组ID，返回null表示失败
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(string $Result) 设置创建成功的部署组ID，返回null表示失败
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateServerlessGroupResponse extends AbstractModel
+class ModifyDBInstanceNameResponse extends AbstractModel
 {
     /**
-     * @var string 创建成功的部署组ID，返回null表示失败
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 实例ID
      */
-    public $Result;
+    public $InstanceId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class CreateServerlessGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 创建成功的部署组ID，返回null表示失败
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 实例ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +54,8 @@ class CreateServerlessGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

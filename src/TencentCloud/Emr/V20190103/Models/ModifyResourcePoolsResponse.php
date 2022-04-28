@@ -14,26 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeServerlessGroups返回参数结构体
+ * ModifyResourcePools返回参数结构体
  *
- * @method ServerlessGroupPage getResult() 获取数据列表对象
+ * @method boolean getIsDraft() 获取false表示不是草稿，提交刷新请求成功
+ * @method void setIsDraft(boolean $IsDraft) 设置false表示不是草稿，提交刷新请求成功
+ * @method string getErrorMsg() 获取扩展字段，暂时没用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(ServerlessGroupPage $Result) 设置数据列表对象
+ * @method void setErrorMsg(string $ErrorMsg) 设置扩展字段，暂时没用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeServerlessGroupsResponse extends AbstractModel
+class ModifyResourcePoolsResponse extends AbstractModel
 {
     /**
-     * @var ServerlessGroupPage 数据列表对象
+     * @var boolean false表示不是草稿，提交刷新请求成功
+     */
+    public $IsDraft;
+
+    /**
+     * @var string 扩展字段，暂时没用
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
+    public $ErrorMsg;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +48,8 @@ class DescribeServerlessGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ServerlessGroupPage $Result 数据列表对象
+     * @param boolean $IsDraft false表示不是草稿，提交刷新请求成功
+     * @param string $ErrorMsg 扩展字段，暂时没用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,9 +66,12 @@ class DescribeServerlessGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new ServerlessGroupPage();
-            $this->Result->deserialize($param["Result"]);
+        if (array_key_exists("IsDraft",$param) and $param["IsDraft"] !== null) {
+            $this->IsDraft = $param["IsDraft"];
+        }
+
+        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
+            $this->ErrorMsg = $param["ErrorMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

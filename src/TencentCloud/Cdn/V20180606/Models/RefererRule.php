@@ -49,11 +49,11 @@ blacklist：黑名单
  * @method array getReferers() 获取referer 内容列表列表
  * @method void setReferers(array $Referers) 设置referer 内容列表列表
  * @method boolean getAllowEmpty() 获取是否允许空 referer
-true：允许空 referer
-false：不允许空 referer
+防盗链类型为白名单时，true表示允许空 referer，false表示不允许空 referer；
+防盗链类型为黑名单时，true表示拒绝空referer，false表示不拒绝空referer；
  * @method void setAllowEmpty(boolean $AllowEmpty) 设置是否允许空 referer
-true：允许空 referer
-false：不允许空 referer
+防盗链类型为白名单时，true表示允许空 referer，false表示不允许空 referer；
+防盗链类型为黑名单时，true表示拒绝空referer，false表示不拒绝空referer；
  */
 class RefererRule extends AbstractModel
 {
@@ -89,8 +89,8 @@ blacklist：黑名单
 
     /**
      * @var boolean 是否允许空 referer
-true：允许空 referer
-false：不允许空 referer
+防盗链类型为白名单时，true表示允许空 referer，false表示不允许空 referer；
+防盗链类型为黑名单时，true表示拒绝空referer，false表示不拒绝空referer；
      */
     public $AllowEmpty;
 
@@ -110,8 +110,8 @@ whitelist：白名单
 blacklist：黑名单
      * @param array $Referers referer 内容列表列表
      * @param boolean $AllowEmpty 是否允许空 referer
-true：允许空 referer
-false：不允许空 referer
+防盗链类型为白名单时，true表示允许空 referer，false表示不允许空 referer；
+防盗链类型为黑名单时，true表示拒绝空referer，false表示不拒绝空referer；
      */
     function __construct()
     {

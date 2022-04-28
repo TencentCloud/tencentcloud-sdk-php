@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CloseProVersion返回参数结构体
+ * ModifyResourcePools请求参数结构体
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getInstanceId() 获取emr集群id
+ * @method void setInstanceId(string $InstanceId) 设置emr集群id
+ * @method string getKey() 获取标识是fair还是capacity
+ * @method void setKey(string $Key) 设置标识是fair还是capacity
  */
-class CloseProVersionResponse extends AbstractModel
+class ModifyResourcePoolsRequest extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string emr集群id
      */
-    public $RequestId;
+    public $InstanceId;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 标识是fair还是capacity
+     */
+    public $Key;
+
+    /**
+     * @param string $InstanceId emr集群id
+     * @param string $Key 标识是fair还是capacity
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class CloseProVersionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tsf\V20180326\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeServerlessGroup请求参数结构体
+ * DescribeResourceSchedule请求参数结构体
  *
- * @method string getGroupId() 获取部署组ID
- * @method void setGroupId(string $GroupId) 设置部署组ID
+ * @method string getInstanceId() 获取emr集群的英文id
+ * @method void setInstanceId(string $InstanceId) 设置emr集群的英文id
  */
-class DescribeServerlessGroupRequest extends AbstractModel
+class DescribeResourceScheduleRequest extends AbstractModel
 {
     /**
-     * @var string 部署组ID
+     * @var string emr集群的英文id
      */
-    public $GroupId;
+    public $InstanceId;
 
     /**
-     * @param string $GroupId 部署组ID
+     * @param string $InstanceId emr集群的英文id
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeServerlessGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

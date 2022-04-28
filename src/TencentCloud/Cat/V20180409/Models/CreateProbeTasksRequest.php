@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCron(string $Cron) 设置定时任务cron表达式
  * @method array getTag() 获取资源标签值
  * @method void setTag(array $Tag) 设置资源标签值
+ * @method integer getProbeType() 获取测试类型，包含定时测试与即时测试
+ * @method void setProbeType(integer $ProbeType) 设置测试类型，包含定时测试与即时测试
+ * @method string getPluginSource() 获取插件类型
+ * @method void setPluginSource(string $PluginSource) 设置插件类型
  */
 class CreateProbeTasksRequest extends AbstractModel
 {
@@ -86,6 +90,16 @@ class CreateProbeTasksRequest extends AbstractModel
     public $Tag;
 
     /**
+     * @var integer 测试类型，包含定时测试与即时测试
+     */
+    public $ProbeType;
+
+    /**
+     * @var string 插件类型
+     */
+    public $PluginSource;
+
+    /**
      * @param array $BatchTasks 批量任务名-地址
      * @param integer $TaskType 任务类型
      * @param array $Nodes 拨测节点
@@ -96,6 +110,8 @@ class CreateProbeTasksRequest extends AbstractModel
 <li> 2 = Mobile </li>
      * @param string $Cron 定时任务cron表达式
      * @param array $Tag 资源标签值
+     * @param integer $ProbeType 测试类型，包含定时测试与即时测试
+     * @param string $PluginSource 插件类型
      */
     function __construct()
     {
@@ -150,6 +166,14 @@ class CreateProbeTasksRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tag, $obj);
             }
+        }
+
+        if (array_key_exists("ProbeType",$param) and $param["ProbeType"] !== null) {
+            $this->ProbeType = $param["ProbeType"];
+        }
+
+        if (array_key_exists("PluginSource",$param) and $param["PluginSource"] !== null) {
+            $this->PluginSource = $param["PluginSource"];
         }
     }
 }

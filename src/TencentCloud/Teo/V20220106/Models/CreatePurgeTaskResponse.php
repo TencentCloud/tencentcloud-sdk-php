@@ -14,30 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceOpenProVersionPrepaid返回参数结构体
+ * CreatePurgeTask返回参数结构体
  *
- * @method float getOriginalPrice() 获取预支费用的原价，单位：元。
- * @method void setOriginalPrice(float $OriginalPrice) 设置预支费用的原价，单位：元。
- * @method float getDiscountPrice() 获取预支费用的折扣价，单位：元。
- * @method void setDiscountPrice(float $DiscountPrice) 设置预支费用的折扣价，单位：元。
+ * @method string getJobId() 获取任务ID
+ * @method void setJobId(string $JobId) 设置任务ID
+ * @method array getFailedList() 获取失败的任务列表及原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailedList(array $FailedList) 设置失败的任务列表及原因
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class InquiryPriceOpenProVersionPrepaidResponse extends AbstractModel
+class CreatePurgeTaskResponse extends AbstractModel
 {
     /**
-     * @var float 预支费用的原价，单位：元。
+     * @var string 任务ID
      */
-    public $OriginalPrice;
+    public $JobId;
 
     /**
-     * @var float 预支费用的折扣价，单位：元。
+     * @var array 失败的任务列表及原因
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DiscountPrice;
+    public $FailedList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class InquiryPriceOpenProVersionPrepaidResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $OriginalPrice 预支费用的原价，单位：元。
-     * @param float $DiscountPrice 预支费用的折扣价，单位：元。
+     * @param string $JobId 任务ID
+     * @param array $FailedList 失败的任务列表及原因
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +66,17 @@ class InquiryPriceOpenProVersionPrepaidResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
-            $this->OriginalPrice = $param["OriginalPrice"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
 
-        if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
-            $this->DiscountPrice = $param["DiscountPrice"];
+        if (array_key_exists("FailedList",$param) and $param["FailedList"] !== null) {
+            $this->FailedList = [];
+            foreach ($param["FailedList"] as $key => $value){
+                $obj = new FailReason();
+                $obj->deserialize($value);
+                array_push($this->FailedList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

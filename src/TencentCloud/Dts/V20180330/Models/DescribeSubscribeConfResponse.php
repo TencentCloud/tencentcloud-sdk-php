@@ -76,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标识,0-不自动续费，1-自动续费
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubscribeVersion() 获取数据订阅版本。老版订阅填txdts，kafka版填kafka
+ * @method void setSubscribeVersion(string $SubscribeVersion) 设置数据订阅版本。老版订阅填txdts，kafka版填kafka
+ * @method array getErrors() 获取错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrors(array $Errors) 设置错误信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -214,6 +220,17 @@ class DescribeSubscribeConfResponse extends AbstractModel
     public $AutoRenewFlag;
 
     /**
+     * @var string 数据订阅版本。老版订阅填txdts，kafka版填kafka
+     */
+    public $SubscribeVersion;
+
+    /**
+     * @var array 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Errors;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -246,6 +263,9 @@ class DescribeSubscribeConfResponse extends AbstractModel
      * @param array $Tags 订阅实例的标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动续费标识,0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubscribeVersion 数据订阅版本。老版订阅填txdts，kafka版填kafka
+     * @param array $Errors 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -374,6 +394,19 @@ class DescribeSubscribeConfResponse extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("SubscribeVersion",$param) and $param["SubscribeVersion"] !== null) {
+            $this->SubscribeVersion = $param["SubscribeVersion"];
+        }
+
+        if (array_key_exists("Errors",$param) and $param["Errors"] !== null) {
+            $this->Errors = [];
+            foreach ($param["Errors"] as $key => $value){
+                $obj = new SubsErr();
+                $obj->deserialize($value);
+                array_push($this->Errors, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

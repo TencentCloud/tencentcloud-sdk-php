@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceBandWidth(integer $ServiceBandWidth) 设置业务带宽
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBattleEditionFlag() 获取战斗服版本标记，0表示普通高防包，1表示战斗服高防包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBattleEditionFlag(integer $BattleEditionFlag) 设置战斗服版本标记，0表示普通高防包，1表示战斗服高防包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getChannelEditionFlag() 获取渠道版标记，0表示普通高防包，1表示渠道版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelEditionFlag(integer $ChannelEditionFlag) 设置渠道版标记，0表示普通高防包，1表示渠道版高防包
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPInstanceSpecification extends AbstractModel
 {
@@ -81,6 +89,18 @@ class BGPInstanceSpecification extends AbstractModel
     public $ServiceBandWidth;
 
     /**
+     * @var integer 战斗服版本标记，0表示普通高防包，1表示战斗服高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BattleEditionFlag;
+
+    /**
+     * @var integer 渠道版标记，0表示普通高防包，1表示渠道版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelEditionFlag;
+
+    /**
      * @param integer $ProtectBandwidth 保底防护峰值，单位Gbps
      * @param integer $ProtectCountLimit 防护次数，单位次
      * @param integer $ProtectIPNumberLimit 防护IP数，单位个
@@ -91,6 +111,10 @@ class BGPInstanceSpecification extends AbstractModel
      * @param integer $UnionPackFlag 联合产品标记，0代表普通高防包，1代表联合高防包
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ServiceBandWidth 业务带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BattleEditionFlag 战斗服版本标记，0表示普通高防包，1表示战斗服高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ChannelEditionFlag 渠道版标记，0表示普通高防包，1表示渠道版高防包
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -128,6 +152,14 @@ class BGPInstanceSpecification extends AbstractModel
 
         if (array_key_exists("ServiceBandWidth",$param) and $param["ServiceBandWidth"] !== null) {
             $this->ServiceBandWidth = $param["ServiceBandWidth"];
+        }
+
+        if (array_key_exists("BattleEditionFlag",$param) and $param["BattleEditionFlag"] !== null) {
+            $this->BattleEditionFlag = $param["BattleEditionFlag"];
+        }
+
+        if (array_key_exists("ChannelEditionFlag",$param) and $param["ChannelEditionFlag"] !== null) {
+            $this->ChannelEditionFlag = $param["ChannelEditionFlag"];
         }
     }
 }

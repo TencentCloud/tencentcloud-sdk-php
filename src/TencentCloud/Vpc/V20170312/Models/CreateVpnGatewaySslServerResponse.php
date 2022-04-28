@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskId() 获取创建SSL-VPN server 异步任务ID
  * @method void setTaskId(integer $TaskId) 设置创建SSL-VPN server 异步任务ID
+ * @method string getSslVpnServerId() 获取SSL-VPN server 唯一ID
+ * @method void setSslVpnServerId(string $SslVpnServerId) 设置SSL-VPN server 唯一ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class CreateVpnGatewaySslServerResponse extends AbstractModel
     public $TaskId;
 
     /**
+     * @var string SSL-VPN server 唯一ID
+     */
+    public $SslVpnServerId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $TaskId 创建SSL-VPN server 异步任务ID
+     * @param string $SslVpnServerId SSL-VPN server 唯一ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class CreateVpnGatewaySslServerResponse extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("SslVpnServerId",$param) and $param["SslVpnServerId"] !== null) {
+            $this->SslVpnServerId = $param["SslVpnServerId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -15,37 +15,34 @@
  * limitations under the License.
  */
 
-namespace TencentCloud\Apm\V20210622;
+namespace TencentCloud\Teo\V20220106;
 
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Apm\V20210622\Models as Models;
+use TencentCloud\Teo\V20220106\Models as Models;
 
 /**
- * @method Models\CreateApmInstanceResponse CreateApmInstance(Models\CreateApmInstanceRequest $req) 业务购买APM实例，调用该接口创建
- * @method Models\DescribeApmAgentResponse DescribeApmAgent(Models\DescribeApmAgentRequest $req) 获取Apm Agent信息
- * @method Models\DescribeApmInstancesResponse DescribeApmInstances(Models\DescribeApmInstancesRequest $req) APM实例列表拉取
- * @method Models\DescribeMetricRecordsResponse DescribeMetricRecords(Models\DescribeMetricRecordsRequest $req) 拉取通用指标列表
- * @method Models\DescribeServiceOverviewResponse DescribeServiceOverview(Models\DescribeServiceOverviewRequest $req) 服务概览数据拉取
+ * @method Models\CreatePurgeTaskResponse CreatePurgeTask(Models\CreatePurgeTaskRequest $req) 创建清除缓存任务
+ * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) 查询清除缓存历史记录
  */
 
-class ApmClient extends AbstractClient
+class TeoClient extends AbstractClient
 {
     /**
      * @var string
      */
-    protected $endpoint = "apm.tencentcloudapi.com";
+    protected $endpoint = "teo.tencentcloudapi.com";
 
     /**
      * @var string
      */
-    protected $service = "apm";
+    protected $service = "teo";
 
     /**
      * @var string
      */
-    protected $version = "2021-06-22";
+    protected $version = "2022-01-06";
 
     /**
      * @param Credential $credential
@@ -60,7 +57,7 @@ class ApmClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("apm")."\\"."V20210622\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud"."\\".ucfirst("teo")."\\"."V20220106\\Models"."\\".ucfirst($action)."Response";
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

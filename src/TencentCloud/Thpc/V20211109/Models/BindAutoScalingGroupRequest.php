@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置弹性伸缩启动配置ID。
  * @method string getAutoScalingGroupId() 获取弹性伸缩组ID。
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置弹性伸缩组ID。
+ * @method string getQueueName() 获取队列名称。
+ * @method void setQueueName(string $QueueName) 设置队列名称。
  * @method integer getExpansionBusyTime() 获取任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
  * @method void setExpansionBusyTime(integer $ExpansionBusyTime) 设置任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
  * @method integer getShrinkIdleTime() 获取节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
@@ -63,6 +65,11 @@ class BindAutoScalingGroupRequest extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
+     * @var string 队列名称。
+     */
+    public $QueueName;
+
+    /**
      * @var integer 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
      */
     public $ExpansionBusyTime;
@@ -95,6 +102,7 @@ false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩
      * @param string $ClusterId 集群ID。
      * @param string $LaunchConfigurationId 弹性伸缩启动配置ID。
      * @param string $AutoScalingGroupId 弹性伸缩组ID。
+     * @param string $QueueName 队列名称。
      * @param integer $ExpansionBusyTime 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
      * @param integer $ShrinkIdleTime 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
      * @param boolean $EnableAutoExpansion 是否开启自动扩容，默认值true。
@@ -128,6 +136,10 @@ false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩
 
         if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
             $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
         }
 
         if (array_key_exists("ExpansionBusyTime",$param) and $param["ExpansionBusyTime"] !== null) {

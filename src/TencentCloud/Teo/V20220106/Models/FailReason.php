@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OpenProVersion返回参数结构体
+ * 失败原因
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getReason() 获取失败原因
+ * @method void setReason(string $Reason) 设置失败原因
+ * @method array getTargets() 获取失败列表
+ * @method void setTargets(array $Targets) 设置失败列表
  */
-class OpenProVersionResponse extends AbstractModel
+class FailReason extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 失败原因
      */
-    public $RequestId;
+    public $Reason;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var array 失败列表
+     */
+    public $Targets;
+
+    /**
+     * @param string $Reason 失败原因
+     * @param array $Targets 失败列表
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class OpenProVersionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+            $this->Targets = $param["Targets"];
         }
     }
 }

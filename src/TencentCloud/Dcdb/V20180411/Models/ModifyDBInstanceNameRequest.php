@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcb\V20180608\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeWxCloudBaseRunEnvs请求参数结构体
+ * ModifyDBInstanceName请求参数结构体
  *
- * @method string getWxAppId() 获取wx应用Id
- * @method void setWxAppId(string $WxAppId) 设置wx应用Id
- * @method boolean getAllRegions() 获取是否查询全地域
- * @method void setAllRegions(boolean $AllRegions) 设置是否查询全地域
+ * @method string getInstanceId() 获取实例ID，形如tdsql-hdaprz0v
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，形如tdsql-hdaprz0v
+ * @method string getInstanceName() 获取实例名称
+ * @method void setInstanceName(string $InstanceName) 设置实例名称
  */
-class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel
+class ModifyDBInstanceNameRequest extends AbstractModel
 {
     /**
-     * @var string wx应用Id
+     * @var string 实例ID，形如tdsql-hdaprz0v
      */
-    public $WxAppId;
+    public $InstanceId;
 
     /**
-     * @var boolean 是否查询全地域
+     * @var string 实例名称
      */
-    public $AllRegions;
+    public $InstanceName;
 
     /**
-     * @param string $WxAppId wx应用Id
-     * @param boolean $AllRegions 是否查询全地域
+     * @param string $InstanceId 实例ID，形如tdsql-hdaprz0v
+     * @param string $InstanceName 实例名称
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WxAppId",$param) and $param["WxAppId"] !== null) {
-            $this->WxAppId = $param["WxAppId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("AllRegions",$param) and $param["AllRegions"] !== null) {
-            $this->AllRegions = $param["AllRegions"];
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
         }
     }
 }

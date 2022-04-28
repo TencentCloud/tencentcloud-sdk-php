@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
 • 16k_zh_dialect：多方言。
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
- * @method string getVoiceFormat() 获取识别音频的音频格式。mp3、wav。
- * @method void setVoiceFormat(string $VoiceFormat) 设置识别音频的音频格式。mp3、wav。
+ * @method string getVoiceFormat() 获取识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
+ * @method void setVoiceFormat(string $VoiceFormat) 设置识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
  * @method string getUsrAudioKey() 获取用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
  * @method void setUsrAudioKey(string $UsrAudioKey) 设置用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
  * @method string getUrl() 获取语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时长不能超过60s，音频文件大小不能超过3MB。
@@ -104,7 +104,7 @@ class SentenceRecognitionRequest extends AbstractModel
     public $SourceType;
 
     /**
-     * @var string 识别音频的音频格式。mp3、wav。
+     * @var string 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
      */
     public $VoiceFormat;
 
@@ -173,7 +173,7 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_zh_medical：16k 医疗；
 • 16k_zh_dialect：多方言。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
-     * @param string $VoiceFormat 识别音频的音频格式。mp3、wav。
+     * @param string $VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
      * @param string $UsrAudioKey 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
      * @param string $Url 语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时长不能超过60s，音频文件大小不能超过3MB。
      * @param string $Data 语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频时长不能超过60s，音频文件大小不能超过3MB（Base64后）。

@@ -14,23 +14,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Apm\V20210622\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RenewProVersion返回参数结构体
+ * DescribeServiceOverview返回参数结构体
  *
+ * @method array getRecords() 获取指标结果集
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecords(array $Records) 设置指标结果集
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class RenewProVersionResponse extends AbstractModel
+class DescribeServiceOverviewResponse extends AbstractModel
 {
+    /**
+     * @var array 指标结果集
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Records;
+
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $Records 指标结果集
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +58,15 @@ class RenewProVersionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Records",$param) and $param["Records"] !== null) {
+            $this->Records = [];
+            foreach ($param["Records"] as $key => $value){
+                $obj = new ApmMetricRecord();
+                $obj->deserialize($value);
+                array_push($this->Records, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

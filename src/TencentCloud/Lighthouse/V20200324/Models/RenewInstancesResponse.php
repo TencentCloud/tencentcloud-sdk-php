@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcb\V20180608\Models;
+namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeWxCloudBaseRunEnvs请求参数结构体
+ * RenewInstances返回参数结构体
  *
- * @method string getWxAppId() 获取wx应用Id
- * @method void setWxAppId(string $WxAppId) 设置wx应用Id
- * @method boolean getAllRegions() 获取是否查询全地域
- * @method void setAllRegions(boolean $AllRegions) 设置是否查询全地域
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel
+class RenewInstancesResponse extends AbstractModel
 {
     /**
-     * @var string wx应用Id
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $WxAppId;
+    public $RequestId;
 
     /**
-     * @var boolean 是否查询全地域
-     */
-    public $AllRegions;
-
-    /**
-     * @param string $WxAppId wx应用Id
-     * @param boolean $AllRegions 是否查询全地域
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WxAppId",$param) and $param["WxAppId"] !== null) {
-            $this->WxAppId = $param["WxAppId"];
-        }
-
-        if (array_key_exists("AllRegions",$param) and $param["AllRegions"] !== null) {
-            $this->AllRegions = $param["AllRegions"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

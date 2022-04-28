@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 当前支持ap-shanghai
  * @method void setRegion(string $Region) 设置所属地域。
 当前支持ap-shanghai
+ * @method string getUpdateTime() 获取更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabasesInfo extends AbstractModel
 {
@@ -60,6 +64,12 @@ class DatabasesInfo extends AbstractModel
     public $Region;
 
     /**
+     * @var string 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $InstanceId 数据库唯一标识
      * @param string $Status 状态。包含以下取值：
 <li>INITIALIZING：资源初始化中</li>
@@ -68,6 +78,8 @@ class DatabasesInfo extends AbstractModel
 <li>OVERDUE：资源过期</li>
      * @param string $Region 所属地域。
 当前支持ap-shanghai
+     * @param string $UpdateTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -92,6 +104,10 @@ class DatabasesInfo extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

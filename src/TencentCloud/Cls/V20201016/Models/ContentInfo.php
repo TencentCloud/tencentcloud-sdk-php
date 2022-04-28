@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJson(JsonInfo $Json) 设置json格式内容描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ParquetInfo getParquet() 获取parquet格式内容描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParquet(ParquetInfo $Parquet) 设置parquet格式内容描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContentInfo extends AbstractModel
 {
@@ -51,10 +55,18 @@ class ContentInfo extends AbstractModel
     public $Json;
 
     /**
+     * @var ParquetInfo parquet格式内容描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Parquet;
+
+    /**
      * @param string $Format 内容格式，支持json、csv
      * @param CsvInfo $Csv csv格式内容描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param JsonInfo $Json json格式内容描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParquetInfo $Parquet parquet格式内容描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -82,6 +94,11 @@ class ContentInfo extends AbstractModel
         if (array_key_exists("Json",$param) and $param["Json"] !== null) {
             $this->Json = new JsonInfo();
             $this->Json->deserialize($param["Json"]);
+        }
+
+        if (array_key_exists("Parquet",$param) and $param["Parquet"] !== null) {
+            $this->Parquet = new ParquetInfo();
+            $this->Parquet->deserialize($param["Parquet"]);
         }
     }
 }

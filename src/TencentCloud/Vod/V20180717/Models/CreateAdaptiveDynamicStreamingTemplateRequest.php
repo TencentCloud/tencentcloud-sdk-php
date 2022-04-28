@@ -30,11 +30,15 @@ use TencentCloud\Common\AbstractModel;
 注意：各个子流的帧率必须保持一致；如果不一致，采用第一个子流的帧率作为输出帧率。
  * @method string getName() 获取模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置模板名称，长度限制：64 个字符。
- * @method string getDrmType() 获取DRM方案类型，取值范围：
-<li>SimpleAES。</li>
+ * @method string getDrmType() 获取DRM 方案类型，取值范围：
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
- * @method void setDrmType(string $DrmType) 设置DRM方案类型，取值范围：
-<li>SimpleAES。</li>
+ * @method void setDrmType(string $DrmType) 设置DRM 方案类型，取值范围：
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
  * @method integer getDisableHigherVideoBitrate() 获取是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
@@ -77,8 +81,10 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string DRM方案类型，取值范围：
-<li>SimpleAES。</li>
+     * @var string DRM 方案类型，取值范围：
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
      */
     public $DrmType;
@@ -115,8 +121,10 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
      * @param array $StreamInfos 自适应转码输出子流参数信息，最多输出10路子流。
 注意：各个子流的帧率必须保持一致；如果不一致，采用第一个子流的帧率作为输出帧率。
      * @param string $Name 模板名称，长度限制：64 个字符。
-     * @param string $DrmType DRM方案类型，取值范围：
-<li>SimpleAES。</li>
+     * @param string $DrmType DRM 方案类型，取值范围：
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
      * @param integer $DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>

@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPathType(integer $PathType) 设置跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
  * @method string getFlowId() 获取合同详情 id (PathType=1时必传)
  * @method void setFlowId(string $FlowId) 设置合同详情 id (PathType=1时必传)
+ * @method string getOrganizationName() 获取企业名称
+ * @method void setOrganizationName(string $OrganizationName) 设置企业名称
+ * @method string getEndPoint() 获取链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+ * @method void setEndPoint(string $EndPoint) 设置链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+ * @method boolean getAutoJumpBack() 获取是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+ * @method void setAutoJumpBack(boolean $AutoJumpBack) 设置是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
  */
 class CreateSchemeUrlRequest extends AbstractModel
 {
@@ -66,12 +72,30 @@ class CreateSchemeUrlRequest extends AbstractModel
     public $FlowId;
 
     /**
+     * @var string 企业名称
+     */
+    public $OrganizationName;
+
+    /**
+     * @var string 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+     */
+    public $EndPoint;
+
+    /**
+     * @var boolean 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+     */
+    public $AutoJumpBack;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，参考通用结构
      * @param Agent $Agent 调用方渠道信息，参考通用结构
      * @param string $Name 姓名
      * @param string $Mobile 手机号
      * @param integer $PathType 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
      * @param string $FlowId 合同详情 id (PathType=1时必传)
+     * @param string $OrganizationName 企业名称
+     * @param string $EndPoint 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+     * @param boolean $AutoJumpBack 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
      */
     function __construct()
     {
@@ -110,6 +134,18 @@ class CreateSchemeUrlRequest extends AbstractModel
 
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("OrganizationName",$param) and $param["OrganizationName"] !== null) {
+            $this->OrganizationName = $param["OrganizationName"];
+        }
+
+        if (array_key_exists("EndPoint",$param) and $param["EndPoint"] !== null) {
+            $this->EndPoint = $param["EndPoint"];
+        }
+
+        if (array_key_exists("AutoJumpBack",$param) and $param["AutoJumpBack"] !== null) {
+            $this->AutoJumpBack = $param["AutoJumpBack"];
         }
     }
 }

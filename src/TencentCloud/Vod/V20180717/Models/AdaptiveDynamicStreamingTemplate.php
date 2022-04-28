@@ -37,14 +37,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormat(string $Format) 设置自适应转码格式，取值范围：
 <li>HLS。</li>
  * @method string getDrmType() 获取DRM 类型，取值范围：
-<li>FairPlay；</li>
-<li>SimpleAES；</li>
-<li>Widevine。</li>
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
  * @method void setDrmType(string $DrmType) 设置DRM 类型，取值范围：
-<li>FairPlay；</li>
-<li>SimpleAES；</li>
-<li>Widevine。</li>
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
  * @method array getStreamInfos() 获取自适应转码输入流参数信息，最多输入10路流。
  * @method void setStreamInfos(array $StreamInfos) 设置自适应转码输入流参数信息，最多输入10路流。
@@ -97,9 +97,9 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 
     /**
      * @var string DRM 类型，取值范围：
-<li>FairPlay；</li>
-<li>SimpleAES；</li>
-<li>Widevine。</li>
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
      */
     public $DrmType;
@@ -143,9 +143,9 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
      * @param string $Format 自适应转码格式，取值范围：
 <li>HLS。</li>
      * @param string $DrmType DRM 类型，取值范围：
-<li>FairPlay；</li>
-<li>SimpleAES；</li>
-<li>Widevine。</li>
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
      * @param array $StreamInfos 自适应转码输入流参数信息，最多输入10路流。
      * @param integer $DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：

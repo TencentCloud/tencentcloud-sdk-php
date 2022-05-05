@@ -92,6 +92,10 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListProtocolBlockConfigResponse DescribeListProtocolBlockConfig(Models\DescribeListProtocolBlockConfigRequest $req) 获取DDoS防护的协议封禁配置列表
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) 获取智能调度域名列表
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) 获取DDoS防护的水印防护配置列表
+ * @method Models\DescribeOverviewAttackTrendResponse DescribeOverviewAttackTrend(Models\DescribeOverviewAttackTrendRequest $req) 拉取防护概览攻击趋势
+ * @method Models\DescribeOverviewCCTrendResponse DescribeOverviewCCTrend(Models\DescribeOverviewCCTrendRequest $req) 获取防护概览总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
+ * @method Models\DescribeOverviewDDoSTrendResponse DescribeOverviewDDoSTrend(Models\DescribeOverviewDDoSTrendRequest $req) 获取防护概览DDoS攻击流量带宽和攻击包速率数据
+ * @method Models\DescribeOverviewIndexResponse DescribeOverviewIndex(Models\DescribeOverviewIndexRequest $req) 拉取防护概览指标
  * @method Models\DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(Models\DisassociateDDoSEipAddressRequest $req) 本接口 (DisassociateDDoSEipAddress) 用于解绑高防弹性公网IP。
  * @method Models\ModifyCCLevelPolicyResponse ModifyCCLevelPolicy(Models\ModifyCCLevelPolicyRequest $req) 修改CC防护等级
  * @method Models\ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(Models\ModifyCCPrecisionPolicyRequest $req) 修改CC精准防护策略

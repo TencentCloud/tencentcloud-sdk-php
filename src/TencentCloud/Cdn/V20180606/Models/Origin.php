@@ -88,10 +88,10 @@ IPv6 功能目前尚未全量，需要先申请试用
 若接入的是泛域名，则回源 Host 默认为访问时的子域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCosPrivateAccess() 获取OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket
-注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。
+注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。取值范围: on/off
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosPrivateAccess(string $CosPrivateAccess) 设置OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket
-注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。
+注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。取值范围: on/off
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginPullProtocol() 获取回源协议配置
 http：强制 http 回源
@@ -200,7 +200,7 @@ IPv6 功能目前尚未全量，需要先申请试用
 
     /**
      * @var string OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket
-注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。
+注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。取值范围: on/off
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosPrivateAccess;
@@ -303,7 +303,7 @@ IPv6 功能目前尚未全量，需要先申请试用
 若接入的是泛域名，则回源 Host 默认为访问时的子域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosPrivateAccess OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket
-注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。
+注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。取值范围: on/off
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginPullProtocol 回源协议配置
 http：强制 http 回源

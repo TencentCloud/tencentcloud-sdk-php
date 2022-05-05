@@ -282,7 +282,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) 修改用户自定义水印模板，水印类型不允许修改。
  * @method Models\ModifyWordSampleResponse ModifyWordSample(Models\ModifyWordSampleRequest $req) 该接口用于修改关键词的应用场景、标签，关键词本身不可修改，如需修改，可删除重建。
  * @method Models\ParseStreamingManifestResponse ParseStreamingManifest(Models\ParseStreamingManifestRequest $req) 上传 HLS 视频时，解析索引文件内容，返回待上传的分片文件列表。分片文件路径必须是当前目录或子目录的相对路径，不能是 URL，不能是绝对路径。
- * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) 对点播中的图片文件发起处理任务，功能包括：
+ * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) 该 API 已经<font color='red'>不再维护</font>，智能识别任务请使用图片智能识别 [ReviewImage](https://cloud.tencent.com/document/api/266/73217) 接口。
+
+对点播中的图片文件发起处理任务，功能包括：
 
 1. 智能识别（令人反感的信息、不安全的信息、不适宜的信息）;
 

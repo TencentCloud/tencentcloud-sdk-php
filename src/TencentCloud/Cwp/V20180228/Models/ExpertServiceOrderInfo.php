@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOrderId() 获取订单id
  * @method void setOrderId(integer $OrderId) 设置订单id
- * @method integer getInquireType() 获取订单类型 1应急 2 旗舰护网 3 安全管家
- * @method void setInquireType(integer $InquireType) 设置订单类型 1应急 2 旗舰护网 3 安全管家
+ * @method integer getInquireType() 获取订单类型 1应急 2 旗舰重保 3 安全管家
+ * @method void setInquireType(integer $InquireType) 设置订单类型 1应急 2 旗舰重保 3 安全管家
  * @method integer getInquireNum() 获取服务数量
  * @method void setInquireNum(integer $InquireNum) 设置服务数量
  * @method string getBeginTime() 获取服务开始时间
@@ -43,7 +43,7 @@ class ExpertServiceOrderInfo extends AbstractModel
     public $OrderId;
 
     /**
-     * @var integer 订单类型 1应急 2 旗舰护网 3 安全管家
+     * @var integer 订单类型 1应急 2 旗舰重保 3 安全管家
      */
     public $InquireType;
 
@@ -74,7 +74,7 @@ class ExpertServiceOrderInfo extends AbstractModel
 
     /**
      * @param integer $OrderId 订单id
-     * @param integer $InquireType 订单类型 1应急 2 旗舰护网 3 安全管家
+     * @param integer $InquireType 订单类型 1应急 2 旗舰重保 3 安全管家
      * @param integer $InquireNum 服务数量
      * @param string $BeginTime 服务开始时间
      * @param string $EndTime 服务结束时间

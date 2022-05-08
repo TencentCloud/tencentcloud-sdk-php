@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstallPluginList(array $InstallPluginList) 设置需要安装的插件名列表
  * @method array getRemovePluginList() 获取需要卸载的插件名列表
  * @method void setRemovePluginList(array $RemovePluginList) 设置需要卸载的插件名列表
- * @method boolean getForceRestart() 获取是否强制重启
- * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启
- * @method boolean getForceUpdate() 获取是否重新安装
- * @method void setForceUpdate(boolean $ForceUpdate) 设置是否重新安装
+ * @method boolean getForceRestart() 获取是否强制重启，默认值false
+ * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启，默认值false
+ * @method boolean getForceUpdate() 获取是否重新安装，默认值false
+ * @method void setForceUpdate(boolean $ForceUpdate) 设置是否重新安装，默认值false
  * @method integer getPluginType() 获取0：系统插件
  * @method void setPluginType(integer $PluginType) 设置0：系统插件
  */
@@ -51,12 +51,12 @@ class UpdatePluginsRequest extends AbstractModel
     public $RemovePluginList;
 
     /**
-     * @var boolean 是否强制重启
+     * @var boolean 是否强制重启，默认值false
      */
     public $ForceRestart;
 
     /**
-     * @var boolean 是否重新安装
+     * @var boolean 是否重新安装，默认值false
      */
     public $ForceUpdate;
 
@@ -69,8 +69,8 @@ class UpdatePluginsRequest extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param array $InstallPluginList 需要安装的插件名列表
      * @param array $RemovePluginList 需要卸载的插件名列表
-     * @param boolean $ForceRestart 是否强制重启
-     * @param boolean $ForceUpdate 是否重新安装
+     * @param boolean $ForceRestart 是否强制重启，默认值false
+     * @param boolean $ForceUpdate 是否重新安装，默认值false
      * @param integer $PluginType 0：系统插件
      */
     function __construct()

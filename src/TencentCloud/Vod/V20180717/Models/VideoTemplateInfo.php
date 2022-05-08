@@ -21,15 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 视频流配置参数
  *
  * @method string getCodec() 获取视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
-<li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+<font color=red>注意：</font>
+<li> av1，H.266 编码容器目前只支持 mp4 ；</li>
+<li> H.266 目前只支持恒定 CRF 码率控制方式。 </li>
  * @method void setCodec(string $Codec) 设置视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
-<li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+<font color=red>注意：</font>
+<li> av1，H.266 编码容器目前只支持 mp4 ；</li>
+<li> H.266 目前只支持恒定 CRF 码率控制方式。 </li>
  * @method integer getFps() 获取视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
  * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 100]，单位：Hz。
@@ -83,11 +89,17 @@ use TencentCloud\Common\AbstractModel;
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
  * @method integer getVcrf() 获取视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
+
+<font color=red>注意：</font>
+<li>如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）；</li>
+<li>当指定视频流编码格式为 H.266 时，该字段必填，推荐值为 28；</li>
+<li>如果没有特殊需求，不建议指定该参数。</li>
  * @method void setVcrf(integer $Vcrf) 设置视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
+
+<font color=red>注意：</font>
+<li>如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）；</li>
+<li>当指定视频流编码格式为 H.266 时，该字段必填，推荐值为 28；</li>
+<li>如果没有特殊需求，不建议指定该参数。</li>
  * @method integer getGop() 获取关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
 当填 0 或不填时，系统将自动设置 gop 长度。
  * @method void setGop(integer $Gop) 设置关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
@@ -97,10 +109,13 @@ class VideoTemplateInfo extends AbstractModel
 {
     /**
      * @var string 视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
-<li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+<font color=red>注意：</font>
+<li> av1，H.266 编码容器目前只支持 mp4 ；</li>
+<li> H.266 目前只支持恒定 CRF 码率控制方式。 </li>
      */
     public $Codec;
 
@@ -156,8 +171,11 @@ class VideoTemplateInfo extends AbstractModel
 
     /**
      * @var integer 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
+
+<font color=red>注意：</font>
+<li>如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）；</li>
+<li>当指定视频流编码格式为 H.266 时，该字段必填，推荐值为 28；</li>
+<li>如果没有特殊需求，不建议指定该参数。</li>
      */
     public $Vcrf;
 
@@ -169,10 +187,13 @@ class VideoTemplateInfo extends AbstractModel
 
     /**
      * @param string $Codec 视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
-<li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+<font color=red>注意：</font>
+<li> av1，H.266 编码容器目前只支持 mp4 ；</li>
+<li> H.266 目前只支持恒定 CRF 码率控制方式。 </li>
      * @param integer $Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
@@ -200,8 +221,11 @@ class VideoTemplateInfo extends AbstractModel
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
      * @param integer $Vcrf 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
+
+<font color=red>注意：</font>
+<li>如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）；</li>
+<li>当指定视频流编码格式为 H.266 时，该字段必填，推荐值为 28；</li>
+<li>如果没有特殊需求，不建议指定该参数。</li>
      * @param integer $Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
 当填 0 或不填时，系统将自动设置 gop 长度。
      */

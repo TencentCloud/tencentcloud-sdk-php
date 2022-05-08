@@ -30,12 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxCapacity(integer $MaxCapacity) 设置图库容量。
  * @method integer getMaxQps() 获取该库的访问限频 。
  * @method void setMaxQps(integer $MaxQps) 设置该库的访问限频 。
- * @method integer getGroupType() 获取图库类型： 
-1: 通用图库，以用户输入图提取特征。
-2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
- * @method void setGroupType(integer $GroupType) 设置图库类型： 
-1: 通用图库，以用户输入图提取特征。
-2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+ * @method integer getGroupType() 获取图库类型，对应不同产品功能，默认为1。建议调整为4或5，1~3为历史版本，不推荐。
+参数值：
+4：相同图像搜索，在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于版权场景。
+5：商品图像搜索，在自建图库中搜索相同或相似的商品图片，适用于电商场景。
+ * @method void setGroupType(integer $GroupType) 设置图库类型，对应不同产品功能，默认为1。建议调整为4或5，1~3为历史版本，不推荐。
+参数值：
+4：相同图像搜索，在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于版权场景。
+5：商品图像搜索，在自建图库中搜索相同或相似的商品图片，适用于电商场景。
  * @method integer getPicCount() 获取图库图片数量。
  * @method void setPicCount(integer $PicCount) 设置图库图片数量。
  * @method string getCreateTime() 获取图库创建时间。
@@ -71,9 +73,10 @@ class GroupInfo extends AbstractModel
     public $MaxQps;
 
     /**
-     * @var integer 图库类型： 
-1: 通用图库，以用户输入图提取特征。
-2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+     * @var integer 图库类型，对应不同产品功能，默认为1。建议调整为4或5，1~3为历史版本，不推荐。
+参数值：
+4：相同图像搜索，在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于版权场景。
+5：商品图像搜索，在自建图库中搜索相同或相似的商品图片，适用于电商场景。
      */
     public $GroupType;
 
@@ -98,9 +101,10 @@ class GroupInfo extends AbstractModel
      * @param string $Brief 图库简介。
      * @param integer $MaxCapacity 图库容量。
      * @param integer $MaxQps 该库的访问限频 。
-     * @param integer $GroupType 图库类型： 
-1: 通用图库，以用户输入图提取特征。
-2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+     * @param integer $GroupType 图库类型，对应不同产品功能，默认为1。建议调整为4或5，1~3为历史版本，不推荐。
+参数值：
+4：相同图像搜索，在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于版权场景。
+5：商品图像搜索，在自建图库中搜索相同或相似的商品图片，适用于电商场景。
      * @param integer $PicCount 图库图片数量。
      * @param string $CreateTime 图库创建时间。
      * @param string $UpdateTime 图库更新时间。

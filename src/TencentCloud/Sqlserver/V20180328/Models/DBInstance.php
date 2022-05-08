@@ -108,6 +108,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupModel(string $BackupModel) 设置备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceNote() 获取实例备份信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceNote(string $InstanceNote) 设置实例备份信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getBackupCycle() 获取备份周期
+ * @method void setBackupCycle(array $BackupCycle) 设置备份周期
+ * @method string getBackupCycleType() 获取备份周期类型，[daily、weekly、monthly]
+ * @method void setBackupCycleType(string $BackupCycleType) 设置备份周期类型，[daily、weekly、monthly]
+ * @method integer getBackupSaveDays() 获取数据(日志)备份保留时间
+ * @method void setBackupSaveDays(integer $BackupSaveDays) 设置数据(日志)备份保留时间
+ * @method string getInstanceType() 获取实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+ * @method void setInstanceType(string $InstanceType) 设置实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
  */
 class DBInstance extends AbstractModel
 {
@@ -308,6 +320,32 @@ class DBInstance extends AbstractModel
     public $BackupModel;
 
     /**
+     * @var string 实例备份信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceNote;
+
+    /**
+     * @var array 备份周期
+     */
+    public $BackupCycle;
+
+    /**
+     * @var string 备份周期类型，[daily、weekly、monthly]
+     */
+    public $BackupCycleType;
+
+    /**
+     * @var integer 数据(日志)备份保留时间
+     */
+    public $BackupSaveDays;
+
+    /**
+     * @var string 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
      * @param integer $ProjectId 实例所在项目ID
@@ -352,6 +390,12 @@ class DBInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupModel 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceNote 实例备份信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $BackupCycle 备份周期
+     * @param string $BackupCycleType 备份周期类型，[daily、weekly、monthly]
+     * @param integer $BackupSaveDays 数据(日志)备份保留时间
+     * @param string $InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
      */
     function __construct()
     {
@@ -521,6 +565,26 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("BackupModel",$param) and $param["BackupModel"] !== null) {
             $this->BackupModel = $param["BackupModel"];
+        }
+
+        if (array_key_exists("InstanceNote",$param) and $param["InstanceNote"] !== null) {
+            $this->InstanceNote = $param["InstanceNote"];
+        }
+
+        if (array_key_exists("BackupCycle",$param) and $param["BackupCycle"] !== null) {
+            $this->BackupCycle = $param["BackupCycle"];
+        }
+
+        if (array_key_exists("BackupCycleType",$param) and $param["BackupCycleType"] !== null) {
+            $this->BackupCycleType = $param["BackupCycleType"];
+        }
+
+        if (array_key_exists("BackupSaveDays",$param) and $param["BackupSaveDays"] !== null) {
+            $this->BackupSaveDays = $param["BackupSaveDays"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

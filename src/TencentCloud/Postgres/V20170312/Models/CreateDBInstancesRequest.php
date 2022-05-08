@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
  * @method integer getProjectId() 获取项目ID。
  * @method void setProjectId(integer $ProjectId) 设置项目ID。
- * @method string getDBVersion() 获取PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
- * @method void setDBVersion(string $DBVersion) 设置PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
+ * @method string getDBVersion() 获取PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
+ * @method void setDBVersion(string $DBVersion) 设置PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
  * @method string getInstanceChargeType() 获取实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
  * @method integer getAutoVoucher() 获取是否自动使用代金券。1（是），0（否），默认不使用。
@@ -56,10 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) 设置实例需要绑定的Tag信息，默认为空
  * @method array getSecurityGroupIds() 获取安全组id
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组id
- * @method string getDBMajorVersion() 获取PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
- * @method void setDBMajorVersion(string $DBMajorVersion) 设置PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
- * @method string getDBKernelVersion() 获取PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。
- * @method void setDBKernelVersion(string $DBKernelVersion) 设置PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。
+ * @method string getDBMajorVersion() 获取PostgreSQL主要版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
+ * @method void setDBMajorVersion(string $DBMajorVersion) 设置PostgreSQL主要版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
+ * @method string getDBKernelVersion() 获取PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
+ * @method void setDBKernelVersion(string $DBKernelVersion) 设置PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -94,7 +94,7 @@ class CreateDBInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
+     * @var string PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
      */
     public $DBVersion;
 
@@ -154,12 +154,12 @@ class CreateDBInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var string PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
+     * @var string PostgreSQL主要版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
      */
     public $DBMajorVersion;
 
     /**
-     * @var string PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。
+     * @var string PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
      */
     public $DBKernelVersion;
 
@@ -170,7 +170,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
      * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      * @param integer $ProjectId 项目ID。
-     * @param string $DBVersion PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
+     * @param string $DBVersion PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
      * @param string $InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
      * @param integer $AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
@@ -182,8 +182,8 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
      * @param array $TagList 实例需要绑定的Tag信息，默认为空
      * @param array $SecurityGroupIds 安全组id
-     * @param string $DBMajorVersion PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
-     * @param string $DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。
+     * @param string $DBMajorVersion PostgreSQL主要版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
+     * @param string $DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
      */
     function __construct()
     {

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupName(string $BackupName) 设置备份任务名称，可自定义
  * @method string getGroupId() 获取聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
  * @method void setGroupId(string $GroupId) 设置聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
+ * @method string getBackupFormat() 获取备份文件形式（pkg-打包备份文件，single-单库备份文件）
+ * @method void setBackupFormat(string $BackupFormat) 设置备份文件形式（pkg-打包备份文件，single-单库备份文件）
  */
 class Backup extends AbstractModel
 {
@@ -115,6 +117,11 @@ class Backup extends AbstractModel
     public $GroupId;
 
     /**
+     * @var string 备份文件形式（pkg-打包备份文件，single-单库备份文件）
+     */
+    public $BackupFormat;
+
+    /**
      * @param string $FileName 文件名，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件名
      * @param integer $Size 文件大小，单位 KB，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件大小
      * @param string $StartTime 备份开始时间
@@ -128,6 +135,7 @@ class Backup extends AbstractModel
      * @param integer $BackupWay 备份方式，0-定时备份；1-手动临时备份
      * @param string $BackupName 备份任务名称，可自定义
      * @param string $GroupId 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
+     * @param string $BackupFormat 备份文件形式（pkg-打包备份文件，single-单库备份文件）
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class Backup extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("BackupFormat",$param) and $param["BackupFormat"] !== null) {
+            $this->BackupFormat = $param["BackupFormat"];
         }
     }
 }

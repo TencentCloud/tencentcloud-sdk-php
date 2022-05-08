@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) 设置按照备份的库名称筛选，不填则不筛选此项
  * @method integer getGroup() 获取是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
  * @method void setGroup(integer $Group) 设置是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
+ * @method integer getType() 获取备份类型，1-数据备份，2-日志备份，默认值为1
+ * @method void setType(integer $Type) 设置备份类型，1-数据备份，2-日志备份，默认值为1
+ * @method string getBackupFormat() 获取按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
+ * @method void setBackupFormat(string $BackupFormat) 设置按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
  */
 class DescribeBackupsRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class DescribeBackupsRequest extends AbstractModel
     public $Group;
 
     /**
+     * @var integer 备份类型，1-数据备份，2-日志备份，默认值为1
+     */
+    public $Type;
+
+    /**
+     * @var string 按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
+     */
+    public $BackupFormat;
+
+    /**
      * @param string $StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
      * @param string $InstanceId 实例ID，形如mssql-njj2mtpl
@@ -112,6 +126,8 @@ class DescribeBackupsRequest extends AbstractModel
      * @param integer $BackupId 按照备份ID筛选，不填则不筛选此项
      * @param string $DatabaseName 按照备份的库名称筛选，不填则不筛选此项
      * @param integer $Group 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
+     * @param integer $Type 备份类型，1-数据备份，2-日志备份，默认值为1
+     * @param string $BackupFormat 按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class DescribeBackupsRequest extends AbstractModel
 
         if (array_key_exists("Group",$param) and $param["Group"] !== null) {
             $this->Group = $param["Group"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("BackupFormat",$param) and $param["BackupFormat"] !== null) {
+            $this->BackupFormat = $param["BackupFormat"];
         }
     }
 }

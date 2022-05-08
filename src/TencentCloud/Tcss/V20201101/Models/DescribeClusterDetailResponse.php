@@ -52,6 +52,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefenderStatus(string $DefenderStatus) 设置防御容器状态
  * @method string getTaskCreateTime() 获取扫描任务创建时间
  * @method void setTaskCreateTime(string $TaskCreateTime) 设置扫描任务创建时间
+ * @method string getNetworkType() 获取网络类型.PublicNetwork为公网类型,VPCNetwork为VPC网络
+ * @method void setNetworkType(string $NetworkType) 设置网络类型.PublicNetwork为公网类型,VPCNetwork为VPC网络
+ * @method string getApiServerAddress() 获取API Server地址
+ * @method void setApiServerAddress(string $ApiServerAddress) 设置API Server地址
+ * @method integer getNodeCount() 获取节点数
+ * @method void setNodeCount(integer $NodeCount) 设置节点数
+ * @method integer getNamespaceCount() 获取命名空间数
+ * @method void setNamespaceCount(integer $NamespaceCount) 设置命名空间数
+ * @method integer getWorkloadCount() 获取工作负载数
+ * @method void setWorkloadCount(integer $WorkloadCount) 设置工作负载数
+ * @method integer getPodCount() 获取Pod数量
+ * @method void setPodCount(integer $PodCount) 设置Pod数量
+ * @method integer getServiceCount() 获取Service数量
+ * @method void setServiceCount(integer $ServiceCount) 设置Service数量
+ * @method integer getIngressCount() 获取Ingress数量
+ * @method void setIngressCount(integer $IngressCount) 设置Ingress数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -138,6 +154,46 @@ class DescribeClusterDetailResponse extends AbstractModel
     public $TaskCreateTime;
 
     /**
+     * @var string 网络类型.PublicNetwork为公网类型,VPCNetwork为VPC网络
+     */
+    public $NetworkType;
+
+    /**
+     * @var string API Server地址
+     */
+    public $ApiServerAddress;
+
+    /**
+     * @var integer 节点数
+     */
+    public $NodeCount;
+
+    /**
+     * @var integer 命名空间数
+     */
+    public $NamespaceCount;
+
+    /**
+     * @var integer 工作负载数
+     */
+    public $WorkloadCount;
+
+    /**
+     * @var integer Pod数量
+     */
+    public $PodCount;
+
+    /**
+     * @var integer Service数量
+     */
+    public $ServiceCount;
+
+    /**
+     * @var integer Ingress数量
+     */
+    public $IngressCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -159,6 +215,14 @@ class DescribeClusterDetailResponse extends AbstractModel
      * @param string $CheckStatus 检查任务的状态
      * @param string $DefenderStatus 防御容器状态
      * @param string $TaskCreateTime 扫描任务创建时间
+     * @param string $NetworkType 网络类型.PublicNetwork为公网类型,VPCNetwork为VPC网络
+     * @param string $ApiServerAddress API Server地址
+     * @param integer $NodeCount 节点数
+     * @param integer $NamespaceCount 命名空间数
+     * @param integer $WorkloadCount 工作负载数
+     * @param integer $PodCount Pod数量
+     * @param integer $ServiceCount Service数量
+     * @param integer $IngressCount Ingress数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -236,6 +300,38 @@ class DescribeClusterDetailResponse extends AbstractModel
 
         if (array_key_exists("TaskCreateTime",$param) and $param["TaskCreateTime"] !== null) {
             $this->TaskCreateTime = $param["TaskCreateTime"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("ApiServerAddress",$param) and $param["ApiServerAddress"] !== null) {
+            $this->ApiServerAddress = $param["ApiServerAddress"];
+        }
+
+        if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {
+            $this->NodeCount = $param["NodeCount"];
+        }
+
+        if (array_key_exists("NamespaceCount",$param) and $param["NamespaceCount"] !== null) {
+            $this->NamespaceCount = $param["NamespaceCount"];
+        }
+
+        if (array_key_exists("WorkloadCount",$param) and $param["WorkloadCount"] !== null) {
+            $this->WorkloadCount = $param["WorkloadCount"];
+        }
+
+        if (array_key_exists("PodCount",$param) and $param["PodCount"] !== null) {
+            $this->PodCount = $param["PodCount"];
+        }
+
+        if (array_key_exists("ServiceCount",$param) and $param["ServiceCount"] !== null) {
+            $this->ServiceCount = $param["ServiceCount"];
+        }
+
+        if (array_key_exists("IngressCount",$param) and $param["IngressCount"] !== null) {
+            $this->IngressCount = $param["IngressCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

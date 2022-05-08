@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSynonym(array $Synonym) 设置同义词词典COS地址
  * @method array getQQDict() 获取QQ分词词典COS地址
  * @method void setQQDict(array $QQDict) 设置QQ分词词典COS地址
- * @method integer getUpdateType() 获取0：安装；1：删除
- * @method void setUpdateType(integer $UpdateType) 设置0：安装；1：删除
- * @method boolean getForceRestart() 获取是否强制重启集群
- * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启集群
+ * @method integer getUpdateType() 获取0：安装；1：删除。默认值0
+ * @method void setUpdateType(integer $UpdateType) 设置0：安装；1：删除。默认值0
+ * @method boolean getForceRestart() 获取是否强制重启集群。默认值false
+ * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启集群。默认值false
  */
 class UpdateDictionariesRequest extends AbstractModel
 {
@@ -63,12 +63,12 @@ class UpdateDictionariesRequest extends AbstractModel
     public $QQDict;
 
     /**
-     * @var integer 0：安装；1：删除
+     * @var integer 0：安装；1：删除。默认值0
      */
     public $UpdateType;
 
     /**
-     * @var boolean 是否强制重启集群
+     * @var boolean 是否强制重启集群。默认值false
      */
     public $ForceRestart;
 
@@ -78,8 +78,8 @@ class UpdateDictionariesRequest extends AbstractModel
      * @param array $IkStopwords IK分词停用词词典COS地址
      * @param array $Synonym 同义词词典COS地址
      * @param array $QQDict QQ分词词典COS地址
-     * @param integer $UpdateType 0：安装；1：删除
-     * @param boolean $ForceRestart 是否强制重启集群
+     * @param integer $UpdateType 0：安装；1：删除。默认值0
+     * @param boolean $ForceRestart 是否强制重启集群。默认值false
      */
     function __construct()
     {

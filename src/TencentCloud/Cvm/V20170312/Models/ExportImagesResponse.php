@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateClusterAsGroup返回参数结构体
+ * ExportImages返回参数结构体
  *
- * @method string getLaunchConfigurationId() 获取启动配置ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID
- * @method string getAutoScalingGroupId() 获取伸缩组ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
+ * @method integer getTaskId() 获取导出镜像任务ID
+ * @method void setTaskId(integer $TaskId) 设置导出镜像任务ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateClusterAsGroupResponse extends AbstractModel
+class ExportImagesResponse extends AbstractModel
 {
     /**
-     * @var string 启动配置ID
+     * @var integer 导出镜像任务ID
      */
-    public $LaunchConfigurationId;
-
-    /**
-     * @var string 伸缩组ID
-     */
-    public $AutoScalingGroupId;
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class CreateClusterAsGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $LaunchConfigurationId 启动配置ID
-     * @param string $AutoScalingGroupId 伸缩组ID
+     * @param integer $TaskId 导出镜像任务ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,8 @@ class CreateClusterAsGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LaunchConfigurationId",$param) and $param["LaunchConfigurationId"] !== null) {
-            $this->LaunchConfigurationId = $param["LaunchConfigurationId"];
-        }
-
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

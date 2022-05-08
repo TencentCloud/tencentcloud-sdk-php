@@ -128,6 +128,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribePkgsResponse DescribePkgs(Models\DescribePkgsRequest $req) 无
  * @method Models\DescribePluginInstancesResponse DescribePluginInstances(Models\DescribePluginInstancesRequest $req) 分页查询网关分组/API绑定（或未绑定）的插件列表
  * @method Models\DescribePodInstancesResponse DescribePodInstances(Models\DescribePodInstancesRequest $req) 获取部署组实例列表
+ * @method Models\DescribeProgramsResponse DescribePrograms(Models\DescribeProgramsRequest $req) 查询数据集列表
  * @method Models\DescribePublicConfigResponse DescribePublicConfig(Models\DescribePublicConfigRequest $req) 查询公共配置（单条）
  * @method Models\DescribePublicConfigReleaseLogsResponse DescribePublicConfigReleaseLogs(Models\DescribePublicConfigReleaseLogsRequest $req) 查询公共配置发布历史
  * @method Models\DescribePublicConfigReleasesResponse DescribePublicConfigReleases(Models\DescribePublicConfigReleasesRequest $req) 查询公共配置发布信息

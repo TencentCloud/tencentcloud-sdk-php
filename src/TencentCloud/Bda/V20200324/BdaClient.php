@@ -38,7 +38,7 @@ use TencentCloud\Bda\V20200324\Models as Models;
 - 无论您在单个Trace中提供了多少张人体图片，我们都将生成一个对应的动作轨迹（Trace）信息。即，Trace仅和本次输入的图片序列相关，和图片的个数无关；
 - 输入的图片组中，若有部分图片输入不合法（如图片大小过大、分辨率过大、无法解码等），我们将舍弃这部分图片，确保合法图片被正确搜索。即，我们将尽可能保证请求成功，去除不合法的输入；
 - 构成人体动作轨迹单张图片大小不得超过2M，分辨率不得超过1920*1080。
- * @method Models\CreateSegmentationTaskResponse CreateSegmentationTask(Models\CreateSegmentationTaskRequest $req) 本接口为离线人像分割处理接口组中的提交任务接口，可以对提交的资源进行处理视频流/图片流识别视频作品中的人像区域，进行一键抠像、背景替换、人像虚化等后期处理。
+ * @method Models\CreateSegmentationTaskResponse CreateSegmentationTask(Models\CreateSegmentationTaskRequest $req) 本接口为人像分割在线处理接口组中的提交任务接口，可以对提交的资源进行处理视频流/图片流识别视频作品中的人像区域，进行一键抠像、背景替换、人像虚化等后期处理。
  * @method Models\CreateTraceResponse CreateTrace(Models\CreateTraceRequest $req) 将一个人体动作轨迹添加到一个人员中。一个人员最多允许包含 5 个人体动作轨迹。同一人的人体动作轨迹越多，搜索识别效果越好。
 
 >请注意：

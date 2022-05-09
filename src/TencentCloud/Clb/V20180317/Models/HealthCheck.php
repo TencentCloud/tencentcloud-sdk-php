@@ -85,6 +85,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceIpType(integer $SourceIpType) 设置自定义探测相关参数。健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExtendedCode() 获取GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtendedCode(string $ExtendedCode) 设置GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HealthCheck extends AbstractModel
 {
@@ -185,6 +189,12 @@ class HealthCheck extends AbstractModel
     public $SourceIpType;
 
     /**
+     * @var string GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtendedCode;
+
+    /**
      * @param integer $HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
      * @param integer $TimeOut 健康检查的响应超时时间（仅适用于四层监听器），可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -216,6 +226,8 @@ class HealthCheck extends AbstractModel
      * @param string $HttpVersion 自定义探测相关参数。健康检查协议CheckType的值取HTTP时，必传此字段，代表后端服务的HTTP版本：HTTP/1.0、HTTP/1.1；（仅适用于TCP监听器）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SourceIpType 自定义探测相关参数。健康检查源IP类型：0（使用LB的VIP作为源IP），1（使用100.64网段IP作为源IP），默认值：0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExtendedCode GRPC健康检查状态码（仅适用于后端转发协议为GRPC的规则）。默认值为 12，可输入值为数值、多个数值、或者范围，例如 20 或 20,25 或 0-99
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -293,6 +305,10 @@ class HealthCheck extends AbstractModel
 
         if (array_key_exists("SourceIpType",$param) and $param["SourceIpType"] !== null) {
             $this->SourceIpType = $param["SourceIpType"];
+        }
+
+        if (array_key_exists("ExtendedCode",$param) and $param["ExtendedCode"] !== null) {
+            $this->ExtendedCode = $param["ExtendedCode"];
         }
     }
 }

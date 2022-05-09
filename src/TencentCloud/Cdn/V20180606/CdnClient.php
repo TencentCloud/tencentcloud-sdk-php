@@ -86,7 +86,6 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) DescribePurgeTasks 用于查询提交的 URL 刷新、目录刷新记录及执行进度，通过 PurgePathCache 与 PurgeUrlsCache 接口提交的任务均可通过此接口进行查询。
  * @method Models\DescribePushQuotaResponse DescribePushQuota(Models\DescribePushQuotaRequest $req) DescribePushQuota  用于查询预热配额和每日可用量。
  * @method Models\DescribePushTasksResponse DescribePushTasks(Models\DescribePushTasksRequest $req) DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
-接口灰度中，暂未全量开放，敬请期待。
  * @method Models\DescribeReportDataResponse DescribeReportData(Models\DescribeReportDataRequest $req) DescribeReportData 用于查询域名/项目维度的日/周/月报表数据。
  * @method Models\DescribeScdnBotDataResponse DescribeScdnBotData(Models\DescribeScdnBotDataRequest $req) 获取BOT统计数据列表
  * @method Models\DescribeScdnBotRecordsResponse DescribeScdnBotRecords(Models\DescribeScdnBotRecordsRequest $req) 查询BOT会话记录列表

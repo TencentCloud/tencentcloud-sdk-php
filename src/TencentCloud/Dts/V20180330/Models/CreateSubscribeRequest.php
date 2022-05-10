@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDuration(integer $Duration) 设置购买时长。PayType为0时必填。单位为月，最大支持120
  * @method integer getCount() 获取购买数量,默认为1，最大为10
  * @method void setCount(integer $Count) 设置购买数量,默认为1，最大为10
- * @method integer getAutoRenew() 获取是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
- * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
+ * @method integer getAutoRenew() 获取是否自动续费，0表示不自动续费，1表示自动续费，默认为0。小时计费实例设置该标识无效。
+ * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费，0表示不自动续费，1表示自动续费，默认为0。小时计费实例设置该标识无效。
  * @method array getTags() 获取实例资源标签
  * @method void setTags(array $Tags) 设置实例资源标签
  * @method string getName() 获取用户自定义实例名
@@ -58,7 +58,7 @@ class CreateSubscribeRequest extends AbstractModel
     public $Count;
 
     /**
-     * @var integer 是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
+     * @var integer 是否自动续费，0表示不自动续费，1表示自动续费，默认为0。小时计费实例设置该标识无效。
      */
     public $AutoRenew;
 
@@ -77,7 +77,7 @@ class CreateSubscribeRequest extends AbstractModel
      * @param integer $PayType 实例付费类型，1小时计费，0包年包月
      * @param integer $Duration 购买时长。PayType为0时必填。单位为月，最大支持120
      * @param integer $Count 购买数量,默认为1，最大为10
-     * @param integer $AutoRenew 是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
+     * @param integer $AutoRenew 是否自动续费，0表示不自动续费，1表示自动续费，默认为0。小时计费实例设置该标识无效。
      * @param array $Tags 实例资源标签
      * @param string $Name 用户自定义实例名
      */

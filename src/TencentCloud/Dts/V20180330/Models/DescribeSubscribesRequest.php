@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(array $Status) 设置数据订阅实例的状态，creating - 创建中，normal - 正常运行，isolating - 隔离中，isolated - 已隔离，offlining - 下线中
  * @method array getSubsStatus() 获取数据订阅实例的配置状态，unconfigure - 未配置， configuring - 配置中，configured - 已配置
  * @method void setSubsStatus(array $SubsStatus) 设置数据订阅实例的配置状态，unconfigure - 未配置， configuring - 配置中，configured - 已配置
- * @method integer getOffset() 获取返回记录的起始偏移量
- * @method void setOffset(integer $Offset) 设置返回记录的起始偏移量
- * @method integer getLimit() 获取单次返回的记录数量
- * @method void setLimit(integer $Limit) 设置单次返回的记录数量
+ * @method integer getOffset() 获取返回记录的起始偏移量，默认为0。请输入非负整数
+ * @method void setOffset(integer $Offset) 设置返回记录的起始偏移量，默认为0。请输入非负整数
+ * @method integer getLimit() 获取单次返回的记录数量，默认20。请输入1到100的整数
+ * @method void setLimit(integer $Limit) 设置单次返回的记录数量，默认20。请输入1到100的整数
  * @method string getOrderDirection() 获取排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
  * @method void setOrderDirection(string $OrderDirection) 设置排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
  * @method array getTagFilters() 获取标签过滤条件
@@ -90,12 +90,12 @@ class DescribeSubscribesRequest extends AbstractModel
     public $SubsStatus;
 
     /**
-     * @var integer 返回记录的起始偏移量
+     * @var integer 返回记录的起始偏移量，默认为0。请输入非负整数
      */
     public $Offset;
 
     /**
-     * @var integer 单次返回的记录数量
+     * @var integer 单次返回的记录数量，默认20。请输入1到100的整数
      */
     public $Limit;
 
@@ -123,8 +123,8 @@ class DescribeSubscribesRequest extends AbstractModel
      * @param string $Product 订阅的数据库产品，如mysql
      * @param array $Status 数据订阅实例的状态，creating - 创建中，normal - 正常运行，isolating - 隔离中，isolated - 已隔离，offlining - 下线中
      * @param array $SubsStatus 数据订阅实例的配置状态，unconfigure - 未配置， configuring - 配置中，configured - 已配置
-     * @param integer $Offset 返回记录的起始偏移量
-     * @param integer $Limit 单次返回的记录数量
+     * @param integer $Offset 返回记录的起始偏移量，默认为0。请输入非负整数
+     * @param integer $Limit 单次返回的记录数量，默认20。请输入1到100的整数
      * @param string $OrderDirection 排序方向，可选的值为"DESC"和"ASC"，默认为"DESC"，按创建时间逆序排序
      * @param array $TagFilters 标签过滤条件
      * @param string $SubscribeVersion 订阅实例版本;txdts-旧版数据订阅，kafka-kafka版本数据订阅

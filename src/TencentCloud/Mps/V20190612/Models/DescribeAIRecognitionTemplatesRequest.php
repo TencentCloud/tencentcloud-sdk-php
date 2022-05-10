@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：50。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：50。
+ * @method string getType() 获取模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+ * @method void setType(string $Type) 设置模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
  */
 class DescribeAIRecognitionTemplatesRequest extends AbstractModel
 {
@@ -45,9 +51,19 @@ class DescribeAIRecognitionTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+     */
+    public $Type;
+
+    /**
      * @param array $Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：10。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：50。
+     * @param string $Type 模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
      */
     function __construct()
     {
@@ -72,6 +88,10 @@ class DescribeAIRecognitionTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method string getType() 获取模板类型，取值范围：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(string $Type) 设置模板类型，取值范围：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContentReviewTemplateItem extends AbstractModel
 {
@@ -115,6 +123,14 @@ class ContentReviewTemplateItem extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 模板类型，取值范围：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
      * @param integer $Definition 内容审核模板唯一标识。
      * @param string $Name 内容审核模板名称，长度限制：64 个字符。
      * @param string $Comment 内容审核模板描述信息，长度限制：256 个字符。
@@ -132,6 +148,10 @@ class ContentReviewTemplateItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param string $Type 模板类型，取值范围：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -189,6 +209,10 @@ class ContentReviewTemplateItem extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

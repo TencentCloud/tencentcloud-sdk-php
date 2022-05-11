@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)
  * @method boolean getIsExtranet() 获取是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
  * @method void setIsExtranet(boolean $IsExtranet) 设置是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
+ * @method string getDomain() 获取设置域名
+ * @method void setDomain(string $Domain) 设置设置域名
+ * @method string getSecurityGroup() 获取使用的安全组，只有外网访问需要传递
+ * @method void setSecurityGroup(string $SecurityGroup) 设置使用的安全组，只有外网访问需要传递
+ * @method string getExtensiveParameters() 获取创建lb参数，只有外网访问需要设置
+ * @method void setExtensiveParameters(string $ExtensiveParameters) 设置创建lb参数，只有外网访问需要设置
  */
 class CreateClusterEndpointRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class CreateClusterEndpointRequest extends AbstractModel
     public $IsExtranet;
 
     /**
+     * @var string 设置域名
+     */
+    public $Domain;
+
+    /**
+     * @var string 使用的安全组，只有外网访问需要传递
+     */
+    public $SecurityGroup;
+
+    /**
+     * @var string 创建lb参数，只有外网访问需要设置
+     */
+    public $ExtensiveParameters;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $SubnetId 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)
      * @param boolean $IsExtranet 是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
+     * @param string $Domain 设置域名
+     * @param string $SecurityGroup 使用的安全组，只有外网访问需要传递
+     * @param string $ExtensiveParameters 创建lb参数，只有外网访问需要设置
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class CreateClusterEndpointRequest extends AbstractModel
 
         if (array_key_exists("IsExtranet",$param) and $param["IsExtranet"] !== null) {
             $this->IsExtranet = $param["IsExtranet"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("ExtensiveParameters",$param) and $param["ExtensiveParameters"] !== null) {
+            $this->ExtensiveParameters = $param["ExtensiveParameters"];
         }
     }
 }

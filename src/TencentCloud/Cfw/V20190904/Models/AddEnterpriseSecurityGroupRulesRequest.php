@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
  * @method string getClientToken() 获取保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
  * @method void setClientToken(string $ClientToken) 设置保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+ * @method integer getIsDelay() 获取是否延迟下发，1则延迟下发，否则立即下发
+ * @method void setIsDelay(integer $IsDelay) 设置是否延迟下发，1则延迟下发，否则立即下发
  */
 class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
     public $ClientToken;
 
     /**
+     * @var integer 是否延迟下发，1则延迟下发，否则立即下发
+     */
+    public $IsDelay;
+
+    /**
      * @param array $Data 创建规则数据
      * @param integer $Type 添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后
      * @param string $ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     * @param integer $IsDelay 是否延迟下发，1则延迟下发，否则立即下发
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("IsDelay",$param) and $param["IsDelay"] !== null) {
+            $this->IsDelay = $param["IsDelay"];
         }
     }
 }

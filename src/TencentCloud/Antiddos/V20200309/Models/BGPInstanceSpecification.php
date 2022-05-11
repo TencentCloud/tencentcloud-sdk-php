@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelEditionFlag(integer $ChannelEditionFlag) 设置渠道版标记，0表示普通高防包，1表示渠道版高防包
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnterpriseFlag() 获取高防包企业版标记，0表示普通高防包；1表示企业版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnterpriseFlag(integer $EnterpriseFlag) 设置高防包企业版标记，0表示普通高防包；1表示企业版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getElasticLimit() 获取高防包企业版弹性阈值，0表示未开启；大于0为弹性防护阈值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElasticLimit(integer $ElasticLimit) 设置高防包企业版弹性阈值，0表示未开启；大于0为弹性防护阈值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPInstanceSpecification extends AbstractModel
 {
@@ -101,6 +109,18 @@ class BGPInstanceSpecification extends AbstractModel
     public $ChannelEditionFlag;
 
     /**
+     * @var integer 高防包企业版标记，0表示普通高防包；1表示企业版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnterpriseFlag;
+
+    /**
+     * @var integer 高防包企业版弹性阈值，0表示未开启；大于0为弹性防护阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElasticLimit;
+
+    /**
      * @param integer $ProtectBandwidth 保底防护峰值，单位Gbps
      * @param integer $ProtectCountLimit 防护次数，单位次
      * @param integer $ProtectIPNumberLimit 防护IP数，单位个
@@ -115,6 +135,10 @@ class BGPInstanceSpecification extends AbstractModel
      * @param integer $BattleEditionFlag 战斗服版本标记，0表示普通高防包，1表示战斗服高防包
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelEditionFlag 渠道版标记，0表示普通高防包，1表示渠道版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnterpriseFlag 高防包企业版标记，0表示普通高防包；1表示企业版高防包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ElasticLimit 高防包企业版弹性阈值，0表示未开启；大于0为弹性防护阈值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -160,6 +184,14 @@ class BGPInstanceSpecification extends AbstractModel
 
         if (array_key_exists("ChannelEditionFlag",$param) and $param["ChannelEditionFlag"] !== null) {
             $this->ChannelEditionFlag = $param["ChannelEditionFlag"];
+        }
+
+        if (array_key_exists("EnterpriseFlag",$param) and $param["EnterpriseFlag"] !== null) {
+            $this->EnterpriseFlag = $param["EnterpriseFlag"];
+        }
+
+        if (array_key_exists("ElasticLimit",$param) and $param["ElasticLimit"] !== null) {
+            $this->ElasticLimit = $param["ElasticLimit"];
         }
     }
 }

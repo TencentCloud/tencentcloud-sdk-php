@@ -44,6 +44,8 @@ table-id - String - （过滤条件）table id形如：12342。
  * @method void setAsc(boolean $Asc) 设置排序字段，false：降序（默认）；true
  * @method string getTableType() 获取table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
  * @method void setTableType(string $TableType) 设置table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
+ * @method string getTableFormat() 获取筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
+ * @method void setTableFormat(string $TableFormat) 设置筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
  */
 class DescribeTablesRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ table-id - String - （过滤条件）table id形如：12342。
     public $TableType;
 
     /**
+     * @var string 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
+     */
+    public $TableFormat;
+
+    /**
      * @param string $DatabaseName 列出该数据库下所属数据表。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 数据偏移量，从0开始，默认为0。
@@ -112,6 +119,7 @@ table-id - String - （过滤条件）table id形如：12342。
      * @param string $Sort 排序字段，支持：ModifiedTime（默认）；CreateTime
      * @param boolean $Asc 排序字段，false：降序（默认）；true
      * @param string $TableType table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
+     * @param string $TableFormat 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ table-id - String - （过滤条件）table id形如：12342。
 
         if (array_key_exists("TableType",$param) and $param["TableType"] !== null) {
             $this->TableType = $param["TableType"];
+        }
+
+        if (array_key_exists("TableFormat",$param) and $param["TableFormat"] !== null) {
+            $this->TableFormat = $param["TableFormat"];
         }
     }
 }

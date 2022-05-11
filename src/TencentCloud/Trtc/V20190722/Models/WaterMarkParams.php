@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationX(integer $LocationX) 设置水印在输出时的X偏移。单位为像素值。
  * @method integer getLocationY() 获取水印在输出时的Y偏移。单位为像素值。
  * @method void setLocationY(integer $LocationY) 设置水印在输出时的Y偏移。单位为像素值。
- * @method string getWaterMarkUrl() 获取混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
- * @method void setWaterMarkUrl(string $WaterMarkUrl) 设置混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+ * @method string getWaterMarkUrl() 获取混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过2MB。
+ * @method void setWaterMarkUrl(string $WaterMarkUrl) 设置混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过2MB。
  */
 class WaterMarkParams extends AbstractModel
 {
@@ -61,7 +61,7 @@ class WaterMarkParams extends AbstractModel
     public $LocationY;
 
     /**
-     * @var string 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+     * @var string 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过2MB。
      */
     public $WaterMarkUrl;
 
@@ -71,7 +71,7 @@ class WaterMarkParams extends AbstractModel
      * @param integer $WaterMarkHeight 混流-水印高。单位为像素值。
      * @param integer $LocationX 水印在输出时的X偏移。单位为像素值。
      * @param integer $LocationY 水印在输出时的Y偏移。单位为像素值。
-     * @param string $WaterMarkUrl 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+     * @param string $WaterMarkUrl 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过2MB。
      */
     function __construct()
     {

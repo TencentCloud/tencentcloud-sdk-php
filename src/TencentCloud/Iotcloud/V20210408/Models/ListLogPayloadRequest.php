@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListLogPayload请求参数结构体
  *
- * @method integer getMinTime() 获取日志开始时间
- * @method void setMinTime(integer $MinTime) 设置日志开始时间
- * @method integer getMaxTime() 获取日志结束时间
- * @method void setMaxTime(integer $MaxTime) 设置日志结束时间
+ * @method integer getMinTime() 获取日志开始时间，毫秒级时间戳
+ * @method void setMinTime(integer $MinTime) 设置日志开始时间，毫秒级时间戳
+ * @method integer getMaxTime() 获取日志结束时间，毫秒级时间戳
+ * @method void setMaxTime(integer $MaxTime) 设置日志结束时间，毫秒级时间戳
  * @method string getKeywords() 获取查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:value word。键值或文本可以包含多个，以空格隔开。其中可以索引的key比如：RequestID、ProductID、DeviceName等。
 一个典型的查询示例：ProductID:ABCDE12345 DeviceName:test publish
  * @method void setKeywords(string $Keywords) 设置查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:value word。键值或文本可以包含多个，以空格隔开。其中可以索引的key比如：RequestID、ProductID、DeviceName等。
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class ListLogPayloadRequest extends AbstractModel
 {
     /**
-     * @var integer 日志开始时间
+     * @var integer 日志开始时间，毫秒级时间戳
      */
     public $MinTime;
 
     /**
-     * @var integer 日志结束时间
+     * @var integer 日志结束时间，毫秒级时间戳
      */
     public $MaxTime;
 
@@ -62,8 +62,8 @@ class ListLogPayloadRequest extends AbstractModel
     public $MaxNum;
 
     /**
-     * @param integer $MinTime 日志开始时间
-     * @param integer $MaxTime 日志结束时间
+     * @param integer $MinTime 日志开始时间，毫秒级时间戳
+     * @param integer $MaxTime 日志结束时间，毫秒级时间戳
      * @param string $Keywords 查询关键字，可以同时支持键值查询和文本查询，例如，查询某key的值为value，并且包含某word的日志，该参数为：key:value word。键值或文本可以包含多个，以空格隔开。其中可以索引的key比如：RequestID、ProductID、DeviceName等。
 一个典型的查询示例：ProductID:ABCDE12345 DeviceName:test publish
      * @param string $Context 日志检索上下文

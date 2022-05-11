@@ -94,6 +94,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) 获取DDoS防护的水印防护配置列表
  * @method Models\DescribeOverviewAttackTrendResponse DescribeOverviewAttackTrend(Models\DescribeOverviewAttackTrendRequest $req) 拉取防护概览攻击趋势
  * @method Models\DescribeOverviewCCTrendResponse DescribeOverviewCCTrend(Models\DescribeOverviewCCTrendRequest $req) 获取防护概览总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
+ * @method Models\DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(Models\DescribeOverviewDDoSEventListRequest $req) 获取防护概览的ddos攻击事件
  * @method Models\DescribeOverviewDDoSTrendResponse DescribeOverviewDDoSTrend(Models\DescribeOverviewDDoSTrendRequest $req) 获取防护概览DDoS攻击流量带宽和攻击包速率数据
  * @method Models\DescribeOverviewIndexResponse DescribeOverviewIndex(Models\DescribeOverviewIndexRequest $req) 拉取防护概览指标
  * @method Models\DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(Models\DisassociateDDoSEipAddressRequest $req) 本接口 (DisassociateDDoSEipAddress) 用于解绑高防弹性公网IP。

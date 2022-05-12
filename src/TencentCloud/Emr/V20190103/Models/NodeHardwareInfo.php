@@ -182,6 +182,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportModifyPayMode(integer $SupportModifyPayMode) 设置是否支持变更计费类型 1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRootStorageType() 获取系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRootStorageType(integer $RootStorageType) 设置系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SubnetInfo getSubnetInfo() 获取子网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubnetInfo(SubnetInfo $SubnetInfo) 设置子网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClients() 获取客户端
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClients(string $Clients) 设置客户端
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -427,6 +443,30 @@ class NodeHardwareInfo extends AbstractModel
     public $SupportModifyPayMode;
 
     /**
+     * @var integer 系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RootStorageType;
+
+    /**
+     * @var string 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
+     * @var SubnetInfo 子网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubnetInfo;
+
+    /**
+     * @var string 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Clients;
+
+    /**
      * @param integer $AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNo 序列号
@@ -507,6 +547,14 @@ class NodeHardwareInfo extends AbstractModel
      * @param string $DynamicPodSpec 浮动规格值json字符串
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportModifyPayMode 是否支持变更计费类型 1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RootStorageType 系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetInfo $SubnetInfo 子网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Clients 客户端
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -691,6 +739,23 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("SupportModifyPayMode",$param) and $param["SupportModifyPayMode"] !== null) {
             $this->SupportModifyPayMode = $param["SupportModifyPayMode"];
+        }
+
+        if (array_key_exists("RootStorageType",$param) and $param["RootStorageType"] !== null) {
+            $this->RootStorageType = $param["RootStorageType"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("SubnetInfo",$param) and $param["SubnetInfo"] !== null) {
+            $this->SubnetInfo = new SubnetInfo();
+            $this->SubnetInfo->deserialize($param["SubnetInfo"]);
+        }
+
+        if (array_key_exists("Clients",$param) and $param["Clients"] !== null) {
+            $this->Clients = $param["Clients"];
         }
     }
 }

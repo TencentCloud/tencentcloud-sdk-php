@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置图库ID，不可重复，仅支持字母、数字和下划线。
  * @method string getGroupName() 获取图库名称描述。
  * @method void setGroupName(string $GroupName) 设置图库名称描述。
- * @method integer getMaxCapacity() 获取该库的容量限制。
- * @method void setMaxCapacity(integer $MaxCapacity) 设置该库的容量限制。
+ * @method integer getMaxCapacity() 获取图库可容纳的最大图片数量。
+ * @method void setMaxCapacity(integer $MaxCapacity) 设置图库可容纳的最大图片数量。
  * @method string getBrief() 获取简介。
  * @method void setBrief(string $Brief) 设置简介。
- * @method integer getMaxQps() 获取该库的访问限频 ，默认10。
- * @method void setMaxQps(integer $MaxQps) 设置该库的访问限频 ，默认10。
+ * @method integer getMaxQps() 获取访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
+ * @method void setMaxQps(integer $MaxQps) 设置访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
  * @method integer getGroupType() 获取图库类型，对应不同服务类型，默认为1。建议手动调整为4～6，1～3为历史版本，不推荐。
 参数值：
 4：在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于图片版权保护、原图查询等场景。
@@ -54,7 +54,7 @@ class CreateGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var integer 该库的容量限制。
+     * @var integer 图库可容纳的最大图片数量。
      */
     public $MaxCapacity;
 
@@ -64,7 +64,7 @@ class CreateGroupRequest extends AbstractModel
     public $Brief;
 
     /**
-     * @var integer 该库的访问限频 ，默认10。
+     * @var integer 访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
      */
     public $MaxQps;
 
@@ -80,9 +80,9 @@ class CreateGroupRequest extends AbstractModel
     /**
      * @param string $GroupId 图库ID，不可重复，仅支持字母、数字和下划线。
      * @param string $GroupName 图库名称描述。
-     * @param integer $MaxCapacity 该库的容量限制。
+     * @param integer $MaxCapacity 图库可容纳的最大图片数量。
      * @param string $Brief 简介。
-     * @param integer $MaxQps 该库的访问限频 ，默认10。
+     * @param integer $MaxQps 访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
      * @param integer $GroupType 图库类型，对应不同服务类型，默认为1。建议手动调整为4～6，1～3为历史版本，不推荐。
 参数值：
 4：在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于图片版权保护、原图查询等场景。

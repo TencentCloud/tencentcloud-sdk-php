@@ -222,6 +222,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterExternalServiceInfo(array $ClusterExternalServiceInfo) 设置集群依赖关系
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUniqVpcId() 获取集群vpcid 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置集群vpcid 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUniqSubnetId() 获取子网id 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网id 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTopologyInfoList() 获取节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTopologyInfoList(array $TopologyInfoList) 设置节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsMultiZoneCluster() 获取是否是跨AZ集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) 设置是否是跨AZ集群
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -475,6 +491,30 @@ class ClusterInstancesInfo extends AbstractModel
     public $ClusterExternalServiceInfo;
 
     /**
+     * @var string 集群vpcid 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string 子网id 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UniqSubnetId;
+
+    /**
+     * @var array 节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TopologyInfoList;
+
+    /**
+     * @var boolean 是否是跨AZ集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsMultiZoneCluster;
+
+    /**
      * @param integer $Id ID号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
@@ -575,6 +615,14 @@ class ClusterInstancesInfo extends AbstractModel
      * @param string $SubnetName subnet name
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterExternalServiceInfo 集群依赖关系
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UniqVpcId 集群vpcid 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UniqSubnetId 子网id 字符串类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TopologyInfoList 节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsMultiZoneCluster 是否是跨AZ集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -747,6 +795,27 @@ class ClusterInstancesInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ClusterExternalServiceInfo, $obj);
             }
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("TopologyInfoList",$param) and $param["TopologyInfoList"] !== null) {
+            $this->TopologyInfoList = [];
+            foreach ($param["TopologyInfoList"] as $key => $value){
+                $obj = new TopologyInfo();
+                $obj->deserialize($value);
+                array_push($this->TopologyInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("IsMultiZoneCluster",$param) and $param["IsMultiZoneCluster"] !== null) {
+            $this->IsMultiZoneCluster = $param["IsMultiZoneCluster"];
         }
     }
 }

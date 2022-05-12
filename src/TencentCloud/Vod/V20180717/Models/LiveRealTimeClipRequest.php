@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LiveRealTimeClip请求参数结构体
  *
- * @method string getStreamId() 获取推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
- * @method void setStreamId(string $StreamId) 设置推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+ * @method string getStreamId() 获取推流直播码。
+ * @method void setStreamId(string $StreamId) 设置推流直播码。
  * @method string getStartTime() 获取流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setStartTime(string $StartTime) 设置流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getEndTime() 获取流剪辑的结束时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class LiveRealTimeClipRequest extends AbstractModel
 {
     /**
-     * @var string 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * @var string 推流直播码。
      */
     public $StreamId;
 
@@ -94,7 +94,7 @@ class LiveRealTimeClipRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param string $StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * @param string $StreamId 推流直播码。
      * @param string $StartTime 流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $EndTime 流剪辑的结束时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param integer $IsPersistence 是否固化。0 不固化，1 固化。默认不固化。

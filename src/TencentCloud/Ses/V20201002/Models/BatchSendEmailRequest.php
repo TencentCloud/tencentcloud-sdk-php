@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云
  * @method Template getTemplate() 获取使用模板发送时，填写的模板相关参数
  * @method void setTemplate(Template $Template) 设置使用模板发送时，填写的模板相关参数
- * @method Simple getSimple() 获取使用API直接发送内容时，填写的邮件内容（暂未支持）
- * @method void setSimple(Simple $Simple) 设置使用API直接发送内容时，填写的邮件内容（暂未支持）
+ * @method Simple getSimple() 获取已废弃
+ * @method void setSimple(Simple $Simple) 设置已废弃
  * @method array getAttachments() 获取需要发送附件时，填写附件相关参数（暂未支持）
  * @method void setAttachments(array $Attachments) 设置需要发送附件时，填写附件相关参数（暂未支持）
  * @method CycleEmailParam getCycleParam() 获取周期发送任务的必要参数
@@ -84,7 +84,7 @@ class BatchSendEmailRequest extends AbstractModel
     public $Template;
 
     /**
-     * @var Simple 使用API直接发送内容时，填写的邮件内容（暂未支持）
+     * @var Simple 已废弃
      */
     public $Simple;
 
@@ -122,7 +122,7 @@ class BatchSendEmailRequest extends AbstractModel
      * @param integer $TaskType 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云
      * @param Template $Template 使用模板发送时，填写的模板相关参数
-     * @param Simple $Simple 使用API直接发送内容时，填写的邮件内容（暂未支持）
+     * @param Simple $Simple 已废弃
      * @param array $Attachments 需要发送附件时，填写附件相关参数（暂未支持）
      * @param CycleEmailParam $CycleParam 周期发送任务的必要参数
      * @param TimedEmailParam $TimedParam 定时发送任务的必要参数

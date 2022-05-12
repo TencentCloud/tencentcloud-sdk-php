@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFileIdSet() 获取删除文件 ID 列表。
  * @method void setFileIdSet(array $FileIdSet) 设置删除文件 ID 列表。
+ * @method array getFileDeleteResultInfo() 获取删除文件结果信息列表。
+ * @method void setFileDeleteResultInfo(array $FileDeleteResultInfo) 设置删除文件结果信息列表。
  */
 class FileDeleteTask extends AbstractModel
 {
@@ -31,7 +33,13 @@ class FileDeleteTask extends AbstractModel
     public $FileIdSet;
 
     /**
+     * @var array 删除文件结果信息列表。
+     */
+    public $FileDeleteResultInfo;
+
+    /**
      * @param array $FileIdSet 删除文件 ID 列表。
+     * @param array $FileDeleteResultInfo 删除文件结果信息列表。
      */
     function __construct()
     {
@@ -48,6 +56,15 @@ class FileDeleteTask extends AbstractModel
         }
         if (array_key_exists("FileIdSet",$param) and $param["FileIdSet"] !== null) {
             $this->FileIdSet = $param["FileIdSet"];
+        }
+
+        if (array_key_exists("FileDeleteResultInfo",$param) and $param["FileDeleteResultInfo"] !== null) {
+            $this->FileDeleteResultInfo = [];
+            foreach ($param["FileDeleteResultInfo"] as $key => $value){
+                $obj = new FileDeleteResultItem();
+                $obj->deserialize($value);
+                array_push($this->FileDeleteResultInfo, $obj);
+            }
         }
     }
 }

@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 当HardwareResourceType=POD时，该参数不生效。
  * @method string getStartServiceAfterScaleOut() 获取扩容后是否启动服务，true：启动，false：不启动
  * @method void setStartServiceAfterScaleOut(string $StartServiceAfterScaleOut) 设置扩容后是否启动服务，true：启动，false：不启动
+ * @method integer getZoneId() 获取可用区，默认是集群的主可用区
+ * @method void setZoneId(integer $ZoneId) 设置可用区，默认是集群的主可用区
+ * @method string getSubnetId() 获取子网，默认是集群创建时的子网
+ * @method void setSubnetId(string $SubnetId) 设置子网，默认是集群创建时的子网
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -211,6 +215,16 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $StartServiceAfterScaleOut;
 
     /**
+     * @var integer 可用区，默认是集群的主可用区
+     */
+    public $ZoneId;
+
+    /**
+     * @var string 子网，默认是集群创建时的子网
+     */
+    public $SubnetId;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -244,6 +258,8 @@ class ScaleOutInstanceRequest extends AbstractModel
 使用kafka集群扩容时，该参数不生效。
 当HardwareResourceType=POD时，该参数不生效。
      * @param string $StartServiceAfterScaleOut 扩容后是否启动服务，true：启动，false：不启动
+     * @param integer $ZoneId 可用区，默认是集群的主可用区
+     * @param string $SubnetId 子网，默认是集群创建时的子网
      */
     function __construct()
     {
@@ -356,6 +372,14 @@ class ScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("StartServiceAfterScaleOut",$param) and $param["StartServiceAfterScaleOut"] !== null) {
             $this->StartServiceAfterScaleOut = $param["StartServiceAfterScaleOut"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

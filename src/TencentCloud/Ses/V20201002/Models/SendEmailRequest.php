@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
  * @method Template getTemplate() 获取使用模板发送时，填写的模板相关参数
  * @method void setTemplate(Template $Template) 设置使用模板发送时，填写的模板相关参数
- * @method Simple getSimple() 获取使用API直接发送内容时，填写的邮件内容
- * @method void setSimple(Simple $Simple) 设置使用API直接发送内容时，填写的邮件内容
+ * @method Simple getSimple() 获取已废弃
+ * @method void setSimple(Simple $Simple) 设置已废弃
  * @method array getAttachments() 获取需要发送附件时，填写附件相关参数。
  * @method void setAttachments(array $Attachments) 设置需要发送附件时，填写附件相关参数。
  * @method string getUnsubscribe() 获取退订选项 1: 加入退订链接 0: 不加入退订链接
@@ -73,7 +73,7 @@ class SendEmailRequest extends AbstractModel
     public $Template;
 
     /**
-     * @var Simple 使用API直接发送内容时，填写的邮件内容
+     * @var Simple 已废弃
      */
     public $Simple;
 
@@ -100,7 +100,7 @@ class SendEmailRequest extends AbstractModel
      * @param string $Subject 邮件主题
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
      * @param Template $Template 使用模板发送时，填写的模板相关参数
-     * @param Simple $Simple 使用API直接发送内容时，填写的邮件内容
+     * @param Simple $Simple 已废弃
      * @param array $Attachments 需要发送附件时，填写附件相关参数。
      * @param string $Unsubscribe 退订选项 1: 加入退订链接 0: 不加入退订链接
      * @param integer $TriggerType 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道

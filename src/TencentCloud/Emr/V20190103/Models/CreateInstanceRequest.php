@@ -62,14 +62,10 @@ use TencentCloud\Common\AbstractModel;
 <li>28：表示EMR-V3.2.0。</li>
 <li>29：表示EMR-V2.5.1。</li>
 <li>30：表示EMR-V2.6.0。</li>
- * @method VPCSettings getVPCSettings() 获取私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
- * @method void setVPCSettings(VPCSettings $VPCSettings) 设置私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
  * @method array getSoftware() 获取部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
 填写实例值：hive、flink。
  * @method void setSoftware(array $Software) 设置部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
 填写实例值：hive、flink。
- * @method NewResourceSpec getResourceSpec() 获取节点资源的规格。
- * @method void setResourceSpec(NewResourceSpec $ResourceSpec) 设置节点资源的规格。
  * @method integer getSupportHA() 获取是否开启节点高可用。取值范围：
 <li>0：表示不开启节点高可用。</li>
 <li>1：表示开启节点高可用。</li>
@@ -88,8 +84,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(integer $PayMode) 设置实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
- * @method Placement getPlacement() 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
- * @method void setPlacement(Placement $Placement) 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method integer getTimeSpan() 获取购买实例的时长。结合TimeUnit一起使用。
 <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
 <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
@@ -108,8 +102,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
 <li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
 <li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+ * @method VPCSettings getVPCSettings() 获取私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+ * @method void setVPCSettings(VPCSettings $VPCSettings) 设置私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+ * @method NewResourceSpec getResourceSpec() 获取节点资源的规格。
+ * @method void setResourceSpec(NewResourceSpec $ResourceSpec) 设置节点资源的规格。
  * @method COSSettings getCOSSettings() 获取开启COS访问需要设置的参数。
  * @method void setCOSSettings(COSSettings $COSSettings) 设置开启COS访问需要设置的参数。
+ * @method Placement getPlacement() 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+ * @method void setPlacement(Placement $Placement) 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method string getSgId() 获取实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
  * @method void setSgId(string $SgId) 设置实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
  * @method array getPreExecutedFileSettings() 获取[引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
@@ -168,6 +168,12 @@ Hadoop-Presto
 Hadoop-Hbase
  * @method array getExternalService() 获取共享组件信息
  * @method void setExternalService(array $ExternalService) 设置共享组件信息
+ * @method integer getVersionID() 获取如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
+ * @method void setVersionID(integer $VersionID) 设置如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
+ * @method boolean getMultiZone() 获取true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
+ * @method void setMultiZone(boolean $MultiZone) 设置true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
+ * @method array getMultiZoneSettings() 获取节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+ * @method void setMultiZoneSettings(array $MultiZoneSettings) 设置节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -197,20 +203,10 @@ class CreateInstanceRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
-     */
-    public $VPCSettings;
-
-    /**
      * @var array 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
 填写实例值：hive、flink。
      */
     public $Software;
-
-    /**
-     * @var NewResourceSpec 节点资源的规格。
-     */
-    public $ResourceSpec;
 
     /**
      * @var integer 是否开启节点高可用。取值范围：
@@ -234,11 +230,6 @@ class CreateInstanceRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-     */
-    public $Placement;
-
-    /**
      * @var integer 购买实例的时长。结合TimeUnit一起使用。
 <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
 <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
@@ -260,9 +251,24 @@ class CreateInstanceRequest extends AbstractModel
     public $LoginSettings;
 
     /**
+     * @var VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     */
+    public $VPCSettings;
+
+    /**
+     * @var NewResourceSpec 节点资源的规格。
+     */
+    public $ResourceSpec;
+
+    /**
      * @var COSSettings 开启COS访问需要设置的参数。
      */
     public $COSSettings;
+
+    /**
+     * @var Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     */
+    public $Placement;
 
     /**
      * @var string 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
@@ -362,6 +368,21 @@ Hadoop-Hbase
     public $ExternalService;
 
     /**
+     * @var integer 如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
+     */
+    public $VersionID;
+
+    /**
+     * @var boolean true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
+     */
+    public $MultiZone;
+
+    /**
+     * @var array 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     */
+    public $MultiZoneSettings;
+
+    /**
      * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 <li>1：表示EMR-V1.3.1。</li>
 <li>2：表示EMR-V2.0.1。</li>
@@ -383,10 +404,8 @@ Hadoop-Hbase
 <li>28：表示EMR-V3.2.0。</li>
 <li>29：表示EMR-V2.5.1。</li>
 <li>30：表示EMR-V2.6.0。</li>
-     * @param VPCSettings $VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
      * @param array $Software 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
 填写实例值：hive、flink。
-     * @param NewResourceSpec $ResourceSpec 节点资源的规格。
      * @param integer $SupportHA 是否开启节点高可用。取值范围：
 <li>0：表示不开启节点高可用。</li>
 <li>1：表示开启节点高可用。</li>
@@ -396,7 +415,6 @@ Hadoop-Hbase
      * @param integer $PayMode 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
-     * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param integer $TimeSpan 购买实例的时长。结合TimeUnit一起使用。
 <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
 <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
@@ -406,7 +424,10 @@ Hadoop-Hbase
      * @param LoginSettings $LoginSettings 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
 <li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
 <li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+     * @param VPCSettings $VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     * @param NewResourceSpec $ResourceSpec 节点资源的规格。
      * @param COSSettings $COSSettings 开启COS访问需要设置的参数。
+     * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param string $SgId 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
      * @param array $PreExecutedFileSettings [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
      * @param integer $AutoRenew 包年包月实例是否自动续费。取值范围：
@@ -436,6 +457,9 @@ Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
      * @param array $ExternalService 共享组件信息
+     * @param integer $VersionID 如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
+     * @param boolean $MultiZone true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
+     * @param array $MultiZoneSettings 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
      */
     function __construct()
     {
@@ -454,18 +478,8 @@ Hadoop-Hbase
             $this->ProductId = $param["ProductId"];
         }
 
-        if (array_key_exists("VPCSettings",$param) and $param["VPCSettings"] !== null) {
-            $this->VPCSettings = new VPCSettings();
-            $this->VPCSettings->deserialize($param["VPCSettings"]);
-        }
-
         if (array_key_exists("Software",$param) and $param["Software"] !== null) {
             $this->Software = $param["Software"];
-        }
-
-        if (array_key_exists("ResourceSpec",$param) and $param["ResourceSpec"] !== null) {
-            $this->ResourceSpec = new NewResourceSpec();
-            $this->ResourceSpec->deserialize($param["ResourceSpec"]);
         }
 
         if (array_key_exists("SupportHA",$param) and $param["SupportHA"] !== null) {
@@ -478,11 +492,6 @@ Hadoop-Hbase
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
-        }
-
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
-            $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
         }
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
@@ -498,9 +507,24 @@ Hadoop-Hbase
             $this->LoginSettings->deserialize($param["LoginSettings"]);
         }
 
+        if (array_key_exists("VPCSettings",$param) and $param["VPCSettings"] !== null) {
+            $this->VPCSettings = new VPCSettings();
+            $this->VPCSettings->deserialize($param["VPCSettings"]);
+        }
+
+        if (array_key_exists("ResourceSpec",$param) and $param["ResourceSpec"] !== null) {
+            $this->ResourceSpec = new NewResourceSpec();
+            $this->ResourceSpec->deserialize($param["ResourceSpec"]);
+        }
+
         if (array_key_exists("COSSettings",$param) and $param["COSSettings"] !== null) {
             $this->COSSettings = new COSSettings();
             $this->COSSettings->deserialize($param["COSSettings"]);
+        }
+
+        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+            $this->Placement = new Placement();
+            $this->Placement->deserialize($param["Placement"]);
         }
 
         if (array_key_exists("SgId",$param) and $param["SgId"] !== null) {
@@ -584,6 +608,23 @@ Hadoop-Hbase
                 $obj = new ExternalService();
                 $obj->deserialize($value);
                 array_push($this->ExternalService, $obj);
+            }
+        }
+
+        if (array_key_exists("VersionID",$param) and $param["VersionID"] !== null) {
+            $this->VersionID = $param["VersionID"];
+        }
+
+        if (array_key_exists("MultiZone",$param) and $param["MultiZone"] !== null) {
+            $this->MultiZone = $param["MultiZone"];
+        }
+
+        if (array_key_exists("MultiZoneSettings",$param) and $param["MultiZoneSettings"] !== null) {
+            $this->MultiZoneSettings = [];
+            foreach ($param["MultiZoneSettings"] as $key => $value){
+                $obj = new MultiZoneSetting();
+                $obj->deserialize($value);
+                array_push($this->MultiZoneSettings, $obj);
             }
         }
     }

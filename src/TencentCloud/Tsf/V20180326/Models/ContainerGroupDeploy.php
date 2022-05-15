@@ -160,6 +160,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeInjectEnable(boolean $KubeInjectEnable) 设置KubeInjectEnable值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRepoType() 获取仓库类型 (person, tcr)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRepoType(string $RepoType) 设置仓库类型 (person, tcr)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDeploy extends AbstractModel
 {
@@ -374,6 +378,12 @@ class ContainerGroupDeploy extends AbstractModel
     public $KubeInjectEnable;
 
     /**
+     * @var string 仓库类型 (person, tcr)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RepoType;
+
+    /**
      * @param string $GroupId 部署组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -443,6 +453,8 @@ class ContainerGroupDeploy extends AbstractModel
      * @param array $VolumeMountInfos 数据卷挂载信息，list
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $KubeInjectEnable KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RepoType 仓库类型 (person, tcr)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -618,6 +630,10 @@ class ContainerGroupDeploy extends AbstractModel
 
         if (array_key_exists("KubeInjectEnable",$param) and $param["KubeInjectEnable"] !== null) {
             $this->KubeInjectEnable = $param["KubeInjectEnable"];
+        }
+
+        if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
+            $this->RepoType = $param["RepoType"];
         }
     }
 }

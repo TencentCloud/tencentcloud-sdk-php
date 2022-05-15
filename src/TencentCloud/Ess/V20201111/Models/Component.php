@@ -36,26 +36,42 @@ SELECT - 勾选框控件
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
 SIGN_SIGNATURE - 手写签名控件
- * @method float getComponentWidth() 获取参数控件宽度，单位px
- * @method void setComponentWidth(float $ComponentWidth) 设置参数控件宽度，单位px
- * @method float getComponentHeight() 获取参数控件高度，单位px
- * @method void setComponentHeight(float $ComponentHeight) 设置参数控件高度，单位px
+ * @method float getComponentWidth() 获取参数控件宽度，单位pt
+ * @method void setComponentWidth(float $ComponentWidth) 设置参数控件宽度，单位pt
+ * @method float getComponentHeight() 获取参数控件高度，单位pt
+ * @method void setComponentHeight(float $ComponentHeight) 设置参数控件高度，单位pt
  * @method integer getComponentPage() 获取参数控件所在页码，取值为：1-N
  * @method void setComponentPage(integer $ComponentPage) 设置参数控件所在页码，取值为：1-N
- * @method float getComponentPosX() 获取参数控件X位置，单位px
- * @method void setComponentPosX(float $ComponentPosX) 设置参数控件X位置，单位px
- * @method float getComponentPosY() 获取参数控件Y位置，单位px
- * @method void setComponentPosY(float $ComponentPosY) 设置参数控件Y位置，单位px
+ * @method float getComponentPosX() 获取参数控件X位置，单位pt
+ * @method void setComponentPosX(float $ComponentPosX) 设置参数控件X位置，单位pt
+ * @method float getComponentPosY() 获取参数控件Y位置，单位pt
+ * @method void setComponentPosY(float $ComponentPosY) 设置参数控件Y位置，单位pt
  * @method integer getFileIndex() 获取控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
  * @method void setFileIndex(integer $FileIndex) 设置控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
- * @method string getComponentId() 获取控件编号
- * @method void setComponentId(string $ComponentId) 设置控件编号
- * @method string getComponentName() 获取控件名称
- * @method void setComponentName(string $ComponentName) 设置控件名称
+ * @method string getComponentId() 获取GenerateMode==KEYWORD 指定关键字
+ * @method void setComponentId(string $ComponentId) 设置GenerateMode==KEYWORD 指定关键字
+ * @method string getComponentName() 获取GenerateMode==FIELD 指定表单域名称
+ * @method void setComponentName(string $ComponentName) 设置GenerateMode==FIELD 指定表单域名称
  * @method boolean getComponentRequired() 获取是否必选，默认为false
  * @method void setComponentRequired(boolean $ComponentRequired) 设置是否必选，默认为false
- * @method string getComponentExtra() 获取参数控件样式
- * @method void setComponentExtra(string $ComponentExtra) 设置参数控件样式
+ * @method string getComponentExtra() 获取扩展参数：
+ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+{“ComponentTypeLimit”: [“xxx”]}
+xxx可以为：
+HANDWRITE – 手写签名
+BORDERLESS_ESIGN – 自动生成无边框腾讯体
+OCR_ESIGN -- AI智能识别手写签名
+ESIGN -- 个人印章类型
+如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
+ * @method void setComponentExtra(string $ComponentExtra) 设置扩展参数：
+ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+{“ComponentTypeLimit”: [“xxx”]}
+xxx可以为：
+HANDWRITE – 手写签名
+BORDERLESS_ESIGN – 自动生成无边框腾讯体
+OCR_ESIGN -- AI智能识别手写签名
+ESIGN -- 个人印章类型
+如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
  * @method string getComponentRecipientId() 获取控件关联的签署人ID
  * @method void setComponentRecipientId(string $ComponentRecipientId) 设置控件关联的签署人ID
  * @method string getComponentValue() 获取控件所填写的内容
@@ -70,6 +86,10 @@ FIELD 表单域，需使用ComponentName指定表单域名称
 KEYWORD 关键字，使用ComponentId指定关键字
  * @method integer getComponentDateFontSize() 获取日期控件类型字号
  * @method void setComponentDateFontSize(integer $ComponentDateFontSize) 设置日期控件类型字号
+ * @method float getOffsetX() 获取指定关键字时横坐标偏移量
+ * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量
+ * @method float getOffsetY() 获取指定关键字时纵坐标偏移量
+ * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量
  */
 class Component extends AbstractModel
 {
@@ -86,12 +106,12 @@ SIGN_SIGNATURE - 手写签名控件
     public $ComponentType;
 
     /**
-     * @var float 参数控件宽度，单位px
+     * @var float 参数控件宽度，单位pt
      */
     public $ComponentWidth;
 
     /**
-     * @var float 参数控件高度，单位px
+     * @var float 参数控件高度，单位pt
      */
     public $ComponentHeight;
 
@@ -101,12 +121,12 @@ SIGN_SIGNATURE - 手写签名控件
     public $ComponentPage;
 
     /**
-     * @var float 参数控件X位置，单位px
+     * @var float 参数控件X位置，单位pt
      */
     public $ComponentPosX;
 
     /**
-     * @var float 参数控件Y位置，单位px
+     * @var float 参数控件Y位置，单位pt
      */
     public $ComponentPosY;
 
@@ -116,12 +136,12 @@ SIGN_SIGNATURE - 手写签名控件
     public $FileIndex;
 
     /**
-     * @var string 控件编号
+     * @var string GenerateMode==KEYWORD 指定关键字
      */
     public $ComponentId;
 
     /**
-     * @var string 控件名称
+     * @var string GenerateMode==FIELD 指定表单域名称
      */
     public $ComponentName;
 
@@ -131,7 +151,15 @@ SIGN_SIGNATURE - 手写签名控件
     public $ComponentRequired;
 
     /**
-     * @var string 参数控件样式
+     * @var string 扩展参数：
+ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+{“ComponentTypeLimit”: [“xxx”]}
+xxx可以为：
+HANDWRITE – 手写签名
+BORDERLESS_ESIGN – 自动生成无边框腾讯体
+OCR_ESIGN -- AI智能识别手写签名
+ESIGN -- 个人印章类型
+如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
      */
     public $ComponentExtra;
 
@@ -163,6 +191,16 @@ KEYWORD 关键字，使用ComponentId指定关键字
     public $ComponentDateFontSize;
 
     /**
+     * @var float 指定关键字时横坐标偏移量
+     */
+    public $OffsetX;
+
+    /**
+     * @var float 指定关键字时纵坐标偏移量
+     */
+    public $OffsetY;
+
+    /**
      * @param string $ComponentType 如果是 Component 控件类型，则可选类型为：
 TEXT - 内容文本控件
 DATE - 内容日期控件
@@ -171,16 +209,24 @@ SELECT - 勾选框控件
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
 SIGN_SIGNATURE - 手写签名控件
-     * @param float $ComponentWidth 参数控件宽度，单位px
-     * @param float $ComponentHeight 参数控件高度，单位px
+     * @param float $ComponentWidth 参数控件宽度，单位pt
+     * @param float $ComponentHeight 参数控件高度，单位pt
      * @param integer $ComponentPage 参数控件所在页码，取值为：1-N
-     * @param float $ComponentPosX 参数控件X位置，单位px
-     * @param float $ComponentPosY 参数控件Y位置，单位px
+     * @param float $ComponentPosX 参数控件X位置，单位pt
+     * @param float $ComponentPosY 参数控件Y位置，单位pt
      * @param integer $FileIndex 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
-     * @param string $ComponentId 控件编号
-     * @param string $ComponentName 控件名称
+     * @param string $ComponentId GenerateMode==KEYWORD 指定关键字
+     * @param string $ComponentName GenerateMode==FIELD 指定表单域名称
      * @param boolean $ComponentRequired 是否必选，默认为false
-     * @param string $ComponentExtra 参数控件样式
+     * @param string $ComponentExtra 扩展参数：
+ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+{“ComponentTypeLimit”: [“xxx”]}
+xxx可以为：
+HANDWRITE – 手写签名
+BORDERLESS_ESIGN – 自动生成无边框腾讯体
+OCR_ESIGN -- AI智能识别手写签名
+ESIGN -- 个人印章类型
+如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
      * @param string $ComponentRecipientId 控件关联的签署人ID
      * @param string $ComponentValue 控件所填写的内容
      * @param boolean $IsFormType 是否是表单域类型，默认不存在
@@ -188,6 +234,8 @@ SIGN_SIGNATURE - 手写签名控件
 FIELD 表单域，需使用ComponentName指定表单域名称
 KEYWORD 关键字，使用ComponentId指定关键字
      * @param integer $ComponentDateFontSize 日期控件类型字号
+     * @param float $OffsetX 指定关键字时横坐标偏移量
+     * @param float $OffsetY 指定关键字时纵坐标偏移量
      */
     function __construct()
     {
@@ -264,6 +312,14 @@ KEYWORD 关键字，使用ComponentId指定关键字
 
         if (array_key_exists("ComponentDateFontSize",$param) and $param["ComponentDateFontSize"] !== null) {
             $this->ComponentDateFontSize = $param["ComponentDateFontSize"];
+        }
+
+        if (array_key_exists("OffsetX",$param) and $param["OffsetX"] !== null) {
+            $this->OffsetX = $param["OffsetX"];
+        }
+
+        if (array_key_exists("OffsetY",$param) and $param["OffsetY"] !== null) {
+            $this->OffsetY = $param["OffsetY"];
         }
     }
 }

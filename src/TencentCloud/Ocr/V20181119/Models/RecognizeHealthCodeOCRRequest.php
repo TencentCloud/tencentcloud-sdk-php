@@ -40,24 +40,8 @@ use TencentCloud\Common\AbstractModel;
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
  * @method integer getType() 获取需要识别的健康码类型列表，为空或不填表示默认为自动识别。
 0:自动识别
-
-1:粤康码
-
-2:随申码
-
-3:健康宝
-
-4.穗康码
  * @method void setType(integer $Type) 设置需要识别的健康码类型列表，为空或不填表示默认为自动识别。
 0:自动识别
-
-1:粤康码
-
-2:随申码
-
-3:健康宝
-
-4.穗康码
  */
 class RecognizeHealthCodeOCRRequest extends AbstractModel
 {
@@ -81,14 +65,6 @@ class RecognizeHealthCodeOCRRequest extends AbstractModel
     /**
      * @var integer 需要识别的健康码类型列表，为空或不填表示默认为自动识别。
 0:自动识别
-
-1:粤康码
-
-2:随申码
-
-3:健康宝
-
-4.穗康码
      */
     public $Type;
 
@@ -104,14 +80,6 @@ class RecognizeHealthCodeOCRRequest extends AbstractModel
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param integer $Type 需要识别的健康码类型列表，为空或不填表示默认为自动识别。
 0:自动识别
-
-1:粤康码
-
-2:随申码
-
-3:健康宝
-
-4.穗康码
      */
     function __construct()
     {

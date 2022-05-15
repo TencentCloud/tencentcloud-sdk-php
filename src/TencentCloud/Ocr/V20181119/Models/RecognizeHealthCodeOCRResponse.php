@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeHealthCodeOCR返回参数结构体
  *
- * @method string getName() 获取持码人姓名，如：王*
- * @method void setName(string $Name) 设置持码人姓名，如：王*
- * @method string getIDNumber() 获取持码人身份证号，如：11**************01
- * @method void setIDNumber(string $IDNumber) 设置持码人身份证号，如：11**************01
- * @method string getTime() 获取健康码更新时间
- * @method void setTime(string $Time) 设置健康码更新时间
- * @method string getColor() 获取健康码颜色：绿色、黄色、红色
- * @method void setColor(string $Color) 设置健康码颜色：绿色、黄色、红色
- * @method string getTestingInterval() 获取核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录
- * @method void setTestingInterval(string $TestingInterval) 设置核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录
- * @method string getTestingResult() 获取核酸检测结果：阴性、阳性、暂无核酸检测记录
- * @method void setTestingResult(string $TestingResult) 设置核酸检测结果：阴性、阳性、暂无核酸检测记录
- * @method string getTestingTime() 获取核酸检测时间
- * @method void setTestingTime(string $TestingTime) 设置核酸检测时间
+ * @method string getName() 获取持码人姓名，如：王*（允许返回空值）
+ * @method void setName(string $Name) 设置持码人姓名，如：王*（允许返回空值）
+ * @method string getIDNumber() 获取持码人身份证号，如：11**************01（允许返回空值）
+ * @method void setIDNumber(string $IDNumber) 设置持码人身份证号，如：11**************01（允许返回空值）
+ * @method string getTime() 获取健康码更新时间（允许返回空值）
+ * @method void setTime(string $Time) 设置健康码更新时间（允许返回空值）
+ * @method string getColor() 获取健康码颜色：绿色、黄色、红色（允许返回空值）
+ * @method void setColor(string $Color) 设置健康码颜色：绿色、黄色、红色（允许返回空值）
+ * @method string getTestingInterval() 获取核酸检测间隔时长（允许返回空值）
+ * @method void setTestingInterval(string $TestingInterval) 设置核酸检测间隔时长（允许返回空值）
+ * @method string getTestingResult() 获取核酸检测结果：阴性、阳性、暂无核酸检测记录（允许返回空值）
+ * @method void setTestingResult(string $TestingResult) 设置核酸检测结果：阴性、阳性、暂无核酸检测记录（允许返回空值）
+ * @method string getTestingTime() 获取核酸检测时间（允许返回空值）
+ * @method void setTestingTime(string $TestingTime) 设置核酸检测时间（允许返回空值）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class RecognizeHealthCodeOCRResponse extends AbstractModel
 {
     /**
-     * @var string 持码人姓名，如：王*
+     * @var string 持码人姓名，如：王*（允许返回空值）
      */
     public $Name;
 
     /**
-     * @var string 持码人身份证号，如：11**************01
+     * @var string 持码人身份证号，如：11**************01（允许返回空值）
      */
     public $IDNumber;
 
     /**
-     * @var string 健康码更新时间
+     * @var string 健康码更新时间（允许返回空值）
      */
     public $Time;
 
     /**
-     * @var string 健康码颜色：绿色、黄色、红色
+     * @var string 健康码颜色：绿色、黄色、红色（允许返回空值）
      */
     public $Color;
 
     /**
-     * @var string 核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录
+     * @var string 核酸检测间隔时长（允许返回空值）
      */
     public $TestingInterval;
 
     /**
-     * @var string 核酸检测结果：阴性、阳性、暂无核酸检测记录
+     * @var string 核酸检测结果：阴性、阳性、暂无核酸检测记录（允许返回空值）
      */
     public $TestingResult;
 
     /**
-     * @var string 核酸检测时间
+     * @var string 核酸检测时间（允许返回空值）
      */
     public $TestingTime;
 
@@ -80,13 +80,13 @@ class RecognizeHealthCodeOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Name 持码人姓名，如：王*
-     * @param string $IDNumber 持码人身份证号，如：11**************01
-     * @param string $Time 健康码更新时间
-     * @param string $Color 健康码颜色：绿色、黄色、红色
-     * @param string $TestingInterval 核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录
-     * @param string $TestingResult 核酸检测结果：阴性、阳性、暂无核酸检测记录
-     * @param string $TestingTime 核酸检测时间
+     * @param string $Name 持码人姓名，如：王*（允许返回空值）
+     * @param string $IDNumber 持码人身份证号，如：11**************01（允许返回空值）
+     * @param string $Time 健康码更新时间（允许返回空值）
+     * @param string $Color 健康码颜色：绿色、黄色、红色（允许返回空值）
+     * @param string $TestingInterval 核酸检测间隔时长（允许返回空值）
+     * @param string $TestingResult 核酸检测结果：阴性、阳性、暂无核酸检测记录（允许返回空值）
+     * @param string $TestingTime 核酸检测时间（允许返回空值）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

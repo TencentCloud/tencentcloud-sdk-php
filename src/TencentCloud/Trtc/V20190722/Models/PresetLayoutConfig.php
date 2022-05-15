@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRenderMode(integer $RenderMode) 设置该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
  * @method integer getMixInputType() 获取该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
  * @method void setMixInputType(integer $MixInputType) 设置该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
- * @method integer getPlaceImageId() 获取占位图ID。启用占位图功能时，在当前位置的用户没有上行视频时显示占位图。占位图在实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
- * @method void setPlaceImageId(integer $PlaceImageId) 设置占位图ID。启用占位图功能时，在当前位置的用户没有上行视频时显示占位图。占位图在实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+ * @method integer getPlaceImageId() 获取占位图ID。启用占位图功能时，在当前位置的用户没有上行视频时显示占位图。占位图大小不能超过2M，在实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+ * @method void setPlaceImageId(integer $PlaceImageId) 设置占位图ID。启用占位图功能时，在当前位置的用户没有上行视频时显示占位图。占位图大小不能超过2M，在实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
  */
 class PresetLayoutConfig extends AbstractModel
 {
@@ -89,7 +89,7 @@ class PresetLayoutConfig extends AbstractModel
     public $MixInputType;
 
     /**
-     * @var integer 占位图ID。启用占位图功能时，在当前位置的用户没有上行视频时显示占位图。占位图在实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+     * @var integer 占位图ID。启用占位图功能时，在当前位置的用户没有上行视频时显示占位图。占位图大小不能超过2M，在实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
      */
     public $PlaceImageId;
 
@@ -103,7 +103,7 @@ class PresetLayoutConfig extends AbstractModel
      * @param integer $ZOrder 该画面在输出时的层级，不填默认为0。
      * @param integer $RenderMode 该画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
      * @param integer $MixInputType 该当前位置用户混入的流类型：0为混入音视频，1为只混入视频，2为只混入音频。默认为0，建议配合指定用户ID使用。
-     * @param integer $PlaceImageId 占位图ID。启用占位图功能时，在当前位置的用户没有上行视频时显示占位图。占位图在实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
+     * @param integer $PlaceImageId 占位图ID。启用占位图功能时，在当前位置的用户没有上行视频时显示占位图。占位图大小不能超过2M，在实时音视频控制台上传并生成，https://cloud.tencent.com/document/product/647/50769
      */
     function __construct()
     {

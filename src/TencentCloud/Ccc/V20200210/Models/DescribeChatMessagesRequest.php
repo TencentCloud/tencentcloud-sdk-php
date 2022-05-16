@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeChatMessages请求参数结构体
  *
- * @method integer getInstanceId() 获取实例ID
- * @method void setInstanceId(integer $InstanceId) 设置实例ID
- * @method integer getSdkAppId() 获取应用ID
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
+ * @method integer getInstanceId() 获取实例 ID（废弃）
+ * @method void setInstanceId(integer $InstanceId) 设置实例 ID（废弃）
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getCdrId() 获取服务记录ID
  * @method void setCdrId(string $CdrId) 设置服务记录ID
  * @method integer getLimit() 获取返回记录条数 最大为100默认20
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeChatMessagesRequest extends AbstractModel
 {
     /**
-     * @var integer 实例ID
+     * @var integer 实例 ID（废弃）
      */
     public $InstanceId;
 
     /**
-     * @var integer 应用ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -73,8 +73,8 @@ class DescribeChatMessagesRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @param integer $InstanceId 实例ID
-     * @param integer $SdkAppId 应用ID
+     * @param integer $InstanceId 实例 ID（废弃）
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $CdrId 服务记录ID
      * @param integer $Limit 返回记录条数 最大为100默认20
      * @param integer $Offset 返回记录偏移 默认为0

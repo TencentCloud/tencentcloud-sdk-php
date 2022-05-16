@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePSTNActiveSessionList请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getOffset() 获取数据偏移
  * @method void setOffset(integer $Offset) 设置数据偏移
  * @method integer getLimit() 获取返回的数据条数，最大 25
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePSTNActiveSessionListRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -45,7 +45,7 @@ class DescribePSTNActiveSessionListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param integer $SdkAppId 应用 ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $Offset 数据偏移
      * @param integer $Limit 返回的数据条数，最大 25
      */

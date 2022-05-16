@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAutoCalloutTask请求参数结构体
  *
- * @method integer getSdkAppId() 获取呼叫中心实例Id
- * @method void setSdkAppId(integer $SdkAppId) 设置呼叫中心实例Id
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getNotBefore() 获取任务起始时间戳，Unix 秒级时间戳
  * @method void setNotBefore(integer $NotBefore) 设置任务起始时间戳，Unix 秒级时间戳
  * @method array getCallees() 获取被叫号码列表
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
     /**
-     * @var integer 呼叫中心实例Id
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -87,7 +87,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $Tries;
 
     /**
-     * @param integer $SdkAppId 呼叫中心实例Id
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $NotBefore 任务起始时间戳，Unix 秒级时间戳
      * @param array $Callees 被叫号码列表
      * @param array $Callers 主叫号码列表

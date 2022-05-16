@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSkillGroupInfoList请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用ID
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getPageSize() 获取分页尺寸，上限 100
  * @method void setPageSize(integer $PageSize) 设置分页尺寸，上限 100
  * @method integer getPageNumber() 获取分页页码，从 0 开始
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSkillGroupInfoListRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -59,7 +59,7 @@ class DescribeSkillGroupInfoListRequest extends AbstractModel
     public $ModifiedTime;
 
     /**
-     * @param integer $SdkAppId 应用ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $PageSize 分页尺寸，上限 100
      * @param integer $PageNumber 分页页码，从 0 开始
      * @param integer $SkillGroupId 技能组ID，查询单个技能组时使用

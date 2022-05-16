@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTelSession请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用ID
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
- * @method string getSessionId() 获取会话ID
- * @method void setSessionId(string $SessionId) 设置会话ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method string getSessionId() 获取会话 ID
+ * @method void setSessionId(string $SessionId) 设置会话 ID
  */
 class DescribeTelSessionRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
     /**
-     * @var string 会话ID
+     * @var string 会话 ID
      */
     public $SessionId;
 
     /**
-     * @param integer $SdkAppId 应用ID
-     * @param string $SessionId 会话ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param string $SessionId 会话 ID
      */
     function __construct()
     {

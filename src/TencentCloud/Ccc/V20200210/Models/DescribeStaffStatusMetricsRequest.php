@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStaffStatusMetrics请求参数结构体
  *
- * @method integer getSdkAppId() 获取实例ID
- * @method void setSdkAppId(integer $SdkAppId) 设置实例ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method array getStaffList() 获取筛选坐席列表，默认不传返回全部坐席信息
  * @method void setStaffList(array $StaffList) 设置筛选坐席列表，默认不传返回全部坐席信息
  */
 class DescribeStaffStatusMetricsRequest extends AbstractModel
 {
     /**
-     * @var integer 实例ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -38,7 +38,7 @@ class DescribeStaffStatusMetricsRequest extends AbstractModel
     public $StaffList;
 
     /**
-     * @param integer $SdkAppId 实例ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param array $StaffList 筛选坐席列表，默认不传返回全部坐席信息
      */
     function __construct()

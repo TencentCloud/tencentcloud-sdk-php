@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindStaffSkillGroupList请求参数结构体
  *
- * @method integer getSdkAppId() 获取实例ID
- * @method void setSdkAppId(integer $SdkAppId) 设置实例ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getStaffEmail() 获取坐席邮箱
  * @method void setStaffEmail(string $StaffEmail) 设置坐席邮箱
  * @method array getSkillGroupList() 获取绑定技能组列表
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class BindStaffSkillGroupListRequest extends AbstractModel
 {
     /**
-     * @var integer 实例ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -45,7 +45,7 @@ class BindStaffSkillGroupListRequest extends AbstractModel
     public $SkillGroupList;
 
     /**
-     * @param integer $SdkAppId 实例ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $StaffEmail 坐席邮箱
      * @param array $SkillGroupList 绑定技能组列表
      */

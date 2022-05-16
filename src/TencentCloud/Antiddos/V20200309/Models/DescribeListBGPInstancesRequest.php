@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterBoundStatus(string $FilterBoundStatus) 设置高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
  * @method array getFilterInstanceIdList() 获取实例id数组
  * @method void setFilterInstanceIdList(array $FilterInstanceIdList) 设置实例id数组
+ * @method integer getFilterEnterpriseFlag() 获取企业版搜索
+ * @method void setFilterEnterpriseFlag(integer $FilterEnterpriseFlag) 设置企业版搜索
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterInstanceIdList;
 
     /**
+     * @var integer 企业版搜索
+     */
+    public $FilterEnterpriseFlag;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -104,6 +111,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param string $FilterStatus 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
      * @param string $FilterBoundStatus 高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
      * @param array $FilterInstanceIdList 实例id数组
+     * @param integer $FilterEnterpriseFlag 企业版搜索
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeListBGPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterInstanceIdList",$param) and $param["FilterInstanceIdList"] !== null) {
             $this->FilterInstanceIdList = $param["FilterInstanceIdList"];
+        }
+
+        if (array_key_exists("FilterEnterpriseFlag",$param) and $param["FilterEnterpriseFlag"] !== null) {
+            $this->FilterEnterpriseFlag = $param["FilterEnterpriseFlag"];
         }
     }
 }

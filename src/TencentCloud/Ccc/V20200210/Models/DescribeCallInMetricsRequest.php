@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCallInMetrics请求参数结构体
  *
- * @method integer getSdkAppId() 获取实例ID
- * @method void setSdkAppId(integer $SdkAppId) 设置实例ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method boolean getEnabledSkillGroup() 获取是否返回技能组维度信息，默认“是”
  * @method void setEnabledSkillGroup(boolean $EnabledSkillGroup) 设置是否返回技能组维度信息，默认“是”
  * @method boolean getEnabledNumber() 获取是否返回线路维度信息，默认“否”
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCallInMetricsRequest extends AbstractModel
 {
     /**
-     * @var integer 实例ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -45,7 +45,7 @@ class DescribeCallInMetricsRequest extends AbstractModel
     public $EnabledNumber;
 
     /**
-     * @param integer $SdkAppId 实例ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param boolean $EnabledSkillGroup 是否返回技能组维度信息，默认“是”
      * @param boolean $EnabledNumber 是否返回线路维度信息，默认“否”
      */

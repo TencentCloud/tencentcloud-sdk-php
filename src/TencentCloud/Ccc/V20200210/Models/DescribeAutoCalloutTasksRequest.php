@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoCalloutTasks请求参数结构体
  *
- * @method integer getSdkAppId() 获取呼叫中心实例Id
- * @method void setSdkAppId(integer $SdkAppId) 设置呼叫中心实例Id
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getPageSize() 获取分页大小
  * @method void setPageSize(integer $PageSize) 设置分页大小
  * @method integer getPageNumber() 获取页数
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAutoCalloutTasksRequest extends AbstractModel
 {
     /**
-     * @var integer 呼叫中心实例Id
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -45,7 +45,7 @@ class DescribeAutoCalloutTasksRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @param integer $SdkAppId 呼叫中心实例Id
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $PageSize 分页大小
      * @param integer $PageNumber 页数
      */

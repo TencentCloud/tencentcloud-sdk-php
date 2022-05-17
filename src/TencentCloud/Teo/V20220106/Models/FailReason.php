@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getReason() 获取失败原因
  * @method void setReason(string $Reason) 设置失败原因
- * @method array getTargets() 获取失败列表
- * @method void setTargets(array $Targets) 设置失败列表
+ * @method array getTargets() 获取处理失败的资源列表。
+该列表元素来源于输入参数中的Targets，因此格式和入参中的Targets保持一致
+ * @method void setTargets(array $Targets) 设置处理失败的资源列表。
+该列表元素来源于输入参数中的Targets，因此格式和入参中的Targets保持一致
  */
 class FailReason extends AbstractModel
 {
@@ -33,13 +35,15 @@ class FailReason extends AbstractModel
     public $Reason;
 
     /**
-     * @var array 失败列表
+     * @var array 处理失败的资源列表。
+该列表元素来源于输入参数中的Targets，因此格式和入参中的Targets保持一致
      */
     public $Targets;
 
     /**
      * @param string $Reason 失败原因
-     * @param array $Targets 失败列表
+     * @param array $Targets 处理失败的资源列表。
+该列表元素来源于输入参数中的Targets，因此格式和入参中的Targets保持一致
      */
     function __construct()
     {

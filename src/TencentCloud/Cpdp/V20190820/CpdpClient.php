@@ -145,7 +145,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagement(Models\QueryMerchantInfoForManagementRequest $req) 智慧零售-查询管理端商户
  * @method Models\QueryMerchantOrderResponse QueryMerchantOrder(Models\QueryMerchantOrderRequest $req) 云鉴-消费订单查询接口
  * @method Models\QueryMerchantPayWayListResponse QueryMerchantPayWayList(Models\QueryMerchantPayWayListRequest $req) 商户查询已开通的支付方式列表
- * @method Models\QueryOpenBankBankAccountBalanceResponse QueryOpenBankBankAccountBalance(Models\QueryOpenBankBankAccountBalanceRequest $req) 云企付-查询账户余额
+ * @method Models\QueryOpenBankBankAccountBalanceResponse QueryOpenBankBankAccountBalance(Models\QueryOpenBankBankAccountBalanceRequest $req) 云企付-子商户银行卡余额查询
  * @method Models\QueryOpenBankBankBranchListResponse QueryOpenBankBankBranchList(Models\QueryOpenBankBankBranchListRequest $req) 云企付-查询联行号
  * @method Models\QueryOpenBankBindExternalSubMerchantBankAccountResponse QueryOpenBankBindExternalSubMerchantBankAccount(Models\QueryOpenBankBindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡绑定结果查询
  * @method Models\QueryOpenBankDailyReceiptDownloadUrlResponse QueryOpenBankDailyReceiptDownloadUrl(Models\QueryOpenBankDailyReceiptDownloadUrlRequest $req) 云企付-按日期批量查询回单下载地址

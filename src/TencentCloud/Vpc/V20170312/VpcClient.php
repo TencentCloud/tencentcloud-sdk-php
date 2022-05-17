@@ -394,6 +394,7 @@ LimitTypes取值范围：
  * @method Models\DetachNetworkInterfaceResponse DetachNetworkInterface(Models\DetachNetworkInterfaceRequest $req) 本接口（DetachNetworkInterface）用于弹性网卡解绑云服务器。
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
  * @method Models\DisableCcnRoutesResponse DisableCcnRoutes(Models\DisableCcnRoutesRequest $req) 本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由
+ * @method Models\DisableFlowLogsResponse DisableFlowLogs(Models\DisableFlowLogsRequest $req) 本接口（DisableFlowLogs）用于停止流日志。
  * @method Models\DisableGatewayFlowMonitorResponse DisableGatewayFlowMonitor(Models\DisableGatewayFlowMonitorRequest $req) 本接口（DisableGatewayFlowMonitor）用于关闭网关流量监控。
  * @method Models\DisableRoutesResponse DisableRoutes(Models\DisableRoutesRequest $req) 本接口（DisableRoutes）用于禁用已启用的子网路由
  * @method Models\DisableVpnGatewaySslClientCertResponse DisableVpnGatewaySslClientCert(Models\DisableVpnGatewaySslClientCertRequest $req) 禁用SSL-VPN-CLIENT 证书
@@ -414,6 +415,7 @@ LimitTypes取值范围：
  * @method Models\DownloadVpnGatewaySslClientCertResponse DownloadVpnGatewaySslClientCert(Models\DownloadVpnGatewaySslClientCertRequest $req) 下载SSL-VPN-CLIENT 客户端证书
  * @method Models\EnableCcnRoutesResponse EnableCcnRoutes(Models\EnableCcnRoutesRequest $req) 本接口（EnableCcnRoutes）用于启用已经加入云联网（CCN）的路由。<br />
 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
+ * @method Models\EnableFlowLogsResponse EnableFlowLogs(Models\EnableFlowLogsRequest $req) 本接口（EnableFlowLogs）用于启动流日志。
  * @method Models\EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitor(Models\EnableGatewayFlowMonitorRequest $req) 本接口（EnableGatewayFlowMonitor）用于开启网关流量监控。
  * @method Models\EnableRoutesResponse EnableRoutes(Models\EnableRoutesRequest $req) 本接口（EnableRoutes）用于启用已禁用的子网路由。<br />
 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。

@@ -50,6 +50,8 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
 长度在2到128之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:\/-]*
  * @method void setExternalId(string $ExternalId) 设置角色外部ID，可在[访问管理](https://console.cloud.tencent.com/cam/role)，点击角色名获取。
 长度在2到128之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:\/-]*
+ * @method array getTags() 获取会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
+ * @method void setTags(array $Tags) 设置会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
  */
 class AssumeRoleRequest extends AbstractModel
 {
@@ -89,6 +91,11 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
     public $ExternalId;
 
     /**
+     * @var array 会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
+     */
+    public $Tags;
+
+    /**
      * @param string $RoleArn 角色的资源描述，可在[访问管理](https://console.cloud.tencent.com/cam/role)，点击角色名获取。
 普通角色：
 qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
@@ -104,6 +111,7 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
 3、策略中不能包含 principal 元素。
      * @param string $ExternalId 角色外部ID，可在[访问管理](https://console.cloud.tencent.com/cam/role)，点击角色名获取。
 长度在2到128之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:\/-]*
+     * @param array $Tags 会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
      */
     function __construct()
     {
@@ -136,6 +144,15 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
 
         if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
             $this->ExternalId = $param["ExternalId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

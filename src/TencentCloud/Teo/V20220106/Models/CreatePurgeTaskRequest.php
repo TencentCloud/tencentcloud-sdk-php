@@ -32,12 +32,28 @@ use TencentCloud\Common\AbstractModel;
 - purge_prefix：前缀
 - purge_host：Hostname
 - purge_all：全部缓存
- * @method array getTargets() 获取内容，一行一个
- * @method void setTargets(array $Targets) 设置内容，一行一个
+ * @method array getTargets() 获取要刷新的资源列表，每个元素格式依据Type而定
+1) Type = purge_host 时
+形如：www.example.com 或 foo.bar.example.com
+2) Type = purge_prefix 时
+形如：http://www.example.com/example
+3) Type = purge_url 时
+形如：https://www.example.com/example.jpg
+4）Type = purge_all 时
+Targets可为空，不需要填写
+ * @method void setTargets(array $Targets) 设置要刷新的资源列表，每个元素格式依据Type而定
+1) Type = purge_host 时
+形如：www.example.com 或 foo.bar.example.com
+2) Type = purge_prefix 时
+形如：http://www.example.com/example
+3) Type = purge_url 时
+形如：https://www.example.com/example.jpg
+4）Type = purge_all 时
+Targets可为空，不需要填写
  * @method boolean getEncodeUrl() 获取若有编码转换，仅清除编码转换后匹配的资源
-若内容含有非 ASCII 字符集的字符，请打开 URL Encode 开关，编码转换（编码规则遵循 RFC3986）
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
  * @method void setEncodeUrl(boolean $EncodeUrl) 设置若有编码转换，仅清除编码转换后匹配的资源
-若内容含有非 ASCII 字符集的字符，请打开 URL Encode 开关，编码转换（编码规则遵循 RFC3986）
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
  */
 class CreatePurgeTaskRequest extends AbstractModel
 {
@@ -56,13 +72,21 @@ class CreatePurgeTaskRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var array 内容，一行一个
+     * @var array 要刷新的资源列表，每个元素格式依据Type而定
+1) Type = purge_host 时
+形如：www.example.com 或 foo.bar.example.com
+2) Type = purge_prefix 时
+形如：http://www.example.com/example
+3) Type = purge_url 时
+形如：https://www.example.com/example.jpg
+4）Type = purge_all 时
+Targets可为空，不需要填写
      */
     public $Targets;
 
     /**
      * @var boolean 若有编码转换，仅清除编码转换后匹配的资源
-若内容含有非 ASCII 字符集的字符，请打开 URL Encode 开关，编码转换（编码规则遵循 RFC3986）
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
      */
     public $EncodeUrl;
 
@@ -73,9 +97,17 @@ class CreatePurgeTaskRequest extends AbstractModel
 - purge_prefix：前缀
 - purge_host：Hostname
 - purge_all：全部缓存
-     * @param array $Targets 内容，一行一个
+     * @param array $Targets 要刷新的资源列表，每个元素格式依据Type而定
+1) Type = purge_host 时
+形如：www.example.com 或 foo.bar.example.com
+2) Type = purge_prefix 时
+形如：http://www.example.com/example
+3) Type = purge_url 时
+形如：https://www.example.com/example.jpg
+4）Type = purge_all 时
+Targets可为空，不需要填写
      * @param boolean $EncodeUrl 若有编码转换，仅清除编码转换后匹配的资源
-若内容含有非 ASCII 字符集的字符，请打开 URL Encode 开关，编码转换（编码规则遵循 RFC3986）
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
      */
     function __construct()
     {

@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取Zone ID
  * @method void setZoneId(string $ZoneId) 设置Zone ID
- * @method array getTargets() 获取预热的资源列表
- * @method void setTargets(array $Targets) 设置预热的资源列表
+ * @method array getTargets() 获取要预热的资源列表，每个元素格式类似如下:
+http://www.example.com/example.txt
+ * @method void setTargets(array $Targets) 设置要预热的资源列表，每个元素格式类似如下:
+http://www.example.com/example.txt
  * @method boolean getEncodeUrl() 获取是否对url进行encode
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
  * @method void setEncodeUrl(boolean $EncodeUrl) 设置是否对url进行encode
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
  * @method array getHeaders() 获取附带的http头部信息
  * @method void setHeaders(array $Headers) 设置附带的http头部信息
  */
@@ -37,12 +41,14 @@ class CreatePrefetchTaskRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var array 预热的资源列表
+     * @var array 要预热的资源列表，每个元素格式类似如下:
+http://www.example.com/example.txt
      */
     public $Targets;
 
     /**
      * @var boolean 是否对url进行encode
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
      */
     public $EncodeUrl;
 
@@ -53,8 +59,10 @@ class CreatePrefetchTaskRequest extends AbstractModel
 
     /**
      * @param string $ZoneId Zone ID
-     * @param array $Targets 预热的资源列表
+     * @param array $Targets 要预热的资源列表，每个元素格式类似如下:
+http://www.example.com/example.txt
      * @param boolean $EncodeUrl 是否对url进行encode
+若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
      * @param array $Headers 附带的http头部信息
      */
     function __construct()

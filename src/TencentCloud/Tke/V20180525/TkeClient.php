@@ -137,6 +137,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypes(Models\ModifyNodePoolInstanceTypesRequest $req) 修改节点池的机型配置
  * @method Models\ModifyPrometheusAlertPolicyResponse ModifyPrometheusAlertPolicy(Models\ModifyPrometheusAlertPolicyRequest $req) 修改2.0实例告警策略
  * @method Models\ModifyPrometheusAlertRuleResponse ModifyPrometheusAlertRule(Models\ModifyPrometheusAlertRuleRequest $req) 修改告警规则 
+ * @method Models\ModifyPrometheusTempResponse ModifyPrometheusTemp(Models\ModifyPrometheusTempRequest $req) 修改模板内容
  * @method Models\ModifyPrometheusTemplateResponse ModifyPrometheusTemplate(Models\ModifyPrometheusTemplateRequest $req) 修改模板内容
  * @method Models\RemoveNodeFromNodePoolResponse RemoveNodeFromNodePool(Models\RemoveNodeFromNodePoolRequest $req) 移出节点池节点，但保留在集群内
  * @method Models\RestartEKSContainerInstancesResponse RestartEKSContainerInstances(Models\RestartEKSContainerInstancesRequest $req) 重启弹性容器实例，支持批量操作

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置数据库用户名
  * @method array getDBPrivileges() 获取账号权限变更信息
  * @method void setDBPrivileges(array $DBPrivileges) 设置账号权限变更信息
+ * @method boolean getIsAdmin() 获取是否为管理员账户
+ * @method void setIsAdmin(boolean $IsAdmin) 设置是否为管理员账户
  */
 class AccountPrivilegeModifyInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AccountPrivilegeModifyInfo extends AbstractModel
     public $DBPrivileges;
 
     /**
+     * @var boolean 是否为管理员账户
+     */
+    public $IsAdmin;
+
+    /**
      * @param string $UserName 数据库用户名
      * @param array $DBPrivileges 账号权限变更信息
+     * @param boolean $IsAdmin 是否为管理员账户
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class AccountPrivilegeModifyInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DBPrivileges, $obj);
             }
+        }
+
+        if (array_key_exists("IsAdmin",$param) and $param["IsAdmin"] !== null) {
+            $this->IsAdmin = $param["IsAdmin"];
         }
     }
 }

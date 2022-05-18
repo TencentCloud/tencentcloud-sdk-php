@@ -38,12 +38,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetUid(string $SubnetUid) 设置实例所属子网的UID
  * @method integer getStatus() 获取实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
  * @method void setStatus(integer $Status) 设置实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+ * @method string getRenewFlag() 获取自动续费标识。取值范围：
+RENEW_FLAG_AUTO：自动续费  
+RENEW_FLAG_MANUAL：不自动续费
+默认取值：
+RENEW_FLAG_DEFAULT：不自动续费
+若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+ * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：
+RENEW_FLAG_AUTO：自动续费  
+RENEW_FLAG_MANUAL：不自动续费
+默认取值：
+RENEW_FLAG_DEFAULT：不自动续费
+若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
  * @method string getChargeType() 获取实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
  * @method void setChargeType(string $ChargeType) 设置实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
  * @method integer getChargePeriod() 获取包年包月购买时长,单位:月
  * @method void setChargePeriod(integer $ChargePeriod) 设置包年包月购买时长,单位:月
- * @method string getRenewFlag() 获取自动续费标识。取值范围：RENEW_FLAG_AUTO：自动续费  RENEW_FLAG_MANUAL：不自动续费  默认取值：RENEW_FLAG_DEFAULT：不自动续费。若该参数指定为RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
- * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：RENEW_FLAG_AUTO：自动续费  RENEW_FLAG_MANUAL：不自动续费  默认取值：RENEW_FLAG_DEFAULT：不自动续费。若该参数指定为RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
  * @method string getNodeType() 获取节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
  * @method void setNodeType(string $NodeType) 设置节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
  * @method integer getNodeNum() 获取节点个数
@@ -293,6 +303,16 @@ class InstanceInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string 自动续费标识。取值范围：
+RENEW_FLAG_AUTO：自动续费  
+RENEW_FLAG_MANUAL：不自动续费
+默认取值：
+RENEW_FLAG_DEFAULT：不自动续费
+若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+     */
+    public $RenewFlag;
+
+    /**
      * @var string 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      */
     public $ChargeType;
@@ -301,11 +321,6 @@ class InstanceInfo extends AbstractModel
      * @var integer 包年包月购买时长,单位:月
      */
     public $ChargePeriod;
-
-    /**
-     * @var string 自动续费标识。取值范围：RENEW_FLAG_AUTO：自动续费  RENEW_FLAG_MANUAL：不自动续费  默认取值：RENEW_FLAG_DEFAULT：不自动续费。若该参数指定为RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
-     */
-    public $RenewFlag;
 
     /**
      * @var string 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
@@ -665,9 +680,14 @@ class InstanceInfo extends AbstractModel
      * @param string $VpcUid 实例所属VPC的UID
      * @param string $SubnetUid 实例所属子网的UID
      * @param integer $Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+     * @param string $RenewFlag 自动续费标识。取值范围：
+RENEW_FLAG_AUTO：自动续费  
+RENEW_FLAG_MANUAL：不自动续费
+默认取值：
+RENEW_FLAG_DEFAULT：不自动续费
+若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
      * @param string $ChargeType 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      * @param integer $ChargePeriod 包年包月购买时长,单位:月
-     * @param string $RenewFlag 自动续费标识。取值范围：RENEW_FLAG_AUTO：自动续费  RENEW_FLAG_MANUAL：不自动续费  默认取值：RENEW_FLAG_DEFAULT：不自动续费。若该参数指定为RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
      * @param string $NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param integer $NodeNum 节点个数
      * @param integer $CpuNum 节点CPU核数
@@ -818,16 +838,16 @@ class InstanceInfo extends AbstractModel
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
         }
 
         if (array_key_exists("ChargePeriod",$param) and $param["ChargePeriod"] !== null) {
             $this->ChargePeriod = $param["ChargePeriod"];
-        }
-
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
         }
 
         if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {

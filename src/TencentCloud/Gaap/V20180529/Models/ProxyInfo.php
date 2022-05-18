@@ -126,9 +126,9 @@ RECOVERING表示通道维护中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本：IPv4、IPv6
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNetworkType() 获取网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+ * @method string getNetworkType() 获取网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetworkType(string $NetworkType) 设置网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+ * @method void setNetworkType(string $NetworkType) 设置网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageType() 获取通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
@@ -325,7 +325,7 @@ RECOVERING表示通道维护中。
     public $IPAddressVersion;
 
     /**
-     * @var string 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+     * @var string 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkType;
@@ -417,7 +417,7 @@ RECOVERING表示通道维护中。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本：IPv4、IPv6
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+     * @param string $NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。

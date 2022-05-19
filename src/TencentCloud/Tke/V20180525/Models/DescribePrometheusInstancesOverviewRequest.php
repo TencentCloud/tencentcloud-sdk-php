@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusInstancesOverview请求参数结构体
  *
-
+ * @method integer getOffset() 获取用于分页
+ * @method void setOffset(integer $Offset) 设置用于分页
+ * @method integer getLimit() 获取用于分页
+ * @method void setLimit(integer $Limit) 设置用于分页
+ * @method array getFilters() 获取过滤实例，目前支持：
+ID: 通过实例ID来过滤 
+Name: 通过实例名称来过滤
+ * @method void setFilters(array $Filters) 设置过滤实例，目前支持：
+ID: 通过实例ID来过滤 
+Name: 通过实例名称来过滤
  */
 class DescribePrometheusInstancesOverviewRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 用于分页
+     */
+    public $Offset;
 
     /**
+     * @var integer 用于分页
+     */
+    public $Limit;
 
+    /**
+     * @var array 过滤实例，目前支持：
+ID: 通过实例ID来过滤 
+Name: 通过实例名称来过滤
+     */
+    public $Filters;
+
+    /**
+     * @param integer $Offset 用于分页
+     * @param integer $Limit 用于分页
+     * @param array $Filters 过滤实例，目前支持：
+ID: 通过实例ID来过滤 
+Name: 通过实例名称来过滤
      */
     function __construct()
     {
@@ -42,6 +70,21 @@ class DescribePrometheusInstancesOverviewRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
 
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
     }
 }

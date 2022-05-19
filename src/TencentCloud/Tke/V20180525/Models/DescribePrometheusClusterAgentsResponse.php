@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusClusterAgents返回参数结构体
  *
+ * @method array getAgents() 获取被关联集群信息
+ * @method void setAgents(array $Agents) 设置被关联集群信息
+ * @method integer getTotal() 获取被关联集群总量
+ * @method void setTotal(integer $Total) 设置被关联集群总量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribePrometheusClusterAgentsResponse extends AbstractModel
 {
     /**
+     * @var array 被关联集群信息
+     */
+    public $Agents;
+
+    /**
+     * @var integer 被关联集群总量
+     */
+    public $Total;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $Agents 被关联集群信息
+     * @param integer $Total 被关联集群总量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class DescribePrometheusClusterAgentsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Agents",$param) and $param["Agents"] !== null) {
+            $this->Agents = [];
+            foreach ($param["Agents"] as $key => $value){
+                $obj = new PrometheusAgentOverview();
+                $obj->deserialize($value);
+                array_push($this->Agents, $obj);
+            }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPrometheusTemp请求参数结构体
  *
-
+ * @method string getTemplateId() 获取模板ID
+ * @method void setTemplateId(string $TemplateId) 设置模板ID
+ * @method PrometheusTempModify getTemplate() 获取修改内容
+ * @method void setTemplate(PrometheusTempModify $Template) 设置修改内容
  */
 class ModifyPrometheusTempRequest extends AbstractModel
 {
-
+    /**
+     * @var string 模板ID
+     */
+    public $TemplateId;
 
     /**
+     * @var PrometheusTempModify 修改内容
+     */
+    public $Template;
 
+    /**
+     * @param string $TemplateId 模板ID
+     * @param PrometheusTempModify $Template 修改内容
      */
     function __construct()
     {
@@ -42,6 +54,13 @@ class ModifyPrometheusTempRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
+        }
 
+        if (array_key_exists("Template",$param) and $param["Template"] !== null) {
+            $this->Template = new PrometheusTempModify();
+            $this->Template->deserialize($param["Template"]);
+        }
     }
 }

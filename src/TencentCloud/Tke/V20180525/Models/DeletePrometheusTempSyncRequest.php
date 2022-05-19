@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePrometheusTempSync请求参数结构体
  *
-
+ * @method string getTemplateId() 获取模板id
+ * @method void setTemplateId(string $TemplateId) 设置模板id
+ * @method array getTargets() 获取取消同步的对象列表
+ * @method void setTargets(array $Targets) 设置取消同步的对象列表
  */
 class DeletePrometheusTempSyncRequest extends AbstractModel
 {
-
+    /**
+     * @var string 模板id
+     */
+    public $TemplateId;
 
     /**
+     * @var array 取消同步的对象列表
+     */
+    public $Targets;
 
+    /**
+     * @param string $TemplateId 模板id
+     * @param array $Targets 取消同步的对象列表
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class DeletePrometheusTempSyncRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
+        }
 
+        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+            $this->Targets = [];
+            foreach ($param["Targets"] as $key => $value){
+                $obj = new PrometheusTemplateSyncTarget();
+                $obj->deserialize($value);
+                array_push($this->Targets, $obj);
+            }
+        }
     }
 }

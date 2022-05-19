@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusTempSync请求参数结构体
  *
-
+ * @method string getTemplateId() 获取模板ID
+ * @method void setTemplateId(string $TemplateId) 设置模板ID
  */
 class DescribePrometheusTempSyncRequest extends AbstractModel
 {
-
+    /**
+     * @var string 模板ID
+     */
+    public $TemplateId;
 
     /**
-
+     * @param string $TemplateId 模板ID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribePrometheusTempSyncRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
+        }
     }
 }

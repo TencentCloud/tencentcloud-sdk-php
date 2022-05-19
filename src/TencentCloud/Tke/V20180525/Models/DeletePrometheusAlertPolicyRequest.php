@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePrometheusAlertPolicy请求参数结构体
  *
-
+ * @method string getInstanceId() 获取实例id
+ * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method array getAlertIds() 获取告警策略id列表
+ * @method void setAlertIds(array $AlertIds) 设置告警策略id列表
+ * @method array getNames() 获取告警策略名称
+ * @method void setNames(array $Names) 设置告警策略名称
  */
 class DeletePrometheusAlertPolicyRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例id
+     */
+    public $InstanceId;
 
     /**
+     * @var array 告警策略id列表
+     */
+    public $AlertIds;
 
+    /**
+     * @var array 告警策略名称
+     */
+    public $Names;
+
+    /**
+     * @param string $InstanceId 实例id
+     * @param array $AlertIds 告警策略id列表
+     * @param array $Names 告警策略名称
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class DeletePrometheusAlertPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("AlertIds",$param) and $param["AlertIds"] !== null) {
+            $this->AlertIds = $param["AlertIds"];
+        }
+
+        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
+            $this->Names = $param["Names"];
+        }
     }
 }

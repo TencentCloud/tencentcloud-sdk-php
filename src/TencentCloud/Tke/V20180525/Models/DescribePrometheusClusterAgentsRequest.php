@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusClusterAgents请求参数结构体
  *
-
+ * @method string getInstanceId() 获取实例id
+ * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method integer getOffset() 获取用于分页
+ * @method void setOffset(integer $Offset) 设置用于分页
+ * @method integer getLimit() 获取用于分页
+ * @method void setLimit(integer $Limit) 设置用于分页
  */
 class DescribePrometheusClusterAgentsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例id
+     */
+    public $InstanceId;
 
     /**
+     * @var integer 用于分页
+     */
+    public $Offset;
 
+    /**
+     * @var integer 用于分页
+     */
+    public $Limit;
+
+    /**
+     * @param string $InstanceId 实例id
+     * @param integer $Offset 用于分页
+     * @param integer $Limit 用于分页
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class DescribePrometheusClusterAgentsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
     }
 }

@@ -43,6 +43,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreatePrometheusAlertPolicyResponse CreatePrometheusAlertPolicy(Models\CreatePrometheusAlertPolicyRequest $req) 创建告警策略
  * @method Models\CreatePrometheusAlertRuleResponse CreatePrometheusAlertRule(Models\CreatePrometheusAlertRuleRequest $req) 创建告警规则
  * @method Models\CreatePrometheusDashboardResponse CreatePrometheusDashboard(Models\CreatePrometheusDashboardRequest $req) 创建grafana监控面板
+ * @method Models\CreatePrometheusGlobalNotificationResponse CreatePrometheusGlobalNotification(Models\CreatePrometheusGlobalNotificationRequest $req) 创建全局告警通知渠道
  * @method Models\CreatePrometheusTempResponse CreatePrometheusTemp(Models\CreatePrometheusTempRequest $req) 创建一个云原生Prometheus模板
  * @method Models\CreatePrometheusTemplateResponse CreatePrometheusTemplate(Models\CreatePrometheusTemplateRequest $req) 创建一个云原生Prometheus模板实例
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 删除集群(YUNAPI V3版本)
@@ -98,6 +99,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribePrometheusAlertPolicyResponse DescribePrometheusAlertPolicy(Models\DescribePrometheusAlertPolicyRequest $req) 获取2.0实例告警策略列表
  * @method Models\DescribePrometheusAlertRuleResponse DescribePrometheusAlertRule(Models\DescribePrometheusAlertRuleRequest $req) 获取告警规则列表
  * @method Models\DescribePrometheusClusterAgentsResponse DescribePrometheusClusterAgents(Models\DescribePrometheusClusterAgentsRequest $req) 获取2.0实例关联集群列表
+ * @method Models\DescribePrometheusGlobalNotificationResponse DescribePrometheusGlobalNotification(Models\DescribePrometheusGlobalNotificationRequest $req) 查询全局告警通知渠道
  * @method Models\DescribePrometheusInstanceResponse DescribePrometheusInstance(Models\DescribePrometheusInstanceRequest $req) 获取实例详细信息
  * @method Models\DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(Models\DescribePrometheusInstancesOverviewRequest $req) 获取与云监控融合实例列表
  * @method Models\DescribePrometheusOverviewsResponse DescribePrometheusOverviews(Models\DescribePrometheusOverviewsRequest $req) 获取实例列表
@@ -137,6 +139,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypes(Models\ModifyNodePoolInstanceTypesRequest $req) 修改节点池的机型配置
  * @method Models\ModifyPrometheusAlertPolicyResponse ModifyPrometheusAlertPolicy(Models\ModifyPrometheusAlertPolicyRequest $req) 修改2.0实例告警策略
  * @method Models\ModifyPrometheusAlertRuleResponse ModifyPrometheusAlertRule(Models\ModifyPrometheusAlertRuleRequest $req) 修改告警规则 
+ * @method Models\ModifyPrometheusGlobalNotificationResponse ModifyPrometheusGlobalNotification(Models\ModifyPrometheusGlobalNotificationRequest $req) 修改全局告警通知渠道
  * @method Models\ModifyPrometheusTempResponse ModifyPrometheusTemp(Models\ModifyPrometheusTempRequest $req) 修改模板内容
  * @method Models\ModifyPrometheusTemplateResponse ModifyPrometheusTemplate(Models\ModifyPrometheusTemplateRequest $req) 修改模板内容
  * @method Models\RemoveNodeFromNodePoolResponse RemoveNodeFromNodePool(Models\RemoveNodeFromNodePoolRequest $req) 移出节点池节点，但保留在集群内

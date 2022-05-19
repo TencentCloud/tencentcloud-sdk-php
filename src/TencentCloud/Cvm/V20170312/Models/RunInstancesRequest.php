@@ -84,6 +84,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
  * @method LaunchTemplate getLaunchTemplate() 获取实例启动模板。
  * @method void setLaunchTemplate(LaunchTemplate $LaunchTemplate) 设置实例启动模板。
+ * @method string getDedicatedClusterId() 获取指定专用集群创建。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置指定专用集群创建。
  * @method array getChcIds() 获取指定CHC物理服务器来创建CHC云主机。
  * @method void setChcIds(array $ChcIds) 设置指定CHC物理服务器来创建CHC云主机。
  * @method boolean getDisableApiTermination() 获取实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
@@ -224,6 +226,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $LaunchTemplate;
 
     /**
+     * @var string 指定专用集群创建。
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @var array 指定CHC物理服务器来创建CHC云主机。
      */
     public $ChcIds;
@@ -266,6 +273,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param string $CamRoleName CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
      * @param string $HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
      * @param LaunchTemplate $LaunchTemplate 实例启动模板。
+     * @param string $DedicatedClusterId 指定专用集群创建。
      * @param array $ChcIds 指定CHC物理服务器来创建CHC云主机。
      * @param boolean $DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
      */
@@ -400,6 +408,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (array_key_exists("LaunchTemplate",$param) and $param["LaunchTemplate"] !== null) {
             $this->LaunchTemplate = new LaunchTemplate();
             $this->LaunchTemplate->deserialize($param["LaunchTemplate"]);
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
 
         if (array_key_exists("ChcIds",$param) and $param["ChcIds"] !== null) {

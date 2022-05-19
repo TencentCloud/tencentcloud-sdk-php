@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncPrometheusTemp请求参数结构体
  *
-
+ * @method string getTemplateId() 获取实例id
+ * @method void setTemplateId(string $TemplateId) 设置实例id
+ * @method array getTargets() 获取同步目标
+ * @method void setTargets(array $Targets) 设置同步目标
  */
 class SyncPrometheusTempRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例id
+     */
+    public $TemplateId;
 
     /**
+     * @var array 同步目标
+     */
+    public $Targets;
 
+    /**
+     * @param string $TemplateId 实例id
+     * @param array $Targets 同步目标
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class SyncPrometheusTempRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
+        }
 
+        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
+            $this->Targets = [];
+            foreach ($param["Targets"] as $key => $value){
+                $obj = new PrometheusTemplateSyncTarget();
+                $obj->deserialize($value);
+                array_push($this->Targets, $obj);
+            }
+        }
     }
 }

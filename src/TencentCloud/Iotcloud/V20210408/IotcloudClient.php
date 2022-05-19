@@ -68,8 +68,10 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\DownloadDeviceResourceResponse DownloadDeviceResource(Models\DownloadDeviceResourceRequest $req) 本接口（DownloadDeviceResource）用于下载设备资源
  * @method Models\EditFirmwareResponse EditFirmware(Models\EditFirmwareRequest $req) 编辑固件信息
  * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 本接口（EnableTopicRule）用于启用规则 
+ * @method Models\GetAllVersionResponse GetAllVersion(Models\GetAllVersionRequest $req) 本接口（GetAllVersion）用于获取所有的版本列表 
  * @method Models\GetCOSURLResponse GetCOSURL(Models\GetCOSURLRequest $req) 本接口（GetCOSURL）用于获取固件存储在COS的URL 
  * @method Models\GetUserResourceInfoResponse GetUserResourceInfo(Models\GetUserResourceInfoRequest $req) 本接口（GetUserResourceInfo）用于查询用户资源使用信息。
+ * @method Models\ListFirmwaresResponse ListFirmwares(Models\ListFirmwaresRequest $req) 本接口（ListFirmwares）用于获取固件列表 
  * @method Models\ListLogResponse ListLog(Models\ListLogRequest $req) 本接口（ListLog）用于查看日志信息 
  * @method Models\ListLogPayloadResponse ListLogPayload(Models\ListLogPayloadRequest $req) 获取日志内容列表
  * @method Models\ListSDKLogResponse ListSDKLog(Models\ListSDKLogRequest $req) 获取设备上报的日志

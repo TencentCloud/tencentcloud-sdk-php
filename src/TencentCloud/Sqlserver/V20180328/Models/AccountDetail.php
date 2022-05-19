@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbs(array $Dbs) 设置该账户对相关db的读写权限信息
  * @method boolean getIsAdmin() 获取是否为管理员账户
  * @method void setIsAdmin(boolean $IsAdmin) 设置是否为管理员账户
+ * @method string getAuthentication() 获取win-windows鉴权,sql-sqlserver鉴权
+ * @method void setAuthentication(string $Authentication) 设置win-windows鉴权,sql-sqlserver鉴权
+ * @method string getHost() 获取win-windows鉴权账户需要host
+ * @method void setHost(string $Host) 设置win-windows鉴权账户需要host
  */
 class AccountDetail extends AbstractModel
 {
@@ -87,6 +91,16 @@ class AccountDetail extends AbstractModel
     public $IsAdmin;
 
     /**
+     * @var string win-windows鉴权,sql-sqlserver鉴权
+     */
+    public $Authentication;
+
+    /**
+     * @var string win-windows鉴权账户需要host
+     */
+    public $Host;
+
+    /**
      * @param string $Name 账户名
      * @param string $Remark 账户备注
      * @param string $CreateTime 账户创建时间
@@ -96,6 +110,8 @@ class AccountDetail extends AbstractModel
      * @param string $InternalStatus 账户内部状态，正常为enable
      * @param array $Dbs 该账户对相关db的读写权限信息
      * @param boolean $IsAdmin 是否为管理员账户
+     * @param string $Authentication win-windows鉴权,sql-sqlserver鉴权
+     * @param string $Host win-windows鉴权账户需要host
      */
     function __construct()
     {
@@ -149,6 +165,14 @@ class AccountDetail extends AbstractModel
 
         if (array_key_exists("IsAdmin",$param) and $param["IsAdmin"] !== null) {
             $this->IsAdmin = $param["IsAdmin"];
+        }
+
+        if (array_key_exists("Authentication",$param) and $param["Authentication"] !== null) {
+            $this->Authentication = $param["Authentication"];
+        }
+
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
         }
     }
 }

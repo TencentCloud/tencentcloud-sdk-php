@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePrometheusTemp请求参数结构体
  *
-
+ * @method string getTemplateId() 获取模板id
+ * @method void setTemplateId(string $TemplateId) 设置模板id
  */
 class DeletePrometheusTempRequest extends AbstractModel
 {
-
+    /**
+     * @var string 模板id
+     */
+    public $TemplateId;
 
     /**
-
+     * @param string $TemplateId 模板id
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DeletePrometheusTempRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
+        }
     }
 }

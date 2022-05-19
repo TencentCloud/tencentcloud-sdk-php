@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheusTemp请求参数结构体
  *
-
+ * @method PrometheusTemp getTemplate() 获取模板设置
+ * @method void setTemplate(PrometheusTemp $Template) 设置模板设置
  */
 class CreatePrometheusTempRequest extends AbstractModel
 {
-
+    /**
+     * @var PrometheusTemp 模板设置
+     */
+    public $Template;
 
     /**
-
+     * @param PrometheusTemp $Template 模板设置
      */
     function __construct()
     {
@@ -42,6 +46,9 @@ class CreatePrometheusTempRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Template",$param) and $param["Template"] !== null) {
+            $this->Template = new PrometheusTemp();
+            $this->Template->deserialize($param["Template"]);
+        }
     }
 }

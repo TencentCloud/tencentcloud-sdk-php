@@ -94,6 +94,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserAlias(string $UserAlias) 设置用户别名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSparkJobName() 获取spark应用作业名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSparkJobName(string $SparkJobName) 设置spark应用作业名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSparkJobId() 获取spark应用作业Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSparkJobId(string $SparkJobId) 设置spark应用作业Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSparkJobFile() 获取spark应用入口jar文件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSparkJobFile(string $SparkJobFile) 设置spark应用入口jar文件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUiUrl() 获取spark ui url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUiUrl(string $UiUrl) 设置spark ui url
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -239,6 +255,30 @@ class TaskResponseInfo extends AbstractModel
     public $UserAlias;
 
     /**
+     * @var string spark应用作业名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SparkJobName;
+
+    /**
+     * @var string spark应用作业Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SparkJobId;
+
+    /**
+     * @var string spark应用入口jar文件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SparkJobFile;
+
+    /**
+     * @var string spark ui url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UiUrl;
+
+    /**
      * @param string $DatabaseName 任务所属Database的名称。
      * @param integer $DataAmount 任务数据量。
      * @param string $Id 任务Id。
@@ -275,6 +315,14 @@ class TaskResponseInfo extends AbstractModel
      * @param boolean $CanDownload 查询数据能不能下载
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserAlias 用户别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SparkJobName spark应用作业名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SparkJobId spark应用作业Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SparkJobFile spark应用入口jar文件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UiUrl spark ui url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -392,6 +440,22 @@ class TaskResponseInfo extends AbstractModel
 
         if (array_key_exists("UserAlias",$param) and $param["UserAlias"] !== null) {
             $this->UserAlias = $param["UserAlias"];
+        }
+
+        if (array_key_exists("SparkJobName",$param) and $param["SparkJobName"] !== null) {
+            $this->SparkJobName = $param["SparkJobName"];
+        }
+
+        if (array_key_exists("SparkJobId",$param) and $param["SparkJobId"] !== null) {
+            $this->SparkJobId = $param["SparkJobId"];
+        }
+
+        if (array_key_exists("SparkJobFile",$param) and $param["SparkJobFile"] !== null) {
+            $this->SparkJobFile = $param["SparkJobFile"];
+        }
+
+        if (array_key_exists("UiUrl",$param) and $param["UiUrl"] !== null) {
+            $this->UiUrl = $param["UiUrl"];
         }
     }
 }

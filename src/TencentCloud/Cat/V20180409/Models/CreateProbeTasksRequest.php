@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProbeType(integer $ProbeType) 设置测试类型，包含定时测试与即时测试
  * @method string getPluginSource() 获取插件类型
  * @method void setPluginSource(string $PluginSource) 设置插件类型
+ * @method string getClientNum() 获取客户度ID
+ * @method void setClientNum(string $ClientNum) 设置客户度ID
  */
 class CreateProbeTasksRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ class CreateProbeTasksRequest extends AbstractModel
     public $PluginSource;
 
     /**
+     * @var string 客户度ID
+     */
+    public $ClientNum;
+
+    /**
      * @param array $BatchTasks 批量任务名-地址
      * @param integer $TaskType 任务类型
      * @param array $Nodes 拨测节点
@@ -112,6 +119,7 @@ class CreateProbeTasksRequest extends AbstractModel
      * @param array $Tag 资源标签值
      * @param integer $ProbeType 测试类型，包含定时测试与即时测试
      * @param string $PluginSource 插件类型
+     * @param string $ClientNum 客户度ID
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class CreateProbeTasksRequest extends AbstractModel
 
         if (array_key_exists("PluginSource",$param) and $param["PluginSource"] !== null) {
             $this->PluginSource = $param["PluginSource"];
+        }
+
+        if (array_key_exists("ClientNum",$param) and $param["ClientNum"] !== null) {
+            $this->ClientNum = $param["ClientNum"];
         }
     }
 }

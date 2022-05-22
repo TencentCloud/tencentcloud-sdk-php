@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Oceanus\V20190422\Models as Models;
 
 /**
+ * @method Models\CheckSavepointResponse CheckSavepoint(Models\CheckSavepointRequest $req) 检查快照是否可用
  * @method Models\CreateJobResponse CreateJob(Models\CreateJobRequest $req) 新建作业接口，一个 AppId 最多允许创建1000个作业
  * @method Models\CreateJobConfigResponse CreateJobConfig(Models\CreateJobConfigRequest $req) 创建作业配置，一个作业最多有100个配置版本
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建资源接口
@@ -31,6 +32,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DeleteResourcesResponse DeleteResources(Models\DeleteResourcesRequest $req) 删除资源接口
  * @method Models\DeleteTableConfigResponse DeleteTableConfig(Models\DeleteTableConfigRequest $req) 删除作业表配置
  * @method Models\DescribeJobConfigsResponse DescribeJobConfigs(Models\DescribeJobConfigsRequest $req) 查询作业配置列表，一次最多查询100个
+ * @method Models\DescribeJobSavepointResponse DescribeJobSavepoint(Models\DescribeJobSavepointRequest $req) 查找Savepoint列表
  * @method Models\DescribeJobsResponse DescribeJobs(Models\DescribeJobsRequest $req) 查询作业
  * @method Models\DescribeResourceConfigsResponse DescribeResourceConfigs(Models\DescribeResourceConfigsRequest $req) 描述资源配置接口
  * @method Models\DescribeResourceRelatedJobsResponse DescribeResourceRelatedJobs(Models\DescribeResourceRelatedJobsRequest $req) 获取资源关联作业信息

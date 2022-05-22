@@ -92,6 +92,10 @@ SyncNormal:正常
  * @method void setEndTime(string $EndTime) 设置只读副本计费结束时间
  * @method string getIsolateTime() 获取只读副本隔离时间
  * @method void setIsolateTime(string $IsolateTime) 设置只读副本隔离时间
+ * @method string getRegionId() 获取只读副本所在地域
+ * @method void setRegionId(string $RegionId) 设置只读副本所在地域
+ * @method string getZoneId() 获取只读副本所在可用区
+ * @method void setZoneId(string $ZoneId) 设置只读副本所在可用区
  */
 class ReadOnlyInstance extends AbstractModel
 {
@@ -220,6 +224,16 @@ SyncNormal:正常
     public $IsolateTime;
 
     /**
+     * @var string 只读副本所在地域
+     */
+    public $RegionId;
+
+    /**
+     * @var string 只读副本所在可用区
+     */
+    public $ZoneId;
+
+    /**
      * @param string $InstanceId 只读副本ID，格式如：mssqlro-3l3fgqn7
      * @param string $Name 只读副本名称
      * @param string $Uid 只读副本唯一UID
@@ -256,6 +270,8 @@ SyncNormal:正常
      * @param string $StartTime 只读副本计费开始时间
      * @param string $EndTime 只读副本计费结束时间
      * @param string $IsolateTime 只读副本隔离时间
+     * @param string $RegionId 只读副本所在地域
+     * @param string $ZoneId 只读副本所在可用区
      */
     function __construct()
     {
@@ -356,6 +372,14 @@ SyncNormal:正常
 
         if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
             $this->IsolateTime = $param["IsolateTime"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

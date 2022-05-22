@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 <li> 2 = 港澳台 </li>
 <li> 3 = 国外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCodeType() 获取节点类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCodeType(string $CodeType) 设置节点类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNodeDefineStatus() 获取节点状态：1-运行,2-下线
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeDefineStatus(integer $NodeDefineStatus) 设置节点状态：1-运行,2-下线
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeDefine extends AbstractModel
 {
@@ -110,6 +118,18 @@ class NodeDefine extends AbstractModel
     public $Location;
 
     /**
+     * @var string 节点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CodeType;
+
+    /**
+     * @var integer 节点状态：1-运行,2-下线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeDefineStatus;
+
+    /**
      * @param string $Name 节点名称
      * @param string $Code 节点代码
      * @param integer $Type 节点类型
@@ -127,6 +147,10 @@ class NodeDefine extends AbstractModel
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
 <li> 3 = 国外 </li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CodeType 节点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NodeDefineStatus 节点状态：1-运行,2-下线
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +196,14 @@ class NodeDefine extends AbstractModel
 
         if (array_key_exists("Location",$param) and $param["Location"] !== null) {
             $this->Location = $param["Location"];
+        }
+
+        if (array_key_exists("CodeType",$param) and $param["CodeType"] !== null) {
+            $this->CodeType = $param["CodeType"];
+        }
+
+        if (array_key_exists("NodeDefineStatus",$param) and $param["NodeDefineStatus"] !== null) {
+            $this->NodeDefineStatus = $param["NodeDefineStatus"];
         }
     }
 }

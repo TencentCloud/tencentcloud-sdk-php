@@ -32,6 +32,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeInstancesListResponse DescribeInstancesList(Models\DescribeInstancesListRequest $req) EMR集群实例列表查询
  * @method Models\DescribeJobFlowResponse DescribeJobFlow(Models\DescribeJobFlowRequest $req) 查询流程任务
  * @method Models\DescribeResourceScheduleResponse DescribeResourceSchedule(Models\DescribeResourceScheduleRequest $req) 获取yarn资源调度页面的数据
+ * @method Models\DescribeUsersForUserManagerResponse DescribeUsersForUserManager(Models\DescribeUsersForUserManagerRequest $req) 批量导出用户
  * @method Models\InquirePriceRenewEmrResponse InquirePriceRenewEmr(Models\InquirePriceRenewEmrRequest $req) 集群续费询价。
  * @method Models\InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(Models\InquiryPriceCreateInstanceRequest $req) 创建实例询价
  * @method Models\InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(Models\InquiryPriceRenewInstanceRequest $req) 续费询价。

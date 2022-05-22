@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cat\V20180409\Models;
+namespace TencentCloud\Oceanus\V20190422\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateProbeTasks返回参数结构体
+ * CheckSavepoint返回参数结构体
  *
- * @method array getTaskIDs() 获取任务ID列表
- * @method void setTaskIDs(array $TaskIDs) 设置任务ID列表
+ * @method string getSerialId() 获取资源 id
+ * @method void setSerialId(string $SerialId) 设置资源 id
+ * @method integer getSavepointStatus() 获取1=可用，2=不可用
+ * @method void setSavepointStatus(integer $SavepointStatus) 设置1=可用，2=不可用
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateProbeTasksResponse extends AbstractModel
+class CheckSavepointResponse extends AbstractModel
 {
     /**
-     * @var array 任务ID列表
+     * @var string 资源 id
      */
-    public $TaskIDs;
+    public $SerialId;
+
+    /**
+     * @var integer 1=可用，2=不可用
+     */
+    public $SavepointStatus;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class CreateProbeTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TaskIDs 任务ID列表
+     * @param string $SerialId 资源 id
+     * @param integer $SavepointStatus 1=可用，2=不可用
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,12 @@ class CreateProbeTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskIDs",$param) and $param["TaskIDs"] !== null) {
-            $this->TaskIDs = $param["TaskIDs"];
+        if (array_key_exists("SerialId",$param) and $param["SerialId"] !== null) {
+            $this->SerialId = $param["SerialId"];
+        }
+
+        if (array_key_exists("SavepointStatus",$param) and $param["SavepointStatus"] !== null) {
+            $this->SavepointStatus = $param["SavepointStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

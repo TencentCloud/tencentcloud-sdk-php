@@ -18,10 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 视频处理任务信息
+ * 媒体处理任务信息
  *
- * @method string getTaskId() 获取视频处理任务 ID。
- * @method void setTaskId(string $TaskId) 设置视频处理任务 ID。
+ * @method string getTaskId() 获取媒体处理任务 ID。
+ * @method void setTaskId(string $TaskId) 设置媒体处理任务 ID。
  * @method string getStatus() 获取任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
@@ -32,16 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) 设置已弃用，请使用各个具体任务的 ErrCode。
  * @method string getMessage() 获取已弃用，请使用各个具体任务的 Message。
  * @method void setMessage(string $Message) 设置已弃用，请使用各个具体任务的 Message。
- * @method MediaInputInfo getInputInfo() 获取视频处理的目标文件信息。
+ * @method MediaInputInfo getInputInfo() 获取媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInputInfo(MediaInputInfo $InputInfo) 设置视频处理的目标文件信息。
+ * @method void setInputInfo(MediaInputInfo $InputInfo) 设置媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaMetaData getMetaData() 获取原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMediaProcessResultSet() 获取视频处理任务的执行状态与结果。
- * @method void setMediaProcessResultSet(array $MediaProcessResultSet) 设置视频处理任务的执行状态与结果。
+ * @method array getMediaProcessResultSet() 获取媒体处理任务的执行状态与结果。
+ * @method void setMediaProcessResultSet(array $MediaProcessResultSet) 设置媒体处理任务的执行状态与结果。
  * @method array getAiContentReviewResultSet() 获取视频内容审核任务的执行状态与结果。
  * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) 设置视频内容审核任务的执行状态与结果。
  * @method array getAiAnalysisResultSet() 获取视频内容分析任务的执行状态与结果。
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class WorkflowTask extends AbstractModel
 {
     /**
-     * @var string 视频处理任务 ID。
+     * @var string 媒体处理任务 ID。
      */
     public $TaskId;
 
@@ -74,7 +74,7 @@ class WorkflowTask extends AbstractModel
     public $Message;
 
     /**
-     * @var MediaInputInfo 视频处理的目标文件信息。
+     * @var MediaInputInfo 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputInfo;
@@ -86,7 +86,7 @@ class WorkflowTask extends AbstractModel
     public $MetaData;
 
     /**
-     * @var array 视频处理任务的执行状态与结果。
+     * @var array 媒体处理任务的执行状态与结果。
      */
     public $MediaProcessResultSet;
 
@@ -106,17 +106,17 @@ class WorkflowTask extends AbstractModel
     public $AiRecognitionResultSet;
 
     /**
-     * @param string $TaskId 视频处理任务 ID。
+     * @param string $TaskId 媒体处理任务 ID。
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
      * @param integer $ErrCode 已弃用，请使用各个具体任务的 ErrCode。
      * @param string $Message 已弃用，请使用各个具体任务的 Message。
-     * @param MediaInputInfo $InputInfo 视频处理的目标文件信息。
+     * @param MediaInputInfo $InputInfo 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MediaProcessResultSet 视频处理任务的执行状态与结果。
+     * @param array $MediaProcessResultSet 媒体处理任务的执行状态与结果。
      * @param array $AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
      * @param array $AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
      * @param array $AiRecognitionResultSet 视频内容识别任务的执行状态与结果。

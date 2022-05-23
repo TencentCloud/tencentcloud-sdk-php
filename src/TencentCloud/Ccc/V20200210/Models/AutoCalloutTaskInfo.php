@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIvrId(integer $IvrId) 设置任务使用的IvrId
  * @method integer getState() 获取任务状态0初始 1运行中 2已完成 3结束中 4已结束
  * @method void setState(integer $State) 设置任务状态0初始 1运行中 2已完成 3结束中 4已结束
+ * @method integer getTaskId() 获取任务Id
+ * @method void setTaskId(integer $TaskId) 设置任务Id
  */
 class AutoCalloutTaskInfo extends AbstractModel
 {
@@ -76,6 +78,11 @@ class AutoCalloutTaskInfo extends AbstractModel
     public $State;
 
     /**
+     * @var integer 任务Id
+     */
+    public $TaskId;
+
+    /**
      * @param string $Name 任务名
      * @param integer $CalleeCount 被叫数量
      * @param array $Callers 主叫号码列表
@@ -84,6 +91,7 @@ class AutoCalloutTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IvrId 任务使用的IvrId
      * @param integer $State 任务状态0初始 1运行中 2已完成 3结束中 4已结束
+     * @param integer $TaskId 任务Id
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ class AutoCalloutTaskInfo extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

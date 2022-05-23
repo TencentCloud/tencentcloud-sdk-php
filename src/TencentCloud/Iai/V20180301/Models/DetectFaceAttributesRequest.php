@@ -47,14 +47,14 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
  * @method string getFaceAttributesType() 获取是否返回年龄、性别、情绪等属性。 
-合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow 
+合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow、 
 Gender、Hair、Hat、Headpose、Mask、Mouth、Moustache、Nose、Shape、Skin、Smile。 
 None为不需要返回。默认为 None。 
 需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
 关于各属性的详细描述，参见下文出参。 
 最多返回面积最大的 5 张人脸属性信息，超过 5 张人脸（第 6 张及以后的人脸）的 AttributesInfo 不具备参考意义。
  * @method void setFaceAttributesType(string $FaceAttributesType) 设置是否返回年龄、性别、情绪等属性。 
-合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow 
+合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow、 
 Gender、Hair、Hat、Headpose、Mask、Mouth、Moustache、Nose、Shape、Skin、Smile。 
 None为不需要返回。默认为 None。 
 需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
@@ -94,7 +94,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * @var string 是否返回年龄、性别、情绪等属性。 
-合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow 
+合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow、 
 Gender、Hair、Hat、Headpose、Mask、Mouth、Moustache、Nose、Shape、Skin、Smile。 
 None为不需要返回。默认为 None。 
 需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 
@@ -128,7 +128,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param string $FaceAttributesType 是否返回年龄、性别、情绪等属性。 
-合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow 
+合法值为（大小写不敏感）：None、Age、Beauty、Emotion、Eye、Eyebrow、 
 Gender、Hair、Hat、Headpose、Mask、Mouth、Moustache、Nose、Shape、Skin、Smile。 
 None为不需要返回。默认为 None。 
 需要将属性组成一个用逗号分隔的字符串，属性之间的顺序没有要求。 

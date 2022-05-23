@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskTag(string $TaskTag) 设置任务标签
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskStatus() 获取任务状态
- * @method void setTaskStatus(integer $TaskStatus) 设置任务状态
+ * @method integer getTaskStatus() 获取任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
+ * @method void setTaskStatus(integer $TaskStatus) 设置任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
  * @method string getTaskCreateTime() 获取任务创建时间
  * @method void setTaskCreateTime(string $TaskCreateTime) 设置任务创建时间
  * @method string getTaskUpdateTime() 获取任务更新时间
@@ -61,7 +61,7 @@ class TaskListItem extends AbstractModel
     public $TaskTag;
 
     /**
-     * @var integer 任务状态
+     * @var integer 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
      */
     public $TaskStatus;
 
@@ -81,7 +81,7 @@ class TaskListItem extends AbstractModel
      * @param string $TaskDescription 任务描述
      * @param string $TaskTag 任务标签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskStatus 任务状态
+     * @param integer $TaskStatus 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
      * @param string $TaskCreateTime 任务创建时间
      * @param string $TaskUpdateTime 任务更新时间
      */

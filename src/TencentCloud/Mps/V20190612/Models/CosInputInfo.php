@@ -18,36 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 视频处理 COS 对象信息。
+ * 媒体处理 COS 对象信息。
  *
- * @method string getBucket() 获取视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
- * @method void setBucket(string $Bucket) 设置视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
- * @method string getRegion() 获取视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
- * @method void setRegion(string $Region) 设置视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
- * @method string getObject() 获取视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
- * @method void setObject(string $Object) 设置视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
+ * @method string getBucket() 获取媒体处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
+ * @method void setBucket(string $Bucket) 设置媒体处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
+ * @method string getRegion() 获取媒体处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
+ * @method void setRegion(string $Region) 设置媒体处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
+ * @method string getObject() 获取媒体处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
+ * @method void setObject(string $Object) 设置媒体处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
  */
 class CosInputInfo extends AbstractModel
 {
     /**
-     * @var string 视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
+     * @var string 媒体处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
      */
     public $Bucket;
 
     /**
-     * @var string 视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
+     * @var string 媒体处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
      */
     public $Region;
 
     /**
-     * @var string 视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
+     * @var string 媒体处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
      */
     public $Object;
 
     /**
-     * @param string $Bucket 视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
-     * @param string $Region 视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
-     * @param string $Object 视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
+     * @param string $Bucket 媒体处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
+     * @param string $Region 媒体处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
+     * @param string $Object 媒体处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
      */
     function __construct()
     {

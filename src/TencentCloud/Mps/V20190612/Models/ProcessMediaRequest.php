@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMedia请求参数结构体
  *
- * @method MediaInputInfo getInputInfo() 获取视频处理的文件输入信息。
- * @method void setInputInfo(MediaInputInfo $InputInfo) 设置视频处理的文件输入信息。
- * @method TaskOutputStorage getOutputStorage() 获取视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
- * @method string getOutputDir() 获取视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
- * @method void setOutputDir(string $OutputDir) 设置视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
- * @method MediaProcessTaskInput getMediaProcessTask() 获取视频处理类型任务参数。
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置视频处理类型任务参数。
+ * @method MediaInputInfo getInputInfo() 获取媒体处理的文件输入信息。
+ * @method void setInputInfo(MediaInputInfo $InputInfo) 设置媒体处理的文件输入信息。
+ * @method TaskOutputStorage getOutputStorage() 获取媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+ * @method string getOutputDir() 获取媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
+ * @method void setOutputDir(string $OutputDir) 设置媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
+ * @method MediaProcessTaskInput getMediaProcessTask() 获取媒体处理类型任务参数。
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置媒体处理类型任务参数。
  * @method AiContentReviewTaskInput getAiContentReviewTask() 获取视频内容审核类型任务参数。
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) 设置视频内容审核类型任务参数。
  * @method AiAnalysisTaskInput getAiAnalysisTask() 获取视频内容分析类型任务参数。
@@ -46,22 +46,22 @@ use TencentCloud\Common\AbstractModel;
 class ProcessMediaRequest extends AbstractModel
 {
     /**
-     * @var MediaInputInfo 视频处理的文件输入信息。
+     * @var MediaInputInfo 媒体处理的文件输入信息。
      */
     public $InputInfo;
 
     /**
-     * @var TaskOutputStorage 视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+     * @var TaskOutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
      */
     public $OutputStorage;
 
     /**
-     * @var string 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
+     * @var string 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
      */
     public $OutputDir;
 
     /**
-     * @var MediaProcessTaskInput 视频处理类型任务参数。
+     * @var MediaProcessTaskInput 媒体处理类型任务参数。
      */
     public $MediaProcessTask;
 
@@ -101,10 +101,10 @@ class ProcessMediaRequest extends AbstractModel
     public $SessionContext;
 
     /**
-     * @param MediaInputInfo $InputInfo 视频处理的文件输入信息。
-     * @param TaskOutputStorage $OutputStorage 视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-     * @param string $OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
-     * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
+     * @param MediaInputInfo $InputInfo 媒体处理的文件输入信息。
+     * @param TaskOutputStorage $OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+     * @param string $OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
+     * @param MediaProcessTaskInput $MediaProcessTask 媒体处理类型任务参数。
      * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
      * @param AiAnalysisTaskInput $AiAnalysisTask 视频内容分析类型任务参数。
      * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。

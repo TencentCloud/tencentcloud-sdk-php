@@ -18,31 +18,31 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 视频处理输出对象信息。
+ * 媒体处理输出对象信息。
  *
- * @method string getType() 获取视频处理输出对象存储位置的类型，现在仅支持 COS。
- * @method void setType(string $Type) 设置视频处理输出对象存储位置的类型，现在仅支持 COS。
- * @method CosOutputStorage getCosOutputStorage() 获取当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+ * @method string getType() 获取媒体处理输出对象存储位置的类型，现在仅支持 COS。
+ * @method void setType(string $Type) 设置媒体处理输出对象存储位置的类型，现在仅支持 COS。
+ * @method CosOutputStorage getCosOutputStorage() 获取当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCosOutputStorage(CosOutputStorage $CosOutputStorage) 设置当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+ * @method void setCosOutputStorage(CosOutputStorage $CosOutputStorage) 设置当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOutputStorage extends AbstractModel
 {
     /**
-     * @var string 视频处理输出对象存储位置的类型，现在仅支持 COS。
+     * @var string 媒体处理输出对象存储位置的类型，现在仅支持 COS。
      */
     public $Type;
 
     /**
-     * @var CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+     * @var CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosOutputStorage;
 
     /**
-     * @param string $Type 视频处理输出对象存储位置的类型，现在仅支持 COS。
-     * @param CosOutputStorage $CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+     * @param string $Type 媒体处理输出对象存储位置的类型，现在仅支持 COS。
+     * @param CosOutputStorage $CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

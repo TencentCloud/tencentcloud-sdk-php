@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mps\V20190612\Models;
+namespace TencentCloud\Tcm\V20210413\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 媒体处理 URL 对象信息。
+ * 调用追踪的Zipkin设置
  *
- * @method string getUrl() 获取视频的 URL。
- * @method void setUrl(string $Url) 设置视频的 URL。
+ * @method string getAddress() 获取Zipkin调用地址
+ * @method void setAddress(string $Address) 设置Zipkin调用地址
  */
-class UrlInputInfo extends AbstractModel
+class TracingZipkin extends AbstractModel
 {
     /**
-     * @var string 视频的 URL。
+     * @var string Zipkin调用地址
      */
-    public $Url;
+    public $Address;
 
     /**
-     * @param string $Url 视频的 URL。
+     * @param string $Address Zipkin调用地址
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class UrlInputInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
+        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
+            $this->Address = $param["Address"];
         }
     }
 }

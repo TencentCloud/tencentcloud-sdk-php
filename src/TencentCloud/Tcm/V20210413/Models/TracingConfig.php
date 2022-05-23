@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(boolean $Enable) 设置是否启用调用跟踪
  * @method APM getAPM() 获取腾讯云 APM 服务相关参数
  * @method void setAPM(APM $APM) 设置腾讯云 APM 服务相关参数
+ * @method TracingZipkin getZipkin() 获取启动第三方服务器的地址
+ * @method void setZipkin(TracingZipkin $Zipkin) 设置启动第三方服务器的地址
  */
 class TracingConfig extends AbstractModel
 {
@@ -45,9 +47,15 @@ class TracingConfig extends AbstractModel
     public $APM;
 
     /**
+     * @var TracingZipkin 启动第三方服务器的地址
+     */
+    public $Zipkin;
+
+    /**
      * @param float $Sampling 调用链采样率，百分比
      * @param boolean $Enable 是否启用调用跟踪
      * @param APM $APM 腾讯云 APM 服务相关参数
+     * @param TracingZipkin $Zipkin 启动第三方服务器的地址
      */
     function __construct()
     {
@@ -73,6 +81,11 @@ class TracingConfig extends AbstractModel
         if (array_key_exists("APM",$param) and $param["APM"] !== null) {
             $this->APM = new APM();
             $this->APM->deserialize($param["APM"]);
+        }
+
+        if (array_key_exists("Zipkin",$param) and $param["Zipkin"] !== null) {
+            $this->Zipkin = new TracingZipkin();
+            $this->Zipkin->deserialize($param["Zipkin"]);
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 直播处理任务信息
  *
- * @method string getTaskId() 获取视频处理任务 ID。
- * @method void setTaskId(string $TaskId) 设置视频处理任务 ID。
+ * @method string getTaskId() 获取媒体处理任务 ID。
+ * @method void setTaskId(string $TaskId) 设置媒体处理任务 ID。
  * @method string getStatus() 获取任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class LiveStreamProcessTask extends AbstractModel
 {
     /**
-     * @var string 视频处理任务 ID。
+     * @var string 媒体处理任务 ID。
      */
     public $TaskId;
 
@@ -65,7 +65,7 @@ class LiveStreamProcessTask extends AbstractModel
     public $Url;
 
     /**
-     * @param string $TaskId 视频处理任务 ID。
+     * @param string $TaskId 媒体处理任务 ID。
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>

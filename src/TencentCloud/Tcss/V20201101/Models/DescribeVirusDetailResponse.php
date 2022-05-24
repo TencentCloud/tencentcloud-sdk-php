@@ -220,6 +220,18 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationTime(string $OperationTime) 设置事件最后一次处理的时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerNetStatus() 获取容器隔离状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerNetStatus(string $ContainerNetStatus) 设置容器隔离状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerNetSubStatus() 获取容器隔离子状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器隔离子状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -498,6 +510,24 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     public $OperationTime;
 
     /**
+     * @var string 容器隔离状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerNetStatus;
+
+    /**
+     * @var string 容器隔离子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerNetSubStatus;
+
+    /**
+     * @var string 容器隔离操作来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerIsolateOperationSrc;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -602,6 +632,12 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
      * @param string $AncestorProcessParam 祖先进程命令行参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperationTime 事件最后一次处理的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerNetStatus 容器隔离状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerNetSubStatus 容器隔离子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -788,6 +824,18 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
         if (array_key_exists("OperationTime",$param) and $param["OperationTime"] !== null) {
             $this->OperationTime = $param["OperationTime"];
+        }
+
+        if (array_key_exists("ContainerNetStatus",$param) and $param["ContainerNetStatus"] !== null) {
+            $this->ContainerNetStatus = $param["ContainerNetStatus"];
+        }
+
+        if (array_key_exists("ContainerNetSubStatus",$param) and $param["ContainerNetSubStatus"] !== null) {
+            $this->ContainerNetSubStatus = $param["ContainerNetSubStatus"];
+        }
+
+        if (array_key_exists("ContainerIsolateOperationSrc",$param) and $param["ContainerIsolateOperationSrc"] !== null) {
+            $this->ContainerIsolateOperationSrc = $param["ContainerIsolateOperationSrc"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

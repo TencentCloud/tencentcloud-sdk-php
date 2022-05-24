@@ -90,6 +90,42 @@ TOO_MANY: 任务过多
 OFFLINE: 离线
 INTERNAL: 服务内部错误
 VALIDATION: 参数非法
+ * @method string getContainerNetStatus() 获取网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+ * @method void setContainerNetStatus(string $ContainerNetStatus) 设置网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+ * @method string getContainerNetSubStatus() 获取容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+ * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
+ * @method string getMD5() 获取md5值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMD5(string $MD5) 设置md5值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VirusInfo extends AbstractModel
 {
@@ -189,6 +225,40 @@ VALIDATION: 参数非法
     public $SubStatus;
 
     /**
+     * @var string 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public $ContainerNetStatus;
+
+    /**
+     * @var string 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     */
+    public $ContainerNetSubStatus;
+
+    /**
+     * @var string 容器隔离操作来源
+     */
+    public $ContainerIsolateOperationSrc;
+
+    /**
+     * @var string md5值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MD5;
+
+    /**
      * @param string $FileName 文件名称
      * @param string $FilePath 文件路径
      * @param string $VirusName 病毒名称
@@ -224,6 +294,24 @@ TOO_MANY: 任务过多
 OFFLINE: 离线
 INTERNAL: 服务内部错误
 VALIDATION: 参数非法
+     * @param string $ContainerNetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     * @param string $ContainerNetSubStatus 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
+     * @param string $MD5 md5值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -296,6 +384,22 @@ VALIDATION: 参数非法
 
         if (array_key_exists("SubStatus",$param) and $param["SubStatus"] !== null) {
             $this->SubStatus = $param["SubStatus"];
+        }
+
+        if (array_key_exists("ContainerNetStatus",$param) and $param["ContainerNetStatus"] !== null) {
+            $this->ContainerNetStatus = $param["ContainerNetStatus"];
+        }
+
+        if (array_key_exists("ContainerNetSubStatus",$param) and $param["ContainerNetSubStatus"] !== null) {
+            $this->ContainerNetSubStatus = $param["ContainerNetSubStatus"];
+        }
+
+        if (array_key_exists("ContainerIsolateOperationSrc",$param) and $param["ContainerIsolateOperationSrc"] !== null) {
+            $this->ContainerIsolateOperationSrc = $param["ContainerIsolateOperationSrc"];
+        }
+
+        if (array_key_exists("MD5",$param) and $param["MD5"] !== null) {
+            $this->MD5 = $param["MD5"];
         }
     }
 }

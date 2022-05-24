@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCerebroPublicAccess(string $CerebroPublicAccess) 设置Cerebro公网访问状态
  * @method string getCerebroPrivateAccess() 获取Cerebro内网访问状态
  * @method void setCerebroPrivateAccess(string $CerebroPrivateAccess) 设置Cerebro内网访问状态
+ * @method EsConfigSetInfo getEsConfigSet() 获取新增或修改的配置组信息
+ * @method void setEsConfigSet(EsConfigSetInfo $EsConfigSet) 设置新增或修改的配置组信息
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -245,6 +247,11 @@ class UpdateInstanceRequest extends AbstractModel
     public $CerebroPrivateAccess;
 
     /**
+     * @var EsConfigSetInfo 新增或修改的配置组信息
+     */
+    public $EsConfigSet;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -280,6 +287,7 @@ class UpdateInstanceRequest extends AbstractModel
      * @param boolean $EnableCerebro 启用Cerebro
      * @param string $CerebroPublicAccess Cerebro公网访问状态
      * @param string $CerebroPrivateAccess Cerebro内网访问状态
+     * @param EsConfigSetInfo $EsConfigSet 新增或修改的配置组信息
      */
     function __construct()
     {
@@ -422,6 +430,11 @@ class UpdateInstanceRequest extends AbstractModel
 
         if (array_key_exists("CerebroPrivateAccess",$param) and $param["CerebroPrivateAccess"] !== null) {
             $this->CerebroPrivateAccess = $param["CerebroPrivateAccess"];
+        }
+
+        if (array_key_exists("EsConfigSet",$param) and $param["EsConfigSet"] !== null) {
+            $this->EsConfigSet = new EsConfigSetInfo();
+            $this->EsConfigSet->deserialize($param["EsConfigSet"]);
         }
     }
 }

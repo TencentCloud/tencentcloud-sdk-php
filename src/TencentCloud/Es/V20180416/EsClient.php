@@ -23,8 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Es\V20180416\Models as Models;
 
 /**
+ * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) 创建索引
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建指定规格的ES集群实例
+ * @method Models\DeleteIndexResponse DeleteIndex(Models\DeleteIndexRequest $req) 删除索引
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 销毁集群实例 
+ * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
+ * @method Models\DescribeIndexMetaResponse DescribeIndexMeta(Models\DescribeIndexMetaRequest $req) 获取索引元数据
  * @method Models\DescribeInstanceLogsResponse DescribeInstanceLogs(Models\DescribeInstanceLogsRequest $req) 查询用户该地域下符合条件的ES集群的日志
  * @method Models\DescribeInstanceOperationsResponse DescribeInstanceOperations(Models\DescribeInstanceOperationsRequest $req) 查询实例指定条件下的操作记录
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询用户该地域下符合条件的所有实例
@@ -36,6 +40,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\RestartNodesResponse RestartNodes(Models\RestartNodesRequest $req) 用于重启集群节点
  * @method Models\UpdateDiagnoseSettingsResponse UpdateDiagnoseSettings(Models\UpdateDiagnoseSettingsRequest $req) 更新智能运维配置
  * @method Models\UpdateDictionariesResponse UpdateDictionaries(Models\UpdateDictionariesRequest $req) 更新ES集群词典
+ * @method Models\UpdateIndexResponse UpdateIndex(Models\UpdateIndexRequest $req) 更新索引
  * @method Models\UpdateInstanceResponse UpdateInstance(Models\UpdateInstanceRequest $req) 对集群进行节点规格变更，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作。参数中InstanceId为必传参数，ForceRestart为选填参数，剩余参数传递组合及含义如下：
 - InstanceName：修改实例名称(仅用于标识实例)
 - NodeInfoList: 修改节点配置（节点横向扩缩容，纵向扩缩容，增加主节点，增加冷节点等）

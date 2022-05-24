@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateContentReviewTemplate返回参数结构体
  *
- * @method integer getDefinition() 获取内容智能识别模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置内容智能识别模板唯一标识。
+ * @method integer getDefinition() 获取内容审核模板唯一标识。
+ * @method void setDefinition(integer $Definition) 设置内容审核模板唯一标识。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateContentReviewTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer 内容智能识别模板唯一标识。
+     * @var integer 内容审核模板唯一标识。
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class CreateContentReviewTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Definition 内容智能识别模板唯一标识。
+     * @param integer $Definition 内容审核模板唯一标识。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

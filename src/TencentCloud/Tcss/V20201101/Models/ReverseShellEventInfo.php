@@ -58,6 +58,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestFoundTime(string $LatestFoundTime) 设置最近生成时间
  * @method string getDstAddress() 获取目标地址
  * @method void setDstAddress(string $DstAddress) 设置目标地址
+ * @method string getContainerNetStatus() 获取网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+ * @method void setContainerNetStatus(string $ContainerNetStatus) 设置网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+ * @method string getContainerNetSubStatus() 获取容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+ * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
  */
 class ReverseShellEventInfo extends AbstractModel
 {
@@ -145,6 +177,34 @@ class ReverseShellEventInfo extends AbstractModel
     public $DstAddress;
 
     /**
+     * @var string 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public $ContainerNetStatus;
+
+    /**
+     * @var string 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     */
+    public $ContainerNetSubStatus;
+
+    /**
+     * @var string 容器隔离操作来源
+     */
+    public $ContainerIsolateOperationSrc;
+
+    /**
      * @param string $ProcessName 进程名称
      * @param string $ProcessPath 进程路径
      * @param string $ImageId 镜像id
@@ -164,6 +224,22 @@ class ReverseShellEventInfo extends AbstractModel
      * @param integer $EventCount 事件数量
      * @param string $LatestFoundTime 最近生成时间
      * @param string $DstAddress 目标地址
+     * @param string $ContainerNetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     * @param string $ContainerNetSubStatus 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
      */
     function __construct()
     {
@@ -240,6 +316,18 @@ class ReverseShellEventInfo extends AbstractModel
 
         if (array_key_exists("DstAddress",$param) and $param["DstAddress"] !== null) {
             $this->DstAddress = $param["DstAddress"];
+        }
+
+        if (array_key_exists("ContainerNetStatus",$param) and $param["ContainerNetStatus"] !== null) {
+            $this->ContainerNetStatus = $param["ContainerNetStatus"];
+        }
+
+        if (array_key_exists("ContainerNetSubStatus",$param) and $param["ContainerNetSubStatus"] !== null) {
+            $this->ContainerNetSubStatus = $param["ContainerNetSubStatus"];
+        }
+
+        if (array_key_exists("ContainerIsolateOperationSrc",$param) and $param["ContainerIsolateOperationSrc"] !== null) {
+            $this->ContainerIsolateOperationSrc = $param["ContainerIsolateOperationSrc"];
         }
     }
 }

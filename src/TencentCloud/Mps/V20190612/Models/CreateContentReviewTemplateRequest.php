@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateContentReviewTemplate请求参数结构体
  *
- * @method string getName() 获取内容智能识别模板名称，长度限制：64 个字符。
- * @method void setName(string $Name) 设置内容智能识别模板名称，长度限制：64 个字符。
- * @method string getComment() 获取内容智能识别模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置内容智能识别模板描述信息，长度限制：256 个字符。
+ * @method string getName() 获取内容审核模板名称，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置内容审核模板名称，长度限制：64 个字符。
+ * @method string getComment() 获取内容审核模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置内容审核模板描述信息，长度限制：256 个字符。
  * @method PornConfigureInfo getPornConfigure() 获取令人反感的信息的控制参数。
  * @method void setPornConfigure(PornConfigureInfo $PornConfigure) 设置令人反感的信息的控制参数。
  * @method TerrorismConfigureInfo getTerrorismConfigure() 获取令人不安全的信息的控制参数。
@@ -38,18 +38,18 @@ use TencentCloud\Common\AbstractModel;
 <li>谩骂；</li>
 <li>涉毒违法。</li>
 注意：此参数尚未支持。
- * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义内容智能识别控制参数。
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义内容智能识别控制参数。
+ * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义内容审核控制参数。
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义内容审核控制参数。
  */
 class CreateContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 内容智能识别模板名称，长度限制：64 个字符。
+     * @var string 内容审核模板名称，长度限制：64 个字符。
      */
     public $Name;
 
     /**
-     * @var string 内容智能识别模板描述信息，长度限制：256 个字符。
+     * @var string 内容审核模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
 
@@ -77,13 +77,13 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo 用户自定义内容智能识别控制参数。
+     * @var UserDefineConfigureInfo 用户自定义内容审核控制参数。
      */
     public $UserDefineConfigure;
 
     /**
-     * @param string $Name 内容智能识别模板名称，长度限制：64 个字符。
-     * @param string $Comment 内容智能识别模板描述信息，长度限制：256 个字符。
+     * @param string $Name 内容审核模板名称，长度限制：64 个字符。
+     * @param string $Comment 内容审核模板描述信息，长度限制：256 个字符。
      * @param PornConfigureInfo $PornConfigure 令人反感的信息的控制参数。
      * @param TerrorismConfigureInfo $TerrorismConfigure 令人不安全的信息的控制参数。
      * @param PoliticalConfigureInfo $PoliticalConfigure 令人不适宜的信息的控制参数。
@@ -91,7 +91,7 @@ class CreateContentReviewTemplateRequest extends AbstractModel
 <li>谩骂；</li>
 <li>涉毒违法。</li>
 注意：此参数尚未支持。
-     * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义内容智能识别控制参数。
+     * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义内容审核控制参数。
      */
     function __construct()
     {

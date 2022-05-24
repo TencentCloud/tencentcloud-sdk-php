@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableRanger(boolean $EnableRanger) 设置是否打开Ranger地址校验
  * @method array getRangerServiceAddresses() 获取Ranger地址列表，默认为空数组
  * @method void setRangerServiceAddresses(array $RangerServiceAddresses) 设置Ranger地址列表，默认为空数组
+ * @method array getTags() 获取多个资源标签，可以为空数组
+ * @method void setTags(array $Tags) 设置多个资源标签，可以为空数组
  */
 class CreateFileSystemRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateFileSystemRequest extends AbstractModel
     public $RangerServiceAddresses;
 
     /**
+     * @var array 多个资源标签，可以为空数组
+     */
+    public $Tags;
+
+    /**
      * @param string $FileSystemName 文件系统名称
      * @param integer $CapacityQuota 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
      * @param boolean $PosixAcl 是否校验POSIX ACL
@@ -96,6 +103,7 @@ class CreateFileSystemRequest extends AbstractModel
      * @param string $RootInodeGroup 根目录Inode组名，默认为supergroup
      * @param boolean $EnableRanger 是否打开Ranger地址校验
      * @param array $RangerServiceAddresses Ranger地址列表，默认为空数组
+     * @param array $Tags 多个资源标签，可以为空数组
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class CreateFileSystemRequest extends AbstractModel
 
         if (array_key_exists("RangerServiceAddresses",$param) and $param["RangerServiceAddresses"] !== null) {
             $this->RangerServiceAddresses = $param["RangerServiceAddresses"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

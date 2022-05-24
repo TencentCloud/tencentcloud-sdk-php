@@ -100,6 +100,18 @@ re=正则匹配
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleType(string $RuleType) 设置触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsAdvanced() 获取是否为高级指标，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAdvanced(integer $IsAdvanced) 设置是否为高级指标，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsOpen() 获取高级指标是否开通，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsOpen(integer $IsOpen) 设置高级指标是否开通，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductId() 获取集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductId(string $ProductId) 设置集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicyRule extends AbstractModel
 {
@@ -188,6 +200,24 @@ re=正则匹配
     public $RuleType;
 
     /**
+     * @var integer 是否为高级指标，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAdvanced;
+
+    /**
+     * @var integer 高级指标是否开通，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsOpen;
+
+    /**
+     * @var string 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductId;
+
+    /**
      * @param string $MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Period 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
@@ -227,6 +257,12 @@ re=正则匹配
      * @param string $Unit 单位，用于出参
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleType 触发条件类型 STATIC=静态阈值 DYNAMIC=动态阈值。创建或编辑策略时，如不填则默认为 STATIC。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsAdvanced 是否为高级指标，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsOpen 高级指标是否开通，0否，1是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductId 集成中心产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -285,6 +321,18 @@ re=正则匹配
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("IsAdvanced",$param) and $param["IsAdvanced"] !== null) {
+            $this->IsAdvanced = $param["IsAdvanced"];
+        }
+
+        if (array_key_exists("IsOpen",$param) and $param["IsOpen"] !== null) {
+            $this->IsOpen = $param["IsOpen"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

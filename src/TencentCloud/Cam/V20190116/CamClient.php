@@ -94,6 +94,8 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) 从用户组删除用户
  * @method Models\SetDefaultPolicyVersionResponse SetDefaultPolicyVersion(Models\SetDefaultPolicyVersionRequest $req) 本接口（SetDefaultPolicyVersion）可用于设置生效的策略版本。
  * @method Models\SetMfaFlagResponse SetMfaFlag(Models\SetMfaFlagRequest $req) 设置子用户的登录保护和敏感操作校验方式
+ * @method Models\TagRoleResponse TagRole(Models\TagRoleRequest $req) 角色绑定标签
+ * @method Models\UntagRoleResponse UntagRole(Models\UntagRoleRequest $req) 角色解绑标签。
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) 本接口（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文档。
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 更新用户组
  * @method Models\UpdateOIDCConfigResponse UpdateOIDCConfig(Models\UpdateOIDCConfigRequest $req) 修改角色OIDC配置

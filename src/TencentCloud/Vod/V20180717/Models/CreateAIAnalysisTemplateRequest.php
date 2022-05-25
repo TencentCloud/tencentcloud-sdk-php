@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAIAnalysisTemplate请求参数结构体
  *
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getName() 获取视频内容分析模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置视频内容分析模板名称，长度限制：64 个字符。
  * @method string getComment() 获取视频内容分析模板描述信息，长度限制：256 个字符。
@@ -34,11 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrameTagConfigure(FrameTagConfigureInfo $FrameTagConfigure) 设置智能按帧标签任务控制参数。
  * @method HighlightsConfigureInfo getHighlightConfigure() 获取智能精彩集锦任务控制参数。
  * @method void setHighlightConfigure(HighlightsConfigureInfo $HighlightConfigure) 设置智能精彩集锦任务控制参数。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class CreateAIAnalysisTemplateRequest extends AbstractModel
 {
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
     /**
      * @var string 视频内容分析模板名称，长度限制：64 个字符。
      */
@@ -75,11 +80,7 @@ class CreateAIAnalysisTemplateRequest extends AbstractModel
     public $HighlightConfigure;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 视频内容分析模板名称，长度限制：64 个字符。
      * @param string $Comment 视频内容分析模板描述信息，长度限制：256 个字符。
      * @param ClassificationConfigureInfo $ClassificationConfigure 智能分类任务控制参数。
@@ -87,7 +88,6 @@ class CreateAIAnalysisTemplateRequest extends AbstractModel
      * @param CoverConfigureInfo $CoverConfigure 智能封面任务控制参数。
      * @param FrameTagConfigureInfo $FrameTagConfigure 智能按帧标签任务控制参数。
      * @param HighlightsConfigureInfo $HighlightConfigure 智能精彩集锦任务控制参数。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -102,6 +102,10 @@ class CreateAIAnalysisTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -133,10 +137,6 @@ class CreateAIAnalysisTemplateRequest extends AbstractModel
         if (array_key_exists("HighlightConfigure",$param) and $param["HighlightConfigure"] !== null) {
             $this->HighlightConfigure = new HighlightsConfigureInfo();
             $this->HighlightConfigure->deserialize($param["HighlightConfigure"]);
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

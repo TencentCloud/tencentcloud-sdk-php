@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReviewWallSwitch(string $ReviewWallSwitch) 设置智能识别结果是否进入智能识别墙（对识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getName() 获取内容智能识别模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置内容智能识别模板名称，长度限制：64 个字符。
  * @method string getComment() 获取内容智能识别模板描述信息，长度限制：256 个字符。
@@ -46,8 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义内容智能识别控制参数。
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
  * @method void setScreenshotInterval(float $ScreenshotInterval) 设置截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class CreateContentReviewTemplateRequest extends AbstractModel
 {
@@ -57,6 +57,11 @@ class CreateContentReviewTemplateRequest extends AbstractModel
 <li>OFF：否。</li>
      */
     public $ReviewWallSwitch;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string 内容智能识别模板名称，长度限制：64 个字符。
@@ -101,14 +106,10 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $ScreenshotInterval;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $ReviewWallSwitch 智能识别结果是否进入智能识别墙（对识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 内容智能识别模板名称，长度限制：64 个字符。
      * @param string $Comment 内容智能识别模板描述信息，长度限制：256 个字符。
      * @param PornConfigureInfo $PornConfigure 令人反感的信息的控制参数。
@@ -119,7 +120,6 @@ class CreateContentReviewTemplateRequest extends AbstractModel
 <li>涉毒违法。</li>
      * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义内容智能识别控制参数。
      * @param float $ScreenshotInterval 截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -136,6 +136,10 @@ class CreateContentReviewTemplateRequest extends AbstractModel
         }
         if (array_key_exists("ReviewWallSwitch",$param) and $param["ReviewWallSwitch"] !== null) {
             $this->ReviewWallSwitch = $param["ReviewWallSwitch"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -173,10 +177,6 @@ class CreateContentReviewTemplateRequest extends AbstractModel
 
         if (array_key_exists("ScreenshotInterval",$param) and $param["ScreenshotInterval"] !== null) {
             $this->ScreenshotInterval = $param["ScreenshotInterval"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

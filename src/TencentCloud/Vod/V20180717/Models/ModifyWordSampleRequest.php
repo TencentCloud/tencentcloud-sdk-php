@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyword() 获取关键词，长度限制：128 个字符。
  * @method void setKeyword(string $Keyword) 设置关键词，长度限制：128 个字符。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method array getUsages() 获取<b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过音频识别技术，进行内容识别；
@@ -42,8 +44,6 @@ use TencentCloud\Common\AbstractModel;
 7. All：包含以上全部，等价于 1+2+3+4。
  * @method AiSampleTagOperation getTagOperationInfo() 获取标签操作信息。
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) 设置标签操作信息。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class ModifyWordSampleRequest extends AbstractModel
 {
@@ -51,6 +51,11 @@ class ModifyWordSampleRequest extends AbstractModel
      * @var string 关键词，长度限制：128 个字符。
      */
     public $Keyword;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var array <b>关键词应用场景，可选值：</b>
@@ -71,12 +76,8 @@ class ModifyWordSampleRequest extends AbstractModel
     public $TagOperationInfo;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $Keyword 关键词，长度限制：128 个字符。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param array $Usages <b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过音频识别技术，进行内容识别；
@@ -87,7 +88,6 @@ class ModifyWordSampleRequest extends AbstractModel
 6. Review：通过光学字符识别技术、音频识别技术，进行不适宜的内容识别，等价于 3+4；
 7. All：包含以上全部，等价于 1+2+3+4。
      * @param AiSampleTagOperation $TagOperationInfo 标签操作信息。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -106,6 +106,10 @@ class ModifyWordSampleRequest extends AbstractModel
             $this->Keyword = $param["Keyword"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
             $this->Usages = $param["Usages"];
         }
@@ -113,10 +117,6 @@ class ModifyWordSampleRequest extends AbstractModel
         if (array_key_exists("TagOperationInfo",$param) and $param["TagOperationInfo"] !== null) {
             $this->TagOperationInfo = new AiSampleTagOperation();
             $this->TagOperationInfo->deserialize($param["TagOperationInfo"]);
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

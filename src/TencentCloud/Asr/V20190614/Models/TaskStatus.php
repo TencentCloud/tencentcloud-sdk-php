@@ -18,7 +18,7 @@ namespace TencentCloud\Asr\V20190614\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 获取录音识别结果结果的返回参数
+ * 获取录音识别结果的返回参数
  *
  * @method integer getTaskId() 获取任务标识。
  * @method void setTaskId(integer $TaskId) 设置任务标识。

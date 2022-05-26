@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResumeServerless返回参数结构体
+ * CreateSparkAppTask返回参数结构体
  *
- * @method integer getFlowId() 获取异步流程ID
- * @method void setFlowId(integer $FlowId) 设置异步流程ID
+ * @method string getBatchId() 获取批Id
+ * @method void setBatchId(string $BatchId) 设置批Id
+ * @method string getTaskId() 获取任务Id
+ * @method void setTaskId(string $TaskId) 设置任务Id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ResumeServerlessResponse extends AbstractModel
+class CreateSparkAppTaskResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程ID
+     * @var string 批Id
      */
-    public $FlowId;
+    public $BatchId;
+
+    /**
+     * @var string 任务Id
+     */
+    public $TaskId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ResumeServerlessResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步流程ID
+     * @param string $BatchId 批Id
+     * @param string $TaskId 任务Id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,12 @@ class ResumeServerlessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
+            $this->BatchId = $param["BatchId"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

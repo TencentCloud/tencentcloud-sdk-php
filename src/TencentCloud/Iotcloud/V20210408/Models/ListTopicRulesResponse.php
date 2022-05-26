@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Iotcloud\V20210408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResumeServerless返回参数结构体
+ * ListTopicRules返回参数结构体
  *
- * @method integer getFlowId() 获取异步流程ID
- * @method void setFlowId(integer $FlowId) 设置异步流程ID
+ * @method integer getTotalCnt() 获取规则总数量
+ * @method void setTotalCnt(integer $TotalCnt) 设置规则总数量
+ * @method array getRules() 获取规则列表
+ * @method void setRules(array $Rules) 设置规则列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ResumeServerlessResponse extends AbstractModel
+class ListTopicRulesResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程ID
+     * @var integer 规则总数量
      */
-    public $FlowId;
+    public $TotalCnt;
+
+    /**
+     * @var array 规则列表
+     */
+    public $Rules;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ResumeServerlessResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步流程ID
+     * @param integer $TotalCnt 规则总数量
+     * @param array $Rules 规则列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class ResumeServerlessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists("TotalCnt",$param) and $param["TotalCnt"] !== null) {
+            $this->TotalCnt = $param["TotalCnt"];
+        }
+
+        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+            $this->Rules = [];
+            foreach ($param["Rules"] as $key => $value){
+                $obj = new TopicRuleInfo();
+                $obj->deserialize($value);
+                array_push($this->Rules, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

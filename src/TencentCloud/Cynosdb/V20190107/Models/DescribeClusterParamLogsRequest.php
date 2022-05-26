@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100
- * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，最大值为 100
- * @method integer getOffset() 获取记录偏移量，默认值为0
- * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0
+ * @method integer getLimit() 获取返回数量，默认为 20，取值范围为(0,100]
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，取值范围为(0,100]
+ * @method integer getOffset() 获取记录偏移量，默认值为0，取值范围为[0,INF)
+ * @method void setOffset(integer $Offset) 设置记录偏移量，默认值为0，取值范围为[0,INF)
  */
 class DescribeClusterParamLogsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeClusterParamLogsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer 返回数量，默认为 20，最大值为 100
+     * @var integer 返回数量，默认为 20，取值范围为(0,100]
      */
     public $Limit;
 
     /**
-     * @var integer 记录偏移量，默认值为0
+     * @var integer 记录偏移量，默认值为0，取值范围为[0,INF)
      */
     public $Offset;
 
     /**
      * @param string $ClusterId 集群ID
-     * @param integer $Limit 返回数量，默认为 20，最大值为 100
-     * @param integer $Offset 记录偏移量，默认值为0
+     * @param integer $Limit 返回数量，默认为 20，取值范围为(0,100]
+     * @param integer $Offset 记录偏移量，默认值为0，取值范围为[0,INF)
      */
     function __construct()
     {

@@ -31,9 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
 <li> MYSQL </li>
  * @method string getDbVersion() 获取数据库版本，取值范围: 
-<li> MYSQL可选值：5.7 </li>
+<li> MYSQL可选值：5.7，8.0 </li>
  * @method void setDbVersion(string $DbVersion) 设置数据库版本，取值范围: 
-<li> MYSQL可选值：5.7 </li>
+<li> MYSQL可选值：5.7，8.0 </li>
  * @method integer getProjectId() 获取所属项目ID
  * @method void setProjectId(integer $ProjectId) 设置所属项目ID
  * @method integer getCpu() 获取当DbMode为NORMAL或不填时必选
@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
 存储大小，单位G。
  * @method void setStorage(integer $Storage) 设置该参数无实际意义，已废弃。
 存储大小，单位G。
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getClusterName() 获取集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+ * @method void setClusterName(string $ClusterName) 设置集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
  * @method string getAdminPassword() 获取账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
  * @method void setAdminPassword(string $AdminPassword) 设置账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
  * @method integer getPort() 获取端口，默认5432
@@ -84,8 +84,8 @@ timeRollback，时间点回档
  * @method void setInstanceCount(integer $InstanceCount) 设置实例数量
  * @method integer getTimeSpan() 获取包年包月购买时长
  * @method void setTimeSpan(integer $TimeSpan) 设置包年包月购买时长
- * @method string getTimeUnit() 获取包年包月购买时长单位
- * @method void setTimeUnit(string $TimeUnit) 设置包年包月购买时长单位
+ * @method string getTimeUnit() 获取包年包月购买时长单位，['s','d','m','y']
+ * @method void setTimeUnit(string $TimeUnit) 设置包年包月购买时长单位，['s','d','m','y']
  * @method integer getAutoRenewFlag() 获取包年包月购买是否自动续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置包年包月购买是否自动续费
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
@@ -166,7 +166,7 @@ class CreateClustersRequest extends AbstractModel
 
     /**
      * @var string 数据库版本，取值范围: 
-<li> MYSQL可选值：5.7 </li>
+<li> MYSQL可选值：5.7，8.0 </li>
      */
     public $DbVersion;
 
@@ -194,7 +194,7 @@ class CreateClustersRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var string 集群名称
+     * @var string 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
      */
     public $ClusterName;
 
@@ -264,7 +264,7 @@ timeRollback，时间点回档
     public $TimeSpan;
 
     /**
-     * @var string 包年包月购买时长单位
+     * @var string 包年包月购买时长单位，['s','d','m','y']
      */
     public $TimeUnit;
 
@@ -366,7 +366,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param string $DbType 数据库类型，取值范围: 
 <li> MYSQL </li>
      * @param string $DbVersion 数据库版本，取值范围: 
-<li> MYSQL可选值：5.7 </li>
+<li> MYSQL可选值：5.7，8.0 </li>
      * @param integer $ProjectId 所属项目ID
      * @param integer $Cpu 当DbMode为NORMAL或不填时必选
 普通实例Cpu核数
@@ -374,7 +374,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 普通实例内存,单位G
      * @param integer $Storage 该参数无实际意义，已废弃。
 存储大小，单位G。
-     * @param string $ClusterName 集群名称
+     * @param string $ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
      * @param string $AdminPassword 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
      * @param integer $Port 端口，默认5432
      * @param integer $PayMode 计费模式，按量计费：0，包年包月：1。默认按量计费。
@@ -392,7 +392,7 @@ timeRollback，时间点回档
 当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
      * @param integer $InstanceCount 实例数量
      * @param integer $TimeSpan 包年包月购买时长
-     * @param string $TimeUnit 包年包月购买时长单位
+     * @param string $TimeUnit 包年包月购买时长单位，['s','d','m','y']
      * @param integer $AutoRenewFlag 包年包月购买是否自动续费
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
      * @param integer $HaCount 实例数量（该参数已不再使用，只做存量兼容处理）

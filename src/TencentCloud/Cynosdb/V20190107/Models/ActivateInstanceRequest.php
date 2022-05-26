@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getInstanceIdList() 获取实例ID数组
- * @method void setInstanceIdList(array $InstanceIdList) 设置实例ID数组
+ * @method array getInstanceIdList() 获取实例 ID 列表，单个实例 ID 格式如：cynosdbmysql-ins-n7ocdslw，与TDSQL-C MySQL数据库控制台页面中显示的实例 ID 相同，可使用 查询实例列表 接口获取，其值为输出参数中字段 InstanceId 的值。
+ * @method void setInstanceIdList(array $InstanceIdList) 设置实例 ID 列表，单个实例 ID 格式如：cynosdbmysql-ins-n7ocdslw，与TDSQL-C MySQL数据库控制台页面中显示的实例 ID 相同，可使用 查询实例列表 接口获取，其值为输出参数中字段 InstanceId 的值。
  */
 class ActivateInstanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ActivateInstanceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 实例ID数组
+     * @var array 实例 ID 列表，单个实例 ID 格式如：cynosdbmysql-ins-n7ocdslw，与TDSQL-C MySQL数据库控制台页面中显示的实例 ID 相同，可使用 查询实例列表 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     public $InstanceIdList;
 
     /**
      * @param string $ClusterId 集群ID
-     * @param array $InstanceIdList 实例ID数组
+     * @param array $InstanceIdList 实例 ID 列表，单个实例 ID 格式如：cynosdbmysql-ins-n7ocdslw，与TDSQL-C MySQL数据库控制台页面中显示的实例 ID 相同，可使用 查询实例列表 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     function __construct()
     {

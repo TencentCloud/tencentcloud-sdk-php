@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAccountParams请求参数结构体
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method string getClusterId() 获取集群id，不超过32个字符
+ * @method void setClusterId(string $ClusterId) 设置集群id，不超过32个字符
  * @method InputAccount getAccount() 获取账号信息
  * @method void setAccount(InputAccount $Account) 设置账号信息
  * @method array getAccountParams() 获取数据库表权限数组,当前仅支持参数：max_user_connections
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAccountParamsRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string 集群id，不超过32个字符
      */
     public $ClusterId;
 
@@ -45,7 +45,7 @@ class ModifyAccountParamsRequest extends AbstractModel
     public $AccountParams;
 
     /**
-     * @param string $ClusterId 集群id
+     * @param string $ClusterId 集群id，不超过32个字符
      * @param InputAccount $Account 账号信息
      * @param array $AccountParams 数据库表权限数组,当前仅支持参数：max_user_connections
      */

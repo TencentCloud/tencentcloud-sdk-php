@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PauseServerless请求参数结构体
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method integer getForcePause() 获取是否强制暂停，忽略当前的用户链接  0:不强制  1:强制， 默认为1
  * @method void setForcePause(integer $ForcePause) 设置是否强制暂停，忽略当前的用户链接  0:不强制  1:强制， 默认为1
  */
 class PauseServerlessRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string 集群ID
      */
     public $ClusterId;
 
@@ -38,7 +38,7 @@ class PauseServerlessRequest extends AbstractModel
     public $ForcePause;
 
     /**
-     * @param string $ClusterId 集群id
+     * @param string $ClusterId 集群ID
      * @param integer $ForcePause 是否强制暂停，忽略当前的用户链接  0:不强制  1:强制， 默认为1
      */
     function __construct()

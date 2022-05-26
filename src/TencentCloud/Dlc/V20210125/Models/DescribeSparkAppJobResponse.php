@@ -14,23 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResumeServerless返回参数结构体
+ * DescribeSparkAppJob返回参数结构体
  *
- * @method integer getFlowId() 获取异步流程ID
- * @method void setFlowId(integer $FlowId) 设置异步流程ID
+ * @method SparkJobInfo getJob() 获取spark作业详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJob(SparkJobInfo $Job) 设置spark作业详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsExists() 获取查询的spark作业是否存在
+ * @method void setIsExists(boolean $IsExists) 设置查询的spark作业是否存在
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ResumeServerlessResponse extends AbstractModel
+class DescribeSparkAppJobResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程ID
+     * @var SparkJobInfo spark作业详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FlowId;
+    public $Job;
+
+    /**
+     * @var boolean 查询的spark作业是否存在
+     */
+    public $IsExists;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +48,9 @@ class ResumeServerlessResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步流程ID
+     * @param SparkJobInfo $Job spark作业详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsExists 查询的spark作业是否存在
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +66,13 @@ class ResumeServerlessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists("Job",$param) and $param["Job"] !== null) {
+            $this->Job = new SparkJobInfo();
+            $this->Job->deserialize($param["Job"]);
+        }
+
+        if (array_key_exists("IsExists",$param) and $param["IsExists"] !== null) {
+            $this->IsExists = $param["IsExists"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

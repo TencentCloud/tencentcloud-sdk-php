@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResumeServerless返回参数结构体
+ * DescribeSparkAppJobs返回参数结构体
  *
- * @method integer getFlowId() 获取异步流程ID
- * @method void setFlowId(integer $FlowId) 设置异步流程ID
+ * @method array getSparkAppJobs() 获取spark作业列表详情
+ * @method void setSparkAppJobs(array $SparkAppJobs) 设置spark作业列表详情
+ * @method integer getTotalCount() 获取spark作业总数
+ * @method void setTotalCount(integer $TotalCount) 设置spark作业总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ResumeServerlessResponse extends AbstractModel
+class DescribeSparkAppJobsResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程ID
+     * @var array spark作业列表详情
      */
-    public $FlowId;
+    public $SparkAppJobs;
+
+    /**
+     * @var integer spark作业总数
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ResumeServerlessResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步流程ID
+     * @param array $SparkAppJobs spark作业列表详情
+     * @param integer $TotalCount spark作业总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class ResumeServerlessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists("SparkAppJobs",$param) and $param["SparkAppJobs"] !== null) {
+            $this->SparkAppJobs = [];
+            foreach ($param["SparkAppJobs"] as $key => $value){
+                $obj = new SparkJobInfo();
+                $obj->deserialize($value);
+                array_push($this->SparkAppJobs, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Iotcloud\V20210408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResumeServerless请求参数结构体
+ * ListTopicRules请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method integer getPageNum() 获取请求的页数
+ * @method void setPageNum(integer $PageNum) 设置请求的页数
+ * @method integer getPageSize() 获取分页的大小
+ * @method void setPageSize(integer $PageSize) 设置分页的大小
  */
-class ResumeServerlessRequest extends AbstractModel
+class ListTopicRulesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var integer 请求的页数
      */
-    public $ClusterId;
+    public $PageNum;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @var integer 分页的大小
+     */
+    public $PageSize;
+
+    /**
+     * @param integer $PageNum 请求的页数
+     * @param integer $PageSize 分页的大小
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class ResumeServerlessRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
+            $this->PageNum = $param["PageNum"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
     }
 }

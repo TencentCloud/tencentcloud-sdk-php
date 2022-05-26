@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResumeServerless请求参数结构体
+ * DeleteSparkApp请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getAppName() 获取spark应用名
+ * @method void setAppName(string $AppName) 设置spark应用名
  */
-class ResumeServerlessRequest extends AbstractModel
+class DeleteSparkAppRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string spark应用名
      */
-    public $ClusterId;
+    public $AppName;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $AppName spark应用名
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ResumeServerlessRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
+            $this->AppName = $param["AppName"];
         }
     }
 }

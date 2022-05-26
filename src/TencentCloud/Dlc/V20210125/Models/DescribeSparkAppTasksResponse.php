@@ -14,23 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResumeServerless返回参数结构体
+ * DescribeSparkAppTasks返回参数结构体
  *
- * @method integer getFlowId() 获取异步流程ID
- * @method void setFlowId(integer $FlowId) 设置异步流程ID
+ * @method TaskResponseInfo getTasks() 获取任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTasks(TaskResponseInfo $Tasks) 设置任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取任务总数
+ * @method void setTotalCount(integer $TotalCount) 设置任务总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ResumeServerlessResponse extends AbstractModel
+class DescribeSparkAppTasksResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程ID
+     * @var TaskResponseInfo 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FlowId;
+    public $Tasks;
+
+    /**
+     * @var integer 任务总数
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +48,9 @@ class ResumeServerlessResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步流程ID
+     * @param TaskResponseInfo $Tasks 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 任务总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +66,13 @@ class ResumeServerlessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = new TaskResponseInfo();
+            $this->Tasks->deserialize($param["Tasks"]);
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

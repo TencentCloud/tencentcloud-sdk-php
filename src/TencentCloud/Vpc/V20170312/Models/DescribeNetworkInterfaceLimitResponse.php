@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtendEniPrivateIpAddressQuantity(integer $ExtendEniPrivateIpAddressQuantity) 设置每个扩展型弹性网卡可以分配的IP配额
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubEniQuantity() 获取中继网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubEniQuantity(integer $SubEniQuantity) 设置中继网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubEniPrivateIpAddressQuantity() 获取每个中继网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubEniPrivateIpAddressQuantity(integer $SubEniPrivateIpAddressQuantity) 设置每个中继网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -60,6 +68,18 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
     public $ExtendEniPrivateIpAddressQuantity;
 
     /**
+     * @var integer 中继网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubEniQuantity;
+
+    /**
+     * @var integer 每个中继网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubEniPrivateIpAddressQuantity;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -70,6 +90,10 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
      * @param integer $ExtendEniQuantity 扩展型网卡配额
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExtendEniPrivateIpAddressQuantity 每个扩展型弹性网卡可以分配的IP配额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubEniQuantity 中继网卡配额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubEniPrivateIpAddressQuantity 每个中继网卡可以分配的IP配额
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -100,6 +124,14 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
 
         if (array_key_exists("ExtendEniPrivateIpAddressQuantity",$param) and $param["ExtendEniPrivateIpAddressQuantity"] !== null) {
             $this->ExtendEniPrivateIpAddressQuantity = $param["ExtendEniPrivateIpAddressQuantity"];
+        }
+
+        if (array_key_exists("SubEniQuantity",$param) and $param["SubEniQuantity"] !== null) {
+            $this->SubEniQuantity = $param["SubEniQuantity"];
+        }
+
+        if (array_key_exists("SubEniPrivateIpAddressQuantity",$param) and $param["SubEniPrivateIpAddressQuantity"] !== null) {
+            $this->SubEniPrivateIpAddressQuantity = $param["SubEniPrivateIpAddressQuantity"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotId(string $SnapshotId) 设置快照ID。
  * @method string getTimeStartShare() 获取快照开始共享的时间。
  * @method void setTimeStartShare(string $TimeStartShare) 设置快照开始共享的时间。
+ * @method array getTags() 获取快照绑定的标签列表。
+ * @method void setTags(array $Tags) 设置快照绑定的标签列表。
  */
 class Snapshot extends AbstractModel
 {
@@ -157,6 +159,11 @@ class Snapshot extends AbstractModel
     public $TimeStartShare;
 
     /**
+     * @var array 快照绑定的标签列表。
+     */
+    public $Tags;
+
+    /**
      * @param Placement $Placement 快照所在的位置。
      * @param boolean $CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
      * @param string $SnapshotState 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
@@ -176,6 +183,7 @@ class Snapshot extends AbstractModel
      * @param string $DiskUsage 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
      * @param string $SnapshotId 快照ID。
      * @param string $TimeStartShare 快照开始共享的时间。
+     * @param array $Tags 快照绑定的标签列表。
      */
     function __construct()
     {
@@ -270,6 +278,15 @@ class Snapshot extends AbstractModel
 
         if (array_key_exists("TimeStartShare",$param) and $param["TimeStartShare"] !== null) {
             $this->TimeStartShare = $param["TimeStartShare"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

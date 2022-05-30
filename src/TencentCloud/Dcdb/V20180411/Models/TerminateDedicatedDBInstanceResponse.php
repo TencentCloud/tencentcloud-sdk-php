@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ccc\V20200210\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTelCallInfo返回参数结构体
+ * TerminateDedicatedDBInstance返回参数结构体
  *
- * @method integer getTelCallOutCount() 获取呼出套餐包消耗分钟数
- * @method void setTelCallOutCount(integer $TelCallOutCount) 设置呼出套餐包消耗分钟数
- * @method integer getTelCallInCount() 获取呼入套餐包消耗分钟数
- * @method void setTelCallInCount(integer $TelCallInCount) 设置呼入套餐包消耗分钟数
- * @method integer getSeatUsedCount() 获取坐席使用统计个数
- * @method void setSeatUsedCount(integer $SeatUsedCount) 设置坐席使用统计个数
+ * @method integer getFlowId() 获取异步流程Id
+ * @method void setFlowId(integer $FlowId) 设置异步流程Id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTelCallInfoResponse extends AbstractModel
+class TerminateDedicatedDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 呼出套餐包消耗分钟数
+     * @var integer 异步流程Id
      */
-    public $TelCallOutCount;
-
-    /**
-     * @var integer 呼入套餐包消耗分钟数
-     */
-    public $TelCallInCount;
-
-    /**
-     * @var integer 坐席使用统计个数
-     */
-    public $SeatUsedCount;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class DescribeTelCallInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TelCallOutCount 呼出套餐包消耗分钟数
-     * @param integer $TelCallInCount 呼入套餐包消耗分钟数
-     * @param integer $SeatUsedCount 坐席使用统计个数
+     * @param integer $FlowId 异步流程Id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +54,8 @@ class DescribeTelCallInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TelCallOutCount",$param) and $param["TelCallOutCount"] !== null) {
-            $this->TelCallOutCount = $param["TelCallOutCount"];
-        }
-
-        if (array_key_exists("TelCallInCount",$param) and $param["TelCallInCount"] !== null) {
-            $this->TelCallInCount = $param["TelCallInCount"];
-        }
-
-        if (array_key_exists("SeatUsedCount",$param) and $param["SeatUsedCount"] !== null) {
-            $this->SeatUsedCount = $param["SeatUsedCount"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

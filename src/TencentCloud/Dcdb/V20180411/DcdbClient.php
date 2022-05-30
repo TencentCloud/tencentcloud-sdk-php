@@ -90,6 +90,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) 本接口（ResetAccountPassword）用于重置云数据库账号的密码。
 注意：相同用户名，不同Host是不同的账号。
  * @method Models\SwitchDBInstanceHAResponse SwitchDBInstanceHA(Models\SwitchDBInstanceHARequest $req) 本接口(SwitchDBInstanceHA)用于实例主备切换。
+ * @method Models\TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstance(Models\TerminateDedicatedDBInstanceRequest $req) 本接口（IsolateDedicatedDBInstance）用于销毁已隔离的独享分布式数据库实例。
  * @method Models\UpgradeDCDBInstanceResponse UpgradeDCDBInstance(Models\UpgradeDCDBInstanceRequest $req) 本接口（UpgradeDCDBInstance）用于升级分布式数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
  */
 

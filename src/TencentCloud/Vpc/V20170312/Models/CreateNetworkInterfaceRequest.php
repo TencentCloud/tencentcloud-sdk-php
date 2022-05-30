@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置指定的内网IP信息，单次最多指定10个。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+ * @method string getTrunkingFlag() 获取网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
+ * @method void setTrunkingFlag(string $TrunkingFlag) 设置网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
  */
 class CreateNetworkInterfaceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
+     */
+    public $TrunkingFlag;
+
+    /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
      * @param string $SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
@@ -88,6 +95,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @param array $SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
      * @param array $PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * @param string $TrunkingFlag 网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
      */
     function __construct()
     {
@@ -142,6 +150,10 @@ class CreateNetworkInterfaceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("TrunkingFlag",$param) and $param["TrunkingFlag"] !== null) {
+            $this->TrunkingFlag = $param["TrunkingFlag"];
         }
     }
 }

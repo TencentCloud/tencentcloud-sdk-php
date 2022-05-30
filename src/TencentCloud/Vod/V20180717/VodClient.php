@@ -393,6 +393,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 剪辑不固化的优势在于其剪辑操作十分“轻量化”，不会产生额外的存储开销。但其不足之处在于生命周期与原始录制视频相同，且无法进一步进行转码等视频处理。
  * @method Models\SplitMediaResponse SplitMedia(Models\SplitMediaRequest $req) 对点播视频进行拆条，生成多个新的点播视频。
  * @method Models\WeChatMiniProgramPublishResponse WeChatMiniProgramPublish(Models\WeChatMiniProgramPublishRequest $req) 将点播视频发布到微信小程序，供微信小程序播放器播放。
+本接口支持发布原始视频和转码后视频，暂不支持发布自适应码流。
  */
 
 class VodClient extends AbstractClient

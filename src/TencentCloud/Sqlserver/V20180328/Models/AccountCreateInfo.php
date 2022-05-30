@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置账号备注信息
  * @method boolean getIsAdmin() 获取是否为管理员账户，默认为否
  * @method void setIsAdmin(boolean $IsAdmin) 设置是否为管理员账户，默认为否
- * @method string getAuthentication() 获取win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
- * @method void setAuthentication(string $Authentication) 设置win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+ * @method string getAuthentication() 获取win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
+ * @method void setAuthentication(string $Authentication) 设置win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
  */
 class AccountCreateInfo extends AbstractModel
 {
@@ -61,7 +61,7 @@ class AccountCreateInfo extends AbstractModel
     public $IsAdmin;
 
     /**
-     * @var string win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+     * @var string win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
      */
     public $Authentication;
 
@@ -71,7 +71,7 @@ class AccountCreateInfo extends AbstractModel
      * @param array $DBPrivileges DB权限列表
      * @param string $Remark 账号备注信息
      * @param boolean $IsAdmin 是否为管理员账户，默认为否
-     * @param string $Authentication win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+     * @param string $Authentication win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
      */
     function __construct()
     {

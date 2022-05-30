@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagMsg(string $TagMsg) 设置标签操作的返回信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHsmClusterId() 获取HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHsmClusterId(string $HsmClusterId) 设置HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,6 +95,12 @@ class CreateKeyResponse extends AbstractModel
     public $TagMsg;
 
     /**
+     * @var string HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HsmClusterId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -106,6 +116,8 @@ class CreateKeyResponse extends AbstractModel
      * @param integer $TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TagMsg 标签操作的返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -152,6 +164,10 @@ class CreateKeyResponse extends AbstractModel
 
         if (array_key_exists("TagMsg",$param) and $param["TagMsg"] !== null) {
             $this->TagMsg = $param["TagMsg"];
+        }
+
+        if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
+            $this->HsmClusterId = $param["HsmClusterId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

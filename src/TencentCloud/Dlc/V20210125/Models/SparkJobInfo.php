@@ -76,6 +76,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSource(string $DataSource) 设置数据源名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsLocalPythonFiles() 获取pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsLocalPythonFiles(string $IsLocalPythonFiles) 设置pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppPythonFiles() 获取pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppPythonFiles(string $AppPythonFiles) 设置pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -212,6 +220,18 @@ class SparkJobInfo extends AbstractModel
     public $DataSource;
 
     /**
+     * @var string pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsLocalPythonFiles;
+
+    /**
+     * @var string pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppPythonFiles;
+
+    /**
      * @param string $JobId spark作业ID
      * @param string $JobName spark作业名
      * @param integer $JobType spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业
@@ -239,6 +259,10 @@ class SparkJobInfo extends AbstractModel
      * @param StreamingStatistics $StreamingStat spark流作业统计
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSource 数据源名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -357,6 +381,14 @@ class SparkJobInfo extends AbstractModel
 
         if (array_key_exists("DataSource",$param) and $param["DataSource"] !== null) {
             $this->DataSource = $param["DataSource"];
+        }
+
+        if (array_key_exists("IsLocalPythonFiles",$param) and $param["IsLocalPythonFiles"] !== null) {
+            $this->IsLocalPythonFiles = $param["IsLocalPythonFiles"];
+        }
+
+        if (array_key_exists("AppPythonFiles",$param) and $param["AppPythonFiles"] !== null) {
+            $this->AppPythonFiles = $param["AppPythonFiles"];
         }
     }
 }

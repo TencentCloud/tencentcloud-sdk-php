@@ -156,6 +156,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置关联标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RootCertificates getRootCert() 获取根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRootCert(RootCertificates $RootCert) 设置根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncryptCert() 获取国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncryptCert(string $EncryptCert) 设置国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncryptPrivateKey() 获取国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncryptPrivateKey(string $EncryptPrivateKey) 设置国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -366,6 +378,24 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $Tags;
 
     /**
+     * @var RootCertificates 根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RootCert;
+
+    /**
+     * @var string 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EncryptCert;
+
+    /**
+     * @var string 国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EncryptPrivateKey;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -438,6 +468,12 @@ class DescribeCertificateDetailResponse extends AbstractModel
      * @param boolean $Deployable 是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 关联标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RootCertificates $RootCert 根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EncryptCert 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EncryptPrivateKey 国密加密私钥
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -596,6 +632,19 @@ class DescribeCertificateDetailResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("RootCert",$param) and $param["RootCert"] !== null) {
+            $this->RootCert = new RootCertificates();
+            $this->RootCert->deserialize($param["RootCert"]);
+        }
+
+        if (array_key_exists("EncryptCert",$param) and $param["EncryptCert"] !== null) {
+            $this->EncryptCert = $param["EncryptCert"];
+        }
+
+        if (array_key_exists("EncryptPrivateKey",$param) and $param["EncryptPrivateKey"] !== null) {
+            $this->EncryptPrivateKey = $param["EncryptPrivateKey"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

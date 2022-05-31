@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxRetries(integer $MaxRetries) 设置只对spark流任务生效
  * @method string getDataSource() 获取数据源名
  * @method void setDataSource(string $DataSource) 设置数据源名
+ * @method string getIsLocalPythonFiles() 获取pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+ * @method void setIsLocalPythonFiles(string $IsLocalPythonFiles) 设置pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+ * @method string getAppPythonFiles() 获取pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+ * @method void setAppPythonFiles(string $AppPythonFiles) 设置pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
  */
 class CreateSparkAppRequest extends AbstractModel
 {
@@ -157,6 +161,16 @@ class CreateSparkAppRequest extends AbstractModel
     public $DataSource;
 
     /**
+     * @var string pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     */
+    public $IsLocalPythonFiles;
+
+    /**
+     * @var string pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     */
+    public $AppPythonFiles;
+
+    /**
      * @param string $AppName spark应用名
      * @param integer $AppType 1代表spark jar应用，2代表spark streaming应用
      * @param string $DataEngine 执行spark作业的数据引擎
@@ -176,6 +190,8 @@ class CreateSparkAppRequest extends AbstractModel
      * @param string $CmdArgs spark作业命令行参数
      * @param integer $MaxRetries 只对spark流任务生效
      * @param string $DataSource 数据源名
+     * @param string $IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @param string $AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
      */
     function __construct()
     {
@@ -264,6 +280,14 @@ class CreateSparkAppRequest extends AbstractModel
 
         if (array_key_exists("DataSource",$param) and $param["DataSource"] !== null) {
             $this->DataSource = $param["DataSource"];
+        }
+
+        if (array_key_exists("IsLocalPythonFiles",$param) and $param["IsLocalPythonFiles"] !== null) {
+            $this->IsLocalPythonFiles = $param["IsLocalPythonFiles"];
+        }
+
+        if (array_key_exists("AppPythonFiles",$param) and $param["AppPythonFiles"] !== null) {
+            $this->AppPythonFiles = $param["AppPythonFiles"];
         }
     }
 }

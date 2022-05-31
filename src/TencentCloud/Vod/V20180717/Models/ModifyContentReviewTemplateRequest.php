@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取内容智能识别模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置内容智能识别模板唯一标识。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getName() 获取内容智能识别模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置内容智能识别模板名称，长度限制：64 个字符。
  * @method string getComment() 获取内容智能识别模板描述信息，长度限制：256 个字符。
@@ -48,8 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReviewWallSwitch(string $ReviewWallSwitch) 设置智能识别结果是否进入智能识别墙（对智能识别结果进行人工识别）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class ModifyContentReviewTemplateRequest extends AbstractModel
 {
@@ -57,6 +57,11 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
      * @var integer 内容智能识别模板唯一标识。
      */
     public $Definition;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string 内容智能识别模板名称，长度限制：64 个字符。
@@ -108,12 +113,8 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     public $ReviewWallSwitch;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param integer $Definition 内容智能识别模板唯一标识。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 内容智能识别模板名称，长度限制：64 个字符。
      * @param string $Comment 内容智能识别模板描述信息，长度限制：256 个字符。
      * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure 令人不安全的信息的控制参数。
@@ -127,7 +128,6 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
      * @param string $ReviewWallSwitch 智能识别结果是否进入智能识别墙（对智能识别结果进行人工识别）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -144,6 +144,10 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -185,10 +189,6 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
 
         if (array_key_exists("ReviewWallSwitch",$param) and $param["ReviewWallSwitch"] !== null) {
             $this->ReviewWallSwitch = $param["ReviewWallSwitch"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

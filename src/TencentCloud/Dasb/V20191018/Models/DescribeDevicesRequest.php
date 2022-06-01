@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDevices请求参数结构体
  *
- * @method array getIdSet() 获取主机ID集合，非必需
- * @method void setIdSet(array $IdSet) 设置主机ID集合，非必需
- * @method string getName() 获取主机名或主机IP，模糊查询
- * @method void setName(string $Name) 设置主机名或主机IP，模糊查询
+ * @method array getIdSet() 获取资产ID集合
+ * @method void setIdSet(array $IdSet) 设置资产ID集合
+ * @method string getName() 获取资产名或资产IP，模糊查询
+ * @method void setName(string $Name) 设置资产名或资产IP，模糊查询
  * @method string getIp() 获取暂未使用
  * @method void setIp(string $Ip) 设置暂未使用
  * @method array getApCodeSet() 获取地域码集合
  * @method void setApCodeSet(array $ApCodeSet) 设置地域码集合
- * @method integer getKind() 获取操作系统类型
- * @method void setKind(integer $Kind) 设置操作系统类型
+ * @method integer getKind() 获取操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+ * @method void setKind(integer $Kind) 设置操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
  * @method integer getOffset() 获取分页，偏移位置
  * @method void setOffset(integer $Offset) 设置分页，偏移位置
  * @method integer getLimit() 获取每页条目数量，默认20
  * @method void setLimit(integer $Limit) 设置每页条目数量，默认20
- * @method array getAuthorizedUserIdSet() 获取有该主机访问权限的用户ID集合
- * @method void setAuthorizedUserIdSet(array $AuthorizedUserIdSet) 设置有该主机访问权限的用户ID集合
- * @method array getResourceIdSet() 获取过滤条件，主机绑定的堡垒机服务ID集合
- * @method void setResourceIdSet(array $ResourceIdSet) 设置过滤条件，主机绑定的堡垒机服务ID集合
- * @method array getKindSet() 获取可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL
- * @method void setKindSet(array $KindSet) 设置可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL
+ * @method array getAuthorizedUserIdSet() 获取有该资产访问权限的用户ID集合
+ * @method void setAuthorizedUserIdSet(array $AuthorizedUserIdSet) 设置有该资产访问权限的用户ID集合
+ * @method array getResourceIdSet() 获取过滤条件，资产绑定的堡垒机服务ID集合
+ * @method void setResourceIdSet(array $ResourceIdSet) 设置过滤条件，资产绑定的堡垒机服务ID集合
+ * @method array getKindSet() 获取可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+ * @method void setKindSet(array $KindSet) 设置可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
  */
 class DescribeDevicesRequest extends AbstractModel
 {
     /**
-     * @var array 主机ID集合，非必需
+     * @var array 资产ID集合
      */
     public $IdSet;
 
     /**
-     * @var string 主机名或主机IP，模糊查询
+     * @var string 资产名或资产IP，模糊查询
      */
     public $Name;
 
@@ -64,7 +64,7 @@ class DescribeDevicesRequest extends AbstractModel
     public $ApCodeSet;
 
     /**
-     * @var integer 操作系统类型
+     * @var integer 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      */
     public $Kind;
 
@@ -79,31 +79,31 @@ class DescribeDevicesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 有该主机访问权限的用户ID集合
+     * @var array 有该资产访问权限的用户ID集合
      */
     public $AuthorizedUserIdSet;
 
     /**
-     * @var array 过滤条件，主机绑定的堡垒机服务ID集合
+     * @var array 过滤条件，资产绑定的堡垒机服务ID集合
      */
     public $ResourceIdSet;
 
     /**
-     * @var array 可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL
+     * @var array 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      */
     public $KindSet;
 
     /**
-     * @param array $IdSet 主机ID集合，非必需
-     * @param string $Name 主机名或主机IP，模糊查询
+     * @param array $IdSet 资产ID集合
+     * @param string $Name 资产名或资产IP，模糊查询
      * @param string $Ip 暂未使用
      * @param array $ApCodeSet 地域码集合
-     * @param integer $Kind 操作系统类型
+     * @param integer $Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      * @param integer $Offset 分页，偏移位置
      * @param integer $Limit 每页条目数量，默认20
-     * @param array $AuthorizedUserIdSet 有该主机访问权限的用户ID集合
-     * @param array $ResourceIdSet 过滤条件，主机绑定的堡垒机服务ID集合
-     * @param array $KindSet 可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL
+     * @param array $AuthorizedUserIdSet 有该资产访问权限的用户ID集合
+     * @param array $ResourceIdSet 过滤条件，资产绑定的堡垒机服务ID集合
+     * @param array $KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      */
     function __construct()
     {

@@ -26,16 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置模糊查询，IdSet、UserName、Phone为空时才生效，对用户名和姓名进行模糊查询
  * @method integer getOffset() 获取分页，偏移位置
  * @method void setOffset(integer $Offset) 设置分页，偏移位置
- * @method integer getLimit() 获取每页条目数量，默认20
- * @method void setLimit(integer $Limit) 设置每页条目数量，默认20
+ * @method integer getLimit() 获取每页条目数量，默认20, 最大500
+ * @method void setLimit(integer $Limit) 设置每页条目数量，默认20, 最大500
  * @method string getUserName() 获取精确查询，IdSet为空时才生效
  * @method void setUserName(string $UserName) 设置精确查询，IdSet为空时才生效
- * @method string getPhone() 获取精确查询，IdSet、UserName为空时才生效
- * @method void setPhone(string $Phone) 设置精确查询，IdSet、UserName为空时才生效
- * @method array getAuthorizedDeviceIdSet() 获取有访问权限的主机ID集合
- * @method void setAuthorizedDeviceIdSet(array $AuthorizedDeviceIdSet) 设置有访问权限的主机ID集合
- * @method array getAuthTypeSet() 获取认证方式，0-本地，1-ldap, 2-oauth 不传为全部
- * @method void setAuthTypeSet(array $AuthTypeSet) 设置认证方式，0-本地，1-ldap, 2-oauth 不传为全部
+ * @method string getPhone() 获取精确查询，IdSet、UserName为空时才生效。
+大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+ * @method void setPhone(string $Phone) 设置精确查询，IdSet、UserName为空时才生效。
+大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+ * @method array getAuthorizedDeviceIdSet() 获取查询具有指定资产ID访问权限的用户
+ * @method void setAuthorizedDeviceIdSet(array $AuthorizedDeviceIdSet) 设置查询具有指定资产ID访问权限的用户
+ * @method array getAuthTypeSet() 获取认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+ * @method void setAuthTypeSet(array $AuthTypeSet) 设置认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
  */
 class DescribeUsersRequest extends AbstractModel
 {
@@ -55,7 +57,7 @@ class DescribeUsersRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 每页条目数量，默认20
+     * @var integer 每页条目数量，默认20, 最大500
      */
     public $Limit;
 
@@ -65,17 +67,18 @@ class DescribeUsersRequest extends AbstractModel
     public $UserName;
 
     /**
-     * @var string 精确查询，IdSet、UserName为空时才生效
+     * @var string 精确查询，IdSet、UserName为空时才生效。
+大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
      */
     public $Phone;
 
     /**
-     * @var array 有访问权限的主机ID集合
+     * @var array 查询具有指定资产ID访问权限的用户
      */
     public $AuthorizedDeviceIdSet;
 
     /**
-     * @var array 认证方式，0-本地，1-ldap, 2-oauth 不传为全部
+     * @var array 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
      */
     public $AuthTypeSet;
 
@@ -83,11 +86,12 @@ class DescribeUsersRequest extends AbstractModel
      * @param array $IdSet 如果IdSet不为空，则忽略其他参数
      * @param string $Name 模糊查询，IdSet、UserName、Phone为空时才生效，对用户名和姓名进行模糊查询
      * @param integer $Offset 分页，偏移位置
-     * @param integer $Limit 每页条目数量，默认20
+     * @param integer $Limit 每页条目数量，默认20, 最大500
      * @param string $UserName 精确查询，IdSet为空时才生效
-     * @param string $Phone 精确查询，IdSet、UserName为空时才生效
-     * @param array $AuthorizedDeviceIdSet 有访问权限的主机ID集合
-     * @param array $AuthTypeSet 认证方式，0-本地，1-ldap, 2-oauth 不传为全部
+     * @param string $Phone 精确查询，IdSet、UserName为空时才生效。
+大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * @param array $AuthorizedDeviceIdSet 查询具有指定资产ID访问权限的用户
+     * @param array $AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
      */
     function __construct()
     {

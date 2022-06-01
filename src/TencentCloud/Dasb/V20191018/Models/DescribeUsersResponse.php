@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsers返回参数结构体
  *
- * @method integer getTotalCount() 获取记录总数
- * @method void setTotalCount(integer $TotalCount) 设置记录总数
- * @method array getUserSet() 获取用户信息列表
- * @method void setUserSet(array $UserSet) 设置用户信息列表
+ * @method integer getTotalCount() 获取用户总数
+ * @method void setTotalCount(integer $TotalCount) 设置用户总数
+ * @method array getUserSet() 获取用户列表
+ * @method void setUserSet(array $UserSet) 设置用户列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeUsersResponse extends AbstractModel
 {
     /**
-     * @var integer 记录总数
+     * @var integer 用户总数
      */
     public $TotalCount;
 
     /**
-     * @var array 用户信息列表
+     * @var array 用户列表
      */
     public $UserSet;
 
@@ -45,8 +45,8 @@ class DescribeUsersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 记录总数
-     * @param array $UserSet 用户信息列表
+     * @param integer $TotalCount 用户总数
+     * @param array $UserSet 用户列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

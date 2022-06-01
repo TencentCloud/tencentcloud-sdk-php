@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUser返回参数结构体
  *
- * @method integer getId() 获取新建成功后返回的记录ID
- * @method void setId(integer $Id) 设置新建成功后返回的记录ID
+ * @method integer getId() 获取新建用户的ID
+ * @method void setId(integer $Id) 设置新建用户的ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateUserResponse extends AbstractModel
 {
     /**
-     * @var integer 新建成功后返回的记录ID
+     * @var integer 新建用户的ID
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class CreateUserResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Id 新建成功后返回的记录ID
+     * @param integer $Id 新建用户的ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

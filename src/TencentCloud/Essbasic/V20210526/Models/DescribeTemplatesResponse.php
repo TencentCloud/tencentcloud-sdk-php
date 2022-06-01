@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTemplates() 获取模板详情
  * @method void setTemplates(array $Templates) 设置模板详情
+ * @method integer getTotalCount() 获取查询总数
+ * @method void setTotalCount(integer $TotalCount) 设置查询总数
+ * @method integer getLimit() 获取查询数量
+ * @method void setLimit(integer $Limit) 设置查询数量
+ * @method integer getOffset() 获取查询起始偏移
+ * @method void setOffset(integer $Offset) 设置查询起始偏移
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +39,30 @@ class DescribeTemplatesResponse extends AbstractModel
     public $Templates;
 
     /**
+     * @var integer 查询总数
+     */
+    public $TotalCount;
+
+    /**
+     * @var integer 查询数量
+     */
+    public $Limit;
+
+    /**
+     * @var integer 查询起始偏移
+     */
+    public $Offset;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $Templates 模板详情
+     * @param integer $TotalCount 查询总数
+     * @param integer $Limit 查询数量
+     * @param integer $Offset 查询起始偏移
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +85,18 @@ class DescribeTemplatesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Templates, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

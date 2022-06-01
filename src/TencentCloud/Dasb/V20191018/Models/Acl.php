@@ -22,56 +22,60 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取访问权限ID
  * @method void setId(integer $Id) 设置访问权限ID
- * @method string getName() 获取规则名
- * @method void setName(string $Name) 设置规则名
+ * @method string getName() 获取访问权限名称
+ * @method void setName(string $Name) 设置访问权限名称
  * @method boolean getAllowDiskRedirect() 获取是否开启磁盘映射
  * @method void setAllowDiskRedirect(boolean $AllowDiskRedirect) 设置是否开启磁盘映射
  * @method boolean getAllowClipFileUp() 获取是否开启剪贴板文件上行
  * @method void setAllowClipFileUp(boolean $AllowClipFileUp) 设置是否开启剪贴板文件上行
  * @method boolean getAllowClipFileDown() 获取是否开启剪贴板文件下行
  * @method void setAllowClipFileDown(boolean $AllowClipFileDown) 设置是否开启剪贴板文件下行
- * @method boolean getAllowClipTextUp() 获取是否开启剪贴板text（目前含图片）上行
- * @method void setAllowClipTextUp(boolean $AllowClipTextUp) 设置是否开启剪贴板text（目前含图片）上行
- * @method boolean getAllowClipTextDown() 获取是否开启剪贴板text（目前含图片）下行
- * @method void setAllowClipTextDown(boolean $AllowClipTextDown) 设置是否开启剪贴板text（目前含图片）下行
+ * @method boolean getAllowClipTextUp() 获取是否开启剪贴板文本（目前含图片）上行
+ * @method void setAllowClipTextUp(boolean $AllowClipTextUp) 设置是否开启剪贴板文本（目前含图片）上行
+ * @method boolean getAllowClipTextDown() 获取是否开启剪贴板文本（目前含图片）下行
+ * @method void setAllowClipTextDown(boolean $AllowClipTextDown) 设置是否开启剪贴板文本（目前含图片）下行
  * @method boolean getAllowFileUp() 获取是否开启文件传输上传
  * @method void setAllowFileUp(boolean $AllowFileUp) 设置是否开启文件传输上传
- * @method integer getMaxFileUpSize() 获取文件传输上传大小限制
- * @method void setMaxFileUpSize(integer $MaxFileUpSize) 设置文件传输上传大小限制
+ * @method integer getMaxFileUpSize() 获取文件传输上传大小限制（预留参数，暂未启用）
+ * @method void setMaxFileUpSize(integer $MaxFileUpSize) 设置文件传输上传大小限制（预留参数，暂未启用）
  * @method boolean getAllowFileDown() 获取是否开启文件传输下载
  * @method void setAllowFileDown(boolean $AllowFileDown) 设置是否开启文件传输下载
- * @method integer getMaxFileDownSize() 获取文件传输下载大小限制
- * @method void setMaxFileDownSize(integer $MaxFileDownSize) 设置文件传输下载大小限制
- * @method boolean getAllowAnyAccount() 获取是否允许任意账号登陆
- * @method void setAllowAnyAccount(boolean $AllowAnyAccount) 设置是否允许任意账号登陆
+ * @method integer getMaxFileDownSize() 获取文件传输下载大小限制（预留参数，暂未启用）
+ * @method void setMaxFileDownSize(integer $MaxFileDownSize) 设置文件传输下载大小限制（预留参数，暂未启用）
+ * @method boolean getAllowAnyAccount() 获取是否允许任意账号登录
+ * @method void setAllowAnyAccount(boolean $AllowAnyAccount) 设置是否允许任意账号登录
  * @method array getUserSet() 获取关联的用户列表
  * @method void setUserSet(array $UserSet) 设置关联的用户列表
  * @method array getUserGroupSet() 获取关联的用户组列表
  * @method void setUserGroupSet(array $UserGroupSet) 设置关联的用户组列表
- * @method array getDeviceSet() 获取关联的主机列表
- * @method void setDeviceSet(array $DeviceSet) 设置关联的主机列表
- * @method array getDeviceGroupSet() 获取关联的主机组列表
- * @method void setDeviceGroupSet(array $DeviceGroupSet) 设置关联的主机组列表
+ * @method array getDeviceSet() 获取关联的资产列表
+ * @method void setDeviceSet(array $DeviceSet) 设置关联的资产列表
+ * @method array getDeviceGroupSet() 获取关联的资产组列表
+ * @method void setDeviceGroupSet(array $DeviceGroupSet) 设置关联的资产组列表
  * @method array getAccountSet() 获取关联的账号列表
  * @method void setAccountSet(array $AccountSet) 设置关联的账号列表
  * @method array getCmdTemplateSet() 获取关联的高危命令模板列表
  * @method void setCmdTemplateSet(array $CmdTemplateSet) 设置关联的高危命令模板列表
- * @method boolean getAllowDiskFileUp() 获取是否开启rdp磁盘映射文件上传
- * @method void setAllowDiskFileUp(boolean $AllowDiskFileUp) 设置是否开启rdp磁盘映射文件上传
- * @method boolean getAllowDiskFileDown() 获取是否开启rdp磁盘映射文件下载
- * @method void setAllowDiskFileDown(boolean $AllowDiskFileDown) 设置是否开启rdp磁盘映射文件下载
- * @method boolean getAllowShellFileUp() 获取是否开启rz sz文件上传
- * @method void setAllowShellFileUp(boolean $AllowShellFileUp) 设置是否开启rz sz文件上传
- * @method boolean getAllowShellFileDown() 获取是否开启rz sz文件下载
- * @method void setAllowShellFileDown(boolean $AllowShellFileDown) 设置是否开启rz sz文件下载
- * @method boolean getAllowFileDel() 获取是否开启SFTP文件删除
- * @method void setAllowFileDel(boolean $AllowFileDel) 设置是否开启SFTP文件删除
- * @method string getValidateFrom() 获取生效日期
- * @method void setValidateFrom(string $ValidateFrom) 设置生效日期
- * @method string getValidateTo() 获取失效日期
- * @method void setValidateTo(string $ValidateTo) 设置失效日期
- * @method integer getStatus() 获取策略状态，1-已生效，2-未生效，3-已过期
- * @method void setStatus(integer $Status) 设置策略状态，1-已生效，2-未生效，3-已过期
+ * @method boolean getAllowDiskFileUp() 获取是否开启 RDP 磁盘映射文件上传
+ * @method void setAllowDiskFileUp(boolean $AllowDiskFileUp) 设置是否开启 RDP 磁盘映射文件上传
+ * @method boolean getAllowDiskFileDown() 获取是否开启 RDP 磁盘映射文件下载
+ * @method void setAllowDiskFileDown(boolean $AllowDiskFileDown) 设置是否开启 RDP 磁盘映射文件下载
+ * @method boolean getAllowShellFileUp() 获取是否开启 rz sz 文件上传
+ * @method void setAllowShellFileUp(boolean $AllowShellFileUp) 设置是否开启 rz sz 文件上传
+ * @method boolean getAllowShellFileDown() 获取是否开启 rz sz 文件下载
+ * @method void setAllowShellFileDown(boolean $AllowShellFileDown) 设置是否开启 rz sz 文件下载
+ * @method boolean getAllowFileDel() 获取是否开启 SFTP 文件删除
+ * @method void setAllowFileDel(boolean $AllowFileDel) 设置是否开启 SFTP 文件删除
+ * @method string getValidateFrom() 获取访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+ * @method void setValidateFrom(string $ValidateFrom) 设置访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+ * @method string getValidateTo() 获取访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+ * @method void setValidateTo(string $ValidateTo) 设置访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+ * @method integer getStatus() 获取访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+ * @method void setStatus(integer $Status) 设置访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
  */
 class Acl extends AbstractModel
 {
@@ -81,7 +85,7 @@ class Acl extends AbstractModel
     public $Id;
 
     /**
-     * @var string 规则名
+     * @var string 访问权限名称
      */
     public $Name;
 
@@ -101,12 +105,12 @@ class Acl extends AbstractModel
     public $AllowClipFileDown;
 
     /**
-     * @var boolean 是否开启剪贴板text（目前含图片）上行
+     * @var boolean 是否开启剪贴板文本（目前含图片）上行
      */
     public $AllowClipTextUp;
 
     /**
-     * @var boolean 是否开启剪贴板text（目前含图片）下行
+     * @var boolean 是否开启剪贴板文本（目前含图片）下行
      */
     public $AllowClipTextDown;
 
@@ -116,7 +120,7 @@ class Acl extends AbstractModel
     public $AllowFileUp;
 
     /**
-     * @var integer 文件传输上传大小限制
+     * @var integer 文件传输上传大小限制（预留参数，暂未启用）
      */
     public $MaxFileUpSize;
 
@@ -126,12 +130,12 @@ class Acl extends AbstractModel
     public $AllowFileDown;
 
     /**
-     * @var integer 文件传输下载大小限制
+     * @var integer 文件传输下载大小限制（预留参数，暂未启用）
      */
     public $MaxFileDownSize;
 
     /**
-     * @var boolean 是否允许任意账号登陆
+     * @var boolean 是否允许任意账号登录
      */
     public $AllowAnyAccount;
 
@@ -146,12 +150,12 @@ class Acl extends AbstractModel
     public $UserGroupSet;
 
     /**
-     * @var array 关联的主机列表
+     * @var array 关联的资产列表
      */
     public $DeviceSet;
 
     /**
-     * @var array 关联的主机组列表
+     * @var array 关联的资产组列表
      */
     public $DeviceGroupSet;
 
@@ -166,72 +170,76 @@ class Acl extends AbstractModel
     public $CmdTemplateSet;
 
     /**
-     * @var boolean 是否开启rdp磁盘映射文件上传
+     * @var boolean 是否开启 RDP 磁盘映射文件上传
      */
     public $AllowDiskFileUp;
 
     /**
-     * @var boolean 是否开启rdp磁盘映射文件下载
+     * @var boolean 是否开启 RDP 磁盘映射文件下载
      */
     public $AllowDiskFileDown;
 
     /**
-     * @var boolean 是否开启rz sz文件上传
+     * @var boolean 是否开启 rz sz 文件上传
      */
     public $AllowShellFileUp;
 
     /**
-     * @var boolean 是否开启rz sz文件下载
+     * @var boolean 是否开启 rz sz 文件下载
      */
     public $AllowShellFileDown;
 
     /**
-     * @var boolean 是否开启SFTP文件删除
+     * @var boolean 是否开启 SFTP 文件删除
      */
     public $AllowFileDel;
 
     /**
-     * @var string 生效日期
+     * @var string 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
      */
     public $ValidateFrom;
 
     /**
-     * @var string 失效日期
+     * @var string 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
      */
     public $ValidateTo;
 
     /**
-     * @var integer 策略状态，1-已生效，2-未生效，3-已过期
+     * @var integer 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      */
     public $Status;
 
     /**
      * @param integer $Id 访问权限ID
-     * @param string $Name 规则名
+     * @param string $Name 访问权限名称
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
      * @param boolean $AllowClipFileUp 是否开启剪贴板文件上行
      * @param boolean $AllowClipFileDown 是否开启剪贴板文件下行
-     * @param boolean $AllowClipTextUp 是否开启剪贴板text（目前含图片）上行
-     * @param boolean $AllowClipTextDown 是否开启剪贴板text（目前含图片）下行
+     * @param boolean $AllowClipTextUp 是否开启剪贴板文本（目前含图片）上行
+     * @param boolean $AllowClipTextDown 是否开启剪贴板文本（目前含图片）下行
      * @param boolean $AllowFileUp 是否开启文件传输上传
-     * @param integer $MaxFileUpSize 文件传输上传大小限制
+     * @param integer $MaxFileUpSize 文件传输上传大小限制（预留参数，暂未启用）
      * @param boolean $AllowFileDown 是否开启文件传输下载
-     * @param integer $MaxFileDownSize 文件传输下载大小限制
-     * @param boolean $AllowAnyAccount 是否允许任意账号登陆
+     * @param integer $MaxFileDownSize 文件传输下载大小限制（预留参数，暂未启用）
+     * @param boolean $AllowAnyAccount 是否允许任意账号登录
      * @param array $UserSet 关联的用户列表
      * @param array $UserGroupSet 关联的用户组列表
-     * @param array $DeviceSet 关联的主机列表
-     * @param array $DeviceGroupSet 关联的主机组列表
+     * @param array $DeviceSet 关联的资产列表
+     * @param array $DeviceGroupSet 关联的资产组列表
      * @param array $AccountSet 关联的账号列表
      * @param array $CmdTemplateSet 关联的高危命令模板列表
-     * @param boolean $AllowDiskFileUp 是否开启rdp磁盘映射文件上传
-     * @param boolean $AllowDiskFileDown 是否开启rdp磁盘映射文件下载
-     * @param boolean $AllowShellFileUp 是否开启rz sz文件上传
-     * @param boolean $AllowShellFileDown 是否开启rz sz文件下载
-     * @param boolean $AllowFileDel 是否开启SFTP文件删除
-     * @param string $ValidateFrom 生效日期
-     * @param string $ValidateTo 失效日期
-     * @param integer $Status 策略状态，1-已生效，2-未生效，3-已过期
+     * @param boolean $AllowDiskFileUp 是否开启 RDP 磁盘映射文件上传
+     * @param boolean $AllowDiskFileDown 是否开启 RDP 磁盘映射文件下载
+     * @param boolean $AllowShellFileUp 是否开启 rz sz 文件上传
+     * @param boolean $AllowShellFileDown 是否开启 rz sz 文件下载
+     * @param boolean $AllowFileDel 是否开启 SFTP 文件删除
+     * @param string $ValidateFrom 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+     * @param string $ValidateTo 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+     * @param integer $Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      */
     function __construct()
     {

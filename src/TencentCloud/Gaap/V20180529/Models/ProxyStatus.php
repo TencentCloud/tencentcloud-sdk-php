@@ -32,7 +32,8 @@ CLOSING表示关闭中；
 CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
-ISOLATED表示已隔离。
+ISOLATED表示已隔离；
+MOVING表示迁移中。
  * @method void setStatus(string $Status) 设置通道状态。
 其中：
 RUNNING表示运行中；
@@ -43,7 +44,8 @@ CLOSING表示关闭中；
 CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
-ISOLATED表示已隔离。
+ISOLATED表示已隔离；
+MOVING表示迁移中。
  */
 class ProxyStatus extends AbstractModel
 {
@@ -63,7 +65,8 @@ CLOSING表示关闭中；
 CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
-ISOLATED表示已隔离。
+ISOLATED表示已隔离；
+MOVING表示迁移中。
      */
     public $Status;
 
@@ -79,7 +82,8 @@ CLOSING表示关闭中；
 CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
-ISOLATED表示已隔离。
+ISOLATED表示已隔离；
+MOVING表示迁移中。
      */
     function __construct()
     {

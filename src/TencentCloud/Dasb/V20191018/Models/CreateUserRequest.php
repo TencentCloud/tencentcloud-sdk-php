@@ -20,39 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUser请求参数结构体
  *
- * @method string getUserName() 获取用户名，最大长度32字符，不能为空
- * @method void setUserName(string $UserName) 设置用户名，最大长度32字符，不能为空
- * @method string getRealName() 获取用户姓名，最大长度32字符，不能为空
- * @method void setRealName(string $RealName) 设置用户姓名，最大长度32字符，不能为空
- * @method string getPhone() 获取手机号
- * @method void setPhone(string $Phone) 设置手机号
+ * @method string getUserName() 获取用户名, 3-20个字符, 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
+ * @method void setUserName(string $UserName) 设置用户名, 3-20个字符, 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
+ * @method string getRealName() 获取用户姓名，最大长度20个字符，不能包含空白字符
+ * @method void setRealName(string $RealName) 设置用户姓名，最大长度20个字符，不能包含空白字符
+ * @method string getPhone() 获取大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+ * @method void setPhone(string $Phone) 设置大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
  * @method string getEmail() 获取电子邮件
  * @method void setEmail(string $Email) 设置电子邮件
- * @method string getValidateFrom() 获取生效起始时间,不设置则为1970-01-01T08:00:01+08:00
- * @method void setValidateFrom(string $ValidateFrom) 设置生效起始时间,不设置则为1970-01-01T08:00:01+08:00
- * @method string getValidateTo() 获取生效结束时间,不设置则为1970-01-01T08:00:01+08:00
- * @method void setValidateTo(string $ValidateTo) 设置生效结束时间,不设置则为1970-01-01T08:00:01+08:00
+ * @method string getValidateFrom() 获取用户生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则用户长期有效
+ * @method void setValidateFrom(string $ValidateFrom) 设置用户生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则用户长期有效
+ * @method string getValidateTo() 获取用户失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则用户长期有效
+ * @method void setValidateTo(string $ValidateTo) 设置用户失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则用户长期有效
  * @method array getGroupIdSet() 获取所属用户组ID集合
  * @method void setGroupIdSet(array $GroupIdSet) 设置所属用户组ID集合
- * @method integer getAuthType() 获取认证方式，0-本地 1-ldap 2-oauth,不传则默认为0
- * @method void setAuthType(integer $AuthType) 设置认证方式，0-本地 1-ldap 2-oauth,不传则默认为0
- * @method string getValidateTime() 获取生效时间段, 0、1组成的字符串，长度168(7*24), 代表该用户的生效时间. 0 - 未生效，1 - 生效
- * @method void setValidateTime(string $ValidateTime) 设置生效时间段, 0、1组成的字符串，长度168(7*24), 代表该用户的生效时间. 0 - 未生效，1 - 生效
+ * @method integer getAuthType() 获取认证方式，0 - 本地， 1 - LDAP， 2 - OAuth 不传则默认为0
+ * @method void setAuthType(integer $AuthType) 设置认证方式，0 - 本地， 1 - LDAP， 2 - OAuth 不传则默认为0
+ * @method string getValidateTime() 获取访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
+ * @method void setValidateTime(string $ValidateTime) 设置访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
  */
 class CreateUserRequest extends AbstractModel
 {
     /**
-     * @var string 用户名，最大长度32字符，不能为空
+     * @var string 用户名, 3-20个字符, 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      */
     public $UserName;
 
     /**
-     * @var string 用户姓名，最大长度32字符，不能为空
+     * @var string 用户姓名，最大长度20个字符，不能包含空白字符
      */
     public $RealName;
 
     /**
-     * @var string 手机号
+     * @var string 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
      */
     public $Phone;
 
@@ -62,12 +66,14 @@ class CreateUserRequest extends AbstractModel
     public $Email;
 
     /**
-     * @var string 生效起始时间,不设置则为1970-01-01T08:00:01+08:00
+     * @var string 用户生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则用户长期有效
      */
     public $ValidateFrom;
 
     /**
-     * @var string 生效结束时间,不设置则为1970-01-01T08:00:01+08:00
+     * @var string 用户失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则用户长期有效
      */
     public $ValidateTo;
 
@@ -77,25 +83,27 @@ class CreateUserRequest extends AbstractModel
     public $GroupIdSet;
 
     /**
-     * @var integer 认证方式，0-本地 1-ldap 2-oauth,不传则默认为0
+     * @var integer 认证方式，0 - 本地， 1 - LDAP， 2 - OAuth 不传则默认为0
      */
     public $AuthType;
 
     /**
-     * @var string 生效时间段, 0、1组成的字符串，长度168(7*24), 代表该用户的生效时间. 0 - 未生效，1 - 生效
+     * @var string 访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
      */
     public $ValidateTime;
 
     /**
-     * @param string $UserName 用户名，最大长度32字符，不能为空
-     * @param string $RealName 用户姓名，最大长度32字符，不能为空
-     * @param string $Phone 手机号
+     * @param string $UserName 用户名, 3-20个字符, 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
+     * @param string $RealName 用户姓名，最大长度20个字符，不能包含空白字符
+     * @param string $Phone 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
      * @param string $Email 电子邮件
-     * @param string $ValidateFrom 生效起始时间,不设置则为1970-01-01T08:00:01+08:00
-     * @param string $ValidateTo 生效结束时间,不设置则为1970-01-01T08:00:01+08:00
+     * @param string $ValidateFrom 用户生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则用户长期有效
+     * @param string $ValidateTo 用户失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则用户长期有效
      * @param array $GroupIdSet 所属用户组ID集合
-     * @param integer $AuthType 认证方式，0-本地 1-ldap 2-oauth,不传则默认为0
-     * @param string $ValidateTime 生效时间段, 0、1组成的字符串，长度168(7*24), 代表该用户的生效时间. 0 - 未生效，1 - 生效
+     * @param integer $AuthType 认证方式，0 - 本地， 1 - LDAP， 2 - OAuth 不传则默认为0
+     * @param string $ValidateTime 访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
      */
     function __construct()
     {

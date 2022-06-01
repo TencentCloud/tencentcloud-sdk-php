@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAcl请求参数结构体
  *
- * @method string getName() 获取权限名称，最大32字符，不能为空，不能包含空白字符
- * @method void setName(string $Name) 设置权限名称，最大32字符，不能为空，不能包含空白字符
+ * @method string getName() 获取权限名称，最大32字符，不能包含空白字符
+ * @method void setName(string $Name) 设置权限名称，最大32字符，不能包含空白字符
  * @method boolean getAllowDiskRedirect() 获取是否开启磁盘映射
  * @method void setAllowDiskRedirect(boolean $AllowDiskRedirect) 设置是否开启磁盘映射
- * @method boolean getAllowAnyAccount() 获取是否允许任意账号登陆
- * @method void setAllowAnyAccount(boolean $AllowAnyAccount) 设置是否允许任意账号登陆
+ * @method boolean getAllowAnyAccount() 获取是否允许任意账号登录
+ * @method void setAllowAnyAccount(boolean $AllowAnyAccount) 设置是否允许任意账号登录
  * @method boolean getAllowClipFileUp() 获取是否开启剪贴板文件上行
  * @method void setAllowClipFileUp(boolean $AllowClipFileUp) 设置是否开启剪贴板文件上行
  * @method boolean getAllowClipFileDown() 获取是否开启剪贴板文件下行
  * @method void setAllowClipFileDown(boolean $AllowClipFileDown) 设置是否开启剪贴板文件下行
- * @method boolean getAllowClipTextUp() 获取是否开启剪贴板text（含图片）上行
- * @method void setAllowClipTextUp(boolean $AllowClipTextUp) 设置是否开启剪贴板text（含图片）上行
- * @method boolean getAllowClipTextDown() 获取是否开启剪贴板text（含图片）下行
- * @method void setAllowClipTextDown(boolean $AllowClipTextDown) 设置是否开启剪贴板text（含图片）下行
- * @method boolean getAllowFileUp() 获取是否开启SFTP文件上传
- * @method void setAllowFileUp(boolean $AllowFileUp) 设置是否开启SFTP文件上传
- * @method integer getMaxFileUpSize() 获取文件传输上传大小限制
- * @method void setMaxFileUpSize(integer $MaxFileUpSize) 设置文件传输上传大小限制
- * @method boolean getAllowFileDown() 获取是否开启SFTP文件下载
- * @method void setAllowFileDown(boolean $AllowFileDown) 设置是否开启SFTP文件下载
- * @method integer getMaxFileDownSize() 获取文件传输下载大小限制
- * @method void setMaxFileDownSize(integer $MaxFileDownSize) 设置文件传输下载大小限制
- * @method array getUserIdSet() 获取关联的用户ID
- * @method void setUserIdSet(array $UserIdSet) 设置关联的用户ID
+ * @method boolean getAllowClipTextUp() 获取是否开启剪贴板文本（含图片）上行
+ * @method void setAllowClipTextUp(boolean $AllowClipTextUp) 设置是否开启剪贴板文本（含图片）上行
+ * @method boolean getAllowClipTextDown() 获取是否开启剪贴板文本（含图片）下行
+ * @method void setAllowClipTextDown(boolean $AllowClipTextDown) 设置是否开启剪贴板文本（含图片）下行
+ * @method boolean getAllowFileUp() 获取是否开启 SFTP 文件上传
+ * @method void setAllowFileUp(boolean $AllowFileUp) 设置是否开启 SFTP 文件上传
+ * @method integer getMaxFileUpSize() 获取文件传输上传大小限制（预留参数，目前暂未使用）
+ * @method void setMaxFileUpSize(integer $MaxFileUpSize) 设置文件传输上传大小限制（预留参数，目前暂未使用）
+ * @method boolean getAllowFileDown() 获取是否开启 SFTP 文件下载
+ * @method void setAllowFileDown(boolean $AllowFileDown) 设置是否开启 SFTP 文件下载
+ * @method integer getMaxFileDownSize() 获取文件传输下载大小限制（预留参数，目前暂未使用）
+ * @method void setMaxFileDownSize(integer $MaxFileDownSize) 设置文件传输下载大小限制（预留参数，目前暂未使用）
+ * @method array getUserIdSet() 获取关联的用户ID集合
+ * @method void setUserIdSet(array $UserIdSet) 设置关联的用户ID集合
  * @method array getUserGroupIdSet() 获取关联的用户组ID
  * @method void setUserGroupIdSet(array $UserGroupIdSet) 设置关联的用户组ID
- * @method array getDeviceIdSet() 获取关联的主机ID
- * @method void setDeviceIdSet(array $DeviceIdSet) 设置关联的主机ID
- * @method array getDeviceGroupIdSet() 获取关联的主机组ID
- * @method void setDeviceGroupIdSet(array $DeviceGroupIdSet) 设置关联的主机组ID
- * @method array getAccountSet() 获取关联的账号，账号name
- * @method void setAccountSet(array $AccountSet) 设置关联的账号，账号name
+ * @method array getDeviceIdSet() 获取关联的资产ID集合
+ * @method void setDeviceIdSet(array $DeviceIdSet) 设置关联的资产ID集合
+ * @method array getDeviceGroupIdSet() 获取关联的资产组ID
+ * @method void setDeviceGroupIdSet(array $DeviceGroupIdSet) 设置关联的资产组ID
+ * @method array getAccountSet() 获取关联的账号
+ * @method void setAccountSet(array $AccountSet) 设置关联的账号
  * @method array getCmdTemplateIdSet() 获取关联的高危命令模板ID
  * @method void setCmdTemplateIdSet(array $CmdTemplateIdSet) 设置关联的高危命令模板ID
  * @method boolean getAllowDiskFileUp() 获取是否开启rdp磁盘映射文件上传
@@ -62,17 +62,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllowShellFileUp(boolean $AllowShellFileUp) 设置是否开启rz sz文件上传
  * @method boolean getAllowShellFileDown() 获取是否开启rz sz文件下载
  * @method void setAllowShellFileDown(boolean $AllowShellFileDown) 设置是否开启rz sz文件下载
- * @method boolean getAllowFileDel() 获取是否开启SFTP文件删除
- * @method void setAllowFileDel(boolean $AllowFileDel) 设置是否开启SFTP文件删除
- * @method string getValidateFrom() 获取生效日期，如果为空，默认1970-01-01T08:00:01+08:00
- * @method void setValidateFrom(string $ValidateFrom) 设置生效日期，如果为空，默认1970-01-01T08:00:01+08:00
- * @method string getValidateTo() 获取失效日期，如果为空，默认1970-01-01T08:00:01+08:00
- * @method void setValidateTo(string $ValidateTo) 设置失效日期，如果为空，默认1970-01-01T08:00:01+08:00
+ * @method boolean getAllowFileDel() 获取是否开启 SFTP 文件删除
+ * @method void setAllowFileDel(boolean $AllowFileDel) 设置是否开启 SFTP 文件删除
+ * @method string getValidateFrom() 获取访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+ * @method void setValidateFrom(string $ValidateFrom) 设置访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+ * @method string getValidateTo() 获取访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+ * @method void setValidateTo(string $ValidateTo) 设置访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
  */
 class CreateAclRequest extends AbstractModel
 {
     /**
-     * @var string 权限名称，最大32字符，不能为空，不能包含空白字符
+     * @var string 权限名称，最大32字符，不能包含空白字符
      */
     public $Name;
 
@@ -82,7 +86,7 @@ class CreateAclRequest extends AbstractModel
     public $AllowDiskRedirect;
 
     /**
-     * @var boolean 是否允许任意账号登陆
+     * @var boolean 是否允许任意账号登录
      */
     public $AllowAnyAccount;
 
@@ -97,37 +101,37 @@ class CreateAclRequest extends AbstractModel
     public $AllowClipFileDown;
 
     /**
-     * @var boolean 是否开启剪贴板text（含图片）上行
+     * @var boolean 是否开启剪贴板文本（含图片）上行
      */
     public $AllowClipTextUp;
 
     /**
-     * @var boolean 是否开启剪贴板text（含图片）下行
+     * @var boolean 是否开启剪贴板文本（含图片）下行
      */
     public $AllowClipTextDown;
 
     /**
-     * @var boolean 是否开启SFTP文件上传
+     * @var boolean 是否开启 SFTP 文件上传
      */
     public $AllowFileUp;
 
     /**
-     * @var integer 文件传输上传大小限制
+     * @var integer 文件传输上传大小限制（预留参数，目前暂未使用）
      */
     public $MaxFileUpSize;
 
     /**
-     * @var boolean 是否开启SFTP文件下载
+     * @var boolean 是否开启 SFTP 文件下载
      */
     public $AllowFileDown;
 
     /**
-     * @var integer 文件传输下载大小限制
+     * @var integer 文件传输下载大小限制（预留参数，目前暂未使用）
      */
     public $MaxFileDownSize;
 
     /**
-     * @var array 关联的用户ID
+     * @var array 关联的用户ID集合
      */
     public $UserIdSet;
 
@@ -137,17 +141,17 @@ class CreateAclRequest extends AbstractModel
     public $UserGroupIdSet;
 
     /**
-     * @var array 关联的主机ID
+     * @var array 关联的资产ID集合
      */
     public $DeviceIdSet;
 
     /**
-     * @var array 关联的主机组ID
+     * @var array 关联的资产组ID
      */
     public $DeviceGroupIdSet;
 
     /**
-     * @var array 关联的账号，账号name
+     * @var array 关联的账号
      */
     public $AccountSet;
 
@@ -177,45 +181,49 @@ class CreateAclRequest extends AbstractModel
     public $AllowShellFileDown;
 
     /**
-     * @var boolean 是否开启SFTP文件删除
+     * @var boolean 是否开启 SFTP 文件删除
      */
     public $AllowFileDel;
 
     /**
-     * @var string 生效日期，如果为空，默认1970-01-01T08:00:01+08:00
+     * @var string 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
      */
     public $ValidateFrom;
 
     /**
-     * @var string 失效日期，如果为空，默认1970-01-01T08:00:01+08:00
+     * @var string 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
      */
     public $ValidateTo;
 
     /**
-     * @param string $Name 权限名称，最大32字符，不能为空，不能包含空白字符
+     * @param string $Name 权限名称，最大32字符，不能包含空白字符
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
-     * @param boolean $AllowAnyAccount 是否允许任意账号登陆
+     * @param boolean $AllowAnyAccount 是否允许任意账号登录
      * @param boolean $AllowClipFileUp 是否开启剪贴板文件上行
      * @param boolean $AllowClipFileDown 是否开启剪贴板文件下行
-     * @param boolean $AllowClipTextUp 是否开启剪贴板text（含图片）上行
-     * @param boolean $AllowClipTextDown 是否开启剪贴板text（含图片）下行
-     * @param boolean $AllowFileUp 是否开启SFTP文件上传
-     * @param integer $MaxFileUpSize 文件传输上传大小限制
-     * @param boolean $AllowFileDown 是否开启SFTP文件下载
-     * @param integer $MaxFileDownSize 文件传输下载大小限制
-     * @param array $UserIdSet 关联的用户ID
+     * @param boolean $AllowClipTextUp 是否开启剪贴板文本（含图片）上行
+     * @param boolean $AllowClipTextDown 是否开启剪贴板文本（含图片）下行
+     * @param boolean $AllowFileUp 是否开启 SFTP 文件上传
+     * @param integer $MaxFileUpSize 文件传输上传大小限制（预留参数，目前暂未使用）
+     * @param boolean $AllowFileDown 是否开启 SFTP 文件下载
+     * @param integer $MaxFileDownSize 文件传输下载大小限制（预留参数，目前暂未使用）
+     * @param array $UserIdSet 关联的用户ID集合
      * @param array $UserGroupIdSet 关联的用户组ID
-     * @param array $DeviceIdSet 关联的主机ID
-     * @param array $DeviceGroupIdSet 关联的主机组ID
-     * @param array $AccountSet 关联的账号，账号name
+     * @param array $DeviceIdSet 关联的资产ID集合
+     * @param array $DeviceGroupIdSet 关联的资产组ID
+     * @param array $AccountSet 关联的账号
      * @param array $CmdTemplateIdSet 关联的高危命令模板ID
      * @param boolean $AllowDiskFileUp 是否开启rdp磁盘映射文件上传
      * @param boolean $AllowDiskFileDown 是否开启rdp磁盘映射文件下载
      * @param boolean $AllowShellFileUp 是否开启rz sz文件上传
      * @param boolean $AllowShellFileDown 是否开启rz sz文件下载
-     * @param boolean $AllowFileDel 是否开启SFTP文件删除
-     * @param string $ValidateFrom 生效日期，如果为空，默认1970-01-01T08:00:01+08:00
-     * @param string $ValidateTo 失效日期，如果为空，默认1970-01-01T08:00:01+08:00
+     * @param boolean $AllowFileDel 是否开启 SFTP 文件删除
+     * @param string $ValidateFrom 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
+     * @param string $ValidateTo 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+生效、失效时间不填则访问权限长期有效
      */
     function __construct()
     {

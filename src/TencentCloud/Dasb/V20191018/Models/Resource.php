@@ -18,26 +18,26 @@ namespace TencentCloud\Dasb\V20191018\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 用户购买的堡垒机资源信息
+ * 堡垒机服务信息
  *
- * @method string getResourceId() 获取资源实例id，如bh-saas-s3ed4r5e
- * @method void setResourceId(string $ResourceId) 设置资源实例id，如bh-saas-s3ed4r5e
+ * @method string getResourceId() 获取服务实例ID，如bh-saas-s3ed4r5e
+ * @method void setResourceId(string $ResourceId) 设置服务实例ID，如bh-saas-s3ed4r5e
  * @method string getApCode() 获取地域编码
  * @method void setApCode(string $ApCode) 设置地域编码
- * @method string getSvArgs() 获取实例规格信息（询价参数）
- * @method void setSvArgs(string $SvArgs) 设置实例规格信息（询价参数）
- * @method string getVpcId() 获取vpc id
- * @method void setVpcId(string $VpcId) 设置vpc id
- * @method integer getNodes() 获取堡垒机规格对应的资产数
- * @method void setNodes(integer $Nodes) 设置堡垒机规格对应的资产数
- * @method integer getRenewFlag() 获取自动续费标记，0表示默认状态，1表示自动续费，2表示明确不自动续费
- * @method void setRenewFlag(integer $RenewFlag) 设置自动续费标记，0表示默认状态，1表示自动续费，2表示明确不自动续费
+ * @method string getSvArgs() 获取服务实例规格信息
+ * @method void setSvArgs(string $SvArgs) 设置服务实例规格信息
+ * @method string getVpcId() 获取VPC ID
+ * @method void setVpcId(string $VpcId) 设置VPC ID
+ * @method integer getNodes() 获取服务规格对应的资产数
+ * @method void setNodes(integer $Nodes) 设置服务规格对应的资产数
+ * @method integer getRenewFlag() 获取自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
+ * @method void setRenewFlag(integer $RenewFlag) 设置自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
  * @method string getExpireTime() 获取过期时间
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
- * @method integer getStatus() 获取资源状态，0未初始化，1正常，2隔离，3销毁，4初始化失败，5初始化中
- * @method void setStatus(integer $Status) 设置资源状态，0未初始化，1正常，2隔离，3销毁，4初始化失败，5初始化中
- * @method string getResourceName() 获取实例名，如T-Sec-堡垒机（SaaS型）
- * @method void setResourceName(string $ResourceName) 设置实例名，如T-Sec-堡垒机（SaaS型）
+ * @method integer getStatus() 获取资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
+ * @method void setStatus(integer $Status) 设置资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
+ * @method string getResourceName() 获取服务实例名，如T-Sec-堡垒机（SaaS型）
+ * @method void setResourceName(string $ResourceName) 设置服务实例名，如T-Sec-堡垒机（SaaS型）
  * @method integer getPid() 获取定价模型ID
  * @method void setPid(integer $Pid) 设置定价模型ID
  * @method string getCreateTime() 获取资源创建时间
@@ -52,10 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpired(boolean $Expired) 设置是否过期，true-过期，false-未过期
  * @method boolean getDeployed() 获取是否开通，true-开通，false-未开通
  * @method void setDeployed(boolean $Deployed) 设置是否开通，true-开通，false-未开通
- * @method string getVpcName() 获取开通服务的VPC名称
- * @method void setVpcName(string $VpcName) 设置开通服务的VPC名称
- * @method string getVpcCidrBlock() 获取开通服务的VPC对应的网段
- * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置开通服务的VPC对应的网段
+ * @method string getVpcName() 获取开通服务的 VPC 名称
+ * @method void setVpcName(string $VpcName) 设置开通服务的 VPC 名称
+ * @method string getVpcCidrBlock() 获取开通服务的 VPC 对应的网段
+ * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置开通服务的 VPC 对应的网段
  * @method string getSubnetId() 获取开通服务的子网ID
  * @method void setSubnetId(string $SubnetId) 设置开通服务的子网ID
  * @method string getSubnetName() 获取开通服务的子网名称
@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpSet(array $PublicIpSet) 设置外部IP
  * @method array getPrivateIpSet() 获取内部IP
  * @method void setPrivateIpSet(array $PrivateIpSet) 设置内部IP
- * @method array getModuleSet() 获取资源开通的高级功能列表，如:[DB]
- * @method void setModuleSet(array $ModuleSet) 设置资源开通的高级功能列表，如:[DB]
+ * @method array getModuleSet() 获取服务开通的高级功能列表，如:[DB]
+ * @method void setModuleSet(array $ModuleSet) 设置服务开通的高级功能列表，如:[DB]
  * @method integer getUsedNodes() 获取已使用的授权点数
  * @method void setUsedNodes(integer $UsedNodes) 设置已使用的授权点数
  * @method integer getExtendPoints() 获取扩展点数
@@ -80,7 +80,7 @@ use TencentCloud\Common\AbstractModel;
 class Resource extends AbstractModel
 {
     /**
-     * @var string 资源实例id，如bh-saas-s3ed4r5e
+     * @var string 服务实例ID，如bh-saas-s3ed4r5e
      */
     public $ResourceId;
 
@@ -90,22 +90,22 @@ class Resource extends AbstractModel
     public $ApCode;
 
     /**
-     * @var string 实例规格信息（询价参数）
+     * @var string 服务实例规格信息
      */
     public $SvArgs;
 
     /**
-     * @var string vpc id
+     * @var string VPC ID
      */
     public $VpcId;
 
     /**
-     * @var integer 堡垒机规格对应的资产数
+     * @var integer 服务规格对应的资产数
      */
     public $Nodes;
 
     /**
-     * @var integer 自动续费标记，0表示默认状态，1表示自动续费，2表示明确不自动续费
+     * @var integer 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
      */
     public $RenewFlag;
 
@@ -115,12 +115,12 @@ class Resource extends AbstractModel
     public $ExpireTime;
 
     /**
-     * @var integer 资源状态，0未初始化，1正常，2隔离，3销毁，4初始化失败，5初始化中
+     * @var integer 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
      */
     public $Status;
 
     /**
-     * @var string 实例名，如T-Sec-堡垒机（SaaS型）
+     * @var string 服务实例名，如T-Sec-堡垒机（SaaS型）
      */
     public $ResourceName;
 
@@ -160,12 +160,12 @@ class Resource extends AbstractModel
     public $Deployed;
 
     /**
-     * @var string 开通服务的VPC名称
+     * @var string 开通服务的 VPC 名称
      */
     public $VpcName;
 
     /**
-     * @var string 开通服务的VPC对应的网段
+     * @var string 开通服务的 VPC 对应的网段
      */
     public $VpcCidrBlock;
 
@@ -195,7 +195,7 @@ class Resource extends AbstractModel
     public $PrivateIpSet;
 
     /**
-     * @var array 资源开通的高级功能列表，如:[DB]
+     * @var array 服务开通的高级功能列表，如:[DB]
      */
     public $ModuleSet;
 
@@ -220,15 +220,15 @@ class Resource extends AbstractModel
     public $PackageNode;
 
     /**
-     * @param string $ResourceId 资源实例id，如bh-saas-s3ed4r5e
+     * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
-     * @param string $SvArgs 实例规格信息（询价参数）
-     * @param string $VpcId vpc id
-     * @param integer $Nodes 堡垒机规格对应的资产数
-     * @param integer $RenewFlag 自动续费标记，0表示默认状态，1表示自动续费，2表示明确不自动续费
+     * @param string $SvArgs 服务实例规格信息
+     * @param string $VpcId VPC ID
+     * @param integer $Nodes 服务规格对应的资产数
+     * @param integer $RenewFlag 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
      * @param string $ExpireTime 过期时间
-     * @param integer $Status 资源状态，0未初始化，1正常，2隔离，3销毁，4初始化失败，5初始化中
-     * @param string $ResourceName 实例名，如T-Sec-堡垒机（SaaS型）
+     * @param integer $Status 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
+     * @param string $ResourceName 服务实例名，如T-Sec-堡垒机（SaaS型）
      * @param integer $Pid 定价模型ID
      * @param string $CreateTime 资源创建时间
      * @param string $ProductCode 商品码, p_cds_dasb
@@ -236,14 +236,14 @@ class Resource extends AbstractModel
      * @param string $Zone 可用区
      * @param boolean $Expired 是否过期，true-过期，false-未过期
      * @param boolean $Deployed 是否开通，true-开通，false-未开通
-     * @param string $VpcName 开通服务的VPC名称
-     * @param string $VpcCidrBlock 开通服务的VPC对应的网段
+     * @param string $VpcName 开通服务的 VPC 名称
+     * @param string $VpcCidrBlock 开通服务的 VPC 对应的网段
      * @param string $SubnetId 开通服务的子网ID
      * @param string $SubnetName 开通服务的子网名称
      * @param string $CidrBlock 开通服务的子网网段
      * @param array $PublicIpSet 外部IP
      * @param array $PrivateIpSet 内部IP
-     * @param array $ModuleSet 资源开通的高级功能列表，如:[DB]
+     * @param array $ModuleSet 服务开通的高级功能列表，如:[DB]
      * @param integer $UsedNodes 已使用的授权点数
      * @param integer $ExtendPoints 扩展点数
      * @param integer $PackageBandwidth 带宽扩展包个数(4M)

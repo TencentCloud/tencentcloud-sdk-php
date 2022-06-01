@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAcls请求参数结构体
  *
- * @method array getIdSet() 获取访问权限ID集合，非必需
- * @method void setIdSet(array $IdSet) 设置访问权限ID集合，非必需
+ * @method array getIdSet() 获取访问权限ID集合
+ * @method void setIdSet(array $IdSet) 设置访问权限ID集合
  * @method string getName() 获取访问权限名称，模糊查询，最长64字符
  * @method void setName(string $Name) 设置访问权限名称，模糊查询，最长64字符
- * @method integer getOffset() 获取分页，偏移位置
- * @method void setOffset(integer $Offset) 设置分页，偏移位置
- * @method integer getLimit() 获取每页条目数量，默认20
- * @method void setLimit(integer $Limit) 设置每页条目数量，默认20
- * @method boolean getExact() 获取是否根据Name进行精确查询,默认值false
- * @method void setExact(boolean $Exact) 设置是否根据Name进行精确查询,默认值false
- * @method array getAuthorizedUserIdSet() 获取有权限的用户ID集合
- * @method void setAuthorizedUserIdSet(array $AuthorizedUserIdSet) 设置有权限的用户ID集合
- * @method array getAuthorizedDeviceIdSet() 获取有权限的主机ID集合
- * @method void setAuthorizedDeviceIdSet(array $AuthorizedDeviceIdSet) 设置有权限的主机ID集合
- * @method integer getStatus() 获取策略状态，0-不限，1-已生效，2-未生效，3-已过期
- * @method void setStatus(integer $Status) 设置策略状态，0-不限，1-已生效，2-未生效，3-已过期
+ * @method integer getOffset() 获取分页偏移位置
+ * @method void setOffset(integer $Offset) 设置分页偏移位置
+ * @method integer getLimit() 获取每页条目数量，默认20，最大500
+ * @method void setLimit(integer $Limit) 设置每页条目数量，默认20，最大500
+ * @method boolean getExact() 获取是否根据Name进行精确查询，默认值false
+ * @method void setExact(boolean $Exact) 设置是否根据Name进行精确查询，默认值false
+ * @method array getAuthorizedUserIdSet() 获取有访问权限的用户ID集合
+ * @method void setAuthorizedUserIdSet(array $AuthorizedUserIdSet) 设置有访问权限的用户ID集合
+ * @method array getAuthorizedDeviceIdSet() 获取有访问权限的资产ID集合
+ * @method void setAuthorizedDeviceIdSet(array $AuthorizedDeviceIdSet) 设置有访问权限的资产ID集合
+ * @method integer getStatus() 获取访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+ * @method void setStatus(integer $Status) 设置访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
  */
 class DescribeAclsRequest extends AbstractModel
 {
     /**
-     * @var array 访问权限ID集合，非必需
+     * @var array 访问权限ID集合
      */
     public $IdSet;
 
@@ -50,44 +50,44 @@ class DescribeAclsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 分页，偏移位置
+     * @var integer 分页偏移位置
      */
     public $Offset;
 
     /**
-     * @var integer 每页条目数量，默认20
+     * @var integer 每页条目数量，默认20，最大500
      */
     public $Limit;
 
     /**
-     * @var boolean 是否根据Name进行精确查询,默认值false
+     * @var boolean 是否根据Name进行精确查询，默认值false
      */
     public $Exact;
 
     /**
-     * @var array 有权限的用户ID集合
+     * @var array 有访问权限的用户ID集合
      */
     public $AuthorizedUserIdSet;
 
     /**
-     * @var array 有权限的主机ID集合
+     * @var array 有访问权限的资产ID集合
      */
     public $AuthorizedDeviceIdSet;
 
     /**
-     * @var integer 策略状态，0-不限，1-已生效，2-未生效，3-已过期
+     * @var integer 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      */
     public $Status;
 
     /**
-     * @param array $IdSet 访问权限ID集合，非必需
+     * @param array $IdSet 访问权限ID集合
      * @param string $Name 访问权限名称，模糊查询，最长64字符
-     * @param integer $Offset 分页，偏移位置
-     * @param integer $Limit 每页条目数量，默认20
-     * @param boolean $Exact 是否根据Name进行精确查询,默认值false
-     * @param array $AuthorizedUserIdSet 有权限的用户ID集合
-     * @param array $AuthorizedDeviceIdSet 有权限的主机ID集合
-     * @param integer $Status 策略状态，0-不限，1-已生效，2-未生效，3-已过期
+     * @param integer $Offset 分页偏移位置
+     * @param integer $Limit 每页条目数量，默认20，最大500
+     * @param boolean $Exact 是否根据Name进行精确查询，默认值false
+     * @param array $AuthorizedUserIdSet 有访问权限的用户ID集合
+     * @param array $AuthorizedDeviceIdSet 有访问权限的资产ID集合
+     * @param integer $Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
      */
     function __construct()
     {

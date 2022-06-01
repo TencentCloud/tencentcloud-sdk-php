@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDevices返回参数结构体
  *
- * @method integer getTotalCount() 获取记录总数
- * @method void setTotalCount(integer $TotalCount) 设置记录总数
- * @method array getDeviceSet() 获取主机信息列表
- * @method void setDeviceSet(array $DeviceSet) 设置主机信息列表
+ * @method integer getTotalCount() 获取资产总数
+ * @method void setTotalCount(integer $TotalCount) 设置资产总数
+ * @method array getDeviceSet() 获取资产信息列表
+ * @method void setDeviceSet(array $DeviceSet) 设置资产信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDevicesResponse extends AbstractModel
 {
     /**
-     * @var integer 记录总数
+     * @var integer 资产总数
      */
     public $TotalCount;
 
     /**
-     * @var array 主机信息列表
+     * @var array 资产信息列表
      */
     public $DeviceSet;
 
@@ -45,8 +45,8 @@ class DescribeDevicesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 记录总数
-     * @param array $DeviceSet 主机信息列表
+     * @param integer $TotalCount 资产总数
+     * @param array $DeviceSet 资产信息列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

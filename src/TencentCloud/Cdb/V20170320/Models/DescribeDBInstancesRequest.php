@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqueVpcIds(array $UniqueVpcIds) 设置私有网络字符型vpcId
  * @method array getUniqSubnetIds() 获取私有网络字符型subnetId
  * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置私有网络字符型subnetId
+ * @method array getTags() 获取标签键值
+ * @method void setTags(array $Tags) 设置标签键值
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -241,6 +243,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $UniqSubnetIds;
 
     /**
+     * @var array 标签键值
+     */
+    public $Tags;
+
+    /**
      * @param integer $ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      * @param array $InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
      * @param array $Vips 实例的内网 IP 地址。
@@ -272,6 +279,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $TagValues 标签值
      * @param array $UniqueVpcIds 私有网络字符型vpcId
      * @param array $UniqSubnetIds 私有网络字符型subnetId
+     * @param array $Tags 标签键值
      */
     function __construct()
     {
@@ -408,6 +416,15 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("UniqSubnetIds",$param) and $param["UniqSubnetIds"] !== null) {
             $this->UniqSubnetIds = $param["UniqSubnetIds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

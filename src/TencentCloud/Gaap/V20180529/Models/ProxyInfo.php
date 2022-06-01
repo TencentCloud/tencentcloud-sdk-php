@@ -49,7 +49,8 @@ ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
 CLONING表示复制中；
-RECOVERING表示通道维护中。
+RECOVERING表示通道维护中；
+MOVING表示迁移中。
  * @method void setStatus(string $Status) 设置通道状态。其中：
 RUNNING表示运行中；
 CREATING表示创建中；
@@ -61,7 +62,8 @@ ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
 CLONING表示复制中；
-RECOVERING表示通道维护中。
+RECOVERING表示通道维护中；
+MOVING表示迁移中。
  * @method string getDomain() 获取接入域名。
  * @method void setDomain(string $Domain) 设置接入域名。
  * @method string getIP() 获取接入IP。
@@ -126,9 +128,9 @@ RECOVERING表示通道维护中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本：IPv4、IPv6
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNetworkType() 获取网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
+ * @method string getNetworkType() 获取网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetworkType(string $NetworkType) 设置网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
+ * @method void setNetworkType(string $NetworkType) 设置网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageType() 获取通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
@@ -212,7 +214,8 @@ ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
 CLONING表示复制中；
-RECOVERING表示通道维护中。
+RECOVERING表示通道维护中；
+MOVING表示迁移中。
      */
     public $Status;
 
@@ -325,7 +328,7 @@ RECOVERING表示通道维护中。
     public $IPAddressVersion;
 
     /**
-     * @var string 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
+     * @var string 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkType;
@@ -384,7 +387,8 @@ ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
 CLONING表示复制中；
-RECOVERING表示通道维护中。
+RECOVERING表示通道维护中；
+MOVING表示迁移中。
      * @param string $Domain 接入域名。
      * @param string $IP 接入IP。
      * @param string $Version 通道版本号：1.0，2.0，3.0。
@@ -417,7 +421,7 @@ RECOVERING表示通道维护中。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本：IPv4、IPv6
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
+     * @param string $NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。

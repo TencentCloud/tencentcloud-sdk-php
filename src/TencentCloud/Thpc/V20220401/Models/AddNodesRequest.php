@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlacement(Placement $Placement) 设置集群中实例所在的位置。
  * @method string getClusterId() 获取集群ID。
  * @method void setClusterId(string $ClusterId) 设置集群ID。
- * @method string getImageId() 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
- * @method void setImageId(string $ImageId) 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
+ * @method string getImageId() 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜。
+ * @method void setImageId(string $ImageId) 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜。
  * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取私有网络相关信息配置。
  * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置私有网络相关信息配置。
  * @method integer getCount() 获取添加节点数量。
@@ -82,7 +82,7 @@ class AddNodesRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
+     * @var string 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜。
      */
     public $ImageId;
 
@@ -170,7 +170,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     /**
      * @param Placement $Placement 集群中实例所在的位置。
      * @param string $ClusterId 集群ID。
-     * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
+     * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜。
      * @param VirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息配置。
      * @param integer $Count 添加节点数量。
      * @param string $InstanceChargeType 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。

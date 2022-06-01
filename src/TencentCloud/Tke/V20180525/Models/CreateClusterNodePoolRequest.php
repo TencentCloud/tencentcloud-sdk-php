@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置Labels标签
  * @method array getTaints() 获取Taints互斥
  * @method void setTaints(array $Taints) 设置Taints互斥
+ * @method string getContainerRuntime() 获取节点池纬度运行时类型及版本
+ * @method void setContainerRuntime(string $ContainerRuntime) 设置节点池纬度运行时类型及版本
+ * @method string getRuntimeVersion() 获取运行时版本
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
  * @method string getNodePoolOs() 获取节点池os
  * @method void setNodePoolOs(string $NodePoolOs) 设置节点池os
  * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
@@ -86,6 +90,16 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $Taints;
 
     /**
+     * @var string 节点池纬度运行时类型及版本
+     */
+    public $ContainerRuntime;
+
+    /**
+     * @var string 运行时版本
+     */
+    public $RuntimeVersion;
+
+    /**
      * @var string 节点池os
      */
     public $NodePoolOs;
@@ -109,6 +123,8 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param string $Name 节点池名称
      * @param array $Labels Labels标签
      * @param array $Taints Taints互斥
+     * @param string $ContainerRuntime 节点池纬度运行时类型及版本
+     * @param string $RuntimeVersion 运行时版本
      * @param string $NodePoolOs 节点池os
      * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      * @param array $Tags 资源标签
@@ -167,6 +183,14 @@ class CreateClusterNodePoolRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Taints, $obj);
             }
+        }
+
+        if (array_key_exists("ContainerRuntime",$param) and $param["ContainerRuntime"] !== null) {
+            $this->ContainerRuntime = $param["ContainerRuntime"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
         }
 
         if (array_key_exists("NodePoolOs",$param) and $param["NodePoolOs"] !== null) {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAcl返回参数结构体
  *
- * @method integer getId() 获取访问权限ID
- * @method void setId(integer $Id) 设置访问权限ID
+ * @method integer getId() 获取新建成功的访问权限ID
+ * @method void setId(integer $Id) 设置新建成功的访问权限ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAclResponse extends AbstractModel
 {
     /**
-     * @var integer 访问权限ID
+     * @var integer 新建成功的访问权限ID
      */
     public $Id;
 
@@ -38,7 +38,7 @@ class CreateAclResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Id 访问权限ID
+     * @param integer $Id 新建成功的访问权限ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

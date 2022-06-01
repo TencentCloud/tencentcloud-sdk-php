@@ -34,8 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(string $FlowId) 设置合同详情 id (PathType=1时必传)
  * @method string getOrganizationName() 获取企业名称
  * @method void setOrganizationName(string $OrganizationName) 设置企业名称
- * @method string getEndPoint() 获取链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
- * @method void setEndPoint(string $EndPoint) 设置链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+ * @method string getEndPoint() 获取链接类型
+HTTP：跳转电子签小程序的http_url，
+APP：第三方APP或小程序跳转电子签小程序的path。
+默认为HTTP类型
+ * @method void setEndPoint(string $EndPoint) 设置链接类型
+HTTP：跳转电子签小程序的http_url，
+APP：第三方APP或小程序跳转电子签小程序的path。
+默认为HTTP类型
  * @method boolean getAutoJumpBack() 获取是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
  * @method void setAutoJumpBack(boolean $AutoJumpBack) 设置是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
  */
@@ -77,7 +83,10 @@ class CreateSchemeUrlRequest extends AbstractModel
     public $OrganizationName;
 
     /**
-     * @var string 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+     * @var string 链接类型
+HTTP：跳转电子签小程序的http_url，
+APP：第三方APP或小程序跳转电子签小程序的path。
+默认为HTTP类型
      */
     public $EndPoint;
 
@@ -94,7 +103,10 @@ class CreateSchemeUrlRequest extends AbstractModel
      * @param integer $PathType 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
      * @param string $FlowId 合同详情 id (PathType=1时必传)
      * @param string $OrganizationName 企业名称
-     * @param string $EndPoint 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+     * @param string $EndPoint 链接类型
+HTTP：跳转电子签小程序的http_url，
+APP：第三方APP或小程序跳转电子签小程序的path。
+默认为HTTP类型
      * @param boolean $AutoJumpBack 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
      */
     function __construct()

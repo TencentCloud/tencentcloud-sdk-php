@@ -57,6 +57,7 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\MinorsVerificationResponse MinorsVerification(Models\MinorsVerificationRequest $req) 通过传入手机号或姓名和身份证号，结合权威数据源和腾讯健康守护可信模型，判断该信息是否真实且年满18周岁。腾讯健康守护可信模型覆盖了上十亿手机库源，覆盖率高、准确率高，如果不在库中的手机号，还可以通过姓名+身份证进行兜底验证。
  * @method Models\MobileNetworkTimeVerificationResponse MobileNetworkTimeVerification(Models\MobileNetworkTimeVerificationRequest $req) 本接口用于查询手机号在网时长，输入手机号进行查询。
  * @method Models\MobileStatusResponse MobileStatus(Models\MobileStatusRequest $req) 本接口用于验证手机号的状态，您可以输入手机号进行查询。
+ * @method Models\ParseNfcDataResponse ParseNfcData(Models\ParseNfcDataRequest $req) 解析SDK获取到的证件NFC数据，接口传入SDK返回的ReqId，返回证件信息（个别字段为特定证件类型特有）。SDK生成的ReqId五分钟内有效，重复查询仅收一次费。支持身份证类证件（二代身份证、港澳居住证、台湾居住证、外国人永居证）以及旅行类证件（港澳通行证、台湾通行证、台胞证、回乡证）的NFC识别及核验。
  * @method Models\PhoneVerificationResponse PhoneVerification(Models\PhoneVerificationRequest $req) 本接口用于校验手机号、姓名和身份证号的真实性和一致性。支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
  * @method Models\PhoneVerificationCMCCResponse PhoneVerificationCMCC(Models\PhoneVerificationCMCCRequest $req) 本接口用于校验中国移动手机号、姓名和身份证号的真实性和一致性。中国移动支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
  * @method Models\PhoneVerificationCTCCResponse PhoneVerificationCTCC(Models\PhoneVerificationCTCCRequest $req) 本接口用于校验中国电信手机号、姓名和身份证号的真实性和一致性。中国电信支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。

@@ -116,6 +116,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGPUInfo(GPUInfo $GPUInfo) 设置GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLicenseType() 获取实例的操作系统许可类型，默认为TencentCloud
+ * @method void setLicenseType(string $LicenseType) 设置实例的操作系统许可类型，默认为TencentCloud
  */
 class Instance extends AbstractModel
 {
@@ -308,6 +310,11 @@ class Instance extends AbstractModel
     public $GPUInfo;
 
     /**
+     * @var string 实例的操作系统许可类型，默认为TencentCloud
+     */
+    public $LicenseType;
+
+    /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
      * @param string $InstanceType 实例机型。
@@ -356,6 +363,7 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GPUInfo $GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LicenseType 实例的操作系统许可类型，默认为TencentCloud
      */
     function __construct()
     {
@@ -524,6 +532,10 @@ class Instance extends AbstractModel
         if (array_key_exists("GPUInfo",$param) and $param["GPUInfo"] !== null) {
             $this->GPUInfo = new GPUInfo();
             $this->GPUInfo->deserialize($param["GPUInfo"]);
+        }
+
+        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
+            $this->LicenseType = $param["LicenseType"];
         }
     }
 }

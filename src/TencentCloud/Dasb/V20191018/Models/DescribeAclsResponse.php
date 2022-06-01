@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAcls返回参数结构体
  *
- * @method integer getTotalCount() 获取记录总数
- * @method void setTotalCount(integer $TotalCount) 设置记录总数
- * @method array getAclSet() 获取访问权限记录集合，当前分页
- * @method void setAclSet(array $AclSet) 设置访问权限记录集合，当前分页
+ * @method integer getTotalCount() 获取访问权限总数
+ * @method void setTotalCount(integer $TotalCount) 设置访问权限总数
+ * @method array getAclSet() 获取访问权限列表
+ * @method void setAclSet(array $AclSet) 设置访问权限列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAclsResponse extends AbstractModel
 {
     /**
-     * @var integer 记录总数
+     * @var integer 访问权限总数
      */
     public $TotalCount;
 
     /**
-     * @var array 访问权限记录集合，当前分页
+     * @var array 访问权限列表
      */
     public $AclSet;
 
@@ -45,8 +45,8 @@ class DescribeAclsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 记录总数
-     * @param array $AclSet 访问权限记录集合，当前分页
+     * @param integer $TotalCount 访问权限总数
+     * @param array $AclSet 访问权限列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

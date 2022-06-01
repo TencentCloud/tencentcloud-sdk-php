@@ -31,11 +31,13 @@ use TencentCloud\Common\AbstractModel;
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
  * @method void setStatus(integer $Status) 设置通道组状态：
 0表示正常运行；
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
  * @method string getOwnerUin() 获取归属Uin
  * @method void setOwnerUin(string $OwnerUin) 设置归属Uin
  * @method string getCreateUin() 获取创建Uin
@@ -110,6 +112,7 @@ class ProxyGroupDetail extends AbstractModel
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
      */
     public $Status;
 
@@ -207,6 +210,7 @@ class ProxyGroupDetail extends AbstractModel
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
      * @param string $OwnerUin 归属Uin
      * @param string $CreateUin 创建Uin
      * @param string $GroupName 通道名称

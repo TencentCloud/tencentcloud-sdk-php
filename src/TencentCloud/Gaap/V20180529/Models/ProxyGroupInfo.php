@@ -39,13 +39,15 @@ use TencentCloud\Common\AbstractModel;
 RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
-MOVING表示通道迁移中。
+MOVING表示通道迁移中；
+CHANGING表示部分部署中。
  * @method void setStatus(string $Status) 设置通道组状态。
 其中，
 RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
-MOVING表示通道迁移中。
+MOVING表示通道迁移中；
+CHANGING表示部分部署中。
  * @method array getTagSet() 获取标签列表。
  * @method void setTagSet(array $TagSet) 设置标签列表。
  * @method string getVersion() 获取通道组版本
@@ -61,12 +63,12 @@ MOVING表示通道迁移中。
  * @method void setProxyType(integer $ProxyType) 设置通道组是否包含微软通道
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHttp3Supported() 获取支持Http3特性的标识，其中：
-0，表示不支持Http3；
-1，表示支持Http3。
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3特性的标识，其中：
-0，表示不支持Http3；
-1，表示支持Http3。
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupInfo extends AbstractModel
@@ -104,7 +106,8 @@ class ProxyGroupInfo extends AbstractModel
 RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
-MOVING表示通道迁移中。
+MOVING表示通道迁移中；
+CHANGING表示部分部署中。
      */
     public $Status;
 
@@ -133,8 +136,8 @@ MOVING表示通道迁移中。
 
     /**
      * @var integer 支持Http3特性的标识，其中：
-0，表示不支持Http3；
-1，表示支持Http3。
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Http3Supported;
@@ -152,7 +155,8 @@ MOVING表示通道迁移中。
 RUNNING表示运行中；
 CREATING表示创建中；
 DESTROYING表示销毁中；
-MOVING表示通道迁移中。
+MOVING表示通道迁移中；
+CHANGING表示部分部署中。
      * @param array $TagSet 标签列表。
      * @param string $Version 通道组版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -161,8 +165,8 @@ MOVING表示通道迁移中。
      * @param integer $ProxyType 通道组是否包含微软通道
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Http3Supported 支持Http3特性的标识，其中：
-0，表示不支持Http3；
-1，表示支持Http3。
+0表示关闭；
+1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

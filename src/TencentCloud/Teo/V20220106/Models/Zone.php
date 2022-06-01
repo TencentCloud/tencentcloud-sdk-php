@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedOn(string $CreatedOn) 设置站点创建时间
  * @method string getModifiedOn() 获取站点修改时间
  * @method void setModifiedOn(string $ModifiedOn) 设置站点修改时间
+ * @method string getCnameStatus() 获取cname 接入状态
+- finished 站点已验证
+- pending 站点验证中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCnameStatus(string $CnameStatus) 设置cname 接入状态
+- finished 站点已验证
+- pending 站点验证中
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Zone extends AbstractModel
 {
@@ -105,6 +113,14 @@ class Zone extends AbstractModel
     public $ModifiedOn;
 
     /**
+     * @var string cname 接入状态
+- finished 站点已验证
+- pending 站点验证中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CnameStatus;
+
+    /**
      * @param string $Id 站点ID
      * @param string $Name 站点名称
      * @param array $OriginalNameServers 站点当前使用的 NS 列表
@@ -120,6 +136,10 @@ class Zone extends AbstractModel
      * @param boolean $Paused 站点是否关闭
      * @param string $CreatedOn 站点创建时间
      * @param string $ModifiedOn 站点修改时间
+     * @param string $CnameStatus cname 接入状态
+- finished 站点已验证
+- pending 站点验证中
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +188,10 @@ class Zone extends AbstractModel
 
         if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
             $this->ModifiedOn = $param["ModifiedOn"];
+        }
+
+        if (array_key_exists("CnameStatus",$param) and $param["CnameStatus"] !== null) {
+            $this->CnameStatus = $param["CnameStatus"];
         }
     }
 }

@@ -18,14 +18,14 @@ namespace TencentCloud\Dasb\V20191018\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 主机信息
+ * 资产信息
  *
- * @method integer getId() 获取主机记录ID
- * @method void setId(integer $Id) 设置主机记录ID
- * @method string getInstanceId() 获取主机ID，对应cvm实例id
- * @method void setInstanceId(string $InstanceId) 设置主机ID，对应cvm实例id
- * @method string getName() 获取主机名
- * @method void setName(string $Name) 设置主机名
+ * @method integer getId() 获取资产ID
+ * @method void setId(integer $Id) 设置资产ID
+ * @method string getInstanceId() 获取实例ID，对应CVM、CDB等实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，对应CVM、CDB等实例ID
+ * @method string getName() 获取资产名
+ * @method void setName(string $Name) 设置资产名
  * @method string getPublicIp() 获取公网IP
  * @method void setPublicIp(string $PublicIp) 设置公网IP
  * @method string getPrivateIp() 获取内网IP
@@ -34,14 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApCode(string $ApCode) 设置地域编码
  * @method string getOsName() 获取操作系统名称
  * @method void setOsName(string $OsName) 设置操作系统名称
- * @method integer getKind() 获取主机类型，1-Linux, 2-Windows
- * @method void setKind(integer $Kind) 设置主机类型，1-Linux, 2-Windows
+ * @method integer getKind() 获取资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+ * @method void setKind(integer $Kind) 设置资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
  * @method integer getPort() 获取管理端口
  * @method void setPort(integer $Port) 设置管理端口
- * @method array getGroupSet() 获取所属主机组信息列表
- * @method void setGroupSet(array $GroupSet) 设置所属主机组信息列表
- * @method integer getAccountCount() 获取主机绑定的账号数
- * @method void setAccountCount(integer $AccountCount) 设置主机绑定的账号数
+ * @method array getGroupSet() 获取所属资产组列表
+ * @method void setGroupSet(array $GroupSet) 设置所属资产组列表
+ * @method integer getAccountCount() 获取资产绑定的账号数
+ * @method void setAccountCount(integer $AccountCount) 设置资产绑定的账号数
  * @method string getVpcId() 获取VPC ID
  * @method void setVpcId(string $VpcId) 设置VPC ID
  * @method string getSubnetId() 获取子网ID
@@ -54,17 +54,17 @@ use TencentCloud\Common\AbstractModel;
 class Device extends AbstractModel
 {
     /**
-     * @var integer 主机记录ID
+     * @var integer 资产ID
      */
     public $Id;
 
     /**
-     * @var string 主机ID，对应cvm实例id
+     * @var string 实例ID，对应CVM、CDB等实例ID
      */
     public $InstanceId;
 
     /**
-     * @var string 主机名
+     * @var string 资产名
      */
     public $Name;
 
@@ -89,7 +89,7 @@ class Device extends AbstractModel
     public $OsName;
 
     /**
-     * @var integer 主机类型，1-Linux, 2-Windows
+     * @var integer 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      */
     public $Kind;
 
@@ -99,12 +99,12 @@ class Device extends AbstractModel
     public $Port;
 
     /**
-     * @var array 所属主机组信息列表
+     * @var array 所属资产组列表
      */
     public $GroupSet;
 
     /**
-     * @var integer 主机绑定的账号数
+     * @var integer 资产绑定的账号数
      */
     public $AccountCount;
 
@@ -125,17 +125,17 @@ class Device extends AbstractModel
     public $Resource;
 
     /**
-     * @param integer $Id 主机记录ID
-     * @param string $InstanceId 主机ID，对应cvm实例id
-     * @param string $Name 主机名
+     * @param integer $Id 资产ID
+     * @param string $InstanceId 实例ID，对应CVM、CDB等实例ID
+     * @param string $Name 资产名
      * @param string $PublicIp 公网IP
      * @param string $PrivateIp 内网IP
      * @param string $ApCode 地域编码
      * @param string $OsName 操作系统名称
-     * @param integer $Kind 主机类型，1-Linux, 2-Windows
+     * @param integer $Kind 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
      * @param integer $Port 管理端口
-     * @param array $GroupSet 所属主机组信息列表
-     * @param integer $AccountCount 主机绑定的账号数
+     * @param array $GroupSet 所属资产组列表
+     * @param integer $AccountCount 资产绑定的账号数
      * @param string $VpcId VPC ID
      * @param string $SubnetId 子网ID
      * @param Resource $Resource 堡垒机服务信息，注意没有绑定服务时为null

@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method string getTemplateId() 获取模板唯一标识
  * @method void setTemplateId(string $TemplateId) 设置模板唯一标识
+ * @method integer getContentType() 获取查询内容：0-模版列表及详情（默认），1-仅模版列表
+ * @method void setContentType(integer $ContentType) 设置查询内容：0-模版列表及详情（默认），1-仅模版列表
+ * @method integer getLimit() 获取查询个数，默认20，最大100
+ * @method void setLimit(integer $Limit) 设置查询个数，默认20，最大100
+ * @method integer getOffset() 获取查询偏移位置，默认0
+ * @method void setOffset(integer $Offset) 设置查询偏移位置，默认0
  */
 class DescribeTemplatesRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class DescribeTemplatesRequest extends AbstractModel
     public $TemplateId;
 
     /**
+     * @var integer 查询内容：0-模版列表及详情（默认），1-仅模版列表
+     */
+    public $ContentType;
+
+    /**
+     * @var integer 查询个数，默认20，最大100
+     */
+    public $Limit;
+
+    /**
+     * @var integer 查询偏移位置，默认0
+     */
+    public $Offset;
+
+    /**
      * @param Agent $Agent 渠道应用相关信息
      * @param UserInfo $Operator 操作者的信息
      * @param string $TemplateId 模板唯一标识
+     * @param integer $ContentType 查询内容：0-模版列表及详情（默认），1-仅模版列表
+     * @param integer $Limit 查询个数，默认20，最大100
+     * @param integer $Offset 查询偏移位置，默认0
      */
     function __construct()
     {
@@ -74,6 +98,18 @@ class DescribeTemplatesRequest extends AbstractModel
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
+            $this->ContentType = $param["ContentType"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

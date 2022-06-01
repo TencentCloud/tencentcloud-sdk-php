@@ -18,36 +18,36 @@ namespace TencentCloud\Dasb\V20191018\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 命令模板
+ * 高危命令模板
  *
- * @method integer getId() 获取模板ID
- * @method void setId(integer $Id) 设置模板ID
- * @method string getName() 获取模板名称
- * @method void setName(string $Name) 设置模板名称
- * @method string getCmdList() 获取命令列表，\n分隔
- * @method void setCmdList(string $CmdList) 设置命令列表，\n分隔
+ * @method integer getId() 获取高危命令模板ID
+ * @method void setId(integer $Id) 设置高危命令模板ID
+ * @method string getName() 获取高危命令模板名称
+ * @method void setName(string $Name) 设置高危命令模板名称
+ * @method string getCmdList() 获取命令列表，命令之间用换行符（"\n"）分隔
+ * @method void setCmdList(string $CmdList) 设置命令列表，命令之间用换行符（"\n"）分隔
  */
 class CmdTemplate extends AbstractModel
 {
     /**
-     * @var integer 模板ID
+     * @var integer 高危命令模板ID
      */
     public $Id;
 
     /**
-     * @var string 模板名称
+     * @var string 高危命令模板名称
      */
     public $Name;
 
     /**
-     * @var string 命令列表，\n分隔
+     * @var string 命令列表，命令之间用换行符（"\n"）分隔
      */
     public $CmdList;
 
     /**
-     * @param integer $Id 模板ID
-     * @param string $Name 模板名称
-     * @param string $CmdList 命令列表，\n分隔
+     * @param integer $Id 高危命令模板ID
+     * @param string $Name 高危命令模板名称
+     * @param string $CmdList 命令列表，命令之间用换行符（"\n"）分隔
      */
     function __construct()
     {

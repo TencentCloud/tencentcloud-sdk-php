@@ -24,6 +24,8 @@ use TencentCloud\As\V20180419\Models as Models;
 
 /**
  * @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) 本接口（AttachInstances）用于将 CVM 实例添加到伸缩组。
+* 仅支持添加处于`RUNNING`（运行中）或`STOPPED`（已关机）状态的 CVM 实例
+* 添加的 CVM 实例需要和伸缩组 VPC 网络一致
 
  * @method Models\AttachLoadBalancersResponse AttachLoadBalancers(Models\AttachLoadBalancersRequest $req) 此接口（AttachLoadBalancers）用于将负载均衡器添加到伸缩组。
  * @method Models\ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(Models\ClearLaunchConfigurationAttributesRequest $req) 本接口（ClearLaunchConfigurationAttributes）用于将启动配置内的特定属性完全清空。

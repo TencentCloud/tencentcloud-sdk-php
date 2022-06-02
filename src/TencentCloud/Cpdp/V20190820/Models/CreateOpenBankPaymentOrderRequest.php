@@ -62,14 +62,10 @@ __FREEZE__:担保支付
  * @method void setNotifyUrl(string $NotifyUrl) 设置通知地址，如www.test.com。
  * @method string getExpireTime() 获取订单过期时间，yyyy-MM-dd HH:mm:ss格式。
  * @method void setExpireTime(string $ExpireTime) 设置订单过期时间，yyyy-MM-dd HH:mm:ss格式。
- * @method string getFrontUrl() 获取前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
- * @method void setFrontUrl(string $FrontUrl) 设置前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
- * @method string getRefreshUrl() 获取前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
- * @method void setRefreshUrl(string $RefreshUrl) 设置前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+ * @method string getFrontUrl() 获取前端成功回调URL。条件可选。
+ * @method void setFrontUrl(string $FrontUrl) 设置前端成功回调URL。条件可选。
+ * @method string getRefreshUrl() 获取前端刷新 URL。条件可选。
+ * @method void setRefreshUrl(string $RefreshUrl) 设置前端刷新 URL。条件可选。
  * @method OpenBankSceneInfo getSceneInfo() 获取设备信息，条件可选。
  * @method void setSceneInfo(OpenBankSceneInfo $SceneInfo) 设置设备信息，条件可选。
  * @method OpenBankGoodsInfo getGoodsInfo() 获取商品信息，条件可选。
@@ -165,14 +161,12 @@ __FREEZE__:担保支付
     public $ExpireTime;
 
     /**
-     * @var string 前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+     * @var string 前端成功回调URL。条件可选。
      */
     public $FrontUrl;
 
     /**
-     * @var string 前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+     * @var string 前端刷新 URL。条件可选。
      */
     public $RefreshUrl;
 
@@ -239,10 +233,8 @@ __FREEZE__:担保支付
      * @param OpenBankPayeeInfo $PayeeInfo 收款方信息。
      * @param string $NotifyUrl 通知地址，如www.test.com。
      * @param string $ExpireTime 订单过期时间，yyyy-MM-dd HH:mm:ss格式。
-     * @param string $FrontUrl 前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
-     * @param string $RefreshUrl 前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+     * @param string $FrontUrl 前端成功回调URL。条件可选。
+     * @param string $RefreshUrl 前端刷新 URL。条件可选。
      * @param OpenBankSceneInfo $SceneInfo 设备信息，条件可选。
      * @param OpenBankGoodsInfo $GoodsInfo 商品信息，条件可选。
      * @param string $Attachment 附加信息，查询时原样返回。

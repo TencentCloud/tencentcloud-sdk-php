@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云企付-商品信息
  *
- * @method string getGoodsName() 获取商品名称，默认值“商品支付”
- * @method void setGoodsName(string $GoodsName) 设置商品名称，默认值“商品支付”
+ * @method string getGoodsName() 获取商品标题，默认值“商品支付”
+ * @method void setGoodsName(string $GoodsName) 设置商品标题，默认值“商品支付”
  * @method string getGoodsDetail() 获取商品详细描述（商品列表）
  * @method void setGoodsDetail(string $GoodsDetail) 设置商品详细描述（商品列表）
- * @method string getGoodsDescription() 获取商品简单描述。需传入应用市场上的 APP 名字-实际商品名称，例如：天天爱消除-游戏充值
- * @method void setGoodsDescription(string $GoodsDescription) 设置商品简单描述。需传入应用市场上的 APP 名字-实际商品名称，例如：天天爱消除-游戏充值
+ * @method string getGoodsDescription() 获取银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+ * @method void setGoodsDescription(string $GoodsDescription) 设置银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
  */
 class OpenBankGoodsInfo extends AbstractModel
 {
     /**
-     * @var string 商品名称，默认值“商品支付”
+     * @var string 商品标题，默认值“商品支付”
      */
     public $GoodsName;
 
@@ -40,14 +40,14 @@ class OpenBankGoodsInfo extends AbstractModel
     public $GoodsDetail;
 
     /**
-     * @var string 商品简单描述。需传入应用市场上的 APP 名字-实际商品名称，例如：天天爱消除-游戏充值
+     * @var string 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
      */
     public $GoodsDescription;
 
     /**
-     * @param string $GoodsName 商品名称，默认值“商品支付”
+     * @param string $GoodsName 商品标题，默认值“商品支付”
      * @param string $GoodsDetail 商品详细描述（商品列表）
-     * @param string $GoodsDescription 商品简单描述。需传入应用市场上的 APP 名字-实际商品名称，例如：天天爱消除-游戏充值
+     * @param string $GoodsDescription 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
      */
     function __construct()
     {

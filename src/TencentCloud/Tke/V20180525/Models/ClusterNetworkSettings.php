@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnets(array $Subnets) 设置集群关联的容器子网
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIgnoreServiceCIDRConflict() 获取是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIgnoreServiceCIDRConflict(boolean $IgnoreServiceCIDRConflict) 设置是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterNetworkSettings extends AbstractModel
 {
@@ -103,6 +107,12 @@ class ClusterNetworkSettings extends AbstractModel
     public $Subnets;
 
     /**
+     * @var boolean 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IgnoreServiceCIDRConflict;
+
+    /**
      * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
      * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量(默认为256)
@@ -115,6 +125,8 @@ class ClusterNetworkSettings extends AbstractModel
      * @param string $ServiceCIDR 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Subnets 集群关联的容器子网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IgnoreServiceCIDRConflict 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -168,6 +180,10 @@ class ClusterNetworkSettings extends AbstractModel
 
         if (array_key_exists("Subnets",$param) and $param["Subnets"] !== null) {
             $this->Subnets = $param["Subnets"];
+        }
+
+        if (array_key_exists("IgnoreServiceCIDRConflict",$param) and $param["IgnoreServiceCIDRConflict"] !== null) {
+            $this->IgnoreServiceCIDRConflict = $param["IgnoreServiceCIDRConflict"];
         }
     }
 }

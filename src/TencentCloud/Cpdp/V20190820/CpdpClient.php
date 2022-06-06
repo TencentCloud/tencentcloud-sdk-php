@@ -27,6 +27,8 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\AddMerchantResponse AddMerchant(Models\AddMerchantRequest $req) 云支付-添加商户接口
  * @method Models\AddShopResponse AddShop(Models\AddShopRequest $req) 云支付-添加门店接口
  * @method Models\ApplyApplicationMaterialResponse ApplyApplicationMaterial(Models\ApplyApplicationMaterialRequest $req) 跨境-提交申报材料。申报材料的主体是付款人，需要提前调用【跨境-付款人申请】接口提交付款人信息且审核通过后调用。
+ * @method Models\ApplyFlexPaymentResponse ApplyFlexPayment(Models\ApplyFlexPaymentRequest $req) 灵云V2-付款
+ * @method Models\ApplyFlexSettlementResponse ApplyFlexSettlement(Models\ApplyFlexSettlementRequest $req) 灵云V2-结算
  * @method Models\ApplyOpenBankOrderDetailReceiptResponse ApplyOpenBankOrderDetailReceipt(Models\ApplyOpenBankOrderDetailReceiptRequest $req) 云企付-申请单笔交易回单
  * @method Models\ApplyOutwardOrderResponse ApplyOutwardOrder(Models\ApplyOutwardOrderRequest $req) 跨境-汇出指令申请。通过该接口可将对接方账户中的人民币余额汇兑成外币，再汇出至指定银行账户。
  * @method Models\ApplyPayerInfoResponse ApplyPayerInfo(Models\ApplyPayerInfoRequest $req) 跨境-付款人申请。通过该接口提交付款人信息并进行 kyc 审核。
@@ -62,6 +64,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateCustAcctIdResponse CreateCustAcctId(Models\CreateCustAcctIdRequest $req) 会员子账户开立。会员在银行注册，并开立会员子账户，交易网会员代码即会员在平台端系统的会员编号。
 平台需保存银行返回的子账户账号，后续交易接口都会用到。会员属性字段为预留扩展字段，当前必须送默认值。
  * @method Models\CreateExternalAnchorResponse CreateExternalAnchor(Models\CreateExternalAnchorRequest $req) 灵云-主播入驻
+ * @method Models\CreateFlexPayeeResponse CreateFlexPayee(Models\CreateFlexPayeeRequest $req) 灵云V2-收款用户开立
  * @method Models\CreateInvoiceResponse CreateInvoice(Models\CreateInvoiceRequest $req) 智慧零售-发票开具
  * @method Models\CreateInvoiceV2Response CreateInvoiceV2(Models\CreateInvoiceV2Request $req) 智慧零售-发票开具V2
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 智慧零售-商户注册
@@ -97,6 +100,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\DownloadOrgFileResponse DownloadOrgFile(Models\DownloadOrgFileRequest $req) 云支付-下载机构文件接口
  * @method Models\DownloadReconciliationUrlResponse DownloadReconciliationUrl(Models\DownloadReconciliationUrlRequest $req) 获取对账中心账单下载地址的接口
  * @method Models\ExecuteMemberTransactionResponse ExecuteMemberTransaction(Models\ExecuteMemberTransactionRequest $req) 会员间交易接口
+ * @method Models\FreezeFlexBalanceResponse FreezeFlexBalance(Models\FreezeFlexBalanceRequest $req) 灵云V2-冻结余额
  * @method Models\GetBillDownloadUrlResponse GetBillDownloadUrl(Models\GetBillDownloadUrlRequest $req) 调用该接口返回对账单下载地址，对账单下载URL通过GET方式访问，返回zip包，解压后为csv格式文件。文件首行如下：
 订单号,订单归属日期,机构编号,订单描述,交易类型,订单状态,支付场景,原始金额,折扣金额,实际交易金额,支付渠道优惠金额,抹零金额,币种,下单时间,付款成功时间,商户编号,门店编号,付款方式编号,付款方式名称,商户手续费T1,商户扣率,是否信用卡交易,原始订单号,用户账号,外部订单号,订单备注
  * @method Models\GetDistributeBillDownloadUrlResponse GetDistributeBillDownloadUrl(Models\GetDistributeBillDownloadUrlRequest $req) 调用该接口返回对账单下载地址，对账单下载URL通过GET方式访问，返回zip包，解压后为csv格式文件。文件首行如下：
@@ -108,6 +112,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\MigrateOrderRefundQueryResponse MigrateOrderRefundQuery(Models\MigrateOrderRefundQueryRequest $req) 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时。
  * @method Models\ModifyAgentTaxPaymentInfoResponse ModifyAgentTaxPaymentInfo(Models\ModifyAgentTaxPaymentInfoRequest $req) 直播平台-修改代理商完税信息
  * @method Models\ModifyBindedAccountResponse ModifyBindedAccount(Models\ModifyBindedAccountRequest $req) 灵云-重新绑定账号
+ * @method Models\ModifyFlexPayeeAccountRightStatusResponse ModifyFlexPayeeAccountRightStatus(Models\ModifyFlexPayeeAccountRightStatusRequest $req) 灵云V2-收款用户账户权益状态修改
  * @method Models\ModifyMerchantResponse ModifyMerchant(Models\ModifyMerchantRequest $req) 云鉴-商户信息修改的接口
  * @method Models\ModifyMntMbrBindRelateAcctBankCodeResponse ModifyMntMbrBindRelateAcctBankCode(Models\ModifyMntMbrBindRelateAcctBankCodeRequest $req) 维护会员绑定提现账户联行号。此接口可以支持市场修改会员的提现账户的开户行信息，具体包括开户行行名、开户行的银行联行号（大小额联行号）和超级网银行号。
  * @method Models\QueryAcctBindingResponse QueryAcctBinding(Models\QueryAcctBindingRequest $req) 聚鑫-查询子账户绑定银行卡
@@ -137,6 +142,15 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryDownloadBillURLResponse QueryDownloadBillURL(Models\QueryDownloadBillURLRequest $req) 云鉴-查询对账单下载地址的接口
  * @method Models\QueryExceedingInfoResponse QueryExceedingInfo(Models\QueryExceedingInfoRequest $req) 灵云-查询超额信息
  * @method Models\QueryExchangeRateResponse QueryExchangeRate(Models\QueryExchangeRateRequest $req) 跨境-查询汇率
+ * @method Models\QueryFlexAmountBeforeTaxResponse QueryFlexAmountBeforeTax(Models\QueryFlexAmountBeforeTaxRequest $req) 灵云V2-查询税前金额
+ * @method Models\QueryFlexFreezeOrderListResponse QueryFlexFreezeOrderList(Models\QueryFlexFreezeOrderListRequest $req) 灵云V2-查询冻结订单列表
+ * @method Models\QueryFlexPayeeAccountBalanceResponse QueryFlexPayeeAccountBalance(Models\QueryFlexPayeeAccountBalanceRequest $req) 灵云V2-收款用户账户余额查询
+ * @method Models\QueryFlexPayeeAccountInfoResponse QueryFlexPayeeAccountInfo(Models\QueryFlexPayeeAccountInfoRequest $req) 灵云V2-收款用户账户信息查询
+ * @method Models\QueryFlexPayeeAccountListResponse QueryFlexPayeeAccountList(Models\QueryFlexPayeeAccountListRequest $req) 灵云V2-收款用户账户列表查询
+ * @method Models\QueryFlexPayeeInfoResponse QueryFlexPayeeInfo(Models\QueryFlexPayeeInfoRequest $req) 灵云V2-收款用户信息查询
+ * @method Models\QueryFlexPaymentOrderListResponse QueryFlexPaymentOrderList(Models\QueryFlexPaymentOrderListRequest $req) 灵云V2-查询付款订单列表
+ * @method Models\QueryFlexPaymentOrderStatusResponse QueryFlexPaymentOrderStatus(Models\QueryFlexPaymentOrderStatusRequest $req) 灵云V2-查询付款订单状态
+ * @method Models\QueryFlexSettlementOrderListResponse QueryFlexSettlementOrderList(Models\QueryFlexSettlementOrderListRequest $req) 灵云V2-查询结算订单列表
  * @method Models\QueryFundsTransactionDetailsResponse QueryFundsTransactionDetails(Models\QueryFundsTransactionDetailsRequest $req) 聚鑫-查询会员资金交易信息列表
  * @method Models\QueryInvoiceResponse QueryInvoice(Models\QueryInvoiceRequest $req) 智慧零售-发票查询
  * @method Models\QueryInvoiceV2Response QueryInvoiceV2(Models\QueryInvoiceV2Request $req) 智慧零售-发票查询V2

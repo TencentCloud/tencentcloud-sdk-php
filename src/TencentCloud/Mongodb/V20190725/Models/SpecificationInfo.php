@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区信息
  * @method array getSpecItems() 获取售卖规格信息
  * @method void setSpecItems(array $SpecItems) 设置售卖规格信息
+ * @method integer getSupportMultiAZ() 获取是否支持跨可用区部署 1-支持，0-不支持
+ * @method void setSupportMultiAZ(integer $SupportMultiAZ) 设置是否支持跨可用区部署 1-支持，0-不支持
  */
 class SpecificationInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class SpecificationInfo extends AbstractModel
     public $SpecItems;
 
     /**
+     * @var integer 是否支持跨可用区部署 1-支持，0-不支持
+     */
+    public $SupportMultiAZ;
+
+    /**
      * @param string $Region 地域信息
      * @param string $Zone 可用区信息
      * @param array $SpecItems 售卖规格信息
+     * @param integer $SupportMultiAZ 是否支持跨可用区部署 1-支持，0-不支持
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class SpecificationInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SpecItems, $obj);
             }
+        }
+
+        if (array_key_exists("SupportMultiAZ",$param) and $param["SupportMultiAZ"] !== null) {
+            $this->SupportMultiAZ = $param["SupportMultiAZ"];
         }
     }
 }

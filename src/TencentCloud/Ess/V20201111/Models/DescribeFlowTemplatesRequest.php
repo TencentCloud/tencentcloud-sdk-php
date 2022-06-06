@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置应用相关信息
  * @method integer getGenerateSource() 获取暂未开放
  * @method void setGenerateSource(integer $GenerateSource) 设置暂未开放
- * @method integer getContentType() 获取查询内容：0-模版列表及详情（默认），1-仅模版列表
- * @method void setContentType(integer $ContentType) 设置查询内容：0-模版列表及详情（默认），1-仅模版列表
+ * @method integer getContentType() 获取查询内容：0-模板列表及详情（默认），1-仅模板列表
+ * @method void setContentType(integer $ContentType) 设置查询内容：0-模板列表及详情（默认），1-仅模板列表
  */
 class DescribeFlowTemplatesRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeFlowTemplatesRequest extends AbstractModel
     public $GenerateSource;
 
     /**
-     * @var integer 查询内容：0-模版列表及详情（默认），1-仅模版列表
+     * @var integer 查询内容：0-模板列表及详情（默认），1-仅模板列表
      */
     public $ContentType;
 
@@ -79,7 +79,7 @@ class DescribeFlowTemplatesRequest extends AbstractModel
      * @param array $Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
      * @param Agent $Agent 应用相关信息
      * @param integer $GenerateSource 暂未开放
-     * @param integer $ContentType 查询内容：0-模版列表及详情（默认），1-仅模版列表
+     * @param integer $ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
      */
     function __construct()
     {

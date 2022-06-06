@@ -20,19 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSparkAppTasks返回参数结构体
  *
- * @method TaskResponseInfo getTasks() 获取任务列表
+ * @method TaskResponseInfo getTasks() 获取任务结果（该字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTasks(TaskResponseInfo $Tasks) 设置任务列表
+ * @method void setTasks(TaskResponseInfo $Tasks) 设置任务结果（该字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取任务总数
  * @method void setTotalCount(integer $TotalCount) 设置任务总数
+ * @method array getSparkAppTasks() 获取任务结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSparkAppTasks(array $SparkAppTasks) 设置任务结果列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSparkAppTasksResponse extends AbstractModel
 {
     /**
-     * @var TaskResponseInfo 任务列表
+     * @var TaskResponseInfo 任务结果（该字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tasks;
@@ -43,14 +47,22 @@ class DescribeSparkAppTasksResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var array 任务结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SparkAppTasks;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param TaskResponseInfo $Tasks 任务列表
+     * @param TaskResponseInfo $Tasks 任务结果（该字段已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 任务总数
+     * @param array $SparkAppTasks 任务结果列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +85,15 @@ class DescribeSparkAppTasksResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("SparkAppTasks",$param) and $param["SparkAppTasks"] !== null) {
+            $this->SparkAppTasks = [];
+            foreach ($param["SparkAppTasks"] as $key => $value){
+                $obj = new TaskResponseInfo();
+                $obj->deserialize($value);
+                array_push($this->SparkAppTasks, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

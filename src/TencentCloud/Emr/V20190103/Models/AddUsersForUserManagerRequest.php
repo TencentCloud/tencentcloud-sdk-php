@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUsersForUserManager请求参数结构体
  *
+ * @method string getInstanceId() 获取集群字符串ID
+ * @method void setInstanceId(string $InstanceId) 设置集群字符串ID
  * @method array getUserManagerUserList() 获取用户信息列表
  * @method void setUserManagerUserList(array $UserManagerUserList) 设置用户信息列表
  */
 class AddUsersForUserManagerRequest extends AbstractModel
 {
     /**
+     * @var string 集群字符串ID
+     */
+    public $InstanceId;
+
+    /**
      * @var array 用户信息列表
      */
     public $UserManagerUserList;
 
     /**
+     * @param string $InstanceId 集群字符串ID
      * @param array $UserManagerUserList 用户信息列表
      */
     function __construct()
@@ -46,6 +54,10 @@ class AddUsersForUserManagerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("UserManagerUserList",$param) and $param["UserManagerUserList"] !== null) {
             $this->UserManagerUserList = [];
             foreach ($param["UserManagerUserList"] as $key => $value){

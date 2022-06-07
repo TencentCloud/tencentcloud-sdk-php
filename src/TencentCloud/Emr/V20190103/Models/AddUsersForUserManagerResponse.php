@@ -20,17 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUsersForUserManager返回参数结构体
  *
+ * @method array getSuccessUserList() 获取添加成功的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSuccessUserList(array $SuccessUserList) 设置添加成功的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFailedUserList() 获取添加失败的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailedUserList(array $FailedUserList) 设置添加失败的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class AddUsersForUserManagerResponse extends AbstractModel
 {
     /**
+     * @var array 添加成功的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SuccessUserList;
+
+    /**
+     * @var array 添加失败的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailedUserList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $SuccessUserList 添加成功的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FailedUserList 添加失败的用户列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +70,14 @@ class AddUsersForUserManagerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SuccessUserList",$param) and $param["SuccessUserList"] !== null) {
+            $this->SuccessUserList = $param["SuccessUserList"];
+        }
+
+        if (array_key_exists("FailedUserList",$param) and $param["FailedUserList"] !== null) {
+            $this->FailedUserList = $param["FailedUserList"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskIncrease(integer $RiskIncrease) 设置待处理风险个数较昨日增长
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsolateIncrease() 获取隔离事件个数较昨日新增
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolateIncrease(integer $IsolateIncrease) 设置隔离事件个数较昨日新增
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsolateCnt() 获取隔离事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolateCnt(integer $IsolateCnt) 设置隔离事件总数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -83,6 +91,18 @@ class DescribeVirusSummaryResponse extends AbstractModel
     public $RiskIncrease;
 
     /**
+     * @var integer 隔离事件个数较昨日新增
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolateIncrease;
+
+    /**
+     * @var integer 隔离事件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolateCnt;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -98,6 +118,10 @@ class DescribeVirusSummaryResponse extends AbstractModel
      * @param integer $RiskContainerIncrease 木马影响容器个数较昨日增长
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskIncrease 待处理风险个数较昨日增长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsolateIncrease 隔离事件个数较昨日新增
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsolateCnt 隔离事件总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -136,6 +160,14 @@ class DescribeVirusSummaryResponse extends AbstractModel
 
         if (array_key_exists("RiskIncrease",$param) and $param["RiskIncrease"] !== null) {
             $this->RiskIncrease = $param["RiskIncrease"];
+        }
+
+        if (array_key_exists("IsolateIncrease",$param) and $param["IsolateIncrease"] !== null) {
+            $this->IsolateIncrease = $param["IsolateIncrease"];
+        }
+
+        if (array_key_exists("IsolateCnt",$param) and $param["IsolateCnt"] !== null) {
+            $this->IsolateCnt = $param["IsolateCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

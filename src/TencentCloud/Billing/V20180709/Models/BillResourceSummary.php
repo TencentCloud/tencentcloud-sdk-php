@@ -90,6 +90,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductCode(string $ProductCode) 设置子产品名称代码
  * @method integer getRegionId() 获取区域ID
  * @method void setRegionId(integer $RegionId) 设置区域ID
+ * @method string getInstanceType() 获取资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+ * @method void setInstanceType(string $InstanceType) 设置资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+ * @method string getOriginalCostWithRI() 获取按组件原价的口径换算的预留实例抵扣金额
+ * @method void setOriginalCostWithRI(string $OriginalCostWithRI) 设置按组件原价的口径换算的预留实例抵扣金额
+ * @method string getSPDeduction() 获取节省计划抵扣的SP包面值
+ * @method void setSPDeduction(string $SPDeduction) 设置节省计划抵扣的SP包面值
+ * @method string getOriginalCostWithSP() 获取按组件原价的口径换算的节省计划抵扣金额
+ * @method void setOriginalCostWithSP(string $OriginalCostWithSP) 设置按组件原价的口径换算的节省计划抵扣金额
  */
 class BillResourceSummary extends AbstractModel
 {
@@ -261,6 +285,34 @@ class BillResourceSummary extends AbstractModel
     public $RegionId;
 
     /**
+     * @var string 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 按组件原价的口径换算的预留实例抵扣金额
+     */
+    public $OriginalCostWithRI;
+
+    /**
+     * @var string 节省计划抵扣的SP包面值
+     */
+    public $SPDeduction;
+
+    /**
+     * @var string 按组件原价的口径换算的节省计划抵扣金额
+     */
+    public $OriginalCostWithSP;
+
+    /**
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @param string $ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
      * @param string $PayModeName 计费模式：包年包月和按量计费
@@ -296,6 +348,18 @@ class BillResourceSummary extends AbstractModel
      * @param string $BusinessCode 产品名称代码
      * @param string $ProductCode 子产品名称代码
      * @param integer $RegionId 区域ID
+     * @param string $InstanceType 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+     * @param string $OriginalCostWithRI 按组件原价的口径换算的预留实例抵扣金额
+     * @param string $SPDeduction 节省计划抵扣的SP包面值
+     * @param string $OriginalCostWithSP 按组件原价的口径换算的节省计划抵扣金额
      */
     function __construct()
     {
@@ -445,6 +509,22 @@ class BillResourceSummary extends AbstractModel
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("OriginalCostWithRI",$param) and $param["OriginalCostWithRI"] !== null) {
+            $this->OriginalCostWithRI = $param["OriginalCostWithRI"];
+        }
+
+        if (array_key_exists("SPDeduction",$param) and $param["SPDeduction"] !== null) {
+            $this->SPDeduction = $param["SPDeduction"];
+        }
+
+        if (array_key_exists("OriginalCostWithSP",$param) and $param["OriginalCostWithSP"] !== null) {
+            $this->OriginalCostWithSP = $param["OriginalCostWithSP"];
         }
     }
 }

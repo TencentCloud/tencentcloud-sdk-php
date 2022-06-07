@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMp3Param(RecordParam $Mp3Param) 设置MP3 录制参数，开启 MP3 录制时设置。
  * @method boolean getRemoveWatermark() 获取是否去除水印，类型为慢直播时此参数无效。
  * @method void setRemoveWatermark(boolean $RemoveWatermark) 设置是否去除水印，类型为慢直播时此参数无效。
+ * @method FlvSpecialParam getFlvSpecialParam() 获取FLV 录制定制参数。
+ * @method void setFlvSpecialParam(FlvSpecialParam $FlvSpecialParam) 设置FLV 录制定制参数。
  */
 class ModifyLiveRecordTemplateRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     public $RemoveWatermark;
 
     /**
+     * @var FlvSpecialParam FLV 录制定制参数。
+     */
+    public $FlvSpecialParam;
+
+    /**
      * @param integer $TemplateId DescribeRecordTemplates接口获取到的模板 ID。
      * @param string $TemplateName 模板名称。
      * @param string $Description 描述信息。
@@ -104,6 +111,7 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
      * @param HlsSpecialParam $HlsSpecialParam HLS 录制定制参数。
      * @param RecordParam $Mp3Param MP3 录制参数，开启 MP3 录制时设置。
      * @param boolean $RemoveWatermark 是否去除水印，类型为慢直播时此参数无效。
+     * @param FlvSpecialParam $FlvSpecialParam FLV 录制定制参数。
      */
     function __construct()
     {
@@ -162,6 +170,11 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
 
         if (array_key_exists("RemoveWatermark",$param) and $param["RemoveWatermark"] !== null) {
             $this->RemoveWatermark = $param["RemoveWatermark"];
+        }
+
+        if (array_key_exists("FlvSpecialParam",$param) and $param["FlvSpecialParam"] !== null) {
+            $this->FlvSpecialParam = new FlvSpecialParam();
+            $this->FlvSpecialParam->deserialize($param["FlvSpecialParam"]);
         }
     }
 }

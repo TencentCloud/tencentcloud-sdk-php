@@ -64,6 +64,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContractPrice(string $ContractPrice) 设置合同价
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceType() 获取资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceType(string $InstanceType) 设置资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRiTimeSpan() 获取预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiTimeSpan(string $RiTimeSpan) 设置预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginalCostWithRI() 获取按组件原价的口径换算的预留实例抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginalCostWithRI(string $OriginalCostWithRI) 设置按组件原价的口径换算的预留实例抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSPDeductionRate() 获取节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSPDeductionRate(string $SPDeductionRate) 设置节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSPDeduction() 获取节省计划抵扣的SP包面值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSPDeduction(string $SPDeduction) 设置节省计划抵扣的SP包面值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginalCostWithSP() 获取按组件原价的口径换算的节省计划抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginalCostWithSP(string $OriginalCostWithSP) 设置按组件原价的口径换算的节省计划抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBlendedDiscount() 获取综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBlendedDiscount(string $BlendedDiscount) 设置综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillDetailComponent extends AbstractModel
 {
@@ -166,6 +194,48 @@ class BillDetailComponent extends AbstractModel
     public $ContractPrice;
 
     /**
+     * @var string 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiTimeSpan;
+
+    /**
+     * @var string 按组件原价的口径换算的预留实例抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginalCostWithRI;
+
+    /**
+     * @var string 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SPDeductionRate;
+
+    /**
+     * @var string 节省计划抵扣的SP包面值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SPDeduction;
+
+    /**
+     * @var string 按组件原价的口径换算的节省计划抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginalCostWithSP;
+
+    /**
+     * @var string 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BlendedDiscount;
+
+    /**
      * @param string $ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
      * @param string $ItemCodeName 组件名称:资源组件的名称，如云数据库MySQL-内存等
      * @param string $SinglePrice 组件刊例价:资源组件的原始价格，保持原始粒度
@@ -187,6 +257,20 @@ class BillDetailComponent extends AbstractModel
      * @param string $ComponentCode 组件名称代码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContractPrice 合同价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceType 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RiTimeSpan 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginalCostWithRI 按组件原价的口径换算的预留实例抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SPDeductionRate 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SPDeduction 节省计划抵扣的SP包面值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginalCostWithSP 按组件原价的口径换算的节省计划抵扣金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BlendedDiscount 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +360,34 @@ class BillDetailComponent extends AbstractModel
 
         if (array_key_exists("ContractPrice",$param) and $param["ContractPrice"] !== null) {
             $this->ContractPrice = $param["ContractPrice"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("RiTimeSpan",$param) and $param["RiTimeSpan"] !== null) {
+            $this->RiTimeSpan = $param["RiTimeSpan"];
+        }
+
+        if (array_key_exists("OriginalCostWithRI",$param) and $param["OriginalCostWithRI"] !== null) {
+            $this->OriginalCostWithRI = $param["OriginalCostWithRI"];
+        }
+
+        if (array_key_exists("SPDeductionRate",$param) and $param["SPDeductionRate"] !== null) {
+            $this->SPDeductionRate = $param["SPDeductionRate"];
+        }
+
+        if (array_key_exists("SPDeduction",$param) and $param["SPDeduction"] !== null) {
+            $this->SPDeduction = $param["SPDeduction"];
+        }
+
+        if (array_key_exists("OriginalCostWithSP",$param) and $param["OriginalCostWithSP"] !== null) {
+            $this->OriginalCostWithSP = $param["OriginalCostWithSP"];
+        }
+
+        if (array_key_exists("BlendedDiscount",$param) and $param["BlendedDiscount"] !== null) {
+            $this->BlendedDiscount = $param["BlendedDiscount"];
         }
     }
 }

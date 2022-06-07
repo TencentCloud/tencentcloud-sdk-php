@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRisks(string $Risks) 设置风险实例详情列表，需要json decode
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getResourceCount() 获取巡检资源数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceCount(integer $ResourceCount) 设置巡检资源数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -69,6 +73,12 @@ class DescribeTaskStrategyRisksResponse extends AbstractModel
     public $Risks;
 
     /**
+     * @var integer 巡检资源数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -82,6 +92,8 @@ class DescribeTaskStrategyRisksResponse extends AbstractModel
      * @param integer $RiskTotalCount 风险实例个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Risks 风险实例详情列表，需要json decode
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ResourceCount 巡检资源数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -117,6 +129,10 @@ class DescribeTaskStrategyRisksResponse extends AbstractModel
 
         if (array_key_exists("Risks",$param) and $param["Risks"] !== null) {
             $this->Risks = $param["Risks"];
+        }
+
+        if (array_key_exists("ResourceCount",$param) and $param["ResourceCount"] !== null) {
+            $this->ResourceCount = $param["ResourceCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

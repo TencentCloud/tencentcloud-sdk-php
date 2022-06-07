@@ -20,24 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 弹性伸缩策略
  *
- * @method integer getMinReplicas() 获取最小实例数
- * @method void setMinReplicas(integer $MinReplicas) 设置最小实例数
- * @method integer getMaxReplicas() 获取最大实例数
- * @method void setMaxReplicas(integer $MaxReplicas) 设置最大实例数
+ * @method integer getMinReplicas() 获取最小实例数（可以不传）
+ * @method void setMinReplicas(integer $MinReplicas) 设置最小实例数（可以不传）
+ * @method integer getMaxReplicas() 获取最大实例数（可以不传）
+ * @method void setMaxReplicas(integer $MaxReplicas) 设置最大实例数（可以不传）
  * @method string getMetrics() 获取指标度量（CPU or MEMORY）
  * @method void setMetrics(string $Metrics) 设置指标度量（CPU or MEMORY）
  * @method integer getThreshold() 获取阈值（百分比）
  * @method void setThreshold(integer $Threshold) 设置阈值（百分比）
+ * @method boolean getEnabled() 获取是否启用
+ * @method void setEnabled(boolean $Enabled) 设置是否启用
  */
 class HorizontalAutoscaler extends AbstractModel
 {
     /**
-     * @var integer 最小实例数
+     * @var integer 最小实例数（可以不传）
      */
     public $MinReplicas;
 
     /**
-     * @var integer 最大实例数
+     * @var integer 最大实例数（可以不传）
      */
     public $MaxReplicas;
 
@@ -52,10 +54,16 @@ class HorizontalAutoscaler extends AbstractModel
     public $Threshold;
 
     /**
-     * @param integer $MinReplicas 最小实例数
-     * @param integer $MaxReplicas 最大实例数
+     * @var boolean 是否启用
+     */
+    public $Enabled;
+
+    /**
+     * @param integer $MinReplicas 最小实例数（可以不传）
+     * @param integer $MaxReplicas 最大实例数（可以不传）
      * @param string $Metrics 指标度量（CPU or MEMORY）
      * @param integer $Threshold 阈值（百分比）
+     * @param boolean $Enabled 是否启用
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class HorizontalAutoscaler extends AbstractModel
 
         if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
             $this->Threshold = $param["Threshold"];
+        }
+
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
     }
 }

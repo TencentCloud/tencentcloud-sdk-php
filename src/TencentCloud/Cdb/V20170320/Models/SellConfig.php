@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceTypeName(string $DeviceTypeName) 设置实例类型描述，可能的取值范围有：通用型， 独享型， 基础型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineType() 获取引擎类型描述，可能的取值范围有：Innodb，RocksDB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineType(string $EngineType) 设置引擎类型描述，可能的取值范围有：Innodb，RocksDB
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SellConfig extends AbstractModel
 {
@@ -142,6 +146,12 @@ class SellConfig extends AbstractModel
     public $DeviceTypeName;
 
     /**
+     * @var string 引擎类型描述，可能的取值范围有：Innodb，RocksDB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineType;
+
+    /**
      * @param string $Device 设备类型（废弃）
      * @param string $Type 售卖规格描述（废弃）
      * @param string $CdbType 实例类型（废弃）
@@ -159,6 +169,8 @@ class SellConfig extends AbstractModel
      * @param string $DeviceType 实例类型，可能的取值范围有：UNIVERSAL (通用型), EXCLUSIVE (独享型), BASIC (基础型)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceTypeName 实例类型描述，可能的取值范围有：通用型， 独享型， 基础型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineType 引擎类型描述，可能的取值范围有：Innodb，RocksDB
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -236,6 +248,10 @@ class SellConfig extends AbstractModel
 
         if (array_key_exists("DeviceTypeName",$param) and $param["DeviceTypeName"] !== null) {
             $this->DeviceTypeName = $param["DeviceTypeName"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

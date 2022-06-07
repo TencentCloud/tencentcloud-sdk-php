@@ -40,6 +40,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DescribeSystemResourcesResponse DescribeSystemResources(Models\DescribeSystemResourcesRequest $req) 描述系统资源接口
  * @method Models\RunJobsResponse RunJobs(Models\RunJobsRequest $req) 批量启动或者恢复作业，批量操作数量上限20
  * @method Models\StopJobsResponse StopJobs(Models\StopJobsRequest $req) 批量停止作业，批量操作数量上限为20
+ * @method Models\TriggerJobSavepointResponse TriggerJobSavepoint(Models\TriggerJobSavepointRequest $req) 触发Savepoint
  */
 
 class OceanusClient extends AbstractClient

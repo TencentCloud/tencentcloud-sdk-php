@@ -24,13 +24,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableTag(boolean $EnableTag) 设置是否投递 TAG 信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMetaFields() 获取需要投递的元数据列表，目前仅支持：__SOURCE__，__FILENAME__和__TIMESTAMP__
+ * @method array getMetaFields() 获取需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_和\_\_TIMESTAMP\_\_
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetaFields(array $MetaFields) 设置需要投递的元数据列表，目前仅支持：__SOURCE__，__FILENAME__和__TIMESTAMP__
+ * @method void setMetaFields(array $MetaFields) 设置需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_和\_\_TIMESTAMP\_\_
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTagJsonNotTiled() 获取当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagJsonNotTiled(boolean $TagJsonNotTiled) 设置当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTimestampAccuracy() 获取投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimestampAccuracy(integer $TimestampAccuracy) 设置投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumerContent extends AbstractModel
@@ -42,7 +46,7 @@ class ConsumerContent extends AbstractModel
     public $EnableTag;
 
     /**
-     * @var array 需要投递的元数据列表，目前仅支持：__SOURCE__，__FILENAME__和__TIMESTAMP__
+     * @var array 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_和\_\_TIMESTAMP\_\_
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaFields;
@@ -54,11 +58,19 @@ class ConsumerContent extends AbstractModel
     public $TagJsonNotTiled;
 
     /**
+     * @var integer 投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TimestampAccuracy;
+
+    /**
      * @param boolean $EnableTag 是否投递 TAG 信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MetaFields 需要投递的元数据列表，目前仅支持：__SOURCE__，__FILENAME__和__TIMESTAMP__
+     * @param array $MetaFields 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_和\_\_TIMESTAMP\_\_
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TimestampAccuracy 投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class ConsumerContent extends AbstractModel
 
         if (array_key_exists("TagJsonNotTiled",$param) and $param["TagJsonNotTiled"] !== null) {
             $this->TagJsonNotTiled = $param["TagJsonNotTiled"];
+        }
+
+        if (array_key_exists("TimestampAccuracy",$param) and $param["TimestampAccuracy"] !== null) {
+            $this->TimestampAccuracy = $param["TimestampAccuracy"];
         }
     }
 }

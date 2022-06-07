@@ -30,12 +30,18 @@ use TencentCloud\Common\AbstractModel;
 <li>ContainerName - String - 是否必填：否 - 容器名称</li>
 <li>ContainerId - String - 是否必填：否 - 容器id</li>
 <li>Hostname - String - 是否必填：否 - 主机名称</li>
-<li>HostIp- String - 是否必填：是 - 容器名称</li>
+<li>HostIp- String - 是否必填：否 - 主机IP</li>
+<li>ImageId- String - 是否必填：否 - 镜像ID</li>
+<li>ImageName- String - 是否必填：否 - 镜像名称</li>
+<li>Status- String - 是否必填：否 - 状态</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>ContainerName - String - 是否必填：否 - 容器名称</li>
 <li>ContainerId - String - 是否必填：否 - 容器id</li>
 <li>Hostname - String - 是否必填：否 - 主机名称</li>
-<li>HostIp- String - 是否必填：是 - 容器名称</li>
+<li>HostIp- String - 是否必填：否 - 主机IP</li>
+<li>ImageId- String - 是否必填：否 - 镜像ID</li>
+<li>ImageName- String - 是否必填：否 - 镜像名称</li>
+<li>Status- String - 是否必填：否 - 状态</li>
  * @method string getBy() 获取排序字段
  * @method void setBy(string $By) 设置排序字段
  * @method string getOrder() 获取排序方式
@@ -63,7 +69,10 @@ class DescribeVirusTaskListRequest extends AbstractModel
 <li>ContainerName - String - 是否必填：否 - 容器名称</li>
 <li>ContainerId - String - 是否必填：否 - 容器id</li>
 <li>Hostname - String - 是否必填：否 - 主机名称</li>
-<li>HostIp- String - 是否必填：是 - 容器名称</li>
+<li>HostIp- String - 是否必填：否 - 主机IP</li>
+<li>ImageId- String - 是否必填：否 - 镜像ID</li>
+<li>ImageName- String - 是否必填：否 - 镜像名称</li>
+<li>Status- String - 是否必填：否 - 状态</li>
      */
     public $Filters;
 
@@ -85,7 +94,10 @@ class DescribeVirusTaskListRequest extends AbstractModel
 <li>ContainerName - String - 是否必填：否 - 容器名称</li>
 <li>ContainerId - String - 是否必填：否 - 容器id</li>
 <li>Hostname - String - 是否必填：否 - 主机名称</li>
-<li>HostIp- String - 是否必填：是 - 容器名称</li>
+<li>HostIp- String - 是否必填：否 - 主机IP</li>
+<li>ImageId- String - 是否必填：否 - 镜像ID</li>
+<li>ImageName- String - 是否必填：否 - 镜像名称</li>
+<li>Status- String - 是否必填：否 - 状态</li>
      * @param string $By 排序字段
      * @param string $Order 排序方式
      */

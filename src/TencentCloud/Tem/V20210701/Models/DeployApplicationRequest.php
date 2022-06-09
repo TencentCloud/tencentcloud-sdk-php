@@ -100,10 +100,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadiness(HealthCheckConfig $Readiness) 设置就绪探针配置
  * @method DeployStrategyConf getDeployStrategyConf() 获取分批发布策略配置
  * @method void setDeployStrategyConf(DeployStrategyConf $DeployStrategyConf) 设置分批发布策略配置
- * @method array getHorizontalAutoscaler() 获取弹性策略
- * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) 设置弹性策略
- * @method array getCronHorizontalAutoscaler() 获取定时弹性策略
- * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) 设置定时弹性策略
+ * @method array getHorizontalAutoscaler() 获取弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
+ * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) 设置弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
+ * @method array getCronHorizontalAutoscaler() 获取定时弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
+ * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) 设置定时弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
  * @method integer getLogEnable() 获取是否启用log，1为启用，0为不启用
  * @method void setLogEnable(integer $LogEnable) 设置是否启用log，1为启用，0为不启用
  * @method boolean getConfEdited() 获取（除开镜像配置）配置是否修改
@@ -128,6 +128,8 @@ use TencentCloud\Common\AbstractModel;
 - TENCENTOS
  * @method EnablePrometheusConf getEnablePrometheusConf() 获取是否开启prometheus 业务指标监控
  * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) 设置是否开启prometheus 业务指标监控
+ * @method integer getEnableTracing() 获取1：开始apm采集；0：关闭apm采集
+ * @method void setEnableTracing(integer $EnableTracing) 设置1：开始apm采集；0：关闭apm采集
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -300,12 +302,12 @@ class DeployApplicationRequest extends AbstractModel
     public $DeployStrategyConf;
 
     /**
-     * @var array 弹性策略
+     * @var array 弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
      */
     public $HorizontalAutoscaler;
 
     /**
-     * @var array 定时弹性策略
+     * @var array 定时弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
      */
     public $CronHorizontalAutoscaler;
 
@@ -344,6 +346,11 @@ class DeployApplicationRequest extends AbstractModel
      * @var EnablePrometheusConf 是否开启prometheus 业务指标监控
      */
     public $EnablePrometheusConf;
+
+    /**
+     * @var integer 1：开始apm采集；0：关闭apm采集
+     */
+    public $EnableTracing;
 
     /**
      * @param string $ApplicationId 应用ID
@@ -386,8 +393,8 @@ class DeployApplicationRequest extends AbstractModel
      * @param HealthCheckConfig $Liveness 存活探针配置
      * @param HealthCheckConfig $Readiness 就绪探针配置
      * @param DeployStrategyConf $DeployStrategyConf 分批发布策略配置
-     * @param array $HorizontalAutoscaler 弹性策略
-     * @param array $CronHorizontalAutoscaler 定时弹性策略
+     * @param array $HorizontalAutoscaler 弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
+     * @param array $CronHorizontalAutoscaler 定时弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
      * @param integer $LogEnable 是否启用log，1为启用，0为不启用
      * @param boolean $ConfEdited （除开镜像配置）配置是否修改
      * @param boolean $SpeedUp 是否开启应用加速
@@ -400,6 +407,7 @@ class DeployApplicationRequest extends AbstractModel
 - ALPINE
 - TENCENTOS
      * @param EnablePrometheusConf $EnablePrometheusConf 是否开启prometheus 业务指标监控
+     * @param integer $EnableTracing 1：开始apm采集；0：关闭apm采集
      */
     function __construct()
     {
@@ -610,6 +618,10 @@ class DeployApplicationRequest extends AbstractModel
         if (array_key_exists("EnablePrometheusConf",$param) and $param["EnablePrometheusConf"] !== null) {
             $this->EnablePrometheusConf = new EnablePrometheusConf();
             $this->EnablePrometheusConf->deserialize($param["EnablePrometheusConf"]);
+        }
+
+        if (array_key_exists("EnableTracing",$param) and $param["EnableTracing"] !== null) {
+            $this->EnableTracing = $param["EnableTracing"];
         }
     }
 }

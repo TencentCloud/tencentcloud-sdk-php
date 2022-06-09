@@ -27,6 +27,7 @@ use TencentCloud\Bsca\V20210811\Models as Models;
  * @method Models\DescribeKBComponentVulnerabilityResponse DescribeKBComponentVulnerability(Models\DescribeKBComponentVulnerabilityRequest $req) 本接口(DescribeKBComponentVulnerability)用于在知识库中查询开源组件的漏洞信息。
  * @method Models\DescribeKBLicenseResponse DescribeKBLicense(Models\DescribeKBLicenseRequest $req) 本接口(DescribeKBLicense)用于在知识库中查询许可证信息。
  * @method Models\DescribeKBVulnerabilityResponse DescribeKBVulnerability(Models\DescribeKBVulnerabilityRequest $req) 本接口(DescribeKBVulnerability)用于在知识库中查询漏洞详细信息，支持根据CVE ID查询或者根据Vul ID查询。
+ * @method Models\MatchKBPURLListResponse MatchKBPURLList(Models\MatchKBPURLListRequest $req) 本接口(MatchKBPURLList)用于在知识库中匹配与特征对应的开源组件列表。
  */
 
 class BscaClient extends AbstractClient

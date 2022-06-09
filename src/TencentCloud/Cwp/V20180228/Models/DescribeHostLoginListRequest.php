@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 <li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
 <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
+ * @method string getOrder() 获取排序方式：根据请求次数排序：asc-升序/desc-降序
+ * @method void setOrder(string $Order) 设置排序方式：根据请求次数排序：asc-升序/desc-降序
+ * @method string getBy() 获取排序字段：LoginTime-发生时间
+ * @method void setBy(string $By) 设置排序字段：LoginTime-发生时间
  */
 class DescribeHostLoginListRequest extends AbstractModel
 {
@@ -72,6 +76,16 @@ class DescribeHostLoginListRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 排序方式：根据请求次数排序：asc-升序/desc-降序
+     */
+    public $Order;
+
+    /**
+     * @var string 排序字段：LoginTime-发生时间
+     */
+    public $By;
+
+    /**
      * @param integer $Limit 需要返回的数量，最大值为100
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
@@ -84,6 +98,8 @@ class DescribeHostLoginListRequest extends AbstractModel
 <li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
 <li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
+     * @param string $Order 排序方式：根据请求次数排序：asc-升序/desc-降序
+     * @param string $By 排序字段：LoginTime-发生时间
      */
     function __construct()
     {
@@ -113,6 +129,14 @@ class DescribeHostLoginListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

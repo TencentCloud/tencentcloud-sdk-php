@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>MergeEndTime - String - 是否必填：否 - 最近访问结束时间</li>
  * @method string getOrder() 获取排序方式：根据请求次数排序：asc-升序/desc-降序
  * @method void setOrder(string $Order) 设置排序方式：根据请求次数排序：asc-升序/desc-降序
- * @method string getBy() 获取排序字段：AccessCount-请求次数
- * @method void setBy(string $By) 设置排序字段：AccessCount-请求次数
+ * @method string getBy() 获取排序字段：AccessCount-请求次数。MergeTime-最近请求时间
+ * @method void setBy(string $By) 设置排序字段：AccessCount-请求次数。MergeTime-最近请求时间
  */
 class DescribeRiskDnsListRequest extends AbstractModel
 {
@@ -69,7 +69,7 @@ class DescribeRiskDnsListRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string 排序字段：AccessCount-请求次数
+     * @var string 排序字段：AccessCount-请求次数。MergeTime-最近请求时间
      */
     public $By;
 
@@ -83,7 +83,7 @@ class DescribeRiskDnsListRequest extends AbstractModel
 <li>MergeBeginTime - String - 是否必填：否 - 最近访问开始时间</li>
 <li>MergeEndTime - String - 是否必填：否 - 最近访问结束时间</li>
      * @param string $Order 排序方式：根据请求次数排序：asc-升序/desc-降序
-     * @param string $By 排序字段：AccessCount-请求次数
+     * @param string $By 排序字段：AccessCount-请求次数。MergeTime-最近请求时间
      */
     function __construct()
     {

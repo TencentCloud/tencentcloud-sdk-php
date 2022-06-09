@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(integer $Source) 设置任务来源, -1:所有, 0:默认值(私域), 1:灵犀, 2:灵鲲;
  * @method integer getPlatform() 获取应用平台, 0:android, 1:ios, 2:小程序
  * @method void setPlatform(integer $Platform) 设置应用平台, 0:android, 1:ios, 2:小程序
- * @method string getTaskStatuses() 获取任务状态,可多值查询,比如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
- * @method void setTaskStatuses(string $TaskStatuses) 设置任务状态,可多值查询,比如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
- * @method string getTaskTypes() 获取任务类型,可多值查询,采用逗号分隔,比如:"0,1" 0:基础版, 1:专家版, 2:本地化
- * @method void setTaskTypes(string $TaskTypes) 设置任务类型,可多值查询,采用逗号分隔,比如:"0,1" 0:基础版, 1:专家版, 2:本地化
+ * @method string getTaskStatuses() 获取任务状态,可多值查询,例如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
+ * @method void setTaskStatuses(string $TaskStatuses) 设置任务状态,可多值查询,例如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
+ * @method string getTaskTypes() 获取任务类型,可多值查询,采用逗号分隔,例如:"0,1" 0:基础版, 1:专家版, 2:本地化
+ * @method void setTaskTypes(string $TaskTypes) 设置任务类型,可多值查询,采用逗号分隔,例如:"0,1" 0:基础版, 1:专家版, 2:本地化
  * @method integer getPageNo() 获取页码
  * @method void setPageNo(integer $PageNo) 设置页码
  * @method integer getPageSize() 获取页码大小
@@ -52,12 +52,12 @@ class DescribeScanTaskListRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var string 任务状态,可多值查询,比如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
+     * @var string 任务状态,可多值查询,例如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
      */
     public $TaskStatuses;
 
     /**
-     * @var string 任务类型,可多值查询,采用逗号分隔,比如:"0,1" 0:基础版, 1:专家版, 2:本地化
+     * @var string 任务类型,可多值查询,采用逗号分隔,例如:"0,1" 0:基础版, 1:专家版, 2:本地化
      */
     public $TaskTypes;
 
@@ -89,8 +89,8 @@ class DescribeScanTaskListRequest extends AbstractModel
     /**
      * @param integer $Source 任务来源, -1:所有, 0:默认值(私域), 1:灵犀, 2:灵鲲;
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
-     * @param string $TaskStatuses 任务状态,可多值查询,比如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
-     * @param string $TaskTypes 任务类型,可多值查询,采用逗号分隔,比如:"0,1" 0:基础版, 1:专家版, 2:本地化
+     * @param string $TaskStatuses 任务状态,可多值查询,例如:"1,2,3" 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
+     * @param string $TaskTypes 任务类型,可多值查询,采用逗号分隔,例如:"0,1" 0:基础版, 1:专家版, 2:本地化
      * @param integer $PageNo 页码
      * @param integer $PageSize 页码大小
      * @param string $AppName 应用名称或小程序名称(可选参数)

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageType(string $StorageType) 设置消费端类型：cls、ckafka
  * @method FlowLogStorage getFlowLogStorage() 获取流日志消费端信息，当消费端类型为ckafka时，必填。
  * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) 设置流日志消费端信息，当消费端类型为ckafka时，必填。
+ * @method string getCloudLogRegion() 获取流日志存储ID对应的地域，不传递默认为本地域。
+ * @method void setCloudLogRegion(string $CloudLogRegion) 设置流日志存储ID对应的地域，不传递默认为本地域。
  */
 class CreateFlowLogRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateFlowLogRequest extends AbstractModel
     public $FlowLogStorage;
 
     /**
+     * @var string 流日志存储ID对应的地域，不传递默认为本地域。
+     */
+    public $CloudLogRegion;
+
+    /**
      * @param string $FlowLogName 流日志实例名字
      * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
      * @param string $ResourceId 资源唯一ID
@@ -104,6 +111,7 @@ class CreateFlowLogRequest extends AbstractModel
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      * @param string $StorageType 消费端类型：cls、ckafka
      * @param FlowLogStorage $FlowLogStorage 流日志消费端信息，当消费端类型为ckafka时，必填。
+     * @param string $CloudLogRegion 流日志存储ID对应的地域，不传递默认为本地域。
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class CreateFlowLogRequest extends AbstractModel
         if (array_key_exists("FlowLogStorage",$param) and $param["FlowLogStorage"] !== null) {
             $this->FlowLogStorage = new FlowLogStorage();
             $this->FlowLogStorage->deserialize($param["FlowLogStorage"]);
+        }
+
+        if (array_key_exists("CloudLogRegion",$param) and $param["CloudLogRegion"] !== null) {
+            $this->CloudLogRegion = $param["CloudLogRegion"];
         }
     }
 }

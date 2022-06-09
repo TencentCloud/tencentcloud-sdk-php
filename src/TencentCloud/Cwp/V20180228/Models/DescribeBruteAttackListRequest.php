@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 <li>ModifyBeginTime - String - 是否必填：否 - 最近攻击时间筛选，开始时间</li>
 <li>ModifyEndTime - String - 是否必填：否 - 最近攻击时间筛选，结束时间</li>
 <li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-已阻断，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断</li>
+ * @method string getOrder() 获取排序方式：根据请求次数排序：asc-升序/desc-降序
+ * @method void setOrder(string $Order) 设置排序方式：根据请求次数排序：asc-升序/desc-降序
+ * @method string getBy() 获取排序字段：CreateTime-首次攻击时间
+ * @method void setBy(string $By) 设置排序字段：CreateTime-首次攻击时间
  */
 class DescribeBruteAttackListRequest extends AbstractModel
 {
@@ -78,6 +82,16 @@ class DescribeBruteAttackListRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 排序方式：根据请求次数排序：asc-升序/desc-降序
+     */
+    public $Order;
+
+    /**
+     * @var string 排序字段：CreateTime-首次攻击时间
+     */
+    public $By;
+
+    /**
      * @param integer $Limit 需要返回的数量，最大值为100
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
@@ -92,6 +106,8 @@ class DescribeBruteAttackListRequest extends AbstractModel
 <li>ModifyBeginTime - String - 是否必填：否 - 最近攻击时间筛选，开始时间</li>
 <li>ModifyEndTime - String - 是否必填：否 - 最近攻击时间筛选，结束时间</li>
 <li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-已阻断，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断</li>
+     * @param string $Order 排序方式：根据请求次数排序：asc-升序/desc-降序
+     * @param string $By 排序字段：CreateTime-首次攻击时间
      */
     function __construct()
     {
@@ -121,6 +137,14 @@ class DescribeBruteAttackListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

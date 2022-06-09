@@ -24,10 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目 Id。
  * @method string getStatus() 获取项目状态，取值有：
 <li>Working：云转推推流开始；</li>
-<li>Stopped：云转推推流结束。</li>
+<li>Stopped：云转推推流结束；</li>
+<li>InputInterrupted：云转推输入断流；</li>
+<li>OutputInterrupted：云转推输出断流。</li>
  * @method void setStatus(string $Status) 设置项目状态，取值有：
 <li>Working：云转推推流开始；</li>
-<li>Stopped：云转推推流结束。</li>
+<li>Stopped：云转推推流结束；</li>
+<li>InputInterrupted：云转推输入断流；</li>
+<li>OutputInterrupted：云转推输出断流。</li>
+ * @method StreamConnectInputInterruptInfo getInputInterruptInfo() 获取云转推输入断流信息，仅当 Status 取值 InputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInputInterruptInfo(StreamConnectInputInterruptInfo $InputInterruptInfo) 设置云转推输入断流信息，仅当 Status 取值 InputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method StreamConnectOutputInterruptInfo getOutputInterruptInfo() 获取云转推输出断流信息，仅当 Status 取值 OutputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutputInterruptInfo(StreamConnectOutputInterruptInfo $OutputInterruptInfo) 设置云转推输出断流信息，仅当 Status 取值 OutputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProjectStreamConnectStatusChangedEvent extends AbstractModel
 {
@@ -39,15 +51,35 @@ class ProjectStreamConnectStatusChangedEvent extends AbstractModel
     /**
      * @var string 项目状态，取值有：
 <li>Working：云转推推流开始；</li>
-<li>Stopped：云转推推流结束。</li>
+<li>Stopped：云转推推流结束；</li>
+<li>InputInterrupted：云转推输入断流；</li>
+<li>OutputInterrupted：云转推输出断流。</li>
      */
     public $Status;
+
+    /**
+     * @var StreamConnectInputInterruptInfo 云转推输入断流信息，仅当 Status 取值 InputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InputInterruptInfo;
+
+    /**
+     * @var StreamConnectOutputInterruptInfo 云转推输出断流信息，仅当 Status 取值 OutputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OutputInterruptInfo;
 
     /**
      * @param string $ProjectId 项目 Id。
      * @param string $Status 项目状态，取值有：
 <li>Working：云转推推流开始；</li>
-<li>Stopped：云转推推流结束。</li>
+<li>Stopped：云转推推流结束；</li>
+<li>InputInterrupted：云转推输入断流；</li>
+<li>OutputInterrupted：云转推输出断流。</li>
+     * @param StreamConnectInputInterruptInfo $InputInterruptInfo 云转推输入断流信息，仅当 Status 取值 InputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StreamConnectOutputInterruptInfo $OutputInterruptInfo 云转推输出断流信息，仅当 Status 取值 OutputInterrupted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -68,6 +100,16 @@ class ProjectStreamConnectStatusChangedEvent extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("InputInterruptInfo",$param) and $param["InputInterruptInfo"] !== null) {
+            $this->InputInterruptInfo = new StreamConnectInputInterruptInfo();
+            $this->InputInterruptInfo->deserialize($param["InputInterruptInfo"]);
+        }
+
+        if (array_key_exists("OutputInterruptInfo",$param) and $param["OutputInterruptInfo"] !== null) {
+            $this->OutputInterruptInfo = new StreamConnectOutputInterruptInfo();
+            $this->OutputInterruptInfo->deserialize($param["OutputInterruptInfo"]);
         }
     }
 }

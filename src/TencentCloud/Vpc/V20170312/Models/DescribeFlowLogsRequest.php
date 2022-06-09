@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(Filter $Filters) 设置过滤条件，参数不支持同时指定FlowLogIds和Filters。
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
+ * @method string getCloudLogRegion() 获取流日志存储ID对应的地域信息
+ * @method void setCloudLogRegion(string $CloudLogRegion) 设置流日志存储ID对应的地域信息
  */
 class DescribeFlowLogsRequest extends AbstractModel
 {
@@ -121,6 +123,11 @@ class DescribeFlowLogsRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 流日志存储ID对应的地域信息
+     */
+    public $CloudLogRegion;
+
+    /**
      * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID
      * @param string $FlowLogId 流日志唯一ID
      * @param string $FlowLogName 流日志实例名字
@@ -136,6 +143,7 @@ class DescribeFlowLogsRequest extends AbstractModel
      * @param Filter $Filters 过滤条件，参数不支持同时指定FlowLogIds和Filters。
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
+     * @param string $CloudLogRegion 流日志存储ID对应的地域信息
      */
     function __construct()
     {
@@ -201,6 +209,10 @@ class DescribeFlowLogsRequest extends AbstractModel
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = new Filter();
             $this->Filters->deserialize($param["Filters"]);
+        }
+
+        if (array_key_exists("CloudLogRegion",$param) and $param["CloudLogRegion"] !== null) {
+            $this->CloudLogRegion = $param["CloudLogRegion"];
         }
     }
 }

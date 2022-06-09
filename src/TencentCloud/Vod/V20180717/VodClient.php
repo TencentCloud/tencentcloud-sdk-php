@@ -327,6 +327,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\PushUrlCacheResponse PushUrlCache(Models\PushUrlCacheRequest $req) 1. 预热指定的 URL 列表。
 2. URL 的域名必须已在云点播中注册。
 3. 单次请求最多指定20个 URL。
+4. 默认预热配额为每天10000个 URL。
  * @method Models\ResetProcedureTemplateResponse ResetProcedureTemplate(Models\ResetProcedureTemplateRequest $req) 重新设置用户自定义任务流模板的内容。  
  * @method Models\ReviewImageResponse ReviewImage(Models\ReviewImageRequest $req) 对点播中的图片文件发起智能识别（令人反感的信息、不安全的信息、不适宜的信息）任务。
 

@@ -23,6 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tse\V20201207\Models as Models;
 
 /**
+ * @method Models\CreateEngineResponse CreateEngine(Models\CreateEngineRequest $req) 创建引擎实例
+ * @method Models\DeleteEngineResponse DeleteEngine(Models\DeleteEngineRequest $req) 删除引擎实例
  * @method Models\DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddress(Models\DescribeSREInstanceAccessAddressRequest $req) 查询引擎实例访问地址
  * @method Models\DescribeSREInstancesResponse DescribeSREInstances(Models\DescribeSREInstancesRequest $req) 用于查询引擎实例列表
  */

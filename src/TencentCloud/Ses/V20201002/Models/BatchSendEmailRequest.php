@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubject(string $Subject) 设置邮件主题
  * @method integer getTaskType() 获取任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
  * @method void setTaskType(integer $TaskType) 设置任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
- * @method string getReplyToAddresses() 获取邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云
- * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云
+ * @method string getReplyToAddresses() 获取邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
+ * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
  * @method Template getTemplate() 获取使用模板发送时，填写的模板相关参数
  * @method void setTemplate(Template $Template) 设置使用模板发送时，填写的模板相关参数
  * @method Simple getSimple() 获取已废弃
@@ -74,7 +74,7 @@ class BatchSendEmailRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var string 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云
+     * @var string 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
      */
     public $ReplyToAddresses;
 
@@ -120,7 +120,7 @@ class BatchSendEmailRequest extends AbstractModel
      * @param integer $ReceiverId 收件人列表ID
      * @param string $Subject 邮件主题
      * @param integer $TaskType 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
-     * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云
+     * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
      * @param Template $Template 使用模板发送时，填写的模板相关参数
      * @param Simple $Simple 已废弃
      * @param array $Attachments 需要发送附件时，填写附件相关参数（暂未支持）

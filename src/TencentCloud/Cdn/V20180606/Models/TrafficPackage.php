@@ -86,6 +86,14 @@ disabled：未启用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtensionMode(integer $ExtensionMode) 设置流量包当前续订模式，0 未续订、1到期续订、2用完续订、3到期或用完续订
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTrueEnableTime() 获取流量包实际生效时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrueEnableTime(string $TrueEnableTime) 设置流量包实际生效时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTrueExpireTime() 获取流量包实际过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrueExpireTime(string $TrueExpireTime) 设置流量包实际过期时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrafficPackage extends AbstractModel
 {
@@ -195,6 +203,18 @@ disabled：未启用
     public $ExtensionMode;
 
     /**
+     * @var string 流量包实际生效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrueEnableTime;
+
+    /**
+     * @var string 流量包实际过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrueExpireTime;
+
+    /**
      * @param integer $Id 流量包 Id
      * @param string $Type 流量包类型
      * @param integer $Bytes 流量包大小（单位为 Byte）
@@ -227,6 +247,10 @@ disabled：未启用
      * @param integer $ConfigId 流量包类型id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExtensionMode 流量包当前续订模式，0 未续订、1到期续订、2用完续订、3到期或用完续订
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TrueEnableTime 流量包实际生效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TrueExpireTime 流量包实际过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -312,6 +336,14 @@ disabled：未启用
 
         if (array_key_exists("ExtensionMode",$param) and $param["ExtensionMode"] !== null) {
             $this->ExtensionMode = $param["ExtensionMode"];
+        }
+
+        if (array_key_exists("TrueEnableTime",$param) and $param["TrueEnableTime"] !== null) {
+            $this->TrueEnableTime = $param["TrueEnableTime"];
+        }
+
+        if (array_key_exists("TrueExpireTime",$param) and $param["TrueExpireTime"] !== null) {
+            $this->TrueExpireTime = $param["TrueExpireTime"];
         }
     }
 }

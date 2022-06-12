@@ -29,10 +29,10 @@ use TencentCloud\Common\AbstractModel;
 2：44100Hz
 3：16000Hz。
  * @method integer getChannel() 获取声道数:
-1：单身道;
+1：单声道;
 2：双声道（默认）。
  * @method void setChannel(integer $Channel) 设置声道数:
-1：单身道;
+1：单声道;
 2：双声道（默认）。
  * @method integer getBitRate() 获取音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
  * @method void setBitRate(integer $BitRate) 设置音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
@@ -49,7 +49,7 @@ class AudioParams extends AbstractModel
 
     /**
      * @var integer 声道数:
-1：单身道;
+1：单声道;
 2：双声道（默认）。
      */
     public $Channel;
@@ -65,7 +65,7 @@ class AudioParams extends AbstractModel
 2：44100Hz
 3：16000Hz。
      * @param integer $Channel 声道数:
-1：单身道;
+1：单声道;
 2：双声道（默认）。
      * @param integer $BitRate 音频码率: 取值范围[32000, 128000] ，单位bps，默认64000bps。
      */

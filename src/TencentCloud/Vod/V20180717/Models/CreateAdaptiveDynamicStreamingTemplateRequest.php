@@ -21,9 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * CreateAdaptiveDynamicStreamingTemplate请求参数结构体
  *
  * @method string getFormat() 获取自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
  * @method void setFormat(string $Format) 设置自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
  * @method array getStreamInfos() 获取自适应转码输出子流参数信息，最多输出10路子流。
 注意：各个子流的帧率必须保持一致；如果不一致，采用第一个子流的帧率作为输出帧率。
  * @method void setStreamInfos(array $StreamInfos) 设置自适应转码输出子流参数信息，最多输出10路子流。
@@ -65,7 +67,8 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
     /**
      * @var string 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      */
     public $Format;
 
@@ -117,7 +120,8 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
      * @param string $Format 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      * @param array $StreamInfos 自适应转码输出子流参数信息，最多输出10路子流。
 注意：各个子流的帧率必须保持一致；如果不一致，采用第一个子流的帧率作为输出帧率。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>

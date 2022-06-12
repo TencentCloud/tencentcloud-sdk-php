@@ -34,8 +34,9 @@ use TencentCloud\Common\AbstractModel;
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>libfdk_aac。</li>
+当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
+<li>libfdk_aac。</li>
  * @method void setCodec(string $Codec) 设置音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -50,8 +51,9 @@ use TencentCloud\Common\AbstractModel;
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>libfdk_aac。</li>
+当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
+<li>libfdk_aac。</li>
  * @method integer getBitrate() 获取音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。
  * @method void setBitrate(integer $Bitrate) 设置音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。
  * @method integer getSampleRate() 获取音频流的采样率，可选值：
@@ -92,8 +94,9 @@ class AudioTemplateInfoForUpdate extends AbstractModel
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>libfdk_aac。</li>
+当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
+<li>libfdk_aac。</li>
      */
     public $Codec;
 
@@ -135,8 +138,9 @@ class AudioTemplateInfoForUpdate extends AbstractModel
 <li>libmp3lame：更适合 flv；</li>
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
-<li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>libfdk_aac。</li>
+当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
+<li>libfdk_aac。</li>
      * @param integer $Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。 当取值为 0，表示音频码率和原始音频保持一致。
      * @param integer $SampleRate 音频流的采样率，可选值：
 <li>32000</li>

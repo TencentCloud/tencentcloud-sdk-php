@@ -20,14 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 根证书
  *
-
+ * @method string getSign() 获取国密签名证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSign(string $Sign) 设置国密签名证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncrypt() 获取国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncrypt(string $Encrypt) 设置国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStandard() 获取标准证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStandard(string $Standard) 设置标准证书
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RootCertificates extends AbstractModel
 {
-
+    /**
+     * @var string 国密签名证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Sign;
 
     /**
+     * @var string 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Encrypt;
 
+    /**
+     * @var string 标准证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Standard;
+
+    /**
+     * @param string $Sign 国密签名证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Encrypt 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Standard 标准证书
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -42,6 +74,16 @@ class RootCertificates extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Sign",$param) and $param["Sign"] !== null) {
+            $this->Sign = $param["Sign"];
+        }
 
+        if (array_key_exists("Encrypt",$param) and $param["Encrypt"] !== null) {
+            $this->Encrypt = $param["Encrypt"];
+        }
+
+        if (array_key_exists("Standard",$param) and $param["Standard"] !== null) {
+            $this->Standard = $param["Standard"];
+        }
     }
 }

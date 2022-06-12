@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryId(string $RegistryId) 设置实例id
  * @method boolean getDeleteBucket() 获取是否删除存储桶，默认为false
  * @method void setDeleteBucket(boolean $DeleteBucket) 设置是否删除存储桶，默认为false
+ * @method boolean getDryRun() 获取是否dryRun模式，缺省值：false
+ * @method void setDryRun(boolean $DryRun) 设置是否dryRun模式，缺省值：false
  */
 class DeleteInstanceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteInstanceRequest extends AbstractModel
     public $DeleteBucket;
 
     /**
+     * @var boolean 是否dryRun模式，缺省值：false
+     */
+    public $DryRun;
+
+    /**
      * @param string $RegistryId 实例id
      * @param boolean $DeleteBucket 是否删除存储桶，默认为false
+     * @param boolean $DryRun 是否dryRun模式，缺省值：false
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteInstanceRequest extends AbstractModel
 
         if (array_key_exists("DeleteBucket",$param) and $param["DeleteBucket"] !== null) {
             $this->DeleteBucket = $param["DeleteBucket"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

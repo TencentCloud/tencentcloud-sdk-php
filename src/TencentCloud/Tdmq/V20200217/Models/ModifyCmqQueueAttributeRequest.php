@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrace(boolean $Trace) 设置是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
  * @method integer getTransaction() 获取是否开启事务，1开启，0不开启
  * @method void setTransaction(integer $Transaction) 设置是否开启事务，1开启，0不开启
- * @method integer getRetentionSizeInMB() 获取队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
- * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) 设置队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+ * @method integer getRetentionSizeInMB() 获取队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
+ * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) 设置队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
  */
 class ModifyCmqQueueAttributeRequest extends AbstractModel
 {
@@ -131,7 +131,7 @@ class ModifyCmqQueueAttributeRequest extends AbstractModel
     public $Transaction;
 
     /**
-     * @var integer 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+     * @var integer 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
      */
     public $RetentionSizeInMB;
 
@@ -151,7 +151,7 @@ class ModifyCmqQueueAttributeRequest extends AbstractModel
      * @param integer $Policy 死信队列策略
      * @param boolean $Trace 是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
      * @param integer $Transaction 是否开启事务，1开启，0不开启
-     * @param integer $RetentionSizeInMB 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+     * @param integer $RetentionSizeInMB 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
      */
     function __construct()
     {

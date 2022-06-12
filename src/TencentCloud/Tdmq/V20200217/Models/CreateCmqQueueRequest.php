@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrace(boolean $Trace) 设置是否开启消息轨迹追踪，当不设置字段时，默认为不开启，该字段为true表示开启，为false表示不开启
  * @method array getTags() 获取标签数组
  * @method void setTags(array $Tags) 设置标签数组
- * @method integer getRetentionSizeInMB() 获取队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
- * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) 设置队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+ * @method integer getRetentionSizeInMB() 获取队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
+ * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) 设置队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
  */
 class CreateCmqQueueRequest extends AbstractModel
 {
@@ -138,7 +138,7 @@ class CreateCmqQueueRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+     * @var integer 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
      */
     public $RetentionSizeInMB;
 
@@ -159,7 +159,7 @@ class CreateCmqQueueRequest extends AbstractModel
      * @param integer $MaxTimeToLive policy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间msgRetentionSeconds
      * @param boolean $Trace 是否开启消息轨迹追踪，当不设置字段时，默认为不开启，该字段为true表示开启，为false表示不开启
      * @param array $Tags 标签数组
-     * @param integer $RetentionSizeInMB 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+     * @param integer $RetentionSizeInMB 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
      */
     function __construct()
     {

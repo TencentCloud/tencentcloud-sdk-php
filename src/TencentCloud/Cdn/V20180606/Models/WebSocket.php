@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
 
 * WebSocket 为ECDN产品功能，如需使用请通过ECDN域名配置.
- * @method integer getTimeout() 获取设置超时时间，单位为秒，最大超时时间65秒。
+ * @method integer getTimeout() 获取设置超时时间，单位为秒，最大超时时间300秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeout(integer $Timeout) 设置设置超时时间，单位为秒，最大超时时间65秒。
+ * @method void setTimeout(integer $Timeout) 设置设置超时时间，单位为秒，最大超时时间300秒。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WebSocket extends AbstractModel
@@ -41,7 +41,7 @@ class WebSocket extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer 设置超时时间，单位为秒，最大超时时间65秒。
+     * @var integer 设置超时时间，单位为秒，最大超时时间300秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timeout;
@@ -50,7 +50,7 @@ class WebSocket extends AbstractModel
      * @param string $Switch WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
 
 * WebSocket 为ECDN产品功能，如需使用请通过ECDN域名配置.
-     * @param integer $Timeout 设置超时时间，单位为秒，最大超时时间65秒。
+     * @param integer $Timeout 设置超时时间，单位为秒，最大超时时间300秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

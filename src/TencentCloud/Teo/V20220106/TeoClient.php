@@ -63,6 +63,7 @@ use TencentCloud\Teo\V20220106\Models as Models;
  * @method Models\DescribeSecurityPolicyManagedRulesResponse DescribeSecurityPolicyManagedRules(Models\DescribeSecurityPolicyManagedRulesRequest $req) 分页查询门神规则
  * @method Models\DescribeSecurityPolicyManagedRulesIdResponse DescribeSecurityPolicyManagedRulesId(Models\DescribeSecurityPolicyManagedRulesIdRequest $req) 规则id查询门神规则详情
  * @method Models\DescribeSecurityPolicyRegionsResponse DescribeSecurityPolicyRegions(Models\DescribeSecurityPolicyRegionsRequest $req) 查询所有地域信息
+ * @method Models\DescribeSecurityPortraitRulesResponse DescribeSecurityPortraitRules(Models\DescribeSecurityPortraitRulesRequest $req) 查询Bot用户画像规则
  * @method Models\DescribeZoneDDoSPolicyResponse DescribeZoneDDoSPolicy(Models\DescribeZoneDDoSPolicyRequest $req) 查询所有DDoS防护分区
  * @method Models\DescribeZoneDetailsResponse DescribeZoneDetails(Models\DescribeZoneDetailsRequest $req) 根据站点 ID 查询站点的详细信息
  * @method Models\DescribeZoneSettingResponse DescribeZoneSetting(Models\DescribeZoneSettingRequest $req) 用于查询站点的所有配置信息。

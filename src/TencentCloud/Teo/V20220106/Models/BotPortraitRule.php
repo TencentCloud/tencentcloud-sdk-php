@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDropManagedIds(array $DropManagedIds) 设置拦截的规则ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSwitch() 获取本功能的开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSwitch(string $Switch) 设置本功能的开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotPortraitRule extends AbstractModel
 {
@@ -74,6 +78,12 @@ class BotPortraitRule extends AbstractModel
     public $DropManagedIds;
 
     /**
+     * @var string 本功能的开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Switch;
+
+    /**
      * @param integer $RuleID 本规则的id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AlgManagedIds JS挑战的规则ID
@@ -83,6 +93,8 @@ class BotPortraitRule extends AbstractModel
      * @param array $MonManagedIds 观察的规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DropManagedIds 拦截的规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Switch 本功能的开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class BotPortraitRule extends AbstractModel
 
         if (array_key_exists("DropManagedIds",$param) and $param["DropManagedIds"] !== null) {
             $this->DropManagedIds = $param["DropManagedIds"];
+        }
+
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

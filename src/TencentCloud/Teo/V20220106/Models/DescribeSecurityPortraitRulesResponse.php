@@ -14,44 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ocr\V20181119\Models;
+namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SealOCR返回参数结构体
+ * DescribeSecurityPortraitRules返回参数结构体
  *
- * @method string getSealBody() 获取印章内容
- * @method void setSealBody(string $SealBody) 设置印章内容
- * @method Rect getLocation() 获取印章坐标
- * @method void setLocation(Rect $Location) 设置印章坐标
- * @method array getOtherTexts() 获取其它文本内容
- * @method void setOtherTexts(array $OtherTexts) 设置其它文本内容
- * @method array getSealInfos() 获取全部印章信息
- * @method void setSealInfos(array $SealInfos) 设置全部印章信息
+ * @method integer getCount() 获取本次返回的规则数
+ * @method void setCount(integer $Count) 设置本次返回的规则数
+ * @method array getRules() 获取Bot用户画像规则
+ * @method void setRules(array $Rules) 设置Bot用户画像规则
+ * @method integer getTotal() 获取总规则数
+ * @method void setTotal(integer $Total) 设置总规则数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class SealOCRResponse extends AbstractModel
+class DescribeSecurityPortraitRulesResponse extends AbstractModel
 {
     /**
-     * @var string 印章内容
+     * @var integer 本次返回的规则数
      */
-    public $SealBody;
+    public $Count;
 
     /**
-     * @var Rect 印章坐标
+     * @var array Bot用户画像规则
      */
-    public $Location;
+    public $Rules;
 
     /**
-     * @var array 其它文本内容
+     * @var integer 总规则数
      */
-    public $OtherTexts;
-
-    /**
-     * @var array 全部印章信息
-     */
-    public $SealInfos;
+    public $Total;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +52,9 @@ class SealOCRResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SealBody 印章内容
-     * @param Rect $Location 印章坐标
-     * @param array $OtherTexts 其它文本内容
-     * @param array $SealInfos 全部印章信息
+     * @param integer $Count 本次返回的规则数
+     * @param array $Rules Bot用户画像规则
+     * @param integer $Total 总规则数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,26 +70,21 @@ class SealOCRResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SealBody",$param) and $param["SealBody"] !== null) {
-            $this->SealBody = $param["SealBody"];
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
 
-        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
-            $this->Location = new Rect();
-            $this->Location->deserialize($param["Location"]);
-        }
-
-        if (array_key_exists("OtherTexts",$param) and $param["OtherTexts"] !== null) {
-            $this->OtherTexts = $param["OtherTexts"];
-        }
-
-        if (array_key_exists("SealInfos",$param) and $param["SealInfos"] !== null) {
-            $this->SealInfos = [];
-            foreach ($param["SealInfos"] as $key => $value){
-                $obj = new SealInfo();
+        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+            $this->Rules = [];
+            foreach ($param["Rules"] as $key => $value){
+                $obj = new PortraitManagedRuleDetail();
                 $obj->deserialize($value);
-                array_push($this->SealInfos, $obj);
+                array_push($this->Rules, $obj);
             }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

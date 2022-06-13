@@ -54,6 +54,10 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifiedTime(string $ModifiedTime) 设置字段修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsPartition() 获取是否为分区字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsPartition(boolean $IsPartition) 设置是否为分区字段
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Column extends AbstractModel
 {
@@ -111,6 +115,12 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     public $ModifiedTime;
 
     /**
+     * @var boolean 是否为分区字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsPartition;
+
+    /**
      * @param string $Name 列名称，不区分大小写，最大支持25个字符。
      * @param string $Type 列类型，支持如下类型定义:
 string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>。
@@ -127,6 +137,8 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
      * @param string $CreateTime 字段创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifiedTime 字段修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsPartition 是否为分区字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +188,10 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
+        }
+
+        if (array_key_exists("IsPartition",$param) and $param["IsPartition"] !== null) {
+            $this->IsPartition = $param["IsPartition"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalPrice(integer $OriginalPrice) 设置总费用，打折前的
  * @method integer getPrice() 获取实际需要付款金额
  * @method void setPrice(integer $Price) 设置实际需要付款金额
+ * @method string getCurrency() 获取币种。例如，CNY：人民币。
+ * @method void setCurrency(string $Currency) 设置币种。例如，CNY：人民币。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
     public $Price;
 
     /**
+     * @var string 币种。例如，CNY：人民币。
+     */
+    public $Currency;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
     /**
      * @param integer $OriginalPrice 总费用，打折前的
      * @param integer $Price 实际需要付款金额
+     * @param string $Currency 币种。例如，CNY：人民币。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
 
         if (array_key_exists("Price",$param) and $param["Price"] !== null) {
             $this->Price = $param["Price"];
+        }
+
+        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
+            $this->Currency = $param["Currency"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

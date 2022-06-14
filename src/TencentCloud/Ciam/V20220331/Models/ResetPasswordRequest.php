@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Ciam\V20220331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateDBInstances请求参数结构体
+ * ResetPassword请求参数结构体
  *
- * @method array getDBInstanceIdSet() 获取实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+ * @method string getUserId() 获取用户ID
+ * @method void setUserId(string $UserId) 设置用户ID
+ * @method string getUserStoreId() 获取用户目录ID
+ * @method void setUserStoreId(string $UserStoreId) 设置用户目录ID
  */
-class IsolateDBInstancesRequest extends AbstractModel
+class ResetPasswordRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+     * @var string 用户ID
      */
-    public $DBInstanceIdSet;
+    public $UserId;
 
     /**
-     * @param array $DBInstanceIdSet 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+     * @var string 用户目录ID
+     */
+    public $UserStoreId;
+
+    /**
+     * @param string $UserId 用户ID
+     * @param string $UserStoreId 用户目录ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class IsolateDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceIdSet",$param) and $param["DBInstanceIdSet"] !== null) {
-            $this->DBInstanceIdSet = $param["DBInstanceIdSet"];
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("UserStoreId",$param) and $param["UserStoreId"] !== null) {
+            $this->UserStoreId = $param["UserStoreId"];
         }
     }
 }

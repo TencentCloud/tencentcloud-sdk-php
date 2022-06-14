@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisIsolateDBInstances请求参数结构体
  *
- * @method array getDBInstanceIdSet() 获取资源ID列表
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置资源ID列表
+ * @method array getDBInstanceIdSet() 获取资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
  * @method integer getPeriod() 获取包年包月实例解隔离时购买时常 以月为单位
  * @method void setPeriod(integer $Period) 设置包年包月实例解隔离时购买时常 以月为单位
  * @method boolean getAutoVoucher() 获取是否使用代金券：true-使用,false-不使用，默认不使用
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DisIsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 资源ID列表
+     * @var array 资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
      */
     public $DBInstanceIdSet;
 
@@ -52,7 +52,7 @@ class DisIsolateDBInstancesRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @param array $DBInstanceIdSet 资源ID列表
+     * @param array $DBInstanceIdSet 资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
      * @param integer $Period 包年包月实例解隔离时购买时常 以月为单位
      * @param boolean $AutoVoucher 是否使用代金券：true-使用,false-不使用，默认不使用
      * @param array $VoucherIds 代金券id列表

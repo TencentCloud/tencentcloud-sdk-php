@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Mmps\V20200710\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateDBInstances请求参数结构体
+ * DescribeBasicDiagnosisResourceUsageInfo请求参数结构体
  *
- * @method array getDBInstanceIdSet() 获取实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+ * @method integer getMode() 获取诊断模式 1:基础诊断，2:深度诊断
+ * @method void setMode(integer $Mode) 设置诊断模式 1:基础诊断，2:深度诊断
  */
-class IsolateDBInstancesRequest extends AbstractModel
+class DescribeBasicDiagnosisResourceUsageInfoRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+     * @var integer 诊断模式 1:基础诊断，2:深度诊断
      */
-    public $DBInstanceIdSet;
+    public $Mode;
 
     /**
-     * @param array $DBInstanceIdSet 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+     * @param integer $Mode 诊断模式 1:基础诊断，2:深度诊断
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class IsolateDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceIdSet",$param) and $param["DBInstanceIdSet"] !== null) {
-            $this->DBInstanceIdSet = $param["DBInstanceIdSet"];
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
     }
 }

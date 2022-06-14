@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
  * @method RoGroup getRoGroup() 获取只读实例参数。购买只读实例时，该参数必传。
  * @method void setRoGroup(RoGroup $RoGroup) 设置只读实例参数。购买只读实例时，该参数必传。
- * @method string getInstanceName() 获取实例名称。
- * @method void setInstanceName(string $InstanceName) 设置实例名称。
+ * @method string getInstanceName() 获取实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
  * @method array getResourceTags() 获取实例标签信息。
  * @method void setResourceTags(array $ResourceTags) 设置实例标签信息。
  * @method string getDeployGroupId() 获取置放群组 ID。
@@ -210,7 +210,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $RoGroup;
 
     /**
-     * @var string 实例名称。
+     * @var string 实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
      */
     public $InstanceName;
 
@@ -312,7 +312,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $MasterRegion 主实例地域信息，购买灾备实例时，该字段必填。
      * @param array $SecurityGroup 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
      * @param RoGroup $RoGroup 只读实例参数。购买只读实例时，该参数必传。
-     * @param string $InstanceName 实例名称。
+     * @param string $InstanceName 实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
      * @param array $ResourceTags 实例标签信息。
      * @param string $DeployGroupId 置放群组 ID。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。

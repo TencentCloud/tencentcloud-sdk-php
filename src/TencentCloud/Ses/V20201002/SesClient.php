@@ -30,7 +30,7 @@ use TencentCloud\Ses\V20201002\Models as Models;
 注意：模板需要审核通过才可以使用。
  * @method Models\CreateReceiverResponse CreateReceiver(Models\CreateReceiverRequest $req) 创建收件人列表，收件人列表是发送批量邮件的目标邮件地址列表。创建列表后，需要上传收件人邮箱地址。之后创建发送任务，关联列表，便可以实现批量发送邮件的功能
  * @method Models\CreateReceiverDetailResponse CreateReceiverDetail(Models\CreateReceiverDetailRequest $req) 在创建完收件人列表后，向这个收件人列表中批量增加收件人邮箱地址，一次最大支持10W，异步完成处理。收件人列表只可以上传一次，不可追加上传。数据量比较大的时候，上传可能需要一点时间，可以通过查询收件人列表了解上传状态和上传数量
- * @method Models\CreateReceiverDetailWithDataResponse CreateReceiverDetailWithData(Models\CreateReceiverDetailWithDataRequest $req) 添加收件人地址附带模板参数
+ * @method Models\CreateReceiverDetailWithDataResponse CreateReceiverDetailWithData(Models\CreateReceiverDetailWithDataRequest $req) 添加收件人地址附带模板参数，使用本接口在添加收件人地址的同时传入模板参数，使每一个收件人地址在发信的时候使用的模板变量取值不同。用户首先调用创建收件人列表接口-CreateReceiver后，然后调用本接口传入收件人地址和发信时的模板参数，最后使用批量发送邮件接口-BatchSendEmail，即可完成批量发信。需要注意的是在使用本接口后BatchSendEmail接口中的Template参数不需再传。用户也可以在控制台上邮件发送-收件人列表菜单中，通过导入文件的方式，导入收件人地址和模板变量和参数值。
  * @method Models\DeleteBlackListResponse DeleteBlackList(Models\DeleteBlackListRequest $req) 邮箱被拉黑之后，用户如果确认收件邮箱有效或者已经处于激活状态，可以从腾讯云地址库中删除该黑名单之后继续投递。
  * @method Models\DeleteEmailAddressResponse DeleteEmailAddress(Models\DeleteEmailAddressRequest $req) 删除发信人地址
  * @method Models\DeleteEmailIdentityResponse DeleteEmailIdentity(Models\DeleteEmailIdentityRequest $req) 删除发信域名，删除后，将不可再使用该域名进行发信

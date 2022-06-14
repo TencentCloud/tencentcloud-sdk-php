@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置网络ID，可在区块链网络详情或列表中获取
  * @method string getChainId() 获取业务链编号，可在业务链列表中获取
  * @method void setChainId(string $ChainId) 设置业务链编号，可在业务链列表中获取
- * @method integer getBlockHeight() 获取区块高度，-1表示最新区块
- * @method void setBlockHeight(integer $BlockHeight) 设置区块高度，-1表示最新区块
+ * @method integer getBlockHeight() 获取区块高度
+ * @method void setBlockHeight(integer $BlockHeight) 设置区块高度
  */
 class QueryChainMakerBlockTransactionRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class QueryChainMakerBlockTransactionRequest extends AbstractModel
     public $ChainId;
 
     /**
-     * @var integer 区块高度，-1表示最新区块
+     * @var integer 区块高度
      */
     public $BlockHeight;
 
     /**
      * @param string $ClusterId 网络ID，可在区块链网络详情或列表中获取
      * @param string $ChainId 业务链编号，可在业务链列表中获取
-     * @param integer $BlockHeight 区块高度，-1表示最新区块
+     * @param integer $BlockHeight 区块高度
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMultiFlowSignQRCode请求参数结构体
  *
- * @method string getTemplateId() 获取模版ID
- * @method void setTemplateId(string $TemplateId) 设置模版ID
+ * @method string getTemplateId() 获取模板ID
+ * @method void setTemplateId(string $TemplateId) 设置模板ID
  * @method UserInfo getOperator() 获取用户信息
  * @method void setOperator(UserInfo $Operator) 设置用户信息
  * @method string getFlowName() 获取合同名称
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
     /**
-     * @var string 模版ID
+     * @var string 模板ID
      */
     public $TemplateId;
 
@@ -80,7 +80,7 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $CallbackUrl;
 
     /**
-     * @param string $TemplateId 模版ID
+     * @param string $TemplateId 模板ID
      * @param UserInfo $Operator 用户信息
      * @param string $FlowName 合同名称
      * @param Agent $Agent 应用信息

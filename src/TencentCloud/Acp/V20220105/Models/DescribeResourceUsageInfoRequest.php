@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Acp\V20220105\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateDBInstances请求参数结构体
+ * DescribeResourceUsageInfo请求参数结构体
  *
- * @method array getDBInstanceIdSet() 获取实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+ * @method string getPriceName() 获取资源计费项名称
+ * @method void setPriceName(string $PriceName) 设置资源计费项名称
  */
-class IsolateDBInstancesRequest extends AbstractModel
+class DescribeResourceUsageInfoRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+     * @var string 资源计费项名称
      */
-    public $DBInstanceIdSet;
+    public $PriceName;
 
     /**
-     * @param array $DBInstanceIdSet 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+     * @param string $PriceName 资源计费项名称
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class IsolateDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceIdSet",$param) and $param["DBInstanceIdSet"] !== null) {
-            $this->DBInstanceIdSet = $param["DBInstanceIdSet"];
+        if (array_key_exists("PriceName",$param) and $param["PriceName"] !== null) {
+            $this->PriceName = $param["PriceName"];
         }
     }
 }

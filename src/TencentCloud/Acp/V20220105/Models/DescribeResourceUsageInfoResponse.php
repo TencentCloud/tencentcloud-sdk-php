@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Acp\V20220105\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceCreateDBInstances返回参数结构体
+ * DescribeResourceUsageInfo返回参数结构体
  *
- * @method integer getOriginalPrice() 获取原始价格，单位：分
- * @method void setOriginalPrice(integer $OriginalPrice) 设置原始价格，单位：分
- * @method integer getPrice() 获取折后价格，单位：分
- * @method void setPrice(integer $Price) 设置折后价格，单位：分
- * @method string getCurrency() 获取币种。例如，CNY：人民币。
- * @method void setCurrency(string $Currency) 设置币种。例如，CNY：人民币。
+ * @method integer getResult() 获取返回值, 0:成功, 其他值请查看“返回值”定义，暂时未定
+ * @method void setResult(integer $Result) 设置返回值, 0:成功, 其他值请查看“返回值”定义，暂时未定
+ * @method ResourceUsageInfoData getData() 获取资源使用信息
+ * @method void setData(ResourceUsageInfoData $Data) 设置资源使用信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class InquiryPriceCreateDBInstancesResponse extends AbstractModel
+class DescribeResourceUsageInfoResponse extends AbstractModel
 {
     /**
-     * @var integer 原始价格，单位：分
+     * @var integer 返回值, 0:成功, 其他值请查看“返回值”定义，暂时未定
      */
-    public $OriginalPrice;
+    public $Result;
 
     /**
-     * @var integer 折后价格，单位：分
+     * @var ResourceUsageInfoData 资源使用信息
      */
-    public $Price;
-
-    /**
-     * @var string 币种。例如，CNY：人民币。
-     */
-    public $Currency;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class InquiryPriceCreateDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $OriginalPrice 原始价格，单位：分
-     * @param integer $Price 折后价格，单位：分
-     * @param string $Currency 币种。例如，CNY：人民币。
+     * @param integer $Result 返回值, 0:成功, 其他值请查看“返回值”定义，暂时未定
+     * @param ResourceUsageInfoData $Data 资源使用信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +62,13 @@ class InquiryPriceCreateDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
-            $this->OriginalPrice = $param["OriginalPrice"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
-        }
-
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new ResourceUsageInfoData();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -70,10 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBNodeSet(array $DBNodeSet) 设置实例节点信息，购买跨可用区实例时填写。
  * @method integer getNeedSupportTDE() 获取是否需要支持数据透明加密，1：是，0：否（默认）。
  * @method void setNeedSupportTDE(integer $NeedSupportTDE) 设置是否需要支持数据透明加密，1：是，0：否（默认）。
- * @method string getKMSKeyId() 获取自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
- * @method void setKMSKeyId(string $KMSKeyId) 设置自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
- * @method string getKMSRegion() 获取使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
- * @method void setKMSRegion(string $KMSRegion) 设置使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+ * @method string getKMSKeyId() 获取自定义密钥的KeyId，若选择自定义密匙加密，则需要传入自定义密匙的KeyId，KeyId是CMK的唯一标识。
+ * @method void setKMSKeyId(string $KMSKeyId) 设置自定义密钥的KeyId，若选择自定义密匙加密，则需要传入自定义密匙的KeyId，KeyId是CMK的唯一标识。
+ * @method string getKMSRegion() 获取使用KMS服务的地域，KMSRegion为空默认使用本地域的KMS，本地域不支持的情况下需自选其他KMS支持的地域。
+ * @method void setKMSRegion(string $KMSRegion) 设置使用KMS服务的地域，KMSRegion为空默认使用本地域的KMS，本地域不支持的情况下需自选其他KMS支持的地域。
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -203,12 +203,12 @@ class CreateInstancesRequest extends AbstractModel
     public $NeedSupportTDE;
 
     /**
-     * @var string 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+     * @var string 自定义密钥的KeyId，若选择自定义密匙加密，则需要传入自定义密匙的KeyId，KeyId是CMK的唯一标识。
      */
     public $KMSKeyId;
 
     /**
-     * @var string 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+     * @var string 使用KMS服务的地域，KMSRegion为空默认使用本地域的KMS，本地域不支持的情况下需自选其他KMS支持的地域。
      */
     public $KMSRegion;
 
@@ -238,8 +238,8 @@ class CreateInstancesRequest extends AbstractModel
      * @param string $DBKernelVersion PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
      * @param array $DBNodeSet 实例节点信息，购买跨可用区实例时填写。
      * @param integer $NeedSupportTDE 是否需要支持数据透明加密，1：是，0：否（默认）。
-     * @param string $KMSKeyId 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
-     * @param string $KMSRegion 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+     * @param string $KMSKeyId 自定义密钥的KeyId，若选择自定义密匙加密，则需要传入自定义密匙的KeyId，KeyId是CMK的唯一标识。
+     * @param string $KMSRegion 使用KMS服务的地域，KMSRegion为空默认使用本地域的KMS，本地域不支持的情况下需自选其他KMS支持的地域。
      */
     function __construct()
     {

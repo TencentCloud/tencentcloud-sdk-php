@@ -26,6 +26,7 @@ use TencentCloud\Acp\V20220105\Models as Models;
  * @method Models\CreateAppScanTaskResponse CreateAppScanTask(Models\CreateAppScanTaskRequest $req) 创建应用合规隐私诊断任务
  * @method Models\CreateAppScanTaskRepeatResponse CreateAppScanTaskRepeat(Models\CreateAppScanTaskRepeatRequest $req) App应用合规隐私诊断重试任务
  * @method Models\DescribeFileTicketResponse DescribeFileTicket(Models\DescribeFileTicketRequest $req) 获取应用合规文件上传凭证，用于上传诊断文件
+ * @method Models\DescribeResourceUsageInfoResponse DescribeResourceUsageInfo(Models\DescribeResourceUsageInfoRequest $req) 查询应用合规平台用户资源的使用情况
  * @method Models\DescribeScanTaskListResponse DescribeScanTaskList(Models\DescribeScanTaskListRequest $req) 获取App隐私合规诊断任务列表
  * @method Models\DescribeScanTaskReportUrlResponse DescribeScanTaskReportUrl(Models\DescribeScanTaskReportUrlRequest $req) 获取App合规诊断任务报告url
  * @method Models\DescribeScanTaskStatusResponse DescribeScanTaskStatus(Models\DescribeScanTaskStatusRequest $req) 查询App隐私合规诊断任务状态

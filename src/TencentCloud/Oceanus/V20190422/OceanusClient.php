@@ -38,6 +38,17 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DescribeResourceRelatedJobsResponse DescribeResourceRelatedJobs(Models\DescribeResourceRelatedJobsRequest $req) 获取资源关联作业信息
  * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) 描述资源接口
  * @method Models\DescribeSystemResourcesResponse DescribeSystemResources(Models\DescribeSystemResourcesRequest $req) 描述系统资源接口
+ * @method Models\ModifyJobResponse ModifyJob(Models\ModifyJobRequest $req) 更新作业属性，仅允许以下3种操作，不支持组合操作：
+(1)	更新作业名称
+(2)	更新作业备注 
+(3)	更新作业最大并行度
+变更前提：WorkerCuNum<=MaxParallelism
+如果MaxParallelism变小，不重启作业，待下一次重启生效
+如果MaxParallelism变大，则要求入参RestartAllowed必须为True
+假设作业运行状态，则先停止作业，再启动作业，中间状态丢失
+假设作业暂停状态，则将作业更改为停止状态，中间状态丢失
+
+
  * @method Models\RunJobsResponse RunJobs(Models\RunJobsRequest $req) 批量启动或者恢复作业，批量操作数量上限20
  * @method Models\StopJobsResponse StopJobs(Models\StopJobsRequest $req) 批量停止作业，批量操作数量上限为20
  * @method Models\TriggerJobSavepointResponse TriggerJobSavepoint(Models\TriggerJobSavepointRequest $req) 触发Savepoint

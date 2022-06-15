@@ -42,9 +42,16 @@ use TencentCloud\Teo\V20220106\Models as Models;
  * @method Models\DeleteZoneResponse DeleteZone(Models\DeleteZoneRequest $req) 删除站点
  * @method Models\DescribeApplicationProxyResponse DescribeApplicationProxy(Models\DescribeApplicationProxyRequest $req) 获取应用代理列表
  * @method Models\DescribeApplicationProxyDetailResponse DescribeApplicationProxyDetail(Models\DescribeApplicationProxyDetailRequest $req) 获取应用代理详细信息
+ * @method Models\DescribeBotLogResponse DescribeBotLog(Models\DescribeBotLogRequest $req) 查询Bot攻击日志
  * @method Models\DescribeBotManagedRulesResponse DescribeBotManagedRules(Models\DescribeBotManagedRulesRequest $req) 分页查询Bot托管规则
  * @method Models\DescribeCnameStatusResponse DescribeCnameStatus(Models\DescribeCnameStatusRequest $req) 查询域名 CNAME 状态
  * @method Models\DescribeDDoSPolicyResponse DescribeDDoSPolicy(Models\DescribeDDoSPolicyRequest $req) 查询DDoS防护配置详情
+ * @method Models\DescribeDDosAttackDataResponse DescribeDDosAttackData(Models\DescribeDDosAttackDataRequest $req) 查询DDos攻击数据
+ * @method Models\DescribeDDosAttackEventResponse DescribeDDosAttackEvent(Models\DescribeDDosAttackEventRequest $req) 查询DDos攻击事件
+ * @method Models\DescribeDDosAttackEventDetailResponse DescribeDDosAttackEventDetail(Models\DescribeDDosAttackEventDetailRequest $req) 查询DDos攻击事件详情
+ * @method Models\DescribeDDosAttackSourceEventResponse DescribeDDosAttackSourceEvent(Models\DescribeDDosAttackSourceEventRequest $req) 查询DDos攻击源
+ * @method Models\DescribeDDosAttackTopDataResponse DescribeDDosAttackTopData(Models\DescribeDDosAttackTopDataRequest $req) 查询DDos攻击Top数据
+ * @method Models\DescribeDDosMajorAttackEventResponse DescribeDDosMajorAttackEvent(Models\DescribeDDosMajorAttackEventRequest $req) 查询DDos主攻击事件
  * @method Models\DescribeDefaultCertificatesResponse DescribeDefaultCertificates(Models\DescribeDefaultCertificatesRequest $req) 查询默认证书列表
  * @method Models\DescribeDnsDataResponse DescribeDnsData(Models\DescribeDnsDataRequest $req) 获取DNS请求数统计曲线
  * @method Models\DescribeDnsRecordsResponse DescribeDnsRecords(Models\DescribeDnsRecordsRequest $req) 查询 DNS 记录列表，支持搜索、分页、排序、过滤。
@@ -56,6 +63,7 @@ use TencentCloud\Teo\V20220106\Models as Models;
  * @method Models\DescribeLoadBalancingDetailResponse DescribeLoadBalancingDetail(Models\DescribeLoadBalancingDetailRequest $req) 获取负载均衡详细信息
  * @method Models\DescribeOriginGroupResponse DescribeOriginGroup(Models\DescribeOriginGroupRequest $req) 获取源站组信息列表
  * @method Models\DescribeOriginGroupDetailResponse DescribeOriginGroupDetail(Models\DescribeOriginGroupDetailRequest $req) 获取源站组详细信息
+ * @method Models\DescribeOverviewL7DataResponse DescribeOverviewL7Data(Models\DescribeOverviewL7DataRequest $req) 查询七层监控类时序流量数据
  * @method Models\DescribePrefetchTasksResponse DescribePrefetchTasks(Models\DescribePrefetchTasksRequest $req) 查询预热任务状态
  * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) 查询清除缓存历史记录
  * @method Models\DescribeSecurityPolicyResponse DescribeSecurityPolicy(Models\DescribeSecurityPolicyRequest $req) 查询安全防护配置详情
@@ -64,6 +72,16 @@ use TencentCloud\Teo\V20220106\Models as Models;
  * @method Models\DescribeSecurityPolicyManagedRulesIdResponse DescribeSecurityPolicyManagedRulesId(Models\DescribeSecurityPolicyManagedRulesIdRequest $req) 规则id查询门神规则详情
  * @method Models\DescribeSecurityPolicyRegionsResponse DescribeSecurityPolicyRegions(Models\DescribeSecurityPolicyRegionsRequest $req) 查询所有地域信息
  * @method Models\DescribeSecurityPortraitRulesResponse DescribeSecurityPortraitRules(Models\DescribeSecurityPortraitRulesRequest $req) 查询Bot用户画像规则
+ * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) 四层时序流量数据查询
+ * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) 查询七层数据分析类时序流量数据
+ * @method Models\DescribeTopL7AnalysisDataResponse DescribeTopL7AnalysisData(Models\DescribeTopL7AnalysisDataRequest $req) 查询top类流量数据
+ * @method Models\DescribeWebManagedRulesAttackEventsResponse DescribeWebManagedRulesAttackEvents(Models\DescribeWebManagedRulesAttackEventsRequest $req) 查询Web托管攻击事件
+ * @method Models\DescribeWebManagedRulesDataResponse DescribeWebManagedRulesData(Models\DescribeWebManagedRulesDataRequest $req) 查询Web托管规则数据
+ * @method Models\DescribeWebManagedRulesLogResponse DescribeWebManagedRulesLog(Models\DescribeWebManagedRulesLogRequest $req) 查询Web托管日志
+ * @method Models\DescribeWebManagedRulesTopDataResponse DescribeWebManagedRulesTopData(Models\DescribeWebManagedRulesTopDataRequest $req) 查询Web托管规则Top数据
+ * @method Models\DescribeWebProtectionAttackEventsResponse DescribeWebProtectionAttackEvents(Models\DescribeWebProtectionAttackEventsRequest $req) 查询web防护攻击事件
+ * @method Models\DescribeWebProtectionDataResponse DescribeWebProtectionData(Models\DescribeWebProtectionDataRequest $req) 查询web防护数据
+ * @method Models\DescribeWebProtectionLogResponse DescribeWebProtectionLog(Models\DescribeWebProtectionLogRequest $req) 查询web防护日志
  * @method Models\DescribeZoneDDoSPolicyResponse DescribeZoneDDoSPolicy(Models\DescribeZoneDDoSPolicyRequest $req) 查询所有DDoS防护分区
  * @method Models\DescribeZoneDetailsResponse DescribeZoneDetails(Models\DescribeZoneDetailsRequest $req) 根据站点 ID 查询站点的详细信息
  * @method Models\DescribeZoneSettingResponse DescribeZoneSetting(Models\DescribeZoneSettingRequest $req) 用于查询站点的所有配置信息。

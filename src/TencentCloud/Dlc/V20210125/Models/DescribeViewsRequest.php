@@ -36,12 +36,12 @@ view-id - String - （过滤条件）view id形如：12342。
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据库所属的数据源名称
  * @method string getSort() 获取排序字段
  * @method void setSort(string $Sort) 设置排序字段
- * @method boolean getAsc() 获取排序规则
- * @method void setAsc(boolean $Asc) 设置排序规则
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method boolean getAsc() 获取排序规则，true:升序；false:降序
+ * @method void setAsc(boolean $Asc) 设置排序规则，true:升序；false:降序
+ * @method string getStartTime() 获取按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
+ * @method void setStartTime(string $StartTime) 设置按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
+ * @method string getEndTime() 获取按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
+ * @method void setEndTime(string $EndTime) 设置按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
  */
 class DescribeViewsRequest extends AbstractModel
 {
@@ -78,17 +78,17 @@ view-id - String - （过滤条件）view id形如：12342。
     public $Sort;
 
     /**
-     * @var boolean 排序规则
+     * @var boolean 排序规则，true:升序；false:降序
      */
     public $Asc;
 
     /**
-     * @var string 开始时间
+     * @var string 按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
      */
     public $EndTime;
 
@@ -101,9 +101,9 @@ view-name - String - （过滤条件）数据表名称,形如：view-001。
 view-id - String - （过滤条件）view id形如：12342。
      * @param string $DatasourceConnectionName 数据库所属的数据源名称
      * @param string $Sort 排序字段
-     * @param boolean $Asc 排序规则
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
+     * @param boolean $Asc 排序规则，true:升序；false:降序
+     * @param string $StartTime 按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
+     * @param string $EndTime 按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
      */
     function __construct()
     {

@@ -23,7 +23,16 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ciam\V20220331\Models as Models;
 
 /**
+ * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
+ * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 批量删除用户
+ * @method Models\DescribeUserByIdResponse DescribeUserById(Models\DescribeUserByIdRequest $req) 根据ID查询用户信息
+ * @method Models\LinkAccountResponse LinkAccount(Models\LinkAccountRequest $req) 账号融合
+ * @method Models\ListUserResponse ListUser(Models\ListUserRequest $req) 查询用户列表
+ * @method Models\ListUserByPropertyResponse ListUserByProperty(Models\ListUserByPropertyRequest $req) 根据属性查询用户列表
  * @method Models\ResetPasswordResponse ResetPassword(Models\ResetPasswordRequest $req) 重置用户密码
+ * @method Models\SetPasswordResponse SetPassword(Models\SetPasswordRequest $req) 设置用户密码
+ * @method Models\UpdateUserResponse UpdateUser(Models\UpdateUserRequest $req) 更新用户
+ * @method Models\UpdateUserStatusResponse UpdateUserStatus(Models\UpdateUserStatusRequest $req) 更新用户状态
  */
 
 class CiamClient extends AbstractClient

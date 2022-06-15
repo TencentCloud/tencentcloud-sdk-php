@@ -102,6 +102,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBGPIPChannelFlag(integer $BGPIPChannelFlag) 设置是否渠道版高防IP，是为1，否为0
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagInfoList() 获取资源关联标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagInfoList(array $TagInfoList) 设置资源关联标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -227,6 +231,12 @@ class BGPIPInstance extends AbstractModel
     public $BGPIPChannelFlag;
 
     /**
+     * @var array 资源关联标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagInfoList;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPIPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPIPInstanceUsages $Usage 资产实例的使用统计信息
@@ -267,6 +277,8 @@ class BGPIPInstance extends AbstractModel
      * @param integer $V6Flag 是否Ipv6版本的IP, 是为1，否为0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BGPIPChannelFlag 是否渠道版高防IP，是为1，否为0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagInfoList 资源关联标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -368,6 +380,15 @@ class BGPIPInstance extends AbstractModel
 
         if (array_key_exists("BGPIPChannelFlag",$param) and $param["BGPIPChannelFlag"] !== null) {
             $this->BGPIPChannelFlag = $param["BGPIPChannelFlag"];
+        }
+
+        if (array_key_exists("TagInfoList",$param) and $param["TagInfoList"] !== null) {
+            $this->TagInfoList = [];
+            foreach ($param["TagInfoList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagInfoList, $obj);
+            }
         }
     }
 }

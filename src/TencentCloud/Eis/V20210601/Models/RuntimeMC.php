@@ -50,6 +50,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemoryUsed(float $MemoryUsed) 设置已使用内存 MB
  * @method float getMemoryLimit() 获取内存上限 MB
  * @method void setMemoryLimit(float $MemoryLimit) 设置内存上限 MB
+ * @method integer getExpiredAt() 获取运行时过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpiredAt(integer $ExpiredAt) 设置运行时过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getChargeType() 获取收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChargeType(integer $ChargeType) 设置收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getResourceLimitType() 获取资源限制类型：0:无限制，1:有限制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceLimitType(integer $ResourceLimitType) 设置资源限制类型：0:无限制，1:有限制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoRenewal() 获取是否开启自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoRenewal(boolean $AutoRenewal) 设置是否开启自动续费
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuntimeMC extends AbstractModel
 {
@@ -129,6 +145,30 @@ class RuntimeMC extends AbstractModel
     public $MemoryLimit;
 
     /**
+     * @var integer 运行时过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpiredAt;
+
+    /**
+     * @var integer 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChargeType;
+
+    /**
+     * @var integer 资源限制类型：0:无限制，1:有限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceLimitType;
+
+    /**
+     * @var boolean 是否开启自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoRenewal;
+
+    /**
      * @param integer $RuntimeId 运行时id
      * @param string $Uin 主账号uin
      * @param string $DisplayName 运行时名称，用户输入，同一uin内唯一
@@ -144,6 +184,14 @@ class RuntimeMC extends AbstractModel
      * @param float $CpuLimit cpu核数上限
      * @param float $MemoryUsed 已使用内存 MB
      * @param float $MemoryLimit 内存上限 MB
+     * @param integer $ExpiredAt 运行时过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ChargeType 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ResourceLimitType 资源限制类型：0:无限制，1:有限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoRenewal 是否开启自动续费
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -216,6 +264,22 @@ class RuntimeMC extends AbstractModel
 
         if (array_key_exists("MemoryLimit",$param) and $param["MemoryLimit"] !== null) {
             $this->MemoryLimit = $param["MemoryLimit"];
+        }
+
+        if (array_key_exists("ExpiredAt",$param) and $param["ExpiredAt"] !== null) {
+            $this->ExpiredAt = $param["ExpiredAt"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("ResourceLimitType",$param) and $param["ResourceLimitType"] !== null) {
+            $this->ResourceLimitType = $param["ResourceLimitType"];
+        }
+
+        if (array_key_exists("AutoRenewal",$param) and $param["AutoRenewal"] !== null) {
+            $this->AutoRenewal = $param["AutoRenewal"];
         }
     }
 }

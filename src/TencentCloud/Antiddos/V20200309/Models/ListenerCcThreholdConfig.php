@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getProtocol() 获取协议（可取值htttps）
- * @method void setProtocol(string $Protocol) 设置协议（可取值htttps）
+ * @method string getProtocol() 获取协议（可取值https）
+ * @method void setProtocol(string $Protocol) 设置协议（可取值https）
  * @method integer getCCEnable() 获取开关状态（0：关闭，1：开启）
  * @method void setCCEnable(integer $CCEnable) 设置开关状态（0：关闭，1：开启）
  * @method integer getCCThreshold() 获取cc防护阈值
@@ -37,7 +37,7 @@ class ListenerCcThreholdConfig extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 协议（可取值htttps）
+     * @var string 协议（可取值https）
      */
     public $Protocol;
 
@@ -53,7 +53,7 @@ class ListenerCcThreholdConfig extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param string $Protocol 协议（可取值htttps）
+     * @param string $Protocol 协议（可取值https）
      * @param integer $CCEnable 开关状态（0：关闭，1：开启）
      * @param integer $CCThreshold cc防护阈值
      */

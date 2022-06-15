@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSort(string $Sort) 设置排序方式：asc，desc（默认）
  * @method string getZone() 获取运行时地域
  * @method void setZone(string $Zone) 设置运行时地域
+ * @method integer getApiVersion() 获取1:3.0版本新控制台传1；否则传0
+ * @method void setApiVersion(integer $ApiVersion) 设置1:3.0版本新控制台传1；否则传0
  */
 class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
     public $Zone;
 
     /**
+     * @var integer 1:3.0版本新控制台传1；否则传0
+     */
+    public $ApiVersion;
+
+    /**
      * @param integer $RuntimeId 运行时id
      * @param integer $Limit 最大请求数量
      * @param integer $Offset 请求偏移量
      * @param integer $SortType 排序类型：1:创建时间排序, 2:更新时间排序（默认）
      * @param string $Sort 排序方式：asc，desc（默认）
      * @param string $Zone 运行时地域
+     * @param integer $ApiVersion 1:3.0版本新控制台传1；否则传0
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("ApiVersion",$param) and $param["ApiVersion"] !== null) {
+            $this->ApiVersion = $param["ApiVersion"];
         }
     }
 }

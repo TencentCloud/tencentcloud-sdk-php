@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPacketFilterConfig(PacketFilterConfig $PacketFilterConfig) 设置特征过滤配置
  * @method array getInstanceDetailList() 获取特征过滤配置所属的实例
  * @method void setInstanceDetailList(array $InstanceDetailList) 设置特征过滤配置所属的实例
+ * @method string getModifyTime() 获取修改时间
+ * @method void setModifyTime(string $ModifyTime) 设置修改时间
  */
 class PacketFilterRelation extends AbstractModel
 {
@@ -38,8 +40,14 @@ class PacketFilterRelation extends AbstractModel
     public $InstanceDetailList;
 
     /**
+     * @var string 修改时间
+     */
+    public $ModifyTime;
+
+    /**
      * @param PacketFilterConfig $PacketFilterConfig 特征过滤配置
      * @param array $InstanceDetailList 特征过滤配置所属的实例
+     * @param string $ModifyTime 修改时间
      */
     function __construct()
     {
@@ -66,6 +74,10 @@ class PacketFilterRelation extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceDetailList, $obj);
             }
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
         }
     }
 }

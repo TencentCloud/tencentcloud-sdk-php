@@ -46,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMainClass(string $MainClass) 设置spark jar作业时的主类
  * @method string getAppConf() 获取spark配置，以换行符分隔
  * @method void setAppConf(string $AppConf) 设置spark配置，以换行符分隔
- * @method string getIsLocalJars() 获取是否本地上传，可去cos,lakefs
- * @method void setIsLocalJars(string $IsLocalJars) 设置是否本地上传，可去cos,lakefs
+ * @method string getIsLocalJars() 获取jar资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+ * @method void setIsLocalJars(string $IsLocalJars) 设置jar资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
  * @method string getAppJars() 获取spark jar作业依赖jars，以逗号分隔
  * @method void setAppJars(string $AppJars) 设置spark jar作业依赖jars，以逗号分隔
- * @method string getIsLocalFiles() 获取是否本地上传，可去cos,lakefs
- * @method void setIsLocalFiles(string $IsLocalFiles) 设置是否本地上传，可去cos,lakefs
+ * @method string getIsLocalFiles() 获取file资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+ * @method void setIsLocalFiles(string $IsLocalFiles) 设置file资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
  * @method string getAppFiles() 获取spark作业依赖资源，以逗号分隔
  * @method void setAppFiles(string $AppFiles) 设置spark作业依赖资源，以逗号分隔
  * @method string getIsLocalPythonFiles() 获取pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
@@ -133,7 +133,7 @@ class ModifySparkAppRequest extends AbstractModel
     public $AppConf;
 
     /**
-     * @var string 是否本地上传，可去cos,lakefs
+     * @var string jar资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
      */
     public $IsLocalJars;
 
@@ -143,7 +143,7 @@ class ModifySparkAppRequest extends AbstractModel
     public $AppJars;
 
     /**
-     * @var string 是否本地上传，可去cos,lakefs
+     * @var string file资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
      */
     public $IsLocalFiles;
 
@@ -191,9 +191,9 @@ class ModifySparkAppRequest extends AbstractModel
      * @param string $IsLocal 是否本地上传，可取cos,lakefs
      * @param string $MainClass spark jar作业时的主类
      * @param string $AppConf spark配置，以换行符分隔
-     * @param string $IsLocalJars 是否本地上传，可去cos,lakefs
+     * @param string $IsLocalJars jar资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
      * @param string $AppJars spark jar作业依赖jars，以逗号分隔
-     * @param string $IsLocalFiles 是否本地上传，可去cos,lakefs
+     * @param string $IsLocalFiles file资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
      * @param string $AppFiles spark作业依赖资源，以逗号分隔
      * @param string $IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
      * @param string $AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔

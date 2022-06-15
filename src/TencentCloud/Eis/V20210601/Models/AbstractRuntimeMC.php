@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArea(string $Area) 设置运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
  * @method string getAddr() 获取运行时应用listener地址后缀
  * @method void setAddr(string $Addr) 设置运行时应用listener地址后缀
+ * @method integer getStatus() 获取运行时状态
+ * @method void setStatus(integer $Status) 设置运行时状态
+ * @method integer getExpiredAt() 获取运行时过期时间
+ * @method void setExpiredAt(integer $ExpiredAt) 设置运行时过期时间
  */
 class AbstractRuntimeMC extends AbstractModel
 {
@@ -66,12 +70,24 @@ class AbstractRuntimeMC extends AbstractModel
     public $Addr;
 
     /**
+     * @var integer 运行时状态
+     */
+    public $Status;
+
+    /**
+     * @var integer 运行时过期时间
+     */
+    public $ExpiredAt;
+
+    /**
      * @param integer $RuntimeId 运行时id
      * @param string $DisplayName 运行时名称，用户输入，同一uin内唯一
      * @param integer $Type 运行时类型：0: sandbox, 1:shared, 2:private
      * @param string $Zone 运行时所在地域，tianjin，beijiing，guangzhou等
      * @param string $Area 运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
      * @param string $Addr 运行时应用listener地址后缀
+     * @param integer $Status 运行时状态
+     * @param integer $ExpiredAt 运行时过期时间
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class AbstractRuntimeMC extends AbstractModel
 
         if (array_key_exists("Addr",$param) and $param["Addr"] !== null) {
             $this->Addr = $param["Addr"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ExpiredAt",$param) and $param["ExpiredAt"] !== null) {
+            $this->ExpiredAt = $param["ExpiredAt"];
         }
     }
 }

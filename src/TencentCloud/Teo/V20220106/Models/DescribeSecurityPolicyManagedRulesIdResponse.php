@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotal(integer $Total) 设置返回总数
  * @method array getRules() 获取门神规则
  * @method void setRules(array $Rules) 设置门神规则
+ * @method integer getCount() 获取返回总数
+ * @method void setCount(integer $Count) 设置返回总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeSecurityPolicyManagedRulesIdResponse extends AbstractModel
     public $Rules;
 
     /**
+     * @var integer 返回总数
+     */
+    public $Count;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeSecurityPolicyManagedRulesIdResponse extends AbstractModel
     /**
      * @param integer $Total 返回总数
      * @param array $Rules 门神规则
+     * @param integer $Count 返回总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeSecurityPolicyManagedRulesIdResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
+        }
+
+        if (array_key_exists("Count",$param) and $param["Count"] !== null) {
+            $this->Count = $param["Count"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

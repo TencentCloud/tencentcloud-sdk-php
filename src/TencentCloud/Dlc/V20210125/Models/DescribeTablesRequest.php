@@ -40,8 +40,8 @@ table-id - String - （过滤条件）table id形如：12342。
  * @method void setEndTime(string $EndTime) 设置终止时间：用于对更新时间的筛选
  * @method string getSort() 获取排序字段，支持：ModifiedTime（默认）；CreateTime
  * @method void setSort(string $Sort) 设置排序字段，支持：ModifiedTime（默认）；CreateTime
- * @method boolean getAsc() 获取排序字段，false：降序（默认）；true
- * @method void setAsc(boolean $Asc) 设置排序字段，false：降序（默认）；true
+ * @method boolean getAsc() 获取排序字段，false：降序（默认）；true：升序
+ * @method void setAsc(boolean $Asc) 设置排序字段，false：降序（默认）；true：升序
  * @method string getTableType() 获取table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
  * @method void setTableType(string $TableType) 设置table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
  * @method string getTableFormat() 获取筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
@@ -92,7 +92,7 @@ table-id - String - （过滤条件）table id形如：12342。
     public $Sort;
 
     /**
-     * @var boolean 排序字段，false：降序（默认）；true
+     * @var boolean 排序字段，false：降序（默认）；true：升序
      */
     public $Asc;
 
@@ -117,7 +117,7 @@ table-id - String - （过滤条件）table id形如：12342。
      * @param string $StartTime 起始时间：用于对更新时间的筛选
      * @param string $EndTime 终止时间：用于对更新时间的筛选
      * @param string $Sort 排序字段，支持：ModifiedTime（默认）；CreateTime
-     * @param boolean $Asc 排序字段，false：降序（默认）；true
+     * @param boolean $Asc 排序字段，false：降序（默认）；true：升序
      * @param string $TableType table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
      * @param string $TableFormat 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
      */

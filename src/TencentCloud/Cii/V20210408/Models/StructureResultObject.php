@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubTaskId(string $SubTaskId) 设置子任务ID
  * @method array getTaskFiles() 获取任务文件列表
  * @method void setTaskFiles(array $TaskFiles) 设置任务文件列表
+ * @method array getResultFields() 获取结构化字段结果数组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResultFields(array $ResultFields) 设置结构化字段结果数组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StructureResultObject extends AbstractModel
 {
@@ -59,11 +63,19 @@ class StructureResultObject extends AbstractModel
     public $TaskFiles;
 
     /**
+     * @var array 结构化字段结果数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResultFields;
+
+    /**
      * @param integer $Code 0表示正常返回；1代表结果未生成；2代表任务执行失败
      * @param string $TaskType 报告类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
      * @param string $StructureResult 结构化结果
      * @param string $SubTaskId 子任务ID
      * @param array $TaskFiles 任务文件列表
+     * @param array $ResultFields 结构化字段结果数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,15 @@ class StructureResultObject extends AbstractModel
 
         if (array_key_exists("TaskFiles",$param) and $param["TaskFiles"] !== null) {
             $this->TaskFiles = $param["TaskFiles"];
+        }
+
+        if (array_key_exists("ResultFields",$param) and $param["ResultFields"] !== null) {
+            $this->ResultFields = [];
+            foreach ($param["ResultFields"] as $key => $value){
+                $obj = new OcrRecognise();
+                $obj->deserialize($value);
+                array_push($this->ResultFields, $obj);
+            }
         }
     }
 }

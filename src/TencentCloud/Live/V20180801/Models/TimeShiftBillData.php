@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取推流域名。
  * @method void setDomain(string $Domain) 设置推流域名。
- * @method float getDuration() 获取时移时长,单位分钟。
- * @method void setDuration(float $Duration) 设置时移时长,单位分钟。
+ * @method float getDuration() 获取时移文件时长,单位分钟。
+ * @method void setDuration(float $Duration) 设置时移文件时长,单位分钟。
  * @method float getStoragePeriod() 获取时移配置天数，单位天。
  * @method void setStoragePeriod(float $StoragePeriod) 设置时移配置天数，单位天。
  * @method string getTime() 获取时间点，格式: yyyy-mm-ddTHH:MM:SSZ。
@@ -37,7 +37,7 @@ class TimeShiftBillData extends AbstractModel
     public $Domain;
 
     /**
-     * @var float 时移时长,单位分钟。
+     * @var float 时移文件时长,单位分钟。
      */
     public $Duration;
 
@@ -53,7 +53,7 @@ class TimeShiftBillData extends AbstractModel
 
     /**
      * @param string $Domain 推流域名。
-     * @param float $Duration 时移时长,单位分钟。
+     * @param float $Duration 时移文件时长,单位分钟。
      * @param float $StoragePeriod 时移配置天数，单位天。
      * @param string $Time 时间点，格式: yyyy-mm-ddTHH:MM:SSZ。
      */

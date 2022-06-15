@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置终止时间
  * @method array getTaskStatus() 获取任务状态
  * @method void setTaskStatus(array $TaskStatus) 设置任务状态
+ * @method array getResult() 获取任务状态
+ * @method void setResult(array $Result) 设置任务状态
+ * @method array getOperatorUin() 获取操作者Uin
+ * @method void setOperatorUin(array $OperatorUin) 设置操作者Uin
  */
 class DescribeTaskListRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class DescribeTaskListRequest extends AbstractModel
     public $TaskStatus;
 
     /**
+     * @var array 任务状态
+     */
+    public $Result;
+
+    /**
+     * @var array 操作者Uin
+     */
+    public $OperatorUin;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $InstanceName 实例名称
      * @param integer $Limit 分页大小,默认20，上限不大于100
@@ -96,6 +110,8 @@ class DescribeTaskListRequest extends AbstractModel
      * @param string $BeginTime 起始时间
      * @param string $EndTime 终止时间
      * @param array $TaskStatus 任务状态
+     * @param array $Result 任务状态
+     * @param array $OperatorUin 操作者Uin
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class DescribeTaskListRequest extends AbstractModel
 
         if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
             $this->TaskStatus = $param["TaskStatus"];
+        }
+
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("OperatorUin",$param) and $param["OperatorUin"] !== null) {
+            $this->OperatorUin = $param["OperatorUin"];
         }
     }
 }

@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMediaCount(integer $MediaCount) 设置当前媒体总量。
  * @method integer getTotalStorage() 获取当前总存储量，单位是字节。
  * @method void setTotalStorage(integer $TotalStorage) 设置当前总存储量，单位是字节。
- * @method integer getInfrequentStorage() 获取当前低频存储量，单位是字节。
- * @method void setInfrequentStorage(integer $InfrequentStorage) 设置当前低频存储量，单位是字节。
  * @method integer getStandardStorage() 获取当前标准存储量，单位是字节。
  * @method void setStandardStorage(integer $StandardStorage) 设置当前标准存储量，单位是字节。
+ * @method integer getInfrequentStorage() 获取当前低频存储量，单位是字节。
+ * @method void setInfrequentStorage(integer $InfrequentStorage) 设置当前低频存储量，单位是字节。
+ * @method integer getArchiveStorage() 获取当前归档存储量，单位是字节。
+ * @method void setArchiveStorage(integer $ArchiveStorage) 设置当前归档存储量，单位是字节。
+ * @method integer getDeepArchiveStorage() 获取当前深度归档存储量，单位是字节。
+ * @method void setDeepArchiveStorage(integer $DeepArchiveStorage) 设置当前深度归档存储量，单位是字节。
  * @method array getStorageStat() 获取各计费区域的存储用量。
  * @method void setStorageStat(array $StorageStat) 设置各计费区域的存储用量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,14 +50,24 @@ class DescribeStorageDataResponse extends AbstractModel
     public $TotalStorage;
 
     /**
+     * @var integer 当前标准存储量，单位是字节。
+     */
+    public $StandardStorage;
+
+    /**
      * @var integer 当前低频存储量，单位是字节。
      */
     public $InfrequentStorage;
 
     /**
-     * @var integer 当前标准存储量，单位是字节。
+     * @var integer 当前归档存储量，单位是字节。
      */
-    public $StandardStorage;
+    public $ArchiveStorage;
+
+    /**
+     * @var integer 当前深度归档存储量，单位是字节。
+     */
+    public $DeepArchiveStorage;
 
     /**
      * @var array 各计费区域的存储用量。
@@ -68,8 +82,10 @@ class DescribeStorageDataResponse extends AbstractModel
     /**
      * @param integer $MediaCount 当前媒体总量。
      * @param integer $TotalStorage 当前总存储量，单位是字节。
-     * @param integer $InfrequentStorage 当前低频存储量，单位是字节。
      * @param integer $StandardStorage 当前标准存储量，单位是字节。
+     * @param integer $InfrequentStorage 当前低频存储量，单位是字节。
+     * @param integer $ArchiveStorage 当前归档存储量，单位是字节。
+     * @param integer $DeepArchiveStorage 当前深度归档存储量，单位是字节。
      * @param array $StorageStat 各计费区域的存储用量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -94,12 +110,20 @@ class DescribeStorageDataResponse extends AbstractModel
             $this->TotalStorage = $param["TotalStorage"];
         }
 
+        if (array_key_exists("StandardStorage",$param) and $param["StandardStorage"] !== null) {
+            $this->StandardStorage = $param["StandardStorage"];
+        }
+
         if (array_key_exists("InfrequentStorage",$param) and $param["InfrequentStorage"] !== null) {
             $this->InfrequentStorage = $param["InfrequentStorage"];
         }
 
-        if (array_key_exists("StandardStorage",$param) and $param["StandardStorage"] !== null) {
-            $this->StandardStorage = $param["StandardStorage"];
+        if (array_key_exists("ArchiveStorage",$param) and $param["ArchiveStorage"] !== null) {
+            $this->ArchiveStorage = $param["ArchiveStorage"];
+        }
+
+        if (array_key_exists("DeepArchiveStorage",$param) and $param["DeepArchiveStorage"] !== null) {
+            $this->DeepArchiveStorage = $param["DeepArchiveStorage"];
         }
 
         if (array_key_exists("StorageStat",$param) and $param["StorageStat"] !== null) {

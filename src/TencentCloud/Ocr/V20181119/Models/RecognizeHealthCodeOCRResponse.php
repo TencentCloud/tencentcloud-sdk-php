@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTestingResult(string $TestingResult) 设置核酸检测结果：阴性、阳性、暂无核酸检测记录（允许返回空值）
  * @method string getTestingTime() 获取核酸检测时间（允许返回空值）
  * @method void setTestingTime(string $TestingTime) 设置核酸检测时间（允许返回空值）
+ * @method string getVaccination() 获取疫苗接种信息，返回接种针数或接种情况（允许返回空值）
+ * @method void setVaccination(string $Vaccination) 设置疫苗接种信息，返回接种针数或接种情况（允许返回空值）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -75,6 +77,11 @@ class RecognizeHealthCodeOCRResponse extends AbstractModel
     public $TestingTime;
 
     /**
+     * @var string 疫苗接种信息，返回接种针数或接种情况（允许返回空值）
+     */
+    public $Vaccination;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +94,7 @@ class RecognizeHealthCodeOCRResponse extends AbstractModel
      * @param string $TestingInterval 核酸检测间隔时长（允许返回空值）
      * @param string $TestingResult 核酸检测结果：阴性、阳性、暂无核酸检测记录（允许返回空值）
      * @param string $TestingTime 核酸检测时间（允许返回空值）
+     * @param string $Vaccination 疫苗接种信息，返回接种针数或接种情况（允许返回空值）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -128,6 +136,10 @@ class RecognizeHealthCodeOCRResponse extends AbstractModel
 
         if (array_key_exists("TestingTime",$param) and $param["TestingTime"] !== null) {
             $this->TestingTime = $param["TestingTime"];
+        }
+
+        if (array_key_exists("Vaccination",$param) and $param["Vaccination"] !== null) {
+            $this->Vaccination = $param["Vaccination"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

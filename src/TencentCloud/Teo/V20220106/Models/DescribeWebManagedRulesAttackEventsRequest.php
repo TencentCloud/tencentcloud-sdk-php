@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置条数
  * @method integer getPageNo() 获取当前页
  * @method void setPageNo(integer $PageNo) 设置当前页
- * @method array getPolicyIds() 获取ddos策略组id 集合
- * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组id 集合
+ * @method array getPolicyIds() 获取ddos策略组id列表
+ * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组id列表
  * @method array getZoneIds() 获取站点集合
  * @method void setZoneIds(array $ZoneIds) 设置站点集合
- * @method array getDomains() 获取协议类型,{tcp,udp,all}
- * @method void setDomains(array $Domains) 设置协议类型,{tcp,udp,all}
+ * @method array getDomains() 获取子域名列表
+ * @method void setDomains(array $Domains) 设置子域名列表
  * @method string getIsShowDetail() 获取选填{Y、N},默认为Y；Y：展示，N：不展示
  * @method void setIsShowDetail(string $IsShowDetail) 设置选填{Y、N},默认为Y；Y：展示，N：不展示
  */
@@ -60,7 +60,7 @@ class DescribeWebManagedRulesAttackEventsRequest extends AbstractModel
     public $PageNo;
 
     /**
-     * @var array ddos策略组id 集合
+     * @var array ddos策略组id列表
      */
     public $PolicyIds;
 
@@ -70,7 +70,7 @@ class DescribeWebManagedRulesAttackEventsRequest extends AbstractModel
     public $ZoneIds;
 
     /**
-     * @var array 协议类型,{tcp,udp,all}
+     * @var array 子域名列表
      */
     public $Domains;
 
@@ -84,9 +84,9 @@ class DescribeWebManagedRulesAttackEventsRequest extends AbstractModel
      * @param string $EndTime 结束时间
      * @param integer $PageSize 条数
      * @param integer $PageNo 当前页
-     * @param array $PolicyIds ddos策略组id 集合
+     * @param array $PolicyIds ddos策略组id列表
      * @param array $ZoneIds 站点集合
-     * @param array $Domains 协议类型,{tcp,udp,all}
+     * @param array $Domains 子域名列表
      * @param string $IsShowDetail 选填{Y、N},默认为Y；Y：展示，N：不展示
      */
     function __construct()

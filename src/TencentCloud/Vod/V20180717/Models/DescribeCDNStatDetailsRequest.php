@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getEndTime() 获取结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setEndTime(string $EndTime) 设置结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method array getDomainNames() 获取域名列表。一次最多查询20个域名的数据。默认返回所有域名叠加的用量数据。
  * @method void setDomainNames(array $DomainNames) 设置域名列表。一次最多查询20个域名的数据。默认返回所有域名叠加的用量数据。
  * @method string getArea() 获取服务区域，取值有：
@@ -152,8 +154,6 @@ use TencentCloud\Common\AbstractModel;
 <li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
 <li>1440：天粒度，返回指定查询时间内1天粒度的数据。起始时间和结束时间跨度大于24小时，只支持天粒度的数据。</li>
 当 StartTime 和 EndTime 时间跨度大于24小时时，DataInterval 默认为 1440。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class DescribeCDNStatDetailsRequest extends AbstractModel
 {
@@ -174,6 +174,11 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
      * @var string 结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public $EndTime;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var array 域名列表。一次最多查询20个域名的数据。默认返回所有域名叠加的用量数据。
@@ -256,17 +261,13 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
     public $DataInterval;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $Metric 查询指标，取值有：
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
 <li>Requests：请求数。</li>
      * @param string $StartTime 起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $EndTime 结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param array $DomainNames 域名列表。一次最多查询20个域名的数据。默认返回所有域名叠加的用量数据。
      * @param string $Area 服务区域，取值有：
 <li>Chinese Mainland：中国大陆。 </li>
@@ -327,7 +328,6 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
 <li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
 <li>1440：天粒度，返回指定查询时间内1天粒度的数据。起始时间和结束时间跨度大于24小时，只支持天粒度的数据。</li>
 当 StartTime 和 EndTime 时间跨度大于24小时时，DataInterval 默认为 1440。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -354,6 +354,10 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
             $this->EndTime = $param["EndTime"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("DomainNames",$param) and $param["DomainNames"] !== null) {
             $this->DomainNames = $param["DomainNames"];
         }
@@ -372,10 +376,6 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
 
         if (array_key_exists("DataInterval",$param) and $param["DataInterval"] !== null) {
             $this->DataInterval = $param["DataInterval"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

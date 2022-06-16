@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDosAttackEventDetail请求参数结构体
  *
- * @method string getEventId() 获取时间id
- * @method void setEventId(string $EventId) 设置时间id
+ * @method string getEventId() 获取事件id
+ * @method void setEventId(string $EventId) 设置事件id
  */
 class DescribeDDosAttackEventDetailRequest extends AbstractModel
 {
     /**
-     * @var string 时间id
+     * @var string 事件id
      */
     public $EventId;
 
     /**
-     * @param string $EventId 时间id
+     * @param string $EventId 事件id
      */
     function __construct()
     {

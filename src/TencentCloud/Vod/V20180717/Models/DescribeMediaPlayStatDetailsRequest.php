@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getEndTime() 获取结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setEndTime(string $EndTime) 设置结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getInterval() 获取统计时间粒度，有效值：
 <li>Hour：以小时为粒度。</li>
 <li>Day：以天为粒度。</li>
@@ -34,8 +36,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Hour：以小时为粒度。</li>
 <li>Day：以天为粒度。</li>
 默认按时间跨度决定，小于1天以小时为粒度，大于等于1天则以天为粒度。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class DescribeMediaPlayStatDetailsRequest extends AbstractModel
 {
@@ -55,6 +55,11 @@ class DescribeMediaPlayStatDetailsRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
+    /**
      * @var string 统计时间粒度，有效值：
 <li>Hour：以小时为粒度。</li>
 <li>Day：以天为粒度。</li>
@@ -63,19 +68,14 @@ class DescribeMediaPlayStatDetailsRequest extends AbstractModel
     public $Interval;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $FileId 媒体文件 ID。
      * @param string $StartTime 起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $EndTime 结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Interval 统计时间粒度，有效值：
 <li>Hour：以小时为粒度。</li>
 <li>Day：以天为粒度。</li>
 默认按时间跨度决定，小于1天以小时为粒度，大于等于1天则以天为粒度。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -102,12 +102,12 @@ class DescribeMediaPlayStatDetailsRequest extends AbstractModel
             $this->EndTime = $param["EndTime"];
         }
 
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
-        }
-
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
+            $this->Interval = $param["Interval"];
         }
     }
 }

@@ -24,8 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserStoreId(string $UserStoreId) 设置用户目录ID
  * @method string getUserId() 获取用户ID
  * @method void setUserId(string $UserId) 设置用户ID
- * @method string getStatus() 获取NORMAL（正常）,LOCK（锁定）,FREEZE（冻结）,请传英文大写字母
- * @method void setStatus(string $Status) 设置NORMAL（正常）,LOCK（锁定）,FREEZE（冻结）,请传英文大写字母
+ * @method string getStatus() 获取用户状态
+
+<li> **NORMAL** </li>	  正常
+<li> **LOCK** </li>  锁定
+<li> **FREEZE** </li>	  冻结
+ * @method void setStatus(string $Status) 设置用户状态
+
+<li> **NORMAL** </li>	  正常
+<li> **LOCK** </li>  锁定
+<li> **FREEZE** </li>	  冻结
  */
 class UpdateUserStatusRequest extends AbstractModel
 {
@@ -40,14 +48,22 @@ class UpdateUserStatusRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var string NORMAL（正常）,LOCK（锁定）,FREEZE（冻结）,请传英文大写字母
+     * @var string 用户状态
+
+<li> **NORMAL** </li>	  正常
+<li> **LOCK** </li>  锁定
+<li> **FREEZE** </li>	  冻结
      */
     public $Status;
 
     /**
      * @param string $UserStoreId 用户目录ID
      * @param string $UserId 用户ID
-     * @param string $Status NORMAL（正常）,LOCK（锁定）,FREEZE（冻结）,请传英文大写字母
+     * @param string $Status 用户状态
+
+<li> **NORMAL** </li>	  正常
+<li> **LOCK** </li>  锁定
+<li> **FREEZE** </li>	  冻结
      */
     function __construct()
     {

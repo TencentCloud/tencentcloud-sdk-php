@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserStoreId() 获取用户目录ID
  * @method void setUserStoreId(string $UserStoreId) 设置用户目录ID
- * @method string getPropertyCode() 获取查询的属性（支持phoneNumber，email）
- * @method void setPropertyCode(string $PropertyCode) 设置查询的属性（支持phoneNumber，email）
+ * @method string getPropertyCode() 获取查询的属性
+
+<li> **phoneNumber** </li>	  手机号码
+<li> **email** </li>  邮箱
+ * @method void setPropertyCode(string $PropertyCode) 设置查询的属性
+
+<li> **phoneNumber** </li>	  手机号码
+<li> **email** </li>  邮箱
  * @method string getPropertyValue() 获取属性值
  * @method void setPropertyValue(string $PropertyValue) 设置属性值
  */
@@ -35,7 +41,10 @@ class ListUserByPropertyRequest extends AbstractModel
     public $UserStoreId;
 
     /**
-     * @var string 查询的属性（支持phoneNumber，email）
+     * @var string 查询的属性
+
+<li> **phoneNumber** </li>	  手机号码
+<li> **email** </li>  邮箱
      */
     public $PropertyCode;
 
@@ -46,7 +55,10 @@ class ListUserByPropertyRequest extends AbstractModel
 
     /**
      * @param string $UserStoreId 用户目录ID
-     * @param string $PropertyCode 查询的属性（支持phoneNumber，email）
+     * @param string $PropertyCode 查询的属性
+
+<li> **phoneNumber** </li>	  手机号码
+<li> **email** </li>  邮箱
      * @param string $PropertyValue 属性值
      */
     function __construct()

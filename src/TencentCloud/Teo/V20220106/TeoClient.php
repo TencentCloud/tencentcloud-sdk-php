@@ -74,7 +74,9 @@ use TencentCloud\Teo\V20220106\Models as Models;
  * @method Models\DescribeSecurityPortraitRulesResponse DescribeSecurityPortraitRules(Models\DescribeSecurityPortraitRulesRequest $req) 查询Bot用户画像规则
  * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) 四层时序流量数据查询
  * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) 查询七层数据分析类时序流量数据
+ * @method Models\DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(Models\DescribeTimingL7CacheDataRequest $req) 七层查询缓存分析时序类流量数据
  * @method Models\DescribeTopL7AnalysisDataResponse DescribeTopL7AnalysisData(Models\DescribeTopL7AnalysisDataRequest $req) 查询top类流量数据
+ * @method Models\DescribeTopL7CacheDataResponse DescribeTopL7CacheData(Models\DescribeTopL7CacheDataRequest $req) 七层查询缓存分析top类流量数据
  * @method Models\DescribeWebManagedRulesAttackEventsResponse DescribeWebManagedRulesAttackEvents(Models\DescribeWebManagedRulesAttackEventsRequest $req) 查询Web托管攻击事件
  * @method Models\DescribeWebManagedRulesDataResponse DescribeWebManagedRulesData(Models\DescribeWebManagedRulesDataRequest $req) 查询Web托管规则数据
  * @method Models\DescribeWebManagedRulesLogResponse DescribeWebManagedRulesLog(Models\DescribeWebManagedRulesLogRequest $req) 查询Web托管日志

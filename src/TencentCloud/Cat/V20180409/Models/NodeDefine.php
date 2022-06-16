@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 <li> 2 = 港澳台 </li>
 <li> 3 = 国外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCodeType() 获取节点类型
+ * @method string getCodeType() 获取节点类型  如果为base 则为可用性拨测点，为空则为高级拨测点
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCodeType(string $CodeType) 设置节点类型
+ * @method void setCodeType(string $CodeType) 设置节点类型  如果为base 则为可用性拨测点，为空则为高级拨测点
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNodeDefineStatus() 获取节点状态：1-运行,2-下线
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,7 +118,7 @@ class NodeDefine extends AbstractModel
     public $Location;
 
     /**
-     * @var string 节点类型
+     * @var string 节点类型  如果为base 则为可用性拨测点，为空则为高级拨测点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeType;
@@ -148,7 +148,7 @@ class NodeDefine extends AbstractModel
 <li> 2 = 港澳台 </li>
 <li> 3 = 国外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CodeType 节点类型
+     * @param string $CodeType 节点类型  如果为base 则为可用性拨测点，为空则为高级拨测点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NodeDefineStatus 节点状态：1-运行,2-下线
 注意：此字段可能返回 null，表示取不到有效值。

@@ -328,7 +328,12 @@ use TencentCloud\Vod\V20180717\Models as Models;
 2. URL 的域名必须已在云点播中注册。
 3. 单次请求最多指定20个 URL。
 4. 默认预热配额为每天10000个 URL。
+ * @method Models\RefreshUrlCacheResponse RefreshUrlCache(Models\RefreshUrlCacheRequest $req) 1. 刷新指定的 URL 列表。
+2. URL 的域名必须已在云点播中注册。
+3. 单次请求最多指定20个 URL。
+4. 默认刷新配额为每天100000个 URL。
  * @method Models\ResetProcedureTemplateResponse ResetProcedureTemplate(Models\ResetProcedureTemplateRequest $req) 重新设置用户自定义任务流模板的内容。  
+ * @method Models\RestoreMediaResponse RestoreMedia(Models\RestoreMediaRequest $req) 当媒体文件的存储类型是归档存储或深度归档存储时，是不可访问的。如需访问，则需要调用本接口进行解冻，解冻后可访问的媒体文件是临时的，在有效期过后，则不可访问。
  * @method Models\ReviewImageResponse ReviewImage(Models\ReviewImageRequest $req) 对点播中的图片文件发起智能识别（令人反感的信息、不安全的信息、不适宜的信息）任务。
 
 ><li>图片文件大小支持：文件 < 5M；</li>

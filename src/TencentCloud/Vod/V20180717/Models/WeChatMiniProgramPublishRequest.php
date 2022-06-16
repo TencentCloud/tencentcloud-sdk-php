@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() 获取媒体文件 ID。
  * @method void setFileId(string $FileId) 设置媒体文件 ID。
- * @method integer getSourceDefinition() 获取发布视频所对应的转码模板 ID，为0代表原始视频。
- * @method void setSourceDefinition(integer $SourceDefinition) 设置发布视频所对应的转码模板 ID，为0代表原始视频。
  * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method integer getSourceDefinition() 获取发布视频所对应的转码模板 ID，为0代表原始视频。
+ * @method void setSourceDefinition(integer $SourceDefinition) 设置发布视频所对应的转码模板 ID，为0代表原始视频。
  */
 class WeChatMiniProgramPublishRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class WeChatMiniProgramPublishRequest extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer 发布视频所对应的转码模板 ID，为0代表原始视频。
-     */
-    public $SourceDefinition;
-
-    /**
      * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     public $SubAppId;
 
     /**
+     * @var integer 发布视频所对应的转码模板 ID，为0代表原始视频。
+     */
+    public $SourceDefinition;
+
+    /**
      * @param string $FileId 媒体文件 ID。
-     * @param integer $SourceDefinition 发布视频所对应的转码模板 ID，为0代表原始视频。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param integer $SourceDefinition 发布视频所对应的转码模板 ID，为0代表原始视频。
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class WeChatMiniProgramPublishRequest extends AbstractModel
             $this->FileId = $param["FileId"];
         }
 
-        if (array_key_exists("SourceDefinition",$param) and $param["SourceDefinition"] !== null) {
-            $this->SourceDefinition = $param["SourceDefinition"];
-        }
-
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("SourceDefinition",$param) and $param["SourceDefinition"] !== null) {
+            $this->SourceDefinition = $param["SourceDefinition"];
         }
     }
 }

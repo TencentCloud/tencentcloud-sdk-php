@@ -26,8 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrimaryUserId(string $PrimaryUserId) 设置主用户ID
  * @method string getSecondaryUserId() 获取从用户ID
  * @method void setSecondaryUserId(string $SecondaryUserId) 设置从用户ID
- * @method string getUserLinkedOnAttribute() 获取融合属性(PHONENUMBER,EMAIL)
- * @method void setUserLinkedOnAttribute(string $UserLinkedOnAttribute) 设置融合属性(PHONENUMBER,EMAIL)
+ * @method string getUserLinkedOnAttribute() 获取融合属性
+
+<li> **PHONENUMBER** </li>	  手机号码
+<li> **EMAIL** </li>  邮箱
+ * @method void setUserLinkedOnAttribute(string $UserLinkedOnAttribute) 设置融合属性
+
+<li> **PHONENUMBER** </li>	  手机号码
+<li> **EMAIL** </li>  邮箱
  */
 class LinkAccountRequest extends AbstractModel
 {
@@ -47,7 +53,10 @@ class LinkAccountRequest extends AbstractModel
     public $SecondaryUserId;
 
     /**
-     * @var string 融合属性(PHONENUMBER,EMAIL)
+     * @var string 融合属性
+
+<li> **PHONENUMBER** </li>	  手机号码
+<li> **EMAIL** </li>  邮箱
      */
     public $UserLinkedOnAttribute;
 
@@ -55,7 +64,10 @@ class LinkAccountRequest extends AbstractModel
      * @param string $UserStoreId 用户目录ID
      * @param string $PrimaryUserId 主用户ID
      * @param string $SecondaryUserId 从用户ID
-     * @param string $UserLinkedOnAttribute 融合属性(PHONENUMBER,EMAIL)
+     * @param string $UserLinkedOnAttribute 融合属性
+
+<li> **PHONENUMBER** </li>	  手机号码
+<li> **EMAIL** </li>  邮箱
      */
     function __construct()
     {

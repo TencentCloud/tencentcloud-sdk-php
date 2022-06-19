@@ -30,8 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInterval(string $Interval) 设置时间间隔，选填{min, 5min, hour, day, week}
  * @method array getZoneIds() 获取站点id列表
  * @method void setZoneIds(array $ZoneIds) 设置站点id列表
- * @method array getFilters() 获取筛选条件
- * @method void setFilters(array $Filters) 设置筛选条件
+ * @method array getFilters() 获取筛选条件，筛选EO/源站响应如下：
+EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
+源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
+ * @method void setFilters(array $Filters) 设置筛选条件，筛选EO/源站响应如下：
+EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
+源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
  */
 class DescribeTimingL7CacheDataRequest extends AbstractModel
 {
@@ -61,7 +65,9 @@ class DescribeTimingL7CacheDataRequest extends AbstractModel
     public $ZoneIds;
 
     /**
-     * @var array 筛选条件
+     * @var array 筛选条件，筛选EO/源站响应如下：
+EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
+源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
      */
     public $Filters;
 
@@ -71,7 +77,9 @@ class DescribeTimingL7CacheDataRequest extends AbstractModel
      * @param array $MetricNames 时序类访问流量指标列表
      * @param string $Interval 时间间隔，选填{min, 5min, hour, day, week}
      * @param array $ZoneIds 站点id列表
-     * @param array $Filters 筛选条件
+     * @param array $Filters 筛选条件，筛选EO/源站响应如下：
+EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
+源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
      */
     function __construct()
     {

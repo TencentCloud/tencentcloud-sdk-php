@@ -60,9 +60,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置说明
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getHostVersion() 获取版本信息 0=普通版本 1=专业版 2=旗舰版
+ * @method integer getHostVersion() 获取版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHostVersion(integer $HostVersion) 设置版本信息 0=普通版本 1=专业版 2=旗舰版
+ * @method void setHostVersion(integer $HostVersion) 设置版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsSupportAutoFix() 获取是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
 注意：此字段可能返回 null，表示取不到有效值。
@@ -71,6 +71,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFixStatusMsg() 获取失败原因
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixStatusMsg(string $FixStatusMsg) 设置失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFirstDiscoveryTime() 获取首次发现时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFirstDiscoveryTime(string $FirstDiscoveryTime) 设置首次发现时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceState() 获取实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceState(string $InstanceState) 设置实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulEffectHostList extends AbstractModel
@@ -136,7 +144,7 @@ class VulEffectHostList extends AbstractModel
     public $Description;
 
     /**
-     * @var integer 版本信息 0=普通版本 1=专业版 2=旗舰版
+     * @var integer 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostVersion;
@@ -152,6 +160,18 @@ class VulEffectHostList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixStatusMsg;
+
+    /**
+     * @var string 首次发现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FirstDiscoveryTime;
+
+    /**
+     * @var string 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceState;
 
     /**
      * @param integer $EventId 事件id
@@ -174,11 +194,15 @@ class VulEffectHostList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 说明
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $HostVersion 版本信息 0=普通版本 1=专业版 2=旗舰版
+     * @param integer $HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSupportAutoFix 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FixStatusMsg 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FirstDiscoveryTime 首次发现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceState 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +268,14 @@ class VulEffectHostList extends AbstractModel
 
         if (array_key_exists("FixStatusMsg",$param) and $param["FixStatusMsg"] !== null) {
             $this->FixStatusMsg = $param["FixStatusMsg"];
+        }
+
+        if (array_key_exists("FirstDiscoveryTime",$param) and $param["FirstDiscoveryTime"] !== null) {
+            $this->FirstDiscoveryTime = $param["FirstDiscoveryTime"];
+        }
+
+        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
+            $this->InstanceState = $param["InstanceState"];
         }
     }
 }

@@ -40,8 +40,8 @@ span.kind:
  * @method void setMetrics(array $Metrics) 设置需要查询的指标，不可自定义输入。支持：service_request_count（总请求）、service_duration（平均响应时间）的指标数据。
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getViewName() 获取视图名称
- * @method void setViewName(string $ViewName) 设置视图名称
+ * @method string getViewName() 获取视图名称，不可自定义输入。支持：service_metric
+ * @method void setViewName(string $ViewName) 设置视图名称，不可自定义输入。支持：service_metric
  * @method array getGroupBy() 获取聚合维度，支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
  * @method void setGroupBy(array $GroupBy) 设置聚合维度，支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
  * @method integer getStartTime() 获取起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
@@ -76,7 +76,7 @@ span.kind:
     public $InstanceId;
 
     /**
-     * @var string 视图名称
+     * @var string 视图名称，不可自定义输入。支持：service_metric
      */
     public $ViewName;
 
@@ -111,7 +111,7 @@ span.kind:
 默认为服务端视角进行查询。
      * @param array $Metrics 需要查询的指标，不可自定义输入。支持：service_request_count（总请求）、service_duration（平均响应时间）的指标数据。
      * @param string $InstanceId 实例ID
-     * @param string $ViewName 视图名称
+     * @param string $ViewName 视图名称，不可自定义输入。支持：service_metric
      * @param array $GroupBy 聚合维度，支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
      * @param integer $StartTime 起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
      * @param integer $EndTime 结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。

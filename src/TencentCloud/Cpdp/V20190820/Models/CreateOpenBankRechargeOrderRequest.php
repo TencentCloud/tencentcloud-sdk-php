@@ -54,6 +54,14 @@ __ALIPAY__: 支付宝
  * @method void setNotifyUrl(string $NotifyUrl) 设置通知地址，如www.test.com。
  * @method string getRemark() 获取备注信息。
  * @method void setRemark(string $Remark) 设置备注信息。
+ * @method string getEnvironment() 获取环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+ * @method void setEnvironment(string $Environment) 设置环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
  */
 class CreateOpenBankRechargeOrderRequest extends AbstractModel
 {
@@ -119,6 +127,14 @@ __ALIPAY__: 支付宝
     public $Remark;
 
     /**
+     * @var string 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public $Environment;
+
+    /**
      * @param string $ChannelMerchantId 云企付渠道商户号。外部接入平台入驻云企付平台后下发。
      * @param string $OutOrderId 外部订单号,只能是数字、大小写字母，且在同一个接入平台下唯一，限定长度40位。
      * @param integer $TotalAmount 付款金额，单位分。
@@ -136,6 +152,10 @@ __ALIPAY__: 支付宝
      * @param string $ChannelSubMerchantId 渠道子商户号
      * @param string $NotifyUrl 通知地址，如www.test.com。
      * @param string $Remark 备注信息。
+     * @param string $Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
      */
     function __construct()
     {
@@ -193,6 +213,10 @@ __ALIPAY__: 支付宝
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

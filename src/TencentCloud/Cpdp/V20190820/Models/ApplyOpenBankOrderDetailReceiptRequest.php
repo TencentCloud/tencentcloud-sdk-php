@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPaymentMethod(string $PaymentMethod) 设置支付方式，目前只支持SAFT_ISV
  * @method string getChannelOrderId() 获取云企付平台订单号
  * @method void setChannelOrderId(string $ChannelOrderId) 设置云企付平台订单号
+ * @method string getEnvironment() 获取环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+ * @method void setEnvironment(string $Environment) 设置环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
  */
 class ApplyOpenBankOrderDetailReceiptRequest extends AbstractModel
 {
@@ -66,12 +74,24 @@ class ApplyOpenBankOrderDetailReceiptRequest extends AbstractModel
     public $ChannelOrderId;
 
     /**
+     * @var string 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public $Environment;
+
+    /**
      * @param string $OutApplyId 外部回单申请编号
      * @param string $ChannelMerchantId 渠道商户ID
      * @param string $ChannelSubMerchantId 渠道子商户ID
      * @param string $ChannelName 渠道名称，目前只支持ALIPAY
      * @param string $PaymentMethod 支付方式，目前只支持SAFT_ISV
      * @param string $ChannelOrderId 云企付平台订单号
+     * @param string $Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
      */
     function __construct()
     {
@@ -108,6 +128,10 @@ class ApplyOpenBankOrderDetailReceiptRequest extends AbstractModel
 
         if (array_key_exists("ChannelOrderId",$param) and $param["ChannelOrderId"] !== null) {
             $this->ChannelOrderId = $param["ChannelOrderId"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

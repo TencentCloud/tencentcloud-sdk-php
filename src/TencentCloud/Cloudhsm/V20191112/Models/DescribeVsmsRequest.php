@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagFilters(array $TagFilters) 设置标签过滤条件
  * @method string getManufacturer() 获取设备所属的厂商名称，根据厂商来进行筛选
  * @method void setManufacturer(string $Manufacturer) 设置设备所属的厂商名称，根据厂商来进行筛选
+ * @method string getHsmType() 获取Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+ * @method void setHsmType(string $HsmType) 设置Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
  */
 class DescribeVsmsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeVsmsRequest extends AbstractModel
     public $Manufacturer;
 
     /**
+     * @var string Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+     */
+    public $HsmType;
+
+    /**
      * @param integer $Offset 偏移
      * @param integer $Limit 最大数量
      * @param string $SearchWord 查询关键字
      * @param array $TagFilters 标签过滤条件
      * @param string $Manufacturer 设备所属的厂商名称，根据厂商来进行筛选
+     * @param string $HsmType Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class DescribeVsmsRequest extends AbstractModel
 
         if (array_key_exists("Manufacturer",$param) and $param["Manufacturer"] !== null) {
             $this->Manufacturer = $param["Manufacturer"];
+        }
+
+        if (array_key_exists("HsmType",$param) and $param["HsmType"] !== null) {
+            $this->HsmType = $param["HsmType"];
         }
     }
 }

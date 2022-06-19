@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudhsm\V20191112\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSupportedHsm请求参数结构体
+ * DescribeApplicationsStatus请求参数结构体
  *
- * @method string getHsmType() 获取Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
- * @method void setHsmType(string $HsmType) 设置Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+ * @method integer getSourceChannel() 获取来源渠道
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
+ * @method string getEnvironmentId() 获取环境ID
+ * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
  */
-class DescribeSupportedHsmRequest extends AbstractModel
+class DescribeApplicationsStatusRequest extends AbstractModel
 {
     /**
-     * @var string Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+     * @var integer 来源渠道
      */
-    public $HsmType;
+    public $SourceChannel;
 
     /**
-     * @param string $HsmType Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+     * @var string 环境ID
+     */
+    public $EnvironmentId;
+
+    /**
+     * @param integer $SourceChannel 来源渠道
+     * @param string $EnvironmentId 环境ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeSupportedHsmRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HsmType",$param) and $param["HsmType"] !== null) {
-            $this->HsmType = $param["HsmType"];
+        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
+            $this->SourceChannel = $param["SourceChannel"];
+        }
+
+        if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
+            $this->EnvironmentId = $param["EnvironmentId"];
         }
     }
 }

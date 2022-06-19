@@ -140,6 +140,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsIgnore() 获取是否已忽略到期通知
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsIgnore(boolean $IsIgnore) 设置是否已忽略到期通知
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -324,6 +328,12 @@ class Certificates extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean 是否已忽略到期通知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsIgnore;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -383,6 +393,8 @@ class Certificates extends AbstractModel
      * @param boolean $Deployable 是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsIgnore 是否已忽略到期通知
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -523,6 +535,10 @@ class Certificates extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("IsIgnore",$param) and $param["IsIgnore"] !== null) {
+            $this->IsIgnore = $param["IsIgnore"];
         }
     }
 }

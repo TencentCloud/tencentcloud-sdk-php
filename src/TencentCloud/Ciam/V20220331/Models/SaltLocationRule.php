@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudhsm\V20191112\Models;
+namespace TencentCloud\Ciam\V20220331\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSupportedHsm请求参数结构体
+ * 盐位规则
  *
- * @method string getHsmType() 获取Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
- * @method void setHsmType(string $HsmType) 设置Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+ * @method string getRegex() 获取表达式
+ * @method void setRegex(string $Regex) 设置表达式
  */
-class DescribeSupportedHsmRequest extends AbstractModel
+class SaltLocationRule extends AbstractModel
 {
     /**
-     * @var string Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+     * @var string 表达式
      */
-    public $HsmType;
+    public $Regex;
 
     /**
-     * @param string $HsmType Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+     * @param string $Regex 表达式
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeSupportedHsmRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HsmType",$param) and $param["HsmType"] !== null) {
-            $this->HsmType = $param["HsmType"];
+        if (array_key_exists("Regex",$param) and $param["Regex"] !== null) {
+            $this->Regex = $param["Regex"];
         }
     }
 }

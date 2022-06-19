@@ -254,6 +254,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsPrivateDomain(string $EsPrivateDomain) 设置https集群内网域名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEsConfigSets() 获取集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsConfigSets(array $EsConfigSets) 设置集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -671,6 +675,12 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $EsPrivateDomain;
 
     /**
+     * @var array 集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsConfigSets;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -787,6 +797,8 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param string $EsPrivateUrl https集群内网url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EsPrivateDomain https集群内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $EsConfigSets 集群的配置组信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1118,6 +1130,15 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("EsPrivateDomain",$param) and $param["EsPrivateDomain"] !== null) {
             $this->EsPrivateDomain = $param["EsPrivateDomain"];
+        }
+
+        if (array_key_exists("EsConfigSets",$param) and $param["EsConfigSets"] !== null) {
+            $this->EsConfigSets = [];
+            foreach ($param["EsConfigSets"] as $key => $value){
+                $obj = new EsConfigSetInfo();
+                $obj->deserialize($value);
+                array_push($this->EsConfigSets, $obj);
+            }
         }
     }
 }

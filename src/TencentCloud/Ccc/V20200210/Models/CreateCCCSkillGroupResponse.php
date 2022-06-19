@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudhsm\V20191112\Models;
+namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSupportedHsm返回参数结构体
+ * CreateCCCSkillGroup返回参数结构体
  *
- * @method array getDeviceTypes() 获取当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceTypes(array $DeviceTypes) 设置当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSkillGroupId() 获取技能组ID
+ * @method void setSkillGroupId(integer $SkillGroupId) 设置技能组ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSupportedHsmResponse extends AbstractModel
+class CreateCCCSkillGroupResponse extends AbstractModel
 {
     /**
-     * @var array 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 技能组ID
      */
-    public $DeviceTypes;
+    public $SkillGroupId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class DescribeSupportedHsmResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DeviceTypes 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SkillGroupId 技能组ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,13 +54,8 @@ class DescribeSupportedHsmResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceTypes",$param) and $param["DeviceTypes"] !== null) {
-            $this->DeviceTypes = [];
-            foreach ($param["DeviceTypes"] as $key => $value){
-                $obj = new DeviceInfo();
-                $obj->deserialize($value);
-                array_push($this->DeviceTypes, $obj);
-            }
+        if (array_key_exists("SkillGroupId",$param) and $param["SkillGroupId"] !== null) {
+            $this->SkillGroupId = $param["SkillGroupId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

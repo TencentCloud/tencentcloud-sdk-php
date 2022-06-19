@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudhsm\V20191112\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSupportedHsm返回参数结构体
+ * DescribeApplicationsStatus返回参数结构体
  *
- * @method array getDeviceTypes() 获取当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeviceTypes(array $DeviceTypes) 设置当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResult() 获取返回结果
+ * @method void setResult(array $Result) 设置返回结果
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSupportedHsmResponse extends AbstractModel
+class DescribeApplicationsStatusResponse extends AbstractModel
 {
     /**
-     * @var array 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 返回结果
      */
-    public $DeviceTypes;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class DescribeSupportedHsmResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DeviceTypes 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Result 返回结果
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,12 +54,12 @@ class DescribeSupportedHsmResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeviceTypes",$param) and $param["DeviceTypes"] !== null) {
-            $this->DeviceTypes = [];
-            foreach ($param["DeviceTypes"] as $key => $value){
-                $obj = new DeviceInfo();
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = [];
+            foreach ($param["Result"] as $key => $value){
+                $obj = new ServiceVersionBrief();
                 $obj->deserialize($value);
-                array_push($this->DeviceTypes, $obj);
+                array_push($this->Result, $obj);
             }
         }
 

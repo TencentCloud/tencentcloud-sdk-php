@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 盐位
  *
-
+ * @method string getSaltLocationTypeEnum() 获取密码加盐的类型（HEAD，TAIL，OTHER）
+ * @method void setSaltLocationTypeEnum(string $SaltLocationTypeEnum) 设置密码加盐的类型（HEAD，TAIL，OTHER）
+ * @method SaltLocationRule getSaltLocationRule() 获取加盐规则
+ * @method void setSaltLocationRule(SaltLocationRule $SaltLocationRule) 设置加盐规则
  */
 class SaltLocation extends AbstractModel
 {
-
+    /**
+     * @var string 密码加盐的类型（HEAD，TAIL，OTHER）
+     */
+    public $SaltLocationTypeEnum;
 
     /**
+     * @var SaltLocationRule 加盐规则
+     */
+    public $SaltLocationRule;
 
+    /**
+     * @param string $SaltLocationTypeEnum 密码加盐的类型（HEAD，TAIL，OTHER）
+     * @param SaltLocationRule $SaltLocationRule 加盐规则
      */
     function __construct()
     {
@@ -42,6 +54,13 @@ class SaltLocation extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SaltLocationTypeEnum",$param) and $param["SaltLocationTypeEnum"] !== null) {
+            $this->SaltLocationTypeEnum = $param["SaltLocationTypeEnum"];
+        }
 
+        if (array_key_exists("SaltLocationRule",$param) and $param["SaltLocationRule"] !== null) {
+            $this->SaltLocationRule = new SaltLocationRule();
+            $this->SaltLocationRule->deserialize($param["SaltLocationRule"]);
+        }
     }
 }

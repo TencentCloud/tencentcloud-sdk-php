@@ -42,6 +42,14 @@ __SAFT_ISV__: 安心发支付
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付
 __SAFT_ISV__: 安心发支付
+ * @method string getEnvironment() 获取环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+ * @method void setEnvironment(string $Environment) 设置环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
  */
 class CreateOpenBankExternalSubMerchantAccountBookRequest extends AbstractModel
 {
@@ -77,6 +85,14 @@ __SAFT_ISV__: 安心发支付
     public $PaymentMethod;
 
     /**
+     * @var string 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public $Environment;
+
+    /**
      * @param string $OutAccountBookId 外部账本ID
      * @param string $ChannelMerchantId 渠道商户ID
      * @param string $ChannelSubMerchantId 渠道子商户ID
@@ -88,6 +104,10 @@ __ALIPAY__: 支付宝
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付
 __SAFT_ISV__: 安心发支付
+     * @param string $Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
      */
     function __construct()
     {
@@ -120,6 +140,10 @@ __SAFT_ISV__: 安心发支付
 
         if (array_key_exists("PaymentMethod",$param) and $param["PaymentMethod"] !== null) {
             $this->PaymentMethod = $param["PaymentMethod"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

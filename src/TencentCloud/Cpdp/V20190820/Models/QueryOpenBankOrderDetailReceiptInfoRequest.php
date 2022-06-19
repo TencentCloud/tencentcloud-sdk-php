@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutApplyId(string $OutApplyId) 设置外部回单申请ID，与渠道回单申请ID二者选填其一
  * @method string getChannelApplyId() 获取渠道回单申请ID，与外部回单申请ID二者选填其一
  * @method void setChannelApplyId(string $ChannelApplyId) 设置渠道回单申请ID，与外部回单申请ID二者选填其一
+ * @method string getEnvironment() 获取环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+ * @method void setEnvironment(string $Environment) 设置环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
  */
 class QueryOpenBankOrderDetailReceiptInfoRequest extends AbstractModel
 {
@@ -66,12 +74,24 @@ class QueryOpenBankOrderDetailReceiptInfoRequest extends AbstractModel
     public $ChannelApplyId;
 
     /**
+     * @var string 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public $Environment;
+
+    /**
      * @param string $ChannelMerchantId 渠道商户ID
      * @param string $ChannelSubMerchantId 渠道子商户ID
      * @param string $ChannelName 渠道名称，目前只支持ALIPAY
      * @param string $PaymentMethod 支付方式，目前只支持SAFT_ISV
      * @param string $OutApplyId 外部回单申请ID，与渠道回单申请ID二者选填其一
      * @param string $ChannelApplyId 渠道回单申请ID，与外部回单申请ID二者选填其一
+     * @param string $Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
      */
     function __construct()
     {
@@ -108,6 +128,10 @@ class QueryOpenBankOrderDetailReceiptInfoRequest extends AbstractModel
 
         if (array_key_exists("ChannelApplyId",$param) and $param["ChannelApplyId"] !== null) {
             $this->ChannelApplyId = $param["ChannelApplyId"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

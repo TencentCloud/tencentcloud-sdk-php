@@ -44,6 +44,14 @@ __SAFT_ISV__: 安心发支付
  * @method void setOutAccountBookId(string $OutAccountBookId) 设置外部账本号ID。与ChannelAccountBookId二者选填其一。
  * @method string getChannelAccountBookId() 获取渠道账本号ID。与OutAccountBookId二者选填其一。
  * @method void setChannelAccountBookId(string $ChannelAccountBookId) 设置渠道账本号ID。与OutAccountBookId二者选填其一。
+ * @method string getEnvironment() 获取环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+ * @method void setEnvironment(string $Environment) 设置环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
  */
 class QueryOpenBankExternalSubAccountBookBalanceRequest extends AbstractModel
 {
@@ -84,6 +92,14 @@ __SAFT_ISV__: 安心发支付
     public $ChannelAccountBookId;
 
     /**
+     * @var string 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
+     */
+    public $Environment;
+
+    /**
      * @param string $ChannelMerchantId 渠道商户ID
      * @param string $ChannelSubMerchantId 渠道子商户ID
      * @param string $ChannelName 渠道名称。目前只支持支付宝
@@ -96,6 +112,10 @@ __OPENBANK_PAYMENT__: openbank支付
 __SAFT_ISV__: 安心发支付
      * @param string $OutAccountBookId 外部账本号ID。与ChannelAccountBookId二者选填其一。
      * @param string $ChannelAccountBookId 渠道账本号ID。与OutAccountBookId二者选填其一。
+     * @param string $Environment 环境类型。
+__release__:生产环境
+__sandbox__:沙箱环境
+_不填默认为生产环境_
      */
     function __construct()
     {
@@ -132,6 +152,10 @@ __SAFT_ISV__: 安心发支付
 
         if (array_key_exists("ChannelAccountBookId",$param) and $param["ChannelAccountBookId"] !== null) {
             $this->ChannelAccountBookId = $param["ChannelAccountBookId"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

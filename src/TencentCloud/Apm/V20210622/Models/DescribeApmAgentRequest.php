@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkMode(string $NetworkMode) 设置环境
  * @method string getLanguageEnvironment() 获取语言
  * @method void setLanguageEnvironment(string $LanguageEnvironment) 设置语言
+ * @method string getReportMethod() 获取上报方式
+ * @method void setReportMethod(string $ReportMethod) 设置上报方式
  */
 class DescribeApmAgentRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeApmAgentRequest extends AbstractModel
     public $LanguageEnvironment;
 
     /**
+     * @var string 上报方式
+     */
+    public $ReportMethod;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $AgentType 接入方式
      * @param string $NetworkMode 环境
      * @param string $LanguageEnvironment 语言
+     * @param string $ReportMethod 上报方式
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeApmAgentRequest extends AbstractModel
 
         if (array_key_exists("LanguageEnvironment",$param) and $param["LanguageEnvironment"] !== null) {
             $this->LanguageEnvironment = $param["LanguageEnvironment"];
+        }
+
+        if (array_key_exists("ReportMethod",$param) and $param["ReportMethod"] !== null) {
+            $this->ReportMethod = $param["ReportMethod"];
         }
     }
 }

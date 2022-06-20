@@ -82,6 +82,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAffectedVersion(string $AffectedVersion) 设置受影响的版本信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIgnoredAssetNum() 获取忽略的资产数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIgnoredAssetNum(integer $IgnoredAssetNum) 设置忽略的资产数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsIgnored() 获取是否忽略该检测项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsIgnored(boolean $IsIgnored) 设置是否忽略该检测项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRiskAssessment() 获取受影响评估
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskAssessment(string $RiskAssessment) 设置受影响评估
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterCheckItem extends AbstractModel
 {
@@ -181,6 +193,24 @@ class ClusterCheckItem extends AbstractModel
     public $AffectedVersion;
 
     /**
+     * @var integer 忽略的资产数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IgnoredAssetNum;
+
+    /**
+     * @var boolean 是否忽略该检测项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsIgnored;
+
+    /**
+     * @var string 受影响评估
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskAssessment;
+
+    /**
      * @param integer $CheckItemId 唯一的检测项的ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 风险项的名称
@@ -211,6 +241,12 @@ class ClusterCheckItem extends AbstractModel
      * @param string $AffectedType 影响类型，为Node或者Workload
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AffectedVersion 受影响的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IgnoredAssetNum 忽略的资产数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsIgnored 是否忽略该检测项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RiskAssessment 受影响评估
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -288,6 +324,18 @@ class ClusterCheckItem extends AbstractModel
 
         if (array_key_exists("AffectedVersion",$param) and $param["AffectedVersion"] !== null) {
             $this->AffectedVersion = $param["AffectedVersion"];
+        }
+
+        if (array_key_exists("IgnoredAssetNum",$param) and $param["IgnoredAssetNum"] !== null) {
+            $this->IgnoredAssetNum = $param["IgnoredAssetNum"];
+        }
+
+        if (array_key_exists("IsIgnored",$param) and $param["IsIgnored"] !== null) {
+            $this->IsIgnored = $param["IsIgnored"];
+        }
+
+        if (array_key_exists("RiskAssessment",$param) and $param["RiskAssessment"] !== null) {
+            $this->RiskAssessment = $param["RiskAssessment"];
         }
     }
 }

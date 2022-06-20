@@ -14,48 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dlc\V20210125\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSparkAppTasks请求参数结构体
+ * DescribeDeliveryConfigs请求参数结构体
  *
- * @method string getJobId() 获取spark作业Id
- * @method void setJobId(string $JobId) 设置spark作业Id
- * @method integer getOffset() 获取分页查询偏移量
- * @method void setOffset(integer $Offset) 设置分页查询偏移量
- * @method integer getLimit() 获取分页查询Limit
- * @method void setLimit(integer $Limit) 设置分页查询Limit
- * @method string getTaskId() 获取执行实例id
- * @method void setTaskId(string $TaskId) 设置执行实例id
+ * @method string getSearchWord() 获取关键字
+ * @method void setSearchWord(string $SearchWord) 设置关键字
+ * @method integer getOffset() 获取偏移
+ * @method void setOffset(integer $Offset) 设置偏移
+ * @method integer getLimit() 获取搜索条数
+ * @method void setLimit(integer $Limit) 设置搜索条数
  */
-class DescribeSparkAppTasksRequest extends AbstractModel
+class DescribeDeliveryConfigsRequest extends AbstractModel
 {
     /**
-     * @var string spark作业Id
+     * @var string 关键字
      */
-    public $JobId;
+    public $SearchWord;
 
     /**
-     * @var integer 分页查询偏移量
+     * @var integer 偏移
      */
     public $Offset;
 
     /**
-     * @var integer 分页查询Limit
+     * @var integer 搜索条数
      */
     public $Limit;
 
     /**
-     * @var string 执行实例id
-     */
-    public $TaskId;
-
-    /**
-     * @param string $JobId spark作业Id
-     * @param integer $Offset 分页查询偏移量
-     * @param integer $Limit 分页查询Limit
-     * @param string $TaskId 执行实例id
+     * @param string $SearchWord 关键字
+     * @param integer $Offset 偏移
+     * @param integer $Limit 搜索条数
      */
     function __construct()
     {
@@ -70,8 +62,8 @@ class DescribeSparkAppTasksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("SearchWord",$param) and $param["SearchWord"] !== null) {
+            $this->SearchWord = $param["SearchWord"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
@@ -80,10 +72,6 @@ class DescribeSparkAppTasksRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
         }
     }
 }

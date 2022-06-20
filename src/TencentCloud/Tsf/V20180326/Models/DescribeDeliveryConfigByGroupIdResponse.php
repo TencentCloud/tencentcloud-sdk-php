@@ -14,36 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Trtc\V20190722\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MeasureTrtcMcuExternal返回参数结构体
+ * DescribeDeliveryConfigByGroupId返回参数结构体
  *
- * @method array getUsages() 获取应用的用量信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUsages(array $Usages) 设置应用的用量信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取用户计费类型
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置用户计费类型
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method SimpleKafkaDeliveryConfig getResult() 获取投递kafak配置项
+ * @method void setResult(SimpleKafkaDeliveryConfig $Result) 设置投递kafak配置项
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class MeasureTrtcMcuExternalResponse extends AbstractModel
+class DescribeDeliveryConfigByGroupIdResponse extends AbstractModel
 {
     /**
-     * @var array 应用的用量信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var SimpleKafkaDeliveryConfig 投递kafak配置项
      */
-    public $Usages;
-
-    /**
-     * @var string 用户计费类型
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Type;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +38,7 @@ class MeasureTrtcMcuExternalResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Usages 应用的用量信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 用户计费类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param SimpleKafkaDeliveryConfig $Result 投递kafak配置项
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,17 +54,9 @@ class MeasureTrtcMcuExternalResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
-            $this->Usages = [];
-            foreach ($param["Usages"] as $key => $value){
-                $obj = new OneSdkAppIdTranscodeTimeUsagesNewInfo();
-                $obj->deserialize($value);
-                array_push($this->Usages, $obj);
-            }
-        }
-
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new SimpleKafkaDeliveryConfig();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

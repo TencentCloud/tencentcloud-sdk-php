@@ -62,9 +62,13 @@ Bcos分页查询当前群组的交易信息列表
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 新增交易
  * @method Models\InvokeBcosTransResponse InvokeBcosTrans(Models\InvokeBcosTransRequest $req) 执行Bcos交易，支持动态部署的合约
  * @method Models\InvokeChainMakerContractResponse InvokeChainMakerContract(Models\InvokeChainMakerContractRequest $req) 调用长安链合约执行交易
+ * @method Models\InvokeChainMakerDemoContractResponse InvokeChainMakerDemoContract(Models\InvokeChainMakerDemoContractRequest $req) 调用长安链体验网络合约执行交易
  * @method Models\QueryResponse Query(Models\QueryRequest $req) 查询交易
  * @method Models\QueryChainMakerBlockTransactionResponse QueryChainMakerBlockTransaction(Models\QueryChainMakerBlockTransactionRequest $req) 查询长安链指定高度区块的交易
  * @method Models\QueryChainMakerContractResponse QueryChainMakerContract(Models\QueryChainMakerContractRequest $req) 调用长安链合约查询
+ * @method Models\QueryChainMakerDemoBlockTransactionResponse QueryChainMakerDemoBlockTransaction(Models\QueryChainMakerDemoBlockTransactionRequest $req) 查询长安链体验网络指定高度区块的交易
+ * @method Models\QueryChainMakerDemoContractResponse QueryChainMakerDemoContract(Models\QueryChainMakerDemoContractRequest $req) 调用长安链体验网络合约查询
+ * @method Models\QueryChainMakerDemoTransactionResponse QueryChainMakerDemoTransaction(Models\QueryChainMakerDemoTransactionRequest $req) 通过交易ID查询长安链体验网络交易
  * @method Models\QueryChainMakerTransactionResponse QueryChainMakerTransaction(Models\QueryChainMakerTransactionRequest $req) 通过交易ID查询长安链交易
  * @method Models\SendTransactionHandlerResponse SendTransactionHandler(Models\SendTransactionHandlerRequest $req) 版本升级
 

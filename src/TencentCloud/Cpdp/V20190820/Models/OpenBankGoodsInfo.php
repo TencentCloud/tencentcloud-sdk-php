@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云企付-商品信息
  *
- * @method string getGoodsName() 获取商品标题，默认值“商品支付”
- * @method void setGoodsName(string $GoodsName) 设置商品标题，默认值“商品支付”
- * @method string getGoodsDetail() 获取商品详细描述（商品列表）
- * @method void setGoodsDetail(string $GoodsDetail) 设置商品详细描述（商品列表）
- * @method string getGoodsDescription() 获取银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
- * @method void setGoodsDescription(string $GoodsDescription) 设置银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+ * @method string getGoodsName() 获取商品标题。默认值“商品支付”。
+ * @method void setGoodsName(string $GoodsName) 设置商品标题。默认值“商品支付”。
+ * @method string getGoodsDetail() 获取商品详细描述（商品列表）。
+ * @method void setGoodsDetail(string $GoodsDetail) 设置商品详细描述（商品列表）。
+ * @method string getGoodsDescription() 获取银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+ * @method void setGoodsDescription(string $GoodsDescription) 设置银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+ * @method string getGoodsBizType() 获取业务类型。汇付渠道必填，汇付渠道传入固定值100099。
+ * @method void setGoodsBizType(string $GoodsBizType) 设置业务类型。汇付渠道必填，汇付渠道传入固定值100099。
  */
 class OpenBankGoodsInfo extends AbstractModel
 {
     /**
-     * @var string 商品标题，默认值“商品支付”
+     * @var string 商品标题。默认值“商品支付”。
      */
     public $GoodsName;
 
     /**
-     * @var string 商品详细描述（商品列表）
+     * @var string 商品详细描述（商品列表）。
      */
     public $GoodsDetail;
 
     /**
-     * @var string 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+     * @var string 银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
      */
     public $GoodsDescription;
 
     /**
-     * @param string $GoodsName 商品标题，默认值“商品支付”
-     * @param string $GoodsDetail 商品详细描述（商品列表）
-     * @param string $GoodsDescription 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+     * @var string 业务类型。汇付渠道必填，汇付渠道传入固定值100099。
+     */
+    public $GoodsBizType;
+
+    /**
+     * @param string $GoodsName 商品标题。默认值“商品支付”。
+     * @param string $GoodsDetail 商品详细描述（商品列表）。
+     * @param string $GoodsDescription 银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+     * @param string $GoodsBizType 业务类型。汇付渠道必填，汇付渠道传入固定值100099。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class OpenBankGoodsInfo extends AbstractModel
 
         if (array_key_exists("GoodsDescription",$param) and $param["GoodsDescription"] !== null) {
             $this->GoodsDescription = $param["GoodsDescription"];
+        }
+
+        if (array_key_exists("GoodsBizType",$param) and $param["GoodsBizType"] !== null) {
+            $this->GoodsBizType = $param["GoodsBizType"];
         }
     }
 }

@@ -20,42 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云企付-设备信息
  *
- * @method string getPayerClientIp() 获取用户端实际 ip，示例值：14.17.22.32
- * @method void setPayerClientIp(string $PayerClientIp) 设置用户端实际 ip，示例值：14.17.22.32
- * @method string getPayerUa() 获取浏览器 User-Agent
- * @method void setPayerUa(string $PayerUa) 设置浏览器 User-Agent
- * @method string getOrderTime() 获取用户下单时间，若不上送，服务端默认当前时间
- * @method void setOrderTime(string $OrderTime) 设置用户下单时间，若不上送，服务端默认当前时间
- * @method string getDeviceId() 获取终端设备号（门店号或收银设备 ID），示例值：POS1:1
- * @method void setDeviceId(string $DeviceId) 设置终端设备号（门店号或收银设备 ID），示例值：POS1:1
+ * @method string getPayerClientIp() 获取用户端实际 ip。汇付渠道必填。
+ * @method void setPayerClientIp(string $PayerClientIp) 设置用户端实际 ip。汇付渠道必填。
+ * @method string getPayerUa() 获取浏览器 User-Agent。
+ * @method void setPayerUa(string $PayerUa) 设置浏览器 User-Agent。
+ * @method string getOrderTime() 获取用户下单时间。若不上送，服务端默认当前时间。
+ * @method void setOrderTime(string $OrderTime) 设置用户下单时间。若不上送，服务端默认当前时间。
+ * @method string getDeviceId() 获取终端设备号（门店号或收银设备 ID），示例值：POS1:1。
+ * @method void setDeviceId(string $DeviceId) 设置终端设备号（门店号或收银设备 ID），示例值：POS1:1。
+ * @method string getDeviceType() 获取终端设备类型。MOBILE_BROWSER:手机浏览器，MOBILE_APP:手机应用程序，TABLET:平板；WATCH:手表，PC:电脑PC，OTHER:其他。
+汇付渠道必填。
+ * @method void setDeviceType(string $DeviceType) 设置终端设备类型。MOBILE_BROWSER:手机浏览器，MOBILE_APP:手机应用程序，TABLET:平板；WATCH:手表，PC:电脑PC，OTHER:其他。
+汇付渠道必填。
  */
 class OpenBankSceneInfo extends AbstractModel
 {
     /**
-     * @var string 用户端实际 ip，示例值：14.17.22.32
+     * @var string 用户端实际 ip。汇付渠道必填。
      */
     public $PayerClientIp;
 
     /**
-     * @var string 浏览器 User-Agent
+     * @var string 浏览器 User-Agent。
      */
     public $PayerUa;
 
     /**
-     * @var string 用户下单时间，若不上送，服务端默认当前时间
+     * @var string 用户下单时间。若不上送，服务端默认当前时间。
      */
     public $OrderTime;
 
     /**
-     * @var string 终端设备号（门店号或收银设备 ID），示例值：POS1:1
+     * @var string 终端设备号（门店号或收银设备 ID），示例值：POS1:1。
      */
     public $DeviceId;
 
     /**
-     * @param string $PayerClientIp 用户端实际 ip，示例值：14.17.22.32
-     * @param string $PayerUa 浏览器 User-Agent
-     * @param string $OrderTime 用户下单时间，若不上送，服务端默认当前时间
-     * @param string $DeviceId 终端设备号（门店号或收银设备 ID），示例值：POS1:1
+     * @var string 终端设备类型。MOBILE_BROWSER:手机浏览器，MOBILE_APP:手机应用程序，TABLET:平板；WATCH:手表，PC:电脑PC，OTHER:其他。
+汇付渠道必填。
+     */
+    public $DeviceType;
+
+    /**
+     * @param string $PayerClientIp 用户端实际 ip。汇付渠道必填。
+     * @param string $PayerUa 浏览器 User-Agent。
+     * @param string $OrderTime 用户下单时间。若不上送，服务端默认当前时间。
+     * @param string $DeviceId 终端设备号（门店号或收银设备 ID），示例值：POS1:1。
+     * @param string $DeviceType 终端设备类型。MOBILE_BROWSER:手机浏览器，MOBILE_APP:手机应用程序，TABLET:平板；WATCH:手表，PC:电脑PC，OTHER:其他。
+汇付渠道必填。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class OpenBankSceneInfo extends AbstractModel
 
         if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
             $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
         }
     }
 }

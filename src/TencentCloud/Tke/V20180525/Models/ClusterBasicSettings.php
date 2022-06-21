@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述集群的基本配置信息
  *
- * @method string getClusterOs() 获取集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
- * @method void setClusterOs(string $ClusterOs) 设置集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+ * @method string getClusterOs() 获取集群系统，支持的os：https://cloud.tencent.com/document/product/457/68289
+ * @method void setClusterOs(string $ClusterOs) 设置集群系统，支持的os：https://cloud.tencent.com/document/product/457/68289
  * @method string getClusterVersion() 获取集群版本,默认值为1.10.5
  * @method void setClusterVersion(string $ClusterVersion) 设置集群版本,默认值为1.10.5
  * @method string getClusterName() 获取集群名称
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class ClusterBasicSettings extends AbstractModel
 {
     /**
-     * @var string 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+     * @var string 集群系统，支持的os：https://cloud.tencent.com/document/product/457/68289
      */
     public $ClusterOs;
 
@@ -108,7 +108,7 @@ class ClusterBasicSettings extends AbstractModel
     public $AutoUpgradeClusterLevel;
 
     /**
-     * @param string $ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+     * @param string $ClusterOs 集群系统，支持的os：https://cloud.tencent.com/document/product/457/68289
      * @param string $ClusterVersion 集群版本,默认值为1.10.5
      * @param string $ClusterName 集群名称
      * @param string $ClusterDescription 集群描述

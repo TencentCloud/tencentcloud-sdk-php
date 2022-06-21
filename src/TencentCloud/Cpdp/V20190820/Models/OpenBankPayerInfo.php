@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPayerName() 获取付款方名称。当TENPAY上送付款方入驻云企付的商户名称。
  * @method void setPayerName(string $PayerName) 设置付款方名称。当TENPAY上送付款方入驻云企付的商户名称。
  * @method string getBindSerialNo() 获取付款方付款账户标识。
-当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID；当付款方式为ONLINEBANK，上送付款方银行编号BankId。
  * @method void setBindSerialNo(string $BindSerialNo) 设置付款方付款账户标识。
-当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID；当付款方式为ONLINEBANK，上送付款方银行编号BankId。
  * @method string getAccountType() 获取付款账户标识类型
 BANK_ACCOUNT：绑定银行账户
 ACCOUNT_BOOK_ID：电子记账本ID。
@@ -38,6 +38,12 @@ ACCOUNT_BOOK_ID：电子记账本ID。
 BANK_ACCOUNT：绑定银行账户
 ACCOUNT_BOOK_ID：电子记账本ID。
 当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
+ * @method string getBankCardType() 获取付款卡类型。汇付渠道必填。
+DEBIT_CARD：借记卡
+CREDIT_CARD：信用卡
+ * @method void setBankCardType(string $BankCardType) 设置付款卡类型。汇付渠道必填。
+DEBIT_CARD：借记卡
+CREDIT_CARD：信用卡
  */
 class OpenBankPayerInfo extends AbstractModel
 {
@@ -54,7 +60,7 @@ class OpenBankPayerInfo extends AbstractModel
 
     /**
      * @var string 付款方付款账户标识。
-当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID；当付款方式为ONLINEBANK，上送付款方银行编号BankId。
      */
     public $BindSerialNo;
 
@@ -67,15 +73,25 @@ ACCOUNT_BOOK_ID：电子记账本ID。
     public $AccountType;
 
     /**
+     * @var string 付款卡类型。汇付渠道必填。
+DEBIT_CARD：借记卡
+CREDIT_CARD：信用卡
+     */
+    public $BankCardType;
+
+    /**
      * @param string $PayerId 付款方唯一标识。当TENPAY时，必填上送
 付款方入驻云企付商户ID。
      * @param string $PayerName 付款方名称。当TENPAY上送付款方入驻云企付的商户名称。
      * @param string $BindSerialNo 付款方付款账户标识。
-当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
+当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID；当付款方式为ONLINEBANK，上送付款方银行编号BankId。
      * @param string $AccountType 付款账户标识类型
 BANK_ACCOUNT：绑定银行账户
 ACCOUNT_BOOK_ID：电子记账本ID。
 当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
+     * @param string $BankCardType 付款卡类型。汇付渠道必填。
+DEBIT_CARD：借记卡
+CREDIT_CARD：信用卡
      */
     function __construct()
     {
@@ -104,6 +120,10 @@ ACCOUNT_BOOK_ID：电子记账本ID。
 
         if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
             $this->AccountType = $param["AccountType"];
+        }
+
+        if (array_key_exists("BankCardType",$param) and $param["BankCardType"] !== null) {
+            $this->BankCardType = $param["BankCardType"];
         }
     }
 }

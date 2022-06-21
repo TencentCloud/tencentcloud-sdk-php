@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerRuntime(string $ContainerRuntime) 设置节点池纬度运行时类型及版本
  * @method string getRuntimeVersion() 获取运行时版本
  * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
- * @method string getNodePoolOs() 获取节点池os
- * @method void setNodePoolOs(string $NodePoolOs) 设置节点池os
+ * @method string getNodePoolOs() 获取节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
+ * @method void setNodePoolOs(string $NodePoolOs) 设置节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
  * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method array getTags() 获取资源标签
@@ -100,7 +100,7 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $RuntimeVersion;
 
     /**
-     * @var string 节点池os
+     * @var string 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
      */
     public $NodePoolOs;
 
@@ -125,7 +125,7 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param array $Taints Taints互斥
      * @param string $ContainerRuntime 节点池纬度运行时类型及版本
      * @param string $RuntimeVersion 运行时版本
-     * @param string $NodePoolOs 节点池os
+     * @param string $NodePoolOs 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
      * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      * @param array $Tags 资源标签
      */

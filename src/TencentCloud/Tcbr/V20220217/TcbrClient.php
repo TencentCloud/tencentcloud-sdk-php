@@ -29,6 +29,8 @@ use TencentCloud\Tcbr\V20220217\Models as Models;
  * @method Models\DescribeCloudRunServerDetailResponse DescribeCloudRunServerDetail(Models\DescribeCloudRunServerDetailRequest $req) 查询云托管服务详情
  * @method Models\DescribeCloudRunServersResponse DescribeCloudRunServers(Models\DescribeCloudRunServersRequest $req) 查询云托管服务列表接口
  * @method Models\DescribeEnvBaseInfoResponse DescribeEnvBaseInfo(Models\DescribeEnvBaseInfoRequest $req) 查询环境基础信息
+ * @method Models\OperateServerManageResponse OperateServerManage(Models\OperateServerManageRequest $req) 操作发布单
+ * @method Models\ReleaseGrayResponse ReleaseGray(Models\ReleaseGrayRequest $req) 灰度发布
  * @method Models\UpdateCloudRunServerResponse UpdateCloudRunServer(Models\UpdateCloudRunServerRequest $req) 更新云托管服务
  */
 

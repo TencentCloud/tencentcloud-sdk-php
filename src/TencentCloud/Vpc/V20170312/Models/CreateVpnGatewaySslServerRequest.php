@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
  * @method boolean getCompress() 获取是否支持压缩。当前仅支持不支持压缩。默认False
  * @method void setCompress(boolean $Compress) 设置是否支持压缩。当前仅支持不支持压缩。默认False
+ * @method boolean getSsoEnabled() 获取是否开启SSO认证
+ * @method void setSsoEnabled(boolean $SsoEnabled) 设置是否开启SSO认证
+ * @method boolean getAccessPolicyEnabled() 获取是否开启策略访问控制
+ * @method void setAccessPolicyEnabled(boolean $AccessPolicyEnabled) 设置是否开启策略访问控制
+ * @method string getSamlData() 获取SAML-DATA
+ * @method void setSamlData(string $SamlData) 设置SAML-DATA
  */
 class CreateVpnGatewaySslServerRequest extends AbstractModel
 {
@@ -87,6 +93,21 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
     public $Compress;
 
     /**
+     * @var boolean 是否开启SSO认证
+     */
+    public $SsoEnabled;
+
+    /**
+     * @var boolean 是否开启策略访问控制
+     */
+    public $AccessPolicyEnabled;
+
+    /**
+     * @var string SAML-DATA
+     */
+    public $SamlData;
+
+    /**
      * @param string $VpnGatewayId VPN实例ID
      * @param string $SslVpnServerName SSL_VPN_SERVER 实例名
      * @param array $LocalAddress 本端地址网段
@@ -96,6 +117,9 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
      * @param string $IntegrityAlgorithm 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
      * @param string $EncryptAlgorithm 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
      * @param boolean $Compress 是否支持压缩。当前仅支持不支持压缩。默认False
+     * @param boolean $SsoEnabled 是否开启SSO认证
+     * @param boolean $AccessPolicyEnabled 是否开启策略访问控制
+     * @param string $SamlData SAML-DATA
      */
     function __construct()
     {
@@ -144,6 +168,18 @@ class CreateVpnGatewaySslServerRequest extends AbstractModel
 
         if (array_key_exists("Compress",$param) and $param["Compress"] !== null) {
             $this->Compress = $param["Compress"];
+        }
+
+        if (array_key_exists("SsoEnabled",$param) and $param["SsoEnabled"] !== null) {
+            $this->SsoEnabled = $param["SsoEnabled"];
+        }
+
+        if (array_key_exists("AccessPolicyEnabled",$param) and $param["AccessPolicyEnabled"] !== null) {
+            $this->AccessPolicyEnabled = $param["AccessPolicyEnabled"];
+        }
+
+        if (array_key_exists("SamlData",$param) and $param["SamlData"] !== null) {
+            $this->SamlData = $param["SamlData"];
         }
     }
 }

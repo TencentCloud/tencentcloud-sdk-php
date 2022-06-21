@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取推流域名。
  * @method void setDomain(string $Domain) 设置推流域名。
- * @method float getDuration() 获取时移文件时长,单位分钟。
- * @method void setDuration(float $Duration) 设置时移文件时长,单位分钟。
+ * @method float getDuration() 获取时移文件时长，单位分钟。
+ * @method void setDuration(float $Duration) 设置时移文件时长，单位分钟。
  * @method float getStoragePeriod() 获取时移配置天数，单位天。
  * @method void setStoragePeriod(float $StoragePeriod) 设置时移配置天数，单位天。
  * @method string getTime() 获取时间点，格式: yyyy-mm-ddTHH:MM:SSZ。
  * @method void setTime(string $Time) 设置时间点，格式: yyyy-mm-ddTHH:MM:SSZ。
+ * @method float getTotalDuration() 获取时移总时长，单位分钟。
+ * @method void setTotalDuration(float $TotalDuration) 设置时移总时长，单位分钟。
  */
 class TimeShiftBillData extends AbstractModel
 {
@@ -37,7 +39,7 @@ class TimeShiftBillData extends AbstractModel
     public $Domain;
 
     /**
-     * @var float 时移文件时长,单位分钟。
+     * @var float 时移文件时长，单位分钟。
      */
     public $Duration;
 
@@ -52,10 +54,16 @@ class TimeShiftBillData extends AbstractModel
     public $Time;
 
     /**
+     * @var float 时移总时长，单位分钟。
+     */
+    public $TotalDuration;
+
+    /**
      * @param string $Domain 推流域名。
-     * @param float $Duration 时移文件时长,单位分钟。
+     * @param float $Duration 时移文件时长，单位分钟。
      * @param float $StoragePeriod 时移配置天数，单位天。
      * @param string $Time 时间点，格式: yyyy-mm-ddTHH:MM:SSZ。
+     * @param float $TotalDuration 时移总时长，单位分钟。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class TimeShiftBillData extends AbstractModel
 
         if (array_key_exists("Time",$param) and $param["Time"] !== null) {
             $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("TotalDuration",$param) and $param["TotalDuration"] !== null) {
+            $this->TotalDuration = $param["TotalDuration"];
         }
     }
 }

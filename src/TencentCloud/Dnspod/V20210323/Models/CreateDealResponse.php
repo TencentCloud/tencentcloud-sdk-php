@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Dnspod\V20210323\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DownloadVpnGatewaySslClientCert返回参数结构体
+ * CreateDeal返回参数结构体
  *
- * @method string getSslClientConfigsSet() 获取无
- * @method void setSslClientConfigsSet(string $SslClientConfigsSet) 设置无
- * @method array getSslClientConfig() 获取SSL-VPN client配置
- * @method void setSslClientConfig(array $SslClientConfig) 设置SSL-VPN client配置
- * @method integer getAuthenticated() 获取是否鉴权成功 只有传入SamlToken 才生效
- * @method void setAuthenticated(integer $Authenticated) 设置是否鉴权成功 只有传入SamlToken 才生效
+ * @method string getBigDealId() 获取大订单号，一个大订单号下可以有多个子订单，说明是同一次下单
+ * @method void setBigDealId(string $BigDealId) 设置大订单号，一个大订单号下可以有多个子订单，说明是同一次下单
+ * @method array getDealList() 获取子订单列表
+ * @method void setDealList(array $DealList) 设置子订单列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
+class CreateDealResponse extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 大订单号，一个大订单号下可以有多个子订单，说明是同一次下单
      */
-    public $SslClientConfigsSet;
+    public $BigDealId;
 
     /**
-     * @var array SSL-VPN client配置
+     * @var array 子订单列表
      */
-    public $SslClientConfig;
-
-    /**
-     * @var integer 是否鉴权成功 只有传入SamlToken 才生效
-     */
-    public $Authenticated;
+    public $DealList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SslClientConfigsSet 无
-     * @param array $SslClientConfig SSL-VPN client配置
-     * @param integer $Authenticated 是否鉴权成功 只有传入SamlToken 才生效
+     * @param string $BigDealId 大订单号，一个大订单号下可以有多个子订单，说明是同一次下单
+     * @param array $DealList 子订单列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +62,17 @@ class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SslClientConfigsSet",$param) and $param["SslClientConfigsSet"] !== null) {
-            $this->SslClientConfigsSet = $param["SslClientConfigsSet"];
+        if (array_key_exists("BigDealId",$param) and $param["BigDealId"] !== null) {
+            $this->BigDealId = $param["BigDealId"];
         }
 
-        if (array_key_exists("SslClientConfig",$param) and $param["SslClientConfig"] !== null) {
-            $this->SslClientConfig = [];
-            foreach ($param["SslClientConfig"] as $key => $value){
-                $obj = new SslClientConfig();
+        if (array_key_exists("DealList",$param) and $param["DealList"] !== null) {
+            $this->DealList = [];
+            foreach ($param["DealList"] as $key => $value){
+                $obj = new Deals();
                 $obj->deserialize($value);
-                array_push($this->SslClientConfig, $obj);
+                array_push($this->DealList, $obj);
             }
-        }
-
-        if (array_key_exists("Authenticated",$param) and $param["Authenticated"] !== null) {
-            $this->Authenticated = $param["Authenticated"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

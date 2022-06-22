@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchMedia请求参数结构体
  *
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method array getFileIds() 获取文件 ID 集合，匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
 <li>单个 ID 长度限制：40个字符。</li>
@@ -49,10 +51,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClassIds(array $ClassIds) 设置分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
 <li>数组长度限制：10。</li>
  * @method array getTags() 获取标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
  * @method void setTags(array $Tags) 设置标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
  * @method array getCategories() 获取文件类型。匹配集合中的任意元素：
 <li>Video: 视频文件</li>
@@ -124,8 +126,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageRegions(array $StorageRegions) 设置媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
 <li>单个存储地区长度限制：20个字符。</li>
 <li>数组长度限制：20。</li>
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method array getStorageClasses() 获取存储类型数组。可选值有：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
@@ -176,6 +176,11 @@ use TencentCloud\Common\AbstractModel;
 class SearchMediaRequest extends AbstractModel
 {
     /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
+    /**
      * @var array 文件 ID 集合，匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
 <li>单个 ID 长度限制：40个字符。</li>
@@ -211,7 +216,7 @@ class SearchMediaRequest extends AbstractModel
 
     /**
      * @var array 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public $Tags;
@@ -296,11 +301,6 @@ class SearchMediaRequest extends AbstractModel
     public $StorageRegions;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @var array 存储类型数组。可选值有：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
@@ -352,6 +352,7 @@ class SearchMediaRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param array $FileIds 文件 ID 集合，匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
 <li>单个 ID 长度限制：40个字符。</li>
@@ -367,7 +368,7 @@ class SearchMediaRequest extends AbstractModel
      * @param array $ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
 <li>数组长度限制：10。</li>
      * @param array $Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
      * @param array $Categories 文件类型。匹配集合中的任意元素：
 <li>Video: 视频文件</li>
@@ -404,7 +405,6 @@ class SearchMediaRequest extends AbstractModel
      * @param array $StorageRegions 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
 <li>单个存储地区长度限制：20个字符。</li>
 <li>数组长度限制：20。</li>
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param array $StorageClasses 存储类型数组。可选值有：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
@@ -442,6 +442,10 @@ class SearchMediaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("FileIds",$param) and $param["FileIds"] !== null) {
             $this->FileIds = $param["FileIds"];
         }
@@ -511,10 +515,6 @@ class SearchMediaRequest extends AbstractModel
 
         if (array_key_exists("StorageRegions",$param) and $param["StorageRegions"] !== null) {
             $this->StorageRegions = $param["StorageRegions"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("StorageClasses",$param) and $param["StorageClasses"] !== null) {

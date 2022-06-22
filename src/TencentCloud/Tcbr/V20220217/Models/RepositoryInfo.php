@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSource(string $Source) 设置git source
  * @method string getRepo() 获取仓库名
  * @method void setRepo(string $Repo) 设置仓库名
- * @method string getBranch() 获取分之名
- * @method void setBranch(string $Branch) 设置分之名
+ * @method string getBranch() 获取分支名
+ * @method void setBranch(string $Branch) 设置分支名
  */
 class RepositoryInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class RepositoryInfo extends AbstractModel
     public $Repo;
 
     /**
-     * @var string 分之名
+     * @var string 分支名
      */
     public $Branch;
 
     /**
      * @param string $Source git source
      * @param string $Repo 仓库名
-     * @param string $Branch 分之名
+     * @param string $Branch 分支名
      */
     function __construct()
     {

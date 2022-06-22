@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileVerifyUrl(string $FileVerifyUrl) 设置文件验证 URL 指引
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFileVerifyDomains() 获取文件校验域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileVerifyDomains(array $FileVerifyDomains) 设置文件校验域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileVerifyName() 获取文件校验文件名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileVerifyName(string $FileVerifyName) 设置文件校验文件名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -57,6 +65,18 @@ class CreateVerifyRecordResponse extends AbstractModel
     public $FileVerifyUrl;
 
     /**
+     * @var array 文件校验域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileVerifyDomains;
+
+    /**
+     * @var string 文件校验文件名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileVerifyName;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -66,6 +86,10 @@ class CreateVerifyRecordResponse extends AbstractModel
      * @param string $Record 解析值
      * @param string $RecordType 解析类型
      * @param string $FileVerifyUrl 文件验证 URL 指引
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FileVerifyDomains 文件校验域名列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileVerifyName 文件校验文件名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -96,6 +120,14 @@ class CreateVerifyRecordResponse extends AbstractModel
 
         if (array_key_exists("FileVerifyUrl",$param) and $param["FileVerifyUrl"] !== null) {
             $this->FileVerifyUrl = $param["FileVerifyUrl"];
+        }
+
+        if (array_key_exists("FileVerifyDomains",$param) and $param["FileVerifyDomains"] !== null) {
+            $this->FileVerifyDomains = $param["FileVerifyDomains"];
+        }
+
+        if (array_key_exists("FileVerifyName",$param) and $param["FileVerifyName"] !== null) {
+            $this->FileVerifyName = $param["FileVerifyName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogTime(integer $LogTime) 设置日志打包开始时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDomain() 获取站点名称
+ * @method string getDomain() 获取子域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomain(string $Domain) 设置站点名称
+ * @method void setDomain(string $Domain) 设置子域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取原始大小 单位byte
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,7 +50,7 @@ class L7OfflineLog extends AbstractModel
     public $LogTime;
 
     /**
-     * @var string 站点名称
+     * @var string 子域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
@@ -76,7 +76,7 @@ class L7OfflineLog extends AbstractModel
     /**
      * @param integer $LogTime 日志打包开始时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Domain 站点名称
+     * @param string $Domain 子域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 原始大小 单位byte
 注意：此字段可能返回 null，表示取不到有效值。

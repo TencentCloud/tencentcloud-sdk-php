@@ -110,6 +110,10 @@ TEXT控件可以指定字体
  * @method void setDocumentId(string $DocumentId) 设置控件所属文档的Id, 模块相关接口为空值
  * @method string getComponentDescription() 获取控件描述
  * @method void setComponentDescription(string $ComponentDescription) 设置控件描述
+ * @method float getOffsetX() 获取指定关键字时横坐标偏移量
+ * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量
+ * @method float getOffsetY() 获取指定关键字时纵坐标偏移量
+ * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量
  */
 class Component extends AbstractModel
 {
@@ -223,6 +227,16 @@ TEXT控件可以指定字体
     public $ComponentDescription;
 
     /**
+     * @var float 指定关键字时横坐标偏移量
+     */
+    public $OffsetX;
+
+    /**
+     * @var float 指定关键字时纵坐标偏移量
+     */
+    public $OffsetY;
+
+    /**
      * @param string $ComponentId 控件编号
 
 注：
@@ -268,6 +282,8 @@ TEXT控件可以指定字体
 签署区日期控件会转换成图片格式并带存证，需要通过字体决定图片大小
      * @param string $DocumentId 控件所属文档的Id, 模块相关接口为空值
      * @param string $ComponentDescription 控件描述
+     * @param float $OffsetX 指定关键字时横坐标偏移量
+     * @param float $OffsetY 指定关键字时纵坐标偏移量
      */
     function __construct()
     {
@@ -344,6 +360,14 @@ TEXT控件可以指定字体
 
         if (array_key_exists("ComponentDescription",$param) and $param["ComponentDescription"] !== null) {
             $this->ComponentDescription = $param["ComponentDescription"];
+        }
+
+        if (array_key_exists("OffsetX",$param) and $param["OffsetX"] !== null) {
+            $this->OffsetX = $param["OffsetX"];
+        }
+
+        if (array_key_exists("OffsetY",$param) and $param["OffsetY"] !== null) {
+            $this->OffsetY = $param["OffsetY"];
         }
     }
 }

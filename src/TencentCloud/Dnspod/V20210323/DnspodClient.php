@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Dnspod\V20210323\Models as Models;
 
 /**
+ * @method Models\CreateDealResponse CreateDeal(Models\CreateDealRequest $req) DNSPod商品下单
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 添加域名
 
  * @method Models\CreateDomainAliasResponse CreateDomainAlias(Models\CreateDomainAliasRequest $req) 创建域名别名
@@ -57,11 +58,14 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\ModifyDomainUnlockResponse ModifyDomainUnlock(Models\ModifyDomainUnlockRequest $req) 域名锁定解锁
  * @method Models\ModifyDynamicDNSResponse ModifyDynamicDNS(Models\ModifyDynamicDNSRequest $req) 更新动态 DNS 记录
 
+ * @method Models\ModifyPackageAutoRenewResponse ModifyPackageAutoRenew(Models\ModifyPackageAutoRenewRequest $req)  DNS 解析套餐自动续费设置
  * @method Models\ModifyRecordResponse ModifyRecord(Models\ModifyRecordRequest $req) 修改记录
  * @method Models\ModifyRecordBatchResponse ModifyRecordBatch(Models\ModifyRecordBatchRequest $req) 批量修改记录
  * @method Models\ModifyRecordRemarkResponse ModifyRecordRemark(Models\ModifyRecordRemarkRequest $req) 设置记录备注
  * @method Models\ModifyRecordStatusResponse ModifyRecordStatus(Models\ModifyRecordStatusRequest $req) 修改解析记录的状态
  * @method Models\ModifySubdomainStatusResponse ModifySubdomainStatus(Models\ModifySubdomainStatusRequest $req) 暂停子域名的解析记录
+ * @method Models\ModifyVasAutoRenewStatusResponse ModifyVasAutoRenewStatus(Models\ModifyVasAutoRenewStatusRequest $req) 增值服务自动续费设置
+ * @method Models\PayOrderWithBalanceResponse PayOrderWithBalance(Models\PayOrderWithBalanceRequest $req) DNSPod商品余额支付
  */
 
 class DnspodClient extends AbstractClient

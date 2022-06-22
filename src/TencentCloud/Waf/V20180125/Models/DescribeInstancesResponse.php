@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DownloadVpnGatewaySslClientCert返回参数结构体
+ * DescribeInstances返回参数结构体
  *
- * @method string getSslClientConfigsSet() 获取无
- * @method void setSslClientConfigsSet(string $SslClientConfigsSet) 设置无
- * @method array getSslClientConfig() 获取SSL-VPN client配置
- * @method void setSslClientConfig(array $SslClientConfig) 设置SSL-VPN client配置
- * @method integer getAuthenticated() 获取是否鉴权成功 只有传入SamlToken 才生效
- * @method void setAuthenticated(integer $Authenticated) 设置是否鉴权成功 只有传入SamlToken 才生效
+ * @method integer getTotal() 获取总数
+ * @method void setTotal(integer $Total) 设置总数
+ * @method array getInstances() 获取instance列表
+ * @method void setInstances(array $Instances) 设置instance列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
+class DescribeInstancesResponse extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var integer 总数
      */
-    public $SslClientConfigsSet;
+    public $Total;
 
     /**
-     * @var array SSL-VPN client配置
+     * @var array instance列表
      */
-    public $SslClientConfig;
-
-    /**
-     * @var integer 是否鉴权成功 只有传入SamlToken 才生效
-     */
-    public $Authenticated;
+    public $Instances;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SslClientConfigsSet 无
-     * @param array $SslClientConfig SSL-VPN client配置
-     * @param integer $Authenticated 是否鉴权成功 只有传入SamlToken 才生效
+     * @param integer $Total 总数
+     * @param array $Instances instance列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +62,17 @@ class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SslClientConfigsSet",$param) and $param["SslClientConfigsSet"] !== null) {
-            $this->SslClientConfigsSet = $param["SslClientConfigsSet"];
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
-        if (array_key_exists("SslClientConfig",$param) and $param["SslClientConfig"] !== null) {
-            $this->SslClientConfig = [];
-            foreach ($param["SslClientConfig"] as $key => $value){
-                $obj = new SslClientConfig();
+        if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
+            $this->Instances = [];
+            foreach ($param["Instances"] as $key => $value){
+                $obj = new InstanceInfo();
                 $obj->deserialize($value);
-                array_push($this->SslClientConfig, $obj);
+                array_push($this->Instances, $obj);
             }
-        }
-
-        if (array_key_exists("Authenticated",$param) and $param["Authenticated"] !== null) {
-            $this->Authenticated = $param["Authenticated"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

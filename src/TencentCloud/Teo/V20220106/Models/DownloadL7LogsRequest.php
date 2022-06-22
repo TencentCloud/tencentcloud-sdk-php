@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置每页展示条数
  * @method integer getPageNo() 获取当前页
  * @method void setPageNo(integer $PageNo) 设置当前页
- * @method array getZones() 获取站点集合
- * @method void setZones(array $Zones) 设置站点集合
- * @method array getDomains() 获取域名集合
- * @method void setDomains(array $Domains) 设置域名集合
+ * @method array getZones() 获取站点名集合
+ * @method void setZones(array $Zones) 设置站点名集合
+ * @method array getDomains() 获取子域名集合
+ * @method void setDomains(array $Domains) 设置子域名集合
  */
 class DownloadL7LogsRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class DownloadL7LogsRequest extends AbstractModel
     public $PageNo;
 
     /**
-     * @var array 站点集合
+     * @var array 站点名集合
      */
     public $Zones;
 
     /**
-     * @var array 域名集合
+     * @var array 子域名集合
      */
     public $Domains;
 
@@ -70,8 +70,8 @@ class DownloadL7LogsRequest extends AbstractModel
      * @param string $EndTime 结束时间(需严格按照RFC3339标准传参)
      * @param integer $PageSize 每页展示条数
      * @param integer $PageNo 当前页
-     * @param array $Zones 站点集合
-     * @param array $Domains 域名集合
+     * @param array $Zones 站点名集合
+     * @param array $Domains 子域名集合
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getAddresses() 获取集群的接入地址信息
  * @method void setAddresses(array $Addresses) 设置集群的接入地址信息
- * @method ClusterCredential getCredential() 获取集群的认证信息
- * @method void setCredential(ClusterCredential $Credential) 设置集群的认证信息
+ * @method ClusterCredential getCredential() 获取集群的认证信息（token只有请求是主账号才返回，子账户请使用返回的kubeconfig）
+ * @method void setCredential(ClusterCredential $Credential) 设置集群的认证信息（token只有请求是主账号才返回，子账户请使用返回的kubeconfig）
  * @method ClusterPublicLB getPublicLB() 获取集群的公网访问信息
  * @method void setPublicLB(ClusterPublicLB $PublicLB) 设置集群的公网访问信息
  * @method ClusterInternalLB getInternalLB() 获取集群的内网访问信息
@@ -43,7 +43,7 @@ class DescribeEKSClusterCredentialResponse extends AbstractModel
     public $Addresses;
 
     /**
-     * @var ClusterCredential 集群的认证信息
+     * @var ClusterCredential 集群的认证信息（token只有请求是主账号才返回，子账户请使用返回的kubeconfig）
      */
     public $Credential;
 
@@ -74,7 +74,7 @@ class DescribeEKSClusterCredentialResponse extends AbstractModel
 
     /**
      * @param array $Addresses 集群的接入地址信息
-     * @param ClusterCredential $Credential 集群的认证信息
+     * @param ClusterCredential $Credential 集群的认证信息（token只有请求是主账号才返回，子账户请使用返回的kubeconfig）
      * @param ClusterPublicLB $PublicLB 集群的公网访问信息
      * @param ClusterInternalLB $InternalLB 集群的内网访问信息
      * @param boolean $ProxyLB 标记是否新的内外网功能

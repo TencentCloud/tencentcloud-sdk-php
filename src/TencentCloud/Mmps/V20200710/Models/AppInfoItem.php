@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBehaviorTitle(string $BehaviorTitle) 设置小程序隐私诊断堆栈报告名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHighRiskCount() 获取诊断风险项数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHighRiskCount(integer $HighRiskCount) 设置诊断风险项数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppInfoItem extends AbstractModel
 {
@@ -98,6 +102,12 @@ class AppInfoItem extends AbstractModel
     public $BehaviorTitle;
 
     /**
+     * @var integer 诊断风险项数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HighRiskCount;
+
+    /**
      * @param string $AppPackage 小程序apiiid
      * @param string $AppName 小程序应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,6 +121,8 @@ class AppInfoItem extends AbstractModel
      * @param string $BehaviorUrl 小程序隐私诊断堆栈报告下载链接
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BehaviorTitle 小程序隐私诊断堆栈报告名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HighRiskCount 诊断风险项数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -156,6 +168,10 @@ class AppInfoItem extends AbstractModel
 
         if (array_key_exists("BehaviorTitle",$param) and $param["BehaviorTitle"] !== null) {
             $this->BehaviorTitle = $param["BehaviorTitle"];
+        }
+
+        if (array_key_exists("HighRiskCount",$param) and $param["HighRiskCount"] !== null) {
+            $this->HighRiskCount = $param["HighRiskCount"];
         }
     }
 }

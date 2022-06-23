@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStreamInputRtmpPushUrl() 获取输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
  * @method void setStreamInputRtmpPushUrl(string $StreamInputRtmpPushUrl) 设置输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
+ * @method VodPullInputPlayInfo getVodPullInputPlayInfo() 获取点播输入源播放进度信息，当 Operation 取值 DescribeInputPlayInfo 且 InputType 为 VodPull 类型时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVodPullInputPlayInfo(VodPullInputPlayInfo $VodPullInputPlayInfo) 设置点播输入源播放进度信息，当 Operation 取值 DescribeInputPlayInfo 且 InputType 为 VodPull 类型时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class HandleStreamConnectProjectResponse extends AbstractModel
     public $StreamInputRtmpPushUrl;
 
     /**
+     * @var VodPullInputPlayInfo 点播输入源播放进度信息，当 Operation 取值 DescribeInputPlayInfo 且 InputType 为 VodPull 类型时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VodPullInputPlayInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $StreamInputRtmpPushUrl 输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
+     * @param VodPullInputPlayInfo $VodPullInputPlayInfo 点播输入源播放进度信息，当 Operation 取值 DescribeInputPlayInfo 且 InputType 为 VodPull 类型时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,11 @@ class HandleStreamConnectProjectResponse extends AbstractModel
         }
         if (array_key_exists("StreamInputRtmpPushUrl",$param) and $param["StreamInputRtmpPushUrl"] !== null) {
             $this->StreamInputRtmpPushUrl = $param["StreamInputRtmpPushUrl"];
+        }
+
+        if (array_key_exists("VodPullInputPlayInfo",$param) and $param["VodPullInputPlayInfo"] !== null) {
+            $this->VodPullInputPlayInfo = new VodPullInputPlayInfo();
+            $this->VodPullInputPlayInfo->deserialize($param["VodPullInputPlayInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

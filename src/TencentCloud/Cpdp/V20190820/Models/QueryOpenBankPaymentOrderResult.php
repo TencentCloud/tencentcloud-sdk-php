@@ -28,17 +28,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelOrderId(string $ChannelOrderId) 设置云企付平台订单号
  * @method string getThirdPayOrderId() 获取第三方支付平台订单号
  * @method void setThirdPayOrderId(string $ThirdPayOrderId) 设置第三方支付平台订单号
- * @method string getOrderStatus() 获取INIT：初始化
+ * @method string getOrderStatus() 获取订单状态。
+INIT：初始化
 PAYING：支付中
-DEDUCTED：扣款成功
 ACCEPTED：支付受理成功
 SUCCESS：支付成功
 CLOSED：关单
 PAY_FAIL：支付失败
 REVOKE：退票
- * @method void setOrderStatus(string $OrderStatus) 设置INIT：初始化
+ * @method void setOrderStatus(string $OrderStatus) 设置订单状态。
+INIT：初始化
 PAYING：支付中
-DEDUCTED：扣款成功
 ACCEPTED：支付受理成功
 SUCCESS：支付成功
 CLOSED：关单
@@ -76,6 +76,14 @@ OPENBANK_PAYMENT
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBankApprovalGuideInfo(OpenBankApprovalGuideInfo $BankApprovalGuideInfo) 设置银行复核指引。当TENPAY下OPENBANT_PAYMENT时，下单受理成功是返回。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFeeAmount() 获取手续费金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeeAmount(integer $FeeAmount) 设置手续费金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFeeRate() 获取手续费费率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeeRate(integer $FeeRate) 设置手续费费率
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueryOpenBankPaymentOrderResult extends AbstractModel
 {
@@ -100,9 +108,9 @@ class QueryOpenBankPaymentOrderResult extends AbstractModel
     public $ThirdPayOrderId;
 
     /**
-     * @var string INIT：初始化
+     * @var string 订单状态。
+INIT：初始化
 PAYING：支付中
-DEDUCTED：扣款成功
 ACCEPTED：支付受理成功
 SUCCESS：支付成功
 CLOSED：关单
@@ -164,13 +172,25 @@ OPENBANK_PAYMENT
     public $BankApprovalGuideInfo;
 
     /**
+     * @var integer 手续费金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FeeAmount;
+
+    /**
+     * @var integer 手续费费率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FeeRate;
+
+    /**
      * @param string $ChannelMerchantId 渠道商户号。外部接入平台入驻云企付平台下发
      * @param string $OutOrderId 外部商户订单号
      * @param string $ChannelOrderId 云企付平台订单号
      * @param string $ThirdPayOrderId 第三方支付平台订单号
-     * @param string $OrderStatus INIT：初始化
+     * @param string $OrderStatus 订单状态。
+INIT：初始化
 PAYING：支付中
-DEDUCTED：扣款成功
 ACCEPTED：支付受理成功
 SUCCESS：支付成功
 CLOSED：关单
@@ -191,6 +211,10 @@ OPENBANK_PAYMENT
      * @param string $ExternalReturnData 第三方渠道返回信息，见渠道特殊说明,详情见附录-复杂类型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenBankApprovalGuideInfo $BankApprovalGuideInfo 银行复核指引。当TENPAY下OPENBANT_PAYMENT时，下单受理成功是返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FeeAmount 手续费金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FeeRate 手续费费率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -262,6 +286,14 @@ OPENBANK_PAYMENT
         if (array_key_exists("BankApprovalGuideInfo",$param) and $param["BankApprovalGuideInfo"] !== null) {
             $this->BankApprovalGuideInfo = new OpenBankApprovalGuideInfo();
             $this->BankApprovalGuideInfo->deserialize($param["BankApprovalGuideInfo"]);
+        }
+
+        if (array_key_exists("FeeAmount",$param) and $param["FeeAmount"] !== null) {
+            $this->FeeAmount = $param["FeeAmount"];
+        }
+
+        if (array_key_exists("FeeRate",$param) and $param["FeeRate"] !== null) {
+            $this->FeeRate = $param["FeeRate"];
         }
     }
 }

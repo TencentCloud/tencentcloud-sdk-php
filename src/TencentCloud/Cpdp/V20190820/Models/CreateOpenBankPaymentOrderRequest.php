@@ -22,22 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getChannelMerchantId() 获取云企付渠道商户号。外部接入平台入驻云企付平台后下发。
  * @method void setChannelMerchantId(string $ChannelMerchantId) 设置云企付渠道商户号。外部接入平台入驻云企付平台后下发。
- * @method string getChannelName() 获取渠道名称。
+ * @method string getChannelName() 获取渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
 __WECHAT__: 微信支付
- * @method void setChannelName(string $ChannelName) 设置渠道名称。
+ * @method void setChannelName(string $ChannelName) 设置渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
 __WECHAT__: 微信支付
- * @method string getPaymentMethod() 获取付款方式。如
+ * @method string getPaymentMethod() 获取付款方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
 __SAFT_ISV__:支付宝安心发
 __TRANS_TO_CHANGE__: 微信支付转账到零钱v2
- * @method void setPaymentMethod(string $PaymentMethod) 设置付款方式。如
+ * @method void setPaymentMethod(string $PaymentMethod) 设置付款方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
 __SAFT_ISV__:支付宝安心发
@@ -101,7 +101,7 @@ class CreateOpenBankPaymentOrderRequest extends AbstractModel
     public $ChannelMerchantId;
 
     /**
-     * @var string 渠道名称。
+     * @var string 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
@@ -110,7 +110,7 @@ __WECHAT__: 微信支付
     public $ChannelName;
 
     /**
-     * @var string 付款方式。如
+     * @var string 付款方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
 __SAFT_ISV__:支付宝安心发
@@ -213,12 +213,12 @@ __sandbox__:沙箱环境
 
     /**
      * @param string $ChannelMerchantId 云企付渠道商户号。外部接入平台入驻云企付平台后下发。
-     * @param string $ChannelName 渠道名称。
+     * @param string $ChannelName 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
 __WECHAT__: 微信支付
-     * @param string $PaymentMethod 付款方式。如
+     * @param string $PaymentMethod 付款方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
 __SAFT_ISV__:支付宝安心发

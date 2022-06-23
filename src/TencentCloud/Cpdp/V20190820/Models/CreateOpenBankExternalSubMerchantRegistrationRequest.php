@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelMerchantId(string $ChannelMerchantId) 设置渠道商户ID。
  * @method string getOutSubMerchantId() 获取外部子商户ID,平台侧商户唯一ID。
  * @method void setOutSubMerchantId(string $OutSubMerchantId) 设置外部子商户ID,平台侧商户唯一ID。
- * @method string getChannelName() 获取渠道名称。
+ * @method string getChannelName() 获取渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
- * @method void setChannelName(string $ChannelName) 设置渠道名称。
+ * @method void setChannelName(string $ChannelName) 设置渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
- * @method string getPaymentMethod() 获取支付方式。
+ * @method string getPaymentMethod() 获取支付方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付
- * @method void setPaymentMethod(string $PaymentMethod) 设置支付方式。
+ * @method void setPaymentMethod(string $PaymentMethod) 设置支付方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付
  * @method string getBusinessLicenseNumber() 获取社会信用代码。
@@ -81,7 +81,7 @@ class CreateOpenBankExternalSubMerchantRegistrationRequest extends AbstractModel
     public $OutSubMerchantId;
 
     /**
-     * @var string 渠道名称。
+     * @var string 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
@@ -89,7 +89,7 @@ __ALIPAY__: 支付宝
     public $ChannelName;
 
     /**
-     * @var string 支付方式。
+     * @var string 支付方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付
      */
@@ -142,11 +142,11 @@ _不填默认为生产环境_
      * @param string $OutRegistrationNo 外部进件序列号。
      * @param string $ChannelMerchantId 渠道商户ID。
      * @param string $OutSubMerchantId 外部子商户ID,平台侧商户唯一ID。
-     * @param string $ChannelName 渠道名称。
+     * @param string $ChannelName 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
-     * @param string $PaymentMethod 支付方式。
+     * @param string $PaymentMethod 支付方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__: ebank支付
 __OPENBANK_PAYMENT__: openbank支付
      * @param string $BusinessLicenseNumber 社会信用代码。

@@ -92,6 +92,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiagnose(string $Diagnose) 设置临床诊断
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCheckItem() 获取检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckItem(string $CheckItem) 设置检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCheckMethod() 获取检查方法
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckMethod(string $CheckMethod) 设置检查方法
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiagnoseTime() 获取诊断时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiagnoseTime(string $DiagnoseTime) 设置诊断时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHealthCheckupNum() 获取体检号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthCheckupNum(string $HealthCheckupNum) 设置体检号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOtherTime() 获取其它时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOtherTime(string $OtherTime) 设置其它时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrintTime() 获取打印时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrintTime(string $PrintTime) 设置打印时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTimes() 获取未归类时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimes(array $Times) 设置未归类时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReportInfo extends AbstractModel
 {
@@ -204,6 +232,48 @@ class ReportInfo extends AbstractModel
     public $Diagnose;
 
     /**
+     * @var string 检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckItem;
+
+    /**
+     * @var string 检查方法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckMethod;
+
+    /**
+     * @var string 诊断时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiagnoseTime;
+
+    /**
+     * @var string 体检号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthCheckupNum;
+
+    /**
+     * @var string 其它时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OtherTime;
+
+    /**
+     * @var string 打印时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrintTime;
+
+    /**
+     * @var array 未归类时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Times;
+
+    /**
      * @param string $Hospital 医院名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DepartmentName 科室名称
@@ -239,6 +309,20 @@ class ReportInfo extends AbstractModel
      * @param string $UltraNum 超声号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Diagnose 临床诊断
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CheckItem 检查项目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CheckMethod 检查方法
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiagnoseTime 诊断时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HealthCheckupNum 体检号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OtherTime 其它时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PrintTime 打印时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Times 未归类时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -324,6 +408,39 @@ class ReportInfo extends AbstractModel
 
         if (array_key_exists("Diagnose",$param) and $param["Diagnose"] !== null) {
             $this->Diagnose = $param["Diagnose"];
+        }
+
+        if (array_key_exists("CheckItem",$param) and $param["CheckItem"] !== null) {
+            $this->CheckItem = $param["CheckItem"];
+        }
+
+        if (array_key_exists("CheckMethod",$param) and $param["CheckMethod"] !== null) {
+            $this->CheckMethod = $param["CheckMethod"];
+        }
+
+        if (array_key_exists("DiagnoseTime",$param) and $param["DiagnoseTime"] !== null) {
+            $this->DiagnoseTime = $param["DiagnoseTime"];
+        }
+
+        if (array_key_exists("HealthCheckupNum",$param) and $param["HealthCheckupNum"] !== null) {
+            $this->HealthCheckupNum = $param["HealthCheckupNum"];
+        }
+
+        if (array_key_exists("OtherTime",$param) and $param["OtherTime"] !== null) {
+            $this->OtherTime = $param["OtherTime"];
+        }
+
+        if (array_key_exists("PrintTime",$param) and $param["PrintTime"] !== null) {
+            $this->PrintTime = $param["PrintTime"];
+        }
+
+        if (array_key_exists("Times",$param) and $param["Times"] !== null) {
+            $this->Times = [];
+            foreach ($param["Times"] as $key => $value){
+                $obj = new Time();
+                $obj->deserialize($value);
+                array_push($this->Times, $obj);
+            }
         }
     }
 }

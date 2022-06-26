@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置
  * @method ClientIp getClientIpHeader() 获取客户端IP回源请求头配置
  * @method void setClientIpHeader(ClientIp $ClientIpHeader) 设置客户端IP回源请求头配置
+ * @method CachePrefresh getCachePrefresh() 获取缓存预刷新配置
+ * @method void setCachePrefresh(CachePrefresh $CachePrefresh) 设置缓存预刷新配置
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class ModifyZoneSettingRequest extends AbstractModel
     public $ClientIpHeader;
 
     /**
+     * @var CachePrefresh 缓存预刷新配置
+     */
+    public $CachePrefresh;
+
+    /**
      * @param string $ZoneId 待变更的站点ID
      * @param CacheConfig $Cache 缓存过期时间配置
      * @param CacheKey $CacheKey 节点缓存键配置
@@ -144,6 +151,7 @@ class ModifyZoneSettingRequest extends AbstractModel
      * @param SmartRouting $SmartRouting 智能加速配置
      * @param WebSocket $WebSocket WebSocket配置
      * @param ClientIp $ClientIpHeader 客户端IP回源请求头配置
+     * @param CachePrefresh $CachePrefresh 缓存预刷新配置
      */
     function __construct()
     {
@@ -230,6 +238,11 @@ class ModifyZoneSettingRequest extends AbstractModel
         if (array_key_exists("ClientIpHeader",$param) and $param["ClientIpHeader"] !== null) {
             $this->ClientIpHeader = new ClientIp();
             $this->ClientIpHeader->deserialize($param["ClientIpHeader"]);
+        }
+
+        if (array_key_exists("CachePrefresh",$param) and $param["CachePrefresh"] !== null) {
+            $this->CachePrefresh = new CachePrefresh();
+            $this->CachePrefresh->deserialize($param["CachePrefresh"]);
         }
     }
 }

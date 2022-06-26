@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIpHeader(ClientIp $ClientIpHeader) 设置客户端IP回源请求头配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CachePrefresh getCachePrefresh() 获取缓存预刷新配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCachePrefresh(CachePrefresh $CachePrefresh) 设置缓存预刷新配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -180,6 +184,12 @@ class DescribeZoneSettingResponse extends AbstractModel
     public $ClientIpHeader;
 
     /**
+     * @var CachePrefresh 缓存预刷新配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CachePrefresh;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -214,6 +224,8 @@ class DescribeZoneSettingResponse extends AbstractModel
      * @param WebSocket $WebSocket WebSocket配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIp $ClientIpHeader 客户端IP回源请求头配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CachePrefresh $CachePrefresh 缓存预刷新配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -306,6 +318,11 @@ class DescribeZoneSettingResponse extends AbstractModel
         if (array_key_exists("ClientIpHeader",$param) and $param["ClientIpHeader"] !== null) {
             $this->ClientIpHeader = new ClientIp();
             $this->ClientIpHeader->deserialize($param["ClientIpHeader"]);
+        }
+
+        if (array_key_exists("CachePrefresh",$param) and $param["CachePrefresh"] !== null) {
+            $this->CachePrefresh = new CachePrefresh();
+            $this->CachePrefresh->deserialize($param["CachePrefresh"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

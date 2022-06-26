@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) 设置置信度
  * @method Location getLocation() 获取位置信息
  * @method void setLocation(Location $Location) 设置位置信息
+ * @method string getField() 获取字段名
+ * @method void setField(string $Field) 设置字段名
  */
 class OcrRecognise extends AbstractModel
 {
@@ -52,10 +54,16 @@ class OcrRecognise extends AbstractModel
     public $Location;
 
     /**
+     * @var string 字段名
+     */
+    public $Field;
+
+    /**
      * @param string $OriginalField 原文字段
      * @param string $Value 识别结果
      * @param float $Confidence 置信度
      * @param Location $Location 位置信息
+     * @param string $Field 字段名
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class OcrRecognise extends AbstractModel
         if (array_key_exists("Location",$param) and $param["Location"] !== null) {
             $this->Location = new Location();
             $this->Location->deserialize($param["Location"]);
+        }
+
+        if (array_key_exists("Field",$param) and $param["Field"] !== null) {
+            $this->Field = $param["Field"];
         }
     }
 }

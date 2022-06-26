@@ -35,6 +35,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\CreatePolicyGroupResponse CreatePolicyGroup(Models\CreatePolicyGroupRequest $req) 增加策略组
  * @method Models\CreatePrometheusAgentResponse CreatePrometheusAgent(Models\CreatePrometheusAgentRequest $req) 创建 Prometheus CVM Agent
  * @method Models\CreatePrometheusScrapeJobResponse CreatePrometheusScrapeJob(Models\CreatePrometheusScrapeJobRequest $req) 创建 Prometheus 抓取任务
+ * @method Models\CreateRecordingRuleResponse CreateRecordingRule(Models\CreateRecordingRuleRequest $req) 创建 Prometheus 的预聚合规则
  * @method Models\CreateServiceDiscoveryResponse CreateServiceDiscovery(Models\CreateServiceDiscoveryRequest $req) 在腾讯云容器服务下创建 Prometheus 服务发现。
 <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
 <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
@@ -44,6 +45,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DeleteExporterIntegrationResponse DeleteExporterIntegration(Models\DeleteExporterIntegrationRequest $req) 删除 exporter 集成
  * @method Models\DeletePolicyGroupResponse DeletePolicyGroup(Models\DeletePolicyGroupRequest $req) 删除告警策略组
  * @method Models\DeletePrometheusScrapeJobsResponse DeletePrometheusScrapeJobs(Models\DeletePrometheusScrapeJobsRequest $req) 删除 Prometheus 抓取任务
+ * @method Models\DeleteRecordingRulesResponse DeleteRecordingRules(Models\DeleteRecordingRulesRequest $req) 批量删除 Prometheus 预聚合规则
  * @method Models\DeleteServiceDiscoveryResponse DeleteServiceDiscovery(Models\DeleteServiceDiscoveryRequest $req) 删除在腾讯云容器服务下创建的 Prometheus 服务发现。
 <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
 <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
@@ -78,6 +80,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
 <li>如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的实例。</li>
 </ul>
  * @method Models\DescribePrometheusScrapeJobsResponse DescribePrometheusScrapeJobs(Models\DescribePrometheusScrapeJobsRequest $req) 列出 Prometheus 抓取任务
+ * @method Models\DescribeRecordingRulesResponse DescribeRecordingRules(Models\DescribeRecordingRulesRequest $req) 根据条件查询 Prometheus 预聚合规则
  * @method Models\DescribeServiceDiscoveryResponse DescribeServiceDiscovery(Models\DescribeServiceDiscoveryRequest $req) 列出在腾讯云容器服务下创建的 Prometheus 服务发现。
 <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
 <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
@@ -119,6 +122,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\UpdateExporterIntegrationResponse UpdateExporterIntegration(Models\UpdateExporterIntegrationRequest $req) 更新 exporter 集成配置
  * @method Models\UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatus(Models\UpdatePrometheusAgentStatusRequest $req) 更新 Prometheus CVM Agent 状态
  * @method Models\UpdatePrometheusScrapeJobResponse UpdatePrometheusScrapeJob(Models\UpdatePrometheusScrapeJobRequest $req) 更新 Prometheus 抓取任务
+ * @method Models\UpdateRecordingRuleResponse UpdateRecordingRule(Models\UpdateRecordingRuleRequest $req) 更新 Prometheus 的预聚合规则
  * @method Models\UpdateServiceDiscoveryResponse UpdateServiceDiscovery(Models\UpdateServiceDiscoveryRequest $req) 在腾讯云容器服务下更新 Prometheus 服务发现。
 <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
 <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>

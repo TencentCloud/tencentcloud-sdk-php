@@ -141,6 +141,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\EnableEventPersistenceResponse EnableEventPersistence(Models\EnableEventPersistenceRequest $req) 开启事件持久化功能
  * @method Models\EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(Models\EnableVpcCniNetworkTypeRequest $req) GR集群可以通过本接口附加vpc-cni容器网络插件，开启vpc-cni容器网络能力
  * @method Models\ForwardApplicationRequestV3Response ForwardApplicationRequestV3(Models\ForwardApplicationRequestV3Request $req) 操作TKE集群的addon
+ * @method Models\ForwardTKEEdgeApplicationRequestV3Response ForwardTKEEdgeApplicationRequestV3(Models\ForwardTKEEdgeApplicationRequestV3Request $req) 操作TKEEdge集群的addon
  * @method Models\GetClusterLevelPriceResponse GetClusterLevelPrice(Models\GetClusterLevelPriceRequest $req) 获取集群规模价格
  * @method Models\GetMostSuitableImageCacheResponse GetMostSuitableImageCache(Models\GetMostSuitableImageCacheRequest $req) 根据镜像列表，查询匹配的镜像缓存
  * @method Models\GetTkeAppChartListResponse GetTkeAppChartList(Models\GetTkeAppChartListRequest $req) 获取TKE支持的App列表

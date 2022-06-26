@@ -14,37 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceUpgradeDBInstance返回参数结构体
+ * DescribeRecordingRules返回参数结构体
  *
- * @method integer getOriginalPrice() 获取刊例价费用
- * @method void setOriginalPrice(integer $OriginalPrice) 设置刊例价费用
- * @method integer getPrice() 获取折后实际付款金额
- * @method void setPrice(integer $Price) 设置折后实际付款金额
- * @method string getCurrency() 获取币种。例如，CNY：人民币。
- * @method void setCurrency(string $Currency) 设置币种。例如，CNY：人民币。
+ * @method integer getTotalCount() 获取规则组数量
+ * @method void setTotalCount(integer $TotalCount) 设置规则组数量
+ * @method array getRecordingRuleSet() 获取规则组详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordingRuleSet(array $RecordingRuleSet) 设置规则组详情
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
+class DescribeRecordingRulesResponse extends AbstractModel
 {
     /**
-     * @var integer 刊例价费用
+     * @var integer 规则组数量
      */
-    public $OriginalPrice;
+    public $TotalCount;
 
     /**
-     * @var integer 折后实际付款金额
+     * @var array 规则组详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Price;
-
-    /**
-     * @var string 币种。例如，CNY：人民币。
-     */
-    public $Currency;
+    public $RecordingRuleSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +48,9 @@ class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $OriginalPrice 刊例价费用
-     * @param integer $Price 折后实际付款金额
-     * @param string $Currency 币种。例如，CNY：人民币。
+     * @param integer $TotalCount 规则组数量
+     * @param array $RecordingRuleSet 规则组详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +66,17 @@ class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
-            $this->OriginalPrice = $param["OriginalPrice"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
-        }
-
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists("RecordingRuleSet",$param) and $param["RecordingRuleSet"] !== null) {
+            $this->RecordingRuleSet = [];
+            foreach ($param["RecordingRuleSet"] as $key => $value){
+                $obj = new RecordingRuleSet();
+                $obj->deserialize($value);
+                array_push($this->RecordingRuleSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

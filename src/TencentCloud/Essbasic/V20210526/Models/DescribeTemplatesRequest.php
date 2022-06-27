@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTemplates请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息
+ * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method string getTemplateId() 获取模板唯一标识
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTemplatesRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息
+     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
@@ -66,7 +66,7 @@ class DescribeTemplatesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param Agent $Agent 渠道应用相关信息
+     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param UserInfo $Operator 操作者的信息
      * @param string $TemplateId 模板唯一标识
      * @param integer $ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表

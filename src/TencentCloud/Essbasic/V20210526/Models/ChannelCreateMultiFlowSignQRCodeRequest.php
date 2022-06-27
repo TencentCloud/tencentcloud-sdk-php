@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateMultiFlowSignQRCode请求参数结构体
  *
- * @method Agent getAgent() 获取应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
- * @method void setAgent(Agent $Agent) 设置应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+ * @method Agent getAgent() 获取渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
  * @method string getTemplateId() 获取模版ID
  * @method void setTemplateId(string $TemplateId) 设置模版ID
  * @method string getFlowName() 获取合同名称
@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+     * @var Agent 渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      */
     public $Agent;
 
@@ -83,8 +83,8 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $CallbackUrl;
 
     /**
-     * @param Agent $Agent 应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+     * @param Agent $Agent 渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      * @param string $TemplateId 模版ID
      * @param string $FlowName 合同名称
      * @param UserInfo $Operator 用户信息

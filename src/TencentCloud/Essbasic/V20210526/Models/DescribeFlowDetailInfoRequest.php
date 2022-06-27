@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowDetailInfo请求参数结构体
  *
- * @method Agent getAgent() 获取应用信息
- * @method void setAgent(Agent $Agent) 设置应用信息
+ * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method array getFlowIds() 获取合同(流程)编号数组
  * @method void setFlowIds(array $FlowIds) 设置合同(流程)编号数组
  * @method UserInfo getOperator() 获取操作者的信息
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFlowDetailInfoRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用信息
+     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
@@ -45,7 +45,7 @@ class DescribeFlowDetailInfoRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用信息
+     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param array $FlowIds 合同(流程)编号数组
      * @param UserInfo $Operator 操作者的信息
      */

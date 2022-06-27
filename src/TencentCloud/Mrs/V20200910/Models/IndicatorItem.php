@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemString(string $ItemString) 设置项目原文
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getId() 获取指标项ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(integer $Id) 设置指标项ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Coordinate getCoords() 获取指标项坐标位置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCoords(Coordinate $Coords) 设置指标项坐标位置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IndicatorItem extends AbstractModel
 {
@@ -124,6 +132,18 @@ class IndicatorItem extends AbstractModel
     public $ItemString;
 
     /**
+     * @var integer 指标项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Id;
+
+    /**
+     * @var Coordinate 指标项坐标位置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Coords;
+
+    /**
      * @param string $Code 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Scode 标准缩写
@@ -143,6 +163,10 @@ class IndicatorItem extends AbstractModel
      * @param boolean $Normal 是否正常
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ItemString 项目原文
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Id 指标项ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Coordinate $Coords 指标项坐标位置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +220,15 @@ class IndicatorItem extends AbstractModel
 
         if (array_key_exists("ItemString",$param) and $param["ItemString"] !== null) {
             $this->ItemString = $param["ItemString"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Coords",$param) and $param["Coords"] !== null) {
+            $this->Coords = new Coordinate();
+            $this->Coords->deserialize($param["Coords"]);
         }
     }
 }

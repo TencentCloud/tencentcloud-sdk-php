@@ -68,11 +68,14 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateInvoiceResponse CreateInvoice(Models\CreateInvoiceRequest $req) 智慧零售-发票开具
  * @method Models\CreateInvoiceV2Response CreateInvoiceV2(Models\CreateInvoiceV2Request $req) 智慧零售-发票开具V2
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 智慧零售-商户注册
+ * @method Models\CreateOpenBankAggregatedSubMerchantRegistrationResponse CreateOpenBankAggregatedSubMerchantRegistration(Models\CreateOpenBankAggregatedSubMerchantRegistrationRequest $req) 云企付-子商户进件V2
  * @method Models\CreateOpenBankExternalSubMerchantAccountBookResponse CreateOpenBankExternalSubMerchantAccountBook(Models\CreateOpenBankExternalSubMerchantAccountBookRequest $req) 第三方子商户电子记账本创建接口
  * @method Models\CreateOpenBankExternalSubMerchantRegistrationResponse CreateOpenBankExternalSubMerchantRegistration(Models\CreateOpenBankExternalSubMerchantRegistrationRequest $req) 云企付-子商户进件
  * @method Models\CreateOpenBankMerchantResponse CreateOpenBankMerchant(Models\CreateOpenBankMerchantRequest $req) 云企付-创建商户
  * @method Models\CreateOpenBankPaymentOrderResponse CreateOpenBankPaymentOrder(Models\CreateOpenBankPaymentOrderRequest $req) 云企付-创建支付订单
  * @method Models\CreateOpenBankRechargeOrderResponse CreateOpenBankRechargeOrder(Models\CreateOpenBankRechargeOrderRequest $req) 云企付-创建充值订单
+ * @method Models\CreateOpenBankSubMerchantRateConfigureResponse CreateOpenBankSubMerchantRateConfigure(Models\CreateOpenBankSubMerchantRateConfigureRequest $req) 云企付-子商户费率配置
+ * @method Models\CreateOpenBankUnifiedOrderResponse CreateOpenBankUnifiedOrder(Models\CreateOpenBankUnifiedOrderRequest $req) 云企付-聚合下单
  * @method Models\CreateOrderResponse CreateOrder(Models\CreateOrderRequest $req) 云鉴-消费订单发起的接口
  * @method Models\CreatePayMerchantResponse CreatePayMerchant(Models\CreatePayMerchantRequest $req) 商户新增的接口
  * @method Models\CreatePayRollPreOrderResponse CreatePayRollPreOrder(Models\CreatePayRollPreOrderRequest $req) 务工卡-核身预下单
@@ -167,6 +170,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryMerchantPayWayListResponse QueryMerchantPayWayList(Models\QueryMerchantPayWayListRequest $req) 商户查询已开通的支付方式列表
  * @method Models\QueryOpenBankBankAccountBalanceResponse QueryOpenBankBankAccountBalance(Models\QueryOpenBankBankAccountBalanceRequest $req) 云企付-子商户银行卡余额查询
  * @method Models\QueryOpenBankBankBranchListResponse QueryOpenBankBankBranchList(Models\QueryOpenBankBankBranchListRequest $req) 云企付-查询联行号
+ * @method Models\QueryOpenBankBillDataPageResponse QueryOpenBankBillDataPage(Models\QueryOpenBankBillDataPageRequest $req) 云企付-分页查询对账单数据
  * @method Models\QueryOpenBankBindExternalSubMerchantBankAccountResponse QueryOpenBankBindExternalSubMerchantBankAccount(Models\QueryOpenBankBindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡绑定结果查询
  * @method Models\QueryOpenBankDailyReceiptDownloadUrlResponse QueryOpenBankDailyReceiptDownloadUrl(Models\QueryOpenBankDailyReceiptDownloadUrlRequest $req) 云企付-按日期批量查询回单下载地址
  * @method Models\QueryOpenBankDownLoadUrlResponse QueryOpenBankDownLoadUrl(Models\QueryOpenBankDownLoadUrlRequest $req) 云企付-查询对账单下载地址
@@ -175,6 +179,9 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryOpenBankExternalSubMerchantRegistrationResponse QueryOpenBankExternalSubMerchantRegistration(Models\QueryOpenBankExternalSubMerchantRegistrationRequest $req) 云企付-子商户进件结果查询
  * @method Models\QueryOpenBankOrderDetailReceiptInfoResponse QueryOpenBankOrderDetailReceiptInfo(Models\QueryOpenBankOrderDetailReceiptInfoRequest $req) 云企付-单笔交易回单申请结果查询
  * @method Models\QueryOpenBankPaymentOrderResponse QueryOpenBankPaymentOrder(Models\QueryOpenBankPaymentOrderRequest $req) 云企付-查询订单支付结果
+ * @method Models\QueryOpenBankRefundOrderResponse QueryOpenBankRefundOrder(Models\QueryOpenBankRefundOrderRequest $req) 云企付-退款结果查询
+ * @method Models\QueryOpenBankSubMerchantCredentialResponse QueryOpenBankSubMerchantCredential(Models\QueryOpenBankSubMerchantCredentialRequest $req) 云企付-子商户资质文件查询
+ * @method Models\QueryOpenBankSubMerchantRateConfigureResponse QueryOpenBankSubMerchantRateConfigure(Models\QueryOpenBankSubMerchantRateConfigureRequest $req) 云企付-子商户费率配置结果查询
  * @method Models\QueryOpenBankSupportBankListResponse QueryOpenBankSupportBankList(Models\QueryOpenBankSupportBankListRequest $req) 云企付-查询支持银行列表
  * @method Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResponse QueryOpenBankUnbindExternalSubMerchantBankAccount(Models\QueryOpenBankUnbindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡解绑结果查询
  * @method Models\QueryOrderResponse QueryOrder(Models\QueryOrderRequest $req) 根据订单号，或者用户Id，查询支付订单状态 
@@ -198,6 +205,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\RefundResponse Refund(Models\RefundRequest $req) 如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。 
  * @method Models\RefundCloudOrderResponse RefundCloudOrder(Models\RefundCloudOrderRequest $req) 如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。 
  * @method Models\RefundMemberTransactionResponse RefundMemberTransaction(Models\RefundMemberTransactionRequest $req) 会员间交易退款
+ * @method Models\RefundOpenBankOrderResponse RefundOpenBankOrder(Models\RefundOpenBankOrderRequest $req) 云企付-退款申请
  * @method Models\RefundOrderResponse RefundOrder(Models\RefundOrderRequest $req) 云鉴-消费订单退款的接口
  * @method Models\RefundTlinxOrderResponse RefundTlinxOrder(Models\RefundTlinxOrderRequest $req) 云支付订单退款接口
  * @method Models\RegisterBehaviorResponse RegisterBehavior(Models\RegisterBehaviorRequest $req) 商户查询是否签约和签约行为上报
@@ -218,6 +226,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\UnifiedTlinxOrderResponse UnifiedTlinxOrder(Models\UnifiedTlinxOrderRequest $req) 云支付-统一下单接口
  * @method Models\UploadExternalAnchorInfoResponse UploadExternalAnchorInfo(Models\UploadExternalAnchorInfoRequest $req) 灵云-上传主播信息
  * @method Models\UploadFileResponse UploadFile(Models\UploadFileRequest $req) 直播平台-文件上传
+ * @method Models\UploadOpenBankSubMerchantCredentialResponse UploadOpenBankSubMerchantCredential(Models\UploadOpenBankSubMerchantCredentialRequest $req) 云企付-子商户资质文件上传
  * @method Models\UploadOrgFileResponse UploadOrgFile(Models\UploadOrgFileRequest $req) 云支付-上传机构文件接口
  * @method Models\UploadTaxListResponse UploadTaxList(Models\UploadTaxListRequest $req) 直播平台-上传代理商完税列表
  * @method Models\UploadTaxPaymentResponse UploadTaxPayment(Models\UploadTaxPaymentRequest $req) 直播平台-上传代理商完税证明

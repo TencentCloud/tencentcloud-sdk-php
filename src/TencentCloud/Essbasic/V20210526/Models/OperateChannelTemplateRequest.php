@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OperateChannelTemplate请求参数结构体
  *
- * @method Agent getAgent() 获取应用信息
- * @method void setAgent(Agent $Agent) 设置应用信息
+ * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method string getTemplateId() 获取渠道方模板库模板唯一标识
  * @method void setTemplateId(string $TemplateId) 设置渠道方模板库模板唯一标识
  * @method string getOperateType() 获取操作类型，查询:"SELECT"，删除:"DELETE"，更新:"UPDATE"
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class OperateChannelTemplateRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用信息
+     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
@@ -66,7 +66,7 @@ class OperateChannelTemplateRequest extends AbstractModel
     public $ProxyOrganizationOpenIds;
 
     /**
-     * @param Agent $Agent 应用信息
+     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $TemplateId 渠道方模板库模板唯一标识
      * @param string $OperateType 操作类型，查询:"SELECT"，删除:"DELETE"，更新:"UPDATE"
      * @param UserInfo $Operator 操作者的信息

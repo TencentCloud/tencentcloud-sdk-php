@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSignUrls请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息
+ * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method array getFlowIds() 获取所签署合同ID数组
  * @method void setFlowIds(array $FlowIds) 设置所签署合同ID数组
  * @method UserInfo getOperator() 获取操作者的信息
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateSignUrlsRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息
+     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
@@ -66,7 +66,7 @@ class CreateSignUrlsRequest extends AbstractModel
     public $AutoJumpBack;
 
     /**
-     * @param Agent $Agent 渠道应用相关信息
+     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param array $FlowIds 所签署合同ID数组
      * @param UserInfo $Operator 操作者的信息
      * @param string $Endpoint 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;

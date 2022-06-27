@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDownloadFlowUrl请求参数结构体
  *
- * @method Agent getAgent() 获取应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
- * @method void setAgent(Agent $Agent) 设置应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+ * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method array getDownLoadFlows() 获取文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
@@ -32,8 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GetDownloadFlowUrlRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
@@ -48,8 +45,7 @@ class GetDownloadFlowUrlRequest extends AbstractModel
     public $DownLoadFlows;
 
     /**
-     * @param Agent $Agent 应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param UserInfo $Operator 操作者的信息
      * @param array $DownLoadFlows 文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
      */

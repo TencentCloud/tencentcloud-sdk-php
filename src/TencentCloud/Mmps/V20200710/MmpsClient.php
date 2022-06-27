@@ -29,6 +29,7 @@ use TencentCloud\Mmps\V20200710\Models as Models;
  * @method Models\CreateFlySecMiniAppScanTaskRepeatResponse CreateFlySecMiniAppScanTaskRepeat(Models\CreateFlySecMiniAppScanTaskRepeatRequest $req) 重新提交基础诊断任务
  * @method Models\DescribeBasicDiagnosisResourceUsageInfoResponse DescribeBasicDiagnosisResourceUsageInfo(Models\DescribeBasicDiagnosisResourceUsageInfoRequest $req) 查询翼扬安全基础诊断资源使用情况
  * @method Models\DescribeFlySecMiniAppReportUrlResponse DescribeFlySecMiniAppReportUrl(Models\DescribeFlySecMiniAppReportUrlRequest $req) 获取翼扬诊断任务报告链接地址
+ * @method Models\DescribeFlySecMiniAppScanReportListResponse DescribeFlySecMiniAppScanReportList(Models\DescribeFlySecMiniAppScanReportListRequest $req) 查询指定小程序版本的翼扬诊断安全得分
  * @method Models\DescribeFlySecMiniAppScanTaskListResponse DescribeFlySecMiniAppScanTaskList(Models\DescribeFlySecMiniAppScanTaskListRequest $req) 获取翼扬安全诊断任务列表
  * @method Models\DescribeFlySecMiniAppScanTaskParamResponse DescribeFlySecMiniAppScanTaskParam(Models\DescribeFlySecMiniAppScanTaskParamRequest $req) 获取用户提交的基础诊断任务参数信息
  * @method Models\DescribeFlySecMiniAppScanTaskStatusResponse DescribeFlySecMiniAppScanTaskStatus(Models\DescribeFlySecMiniAppScanTaskStatusRequest $req) 查询翼扬安全诊断任务状态

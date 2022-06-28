@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置位置名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQuuid() 获取主机quuid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuuid(string $Quuid) 设置主机quuid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostLoginList extends AbstractModel
 {
@@ -204,6 +208,12 @@ class HostLoginList extends AbstractModel
     public $Location;
 
     /**
+     * @var string 主机quuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Quuid;
+
+    /**
      * @param integer $Id 记录Id
      * @param string $Uuid Uuid串
 注意：此字段可能返回 null，表示取不到有效值。
@@ -239,6 +249,8 @@ class HostLoginList extends AbstractModel
 1 可疑
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 位置名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Quuid 主机quuid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -324,6 +336,10 @@ class HostLoginList extends AbstractModel
 
         if (array_key_exists("Location",$param) and $param["Location"] !== null) {
             $this->Location = $param["Location"];
+        }
+
+        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
+            $this->Quuid = $param["Quuid"];
         }
     }
 }

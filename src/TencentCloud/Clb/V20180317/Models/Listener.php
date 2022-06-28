@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAttrFlags() 获取监听器的属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttrFlags(array $AttrFlags) 设置监听器的属性
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Listener extends AbstractModel
 {
@@ -195,6 +199,12 @@ class Listener extends AbstractModel
     public $DeregisterTargetRst;
 
     /**
+     * @var array 监听器的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttrFlags;
+
+    /**
      * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Protocol 监听器协议
      * @param integer $Port 监听器端口
@@ -227,6 +237,8 @@ class Listener extends AbstractModel
      * @param boolean $Toa 仅支持Nat64 CLB TCP监听器
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AttrFlags 监听器的属性
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -320,6 +332,10 @@ class Listener extends AbstractModel
 
         if (array_key_exists("DeregisterTargetRst",$param) and $param["DeregisterTargetRst"] !== null) {
             $this->DeregisterTargetRst = $param["DeregisterTargetRst"];
+        }
+
+        if (array_key_exists("AttrFlags",$param) and $param["AttrFlags"] !== null) {
+            $this->AttrFlags = $param["AttrFlags"];
         }
     }
 }

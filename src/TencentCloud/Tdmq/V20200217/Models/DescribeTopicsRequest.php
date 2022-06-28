@@ -29,19 +29,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取返回数量，不填则默认为10，最大值为20。
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为10，最大值为20。
  * @method integer getTopicType() 获取topic类型描述：
-0：普通消息；
-1：全局顺序消息；
-2：局部顺序消息；
-3：重试队列；
-4：死信队列；
-5：事务消息。
+0：非持久非分区主题类型；
+1：非持久分区主题类型；
+2：持久非分区主题类型；
+3：持久分区主题类型；
  * @method void setTopicType(integer $TopicType) 设置topic类型描述：
-0：普通消息；
-1：全局顺序消息；
-2：局部顺序消息；
-3：重试队列；
-4：死信队列；
-5：事务消息。
+0：非持久非分区主题类型；
+1：非持久分区主题类型；
+2：持久非分区主题类型；
+3：持久分区主题类型；
  * @method string getClusterId() 获取Pulsar 集群的ID
  * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID
  * @method array getFilters() 获取* TopicName
@@ -52,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
 按照主题名字查询，精确查询。
 类型：String
 必选：否
+ * @method integer getTopicCreator() 获取创建来源：
+1：用户创建
+2：系统创建
+ * @method void setTopicCreator(integer $TopicCreator) 设置创建来源：
+1：用户创建
+2：系统创建
  */
 class DescribeTopicsRequest extends AbstractModel
 {
@@ -77,12 +79,10 @@ class DescribeTopicsRequest extends AbstractModel
 
     /**
      * @var integer topic类型描述：
-0：普通消息；
-1：全局顺序消息；
-2：局部顺序消息；
-3：重试队列；
-4：死信队列；
-5：事务消息。
+0：非持久非分区主题类型；
+1：非持久分区主题类型；
+2：持久非分区主题类型；
+3：持久分区主题类型；
      */
     public $TopicType;
 
@@ -100,22 +100,30 @@ class DescribeTopicsRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var integer 创建来源：
+1：用户创建
+2：系统创建
+     */
+    public $TopicCreator;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名模糊匹配。
      * @param integer $Offset 起始下标，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认为10，最大值为20。
      * @param integer $TopicType topic类型描述：
-0：普通消息；
-1：全局顺序消息；
-2：局部顺序消息；
-3：重试队列；
-4：死信队列；
-5：事务消息。
+0：非持久非分区主题类型；
+1：非持久分区主题类型；
+2：持久非分区主题类型；
+3：持久分区主题类型；
      * @param string $ClusterId Pulsar 集群的ID
      * @param array $Filters * TopicName
 按照主题名字查询，精确查询。
 类型：String
 必选：否
+     * @param integer $TopicCreator 创建来源：
+1：用户创建
+2：系统创建
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class DescribeTopicsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("TopicCreator",$param) and $param["TopicCreator"] !== null) {
+            $this->TopicCreator = $param["TopicCreator"];
         }
     }
 }

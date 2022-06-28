@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlySecMiniAppScanReportList请求参数结构体
  *
- * @method string getMiniAppID() 获取任务id
- * @method void setMiniAppID(string $MiniAppID) 设置任务id
+ * @method string getMiniAppID() 获取小程序AppID
+ * @method void setMiniAppID(string $MiniAppID) 设置小程序AppID
  * @method integer getMode() 获取诊断方式 1:基础诊断，2:深度诊断
  * @method void setMode(integer $Mode) 设置诊断方式 1:基础诊断，2:深度诊断
  * @method integer getStatus() 获取诊断状态 -1:查询全部, 0:排队中, 1:成功, 2:失败, 3:进行中
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFlySecMiniAppScanReportListRequest extends AbstractModel
 {
     /**
-     * @var string 任务id
+     * @var string 小程序AppID
      */
     public $MiniAppID;
 
@@ -59,7 +59,7 @@ class DescribeFlySecMiniAppScanReportListRequest extends AbstractModel
     public $MiniAppVersion;
 
     /**
-     * @param string $MiniAppID 任务id
+     * @param string $MiniAppID 小程序AppID
      * @param integer $Mode 诊断方式 1:基础诊断，2:深度诊断
      * @param integer $Status 诊断状态 -1:查询全部, 0:排队中, 1:成功, 2:失败, 3:进行中
      * @param integer $Size 查询数量, 0:查询所有, 其他值:最近几次的诊断数量

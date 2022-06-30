@@ -53,7 +53,8 @@ try {
     array_push($req->Approvers, $clientInfo);
 
     $req->setFlowName("********************************");
-    $req->setDeadLine(1672474522);
+    // 请设置合理的时间，否则容易造成合同过期
+    $req->setDeadLine(time() + 7 * 24 * 3600);
 
     $resp = $client->CreateFlow($req);
 

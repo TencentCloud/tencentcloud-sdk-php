@@ -30,26 +30,28 @@ use TencentCloud\Common\AbstractModel;
 - 文档 "DOCUMENT"
 - 印章  “SEAL”
 - 流程 "FLOW"
+ * @method array getBusinessIds() 获取业务编号的数组，如模板编号、文档编号、印章编号
+最大支持20个资源
+ * @method void setBusinessIds(array $BusinessIds) 设置业务编号的数组，如模板编号、文档编号、印章编号
+最大支持20个资源
  * @method UserInfo getOperator() 获取操作者信息
  * @method void setOperator(UserInfo $Operator) 设置操作者信息
- * @method array getBusinessIds() 获取业务编号的数组，如模板编号、文档编号、印章编号
- * @method void setBusinessIds(array $BusinessIds) 设置业务编号的数组，如模板编号、文档编号、印章编号
- * @method string getFileType() 获取文件类型，"JPG", "PDF","ZIP"等
- * @method void setFileType(string $FileType) 设置文件类型，"JPG", "PDF","ZIP"等
- * @method string getFileName() 获取下载后的文件命名，只有fileType为zip的时候生效
- * @method void setFileName(string $FileName) 设置下载后的文件命名，只有fileType为zip的时候生效
- * @method integer getOffset() 获取指定资源起始偏移量
- * @method void setOffset(integer $Offset) 设置指定资源起始偏移量
- * @method integer getLimit() 获取指定资源数量，查询全部资源则传入-1
- * @method void setLimit(integer $Limit) 设置指定资源数量，查询全部资源则传入-1
  * @method Agent getAgent() 获取应用相关信息
  * @method void setAgent(Agent $Agent) 设置应用相关信息
- * @method integer getUrlTtl() 获取下载url过期时间，0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
- * @method void setUrlTtl(integer $UrlTtl) 设置下载url过期时间，0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
- * @method string getCcToken() 获取流程校验发送邮件权限
- * @method void setCcToken(string $CcToken) 设置流程校验发送邮件权限
- * @method string getScene() 获取场景
- * @method void setScene(string $Scene) 设置场景
+ * @method string getFileName() 获取下载后的文件命名，只有fileType为zip的时候生效
+ * @method void setFileName(string $FileName) 设置下载后的文件命名，只有fileType为zip的时候生效
+ * @method string getFileType() 获取文件类型，"JPG", "PDF","ZIP"等
+ * @method void setFileType(string $FileType) 设置文件类型，"JPG", "PDF","ZIP"等
+ * @method integer getOffset() 获取指定资源起始偏移量，默认0
+ * @method void setOffset(integer $Offset) 设置指定资源起始偏移量，默认0
+ * @method integer getLimit() 获取指定资源数量，查询全部资源则传入-1
+ * @method void setLimit(integer $Limit) 设置指定资源数量，查询全部资源则传入-1
+ * @method integer getUrlTtl() 获取下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+ * @method void setUrlTtl(integer $UrlTtl) 设置下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+ * @method string getScene() 获取暂不开放
+ * @method void setScene(string $Scene) 设置暂不开放
+ * @method string getCcToken() 获取暂不开放
+ * @method void setCcToken(string $CcToken) 设置暂不开放
  */
 class DescribeFileUrlsRequest extends AbstractModel
 {
@@ -63,19 +65,20 @@ class DescribeFileUrlsRequest extends AbstractModel
     public $BusinessType;
 
     /**
+     * @var array 业务编号的数组，如模板编号、文档编号、印章编号
+最大支持20个资源
+     */
+    public $BusinessIds;
+
+    /**
      * @var UserInfo 操作者信息
      */
     public $Operator;
 
     /**
-     * @var array 业务编号的数组，如模板编号、文档编号、印章编号
+     * @var Agent 应用相关信息
      */
-    public $BusinessIds;
-
-    /**
-     * @var string 文件类型，"JPG", "PDF","ZIP"等
-     */
-    public $FileType;
+    public $Agent;
 
     /**
      * @var string 下载后的文件命名，只有fileType为zip的时候生效
@@ -83,7 +86,12 @@ class DescribeFileUrlsRequest extends AbstractModel
     public $FileName;
 
     /**
-     * @var integer 指定资源起始偏移量
+     * @var string 文件类型，"JPG", "PDF","ZIP"等
+     */
+    public $FileType;
+
+    /**
+     * @var integer 指定资源起始偏移量，默认0
      */
     public $Offset;
 
@@ -93,24 +101,19 @@ class DescribeFileUrlsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var Agent 应用相关信息
-     */
-    public $Agent;
-
-    /**
-     * @var integer 下载url过期时间，0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+     * @var integer 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
      */
     public $UrlTtl;
 
     /**
-     * @var string 流程校验发送邮件权限
-     */
-    public $CcToken;
-
-    /**
-     * @var string 场景
+     * @var string 暂不开放
      */
     public $Scene;
+
+    /**
+     * @var string 暂不开放
+     */
+    public $CcToken;
 
     /**
      * @param string $BusinessType 文件对应的业务类型，目前支持：
@@ -118,16 +121,17 @@ class DescribeFileUrlsRequest extends AbstractModel
 - 文档 "DOCUMENT"
 - 印章  “SEAL”
 - 流程 "FLOW"
-     * @param UserInfo $Operator 操作者信息
      * @param array $BusinessIds 业务编号的数组，如模板编号、文档编号、印章编号
-     * @param string $FileType 文件类型，"JPG", "PDF","ZIP"等
-     * @param string $FileName 下载后的文件命名，只有fileType为zip的时候生效
-     * @param integer $Offset 指定资源起始偏移量
-     * @param integer $Limit 指定资源数量，查询全部资源则传入-1
+最大支持20个资源
+     * @param UserInfo $Operator 操作者信息
      * @param Agent $Agent 应用相关信息
-     * @param integer $UrlTtl 下载url过期时间，0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
-     * @param string $CcToken 流程校验发送邮件权限
-     * @param string $Scene 场景
+     * @param string $FileName 下载后的文件命名，只有fileType为zip的时候生效
+     * @param string $FileType 文件类型，"JPG", "PDF","ZIP"等
+     * @param integer $Offset 指定资源起始偏移量，默认0
+     * @param integer $Limit 指定资源数量，查询全部资源则传入-1
+     * @param integer $UrlTtl 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+     * @param string $Scene 暂不开放
+     * @param string $CcToken 暂不开放
      */
     function __construct()
     {
@@ -146,21 +150,26 @@ class DescribeFileUrlsRequest extends AbstractModel
             $this->BusinessType = $param["BusinessType"];
         }
 
+        if (array_key_exists("BusinessIds",$param) and $param["BusinessIds"] !== null) {
+            $this->BusinessIds = $param["BusinessIds"];
+        }
+
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
         }
 
-        if (array_key_exists("BusinessIds",$param) and $param["BusinessIds"] !== null) {
-            $this->BusinessIds = $param["BusinessIds"];
-        }
-
-        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
-            $this->FileType = $param["FileType"];
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
 
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
             $this->FileName = $param["FileName"];
+        }
+
+        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
+            $this->FileType = $param["FileType"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
@@ -171,21 +180,16 @@ class DescribeFileUrlsRequest extends AbstractModel
             $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
-            $this->Agent = new Agent();
-            $this->Agent->deserialize($param["Agent"]);
-        }
-
         if (array_key_exists("UrlTtl",$param) and $param["UrlTtl"] !== null) {
             $this->UrlTtl = $param["UrlTtl"];
         }
 
-        if (array_key_exists("CcToken",$param) and $param["CcToken"] !== null) {
-            $this->CcToken = $param["CcToken"];
-        }
-
         if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
             $this->Scene = $param["Scene"];
+        }
+
+        if (array_key_exists("CcToken",$param) and $param["CcToken"] !== null) {
+            $this->CcToken = $param["CcToken"];
         }
     }
 }

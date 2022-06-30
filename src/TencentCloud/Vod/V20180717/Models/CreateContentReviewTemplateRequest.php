@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateContentReviewTemplate请求参数结构体
  *
- * @method string getReviewWallSwitch() 获取智能识别结果是否进入智能识别墙（对识别结果进行人工复核）的开关。
+ * @method string getReviewWallSwitch() 获取音视频审核结果是否进入音视频审核墙（对识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) 设置智能识别结果是否进入智能识别墙（对识别结果进行人工复核）的开关。
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) 设置音视频审核结果是否进入音视频审核墙（对识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
  * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method string getName() 获取内容智能识别模板名称，长度限制：64 个字符。
- * @method void setName(string $Name) 设置内容智能识别模板名称，长度限制：64 个字符。
- * @method string getComment() 获取内容智能识别模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置内容智能识别模板描述信息，长度限制：256 个字符。
+ * @method string getName() 获取内容审核模板名称，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置内容审核模板名称，长度限制：64 个字符。
+ * @method string getComment() 获取内容审核模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置内容审核模板描述信息，长度限制：256 个字符。
  * @method PornConfigureInfo getPornConfigure() 获取令人反感的信息的控制参数。
  * @method void setPornConfigure(PornConfigureInfo $PornConfigure) 设置令人反感的信息的控制参数。
  * @method TerrorismConfigureInfo getTerrorismConfigure() 获取令人不安全的信息的控制参数。
@@ -44,15 +44,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProhibitedConfigure(ProhibitedConfigureInfo $ProhibitedConfigure) 设置违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
- * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义内容智能识别控制参数。
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义内容智能识别控制参数。
+ * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义内容审核控制参数。
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义内容审核控制参数。
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
  * @method void setScreenshotInterval(float $ScreenshotInterval) 设置截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
  */
 class CreateContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 智能识别结果是否进入智能识别墙（对识别结果进行人工复核）的开关。
+     * @var string 音视频审核结果是否进入音视频审核墙（对识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      */
@@ -64,12 +64,12 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string 内容智能识别模板名称，长度限制：64 个字符。
+     * @var string 内容审核模板名称，长度限制：64 个字符。
      */
     public $Name;
 
     /**
-     * @var string 内容智能识别模板描述信息，长度限制：256 个字符。
+     * @var string 内容审核模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
 
@@ -96,7 +96,7 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo 用户自定义内容智能识别控制参数。
+     * @var UserDefineConfigureInfo 用户自定义内容审核控制参数。
      */
     public $UserDefineConfigure;
 
@@ -106,19 +106,19 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $ScreenshotInterval;
 
     /**
-     * @param string $ReviewWallSwitch 智能识别结果是否进入智能识别墙（对识别结果进行人工复核）的开关。
+     * @param string $ReviewWallSwitch 音视频审核结果是否进入音视频审核墙（对识别结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
-     * @param string $Name 内容智能识别模板名称，长度限制：64 个字符。
-     * @param string $Comment 内容智能识别模板描述信息，长度限制：256 个字符。
+     * @param string $Name 内容审核模板名称，长度限制：64 个字符。
+     * @param string $Comment 内容审核模板描述信息，长度限制：256 个字符。
      * @param PornConfigureInfo $PornConfigure 令人反感的信息的控制参数。
      * @param TerrorismConfigureInfo $TerrorismConfigure 令人不安全的信息的控制参数。
      * @param PoliticalConfigureInfo $PoliticalConfigure 令人不适宜的控制参数。
      * @param ProhibitedConfigureInfo $ProhibitedConfigure 违禁控制参数。违禁内容包括：
 <li>谩骂；</li>
 <li>涉毒违法。</li>
-     * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义内容智能识别控制参数。
+     * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义内容审核控制参数。
      * @param float $ScreenshotInterval 截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
      */
     function __construct()

@@ -23,11 +23,18 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Dlc\V20210125\Models as Models;
 
 /**
+ * @method Models\AddDMSPartitionsResponse AddDMSPartitions(Models\AddDMSPartitionsRequest $req) DMS元数据新增分区
  * @method Models\AddUsersToWorkGroupResponse AddUsersToWorkGroup(Models\AddUsersToWorkGroupRequest $req) 添加用户到工作组
+ * @method Models\AlterDMSDatabaseResponse AlterDMSDatabase(Models\AlterDMSDatabaseRequest $req) DMS元数据更新库
+ * @method Models\AlterDMSPartitionResponse AlterDMSPartition(Models\AlterDMSPartitionRequest $req) DMS元数据更新分区
+ * @method Models\AlterDMSTableResponse AlterDMSTable(Models\AlterDMSTableRequest $req) DMS元数据更新表
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) 绑定鉴权策略到用户
  * @method Models\AttachWorkGroupPolicyResponse AttachWorkGroupPolicy(Models\AttachWorkGroupPolicyRequest $req) 绑定鉴权策略到工作组
  * @method Models\BindWorkGroupsToUserResponse BindWorkGroupsToUser(Models\BindWorkGroupsToUserRequest $req) 绑定工作组到用户
  * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 本接口（CancelTask），用于取消任务执行
+ * @method Models\CheckLockMetaDataResponse CheckLockMetaData(Models\CheckLockMetaDataRequest $req) 元数据锁检查
+ * @method Models\CreateDMSDatabaseResponse CreateDMSDatabase(Models\CreateDMSDatabaseRequest $req) DMS元数据创建库
+ * @method Models\CreateDMSTableResponse CreateDMSTable(Models\CreateDMSTableRequest $req) DMS元数据创建表
  * @method Models\CreateDatabaseResponse CreateDatabase(Models\CreateDatabaseRequest $req) 本接口（CreateDatabase）用于生成建库SQL语句。
  * @method Models\CreateExportTaskResponse CreateExportTask(Models\CreateExportTaskRequest $req) 该接口（CreateExportTask）用于创建导出任务
  * @method Models\CreateImportTaskResponse CreateImportTask(Models\CreateImportTaskRequest $req) 该接口（CreateImportTask）用于创建导入任务
@@ -46,6 +53,10 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroup(Models\DeleteUsersFromWorkGroupRequest $req) 从工作组中删除用户
  * @method Models\DeleteWorkGroupResponse DeleteWorkGroup(Models\DeleteWorkGroupRequest $req) 删除工作组
+ * @method Models\DescribeDMSDatabaseResponse DescribeDMSDatabase(Models\DescribeDMSDatabaseRequest $req) DMS元数据获取库
+ * @method Models\DescribeDMSPartitionsResponse DescribeDMSPartitions(Models\DescribeDMSPartitionsRequest $req) DMS元数据获取分区
+ * @method Models\DescribeDMSTableResponse DescribeDMSTable(Models\DescribeDMSTableRequest $req) DMS元数据获取表
+ * @method Models\DescribeDMSTablesResponse DescribeDMSTables(Models\DescribeDMSTablesRequest $req) DMS元数据获取表列表
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询数据库列表。
  * @method Models\DescribeScriptsResponse DescribeScripts(Models\DescribeScriptsRequest $req) 该接口（DescribeScripts）用于获取所有SQL查询。
  * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) 查询具体的spark应用
@@ -61,11 +72,16 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeWorkGroupsResponse DescribeWorkGroups(Models\DescribeWorkGroupsRequest $req) 获取工作组列表
  * @method Models\DetachUserPolicyResponse DetachUserPolicy(Models\DetachUserPolicyRequest $req) 解绑用户鉴权策略
  * @method Models\DetachWorkGroupPolicyResponse DetachWorkGroupPolicy(Models\DetachWorkGroupPolicyRequest $req) 解绑工作组鉴权策略
+ * @method Models\DropDMSDatabaseResponse DropDMSDatabase(Models\DropDMSDatabaseRequest $req) DMS元数据删除库
+ * @method Models\DropDMSPartitionsResponse DropDMSPartitions(Models\DropDMSPartitionsRequest $req) DMS元数据删除分区
+ * @method Models\DropDMSTableResponse DropDMSTable(Models\DropDMSTableRequest $req) DMS元数据删除表
  * @method Models\ListTaskJobLogDetailResponse ListTaskJobLogDetail(Models\ListTaskJobLogDetailRequest $req) 本接口（ListTaskJobLogDetail）用于获取spark-jar日志列表
+ * @method Models\LockMetaDataResponse LockMetaData(Models\LockMetaDataRequest $req) 元数据锁
  * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) 更新spark应用
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyWorkGroupResponse ModifyWorkGroup(Models\ModifyWorkGroupRequest $req) 修改工作组信息
  * @method Models\UnbindWorkGroupsFromUserResponse UnbindWorkGroupsFromUser(Models\UnbindWorkGroupsFromUserRequest $req) 解绑用户上的用户组
+ * @method Models\UnlockMetaDataResponse UnlockMetaData(Models\UnlockMetaDataRequest $req) 元数据解锁
  */
 
 class DlcClient extends AbstractClient

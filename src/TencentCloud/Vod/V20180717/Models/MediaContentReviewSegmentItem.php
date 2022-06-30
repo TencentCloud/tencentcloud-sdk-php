@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能识别涉及令人反感的信息、涉及令人不安全的信息的嫌疑片段
+ * 音视频审核涉及令人反感的信息、涉及令人不安全的信息的嫌疑片段
  *
  * @method float getStartTimeOffset() 获取嫌疑片段起始的偏移时间，单位：秒。
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置嫌疑片段起始的偏移时间，单位：秒。

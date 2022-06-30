@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 小程序智能识别信息
+ * 小程序音视频审核信息
  *
- * @method array getMiniProgramReviewList() 获取智能识别信息列表。
- * @method void setMiniProgramReviewList(array $MiniProgramReviewList) 设置智能识别信息列表。
+ * @method array getMiniProgramReviewList() 获取音视频审核信息列表。
+ * @method void setMiniProgramReviewList(array $MiniProgramReviewList) 设置音视频审核信息列表。
  */
 class MediaMiniProgramReviewInfo extends AbstractModel
 {
     /**
-     * @var array 智能识别信息列表。
+     * @var array 音视频审核信息列表。
      */
     public $MiniProgramReviewList;
 
     /**
-     * @param array $MiniProgramReviewList 智能识别信息列表。
+     * @param array $MiniProgramReviewList 音视频审核信息列表。
      */
     function __construct()
     {

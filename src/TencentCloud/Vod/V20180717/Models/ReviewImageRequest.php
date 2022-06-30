@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() 获取媒体文件 ID，即该文件在云点播上的全局唯一标识符。本接口要求媒体文件必须是图片格式。
  * @method void setFileId(string $FileId) 设置媒体文件 ID，即该文件在云点播上的全局唯一标识符。本接口要求媒体文件必须是图片格式。
- * @method integer getDefinition() 获取图片智能识别模板 ID，当前固定填 10。
- * @method void setDefinition(integer $Definition) 设置图片智能识别模板 ID，当前固定填 10。
+ * @method integer getDefinition() 获取图片审核模板 ID，当前固定填 10。
+ * @method void setDefinition(integer $Definition) 设置图片审核模板 ID，当前固定填 10。
  * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  */
@@ -35,7 +35,7 @@ class ReviewImageRequest extends AbstractModel
     public $FileId;
 
     /**
-     * @var integer 图片智能识别模板 ID，当前固定填 10。
+     * @var integer 图片审核模板 ID，当前固定填 10。
      */
     public $Definition;
 
@@ -46,7 +46,7 @@ class ReviewImageRequest extends AbstractModel
 
     /**
      * @param string $FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符。本接口要求媒体文件必须是图片格式。
-     * @param integer $Definition 图片智能识别模板 ID，当前固定填 10。
+     * @param integer $Definition 图片审核模板 ID，当前固定填 10。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     function __construct()

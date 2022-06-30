@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 图片画面智能识别涉及令人反感的信息的任务结果类型
+ * 图片画面审核涉及令人反感的信息的任务结果类型
  *
  * @method float getConfidence() 获取鉴别涉及令人反感的信息的评分，分值为0到100。
  * @method void setConfidence(float $Confidence) 设置鉴别涉及令人反感的信息的评分，分值为0到100。

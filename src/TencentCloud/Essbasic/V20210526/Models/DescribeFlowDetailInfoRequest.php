@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method array getFlowIds() 获取合同(流程)编号数组
- * @method void setFlowIds(array $FlowIds) 设置合同(流程)编号数组
+ * @method array getFlowIds() 获取合同(流程)编号数组，最多支持100个。
+ * @method void setFlowIds(array $FlowIds) 设置合同(流程)编号数组，最多支持100个。
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
@@ -35,7 +35,7 @@ class DescribeFlowDetailInfoRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var array 合同(流程)编号数组
+     * @var array 合同(流程)编号数组，最多支持100个。
      */
     public $FlowIds;
 
@@ -46,7 +46,7 @@ class DescribeFlowDetailInfoRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
-     * @param array $FlowIds 合同(流程)编号数组
+     * @param array $FlowIds 合同(流程)编号数组，最多支持100个。
      * @param UserInfo $Operator 操作者的信息
      */
     function __construct()

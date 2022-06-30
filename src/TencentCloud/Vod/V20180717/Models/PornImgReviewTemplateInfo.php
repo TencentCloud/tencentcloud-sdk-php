@@ -26,20 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置画面鉴别涉及令人反感的信息的任务开关，可选值：
 <li>ON：开启画面鉴别涉及令人反感的信息的任务；</li>
 <li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li>
- * @method array getLabelSet() 获取画面鉴别涉及令人反感的信息的过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回，可选值为：
+ * @method array getLabelSet() 获取画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>porn：色情；</li>
 <li>vulgar：低俗；</li>
 <li>intimacy：亲密行为；</li>
 <li>sexy：性感。</li>
- * @method void setLabelSet(array $LabelSet) 设置画面鉴别涉及令人反感的信息的过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回，可选值为：
+ * @method void setLabelSet(array $LabelSet) 设置画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>porn：色情；</li>
 <li>vulgar：低俗；</li>
 <li>intimacy：亲密行为；</li>
 <li>sexy：性感。</li>
- * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
- * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
- * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
- * @method void setReviewConfidence(integer $ReviewConfidence) 设置判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
+ * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+ * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+ * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
+ * @method void setReviewConfidence(integer $ReviewConfidence) 设置判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
  */
 class PornImgReviewTemplateInfo extends AbstractModel
 {
@@ -51,7 +51,7 @@ class PornImgReviewTemplateInfo extends AbstractModel
     public $Switch;
 
     /**
-     * @var array 画面鉴别涉及令人反感的信息的过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回，可选值为：
+     * @var array 画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>porn：色情；</li>
 <li>vulgar：低俗；</li>
 <li>intimacy：亲密行为；</li>
@@ -60,12 +60,12 @@ class PornImgReviewTemplateInfo extends AbstractModel
     public $LabelSet;
 
     /**
-     * @var integer 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+     * @var integer 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
      */
     public $BlockConfidence;
 
     /**
-     * @var integer 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
+     * @var integer 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
      */
     public $ReviewConfidence;
 
@@ -73,13 +73,13 @@ class PornImgReviewTemplateInfo extends AbstractModel
      * @param string $Switch 画面鉴别涉及令人反感的信息的任务开关，可选值：
 <li>ON：开启画面鉴别涉及令人反感的信息的任务；</li>
 <li>OFF：关闭画面鉴别涉及令人反感的信息的任务。</li>
-     * @param array $LabelSet 画面鉴别涉及令人反感的信息的过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回，可选值为：
+     * @param array $LabelSet 画面鉴别涉及令人反感的信息的过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>porn：色情；</li>
 <li>vulgar：低俗；</li>
 <li>intimacy：亲密行为；</li>
 <li>sexy：性感。</li>
-     * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
-     * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
+     * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规，不填默认为 90 分。取值范围：0~100。
+     * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核，不填默认为 0 分。取值范围：0~100。
      */
     function __construct()
     {

@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取应用信息
  * @method void setAgent(Agent $Agent) 设置应用信息
- * @method string getStartDate() 获取开始时间 eg:2021-03-21
- * @method void setStartDate(string $StartDate) 设置开始时间 eg:2021-03-21
- * @method string getEndDate() 获取结束时间 eg:2021-06-21 
-开始时间到结束时间的区间长度小于等于90天
- * @method void setEndDate(string $EndDate) 设置结束时间 eg:2021-06-21 
-开始时间到结束时间的区间长度小于等于90天
+ * @method string getStartDate() 获取开始时间，例如：2021-03-21
+ * @method void setStartDate(string $StartDate) 设置开始时间，例如：2021-03-21
+ * @method string getEndDate() 获取结束时间，例如：2021-06-21；
+开始时间到结束时间的区间长度小于等于90天。
+ * @method void setEndDate(string $EndDate) 设置结束时间，例如：2021-06-21；
+开始时间到结束时间的区间长度小于等于90天。
+ * @method boolean getNeedAggregate() 获取是否汇总数据，默认不汇总。
+不汇总：返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数；
+汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据；
+ * @method void setNeedAggregate(boolean $NeedAggregate) 设置是否汇总数据，默认不汇总。
+不汇总：返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数；
+汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据；
+ * @method integer getLimit() 获取单次返回的最多条目数量。默认为1000，且不能超过1000。
+ * @method void setLimit(integer $Limit) 设置单次返回的最多条目数量。默认为1000，且不能超过1000。
+ * @method integer getOffset() 获取偏移量，默认是0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认是0。
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method boolean getNeedAggregate() 获取是否汇总数据，默认不汇总
-不汇总:返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数
-汇总:返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据
- * @method void setNeedAggregate(boolean $NeedAggregate) 设置是否汇总数据，默认不汇总
-不汇总:返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数
-汇总:返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据
- * @method integer getLimit() 获取单次返回的最多条目数量,默认为1000,且不能超过1000
- * @method void setLimit(integer $Limit) 设置单次返回的最多条目数量,默认为1000,且不能超过1000
- * @method integer getOffset() 获取偏移量,默认是0
- * @method void setOffset(integer $Offset) 设置偏移量,默认是0
  */
 class DescribeUsageRequest extends AbstractModel
 {
@@ -49,15 +49,32 @@ class DescribeUsageRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 开始时间 eg:2021-03-21
+     * @var string 开始时间，例如：2021-03-21
      */
     public $StartDate;
 
     /**
-     * @var string 结束时间 eg:2021-06-21 
-开始时间到结束时间的区间长度小于等于90天
+     * @var string 结束时间，例如：2021-06-21；
+开始时间到结束时间的区间长度小于等于90天。
      */
     public $EndDate;
+
+    /**
+     * @var boolean 是否汇总数据，默认不汇总。
+不汇总：返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数；
+汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据；
+     */
+    public $NeedAggregate;
+
+    /**
+     * @var integer 单次返回的最多条目数量。默认为1000，且不能超过1000。
+     */
+    public $Limit;
+
+    /**
+     * @var integer 偏移量，默认是0。
+     */
+    public $Offset;
 
     /**
      * @var UserInfo 操作者的信息
@@ -65,33 +82,16 @@ class DescribeUsageRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var boolean 是否汇总数据，默认不汇总
-不汇总:返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数
-汇总:返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据
-     */
-    public $NeedAggregate;
-
-    /**
-     * @var integer 单次返回的最多条目数量,默认为1000,且不能超过1000
-     */
-    public $Limit;
-
-    /**
-     * @var integer 偏移量,默认是0
-     */
-    public $Offset;
-
-    /**
      * @param Agent $Agent 应用信息
-     * @param string $StartDate 开始时间 eg:2021-03-21
-     * @param string $EndDate 结束时间 eg:2021-06-21 
-开始时间到结束时间的区间长度小于等于90天
+     * @param string $StartDate 开始时间，例如：2021-03-21
+     * @param string $EndDate 结束时间，例如：2021-06-21；
+开始时间到结束时间的区间长度小于等于90天。
+     * @param boolean $NeedAggregate 是否汇总数据，默认不汇总。
+不汇总：返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数；
+汇总：返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据；
+     * @param integer $Limit 单次返回的最多条目数量。默认为1000，且不能超过1000。
+     * @param integer $Offset 偏移量，默认是0。
      * @param UserInfo $Operator 操作者的信息
-     * @param boolean $NeedAggregate 是否汇总数据，默认不汇总
-不汇总:返回在统计区间内渠道下所有企业的每日明细，即每个企业N条数据，N为统计天数
-汇总:返回在统计区间内渠道下所有企业的汇总后数据，即每个企业一条数据
-     * @param integer $Limit 单次返回的最多条目数量,默认为1000,且不能超过1000
-     * @param integer $Offset 偏移量,默认是0
      */
     function __construct()
     {
@@ -119,11 +119,6 @@ class DescribeUsageRequest extends AbstractModel
             $this->EndDate = $param["EndDate"];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
-        }
-
         if (array_key_exists("NeedAggregate",$param) and $param["NeedAggregate"] !== null) {
             $this->NeedAggregate = $param["NeedAggregate"];
         }
@@ -134,6 +129,11 @@ class DescribeUsageRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
         }
     }
 }

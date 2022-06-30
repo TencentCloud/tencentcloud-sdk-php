@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAIRecognitionTemplate返回参数结构体
  *
- * @method integer getDefinition() 获取视频内容识别模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置视频内容识别模板唯一标识。
+ * @method integer getDefinition() 获取音视频内容识别模板唯一标识。
+ * @method void setDefinition(integer $Definition) 设置音视频内容识别模板唯一标识。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateAIRecognitionTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer 视频内容识别模板唯一标识。
+     * @var integer 音视频内容识别模板唯一标识。
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class CreateAIRecognitionTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Definition 视频内容识别模板唯一标识。
+     * @param integer $Definition 音视频内容识别模板唯一标识。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

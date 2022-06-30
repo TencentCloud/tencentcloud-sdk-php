@@ -21,49 +21,39 @@ use TencentCloud\Common\AbstractModel;
  * CreateConsoleLoginUrl请求参数结构体
  *
  * @method Agent getAgent() 获取应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
  * @method void setAgent(Agent $Agent) 设置应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
- * @method string getProxyOrganizationName() 获取渠道侧合作企业名称
- * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道侧合作企业名称
- * @method string getUniformSocialCreditCode() 获取渠道侧合作企业统一社会信用代码
- * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置渠道侧合作企业统一社会信用代码
- * @method string getProxyOperatorName() 获取渠道侧合作企业经办人的姓名
- * @method void setProxyOperatorName(string $ProxyOperatorName) 设置渠道侧合作企业经办人的姓名
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+ * @method string getProxyOrganizationName() 获取渠道侧合作企业名称，最大长度64个字符
+ * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道侧合作企业名称，最大长度64个字符
+ * @method string getProxyOperatorName() 获取渠道侧合作企业经办人的姓名，最大长度50个字符
+ * @method void setProxyOperatorName(string $ProxyOperatorName) 设置渠道侧合作企业经办人的姓名，最大长度50个字符
  * @method string getModule() 获取控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
  * @method void setModule(string $Module) 设置控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
  * @method string getModuleId() 获取控制台指定模块Id
  * @method void setModuleId(string $ModuleId) 设置控制台指定模块Id
+ * @method string getUniformSocialCreditCode() 获取渠道侧合作企业统一社会信用代码，最大长度200个字符
+ * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置渠道侧合作企业统一社会信用代码，最大长度200个字符
+ * @method UserInfo getOperator() 获取操作者的信息
+ * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
 class CreateConsoleLoginUrlRequest extends AbstractModel
 {
     /**
      * @var Agent 应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
      */
     public $Agent;
 
     /**
-     * @var string 渠道侧合作企业名称
+     * @var string 渠道侧合作企业名称，最大长度64个字符
      */
     public $ProxyOrganizationName;
 
     /**
-     * @var string 渠道侧合作企业统一社会信用代码
-     */
-    public $UniformSocialCreditCode;
-
-    /**
-     * @var string 渠道侧合作企业经办人的姓名
+     * @var string 渠道侧合作企业经办人的姓名，最大长度50个字符
      */
     public $ProxyOperatorName;
-
-    /**
-     * @var UserInfo 操作者的信息
-     */
-    public $Operator;
 
     /**
      * @var string 控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
@@ -76,14 +66,24 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $ModuleId;
 
     /**
+     * @var string 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     */
+    public $UniformSocialCreditCode;
+
+    /**
+     * @var UserInfo 操作者的信息
+     */
+    public $Operator;
+
+    /**
      * @param Agent $Agent 应用信息
-此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
-     * @param string $ProxyOrganizationName 渠道侧合作企业名称
-     * @param string $UniformSocialCreditCode 渠道侧合作企业统一社会信用代码
-     * @param string $ProxyOperatorName 渠道侧合作企业经办人的姓名
-     * @param UserInfo $Operator 操作者的信息
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+     * @param string $ProxyOrganizationName 渠道侧合作企业名称，最大长度64个字符
+     * @param string $ProxyOperatorName 渠道侧合作企业经办人的姓名，最大长度50个字符
      * @param string $Module 控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
      * @param string $ModuleId 控制台指定模块Id
+     * @param string $UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     * @param UserInfo $Operator 操作者的信息
      */
     function __construct()
     {
@@ -107,17 +107,8 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
             $this->ProxyOrganizationName = $param["ProxyOrganizationName"];
         }
 
-        if (array_key_exists("UniformSocialCreditCode",$param) and $param["UniformSocialCreditCode"] !== null) {
-            $this->UniformSocialCreditCode = $param["UniformSocialCreditCode"];
-        }
-
         if (array_key_exists("ProxyOperatorName",$param) and $param["ProxyOperatorName"] !== null) {
             $this->ProxyOperatorName = $param["ProxyOperatorName"];
-        }
-
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
         }
 
         if (array_key_exists("Module",$param) and $param["Module"] !== null) {
@@ -126,6 +117,15 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
         if (array_key_exists("ModuleId",$param) and $param["ModuleId"] !== null) {
             $this->ModuleId = $param["ModuleId"];
+        }
+
+        if (array_key_exists("UniformSocialCreditCode",$param) and $param["UniformSocialCreditCode"] !== null) {
+            $this->UniformSocialCreditCode = $param["UniformSocialCreditCode"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
         }
     }
 }

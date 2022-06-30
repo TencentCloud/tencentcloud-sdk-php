@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBucketKey(string $BucketKey) 设置聚合关键词
  * @method string getDbName() 获取数据库
  * @method void setDbName(string $DbName) 设置数据库
+ * @method array getNamespaceIdList() 获取命名空间id数组
+ * @method void setNamespaceIdList(array $NamespaceIdList) 设置命名空间id数组
  */
 class DescribeStatisticsRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class DescribeStatisticsRequest extends AbstractModel
     public $DbName;
 
     /**
+     * @var array 命名空间id数组
+     */
+    public $NamespaceIdList;
+
+    /**
      * @param string $Type 类型：Interface、Service、Group、Instance、SQL、NoSQL
      * @param integer $TimeStep 步长，单位s：60、3600、86400
      * @param integer $Offset 偏移量，取值范围大于等于0，默认值为0
@@ -136,6 +143,7 @@ class DescribeStatisticsRequest extends AbstractModel
      * @param array $MetricDimensionValues 维度
      * @param string $BucketKey 聚合关键词
      * @param string $DbName 数据库
+     * @param array $NamespaceIdList 命名空间id数组
      */
     function __construct()
     {
@@ -209,6 +217,10 @@ class DescribeStatisticsRequest extends AbstractModel
 
         if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
             $this->DbName = $param["DbName"];
+        }
+
+        if (array_key_exists("NamespaceIdList",$param) and $param["NamespaceIdList"] !== null) {
+            $this->NamespaceIdList = $param["NamespaceIdList"];
         }
     }
 }

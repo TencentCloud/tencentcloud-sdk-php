@@ -14,47 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Taf\V20200210\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 流量反欺诈-虚假TA识别
+ * 列排序对象
  *
- * @method integer getCode() 获取错误码[0:成功；非0：失败的错误码]
- * @method void setCode(integer $Code) 设置错误码[0:成功；非0：失败的错误码]
- * @method string getMessage() 获取错误信息
+ * @method string getCol() 获取列名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置错误信息
+ * @method void setCol(string $Col) 设置列名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OutputTaValue getValue() 获取结果数据
+ * @method integer getOrder() 获取排序
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(OutputTaValue $Value) 设置结果数据
+ * @method void setOrder(integer $Order) 设置排序
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class OutputTaData extends AbstractModel
+class DMSColumnOrder extends AbstractModel
 {
     /**
-     * @var integer 错误码[0:成功；非0：失败的错误码]
-     */
-    public $Code;
-
-    /**
-     * @var string 错误信息
+     * @var string 列名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Message;
+    public $Col;
 
     /**
-     * @var OutputTaValue 结果数据
+     * @var integer 排序
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Value;
+    public $Order;
 
     /**
-     * @param integer $Code 错误码[0:成功；非0：失败的错误码]
-     * @param string $Message 错误信息
+     * @param string $Col 列名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputTaValue $Value 结果数据
+     * @param integer $Order 排序
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,17 +62,12 @@ class OutputTaData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
-            $this->Code = $param["Code"];
+        if (array_key_exists("Col",$param) and $param["Col"] !== null) {
+            $this->Col = $param["Col"];
         }
 
-        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
-            $this->Message = $param["Message"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = new OutputTaValue();
-            $this->Value->deserialize($param["Value"]);
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
         }
     }
 }

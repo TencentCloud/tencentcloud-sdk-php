@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostCount(integer $HostCount) 设置影响机器数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSupportDefense() 获取是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportDefense(integer $IsSupportDefense) 设置是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDefenseAttackCount() 获取已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefenseAttackCount(integer $DefenseAttackCount) 设置已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmergencyVul extends AbstractModel
 {
@@ -120,6 +128,18 @@ class EmergencyVul extends AbstractModel
     public $HostCount;
 
     /**
+     * @var integer 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportDefense;
+
+    /**
+     * @var integer 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefenseAttackCount;
+
+    /**
      * @param integer $VulId 漏洞id
      * @param integer $Level 漏洞级别
      * @param string $VulName 漏洞名称
@@ -135,6 +155,10 @@ class EmergencyVul extends AbstractModel
      * @param string $Labels 漏洞标签 多个逗号分割
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostCount 影响机器数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSupportDefense 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefenseAttackCount 已防御的攻击次数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +220,14 @@ class EmergencyVul extends AbstractModel
 
         if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
             $this->HostCount = $param["HostCount"];
+        }
+
+        if (array_key_exists("IsSupportDefense",$param) and $param["IsSupportDefense"] !== null) {
+            $this->IsSupportDefense = $param["IsSupportDefense"];
+        }
+
+        if (array_key_exists("DefenseAttackCount",$param) and $param["DefenseAttackCount"] !== null) {
+            $this->DefenseAttackCount = $param["DefenseAttackCount"];
         }
     }
 }

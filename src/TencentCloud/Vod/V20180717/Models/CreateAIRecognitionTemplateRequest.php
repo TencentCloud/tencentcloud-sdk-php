@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method string getName() 获取视频内容识别模板名称，长度限制：64 个字符。
- * @method void setName(string $Name) 设置视频内容识别模板名称，长度限制：64 个字符。
- * @method string getComment() 获取视频内容识别模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置视频内容识别模板描述信息，长度限制：256 个字符。
+ * @method string getName() 获取音视频内容识别模板名称，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置音视频内容识别模板名称，长度限制：64 个字符。
+ * @method string getComment() 获取音视频内容识别模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置音视频内容识别模板描述信息，长度限制：256 个字符。
  * @method HeadTailConfigureInfo getHeadTailConfigure() 获取视频片头片尾识别控制参数。
  * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) 设置视频片头片尾识别控制参数。
  * @method SegmentConfigureInfo getSegmentConfigure() 获取视频拆条识别控制参数。
@@ -53,12 +53,12 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string 视频内容识别模板名称，长度限制：64 个字符。
+     * @var string 音视频内容识别模板名称，长度限制：64 个字符。
      */
     public $Name;
 
     /**
-     * @var string 视频内容识别模板描述信息，长度限制：256 个字符。
+     * @var string 音视频内容识别模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
 
@@ -109,8 +109,8 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
 
     /**
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
-     * @param string $Name 视频内容识别模板名称，长度限制：64 个字符。
-     * @param string $Comment 视频内容识别模板描述信息，长度限制：256 个字符。
+     * @param string $Name 音视频内容识别模板名称，长度限制：64 个字符。
+     * @param string $Comment 音视频内容识别模板描述信息，长度限制：256 个字符。
      * @param HeadTailConfigureInfo $HeadTailConfigure 视频片头片尾识别控制参数。
      * @param SegmentConfigureInfo $SegmentConfigure 视频拆条识别控制参数。
      * @param FaceConfigureInfo $FaceConfigure 人脸识别控制参数。

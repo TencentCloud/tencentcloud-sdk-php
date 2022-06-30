@@ -18,10 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 视频处理任务信息
+ * 音视频处理任务信息
  *
- * @method string getTaskId() 获取视频处理任务 ID。
- * @method void setTaskId(string $TaskId) 设置视频处理任务 ID。
+ * @method string getTaskId() 获取音视频处理任务 ID。
+ * @method void setTaskId(string $TaskId) 设置音视频处理任务 ID。
  * @method string getStatus() 获取任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
@@ -50,18 +50,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileUrl(string $FileUrl) 设置媒体文件地址
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.MediaUrl；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Url。</li>
- * @method MediaMetaData getMetaData() 获取原始视频的元信息。
+ * @method MediaMetaData getMetaData() 获取原始音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
+ * @method void setMetaData(MediaMetaData $MetaData) 设置原始音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getMediaProcessResultSet() 获取视频处理任务的执行状态与结果。
- * @method void setMediaProcessResultSet(array $MediaProcessResultSet) 设置视频处理任务的执行状态与结果。
- * @method array getAiContentReviewResultSet() 获取视频智能识别任务的执行状态与结果。
- * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) 设置视频智能识别任务的执行状态与结果。
- * @method array getAiAnalysisResultSet() 获取视频内容分析任务的执行状态与结果。
- * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) 设置视频内容分析任务的执行状态与结果。
- * @method array getAiRecognitionResultSet() 获取视频内容识别任务的执行状态与结果。
- * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) 设置视频内容识别任务的执行状态与结果。
+ * @method array getMediaProcessResultSet() 获取音视频处理任务的执行状态与结果。
+ * @method void setMediaProcessResultSet(array $MediaProcessResultSet) 设置音视频处理任务的执行状态与结果。
+ * @method array getAiContentReviewResultSet() 获取音视频审核任务的执行状态与结果。
+ * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) 设置音视频审核任务的执行状态与结果。
+ * @method array getAiAnalysisResultSet() 获取音视频内容分析任务的执行状态与结果。
+ * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) 设置音视频内容分析任务的执行状态与结果。
+ * @method array getAiRecognitionResultSet() 获取音视频内容识别任务的执行状态与结果。
+ * @method void setAiRecognitionResultSet(array $AiRecognitionResultSet) 设置音视频内容识别任务的执行状态与结果。
  * @method integer getTasksPriority() 获取任务流的优先级，取值范围为 [-10, 10]。
  * @method void setTasksPriority(integer $TasksPriority) 设置任务流的优先级，取值范围为 [-10, 10]。
  * @method string getTasksNotifyMode() 获取任务流状态变更通知模式。
@@ -80,7 +80,7 @@ use TencentCloud\Common\AbstractModel;
 class ProcedureTask extends AbstractModel
 {
     /**
-     * @var string 视频处理任务 ID。
+     * @var string 音视频处理任务 ID。
      */
     public $TaskId;
 
@@ -123,28 +123,28 @@ class ProcedureTask extends AbstractModel
     public $FileUrl;
 
     /**
-     * @var MediaMetaData 原始视频的元信息。
+     * @var MediaMetaData 原始音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaData;
 
     /**
-     * @var array 视频处理任务的执行状态与结果。
+     * @var array 音视频处理任务的执行状态与结果。
      */
     public $MediaProcessResultSet;
 
     /**
-     * @var array 视频智能识别任务的执行状态与结果。
+     * @var array 音视频审核任务的执行状态与结果。
      */
     public $AiContentReviewResultSet;
 
     /**
-     * @var array 视频内容分析任务的执行状态与结果。
+     * @var array 音视频内容分析任务的执行状态与结果。
      */
     public $AiAnalysisResultSet;
 
     /**
-     * @var array 视频内容识别任务的执行状态与结果。
+     * @var array 音视频内容识别任务的执行状态与结果。
      */
     public $AiRecognitionResultSet;
 
@@ -172,7 +172,7 @@ class ProcedureTask extends AbstractModel
     public $SessionId;
 
     /**
-     * @param string $TaskId 视频处理任务 ID。
+     * @param string $TaskId 音视频处理任务 ID。
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
@@ -187,12 +187,12 @@ class ProcedureTask extends AbstractModel
      * @param string $FileUrl 媒体文件地址
 <li>若流程由 [ProcessMedia](https://cloud.tencent.com/document/product/266/33427) 发起，该字段表示 [MediaInfo](https://cloud.tencent.com/document/product/266/31773#MediaInfo) 的 BasicInfo.MediaUrl；</li>
 <li>若流程由 [ProcessMediaByUrl](https://cloud.tencent.com/document/product/266/33426) 发起，该字段表示 [MediaInputInfo](https://cloud.tencent.com/document/product/266/31773#MediaInputInfo) 的 Url。</li>
-     * @param MediaMetaData $MetaData 原始视频的元信息。
+     * @param MediaMetaData $MetaData 原始音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $MediaProcessResultSet 视频处理任务的执行状态与结果。
-     * @param array $AiContentReviewResultSet 视频智能识别任务的执行状态与结果。
-     * @param array $AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
-     * @param array $AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
+     * @param array $MediaProcessResultSet 音视频处理任务的执行状态与结果。
+     * @param array $AiContentReviewResultSet 音视频审核任务的执行状态与结果。
+     * @param array $AiAnalysisResultSet 音视频内容分析任务的执行状态与结果。
+     * @param array $AiRecognitionResultSet 音视频内容识别任务的执行状态与结果。
      * @param integer $TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
      * @param string $TasksNotifyMode 任务流状态变更通知模式。
 <li>Finish：只有当任务流全部执行完毕时，才发起一次事件通知；</li>

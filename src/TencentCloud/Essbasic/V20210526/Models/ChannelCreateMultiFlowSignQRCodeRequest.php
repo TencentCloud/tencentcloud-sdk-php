@@ -26,18 +26,22 @@ use TencentCloud\Common\AbstractModel;
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
  * @method string getTemplateId() 获取模版ID
  * @method void setTemplateId(string $TemplateId) 设置模版ID
- * @method string getFlowName() 获取合同名称
- * @method void setFlowName(string $FlowName) 设置合同名称
- * @method UserInfo getOperator() 获取用户信息
- * @method void setOperator(UserInfo $Operator) 设置用户信息
- * @method integer getFlowEffectiveDay() 获取合同有效天数 默认7天 最高设置不超过30天
- * @method void setFlowEffectiveDay(integer $FlowEffectiveDay) 设置合同有效天数 默认7天 最高设置不超过30天
+ * @method string getFlowName() 获取签署流程名称，最大长度200个字符。
+ * @method void setFlowName(string $FlowName) 设置签署流程名称，最大长度200个字符。
+ * @method integer getMaxFlowNum() 获取最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+ * @method void setMaxFlowNum(integer $MaxFlowNum) 设置最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+ * @method integer getFlowEffectiveDay() 获取签署流程有效天数 默认7天 最高设置不超过30天
+ * @method void setFlowEffectiveDay(integer $FlowEffectiveDay) 设置签署流程有效天数 默认7天 最高设置不超过30天
  * @method integer getQrEffectiveDay() 获取二维码有效天数 默认7天 最高设置不超过90天
  * @method void setQrEffectiveDay(integer $QrEffectiveDay) 设置二维码有效天数 默认7天 最高设置不超过90天
- * @method integer getMaxFlowNum() 获取最大合同份数，默认5份 超过此上限 二维码自动失效
- * @method void setMaxFlowNum(integer $MaxFlowNum) 设置最大合同份数，默认5份 超过此上限 二维码自动失效
- * @method string getCallbackUrl() 获取回调地址
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
+ * @method string getCallbackUrl() 获取回调地址，最大长度1000个字符
+不传默认使用渠道应用号配置的回调地址
+回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，最大长度1000个字符
+不传默认使用渠道应用号配置的回调地址
+回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
+ * @method UserInfo getOperator() 获取用户信息
+ * @method void setOperator(UserInfo $Operator) 设置用户信息
  */
 class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
@@ -53,17 +57,17 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 合同名称
+     * @var string 签署流程名称，最大长度200个字符。
      */
     public $FlowName;
 
     /**
-     * @var UserInfo 用户信息
+     * @var integer 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
      */
-    public $Operator;
+    public $MaxFlowNum;
 
     /**
-     * @var integer 合同有效天数 默认7天 最高设置不超过30天
+     * @var integer 签署流程有效天数 默认7天 最高设置不超过30天
      */
     public $FlowEffectiveDay;
 
@@ -73,25 +77,29 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $QrEffectiveDay;
 
     /**
-     * @var integer 最大合同份数，默认5份 超过此上限 二维码自动失效
-     */
-    public $MaxFlowNum;
-
-    /**
-     * @var string 回调地址
+     * @var string 回调地址，最大长度1000个字符
+不传默认使用渠道应用号配置的回调地址
+回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
      */
     public $CallbackUrl;
+
+    /**
+     * @var UserInfo 用户信息
+     */
+    public $Operator;
 
     /**
      * @param Agent $Agent 渠道应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      * @param string $TemplateId 模版ID
-     * @param string $FlowName 合同名称
-     * @param UserInfo $Operator 用户信息
-     * @param integer $FlowEffectiveDay 合同有效天数 默认7天 最高设置不超过30天
+     * @param string $FlowName 签署流程名称，最大长度200个字符。
+     * @param integer $MaxFlowNum 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+     * @param integer $FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
      * @param integer $QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
-     * @param integer $MaxFlowNum 最大合同份数，默认5份 超过此上限 二维码自动失效
-     * @param string $CallbackUrl 回调地址
+     * @param string $CallbackUrl 回调地址，最大长度1000个字符
+不传默认使用渠道应用号配置的回调地址
+回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
+     * @param UserInfo $Operator 用户信息
      */
     function __construct()
     {
@@ -119,9 +127,8 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
             $this->FlowName = $param["FlowName"];
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
+        if (array_key_exists("MaxFlowNum",$param) and $param["MaxFlowNum"] !== null) {
+            $this->MaxFlowNum = $param["MaxFlowNum"];
         }
 
         if (array_key_exists("FlowEffectiveDay",$param) and $param["FlowEffectiveDay"] !== null) {
@@ -132,12 +139,13 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
             $this->QrEffectiveDay = $param["QrEffectiveDay"];
         }
 
-        if (array_key_exists("MaxFlowNum",$param) and $param["MaxFlowNum"] !== null) {
-            $this->MaxFlowNum = $param["MaxFlowNum"];
-        }
-
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
         }
     }
 }

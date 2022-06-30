@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 抄送信息
  *
- * @method string getMobile() 获取被抄送人手机号
- * @method void setMobile(string $Mobile) 设置被抄送人手机号
+ * @method string getMobile() 获取被抄送人手机号，大陆11位手机号
+ * @method void setMobile(string $Mobile) 设置被抄送人手机号，大陆11位手机号
  */
 class CcInfo extends AbstractModel
 {
     /**
-     * @var string 被抄送人手机号
+     * @var string 被抄送人手机号，大陆11位手机号
      */
     public $Mobile;
 
     /**
-     * @param string $Mobile 被抄送人手机号
+     * @param string $Mobile 被抄送人手机号，大陆11位手机号
      */
     function __construct()
     {

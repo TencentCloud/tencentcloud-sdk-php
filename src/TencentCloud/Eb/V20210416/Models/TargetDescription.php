@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSCFParams(SCFParams $SCFParams) 设置云函数参数
  * @method CkafkaTargetParams getCkafkaTargetParams() 获取Ckafka参数
  * @method void setCkafkaTargetParams(CkafkaTargetParams $CkafkaTargetParams) 设置Ckafka参数
+ * @method ESTargetParams getESTargetParams() 获取ElasticSearch参数
+ * @method void setESTargetParams(ESTargetParams $ESTargetParams) 设置ElasticSearch参数
  */
 class TargetDescription extends AbstractModel
 {
@@ -45,9 +47,15 @@ class TargetDescription extends AbstractModel
     public $CkafkaTargetParams;
 
     /**
+     * @var ESTargetParams ElasticSearch参数
+     */
+    public $ESTargetParams;
+
+    /**
      * @param string $ResourceDescription QCS资源六段式，更多参考 [资源六段式](https://cloud.tencent.com/document/product/598/10606)
      * @param SCFParams $SCFParams 云函数参数
      * @param CkafkaTargetParams $CkafkaTargetParams Ckafka参数
+     * @param ESTargetParams $ESTargetParams ElasticSearch参数
      */
     function __construct()
     {
@@ -74,6 +82,11 @@ class TargetDescription extends AbstractModel
         if (array_key_exists("CkafkaTargetParams",$param) and $param["CkafkaTargetParams"] !== null) {
             $this->CkafkaTargetParams = new CkafkaTargetParams();
             $this->CkafkaTargetParams->deserialize($param["CkafkaTargetParams"]);
+        }
+
+        if (array_key_exists("ESTargetParams",$param) and $param["ESTargetParams"] !== null) {
+            $this->ESTargetParams = new ESTargetParams();
+            $this->ESTargetParams->deserialize($param["ESTargetParams"]);
         }
     }
 }

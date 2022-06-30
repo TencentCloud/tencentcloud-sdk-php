@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCCEnable(integer $CCEnable) 设置CC防护开关
  * @method array getTagInfoList() 获取资源关联标签
  * @method void setTagInfoList(array $TagInfoList) 设置资源关联标签
+ * @method integer getIpCountNewFlag() 获取新版本1ip高防包
+ * @method void setIpCountNewFlag(integer $IpCountNewFlag) 设置新版本1ip高防包
  */
 class BGPInstance extends AbstractModel
 {
@@ -158,6 +160,11 @@ class BGPInstance extends AbstractModel
     public $TagInfoList;
 
     /**
+     * @var integer 新版本1ip高防包
+     */
+    public $IpCountNewFlag;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPInstanceUsages $Usage 资产实例的使用统计信息
@@ -184,6 +191,7 @@ class BGPInstance extends AbstractModel
      * @param string $DDoSLevel 四层防护严格级别
      * @param integer $CCEnable CC防护开关
      * @param array $TagInfoList 资源关联标签
+     * @param integer $IpCountNewFlag 新版本1ip高防包
      */
     function __construct()
     {
@@ -267,6 +275,10 @@ class BGPInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("IpCountNewFlag",$param) and $param["IpCountNewFlag"] !== null) {
+            $this->IpCountNewFlag = $param["IpCountNewFlag"];
         }
     }
 }

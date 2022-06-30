@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProxyId() 获取实例ID
  * @method void setProxyId(string $ProxyId) 设置实例ID
- * @method string getProxyName() 获取实例名称
- * @method void setProxyName(string $ProxyName) 设置实例名称
+ * @method string getProxyName() 获取代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
+ * @method void setProxyName(string $ProxyName) 设置代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
  * @method string getPlatType() 获取调度模式：
 ip表示Anycast IP
 domain表示CNAME
@@ -59,13 +63,17 @@ progress：部署中
  * @method integer getSessionPersistTime() 获取会话保持时间
  * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间
  * @method string getProxyType() 获取服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
  * @method void setProxyType(string $ProxyType) 设置服务类型
-hostname：子域名
-instance：实例
- * @method string getHostId() 获取七层实例ID
- * @method void setHostId(string $HostId) 设置七层实例ID
+hostname：子域名模式
+instance：实例模式
+ * @method string getHostId() 获取当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
+ * @method void setHostId(string $HostId) 设置当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -77,7 +85,9 @@ class DescribeApplicationProxyDetailResponse extends AbstractModel
     public $ProxyId;
 
     /**
-     * @var string 实例名称
+     * @var string 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      */
     public $ProxyName;
 
@@ -148,13 +158,15 @@ progress：部署中
 
     /**
      * @var string 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      */
     public $ProxyType;
 
     /**
-     * @var string 七层实例ID
+     * @var string 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
      */
     public $HostId;
 
@@ -165,7 +177,9 @@ instance：实例
 
     /**
      * @param string $ProxyId 实例ID
-     * @param string $ProxyName 实例名称
+     * @param string $ProxyName 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      * @param string $PlatType 调度模式：
 ip表示Anycast IP
 domain表示CNAME
@@ -184,9 +198,11 @@ progress：部署中
      * @param string $ZoneName 站点名称
      * @param integer $SessionPersistTime 会话保持时间
      * @param string $ProxyType 服务类型
-hostname：子域名
-instance：实例
-     * @param string $HostId 七层实例ID
+hostname：子域名模式
+instance：实例模式
+     * @param string $HostId 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置站点ID
  * @method string getZoneName() 获取站点名称
  * @method void setZoneName(string $ZoneName) 设置站点名称
- * @method string getProxyName() 获取四层代理名称
- * @method void setProxyName(string $ProxyName) 设置四层代理名称
+ * @method string getProxyName() 获取代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
+ * @method void setProxyName(string $ProxyName) 设置代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
  * @method string getPlatType() 获取调度模式：
 ip表示Anycast IP
 domain表示CNAME
@@ -45,11 +49,11 @@ domain表示CNAME
  * @method integer getSessionPersistTime() 获取会话保持时间，取值范围：30-3600，单位：秒
  * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间，取值范围：30-3600，单位：秒
  * @method string getProxyType() 获取服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
  * @method void setProxyType(string $ProxyType) 设置服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
  */
 class CreateApplicationProxyRequest extends AbstractModel
 {
@@ -64,7 +68,9 @@ class CreateApplicationProxyRequest extends AbstractModel
     public $ZoneName;
 
     /**
-     * @var string 四层代理名称
+     * @var string 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      */
     public $ProxyName;
 
@@ -107,15 +113,17 @@ domain表示CNAME
 
     /**
      * @var string 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      */
     public $ProxyType;
 
     /**
      * @param string $ZoneId 站点ID
      * @param string $ZoneName 站点名称
-     * @param string $ProxyName 四层代理名称
+     * @param string $ProxyName 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      * @param string $PlatType 调度模式：
 ip表示Anycast IP
 domain表示CNAME
@@ -126,8 +134,8 @@ domain表示CNAME
      * @param array $Rule 规则详细信息
      * @param integer $SessionPersistTime 会话保持时间，取值范围：30-3600，单位：秒
      * @param string $ProxyType 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      */
     function __construct()
     {

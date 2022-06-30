@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置id唯一
  * @method integer getFailType() 获取失败详情
  * @method void setFailType(integer $FailType) 设置失败详情
+ * @method string getMachineWanIp() 获取外网ip
+ * @method void setMachineWanIp(string $MachineWanIp) 设置外网ip
  */
 class ScanTaskDetails extends AbstractModel
 {
@@ -108,6 +110,11 @@ class ScanTaskDetails extends AbstractModel
     public $FailType;
 
     /**
+     * @var string 外网ip
+     */
+    public $MachineWanIp;
+
+    /**
      * @param string $HostIp 服务器IP
      * @param string $HostName 服务器名称
      * @param string $OsName 操作系统
@@ -120,6 +127,7 @@ class ScanTaskDetails extends AbstractModel
      * @param string $Description 描述
      * @param integer $Id id唯一
      * @param integer $FailType 失败详情
+     * @param string $MachineWanIp 外网ip
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class ScanTaskDetails extends AbstractModel
 
         if (array_key_exists("FailType",$param) and $param["FailType"] !== null) {
             $this->FailType = $param["FailType"];
+        }
+
+        if (array_key_exists("MachineWanIp",$param) and $param["MachineWanIp"] !== null) {
+            $this->MachineWanIp = $param["MachineWanIp"];
         }
     }
 }

@@ -24,7 +24,6 @@ use TencentCloud\Taf\V20200210\Models as Models;
 
 /**
  * @method Models\DetectFraudKOLResponse DetectFraudKOL(Models\DetectFraudKOLRequest $req) 流量反欺诈-KOL欺诈识别
- * @method Models\EnhanceTaDegreeResponse EnhanceTaDegree(Models\EnhanceTaDegreeRequest $req) 流量反欺诈-虚假TA识别
  * @method Models\RecognizeCustomizedAudienceResponse RecognizeCustomizedAudience(Models\RecognizeCustomizedAudienceRequest $req) 流量反欺诈-流量验准定制版
  * @method Models\RecognizeEffectiveFlowResponse RecognizeEffectiveFlow(Models\RecognizeEffectiveFlowRequest $req) 该服务已不再对外提供能力
 

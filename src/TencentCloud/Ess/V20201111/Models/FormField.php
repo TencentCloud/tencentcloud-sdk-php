@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComponentValue(string $ComponentValue) 设置控件填充value
  * @method string getComponentId() 获取控件id
  * @method void setComponentId(string $ComponentId) 设置控件id
- * @method string getComponentName() 获取控件名字
- * @method void setComponentName(string $ComponentName) 设置控件名字
+ * @method string getComponentName() 获取控件名字，最大长度不超过30字符
+ * @method void setComponentName(string $ComponentName) 设置控件名字，最大长度不超过30字符
  */
 class FormField extends AbstractModel
 {
@@ -40,14 +40,14 @@ class FormField extends AbstractModel
     public $ComponentId;
 
     /**
-     * @var string 控件名字
+     * @var string 控件名字，最大长度不超过30字符
      */
     public $ComponentName;
 
     /**
      * @param string $ComponentValue 控件填充value
      * @param string $ComponentId 控件id
-     * @param string $ComponentName 控件名字
+     * @param string $ComponentName 控件名字，最大长度不超过30字符
      */
     function __construct()
     {

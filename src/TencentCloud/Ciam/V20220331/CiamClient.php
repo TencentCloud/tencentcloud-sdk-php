@@ -30,6 +30,7 @@ use TencentCloud\Ciam\V20220331\Models as Models;
  * @method Models\DescribeUserByIdResponse DescribeUserById(Models\DescribeUserByIdRequest $req) 根据ID查询用户信息
  * @method Models\LinkAccountResponse LinkAccount(Models\LinkAccountRequest $req) 账号融合
  * @method Models\ListJobsResponse ListJobs(Models\ListJobsRequest $req) 查询任务详情
+ * @method Models\ListLogMessageByConditionResponse ListLogMessageByCondition(Models\ListLogMessageByConditionRequest $req) 查询日志信息
  * @method Models\ListUserResponse ListUser(Models\ListUserRequest $req) 查询用户列表
  * @method Models\ListUserByPropertyResponse ListUserByProperty(Models\ListUserByPropertyRequest $req) 根据属性查询用户列表
  * @method Models\ResetPasswordResponse ResetPassword(Models\ResetPasswordRequest $req) 重置用户密码

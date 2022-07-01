@@ -29,15 +29,17 @@ use TencentCloud\Common\AbstractModel;
 <li>Level - String - 是否必填：否 - 漏洞等级筛选 1:低 2:中 3:高 4:提示</li>
 <li>VulName- String - 是否必填：否 - 漏洞名称搜索</li>
 <li>Uuids- String - 是否必填：否 - 主机uuid</li>
+<li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Status - String - 是否必填：是 - 漏洞状态筛选，0//未检测 1有风险 ，2无风险 ，3 检查中展示progress</li>
 <li>Level - String - 是否必填：否 - 漏洞等级筛选 1:低 2:中 3:高 4:提示</li>
 <li>VulName- String - 是否必填：否 - 漏洞名称搜索</li>
 <li>Uuids- String - 是否必填：否 - 主机uuid</li>
+<li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li>
  * @method string getOrder() 获取排序方式 desc , asc
  * @method void setOrder(string $Order) 设置排序方式 desc , asc
- * @method string getBy() 获取排序字段 PublishDate
- * @method void setBy(string $By) 设置排序字段 PublishDate
+ * @method string getBy() 获取排序字段 PublishDate  LastScanTime HostCount
+ * @method void setBy(string $By) 设置排序字段 PublishDate  LastScanTime HostCount
  */
 class DescribeEmergencyVulListRequest extends AbstractModel
 {
@@ -57,6 +59,7 @@ class DescribeEmergencyVulListRequest extends AbstractModel
 <li>Level - String - 是否必填：否 - 漏洞等级筛选 1:低 2:中 3:高 4:提示</li>
 <li>VulName- String - 是否必填：否 - 漏洞名称搜索</li>
 <li>Uuids- String - 是否必填：否 - 主机uuid</li>
+<li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li>
      */
     public $Filters;
 
@@ -66,7 +69,7 @@ class DescribeEmergencyVulListRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string 排序字段 PublishDate
+     * @var string 排序字段 PublishDate  LastScanTime HostCount
      */
     public $By;
 
@@ -78,8 +81,9 @@ class DescribeEmergencyVulListRequest extends AbstractModel
 <li>Level - String - 是否必填：否 - 漏洞等级筛选 1:低 2:中 3:高 4:提示</li>
 <li>VulName- String - 是否必填：否 - 漏洞名称搜索</li>
 <li>Uuids- String - 是否必填：否 - 主机uuid</li>
+<li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li>
      * @param string $Order 排序方式 desc , asc
-     * @param string $By 排序字段 PublishDate
+     * @param string $By 排序字段 PublishDate  LastScanTime HostCount
      */
     function __construct()
     {

@@ -20,12 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用代理实例
  *
- * @method string getProxyId() 获取实例ID
+ * @method string getProxyId() 获取代理ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProxyId(string $ProxyId) 设置实例ID
+ * @method void setProxyId(string $ProxyId) 设置代理ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProxyName() 获取实例名称
- * @method void setProxyName(string $ProxyName) 设置实例名称
+ * @method string getProxyName() 获取代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
+ * @method void setProxyName(string $ProxyName) 设置代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
  * @method string getPlatType() 获取调度模式：
 ip表示Anycast IP
 domain表示CNAME
@@ -77,28 +81,34 @@ fail：部署失败/停用失败
  * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProxyType() 获取服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyType(string $ProxyType) 设置服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHostId() 获取七层实例ID
+ * @method string getHostId() 获取当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHostId(string $HostId) 设置七层实例ID
+ * @method void setHostId(string $HostId) 设置当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationProxy extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 代理ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyId;
 
     /**
-     * @var string 实例名称
+     * @var string 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      */
     public $ProxyName;
 
@@ -177,22 +187,26 @@ fail：部署失败/停用失败
 
     /**
      * @var string 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyType;
 
     /**
-     * @var string 七层实例ID
+     * @var string 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostId;
 
     /**
-     * @param string $ProxyId 实例ID
+     * @param string $ProxyId 代理ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProxyName 实例名称
+     * @param string $ProxyName 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      * @param string $PlatType 调度模式：
 ip表示Anycast IP
 domain表示CNAME
@@ -219,10 +233,12 @@ fail：部署失败/停用失败
      * @param integer $SessionPersistTime 会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProxyType 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HostId 七层实例ID
+     * @param string $HostId 当ProxyType=hostname时：
+ProxyName为域名，如：test.123.com
+HostId表示该域名，即test.123.com对应的代理加速唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowsByTemplates请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息
- * @method array getFlowInfos() 获取多个合同（流程）信息
- * @method void setFlowInfos(array $FlowInfos) 设置多个合同（流程）信息
+ * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method array getFlowInfos() 获取多个合同（签署流程）信息，最多支持20个
+ * @method void setFlowInfos(array $FlowInfos) 设置多个合同（签署流程）信息，最多支持20个
+ * @method boolean getNeedPreview() 获取是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+预览链接有效期300秒；
+ * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+预览链接有效期300秒；
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method boolean getNeedPreview() 获取是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
- * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
  */
 class CreateFlowsByTemplatesRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息
+     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
     /**
-     * @var array 多个合同（流程）信息
+     * @var array 多个合同（签署流程）信息，最多支持20个
      */
     public $FlowInfos;
+
+    /**
+     * @var boolean 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+预览链接有效期300秒；
+     */
+    public $NeedPreview;
 
     /**
      * @var UserInfo 操作者的信息
@@ -47,15 +55,11 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var boolean 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
-     */
-    public $NeedPreview;
-
-    /**
-     * @param Agent $Agent 渠道应用相关信息
-     * @param array $FlowInfos 多个合同（流程）信息
-     * @param UserInfo $Operator 操作者的信息
+     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param array $FlowInfos 多个合同（签署流程）信息，最多支持20个
      * @param boolean $NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+预览链接有效期300秒；
+     * @param UserInfo $Operator 操作者的信息
      */
     function __construct()
     {
@@ -84,13 +88,13 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("NeedPreview",$param) and $param["NeedPreview"] !== null) {
+            $this->NeedPreview = $param["NeedPreview"];
+        }
+
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("NeedPreview",$param) and $param["NeedPreview"] !== null) {
-            $this->NeedPreview = $param["NeedPreview"];
         }
     }
 }

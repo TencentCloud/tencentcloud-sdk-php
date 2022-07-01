@@ -80,6 +80,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置最后扫描任务的id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSupportDefense() 获取是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportDefense(integer $IsSupportDefense) 设置是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDefenseAttackCount() 获取已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefenseAttackCount(integer $DefenseAttackCount) 设置已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFirstAppearTime() 获取首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFirstAppearTime(string $FirstAppearTime) 设置首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVulCategory() 获取漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVulCategory(integer $VulCategory) 设置漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulInfoList extends AbstractModel
 {
@@ -190,6 +206,30 @@ class VulInfoList extends AbstractModel
     public $TaskId;
 
     /**
+     * @var integer 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportDefense;
+
+    /**
+     * @var integer 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefenseAttackCount;
+
+    /**
+     * @var string 首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FirstAppearTime;
+
+    /**
+     * @var integer 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VulCategory;
+
+    /**
      * @param string $Ids 漏洞包含的事件id串，多个用“,”分割
      * @param string $Name 漏洞名
      * @param integer $Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
@@ -219,6 +259,14 @@ class VulInfoList extends AbstractModel
      * @param integer $FixSwitch 是否能自动修复且包含能自动修复的主机， 0=否  1=是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskId 最后扫描任务的id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSupportDefense 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefenseAttackCount 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FirstAppearTime 首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VulCategory 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -308,6 +356,22 @@ class VulInfoList extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("IsSupportDefense",$param) and $param["IsSupportDefense"] !== null) {
+            $this->IsSupportDefense = $param["IsSupportDefense"];
+        }
+
+        if (array_key_exists("DefenseAttackCount",$param) and $param["DefenseAttackCount"] !== null) {
+            $this->DefenseAttackCount = $param["DefenseAttackCount"];
+        }
+
+        if (array_key_exists("FirstAppearTime",$param) and $param["FirstAppearTime"] !== null) {
+            $this->FirstAppearTime = $param["FirstAppearTime"];
+        }
+
+        if (array_key_exists("VulCategory",$param) and $param["VulCategory"] !== null) {
+            $this->VulCategory = $param["VulCategory"];
         }
     }
 }

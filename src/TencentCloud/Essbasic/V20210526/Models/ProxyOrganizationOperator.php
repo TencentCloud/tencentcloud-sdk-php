@@ -20,66 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 合作企业经办人列表信息
  *
- * @method string getId() 获取经办人ID（渠道颁发）
- * @method void setId(string $Id) 设置经办人ID（渠道颁发）
- * @method string getName() 获取经办人姓名
- * @method void setName(string $Name) 设置经办人姓名
+ * @method string getId() 获取经办人ID（渠道颁发），最大长度64个字符
+ * @method void setId(string $Id) 设置经办人ID（渠道颁发），最大长度64个字符
+ * @method string getName() 获取经办人姓名，最大长度50个字符
+ * @method void setName(string $Name) 设置经办人姓名，最大长度50个字符
  * @method string getIdCardType() 获取经办人身份证件类型
-用户证件类型：默认ID_CARD
-1. ID_CARD - 居民身份证
-2. HOUSEHOLD_REGISTER - 户口本
-3. TEMP_ID_CARD - 临时居民身份证
+1.ID_CARD 居民身份证
+2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
+3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
  * @method void setIdCardType(string $IdCardType) 设置经办人身份证件类型
-用户证件类型：默认ID_CARD
-1. ID_CARD - 居民身份证
-2. HOUSEHOLD_REGISTER - 户口本
-3. TEMP_ID_CARD - 临时居民身份证
- * @method string getIdCardNumber() 获取经办人身份证号
- * @method void setIdCardNumber(string $IdCardNumber) 设置经办人身份证号
- * @method string getMobile() 获取经办人手机号
- * @method void setMobile(string $Mobile) 设置经办人手机号
+1.ID_CARD 居民身份证
+2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
+3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
+ * @method string getIdCardNumber() 获取经办人证件号
+ * @method void setIdCardNumber(string $IdCardNumber) 设置经办人证件号
+ * @method string getMobile() 获取经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
+ * @method void setMobile(string $Mobile) 设置经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
  */
 class ProxyOrganizationOperator extends AbstractModel
 {
     /**
-     * @var string 经办人ID（渠道颁发）
+     * @var string 经办人ID（渠道颁发），最大长度64个字符
      */
     public $Id;
 
     /**
-     * @var string 经办人姓名
+     * @var string 经办人姓名，最大长度50个字符
      */
     public $Name;
 
     /**
      * @var string 经办人身份证件类型
-用户证件类型：默认ID_CARD
-1. ID_CARD - 居民身份证
-2. HOUSEHOLD_REGISTER - 户口本
-3. TEMP_ID_CARD - 临时居民身份证
+1.ID_CARD 居民身份证
+2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
+3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
      */
     public $IdCardType;
 
     /**
-     * @var string 经办人身份证号
+     * @var string 经办人证件号
      */
     public $IdCardNumber;
 
     /**
-     * @var string 经办人手机号
+     * @var string 经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
      */
     public $Mobile;
 
     /**
-     * @param string $Id 经办人ID（渠道颁发）
-     * @param string $Name 经办人姓名
+     * @param string $Id 经办人ID（渠道颁发），最大长度64个字符
+     * @param string $Name 经办人姓名，最大长度50个字符
      * @param string $IdCardType 经办人身份证件类型
-用户证件类型：默认ID_CARD
-1. ID_CARD - 居民身份证
-2. HOUSEHOLD_REGISTER - 户口本
-3. TEMP_ID_CARD - 临时居民身份证
-     * @param string $IdCardNumber 经办人身份证号
-     * @param string $Mobile 经办人手机号
+1.ID_CARD 居民身份证
+2.HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证
+3.HONGKONG_AND_MACAO 港澳居民来往内地通行证
+     * @param string $IdCardNumber 经办人证件号
+     * @param string $Mobile 经办人手机号，大陆手机号输入11位，暂不支持海外手机号。
      */
     function __construct()
     {

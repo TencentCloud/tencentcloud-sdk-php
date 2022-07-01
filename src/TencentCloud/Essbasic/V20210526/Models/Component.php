@@ -60,12 +60,12 @@ SIGN_SIGNATURE - 用户签名控件；
 SIGN_PERSONAL_SEAL - 个人签署印章控件；
 
 表单域的控件不能作为印章和签名控件
- * @method string getComponentName() 获取控件简称
- * @method void setComponentName(string $ComponentName) 设置控件简称
+ * @method string getComponentName() 获取控件简称，不能超过30个字符
+ * @method void setComponentName(string $ComponentName) 设置控件简称，不能超过30个字符
  * @method boolean getComponentRequired() 获取定义控件是否为必填项，默认为false
  * @method void setComponentRequired(boolean $ComponentRequired) 设置定义控件是否为必填项，默认为false
- * @method integer getFileIndex() 获取控件所属文件的序号 (文档中文件的排列序号)
- * @method void setFileIndex(integer $FileIndex) 设置控件所属文件的序号 (文档中文件的排列序号)
+ * @method integer getFileIndex() 获取控件所属文件的序号 (文档中文件的排列序号，从0开始)
+ * @method void setFileIndex(integer $FileIndex) 设置控件所属文件的序号 (文档中文件的排列序号，从0开始)
  * @method string getGenerateMode() 获取控件生成的方式：
 NORMAL - 普通控件
 FIELD - 表单域
@@ -82,8 +82,8 @@ KEYWORD - 关键字
 表单域和关键字转换控件不用填
  * @method void setComponentHeight(float $ComponentHeight) 设置参数控件高度，默认100，单位px
 表单域和关键字转换控件不用填
- * @method integer getComponentPage() 获取参数控件所在页码
- * @method void setComponentPage(integer $ComponentPage) 设置参数控件所在页码
+ * @method integer getComponentPage() 获取参数控件所在页码，从1开始
+ * @method void setComponentPage(integer $ComponentPage) 设置参数控件所在页码，从1开始
  * @method float getComponentPosX() 获取参数控件X位置，单位px
  * @method void setComponentPosX(float $ComponentPosX) 设置参数控件X位置，单位px
  * @method float getComponentPosY() 获取参数控件Y位置，单位px
@@ -108,12 +108,12 @@ TEXT控件可以指定字体
 签署区日期控件会转换成图片格式并带存证，需要通过字体决定图片大小
  * @method string getDocumentId() 获取控件所属文档的Id, 模块相关接口为空值
  * @method void setDocumentId(string $DocumentId) 设置控件所属文档的Id, 模块相关接口为空值
- * @method string getComponentDescription() 获取控件描述
- * @method void setComponentDescription(string $ComponentDescription) 设置控件描述
- * @method float getOffsetX() 获取指定关键字时横坐标偏移量
- * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量
- * @method float getOffsetY() 获取指定关键字时纵坐标偏移量
- * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量
+ * @method string getComponentDescription() 获取控件描述，不能超过30个字符
+ * @method void setComponentDescription(string $ComponentDescription) 设置控件描述，不能超过30个字符
+ * @method float getOffsetX() 获取指定关键字时横坐标偏移量，单位pt
+ * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量，单位pt
+ * @method float getOffsetY() 获取指定关键字时纵坐标偏移量，单位pt
+ * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量，单位pt
  */
 class Component extends AbstractModel
 {
@@ -146,7 +146,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
     public $ComponentType;
 
     /**
-     * @var string 控件简称
+     * @var string 控件简称，不能超过30个字符
      */
     public $ComponentName;
 
@@ -156,7 +156,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
     public $ComponentRequired;
 
     /**
-     * @var integer 控件所属文件的序号 (文档中文件的排列序号)
+     * @var integer 控件所属文件的序号 (文档中文件的排列序号，从0开始)
      */
     public $FileIndex;
 
@@ -181,7 +181,7 @@ KEYWORD - 关键字
     public $ComponentHeight;
 
     /**
-     * @var integer 参数控件所在页码
+     * @var integer 参数控件所在页码，从1开始
      */
     public $ComponentPage;
 
@@ -222,17 +222,17 @@ TEXT控件可以指定字体
     public $DocumentId;
 
     /**
-     * @var string 控件描述
+     * @var string 控件描述，不能超过30个字符
      */
     public $ComponentDescription;
 
     /**
-     * @var float 指定关键字时横坐标偏移量
+     * @var float 指定关键字时横坐标偏移量，单位pt
      */
     public $OffsetX;
 
     /**
-     * @var float 指定关键字时纵坐标偏移量
+     * @var float 指定关键字时纵坐标偏移量，单位pt
      */
     public $OffsetY;
 
@@ -257,9 +257,9 @@ SIGN_SIGNATURE - 用户签名控件；
 SIGN_PERSONAL_SEAL - 个人签署印章控件；
 
 表单域的控件不能作为印章和签名控件
-     * @param string $ComponentName 控件简称
+     * @param string $ComponentName 控件简称，不能超过30个字符
      * @param boolean $ComponentRequired 定义控件是否为必填项，默认为false
-     * @param integer $FileIndex 控件所属文件的序号 (文档中文件的排列序号)
+     * @param integer $FileIndex 控件所属文件的序号 (文档中文件的排列序号，从0开始)
      * @param string $GenerateMode 控件生成的方式：
 NORMAL - 普通控件
 FIELD - 表单域
@@ -268,7 +268,7 @@ KEYWORD - 关键字
 表单域和关键字转换控件不用填
      * @param float $ComponentHeight 参数控件高度，默认100，单位px
 表单域和关键字转换控件不用填
-     * @param integer $ComponentPage 参数控件所在页码
+     * @param integer $ComponentPage 参数控件所在页码，从1开始
      * @param float $ComponentPosX 参数控件X位置，单位px
      * @param float $ComponentPosY 参数控件Y位置，单位px
      * @param string $ComponentExtra 参数控件样式，json格式表述
@@ -281,9 +281,9 @@ TEXT控件可以指定字体
 
 签署区日期控件会转换成图片格式并带存证，需要通过字体决定图片大小
      * @param string $DocumentId 控件所属文档的Id, 模块相关接口为空值
-     * @param string $ComponentDescription 控件描述
-     * @param float $OffsetX 指定关键字时横坐标偏移量
-     * @param float $OffsetY 指定关键字时纵坐标偏移量
+     * @param string $ComponentDescription 控件描述，不能超过30个字符
+     * @param float $OffsetX 指定关键字时横坐标偏移量，单位pt
+     * @param float $OffsetY 指定关键字时纵坐标偏移量，单位pt
      */
     function __construct()
     {

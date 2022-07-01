@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDocument请求参数结构体
  *
- * @method UserInfo getOperator() 获取无
- * @method void setOperator(UserInfo $Operator) 设置无
+ * @method string getFlowId() 获取签署流程编号,由CreateFlow接口返回
+ * @method void setFlowId(string $FlowId) 设置签署流程编号,由CreateFlow接口返回
  * @method string getTemplateId() 获取用户上传的模板ID
  * @method void setTemplateId(string $TemplateId) 设置用户上传的模板ID
- * @method string getFlowId() 获取流程ID
- * @method void setFlowId(string $FlowId) 设置流程ID
- * @method array getFileNames() 获取文件名列表
- * @method void setFileNames(array $FileNames) 设置文件名列表
- * @method array getFormFields() 获取内容控件信息数组
- * @method void setFormFields(array $FormFields) 设置内容控件信息数组
+ * @method array getFileNames() 获取文件名列表,单个文件名最大长度200个字符
+ * @method void setFileNames(array $FileNames) 设置文件名列表,单个文件名最大长度200个字符
+ * @method UserInfo getOperator() 获取无
+ * @method void setOperator(UserInfo $Operator) 设置无
  * @method Agent getAgent() 获取应用相关信息
  * @method void setAgent(Agent $Agent) 设置应用相关信息
- * @method string getClientToken() 获取客户端Token，保持接口幂等性
- * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性
+ * @method array getFormFields() 获取内容控件信息数组
+ * @method void setFormFields(array $FormFields) 设置内容控件信息数组
  * @method boolean getNeedPreview() 获取是否需要生成预览文件 默认不生成；
 预览链接有效期300秒；
  * @method void setNeedPreview(boolean $NeedPreview) 设置是否需要生成预览文件 默认不生成；
 预览链接有效期300秒；
+ * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
+ * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
  */
 class CreateDocumentRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 无
+     * @var string 签署流程编号,由CreateFlow接口返回
      */
-    public $Operator;
+    public $FlowId;
 
     /**
      * @var string 用户上传的模板ID
@@ -52,19 +52,14 @@ class CreateDocumentRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 流程ID
-     */
-    public $FlowId;
-
-    /**
-     * @var array 文件名列表
+     * @var array 文件名列表,单个文件名最大长度200个字符
      */
     public $FileNames;
 
     /**
-     * @var array 内容控件信息数组
+     * @var UserInfo 无
      */
-    public $FormFields;
+    public $Operator;
 
     /**
      * @var Agent 应用相关信息
@@ -72,9 +67,9 @@ class CreateDocumentRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 客户端Token，保持接口幂等性
+     * @var array 内容控件信息数组
      */
-    public $ClientToken;
+    public $FormFields;
 
     /**
      * @var boolean 是否需要生成预览文件 默认不生成；
@@ -83,15 +78,20 @@ class CreateDocumentRequest extends AbstractModel
     public $NeedPreview;
 
     /**
-     * @param UserInfo $Operator 无
+     * @var string 客户端Token，保持接口幂等性,最大长度64个字符
+     */
+    public $ClientToken;
+
+    /**
+     * @param string $FlowId 签署流程编号,由CreateFlow接口返回
      * @param string $TemplateId 用户上传的模板ID
-     * @param string $FlowId 流程ID
-     * @param array $FileNames 文件名列表
-     * @param array $FormFields 内容控件信息数组
+     * @param array $FileNames 文件名列表,单个文件名最大长度200个字符
+     * @param UserInfo $Operator 无
      * @param Agent $Agent 应用相关信息
-     * @param string $ClientToken 客户端Token，保持接口幂等性
+     * @param array $FormFields 内容控件信息数组
      * @param boolean $NeedPreview 是否需要生成预览文件 默认不生成；
 预览链接有效期300秒；
+     * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      */
     function __construct()
     {
@@ -106,21 +106,26 @@ class CreateDocumentRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
         }
 
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
-        }
-
         if (array_key_exists("FileNames",$param) and $param["FileNames"] !== null) {
             $this->FileNames = $param["FileNames"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
 
         if (array_key_exists("FormFields",$param) and $param["FormFields"] !== null) {
@@ -132,17 +137,12 @@ class CreateDocumentRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
-            $this->Agent = new Agent();
-            $this->Agent->deserialize($param["Agent"]);
+        if (array_key_exists("NeedPreview",$param) and $param["NeedPreview"] !== null) {
+            $this->NeedPreview = $param["NeedPreview"];
         }
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
-        }
-
-        if (array_key_exists("NeedPreview",$param) and $param["NeedPreview"] !== null) {
-            $this->NeedPreview = $param["NeedPreview"];
         }
     }
 }

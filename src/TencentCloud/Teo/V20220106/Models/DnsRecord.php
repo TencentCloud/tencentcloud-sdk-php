@@ -56,15 +56,15 @@ pending: 不生效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCname(string $Cname) 设置CNAME 地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDomainStatus() 获取域名是否开启了lb，四层，安全
+ * @method array getDomainStatus() 获取域名是否开启了负载均衡，四层代理，安全
 - lb 负载均衡
 - security 安全
-- l4 四层
+- l4 四层代理
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomainStatus(array $DomainStatus) 设置域名是否开启了lb，四层，安全
+ * @method void setDomainStatus(array $DomainStatus) 设置域名是否开启了负载均衡，四层代理，安全
 - lb 负载均衡
 - security 安全
-- l4 四层
+- l4 四层代理
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DnsRecord extends AbstractModel
@@ -144,10 +144,10 @@ pending: 不生效
     public $Cname;
 
     /**
-     * @var array 域名是否开启了lb，四层，安全
+     * @var array 域名是否开启了负载均衡，四层代理，安全
 - lb 负载均衡
 - security 安全
-- l4 四层
+- l4 四层代理
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainStatus;
@@ -171,10 +171,10 @@ active: 生效
 pending: 不生效
      * @param string $Cname CNAME 地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DomainStatus 域名是否开启了lb，四层，安全
+     * @param array $DomainStatus 域名是否开启了负载均衡，四层代理，安全
 - lb 负载均衡
 - security 安全
-- l4 四层
+- l4 四层代理
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

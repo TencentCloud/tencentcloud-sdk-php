@@ -37,23 +37,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOriginType() 获取源站类型，取值：
 custom：手动添加
 origins：源站组
-load_balancing：负载均衡
  * @method void setOriginType(string $OriginType) 设置源站类型，取值：
 custom：手动添加
 origins：源站组
-load_balancing：负载均衡
  * @method array getOriginValue() 获取源站信息：
-当OriginType=custom时，表示多个：
-IP:端口
-域名:端口
-当OriginType=origins时，包含一个元素，表示源站组ID
-当OriginType=load_balancing时，包含一个元素，表示负载均衡ID
+当OriginType=custom时，表示一个或多个源站，如：
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+当OriginType=origins时，包含一个元素，表示源站组ID，如：
+OriginValue=["origin-xxx"]
  * @method void setOriginValue(array $OriginValue) 设置源站信息：
-当OriginType=custom时，表示多个：
-IP:端口
-域名:端口
-当OriginType=origins时，包含一个元素，表示源站组ID
-当OriginType=load_balancing时，包含一个元素，表示负载均衡ID
+当OriginType=custom时，表示一个或多个源站，如：
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+当OriginType=origins时，包含一个元素，表示源站组ID，如：
+OriginValue=["origin-xxx"]
  * @method string getForwardClientIp() 获取传递客户端IP，当Proto=TCP时，取值：
 TOA：TOA
 PPV1: Proxy Protocol传递，协议版本V1
@@ -106,17 +106,17 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
      * @var string 源站类型，取值：
 custom：手动添加
 origins：源站组
-load_balancing：负载均衡
      */
     public $OriginType;
 
     /**
      * @var array 源站信息：
-当OriginType=custom时，表示多个：
-IP:端口
-域名:端口
-当OriginType=origins时，包含一个元素，表示源站组ID
-当OriginType=load_balancing时，包含一个元素，表示负载均衡ID
+当OriginType=custom时，表示一个或多个源站，如：
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+当OriginType=origins时，包含一个元素，表示源站组ID，如：
+OriginValue=["origin-xxx"]
      */
     public $OriginValue;
 
@@ -148,13 +148,13 @@ OFF：不传递
      * @param string $OriginType 源站类型，取值：
 custom：手动添加
 origins：源站组
-load_balancing：负载均衡
      * @param array $OriginValue 源站信息：
-当OriginType=custom时，表示多个：
-IP:端口
-域名:端口
-当OriginType=origins时，包含一个元素，表示源站组ID
-当OriginType=load_balancing时，包含一个元素，表示负载均衡ID
+当OriginType=custom时，表示一个或多个源站，如：
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+当OriginType=origins时，包含一个元素，表示源站组ID，如：
+OriginValue=["origin-xxx"]
      * @param string $ForwardClientIp 传递客户端IP，当Proto=TCP时，取值：
 TOA：TOA
 PPV1: Proxy Protocol传递，协议版本V1

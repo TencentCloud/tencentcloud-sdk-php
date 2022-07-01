@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点ID
  * @method void setZoneId(string $ZoneId) 设置站点ID
- * @method string getProxyId() 获取四层代理ID
- * @method void setProxyId(string $ProxyId) 设置四层代理ID
+ * @method string getProxyId() 获取代理ID
+ * @method void setProxyId(string $ProxyId) 设置代理ID
  * @method string getStatus() 获取状态
 offline: 停用
 online: 启用
@@ -39,7 +39,7 @@ class ModifyApplicationProxyStatusRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 四层代理ID
+     * @var string 代理ID
      */
     public $ProxyId;
 
@@ -52,7 +52,7 @@ online: 启用
 
     /**
      * @param string $ZoneId 站点ID
-     * @param string $ProxyId 四层代理ID
+     * @param string $ProxyId 代理ID
      * @param string $Status 状态
 offline: 停用
 online: 启用

@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvId() 获取环境Id
  * @method void setEnvId(string $EnvId) 设置环境Id
+ * @method integer getPageSize() 获取默认为9， 最大为30
+不传或传0时 取默认9
+大于30时取30
+ * @method void setPageSize(integer $PageSize) 设置默认为9， 最大为30
+不传或传0时 取默认9
+大于30时取30
+ * @method integer getPageNum() 获取不传或传0时 会默认为1
+ * @method void setPageNum(integer $PageNum) 设置不传或传0时 会默认为1
  */
 class DescribeCloudRunServersRequest extends AbstractModel
 {
@@ -31,7 +39,23 @@ class DescribeCloudRunServersRequest extends AbstractModel
     public $EnvId;
 
     /**
+     * @var integer 默认为9， 最大为30
+不传或传0时 取默认9
+大于30时取30
+     */
+    public $PageSize;
+
+    /**
+     * @var integer 不传或传0时 会默认为1
+     */
+    public $PageNum;
+
+    /**
      * @param string $EnvId 环境Id
+     * @param integer $PageSize 默认为9， 最大为30
+不传或传0时 取默认9
+大于30时取30
+     * @param integer $PageNum 不传或传0时 会默认为1
      */
     function __construct()
     {
@@ -48,6 +72,14 @@ class DescribeCloudRunServersRequest extends AbstractModel
         }
         if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {
             $this->EnvId = $param["EnvId"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("PageNum",$param) and $param["PageNum"] !== null) {
+            $this->PageNum = $param["PageNum"];
         }
     }
 }

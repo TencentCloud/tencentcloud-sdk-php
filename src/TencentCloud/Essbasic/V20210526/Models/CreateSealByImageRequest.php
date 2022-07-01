@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSealByImage请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息
- * @method string getSealName() 获取印章名称
- * @method void setSealName(string $SealName) 设置印章名称
+ * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method string getSealName() 获取印章名称，最大长度不超过30字符
+ * @method void setSealName(string $SealName) 设置印章名称，最大长度不超过30字符
  * @method string getSealImage() 获取印章图片base64
  * @method void setSealImage(string $SealImage) 设置印章图片base64
  * @method UserInfo getOperator() 获取操作者的信息
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateSealByImageRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息
+     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
     /**
-     * @var string 印章名称
+     * @var string 印章名称，最大长度不超过30字符
      */
     public $SealName;
 
@@ -52,8 +52,8 @@ class CreateSealByImageRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 渠道应用相关信息
-     * @param string $SealName 印章名称
+     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param string $SealName 印章名称，最大长度不超过30字符
      * @param string $SealImage 印章图片base64
      * @param UserInfo $Operator 操作者的信息
      */

@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceState(string $InstanceState) 设置实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublicIpAddresses() 获取外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublicIpAddresses(string $PublicIpAddresses) 设置外网ip
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulEffectHostList extends AbstractModel
 {
@@ -174,6 +178,12 @@ class VulEffectHostList extends AbstractModel
     public $InstanceState;
 
     /**
+     * @var string 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PublicIpAddresses;
+
+    /**
      * @param integer $EventId 事件id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
@@ -203,6 +213,8 @@ class VulEffectHostList extends AbstractModel
      * @param string $FirstDiscoveryTime 首次发现时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceState 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicIpAddresses 外网ip
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +288,10 @@ class VulEffectHostList extends AbstractModel
 
         if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
             $this->InstanceState = $param["InstanceState"];
+        }
+
+        if (array_key_exists("PublicIpAddresses",$param) and $param["PublicIpAddresses"] !== null) {
+            $this->PublicIpAddresses = $param["PublicIpAddresses"];
         }
     }
 }

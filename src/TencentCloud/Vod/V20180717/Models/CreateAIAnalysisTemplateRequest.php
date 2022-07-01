@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method string getName() 获取视频内容分析模板名称，长度限制：64 个字符。
- * @method void setName(string $Name) 设置视频内容分析模板名称，长度限制：64 个字符。
- * @method string getComment() 获取视频内容分析模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置视频内容分析模板描述信息，长度限制：256 个字符。
+ * @method string getName() 获取音视频内容分析模板名称，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置音视频内容分析模板名称，长度限制：64 个字符。
+ * @method string getComment() 获取音视频内容分析模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置音视频内容分析模板描述信息，长度限制：256 个字符。
  * @method ClassificationConfigureInfo getClassificationConfigure() 获取智能分类任务控制参数。
  * @method void setClassificationConfigure(ClassificationConfigureInfo $ClassificationConfigure) 设置智能分类任务控制参数。
  * @method TagConfigureInfo getTagConfigure() 获取智能标签任务控制参数。
@@ -45,12 +45,12 @@ class CreateAIAnalysisTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string 视频内容分析模板名称，长度限制：64 个字符。
+     * @var string 音视频内容分析模板名称，长度限制：64 个字符。
      */
     public $Name;
 
     /**
-     * @var string 视频内容分析模板描述信息，长度限制：256 个字符。
+     * @var string 音视频内容分析模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
 
@@ -81,8 +81,8 @@ class CreateAIAnalysisTemplateRequest extends AbstractModel
 
     /**
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
-     * @param string $Name 视频内容分析模板名称，长度限制：64 个字符。
-     * @param string $Comment 视频内容分析模板描述信息，长度限制：256 个字符。
+     * @param string $Name 音视频内容分析模板名称，长度限制：64 个字符。
+     * @param string $Comment 音视频内容分析模板描述信息，长度限制：256 个字符。
      * @param ClassificationConfigureInfo $ClassificationConfigure 智能分类任务控制参数。
      * @param TagConfigureInfo $TagConfigure 智能标签任务控制参数。
      * @param CoverConfigureInfo $CoverConfigure 智能封面任务控制参数。

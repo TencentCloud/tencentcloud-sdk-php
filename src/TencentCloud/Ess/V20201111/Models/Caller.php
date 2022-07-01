@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置应用号
  * @method string getOrganizationId() 获取主机构ID
  * @method void setOrganizationId(string $OrganizationId) 设置主机构ID
- * @method string getSubOrganizationId() 获取下属机构ID
- * @method void setSubOrganizationId(string $SubOrganizationId) 设置下属机构ID
  * @method string getOperatorId() 获取经办人的用户ID
  * @method void setOperatorId(string $OperatorId) 设置经办人的用户ID
+ * @method string getSubOrganizationId() 获取下属机构ID
+ * @method void setSubOrganizationId(string $SubOrganizationId) 设置下属机构ID
  */
 class Caller extends AbstractModel
 {
@@ -42,20 +42,20 @@ class Caller extends AbstractModel
     public $OrganizationId;
 
     /**
-     * @var string 下属机构ID
-     */
-    public $SubOrganizationId;
-
-    /**
      * @var string 经办人的用户ID
      */
     public $OperatorId;
 
     /**
+     * @var string 下属机构ID
+     */
+    public $SubOrganizationId;
+
+    /**
      * @param string $ApplicationId 应用号
      * @param string $OrganizationId 主机构ID
-     * @param string $SubOrganizationId 下属机构ID
      * @param string $OperatorId 经办人的用户ID
+     * @param string $SubOrganizationId 下属机构ID
      */
     function __construct()
     {
@@ -78,12 +78,12 @@ class Caller extends AbstractModel
             $this->OrganizationId = $param["OrganizationId"];
         }
 
-        if (array_key_exists("SubOrganizationId",$param) and $param["SubOrganizationId"] !== null) {
-            $this->SubOrganizationId = $param["SubOrganizationId"];
-        }
-
         if (array_key_exists("OperatorId",$param) and $param["OperatorId"] !== null) {
             $this->OperatorId = $param["OperatorId"];
+        }
+
+        if (array_key_exists("SubOrganizationId",$param) and $param["SubOrganizationId"] !== null) {
+            $this->SubOrganizationId = $param["SubOrganizationId"];
         }
     }
 }

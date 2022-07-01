@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBasicResourceUsage请求参数结构体
  *
-
+ * @method boolean getAll() 获取是否无视权限查询全租户的，默认 true。注：无论 true 还是 false，PackageSpaceUsed 和 ConsulInstanceCount  都是全租户的
+ * @method void setAll(boolean $All) 设置是否无视权限查询全租户的，默认 true。注：无论 true 还是 false，PackageSpaceUsed 和 ConsulInstanceCount  都是全租户的
  */
 class DescribeBasicResourceUsageRequest extends AbstractModel
 {
-
+    /**
+     * @var boolean 是否无视权限查询全租户的，默认 true。注：无论 true 还是 false，PackageSpaceUsed 和 ConsulInstanceCount  都是全租户的
+     */
+    public $All;
 
     /**
-
+     * @param boolean $All 是否无视权限查询全租户的，默认 true。注：无论 true 还是 false，PackageSpaceUsed 和 ConsulInstanceCount  都是全租户的
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeBasicResourceUsageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("All",$param) and $param["All"] !== null) {
+            $this->All = $param["All"];
+        }
     }
 }

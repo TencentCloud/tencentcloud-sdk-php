@@ -45,11 +45,11 @@ FINISH：已完成。
  * @method string getPublishResult() 获取微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
-<li>Rejected：智能识别未通过。</li>
+<li>Rejected：音视频审核未通过。</li>
  * @method void setPublishResult(string $PublishResult) 设置微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
-<li>Rejected：智能识别未通过。</li>
+<li>Rejected：音视频审核未通过。</li>
  */
 class WechatMiniProgramPublishTask extends AbstractModel
 {
@@ -92,7 +92,7 @@ FINISH：已完成。
      * @var string 微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
-<li>Rejected：智能识别未通过。</li>
+<li>Rejected：音视频审核未通过。</li>
      */
     public $PublishResult;
 
@@ -111,7 +111,7 @@ FINISH：已完成。
      * @param string $PublishResult 微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
-<li>Rejected：智能识别未通过。</li>
+<li>Rejected：音视频审核未通过。</li>
      */
     function __construct()
     {

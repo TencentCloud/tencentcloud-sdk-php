@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComponents(array $Components) 设置模板控件信息结构
  * @method array getSignComponents() 获取签署区模板信息结构
  * @method void setSignComponents(array $SignComponents) 设置签署区模板信息结构
+ * @method array getRecipients() 获取模板中的流程参与人信息
+ * @method void setRecipients(array $Recipients) 设置模板中的流程参与人信息
+ * @method integer getTemplateType() 获取模板类型：1-静默签；2-静默签授权；3-普通模板
+ * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；2-静默签授权；3-普通模板
+ * @method boolean getIsPromoter() 获取是否是发起人
+ * @method void setIsPromoter(boolean $IsPromoter) 设置是否是发起人
  * @method string getCreator() 获取模板的创建者信息
  * @method void setCreator(string $Creator) 设置模板的创建者信息
  * @method integer getCreatedOn() 获取模板创建的时间戳（精确到秒）
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳（精确到秒）
- * @method integer getTemplateType() 获取模板类型：1-静默签；2-静默签授权；3-普通模板
- * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；2-静默签授权；3-普通模板
- * @method array getRecipients() 获取模板中的流程参与人信息
- * @method void setRecipients(array $Recipients) 设置模板中的流程参与人信息
- * @method boolean getIsPromoter() 获取是否是发起人
- * @method void setIsPromoter(boolean $IsPromoter) 设置是否是发起人
  */
 class TemplateInfo extends AbstractModel
 {
@@ -69,6 +69,21 @@ class TemplateInfo extends AbstractModel
     public $SignComponents;
 
     /**
+     * @var array 模板中的流程参与人信息
+     */
+    public $Recipients;
+
+    /**
+     * @var integer 模板类型：1-静默签；2-静默签授权；3-普通模板
+     */
+    public $TemplateType;
+
+    /**
+     * @var boolean 是否是发起人
+     */
+    public $IsPromoter;
+
+    /**
      * @var string 模板的创建者信息
      */
     public $Creator;
@@ -79,31 +94,16 @@ class TemplateInfo extends AbstractModel
     public $CreatedOn;
 
     /**
-     * @var integer 模板类型：1-静默签；2-静默签授权；3-普通模板
-     */
-    public $TemplateType;
-
-    /**
-     * @var array 模板中的流程参与人信息
-     */
-    public $Recipients;
-
-    /**
-     * @var boolean 是否是发起人
-     */
-    public $IsPromoter;
-
-    /**
      * @param string $TemplateId 模板ID
      * @param string $TemplateName 模板名字
      * @param string $Description 模板描述信息
      * @param array $Components 模板控件信息结构
      * @param array $SignComponents 签署区模板信息结构
+     * @param array $Recipients 模板中的流程参与人信息
+     * @param integer $TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模板
+     * @param boolean $IsPromoter 是否是发起人
      * @param string $Creator 模板的创建者信息
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
-     * @param integer $TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模板
-     * @param array $Recipients 模板中的流程参与人信息
-     * @param boolean $IsPromoter 是否是发起人
      */
     function __construct()
     {
@@ -148,18 +148,6 @@ class TemplateInfo extends AbstractModel
             }
         }
 
-        if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
-            $this->Creator = $param["Creator"];
-        }
-
-        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
-            $this->CreatedOn = $param["CreatedOn"];
-        }
-
-        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
-            $this->TemplateType = $param["TemplateType"];
-        }
-
         if (array_key_exists("Recipients",$param) and $param["Recipients"] !== null) {
             $this->Recipients = [];
             foreach ($param["Recipients"] as $key => $value){
@@ -169,8 +157,20 @@ class TemplateInfo extends AbstractModel
             }
         }
 
+        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
+            $this->TemplateType = $param["TemplateType"];
+        }
+
         if (array_key_exists("IsPromoter",$param) and $param["IsPromoter"] !== null) {
             $this->IsPromoter = $param["IsPromoter"];
+        }
+
+        if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
+            $this->Creator = $param["Creator"];
+        }
+
+        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
+            $this->CreatedOn = $param["CreatedOn"];
         }
     }
 }

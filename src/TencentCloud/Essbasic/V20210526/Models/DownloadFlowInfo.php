@@ -18,12 +18,12 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 合同（流程）下载信息
+ * 签署流程下载信息
  *
  * @method string getFileName() 获取文件夹名称
  * @method void setFileName(string $FileName) 设置文件夹名称
- * @method array getFlowIdList() 获取合同（流程）的标识数组
- * @method void setFlowIdList(array $FlowIdList) 设置合同（流程）的标识数组
+ * @method array getFlowIdList() 获取签署流程的标识数组
+ * @method void setFlowIdList(array $FlowIdList) 设置签署流程的标识数组
  */
 class DownloadFlowInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DownloadFlowInfo extends AbstractModel
     public $FileName;
 
     /**
-     * @var array 合同（流程）的标识数组
+     * @var array 签署流程的标识数组
      */
     public $FlowIdList;
 
     /**
      * @param string $FileName 文件夹名称
-     * @param array $FlowIdList 合同（流程）的标识数组
+     * @param array $FlowIdList 签署流程的标识数组
      */
     function __construct()
     {

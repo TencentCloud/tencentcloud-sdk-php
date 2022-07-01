@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAIAnalysisTemplate请求参数结构体
  *
- * @method integer getDefinition() 获取视频内容分析模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置视频内容分析模板唯一标识。
+ * @method integer getDefinition() 获取音视频内容分析模板唯一标识。
+ * @method void setDefinition(integer $Definition) 设置音视频内容分析模板唯一标识。
  * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method string getName() 获取视频内容分析模板名称，长度限制：64 个字符。
- * @method void setName(string $Name) 设置视频内容分析模板名称，长度限制：64 个字符。
- * @method string getComment() 获取视频内容分析模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置视频内容分析模板描述信息，长度限制：256 个字符。
+ * @method string getName() 获取音视频内容分析模板名称，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置音视频内容分析模板名称，长度限制：64 个字符。
+ * @method string getComment() 获取音视频内容分析模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置音视频内容分析模板描述信息，长度限制：256 个字符。
  * @method ClassificationConfigureInfoForUpdate getClassificationConfigure() 获取智能分类任务控制参数。
  * @method void setClassificationConfigure(ClassificationConfigureInfoForUpdate $ClassificationConfigure) 设置智能分类任务控制参数。
  * @method TagConfigureInfoForUpdate getTagConfigure() 获取智能标签任务控制参数。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAIAnalysisTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 视频内容分析模板唯一标识。
+     * @var integer 音视频内容分析模板唯一标识。
      */
     public $Definition;
 
@@ -52,12 +52,12 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string 视频内容分析模板名称，长度限制：64 个字符。
+     * @var string 音视频内容分析模板名称，长度限制：64 个字符。
      */
     public $Name;
 
     /**
-     * @var string 视频内容分析模板描述信息，长度限制：256 个字符。
+     * @var string 音视频内容分析模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
 
@@ -87,10 +87,10 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
     public $HighlightConfigure;
 
     /**
-     * @param integer $Definition 视频内容分析模板唯一标识。
+     * @param integer $Definition 音视频内容分析模板唯一标识。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
-     * @param string $Name 视频内容分析模板名称，长度限制：64 个字符。
-     * @param string $Comment 视频内容分析模板描述信息，长度限制：256 个字符。
+     * @param string $Name 音视频内容分析模板名称，长度限制：64 个字符。
+     * @param string $Comment 音视频内容分析模板描述信息，长度限制：256 个字符。
      * @param ClassificationConfigureInfoForUpdate $ClassificationConfigure 智能分类任务控制参数。
      * @param TagConfigureInfoForUpdate $TagConfigure 智能标签任务控制参数。
      * @param CoverConfigureInfoForUpdate $CoverConfigure 智能封面任务控制参数。

@@ -172,6 +172,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgentVersion(string $AgentVersion) 设置agent版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeInstanceId() 获取容器母机实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeInstanceId(string $NodeInstanceId) 设置容器母机实例ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -404,6 +408,12 @@ class Instance extends AbstractModel
     public $AgentVersion;
 
     /**
+     * @var string 容器母机实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeInstanceId;
+
+    /**
      * @param string $InstanceId 机器实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 机器名称
@@ -479,6 +489,8 @@ class Instance extends AbstractModel
      * @param string $Reason 健康检查原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AgentVersion agent版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeInstanceId 容器母机实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -644,6 +656,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("AgentVersion",$param) and $param["AgentVersion"] !== null) {
             $this->AgentVersion = $param["AgentVersion"];
+        }
+
+        if (array_key_exists("NodeInstanceId",$param) and $param["NodeInstanceId"] !== null) {
+            $this->NodeInstanceId = $param["NodeInstanceId"];
         }
     }
 }

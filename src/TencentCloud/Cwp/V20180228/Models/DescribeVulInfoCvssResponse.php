@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(string $Labels) 设置漏洞标签 多个逗号分割
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDefenseAttackCount() 获取已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefenseAttackCount(integer $DefenseAttackCount) 设置已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -166,6 +170,12 @@ class DescribeVulInfoCvssResponse extends AbstractModel
     public $Labels;
 
     /**
+     * @var integer 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefenseAttackCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -198,6 +208,8 @@ class DescribeVulInfoCvssResponse extends AbstractModel
      * @param float $CvssScoreFloat cvss 分数 浮点型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Labels 漏洞标签 多个逗号分割
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefenseAttackCount 已防御的攻击次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -268,6 +280,10 @@ class DescribeVulInfoCvssResponse extends AbstractModel
 
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
             $this->Labels = $param["Labels"];
+        }
+
+        if (array_key_exists("DefenseAttackCount",$param) and $param["DefenseAttackCount"] !== null) {
+            $this->DefenseAttackCount = $param["DefenseAttackCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

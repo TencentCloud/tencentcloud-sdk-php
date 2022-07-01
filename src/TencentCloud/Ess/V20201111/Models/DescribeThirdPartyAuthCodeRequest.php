@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeThirdPartyAuthCode请求参数结构体
  *
- * @method string getAuthCode() 获取AuthCode 值
- * @method void setAuthCode(string $AuthCode) 设置AuthCode 值
+ * @method string getAuthCode() 获取电子签小程序跳转客户小程序时携带的授权查看码
+ * @method void setAuthCode(string $AuthCode) 设置电子签小程序跳转客户小程序时携带的授权查看码
  */
 class DescribeThirdPartyAuthCodeRequest extends AbstractModel
 {
     /**
-     * @var string AuthCode 值
+     * @var string 电子签小程序跳转客户小程序时携带的授权查看码
      */
     public $AuthCode;
 
     /**
-     * @param string $AuthCode AuthCode 值
+     * @param string $AuthCode 电子签小程序跳转客户小程序时携带的授权查看码
      */
     function __construct()
     {

@@ -25,11 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取配置类型，当OriginType=self 时，需要填写：
 area: 按区域配置
 weight: 按权重配置
-当OriginType=third_party 时，不需要填写
+当OriginType=third_party/cos 时，不需要填写
  * @method void setType(string $Type) 设置配置类型，当OriginType=self 时，需要填写：
 area: 按区域配置
 weight: 按权重配置
-当OriginType=third_party 时，不需要填写
+当OriginType=third_party/cos 时，不需要填写
  * @method array getRecord() 获取源站记录
  * @method void setRecord(array $Record) 设置源站记录
  * @method string getZoneId() 获取站点ID
@@ -37,9 +37,11 @@ weight: 按权重配置
  * @method string getOriginType() 获取源站类型
 self：自有源站
 third_party：第三方源站
+cos：腾讯云COS源站
  * @method void setOriginType(string $OriginType) 设置源站类型
 self：自有源站
 third_party：第三方源站
+cos：腾讯云COS源站
  */
 class CreateOriginGroupRequest extends AbstractModel
 {
@@ -52,7 +54,7 @@ class CreateOriginGroupRequest extends AbstractModel
      * @var string 配置类型，当OriginType=self 时，需要填写：
 area: 按区域配置
 weight: 按权重配置
-当OriginType=third_party 时，不需要填写
+当OriginType=third_party/cos 时，不需要填写
      */
     public $Type;
 
@@ -70,6 +72,7 @@ weight: 按权重配置
      * @var string 源站类型
 self：自有源站
 third_party：第三方源站
+cos：腾讯云COS源站
      */
     public $OriginType;
 
@@ -78,12 +81,13 @@ third_party：第三方源站
      * @param string $Type 配置类型，当OriginType=self 时，需要填写：
 area: 按区域配置
 weight: 按权重配置
-当OriginType=third_party 时，不需要填写
+当OriginType=third_party/cos 时，不需要填写
      * @param array $Record 源站记录
      * @param string $ZoneId 站点ID
      * @param string $OriginType 源站类型
 self：自有源站
 third_party：第三方源站
+cos：腾讯云COS源站
      */
     function __construct()
     {

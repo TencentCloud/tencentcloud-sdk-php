@@ -18,9 +18,9 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 小程序智能识别概要元信息
+ * 小程序音视频审核概要元信息
  *
- * @method string getType() 获取智能识别类型。 
+ * @method string getType() 获取音视频审核类型。 
 <li>Porn：画面涉及令人反感的信息，</li>
 <li>Porn.Ocr：文字涉及令人反感的信息，</li>
 <li>Porn.Asr：声音涉及令人反感的信息，</li>
@@ -28,7 +28,7 @@ use TencentCloud\Common\AbstractModel;
 <li>Political：画面涉及令人不适宜的信息，</li>
 <li>Political.Ocr：文字涉及令人不适宜的信息，</li>
 <li>Political.Asr：声音涉及令人不适宜的信息。</li>
- * @method void setType(string $Type) 设置智能识别类型。 
+ * @method void setType(string $Type) 设置音视频审核类型。 
 <li>Porn：画面涉及令人反感的信息，</li>
 <li>Porn.Ocr：文字涉及令人反感的信息，</li>
 <li>Porn.Asr：声音涉及令人反感的信息，</li>
@@ -36,21 +36,21 @@ use TencentCloud\Common\AbstractModel;
 <li>Political：画面涉及令人不适宜的信息，</li>
 <li>Political.Ocr：文字涉及令人不适宜的信息，</li>
 <li>Political.Asr：声音涉及令人不适宜的信息。</li>
- * @method string getSuggestion() 获取智能识别意见。
+ * @method string getSuggestion() 获取音视频审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
- * @method void setSuggestion(string $Suggestion) 设置智能识别意见。
+ * @method void setSuggestion(string $Suggestion) 设置音视频审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
- * @method float getConfidence() 获取智能识别结果置信度。取值 0~100。
- * @method void setConfidence(float $Confidence) 设置智能识别结果置信度。取值 0~100。
+ * @method float getConfidence() 获取音视频审核结果置信度。取值 0~100。
+ * @method void setConfidence(float $Confidence) 设置音视频审核结果置信度。取值 0~100。
  */
 class MediaMiniProgramReviewElem extends AbstractModel
 {
     /**
-     * @var string 智能识别类型。 
+     * @var string 音视频审核类型。 
 <li>Porn：画面涉及令人反感的信息，</li>
 <li>Porn.Ocr：文字涉及令人反感的信息，</li>
 <li>Porn.Asr：声音涉及令人反感的信息，</li>
@@ -62,7 +62,7 @@ class MediaMiniProgramReviewElem extends AbstractModel
     public $Type;
 
     /**
-     * @var string 智能识别意见。
+     * @var string 音视频审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
@@ -70,12 +70,12 @@ class MediaMiniProgramReviewElem extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var float 智能识别结果置信度。取值 0~100。
+     * @var float 音视频审核结果置信度。取值 0~100。
      */
     public $Confidence;
 
     /**
-     * @param string $Type 智能识别类型。 
+     * @param string $Type 音视频审核类型。 
 <li>Porn：画面涉及令人反感的信息，</li>
 <li>Porn.Ocr：文字涉及令人反感的信息，</li>
 <li>Porn.Asr：声音涉及令人反感的信息，</li>
@@ -83,11 +83,11 @@ class MediaMiniProgramReviewElem extends AbstractModel
 <li>Political：画面涉及令人不适宜的信息，</li>
 <li>Political.Ocr：文字涉及令人不适宜的信息，</li>
 <li>Political.Asr：声音涉及令人不适宜的信息。</li>
-     * @param string $Suggestion 智能识别意见。
+     * @param string $Suggestion 音视频审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
-     * @param float $Confidence 智能识别结果置信度。取值 0~100。
+     * @param float $Confidence 音视频审核结果置信度。取值 0~100。
      */
     function __construct()
     {

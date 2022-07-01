@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginId(string $OriginId) 设置源站组ID
  * @method string getOriginName() 获取源站组名称
  * @method void setOriginName(string $OriginName) 设置源站组名称
- * @method string getType() 获取配置类型
- * @method void setType(string $Type) 设置配置类型
+ * @method string getType() 获取源站组配置类型
+area：表示按照Record记录中的Area字段进行按客户端IP所在区域回源。
+weight：表示按照Record记录中的Weight字段进行按权重回源。
+ * @method void setType(string $Type) 设置源站组配置类型
+area：表示按照Record记录中的Area字段进行按客户端IP所在区域回源。
+weight：表示按照Record记录中的Weight字段进行按权重回源。
  * @method array getRecord() 获取记录
  * @method void setRecord(array $Record) 设置记录
  * @method string getUpdateTime() 获取更新时间
@@ -38,13 +42,29 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginType(string $OriginType) 设置源站类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getApplicationProxyUsed() 获取是否为四层代理使用
+ * @method boolean getApplicationProxyUsed() 获取当前源站组是否被四层代理使用。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApplicationProxyUsed(boolean $ApplicationProxyUsed) 设置是否为四层代理使用
+ * @method void setApplicationProxyUsed(boolean $ApplicationProxyUsed) 设置当前源站组是否被四层代理使用。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getLoadBalancingUsed() 获取是否为负载均衡使用
+ * @method boolean getLoadBalancingUsed() 获取当前源站组是否被负载均衡使用。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLoadBalancingUsed(boolean $LoadBalancingUsed) 设置是否为负载均衡使用
+ * @method void setLoadBalancingUsed(boolean $LoadBalancingUsed) 设置当前源站组是否被负载均衡使用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OriginCheckOriginStatus getStatus() 获取源站状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(OriginCheckOriginStatus $Status) 设置源站状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLoadBalancingUsedType() 获取使用当前源站组的负载均衡的类型：
+none：未被使用
+dns_only：被仅DNS类型负载均衡使用
+proxied：被代理加速类型负载均衡使用
+both：同时被仅DNS和代理加速类型负载均衡使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLoadBalancingUsedType(string $LoadBalancingUsedType) 设置使用当前源站组的负载均衡的类型：
+none：未被使用
+dns_only：被仅DNS类型负载均衡使用
+proxied：被代理加速类型负载均衡使用
+both：同时被仅DNS和代理加速类型负载均衡使用
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class OriginGroup extends AbstractModel
@@ -60,7 +80,9 @@ class OriginGroup extends AbstractModel
     public $OriginName;
 
     /**
-     * @var string 配置类型
+     * @var string 源站组配置类型
+area：表示按照Record记录中的Area字段进行按客户端IP所在区域回源。
+weight：表示按照Record记录中的Weight字段进行按权重回源。
      */
     public $Type;
 
@@ -91,30 +113,56 @@ class OriginGroup extends AbstractModel
     public $OriginType;
 
     /**
-     * @var boolean 是否为四层代理使用
+     * @var boolean 当前源站组是否被四层代理使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationProxyUsed;
 
     /**
-     * @var boolean 是否为负载均衡使用
+     * @var boolean 当前源站组是否被负载均衡使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancingUsed;
 
     /**
+     * @var OriginCheckOriginStatus 源站状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var string 使用当前源站组的负载均衡的类型：
+none：未被使用
+dns_only：被仅DNS类型负载均衡使用
+proxied：被代理加速类型负载均衡使用
+both：同时被仅DNS和代理加速类型负载均衡使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LoadBalancingUsedType;
+
+    /**
      * @param string $OriginId 源站组ID
      * @param string $OriginName 源站组名称
-     * @param string $Type 配置类型
+     * @param string $Type 源站组配置类型
+area：表示按照Record记录中的Area字段进行按客户端IP所在区域回源。
+weight：表示按照Record记录中的Weight字段进行按权重回源。
      * @param array $Record 记录
      * @param string $UpdateTime 更新时间
      * @param string $ZoneId 站点ID
      * @param string $ZoneName 站点名称
      * @param string $OriginType 源站类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $ApplicationProxyUsed 是否为四层代理使用
+     * @param boolean $ApplicationProxyUsed 当前源站组是否被四层代理使用。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $LoadBalancingUsed 是否为负载均衡使用
+     * @param boolean $LoadBalancingUsed 当前源站组是否被负载均衡使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginCheckOriginStatus $Status 源站状态信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LoadBalancingUsedType 使用当前源站组的负载均衡的类型：
+none：未被使用
+dns_only：被仅DNS类型负载均衡使用
+proxied：被代理加速类型负载均衡使用
+both：同时被仅DNS和代理加速类型负载均衡使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -173,6 +221,15 @@ class OriginGroup extends AbstractModel
 
         if (array_key_exists("LoadBalancingUsed",$param) and $param["LoadBalancingUsed"] !== null) {
             $this->LoadBalancingUsed = $param["LoadBalancingUsed"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = new OriginCheckOriginStatus();
+            $this->Status->deserialize($param["Status"]);
+        }
+
+        if (array_key_exists("LoadBalancingUsedType",$param) and $param["LoadBalancingUsedType"] !== null) {
+            $this->LoadBalancingUsedType = $param["LoadBalancingUsedType"];
         }
     }
 }

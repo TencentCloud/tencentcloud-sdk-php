@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method array getDownLoadFlows() 获取文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
+ * @method void setDownLoadFlows(array $DownLoadFlows) 设置文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method array getDownLoadFlows() 获取文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
- * @method void setDownLoadFlows(array $DownLoadFlows) 设置文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
  */
 class GetDownloadFlowUrlRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class GetDownloadFlowUrlRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var array 文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
+     */
+    public $DownLoadFlows;
+
+    /**
      * @var UserInfo 操作者的信息
      */
     public $Operator;
 
     /**
-     * @var array 文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
-     */
-    public $DownLoadFlows;
-
-    /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param array $DownLoadFlows 文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
      * @param UserInfo $Operator 操作者的信息
-     * @param array $DownLoadFlows 文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
      */
     function __construct()
     {
@@ -67,11 +67,6 @@ class GetDownloadFlowUrlRequest extends AbstractModel
             $this->Agent->deserialize($param["Agent"]);
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
-        }
-
         if (array_key_exists("DownLoadFlows",$param) and $param["DownLoadFlows"] !== null) {
             $this->DownLoadFlows = [];
             foreach ($param["DownLoadFlows"] as $key => $value){
@@ -79,6 +74,11 @@ class GetDownloadFlowUrlRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DownLoadFlows, $obj);
             }
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
         }
     }
 }

@@ -23,7 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComponentType() 获取如果是 Component 控件类型，则可选类型为：
 TEXT - 内容文本控件
 DATE - 内容日期控件
-SELECT - 勾选框控件
+CHECK_BOX - 勾选框控件
 如果是 SignComponent 控件类型，则可选类型为：
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
@@ -31,7 +31,7 @@ SIGN_SIGNATURE - 手写签名控件
  * @method void setComponentType(string $ComponentType) 设置如果是 Component 控件类型，则可选类型为：
 TEXT - 内容文本控件
 DATE - 内容日期控件
-SELECT - 勾选框控件
+CHECK_BOX - 勾选框控件
 如果是 SignComponent 控件类型，则可选类型为：
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
@@ -86,10 +86,10 @@ FIELD 表单域，需使用ComponentName指定表单域名称
 KEYWORD 关键字，使用ComponentId指定关键字
  * @method integer getComponentDateFontSize() 获取日期控件类型字号
  * @method void setComponentDateFontSize(integer $ComponentDateFontSize) 设置日期控件类型字号
- * @method float getOffsetX() 获取指定关键字时横坐标偏移量
- * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量
- * @method float getOffsetY() 获取指定关键字时纵坐标偏移量
- * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量
+ * @method float getOffsetX() 获取指定关键字时横坐标偏移量，单位pt
+ * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量，单位pt
+ * @method float getOffsetY() 获取指定关键字时纵坐标偏移量，单位pt
+ * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量，单位pt
  */
 class Component extends AbstractModel
 {
@@ -97,7 +97,7 @@ class Component extends AbstractModel
      * @var string 如果是 Component 控件类型，则可选类型为：
 TEXT - 内容文本控件
 DATE - 内容日期控件
-SELECT - 勾选框控件
+CHECK_BOX - 勾选框控件
 如果是 SignComponent 控件类型，则可选类型为：
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
@@ -191,12 +191,12 @@ KEYWORD 关键字，使用ComponentId指定关键字
     public $ComponentDateFontSize;
 
     /**
-     * @var float 指定关键字时横坐标偏移量
+     * @var float 指定关键字时横坐标偏移量，单位pt
      */
     public $OffsetX;
 
     /**
-     * @var float 指定关键字时纵坐标偏移量
+     * @var float 指定关键字时纵坐标偏移量，单位pt
      */
     public $OffsetY;
 
@@ -204,7 +204,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
      * @param string $ComponentType 如果是 Component 控件类型，则可选类型为：
 TEXT - 内容文本控件
 DATE - 内容日期控件
-SELECT - 勾选框控件
+CHECK_BOX - 勾选框控件
 如果是 SignComponent 控件类型，则可选类型为：
 SIGN_SEAL - 签署印章控件
 SIGN_DATE - 签署日期控件
@@ -234,8 +234,8 @@ ESIGN -- 个人印章类型
 FIELD 表单域，需使用ComponentName指定表单域名称
 KEYWORD 关键字，使用ComponentId指定关键字
      * @param integer $ComponentDateFontSize 日期控件类型字号
-     * @param float $OffsetX 指定关键字时横坐标偏移量
-     * @param float $OffsetY 指定关键字时纵坐标偏移量
+     * @param float $OffsetX 指定关键字时横坐标偏移量，单位pt
+     * @param float $OffsetY 指定关键字时纵坐标偏移量，单位pt
      */
     function __construct()
     {

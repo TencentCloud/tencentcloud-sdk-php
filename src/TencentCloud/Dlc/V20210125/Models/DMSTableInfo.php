@@ -14,39 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Taf\V20200210\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 流量反欺诈-虚假TA识别
+ * DMSTable信息
  *
- * @method integer getIsCheck() 获取是否查得[0：未查得；1：查得]
+ * @method DMSTable getTable() 获取DMS表信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsCheck(integer $IsCheck) 设置是否查得[0：未查得；1：查得]
+ * @method void setTable(DMSTable $Table) 设置DMS表信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsMatch() 获取是否符合[0：不符合；1：符合]
+ * @method Asset getAsset() 获取基础对象信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsMatch(integer $IsMatch) 设置是否符合[0：不符合；1：符合]
+ * @method void setAsset(Asset $Asset) 设置基础对象信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class OutputTaValue extends AbstractModel
+class DMSTableInfo extends AbstractModel
 {
     /**
-     * @var integer 是否查得[0：未查得；1：查得]
+     * @var DMSTable DMS表信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $IsCheck;
+    public $Table;
 
     /**
-     * @var integer 是否符合[0：不符合；1：符合]
+     * @var Asset 基础对象信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $IsMatch;
+    public $Asset;
 
     /**
-     * @param integer $IsCheck 是否查得[0：未查得；1：查得]
+     * @param DMSTable $Table DMS表信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsMatch 是否符合[0：不符合；1：符合]
+     * @param Asset $Asset 基础对象信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +62,14 @@ class OutputTaValue extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("IsCheck",$param) and $param["IsCheck"] !== null) {
-            $this->IsCheck = $param["IsCheck"];
+        if (array_key_exists("Table",$param) and $param["Table"] !== null) {
+            $this->Table = new DMSTable();
+            $this->Table->deserialize($param["Table"]);
         }
 
-        if (array_key_exists("IsMatch",$param) and $param["IsMatch"] !== null) {
-            $this->IsMatch = $param["IsMatch"];
+        if (array_key_exists("Asset",$param) and $param["Asset"] !== null) {
+            $this->Asset = new Asset();
+            $this->Asset->deserialize($param["Asset"]);
         }
     }
 }

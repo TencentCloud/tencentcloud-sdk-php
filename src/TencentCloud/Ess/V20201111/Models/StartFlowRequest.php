@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartFlow请求参数结构体
  *
+ * @method string getFlowId() 获取签署流程编号，由CreateFlow接口返回
+ * @method void setFlowId(string $FlowId) 设置签署流程编号，由CreateFlow接口返回
  * @method UserInfo getOperator() 获取用户信息
  * @method void setOperator(UserInfo $Operator) 设置用户信息
- * @method string getFlowId() 获取流程编号
- * @method void setFlowId(string $FlowId) 设置流程编号
  * @method Agent getAgent() 获取应用相关信息
  * @method void setAgent(Agent $Agent) 设置应用相关信息
- * @method string getClientToken() 获取客户端Token，保持接口幂等性
- * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性
+ * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
+ * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
  */
 class StartFlowRequest extends AbstractModel
 {
     /**
+     * @var string 签署流程编号，由CreateFlow接口返回
+     */
+    public $FlowId;
+
+    /**
      * @var UserInfo 用户信息
      */
     public $Operator;
-
-    /**
-     * @var string 流程编号
-     */
-    public $FlowId;
 
     /**
      * @var Agent 应用相关信息
@@ -47,15 +47,15 @@ class StartFlowRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 客户端Token，保持接口幂等性
+     * @var string 客户端Token，保持接口幂等性,最大长度64个字符
      */
     public $ClientToken;
 
     /**
+     * @param string $FlowId 签署流程编号，由CreateFlow接口返回
      * @param UserInfo $Operator 用户信息
-     * @param string $FlowId 流程编号
      * @param Agent $Agent 应用相关信息
-     * @param string $ClientToken 客户端Token，保持接口幂等性
+     * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      */
     function __construct()
     {
@@ -70,13 +70,13 @@ class StartFlowRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
+        }
+
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
-            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {

@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能识别 Ocr 文字鉴违禁任务输入参数类型
+ * 音视频审核 Ocr 文字鉴违禁任务输入参数类型
  *
  * @method integer getDefinition() 获取鉴违禁模板 ID。
  * @method void setDefinition(integer $Definition) 设置鉴违禁模板 ID。

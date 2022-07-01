@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceUrlsByFlows返回参数结构体
  *
- * @method array getFlowResourceUrlInfos() 获取流程资源对应链接信息
- * @method void setFlowResourceUrlInfos(array $FlowResourceUrlInfos) 设置流程资源对应链接信息
+ * @method array getFlowResourceUrlInfos() 获取签署流程资源对应链接信息
+ * @method void setFlowResourceUrlInfos(array $FlowResourceUrlInfos) 设置签署流程资源对应链接信息
  * @method array getErrorMessages() 获取创建消息，对应多个合同ID，
 成功为“”,创建失败则对应失败消息
  * @method void setErrorMessages(array $ErrorMessages) 设置创建消息，对应多个合同ID，
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeResourceUrlsByFlowsResponse extends AbstractModel
 {
     /**
-     * @var array 流程资源对应链接信息
+     * @var array 签署流程资源对应链接信息
      */
     public $FlowResourceUrlInfos;
 
@@ -48,7 +48,7 @@ class DescribeResourceUrlsByFlowsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FlowResourceUrlInfos 流程资源对应链接信息
+     * @param array $FlowResourceUrlInfos 签署流程资源对应链接信息
      * @param array $ErrorMessages 创建消息，对应多个合同ID，
 成功为“”,创建失败则对应失败消息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

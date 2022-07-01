@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterInstanceIdList(array $FilterInstanceIdList) 设置批量查询实例ID对应的高防IP实例资源
  * @method TagFilter getFilterTag() 获取标签搜索
  * @method void setFilterTag(TagFilter $FilterTag) 设置标签搜索
+ * @method array getFilterPackType() 获取按照套餐类型进行过滤
+ * @method void setFilterPackType(array $FilterPackType) 设置按照套餐类型进行过滤
  */
 class DescribeListBGPIPInstancesRequest extends AbstractModel
 {
@@ -140,6 +142,11 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterTag;
 
     /**
+     * @var array 按照套餐类型进行过滤
+     */
+    public $FilterPackType;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -160,6 +167,7 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
      * @param string $FilterCname 获取特定的实例Cname
      * @param array $FilterInstanceIdList 批量查询实例ID对应的高防IP实例资源
      * @param TagFilter $FilterTag 标签搜索
+     * @param array $FilterPackType 按照套餐类型进行过滤
      */
     function __construct()
     {
@@ -229,6 +237,10 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
         if (array_key_exists("FilterTag",$param) and $param["FilterTag"] !== null) {
             $this->FilterTag = new TagFilter();
             $this->FilterTag->deserialize($param["FilterTag"]);
+        }
+
+        if (array_key_exists("FilterPackType",$param) and $param["FilterPackType"] !== null) {
+            $this->FilterPackType = $param["FilterPackType"];
         }
     }
 }

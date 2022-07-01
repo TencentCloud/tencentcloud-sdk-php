@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThirdPayOrderId(string $ThirdPayOrderId) 设置第三方支付平台返回支付订单号。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OpenBankRedirectInfo getRedirectInfo() 获取小程序跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
+ * @method OpenBankRedirectInfo getRedirectInfo() 获取跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRedirectInfo(OpenBankRedirectInfo $RedirectInfo) 设置小程序跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
+ * @method void setRedirectInfo(OpenBankRedirectInfo $RedirectInfo) 设置跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutOrderId() 获取外部商户订单号，只能是数字、大小写字母，且在同一个接入平台下唯一。
  * @method void setOutOrderId(string $OutOrderId) 设置外部商户订单号，只能是数字、大小写字母，且在同一个接入平台下唯一。
@@ -47,7 +47,7 @@ class CreateOpenBankOrderPaymentResult extends AbstractModel
     public $ThirdPayOrderId;
 
     /**
-     * @var OpenBankRedirectInfo 小程序跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
+     * @var OpenBankRedirectInfo 跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RedirectInfo;
@@ -61,7 +61,7 @@ class CreateOpenBankOrderPaymentResult extends AbstractModel
      * @param string $ChannelOrderId 云企付平台订单号。
      * @param string $ThirdPayOrderId 第三方支付平台返回支付订单号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OpenBankRedirectInfo $RedirectInfo 小程序跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
+     * @param OpenBankRedirectInfo $RedirectInfo 跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutOrderId 外部商户订单号，只能是数字、大小写字母，且在同一个接入平台下唯一。
      */

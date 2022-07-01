@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReviewImage返回参数结构体
  *
- * @method array getReviewResultSet() 获取图片智能识别任务结果。
- * @method void setReviewResultSet(array $ReviewResultSet) 设置图片智能识别任务结果。
+ * @method array getReviewResultSet() 获取图片审核任务结果。
+ * @method void setReviewResultSet(array $ReviewResultSet) 设置图片审核任务结果。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ReviewImageResponse extends AbstractModel
 {
     /**
-     * @var array 图片智能识别任务结果。
+     * @var array 图片审核任务结果。
      */
     public $ReviewResultSet;
 
@@ -38,7 +38,7 @@ class ReviewImageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ReviewResultSet 图片智能识别任务结果。
+     * @param array $ReviewResultSet 图片审核任务结果。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

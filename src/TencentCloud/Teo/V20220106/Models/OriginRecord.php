@@ -23,11 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRecord() 获取记录值
  * @method void setRecord(string $Record) 设置记录值
  * @method array getArea() 获取当源站配置类型Type=area时，表示区域
-当源站类型Type=area时，为空表示默认区域
+为空表示默认区域
  * @method void setArea(array $Area) 设置当源站配置类型Type=area时，表示区域
-当源站类型Type=area时，为空表示默认区域
+为空表示默认区域
  * @method integer getWeight() 获取当源站配置类型Type=weight时，表示权重
+取值范围为[1-100]
+源站组内多个源站权重总和应为100
  * @method void setWeight(integer $Weight) 设置当源站配置类型Type=weight时，表示权重
+取值范围为[1-100]
+源站组内多个源站权重总和应为100
  * @method integer getPort() 获取端口
  * @method void setPort(integer $Port) 设置端口
  * @method string getRecordId() 获取记录ID
@@ -54,12 +58,14 @@ class OriginRecord extends AbstractModel
 
     /**
      * @var array 当源站配置类型Type=area时，表示区域
-当源站类型Type=area时，为空表示默认区域
+为空表示默认区域
      */
     public $Area;
 
     /**
      * @var integer 当源站配置类型Type=weight时，表示权重
+取值范围为[1-100]
+源站组内多个源站权重总和应为100
      */
     public $Weight;
 
@@ -90,8 +96,10 @@ class OriginRecord extends AbstractModel
     /**
      * @param string $Record 记录值
      * @param array $Area 当源站配置类型Type=area时，表示区域
-当源站类型Type=area时，为空表示默认区域
+为空表示默认区域
      * @param integer $Weight 当源站配置类型Type=weight时，表示权重
+取值范围为[1-100]
+源站组内多个源站权重总和应为100
      * @param integer $Port 端口
      * @param string $RecordId 记录ID
      * @param boolean $Private 是否私有鉴权

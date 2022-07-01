@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProxyOrganizationOpenId() 获取渠道侧合作企业唯一标识
  * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置渠道侧合作企业唯一标识
- * @method integer getUsage() 获取消耗量
- * @method void setUsage(integer $Usage) 设置消耗量
- * @method string getDate() 获取日期，当需要汇总数据时日期为空
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDate(string $Date) 设置日期，当需要汇总数据时日期为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProxyOrganizationName() 获取渠道侧合作企业名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道侧合作企业名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDate() 获取日期，当需要汇总数据时日期为空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDate(string $Date) 设置日期，当需要汇总数据时日期为空
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUsage() 获取消耗量
+ * @method void setUsage(integer $Usage) 设置消耗量
  */
 class UsageDetail extends AbstractModel
 {
@@ -41,9 +41,10 @@ class UsageDetail extends AbstractModel
     public $ProxyOrganizationOpenId;
 
     /**
-     * @var integer 消耗量
+     * @var string 渠道侧合作企业名
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Usage;
+    public $ProxyOrganizationName;
 
     /**
      * @var string 日期，当需要汇总数据时日期为空
@@ -52,18 +53,17 @@ class UsageDetail extends AbstractModel
     public $Date;
 
     /**
-     * @var string 渠道侧合作企业名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 消耗量
      */
-    public $ProxyOrganizationName;
+    public $Usage;
 
     /**
      * @param string $ProxyOrganizationOpenId 渠道侧合作企业唯一标识
-     * @param integer $Usage 消耗量
-     * @param string $Date 日期，当需要汇总数据时日期为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProxyOrganizationName 渠道侧合作企业名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Date 日期，当需要汇总数据时日期为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Usage 消耗量
      */
     function __construct()
     {
@@ -82,16 +82,16 @@ class UsageDetail extends AbstractModel
             $this->ProxyOrganizationOpenId = $param["ProxyOrganizationOpenId"];
         }
 
-        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
-            $this->Usage = $param["Usage"];
+        if (array_key_exists("ProxyOrganizationName",$param) and $param["ProxyOrganizationName"] !== null) {
+            $this->ProxyOrganizationName = $param["ProxyOrganizationName"];
         }
 
         if (array_key_exists("Date",$param) and $param["Date"] !== null) {
             $this->Date = $param["Date"];
         }
 
-        if (array_key_exists("ProxyOrganizationName",$param) and $param["ProxyOrganizationName"] !== null) {
-            $this->ProxyOrganizationName = $param["ProxyOrganizationName"];
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = $param["Usage"];
         }
     }
 }

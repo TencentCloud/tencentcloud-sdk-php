@@ -14,26 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Taf\V20200210\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EnhanceTaDegree返回参数结构体
+ * AddDMSPartitions返回参数结构体
  *
- * @method OutputTaData getData() 获取回包数据
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(OutputTaData $Data) 设置回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotal() 获取成功数量
+ * @method void setTotal(integer $Total) 设置成功数量
+ * @method array getPartitions() 获取分区值
+ * @method void setPartitions(array $Partitions) 设置分区值
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class EnhanceTaDegreeResponse extends AbstractModel
+class AddDMSPartitionsResponse extends AbstractModel
 {
     /**
-     * @var OutputTaData 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 成功数量
      */
-    public $Data;
+    public $Total;
+
+    /**
+     * @var array 分区值
+     */
+    public $Partitions;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class EnhanceTaDegreeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param OutputTaData $Data 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Total 成功数量
+     * @param array $Partitions 分区值
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,9 +62,17 @@ class EnhanceTaDegreeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new OutputTaData();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Partitions",$param) and $param["Partitions"] !== null) {
+            $this->Partitions = [];
+            foreach ($param["Partitions"] as $key => $value){
+                $obj = new DMSPartition();
+                $obj->deserialize($value);
+                array_push($this->Partitions, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

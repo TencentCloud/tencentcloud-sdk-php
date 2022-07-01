@@ -18,14 +18,14 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能识别模板详情
+ * 音视频审核模板详情
  *
- * @method integer getDefinition() 获取智能识别模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置智能识别模板唯一标识。
- * @method string getName() 获取智能识别模板名称，长度限制：64 个字符。
- * @method void setName(string $Name) 设置智能识别模板名称，长度限制：64 个字符。
- * @method string getComment() 获取智能识别模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置智能识别模板描述信息，长度限制：256 个字符。
+ * @method integer getDefinition() 获取音视频审核模板唯一标识。
+ * @method void setDefinition(integer $Definition) 设置音视频审核模板唯一标识。
+ * @method string getName() 获取音视频审核模板名称，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置音视频审核模板名称，长度限制：64 个字符。
+ * @method string getComment() 获取音视频审核模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置音视频审核模板描述信息，长度限制：256 个字符。
  * @method PornConfigureInfo getPornConfigure() 获取鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPornConfigure(PornConfigureInfo $PornConfigure) 设置鉴别涉及令人反感的信息的控制参数。
@@ -46,14 +46,14 @@ use TencentCloud\Common\AbstractModel;
 <li>谩骂；</li>
 <li>涉毒违法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义智能识别控制参数。
+ * @method UserDefineConfigureInfo getUserDefineConfigure() 获取用户自定义音视频审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义智能识别控制参数。
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) 设置用户自定义音视频审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReviewWallSwitch() 获取智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
+ * @method string getReviewWallSwitch() 获取音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) 设置智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) 设置音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
@@ -66,17 +66,17 @@ use TencentCloud\Common\AbstractModel;
 class ContentReviewTemplateItem extends AbstractModel
 {
     /**
-     * @var integer 智能识别模板唯一标识。
+     * @var integer 音视频审核模板唯一标识。
      */
     public $Definition;
 
     /**
-     * @var string 智能识别模板名称，长度限制：64 个字符。
+     * @var string 音视频审核模板名称，长度限制：64 个字符。
      */
     public $Name;
 
     /**
-     * @var string 智能识别模板描述信息，长度限制：256 个字符。
+     * @var string 音视频审核模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
 
@@ -107,13 +107,13 @@ class ContentReviewTemplateItem extends AbstractModel
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo 用户自定义智能识别控制参数。
+     * @var UserDefineConfigureInfo 用户自定义音视频审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserDefineConfigure;
 
     /**
-     * @var string 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
+     * @var string 音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      */
@@ -135,9 +135,9 @@ class ContentReviewTemplateItem extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 智能识别模板唯一标识。
-     * @param string $Name 智能识别模板名称，长度限制：64 个字符。
-     * @param string $Comment 智能识别模板描述信息，长度限制：256 个字符。
+     * @param integer $Definition 音视频审核模板唯一标识。
+     * @param string $Name 音视频审核模板名称，长度限制：64 个字符。
+     * @param string $Comment 音视频审核模板描述信息，长度限制：256 个字符。
      * @param PornConfigureInfo $PornConfigure 鉴别涉及令人反感的信息的控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TerrorismConfigureInfo $TerrorismConfigure 鉴别涉及令人不安全的信息的控制参数。
@@ -148,9 +148,9 @@ class ContentReviewTemplateItem extends AbstractModel
 <li>谩骂；</li>
 <li>涉毒违法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义智能识别控制参数。
+     * @param UserDefineConfigureInfo $UserDefineConfigure 用户自定义音视频审核控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReviewWallSwitch 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
+     * @param string $ReviewWallSwitch 音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
 <li>ON：是；</li>
 <li>OFF：否。</li>
      * @param float $ScreenshotInterval 截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。

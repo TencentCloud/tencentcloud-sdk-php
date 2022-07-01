@@ -18,41 +18,35 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 此结构体 (FlowInfo) 用于描述流程信息。
+ * 此结构体 (FlowInfo) 用于描述签署流程信息。
  *
- * @method string getFlowName() 获取合同名字
- * @method void setFlowName(string $FlowName) 设置合同名字
+ * @method string getFlowName() 获取合同名字，最大长度200个字符
+ * @method void setFlowName(string $FlowName) 设置合同名字，最大长度200个字符
  * @method integer getDeadline() 获取签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
  * @method void setDeadline(integer $Deadline) 设置签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
  * @method string getTemplateId() 获取模板ID
  * @method void setTemplateId(string $TemplateId) 设置模板ID
- * @method string getFlowType() 获取合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
- * @method void setFlowType(string $FlowType) 设置合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
- * @method string getCallbackUrl() 获取回调地址
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
- * @method array getFlowApprovers() 获取多个签署人信息，渠道侧目前不支持超过5个签署方信息
- * @method void setFlowApprovers(array $FlowApprovers) 设置多个签署人信息，渠道侧目前不支持超过5个签署方信息
+ * @method array getFlowApprovers() 获取多个签署人信息，最大支持50个签署方
+ * @method void setFlowApprovers(array $FlowApprovers) 设置多个签署人信息，最大支持50个签署方
  * @method array getFormFields() 获取表单K-V对列表
  * @method void setFormFields(array $FormFields) 设置表单K-V对列表
- * @method string getFlowDescription() 获取合同描述
- * @method void setFlowDescription(string $FlowDescription) 设置合同描述
- * @method string getCustomerData() 获取渠道的业务信息，限制1024字符
- * @method void setCustomerData(string $CustomerData) 设置渠道的业务信息，限制1024字符
+ * @method string getCallbackUrl() 获取回调地址，最大长度1000个字符
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，最大长度1000个字符
+ * @method string getFlowType() 获取合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+ * @method void setFlowType(string $FlowType) 设置合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+ * @method string getFlowDescription() 获取合同描述，最大长度1000个字符
+ * @method void setFlowDescription(string $FlowDescription) 设置合同描述，最大长度1000个字符
+ * @method string getCustomerData() 获取渠道的业务信息，最大长度1000个字符
+ * @method void setCustomerData(string $CustomerData) 设置渠道的业务信息，最大长度1000个字符
+ * @method string getCustomShowMap() 获取合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+ * @method void setCustomShowMap(string $CustomShowMap) 设置合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method array getCcInfos() 获取被抄送人的信息列表，抄送功能暂不开放
  * @method void setCcInfos(array $CcInfos) 设置被抄送人的信息列表，抄送功能暂不开放
  */
 class FlowInfo extends AbstractModel
 {
     /**
-     * @var string 合同名字
+     * @var string 合同名字，最大长度200个字符
      */
     public $FlowName;
 
@@ -67,21 +61,7 @@ class FlowInfo extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
-     */
-    public $FlowType;
-
-    /**
-     * @var string 回调地址
-     */
-    public $CallbackUrl;
-
-    /**
-     * @var array 多个签署人信息，渠道侧目前不支持超过5个签署方信息
+     * @var array 多个签署人信息，最大支持50个签署方
      */
     public $FlowApprovers;
 
@@ -91,14 +71,29 @@ class FlowInfo extends AbstractModel
     public $FormFields;
 
     /**
-     * @var string 合同描述
+     * @var string 回调地址，最大长度1000个字符
+     */
+    public $CallbackUrl;
+
+    /**
+     * @var string 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+     */
+    public $FlowType;
+
+    /**
+     * @var string 合同描述，最大长度1000个字符
      */
     public $FlowDescription;
 
     /**
-     * @var string 渠道的业务信息，限制1024字符
+     * @var string 渠道的业务信息，最大长度1000个字符
      */
     public $CustomerData;
+
+    /**
+     * @var string 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     */
+    public $CustomShowMap;
 
     /**
      * @var array 被抄送人的信息列表，抄送功能暂不开放
@@ -106,19 +101,16 @@ class FlowInfo extends AbstractModel
     public $CcInfos;
 
     /**
-     * @param string $FlowName 合同名字
+     * @param string $FlowName 合同名字，最大长度200个字符
      * @param integer $Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
      * @param string $TemplateId 模板ID
-     * @param string $FlowType 合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
-     * @param string $CallbackUrl 回调地址
-     * @param array $FlowApprovers 多个签署人信息，渠道侧目前不支持超过5个签署方信息
+     * @param array $FlowApprovers 多个签署人信息，最大支持50个签署方
      * @param array $FormFields 表单K-V对列表
-     * @param string $FlowDescription 合同描述
-     * @param string $CustomerData 渠道的业务信息，限制1024字符
+     * @param string $CallbackUrl 回调地址，最大长度1000个字符
+     * @param string $FlowType 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+     * @param string $FlowDescription 合同描述，最大长度1000个字符
+     * @param string $CustomerData 渠道的业务信息，最大长度1000个字符
+     * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
      * @param array $CcInfos 被抄送人的信息列表，抄送功能暂不开放
      */
     function __construct()
@@ -146,14 +138,6 @@ class FlowInfo extends AbstractModel
             $this->TemplateId = $param["TemplateId"];
         }
 
-        if (array_key_exists("FlowType",$param) and $param["FlowType"] !== null) {
-            $this->FlowType = $param["FlowType"];
-        }
-
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
-        }
-
         if (array_key_exists("FlowApprovers",$param) and $param["FlowApprovers"] !== null) {
             $this->FlowApprovers = [];
             foreach ($param["FlowApprovers"] as $key => $value){
@@ -172,12 +156,24 @@ class FlowInfo extends AbstractModel
             }
         }
 
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("FlowType",$param) and $param["FlowType"] !== null) {
+            $this->FlowType = $param["FlowType"];
+        }
+
         if (array_key_exists("FlowDescription",$param) and $param["FlowDescription"] !== null) {
             $this->FlowDescription = $param["FlowDescription"];
         }
 
         if (array_key_exists("CustomerData",$param) and $param["CustomerData"] !== null) {
             $this->CustomerData = $param["CustomerData"];
+        }
+
+        if (array_key_exists("CustomShowMap",$param) and $param["CustomShowMap"] !== null) {
+            $this->CustomShowMap = $param["CustomShowMap"];
         }
 
         if (array_key_exists("CcInfos",$param) and $param["CcInfos"] !== null) {

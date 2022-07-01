@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowBriefs请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
  * @method array getFlowIds() 获取需要查询的流程ID列表
  * @method void setFlowIds(array $FlowIds) 设置需要查询的流程ID列表
- * @method Agent getAgent() 获取代理商信息
- * @method void setAgent(Agent $Agent) 设置代理商信息
+ * @method UserInfo getOperator() 获取操作人信息
+ * @method void setOperator(UserInfo $Operator) 设置操作人信息
+ * @method Agent getAgent() 获取应用相关信息
+ * @method void setAgent(Agent $Agent) 设置应用相关信息
  */
 class DescribeFlowBriefsRequest extends AbstractModel
 {
-    /**
-     * @var UserInfo 操作人信息
-     */
-    public $Operator;
-
     /**
      * @var array 需要查询的流程ID列表
      */
     public $FlowIds;
 
     /**
-     * @var Agent 代理商信息
+     * @var UserInfo 操作人信息
+     */
+    public $Operator;
+
+    /**
+     * @var Agent 应用相关信息
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 操作人信息
      * @param array $FlowIds 需要查询的流程ID列表
-     * @param Agent $Agent 代理商信息
+     * @param UserInfo $Operator 操作人信息
+     * @param Agent $Agent 应用相关信息
      */
     function __construct()
     {
@@ -62,13 +62,13 @@ class DescribeFlowBriefsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
+            $this->FlowIds = $param["FlowIds"];
+        }
+
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
-            $this->FlowIds = $param["FlowIds"];
         }
 
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {

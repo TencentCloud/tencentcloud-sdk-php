@@ -66,6 +66,8 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
  * @method void setBasePodNumber(integer $BasePodNumber) 设置自定义模式下的基础pod数量
  * @method string getCiliumMode() 获取启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
  * @method void setCiliumMode(string $CiliumMode) 设置启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
+ * @method boolean getIsDualStack() 获取集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+ * @method void setIsDualStack(boolean $IsDualStack) 设置集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -161,6 +163,11 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     public $CiliumMode;
 
     /**
+     * @var boolean 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+     */
+    public $IsDualStack;
+
+    /**
      * @param boolean $IPVS 是否启用IPVS
      * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
@@ -184,6 +191,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
      * @param boolean $EnableCustomizedPodCIDR 是否开节点podCIDR大小的自定义模式
      * @param integer $BasePodNumber 自定义模式下的基础pod数量
      * @param string $CiliumMode 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
+     * @param boolean $IsDualStack 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
      */
     function __construct()
     {
@@ -265,6 +273,10 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
 
         if (array_key_exists("CiliumMode",$param) and $param["CiliumMode"] !== null) {
             $this->CiliumMode = $param["CiliumMode"];
+        }
+
+        if (array_key_exists("IsDualStack",$param) and $param["IsDualStack"] !== null) {
+            $this->IsDualStack = $param["IsDualStack"];
         }
     }
 }

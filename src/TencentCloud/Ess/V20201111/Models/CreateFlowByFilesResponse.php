@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowByFiles返回参数结构体
  *
- * @method string getFlowId() 获取流程编号
- * @method void setFlowId(string $FlowId) 设置流程编号
+ * @method string getFlowId() 获取签署流程编号
+ * @method void setFlowId(string $FlowId) 设置签署流程编号
  * @method string getPreviewUrl() 获取合同预览链接
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置合同预览链接
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateFlowByFilesResponse extends AbstractModel
 {
     /**
-     * @var string 流程编号
+     * @var string 签署流程编号
      */
     public $FlowId;
 
@@ -48,7 +48,7 @@ class CreateFlowByFilesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 流程编号
+     * @param string $FlowId 签署流程编号
      * @param string $PreviewUrl 合同预览链接
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

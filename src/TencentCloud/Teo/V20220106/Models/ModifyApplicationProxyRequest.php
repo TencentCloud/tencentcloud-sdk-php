@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点ID
  * @method void setZoneId(string $ZoneId) 设置站点ID
- * @method string getProxyId() 获取四层代理ID
- * @method void setProxyId(string $ProxyId) 设置四层代理ID
- * @method string getProxyName() 获取四层代理名称
- * @method void setProxyName(string $ProxyName) 设置四层代理名称
+ * @method string getProxyId() 获取代理ID
+ * @method void setProxyId(string $ProxyId) 设置代理ID
+ * @method string getProxyName() 获取代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
+ * @method void setProxyName(string $ProxyName) 设置代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
  * @method string getForwardClientIp() 获取参数已经废弃
  * @method void setForwardClientIp(string $ForwardClientIp) 设置参数已经废弃
  * @method boolean getSessionPersist() 获取参数已经废弃
@@ -33,11 +37,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSessionPersistTime() 获取会话保持时间，取值范围：30-3600，单位：秒
  * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间，取值范围：30-3600，单位：秒
  * @method string getProxyType() 获取服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
  * @method void setProxyType(string $ProxyType) 设置服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
  */
 class ModifyApplicationProxyRequest extends AbstractModel
 {
@@ -47,12 +51,14 @@ class ModifyApplicationProxyRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 四层代理ID
+     * @var string 代理ID
      */
     public $ProxyId;
 
     /**
-     * @var string 四层代理名称
+     * @var string 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      */
     public $ProxyName;
 
@@ -73,21 +79,23 @@ class ModifyApplicationProxyRequest extends AbstractModel
 
     /**
      * @var string 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      */
     public $ProxyType;
 
     /**
      * @param string $ZoneId 站点ID
-     * @param string $ProxyId 四层代理ID
-     * @param string $ProxyName 四层代理名称
+     * @param string $ProxyId 代理ID
+     * @param string $ProxyName 代理名称
+当ProxyType=hostname时，表示域名或者子域名
+当ProxyType=instance时，表示实例名称
      * @param string $ForwardClientIp 参数已经废弃
      * @param boolean $SessionPersist 参数已经废弃
      * @param integer $SessionPersistTime 会话保持时间，取值范围：30-3600，单位：秒
      * @param string $ProxyType 服务类型
-hostname：子域名
-instance：实例
+hostname：子域名模式
+instance：实例模式
      */
     function __construct()
     {

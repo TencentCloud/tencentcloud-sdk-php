@@ -40,6 +40,7 @@ use TencentCloud\Ms\V20180408\Models as Models;
 
  * @method Models\DescribeShieldPlanInstanceResponse DescribeShieldPlanInstance(Models\DescribeShieldPlanInstanceRequest $req) 查询加固策略
  * @method Models\DescribeShieldResultResponse DescribeShieldResult(Models\DescribeShieldResultRequest $req) 通过唯一标识获取加固的结果
+ * @method Models\DescribeUrlDetectionResultResponse DescribeUrlDetectionResult(Models\DescribeUrlDetectionResultRequest $req) 移动安全-网址检测服务
  * @method Models\DescribeUserBaseInfoInstanceResponse DescribeUserBaseInfoInstance(Models\DescribeUserBaseInfoInstanceRequest $req) 获取用户基础信息
  */
 

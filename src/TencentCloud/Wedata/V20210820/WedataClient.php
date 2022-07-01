@@ -15,38 +15,34 @@
  * limitations under the License.
  */
 
-namespace TencentCloud\Dbdc\V20201029;
+namespace TencentCloud\Wedata\V20210820;
 
 use TencentCloud\Common\AbstractClient;
 use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Credential;
-use TencentCloud\Dbdc\V20201029\Models as Models;
+use TencentCloud\Wedata\V20210820\Models as Models;
 
 /**
- * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口用于查询独享集群内的DB实例列表
- * @method Models\DescribeHostListResponse DescribeHostList(Models\DescribeHostListRequest $req) 本接口用于查询主机列表
- * @method Models\DescribeInstanceDetailResponse DescribeInstanceDetail(Models\DescribeInstanceDetailRequest $req) 本接口用于查询独享集群详情
- * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 本接口用于查询独享集群实例列表
- * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 根据不同地域不同用户，获取集群列表信息
- * @method Models\ModifyInstanceNameResponse ModifyInstanceName(Models\ModifyInstanceNameRequest $req) 本接口用于修改集群名称
+ * @method Models\DescribeRelatedInstancesResponse DescribeRelatedInstances(Models\DescribeRelatedInstancesRequest $req) 查询任务实例的关联实例列表
+ * @method Models\DescribeTaskInstancesResponse DescribeTaskInstances(Models\DescribeTaskInstancesRequest $req) 查询任务实例列表
  */
 
-class DbdcClient extends AbstractClient
+class WedataClient extends AbstractClient
 {
     /**
      * @var string
      */
-    protected $endpoint = "dbdc.tencentcloudapi.com";
+    protected $endpoint = "wedata.tencentcloudapi.com";
 
     /**
      * @var string
      */
-    protected $service = "dbdc";
+    protected $service = "wedata";
 
     /**
      * @var string
      */
-    protected $version = "2020-10-29";
+    protected $version = "2021-08-20";
 
     /**
      * @param Credential $credential
@@ -61,7 +57,7 @@ class DbdcClient extends AbstractClient
 
     public function returnResponse($action, $response)
     {
-        $respClass = "TencentCloud"."\\".ucfirst("dbdc")."\\"."V20201029\\Models"."\\".ucfirst($action)."Response";
+        $respClass = "TencentCloud"."\\".ucfirst("wedata")."\\"."V20210820\\Models"."\\".ucfirst($action)."Response";
         $obj = new $respClass();
         $obj->deserialize($response);
         return $obj;

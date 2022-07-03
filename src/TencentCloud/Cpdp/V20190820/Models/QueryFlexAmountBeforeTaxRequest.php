@@ -30,6 +30,16 @@ LABOR:劳务所得
 OCCASION:偶然所得
  * @method string getAmountAfterTax() 获取税后金额
  * @method void setAmountAfterTax(string $AmountAfterTax) 设置税后金额
+ * @method string getEnvironment() 获取环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+ * @method void setEnvironment(string $Environment) 设置环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
  */
 class QueryFlexAmountBeforeTaxRequest extends AbstractModel
 {
@@ -51,11 +61,25 @@ OCCASION:偶然所得
     public $AmountAfterTax;
 
     /**
+     * @var string 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $PayeeId 收款用户ID
      * @param string $IncomeType 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得
      * @param string $AmountAfterTax 税后金额
+     * @param string $Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
      */
     function __construct()
     {
@@ -80,6 +104,10 @@ OCCASION:偶然所得
 
         if (array_key_exists("AmountAfterTax",$param) and $param["AmountAfterTax"] !== null) {
             $this->AmountAfterTax = $param["AmountAfterTax"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

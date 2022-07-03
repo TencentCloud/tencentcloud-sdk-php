@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskId() 获取请求ID，即接口返回的 RequestId 参数。
  * @method void setTaskId(string $TaskId) 设置请求ID，即接口返回的 RequestId 参数。
  * @method string getDealName() 获取订单ID。
+注意：参数TaskId和DealName必须传一个。
  * @method void setDealName(string $DealName) 设置订单ID。
+注意：参数TaskId和DealName必须传一个。
  */
 class DescribeTaskStatusRequest extends AbstractModel
 {
@@ -34,12 +36,14 @@ class DescribeTaskStatusRequest extends AbstractModel
 
     /**
      * @var string 订单ID。
+注意：参数TaskId和DealName必须传一个。
      */
     public $DealName;
 
     /**
      * @param string $TaskId 请求ID，即接口返回的 RequestId 参数。
      * @param string $DealName 订单ID。
+注意：参数TaskId和DealName必须传一个。
      */
     function __construct()
     {

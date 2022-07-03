@@ -18,16 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateInstance请求参数结构体
+ * ModifyBackupName请求参数结构体
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getInstanceIdList() 获取实例ID数组
- * @method void setInstanceIdList(array $InstanceIdList) 设置实例ID数组
- * @method string getDbType() 获取该参数已废弃
- * @method void setDbType(string $DbType) 设置该参数已废弃
+ * @method integer getBackupId() 获取备份文件ID
+ * @method void setBackupId(integer $BackupId) 设置备份文件ID
+ * @method string getBackupName() 获取备注名，长度不能超过60个字符
+ * @method void setBackupName(string $BackupName) 设置备注名，长度不能超过60个字符
  */
-class IsolateInstanceRequest extends AbstractModel
+class ModifyBackupNameRequest extends AbstractModel
 {
     /**
      * @var string 集群ID
@@ -35,19 +35,19 @@ class IsolateInstanceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 实例ID数组
+     * @var integer 备份文件ID
      */
-    public $InstanceIdList;
+    public $BackupId;
 
     /**
-     * @var string 该参数已废弃
+     * @var string 备注名，长度不能超过60个字符
      */
-    public $DbType;
+    public $BackupName;
 
     /**
      * @param string $ClusterId 集群ID
-     * @param array $InstanceIdList 实例ID数组
-     * @param string $DbType 该参数已废弃
+     * @param integer $BackupId 备份文件ID
+     * @param string $BackupName 备注名，长度不能超过60个字符
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class IsolateInstanceRequest extends AbstractModel
             $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
-            $this->InstanceIdList = $param["InstanceIdList"];
+        if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
+            $this->BackupId = $param["BackupId"];
         }
 
-        if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
-            $this->DbType = $param["DbType"];
+        if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
+            $this->BackupName = $param["BackupName"];
         }
     }
 }

@@ -32,8 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricAlarm(MetricAlarm $MetricAlarm) 设置告警监控指标。
  * @method integer getCooldown() 获取冷却时间，单位为秒。默认冷却时间300秒。
  * @method void setCooldown(integer $Cooldown) 设置冷却时间，单位为秒。默认冷却时间300秒。
- * @method array getNotificationUserGroupIds() 获取通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
- * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+ * @method array getNotificationUserGroupIds() 获取此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
+ * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
  */
 class CreateScalingPolicyRequest extends AbstractModel
 {
@@ -68,7 +70,8 @@ class CreateScalingPolicyRequest extends AbstractModel
     public $Cooldown;
 
     /**
-     * @var array 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+     * @var array 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
      */
     public $NotificationUserGroupIds;
 
@@ -79,7 +82,8 @@ class CreateScalingPolicyRequest extends AbstractModel
      * @param integer $AdjustmentValue 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      * @param MetricAlarm $MetricAlarm 告警监控指标。
      * @param integer $Cooldown 冷却时间，单位为秒。默认冷却时间300秒。
-     * @param array $NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+     * @param array $NotificationUserGroupIds 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
      */
     function __construct()
     {

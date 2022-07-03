@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置Cpu核数
  * @method integer getMemory() 获取内存，单位为GB
  * @method void setMemory(integer $Memory) 设置内存，单位为GB
- * @method integer getReadOnlyCount() 获取新增只读实例数，取值范围为(0,16]
- * @method void setReadOnlyCount(integer $ReadOnlyCount) 设置新增只读实例数，取值范围为(0,16]
- * @method string getInstanceGrpId() 获取实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
- * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
- * @method string getVpcId() 获取所属VPC网络ID
- * @method void setVpcId(string $VpcId) 设置所属VPC网络ID
- * @method string getSubnetId() 获取所属子网ID，如果设置了VpcId，则SubnetId必填
- * @method void setSubnetId(string $SubnetId) 设置所属子网ID，如果设置了VpcId，则SubnetId必填
+ * @method integer getReadOnlyCount() 获取新增只读实例数，取值范围为[0,4]
+ * @method void setReadOnlyCount(integer $ReadOnlyCount) 设置新增只读实例数，取值范围为[0,4]
+ * @method string getInstanceGrpId() 获取实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+ * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+ * @method string getVpcId() 获取所属VPC网络ID，该参数已废弃
+ * @method void setVpcId(string $VpcId) 设置所属VPC网络ID，该参数已废弃
+ * @method string getSubnetId() 获取所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
+ * @method void setSubnetId(string $SubnetId) 设置所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
  * @method integer getPort() 获取新增RO组时使用的Port，取值范围为[0,65535)
  * @method void setPort(integer $Port) 设置新增RO组时使用的Port，取值范围为[0,65535)
- * @method string getInstanceName() 获取实例名称，字符串长度范围为[0,64)
- * @method void setInstanceName(string $InstanceName) 设置实例名称，字符串长度范围为[0,64)
+ * @method string getInstanceName() 获取实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
+ * @method void setInstanceName(string $InstanceName) 设置实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
  * @method string getDbType() 获取数据库类型，取值范围: 
@@ -67,22 +67,22 @@ class AddInstancesRequest extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer 新增只读实例数，取值范围为(0,16]
+     * @var integer 新增只读实例数，取值范围为[0,4]
      */
     public $ReadOnlyCount;
 
     /**
-     * @var string 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
+     * @var string 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
      */
     public $InstanceGrpId;
 
     /**
-     * @var string 所属VPC网络ID
+     * @var string 所属VPC网络ID，该参数已废弃
      */
     public $VpcId;
 
     /**
-     * @var string 所属子网ID，如果设置了VpcId，则SubnetId必填
+     * @var string 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
      */
     public $SubnetId;
 
@@ -92,7 +92,7 @@ class AddInstancesRequest extends AbstractModel
     public $Port;
 
     /**
-     * @var string 实例名称，字符串长度范围为[0,64)
+     * @var string 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
      */
     public $InstanceName;
 
@@ -121,12 +121,12 @@ class AddInstancesRequest extends AbstractModel
      * @param string $ClusterId 集群ID
      * @param integer $Cpu Cpu核数
      * @param integer $Memory 内存，单位为GB
-     * @param integer $ReadOnlyCount 新增只读实例数，取值范围为(0,16]
-     * @param string $InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
-     * @param string $VpcId 所属VPC网络ID
-     * @param string $SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填
+     * @param integer $ReadOnlyCount 新增只读实例数，取值范围为[0,4]
+     * @param string $InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * @param string $VpcId 所属VPC网络ID，该参数已废弃
+     * @param string $SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
      * @param integer $Port 新增RO组时使用的Port，取值范围为[0,65535)
-     * @param string $InstanceName 实例名称，字符串长度范围为[0,64)
+     * @param string $InstanceName 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
      * @param string $DbType 数据库类型，取值范围: 
 <li> MYSQL </li>

@@ -28,6 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method Paging getPageNumber() 获取分页
  * @method void setPageNumber(Paging $PageNumber) 设置分页
+ * @method string getEnvironment() 获取环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+ * @method void setEnvironment(string $Environment) 设置环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
  */
 class QueryFlexPayeeAccountListRequest extends AbstractModel
 {
@@ -52,10 +62,24 @@ class QueryFlexPayeeAccountListRequest extends AbstractModel
     public $PageNumber;
 
     /**
+     * @var string 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public $Environment;
+
+    /**
      * @param PayeeAccountPropertyInfo $PropertyInfo 账户属性信息
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
      * @param Paging $PageNumber 分页
+     * @param string $Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
      */
     function __construct()
     {
@@ -86,6 +110,10 @@ class QueryFlexPayeeAccountListRequest extends AbstractModel
         if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
             $this->PageNumber = new Paging();
             $this->PageNumber->deserialize($param["PageNumber"]);
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

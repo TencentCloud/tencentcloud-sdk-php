@@ -34,6 +34,16 @@ DISABLE:停用
  * @method void setAccountRightStatus(string $AccountRightStatus) 设置账户权益状态
 ENABLE:启用
 DISABLE:停用
+ * @method string getEnvironment() 获取环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+ * @method void setEnvironment(string $Environment) 设置环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
  */
 class ModifyFlexPayeeAccountRightStatusRequest extends AbstractModel
 {
@@ -57,6 +67,15 @@ DISABLE:停用
     public $AccountRightStatus;
 
     /**
+     * @var string 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $PayeeId 收款用户ID
      * @param string $AccountRightType 账户权益类型
 SETTLEMENT:结算权益
@@ -64,6 +83,11 @@ PAYMENT:付款权益
      * @param string $AccountRightStatus 账户权益状态
 ENABLE:启用
 DISABLE:停用
+     * @param string $Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
      */
     function __construct()
     {
@@ -88,6 +112,10 @@ DISABLE:停用
 
         if (array_key_exists("AccountRightStatus",$param) and $param["AccountRightStatus"] !== null) {
             $this->AccountRightStatus = $param["AccountRightStatus"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

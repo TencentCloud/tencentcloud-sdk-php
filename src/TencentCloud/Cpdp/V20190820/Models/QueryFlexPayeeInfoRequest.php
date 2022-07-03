@@ -24,6 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayeeId(string $PayeeId) 设置收款用户ID
  * @method string getOutUserId() 获取外部用户ID
  * @method void setOutUserId(string $OutUserId) 设置外部用户ID
+ * @method string getEnvironment() 获取环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+ * @method void setEnvironment(string $Environment) 设置环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
  */
 class QueryFlexPayeeInfoRequest extends AbstractModel
 {
@@ -38,8 +48,22 @@ class QueryFlexPayeeInfoRequest extends AbstractModel
     public $OutUserId;
 
     /**
+     * @var string 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $PayeeId 收款用户ID
      * @param string $OutUserId 外部用户ID
+     * @param string $Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
      */
     function __construct()
     {
@@ -60,6 +84,10 @@ class QueryFlexPayeeInfoRequest extends AbstractModel
 
         if (array_key_exists("OutUserId",$param) and $param["OutUserId"] !== null) {
             $this->OutUserId = $param["OutUserId"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

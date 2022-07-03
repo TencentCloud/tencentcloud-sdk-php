@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheusClusterAgent请求参数结构体
  *
-
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method array getAgents() 获取agent列表
+ * @method void setAgents(array $Agents) 设置agent列表
  */
 class CreatePrometheusClusterAgentRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
 
     /**
+     * @var array agent列表
+     */
+    public $Agents;
 
+    /**
+     * @param string $InstanceId 实例ID
+     * @param array $Agents agent列表
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class CreatePrometheusClusterAgentRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("Agents",$param) and $param["Agents"] !== null) {
+            $this->Agents = [];
+            foreach ($param["Agents"] as $key => $value){
+                $obj = new PrometheusClusterAgentBasic();
+                $obj->deserialize($value);
+                array_push($this->Agents, $obj);
+            }
+        }
     }
 }

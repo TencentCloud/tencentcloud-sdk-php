@@ -153,7 +153,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * 不再使用的云盘，可通过本接口主动退还。
 * 本接口支持退还预付费云盘和按小时后付费云盘。按小时后付费云盘可直接退还，预付费云盘需符合退还规则。
-* 支持批量操作，每次请求批量云硬盘的上限为50。如果批量云盘存在不允许操作的，请求会以特定错误码返回。
+* 支持批量操作，每次请求批量云硬盘的上限为100。如果批量云盘存在不允许操作的，请求会以特定错误码返回。
  * @method Models\UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(Models\UnbindAutoSnapshotPolicyRequest $req) 本接口（UnbindAutoSnapshotPolicy）用于解除云硬盘绑定的定期快照策略。
 
 * 支持批量操作，可一次解除多个云盘与同一定期快照策略的绑定。 

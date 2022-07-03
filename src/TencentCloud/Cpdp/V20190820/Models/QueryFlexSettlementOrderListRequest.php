@@ -28,6 +28,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间，格式"yyyy-MM-dd hh:mm:ss"
  * @method Paging getPageNumber() 获取分页
  * @method void setPageNumber(Paging $PageNumber) 设置分页
+ * @method string getOperationType() 获取操作类型。
+ENABLE_SETTLE: 正常结算
+DISABLE_SETTLE: 停用结算
+UNFREEZE_SETTLE: 解冻结算
+若需要支持多个操作类型，则以;分隔
+ * @method void setOperationType(string $OperationType) 设置操作类型。
+ENABLE_SETTLE: 正常结算
+DISABLE_SETTLE: 停用结算
+UNFREEZE_SETTLE: 解冻结算
+若需要支持多个操作类型，则以;分隔
+ * @method string getEnvironment() 获取环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+ * @method void setEnvironment(string $Environment) 设置环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
  */
 class QueryFlexSettlementOrderListRequest extends AbstractModel
 {
@@ -52,10 +72,38 @@ class QueryFlexSettlementOrderListRequest extends AbstractModel
     public $PageNumber;
 
     /**
+     * @var string 操作类型。
+ENABLE_SETTLE: 正常结算
+DISABLE_SETTLE: 停用结算
+UNFREEZE_SETTLE: 解冻结算
+若需要支持多个操作类型，则以;分隔
+     */
+    public $OperationType;
+
+    /**
+     * @var string 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $PayeeId 收款用户ID
      * @param string $StartTime 开始时间，格式"yyyy-MM-dd hh:mm:ss"
      * @param string $EndTime 结束时间，格式"yyyy-MM-dd hh:mm:ss"
      * @param Paging $PageNumber 分页
+     * @param string $OperationType 操作类型。
+ENABLE_SETTLE: 正常结算
+DISABLE_SETTLE: 停用结算
+UNFREEZE_SETTLE: 解冻结算
+若需要支持多个操作类型，则以;分隔
+     * @param string $Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
      */
     function __construct()
     {
@@ -85,6 +133,14 @@ class QueryFlexSettlementOrderListRequest extends AbstractModel
         if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
             $this->PageNumber = new Paging();
             $this->PageNumber->deserialize($param["PageNumber"]);
+        }
+
+        if (array_key_exists("OperationType",$param) and $param["OperationType"] !== null) {
+            $this->OperationType = $param["OperationType"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

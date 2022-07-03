@@ -28,6 +28,16 @@ OCCASION:偶然所得
  * @method void setIncomeType(string $IncomeType) 设置收入类型
 LABOR:劳务所得
 OCCASION:偶然所得
+ * @method string getEnvironment() 获取环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+ * @method void setEnvironment(string $Environment) 设置环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
  */
 class QueryFlexPayeeAccountBalanceRequest extends AbstractModel
 {
@@ -44,10 +54,24 @@ OCCASION:偶然所得
     public $IncomeType;
 
     /**
+     * @var string 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $PayeeId 收款用户ID
      * @param string $IncomeType 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得
+     * @param string $Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
      */
     function __construct()
     {
@@ -68,6 +92,10 @@ OCCASION:偶然所得
 
         if (array_key_exists("IncomeType",$param) and $param["IncomeType"] !== null) {
             $this->IncomeType = $param["IncomeType"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

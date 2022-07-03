@@ -40,6 +40,16 @@ FREEZE:冻结
 UNFREEZE:解冻
  * @method string getRemark() 获取冻结备注
  * @method void setRemark(string $Remark) 设置冻结备注
+ * @method string getEnvironment() 获取环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+ * @method void setEnvironment(string $Environment) 设置环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
  */
 class FreezeFlexBalanceRequest extends AbstractModel
 {
@@ -78,6 +88,15 @@ UNFREEZE:解冻
     public $Remark;
 
     /**
+     * @var string 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $PayeeId 收款用户ID
      * @param string $AmountBeforeTax 税前金额
      * @param string $IncomeType 收入类型
@@ -88,6 +107,11 @@ OCCASION:偶然所得
 FREEZE:冻结
 UNFREEZE:解冻
      * @param string $Remark 冻结备注
+     * @param string $Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
      */
     function __construct()
     {
@@ -124,6 +148,10 @@ UNFREEZE:解冻
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

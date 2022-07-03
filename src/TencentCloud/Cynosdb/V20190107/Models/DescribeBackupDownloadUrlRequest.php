@@ -18,16 +18,14 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateInstance请求参数结构体
+ * DescribeBackupDownloadUrl请求参数结构体
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getInstanceIdList() 获取实例ID数组
- * @method void setInstanceIdList(array $InstanceIdList) 设置实例ID数组
- * @method string getDbType() 获取该参数已废弃
- * @method void setDbType(string $DbType) 设置该参数已废弃
+ * @method integer getBackupId() 获取备份ID
+ * @method void setBackupId(integer $BackupId) 设置备份ID
  */
-class IsolateInstanceRequest extends AbstractModel
+class DescribeBackupDownloadUrlRequest extends AbstractModel
 {
     /**
      * @var string 集群ID
@@ -35,19 +33,13 @@ class IsolateInstanceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 实例ID数组
+     * @var integer 备份ID
      */
-    public $InstanceIdList;
-
-    /**
-     * @var string 该参数已废弃
-     */
-    public $DbType;
+    public $BackupId;
 
     /**
      * @param string $ClusterId 集群ID
-     * @param array $InstanceIdList 实例ID数组
-     * @param string $DbType 该参数已废弃
+     * @param integer $BackupId 备份ID
      */
     function __construct()
     {
@@ -66,12 +58,8 @@ class IsolateInstanceRequest extends AbstractModel
             $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
-            $this->InstanceIdList = $param["InstanceIdList"];
-        }
-
-        if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
-            $this->DbType = $param["DbType"];
+        if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
+            $this->BackupId = $param["BackupId"];
         }
     }
 }

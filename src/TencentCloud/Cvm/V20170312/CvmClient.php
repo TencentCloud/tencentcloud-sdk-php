@@ -60,6 +60,10 @@ use TencentCloud\Cvm\V20170312\Models as Models;
  * @method Models\DeleteLaunchTemplateResponse DeleteLaunchTemplate(Models\DeleteLaunchTemplateRequest $req) 本接口（DeleteLaunchTemplate）用于删除一个实例启动模板。
  * @method Models\DeleteLaunchTemplateVersionsResponse DeleteLaunchTemplateVersions(Models\DeleteLaunchTemplateVersionsRequest $req) 本接口（DeleteLaunchTemplateVersions）用于删除一个或者多个实例启动模板版本。
  * @method Models\DescribeAccountQuotaResponse DescribeAccountQuota(Models\DescribeAccountQuotaRequest $req) 本接口(DescribeAccountQuota)用于查询用户配额详情。
+ * @method Models\DescribeChcHostsResponse DescribeChcHosts(Models\DescribeChcHostsRequest $req) 本接口 (DescribeChcHosts) 用于查询一个或多个CHC物理服务器详细信息。
+
+* 可以根据实例`ID`、实例名称或者设备类型等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。
+* 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
  * @method Models\DescribeDisasterRecoverGroupQuotaResponse DescribeDisasterRecoverGroupQuota(Models\DescribeDisasterRecoverGroupQuotaRequest $req) 本接口 (DescribeDisasterRecoverGroupQuota)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)配额。
  * @method Models\DescribeDisasterRecoverGroupsResponse DescribeDisasterRecoverGroups(Models\DescribeDisasterRecoverGroupsRequest $req) 本接口 (DescribeDisasterRecoverGroups)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)信息。
  * @method Models\DescribeHostsResponse DescribeHosts(Models\DescribeHostsRequest $req) 本接口 (DescribeHosts) 用于获取一个或多个CDH实例的详细信息。

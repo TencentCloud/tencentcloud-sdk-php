@@ -24,6 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutOrderId(string $OutOrderId) 设置外部订单ID
  * @method string getOrderId() 获取订单ID
  * @method void setOrderId(string $OrderId) 设置订单ID
+ * @method string getEnvironment() 获取环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+ * @method void setEnvironment(string $Environment) 设置环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
  */
 class QueryFlexPaymentOrderStatusRequest extends AbstractModel
 {
@@ -38,8 +48,22 @@ class QueryFlexPaymentOrderStatusRequest extends AbstractModel
     public $OrderId;
 
     /**
+     * @var string 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $OutOrderId 外部订单ID
      * @param string $OrderId 订单ID
+     * @param string $Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
      */
     function __construct()
     {
@@ -60,6 +84,10 @@ class QueryFlexPaymentOrderStatusRequest extends AbstractModel
 
         if (array_key_exists("OrderId",$param) and $param["OrderId"] !== null) {
             $this->OrderId = $param["OrderId"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

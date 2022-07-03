@@ -14,32 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateCluster请求参数结构体
+ * chc部署网络minos引导配置。
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getDbType() 获取该参数已废用
- * @method void setDbType(string $DbType) 设置该参数已废用
+
  */
-class IsolateClusterRequest extends AbstractModel
+class ChcDeployExtraConfig extends AbstractModel
 {
-    /**
-     * @var string 集群ID
-     */
-    public $ClusterId;
+
 
     /**
-     * @var string 该参数已废用
-     */
-    public $DbType;
 
-    /**
-     * @param string $ClusterId 集群ID
-     * @param string $DbType 该参数已废用
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class IsolateClusterRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
-        }
 
-        if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
-            $this->DbType = $param["DbType"];
-        }
     }
 }

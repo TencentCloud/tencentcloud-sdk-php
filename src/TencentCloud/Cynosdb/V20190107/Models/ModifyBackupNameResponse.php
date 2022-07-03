@@ -18,28 +18,20 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IsolateCluster请求参数结构体
+ * ModifyBackupName返回参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getDbType() 获取该参数已废用
- * @method void setDbType(string $DbType) 设置该参数已废用
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class IsolateClusterRequest extends AbstractModel
+class ModifyBackupNameResponse extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $ClusterId;
+    public $RequestId;
 
     /**
-     * @var string 该参数已废用
-     */
-    public $DbType;
-
-    /**
-     * @param string $ClusterId 集群ID
-     * @param string $DbType 该参数已废用
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class IsolateClusterRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
-        }
-
-        if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
-            $this->DbType = $param["DbType"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

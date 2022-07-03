@@ -62,6 +62,8 @@ FAILED:已失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置提现备注
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayeeId() 获取收款用户ID
+ * @method void setPayeeId(string $PayeeId) 设置收款用户ID
  */
 class PaymentOrderResult extends AbstractModel
 {
@@ -131,6 +133,11 @@ FAILED:已失败
     public $Remark;
 
     /**
+     * @var string 收款用户ID
+     */
+    public $PayeeId;
+
+    /**
      * @param string $IncomeType 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得
@@ -152,6 +159,7 @@ FAILED:已失败
      * @param string $StatusDesc 状态描述
      * @param string $Remark 提现备注
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayeeId 收款用户ID
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ FAILED:已失败
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PayeeId",$param) and $param["PayeeId"] !== null) {
+            $this->PayeeId = $param["PayeeId"];
         }
     }
 }

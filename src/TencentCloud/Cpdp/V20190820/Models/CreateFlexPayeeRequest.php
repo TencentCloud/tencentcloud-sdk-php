@@ -40,6 +40,18 @@ use TencentCloud\Common\AbstractModel;
 1:社会信用代码
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
+ * @method string getPhoneNo() 获取手机号码
+ * @method void setPhoneNo(string $PhoneNo) 设置手机号码
+ * @method string getEnvironment() 获取环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+ * @method void setEnvironment(string $Environment) 设置环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
  */
 class CreateFlexPayeeRequest extends AbstractModel
 {
@@ -86,6 +98,20 @@ class CreateFlexPayeeRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 手机号码
+     */
+    public $PhoneNo;
+
+    /**
+     * @var string 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $OutUserId 用户外部业务ID
      * @param string $Name 姓名
      * @param string $IdNo 证件号
@@ -96,6 +122,12 @@ class CreateFlexPayeeRequest extends AbstractModel
 0:身份证
 1:社会信用代码
      * @param string $Remark 备注
+     * @param string $PhoneNo 手机号码
+     * @param string $Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+__test__:测试环境
+缺省默认为生产环境
      */
     function __construct()
     {
@@ -141,6 +173,14 @@ class CreateFlexPayeeRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PhoneNo",$param) and $param["PhoneNo"] !== null) {
+            $this->PhoneNo = $param["PhoneNo"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

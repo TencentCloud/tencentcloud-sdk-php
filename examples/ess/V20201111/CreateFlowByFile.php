@@ -80,6 +80,8 @@ try {
     array_push($req->Approvers, $approver2);
 
     $req->setFlowName("********************************");
+    // 请设置合理的时间，否则容易造成合同过期
+    $req->setDeadLine(time() + 7 * 24 * 3600);
 
     $resp = $client->CreateFlowByFiles($req);
 

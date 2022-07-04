@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setViewExpandedText(string $ViewExpandedText) 设置视图文本
  * @method array getPartitions() 获取分区
  * @method void setPartitions(array $Partitions) 设置分区
+ * @method string getName() 获取当前表名
+ * @method void setName(string $Name) 设置当前表名
  */
 class AlterDMSTableRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class AlterDMSTableRequest extends AbstractModel
     public $Partitions;
 
     /**
+     * @var string 当前表名
+     */
+    public $Name;
+
+    /**
      * @param string $CurrentName 当前名称
      * @param string $CurrentDbName 当前数据库名称
      * @param Asset $Asset 基础对象
@@ -160,6 +167,7 @@ class AlterDMSTableRequest extends AbstractModel
      * @param string $ViewOriginalText 视图文本
      * @param string $ViewExpandedText 视图文本
      * @param array $Partitions 分区
+     * @param string $Name 当前表名
      */
     function __construct()
     {
@@ -257,6 +265,10 @@ class AlterDMSTableRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Partitions, $obj);
             }
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

@@ -20,56 +20,47 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadFiles请求参数结构体
  *
- * @method Caller getCaller() 获取调用方信息
- * @method void setCaller(Caller $Caller) 设置调用方信息
  * @method string getBusinessType() 获取文件对应业务类型，用于区分文件存储路径：
 1. TEMPLATE - 模板； 文件类型：.pdf/.html
 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
-3. FLOW - 签署过程 文件类型：.pdf/.html
-4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
-6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png
+3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
  * @method void setBusinessType(string $BusinessType) 设置文件对应业务类型，用于区分文件存储路径：
 1. TEMPLATE - 模板； 文件类型：.pdf/.html
 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
-3. FLOW - 签署过程 文件类型：.pdf/.html
-4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
-6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png
+3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
+ * @method Caller getCaller() 获取调用方信息
+ * @method void setCaller(Caller $Caller) 设置调用方信息
  * @method array getFileInfos() 获取上传文件内容数组，最多支持20个文件
  * @method void setFileInfos(array $FileInfos) 设置上传文件内容数组，最多支持20个文件
  * @method string getFileUrls() 获取上传文件链接数组，最多支持20个URL
  * @method void setFileUrls(string $FileUrls) 设置上传文件链接数组，最多支持20个URL
- * @method boolean getCoverRect() 获取是否将pdf灰色矩阵置白
+ * @method boolean getCoverRect() 获取此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理
- * @method void setCoverRect(boolean $CoverRect) 设置是否将pdf灰色矩阵置白
+ * @method void setCoverRect(boolean $CoverRect) 设置此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理
- * @method string getFileType() 获取特殊文件类型需要指定文件类型：
-HTML-- .html文件
- * @method void setFileType(string $FileType) 设置特殊文件类型需要指定文件类型：
-HTML-- .html文件
+ * @method string getFileType() 获取文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
+如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
+ * @method void setFileType(string $FileType) 设置文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
+如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
  * @method array getCustomIds() 获取用户自定义ID数组，与上传文件一一对应
  * @method void setCustomIds(array $CustomIds) 设置用户自定义ID数组，与上传文件一一对应
  */
 class UploadFilesRequest extends AbstractModel
 {
     /**
-     * @var Caller 调用方信息
-     */
-    public $Caller;
-
-    /**
      * @var string 文件对应业务类型，用于区分文件存储路径：
 1. TEMPLATE - 模板； 文件类型：.pdf/.html
 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
-3. FLOW - 签署过程 文件类型：.pdf/.html
-4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
-6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png
+3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
      */
     public $BusinessType;
+
+    /**
+     * @var Caller 调用方信息
+     */
+    public $Caller;
 
     /**
      * @var array 上传文件内容数组，最多支持20个文件
@@ -82,15 +73,15 @@ class UploadFilesRequest extends AbstractModel
     public $FileUrls;
 
     /**
-     * @var boolean 是否将pdf灰色矩阵置白
+     * @var boolean 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理
      */
     public $CoverRect;
 
     /**
-     * @var string 特殊文件类型需要指定文件类型：
-HTML-- .html文件
+     * @var string 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
+如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
      */
     public $FileType;
 
@@ -100,21 +91,18 @@ HTML-- .html文件
     public $CustomIds;
 
     /**
-     * @param Caller $Caller 调用方信息
      * @param string $BusinessType 文件对应业务类型，用于区分文件存储路径：
 1. TEMPLATE - 模板； 文件类型：.pdf/.html
 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
-3. FLOW - 签署过程 文件类型：.pdf/.html
-4. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
-5. BUSINESSLICENSE - 营业执照 文件类型：.jpg/.jpeg/.png
-6. IDCARD - 身份证 文件类型：.jpg/.jpeg/.png
+3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
+     * @param Caller $Caller 调用方信息
      * @param array $FileInfos 上传文件内容数组，最多支持20个文件
      * @param string $FileUrls 上传文件链接数组，最多支持20个URL
-     * @param boolean $CoverRect 是否将pdf灰色矩阵置白
+     * @param boolean $CoverRect 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理
-     * @param string $FileType 特殊文件类型需要指定文件类型：
-HTML-- .html文件
+     * @param string $FileType 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
+如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
      * @param array $CustomIds 用户自定义ID数组，与上传文件一一对应
      */
     function __construct()
@@ -130,13 +118,13 @@ HTML-- .html文件
         if ($param === null) {
             return;
         }
+        if (array_key_exists("BusinessType",$param) and $param["BusinessType"] !== null) {
+            $this->BusinessType = $param["BusinessType"];
+        }
+
         if (array_key_exists("Caller",$param) and $param["Caller"] !== null) {
             $this->Caller = new Caller();
             $this->Caller->deserialize($param["Caller"]);
-        }
-
-        if (array_key_exists("BusinessType",$param) and $param["BusinessType"] !== null) {
-            $this->BusinessType = $param["BusinessType"];
         }
 
         if (array_key_exists("FileInfos",$param) and $param["FileInfos"] !== null) {

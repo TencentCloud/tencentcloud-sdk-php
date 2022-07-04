@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
  * @method void setDelayThresh(integer $DelayThresh) 设置如果备机延迟超过本参数设置值，系统将认为备机发生故障
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
+ * @method integer getSlaveConst() 获取针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+ * @method void setSlaveConst(integer $SlaveConst) 设置针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
  */
 class DBAccount extends AbstractModel
 {
@@ -76,6 +78,11 @@ class DBAccount extends AbstractModel
     public $DelayThresh;
 
     /**
+     * @var integer 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+     */
+    public $SlaveConst;
+
+    /**
      * @param string $UserName 用户名
      * @param string $Host 用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
      * @param string $Description 用户备注信息
@@ -84,6 +91,7 @@ class DBAccount extends AbstractModel
      * @param integer $ReadOnly 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      * @param integer $DelayThresh 如果备机延迟超过本参数设置值，系统将认为备机发生故障
 建议该参数值大于10。当ReadOnly选择1、2时该参数生效。
+     * @param integer $SlaveConst 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ class DBAccount extends AbstractModel
 
         if (array_key_exists("DelayThresh",$param) and $param["DelayThresh"] !== null) {
             $this->DelayThresh = $param["DelayThresh"];
+        }
+
+        if (array_key_exists("SlaveConst",$param) and $param["SlaveConst"] !== null) {
+            $this->SlaveConst = $param["SlaveConst"];
         }
     }
 }

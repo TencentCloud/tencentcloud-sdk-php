@@ -168,6 +168,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 该接口为异步操作，部分资源的回收可能存在延迟。您可以通过使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口，指定实例 InstanceId 和状态 Status 为 [5,6,7] 进行查询，若返回实例为空，则实例资源已全部释放。
 
 注意，实例下线后，相关资源和数据将无法找回，请谨慎操作。
+ * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) CDB实例开通审计服务
  * @method Models\OpenDBInstanceGTIDResponse OpenDBInstanceGTID(Models\OpenDBInstanceGTIDRequest $req) 本接口(OpenDBInstanceGTID)用于开启云数据库实例的 GTID，只支持版本为 5.6 以及以上的实例。
  * @method Models\OpenWanServiceResponse OpenWanService(Models\OpenWanServiceRequest $req) 本接口(OpenWanService)用于开通实例外网访问。
 

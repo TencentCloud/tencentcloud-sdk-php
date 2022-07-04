@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectTimeout(integer $ConnectTimeout) 设置连接超时检测 0-65535
  * @method string getEmptyConnectProtect() 获取空连接防护开启 0-1
  * @method void setEmptyConnectProtect(string $EmptyConnectProtect) 设置空连接防护开启 0-1
+ * @method string getUdpShard() 获取UDP分片开关；off-关闭，on-开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUdpShard(string $UdpShard) 设置UDP分片开关；off-关闭，on-开启
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DDoSAntiPly extends AbstractModel
 {
@@ -115,6 +119,12 @@ class DDoSAntiPly extends AbstractModel
     public $EmptyConnectProtect;
 
     /**
+     * @var string UDP分片开关；off-关闭，on-开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UdpShard;
+
+    /**
      * @param string $DropTcp tcp协议封禁 on-开；off-关
      * @param string $DropUdp udp协议封禁 on-开；off-关
      * @param string $DropIcmp icmp协议封禁 on-开；off-关
@@ -128,6 +138,8 @@ class DDoSAntiPly extends AbstractModel
      * @param integer $AbnormalSynNum syn个数异常阈值 0-65535
      * @param integer $ConnectTimeout 连接超时检测 0-65535
      * @param string $EmptyConnectProtect 空连接防护开启 0-1
+     * @param string $UdpShard UDP分片开关；off-关闭，on-开启
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -192,6 +204,10 @@ class DDoSAntiPly extends AbstractModel
 
         if (array_key_exists("EmptyConnectProtect",$param) and $param["EmptyConnectProtect"] !== null) {
             $this->EmptyConnectProtect = $param["EmptyConnectProtect"];
+        }
+
+        if (array_key_exists("UdpShard",$param) and $param["UdpShard"] !== null) {
+            $this->UdpShard = $param["UdpShard"];
         }
     }
 }

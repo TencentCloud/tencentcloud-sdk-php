@@ -33,6 +33,8 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 支持批量操作。每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口 (AssociateSecurityGroups) 用于绑定安全组到指定实例。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+ * @method Models\ConfigureChcAssistVpcResponse ConfigureChcAssistVpc(Models\ConfigureChcAssistVpcRequest $req) 配置CHC物理服务器的带外和部署网络。传入带外网络和部署网络信息
+ * @method Models\ConfigureChcDeployVpcResponse ConfigureChcDeployVpc(Models\ConfigureChcDeployVpcRequest $req) 配置CHC物理服务器部署网络
  * @method Models\CreateDisasterRecoverGroupResponse CreateDisasterRecoverGroup(Models\CreateDisasterRecoverGroupRequest $req) 本接口 (CreateDisasterRecoverGroup)用于创建[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。创建好的置放群组，可在[创建实例](https://cloud.tencent.com/document/api/213/15730)时指定。
  * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
  * @method Models\CreateKeyPairResponse CreateKeyPair(Models\CreateKeyPairRequest $req) 本接口 (CreateKeyPair) 用于创建一个 `OpenSSH RSA` 密钥对，可以用于登录 `Linux` 实例。
@@ -174,6 +176,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 查询退还实例可以返还的费用。
 * 支持批量操作，每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定[错误码](#4.-.E9.94.99.E8.AF.AF.E7.A0.81)返回。
+ * @method Models\ModifyChcAttributeResponse ModifyChcAttribute(Models\ModifyChcAttributeRequest $req) 修改CHC物理服务器的属性
  * @method Models\ModifyDisasterRecoverGroupAttributeResponse ModifyDisasterRecoverGroupAttribute(Models\ModifyDisasterRecoverGroupAttributeRequest $req) 本接口 (ModifyDisasterRecoverGroupAttribute)用于修改[分散置放群组](https://cloud.tencent.com/document/product/213/15486)属性。
  * @method Models\ModifyHostsAttributeResponse ModifyHostsAttribute(Models\ModifyHostsAttributeRequest $req) 本接口（ModifyHostsAttribute）用于修改CDH实例的属性，如实例名称和续费标记等。参数HostName和RenewFlag必须设置其中一个，但不能同时设置。
  * @method Models\ModifyImageAttributeResponse ModifyImageAttribute(Models\ModifyImageAttributeRequest $req) 本接口（ModifyImageAttribute）用于修改镜像属性。
@@ -237,6 +240,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 支持强制重启。强制重启的效果等同于关闭物理计算机的电源开关再重新启动。强制重启可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常重启时使用。
 * 支持批量操作，每次请求批量实例的上限为100。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+ * @method Models\RemoveChcAssistVpcResponse RemoveChcAssistVpc(Models\RemoveChcAssistVpcRequest $req) 清理CHC物理服务器的带外网络和部署网络
+ * @method Models\RemoveChcDeployVpcResponse RemoveChcDeployVpc(Models\RemoveChcDeployVpcRequest $req) 清理CHC物理服务器的部署网络
  * @method Models\RenewHostsResponse RenewHosts(Models\RenewHostsRequest $req) 本接口 (RenewHosts) 用于续费包年包月CDH实例。
 
 * 只支持操作包年包月实例，否则操作会以特定[错误码](#6.-.E9.94.99.E8.AF.AF.E7.A0.81)返回。

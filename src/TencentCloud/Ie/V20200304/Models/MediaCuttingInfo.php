@@ -18,7 +18,8 @@ namespace TencentCloud\Ie\V20200304\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 编辑处理/剪切任务信息
+ * 编辑处理/剪切任务信息。
+截图结果默认存在 SaveInfoSet 的第一个存储位置。
  *
  * @method MediaCuttingTimeInfo getTimeInfo() 获取截取时间信息。
  * @method void setTimeInfo(MediaCuttingTimeInfo $TimeInfo) 设置截取时间信息。
@@ -27,11 +28,17 @@ use TencentCloud\Common\AbstractModel;
  * @method MediaCuttingOutForm getOutForm() 获取截取结果形式信息。
  * @method void setOutForm(MediaCuttingOutForm $OutForm) 设置截取结果形式信息。
  * @method string getResultListSaveType() 获取列表文件形式，存储到用户存储服务中，可选值：
-UseSaveInfo：默认，结果列表和结果存储同一位置；
-NoListFile：不存储结果列表。
+<li>NoListFile：不存储结果列表; </li>
+<li>UseSaveInfo：默认，结果列表和结果存储同一位置（即SaveInfoSet 的第一个存储位置）；</li>
+<li>SaveInfoSet 存储的Id：存储在指定的存储位置。</li>
  * @method void setResultListSaveType(string $ResultListSaveType) 设置列表文件形式，存储到用户存储服务中，可选值：
-UseSaveInfo：默认，结果列表和结果存储同一位置；
-NoListFile：不存储结果列表。
+<li>NoListFile：不存储结果列表; </li>
+<li>UseSaveInfo：默认，结果列表和结果存储同一位置（即SaveInfoSet 的第一个存储位置）；</li>
+<li>SaveInfoSet 存储的Id：存储在指定的存储位置。</li>
+ * @method array getWatermarkInfoSet() 获取水印信息，最多支持 10 个水印。
+ * @method void setWatermarkInfoSet(array $WatermarkInfoSet) 设置水印信息，最多支持 10 个水印。
+ * @method string getDropPureColor() 获取是否去除纯色截图，如果值为 True ，对应时间点的截图如果是纯色，将略过。
+ * @method void setDropPureColor(string $DropPureColor) 设置是否去除纯色截图，如果值为 True ，对应时间点的截图如果是纯色，将略过。
  */
 class MediaCuttingInfo extends AbstractModel
 {
@@ -52,18 +59,32 @@ class MediaCuttingInfo extends AbstractModel
 
     /**
      * @var string 列表文件形式，存储到用户存储服务中，可选值：
-UseSaveInfo：默认，结果列表和结果存储同一位置；
-NoListFile：不存储结果列表。
+<li>NoListFile：不存储结果列表; </li>
+<li>UseSaveInfo：默认，结果列表和结果存储同一位置（即SaveInfoSet 的第一个存储位置）；</li>
+<li>SaveInfoSet 存储的Id：存储在指定的存储位置。</li>
      */
     public $ResultListSaveType;
+
+    /**
+     * @var array 水印信息，最多支持 10 个水印。
+     */
+    public $WatermarkInfoSet;
+
+    /**
+     * @var string 是否去除纯色截图，如果值为 True ，对应时间点的截图如果是纯色，将略过。
+     */
+    public $DropPureColor;
 
     /**
      * @param MediaCuttingTimeInfo $TimeInfo 截取时间信息。
      * @param MediaTargetInfo $TargetInfo 输出结果信息。
      * @param MediaCuttingOutForm $OutForm 截取结果形式信息。
      * @param string $ResultListSaveType 列表文件形式，存储到用户存储服务中，可选值：
-UseSaveInfo：默认，结果列表和结果存储同一位置；
-NoListFile：不存储结果列表。
+<li>NoListFile：不存储结果列表; </li>
+<li>UseSaveInfo：默认，结果列表和结果存储同一位置（即SaveInfoSet 的第一个存储位置）；</li>
+<li>SaveInfoSet 存储的Id：存储在指定的存储位置。</li>
+     * @param array $WatermarkInfoSet 水印信息，最多支持 10 个水印。
+     * @param string $DropPureColor 是否去除纯色截图，如果值为 True ，对应时间点的截图如果是纯色，将略过。
      */
     function __construct()
     {
@@ -95,6 +116,19 @@ NoListFile：不存储结果列表。
 
         if (array_key_exists("ResultListSaveType",$param) and $param["ResultListSaveType"] !== null) {
             $this->ResultListSaveType = $param["ResultListSaveType"];
+        }
+
+        if (array_key_exists("WatermarkInfoSet",$param) and $param["WatermarkInfoSet"] !== null) {
+            $this->WatermarkInfoSet = [];
+            foreach ($param["WatermarkInfoSet"] as $key => $value){
+                $obj = new MediaCuttingWatermark();
+                $obj->deserialize($value);
+                array_push($this->WatermarkInfoSet, $obj);
+            }
+        }
+
+        if (array_key_exists("DropPureColor",$param) and $param["DropPureColor"] !== null) {
+            $this->DropPureColor = $param["DropPureColor"];
         }
     }
 }

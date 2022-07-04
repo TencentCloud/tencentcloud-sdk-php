@@ -26,16 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置RFC3339格式，客户端时间
  * @method array getMetricNames() 获取指标列表
  * @method void setMetricNames(array $MetricNames) 设置指标列表
- * @method array getZoneIds() 获取ZoneId列表，仅在zone/instance维度下查询时该参数有效
- * @method void setZoneIds(array $ZoneIds) 设置ZoneId列表，仅在zone/instance维度下查询时该参数有效
- * @method array getInstanceIds() 获取InstanceId列表，仅在Instance维度下查询时该参数有效
- * @method void setInstanceIds(array $InstanceIds) 设置InstanceId列表，仅在Instance维度下查询时该参数有效
- * @method string getProtocol() 获取协议类型， 该字段当前无效
- * @method void setProtocol(string $Protocol) 设置协议类型， 该字段当前无效
+ * @method array getZoneIds() 获取站点id列表
+ * @method void setZoneIds(array $ZoneIds) 设置站点id列表
+ * @method array getInstanceIds() 获取该字段已废弃，请使用ProxyIds字段
+ * @method void setInstanceIds(array $InstanceIds) 设置该字段已废弃，请使用ProxyIds字段
+ * @method string getProtocol() 获取该字段当前无效
+ * @method void setProtocol(string $Protocol) 设置该字段当前无效
  * @method string getInterval() 获取时间间隔，选填{min, 5min, hour, day}
  * @method void setInterval(string $Interval) 设置时间间隔，选填{min, 5min, hour, day}
- * @method string getRuleId() 获取规则ID，仅在instance维度有效
- * @method void setRuleId(string $RuleId) 设置规则ID，仅在instance维度有效
+ * @method string getRuleId() 获取该字段当前无效，请使用Filter筛选
+ * @method void setRuleId(string $RuleId) 设置该字段当前无效，请使用Filter筛选
+ * @method array getFilters() 获取支持的 Filter：proxyd,ruleId
+ * @method void setFilters(array $Filters) 设置支持的 Filter：proxyd,ruleId
+ * @method array getProxyIds() 获取四层实例列表
+ * @method void setProxyIds(array $ProxyIds) 设置四层实例列表
  */
 class DescribeTimingL4DataRequest extends AbstractModel
 {
@@ -55,17 +59,17 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array ZoneId列表，仅在zone/instance维度下查询时该参数有效
+     * @var array 站点id列表
      */
     public $ZoneIds;
 
     /**
-     * @var array InstanceId列表，仅在Instance维度下查询时该参数有效
+     * @var array 该字段已废弃，请使用ProxyIds字段
      */
     public $InstanceIds;
 
     /**
-     * @var string 协议类型， 该字段当前无效
+     * @var string 该字段当前无效
      */
     public $Protocol;
 
@@ -75,19 +79,31 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $Interval;
 
     /**
-     * @var string 规则ID，仅在instance维度有效
+     * @var string 该字段当前无效，请使用Filter筛选
      */
     public $RuleId;
+
+    /**
+     * @var array 支持的 Filter：proxyd,ruleId
+     */
+    public $Filters;
+
+    /**
+     * @var array 四层实例列表
+     */
+    public $ProxyIds;
 
     /**
      * @param string $StartTime RFC3339格式，客户端时间
      * @param string $EndTime RFC3339格式，客户端时间
      * @param array $MetricNames 指标列表
-     * @param array $ZoneIds ZoneId列表，仅在zone/instance维度下查询时该参数有效
-     * @param array $InstanceIds InstanceId列表，仅在Instance维度下查询时该参数有效
-     * @param string $Protocol 协议类型， 该字段当前无效
+     * @param array $ZoneIds 站点id列表
+     * @param array $InstanceIds 该字段已废弃，请使用ProxyIds字段
+     * @param string $Protocol 该字段当前无效
      * @param string $Interval 时间间隔，选填{min, 5min, hour, day}
-     * @param string $RuleId 规则ID，仅在instance维度有效
+     * @param string $RuleId 该字段当前无效，请使用Filter筛选
+     * @param array $Filters 支持的 Filter：proxyd,ruleId
+     * @param array $ProxyIds 四层实例列表
      */
     function __construct()
     {
@@ -132,6 +148,19 @@ class DescribeTimingL4DataRequest extends AbstractModel
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("ProxyIds",$param) and $param["ProxyIds"] !== null) {
+            $this->ProxyIds = $param["ProxyIds"];
         }
     }
 }

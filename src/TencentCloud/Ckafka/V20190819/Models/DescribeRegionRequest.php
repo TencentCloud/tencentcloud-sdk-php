@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回最大结果数
  * @method string getBusiness() 获取业务字段，可忽略
  * @method void setBusiness(string $Business) 设置业务字段，可忽略
+ * @method string getCdcId() 获取cdc专有集群业务字段，可忽略
+ * @method void setCdcId(string $CdcId) 设置cdc专有集群业务字段，可忽略
  */
 class DescribeRegionRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeRegionRequest extends AbstractModel
     public $Business;
 
     /**
+     * @var string cdc专有集群业务字段，可忽略
+     */
+    public $CdcId;
+
+    /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回最大结果数
      * @param string $Business 业务字段，可忽略
+     * @param string $CdcId cdc专有集群业务字段，可忽略
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeRegionRequest extends AbstractModel
 
         if (array_key_exists("Business",$param) and $param["Business"] !== null) {
             $this->Business = $param["Business"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

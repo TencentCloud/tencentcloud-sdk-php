@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIspBotRule(BotManagedRule $IspBotRule) 设置保留
  * @method BotPortraitRule getPortraitRule() 获取用户画像规则
  * @method void setPortraitRule(BotPortraitRule $PortraitRule) 设置用户画像规则
+ * @method IntelligenceRule getIntelligenceRule() 获取Bot智能分析
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntelligenceRule(IntelligenceRule $IntelligenceRule) 设置Bot智能分析
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotConfig extends AbstractModel
 {
@@ -59,11 +63,19 @@ class BotConfig extends AbstractModel
     public $PortraitRule;
 
     /**
+     * @var IntelligenceRule Bot智能分析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IntelligenceRule;
+
+    /**
      * @param string $Switch bot开关
      * @param BotManagedRule $ManagedRule 预置规则
      * @param BotManagedRule $UaBotRule 保留
      * @param BotManagedRule $IspBotRule 保留
      * @param BotPortraitRule $PortraitRule 用户画像规则
+     * @param IntelligenceRule $IntelligenceRule Bot智能分析
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -100,6 +112,11 @@ class BotConfig extends AbstractModel
         if (array_key_exists("PortraitRule",$param) and $param["PortraitRule"] !== null) {
             $this->PortraitRule = new BotPortraitRule();
             $this->PortraitRule->deserialize($param["PortraitRule"]);
+        }
+
+        if (array_key_exists("IntelligenceRule",$param) and $param["IntelligenceRule"] !== null) {
+            $this->IntelligenceRule = new IntelligenceRule();
+            $this->IntelligenceRule->deserialize($param["IntelligenceRule"]);
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplate(RateLimitTemplate $Template) 设置默认模板
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RateLimitIntelligence getIntelligence() 获取智能客户端过滤
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntelligence(RateLimitIntelligence $Intelligence) 设置智能客户端过滤
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RateLimitConfig extends AbstractModel
 {
@@ -48,9 +52,17 @@ class RateLimitConfig extends AbstractModel
     public $Template;
 
     /**
+     * @var RateLimitIntelligence 智能客户端过滤
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Intelligence;
+
+    /**
      * @param string $Switch 开关
      * @param array $UserRules 用户规则
      * @param RateLimitTemplate $Template 默认模板
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RateLimitIntelligence $Intelligence 智能客户端过滤
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -82,6 +94,11 @@ class RateLimitConfig extends AbstractModel
         if (array_key_exists("Template",$param) and $param["Template"] !== null) {
             $this->Template = new RateLimitTemplate();
             $this->Template->deserialize($param["Template"]);
+        }
+
+        if (array_key_exists("Intelligence",$param) and $param["Intelligence"] !== null) {
+            $this->Intelligence = new RateLimitIntelligence();
+            $this->Intelligence->deserialize($param["Intelligence"]);
         }
     }
 }

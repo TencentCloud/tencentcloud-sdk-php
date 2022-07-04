@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchConfig(SwitchConfig $SwitchConfig) 设置总开关
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method IpTableConfig getIpTableConfig() 获取IP黑白名单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpTableConfig(IpTableConfig $IpTableConfig) 设置IP黑白名单
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityConfig extends AbstractModel
 {
@@ -84,6 +88,12 @@ class SecurityConfig extends AbstractModel
     public $SwitchConfig;
 
     /**
+     * @var IpTableConfig IP黑白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpTableConfig;
+
+    /**
      * @param WafConfig $WafConfig 门神配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitConfig $RateLimitConfig RateLimit配置
@@ -95,6 +105,8 @@ class SecurityConfig extends AbstractModel
      * @param BotConfig $BotConfig Bot配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchConfig $SwitchConfig 总开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpTableConfig $IpTableConfig IP黑白名单
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -138,6 +150,11 @@ class SecurityConfig extends AbstractModel
         if (array_key_exists("SwitchConfig",$param) and $param["SwitchConfig"] !== null) {
             $this->SwitchConfig = new SwitchConfig();
             $this->SwitchConfig->deserialize($param["SwitchConfig"]);
+        }
+
+        if (array_key_exists("IpTableConfig",$param) and $param["IpTableConfig"] !== null) {
+            $this->IpTableConfig = new IpTableConfig();
+            $this->IpTableConfig->deserialize($param["IpTableConfig"]);
         }
     }
 }

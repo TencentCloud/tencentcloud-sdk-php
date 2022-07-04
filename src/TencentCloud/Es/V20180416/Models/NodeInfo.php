@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskCount(integer $DiskCount) 设置节点磁盘块数
  * @method integer getDiskEncrypt() 获取节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
  * @method void setDiskEncrypt(integer $DiskEncrypt) 设置节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
+ * @method integer getCpuNum() 获取cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCpuNum(integer $CpuNum) 设置cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMemSize() 获取内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemSize(integer $MemSize) 设置内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeInfo extends AbstractModel
 {
@@ -92,6 +100,18 @@ class NodeInfo extends AbstractModel
     public $DiskEncrypt;
 
     /**
+     * @var integer cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CpuNum;
+
+    /**
+     * @var integer 内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemSize;
+
+    /**
      * @param integer $NodeNum 节点数量
      * @param string $NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param string $Type 节点类型<li>hotData: 热数据节点</li>
@@ -104,6 +124,10 @@ class NodeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskCount 节点磁盘块数
      * @param integer $DiskEncrypt 节点磁盘是否加密 0: 不加密，1: 加密；默认不加密
+     * @param integer $CpuNum cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MemSize 内存大小，单位GB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -149,6 +173,14 @@ class NodeInfo extends AbstractModel
 
         if (array_key_exists("DiskEncrypt",$param) and $param["DiskEncrypt"] !== null) {
             $this->DiskEncrypt = $param["DiskEncrypt"];
+        }
+
+        if (array_key_exists("CpuNum",$param) and $param["CpuNum"] !== null) {
+            $this->CpuNum = $param["CpuNum"];
+        }
+
+        if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
+            $this->MemSize = $param["MemSize"];
         }
     }
 }

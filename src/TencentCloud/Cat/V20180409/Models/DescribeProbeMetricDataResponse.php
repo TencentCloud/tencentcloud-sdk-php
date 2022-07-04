@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProbeMetricData返回参数结构体
  *
- * @method string getMetricSet() 获取指标 JSON 序列化后的字符串
- * @method void setMetricSet(string $MetricSet) 设置指标 JSON 序列化后的字符串
+ * @method string getMetricSet() 获取返回指标 JSON 序列化后的字符串,具体如下所示：
+"[{\"name\":\"task_navigate_request_gauge\",\"columns\":[\"time\",\"avg(first_screen_time) / 1000\"],\"values\":[[1641571200,6.756600000000001]],\"tags\":null}]"
+ * @method void setMetricSet(string $MetricSet) 设置返回指标 JSON 序列化后的字符串,具体如下所示：
+"[{\"name\":\"task_navigate_request_gauge\",\"columns\":[\"time\",\"avg(first_screen_time) / 1000\"],\"values\":[[1641571200,6.756600000000001]],\"tags\":null}]"
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeProbeMetricDataResponse extends AbstractModel
 {
     /**
-     * @var string 指标 JSON 序列化后的字符串
+     * @var string 返回指标 JSON 序列化后的字符串,具体如下所示：
+"[{\"name\":\"task_navigate_request_gauge\",\"columns\":[\"time\",\"avg(first_screen_time) / 1000\"],\"values\":[[1641571200,6.756600000000001]],\"tags\":null}]"
      */
     public $MetricSet;
 
@@ -38,7 +41,8 @@ class DescribeProbeMetricDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MetricSet 指标 JSON 序列化后的字符串
+     * @param string $MetricSet 返回指标 JSON 序列化后的字符串,具体如下所示：
+"[{\"name\":\"task_navigate_request_gauge\",\"columns\":[\"time\",\"avg(first_screen_time) / 1000\"],\"values\":[[1641571200,6.756600000000001]],\"tags\":null}]"
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

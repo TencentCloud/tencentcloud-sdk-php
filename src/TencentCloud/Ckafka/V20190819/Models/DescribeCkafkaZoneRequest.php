@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCkafkaZone请求参数结构体
  *
-
+ * @method string getCdcId() 获取cdc专业集群业务参数
+ * @method void setCdcId(string $CdcId) 设置cdc专业集群业务参数
  */
 class DescribeCkafkaZoneRequest extends AbstractModel
 {
-
+    /**
+     * @var string cdc专业集群业务参数
+     */
+    public $CdcId;
 
     /**
-
+     * @param string $CdcId cdc专业集群业务参数
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeCkafkaZoneRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
     }
 }

@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitch(string $Switch) 设置DDoS开关 on-开启；off-关闭
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUdpShardOpen() 获取UDP分片功能是否支持，off-不支持，on-支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUdpShardOpen(string $UdpShardOpen) 设置UDP分片功能是否支持，off-不支持，on-支持
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DdosRule extends AbstractModel
 {
@@ -94,6 +98,12 @@ class DdosRule extends AbstractModel
     public $Switch;
 
     /**
+     * @var string UDP分片功能是否支持，off-不支持，on-支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UdpShardOpen;
+
+    /**
      * @param DDoSStatusInfo $DdosStatusInfo DDoS防护等级
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DDoSGeoIp $DdosGeoIp DDoS地域封禁
@@ -107,6 +117,8 @@ class DdosRule extends AbstractModel
      * @param DdosAcls $DdosAcl DDoS端口过滤
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Switch DDoS开关 on-开启；off-关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UdpShardOpen UDP分片功能是否支持，off-不支持，on-支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -154,6 +166,10 @@ class DdosRule extends AbstractModel
 
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("UdpShardOpen",$param) and $param["UdpShardOpen"] !== null) {
+            $this->UdpShardOpen = $param["UdpShardOpen"];
         }
     }
 }

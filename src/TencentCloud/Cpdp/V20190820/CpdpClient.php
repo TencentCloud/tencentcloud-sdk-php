@@ -24,6 +24,8 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
 
 /**
  * @method Models\AddContractResponse AddContract(Models\AddContractRequest $req) 云支付-添加合同接口
+ * @method Models\AddFlexIdInfoResponse AddFlexIdInfo(Models\AddFlexIdInfoRequest $req) 灵云V2-补充证件信息
+ * @method Models\AddFlexPhoneNoResponse AddFlexPhoneNo(Models\AddFlexPhoneNoRequest $req) 灵云V2-补充手机号信息
  * @method Models\AddMerchantResponse AddMerchant(Models\AddMerchantRequest $req) 云支付-添加商户接口
  * @method Models\AddShopResponse AddShop(Models\AddShopRequest $req) 云支付-添加门店接口
  * @method Models\ApplyApplicationMaterialResponse ApplyApplicationMaterial(Models\ApplyApplicationMaterialRequest $req) 跨境-提交申报材料。申报材料的主体是付款人，需要提前调用【跨境-付款人申请】接口提交付款人信息且审核通过后调用。
@@ -146,7 +148,9 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryExceedingInfoResponse QueryExceedingInfo(Models\QueryExceedingInfoRequest $req) 灵云-查询超额信息
  * @method Models\QueryExchangeRateResponse QueryExchangeRate(Models\QueryExchangeRateRequest $req) 跨境-查询汇率
  * @method Models\QueryFlexAmountBeforeTaxResponse QueryFlexAmountBeforeTax(Models\QueryFlexAmountBeforeTaxRequest $req) 灵云V2-查询税前金额
+ * @method Models\QueryFlexBillDownloadUrlResponse QueryFlexBillDownloadUrl(Models\QueryFlexBillDownloadUrlRequest $req) 灵云V2-查询对账单文件下载链接
  * @method Models\QueryFlexFreezeOrderListResponse QueryFlexFreezeOrderList(Models\QueryFlexFreezeOrderListRequest $req) 灵云V2-查询冻结订单列表
+ * @method Models\QueryFlexOrderSummaryListResponse QueryFlexOrderSummaryList(Models\QueryFlexOrderSummaryListRequest $req) 灵云V2-订单汇总列表查询
  * @method Models\QueryFlexPayeeAccountBalanceResponse QueryFlexPayeeAccountBalance(Models\QueryFlexPayeeAccountBalanceRequest $req) 灵云V2-收款用户账户余额查询
  * @method Models\QueryFlexPayeeAccountInfoResponse QueryFlexPayeeAccountInfo(Models\QueryFlexPayeeAccountInfoRequest $req) 灵云V2-收款用户账户信息查询
  * @method Models\QueryFlexPayeeAccountListResponse QueryFlexPayeeAccountList(Models\QueryFlexPayeeAccountListRequest $req) 灵云V2-收款用户账户列表查询

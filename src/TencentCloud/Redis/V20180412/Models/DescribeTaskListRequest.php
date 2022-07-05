@@ -40,8 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskStatus(array $TaskStatus) 设置任务状态
  * @method array getResult() 获取任务状态
  * @method void setResult(array $Result) 设置任务状态
- * @method array getOperatorUin() 获取操作者Uin
- * @method void setOperatorUin(array $OperatorUin) 设置操作者Uin
+ * @method array getOperatorUin() 获取操作者Uin，该字段已废弃，使用OperateUin代替
+ * @method void setOperatorUin(array $OperatorUin) 设置操作者Uin，该字段已废弃，使用OperateUin代替
+ * @method array getOperateUin() 获取操作者Uin
+ * @method void setOperateUin(array $OperateUin) 设置操作者Uin
  */
 class DescribeTaskListRequest extends AbstractModel
 {
@@ -96,9 +98,14 @@ class DescribeTaskListRequest extends AbstractModel
     public $Result;
 
     /**
-     * @var array 操作者Uin
+     * @var array 操作者Uin，该字段已废弃，使用OperateUin代替
      */
     public $OperatorUin;
+
+    /**
+     * @var array 操作者Uin
+     */
+    public $OperateUin;
 
     /**
      * @param string $InstanceId 实例Id
@@ -111,7 +118,8 @@ class DescribeTaskListRequest extends AbstractModel
      * @param string $EndTime 终止时间
      * @param array $TaskStatus 任务状态
      * @param array $Result 任务状态
-     * @param array $OperatorUin 操作者Uin
+     * @param array $OperatorUin 操作者Uin，该字段已废弃，使用OperateUin代替
+     * @param array $OperateUin 操作者Uin
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class DescribeTaskListRequest extends AbstractModel
 
         if (array_key_exists("OperatorUin",$param) and $param["OperatorUin"] !== null) {
             $this->OperatorUin = $param["OperatorUin"];
+        }
+
+        if (array_key_exists("OperateUin",$param) and $param["OperateUin"] !== null) {
+            $this->OperateUin = $param["OperateUin"];
         }
     }
 }

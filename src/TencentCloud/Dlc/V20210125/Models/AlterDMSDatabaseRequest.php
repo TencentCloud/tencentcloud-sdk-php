@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AlterDMSDatabase请求参数结构体
  *
-
+ * @method string getCurrentName() 获取当前名称
+ * @method void setCurrentName(string $CurrentName) 设置当前名称
+ * @method string getSchemaName() 获取schema名称
+ * @method void setSchemaName(string $SchemaName) 设置schema名称
+ * @method string getLocation() 获取路径
+ * @method void setLocation(string $Location) 设置路径
+ * @method Asset getAsset() 获取基础对象
+ * @method void setAsset(Asset $Asset) 设置基础对象
  */
 class AlterDMSDatabaseRequest extends AbstractModel
 {
-
+    /**
+     * @var string 当前名称
+     */
+    public $CurrentName;
 
     /**
+     * @var string schema名称
+     */
+    public $SchemaName;
 
+    /**
+     * @var string 路径
+     */
+    public $Location;
+
+    /**
+     * @var Asset 基础对象
+     */
+    public $Asset;
+
+    /**
+     * @param string $CurrentName 当前名称
+     * @param string $SchemaName schema名称
+     * @param string $Location 路径
+     * @param Asset $Asset 基础对象
      */
     function __construct()
     {
@@ -42,6 +70,21 @@ class AlterDMSDatabaseRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CurrentName",$param) and $param["CurrentName"] !== null) {
+            $this->CurrentName = $param["CurrentName"];
+        }
 
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
+        }
+
+        if (array_key_exists("Asset",$param) and $param["Asset"] !== null) {
+            $this->Asset = new Asset();
+            $this->Asset->deserialize($param["Asset"]);
+        }
     }
 }

@@ -50,8 +50,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置仅适用于公网负载均衡。负载均衡的网络计费模式。
  * @method string getVipIsp() 获取仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
  * @method void setVipIsp(string $VipIsp) 设置仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
- * @method array getTags() 获取购买负载均衡的同时，给负载均衡打上标签。
- * @method void setTags(array $Tags) 设置购买负载均衡的同时，给负载均衡打上标签。
+ * @method array getTags() 获取购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
+ * @method void setTags(array $Tags) 设置购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
  * @method string getVip() 获取指定VIP申请负载均衡。指定此参数后：
 <ul><li>若创建共享型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。</li>
 <li>若创建独占型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。
@@ -153,7 +153,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $VipIsp;
 
     /**
-     * @var array 购买负载均衡的同时，给负载均衡打上标签。
+     * @var array 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
      */
     public $Tags;
 
@@ -234,7 +234,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
      * @param InternetAccessible $InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费模式。
      * @param string $VipIsp 仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
-     * @param array $Tags 购买负载均衡的同时，给负载均衡打上标签。
+     * @param array $Tags 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
      * @param string $Vip 指定VIP申请负载均衡。指定此参数后：
 <ul><li>若创建共享型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。</li>
 <li>若创建独占型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。

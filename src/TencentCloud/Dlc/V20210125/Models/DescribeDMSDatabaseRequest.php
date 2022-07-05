@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDMSDatabase请求参数结构体
  *
-
+ * @method string getName() 获取数据库名称
+ * @method void setName(string $Name) 设置数据库名称
+ * @method string getSchemaName() 获取schema名称
+ * @method void setSchemaName(string $SchemaName) 设置schema名称
+ * @method string getPattern() 获取匹配规则
+ * @method void setPattern(string $Pattern) 设置匹配规则
  */
 class DescribeDMSDatabaseRequest extends AbstractModel
 {
-
+    /**
+     * @var string 数据库名称
+     */
+    public $Name;
 
     /**
+     * @var string schema名称
+     */
+    public $SchemaName;
 
+    /**
+     * @var string 匹配规则
+     */
+    public $Pattern;
+
+    /**
+     * @param string $Name 数据库名称
+     * @param string $SchemaName schema名称
+     * @param string $Pattern 匹配规则
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class DescribeDMSDatabaseRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
 
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
+            $this->Pattern = $param["Pattern"];
+        }
     }
 }

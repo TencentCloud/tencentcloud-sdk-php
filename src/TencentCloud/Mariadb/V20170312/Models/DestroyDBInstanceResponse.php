@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTKEEdgeScript返回参数结构体
+ * DestroyDBInstance返回参数结构体
  *
- * @method string getLink() 获取下载链接
- * @method void setLink(string $Link) 设置下载链接
- * @method string getToken() 获取下载需要的token
- * @method void setToken(string $Token) 设置下载需要的token
- * @method string getCommand() 获取下载命令
- * @method void setCommand(string $Command) 设置下载命令
+ * @method string getInstanceId() 获取实例 ID，与入参InstanceId一致。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，与入参InstanceId一致。
+ * @method integer getFlowId() 获取异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+ * @method void setFlowId(integer $FlowId) 设置异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTKEEdgeScriptResponse extends AbstractModel
+class DestroyDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 下载链接
+     * @var string 实例 ID，与入参InstanceId一致。
      */
-    public $Link;
+    public $InstanceId;
 
     /**
-     * @var string 下载需要的token
+     * @var integer 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
      */
-    public $Token;
-
-    /**
-     * @var string 下载命令
-     */
-    public $Command;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Link 下载链接
-     * @param string $Token 下载需要的token
-     * @param string $Command 下载命令
+     * @param string $InstanceId 实例 ID，与入参InstanceId一致。
+     * @param integer $FlowId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,16 +62,12 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Link",$param) and $param["Link"] !== null) {
-            $this->Link = $param["Link"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
-        }
-
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

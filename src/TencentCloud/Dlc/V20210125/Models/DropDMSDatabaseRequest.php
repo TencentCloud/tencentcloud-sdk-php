@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DropDMSDatabase请求参数结构体
  *
-
+ * @method string getName() 获取数据库名称
+ * @method void setName(string $Name) 设置数据库名称
+ * @method boolean getDeleteData() 获取是否删除数据
+ * @method void setDeleteData(boolean $DeleteData) 设置是否删除数据
+ * @method boolean getCascade() 获取是否级联删除
+ * @method void setCascade(boolean $Cascade) 设置是否级联删除
  */
 class DropDMSDatabaseRequest extends AbstractModel
 {
-
+    /**
+     * @var string 数据库名称
+     */
+    public $Name;
 
     /**
+     * @var boolean 是否删除数据
+     */
+    public $DeleteData;
 
+    /**
+     * @var boolean 是否级联删除
+     */
+    public $Cascade;
+
+    /**
+     * @param string $Name 数据库名称
+     * @param boolean $DeleteData 是否删除数据
+     * @param boolean $Cascade 是否级联删除
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class DropDMSDatabaseRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
 
+        if (array_key_exists("DeleteData",$param) and $param["DeleteData"] !== null) {
+            $this->DeleteData = $param["DeleteData"];
+        }
+
+        if (array_key_exists("Cascade",$param) and $param["Cascade"] !== null) {
+            $this->Cascade = $param["Cascade"];
+        }
     }
 }

@@ -120,6 +120,22 @@ MountNamespace逃逸、
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerStatus() 获取容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+ * @method void setContainerStatus(string $ContainerStatus) 设置容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
  */
 class EscapeEventInfo extends AbstractModel
 {
@@ -254,6 +270,18 @@ MountNamespace逃逸、
     public $ContainerIsolateOperationSrc;
 
     /**
+     * @var string 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+     */
+    public $ContainerStatus;
+
+    /**
      * @param string $EventType 事件类型
    ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
    ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
@@ -304,6 +332,14 @@ MountNamespace逃逸、
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerStatus 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
      */
     function __construct()
     {
@@ -396,6 +432,10 @@ MountNamespace逃逸、
 
         if (array_key_exists("ContainerIsolateOperationSrc",$param) and $param["ContainerIsolateOperationSrc"] !== null) {
             $this->ContainerIsolateOperationSrc = $param["ContainerIsolateOperationSrc"];
+        }
+
+        if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
+            $this->ContainerStatus = $param["ContainerStatus"];
         }
     }
 }

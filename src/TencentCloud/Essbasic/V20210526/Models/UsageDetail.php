@@ -30,8 +30,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDate(string $Date) 设置日期，当需要汇总数据时日期为空
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUsage() 获取消耗量
- * @method void setUsage(integer $Usage) 设置消耗量
+ * @method integer getUsage() 获取消耗数量
+ * @method void setUsage(integer $Usage) 设置消耗数量
+ * @method integer getCancel() 获取撤回数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCancel(integer $Cancel) 设置撤回数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UsageDetail extends AbstractModel
 {
@@ -53,9 +57,15 @@ class UsageDetail extends AbstractModel
     public $Date;
 
     /**
-     * @var integer 消耗量
+     * @var integer 消耗数量
      */
     public $Usage;
+
+    /**
+     * @var integer 撤回数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Cancel;
 
     /**
      * @param string $ProxyOrganizationOpenId 渠道侧合作企业唯一标识
@@ -63,7 +73,9 @@ class UsageDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Date 日期，当需要汇总数据时日期为空
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Usage 消耗量
+     * @param integer $Usage 消耗数量
+     * @param integer $Cancel 撤回数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -92,6 +104,10 @@ class UsageDetail extends AbstractModel
 
         if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
             $this->Usage = $param["Usage"];
+        }
+
+        if (array_key_exists("Cancel",$param) and $param["Cancel"] !== null) {
+            $this->Cancel = $param["Cancel"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
  * @method boolean getIsPublic() 获取是否公开，true为公开，fale为私有
  * @method void setIsPublic(boolean $IsPublic) 设置是否公开，true为公开，fale为私有
+ * @method TagSpecification getTagSpecification() 获取云标签描述
+ * @method void setTagSpecification(TagSpecification $TagSpecification) 设置云标签描述
  */
 class CreateNamespaceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateNamespaceRequest extends AbstractModel
     public $IsPublic;
 
     /**
+     * @var TagSpecification 云标签描述
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $RegistryId 实例ID
      * @param string $NamespaceName 命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
      * @param boolean $IsPublic 是否公开，true为公开，fale为私有
+     * @param TagSpecification $TagSpecification 云标签描述
      */
     function __construct()
     {
@@ -72,6 +80,11 @@ class CreateNamespaceRequest extends AbstractModel
 
         if (array_key_exists("IsPublic",$param) and $param["IsPublic"] !== null) {
             $this->IsPublic = $param["IsPublic"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = new TagSpecification();
+            $this->TagSpecification->deserialize($param["TagSpecification"]);
         }
     }
 }

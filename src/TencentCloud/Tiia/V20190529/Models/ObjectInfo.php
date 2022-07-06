@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColors(array $Colors) 设置整张图颜色信息。
  * @method array getAttributes() 获取属性信息。
  * @method void setAttributes(array $Attributes) 设置属性信息。
+ * @method array getAllBox() 获取图像的所有主体区域。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAllBox(array $AllBox) 设置图像的所有主体区域。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ObjectInfo extends AbstractModel
 {
@@ -52,10 +56,18 @@ class ObjectInfo extends AbstractModel
     public $Attributes;
 
     /**
+     * @var array 图像的所有主体区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AllBox;
+
+    /**
      * @param Box $Box 图像主体区域。
      * @param integer $CategoryId 主体类别ID。
      * @param array $Colors 整张图颜色信息。
      * @param array $Attributes 属性信息。
+     * @param array $AllBox 图像的所有主体区域。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -94,6 +106,15 @@ class ObjectInfo extends AbstractModel
                 $obj = new Attribute();
                 $obj->deserialize($value);
                 array_push($this->Attributes, $obj);
+            }
+        }
+
+        if (array_key_exists("AllBox",$param) and $param["AllBox"] !== null) {
+            $this->AllBox = [];
+            foreach ($param["AllBox"] as $key => $value){
+                $obj = new Box();
+                $obj->deserialize($value);
+                array_push($this->AllBox, $obj);
             }
         }
     }

@@ -120,6 +120,22 @@ RULE_MODE_HOLDUP 拦截
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContainerStatus() 获取容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+ * @method void setContainerStatus(string $ContainerStatus) 设置容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
  */
 class AbnormalProcessEventInfo extends AbstractModel
 {
@@ -274,6 +290,18 @@ RULE_MODE_HOLDUP 拦截
     public $ContainerIsolateOperationSrc;
 
     /**
+     * @var string 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+     */
+    public $ContainerStatus;
+
+    /**
      * @param string $ProcessPath 进程目录
      * @param string $EventType 事件类型，MALICE_PROCESS_START:恶意进程启动
      * @param string $MatchRuleName 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
@@ -324,6 +352,14 @@ RULE_MODE_HOLDUP 拦截
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContainerStatus 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
      */
     function __construct()
     {
@@ -436,6 +472,10 @@ RULE_MODE_HOLDUP 拦截
 
         if (array_key_exists("ContainerIsolateOperationSrc",$param) and $param["ContainerIsolateOperationSrc"] !== null) {
             $this->ContainerIsolateOperationSrc = $param["ContainerIsolateOperationSrc"];
+        }
+
+        if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
+            $this->ContainerStatus = $param["ContainerStatus"];
         }
     }
 }

@@ -36,6 +36,7 @@ use TencentCloud\Common\AbstractModel;
 <li>TaskId- string - 是否必填：否 - 任务ID</li>
 <li>ContainerNetStatus - String -是否必填: 否 -  容器网络状态筛选 NORMAL ISOLATED ISOLATING RESTORING RESTORE_FAILED</li>
 <li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
+<li>ContainerStatus - string -是否必填: 否 - 容器状态 RUNNING PAUSED STOPPED CREATED DESTROYED RESTARTING REMOVING</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>FileName - String - 是否必填：否 - 文件名称</li>
 <li>FilePath - String - 是否必填：否 - 文件路径</li>
@@ -48,6 +49,7 @@ use TencentCloud\Common\AbstractModel;
 <li>TaskId- string - 是否必填：否 - 任务ID</li>
 <li>ContainerNetStatus - String -是否必填: 否 -  容器网络状态筛选 NORMAL ISOLATED ISOLATING RESTORING RESTORE_FAILED</li>
 <li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
+<li>ContainerStatus - string -是否必填: 否 - 容器状态 RUNNING PAUSED STOPPED CREATED DESTROYED RESTARTING REMOVING</li>
  * @method string getOrder() 获取排序方式
  * @method void setOrder(string $Order) 设置排序方式
  * @method string getBy() 获取排序字段
@@ -78,6 +80,7 @@ class DescribeVirusListRequest extends AbstractModel
 <li>TaskId- string - 是否必填：否 - 任务ID</li>
 <li>ContainerNetStatus - String -是否必填: 否 -  容器网络状态筛选 NORMAL ISOLATED ISOLATING RESTORING RESTORE_FAILED</li>
 <li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
+<li>ContainerStatus - string -是否必填: 否 - 容器状态 RUNNING PAUSED STOPPED CREATED DESTROYED RESTARTING REMOVING</li>
      */
     public $Filters;
 
@@ -106,6 +109,7 @@ class DescribeVirusListRequest extends AbstractModel
 <li>TaskId- string - 是否必填：否 - 任务ID</li>
 <li>ContainerNetStatus - String -是否必填: 否 -  容器网络状态筛选 NORMAL ISOLATED ISOLATING RESTORING RESTORE_FAILED</li>
 <li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
+<li>ContainerStatus - string -是否必填: 否 - 容器状态 RUNNING PAUSED STOPPED CREATED DESTROYED RESTARTING REMOVING</li>
      * @param string $Order 排序方式
      * @param string $By 排序字段
      */

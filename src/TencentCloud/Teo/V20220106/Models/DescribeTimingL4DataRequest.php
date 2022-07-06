@@ -24,8 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置RFC3339格式，客户端时间
  * @method string getEndTime() 获取RFC3339格式，客户端时间
  * @method void setEndTime(string $EndTime) 设置RFC3339格式，客户端时间
- * @method array getMetricNames() 获取指标列表
- * @method void setMetricNames(array $MetricNames) 设置指标列表
+ * @method array getMetricNames() 获取支持的指标：
+l4Flow_connections: 访问连接数
+l4Flow_flux: 访问总流量
+l4Flow_inFlux: 访问入流量
+l4Flow_outFlux: 访问出流量
+ * @method void setMetricNames(array $MetricNames) 设置支持的指标：
+l4Flow_connections: 访问连接数
+l4Flow_flux: 访问总流量
+l4Flow_inFlux: 访问入流量
+l4Flow_outFlux: 访问出流量
  * @method array getZoneIds() 获取站点id列表
  * @method void setZoneIds(array $ZoneIds) 设置站点id列表
  * @method array getInstanceIds() 获取该字段已废弃，请使用ProxyIds字段
@@ -54,7 +62,11 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 指标列表
+     * @var array 支持的指标：
+l4Flow_connections: 访问连接数
+l4Flow_flux: 访问总流量
+l4Flow_inFlux: 访问入流量
+l4Flow_outFlux: 访问出流量
      */
     public $MetricNames;
 
@@ -96,7 +108,11 @@ class DescribeTimingL4DataRequest extends AbstractModel
     /**
      * @param string $StartTime RFC3339格式，客户端时间
      * @param string $EndTime RFC3339格式，客户端时间
-     * @param array $MetricNames 指标列表
+     * @param array $MetricNames 支持的指标：
+l4Flow_connections: 访问连接数
+l4Flow_flux: 访问总流量
+l4Flow_inFlux: 访问入流量
+l4Flow_outFlux: 访问出流量
      * @param array $ZoneIds 站点id列表
      * @param array $InstanceIds 该字段已废弃，请使用ProxyIds字段
      * @param string $Protocol 该字段当前无效

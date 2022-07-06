@@ -52,6 +52,8 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
 长度在2到128之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:\/-]*
  * @method array getTags() 获取会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
  * @method void setTags(array $Tags) 设置会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
+ * @method string getSourceIdentity() 获取调用者身份uin
+ * @method void setSourceIdentity(string $SourceIdentity) 设置调用者身份uin
  */
 class AssumeRoleRequest extends AbstractModel
 {
@@ -96,6 +98,11 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
     public $Tags;
 
     /**
+     * @var string 调用者身份uin
+     */
+    public $SourceIdentity;
+
+    /**
      * @param string $RoleArn 角色的资源描述，可在[访问管理](https://console.cloud.tencent.com/cam/role)，点击角色名获取。
 普通角色：
 qcs::cam::uin/12345678:role/4611686018427397919、qcs::cam::uin/12345678:roleName/testRoleName
@@ -112,6 +119,7 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
      * @param string $ExternalId 角色外部ID，可在[访问管理](https://console.cloud.tencent.com/cam/role)，点击角色名获取。
 长度在2到128之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:\/-]*
      * @param array $Tags 会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
+     * @param string $SourceIdentity 调用者身份uin
      */
     function __construct()
     {
@@ -153,6 +161,10 @@ qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920、qcs::c
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("SourceIdentity",$param) and $param["SourceIdentity"] !== null) {
+            $this->SourceIdentity = $param["SourceIdentity"];
         }
     }
 }

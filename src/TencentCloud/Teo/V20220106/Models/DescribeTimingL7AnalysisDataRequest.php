@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置RFC3339标准，客户端时间
  * @method string getEndTime() 获取RFC3339标准，客户端时间
  * @method void setEndTime(string $EndTime) 设置RFC3339标准，客户端时间
- * @method array getMetricNames() 获取时序类访问流量指标
- * @method void setMetricNames(array $MetricNames) 设置时序类访问流量指标
+ * @method array getMetricNames() 获取指标列表，支持的指标
+l7Flow_outFlux: 访问流量
+l7Flow_request: 访问请求数
+l7Flow_outBandwidth: 访问带宽
+ * @method void setMetricNames(array $MetricNames) 设置指标列表，支持的指标
+l7Flow_outFlux: 访问流量
+l7Flow_request: 访问请求数
+l7Flow_outBandwidth: 访问带宽
  * @method string getInterval() 获取时间间隔，选填{min, 5min, hour, day, week}
  * @method void setInterval(string $Interval) 设置时间间隔，选填{min, 5min, hour, day, week}
  * @method array getZoneIds() 获取ZoneId数组
@@ -46,7 +52,10 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 时序类访问流量指标
+     * @var array 指标列表，支持的指标
+l7Flow_outFlux: 访问流量
+l7Flow_request: 访问请求数
+l7Flow_outBandwidth: 访问带宽
      */
     public $MetricNames;
 
@@ -68,7 +77,10 @@ class DescribeTimingL7AnalysisDataRequest extends AbstractModel
     /**
      * @param string $StartTime RFC3339标准，客户端时间
      * @param string $EndTime RFC3339标准，客户端时间
-     * @param array $MetricNames 时序类访问流量指标
+     * @param array $MetricNames 指标列表，支持的指标
+l7Flow_outFlux: 访问流量
+l7Flow_request: 访问请求数
+l7Flow_outBandwidth: 访问带宽
      * @param string $Interval 时间间隔，选填{min, 5min, hour, day, week}
      * @param array $ZoneIds ZoneId数组
      * @param array $Filters 筛选条件

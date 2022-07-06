@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置自动变配集群等级，针对托管集群生效
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -201,6 +205,12 @@ class Cluster extends AbstractModel
     public $AutoUpgradeClusterLevel;
 
     /**
+     * @var boolean 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QGPUShareEnable;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterDescription 集群描述
@@ -231,6 +241,8 @@ class Cluster extends AbstractModel
      * @param string $ClusterLevel 集群等级，针对托管集群生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $QGPUShareEnable 是否开启QGPU共享
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -334,6 +346,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
             $this->AutoUpgradeClusterLevel = $param["AutoUpgradeClusterLevel"];
+        }
+
+        if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
+            $this->QGPUShareEnable = $param["QGPUShareEnable"];
         }
     }
 }

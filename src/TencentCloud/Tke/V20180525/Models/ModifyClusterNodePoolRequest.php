@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置资源标签
  * @method integer getUnschedulable() 获取设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
  * @method void setUnschedulable(integer $Unschedulable) 设置设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+ * @method boolean getDeletionProtection() 获取删除保护开关
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $Unschedulable;
 
     /**
+     * @var boolean 删除保护开关
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $NodePoolId 节点池ID
      * @param string $Name 名称
@@ -128,6 +135,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param InstanceExtraArgs $ExtraArgs 节点自定义参数
      * @param array $Tags 资源标签
      * @param integer $Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     * @param boolean $DeletionProtection 删除保护开关
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ class ModifyClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("Unschedulable",$param) and $param["Unschedulable"] !== null) {
             $this->Unschedulable = $param["Unschedulable"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

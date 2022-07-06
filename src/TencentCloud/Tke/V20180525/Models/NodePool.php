@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置资源标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeletionProtection() 获取删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodePool extends AbstractModel
 {
@@ -187,6 +191,12 @@ class NodePool extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean 删除保护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $NodePoolId NodePoolId 资源池id
      * @param string $Name Name 资源池名称
      * @param string $ClusterInstanceId ClusterInstanceId 集群实例id
@@ -215,6 +225,8 @@ class NodePool extends AbstractModel
      * @param string $UserScript 用户自定义脚本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeletionProtection 删除保护开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -320,6 +332,10 @@ class NodePool extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

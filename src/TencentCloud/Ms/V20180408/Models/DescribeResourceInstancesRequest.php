@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceInstances请求参数结构体
  *
- * @method array getPids() 获取资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
- * @method void setPids(array $Pids) 设置资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
- * @method array getFilters() 获取支持通过资源id，pid进行查询
- * @method void setFilters(array $Filters) 设置支持通过资源id，pid进行查询
+ * @method array getFilters() 获取支持CreateTime、ExpireTime、AppName、AppPkgName、BindValue、IsBind过滤
+ * @method void setFilters(array $Filters) 设置支持CreateTime、ExpireTime、AppName、AppPkgName、BindValue、IsBind过滤
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取数量限制，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置数量限制，默认为20，最大值为100。
+ * @method array getPids() 获取资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+ * @method void setPids(array $Pids) 设置资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
  * @method string getOrderField() 获取按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
  * @method void setOrderField(string $OrderField) 设置按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
  * @method string getOrderDirection() 获取升序（asc）还是降序（desc），默认：desc。
@@ -36,12 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeResourceInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
-     */
-    public $Pids;
-
-    /**
-     * @var array 支持通过资源id，pid进行查询
+     * @var array 支持CreateTime、ExpireTime、AppName、AppPkgName、BindValue、IsBind过滤
      */
     public $Filters;
 
@@ -56,6 +51,11 @@ class DescribeResourceInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+     */
+    public $Pids;
+
+    /**
      * @var string 按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
      */
     public $OrderField;
@@ -66,10 +66,10 @@ class DescribeResourceInstancesRequest extends AbstractModel
     public $OrderDirection;
 
     /**
-     * @param array $Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
-     * @param array $Filters 支持通过资源id，pid进行查询
+     * @param array $Filters 支持CreateTime、ExpireTime、AppName、AppPkgName、BindValue、IsBind过滤
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 数量限制，默认为20，最大值为100。
+     * @param array $Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
      * @param string $OrderField 按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
      * @param string $OrderDirection 升序（asc）还是降序（desc），默认：desc。
      */
@@ -86,10 +86,6 @@ class DescribeResourceInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Pids",$param) and $param["Pids"] !== null) {
-            $this->Pids = $param["Pids"];
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -105,6 +101,10 @@ class DescribeResourceInstancesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Pids",$param) and $param["Pids"] !== null) {
+            $this->Pids = $param["Pids"];
         }
 
         if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {

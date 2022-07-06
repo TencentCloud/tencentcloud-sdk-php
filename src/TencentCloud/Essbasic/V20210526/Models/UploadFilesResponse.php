@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadFiles返回参数结构体
  *
- * @method array getFileIds() 获取文件id数组
- * @method void setFileIds(array $FileIds) 设置文件id数组
+ * @method array getFileIds() 获取文件id数组，有效期一个小时
+ * @method void setFileIds(array $FileIds) 设置文件id数组，有效期一个小时
  * @method integer getTotalCount() 获取上传成功文件数量
  * @method void setTotalCount(integer $TotalCount) 设置上传成功文件数量
  * @method array getFileUrls() 获取文件Url
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class UploadFilesResponse extends AbstractModel
 {
     /**
-     * @var array 文件id数组
+     * @var array 文件id数组，有效期一个小时
      */
     public $FileIds;
 
@@ -52,7 +52,7 @@ class UploadFilesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FileIds 文件id数组
+     * @param array $FileIds 文件id数组，有效期一个小时
      * @param integer $TotalCount 上传成功文件数量
      * @param array $FileUrls 文件Url
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

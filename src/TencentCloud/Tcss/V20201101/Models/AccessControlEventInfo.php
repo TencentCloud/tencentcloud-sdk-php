@@ -116,6 +116,22 @@ RULE_MODE_HOLDUP 拦截
 "UNKNOW"              // 原因未知
  * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
+ * @method string getContainerStatus() 获取容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+ * @method void setContainerStatus(string $ContainerStatus) 设置容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
  */
 class AccessControlEventInfo extends AbstractModel
 {
@@ -272,6 +288,18 @@ RULE_MODE_HOLDUP 拦截
     public $ContainerIsolateOperationSrc;
 
     /**
+     * @var string 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+     */
+    public $ContainerStatus;
+
+    /**
      * @param string $ProcessName 进程名称
      * @param string $MatchRuleName 命中规则名称
      * @param string $FoundTime 生成时间
@@ -320,6 +348,14 @@ RULE_MODE_HOLDUP 拦截
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
+     * @param string $ContainerStatus 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
      */
     function __construct()
     {
@@ -436,6 +472,10 @@ RULE_MODE_HOLDUP 拦截
 
         if (array_key_exists("ContainerIsolateOperationSrc",$param) and $param["ContainerIsolateOperationSrc"] !== null) {
             $this->ContainerIsolateOperationSrc = $param["ContainerIsolateOperationSrc"];
+        }
+
+        if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
+            $this->ContainerStatus = $param["ContainerStatus"];
         }
     }
 }

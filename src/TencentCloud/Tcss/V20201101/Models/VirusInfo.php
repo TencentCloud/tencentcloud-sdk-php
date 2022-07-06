@@ -34,10 +34,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerName(string $ContainerName) 设置容器名称
  * @method string getContainerId() 获取容器id
  * @method void setContainerId(string $ContainerId) 设置容器id
- * @method string getContainerStatus() 获取容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
- * @method void setContainerStatus(string $ContainerStatus) 设置容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
+ * @method string getContainerStatus() 获取容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+ * @method void setContainerStatus(string $ContainerStatus) 设置容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
  * @method string getImageName() 获取镜像名称
  * @method void setImageName(string $ImageName) 设置镜像名称
  * @method string getImageId() 获取镜像id
@@ -165,8 +177,14 @@ class VirusInfo extends AbstractModel
     public $ContainerId;
 
     /**
-     * @var string 容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
+     * @var string 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
      */
     public $ContainerStatus;
 
@@ -266,8 +284,14 @@ VALIDATION: 参数非法
      * @param string $ModifyTime 更新时间
      * @param string $ContainerName 容器名称
      * @param string $ContainerId 容器id
-     * @param string $ContainerStatus 容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
+     * @param string $ContainerStatus 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
      * @param string $ImageName 镜像名称
      * @param string $ImageId 镜像id
      * @param string $Status DEAL_NONE:文件待处理

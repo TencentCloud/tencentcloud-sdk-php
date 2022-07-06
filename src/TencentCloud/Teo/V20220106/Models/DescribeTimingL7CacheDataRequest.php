@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置RFC3339标准，客户端时间
  * @method string getEndTime() 获取RFC3339标准，客户端时间
  * @method void setEndTime(string $EndTime) 设置RFC3339标准，客户端时间
- * @method array getMetricNames() 获取时序类访问流量指标列表
- * @method void setMetricNames(array $MetricNames) 设置时序类访问流量指标列表
+ * @method array getMetricNames() 获取时序类访问流量指标列表，支持的指标
+l7Cache_outFlux: 访问流量
+l7Cache_request: 访问请求数
+ * @method void setMetricNames(array $MetricNames) 设置时序类访问流量指标列表，支持的指标
+l7Cache_outFlux: 访问流量
+l7Cache_request: 访问请求数
  * @method string getInterval() 获取时间间隔，选填{min, 5min, hour, day, week}
  * @method void setInterval(string $Interval) 设置时间间隔，选填{min, 5min, hour, day, week}
  * @method array getZoneIds() 获取站点id列表
@@ -50,7 +54,9 @@ class DescribeTimingL7CacheDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 时序类访问流量指标列表
+     * @var array 时序类访问流量指标列表，支持的指标
+l7Cache_outFlux: 访问流量
+l7Cache_request: 访问请求数
      */
     public $MetricNames;
 
@@ -74,7 +80,9 @@ EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
     /**
      * @param string $StartTime RFC3339标准，客户端时间
      * @param string $EndTime RFC3339标准，客户端时间
-     * @param array $MetricNames 时序类访问流量指标列表
+     * @param array $MetricNames 时序类访问流量指标列表，支持的指标
+l7Cache_outFlux: 访问流量
+l7Cache_request: 访问请求数
      * @param string $Interval 时间间隔，选填{min, 5min, hour, day, week}
      * @param array $ZoneIds 站点id列表
      * @param array $Filters 筛选条件，筛选EO/源站响应如下：

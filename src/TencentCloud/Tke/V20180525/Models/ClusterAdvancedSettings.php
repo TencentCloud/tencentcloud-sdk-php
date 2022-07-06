@@ -68,6 +68,8 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
  * @method void setCiliumMode(string $CiliumMode) 设置启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
  * @method boolean getIsDualStack() 获取集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
  * @method void setIsDualStack(boolean $IsDualStack) 设置集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+ * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享
+ * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -168,6 +170,11 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     public $IsDualStack;
 
     /**
+     * @var boolean 是否开启QGPU共享
+     */
+    public $QGPUShareEnable;
+
+    /**
      * @param boolean $IPVS 是否启用IPVS
      * @param boolean $AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
@@ -192,6 +199,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
      * @param integer $BasePodNumber 自定义模式下的基础pod数量
      * @param string $CiliumMode 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
      * @param boolean $IsDualStack 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+     * @param boolean $QGPUShareEnable 是否开启QGPU共享
      */
     function __construct()
     {
@@ -277,6 +285,10 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
 
         if (array_key_exists("IsDualStack",$param) and $param["IsDualStack"] !== null) {
             $this->IsDualStack = $param["IsDualStack"];
+        }
+
+        if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
+            $this->QGPUShareEnable = $param["QGPUShareEnable"];
         }
     }
 }

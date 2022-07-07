@@ -28,8 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置操作人信息
  * @method Agent getAgent() 获取应用相关信息
  * @method void setAgent(Agent $Agent) 设置应用相关信息
- * @method boolean getUnordered() 获取发送类型(true为无序签,false为顺序签)
- * @method void setUnordered(boolean $Unordered) 设置发送类型(true为无序签,false为顺序签)
+ * @method boolean getUnordered() 获取发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
+ * @method void setUnordered(boolean $Unordered) 设置发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
  * @method integer getDeadLine() 获取签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
  * @method void setDeadLine(integer $DeadLine) 设置签署流程的签署截止时间。
@@ -72,7 +78,10 @@ class CreateFlowRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var boolean 发送类型(true为无序签,false为顺序签)
+     * @var boolean 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
      */
     public $Unordered;
 
@@ -122,7 +131,10 @@ class CreateFlowRequest extends AbstractModel
      * @param array $Approvers 签署流程参与者信息
      * @param UserInfo $Operator 操作人信息
      * @param Agent $Agent 应用相关信息
-     * @param boolean $Unordered 发送类型(true为无序签,false为顺序签)
+     * @param boolean $Unordered 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
      * @param integer $DeadLine 签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
      * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符

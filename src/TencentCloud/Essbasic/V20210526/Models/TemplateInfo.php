@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignComponents(array $SignComponents) 设置签署区模板信息结构
  * @method array getRecipients() 获取模板中的流程参与人信息
  * @method void setRecipients(array $Recipients) 设置模板中的流程参与人信息
- * @method integer getTemplateType() 获取模板类型：1-静默签；2-静默签授权；3-普通模板
- * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；2-静默签授权；3-普通模板
+ * @method integer getTemplateType() 获取模板类型：1-静默签；3-普通模板
+ * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；3-普通模板
  * @method boolean getIsPromoter() 获取是否是发起人
  * @method void setIsPromoter(boolean $IsPromoter) 设置是否是发起人
  * @method string getCreator() 获取模板的创建者信息
@@ -74,7 +74,7 @@ class TemplateInfo extends AbstractModel
     public $Recipients;
 
     /**
-     * @var integer 模板类型：1-静默签；2-静默签授权；3-普通模板
+     * @var integer 模板类型：1-静默签；3-普通模板
      */
     public $TemplateType;
 
@@ -100,7 +100,7 @@ class TemplateInfo extends AbstractModel
      * @param array $Components 模板控件信息结构
      * @param array $SignComponents 签署区模板信息结构
      * @param array $Recipients 模板中的流程参与人信息
-     * @param integer $TemplateType 模板类型：1-静默签；2-静默签授权；3-普通模板
+     * @param integer $TemplateType 模板类型：1-静默签；3-普通模板
      * @param boolean $IsPromoter 是否是发起人
      * @param string $Creator 模板的创建者信息
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）

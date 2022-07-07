@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryFlexPaymentOrderList请求参数结构体
  *
- * @method string getPayeeId() 获取收款用户ID
- * @method void setPayeeId(string $PayeeId) 设置收款用户ID
  * @method string getStartTime() 获取开始时间，格式"yyyy-MM-dd hh:mm:ss"
  * @method void setStartTime(string $StartTime) 设置开始时间，格式"yyyy-MM-dd hh:mm:ss"
  * @method string getEndTime() 获取结束时间，格式"yyyy-MM-dd hh:mm:ss"
  * @method void setEndTime(string $EndTime) 设置结束时间，格式"yyyy-MM-dd hh:mm:ss"
  * @method Paging getPageNumber() 获取分页
  * @method void setPageNumber(Paging $PageNumber) 设置分页
+ * @method string getPayeeId() 获取收款用户ID
+ * @method void setPayeeId(string $PayeeId) 设置收款用户ID
  * @method string getEnvironment() 获取环境类型
 __release__:生产环境
 __sandbox__:沙箱环境
@@ -41,11 +41,6 @@ __test__:测试环境
  */
 class QueryFlexPaymentOrderListRequest extends AbstractModel
 {
-    /**
-     * @var string 收款用户ID
-     */
-    public $PayeeId;
-
     /**
      * @var string 开始时间，格式"yyyy-MM-dd hh:mm:ss"
      */
@@ -62,6 +57,11 @@ class QueryFlexPaymentOrderListRequest extends AbstractModel
     public $PageNumber;
 
     /**
+     * @var string 收款用户ID
+     */
+    public $PayeeId;
+
+    /**
      * @var string 环境类型
 __release__:生产环境
 __sandbox__:沙箱环境
@@ -71,10 +71,10 @@ __test__:测试环境
     public $Environment;
 
     /**
-     * @param string $PayeeId 收款用户ID
      * @param string $StartTime 开始时间，格式"yyyy-MM-dd hh:mm:ss"
      * @param string $EndTime 结束时间，格式"yyyy-MM-dd hh:mm:ss"
      * @param Paging $PageNumber 分页
+     * @param string $PayeeId 收款用户ID
      * @param string $Environment 环境类型
 __release__:生产环境
 __sandbox__:沙箱环境
@@ -94,10 +94,6 @@ __test__:测试环境
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PayeeId",$param) and $param["PayeeId"] !== null) {
-            $this->PayeeId = $param["PayeeId"];
-        }
-
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
@@ -109,6 +105,10 @@ __test__:测试环境
         if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
             $this->PageNumber = new Paging();
             $this->PageNumber->deserialize($param["PageNumber"]);
+        }
+
+        if (array_key_exists("PayeeId",$param) and $param["PayeeId"] !== null) {
+            $this->PayeeId = $param["PayeeId"];
         }
 
         if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSummaryTime(string $SummaryTime) 设置汇总日期
  * @method integer getSummaryCount() 获取汇总记录数量
  * @method void setSummaryCount(integer $SummaryCount) 设置汇总记录数量
+ * @method string getOutUserId() 获取外部用户ID
+ * @method void setOutUserId(string $OutUserId) 设置外部用户ID
  */
 class OrderSummaryResult extends AbstractModel
 {
@@ -73,6 +75,11 @@ class OrderSummaryResult extends AbstractModel
     public $SummaryCount;
 
     /**
+     * @var string 外部用户ID
+     */
+    public $OutUserId;
+
+    /**
      * @param string $SummaryId 汇总ID
      * @param string $PayeeId 收款账户ID
      * @param string $Name 收款账户名称
@@ -80,6 +87,7 @@ class OrderSummaryResult extends AbstractModel
      * @param string $SummaryAmount 汇总金额
      * @param string $SummaryTime 汇总日期
      * @param integer $SummaryCount 汇总记录数量
+     * @param string $OutUserId 外部用户ID
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class OrderSummaryResult extends AbstractModel
 
         if (array_key_exists("SummaryCount",$param) and $param["SummaryCount"] !== null) {
             $this->SummaryCount = $param["SummaryCount"];
+        }
+
+        if (array_key_exists("OutUserId",$param) and $param["OutUserId"] !== null) {
+            $this->OutUserId = $param["OutUserId"];
         }
     }
 }

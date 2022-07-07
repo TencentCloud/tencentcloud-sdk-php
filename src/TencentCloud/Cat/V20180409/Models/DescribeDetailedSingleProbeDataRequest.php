@@ -25,9 +25,23 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEndTime() 获取结束时间戳（毫秒级）
  * @method void setEndTime(integer $EndTime) 设置结束时间戳（毫秒级）
  * @method string getTaskType() 获取任务类型
+AnalyzeTaskType_Network：网络质量
+AnalyzeTaskType_Browse：页面性能
+AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
+AnalyzeTaskType_Transport：端口性能
+AnalyzeTaskType_MediaStream：音视频体验
  * @method void setTaskType(string $TaskType) 设置任务类型
+AnalyzeTaskType_Network：网络质量
+AnalyzeTaskType_Browse：页面性能
+AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
+AnalyzeTaskType_Transport：端口性能
+AnalyzeTaskType_MediaStream：音视频体验
  * @method string getSortField() 获取待排序字段
+可以填写 ProbeTime 拨测时间排序
+也可填写SelectedFields 中的选中字段
  * @method void setSortField(string $SortField) 设置待排序字段
+可以填写 ProbeTime 拨测时间排序
+也可填写SelectedFields 中的选中字段
  * @method boolean getAscending() 获取true表示升序
  * @method void setAscending(boolean $Ascending) 设置true表示升序
  * @method array getSelectedFields() 获取选中字段
@@ -39,13 +53,53 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTaskID() 获取任务ID
  * @method void setTaskID(array $TaskID) 设置任务ID
  * @method array getOperators() 获取拨测点运营商
+	
+这里实际按拨测结果中的运营商来填写即可
+
+电信：中国电信
+移动：中国移动
+联通：中国联通
  * @method void setOperators(array $Operators) 设置拨测点运营商
+	
+这里实际按拨测结果中的运营商来填写即可
+
+电信：中国电信
+移动：中国移动
+联通：中国联通
  * @method array getDistricts() 获取拨测点地区
+	
+这里实际按拨测结果中的地区来填写即可
+
+国内一般是省级单位，如广东、广西、香港特区、新疆；直辖市则填北京、上海
+
+海外一般是国家名，如澳大利亚、新加坡
  * @method void setDistricts(array $Districts) 设置拨测点地区
+	
+这里实际按拨测结果中的地区来填写即可
+
+国内一般是省级单位，如广东、广西、香港特区、新疆；直辖市则填北京、上海
+
+海外一般是国家名，如澳大利亚、新加坡
  * @method array getErrorTypes() 获取错误类型
  * @method void setErrorTypes(array $ErrorTypes) 设置错误类型
  * @method array getCity() 获取城市
+这里实际按拨测结果中的城市来填写即可
+
+示例：
+
+深圳市
+武汉市
+首尔
+多伦多
  * @method void setCity(array $City) 设置城市
+这里实际按拨测结果中的城市来填写即可
+
+示例：
+
+深圳市
+武汉市
+首尔
+多伦多
  */
 class DescribeDetailedSingleProbeDataRequest extends AbstractModel
 {
@@ -61,11 +115,18 @@ class DescribeDetailedSingleProbeDataRequest extends AbstractModel
 
     /**
      * @var string 任务类型
+AnalyzeTaskType_Network：网络质量
+AnalyzeTaskType_Browse：页面性能
+AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
+AnalyzeTaskType_Transport：端口性能
+AnalyzeTaskType_MediaStream：音视频体验
      */
     public $TaskType;
 
     /**
      * @var string 待排序字段
+可以填写 ProbeTime 拨测时间排序
+也可填写SelectedFields 中的选中字段
      */
     public $SortField;
 
@@ -96,11 +157,23 @@ class DescribeDetailedSingleProbeDataRequest extends AbstractModel
 
     /**
      * @var array 拨测点运营商
+	
+这里实际按拨测结果中的运营商来填写即可
+
+电信：中国电信
+移动：中国移动
+联通：中国联通
      */
     public $Operators;
 
     /**
      * @var array 拨测点地区
+	
+这里实际按拨测结果中的地区来填写即可
+
+国内一般是省级单位，如广东、广西、香港特区、新疆；直辖市则填北京、上海
+
+海外一般是国家名，如澳大利亚、新加坡
      */
     public $Districts;
 
@@ -111,6 +184,14 @@ class DescribeDetailedSingleProbeDataRequest extends AbstractModel
 
     /**
      * @var array 城市
+这里实际按拨测结果中的城市来填写即可
+
+示例：
+
+深圳市
+武汉市
+首尔
+多伦多
      */
     public $City;
 
@@ -118,16 +199,43 @@ class DescribeDetailedSingleProbeDataRequest extends AbstractModel
      * @param integer $BeginTime 开始时间戳（毫秒级）
      * @param integer $EndTime 结束时间戳（毫秒级）
      * @param string $TaskType 任务类型
+AnalyzeTaskType_Network：网络质量
+AnalyzeTaskType_Browse：页面性能
+AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
+AnalyzeTaskType_Transport：端口性能
+AnalyzeTaskType_MediaStream：音视频体验
      * @param string $SortField 待排序字段
+可以填写 ProbeTime 拨测时间排序
+也可填写SelectedFields 中的选中字段
      * @param boolean $Ascending true表示升序
      * @param array $SelectedFields 选中字段
      * @param integer $Offset 起始取数位置
      * @param integer $Limit 取数数量
      * @param array $TaskID 任务ID
      * @param array $Operators 拨测点运营商
+	
+这里实际按拨测结果中的运营商来填写即可
+
+电信：中国电信
+移动：中国移动
+联通：中国联通
      * @param array $Districts 拨测点地区
+	
+这里实际按拨测结果中的地区来填写即可
+
+国内一般是省级单位，如广东、广西、香港特区、新疆；直辖市则填北京、上海
+
+海外一般是国家名，如澳大利亚、新加坡
      * @param array $ErrorTypes 错误类型
      * @param array $City 城市
+这里实际按拨测结果中的城市来填写即可
+
+示例：
+
+深圳市
+武汉市
+首尔
+多伦多
      */
     function __construct()
     {

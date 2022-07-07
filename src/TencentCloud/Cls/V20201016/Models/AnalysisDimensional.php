@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取分析名称
  * @method void setName(string $Name) 设置分析名称
- * @method string getType() 获取分析类型：query，field
- * @method void setType(string $Type) 设置分析类型：query，field
+ * @method string getType() 获取分析类型：query，field ，original
+ * @method void setType(string $Type) 设置分析类型：query，field ，original
  * @method string getContent() 获取分析内容
  * @method void setContent(string $Content) 设置分析内容
+ * @method array getConfigInfo() 获取配置
+ * @method void setConfigInfo(array $ConfigInfo) 设置配置
  */
 class AnalysisDimensional extends AbstractModel
 {
@@ -35,7 +37,7 @@ class AnalysisDimensional extends AbstractModel
     public $Name;
 
     /**
-     * @var string 分析类型：query，field
+     * @var string 分析类型：query，field ，original
      */
     public $Type;
 
@@ -45,9 +47,15 @@ class AnalysisDimensional extends AbstractModel
     public $Content;
 
     /**
+     * @var array 配置
+     */
+    public $ConfigInfo;
+
+    /**
      * @param string $Name 分析名称
-     * @param string $Type 分析类型：query，field
+     * @param string $Type 分析类型：query，field ，original
      * @param string $Content 分析内容
+     * @param array $ConfigInfo 配置
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class AnalysisDimensional extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("ConfigInfo",$param) and $param["ConfigInfo"] !== null) {
+            $this->ConfigInfo = [];
+            foreach ($param["ConfigInfo"] as $key => $value){
+                $obj = new AlarmAnalysisConfig();
+                $obj->deserialize($value);
+                array_push($this->ConfigInfo, $obj);
+            }
         }
     }
 }

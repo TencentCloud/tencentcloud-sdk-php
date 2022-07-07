@@ -60,6 +60,10 @@ FAILED:已失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置冻结备注
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayeeId() 获取收款用户ID
+ * @method void setPayeeId(string $PayeeId) 设置收款用户ID
+ * @method string getOutUserId() 获取外部用户ID
+ * @method void setOutUserId(string $OutUserId) 设置外部用户ID
  */
 class FreezeOrderResult extends AbstractModel
 {
@@ -124,6 +128,16 @@ FAILED:已失败
     public $Remark;
 
     /**
+     * @var string 收款用户ID
+     */
+    public $PayeeId;
+
+    /**
+     * @var string 外部用户ID
+     */
+    public $OutUserId;
+
+    /**
      * @param string $AmountBeforeTax 税前金额
      * @param string $IncomeType 收入类型
 LABOR:劳务所得
@@ -144,6 +158,8 @@ FAILED:已失败
      * @param string $StatusDesc 状态描述
      * @param string $Remark 冻结备注
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayeeId 收款用户ID
+     * @param string $OutUserId 外部用户ID
      */
     function __construct()
     {
@@ -196,6 +212,14 @@ FAILED:已失败
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PayeeId",$param) and $param["PayeeId"] !== null) {
+            $this->PayeeId = $param["PayeeId"];
+        }
+
+        if (array_key_exists("OutUserId",$param) and $param["OutUserId"] !== null) {
+            $this->OutUserId = $param["OutUserId"];
         }
     }
 }

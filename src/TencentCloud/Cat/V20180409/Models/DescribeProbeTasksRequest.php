@@ -45,7 +45,29 @@ use TencentCloud\Common\AbstractModel;
 <li>1 = 正常</li>
 <li> 2 = 欠费 </li>
  * @method array getTaskType() 获取拨测类型
+
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
  * @method void setTaskType(array $TaskType) 设置拨测类型
+
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
  * @method array getTaskCategory() 获取节点类型
  * @method void setTaskCategory(array $TaskCategory) 设置节点类型
  * @method string getOrderBy() 获取排序的列
@@ -103,6 +125,17 @@ class DescribeProbeTasksRequest extends AbstractModel
 
     /**
      * @var array 拨测类型
+
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
      */
     public $TaskType;
 
@@ -140,6 +173,17 @@ class DescribeProbeTasksRequest extends AbstractModel
 <li>1 = 正常</li>
 <li> 2 = 欠费 </li>
      * @param array $TaskType 拨测类型
+
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
      * @param array $TaskCategory 节点类型
      * @param string $OrderBy 排序的列
      * @param boolean $Ascend 是否正序

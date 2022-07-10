@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getInstanceIds() 获取实例ID列表
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表
+ * @method string getDealName() 获取订单ID
+ * @method void setDealName(string $DealName) 设置订单ID
  */
 class BillingResourceInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class BillingResourceInfo extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var string 订单ID
+     */
+    public $DealName;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIds 实例ID列表
+     * @param string $DealName 订单ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BillingResourceInfo extends AbstractModel
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
         }
     }
 }

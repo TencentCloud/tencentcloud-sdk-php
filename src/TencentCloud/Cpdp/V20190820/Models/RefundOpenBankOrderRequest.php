@@ -24,16 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutRefundId(string $OutRefundId) 设置外部商户退款单号。
  * @method integer getRefundAmount() 获取退款金额。单位分。
  * @method void setRefundAmount(integer $RefundAmount) 设置退款金额。单位分。
- * @method string getChannelMerchantId() 获取渠道商户号。
- * @method void setChannelMerchantId(string $ChannelMerchantId) 设置渠道商户号。
- * @method string getOutOrderId() 获取外部商户订单号，与云企付渠道订单号二者选填其一。
- * @method void setOutOrderId(string $OutOrderId) 设置外部商户订单号，与云企付渠道订单号二者选填其一。
- * @method string getChannelOrderId() 获取云企付渠道订单号，与外部订单号二者选填其一。
- * @method void setChannelOrderId(string $ChannelOrderId) 设置云企付渠道订单号，与外部订单号二者选填其一。
+ * @method string getChannelMerchantId() 获取渠道商户号。外部平台接入云企付平台下发。必填。
+ * @method void setChannelMerchantId(string $ChannelMerchantId) 设置渠道商户号。外部平台接入云企付平台下发。必填。
+ * @method string getOutOrderId() 获取外部商户订单号，与云企付渠道订单号二者不能同时为空。
+ * @method void setOutOrderId(string $OutOrderId) 设置外部商户订单号，与云企付渠道订单号二者不能同时为空。
+ * @method string getChannelOrderId() 获取云企付渠道订单号，与外部订单号二者不能同时为空。
+ * @method void setChannelOrderId(string $ChannelOrderId) 设置云企付渠道订单号，与外部订单号二者不能同时为空。
  * @method string getNotifyUrl() 获取退款通知地址。
  * @method void setNotifyUrl(string $NotifyUrl) 设置退款通知地址。
  * @method string getRefundReason() 获取退款原因。
+当EBANK_PAYMENT担保支付订单退款时，此字段必传。
  * @method void setRefundReason(string $RefundReason) 设置退款原因。
+当EBANK_PAYMENT担保支付订单退款时，此字段必传。
  * @method string getExternalRefundData() 获取第三方渠道退款附加信息。详见附录-复杂类型。
 若未作特殊说明，则无需传入。
  * @method void setExternalRefundData(string $ExternalRefundData) 设置第三方渠道退款附加信息。详见附录-复杂类型。
@@ -62,17 +64,17 @@ class RefundOpenBankOrderRequest extends AbstractModel
     public $RefundAmount;
 
     /**
-     * @var string 渠道商户号。
+     * @var string 渠道商户号。外部平台接入云企付平台下发。必填。
      */
     public $ChannelMerchantId;
 
     /**
-     * @var string 外部商户订单号，与云企付渠道订单号二者选填其一。
+     * @var string 外部商户订单号，与云企付渠道订单号二者不能同时为空。
      */
     public $OutOrderId;
 
     /**
-     * @var string 云企付渠道订单号，与外部订单号二者选填其一。
+     * @var string 云企付渠道订单号，与外部订单号二者不能同时为空。
      */
     public $ChannelOrderId;
 
@@ -83,6 +85,7 @@ class RefundOpenBankOrderRequest extends AbstractModel
 
     /**
      * @var string 退款原因。
+当EBANK_PAYMENT担保支付订单退款时，此字段必传。
      */
     public $RefundReason;
 
@@ -108,11 +111,12 @@ _不填默认为生产环境_
     /**
      * @param string $OutRefundId 外部商户退款单号。
      * @param integer $RefundAmount 退款金额。单位分。
-     * @param string $ChannelMerchantId 渠道商户号。
-     * @param string $OutOrderId 外部商户订单号，与云企付渠道订单号二者选填其一。
-     * @param string $ChannelOrderId 云企付渠道订单号，与外部订单号二者选填其一。
+     * @param string $ChannelMerchantId 渠道商户号。外部平台接入云企付平台下发。必填。
+     * @param string $OutOrderId 外部商户订单号，与云企付渠道订单号二者不能同时为空。
+     * @param string $ChannelOrderId 云企付渠道订单号，与外部订单号二者不能同时为空。
      * @param string $NotifyUrl 退款通知地址。
      * @param string $RefundReason 退款原因。
+当EBANK_PAYMENT担保支付订单退款时，此字段必传。
      * @param string $ExternalRefundData 第三方渠道退款附加信息。详见附录-复杂类型。
 若未作特殊说明，则无需传入。
      * @param string $Remark 备注信息

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述
  * @method integer getSourceChannel() 获取来源渠道
  * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
- * @method integer getEnableTracing() 获取是否开启调用链, 0 为关闭，1位开启
- * @method void setEnableTracing(integer $EnableTracing) 设置是否开启调用链, 0 为关闭，1位开启
+ * @method integer getEnableTracing() 获取是否开启调用链,（此参数已弃用）
+ * @method void setEnableTracing(integer $EnableTracing) 设置是否开启调用链,（此参数已弃用）
  */
 class ModifyApplicationInfoRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyApplicationInfoRequest extends AbstractModel
     public $SourceChannel;
 
     /**
-     * @var integer 是否开启调用链, 0 为关闭，1位开启
+     * @var integer 是否开启调用链,（此参数已弃用）
      */
     public $EnableTracing;
 
@@ -55,7 +55,7 @@ class ModifyApplicationInfoRequest extends AbstractModel
      * @param string $ApplicationId 应用ID
      * @param string $Description 描述
      * @param integer $SourceChannel 来源渠道
-     * @param integer $EnableTracing 是否开启调用链, 0 为关闭，1位开启
+     * @param integer $EnableTracing 是否开启调用链,（此参数已弃用）
      */
     function __construct()
     {

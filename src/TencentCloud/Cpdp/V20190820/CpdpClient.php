@@ -74,10 +74,11 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateOpenBankExternalSubMerchantAccountBookResponse CreateOpenBankExternalSubMerchantAccountBook(Models\CreateOpenBankExternalSubMerchantAccountBookRequest $req) 第三方子商户电子记账本创建接口
  * @method Models\CreateOpenBankExternalSubMerchantRegistrationResponse CreateOpenBankExternalSubMerchantRegistration(Models\CreateOpenBankExternalSubMerchantRegistrationRequest $req) 云企付-子商户进件
  * @method Models\CreateOpenBankMerchantResponse CreateOpenBankMerchant(Models\CreateOpenBankMerchantRequest $req) 云企付-创建商户
- * @method Models\CreateOpenBankPaymentOrderResponse CreateOpenBankPaymentOrder(Models\CreateOpenBankPaymentOrderRequest $req) 云企付-创建支付订单
+ * @method Models\CreateOpenBankPaymentOrderResponse CreateOpenBankPaymentOrder(Models\CreateOpenBankPaymentOrderRequest $req) 云企付-创建支付订单。支持B2B网关支付，B2C转账下单。
  * @method Models\CreateOpenBankRechargeOrderResponse CreateOpenBankRechargeOrder(Models\CreateOpenBankRechargeOrderRequest $req) 云企付-创建充值订单
  * @method Models\CreateOpenBankSubMerchantRateConfigureResponse CreateOpenBankSubMerchantRateConfigure(Models\CreateOpenBankSubMerchantRateConfigureRequest $req) 云企付-子商户费率配置
  * @method Models\CreateOpenBankUnifiedOrderResponse CreateOpenBankUnifiedOrder(Models\CreateOpenBankUnifiedOrderRequest $req) 云企付-聚合下单
+ * @method Models\CreateOpenBankVerificationOrderResponse CreateOpenBankVerificationOrder(Models\CreateOpenBankVerificationOrderRequest $req) 云企付-创建核销申请，适用于针对支付订单维度的确认收货，解冻等业务场景。目前支持的渠道有TENPAY下的EBANK_PAYMENT付款方式创建支付订单时，选择担保支付下单的订单进行解冻。
  * @method Models\CreateOrderResponse CreateOrder(Models\CreateOrderRequest $req) 云鉴-消费订单发起的接口
  * @method Models\CreatePayMerchantResponse CreatePayMerchant(Models\CreatePayMerchantRequest $req) 商户新增的接口
  * @method Models\CreatePayRollPreOrderResponse CreatePayRollPreOrder(Models\CreatePayRollPreOrderRequest $req) 务工卡-核身预下单
@@ -188,6 +189,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryOpenBankSubMerchantRateConfigureResponse QueryOpenBankSubMerchantRateConfigure(Models\QueryOpenBankSubMerchantRateConfigureRequest $req) 云企付-子商户费率配置结果查询
  * @method Models\QueryOpenBankSupportBankListResponse QueryOpenBankSupportBankList(Models\QueryOpenBankSupportBankListRequest $req) 云企付-查询支持银行列表
  * @method Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResponse QueryOpenBankUnbindExternalSubMerchantBankAccount(Models\QueryOpenBankUnbindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡解绑结果查询
+ * @method Models\QueryOpenBankVerificationOrderResponse QueryOpenBankVerificationOrder(Models\QueryOpenBankVerificationOrderRequest $req) 云企付-查询核销订单状态，客户可以使用该接口来查询核销申请的订单状态。目前仅支持TENPAY渠道EBANK_PAYMENT付款方式的担保支付订单查询。
  * @method Models\QueryOrderResponse QueryOrder(Models\QueryOrderRequest $req) 根据订单号，或者用户Id，查询支付订单状态 
  * @method Models\QueryOrderStatusResponse QueryOrderStatus(Models\QueryOrderStatusRequest $req) 云支付-查询订单付款状态
  * @method Models\QueryOutwardOrderResponse QueryOutwardOrder(Models\QueryOutwardOrderRequest $req) 跨境-查询汇出结果
@@ -234,6 +236,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\UploadOrgFileResponse UploadOrgFile(Models\UploadOrgFileRequest $req) 云支付-上传机构文件接口
  * @method Models\UploadTaxListResponse UploadTaxList(Models\UploadTaxListRequest $req) 直播平台-上传代理商完税列表
  * @method Models\UploadTaxPaymentResponse UploadTaxPayment(Models\UploadTaxPaymentRequest $req) 直播平台-上传代理商完税证明
+ * @method Models\VerifyOpenBankAccountResponse VerifyOpenBankAccount(Models\VerifyOpenBankAccountRequest $req) 云企付-子商户银行卡打款验证，在接入TENPAY渠道EBANK_PAYMENT付款时，若客户期望接入担保支付，需在接入前先完成，收款商户绑定的银行卡进行打款验证。验证成功后，才可以调用CreateOpenBankPaymentOrder接口进行担保支付下单。
  * @method Models\ViewContractResponse ViewContract(Models\ViewContractRequest $req) 云支付-查询合同明细接口
  * @method Models\ViewMerchantResponse ViewMerchant(Models\ViewMerchantRequest $req) 云支付-查询商户明细接口
  * @method Models\ViewShopResponse ViewShop(Models\ViewShopRequest $req) 云支付-查询门店明细接口

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowType(string $FlowType) 设置合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
  * @method string getFlowDescription() 获取合同描述，最大长度1000个字符
  * @method void setFlowDescription(string $FlowDescription) 设置合同描述，最大长度1000个字符
- * @method string getCustomerData() 获取渠道的业务信息，最大长度1000个字符
- * @method void setCustomerData(string $CustomerData) 设置渠道的业务信息，最大长度1000个字符
+ * @method string getCustomerData() 获取渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method void setCustomerData(string $CustomerData) 设置渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  * @method string getCustomShowMap() 获取合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method void setCustomShowMap(string $CustomShowMap) 设置合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method array getCcInfos() 获取被抄送人的信息列表，抄送功能暂不开放
@@ -86,7 +86,7 @@ class FlowInfo extends AbstractModel
     public $FlowDescription;
 
     /**
-     * @var string 渠道的业务信息，最大长度1000个字符
+     * @var string 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      */
     public $CustomerData;
 
@@ -109,7 +109,7 @@ class FlowInfo extends AbstractModel
      * @param string $CallbackUrl 回调地址，最大长度1000个字符
      * @param string $FlowType 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
      * @param string $FlowDescription 合同描述，最大长度1000个字符
-     * @param string $CustomerData 渠道的业务信息，最大长度1000个字符
+     * @param string $CustomerData 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
      * @param array $CcInfos 被抄送人的信息列表，抄送功能暂不开放
      */

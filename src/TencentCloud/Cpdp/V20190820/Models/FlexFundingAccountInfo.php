@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFundingAccountType(string $FundingAccountType) 设置资金账户类型
  * @method string getFundingAccountBindSerialNo() 获取资金账户绑定序列号
  * @method void setFundingAccountBindSerialNo(string $FundingAccountBindSerialNo) 设置资金账户绑定序列号
+ * @method string getFundingAccountName() 获取资金账户名称
+ * @method void setFundingAccountName(string $FundingAccountName) 设置资金账户名称
  */
 class FlexFundingAccountInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class FlexFundingAccountInfo extends AbstractModel
     public $FundingAccountBindSerialNo;
 
     /**
+     * @var string 资金账户名称
+     */
+    public $FundingAccountName;
+
+    /**
      * @param string $FundingAccountNo 资金账户号
      * @param string $FundingAccountType 资金账户类型
      * @param string $FundingAccountBindSerialNo 资金账户绑定序列号
+     * @param string $FundingAccountName 资金账户名称
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class FlexFundingAccountInfo extends AbstractModel
 
         if (array_key_exists("FundingAccountBindSerialNo",$param) and $param["FundingAccountBindSerialNo"] !== null) {
             $this->FundingAccountBindSerialNo = $param["FundingAccountBindSerialNo"];
+        }
+
+        if (array_key_exists("FundingAccountName",$param) and $param["FundingAccountName"] !== null) {
+            $this->FundingAccountName = $param["FundingAccountName"];
         }
     }
 }

@@ -44,10 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOpenId(string $OpenId) 设置用户侧第三方id，最大长度64个字符
  * @method string getOrganizationOpenId() 获取企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
- * @method string getApproverType() 获取签署人类型，PERSON-个人；ORGANIZATION-企业；
+ * @method string getApproverType() 获取签署人类型，PERSON-个人；
+PERSON_AUTO_SIGN-个人自动签；
+ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
 注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
- * @method void setApproverType(string $ApproverType) 设置签署人类型，PERSON-个人；ORGANIZATION-企业；
+ * @method void setApproverType(string $ApproverType) 设置签署人类型，PERSON-个人；
+PERSON_AUTO_SIGN-个人自动签；
+ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
 注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
  * @method string getRecipientId() 获取签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
@@ -112,7 +116,9 @@ class FlowApproverInfo extends AbstractModel
     public $OrganizationOpenId;
 
     /**
-     * @var string 签署人类型，PERSON-个人；ORGANIZATION-企业；
+     * @var string 签署人类型，PERSON-个人；
+PERSON_AUTO_SIGN-个人自动签；
+ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
 注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
      */
@@ -166,7 +172,9 @@ ENTERPRISESERVER-企业静默签;
 默认为false，即签署人位于同一个渠道应用号下；
      * @param string $OpenId 用户侧第三方id，最大长度64个字符
      * @param string $OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
-     * @param string $ApproverType 签署人类型，PERSON-个人；ORGANIZATION-企业；
+     * @param string $ApproverType 签署人类型，PERSON-个人；
+PERSON_AUTO_SIGN-个人自动签；
+ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
 注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
      * @param string $RecipientId 签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；

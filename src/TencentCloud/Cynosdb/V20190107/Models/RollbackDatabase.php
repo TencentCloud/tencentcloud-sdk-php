@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回滚数据库信息
  *
- * @method string getOldDatabase() 获取旧数据库
- * @method void setOldDatabase(string $OldDatabase) 设置旧数据库
- * @method string getNewDatabase() 获取新数据库
- * @method void setNewDatabase(string $NewDatabase) 设置新数据库
+ * @method string getOldDatabase() 获取旧数据库名称
+ * @method void setOldDatabase(string $OldDatabase) 设置旧数据库名称
+ * @method string getNewDatabase() 获取新数据库名称
+ * @method void setNewDatabase(string $NewDatabase) 设置新数据库名称
  */
 class RollbackDatabase extends AbstractModel
 {
     /**
-     * @var string 旧数据库
+     * @var string 旧数据库名称
      */
     public $OldDatabase;
 
     /**
-     * @var string 新数据库
+     * @var string 新数据库名称
      */
     public $NewDatabase;
 
     /**
-     * @param string $OldDatabase 旧数据库
-     * @param string $NewDatabase 新数据库
+     * @param string $OldDatabase 旧数据库名称
+     * @param string $NewDatabase 新数据库名称
      */
     function __construct()
     {

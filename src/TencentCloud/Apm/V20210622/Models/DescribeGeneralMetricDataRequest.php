@@ -27,7 +27,8 @@ span.kind:
 	client:客户端视角
 默认为服务端视角进行查询。
 runtime_metric视图支持：service.name（服务名）维度进行过滤。
-sql_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、（db.ip）数据库实例ip维度进行过滤。
+查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必输入。
  * @method void setFilters(array $Filters) 设置要过滤的维度信息
 service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
 span.kind:
@@ -35,15 +36,16 @@ span.kind:
 	client:客户端视角
 默认为服务端视角进行查询。
 runtime_metric视图支持：service.name（服务名）维度进行过滤。
-sql_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、（db.ip）数据库实例ip维度进行过滤。
+查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必输入。
  * @method array getMetrics() 获取需要查询的指标，不可自定义输入。
 service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
 runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）。
+sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
  * @method void setMetrics(array $Metrics) 设置需要查询的指标，不可自定义输入。
 service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
 runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）。
+sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getViewName() 获取视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
@@ -51,11 +53,13 @@ sql_metric视图支持：service_slow_sql_count（慢sql）。
  * @method array getGroupBy() 获取聚合维度
 service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
 runtime_metric视图支持：service.name（服务名）维度进行聚合。
-sql_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合。
+查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必输入。
  * @method void setGroupBy(array $GroupBy) 设置聚合维度
 service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
 runtime_metric视图支持：service.name（服务名）维度进行聚合。
-sql_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合。
+查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必输入。
  * @method integer getStartTime() 获取起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
  * @method void setStartTime(integer $StartTime) 设置起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
  * @method integer getEndTime() 获取结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
@@ -73,7 +77,8 @@ span.kind:
 	client:客户端视角
 默认为服务端视角进行查询。
 runtime_metric视图支持：service.name（服务名）维度进行过滤。
-sql_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、（db.ip）数据库实例ip维度进行过滤。
+查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必输入。
      */
     public $Filters;
 
@@ -81,7 +86,7 @@ sql_metric视图支持：service.name（服务名）维度进行过滤。
      * @var array 需要查询的指标，不可自定义输入。
 service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
 runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）。
+sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
      */
     public $Metrics;
 
@@ -99,7 +104,8 @@ sql_metric视图支持：service_slow_sql_count（慢sql）。
      * @var array 聚合维度
 service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
 runtime_metric视图支持：service.name（服务名）维度进行聚合。
-sql_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合。
+查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必输入。
      */
     public $GroupBy;
 
@@ -126,17 +132,19 @@ span.kind:
 	client:客户端视角
 默认为服务端视角进行查询。
 runtime_metric视图支持：service.name（服务名）维度进行过滤。
-sql_metric视图支持：service.name（服务名）维度进行过滤。
+sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、（db.ip）数据库实例ip维度进行过滤。
+查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必输入。
      * @param array $Metrics 需要查询的指标，不可自定义输入。
 service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
 runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）。
+sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
      * @param string $InstanceId 实例ID
      * @param string $ViewName 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
      * @param array $GroupBy 聚合维度
 service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
 runtime_metric视图支持：service.name（服务名）维度进行聚合。
-sql_metric视图支持：service.name（服务名）维度进行聚合。
+sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合。
+查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必输入。
      * @param integer $StartTime 起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
      * @param integer $EndTime 结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
      * @param integer $Period 聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。

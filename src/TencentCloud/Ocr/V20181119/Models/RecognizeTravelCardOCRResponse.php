@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(string $Time) 设置行程卡更新时间，格式为：XXXX.XX.XX XX:XX:XX
  * @method string getColor() 获取行程卡颜色：绿色、黄色、红色
  * @method void setColor(string $Color) 设置行程卡颜色：绿色、黄色、红色
- * @method array getReachedCity() 获取14天内到达或途经的城市
- * @method void setReachedCity(array $ReachedCity) 设置14天内到达或途经的城市
- * @method array getRiskArea() 获取14天内到达或途径存在中高风险地区的城市
- * @method void setRiskArea(array $RiskArea) 设置14天内到达或途径存在中高风险地区的城市
+ * @method array getReachedCity() 获取7天内到达或途经的城市（自2022年7月8日起，通信行程卡查询结果的覆盖时间范围由“14天”调整为“7天”）
+ * @method void setReachedCity(array $ReachedCity) 设置7天内到达或途经的城市（自2022年7月8日起，通信行程卡查询结果的覆盖时间范围由“14天”调整为“7天”）
+ * @method array getRiskArea() 获取7天内到达或途径存在中高风险地区的城市（自2022年6月29日起，通信行程卡取消“星号”标记，改字段将返回空值）
+ * @method void setRiskArea(array $RiskArea) 设置7天内到达或途径存在中高风险地区的城市（自2022年6月29日起，通信行程卡取消“星号”标记，改字段将返回空值）
  * @method string getTelephone() 获取电话号码
  * @method void setTelephone(string $Telephone) 设置电话号码
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,12 +46,12 @@ class RecognizeTravelCardOCRResponse extends AbstractModel
     public $Color;
 
     /**
-     * @var array 14天内到达或途经的城市
+     * @var array 7天内到达或途经的城市（自2022年7月8日起，通信行程卡查询结果的覆盖时间范围由“14天”调整为“7天”）
      */
     public $ReachedCity;
 
     /**
-     * @var array 14天内到达或途径存在中高风险地区的城市
+     * @var array 7天内到达或途径存在中高风险地区的城市（自2022年6月29日起，通信行程卡取消“星号”标记，改字段将返回空值）
      */
     public $RiskArea;
 
@@ -68,8 +68,8 @@ class RecognizeTravelCardOCRResponse extends AbstractModel
     /**
      * @param string $Time 行程卡更新时间，格式为：XXXX.XX.XX XX:XX:XX
      * @param string $Color 行程卡颜色：绿色、黄色、红色
-     * @param array $ReachedCity 14天内到达或途经的城市
-     * @param array $RiskArea 14天内到达或途径存在中高风险地区的城市
+     * @param array $ReachedCity 7天内到达或途经的城市（自2022年7月8日起，通信行程卡查询结果的覆盖时间范围由“14天”调整为“7天”）
+     * @param array $RiskArea 7天内到达或途径存在中高风险地区的城市（自2022年6月29日起，通信行程卡取消“星号”标记，改字段将返回空值）
      * @param string $Telephone 电话号码
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

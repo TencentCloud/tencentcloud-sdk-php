@@ -128,8 +128,10 @@ use TencentCloud\Common\AbstractModel;
 - TENCENTOS
  * @method EnablePrometheusConf getEnablePrometheusConf() 获取是否开启prometheus 业务指标监控
  * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) 设置是否开启prometheus 业务指标监控
- * @method integer getEnableTracing() 获取1：开始apm采集；0：关闭apm采集
- * @method void setEnableTracing(integer $EnableTracing) 设置1：开始apm采集；0：关闭apm采集
+ * @method integer getEnableTracing() 获取1：开始apm采集（skywalking）；
+0：关闭apm采集；
+ * @method void setEnableTracing(integer $EnableTracing) 设置1：开始apm采集（skywalking）；
+0：关闭apm采集；
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -348,7 +350,8 @@ class DeployApplicationRequest extends AbstractModel
     public $EnablePrometheusConf;
 
     /**
-     * @var integer 1：开始apm采集；0：关闭apm采集
+     * @var integer 1：开始apm采集（skywalking）；
+0：关闭apm采集；
      */
     public $EnableTracing;
 
@@ -407,7 +410,8 @@ class DeployApplicationRequest extends AbstractModel
 - ALPINE
 - TENCENTOS
      * @param EnablePrometheusConf $EnablePrometheusConf 是否开启prometheus 业务指标监控
-     * @param integer $EnableTracing 1：开始apm采集；0：关闭apm采集
+     * @param integer $EnableTracing 1：开始apm采集（skywalking）；
+0：关闭apm采集；
      */
     function __construct()
     {

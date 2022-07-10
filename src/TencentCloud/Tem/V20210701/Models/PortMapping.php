@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetPort(integer $TargetPort) 设置映射端口
  * @method string getProtocol() 获取协议栈 TCP/UDP
  * @method void setProtocol(string $Protocol) 设置协议栈 TCP/UDP
+ * @method string getServiceName() 获取k8s service名称
+ * @method void setServiceName(string $ServiceName) 设置k8s service名称
  */
 class PortMapping extends AbstractModel
 {
@@ -45,9 +47,15 @@ class PortMapping extends AbstractModel
     public $Protocol;
 
     /**
+     * @var string k8s service名称
+     */
+    public $ServiceName;
+
+    /**
      * @param integer $Port 端口
      * @param integer $TargetPort 映射端口
      * @param string $Protocol 协议栈 TCP/UDP
+     * @param string $ServiceName k8s service名称
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class PortMapping extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
+            $this->ServiceName = $param["ServiceName"];
         }
     }
 }

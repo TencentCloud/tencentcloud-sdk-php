@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC ID
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method string getWorkload() 获取引擎其他组件名称（pushgateway）
+ * @method void setWorkload(string $Workload) 设置引擎其他组件名称（pushgateway）
  */
 class DescribeSREInstanceAccessAddressRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeSREInstanceAccessAddressRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string 引擎其他组件名称（pushgateway）
+     */
+    public $Workload;
+
+    /**
      * @param string $InstanceId 注册引擎实例Id
      * @param string $VpcId VPC ID
      * @param string $SubnetId 子网ID
+     * @param string $Workload 引擎其他组件名称（pushgateway）
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeSREInstanceAccessAddressRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("Workload",$param) and $param["Workload"] !== null) {
+            $this->Workload = $param["Workload"];
         }
     }
 }

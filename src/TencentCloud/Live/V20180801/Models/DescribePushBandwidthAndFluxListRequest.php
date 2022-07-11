@@ -64,6 +64,10 @@ North America 北美
 South America 南美
 Middle East 中东
 Africa 非洲。
+ * @method array getCountryNames() 获取国家，映射表参照如下文档：
+https://cloud.tencent.com/document/product/267/34019。
+ * @method void setCountryNames(array $CountryNames) 设置国家，映射表参照如下文档：
+https://cloud.tencent.com/document/product/267/34019。
  */
 class DescribePushBandwidthAndFluxListRequest extends AbstractModel
 {
@@ -114,6 +118,12 @@ Africa 非洲。
     public $RegionNames;
 
     /**
+     * @var array 国家，映射表参照如下文档：
+https://cloud.tencent.com/document/product/267/34019。
+     */
+    public $CountryNames;
+
+    /**
      * @param string $StartTime 起始时间点，格式为 yyyy-mm-dd HH:MM:SS。
      * @param string $EndTime 结束时间点，格式为 yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
      * @param array $PushDomains 域名，可以填多个，若不填，表示总体数据。
@@ -136,6 +146,8 @@ North America 北美
 South America 南美
 Middle East 中东
 Africa 非洲。
+     * @param array $CountryNames 国家，映射表参照如下文档：
+https://cloud.tencent.com/document/product/267/34019。
      */
     function __construct()
     {
@@ -172,6 +184,10 @@ Africa 非洲。
 
         if (array_key_exists("RegionNames",$param) and $param["RegionNames"] !== null) {
             $this->RegionNames = $param["RegionNames"];
+        }
+
+        if (array_key_exists("CountryNames",$param) and $param["CountryNames"] !== null) {
+            $this->CountryNames = $param["CountryNames"];
         }
     }
 }

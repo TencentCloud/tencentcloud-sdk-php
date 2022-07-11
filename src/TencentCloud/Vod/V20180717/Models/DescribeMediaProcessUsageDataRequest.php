@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method string getEndTime() 获取结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method void setEndTime(string $EndTime) 设置结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。
+ * @method integer getSubAppId() 获取<b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getType() 获取查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -31,7 +33,9 @@ use TencentCloud\Common\AbstractModel;
 <li> Editing-TESHD: 极速高清视频编辑</li>
 <li> AdaptiveBitrateStreaming: 自适应码流</li>
 <li> ContentAudit: 内容审核</li>
+<li> ContentRecognition: 内容识别</li>
 <li> RemoveWatermark: 去除水印</li>
+<li> ExtractTraceWatermark: 提取水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
  * @method void setType(string $Type) 设置查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
@@ -40,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
 <li> Editing-TESHD: 极速高清视频编辑</li>
 <li> AdaptiveBitrateStreaming: 自适应码流</li>
 <li> ContentAudit: 内容审核</li>
+<li> ContentRecognition: 内容识别</li>
 <li> RemoveWatermark: 去除水印</li>
+<li> ExtractTraceWatermark: 提取水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
- * @method integer getSubAppId() 获取点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class DescribeMediaProcessUsageDataRequest extends AbstractModel
 {
@@ -58,6 +62,11 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var integer <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
+    /**
      * @var string 查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -65,19 +74,17 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
 <li> Editing-TESHD: 极速高清视频编辑</li>
 <li> AdaptiveBitrateStreaming: 自适应码流</li>
 <li> ContentAudit: 内容审核</li>
+<li> ContentRecognition: 内容识别</li>
 <li> RemoveWatermark: 去除水印</li>
+<li> ExtractTraceWatermark: 提取水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public $Type;
 
     /**
-     * @var integer 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $StartTime 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。
      * @param string $EndTime 结束日期，需大于等于起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#52)。
+     * @param integer $SubAppId <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Type 查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -85,9 +92,10 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
 <li> Editing-TESHD: 极速高清视频编辑</li>
 <li> AdaptiveBitrateStreaming: 自适应码流</li>
 <li> ContentAudit: 内容审核</li>
+<li> ContentRecognition: 内容识别</li>
 <li> RemoveWatermark: 去除水印</li>
+<li> ExtractTraceWatermark: 提取水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
-     * @param integer $SubAppId 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -110,12 +118,12 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
             $this->EndTime = $param["EndTime"];
         }
 
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
-        }
-
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

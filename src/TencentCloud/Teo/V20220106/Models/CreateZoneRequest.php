@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 - partial CNAME接入
  * @method boolean getJumpStart() 获取是否跳过站点历史解析记录扫描
  * @method void setJumpStart(boolean $JumpStart) 设置是否跳过站点历史解析记录扫描
+ * @method array getTags() 获取资源标签
+ * @method void setTags(array $Tags) 设置资源标签
  */
 class CreateZoneRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ class CreateZoneRequest extends AbstractModel
     public $JumpStart;
 
     /**
+     * @var array 资源标签
+     */
+    public $Tags;
+
+    /**
      * @param string $Name 站点名字
      * @param string $Type 接入方式，默认full
 - full NS接入
 - partial CNAME接入
      * @param boolean $JumpStart 是否跳过站点历史解析记录扫描
+     * @param array $Tags 资源标签
      */
     function __construct()
     {
@@ -80,6 +88,15 @@ class CreateZoneRequest extends AbstractModel
 
         if (array_key_exists("JumpStart",$param) and $param["JumpStart"] !== null) {
             $this->JumpStart = $param["JumpStart"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

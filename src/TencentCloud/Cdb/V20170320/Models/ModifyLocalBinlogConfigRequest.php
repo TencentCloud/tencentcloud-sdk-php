@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
- * @method integer getSaveHours() 获取本地binlog保留时长，可取值范围：[120,168]。
- * @method void setSaveHours(integer $SaveHours) 设置本地binlog保留时长，可取值范围：[120,168]。
+ * @method integer getSaveHours() 获取本地binlog保留时长，可取值范围：[72,168]，当实例存在灾备实例时，可取值范围：[120,168]。
+ * @method void setSaveHours(integer $SaveHours) 设置本地binlog保留时长，可取值范围：[72,168]，当实例存在灾备实例时，可取值范围：[120,168]。
  * @method integer getMaxUsage() 获取本地binlog空间使用率，可取值范围：[30,50]。
  * @method void setMaxUsage(integer $MaxUsage) 设置本地binlog空间使用率，可取值范围：[30,50]。
  */
@@ -35,7 +35,7 @@ class ModifyLocalBinlogConfigRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 本地binlog保留时长，可取值范围：[120,168]。
+     * @var integer 本地binlog保留时长，可取值范围：[72,168]，当实例存在灾备实例时，可取值范围：[120,168]。
      */
     public $SaveHours;
 
@@ -46,7 +46,7 @@ class ModifyLocalBinlogConfigRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
-     * @param integer $SaveHours 本地binlog保留时长，可取值范围：[120,168]。
+     * @param integer $SaveHours 本地binlog保留时长，可取值范围：[72,168]，当实例存在灾备实例时，可取值范围：[120,168]。
      * @param integer $MaxUsage 本地binlog空间使用率，可取值范围：[30,50]。
      */
     function __construct()

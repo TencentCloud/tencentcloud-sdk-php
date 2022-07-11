@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getParamList() 获取要修改的参数列表。每一个元素是ParamName、CurrentValue和OldValue的组合。ParamName是参数名称，CurrentValue是当前值，OldValue是之前值
- * @method void setParamList(array $ParamList) 设置要修改的参数列表。每一个元素是ParamName、CurrentValue和OldValue的组合。ParamName是参数名称，CurrentValue是当前值，OldValue是之前值
+ * @method array getParamList() 获取要修改的参数列表。每一个元素是ParamName、CurrentValue和OldValue的组合。ParamName是参数名称，CurrentValue是当前值，OldValue是之前值且不做校验
+ * @method void setParamList(array $ParamList) 设置要修改的参数列表。每一个元素是ParamName、CurrentValue和OldValue的组合。ParamName是参数名称，CurrentValue是当前值，OldValue是之前值且不做校验
  * @method string getIsInMaintainPeriod() 获取维护期间执行-yes,立即执行-no
  * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) 设置维护期间执行-yes,立即执行-no
  */
@@ -35,7 +35,7 @@ class ModifyClusterParamRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 要修改的参数列表。每一个元素是ParamName、CurrentValue和OldValue的组合。ParamName是参数名称，CurrentValue是当前值，OldValue是之前值
+     * @var array 要修改的参数列表。每一个元素是ParamName、CurrentValue和OldValue的组合。ParamName是参数名称，CurrentValue是当前值，OldValue是之前值且不做校验
      */
     public $ParamList;
 
@@ -46,7 +46,7 @@ class ModifyClusterParamRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
-     * @param array $ParamList 要修改的参数列表。每一个元素是ParamName、CurrentValue和OldValue的组合。ParamName是参数名称，CurrentValue是当前值，OldValue是之前值
+     * @param array $ParamList 要修改的参数列表。每一个元素是ParamName、CurrentValue和OldValue的组合。ParamName是参数名称，CurrentValue是当前值，OldValue是之前值且不做校验
      * @param string $IsInMaintainPeriod 维护期间执行-yes,立即执行-no
      */
     function __construct()

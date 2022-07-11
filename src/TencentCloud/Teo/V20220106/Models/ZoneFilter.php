@@ -23,9 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取过滤字段名，支持的列表如下：
 - name: 站点名。
 - status: 站点状态
+- tagKey: 标签键
+- tagValue: 标签值
  * @method void setName(string $Name) 设置过滤字段名，支持的列表如下：
 - name: 站点名。
 - status: 站点状态
+- tagKey: 标签键
+- tagValue: 标签值
  * @method array getValues() 获取过滤字段值
  * @method void setValues(array $Values) 设置过滤字段值
  * @method boolean getFuzzy() 获取是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
@@ -37,6 +41,8 @@ class ZoneFilter extends AbstractModel
      * @var string 过滤字段名，支持的列表如下：
 - name: 站点名。
 - status: 站点状态
+- tagKey: 标签键
+- tagValue: 标签值
      */
     public $Name;
 
@@ -54,6 +60,8 @@ class ZoneFilter extends AbstractModel
      * @param string $Name 过滤字段名，支持的列表如下：
 - name: 站点名。
 - status: 站点状态
+- tagKey: 标签键
+- tagValue: 标签值
      * @param array $Values 过滤字段值
      * @param boolean $Fuzzy 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
      */

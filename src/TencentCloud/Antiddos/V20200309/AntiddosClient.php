@@ -39,6 +39,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateDefaultAlarmThresholdResponse CreateDefaultAlarmThreshold(Models\CreateDefaultAlarmThresholdRequest $req) 设置单IP默认告警阈值配置
  * @method Models\CreateIPAlarmThresholdConfigResponse CreateIPAlarmThresholdConfig(Models\CreateIPAlarmThresholdConfigRequest $req) 设置单IP告警阈值配置
  * @method Models\CreateL7RuleCertsResponse CreateL7RuleCerts(Models\CreateL7RuleCertsRequest $req) 批量配置L7转发规则的证书供SSL测调用
+ * @method Models\CreateNewL7RulesResponse CreateNewL7Rules(Models\CreateNewL7RulesRequest $req) 添加7层转发规则
  * @method Models\CreatePacketFilterConfigResponse CreatePacketFilterConfig(Models\CreatePacketFilterConfigRequest $req) 添加DDoS防护的特征过滤规则
  * @method Models\CreatePortAclConfigResponse CreatePortAclConfig(Models\CreatePortAclConfigRequest $req) 添加DDoS防护的端口acl策略
  * @method Models\CreatePortAclConfigListResponse CreatePortAclConfigList(Models\CreatePortAclConfigListRequest $req) 批量添加DDoS防护的端口acl策略

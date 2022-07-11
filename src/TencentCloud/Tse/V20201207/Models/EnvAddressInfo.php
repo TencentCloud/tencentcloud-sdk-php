@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableConfigInternet(boolean $EnableConfigInternet) 设置是否开启config公网
  * @method string getConfigInternetServiceIp() 获取config公网ip
  * @method void setConfigInternetServiceIp(string $ConfigInternetServiceIp) 设置config公网ip
+ * @method string getConfigIntranetAddress() 获取config内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigIntranetAddress(string $ConfigIntranetAddress) 设置config内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvAddressInfo extends AbstractModel
 {
@@ -45,9 +49,17 @@ class EnvAddressInfo extends AbstractModel
     public $ConfigInternetServiceIp;
 
     /**
+     * @var string config内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigIntranetAddress;
+
+    /**
      * @param string $EnvName 环境名
      * @param boolean $EnableConfigInternet 是否开启config公网
      * @param string $ConfigInternetServiceIp config公网ip
+     * @param string $ConfigIntranetAddress config内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class EnvAddressInfo extends AbstractModel
 
         if (array_key_exists("ConfigInternetServiceIp",$param) and $param["ConfigInternetServiceIp"] !== null) {
             $this->ConfigInternetServiceIp = $param["ConfigInternetServiceIp"];
+        }
+
+        if (array_key_exists("ConfigIntranetAddress",$param) and $param["ConfigIntranetAddress"] !== null) {
+            $this->ConfigIntranetAddress = $param["ConfigIntranetAddress"];
         }
     }
 }

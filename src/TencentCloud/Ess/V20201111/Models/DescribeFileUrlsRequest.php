@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置指定资源起始偏移量，默认0
  * @method integer getLimit() 获取指定资源数量，查询全部资源则传入-1
  * @method void setLimit(integer $Limit) 设置指定资源数量，查询全部资源则传入-1
- * @method integer getUrlTtl() 获取下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
- * @method void setUrlTtl(integer $UrlTtl) 设置下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+ * @method integer getUrlTtl() 获取下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
+ * @method void setUrlTtl(integer $UrlTtl) 设置下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
  * @method string getScene() 获取暂不开放
  * @method void setScene(string $Scene) 设置暂不开放
  * @method string getCcToken() 获取暂不开放
@@ -101,7 +101,7 @@ class DescribeFileUrlsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+     * @var integer 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
      */
     public $UrlTtl;
 
@@ -129,7 +129,7 @@ class DescribeFileUrlsRequest extends AbstractModel
      * @param string $FileType 文件类型，"JPG", "PDF","ZIP"等
      * @param integer $Offset 指定资源起始偏移量，默认0
      * @param integer $Limit 指定资源数量，查询全部资源则传入-1
-     * @param integer $UrlTtl 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+     * @param integer $UrlTtl 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
      * @param string $Scene 暂不开放
      * @param string $CcToken 暂不开放
      */

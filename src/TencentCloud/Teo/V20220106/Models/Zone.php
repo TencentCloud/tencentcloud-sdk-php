@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 - finished 站点已验证
 - pending 站点验证中
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置资源标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Zone extends AbstractModel
 {
@@ -121,6 +125,12 @@ class Zone extends AbstractModel
     public $CnameStatus;
 
     /**
+     * @var array 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $Id 站点ID
      * @param string $Name 站点名称
      * @param array $OriginalNameServers 站点当前使用的 NS 列表
@@ -139,6 +149,8 @@ class Zone extends AbstractModel
      * @param string $CnameStatus cname 接入状态
 - finished 站点已验证
 - pending 站点验证中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 资源标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -192,6 +204,15 @@ class Zone extends AbstractModel
 
         if (array_key_exists("CnameStatus",$param) and $param["CnameStatus"] !== null) {
             $this->CnameStatus = $param["CnameStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

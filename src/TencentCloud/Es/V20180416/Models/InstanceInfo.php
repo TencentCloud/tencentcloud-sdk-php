@@ -258,6 +258,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsConfigSets(array $EsConfigSets) 设置集群的配置组信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OperationDuration getOperationDuration() 获取集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperationDuration(OperationDuration $OperationDuration) 设置集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -681,6 +685,12 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $EsConfigSets;
 
     /**
+     * @var OperationDuration 集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperationDuration;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -799,6 +809,8 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param string $EsPrivateDomain https集群内网域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EsConfigSets 集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationDuration $OperationDuration 集群可维护时间段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1139,6 +1151,11 @@ RENEW_FLAG_DEFAULT：不自动续费
                 $obj->deserialize($value);
                 array_push($this->EsConfigSets, $obj);
             }
+        }
+
+        if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
+            $this->OperationDuration = new OperationDuration();
+            $this->OperationDuration->deserialize($param["OperationDuration"]);
         }
     }
 }

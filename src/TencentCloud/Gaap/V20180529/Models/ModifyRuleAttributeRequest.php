@@ -54,6 +54,8 @@ lc，最小连接数。
  * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) 设置服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
  * @method string getServerNameIndication() 获取服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
  * @method void setServerNameIndication(string $ServerNameIndication) 设置服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+ * @method string getForcedRedirect() 获取HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+ * @method void setForcedRedirect(string $ForcedRedirect) 设置HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
  */
 class ModifyRuleAttributeRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ lc，最小连接数。
     public $ServerNameIndication;
 
     /**
+     * @var string HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     */
+    public $ForcedRedirect;
+
+    /**
      * @param string $ListenerId 监听器ID
      * @param string $RuleId 转发规则ID
      * @param string $Scheduler 调度策略，其中：
@@ -132,6 +139,7 @@ lc，最小连接数。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
      * @param string $ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
      * @param string $ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+     * @param string $ForcedRedirect HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ lc，最小连接数。
 
         if (array_key_exists("ServerNameIndication",$param) and $param["ServerNameIndication"] !== null) {
             $this->ServerNameIndication = $param["ServerNameIndication"];
+        }
+
+        if (array_key_exists("ForcedRedirect",$param) and $param["ForcedRedirect"] !== null) {
+            $this->ForcedRedirect = $param["ForcedRedirect"];
         }
     }
 }

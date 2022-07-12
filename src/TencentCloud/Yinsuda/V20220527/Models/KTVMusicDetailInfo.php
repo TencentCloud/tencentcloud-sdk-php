@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMidiUrl(string $MidiUrl) 设置音高数据下载链接。
  * @method array getChorusClipSet() 获取副歌片段信息。
  * @method void setChorusClipSet(array $ChorusClipSet) 设置副歌片段信息。
+ * @method integer getPreludeInterval() 获取前奏间隔。
+ * @method void setPreludeInterval(integer $PreludeInterval) 设置前奏间隔。
+ * @method array getGenreSet() 获取歌曲流派列表。
+ * @method void setGenreSet(array $GenreSet) 设置歌曲流派列表。
  */
 class KTVMusicDetailInfo extends AbstractModel
 {
@@ -59,11 +63,23 @@ class KTVMusicDetailInfo extends AbstractModel
     public $ChorusClipSet;
 
     /**
+     * @var integer 前奏间隔。
+     */
+    public $PreludeInterval;
+
+    /**
+     * @var array 歌曲流派列表。
+     */
+    public $GenreSet;
+
+    /**
      * @param KTVMusicBaseInfo $KTVMusicBaseInfo 歌曲基础信息。
      * @param string $PlayToken 播放凭证。
      * @param string $LyricsUrl 歌词下载链接。
      * @param string $MidiUrl 音高数据下载链接。
      * @param array $ChorusClipSet 副歌片段信息。
+     * @param integer $PreludeInterval 前奏间隔。
+     * @param array $GenreSet 歌曲流派列表。
      */
     function __construct()
     {
@@ -102,6 +118,14 @@ class KTVMusicDetailInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ChorusClipSet, $obj);
             }
+        }
+
+        if (array_key_exists("PreludeInterval",$param) and $param["PreludeInterval"] !== null) {
+            $this->PreludeInterval = $param["PreludeInterval"];
+        }
+
+        if (array_key_exists("GenreSet",$param) and $param["GenreSet"] !== null) {
+            $this->GenreSet = $param["GenreSet"];
         }
     }
 }

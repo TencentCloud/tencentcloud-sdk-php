@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortBy(string $SortBy) 设置返回结果按照该字段排序
  * @method string getSorting() 获取正序或者倒序，例如：desc
  * @method void setSorting(string $Sorting) 设置正序或者倒序，例如：desc
- * @method array getFilters() 获取按照该参数过滤
- * @method void setFilters(array $Filters) 设置按照该参数过滤
+ * @method array getFilters() 获取按照该参数过滤,支持spark-job-name
+ * @method void setFilters(array $Filters) 设置按照该参数过滤,支持spark-job-name
  * @method string getStartTime() 获取更新时间起始点
  * @method void setStartTime(string $StartTime) 设置更新时间起始点
  * @method string getEndTime() 获取更新时间截止点
@@ -48,7 +48,7 @@ class DescribeSparkAppJobsRequest extends AbstractModel
     public $Sorting;
 
     /**
-     * @var array 按照该参数过滤
+     * @var array 按照该参数过滤,支持spark-job-name
      */
     public $Filters;
 
@@ -75,7 +75,7 @@ class DescribeSparkAppJobsRequest extends AbstractModel
     /**
      * @param string $SortBy 返回结果按照该字段排序
      * @param string $Sorting 正序或者倒序，例如：desc
-     * @param array $Filters 按照该参数过滤
+     * @param array $Filters 按照该参数过滤,支持spark-job-name
      * @param string $StartTime 更新时间起始点
      * @param string $EndTime 更新时间截止点
      * @param integer $Offset 查询列表偏移量

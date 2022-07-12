@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerNameIndication(string $ServerNameIndication) 设置服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getForcedRedirect() 获取强转HTTPS指示，当传递值为https:时表示强转为https
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setForcedRedirect(string $ForcedRedirect) 设置强转HTTPS指示，当传递值为https:时表示强转为https
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleInfo extends AbstractModel
 {
@@ -143,6 +147,12 @@ class RuleInfo extends AbstractModel
     public $ServerNameIndication;
 
     /**
+     * @var string 强转HTTPS指示，当传递值为https:时表示强转为https
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ForcedRedirect;
+
+    /**
      * @param string $RuleId 规则信息
      * @param string $ListenerId 监听器信息
      * @param string $Domain 规则域名
@@ -163,6 +173,8 @@ class RuleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
 注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ForcedRedirect 强转HTTPS指示，当传递值为https:时表示强转为https
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -238,6 +250,10 @@ class RuleInfo extends AbstractModel
 
         if (array_key_exists("ServerNameIndication",$param) and $param["ServerNameIndication"] !== null) {
             $this->ServerNameIndication = $param["ServerNameIndication"];
+        }
+
+        if (array_key_exists("ForcedRedirect",$param) and $param["ForcedRedirect"] !== null) {
+            $this->ForcedRedirect = $param["ForcedRedirect"];
         }
     }
 }

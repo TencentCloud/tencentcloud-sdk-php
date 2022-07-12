@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) 设置服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
  * @method string getServerNameIndication() 获取服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
  * @method void setServerNameIndication(string $ServerNameIndication) 设置服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+ * @method string getForcedRedirect() 获取HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+ * @method void setForcedRedirect(string $ForcedRedirect) 设置HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
  */
 class CreateRuleRequest extends AbstractModel
 {
@@ -104,6 +106,11 @@ class CreateRuleRequest extends AbstractModel
     public $ServerNameIndication;
 
     /**
+     * @var string HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     */
+    public $ForcedRedirect;
+
+    /**
      * @param string $ListenerId 7层监听器ID
      * @param string $Domain 转发规则的域名
      * @param string $Path 转发规则的路径
@@ -116,6 +123,7 @@ class CreateRuleRequest extends AbstractModel
      * @param string $ForwardHost 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
      * @param string $ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
      * @param string $ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+     * @param string $ForcedRedirect HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class CreateRuleRequest extends AbstractModel
 
         if (array_key_exists("ServerNameIndication",$param) and $param["ServerNameIndication"] !== null) {
             $this->ServerNameIndication = $param["ServerNameIndication"];
+        }
+
+        if (array_key_exists("ForcedRedirect",$param) and $param["ForcedRedirect"] !== null) {
+            $this->ForcedRedirect = $param["ForcedRedirect"];
         }
     }
 }

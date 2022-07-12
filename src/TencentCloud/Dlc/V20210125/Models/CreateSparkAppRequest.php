@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsLocalPythonFiles(string $IsLocalPythonFiles) 设置pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
  * @method string getAppPythonFiles() 获取pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
  * @method void setAppPythonFiles(string $AppPythonFiles) 设置pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+ * @method string getIsLocalArchives() 获取archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+ * @method void setIsLocalArchives(string $IsLocalArchives) 设置archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+ * @method string getAppArchives() 获取archives：依赖资源
+ * @method void setAppArchives(string $AppArchives) 设置archives：依赖资源
  */
 class CreateSparkAppRequest extends AbstractModel
 {
@@ -171,6 +175,16 @@ class CreateSparkAppRequest extends AbstractModel
     public $AppPythonFiles;
 
     /**
+     * @var string archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     */
+    public $IsLocalArchives;
+
+    /**
+     * @var string archives：依赖资源
+     */
+    public $AppArchives;
+
+    /**
      * @param string $AppName spark应用名
      * @param integer $AppType 1代表spark jar应用，2代表spark streaming应用
      * @param string $DataEngine 执行spark作业的数据引擎
@@ -192,6 +206,8 @@ class CreateSparkAppRequest extends AbstractModel
      * @param string $DataSource 数据源名
      * @param string $IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
      * @param string $AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * @param string $IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @param string $AppArchives archives：依赖资源
      */
     function __construct()
     {
@@ -288,6 +304,14 @@ class CreateSparkAppRequest extends AbstractModel
 
         if (array_key_exists("AppPythonFiles",$param) and $param["AppPythonFiles"] !== null) {
             $this->AppPythonFiles = $param["AppPythonFiles"];
+        }
+
+        if (array_key_exists("IsLocalArchives",$param) and $param["IsLocalArchives"] !== null) {
+            $this->IsLocalArchives = $param["IsLocalArchives"];
+        }
+
+        if (array_key_exists("AppArchives",$param) and $param["AppArchives"] !== null) {
+            $this->AppArchives = $param["AppArchives"];
         }
     }
 }

@@ -80,9 +80,25 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsLocalPythonFiles(string $IsLocalPythonFiles) 设置pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppPythonFiles() 获取pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+ * @method string getAppPythonFiles() 获取注：该返回值已废弃
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppPythonFiles(string $AppPythonFiles) 设置pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+ * @method void setAppPythonFiles(string $AppPythonFiles) 设置注：该返回值已废弃
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsLocalArchives() 获取archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsLocalArchives(string $IsLocalArchives) 设置archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJobArchives() 获取archives：依赖资源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobArchives(string $JobArchives) 设置archives：依赖资源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJobPythonFiles() 获取pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobPythonFiles(string $JobPythonFiles) 设置pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskNum() 获取当前job正在运行或准备运行的任务个数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskNum(integer $TaskNum) 设置当前job正在运行或准备运行的任务个数
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SparkJobInfo extends AbstractModel
@@ -226,10 +242,34 @@ class SparkJobInfo extends AbstractModel
     public $IsLocalPythonFiles;
 
     /**
-     * @var string pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * @var string 注：该返回值已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppPythonFiles;
+
+    /**
+     * @var string archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsLocalArchives;
+
+    /**
+     * @var string archives：依赖资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobArchives;
+
+    /**
+     * @var string pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobPythonFiles;
+
+    /**
+     * @var integer 当前job正在运行或准备运行的任务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskNum;
 
     /**
      * @param string $JobId spark作业ID
@@ -262,7 +302,15 @@ class SparkJobInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * @param string $AppPythonFiles 注：该返回值已废弃
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JobArchives archives：依赖资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JobPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskNum 当前job正在运行或准备运行的任务个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -389,6 +437,22 @@ class SparkJobInfo extends AbstractModel
 
         if (array_key_exists("AppPythonFiles",$param) and $param["AppPythonFiles"] !== null) {
             $this->AppPythonFiles = $param["AppPythonFiles"];
+        }
+
+        if (array_key_exists("IsLocalArchives",$param) and $param["IsLocalArchives"] !== null) {
+            $this->IsLocalArchives = $param["IsLocalArchives"];
+        }
+
+        if (array_key_exists("JobArchives",$param) and $param["JobArchives"] !== null) {
+            $this->JobArchives = $param["JobArchives"];
+        }
+
+        if (array_key_exists("JobPythonFiles",$param) and $param["JobPythonFiles"] !== null) {
+            $this->JobPythonFiles = $param["JobPythonFiles"];
+        }
+
+        if (array_key_exists("TaskNum",$param) and $param["TaskNum"] !== null) {
+            $this->TaskNum = $param["TaskNum"];
         }
     }
 }

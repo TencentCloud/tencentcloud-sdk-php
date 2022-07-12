@@ -76,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIPv6Addresses() 获取实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIPv6Addresses(array $IPv6Addresses) 设置实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExistedInstance extends AbstractModel
 {
@@ -164,6 +170,13 @@ class ExistedInstance extends AbstractModel
     public $InstanceChargeType;
 
     /**
+     * @var array 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IPv6Addresses;
+
+    /**
      * @param boolean $Usable 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnusableReason 实例不支持加入的原因。
@@ -191,6 +204,9 @@ class ExistedInstance extends AbstractModel
      * @param string $AutoscalingGroupId 伸缩组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceChargeType 实例计费模式。取值范围： PREPAID：表示预付费，即包年包月 POSTPAID_BY_HOUR：表示后付费，即按量计费 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IPv6Addresses 实例的IPv6地址。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +276,10 @@ class ExistedInstance extends AbstractModel
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
             $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("IPv6Addresses",$param) and $param["IPv6Addresses"] !== null) {
+            $this->IPv6Addresses = $param["IPv6Addresses"];
         }
     }
 }

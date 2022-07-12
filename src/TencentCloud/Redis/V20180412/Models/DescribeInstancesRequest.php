@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method integer getLimit() 获取实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
- * @method void setLimit(integer $Limit) 设置实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
+ * @method integer getLimit() 获取返回数量，参数默认值20，最大值为1000
+ * @method void setLimit(integer $Limit) 设置返回数量，参数默认值20，最大值为1000
  * @method integer getOffset() 获取偏移量，取Limit整数倍
  * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍
  * @method string getInstanceId() 获取实例Id，如：crs-6ubhgouj
@@ -68,11 +68,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTags(array $InstanceTags) 设置根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
  * @method array getTagKeys() 获取根据标签的Key筛选资源，不传或者传空数组则不进行过滤
  * @method void setTagKeys(array $TagKeys) 设置根据标签的Key筛选资源，不传或者传空数组则不进行过滤
+ * @method array getProductVersions() 获取需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+ * @method void setProductVersions(array $ProductVersions) 设置需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
+     * @var integer 返回数量，参数默认值20，最大值为1000
      */
     public $Limit;
 
@@ -192,7 +194,12 @@ class DescribeInstancesRequest extends AbstractModel
     public $TagKeys;
 
     /**
-     * @param integer $Limit 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
+     * @var array 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+     */
+    public $ProductVersions;
+
+    /**
+     * @param integer $Limit 返回数量，参数默认值20，最大值为1000
      * @param integer $Offset 偏移量，取Limit整数倍
      * @param string $InstanceId 实例Id，如：crs-6ubhgouj
      * @param string $OrderBy 枚举范围： projectId,createtime,instancename,type,curDeadline
@@ -216,6 +223,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param string $MonitorVersion 内部参数，用户可忽略
      * @param array $InstanceTags 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
      * @param array $TagKeys 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
+     * @param array $ProductVersions 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
      */
     function __construct()
     {
@@ -329,6 +337,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
             $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("ProductVersions",$param) and $param["ProductVersions"] !== null) {
+            $this->ProductVersions = $param["ProductVersions"];
         }
     }
 }

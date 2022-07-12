@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCostType(string $CostType) 设置耗时计算
  * @method string getEnv() 获取环境
  * @method void setEnv(string $Env) 设置环境
+ * @method string getPackageType() 获取获取package
+ * @method void setPackageType(string $PackageType) 设置获取package
  */
 class DescribeDataSetUrlStatisticsRequest extends AbstractModel
 {
@@ -178,6 +180,11 @@ class DescribeDataSetUrlStatisticsRequest extends AbstractModel
     public $Env;
 
     /**
+     * @var string 获取package
+     */
+    public $PackageType;
+
+    /**
      * @param integer $StartTime 开始时间
      * @param string $Type allcount：性能视图，data：小程序，component：小程序相关，day：14天数据，nettype：网络/平台视图，performance：页面性能TOP视图，version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：ISP视图/地区视图/浏览器视图等
      * @param integer $EndTime 结束时间
@@ -200,6 +207,7 @@ class DescribeDataSetUrlStatisticsRequest extends AbstractModel
      * @param string $Browser 浏览器
      * @param string $CostType 耗时计算
      * @param string $Env 环境
+     * @param string $PackageType 获取package
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ class DescribeDataSetUrlStatisticsRequest extends AbstractModel
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {
             $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

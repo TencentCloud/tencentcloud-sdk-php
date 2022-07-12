@@ -56,6 +56,10 @@ OCCASION:偶然所得
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInPayBalance(string $InPayBalance) 设置提现中余额
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSumSettlementAmount() 获取累计结算金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSumSettlementAmount(string $SumSettlementAmount) 设置累计结算金额
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PayeeAccountBalanceResult extends AbstractModel
 {
@@ -110,6 +114,12 @@ OCCASION:偶然所得
     public $InPayBalance;
 
     /**
+     * @var string 累计结算金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SumSettlementAmount;
+
+    /**
      * @param string $AccountId 账户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IncomeType 收入类型
@@ -127,6 +137,8 @@ OCCASION:偶然所得
      * @param string $PaidBalance 已提现余额
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InPayBalance 提现中余额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SumSettlementAmount 累计结算金额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +184,10 @@ OCCASION:偶然所得
 
         if (array_key_exists("InPayBalance",$param) and $param["InPayBalance"] !== null) {
             $this->InPayBalance = $param["InPayBalance"];
+        }
+
+        if (array_key_exists("SumSettlementAmount",$param) and $param["SumSettlementAmount"] !== null) {
+            $this->SumSettlementAmount = $param["SumSettlementAmount"];
         }
     }
 }

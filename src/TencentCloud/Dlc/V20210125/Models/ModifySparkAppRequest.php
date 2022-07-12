@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxRetries(integer $MaxRetries) 设置只对spark流任务生效
  * @method string getDataSource() 获取数据源名
  * @method void setDataSource(string $DataSource) 设置数据源名
+ * @method string getIsLocalArchives() 获取archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+ * @method void setIsLocalArchives(string $IsLocalArchives) 设置archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+ * @method string getAppArchives() 获取archives：依赖资源
+ * @method void setAppArchives(string $AppArchives) 设置archives：依赖资源
  */
 class ModifySparkAppRequest extends AbstractModel
 {
@@ -178,6 +182,16 @@ class ModifySparkAppRequest extends AbstractModel
     public $DataSource;
 
     /**
+     * @var string archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     */
+    public $IsLocalArchives;
+
+    /**
+     * @var string archives：依赖资源
+     */
+    public $AppArchives;
+
+    /**
      * @param string $AppName spark应用名
      * @param integer $AppType 1代表spark jar应用，2代表spark streaming应用
      * @param string $DataEngine 执行spark作业的数据引擎
@@ -200,6 +214,8 @@ class ModifySparkAppRequest extends AbstractModel
      * @param string $CmdArgs spark作业命令行参数
      * @param integer $MaxRetries 只对spark流任务生效
      * @param string $DataSource 数据源名
+     * @param string $IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * @param string $AppArchives archives：依赖资源
      */
     function __construct()
     {
@@ -300,6 +316,14 @@ class ModifySparkAppRequest extends AbstractModel
 
         if (array_key_exists("DataSource",$param) and $param["DataSource"] !== null) {
             $this->DataSource = $param["DataSource"];
+        }
+
+        if (array_key_exists("IsLocalArchives",$param) and $param["IsLocalArchives"] !== null) {
+            $this->IsLocalArchives = $param["IsLocalArchives"];
+        }
+
+        if (array_key_exists("AppArchives",$param) and $param["AppArchives"] !== null) {
+            $this->AppArchives = $param["AppArchives"];
         }
     }
 }

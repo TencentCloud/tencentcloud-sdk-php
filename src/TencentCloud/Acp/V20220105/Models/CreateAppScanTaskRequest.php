@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskType() 获取任务类型, 0:基础版, 1:专家版, 2:本地化
  * @method void setTaskType(integer $TaskType) 设置任务类型, 0:基础版, 1:专家版, 2:本地化
- * @method integer getSource() 获取任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
- * @method void setSource(integer $Source) 设置任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+ * @method integer getSource() 获取任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+ * @method void setSource(integer $Source) 设置任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
  * @method integer getPlatform() 获取应用平台, 0:android, 1:ios, 2:小程序
  * @method void setPlatform(integer $Platform) 设置应用平台, 0:android, 1:ios, 2:小程序
  * @method string getAppPackage() 获取App包名
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置App名称
  * @method string getAppVersion() 获取App版本
  * @method void setAppVersion(string $AppVersion) 设置App版本
- * @method string getFileID() 获取上传的软件文件ID(灵犀诊断必填)
- * @method void setFileID(string $FileID) 设置上传的软件文件ID(灵犀诊断必填)
- * @method string getAppDownloadUrl() 获取软件下载链接地址(灵鲲诊断必填)
- * @method void setAppDownloadUrl(string $AppDownloadUrl) 设置软件下载链接地址(灵鲲诊断必填)
- * @method string getPrivacyTextUrl() 获取隐私文本下载地址(灵鲲诊断必填)
- * @method void setPrivacyTextUrl(string $PrivacyTextUrl) 设置隐私文本下载地址(灵鲲诊断必填)
+ * @method string getFileID() 获取上传的软件文件ID(任务来源为1时必填)
+ * @method void setFileID(string $FileID) 设置上传的软件文件ID(任务来源为1时必填)
+ * @method string getAppDownloadUrl() 获取软件下载链接地址(任务来源为2时必填)
+ * @method void setAppDownloadUrl(string $AppDownloadUrl) 设置软件下载链接地址(任务来源为2时必填)
+ * @method string getPrivacyTextUrl() 获取隐私文本下载地址(任务来源为2时必填)
+ * @method void setPrivacyTextUrl(string $PrivacyTextUrl) 设置隐私文本下载地址(任务来源为2时必填)
  * @method string getContactName() 获取联系人信息
  * @method void setContactName(string $ContactName) 设置联系人信息
  * @method string getTelNumber() 获取联系电话
@@ -63,7 +63,7 @@ class CreateAppScanTaskRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var integer 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * @var integer 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      */
     public $Source;
 
@@ -88,17 +88,17 @@ class CreateAppScanTaskRequest extends AbstractModel
     public $AppVersion;
 
     /**
-     * @var string 上传的软件文件ID(灵犀诊断必填)
+     * @var string 上传的软件文件ID(任务来源为1时必填)
      */
     public $FileID;
 
     /**
-     * @var string 软件下载链接地址(灵鲲诊断必填)
+     * @var string 软件下载链接地址(任务来源为2时必填)
      */
     public $AppDownloadUrl;
 
     /**
-     * @var string 隐私文本下载地址(灵鲲诊断必填)
+     * @var string 隐私文本下载地址(任务来源为2时必填)
      */
     public $PrivacyTextUrl;
 
@@ -144,14 +144,14 @@ class CreateAppScanTaskRequest extends AbstractModel
 
     /**
      * @param integer $TaskType 任务类型, 0:基础版, 1:专家版, 2:本地化
-     * @param integer $Source 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * @param integer $Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
      * @param string $AppPackage App包名
      * @param string $AppName App名称
      * @param string $AppVersion App版本
-     * @param string $FileID 上传的软件文件ID(灵犀诊断必填)
-     * @param string $AppDownloadUrl 软件下载链接地址(灵鲲诊断必填)
-     * @param string $PrivacyTextUrl 隐私文本下载地址(灵鲲诊断必填)
+     * @param string $FileID 上传的软件文件ID(任务来源为1时必填)
+     * @param string $AppDownloadUrl 软件下载链接地址(任务来源为2时必填)
+     * @param string $PrivacyTextUrl 隐私文本下载地址(任务来源为2时必填)
      * @param string $ContactName 联系人信息
      * @param string $TelNumber 联系电话
      * @param string $Email 公司邮箱

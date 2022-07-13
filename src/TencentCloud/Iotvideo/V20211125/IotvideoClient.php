@@ -25,8 +25,10 @@ use TencentCloud\Iotvideo\V20211125\Models as Models;
 /**
  * @method Models\CallDeviceActionAsyncResponse CallDeviceActionAsync(Models\CallDeviceActionAsyncRequest $req) 异步调用设备行为
  * @method Models\CallDeviceActionSyncResponse CallDeviceActionSync(Models\CallDeviceActionSyncRequest $req) 同步调用设备行为
+ * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 创建产品
  * @method Models\DescribeDeviceDataStatsResponse DescribeDeviceDataStats(Models\DescribeDeviceDataStatsRequest $req) 查询设备数据统计
  * @method Models\DescribeMessageDataStatsResponse DescribeMessageDataStats(Models\DescribeMessageDataStatsRequest $req) 查询设备消息数量统计
+ * @method Models\GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublic(Models\GenSingleDeviceSignatureOfPublicRequest $req) 获取设备的绑定签名
  */
 
 class IotvideoClient extends AbstractClient

@@ -24,6 +24,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
 
 /**
  * @method Models\AddRealServersResponse AddRealServers(Models\AddRealServersRequest $req) 添加源站(服务器)信息，支持IP或域名
+ * @method Models\BanAndRecoverProxyResponse BanAndRecoverProxy(Models\BanAndRecoverProxyRequest $req) 本接口（BanAndRecoverProxy）用于联通封禁解封GAAP跨境通道实例，支持按照客户UIN维度下发请求。被封禁的实例带宽上限将会被限制到0Mbps，无法正常处理客户端和源站之间的请求。
  * @method Models\BindListenerRealServersResponse BindListenerRealServers(Models\BindListenerRealServersRequest $req) 本接口（BindListenerRealServers）用于TCP/UDP监听器绑定解绑源站。
 注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。例如：原来绑定的源站为A，B，C，本次调用的选择绑定的源站为C，D，E，那么调用后所绑定的源站为C，D，E。
  * @method Models\BindRuleRealServersResponse BindRuleRealServers(Models\BindRuleRealServersRequest $req) 该接口用于7层监听器的转发规则绑定源站。注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。
@@ -62,6 +63,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DescribeCertificateDetailResponse DescribeCertificateDetail(Models\DescribeCertificateDetailRequest $req) 本接口（DescribeCertificateDetail）用于查询证书详情，包括证书ID，证书名字，证书类型，证书内容以及密钥等信息。
  * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) 本接口（DescribeCertificates）用来查询可以使用的证书列表。
  * @method Models\DescribeCountryAreaMappingResponse DescribeCountryAreaMapping(Models\DescribeCountryAreaMappingRequest $req) 本接口（DescribeCountryAreaMapping）用于获取国家地区编码映射表。
+ * @method Models\DescribeCrossBorderProxiesResponse DescribeCrossBorderProxies(Models\DescribeCrossBorderProxiesRequest $req) 本接口（DescribeCrossBorderProxies）用于查询跨境通道实例列表。
  * @method Models\DescribeCustomHeaderResponse DescribeCustomHeader(Models\DescribeCustomHeaderRequest $req) 本接口（DescribeCustomHeader）用于自定义header列表
  * @method Models\DescribeDestRegionsResponse DescribeDestRegions(Models\DescribeDestRegionsRequest $req) 本接口（DescribeDestRegions）用于查询源站区域，即源站服务器所在区域。
  * @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) 查询目前定制域名的错误响应

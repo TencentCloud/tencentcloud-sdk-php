@@ -144,6 +144,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsIgnore(boolean $IsIgnore) 设置是否已忽略到期通知
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsSM() 获取是否国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSM(boolean $IsSM) 设置是否国密证书
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -334,6 +338,12 @@ class Certificates extends AbstractModel
     public $IsIgnore;
 
     /**
+     * @var boolean 是否国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSM;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -395,6 +405,8 @@ class Certificates extends AbstractModel
      * @param array $Tags 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsIgnore 是否已忽略到期通知
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsSM 是否国密证书
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -539,6 +551,10 @@ class Certificates extends AbstractModel
 
         if (array_key_exists("IsIgnore",$param) and $param["IsIgnore"] !== null) {
             $this->IsIgnore = $param["IsIgnore"];
+        }
+
+        if (array_key_exists("IsSM",$param) and $param["IsSM"] !== null) {
+            $this->IsSM = $param["IsSM"];
         }
     }
 }

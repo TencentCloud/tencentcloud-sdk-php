@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskType() 获取任务类型, 0:基础版, 1:专家版, 2:本地化
  * @method void setTaskType(integer $TaskType) 设置任务类型, 0:基础版, 1:专家版, 2:本地化
- * @method integer getSource() 获取任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
- * @method void setSource(integer $Source) 设置任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+ * @method integer getSource() 获取任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+ * @method void setSource(integer $Source) 设置任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
  * @method string getAppPackage() 获取小程序AppID
  * @method void setAppPackage(string $AppPackage) 设置小程序AppID
  * @method integer getPlatform() 获取应用平台, 0:android, 1:ios, 2:小程序
@@ -51,7 +51,7 @@ class CreateAppScanTaskRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var integer 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * @var integer 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      */
     public $Source;
 
@@ -102,7 +102,7 @@ class CreateAppScanTaskRequest extends AbstractModel
 
     /**
      * @param integer $TaskType 任务类型, 0:基础版, 1:专家版, 2:本地化
-     * @param integer $Source 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * @param integer $Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      * @param string $AppPackage 小程序AppID
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
      * @param string $AppName 小程序名称

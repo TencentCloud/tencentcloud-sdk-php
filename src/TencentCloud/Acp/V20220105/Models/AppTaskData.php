@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskErrMsg(string $TaskErrMsg) 设置错误信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSource() 获取任务来源,0:默认值(私域), 1:灵犀, 2:灵鲲
- * @method void setSource(integer $Source) 设置任务来源,0:默认值(私域), 1:灵犀, 2:灵鲲
+ * @method integer getSource() 获取任务来源,0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android)
+ * @method void setSource(integer $Source) 设置任务来源,0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android)
  * @method AppInfoItem getAppInfo() 获取应用信息
  * @method void setAppInfo(AppInfoItem $AppInfo) 设置应用信息
  * @method string getStartTime() 获取任务启动时间
@@ -67,7 +67,7 @@ class AppTaskData extends AbstractModel
     public $TaskErrMsg;
 
     /**
-     * @var integer 任务来源,0:默认值(私域), 1:灵犀, 2:灵鲲
+     * @var integer 任务来源,0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android)
      */
     public $Source;
 
@@ -98,7 +98,7 @@ class AppTaskData extends AbstractModel
      * @param integer $TaskStatus 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
      * @param string $TaskErrMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Source 任务来源,0:默认值(私域), 1:灵犀, 2:灵鲲
+     * @param integer $Source 任务来源,0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android)
      * @param AppInfoItem $AppInfo 应用信息
      * @param string $StartTime 任务启动时间
      * @param string $EndTime 任务完成时间(更新时间)

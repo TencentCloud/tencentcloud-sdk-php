@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFileTicket请求参数结构体
  *
- * @method integer getSource() 获取任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
- * @method void setSource(integer $Source) 设置任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+ * @method integer getSource() 获取任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+ * @method void setSource(integer $Source) 设置任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
  * @method integer getPlatform() 获取应用平台, 0:android, 1:ios, 2:小程序
  * @method void setPlatform(integer $Platform) 设置应用平台, 0:android, 1:ios, 2:小程序
  */
 class DescribeFileTicketRequest extends AbstractModel
 {
     /**
-     * @var integer 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * @var integer 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      */
     public $Source;
 
@@ -38,7 +38,7 @@ class DescribeFileTicketRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @param integer $Source 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * @param integer $Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
      */
     function __construct()

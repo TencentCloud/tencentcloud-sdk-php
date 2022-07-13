@@ -14,32 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Waf\V20180125\Models;
+namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCustomRules接口的翻页参数
+ * BanAndRecoverProxy请求参数结构体
  *
- * @method integer getOffset() 获取当前页码
- * @method void setOffset(integer $Offset) 设置当前页码
- * @method integer getLimit() 获取当前页的最大数据条数
- * @method void setLimit(integer $Limit) 设置当前页的最大数据条数
+
  */
-class DescribeCustomRulesPagingInfo extends AbstractModel
+class BanAndRecoverProxyRequest extends AbstractModel
 {
-    /**
-     * @var integer 当前页码
-     */
-    public $Offset;
+
 
     /**
-     * @var integer 当前页的最大数据条数
-     */
-    public $Limit;
 
-    /**
-     * @param integer $Offset 当前页码
-     * @param integer $Limit 当前页的最大数据条数
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class DescribeCustomRulesPagingInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
     }
 }

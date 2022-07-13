@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScanTaskReportUrl请求参数结构体
  *
- * @method integer getSource() 获取任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
- * @method void setSource(integer $Source) 设置任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+ * @method integer getSource() 获取任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+ * @method void setSource(integer $Source) 设置任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
  * @method string getTaskID() 获取任务id
  * @method void setTaskID(string $TaskID) 设置任务id
  * @method integer getPlatform() 获取应用平台, 0:android, 1:ios, 2:小程序
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScanTaskReportUrlRequest extends AbstractModel
 {
     /**
-     * @var integer 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * @var integer 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      */
     public $Source;
 
@@ -59,7 +59,7 @@ class DescribeScanTaskReportUrlRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @param integer $Source 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+     * @param integer $Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      * @param string $TaskID 任务id
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
      * @param integer $ReportType 报告类型, 0:诊断报告, 1:堆栈报告

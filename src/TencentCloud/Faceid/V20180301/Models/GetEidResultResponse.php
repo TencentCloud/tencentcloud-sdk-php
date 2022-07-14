@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEidInfo(EidInfo $EidInfo) 设置Eid信息。（包括商户下用户唯一标识以及加密后的姓名、身份证号信息。解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method IntentionVerifyData getIntentionVerifyData() 获取意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntentionVerifyData(IntentionVerifyData $IntentionVerifyData) 设置意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -66,6 +70,12 @@ class GetEidResultResponse extends AbstractModel
     public $EidInfo;
 
     /**
+     * @var IntentionVerifyData 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IntentionVerifyData;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -78,6 +88,8 @@ class GetEidResultResponse extends AbstractModel
      * @param DetectInfoBestFrame $BestFrame 最佳帧信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EidInfo $EidInfo Eid信息。（包括商户下用户唯一标识以及加密后的姓名、身份证号信息。解密方式详见[E证通获取实名信息指引](https://cloud.tencent.com/document/product/1007/63370)）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntentionVerifyData $IntentionVerifyData 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -112,6 +124,11 @@ class GetEidResultResponse extends AbstractModel
         if (array_key_exists("EidInfo",$param) and $param["EidInfo"] !== null) {
             $this->EidInfo = new EidInfo();
             $this->EidInfo->deserialize($param["EidInfo"]);
+        }
+
+        if (array_key_exists("IntentionVerifyData",$param) and $param["IntentionVerifyData"] !== null) {
+            $this->IntentionVerifyData = new IntentionVerifyData();
+            $this->IntentionVerifyData->deserialize($param["IntentionVerifyData"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

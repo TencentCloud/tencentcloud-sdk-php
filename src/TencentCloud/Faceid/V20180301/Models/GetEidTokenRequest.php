@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
  * @method string getExtra() 获取透传字段，在获取验证结果时返回。最长长度1024位。
  * @method void setExtra(string $Extra) 设置透传字段，在获取验证结果时返回。最长长度1024位。
- * @method GetEidTokenConfig getConfig() 获取小程序模式配置，包括如何传入姓名身份证的配置。
- * @method void setConfig(GetEidTokenConfig $Config) 设置小程序模式配置，包括如何传入姓名身份证的配置。
+ * @method GetEidTokenConfig getConfig() 获取小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
+ * @method void setConfig(GetEidTokenConfig $Config) 设置小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
  * @method string getRedirectUrl() 获取最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
  * @method void setRedirectUrl(string $RedirectUrl) 设置最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
  * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
@@ -61,7 +61,7 @@ class GetEidTokenRequest extends AbstractModel
     public $Extra;
 
     /**
-     * @var GetEidTokenConfig 小程序模式配置，包括如何传入姓名身份证的配置。
+     * @var GetEidTokenConfig 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
      */
     public $Config;
 
@@ -81,7 +81,7 @@ class GetEidTokenRequest extends AbstractModel
 规则：a-zA-Z0-9组合。最长长度32位。
      * @param string $Name 姓名。（未使用OCR服务时，必须传入）最长长度32位。中文请使用UTF-8编码。
      * @param string $Extra 透传字段，在获取验证结果时返回。最长长度1024位。
-     * @param GetEidTokenConfig $Config 小程序模式配置，包括如何传入姓名身份证的配置。
+     * @param GetEidTokenConfig $Config 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
      * @param string $RedirectUrl 最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
      * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */

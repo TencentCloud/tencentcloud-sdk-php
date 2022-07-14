@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateExporterIntegration返回参数结构体
  *
+ * @method array getNames() 获取返回创建成功的集成名称列表
+ * @method void setNames(array $Names) 设置返回创建成功的集成名称列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateExporterIntegrationResponse extends AbstractModel
 {
     /**
+     * @var array 返回创建成功的集成名称列表
+     */
+    public $Names;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $Names 返回创建成功的集成名称列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class CreateExporterIntegrationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
+            $this->Names = $param["Names"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

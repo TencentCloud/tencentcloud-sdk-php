@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheusScrapeJob返回参数结构体
  *
+ * @method string getJobId() 获取成功创建抓取任务 Id
+ * @method void setJobId(string $JobId) 设置成功创建抓取任务 Id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreatePrometheusScrapeJobResponse extends AbstractModel
 {
     /**
+     * @var string 成功创建抓取任务 Id
+     */
+    public $JobId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $JobId 成功创建抓取任务 Id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class CreatePrometheusScrapeJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getKind() 获取类型
+ * @method void setKind(string $Kind) 设置类型
+ * @method string getContent() 获取集成配置
+ * @method void setContent(string $Content) 设置集成配置
  * @method integer getKubeType() 获取Kubernetes 集群类型，取值如下：
 <li> 1= 容器集群(TKE) </li>
 <li> 2=弹性集群<EKS> </li>
@@ -32,10 +36,6 @@ use TencentCloud\Common\AbstractModel;
 <li> 3= Prometheus管理的弹性集群<MEKS> </li>
  * @method string getClusterId() 获取集群 ID
  * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method string getKind() 获取类型
- * @method void setKind(string $Kind) 设置类型
- * @method string getContent() 获取集成配置
- * @method void setContent(string $Content) 设置集成配置
  */
 class CreateExporterIntegrationRequest extends AbstractModel
 {
@@ -43,6 +43,16 @@ class CreateExporterIntegrationRequest extends AbstractModel
      * @var string 实例 ID
      */
     public $InstanceId;
+
+    /**
+     * @var string 类型
+     */
+    public $Kind;
+
+    /**
+     * @var string 集成配置
+     */
+    public $Content;
 
     /**
      * @var integer Kubernetes 集群类型，取值如下：
@@ -58,24 +68,14 @@ class CreateExporterIntegrationRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 类型
-     */
-    public $Kind;
-
-    /**
-     * @var string 集成配置
-     */
-    public $Content;
-
-    /**
      * @param string $InstanceId 实例 ID
+     * @param string $Kind 类型
+     * @param string $Content 集成配置
      * @param integer $KubeType Kubernetes 集群类型，取值如下：
 <li> 1= 容器集群(TKE) </li>
 <li> 2=弹性集群<EKS> </li>
 <li> 3= Prometheus管理的弹性集群<MEKS> </li>
      * @param string $ClusterId 集群 ID
-     * @param string $Kind 类型
-     * @param string $Content 集成配置
      */
     function __construct()
     {
@@ -94,20 +94,20 @@ class CreateExporterIntegrationRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("KubeType",$param) and $param["KubeType"] !== null) {
-            $this->KubeType = $param["KubeType"];
-        }
-
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
-        }
-
         if (array_key_exists("Kind",$param) and $param["Kind"] !== null) {
             $this->Kind = $param["Kind"];
         }
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("KubeType",$param) and $param["KubeType"] !== null) {
+            $this->KubeType = $param["KubeType"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

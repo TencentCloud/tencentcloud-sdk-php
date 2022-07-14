@@ -72,6 +72,10 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
  * @method void setTemplateId(string $TemplateId) 设置创建实例需要应用的参数模板ID，不传则应用默认的参数模板
  * @method boolean getDryRun() 获取false ：默认值,发送正常请求，通过检查后直接创建实例 true：发送检查请求，不会创建实例。
  * @method void setDryRun(boolean $DryRun) 设置false ：默认值,发送正常请求，通过检查后直接创建实例 true：发送检查请求，不会创建实例。
+ * @method string getProductVersion() 获取"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本
+ * @method void setProductVersion(string $ProductVersion) 设置"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本
+ * @method string getRedisClusterId() 获取独享集群id，ProductVersion="cdc"时必传
+ * @method void setRedisClusterId(string $RedisClusterId) 设置独享集群id，ProductVersion="cdc"时必传
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -194,6 +198,16 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     public $DryRun;
 
     /**
+     * @var string "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本
+     */
+    public $ProductVersion;
+
+    /**
+     * @var string 独享集群id，ProductVersion="cdc"时必传
+     */
+    public $RedisClusterId;
+
+    /**
      * @param integer $TypeId 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
      * @param integer $MemSize 内存容量，单位为MB， 数值需为1024的整数倍，具体规格以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
 TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架构时，MemSize是单分片内存容量。
@@ -220,6 +234,8 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      * @param string $ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
      * @param string $TemplateId 创建实例需要应用的参数模板ID，不传则应用默认的参数模板
      * @param boolean $DryRun false ：默认值,发送正常请求，通过检查后直接创建实例 true：发送检查请求，不会创建实例。
+     * @param string $ProductVersion "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本
+     * @param string $RedisClusterId 独享集群id，ProductVersion="cdc"时必传
      */
     function __construct()
     {
@@ -334,6 +350,14 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("ProductVersion",$param) and $param["ProductVersion"] !== null) {
+            $this->ProductVersion = $param["ProductVersion"];
+        }
+
+        if (array_key_exists("RedisClusterId",$param) and $param["RedisClusterId"] !== null) {
+            $this->RedisClusterId = $param["RedisClusterId"];
         }
     }
 }

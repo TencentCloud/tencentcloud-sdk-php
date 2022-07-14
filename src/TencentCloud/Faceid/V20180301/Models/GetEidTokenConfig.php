@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 4：客户后台传入  
 默认1
 注：使用OCR时仅支持用户修改结果中的姓名
+ * @method boolean getUseIntentionVerify() 获取是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+ * @method void setUseIntentionVerify(boolean $UseIntentionVerify) 设置是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+ * @method string getIntentionVerifyText() 获取意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+ * @method void setIntentionVerifyText(string $IntentionVerifyText) 设置意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
  */
 class GetEidTokenConfig extends AbstractModel
 {
@@ -49,6 +53,16 @@ class GetEidTokenConfig extends AbstractModel
     public $InputType;
 
     /**
+     * @var boolean 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+     */
+    public $UseIntentionVerify;
+
+    /**
+     * @var string 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     */
+    public $IntentionVerifyText;
+
+    /**
      * @param string $InputType 姓名身份证输入方式。
 1：传身份证正反面OCR   
 2：传身份证正面OCR  
@@ -56,6 +70,8 @@ class GetEidTokenConfig extends AbstractModel
 4：客户后台传入  
 默认1
 注：使用OCR时仅支持用户修改结果中的姓名
+     * @param boolean $UseIntentionVerify 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+     * @param string $IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class GetEidTokenConfig extends AbstractModel
         }
         if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
             $this->InputType = $param["InputType"];
+        }
+
+        if (array_key_exists("UseIntentionVerify",$param) and $param["UseIntentionVerify"] !== null) {
+            $this->UseIntentionVerify = $param["UseIntentionVerify"];
+        }
+
+        if (array_key_exists("IntentionVerifyText",$param) and $param["IntentionVerifyText"] !== null) {
+            $this->IntentionVerifyText = $param["IntentionVerifyText"];
         }
     }
 }

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEidToken() 获取E证通流程的唯一标识，调用GetEidToken接口时生成。
  * @method void setEidToken(string $EidToken) 设置E证通流程的唯一标识，调用GetEidToken接口时生成。
- * @method string getInfoType() 获取指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息）。
+ * @method string getInfoType() 获取指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息；5：意愿核身相关结果；）。
 如 13表示拉取文本类、最佳截图信息。
 默认值：0
- * @method void setInfoType(string $InfoType) 设置指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息）。
+ * @method void setInfoType(string $InfoType) 设置指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息；5：意愿核身相关结果；）。
 如 13表示拉取文本类、最佳截图信息。
 默认值：0
  * @method integer getBestFramesCount() 获取从活体视频中截取一定张数的最佳帧。默认为0，最大为3，超出3的最多只给3张。（InfoType需要包含3）
@@ -39,7 +39,7 @@ class GetEidResultRequest extends AbstractModel
     public $EidToken;
 
     /**
-     * @var string 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息）。
+     * @var string 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息；5：意愿核身相关结果；）。
 如 13表示拉取文本类、最佳截图信息。
 默认值：0
      */
@@ -52,7 +52,7 @@ class GetEidResultRequest extends AbstractModel
 
     /**
      * @param string $EidToken E证通流程的唯一标识，调用GetEidToken接口时生成。
-     * @param string $InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息）。
+     * @param string $InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：最佳截图信息；5：意愿核身相关结果；）。
 如 13表示拉取文本类、最佳截图信息。
 默认值：0
      * @param integer $BestFramesCount 从活体视频中截取一定张数的最佳帧。默认为0，最大为3，超出3的最多只给3张。（InfoType需要包含3）

@@ -28,13 +28,18 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 上传流程请参考 [服务端上传综述](/document/product/266/9759)。
  * @method Models\AttachMediaSubtitlesResponse AttachMediaSubtitles(Models\AttachMediaSubtitlesRequest $req) 关联媒资字幕，将指定的字幕关联到转自适应码流模板号对应的媒体输出文件中（或解除关联）。
  * @method Models\CommitUploadResponse CommitUpload(Models\CommitUploadRequest $req) 该接口用于确认媒体文件（和封面文件）上传到腾讯云点播的结果，并存储媒体信息，返回文件的播放地址和文件 ID。
- * @method Models\ComposeMediaResponse ComposeMedia(Models\ComposeMediaRequest $req) 该接口用于制作媒体文件，可以
+ * @method Models\ComposeMediaResponse ComposeMedia(Models\ComposeMediaRequest $req) 该接口用于合成媒体文件，可以达到以下效果：
 
-1. 对一个媒体文件进行剪辑，生成一个新的媒体文件；
-2. 对多个媒体文件进行裁剪拼接，生成一个新的媒体文件；
-3. 对多个媒体文件的媒体流进行裁剪拼接，生成一个新的媒体文件。
+1. **画面旋转**：对视频、图片的画面旋转一定角度，或按照某个方向翻转。
+2. **声音控制**：升高降低视频、音频中声音的音量，或者对视频静音。
+3. **画面叠加**：将视频、图片中的画面依序叠加在一起，如实现“画中画”的效果。
+4. **声音混合**：将视频、音频中的声音混合在一起（混音）。
+5. **声音提取**：将视频中的音频提取出来（不保留画面）。
+6. **裁剪**：对视频、音频裁剪出指定时间段。
+7. **拼接**：对视频、音频、图片按时间顺序前后拼接。
+8. **转场**：将多段视频或图片拼接时，可以在段落之间添加转场效果。
 
-如使用事件通知，事件通知的类型为 [视频合成完成](https://cloud.tencent.com/document/product/266/43000)。
+合成后的媒体封装格式可以是 MP4（视频）或 MP3（音频）。如使用事件通知，事件通知的类型为 [视频合成完成](https://cloud.tencent.com/document/product/266/43000)。
  * @method Models\ConfirmEventsResponse ConfirmEvents(Models\ConfirmEventsRequest $req) * 开发者调用拉取事件通知，获取到事件后，必须调用该接口来确认消息已经收到；
 * 开发者获取到事件句柄后，等待确认的有效时间为 30 秒，超出 30 秒会报参数错误（4000）；
 * 更多参考事件通知的[可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83)。

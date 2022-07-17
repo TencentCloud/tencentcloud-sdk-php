@@ -28,6 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHorizontalPodAutoscaler(HorizontalPodAutoscalerSpec $HorizontalPodAutoscaler) 设置HPA策略
  * @method array getSelectedNodeList() 获取部署到指定节点
  * @method void setSelectedNodeList(array $SelectedNodeList) 设置部署到指定节点
+ * @method string getDeployMode() 获取组件的部署模式，取值说明：
+IN_GENERAL_NODE：常规节点
+IN_EKLET：eklet 节点
+IN_SHARED_NODE_POOL：共享节电池
+IN_EXCLUSIVE_NODE_POOL：独占节点池
+ * @method void setDeployMode(string $DeployMode) 设置组件的部署模式，取值说明：
+IN_GENERAL_NODE：常规节点
+IN_EKLET：eklet 节点
+IN_SHARED_NODE_POOL：共享节电池
+IN_EXCLUSIVE_NODE_POOL：独占节点池
  */
 class WorkloadConfig extends AbstractModel
 {
@@ -52,10 +62,24 @@ class WorkloadConfig extends AbstractModel
     public $SelectedNodeList;
 
     /**
+     * @var string 组件的部署模式，取值说明：
+IN_GENERAL_NODE：常规节点
+IN_EKLET：eklet 节点
+IN_SHARED_NODE_POOL：共享节电池
+IN_EXCLUSIVE_NODE_POOL：独占节点池
+     */
+    public $DeployMode;
+
+    /**
      * @param integer $Replicas 工作副本数
      * @param ResourceRequirements $Resources 资源配置
      * @param HorizontalPodAutoscalerSpec $HorizontalPodAutoscaler HPA策略
      * @param array $SelectedNodeList 部署到指定节点
+     * @param string $DeployMode 组件的部署模式，取值说明：
+IN_GENERAL_NODE：常规节点
+IN_EKLET：eklet 节点
+IN_SHARED_NODE_POOL：共享节电池
+IN_EXCLUSIVE_NODE_POOL：独占节点池
      */
     function __construct()
     {
@@ -86,6 +110,10 @@ class WorkloadConfig extends AbstractModel
 
         if (array_key_exists("SelectedNodeList",$param) and $param["SelectedNodeList"] !== null) {
             $this->SelectedNodeList = $param["SelectedNodeList"];
+        }
+
+        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
+            $this->DeployMode = $param["DeployMode"];
         }
     }
 }

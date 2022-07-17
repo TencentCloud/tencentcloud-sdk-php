@@ -44,6 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
+ * @method string getTranscodeType() 获取模板类型（替换旧版本 TEHDType），可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+<li>Enhance：音视频增强模板。</li>
+默认空，不限制类型。
+ * @method void setTranscodeType(string $TranscodeType) 设置模板类型（替换旧版本 TEHDType），可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+<li>Enhance：音视频增强模板。</li>
+默认空，不限制类型。
  */
 class DescribeTranscodeTemplatesRequest extends AbstractModel
 {
@@ -84,6 +94,15 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 模板类型（替换旧版本 TEHDType），可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+<li>Enhance：音视频增强模板。</li>
+默认空，不限制类型。
+     */
+    public $TranscodeType;
+
+    /**
      * @param array $Definitions 转码模板唯一标识过滤条件，数组长度限制：100。
      * @param string $Type 模板类型过滤条件，可选值：
 <li>Preset：系统预置模板；</li>
@@ -96,6 +115,11 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
 <li>TEHD：极速高清模板。</li>
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
+     * @param string $TranscodeType 模板类型（替换旧版本 TEHDType），可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：极速高清模板。</li>
+<li>Enhance：音视频增强模板。</li>
+默认空，不限制类型。
      */
     function __construct()
     {
@@ -132,6 +156,10 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TranscodeType",$param) and $param["TranscodeType"] !== null) {
+            $this->TranscodeType = $param["TranscodeType"];
         }
     }
 }

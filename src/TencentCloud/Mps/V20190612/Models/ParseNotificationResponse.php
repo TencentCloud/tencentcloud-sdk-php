@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEventType() 获取支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
+<li>ScheduleTask：编排任务。</li>
  * @method void setEventType(string $EventType) 设置支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
+<li>ScheduleTask：编排任务。</li>
  * @method WorkflowTask getWorkflowTaskEvent() 获取视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkflowTaskEvent(WorkflowTask $WorkflowTaskEvent) 设置视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
@@ -38,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
+ * @method ScheduleTask getScheduleTaskEvent() 获取编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleTaskEvent(ScheduleTask $ScheduleTaskEvent) 设置编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +53,7 @@ class ParseNotificationResponse extends AbstractModel
      * @var string 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
+<li>ScheduleTask：编排任务。</li>
      */
     public $EventType;
 
@@ -73,6 +80,12 @@ class ParseNotificationResponse extends AbstractModel
     public $SessionContext;
 
     /**
+     * @var ScheduleTask 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleTaskEvent;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -81,12 +94,15 @@ class ParseNotificationResponse extends AbstractModel
      * @param string $EventType 支持事件类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
+<li>ScheduleTask：编排任务。</li>
      * @param WorkflowTask $WorkflowTaskEvent 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTask $EditMediaTaskEvent 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
+     * @param ScheduleTask $ScheduleTaskEvent 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -122,6 +138,11 @@ class ParseNotificationResponse extends AbstractModel
 
         if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
             $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("ScheduleTaskEvent",$param) and $param["ScheduleTaskEvent"] !== null) {
+            $this->ScheduleTaskEvent = new ScheduleTask();
+            $this->ScheduleTaskEvent->deserialize($param["ScheduleTaskEvent"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

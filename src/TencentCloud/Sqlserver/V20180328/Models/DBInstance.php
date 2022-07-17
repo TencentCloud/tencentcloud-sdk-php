@@ -120,6 +120,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupSaveDays(integer $BackupSaveDays) 设置数据(日志)备份保留时间
  * @method string getInstanceType() 获取实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
  * @method void setInstanceType(string $InstanceType) 设置实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+ * @method array getCrossRegions() 获取跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+ * @method void setCrossRegions(array $CrossRegions) 设置跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+ * @method string getCrossBackupEnabled() 获取跨地域备份状态 enable-开启，disable-关闭
+ * @method void setCrossBackupEnabled(string $CrossBackupEnabled) 设置跨地域备份状态 enable-开启，disable-关闭
+ * @method integer getCrossBackupSaveDays() 获取跨地域备份保留天数，则默认7天
+ * @method void setCrossBackupSaveDays(integer $CrossBackupSaveDays) 设置跨地域备份保留天数，则默认7天
  */
 class DBInstance extends AbstractModel
 {
@@ -346,6 +352,21 @@ class DBInstance extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var array 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+     */
+    public $CrossRegions;
+
+    /**
+     * @var string 跨地域备份状态 enable-开启，disable-关闭
+     */
+    public $CrossBackupEnabled;
+
+    /**
+     * @var integer 跨地域备份保留天数，则默认7天
+     */
+    public $CrossBackupSaveDays;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
      * @param integer $ProjectId 实例所在项目ID
@@ -396,6 +417,9 @@ class DBInstance extends AbstractModel
      * @param string $BackupCycleType 备份周期类型，[daily、weekly、monthly]
      * @param integer $BackupSaveDays 数据(日志)备份保留时间
      * @param string $InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     * @param array $CrossRegions 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+     * @param string $CrossBackupEnabled 跨地域备份状态 enable-开启，disable-关闭
+     * @param integer $CrossBackupSaveDays 跨地域备份保留天数，则默认7天
      */
     function __construct()
     {
@@ -585,6 +609,18 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("CrossRegions",$param) and $param["CrossRegions"] !== null) {
+            $this->CrossRegions = $param["CrossRegions"];
+        }
+
+        if (array_key_exists("CrossBackupEnabled",$param) and $param["CrossBackupEnabled"] !== null) {
+            $this->CrossBackupEnabled = $param["CrossBackupEnabled"];
+        }
+
+        if (array_key_exists("CrossBackupSaveDays",$param) and $param["CrossBackupSaveDays"] !== null) {
+            $this->CrossBackupSaveDays = $param["CrossBackupSaveDays"];
         }
     }
 }

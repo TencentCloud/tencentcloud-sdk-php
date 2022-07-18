@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunningCount(integer $RunningCount) 设置环境运行的节点数
  * @method string getAliasEnvName() 获取环境别名
  * @method void setAliasEnvName(string $AliasEnvName) 设置环境别名
+ * @method string getEnvDesc() 获取环境描述
+ * @method void setEnvDesc(string $EnvDesc) 设置环境描述
+ * @method integer getClientBandWidth() 获取客户端带宽
+ * @method void setClientBandWidth(integer $ClientBandWidth) 设置客户端带宽
  */
 class EnvInfo extends AbstractModel
 {
@@ -108,6 +112,16 @@ class EnvInfo extends AbstractModel
     public $AliasEnvName;
 
     /**
+     * @var string 环境描述
+     */
+    public $EnvDesc;
+
+    /**
+     * @var integer 客户端带宽
+     */
+    public $ClientBandWidth;
+
+    /**
      * @param string $EnvName 环境名称
      * @param array $VpcInfos 环境对应的网络信息
      * @param integer $StorageCapacity 云硬盘容量
@@ -120,6 +134,8 @@ class EnvInfo extends AbstractModel
      * @param integer $EnvReplica 环境的节点数
      * @param integer $RunningCount 环境运行的节点数
      * @param string $AliasEnvName 环境别名
+     * @param string $EnvDesc 环境描述
+     * @param integer $ClientBandWidth 客户端带宽
      */
     function __construct()
     {
@@ -185,6 +201,14 @@ class EnvInfo extends AbstractModel
 
         if (array_key_exists("AliasEnvName",$param) and $param["AliasEnvName"] !== null) {
             $this->AliasEnvName = $param["AliasEnvName"];
+        }
+
+        if (array_key_exists("EnvDesc",$param) and $param["EnvDesc"] !== null) {
+            $this->EnvDesc = $param["EnvDesc"];
+        }
+
+        if (array_key_exists("ClientBandWidth",$param) and $param["ClientBandWidth"] !== null) {
+            $this->ClientBandWidth = $param["ClientBandWidth"];
         }
     }
 }

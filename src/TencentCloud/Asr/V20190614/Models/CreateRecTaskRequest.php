@@ -20,7 +20,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRecTask请求参数结构体
  *
- * @method string getEngineModelType() 获取引擎模型类型。
+ * @method string getEngineModelType() 获取引擎模型类型。注意：非电话场景请务必使用16k的引擎。
 电话场景：
 • 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
@@ -35,7 +35,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
 • 16k_zh_dialect：多方言，支持23种方言。
- * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。
+ * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。注意：非电话场景请务必使用16k的引擎。
 电话场景：
 • 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
@@ -90,7 +90,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateRecTaskRequest extends AbstractModel
 {
     /**
-     * @var string 引擎模型类型。
+     * @var string 引擎模型类型。注意：非电话场景请务必使用16k的引擎。
 电话场景：
 • 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
@@ -191,7 +191,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterModal;
 
     /**
-     * @param string $EngineModelType 引擎模型类型。
+     * @param string $EngineModelType 引擎模型类型。注意：非电话场景请务必使用16k的引擎。
 电话场景：
 • 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；

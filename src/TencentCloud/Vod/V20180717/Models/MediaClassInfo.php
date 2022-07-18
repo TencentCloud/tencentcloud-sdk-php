@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分类信息描述
  *
- * @method integer getClassId() 获取分类 ID
- * @method void setClassId(integer $ClassId) 设置分类 ID
+ * @method integer getClassId() 获取分类 ID。
+ * @method void setClassId(integer $ClassId) 设置分类 ID。
  * @method integer getParentId() 获取父类 ID，一级分类的父类 ID 为 -1。
  * @method void setParentId(integer $ParentId) 设置父类 ID，一级分类的父类 ID 为 -1。
- * @method string getClassName() 获取分类名称
- * @method void setClassName(string $ClassName) 设置分类名称
+ * @method string getName() 获取分类名称。
+ * @method void setName(string $Name) 设置分类名称。
  * @method integer getLevel() 获取分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
  * @method void setLevel(integer $Level) 设置分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
- * @method array getSubClassIdSet() 获取当前分类的第一级子类 ID 集合
- * @method void setSubClassIdSet(array $SubClassIdSet) 设置当前分类的第一级子类 ID 集合
+ * @method array getSubClassIdSet() 获取当前分类的第一级子类 ID 集合。
+ * @method void setSubClassIdSet(array $SubClassIdSet) 设置当前分类的第一级子类 ID 集合。
+ * @method string getClassName() 获取分类名称（该字段已不推荐使用，建议使用新的分类名称字段 Name）。
+ * @method void setClassName(string $ClassName) 设置分类名称（该字段已不推荐使用，建议使用新的分类名称字段 Name）。
  */
 class MediaClassInfo extends AbstractModel
 {
     /**
-     * @var integer 分类 ID
+     * @var integer 分类 ID。
      */
     public $ClassId;
 
@@ -44,9 +46,9 @@ class MediaClassInfo extends AbstractModel
     public $ParentId;
 
     /**
-     * @var string 分类名称
+     * @var string 分类名称。
      */
-    public $ClassName;
+    public $Name;
 
     /**
      * @var integer 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
@@ -54,16 +56,22 @@ class MediaClassInfo extends AbstractModel
     public $Level;
 
     /**
-     * @var array 当前分类的第一级子类 ID 集合
+     * @var array 当前分类的第一级子类 ID 集合。
      */
     public $SubClassIdSet;
 
     /**
-     * @param integer $ClassId 分类 ID
+     * @var string 分类名称（该字段已不推荐使用，建议使用新的分类名称字段 Name）。
+     */
+    public $ClassName;
+
+    /**
+     * @param integer $ClassId 分类 ID。
      * @param integer $ParentId 父类 ID，一级分类的父类 ID 为 -1。
-     * @param string $ClassName 分类名称
+     * @param string $Name 分类名称。
      * @param integer $Level 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
-     * @param array $SubClassIdSet 当前分类的第一级子类 ID 集合
+     * @param array $SubClassIdSet 当前分类的第一级子类 ID 集合。
+     * @param string $ClassName 分类名称（该字段已不推荐使用，建议使用新的分类名称字段 Name）。
      */
     function __construct()
     {
@@ -86,8 +94,8 @@ class MediaClassInfo extends AbstractModel
             $this->ParentId = $param["ParentId"];
         }
 
-        if (array_key_exists("ClassName",$param) and $param["ClassName"] !== null) {
-            $this->ClassName = $param["ClassName"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {
@@ -96,6 +104,10 @@ class MediaClassInfo extends AbstractModel
 
         if (array_key_exists("SubClassIdSet",$param) and $param["SubClassIdSet"] !== null) {
             $this->SubClassIdSet = $param["SubClassIdSet"];
+        }
+
+        if (array_key_exists("ClassName",$param) and $param["ClassName"] !== null) {
+            $this->ClassName = $param["ClassName"];
         }
     }
 }

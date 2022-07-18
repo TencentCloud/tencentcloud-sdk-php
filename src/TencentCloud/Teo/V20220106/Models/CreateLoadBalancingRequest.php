@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点ID
  * @method void setZoneId(string $ZoneId) 设置站点ID
- * @method string getHost() 获取子域名，填写@表示根域
- * @method void setHost(string $Host) 设置子域名，填写@表示根域
+ * @method string getHost() 获取子域名
+ * @method void setHost(string $Host) 设置子域名
  * @method string getType() 获取代理模式：
 dns_only: 仅DNS
 proxied: 开启代理
@@ -43,7 +43,7 @@ class CreateLoadBalancingRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 子域名，填写@表示根域
+     * @var string 子域名
      */
     public $Host;
 
@@ -66,7 +66,7 @@ proxied: 开启代理
 
     /**
      * @param string $ZoneId 站点ID
-     * @param string $Host 子域名，填写@表示根域
+     * @param string $Host 子域名
      * @param string $Type 代理模式：
 dns_only: 仅DNS
 proxied: 开启代理

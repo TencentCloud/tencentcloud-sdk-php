@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBlockNodeRecords请求参数结构体
  *
- * @method string getGroupId() 获取盘查实例id
- * @method void setGroupId(string $GroupId) 设置盘查实例id
- * @method string getNodeId() 获取节点id
- * @method void setNodeId(string $NodeId) 设置节点id
- * @method string getRecords() 获取节点记录-json
- * @method void setRecords(string $Records) 设置节点记录-json
+ * @method string getGroupId() 获取盘查组id，可在“盘查组概览”功能中获取。
+ * @method void setGroupId(string $GroupId) 设置盘查组id，可在“盘查组概览”功能中获取。
+ * @method string getNodeId() 获取节点id，可在“数据接入管理”中获取。
+ * @method void setNodeId(string $NodeId) 设置节点id，可在“数据接入管理”中获取。
+ * @method string getRecords() 获取节点数据json，具体demo请参考输入示例，其中key为数据接入管理中节点内创建的属性变量名，value为期望的推送值。
+ * @method void setRecords(string $Records) 设置节点数据json，具体demo请参考输入示例，其中key为数据接入管理中节点内创建的属性变量名，value为期望的推送值。
  */
 class CreateBlockNodeRecordsRequest extends AbstractModel
 {
     /**
-     * @var string 盘查实例id
+     * @var string 盘查组id，可在“盘查组概览”功能中获取。
      */
     public $GroupId;
 
     /**
-     * @var string 节点id
+     * @var string 节点id，可在“数据接入管理”中获取。
      */
     public $NodeId;
 
     /**
-     * @var string 节点记录-json
+     * @var string 节点数据json，具体demo请参考输入示例，其中key为数据接入管理中节点内创建的属性变量名，value为期望的推送值。
      */
     public $Records;
 
     /**
-     * @param string $GroupId 盘查实例id
-     * @param string $NodeId 节点id
-     * @param string $Records 节点记录-json
+     * @param string $GroupId 盘查组id，可在“盘查组概览”功能中获取。
+     * @param string $NodeId 节点id，可在“数据接入管理”中获取。
+     * @param string $Records 节点数据json，具体demo请参考输入示例，其中key为数据接入管理中节点内创建的属性变量名，value为期望的推送值。
      */
     function __construct()
     {

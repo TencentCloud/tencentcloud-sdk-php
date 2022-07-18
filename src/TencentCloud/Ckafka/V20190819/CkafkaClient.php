@@ -28,7 +28,9 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\BatchModifyGroupOffsetsResponse BatchModifyGroupOffsets(Models\BatchModifyGroupOffsetsRequest $req) 批量修改消费组offset
  * @method Models\BatchModifyTopicAttributesResponse BatchModifyTopicAttributes(Models\BatchModifyTopicAttributesRequest $req) 批量设置主题属性
  * @method Models\CancelAuthorizationTokenResponse CancelAuthorizationToken(Models\CancelAuthorizationTokenRequest $req) 取消授权token
+ * @method Models\CheckCdcClusterResponse CheckCdcCluster(Models\CheckCdcClusterRequest $req) 用于查询cdc-ckafka任务状态
  * @method Models\CreateAclResponse CreateAcl(Models\CreateAclRequest $req) 添加 ACL 策略
+ * @method Models\CreateCdcClusterResponse CreateCdcCluster(Models\CreateCdcClusterRequest $req) 用于cdc的专用ckafka集群
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 创建消费者组
  * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) 创建实例(预付费包年包月)
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 本接口用于增加主题中的分区

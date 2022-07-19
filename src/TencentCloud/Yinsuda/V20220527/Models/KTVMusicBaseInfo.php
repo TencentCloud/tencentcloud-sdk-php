@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRightSet(array $RightSet) 设置权益列表，取值有：
 <li>Play：可播；</li>
 <li>Sing：可唱。</li>
+ * @method string getRecommendType() 获取推荐类型，取值有：
+<li>Featured：精选；</li>
+<li>Other：其他。</li>
+ * @method void setRecommendType(string $RecommendType) 设置推荐类型，取值有：
+<li>Featured：精选；</li>
+<li>Other：其他。</li>
  */
 class KTVMusicBaseInfo extends AbstractModel
 {
@@ -82,6 +88,13 @@ class KTVMusicBaseInfo extends AbstractModel
     public $RightSet;
 
     /**
+     * @var string 推荐类型，取值有：
+<li>Featured：精选；</li>
+<li>Other：其他。</li>
+     */
+    public $RecommendType;
+
+    /**
      * @param string $MusicId 歌曲Id。
      * @param string $Name 歌曲名称。
      * @param array $SingerSet 歌手名称。
@@ -92,6 +105,9 @@ class KTVMusicBaseInfo extends AbstractModel
      * @param array $RightSet 权益列表，取值有：
 <li>Play：可播；</li>
 <li>Sing：可唱。</li>
+     * @param string $RecommendType 推荐类型，取值有：
+<li>Featured：精选；</li>
+<li>Other：其他。</li>
      */
     function __construct()
     {
@@ -133,6 +149,10 @@ class KTVMusicBaseInfo extends AbstractModel
 
         if (array_key_exists("RightSet",$param) and $param["RightSet"] !== null) {
             $this->RightSet = $param["RightSet"];
+        }
+
+        if (array_key_exists("RecommendType",$param) and $param["RecommendType"] !== null) {
+            $this->RecommendType = $param["RecommendType"];
         }
     }
 }

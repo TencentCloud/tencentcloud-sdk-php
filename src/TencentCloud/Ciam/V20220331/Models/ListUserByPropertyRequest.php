@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li> **email** </li>  邮箱
  * @method string getPropertyValue() 获取属性值
  * @method void setPropertyValue(string $PropertyValue) 设置属性值
+ * @method boolean getOriginal() 获取返回信息是否为原文
+ * @method void setOriginal(boolean $Original) 设置返回信息是否为原文
  */
 class ListUserByPropertyRequest extends AbstractModel
 {
@@ -54,12 +56,18 @@ class ListUserByPropertyRequest extends AbstractModel
     public $PropertyValue;
 
     /**
+     * @var boolean 返回信息是否为原文
+     */
+    public $Original;
+
+    /**
      * @param string $UserStoreId 用户目录ID
      * @param string $PropertyCode 查询的属性
 
 <li> **phoneNumber** </li>	  手机号码
 <li> **email** </li>  邮箱
      * @param string $PropertyValue 属性值
+     * @param boolean $Original 返回信息是否为原文
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ListUserByPropertyRequest extends AbstractModel
 
         if (array_key_exists("PropertyValue",$param) and $param["PropertyValue"] !== null) {
             $this->PropertyValue = $param["PropertyValue"];
+        }
+
+        if (array_key_exists("Original",$param) and $param["Original"] !== null) {
+            $this->Original = $param["Original"];
         }
     }
 }

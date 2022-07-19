@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 
 <li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
 <li> **userGroupId** </li>	Values = 用户组ID
+ * @method boolean getOriginal() 获取返回信息是否为原文
+ * @method void setOriginal(boolean $Original) 设置返回信息是否为原文
  */
 class ListUserRequest extends AbstractModel
 {
@@ -54,12 +56,18 @@ class ListUserRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var boolean 返回信息是否为原文
+     */
+    public $Original;
+
+    /**
      * @param string $UserStoreId 用户目录ID
      * @param Pageable $Pageable 分页数据
      * @param array $Filters Key可选值为condition、userGroupId
 
 <li> **condition** </li>	Values = 查询条件，用户ID，用户名称，手机或邮箱
 <li> **userGroupId** </li>	Values = 用户组ID
+     * @param boolean $Original 返回信息是否为原文
      */
     function __construct()
     {
@@ -90,6 +98,10 @@ class ListUserRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Original",$param) and $param["Original"] !== null) {
+            $this->Original = $param["Original"];
         }
     }
 }

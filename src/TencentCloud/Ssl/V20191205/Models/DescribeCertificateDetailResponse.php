@@ -168,6 +168,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptPrivateKey(string $EncryptPrivateKey) 设置国密加密私钥
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCertFingerprint() 获取签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertFingerprint(string $CertFingerprint) 设置签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncryptCertFingerprint() 获取加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncryptCertFingerprint(string $EncryptCertFingerprint) 设置加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -396,6 +404,18 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $EncryptPrivateKey;
 
     /**
+     * @var string 签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CertFingerprint;
+
+    /**
+     * @var string 加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EncryptCertFingerprint;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -474,6 +494,10 @@ class DescribeCertificateDetailResponse extends AbstractModel
      * @param string $EncryptCert 国密加密证书
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptPrivateKey 国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CertFingerprint 签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EncryptCertFingerprint 加密证书 SHA1指纹 （国密证书特有）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -645,6 +669,14 @@ class DescribeCertificateDetailResponse extends AbstractModel
 
         if (array_key_exists("EncryptPrivateKey",$param) and $param["EncryptPrivateKey"] !== null) {
             $this->EncryptPrivateKey = $param["EncryptPrivateKey"];
+        }
+
+        if (array_key_exists("CertFingerprint",$param) and $param["CertFingerprint"] !== null) {
+            $this->CertFingerprint = $param["CertFingerprint"];
+        }
+
+        if (array_key_exists("EncryptCertFingerprint",$param) and $param["EncryptCertFingerprint"] !== null) {
+            $this->EncryptCertFingerprint = $param["EncryptCertFingerprint"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

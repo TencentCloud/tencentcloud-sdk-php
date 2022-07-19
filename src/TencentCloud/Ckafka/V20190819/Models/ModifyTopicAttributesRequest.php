@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) 设置生产限流，单位 MB/s
  * @method integer getQuotaConsumerByteRate() 获取消费限流，单位 MB/s
  * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) 设置消费限流，单位 MB/s
+ * @method integer getReplicaNum() 获取调整topic副本数
+ * @method void setReplicaNum(integer $ReplicaNum) 设置调整topic副本数
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $QuotaConsumerByteRate;
 
     /**
+     * @var integer 调整topic副本数
+     */
+    public $ReplicaNum;
+
+    /**
      * @param string $InstanceId 实例 ID。
      * @param string $TopicName 主题名称。
      * @param string $Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
@@ -160,6 +167,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param array $Tags 标签列表
      * @param integer $QuotaProducerByteRate 生产限流，单位 MB/s
      * @param integer $QuotaConsumerByteRate 消费限流，单位 MB/s
+     * @param integer $ReplicaNum 调整topic副本数
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class ModifyTopicAttributesRequest extends AbstractModel
 
         if (array_key_exists("QuotaConsumerByteRate",$param) and $param["QuotaConsumerByteRate"] !== null) {
             $this->QuotaConsumerByteRate = $param["QuotaConsumerByteRate"];
+        }
+
+        if (array_key_exists("ReplicaNum",$param) and $param["ReplicaNum"] !== null) {
+            $this->ReplicaNum = $param["ReplicaNum"];
         }
     }
 }

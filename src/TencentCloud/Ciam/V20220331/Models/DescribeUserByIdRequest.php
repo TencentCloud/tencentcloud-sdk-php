@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserStoreId(string $UserStoreId) 设置用户目录ID
  * @method string getUserId() 获取用户ID
  * @method void setUserId(string $UserId) 设置用户ID
+ * @method boolean getOriginal() 获取返回信息是否为原文
+
+<li> **false** </li>	默认，返回信息为脱敏信息
+<li> **true** </li>	返回用户信息原文
+ * @method void setOriginal(boolean $Original) 设置返回信息是否为原文
+
+<li> **false** </li>	默认，返回信息为脱敏信息
+<li> **true** </li>	返回用户信息原文
  */
 class DescribeUserByIdRequest extends AbstractModel
 {
@@ -38,8 +46,20 @@ class DescribeUserByIdRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var boolean 返回信息是否为原文
+
+<li> **false** </li>	默认，返回信息为脱敏信息
+<li> **true** </li>	返回用户信息原文
+     */
+    public $Original;
+
+    /**
      * @param string $UserStoreId 用户目录ID
      * @param string $UserId 用户ID
+     * @param boolean $Original 返回信息是否为原文
+
+<li> **false** </li>	默认，返回信息为脱敏信息
+<li> **true** </li>	返回用户信息原文
      */
     function __construct()
     {
@@ -60,6 +80,10 @@ class DescribeUserByIdRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("Original",$param) and $param["Original"] !== null) {
+            $this->Original = $param["Original"];
         }
     }
 }

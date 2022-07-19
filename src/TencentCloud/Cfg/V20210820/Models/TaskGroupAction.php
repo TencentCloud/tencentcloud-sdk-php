@@ -70,6 +70,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置动作类型：平台、自定义
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsExecuteRedo() 获取是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsExecuteRedo(boolean $IsExecuteRedo) 设置是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getActionRisk() 获取动作风险级别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setActionRisk(string $ActionRisk) 设置动作风险级别
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskGroupAction extends AbstractModel
 {
@@ -167,6 +175,18 @@ class TaskGroupAction extends AbstractModel
     public $ActionType;
 
     /**
+     * @var boolean 是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsExecuteRedo;
+
+    /**
+     * @var string 动作风险级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ActionRisk;
+
+    /**
      * @param integer $TaskGroupActionId 任务分组动作ID
      * @param array $TaskGroupInstances 任务分组动作实例列表
      * @param integer $ActionId 动作ID
@@ -191,6 +211,10 @@ class TaskGroupAction extends AbstractModel
      * @param integer $ActionAttribute 1:故障，2:恢复
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionType 动作类型：平台、自定义
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsExecuteRedo 是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ActionRisk 动作风险级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -277,6 +301,14 @@ class TaskGroupAction extends AbstractModel
 
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
+        }
+
+        if (array_key_exists("IsExecuteRedo",$param) and $param["IsExecuteRedo"] !== null) {
+            $this->IsExecuteRedo = $param["IsExecuteRedo"];
+        }
+
+        if (array_key_exists("ActionRisk",$param) and $param["ActionRisk"] !== null) {
+            $this->ActionRisk = $param["ActionRisk"];
         }
     }
 }

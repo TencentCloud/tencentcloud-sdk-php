@@ -31,7 +31,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 <br>•   本地文件必须为UTF-8编码格式，每行仅添加一个热词且不能包含标点和特殊字符。
 <br>•   热词权重取值范围为[1,10]之间的整数，权重越大代表该词被识别出来的概率越大。
  * @method Models\CreateAsyncRecognitionTaskResponse CreateAsyncRecognitionTask(Models\CreateAsyncRecognitionTaskRequest $req) 本接口用于对语音流进行准实时识别，通过异步回调来返回识别结果。适用于直播审核等场景。
-<br>• 支持rtmp、hls、rtsp等流媒体协议，以及各类基于http协议的直播流
+<br>• 支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls)
 <br>• 音频流时长无限制，服务会自动拉取音频流数据，若连续10分钟拉不到流数据时，服务会终止识别任务
 <br>• 服务通过回调的方式来提供识别结果，用户需要提供CallbackUrl。回调时机为一小段话(最长15秒)回调一次。
 <br>• 签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。

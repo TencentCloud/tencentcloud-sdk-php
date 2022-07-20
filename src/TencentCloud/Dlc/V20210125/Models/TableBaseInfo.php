@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableFormat(string $TableFormat) 设置数据格式类型，hive，iceberg等
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserAlias() 获取建表用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserAlias(string $UserAlias) 设置建表用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserSubUin() 获取建表用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserSubUin(string $UserSubUin) 设置建表用户ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableBaseInfo extends AbstractModel
 {
@@ -78,6 +86,18 @@ class TableBaseInfo extends AbstractModel
     public $TableFormat;
 
     /**
+     * @var string 建表用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserAlias;
+
+    /**
+     * @var string 建表用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserSubUin;
+
+    /**
      * @param string $DatabaseName 该数据表所属数据库名字
      * @param string $TableName 数据表名字
      * @param string $DatasourceConnectionName 该数据表所属数据源名字
@@ -87,6 +107,10 @@ class TableBaseInfo extends AbstractModel
      * @param string $Type 具体类型，表or视图
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableFormat 数据格式类型，hive，iceberg等
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserAlias 建表用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserSubUin 建表用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +148,14 @@ class TableBaseInfo extends AbstractModel
 
         if (array_key_exists("TableFormat",$param) and $param["TableFormat"] !== null) {
             $this->TableFormat = $param["TableFormat"];
+        }
+
+        if (array_key_exists("UserAlias",$param) and $param["UserAlias"] !== null) {
+            $this->UserAlias = $param["UserAlias"];
+        }
+
+        if (array_key_exists("UserSubUin",$param) and $param["UserSubUin"] !== null) {
+            $this->UserSubUin = $param["UserSubUin"];
         }
     }
 }

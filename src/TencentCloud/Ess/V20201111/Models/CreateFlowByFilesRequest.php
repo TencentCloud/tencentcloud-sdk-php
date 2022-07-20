@@ -34,11 +34,13 @@ use TencentCloud\Common\AbstractModel;
 TEXT - 内容文本控件
 MULTI_LINE_TEXT - 多行文本控件
 CHECK_BOX - 勾选框控件
+ATTACHMENT - 附件
 注：默认字体大小为 字号12
  * @method void setComponents(array $Components) 设置经办人内容控件配置。可选类型为：
 TEXT - 内容文本控件
 MULTI_LINE_TEXT - 多行文本控件
 CHECK_BOX - 勾选框控件
+ATTACHMENT - 附件
 注：默认字体大小为 字号12
  * @method integer getDeadline() 获取签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
@@ -99,6 +101,7 @@ class CreateFlowByFilesRequest extends AbstractModel
 TEXT - 内容文本控件
 MULTI_LINE_TEXT - 多行文本控件
 CHECK_BOX - 勾选框控件
+ATTACHMENT - 附件
 注：默认字体大小为 字号12
      */
     public $Components;
@@ -154,6 +157,7 @@ false：有序签
 TEXT - 内容文本控件
 MULTI_LINE_TEXT - 多行文本控件
 CHECK_BOX - 勾选框控件
+ATTACHMENT - 附件
 注：默认字体大小为 字号12
      * @param integer $Deadline 签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatabaseName(string $DatabaseName) 设置该视图所属数据库名字
  * @method string getViewName() 获取视图名称
  * @method void setViewName(string $ViewName) 设置视图名称
+ * @method string getUserAlias() 获取视图创建人昵称
+ * @method void setUserAlias(string $UserAlias) 设置视图创建人昵称
+ * @method string getUserSubUin() 获取视图创建人ID
+ * @method void setUserSubUin(string $UserSubUin) 设置视图创建人ID
  */
 class ViewBaseInfo extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ViewBaseInfo extends AbstractModel
     public $ViewName;
 
     /**
+     * @var string 视图创建人昵称
+     */
+    public $UserAlias;
+
+    /**
+     * @var string 视图创建人ID
+     */
+    public $UserSubUin;
+
+    /**
      * @param string $DatabaseName 该视图所属数据库名字
      * @param string $ViewName 视图名称
+     * @param string $UserAlias 视图创建人昵称
+     * @param string $UserSubUin 视图创建人ID
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ViewBaseInfo extends AbstractModel
 
         if (array_key_exists("ViewName",$param) and $param["ViewName"] !== null) {
             $this->ViewName = $param["ViewName"];
+        }
+
+        if (array_key_exists("UserAlias",$param) and $param["UserAlias"] !== null) {
+            $this->UserAlias = $param["UserAlias"];
+        }
+
+        if (array_key_exists("UserSubUin",$param) and $param["UserSubUin"] !== null) {
+            $this->UserSubUin = $param["UserSubUin"];
         }
     }
 }

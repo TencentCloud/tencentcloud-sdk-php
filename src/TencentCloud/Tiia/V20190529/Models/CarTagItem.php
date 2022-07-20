@@ -28,15 +28,27 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置车辆类型
  * @method string getColor() 获取车辆颜色
  * @method void setColor(string $Color) 设置车辆颜色
- * @method integer getConfidence() 获取置信度，0-100
- * @method void setConfidence(integer $Confidence) 设置置信度，0-100
+ * @method integer getConfidence() 获取车系置信度，0-100
+ * @method void setConfidence(integer $Confidence) 设置车系置信度，0-100
  * @method integer getYear() 获取年份，没识别出年份的时候返回0
  * @method void setYear(integer $Year) 设置年份，没识别出年份的时候返回0
  * @method array getCarLocation() 获取车辆在图片中的坐标信息
  * @method void setCarLocation(array $CarLocation) 设置车辆在图片中的坐标信息
- * @method CarPlateContent getPlateContent() 获取车牌信息
+ * @method CarPlateContent getPlateContent() 获取车牌信息，仅车辆识别（增强版）支持
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPlateContent(CarPlateContent $PlateContent) 设置车牌信息
+ * @method void setPlateContent(CarPlateContent $PlateContent) 设置车牌信息，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPlateConfidence() 获取车牌信息置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPlateConfidence(integer $PlateConfidence) 设置车牌信息置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTypeConfidence() 获取车辆类型置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTypeConfidence(integer $TypeConfidence) 设置车辆类型置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getColorConfidence() 获取车辆颜色置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColorConfidence(integer $ColorConfidence) 设置车辆颜色置信度，0-100，仅车辆识别（增强版）支持
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CarTagItem extends AbstractModel
@@ -62,7 +74,7 @@ class CarTagItem extends AbstractModel
     public $Color;
 
     /**
-     * @var integer 置信度，0-100
+     * @var integer 车系置信度，0-100
      */
     public $Confidence;
 
@@ -77,20 +89,44 @@ class CarTagItem extends AbstractModel
     public $CarLocation;
 
     /**
-     * @var CarPlateContent 车牌信息
+     * @var CarPlateContent 车牌信息，仅车辆识别（增强版）支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlateContent;
+
+    /**
+     * @var integer 车牌信息置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PlateConfidence;
+
+    /**
+     * @var integer 车辆类型置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TypeConfidence;
+
+    /**
+     * @var integer 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColorConfidence;
 
     /**
      * @param string $Serial 车系
      * @param string $Brand 车辆品牌
      * @param string $Type 车辆类型
      * @param string $Color 车辆颜色
-     * @param integer $Confidence 置信度，0-100
+     * @param integer $Confidence 车系置信度，0-100
      * @param integer $Year 年份，没识别出年份的时候返回0
      * @param array $CarLocation 车辆在图片中的坐标信息
-     * @param CarPlateContent $PlateContent 车牌信息
+     * @param CarPlateContent $PlateContent 车牌信息，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PlateConfidence 车牌信息置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TypeConfidence 车辆类型置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ColorConfidence 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -142,6 +178,18 @@ class CarTagItem extends AbstractModel
         if (array_key_exists("PlateContent",$param) and $param["PlateContent"] !== null) {
             $this->PlateContent = new CarPlateContent();
             $this->PlateContent->deserialize($param["PlateContent"]);
+        }
+
+        if (array_key_exists("PlateConfidence",$param) and $param["PlateConfidence"] !== null) {
+            $this->PlateConfidence = $param["PlateConfidence"];
+        }
+
+        if (array_key_exists("TypeConfidence",$param) and $param["TypeConfidence"] !== null) {
+            $this->TypeConfidence = $param["TypeConfidence"];
+        }
+
+        if (array_key_exists("ColorConfidence",$param) and $param["ColorConfidence"] !== null) {
+            $this->ColorConfidence = $param["ColorConfidence"];
         }
     }
 }

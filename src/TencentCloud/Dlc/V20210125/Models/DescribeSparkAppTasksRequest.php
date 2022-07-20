@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页查询Limit
  * @method string getTaskId() 获取执行实例id
  * @method void setTaskId(string $TaskId) 设置执行实例id
+ * @method string getStartTime() 获取更新时间起始点
+ * @method void setStartTime(string $StartTime) 设置更新时间起始点
+ * @method string getEndTime() 获取更新时间截止点
+ * @method void setEndTime(string $EndTime) 设置更新时间截止点
+ * @method array getFilters() 获取按照该参数过滤,支持task-state
+ * @method void setFilters(array $Filters) 设置按照该参数过滤,支持task-state
  */
 class DescribeSparkAppTasksRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class DescribeSparkAppTasksRequest extends AbstractModel
     public $TaskId;
 
     /**
+     * @var string 更新时间起始点
+     */
+    public $StartTime;
+
+    /**
+     * @var string 更新时间截止点
+     */
+    public $EndTime;
+
+    /**
+     * @var array 按照该参数过滤,支持task-state
+     */
+    public $Filters;
+
+    /**
      * @param string $JobId spark作业Id
      * @param integer $Offset 分页查询偏移量
      * @param integer $Limit 分页查询Limit
      * @param string $TaskId 执行实例id
+     * @param string $StartTime 更新时间起始点
+     * @param string $EndTime 更新时间截止点
+     * @param array $Filters 按照该参数过滤,支持task-state
      */
     function __construct()
     {
@@ -84,6 +108,23 @@ class DescribeSparkAppTasksRequest extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

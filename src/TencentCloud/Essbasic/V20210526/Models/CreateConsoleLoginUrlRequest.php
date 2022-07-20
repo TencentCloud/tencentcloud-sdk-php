@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModuleId(string $ModuleId) 设置控制台指定模块Id
  * @method string getUniformSocialCreditCode() 获取渠道侧合作企业统一社会信用代码，最大长度200个字符
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置渠道侧合作企业统一社会信用代码，最大长度200个字符
+ * @method string getMenuStatus() 获取是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
+ * @method void setMenuStatus(string $MenuStatus) 设置是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
@@ -71,6 +73,11 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $UniformSocialCreditCode;
 
     /**
+     * @var string 是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
+     */
+    public $MenuStatus;
+
+    /**
      * @var UserInfo 操作者的信息
      */
     public $Operator;
@@ -83,6 +90,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $Module 控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
      * @param string $ModuleId 控制台指定模块Id
      * @param string $UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     * @param string $MenuStatus 是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
      * @param UserInfo $Operator 操作者的信息
      */
     function __construct()
@@ -121,6 +129,10 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
         if (array_key_exists("UniformSocialCreditCode",$param) and $param["UniformSocialCreditCode"] !== null) {
             $this->UniformSocialCreditCode = $param["UniformSocialCreditCode"];
+        }
+
+        if (array_key_exists("MenuStatus",$param) and $param["MenuStatus"] !== null) {
+            $this->MenuStatus = $param["MenuStatus"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

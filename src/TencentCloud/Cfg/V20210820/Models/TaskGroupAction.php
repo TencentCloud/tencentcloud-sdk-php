@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionRisk(string $ActionRisk) 设置动作风险级别
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskGroupActionExecuteTime() 获取动作运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskGroupActionExecuteTime(integer $TaskGroupActionExecuteTime) 设置动作运行时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskGroupAction extends AbstractModel
 {
@@ -187,6 +191,12 @@ class TaskGroupAction extends AbstractModel
     public $ActionRisk;
 
     /**
+     * @var integer 动作运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskGroupActionExecuteTime;
+
+    /**
      * @param integer $TaskGroupActionId 任务分组动作ID
      * @param array $TaskGroupInstances 任务分组动作实例列表
      * @param integer $ActionId 动作ID
@@ -215,6 +225,8 @@ class TaskGroupAction extends AbstractModel
      * @param boolean $IsExecuteRedo 是否可重试
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionRisk 动作风险级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskGroupActionExecuteTime 动作运行时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -309,6 +321,10 @@ class TaskGroupAction extends AbstractModel
 
         if (array_key_exists("ActionRisk",$param) and $param["ActionRisk"] !== null) {
             $this->ActionRisk = $param["ActionRisk"];
+        }
+
+        if (array_key_exists("TaskGroupActionExecuteTime",$param) and $param["TaskGroupActionExecuteTime"] !== null) {
+            $this->TaskGroupActionExecuteTime = $param["TaskGroupActionExecuteTime"];
         }
     }
 }

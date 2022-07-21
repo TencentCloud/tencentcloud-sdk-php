@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupInstanceIsRedo(boolean $TaskGroupInstanceIsRedo) 设置实例是否可重试
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskGroupInstanceExecuteTime() 获取动作实例执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskGroupInstanceExecuteTime(integer $TaskGroupInstanceExecuteTime) 设置动作实例执行时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskGroupInstance extends AbstractModel
 {
@@ -109,6 +113,12 @@ class TaskGroupInstance extends AbstractModel
     public $TaskGroupInstanceIsRedo;
 
     /**
+     * @var integer 动作实例执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskGroupInstanceExecuteTime;
+
+    /**
      * @param integer $TaskGroupInstanceId 实例ID
      * @param string $TaskGroupInstanceObjectId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,6 +133,8 @@ class TaskGroupInstance extends AbstractModel
      * @param string $TaskGroupInstanceEndTime 执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TaskGroupInstanceIsRedo 实例是否可重试
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskGroupInstanceExecuteTime 动作实例执行时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +188,10 @@ class TaskGroupInstance extends AbstractModel
 
         if (array_key_exists("TaskGroupInstanceIsRedo",$param) and $param["TaskGroupInstanceIsRedo"] !== null) {
             $this->TaskGroupInstanceIsRedo = $param["TaskGroupInstanceIsRedo"];
+        }
+
+        if (array_key_exists("TaskGroupInstanceExecuteTime",$param) and $param["TaskGroupInstanceExecuteTime"] !== null) {
+            $this->TaskGroupInstanceExecuteTime = $param["TaskGroupInstanceExecuteTime"];
         }
     }
 }

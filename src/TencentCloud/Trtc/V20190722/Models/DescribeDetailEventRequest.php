@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDetailEvent请求参数结构体
  *
- * @method string getCommId() 获取通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
- * @method void setCommId(string $CommId) 设置通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
- * @method integer getStartTime() 获取查询开始时间，14天内。本地unix时间戳（1588055615s）
- * @method void setStartTime(integer $StartTime) 设置查询开始时间，14天内。本地unix时间戳（1588055615s）
- * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1588058615s）
- * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1588058615s）
- * @method string getUserId() 获取用户id
- * @method void setUserId(string $UserId) 设置用户id
- * @method string getRoomId() 获取房间号
- * @method void setRoomId(string $RoomId) 设置房间号
+ * @method string getCommId() 获取通话 ID（唯一标识一次通话）： SdkAppId_RoomId（房间号）_ CreateTime（房间创建时间，unix时间戳，单位为s）例：1400xxxxxx_218695_1590065777。通过 DescribeRoomInfo（查询历史房间列表）接口获取（[查询历史房间列表](https://cloud.tencent.com/document/product/647/44050)）。
+ * @method void setCommId(string $CommId) 设置通话 ID（唯一标识一次通话）： SdkAppId_RoomId（房间号）_ CreateTime（房间创建时间，unix时间戳，单位为s）例：1400xxxxxx_218695_1590065777。通过 DescribeRoomInfo（查询历史房间列表）接口获取（[查询历史房间列表](https://cloud.tencent.com/document/product/647/44050)）。
+ * @method integer getStartTime() 获取查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
+ * @method void setStartTime(integer $StartTime) 设置查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
+ * @method integer getEndTime() 获取查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：查询时间大于房间结束时间，以房间结束时间为准。
+ * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：查询时间大于房间结束时间，以房间结束时间为准。
+ * @method string getUserId() 获取用户UserId
+ * @method void setUserId(string $UserId) 设置用户UserId
+ * @method string getRoomId() 获取房间号（如：223）
+ * @method void setRoomId(string $RoomId) 设置房间号（如：223）
  */
 class DescribeDetailEventRequest extends AbstractModel
 {
     /**
-     * @var string 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
+     * @var string 通话 ID（唯一标识一次通话）： SdkAppId_RoomId（房间号）_ CreateTime（房间创建时间，unix时间戳，单位为s）例：1400xxxxxx_218695_1590065777。通过 DescribeRoomInfo（查询历史房间列表）接口获取（[查询历史房间列表](https://cloud.tencent.com/document/product/647/44050)）。
      */
     public $CommId;
 
     /**
-     * @var integer 查询开始时间，14天内。本地unix时间戳（1588055615s）
+     * @var integer 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
      */
     public $StartTime;
 
     /**
-     * @var integer 查询结束时间，本地unix时间戳（1588058615s）
+     * @var integer 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：查询时间大于房间结束时间，以房间结束时间为准。
      */
     public $EndTime;
 
     /**
-     * @var string 用户id
+     * @var string 用户UserId
      */
     public $UserId;
 
     /**
-     * @var string 房间号
+     * @var string 房间号（如：223）
      */
     public $RoomId;
 
     /**
-     * @param string $CommId 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
-     * @param integer $StartTime 查询开始时间，14天内。本地unix时间戳（1588055615s）
-     * @param integer $EndTime 查询结束时间，本地unix时间戳（1588058615s）
-     * @param string $UserId 用户id
-     * @param string $RoomId 房间号
+     * @param string $CommId 通话 ID（唯一标识一次通话）： SdkAppId_RoomId（房间号）_ CreateTime（房间创建时间，unix时间戳，单位为s）例：1400xxxxxx_218695_1590065777。通过 DescribeRoomInfo（查询历史房间列表）接口获取（[查询历史房间列表](https://cloud.tencent.com/document/product/647/44050)）。
+     * @param integer $StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
+     * @param integer $EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+注意：查询时间大于房间结束时间，以房间结束时间为准。
+     * @param string $UserId 用户UserId
+     * @param string $RoomId 房间号（如：223）
      */
     function __construct()
     {

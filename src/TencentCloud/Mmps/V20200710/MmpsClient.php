@@ -25,6 +25,7 @@ use TencentCloud\Mmps\V20200710\Models as Models;
 /**
  * @method Models\CreateAppScanTaskResponse CreateAppScanTask(Models\CreateAppScanTaskRequest $req) 创建小程序隐私合规诊断任务
  * @method Models\CreateAppScanTaskRepeatResponse CreateAppScanTaskRepeat(Models\CreateAppScanTaskRepeatRequest $req) 小程序隐私合规诊断重试任务
+ * @method Models\CreateFlySecMiniAppProfessionalScanTaskResponse CreateFlySecMiniAppProfessionalScanTask(Models\CreateFlySecMiniAppProfessionalScanTaskRequest $req) 创建小程序安全深度诊断任务
  * @method Models\CreateFlySecMiniAppScanTaskResponse CreateFlySecMiniAppScanTask(Models\CreateFlySecMiniAppScanTaskRequest $req) 创建小程序翼扬安全的基础或深度诊断任务
  * @method Models\CreateFlySecMiniAppScanTaskRepeatResponse CreateFlySecMiniAppScanTaskRepeat(Models\CreateFlySecMiniAppScanTaskRepeatRequest $req) 重新提交基础诊断任务
  * @method Models\DescribeBasicDiagnosisResourceUsageInfoResponse DescribeBasicDiagnosisResourceUsageInfo(Models\DescribeBasicDiagnosisResourceUsageInfoRequest $req) 查询翼扬安全基础诊断资源使用情况

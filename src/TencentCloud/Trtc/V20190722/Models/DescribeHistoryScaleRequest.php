@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHistoryScale请求参数结构体
  *
- * @method string getSdkAppId() 获取用户sdkappid(1400188366)
- * @method void setSdkAppId(string $SdkAppId) 设置用户sdkappid(1400188366)
- * @method integer getStartTime() 获取查询开始时间，5天内。本地unix时间戳（1587571000s）
- * @method void setStartTime(integer $StartTime) 设置查询开始时间，5天内。本地unix时间戳（1587571000s）
- * @method integer getEndTime() 获取查询结束时间，本地unix时间戳（1588034999s）
- * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳（1588034999s）
+ * @method string getSdkAppId() 获取用户SdkAppId（如：1400xxxxxx）
+ * @method void setSdkAppId(string $SdkAppId) 设置用户SdkAppId（如：1400xxxxxx）
+ * @method integer getStartTime() 获取查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据。
+ * @method void setStartTime(integer $StartTime) 设置查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据。
+ * @method integer getEndTime() 获取查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
+注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需小于20号0点）。
+ * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
+注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需小于20号0点）。
  */
 class DescribeHistoryScaleRequest extends AbstractModel
 {
     /**
-     * @var string 用户sdkappid(1400188366)
+     * @var string 用户SdkAppId（如：1400xxxxxx）
      */
     public $SdkAppId;
 
     /**
-     * @var integer 查询开始时间，5天内。本地unix时间戳（1587571000s）
+     * @var integer 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据。
      */
     public $StartTime;
 
     /**
-     * @var integer 查询结束时间，本地unix时间戳（1588034999s）
+     * @var integer 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
+注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需小于20号0点）。
      */
     public $EndTime;
 
     /**
-     * @param string $SdkAppId 用户sdkappid(1400188366)
-     * @param integer $StartTime 查询开始时间，5天内。本地unix时间戳（1587571000s）
-     * @param integer $EndTime 查询结束时间，本地unix时间戳（1588034999s）
+     * @param string $SdkAppId 用户SdkAppId（如：1400xxxxxx）
+     * @param integer $StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据。
+     * @param integer $EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
+注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需小于20号0点）。
      */
     function __construct()
     {

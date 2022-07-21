@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ses\V20201002\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListEmailIdentities返回参数结构体
+ * DescribeNetworkAclQuintupleEntries返回参数结构体
  *
- * @method array getEmailIdentities() 获取发信域名列表
- * @method void setEmailIdentities(array $EmailIdentities) 设置发信域名列表
- * @method integer getMaxReputationLevel() 获取最大信誉等级
- * @method void setMaxReputationLevel(integer $MaxReputationLevel) 设置最大信誉等级
- * @method integer getMaxDailyQuota() 获取单域名最高日发送量
- * @method void setMaxDailyQuota(integer $MaxDailyQuota) 设置单域名最高日发送量
+ * @method array getNetworkAclQuintupleSet() 获取网络ACL条目列表（NetworkAclTuple5Entry）
+ * @method void setNetworkAclQuintupleSet(array $NetworkAclQuintupleSet) 设置网络ACL条目列表（NetworkAclTuple5Entry）
+ * @method integer getTotalCount() 获取符合条件的实例数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的实例数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ListEmailIdentitiesResponse extends AbstractModel
+class DescribeNetworkAclQuintupleEntriesResponse extends AbstractModel
 {
     /**
-     * @var array 发信域名列表
+     * @var array 网络ACL条目列表（NetworkAclTuple5Entry）
      */
-    public $EmailIdentities;
+    public $NetworkAclQuintupleSet;
 
     /**
-     * @var integer 最大信誉等级
+     * @var integer 符合条件的实例数量。
      */
-    public $MaxReputationLevel;
-
-    /**
-     * @var integer 单域名最高日发送量
-     */
-    public $MaxDailyQuota;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class ListEmailIdentitiesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $EmailIdentities 发信域名列表
-     * @param integer $MaxReputationLevel 最大信誉等级
-     * @param integer $MaxDailyQuota 单域名最高日发送量
+     * @param array $NetworkAclQuintupleSet 网络ACL条目列表（NetworkAclTuple5Entry）
+     * @param integer $TotalCount 符合条件的实例数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +62,17 @@ class ListEmailIdentitiesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EmailIdentities",$param) and $param["EmailIdentities"] !== null) {
-            $this->EmailIdentities = [];
-            foreach ($param["EmailIdentities"] as $key => $value){
-                $obj = new EmailIdentity();
+        if (array_key_exists("NetworkAclQuintupleSet",$param) and $param["NetworkAclQuintupleSet"] !== null) {
+            $this->NetworkAclQuintupleSet = [];
+            foreach ($param["NetworkAclQuintupleSet"] as $key => $value){
+                $obj = new NetworkAclQuintupleEntry();
                 $obj->deserialize($value);
-                array_push($this->EmailIdentities, $obj);
+                array_push($this->NetworkAclQuintupleSet, $obj);
             }
         }
 
-        if (array_key_exists("MaxReputationLevel",$param) and $param["MaxReputationLevel"] !== null) {
-            $this->MaxReputationLevel = $param["MaxReputationLevel"];
-        }
-
-        if (array_key_exists("MaxDailyQuota",$param) and $param["MaxDailyQuota"] !== null) {
-            $this->MaxDailyQuota = $param["MaxDailyQuota"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

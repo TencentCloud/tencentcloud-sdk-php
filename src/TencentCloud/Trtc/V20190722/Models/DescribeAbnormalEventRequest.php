@@ -20,29 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAbnormalEvent请求参数结构体
  *
- * @method string getSdkAppId() 获取用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
- * @method void setSdkAppId(string $SdkAppId) 设置用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
- * @method integer getStartTime() 获取查询开始时间,本地unix时间戳（1592448600s）
- * @method void setStartTime(integer $StartTime) 设置查询开始时间,本地unix时间戳（1592448600s）
- * @method integer getEndTime() 获取查询结束时间,本地unix时间戳（1592449080s）
- * @method void setEndTime(integer $EndTime) 设置查询结束时间,本地unix时间戳（1592449080s）
+ * @method string getSdkAppId() 获取用户SdkAppId（如：1400xxxxxx）
+ * @method void setSdkAppId(string $SdkAppId) 设置用户SdkAppId（如：1400xxxxxx）
+ * @method integer getStartTime() 获取查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
+ * @method void setStartTime(integer $StartTime) 设置查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
+ * @method integer getEndTime() 获取查询结束时间，本地unix时间戳，单位为秒（如：1590065877）注意：与StartTime间隔时间不超过1小时。
+ * @method void setEndTime(integer $EndTime) 设置查询结束时间，本地unix时间戳，单位为秒（如：1590065877）注意：与StartTime间隔时间不超过1小时。
  * @method string getRoomId() 获取房间号，查询房间内任意20条以内异常体验事件
  * @method void setRoomId(string $RoomId) 设置房间号，查询房间内任意20条以内异常体验事件
  */
 class DescribeAbnormalEventRequest extends AbstractModel
 {
     /**
-     * @var string 用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
+     * @var string 用户SdkAppId（如：1400xxxxxx）
      */
     public $SdkAppId;
 
     /**
-     * @var integer 查询开始时间,本地unix时间戳（1592448600s）
+     * @var integer 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
      */
     public $StartTime;
 
     /**
-     * @var integer 查询结束时间,本地unix时间戳（1592449080s）
+     * @var integer 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）注意：与StartTime间隔时间不超过1小时。
      */
     public $EndTime;
 
@@ -52,9 +55,10 @@ class DescribeAbnormalEventRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @param string $SdkAppId 用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
-     * @param integer $StartTime 查询开始时间,本地unix时间戳（1592448600s）
-     * @param integer $EndTime 查询结束时间,本地unix时间戳（1592449080s）
+     * @param string $SdkAppId 用户SdkAppId（如：1400xxxxxx）
+     * @param integer $StartTime 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+注意：支持查询14天内的数据
+     * @param integer $EndTime 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）注意：与StartTime间隔时间不超过1小时。
      * @param string $RoomId 房间号，查询房间内任意20条以内异常体验事件
      */
     function __construct()

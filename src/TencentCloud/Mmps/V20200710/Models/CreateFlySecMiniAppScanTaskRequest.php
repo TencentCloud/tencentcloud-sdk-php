@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMiniAppID() 获取小程序AppID
  * @method void setMiniAppID(string $MiniAppID) 设置小程序AppID
- * @method integer getMode() 获取诊断模式 1:基础诊断，2:深度诊断
- * @method void setMode(integer $Mode) 设置诊断模式 1:基础诊断，2:深度诊断
+ * @method integer getMode() 获取诊断模式 1:基础诊断
+ * @method void setMode(integer $Mode) 设置诊断模式 1:基础诊断
  * @method string getMiniAppTestAccount() 获取小程序测试账号(自有账号体系需提供,其他情况不需要)
  * @method void setMiniAppTestAccount(string $MiniAppTestAccount) 设置小程序测试账号(自有账号体系需提供,其他情况不需要)
  * @method string getMiniAppTestPwd() 获取小程序测试密码(自有账号体系需提供,其他情况不需要)
@@ -49,7 +49,7 @@ class CreateFlySecMiniAppScanTaskRequest extends AbstractModel
     public $MiniAppID;
 
     /**
-     * @var integer 诊断模式 1:基础诊断，2:深度诊断
+     * @var integer 诊断模式 1:基础诊断
      */
     public $Mode;
 
@@ -95,7 +95,7 @@ class CreateFlySecMiniAppScanTaskRequest extends AbstractModel
 
     /**
      * @param string $MiniAppID 小程序AppID
-     * @param integer $Mode 诊断模式 1:基础诊断，2:深度诊断
+     * @param integer $Mode 诊断模式 1:基础诊断
      * @param string $MiniAppTestAccount 小程序测试账号(自有账号体系需提供,其他情况不需要)
      * @param string $MiniAppTestPwd 小程序测试密码(自有账号体系需提供,其他情况不需要)
      * @param string $Industry 小程序所属行业

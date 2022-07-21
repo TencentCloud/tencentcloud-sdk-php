@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdentityType(string $IdentityType) 设置验证类型，固定为DOMAIN
  * @method boolean getSendingEnabled() 获取是否已通过验证
  * @method void setSendingEnabled(boolean $SendingEnabled) 设置是否已通过验证
+ * @method integer getCurrentReputationLevel() 获取当前信誉等级
+ * @method void setCurrentReputationLevel(integer $CurrentReputationLevel) 设置当前信誉等级
+ * @method integer getDailyQuota() 获取当日最高发信量
+ * @method void setDailyQuota(integer $DailyQuota) 设置当日最高发信量
  */
 class EmailIdentity extends AbstractModel
 {
@@ -45,9 +49,21 @@ class EmailIdentity extends AbstractModel
     public $SendingEnabled;
 
     /**
+     * @var integer 当前信誉等级
+     */
+    public $CurrentReputationLevel;
+
+    /**
+     * @var integer 当日最高发信量
+     */
+    public $DailyQuota;
+
+    /**
      * @param string $IdentityName 发信域名
      * @param string $IdentityType 验证类型，固定为DOMAIN
      * @param boolean $SendingEnabled 是否已通过验证
+     * @param integer $CurrentReputationLevel 当前信誉等级
+     * @param integer $DailyQuota 当日最高发信量
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class EmailIdentity extends AbstractModel
 
         if (array_key_exists("SendingEnabled",$param) and $param["SendingEnabled"] !== null) {
             $this->SendingEnabled = $param["SendingEnabled"];
+        }
+
+        if (array_key_exists("CurrentReputationLevel",$param) and $param["CurrentReputationLevel"] !== null) {
+            $this->CurrentReputationLevel = $param["CurrentReputationLevel"];
+        }
+
+        if (array_key_exists("DailyQuota",$param) and $param["DailyQuota"] !== null) {
+            $this->DailyQuota = $param["DailyQuota"];
         }
     }
 }

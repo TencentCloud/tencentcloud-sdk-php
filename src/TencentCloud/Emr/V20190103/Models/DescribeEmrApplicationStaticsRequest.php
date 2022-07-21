@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取集群id
  * @method void setInstanceId(string $InstanceId) 设置集群id
- * @method integer getStartTime() 获取起始时间
- * @method void setStartTime(integer $StartTime) 设置起始时间
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
+ * @method integer getStartTime() 获取起始时间，时间戳（秒）
+ * @method void setStartTime(integer $StartTime) 设置起始时间，时间戳（秒）
+ * @method integer getEndTime() 获取结束时间，时间戳（秒）
+ * @method void setEndTime(integer $EndTime) 设置结束时间，时间戳（秒）
  * @method array getQueues() 获取过滤的队列名
  * @method void setQueues(array $Queues) 设置过滤的队列名
  * @method array getUsers() 获取过滤的用户名
@@ -51,12 +51,12 @@ class DescribeEmrApplicationStaticsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 起始时间
+     * @var integer 起始时间，时间戳（秒）
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间
+     * @var integer 结束时间，时间戳（秒）
      */
     public $EndTime;
 
@@ -102,8 +102,8 @@ class DescribeEmrApplicationStaticsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 集群id
-     * @param integer $StartTime 起始时间
-     * @param integer $EndTime 结束时间
+     * @param integer $StartTime 起始时间，时间戳（秒）
+     * @param integer $EndTime 结束时间，时间戳（秒）
      * @param array $Queues 过滤的队列名
      * @param array $Users 过滤的用户名
      * @param array $ApplicationTypes 过滤的作业类型

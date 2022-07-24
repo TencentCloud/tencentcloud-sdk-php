@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeys(array $TagKeys) 设置根据标签的Key筛选资源，不传或者传空数组则不进行过滤
  * @method array getProductVersions() 获取需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
  * @method void setProductVersions(array $ProductVersions) 设置需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+ * @method array getInstanceIds() 获取批量查询指定的实例
+ * @method void setInstanceIds(array $InstanceIds) 设置批量查询指定的实例
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -199,6 +201,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $ProductVersions;
 
     /**
+     * @var array 批量查询指定的实例
+     */
+    public $InstanceIds;
+
+    /**
      * @param integer $Limit 返回数量，参数默认值20，最大值为1000
      * @param integer $Offset 偏移量，取Limit整数倍
      * @param string $InstanceId 实例Id，如：crs-6ubhgouj
@@ -224,6 +231,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $InstanceTags 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
      * @param array $TagKeys 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
      * @param array $ProductVersions 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+     * @param array $InstanceIds 批量查询指定的实例
      */
     function __construct()
     {
@@ -341,6 +349,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("ProductVersions",$param) and $param["ProductVersions"] !== null) {
             $this->ProductVersions = $param["ProductVersions"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

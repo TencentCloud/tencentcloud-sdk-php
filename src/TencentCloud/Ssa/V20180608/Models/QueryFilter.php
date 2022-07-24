@@ -18,36 +18,36 @@ namespace TencentCloud\Ssa\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询参数
+ * 过滤条件
  *
- * @method string getFilterKey() 获取查询的字段
- * @method void setFilterKey(string $FilterKey) 设置查询的字段
- * @method string getFilterValue() 获取查询的值
- * @method void setFilterValue(string $FilterValue) 设置查询的值
- * @method integer getFilterOperatorType() 获取匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
- * @method void setFilterOperatorType(integer $FilterOperatorType) 设置匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
+ * @method string getFilterKey() 获取过滤key
+ * @method void setFilterKey(string $FilterKey) 设置过滤key
+ * @method integer getFilterOperatorType() 获取操作符(只支持32位)
+ * @method void setFilterOperatorType(integer $FilterOperatorType) 设置操作符(只支持32位)
+ * @method string getFilterValue() 获取过滤value
+ * @method void setFilterValue(string $FilterValue) 设置过滤value
  */
 class QueryFilter extends AbstractModel
 {
     /**
-     * @var string 查询的字段
+     * @var string 过滤key
      */
     public $FilterKey;
 
     /**
-     * @var string 查询的值
-     */
-    public $FilterValue;
-
-    /**
-     * @var integer 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
+     * @var integer 操作符(只支持32位)
      */
     public $FilterOperatorType;
 
     /**
-     * @param string $FilterKey 查询的字段
-     * @param string $FilterValue 查询的值
-     * @param integer $FilterOperatorType 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
+     * @var string 过滤value
+     */
+    public $FilterValue;
+
+    /**
+     * @param string $FilterKey 过滤key
+     * @param integer $FilterOperatorType 操作符(只支持32位)
+     * @param string $FilterValue 过滤value
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class QueryFilter extends AbstractModel
             $this->FilterKey = $param["FilterKey"];
         }
 
-        if (array_key_exists("FilterValue",$param) and $param["FilterValue"] !== null) {
-            $this->FilterValue = $param["FilterValue"];
-        }
-
         if (array_key_exists("FilterOperatorType",$param) and $param["FilterOperatorType"] !== null) {
             $this->FilterOperatorType = $param["FilterOperatorType"];
+        }
+
+        if (array_key_exists("FilterValue",$param) and $param["FilterValue"] !== null) {
+            $this->FilterValue = $param["FilterValue"];
         }
     }
 }

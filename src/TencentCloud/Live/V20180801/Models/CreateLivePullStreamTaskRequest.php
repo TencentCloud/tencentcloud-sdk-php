@@ -52,10 +52,10 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 6. 点播源请使用小文件，尽量时长保持在1小时内，较大文件打开和续播耗时较久，耗时超过15秒会有无法正常转推风险。
  * @method string getDomainName() 获取推流域名。
 将拉取过来的流推到该域名。
-注意：请使用已在云直播配置的推流域名。
+注意：如果目标地址为非云直播，且样式不同于云直播，请使用 ToUrl 传入完整推流地址，详细用法请参考 ToUrl 参数说明。
  * @method void setDomainName(string $DomainName) 设置推流域名。
 将拉取过来的流推到该域名。
-注意：请使用已在云直播配置的推流域名。
+注意：如果目标地址为非云直播，且样式不同于云直播，请使用 ToUrl 传入完整推流地址，详细用法请参考 ToUrl 参数说明。
  * @method string getAppName() 获取推流路径。
 将拉取过来的流推到该路径。
  * @method void setAppName(string $AppName) 设置推流路径。
@@ -207,7 +207,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
     /**
      * @var string 推流域名。
 将拉取过来的流推到该域名。
-注意：请使用已在云直播配置的推流域名。
+注意：如果目标地址为非云直播，且样式不同于云直播，请使用 ToUrl 传入完整推流地址，详细用法请参考 ToUrl 参数说明。
      */
     public $DomainName;
 
@@ -350,7 +350,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 6. 点播源请使用小文件，尽量时长保持在1小时内，较大文件打开和续播耗时较久，耗时超过15秒会有无法正常转推风险。
      * @param string $DomainName 推流域名。
 将拉取过来的流推到该域名。
-注意：请使用已在云直播配置的推流域名。
+注意：如果目标地址为非云直播，且样式不同于云直播，请使用 ToUrl 传入完整推流地址，详细用法请参考 ToUrl 参数说明。
      * @param string $AppName 推流路径。
 将拉取过来的流推到该路径。
      * @param string $StreamName 推流名称。

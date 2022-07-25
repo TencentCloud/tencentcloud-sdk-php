@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFolder请求参数结构体
  *
+ * @method string getFolderName() 获取新建文件夹名
+ * @method void setFolderName(string $FolderName) 设置新建文件夹名
+ * @method string getParentId() 获取新建文件夹的父目录ID
+ * @method void setParentId(string $ParentId) 设置新建文件夹的父目录ID
  * @method integer getFolderType() 获取文件夹类型，0是任务文件夹，1是依赖文件夹
  * @method void setFolderType(integer $FolderType) 设置文件夹类型，0是任务文件夹，1是依赖文件夹
  * @method string getWorkSpaceId() 获取工作空间 SerialId
@@ -27,6 +31,16 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreateFolderRequest extends AbstractModel
 {
+    /**
+     * @var string 新建文件夹名
+     */
+    public $FolderName;
+
+    /**
+     * @var string 新建文件夹的父目录ID
+     */
+    public $ParentId;
+
     /**
      * @var integer 文件夹类型，0是任务文件夹，1是依赖文件夹
      */
@@ -38,6 +52,8 @@ class CreateFolderRequest extends AbstractModel
     public $WorkSpaceId;
 
     /**
+     * @param string $FolderName 新建文件夹名
+     * @param string $ParentId 新建文件夹的父目录ID
      * @param integer $FolderType 文件夹类型，0是任务文件夹，1是依赖文件夹
      * @param string $WorkSpaceId 工作空间 SerialId
      */
@@ -54,6 +70,14 @@ class CreateFolderRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("FolderName",$param) and $param["FolderName"] !== null) {
+            $this->FolderName = $param["FolderName"];
+        }
+
+        if (array_key_exists("ParentId",$param) and $param["ParentId"] !== null) {
+            $this->ParentId = $param["ParentId"];
+        }
+
         if (array_key_exists("FolderType",$param) and $param["FolderType"] !== null) {
             $this->FolderType = $param["FolderType"];
         }

@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
  * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
+ * @method string getCamRoleName() 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+ * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
  * @method string getInstanceTypesCheckPolicy() 获取实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
 <br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
@@ -74,8 +76,8 @@ use TencentCloud\Common\AbstractModel;
 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
  * @method array getInstanceTags() 获取标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
  * @method void setInstanceTags(array $InstanceTags) 设置标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
- * @method string getCamRoleName() 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
- * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+ * @method array getTags() 获取标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
+ * @method void setTags(array $Tags) 设置标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
  * @method HostNameSettings getHostNameSettings() 获取云服务器主机名（HostName）的相关设置。
  * @method void setHostNameSettings(HostNameSettings $HostNameSettings) 设置云服务器主机名（HostName）的相关设置。
  * @method InstanceNameSettings getInstanceNameSettings() 获取云服务器实例名（InstanceName）的相关设置。
@@ -170,6 +172,11 @@ class CreateLaunchConfigurationRequest extends AbstractModel
     public $InstanceTypes;
 
     /**
+     * @var string CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     */
+    public $CamRoleName;
+
+    /**
      * @var string 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
 <br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
@@ -185,9 +192,9 @@ class CreateLaunchConfigurationRequest extends AbstractModel
     public $InstanceTags;
 
     /**
-     * @var string CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @var array 标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
      */
-    public $CamRoleName;
+    public $Tags;
 
     /**
      * @var HostNameSettings 云服务器主机名（HostName）的相关设置。
@@ -233,6 +240,7 @@ class CreateLaunchConfigurationRequest extends AbstractModel
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
      * @param array $InstanceTypes 实例机型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
 `InstanceType`和`InstanceTypes`参数互斥，二者必填一个且只能填写一个。
+     * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      * @param string $InstanceTypesCheckPolicy 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
 <br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
@@ -240,7 +248,7 @@ class CreateLaunchConfigurationRequest extends AbstractModel
 实例类型不可用的常见原因包括该实例类型售罄、对应云盘售罄等。
 如果 InstanceTypes 中一款机型不存在或者已下线，则无论 InstanceTypesCheckPolicy 采用何种取值，都会校验报错。
      * @param array $InstanceTags 标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
-     * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @param array $Tags 标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
      * @param HostNameSettings $HostNameSettings 云服务器主机名（HostName）的相关设置。
      * @param InstanceNameSettings $InstanceNameSettings 云服务器实例名（InstanceName）的相关设置。
 如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
@@ -328,6 +336,10 @@ class CreateLaunchConfigurationRequest extends AbstractModel
             $this->InstanceTypes = $param["InstanceTypes"];
         }
 
+        if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
+            $this->CamRoleName = $param["CamRoleName"];
+        }
+
         if (array_key_exists("InstanceTypesCheckPolicy",$param) and $param["InstanceTypesCheckPolicy"] !== null) {
             $this->InstanceTypesCheckPolicy = $param["InstanceTypesCheckPolicy"];
         }
@@ -341,8 +353,13 @@ class CreateLaunchConfigurationRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
-            $this->CamRoleName = $param["CamRoleName"];
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("HostNameSettings",$param) and $param["HostNameSettings"] !== null) {

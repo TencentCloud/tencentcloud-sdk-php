@@ -64,8 +64,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceTypes() 获取实例机型列表。
  * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表。
- * @method array getInstanceTags() 获取标签列表。
- * @method void setInstanceTags(array $InstanceTags) 设置标签列表。
+ * @method array getInstanceTags() 获取实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+ * @method void setInstanceTags(array $InstanceTags) 设置实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+ * @method array getTags() 获取标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVersionNumber() 获取版本号。
  * @method void setVersionNumber(integer $VersionNumber) 设置版本号。
  * @method string getUpdatedTime() 获取更新时间。
@@ -184,9 +188,15 @@ class LaunchConfiguration extends AbstractModel
     public $InstanceTypes;
 
     /**
-     * @var array 标签列表。
+     * @var array 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
      */
     public $InstanceTags;
+
+    /**
+     * @var array 标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
 
     /**
      * @var integer 版本号。
@@ -253,7 +263,9 @@ class LaunchConfiguration extends AbstractModel
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceTypes 实例机型列表。
-     * @param array $InstanceTags 标签列表。
+     * @param array $InstanceTags 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+     * @param array $Tags 标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VersionNumber 版本号。
      * @param string $UpdatedTime 更新时间。
      * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
@@ -371,6 +383,15 @@ class LaunchConfiguration extends AbstractModel
                 $obj = new InstanceTag();
                 $obj->deserialize($value);
                 array_push($this->InstanceTags, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
 

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CopyJobs请求参数结构体
  *
-
+ * @method array getJobItems() 获取复制明细列表
+ * @method void setJobItems(array $JobItems) 设置复制明细列表
+ * @method string getWorkSpaceId() 获取工作空间 SerialId
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
 class CopyJobsRequest extends AbstractModel
 {
-
+    /**
+     * @var array 复制明细列表
+     */
+    public $JobItems;
 
     /**
+     * @var string 工作空间 SerialId
+     */
+    public $WorkSpaceId;
 
+    /**
+     * @param array $JobItems 复制明细列表
+     * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class CopyJobsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("JobItems",$param) and $param["JobItems"] !== null) {
+            $this->JobItems = [];
+            foreach ($param["JobItems"] as $key => $value){
+                $obj = new CopyJobItem();
+                $obj->deserialize($value);
+                array_push($this->JobItems, $obj);
+            }
+        }
 
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
     }
 }

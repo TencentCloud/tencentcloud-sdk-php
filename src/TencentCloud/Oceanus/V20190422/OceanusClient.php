@@ -25,7 +25,6 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
 /**
  * @method Models\CheckSavepointResponse CheckSavepoint(Models\CheckSavepointRequest $req) 检查快照是否可用
  * @method Models\CopyJobsResponse CopyJobs(Models\CopyJobsRequest $req) 单条和批量复制作业
-https://iwiki.woa.com/pages/viewpage.action?pageId=1288112774
  * @method Models\CreateFolderResponse CreateFolder(Models\CreateFolderRequest $req) 作业列表页面新建文件夹请求
  * @method Models\CreateJobResponse CreateJob(Models\CreateJobRequest $req) 新建作业接口，一个 AppId 最多允许创建1000个作业
  * @method Models\CreateJobConfigResponse CreateJobConfig(Models\CreateJobConfigRequest $req) 创建作业配置，一个作业最多有100个配置版本

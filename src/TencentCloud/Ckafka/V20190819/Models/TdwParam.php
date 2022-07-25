@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBid(string $Bid) 设置Tdw的bid
  * @method string getTid() 获取Tdw的tid
  * @method void setTid(string $Tid) 设置Tdw的tid
+ * @method boolean getIsDomestic() 获取是否为国内站，默认true
+ * @method void setIsDomestic(boolean $IsDomestic) 设置是否为国内站，默认true
  */
 class TdwParam extends AbstractModel
 {
@@ -38,8 +40,14 @@ class TdwParam extends AbstractModel
     public $Tid;
 
     /**
+     * @var boolean 是否为国内站，默认true
+     */
+    public $IsDomestic;
+
+    /**
      * @param string $Bid Tdw的bid
      * @param string $Tid Tdw的tid
+     * @param boolean $IsDomestic 是否为国内站，默认true
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class TdwParam extends AbstractModel
 
         if (array_key_exists("Tid",$param) and $param["Tid"] !== null) {
             $this->Tid = $param["Tid"];
+        }
+
+        if (array_key_exists("IsDomestic",$param) and $param["IsDomestic"] !== null) {
+            $this->IsDomestic = $param["IsDomestic"];
         }
     }
 }

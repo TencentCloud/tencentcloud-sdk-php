@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFolder返回参数结构体
  *
+ * @method string getFolderId() 获取新建文件夹的唯一ID
+ * @method void setFolderId(string $FolderId) 设置新建文件夹的唯一ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateFolderResponse extends AbstractModel
 {
     /**
+     * @var string 新建文件夹的唯一ID
+     */
+    public $FolderId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param string $FolderId 新建文件夹的唯一ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class CreateFolderResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("FolderId",$param) and $param["FolderId"] !== null) {
+            $this->FolderId = $param["FolderId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

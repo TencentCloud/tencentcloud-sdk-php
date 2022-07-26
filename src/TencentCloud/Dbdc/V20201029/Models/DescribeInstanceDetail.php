@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method integer getProductId() 获取产品ID, 0:CDB, 1:TDSQL
  * @method void setProductId(integer $ProductId) 设置产品ID, 0:CDB, 1:TDSQL
- * @method integer getType() 获取集群类型, 0:公有云, 1:金融围笼
- * @method void setType(integer $Type) 设置集群类型, 0:公有云, 1:金融围笼
- * @method integer getHostType() 获取主机类型, 0:物理机, 1:cvm本地盘, 2:cvm云盘
- * @method void setHostType(integer $HostType) 设置主机类型, 0:物理机, 1:cvm本地盘, 2:cvm云盘
+ * @method integer getType() 获取集群类型, 0:公有云, 1:金融围笼, 2:CDC集群
+ * @method void setType(integer $Type) 设置集群类型, 0:公有云, 1:金融围笼, 2:CDC集群
+ * @method integer getHostType() 获取主机类型, 0:物理机, 1:CVM机型, 2:CDC机型
+ * @method void setHostType(integer $HostType) 设置主机类型, 0:物理机, 1:CVM机型, 2:CDC机型
  * @method integer getAutoRenewFlag() 获取自动续费标志, 0:未设置, 1:自动续费, 2:到期不续费
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志, 0:未设置, 1:自动续费, 2:到期不续费
  * @method integer getStatus() 获取集群状态
@@ -68,9 +68,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskAssignable(integer $DiskAssignable) 设置总可分配磁盘(单位:GB)
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
- * @method string getFenceId() 获取围笼ID
+ * @method string getFenceId() 获取金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFenceId(string $FenceId) 设置围笼ID
+ * @method void setFenceId(string $FenceId) 设置金融围笼ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterId() 获取所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterId(string $ClusterId) 设置所属集群ID(默认集群为空)
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeInstanceDetail extends AbstractModel
@@ -96,12 +100,12 @@ class DescribeInstanceDetail extends AbstractModel
     public $ProductId;
 
     /**
-     * @var integer 集群类型, 0:公有云, 1:金融围笼
+     * @var integer 集群类型, 0:公有云, 1:金融围笼, 2:CDC集群
      */
     public $Type;
 
     /**
-     * @var integer 主机类型, 0:物理机, 1:cvm本地盘, 2:cvm云盘
+     * @var integer 主机类型, 0:物理机, 1:CVM机型, 2:CDC机型
      */
     public $HostType;
 
@@ -196,18 +200,24 @@ class DescribeInstanceDetail extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 围笼ID
+     * @var string 金融围笼ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FenceId;
+
+    /**
+     * @var string 所属集群ID(默认集群为空)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterId;
 
     /**
      * @param string $InstanceId 独享集群实例Id
      * @param string $InstanceName 独享集群实例名称
      * @param string $Region 地域
      * @param integer $ProductId 产品ID, 0:CDB, 1:TDSQL
-     * @param integer $Type 集群类型, 0:公有云, 1:金融围笼
-     * @param integer $HostType 主机类型, 0:物理机, 1:cvm本地盘, 2:cvm云盘
+     * @param integer $Type 集群类型, 0:公有云, 1:金融围笼, 2:CDC集群
+     * @param integer $HostType 主机类型, 0:物理机, 1:CVM机型, 2:CDC机型
      * @param integer $AutoRenewFlag 自动续费标志, 0:未设置, 1:自动续费, 2:到期不续费
      * @param integer $Status 集群状态
      * @param string $StatusDesc 集群状态描述
@@ -226,7 +236,9 @@ class DescribeInstanceDetail extends AbstractModel
      * @param integer $DiskAssigned 总已分配磁盘(单位:GB)
      * @param integer $DiskAssignable 总可分配磁盘(单位:GB)
      * @param string $Zone 可用区
-     * @param string $FenceId 围笼ID
+     * @param string $FenceId 金融围笼ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterId 所属集群ID(默认集群为空)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -340,6 +352,10 @@ class DescribeInstanceDetail extends AbstractModel
 
         if (array_key_exists("FenceId",$param) and $param["FenceId"] !== null) {
             $this->FenceId = $param["FenceId"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

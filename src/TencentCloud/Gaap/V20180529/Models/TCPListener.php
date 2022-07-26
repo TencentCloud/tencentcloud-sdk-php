@@ -46,14 +46,8 @@ use TencentCloud\Common\AbstractModel;
 2表示销毁中；
 3表示源站调整中；
 4表示配置变更中。
- * @method string getScheduler() 获取监听器源站访问策略，其中：
-rr表示轮询；
-wrr表示加权轮询；
-lc表示最小连接数。
- * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：
-rr表示轮询；
-wrr表示加权轮询；
-lc表示最小连接数。
+ * @method string getScheduler() 获取监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+ * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
  * @method integer getConnectTimeout() 获取源站健康检查响应超时时间，单位：秒
  * @method void setConnectTimeout(integer $ConnectTimeout) 设置源站健康检查响应超时时间，单位：秒
  * @method integer getDelayLoop() 获取源站健康检查时间间隔，单位：秒
@@ -141,10 +135,7 @@ class TCPListener extends AbstractModel
     public $ListenerStatus;
 
     /**
-     * @var string 监听器源站访问策略，其中：
-rr表示轮询；
-wrr表示加权轮询；
-lc表示最小连接数。
+     * @var string 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public $Scheduler;
 
@@ -227,10 +218,7 @@ lc表示最小连接数。
 2表示销毁中；
 3表示源站调整中；
 4表示配置变更中。
-     * @param string $Scheduler 监听器源站访问策略，其中：
-rr表示轮询；
-wrr表示加权轮询；
-lc表示最小连接数。
+     * @param string $Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      * @param integer $ConnectTimeout 源站健康检查响应超时时间，单位：秒
      * @param integer $DelayLoop 源站健康检查时间间隔，单位：秒
      * @param integer $HealthCheck 监听器是否开启健康检查，其中：

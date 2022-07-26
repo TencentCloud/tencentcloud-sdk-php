@@ -76,9 +76,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置产品名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Ext getExt() 获取0
+ * @method Ext getExt() 获取未使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExt(Ext $Ext) 设置0
+ * @method void setExt(Ext $Ext) 设置未使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTplName() 获取模板名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -172,7 +172,7 @@ class CodeBatch extends AbstractModel
     public $ProductName;
 
     /**
-     * @var Ext 0
+     * @var Ext 未使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ext;
@@ -212,7 +212,7 @@ class CodeBatch extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 产品名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ext $Ext 0
+     * @param Ext $Ext 未使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TplName 模板名称
 注意：此字段可能返回 null，表示取不到有效值。

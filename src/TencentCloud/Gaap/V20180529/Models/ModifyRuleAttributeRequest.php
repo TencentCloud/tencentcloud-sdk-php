@@ -24,14 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) 设置监听器ID
  * @method string getRuleId() 获取转发规则ID
  * @method void setRuleId(string $RuleId) 设置转发规则ID
- * @method string getScheduler() 获取调度策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
- * @method void setScheduler(string $Scheduler) 设置调度策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+ * @method string getScheduler() 获取监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+ * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
  * @method integer getHealthCheck() 获取源站健康检查开关，其中：
 1，开启；
 0，关闭。
@@ -70,10 +64,7 @@ class ModifyRuleAttributeRequest extends AbstractModel
     public $RuleId;
 
     /**
-     * @var string 调度策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+     * @var string 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public $Scheduler;
 
@@ -124,10 +115,7 @@ lc，最小连接数。
     /**
      * @param string $ListenerId 监听器ID
      * @param string $RuleId 转发规则ID
-     * @param string $Scheduler 调度策略，其中：
-rr，轮询；
-wrr，加权轮询；
-lc，最小连接数。
+     * @param string $Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      * @param integer $HealthCheck 源站健康检查开关，其中：
 1，开启；
 0，关闭。

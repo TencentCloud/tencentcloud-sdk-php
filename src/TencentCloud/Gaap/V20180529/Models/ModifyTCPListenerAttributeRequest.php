@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyId(string $ProxyId) 设置通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
  * @method string getListenerName() 获取监听器名称
  * @method void setListenerName(string $ListenerName) 设置监听器名称
- * @method string getScheduler() 获取监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
- * @method void setScheduler(string $Scheduler) 设置监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+ * @method string getScheduler() 获取监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+ * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
  * @method integer getDelayLoop() 获取源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
  * @method void setDelayLoop(integer $DelayLoop) 设置源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
  * @method integer getConnectTimeout() 获取源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
@@ -66,7 +66,7 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
     public $ListenerName;
 
     /**
-     * @var string 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * @var string 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public $Scheduler;
 
@@ -105,7 +105,7 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
      * @param string $GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param string $ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param string $ListenerName 监听器名称
-     * @param string $Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * @param string $Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      * @param integer $DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
      * @param integer $ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
      * @param integer $HealthCheck 是否开启健康检查，1开启，0关闭。

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlow请求参数结构体
  *
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  * @method string getFlowName() 获取签署流程名称,最大长度200个字符
  * @method void setFlowName(string $FlowName) 设置签署流程名称,最大长度200个字符
  * @method array getApprovers() 获取签署流程参与者信息
  * @method void setApprovers(array $Approvers) 设置签署流程参与者信息
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method string getFlowType() 获取签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+ * @method void setFlowType(string $FlowType) 设置签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+ * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
+ * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
+ * @method string getCallbackUrl() 获取暂未开放
+ * @method void setCallbackUrl(string $CallbackUrl) 设置暂未开放
+ * @method integer getDeadLine() 获取签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+ * @method void setDeadLine(integer $DeadLine) 设置签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+ * @method string getUserData() 获取用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+ * @method void setUserData(string $UserData) 设置用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+ * @method string getFlowDescription() 获取签署流程描述,最大长度1000个字符
+ * @method void setFlowDescription(string $FlowDescription) 设置签署流程描述,最大长度1000个字符
  * @method boolean getUnordered() 获取发送类型：
 true：无序签
 false：有序签
@@ -36,27 +48,20 @@ false：有序签
 true：无序签
 false：有序签
 注：默认为false（有序签），请和模板中的配置保持一致
- * @method integer getDeadLine() 获取签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
- * @method void setDeadLine(integer $DeadLine) 设置签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
- * @method string getFlowType() 获取签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
- * @method void setFlowType(string $FlowType) 设置签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
- * @method string getUserData() 获取用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
- * @method void setUserData(string $UserData) 设置用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
- * @method string getFlowDescription() 获取签署流程描述,最大长度1000个字符
- * @method void setFlowDescription(string $FlowDescription) 设置签署流程描述,最大长度1000个字符
- * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
- * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
  * @method string getCustomShowMap() 获取合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method void setCustomShowMap(string $CustomShowMap) 设置合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method string getRelatedFlowId() 获取暂未开放
  * @method void setRelatedFlowId(string $RelatedFlowId) 设置暂未开放
- * @method string getCallbackUrl() 获取暂未开放
- * @method void setCallbackUrl(string $CallbackUrl) 设置暂未开放
+ * @method Agent getAgent() 获取应用相关信息
+ * @method void setAgent(Agent $Agent) 设置应用相关信息
  */
 class CreateFlowRequest extends AbstractModel
 {
+    /**
+     * @var UserInfo 调用方用户信息，userId 必填
+     */
+    public $Operator;
+
     /**
      * @var string 签署流程名称,最大长度200个字符
      */
@@ -68,33 +73,25 @@ class CreateFlowRequest extends AbstractModel
     public $Approvers;
 
     /**
-     * @var UserInfo 操作人信息
+     * @var string 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      */
-    public $Operator;
+    public $FlowType;
 
     /**
-     * @var Agent 应用相关信息
+     * @var string 客户端Token，保持接口幂等性,最大长度64个字符
      */
-    public $Agent;
+    public $ClientToken;
 
     /**
-     * @var boolean 发送类型：
-true：无序签
-false：有序签
-注：默认为false（有序签），请和模板中的配置保持一致
+     * @var string 暂未开放
      */
-    public $Unordered;
+    public $CallbackUrl;
 
     /**
      * @var integer 签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
      */
     public $DeadLine;
-
-    /**
-     * @var string 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     */
-    public $FlowType;
 
     /**
      * @var string 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
@@ -107,9 +104,12 @@ false：有序签
     public $FlowDescription;
 
     /**
-     * @var string 客户端Token，保持接口幂等性,最大长度64个字符
+     * @var boolean 发送类型：
+true：无序签
+false：有序签
+注：默认为false（有序签），请和模板中的配置保持一致
      */
-    public $ClientToken;
+    public $Unordered;
 
     /**
      * @var string 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
@@ -122,28 +122,28 @@ false：有序签
     public $RelatedFlowId;
 
     /**
-     * @var string 暂未开放
+     * @var Agent 应用相关信息
      */
-    public $CallbackUrl;
+    public $Agent;
 
     /**
+     * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署流程参与者信息
-     * @param UserInfo $Operator 操作人信息
-     * @param Agent $Agent 应用相关信息
+     * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
+     * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     * @param string $CallbackUrl 暂未开放
+     * @param integer $DeadLine 签署流程的签署截止时间。
+值为unix时间戳,精确到秒,不传默认为当前时间一年后
+     * @param string $UserData 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+     * @param string $FlowDescription 签署流程描述,最大长度1000个字符
      * @param boolean $Unordered 发送类型：
 true：无序签
 false：有序签
 注：默认为false（有序签），请和模板中的配置保持一致
-     * @param integer $DeadLine 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
-     * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     * @param string $UserData 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
-     * @param string $FlowDescription 签署流程描述,最大长度1000个字符
-     * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
      * @param string $RelatedFlowId 暂未开放
-     * @param string $CallbackUrl 暂未开放
+     * @param Agent $Agent 应用相关信息
      */
     function __construct()
     {
@@ -158,6 +158,11 @@ false：有序签
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
+        }
+
         if (array_key_exists("FlowName",$param) and $param["FlowName"] !== null) {
             $this->FlowName = $param["FlowName"];
         }
@@ -171,26 +176,20 @@ false：有序签
             }
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
+        if (array_key_exists("FlowType",$param) and $param["FlowType"] !== null) {
+            $this->FlowType = $param["FlowType"];
         }
 
-        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
-            $this->Agent = new Agent();
-            $this->Agent->deserialize($param["Agent"]);
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
 
-        if (array_key_exists("Unordered",$param) and $param["Unordered"] !== null) {
-            $this->Unordered = $param["Unordered"];
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
 
         if (array_key_exists("DeadLine",$param) and $param["DeadLine"] !== null) {
             $this->DeadLine = $param["DeadLine"];
-        }
-
-        if (array_key_exists("FlowType",$param) and $param["FlowType"] !== null) {
-            $this->FlowType = $param["FlowType"];
         }
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
@@ -201,8 +200,8 @@ false：有序签
             $this->FlowDescription = $param["FlowDescription"];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists("Unordered",$param) and $param["Unordered"] !== null) {
+            $this->Unordered = $param["Unordered"];
         }
 
         if (array_key_exists("CustomShowMap",$param) and $param["CustomShowMap"] !== null) {
@@ -213,8 +212,9 @@ false：有序签
             $this->RelatedFlowId = $param["RelatedFlowId"];
         }
 
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

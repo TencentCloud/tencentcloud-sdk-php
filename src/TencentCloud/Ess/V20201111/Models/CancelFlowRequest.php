@@ -20,17 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CancelFlow请求参数结构体
  *
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  * @method string getFlowId() 获取签署流程id
  * @method void setFlowId(string $FlowId) 设置签署流程id
  * @method string getCancelMessage() 获取撤销原因，最长200个字符；
  * @method void setCancelMessage(string $CancelMessage) 设置撤销原因，最长200个字符；
- * @method UserInfo getOperator() 获取操作用户id
- * @method void setOperator(UserInfo $Operator) 设置操作用户id
  * @method Agent getAgent() 获取应用相关信息
  * @method void setAgent(Agent $Agent) 设置应用相关信息
  */
 class CancelFlowRequest extends AbstractModel
 {
+    /**
+     * @var UserInfo 调用方用户信息，userId 必填
+     */
+    public $Operator;
+
     /**
      * @var string 签署流程id
      */
@@ -42,19 +47,14 @@ class CancelFlowRequest extends AbstractModel
     public $CancelMessage;
 
     /**
-     * @var UserInfo 操作用户id
-     */
-    public $Operator;
-
-    /**
      * @var Agent 应用相关信息
      */
     public $Agent;
 
     /**
+     * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $FlowId 签署流程id
      * @param string $CancelMessage 撤销原因，最长200个字符；
-     * @param UserInfo $Operator 操作用户id
      * @param Agent $Agent 应用相关信息
      */
     function __construct()
@@ -70,17 +70,17 @@ class CancelFlowRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
+        }
+
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("CancelMessage",$param) and $param["CancelMessage"] !== null) {
             $this->CancelMessage = $param["CancelMessage"];
-        }
-
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
         }
 
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {

@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAnycastOutPackRelation(AnycastOutPackRelation $AnycastOutPackRelation) 设置资产实例所属的全力防护套餐包详情，
 注意：当资产实例不是全力防护套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceVersion() 获取资源实例版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceVersion(integer $InstanceVersion) 设置资源实例版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -250,6 +254,12 @@ class BGPIPInstance extends AbstractModel
     public $AnycastOutPackRelation;
 
     /**
+     * @var integer 资源实例版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceVersion;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPIPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPIPInstanceUsages $Usage 资产实例的使用统计信息
@@ -295,6 +305,8 @@ class BGPIPInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AnycastOutPackRelation $AnycastOutPackRelation 资产实例所属的全力防护套餐包详情，
 注意：当资产实例不是全力防护套餐包的实例时，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceVersion 资源实例版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -410,6 +422,10 @@ class BGPIPInstance extends AbstractModel
         if (array_key_exists("AnycastOutPackRelation",$param) and $param["AnycastOutPackRelation"] !== null) {
             $this->AnycastOutPackRelation = new AnycastOutPackRelation();
             $this->AnycastOutPackRelation->deserialize($param["AnycastOutPackRelation"]);
+        }
+
+        if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
+            $this->InstanceVersion = $param["InstanceVersion"];
         }
     }
 }

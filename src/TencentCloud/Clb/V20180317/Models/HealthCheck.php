@@ -49,9 +49,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpCheckPath(string $HttpCheckPath) 设置健康检查路径（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHttpCheckDomain() 获取健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
+ * @method string getHttpCheckDomain() 获取健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式，当监听器是TCP类型时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttpCheckDomain(string $HttpCheckDomain) 设置健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
+ * @method void setHttpCheckDomain(string $HttpCheckDomain) 设置健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式，当监听器是TCP类型时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHttpCheckMethod() 获取健康检查方法（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式），默认值：HEAD，可选值HEAD或GET。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -135,7 +135,7 @@ class HealthCheck extends AbstractModel
     public $HttpCheckPath;
 
     /**
-     * @var string 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
+     * @var string 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式，当监听器是TCP类型时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpCheckDomain;
@@ -209,7 +209,7 @@ class HealthCheck extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HttpCheckPath 健康检查路径（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式）。
+     * @param string $HttpCheckDomain 健康检查域名（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式，当监听器是TCP类型时，该参数为必填项）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HttpCheckMethod 健康检查方法（仅适用于HTTP/HTTPS转发规则、TCP监听器的HTTP健康检查方式），默认值：HEAD，可选值HEAD或GET。
 注意：此字段可能返回 null，表示取不到有效值。

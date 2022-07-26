@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAmountBeforeTax(string $AmountBeforeTax) 设置税前金额
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAmountBeforeTaxWithTwoDigitPrecision() 获取两位精度税前金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAmountBeforeTaxWithTwoDigitPrecision(string $AmountBeforeTaxWithTwoDigitPrecision) 设置两位精度税前金额
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AmountBeforeTaxResult extends AbstractModel
 {
@@ -34,7 +38,15 @@ class AmountBeforeTaxResult extends AbstractModel
     public $AmountBeforeTax;
 
     /**
+     * @var string 两位精度税前金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AmountBeforeTaxWithTwoDigitPrecision;
+
+    /**
      * @param string $AmountBeforeTax 税前金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AmountBeforeTaxWithTwoDigitPrecision 两位精度税前金额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +64,10 @@ class AmountBeforeTaxResult extends AbstractModel
         }
         if (array_key_exists("AmountBeforeTax",$param) and $param["AmountBeforeTax"] !== null) {
             $this->AmountBeforeTax = $param["AmountBeforeTax"];
+        }
+
+        if (array_key_exists("AmountBeforeTaxWithTwoDigitPrecision",$param) and $param["AmountBeforeTaxWithTwoDigitPrecision"] !== null) {
+            $this->AmountBeforeTaxWithTwoDigitPrecision = $param["AmountBeforeTaxWithTwoDigitPrecision"];
         }
     }
 }

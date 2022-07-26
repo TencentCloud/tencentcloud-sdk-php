@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscriptionName(string $SubscriptionName) 设置订阅者的名字
  * @method integer getReceiverQueueSize() 获取默认值为1000，consumer接收的消息会首先存储到receiverQueueSize这个队列中，用作调优接收消息的速率
  * @method void setReceiverQueueSize(integer $ReceiverQueueSize) 设置默认值为1000，consumer接收的消息会首先存储到receiverQueueSize这个队列中，用作调优接收消息的速率
- * @method string getSubInitialPosition() 获取默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
- * @method void setSubInitialPosition(string $SubInitialPosition) 设置默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
+ * @method string getSubInitialPosition() 获取默认值为：Earliest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
+ * @method void setSubInitialPosition(string $SubInitialPosition) 设置默认值为：Earliest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
  * @method integer getMaxNumMessages() 获取用于设置BatchReceivePolicy，指在一次batch中最多接收多少条消息，默认是 0。即不开启BatchReceivePolicy
  * @method void setMaxNumMessages(integer $MaxNumMessages) 设置用于设置BatchReceivePolicy，指在一次batch中最多接收多少条消息，默认是 0。即不开启BatchReceivePolicy
  * @method integer getMaxNumBytes() 获取用于设置BatchReceivePolicy，指在一次batch中最多接收的消息体有多大，单位是 bytes。默认是 0，即不开启BatchReceivePolicy
@@ -53,7 +53,7 @@ class ReceiveMessageRequest extends AbstractModel
     public $ReceiverQueueSize;
 
     /**
-     * @var string 默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
+     * @var string 默认值为：Earliest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
      */
     public $SubInitialPosition;
 
@@ -76,7 +76,7 @@ class ReceiveMessageRequest extends AbstractModel
      * @param string $Topic 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
      * @param string $SubscriptionName 订阅者的名字
      * @param integer $ReceiverQueueSize 默认值为1000，consumer接收的消息会首先存储到receiverQueueSize这个队列中，用作调优接收消息的速率
-     * @param string $SubInitialPosition 默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
+     * @param string $SubInitialPosition 默认值为：Earliest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
      * @param integer $MaxNumMessages 用于设置BatchReceivePolicy，指在一次batch中最多接收多少条消息，默认是 0。即不开启BatchReceivePolicy
      * @param integer $MaxNumBytes 用于设置BatchReceivePolicy，指在一次batch中最多接收的消息体有多大，单位是 bytes。默认是 0，即不开启BatchReceivePolicy
      * @param integer $Timeout 用于设置BatchReceivePolicy，指在一次batch消息的接收z中最多等待的超时时间，单位是毫秒。默认是 0，即不开启BatchReceivePolicy

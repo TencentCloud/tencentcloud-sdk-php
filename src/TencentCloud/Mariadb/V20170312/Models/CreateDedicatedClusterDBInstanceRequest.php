@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMasterHostId(string $MasterHostId) 设置指定主节点uuid，不填随机分配
  * @method array getSlaveHostIds() 获取指定从节点uuid，不填随机分配
  * @method void setSlaveHostIds(array $SlaveHostIds) 设置指定从节点uuid，不填随机分配
+ * @method string getRollbackInstanceId() 获取需要回档的源实例ID
+ * @method void setRollbackInstanceId(string $RollbackInstanceId) 设置需要回档的源实例ID
+ * @method string getRollbackTime() 获取回档时间
+ * @method void setRollbackTime(string $RollbackTime) 设置回档时间
  */
 class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
 {
@@ -185,6 +189,16 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
     public $SlaveHostIds;
 
     /**
+     * @var string 需要回档的源实例ID
+     */
+    public $RollbackInstanceId;
+
+    /**
+     * @var string 回档时间
+     */
+    public $RollbackTime;
+
+    /**
      * @param integer $GoodsNum 分配实例个数
      * @param integer $Memory 內存大小，单位GB
      * @param integer $Storage 磁盘大小，单位GB
@@ -208,6 +222,8 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
      * @param integer $NodeNum 实例节点数
      * @param string $MasterHostId 指定主节点uuid，不填随机分配
      * @param array $SlaveHostIds 指定从节点uuid，不填随机分配
+     * @param string $RollbackInstanceId 需要回档的源实例ID
+     * @param string $RollbackTime 回档时间
      */
     function __construct()
     {
@@ -322,6 +338,14 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("SlaveHostIds",$param) and $param["SlaveHostIds"] !== null) {
             $this->SlaveHostIds = $param["SlaveHostIds"];
+        }
+
+        if (array_key_exists("RollbackInstanceId",$param) and $param["RollbackInstanceId"] !== null) {
+            $this->RollbackInstanceId = $param["RollbackInstanceId"];
+        }
+
+        if (array_key_exists("RollbackTime",$param) and $param["RollbackTime"] !== null) {
+            $this->RollbackTime = $param["RollbackTime"];
         }
     }
 }

@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMethod(string $Method) 设置HTTP请求方式，取值[HEAD,GET]
  * @method integer getStatusCode() 获取健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
  * @method void setStatusCode(integer $StatusCode) 设置健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+ * @method integer getProtocolFlag() 获取是否同时下发http和https规则健康检查配置
+ * @method void setProtocolFlag(integer $ProtocolFlag) 设置是否同时下发http和https规则健康检查配置
+ * @method integer getPassiveEnable() 获取被动探测开关，=1表示开启；=0表示关闭
+ * @method void setPassiveEnable(integer $PassiveEnable) 设置被动探测开关，=1表示开启；=0表示关闭
+ * @method integer getBlockInter() 获取被动探测不健康屏蔽时间
+ * @method void setBlockInter(integer $BlockInter) 设置被动探测不健康屏蔽时间
+ * @method integer getFailedCountInter() 获取被动探测不健康统计间隔
+ * @method void setFailedCountInter(integer $FailedCountInter) 设置被动探测不健康统计间隔
+ * @method integer getFailedThreshold() 获取被动探测不健康阈值
+ * @method void setFailedThreshold(integer $FailedThreshold) 设置被动探测不健康阈值
+ * @method integer getPassiveStatusCode() 获取被动探测判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+ * @method void setPassiveStatusCode(integer $PassiveStatusCode) 设置被动探测判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
  */
 class L7RuleHealth extends AbstractModel
 {
@@ -87,6 +99,36 @@ class L7RuleHealth extends AbstractModel
     public $StatusCode;
 
     /**
+     * @var integer 是否同时下发http和https规则健康检查配置
+     */
+    public $ProtocolFlag;
+
+    /**
+     * @var integer 被动探测开关，=1表示开启；=0表示关闭
+     */
+    public $PassiveEnable;
+
+    /**
+     * @var integer 被动探测不健康屏蔽时间
+     */
+    public $BlockInter;
+
+    /**
+     * @var integer 被动探测不健康统计间隔
+     */
+    public $FailedCountInter;
+
+    /**
+     * @var integer 被动探测不健康阈值
+     */
+    public $FailedThreshold;
+
+    /**
+     * @var integer 被动探测判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+     */
+    public $PassiveStatusCode;
+
+    /**
      * @param integer $Status 配置状态，0： 正常，1：配置中，2：配置失败
      * @param integer $Enable =1表示开启；=0表示关闭
      * @param string $RuleId 规则ID
@@ -96,6 +138,12 @@ class L7RuleHealth extends AbstractModel
      * @param integer $KickNum 不健康阈值，单位次
      * @param string $Method HTTP请求方式，取值[HEAD,GET]
      * @param integer $StatusCode 健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+     * @param integer $ProtocolFlag 是否同时下发http和https规则健康检查配置
+     * @param integer $PassiveEnable 被动探测开关，=1表示开启；=0表示关闭
+     * @param integer $BlockInter 被动探测不健康屏蔽时间
+     * @param integer $FailedCountInter 被动探测不健康统计间隔
+     * @param integer $FailedThreshold 被动探测不健康阈值
+     * @param integer $PassiveStatusCode 被动探测判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
      */
     function __construct()
     {
@@ -144,6 +192,30 @@ class L7RuleHealth extends AbstractModel
 
         if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
             $this->StatusCode = $param["StatusCode"];
+        }
+
+        if (array_key_exists("ProtocolFlag",$param) and $param["ProtocolFlag"] !== null) {
+            $this->ProtocolFlag = $param["ProtocolFlag"];
+        }
+
+        if (array_key_exists("PassiveEnable",$param) and $param["PassiveEnable"] !== null) {
+            $this->PassiveEnable = $param["PassiveEnable"];
+        }
+
+        if (array_key_exists("BlockInter",$param) and $param["BlockInter"] !== null) {
+            $this->BlockInter = $param["BlockInter"];
+        }
+
+        if (array_key_exists("FailedCountInter",$param) and $param["FailedCountInter"] !== null) {
+            $this->FailedCountInter = $param["FailedCountInter"];
+        }
+
+        if (array_key_exists("FailedThreshold",$param) and $param["FailedThreshold"] !== null) {
+            $this->FailedThreshold = $param["FailedThreshold"];
+        }
+
+        if (array_key_exists("PassiveStatusCode",$param) and $param["PassiveStatusCode"] !== null) {
+            $this->PassiveStatusCode = $param["PassiveStatusCode"];
         }
     }
 }

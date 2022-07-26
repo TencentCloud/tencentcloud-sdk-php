@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisk(integer $Disk) 设置磁盘规格(单位:GB)
  * @method integer getShardNum() 获取分布式类型的实例的分片数
  * @method void setShardNum(integer $ShardNum) 设置分布式类型的实例的分片数
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getDbHosts() 获取Db所在主机列表, 格式: m1,s1|m2,s2
@@ -58,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostRole(integer $HostRole) 设置主机角色, 1:主, 2:从, 3:主+从
  * @method string getDbEngine() 获取DB引擎，MySQL,Percona,MariaDB
  * @method void setDbEngine(string $DbEngine) 设置DB引擎，MySQL,Percona,MariaDB
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
  */
 class DBInstanceDetail extends AbstractModel
 {
@@ -137,6 +141,11 @@ class DBInstanceDetail extends AbstractModel
     public $ShardNum;
 
     /**
+     * @var string 地域
+     */
+    public $Region;
+
+    /**
      * @var string 可用区
      */
     public $Zone;
@@ -157,6 +166,11 @@ class DBInstanceDetail extends AbstractModel
     public $DbEngine;
 
     /**
+     * @var string 创建时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $InstanceId DB实例Id
      * @param string $InstanceName DB实例名称
      * @param integer $Status DB实例状态,-1:已隔离, 0:创建中, 1:流程中, 2:运行中, 3:未初始化
@@ -172,10 +186,12 @@ class DBInstanceDetail extends AbstractModel
      * @param integer $Memory 内存规格(单位:GB)
      * @param integer $Disk 磁盘规格(单位:GB)
      * @param integer $ShardNum 分布式类型的实例的分片数
+     * @param string $Region 地域
      * @param string $Zone 可用区
      * @param string $DbHosts Db所在主机列表, 格式: m1,s1|m2,s2
      * @param integer $HostRole 主机角色, 1:主, 2:从, 3:主+从
      * @param string $DbEngine DB引擎，MySQL,Percona,MariaDB
+     * @param string $CreateTime 创建时间
      */
     function __construct()
     {
@@ -250,6 +266,10 @@ class DBInstanceDetail extends AbstractModel
             $this->ShardNum = $param["ShardNum"];
         }
 
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
         }
@@ -264,6 +284,10 @@ class DBInstanceDetail extends AbstractModel
 
         if (array_key_exists("DbEngine",$param) and $param["DbEngine"] !== null) {
             $this->DbEngine = $param["DbEngine"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

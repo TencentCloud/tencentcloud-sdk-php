@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFenceId(array $FenceId) 设置按金融围笼ID过滤
  * @method array getStatus() 获取按实例状态过滤, -1:已隔离, 0:创建中, 1:运行中, 2:扩容中, 3:删除中
  * @method void setStatus(array $Status) 设置按实例状态过滤, -1:已隔离, 0:创建中, 1:运行中, 2:扩容中, 3:删除中
+ * @method array getClusterId() 获取按所属集群ID过滤
+ * @method void setClusterId(array $ClusterId) 设置按所属集群ID过滤
  */
 class DescribeInstanceListRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeInstanceListRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var array 按所属集群ID过滤
+     */
+    public $ClusterId;
+
+    /**
      * @param integer $Limit 分页返回数量
      * @param integer $Offset 分页偏移量
      * @param string $OrderBy 排序字段，createTime,instancename两者之一
@@ -96,6 +103,7 @@ class DescribeInstanceListRequest extends AbstractModel
      * @param array $InstanceName 按实例名称过滤
      * @param array $FenceId 按金融围笼ID过滤
      * @param array $Status 按实例状态过滤, -1:已隔离, 0:创建中, 1:运行中, 2:扩容中, 3:删除中
+     * @param array $ClusterId 按所属集群ID过滤
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeInstanceListRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

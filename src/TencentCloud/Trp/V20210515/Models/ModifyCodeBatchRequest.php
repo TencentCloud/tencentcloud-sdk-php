@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置状态 0: 未激活 1: 已激活 -1: 已冻结
  * @method string getMpTpl() 获取模板ID
  * @method void setMpTpl(string $MpTpl) 设置模板ID
+ * @method string getMerchantId() 获取商户ID
+ * @method void setMerchantId(string $MerchantId) 设置商户ID
+ * @method string getProductId() 获取商品ID
+ * @method void setProductId(string $ProductId) 设置商品ID
+ * @method string getRemark() 获取备注
+ * @method void setRemark(string $Remark) 设置备注
  */
 class ModifyCodeBatchRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class ModifyCodeBatchRequest extends AbstractModel
     public $MpTpl;
 
     /**
+     * @var string 商户ID
+     */
+    public $MerchantId;
+
+    /**
+     * @var string 商品ID
+     */
+    public $ProductId;
+
+    /**
+     * @var string 备注
+     */
+    public $Remark;
+
+    /**
      * @param string $BatchId 批次ID
      * @param integer $CorpId 企业ID
      * @param integer $Status 状态 0: 未激活 1: 已激活 -1: 已冻结
      * @param string $MpTpl 模板ID
+     * @param string $MerchantId 商户ID
+     * @param string $ProductId 商品ID
+     * @param string $Remark 备注
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class ModifyCodeBatchRequest extends AbstractModel
 
         if (array_key_exists("MpTpl",$param) and $param["MpTpl"] !== null) {
             $this->MpTpl = $param["MpTpl"];
+        }
+
+        if (array_key_exists("MerchantId",$param) and $param["MerchantId"] !== null) {
+            $this->MerchantId = $param["MerchantId"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

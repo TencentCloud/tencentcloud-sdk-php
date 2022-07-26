@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置转发规则的路径
  * @method string getRealServerType() 获取转发规则对应源站的类型，支持IP和DOMAIN类型。
  * @method void setRealServerType(string $RealServerType) 设置转发规则对应源站的类型，支持IP和DOMAIN类型。
- * @method string getScheduler() 获取规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
- * @method void setScheduler(string $Scheduler) 设置规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+ * @method string getScheduler() 获取监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+ * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
  * @method integer getHealthCheck() 获取规则是否开启健康检查，1开启，0关闭。
  * @method void setHealthCheck(integer $HealthCheck) 设置规则是否开启健康检查，1开启，0关闭。
  * @method RuleCheckParams getCheckParams() 获取源站健康检查相关参数
@@ -70,7 +70,7 @@ class CreateRuleRequest extends AbstractModel
     public $RealServerType;
 
     /**
-     * @var string 规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * @var string 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public $Scheduler;
 
@@ -115,7 +115,7 @@ class CreateRuleRequest extends AbstractModel
      * @param string $Domain 转发规则的域名
      * @param string $Path 转发规则的路径
      * @param string $RealServerType 转发规则对应源站的类型，支持IP和DOMAIN类型。
-     * @param string $Scheduler 规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * @param string $Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      * @param integer $HealthCheck 规则是否开启健康检查，1开启，0关闭。
      * @param RuleCheckParams $CheckParams 源站健康检查相关参数
      * @param string $ForwardProtocol 加速通道转发到源站的协议类型：支持HTTP或HTTPS。

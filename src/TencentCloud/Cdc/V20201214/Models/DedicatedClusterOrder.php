@@ -62,6 +62,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayStatus(integer $PayStatus) 设置0代表未支付，1代表已支付
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayType() 获取支付方式，一次性、按月、按年
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayType(string $PayType) 设置支付方式，一次性、按月、按年
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTimeUnit() 获取购买时长的单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimeUnit(string $TimeUnit) 设置购买时长的单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTimeSpan() 获取购买时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimeSpan(integer $TimeSpan) 设置购买时长
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DedicatedClusterOrder extends AbstractModel
 {
@@ -151,6 +163,24 @@ class DedicatedClusterOrder extends AbstractModel
     public $PayStatus;
 
     /**
+     * @var string 支付方式，一次性、按月、按年
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayType;
+
+    /**
+     * @var string 购买时长的单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TimeUnit;
+
+    /**
+     * @var integer 购买时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TimeSpan;
+
+    /**
      * @param string $DedicatedClusterId 专用集群id
      * @param string $DedicatedClusterTypeId 专用集群类型id（移到下一层级，已经废弃，后续将删除）
      * @param array $SupportedStorageType 支持的存储类型列表（移到下一层级，已经废弃，后续将删除）
@@ -171,6 +201,12 @@ class DedicatedClusterOrder extends AbstractModel
      * @param integer $Gpu gpu值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayStatus 0代表未支付，1代表已支付
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayType 支付方式，一次性、按月、按年
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TimeUnit 购买时长的单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TimeSpan 购买时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -253,6 +289,18 @@ class DedicatedClusterOrder extends AbstractModel
 
         if (array_key_exists("PayStatus",$param) and $param["PayStatus"] !== null) {
             $this->PayStatus = $param["PayStatus"];
+        }
+
+        if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
+            $this->PayType = $param["PayType"];
+        }
+
+        if (array_key_exists("TimeUnit",$param) and $param["TimeUnit"] !== null) {
+            $this->TimeUnit = $param["TimeUnit"];
+        }
+
+        if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
+            $this->TimeSpan = $param["TimeSpan"];
         }
     }
 }

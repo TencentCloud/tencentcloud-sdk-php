@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskID(string $TaskID) 设置任务id
  * @method integer getTaskType() 获取任务类型, 0:基础版, 1:专家版, 2:本地化
  * @method void setTaskType(integer $TaskType) 设置任务类型, 0:基础版, 1:专家版, 2:本地化
- * @method integer getReportType() 获取报告类型, 0:诊断报告, 1:堆栈报告
- * @method void setReportType(integer $ReportType) 设置报告类型, 0:诊断报告, 1:堆栈报告
+ * @method integer getReportType() 获取报告类型, 0:诊断报告, 1:堆栈报告, 2:视频证据(预留), 3:报告json结果
+ * @method void setReportType(integer $ReportType) 设置报告类型, 0:诊断报告, 1:堆栈报告, 2:视频证据(预留), 3:报告json结果
  */
 class DescribeScanTaskReportUrlRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeScanTaskReportUrlRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var integer 报告类型, 0:诊断报告, 1:堆栈报告
+     * @var integer 报告类型, 0:诊断报告, 1:堆栈报告, 2:视频证据(预留), 3:报告json结果
      */
     public $ReportType;
 
@@ -63,7 +63,7 @@ class DescribeScanTaskReportUrlRequest extends AbstractModel
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
      * @param string $TaskID 任务id
      * @param integer $TaskType 任务类型, 0:基础版, 1:专家版, 2:本地化
-     * @param integer $ReportType 报告类型, 0:诊断报告, 1:堆栈报告
+     * @param integer $ReportType 报告类型, 0:诊断报告, 1:堆栈报告, 2:视频证据(预留), 3:报告json结果
      */
     function __construct()
     {

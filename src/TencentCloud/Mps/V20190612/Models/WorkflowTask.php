@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
- * @method integer getErrCode() 获取已弃用，请使用各个具体任务的 ErrCode。
- * @method void setErrCode(integer $ErrCode) 设置已弃用，请使用各个具体任务的 ErrCode。
- * @method string getMessage() 获取已弃用，请使用各个具体任务的 Message。
- * @method void setMessage(string $Message) 设置已弃用，请使用各个具体任务的 Message。
+ * @method integer getErrCode() 获取源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+ * @method void setErrCode(integer $ErrCode) 设置源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+ * @method string getMessage() 获取源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+ * @method void setMessage(string $Message) 设置源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
  * @method MediaInputInfo getInputInfo() 获取媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputInfo(MediaInputInfo $InputInfo) 设置媒体处理的目标文件信息。
@@ -64,12 +64,12 @@ class WorkflowTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 已弃用，请使用各个具体任务的 ErrCode。
+     * @var integer 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
      */
     public $ErrCode;
 
     /**
-     * @var string 已弃用，请使用各个具体任务的 Message。
+     * @var string 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
      */
     public $Message;
 
@@ -110,8 +110,8 @@ class WorkflowTask extends AbstractModel
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-     * @param integer $ErrCode 已弃用，请使用各个具体任务的 ErrCode。
-     * @param string $Message 已弃用，请使用各个具体任务的 Message。
+     * @param integer $ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+     * @param string $Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
      * @param MediaInputInfo $InputInfo 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 原始视频的元信息。

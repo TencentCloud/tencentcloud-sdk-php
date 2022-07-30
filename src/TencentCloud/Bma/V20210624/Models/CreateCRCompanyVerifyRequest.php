@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCompanyName() 获取企业名称
  * @method void setCompanyName(string $CompanyName) 设置企业名称
+ * @method string getCompanyIDType() 获取企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+ * @method void setCompanyIDType(string $CompanyIDType) 设置企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
  * @method string getCompanyID() 获取企业证件号码
  * @method void setCompanyID(string $CompanyID) 设置企业证件号码
  * @method string getCompanyLegalName() 获取企业法人姓名
@@ -32,8 +34,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManagerPhone(string $ManagerPhone) 设置管理员手机号
  * @method string getVerificationCode() 获取手机验证码
  * @method void setVerificationCode(string $VerificationCode) 设置手机验证码
- * @method string getCompanyIDType() 获取企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
- * @method void setCompanyIDType(string $CompanyIDType) 设置企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
  * @method string getType() 获取xxx
  * @method void setType(string $Type) 设置xxx
  */
@@ -43,6 +43,11 @@ class CreateCRCompanyVerifyRequest extends AbstractModel
      * @var string 企业名称
      */
     public $CompanyName;
+
+    /**
+     * @var string 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+     */
+    public $CompanyIDType;
 
     /**
      * @var string 企业证件号码
@@ -70,23 +75,18 @@ class CreateCRCompanyVerifyRequest extends AbstractModel
     public $VerificationCode;
 
     /**
-     * @var string 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
-     */
-    public $CompanyIDType;
-
-    /**
      * @var string xxx
      */
     public $Type;
 
     /**
      * @param string $CompanyName 企业名称
+     * @param string $CompanyIDType 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
      * @param string $CompanyID 企业证件号码
      * @param string $CompanyLegalName 企业法人姓名
      * @param string $ManagerName 管理员名称
      * @param string $ManagerPhone 管理员手机号
      * @param string $VerificationCode 手机验证码
-     * @param string $CompanyIDType 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
      * @param string $Type xxx
      */
     function __construct()
@@ -104,6 +104,10 @@ class CreateCRCompanyVerifyRequest extends AbstractModel
         }
         if (array_key_exists("CompanyName",$param) and $param["CompanyName"] !== null) {
             $this->CompanyName = $param["CompanyName"];
+        }
+
+        if (array_key_exists("CompanyIDType",$param) and $param["CompanyIDType"] !== null) {
+            $this->CompanyIDType = $param["CompanyIDType"];
         }
 
         if (array_key_exists("CompanyID",$param) and $param["CompanyID"] !== null) {
@@ -124,10 +128,6 @@ class CreateCRCompanyVerifyRequest extends AbstractModel
 
         if (array_key_exists("VerificationCode",$param) and $param["VerificationCode"] !== null) {
             $this->VerificationCode = $param["VerificationCode"];
-        }
-
-        if (array_key_exists("CompanyIDType",$param) and $param["CompanyIDType"] !== null) {
-            $this->CompanyIDType = $param["CompanyIDType"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {

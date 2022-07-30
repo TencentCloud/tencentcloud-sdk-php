@@ -108,6 +108,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\DescribeEdgeCVMInstancesResponse DescribeEdgeCVMInstances(Models\DescribeEdgeCVMInstancesRequest $req) 获取边缘容器CVM实例相关信息
  * @method Models\DescribeEdgeClusterExtraArgsResponse DescribeEdgeClusterExtraArgs(Models\DescribeEdgeClusterExtraArgsRequest $req) 查询边缘集群自定义参数
  * @method Models\DescribeEdgeClusterInstancesResponse DescribeEdgeClusterInstances(Models\DescribeEdgeClusterInstancesRequest $req) 查询边缘计算集群的节点信息
+ * @method Models\DescribeEdgeLogSwitchesResponse DescribeEdgeLogSwitches(Models\DescribeEdgeLogSwitchesRequest $req) 获取事件、审计和日志的状态接口
  * @method Models\DescribeEksContainerInstanceLogResponse DescribeEksContainerInstanceLog(Models\DescribeEksContainerInstanceLogRequest $req) 查询容器实例中容器日志
  * @method Models\DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgress(Models\DescribeEnableVpcCniProgressRequest $req) 本接口用于查询开启vpc-cni模式的任务进度
  * @method Models\DescribeExistedInstancesResponse DescribeExistedInstances(Models\DescribeExistedInstancesRequest $req) 查询已经存在的节点，判断是否可以加入集群

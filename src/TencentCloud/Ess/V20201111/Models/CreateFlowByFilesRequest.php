@@ -30,18 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileIds(array $FileIds) 设置签署pdf文件的资源编号列表，通过UploadFiles接口获取
  * @method string getFlowType() 获取签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
  * @method void setFlowType(string $FlowType) 设置签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
- * @method array getComponents() 获取经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-CHECK_BOX - 勾选框控件
-ATTACHMENT - 附件
-注：默认字体大小为 字号12
- * @method void setComponents(array $Components) 设置经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-CHECK_BOX - 勾选框控件
-ATTACHMENT - 附件
-注：默认字体大小为 字号12
+ * @method array getComponents() 获取经办人内容控件配置
+ * @method void setComponents(array $Components) 设置经办人内容控件配置
  * @method array getCcInfos() 获取被抄送人的信息列表。
 注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
  * @method void setCcInfos(array $CcInfos) 设置被抄送人的信息列表。
@@ -97,12 +87,7 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $FlowType;
 
     /**
-     * @var array 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-CHECK_BOX - 勾选框控件
-ATTACHMENT - 附件
-注：默认字体大小为 字号12
+     * @var array 经办人内容控件配置
      */
     public $Components;
 
@@ -153,12 +138,7 @@ false：有序签
      * @param array $Approvers 签署参与者信息
      * @param array $FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取
      * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-     * @param array $Components 经办人内容控件配置。可选类型为：
-TEXT - 内容文本控件
-MULTI_LINE_TEXT - 多行文本控件
-CHECK_BOX - 勾选框控件
-ATTACHMENT - 附件
-注：默认字体大小为 字号12
+     * @param array $Components 经办人内容控件配置
      * @param array $CcInfos 被抄送人的信息列表。
 注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
      * @param boolean $NeedPreview 是否需要预览，true：预览模式，false：非预览（默认）；

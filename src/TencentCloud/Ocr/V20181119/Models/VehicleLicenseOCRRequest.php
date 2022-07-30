@@ -29,10 +29,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
  * @method string getCardSide() 获取FRONT 为行驶证主页正面（有红色印章的一面），
-BACK 为行驶证副页正面（有号码号牌的一面）。
+BACK 为行驶证副页正面（有号码号牌的一面），
+DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。
  * @method void setCardSide(string $CardSide) 设置FRONT 为行驶证主页正面（有红色印章的一面），
-BACK 为行驶证副页正面（有号码号牌的一面）。
+BACK 为行驶证副页正面（有号码号牌的一面），
+DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。
  */
 class VehicleLicenseOCRRequest extends AbstractModel
@@ -51,7 +53,8 @@ class VehicleLicenseOCRRequest extends AbstractModel
 
     /**
      * @var string FRONT 为行驶证主页正面（有红色印章的一面），
-BACK 为行驶证副页正面（有号码号牌的一面）。
+BACK 为行驶证副页正面（有号码号牌的一面），
+DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。
      */
     public $CardSide;
@@ -62,7 +65,8 @@ BACK 为行驶证副页正面（有号码号牌的一面）。
      * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      * @param string $CardSide FRONT 为行驶证主页正面（有红色印章的一面），
-BACK 为行驶证副页正面（有号码号牌的一面）。
+BACK 为行驶证副页正面（有号码号牌的一面），
+DOUBLE 为行驶证主页正面和副页正面。
 默认值为：FRONT。
      */
     function __construct()

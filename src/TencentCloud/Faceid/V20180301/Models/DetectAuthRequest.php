@@ -42,6 +42,8 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
  * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  * @method string getIntentionVerifyText() 获取意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
  * @method void setIntentionVerifyText(string $IntentionVerifyText) 设置意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+ * @method array getIntentionQuestions() 获取意愿核身过程中播报文本/问题、用户朗读/回答的文本，当前支持一个播报文本+回答文本。
+ * @method void setIntentionQuestions(array $IntentionQuestions) 设置意愿核身过程中播报文本/问题、用户朗读/回答的文本，当前支持一个播报文本+回答文本。
  */
 class DetectAuthRequest extends AbstractModel
 {
@@ -93,6 +95,11 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     public $IntentionVerifyText;
 
     /**
+     * @var array 意愿核身过程中播报文本/问题、用户朗读/回答的文本，当前支持一个播报文本+回答文本。
+     */
+    public $IntentionQuestions;
+
+    /**
      * @param string $RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
      * @param string $TerminalType 本接口不需要传递此参数。
      * @param string $IdCard 身份标识（未使用OCR服务时，必须传入）。
@@ -104,6 +111,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      * @param string $IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * @param array $IntentionQuestions 意愿核身过程中播报文本/问题、用户朗读/回答的文本，当前支持一个播报文本+回答文本。
      */
     function __construct()
     {
@@ -153,6 +161,15 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
 
         if (array_key_exists("IntentionVerifyText",$param) and $param["IntentionVerifyText"] !== null) {
             $this->IntentionVerifyText = $param["IntentionVerifyText"];
+        }
+
+        if (array_key_exists("IntentionQuestions",$param) and $param["IntentionQuestions"] !== null) {
+            $this->IntentionQuestions = [];
+            foreach ($param["IntentionQuestions"] as $key => $value){
+                $obj = new IntentionQuestion();
+                $obj->deserialize($value);
+                array_push($this->IntentionQuestions, $obj);
+            }
         }
     }
 }

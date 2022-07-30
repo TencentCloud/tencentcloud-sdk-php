@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置资源标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResources() 获取计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResources(array $Resources) 设置计费资源
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -172,6 +176,12 @@ class DescribeZoneDetailsResponse extends AbstractModel
     public $Tags;
 
     /**
+     * @var array 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Resources;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -206,6 +216,8 @@ class DescribeZoneDetailsResponse extends AbstractModel
 - pending 切换验证中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Resources 计费资源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -286,6 +298,15 @@ class DescribeZoneDetailsResponse extends AbstractModel
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
+            $this->Resources = [];
+            foreach ($param["Resources"] as $key => $value){
+                $obj = new Resource();
+                $obj->deserialize($value);
+                array_push($this->Resources, $obj);
             }
         }
 

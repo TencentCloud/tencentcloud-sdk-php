@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverName(string $ApproverName) 设置本环节需要操作人的名字
  * @method string getApproverMobile() 获取本环节需要操作人的手机号
  * @method void setApproverMobile(string $ApproverMobile) 设置本环节需要操作人的手机号
- * @method array getSignComponents() 获取本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。
- * @method void setSignComponents(array $SignComponents) 设置本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。
+ * @method array getSignComponents() 获取本环节操作人签署控件配置
+ * @method void setSignComponents(array $SignComponents) 设置本环节操作人签署控件配置
  * @method string getOrganizationName() 获取如果是企业,则为企业的名字
  * @method void setOrganizationName(string $OrganizationName) 设置如果是企业,则为企业的名字
  * @method string getApproverIdCardNumber() 获取身份证号
@@ -79,7 +79,7 @@ class ApproverInfo extends AbstractModel
     public $ApproverMobile;
 
     /**
-     * @var array 本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。
+     * @var array 本环节操作人签署控件配置
      */
     public $SignComponents;
 
@@ -129,7 +129,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
      * @param string $ApproverName 本环节需要操作人的名字
      * @param string $ApproverMobile 本环节需要操作人的手机号
-     * @param array $SignComponents 本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。
+     * @param array $SignComponents 本环节操作人签署控件配置
      * @param string $OrganizationName 如果是企业,则为企业的名字
      * @param string $ApproverIdCardNumber 身份证号
      * @param string $ApproverIdCardType 证件类型 

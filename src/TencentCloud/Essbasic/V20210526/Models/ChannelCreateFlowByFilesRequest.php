@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowDescription(string $FlowDescription) 设置签署流程的描述，长度不超过1000个字符
  * @method string getCustomShowMap() 获取合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method void setCustomShowMap(string $CustomShowMap) 设置合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+ * @method string getCustomerData() 获取渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method void setCustomerData(string $CustomerData) 设置渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
@@ -103,6 +105,11 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
     public $CustomShowMap;
 
     /**
+     * @var string 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public $CustomerData;
+
+    /**
      * @var UserInfo 操作者的信息
      */
     public $Operator;
@@ -119,6 +126,7 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
      * @param string $FlowType 签署流程的类型，长度不超过255个字符
      * @param string $FlowDescription 签署流程的描述，长度不超过1000个字符
      * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     * @param string $CustomerData 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      * @param UserInfo $Operator 操作者的信息
      */
     function __construct()
@@ -187,6 +195,10 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
 
         if (array_key_exists("CustomShowMap",$param) and $param["CustomShowMap"] !== null) {
             $this->CustomShowMap = $param["CustomShowMap"];
+        }
+
+        if (array_key_exists("CustomerData",$param) and $param["CustomerData"] !== null) {
+            $this->CustomerData = $param["CustomerData"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

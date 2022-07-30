@@ -21,21 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 模板控件信息
  *
  * @method string getComponentType() 获取如果是 Component 控件类型，则可选类型为：
-TEXT - 内容文本控件
-DATE - 内容日期控件
-CHECK_BOX - 勾选框控件
+TEXT - 单行文本
+MULTI_LINE_TEXT - 多行文本
+CHECK_BOX - 勾选框
+ATTACHMENT - 附件
+SELECTOR - 选择器
 如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件
+SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
 SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件
+SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
  * @method void setComponentType(string $ComponentType) 设置如果是 Component 控件类型，则可选类型为：
-TEXT - 内容文本控件
-DATE - 内容日期控件
-CHECK_BOX - 勾选框控件
+TEXT - 单行文本
+MULTI_LINE_TEXT - 多行文本
+CHECK_BOX - 勾选框
+ATTACHMENT - 附件
+SELECTOR - 选择器
 如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件
+SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
 SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件
+SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
  * @method float getComponentWidth() 获取参数控件宽度，单位pt
  * @method void setComponentWidth(float $ComponentWidth) 设置参数控件宽度，单位pt
  * @method float getComponentHeight() 获取参数控件高度，单位pt
@@ -74,8 +78,18 @@ ESIGN -- 个人印章类型
 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
  * @method string getComponentRecipientId() 获取控件关联的签署人ID
  * @method void setComponentRecipientId(string $ComponentRecipientId) 设置控件关联的签署人ID
- * @method string getComponentValue() 获取控件所填写的内容
- * @method void setComponentValue(string $ComponentValue) 设置控件所填写的内容
+ * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+ * @method void setComponentValue(string $ComponentValue) 设置控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
  * @method boolean getIsFormType() 获取是否是表单域类型，默认不存在
  * @method void setIsFormType(boolean $IsFormType) 设置是否是表单域类型，默认不存在
  * @method string getGenerateMode() 获取NORMAL 正常模式，使用坐标制定签署控件位置
@@ -95,13 +109,15 @@ class Component extends AbstractModel
 {
     /**
      * @var string 如果是 Component 控件类型，则可选类型为：
-TEXT - 内容文本控件
-DATE - 内容日期控件
-CHECK_BOX - 勾选框控件
+TEXT - 单行文本
+MULTI_LINE_TEXT - 多行文本
+CHECK_BOX - 勾选框
+ATTACHMENT - 附件
+SELECTOR - 选择器
 如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件
+SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
 SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件
+SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
      */
     public $ComponentType;
 
@@ -169,7 +185,12 @@ ESIGN -- 个人印章类型
     public $ComponentRecipientId;
 
     /**
-     * @var string 控件所填写的内容
+     * @var string 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
      */
     public $ComponentValue;
 
@@ -202,13 +223,15 @@ KEYWORD 关键字，使用ComponentId指定关键字
 
     /**
      * @param string $ComponentType 如果是 Component 控件类型，则可选类型为：
-TEXT - 内容文本控件
-DATE - 内容日期控件
-CHECK_BOX - 勾选框控件
+TEXT - 单行文本
+MULTI_LINE_TEXT - 多行文本
+CHECK_BOX - 勾选框
+ATTACHMENT - 附件
+SELECTOR - 选择器
 如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件
+SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
 SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件
+SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
      * @param float $ComponentWidth 参数控件宽度，单位pt
      * @param float $ComponentHeight 参数控件高度，单位pt
      * @param integer $ComponentPage 参数控件所在页码，取值为：1-N
@@ -228,7 +251,12 @@ OCR_ESIGN -- AI智能识别手写签名
 ESIGN -- 个人印章类型
 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
      * @param string $ComponentRecipientId 控件关联的签署人ID
-     * @param string $ComponentValue 控件所填写的内容
+     * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
      * @param boolean $IsFormType 是否是表单域类型，默认不存在
      * @param string $GenerateMode NORMAL 正常模式，使用坐标制定签署控件位置
 FIELD 表单域，需使用ComponentName指定表单域名称

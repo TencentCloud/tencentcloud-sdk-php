@@ -50,18 +50,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) 设置分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
- * @method integer getWidth() 获取视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+ * @method integer getWidth() 获取视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
- * @method void setWidth(integer $Width) 设置视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+ * @method void setWidth(integer $Width) 设置视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
- * @method integer getHeight() 获取视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
- * @method void setHeight(integer $Height) 设置视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+ * @method integer getHeight() 获取视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+ * @method void setHeight(integer $Height) 设置视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
  * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -88,6 +88,12 @@ use TencentCloud\Common\AbstractModel;
 当填 0 或不填时，系统将自动设置 gop 长度。
  * @method void setGop(integer $Gop) 设置关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
 当填 0 或不填时，系统将自动设置 gop 长度。
+ * @method string getPreserveHDRSwitch() 获取当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
+<li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
+<li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
+ * @method void setPreserveHDRSwitch(string $PreserveHDRSwitch) 设置当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
+<li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
+<li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -123,7 +129,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $ResolutionAdaptive;
 
     /**
-     * @var integer 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @var integer 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -132,7 +138,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $Width;
 
     /**
-     * @var integer 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @var integer 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
      */
     public $Height;
 
@@ -162,6 +168,13 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $Gop;
 
     /**
+     * @var string 当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
+<li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
+<li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
+     */
+    public $PreserveHDRSwitch;
+
+    /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码；</li>
 <li>libx265：H.265 编码；</li>
@@ -177,12 +190,12 @@ class VideoTemplateInfoForUpdate extends AbstractModel
      * @param string $ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
-     * @param integer $Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @param integer $Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-     * @param integer $Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @param integer $Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
      * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -196,6 +209,9 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>如果没有特殊需求，不建议指定该参数。</li>
      * @param integer $Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
 当填 0 或不填时，系统将自动设置 gop 长度。
+     * @param string $PreserveHDRSwitch 当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
+<li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
+<li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
      */
     function __construct()
     {
@@ -244,6 +260,10 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 
         if (array_key_exists("Gop",$param) and $param["Gop"] !== null) {
             $this->Gop = $param["Gop"];
+        }
+
+        if (array_key_exists("PreserveHDRSwitch",$param) and $param["PreserveHDRSwitch"] !== null) {
+            $this->PreserveHDRSwitch = $param["PreserveHDRSwitch"];
         }
     }
 }

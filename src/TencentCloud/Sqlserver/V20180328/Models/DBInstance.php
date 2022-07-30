@@ -126,6 +126,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCrossBackupEnabled(string $CrossBackupEnabled) 设置跨地域备份状态 enable-开启，disable-关闭
  * @method integer getCrossBackupSaveDays() 获取跨地域备份保留天数，则默认7天
  * @method void setCrossBackupSaveDays(integer $CrossBackupSaveDays) 设置跨地域备份保留天数，则默认7天
+ * @method string getDnsPodDomain() 获取外网地址域名
+ * @method void setDnsPodDomain(string $DnsPodDomain) 设置外网地址域名
+ * @method integer getTgwWanVPort() 获取外网端口号
+ * @method void setTgwWanVPort(integer $TgwWanVPort) 设置外网端口号
  */
 class DBInstance extends AbstractModel
 {
@@ -367,6 +371,16 @@ class DBInstance extends AbstractModel
     public $CrossBackupSaveDays;
 
     /**
+     * @var string 外网地址域名
+     */
+    public $DnsPodDomain;
+
+    /**
+     * @var integer 外网端口号
+     */
+    public $TgwWanVPort;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
      * @param integer $ProjectId 实例所在项目ID
@@ -420,6 +434,8 @@ class DBInstance extends AbstractModel
      * @param array $CrossRegions 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
      * @param string $CrossBackupEnabled 跨地域备份状态 enable-开启，disable-关闭
      * @param integer $CrossBackupSaveDays 跨地域备份保留天数，则默认7天
+     * @param string $DnsPodDomain 外网地址域名
+     * @param integer $TgwWanVPort 外网端口号
      */
     function __construct()
     {
@@ -621,6 +637,14 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("CrossBackupSaveDays",$param) and $param["CrossBackupSaveDays"] !== null) {
             $this->CrossBackupSaveDays = $param["CrossBackupSaveDays"];
+        }
+
+        if (array_key_exists("DnsPodDomain",$param) and $param["DnsPodDomain"] !== null) {
+            $this->DnsPodDomain = $param["DnsPodDomain"];
+        }
+
+        if (array_key_exists("TgwWanVPort",$param) and $param["TgwWanVPort"] !== null) {
+            $this->TgwWanVPort = $param["TgwWanVPort"];
         }
     }
 }

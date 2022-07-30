@@ -102,6 +102,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDauPackage(boolean $IsDauPackage) 设置是否是dau新套餐
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPackageType() 获取套餐类型:空\baas\tcbr
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPackageType(string $PackageType) 设置套餐类型:空\baas\tcbr
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvInfo extends AbstractModel
 {
@@ -235,6 +239,12 @@ class EnvInfo extends AbstractModel
     public $IsDauPackage;
 
     /**
+     * @var string 套餐类型:空\baas\tcbr
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PackageType;
+
+    /**
      * @param string $EnvId 账户下该环境唯一标识
      * @param string $Source 环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
@@ -275,6 +285,8 @@ class EnvInfo extends AbstractModel
      * @param string $EnvType 环境类型：baas, run, hoting, weda
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDauPackage 是否是dau新套餐
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PackageType 套餐类型:空\baas\tcbr
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -411,6 +423,10 @@ class EnvInfo extends AbstractModel
 
         if (array_key_exists("IsDauPackage",$param) and $param["IsDauPackage"] !== null) {
             $this->IsDauPackage = $param["IsDauPackage"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMiniAppID(string $MiniAppID) 设置小程序appid
  * @method integer getMode() 获取诊断方式 1:基础诊断，2:深度诊断
  * @method void setMode(integer $Mode) 设置诊断方式 1:基础诊断，2:深度诊断
- * @method integer getReportType() 获取诊断报告类型 0:基础诊断报告, 1:总裁版诊断报告
- * @method void setReportType(integer $ReportType) 设置诊断报告类型 0:基础诊断报告, 1:总裁版诊断报告
+ * @method integer getReportType() 获取诊断报告类型 0:基础诊断报告，1:总裁版诊断报告，2:诊断报告json结果
+ * @method void setReportType(integer $ReportType) 设置诊断报告类型 0:基础诊断报告，1:总裁版诊断报告，2:诊断报告json结果
  */
 class DescribeFlySecMiniAppReportUrlRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeFlySecMiniAppReportUrlRequest extends AbstractModel
     public $Mode;
 
     /**
-     * @var integer 诊断报告类型 0:基础诊断报告, 1:总裁版诊断报告
+     * @var integer 诊断报告类型 0:基础诊断报告，1:总裁版诊断报告，2:诊断报告json结果
      */
     public $ReportType;
 
@@ -55,7 +55,7 @@ class DescribeFlySecMiniAppReportUrlRequest extends AbstractModel
      * @param string $TaskID 任务id
      * @param string $MiniAppID 小程序appid
      * @param integer $Mode 诊断方式 1:基础诊断，2:深度诊断
-     * @param integer $ReportType 诊断报告类型 0:基础诊断报告, 1:总裁版诊断报告
+     * @param integer $ReportType 诊断报告类型 0:基础诊断报告，1:总裁版诊断报告，2:诊断报告json结果
      */
     function __construct()
     {

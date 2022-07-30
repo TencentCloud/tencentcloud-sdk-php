@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComputeFormat(string $ComputeFormat) 设置规格展示
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTypeFamily() 获取规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTypeFamily(string $TypeFamily) 设置规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubOrderPayStatus() 获取0未支付，1已支付
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubOrderPayStatus(integer $SubOrderPayStatus) 设置0未支付，1已支付
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DedicatedClusterOrderItem extends AbstractModel
 {
@@ -146,6 +154,18 @@ class DedicatedClusterOrderItem extends AbstractModel
     public $ComputeFormat;
 
     /**
+     * @var string 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TypeFamily;
+
+    /**
+     * @var integer 0未支付，1已支付
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubOrderPayStatus;
+
+    /**
      * @param string $DedicatedClusterTypeId 专用集群类型id
      * @param array $SupportedStorageType 支持的存储类型列表
      * @param array $SupportedUplinkSpeed 支持的上连交换机的链路传输速率(GiB)
@@ -163,6 +183,10 @@ class DedicatedClusterOrderItem extends AbstractModel
      * @param integer $TotalGpu GPU数
      * @param string $TypeName 规格英文名
      * @param string $ComputeFormat 规格展示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TypeFamily 规格类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubOrderPayStatus 0未支付，1已支付
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -244,6 +268,14 @@ class DedicatedClusterOrderItem extends AbstractModel
 
         if (array_key_exists("ComputeFormat",$param) and $param["ComputeFormat"] !== null) {
             $this->ComputeFormat = $param["ComputeFormat"];
+        }
+
+        if (array_key_exists("TypeFamily",$param) and $param["TypeFamily"] !== null) {
+            $this->TypeFamily = $param["TypeFamily"];
+        }
+
+        if (array_key_exists("SubOrderPayStatus",$param) and $param["SubOrderPayStatus"] !== null) {
+            $this->SubOrderPayStatus = $param["SubOrderPayStatus"];
         }
     }
 }

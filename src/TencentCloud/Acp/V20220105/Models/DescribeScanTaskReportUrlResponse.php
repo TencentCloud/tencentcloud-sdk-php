@@ -22,13 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getResult() 获取返回值, 0:成功, 其他值请查看“返回值”定义
  * @method void setResult(integer $Result) 设置返回值, 0:成功, 其他值请查看“返回值”定义
- * @method string getReportUrl() 获取诊断报告/堆栈信息下载链接
+ * @method string getReportUrl() 获取诊断报告/堆栈信息/报告json结果下载链接
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReportUrl(string $ReportUrl) 设置诊断报告/堆栈信息下载链接
+ * @method void setReportUrl(string $ReportUrl) 设置诊断报告/堆栈信息/报告json结果下载链接
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReportTitle() 获取诊断报告/堆栈名称
+ * @method string getReportTitle() 获取诊断报告/堆栈/报告json结果的名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReportTitle(string $ReportTitle) 设置诊断报告/堆栈名称
+ * @method void setReportTitle(string $ReportTitle) 设置诊断报告/堆栈/报告json结果的名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,13 +41,13 @@ class DescribeScanTaskReportUrlResponse extends AbstractModel
     public $Result;
 
     /**
-     * @var string 诊断报告/堆栈信息下载链接
+     * @var string 诊断报告/堆栈信息/报告json结果下载链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportUrl;
 
     /**
-     * @var string 诊断报告/堆栈名称
+     * @var string 诊断报告/堆栈/报告json结果的名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportTitle;
@@ -59,9 +59,9 @@ class DescribeScanTaskReportUrlResponse extends AbstractModel
 
     /**
      * @param integer $Result 返回值, 0:成功, 其他值请查看“返回值”定义
-     * @param string $ReportUrl 诊断报告/堆栈信息下载链接
+     * @param string $ReportUrl 诊断报告/堆栈信息/报告json结果下载链接
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReportTitle 诊断报告/堆栈名称
+     * @param string $ReportTitle 诊断报告/堆栈/报告json结果的名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

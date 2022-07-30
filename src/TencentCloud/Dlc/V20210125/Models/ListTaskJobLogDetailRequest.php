@@ -26,10 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置开始运行时间，unix时间戳（毫秒）
  * @method integer getEndTime() 获取结束运行时间，unix时间戳（毫秒）
  * @method void setEndTime(integer $EndTime) 设置结束运行时间，unix时间戳（毫秒）
- * @method integer getLimit() 获取分页大小，最大100，配合Context一起使用
- * @method void setLimit(integer $Limit) 设置分页大小，最大100，配合Context一起使用
+ * @method integer getLimit() 获取分页大小，最大1000，配合Context一起使用
+ * @method void setLimit(integer $Limit) 设置分页大小，最大1000，配合Context一起使用
  * @method string getContext() 获取下一次分页参数，第一次传空
  * @method void setContext(string $Context) 设置下一次分页参数，第一次传空
+ * @method boolean getAsc() 获取最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
+ * @method void setAsc(boolean $Asc) 设置最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
+ * @method array getFilters() 获取预览日志的通用过滤条件
+ * @method void setFilters(array $Filters) 设置预览日志的通用过滤条件
  */
 class ListTaskJobLogDetailRequest extends AbstractModel
 {
@@ -49,7 +53,7 @@ class ListTaskJobLogDetailRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 分页大小，最大100，配合Context一起使用
+     * @var integer 分页大小，最大1000，配合Context一起使用
      */
     public $Limit;
 
@@ -59,11 +63,23 @@ class ListTaskJobLogDetailRequest extends AbstractModel
     public $Context;
 
     /**
+     * @var boolean 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
+     */
+    public $Asc;
+
+    /**
+     * @var array 预览日志的通用过滤条件
+     */
+    public $Filters;
+
+    /**
      * @param string $TaskId 列表返回的Id
      * @param integer $StartTime 开始运行时间，unix时间戳（毫秒）
      * @param integer $EndTime 结束运行时间，unix时间戳（毫秒）
-     * @param integer $Limit 分页大小，最大100，配合Context一起使用
+     * @param integer $Limit 分页大小，最大1000，配合Context一起使用
      * @param string $Context 下一次分页参数，第一次传空
+     * @param boolean $Asc 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
+     * @param array $Filters 预览日志的通用过滤条件
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class ListTaskJobLogDetailRequest extends AbstractModel
 
         if (array_key_exists("Context",$param) and $param["Context"] !== null) {
             $this->Context = $param["Context"];
+        }
+
+        if (array_key_exists("Asc",$param) and $param["Asc"] !== null) {
+            $this->Asc = $param["Asc"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

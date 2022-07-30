@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskID(string $TaskID) 设置任务id
  * @method integer getPlatform() 获取应用平台, 0:android, 1:ios, 2:小程序
  * @method void setPlatform(integer $Platform) 设置应用平台, 0:android, 1:ios, 2:小程序
- * @method integer getReportType() 获取报告类型, 0:诊断报告, 1:堆栈报告
- * @method void setReportType(integer $ReportType) 设置报告类型, 0:诊断报告, 1:堆栈报告
+ * @method integer getReportType() 获取报告类型, 0:诊断报告, 1:堆栈报告(预留), 2:视频证据(预留), 3:报告json结果
+ * @method void setReportType(integer $ReportType) 设置报告类型, 0:诊断报告, 1:堆栈报告(预留), 2:视频证据(预留), 3:报告json结果
  * @method integer getTaskType() 获取任务类型, 0:基础版, 1:专家版, 2:本地化
  * @method void setTaskType(integer $TaskType) 设置任务类型, 0:基础版, 1:专家版, 2:本地化
  */
@@ -49,7 +49,7 @@ class DescribeScanTaskReportUrlRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @var integer 报告类型, 0:诊断报告, 1:堆栈报告
+     * @var integer 报告类型, 0:诊断报告, 1:堆栈报告(预留), 2:视频证据(预留), 3:报告json结果
      */
     public $ReportType;
 
@@ -62,7 +62,7 @@ class DescribeScanTaskReportUrlRequest extends AbstractModel
      * @param integer $Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
      * @param string $TaskID 任务id
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
-     * @param integer $ReportType 报告类型, 0:诊断报告, 1:堆栈报告
+     * @param integer $ReportType 报告类型, 0:诊断报告, 1:堆栈报告(预留), 2:视频证据(预留), 3:报告json结果
      * @param integer $TaskType 任务类型, 0:基础版, 1:专家版, 2:本地化
      */
     function __construct()

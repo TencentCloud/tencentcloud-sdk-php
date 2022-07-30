@@ -158,6 +158,32 @@ CrossBorder表示跨境通道。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInBanBlacklist(integer $InBanBlacklist) 设置是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFeatureBitmap() 获取特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeatureBitmap(integer $FeatureBitmap) 设置特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
 {
@@ -367,6 +393,23 @@ CrossBorder表示跨境通道。
     public $InBanBlacklist;
 
     /**
+     * @var integer 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FeatureBitmap;
+
+    /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
@@ -435,6 +478,19 @@ CrossBorder表示跨境通道。
 1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -596,6 +652,10 @@ CrossBorder表示跨境通道。
 
         if (array_key_exists("InBanBlacklist",$param) and $param["InBanBlacklist"] !== null) {
             $this->InBanBlacklist = $param["InBanBlacklist"];
+        }
+
+        if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
+            $this->FeatureBitmap = $param["FeatureBitmap"];
         }
     }
 }

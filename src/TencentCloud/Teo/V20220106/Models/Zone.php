@@ -62,6 +62,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置资源标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResources() 获取计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResources(array $Resources) 设置计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCnameSpeedUp() 获取是否开启cname加速
+- enabled 开启
+- disabled 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCnameSpeedUp(string $CnameSpeedUp) 设置是否开启cname加速
+- enabled 开启
+- disabled 关闭
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Zone extends AbstractModel
 {
@@ -131,6 +143,20 @@ class Zone extends AbstractModel
     public $Tags;
 
     /**
+     * @var array 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Resources;
+
+    /**
+     * @var string 是否开启cname加速
+- enabled 开启
+- disabled 关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CnameSpeedUp;
+
+    /**
      * @param string $Id 站点ID
      * @param string $Name 站点名称
      * @param array $OriginalNameServers 站点当前使用的 NS 列表
@@ -151,6 +177,12 @@ class Zone extends AbstractModel
 - pending 站点验证中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Resources 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CnameSpeedUp 是否开启cname加速
+- enabled 开启
+- disabled 关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -213,6 +245,19 @@ class Zone extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
+            $this->Resources = [];
+            foreach ($param["Resources"] as $key => $value){
+                $obj = new Resource();
+                $obj->deserialize($value);
+                array_push($this->Resources, $obj);
+            }
+        }
+
+        if (array_key_exists("CnameSpeedUp",$param) and $param["CnameSpeedUp"] !== null) {
+            $this->CnameSpeedUp = $param["CnameSpeedUp"];
         }
     }
 }

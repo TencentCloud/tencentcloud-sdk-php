@@ -56,6 +56,8 @@ global：预热全球节点
  * @method void setDisableRange(boolean $DisableRange) 设置是否关闭Range回源
 注意事项：
 此功能灰度发布中，敬请期待
+ * @method boolean getUrlEncode() 获取是否对URL进行编码
+ * @method void setUrlEncode(boolean $UrlEncode) 设置是否对URL进行编码
  */
 class PushUrlsCacheRequest extends AbstractModel
 {
@@ -102,6 +104,11 @@ global：预热全球节点
     public $DisableRange;
 
     /**
+     * @var boolean 是否对URL进行编码
+     */
+    public $UrlEncode;
+
+    /**
      * @param array $Urls URL 列表，需要包含协议头部 http:// 或 https://
      * @param string $UserAgent 指定预热请求回源时 HTTP 请求的 User-Agent 头部
 默认为 TencentCdn
@@ -120,6 +127,7 @@ global：预热全球节点
      * @param boolean $DisableRange 是否关闭Range回源
 注意事项：
 此功能灰度发布中，敬请期待
+     * @param boolean $UrlEncode 是否对URL进行编码
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ global：预热全球节点
 
         if (array_key_exists("DisableRange",$param) and $param["DisableRange"] !== null) {
             $this->DisableRange = $param["DisableRange"];
+        }
+
+        if (array_key_exists("UrlEncode",$param) and $param["UrlEncode"] !== null) {
+            $this->UrlEncode = $param["UrlEncode"];
         }
     }
 }

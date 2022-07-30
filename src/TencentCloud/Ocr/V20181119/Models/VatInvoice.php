@@ -71,9 +71,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCheckCode() 获取检验码
  * @method void setCheckCode(string $CheckCode) 设置检验码
  * @method string getIsAbandoned() 获取是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
  * @method void setIsAbandoned(string $IsAbandoned) 设置是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
  * @method string getHasSellerList() 获取是否有销货清单 
 Y: 有清单 N：无清单 
 卷票无
@@ -182,7 +182,7 @@ class VatInvoice extends AbstractModel
 
     /**
      * @var string 是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
      */
     public $IsAbandoned;
 
@@ -250,7 +250,7 @@ Y: 有清单 N：无清单
 32：深圳区块链发票
      * @param string $CheckCode 检验码
      * @param string $IsAbandoned 是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
      * @param string $HasSellerList 是否有销货清单 
 Y: 有清单 N：无清单 
 卷票无

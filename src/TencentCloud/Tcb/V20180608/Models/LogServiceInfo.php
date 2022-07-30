@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置topic-id
  * @method string getRegion() 获取cls日志所属地域
  * @method void setRegion(string $Region) 设置cls日志所属地域
+ * @method integer getPeriod() 获取topic保存时长 默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPeriod(integer $Period) 设置topic保存时长 默认7天
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogServiceInfo extends AbstractModel
 {
@@ -59,11 +63,19 @@ class LogServiceInfo extends AbstractModel
     public $Region;
 
     /**
+     * @var integer topic保存时长 默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Period;
+
+    /**
      * @param string $LogsetName log名
      * @param string $LogsetId log-id
      * @param string $TopicName topic名
      * @param string $TopicId topic-id
      * @param string $Region cls日志所属地域
+     * @param integer $Period topic保存时长 默认7天
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class LogServiceInfo extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

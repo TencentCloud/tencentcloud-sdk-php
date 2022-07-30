@@ -14,39 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tiia\V20190529\Models;
+namespace TencentCloud\Pts\V20210728\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 名人识别的标签
+ * 标签
  *
- * @method string getFirstLabel() 获取公众人物身份标签的一级分类，例如体育明星、娱乐明星等；
+ * @method string getTagKey() 获取标签键
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFirstLabel(string $FirstLabel) 设置公众人物身份标签的一级分类，例如体育明星、娱乐明星等；
+ * @method void setTagKey(string $TagKey) 设置标签键
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecondLabel() 获取公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
+ * @method string getTagValue() 获取标签值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecondLabel(string $SecondLabel) 设置公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
+ * @method void setTagValue(string $TagValue) 设置标签值
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Labels extends AbstractModel
+class TagSpec extends AbstractModel
 {
     /**
-     * @var string 公众人物身份标签的一级分类，例如体育明星、娱乐明星等；
+     * @var string 标签键
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FirstLabel;
+    public $TagKey;
 
     /**
-     * @var string 公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
+     * @var string 标签值
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SecondLabel;
+    public $TagValue;
 
     /**
-     * @param string $FirstLabel 公众人物身份标签的一级分类，例如体育明星、娱乐明星等；
+     * @param string $TagKey 标签键
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SecondLabel 公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
+     * @param string $TagValue 标签值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +62,12 @@ class Labels extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FirstLabel",$param) and $param["FirstLabel"] !== null) {
-            $this->FirstLabel = $param["FirstLabel"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
         }
 
-        if (array_key_exists("SecondLabel",$param) and $param["SecondLabel"] !== null) {
-            $this->SecondLabel = $param["SecondLabel"];
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

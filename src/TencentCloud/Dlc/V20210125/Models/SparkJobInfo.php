@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskNum(integer $TaskNum) 设置当前job正在运行或准备运行的任务个数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDataEngineStatus() 获取引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataEngineStatus(integer $DataEngineStatus) 设置引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SparkJobInfo extends AbstractModel
 {
@@ -272,6 +276,12 @@ class SparkJobInfo extends AbstractModel
     public $TaskNum;
 
     /**
+     * @var integer 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataEngineStatus;
+
+    /**
      * @param string $JobId spark作业ID
      * @param string $JobName spark作业名
      * @param integer $JobType spark作业类型，可去1或者2，1表示batch作业， 2表示streaming作业
@@ -311,6 +321,8 @@ class SparkJobInfo extends AbstractModel
      * @param string $JobPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskNum 当前job正在运行或准备运行的任务个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DataEngineStatus 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -453,6 +465,10 @@ class SparkJobInfo extends AbstractModel
 
         if (array_key_exists("TaskNum",$param) and $param["TaskNum"] !== null) {
             $this->TaskNum = $param["TaskNum"];
+        }
+
+        if (array_key_exists("DataEngineStatus",$param) and $param["DataEngineStatus"] !== null) {
+            $this->DataEngineStatus = $param["DataEngineStatus"];
         }
     }
 }

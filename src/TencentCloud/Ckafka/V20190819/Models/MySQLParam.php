@@ -46,6 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataTargetPrimaryKeyField(string $DataTargetPrimaryKeyField) 设置当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
  * @method array getDataTargetRecordMapping() 获取表与消息间的映射关系
  * @method void setDataTargetRecordMapping(array $DataTargetRecordMapping) 设置表与消息间的映射关系
+ * @method string getTopicRegex() 获取事件路由到特定主题的正则表达式，默认为(.*)
+ * @method void setTopicRegex(string $TopicRegex) 设置事件路由到特定主题的正则表达式，默认为(.*)
+ * @method string getTopicReplacement() 获取TopicRegex的引用组，指定$1、$2等
+ * @method void setTopicReplacement(string $TopicReplacement) 设置TopicRegex的引用组，指定$1、$2等
+ * @method string getKeyColumns() 获取格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+ * @method void setKeyColumns(string $KeyColumns) 设置格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
  */
 class MySQLParam extends AbstractModel
 {
@@ -115,6 +121,21 @@ class MySQLParam extends AbstractModel
     public $DataTargetRecordMapping;
 
     /**
+     * @var string 事件路由到特定主题的正则表达式，默认为(.*)
+     */
+    public $TopicRegex;
+
+    /**
+     * @var string TopicRegex的引用组，指定$1、$2等
+     */
+    public $TopicReplacement;
+
+    /**
+     * @var string 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     */
+    public $KeyColumns;
+
+    /**
      * @param string $Database MySQL的数据库名称，"*"为全数据库
      * @param string $Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
      * @param string $Resource 该MySQL在连接管理内的Id
@@ -128,6 +149,9 @@ class MySQLParam extends AbstractModel
      * @param string $DataTargetInsertMode "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
      * @param string $DataTargetPrimaryKeyField 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
      * @param array $DataTargetRecordMapping 表与消息间的映射关系
+     * @param string $TopicRegex 事件路由到特定主题的正则表达式，默认为(.*)
+     * @param string $TopicReplacement TopicRegex的引用组，指定$1、$2等
+     * @param string $KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
      */
     function __construct()
     {
@@ -197,6 +221,18 @@ class MySQLParam extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DataTargetRecordMapping, $obj);
             }
+        }
+
+        if (array_key_exists("TopicRegex",$param) and $param["TopicRegex"] !== null) {
+            $this->TopicRegex = $param["TopicRegex"];
+        }
+
+        if (array_key_exists("TopicReplacement",$param) and $param["TopicReplacement"] !== null) {
+            $this->TopicReplacement = $param["TopicReplacement"];
+        }
+
+        if (array_key_exists("KeyColumns",$param) and $param["KeyColumns"] !== null) {
+            $this->KeyColumns = $param["KeyColumns"];
         }
     }
 }

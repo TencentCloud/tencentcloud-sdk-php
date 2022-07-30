@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置应用名称。
  * @method string getUserId() 获取用户标识。
  * @method void setUserId(string $UserId) 设置用户标识。
+ * @method array getTypes() 获取类型列表，取值有：
+<li>OfficialRec：官方推荐；</li>
+<li>Customize：自定义。</li>
+ * @method void setTypes(array $Types) 设置类型列表，取值有：
+<li>OfficialRec：官方推荐；</li>
+<li>Customize：自定义。</li>
  */
 class DescribeKTVPlaylistsRequest extends AbstractModel
 {
@@ -38,8 +44,18 @@ class DescribeKTVPlaylistsRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var array 类型列表，取值有：
+<li>OfficialRec：官方推荐；</li>
+<li>Customize：自定义。</li>
+     */
+    public $Types;
+
+    /**
      * @param string $AppName 应用名称。
      * @param string $UserId 用户标识。
+     * @param array $Types 类型列表，取值有：
+<li>OfficialRec：官方推荐；</li>
+<li>Customize：自定义。</li>
      */
     function __construct()
     {
@@ -60,6 +76,10 @@ class DescribeKTVPlaylistsRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("Types",$param) and $param["Types"] !== null) {
+            $this->Types = $param["Types"];
         }
     }
 }

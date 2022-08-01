@@ -1,33 +1,10 @@
 # 本版本更新包含以下内容：
 
-## 本地专用集群(cdc) 版本：2020-12-14
+## 云数据库 MySQL(cdb) 版本：2017-03-20
 
-### 第 3 次发布
+### 第 96 次发布
 
-发布时间：2022-07-30 15:07:54
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改数据结构：
-
-* [DedicatedClusterOrder](https://cloud.tencent.com/document/api/1346/73770#DedicatedClusterOrder)
-
-	* 新增成员：PayType, TimeUnit, TimeSpan
-
-* [DedicatedClusterOrderItem](https://cloud.tencent.com/document/api/1346/73770#DedicatedClusterOrderItem)
-
-	* 新增成员：TypeFamily, SubOrderPayStatus
-
-
-
-
-## 电子签服务(ess) 版本：2020-11-11
-
-### 第 11 次发布
-
-发布时间：2022-07-30 15:12:18
+发布时间：2022-08-01 11:27:47
 
 本次发布包含了以下内容：
 
@@ -35,48 +12,15 @@
 
 新增接口：
 
-* [CreateConvertTaskApi](https://cloud.tencent.com/document/api/1323/78149)
-* [GetTaskResultApi](https://cloud.tencent.com/document/api/1323/78148)
-
-新增数据结构：
-
-* [OrganizationInfo](https://cloud.tencent.com/document/api/1323/70369#OrganizationInfo)
+* [ModifyInstancePasswordComplexity](https://cloud.tencent.com/document/api/236/78162)
 
 
 
-## 人脸核身(faceid) 版本：2018-03-01
+## 日志服务(cls) 版本：2020-10-16
 
-### 第 43 次发布
+### 第 26 次发布
 
-发布时间：2022-07-30 15:12:30
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [DetectAuth](https://cloud.tencent.com/document/api/1007/31816)
-
-	* 新增入参：IntentionQuestions
-
-* [GetDetectInfoEnhanced](https://cloud.tencent.com/document/api/1007/41957)
-
-	* 新增出参：IntentionQuestionResult
-
-
-新增数据结构：
-
-* [IntentionQuestion](https://cloud.tencent.com/document/api/1007/41958#IntentionQuestion)
-* [IntentionQuestionResult](https://cloud.tencent.com/document/api/1007/41958#IntentionQuestionResult)
-
-
-
-## 云开发 CloudBase(tcb) 版本：2018-06-08
-
-### 第 84 次发布
-
-发布时间：2022-07-30 15:18:11
+发布时间：2022-08-01 11:31:08
 
 本次发布包含了以下内容：
 
@@ -84,33 +28,78 @@
 
 修改数据结构：
 
-* [EnvInfo](https://cloud.tencent.com/document/api/876/34822#EnvInfo)
+* [ShipperInfo](https://cloud.tencent.com/document/api/614/56471#ShipperInfo)
 
-	* 新增成员：PackageType
-
-* [LogServiceInfo](https://cloud.tencent.com/document/api/876/34822#LogServiceInfo)
-
-	* 新增成员：Period
+	* 新增成员：FilenameMode
 
 
 
 
-## 音速达直播音乐版权引擎(yinsuda) 版本：2022-05-27
+## 私有域解析 Private DNS(privatedns) 版本：2020-10-28
 
-### 第 4 次发布
+### 第 8 次发布
 
-发布时间：2022-07-30 15:22:03
+发布时间：2022-08-01 11:48:13
 
 本次发布包含了以下内容：
 
 改善已有的文档。
 
-修改接口：
+修改数据结构：
 
-* [DescribeKTVPlaylists](https://cloud.tencent.com/document/api/1592/76188)
+* [PrivateZoneRecord](https://cloud.tencent.com/document/api/1338/55947#PrivateZoneRecord)
 
-	* 新增入参：Types
+	* 新增成员：Enabled
 
+
+
+
+## 云开发 CloudBase(tcb) 版本：2018-06-08
+
+### 第 85 次发布
+
+发布时间：2022-08-01 11:52:06
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeBaasPackageList](https://cloud.tencent.com/document/api/876/78167)
+
+新增数据结构：
+
+* [BaasPackageInfo](https://cloud.tencent.com/document/api/876/34822#BaasPackageInfo)
+
+
+
+## 弹性微服务(tem) 版本：2021-07-01
+
+### 第 21 次发布
+
+发布时间：2022-08-01 11:54:48
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeApplications](https://cloud.tencent.com/document/api/1371/78169)
+* [DescribeEnvironmentStatus](https://cloud.tencent.com/document/api/1371/78168)
+
+新增数据结构：
+
+* [NamespaceStatusInfo](https://cloud.tencent.com/document/api/1371/60171#NamespaceStatusInfo)
+* [ServicePage](https://cloud.tencent.com/document/api/1371/60171#ServicePage)
+* [TemEnvironmentStartingStatus](https://cloud.tencent.com/document/api/1371/60171#TemEnvironmentStartingStatus)
+* [TemEnvironmentStoppingStatus](https://cloud.tencent.com/document/api/1371/60171#TemEnvironmentStoppingStatus)
+* [TemService](https://cloud.tencent.com/document/api/1371/60171#TemService)
+
+
+
+## 弹性微服务(tem) 版本：2020-12-21
 
 
 
@@ -10951,6 +10940,18 @@
 
 ## 云数据库 MySQL(cdb) 版本：2017-03-20
 
+### 第 96 次发布
+
+发布时间：2022-08-01 11:27:47
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[ModifyInstancePasswordComplexity](https://cloud.tencent.com/document/api/236/78162)](https://cloud.tencent.com/document/api/#/#)
+
 ### 第 95 次发布
 
 发布时间：2022-07-05 06:08:02
@@ -19828,6 +19829,21 @@
 
 
 ## 日志服务(cls) 版本：2020-10-16
+
+### 第 26 次发布
+
+发布时间：2022-08-01 11:31:08
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [ShipperInfo](https://cloud.tencent.com/document/api/614/56471#ShipperInfo)
+
+	* 新增成员：FilenameMode
+
 
 ### 第 25 次发布
 
@@ -36339,12 +36355,12 @@
 
 新增接口：
 
-* [[CreateConvertTaskApi](https://cloud.tencent.com/document/api/1323/78149)](https://cloud.tencent.com/document/api/#/#)
-* [[GetTaskResultApi](https://cloud.tencent.com/document/api/1323/78148)](https://cloud.tencent.com/document/api/#/#)
+* [CreateConvertTaskApi](https://cloud.tencent.com/document/api/1323/78149)
+* [GetTaskResultApi](https://cloud.tencent.com/document/api/1323/78148)
 
 新增数据结构：
 
-* [[OrganizationInfo](https://cloud.tencent.com/document/api/1323/70369#OrganizationInfo)](https://cloud.tencent.com/document/api/1323/70369#[OrganizationInfo](https://cloud.tencent.com/document/api/1323/70369#OrganizationInfo))
+* [OrganizationInfo](https://cloud.tencent.com/document/api/1323/70369#OrganizationInfo)
 
 ### 第 10 次发布
 
@@ -37212,8 +37228,8 @@
 
 新增数据结构：
 
-* [[IntentionQuestion](https://cloud.tencent.com/document/api/1007/41958#IntentionQuestion)](https://cloud.tencent.com/document/api/1007/41958#[IntentionQuestion](https://cloud.tencent.com/document/api/1007/41958#IntentionQuestion))
-* [[IntentionQuestionResult](https://cloud.tencent.com/document/api/1007/41958#IntentionQuestionResult)](https://cloud.tencent.com/document/api/1007/41958#[IntentionQuestionResult](https://cloud.tencent.com/document/api/1007/41958#IntentionQuestionResult))
+* [IntentionQuestion](https://cloud.tencent.com/document/api/1007/41958#IntentionQuestion)
+* [IntentionQuestionResult](https://cloud.tencent.com/document/api/1007/41958#IntentionQuestionResult)
 
 ### 第 42 次发布
 
@@ -57237,6 +57253,21 @@
 
 ## 私有域解析 Private DNS(privatedns) 版本：2020-10-28
 
+### 第 8 次发布
+
+发布时间：2022-08-01 11:48:13
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [PrivateZoneRecord](https://cloud.tencent.com/document/api/1338/55947#PrivateZoneRecord)
+
+	* 新增成员：Enabled
+
+
 ### 第 7 次发布
 
 发布时间：2022-03-30 06:10:30
@@ -64681,6 +64712,22 @@
 
 ## 云开发 CloudBase(tcb) 版本：2018-06-08
 
+### 第 85 次发布
+
+发布时间：2022-08-01 11:52:06
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribeBaasPackageList](https://cloud.tencent.com/document/api/876/78167)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[BaasPackageInfo](https://cloud.tencent.com/document/api/876/34822#BaasPackageInfo)](https://cloud.tencent.com/document/api/876/34822#[BaasPackageInfo](https://cloud.tencent.com/document/api/876/34822#BaasPackageInfo))
+
 ### 第 84 次发布
 
 发布时间：2022-07-30 15:18:11
@@ -69769,6 +69816,27 @@
 
 
 ## 弹性微服务(tem) 版本：2021-07-01
+
+### 第 21 次发布
+
+发布时间：2022-08-01 11:54:48
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribeApplications](https://cloud.tencent.com/document/api/1371/78169)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeEnvironmentStatus](https://cloud.tencent.com/document/api/1371/78168)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[NamespaceStatusInfo](https://cloud.tencent.com/document/api/1371/60171#NamespaceStatusInfo)](https://cloud.tencent.com/document/api/1371/60171#[NamespaceStatusInfo](https://cloud.tencent.com/document/api/1371/60171#NamespaceStatusInfo))
+* [[ServicePage](https://cloud.tencent.com/document/api/1371/60171#ServicePage)](https://cloud.tencent.com/document/api/1371/60171#[ServicePage](https://cloud.tencent.com/document/api/1371/60171#ServicePage))
+* [[TemEnvironmentStartingStatus](https://cloud.tencent.com/document/api/1371/60171#TemEnvironmentStartingStatus)](https://cloud.tencent.com/document/api/1371/60171#[TemEnvironmentStartingStatus](https://cloud.tencent.com/document/api/1371/60171#TemEnvironmentStartingStatus))
+* [[TemEnvironmentStoppingStatus](https://cloud.tencent.com/document/api/1371/60171#TemEnvironmentStoppingStatus)](https://cloud.tencent.com/document/api/1371/60171#[TemEnvironmentStoppingStatus](https://cloud.tencent.com/document/api/1371/60171#TemEnvironmentStoppingStatus))
+* [[TemService](https://cloud.tencent.com/document/api/1371/60171#TemService)](https://cloud.tencent.com/document/api/1371/60171#[TemService](https://cloud.tencent.com/document/api/1371/60171#TemService))
 
 ### 第 20 次发布
 

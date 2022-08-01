@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取投递日志的创建时间
  * @method void setCreateTime(string $CreateTime) 设置投递日志的创建时间
+ * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ShipperInfo extends AbstractModel
 {
@@ -124,6 +128,12 @@ class ShipperInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FilenameMode;
+
+    /**
      * @param string $ShipperId 投递规则ID
      * @param string $TopicId 日志主题ID
      * @param string $Bucket 投递的bucket地址
@@ -140,6 +150,8 @@ class ShipperInfo extends AbstractModel
      * @param ContentInfo $Content 投递日志的内容格式配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 投递日志的创建时间
+     * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -211,6 +223,10 @@ class ShipperInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("FilenameMode",$param) and $param["FilenameMode"] !== null) {
+            $this->FilenameMode = $param["FilenameMode"];
         }
     }
 }

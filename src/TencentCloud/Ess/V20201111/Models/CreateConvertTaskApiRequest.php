@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceId() 获取资源Id
  * @method void setResourceId(string $ResourceId) 设置资源Id
- * @method string getResourceType() 获取资源类型 2-doc 3-docx
- * @method void setResourceType(string $ResourceType) 设置资源类型 2-doc 3-docx
+ * @method string getResourceType() 获取资源类型 取值范围doc,docx,html之一
+ * @method void setResourceType(string $ResourceType) 设置资源类型 取值范围doc,docx,html之一
  * @method string getResourceName() 获取资源名称
  * @method void setResourceName(string $ResourceName) 设置资源名称
  * @method OrganizationInfo getOrganization() 获取无
@@ -41,7 +41,7 @@ class CreateConvertTaskApiRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 资源类型 2-doc 3-docx
+     * @var string 资源类型 取值范围doc,docx,html之一
      */
     public $ResourceType;
 
@@ -67,7 +67,7 @@ class CreateConvertTaskApiRequest extends AbstractModel
 
     /**
      * @param string $ResourceId 资源Id
-     * @param string $ResourceType 资源类型 2-doc 3-docx
+     * @param string $ResourceType 资源类型 取值范围doc,docx,html之一
      * @param string $ResourceName 资源名称
      * @param OrganizationInfo $Organization 无
      * @param UserInfo $Operator 无

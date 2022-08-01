@@ -157,6 +157,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
  * @method Models\ModifyDBInstanceVipVportResponse ModifyDBInstanceVipVport(Models\ModifyDBInstanceVipVportRequest $req) 本接口(ModifyDBInstanceVipVport)用于修改云数据库实例的IP和端口号，也可进行基础网络转 VPC 网络和 VPC 网络下的子网变更。
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口(ModifyInstanceParam)用于修改云数据库实例的参数。
+ * @method Models\ModifyInstancePasswordComplexityResponse ModifyInstancePasswordComplexity(Models\ModifyInstancePasswordComplexityRequest $req) 本接口(ModifyInstancePasswordComplexity)用于修改云数据库实例的密码复杂度。
  * @method Models\ModifyInstanceTagResponse ModifyInstanceTag(Models\ModifyInstanceTagRequest $req) 本接口(ModifyInstanceTag)用于对实例标签进行添加、修改或者删除。
  * @method Models\ModifyLocalBinlogConfigResponse ModifyLocalBinlogConfig(Models\ModifyLocalBinlogConfigRequest $req) 该接口用于修改实例本地binlog保留策略。
  * @method Models\ModifyNameOrDescByDpIdResponse ModifyNameOrDescByDpId(Models\ModifyNameOrDescByDpIdRequest $req) 修改置放群组的名称或者描述

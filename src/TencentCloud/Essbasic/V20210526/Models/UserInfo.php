@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 接口调用者信息
  *
- * @method string getOpenId() 获取用户在渠道的编号
- * @method void setOpenId(string $OpenId) 设置用户在渠道的编号
+ * @method string getOpenId() 获取用户在渠道的编号，最大64位字符串
+ * @method void setOpenId(string $OpenId) 设置用户在渠道的编号，最大64位字符串
  * @method string getChannel() 获取用户的来源渠道
  * @method void setChannel(string $Channel) 设置用户的来源渠道
  * @method string getCustomUserId() 获取自定义用户编号
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class UserInfo extends AbstractModel
 {
     /**
-     * @var string 用户在渠道的编号
+     * @var string 用户在渠道的编号，最大64位字符串
      */
     public $OpenId;
 
@@ -59,7 +59,7 @@ class UserInfo extends AbstractModel
     public $ProxyIp;
 
     /**
-     * @param string $OpenId 用户在渠道的编号
+     * @param string $OpenId 用户在渠道的编号，最大64位字符串
      * @param string $Channel 用户的来源渠道
      * @param string $CustomUserId 自定义用户编号
      * @param string $ClientIp 用户真实IP

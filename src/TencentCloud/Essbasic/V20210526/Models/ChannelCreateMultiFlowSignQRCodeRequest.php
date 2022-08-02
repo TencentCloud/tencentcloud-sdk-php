@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，最大长度1000个字符
 不传默认使用渠道应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
+ * @method ApproverRestriction getApproverRestrictions() 获取限制二维码用户条件
+ * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件
  * @method UserInfo getOperator() 获取用户信息
  * @method void setOperator(UserInfo $Operator) 设置用户信息
  */
@@ -84,6 +86,11 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $CallbackUrl;
 
     /**
+     * @var ApproverRestriction 限制二维码用户条件
+     */
+    public $ApproverRestrictions;
+
+    /**
      * @var UserInfo 用户信息
      */
     public $Operator;
@@ -99,6 +106,7 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
      * @param string $CallbackUrl 回调地址，最大长度1000个字符
 不传默认使用渠道应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
+     * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件
      * @param UserInfo $Operator 用户信息
      */
     function __construct()
@@ -141,6 +149,11 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("ApproverRestrictions",$param) and $param["ApproverRestrictions"] !== null) {
+            $this->ApproverRestrictions = new ApproverRestriction();
+            $this->ApproverRestrictions->deserialize($param["ApproverRestrictions"]);
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

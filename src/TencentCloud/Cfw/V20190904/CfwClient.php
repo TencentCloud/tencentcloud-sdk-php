@@ -29,7 +29,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\CreateChooseVpcsResponse CreateChooseVpcs(Models\CreateChooseVpcsRequest $req) 创建、选择vpc
  * @method Models\CreateDatabaseWhiteListRulesResponse CreateDatabaseWhiteListRules(Models\CreateDatabaseWhiteListRulesRequest $req) 创建暴露数据库白名单规则
  * @method Models\CreateNatFwInstanceResponse CreateNatFwInstance(Models\CreateNatFwInstanceRequest $req) 创建NAT防火墙实例（Region参数必填）
- * @method Models\CreateNatFwInstanceWithDomainResponse CreateNatFwInstanceWithDomain(Models\CreateNatFwInstanceWithDomainRequest $req) 创建防火墙实例和接入域名
+ * @method Models\CreateNatFwInstanceWithDomainResponse CreateNatFwInstanceWithDomain(Models\CreateNatFwInstanceWithDomainRequest $req) 创建防火墙实例和接入域名（Region参数必填）
  * @method Models\CreateSecurityGroupApiRulesResponse CreateSecurityGroupApiRules(Models\CreateSecurityGroupApiRulesRequest $req) 创建安全组API规则
  * @method Models\CreateSecurityGroupRulesResponse CreateSecurityGroupRules(Models\CreateSecurityGroupRulesRequest $req) 创建企业安全组规则
  * @method Models\DeleteAcRuleResponse DeleteAcRule(Models\DeleteAcRuleRequest $req) 删除规则

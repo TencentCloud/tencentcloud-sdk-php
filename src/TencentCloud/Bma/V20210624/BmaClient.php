@@ -23,13 +23,23 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Bma\V20210624\Models as Models;
 
 /**
+ * @method Models\CreateBPFakeURLResponse CreateBPFakeURL(Models\CreateBPFakeURLRequest $req) 添加仿冒链接（举报）
+ * @method Models\CreateBPFalseTicketResponse CreateBPFalseTicket(Models\CreateBPFalseTicketRequest $req) 添加误报工单
+ * @method Models\CreateBPOfflineAttachmentResponse CreateBPOfflineAttachment(Models\CreateBPOfflineAttachmentRequest $req) 添加下线材料
+ * @method Models\CreateBPOfflineTicketResponse CreateBPOfflineTicket(Models\CreateBPOfflineTicketRequest $req) 添加下线工单
+ * @method Models\CreateBPProtectURLsResponse CreateBPProtectURLs(Models\CreateBPProtectURLsRequest $req) 添加保护网站
  * @method Models\CreateCRBlockResponse CreateCRBlock(Models\CreateCRBlockRequest $req) 版权保护-新建拦截接口
  * @method Models\CreateCRCompanyVerifyResponse CreateCRCompanyVerify(Models\CreateCRCompanyVerifyRequest $req) 品牌经营管家-版权保护模块企业认证接口
  * @method Models\CreateCRRightResponse CreateCRRight(Models\CreateCRRightRequest $req) 版权保护-新建发函接口
  * @method Models\CreateCRWorkResponse CreateCRWork(Models\CreateCRWorkRequest $req) 版权保护-添加作品接口
+ * @method Models\DescribeBPCompanyInfoResponse DescribeBPCompanyInfo(Models\DescribeBPCompanyInfoRequest $req) 查询企业信息
+ * @method Models\DescribeBPFakeURLsResponse DescribeBPFakeURLs(Models\DescribeBPFakeURLsRequest $req) 查询仿冒链接
+ * @method Models\DescribeBPProtectURLsResponse DescribeBPProtectURLs(Models\DescribeBPProtectURLsRequest $req) 查询保护网站
+ * @method Models\DescribeBPReportFakeURLsResponse DescribeBPReportFakeURLs(Models\DescribeBPReportFakeURLsRequest $req) 查询举报列表
  * @method Models\DescribeCRMonitorDetailResponse DescribeCRMonitorDetail(Models\DescribeCRMonitorDetailRequest $req) 版权保护-查询作品监测详情接口
  * @method Models\DescribeCRMonitorsResponse DescribeCRMonitors(Models\DescribeCRMonitorsRequest $req) 版权保护-查询监测列表接口
  * @method Models\DescribeCRWorkInfoResponse DescribeCRWorkInfo(Models\DescribeCRWorkInfoRequest $req) 查询作品基本信息
+ * @method Models\ModifyBPOfflineAttachmentResponse ModifyBPOfflineAttachment(Models\ModifyBPOfflineAttachmentRequest $req) 修改下线材料
  * @method Models\ModifyCRBlockStatusResponse ModifyCRBlockStatus(Models\ModifyCRBlockStatusRequest $req) 版权保护-拦截申请接口
  * @method Models\ModifyCRMonitorResponse ModifyCRMonitor(Models\ModifyCRMonitorRequest $req) 版权保护-修改监测状态接口
  * @method Models\ModifyCRObtainStatusResponse ModifyCRObtainStatus(Models\ModifyCRObtainStatusRequest $req) 申请取证

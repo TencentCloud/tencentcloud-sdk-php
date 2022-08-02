@@ -33,6 +33,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
   - 删除服务
  * @method Models\DeleteIngressResponse DeleteIngress(Models\DeleteIngressRequest $req) 删除 Ingress 规则
  * @method Models\DeployApplicationResponse DeployApplication(Models\DeployApplicationRequest $req) 应用部署
+ * @method Models\DescribeApplicationInfoResponse DescribeApplicationInfo(Models\DescribeApplicationInfoRequest $req) 服务基本信息查看
  * @method Models\DescribeApplicationPodsResponse DescribeApplicationPods(Models\DescribeApplicationPodsRequest $req) 获取应用实例列表
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 获取运行服务列表
  * @method Models\DescribeApplicationsStatusResponse DescribeApplicationsStatus(Models\DescribeApplicationsStatusRequest $req) 单环境下所有应用状态查看

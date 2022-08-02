@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置环境地域
  * @method string getEnvType() 获取环境类型 tcbr ｜ run
  * @method void setEnvType(string $EnvType) 设置环境类型 tcbr ｜ run
+ * @method string getSubnetIds() 获取子网id
+ * @method void setSubnetIds(string $SubnetIds) 设置子网id
  */
 class EnvBaseInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class EnvBaseInfo extends AbstractModel
     public $EnvType;
 
     /**
+     * @var string 子网id
+     */
+    public $SubnetIds;
+
+    /**
      * @param string $EnvId 环境Id
      * @param string $PackageType 套餐类型：Trial ｜ Standard ｜ Professional ｜ Enterprise
      * @param string $VpcId VPC Id
@@ -88,6 +95,7 @@ class EnvBaseInfo extends AbstractModel
      * @param string $Status 环境状态
      * @param string $Region 环境地域
      * @param string $EnvType 环境类型 tcbr ｜ run
+     * @param string $SubnetIds 子网id
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class EnvBaseInfo extends AbstractModel
 
         if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
             $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
+            $this->SubnetIds = $param["SubnetIds"];
         }
     }
 }

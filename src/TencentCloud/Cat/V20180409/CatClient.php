@@ -26,6 +26,7 @@ use TencentCloud\Cat\V20180409\Models as Models;
  * @method Models\CreateProbeTasksResponse CreateProbeTasks(Models\CreateProbeTasksRequest $req) 批量创建拨测任务
  * @method Models\DeleteProbeTaskResponse DeleteProbeTask(Models\DeleteProbeTaskRequest $req) 删除拨测任务
  * @method Models\DescribeDetailedSingleProbeDataResponse DescribeDetailedSingleProbeData(Models\DescribeDetailedSingleProbeDataRequest $req) 根据时间范围、任务ID、运营商等条件查询单次拨测详情数据
+ * @method Models\DescribeNodesResponse DescribeNodes(Models\DescribeNodesRequest $req) 获取拨测节点
  * @method Models\DescribeProbeMetricDataResponse DescribeProbeMetricData(Models\DescribeProbeMetricDataRequest $req) 查询云拨测指标数据，指标支持使用sum,avg,max,min聚合函数进行指标数据查询
  * @method Models\DescribeProbeNodesResponse DescribeProbeNodes(Models\DescribeProbeNodesRequest $req) 查询拨测节点
  * @method Models\DescribeProbeTasksResponse DescribeProbeTasks(Models\DescribeProbeTasksRequest $req) 查询拨测任务列表

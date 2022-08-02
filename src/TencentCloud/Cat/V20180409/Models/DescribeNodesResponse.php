@@ -14,47 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTKEEdgeScript返回参数结构体
+ * DescribeNodes返回参数结构体
  *
- * @method string getLink() 获取下载链接
- * @method void setLink(string $Link) 设置下载链接
- * @method string getToken() 获取下载需要的token
- * @method void setToken(string $Token) 设置下载需要的token
- * @method string getCommand() 获取下载命令
- * @method void setCommand(string $Command) 设置下载命令
- * @method string getScriptVersion() 获取edgectl脚本版本，默认拉取最新版本
+ * @method array getNodeSet() 获取节点列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScriptVersion(string $ScriptVersion) 设置edgectl脚本版本，默认拉取最新版本
+ * @method void setNodeSet(array $NodeSet) 设置节点列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTKEEdgeScriptResponse extends AbstractModel
+class DescribeNodesResponse extends AbstractModel
 {
     /**
-     * @var string 下载链接
-     */
-    public $Link;
-
-    /**
-     * @var string 下载需要的token
-     */
-    public $Token;
-
-    /**
-     * @var string 下载命令
-     */
-    public $Command;
-
-    /**
-     * @var string edgectl脚本版本，默认拉取最新版本
+     * @var array 节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ScriptVersion;
+    public $NodeSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -62,10 +41,7 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Link 下载链接
-     * @param string $Token 下载需要的token
-     * @param string $Command 下载命令
-     * @param string $ScriptVersion edgectl脚本版本，默认拉取最新版本
+     * @param array $NodeSet 节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -82,20 +58,13 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Link",$param) and $param["Link"] !== null) {
-            $this->Link = $param["Link"];
-        }
-
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
-        }
-
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
-        }
-
-        if (array_key_exists("ScriptVersion",$param) and $param["ScriptVersion"] !== null) {
-            $this->ScriptVersion = $param["ScriptVersion"];
+        if (array_key_exists("NodeSet",$param) and $param["NodeSet"] !== null) {
+            $this->NodeSet = [];
+            foreach ($param["NodeSet"] as $key => $value){
+                $obj = new NodeDefineExt();
+                $obj->deserialize($value);
+                array_push($this->NodeSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

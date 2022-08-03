@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowEffectiveDay(integer $FlowEffectiveDay) 设置签署流程有效天数 默认7天 最高设置不超过30天
  * @method integer getQrEffectiveDay() 获取二维码有效天数 默认7天 最高设置不超过90天
  * @method void setQrEffectiveDay(integer $QrEffectiveDay) 设置二维码有效天数 默认7天 最高设置不超过90天
+ * @method ApproverRestriction getApproverRestrictions() 获取限制二维码用户条件
+ * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件
  */
 class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
@@ -89,6 +91,11 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $QrEffectiveDay;
 
     /**
+     * @var ApproverRestriction 限制二维码用户条件
+     */
+    public $ApproverRestrictions;
+
+    /**
      * @param string $TemplateId 模板ID
      * @param string $FlowName 签署流程名称，最大长度不超过200字符
      * @param UserInfo $Operator 用户信息
@@ -100,6 +107,7 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 发起流程数量超过此上限后二维码自动失效
      * @param integer $FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
      * @param integer $QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
+     * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件
      */
     function __construct()
     {
@@ -146,6 +154,11 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 
         if (array_key_exists("QrEffectiveDay",$param) and $param["QrEffectiveDay"] !== null) {
             $this->QrEffectiveDay = $param["QrEffectiveDay"];
+        }
+
+        if (array_key_exists("ApproverRestrictions",$param) and $param["ApproverRestrictions"] !== null) {
+            $this->ApproverRestrictions = new ApproverRestriction();
+            $this->ApproverRestrictions->deserialize($param["ApproverRestrictions"]);
         }
     }
 }

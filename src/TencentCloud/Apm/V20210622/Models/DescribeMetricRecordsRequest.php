@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间
  * @method string getBusinessName() 获取业务名称（默认值：taw）
  * @method void setBusinessName(string $BusinessName) 设置业务名称（默认值：taw）
+ * @method integer getPageIndex() 获取页码
+ * @method void setPageIndex(integer $PageIndex) 设置页码
+ * @method integer getPageSize() 获取页长
+ * @method void setPageSize(integer $PageSize) 设置页长
  */
 class DescribeMetricRecordsRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class DescribeMetricRecordsRequest extends AbstractModel
     public $BusinessName;
 
     /**
+     * @var integer 页码
+     */
+    public $PageIndex;
+
+    /**
+     * @var integer 页长
+     */
+    public $PageSize;
+
+    /**
      * @param array $Filters 过滤条件
      * @param array $Metrics 指标列表
      * @param array $GroupBy 聚合维度
@@ -104,6 +118,8 @@ class DescribeMetricRecordsRequest extends AbstractModel
      * @param integer $Offset 分页起始点
      * @param integer $EndTime 结束时间
      * @param string $BusinessName 业务名称（默认值：taw）
+     * @param integer $PageIndex 页码
+     * @param integer $PageSize 页长
      */
     function __construct()
     {
@@ -167,6 +183,14 @@ class DescribeMetricRecordsRequest extends AbstractModel
 
         if (array_key_exists("BusinessName",$param) and $param["BusinessName"] !== null) {
             $this->BusinessName = $param["BusinessName"];
+        }
+
+        if (array_key_exists("PageIndex",$param) and $param["PageIndex"] !== null) {
+            $this->PageIndex = $param["PageIndex"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
     }
 }

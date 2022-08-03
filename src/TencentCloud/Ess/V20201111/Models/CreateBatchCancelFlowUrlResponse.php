@@ -18,26 +18,33 @@ namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateMultiFlowSignQRCode返回参数结构体
+ * CreateBatchCancelFlowUrl返回参数结构体
  *
- * @method SignQrCode getQrCode() 获取签署二维码对象
- * @method void setQrCode(SignQrCode $QrCode) 设置签署二维码对象
- * @method SignUrl getSignUrls() 获取签署链接对象
- * @method void setSignUrls(SignUrl $SignUrls) 设置签署链接对象
+ * @method string getBatchCancelFlowUrl() 获取批量撤回签署流程链接
+ * @method void setBatchCancelFlowUrl(string $BatchCancelFlowUrl) 设置批量撤回签署流程链接
+ * @method array getFailMessages() 获取签署流程撤回失败信息
+ * @method void setFailMessages(array $FailMessages) 设置签署流程撤回失败信息
+ * @method string getUrlExpireOn() 获取签署连接过期时间字符串：年月日-时分秒
+ * @method void setUrlExpireOn(string $UrlExpireOn) 设置签署连接过期时间字符串：年月日-时分秒
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateMultiFlowSignQRCodeResponse extends AbstractModel
+class CreateBatchCancelFlowUrlResponse extends AbstractModel
 {
     /**
-     * @var SignQrCode 签署二维码对象
+     * @var string 批量撤回签署流程链接
      */
-    public $QrCode;
+    public $BatchCancelFlowUrl;
 
     /**
-     * @var SignUrl 签署链接对象
+     * @var array 签署流程撤回失败信息
      */
-    public $SignUrls;
+    public $FailMessages;
+
+    /**
+     * @var string 签署连接过期时间字符串：年月日-时分秒
+     */
+    public $UrlExpireOn;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class CreateMultiFlowSignQRCodeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SignQrCode $QrCode 签署二维码对象
-     * @param SignUrl $SignUrls 签署链接对象
+     * @param string $BatchCancelFlowUrl 批量撤回签署流程链接
+     * @param array $FailMessages 签署流程撤回失败信息
+     * @param string $UrlExpireOn 签署连接过期时间字符串：年月日-时分秒
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,14 +70,16 @@ class CreateMultiFlowSignQRCodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QrCode",$param) and $param["QrCode"] !== null) {
-            $this->QrCode = new SignQrCode();
-            $this->QrCode->deserialize($param["QrCode"]);
+        if (array_key_exists("BatchCancelFlowUrl",$param) and $param["BatchCancelFlowUrl"] !== null) {
+            $this->BatchCancelFlowUrl = $param["BatchCancelFlowUrl"];
         }
 
-        if (array_key_exists("SignUrls",$param) and $param["SignUrls"] !== null) {
-            $this->SignUrls = new SignUrl();
-            $this->SignUrls->deserialize($param["SignUrls"]);
+        if (array_key_exists("FailMessages",$param) and $param["FailMessages"] !== null) {
+            $this->FailMessages = $param["FailMessages"];
+        }
+
+        if (array_key_exists("UrlExpireOn",$param) and $param["UrlExpireOn"] !== null) {
+            $this->UrlExpireOn = $param["UrlExpireOn"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

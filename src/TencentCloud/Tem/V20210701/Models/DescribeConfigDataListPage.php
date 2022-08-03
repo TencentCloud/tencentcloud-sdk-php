@@ -14,48 +14,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apm\V20210622\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMetricRecords返回参数结构体
+ * 配置信息的分页列表
  *
- * @method array getRecords() 获取指标结果集
+ * @method array getRecords() 获取记录
+ * @method void setRecords(array $Records) 设置记录
+ * @method string getContinueToken() 获取分页游标，用以查询下一页
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecords(array $Records) 设置指标结果集
+ * @method void setContinueToken(string $ContinueToken) 设置分页游标，用以查询下一页
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取查询指标结果集条数
+ * @method integer getRemainingCount() 获取剩余数目
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置查询指标结果集条数
+ * @method void setRemainingCount(integer $RemainingCount) 设置剩余数目
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMetricRecordsResponse extends AbstractModel
+class DescribeConfigDataListPage extends AbstractModel
 {
     /**
-     * @var array 指标结果集
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 记录
      */
     public $Records;
 
     /**
-     * @var integer 查询指标结果集条数
+     * @var string 分页游标，用以查询下一页
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TotalCount;
+    public $ContinueToken;
 
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var integer 剩余数目
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RequestId;
+    public $RemainingCount;
 
     /**
-     * @param array $Records 指标结果集
+     * @param array $Records 记录
+     * @param string $ContinueToken 分页游标，用以查询下一页
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 查询指标结果集条数
+     * @param integer $RemainingCount 剩余数目
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -73,18 +73,18 @@ class DescribeMetricRecordsResponse extends AbstractModel
         if (array_key_exists("Records",$param) and $param["Records"] !== null) {
             $this->Records = [];
             foreach ($param["Records"] as $key => $value){
-                $obj = new ApmMetricRecord();
+                $obj = new ConfigData();
                 $obj->deserialize($value);
                 array_push($this->Records, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("ContinueToken",$param) and $param["ContinueToken"] !== null) {
+            $this->ContinueToken = $param["ContinueToken"];
         }
 
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("RemainingCount",$param) and $param["RemainingCount"] !== null) {
+            $this->RemainingCount = $param["RemainingCount"];
         }
     }
 }

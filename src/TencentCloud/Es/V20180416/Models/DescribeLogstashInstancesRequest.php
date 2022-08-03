@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByKey(integer $OrderByKey) 设置排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
  * @method integer getOrderByType() 获取排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
  * @method void setOrderByType(integer $OrderByType) 设置排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+ * @method array getVpcIds() 获取VpcId 筛选项
+ * @method void setVpcIds(array $VpcIds) 设置VpcId 筛选项
  */
 class DescribeLogstashInstancesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeLogstashInstancesRequest extends AbstractModel
     public $OrderByType;
 
     /**
+     * @var array VpcId 筛选项
+     */
+    public $VpcIds;
+
+    /**
      * @param string $Zone 实例所属可用区，不传则默认所有可用区
      * @param array $InstanceIds 实例ID列表
      * @param array $InstanceNames 实例名称列表
@@ -80,6 +87,7 @@ class DescribeLogstashInstancesRequest extends AbstractModel
      * @param integer $Limit 分页大小，默认值20
      * @param integer $OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      * @param integer $OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+     * @param array $VpcIds VpcId 筛选项
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeLogstashInstancesRequest extends AbstractModel
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
             $this->OrderByType = $param["OrderByType"];
+        }
+
+        if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
+            $this->VpcIds = $param["VpcIds"];
         }
     }
 }

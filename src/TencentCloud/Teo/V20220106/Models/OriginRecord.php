@@ -28,10 +28,16 @@ use TencentCloud\Common\AbstractModel;
 为空表示默认区域
  * @method integer getWeight() 获取当源站配置类型Type=weight时，表示权重
 取值范围为[1-100]
-源站组内多个源站权重总和应为100
+源站组内多个源站权重总和应为100。
+当源站配置类型Type=proto，表示权重
+取值范围为[1-100]
+源站组内Proto相同的多个源站权重总和应为100。
  * @method void setWeight(integer $Weight) 设置当源站配置类型Type=weight时，表示权重
 取值范围为[1-100]
-源站组内多个源站权重总和应为100
+源站组内多个源站权重总和应为100。
+当源站配置类型Type=proto，表示权重
+取值范围为[1-100]
+源站组内Proto相同的多个源站权重总和应为100。
  * @method integer getPort() 获取端口
  * @method void setPort(integer $Port) 设置端口
  * @method string getRecordId() 获取记录ID
@@ -47,6 +53,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateParameter(array $PrivateParameter) 设置私有鉴权参数
 当源站类型Private=true时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProto() 获取当源站配置类型Type=proto时，表示客户端请求协议，取值：http/https
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProto(string $Proto) 设置当源站配置类型Type=proto时，表示客户端请求协议，取值：http/https
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class OriginRecord extends AbstractModel
@@ -65,7 +75,10 @@ class OriginRecord extends AbstractModel
     /**
      * @var integer 当源站配置类型Type=weight时，表示权重
 取值范围为[1-100]
-源站组内多个源站权重总和应为100
+源站组内多个源站权重总和应为100。
+当源站配置类型Type=proto，表示权重
+取值范围为[1-100]
+源站组内Proto相同的多个源站权重总和应为100。
      */
     public $Weight;
 
@@ -94,12 +107,21 @@ class OriginRecord extends AbstractModel
     public $PrivateParameter;
 
     /**
+     * @var string 当源站配置类型Type=proto时，表示客户端请求协议，取值：http/https
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Proto;
+
+    /**
      * @param string $Record 记录值
      * @param array $Area 当源站配置类型Type=area时，表示区域
 为空表示默认区域
      * @param integer $Weight 当源站配置类型Type=weight时，表示权重
 取值范围为[1-100]
-源站组内多个源站权重总和应为100
+源站组内多个源站权重总和应为100。
+当源站配置类型Type=proto，表示权重
+取值范围为[1-100]
+源站组内Proto相同的多个源站权重总和应为100。
      * @param integer $Port 端口
      * @param string $RecordId 记录ID
      * @param boolean $Private 是否私有鉴权
@@ -107,6 +129,8 @@ class OriginRecord extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateParameter 私有鉴权参数
 当源站类型Private=true时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Proto 当源站配置类型Type=proto时，表示客户端请求协议，取值：http/https
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +177,10 @@ class OriginRecord extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PrivateParameter, $obj);
             }
+        }
+
+        if (array_key_exists("Proto",$param) and $param["Proto"] !== null) {
+            $this->Proto = $param["Proto"];
         }
     }
 }

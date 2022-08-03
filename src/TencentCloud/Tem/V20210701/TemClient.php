@@ -24,6 +24,8 @@ use TencentCloud\Tem\V20210701\Models as Models;
 
 /**
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 创建应用
+ * @method Models\CreateApplicationAutoscalerResponse CreateApplicationAutoscaler(Models\CreateApplicationAutoscalerRequest $req) 创建弹性伸缩策略组合
+ * @method Models\CreateConfigDataResponse CreateConfigData(Models\CreateConfigDataRequest $req) 创建配置
  * @method Models\CreateCosTokenResponse CreateCosToken(Models\CreateCosTokenRequest $req) 生成Cos临时秘钥
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 创建环境
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 绑定云资源
@@ -31,22 +33,29 @@ use TencentCloud\Tem\V20210701\Models as Models;
   - 停止当前运行服务
   - 删除服务相关资源
   - 删除服务
+ * @method Models\DeleteApplicationAutoscalerResponse DeleteApplicationAutoscaler(Models\DeleteApplicationAutoscalerRequest $req) 删除应用弹性策略组合
  * @method Models\DeleteIngressResponse DeleteIngress(Models\DeleteIngressRequest $req) 删除 Ingress 规则
  * @method Models\DeployApplicationResponse DeployApplication(Models\DeployApplicationRequest $req) 应用部署
+ * @method Models\DescribeApplicationAutoscalerListResponse DescribeApplicationAutoscalerList(Models\DescribeApplicationAutoscalerListRequest $req) 获取应用弹性策略组合
  * @method Models\DescribeApplicationInfoResponse DescribeApplicationInfo(Models\DescribeApplicationInfoRequest $req) 服务基本信息查看
  * @method Models\DescribeApplicationPodsResponse DescribeApplicationPods(Models\DescribeApplicationPodsRequest $req) 获取应用实例列表
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 获取运行服务列表
  * @method Models\DescribeApplicationsStatusResponse DescribeApplicationsStatus(Models\DescribeApplicationsStatusRequest $req) 单环境下所有应用状态查看
+ * @method Models\DescribeConfigDataResponse DescribeConfigData(Models\DescribeConfigDataRequest $req) 查询配置详情
+ * @method Models\DescribeConfigDataListResponse DescribeConfigDataList(Models\DescribeConfigDataListRequest $req) 查询配置列表
  * @method Models\DescribeDeployApplicationDetailResponse DescribeDeployApplicationDetail(Models\DescribeDeployApplicationDetailRequest $req) 获取分批发布详情
  * @method Models\DescribeEnvironmentStatusResponse DescribeEnvironmentStatus(Models\DescribeEnvironmentStatusRequest $req) 获取环境状态
  * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 获取租户环境列表
  * @method Models\DescribeIngressResponse DescribeIngress(Models\DescribeIngressRequest $req) 查询 Ingress 规则
  * @method Models\DescribeIngressesResponse DescribeIngresses(Models\DescribeIngressesRequest $req) 查询 Ingress 规则列表
  * @method Models\DescribeRelatedIngressesResponse DescribeRelatedIngresses(Models\DescribeRelatedIngressesRequest $req) 查询应用关联的 Ingress 规则列表
+ * @method Models\DestroyConfigDataResponse DestroyConfigData(Models\DestroyConfigDataRequest $req) 销毁配置
  * @method Models\DestroyEnvironmentResponse DestroyEnvironment(Models\DestroyEnvironmentRequest $req) 销毁命名空间
  * @method Models\GenerateApplicationPackageDownloadUrlResponse GenerateApplicationPackageDownloadUrl(Models\GenerateApplicationPackageDownloadUrlRequest $req) 生成应用程序包预签名下载链接
+ * @method Models\ModifyApplicationAutoscalerResponse ModifyApplicationAutoscaler(Models\ModifyApplicationAutoscalerRequest $req) 修改弹性伸缩策略组合
  * @method Models\ModifyApplicationInfoResponse ModifyApplicationInfo(Models\ModifyApplicationInfoRequest $req) 修改应用基本信息
  * @method Models\ModifyApplicationReplicasResponse ModifyApplicationReplicas(Models\ModifyApplicationReplicasRequest $req) 修改应用实例数量
+ * @method Models\ModifyConfigDataResponse ModifyConfigData(Models\ModifyConfigDataRequest $req) 编辑配置
  * @method Models\ModifyEnvironmentResponse ModifyEnvironment(Models\ModifyEnvironmentRequest $req) 编辑环境
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 创建或者更新 Ingress 规则
  * @method Models\RestartApplicationResponse RestartApplication(Models\RestartApplicationRequest $req) 服务重启

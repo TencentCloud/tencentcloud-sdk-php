@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Waf规则
  *
- * @method array getBlockRuleIDs() 获取黑名单
- * @method void setBlockRuleIDs(array $BlockRuleIDs) 设置黑名单
- * @method string getSwitch() 获取id的开关
- * @method void setSwitch(string $Switch) 设置id的开关
- * @method array getObserveRuleIDs() 获取观察模式
+ * @method array getBlockRuleIDs() 获取黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
+ * @method void setBlockRuleIDs(array $BlockRuleIDs) 设置黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
+ * @method string getSwitch() 获取托管规则 开关
+ * @method void setSwitch(string $Switch) 设置托管规则 开关
+ * @method array getObserveRuleIDs() 获取观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setObserveRuleIDs(array $ObserveRuleIDs) 设置观察模式
+ * @method void setObserveRuleIDs(array $ObserveRuleIDs) 设置观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WafRule extends AbstractModel
 {
     /**
-     * @var array 黑名单
+     * @var array 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
      */
     public $BlockRuleIDs;
 
     /**
-     * @var string id的开关
+     * @var string 托管规则 开关
      */
     public $Switch;
 
     /**
-     * @var array 观察模式
+     * @var array 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObserveRuleIDs;
 
     /**
-     * @param array $BlockRuleIDs 黑名单
-     * @param string $Switch id的开关
-     * @param array $ObserveRuleIDs 观察模式
+     * @param array $BlockRuleIDs 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
+     * @param string $Switch 托管规则 开关
+     * @param array $ObserveRuleIDs 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

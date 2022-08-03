@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 投递日志的压缩配置
  *
- * @method string getFormat() 获取压缩格式，支持gzip、lzop和none不压缩
- * @method void setFormat(string $Format) 设置压缩格式，支持gzip、lzop和none不压缩
+ * @method string getFormat() 获取压缩格式，支持gzip、lzop、snappy和none不压缩
+ * @method void setFormat(string $Format) 设置压缩格式，支持gzip、lzop、snappy和none不压缩
  */
 class CompressInfo extends AbstractModel
 {
     /**
-     * @var string 压缩格式，支持gzip、lzop和none不压缩
+     * @var string 压缩格式，支持gzip、lzop、snappy和none不压缩
      */
     public $Format;
 
     /**
-     * @param string $Format 压缩格式，支持gzip、lzop和none不压缩
+     * @param string $Format 压缩格式，支持gzip、lzop、snappy和none不压缩
      */
     function __construct()
     {

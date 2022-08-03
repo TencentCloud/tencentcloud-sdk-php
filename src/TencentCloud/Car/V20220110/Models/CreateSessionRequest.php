@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIp(string $UserIp) 设置用户IP
  * @method string getClientSession() 获取客户端session信息，从SDK请求中获得
  * @method void setClientSession(string $ClientSession) 设置客户端session信息，从SDK请求中获得
+ * @method string getRunMode() 获取云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+ * @method void setRunMode(string $RunMode) 设置云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
  */
 class CreateSessionRequest extends AbstractModel
 {
@@ -45,9 +51,19 @@ class CreateSessionRequest extends AbstractModel
     public $ClientSession;
 
     /**
+     * @var string 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+     */
+    public $RunMode;
+
+    /**
      * @param string $UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      * @param string $UserIp 用户IP
      * @param string $ClientSession 客户端session信息，从SDK请求中获得
+     * @param string $RunMode 云端运行模式。
+RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
      */
     function __construct()
     {
@@ -72,6 +88,10 @@ class CreateSessionRequest extends AbstractModel
 
         if (array_key_exists("ClientSession",$param) and $param["ClientSession"] !== null) {
             $this->ClientSession = $param["ClientSession"];
+        }
+
+        if (array_key_exists("RunMode",$param) and $param["RunMode"] !== null) {
+            $this->RunMode = $param["RunMode"];
         }
     }
 }

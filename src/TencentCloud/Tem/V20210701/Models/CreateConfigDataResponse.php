@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateMultiFlowSignQRCode返回参数结构体
+ * CreateConfigData返回参数结构体
  *
- * @method SignQrCode getQrCode() 获取签署二维码对象
- * @method void setQrCode(SignQrCode $QrCode) 设置签署二维码对象
- * @method SignUrl getSignUrls() 获取签署链接对象
- * @method void setSignUrls(SignUrl $SignUrls) 设置签署链接对象
+ * @method boolean getResult() 获取创建是否成功
+ * @method void setResult(boolean $Result) 设置创建是否成功
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateMultiFlowSignQRCodeResponse extends AbstractModel
+class CreateConfigDataResponse extends AbstractModel
 {
     /**
-     * @var SignQrCode 签署二维码对象
+     * @var boolean 创建是否成功
      */
-    public $QrCode;
-
-    /**
-     * @var SignUrl 签署链接对象
-     */
-    public $SignUrls;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class CreateMultiFlowSignQRCodeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SignQrCode $QrCode 签署二维码对象
-     * @param SignUrl $SignUrls 签署链接对象
+     * @param boolean $Result 创建是否成功
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,14 +54,8 @@ class CreateMultiFlowSignQRCodeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QrCode",$param) and $param["QrCode"] !== null) {
-            $this->QrCode = new SignQrCode();
-            $this->QrCode->deserialize($param["QrCode"]);
-        }
-
-        if (array_key_exists("SignUrls",$param) and $param["SignUrls"] !== null) {
-            $this->SignUrls = new SignUrl();
-            $this->SignUrls->deserialize($param["SignUrls"]);
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

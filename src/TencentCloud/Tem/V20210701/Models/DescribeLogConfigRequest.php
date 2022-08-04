@@ -14,32 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cat\V20180409\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 拨测任务基础配置
+ * DescribeLogConfig请求参数结构体
  *
- * @method string getName() 获取拨测任务名称
- * @method void setName(string $Name) 设置拨测任务名称
- * @method string getTargetAddress() 获取拨测目标地址
- * @method void setTargetAddress(string $TargetAddress) 设置拨测目标地址
+ * @method string getEnvironmentId() 获取环境 ID
+ * @method void setEnvironmentId(string $EnvironmentId) 设置环境 ID
+ * @method string getName() 获取配置名
+ * @method void setName(string $Name) 设置配置名
+ * @method string getApplicationId() 获取应用 ID
+ * @method void setApplicationId(string $ApplicationId) 设置应用 ID
  */
-class ProbeTaskBasicConfiguration extends AbstractModel
+class DescribeLogConfigRequest extends AbstractModel
 {
     /**
-     * @var string 拨测任务名称
+     * @var string 环境 ID
+     */
+    public $EnvironmentId;
+
+    /**
+     * @var string 配置名
      */
     public $Name;
 
     /**
-     * @var string 拨测目标地址
+     * @var string 应用 ID
      */
-    public $TargetAddress;
+    public $ApplicationId;
 
     /**
-     * @param string $Name 拨测任务名称
-     * @param string $TargetAddress 拨测目标地址
+     * @param string $EnvironmentId 环境 ID
+     * @param string $Name 配置名
+     * @param string $ApplicationId 应用 ID
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class ProbeTaskBasicConfiguration extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
+            $this->EnvironmentId = $param["EnvironmentId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("TargetAddress",$param) and $param["TargetAddress"] !== null) {
-            $this->TargetAddress = $param["TargetAddress"];
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }

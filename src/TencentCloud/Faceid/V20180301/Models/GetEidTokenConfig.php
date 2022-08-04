@@ -36,8 +36,12 @@ use TencentCloud\Common\AbstractModel;
 注：使用OCR时仅支持用户修改结果中的姓名
  * @method boolean getUseIntentionVerify() 获取是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
  * @method void setUseIntentionVerify(boolean $UseIntentionVerify) 设置是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
- * @method string getIntentionVerifyText() 获取意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
- * @method void setIntentionVerifyText(string $IntentionVerifyText) 设置意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+ * @method string getIntentionMode() 获取意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+ * @method void setIntentionMode(string $IntentionMode) 设置意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+ * @method string getIntentionVerifyText() 获取意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+ * @method void setIntentionVerifyText(string $IntentionVerifyText) 设置意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+ * @method array getIntentionQuestions() 获取意愿核身问答模式的配置列表。当前仅支持一个问答。
+ * @method void setIntentionQuestions(array $IntentionQuestions) 设置意愿核身问答模式的配置列表。当前仅支持一个问答。
  */
 class GetEidTokenConfig extends AbstractModel
 {
@@ -58,9 +62,19 @@ class GetEidTokenConfig extends AbstractModel
     public $UseIntentionVerify;
 
     /**
-     * @var string 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * @var string 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+     */
+    public $IntentionMode;
+
+    /**
+     * @var string 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
      */
     public $IntentionVerifyText;
+
+    /**
+     * @var array 意愿核身问答模式的配置列表。当前仅支持一个问答。
+     */
+    public $IntentionQuestions;
 
     /**
      * @param string $InputType 姓名身份证输入方式。
@@ -71,7 +85,9 @@ class GetEidTokenConfig extends AbstractModel
 默认1
 注：使用OCR时仅支持用户修改结果中的姓名
      * @param boolean $UseIntentionVerify 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
-     * @param string $IntentionVerifyText 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * @param string $IntentionMode 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+     * @param string $IntentionVerifyText 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * @param array $IntentionQuestions 意愿核身问答模式的配置列表。当前仅支持一个问答。
      */
     function __construct()
     {
@@ -94,8 +110,21 @@ class GetEidTokenConfig extends AbstractModel
             $this->UseIntentionVerify = $param["UseIntentionVerify"];
         }
 
+        if (array_key_exists("IntentionMode",$param) and $param["IntentionMode"] !== null) {
+            $this->IntentionMode = $param["IntentionMode"];
+        }
+
         if (array_key_exists("IntentionVerifyText",$param) and $param["IntentionVerifyText"] !== null) {
             $this->IntentionVerifyText = $param["IntentionVerifyText"];
+        }
+
+        if (array_key_exists("IntentionQuestions",$param) and $param["IntentionQuestions"] !== null) {
+            $this->IntentionQuestions = [];
+            foreach ($param["IntentionQuestions"] as $key => $value){
+                $obj = new IntentionQuestion();
+                $obj->deserialize($value);
+                array_push($this->IntentionQuestions, $obj);
+            }
         }
     }
 }

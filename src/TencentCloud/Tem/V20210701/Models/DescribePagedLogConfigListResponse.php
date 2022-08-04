@@ -14,21 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cpdp\V20190820\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSinglePay返回参数结构体
+ * DescribePagedLogConfigList返回参数结构体
  *
- * @method CreateSinglePayResult getResult() 获取返回结果
- * @method void setResult(CreateSinglePayResult $Result) 设置返回结果
+ * @method LogConfigListPage getResult() 获取日志收集配置列表
+ * @method void setResult(LogConfigListPage $Result) 设置日志收集配置列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateSinglePayResponse extends AbstractModel
+class DescribePagedLogConfigListResponse extends AbstractModel
 {
     /**
-     * @var CreateSinglePayResult 返回结果
+     * @var LogConfigListPage 日志收集配置列表
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class CreateSinglePayResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CreateSinglePayResult $Result 返回结果
+     * @param LogConfigListPage $Result 日志收集配置列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class CreateSinglePayResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = new CreateSinglePayResult();
+            $this->Result = new LogConfigListPage();
             $this->Result->deserialize($param["Result"]);
         }
 

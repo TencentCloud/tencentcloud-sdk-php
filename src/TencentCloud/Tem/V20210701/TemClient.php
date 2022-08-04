@@ -28,6 +28,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\CreateConfigDataResponse CreateConfigData(Models\CreateConfigDataRequest $req) 创建配置
  * @method Models\CreateCosTokenResponse CreateCosToken(Models\CreateCosTokenRequest $req) 生成Cos临时秘钥
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 创建环境
+ * @method Models\CreateLogConfigResponse CreateLogConfig(Models\CreateLogConfigRequest $req) 创建日志收集配置
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 绑定云资源
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) 服务删除
   - 停止当前运行服务
@@ -45,12 +46,15 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\DescribeConfigDataListResponse DescribeConfigDataList(Models\DescribeConfigDataListRequest $req) 查询配置列表
  * @method Models\DescribeDeployApplicationDetailResponse DescribeDeployApplicationDetail(Models\DescribeDeployApplicationDetailRequest $req) 获取分批发布详情
  * @method Models\DescribeEnvironmentStatusResponse DescribeEnvironmentStatus(Models\DescribeEnvironmentStatusRequest $req) 获取环境状态
- * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 获取租户环境列表
+ * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 获取环境列表
  * @method Models\DescribeIngressResponse DescribeIngress(Models\DescribeIngressRequest $req) 查询 Ingress 规则
  * @method Models\DescribeIngressesResponse DescribeIngresses(Models\DescribeIngressesRequest $req) 查询 Ingress 规则列表
+ * @method Models\DescribeLogConfigResponse DescribeLogConfig(Models\DescribeLogConfigRequest $req) 查询日志收集配置详情
+ * @method Models\DescribePagedLogConfigListResponse DescribePagedLogConfigList(Models\DescribePagedLogConfigListRequest $req) 查询分页的日志收集配置列表
  * @method Models\DescribeRelatedIngressesResponse DescribeRelatedIngresses(Models\DescribeRelatedIngressesRequest $req) 查询应用关联的 Ingress 规则列表
  * @method Models\DestroyConfigDataResponse DestroyConfigData(Models\DestroyConfigDataRequest $req) 销毁配置
- * @method Models\DestroyEnvironmentResponse DestroyEnvironment(Models\DestroyEnvironmentRequest $req) 销毁命名空间
+ * @method Models\DestroyEnvironmentResponse DestroyEnvironment(Models\DestroyEnvironmentRequest $req) 销毁环境
+ * @method Models\DestroyLogConfigResponse DestroyLogConfig(Models\DestroyLogConfigRequest $req) 销毁日志收集配置
  * @method Models\GenerateApplicationPackageDownloadUrlResponse GenerateApplicationPackageDownloadUrl(Models\GenerateApplicationPackageDownloadUrlRequest $req) 生成应用程序包预签名下载链接
  * @method Models\ModifyApplicationAutoscalerResponse ModifyApplicationAutoscaler(Models\ModifyApplicationAutoscalerRequest $req) 修改弹性伸缩策略组合
  * @method Models\ModifyApplicationInfoResponse ModifyApplicationInfo(Models\ModifyApplicationInfoRequest $req) 修改应用基本信息
@@ -58,6 +62,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\ModifyConfigDataResponse ModifyConfigData(Models\ModifyConfigDataRequest $req) 编辑配置
  * @method Models\ModifyEnvironmentResponse ModifyEnvironment(Models\ModifyEnvironmentRequest $req) 编辑环境
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 创建或者更新 Ingress 规则
+ * @method Models\ModifyLogConfigResponse ModifyLogConfig(Models\ModifyLogConfigRequest $req) 编辑日志收集配置
  * @method Models\RestartApplicationResponse RestartApplication(Models\RestartApplicationRequest $req) 服务重启
  * @method Models\RestartApplicationPodResponse RestartApplicationPod(Models\RestartApplicationPodRequest $req) 重启应用实例
  * @method Models\ResumeDeployApplicationResponse ResumeDeployApplication(Models\ResumeDeployApplicationRequest $req) 开始下一批次发布

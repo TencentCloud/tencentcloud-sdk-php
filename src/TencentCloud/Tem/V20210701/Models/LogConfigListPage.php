@@ -14,39 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220106\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DDoS地域封禁
+ * LogConfig 列表结果
  *
- * @method array getRegionId() 获取地域信息，ID参考接口DescribeSecurityPolicyRegions
+ * @method array getRecords() 获取记录
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionId(array $RegionId) 设置地域信息，ID参考接口DescribeSecurityPolicyRegions
+ * @method void setRecords(array $Records) 设置记录
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSwitch() 获取区域封禁清空标识
+ * @method string getContinueToken() 获取翻页游标
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置区域封禁清空标识
+ * @method void setContinueToken(string $ContinueToken) 设置翻页游标
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DDoSGeoIp extends AbstractModel
+class LogConfigListPage extends AbstractModel
 {
     /**
-     * @var array 地域信息，ID参考接口DescribeSecurityPolicyRegions
+     * @var array 记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RegionId;
+    public $Records;
 
     /**
-     * @var string 区域封禁清空标识
+     * @var string 翻页游标
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Switch;
+    public $ContinueToken;
 
     /**
-     * @param array $RegionId 地域信息，ID参考接口DescribeSecurityPolicyRegions
+     * @param array $Records 记录
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Switch 区域封禁清空标识
+     * @param string $ContinueToken 翻页游标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +62,17 @@ class DDoSGeoIp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists("Records",$param) and $param["Records"] !== null) {
+            $this->Records = [];
+            foreach ($param["Records"] as $key => $value){
+                $obj = new LogConfig();
+                $obj->deserialize($value);
+                array_push($this->Records, $obj);
+            }
         }
 
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("ContinueToken",$param) and $param["ContinueToken"] !== null) {
+            $this->ContinueToken = $param["ContinueToken"];
         }
     }
 }

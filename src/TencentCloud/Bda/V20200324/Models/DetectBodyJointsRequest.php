@@ -34,6 +34,12 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。  
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method boolean getLocalBodySwitch() 获取人体局部关键点识别，开启后对人体局部图（例如部分身体部位）进行关键点识别，输出人体关键点坐标，默认不开启
+
+注意：若开启人体局部图片关键点识别，则BoundBox、Confidence返回为空。
+ * @method void setLocalBodySwitch(boolean $LocalBodySwitch) 设置人体局部关键点识别，开启后对人体局部图（例如部分身体部位）进行关键点识别，输出人体关键点坐标，默认不开启
+
+注意：若开启人体局部图片关键点识别，则BoundBox、Confidence返回为空。
  */
 class DetectBodyJointsRequest extends AbstractModel
 {
@@ -53,6 +59,13 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $Url;
 
     /**
+     * @var boolean 人体局部关键点识别，开启后对人体局部图（例如部分身体部位）进行关键点识别，输出人体关键点坐标，默认不开启
+
+注意：若开启人体局部图片关键点识别，则BoundBox、Confidence返回为空。
+     */
+    public $LocalBodySwitch;
+
+    /**
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。  
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param string $Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
@@ -60,6 +73,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。  
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param boolean $LocalBodySwitch 人体局部关键点识别，开启后对人体局部图（例如部分身体部位）进行关键点识别，输出人体关键点坐标，默认不开启
+
+注意：若开启人体局部图片关键点识别，则BoundBox、Confidence返回为空。
      */
     function __construct()
     {
@@ -80,6 +96,10 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("LocalBodySwitch",$param) and $param["LocalBodySwitch"] !== null) {
+            $this->LocalBodySwitch = $param["LocalBodySwitch"];
         }
     }
 }

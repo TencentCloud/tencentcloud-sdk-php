@@ -14,39 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220106\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DDoS地域封禁
+ * 服务端口映射条目
  *
- * @method array getRegionId() 获取地域信息，ID参考接口DescribeSecurityPolicyRegions
+ * @method integer getPort() 获取应用访问端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionId(array $RegionId) 设置地域信息，ID参考接口DescribeSecurityPolicyRegions
+ * @method void setPort(integer $Port) 设置应用访问端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSwitch() 获取区域封禁清空标识
+ * @method integer getTargetPort() 获取应用监听端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置区域封禁清空标识
+ * @method void setTargetPort(integer $TargetPort) 设置应用监听端口
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocol() 获取协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtocol(string $Protocol) 设置协议类型
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DDoSGeoIp extends AbstractModel
+class ServicePortMappingItem extends AbstractModel
 {
     /**
-     * @var array 地域信息，ID参考接口DescribeSecurityPolicyRegions
+     * @var integer 应用访问端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RegionId;
+    public $Port;
 
     /**
-     * @var string 区域封禁清空标识
+     * @var integer 应用监听端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Switch;
+    public $TargetPort;
 
     /**
-     * @param array $RegionId 地域信息，ID参考接口DescribeSecurityPolicyRegions
+     * @var string 协议类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Switch 区域封禁清空标识
+     */
+    public $Protocol;
+
+    /**
+     * @param integer $Port 应用访问端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TargetPort 应用监听端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Protocol 协议类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,12 +74,16 @@ class DDoSGeoIp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
 
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("TargetPort",$param) and $param["TargetPort"] !== null) {
+            $this->TargetPort = $param["TargetPort"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

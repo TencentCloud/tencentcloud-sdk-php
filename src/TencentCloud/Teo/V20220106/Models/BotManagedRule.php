@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Bot 规则
+ * Bot 规则，下列规则ID可参考接口 DescribeBotManagedRules返回的ID信息
  *
  * @method array getManagedIds() 获取想开启的规则id
 注意：此字段可能返回 null，表示取不到有效值。

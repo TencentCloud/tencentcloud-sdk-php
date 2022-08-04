@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogExpireDays(integer $BinlogExpireDays) 设置binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
  * @method CommonTimeWindow getBackupTimeWindow() 获取备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
  * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) 设置备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
- * @method string getEnableBackupPeriodSave() 获取定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
- * @method void setEnableBackupPeriodSave(string $EnableBackupPeriodSave) 设置定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+ * @method string getEnableBackupPeriodSave() 获取定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
+ * @method void setEnableBackupPeriodSave(string $EnableBackupPeriodSave) 设置定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
  * @method string getEnableBackupPeriodLongTermSave() 获取长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效
  * @method void setEnableBackupPeriodLongTermSave(string $EnableBackupPeriodLongTermSave) 设置长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效
  * @method integer getBackupPeriodSaveDays() 获取定期保留最长天数，最小值：90，最大值：3650，默认值：1080
@@ -78,7 +78,7 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $BackupTimeWindow;
 
     /**
-     * @var string 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+     * @var string 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
      */
     public $EnableBackupPeriodSave;
 
@@ -114,7 +114,7 @@ class ModifyBackupConfigRequest extends AbstractModel
      * @param string $BackupMethod 自动备份方式，仅支持：physical - 物理冷备
      * @param integer $BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
      * @param CommonTimeWindow $BackupTimeWindow 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
-     * @param string $EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+     * @param string $EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off。首次开启定期保留策略时，BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount，StartBackupPeriodSaveDate参数为必填项，否则定期保留策略不会生效
      * @param string $EnableBackupPeriodLongTermSave 长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效
      * @param integer $BackupPeriodSaveDays 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
      * @param string $BackupPeriodSaveInterval 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly

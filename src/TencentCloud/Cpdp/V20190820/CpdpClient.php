@@ -86,7 +86,6 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreatePayRollTokenResponse CreatePayRollToken(Models\CreatePayRollTokenRequest $req) 务工卡-生成授权令牌
  * @method Models\CreateRedInvoiceResponse CreateRedInvoice(Models\CreateRedInvoiceRequest $req) 智慧零售-发票红冲
  * @method Models\CreateRedInvoiceV2Response CreateRedInvoiceV2(Models\CreateRedInvoiceV2Request $req) 智慧零售-发票红冲V2
- * @method Models\CreateSinglePayResponse CreateSinglePay(Models\CreateSinglePayRequest $req) 银企直连-单笔支付接口
  * @method Models\CreateSinglePaymentResponse CreateSinglePayment(Models\CreateSinglePaymentRequest $req) 灵云-单笔主播转账接口
  * @method Models\CreateTransferBatchResponse CreateTransferBatch(Models\CreateTransferBatchRequest $req) 微信商户发起批量转账
  * @method Models\DeduceQuotaResponse DeduceQuota(Models\DeduceQuotaRequest $req) 直播平台-扣减额度
@@ -198,7 +197,6 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryReconciliationFileApplyInfoResponse QueryReconciliationFileApplyInfo(Models\QueryReconciliationFileApplyInfoRequest $req) 聚鑫-查询对账文件申请结果
  * @method Models\QueryRefundResponse QueryRefund(Models\QueryRefundRequest $req) 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时，用微信零钱支付的退款约20分钟内到账，银行卡支付的退款约3个工作日后到账。
  * @method Models\QueryShopOpenIdResponse QueryShopOpenId(Models\QueryShopOpenIdRequest $req) 云支付-获取门店OpenId接口
- * @method Models\QuerySinglePayResponse QuerySinglePay(Models\QuerySinglePayRequest $req) 银企直连-单笔支付状态查询接口
  * @method Models\QuerySinglePaymentResultResponse QuerySinglePaymentResult(Models\QuerySinglePaymentResultRequest $req) 灵云-单笔转账结果查询
  * @method Models\QuerySingleTransactionStatusResponse QuerySingleTransactionStatus(Models\QuerySingleTransactionStatusRequest $req) 查询银行单笔交易状态。查询单笔交易的状态。
  * @method Models\QuerySmallAmountTransferResponse QuerySmallAmountTransfer(Models\QuerySmallAmountTransferRequest $req) 查询小额鉴权转账结果。查询小额往账鉴权的转账状态。

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setX(float $X) 设置人体关键点横坐标
  * @method float getY() 获取人体关键点纵坐标
  * @method void setY(float $Y) 设置人体关键点纵坐标
+ * @method float getBodyScore() 获取关键点坐标置信度，分数取值在0-1之间，阈值建议为0.25，小于0.25认为在图中无人体关键点。
+ * @method void setBodyScore(float $BodyScore) 设置关键点坐标置信度，分数取值在0-1之间，阈值建议为0.25，小于0.25认为在图中无人体关键点。
  */
 class KeyPointInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class KeyPointInfo extends AbstractModel
     public $Y;
 
     /**
+     * @var float 关键点坐标置信度，分数取值在0-1之间，阈值建议为0.25，小于0.25认为在图中无人体关键点。
+     */
+    public $BodyScore;
+
+    /**
      * @param string $KeyPointType 代表不同位置的人体关键点信息，返回值为以下集合中的一个 [头部,颈部,右肩,右肘,右腕,左肩,左肘,左腕,右髋,右膝,右踝,左髋,左膝,左踝]
      * @param float $X 人体关键点横坐标
      * @param float $Y 人体关键点纵坐标
+     * @param float $BodyScore 关键点坐标置信度，分数取值在0-1之间，阈值建议为0.25，小于0.25认为在图中无人体关键点。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class KeyPointInfo extends AbstractModel
 
         if (array_key_exists("Y",$param) and $param["Y"] !== null) {
             $this->Y = $param["Y"];
+        }
+
+        if (array_key_exists("BodyScore",$param) and $param["BodyScore"] !== null) {
+            $this->BodyScore = $param["BodyScore"];
         }
     }
 }

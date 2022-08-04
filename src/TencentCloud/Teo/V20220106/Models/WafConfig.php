@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLevel(string $Level) 设置防护级别，loose/normal/strict/stricter/custom
  * @method string getMode() 获取模式 block-阻断；observe-观察模式；close-关闭
  * @method void setMode(string $Mode) 设置模式 block-阻断；observe-观察模式；close-关闭
- * @method WafRule getWafRules() 获取门神黑白名单
- * @method void setWafRules(WafRule $WafRules) 设置门神黑白名单
+ * @method WafRule getWafRules() 获取托管规则黑白名单
+ * @method void setWafRules(WafRule $WafRules) 设置托管规则黑白名单
  * @method AiRule getAiRule() 获取AI规则引擎防护
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiRule(AiRule $AiRule) 设置AI规则引擎防护
@@ -51,7 +51,7 @@ class WafConfig extends AbstractModel
     public $Mode;
 
     /**
-     * @var WafRule 门神黑白名单
+     * @var WafRule 托管规则黑白名单
      */
     public $WafRules;
 
@@ -65,7 +65,7 @@ class WafConfig extends AbstractModel
      * @param string $Switch 开关
      * @param string $Level 防护级别，loose/normal/strict/stricter/custom
      * @param string $Mode 模式 block-阻断；observe-观察模式；close-关闭
-     * @param WafRule $WafRules 门神黑白名单
+     * @param WafRule $WafRules 托管规则黑白名单
      * @param AiRule $AiRule AI规则引擎防护
 注意：此字段可能返回 null，表示取不到有效值。
      */

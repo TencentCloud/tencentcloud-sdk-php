@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastTime(string $LastTime) 设置最后检测时间
  * @method integer getHostCount() 获取影响主机数
  * @method void setHostCount(integer $HostCount) 设置影响主机数
- * @method integer getLevel() 获取漏洞等级 1:低 2:中 3:高 4:提示
- * @method void setLevel(integer $Level) 设置漏洞等级 1:低 2:中 3:高 4:提示
+ * @method integer getLevel() 获取漏洞等级 1:低 2:中 3:高 4:严重
+ * @method void setLevel(integer $Level) 设置漏洞等级 1:低 2:中 3:高 4:严重
  * @method integer getFrom() 获取废弃字段
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrom(integer $From) 设置废弃字段
@@ -135,7 +135,7 @@ class VulInfoList extends AbstractModel
     public $HostCount;
 
     /**
-     * @var integer 漏洞等级 1:低 2:中 3:高 4:提示
+     * @var integer 漏洞等级 1:低 2:中 3:高 4:严重
      */
     public $Level;
 
@@ -237,7 +237,7 @@ class VulInfoList extends AbstractModel
      * @param string $PublishTime 漏洞披露事件
      * @param string $LastTime 最后检测时间
      * @param integer $HostCount 影响主机数
-     * @param integer $Level 漏洞等级 1:低 2:中 3:高 4:提示
+     * @param integer $Level 漏洞等级 1:低 2:中 3:高 4:严重
      * @param integer $From 废弃字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Descript 描述

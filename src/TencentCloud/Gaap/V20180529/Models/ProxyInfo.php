@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegion(string $RealServerRegion) 设置源站地域。
  * @method integer getBandwidth() 获取带宽，单位：Mbps。
  * @method void setBandwidth(integer $Bandwidth) 设置带宽，单位：Mbps。
- * @method integer getConcurrent() 获取并发，单位：个/秒。
- * @method void setConcurrent(integer $Concurrent) 设置并发，单位：个/秒。
+ * @method integer getConcurrent() 获取并发，单位：万个/秒。
+ * @method void setConcurrent(integer $Concurrent) 设置并发，单位：万个/秒。
  * @method string getStatus() 获取通道状态。其中：
 RUNNING表示运行中；
 CREATING表示创建中；
@@ -224,7 +224,7 @@ class ProxyInfo extends AbstractModel
     public $Bandwidth;
 
     /**
-     * @var integer 并发，单位：个/秒。
+     * @var integer 并发，单位：万个/秒。
      */
     public $Concurrent;
 
@@ -418,7 +418,7 @@ CrossBorder表示跨境通道。
      * @param string $AccessRegion 接入地域。
      * @param string $RealServerRegion 源站地域。
      * @param integer $Bandwidth 带宽，单位：Mbps。
-     * @param integer $Concurrent 并发，单位：个/秒。
+     * @param integer $Concurrent 并发，单位：万个/秒。
      * @param string $Status 通道状态。其中：
 RUNNING表示运行中；
 CREATING表示创建中；

@@ -31,20 +31,30 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFlowType() 获取流程的类型
  * @method void setFlowType(string $FlowType) 设置流程的类型
  * @method integer getFlowStatus() 获取流程状态
-- `1` 未签署
+- `0`  还没有发起
+- `1`  未签署
 - `2`  部分签署
 - `3`  已退回
 - `4`  完成签署
 - `5`  已过期
 - `6`  已取消
+- `7`  还没有预发起
+- `8`  等待填写
+- `9`  部分填写
+- `10`  拒填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowStatus(integer $FlowStatus) 设置流程状态
-- `1` 未签署
+- `0`  还没有发起
+- `1`  未签署
 - `2`  部分签署
 - `3`  已退回
 - `4`  完成签署
 - `5`  已过期
 - `6`  已取消
+- `7`  还没有预发起
+- `8`  等待填写
+- `9`  部分填写
+- `10`  拒填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreatedOn() 获取流程创建的时间戳
 注意：此字段可能返回 null，表示取不到有效值。
@@ -80,12 +90,17 @@ class FlowBrief extends AbstractModel
 
     /**
      * @var integer 流程状态
-- `1` 未签署
+- `0`  还没有发起
+- `1`  未签署
 - `2`  部分签署
 - `3`  已退回
 - `4`  完成签署
 - `5`  已过期
 - `6`  已取消
+- `7`  还没有预发起
+- `8`  等待填写
+- `9`  部分填写
+- `10`  拒填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowStatus;
@@ -109,12 +124,17 @@ class FlowBrief extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowType 流程的类型
      * @param integer $FlowStatus 流程状态
-- `1` 未签署
+- `0`  还没有发起
+- `1`  未签署
 - `2`  部分签署
 - `3`  已退回
 - `4`  完成签署
 - `5`  已过期
 - `6`  已取消
+- `7`  还没有预发起
+- `8`  等待填写
+- `9`  部分填写
+- `10`  拒填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreatedOn 流程创建的时间戳
 注意：此字段可能返回 null，表示取不到有效值。

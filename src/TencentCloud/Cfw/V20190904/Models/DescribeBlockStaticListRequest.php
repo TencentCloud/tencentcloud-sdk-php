@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getQueryType() 获取类型
- * @method void setQueryType(string $QueryType) 设置类型
+ * @method string getQueryType() 获取列表类型，只能是下面三种之一：port、address、ip
+ * @method void setQueryType(string $QueryType) 设置列表类型，只能是下面三种之一：port、address、ip
  * @method integer getTop() 获取top数
  * @method void setTop(integer $Top) 设置top数
  * @method string getSearchValue() 获取查询条件
@@ -44,7 +44,7 @@ class DescribeBlockStaticListRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 类型
+     * @var string 列表类型，只能是下面三种之一：port、address、ip
      */
     public $QueryType;
 
@@ -61,7 +61,7 @@ class DescribeBlockStaticListRequest extends AbstractModel
     /**
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
-     * @param string $QueryType 类型
+     * @param string $QueryType 列表类型，只能是下面三种之一：port、address、ip
      * @param integer $Top top数
      * @param string $SearchValue 查询条件
      */

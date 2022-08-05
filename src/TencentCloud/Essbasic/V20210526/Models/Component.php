@@ -19,6 +19,7 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 此结构体 (Component) 用于描述控件属性。
+
  *
  * @method string getComponentId() 获取控件编号
 
@@ -43,6 +44,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComponentType() 获取如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 DATE - 普通日期控件；跟TEXT相比会有校验逻辑
+DYNAMIC_TABLE-动态表格控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
@@ -53,6 +55,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件；
  * @method void setComponentType(string $ComponentType) 设置如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 DATE - 普通日期控件；跟TEXT相比会有校验逻辑
+DYNAMIC_TABLE-动态表格控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
@@ -135,6 +138,7 @@ class Component extends AbstractModel
      * @var string 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 DATE - 普通日期控件；跟TEXT相比会有校验逻辑
+DYNAMIC_TABLE-动态表格控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
@@ -250,6 +254,7 @@ TEXT控件可以指定字体
      * @param string $ComponentType 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 DATE - 普通日期控件；跟TEXT相比会有校验逻辑
+DYNAMIC_TABLE-动态表格控件；
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；

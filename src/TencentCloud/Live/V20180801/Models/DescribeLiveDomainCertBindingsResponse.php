@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rce\V20201103\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 风控建模服务出参对应值
+ * DescribeLiveDomainCertBindings返回参数结构体
  *
- * @method float getApplyScore() 获取模型分数值
- * @method void setApplyScore(float $ApplyScore) 设置模型分数值
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class OutputDescribeRiskModelValue extends AbstractModel
+class DescribeLiveDomainCertBindingsResponse extends AbstractModel
 {
     /**
-     * @var float 模型分数值
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $ApplyScore;
+    public $RequestId;
 
     /**
-     * @param float $ApplyScore 模型分数值
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class OutputDescribeRiskModelValue extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplyScore",$param) and $param["ApplyScore"] !== null) {
-            $this->ApplyScore = $param["ApplyScore"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模板控件信息
  *
- * @method string getComponentType() 获取如果是 Component 控件类型，则可选类型为：
-TEXT - 单行文本
-MULTI_LINE_TEXT - 多行文本
-CHECK_BOX - 勾选框
-ATTACHMENT - 附件
-SELECTOR - 选择器
-如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
-SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
- * @method void setComponentType(string $ComponentType) 设置如果是 Component 控件类型，则可选类型为：
-TEXT - 单行文本
-MULTI_LINE_TEXT - 多行文本
-CHECK_BOX - 勾选框
-ATTACHMENT - 附件
-SELECTOR - 选择器
-如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
-SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
+ * @method string getComponentType() 获取如果是Component控件类型，则可选的字段为：
+TEXT - 普通文本控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
+如果是SignComponent控件类型，则可选的字段为
+SIGN_SEAL - 签署印章控件；
+SIGN_DATE - 签署日期控件；
+SIGN_SIGNATURE - 用户签名控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
+
+表单域的控件不能作为印章和签名控件
+ * @method void setComponentType(string $ComponentType) 设置如果是Component控件类型，则可选的字段为：
+TEXT - 普通文本控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
+如果是SignComponent控件类型，则可选的字段为
+SIGN_SEAL - 签署印章控件；
+SIGN_DATE - 签署日期控件；
+SIGN_SIGNATURE - 用户签名控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
+
+表单域的控件不能作为印章和签名控件
  * @method float getComponentWidth() 获取参数控件宽度，单位pt
  * @method void setComponentWidth(float $ComponentWidth) 设置参数控件宽度，单位pt
  * @method float getComponentHeight() 获取参数控件高度，单位pt
@@ -82,14 +94,16 @@ ESIGN -- 个人印章类型
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
-ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
  * @method void setComponentValue(string $ComponentValue) 设置控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
-ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
  * @method boolean getIsFormType() 获取是否是表单域类型，默认不存在
  * @method void setIsFormType(boolean $IsFormType) 设置是否是表单域类型，默认不存在
  * @method string getGenerateMode() 获取NORMAL 正常模式，使用坐标制定签署控件位置
@@ -108,16 +122,22 @@ KEYWORD 关键字，使用ComponentId指定关键字
 class Component extends AbstractModel
 {
     /**
-     * @var string 如果是 Component 控件类型，则可选类型为：
-TEXT - 单行文本
-MULTI_LINE_TEXT - 多行文本
-CHECK_BOX - 勾选框
-ATTACHMENT - 附件
-SELECTOR - 选择器
-如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
-SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
+     * @var string 如果是Component控件类型，则可选的字段为：
+TEXT - 普通文本控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
+如果是SignComponent控件类型，则可选的字段为
+SIGN_SEAL - 签署印章控件；
+SIGN_DATE - 签署日期控件；
+SIGN_SIGNATURE - 用户签名控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
+
+表单域的控件不能作为印章和签名控件
      */
     public $ComponentType;
 
@@ -189,8 +209,9 @@ ESIGN -- 个人印章类型
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
-ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
      */
     public $ComponentValue;
 
@@ -222,16 +243,22 @@ KEYWORD 关键字，使用ComponentId指定关键字
     public $OffsetY;
 
     /**
-     * @param string $ComponentType 如果是 Component 控件类型，则可选类型为：
-TEXT - 单行文本
-MULTI_LINE_TEXT - 多行文本
-CHECK_BOX - 勾选框
-ATTACHMENT - 附件
-SELECTOR - 选择器
-如果是 SignComponent 控件类型，则可选类型为：
-SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
-SIGN_DATE - 签署日期控件
-SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
+     * @param string $ComponentType 如果是Component控件类型，则可选的字段为：
+TEXT - 普通文本控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
+如果是SignComponent控件类型，则可选的字段为
+SIGN_SEAL - 签署印章控件；
+SIGN_DATE - 签署日期控件；
+SIGN_SIGNATURE - 用户签名控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
+
+表单域的控件不能作为印章和签名控件
      * @param float $ComponentWidth 参数控件宽度，单位pt
      * @param float $ComponentHeight 参数控件高度，单位pt
      * @param integer $ComponentPage 参数控件所在页码，取值为：1-N
@@ -255,8 +282,9 @@ ESIGN -- 个人印章类型
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
-ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
      * @param boolean $IsFormType 是否是表单域类型，默认不存在
      * @param string $GenerateMode NORMAL 正常模式，使用坐标制定签署控件位置
 FIELD 表单域，需使用ComponentName指定表单域名称

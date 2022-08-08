@@ -43,24 +43,34 @@ use TencentCloud\Common\AbstractModel;
 查询时返回完整结构
  * @method string getComponentType() 获取如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
-DATE - 普通日期控件；跟TEXT相比会有校验逻辑
-DYNAMIC_TABLE-动态表格控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
-SIGN_PERSONAL_SEAL - 个人签署印章控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 
 表单域的控件不能作为印章和签名控件
  * @method void setComponentType(string $ComponentType) 设置如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
-DATE - 普通日期控件；跟TEXT相比会有校验逻辑
-DYNAMIC_TABLE-动态表格控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
-SIGN_PERSONAL_SEAL - 个人签署印章控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 
 表单域的控件不能作为印章和签名控件
  * @method string getComponentName() 获取控件简称，不能超过30个字符
@@ -99,10 +109,20 @@ TEXT控件可以指定字体
 不同类型的控件会有部分非通用参数
 TEXT控件可以指定字体
 例如：{"FontSize":12}
- * @method string getComponentValue() 获取印章 ID，传参 DEFAULT_COMPANY_SEAL 表示使用默认印章。
-控件填入内容，印章控件里面，如果是手写签名内容为PNG图片格式的base64编码
- * @method void setComponentValue(string $ComponentValue) 设置印章 ID，传参 DEFAULT_COMPANY_SEAL 表示使用默认印章。
-控件填入内容，印章控件里面，如果是手写签名内容为PNG图片格式的base64编码
+ * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+ * @method void setComponentValue(string $ComponentValue) 设置控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
  * @method integer getComponentDateFontSize() 获取日期签署控件的字号，默认为 12
 
 签署区日期控件会转换成图片格式并带存证，需要通过字体决定图片大小
@@ -137,13 +157,18 @@ class Component extends AbstractModel
     /**
      * @var string 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
-DATE - 普通日期控件；跟TEXT相比会有校验逻辑
-DYNAMIC_TABLE-动态表格控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
-SIGN_PERSONAL_SEAL - 个人签署印章控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 
 表单域的控件不能作为印章和签名控件
      */
@@ -208,8 +233,13 @@ TEXT控件可以指定字体
     public $ComponentExtra;
 
     /**
-     * @var string 印章 ID，传参 DEFAULT_COMPANY_SEAL 表示使用默认印章。
-控件填入内容，印章控件里面，如果是手写签名内容为PNG图片格式的base64编码
+     * @var string 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
      */
     public $ComponentValue;
 
@@ -253,13 +283,18 @@ TEXT控件可以指定字体
 查询时返回完整结构
      * @param string $ComponentType 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
-DATE - 普通日期控件；跟TEXT相比会有校验逻辑
-DYNAMIC_TABLE-动态表格控件；
+MULTI_LINE_TEXT - 多行文本控件；
+CHECK_BOX - 勾选框控件；
+FILL_IMAGE - 图片控件；
+DYNAMIC_TABLE - 动态表格控件；
+ATTACHMENT - 附件控件；
+SELECTOR - 选择器控件；
+
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
-SIGN_PERSONAL_SEAL - 个人签署印章控件；
+SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
 
 表单域的控件不能作为印章和签名控件
      * @param string $ComponentName 控件简称，不能超过30个字符
@@ -280,8 +315,13 @@ KEYWORD - 关键字
 不同类型的控件会有部分非通用参数
 TEXT控件可以指定字体
 例如：{"FontSize":12}
-     * @param string $ComponentValue 印章 ID，传参 DEFAULT_COMPANY_SEAL 表示使用默认印章。
-控件填入内容，印章控件里面，如果是手写签名内容为PNG图片格式的base64编码
+     * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
      * @param integer $ComponentDateFontSize 日期签署控件的字号，默认为 12
 
 签署区日期控件会转换成图片格式并带存证，需要通过字体决定图片大小

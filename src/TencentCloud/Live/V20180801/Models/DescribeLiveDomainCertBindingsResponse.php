@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLiveDomainCertBindings返回参数结构体
  *
+ * @method array getLiveDomainCertBindings() 获取有绑定证书的域名信息数组。
+ * @method void setLiveDomainCertBindings(array $LiveDomainCertBindings) 设置有绑定证书的域名信息数组。
+ * @method integer getTotalNum() 获取总的记录行数，便于分页。
+ * @method void setTotalNum(integer $TotalNum) 设置总的记录行数，便于分页。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeLiveDomainCertBindingsResponse extends AbstractModel
 {
     /**
+     * @var array 有绑定证书的域名信息数组。
+     */
+    public $LiveDomainCertBindings;
+
+    /**
+     * @var integer 总的记录行数，便于分页。
+     */
+    public $TotalNum;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $LiveDomainCertBindings 有绑定证书的域名信息数组。
+     * @param integer $TotalNum 总的记录行数，便于分页。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class DescribeLiveDomainCertBindingsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("LiveDomainCertBindings",$param) and $param["LiveDomainCertBindings"] !== null) {
+            $this->LiveDomainCertBindings = [];
+            foreach ($param["LiveDomainCertBindings"] as $key => $value){
+                $obj = new LiveDomainCertBindings();
+                $obj->deserialize($value);
+                array_push($this->LiveDomainCertBindings, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
+            $this->TotalNum = $param["TotalNum"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

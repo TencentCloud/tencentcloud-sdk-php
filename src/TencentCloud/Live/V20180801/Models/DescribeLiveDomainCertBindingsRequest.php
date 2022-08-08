@@ -31,11 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomainName() 获取要查询的单个域名。
  * @method void setDomainName(string $DomainName) 设置要查询的单个域名。
  * @method string getOrderBy() 获取可取值：
-ExpireTimeAsc：证书过期时间降序。
-ExpireTimeDesc：证书过期时间升序。
+ExpireTimeAsc：证书过期时间升序。
+ExpireTimeDesc：证书过期时间降序。
  * @method void setOrderBy(string $OrderBy) 设置可取值：
-ExpireTimeAsc：证书过期时间降序。
-ExpireTimeDesc：证书过期时间升序。
+ExpireTimeAsc：证书过期时间升序。
+ExpireTimeDesc：证书过期时间降序。
  */
 class DescribeLiveDomainCertBindingsRequest extends AbstractModel
 {
@@ -62,8 +62,8 @@ class DescribeLiveDomainCertBindingsRequest extends AbstractModel
 
     /**
      * @var string 可取值：
-ExpireTimeAsc：证书过期时间降序。
-ExpireTimeDesc：证书过期时间升序。
+ExpireTimeAsc：证书过期时间升序。
+ExpireTimeDesc：证书过期时间降序。
      */
     public $OrderBy;
 
@@ -74,8 +74,8 @@ ExpireTimeDesc：证书过期时间升序。
 若不传，则最多返回50条数据。
      * @param string $DomainName 要查询的单个域名。
      * @param string $OrderBy 可取值：
-ExpireTimeAsc：证书过期时间降序。
-ExpireTimeDesc：证书过期时间升序。
+ExpireTimeAsc：证书过期时间升序。
+ExpireTimeDesc：证书过期时间降序。
      */
     function __construct()
     {

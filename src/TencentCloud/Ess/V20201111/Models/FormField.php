@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 电子文档的控件填充信息
  *
- * @method string getComponentValue() 获取控件填充value，ComponentType和传入值类型对应关系：
+ * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
-ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
-SELECTOR - 模板中配置的选项值
- * @method void setComponentValue(string $ComponentValue) 设置控件填充value，ComponentType和传入值类型对应关系：
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+ * @method void setComponentValue(string $ComponentValue) 设置控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
-ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
-SELECTOR - 模板中配置的选项值
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
  * @method string getComponentId() 获取控件id，和ComponentName选择一项传入即可
  * @method void setComponentId(string $ComponentId) 设置控件id，和ComponentName选择一项传入即可
  * @method string getComponentName() 获取控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
@@ -40,12 +42,13 @@ SELECTOR - 模板中配置的选项值
 class FormField extends AbstractModel
 {
     /**
-     * @var string 控件填充value，ComponentType和传入值类型对应关系：
+     * @var string 控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
-ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
-SELECTOR - 模板中配置的选项值
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
      */
     public $ComponentValue;
 
@@ -60,12 +63,13 @@ SELECTOR - 模板中配置的选项值
     public $ComponentName;
 
     /**
-     * @param string $ComponentValue 控件填充value，ComponentType和传入值类型对应关系：
+     * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
 CHECK_BOX - true/false
-ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
-SELECTOR - 模板中配置的选项值
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
      * @param string $ComponentId 控件id，和ComponentName选择一项传入即可
      * @param string $ComponentName 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
      */

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPersonId() 获取人员ID
  * @method void setPersonId(string $PersonId) 设置人员ID
- * @method string getFaceId() 获取人脸ID
- * @method void setFaceId(string $FaceId) 设置人脸ID
+ * @method string getFaceId() 获取人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
+ * @method void setFaceId(string $FaceId) 设置人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
  * @method float getScore() 获取候选者的匹配得分。 
 
 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分；
@@ -59,7 +59,7 @@ class Candidate extends AbstractModel
     public $PersonId;
 
     /**
-     * @var string 人脸ID
+     * @var string 人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
      */
     public $FaceId;
 
@@ -94,7 +94,7 @@ class Candidate extends AbstractModel
 
     /**
      * @param string $PersonId 人员ID
-     * @param string $FaceId 人脸ID
+     * @param string $FaceId 人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
      * @param float $Score 候选者的匹配得分。 
 
 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分；

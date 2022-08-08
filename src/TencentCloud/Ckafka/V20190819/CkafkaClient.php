@@ -81,6 +81,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\FetchDatahubMessageByOffsetResponse FetchDatahubMessageByOffset(Models\FetchDatahubMessageByOffsetRequest $req) 根据指定offset位置的消息
  * @method Models\FetchLatestDatahubMessageListResponse FetchLatestDatahubMessageList(Models\FetchLatestDatahubMessageListRequest $req) 查询最新消息列表
  * @method Models\FetchMessageByOffsetResponse FetchMessageByOffset(Models\FetchMessageByOffsetRequest $req) 根据指定offset位置的消息
+ * @method Models\FetchMessageListByOffsetResponse FetchMessageListByOffset(Models\FetchMessageListByOffsetRequest $req) 根据位点查询消息列表
  * @method Models\ModifyConnectResourceResponse ModifyConnectResource(Models\ModifyConnectResourceRequest $req) 编辑Datahub连接源
  * @method Models\ModifyDatahubTaskResponse ModifyDatahubTask(Models\ModifyDatahubTaskRequest $req) 修改Datahub任务
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) 设置Groups 消费分组offset

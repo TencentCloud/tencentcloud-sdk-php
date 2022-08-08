@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInquiryType() 获取查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
  * @method void setInquiryType(string $InquiryType) 设置查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
- * @method array getZones() 获取查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
- * @method void setZones(array $Zones) 设置查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
  * @method string getDiskChargeType() 获取付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
  * @method void setDiskChargeType(string $DiskChargeType) 设置付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
- * @method array getDiskTypes() 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
- * @method void setDiskTypes(array $DiskTypes) 设置硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
- * @method string getDiskUsage() 获取系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
- * @method void setDiskUsage(string $DiskUsage) 设置系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
  * @method array getInstanceFamilies() 获取按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
  * @method void setInstanceFamilies(array $InstanceFamilies) 设置按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
- * @method integer getCPU() 获取实例CPU核数。
- * @method void setCPU(integer $CPU) 设置实例CPU核数。
+ * @method array getDiskTypes() 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
+ * @method void setDiskTypes(array $DiskTypes) 设置硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
+ * @method array getZones() 获取查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+ * @method void setZones(array $Zones) 设置查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
  * @method integer getMemory() 获取实例内存大小。
  * @method void setMemory(integer $Memory) 设置实例内存大小。
+ * @method string getDiskUsage() 获取系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+ * @method void setDiskUsage(string $DiskUsage) 设置系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+ * @method integer getCPU() 获取实例CPU核数。
+ * @method void setCPU(integer $CPU) 设置实例CPU核数。
  */
 class DescribeDiskConfigQuotaRequest extends AbstractModel
 {
@@ -45,24 +45,9 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
     public $InquiryType;
 
     /**
-     * @var array 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
-     */
-    public $Zones;
-
-    /**
      * @var string 付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
      */
     public $DiskChargeType;
-
-    /**
-     * @var array 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
-     */
-    public $DiskTypes;
-
-    /**
-     * @var string 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
-     */
-    public $DiskUsage;
 
     /**
      * @var array 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
@@ -70,9 +55,14 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
     public $InstanceFamilies;
 
     /**
-     * @var integer 实例CPU核数。
+     * @var array 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
      */
-    public $CPU;
+    public $DiskTypes;
+
+    /**
+     * @var array 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+     */
+    public $Zones;
 
     /**
      * @var integer 实例内存大小。
@@ -80,14 +70,24 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
     public $Memory;
 
     /**
+     * @var string 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     */
+    public $DiskUsage;
+
+    /**
+     * @var integer 实例CPU核数。
+     */
+    public $CPU;
+
+    /**
      * @param string $InquiryType 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
-     * @param array $Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
      * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
-     * @param array $DiskTypes 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
-     * @param string $DiskUsage 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      * @param array $InstanceFamilies 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
-     * @param integer $CPU 实例CPU核数。
+     * @param array $DiskTypes 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘。
+     * @param array $Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
      * @param integer $Memory 实例内存大小。
+     * @param string $DiskUsage 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     * @param integer $CPU 实例CPU核数。
      */
     function __construct()
     {
@@ -106,32 +106,32 @@ class DescribeDiskConfigQuotaRequest extends AbstractModel
             $this->InquiryType = $param["InquiryType"];
         }
 
-        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
-            $this->Zones = $param["Zones"];
-        }
-
         if (array_key_exists("DiskChargeType",$param) and $param["DiskChargeType"] !== null) {
             $this->DiskChargeType = $param["DiskChargeType"];
-        }
-
-        if (array_key_exists("DiskTypes",$param) and $param["DiskTypes"] !== null) {
-            $this->DiskTypes = $param["DiskTypes"];
-        }
-
-        if (array_key_exists("DiskUsage",$param) and $param["DiskUsage"] !== null) {
-            $this->DiskUsage = $param["DiskUsage"];
         }
 
         if (array_key_exists("InstanceFamilies",$param) and $param["InstanceFamilies"] !== null) {
             $this->InstanceFamilies = $param["InstanceFamilies"];
         }
 
-        if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
-            $this->CPU = $param["CPU"];
+        if (array_key_exists("DiskTypes",$param) and $param["DiskTypes"] !== null) {
+            $this->DiskTypes = $param["DiskTypes"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
         }
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
             $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("DiskUsage",$param) and $param["DiskUsage"] !== null) {
+            $this->DiskUsage = $param["DiskUsage"];
+        }
+
+        if (array_key_exists("CPU",$param) and $param["CPU"] !== null) {
+            $this->CPU = $param["CPU"];
         }
     }
 }

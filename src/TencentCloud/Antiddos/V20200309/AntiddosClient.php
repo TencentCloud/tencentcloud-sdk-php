@@ -47,7 +47,6 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateSchedulingDomainResponse CreateSchedulingDomain(Models\CreateSchedulingDomainRequest $req) 创建一个域名，可用于在封堵时调度切换IP
  * @method Models\CreateWaterPrintConfigResponse CreateWaterPrintConfig(Models\CreateWaterPrintConfigRequest $req) 添加DDoS防护的水印防护配置
  * @method Models\CreateWaterPrintKeyResponse CreateWaterPrintKey(Models\CreateWaterPrintKeyRequest $req) 添加DDoS防护的水印防护密钥
- * @method Models\DeleteBlackWhiteIpListResponse DeleteBlackWhiteIpList(Models\DeleteBlackWhiteIpListRequest $req) 删除DDoS防护的IP黑白名单
  * @method Models\DeleteCCLevelPolicyResponse DeleteCCLevelPolicy(Models\DeleteCCLevelPolicyRequest $req) 删除CC分级策略
  * @method Models\DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicy(Models\DeleteCCPrecisionPolicyRequest $req) 删除CC精准防护策略
  * @method Models\DeleteCCRequestLimitPolicyResponse DeleteCCRequestLimitPolicy(Models\DeleteCCRequestLimitPolicyRequest $req) 删除CC频率限制策略
@@ -62,6 +61,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DeleteWaterPrintConfigResponse DeleteWaterPrintConfig(Models\DeleteWaterPrintConfigRequest $req) 删除DDoS防护的水印防护配置
  * @method Models\DeleteWaterPrintKeyResponse DeleteWaterPrintKey(Models\DeleteWaterPrintKeyRequest $req) 删除DDoS防护的水印防护密钥
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) 获取基础防护攻击状态
+ * @method Models\DescribeBgpBizTrendResponse DescribeBgpBizTrend(Models\DescribeBgpBizTrendRequest $req) 获取高防包流量折线图
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) 获取业务流量曲线
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) 获取DDoS防护的IP黑白名单
  * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) 获取边界防护CC防护等级列表

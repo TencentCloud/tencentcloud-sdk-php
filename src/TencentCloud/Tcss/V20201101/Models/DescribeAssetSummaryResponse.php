@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestImageScanTime(string $LatestImageScanTime) 设置最近镜像扫描时间
  * @method integer getImageUnsafeCnt() 获取风险镜像个数
  * @method void setImageUnsafeCnt(integer $ImageUnsafeCnt) 设置风险镜像个数
+ * @method integer getHostUnInstallCnt() 获取主机未安装agent数量
+ * @method void setHostUnInstallCnt(integer $HostUnInstallCnt) 设置主机未安装agent数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -159,6 +161,11 @@ class DescribeAssetSummaryResponse extends AbstractModel
     public $ImageUnsafeCnt;
 
     /**
+     * @var integer 主机未安装agent数量
+     */
+    public $HostUnInstallCnt;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -183,6 +190,7 @@ class DescribeAssetSummaryResponse extends AbstractModel
      * @param integer $WebServiceCnt web服务个数
      * @param string $LatestImageScanTime 最近镜像扫描时间
      * @param integer $ImageUnsafeCnt 风险镜像个数
+     * @param integer $HostUnInstallCnt 主机未安装agent数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -272,6 +280,10 @@ class DescribeAssetSummaryResponse extends AbstractModel
 
         if (array_key_exists("ImageUnsafeCnt",$param) and $param["ImageUnsafeCnt"] !== null) {
             $this->ImageUnsafeCnt = $param["ImageUnsafeCnt"];
+        }
+
+        if (array_key_exists("HostUnInstallCnt",$param) and $param["HostUnInstallCnt"] !== null) {
+            $this->HostUnInstallCnt = $param["HostUnInstallCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

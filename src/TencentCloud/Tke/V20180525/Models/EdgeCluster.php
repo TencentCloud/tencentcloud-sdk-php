@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxNodePodNum(integer $MaxNodePodNum) 设置节点最大Pod数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method EdgeClusterAdvancedSettings getClusterAdvancedSettings() 获取集群高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterAdvancedSettings(EdgeClusterAdvancedSettings $ClusterAdvancedSettings) 设置集群高级设置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeCluster extends AbstractModel
 {
@@ -104,6 +108,12 @@ class EdgeCluster extends AbstractModel
     public $MaxNodePodNum;
 
     /**
+     * @var EdgeClusterAdvancedSettings 集群高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterAdvancedSettings;
+
+    /**
      * @param string $ClusterId 集群Id
      * @param string $ClusterName 集群名称
      * @param string $VpcId Vpc Id
@@ -115,6 +125,8 @@ class EdgeCluster extends AbstractModel
      * @param string $CreatedTime 集群创建时间
      * @param string $EdgeClusterVersion 边缘集群版本
      * @param integer $MaxNodePodNum 节点最大Pod数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EdgeClusterAdvancedSettings $ClusterAdvancedSettings 集群高级设置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +184,11 @@ class EdgeCluster extends AbstractModel
 
         if (array_key_exists("MaxNodePodNum",$param) and $param["MaxNodePodNum"] !== null) {
             $this->MaxNodePodNum = $param["MaxNodePodNum"];
+        }
+
+        if (array_key_exists("ClusterAdvancedSettings",$param) and $param["ClusterAdvancedSettings"] !== null) {
+            $this->ClusterAdvancedSettings = new EdgeClusterAdvancedSettings();
+            $this->ClusterAdvancedSettings->deserialize($param["ClusterAdvancedSettings"]);
         }
     }
 }

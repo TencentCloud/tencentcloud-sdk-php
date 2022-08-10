@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageRegistryCnt(integer $ImageRegistryCnt) 设置镜像仓库数量
  * @method integer getImageTotalCnt() 获取镜像总数
  * @method void setImageTotalCnt(integer $ImageTotalCnt) 设置镜像总数
+ * @method integer getHostUnInstallCnt() 获取主机未安装agent数量
+ * @method void setHostUnInstallCnt(integer $HostUnInstallCnt) 设置主机未安装agent数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -96,6 +98,11 @@ class DescribeContainerAssetSummaryResponse extends AbstractModel
     public $ImageTotalCnt;
 
     /**
+     * @var integer 主机未安装agent数量
+     */
+    public $HostUnInstallCnt;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -111,6 +118,7 @@ class DescribeContainerAssetSummaryResponse extends AbstractModel
      * @param integer $HostOfflineCnt 主机离线节点数量
      * @param integer $ImageRegistryCnt 镜像仓库数量
      * @param integer $ImageTotalCnt 镜像总数
+     * @param integer $HostUnInstallCnt 主机未安装agent数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -164,6 +172,10 @@ class DescribeContainerAssetSummaryResponse extends AbstractModel
 
         if (array_key_exists("ImageTotalCnt",$param) and $param["ImageTotalCnt"] !== null) {
             $this->ImageTotalCnt = $param["ImageTotalCnt"];
+        }
+
+        if (array_key_exists("HostUnInstallCnt",$param) and $param["HostUnInstallCnt"] !== null) {
+            $this->HostUnInstallCnt = $param["HostUnInstallCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

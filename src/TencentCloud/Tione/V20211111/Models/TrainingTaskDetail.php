@@ -134,6 +134,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroupName(string $ResourceGroupName) 设置预付费专用资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMessage() 获取任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessage(string $Message) 设置任务信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrainingTaskDetail extends AbstractModel
 {
@@ -339,6 +343,12 @@ class TrainingTaskDetail extends AbstractModel
     public $ResourceGroupName;
 
     /**
+     * @var string 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Message;
+
+    /**
      * @param string $Id 训练任务ID
      * @param string $Name 训练任务名称
      * @param string $Uin 主账号uin
@@ -395,6 +405,8 @@ class TrainingTaskDetail extends AbstractModel
      * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroupName 预付费专用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Message 任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -572,6 +584,10 @@ class TrainingTaskDetail extends AbstractModel
 
         if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
             $this->ResourceGroupName = $param["ResourceGroupName"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

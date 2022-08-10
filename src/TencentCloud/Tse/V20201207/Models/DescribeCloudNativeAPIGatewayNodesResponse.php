@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Tse\V20201207\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMonitorTypes返回参数结构体
+ * DescribeCloudNativeAPIGatewayNodes返回参数结构体
  *
- * @method array getMonitorTypes() 获取监控类型，云产品监控为 MT_QCE
- * @method void setMonitorTypes(array $MonitorTypes) 设置监控类型，云产品监控为 MT_QCE
- * @method array getMonitorTypeInfos() 获取监控类型详情
- * @method void setMonitorTypeInfos(array $MonitorTypeInfos) 设置监控类型详情
+ * @method DescribeCloudNativeAPIGatewayNodesResult getResult() 获取获取云原生网关节点列表结果。
+ * @method void setResult(DescribeCloudNativeAPIGatewayNodesResult $Result) 设置获取云原生网关节点列表结果。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMonitorTypesResponse extends AbstractModel
+class DescribeCloudNativeAPIGatewayNodesResponse extends AbstractModel
 {
     /**
-     * @var array 监控类型，云产品监控为 MT_QCE
+     * @var DescribeCloudNativeAPIGatewayNodesResult 获取云原生网关节点列表结果。
      */
-    public $MonitorTypes;
-
-    /**
-     * @var array 监控类型详情
-     */
-    public $MonitorTypeInfos;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeMonitorTypesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $MonitorTypes 监控类型，云产品监控为 MT_QCE
-     * @param array $MonitorTypeInfos 监控类型详情
+     * @param DescribeCloudNativeAPIGatewayNodesResult $Result 获取云原生网关节点列表结果。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,9 @@ class DescribeMonitorTypesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MonitorTypes",$param) and $param["MonitorTypes"] !== null) {
-            $this->MonitorTypes = $param["MonitorTypes"];
-        }
-
-        if (array_key_exists("MonitorTypeInfos",$param) and $param["MonitorTypeInfos"] !== null) {
-            $this->MonitorTypeInfos = [];
-            foreach ($param["MonitorTypeInfos"] as $key => $value){
-                $obj = new MonitorTypeInfo();
-                $obj->deserialize($value);
-                array_push($this->MonitorTypeInfos, $obj);
-            }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new DescribeCloudNativeAPIGatewayNodesResult();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscount(float $Discount) 设置折扣。
  * @method float getDiscountPrice() 获取折后总价。
  * @method void setDiscountPrice(float $DiscountPrice) 设置折后总价。
+ * @method array getDetailPrices() 获取计费项目明细列表。
+ * @method void setDetailPrices(array $DetailPrices) 设置计费项目明细列表。
  */
 class DiskPrice extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DiskPrice extends AbstractModel
     public $DiscountPrice;
 
     /**
+     * @var array 计费项目明细列表。
+     */
+    public $DetailPrices;
+
+    /**
      * @param float $OriginalDiskPrice 云硬盘单价。
      * @param float $OriginalPrice 云硬盘总价。
      * @param float $Discount 折扣。
      * @param float $DiscountPrice 折后总价。
+     * @param array $DetailPrices 计费项目明细列表。
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class DiskPrice extends AbstractModel
 
         if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
             $this->DiscountPrice = $param["DiscountPrice"];
+        }
+
+        if (array_key_exists("DetailPrices",$param) and $param["DetailPrices"] !== null) {
+            $this->DetailPrices = [];
+            foreach ($param["DetailPrices"] as $key => $value){
+                $obj = new DetailPrice();
+                $obj->deserialize($value);
+                array_push($this->DetailPrices, $obj);
+            }
         }
     }
 }

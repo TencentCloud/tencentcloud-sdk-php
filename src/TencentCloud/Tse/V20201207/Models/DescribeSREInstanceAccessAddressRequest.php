@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网ID
  * @method string getWorkload() 获取引擎其他组件名称（pushgateway）
  * @method void setWorkload(string $Workload) 设置引擎其他组件名称（pushgateway）
+ * @method string getEngineRegion() 获取部署地域
+ * @method void setEngineRegion(string $EngineRegion) 设置部署地域
  */
 class DescribeSREInstanceAccessAddressRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeSREInstanceAccessAddressRequest extends AbstractModel
     public $Workload;
 
     /**
+     * @var string 部署地域
+     */
+    public $EngineRegion;
+
+    /**
      * @param string $InstanceId 注册引擎实例Id
      * @param string $VpcId VPC ID
      * @param string $SubnetId 子网ID
      * @param string $Workload 引擎其他组件名称（pushgateway）
+     * @param string $EngineRegion 部署地域
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeSREInstanceAccessAddressRequest extends AbstractModel
 
         if (array_key_exists("Workload",$param) and $param["Workload"] !== null) {
             $this->Workload = $param["Workload"];
+        }
+
+        if (array_key_exists("EngineRegion",$param) and $param["EngineRegion"] !== null) {
+            $this->EngineRegion = $param["EngineRegion"];
         }
     }
 }

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelGetTaskResultApi请求参数结构体
  *
- * @method Agent getAgent() 获取渠道信息
- * @method void setAgent(Agent $Agent) 设置渠道信息
- * @method string getTaskId() 获取任务Id
- * @method void setTaskId(string $TaskId) 设置任务Id
- * @method OrganizationInfo getOrganization() 获取企业信息
- * @method void setOrganization(OrganizationInfo $Organization) 设置企业信息
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
+ * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method string getTaskId() 获取任务Id，通过ChannelCreateConvertTaskApi接口获得
+ * @method void setTaskId(string $TaskId) 设置任务Id，通过ChannelCreateConvertTaskApi接口获得
+ * @method UserInfo getOperator() 获取操作者的信息
+ * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method OrganizationInfo getOrganization() 获取暂未开放
+ * @method void setOrganization(OrganizationInfo $Organization) 设置暂未开放
  */
 class ChannelGetTaskResultApiRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道信息
+     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
     /**
-     * @var string 任务Id
+     * @var string 任务Id，通过ChannelCreateConvertTaskApi接口获得
      */
     public $TaskId;
 
     /**
-     * @var OrganizationInfo 企业信息
-     */
-    public $Organization;
-
-    /**
-     * @var UserInfo 操作人信息
+     * @var UserInfo 操作者的信息
      */
     public $Operator;
 
     /**
-     * @param Agent $Agent 渠道信息
-     * @param string $TaskId 任务Id
-     * @param OrganizationInfo $Organization 企业信息
-     * @param UserInfo $Operator 操作人信息
+     * @var OrganizationInfo 暂未开放
+     */
+    public $Organization;
+
+    /**
+     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param string $TaskId 任务Id，通过ChannelCreateConvertTaskApi接口获得
+     * @param UserInfo $Operator 操作者的信息
+     * @param OrganizationInfo $Organization 暂未开放
      */
     function __construct()
     {
@@ -79,14 +79,14 @@ class ChannelGetTaskResultApiRequest extends AbstractModel
             $this->TaskId = $param["TaskId"];
         }
 
-        if (array_key_exists("Organization",$param) and $param["Organization"] !== null) {
-            $this->Organization = new OrganizationInfo();
-            $this->Organization->deserialize($param["Organization"]);
-        }
-
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("Organization",$param) and $param["Organization"] !== null) {
+            $this->Organization = new OrganizationInfo();
+            $this->Organization->deserialize($param["Organization"]);
         }
     }
 }

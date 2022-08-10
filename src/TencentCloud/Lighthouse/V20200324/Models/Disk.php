@@ -50,16 +50,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestOperationState(string $LatestOperationState) 设置上一次操作状态
  * @method string getLatestOperationRequestId() 获取上一次请求ID
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) 设置上一次请求ID
- * @method string getCreatedTime() 获取创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method string getExpiredTime() 获取到期时间
+ * @method string getCreatedTime() 获取创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+ * @method string getExpiredTime() 获取到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpiredTime(string $ExpiredTime) 设置到期时间
+ * @method void setExpiredTime(string $ExpiredTime) 设置到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIsolatedTime() 获取隔离时间
+ * @method string getIsolatedTime() 获取隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsolatedTime(string $IsolatedTime) 设置隔离时间
+ * @method void setIsolatedTime(string $IsolatedTime) 设置隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDiskBackupCount() 获取云硬盘的已有备份点数量。
+ * @method void setDiskBackupCount(integer $DiskBackupCount) 设置云硬盘的已有备份点数量。
+ * @method integer getDiskBackupQuota() 获取云硬盘的备份点配额数量。
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置云硬盘的备份点配额数量。
  */
 class Disk extends AbstractModel
 {
@@ -139,21 +149,34 @@ class Disk extends AbstractModel
     public $LatestOperationRequestId;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
      */
     public $CreatedTime;
 
     /**
-     * @var string 到期时间
+     * @var string 到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiredTime;
 
     /**
-     * @var string 隔离时间
+     * @var string 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolatedTime;
+
+    /**
+     * @var integer 云硬盘的已有备份点数量。
+     */
+    public $DiskBackupCount;
+
+    /**
+     * @var integer 云硬盘的备份点配额数量。
+     */
+    public $DiskBackupQuota;
 
     /**
      * @param string $DiskId 磁盘ID
@@ -171,11 +194,16 @@ class Disk extends AbstractModel
      * @param string $LatestOperation 上一次操作
      * @param string $LatestOperationState 上一次操作状态
      * @param string $LatestOperationRequestId 上一次请求ID
-     * @param string $CreatedTime 创建时间
-     * @param string $ExpiredTime 到期时间
+     * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+     * @param string $ExpiredTime 到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IsolatedTime 隔离时间
+     * @param string $IsolatedTime 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DiskBackupCount 云硬盘的已有备份点数量。
+     * @param integer $DiskBackupQuota 云硬盘的备份点配额数量。
      */
     function __construct()
     {
@@ -260,6 +288,14 @@ class Disk extends AbstractModel
 
         if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
             $this->IsolatedTime = $param["IsolatedTime"];
+        }
+
+        if (array_key_exists("DiskBackupCount",$param) and $param["DiskBackupCount"] !== null) {
+            $this->DiskBackupCount = $param["DiskBackupCount"];
+        }
+
+        if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
+            $this->DiskBackupQuota = $param["DiskBackupQuota"];
         }
     }
 }

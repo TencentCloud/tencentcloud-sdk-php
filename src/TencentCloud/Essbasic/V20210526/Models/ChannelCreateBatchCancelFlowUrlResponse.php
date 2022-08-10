@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChannelCreateBatchCancelFlowUrl返回参数结构体
  *
- * @method string getBatchCancelFlowUrl() 获取批量撤回url
- * @method void setBatchCancelFlowUrl(string $BatchCancelFlowUrl) 设置批量撤回url
- * @method array getFailMessages() 获取签署流程批量撤回失败原因
- * @method void setFailMessages(array $FailMessages) 设置签署流程批量撤回失败原因
- * @method string getUrlExpireOn() 获取签署撤回url过期时间-年月日-时分秒
- * @method void setUrlExpireOn(string $UrlExpireOn) 设置签署撤回url过期时间-年月日-时分秒
+ * @method string getBatchCancelFlowUrl() 获取批量撤销url
+ * @method void setBatchCancelFlowUrl(string $BatchCancelFlowUrl) 设置批量撤销url
+ * @method array getFailMessages() 获取签署流程批量撤销失败原因
+ * @method void setFailMessages(array $FailMessages) 设置签署流程批量撤销失败原因
+ * @method string getUrlExpireOn() 获取签署撤销url过期时间-年月日-时分秒
+ * @method void setUrlExpireOn(string $UrlExpireOn) 设置签署撤销url过期时间-年月日-时分秒
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ChannelCreateBatchCancelFlowUrlResponse extends AbstractModel
 {
     /**
-     * @var string 批量撤回url
+     * @var string 批量撤销url
      */
     public $BatchCancelFlowUrl;
 
     /**
-     * @var array 签署流程批量撤回失败原因
+     * @var array 签署流程批量撤销失败原因
      */
     public $FailMessages;
 
     /**
-     * @var string 签署撤回url过期时间-年月日-时分秒
+     * @var string 签署撤销url过期时间-年月日-时分秒
      */
     public $UrlExpireOn;
 
@@ -52,9 +52,9 @@ class ChannelCreateBatchCancelFlowUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BatchCancelFlowUrl 批量撤回url
-     * @param array $FailMessages 签署流程批量撤回失败原因
-     * @param string $UrlExpireOn 签署撤回url过期时间-年月日-时分秒
+     * @param string $BatchCancelFlowUrl 批量撤销url
+     * @param array $FailMessages 签署流程批量撤销失败原因
+     * @param string $UrlExpireOn 签署撤销url过期时间-年月日-时分秒
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

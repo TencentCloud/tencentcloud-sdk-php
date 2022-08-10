@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置播放器配置类型，取值范围：
 <li>Preset：系统预置配置；</li>
 <li>Custom：用户自定义配置。</li>
+ * @method string getAudioVideoType() 获取播放的音视频类型，可选值有：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+ * @method void setAudioVideoType(string $AudioVideoType) 设置播放的音视频类型，可选值有：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
  * @method string getDrmSwitch() 获取播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
@@ -40,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrmStreamingsInfo(DrmStreamingsInfo $DrmStreamingsInfo) 设置允许输出的 DRM 自适应码流模板内容。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTranscodeDefinition() 获取允许输出的转码模板 ID。
+ * @method void setTranscodeDefinition(integer $TranscodeDefinition) 设置允许输出的转码模板 ID。
  * @method integer getImageSpriteDefinition() 获取允许输出的雪碧图模板 ID。
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) 设置允许输出的雪碧图模板 ID。
  * @method array getResolutionNameSet() 获取播放器对不于不同分辨率的子流展示名字。
@@ -76,6 +86,14 @@ class PlayerConfig extends AbstractModel
     public $Type;
 
     /**
+     * @var string 播放的音视频类型，可选值有：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
+     */
+    public $AudioVideoType;
+
+    /**
      * @var string 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
@@ -92,6 +110,11 @@ class PlayerConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DrmStreamingsInfo;
+
+    /**
+     * @var integer 允许输出的转码模板 ID。
+     */
+    public $TranscodeDefinition;
 
     /**
      * @var integer 允许输出的雪碧图模板 ID。
@@ -136,12 +159,17 @@ class PlayerConfig extends AbstractModel
      * @param string $Type 播放器配置类型，取值范围：
 <li>Preset：系统预置配置；</li>
 <li>Custom：用户自定义配置。</li>
+     * @param string $AudioVideoType 播放的音视频类型，可选值有：
+<li>AdaptiveDynamicStream：自适应码流输出；</li>
+<li>Transcode：转码输出；</li>
+<li>Original：原始音视频。</li>
      * @param string $DrmSwitch 播放 DRM 保护的自适应码流开关：
 <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
 <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
      * @param integer $AdaptiveDynamicStreamingDefinition 允许输出的未加密的自适应码流模板 ID。
      * @param DrmStreamingsInfo $DrmStreamingsInfo 允许输出的 DRM 自适应码流模板内容。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TranscodeDefinition 允许输出的转码模板 ID。
      * @param integer $ImageSpriteDefinition 允许输出的雪碧图模板 ID。
      * @param array $ResolutionNameSet 播放器对不于不同分辨率的子流展示名字。
      * @param string $CreateTime 播放器配置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -174,6 +202,10 @@ class PlayerConfig extends AbstractModel
             $this->Type = $param["Type"];
         }
 
+        if (array_key_exists("AudioVideoType",$param) and $param["AudioVideoType"] !== null) {
+            $this->AudioVideoType = $param["AudioVideoType"];
+        }
+
         if (array_key_exists("DrmSwitch",$param) and $param["DrmSwitch"] !== null) {
             $this->DrmSwitch = $param["DrmSwitch"];
         }
@@ -185,6 +217,10 @@ class PlayerConfig extends AbstractModel
         if (array_key_exists("DrmStreamingsInfo",$param) and $param["DrmStreamingsInfo"] !== null) {
             $this->DrmStreamingsInfo = new DrmStreamingsInfo();
             $this->DrmStreamingsInfo->deserialize($param["DrmStreamingsInfo"]);
+        }
+
+        if (array_key_exists("TranscodeDefinition",$param) and $param["TranscodeDefinition"] !== null) {
+            $this->TranscodeDefinition = $param["TranscodeDefinition"];
         }
 
         if (array_key_exists("ImageSpriteDefinition",$param) and $param["ImageSpriteDefinition"] !== null) {

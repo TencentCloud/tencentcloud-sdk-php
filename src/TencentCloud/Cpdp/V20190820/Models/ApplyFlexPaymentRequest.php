@@ -46,6 +46,8 @@ __release__:生产环境
 __sandbox__:沙箱环境
 __test__:测试环境
 缺省默认为生产环境
+ * @method string getNotifyUrl() 获取支付结果通知回调地址
+ * @method void setNotifyUrl(string $NotifyUrl) 设置支付结果通知回调地址
  */
 class ApplyFlexPaymentRequest extends AbstractModel
 {
@@ -91,6 +93,11 @@ __test__:测试环境
     public $Environment;
 
     /**
+     * @var string 支付结果通知回调地址
+     */
+    public $NotifyUrl;
+
+    /**
      * @param string $PayeeId 收款用户ID
      * @param string $IncomeType 收入类型
 LABOR:劳务所得
@@ -104,6 +111,7 @@ __release__:生产环境
 __sandbox__:沙箱环境
 __test__:测试环境
 缺省默认为生产环境
+     * @param string $NotifyUrl 支付结果通知回调地址
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ __test__:测试环境
 
         if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
             $this->Environment = $param["Environment"];
+        }
+
+        if (array_key_exists("NotifyUrl",$param) and $param["NotifyUrl"] !== null) {
+            $this->NotifyUrl = $param["NotifyUrl"];
         }
     }
 }

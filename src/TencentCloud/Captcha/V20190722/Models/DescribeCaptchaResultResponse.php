@@ -72,9 +72,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaptchaMsg(string $CaptchaMsg) 设置状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEvilLevel() 获取[0,100]，恶意等级
+ * @method integer getEvilLevel() 获取无感验证模式下，该参数返回验证结果：
+
+EvilLevel=0 请求无恶意
+EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEvilLevel(integer $EvilLevel) 设置[0,100]，恶意等级
+ * @method void setEvilLevel(integer $EvilLevel) 设置无感验证模式下，该参数返回验证结果：
+
+EvilLevel=0 请求无恶意
+EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGetCaptchaTime() 获取前端获取验证码时间，时间戳格式
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,7 +126,10 @@ class DescribeCaptchaResultResponse extends AbstractModel
     public $CaptchaMsg;
 
     /**
-     * @var integer [0,100]，恶意等级
+     * @var integer 无感验证模式下，该参数返回验证结果：
+
+EvilLevel=0 请求无恶意
+EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EvilLevel;
@@ -163,7 +172,10 @@ class DescribeCaptchaResultResponse extends AbstractModel
 104 Ticket Reuse 票据重复使用，同个票据验证多次，请重新生成Randstr、Ticket进行校验
      * @param string $CaptchaMsg 状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EvilLevel [0,100]，恶意等级
+     * @param integer $EvilLevel 无感验证模式下，该参数返回验证结果：
+
+EvilLevel=0 请求无恶意
+EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GetCaptchaTime 前端获取验证码时间，时间戳格式
 注意：此字段可能返回 null，表示取不到有效值。

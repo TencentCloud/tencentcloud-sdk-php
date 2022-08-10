@@ -22,12 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取任务Id
  * @method void setTaskId(string $TaskId) 设置任务Id
- * @method integer getTaskStatus() 获取任务状态
- * @method void setTaskStatus(integer $TaskStatus) 设置任务状态
- * @method string getTaskMessage() 获取状态描述
- * @method void setTaskMessage(string $TaskMessage) 设置状态描述
- * @method string getResourceId() 获取资源Id
- * @method void setResourceId(string $ResourceId) 设置资源Id
+ * @method integer getTaskStatus() 获取任务状态，需要关注的状态
+0  :NeedTranform   - 任务已提交
+4  :Processing     - 文档转换中
+8  :TaskEnd        - 任务处理完成
+-2 :DownloadFailed - 下载失败
+-6 :ProcessFailed  - 转换失败
+-13:ProcessTimeout - 转换文件超时
+ * @method void setTaskStatus(integer $TaskStatus) 设置任务状态，需要关注的状态
+0  :NeedTranform   - 任务已提交
+4  :Processing     - 文档转换中
+8  :TaskEnd        - 任务处理完成
+-2 :DownloadFailed - 下载失败
+-6 :ProcessFailed  - 转换失败
+-13:ProcessTimeout - 转换文件超时
+ * @method string getTaskMessage() 获取状态描述，需要关注的状态
+NeedTranform   - 任务已提交
+Processing     - 文档转换中
+TaskEnd        - 任务处理完成
+DownloadFailed - 下载失败
+ProcessFailed  - 转换失败
+ProcessTimeout - 转换文件超时
+ * @method void setTaskMessage(string $TaskMessage) 设置状态描述，需要关注的状态
+NeedTranform   - 任务已提交
+Processing     - 文档转换中
+TaskEnd        - 任务处理完成
+DownloadFailed - 下载失败
+ProcessFailed  - 转换失败
+ProcessTimeout - 转换文件超时
+ * @method string getResourceId() 获取资源Id，也是FileId，用于文件发起使用
+ * @method void setResourceId(string $ResourceId) 设置资源Id，也是FileId，用于文件发起使用
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,17 +63,29 @@ class GetTaskResultApiResponse extends AbstractModel
     public $TaskId;
 
     /**
-     * @var integer 任务状态
+     * @var integer 任务状态，需要关注的状态
+0  :NeedTranform   - 任务已提交
+4  :Processing     - 文档转换中
+8  :TaskEnd        - 任务处理完成
+-2 :DownloadFailed - 下载失败
+-6 :ProcessFailed  - 转换失败
+-13:ProcessTimeout - 转换文件超时
      */
     public $TaskStatus;
 
     /**
-     * @var string 状态描述
+     * @var string 状态描述，需要关注的状态
+NeedTranform   - 任务已提交
+Processing     - 文档转换中
+TaskEnd        - 任务处理完成
+DownloadFailed - 下载失败
+ProcessFailed  - 转换失败
+ProcessTimeout - 转换文件超时
      */
     public $TaskMessage;
 
     /**
-     * @var string 资源Id
+     * @var string 资源Id，也是FileId，用于文件发起使用
      */
     public $ResourceId;
 
@@ -60,9 +96,21 @@ class GetTaskResultApiResponse extends AbstractModel
 
     /**
      * @param string $TaskId 任务Id
-     * @param integer $TaskStatus 任务状态
-     * @param string $TaskMessage 状态描述
-     * @param string $ResourceId 资源Id
+     * @param integer $TaskStatus 任务状态，需要关注的状态
+0  :NeedTranform   - 任务已提交
+4  :Processing     - 文档转换中
+8  :TaskEnd        - 任务处理完成
+-2 :DownloadFailed - 下载失败
+-6 :ProcessFailed  - 转换失败
+-13:ProcessTimeout - 转换文件超时
+     * @param string $TaskMessage 状态描述，需要关注的状态
+NeedTranform   - 任务已提交
+Processing     - 文档转换中
+TaskEnd        - 任务处理完成
+DownloadFailed - 下载失败
+ProcessFailed  - 转换失败
+ProcessTimeout - 转换文件超时
+     * @param string $ResourceId 资源Id，也是FileId，用于文件发起使用
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

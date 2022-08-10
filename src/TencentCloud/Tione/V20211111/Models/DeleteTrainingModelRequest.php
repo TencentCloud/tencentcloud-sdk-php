@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrainingModelId(string $TrainingModelId) 设置模型ID
  * @method boolean getEnableDeleteCos() 获取是否同步清理cos
  * @method void setEnableDeleteCos(boolean $EnableDeleteCos) 设置是否同步清理cos
+ * @method string getModelVersionType() 获取删除模型类型，枚举值：NORMAL 普通，ACCELERATE 加速，不传则删除所有
+ * @method void setModelVersionType(string $ModelVersionType) 设置删除模型类型，枚举值：NORMAL 普通，ACCELERATE 加速，不传则删除所有
  */
 class DeleteTrainingModelRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteTrainingModelRequest extends AbstractModel
     public $EnableDeleteCos;
 
     /**
+     * @var string 删除模型类型，枚举值：NORMAL 普通，ACCELERATE 加速，不传则删除所有
+     */
+    public $ModelVersionType;
+
+    /**
      * @param string $TrainingModelId 模型ID
      * @param boolean $EnableDeleteCos 是否同步清理cos
+     * @param string $ModelVersionType 删除模型类型，枚举值：NORMAL 普通，ACCELERATE 加速，不传则删除所有
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteTrainingModelRequest extends AbstractModel
 
         if (array_key_exists("EnableDeleteCos",$param) and $param["EnableDeleteCos"] !== null) {
             $this->EnableDeleteCos = $param["EnableDeleteCos"];
+        }
+
+        if (array_key_exists("ModelVersionType",$param) and $param["ModelVersionType"] !== null) {
+            $this->ModelVersionType = $param["ModelVersionType"];
         }
     }
 }

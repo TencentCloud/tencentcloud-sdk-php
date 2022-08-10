@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrainingModelId(string $TrainingModelId) 设置模型ID（导入新模型不需要，导入新版本需要）
  * @method CosPathInfo getModelOutputPath() 获取模型存储cos目录
  * @method void setModelOutputPath(CosPathInfo $ModelOutputPath) 设置模型存储cos目录
- * @method string getTrainingModelSource() 获取模型来源 （JOB/COS/AUTO_ML）
- * @method void setTrainingModelSource(string $TrainingModelSource) 设置模型来源 （JOB/COS/AUTO_ML）
+ * @method string getTrainingModelSource() 获取模型来源 （JOB/COS）
+ * @method void setTrainingModelSource(string $TrainingModelSource) 设置模型来源 （JOB/COS）
  * @method string getTrainingPreference() 获取模型偏好
  * @method void setTrainingPreference(string $TrainingPreference) 设置模型偏好
  * @method string getAutoMLTaskId() 获取自动学习任务ID
@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 注意:  默认为NORMAL
  * @method string getModelFormat() 获取模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML）
  * @method void setModelFormat(string $ModelFormat) 设置模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML）
+ * @method string getReasoningEnvironmentId() 获取推理镜像ID
+ * @method void setReasoningEnvironmentId(string $ReasoningEnvironmentId) 设置推理镜像ID
  */
 class CreateTrainingModelRequest extends AbstractModel
 {
@@ -145,7 +147,7 @@ class CreateTrainingModelRequest extends AbstractModel
     public $ModelOutputPath;
 
     /**
-     * @var string 模型来源 （JOB/COS/AUTO_ML）
+     * @var string 模型来源 （JOB/COS）
      */
     public $TrainingModelSource;
 
@@ -177,6 +179,11 @@ class CreateTrainingModelRequest extends AbstractModel
     public $ModelFormat;
 
     /**
+     * @var string 推理镜像ID
+     */
+    public $ReasoningEnvironmentId;
+
+    /**
      * @param string $ImportMethod 导入方式（MODEL/VERSION）
      * @param CosPathInfo $TrainingModelCosPath 模型来源cos目录，以/结尾
      * @param string $ReasoningEnvironmentSource 推理环境来源（SYSTEM/CUSTOM）
@@ -192,7 +199,7 @@ class CreateTrainingModelRequest extends AbstractModel
      * @param string $TrainingJobId 训练任务ID
      * @param string $TrainingModelId 模型ID（导入新模型不需要，导入新版本需要）
      * @param CosPathInfo $ModelOutputPath 模型存储cos目录
-     * @param string $TrainingModelSource 模型来源 （JOB/COS/AUTO_ML）
+     * @param string $TrainingModelSource 模型来源 （JOB/COS）
      * @param string $TrainingPreference 模型偏好
      * @param string $AutoMLTaskId 自动学习任务ID
      * @param string $TrainingJobVersion 任务版本
@@ -200,6 +207,7 @@ class CreateTrainingModelRequest extends AbstractModel
 枚举值：NORMAL(通用)  ACCELERATE(加速)
 注意:  默认为NORMAL
      * @param string $ModelFormat 模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML）
+     * @param string $ReasoningEnvironmentId 推理镜像ID
      */
     function __construct()
     {
@@ -304,6 +312,10 @@ class CreateTrainingModelRequest extends AbstractModel
 
         if (array_key_exists("ModelFormat",$param) and $param["ModelFormat"] !== null) {
             $this->ModelFormat = $param["ModelFormat"];
+        }
+
+        if (array_key_exists("ReasoningEnvironmentId",$param) and $param["ReasoningEnvironmentId"] !== null) {
+            $this->ReasoningEnvironmentId = $param["ReasoningEnvironmentId"];
         }
     }
 }

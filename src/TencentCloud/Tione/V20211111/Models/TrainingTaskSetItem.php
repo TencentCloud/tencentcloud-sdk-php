@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置自定义镜像信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMessage() 获取任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessage(string $Message) 设置任务信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrainingTaskSetItem extends AbstractModel
 {
@@ -201,6 +205,12 @@ class TrainingTaskSetItem extends AbstractModel
     public $ImageInfo;
 
     /**
+     * @var string 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Message;
+
+    /**
      * @param string $Id 训练任务ID
      * @param string $Name 训练任务名称
      * @param string $FrameworkName 框架名称
@@ -231,6 +241,8 @@ class TrainingTaskSetItem extends AbstractModel
      * @param string $BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
      * @param string $ResourceGroupName 预付费专用资源组名称
      * @param ImageInfo $ImageInfo 自定义镜像信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Message 任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -340,6 +352,10 @@ class TrainingTaskSetItem extends AbstractModel
         if (array_key_exists("ImageInfo",$param) and $param["ImageInfo"] !== null) {
             $this->ImageInfo = new ImageInfo();
             $this->ImageInfo->deserialize($param["ImageInfo"]);
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

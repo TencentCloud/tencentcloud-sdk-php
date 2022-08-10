@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  * @method array getFilters() 获取搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
  * @method void setFilters(array $Filters) 设置搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
- * @method integer getLimit() 获取查询个数，默认20，最大100
- * @method void setLimit(integer $Limit) 设置查询个数，默认20，最大100
+ * @method integer getLimit() 获取查询个数，默认20，最大200
+ * @method void setLimit(integer $Limit) 设置查询个数，默认20，最大200
  * @method integer getOffset() 获取查询偏移位置，默认0
  * @method void setOffset(integer $Offset) 设置查询偏移位置，默认0
  * @method integer getContentType() 获取查询内容：0-模板列表及详情（默认），1-仅模板列表
@@ -48,7 +48,7 @@ class DescribeFlowTemplatesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 查询个数，默认20，最大100
+     * @var integer 查询个数，默认20，最大200
      */
     public $Limit;
 
@@ -75,7 +75,7 @@ class DescribeFlowTemplatesRequest extends AbstractModel
     /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param array $Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
-     * @param integer $Limit 查询个数，默认20，最大100
+     * @param integer $Limit 查询个数，默认20，最大200
      * @param integer $Offset 查询偏移位置，默认0
      * @param integer $ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
      * @param integer $GenerateSource 暂未开放

@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiZones(boolean $MultiZones) 设置是否跨可用区部署，默认值为false
  * @method array getResourceTags() 获取新建实例绑定的标签集合
  * @method void setResourceTags(array $ResourceTags) 设置新建实例绑定的标签集合
+ * @method string getCollation() 获取系统字符集排序规则，默认：Chinese_PRC_CI_AS
+ * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
+ * @method string getTimeZone() 获取系统时区，默认：China Standard Time
+ * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -164,6 +168,16 @@ class CreateDBInstancesRequest extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     */
+    public $Collation;
+
+    /**
+     * @var string 系统时区，默认：China Standard Time
+     */
+    public $TimeZone;
+
+    /**
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $Memory 实例内存大小，单位GB
      * @param integer $Storage 实例磁盘大小，单位GB
@@ -184,6 +198,8 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $HAType 购买高可用实例的类型：DUAL-双机高可用  CLUSTER-集群，默认值为DUAL
      * @param boolean $MultiZones 是否跨可用区部署，默认值为false
      * @param array $ResourceTags 新建实例绑定的标签集合
+     * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * @param string $TimeZone 系统时区，默认：China Standard Time
      */
     function __construct()
     {
@@ -281,6 +297,14 @@ class CreateDBInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("Collation",$param) and $param["Collation"] !== null) {
+            $this->Collation = $param["Collation"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

@@ -45,6 +45,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\DescribeConfigDataResponse DescribeConfigData(Models\DescribeConfigDataRequest $req) 查询配置详情
  * @method Models\DescribeConfigDataListResponse DescribeConfigDataList(Models\DescribeConfigDataListRequest $req) 查询配置列表
  * @method Models\DescribeDeployApplicationDetailResponse DescribeDeployApplicationDetail(Models\DescribeDeployApplicationDetailRequest $req) 获取分批发布详情
+ * @method Models\DescribeEnvironmentResponse DescribeEnvironment(Models\DescribeEnvironmentRequest $req) 获取环境基础信息
  * @method Models\DescribeEnvironmentStatusResponse DescribeEnvironmentStatus(Models\DescribeEnvironmentStatusRequest $req) 获取环境状态
  * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) 获取环境列表
  * @method Models\DescribeIngressResponse DescribeIngress(Models\DescribeIngressRequest $req) 查询 Ingress 规则

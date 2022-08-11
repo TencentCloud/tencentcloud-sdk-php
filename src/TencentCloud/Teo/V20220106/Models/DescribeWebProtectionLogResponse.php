@@ -20,29 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWebProtectionLog返回参数结构体
  *
- * @method CCLogData getData() 获取限速拦截Data
- * @method void setData(CCLogData $Data) 设置限速拦截Data
- * @method integer getStatus() 获取状态，1：失败，0:成功
- * @method void setStatus(integer $Status) 设置状态，1：失败，0:成功
- * @method string getMsg() 获取返回信息
- * @method void setMsg(string $Msg) 设置返回信息
+ * @method CCLogData getData() 获取限速拦截数据内容。
+ * @method void setData(CCLogData $Data) 设置限速拦截数据内容。
+ * @method integer getStatus() 获取请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+ * @method void setStatus(integer $Status) 设置请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+ * @method string getMsg() 获取请求响应信息。
+ * @method void setMsg(string $Msg) 设置请求响应信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeWebProtectionLogResponse extends AbstractModel
 {
     /**
-     * @var CCLogData 限速拦截Data
+     * @var CCLogData 限速拦截数据内容。
      */
     public $Data;
 
     /**
-     * @var integer 状态，1：失败，0:成功
+     * @var integer 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public $Status;
 
     /**
-     * @var string 返回信息
+     * @var string 请求响应信息。
      */
     public $Msg;
 
@@ -52,9 +58,11 @@ class DescribeWebProtectionLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CCLogData $Data 限速拦截Data
-     * @param integer $Status 状态，1：失败，0:成功
-     * @param string $Msg 返回信息
+     * @param CCLogData $Data 限速拦截数据内容。
+     * @param integer $Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+     * @param string $Msg 请求响应信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

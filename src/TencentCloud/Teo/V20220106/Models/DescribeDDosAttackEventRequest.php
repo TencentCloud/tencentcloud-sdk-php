@@ -20,74 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDosAttackEvent请求参数结构体
  *
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method integer getPageSize() 获取条数
- * @method void setPageSize(integer $PageSize) 设置条数
- * @method integer getPageNo() 获取当前页
- * @method void setPageNo(integer $PageNo) 设置当前页
- * @method array getPolicyIds() 获取ddos策略组id 集合
- * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组id 集合
- * @method array getZoneIds() 获取站点集合
- * @method void setZoneIds(array $ZoneIds) 设置站点集合
- * @method string getProtocolType() 获取协议类型,{tcp,udp,all}
- * @method void setProtocolType(string $ProtocolType) 设置协议类型,{tcp,udp,all}
- * @method string getIsShowDetail() 获取选填{Y、N},默认为Y；Y：展示，N：不展示
- * @method void setIsShowDetail(string $IsShowDetail) 设置选填{Y、N},默认为Y；Y：展示，N：不展示
+ * @method string getStartTime() 获取开始时间。
+ * @method void setStartTime(string $StartTime) 设置开始时间。
+ * @method string getEndTime() 获取结束时间。
+ * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method integer getPageSize() 获取分页拉取的最大返回结果数。最大值：1000。
+ * @method void setPageSize(integer $PageSize) 设置分页拉取的最大返回结果数。最大值：1000。
+ * @method integer getPageNo() 获取分页拉取的起始页号。最小值：1。
+ * @method void setPageNo(integer $PageNo) 设置分页拉取的起始页号。最小值：1。
+ * @method array getPolicyIds() 获取ddos策略组id列表，不填默认选择全部策略Id。
+ * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组id列表，不填默认选择全部策略Id。
+ * @method array getZoneIds() 获取站点id列表，不填默认选择全部站点。
+ * @method void setZoneIds(array $ZoneIds) 设置站点id列表，不填默认选择全部站点。
+ * @method string getProtocolType() 获取协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+ * @method void setProtocolType(string $ProtocolType) 设置协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+ * @method string getIsShowDetail() 获取是否展示详情，取值有：
+<li>Y ：展示 ；</li>
+<li>N ：不展示 。</li>默认为Y。
+ * @method void setIsShowDetail(string $IsShowDetail) 设置是否展示详情，取值有：
+<li>Y ：展示 ；</li>
+<li>N ：不展示 。</li>默认为Y。
  */
 class DescribeDDosAttackEventRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string 开始时间。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间。
      */
     public $EndTime;
 
     /**
-     * @var integer 条数
+     * @var integer 分页拉取的最大返回结果数。最大值：1000。
      */
     public $PageSize;
 
     /**
-     * @var integer 当前页
+     * @var integer 分页拉取的起始页号。最小值：1。
      */
     public $PageNo;
 
     /**
-     * @var array ddos策略组id 集合
+     * @var array ddos策略组id列表，不填默认选择全部策略Id。
      */
     public $PolicyIds;
 
     /**
-     * @var array 站点集合
+     * @var array 站点id列表，不填默认选择全部站点。
      */
     public $ZoneIds;
 
     /**
-     * @var string 协议类型,{tcp,udp,all}
+     * @var string 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
      */
     public $ProtocolType;
 
     /**
-     * @var string 选填{Y、N},默认为Y；Y：展示，N：不展示
+     * @var string 是否展示详情，取值有：
+<li>Y ：展示 ；</li>
+<li>N ：不展示 。</li>默认为Y。
      */
     public $IsShowDetail;
 
     /**
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param integer $PageSize 条数
-     * @param integer $PageNo 当前页
-     * @param array $PolicyIds ddos策略组id 集合
-     * @param array $ZoneIds 站点集合
-     * @param string $ProtocolType 协议类型,{tcp,udp,all}
-     * @param string $IsShowDetail 选填{Y、N},默认为Y；Y：展示，N：不展示
+     * @param string $StartTime 开始时间。
+     * @param string $EndTime 结束时间。
+     * @param integer $PageSize 分页拉取的最大返回结果数。最大值：1000。
+     * @param integer $PageNo 分页拉取的起始页号。最小值：1。
+     * @param array $PolicyIds ddos策略组id列表，不填默认选择全部策略Id。
+     * @param array $ZoneIds 站点id列表，不填默认选择全部站点。
+     * @param string $ProtocolType 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+     * @param string $IsShowDetail 是否展示详情，取值有：
+<li>Y ：展示 ；</li>
+<li>N ：不展示 。</li>默认为Y。
      */
     function __construct()
     {

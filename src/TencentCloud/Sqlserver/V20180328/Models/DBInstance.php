@@ -130,6 +130,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsPodDomain(string $DnsPodDomain) 设置外网地址域名
  * @method integer getTgwWanVPort() 获取外网端口号
  * @method void setTgwWanVPort(integer $TgwWanVPort) 设置外网端口号
+ * @method string getCollation() 获取系统字符集排序规则，默认：Chinese_PRC_CI_AS
+ * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
+ * @method string getTimeZone() 获取系统时区，默认：China Standard Time
+ * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
  */
 class DBInstance extends AbstractModel
 {
@@ -381,6 +385,16 @@ class DBInstance extends AbstractModel
     public $TgwWanVPort;
 
     /**
+     * @var string 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     */
+    public $Collation;
+
+    /**
+     * @var string 系统时区，默认：China Standard Time
+     */
+    public $TimeZone;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
      * @param integer $ProjectId 实例所在项目ID
@@ -436,6 +450,8 @@ class DBInstance extends AbstractModel
      * @param integer $CrossBackupSaveDays 跨地域备份保留天数，则默认7天
      * @param string $DnsPodDomain 外网地址域名
      * @param integer $TgwWanVPort 外网端口号
+     * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * @param string $TimeZone 系统时区，默认：China Standard Time
      */
     function __construct()
     {
@@ -645,6 +661,14 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("TgwWanVPort",$param) and $param["TgwWanVPort"] !== null) {
             $this->TgwWanVPort = $param["TgwWanVPort"];
+        }
+
+        if (array_key_exists("Collation",$param) and $param["Collation"] !== null) {
+            $this->Collation = $param["Collation"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

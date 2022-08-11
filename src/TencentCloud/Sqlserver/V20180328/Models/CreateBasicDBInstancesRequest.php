@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpan(integer $Span) 设置可维护时间窗配置，持续时间，单位：小时
  * @method array getResourceTags() 获取新建实例绑定的标签集合
  * @method void setResourceTags(array $ResourceTags) 设置新建实例绑定的标签集合
+ * @method string getCollation() 获取系统字符集排序规则，默认：Chinese_PRC_CI_AS
+ * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
+ * @method string getTimeZone() 获取系统时区，默认：China Standard Time
+ * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
  */
 class CreateBasicDBInstancesRequest extends AbstractModel
 {
@@ -164,6 +168,16 @@ class CreateBasicDBInstancesRequest extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     */
+    public $Collation;
+
+    /**
+     * @var string 系统时区，默认：China Standard Time
+     */
+    public $TimeZone;
+
+    /**
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $Cpu 实例的CPU核心数
      * @param integer $Memory 实例内存大小，单位GB
@@ -184,6 +198,8 @@ class CreateBasicDBInstancesRequest extends AbstractModel
      * @param string $StartTime 可维护时间窗配置，每天可维护的开始时间
      * @param integer $Span 可维护时间窗配置，持续时间，单位：小时
      * @param array $ResourceTags 新建实例绑定的标签集合
+     * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * @param string $TimeZone 系统时区，默认：China Standard Time
      */
     function __construct()
     {
@@ -281,6 +297,14 @@ class CreateBasicDBInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("Collation",$param) and $param["Collation"] !== null) {
+            $this->Collation = $param["Collation"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全数据Entry对应的值
  *
- * @method string getMetric() 获取指标名称
+ * @method string getMetric() 获取指标名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetric(string $Metric) 设置指标名称
+ * @method void setMetric(string $Metric) 设置指标名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDetail() 获取指标数据明细
+ * @method array getDetail() 获取时序数据详情。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDetail(array $Detail) 设置指标数据明细
+ * @method void setDetail(array $Detail) 设置时序数据详情。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMax() 获取最大值
+ * @method integer getMax() 获取最大值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMax(integer $Max) 设置最大值
+ * @method void setMax(integer $Max) 设置最大值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getAvg() 获取平均值
+ * @method float getAvg() 获取平均值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAvg(float $Avg) 设置平均值
+ * @method void setAvg(float $Avg) 设置平均值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getSum() 获取数据总和
+ * @method float getSum() 获取数据总和。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSum(float $Sum) 设置数据总和
+ * @method void setSum(float $Sum) 设置数据总和。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecEntryValue extends AbstractModel
 {
     /**
-     * @var string 指标名称
+     * @var string 指标名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metric;
 
     /**
-     * @var array 指标数据明细
+     * @var array 时序数据详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
     /**
-     * @var integer 最大值
+     * @var integer 最大值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Max;
 
     /**
-     * @var float 平均值
+     * @var float 平均值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Avg;
 
     /**
-     * @var float 数据总和
+     * @var float 数据总和。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sum;
 
     /**
-     * @param string $Metric 指标名称
+     * @param string $Metric 指标名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Detail 指标数据明细
+     * @param array $Detail 时序数据详情。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Max 最大值
+     * @param integer $Max 最大值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Avg 平均值
+     * @param float $Avg 平均值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Sum 数据总和
+     * @param float $Sum 数据总和。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

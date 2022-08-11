@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置云盘类型选择策略。取值范围：
 <br><li>ORIGINAL：使用设置的云盘类型
 <br><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型
+ * @method string getHpcClusterId() 获取高性能计算集群ID。<br>
+注意：此字段默认为空。
+ * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。<br>
+注意：此字段默认为空。
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -241,6 +245,12 @@ class LaunchConfiguration extends AbstractModel
     public $DiskTypePolicy;
 
     /**
+     * @var string 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     */
+    public $HpcClusterId;
+
+    /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
      * @param string $LaunchConfigurationName 启动配置名称。
@@ -276,6 +286,8 @@ class LaunchConfiguration extends AbstractModel
      * @param string $DiskTypePolicy 云盘类型选择策略。取值范围：
 <br><li>ORIGINAL：使用设置的云盘类型
 <br><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型
+     * @param string $HpcClusterId 高性能计算集群ID。<br>
+注意：此字段默认为空。
      */
     function __construct()
     {
@@ -428,6 +440,10 @@ class LaunchConfiguration extends AbstractModel
 
         if (array_key_exists("DiskTypePolicy",$param) and $param["DiskTypePolicy"] !== null) {
             $this->DiskTypePolicy = $param["DiskTypePolicy"];
+        }
+
+        if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {
+            $this->HpcClusterId = $param["HpcClusterId"];
         }
     }
 }

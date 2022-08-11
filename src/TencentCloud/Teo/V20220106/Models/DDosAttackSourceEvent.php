@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDos攻击事件对象
  *
- * @method string getAttackSourceIp() 获取攻击源ip
+ * @method string getAttackSourceIp() 获取攻击源ip。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttackSourceIp(string $AttackSourceIp) 设置攻击源ip
+ * @method void setAttackSourceIp(string $AttackSourceIp) 设置攻击源ip。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAttackRegion() 获取地区(国家)
+ * @method string getAttackRegion() 获取地区（国家）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttackRegion(string $AttackRegion) 设置地区(国家)
+ * @method void setAttackRegion(string $AttackRegion) 设置地区（国家）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAttackFlow() 获取累计攻击流量
+ * @method integer getAttackFlow() 获取累计攻击流量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttackFlow(integer $AttackFlow) 设置累计攻击流量
+ * @method void setAttackFlow(integer $AttackFlow) 设置累计攻击流量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAttackPacketNum() 获取累计攻击包量
+ * @method integer getAttackPacketNum() 获取累计攻击包量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttackPacketNum(integer $AttackPacketNum) 设置累计攻击包量
+ * @method void setAttackPacketNum(integer $AttackPacketNum) 设置累计攻击包量。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DDosAttackSourceEvent extends AbstractModel
 {
     /**
-     * @var string 攻击源ip
+     * @var string 攻击源ip。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackSourceIp;
 
     /**
-     * @var string 地区(国家)
+     * @var string 地区（国家）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackRegion;
 
     /**
-     * @var integer 累计攻击流量
+     * @var integer 累计攻击流量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackFlow;
 
     /**
-     * @var integer 累计攻击包量
+     * @var integer 累计攻击包量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackPacketNum;
 
     /**
-     * @param string $AttackSourceIp 攻击源ip
+     * @param string $AttackSourceIp 攻击源ip。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AttackRegion 地区(国家)
+     * @param string $AttackRegion 地区（国家）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AttackFlow 累计攻击流量
+     * @param integer $AttackFlow 累计攻击流量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AttackPacketNum 累计攻击包量
+     * @param integer $AttackPacketNum 累计攻击包量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

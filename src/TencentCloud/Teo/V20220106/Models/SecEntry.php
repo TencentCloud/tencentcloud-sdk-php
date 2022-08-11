@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全数据Entry返回值
  *
- * @method string getKey() 获取Entry的Key
+ * @method string getKey() 获取查询维度值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKey(string $Key) 设置Entry的Key
+ * @method void setKey(string $Key) 设置查询维度值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getValue() 获取Entry的Value
+ * @method array getValue() 获取查询维度下详细数据。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(array $Value) 设置Entry的Value
+ * @method void setValue(array $Value) 设置查询维度下详细数据。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecEntry extends AbstractModel
 {
     /**
-     * @var string Entry的Key
+     * @var string 查询维度值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
-     * @var array Entry的Value
+     * @var array 查询维度下详细数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @param string $Key Entry的Key
+     * @param string $Key 查询维度值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Value Entry的Value
+     * @param array $Value 查询维度下详细数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

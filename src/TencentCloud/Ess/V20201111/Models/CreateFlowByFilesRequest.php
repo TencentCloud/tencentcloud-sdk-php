@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  * @method string getFlowName() 获取签署流程名称,最大长度200个字符
  * @method void setFlowName(string $FlowName) 设置签署流程名称,最大长度200个字符
- * @method array getApprovers() 获取签署参与者信息
- * @method void setApprovers(array $Approvers) 设置签署参与者信息
+ * @method array getApprovers() 获取签署参与者信息，最大限制50方
+ * @method void setApprovers(array $Approvers) 设置签署参与者信息，最大限制50方
  * @method array getFileIds() 获取签署pdf文件的资源编号列表，通过UploadFiles接口获取
  * @method void setFileIds(array $FileIds) 设置签署pdf文件的资源编号列表，通过UploadFiles接口获取
  * @method string getFlowType() 获取签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
@@ -56,6 +56,14 @@ false：有序签
 注：默认为false（有序签）
  * @method string getCustomShowMap() 获取合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method void setCustomShowMap(string $CustomShowMap) 设置合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+ * @method boolean getNeedSignReview() 获取发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+ * @method void setNeedSignReview(boolean $NeedSignReview) 设置发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
  * @method Agent getAgent() 获取应用号信息
  * @method void setAgent(Agent $Agent) 设置应用号信息
  */
@@ -72,7 +80,7 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $FlowName;
 
     /**
-     * @var array 签署参与者信息
+     * @var array 签署参与者信息，最大限制50方
      */
     public $Approvers;
 
@@ -128,6 +136,14 @@ false：有序签
     public $CustomShowMap;
 
     /**
+     * @var boolean 发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+     */
+    public $NeedSignReview;
+
+    /**
      * @var Agent 应用号信息
      */
     public $Agent;
@@ -135,7 +151,7 @@ false：有序签
     /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $FlowName 签署流程名称,最大长度200个字符
-     * @param array $Approvers 签署参与者信息
+     * @param array $Approvers 签署参与者信息，最大限制50方
      * @param array $FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取
      * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      * @param array $Components 经办人内容控件配置
@@ -151,6 +167,10 @@ true：无序签
 false：有序签
 注：默认为false（有序签）
      * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     * @param boolean $NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
      * @param Agent $Agent 应用号信息
      */
     function __construct()
@@ -228,6 +248,10 @@ false：有序签
 
         if (array_key_exists("CustomShowMap",$param) and $param["CustomShowMap"] !== null) {
             $this->CustomShowMap = $param["CustomShowMap"];
+        }
+
+        if (array_key_exists("NeedSignReview",$param) and $param["NeedSignReview"] !== null) {
+            $this->NeedSignReview = $param["NeedSignReview"];
         }
 
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {

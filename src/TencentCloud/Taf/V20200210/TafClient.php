@@ -25,9 +25,6 @@ use TencentCloud\Taf\V20200210\Models as Models;
 /**
  * @method Models\DetectFraudKOLResponse DetectFraudKOL(Models\DetectFraudKOLRequest $req) 流量反欺诈-KOL欺诈识别
  * @method Models\RecognizeCustomizedAudienceResponse RecognizeCustomizedAudience(Models\RecognizeCustomizedAudienceRequest $req) 流量反欺诈-流量验准定制版
- * @method Models\RecognizeEffectiveFlowResponse RecognizeEffectiveFlow(Models\RecognizeEffectiveFlowRequest $req) 该服务已不再对外提供能力
-
-筛选敏感易骚扰人群
  * @method Models\RecognizePreciseTargetAudienceResponse RecognizePreciseTargetAudience(Models\RecognizePreciseTargetAudienceRequest $req) 流量反欺诈-流量验准高级版
  * @method Models\RecognizeTargetAudienceResponse RecognizeTargetAudience(Models\RecognizeTargetAudienceRequest $req) 流量反欺诈-流量验准
  * @method Models\SendTrafficSecuritySmsMessageResponse SendTrafficSecuritySmsMessage(Models\SendTrafficSecuritySmsMessageRequest $req) 流量安选产品，短信发送接口

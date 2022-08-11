@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Taf\V20200210\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 接口入参
+ * GetCustomizationList请求参数结构体
  *
-
+ * @method integer getBizId() 获取应用 ID，登录控制台创建应用得到的AppID
+ * @method void setBizId(integer $BizId) 设置应用 ID，登录控制台创建应用得到的AppID
  */
-class InputRecognizeEffectiveFlow extends AbstractModel
+class GetCustomizationListRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 应用 ID，登录控制台创建应用得到的AppID
+     */
+    public $BizId;
 
     /**
-
+     * @param integer $BizId 应用 ID，登录控制台创建应用得到的AppID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class InputRecognizeEffectiveFlow extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
+            $this->BizId = $param["BizId"];
+        }
     }
 }

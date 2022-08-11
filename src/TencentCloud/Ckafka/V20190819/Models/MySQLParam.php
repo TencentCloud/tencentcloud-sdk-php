@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicReplacement(string $TopicReplacement) 设置TopicRegex的引用组，指定$1、$2等
  * @method string getKeyColumns() 获取格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
  * @method void setKeyColumns(string $KeyColumns) 设置格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+ * @method boolean getDropInvalidMessage() 获取Mysql 是否抛弃解析失败的消息，默认为true
+ * @method void setDropInvalidMessage(boolean $DropInvalidMessage) 设置Mysql 是否抛弃解析失败的消息，默认为true
+ * @method DropCls getDropCls() 获取当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+ * @method void setDropCls(DropCls $DropCls) 设置当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
  */
 class MySQLParam extends AbstractModel
 {
@@ -136,6 +140,16 @@ class MySQLParam extends AbstractModel
     public $KeyColumns;
 
     /**
+     * @var boolean Mysql 是否抛弃解析失败的消息，默认为true
+     */
+    public $DropInvalidMessage;
+
+    /**
+     * @var DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+     */
+    public $DropCls;
+
+    /**
      * @param string $Database MySQL的数据库名称，"*"为全数据库
      * @param string $Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
      * @param string $Resource 该MySQL在连接管理内的Id
@@ -152,6 +166,8 @@ class MySQLParam extends AbstractModel
      * @param string $TopicRegex 事件路由到特定主题的正则表达式，默认为(.*)
      * @param string $TopicReplacement TopicRegex的引用组，指定$1、$2等
      * @param string $KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     * @param boolean $DropInvalidMessage Mysql 是否抛弃解析失败的消息，默认为true
+     * @param DropCls $DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
      */
     function __construct()
     {
@@ -233,6 +249,15 @@ class MySQLParam extends AbstractModel
 
         if (array_key_exists("KeyColumns",$param) and $param["KeyColumns"] !== null) {
             $this->KeyColumns = $param["KeyColumns"];
+        }
+
+        if (array_key_exists("DropInvalidMessage",$param) and $param["DropInvalidMessage"] !== null) {
+            $this->DropInvalidMessage = $param["DropInvalidMessage"];
+        }
+
+        if (array_key_exists("DropCls",$param) and $param["DropCls"] !== null) {
+            $this->DropCls = new DropCls();
+            $this->DropCls->deserialize($param["DropCls"]);
         }
     }
 }

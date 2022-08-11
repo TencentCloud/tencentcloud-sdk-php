@@ -20,66 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBotLog请求参数结构体
  *
- * @method string getStartTime() 获取起始时间
- * @method void setStartTime(string $StartTime) 设置起始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method integer getPageSize() 获取每页条数
- * @method void setPageSize(integer $PageSize) 设置每页条数
- * @method integer getPageNo() 获取当前页
- * @method void setPageNo(integer $PageNo) 设置当前页
- * @method array getZoneIds() 获取站点集合
- * @method void setZoneIds(array $ZoneIds) 设置站点集合
- * @method array getDomains() 获取域名集合
- * @method void setDomains(array $Domains) 设置域名集合
- * @method array getQueryCondition() 获取查询条件
- * @method void setQueryCondition(array $QueryCondition) 设置查询条件
+ * @method string getStartTime() 获取起始时间。
+ * @method void setStartTime(string $StartTime) 设置起始时间。
+ * @method string getEndTime() 获取结束时间。
+ * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method integer getPageSize() 获取分页拉取的最大返回结果数。最大值：1000。
+ * @method void setPageSize(integer $PageSize) 设置分页拉取的最大返回结果数。最大值：1000。
+ * @method integer getPageNo() 获取分页拉取的起始页号。最小值：1。
+ * @method void setPageNo(integer $PageNo) 设置分页拉取的起始页号。最小值：1。
+ * @method array getZoneIds() 获取站点集合，不填默认查询所有站点。
+ * @method void setZoneIds(array $ZoneIds) 设置站点集合，不填默认查询所有站点。
+ * @method array getDomains() 获取域名集合，不填默认查询所有子域名。
+ * @method void setDomains(array $Domains) 设置域名集合，不填默认查询所有子域名。
+ * @method array getQueryCondition() 获取筛选条件，取值有：
+<li>action ：执行动作（处置方式）；</li>
+<li>sipCountryCode ：ip所在国家 ；</li>
+<li>attackIp ：攻击ip ；</li>
+<li>ruleId ：规则id ；</li>
+<li>eventId ：事件id ；</li>
+<li>ua ：用户代理 ；</li>
+<li>requestMethod ：请求方法 ；</li>
+<li>uri ：统一资源标识符 。</li>
+ * @method void setQueryCondition(array $QueryCondition) 设置筛选条件，取值有：
+<li>action ：执行动作（处置方式）；</li>
+<li>sipCountryCode ：ip所在国家 ；</li>
+<li>attackIp ：攻击ip ；</li>
+<li>ruleId ：规则id ；</li>
+<li>eventId ：事件id ；</li>
+<li>ua ：用户代理 ；</li>
+<li>requestMethod ：请求方法 ；</li>
+<li>uri ：统一资源标识符 。</li>
  */
 class DescribeBotLogRequest extends AbstractModel
 {
     /**
-     * @var string 起始时间
+     * @var string 起始时间。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间。
      */
     public $EndTime;
 
     /**
-     * @var integer 每页条数
+     * @var integer 分页拉取的最大返回结果数。最大值：1000。
      */
     public $PageSize;
 
     /**
-     * @var integer 当前页
+     * @var integer 分页拉取的起始页号。最小值：1。
      */
     public $PageNo;
 
     /**
-     * @var array 站点集合
+     * @var array 站点集合，不填默认查询所有站点。
      */
     public $ZoneIds;
 
     /**
-     * @var array 域名集合
+     * @var array 域名集合，不填默认查询所有子域名。
      */
     public $Domains;
 
     /**
-     * @var array 查询条件
+     * @var array 筛选条件，取值有：
+<li>action ：执行动作（处置方式）；</li>
+<li>sipCountryCode ：ip所在国家 ；</li>
+<li>attackIp ：攻击ip ；</li>
+<li>ruleId ：规则id ；</li>
+<li>eventId ：事件id ；</li>
+<li>ua ：用户代理 ；</li>
+<li>requestMethod ：请求方法 ；</li>
+<li>uri ：统一资源标识符 。</li>
      */
     public $QueryCondition;
 
     /**
-     * @param string $StartTime 起始时间
-     * @param string $EndTime 结束时间
-     * @param integer $PageSize 每页条数
-     * @param integer $PageNo 当前页
-     * @param array $ZoneIds 站点集合
-     * @param array $Domains 域名集合
-     * @param array $QueryCondition 查询条件
+     * @param string $StartTime 起始时间。
+     * @param string $EndTime 结束时间。
+     * @param integer $PageSize 分页拉取的最大返回结果数。最大值：1000。
+     * @param integer $PageNo 分页拉取的起始页号。最小值：1。
+     * @param array $ZoneIds 站点集合，不填默认查询所有站点。
+     * @param array $Domains 域名集合，不填默认查询所有子域名。
+     * @param array $QueryCondition 筛选条件，取值有：
+<li>action ：执行动作（处置方式）；</li>
+<li>sipCountryCode ：ip所在国家 ；</li>
+<li>attackIp ：攻击ip ；</li>
+<li>ruleId ：规则id ；</li>
+<li>eventId ：事件id ；</li>
+<li>ua ：用户代理 ；</li>
+<li>requestMethod ：请求方法 ；</li>
+<li>uri ：统一资源标识符 。</li>
      */
     function __construct()
     {

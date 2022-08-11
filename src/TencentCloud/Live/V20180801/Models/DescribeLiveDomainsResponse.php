@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateLimitCount(integer $CreateLimitCount) 设置可继续添加域名数量。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPlayTypeCount() 获取启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPlayTypeCount(array $PlayTypeCount) 设置启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,6 +54,12 @@ class DescribeLiveDomainsResponse extends AbstractModel
     public $CreateLimitCount;
 
     /**
+     * @var array 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PlayTypeCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -58,6 +68,8 @@ class DescribeLiveDomainsResponse extends AbstractModel
      * @param integer $AllCount 总记录数。
      * @param array $DomainList 域名详细信息列表。
      * @param integer $CreateLimitCount 可继续添加域名数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PlayTypeCount 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -89,6 +101,10 @@ class DescribeLiveDomainsResponse extends AbstractModel
 
         if (array_key_exists("CreateLimitCount",$param) and $param["CreateLimitCount"] !== null) {
             $this->CreateLimitCount = $param["CreateLimitCount"];
+        }
+
+        if (array_key_exists("PlayTypeCount",$param) and $param["PlayTypeCount"] !== null) {
+            $this->PlayTypeCount = $param["PlayTypeCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

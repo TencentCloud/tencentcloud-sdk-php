@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tbaas\V20180416\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * BlockByNumberHandler返回参数结构体
+ * GetCustomizationList返回参数结构体
  *
- * @method string getBlockJson() 获取返回区块json字符串
- * @method void setBlockJson(string $BlockJson) 设置返回区块json字符串
+ * @method array getCustomizationConfigs() 获取语音消息转文本自学习模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomizationConfigs(array $CustomizationConfigs) 设置语音消息转文本自学习模型配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class BlockByNumberHandlerResponse extends AbstractModel
+class GetCustomizationListResponse extends AbstractModel
 {
     /**
-     * @var string 返回区块json字符串
+     * @var array 语音消息转文本自学习模型配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $BlockJson;
+    public $CustomizationConfigs;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +41,8 @@ class BlockByNumberHandlerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BlockJson 返回区块json字符串
+     * @param array $CustomizationConfigs 语音消息转文本自学习模型配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +58,13 @@ class BlockByNumberHandlerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BlockJson",$param) and $param["BlockJson"] !== null) {
-            $this->BlockJson = $param["BlockJson"];
+        if (array_key_exists("CustomizationConfigs",$param) and $param["CustomizationConfigs"] !== null) {
+            $this->CustomizationConfigs = [];
+            foreach ($param["CustomizationConfigs"] as $key => $value){
+                $obj = new CustomizationConfigs();
+                $obj->deserialize($value);
+                array_push($this->CustomizationConfigs, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

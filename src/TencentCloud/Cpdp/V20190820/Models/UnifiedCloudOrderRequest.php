@@ -226,6 +226,8 @@ ORDER_RECEIVE_MODE_COMMON - 普通支付
 ORDER_RECEIVE_MODE_COMBINE - 合单支付
 ORDER_RECEIVE_MODE_V_COMBINE - 虚拟合单支付
 若不传入该字段，则会根据是否传入子单来判断是 普通支付 还是 合单支付
+ * @method array getExternalUserInfoList() 获取渠道方用户信息列表
+ * @method void setExternalUserInfoList(array $ExternalUserInfoList) 设置渠道方用户信息列表
  */
 class UnifiedCloudOrderRequest extends AbstractModel
 {
@@ -485,6 +487,11 @@ ORDER_RECEIVE_MODE_V_COMBINE - 虚拟合单支付
     public $OrderReceiveMode;
 
     /**
+     * @var array 渠道方用户信息列表
+     */
+    public $ExternalUserInfoList;
+
+    /**
      * @param string $MidasAppId 米大师分配的支付主MidasAppId
      * @param string $UserId 用户ID
 长度不小于5位，仅支持字母和数字的组合，长度限制以具体接入渠道为准
@@ -588,6 +595,7 @@ ORDER_RECEIVE_MODE_COMMON - 普通支付
 ORDER_RECEIVE_MODE_COMBINE - 合单支付
 ORDER_RECEIVE_MODE_V_COMBINE - 虚拟合单支付
 若不传入该字段，则会根据是否传入子单来判断是 普通支付 还是 合单支付
+     * @param array $ExternalUserInfoList 渠道方用户信息列表
      */
     function __construct()
     {
@@ -771,6 +779,15 @@ ORDER_RECEIVE_MODE_V_COMBINE - 虚拟合单支付
 
         if (array_key_exists("OrderReceiveMode",$param) and $param["OrderReceiveMode"] !== null) {
             $this->OrderReceiveMode = $param["OrderReceiveMode"];
+        }
+
+        if (array_key_exists("ExternalUserInfoList",$param) and $param["ExternalUserInfoList"] !== null) {
+            $this->ExternalUserInfoList = [];
+            foreach ($param["ExternalUserInfoList"] as $key => $value){
+                $obj = new CloudExternalUserInfo();
+                $obj->deserialize($value);
+                array_push($this->ExternalUserInfoList, $obj);
+            }
         }
     }
 }

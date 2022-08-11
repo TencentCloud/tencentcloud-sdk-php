@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReserveRest(boolean $ReserveRest) 设置是否预约小休
  * @method boolean getReserveNotReady() 获取是否预约示忙
  * @method void setReserveNotReady(boolean $ReserveNotReady) 设置是否预约示忙
+ * @method integer getUseMobileAccept() 获取手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
+ * @method void setUseMobileAccept(integer $UseMobileAccept) 设置手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
+ * @method boolean getUseMobileCallOut() 获取手机外呼开关
+ * @method void setUseMobileCallOut(boolean $UseMobileCallOut) 设置手机外呼开关
  */
 class StaffStatusMetrics extends AbstractModel
 {
@@ -108,6 +112,16 @@ class StaffStatusMetrics extends AbstractModel
     public $ReserveNotReady;
 
     /**
+     * @var integer 手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
+     */
+    public $UseMobileAccept;
+
+    /**
+     * @var boolean 手机外呼开关
+     */
+    public $UseMobileCallOut;
+
+    /**
      * @param string $Email 坐席邮箱
      * @param string $Status 坐席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线
      * @param StaffStatusExtra $StatusExtra 坐席状态补充信息
@@ -120,6 +134,8 @@ class StaffStatusMetrics extends AbstractModel
      * @param string $Reason 小休原因
      * @param boolean $ReserveRest 是否预约小休
      * @param boolean $ReserveNotReady 是否预约示忙
+     * @param integer $UseMobileAccept 手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
+     * @param boolean $UseMobileCallOut 手机外呼开关
      */
     function __construct()
     {
@@ -181,6 +197,14 @@ class StaffStatusMetrics extends AbstractModel
 
         if (array_key_exists("ReserveNotReady",$param) and $param["ReserveNotReady"] !== null) {
             $this->ReserveNotReady = $param["ReserveNotReady"];
+        }
+
+        if (array_key_exists("UseMobileAccept",$param) and $param["UseMobileAccept"] !== null) {
+            $this->UseMobileAccept = $param["UseMobileAccept"];
+        }
+
+        if (array_key_exists("UseMobileCallOut",$param) and $param["UseMobileCallOut"] !== null) {
+            $this->UseMobileCallOut = $param["UseMobileCallOut"];
         }
     }
 }

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Taf\V20200210\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RecognizeEffectiveFlow请求参数结构体
+ * SwitchProxy请求参数结构体
  *
- * @method InputRecognizeEffectiveFlow getBusinessSecurityData() 获取业务入参
- * @method void setBusinessSecurityData(InputRecognizeEffectiveFlow $BusinessSecurityData) 设置业务入参
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getProxyID() 获取实例ProxyID
+ * @method void setProxyID(string $ProxyID) 设置实例ProxyID
  */
-class RecognizeEffectiveFlowRequest extends AbstractModel
+class SwitchProxyRequest extends AbstractModel
 {
     /**
-     * @var InputRecognizeEffectiveFlow 业务入参
+     * @var string 实例ID
      */
-    public $BusinessSecurityData;
+    public $InstanceId;
 
     /**
-     * @param InputRecognizeEffectiveFlow $BusinessSecurityData 业务入参
+     * @var string 实例ProxyID
+     */
+    public $ProxyID;
+
+    /**
+     * @param string $InstanceId 实例ID
+     * @param string $ProxyID 实例ProxyID
      */
     function __construct()
     {
@@ -46,9 +54,12 @@ class RecognizeEffectiveFlowRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BusinessSecurityData",$param) and $param["BusinessSecurityData"] !== null) {
-            $this->BusinessSecurityData = new InputRecognizeEffectiveFlow();
-            $this->BusinessSecurityData->deserialize($param["BusinessSecurityData"]);
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ProxyID",$param) and $param["ProxyID"] !== null) {
+            $this->ProxyID = $param["ProxyID"];
         }
     }
 }

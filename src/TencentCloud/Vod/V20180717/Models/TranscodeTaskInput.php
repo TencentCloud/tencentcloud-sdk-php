@@ -26,18 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
  * @method TraceWatermarkInput getTraceWatermark() 获取溯源水印。
  * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) 设置溯源水印。
- * @method array getHeadTailSet() 获取片头片尾列表，支持多片头片尾，最大可支持 10 个。
- * @method void setHeadTailSet(array $HeadTailSet) 设置片头片尾列表，支持多片头片尾，最大可支持 10 个。
  * @method array getMosaicSet() 获取马赛克列表，最大可支持 10 张。
  * @method void setMosaicSet(array $MosaicSet) 设置马赛克列表，最大可支持 10 张。
- * @method float getEndTimeOffset() 获取转码后视频的终止时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
- * @method void setEndTimeOffset(float $EndTimeOffset) 设置转码后视频的终止时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+ * @method array getHeadTailSet() 获取片头片尾列表，支持多片头片尾，最大可支持 10 个。
+ * @method void setHeadTailSet(array $HeadTailSet) 设置片头片尾列表，支持多片头片尾，最大可支持 10 个。
  * @method float getStartTimeOffset() 获取转码后的视频的起始时间偏移，单位：秒。
 <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
@@ -46,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
 <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
 <li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+ * @method float getEndTimeOffset() 获取转码后视频的终止时间偏移，单位：秒。
+<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+ * @method void setEndTimeOffset(float $EndTimeOffset) 设置转码后视频的终止时间偏移，单位：秒。
+<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
  */
 class TranscodeTaskInput extends AbstractModel
 {
@@ -65,22 +65,14 @@ class TranscodeTaskInput extends AbstractModel
     public $TraceWatermark;
 
     /**
-     * @var array 片头片尾列表，支持多片头片尾，最大可支持 10 个。
-     */
-    public $HeadTailSet;
-
-    /**
      * @var array 马赛克列表，最大可支持 10 张。
      */
     public $MosaicSet;
 
     /**
-     * @var float 转码后视频的终止时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+     * @var array 片头片尾列表，支持多片头片尾，最大可支持 10 个。
      */
-    public $EndTimeOffset;
+    public $HeadTailSet;
 
     /**
      * @var float 转码后的视频的起始时间偏移，单位：秒。
@@ -91,19 +83,27 @@ class TranscodeTaskInput extends AbstractModel
     public $StartTimeOffset;
 
     /**
-     * @param integer $Definition 视频转码模板 ID。
-     * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-     * @param TraceWatermarkInput $TraceWatermark 溯源水印。
-     * @param array $HeadTailSet 片头片尾列表，支持多片头片尾，最大可支持 10 个。
-     * @param array $MosaicSet 马赛克列表，最大可支持 10 张。
-     * @param float $EndTimeOffset 转码后视频的终止时间偏移，单位：秒。
+     * @var float 转码后视频的终止时间偏移，单位：秒。
 <li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
 <li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+     */
+    public $EndTimeOffset;
+
+    /**
+     * @param integer $Definition 视频转码模板 ID。
+     * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * @param TraceWatermarkInput $TraceWatermark 溯源水印。
+     * @param array $MosaicSet 马赛克列表，最大可支持 10 张。
+     * @param array $HeadTailSet 片头片尾列表，支持多片头片尾，最大可支持 10 个。
      * @param float $StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
 <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
 <li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+     * @param float $EndTimeOffset 转码后视频的终止时间偏移，单位：秒。
+<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
+<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
+<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
      */
     function __construct()
     {
@@ -136,15 +136,6 @@ class TranscodeTaskInput extends AbstractModel
             $this->TraceWatermark->deserialize($param["TraceWatermark"]);
         }
 
-        if (array_key_exists("HeadTailSet",$param) and $param["HeadTailSet"] !== null) {
-            $this->HeadTailSet = [];
-            foreach ($param["HeadTailSet"] as $key => $value){
-                $obj = new HeadTailTaskInput();
-                $obj->deserialize($value);
-                array_push($this->HeadTailSet, $obj);
-            }
-        }
-
         if (array_key_exists("MosaicSet",$param) and $param["MosaicSet"] !== null) {
             $this->MosaicSet = [];
             foreach ($param["MosaicSet"] as $key => $value){
@@ -154,12 +145,21 @@ class TranscodeTaskInput extends AbstractModel
             }
         }
 
-        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
-            $this->EndTimeOffset = $param["EndTimeOffset"];
+        if (array_key_exists("HeadTailSet",$param) and $param["HeadTailSet"] !== null) {
+            $this->HeadTailSet = [];
+            foreach ($param["HeadTailSet"] as $key => $value){
+                $obj = new HeadTailTaskInput();
+                $obj->deserialize($value);
+                array_push($this->HeadTailSet, $obj);
+            }
         }
 
         if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
             $this->StartTimeOffset = $param["StartTimeOffset"];
+        }
+
+        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
+            $this->EndTimeOffset = $param["EndTimeOffset"];
         }
     }
 }

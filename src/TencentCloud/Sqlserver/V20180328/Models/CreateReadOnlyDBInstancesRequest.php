@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID数组，目前单个订单只能使用一张
  * @method array getResourceTags() 获取新建实例绑定的标签集合
  * @method void setResourceTags(array $ResourceTags) 设置新建实例绑定的标签集合
+ * @method string getCollation() 获取系统字符集排序规则，默认：Chinese_PRC_CI_AS
+ * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
+ * @method string getTimeZone() 获取系统时区，默认：China Standard Time
+ * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
  */
 class CreateReadOnlyDBInstancesRequest extends AbstractModel
 {
@@ -164,6 +168,16 @@ class CreateReadOnlyDBInstancesRequest extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     */
+    public $Collation;
+
+    /**
+     * @var string 系统时区，默认：China Standard Time
+     */
+    public $TimeZone;
+
+    /**
      * @param string $InstanceId 主实例ID，格式如：mssql-3l3fgqn7
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $ReadOnlyGroupType 只读组类型选项，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货，所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
@@ -184,6 +198,8 @@ class CreateReadOnlyDBInstancesRequest extends AbstractModel
      * @param integer $AutoVoucher 是否自动使用代金券；1 - 是，0 - 否，默认不使用
      * @param array $VoucherIds 代金券ID数组，目前单个订单只能使用一张
      * @param array $ResourceTags 新建实例绑定的标签集合
+     * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * @param string $TimeZone 系统时区，默认：China Standard Time
      */
     function __construct()
     {
@@ -281,6 +297,14 @@ class CreateReadOnlyDBInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("Collation",$param) and $param["Collation"] !== null) {
+            $this->Collation = $param["Collation"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

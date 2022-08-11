@@ -20,82 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDosAttackData请求参数结构体
  *
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method array getMetricNames() 获取统计指标列表
- * @method void setMetricNames(array $MetricNames) 设置统计指标列表
- * @method array getZoneIds() 获取站点id列表
- * @method void setZoneIds(array $ZoneIds) 设置站点id列表
- * @method array getPolicyIds() 获取ddos策略组id列表
- * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组id列表
- * @method integer getPort() 获取端口号
- * @method void setPort(integer $Port) 设置端口号
- * @method string getProtocolType() 获取协议类型,tcp,udp,all
- * @method void setProtocolType(string $ProtocolType) 设置协议类型,tcp,udp,all
- * @method string getAttackType() 获取攻击类型,flood,icmpFlood......,all
- * @method void setAttackType(string $AttackType) 设置攻击类型,flood,icmpFlood......,all
- * @method string getInterval() 获取查询时间粒度，可选{min,5min,hour,day}
- * @method void setInterval(string $Interval) 设置查询时间粒度，可选{min,5min,hour,day}
+ * @method string getStartTime() 获取开始时间。
+ * @method void setStartTime(string $StartTime) 设置开始时间。
+ * @method string getEndTime() 获取结束时间。
+ * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method array getMetricNames() 获取统计指标列表，取值有：
+<li>ddos_attackMaxBandwidth ：攻击带宽峰值 ；</li>
+<li>ddos_attackMaxPackageRate：攻击包速率峰值  ；</li>
+<li>ddos_attackBandwidth ：攻击带宽曲线 ；</li>
+<li>ddos_attackPackageRate ：攻击包速率曲线 。</li>
+ * @method void setMetricNames(array $MetricNames) 设置统计指标列表，取值有：
+<li>ddos_attackMaxBandwidth ：攻击带宽峰值 ；</li>
+<li>ddos_attackMaxPackageRate：攻击包速率峰值  ；</li>
+<li>ddos_attackBandwidth ：攻击带宽曲线 ；</li>
+<li>ddos_attackPackageRate ：攻击包速率曲线 。</li>
+ * @method array getZoneIds() 获取站点id列表，不填默认选择全部站点。
+ * @method void setZoneIds(array $ZoneIds) 设置站点id列表，不填默认选择全部站点。
+ * @method array getPolicyIds() 获取ddos策略组id列表，不填默认选择全部策略id。
+ * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组id列表，不填默认选择全部策略id。
+ * @method integer getPort() 获取端口号。
+ * @method void setPort(integer $Port) 设置端口号。
+ * @method string getProtocolType() 获取协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+ * @method void setProtocolType(string $ProtocolType) 设置协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+ * @method string getAttackType() 获取攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
+ * @method void setAttackType(string $AttackType) 设置攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
+ * @method string getInterval() 获取查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+ * @method void setInterval(string $Interval) 设置查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
  */
 class DescribeDDosAttackDataRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string 开始时间。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间。
      */
     public $EndTime;
 
     /**
-     * @var array 统计指标列表
+     * @var array 统计指标列表，取值有：
+<li>ddos_attackMaxBandwidth ：攻击带宽峰值 ；</li>
+<li>ddos_attackMaxPackageRate：攻击包速率峰值  ；</li>
+<li>ddos_attackBandwidth ：攻击带宽曲线 ；</li>
+<li>ddos_attackPackageRate ：攻击包速率曲线 。</li>
      */
     public $MetricNames;
 
     /**
-     * @var array 站点id列表
+     * @var array 站点id列表，不填默认选择全部站点。
      */
     public $ZoneIds;
 
     /**
-     * @var array ddos策略组id列表
+     * @var array ddos策略组id列表，不填默认选择全部策略id。
      */
     public $PolicyIds;
 
     /**
-     * @var integer 端口号
+     * @var integer 端口号。
      */
     public $Port;
 
     /**
-     * @var string 协议类型,tcp,udp,all
+     * @var string 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
      */
     public $ProtocolType;
 
     /**
-     * @var string 攻击类型,flood,icmpFlood......,all
+     * @var string 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
      */
     public $AttackType;
 
     /**
-     * @var string 查询时间粒度，可选{min,5min,hour,day}
+     * @var string 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public $Interval;
 
     /**
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param array $MetricNames 统计指标列表
-     * @param array $ZoneIds 站点id列表
-     * @param array $PolicyIds ddos策略组id列表
-     * @param integer $Port 端口号
-     * @param string $ProtocolType 协议类型,tcp,udp,all
-     * @param string $AttackType 攻击类型,flood,icmpFlood......,all
-     * @param string $Interval 查询时间粒度，可选{min,5min,hour,day}
+     * @param string $StartTime 开始时间。
+     * @param string $EndTime 结束时间。
+     * @param array $MetricNames 统计指标列表，取值有：
+<li>ddos_attackMaxBandwidth ：攻击带宽峰值 ；</li>
+<li>ddos_attackMaxPackageRate：攻击包速率峰值  ；</li>
+<li>ddos_attackBandwidth ：攻击带宽曲线 ；</li>
+<li>ddos_attackPackageRate ：攻击包速率曲线 。</li>
+     * @param array $ZoneIds 站点id列表，不填默认选择全部站点。
+     * @param array $PolicyIds ddos策略组id列表，不填默认选择全部策略id。
+     * @param integer $Port 端口号。
+     * @param string $ProtocolType 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+     * @param string $AttackType 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
+     * @param string $Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     function __construct()
     {

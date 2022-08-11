@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 备份文件存储信息
+ * DescribeEnvironment请求参数结构体
  *
- * @method string getReplicateSetId() 获取备份文件所属的副本集/分片ID
- * @method void setReplicateSetId(string $ReplicateSetId) 设置备份文件所属的副本集/分片ID
- * @method string getFile() 获取备份文件保存路径
- * @method void setFile(string $File) 设置备份文件保存路径
+ * @method string getEnvironmentId() 获取命名空间id
+ * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间id
+ * @method integer getSourceChannel() 获取来源Channel
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源Channel
  */
-class BackupFile extends AbstractModel
+class DescribeEnvironmentRequest extends AbstractModel
 {
     /**
-     * @var string 备份文件所属的副本集/分片ID
+     * @var string 命名空间id
      */
-    public $ReplicateSetId;
+    public $EnvironmentId;
 
     /**
-     * @var string 备份文件保存路径
+     * @var integer 来源Channel
      */
-    public $File;
+    public $SourceChannel;
 
     /**
-     * @param string $ReplicateSetId 备份文件所属的副本集/分片ID
-     * @param string $File 备份文件保存路径
+     * @param string $EnvironmentId 命名空间id
+     * @param integer $SourceChannel 来源Channel
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class BackupFile extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReplicateSetId",$param) and $param["ReplicateSetId"] !== null) {
-            $this->ReplicateSetId = $param["ReplicateSetId"];
+        if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
+            $this->EnvironmentId = $param["EnvironmentId"];
         }
 
-        if (array_key_exists("File",$param) and $param["File"] !== null) {
-            $this->File = $param["File"];
+        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
+            $this->SourceChannel = $param["SourceChannel"];
         }
     }
 }

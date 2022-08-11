@@ -20,29 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWebManagedRulesLog返回参数结构体
  *
- * @method WebLogData getData() 获取web攻击日志data
- * @method void setData(WebLogData $Data) 设置web攻击日志data
- * @method integer getStatus() 获取状态，1:失败，0:失败
- * @method void setStatus(integer $Status) 设置状态，1:失败，0:失败
- * @method string getMsg() 获取返回信息
- * @method void setMsg(string $Msg) 设置返回信息
+ * @method WebLogData getData() 获取web攻击日志数据内容。
+ * @method void setData(WebLogData $Data) 设置web攻击日志数据内容。
+ * @method integer getStatus() 获取请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+ * @method void setStatus(integer $Status) 设置请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+ * @method string getMsg() 获取请求响应信息。
+ * @method void setMsg(string $Msg) 设置请求响应信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeWebManagedRulesLogResponse extends AbstractModel
 {
     /**
-     * @var WebLogData web攻击日志data
+     * @var WebLogData web攻击日志数据内容。
      */
     public $Data;
 
     /**
-     * @var integer 状态，1:失败，0:失败
+     * @var integer 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public $Status;
 
     /**
-     * @var string 返回信息
+     * @var string 请求响应信息。
      */
     public $Msg;
 
@@ -52,9 +58,11 @@ class DescribeWebManagedRulesLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param WebLogData $Data web攻击日志data
-     * @param integer $Status 状态，1:失败，0:失败
-     * @param string $Msg 返回信息
+     * @param WebLogData $Data web攻击日志数据内容。
+     * @param integer $Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+     * @param string $Msg 请求响应信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,29 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDosMajorAttackEvent返回参数结构体
  *
- * @method DDosMajorAttackEventData getData() 获取DDos查询主攻击事件
- * @method void setData(DDosMajorAttackEventData $Data) 设置DDos查询主攻击事件
- * @method integer getStatus() 获取状态，1:失败，0:成功
- * @method void setStatus(integer $Status) 设置状态，1:失败，0:成功
- * @method string getMsg() 获取返回消息
- * @method void setMsg(string $Msg) 设置返回消息
+ * @method DDosMajorAttackEventData getData() 获取DDos查询主攻击事件。
+ * @method void setData(DDosMajorAttackEventData $Data) 设置DDos查询主攻击事件。
+ * @method integer getStatus() 获取请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+ * @method void setStatus(integer $Status) 设置请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+ * @method string getMsg() 获取请求响应消息。
+ * @method void setMsg(string $Msg) 设置请求响应消息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDDosMajorAttackEventResponse extends AbstractModel
 {
     /**
-     * @var DDosMajorAttackEventData DDos查询主攻击事件
+     * @var DDosMajorAttackEventData DDos查询主攻击事件。
      */
     public $Data;
 
     /**
-     * @var integer 状态，1:失败，0:成功
+     * @var integer 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public $Status;
 
     /**
-     * @var string 返回消息
+     * @var string 请求响应消息。
      */
     public $Msg;
 
@@ -52,9 +58,11 @@ class DescribeDDosMajorAttackEventResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DDosMajorAttackEventData $Data DDos查询主攻击事件
-     * @param integer $Status 状态，1:失败，0:成功
-     * @param string $Msg 返回消息
+     * @param DDosMajorAttackEventData $Data DDos查询主攻击事件。
+     * @param integer $Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+     * @param string $Msg 请求响应消息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBackupAccess返回参数结构体
+ * DeleteCustomization返回参数结构体
  *
- * @method string getRegion() 获取实例所属地域
- * @method void setRegion(string $Region) 设置实例所属地域
- * @method string getBucket() 获取备份文件所在存储桶
- * @method void setBucket(string $Bucket) 设置备份文件所在存储桶
- * @method array getFiles() 获取备份文件的存储信息
- * @method void setFiles(array $Files) 设置备份文件的存储信息
+ * @method integer getErrorCode() 获取返回值。0为成功，非0为失败。
+ * @method void setErrorCode(integer $ErrorCode) 设置返回值。0为成功，非0为失败。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeBackupAccessResponse extends AbstractModel
+class DeleteCustomizationResponse extends AbstractModel
 {
     /**
-     * @var string 实例所属地域
+     * @var integer 返回值。0为成功，非0为失败。
      */
-    public $Region;
-
-    /**
-     * @var string 备份文件所在存储桶
-     */
-    public $Bucket;
-
-    /**
-     * @var array 备份文件的存储信息
-     */
-    public $Files;
+    public $ErrorCode;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class DescribeBackupAccessResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Region 实例所属地域
-     * @param string $Bucket 备份文件所在存储桶
-     * @param array $Files 备份文件的存储信息
+     * @param integer $ErrorCode 返回值。0为成功，非0为失败。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +54,8 @@ class DescribeBackupAccessResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
-        }
-
-        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
-            $this->Bucket = $param["Bucket"];
-        }
-
-        if (array_key_exists("Files",$param) and $param["Files"] !== null) {
-            $this->Files = [];
-            foreach ($param["Files"] as $key => $value){
-                $obj = new BackupFile();
-                $obj->deserialize($value);
-                array_push($this->Files, $obj);
-            }
+        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
+            $this->ErrorCode = $param["ErrorCode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

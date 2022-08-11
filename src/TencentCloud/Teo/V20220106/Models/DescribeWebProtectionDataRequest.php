@@ -20,130 +20,110 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWebProtectionData请求参数结构体
  *
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method array getMetricNames() 获取统计指标列表
- * @method void setMetricNames(array $MetricNames) 设置统计指标列表
- * @method array getZoneIds() 获取站点id列表
- * @method void setZoneIds(array $ZoneIds) 设置站点id列表
- * @method array getDomains() 获取子域名列表
- * @method void setDomains(array $Domains) 设置子域名列表
- * @method string getProtocolType() 获取协议类型
- * @method void setProtocolType(string $ProtocolType) 设置协议类型
- * @method string getAttackType() 获取"webshell" : Webshell检测防护
-"oa" : 常见OA漏洞防护
-"xss" : XSS跨站脚本攻击防护
-"xxe" : XXE攻击防护
-"webscan" : 扫描器攻击漏洞防护
-"cms" : 常见CMS漏洞防护
-"upload" : 恶意文件上传攻击防护
-"sql" : SQL注入攻击防护
-"cmd_inject": 命令/代码注入攻击防护
-"osc" : 开源组件漏洞防护
-"file_read" : 任意文件读取
-"ldap" : LDAP注入攻击防护
-"other" : 其它漏洞防护
-
-"all":"所有"
- * @method void setAttackType(string $AttackType) 设置"webshell" : Webshell检测防护
-"oa" : 常见OA漏洞防护
-"xss" : XSS跨站脚本攻击防护
-"xxe" : XXE攻击防护
-"webscan" : 扫描器攻击漏洞防护
-"cms" : 常见CMS漏洞防护
-"upload" : 恶意文件上传攻击防护
-"sql" : SQL注入攻击防护
-"cmd_inject": 命令/代码注入攻击防护
-"osc" : 开源组件漏洞防护
-"file_read" : 任意文件读取
-"ldap" : LDAP注入攻击防护
-"other" : 其它漏洞防护
-
-"all":"所有"
- * @method string getInterval() 获取查询时间粒度，可选{min,5min,hour,day}
- * @method void setInterval(string $Interval) 设置查询时间粒度，可选{min,5min,hour,day}
+ * @method string getStartTime() 获取开始时间，RFC3339格式。
+ * @method void setStartTime(string $StartTime) 设置开始时间，RFC3339格式。
+ * @method string getEndTime() 获取结束时间，RFC3339格式。
+ * @method void setEndTime(string $EndTime) 设置结束时间，RFC3339格式。
+ * @method array getMetricNames() 获取统计指标列表，取值有：
+<li>ccRate_interceptNum ：速率限制规则限制次数 ；</li>
+<li>ccAcl_interceptNum ：自定义规则拦截次数 。</li>
+ * @method void setMetricNames(array $MetricNames) 设置统计指标列表，取值有：
+<li>ccRate_interceptNum ：速率限制规则限制次数 ；</li>
+<li>ccAcl_interceptNum ：自定义规则拦截次数 。</li>
+ * @method array getZoneIds() 获取站点id列表，不填默认选择全部站点。
+ * @method void setZoneIds(array $ZoneIds) 设置站点id列表，不填默认选择全部站点。
+ * @method array getDomains() 获取子域名列表，不填默认选择全部子域名。
+ * @method void setDomains(array $Domains) 设置子域名列表，不填默认选择全部子域名。
+ * @method string getProtocolType() 获取该字段已废弃，请勿传。
+ * @method void setProtocolType(string $ProtocolType) 设置该字段已废弃，请勿传。
+ * @method string getAttackType() 获取该字段已废弃，请勿传。
+ * @method void setAttackType(string $AttackType) 设置该字段已废弃，请勿传。
+ * @method string getInterval() 获取查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+ * @method void setInterval(string $Interval) 设置查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+ * @method array getQueryCondition() 获取筛选条件，取值有：
+<li>action ：执行动作 。</li>
+ * @method void setQueryCondition(array $QueryCondition) 设置筛选条件，取值有：
+<li>action ：执行动作 。</li>
  */
 class DescribeWebProtectionDataRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string 开始时间，RFC3339格式。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间，RFC3339格式。
      */
     public $EndTime;
 
     /**
-     * @var array 统计指标列表
+     * @var array 统计指标列表，取值有：
+<li>ccRate_interceptNum ：速率限制规则限制次数 ；</li>
+<li>ccAcl_interceptNum ：自定义规则拦截次数 。</li>
      */
     public $MetricNames;
 
     /**
-     * @var array 站点id列表
+     * @var array 站点id列表，不填默认选择全部站点。
      */
     public $ZoneIds;
 
     /**
-     * @var array 子域名列表
+     * @var array 子域名列表，不填默认选择全部子域名。
      */
     public $Domains;
 
     /**
-     * @var string 协议类型
+     * @var string 该字段已废弃，请勿传。
      */
     public $ProtocolType;
 
     /**
-     * @var string "webshell" : Webshell检测防护
-"oa" : 常见OA漏洞防护
-"xss" : XSS跨站脚本攻击防护
-"xxe" : XXE攻击防护
-"webscan" : 扫描器攻击漏洞防护
-"cms" : 常见CMS漏洞防护
-"upload" : 恶意文件上传攻击防护
-"sql" : SQL注入攻击防护
-"cmd_inject": 命令/代码注入攻击防护
-"osc" : 开源组件漏洞防护
-"file_read" : 任意文件读取
-"ldap" : LDAP注入攻击防护
-"other" : 其它漏洞防护
-
-"all":"所有"
+     * @var string 该字段已废弃，请勿传。
      */
     public $AttackType;
 
     /**
-     * @var string 查询时间粒度，可选{min,5min,hour,day}
+     * @var string 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public $Interval;
 
     /**
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param array $MetricNames 统计指标列表
-     * @param array $ZoneIds 站点id列表
-     * @param array $Domains 子域名列表
-     * @param string $ProtocolType 协议类型
-     * @param string $AttackType "webshell" : Webshell检测防护
-"oa" : 常见OA漏洞防护
-"xss" : XSS跨站脚本攻击防护
-"xxe" : XXE攻击防护
-"webscan" : 扫描器攻击漏洞防护
-"cms" : 常见CMS漏洞防护
-"upload" : 恶意文件上传攻击防护
-"sql" : SQL注入攻击防护
-"cmd_inject": 命令/代码注入攻击防护
-"osc" : 开源组件漏洞防护
-"file_read" : 任意文件读取
-"ldap" : LDAP注入攻击防护
-"other" : 其它漏洞防护
+     * @var array 筛选条件，取值有：
+<li>action ：执行动作 。</li>
+     */
+    public $QueryCondition;
 
-"all":"所有"
-     * @param string $Interval 查询时间粒度，可选{min,5min,hour,day}
+    /**
+     * @param string $StartTime 开始时间，RFC3339格式。
+     * @param string $EndTime 结束时间，RFC3339格式。
+     * @param array $MetricNames 统计指标列表，取值有：
+<li>ccRate_interceptNum ：速率限制规则限制次数 ；</li>
+<li>ccAcl_interceptNum ：自定义规则拦截次数 。</li>
+     * @param array $ZoneIds 站点id列表，不填默认选择全部站点。
+     * @param array $Domains 子域名列表，不填默认选择全部子域名。
+     * @param string $ProtocolType 该字段已废弃，请勿传。
+     * @param string $AttackType 该字段已废弃，请勿传。
+     * @param string $Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     * @param array $QueryCondition 筛选条件，取值有：
+<li>action ：执行动作 。</li>
      */
     function __construct()
     {
@@ -188,6 +168,15 @@ class DescribeWebProtectionDataRequest extends AbstractModel
 
         if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
             $this->Interval = $param["Interval"];
+        }
+
+        if (array_key_exists("QueryCondition",$param) and $param["QueryCondition"] !== null) {
+            $this->QueryCondition = [];
+            foreach ($param["QueryCondition"] as $key => $value){
+                $obj = new QueryCondition();
+                $obj->deserialize($value);
+                array_push($this->QueryCondition, $obj);
+            }
         }
     }
 }

@@ -20,74 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ddos 攻击事件的详情
  *
- * @method integer getAttackStatus() 获取攻击状态
- * @method void setAttackStatus(integer $AttackStatus) 设置攻击状态
- * @method string getAttackType() 获取攻击类型
- * @method void setAttackType(string $AttackType) 设置攻击类型
- * @method integer getEndTime() 获取结束时间
- * @method void setEndTime(integer $EndTime) 设置结束时间
- * @method integer getStartTime() 获取开始时间
- * @method void setStartTime(integer $StartTime) 设置开始时间
- * @method integer getMaxBandWidth() 获取最大带宽
- * @method void setMaxBandWidth(integer $MaxBandWidth) 设置最大带宽
- * @method integer getPacketMaxRate() 获取最大包速率
- * @method void setPacketMaxRate(integer $PacketMaxRate) 设置最大包速率
- * @method string getEventId() 获取事件Id
- * @method void setEventId(string $EventId) 设置事件Id
- * @method integer getPolicyId() 获取ddos 策略组id
- * @method void setPolicyId(integer $PolicyId) 设置ddos 策略组id
+ * @method integer getAttackStatus() 获取攻击状态，取值有：
+<li>1 ：观察中 ；</li>
+<li>2 ：攻击开始 ；</li>
+<li>3 ：攻击结束 。</li>
+ * @method void setAttackStatus(integer $AttackStatus) 设置攻击状态，取值有：
+<li>1 ：观察中 ；</li>
+<li>2 ：攻击开始 ；</li>
+<li>3 ：攻击结束 。</li>
+ * @method string getAttackType() 获取攻击类型。
+ * @method void setAttackType(string $AttackType) 设置攻击类型。
+ * @method integer getEndTime() 获取结束时间。
+ * @method void setEndTime(integer $EndTime) 设置结束时间。
+ * @method integer getStartTime() 获取开始时间。
+ * @method void setStartTime(integer $StartTime) 设置开始时间。
+ * @method integer getMaxBandWidth() 获取最大带宽。
+ * @method void setMaxBandWidth(integer $MaxBandWidth) 设置最大带宽。
+ * @method integer getPacketMaxRate() 获取最大包速率。
+ * @method void setPacketMaxRate(integer $PacketMaxRate) 设置最大包速率。
+ * @method string getEventId() 获取事件Id。
+ * @method void setEventId(string $EventId) 设置事件Id。
+ * @method integer getPolicyId() 获取ddos 策略组id。
+ * @method void setPolicyId(integer $PolicyId) 设置ddos 策略组id。
  */
 class DDosAttackEventDetailData extends AbstractModel
 {
     /**
-     * @var integer 攻击状态
+     * @var integer 攻击状态，取值有：
+<li>1 ：观察中 ；</li>
+<li>2 ：攻击开始 ；</li>
+<li>3 ：攻击结束 。</li>
      */
     public $AttackStatus;
 
     /**
-     * @var string 攻击类型
+     * @var string 攻击类型。
      */
     public $AttackType;
 
     /**
-     * @var integer 结束时间
+     * @var integer 结束时间。
      */
     public $EndTime;
 
     /**
-     * @var integer 开始时间
+     * @var integer 开始时间。
      */
     public $StartTime;
 
     /**
-     * @var integer 最大带宽
+     * @var integer 最大带宽。
      */
     public $MaxBandWidth;
 
     /**
-     * @var integer 最大包速率
+     * @var integer 最大包速率。
      */
     public $PacketMaxRate;
 
     /**
-     * @var string 事件Id
+     * @var string 事件Id。
      */
     public $EventId;
 
     /**
-     * @var integer ddos 策略组id
+     * @var integer ddos 策略组id。
      */
     public $PolicyId;
 
     /**
-     * @param integer $AttackStatus 攻击状态
-     * @param string $AttackType 攻击类型
-     * @param integer $EndTime 结束时间
-     * @param integer $StartTime 开始时间
-     * @param integer $MaxBandWidth 最大带宽
-     * @param integer $PacketMaxRate 最大包速率
-     * @param string $EventId 事件Id
-     * @param integer $PolicyId ddos 策略组id
+     * @param integer $AttackStatus 攻击状态，取值有：
+<li>1 ：观察中 ；</li>
+<li>2 ：攻击开始 ；</li>
+<li>3 ：攻击结束 。</li>
+     * @param string $AttackType 攻击类型。
+     * @param integer $EndTime 结束时间。
+     * @param integer $StartTime 开始时间。
+     * @param integer $MaxBandWidth 最大带宽。
+     * @param integer $PacketMaxRate 最大包速率。
+     * @param string $EventId 事件Id。
+     * @param integer $PolicyId ddos 策略组id。
      */
     function __construct()
     {

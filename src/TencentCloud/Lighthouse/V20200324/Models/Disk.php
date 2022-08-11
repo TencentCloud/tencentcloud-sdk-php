@@ -38,8 +38,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskSize(integer $DiskSize) 设置磁盘大小
  * @method string getRenewFlag() 获取续费标识
  * @method void setRenewFlag(string $RenewFlag) 设置续费标识
- * @method string getDiskState() 获取磁盘状态
- * @method void setDiskState(string $DiskState) 设置磁盘状态
+ * @method string getDiskState() 获取磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
+ * @method void setDiskState(string $DiskState) 设置磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
  * @method boolean getAttached() 获取磁盘挂载状态
  * @method void setAttached(boolean $Attached) 设置磁盘挂载状态
  * @method boolean getDeleteWithInstance() 获取是否随实例释放
@@ -119,7 +139,17 @@ class Disk extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string 磁盘状态
+     * @var string 磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
      */
     public $DiskState;
 
@@ -188,7 +218,17 @@ class Disk extends AbstractModel
      * @param string $DiskChargeType 磁盘付费类型
      * @param integer $DiskSize 磁盘大小
      * @param string $RenewFlag 续费标识
-     * @param string $DiskState 磁盘状态
+     * @param string $DiskState 磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
      * @param boolean $Attached 磁盘挂载状态
      * @param boolean $DeleteWithInstance 是否随实例释放
      * @param string $LatestOperation 上一次操作

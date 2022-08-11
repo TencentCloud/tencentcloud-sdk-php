@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDos主攻击事件
  *
- * @method integer getPolicyId() 获取ddos 策略组id
- * @method void setPolicyId(integer $PolicyId) 设置ddos 策略组id
- * @method integer getAttackMaxBandWidth() 获取攻击最大带宽
- * @method void setAttackMaxBandWidth(integer $AttackMaxBandWidth) 设置攻击最大带宽
- * @method integer getAttackTime() 获取攻击时间 单位为s
- * @method void setAttackTime(integer $AttackTime) 设置攻击时间 单位为s
+ * @method integer getPolicyId() 获取ddos 策略组id。
+ * @method void setPolicyId(integer $PolicyId) 设置ddos 策略组id。
+ * @method integer getAttackMaxBandWidth() 获取攻击最大带宽。
+ * @method void setAttackMaxBandWidth(integer $AttackMaxBandWidth) 设置攻击最大带宽。
+ * @method integer getAttackTime() 获取攻击请求时间，采用unix秒级时间戳。
+ * @method void setAttackTime(integer $AttackTime) 设置攻击请求时间，采用unix秒级时间戳。
  */
 class DDosMajorAttackEvent extends AbstractModel
 {
     /**
-     * @var integer ddos 策略组id
+     * @var integer ddos 策略组id。
      */
     public $PolicyId;
 
     /**
-     * @var integer 攻击最大带宽
+     * @var integer 攻击最大带宽。
      */
     public $AttackMaxBandWidth;
 
     /**
-     * @var integer 攻击时间 单位为s
+     * @var integer 攻击请求时间，采用unix秒级时间戳。
      */
     public $AttackTime;
 
     /**
-     * @param integer $PolicyId ddos 策略组id
-     * @param integer $AttackMaxBandWidth 攻击最大带宽
-     * @param integer $AttackTime 攻击时间 单位为s
+     * @param integer $PolicyId ddos 策略组id。
+     * @param integer $AttackMaxBandWidth 攻击最大带宽。
+     * @param integer $AttackTime 攻击请求时间，采用unix秒级时间戳。
      */
     function __construct()
     {

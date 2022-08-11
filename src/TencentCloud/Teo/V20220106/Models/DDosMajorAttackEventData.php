@@ -20,69 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 主攻击对象Data
  *
- * @method array getList() 获取DDosMajorAttackEvent ddos 攻击事件
+ * @method array getList() 获取DDosMajorAttackEvent ddos 攻击事件。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setList(array $List) 设置DDosMajorAttackEvent ddos 攻击事件
+ * @method void setList(array $List) 设置DDosMajorAttackEvent ddos 攻击事件。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageNo() 获取当前页
+ * @method integer getPageNo() 获取分页拉取的起始页号。最小值：1。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageNo(integer $PageNo) 设置当前页
+ * @method void setPageNo(integer $PageNo) 设置分页拉取的起始页号。最小值：1。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageSize() 获取每页展示条数
+ * @method integer getPageSize() 获取分页拉取的最大返回结果数。最大值：1000。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageSize(integer $PageSize) 设置每页展示条数
+ * @method void setPageSize(integer $PageSize) 设置分页拉取的最大返回结果数。最大值：1000。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPages() 获取总页数
+ * @method integer getPages() 获取总页数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPages(integer $Pages) 设置总页数
+ * @method void setPages(integer $Pages) 设置总页数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalSize() 获取总条数
+ * @method integer getTotalSize() 获取总条数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalSize(integer $TotalSize) 设置总条数
+ * @method void setTotalSize(integer $TotalSize) 设置总条数。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DDosMajorAttackEventData extends AbstractModel
 {
     /**
-     * @var array DDosMajorAttackEvent ddos 攻击事件
+     * @var array DDosMajorAttackEvent ddos 攻击事件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
-     * @var integer 当前页
+     * @var integer 分页拉取的起始页号。最小值：1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageNo;
 
     /**
-     * @var integer 每页展示条数
+     * @var integer 分页拉取的最大返回结果数。最大值：1000。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageSize;
 
     /**
-     * @var integer 总页数
+     * @var integer 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pages;
 
     /**
-     * @var integer 总条数
+     * @var integer 总条数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalSize;
 
     /**
-     * @param array $List DDosMajorAttackEvent ddos 攻击事件
+     * @param array $List DDosMajorAttackEvent ddos 攻击事件。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageNo 当前页
+     * @param integer $PageNo 分页拉取的起始页号。最小值：1。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageSize 每页展示条数
+     * @param integer $PageSize 分页拉取的最大返回结果数。最大值：1000。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Pages 总页数
+     * @param integer $Pages 总页数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalSize 总条数
+     * @param integer $TotalSize 总条数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,82 +20,130 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDDosAttackTopData请求参数结构体
  *
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getMetricName() 获取过滤指标
- * @method void setMetricName(string $MetricName) 设置过滤指标
- * @method integer getLimit() 获取查询前多少名,传值为0 全量
- * @method void setLimit(integer $Limit) 设置查询前多少名,传值为0 全量
- * @method array getZoneIds() 获取站点集合
- * @method void setZoneIds(array $ZoneIds) 设置站点集合
- * @method array getPolicyIds() 获取ddos策略组id 集合
- * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组id 集合
- * @method integer getPort() 获取端口号
- * @method void setPort(integer $Port) 设置端口号
- * @method string getProtocolType() 获取协议类型,tcp,udp,all
- * @method void setProtocolType(string $ProtocolType) 设置协议类型,tcp,udp,all
- * @method string getAttackType() 获取攻击类型,flood,icmpFlood......,all
- * @method void setAttackType(string $AttackType) 设置攻击类型,flood,icmpFlood......,all
+ * @method string getStartTime() 获取开始时间。
+ * @method void setStartTime(string $StartTime) 设置开始时间。
+ * @method string getEndTime() 获取结束时间。
+ * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getMetricName() 获取统计指标列表，取值有：
+<li>ddos_attackFlux_protocol ：攻击总流量协议类型分布排行 ；</li>
+<li>ddos_attackPackageNum_protocol ：攻击总包量协议类型分布排行 ；</li>
+<li>ddos_attackNum_attackType ：攻击总次数攻击类型分布排行 ；</li>
+<li>ddos_attackNum_sregion ：攻击总次数攻击源地区分布排行 ；</li>
+<li>ddos_attackFlux_sip ：攻击总流量攻击源ip分布排行 ；</li>
+<li>ddos_attackFlux_sregion ：攻击总流量攻击源地区分布排行 。</li>
+ * @method void setMetricName(string $MetricName) 设置统计指标列表，取值有：
+<li>ddos_attackFlux_protocol ：攻击总流量协议类型分布排行 ；</li>
+<li>ddos_attackPackageNum_protocol ：攻击总包量协议类型分布排行 ；</li>
+<li>ddos_attackNum_attackType ：攻击总次数攻击类型分布排行 ；</li>
+<li>ddos_attackNum_sregion ：攻击总次数攻击源地区分布排行 ；</li>
+<li>ddos_attackFlux_sip ：攻击总流量攻击源ip分布排行 ；</li>
+<li>ddos_attackFlux_sregion ：攻击总流量攻击源地区分布排行 。</li>
+ * @method integer getLimit() 获取查询前多少个，传值为0返回全量。
+ * @method void setLimit(integer $Limit) 设置查询前多少个，传值为0返回全量。
+ * @method array getZoneIds() 获取站点id集合，不填默认选择全部站点。
+ * @method void setZoneIds(array $ZoneIds) 设置站点id集合，不填默认选择全部站点。
+ * @method array getPolicyIds() 获取ddos策略组id 集合，不填默认选择全部策略id。
+ * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组id 集合，不填默认选择全部策略id。
+ * @method integer getPort() 获取端口号。
+ * @method void setPort(integer $Port) 设置端口号。
+ * @method string getProtocolType() 获取协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+ * @method void setProtocolType(string $ProtocolType) 设置协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+ * @method string getAttackType() 获取攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
+ * @method void setAttackType(string $AttackType) 设置攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
  */
 class DescribeDDosAttackTopDataRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string 开始时间。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间。
      */
     public $EndTime;
 
     /**
-     * @var string 过滤指标
+     * @var string 统计指标列表，取值有：
+<li>ddos_attackFlux_protocol ：攻击总流量协议类型分布排行 ；</li>
+<li>ddos_attackPackageNum_protocol ：攻击总包量协议类型分布排行 ；</li>
+<li>ddos_attackNum_attackType ：攻击总次数攻击类型分布排行 ；</li>
+<li>ddos_attackNum_sregion ：攻击总次数攻击源地区分布排行 ；</li>
+<li>ddos_attackFlux_sip ：攻击总流量攻击源ip分布排行 ；</li>
+<li>ddos_attackFlux_sregion ：攻击总流量攻击源地区分布排行 。</li>
      */
     public $MetricName;
 
     /**
-     * @var integer 查询前多少名,传值为0 全量
+     * @var integer 查询前多少个，传值为0返回全量。
      */
     public $Limit;
 
     /**
-     * @var array 站点集合
+     * @var array 站点id集合，不填默认选择全部站点。
      */
     public $ZoneIds;
 
     /**
-     * @var array ddos策略组id 集合
+     * @var array ddos策略组id 集合，不填默认选择全部策略id。
      */
     public $PolicyIds;
 
     /**
-     * @var integer 端口号
+     * @var integer 端口号。
      */
     public $Port;
 
     /**
-     * @var string 协议类型,tcp,udp,all
+     * @var string 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
      */
     public $ProtocolType;
 
     /**
-     * @var string 攻击类型,flood,icmpFlood......,all
+     * @var string 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
      */
     public $AttackType;
 
     /**
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param string $MetricName 过滤指标
-     * @param integer $Limit 查询前多少名,传值为0 全量
-     * @param array $ZoneIds 站点集合
-     * @param array $PolicyIds ddos策略组id 集合
-     * @param integer $Port 端口号
-     * @param string $ProtocolType 协议类型,tcp,udp,all
-     * @param string $AttackType 攻击类型,flood,icmpFlood......,all
+     * @param string $StartTime 开始时间。
+     * @param string $EndTime 结束时间。
+     * @param string $MetricName 统计指标列表，取值有：
+<li>ddos_attackFlux_protocol ：攻击总流量协议类型分布排行 ；</li>
+<li>ddos_attackPackageNum_protocol ：攻击总包量协议类型分布排行 ；</li>
+<li>ddos_attackNum_attackType ：攻击总次数攻击类型分布排行 ；</li>
+<li>ddos_attackNum_sregion ：攻击总次数攻击源地区分布排行 ；</li>
+<li>ddos_attackFlux_sip ：攻击总流量攻击源ip分布排行 ；</li>
+<li>ddos_attackFlux_sregion ：攻击总流量攻击源地区分布排行 。</li>
+     * @param integer $Limit 查询前多少个，传值为0返回全量。
+     * @param array $ZoneIds 站点id集合，不填默认选择全部站点。
+     * @param array $PolicyIds ddos策略组id 集合，不填默认选择全部策略id。
+     * @param integer $Port 端口号。
+     * @param string $ProtocolType 协议类型，取值有：
+<li>tcp ；</li>
+<li>udp ；</li>
+<li>all 。</li>
+     * @param string $AttackType 攻击类型，取值有：
+<li>flood ；</li>
+<li>icmpFlood ；</li>
+<li>all 。</li>
      */
     function __construct()
     {

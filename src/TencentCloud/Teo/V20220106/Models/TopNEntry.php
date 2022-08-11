@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TopN entry
  *
- * @method string getKey() 获取Entry key
- * @method void setKey(string $Key) 设置Entry key
- * @method array getValue() 获取TopN数据
- * @method void setValue(array $Value) 设置TopN数据
+ * @method string getKey() 获取top查询维度值。
+ * @method void setKey(string $Key) 设置top查询维度值。
+ * @method array getValue() 获取查询具体数据。
+ * @method void setValue(array $Value) 设置查询具体数据。
  */
 class TopNEntry extends AbstractModel
 {
     /**
-     * @var string Entry key
+     * @var string top查询维度值。
      */
     public $Key;
 
     /**
-     * @var array TopN数据
+     * @var array 查询具体数据。
      */
     public $Value;
 
     /**
-     * @param string $Key Entry key
-     * @param array $Value TopN数据
+     * @param string $Key top查询维度值。
+     * @param array $Value 查询具体数据。
      */
     function __construct()
     {

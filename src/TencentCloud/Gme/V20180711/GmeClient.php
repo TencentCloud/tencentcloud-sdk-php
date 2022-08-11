@@ -35,7 +35,9 @@ use TencentCloud\Gme\V20180711\Models as Models;
 <li>音频文件格式支持的类型：.wav、.m4a、.amr、.mp3、.aac、.wma、.ogg</li>
 </br>
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 本接口(CreateApp)用于创建一个GME应用。
+ * @method Models\CreateCustomizationResponse CreateCustomization(Models\CreateCustomizationRequest $req) 用户使用该接口可以创建语音消息转文本自学习模型，以供识别调用
  * @method Models\CreateScanUserResponse CreateScanUser(Models\CreateScanUserRequest $req) 新增自定义送检用户
+ * @method Models\DeleteCustomizationResponse DeleteCustomization(Models\DeleteCustomizationRequest $req) 用户通过该接口可以删除语音消息转文本自学习模型
  * @method Models\DeleteScanUserResponse DeleteScanUser(Models\DeleteScanUserRequest $req) 删除自定义送检用户
  * @method Models\DescribeAgeDetectTaskResponse DescribeAgeDetectTask(Models\DescribeAgeDetectTaskRequest $req) 查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
  * @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近30天。
@@ -47,7 +49,10 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\DescribeScanResultListResponse DescribeScanResultList(Models\DescribeScanResultListRequest $req) 本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。
 <p style="color:red">如果在提交语音检测任务时未设置 Callback 字段，则需要通过本接口获取检测结果</p>
  * @method Models\DescribeUserInAndOutTimeResponse DescribeUserInAndOutTime(Models\DescribeUserInAndOutTimeRequest $req) 拉取用户在房间得进出时间
+ * @method Models\GetCustomizationListResponse GetCustomizationList(Models\GetCustomizationListRequest $req) 查询语音消息转文本自学习模型列表
  * @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) 本接口(ModifyAppStatus)用于修改应用总开关状态。
+ * @method Models\ModifyCustomizationResponse ModifyCustomization(Models\ModifyCustomizationRequest $req) 用户通过该接口可以更新语音消息转文本自学习模型。
+ * @method Models\ModifyCustomizationStateResponse ModifyCustomizationState(Models\ModifyCustomizationStateRequest $req) 通过该接口，用户可以修改语音消息转文本自学习模型状态，上下线自学习模型
  * @method Models\ModifyRoomInfoResponse ModifyRoomInfo(Models\ModifyRoomInfoRequest $req) 修改房间信息
  * @method Models\ModifyUserMicStatusResponse ModifyUserMicStatus(Models\ModifyUserMicStatusRequest $req) 修改用户麦克风状态。
  * @method Models\ScanVoiceResponse ScanVoice(Models\ScanVoiceRequest $req) 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。

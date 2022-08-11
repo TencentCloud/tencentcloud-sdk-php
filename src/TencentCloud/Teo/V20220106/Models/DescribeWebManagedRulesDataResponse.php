@@ -20,39 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWebManagedRulesData返回参数结构体
  *
- * @method array getData() 获取Web攻击日志实体
+ * @method array getData() 获取Web攻击日志实体。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置Web攻击日志实体
+ * @method void setData(array $Data) 设置Web攻击日志实体。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态，1:失败，0:成功
- * @method void setStatus(integer $Status) 设置状态，1:失败，0:成功
- * @method string getMsg() 获取返回消息
- * @method void setMsg(string $Msg) 设置返回消息
- * @method string getInterval() 获取查询时间粒度，可选{min,5min,hour,day}
- * @method void setInterval(string $Interval) 设置查询时间粒度，可选{min,5min,hour,day}
+ * @method integer getStatus() 获取请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+ * @method void setStatus(integer $Status) 设置请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+ * @method string getMsg() 获取请求响应消息。
+ * @method void setMsg(string $Msg) 设置请求响应消息。
+ * @method string getInterval() 获取查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+ * @method void setInterval(string $Interval) 设置查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeWebManagedRulesDataResponse extends AbstractModel
 {
     /**
-     * @var array Web攻击日志实体
+     * @var array Web攻击日志实体。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
-     * @var integer 状态，1:失败，0:成功
+     * @var integer 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
      */
     public $Status;
 
     /**
-     * @var string 返回消息
+     * @var string 请求响应消息。
      */
     public $Msg;
 
     /**
-     * @var string 查询时间粒度，可选{min,5min,hour,day}
+     * @var string 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public $Interval;
 
@@ -62,11 +80,17 @@ class DescribeWebManagedRulesDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Web攻击日志实体
+     * @param array $Data Web攻击日志实体。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态，1:失败，0:成功
-     * @param string $Msg 返回消息
-     * @param string $Interval 查询时间粒度，可选{min,5min,hour,day}
+     * @param integer $Status 请求响应状态，取值有：
+<li>1 ：失败 ；</li>
+<li>0 ：成功 。</li>
+     * @param string $Msg 请求响应消息。
+     * @param string $Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

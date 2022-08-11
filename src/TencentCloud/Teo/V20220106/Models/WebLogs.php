@@ -20,189 +20,173 @@ use TencentCloud\Common\AbstractModel;
 /**
  * web攻击日志
  *
- * @method string getAttackContent() 获取攻击内容
+ * @method string getAttackContent() 获取该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttackContent(string $AttackContent) 设置攻击内容
+ * @method void setAttackContent(string $AttackContent) 设置该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAttackIp() 获取攻击IP
+ * @method string getAttackIp() 获取攻击源（客户端）Ip。
+ * @method void setAttackIp(string $AttackIp) 设置攻击源（客户端）Ip。
+ * @method string getAttackType() 获取该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttackIp(string $AttackIp) 设置攻击IP
+ * @method void setAttackType(string $AttackType) 设置该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAttackType() 获取攻击类型
+ * @method string getDomain() 获取受攻击子域名。
+ * @method void setDomain(string $Domain) 设置受攻击子域名。
+ * @method string getMsuuid() 获取该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttackType(string $AttackType) 设置攻击类型
+ * @method void setMsuuid(string $Msuuid) 设置该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDomain() 获取域名
+ * @method string getRequestMethod() 获取该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomain(string $Domain) 设置域名
+ * @method void setRequestMethod(string $RequestMethod) 设置该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMsuuid() 获取uuid
+ * @method string getRequestUri() 获取URI
+ * @method void setRequestUri(string $RequestUri) 设置URI
+ * @method string getRiskLevel() 获取该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMsuuid(string $Msuuid) 设置uuid
+ * @method void setRiskLevel(string $RiskLevel) 设置该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestMethod() 获取请求方法
+ * @method integer getRuleId() 获取该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestMethod(string $RequestMethod) 设置请求方法
+ * @method void setRuleId(integer $RuleId) 设置该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRequestUri() 获取请求URI
+ * @method string getSipCountryCode() 获取IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)
+ * @method void setSipCountryCode(string $SipCountryCode) 设置IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)
+ * @method string getEventId() 获取请求（事件）ID。
+ * @method void setEventId(string $EventId) 设置请求（事件）ID。
+ * @method string getDisposalMethod() 获取该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRequestUri(string $RequestUri) 设置请求URI
+ * @method void setDisposalMethod(string $DisposalMethod) 设置该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRiskLevel() 获取风险等级
+ * @method string getHttpLog() 获取http log。
+ * @method void setHttpLog(string $HttpLog) 设置http log。
+ * @method string getUa() 获取该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskLevel(string $RiskLevel) 设置风险等级
+ * @method void setUa(string $Ua) 设置该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRuleId() 获取规则ID
+ * @method integer getAttackTime() 获取攻击时间，采用unix秒级时间戳。
+ * @method void setAttackTime(integer $AttackTime) 设置攻击时间，采用unix秒级时间戳。
+ * @method array getRuleDetailList() 获取规则相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleId(integer $RuleId) 设置规则ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSipCountryCode() 获取IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSipCountryCode(string $SipCountryCode) 设置IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEventId() 获取事件id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEventId(string $EventId) 设置事件id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDisposalMethod() 获取处置方式
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisposalMethod(string $DisposalMethod) 设置处置方式
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHttpLog() 获取http_log
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttpLog(string $HttpLog) 设置http_log
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUa() 获取user agent
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUa(string $Ua) 设置user agent
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAttackTime() 获取攻击时间，为保持统一，原参数time更名为AttackTime
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttackTime(integer $AttackTime) 设置攻击时间，为保持统一，原参数time更名为AttackTime
+ * @method void setRuleDetailList(array $RuleDetailList) 设置规则相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WebLogs extends AbstractModel
 {
     /**
-     * @var string 攻击内容
+     * @var string 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackContent;
 
     /**
-     * @var string 攻击IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 攻击源（客户端）Ip。
      */
     public $AttackIp;
 
     /**
-     * @var string 攻击类型
+     * @var string 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackType;
 
     /**
-     * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 受攻击子域名。
      */
     public $Domain;
 
     /**
-     * @var string uuid
+     * @var string 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Msuuid;
 
     /**
-     * @var string 请求方法
+     * @var string 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RequestMethod;
 
     /**
-     * @var string 请求URI
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string URI
      */
     public $RequestUri;
 
     /**
-     * @var string 风险等级
+     * @var string 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
-     * @var integer 规则ID
+     * @var integer 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
-     * @var string IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)
      */
     public $SipCountryCode;
 
     /**
-     * @var string 事件id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 请求（事件）ID。
      */
     public $EventId;
 
     /**
-     * @var string 处置方式
+     * @var string 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisposalMethod;
 
     /**
-     * @var string http_log
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string http log。
      */
     public $HttpLog;
 
     /**
-     * @var string user agent
+     * @var string 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ua;
 
     /**
-     * @var integer 攻击时间，为保持统一，原参数time更名为AttackTime
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 攻击时间，采用unix秒级时间戳。
      */
     public $AttackTime;
 
     /**
-     * @param string $AttackContent 攻击内容
+     * @var array 规则相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AttackIp 攻击IP
+     */
+    public $RuleDetailList;
+
+    /**
+     * @param string $AttackContent 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AttackType 攻击类型
+     * @param string $AttackIp 攻击源（客户端）Ip。
+     * @param string $AttackType 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Domain 域名
+     * @param string $Domain 受攻击子域名。
+     * @param string $Msuuid 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Msuuid uuid
+     * @param string $RequestMethod 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestMethod 请求方法
+     * @param string $RequestUri URI
+     * @param string $RiskLevel 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RequestUri 请求URI
+     * @param integer $RuleId 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RiskLevel 风险等级
+     * @param string $SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)
+     * @param string $EventId 请求（事件）ID。
+     * @param string $DisposalMethod 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RuleId 规则ID
+     * @param string $HttpLog http log。
+     * @param string $Ua 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SipCountryCode IP所在国家
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DisposalMethod 处置方式
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HttpLog http_log
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ua user agent
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AttackTime 攻击时间，为保持统一，原参数time更名为AttackTime
+     * @param integer $AttackTime 攻击时间，采用unix秒级时间戳。
+     * @param array $RuleDetailList 规则相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +260,15 @@ class WebLogs extends AbstractModel
 
         if (array_key_exists("AttackTime",$param) and $param["AttackTime"] !== null) {
             $this->AttackTime = $param["AttackTime"];
+        }
+
+        if (array_key_exists("RuleDetailList",$param) and $param["RuleDetailList"] !== null) {
+            $this->RuleDetailList = [];
+            foreach ($param["RuleDetailList"] as $key => $value){
+                $obj = new SecRuleRelatedInfo();
+                $obj->deserialize($value);
+                array_push($this->RuleDetailList, $obj);
+            }
         }
     }
 }

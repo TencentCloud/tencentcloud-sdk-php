@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tbaas\V20180416\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TransByDynamicContractHandler返回参数结构体
+ * CreateCustomization返回参数结构体
  *
- * @method string getTransactionRsp() 获取交易结果json字符串
- * @method void setTransactionRsp(string $TransactionRsp) 设置交易结果json字符串
+ * @method string getModelId() 获取模型ID
+ * @method void setModelId(string $ModelId) 设置模型ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class TransByDynamicContractHandlerResponse extends AbstractModel
+class CreateCustomizationResponse extends AbstractModel
 {
     /**
-     * @var string 交易结果json字符串
+     * @var string 模型ID
      */
-    public $TransactionRsp;
+    public $ModelId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class TransByDynamicContractHandlerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TransactionRsp 交易结果json字符串
+     * @param string $ModelId 模型ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class TransByDynamicContractHandlerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TransactionRsp",$param) and $param["TransactionRsp"] !== null) {
-            $this->TransactionRsp = $param["TransactionRsp"];
+        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
+            $this->ModelId = $param["ModelId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

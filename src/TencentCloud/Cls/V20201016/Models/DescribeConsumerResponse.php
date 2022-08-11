@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method Ckafka getCkafka() 获取CKafka的描述
  * @method void setCkafka(Ckafka $Ckafka) 设置CKafka的描述
+ * @method integer getCompression() 获取压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCompression(integer $Compression) 设置压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -57,6 +61,12 @@ class DescribeConsumerResponse extends AbstractModel
     public $Ckafka;
 
     /**
+     * @var integer 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Compression;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -67,6 +77,8 @@ class DescribeConsumerResponse extends AbstractModel
      * @param ConsumerContent $Content 如果需要投递元数据信息，元数据信息的描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ckafka $Ckafka CKafka的描述
+     * @param integer $Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -98,6 +110,10 @@ class DescribeConsumerResponse extends AbstractModel
         if (array_key_exists("Ckafka",$param) and $param["Ckafka"] !== null) {
             $this->Ckafka = new Ckafka();
             $this->Ckafka->deserialize($param["Ckafka"]);
+        }
+
+        if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
+            $this->Compression = $param["Compression"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

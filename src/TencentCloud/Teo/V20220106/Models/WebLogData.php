@@ -20,70 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * web攻击日志Data
  *
- * @method array getList() 获取数据
+ * @method array getList() 获取分组数据。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setList(array $List) 设置数据
+ * @method void setList(array $List) 设置分组数据。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageNo() 获取当前页
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageNo(integer $PageNo) 设置当前页
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPageSize() 获取每页展示条数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPageSize(integer $PageSize) 设置每页展示条数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPages() 获取总页数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPages(integer $Pages) 设置总页数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalSize() 获取总条数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalSize(integer $TotalSize) 设置总条数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPageNo() 获取分页拉取的起始页号。最小值：1。
+ * @method void setPageNo(integer $PageNo) 设置分页拉取的起始页号。最小值：1。
+ * @method integer getPageSize() 获取分页拉取的最大返回结果数。最大值：1000。
+ * @method void setPageSize(integer $PageSize) 设置分页拉取的最大返回结果数。最大值：1000。
+ * @method integer getPages() 获取总页数。
+ * @method void setPages(integer $Pages) 设置总页数。
+ * @method integer getTotalSize() 获取总条数。
+ * @method void setTotalSize(integer $TotalSize) 设置总条数。
  */
 class WebLogData extends AbstractModel
 {
     /**
-     * @var array 数据
+     * @var array 分组数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
-     * @var integer 当前页
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 分页拉取的起始页号。最小值：1。
      */
     public $PageNo;
 
     /**
-     * @var integer 每页展示条数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 分页拉取的最大返回结果数。最大值：1000。
      */
     public $PageSize;
 
     /**
-     * @var integer 总页数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 总页数。
      */
     public $Pages;
 
     /**
-     * @var integer 总条数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 总条数。
      */
     public $TotalSize;
 
     /**
-     * @param array $List 数据
+     * @param array $List 分组数据。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageNo 当前页
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PageSize 每页展示条数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Pages 总页数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalSize 总条数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PageNo 分页拉取的起始页号。最小值：1。
+     * @param integer $PageSize 分页拉取的最大返回结果数。最大值：1000。
+     * @param integer $Pages 总页数。
+     * @param integer $TotalSize 总条数。
      */
     function __construct()
     {

@@ -20,90 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWebManagedRulesTopData请求参数结构体
  *
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getMetricName() 获取过滤指标
- * @method void setMetricName(string $MetricName) 设置过滤指标
- * @method integer getLimit() 获取查询前多少名,传值为0 全量
- * @method void setLimit(integer $Limit) 设置查询前多少名,传值为0 全量
- * @method array getZoneIds() 获取站点集合
- * @method void setZoneIds(array $ZoneIds) 设置站点集合
- * @method array getPolicyIds() 获取ddos策略组id 集合
- * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组id 集合
- * @method integer getPort() 获取端口号
- * @method void setPort(integer $Port) 设置端口号
- * @method string getProtocolType() 获取协议类型,tcp,udp,all
- * @method void setProtocolType(string $ProtocolType) 设置协议类型,tcp,udp,all
- * @method string getAttackType() 获取攻击类型,flood,icmpFlood......,all
- * @method void setAttackType(string $AttackType) 设置攻击类型,flood,icmpFlood......,all
- * @method array getDomains() 获取域名集合
- * @method void setDomains(array $Domains) 设置域名集合
+ * @method string getStartTime() 获取开始时间。
+ * @method void setStartTime(string $StartTime) 设置开始时间。
+ * @method string getEndTime() 获取结束时间。
+ * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getMetricName() 获取统计指标列表，取值有：
+<li>waf_requestNum_url ：url请求数排行 ；</li>
+<li>waf_requestNum_cip：客户端ip请求数排行 ；</li>
+<li>waf_cipRequestNum_region ：客户端区域请求数排行 。</li>
+ * @method void setMetricName(string $MetricName) 设置统计指标列表，取值有：
+<li>waf_requestNum_url ：url请求数排行 ；</li>
+<li>waf_requestNum_cip：客户端ip请求数排行 ；</li>
+<li>waf_cipRequestNum_region ：客户端区域请求数排行 。</li>
+ * @method integer getLimit() 获取查询前多少个，传值为0返回全量。
+ * @method void setLimit(integer $Limit) 设置查询前多少个，传值为0返回全量。
+ * @method array getZoneIds() 获取站点id列表，不填默认选择全部站点。
+ * @method void setZoneIds(array $ZoneIds) 设置站点id列表，不填默认选择全部站点。
+ * @method array getPolicyIds() 获取该字段已废弃，请勿传。
+ * @method void setPolicyIds(array $PolicyIds) 设置该字段已废弃，请勿传。
+ * @method integer getPort() 获取该字段已废弃，请勿传。
+ * @method void setPort(integer $Port) 设置该字段已废弃，请勿传。
+ * @method string getProtocolType() 获取该字段已废弃，请勿传。
+ * @method void setProtocolType(string $ProtocolType) 设置该字段已废弃，请勿传。
+ * @method string getAttackType() 获取该字段已废弃，请勿传。
+ * @method void setAttackType(string $AttackType) 设置该字段已废弃，请勿传。
+ * @method array getDomains() 获取域名列表，不填默认选择全部子域名。
+ * @method void setDomains(array $Domains) 设置域名列表，不填默认选择全部子域名。
+ * @method string getInterval() 获取查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+ * @method void setInterval(string $Interval) 设置查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+ * @method array getQueryCondition() 获取筛选条件，取值有：
+<li>action ：执行动作 。</li>
+ * @method void setQueryCondition(array $QueryCondition) 设置筛选条件，取值有：
+<li>action ：执行动作 。</li>
  */
 class DescribeWebManagedRulesTopDataRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string 开始时间。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间。
      */
     public $EndTime;
 
     /**
-     * @var string 过滤指标
+     * @var string 统计指标列表，取值有：
+<li>waf_requestNum_url ：url请求数排行 ；</li>
+<li>waf_requestNum_cip：客户端ip请求数排行 ；</li>
+<li>waf_cipRequestNum_region ：客户端区域请求数排行 。</li>
      */
     public $MetricName;
 
     /**
-     * @var integer 查询前多少名,传值为0 全量
+     * @var integer 查询前多少个，传值为0返回全量。
      */
     public $Limit;
 
     /**
-     * @var array 站点集合
+     * @var array 站点id列表，不填默认选择全部站点。
      */
     public $ZoneIds;
 
     /**
-     * @var array ddos策略组id 集合
+     * @var array 该字段已废弃，请勿传。
      */
     public $PolicyIds;
 
     /**
-     * @var integer 端口号
+     * @var integer 该字段已废弃，请勿传。
      */
     public $Port;
 
     /**
-     * @var string 协议类型,tcp,udp,all
+     * @var string 该字段已废弃，请勿传。
      */
     public $ProtocolType;
 
     /**
-     * @var string 攻击类型,flood,icmpFlood......,all
+     * @var string 该字段已废弃，请勿传。
      */
     public $AttackType;
 
     /**
-     * @var array 域名集合
+     * @var array 域名列表，不填默认选择全部子域名。
      */
     public $Domains;
 
     /**
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param string $MetricName 过滤指标
-     * @param integer $Limit 查询前多少名,传值为0 全量
-     * @param array $ZoneIds 站点集合
-     * @param array $PolicyIds ddos策略组id 集合
-     * @param integer $Port 端口号
-     * @param string $ProtocolType 协议类型,tcp,udp,all
-     * @param string $AttackType 攻击类型,flood,icmpFlood......,all
-     * @param array $Domains 域名集合
+     * @var string 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     */
+    public $Interval;
+
+    /**
+     * @var array 筛选条件，取值有：
+<li>action ：执行动作 。</li>
+     */
+    public $QueryCondition;
+
+    /**
+     * @param string $StartTime 开始时间。
+     * @param string $EndTime 结束时间。
+     * @param string $MetricName 统计指标列表，取值有：
+<li>waf_requestNum_url ：url请求数排行 ；</li>
+<li>waf_requestNum_cip：客户端ip请求数排行 ；</li>
+<li>waf_cipRequestNum_region ：客户端区域请求数排行 。</li>
+     * @param integer $Limit 查询前多少个，传值为0返回全量。
+     * @param array $ZoneIds 站点id列表，不填默认选择全部站点。
+     * @param array $PolicyIds 该字段已废弃，请勿传。
+     * @param integer $Port 该字段已废弃，请勿传。
+     * @param string $ProtocolType 该字段已废弃，请勿传。
+     * @param string $AttackType 该字段已废弃，请勿传。
+     * @param array $Domains 域名列表，不填默认选择全部子域名。
+     * @param string $Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     * @param array $QueryCondition 筛选条件，取值有：
+<li>action ：执行动作 。</li>
      */
     function __construct()
     {
@@ -156,6 +204,19 @@ class DescribeWebManagedRulesTopDataRequest extends AbstractModel
 
         if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
             $this->Domains = $param["Domains"];
+        }
+
+        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
+            $this->Interval = $param["Interval"];
+        }
+
+        if (array_key_exists("QueryCondition",$param) and $param["QueryCondition"] !== null) {
+            $this->QueryCondition = [];
+            foreach ($param["QueryCondition"] as $key => $value){
+                $obj = new QueryCondition();
+                $obj->deserialize($value);
+                array_push($this->QueryCondition, $obj);
+            }
         }
     }
 }

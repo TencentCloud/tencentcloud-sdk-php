@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNick(string $Nick) 设置坐席昵称
  * @method array getSkillGroupIds() 获取绑定技能组ID列表
  * @method void setSkillGroupIds(array $SkillGroupIds) 设置绑定技能组ID列表
+ * @method boolean getUseMobileCallOut() 获取是否开启手机外呼开关
+ * @method void setUseMobileCallOut(boolean $UseMobileCallOut) 设置是否开启手机外呼开关
+ * @method integer getUseMobileAccept() 获取手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
+ * @method void setUseMobileAccept(integer $UseMobileAccept) 设置手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
  */
 class ModifyStaffRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class ModifyStaffRequest extends AbstractModel
     public $SkillGroupIds;
 
     /**
+     * @var boolean 是否开启手机外呼开关
+     */
+    public $UseMobileCallOut;
+
+    /**
+     * @var integer 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
+     */
+    public $UseMobileAccept;
+
+    /**
      * @param integer $SdkAppId 应用ID
      * @param string $Email 坐席账户
      * @param string $Name 坐席名称
      * @param string $Phone 坐席手机号（带0086前缀,示例：008618011111111）
      * @param string $Nick 坐席昵称
      * @param array $SkillGroupIds 绑定技能组ID列表
+     * @param boolean $UseMobileCallOut 是否开启手机外呼开关
+     * @param integer $UseMobileAccept 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class ModifyStaffRequest extends AbstractModel
 
         if (array_key_exists("SkillGroupIds",$param) and $param["SkillGroupIds"] !== null) {
             $this->SkillGroupIds = $param["SkillGroupIds"];
+        }
+
+        if (array_key_exists("UseMobileCallOut",$param) and $param["UseMobileCallOut"] !== null) {
+            $this->UseMobileCallOut = $param["UseMobileCallOut"];
+        }
+
+        if (array_key_exists("UseMobileAccept",$param) and $param["UseMobileAccept"] !== null) {
+            $this->UseMobileAccept = $param["UseMobileAccept"];
         }
     }
 }

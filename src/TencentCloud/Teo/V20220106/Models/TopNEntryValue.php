@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TopN数据Entry
  *
- * @method string getName() 获取Entry的name
- * @method void setName(string $Name) 设置Entry的name
- * @method integer getCount() 获取数量
- * @method void setCount(integer $Count) 设置数量
+ * @method string getName() 获取排序实体名。
+ * @method void setName(string $Name) 设置排序实体名。
+ * @method integer getCount() 获取排序实体数量。
+ * @method void setCount(integer $Count) 设置排序实体数量。
  */
 class TopNEntryValue extends AbstractModel
 {
     /**
-     * @var string Entry的name
+     * @var string 排序实体名。
      */
     public $Name;
 
     /**
-     * @var integer 数量
+     * @var integer 排序实体数量。
      */
     public $Count;
 
     /**
-     * @param string $Name Entry的name
-     * @param integer $Count 数量
+     * @param string $Name 排序实体名。
+     * @param integer $Count 排序实体数量。
      */
     function __construct()
     {

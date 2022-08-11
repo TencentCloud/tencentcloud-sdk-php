@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkillGroupId(integer $SkillGroupId) 设置技能组ID，查询单个技能组时使用
  * @method integer getModifiedTime() 获取查询修改时间大于等于ModifiedTime的技能组时使用
  * @method void setModifiedTime(integer $ModifiedTime) 设置查询修改时间大于等于ModifiedTime的技能组时使用
+ * @method string getSkillGroupName() 获取技能组名称
+ * @method void setSkillGroupName(string $SkillGroupName) 设置技能组名称
  */
 class DescribeSkillGroupInfoListRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeSkillGroupInfoListRequest extends AbstractModel
     public $ModifiedTime;
 
     /**
+     * @var string 技能组名称
+     */
+    public $SkillGroupName;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $PageSize 分页尺寸，上限 100
      * @param integer $PageNumber 分页页码，从 0 开始
      * @param integer $SkillGroupId 技能组ID，查询单个技能组时使用
      * @param integer $ModifiedTime 查询修改时间大于等于ModifiedTime的技能组时使用
+     * @param string $SkillGroupName 技能组名称
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeSkillGroupInfoListRequest extends AbstractModel
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
+        }
+
+        if (array_key_exists("SkillGroupName",$param) and $param["SkillGroupName"] !== null) {
+            $this->SkillGroupName = $param["SkillGroupName"];
         }
     }
 }

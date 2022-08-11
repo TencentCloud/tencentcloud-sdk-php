@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVersionId() 获取主键
  * @method void setVersionId(string $VersionId) 设置主键
- * @method boolean getApplicationId() 获取服务id
- * @method void setApplicationId(boolean $ApplicationId) 设置服务id
+ * @method string getApplicationId() 获取服务id
+ * @method void setApplicationId(string $ApplicationId) 设置服务id
  * @method string getDeployMode() 获取部署方式
  * @method void setDeployMode(string $DeployMode) 设置部署方式
  * @method string getJdkVersion() 获取jdk版本
@@ -49,7 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getImgVersion() 获取镜像版本
  * @method void setImgVersion(string $ImgVersion) 设置镜像版本
  * @method EsInfo getEsInfo() 获取弹性配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsInfo(EsInfo $EsInfo) 设置弹性配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEnvConf() 获取环境配置
  * @method void setEnvConf(array $EnvConf) 设置环境配置
  * @method array getStorageConfs() 获取存储配置
@@ -132,9 +134,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogEnable(integer $LogEnable) 设置是否启用log
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMinAliveInstances() 获取最小实例数
+ * @method string getMinAliveInstances() 获取最小实例数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMinAliveInstances(integer $MinAliveInstances) 设置最小实例数
+ * @method void setMinAliveInstances(string $MinAliveInstances) 设置最小实例数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecurityGroupIds() 获取安全组
 注意：此字段可能返回 null，表示取不到有效值。
@@ -212,9 +214,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableTracing(integer $EnableTracing) 设置是否启用调用链组件
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getEnableTracingReport() 获取是否开启调用链上报，只有 EnableTracing=1 时生效
+ * @method integer getEnableTracingReport() 获取是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnableTracingReport(integer $EnableTracingReport) 设置是否开启调用链上报，只有 EnableTracing=1 时生效
+ * @method void setEnableTracingReport(integer $EnableTracingReport) 设置是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRepoType() 获取镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
 注意：此字段可能返回 null，表示取不到有效值。
@@ -256,9 +258,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnderDeploying(boolean $UnderDeploying) 设置是否正在发布中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method EnablePrometheusConf getEnablePrometheusConf() 获取是否开启prometheus业务指标监控
+ * @method EnablePrometheusConf getEnablePrometheusConf() 获取监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) 设置是否开启prometheus业务指标监控
+ * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) 设置监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getStoppedManually() 获取是否为手动停止
 注意：此字段可能返回 null，表示取不到有效值。
@@ -267,6 +269,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTcrInstanceId() 获取tcr实例ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTcrInstanceId(string $TcrInstanceId) 设置tcr实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableMetrics() 获取1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableMetrics(integer $EnableMetrics) 设置1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemServiceVersionInfo extends AbstractModel
@@ -277,7 +285,7 @@ class TemServiceVersionInfo extends AbstractModel
     public $VersionId;
 
     /**
-     * @var boolean 服务id
+     * @var string 服务id
      */
     public $ApplicationId;
 
@@ -343,6 +351,7 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var EsInfo 弹性配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsInfo;
 
@@ -484,7 +493,7 @@ class TemServiceVersionInfo extends AbstractModel
     public $LogEnable;
 
     /**
-     * @var integer 最小实例数
+     * @var string 最小实例数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinAliveInstances;
@@ -604,7 +613,7 @@ class TemServiceVersionInfo extends AbstractModel
     public $EnableTracing;
 
     /**
-     * @var integer 是否开启调用链上报，只有 EnableTracing=1 时生效
+     * @var integer 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableTracingReport;
@@ -666,7 +675,7 @@ class TemServiceVersionInfo extends AbstractModel
     public $UnderDeploying;
 
     /**
-     * @var EnablePrometheusConf 是否开启prometheus业务指标监控
+     * @var EnablePrometheusConf 监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnablePrometheusConf;
@@ -684,8 +693,15 @@ class TemServiceVersionInfo extends AbstractModel
     public $TcrInstanceId;
 
     /**
+     * @var integer 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableMetrics;
+
+    /**
      * @param string $VersionId 主键
-     * @param boolean $ApplicationId 服务id
+     * @param string $ApplicationId 服务id
      * @param string $DeployMode 部署方式
      * @param string $JdkVersion jdk版本
      * @param string $Description 描述
@@ -699,6 +715,7 @@ class TemServiceVersionInfo extends AbstractModel
      * @param string $ImgName 镜像名称
      * @param string $ImgVersion 镜像版本
      * @param EsInfo $EsInfo 弹性配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EnvConf 环境配置
      * @param array $StorageConfs 存储配置
      * @param string $Status 运行状态
@@ -740,7 +757,7 @@ class TemServiceVersionInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LogEnable 是否启用log
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MinAliveInstances 最小实例数
+     * @param string $MinAliveInstances 最小实例数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroupIds 安全组
 注意：此字段可能返回 null，表示取不到有效值。
@@ -780,7 +797,7 @@ class TemServiceVersionInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableTracing 是否启用调用链组件
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $EnableTracingReport 是否开启调用链上报，只有 EnableTracing=1 时生效
+     * @param integer $EnableTracingReport 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RepoType 镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
 注意：此字段可能返回 null，表示取不到有效值。
@@ -802,11 +819,14 @@ class TemServiceVersionInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UnderDeploying 是否正在发布中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnablePrometheusConf $EnablePrometheusConf 是否开启prometheus业务指标监控
+     * @param EnablePrometheusConf $EnablePrometheusConf 监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $StoppedManually 是否为手动停止
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TcrInstanceId tcr实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableMetrics 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1151,6 +1171,10 @@ class TemServiceVersionInfo extends AbstractModel
 
         if (array_key_exists("TcrInstanceId",$param) and $param["TcrInstanceId"] !== null) {
             $this->TcrInstanceId = $param["TcrInstanceId"];
+        }
+
+        if (array_key_exists("EnableMetrics",$param) and $param["EnableMetrics"] !== null) {
+            $this->EnableMetrics = $param["EnableMetrics"];
         }
     }
 }

@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ccc\V20200210\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSeatUserList返回参数结构体
+ * ModifyCustomizationState返回参数结构体
  *
- * @method integer getTotalCount() 获取此实例的坐席用户总数
- * @method void setTotalCount(integer $TotalCount) 设置此实例的坐席用户总数
- * @method array getSeatUsers() 获取坐席用户信息列表
- * @method void setSeatUsers(array $SeatUsers) 设置坐席用户信息列表
+ * @method string getModelId() 获取自学习模型ID
+ * @method void setModelId(string $ModelId) 设置自学习模型ID
+ * @method integer getErrorCode() 获取返回值。0为成功，非0为失败。
+ * @method void setErrorCode(integer $ErrorCode) 设置返回值。0为成功，非0为失败。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSeatUserListResponse extends AbstractModel
+class ModifyCustomizationStateResponse extends AbstractModel
 {
     /**
-     * @var integer 此实例的坐席用户总数
+     * @var string 自学习模型ID
      */
-    public $TotalCount;
+    public $ModelId;
 
     /**
-     * @var array 坐席用户信息列表
+     * @var integer 返回值。0为成功，非0为失败。
      */
-    public $SeatUsers;
+    public $ErrorCode;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class DescribeSeatUserListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 此实例的坐席用户总数
-     * @param array $SeatUsers 坐席用户信息列表
+     * @param string $ModelId 自学习模型ID
+     * @param integer $ErrorCode 返回值。0为成功，非0为失败。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +62,12 @@ class DescribeSeatUserListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
+            $this->ModelId = $param["ModelId"];
         }
 
-        if (array_key_exists("SeatUsers",$param) and $param["SeatUsers"] !== null) {
-            $this->SeatUsers = [];
-            foreach ($param["SeatUsers"] as $key => $value){
-                $obj = new SeatUserInfo();
-                $obj->deserialize($value);
-                array_push($this->SeatUsers, $obj);
-            }
+        if (array_key_exists("ErrorCode",$param) and $param["ErrorCode"] !== null) {
+            $this->ErrorCode = $param["ErrorCode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

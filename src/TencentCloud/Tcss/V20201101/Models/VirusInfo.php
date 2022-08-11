@@ -138,6 +138,24 @@ VALIDATION: 参数非法
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMD5(string $MD5) 设置md5值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRiskLevel() 获取风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskLevel(string $RiskLevel) 设置风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCheckPlatform() 获取检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckPlatform(array $CheckPlatform) 设置检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VirusInfo extends AbstractModel
 {
@@ -277,6 +295,23 @@ VALIDATION: 参数非法
     public $MD5;
 
     /**
+     * @var string 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskLevel;
+
+    /**
+     * @var array 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckPlatform;
+
+    /**
      * @param string $FileName 文件名称
      * @param string $FilePath 文件路径
      * @param string $VirusName 病毒名称
@@ -335,6 +370,15 @@ VALIDATION: 参数非法
 	"UNKNOW"              // 原因未知
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
      * @param string $MD5 md5值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RiskLevel 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CheckPlatform 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -424,6 +468,14 @@ VALIDATION: 参数非法
 
         if (array_key_exists("MD5",$param) and $param["MD5"] !== null) {
             $this->MD5 = $param["MD5"];
+        }
+
+        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
+            $this->RiskLevel = $param["RiskLevel"];
+        }
+
+        if (array_key_exists("CheckPlatform",$param) and $param["CheckPlatform"] !== null) {
+            $this->CheckPlatform = $param["CheckPlatform"];
         }
     }
 }

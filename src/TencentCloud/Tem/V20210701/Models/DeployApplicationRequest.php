@@ -126,12 +126,16 @@ use TencentCloud\Common\AbstractModel;
 当选择konajdk时，可选参数：
 - ALPINE
 - TENCENTOS
- * @method EnablePrometheusConf getEnablePrometheusConf() 获取是否开启prometheus 业务指标监控
- * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) 设置是否开启prometheus 业务指标监控
- * @method integer getEnableTracing() 获取1：开始apm采集（skywalking）；
+ * @method EnablePrometheusConf getEnablePrometheusConf() 获取metrics业务指标监控配置
+ * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) 设置metrics业务指标监控配置
+ * @method integer getEnableTracing() 获取1：开始自动apm采集（skywalking）；
 0：关闭apm采集；
- * @method void setEnableTracing(integer $EnableTracing) 设置1：开始apm采集（skywalking）；
+ * @method void setEnableTracing(integer $EnableTracing) 设置1：开始自动apm采集（skywalking）；
 0：关闭apm采集；
+ * @method integer getEnableMetrics() 获取1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+ * @method void setEnableMetrics(integer $EnableMetrics) 设置1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -345,15 +349,21 @@ class DeployApplicationRequest extends AbstractModel
     public $OsFlavour;
 
     /**
-     * @var EnablePrometheusConf 是否开启prometheus 业务指标监控
+     * @var EnablePrometheusConf metrics业务指标监控配置
      */
     public $EnablePrometheusConf;
 
     /**
-     * @var integer 1：开始apm采集（skywalking）；
+     * @var integer 1：开始自动apm采集（skywalking）；
 0：关闭apm采集；
      */
     public $EnableTracing;
+
+    /**
+     * @var integer 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+     */
+    public $EnableMetrics;
 
     /**
      * @param string $ApplicationId 应用ID
@@ -409,9 +419,11 @@ class DeployApplicationRequest extends AbstractModel
 当选择konajdk时，可选参数：
 - ALPINE
 - TENCENTOS
-     * @param EnablePrometheusConf $EnablePrometheusConf 是否开启prometheus 业务指标监控
-     * @param integer $EnableTracing 1：开始apm采集（skywalking）；
+     * @param EnablePrometheusConf $EnablePrometheusConf metrics业务指标监控配置
+     * @param integer $EnableTracing 1：开始自动apm采集（skywalking）；
 0：关闭apm采集；
+     * @param integer $EnableMetrics 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
      */
     function __construct()
     {
@@ -626,6 +638,10 @@ class DeployApplicationRequest extends AbstractModel
 
         if (array_key_exists("EnableTracing",$param) and $param["EnableTracing"] !== null) {
             $this->EnableTracing = $param["EnableTracing"];
+        }
+
+        if (array_key_exists("EnableMetrics",$param) and $param["EnableMetrics"] !== null) {
+            $this->EnableMetrics = $param["EnableMetrics"];
         }
     }
 }

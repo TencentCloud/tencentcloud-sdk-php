@@ -56,6 +56,8 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\DestroyConfigDataResponse DestroyConfigData(Models\DestroyConfigDataRequest $req) 销毁配置
  * @method Models\DestroyEnvironmentResponse DestroyEnvironment(Models\DestroyEnvironmentRequest $req) 销毁环境
  * @method Models\DestroyLogConfigResponse DestroyLogConfig(Models\DestroyLogConfigRequest $req) 销毁日志收集配置
+ * @method Models\DisableApplicationAutoscalerResponse DisableApplicationAutoscaler(Models\DisableApplicationAutoscalerRequest $req) 关闭应用弹性策略组合
+ * @method Models\EnableApplicationAutoscalerResponse EnableApplicationAutoscaler(Models\EnableApplicationAutoscalerRequest $req) 启用应用弹性策略组合
  * @method Models\GenerateApplicationPackageDownloadUrlResponse GenerateApplicationPackageDownloadUrl(Models\GenerateApplicationPackageDownloadUrlRequest $req) 生成应用程序包预签名下载链接
  * @method Models\ModifyApplicationAutoscalerResponse ModifyApplicationAutoscaler(Models\ModifyApplicationAutoscalerRequest $req) 修改弹性伸缩策略组合
  * @method Models\ModifyApplicationInfoResponse ModifyApplicationInfo(Models\ModifyApplicationInfoRequest $req) 修改应用基本信息

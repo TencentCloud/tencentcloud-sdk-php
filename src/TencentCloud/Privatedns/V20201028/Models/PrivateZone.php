@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCustomTld(boolean $IsCustomTld) 设置是否自定义TLD
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCnameSpeedupStatus() 获取CNAME加速状态：开通：ENABLED, 关闭，DISABLED
+ * @method void setCnameSpeedupStatus(string $CnameSpeedupStatus) 设置CNAME加速状态：开通：ENABLED, 关闭，DISABLED
  */
 class PrivateZone extends AbstractModel
 {
@@ -124,6 +126,11 @@ class PrivateZone extends AbstractModel
     public $IsCustomTld;
 
     /**
+     * @var string CNAME加速状态：开通：ENABLED, 关闭，DISABLED
+     */
+    public $CnameSpeedupStatus;
+
+    /**
      * @param string $ZoneId 私有域id: zone-xxxxxxxx
      * @param integer $OwnerUin 域名所有者uin
      * @param string $Domain 私有域名
@@ -140,6 +147,7 @@ class PrivateZone extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsCustomTld 是否自定义TLD
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CnameSpeedupStatus CNAME加速状态：开通：ENABLED, 关闭，DISABLED
      */
     function __construct()
     {
@@ -219,6 +227,10 @@ class PrivateZone extends AbstractModel
 
         if (array_key_exists("IsCustomTld",$param) and $param["IsCustomTld"] !== null) {
             $this->IsCustomTld = $param["IsCustomTld"];
+        }
+
+        if (array_key_exists("CnameSpeedupStatus",$param) and $param["CnameSpeedupStatus"] !== null) {
+            $this->CnameSpeedupStatus = $param["CnameSpeedupStatus"];
         }
     }
 }

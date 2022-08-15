@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 不缓存配置
  *
- * @method string getSwitch() 获取不缓存配置开关
-on：开启
-off：关闭
+ * @method string getSwitch() 获取不缓存配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置不缓存配置开关
-on：开启
-off：关闭
+ * @method void setSwitch(string $Switch) 设置不缓存配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheConfigNoCache extends AbstractModel
 {
     /**
-     * @var string 不缓存配置开关
-on：开启
-off：关闭
+     * @var string 不缓存配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
-     * @param string $Switch 不缓存配置开关
-on：开启
-off：关闭
+     * @param string $Switch 不缓存配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

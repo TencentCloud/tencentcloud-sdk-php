@@ -22,12 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDigest() 获取哈希值
  * @method void setDigest(string $Digest) 设置哈希值
- * @method integer getSize() 获取镜像大小
- * @method void setSize(integer $Size) 设置镜像大小
+ * @method integer getSize() 获取镜像体积（单位：字节）
+ * @method void setSize(integer $Size) 设置镜像体积（单位：字节）
  * @method string getImageVersion() 获取Tag名称
  * @method void setImageVersion(string $ImageVersion) 设置Tag名称
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method string getKind() 获取制品类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKind(string $Kind) 设置制品类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKmsSignature() 获取KMS 签名信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKmsSignature(string $KmsSignature) 设置KMS 签名信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TcrImageInfo extends AbstractModel
 {
@@ -37,7 +45,7 @@ class TcrImageInfo extends AbstractModel
     public $Digest;
 
     /**
-     * @var integer 镜像大小
+     * @var integer 镜像体积（单位：字节）
      */
     public $Size;
 
@@ -52,10 +60,26 @@ class TcrImageInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 制品类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Kind;
+
+    /**
+     * @var string KMS 签名信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KmsSignature;
+
+    /**
      * @param string $Digest 哈希值
-     * @param integer $Size 镜像大小
+     * @param integer $Size 镜像体积（单位：字节）
      * @param string $ImageVersion Tag名称
      * @param string $UpdateTime 更新时间
+     * @param string $Kind 制品类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KmsSignature KMS 签名信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +108,14 @@ class TcrImageInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Kind",$param) and $param["Kind"] !== null) {
+            $this->Kind = $param["Kind"];
+        }
+
+        if (array_key_exists("KmsSignature",$param) and $param["KmsSignature"] !== null) {
+            $this->KmsSignature = $param["KmsSignature"];
         }
     }
 }

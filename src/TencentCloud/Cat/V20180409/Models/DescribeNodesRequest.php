@@ -31,11 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLocation() 获取节点区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 海外 </li>
+<li> 3 = 境外</li>
  * @method void setLocation(integer $Location) 设置节点区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 海外 </li>
+<li> 3 = 境外</li>
  * @method boolean getIsIPv6() 获取是否IPv6
  * @method void setIsIPv6(boolean $IsIPv6) 设置是否IPv6
  * @method string getNodeName() 获取名字模糊搜索
@@ -75,7 +75,7 @@ class DescribeNodesRequest extends AbstractModel
      * @var integer 节点区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 海外 </li>
+<li> 3 = 境外</li>
      */
     public $Location;
 
@@ -115,7 +115,7 @@ class DescribeNodesRequest extends AbstractModel
      * @param integer $Location 节点区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 海外 </li>
+<li> 3 = 境外</li>
      * @param boolean $IsIPv6 是否IPv6
      * @param string $NodeName 名字模糊搜索
      * @param integer $PayMode 付费模式

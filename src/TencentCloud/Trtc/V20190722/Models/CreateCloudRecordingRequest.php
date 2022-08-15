@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageParams(StorageParams $StorageParams) 设置云端录制文件上传到云存储的参数(目前只支持使用腾讯云点播作为存储)。
  * @method integer getRoomIdType() 获取TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId（默认）
+1: 32位整型的RoomId
  * @method void setRoomIdType(integer $RoomIdType) 设置TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId（默认）
+1: 32位整型的RoomId
  * @method MixTranscodeParams getMixTranscodeParams() 获取混流的转码参数，录制模式为混流的时候可以设置。
  * @method void setMixTranscodeParams(MixTranscodeParams $MixTranscodeParams) 设置混流的转码参数，录制模式为混流的时候可以设置。
  * @method MixLayoutParams getMixLayoutParams() 获取混流的布局参数，录制模式为混流的时候可以设置。
@@ -82,7 +82,7 @@ class CreateCloudRecordingRequest extends AbstractModel
     /**
      * @var integer TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId（默认）
+1: 32位整型的RoomId
      */
     public $RoomIdType;
 
@@ -115,7 +115,7 @@ class CreateCloudRecordingRequest extends AbstractModel
      * @param StorageParams $StorageParams 云端录制文件上传到云存储的参数(目前只支持使用腾讯云点播作为存储)。
      * @param integer $RoomIdType TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
 0: 字符串类型的RoomId
-1: 32位整型的RoomId（默认）
+1: 32位整型的RoomId
      * @param MixTranscodeParams $MixTranscodeParams 混流的转码参数，录制模式为混流的时候可以设置。
      * @param MixLayoutParams $MixLayoutParams 混流的布局参数，录制模式为混流的时候可以设置。
      * @param integer $ResourceExpiredHour 接口可以调用的时效性，从成功开启录制并获得任务ID后开始计算，超时后无法调用查询、更新和停止等接口，但是录制任务不会停止。 参数的单位是小时，默认72小时（3天），最大可设置720小时（30天），最小设置6小时。举例说明：如果不设置该参数，那么开始录制成功后，查询、更新和停止录制的调用时效为72个小时。

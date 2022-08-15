@@ -18,35 +18,47 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 客户端IP头部
+ * 存储客户端请求IP的头部信息配置
  *
- * @method string getSwitch() 获取客户端IP头部配置开关
+ * @method string getSwitch() 获取配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置客户端IP头部配置开关
+ * @method void setSwitch(string $Switch) 设置配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHeaderName() 获取回源客户端IP请求头名称
+ * @method string getHeaderName() 获取回源时，存放客户端IP的请求头名称。
+为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeaderName(string $HeaderName) 设置回源客户端IP请求头名称
+ * @method void setHeaderName(string $HeaderName) 设置回源时，存放客户端IP的请求头名称。
+为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClientIp extends AbstractModel
 {
     /**
-     * @var string 客户端IP头部配置开关
+     * @var string 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
-     * @var string 回源客户端IP请求头名称
+     * @var string 回源时，存放客户端IP的请求头名称。
+为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeaderName;
 
     /**
-     * @param string $Switch 客户端IP头部配置开关
+     * @param string $Switch 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HeaderName 回源客户端IP请求头名称
+     * @param string $HeaderName 回源时，存放客户端IP的请求头名称。
+为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

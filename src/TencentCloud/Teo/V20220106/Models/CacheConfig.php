@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 缓存规则配置。
  *
- * @method CacheConfigCache getCache() 获取缓存配置
+ * @method CacheConfigCache getCache() 获取缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCache(CacheConfigCache $Cache) 设置缓存配置
+ * @method void setCache(CacheConfigCache $Cache) 设置缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CacheConfigNoCache getNoCache() 获取不缓存配置
+ * @method CacheConfigNoCache getNoCache() 获取不缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoCache(CacheConfigNoCache $NoCache) 设置不缓存配置
+ * @method void setNoCache(CacheConfigNoCache $NoCache) 设置不缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CacheConfigFollowOrigin getFollowOrigin() 获取遵循源站配置
+ * @method CacheConfigFollowOrigin getFollowOrigin() 获取遵循源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFollowOrigin(CacheConfigFollowOrigin $FollowOrigin) 设置遵循源站配置
+ * @method void setFollowOrigin(CacheConfigFollowOrigin $FollowOrigin) 设置遵循源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheConfig extends AbstractModel
 {
     /**
-     * @var CacheConfigCache 缓存配置
+     * @var CacheConfigCache 缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cache;
 
     /**
-     * @var CacheConfigNoCache 不缓存配置
+     * @var CacheConfigNoCache 不缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoCache;
 
     /**
-     * @var CacheConfigFollowOrigin 遵循源站配置
+     * @var CacheConfigFollowOrigin 遵循源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FollowOrigin;
 
     /**
-     * @param CacheConfigCache $Cache 缓存配置
+     * @param CacheConfigCache $Cache 缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheConfigNoCache $NoCache 不缓存配置
+     * @param CacheConfigNoCache $NoCache 不缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheConfigFollowOrigin $FollowOrigin 遵循源站配置
+     * @param CacheConfigFollowOrigin $FollowOrigin 遵循源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 浏览器缓存规则配置，用于设置 MaxAge 默认值，默认为关闭状态
  *
- * @method integer getMaxAgeTime() 获取MaxAge 时间设置，单位秒，最大365天
+ * @method string getFollowOrigin() 获取是否遵循源站，取值有：
+<li>on：遵循源站，忽略MaxAge 时间设置；</li>
+<li>off：不遵循源站，使用MaxAge 时间设置。</li>
+ * @method void setFollowOrigin(string $FollowOrigin) 设置是否遵循源站，取值有：
+<li>on：遵循源站，忽略MaxAge 时间设置；</li>
+<li>off：不遵循源站，使用MaxAge 时间设置。</li>
+ * @method integer getMaxAgeTime() 获取MaxAge 时间设置，单位秒，最大365天。
 注意：时间为0，即不缓存。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxAgeTime(integer $MaxAgeTime) 设置MaxAge 时间设置，单位秒，最大365天
+ * @method void setMaxAgeTime(integer $MaxAgeTime) 设置MaxAge 时间设置，单位秒，最大365天。
 注意：时间为0，即不缓存。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFollowOrigin() 获取是否遵循源站，on或off，开启时忽略时间设置。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFollowOrigin(string $FollowOrigin) 设置是否遵循源站，on或off，开启时忽略时间设置。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MaxAge extends AbstractModel
 {
     /**
-     * @var integer MaxAge 时间设置，单位秒，最大365天
-注意：时间为0，即不缓存。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MaxAgeTime;
-
-    /**
-     * @var string 是否遵循源站，on或off，开启时忽略时间设置。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 是否遵循源站，取值有：
+<li>on：遵循源站，忽略MaxAge 时间设置；</li>
+<li>off：不遵循源站，使用MaxAge 时间设置。</li>
      */
     public $FollowOrigin;
 
     /**
-     * @param integer $MaxAgeTime MaxAge 时间设置，单位秒，最大365天
+     * @var integer MaxAge 时间设置，单位秒，最大365天。
 注意：时间为0，即不缓存。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FollowOrigin 是否遵循源站，on或off，开启时忽略时间设置。
-注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxAgeTime;
+
+    /**
+     * @param string $FollowOrigin 是否遵循源站，取值有：
+<li>on：遵循源站，忽略MaxAge 时间设置；</li>
+<li>off：不遵循源站，使用MaxAge 时间设置。</li>
+     * @param integer $MaxAgeTime MaxAge 时间设置，单位秒，最大365天。
+注意：时间为0，即不缓存。
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class MaxAge extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MaxAgeTime",$param) and $param["MaxAgeTime"] !== null) {
-            $this->MaxAgeTime = $param["MaxAgeTime"];
-        }
-
         if (array_key_exists("FollowOrigin",$param) and $param["FollowOrigin"] !== null) {
             $this->FollowOrigin = $param["FollowOrigin"];
+        }
+
+        if (array_key_exists("MaxAgeTime",$param) and $param["MaxAgeTime"] !== null) {
+            $this->MaxAgeTime = $param["MaxAgeTime"];
         }
     }
 }

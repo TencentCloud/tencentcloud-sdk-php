@@ -49,12 +49,12 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLocation() 获取区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 国外 </li>
+<li> 3 = 境外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(integer $Location) 设置区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 国外 </li>
+<li> 3 = 境外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCodeType() 获取节点类型  如果为base 则为可用性拨测点，为空则为高级拨测点
 注意：此字段可能返回 null，表示取不到有效值。
@@ -112,7 +112,7 @@ class NodeDefineExt extends AbstractModel
      * @var integer 区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 国外 </li>
+<li> 3 = 境外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
@@ -146,7 +146,7 @@ class NodeDefineExt extends AbstractModel
      * @param integer $Location 区域
 <li> 1 = 中国大陆 </li>
 <li> 2 = 港澳台 </li>
-<li> 3 = 国外 </li>
+<li> 3 = 境外 </li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CodeType 节点类型  如果为base 则为可用性拨测点，为空则为高级拨测点
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 访问协议强制https跳转配置
  *
- * @method string getSwitch() 获取访问强制跳转配置开关
-on：开启
-off：关闭
- * @method void setSwitch(string $Switch) 设置访问强制跳转配置开关
-on：开启
-off：关闭
- * @method integer getRedirectStatusCode() 获取重定向状态码
-301
-302
+ * @method string getSwitch() 获取访问强制跳转配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+ * @method void setSwitch(string $Switch) 设置访问强制跳转配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+ * @method integer getRedirectStatusCode() 获取重定向状态码，取值有：
+<li>301：301跳转；</li>
+<li>302：302跳转。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRedirectStatusCode(integer $RedirectStatusCode) 设置重定向状态码
-301
-302
+ * @method void setRedirectStatusCode(integer $RedirectStatusCode) 设置重定向状态码，取值有：
+<li>301：301跳转；</li>
+<li>302：302跳转。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ForceRedirect extends AbstractModel
 {
     /**
-     * @var string 访问强制跳转配置开关
-on：开启
-off：关闭
+     * @var string 访问强制跳转配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public $Switch;
 
     /**
-     * @var integer 重定向状态码
-301
-302
+     * @var integer 重定向状态码，取值有：
+<li>301：301跳转；</li>
+<li>302：302跳转。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RedirectStatusCode;
 
     /**
-     * @param string $Switch 访问强制跳转配置开关
-on：开启
-off：关闭
-     * @param integer $RedirectStatusCode 重定向状态码
-301
-302
+     * @param string $Switch 访问强制跳转配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param integer $RedirectStatusCode 重定向状态码，取值有：
+<li>301：301跳转；</li>
+<li>302：302跳转。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

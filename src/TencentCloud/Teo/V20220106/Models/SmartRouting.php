@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能加速配置
  *
- * @method string getSwitch() 获取智能加速配置开关
-on：开启
-off：关闭
- * @method void setSwitch(string $Switch) 设置智能加速配置开关
-on：开启
-off：关闭
+ * @method string getSwitch() 获取智能加速配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+ * @method void setSwitch(string $Switch) 设置智能加速配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
  */
 class SmartRouting extends AbstractModel
 {
     /**
-     * @var string 智能加速配置开关
-on：开启
-off：关闭
+     * @var string 智能加速配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public $Switch;
 
     /**
-     * @param string $Switch 智能加速配置开关
-on：开启
-off：关闭
+     * @param string $Switch 智能加速配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     function __construct()
     {

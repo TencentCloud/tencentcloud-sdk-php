@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注
  * @method string getDnsForwardStatus() 获取是否开启子域名递归, ENABLED， DISABLED
  * @method void setDnsForwardStatus(string $DnsForwardStatus) 设置是否开启子域名递归, ENABLED， DISABLED
+ * @method string getCnameSpeedupStatus() 获取是否开启CNAME加速：ENABLED， DISABLED
+ * @method void setCnameSpeedupStatus(string $CnameSpeedupStatus) 设置是否开启CNAME加速：ENABLED， DISABLED
  */
 class ModifyPrivateZoneRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyPrivateZoneRequest extends AbstractModel
     public $DnsForwardStatus;
 
     /**
+     * @var string 是否开启CNAME加速：ENABLED， DISABLED
+     */
+    public $CnameSpeedupStatus;
+
+    /**
      * @param string $ZoneId 私有域ID
      * @param string $Remark 备注
      * @param string $DnsForwardStatus 是否开启子域名递归, ENABLED， DISABLED
+     * @param string $CnameSpeedupStatus 是否开启CNAME加速：ENABLED， DISABLED
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyPrivateZoneRequest extends AbstractModel
 
         if (array_key_exists("DnsForwardStatus",$param) and $param["DnsForwardStatus"] !== null) {
             $this->DnsForwardStatus = $param["DnsForwardStatus"];
+        }
+
+        if (array_key_exists("CnameSpeedupStatus",$param) and $param["CnameSpeedupStatus"] !== null) {
+            $this->CnameSpeedupStatus = $param["CnameSpeedupStatus"];
         }
     }
 }

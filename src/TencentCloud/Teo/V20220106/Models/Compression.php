@@ -20,37 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能压缩配置
  *
- * @method string getSwitch() 获取智能压缩配置开关
-on：开启
-off：关闭
- * @method void setSwitch(string $Switch) 设置智能压缩配置开关
-on：开启
-off：关闭
- * @method array getAlgorithms() 获取支持的压缩算法列表
+ * @method string getSwitch() 获取智能压缩配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+ * @method void setSwitch(string $Switch) 设置智能压缩配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+ * @method array getAlgorithms() 获取支持的压缩算法列表，取值有：
+<li>brotli：brotli算法；</li>
+<li>gzip：gzip算法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlgorithms(array $Algorithms) 设置支持的压缩算法列表
+ * @method void setAlgorithms(array $Algorithms) 设置支持的压缩算法列表，取值有：
+<li>brotli：brotli算法；</li>
+<li>gzip：gzip算法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Compression extends AbstractModel
 {
     /**
-     * @var string 智能压缩配置开关
-on：开启
-off：关闭
+     * @var string 智能压缩配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public $Switch;
 
     /**
-     * @var array 支持的压缩算法列表
+     * @var array 支持的压缩算法列表，取值有：
+<li>brotli：brotli算法；</li>
+<li>gzip：gzip算法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Algorithms;
 
     /**
-     * @param string $Switch 智能压缩配置开关
-on：开启
-off：关闭
-     * @param array $Algorithms 支持的压缩算法列表
+     * @param string $Switch 智能压缩配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param array $Algorithms 支持的压缩算法列表，取值有：
+<li>brotli：brotli算法；</li>
+<li>gzip：gzip算法。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

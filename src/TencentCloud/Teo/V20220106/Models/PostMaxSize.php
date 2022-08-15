@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * POST请求上传文件流式传输最大限制
  *
- * @method string getSwitch() 获取是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
- * @method void setSwitch(string $Switch) 设置是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
- * @method integer getMaxSize() 获取最大限制，取值在1MB和500MB之间。单位字节
+ * @method string getSwitch() 获取是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+<li>on：开启限制；</li>
+<li>off：关闭限制。</li>
+ * @method void setSwitch(string $Switch) 设置是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+<li>on：开启限制；</li>
+<li>off：关闭限制。</li>
+ * @method integer getMaxSize() 获取最大限制，取值在1MB和500MB之间。单位字节。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxSize(integer $MaxSize) 设置最大限制，取值在1MB和500MB之间。单位字节
+ * @method void setMaxSize(integer $MaxSize) 设置最大限制，取值在1MB和500MB之间。单位字节。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PostMaxSize extends AbstractModel
 {
     /**
-     * @var string 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
+     * @var string 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+<li>on：开启限制；</li>
+<li>off：关闭限制。</li>
      */
     public $Switch;
 
     /**
-     * @var integer 最大限制，取值在1MB和500MB之间。单位字节
+     * @var integer 最大限制，取值在1MB和500MB之间。单位字节。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxSize;
 
     /**
-     * @param string $Switch 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
-     * @param integer $MaxSize 最大限制，取值在1MB和500MB之间。单位字节
+     * @param string $Switch 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+<li>on：开启限制；</li>
+<li>off：关闭限制。</li>
+     * @param integer $MaxSize 最大限制，取值在1MB和500MB之间。单位字节。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

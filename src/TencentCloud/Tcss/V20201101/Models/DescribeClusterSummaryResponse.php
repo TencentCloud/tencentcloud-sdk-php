@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIndependentClusterCount(integer $IndependentClusterCount) 设置独立集群数量
  * @method integer getNoRiskClusterCount() 获取无风险的集群数量
  * @method void setNoRiskClusterCount(integer $NoRiskClusterCount) 设置无风险的集群数量
+ * @method integer getCheckedClusterCount() 获取已经检查集群数
+ * @method void setCheckedClusterCount(integer $CheckedClusterCount) 设置已经检查集群数
+ * @method integer getAutoCheckClusterCount() 获取自动检查集群数
+ * @method void setAutoCheckClusterCount(integer $AutoCheckClusterCount) 设置自动检查集群数
+ * @method integer getManualCheckClusterCount() 获取手动检查集群数
+ * @method void setManualCheckClusterCount(integer $ManualCheckClusterCount) 设置手动检查集群数
+ * @method integer getFailedClusterCount() 获取检查失败集群数
+ * @method void setFailedClusterCount(integer $FailedClusterCount) 设置检查失败集群数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +76,26 @@ class DescribeClusterSummaryResponse extends AbstractModel
     public $NoRiskClusterCount;
 
     /**
+     * @var integer 已经检查集群数
+     */
+    public $CheckedClusterCount;
+
+    /**
+     * @var integer 自动检查集群数
+     */
+    public $AutoCheckClusterCount;
+
+    /**
+     * @var integer 手动检查集群数
+     */
+    public $ManualCheckClusterCount;
+
+    /**
+     * @var integer 检查失败集群数
+     */
+    public $FailedClusterCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +107,10 @@ class DescribeClusterSummaryResponse extends AbstractModel
      * @param integer $ManagedClusterCount 托管集群数量
      * @param integer $IndependentClusterCount 独立集群数量
      * @param integer $NoRiskClusterCount 无风险的集群数量
+     * @param integer $CheckedClusterCount 已经检查集群数
+     * @param integer $AutoCheckClusterCount 自动检查集群数
+     * @param integer $ManualCheckClusterCount 手动检查集群数
+     * @param integer $FailedClusterCount 检查失败集群数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +148,22 @@ class DescribeClusterSummaryResponse extends AbstractModel
 
         if (array_key_exists("NoRiskClusterCount",$param) and $param["NoRiskClusterCount"] !== null) {
             $this->NoRiskClusterCount = $param["NoRiskClusterCount"];
+        }
+
+        if (array_key_exists("CheckedClusterCount",$param) and $param["CheckedClusterCount"] !== null) {
+            $this->CheckedClusterCount = $param["CheckedClusterCount"];
+        }
+
+        if (array_key_exists("AutoCheckClusterCount",$param) and $param["AutoCheckClusterCount"] !== null) {
+            $this->AutoCheckClusterCount = $param["AutoCheckClusterCount"];
+        }
+
+        if (array_key_exists("ManualCheckClusterCount",$param) and $param["ManualCheckClusterCount"] !== null) {
+            $this->ManualCheckClusterCount = $param["ManualCheckClusterCount"];
+        }
+
+        if (array_key_exists("FailedClusterCount",$param) and $param["FailedClusterCount"] !== null) {
+            $this->FailedClusterCount = $param["FailedClusterCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

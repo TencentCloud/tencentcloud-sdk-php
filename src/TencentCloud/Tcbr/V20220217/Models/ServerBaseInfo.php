@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置服务状态：running/deploying/deploy_failed
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method array getAccessTypes() 获取公网访问类型
+ * @method void setAccessTypes(array $AccessTypes) 设置公网访问类型
  */
 class ServerBaseInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ServerBaseInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var array 公网访问类型
+     */
+    public $AccessTypes;
+
+    /**
      * @param string $ServerName 服务名
      * @param string $DefaultDomainName 默认服务域名
      * @param string $CustomDomainName 自定义域名
      * @param string $Status 服务状态：running/deploying/deploy_failed
      * @param string $UpdateTime 更新时间
+     * @param array $AccessTypes 公网访问类型
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ServerBaseInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("AccessTypes",$param) and $param["AccessTypes"] !== null) {
+            $this->AccessTypes = $param["AccessTypes"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAll(boolean $All) 设置列出所有命名空间
  * @method array getFilters() 获取过滤条件
  * @method void setFilters(array $Filters) 设置过滤条件
+ * @method boolean getKmsSignPolicy() 获取仅查询启用了 KMS 镜像签名的空间
+ * @method void setKmsSignPolicy(boolean $KmsSignPolicy) 设置仅查询启用了 KMS 镜像签名的空间
  */
 class DescribeNamespacesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeNamespacesRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var boolean 仅查询启用了 KMS 镜像签名的空间
+     */
+    public $KmsSignPolicy;
+
+    /**
      * @param string $RegistryId 实例Id
      * @param string $NamespaceName 指定命名空间，不填写默认查询所有命名空间
      * @param integer $Limit 每页个数
      * @param integer $Offset 页面偏移（第几页）
      * @param boolean $All 列出所有命名空间
      * @param array $Filters 过滤条件
+     * @param boolean $KmsSignPolicy 仅查询启用了 KMS 镜像签名的空间
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class DescribeNamespacesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("KmsSignPolicy",$param) and $param["KmsSignPolicy"] !== null) {
+            $this->KmsSignPolicy = $param["KmsSignPolicy"];
         }
     }
 }

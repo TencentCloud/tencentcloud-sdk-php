@@ -20,53 +20,61 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 缓存键配置
  *
- * @method string getFullUrlCache() 获取是否开启全路径缓存
-on：开启全路径缓存（即关闭参数忽略）
-off：关闭全路径缓存（即开启参数忽略）
+ * @method string getFullUrlCache() 获取是否开启全路径缓存，取值有：
+<li>on：开启全路径缓存（即关闭参数忽略）；</li>
+<li>off：关闭全路径缓存（即开启参数忽略）。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFullUrlCache(string $FullUrlCache) 设置是否开启全路径缓存
-on：开启全路径缓存（即关闭参数忽略）
-off：关闭全路径缓存（即开启参数忽略）
+ * @method void setFullUrlCache(string $FullUrlCache) 设置是否开启全路径缓存，取值有：
+<li>on：开启全路径缓存（即关闭参数忽略）；</li>
+<li>off：关闭全路径缓存（即开启参数忽略）。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIgnoreCase() 获取是否忽略大小写缓存
+ * @method string getIgnoreCase() 获取是否忽略大小写缓存，取值有：
+<li>on：忽略；</li>
+<li>off：不忽略。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIgnoreCase(string $IgnoreCase) 设置是否忽略大小写缓存
+ * @method void setIgnoreCase(string $IgnoreCase) 设置是否忽略大小写缓存，取值有：
+<li>on：忽略；</li>
+<li>off：不忽略。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method QueryString getQueryString() 获取CacheKey中包含请求参数
+ * @method QueryString getQueryString() 获取CacheKey中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQueryString(QueryString $QueryString) 设置CacheKey中包含请求参数
+ * @method void setQueryString(QueryString $QueryString) 设置CacheKey中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheKey extends AbstractModel
 {
     /**
-     * @var string 是否开启全路径缓存
-on：开启全路径缓存（即关闭参数忽略）
-off：关闭全路径缓存（即开启参数忽略）
+     * @var string 是否开启全路径缓存，取值有：
+<li>on：开启全路径缓存（即关闭参数忽略）；</li>
+<li>off：关闭全路径缓存（即开启参数忽略）。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FullUrlCache;
 
     /**
-     * @var string 是否忽略大小写缓存
+     * @var string 是否忽略大小写缓存，取值有：
+<li>on：忽略；</li>
+<li>off：不忽略。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoreCase;
 
     /**
-     * @var QueryString CacheKey中包含请求参数
+     * @var QueryString CacheKey中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QueryString;
 
     /**
-     * @param string $FullUrlCache 是否开启全路径缓存
-on：开启全路径缓存（即关闭参数忽略）
-off：关闭全路径缓存（即开启参数忽略）
+     * @param string $FullUrlCache 是否开启全路径缓存，取值有：
+<li>on：开启全路径缓存（即关闭参数忽略）；</li>
+<li>off：关闭全路径缓存（即开启参数忽略）。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IgnoreCase 是否忽略大小写缓存
+     * @param string $IgnoreCase 是否忽略大小写缓存，取值有：
+<li>on：忽略；</li>
+<li>off：不忽略。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QueryString $QueryString CacheKey中包含请求参数
+     * @param QueryString $QueryString CacheKey中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

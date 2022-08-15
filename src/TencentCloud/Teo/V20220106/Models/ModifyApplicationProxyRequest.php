@@ -20,82 +20,86 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplicationProxy请求参数结构体
  *
- * @method string getZoneId() 获取站点ID
- * @method void setZoneId(string $ZoneId) 设置站点ID
- * @method string getProxyId() 获取代理ID
- * @method void setProxyId(string $ProxyId) 设置代理ID
- * @method string getProxyName() 获取代理名称
-当ProxyType=hostname时，表示域名或者子域名
-当ProxyType=instance时，表示实例名称
- * @method void setProxyName(string $ProxyName) 设置代理名称
-当ProxyType=hostname时，表示域名或者子域名
-当ProxyType=instance时，表示实例名称
- * @method string getForwardClientIp() 获取参数已经废弃
- * @method void setForwardClientIp(string $ForwardClientIp) 设置参数已经废弃
- * @method boolean getSessionPersist() 获取参数已经废弃
- * @method void setSessionPersist(boolean $SessionPersist) 设置参数已经废弃
- * @method integer getSessionPersistTime() 获取会话保持时间，取值范围：30-3600，单位：秒
- * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间，取值范围：30-3600，单位：秒
- * @method string getProxyType() 获取服务类型
-hostname：子域名模式
-instance：实例模式
- * @method void setProxyType(string $ProxyType) 设置服务类型
-hostname：子域名模式
-instance：实例模式
+ * @method string getZoneId() 获取站点ID。
+ * @method void setZoneId(string $ZoneId) 设置站点ID。
+ * @method string getProxyId() 获取代理ID。
+ * @method void setProxyId(string $ProxyId) 设置代理ID。
+ * @method string getProxyName() 获取当ProxyType=hostname时，表示域名或子域名；
+当ProxyType=instance时，表示代理名称。
+ * @method void setProxyName(string $ProxyName) 设置当ProxyType=hostname时，表示域名或子域名；
+当ProxyType=instance时，表示代理名称。
+ * @method string getForwardClientIp() 获取参数已经废弃。
+ * @method void setForwardClientIp(string $ForwardClientIp) 设置参数已经废弃。
+ * @method boolean getSessionPersist() 获取参数已经废弃。
+ * @method void setSessionPersist(boolean $SessionPersist) 设置参数已经废弃。
+ * @method integer getSessionPersistTime() 获取会话保持时间，不填写保持原有配置。取值范围：30-3600，单位：秒。
+ * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持时间，不填写保持原有配置。取值范围：30-3600，单位：秒。
+ * @method string getProxyType() 获取四层代理模式，取值有：
+<li>hostname：表示子域名模式；</li>
+<li>instance：表示实例模式。</li>不填写保持原有配置。
+ * @method void setProxyType(string $ProxyType) 设置四层代理模式，取值有：
+<li>hostname：表示子域名模式；</li>
+<li>instance：表示实例模式。</li>不填写保持原有配置。
+ * @method Ipv6Access getIpv6() 获取Ipv6访问配置，不填写保持原有配置。
+ * @method void setIpv6(Ipv6Access $Ipv6) 设置Ipv6访问配置，不填写保持原有配置。
  */
 class ModifyApplicationProxyRequest extends AbstractModel
 {
     /**
-     * @var string 站点ID
+     * @var string 站点ID。
      */
     public $ZoneId;
 
     /**
-     * @var string 代理ID
+     * @var string 代理ID。
      */
     public $ProxyId;
 
     /**
-     * @var string 代理名称
-当ProxyType=hostname时，表示域名或者子域名
-当ProxyType=instance时，表示实例名称
+     * @var string 当ProxyType=hostname时，表示域名或子域名；
+当ProxyType=instance时，表示代理名称。
      */
     public $ProxyName;
 
     /**
-     * @var string 参数已经废弃
+     * @var string 参数已经废弃。
      */
     public $ForwardClientIp;
 
     /**
-     * @var boolean 参数已经废弃
+     * @var boolean 参数已经废弃。
      */
     public $SessionPersist;
 
     /**
-     * @var integer 会话保持时间，取值范围：30-3600，单位：秒
+     * @var integer 会话保持时间，不填写保持原有配置。取值范围：30-3600，单位：秒。
      */
     public $SessionPersistTime;
 
     /**
-     * @var string 服务类型
-hostname：子域名模式
-instance：实例模式
+     * @var string 四层代理模式，取值有：
+<li>hostname：表示子域名模式；</li>
+<li>instance：表示实例模式。</li>不填写保持原有配置。
      */
     public $ProxyType;
 
     /**
-     * @param string $ZoneId 站点ID
-     * @param string $ProxyId 代理ID
-     * @param string $ProxyName 代理名称
-当ProxyType=hostname时，表示域名或者子域名
-当ProxyType=instance时，表示实例名称
-     * @param string $ForwardClientIp 参数已经废弃
-     * @param boolean $SessionPersist 参数已经废弃
-     * @param integer $SessionPersistTime 会话保持时间，取值范围：30-3600，单位：秒
-     * @param string $ProxyType 服务类型
-hostname：子域名模式
-instance：实例模式
+     * @var Ipv6Access Ipv6访问配置，不填写保持原有配置。
+     */
+    public $Ipv6;
+
+    /**
+     * @param string $ZoneId 站点ID。
+     * @param string $ProxyId 代理ID。
+     * @param string $ProxyName 当ProxyType=hostname时，表示域名或子域名；
+当ProxyType=instance时，表示代理名称。
+     * @param string $ForwardClientIp 参数已经废弃。
+     * @param boolean $SessionPersist 参数已经废弃。
+     * @param integer $SessionPersistTime 会话保持时间，不填写保持原有配置。取值范围：30-3600，单位：秒。
+     * @param string $ProxyType 四层代理模式，取值有：
+<li>hostname：表示子域名模式；</li>
+<li>instance：表示实例模式。</li>不填写保持原有配置。
+     * @param Ipv6Access $Ipv6 Ipv6访问配置，不填写保持原有配置。
      */
     function __construct()
     {
@@ -136,6 +140,11 @@ instance：实例模式
 
         if (array_key_exists("ProxyType",$param) and $param["ProxyType"] !== null) {
             $this->ProxyType = $param["ProxyType"];
+        }
+
+        if (array_key_exists("Ipv6",$param) and $param["Ipv6"] !== null) {
+            $this->Ipv6 = new Ipv6Access();
+            $this->Ipv6->deserialize($param["Ipv6"]);
         }
     }
 }

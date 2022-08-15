@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplicationProxy返回参数结构体
  *
- * @method string getProxyId() 获取新增的四层代理应用ID
- * @method void setProxyId(string $ProxyId) 设置新增的四层代理应用ID
+ * @method string getProxyId() 获取新增的四层代理应用ID。
+ * @method void setProxyId(string $ProxyId) 设置新增的四层代理应用ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateApplicationProxyResponse extends AbstractModel
 {
     /**
-     * @var string 新增的四层代理应用ID
+     * @var string 新增的四层代理应用ID。
      */
     public $ProxyId;
 
@@ -38,7 +38,7 @@ class CreateApplicationProxyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ProxyId 新增的四层代理应用ID
+     * @param string $ProxyId 新增的四层代理应用ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

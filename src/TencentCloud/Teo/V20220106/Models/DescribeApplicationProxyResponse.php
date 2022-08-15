@@ -20,58 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApplicationProxy返回参数结构体
  *
- * @method array getData() 获取数据列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置数据列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取记录总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置记录总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQuota() 获取字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuota(integer $Quota) 设置字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIpCount() 获取表示套餐内PlatType为ip的Anycast IP实例数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpCount(integer $IpCount) 设置表示套餐内PlatType为ip的Anycast IP实例数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDomainCount() 获取表示套餐内PlatType为domain的CNAME实例数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDomainCount(integer $DomainCount) 设置表示套餐内PlatType为domain的CNAME实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getData() 获取应用代理列表。
+ * @method void setData(array $Data) 设置应用代理列表。
+ * @method integer getTotalCount() 获取记录总数。
+ * @method void setTotalCount(integer $TotalCount) 设置记录总数。
+ * @method integer getQuota() 获取字段已废弃。
+ * @method void setQuota(integer $Quota) 设置字段已废弃。
+ * @method integer getIpCount() 获取当ProxyId为空时，表示套餐内PlatType为ip的Anycast IP的实例数量。
+ * @method void setIpCount(integer $IpCount) 设置当ProxyId为空时，表示套餐内PlatType为ip的Anycast IP的实例数量。
+ * @method integer getDomainCount() 获取当ProxyId为空时，表示套餐内PlatType为domain的CNAME的实例数量。
+ * @method void setDomainCount(integer $DomainCount) 设置当ProxyId为空时，表示套餐内PlatType为domain的CNAME的实例数量。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeApplicationProxyResponse extends AbstractModel
 {
     /**
-     * @var array 数据列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 应用代理列表。
      */
     public $Data;
 
     /**
-     * @var integer 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 记录总数。
      */
     public $TotalCount;
 
     /**
-     * @var integer 字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 字段已废弃。
      */
     public $Quota;
 
     /**
-     * @var integer 表示套餐内PlatType为ip的Anycast IP实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 当ProxyId为空时，表示套餐内PlatType为ip的Anycast IP的实例数量。
      */
     public $IpCount;
 
     /**
-     * @var integer 表示套餐内PlatType为domain的CNAME实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 当ProxyId为空时，表示套餐内PlatType为domain的CNAME的实例数量。
      */
     public $DomainCount;
 
@@ -81,16 +66,11 @@ class DescribeApplicationProxyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 数据列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Quota 字段已废弃
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IpCount 表示套餐内PlatType为ip的Anycast IP实例数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DomainCount 表示套餐内PlatType为domain的CNAME实例数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Data 应用代理列表。
+     * @param integer $TotalCount 记录总数。
+     * @param integer $Quota 字段已废弃。
+     * @param integer $IpCount 当ProxyId为空时，表示套餐内PlatType为ip的Anycast IP的实例数量。
+     * @param integer $DomainCount 当ProxyId为空时，表示套餐内PlatType为domain的CNAME的实例数量。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

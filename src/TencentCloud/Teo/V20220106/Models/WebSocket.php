@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * WebSocket配置
  *
- * @method string getSwitch() 获取WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
- * @method void setSwitch(string $Switch) 设置WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
- * @method integer getTimeout() 获取设置超时时间，单位为秒，最大超时时间120秒。
- * @method void setTimeout(integer $Timeout) 设置设置超时时间，单位为秒，最大超时时间120秒。
+ * @method string getSwitch() 获取WebSocket 超时时间配置开关，取值有：
+<li>on：使用Timeout作为WebSocket超时时间；</li>
+<li>off：平台仍支持WebSocket连接，此时使用系统默认的15秒为超时时间。</li>
+ * @method void setSwitch(string $Switch) 设置WebSocket 超时时间配置开关，取值有：
+<li>on：使用Timeout作为WebSocket超时时间；</li>
+<li>off：平台仍支持WebSocket连接，此时使用系统默认的15秒为超时时间。</li>
+ * @method integer getTimeout() 获取超时时间，单位为秒，最大超时时间120秒。
+ * @method void setTimeout(integer $Timeout) 设置超时时间，单位为秒，最大超时时间120秒。
  */
 class WebSocket extends AbstractModel
 {
     /**
-     * @var string WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+     * @var string WebSocket 超时时间配置开关，取值有：
+<li>on：使用Timeout作为WebSocket超时时间；</li>
+<li>off：平台仍支持WebSocket连接，此时使用系统默认的15秒为超时时间。</li>
      */
     public $Switch;
 
     /**
-     * @var integer 设置超时时间，单位为秒，最大超时时间120秒。
+     * @var integer 超时时间，单位为秒，最大超时时间120秒。
      */
     public $Timeout;
 
     /**
-     * @param string $Switch WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
-     * @param integer $Timeout 设置超时时间，单位为秒，最大超时时间120秒。
+     * @param string $Switch WebSocket 超时时间配置开关，取值有：
+<li>on：使用Timeout作为WebSocket超时时间；</li>
+<li>off：平台仍支持WebSocket连接，此时使用系统默认的15秒为超时时间。</li>
+     * @param integer $Timeout 超时时间，单位为秒，最大超时时间120秒。
      */
     function __construct()
     {

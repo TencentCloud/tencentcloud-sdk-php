@@ -20,29 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 缓存预刷新
  *
- * @method string getSwitch() 获取缓存预刷新配置开关
- * @method void setSwitch(string $Switch) 设置缓存预刷新配置开关
- * @method integer getPercent() 获取缓存预刷新百分比：1-99
+ * @method string getSwitch() 获取缓存预刷新配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+ * @method void setSwitch(string $Switch) 设置缓存预刷新配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+ * @method integer getPercent() 获取缓存预刷新百分比，取值范围：1-99。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPercent(integer $Percent) 设置缓存预刷新百分比：1-99
+ * @method void setPercent(integer $Percent) 设置缓存预刷新百分比，取值范围：1-99。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CachePrefresh extends AbstractModel
 {
     /**
-     * @var string 缓存预刷新配置开关
+     * @var string 缓存预刷新配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     public $Switch;
 
     /**
-     * @var integer 缓存预刷新百分比：1-99
+     * @var integer 缓存预刷新百分比，取值范围：1-99。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Percent;
 
     /**
-     * @param string $Switch 缓存预刷新配置开关
-     * @param integer $Percent 缓存预刷新百分比：1-99
+     * @param string $Switch 缓存预刷新配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+     * @param integer $Percent 缓存预刷新百分比，取值范围：1-99。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

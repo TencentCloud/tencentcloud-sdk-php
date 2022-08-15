@@ -20,69 +20,73 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZoneSetting返回参数结构体
  *
- * @method CacheConfig getCache() 获取缓存过期时间配置
+ * @method string getZoneId() 获取站点ID。
+ * @method void setZoneId(string $ZoneId) 设置站点ID。
+ * @method string getZone() 获取站点名称。
+ * @method void setZone(string $Zone) 设置站点名称。
+ * @method CacheConfig getCache() 获取缓存过期时间配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCache(CacheConfig $Cache) 设置缓存过期时间配置
+ * @method void setCache(CacheConfig $Cache) 设置缓存过期时间配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CacheKey getCacheKey() 获取节点缓存键配置
+ * @method CacheKey getCacheKey() 获取节点缓存键配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCacheKey(CacheKey $CacheKey) 设置节点缓存键配置
+ * @method void setCacheKey(CacheKey $CacheKey) 设置节点缓存键配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MaxAge getMaxAge() 获取浏览器缓存配置
+ * @method Quic getQuic() 获取Quic访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxAge(MaxAge $MaxAge) 设置浏览器缓存配置
+ * @method void setQuic(Quic $Quic) 设置Quic访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method OfflineCache getOfflineCache() 获取离线缓存
+ * @method PostMaxSize getPostMaxSize() 获取POST请求传输配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存
+ * @method void setPostMaxSize(PostMaxSize $PostMaxSize) 设置POST请求传输配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Quic getQuic() 获取Quic访问
+ * @method Compression getCompression() 获取智能压缩配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQuic(Quic $Quic) 设置Quic访问
+ * @method void setCompression(Compression $Compression) 设置智能压缩配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method PostMaxSize getPostMaxSize() 获取POST请求传输配置
+ * @method UpstreamHttp2 getUpstreamHttp2() 获取Http2回源配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPostMaxSize(PostMaxSize $PostMaxSize) 设置POST请求传输配置
+ * @method void setUpstreamHttp2(UpstreamHttp2 $UpstreamHttp2) 设置Http2回源配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Compression getCompression() 获取智能压缩配置
+ * @method ForceRedirect getForceRedirect() 获取访问协议强制Https跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompression(Compression $Compression) 设置智能压缩配置
+ * @method void setForceRedirect(ForceRedirect $ForceRedirect) 设置访问协议强制Https跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method UpstreamHttp2 getUpstreamHttp2() 获取http2回源配置
+ * @method Https getHttps() 获取Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpstreamHttp2(UpstreamHttp2 $UpstreamHttp2) 设置http2回源配置
+ * @method void setHttps(Https $Https) 设置Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ForceRedirect getForceRedirect() 获取访问协议强制https跳转配置
+ * @method Origin getOrigin() 获取源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setForceRedirect(ForceRedirect $ForceRedirect) 设置访问协议强制https跳转配置
+ * @method void setOrigin(Origin $Origin) 设置源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Https getHttps() 获取Https 加速配置
+ * @method SmartRouting getSmartRouting() 获取智能加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttps(Https $Https) 设置Https 加速配置
+ * @method void setSmartRouting(SmartRouting $SmartRouting) 设置智能加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Origin getOrigin() 获取源站配置
+ * @method MaxAge getMaxAge() 获取浏览器缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrigin(Origin $Origin) 设置源站配置
+ * @method void setMaxAge(MaxAge $MaxAge) 设置浏览器缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SmartRouting getSmartRouting() 获取动态加速配置
+ * @method OfflineCache getOfflineCache() 获取离线缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSmartRouting(SmartRouting $SmartRouting) 设置动态加速配置
+ * @method void setOfflineCache(OfflineCache $OfflineCache) 设置离线缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getZoneId() 获取站点ID
- * @method void setZoneId(string $ZoneId) 设置站点ID
- * @method string getZone() 获取站点域名
- * @method void setZone(string $Zone) 设置站点域名
- * @method WebSocket getWebSocket() 获取WebSocket配置
+ * @method WebSocket getWebSocket() 获取WebSocket配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置
+ * @method void setWebSocket(WebSocket $WebSocket) 设置WebSocket配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ClientIp getClientIpHeader() 获取客户端IP回源请求头配置
+ * @method ClientIp getClientIpHeader() 获取客户端IP回源请求头配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClientIpHeader(ClientIp $ClientIpHeader) 设置客户端IP回源请求头配置
+ * @method void setClientIpHeader(ClientIp $ClientIpHeader) 设置客户端IP回源请求头配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method CachePrefresh getCachePrefresh() 获取缓存预刷新配置
+ * @method CachePrefresh getCachePrefresh() 获取缓存预刷新配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCachePrefresh(CachePrefresh $CachePrefresh) 设置缓存预刷新配置
+ * @method void setCachePrefresh(CachePrefresh $CachePrefresh) 设置缓存预刷新配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Ipv6Access getIpv6() 获取Ipv6访问配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6(Ipv6Access $Ipv6) 设置Ipv6访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -90,104 +94,110 @@ use TencentCloud\Common\AbstractModel;
 class DescribeZoneSettingResponse extends AbstractModel
 {
     /**
-     * @var CacheConfig 缓存过期时间配置
+     * @var string 站点ID。
+     */
+    public $ZoneId;
+
+    /**
+     * @var string 站点名称。
+     */
+    public $Zone;
+
+    /**
+     * @var CacheConfig 缓存过期时间配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cache;
 
     /**
-     * @var CacheKey 节点缓存键配置
+     * @var CacheKey 节点缓存键配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CacheKey;
 
     /**
-     * @var MaxAge 浏览器缓存配置
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MaxAge;
-
-    /**
-     * @var OfflineCache 离线缓存
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $OfflineCache;
-
-    /**
-     * @var Quic Quic访问
+     * @var Quic Quic访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quic;
 
     /**
-     * @var PostMaxSize POST请求传输配置
+     * @var PostMaxSize POST请求传输配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostMaxSize;
 
     /**
-     * @var Compression 智能压缩配置
+     * @var Compression 智能压缩配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Compression;
 
     /**
-     * @var UpstreamHttp2 http2回源配置
+     * @var UpstreamHttp2 Http2回源配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamHttp2;
 
     /**
-     * @var ForceRedirect 访问协议强制https跳转配置
+     * @var ForceRedirect 访问协议强制Https跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForceRedirect;
 
     /**
-     * @var Https Https 加速配置
+     * @var Https Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Https;
 
     /**
-     * @var Origin 源站配置
+     * @var Origin 源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Origin;
 
     /**
-     * @var SmartRouting 动态加速配置
+     * @var SmartRouting 智能加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmartRouting;
 
     /**
-     * @var string 站点ID
+     * @var MaxAge 浏览器缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ZoneId;
+    public $MaxAge;
 
     /**
-     * @var string 站点域名
+     * @var OfflineCache 离线缓存配置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Zone;
+    public $OfflineCache;
 
     /**
-     * @var WebSocket WebSocket配置
+     * @var WebSocket WebSocket配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebSocket;
 
     /**
-     * @var ClientIp 客户端IP回源请求头配置
+     * @var ClientIp 客户端IP回源请求头配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientIpHeader;
 
     /**
-     * @var CachePrefresh 缓存预刷新配置
+     * @var CachePrefresh 缓存预刷新配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CachePrefresh;
+
+    /**
+     * @var Ipv6Access Ipv6访问配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -195,37 +205,39 @@ class DescribeZoneSettingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param CacheConfig $Cache 缓存过期时间配置
+     * @param string $ZoneId 站点ID。
+     * @param string $Zone 站点名称。
+     * @param CacheConfig $Cache 缓存过期时间配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CacheKey $CacheKey 节点缓存键配置
+     * @param CacheKey $CacheKey 节点缓存键配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxAge $MaxAge 浏览器缓存配置
+     * @param Quic $Quic Quic访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OfflineCache $OfflineCache 离线缓存
+     * @param PostMaxSize $PostMaxSize POST请求传输配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Quic $Quic Quic访问
+     * @param Compression $Compression 智能压缩配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostMaxSize $PostMaxSize POST请求传输配置
+     * @param UpstreamHttp2 $UpstreamHttp2 Http2回源配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Compression $Compression 智能压缩配置
+     * @param ForceRedirect $ForceRedirect 访问协议强制Https跳转配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamHttp2 $UpstreamHttp2 http2回源配置
+     * @param Https $Https Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ForceRedirect $ForceRedirect 访问协议强制https跳转配置
+     * @param Origin $Origin 源站配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Https $Https Https 加速配置
+     * @param SmartRouting $SmartRouting 智能加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Origin $Origin 源站配置
+     * @param MaxAge $MaxAge 浏览器缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SmartRouting $SmartRouting 动态加速配置
+     * @param OfflineCache $OfflineCache 离线缓存配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ZoneId 站点ID
-     * @param string $Zone 站点域名
-     * @param WebSocket $WebSocket WebSocket配置
+     * @param WebSocket $WebSocket WebSocket配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClientIp $ClientIpHeader 客户端IP回源请求头配置
+     * @param ClientIp $ClientIpHeader 客户端IP回源请求头配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CachePrefresh $CachePrefresh 缓存预刷新配置
+     * @param CachePrefresh $CachePrefresh 缓存预刷新配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6Access $Ipv6 Ipv6访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -242,6 +254,14 @@ class DescribeZoneSettingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
         if (array_key_exists("Cache",$param) and $param["Cache"] !== null) {
             $this->Cache = new CacheConfig();
             $this->Cache->deserialize($param["Cache"]);
@@ -250,16 +270,6 @@ class DescribeZoneSettingResponse extends AbstractModel
         if (array_key_exists("CacheKey",$param) and $param["CacheKey"] !== null) {
             $this->CacheKey = new CacheKey();
             $this->CacheKey->deserialize($param["CacheKey"]);
-        }
-
-        if (array_key_exists("MaxAge",$param) and $param["MaxAge"] !== null) {
-            $this->MaxAge = new MaxAge();
-            $this->MaxAge->deserialize($param["MaxAge"]);
-        }
-
-        if (array_key_exists("OfflineCache",$param) and $param["OfflineCache"] !== null) {
-            $this->OfflineCache = new OfflineCache();
-            $this->OfflineCache->deserialize($param["OfflineCache"]);
         }
 
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
@@ -302,12 +312,14 @@ class DescribeZoneSettingResponse extends AbstractModel
             $this->SmartRouting->deserialize($param["SmartRouting"]);
         }
 
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
+        if (array_key_exists("MaxAge",$param) and $param["MaxAge"] !== null) {
+            $this->MaxAge = new MaxAge();
+            $this->MaxAge->deserialize($param["MaxAge"]);
         }
 
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
+        if (array_key_exists("OfflineCache",$param) and $param["OfflineCache"] !== null) {
+            $this->OfflineCache = new OfflineCache();
+            $this->OfflineCache->deserialize($param["OfflineCache"]);
         }
 
         if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
@@ -323,6 +335,11 @@ class DescribeZoneSettingResponse extends AbstractModel
         if (array_key_exists("CachePrefresh",$param) and $param["CachePrefresh"] !== null) {
             $this->CachePrefresh = new CachePrefresh();
             $this->CachePrefresh->deserialize($param["CachePrefresh"]);
+        }
+
+        if (array_key_exists("Ipv6",$param) and $param["Ipv6"] !== null) {
+            $this->Ipv6 = new Ipv6Access();
+            $this->Ipv6->deserialize($param["Ipv6"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

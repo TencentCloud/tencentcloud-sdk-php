@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillMonth(string $BillMonth) 设置账单月份，格式2019-08
  * @method string getTotalCost() 获取原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
  * @method void setTotalCost(string $TotalCost) 设置原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+ * @method string getTransferPayAmount() 获取分成金金额
+ * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金金额
  */
 class BusinessSummaryOverviewItem extends AbstractModel
 {
@@ -90,6 +92,11 @@ class BusinessSummaryOverviewItem extends AbstractModel
     public $TotalCost;
 
     /**
+     * @var string 分成金金额
+     */
+    public $TransferPayAmount;
+
+    /**
      * @param string $BusinessCode 产品名称代码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
@@ -100,6 +107,7 @@ class BusinessSummaryOverviewItem extends AbstractModel
      * @param string $VoucherPayAmount 代金券金额
      * @param string $BillMonth 账单月份，格式2019-08
      * @param string $TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+     * @param string $TransferPayAmount 分成金金额
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class BusinessSummaryOverviewItem extends AbstractModel
 
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
             $this->TotalCost = $param["TotalCost"];
+        }
+
+        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
+            $this->TransferPayAmount = $param["TransferPayAmount"];
         }
     }
 }

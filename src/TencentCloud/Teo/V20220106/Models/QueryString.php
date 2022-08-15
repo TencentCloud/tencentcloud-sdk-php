@@ -20,49 +20,61 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CacheKey中包含请求参数
  *
- * @method string getSwitch() 获取on | off CacheKey是否由QueryString组成
+ * @method string getSwitch() 获取CacheKey是否由QueryString组成，取值有：
+<li>on：是；</li>
+<li>off：否。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置on | off CacheKey是否由QueryString组成
+ * @method void setSwitch(string $Switch) 设置CacheKey是否由QueryString组成，取值有：
+<li>on：是；</li>
+<li>off：否。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAction() 获取includeCustom:使用部分url参数
-excludeCustom:排除部分url参数
+ * @method string getAction() 获取CacheKey使用QueryString的方式，取值有：
+<li>includeCustom：使用部分url参数；</li>
+<li>excludeCustom：排除部分url参数。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAction(string $Action) 设置includeCustom:使用部分url参数
-excludeCustom:排除部分url参数
+ * @method void setAction(string $Action) 设置CacheKey使用QueryString的方式，取值有：
+<li>includeCustom：使用部分url参数；</li>
+<li>excludeCustom：排除部分url参数。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getValue() 获取使用/排除的url参数数组
+ * @method array getValue() 获取使用/排除的url参数数组。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(array $Value) 设置使用/排除的url参数数组
+ * @method void setValue(array $Value) 设置使用/排除的url参数数组。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueryString extends AbstractModel
 {
     /**
-     * @var string on | off CacheKey是否由QueryString组成
+     * @var string CacheKey是否由QueryString组成，取值有：
+<li>on：是；</li>
+<li>off：否。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
-     * @var string includeCustom:使用部分url参数
-excludeCustom:排除部分url参数
+     * @var string CacheKey使用QueryString的方式，取值有：
+<li>includeCustom：使用部分url参数；</li>
+<li>excludeCustom：排除部分url参数。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
-     * @var array 使用/排除的url参数数组
+     * @var array 使用/排除的url参数数组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
-     * @param string $Switch on | off CacheKey是否由QueryString组成
+     * @param string $Switch CacheKey是否由QueryString组成，取值有：
+<li>on：是；</li>
+<li>off：否。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Action includeCustom:使用部分url参数
-excludeCustom:排除部分url参数
+     * @param string $Action CacheKey使用QueryString的方式，取值有：
+<li>includeCustom：使用部分url参数；</li>
+<li>excludeCustom：排除部分url参数。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Value 使用/排除的url参数数组
+     * @param array $Value 使用/排除的url参数数组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

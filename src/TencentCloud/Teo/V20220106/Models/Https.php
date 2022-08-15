@@ -20,27 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 域名 https 加速配置，默认为关闭状态
  *
- * @method string getHttp2() 获取http2 配置开关
-on：开启
-off：关闭
+ * @method string getHttp2() 获取http2 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttp2(string $Http2) 设置http2 配置开关
-on：开启
-off：关闭
+ * @method void setHttp2(string $Http2) 设置http2 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOcspStapling() 获取OCSP 配置开关
-on：开启
-off：关闭
-默认为关闭状态
+ * @method string getOcspStapling() 获取OCSP 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOcspStapling(string $OcspStapling) 设置OCSP 配置开关
-on：开启
-off：关闭
-默认为关闭状态
+ * @method void setOcspStapling(string $OcspStapling) 设置OCSP 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTlsVersion() 获取Tls版本设置，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+ * @method array getTlsVersion() 获取Tls版本设置，取值有：
+<li>TLSv1：TLSv1版本；</li>
+<li>TLSV1.1：TLSv1.1版本；</li>
+<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTlsVersion(array $TlsVersion) 设置Tls版本设置，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+ * @method void setTlsVersion(array $TlsVersion) 设置Tls版本设置，取值有：
+<li>TLSv1：TLSv1版本；</li>
+<li>TLSV1.1：TLSv1.1版本；</li>
+<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method Hsts getHsts() 获取HSTS 配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,24 +56,27 @@ off：关闭
 class Https extends AbstractModel
 {
     /**
-     * @var string http2 配置开关
-on：开启
-off：关闭
+     * @var string http2 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Http2;
 
     /**
-     * @var string OCSP 配置开关
-on：开启
-off：关闭
-默认为关闭状态
+     * @var string OCSP 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcspStapling;
 
     /**
-     * @var array Tls版本设置，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+     * @var array Tls版本设置，取值有：
+<li>TLSv1：TLSv1版本；</li>
+<li>TLSV1.1：TLSv1.1版本；</li>
+<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TlsVersion;
@@ -79,16 +88,19 @@ off：关闭
     public $Hsts;
 
     /**
-     * @param string $Http2 http2 配置开关
-on：开启
-off：关闭
+     * @param string $Http2 http2 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OcspStapling OCSP 配置开关
-on：开启
-off：关闭
-默认为关闭状态
+     * @param string $OcspStapling OCSP 配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TlsVersion Tls版本设置，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+     * @param array $TlsVersion Tls版本设置，取值有：
+<li>TLSv1：TLSv1版本；</li>
+<li>TLSV1.1：TLSv1.1版本；</li>
+<li>TLSV1.2：TLSv1.2版本；</li>
+<li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Hsts $Hsts HSTS 配置。
 注意：此字段可能返回 null，表示取不到有效值。

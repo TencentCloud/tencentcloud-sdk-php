@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApplicationProxyDetail请求参数结构体
  *
- * @method string getZoneId() 获取站点ID
- * @method void setZoneId(string $ZoneId) 设置站点ID
- * @method string getProxyId() 获取实例ID
- * @method void setProxyId(string $ProxyId) 设置实例ID
+ * @method string getZoneId() 获取站点ID。
+ * @method void setZoneId(string $ZoneId) 设置站点ID。
+ * @method string getProxyId() 获取实例ID。
+ * @method void setProxyId(string $ProxyId) 设置实例ID。
  */
 class DescribeApplicationProxyDetailRequest extends AbstractModel
 {
     /**
-     * @var string 站点ID
+     * @var string 站点ID。
      */
     public $ZoneId;
 
     /**
-     * @var string 实例ID
+     * @var string 实例ID。
      */
     public $ProxyId;
 
     /**
-     * @param string $ZoneId 站点ID
-     * @param string $ProxyId 实例ID
+     * @param string $ZoneId 站点ID。
+     * @param string $ProxyId 实例ID。
      */
     function __construct()
     {

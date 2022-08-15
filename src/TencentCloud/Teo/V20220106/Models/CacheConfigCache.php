@@ -20,65 +20,65 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 缓存时间设置
  *
- * @method string getSwitch() 获取缓存配置开关
-on：开启
-off：关闭
+ * @method string getSwitch() 获取缓存配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置缓存配置开关
-on：开启
-off：关闭
+ * @method void setSwitch(string $Switch) 设置缓存配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCacheTime() 获取缓存过期时间设置
-单位为秒，最大可设置为 365 天
+ * @method integer getCacheTime() 获取缓存过期时间设置。
+单位为秒，最大可设置为 365 天。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCacheTime(integer $CacheTime) 设置缓存过期时间设置
-单位为秒，最大可设置为 365 天
+ * @method void setCacheTime(integer $CacheTime) 设置缓存过期时间设置。
+单位为秒，最大可设置为 365 天。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIgnoreCacheControl() 获取是否开启强制缓存
-开启：on
-关闭：off
+ * @method string getIgnoreCacheControl() 获取是否开启强制缓存，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIgnoreCacheControl(string $IgnoreCacheControl) 设置是否开启强制缓存
-开启：on
-关闭：off
+ * @method void setIgnoreCacheControl(string $IgnoreCacheControl) 设置是否开启强制缓存，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheConfigCache extends AbstractModel
 {
     /**
-     * @var string 缓存配置开关
-on：开启
-off：关闭
+     * @var string 缓存配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
-     * @var integer 缓存过期时间设置
-单位为秒，最大可设置为 365 天
+     * @var integer 缓存过期时间设置。
+单位为秒，最大可设置为 365 天。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CacheTime;
 
     /**
-     * @var string 是否开启强制缓存
-开启：on
-关闭：off
+     * @var string 是否开启强制缓存，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoreCacheControl;
 
     /**
-     * @param string $Switch 缓存配置开关
-on：开启
-off：关闭
+     * @param string $Switch 缓存配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CacheTime 缓存过期时间设置
-单位为秒，最大可设置为 365 天
+     * @param integer $CacheTime 缓存过期时间设置。
+单位为秒，最大可设置为 365 天。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IgnoreCacheControl 是否开启强制缓存
-开启：on
-关闭：off
+     * @param string $IgnoreCacheControl 是否开启强制缓存，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

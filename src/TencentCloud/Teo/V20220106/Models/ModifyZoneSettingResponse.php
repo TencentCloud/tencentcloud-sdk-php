@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyZoneSetting返回参数结构体
  *
- * @method string getZoneId() 获取站点ID
- * @method void setZoneId(string $ZoneId) 设置站点ID
+ * @method string getZoneId() 获取站点ID。
+ * @method void setZoneId(string $ZoneId) 设置站点ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyZoneSettingResponse extends AbstractModel
 {
     /**
-     * @var string 站点ID
+     * @var string 站点ID。
      */
     public $ZoneId;
 
@@ -38,7 +38,7 @@ class ModifyZoneSettingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ZoneId 站点ID
+     * @param string $ZoneId 站点ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

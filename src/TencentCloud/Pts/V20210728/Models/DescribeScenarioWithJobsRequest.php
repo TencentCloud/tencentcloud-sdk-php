@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScenarioRelatedJobsParams(ScenarioRelatedJobsParams $ScenarioRelatedJobsParams) 设置job相关参数
  * @method boolean getIgnoreScript() 获取是否需要返回场景的脚本内容
  * @method void setIgnoreScript(boolean $IgnoreScript) 设置是否需要返回场景的脚本内容
+ * @method boolean getIgnoreDataset() 获取是否需要返回测试数据文件信息
+ * @method void setIgnoreDataset(boolean $IgnoreDataset) 设置是否需要返回测试数据文件信息
  */
 class DescribeScenarioWithJobsRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeScenarioWithJobsRequest extends AbstractModel
     public $IgnoreScript;
 
     /**
+     * @var boolean 是否需要返回测试数据文件信息
+     */
+    public $IgnoreDataset;
+
+    /**
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大为100
      * @param array $ProjectIds 项目ID数组
@@ -104,6 +111,7 @@ class DescribeScenarioWithJobsRequest extends AbstractModel
      * @param boolean $Ascend 是否正序
      * @param ScenarioRelatedJobsParams $ScenarioRelatedJobsParams job相关参数
      * @param boolean $IgnoreScript 是否需要返回场景的脚本内容
+     * @param boolean $IgnoreDataset 是否需要返回测试数据文件信息
      */
     function __construct()
     {
@@ -157,6 +165,10 @@ class DescribeScenarioWithJobsRequest extends AbstractModel
 
         if (array_key_exists("IgnoreScript",$param) and $param["IgnoreScript"] !== null) {
             $this->IgnoreScript = $param["IgnoreScript"];
+        }
+
+        if (array_key_exists("IgnoreDataset",$param) and $param["IgnoreDataset"] !== null) {
+            $this->IgnoreDataset = $param["IgnoreDataset"];
         }
     }
 }

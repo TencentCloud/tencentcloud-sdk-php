@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSampleRate(integer $SampleRate) 设置音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
  * @method string getCodec() 获取返回音频格式，可取值：wav（默认），mp3，pcm
  * @method void setCodec(string $Codec) 设置返回音频格式，可取值：wav（默认），mp3，pcm
+ * @method boolean getEnableSubtitle() 获取是否开启时间戳功能，默认为false。
+ * @method void setEnableSubtitle(boolean $EnableSubtitle) 设置是否开启时间戳功能，默认为false。
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -97,6 +99,11 @@ class TextToVoiceRequest extends AbstractModel
     public $Codec;
 
     /**
+     * @var boolean 是否开启时间戳功能，默认为false。
+     */
+    public $EnableSubtitle;
+
+    /**
      * @param string $Text 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
      * @param string $SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
@@ -108,6 +115,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param integer $PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      * @param integer $SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      * @param string $Codec 返回音频格式，可取值：wav（默认），mp3，pcm
+     * @param boolean $EnableSubtitle 是否开启时间戳功能，默认为false。
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ class TextToVoiceRequest extends AbstractModel
 
         if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
             $this->Codec = $param["Codec"];
+        }
+
+        if (array_key_exists("EnableSubtitle",$param) and $param["EnableSubtitle"] !== null) {
+            $this->EnableSubtitle = $param["EnableSubtitle"];
         }
     }
 }

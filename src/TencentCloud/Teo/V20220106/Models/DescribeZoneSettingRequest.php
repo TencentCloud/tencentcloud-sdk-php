@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZoneSetting请求参数结构体
  *
- * @method string getZoneId() 获取站点ID
- * @method void setZoneId(string $ZoneId) 设置站点ID
+ * @method string getZoneId() 获取站点ID。
+ * @method void setZoneId(string $ZoneId) 设置站点ID。
  */
 class DescribeZoneSettingRequest extends AbstractModel
 {
     /**
-     * @var string 站点ID
+     * @var string 站点ID。
      */
     public $ZoneId;
 
     /**
-     * @param string $ZoneId 站点ID
+     * @param string $ZoneId 站点ID。
      */
     function __construct()
     {

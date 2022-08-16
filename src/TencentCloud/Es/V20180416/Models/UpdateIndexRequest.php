@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) 设置集群访问用户名
  * @method string getPassword() 获取集群访问密码
  * @method void setPassword(string $Password) 设置集群访问密码
+ * @method boolean getRolloverBackingIndex() 获取是否滚动后备索引
+ * @method void setRolloverBackingIndex(boolean $RolloverBackingIndex) 设置是否滚动后备索引
  */
 class UpdateIndexRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class UpdateIndexRequest extends AbstractModel
     public $Password;
 
     /**
+     * @var boolean 是否滚动后备索引
+     */
+    public $RolloverBackingIndex;
+
+    /**
      * @param string $InstanceId ES集群ID
      * @param string $IndexType 更新的索引类型。auto：自治索引；normal：普通索引
      * @param string $IndexName 更新的索引名
      * @param string $UpdateMetaJson 更新的索引元数据JSON，如mappings、settings
      * @param string $Username 集群访问用户名
      * @param string $Password 集群访问密码
+     * @param boolean $RolloverBackingIndex 是否滚动后备索引
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class UpdateIndexRequest extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("RolloverBackingIndex",$param) and $param["RolloverBackingIndex"] !== null) {
+            $this->RolloverBackingIndex = $param["RolloverBackingIndex"];
         }
     }
 }

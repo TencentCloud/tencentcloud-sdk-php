@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDropInvalidMessage(boolean $DropInvalidMessage) 设置Mysql 是否抛弃解析失败的消息，默认为true
  * @method DropCls getDropCls() 获取当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
  * @method void setDropCls(DropCls $DropCls) 设置当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+ * @method string getOutputFormat() 获取输出格式，DEFAULT、CANAL_1、CANAL_2
+ * @method void setOutputFormat(string $OutputFormat) 设置输出格式，DEFAULT、CANAL_1、CANAL_2
+ * @method boolean getIsTablePrefix() 获取当Table输入的是前缀时，该项值为true，否则为false
+ * @method void setIsTablePrefix(boolean $IsTablePrefix) 设置当Table输入的是前缀时，该项值为true，否则为false
+ * @method string getIncludeContentChanges() 获取如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+ * @method void setIncludeContentChanges(string $IncludeContentChanges) 设置如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+ * @method boolean getIncludeQuery() 获取如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+ * @method void setIncludeQuery(boolean $IncludeQuery) 设置如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
  */
 class MySQLParam extends AbstractModel
 {
@@ -150,6 +158,26 @@ class MySQLParam extends AbstractModel
     public $DropCls;
 
     /**
+     * @var string 输出格式，DEFAULT、CANAL_1、CANAL_2
+     */
+    public $OutputFormat;
+
+    /**
+     * @var boolean 当Table输入的是前缀时，该项值为true，否则为false
+     */
+    public $IsTablePrefix;
+
+    /**
+     * @var string 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+     */
+    public $IncludeContentChanges;
+
+    /**
+     * @var boolean 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+     */
+    public $IncludeQuery;
+
+    /**
      * @param string $Database MySQL的数据库名称，"*"为全数据库
      * @param string $Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
      * @param string $Resource 该MySQL在连接管理内的Id
@@ -168,6 +196,10 @@ class MySQLParam extends AbstractModel
      * @param string $KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
      * @param boolean $DropInvalidMessage Mysql 是否抛弃解析失败的消息，默认为true
      * @param DropCls $DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+     * @param string $OutputFormat 输出格式，DEFAULT、CANAL_1、CANAL_2
+     * @param boolean $IsTablePrefix 当Table输入的是前缀时，该项值为true，否则为false
+     * @param string $IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+     * @param boolean $IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
      */
     function __construct()
     {
@@ -258,6 +290,22 @@ class MySQLParam extends AbstractModel
         if (array_key_exists("DropCls",$param) and $param["DropCls"] !== null) {
             $this->DropCls = new DropCls();
             $this->DropCls->deserialize($param["DropCls"]);
+        }
+
+        if (array_key_exists("OutputFormat",$param) and $param["OutputFormat"] !== null) {
+            $this->OutputFormat = $param["OutputFormat"];
+        }
+
+        if (array_key_exists("IsTablePrefix",$param) and $param["IsTablePrefix"] !== null) {
+            $this->IsTablePrefix = $param["IsTablePrefix"];
+        }
+
+        if (array_key_exists("IncludeContentChanges",$param) and $param["IncludeContentChanges"] !== null) {
+            $this->IncludeContentChanges = $param["IncludeContentChanges"];
+        }
+
+        if (array_key_exists("IncludeQuery",$param) and $param["IncludeQuery"] !== null) {
+            $this->IncludeQuery = $param["IncludeQuery"];
         }
     }
 }

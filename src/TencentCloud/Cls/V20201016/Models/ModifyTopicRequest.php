@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSplit(boolean $AutoSplit) 设置是否开启自动分裂
  * @method integer getMaxSplitPartitions() 获取若开启最大分裂，该主题能够能够允许的最大分区数
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置若开启最大分裂，该主题能够能够允许的最大分区数
- * @method integer getPeriod() 获取生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
- * @method void setPeriod(integer $Period) 设置生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+ * @method integer getPeriod() 获取生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存
+ * @method void setPeriod(integer $Period) 设置生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class ModifyTopicRequest extends AbstractModel
     public $MaxSplitPartitions;
 
     /**
-     * @var integer 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+     * @var integer 生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存
      */
     public $Period;
 
@@ -79,7 +79,7 @@ class ModifyTopicRequest extends AbstractModel
      * @param boolean $Status 该日志主题是否开始采集
      * @param boolean $AutoSplit 是否开启自动分裂
      * @param integer $MaxSplitPartitions 若开启最大分裂，该主题能够能够允许的最大分区数
-     * @param integer $Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+     * @param integer $Period 生命周期，单位天，标准存储取值范围1~3600，低频存储取值范围7~3600。取值为3640时代表永久保存
      */
     function __construct()
     {

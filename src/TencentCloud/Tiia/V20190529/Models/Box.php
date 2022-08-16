@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRect(ImageRect $Rect) 设置图像主体区域。
  * @method float getScore() 获取置信度。
  * @method void setScore(float $Score) 设置置信度。
+ * @method integer getCategoryId() 获取主体区域类目ID
+ * @method void setCategoryId(integer $CategoryId) 设置主体区域类目ID
  */
 class Box extends AbstractModel
 {
@@ -38,8 +40,14 @@ class Box extends AbstractModel
     public $Score;
 
     /**
+     * @var integer 主体区域类目ID
+     */
+    public $CategoryId;
+
+    /**
      * @param ImageRect $Rect 图像主体区域。
      * @param float $Score 置信度。
+     * @param integer $CategoryId 主体区域类目ID
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class Box extends AbstractModel
 
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
+        }
+
+        if (array_key_exists("CategoryId",$param) and $param["CategoryId"] !== null) {
+            $this->CategoryId = $param["CategoryId"];
         }
     }
 }

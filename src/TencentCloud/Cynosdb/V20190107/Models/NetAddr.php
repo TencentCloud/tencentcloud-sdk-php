@@ -40,6 +40,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetType(string $NetType) 设置网络类型（ro-只读,rw/ha-读写）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUniqSubnetId() 获取子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUniqVpcId() 获取私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescription(string $Description) 设置描述信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetAddr extends AbstractModel
 {
@@ -74,6 +86,24 @@ class NetAddr extends AbstractModel
     public $NetType;
 
     /**
+     * @var string 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UniqSubnetId;
+
+    /**
+     * @var string 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string 描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Description;
+
+    /**
      * @param string $Vip 内网ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Vport 内网端口号
@@ -83,6 +113,12 @@ class NetAddr extends AbstractModel
      * @param integer $WanPort 外网端口号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetType 网络类型（ro-只读,rw/ha-读写）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UniqSubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UniqVpcId 私有网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +152,18 @@ class NetAddr extends AbstractModel
 
         if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
             $this->NetType = $param["NetType"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

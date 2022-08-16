@@ -262,6 +262,14 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationDuration(OperationDuration $OperationDuration) 设置集群可维护时间段
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOptionalWebServiceInfos() 获取web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOptionalWebServiceInfos(array $OptionalWebServiceInfos) 设置web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoIndexEnabled() 获取自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoIndexEnabled(boolean $AutoIndexEnabled) 设置自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -691,6 +699,18 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $OperationDuration;
 
     /**
+     * @var array web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OptionalWebServiceInfos;
+
+    /**
+     * @var boolean 自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoIndexEnabled;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -811,6 +831,10 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param array $EsConfigSets 集群的配置组信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationDuration $OperationDuration 集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OptionalWebServiceInfos web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoIndexEnabled 自治索引开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1156,6 +1180,19 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
             $this->OperationDuration = new OperationDuration();
             $this->OperationDuration->deserialize($param["OperationDuration"]);
+        }
+
+        if (array_key_exists("OptionalWebServiceInfos",$param) and $param["OptionalWebServiceInfos"] !== null) {
+            $this->OptionalWebServiceInfos = [];
+            foreach ($param["OptionalWebServiceInfos"] as $key => $value){
+                $obj = new OptionalWebServiceInfo();
+                $obj->deserialize($value);
+                array_push($this->OptionalWebServiceInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("AutoIndexEnabled",$param) and $param["AutoIndexEnabled"] !== null) {
+            $this->AutoIndexEnabled = $param["AutoIndexEnabled"];
         }
     }
 }

@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutput(CosPathInfo $Output) 设置COS训练输出路径
  * @method boolean getLogEnable() 获取是否上报日志
  * @method void setLogEnable(boolean $LogEnable) 设置是否上报日志
- * @method string getFrameworkName() 获取训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
- * @method void setFrameworkName(string $FrameworkName) 设置训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
- * @method string getFrameworkVersion() 获取训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15-py3.6-cpu、1.9-py3.6-cuda11.1-gpu
- * @method void setFrameworkVersion(string $FrameworkVersion) 设置训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15-py3.6-cpu、1.9-py3.6-cuda11.1-gpu
+ * @method string getFrameworkName() 获取训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
+ * @method void setFrameworkName(string $FrameworkName) 设置训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
+ * @method string getFrameworkVersion() 获取训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+ * @method void setFrameworkVersion(string $FrameworkVersion) 设置训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
  * @method string getResourceGroupId() 获取预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
  * @method void setResourceGroupId(string $ResourceGroupId) 设置预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
  * @method array getTags() 获取标签配置
@@ -99,12 +99,12 @@ class CreateTrainingTaskRequest extends AbstractModel
     public $LogEnable;
 
     /**
-     * @var string 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+     * @var string 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
      */
     public $FrameworkName;
 
     /**
-     * @var string 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15-py3.6-cpu、1.9-py3.6-cuda11.1-gpu
+     * @var string 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
      */
     public $FrameworkVersion;
 
@@ -171,8 +171,8 @@ class CreateTrainingTaskRequest extends AbstractModel
      * @param CosPathInfo $CodePackagePath COS代码包路径
      * @param CosPathInfo $Output COS训练输出路径
      * @param boolean $LogEnable 是否上报日志
-     * @param string $FrameworkName 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
-     * @param string $FrameworkVersion 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15-py3.6-cpu、1.9-py3.6-cuda11.1-gpu
+     * @param string $FrameworkName 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
+     * @param string $FrameworkVersion 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
      * @param string $ResourceGroupId 预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
      * @param array $Tags 标签配置
      * @param ImageInfo $ImageInfo 自定义镜像信息

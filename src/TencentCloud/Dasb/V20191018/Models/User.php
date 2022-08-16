@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthType(integer $AuthType) 设置认证方式，0 - 本地，1 - LDAP，2 - OAuth
  * @method string getValidateTime() 获取访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
  * @method void setValidateTime(string $ValidateTime) 设置访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
+ * @method Department getDepartment() 获取用户所属部门（用于出参）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDepartment(Department $Department) 设置用户所属部门（用于出参）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDepartmentId() 获取用户所属部门（用于入参）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDepartmentId(string $DepartmentId) 设置用户所属部门（用于入参）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class User extends AbstractModel
 {
@@ -100,6 +108,18 @@ class User extends AbstractModel
     public $ValidateTime;
 
     /**
+     * @var Department 用户所属部门（用于出参）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Department;
+
+    /**
+     * @var string 用户所属部门（用于入参）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DepartmentId;
+
+    /**
      * @param string $UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      * @param string $RealName 用户姓名， 最大20个字符，不能包含空白字符
      * @param string $Phone 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
@@ -112,6 +132,10 @@ class User extends AbstractModel
      * @param array $GroupSet 所属用户组列表
      * @param integer $AuthType 认证方式，0 - 本地，1 - LDAP，2 - OAuth
      * @param string $ValidateTime 访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
+     * @param Department $Department 用户所属部门（用于出参）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DepartmentId 用户所属部门（用于入参）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -169,6 +193,15 @@ class User extends AbstractModel
 
         if (array_key_exists("ValidateTime",$param) and $param["ValidateTime"] !== null) {
             $this->ValidateTime = $param["ValidateTime"];
+        }
+
+        if (array_key_exists("Department",$param) and $param["Department"] !== null) {
+            $this->Department = new Department();
+            $this->Department->deserialize($param["Department"]);
+        }
+
+        if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
+            $this->DepartmentId = $param["DepartmentId"];
         }
     }
 }

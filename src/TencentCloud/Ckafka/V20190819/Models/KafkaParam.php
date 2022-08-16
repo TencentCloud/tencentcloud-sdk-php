@@ -58,6 +58,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQpsLimit(integer $QpsLimit) 设置Qps 限制
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTableMappings() 获取Table到Topic的路由，「分发到多个topic」开关打开时必传
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableMappings(array $TableMappings) 设置Table到Topic的路由，「分发到多个topic」开关打开时必传
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUseTableMapping() 获取「分发到多个topic」开关，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUseTableMapping(boolean $UseTableMapping) 设置「分发到多个topic」开关，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KafkaParam extends AbstractModel
 {
@@ -125,6 +133,18 @@ class KafkaParam extends AbstractModel
     public $QpsLimit;
 
     /**
+     * @var array Table到Topic的路由，「分发到多个topic」开关打开时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableMappings;
+
+    /**
+     * @var boolean 「分发到多个topic」开关，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UseTableMapping;
+
+    /**
      * @param boolean $SelfBuilt 是否为自建集群
      * @param string $Resource 实例资源
      * @param string $Topic Topic名称，多个以“,”分隔
@@ -143,6 +163,10 @@ class KafkaParam extends AbstractModel
      * @param boolean $EnableToleration 启用容错实例/开启死信队列
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QpsLimit Qps 限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TableMappings Table到Topic的路由，「分发到多个topic」开关打开时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $UseTableMapping 「分发到多个topic」开关，默认为false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -200,6 +224,19 @@ class KafkaParam extends AbstractModel
 
         if (array_key_exists("QpsLimit",$param) and $param["QpsLimit"] !== null) {
             $this->QpsLimit = $param["QpsLimit"];
+        }
+
+        if (array_key_exists("TableMappings",$param) and $param["TableMappings"] !== null) {
+            $this->TableMappings = [];
+            foreach ($param["TableMappings"] as $key => $value){
+                $obj = new TableMapping();
+                $obj->deserialize($value);
+                array_push($this->TableMappings, $obj);
+            }
+        }
+
+        if (array_key_exists("UseTableMapping",$param) and $param["UseTableMapping"] !== null) {
+            $this->UseTableMapping = $param["UseTableMapping"];
         }
     }
 }

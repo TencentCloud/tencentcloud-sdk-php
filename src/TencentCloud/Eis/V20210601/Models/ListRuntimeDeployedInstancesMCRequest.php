@@ -34,6 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置运行时地域
  * @method integer getApiVersion() 获取1:3.0版本新控制台传1；否则传0
  * @method void setApiVersion(integer $ApiVersion) 设置1:3.0版本新控制台传1；否则传0
+ * @method integer getGroupId() 获取-1:不按项目筛选，获取所有
+>=0: 按项目id筛选
+ * @method void setGroupId(integer $GroupId) 设置-1:不按项目筛选，获取所有
+>=0: 按项目id筛选
+ * @method integer getStatus() 获取-2: 不按状态筛选，获取所有
+0: 运行中
+2: 已停止
+ * @method void setStatus(integer $Status) 设置-2: 不按状态筛选，获取所有
+0: 运行中
+2: 已停止
  */
 class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
 {
@@ -73,6 +83,19 @@ class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
     public $ApiVersion;
 
     /**
+     * @var integer -1:不按项目筛选，获取所有
+>=0: 按项目id筛选
+     */
+    public $GroupId;
+
+    /**
+     * @var integer -2: 不按状态筛选，获取所有
+0: 运行中
+2: 已停止
+     */
+    public $Status;
+
+    /**
      * @param integer $RuntimeId 运行时id
      * @param integer $Limit 最大请求数量
      * @param integer $Offset 请求偏移量
@@ -80,6 +103,11 @@ class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
      * @param string $Sort 排序方式：asc，desc（默认）
      * @param string $Zone 运行时地域
      * @param integer $ApiVersion 1:3.0版本新控制台传1；否则传0
+     * @param integer $GroupId -1:不按项目筛选，获取所有
+>=0: 按项目id筛选
+     * @param integer $Status -2: 不按状态筛选，获取所有
+0: 运行中
+2: 已停止
      */
     function __construct()
     {
@@ -120,6 +148,14 @@ class ListRuntimeDeployedInstancesMCRequest extends AbstractModel
 
         if (array_key_exists("ApiVersion",$param) and $param["ApiVersion"] !== null) {
             $this->ApiVersion = $param["ApiVersion"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

@@ -48,6 +48,8 @@ ItemNames=["姓名","性别"]
  * @method void setIsPdf(boolean $IsPdf) 设置是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
  * @method integer getPdfPageNumber() 获取需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
  * @method void setPdfPageNumber(integer $PdfPageNumber) 设置需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+ * @method boolean getReturnFullText() 获取是否开启全文字段识别，默认值为false，开启后可返回全文字段识别结果。
+ * @method void setReturnFullText(boolean $ReturnFullText) 设置是否开启全文字段识别，默认值为false，开启后可返回全文字段识别结果。
  */
 class SmartStructuralOCRRequest extends AbstractModel
 {
@@ -86,6 +88,11 @@ ItemNames=["姓名","性别"]
     public $PdfPageNumber;
 
     /**
+     * @var boolean 是否开启全文字段识别，默认值为false，开启后可返回全文字段识别结果。
+     */
+    public $ReturnFullText;
+
+    /**
      * @param string $ImageUrl 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -100,6 +107,7 @@ ItemNames=["姓名","性别"]
 ItemNames=["姓名","性别"]
      * @param boolean $IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * @param boolean $ReturnFullText 是否开启全文字段识别，默认值为false，开启后可返回全文字段识别结果。
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ ItemNames=["姓名","性别"]
 
         if (array_key_exists("PdfPageNumber",$param) and $param["PdfPageNumber"] !== null) {
             $this->PdfPageNumber = $param["PdfPageNumber"];
+        }
+
+        if (array_key_exists("ReturnFullText",$param) and $param["ReturnFullText"] !== null) {
+            $this->ReturnFullText = $param["ReturnFullText"];
         }
     }
 }

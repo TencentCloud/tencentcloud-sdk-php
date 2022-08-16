@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 生效、失效时间不填则访问权限长期有效
  * @method integer getStatus() 获取访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
  * @method void setStatus(integer $Status) 设置访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+ * @method Department getDepartment() 获取所属部门的信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDepartment(Department $Department) 设置所属部门的信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Acl extends AbstractModel
 {
@@ -212,6 +216,12 @@ class Acl extends AbstractModel
     public $Status;
 
     /**
+     * @var Department 所属部门的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Department;
+
+    /**
      * @param integer $Id 访问权限ID
      * @param string $Name 访问权限名称
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
@@ -240,6 +250,8 @@ class Acl extends AbstractModel
      * @param string $ValidateTo 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
 生效、失效时间不填则访问权限长期有效
      * @param integer $Status 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
+     * @param Department $Department 所属部门的信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -381,6 +393,11 @@ class Acl extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Department",$param) and $param["Department"] !== null) {
+            $this->Department = new Department();
+            $this->Department->deserialize($param["Department"]);
         }
     }
 }

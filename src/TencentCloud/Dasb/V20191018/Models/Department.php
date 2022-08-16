@@ -18,39 +18,39 @@ namespace TencentCloud\Dasb\V20191018\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 组信息，用于用户组、主机组
+ * 部门信息
  *
- * @method integer getId() 获取组ID
- * @method void setId(integer $Id) 设置组ID
- * @method string getName() 获取组名称
- * @method void setName(string $Name) 设置组名称
- * @method Department getDepartment() 获取所属部门信息
+ * @method string getId() 获取部门ID
+ * @method void setId(string $Id) 设置部门ID
+ * @method string getName() 获取部门名称，1 - 256个字符
+ * @method void setName(string $Name) 设置部门名称，1 - 256个字符
+ * @method array getManagers() 获取部门管理员账号ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDepartment(Department $Department) 设置所属部门信息
+ * @method void setManagers(array $Managers) 设置部门管理员账号ID
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Group extends AbstractModel
+class Department extends AbstractModel
 {
     /**
-     * @var integer 组ID
+     * @var string 部门ID
      */
     public $Id;
 
     /**
-     * @var string 组名称
+     * @var string 部门名称，1 - 256个字符
      */
     public $Name;
 
     /**
-     * @var Department 所属部门信息
+     * @var array 部门管理员账号ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Department;
+    public $Managers;
 
     /**
-     * @param integer $Id 组ID
-     * @param string $Name 组名称
-     * @param Department $Department 所属部门信息
+     * @param string $Id 部门ID
+     * @param string $Name 部门名称，1 - 256个字符
+     * @param array $Managers 部门管理员账号ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -74,9 +74,8 @@ class Group extends AbstractModel
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Department",$param) and $param["Department"] !== null) {
-            $this->Department = new Department();
-            $this->Department->deserialize($param["Department"]);
+        if (array_key_exists("Managers",$param) and $param["Managers"] !== null) {
+            $this->Managers = $param["Managers"];
         }
     }
 }

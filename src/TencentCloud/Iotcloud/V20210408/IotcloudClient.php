@@ -35,6 +35,7 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\CreateTopicRuleResponse CreateTopicRule(Models\CreateTopicRuleRequest $req) 本接口（CreateTopicRule）用于创建一个规则 
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) 本接口（DeleteDevice）用于删除物联网通信设备。 
  * @method Models\DeleteDeviceResourceResponse DeleteDeviceResource(Models\DeleteDeviceResourceRequest $req) 本接口（DeleteDeviceResource）用于删除设备资源
+ * @method Models\DeleteDeviceShadowResponse DeleteDeviceShadow(Models\DeleteDeviceShadowRequest $req) 本接口（DeleteDeviceShadow）用于删除设备影子 
  * @method Models\DeletePrivateCAResponse DeletePrivateCA(Models\DeletePrivateCARequest $req) 删除私有CA证书
  * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) 本接口（DeleteProduct）用于删除一个物联网通信产品
  * @method Models\DeleteProductPrivateCAResponse DeleteProductPrivateCA(Models\DeleteProductPrivateCARequest $req) 删除产品的私有CA证书

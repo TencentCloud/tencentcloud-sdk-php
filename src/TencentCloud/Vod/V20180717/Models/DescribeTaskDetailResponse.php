@@ -27,15 +27,9 @@ use TencentCloud\Common\AbstractModel;
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
-<li>PullUpload：拉取上传媒体文件任务。</li>
-<li>FastClipMedia：快速剪辑任务。</li>
-
-兼容 2017 版的任务类型：
-<li>Transcode：视频转码任务；</li>
-<li>SnapshotByTimeOffset：视频截图任务；</li>
-<li>Concat：视频拼接任务；</li>
-<li>Clip：视频剪辑任务；</li>
-<li>ImageSprites：截取雪碧图任务。</li>
+<li>PullUpload：拉取上传媒体文件任务；</li>
+<li>FastClipMedia：快速剪辑任务；</li>
+<li>ReduceMediaBitrate：降码率任务。</li>
  * @method void setTaskType(string $TaskType) 设置任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -43,15 +37,9 @@ use TencentCloud\Common\AbstractModel;
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
-<li>PullUpload：拉取上传媒体文件任务。</li>
-<li>FastClipMedia：快速剪辑任务。</li>
-
-兼容 2017 版的任务类型：
-<li>Transcode：视频转码任务；</li>
-<li>SnapshotByTimeOffset：视频截图任务；</li>
-<li>Concat：视频拼接任务；</li>
-<li>Clip：视频剪辑任务；</li>
-<li>ImageSprites：截取雪碧图任务。</li>
+<li>PullUpload：拉取上传媒体文件任务；</li>
+<li>FastClipMedia：快速剪辑任务；</li>
+<li>ReduceMediaBitrate：降码率任务。</li>
  * @method string getStatus() 获取任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -127,15 +115,9 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
-<li>PullUpload：拉取上传媒体文件任务。</li>
-<li>FastClipMedia：快速剪辑任务。</li>
-
-兼容 2017 版的任务类型：
-<li>Transcode：视频转码任务；</li>
-<li>SnapshotByTimeOffset：视频截图任务；</li>
-<li>Concat：视频拼接任务；</li>
-<li>Clip：视频剪辑任务；</li>
-<li>ImageSprites：截取雪碧图任务。</li>
+<li>PullUpload：拉取上传媒体文件任务；</li>
+<li>FastClipMedia：快速剪辑任务；</li>
+<li>ReduceMediaBitrate：降码率任务。</li>
      */
     public $TaskType;
 
@@ -247,15 +229,9 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>ComposeMedia：制作媒体文件任务；</li>
 <li>WechatPublish：微信发布任务；</li>
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
-<li>PullUpload：拉取上传媒体文件任务。</li>
-<li>FastClipMedia：快速剪辑任务。</li>
-
-兼容 2017 版的任务类型：
-<li>Transcode：视频转码任务；</li>
-<li>SnapshotByTimeOffset：视频截图任务；</li>
-<li>Concat：视频拼接任务；</li>
-<li>Clip：视频剪辑任务；</li>
-<li>ImageSprites：截取雪碧图任务。</li>
+<li>PullUpload：拉取上传媒体文件任务；</li>
+<li>FastClipMedia：快速剪辑任务；</li>
+<li>ReduceMediaBitrate：降码率任务。</li>
      * @param string $Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>

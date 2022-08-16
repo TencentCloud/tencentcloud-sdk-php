@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthType(integer $AuthType) 设置认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0
  * @method string getValidateTime() 获取访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
  * @method void setValidateTime(string $ValidateTime) 设置访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
+ * @method string getDepartmentId() 获取用户所属部门的ID，如1.2.3
+ * @method void setDepartmentId(string $DepartmentId) 设置用户所属部门的ID，如1.2.3
  */
 class ModifyUserRequest extends AbstractModel
 {
@@ -93,6 +95,11 @@ class ModifyUserRequest extends AbstractModel
     public $ValidateTime;
 
     /**
+     * @var string 用户所属部门的ID，如1.2.3
+     */
+    public $DepartmentId;
+
+    /**
      * @param integer $Id 用户ID
      * @param string $RealName 用户姓名，最大长度20个字符，不能包含空格
      * @param string $Phone 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
@@ -104,6 +111,7 @@ class ModifyUserRequest extends AbstractModel
      * @param array $GroupIdSet 所属用户组ID集合
      * @param integer $AuthType 认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0
      * @param string $ValidateTime 访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
+     * @param string $DepartmentId 用户所属部门的ID，如1.2.3
      */
     function __construct()
     {
@@ -152,6 +160,10 @@ class ModifyUserRequest extends AbstractModel
 
         if (array_key_exists("ValidateTime",$param) and $param["ValidateTime"] !== null) {
             $this->ValidateTime = $param["ValidateTime"];
+        }
+
+        if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
+            $this->DepartmentId = $param["DepartmentId"];
         }
     }
 }

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetUserInfo请求参数结构体
  *
- * @method string getQuuid() 获取服务器Quuid
- * @method void setQuuid(string $Quuid) 设置服务器Quuid
- * @method string getUuid() 获取服务器Uuid
- * @method void setUuid(string $Uuid) 设置服务器Uuid
+ * @method string getQuuid() 获取云服务器UUID
+ * @method void setQuuid(string $Quuid) 设置云服务器UUID
+ * @method string getUuid() 获取主机安全UUID
+ * @method void setUuid(string $Uuid) 设置主机安全UUID
  * @method string getName() 获取账户名
  * @method void setName(string $Name) 设置账户名
  */
 class DescribeAssetUserInfoRequest extends AbstractModel
 {
     /**
-     * @var string 服务器Quuid
+     * @var string 云服务器UUID
      */
     public $Quuid;
 
     /**
-     * @var string 服务器Uuid
+     * @var string 主机安全UUID
      */
     public $Uuid;
 
@@ -45,8 +45,8 @@ class DescribeAssetUserInfoRequest extends AbstractModel
     public $Name;
 
     /**
-     * @param string $Quuid 服务器Quuid
-     * @param string $Uuid 服务器Uuid
+     * @param string $Quuid 云服务器UUID
+     * @param string $Uuid 主机安全UUID
      * @param string $Name 账户名
      */
     function __construct()

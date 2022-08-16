@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceIdSet(array $ResourceIdSet) 设置过滤条件，资产绑定的堡垒机服务ID集合
  * @method array getKindSet() 获取可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
  * @method void setKindSet(array $KindSet) 设置可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+ * @method string getDepartmentId() 获取过滤条件，可按照部门ID进行过滤
+ * @method void setDepartmentId(string $DepartmentId) 设置过滤条件，可按照部门ID进行过滤
  */
 class DescribeDevicesRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeDevicesRequest extends AbstractModel
     public $KindSet;
 
     /**
+     * @var string 过滤条件，可按照部门ID进行过滤
+     */
+    public $DepartmentId;
+
+    /**
      * @param array $IdSet 资产ID集合
      * @param string $Name 资产名或资产IP，模糊查询
      * @param string $Ip 暂未使用
@@ -104,6 +111,7 @@ class DescribeDevicesRequest extends AbstractModel
      * @param array $AuthorizedUserIdSet 有该资产访问权限的用户ID集合
      * @param array $ResourceIdSet 过滤条件，资产绑定的堡垒机服务ID集合
      * @param array $KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * @param string $DepartmentId 过滤条件，可按照部门ID进行过滤
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeDevicesRequest extends AbstractModel
 
         if (array_key_exists("KindSet",$param) and $param["KindSet"] !== null) {
             $this->KindSet = $param["KindSet"];
+        }
+
+        if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
+            $this->DepartmentId = $param["DepartmentId"];
         }
     }
 }

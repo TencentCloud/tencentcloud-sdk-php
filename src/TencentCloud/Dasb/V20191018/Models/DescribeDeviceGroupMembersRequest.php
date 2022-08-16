@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页条目数，默认20, 最大500
  * @method integer getKind() 获取资产类型，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
  * @method void setKind(integer $Kind) 设置资产类型，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+ * @method string getDepartmentId() 获取所属部门ID
+ * @method void setDepartmentId(string $DepartmentId) 设置所属部门ID
  */
 class DescribeDeviceGroupMembersRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
     public $Kind;
 
     /**
+     * @var string 所属部门ID
+     */
+    public $DepartmentId;
+
+    /**
      * @param integer $Id 资产组ID
      * @param boolean $Bound true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
      * @param string $Name 资产名或资产IP，模糊查询
      * @param integer $Offset 分页偏移位置
      * @param integer $Limit 每页条目数，默认20, 最大500
      * @param integer $Kind 资产类型，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
+     * @param string $DepartmentId 所属部门ID
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
 
         if (array_key_exists("Kind",$param) and $param["Kind"] !== null) {
             $this->Kind = $param["Kind"];
+        }
+
+        if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
+            $this->DepartmentId = $param["DepartmentId"];
         }
     }
 }

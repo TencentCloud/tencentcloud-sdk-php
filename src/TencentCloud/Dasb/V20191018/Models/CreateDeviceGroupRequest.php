@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取资产组名，最大长度32字符
  * @method void setName(string $Name) 设置资产组名，最大长度32字符
+ * @method string getDepartmentId() 获取资产组所属部门ID，如：1.2.3
+ * @method void setDepartmentId(string $DepartmentId) 设置资产组所属部门ID，如：1.2.3
  */
 class CreateDeviceGroupRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateDeviceGroupRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string 资产组所属部门ID，如：1.2.3
+     */
+    public $DepartmentId;
+
+    /**
      * @param string $Name 资产组名，最大长度32字符
+     * @param string $DepartmentId 资产组所属部门ID，如：1.2.3
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateDeviceGroupRequest extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
+            $this->DepartmentId = $param["DepartmentId"];
         }
     }
 }

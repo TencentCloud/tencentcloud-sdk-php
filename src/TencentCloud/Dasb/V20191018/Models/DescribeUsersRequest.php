@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthorizedDeviceIdSet(array $AuthorizedDeviceIdSet) 设置查询具有指定资产ID访问权限的用户
  * @method array getAuthTypeSet() 获取认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
  * @method void setAuthTypeSet(array $AuthTypeSet) 设置认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+ * @method string getDepartmentId() 获取部门ID，用于过滤属于某个部门的用户
+ * @method void setDepartmentId(string $DepartmentId) 设置部门ID，用于过滤属于某个部门的用户
  */
 class DescribeUsersRequest extends AbstractModel
 {
@@ -83,6 +85,11 @@ class DescribeUsersRequest extends AbstractModel
     public $AuthTypeSet;
 
     /**
+     * @var string 部门ID，用于过滤属于某个部门的用户
+     */
+    public $DepartmentId;
+
+    /**
      * @param array $IdSet 如果IdSet不为空，则忽略其他参数
      * @param string $Name 模糊查询，IdSet、UserName、Phone为空时才生效，对用户名和姓名进行模糊查询
      * @param integer $Offset 分页，偏移位置
@@ -92,6 +99,7 @@ class DescribeUsersRequest extends AbstractModel
 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
      * @param array $AuthorizedDeviceIdSet 查询具有指定资产ID访问权限的用户
      * @param array $AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+     * @param string $DepartmentId 部门ID，用于过滤属于某个部门的用户
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ class DescribeUsersRequest extends AbstractModel
 
         if (array_key_exists("AuthTypeSet",$param) and $param["AuthTypeSet"] !== null) {
             $this->AuthTypeSet = $param["AuthTypeSet"];
+        }
+
+        if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
+            $this->DepartmentId = $param["DepartmentId"];
         }
     }
 }

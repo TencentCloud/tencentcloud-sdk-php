@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
 生效、失效时间不填则访问权限长期有效
  * @method void setValidateTo(string $ValidateTo) 设置访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
 生效、失效时间不填则访问权限长期有效
+ * @method string getDepartmentId() 获取权限所属部门的ID，如：1.2.3
+ * @method void setDepartmentId(string $DepartmentId) 设置权限所属部门的ID，如：1.2.3
  */
 class ModifyAclRequest extends AbstractModel
 {
@@ -205,6 +207,11 @@ class ModifyAclRequest extends AbstractModel
     public $ValidateTo;
 
     /**
+     * @var string 权限所属部门的ID，如：1.2.3
+     */
+    public $DepartmentId;
+
+    /**
      * @param string $Name 访问权限名称，最大32字符，不能包含空白字符
      * @param boolean $AllowDiskRedirect 是否开启磁盘映射
      * @param boolean $AllowAnyAccount 是否允许任意账号登录
@@ -232,6 +239,7 @@ class ModifyAclRequest extends AbstractModel
 生效、失效时间不填则访问权限长期有效
      * @param string $ValidateTo 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
 生效、失效时间不填则访问权限长期有效
+     * @param string $DepartmentId 权限所属部门的ID，如：1.2.3
      */
     function __construct()
     {
@@ -344,6 +352,10 @@ class ModifyAclRequest extends AbstractModel
 
         if (array_key_exists("ValidateTo",$param) and $param["ValidateTo"] !== null) {
             $this->ValidateTo = $param["ValidateTo"];
+        }
+
+        if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
+            $this->DepartmentId = $param["DepartmentId"];
         }
     }
 }

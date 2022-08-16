@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(Resource $Resource) 设置堡垒机服务信息，注意没有绑定服务时为null
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Department getDepartment() 获取资产所属部门
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDepartment(Department $Department) 设置资产所属部门
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Device extends AbstractModel
 {
@@ -125,6 +129,12 @@ class Device extends AbstractModel
     public $Resource;
 
     /**
+     * @var Department 资产所属部门
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Department;
+
+    /**
      * @param integer $Id 资产ID
      * @param string $InstanceId 实例ID，对应CVM、CDB等实例ID
      * @param string $Name 资产名
@@ -139,6 +149,8 @@ class Device extends AbstractModel
      * @param string $VpcId VPC ID
      * @param string $SubnetId 子网ID
      * @param Resource $Resource 堡垒机服务信息，注意没有绑定服务时为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Department $Department 资产所属部门
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -214,6 +226,11 @@ class Device extends AbstractModel
         if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
             $this->Resource = new Resource();
             $this->Resource->deserialize($param["Resource"]);
+        }
+
+        if (array_key_exists("Department",$param) and $param["Department"] !== null) {
+            $this->Department = new Department();
+            $this->Department->deserialize($param["Department"]);
         }
     }
 }

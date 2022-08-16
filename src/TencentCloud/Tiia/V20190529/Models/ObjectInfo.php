@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setColors(array $Colors) 设置整张图颜色信息。
  * @method array getAttributes() 获取属性信息。
  * @method void setAttributes(array $Attributes) 设置属性信息。
- * @method array getAllBox() 获取图像的所有主体区域。
+ * @method array getAllBox() 获取图像的所有主体区域，置信度，以及主体区域类别ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAllBox(array $AllBox) 设置图像的所有主体区域。
+ * @method void setAllBox(array $AllBox) 设置图像的所有主体区域，置信度，以及主体区域类别ID。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ObjectInfo extends AbstractModel
@@ -56,7 +56,7 @@ class ObjectInfo extends AbstractModel
     public $Attributes;
 
     /**
-     * @var array 图像的所有主体区域。
+     * @var array 图像的所有主体区域，置信度，以及主体区域类别ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllBox;
@@ -66,7 +66,7 @@ class ObjectInfo extends AbstractModel
      * @param integer $CategoryId 主体类别ID。
      * @param array $Colors 整张图颜色信息。
      * @param array $Attributes 属性信息。
-     * @param array $AllBox 图像的所有主体区域。
+     * @param array $AllBox 图像的所有主体区域，置信度，以及主体区域类别ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

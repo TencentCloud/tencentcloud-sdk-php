@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移位置
  * @method integer getLimit() 获取每页条目数量，默认20, 最大500
  * @method void setLimit(integer $Limit) 设置每页条目数量，默认20, 最大500
+ * @method string getDepartmentId() 获取所属部门ID
+ * @method void setDepartmentId(string $DepartmentId) 设置所属部门ID
  */
 class DescribeUserGroupMembersRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeUserGroupMembersRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 所属部门ID
+     */
+    public $DepartmentId;
+
+    /**
      * @param integer $Id 用户组ID
      * @param boolean $Bound true - 查询已添加到该用户组的用户，false - 查询未添加到该用户组的用户
      * @param string $Name 用户名或用户姓名，最长64个字符，模糊查询
      * @param integer $Offset 分页偏移位置
      * @param integer $Limit 每页条目数量，默认20, 最大500
+     * @param string $DepartmentId 所属部门ID
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeUserGroupMembersRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
+            $this->DepartmentId = $param["DepartmentId"];
         }
     }
 }

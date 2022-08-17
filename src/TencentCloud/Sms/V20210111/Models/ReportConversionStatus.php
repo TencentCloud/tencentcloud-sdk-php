@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Sms\V20210111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFilterResult请求参数结构体
+ * 转化率上报响应。
  *
- * @method integer getBizId() 获取应用ID
- * @method void setBizId(integer $BizId) 设置应用ID
- * @method string getFileId() 获取文件ID
- * @method void setFileId(string $FileId) 设置文件ID
+ * @method string getCode() 获取错误码。上报成功返回 ok。
+ * @method void setCode(string $Code) 设置错误码。上报成功返回 ok。
+ * @method string getMessage() 获取错误码描述。
+ * @method void setMessage(string $Message) 设置错误码描述。
  */
-class DescribeFilterResultRequest extends AbstractModel
+class ReportConversionStatus extends AbstractModel
 {
     /**
-     * @var integer 应用ID
+     * @var string 错误码。上报成功返回 ok。
      */
-    public $BizId;
+    public $Code;
 
     /**
-     * @var string 文件ID
+     * @var string 错误码描述。
      */
-    public $FileId;
+    public $Message;
 
     /**
-     * @param integer $BizId 应用ID
-     * @param string $FileId 文件ID
+     * @param string $Code 错误码。上报成功返回 ok。
+     * @param string $Message 错误码描述。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeFilterResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
         }
 
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

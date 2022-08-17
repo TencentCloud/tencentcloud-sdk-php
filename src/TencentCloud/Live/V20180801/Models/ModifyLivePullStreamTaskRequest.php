@@ -122,6 +122,24 @@ PullVodPushLive -点播。
 只允许填一个备源 URL
  * @method void setBackupSourceUrl(string $BackupSourceUrl) 设置备源 URL。
 只允许填一个备源 URL
+ * @method array getWatermarkList() 获取水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg等。
+4. 轮播任务修改水印后，轮播到下一个文件时新水印生效。
+5. 直播源任务修改水印后，水印立即生效。
+6. 清除水印时，需携带该水印列表参数，内容为空数组。
+7. 暂不支持动图水印。
+ * @method void setWatermarkList(array $WatermarkList) 设置水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg等。
+4. 轮播任务修改水印后，轮播到下一个文件时新水印生效。
+5. 直播源任务修改水印后，水印立即生效。
+6. 清除水印时，需携带该水印列表参数，内容为空数组。
+7. 暂不支持动图水印。
  */
 class ModifyLivePullStreamTaskRequest extends AbstractModel
 {
@@ -237,6 +255,19 @@ PullVodPushLive -点播。
     public $BackupSourceUrl;
 
     /**
+     * @var array 水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg等。
+4. 轮播任务修改水印后，轮播到下一个文件时新水印生效。
+5. 直播源任务修改水印后，水印立即生效。
+6. 清除水印时，需携带该水印列表参数，内容为空数组。
+7. 暂不支持动图水印。
+     */
+    public $WatermarkList;
+
+    /**
      * @param string $TaskId 任务Id。
      * @param string $Operator 操作人姓名。
      * @param array $SourceUrls 拉流源url列表。
@@ -288,6 +319,15 @@ PullVodPushLive -点播。
 3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
      * @param string $BackupSourceUrl 备源 URL。
 只允许填一个备源 URL
+     * @param array $WatermarkList 水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg等。
+4. 轮播任务修改水印后，轮播到下一个文件时新水印生效。
+5. 直播源任务修改水印后，水印立即生效。
+6. 清除水印时，需携带该水印列表参数，内容为空数组。
+7. 暂不支持动图水印。
      */
     function __construct()
     {
@@ -360,6 +400,15 @@ PullVodPushLive -点播。
 
         if (array_key_exists("BackupSourceUrl",$param) and $param["BackupSourceUrl"] !== null) {
             $this->BackupSourceUrl = $param["BackupSourceUrl"];
+        }
+
+        if (array_key_exists("WatermarkList",$param) and $param["WatermarkList"] !== null) {
+            $this->WatermarkList = [];
+            foreach ($param["WatermarkList"] as $key => $value){
+                $obj = new PullPushWatermarkInfo();
+                $obj->deserialize($value);
+                array_push($this->WatermarkList, $obj);
+            }
         }
     }
 }

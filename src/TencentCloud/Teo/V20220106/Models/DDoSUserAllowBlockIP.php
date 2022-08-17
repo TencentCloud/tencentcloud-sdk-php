@@ -20,82 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDoS黑白名单
  *
- * @method string getIp() 获取用户ip
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIp(string $Ip) 设置用户ip
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMask() 获取掩码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMask(integer $Mask) 设置掩码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取类型 block-丢弃；allow-允许
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置类型 block-丢弃；allow-允许
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getUpdateTime() 获取时间戳
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(integer $UpdateTime) 设置时间戳
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIp2() 获取用户ip范围截止
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIp2(string $Ip2) 设置用户ip范围截止
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMask2() 获取掩码截止范围
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMask2(integer $Mask2) 设置掩码截止范围
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIp() 获取客户端IP。
+ * @method void setIp(string $Ip) 设置客户端IP。
+ * @method integer getMask() 获取掩码。
+ * @method void setMask(integer $Mask) 设置掩码。
+ * @method string getType() 获取类型，取值有：
+<li>block ：丢弃 ；</li>
+<li>allow ：允许。</li>
+ * @method void setType(string $Type) 设置类型，取值有：
+<li>block ：丢弃 ；</li>
+<li>allow ：允许。</li>
+ * @method integer getUpdateTime() 获取10位时间戳，例如1199116800。
+ * @method void setUpdateTime(integer $UpdateTime) 设置10位时间戳，例如1199116800。
+ * @method string getIp2() 获取客户端IP2，设置IP范围时使用，例如 1.1.1.1-1.1.1.2。
+ * @method void setIp2(string $Ip2) 设置客户端IP2，设置IP范围时使用，例如 1.1.1.1-1.1.1.2。
+ * @method integer getMask2() 获取掩码2，设置IP网段范围时使用，例如 1.1.1.0/24-1.1.2.0/24。
+ * @method void setMask2(integer $Mask2) 设置掩码2，设置IP网段范围时使用，例如 1.1.1.0/24-1.1.2.0/24。
  */
 class DDoSUserAllowBlockIP extends AbstractModel
 {
     /**
-     * @var string 用户ip
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 客户端IP。
      */
     public $Ip;
 
     /**
-     * @var integer 掩码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 掩码。
      */
     public $Mask;
 
     /**
-     * @var string 类型 block-丢弃；allow-允许
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 类型，取值有：
+<li>block ：丢弃 ；</li>
+<li>allow ：允许。</li>
      */
     public $Type;
 
     /**
-     * @var integer 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 10位时间戳，例如1199116800。
      */
     public $UpdateTime;
 
     /**
-     * @var string 用户ip范围截止
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 客户端IP2，设置IP范围时使用，例如 1.1.1.1-1.1.1.2。
      */
     public $Ip2;
 
     /**
-     * @var integer 掩码截止范围
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 掩码2，设置IP网段范围时使用，例如 1.1.1.0/24-1.1.2.0/24。
      */
     public $Mask2;
 
     /**
-     * @param string $Ip 用户ip
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Mask 掩码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 类型 block-丢弃；allow-允许
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $UpdateTime 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ip2 用户ip范围截止
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Mask2 掩码截止范围
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Ip 客户端IP。
+     * @param integer $Mask 掩码。
+     * @param string $Type 类型，取值有：
+<li>block ：丢弃 ；</li>
+<li>allow ：允许。</li>
+     * @param integer $UpdateTime 10位时间戳，例如1199116800。
+     * @param string $Ip2 客户端IP2，设置IP范围时使用，例如 1.1.1.1-1.1.1.2。
+     * @param integer $Mask2 掩码2，设置IP网段范围时使用，例如 1.1.1.0/24-1.1.2.0/24。
      */
     function __construct()
     {

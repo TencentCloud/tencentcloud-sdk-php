@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ddos特征过滤
  *
- * @method string getSwitch() 获取特征过滤清空标识，off清空处理
- * @method void setSwitch(string $Switch) 设置特征过滤清空标识，off清空处理
- * @method array getPacketFilter() 获取特征过滤数组
- * @method void setPacketFilter(array $PacketFilter) 设置特征过滤数组
+ * @method array getPacketFilter() 获取特征过滤规则数组。
+ * @method void setPacketFilter(array $PacketFilter) 设置特征过滤规则数组。
+ * @method string getSwitch() 获取特征过滤清空标识，取值有：
+<li>off ：清空特征过滤规则，无需填写 PacketFilter 参数 ；</li>
+<li>on ：配置特征过滤规则，需填写 PacketFilter 参数。</li>默认值为on。
+ * @method void setSwitch(string $Switch) 设置特征过滤清空标识，取值有：
+<li>off ：清空特征过滤规则，无需填写 PacketFilter 参数 ；</li>
+<li>on ：配置特征过滤规则，需填写 PacketFilter 参数。</li>默认值为on。
  */
 class DdosPacketFilter extends AbstractModel
 {
     /**
-     * @var string 特征过滤清空标识，off清空处理
-     */
-    public $Switch;
-
-    /**
-     * @var array 特征过滤数组
+     * @var array 特征过滤规则数组。
      */
     public $PacketFilter;
 
     /**
-     * @param string $Switch 特征过滤清空标识，off清空处理
-     * @param array $PacketFilter 特征过滤数组
+     * @var string 特征过滤清空标识，取值有：
+<li>off ：清空特征过滤规则，无需填写 PacketFilter 参数 ；</li>
+<li>on ：配置特征过滤规则，需填写 PacketFilter 参数。</li>默认值为on。
+     */
+    public $Switch;
+
+    /**
+     * @param array $PacketFilter 特征过滤规则数组。
+     * @param string $Switch 特征过滤清空标识，取值有：
+<li>off ：清空特征过滤规则，无需填写 PacketFilter 参数 ；</li>
+<li>on ：配置特征过滤规则，需填写 PacketFilter 参数。</li>默认值为on。
      */
     function __construct()
     {
@@ -54,10 +62,6 @@ class DdosPacketFilter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
-        }
-
         if (array_key_exists("PacketFilter",$param) and $param["PacketFilter"] !== null) {
             $this->PacketFilter = [];
             foreach ($param["PacketFilter"] as $key => $value){
@@ -65,6 +69,10 @@ class DdosPacketFilter extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PacketFilter, $obj);
             }
+        }
+
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

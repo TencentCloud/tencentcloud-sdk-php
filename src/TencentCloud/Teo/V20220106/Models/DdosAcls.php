@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ddos端口过滤
  *
- * @method string getSwitch() 获取开关 off清空规则标识
- * @method void setSwitch(string $Switch) 设置开关 off清空规则标识
- * @method array getAcl() 获取端口过了详细参数
- * @method void setAcl(array $Acl) 设置端口过了详细参数
+ * @method array getAcl() 获取端口过滤规则数组。
+ * @method void setAcl(array $Acl) 设置端口过滤规则数组。
+ * @method string getSwitch() 获取清空规则标识，取值有：
+<li>off ：清空端口过滤规则列表，Acl无需填写。 ；</li>
+<li>on ：配置端口过滤规则，需填写Acl参数。</li>默认值为on。
+ * @method void setSwitch(string $Switch) 设置清空规则标识，取值有：
+<li>off ：清空端口过滤规则列表，Acl无需填写。 ；</li>
+<li>on ：配置端口过滤规则，需填写Acl参数。</li>默认值为on。
  */
 class DdosAcls extends AbstractModel
 {
     /**
-     * @var string 开关 off清空规则标识
-     */
-    public $Switch;
-
-    /**
-     * @var array 端口过了详细参数
+     * @var array 端口过滤规则数组。
      */
     public $Acl;
 
     /**
-     * @param string $Switch 开关 off清空规则标识
-     * @param array $Acl 端口过了详细参数
+     * @var string 清空规则标识，取值有：
+<li>off ：清空端口过滤规则列表，Acl无需填写。 ；</li>
+<li>on ：配置端口过滤规则，需填写Acl参数。</li>默认值为on。
+     */
+    public $Switch;
+
+    /**
+     * @param array $Acl 端口过滤规则数组。
+     * @param string $Switch 清空规则标识，取值有：
+<li>off ：清空端口过滤规则列表，Acl无需填写。 ；</li>
+<li>on ：配置端口过滤规则，需填写Acl参数。</li>默认值为on。
      */
     function __construct()
     {
@@ -54,10 +62,6 @@ class DdosAcls extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
-        }
-
         if (array_key_exists("Acl",$param) and $param["Acl"] !== null) {
             $this->Acl = [];
             foreach ($param["Acl"] as $key => $value){
@@ -65,6 +69,10 @@ class DdosAcls extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Acl, $obj);
             }
+        }
+
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

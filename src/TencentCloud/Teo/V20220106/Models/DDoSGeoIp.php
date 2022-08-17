@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDoS地域封禁
  *
- * @method array getRegionId() 获取地域信息，ID参考接口DescribeSecurityPolicyRegions
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionId(array $RegionId) 设置地域信息，ID参考接口DescribeSecurityPolicyRegions
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSwitch() 获取区域封禁清空标识
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置区域封禁清空标识
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSwitch() 获取区域封禁清空标识，取值有：
+<li>off ：清空地域封禁列表 ；</li>
+<li>on ：不做处理 。</li>
+ * @method void setSwitch(string $Switch) 设置区域封禁清空标识，取值有：
+<li>off ：清空地域封禁列表 ；</li>
+<li>on ：不做处理 。</li>
+ * @method array getRegionId() 获取地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。
+ * @method void setRegionId(array $RegionId) 设置地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。
  */
 class DDoSGeoIp extends AbstractModel
 {
     /**
-     * @var array 地域信息，ID参考接口DescribeSecurityPolicyRegions
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $RegionId;
-
-    /**
-     * @var string 区域封禁清空标识
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 区域封禁清空标识，取值有：
+<li>off ：清空地域封禁列表 ；</li>
+<li>on ：不做处理 。</li>
      */
     public $Switch;
 
     /**
-     * @param array $RegionId 地域信息，ID参考接口DescribeSecurityPolicyRegions
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Switch 区域封禁清空标识
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。
+     */
+    public $RegionId;
+
+    /**
+     * @param string $Switch 区域封禁清空标识，取值有：
+<li>off ：清空地域封禁列表 ；</li>
+<li>on ：不做处理 。</li>
+     * @param array $RegionId 地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。
      */
     function __construct()
     {
@@ -62,12 +62,12 @@ class DDoSGeoIp extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
-            $this->RegionId = $param["RegionId"];
-        }
-
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

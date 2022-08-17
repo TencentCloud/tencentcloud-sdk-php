@@ -20,34 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDoS封禁等级
  *
- * @method string getAiStatus() 获取不支持，填off
- * @method void setAiStatus(string $AiStatus) 设置不支持，填off
- * @method string getAppid() 获取用户appid
- * @method void setAppid(string $Appid) 设置用户appid
- * @method string getPlyLevel() 获取策略等级 low, middle, high
- * @method void setPlyLevel(string $PlyLevel) 设置策略等级 low, middle, high
+ * @method string getAiStatus() 获取暂不支持，默认值off。
+ * @method void setAiStatus(string $AiStatus) 设置暂不支持，默认值off。
+ * @method string getAppid() 获取废弃字段。
+ * @method void setAppid(string $Appid) 设置废弃字段。
+ * @method string getPlyLevel() 获取策略等级，取值有:
+<li>low ：宽松 ；</li>
+<li>middle ：适中 ；</li>
+<li>high : 严格。 </li>
+ * @method void setPlyLevel(string $PlyLevel) 设置策略等级，取值有:
+<li>low ：宽松 ；</li>
+<li>middle ：适中 ；</li>
+<li>high : 严格。 </li>
  */
 class DDoSStatusInfo extends AbstractModel
 {
     /**
-     * @var string 不支持，填off
+     * @var string 暂不支持，默认值off。
      */
     public $AiStatus;
 
     /**
-     * @var string 用户appid
+     * @var string 废弃字段。
      */
     public $Appid;
 
     /**
-     * @var string 策略等级 low, middle, high
+     * @var string 策略等级，取值有:
+<li>low ：宽松 ；</li>
+<li>middle ：适中 ；</li>
+<li>high : 严格。 </li>
      */
     public $PlyLevel;
 
     /**
-     * @param string $AiStatus 不支持，填off
-     * @param string $Appid 用户appid
-     * @param string $PlyLevel 策略等级 low, middle, high
+     * @param string $AiStatus 暂不支持，默认值off。
+     * @param string $Appid 废弃字段。
+     * @param string $PlyLevel 策略等级，取值有:
+<li>low ：宽松 ；</li>
+<li>middle ：适中 ；</li>
+<li>high : 严格。 </li>
      */
     function __construct()
     {

@@ -20,105 +20,125 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Ddos防护配置
  *
- * @method DDoSStatusInfo getDdosStatusInfo() 获取DDoS防护等级
+ * @method DDoSStatusInfo getDdosStatusInfo() 获取DDoS防护等级。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDdosStatusInfo(DDoSStatusInfo $DdosStatusInfo) 设置DDoS防护等级
+ * @method void setDdosStatusInfo(DDoSStatusInfo $DdosStatusInfo) 设置DDoS防护等级。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DDoSGeoIp getDdosGeoIp() 获取DDoS地域封禁
+ * @method DDoSGeoIp getDdosGeoIp() 获取DDoS地域封禁。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDdosGeoIp(DDoSGeoIp $DdosGeoIp) 设置DDoS地域封禁
+ * @method void setDdosGeoIp(DDoSGeoIp $DdosGeoIp) 设置DDoS地域封禁。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DdosAllowBlock getDdosAllowBlock() 获取DDoS黑白名单
+ * @method DdosAllowBlock getDdosAllowBlock() 获取DDoS黑白名单。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDdosAllowBlock(DdosAllowBlock $DdosAllowBlock) 设置DDoS黑白名单
+ * @method void setDdosAllowBlock(DdosAllowBlock $DdosAllowBlock) 设置DDoS黑白名单。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DDoSAntiPly getDdosAntiPly() 获取DDoS 协议封禁+连接防护
+ * @method DDoSAntiPly getDdosAntiPly() 获取DDoS 协议封禁+连接防护。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDdosAntiPly(DDoSAntiPly $DdosAntiPly) 设置DDoS 协议封禁+连接防护
+ * @method void setDdosAntiPly(DDoSAntiPly $DdosAntiPly) 设置DDoS 协议封禁+连接防护。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DdosPacketFilter getDdosPacketFilter() 获取DDoS特征过滤
+ * @method DdosPacketFilter getDdosPacketFilter() 获取DDoS特征过滤。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDdosPacketFilter(DdosPacketFilter $DdosPacketFilter) 设置DDoS特征过滤
+ * @method void setDdosPacketFilter(DdosPacketFilter $DdosPacketFilter) 设置DDoS特征过滤。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DdosAcls getDdosAcl() 获取DDoS端口过滤
+ * @method DdosAcls getDdosAcl() 获取DDoS端口过滤。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDdosAcl(DdosAcls $DdosAcl) 设置DDoS端口过滤
+ * @method void setDdosAcl(DdosAcls $DdosAcl) 设置DDoS端口过滤。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSwitch() 获取DDoS开关 on-开启；off-关闭
+ * @method string getSwitch() 获取DDoS开关，取值有:
+<li>on ：开启 ；</li>
+<li>off ：关闭 。</li>
+ * @method void setSwitch(string $Switch) 设置DDoS开关，取值有:
+<li>on ：开启 ；</li>
+<li>off ：关闭 。</li>
+ * @method string getUdpShardOpen() 获取UDP分片功能是否支持，取值有:
+<li>on ：支持 ；</li>
+<li>off ：不支持 。</li>
+ * @method void setUdpShardOpen(string $UdpShardOpen) 设置UDP分片功能是否支持，取值有:
+<li>on ：支持 ；</li>
+<li>off ：不支持 。</li>
+ * @method DdosSpeedLimit getDdosSpeedLimit() 获取DDoS源站访问速率限制。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置DDoS开关 on-开启；off-关闭
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUdpShardOpen() 获取UDP分片功能是否支持，off-不支持，on-支持
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUdpShardOpen(string $UdpShardOpen) 设置UDP分片功能是否支持，off-不支持，on-支持
+ * @method void setDdosSpeedLimit(DdosSpeedLimit $DdosSpeedLimit) 设置DDoS源站访问速率限制。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DdosRule extends AbstractModel
 {
     /**
-     * @var DDoSStatusInfo DDoS防护等级
+     * @var DDoSStatusInfo DDoS防护等级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DdosStatusInfo;
 
     /**
-     * @var DDoSGeoIp DDoS地域封禁
+     * @var DDoSGeoIp DDoS地域封禁。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DdosGeoIp;
 
     /**
-     * @var DdosAllowBlock DDoS黑白名单
+     * @var DdosAllowBlock DDoS黑白名单。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DdosAllowBlock;
 
     /**
-     * @var DDoSAntiPly DDoS 协议封禁+连接防护
+     * @var DDoSAntiPly DDoS 协议封禁+连接防护。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DdosAntiPly;
 
     /**
-     * @var DdosPacketFilter DDoS特征过滤
+     * @var DdosPacketFilter DDoS特征过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DdosPacketFilter;
 
     /**
-     * @var DdosAcls DDoS端口过滤
+     * @var DdosAcls DDoS端口过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DdosAcl;
 
     /**
-     * @var string DDoS开关 on-开启；off-关闭
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string DDoS开关，取值有:
+<li>on ：开启 ；</li>
+<li>off ：关闭 。</li>
      */
     public $Switch;
 
     /**
-     * @var string UDP分片功能是否支持，off-不支持，on-支持
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string UDP分片功能是否支持，取值有:
+<li>on ：支持 ；</li>
+<li>off ：不支持 。</li>
      */
     public $UdpShardOpen;
 
     /**
-     * @param DDoSStatusInfo $DdosStatusInfo DDoS防护等级
+     * @var DdosSpeedLimit DDoS源站访问速率限制。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DDoSGeoIp $DdosGeoIp DDoS地域封禁
+     */
+    public $DdosSpeedLimit;
+
+    /**
+     * @param DDoSStatusInfo $DdosStatusInfo DDoS防护等级。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdosAllowBlock $DdosAllowBlock DDoS黑白名单
+     * @param DDoSGeoIp $DdosGeoIp DDoS地域封禁。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DDoSAntiPly $DdosAntiPly DDoS 协议封禁+连接防护
+     * @param DdosAllowBlock $DdosAllowBlock DDoS黑白名单。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdosPacketFilter $DdosPacketFilter DDoS特征过滤
+     * @param DDoSAntiPly $DdosAntiPly DDoS 协议封禁+连接防护。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdosAcls $DdosAcl DDoS端口过滤
+     * @param DdosPacketFilter $DdosPacketFilter DDoS特征过滤。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Switch DDoS开关 on-开启；off-关闭
+     * @param DdosAcls $DdosAcl DDoS端口过滤。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UdpShardOpen UDP分片功能是否支持，off-不支持，on-支持
+     * @param string $Switch DDoS开关，取值有:
+<li>on ：开启 ；</li>
+<li>off ：关闭 。</li>
+     * @param string $UdpShardOpen UDP分片功能是否支持，取值有:
+<li>on ：支持 ；</li>
+<li>off ：不支持 。</li>
+     * @param DdosSpeedLimit $DdosSpeedLimit DDoS源站访问速率限制。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -170,6 +190,11 @@ class DdosRule extends AbstractModel
 
         if (array_key_exists("UdpShardOpen",$param) and $param["UdpShardOpen"] !== null) {
             $this->UdpShardOpen = $param["UdpShardOpen"];
+        }
+
+        if (array_key_exists("DdosSpeedLimit",$param) and $param["DdosSpeedLimit"] !== null) {
+            $this->DdosSpeedLimit = new DdosSpeedLimit();
+            $this->DdosSpeedLimit->deserialize($param["DdosSpeedLimit"]);
         }
     }
 }

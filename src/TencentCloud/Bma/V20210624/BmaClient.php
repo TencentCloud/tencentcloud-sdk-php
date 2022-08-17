@@ -31,6 +31,7 @@ use TencentCloud\Bma\V20210624\Models as Models;
  * @method Models\CreateCRBlockResponse CreateCRBlock(Models\CreateCRBlockRequest $req) 版权保护-新建拦截接口
  * @method Models\CreateCRCompanyVerifyResponse CreateCRCompanyVerify(Models\CreateCRCompanyVerifyRequest $req) 品牌经营管家-版权保护模块企业认证接口
  * @method Models\CreateCRRightResponse CreateCRRight(Models\CreateCRRightRequest $req) 版权保护-新建发函接口
+ * @method Models\CreateCRUserVerifyResponse CreateCRUserVerify(Models\CreateCRUserVerifyRequest $req) 品牌经营管家-版权保护个人认证接口
  * @method Models\CreateCRWorkResponse CreateCRWork(Models\CreateCRWorkRequest $req) 版权保护-添加作品接口
  * @method Models\DescribeBPCompanyInfoResponse DescribeBPCompanyInfo(Models\DescribeBPCompanyInfoRequest $req) 查询企业信息
  * @method Models\DescribeBPFakeURLsResponse DescribeBPFakeURLs(Models\DescribeBPFakeURLsRequest $req) 查询仿冒链接

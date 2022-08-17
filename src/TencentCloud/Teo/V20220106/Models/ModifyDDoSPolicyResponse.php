@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDDoSPolicy返回参数结构体
  *
- * @method integer getPolicyId() 获取策略组ID
- * @method void setPolicyId(integer $PolicyId) 设置策略组ID
+ * @method integer getPolicyId() 获取策略id。
+ * @method void setPolicyId(integer $PolicyId) 设置策略id。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyDDoSPolicyResponse extends AbstractModel
 {
     /**
-     * @var integer 策略组ID
+     * @var integer 策略id。
      */
     public $PolicyId;
 
@@ -38,7 +38,7 @@ class ModifyDDoSPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $PolicyId 策略组ID
+     * @param integer $PolicyId 策略id。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

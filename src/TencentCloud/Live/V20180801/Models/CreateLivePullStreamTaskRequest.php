@@ -153,11 +153,11 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
  * @method string getComment() 获取任务描述，限制 512 字节。
  * @method void setComment(string $Comment) 设置任务描述，限制 512 字节。
  * @method string getToUrl() 获取完整目标 URL 地址。
-用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空值，任务将会使用该 ToUrl 参数指定的目标地址。
+用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
 
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
  * @method void setToUrl(string $ToUrl) 设置完整目标 URL 地址。
-用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空值，任务将会使用该 ToUrl 参数指定的目标地址。
+用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
 
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
  * @method string getBackupSourceType() 获取备源的类型：
@@ -178,6 +178,16 @@ PullVodPushLive -点播。
 只允许填一个备源 URL
  * @method void setBackupSourceUrl(string $BackupSourceUrl) 设置备源 URL。
 只允许填一个备源 URL
+ * @method array getWatermarkList() 获取水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg，gif 等。
+ * @method void setWatermarkList(array $WatermarkList) 设置水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg，gif 等。
  */
 class CreateLivePullStreamTaskRequest extends AbstractModel
 {
@@ -309,7 +319,7 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
 
     /**
      * @var string 完整目标 URL 地址。
-用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空值，任务将会使用该 ToUrl 参数指定的目标地址。
+用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
 
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
      */
@@ -331,6 +341,15 @@ PullVodPushLive -点播。
 只允许填一个备源 URL
      */
     public $BackupSourceUrl;
+
+    /**
+     * @var array 水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg，gif 等。
+     */
+    public $WatermarkList;
 
     /**
      * @param string $SourceType 拉流源的类型：
@@ -400,7 +419,7 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
 示例: ignore_region  用于忽略传入地域, 内部按负载分配。
      * @param string $Comment 任务描述，限制 512 字节。
      * @param string $ToUrl 完整目标 URL 地址。
-用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空值，任务将会使用该 ToUrl 参数指定的目标地址。
+用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
 
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
      * @param string $BackupSourceType 备源的类型：
@@ -412,6 +431,11 @@ PullVodPushLive -点播。
 3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
      * @param string $BackupSourceUrl 备源 URL。
 只允许填一个备源 URL
+     * @param array $WatermarkList 水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg，gif 等。
      */
     function __construct()
     {
@@ -496,6 +520,15 @@ PullVodPushLive -点播。
 
         if (array_key_exists("BackupSourceUrl",$param) and $param["BackupSourceUrl"] !== null) {
             $this->BackupSourceUrl = $param["BackupSourceUrl"];
+        }
+
+        if (array_key_exists("WatermarkList",$param) and $param["WatermarkList"] !== null) {
+            $this->WatermarkList = [];
+            foreach ($param["WatermarkList"] as $key => $value){
+                $obj = new PullPushWatermarkInfo();
+                $obj->deserialize($value);
+                array_push($this->WatermarkList, $obj);
+            }
         }
     }
 }

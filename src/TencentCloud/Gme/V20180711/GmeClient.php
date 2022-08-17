@@ -42,8 +42,6 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\DescribeAgeDetectTaskResponse DescribeAgeDetectTask(Models\DescribeAgeDetectTaskRequest $req) 查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
  * @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近30天。
  * @method Models\DescribeApplicationDataResponse DescribeApplicationData(Models\DescribeApplicationDataRequest $req) 本接口(DescribeApplicationData)用于获取数据详情信息，最多可拉取最近90天的数据。
- * @method Models\DescribeFilterResultResponse DescribeFilterResult(Models\DescribeFilterResultRequest $req) 根据应用ID和文件ID查询识别结果
- * @method Models\DescribeFilterResultListResponse DescribeFilterResultList(Models\DescribeFilterResultListRequest $req) 根据日期查询识别结果列表
  * @method Models\DescribeRealtimeScanConfigResponse DescribeRealtimeScanConfig(Models\DescribeRealtimeScanConfigRequest $req) 获取用户自定义送检信息
  * @method Models\DescribeRoomInfoResponse DescribeRoomInfo(Models\DescribeRoomInfoRequest $req) 获取房间内用户信息
  * @method Models\DescribeScanResultListResponse DescribeScanResultList(Models\DescribeScanResultListRequest $req) 本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。
@@ -192,9 +190,6 @@ use TencentCloud\Gme\V20180711\Models as Models;
 </code></pre>
  * @method Models\UpdateScanRoomsResponse UpdateScanRooms(Models\UpdateScanRoomsRequest $req) 更新自定义送检房间号
  * @method Models\UpdateScanUsersResponse UpdateScanUsers(Models\UpdateScanUsersRequest $req) 更新自定义送检用户号
- * @method Models\VoiceFilterResponse VoiceFilter(Models\VoiceFilterRequest $req) 本接口用于识别涉黄等违规音频，成功会回调配置在应用的回调地址。回调示例如下：
-{"BizId":0,"FileId":"test_file_id","FileName":"test_file_name","FileUrl":"test_file_url","OpenId":"test_open_id","TimeStamp":"0000-00-00 00:00:00","Data":[{"Type":1,"Word":"xx"}]}
-Type表示过滤类型，1：色情，2：谩骂
  */
 
 class GmeClient extends AbstractClient

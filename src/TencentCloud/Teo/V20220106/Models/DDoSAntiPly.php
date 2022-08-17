@@ -20,126 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDoS协议防护+连接防护
  *
- * @method string getDropTcp() 获取tcp协议封禁 on-开；off-关
- * @method void setDropTcp(string $DropTcp) 设置tcp协议封禁 on-开；off-关
- * @method string getDropUdp() 获取udp协议封禁 on-开；off-关
- * @method void setDropUdp(string $DropUdp) 设置udp协议封禁 on-开；off-关
- * @method string getDropIcmp() 获取icmp协议封禁 on-开；off-关
- * @method void setDropIcmp(string $DropIcmp) 设置icmp协议封禁 on-开；off-关
- * @method string getDropOther() 获取其他协议封禁 on-开；off-关
- * @method void setDropOther(string $DropOther) 设置其他协议封禁 on-开；off-关
- * @method integer getSourceCreateLimit() 获取源每秒新建数限制  0-4294967295
- * @method void setSourceCreateLimit(integer $SourceCreateLimit) 设置源每秒新建数限制  0-4294967295
- * @method integer getSourceConnectLimit() 获取源并发连接控制 0-4294967295
- * @method void setSourceConnectLimit(integer $SourceConnectLimit) 设置源并发连接控制 0-4294967295
- * @method integer getDestinationCreateLimit() 获取目的每秒新建数限制 0-4294967295
- * @method void setDestinationCreateLimit(integer $DestinationCreateLimit) 设置目的每秒新建数限制 0-4294967295
- * @method integer getDestinationConnectLimit() 获取目的端口的并发连接控制 0-4294967295
- * @method void setDestinationConnectLimit(integer $DestinationConnectLimit) 设置目的端口的并发连接控制 0-4294967295
- * @method integer getAbnormalConnectNum() 获取异常连接数阈值  0-4294967295
- * @method void setAbnormalConnectNum(integer $AbnormalConnectNum) 设置异常连接数阈值  0-4294967295
- * @method integer getAbnormalSynRatio() 获取syn占比异常阈值 0-100
- * @method void setAbnormalSynRatio(integer $AbnormalSynRatio) 设置syn占比异常阈值 0-100
- * @method integer getAbnormalSynNum() 获取syn个数异常阈值 0-65535
- * @method void setAbnormalSynNum(integer $AbnormalSynNum) 设置syn个数异常阈值 0-65535
- * @method integer getConnectTimeout() 获取连接超时检测 0-65535
- * @method void setConnectTimeout(integer $ConnectTimeout) 设置连接超时检测 0-65535
- * @method string getEmptyConnectProtect() 获取空连接防护开启 0-1
- * @method void setEmptyConnectProtect(string $EmptyConnectProtect) 设置空连接防护开启 0-1
- * @method string getUdpShard() 获取UDP分片开关；off-关闭，on-开启
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUdpShard(string $UdpShard) 设置UDP分片开关；off-关闭，on-开启
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDropTcp() 获取tcp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method void setDropTcp(string $DropTcp) 设置tcp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method string getDropUdp() 获取udp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method void setDropUdp(string $DropUdp) 设置udp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method string getDropIcmp() 获取icmp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method void setDropIcmp(string $DropIcmp) 设置icmp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method string getDropOther() 获取其他协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method void setDropOther(string $DropOther) 设置其他协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method integer getSourceCreateLimit() 获取源站每秒新连接限速，取值范围0-4294967295。
+ * @method void setSourceCreateLimit(integer $SourceCreateLimit) 设置源站每秒新连接限速，取值范围0-4294967295。
+ * @method integer getSourceConnectLimit() 获取源站并发连接控制，取值范围0-4294967295。
+ * @method void setSourceConnectLimit(integer $SourceConnectLimit) 设置源站并发连接控制，取值范围0-4294967295。
+ * @method integer getDestinationCreateLimit() 获取目的端口每秒新连接限速，取值范围0-4294967295。
+ * @method void setDestinationCreateLimit(integer $DestinationCreateLimit) 设置目的端口每秒新连接限速，取值范围0-4294967295。
+ * @method integer getDestinationConnectLimit() 获取目的端口并发连接控制，取值范围0-4294967295。
+ * @method void setDestinationConnectLimit(integer $DestinationConnectLimit) 设置目的端口并发连接控制，取值范围0-4294967295。
+ * @method integer getAbnormalConnectNum() 获取每秒异常连接数阈值，取值范围0-4294967295。
+ * @method void setAbnormalConnectNum(integer $AbnormalConnectNum) 设置每秒异常连接数阈值，取值范围0-4294967295。
+ * @method integer getAbnormalSynRatio() 获取异常syn报文百分比阈值，取值范围0-100。
+ * @method void setAbnormalSynRatio(integer $AbnormalSynRatio) 设置异常syn报文百分比阈值，取值范围0-100。
+ * @method integer getAbnormalSynNum() 获取异常syn报文阈值，取值范围0-65535。
+ * @method void setAbnormalSynNum(integer $AbnormalSynNum) 设置异常syn报文阈值，取值范围0-65535。
+ * @method integer getConnectTimeout() 获取每秒连接超时检测，取值范围0-65535。
+ * @method void setConnectTimeout(integer $ConnectTimeout) 设置每秒连接超时检测，取值范围0-65535。
+ * @method string getEmptyConnectProtect() 获取空连接防护开启，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method void setEmptyConnectProtect(string $EmptyConnectProtect) 设置空连接防护开启，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method string getUdpShard() 获取UDP分片开关，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+ * @method void setUdpShard(string $UdpShard) 设置UDP分片开关，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
  */
 class DDoSAntiPly extends AbstractModel
 {
     /**
-     * @var string tcp协议封禁 on-开；off-关
+     * @var string tcp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public $DropTcp;
 
     /**
-     * @var string udp协议封禁 on-开；off-关
+     * @var string udp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public $DropUdp;
 
     /**
-     * @var string icmp协议封禁 on-开；off-关
+     * @var string icmp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public $DropIcmp;
 
     /**
-     * @var string 其他协议封禁 on-开；off-关
+     * @var string 其他协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public $DropOther;
 
     /**
-     * @var integer 源每秒新建数限制  0-4294967295
+     * @var integer 源站每秒新连接限速，取值范围0-4294967295。
      */
     public $SourceCreateLimit;
 
     /**
-     * @var integer 源并发连接控制 0-4294967295
+     * @var integer 源站并发连接控制，取值范围0-4294967295。
      */
     public $SourceConnectLimit;
 
     /**
-     * @var integer 目的每秒新建数限制 0-4294967295
+     * @var integer 目的端口每秒新连接限速，取值范围0-4294967295。
      */
     public $DestinationCreateLimit;
 
     /**
-     * @var integer 目的端口的并发连接控制 0-4294967295
+     * @var integer 目的端口并发连接控制，取值范围0-4294967295。
      */
     public $DestinationConnectLimit;
 
     /**
-     * @var integer 异常连接数阈值  0-4294967295
+     * @var integer 每秒异常连接数阈值，取值范围0-4294967295。
      */
     public $AbnormalConnectNum;
 
     /**
-     * @var integer syn占比异常阈值 0-100
+     * @var integer 异常syn报文百分比阈值，取值范围0-100。
      */
     public $AbnormalSynRatio;
 
     /**
-     * @var integer syn个数异常阈值 0-65535
+     * @var integer 异常syn报文阈值，取值范围0-65535。
      */
     public $AbnormalSynNum;
 
     /**
-     * @var integer 连接超时检测 0-65535
+     * @var integer 每秒连接超时检测，取值范围0-65535。
      */
     public $ConnectTimeout;
 
     /**
-     * @var string 空连接防护开启 0-1
+     * @var string 空连接防护开启，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public $EmptyConnectProtect;
 
     /**
-     * @var string UDP分片开关；off-关闭，on-开启
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string UDP分片开关，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     public $UdpShard;
 
     /**
-     * @param string $DropTcp tcp协议封禁 on-开；off-关
-     * @param string $DropUdp udp协议封禁 on-开；off-关
-     * @param string $DropIcmp icmp协议封禁 on-开；off-关
-     * @param string $DropOther 其他协议封禁 on-开；off-关
-     * @param integer $SourceCreateLimit 源每秒新建数限制  0-4294967295
-     * @param integer $SourceConnectLimit 源并发连接控制 0-4294967295
-     * @param integer $DestinationCreateLimit 目的每秒新建数限制 0-4294967295
-     * @param integer $DestinationConnectLimit 目的端口的并发连接控制 0-4294967295
-     * @param integer $AbnormalConnectNum 异常连接数阈值  0-4294967295
-     * @param integer $AbnormalSynRatio syn占比异常阈值 0-100
-     * @param integer $AbnormalSynNum syn个数异常阈值 0-65535
-     * @param integer $ConnectTimeout 连接超时检测 0-65535
-     * @param string $EmptyConnectProtect 空连接防护开启 0-1
-     * @param string $UdpShard UDP分片开关；off-关闭，on-开启
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DropTcp tcp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param string $DropUdp udp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param string $DropIcmp icmp协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param string $DropOther 其他协议封禁，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param integer $SourceCreateLimit 源站每秒新连接限速，取值范围0-4294967295。
+     * @param integer $SourceConnectLimit 源站并发连接控制，取值范围0-4294967295。
+     * @param integer $DestinationCreateLimit 目的端口每秒新连接限速，取值范围0-4294967295。
+     * @param integer $DestinationConnectLimit 目的端口并发连接控制，取值范围0-4294967295。
+     * @param integer $AbnormalConnectNum 每秒异常连接数阈值，取值范围0-4294967295。
+     * @param integer $AbnormalSynRatio 异常syn报文百分比阈值，取值范围0-100。
+     * @param integer $AbnormalSynNum 异常syn报文阈值，取值范围0-65535。
+     * @param integer $ConnectTimeout 每秒连接超时检测，取值范围0-65535。
+     * @param string $EmptyConnectProtect 空连接防护开启，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
+     * @param string $UdpShard UDP分片开关，取值有：
+<li>off ：关闭 ；</li>
+<li>on ：开启 。</li>
      */
     function __construct()
     {

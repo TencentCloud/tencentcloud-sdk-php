@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ddos黑白名单
  *
- * @method string getSwitch() 获取开关标识防护是否清空
- * @method void setSwitch(string $Switch) 设置开关标识防护是否清空
- * @method array getUserAllowBlockIp() 获取黑白名单数组
- * @method void setUserAllowBlockIp(array $UserAllowBlockIp) 设置黑白名单数组
+ * @method array getUserAllowBlockIp() 获取黑白名单数组。
+ * @method void setUserAllowBlockIp(array $UserAllowBlockIp) 设置黑白名单数组。
+ * @method string getSwitch() 获取开关标识防护是否清空，取值有：
+<li>off ：清空黑白名单列表，UserAllowBlockIp无需填写。 ；</li>
+<li>on ：配置黑白名单，需填写UserAllowBlockIp参数。</li>默认值为on。
+ * @method void setSwitch(string $Switch) 设置开关标识防护是否清空，取值有：
+<li>off ：清空黑白名单列表，UserAllowBlockIp无需填写。 ；</li>
+<li>on ：配置黑白名单，需填写UserAllowBlockIp参数。</li>默认值为on。
  */
 class DdosAllowBlock extends AbstractModel
 {
     /**
-     * @var string 开关标识防护是否清空
-     */
-    public $Switch;
-
-    /**
-     * @var array 黑白名单数组
+     * @var array 黑白名单数组。
      */
     public $UserAllowBlockIp;
 
     /**
-     * @param string $Switch 开关标识防护是否清空
-     * @param array $UserAllowBlockIp 黑白名单数组
+     * @var string 开关标识防护是否清空，取值有：
+<li>off ：清空黑白名单列表，UserAllowBlockIp无需填写。 ；</li>
+<li>on ：配置黑白名单，需填写UserAllowBlockIp参数。</li>默认值为on。
+     */
+    public $Switch;
+
+    /**
+     * @param array $UserAllowBlockIp 黑白名单数组。
+     * @param string $Switch 开关标识防护是否清空，取值有：
+<li>off ：清空黑白名单列表，UserAllowBlockIp无需填写。 ；</li>
+<li>on ：配置黑白名单，需填写UserAllowBlockIp参数。</li>默认值为on。
      */
     function __construct()
     {
@@ -54,10 +62,6 @@ class DdosAllowBlock extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
-        }
-
         if (array_key_exists("UserAllowBlockIp",$param) and $param["UserAllowBlockIp"] !== null) {
             $this->UserAllowBlockIp = [];
             foreach ($param["UserAllowBlockIp"] as $key => $value){
@@ -65,6 +69,10 @@ class DdosAllowBlock extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->UserAllowBlockIp, $obj);
             }
+        }
+
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

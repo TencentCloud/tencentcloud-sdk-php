@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Sms\V20210111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFilterResult返回参数结构体
+ * ReportConversion返回参数结构体
  *
- * @method VoiceFilterInfo getData() 获取过滤结果
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(VoiceFilterInfo $Data) 设置过滤结果
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method ReportConversionStatus getReportConversionStatus() 获取转化率上报响应包体。
+ * @method void setReportConversionStatus(ReportConversionStatus $ReportConversionStatus) 设置转化率上报响应包体。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeFilterResultResponse extends AbstractModel
+class ReportConversionResponse extends AbstractModel
 {
     /**
-     * @var VoiceFilterInfo 过滤结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var ReportConversionStatus 转化率上报响应包体。
      */
-    public $Data;
+    public $ReportConversionStatus;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class DescribeFilterResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param VoiceFilterInfo $Data 过滤结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportConversionStatus $ReportConversionStatus 转化率上报响应包体。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,9 +54,9 @@ class DescribeFilterResultResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new VoiceFilterInfo();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("ReportConversionStatus",$param) and $param["ReportConversionStatus"] !== null) {
+            $this->ReportConversionStatus = new ReportConversionStatus();
+            $this->ReportConversionStatus->deserialize($param["ReportConversionStatus"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

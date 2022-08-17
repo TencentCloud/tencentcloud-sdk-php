@@ -14,36 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Bma\V20210624\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeFilterResultList返回参数结构体
+ * CreateCRUserVerify返回参数结构体
  *
- * @method integer getTotalCount() 获取过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getData() 获取当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取认证状态 0-认证成功 1-认证失败
+ * @method void setStatus(integer $Status) 设置认证状态 0-认证成功 1-认证失败
+ * @method string getNote() 获取认证结果返回
+ * @method void setNote(string $Note) 设置认证结果返回
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeFilterResultListResponse extends AbstractModel
+class CreateCRUserVerifyResponse extends AbstractModel
 {
     /**
-     * @var integer 过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 认证状态 0-认证成功 1-认证失败
      */
-    public $TotalCount;
+    public $Status;
 
     /**
-     * @var array 当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 认证结果返回
      */
-    public $Data;
+    public $Note;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,10 +45,8 @@ class DescribeFilterResultListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Data 当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 认证状态 0-认证成功 1-认证失败
+     * @param string $Note 认证结果返回
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,17 +62,12 @@ class DescribeFilterResultListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new VoiceFilterInfo();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
+            $this->Note = $param["Note"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

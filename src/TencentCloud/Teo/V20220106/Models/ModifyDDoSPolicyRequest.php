@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDDoSPolicy请求参数结构体
  *
- * @method integer getPolicyId() 获取策略组ID
- * @method void setPolicyId(integer $PolicyId) 设置策略组ID
- * @method string getZoneId() 获取一级域名
- * @method void setZoneId(string $ZoneId) 设置一级域名
- * @method DdosRule getDdosRule() 获取DDoS具体防护配置
- * @method void setDdosRule(DdosRule $DdosRule) 设置DDoS具体防护配置
+ * @method integer getPolicyId() 获取策略id。
+ * @method void setPolicyId(integer $PolicyId) 设置策略id。
+ * @method string getZoneId() 获取站点id。
+ * @method void setZoneId(string $ZoneId) 设置站点id。
+ * @method DdosRule getDdosRule() 获取DDoS防护配置详情。
+ * @method void setDdosRule(DdosRule $DdosRule) 设置DDoS防护配置详情。
  */
 class ModifyDDoSPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 策略组ID
+     * @var integer 策略id。
      */
     public $PolicyId;
 
     /**
-     * @var string 一级域名
+     * @var string 站点id。
      */
     public $ZoneId;
 
     /**
-     * @var DdosRule DDoS具体防护配置
+     * @var DdosRule DDoS防护配置详情。
      */
     public $DdosRule;
 
     /**
-     * @param integer $PolicyId 策略组ID
-     * @param string $ZoneId 一级域名
-     * @param DdosRule $DdosRule DDoS具体防护配置
+     * @param integer $PolicyId 策略id。
+     * @param string $ZoneId 站点id。
+     * @param DdosRule $DdosRule DDoS防护配置详情。
      */
     function __construct()
     {

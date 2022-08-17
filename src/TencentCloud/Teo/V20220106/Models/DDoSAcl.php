@@ -20,66 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDoS配置端口过滤
  *
- * @method integer getDportEnd() 获取目的端口end
- * @method void setDportEnd(integer $DportEnd) 设置目的端口end
- * @method integer getDportStart() 获取目的端口start
- * @method void setDportStart(integer $DportStart) 设置目的端口start
- * @method integer getSportEnd() 获取源端口end
- * @method void setSportEnd(integer $SportEnd) 设置源端口end
- * @method integer getSportStart() 获取源端口start
- * @method void setSportStart(integer $SportStart) 设置源端口start
- * @method string getProtocol() 获取协议 'tcp', 'udp', 'all'
- * @method void setProtocol(string $Protocol) 设置协议 'tcp', 'udp', 'all'
- * @method string getAction() 获取动作  drop-丢弃,；transmit-放行； forward-继续防护
- * @method void setAction(string $Action) 设置动作  drop-丢弃,；transmit-放行； forward-继续防护
- * @method integer getDefault() 获取是否为系统配置 0-人工配置；1-系统配置
- * @method void setDefault(integer $Default) 设置是否为系统配置 0-人工配置；1-系统配置
+ * @method integer getDportEnd() 获取目的端口结束，取值范围0-65535。
+ * @method void setDportEnd(integer $DportEnd) 设置目的端口结束，取值范围0-65535。
+ * @method integer getDportStart() 获取目的端口开始，取值范围0-65535。
+ * @method void setDportStart(integer $DportStart) 设置目的端口开始，取值范围0-65535。
+ * @method integer getSportEnd() 获取源端口结束，取值范围0-65535。
+ * @method void setSportEnd(integer $SportEnd) 设置源端口结束，取值范围0-65535。
+ * @method integer getSportStart() 获取源端口开始，取值范围0-65535。
+ * @method void setSportStart(integer $SportStart) 设置源端口开始，取值范围0-65535。
+ * @method string getProtocol() 获取协议，取值有：
+<li>tcp ：tcp协议 ；</li>
+<li>udp ：udp协议 ；</li>
+<li>all ：全部协议 。</li>
+ * @method void setProtocol(string $Protocol) 设置协议，取值有：
+<li>tcp ：tcp协议 ；</li>
+<li>udp ：udp协议 ；</li>
+<li>all ：全部协议 。</li>
+ * @method string getAction() 获取执行动作，取值为：
+<li>drop ：丢弃 ；</li>
+<li>transmit ：放行 ；</li>
+<li>forward ：继续防护 。</li>
+ * @method void setAction(string $Action) 设置执行动作，取值为：
+<li>drop ：丢弃 ；</li>
+<li>transmit ：放行 ；</li>
+<li>forward ：继续防护 。</li>
+ * @method integer getDefault() 获取是否为系统配置，取值为：
+<li>0 ：修改配置 ；</li>
+<li>1 ：系统默认配置 。</li>
+ * @method void setDefault(integer $Default) 设置是否为系统配置，取值为：
+<li>0 ：修改配置 ；</li>
+<li>1 ：系统默认配置 。</li>
  */
 class DDoSAcl extends AbstractModel
 {
     /**
-     * @var integer 目的端口end
+     * @var integer 目的端口结束，取值范围0-65535。
      */
     public $DportEnd;
 
     /**
-     * @var integer 目的端口start
+     * @var integer 目的端口开始，取值范围0-65535。
      */
     public $DportStart;
 
     /**
-     * @var integer 源端口end
+     * @var integer 源端口结束，取值范围0-65535。
      */
     public $SportEnd;
 
     /**
-     * @var integer 源端口start
+     * @var integer 源端口开始，取值范围0-65535。
      */
     public $SportStart;
 
     /**
-     * @var string 协议 'tcp', 'udp', 'all'
+     * @var string 协议，取值有：
+<li>tcp ：tcp协议 ；</li>
+<li>udp ：udp协议 ；</li>
+<li>all ：全部协议 。</li>
      */
     public $Protocol;
 
     /**
-     * @var string 动作  drop-丢弃,；transmit-放行； forward-继续防护
+     * @var string 执行动作，取值为：
+<li>drop ：丢弃 ；</li>
+<li>transmit ：放行 ；</li>
+<li>forward ：继续防护 。</li>
      */
     public $Action;
 
     /**
-     * @var integer 是否为系统配置 0-人工配置；1-系统配置
+     * @var integer 是否为系统配置，取值为：
+<li>0 ：修改配置 ；</li>
+<li>1 ：系统默认配置 。</li>
      */
     public $Default;
 
     /**
-     * @param integer $DportEnd 目的端口end
-     * @param integer $DportStart 目的端口start
-     * @param integer $SportEnd 源端口end
-     * @param integer $SportStart 源端口start
-     * @param string $Protocol 协议 'tcp', 'udp', 'all'
-     * @param string $Action 动作  drop-丢弃,；transmit-放行； forward-继续防护
-     * @param integer $Default 是否为系统配置 0-人工配置；1-系统配置
+     * @param integer $DportEnd 目的端口结束，取值范围0-65535。
+     * @param integer $DportStart 目的端口开始，取值范围0-65535。
+     * @param integer $SportEnd 源端口结束，取值范围0-65535。
+     * @param integer $SportStart 源端口开始，取值范围0-65535。
+     * @param string $Protocol 协议，取值有：
+<li>tcp ：tcp协议 ；</li>
+<li>udp ：udp协议 ；</li>
+<li>all ：全部协议 。</li>
+     * @param string $Action 执行动作，取值为：
+<li>drop ：丢弃 ；</li>
+<li>transmit ：放行 ；</li>
+<li>forward ：继续防护 。</li>
+     * @param integer $Default 是否为系统配置，取值为：
+<li>0 ：修改配置 ；</li>
+<li>1 ：系统默认配置 。</li>
      */
     function __construct()
     {

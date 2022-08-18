@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFromTopicId() 获取CLS控制台创建的TopicId
  * @method void setFromTopicId(string $FromTopicId) 设置CLS控制台创建的TopicId
+ * @method integer getCompression() 获取压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+ * @method void setCompression(integer $Compression) 设置压缩方式[0:NONE；2:SNAPPY；3:LZ4]
  */
 class OpenKafkaConsumerRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class OpenKafkaConsumerRequest extends AbstractModel
     public $FromTopicId;
 
     /**
+     * @var integer 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+     */
+    public $Compression;
+
+    /**
      * @param string $FromTopicId CLS控制台创建的TopicId
+     * @param integer $Compression 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class OpenKafkaConsumerRequest extends AbstractModel
         }
         if (array_key_exists("FromTopicId",$param) and $param["FromTopicId"] !== null) {
             $this->FromTopicId = $param["FromTopicId"];
+        }
+
+        if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
+            $this->Compression = $param["Compression"];
         }
     }
 }

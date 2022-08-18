@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientRemark(string $ClientRemark) 设置代客备注
  * @method string getClientName() 获取代客名称（首选实名认证名称）
  * @method void setClientName(string $ClientName) 设置代客名称（首选实名认证名称）
- * @method string getAuthType() 获取认证类型, 0：个人，1：企业；其他：未认证
- * @method void setAuthType(string $AuthType) 设置认证类型, 0：个人，1：企业；其他：未认证
+ * @method string getAuthType() 获取认证类型, 0：个人，1：企业；其他：未认证或无效值
+ * @method void setAuthType(string $AuthType) 设置认证类型, 0：个人，1：企业；其他：未认证或无效值
  * @method string getAppId() 获取代客APPID
  * @method void setAppId(string $AppId) 设置代客APPID
  * @method integer getLastMonthAmt() 获取上月消费金额
@@ -92,7 +92,7 @@ class AgentAuditedClient extends AbstractModel
     public $ClientName;
 
     /**
-     * @var string 认证类型, 0：个人，1：企业；其他：未认证
+     * @var string 认证类型, 0：个人，1：企业；其他：未认证或无效值
      */
     public $AuthType;
 
@@ -151,7 +151,7 @@ class AgentAuditedClient extends AbstractModel
      * @param string $ClientFlag 代客类型，可能值为a/b/c
      * @param string $ClientRemark 代客备注
      * @param string $ClientName 代客名称（首选实名认证名称）
-     * @param string $AuthType 认证类型, 0：个人，1：企业；其他：未认证
+     * @param string $AuthType 认证类型, 0：个人，1：企业；其他：未认证或无效值
      * @param string $AppId 代客APPID
      * @param integer $LastMonthAmt 上月消费金额
      * @param integer $ThisMonthAmt 本月消费金额

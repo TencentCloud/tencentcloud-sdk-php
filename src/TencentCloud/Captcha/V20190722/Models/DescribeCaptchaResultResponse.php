@@ -73,12 +73,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCaptchaMsg(string $CaptchaMsg) 设置状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEvilLevel() 获取无感验证模式下，该参数返回验证结果：
-
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvilLevel(integer $EvilLevel) 设置无感验证模式下，该参数返回验证结果：
-
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,7 +125,6 @@ class DescribeCaptchaResultResponse extends AbstractModel
 
     /**
      * @var integer 无感验证模式下，该参数返回验证结果：
-
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。
@@ -173,7 +170,6 @@ EvilLevel=100 请求有恶意
      * @param string $CaptchaMsg 状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EvilLevel 无感验证模式下，该参数返回验证结果：
-
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
 注意：此字段可能返回 null，表示取不到有效值。

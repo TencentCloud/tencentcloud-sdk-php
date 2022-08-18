@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxNodePodNum(integer $MaxNodePodNum) 设置节点上最大Pod数量
  * @method EdgeClusterPublicLB getPublicLB() 获取边缘计算集群公网访问LB信息
  * @method void setPublicLB(EdgeClusterPublicLB $PublicLB) 设置边缘计算集群公网访问LB信息
+ * @method string getClusterLevel() 获取集群的级别
+ * @method void setClusterLevel(string $ClusterLevel) 设置集群的级别
+ * @method boolean getAutoUpgradeClusterLevel() 获取集群是否支持自动升配
+ * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置集群是否支持自动升配
+ * @method string getChargeType() 获取集群计费方式
+ * @method void setChargeType(string $ChargeType) 设置集群计费方式
  */
 class CreateTKEEdgeClusterRequest extends AbstractModel
 {
@@ -87,6 +93,21 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
     public $PublicLB;
 
     /**
+     * @var string 集群的级别
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var boolean 集群是否支持自动升配
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
+     * @var string 集群计费方式
+     */
+    public $ChargeType;
+
+    /**
      * @param string $K8SVersion k8s版本号
      * @param string $VpcId vpc 的Id
      * @param string $ClusterName 集群名称
@@ -96,6 +117,9 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
      * @param EdgeClusterAdvancedSettings $ClusterAdvancedSettings 集群高级设置
      * @param integer $MaxNodePodNum 节点上最大Pod数量
      * @param EdgeClusterPublicLB $PublicLB 边缘计算集群公网访问LB信息
+     * @param string $ClusterLevel 集群的级别
+     * @param boolean $AutoUpgradeClusterLevel 集群是否支持自动升配
+     * @param string $ChargeType 集群计费方式
      */
     function __construct()
     {
@@ -146,6 +170,18 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
         if (array_key_exists("PublicLB",$param) and $param["PublicLB"] !== null) {
             $this->PublicLB = new EdgeClusterPublicLB();
             $this->PublicLB->deserialize($param["PublicLB"]);
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = $param["AutoUpgradeClusterLevel"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
         }
     }
 }

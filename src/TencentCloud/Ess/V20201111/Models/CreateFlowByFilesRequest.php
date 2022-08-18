@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowName(string $FlowName) 设置签署流程名称,最大长度200个字符
  * @method array getApprovers() 获取签署参与者信息，最大限制50方
  * @method void setApprovers(array $Approvers) 设置签署参与者信息，最大限制50方
- * @method array getFileIds() 获取签署pdf文件的资源编号列表，通过UploadFiles接口获取
- * @method void setFileIds(array $FileIds) 设置签署pdf文件的资源编号列表，通过UploadFiles接口获取
+ * @method array getFileIds() 获取签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
+ * @method void setFileIds(array $FileIds) 设置签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
  * @method string getFlowType() 获取签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
  * @method void setFlowType(string $FlowType) 设置签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
  * @method array getComponents() 获取经办人内容控件配置
@@ -85,7 +85,7 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $Approvers;
 
     /**
-     * @var array 签署pdf文件的资源编号列表，通过UploadFiles接口获取
+     * @var array 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
      */
     public $FileIds;
 
@@ -152,7 +152,7 @@ false：有序签
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署参与者信息，最大限制50方
-     * @param array $FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取
+     * @param array $FileIds 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
      * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      * @param array $Components 经办人内容控件配置
      * @param array $CcInfos 被抄送人的信息列表。

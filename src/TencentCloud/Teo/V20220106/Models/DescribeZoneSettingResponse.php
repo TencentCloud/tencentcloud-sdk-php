@@ -88,6 +88,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6(Ipv6Access $Ipv6) 设置Ipv6访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArea() 获取站点加速区域信息，取值有：
+<li>mainland：中国境内加速；</li>
+<li>overseas：中国境外加速。</li>
+ * @method void setArea(string $Area) 设置站点加速区域信息，取值有：
+<li>mainland：中国境内加速；</li>
+<li>overseas：中国境外加速。</li>
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -200,6 +206,13 @@ class DescribeZoneSettingResponse extends AbstractModel
     public $Ipv6;
 
     /**
+     * @var string 站点加速区域信息，取值有：
+<li>mainland：中国境内加速；</li>
+<li>overseas：中国境外加速。</li>
+     */
+    public $Area;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -239,6 +252,9 @@ class DescribeZoneSettingResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6Access $Ipv6 Ipv6访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Area 站点加速区域信息，取值有：
+<li>mainland：中国境内加速；</li>
+<li>overseas：中国境外加速。</li>
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -340,6 +356,10 @@ class DescribeZoneSettingResponse extends AbstractModel
         if (array_key_exists("Ipv6",$param) and $param["Ipv6"] !== null) {
             $this->Ipv6 = new Ipv6Access();
             $this->Ipv6->deserialize($param["Ipv6"]);
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

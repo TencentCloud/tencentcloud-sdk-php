@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Taf\V20200210\Models;
+namespace TencentCloud\Yinsuda\V20220527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CheckKol
+ * 歌曲信息匹配。
  *
- * @method array getDataList() 获取BspData
- * @method void setDataList(array $DataList) 设置BspData
+ * @method string getMusicName() 获取歌曲名称。
+ * @method void setMusicName(string $MusicName) 设置歌曲名称。
+ * @method array getSingerSet() 获取歌手列表。
+ * @method void setSingerSet(array $SingerSet) 设置歌手列表。
  */
-class InputKolBspData extends AbstractModel
+class KTVMatchRuleMusicInfo extends AbstractModel
 {
     /**
-     * @var array BspData
+     * @var string 歌曲名称。
      */
-    public $DataList;
+    public $MusicName;
 
     /**
-     * @param array $DataList BspData
+     * @var array 歌手列表。
+     */
+    public $SingerSet;
+
+    /**
+     * @param string $MusicName 歌曲名称。
+     * @param array $SingerSet 歌手列表。
      */
     function __construct()
     {
@@ -46,13 +54,12 @@ class InputKolBspData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DataList",$param) and $param["DataList"] !== null) {
-            $this->DataList = [];
-            foreach ($param["DataList"] as $key => $value){
-                $obj = new InputKolDataList();
-                $obj->deserialize($value);
-                array_push($this->DataList, $obj);
-            }
+        if (array_key_exists("MusicName",$param) and $param["MusicName"] !== null) {
+            $this->MusicName = $param["MusicName"];
+        }
+
+        if (array_key_exists("SingerSet",$param) and $param["SingerSet"] !== null) {
+            $this->SingerSet = $param["SingerSet"];
         }
     }
 }

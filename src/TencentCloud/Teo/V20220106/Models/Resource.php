@@ -20,102 +20,126 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 计费资源
  *
- * @method string getId() 获取资源 ID
- * @method void setId(string $Id) 设置资源 ID
- * @method integer getPayMode() 获取付费模式
-0 为后付费
-1 为预付费
- * @method void setPayMode(integer $PayMode) 设置付费模式
-0 为后付费
-1 为预付费
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getEnableTime() 获取生效时间
- * @method void setEnableTime(string $EnableTime) 设置生效时间
- * @method string getExpireTime() 获取失效时间
- * @method void setExpireTime(string $ExpireTime) 设置失效时间
- * @method string getStatus() 获取套餐状态
- * @method void setStatus(string $Status) 设置套餐状态
- * @method array getSv() 获取询价参数
- * @method void setSv(array $Sv) 设置询价参数
- * @method integer getAutoRenewFlag() 获取是否自动续费
-0 表示默认状态
-1 表示自动续费
-2 表示不自动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置是否自动续费
-0 表示默认状态
-1 表示自动续费
-2 表示不自动续费
- * @method string getPlanId() 获取套餐关联资源ID
- * @method void setPlanId(string $PlanId) 设置套餐关联资源ID
+ * @method string getId() 获取资源 ID。
+ * @method void setId(string $Id) 设置资源 ID。
+ * @method integer getPayMode() 获取付费模式，取值有：
+<li>0：后付费。</li>
+ * @method void setPayMode(integer $PayMode) 设置付费模式，取值有：
+<li>0：后付费。</li>
+ * @method string getCreateTime() 获取创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。
+ * @method string getEnableTime() 获取生效时间。
+ * @method void setEnableTime(string $EnableTime) 设置生效时间。
+ * @method string getExpireTime() 获取失效时间。
+ * @method void setExpireTime(string $ExpireTime) 设置失效时间。
+ * @method string getStatus() 获取套餐状态，取值有：
+<li>normal：正常；</li>
+<li>isolated：隔离；</li>
+<li>destroyed：销毁。</li>
+ * @method void setStatus(string $Status) 设置套餐状态，取值有：
+<li>normal：正常；</li>
+<li>isolated：隔离；</li>
+<li>destroyed：销毁。</li>
+ * @method array getSv() 获取询价参数。
+ * @method void setSv(array $Sv) 设置询价参数。
+ * @method integer getAutoRenewFlag() 获取是否自动续费，取值有：
+<li>0：默认状态；</li>
+<li>1：自动续费；</li>
+<li>2：不自动续费。</li>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置是否自动续费，取值有：
+<li>0：默认状态；</li>
+<li>1：自动续费；</li>
+<li>2：不自动续费。</li>
+ * @method string getPlanId() 获取套餐关联资源 ID。
+ * @method void setPlanId(string $PlanId) 设置套餐关联资源 ID。
+ * @method string getArea() 获取地域，取值有：
+<li>mainland：国内；</li>
+<li>overseas：海外。</li>
+ * @method void setArea(string $Area) 设置地域，取值有：
+<li>mainland：国内；</li>
+<li>overseas：海外。</li>
  */
 class Resource extends AbstractModel
 {
     /**
-     * @var string 资源 ID
+     * @var string 资源 ID。
      */
     public $Id;
 
     /**
-     * @var integer 付费模式
-0 为后付费
-1 为预付费
+     * @var integer 付费模式，取值有：
+<li>0：后付费。</li>
      */
     public $PayMode;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。
      */
     public $CreateTime;
 
     /**
-     * @var string 生效时间
+     * @var string 生效时间。
      */
     public $EnableTime;
 
     /**
-     * @var string 失效时间
+     * @var string 失效时间。
      */
     public $ExpireTime;
 
     /**
-     * @var string 套餐状态
+     * @var string 套餐状态，取值有：
+<li>normal：正常；</li>
+<li>isolated：隔离；</li>
+<li>destroyed：销毁。</li>
      */
     public $Status;
 
     /**
-     * @var array 询价参数
+     * @var array 询价参数。
      */
     public $Sv;
 
     /**
-     * @var integer 是否自动续费
-0 表示默认状态
-1 表示自动续费
-2 表示不自动续费
+     * @var integer 是否自动续费，取值有：
+<li>0：默认状态；</li>
+<li>1：自动续费；</li>
+<li>2：不自动续费。</li>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 套餐关联资源ID
+     * @var string 套餐关联资源 ID。
      */
     public $PlanId;
 
     /**
-     * @param string $Id 资源 ID
-     * @param integer $PayMode 付费模式
-0 为后付费
-1 为预付费
-     * @param string $CreateTime 创建时间
-     * @param string $EnableTime 生效时间
-     * @param string $ExpireTime 失效时间
-     * @param string $Status 套餐状态
-     * @param array $Sv 询价参数
-     * @param integer $AutoRenewFlag 是否自动续费
-0 表示默认状态
-1 表示自动续费
-2 表示不自动续费
-     * @param string $PlanId 套餐关联资源ID
+     * @var string 地域，取值有：
+<li>mainland：国内；</li>
+<li>overseas：海外。</li>
+     */
+    public $Area;
+
+    /**
+     * @param string $Id 资源 ID。
+     * @param integer $PayMode 付费模式，取值有：
+<li>0：后付费。</li>
+     * @param string $CreateTime 创建时间。
+     * @param string $EnableTime 生效时间。
+     * @param string $ExpireTime 失效时间。
+     * @param string $Status 套餐状态，取值有：
+<li>normal：正常；</li>
+<li>isolated：隔离；</li>
+<li>destroyed：销毁。</li>
+     * @param array $Sv 询价参数。
+     * @param integer $AutoRenewFlag 是否自动续费，取值有：
+<li>0：默认状态；</li>
+<li>1：自动续费；</li>
+<li>2：不自动续费。</li>
+     * @param string $PlanId 套餐关联资源 ID。
+     * @param string $Area 地域，取值有：
+<li>mainland：国内；</li>
+<li>overseas：海外。</li>
      */
     function __construct()
     {
@@ -169,6 +193,10 @@ class Resource extends AbstractModel
 
         if (array_key_exists("PlanId",$param) and $param["PlanId"] !== null) {
             $this->PlanId = $param["PlanId"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

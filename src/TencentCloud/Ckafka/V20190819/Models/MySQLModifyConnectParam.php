@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置当type为TDSQL_C_MYSQL时
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSelfBuilt() 获取是否是自建的集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否是自建的集群
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MySQLModifyConnectParam extends AbstractModel
 {
@@ -104,6 +108,12 @@ class MySQLModifyConnectParam extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var boolean 是否是自建的集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SelfBuilt;
+
+    /**
      * @param string $Resource MySQL连接源的实例资源【不支持修改】
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port MySQL的连接port【不支持修改】
@@ -119,6 +129,8 @@ class MySQLModifyConnectParam extends AbstractModel
      * @param boolean $IsUpdate 是否更新到关联的Datahub任务
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 当type为TDSQL_C_MYSQL时
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SelfBuilt 是否是自建的集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class MySQLModifyConnectParam extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("SelfBuilt",$param) and $param["SelfBuilt"] !== null) {
+            $this->SelfBuilt = $param["SelfBuilt"];
         }
     }
 }

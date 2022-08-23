@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogPacketName(string $LogPacketName) 设置日志数据包名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArea() 获取加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+ * @method void setArea(string $Area) 设置加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
  */
 class L7OfflineLog extends AbstractModel
 {
@@ -74,6 +80,13 @@ class L7OfflineLog extends AbstractModel
     public $LogPacketName;
 
     /**
+     * @var string 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public $Area;
+
+    /**
      * @param integer $LogTime 日志打包开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 子域名
@@ -84,6 +97,9 @@ class L7OfflineLog extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogPacketName 日志数据包名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
      */
     function __construct()
     {
@@ -116,6 +132,10 @@ class L7OfflineLog extends AbstractModel
 
         if (array_key_exists("LogPacketName",$param) and $param["LogPacketName"] !== null) {
             $this->LogPacketName = $param["LogPacketName"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

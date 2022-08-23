@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlugins(array $Plugins) 设置拓展包文件路径
  * @method DomainNameConfig getDomainNameConfig() 获取域名解析配置
  * @method void setDomainNameConfig(DomainNameConfig $DomainNameConfig) 设置域名解析配置
+ * @method array getNotificationHooks() 获取WebHook请求配置
+ * @method void setNotificationHooks(array $NotificationHooks) 设置WebHook请求配置
  */
 class UpdateScenarioRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class UpdateScenarioRequest extends AbstractModel
     public $DomainNameConfig;
 
     /**
+     * @var array WebHook请求配置
+     */
+    public $NotificationHooks;
+
+    /**
      * @param string $ScenarioId 场景ID
      * @param string $Name 场景名
      * @param string $Description 场景描述
@@ -176,6 +183,7 @@ class UpdateScenarioRequest extends AbstractModel
      * @param SLAPolicy $SLAPolicy SLA 策略
      * @param array $Plugins 拓展包文件路径
      * @param DomainNameConfig $DomainNameConfig 域名解析配置
+     * @param array $NotificationHooks WebHook请求配置
      */
     function __construct()
     {
@@ -292,6 +300,15 @@ class UpdateScenarioRequest extends AbstractModel
         if (array_key_exists("DomainNameConfig",$param) and $param["DomainNameConfig"] !== null) {
             $this->DomainNameConfig = new DomainNameConfig();
             $this->DomainNameConfig->deserialize($param["DomainNameConfig"]);
+        }
+
+        if (array_key_exists("NotificationHooks",$param) and $param["NotificationHooks"] !== null) {
+            $this->NotificationHooks = [];
+            foreach ($param["NotificationHooks"] as $key => $value){
+                $obj = new Notification();
+                $obj->deserialize($value);
+                array_push($this->NotificationHooks, $obj);
+            }
         }
     }
 }

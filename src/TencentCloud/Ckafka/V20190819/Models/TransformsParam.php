@@ -40,9 +40,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceType(string $SourceType) 设置数据来源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutputFormat() 获取输出格式
+ * @method string getOutputFormat() 获取输出格式，JSON，ROW，默认为JSON
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputFormat(string $OutputFormat) 设置输出格式
+ * @method void setOutputFormat(string $OutputFormat) 设置输出格式，JSON，ROW，默认为JSON
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method RowParam getRowParam() 获取输出格式为ROW必填
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRowParam(RowParam $RowParam) 设置输出格式为ROW必填
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TransformsParam extends AbstractModel
@@ -82,10 +86,16 @@ class TransformsParam extends AbstractModel
     public $SourceType;
 
     /**
-     * @var string 输出格式
+     * @var string 输出格式，JSON，ROW，默认为JSON
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputFormat;
+
+    /**
+     * @var RowParam 输出格式为ROW必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RowParam;
 
     /**
      * @param string $Content 原始数据
@@ -98,7 +108,9 @@ class TransformsParam extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceType 数据来源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutputFormat 输出格式
+     * @param string $OutputFormat 输出格式，JSON，ROW，默认为JSON
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RowParam $RowParam 输出格式为ROW必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -151,6 +163,11 @@ class TransformsParam extends AbstractModel
 
         if (array_key_exists("OutputFormat",$param) and $param["OutputFormat"] !== null) {
             $this->OutputFormat = $param["OutputFormat"];
+        }
+
+        if (array_key_exists("RowParam",$param) and $param["RowParam"] !== null) {
+            $this->RowParam = new RowParam();
+            $this->RowParam->deserialize($param["RowParam"]);
         }
     }
 }

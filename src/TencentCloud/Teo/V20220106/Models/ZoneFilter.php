@@ -21,49 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 站点查询过滤条件
  *
  * @method string getName() 获取过滤字段名，支持的列表如下：
-- name: 站点名。
-- status: 站点状态
-- tagKey: 标签键
-- tagValue: 标签值
+<li> name：站点名；</li>
+<li> status：站点状态；</li>
+<li> tagKey：标签键；</li>
+<li> tagValue: 标签值。</li>
  * @method void setName(string $Name) 设置过滤字段名，支持的列表如下：
-- name: 站点名。
-- status: 站点状态
-- tagKey: 标签键
-- tagValue: 标签值
- * @method array getValues() 获取过滤字段值
- * @method void setValues(array $Values) 设置过滤字段值
- * @method boolean getFuzzy() 获取是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
- * @method void setFuzzy(boolean $Fuzzy) 设置是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
+<li> name：站点名；</li>
+<li> status：站点状态；</li>
+<li> tagKey：标签键；</li>
+<li> tagValue: 标签值。</li>
+ * @method array getValues() 获取过滤字段值。
+ * @method void setValues(array $Values) 设置过滤字段值。
+ * @method boolean getFuzzy() 获取是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1。默认为false。
+ * @method void setFuzzy(boolean $Fuzzy) 设置是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1。默认为false。
  */
 class ZoneFilter extends AbstractModel
 {
     /**
      * @var string 过滤字段名，支持的列表如下：
-- name: 站点名。
-- status: 站点状态
-- tagKey: 标签键
-- tagValue: 标签值
+<li> name：站点名；</li>
+<li> status：站点状态；</li>
+<li> tagKey：标签键；</li>
+<li> tagValue: 标签值。</li>
      */
     public $Name;
 
     /**
-     * @var array 过滤字段值
+     * @var array 过滤字段值。
      */
     public $Values;
 
     /**
-     * @var boolean 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
+     * @var boolean 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1。默认为false。
      */
     public $Fuzzy;
 
     /**
      * @param string $Name 过滤字段名，支持的列表如下：
-- name: 站点名。
-- status: 站点状态
-- tagKey: 标签键
-- tagValue: 标签值
-     * @param array $Values 过滤字段值
-     * @param boolean $Fuzzy 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
+<li> name：站点名；</li>
+<li> status：站点状态；</li>
+<li> tagKey：标签键；</li>
+<li> tagValue: 标签值。</li>
+     * @param array $Values 过滤字段值。
+     * @param boolean $Fuzzy 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1。默认为false。
      */
     function __construct()
     {

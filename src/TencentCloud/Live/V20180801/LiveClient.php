@@ -183,7 +183,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(Models\DescribeLiveTranscodeRulesRequest $req) 获取转码规则列表
  * @method Models\DescribeLiveTranscodeTemplateResponse DescribeLiveTranscodeTemplate(Models\DescribeLiveTranscodeTemplateRequest $req) 获取单个转码模板。
  * @method Models\DescribeLiveTranscodeTemplatesResponse DescribeLiveTranscodeTemplates(Models\DescribeLiveTranscodeTemplatesRequest $req) 获取转码模板列表。
- * @method Models\DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfo(Models\DescribeLiveTranscodeTotalInfoRequest $req) 查询转码总量数据，可查询近30天内数据。
+ * @method Models\DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfo(Models\DescribeLiveTranscodeTotalInfoRequest $req) 查询转码总量数据，可查询近三个月内的数据。
 注意：
 如果是查询某一天内，则返回5分钟粒度数据；
 如果是查询跨天或指定域名， 则返回1小时粒度数据。

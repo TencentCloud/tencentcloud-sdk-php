@@ -84,6 +84,24 @@ use TencentCloud\Common\AbstractModel;
 表示代理加速唯一标识。
  * @method Ipv6Access getIpv6() 获取Ipv6访问配置。
  * @method void setIpv6(Ipv6Access $Ipv6) 设置Ipv6访问配置。
+ * @method string getArea() 获取加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+默认值：overseas
+ * @method void setArea(string $Area) 设置加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+默认值：overseas
+ * @method string getBanStatus() 获取封禁状态，取值有：
+<li>banned：已封禁;</li>
+<li>banning：封禁中；</li>
+<li>recover：已解封；</li>
+<li>recovering：解封禁中。</li>
+ * @method void setBanStatus(string $BanStatus) 设置封禁状态，取值有：
+<li>banned：已封禁;</li>
+<li>banning：封禁中；</li>
+<li>recover：已解封；</li>
+<li>recovering：解封禁中。</li>
  */
 class ApplicationProxy extends AbstractModel
 {
@@ -188,6 +206,23 @@ class ApplicationProxy extends AbstractModel
     public $Ipv6;
 
     /**
+     * @var string 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+默认值：overseas
+     */
+    public $Area;
+
+    /**
+     * @var string 封禁状态，取值有：
+<li>banned：已封禁;</li>
+<li>banning：封禁中；</li>
+<li>recover：已解封；</li>
+<li>recovering：解封禁中。</li>
+     */
+    public $BanStatus;
+
+    /**
      * @param string $ProxyId 代理ID。
      * @param string $ProxyName 当ProxyType=hostname时，表示域名或子域名；
 当ProxyType=instance时，表示代理名称。
@@ -220,6 +255,15 @@ class ApplicationProxy extends AbstractModel
      * @param string $HostId 当ProxyType=hostname时：
 表示代理加速唯一标识。
      * @param Ipv6Access $Ipv6 Ipv6访问配置。
+     * @param string $Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+默认值：overseas
+     * @param string $BanStatus 封禁状态，取值有：
+<li>banned：已封禁;</li>
+<li>banning：封禁中；</li>
+<li>recover：已解封；</li>
+<li>recovering：解封禁中。</li>
      */
     function __construct()
     {
@@ -306,6 +350,14 @@ class ApplicationProxy extends AbstractModel
         if (array_key_exists("Ipv6",$param) and $param["Ipv6"] !== null) {
             $this->Ipv6 = new Ipv6Access();
             $this->Ipv6->deserialize($param["Ipv6"]);
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
+            $this->BanStatus = $param["BanStatus"];
         }
     }
 }

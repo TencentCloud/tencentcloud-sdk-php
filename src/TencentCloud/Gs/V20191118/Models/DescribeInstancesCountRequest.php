@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGameId(string $GameId) 设置游戏ID
  * @method string getGroupId() 获取实例分组ID
  * @method void setGroupId(string $GroupId) 设置实例分组ID
+ * @method string getGameRegion() 获取游戏区域
+ * @method void setGameRegion(string $GameRegion) 设置游戏区域
  */
 class DescribeInstancesCountRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeInstancesCountRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var string 游戏区域
+     */
+    public $GameRegion;
+
+    /**
      * @param string $GameId 游戏ID
      * @param string $GroupId 实例分组ID
+     * @param string $GameRegion 游戏区域
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeInstancesCountRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("GameRegion",$param) and $param["GameRegion"] !== null) {
+            $this->GameRegion = $param["GameRegion"];
         }
     }
 }

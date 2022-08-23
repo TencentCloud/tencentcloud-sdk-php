@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签配置
  * @method string getTrainingJobName() 获取训练任务名称
  * @method void setTrainingJobName(string $TrainingJobName) 设置训练任务名称
- * @method string getAlgorithmFramework() 获取算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML)
- * @method void setAlgorithmFramework(string $AlgorithmFramework) 设置算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML)
+ * @method string getAlgorithmFramework() 获取算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
+ * @method void setAlgorithmFramework(string $AlgorithmFramework) 设置算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
  * @method string getReasoningEnvironment() 获取推理环境
  * @method void setReasoningEnvironment(string $ReasoningEnvironment) 设置推理环境
  * @method string getTrainingModelIndex() 获取训练指标，最多支持1000字符
@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrainingModelSource(string $TrainingModelSource) 设置模型来源 （JOB/COS）
  * @method string getTrainingPreference() 获取模型偏好
  * @method void setTrainingPreference(string $TrainingPreference) 设置模型偏好
- * @method string getAutoMLTaskId() 获取自动学习任务ID
- * @method void setAutoMLTaskId(string $AutoMLTaskId) 设置自动学习任务ID
+ * @method string getAutoMLTaskId() 获取自动学习任务ID（已废弃）
+ * @method void setAutoMLTaskId(string $AutoMLTaskId) 设置自动学习任务ID（已废弃）
  * @method string getTrainingJobVersion() 获取任务版本
  * @method void setTrainingJobVersion(string $TrainingJobVersion) 设置任务版本
  * @method string getModelVersionType() 获取模型版本类型；
@@ -102,7 +102,7 @@ class CreateTrainingModelRequest extends AbstractModel
     public $TrainingJobName;
 
     /**
-     * @var string 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML)
+     * @var string 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
      */
     public $AlgorithmFramework;
 
@@ -157,7 +157,7 @@ class CreateTrainingModelRequest extends AbstractModel
     public $TrainingPreference;
 
     /**
-     * @var string 自动学习任务ID
+     * @var string 自动学习任务ID（已废弃）
      */
     public $AutoMLTaskId;
 
@@ -190,7 +190,7 @@ class CreateTrainingModelRequest extends AbstractModel
      * @param string $TrainingModelName 模型名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param array $Tags 标签配置
      * @param string $TrainingJobName 训练任务名称
-     * @param string $AlgorithmFramework 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML)
+     * @param string $AlgorithmFramework 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
      * @param string $ReasoningEnvironment 推理环境
      * @param string $TrainingModelIndex 训练指标，最多支持1000字符
      * @param string $TrainingModelVersion 模型版本
@@ -201,7 +201,7 @@ class CreateTrainingModelRequest extends AbstractModel
      * @param CosPathInfo $ModelOutputPath 模型存储cos目录
      * @param string $TrainingModelSource 模型来源 （JOB/COS）
      * @param string $TrainingPreference 模型偏好
-     * @param string $AutoMLTaskId 自动学习任务ID
+     * @param string $AutoMLTaskId 自动学习任务ID（已废弃）
      * @param string $TrainingJobVersion 任务版本
      * @param string $ModelVersionType 模型版本类型；
 枚举值：NORMAL(通用)  ACCELERATE(加速)

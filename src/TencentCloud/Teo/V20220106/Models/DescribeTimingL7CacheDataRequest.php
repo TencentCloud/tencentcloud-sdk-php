@@ -40,6 +40,12 @@ EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
  * @method void setFilters(array $Filters) 设置筛选条件，筛选EO/源站响应如下：
 EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
 源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
+ * @method string getArea() 获取加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+ * @method void setArea(string $Area) 设置加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
  */
 class DescribeTimingL7CacheDataRequest extends AbstractModel
 {
@@ -78,6 +84,13 @@ EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
     public $Filters;
 
     /**
+     * @var string 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public $Area;
+
+    /**
      * @param string $StartTime RFC3339标准，客户端时间
      * @param string $EndTime RFC3339标准，客户端时间
      * @param array $MetricNames 时序类访问流量指标列表，支持的指标
@@ -88,6 +101,9 @@ l7Cache_request: 访问请求数
      * @param array $Filters 筛选条件，筛选EO/源站响应如下：
 EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
 源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
+     * @param string $Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
      */
     function __construct()
     {
@@ -129,6 +145,10 @@ EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

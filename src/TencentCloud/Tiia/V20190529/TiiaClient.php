@@ -99,7 +99,10 @@ use TencentCloud\Tiia\V20190529\Models as Models;
 客户无需自建商品库，即可快速实现商品识别、拍照搜商品等功能。
 >?   
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
- * @method Models\EnhanceImageResponse EnhanceImage(Models\EnhanceImageRequest $req) 传入一张图片，输出清晰度提升后的图片。
+ * @method Models\EnhanceImageResponse EnhanceImage(Models\EnhanceImageRequest $req) >!
+- 图像清晰度增强接口将于2022年8月31日结束免费公测，2022年9月1日起正式转入计费。若您不需要使用本服务，请及时停止使用。价格详情在[计费概述](https://cloud.tencent.com/document/product/865/17627)中提前公示，请您参阅。
+
+传入一张图片，输出清晰度提升后的图片。
 
 可以消除图片有损压缩导致的噪声，和使用滤镜、拍摄失焦导致的模糊。让图片的边缘和细节更加清晰自然。
 >     

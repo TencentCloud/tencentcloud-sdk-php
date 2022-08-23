@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIfFirstScan(boolean $IfFirstScan) 设置是否第一次检测
  * @method integer getTaskId() 获取运行中的任务号, 没有任务则为0
  * @method void setTaskId(integer $TaskId) 设置运行中的任务号, 没有任务则为0
+ * @method string getLastFixTime() 获取最后一次修复漏洞的时间
+ * @method void setLastFixTime(string $LastFixTime) 设置最后一次修复漏洞的时间
+ * @method boolean gethadAutoFixVul() 获取是否有支持自动修复的漏洞事件
+ * @method void sethadAutoFixVul(boolean $hadAutoFixVul) 设置是否有支持自动修复的漏洞事件
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +65,16 @@ class DescribeVulHostCountScanTimeResponse extends AbstractModel
     public $TaskId;
 
     /**
+     * @var string 最后一次修复漏洞的时间
+     */
+    public $LastFixTime;
+
+    /**
+     * @var boolean 是否有支持自动修复的漏洞事件
+     */
+    public $hadAutoFixVul;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +85,8 @@ class DescribeVulHostCountScanTimeResponse extends AbstractModel
      * @param string $ScanTime 扫描时间
      * @param boolean $IfFirstScan 是否第一次检测
      * @param integer $TaskId 运行中的任务号, 没有任务则为0
+     * @param string $LastFixTime 最后一次修复漏洞的时间
+     * @param boolean $hadAutoFixVul 是否有支持自动修复的漏洞事件
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +120,14 @@ class DescribeVulHostCountScanTimeResponse extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("LastFixTime",$param) and $param["LastFixTime"] !== null) {
+            $this->LastFixTime = $param["LastFixTime"];
+        }
+
+        if (array_key_exists("hadAutoFixVul",$param) and $param["hadAutoFixVul"] !== null) {
+            $this->hadAutoFixVul = $param["hadAutoFixVul"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

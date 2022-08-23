@@ -66,6 +66,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreeQuota(string $FreeQuota) 设置免费配额信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableOverrun() 获取是否开启 `超过套餐额度部分转按量付费`
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableOverrun(boolean $EnableOverrun) 设置是否开启 `超过套餐额度部分转按量付费`
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExtPackageType() 获取环境套餐类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtPackageType(string $ExtPackageType) 设置环境套餐类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvBillingInfoItem extends AbstractModel
 {
@@ -145,6 +153,18 @@ class EnvBillingInfoItem extends AbstractModel
     public $FreeQuota;
 
     /**
+     * @var boolean 是否开启 `超过套餐额度部分转按量付费`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableOverrun;
+
+    /**
+     * @var string 环境套餐类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtPackageType;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
      * @param boolean $IsAutoRenew 自动续费标记
@@ -167,6 +187,10 @@ class EnvBillingInfoItem extends AbstractModel
      * @param OrderInfo $OrderInfo 最新的订单信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FreeQuota 免费配额信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableOverrun 是否开启 `超过套餐额度部分转按量付费`
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExtPackageType 环境套餐类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -233,6 +257,14 @@ class EnvBillingInfoItem extends AbstractModel
 
         if (array_key_exists("FreeQuota",$param) and $param["FreeQuota"] !== null) {
             $this->FreeQuota = $param["FreeQuota"];
+        }
+
+        if (array_key_exists("EnableOverrun",$param) and $param["EnableOverrun"] !== null) {
+            $this->EnableOverrun = $param["EnableOverrun"];
+        }
+
+        if (array_key_exists("ExtPackageType",$param) and $param["ExtPackageType"] !== null) {
+            $this->ExtPackageType = $param["ExtPackageType"];
         }
     }
 }

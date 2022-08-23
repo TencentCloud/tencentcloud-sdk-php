@@ -23,11 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() 获取配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitch(string $Switch) 设置配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHeaderName() 获取回源时，存放客户端IP的请求头名称。
 为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -41,7 +39,6 @@ class ClientIp extends AbstractModel
      * @var string 配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
@@ -56,7 +53,6 @@ class ClientIp extends AbstractModel
      * @param string $Switch 配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HeaderName 回源时，存放客户端IP的请求头名称。
 为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。

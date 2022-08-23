@@ -14,26 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Taf\V20200210\Models;
+namespace TencentCloud\Yinsuda\V20220527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DetectFraudKOL返回参数结构体
+ * DescribeKTVMatchMusics返回参数结构体
  *
- * @method OutputKolData getData() 获取回包数据
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(OutputKolData $Data) 设置回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMatchMusicSet() 获取匹配到的歌曲列表。
+ * @method void setMatchMusicSet(array $MatchMusicSet) 设置匹配到的歌曲列表。
+ * @method array getNotMatchRuleSet() 获取未匹配的规则列表。
+ * @method void setNotMatchRuleSet(array $NotMatchRuleSet) 设置未匹配的规则列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DetectFraudKOLResponse extends AbstractModel
+class DescribeKTVMatchMusicsResponse extends AbstractModel
 {
     /**
-     * @var OutputKolData 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 匹配到的歌曲列表。
      */
-    public $Data;
+    public $MatchMusicSet;
+
+    /**
+     * @var array 未匹配的规则列表。
+     */
+    public $NotMatchRuleSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class DetectFraudKOLResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param OutputKolData $Data 回包数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MatchMusicSet 匹配到的歌曲列表。
+     * @param array $NotMatchRuleSet 未匹配的规则列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,9 +62,22 @@ class DetectFraudKOLResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new OutputKolData();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("MatchMusicSet",$param) and $param["MatchMusicSet"] !== null) {
+            $this->MatchMusicSet = [];
+            foreach ($param["MatchMusicSet"] as $key => $value){
+                $obj = new KTVMatchMusic();
+                $obj->deserialize($value);
+                array_push($this->MatchMusicSet, $obj);
+            }
+        }
+
+        if (array_key_exists("NotMatchRuleSet",$param) and $param["NotMatchRuleSet"] !== null) {
+            $this->NotMatchRuleSet = [];
+            foreach ($param["NotMatchRuleSet"] as $key => $value){
+                $obj = new KTVMatchRule();
+                $obj->deserialize($value);
+                array_push($this->NotMatchRuleSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

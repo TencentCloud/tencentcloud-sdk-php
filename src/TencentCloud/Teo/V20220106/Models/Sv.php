@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 询价参数
  *
- * @method string getKey() 获取询价参数 key
- * @method void setKey(string $Key) 设置询价参数 key
- * @method string getValue() 获取询价参数 value
- * @method void setValue(string $Value) 设置询价参数 value
+ * @method string getKey() 获取询价参数键。
+ * @method void setKey(string $Key) 设置询价参数键。
+ * @method string getValue() 获取询价参数值。
+ * @method void setValue(string $Value) 设置询价参数值。
  */
 class Sv extends AbstractModel
 {
     /**
-     * @var string 询价参数 key
+     * @var string 询价参数键。
      */
     public $Key;
 
     /**
-     * @var string 询价参数 value
+     * @var string 询价参数值。
      */
     public $Value;
 
     /**
-     * @param string $Key 询价参数 key
-     * @param string $Value 询价参数 value
+     * @param string $Key 询价参数键。
+     * @param string $Value 询价参数值。
      */
     function __construct()
     {

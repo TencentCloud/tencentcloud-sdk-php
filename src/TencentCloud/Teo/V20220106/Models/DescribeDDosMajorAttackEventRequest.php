@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
 <li>all 。</li>
  * @method array getZoneIds() 获取站点id列表，不填默认选择全部站点。
  * @method void setZoneIds(array $ZoneIds) 设置站点id列表，不填默认选择全部站点。
+ * @method string getArea() 获取数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+ * @method void setArea(string $Area) 设置数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
  */
 class DescribeDDosMajorAttackEventRequest extends AbstractModel
 {
@@ -82,6 +88,13 @@ class DescribeDDosMajorAttackEventRequest extends AbstractModel
     public $ZoneIds;
 
     /**
+     * @var string 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     */
+    public $Area;
+
+    /**
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
      * @param integer $PageSize 分页拉取的最大返回结果数。最大值：1000。
@@ -92,6 +105,9 @@ class DescribeDDosMajorAttackEventRequest extends AbstractModel
 <li>udp ；</li>
 <li>all 。</li>
      * @param array $ZoneIds 站点id列表，不填默认选择全部站点。
+     * @param string $Area 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
      */
     function __construct()
     {
@@ -132,6 +148,10 @@ class DescribeDDosMajorAttackEventRequest extends AbstractModel
 
         if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
             $this->ZoneIds = $param["ZoneIds"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

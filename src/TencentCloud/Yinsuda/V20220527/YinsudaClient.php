@@ -24,6 +24,7 @@ use TencentCloud\Yinsuda\V20220527\Models as Models;
 
 /**
  * @method Models\BatchDescribeKTVMusicDetailsResponse BatchDescribeKTVMusicDetails(Models\BatchDescribeKTVMusicDetailsRequest $req) 批量获取歌曲详细信息，包括：歌词下载链接、播放凭证、音高数据下载链接信息等。
+ * @method Models\DescribeKTVMatchMusicsResponse DescribeKTVMatchMusics(Models\DescribeKTVMatchMusicsRequest $req) 根据输入的规则匹配曲库中的歌曲。
  * @method Models\DescribeKTVPlaylistDetailResponse DescribeKTVPlaylistDetail(Models\DescribeKTVPlaylistDetailRequest $req) 根据歌单 Id 获取歌单详情。
  * @method Models\DescribeKTVPlaylistsResponse DescribeKTVPlaylists(Models\DescribeKTVPlaylistsRequest $req) 获取歌单列表。
  * @method Models\DescribeKTVSuggestionsResponse DescribeKTVSuggestions(Models\DescribeKTVSuggestionsRequest $req) 根据关键词获取联想词列表。

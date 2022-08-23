@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Datahub任务
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSelfBuilt() 获取是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PostgreSQLModifyConnectParam extends AbstractModel
 {
@@ -104,6 +108,12 @@ class PostgreSQLModifyConnectParam extends AbstractModel
     public $IsUpdate;
 
     /**
+     * @var boolean 是否为自建集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SelfBuilt;
+
+    /**
      * @param string $Resource PostgreSQL连接源的实例资源【不支持修改】
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port PostgreSQL的连接port【不支持修改】
@@ -119,6 +129,8 @@ class PostgreSQLModifyConnectParam extends AbstractModel
      * @param string $ClusterId 当type为TDSQL_C_POSTGRESQL时，该参数才有值【不支持修改】
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdate 是否更新到关联的Datahub任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SelfBuilt 是否为自建集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +176,10 @@ class PostgreSQLModifyConnectParam extends AbstractModel
 
         if (array_key_exists("IsUpdate",$param) and $param["IsUpdate"] !== null) {
             $this->IsUpdate = $param["IsUpdate"];
+        }
+
+        if (array_key_exists("SelfBuilt",$param) and $param["SelfBuilt"] !== null) {
+            $this->SelfBuilt = $param["SelfBuilt"];
         }
     }
 }

@@ -53,9 +53,7 @@ OriginValue=["test.com:80"]；
 当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
 OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
  * @method string getRuleId() 获取规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(string $RuleId) 设置规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态，取值有：
 <li>online：启用；</li>
 <li>offline：停用；</li>
@@ -121,7 +119,6 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 
     /**
      * @var string 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
@@ -169,7 +166,6 @@ OriginValue=["test.com:80"]；
 当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
 OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
      * @param string $RuleId 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态，取值有：
 <li>online：启用；</li>
 <li>offline：停用；</li>

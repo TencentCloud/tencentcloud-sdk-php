@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取站点名称
  * @method void setName(string $Name) 设置站点名称
  * @method array getOriginalNameServers() 获取用户当前使用的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalNameServers(array $OriginalNameServers) 设置用户当前使用的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNameServers() 获取腾讯云分配给用户的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNameServers(array $NameServers) 设置腾讯云分配给用户的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取站点状态
 - active：NS 已切换
 - pending：NS 未切换
@@ -50,18 +46,6 @@ use TencentCloud\Common\AbstractModel;
 - partial：CNAME 接入
  * @method boolean getPaused() 获取站点是否关闭
  * @method void setPaused(boolean $Paused) 设置站点是否关闭
- * @method string getCreatedOn() 获取站点创建时间
- * @method void setCreatedOn(string $CreatedOn) 设置站点创建时间
- * @method string getModifiedOn() 获取站点修改时间
- * @method void setModifiedOn(string $ModifiedOn) 设置站点修改时间
- * @method VanityNameServers getVanityNameServers() 获取用户自定义 NS 信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVanityNameServers(VanityNameServers $VanityNameServers) 设置用户自定义 NS 信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getVanityNameServersIps() 获取用户自定义 NS IP 信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVanityNameServersIps(array $VanityNameServersIps) 设置用户自定义 NS IP 信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCnameSpeedUp() 获取是否开启 CNAME 加速
 - enabled：开启
 - disabled：关闭
@@ -71,18 +55,36 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCnameStatus() 获取cname切换验证状态
 - finished 切换完成
 - pending 切换验证中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCnameStatus(string $CnameStatus) 设置cname切换验证状态
 - finished 切换完成
 - pending 切换验证中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取资源标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置资源标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArea() 获取站点接入地域，取值为：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>
+ * @method void setArea(string $Area) 设置站点接入地域，取值为：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>
  * @method array getResources() 获取计费资源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResources(array $Resources) 设置计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModifiedOn() 获取站点修改时间
+ * @method void setModifiedOn(string $ModifiedOn) 设置站点修改时间
+ * @method string getCreatedOn() 获取站点创建时间
+ * @method void setCreatedOn(string $CreatedOn) 设置站点创建时间
+ * @method VanityNameServers getVanityNameServers() 获取用户自定义 NS 信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVanityNameServers(VanityNameServers $VanityNameServers) 设置用户自定义 NS 信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVanityNameServersIps() 获取用户自定义 NS IP 信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVanityNameServersIps(array $VanityNameServersIps) 设置用户自定义 NS IP 信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -101,13 +103,11 @@ class DescribeZoneDetailsResponse extends AbstractModel
 
     /**
      * @var array 用户当前使用的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalNameServers;
 
     /**
      * @var array 腾讯云分配给用户的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameServers;
 
@@ -133,14 +133,48 @@ class DescribeZoneDetailsResponse extends AbstractModel
     public $Paused;
 
     /**
-     * @var string 站点创建时间
+     * @var string 是否开启 CNAME 加速
+- enabled：开启
+- disabled：关闭
      */
-    public $CreatedOn;
+    public $CnameSpeedUp;
+
+    /**
+     * @var string cname切换验证状态
+- finished 切换完成
+- pending 切换验证中
+     */
+    public $CnameStatus;
+
+    /**
+     * @var array 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var string 站点接入地域，取值为：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>
+     */
+    public $Area;
+
+    /**
+     * @var array 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Resources;
 
     /**
      * @var string 站点修改时间
      */
     public $ModifiedOn;
+
+    /**
+     * @var string 站点创建时间
+     */
+    public $CreatedOn;
 
     /**
      * @var VanityNameServers 用户自定义 NS 信息
@@ -155,33 +189,6 @@ class DescribeZoneDetailsResponse extends AbstractModel
     public $VanityNameServersIps;
 
     /**
-     * @var string 是否开启 CNAME 加速
-- enabled：开启
-- disabled：关闭
-     */
-    public $CnameSpeedUp;
-
-    /**
-     * @var string cname切换验证状态
-- finished 切换完成
-- pending 切换验证中
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CnameStatus;
-
-    /**
-     * @var array 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Tags;
-
-    /**
-     * @var array 计费资源
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Resources;
-
-    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -190,9 +197,7 @@ class DescribeZoneDetailsResponse extends AbstractModel
      * @param string $Id 站点 ID
      * @param string $Name 站点名称
      * @param array $OriginalNameServers 用户当前使用的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NameServers 腾讯云分配给用户的 NS 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 站点状态
 - active：NS 已切换
 - pending：NS 未切换
@@ -202,22 +207,25 @@ class DescribeZoneDetailsResponse extends AbstractModel
 - full：NS 接入
 - partial：CNAME 接入
      * @param boolean $Paused 站点是否关闭
-     * @param string $CreatedOn 站点创建时间
-     * @param string $ModifiedOn 站点修改时间
-     * @param VanityNameServers $VanityNameServers 用户自定义 NS 信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $VanityNameServersIps 用户自定义 NS IP 信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CnameSpeedUp 是否开启 CNAME 加速
 - enabled：开启
 - disabled：关闭
      * @param string $CnameStatus cname切换验证状态
 - finished 切换完成
 - pending 切换验证中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 资源标签
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Area 站点接入地域，取值为：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>
      * @param array $Resources 计费资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModifiedOn 站点修改时间
+     * @param string $CreatedOn 站点创建时间
+     * @param VanityNameServers $VanityNameServers 用户自定义 NS 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VanityNameServersIps 用户自定义 NS IP 信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -262,28 +270,6 @@ class DescribeZoneDetailsResponse extends AbstractModel
             $this->Paused = $param["Paused"];
         }
 
-        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
-            $this->CreatedOn = $param["CreatedOn"];
-        }
-
-        if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
-            $this->ModifiedOn = $param["ModifiedOn"];
-        }
-
-        if (array_key_exists("VanityNameServers",$param) and $param["VanityNameServers"] !== null) {
-            $this->VanityNameServers = new VanityNameServers();
-            $this->VanityNameServers->deserialize($param["VanityNameServers"]);
-        }
-
-        if (array_key_exists("VanityNameServersIps",$param) and $param["VanityNameServersIps"] !== null) {
-            $this->VanityNameServersIps = [];
-            foreach ($param["VanityNameServersIps"] as $key => $value){
-                $obj = new VanityNameServersIps();
-                $obj->deserialize($value);
-                array_push($this->VanityNameServersIps, $obj);
-            }
-        }
-
         if (array_key_exists("CnameSpeedUp",$param) and $param["CnameSpeedUp"] !== null) {
             $this->CnameSpeedUp = $param["CnameSpeedUp"];
         }
@@ -301,12 +287,38 @@ class DescribeZoneDetailsResponse extends AbstractModel
             }
         }
 
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
+        }
+
         if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
             $this->Resources = [];
             foreach ($param["Resources"] as $key => $value){
                 $obj = new Resource();
                 $obj->deserialize($value);
                 array_push($this->Resources, $obj);
+            }
+        }
+
+        if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
+            $this->ModifiedOn = $param["ModifiedOn"];
+        }
+
+        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
+            $this->CreatedOn = $param["CreatedOn"];
+        }
+
+        if (array_key_exists("VanityNameServers",$param) and $param["VanityNameServers"] !== null) {
+            $this->VanityNameServers = new VanityNameServers();
+            $this->VanityNameServers->deserialize($param["VanityNameServers"]);
+        }
+
+        if (array_key_exists("VanityNameServersIps",$param) and $param["VanityNameServersIps"] !== null) {
+            $this->VanityNameServersIps = [];
+            foreach ($param["VanityNameServersIps"] as $key => $value){
+                $obj = new VanityNameServersIps();
+                $obj->deserialize($value);
+                array_push($this->VanityNameServersIps, $obj);
             }
         }
 

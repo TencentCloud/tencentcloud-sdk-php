@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneIds(array $ZoneIds) 设置ZoneId数组
  * @method array getFilters() 获取筛选条件
  * @method void setFilters(array $Filters) 设置筛选条件
+ * @method string getArea() 获取加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+ * @method void setArea(string $Area) 设置加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
  */
 class DescribeTopL7CacheDataRequest extends AbstractModel
 {
@@ -73,6 +79,13 @@ class DescribeTopL7CacheDataRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public $Area;
+
+    /**
      * @param string $StartTime RFC3339标准，客户端时间
      * @param string $EndTime RFC3339标准，客户端时间
      * @param string $MetricName 时序类访问流量指标
@@ -80,6 +93,9 @@ class DescribeTopL7CacheDataRequest extends AbstractModel
      * @param string $Interval 时间间隔，选填{min, 5min, hour, day, week}
      * @param array $ZoneIds ZoneId数组
      * @param array $Filters 筛选条件
+     * @param string $Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
      */
     function __construct()
     {
@@ -125,6 +141,10 @@ class DescribeTopL7CacheDataRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置站点ID。
  * @method string getZoneName() 获取站点名称。
  * @method void setZoneName(string $ZoneName) 设置站点名称。
- * @method array getRule() 获取规则详细信息。
- * @method void setRule(array $Rule) 设置规则详细信息。
  * @method string getProxyName() 获取当ProxyType=hostname时，表示域名或子域名；
 当ProxyType=instance时，表示代理名称。
  * @method void setProxyName(string $ProxyName) 设置当ProxyType=hostname时，表示域名或子域名；
@@ -52,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionPersist(boolean $SessionPersist) 设置字段已经废弃。
  * @method string getForwardClientIp() 获取字段已经废弃。
  * @method void setForwardClientIp(string $ForwardClientIp) 设置字段已经废弃。
+ * @method array getRule() 获取规则详细信息。
+ * @method void setRule(array $Rule) 设置规则详细信息。
  * @method string getProxyType() 获取四层代理模式，取值有：
 <li>hostname：表示子域名模式；</li>
 <li>instance：表示实例模式。</li>不填写使用默认值instance。
@@ -78,11 +78,6 @@ class CreateApplicationProxyRequest extends AbstractModel
      * @var string 站点名称。
      */
     public $ZoneName;
-
-    /**
-     * @var array 规则详细信息。
-     */
-    public $Rule;
 
     /**
      * @var string 当ProxyType=hostname时，表示域名或子域名；
@@ -122,6 +117,11 @@ class CreateApplicationProxyRequest extends AbstractModel
     public $ForwardClientIp;
 
     /**
+     * @var array 规则详细信息。
+     */
+    public $Rule;
+
+    /**
      * @var string 四层代理模式，取值有：
 <li>hostname：表示子域名模式；</li>
 <li>instance：表示实例模式。</li>不填写使用默认值instance。
@@ -143,7 +143,6 @@ class CreateApplicationProxyRequest extends AbstractModel
     /**
      * @param string $ZoneId 站点ID。
      * @param string $ZoneName 站点名称。
-     * @param array $Rule 规则详细信息。
      * @param string $ProxyName 当ProxyType=hostname时，表示域名或子域名；
 当ProxyType=instance时，表示代理名称。
      * @param string $PlatType 调度模式，取值有：
@@ -157,6 +156,7 @@ class CreateApplicationProxyRequest extends AbstractModel
 <li>1：开启加速。</li>
      * @param boolean $SessionPersist 字段已经废弃。
      * @param string $ForwardClientIp 字段已经废弃。
+     * @param array $Rule 规则详细信息。
      * @param string $ProxyType 四层代理模式，取值有：
 <li>hostname：表示子域名模式；</li>
 <li>instance：表示实例模式。</li>不填写使用默认值instance。
@@ -186,15 +186,6 @@ class CreateApplicationProxyRequest extends AbstractModel
             $this->ZoneName = $param["ZoneName"];
         }
 
-        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
-            $this->Rule = [];
-            foreach ($param["Rule"] as $key => $value){
-                $obj = new ApplicationProxyRule();
-                $obj->deserialize($value);
-                array_push($this->Rule, $obj);
-            }
-        }
-
         if (array_key_exists("ProxyName",$param) and $param["ProxyName"] !== null) {
             $this->ProxyName = $param["ProxyName"];
         }
@@ -217,6 +208,15 @@ class CreateApplicationProxyRequest extends AbstractModel
 
         if (array_key_exists("ForwardClientIp",$param) and $param["ForwardClientIp"] !== null) {
             $this->ForwardClientIp = $param["ForwardClientIp"];
+        }
+
+        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
+            $this->Rule = [];
+            foreach ($param["Rule"] as $key => $value){
+                $obj = new ApplicationProxyRule();
+                $obj->deserialize($value);
+                array_push($this->Rule, $obj);
+            }
         }
 
         if (array_key_exists("ProxyType",$param) and $param["ProxyType"] !== null) {

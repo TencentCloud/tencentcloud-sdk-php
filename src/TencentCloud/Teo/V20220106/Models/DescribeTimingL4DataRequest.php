@@ -48,6 +48,12 @@ l4Flow_outFlux: 访问出流量
  * @method void setFilters(array $Filters) 设置支持的 Filter：proxyd,ruleId
  * @method array getProxyIds() 获取四层实例列表
  * @method void setProxyIds(array $ProxyIds) 设置四层实例列表
+ * @method string getArea() 获取加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+ * @method void setArea(string $Area) 设置加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
  */
 class DescribeTimingL4DataRequest extends AbstractModel
 {
@@ -106,6 +112,13 @@ l4Flow_outFlux: 访问出流量
     public $ProxyIds;
 
     /**
+     * @var string 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public $Area;
+
+    /**
      * @param string $StartTime RFC3339格式，客户端时间
      * @param string $EndTime RFC3339格式，客户端时间
      * @param array $MetricNames 支持的指标：
@@ -120,6 +133,9 @@ l4Flow_outFlux: 访问出流量
      * @param string $RuleId 该字段当前无效，请使用Filter筛选
      * @param array $Filters 支持的 Filter：proxyd,ruleId
      * @param array $ProxyIds 四层实例列表
+     * @param string $Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
      */
     function __construct()
     {
@@ -177,6 +193,10 @@ l4Flow_outFlux: 访问出流量
 
         if (array_key_exists("ProxyIds",$param) and $param["ProxyIds"] !== null) {
             $this->ProxyIds = $param["ProxyIds"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

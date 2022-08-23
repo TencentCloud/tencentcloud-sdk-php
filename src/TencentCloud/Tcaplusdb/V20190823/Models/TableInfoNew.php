@@ -132,6 +132,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) 设置表格Txh备份文件多少天后过期删除
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SyncTableInfo getSyncTableInfo() 获取表格的缓写信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSyncTableInfo(SyncTableInfo $SyncTableInfo) 设置表格的缓写信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableInfoNew extends AbstractModel
 {
@@ -304,6 +308,12 @@ class TableInfoNew extends AbstractModel
     public $TxhBackupExpireDay;
 
     /**
+     * @var SyncTableInfo 表格的缓写信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SyncTableInfo;
+
+    /**
      * @param string $TableName 表格名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableInstanceId 表格实例ID
@@ -359,6 +369,8 @@ class TableInfoNew extends AbstractModel
      * @param string $DbClusterInfoStruct 表格分布式索引/缓写、kafka数据订阅信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TxhBackupExpireDay 表格Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SyncTableInfo $SyncTableInfo 表格的缓写信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -490,6 +502,11 @@ class TableInfoNew extends AbstractModel
 
         if (array_key_exists("TxhBackupExpireDay",$param) and $param["TxhBackupExpireDay"] !== null) {
             $this->TxhBackupExpireDay = $param["TxhBackupExpireDay"];
+        }
+
+        if (array_key_exists("SyncTableInfo",$param) and $param["SyncTableInfo"] !== null) {
+            $this->SyncTableInfo = new SyncTableInfo();
+            $this->SyncTableInfo->deserialize($param["SyncTableInfo"]);
         }
     }
 }

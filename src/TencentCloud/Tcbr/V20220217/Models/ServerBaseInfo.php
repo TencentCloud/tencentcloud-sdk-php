@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method array getAccessTypes() 获取公网访问类型
  * @method void setAccessTypes(array $AccessTypes) 设置公网访问类型
+ * @method array getCustomDomainNames() 获取展示自定义域名
+ * @method void setCustomDomainNames(array $CustomDomainNames) 设置展示自定义域名
  */
 class ServerBaseInfo extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ServerBaseInfo extends AbstractModel
     public $AccessTypes;
 
     /**
+     * @var array 展示自定义域名
+     */
+    public $CustomDomainNames;
+
+    /**
      * @param string $ServerName 服务名
      * @param string $DefaultDomainName 默认服务域名
      * @param string $CustomDomainName 自定义域名
      * @param string $Status 服务状态：running/deploying/deploy_failed
      * @param string $UpdateTime 更新时间
      * @param array $AccessTypes 公网访问类型
+     * @param array $CustomDomainNames 展示自定义域名
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ServerBaseInfo extends AbstractModel
 
         if (array_key_exists("AccessTypes",$param) and $param["AccessTypes"] !== null) {
             $this->AccessTypes = $param["AccessTypes"];
+        }
+
+        if (array_key_exists("CustomDomainNames",$param) and $param["CustomDomainNames"] !== null) {
+            $this->CustomDomainNames = $param["CustomDomainNames"];
         }
     }
 }

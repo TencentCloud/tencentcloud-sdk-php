@@ -23,11 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() 获取缓存配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitch(string $Switch) 设置缓存配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCacheTime() 获取缓存过期时间设置。
 单位为秒，最大可设置为 365 天。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -49,7 +47,6 @@ class CacheConfigCache extends AbstractModel
      * @var string 缓存配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
@@ -72,7 +69,6 @@ class CacheConfigCache extends AbstractModel
      * @param string $Switch 缓存配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CacheTime 缓存过期时间设置。
 单位为秒，最大可设置为 365 天。
 注意：此字段可能返回 null，表示取不到有效值。

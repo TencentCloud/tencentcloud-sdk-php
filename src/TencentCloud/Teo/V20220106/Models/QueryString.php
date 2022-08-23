@@ -23,11 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() 获取CacheKey是否由QueryString组成，取值有：
 <li>on：是；</li>
 <li>off：否。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitch(string $Switch) 设置CacheKey是否由QueryString组成，取值有：
 <li>on：是；</li>
 <li>off：否。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAction() 获取CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
 <li>excludeCustom：排除部分url参数。</li>
@@ -47,7 +45,6 @@ class QueryString extends AbstractModel
      * @var string CacheKey是否由QueryString组成，取值有：
 <li>on：是；</li>
 <li>off：否。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
@@ -69,7 +66,6 @@ class QueryString extends AbstractModel
      * @param string $Switch CacheKey是否由QueryString组成，取值有：
 <li>on：是；</li>
 <li>off：否。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Action CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
 <li>excludeCustom：排除部分url参数。</li>

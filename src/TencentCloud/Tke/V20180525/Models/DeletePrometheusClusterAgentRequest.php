@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePrometheusClusterAgent请求参数结构体
  *
-
+ * @method array getAgents() 获取agent列表
+ * @method void setAgents(array $Agents) 设置agent列表
+ * @method string getInstanceId() 获取实例id
+ * @method void setInstanceId(string $InstanceId) 设置实例id
  */
 class DeletePrometheusClusterAgentRequest extends AbstractModel
 {
-
+    /**
+     * @var array agent列表
+     */
+    public $Agents;
 
     /**
+     * @var string 实例id
+     */
+    public $InstanceId;
 
+    /**
+     * @param array $Agents agent列表
+     * @param string $InstanceId 实例id
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class DeletePrometheusClusterAgentRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Agents",$param) and $param["Agents"] !== null) {
+            $this->Agents = [];
+            foreach ($param["Agents"] as $key => $value){
+                $obj = new PrometheusAgentInfo();
+                $obj->deserialize($value);
+                array_push($this->Agents, $obj);
+            }
+        }
 
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
     }
 }

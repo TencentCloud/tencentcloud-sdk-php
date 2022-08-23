@@ -88,8 +88,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  * @method string getKernelVersion() 获取内核版本
  * @method void setKernelVersion(string $KernelVersion) 设置内核版本
- * @method string getProtectType() 获取防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
- * @method void setProtectType(string $ProtectType) 设置防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+ * @method string getProtectType() 获取防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+ * @method void setProtectType(string $ProtectType) 设置防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+ * @method array getCloudTags() 获取云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudTags(array $CloudTags) 设置云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Machine extends AbstractModel
 {
@@ -220,9 +224,15 @@ class Machine extends AbstractModel
     public $KernelVersion;
 
     /**
-     * @var string 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     * @var string 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
      */
     public $ProtectType;
+
+    /**
+     * @var array 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudTags;
 
     /**
      * @param string $MachineName 主机名称。
@@ -259,7 +269,9 @@ class Machine extends AbstractModel
      * @param integer $HasAssetScan 是否有资产扫描接口，0无，1有
      * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
      * @param string $KernelVersion 内核版本
-     * @param string $ProtectType 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     * @param string $ProtectType 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+     * @param array $CloudTags 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -374,6 +386,15 @@ class Machine extends AbstractModel
 
         if (array_key_exists("ProtectType",$param) and $param["ProtectType"] !== null) {
             $this->ProtectType = $param["ProtectType"];
+        }
+
+        if (array_key_exists("CloudTags",$param) and $param["CloudTags"] !== null) {
+            $this->CloudTags = [];
+            foreach ($param["CloudTags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->CloudTags, $obj);
+            }
         }
     }
 }

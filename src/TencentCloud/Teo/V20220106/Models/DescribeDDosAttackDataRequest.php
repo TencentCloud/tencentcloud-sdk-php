@@ -66,6 +66,12 @@ use TencentCloud\Common\AbstractModel;
 <li>5min ：5分钟 ；</li>
 <li>hour ：1小时 ；</li>
 <li>day ：1天 。</li>
+ * @method string getArea() 获取数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+ * @method void setArea(string $Area) 设置数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
  */
 class DescribeDDosAttackDataRequest extends AbstractModel
 {
@@ -129,6 +135,13 @@ class DescribeDDosAttackDataRequest extends AbstractModel
     public $Interval;
 
     /**
+     * @var string 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+     */
+    public $Area;
+
+    /**
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
      * @param array $MetricNames 统计指标列表，取值有：
@@ -152,6 +165,9 @@ class DescribeDDosAttackDataRequest extends AbstractModel
 <li>5min ：5分钟 ；</li>
 <li>hour ：1小时 ；</li>
 <li>day ：1天 。</li>
+     * @param string $Area 数据归属地区，取值有：
+<li>overseas ：全球（除中国大陆地区）数据 ；</li>
+<li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
      */
     function __construct()
     {
@@ -200,6 +216,10 @@ class DescribeDDosAttackDataRequest extends AbstractModel
 
         if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
             $this->Interval = $param["Interval"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

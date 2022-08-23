@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZones请求参数结构体
  *
- * @method integer getOffset() 获取分页参数，页偏移
- * @method void setOffset(integer $Offset) 设置分页参数，页偏移
- * @method integer getLimit() 获取分页参数，每页返回的站点个数
- * @method void setLimit(integer $Limit) 设置分页参数，每页返回的站点个数
- * @method array getFilters() 获取查询条件过滤器，复杂类型
- * @method void setFilters(array $Filters) 设置查询条件过滤器，复杂类型
+ * @method integer getOffset() 获取分页查询偏移量。默认值：0，最小值：0。
+ * @method void setOffset(integer $Offset) 设置分页查询偏移量。默认值：0，最小值：0。
+ * @method integer getLimit() 获取分页查询限制数目。默认值：1000，最大值：1000。
+ * @method void setLimit(integer $Limit) 设置分页查询限制数目。默认值：1000，最大值：1000。
+ * @method array getFilters() 获取查询条件过滤器，复杂类型。
+ * @method void setFilters(array $Filters) 设置查询条件过滤器，复杂类型。
  */
 class DescribeZonesRequest extends AbstractModel
 {
     /**
-     * @var integer 分页参数，页偏移
+     * @var integer 分页查询偏移量。默认值：0，最小值：0。
      */
     public $Offset;
 
     /**
-     * @var integer 分页参数，每页返回的站点个数
+     * @var integer 分页查询限制数目。默认值：1000，最大值：1000。
      */
     public $Limit;
 
     /**
-     * @var array 查询条件过滤器，复杂类型
+     * @var array 查询条件过滤器，复杂类型。
      */
     public $Filters;
 
     /**
-     * @param integer $Offset 分页参数，页偏移
-     * @param integer $Limit 分页参数，每页返回的站点个数
-     * @param array $Filters 查询条件过滤器，复杂类型
+     * @param integer $Offset 分页查询偏移量。默认值：0，最小值：0。
+     * @param integer $Limit 分页查询限制数目。默认值：1000，最大值：1000。
+     * @param array $Filters 查询条件过滤器，复杂类型。
      */
     function __construct()
     {

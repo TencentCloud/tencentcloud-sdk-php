@@ -20,25 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZones返回参数结构体
  *
- * @method integer getTotalCount() 获取符合条件的站点数
- * @method void setTotalCount(integer $TotalCount) 设置符合条件的站点数
- * @method array getZones() 获取站点详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZones(array $Zones) 设置站点详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取符合条件的站点个数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的站点个数。
+ * @method array getZones() 获取站点详细信息列表。
+ * @method void setZones(array $Zones) 设置站点详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeZonesResponse extends AbstractModel
 {
     /**
-     * @var integer 符合条件的站点数
+     * @var integer 符合条件的站点个数。
      */
     public $TotalCount;
 
     /**
-     * @var array 站点详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 站点详细信息列表。
      */
     public $Zones;
 
@@ -48,9 +45,8 @@ class DescribeZonesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合条件的站点数
-     * @param array $Zones 站点详细信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 符合条件的站点个数。
+     * @param array $Zones 站点详细信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -28,10 +28,12 @@ use TencentCloud\Common\AbstractModel;
 l7Flow_outFlux: 访问流量
 l7Flow_request: 访问请求数
 l7Flow_outBandwidth: 访问带宽
+ l7Flow_hit_outFlux: 缓存命中流量
  * @method void setMetricNames(array $MetricNames) 设置指标列表，支持的指标
 l7Flow_outFlux: 访问流量
 l7Flow_request: 访问请求数
 l7Flow_outBandwidth: 访问带宽
+ l7Flow_hit_outFlux: 缓存命中流量
  * @method string getInterval() 获取时间间隔，选填{min, 5min, hour, day, week}
  * @method void setInterval(string $Interval) 设置时间间隔，选填{min, 5min, hour, day, week}
  * @method array getZoneIds() 获取ZoneId列表，仅在zone/domain维度下查询时该参数有效
@@ -40,6 +42,12 @@ l7Flow_outBandwidth: 访问带宽
  * @method void setDomains(array $Domains) 设置Domain列表，仅在domain维度下查询时该参数有效
  * @method string getProtocol() 获取协议类型， 选填{http,http2,https,all}
  * @method void setProtocol(string $Protocol) 设置协议类型， 选填{http,http2,https,all}
+ * @method string getArea() 获取加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+ * @method void setArea(string $Area) 设置加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
  */
 class DescribeOverviewL7DataRequest extends AbstractModel
 {
@@ -58,6 +66,7 @@ class DescribeOverviewL7DataRequest extends AbstractModel
 l7Flow_outFlux: 访问流量
 l7Flow_request: 访问请求数
 l7Flow_outBandwidth: 访问带宽
+ l7Flow_hit_outFlux: 缓存命中流量
      */
     public $MetricNames;
 
@@ -82,16 +91,27 @@ l7Flow_outBandwidth: 访问带宽
     public $Protocol;
 
     /**
+     * @var string 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
+     */
+    public $Area;
+
+    /**
      * @param string $StartTime RFC3339格式，客户端时间
      * @param string $EndTime RFC3339格式，客户端时间
      * @param array $MetricNames 指标列表，支持的指标
 l7Flow_outFlux: 访问流量
 l7Flow_request: 访问请求数
 l7Flow_outBandwidth: 访问带宽
+ l7Flow_hit_outFlux: 缓存命中流量
      * @param string $Interval 时间间隔，选填{min, 5min, hour, day, week}
      * @param array $ZoneIds ZoneId列表，仅在zone/domain维度下查询时该参数有效
      * @param array $Domains Domain列表，仅在domain维度下查询时该参数有效
      * @param string $Protocol 协议类型， 选填{http,http2,https,all}
+     * @param string $Area 加速区域，取值有：
+<li>mainland：中国大陆境内;</li>
+<li>overseas：全球（不含中国大陆）。</li>
      */
     function __construct()
     {
@@ -132,6 +152,10 @@ l7Flow_outBandwidth: 访问带宽
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

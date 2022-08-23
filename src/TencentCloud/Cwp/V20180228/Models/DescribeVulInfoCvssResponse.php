@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefenseAttackCount(integer $DefenseAttackCount) 设置已防御的攻击次数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSuccessFixCount() 获取全网修复成功次数, 不支持自动修复的漏洞默认返回0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSuccessFixCount(integer $SuccessFixCount) 设置全网修复成功次数, 不支持自动修复的漏洞默认返回0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFixSwitch() 获取修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFixSwitch(integer $FixSwitch) 设置修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -176,6 +184,18 @@ class DescribeVulInfoCvssResponse extends AbstractModel
     public $DefenseAttackCount;
 
     /**
+     * @var integer 全网修复成功次数, 不支持自动修复的漏洞默认返回0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SuccessFixCount;
+
+    /**
+     * @var integer 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FixSwitch;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -210,6 +230,10 @@ class DescribeVulInfoCvssResponse extends AbstractModel
      * @param string $Labels 漏洞标签 多个逗号分割
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefenseAttackCount 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SuccessFixCount 全网修复成功次数, 不支持自动修复的漏洞默认返回0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FixSwitch 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -284,6 +308,14 @@ class DescribeVulInfoCvssResponse extends AbstractModel
 
         if (array_key_exists("DefenseAttackCount",$param) and $param["DefenseAttackCount"] !== null) {
             $this->DefenseAttackCount = $param["DefenseAttackCount"];
+        }
+
+        if (array_key_exists("SuccessFixCount",$param) and $param["SuccessFixCount"] !== null) {
+            $this->SuccessFixCount = $param["SuccessFixCount"];
+        }
+
+        if (array_key_exists("FixSwitch",$param) and $param["FixSwitch"] !== null) {
+            $this->FixSwitch = $param["FixSwitch"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

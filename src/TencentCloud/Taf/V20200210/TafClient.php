@@ -23,7 +23,6 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Taf\V20200210\Models as Models;
 
 /**
- * @method Models\DetectFraudKOLResponse DetectFraudKOL(Models\DetectFraudKOLRequest $req) 流量反欺诈-KOL欺诈识别
  * @method Models\RecognizeCustomizedAudienceResponse RecognizeCustomizedAudience(Models\RecognizeCustomizedAudienceRequest $req) 流量反欺诈-流量验准定制版
  * @method Models\RecognizePreciseTargetAudienceResponse RecognizePreciseTargetAudience(Models\RecognizePreciseTargetAudienceRequest $req) 流量反欺诈-流量验准高级版
  * @method Models\RecognizeTargetAudienceResponse RecognizeTargetAudience(Models\RecognizeTargetAudienceRequest $req) 流量反欺诈-流量验准

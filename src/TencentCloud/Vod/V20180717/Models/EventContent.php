@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent) 设置微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RemoveWatermarkTask getRemoveWatermarkCompleteEvent() 获取智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask $RemoveWatermarkCompleteEvent) 设置智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method RestoreMediaTask getRestoreMediaCompleteEvent() 获取视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) 设置视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
@@ -230,6 +234,12 @@ class EventContent extends AbstractModel
     public $WechatMiniProgramPublishCompleteEvent;
 
     /**
+     * @var RemoveWatermarkTask 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemoveWatermarkCompleteEvent;
+
+    /**
      * @var RestoreMediaTask 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -281,6 +291,8 @@ class EventContent extends AbstractModel
      * @param WechatPublishTask $WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemoveWatermarkTask $RemoveWatermarkCompleteEvent 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RestoreMediaTask $RestoreMediaCompleteEvent 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -374,6 +386,11 @@ class EventContent extends AbstractModel
         if (array_key_exists("WechatMiniProgramPublishCompleteEvent",$param) and $param["WechatMiniProgramPublishCompleteEvent"] !== null) {
             $this->WechatMiniProgramPublishCompleteEvent = new WechatMiniProgramPublishTask();
             $this->WechatMiniProgramPublishCompleteEvent->deserialize($param["WechatMiniProgramPublishCompleteEvent"]);
+        }
+
+        if (array_key_exists("RemoveWatermarkCompleteEvent",$param) and $param["RemoveWatermarkCompleteEvent"] !== null) {
+            $this->RemoveWatermarkCompleteEvent = new RemoveWatermarkTask();
+            $this->RemoveWatermarkCompleteEvent->deserialize($param["RemoveWatermarkCompleteEvent"]);
         }
 
         if (array_key_exists("RestoreMediaCompleteEvent",$param) and $param["RestoreMediaCompleteEvent"] !== null) {

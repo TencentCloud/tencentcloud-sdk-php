@@ -32,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Class.Created：分类新增事件；</li>
 <li>Class.Moved：分类移动事件；</li>
 <li>Class.Deleted：分类删除事件；</li>
-<li>Task.VideoExportCompleted：视频导出完成事件。 </li>
+<li>Task.VideoExportCompleted：视频导出完成事件； </li>
+<li>Project.MediaCast.StatusChanged：点播转直播项目状态变更事件。 </li>
  * @method void setEventType(string $EventType) 设置事件类型，可取值有：
 <li>Storage.NewFileCreated：新文件产生事件；</li>
 <li>Project.StreamConnect.StatusChanged：云转推项目状态变更事件；</li>
@@ -45,7 +46,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Class.Created：分类新增事件；</li>
 <li>Class.Moved：分类移动事件；</li>
 <li>Class.Deleted：分类删除事件；</li>
-<li>Task.VideoExportCompleted：视频导出完成事件。 </li>
+<li>Task.VideoExportCompleted：视频导出完成事件； </li>
+<li>Project.MediaCast.StatusChanged：点播转直播项目状态变更事件。 </li>
  * @method string getOperator() 获取操作者，表示触发事件的操作者。如果是 `cmeid_system` 表示平台管理员操作。
  * @method void setOperator(string $Operator) 设置操作者，表示触发事件的操作者。如果是 `cmeid_system` 表示平台管理员操作。
  * @method StorageNewFileCreatedEvent getStorageNewFileCreatedEvent() 获取新文件产生事件。仅当 EventType 为 Storage.NewFileCreated 时有效。
@@ -92,6 +94,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoExportCompletedEvent(VideoExportCompletedEvent $VideoExportCompletedEvent) 设置视频导出完成事件。仅当 EventType 为 Task.VideoExportCompleted 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ProjectMediaCastStatusChangedEvent getProjectMediaCastStatusChangedEvent() 获取点播转直播项目状态变更事件。仅当 EventType 为 Project.MediaCast.StatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectMediaCastStatusChangedEvent(ProjectMediaCastStatusChangedEvent $ProjectMediaCastStatusChangedEvent) 设置点播转直播项目状态变更事件。仅当 EventType 为 Project.MediaCast.StatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventContent extends AbstractModel
 {
@@ -108,7 +114,8 @@ class EventContent extends AbstractModel
 <li>Class.Created：分类新增事件；</li>
 <li>Class.Moved：分类移动事件；</li>
 <li>Class.Deleted：分类删除事件；</li>
-<li>Task.VideoExportCompleted：视频导出完成事件。 </li>
+<li>Task.VideoExportCompleted：视频导出完成事件； </li>
+<li>Project.MediaCast.StatusChanged：点播转直播项目状态变更事件。 </li>
      */
     public $EventType;
 
@@ -188,6 +195,12 @@ class EventContent extends AbstractModel
     public $VideoExportCompletedEvent;
 
     /**
+     * @var ProjectMediaCastStatusChangedEvent 点播转直播项目状态变更事件。仅当 EventType 为 Project.MediaCast.StatusChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectMediaCastStatusChangedEvent;
+
+    /**
      * @param string $EventType 事件类型，可取值有：
 <li>Storage.NewFileCreated：新文件产生事件；</li>
 <li>Project.StreamConnect.StatusChanged：云转推项目状态变更事件；</li>
@@ -200,7 +213,8 @@ class EventContent extends AbstractModel
 <li>Class.Created：分类新增事件；</li>
 <li>Class.Moved：分类移动事件；</li>
 <li>Class.Deleted：分类删除事件；</li>
-<li>Task.VideoExportCompleted：视频导出完成事件。 </li>
+<li>Task.VideoExportCompleted：视频导出完成事件； </li>
+<li>Project.MediaCast.StatusChanged：点播转直播项目状态变更事件。 </li>
      * @param string $Operator 操作者，表示触发事件的操作者。如果是 `cmeid_system` 表示平台管理员操作。
      * @param StorageNewFileCreatedEvent $StorageNewFileCreatedEvent 新文件产生事件。仅当 EventType 为 Storage.NewFileCreated 时有效。
      * @param ProjectStreamConnectStatusChangedEvent $ProjectStreamConnectStatusChangedEvent 云转推项目状态变更事件。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。
@@ -223,6 +237,8 @@ class EventContent extends AbstractModel
      * @param ClassDeletedEvent $ClassDeletedEvent 分类删除事件。仅当 EventType 为 Class.Deleted 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoExportCompletedEvent $VideoExportCompletedEvent 视频导出完成事件。仅当 EventType 为 Task.VideoExportCompleted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectMediaCastStatusChangedEvent $ProjectMediaCastStatusChangedEvent 点播转直播项目状态变更事件。仅当 EventType 为 Project.MediaCast.StatusChanged 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -304,6 +320,11 @@ class EventContent extends AbstractModel
         if (array_key_exists("VideoExportCompletedEvent",$param) and $param["VideoExportCompletedEvent"] !== null) {
             $this->VideoExportCompletedEvent = new VideoExportCompletedEvent();
             $this->VideoExportCompletedEvent->deserialize($param["VideoExportCompletedEvent"]);
+        }
+
+        if (array_key_exists("ProjectMediaCastStatusChangedEvent",$param) and $param["ProjectMediaCastStatusChangedEvent"] !== null) {
+            $this->ProjectMediaCastStatusChangedEvent = new ProjectMediaCastStatusChangedEvent();
+            $this->ProjectMediaCastStatusChangedEvent->deserialize($param["ProjectMediaCastStatusChangedEvent"]);
         }
     }
 }

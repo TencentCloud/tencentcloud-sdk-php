@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getChannelId() 获取通道 ID
  * @method void setChannelId(string $ChannelId) 设置通道 ID
- * @method string getInstanceId() 获取实例名
- * @method void setInstanceId(string $InstanceId) 设置实例名
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getChannelName() 获取渠道名
  * @method void setChannelName(string $ChannelName) 设置渠道名
  * @method array getReceivers() 获取接受告警通道 ID 数组
@@ -39,7 +39,7 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
     public $ChannelId;
 
     /**
-     * @var string 实例名
+     * @var string 实例 ID
      */
     public $InstanceId;
 
@@ -60,7 +60,7 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
 
     /**
      * @param string $ChannelId 通道 ID
-     * @param string $InstanceId 实例名
+     * @param string $InstanceId 实例 ID
      * @param string $ChannelName 渠道名
      * @param array $Receivers 接受告警通道 ID 数组
      * @param array $ExtraOrgIds 额外组织 ID 数组

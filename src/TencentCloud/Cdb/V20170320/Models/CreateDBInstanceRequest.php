@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupZone(string $BackupZone) 设置备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。
  * @method integer getAutoRenewFlag() 获取自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。
- * @method string getMasterRegion() 获取主实例地域信息，购买灾备实例时，该字段必填。
- * @method void setMasterRegion(string $MasterRegion) 设置主实例地域信息，购买灾备实例时，该字段必填。
+ * @method string getMasterRegion() 获取主实例地域信息，购买灾备、RO实例时，该字段必填。
+ * @method void setMasterRegion(string $MasterRegion) 设置主实例地域信息，购买灾备、RO实例时，该字段必填。
  * @method array getSecurityGroup() 获取安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
  * @method RoGroup getRoGroup() 获取只读实例参数。购买只读实例时，该参数必传。
@@ -76,8 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) 设置实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
  * @method integer getParamTemplateId() 获取参数模板id。
  * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模板id。
- * @method array getAlarmPolicyList() 获取告警策略id数组。
- * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置告警策略id数组。
+ * @method array getAlarmPolicyList() 获取告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
+ * @method void setAlarmPolicyList(array $AlarmPolicyList) 设置告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
  * @method integer getInstanceNodes() 获取实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
  * @method void setInstanceNodes(integer $InstanceNodes) 设置实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
  * @method integer getCpu() 获取实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
@@ -195,7 +195,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var string 主实例地域信息，购买灾备实例时，该字段必填。
+     * @var string 主实例地域信息，购买灾备、RO实例时，该字段必填。
      */
     public $MasterRegion;
 
@@ -240,7 +240,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $ParamTemplateId;
 
     /**
-     * @var array 告警策略id数组。
+     * @var array 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
      */
     public $AlarmPolicyList;
 
@@ -309,7 +309,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param array $ParamList 参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
      * @param string $BackupZone 备库 2 的可用区信息，默认为空，购买三节点主实例时可指定该参数。
      * @param integer $AutoRenewFlag 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。
-     * @param string $MasterRegion 主实例地域信息，购买灾备实例时，该字段必填。
+     * @param string $MasterRegion 主实例地域信息，购买灾备、RO实例时，该字段必填。
      * @param array $SecurityGroup 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
      * @param RoGroup $RoGroup 只读实例参数。购买只读实例时，该参数必传。
      * @param string $InstanceName 实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
@@ -318,7 +318,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在48小时内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param string $DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
      * @param integer $ParamTemplateId 参数模板id。
-     * @param array $AlarmPolicyList 告警策略id数组。
+     * @param array $AlarmPolicyList 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
      * @param integer $InstanceNodes 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要购买三节点实例， 请将该值设置为3 或指定 BackupZone 参数。当购买主实例，且未指定该参数和 BackupZone 参数时，该值默认是 2， 即购买两节点实例。
      * @param integer $Cpu 实例cpu核数， 如果不传将根据memory指定的内存值自动填充对应的cpu值。
      * @param integer $AutoSyncFlag 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。该值默认为0。

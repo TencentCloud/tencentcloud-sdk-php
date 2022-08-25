@@ -26,10 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
+ * @method array getSubtitleFormats() 获取生成的字幕文件格式列表，不填或者填空数组表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+ * @method void setSubtitleFormats(array $SubtitleFormats) 设置生成的字幕文件格式列表，不填或者填空数组表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
  * @method string getSubtitleFormat() 获取生成的字幕文件格式，不填或者填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormats。</font>
  * @method void setSubtitleFormat(string $SubtitleFormat) 设置生成的字幕文件格式，不填或者填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormats。</font>
  */
 class AsrFullTextConfigureInfo extends AbstractModel
 {
@@ -41,8 +51,17 @@ class AsrFullTextConfigureInfo extends AbstractModel
     public $Switch;
 
     /**
+     * @var array 生成的字幕文件格式列表，不填或者填空数组表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+     */
+    public $SubtitleFormats;
+
+    /**
      * @var string 生成的字幕文件格式，不填或者填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormats。</font>
      */
     public $SubtitleFormat;
 
@@ -50,8 +69,13 @@ class AsrFullTextConfigureInfo extends AbstractModel
      * @param string $Switch 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
+     * @param array $SubtitleFormats 生成的字幕文件格式列表，不填或者填空数组表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
      * @param string $SubtitleFormat 生成的字幕文件格式，不填或者填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormats。</font>
      */
     function __construct()
     {
@@ -68,6 +92,10 @@ class AsrFullTextConfigureInfo extends AbstractModel
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("SubtitleFormats",$param) and $param["SubtitleFormats"] !== null) {
+            $this->SubtitleFormats = $param["SubtitleFormats"];
         }
 
         if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {

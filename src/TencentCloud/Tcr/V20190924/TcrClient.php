@@ -28,9 +28,11 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CheckInstanceResponse CheckInstance(Models\CheckInstanceRequest $req) 用于校验企业版实例信息
  * @method Models\CheckInstanceNameResponse CheckInstanceName(Models\CheckInstanceNameRequest $req) 检查待创建的实例名称是否符合规范
  * @method Models\CreateApplicationTriggerPersonalResponse CreateApplicationTriggerPersonal(Models\CreateApplicationTriggerPersonalRequest $req) 用于创建应用更新触发器
+ * @method Models\CreateImageAccelerationServiceResponse CreateImageAccelerationService(Models\CreateImageAccelerationServiceRequest $req) 创建镜像加速服务
  * @method Models\CreateImageLifecyclePersonalResponse CreateImageLifecyclePersonal(Models\CreateImageLifecyclePersonalRequest $req) 用于在个人版中创建清理策略
  * @method Models\CreateImmutableTagRulesResponse CreateImmutableTagRules(Models\CreateImmutableTagRulesRequest $req) 创建镜像不可变规则
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建实例
+ * @method Models\CreateInstanceCustomizedDomainResponse CreateInstanceCustomizedDomain(Models\CreateInstanceCustomizedDomainRequest $req) 创建自定义域名
  * @method Models\CreateInstanceTokenResponse CreateInstanceToken(Models\CreateInstanceTokenRequest $req) 创建实例的临时或长期访问凭证
  * @method Models\CreateInternalEndpointDnsResponse CreateInternalEndpointDns(Models\CreateInternalEndpointDnsRequest $req) 创建tcr内网私有域名解析
  * @method Models\CreateMultipleSecurityPolicyResponse CreateMultipleSecurityPolicy(Models\CreateMultipleSecurityPolicyRequest $req) 用于在TCR实例中，创建多个白名单策略
@@ -39,26 +41,34 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CreateReplicationInstanceResponse CreateReplicationInstance(Models\CreateReplicationInstanceRequest $req) 创建从实例
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 用于企业版创建镜像仓库
  * @method Models\CreateRepositoryPersonalResponse CreateRepositoryPersonal(Models\CreateRepositoryPersonalRequest $req) 用于在个人版仓库中创建镜像仓库
+ * @method Models\CreateSecurityPoliciesResponse CreateSecurityPolicies(Models\CreateSecurityPoliciesRequest $req) 创建实例公网访问白名单策略
  * @method Models\CreateSecurityPolicyResponse CreateSecurityPolicy(Models\CreateSecurityPolicyRequest $req) 创建实例公网访问白名单策略
+ * @method Models\CreateSignatureResponse CreateSignature(Models\CreateSignatureRequest $req) 为一个镜像版本创建签名
+ * @method Models\CreateSignaturePolicyResponse CreateSignaturePolicy(Models\CreateSignaturePolicyRequest $req) 创建镜像签名策略
  * @method Models\CreateTagRetentionExecutionResponse CreateTagRetentionExecution(Models\CreateTagRetentionExecutionRequest $req) 手动执行版本保留
  * @method Models\CreateTagRetentionRuleResponse CreateTagRetentionRule(Models\CreateTagRetentionRuleRequest $req) 创建版本保留规则
  * @method Models\CreateUserPersonalResponse CreateUserPersonal(Models\CreateUserPersonalRequest $req) 创建个人用户
  * @method Models\CreateWebhookTriggerResponse CreateWebhookTrigger(Models\CreateWebhookTriggerRequest $req) 创建触发器
  * @method Models\DeleteApplicationTriggerPersonalResponse DeleteApplicationTriggerPersonal(Models\DeleteApplicationTriggerPersonalRequest $req) 用于删除应用更新触发器
  * @method Models\DeleteImageResponse DeleteImage(Models\DeleteImageRequest $req) 删除指定镜像
+ * @method Models\DeleteImageAccelerateServiceResponse DeleteImageAccelerateService(Models\DeleteImageAccelerateServiceRequest $req) 删除镜像加速服务
  * @method Models\DeleteImageLifecycleGlobalPersonalResponse DeleteImageLifecycleGlobalPersonal(Models\DeleteImageLifecycleGlobalPersonalRequest $req) 用于删除个人版全局镜像版本自动清理策略
  * @method Models\DeleteImageLifecyclePersonalResponse DeleteImageLifecyclePersonal(Models\DeleteImageLifecyclePersonalRequest $req) 用于在个人版镜像仓库中删除仓库Tag自动清理策略
  * @method Models\DeleteImagePersonalResponse DeleteImagePersonal(Models\DeleteImagePersonalRequest $req) 用于在个人版中删除tag
  * @method Models\DeleteImmutableTagRulesResponse DeleteImmutableTagRules(Models\DeleteImmutableTagRulesRequest $req)  删除镜像不可变规则
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除镜像仓库企业版实例
+ * @method Models\DeleteInstanceCustomizedDomainResponse DeleteInstanceCustomizedDomain(Models\DeleteInstanceCustomizedDomainRequest $req) 删除自定义域名
  * @method Models\DeleteInstanceTokenResponse DeleteInstanceToken(Models\DeleteInstanceTokenRequest $req) 删除长期访问凭证
  * @method Models\DeleteInternalEndpointDnsResponse DeleteInternalEndpointDns(Models\DeleteInternalEndpointDnsRequest $req) 删除tcr内网私有域名解析
  * @method Models\DeleteMultipleSecurityPolicyResponse DeleteMultipleSecurityPolicy(Models\DeleteMultipleSecurityPolicyRequest $req) 用于删除实例多个公网访问白名单策略
  * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) 删除命名空间
  * @method Models\DeleteNamespacePersonalResponse DeleteNamespacePersonal(Models\DeleteNamespacePersonalRequest $req) 删除共享版命名空间
+ * @method Models\DeleteReplicationInstanceResponse DeleteReplicationInstance(Models\DeleteReplicationInstanceRequest $req) 删除从实例
  * @method Models\DeleteRepositoryResponse DeleteRepository(Models\DeleteRepositoryRequest $req) 删除镜像仓库
  * @method Models\DeleteRepositoryPersonalResponse DeleteRepositoryPersonal(Models\DeleteRepositoryPersonalRequest $req) 用于个人版镜像仓库中删除
+ * @method Models\DeleteRepositoryTagsResponse DeleteRepositoryTags(Models\DeleteRepositoryTagsRequest $req) 用于企业版批量删除Repository Tag
  * @method Models\DeleteSecurityPolicyResponse DeleteSecurityPolicy(Models\DeleteSecurityPolicyRequest $req) 删除实例公网访问白名单策略
+ * @method Models\DeleteSignaturePolicyResponse DeleteSignaturePolicy(Models\DeleteSignaturePolicyRequest $req) 删除命名空间加签策略
  * @method Models\DeleteTagRetentionRuleResponse DeleteTagRetentionRule(Models\DeleteTagRetentionRuleRequest $req) 删除版本保留规则
  * @method Models\DeleteWebhookTriggerResponse DeleteWebhookTrigger(Models\DeleteWebhookTriggerRequest $req) 删除触发器
  * @method Models\DescribeApplicationTriggerLogPersonalResponse DescribeApplicationTriggerLogPersonal(Models\DescribeApplicationTriggerLogPersonalRequest $req) 用于查询应用更新触发器触发日志
@@ -66,6 +76,8 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeChartDownloadInfoResponse DescribeChartDownloadInfo(Models\DescribeChartDownloadInfoRequest $req) 用于在企业版中返回Chart的下载信息
  * @method Models\DescribeExternalEndpointStatusResponse DescribeExternalEndpointStatus(Models\DescribeExternalEndpointStatusRequest $req) 查询实例公网访问入口状态
  * @method Models\DescribeFavorRepositoryPersonalResponse DescribeFavorRepositoryPersonal(Models\DescribeFavorRepositoryPersonalRequest $req) 查询个人收藏仓库
+ * @method Models\DescribeGCJobsResponse DescribeGCJobs(Models\DescribeGCJobsRequest $req) GC 最近10条历史
+ * @method Models\DescribeImageAccelerateServiceResponse DescribeImageAccelerateService(Models\DescribeImageAccelerateServiceRequest $req) 查询镜像加速服务状态
  * @method Models\DescribeImageFilterPersonalResponse DescribeImageFilterPersonal(Models\DescribeImageFilterPersonalRequest $req) 用于在个人版中查询与指定tag镜像内容相同的tag列表
  * @method Models\DescribeImageLifecycleGlobalPersonalResponse DescribeImageLifecycleGlobalPersonal(Models\DescribeImageLifecycleGlobalPersonalRequest $req) 用于获取个人版全局镜像版本自动清理策略
  * @method Models\DescribeImageLifecyclePersonalResponse DescribeImageLifecyclePersonal(Models\DescribeImageLifecyclePersonalRequest $req) 用于获取个人版仓库中自动清理策略
@@ -73,6 +85,9 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeImagePersonalResponse DescribeImagePersonal(Models\DescribeImagePersonalRequest $req) 用于获取个人版镜像仓库tag列表
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 查询镜像版本列表或指定容器镜像信息
  * @method Models\DescribeImmutableTagRulesResponse DescribeImmutableTagRules(Models\DescribeImmutableTagRulesRequest $req) 列出镜像不可变规则
+ * @method Models\DescribeInstanceAllResponse DescribeInstanceAll(Models\DescribeInstanceAllRequest $req) 查询全部实例信息
+ * @method Models\DescribeInstanceAllNamespacesResponse DescribeInstanceAllNamespaces(Models\DescribeInstanceAllNamespacesRequest $req) 查询所有有实例命名空间列表
+ * @method Models\DescribeInstanceCustomizedDomainResponse DescribeInstanceCustomizedDomain(Models\DescribeInstanceCustomizedDomainRequest $req) 查询实例自定义域名列表
  * @method Models\DescribeInstanceStatusResponse DescribeInstanceStatus(Models\DescribeInstanceStatusRequest $req) 查询实例当前状态以及过程信息
  * @method Models\DescribeInstanceTokenResponse DescribeInstanceToken(Models\DescribeInstanceTokenRequest $req) 查询长期访问凭证信息
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询实例信息
@@ -80,6 +95,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeInternalEndpointsResponse DescribeInternalEndpoints(Models\DescribeInternalEndpointsRequest $req) 查询实例内网访问VPC链接
  * @method Models\DescribeNamespacePersonalResponse DescribeNamespacePersonal(Models\DescribeNamespacePersonalRequest $req) 查询个人版命名空间信息
  * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) 查询命名空间列表或指定命名空间信息
+ * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 用于在TCR中获取可用区域
  * @method Models\DescribeReplicationInstanceCreateTasksResponse DescribeReplicationInstanceCreateTasks(Models\DescribeReplicationInstanceCreateTasksRequest $req) 查询创建从实例任务状态
  * @method Models\DescribeReplicationInstanceSyncStatusResponse DescribeReplicationInstanceSyncStatus(Models\DescribeReplicationInstanceSyncStatusRequest $req) 查询从实例同步状态
  * @method Models\DescribeReplicationInstancesResponse DescribeReplicationInstances(Models\DescribeReplicationInstancesRequest $req) 查询从实例列表

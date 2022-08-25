@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaNotificationChannels请求参数结构体
  *
- * @method string getInstanceId() 获取实例名
- * @method void setInstanceId(string $InstanceId) 设置实例名
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取查询数量
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeGrafanaNotificationChannelsRequest extends AbstractModel
 {
     /**
-     * @var string 实例名
+     * @var string 实例 ID
      */
     public $InstanceId;
 
@@ -66,7 +66,7 @@ class DescribeGrafanaNotificationChannelsRequest extends AbstractModel
     public $ChannelState;
 
     /**
-     * @param string $InstanceId 实例名
+     * @param string $InstanceId 实例 ID
      * @param integer $Offset 偏移量
      * @param integer $Limit 查询数量
      * @param string $ChannelName 渠道名

@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportTitle(string $ReportTitle) 设置诊断报告/堆栈/报告json结果的名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReportResult() 获取诊断json结果内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReportResult(string $ReportResult) 设置诊断json结果内容
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -53,6 +57,12 @@ class DescribeScanTaskReportUrlResponse extends AbstractModel
     public $ReportTitle;
 
     /**
+     * @var string 诊断json结果内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReportResult;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -62,6 +72,8 @@ class DescribeScanTaskReportUrlResponse extends AbstractModel
      * @param string $ReportUrl 诊断报告/堆栈信息/报告json结果下载链接
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportTitle 诊断报告/堆栈/报告json结果的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReportResult 诊断json结果内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -88,6 +100,10 @@ class DescribeScanTaskReportUrlResponse extends AbstractModel
 
         if (array_key_exists("ReportTitle",$param) and $param["ReportTitle"] !== null) {
             $this->ReportTitle = $param["ReportTitle"];
+        }
+
+        if (array_key_exists("ReportResult",$param) and $param["ReportResult"] !== null) {
+            $this->ReportResult = $param["ReportResult"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateTime(string $IsolateTime) 设置隔离开始时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRegionInfos() 获取实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionInfos(array $RegionInfos) 设置实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -290,6 +294,12 @@ class SREInstance extends AbstractModel
     public $IsolateTime;
 
     /**
+     * @var array 实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionInfos;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -339,6 +349,8 @@ class SREInstance extends AbstractModel
      * @param string $CurDeadline 预付费到期时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolateTime 隔离开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RegionInfos 实例地域相关的描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -488,6 +500,15 @@ class SREInstance extends AbstractModel
 
         if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
             $this->IsolateTime = $param["IsolateTime"];
+        }
+
+        if (array_key_exists("RegionInfos",$param) and $param["RegionInfos"] !== null) {
+            $this->RegionInfos = [];
+            foreach ($param["RegionInfos"] as $key => $value){
+                $obj = new DescribeInstanceRegionInfo();
+                $obj->deserialize($value);
+                array_push($this->RegionInfos, $obj);
+            }
         }
     }
 }

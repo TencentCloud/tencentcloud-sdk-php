@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGrafanaEnvironments请求参数结构体
  *
- * @method string getInstanceId() 获取实例名
- * @method void setInstanceId(string $InstanceId) 设置实例名
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getEnvs() 获取环境变量字符串
  * @method void setEnvs(string $Envs) 设置环境变量字符串
  */
 class UpdateGrafanaEnvironmentsRequest extends AbstractModel
 {
     /**
-     * @var string 实例名
+     * @var string 实例 ID
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class UpdateGrafanaEnvironmentsRequest extends AbstractModel
     public $Envs;
 
     /**
-     * @param string $InstanceId 实例名
+     * @param string $InstanceId 实例 ID
      * @param string $Envs 环境变量字符串
      */
     function __construct()

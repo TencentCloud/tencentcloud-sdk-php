@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGrafanaConfig请求参数结构体
  *
- * @method string getInstanceId() 获取无
- * @method void setInstanceId(string $InstanceId) 设置无
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getConfig() 获取JSON 编码后的字符串
  * @method void setConfig(string $Config) 设置JSON 编码后的字符串
  */
 class UpdateGrafanaConfigRequest extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 实例 ID
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class UpdateGrafanaConfigRequest extends AbstractModel
     public $Config;
 
     /**
-     * @param string $InstanceId 无
+     * @param string $InstanceId 实例 ID
      * @param string $Config JSON 编码后的字符串
      */
     function __construct()

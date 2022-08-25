@@ -20,17 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceUsageInfo请求参数结构体
  *
- * @method string getPriceName() 获取资源计费项名称(为空时，则根据TaskType和Platform进行查询)
- * @method void setPriceName(string $PriceName) 设置资源计费项名称(为空时，则根据TaskType和Platform进行查询)
+ * @method string getPriceName() 获取资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询)
+ * @method void setPriceName(string $PriceName) 设置资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询)
  * @method integer getTaskType() 获取任务类型, 0:基础版, 1:专家版
  * @method void setTaskType(integer $TaskType) 设置任务类型, 0:基础版, 1:专家版
  * @method integer getPlatform() 获取应用平台, 0:android
  * @method void setPlatform(integer $Platform) 设置应用平台, 0:android
+ * @method integer getSource() 获取任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
+ * @method void setSource(integer $Source) 设置任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
  */
 class DescribeResourceUsageInfoRequest extends AbstractModel
 {
     /**
-     * @var string 资源计费项名称(为空时，则根据TaskType和Platform进行查询)
+     * @var string 资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询)
      */
     public $PriceName;
 
@@ -45,9 +47,15 @@ class DescribeResourceUsageInfoRequest extends AbstractModel
     public $Platform;
 
     /**
-     * @param string $PriceName 资源计费项名称(为空时，则根据TaskType和Platform进行查询)
+     * @var integer 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
+     */
+    public $Source;
+
+    /**
+     * @param string $PriceName 资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询)
      * @param integer $TaskType 任务类型, 0:基础版, 1:专家版
      * @param integer $Platform 应用平台, 0:android
+     * @param integer $Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeResourceUsageInfoRequest extends AbstractModel
 
         if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
             $this->Platform = $param["Platform"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
     }
 }

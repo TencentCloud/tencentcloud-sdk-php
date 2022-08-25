@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaIntegrations请求参数结构体
  *
- * @method string getInstanceId() 获取实例名
- * @method void setInstanceId(string $InstanceId) 设置实例名
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getIntegrationId() 获取集成 ID
  * @method void setIntegrationId(string $IntegrationId) 设置集成 ID
  * @method string getKind() 获取类型
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeGrafanaIntegrationsRequest extends AbstractModel
 {
     /**
-     * @var string 实例名
+     * @var string 实例 ID
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class DescribeGrafanaIntegrationsRequest extends AbstractModel
     public $Kind;
 
     /**
-     * @param string $InstanceId 实例名
+     * @param string $InstanceId 实例 ID
      * @param string $IntegrationId 集成 ID
      * @param string $Kind 类型
      */

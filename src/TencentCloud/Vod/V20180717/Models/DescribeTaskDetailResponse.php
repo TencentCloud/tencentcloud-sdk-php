@@ -29,7 +29,7 @@ use TencentCloud\Common\AbstractModel;
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务；</li>
 <li>FastClipMedia：快速剪辑任务；</li>
-<li>ReduceMediaBitrate：降码率任务。</li>
+<li>RemoveWatermarkTask：智能去除水印任务。</li>
  * @method void setTaskType(string $TaskType) 设置任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -39,7 +39,7 @@ use TencentCloud\Common\AbstractModel;
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务；</li>
 <li>FastClipMedia：快速剪辑任务；</li>
-<li>ReduceMediaBitrate：降码率任务。</li>
+<li>RemoveWatermarkTask：智能去除水印任务。</li>
  * @method string getStatus() 获取任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -102,6 +102,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask) 设置视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method RemoveWatermarkTask getRemoveWatermarkTask() 获取智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) 设置智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -117,7 +121,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务；</li>
 <li>FastClipMedia：快速剪辑任务；</li>
-<li>ReduceMediaBitrate：降码率任务。</li>
+<li>RemoveWatermarkTask：智能去除水印任务。</li>
      */
     public $TaskType;
 
@@ -217,6 +221,12 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $SnapshotByTimeOffsetTask;
 
     /**
+     * @var RemoveWatermarkTask 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemoveWatermarkTask;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -231,7 +241,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
 <li>PullUpload：拉取上传媒体文件任务；</li>
 <li>FastClipMedia：快速剪辑任务；</li>
-<li>ReduceMediaBitrate：降码率任务。</li>
+<li>RemoveWatermarkTask：智能去除水印任务。</li>
      * @param string $Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -262,6 +272,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param CreateImageSpriteTask2017 $CreateImageSpriteTask 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemoveWatermarkTask $RemoveWatermarkTask 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -356,6 +368,11 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("SnapshotByTimeOffsetTask",$param) and $param["SnapshotByTimeOffsetTask"] !== null) {
             $this->SnapshotByTimeOffsetTask = new SnapshotByTimeOffsetTask2017();
             $this->SnapshotByTimeOffsetTask->deserialize($param["SnapshotByTimeOffsetTask"]);
+        }
+
+        if (array_key_exists("RemoveWatermarkTask",$param) and $param["RemoveWatermarkTask"] !== null) {
+            $this->RemoveWatermarkTask = new RemoveWatermarkTask();
+            $this->RemoveWatermarkTask->deserialize($param["RemoveWatermarkTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

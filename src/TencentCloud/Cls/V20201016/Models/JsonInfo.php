@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnableTag() 获取启用标志
  * @method void setEnableTag(boolean $EnableTag) 设置启用标志
- * @method array getMetaFields() 获取元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__。
+ * @method array getMetaFields() 获取元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__、__HOSTNAME__。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetaFields(array $MetaFields) 设置元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__。
+ * @method void setMetaFields(array $MetaFields) 设置元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__、__HOSTNAME__。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class JsonInfo extends AbstractModel
@@ -35,14 +35,14 @@ class JsonInfo extends AbstractModel
     public $EnableTag;
 
     /**
-     * @var array 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__。
+     * @var array 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__、__HOSTNAME__。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaFields;
 
     /**
      * @param boolean $EnableTag 启用标志
-     * @param array $MetaFields 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__。
+     * @param array $MetaFields 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__、__HOSTNAME__。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

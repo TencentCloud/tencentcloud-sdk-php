@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImage(string $Image) 设置Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
  * @method string getServer() 获取Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
  * @method void setServer(string $Server) 设置Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
+ * @method integer getMaxRetryCount() 获取拉取Docker镜像重试次数。默认值：0。
+ * @method void setMaxRetryCount(integer $MaxRetryCount) 设置拉取Docker镜像重试次数。默认值：0。
+ * @method integer getDelayOnRetry() 获取拉取Docker镜像失败时延迟时间。单位：秒。
+ * @method void setDelayOnRetry(integer $DelayOnRetry) 设置拉取Docker镜像失败时延迟时间。单位：秒。
  */
 class Docker extends AbstractModel
 {
@@ -52,10 +56,22 @@ class Docker extends AbstractModel
     public $Server;
 
     /**
+     * @var integer 拉取Docker镜像重试次数。默认值：0。
+     */
+    public $MaxRetryCount;
+
+    /**
+     * @var integer 拉取Docker镜像失败时延迟时间。单位：秒。
+     */
+    public $DelayOnRetry;
+
+    /**
      * @param string $User Docker Hub 用户名或 Tencent Registry 用户名
      * @param string $Password Docker Hub 密码或 Tencent Registry 密码
      * @param string $Image Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
      * @param string $Server Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
+     * @param integer $MaxRetryCount 拉取Docker镜像重试次数。默认值：0。
+     * @param integer $DelayOnRetry 拉取Docker镜像失败时延迟时间。单位：秒。
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class Docker extends AbstractModel
 
         if (array_key_exists("Server",$param) and $param["Server"] !== null) {
             $this->Server = $param["Server"];
+        }
+
+        if (array_key_exists("MaxRetryCount",$param) and $param["MaxRetryCount"] !== null) {
+            $this->MaxRetryCount = $param["MaxRetryCount"];
+        }
+
+        if (array_key_exists("DelayOnRetry",$param) and $param["DelayOnRetry"] !== null) {
+            $this->DelayOnRetry = $param["DelayOnRetry"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGrafanaNotificationChannel请求参数结构体
  *
- * @method string getInstanceId() 获取实例名
- * @method void setInstanceId(string $InstanceId) 设置实例名
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getChannelName() 获取渠道名
  * @method void setChannelName(string $ChannelName) 设置渠道名
  * @method integer getOrgId() 获取组织 ID
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateGrafanaNotificationChannelRequest extends AbstractModel
 {
     /**
-     * @var string 实例名
+     * @var string 实例 ID
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
     public $ExtraOrgIds;
 
     /**
-     * @param string $InstanceId 实例名
+     * @param string $InstanceId 实例 ID
      * @param string $ChannelName 渠道名
      * @param integer $OrgId 组织 ID
      * @param array $Receivers 接受告警通道 ID 数组

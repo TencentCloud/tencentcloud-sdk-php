@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
 <li>Widevine</li>
 <li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
+ * @method string getDrmKeyProvider() 获取DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认值为 VOD 。
+ * @method void setDrmKeyProvider(string $DrmKeyProvider) 设置DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认值为 VOD 。
  * @method array getStreamInfos() 获取自适应转码输入流参数信息，最多输入10路流。
  * @method void setStreamInfos(array $StreamInfos) 设置自适应转码输入流参数信息，最多输入10路流。
  * @method integer getDisableHigherVideoBitrate() 获取是否禁止视频低码率转高码率，取值范围：
@@ -105,6 +113,14 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
     public $DrmType;
 
     /**
+     * @var string DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认值为 VOD 。
+     */
+    public $DrmKeyProvider;
+
+    /**
      * @var array 自适应转码输入流参数信息，最多输入10路流。
      */
     public $StreamInfos;
@@ -147,6 +163,10 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 <li>Widevine</li>
 <li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
+     * @param string $DrmKeyProvider DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认值为 VOD 。
      * @param array $StreamInfos 自适应转码输入流参数信息，最多输入10路流。
      * @param integer $DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
@@ -192,6 +212,10 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 
         if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
             $this->DrmType = $param["DrmType"];
+        }
+
+        if (array_key_exists("DrmKeyProvider",$param) and $param["DrmKeyProvider"] !== null) {
+            $this->DrmKeyProvider = $param["DrmKeyProvider"];
         }
 
         if (array_key_exists("StreamInfos",$param) and $param["StreamInfos"] !== null) {

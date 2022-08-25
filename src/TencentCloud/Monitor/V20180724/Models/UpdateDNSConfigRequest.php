@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateDNSConfig请求参数结构体
  *
- * @method string getInstanceId() 获取实例名
- * @method void setInstanceId(string $InstanceId) 设置实例名
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method array getNameServers() 获取DNS 数组
  * @method void setNameServers(array $NameServers) 设置DNS 数组
  */
 class UpdateDNSConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例名
+     * @var string 实例 ID
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class UpdateDNSConfigRequest extends AbstractModel
     public $NameServers;
 
     /**
-     * @param string $InstanceId 实例名
+     * @param string $InstanceId 实例 ID
      * @param array $NameServers DNS 数组
      */
     function __construct()

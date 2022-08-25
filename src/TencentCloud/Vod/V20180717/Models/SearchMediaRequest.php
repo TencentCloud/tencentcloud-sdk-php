@@ -136,6 +136,16 @@ use TencentCloud\Common\AbstractModel;
 <li> STANDARD_IA：低频存储。</li>
 <li> ARCHIVE：归档存储。</li>
 <li> DEEP_ARCHIVE：深度归档存储。</li>
+ * @method array getTrtcSdkAppIds() 获取TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+ * @method void setTrtcSdkAppIds(array $TrtcSdkAppIds) 设置TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+ * @method array getTrtcRoomIds() 获取TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
+ * @method void setTrtcRoomIds(array $TrtcRoomIds) 设置TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
  * @method string getText() 获取（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
  * @method void setText(string $Text) 设置（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -310,6 +320,19 @@ class SearchMediaRequest extends AbstractModel
     public $StorageClasses;
 
     /**
+     * @var array TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public $TrtcSdkAppIds;
+
+    /**
+     * @var array TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
+     */
+    public $TrtcRoomIds;
+
+    /**
      * @var string （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
      */
@@ -410,6 +433,11 @@ class SearchMediaRequest extends AbstractModel
 <li> STANDARD_IA：低频存储。</li>
 <li> ARCHIVE：归档存储。</li>
 <li> DEEP_ARCHIVE：深度归档存储。</li>
+     * @param array $TrtcSdkAppIds TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     * @param array $TrtcRoomIds TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
      * @param string $Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
      * @param string $SourceType （不推荐：应使用 SourceTypes 替代）
@@ -519,6 +547,14 @@ class SearchMediaRequest extends AbstractModel
 
         if (array_key_exists("StorageClasses",$param) and $param["StorageClasses"] !== null) {
             $this->StorageClasses = $param["StorageClasses"];
+        }
+
+        if (array_key_exists("TrtcSdkAppIds",$param) and $param["TrtcSdkAppIds"] !== null) {
+            $this->TrtcSdkAppIds = $param["TrtcSdkAppIds"];
+        }
+
+        if (array_key_exists("TrtcRoomIds",$param) and $param["TrtcRoomIds"] !== null) {
+            $this->TrtcRoomIds = $param["TrtcRoomIds"];
         }
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {

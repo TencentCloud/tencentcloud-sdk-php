@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScanTaskReportUrl请求参数结构体
  *
- * @method integer getSource() 获取任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
- * @method void setSource(integer $Source) 设置任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+ * @method integer getSource() 获取任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
+ * @method void setSource(integer $Source) 设置任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
  * @method integer getPlatform() 获取应用平台, 0:android, 1:ios, 2:小程序
  * @method void setPlatform(integer $Platform) 设置应用平台, 0:android, 1:ios, 2:小程序
  * @method string getTaskID() 获取任务id
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeScanTaskReportUrlRequest extends AbstractModel
 {
     /**
-     * @var integer 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+     * @var integer 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
      */
     public $Source;
 
@@ -59,7 +59,7 @@ class DescribeScanTaskReportUrlRequest extends AbstractModel
     public $ReportType;
 
     /**
-     * @param integer $Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+     * @param integer $Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
      * @param string $TaskID 任务id
      * @param integer $TaskType 任务类型, 0:基础版, 1:专家版, 2:本地化

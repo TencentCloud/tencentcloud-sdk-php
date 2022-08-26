@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RunSyncAsset请求参数结构体
+ * DeleteRules请求参数结构体
  *
- * @method integer getType() 获取0: 互联网防火墙开关，1：vpc 防火墙开关
- * @method void setType(integer $Type) 设置0: 互联网防火墙开关，1：vpc 防火墙开关
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method array getRuleIds() 获取指定删除的规则 ID 列表。
+ * @method void setRuleIds(array $RuleIds) 设置指定删除的规则 ID 列表。
  */
-class RunSyncAssetRequest extends AbstractModel
+class DeleteRulesRequest extends AbstractModel
 {
     /**
-     * @var integer 0: 互联网防火墙开关，1：vpc 防火墙开关
+     * @var string 站点 ID。
      */
-    public $Type;
+    public $ZoneId;
 
     /**
-     * @param integer $Type 0: 互联网防火墙开关，1：vpc 防火墙开关
+     * @var array 指定删除的规则 ID 列表。
+     */
+    public $RuleIds;
+
+    /**
+     * @param string $ZoneId 站点 ID。
+     * @param array $RuleIds 指定删除的规则 ID 列表。
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class RunSyncAssetRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("RuleIds",$param) and $param["RuleIds"] !== null) {
+            $this->RuleIds = $param["RuleIds"];
         }
     }
 }

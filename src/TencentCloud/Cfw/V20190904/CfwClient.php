@@ -102,7 +102,6 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\ModifyVPCSwitchStatusResponse ModifyVPCSwitchStatus(Models\ModifyVPCSwitchStatusRequest $req) 单个修改VPC火墙开关
  * @method Models\RemoveAcRuleResponse RemoveAcRule(Models\RemoveAcRuleRequest $req) 删除互联网边界规则
  * @method Models\RemoveEnterpriseSecurityGroupRuleResponse RemoveEnterpriseSecurityGroupRule(Models\RemoveEnterpriseSecurityGroupRuleRequest $req) 删除新企业安全组规则
- * @method Models\RunSyncAssetResponse RunSyncAsset(Models\RunSyncAssetRequest $req) 同步资产-互联网&VPC
  * @method Models\SetNatFwDnatRuleResponse SetNatFwDnatRule(Models\SetNatFwDnatRuleRequest $req) 配置防火墙Dnat规则
  * @method Models\SetNatFwEipResponse SetNatFwEip(Models\SetNatFwEipRequest $req) 设置防火墙实例弹性公网ip，目前仅支持新增模式的防火墙实例
  * @method Models\StopSecurityGroupRuleDispatchResponse StopSecurityGroupRuleDispatch(Models\StopSecurityGroupRuleDispatchRequest $req) 中止安全组规则下发

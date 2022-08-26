@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RunSyncAsset返回参数结构体
+ * DescribeRules返回参数结构体
  *
- * @method integer getStatus() 获取0：同步成功，1：资产更新中，2：后台同步调用失败
- * @method void setStatus(integer $Status) 设置0：同步成功，1：资产更新中，2：后台同步调用失败
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method array getRuleList() 获取规则列表，按规则执行顺序从先往后排序。
+ * @method void setRuleList(array $RuleList) 设置规则列表，按规则执行顺序从先往后排序。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class RunSyncAssetResponse extends AbstractModel
+class DescribeRulesResponse extends AbstractModel
 {
     /**
-     * @var integer 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * @var string 站点 ID。
      */
-    public $Status;
+    public $ZoneId;
+
+    /**
+     * @var array 规则列表，按规则执行顺序从先往后排序。
+     */
+    public $RuleList;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class RunSyncAssetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 0：同步成功，1：资产更新中，2：后台同步调用失败
+     * @param string $ZoneId 站点 ID。
+     * @param array $RuleList 规则列表，按规则执行顺序从先往后排序。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class RunSyncAssetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("RuleList",$param) and $param["RuleList"] !== null) {
+            $this->RuleList = [];
+            foreach ($param["RuleList"] as $key => $value){
+                $obj = new RuleSettingDetail();
+                $obj->deserialize($value);
+                array_push($this->RuleList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

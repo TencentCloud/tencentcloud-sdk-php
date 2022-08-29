@@ -92,6 +92,10 @@ Y: 有清单 N：无清单
  * @method void setAmountWithTax(string $AmountWithTax) 设置含税金额
  * @method array getItems() 获取项目明细
  * @method void setItems(array $Items) 设置项目明细
+ * @method string getTaxBureau() 获取所属税局
+ * @method void setTaxBureau(string $TaxBureau) 设置所属税局
+ * @method string getTrafficFreeFlag() 获取通行费标志:Y、是;N、否
+ * @method void setTrafficFreeFlag(string $TrafficFreeFlag) 设置通行费标志:Y、是;N、否
  */
 class VatInvoice extends AbstractModel
 {
@@ -224,6 +228,16 @@ Y: 有清单 N：无清单
     public $Items;
 
     /**
+     * @var string 所属税局
+     */
+    public $TaxBureau;
+
+    /**
+     * @var string 通行费标志:Y、是;N、否
+     */
+    public $TrafficFreeFlag;
+
+    /**
      * @param string $Code 发票代码
      * @param string $Number 发票号码
      * @param string $Date 开票日期
@@ -260,6 +274,8 @@ Y: 有清单 N：无清单
      * @param string $TaxAmount 税额
      * @param string $AmountWithTax 含税金额
      * @param array $Items 项目明细
+     * @param string $TaxBureau 所属税局
+     * @param string $TrafficFreeFlag 通行费标志:Y、是;N、否
      */
     function __construct()
     {
@@ -369,6 +385,14 @@ Y: 有清单 N：无清单
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("TaxBureau",$param) and $param["TaxBureau"] !== null) {
+            $this->TaxBureau = $param["TaxBureau"];
+        }
+
+        if (array_key_exists("TrafficFreeFlag",$param) and $param["TrafficFreeFlag"] !== null) {
+            $this->TrafficFreeFlag = $param["TrafficFreeFlag"];
         }
     }
 }

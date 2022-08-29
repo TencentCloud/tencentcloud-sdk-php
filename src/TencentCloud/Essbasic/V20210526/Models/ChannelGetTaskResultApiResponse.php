@@ -52,6 +52,10 @@ ProcessFailed  - 转换失败
 ProcessTimeout - 转换文件超时
  * @method string getResourceId() 获取资源Id，也是FileId，用于文件发起使用
  * @method void setResourceId(string $ResourceId) 设置资源Id，也是FileId，用于文件发起使用
+ * @method string getPreviewUrl() 获取预览文件Url，有效期30分钟
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreviewUrl(string $PreviewUrl) 设置预览文件Url，有效期30分钟
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -90,6 +94,12 @@ ProcessTimeout - 转换文件超时
     public $ResourceId;
 
     /**
+     * @var string 预览文件Url，有效期30分钟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreviewUrl;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -111,6 +121,8 @@ DownloadFailed - 下载失败
 ProcessFailed  - 转换失败
 ProcessTimeout - 转换文件超时
      * @param string $ResourceId 资源Id，也是FileId，用于文件发起使用
+     * @param string $PreviewUrl 预览文件Url，有效期30分钟
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +152,10 @@ ProcessTimeout - 转换文件超时
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
+            $this->PreviewUrl = $param["PreviewUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

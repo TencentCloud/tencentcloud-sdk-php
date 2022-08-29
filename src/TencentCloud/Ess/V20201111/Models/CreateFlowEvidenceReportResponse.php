@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SignUpCfsService返回参数结构体
+ * CreateFlowEvidenceReport返回参数结构体
  *
- * @method string getCfsServiceStatus() 获取该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通
- * @method void setCfsServiceStatus(string $CfsServiceStatus) 设置该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通
+ * @method string getReportUrl() 获取出证报告 URL（有效期5分钟）
+ * @method void setReportUrl(string $ReportUrl) 设置出证报告 URL（有效期5分钟）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class SignUpCfsServiceResponse extends AbstractModel
+class CreateFlowEvidenceReportResponse extends AbstractModel
 {
     /**
-     * @var string 该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通
+     * @var string 出证报告 URL（有效期5分钟）
      */
-    public $CfsServiceStatus;
+    public $ReportUrl;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class SignUpCfsServiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CfsServiceStatus 该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通
+     * @param string $ReportUrl 出证报告 URL（有效期5分钟）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class SignUpCfsServiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CfsServiceStatus",$param) and $param["CfsServiceStatus"] !== null) {
-            $this->CfsServiceStatus = $param["CfsServiceStatus"];
+        if (array_key_exists("ReportUrl",$param) and $param["ReportUrl"] !== null) {
+            $this->ReportUrl = $param["ReportUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

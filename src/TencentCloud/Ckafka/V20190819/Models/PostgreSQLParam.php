@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPluginName(string $PluginName) 设置插件名(decoderbufs/pgoutput)，默认为decoderbufs
  * @method string getSnapshotMode() 获取复制存量信息(never增量, initial全量)，默认为initial
  * @method void setSnapshotMode(string $SnapshotMode) 设置复制存量信息(never增量, initial全量)，默认为initial
+ * @method string getDataFormat() 获取上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
+ * @method void setDataFormat(string $DataFormat) 设置上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
+ * @method string getDataTargetInsertMode() 获取"INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+ * @method void setDataTargetInsertMode(string $DataTargetInsertMode) 设置"INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+ * @method string getDataTargetPrimaryKeyField() 获取当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+ * @method void setDataTargetPrimaryKeyField(string $DataTargetPrimaryKeyField) 设置当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+ * @method array getDataTargetRecordMapping() 获取表与消息间的映射关系
+ * @method void setDataTargetRecordMapping(array $DataTargetRecordMapping) 设置表与消息间的映射关系
+ * @method boolean getDropInvalidMessage() 获取是否抛弃解析失败的消息，默认为true
+ * @method void setDropInvalidMessage(boolean $DropInvalidMessage) 设置是否抛弃解析失败的消息，默认为true
  */
 class PostgreSQLParam extends AbstractModel
 {
@@ -59,11 +69,41 @@ class PostgreSQLParam extends AbstractModel
     public $SnapshotMode;
 
     /**
+     * @var string 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
+     */
+    public $DataFormat;
+
+    /**
+     * @var string "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+     */
+    public $DataTargetInsertMode;
+
+    /**
+     * @var string 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+     */
+    public $DataTargetPrimaryKeyField;
+
+    /**
+     * @var array 表与消息间的映射关系
+     */
+    public $DataTargetRecordMapping;
+
+    /**
+     * @var boolean 是否抛弃解析失败的消息，默认为true
+     */
+    public $DropInvalidMessage;
+
+    /**
      * @param string $Database PostgreSQL的数据库名称
      * @param string $Table PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
      * @param string $Resource 该PostgreSQL在连接管理内的Id
      * @param string $PluginName 插件名(decoderbufs/pgoutput)，默认为decoderbufs
      * @param string $SnapshotMode 复制存量信息(never增量, initial全量)，默认为initial
+     * @param string $DataFormat 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
+     * @param string $DataTargetInsertMode "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+     * @param string $DataTargetPrimaryKeyField 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+     * @param array $DataTargetRecordMapping 表与消息间的映射关系
+     * @param boolean $DropInvalidMessage 是否抛弃解析失败的消息，默认为true
      */
     function __construct()
     {
@@ -96,6 +136,31 @@ class PostgreSQLParam extends AbstractModel
 
         if (array_key_exists("SnapshotMode",$param) and $param["SnapshotMode"] !== null) {
             $this->SnapshotMode = $param["SnapshotMode"];
+        }
+
+        if (array_key_exists("DataFormat",$param) and $param["DataFormat"] !== null) {
+            $this->DataFormat = $param["DataFormat"];
+        }
+
+        if (array_key_exists("DataTargetInsertMode",$param) and $param["DataTargetInsertMode"] !== null) {
+            $this->DataTargetInsertMode = $param["DataTargetInsertMode"];
+        }
+
+        if (array_key_exists("DataTargetPrimaryKeyField",$param) and $param["DataTargetPrimaryKeyField"] !== null) {
+            $this->DataTargetPrimaryKeyField = $param["DataTargetPrimaryKeyField"];
+        }
+
+        if (array_key_exists("DataTargetRecordMapping",$param) and $param["DataTargetRecordMapping"] !== null) {
+            $this->DataTargetRecordMapping = [];
+            foreach ($param["DataTargetRecordMapping"] as $key => $value){
+                $obj = new RecordMapping();
+                $obj->deserialize($value);
+                array_push($this->DataTargetRecordMapping, $obj);
+            }
+        }
+
+        if (array_key_exists("DropInvalidMessage",$param) and $param["DropInvalidMessage"] !== null) {
+            $this->DropInvalidMessage = $param["DropInvalidMessage"];
         }
     }
 }

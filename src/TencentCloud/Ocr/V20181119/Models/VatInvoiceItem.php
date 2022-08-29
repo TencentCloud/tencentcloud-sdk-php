@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaxRate(string $TaxRate) 设置税率
  * @method string getTaxAmount() 获取税额
  * @method void setTaxAmount(string $TaxAmount) 设置税额
+ * @method string getTaxClassifyCode() 获取税收分类编码
+ * @method void setTaxClassifyCode(string $TaxClassifyCode) 设置税收分类编码
  */
 class VatInvoiceItem extends AbstractModel
 {
@@ -87,6 +89,11 @@ class VatInvoiceItem extends AbstractModel
     public $TaxAmount;
 
     /**
+     * @var string 税收分类编码
+     */
+    public $TaxClassifyCode;
+
+    /**
      * @param string $LineNo 行号
      * @param string $Name 名称
      * @param string $Spec 规格
@@ -96,6 +103,7 @@ class VatInvoiceItem extends AbstractModel
      * @param string $AmountWithoutTax 不含税金额
      * @param string $TaxRate 税率
      * @param string $TaxAmount 税额
+     * @param string $TaxClassifyCode 税收分类编码
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class VatInvoiceItem extends AbstractModel
 
         if (array_key_exists("TaxAmount",$param) and $param["TaxAmount"] !== null) {
             $this->TaxAmount = $param["TaxAmount"];
+        }
+
+        if (array_key_exists("TaxClassifyCode",$param) and $param["TaxClassifyCode"] !== null) {
+            $this->TaxClassifyCode = $param["TaxClassifyCode"];
         }
     }
 }

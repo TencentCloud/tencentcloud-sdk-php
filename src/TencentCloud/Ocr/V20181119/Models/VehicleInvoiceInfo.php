@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSellerAddress(string $SellerAddress) 设置销售地址
  * @method string getSellerTel() 获取销售电话
  * @method void setSellerTel(string $SellerTel) 设置销售电话
+ * @method string getBuyerNo() 获取购方身份证
+ * @method void setBuyerNo(string $BuyerNo) 设置购方身份证
  */
 class VehicleInvoiceInfo extends AbstractModel
 {
@@ -150,6 +152,11 @@ class VehicleInvoiceInfo extends AbstractModel
     public $SellerTel;
 
     /**
+     * @var string 购方身份证
+     */
+    public $BuyerNo;
+
+    /**
      * @param string $CarType 车辆类型
      * @param string $PlateModel 厂牌型号
      * @param string $ProduceAddress 产地
@@ -168,6 +175,7 @@ class VehicleInvoiceInfo extends AbstractModel
      * @param string $MotorBankAccount 账号
      * @param string $SellerAddress 销售地址
      * @param string $SellerTel 销售电话
+     * @param string $BuyerNo 购方身份证
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class VehicleInvoiceInfo extends AbstractModel
 
         if (array_key_exists("SellerTel",$param) and $param["SellerTel"] !== null) {
             $this->SellerTel = $param["SellerTel"];
+        }
+
+        if (array_key_exists("BuyerNo",$param) and $param["BuyerNo"] !== null) {
+            $this->BuyerNo = $param["BuyerNo"];
         }
     }
 }

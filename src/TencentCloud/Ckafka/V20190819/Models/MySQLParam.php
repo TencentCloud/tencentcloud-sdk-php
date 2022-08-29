@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncludeContentChanges(string $IncludeContentChanges) 设置如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
  * @method boolean getIncludeQuery() 获取如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
  * @method void setIncludeQuery(boolean $IncludeQuery) 设置如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+ * @method boolean getRecordWithSchema() 获取如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+ * @method void setRecordWithSchema(boolean $RecordWithSchema) 设置如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
  */
 class MySQLParam extends AbstractModel
 {
@@ -178,6 +180,11 @@ class MySQLParam extends AbstractModel
     public $IncludeQuery;
 
     /**
+     * @var boolean 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     */
+    public $RecordWithSchema;
+
+    /**
      * @param string $Database MySQL的数据库名称，"*"为全数据库
      * @param string $Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
      * @param string $Resource 该MySQL在连接管理内的Id
@@ -200,6 +207,7 @@ class MySQLParam extends AbstractModel
      * @param boolean $IsTablePrefix 当Table输入的是前缀时，该项值为true，否则为false
      * @param string $IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
      * @param boolean $IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+     * @param boolean $RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
      */
     function __construct()
     {
@@ -306,6 +314,10 @@ class MySQLParam extends AbstractModel
 
         if (array_key_exists("IncludeQuery",$param) and $param["IncludeQuery"] !== null) {
             $this->IncludeQuery = $param["IncludeQuery"];
+        }
+
+        if (array_key_exists("RecordWithSchema",$param) and $param["RecordWithSchema"] !== null) {
+            $this->RecordWithSchema = $param["RecordWithSchema"];
         }
     }
 }

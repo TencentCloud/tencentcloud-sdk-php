@@ -86,6 +86,10 @@ __SHARE_BY_INFO__：分润时指定金额，此时如果分润信息 ProfitShar
 __SHARE_BY_API__：后续调用分润接口决定分润金额
  * @method array getProfitShareInfoList() 获取分润信息，配合ProfitShareFlag使用。
  * @method void setProfitShareInfoList(array $ProfitShareInfoList) 设置分润信息，配合ProfitShareFlag使用。
+ * @method OpenBankSettlementRulesInfo getSettlementRulesInfo() 获取商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+ * @method void setSettlementRulesInfo(OpenBankSettlementRulesInfo $SettlementRulesInfo) 设置商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+ * @method string getExternalPaymentData() 获取底层支付渠道特殊字段，若无特殊说明时，可以为空
+ * @method void setExternalPaymentData(string $ExternalPaymentData) 设置底层支付渠道特殊字段，若无特殊说明时，可以为空
  * @method string getRemark() 获取备注信息。
  * @method void setRemark(string $Remark) 设置备注信息。
  * @method string getEnvironment() 获取环境类型
@@ -205,6 +209,16 @@ __SHARE_BY_API__：后续调用分润接口决定分润金额
     public $ProfitShareInfoList;
 
     /**
+     * @var OpenBankSettlementRulesInfo 商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+     */
+    public $SettlementRulesInfo;
+
+    /**
+     * @var string 底层支付渠道特殊字段，若无特殊说明时，可以为空
+     */
+    public $ExternalPaymentData;
+
+    /**
      * @var string 备注信息。
      */
     public $Remark;
@@ -251,6 +265,8 @@ __NO_NEED_SHARE__：无需分润；
 __SHARE_BY_INFO__：分润时指定金额，此时如果分润信息 ProfitShareInfo为空，只冻结，不分账给其他商户；需要调用解冻接口。
 __SHARE_BY_API__：后续调用分润接口决定分润金额
      * @param array $ProfitShareInfoList 分润信息，配合ProfitShareFlag使用。
+     * @param OpenBankSettlementRulesInfo $SettlementRulesInfo 商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+     * @param string $ExternalPaymentData 底层支付渠道特殊字段，若无特殊说明时，可以为空
      * @param string $Remark 备注信息。
      * @param string $Environment 环境类型
 __release__:生产环境
@@ -349,6 +365,15 @@ __sandbox__:沙箱环境
                 $obj->deserialize($value);
                 array_push($this->ProfitShareInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("SettlementRulesInfo",$param) and $param["SettlementRulesInfo"] !== null) {
+            $this->SettlementRulesInfo = new OpenBankSettlementRulesInfo();
+            $this->SettlementRulesInfo->deserialize($param["SettlementRulesInfo"]);
+        }
+
+        if (array_key_exists("ExternalPaymentData",$param) and $param["ExternalPaymentData"] !== null) {
+            $this->ExternalPaymentData = $param["ExternalPaymentData"];
         }
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {

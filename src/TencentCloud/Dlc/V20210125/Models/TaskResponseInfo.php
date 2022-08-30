@@ -18,7 +18,7 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 任务实例
+ * 任务实例。
  *
  * @method string getDatabaseName() 获取任务所属Database的名称。
  * @method void setDatabaseName(string $DatabaseName) 设置任务所属Database的名称。
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataAmount(integer $DataAmount) 设置任务数据量。
  * @method string getId() 获取任务Id。
  * @method void setId(string $Id) 设置任务Id。
- * @method integer getUsedTime() 获取计算时长，单位： ms。
- * @method void setUsedTime(integer $UsedTime) 设置计算时长，单位： ms。
+ * @method integer getUsedTime() 获取计算耗时，单位： ms
+ * @method void setUsedTime(integer $UsedTime) 设置计算耗时，单位： ms
  * @method string getOutputPath() 获取任务输出路径。
  * @method void setOutputPath(string $OutputPath) 设置任务输出路径。
  * @method string getCreateTime() 获取任务创建时间。
@@ -110,6 +110,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUiUrl(string $UiUrl) 设置spark ui url
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalTime() 获取任务耗时，单位： ms
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalTime(integer $TotalTime) 设置任务耗时，单位： ms
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -129,7 +133,7 @@ class TaskResponseInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var integer 计算时长，单位： ms。
+     * @var integer 计算耗时，单位： ms
      */
     public $UsedTime;
 
@@ -279,10 +283,16 @@ class TaskResponseInfo extends AbstractModel
     public $UiUrl;
 
     /**
+     * @var integer 任务耗时，单位： ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalTime;
+
+    /**
      * @param string $DatabaseName 任务所属Database的名称。
      * @param integer $DataAmount 任务数据量。
      * @param string $Id 任务Id。
-     * @param integer $UsedTime 计算时长，单位： ms。
+     * @param integer $UsedTime 计算耗时，单位： ms
      * @param string $OutputPath 任务输出路径。
      * @param string $CreateTime 任务创建时间。
      * @param integer $State 任务状态：0 初始化， 1 执行中， 2 执行成功，-1 执行失败，-3 已取消。
@@ -323,6 +333,8 @@ class TaskResponseInfo extends AbstractModel
      * @param string $SparkJobFile spark应用入口jar文件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UiUrl spark ui url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalTime 任务耗时，单位： ms
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -456,6 +468,10 @@ class TaskResponseInfo extends AbstractModel
 
         if (array_key_exists("UiUrl",$param) and $param["UiUrl"] !== null) {
             $this->UiUrl = $param["UiUrl"];
+        }
+
+        if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
+            $this->TotalTime = $param["TotalTime"];
         }
     }
 }

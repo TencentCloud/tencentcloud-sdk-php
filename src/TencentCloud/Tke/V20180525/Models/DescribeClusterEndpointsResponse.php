@@ -34,6 +34,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterExternalACL(array $ClusterExternalACL) 设置集群APIServer的外网访问ACL列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterExternalDomain() 获取外网域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterExternalDomain(string $ClusterExternalDomain) 设置外网域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterIntranetDomain() 获取内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterIntranetDomain(string $ClusterIntranetDomain) 设置内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSecurityGroup() 获取外网安全组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityGroup(string $SecurityGroup) 设置外网安全组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,6 +79,24 @@ class DescribeClusterEndpointsResponse extends AbstractModel
     public $ClusterExternalACL;
 
     /**
+     * @var string 外网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterExternalDomain;
+
+    /**
+     * @var string 内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterIntranetDomain;
+
+    /**
+     * @var string 外网安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityGroup;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -78,6 +108,12 @@ class DescribeClusterEndpointsResponse extends AbstractModel
      * @param string $ClusterDomain 集群APIServer的域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterExternalACL 集群APIServer的外网访问ACL列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterExternalDomain 外网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterIntranetDomain 内网域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SecurityGroup 外网安全组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -112,6 +148,18 @@ class DescribeClusterEndpointsResponse extends AbstractModel
 
         if (array_key_exists("ClusterExternalACL",$param) and $param["ClusterExternalACL"] !== null) {
             $this->ClusterExternalACL = $param["ClusterExternalACL"];
+        }
+
+        if (array_key_exists("ClusterExternalDomain",$param) and $param["ClusterExternalDomain"] !== null) {
+            $this->ClusterExternalDomain = $param["ClusterExternalDomain"];
+        }
+
+        if (array_key_exists("ClusterIntranetDomain",$param) and $param["ClusterIntranetDomain"] !== null) {
+            $this->ClusterIntranetDomain = $param["ClusterIntranetDomain"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

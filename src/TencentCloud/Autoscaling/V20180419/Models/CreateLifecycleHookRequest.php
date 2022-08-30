@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置通知目标
  * @method string getLifecycleTransitionType() 获取进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) 设置进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+ * @method LifecycleCommand getLifecycleCommand() 获取远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。
+ * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) 设置远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。
  */
 class CreateLifecycleHookRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateLifecycleHookRequest extends AbstractModel
     public $LifecycleTransitionType;
 
     /**
+     * @var LifecycleCommand 远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。
+     */
+    public $LifecycleCommand;
+
+    /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
      * @param string $LifecycleTransition 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
@@ -88,6 +95,7 @@ class CreateLifecycleHookRequest extends AbstractModel
      * @param string $NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""。最大长度不能超过1024个字节。
      * @param NotificationTarget $NotificationTarget 通知目标
      * @param string $LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括NORMAL 和 EXTENSION。说明：设置为EXTENSION值，在AttachInstances、DetachInstances、RemoveInstaces接口时会触发生命周期挂钩操作，值为NORMAL则不会在这些接口中触发生命周期挂钩。
+     * @param LifecycleCommand $LifecycleCommand 远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。
      */
     function __construct()
     {
@@ -133,6 +141,11 @@ class CreateLifecycleHookRequest extends AbstractModel
 
         if (array_key_exists("LifecycleTransitionType",$param) and $param["LifecycleTransitionType"] !== null) {
             $this->LifecycleTransitionType = $param["LifecycleTransitionType"];
+        }
+
+        if (array_key_exists("LifecycleCommand",$param) and $param["LifecycleCommand"] !== null) {
+            $this->LifecycleCommand = new LifecycleCommand();
+            $this->LifecycleCommand->deserialize($param["LifecycleCommand"]);
         }
     }
 }

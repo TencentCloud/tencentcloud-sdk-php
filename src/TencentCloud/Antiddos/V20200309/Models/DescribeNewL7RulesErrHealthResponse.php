@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220106\Models;
+namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDDoSPolicy返回参数结构体
+ * DescribeNewL7RulesErrHealth返回参数结构体
  *
- * @method DdosRule getDdosRule() 获取DDoS防护配置
- * @method void setDdosRule(DdosRule $DdosRule) 设置DDoS防护配置
+ * @method array getErrHealths() 获取异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP及错误信息，多个IP用","分割
+ * @method void setErrHealths(array $ErrHealths) 设置异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP及错误信息，多个IP用","分割
+ * @method integer getTotal() 获取异常规则的总数
+ * @method void setTotal(integer $Total) 设置异常规则的总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDDoSPolicyResponse extends AbstractModel
+class DescribeNewL7RulesErrHealthResponse extends AbstractModel
 {
     /**
-     * @var DdosRule DDoS防护配置
+     * @var array 异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP及错误信息，多个IP用","分割
      */
-    public $DdosRule;
+    public $ErrHealths;
+
+    /**
+     * @var integer 异常规则的总数
+     */
+    public $Total;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeDDoSPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DdosRule $DdosRule DDoS防护配置
+     * @param array $ErrHealths 异常规则列表，返回值说明: Key值为规则ID，Value值为异常IP及错误信息，多个IP用","分割
+     * @param integer $Total 异常规则的总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +62,17 @@ class DescribeDDoSPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DdosRule",$param) and $param["DdosRule"] !== null) {
-            $this->DdosRule = new DdosRule();
-            $this->DdosRule->deserialize($param["DdosRule"]);
+        if (array_key_exists("ErrHealths",$param) and $param["ErrHealths"] !== null) {
+            $this->ErrHealths = [];
+            foreach ($param["ErrHealths"] as $key => $value){
+                $obj = new KeyValue();
+                $obj->deserialize($value);
+                array_push($this->ErrHealths, $obj);
+            }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220106\Models;
+namespace TencentCloud\Ic\V20190307\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDDoSPolicy返回参数结构体
+ * PayForExtendData返回参数结构体
  *
- * @method DdosRule getDdosRule() 获取DDoS防护配置
- * @method void setDdosRule(DdosRule $DdosRule) 设置DDoS防护配置
+ * @method ResOrderIds getData() 获取订单号
+ * @method void setData(ResOrderIds $Data) 设置订单号
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDDoSPolicyResponse extends AbstractModel
+class PayForExtendDataResponse extends AbstractModel
 {
     /**
-     * @var DdosRule DDoS防护配置
+     * @var ResOrderIds 订单号
      */
-    public $DdosRule;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DescribeDDoSPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DdosRule $DdosRule DDoS防护配置
+     * @param ResOrderIds $Data 订单号
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +54,9 @@ class DescribeDDoSPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DdosRule",$param) and $param["DdosRule"] !== null) {
-            $this->DdosRule = new DdosRule();
-            $this->DdosRule->deserialize($param["DdosRule"]);
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new ResOrderIds();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxStorageSize(integer $MaxStorageSize) 设置实例最大可用存储，单位：GB
  * @method integer getMinStorageSize() 获取实例最小可用存储，单位：GB
  * @method void setMinStorageSize(integer $MinStorageSize) 设置实例最小可用存储，单位：GB
+ * @method boolean getHasStock() 获取是否有库存
+ * @method void setHasStock(boolean $HasStock) 设置是否有库存
+ * @method string getMachineType() 获取机器类型
+ * @method void setMachineType(string $MachineType) 设置机器类型
+ * @method integer getMaxIops() 获取最大IOPS
+ * @method void setMaxIops(integer $MaxIops) 设置最大IOPS
+ * @method integer getMaxIoBandWidth() 获取最大IO带宽
+ * @method void setMaxIoBandWidth(integer $MaxIoBandWidth) 设置最大IO带宽
+ * @method array getZoneStockInfos() 获取地域库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneStockInfos(array $ZoneStockInfos) 设置地域库存信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceSpec extends AbstractModel
 {
@@ -52,10 +64,42 @@ class InstanceSpec extends AbstractModel
     public $MinStorageSize;
 
     /**
+     * @var boolean 是否有库存
+     */
+    public $HasStock;
+
+    /**
+     * @var string 机器类型
+     */
+    public $MachineType;
+
+    /**
+     * @var integer 最大IOPS
+     */
+    public $MaxIops;
+
+    /**
+     * @var integer 最大IO带宽
+     */
+    public $MaxIoBandWidth;
+
+    /**
+     * @var array 地域库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneStockInfos;
+
+    /**
      * @param integer $Cpu 实例CPU，单位：核
      * @param integer $Memory 实例内存，单位：GB
      * @param integer $MaxStorageSize 实例最大可用存储，单位：GB
      * @param integer $MinStorageSize 实例最小可用存储，单位：GB
+     * @param boolean $HasStock 是否有库存
+     * @param string $MachineType 机器类型
+     * @param integer $MaxIops 最大IOPS
+     * @param integer $MaxIoBandWidth 最大IO带宽
+     * @param array $ZoneStockInfos 地域库存信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +128,31 @@ class InstanceSpec extends AbstractModel
 
         if (array_key_exists("MinStorageSize",$param) and $param["MinStorageSize"] !== null) {
             $this->MinStorageSize = $param["MinStorageSize"];
+        }
+
+        if (array_key_exists("HasStock",$param) and $param["HasStock"] !== null) {
+            $this->HasStock = $param["HasStock"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("MaxIops",$param) and $param["MaxIops"] !== null) {
+            $this->MaxIops = $param["MaxIops"];
+        }
+
+        if (array_key_exists("MaxIoBandWidth",$param) and $param["MaxIoBandWidth"] !== null) {
+            $this->MaxIoBandWidth = $param["MaxIoBandWidth"];
+        }
+
+        if (array_key_exists("ZoneStockInfos",$param) and $param["ZoneStockInfos"] !== null) {
+            $this->ZoneStockInfos = [];
+            foreach ($param["ZoneStockInfos"] as $key => $value){
+                $obj = new ZoneStockInfo();
+                $obj->deserialize($value);
+                array_push($this->ZoneStockInfos, $obj);
+            }
         }
     }
 }

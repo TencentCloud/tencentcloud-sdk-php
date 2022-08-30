@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredPodNumber(integer $DesiredPodNumber) 设置该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method GPUArgs getGPUArgs() 获取GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGPUArgs(GPUArgs $GPUArgs) 设置GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPreStartUserScript() 获取base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreStartUserScript(string $PreStartUserScript) 设置base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
@@ -112,6 +116,12 @@ class InstanceAdvancedSettings extends AbstractModel
     public $DesiredPodNumber;
 
     /**
+     * @var GPUArgs GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GPUArgs;
+
+    /**
      * @var string base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -139,6 +149,8 @@ class InstanceAdvancedSettings extends AbstractModel
      * @param InstanceExtraArgs $ExtraArgs 节点相关的自定义参数信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GPUArgs $GPUArgs GPU驱动相关参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,6 +211,11 @@ class InstanceAdvancedSettings extends AbstractModel
 
         if (array_key_exists("DesiredPodNumber",$param) and $param["DesiredPodNumber"] !== null) {
             $this->DesiredPodNumber = $param["DesiredPodNumber"];
+        }
+
+        if (array_key_exists("GPUArgs",$param) and $param["GPUArgs"] !== null) {
+            $this->GPUArgs = new GPUArgs();
+            $this->GPUArgs->deserialize($param["GPUArgs"]);
         }
 
         if (array_key_exists("PreStartUserScript",$param) and $param["PreStartUserScript"] !== null) {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getSecurityPolicies() 获取安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
  * @method void setSecurityPolicies(array $SecurityPolicies) 设置安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
+ * @method string getSecurityGroup() 获取修改外网访问安全组
+ * @method void setSecurityGroup(string $SecurityGroup) 设置修改外网访问安全组
  */
 class ModifyClusterEndpointSPRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyClusterEndpointSPRequest extends AbstractModel
     public $SecurityPolicies;
 
     /**
+     * @var string 修改外网访问安全组
+     */
+    public $SecurityGroup;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $SecurityPolicies 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
+     * @param string $SecurityGroup 修改外网访问安全组
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyClusterEndpointSPRequest extends AbstractModel
 
         if (array_key_exists("SecurityPolicies",$param) and $param["SecurityPolicies"] !== null) {
             $this->SecurityPolicies = $param["SecurityPolicies"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
         }
     }
 }

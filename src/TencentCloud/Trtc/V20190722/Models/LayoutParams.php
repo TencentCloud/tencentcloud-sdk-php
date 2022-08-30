@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSmallVideoLayoutParams(SmallVideoLayoutParams $SmallVideoLayoutParams) 设置画中画模板中有效，代表小画面的布局参数。
  * @method integer getMainVideoRightAlign() 获取屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
  * @method void setMainVideoRightAlign(integer $MainVideoRightAlign) 设置屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
- * @method array getMixVideoUids() 获取悬浮模板、九宫格、屏幕分享模板有效。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。最多可设置16个用户。
- * @method void setMixVideoUids(array $MixVideoUids) 设置悬浮模板、九宫格、屏幕分享模板有效。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。最多可设置16个用户。
+ * @method array getMixVideoUids() 获取指定混视频的用户ID列表。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。悬浮模板、九宫格、屏幕分享模板有效，最多可设置16个用户。
+ * @method void setMixVideoUids(array $MixVideoUids) 设置指定混视频的用户ID列表。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。悬浮模板、九宫格、屏幕分享模板有效，最多可设置16个用户。
  * @method array getPresetLayoutConfig() 获取自定义模板中有效，指定用户视频在混合画面中的位置。
  * @method void setPresetLayoutConfig(array $PresetLayoutConfig) 设置自定义模板中有效，指定用户视频在混合画面中的位置。
  * @method integer getPlaceHolderMode() 获取自定义模板中有效，设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
@@ -69,7 +69,7 @@ class LayoutParams extends AbstractModel
     public $MainVideoRightAlign;
 
     /**
-     * @var array 悬浮模板、九宫格、屏幕分享模板有效。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。最多可设置16个用户。
+     * @var array 指定混视频的用户ID列表。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。悬浮模板、九宫格、屏幕分享模板有效，最多可设置16个用户。
      */
     public $MixVideoUids;
 
@@ -99,7 +99,7 @@ class LayoutParams extends AbstractModel
      * @param integer $MainVideoStreamType 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
      * @param SmallVideoLayoutParams $SmallVideoLayoutParams 画中画模板中有效，代表小画面的布局参数。
      * @param integer $MainVideoRightAlign 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
-     * @param array $MixVideoUids 悬浮模板、九宫格、屏幕分享模板有效。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。最多可设置16个用户。
+     * @param array $MixVideoUids 指定混视频的用户ID列表。设置此参数后，输出流混合此参数中包含用户的音视频，以及其他用户的纯音频。悬浮模板、九宫格、屏幕分享模板有效，最多可设置16个用户。
      * @param array $PresetLayoutConfig 自定义模板中有效，指定用户视频在混合画面中的位置。
      * @param integer $PlaceHolderMode 自定义模板中有效，设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
      * @param integer $PureAudioHoldPlaceMode 悬浮模板、九宫格、屏幕分享模板生效，用于控制纯音频上行是否占用画面布局位置。设置为0是代表后台默认处理方式，悬浮小画面占布局位置，九宫格画面占布局位置、屏幕分享小画面不占布局位置；设置为1时代表纯音频上行占布局位置；设置为2时代表纯音频上行不占布局位置。默认为0。

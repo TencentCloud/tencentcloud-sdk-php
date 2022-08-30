@@ -18,36 +18,28 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 子网信息
+ * GPU驱动和CUDA的版本信息
  *
- * @method string getSubnetId() 获取子网id
- * @method void setSubnetId(string $SubnetId) 设置子网id
- * @method string getName() 获取子网节点名称
- * @method void setName(string $Name) 设置子网节点名称
- * @method array getSecurityGroups() 获取安全组id
- * @method void setSecurityGroups(array $SecurityGroups) 设置安全组id
+ * @method string getVersion() 获取GPU驱动或者CUDA的版本
+ * @method void setVersion(string $Version) 设置GPU驱动或者CUDA的版本
+ * @method string getName() 获取GPU驱动或者CUDA的名字
+ * @method void setName(string $Name) 设置GPU驱动或者CUDA的名字
  */
-class SubnetInfos extends AbstractModel
+class DriverVersion extends AbstractModel
 {
     /**
-     * @var string 子网id
+     * @var string GPU驱动或者CUDA的版本
      */
-    public $SubnetId;
+    public $Version;
 
     /**
-     * @var string 子网节点名称
+     * @var string GPU驱动或者CUDA的名字
      */
     public $Name;
 
     /**
-     * @var array 安全组id
-     */
-    public $SecurityGroups;
-
-    /**
-     * @param string $SubnetId 子网id
-     * @param string $Name 子网节点名称
-     * @param array $SecurityGroups 安全组id
+     * @param string $Version GPU驱动或者CUDA的版本
+     * @param string $Name GPU驱动或者CUDA的名字
      */
     function __construct()
     {
@@ -62,16 +54,12 @@ class SubnetInfos extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
-            $this->SecurityGroups = $param["SecurityGroups"];
         }
     }
 }

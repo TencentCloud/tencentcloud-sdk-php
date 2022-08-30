@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskList(array $TaskList) 设置任务对象列表。
  * @method integer getTotalCount() 获取实例总数。
  * @method void setTotalCount(integer $TotalCount) 设置实例总数。
+ * @method TasksOverview getTasksOverview() 获取任务概览信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTasksOverview(TasksOverview $TasksOverview) 设置任务概览信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,12 @@ class DescribeTasksResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var TasksOverview 任务概览信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TasksOverview;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class DescribeTasksResponse extends AbstractModel
     /**
      * @param array $TaskList 任务对象列表。
      * @param integer $TotalCount 实例总数。
+     * @param TasksOverview $TasksOverview 任务概览信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +85,11 @@ class DescribeTasksResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TasksOverview",$param) and $param["TasksOverview"] !== null) {
+            $this->TasksOverview = new TasksOverview();
+            $this->TasksOverview->deserialize($param["TasksOverview"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

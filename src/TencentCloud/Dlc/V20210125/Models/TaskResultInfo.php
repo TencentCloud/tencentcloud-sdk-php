@@ -18,7 +18,7 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 任务结果信息
+ * 任务结果信息。
  *
  * @method string getTaskId() 获取任务唯一ID
  * @method void setTaskId(string $TaskId) 设置任务唯一ID
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(integer $State) 设置任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功 -1：任务执行失败 -3：用户手动终止。只有任务执行成功的情况下，才会返回任务执行的结果
  * @method integer getDataAmount() 获取扫描的数据量，单位byte
  * @method void setDataAmount(integer $DataAmount) 设置扫描的数据量，单位byte
- * @method integer getUsedTime() 获取任务执行耗时，单位秒
- * @method void setUsedTime(integer $UsedTime) 设置任务执行耗时，单位秒
+ * @method integer getUsedTime() 获取计算耗时，单位： ms
+ * @method void setUsedTime(integer $UsedTime) 设置计算耗时，单位： ms
  * @method string getOutputPath() 获取任务结果输出的COS桶地址
  * @method void setOutputPath(string $OutputPath) 设置任务结果输出的COS桶地址
  * @method string getCreateTime() 获取任务创建时间，时间戳
@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgressDetail(string $ProgressDetail) 设置任务进度明细
  * @method string getDisplayFormat() 获取控制台展示格式。table：表格展示 text：文本展示
  * @method void setDisplayFormat(string $DisplayFormat) 设置控制台展示格式。table：表格展示 text：文本展示
+ * @method integer getTotalTime() 获取任务耗时，单位： ms
+ * @method void setTotalTime(integer $TotalTime) 设置任务耗时，单位： ms
  */
 class TaskResultInfo extends AbstractModel
 {
@@ -105,7 +107,7 @@ class TaskResultInfo extends AbstractModel
     public $DataAmount;
 
     /**
-     * @var integer 任务执行耗时，单位秒
+     * @var integer 计算耗时，单位： ms
      */
     public $UsedTime;
 
@@ -162,6 +164,11 @@ class TaskResultInfo extends AbstractModel
     public $DisplayFormat;
 
     /**
+     * @var integer 任务耗时，单位： ms
+     */
+    public $TotalTime;
+
+    /**
      * @param string $TaskId 任务唯一ID
      * @param string $DatasourceConnectionName 数据源名称，当前任务执行时候选中的默认数据源
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,7 +178,7 @@ class TaskResultInfo extends AbstractModel
      * @param string $SQLType 执行任务的类型，现在分为DDL、DML、DQL
      * @param integer $State 任务当前的状态，0：初始化 1：任务运行中 2：任务执行成功 -1：任务执行失败 -3：用户手动终止。只有任务执行成功的情况下，才会返回任务执行的结果
      * @param integer $DataAmount 扫描的数据量，单位byte
-     * @param integer $UsedTime 任务执行耗时，单位秒
+     * @param integer $UsedTime 计算耗时，单位： ms
      * @param string $OutputPath 任务结果输出的COS桶地址
      * @param string $CreateTime 任务创建时间，时间戳
      * @param string $OutputMessage 任务执行信息，成功时返回success，失败时返回失败原因
@@ -184,6 +191,7 @@ class TaskResultInfo extends AbstractModel
      * @param integer $Percentage 任务执行进度num/100(%)
      * @param string $ProgressDetail 任务进度明细
      * @param string $DisplayFormat 控制台展示格式。table：表格展示 text：文本展示
+     * @param integer $TotalTime 任务耗时，单位： ms
      */
     function __construct()
     {
@@ -273,6 +281,10 @@ class TaskResultInfo extends AbstractModel
 
         if (array_key_exists("DisplayFormat",$param) and $param["DisplayFormat"] !== null) {
             $this->DisplayFormat = $param["DisplayFormat"];
+        }
+
+        if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
+            $this->TotalTime = $param["TotalTime"];
         }
     }
 }

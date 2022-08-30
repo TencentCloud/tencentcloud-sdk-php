@@ -94,6 +94,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) 获取智能调度域名列表
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) 获取DDoS防护的水印防护配置列表
  * @method Models\DescribeNewL7RulesResponse DescribeNewL7Rules(Models\DescribeNewL7RulesRequest $req) 高防IP获取7层规则
+ * @method Models\DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealth(Models\DescribeNewL7RulesErrHealthRequest $req) 获取L7转发规则健康检查异常结果
  * @method Models\DescribeOverviewAttackTrendResponse DescribeOverviewAttackTrend(Models\DescribeOverviewAttackTrendRequest $req) 拉取防护概览攻击趋势
  * @method Models\DescribeOverviewCCTrendResponse DescribeOverviewCCTrend(Models\DescribeOverviewCCTrendRequest $req) 获取防护概览总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
  * @method Models\DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(Models\DescribeOverviewDDoSEventListRequest $req) 获取防护概览的ddos攻击事件

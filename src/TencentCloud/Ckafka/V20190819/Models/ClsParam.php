@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContentKey(string $ContentKey) 设置当DecodeJson为false时必填
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTimeField() 获取指定消息中的某字段内容作为cls日志的时间。
+字段内容格式需要是秒级时间戳
+ * @method void setTimeField(string $TimeField) 设置指定消息中的某字段内容作为cls日志的时间。
+字段内容格式需要是秒级时间戳
  */
 class ClsParam extends AbstractModel
 {
@@ -61,6 +65,12 @@ class ClsParam extends AbstractModel
     public $ContentKey;
 
     /**
+     * @var string 指定消息中的某字段内容作为cls日志的时间。
+字段内容格式需要是秒级时间戳
+     */
+    public $TimeField;
+
+    /**
      * @param boolean $DecodeJson 生产的信息是否为json格式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource cls日志主题id
@@ -68,6 +78,8 @@ class ClsParam extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContentKey 当DecodeJson为false时必填
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TimeField 指定消息中的某字段内容作为cls日志的时间。
+字段内容格式需要是秒级时间戳
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class ClsParam extends AbstractModel
 
         if (array_key_exists("ContentKey",$param) and $param["ContentKey"] !== null) {
             $this->ContentKey = $param["ContentKey"];
+        }
+
+        if (array_key_exists("TimeField",$param) and $param["TimeField"] !== null) {
+            $this->TimeField = $param["TimeField"];
         }
     }
 }

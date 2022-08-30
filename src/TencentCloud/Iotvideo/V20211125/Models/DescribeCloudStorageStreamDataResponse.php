@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220106\Models;
+namespace TencentCloud\Iotvideo\V20211125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDDoSPolicy返回参数结构体
+ * DescribeCloudStorageStreamData返回参数结构体
  *
- * @method DdosRule getDdosRule() 获取DDoS防护配置
- * @method void setDdosRule(DdosRule $DdosRule) 设置DDoS防护配置
+ * @method string getVideoStream() 获取图片流视频地址
+ * @method void setVideoStream(string $VideoStream) 设置图片流视频地址
+ * @method string getAudioStream() 获取图片流音频地址
+ * @method void setAudioStream(string $AudioStream) 设置图片流音频地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDDoSPolicyResponse extends AbstractModel
+class DescribeCloudStorageStreamDataResponse extends AbstractModel
 {
     /**
-     * @var DdosRule DDoS防护配置
+     * @var string 图片流视频地址
      */
-    public $DdosRule;
+    public $VideoStream;
+
+    /**
+     * @var string 图片流音频地址
+     */
+    public $AudioStream;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeDDoSPolicyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DdosRule $DdosRule DDoS防护配置
+     * @param string $VideoStream 图片流视频地址
+     * @param string $AudioStream 图片流音频地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,9 +62,12 @@ class DescribeDDoSPolicyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DdosRule",$param) and $param["DdosRule"] !== null) {
-            $this->DdosRule = new DdosRule();
-            $this->DdosRule->deserialize($param["DdosRule"]);
+        if (array_key_exists("VideoStream",$param) and $param["VideoStream"] !== null) {
+            $this->VideoStream = $param["VideoStream"];
+        }
+
+        if (array_key_exists("AudioStream",$param) and $param["AudioStream"] !== null) {
+            $this->AudioStream = $param["AudioStream"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

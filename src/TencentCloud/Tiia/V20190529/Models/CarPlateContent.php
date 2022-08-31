@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlateLocation(array $PlateLocation) 设置车牌在图片中的坐标信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPlateStatus() 获取判断车牌是否遮挡。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPlateStatus(string $PlateStatus) 设置判断车牌是否遮挡。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPlateStatusConfidence() 获取车牌遮挡的置信度，0-100。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPlateStatusConfidence(integer $PlateStatusConfidence) 设置车牌遮挡的置信度，0-100。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getPlateAngle() 获取车牌角度。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPlateAngle(float $PlateAngle) 设置车牌角度。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CarPlateContent extends AbstractModel
 {
@@ -64,6 +76,24 @@ class CarPlateContent extends AbstractModel
     public $PlateLocation;
 
     /**
+     * @var string 判断车牌是否遮挡。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PlateStatus;
+
+    /**
+     * @var integer 车牌遮挡的置信度，0-100。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PlateStatusConfidence;
+
+    /**
+     * @var float 车牌角度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PlateAngle;
+
+    /**
      * @param string $Plate 车牌信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Color 车牌颜色。
@@ -71,6 +101,12 @@ class CarPlateContent extends AbstractModel
      * @param string $Type 车牌类型；渣土车车牌遮挡时,该值为枚举值“异常”。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PlateLocation 车牌在图片中的坐标信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PlateStatus 判断车牌是否遮挡。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PlateStatusConfidence 车牌遮挡的置信度，0-100。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $PlateAngle 车牌角度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -105,6 +141,18 @@ class CarPlateContent extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PlateLocation, $obj);
             }
+        }
+
+        if (array_key_exists("PlateStatus",$param) and $param["PlateStatus"] !== null) {
+            $this->PlateStatus = $param["PlateStatus"];
+        }
+
+        if (array_key_exists("PlateStatusConfidence",$param) and $param["PlateStatusConfidence"] !== null) {
+            $this->PlateStatusConfidence = $param["PlateStatusConfidence"];
+        }
+
+        if (array_key_exists("PlateAngle",$param) and $param["PlateAngle"] !== null) {
+            $this->PlateAngle = $param["PlateAngle"];
         }
     }
 }

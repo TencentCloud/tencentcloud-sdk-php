@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefundMessage(string $RefundMessage) 设置退款返回描述，比如失败原因等。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProfitShareRespInfoList() 获取分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProfitShareRespInfoList(array $ProfitShareRespInfoList) 设置分账信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OpenBankQueryRefundOrderResult extends AbstractModel
 {
@@ -134,6 +138,12 @@ class OpenBankQueryRefundOrderResult extends AbstractModel
     public $RefundMessage;
 
     /**
+     * @var array 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProfitShareRespInfoList;
+
+    /**
      * @param string $OutRefundId 外部商户退款单号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelRefundId 渠道退款单号
@@ -155,6 +165,8 @@ class OpenBankQueryRefundOrderResult extends AbstractModel
      * @param integer $FeeAmount 退款手续费金额
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RefundMessage 退款返回描述，比如失败原因等。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ProfitShareRespInfoList 分账信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +224,15 @@ class OpenBankQueryRefundOrderResult extends AbstractModel
 
         if (array_key_exists("RefundMessage",$param) and $param["RefundMessage"] !== null) {
             $this->RefundMessage = $param["RefundMessage"];
+        }
+
+        if (array_key_exists("ProfitShareRespInfoList",$param) and $param["ProfitShareRespInfoList"] !== null) {
+            $this->ProfitShareRespInfoList = [];
+            foreach ($param["ProfitShareRespInfoList"] as $key => $value){
+                $obj = new OpenBankProfitShareRespInfo();
+                $obj->deserialize($value);
+                array_push($this->ProfitShareRespInfoList, $obj);
+            }
         }
     }
 }

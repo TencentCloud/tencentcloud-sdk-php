@@ -84,6 +84,10 @@ OPENBANK_PAYMENT
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeeRate(integer $FeeRate) 设置手续费费率
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProfitShareRespInfoList() 获取分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProfitShareRespInfoList(array $ProfitShareRespInfoList) 设置分账信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueryOpenBankPaymentOrderResult extends AbstractModel
 {
@@ -184,6 +188,12 @@ OPENBANK_PAYMENT
     public $FeeRate;
 
     /**
+     * @var array 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProfitShareRespInfoList;
+
+    /**
      * @param string $ChannelMerchantId 渠道商户号。外部接入平台入驻云企付平台下发
      * @param string $OutOrderId 外部商户订单号
      * @param string $ChannelOrderId 云企付平台订单号
@@ -215,6 +225,8 @@ OPENBANK_PAYMENT
      * @param integer $FeeAmount 手续费金额
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FeeRate 手续费费率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ProfitShareRespInfoList 分账信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -294,6 +306,15 @@ OPENBANK_PAYMENT
 
         if (array_key_exists("FeeRate",$param) and $param["FeeRate"] !== null) {
             $this->FeeRate = $param["FeeRate"];
+        }
+
+        if (array_key_exists("ProfitShareRespInfoList",$param) and $param["ProfitShareRespInfoList"] !== null) {
+            $this->ProfitShareRespInfoList = [];
+            foreach ($param["ProfitShareRespInfoList"] as $key => $value){
+                $obj = new OpenBankProfitShareRespInfo();
+                $obj->deserialize($value);
+                array_push($this->ProfitShareRespInfoList, $obj);
+            }
         }
     }
 }

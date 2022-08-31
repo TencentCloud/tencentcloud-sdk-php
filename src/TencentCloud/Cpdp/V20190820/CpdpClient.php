@@ -32,6 +32,8 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\ApplyFlexPaymentResponse ApplyFlexPayment(Models\ApplyFlexPaymentRequest $req) 灵云V2-付款
  * @method Models\ApplyFlexSettlementResponse ApplyFlexSettlement(Models\ApplyFlexSettlementRequest $req) 灵云V2-结算
  * @method Models\ApplyOpenBankOrderDetailReceiptResponse ApplyOpenBankOrderDetailReceipt(Models\ApplyOpenBankOrderDetailReceiptRequest $req) 云企付-申请单笔交易回单
+ * @method Models\ApplyOpenBankSettleOrderResponse ApplyOpenBankSettleOrder(Models\ApplyOpenBankSettleOrderRequest $req) 云企付结算申请接口
+ * @method Models\ApplyOpenBankSubMerchantSignOnlineResponse ApplyOpenBankSubMerchantSignOnline(Models\ApplyOpenBankSubMerchantSignOnlineRequest $req) 子商户在线签约
  * @method Models\ApplyOutwardOrderResponse ApplyOutwardOrder(Models\ApplyOutwardOrderRequest $req) 跨境-汇出指令申请。通过该接口可将对接方账户中的人民币余额汇兑成外币，再汇出至指定银行账户。
  * @method Models\ApplyPayerInfoResponse ApplyPayerInfo(Models\ApplyPayerInfoRequest $req) 跨境-付款人申请。通过该接口提交付款人信息并进行 kyc 审核。
  * @method Models\ApplyReWithdrawalResponse ApplyReWithdrawal(Models\ApplyReWithdrawalRequest $req) 正常结算提现失败情况下，发起重新提现的请求接口
@@ -184,8 +186,10 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryOpenBankOrderDetailReceiptInfoResponse QueryOpenBankOrderDetailReceiptInfo(Models\QueryOpenBankOrderDetailReceiptInfoRequest $req) 云企付-单笔交易回单申请结果查询
  * @method Models\QueryOpenBankPaymentOrderResponse QueryOpenBankPaymentOrder(Models\QueryOpenBankPaymentOrderRequest $req) 云企付-查询订单支付结果
  * @method Models\QueryOpenBankRefundOrderResponse QueryOpenBankRefundOrder(Models\QueryOpenBankRefundOrderRequest $req) 云企付-退款结果查询
+ * @method Models\QueryOpenBankSettleOrderResponse QueryOpenBankSettleOrder(Models\QueryOpenBankSettleOrderRequest $req) 云企付结算单查询结果
  * @method Models\QueryOpenBankSubMerchantCredentialResponse QueryOpenBankSubMerchantCredential(Models\QueryOpenBankSubMerchantCredentialRequest $req) 云企付-子商户资质文件查询
  * @method Models\QueryOpenBankSubMerchantRateConfigureResponse QueryOpenBankSubMerchantRateConfigure(Models\QueryOpenBankSubMerchantRateConfigureRequest $req) 云企付-子商户费率配置结果查询
+ * @method Models\QueryOpenBankSubMerchantSignOnlineResponse QueryOpenBankSubMerchantSignOnline(Models\QueryOpenBankSubMerchantSignOnlineRequest $req) 子商户在线签约查询
  * @method Models\QueryOpenBankSupportBankListResponse QueryOpenBankSupportBankList(Models\QueryOpenBankSupportBankListRequest $req) 云企付-查询支持银行列表
  * @method Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResponse QueryOpenBankUnbindExternalSubMerchantBankAccount(Models\QueryOpenBankUnbindExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡解绑结果查询
  * @method Models\QueryOpenBankVerificationOrderResponse QueryOpenBankVerificationOrder(Models\QueryOpenBankVerificationOrderRequest $req) 云企付-查询核销订单状态，客户可以使用该接口来查询核销申请的订单状态。目前仅支持TENPAY渠道EBANK_PAYMENT付款方式的担保支付订单查询。

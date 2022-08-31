@@ -50,6 +50,8 @@ _不填默认为生产环境_
 __release__:生产环境
 __sandbox__:沙箱环境
 _不填默认为生产环境_
+ * @method array getProfitShareInfoList() 获取分账信息列表。
+ * @method void setProfitShareInfoList(array $ProfitShareInfoList) 设置分账信息列表。
  */
 class RefundOpenBankOrderRequest extends AbstractModel
 {
@@ -109,6 +111,11 @@ _不填默认为生产环境_
     public $Environment;
 
     /**
+     * @var array 分账信息列表。
+     */
+    public $ProfitShareInfoList;
+
+    /**
      * @param string $OutRefundId 外部商户退款单号。
      * @param integer $RefundAmount 退款金额。单位分。
      * @param string $ChannelMerchantId 渠道商户号。外部平台接入云企付平台下发。必填。
@@ -124,6 +131,7 @@ _不填默认为生产环境_
 __release__:生产环境
 __sandbox__:沙箱环境
 _不填默认为生产环境_
+     * @param array $ProfitShareInfoList 分账信息列表。
      */
     function __construct()
     {
@@ -176,6 +184,15 @@ _不填默认为生产环境_
 
         if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
             $this->Environment = $param["Environment"];
+        }
+
+        if (array_key_exists("ProfitShareInfoList",$param) and $param["ProfitShareInfoList"] !== null) {
+            $this->ProfitShareInfoList = [];
+            foreach ($param["ProfitShareInfoList"] as $key => $value){
+                $obj = new OpenBankProfitShareInfo();
+                $obj->deserialize($value);
+                array_push($this->ProfitShareInfoList, $obj);
+            }
         }
     }
 }

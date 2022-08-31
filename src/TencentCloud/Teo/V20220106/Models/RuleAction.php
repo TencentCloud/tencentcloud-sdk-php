@@ -43,6 +43,7 @@ use TencentCloud\Common\AbstractModel;
 <li> ClientIpHeader；</li>
 <li> TlsVersion；</li>
 <li> OcspStapling。</li>
+<li> HTTP/2 访问（Http2）。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormalAction(RuleNormalAction $NormalAction) 设置常规功能操作，选择该类型的功能项有：
 <li> 访问URL 重写（AccessUrlRedirect）；</li>
@@ -67,6 +68,7 @@ use TencentCloud\Common\AbstractModel;
 <li> ClientIpHeader；</li>
 <li> TlsVersion；</li>
 <li> OcspStapling。</li>
+<li> HTTP/2 访问（Http2）。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method RuleRewriteAction getRewriteAction() 获取带有请求头/响应头的功能操作，选择该类型的功能项有：
 <li> 修改 HTTP 请求头（RequestHeader）；</li>
@@ -111,6 +113,7 @@ class RuleAction extends AbstractModel
 <li> ClientIpHeader；</li>
 <li> TlsVersion；</li>
 <li> OcspStapling。</li>
+<li> HTTP/2 访问（Http2）。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NormalAction;
@@ -155,6 +158,7 @@ class RuleAction extends AbstractModel
 <li> ClientIpHeader；</li>
 <li> TlsVersion；</li>
 <li> OcspStapling。</li>
+<li> HTTP/2 访问（Http2）。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleRewriteAction $RewriteAction 带有请求头/响应头的功能操作，选择该类型的功能项有：
 <li> 修改 HTTP 请求头（RequestHeader）；</li>

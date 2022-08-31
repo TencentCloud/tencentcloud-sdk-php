@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColorConfidence(integer $ColorConfidence) 设置车辆颜色置信度，0-100，仅车辆识别（增强版）支持
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrientation() 获取车辆朝向，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrientation(string $Orientation) 设置车辆朝向，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOrientationConfidence() 获取车辆朝向置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrientationConfidence(integer $OrientationConfidence) 设置车辆朝向置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CarTagItem extends AbstractModel
 {
@@ -113,6 +121,18 @@ class CarTagItem extends AbstractModel
     public $ColorConfidence;
 
     /**
+     * @var string 车辆朝向，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Orientation;
+
+    /**
+     * @var integer 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrientationConfidence;
+
+    /**
      * @param string $Serial 车系
      * @param string $Brand 车辆品牌
      * @param string $Type 车辆类型
@@ -127,6 +147,10 @@ class CarTagItem extends AbstractModel
      * @param integer $TypeConfidence 车辆类型置信度，0-100，仅车辆识别（增强版）支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ColorConfidence 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Orientation 车辆朝向，仅车辆识别（增强版）支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OrientationConfidence 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -190,6 +214,14 @@ class CarTagItem extends AbstractModel
 
         if (array_key_exists("ColorConfidence",$param) and $param["ColorConfidence"] !== null) {
             $this->ColorConfidence = $param["ColorConfidence"];
+        }
+
+        if (array_key_exists("Orientation",$param) and $param["Orientation"] !== null) {
+            $this->Orientation = $param["Orientation"];
+        }
+
+        if (array_key_exists("OrientationConfidence",$param) and $param["OrientationConfidence"] !== null) {
+            $this->OrientationConfidence = $param["OrientationConfidence"];
         }
     }
 }

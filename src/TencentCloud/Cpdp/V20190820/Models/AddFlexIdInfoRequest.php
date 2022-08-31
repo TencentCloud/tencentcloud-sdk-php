@@ -40,6 +40,8 @@ __release__:生产环境
 __sandbox__:沙箱环境
 __test__:测试环境
 缺省默认为生产环境
+ * @method string getName() 获取姓名
+ * @method void setName(string $Name) 设置姓名
  */
 class AddFlexIdInfoRequest extends AbstractModel
 {
@@ -70,6 +72,11 @@ __test__:测试环境
     public $Environment;
 
     /**
+     * @var string 姓名
+     */
+    public $Name;
+
+    /**
      * @param integer $IdType 证件类型
 0:身份证
 1:社会信用代码
@@ -80,6 +87,7 @@ __release__:生产环境
 __sandbox__:沙箱环境
 __test__:测试环境
 缺省默认为生产环境
+     * @param string $Name 姓名
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ __test__:测试环境
 
         if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
             $this->Environment = $param["Environment"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

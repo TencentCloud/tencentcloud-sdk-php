@@ -70,6 +70,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) 设置多客户端CA证书别名信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHttp3Supported() 获取是否支持Http3，其中：
+0，不支持Http3接入；
+1，持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttp3Supported(integer $Http3Supported) 设置是否支持Http3，其中：
+0，不支持Http3接入；
+1，持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HTTPSListener extends AbstractModel
 {
@@ -151,6 +161,15 @@ class HTTPSListener extends AbstractModel
     public $PolyClientCertificateAliasInfo;
 
     /**
+     * @var integer 是否支持Http3，其中：
+0，不支持Http3接入；
+1，持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
@@ -175,6 +194,11 @@ class HTTPSListener extends AbstractModel
      * @param string $ClientCertificateAlias 客户端CA证书别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PolyClientCertificateAliasInfo 多客户端CA证书别名信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Http3Supported 是否支持Http3，其中：
+0，不支持Http3接入；
+1，持Http3接入。
+注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -245,6 +269,10 @@ class HTTPSListener extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PolyClientCertificateAliasInfo, $obj);
             }
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTraceId(string $TraceId) 设置[无效] 溯源ID
  * @method array getTraceItems() 获取溯源信息
  * @method void setTraceItems(array $TraceItems) 设置溯源信息
+ * @method integer getStatus() 获取溯源状态 0: 无效, 1: 有效
+ * @method void setStatus(integer $Status) 设置溯源状态 0: 无效, 1: 有效
+ * @method PhaseData getPhaseData() 获取环节数据
+ * @method void setPhaseData(PhaseData $PhaseData) 设置环节数据
  */
 class CreateTraceDataRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class CreateTraceDataRequest extends AbstractModel
     public $TraceItems;
 
     /**
+     * @var integer 溯源状态 0: 无效, 1: 有效
+     */
+    public $Status;
+
+    /**
+     * @var PhaseData 环节数据
+     */
+    public $PhaseData;
+
+    /**
      * @param integer $CorpId 企业ID
      * @param string $BatchId 批次ID
      * @param string $TaskId 任务ID
@@ -96,6 +110,8 @@ class CreateTraceDataRequest extends AbstractModel
      * @param integer $Type [无效] 码类型 0: 批次, 1: 码, 2: 生产任务, 3: 物流信息
      * @param string $TraceId [无效] 溯源ID
      * @param array $TraceItems 溯源信息
+     * @param integer $Status 溯源状态 0: 无效, 1: 有效
+     * @param PhaseData $PhaseData 环节数据
      */
     function __construct()
     {
@@ -149,6 +165,15 @@ class CreateTraceDataRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TraceItems, $obj);
             }
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("PhaseData",$param) and $param["PhaseData"] !== null) {
+            $this->PhaseData = new PhaseData();
+            $this->PhaseData->deserialize($param["PhaseData"]);
         }
     }
 }

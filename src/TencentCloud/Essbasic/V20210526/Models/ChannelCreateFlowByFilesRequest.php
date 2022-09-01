@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowApprovers(array $FlowApprovers) 设置签署流程签约方列表，最多不超过5个参与方
  * @method array getFileIds() 获取签署文件资源Id列表，目前仅支持单个文件
  * @method void setFileIds(array $FileIds) 设置签署文件资源Id列表，目前仅支持单个文件
- * @method array getComponents() 获取签署文件中的控件，如：填写控件等
- * @method void setComponents(array $Components) 设置签署文件中的控件，如：填写控件等
+ * @method array getComponents() 获取签署文件中的发起方的填写控件，需要在发起的时候进行填充
+ * @method void setComponents(array $Components) 设置签署文件中的发起方的填写控件，需要在发起的时候进行填充
  * @method integer getDeadline() 获取签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
  * @method void setDeadline(integer $Deadline) 设置签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
  * @method string getCallbackUrl() 获取签署流程回调地址，长度不超过255个字符
@@ -72,7 +72,7 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
     public $FileIds;
 
     /**
-     * @var array 签署文件中的控件，如：填写控件等
+     * @var array 签署文件中的发起方的填写控件，需要在发起的时候进行填充
      */
     public $Components;
 
@@ -126,7 +126,7 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
      * @param string $FlowName 签署流程名称，长度不超过200个字符
      * @param array $FlowApprovers 签署流程签约方列表，最多不超过5个参与方
      * @param array $FileIds 签署文件资源Id列表，目前仅支持单个文件
-     * @param array $Components 签署文件中的控件，如：填写控件等
+     * @param array $Components 签署文件中的发起方的填写控件，需要在发起的时候进行填充
      * @param integer $Deadline 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
      * @param string $CallbackUrl 签署流程回调地址，长度不超过255个字符
      * @param boolean $Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署

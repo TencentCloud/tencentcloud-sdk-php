@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置多个值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKey() 获取类型标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKey(string $Key) 设置类型标识
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TraceItem extends AbstractModel
 {
@@ -84,6 +88,12 @@ class TraceItem extends AbstractModel
     public $Values;
 
     /**
+     * @var string 类型标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Key;
+
+    /**
      * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 单个值
@@ -95,6 +105,8 @@ class TraceItem extends AbstractModel
      * @param boolean $Hidden 扫码展示
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 多个值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Key 类型标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class TraceItem extends AbstractModel
 
         if (array_key_exists("Values",$param) and $param["Values"] !== null) {
             $this->Values = $param["Values"];
+        }
+
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
     }
 }

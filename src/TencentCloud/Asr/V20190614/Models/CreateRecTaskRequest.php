@@ -76,10 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConvertNumMode(integer $ConvertNumMode) 设置是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
  * @method integer getFilterDirty() 获取是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
  * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
- * @method string getHotwordId() 获取热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
- * @method void setHotwordId(string $HotwordId) 设置热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
- * @method string getCustomizationId() 获取自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
- * @method void setCustomizationId(string $CustomizationId) 设置自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+ * @method string getHotwordId() 获取热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
+ * @method void setHotwordId(string $HotwordId) 设置热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
+ * @method string getCustomizationId() 获取自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+ * @method void setCustomizationId(string $CustomizationId) 设置自学习模型 id。如设置了该参数，将生效对应的自学习模型。
  * @method string getExtra() 获取附加参数(该参数无意义，忽略即可)
  * @method void setExtra(string $Extra) 设置附加参数(该参数无意义，忽略即可)
  * @method integer getFilterPunc() 获取是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
@@ -166,12 +166,12 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterDirty;
 
     /**
-     * @var string 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
+     * @var string 热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
      */
     public $HotwordId;
 
     /**
-     * @var string 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+     * @var string 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
      */
     public $CustomizationId;
 
@@ -219,8 +219,8 @@ class CreateRecTaskRequest extends AbstractModel
      * @param integer $DataLen 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
      * @param integer $ConvertNumMode 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
      * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
-     * @param string $HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
-     * @param string $CustomizationId 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+     * @param string $HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
+     * @param string $CustomizationId 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
      * @param string $Extra 附加参数(该参数无意义，忽略即可)
      * @param integer $FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
      * @param integer $FilterModal 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。

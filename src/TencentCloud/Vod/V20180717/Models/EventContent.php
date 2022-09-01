@@ -32,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成。</li>
+<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>ReviewAudioVideoComplete：音视频审核完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -49,7 +50,8 @@ use TencentCloud\Common\AbstractModel;
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成。</li>
+<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>ReviewAudioVideoComplete：音视频审核完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -120,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) 设置视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() 获取音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent) 设置音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventContent extends AbstractModel
 {
@@ -139,7 +145,8 @@ class EventContent extends AbstractModel
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成。</li>
+<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>ReviewAudioVideoComplete：音视频审核完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -246,6 +253,12 @@ class EventContent extends AbstractModel
     public $RestoreMediaCompleteEvent;
 
     /**
+     * @var ReviewAudioVideoTask 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReviewAudioVideoCompleteEvent;
+
+    /**
      * @param string $EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      * @param string $EventType <b>支持事件类型：</b>
 <li>NewFileUpload：视频上传完成；</li>
@@ -257,7 +270,8 @@ class EventContent extends AbstractModel
 <li>WechatPublishComplete：微信发布完成；</li>
 <li>ComposeMediaComplete：制作媒体文件完成；</li>
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-<li>FastClipMediaComplete：快速剪辑完成。</li>
+<li>FastClipMediaComplete：快速剪辑完成；</li>
+<li>ReviewAudioVideoComplete：音视频审核完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -295,6 +309,8 @@ class EventContent extends AbstractModel
      * @param RemoveWatermarkTask $RemoveWatermarkCompleteEvent 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RestoreMediaTask $RestoreMediaCompleteEvent 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -396,6 +412,11 @@ class EventContent extends AbstractModel
         if (array_key_exists("RestoreMediaCompleteEvent",$param) and $param["RestoreMediaCompleteEvent"] !== null) {
             $this->RestoreMediaCompleteEvent = new RestoreMediaTask();
             $this->RestoreMediaCompleteEvent->deserialize($param["RestoreMediaCompleteEvent"]);
+        }
+
+        if (array_key_exists("ReviewAudioVideoCompleteEvent",$param) and $param["ReviewAudioVideoCompleteEvent"] !== null) {
+            $this->ReviewAudioVideoCompleteEvent = new ReviewAudioVideoTask();
+            $this->ReviewAudioVideoCompleteEvent->deserialize($param["ReviewAudioVideoCompleteEvent"]);
         }
     }
 }

@@ -50,8 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChainData(ChainData $ChainData) 设置[无效] 上链数据
  * @method integer getCorpId() 获取企业ID
  * @method void setCorpId(integer $CorpId) 设置企业ID
- * @method integer getStatus() 获取[无效] 溯源状态
- * @method void setStatus(integer $Status) 设置[无效] 溯源状态
+ * @method integer getStatus() 获取溯源状态 0: 无效, 1: 有效
+ * @method void setStatus(integer $Status) 设置溯源状态 0: 无效, 1: 有效
+ * @method PhaseData getPhaseData() 获取环节数据
+ * @method void setPhaseData(PhaseData $PhaseData) 设置环节数据
  */
 class ModifyTraceDataRequest extends AbstractModel
 {
@@ -131,9 +133,14 @@ class ModifyTraceDataRequest extends AbstractModel
     public $CorpId;
 
     /**
-     * @var integer [无效] 溯源状态
+     * @var integer 溯源状态 0: 无效, 1: 有效
      */
     public $Status;
+
+    /**
+     * @var PhaseData 环节数据
+     */
+    public $PhaseData;
 
     /**
      * @param string $TraceId 溯源ID
@@ -151,7 +158,8 @@ class ModifyTraceDataRequest extends AbstractModel
      * @param string $ChainTime [无效] 上链时间
      * @param ChainData $ChainData [无效] 上链数据
      * @param integer $CorpId 企业ID
-     * @param integer $Status [无效] 溯源状态
+     * @param integer $Status 溯源状态 0: 无效, 1: 有效
+     * @param PhaseData $PhaseData 环节数据
      */
     function __construct()
     {
@@ -234,6 +242,11 @@ class ModifyTraceDataRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("PhaseData",$param) and $param["PhaseData"] !== null) {
+            $this->PhaseData = new PhaseData();
+            $this->PhaseData->deserialize($param["PhaseData"]);
         }
     }
 }

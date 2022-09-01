@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuntimeVersion() 获取运行时版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -211,6 +215,12 @@ class Cluster extends AbstractModel
     public $QGPUShareEnable;
 
     /**
+     * @var string 运行时版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuntimeVersion;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterDescription 集群描述
@@ -243,6 +253,8 @@ class Cluster extends AbstractModel
      * @param boolean $AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuntimeVersion 运行时版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -350,6 +362,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
             $this->QGPUShareEnable = $param["QGPUShareEnable"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
         }
     }
 }

@@ -18,18 +18,18 @@ namespace TencentCloud\Autoscaling\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。
+ * 远程命令执行对象。
  *
  * @method string getCommandId() 获取远程命令ID。若选择执行命令，则此项必填。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommandId(string $CommandId) 设置远程命令ID。若选择执行命令，则此项必填。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getParameters() 获取自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
+ * @method string getParameters() 获取自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
 自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setParameters(array $Parameters) 设置自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
+ * @method void setParameters(string $Parameters) 设置自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
 自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
@@ -44,7 +44,7 @@ class LifecycleCommand extends AbstractModel
     public $CommandId;
 
     /**
-     * @var array 自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
+     * @var string 自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
 自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
@@ -55,7 +55,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     /**
      * @param string $CommandId 远程命令ID。若选择执行命令，则此项必填。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Parameters 自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
+     * @param string $Parameters 自定义参数。字段类型为 json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 Command 的 DefaultParameters 进行替换。
 自定义参数最多20个。自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。

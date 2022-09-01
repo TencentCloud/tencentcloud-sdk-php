@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
- * @method array getFilters() 获取过滤条件,不支持同时指定SecurityGroupId和Filters参数。
-<li>security-group-id - String - 安全组ID。</li>
+ * @method array getFilters() 获取过滤条件。
+<li>security-group-id - String - 规则中的安全组ID。</li>
 <li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>
 <li>address-module - String - IP地址模板或IP地址组模板ID。</li>
 <li>service-module - String - 协议端口模板或协议端口组模板ID。</li>
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>poly - String - 协议策略，可选值：`ALL`，所有策略；`ACCEPT`，允许；`DROP`，拒绝。</li>
 <li>direction - String - 协议规则，可选值：`ALL`，所有策略；`INBOUND`，入站规则；`OUTBOUND`，出站规则。</li>
 <li>description - String - 协议描述，该过滤条件支持模糊匹配。</li>
- * @method void setFilters(array $Filters) 设置过滤条件,不支持同时指定SecurityGroupId和Filters参数。
-<li>security-group-id - String - 安全组ID。</li>
+ * @method void setFilters(array $Filters) 设置过滤条件。
+<li>security-group-id - String - 规则中的安全组ID。</li>
 <li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>
 <li>address-module - String - IP地址模板或IP地址组模板ID。</li>
 <li>service-module - String - 协议端口模板或协议端口组模板ID。</li>
@@ -51,8 +51,8 @@ class DescribeSecurityGroupPoliciesRequest extends AbstractModel
     public $SecurityGroupId;
 
     /**
-     * @var array 过滤条件,不支持同时指定SecurityGroupId和Filters参数。
-<li>security-group-id - String - 安全组ID。</li>
+     * @var array 过滤条件。
+<li>security-group-id - String - 规则中的安全组ID。</li>
 <li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>
 <li>address-module - String - IP地址模板或IP地址组模板ID。</li>
 <li>service-module - String - 协议端口模板或协议端口组模板ID。</li>
@@ -66,8 +66,8 @@ class DescribeSecurityGroupPoliciesRequest extends AbstractModel
 
     /**
      * @param string $SecurityGroupId 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。
-     * @param array $Filters 过滤条件,不支持同时指定SecurityGroupId和Filters参数。
-<li>security-group-id - String - 安全组ID。</li>
+     * @param array $Filters 过滤条件。
+<li>security-group-id - String - 规则中的安全组ID。</li>
 <li>ip - String - IP，支持IPV4和IPV6模糊匹配。</li>
 <li>address-module - String - IP地址模板或IP地址组模板ID。</li>
 <li>service-module - String - 协议端口模板或协议端口组模板ID。</li>

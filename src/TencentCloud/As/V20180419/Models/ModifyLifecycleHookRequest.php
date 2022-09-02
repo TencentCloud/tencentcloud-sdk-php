@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) 设置进行生命周期挂钩的场景类型，取值范围包括`NORMAL`和 `EXTENSION`。说明：设置为`EXTENSION`值，在AttachInstances、DetachInstances、RemoveInstances 接口时会触发生命周期挂钩操作，值为`NORMAL`则不会在这些接口中触发生命周期挂钩。
  * @method NotificationTarget getNotificationTarget() 获取通知目标信息。
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置通知目标信息。
+ * @method LifecycleCommand getLifecycleCommand() 获取远程命令执行对象。
+ * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) 设置远程命令执行对象。
  */
 class ModifyLifecycleHookRequest extends AbstractModel
 {
@@ -92,6 +94,11 @@ class ModifyLifecycleHookRequest extends AbstractModel
     public $NotificationTarget;
 
     /**
+     * @var LifecycleCommand 远程命令执行对象。
+     */
+    public $LifecycleCommand;
+
+    /**
      * @param string $LifecycleHookId 生命周期挂钩ID。
      * @param string $LifecycleHookName 生命周期挂钩名称。
      * @param string $LifecycleTransition 进入生命周期挂钩场景，取值包括：
@@ -104,6 +111,7 @@ class ModifyLifecycleHookRequest extends AbstractModel
      * @param string $NotificationMetadata 弹性伸缩向通知目标发送的附加信息。
      * @param string $LifecycleTransitionType 进行生命周期挂钩的场景类型，取值范围包括`NORMAL`和 `EXTENSION`。说明：设置为`EXTENSION`值，在AttachInstances、DetachInstances、RemoveInstances 接口时会触发生命周期挂钩操作，值为`NORMAL`则不会在这些接口中触发生命周期挂钩。
      * @param NotificationTarget $NotificationTarget 通知目标信息。
+     * @param LifecycleCommand $LifecycleCommand 远程命令执行对象。
      */
     function __construct()
     {
@@ -149,6 +157,11 @@ class ModifyLifecycleHookRequest extends AbstractModel
         if (array_key_exists("NotificationTarget",$param) and $param["NotificationTarget"] !== null) {
             $this->NotificationTarget = new NotificationTarget();
             $this->NotificationTarget->deserialize($param["NotificationTarget"]);
+        }
+
+        if (array_key_exists("LifecycleCommand",$param) and $param["LifecycleCommand"] !== null) {
+            $this->LifecycleCommand = new LifecycleCommand();
+            $this->LifecycleCommand->deserialize($param["LifecycleCommand"]);
         }
     }
 }

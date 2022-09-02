@@ -34,11 +34,11 @@ use TencentCloud\Common\AbstractModel;
 <li>SUCCESSFUL 命令调用成功，不代表命令执行成功，执行的具体情况可根据InvocationId进行查询</li>
 <li>FAILED 命令调用失败</li>
 <li>NONE</li>
- * @method string getNotificationResult() 获取通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+ * @method string getNotificationResult() 获取通知的结果，表示通知CMQ/TDMQ是否成功。<br>
 <li>SUCCESSFUL 通知成功</li>
 <li>FAILED 通知失败</li>
 <li>NONE</li>
- * @method void setNotificationResult(string $NotificationResult) 设置通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+ * @method void setNotificationResult(string $NotificationResult) 设置通知的结果，表示通知CMQ/TDMQ是否成功。<br>
 <li>SUCCESSFUL 通知成功</li>
 <li>FAILED 通知失败</li>
 <li>NONE</li>
@@ -89,7 +89,7 @@ class LifecycleActionResultInfo extends AbstractModel
     public $InvokeCommandResult;
 
     /**
-     * @var string 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+     * @var string 通知的结果，表示通知CMQ/TDMQ是否成功。<br>
 <li>SUCCESSFUL 通知成功</li>
 <li>FAILED 通知失败</li>
 <li>NONE</li>
@@ -122,7 +122,7 @@ class LifecycleActionResultInfo extends AbstractModel
 <li>SUCCESSFUL 命令调用成功，不代表命令执行成功，执行的具体情况可根据InvocationId进行查询</li>
 <li>FAILED 命令调用失败</li>
 <li>NONE</li>
-     * @param string $NotificationResult 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+     * @param string $NotificationResult 通知的结果，表示通知CMQ/TDMQ是否成功。<br>
 <li>SUCCESSFUL 通知成功</li>
 <li>FAILED 通知失败</li>
 <li>NONE</li>

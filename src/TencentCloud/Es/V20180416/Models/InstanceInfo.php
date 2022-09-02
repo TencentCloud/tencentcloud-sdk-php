@@ -270,6 +270,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoIndexEnabled(boolean $AutoIndexEnabled) 设置自治索引开关
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableHybridStorage() 获取是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableHybridStorage(boolean $EnableHybridStorage) 设置是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -711,6 +715,12 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $AutoIndexEnabled;
 
     /**
+     * @var boolean 是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableHybridStorage;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -835,6 +845,8 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param array $OptionalWebServiceInfos web节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoIndexEnabled 自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableHybridStorage 是否支持存储计算分离
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1193,6 +1205,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("AutoIndexEnabled",$param) and $param["AutoIndexEnabled"] !== null) {
             $this->AutoIndexEnabled = $param["AutoIndexEnabled"];
+        }
+
+        if (array_key_exists("EnableHybridStorage",$param) and $param["EnableHybridStorage"] !== null) {
+            $this->EnableHybridStorage = $param["EnableHybridStorage"];
         }
     }
 }

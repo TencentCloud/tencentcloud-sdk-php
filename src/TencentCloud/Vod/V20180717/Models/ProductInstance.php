@@ -56,6 +56,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRefundStatus(string $RefundStatus) 设置资源包实例的可退还状态，取值有：
 <li>FullRefund：可全额退款。</li>
 <li>Denied：不可退款。</li>
+ * @method string getRenewStatus() 获取自动续费状态，取值有：
+<li>Never：不自动续费。</li>
+<li>Expire：到期自动续费。</li>
+<li>ExpireOrUseOut：到期或用完自动续费。</li>
+<li>NotSupport：不支持。</li>
+ * @method void setRenewStatus(string $RenewStatus) 设置自动续费状态，取值有：
+<li>Never：不自动续费。</li>
+<li>Expire：到期自动续费。</li>
+<li>ExpireOrUseOut：到期或用完自动续费。</li>
+<li>NotSupport：不支持。</li>
  */
 class ProductInstance extends AbstractModel
 {
@@ -114,6 +124,15 @@ class ProductInstance extends AbstractModel
     public $RefundStatus;
 
     /**
+     * @var string 自动续费状态，取值有：
+<li>Never：不自动续费。</li>
+<li>Expire：到期自动续费。</li>
+<li>ExpireOrUseOut：到期或用完自动续费。</li>
+<li>NotSupport：不支持。</li>
+     */
+    public $RenewStatus;
+
+    /**
      * @param string $ProductType 预付费商品实例类型，取值有：
 <li>StarterPackage：点播新手包。</li>
 <li>MiniProgramPlugin：点播小程序插件。</li>
@@ -132,6 +151,11 @@ class ProductInstance extends AbstractModel
      * @param string $RefundStatus 资源包实例的可退还状态，取值有：
 <li>FullRefund：可全额退款。</li>
 <li>Denied：不可退款。</li>
+     * @param string $RenewStatus 自动续费状态，取值有：
+<li>Never：不自动续费。</li>
+<li>Expire：到期自动续费。</li>
+<li>ExpireOrUseOut：到期或用完自动续费。</li>
+<li>NotSupport：不支持。</li>
      */
     function __construct()
     {
@@ -185,6 +209,10 @@ class ProductInstance extends AbstractModel
 
         if (array_key_exists("RefundStatus",$param) and $param["RefundStatus"] !== null) {
             $this->RefundStatus = $param["RefundStatus"];
+        }
+
+        if (array_key_exists("RenewStatus",$param) and $param["RenewStatus"] !== null) {
+            $this->RenewStatus = $param["RenewStatus"];
         }
     }
 }

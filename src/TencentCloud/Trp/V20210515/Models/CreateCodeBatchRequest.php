@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注
  * @method string getMpTpl() 获取活动ID
  * @method void setMpTpl(string $MpTpl) 设置活动ID
+ * @method string getCloneId() 获取克隆批次ID
+ * @method void setCloneId(string $CloneId) 设置克隆批次ID
  */
 class CreateCodeBatchRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateCodeBatchRequest extends AbstractModel
     public $MpTpl;
 
     /**
+     * @var string 克隆批次ID
+     */
+    public $CloneId;
+
+    /**
      * @param integer $CorpId 企业ID
      * @param string $MerchantId 商户ID
      * @param string $ProductId 产品ID
@@ -80,6 +87,7 @@ class CreateCodeBatchRequest extends AbstractModel
      * @param string $BatchId 批次ID，系统自动生成
      * @param string $Remark 备注
      * @param string $MpTpl 活动ID
+     * @param string $CloneId 克隆批次ID
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateCodeBatchRequest extends AbstractModel
 
         if (array_key_exists("MpTpl",$param) and $param["MpTpl"] !== null) {
             $this->MpTpl = $param["MpTpl"];
+        }
+
+        if (array_key_exists("CloneId",$param) and $param["CloneId"] !== null) {
+            $this->CloneId = $param["CloneId"];
         }
     }
 }

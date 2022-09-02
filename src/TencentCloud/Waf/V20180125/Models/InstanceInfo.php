@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBotPkg(BotPkg $BotPkg) 设置Bot资源包
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method BotQPS getBotQPS() 获取bot的qps详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBotQPS(BotQPS $BotQPS) 设置bot的qps详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -177,6 +181,12 @@ class InstanceInfo extends AbstractModel
     public $BotPkg;
 
     /**
+     * @var BotQPS bot的qps详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BotQPS;
+
+    /**
      * @param string $InstanceId id
      * @param string $InstanceName name
      * @param string $ResourceIds 资源id
@@ -199,6 +209,8 @@ class InstanceInfo extends AbstractModel
      * @param FraudPkg $FraudPkg 业务安全包
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BotPkg $BotPkg Bot资源包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BotQPS $BotQPS bot的qps详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -300,6 +312,11 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("BotPkg",$param) and $param["BotPkg"] !== null) {
             $this->BotPkg = new BotPkg();
             $this->BotPkg->deserialize($param["BotPkg"]);
+        }
+
+        if (array_key_exists("BotQPS",$param) and $param["BotQPS"] !== null) {
+            $this->BotQPS = new BotQPS();
+            $this->BotQPS->deserialize($param["BotQPS"]);
         }
     }
 }

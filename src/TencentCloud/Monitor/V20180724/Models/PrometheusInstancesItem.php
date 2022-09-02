@@ -192,6 +192,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGrafanaInstanceId(string $GrafanaInstanceId) 设置绑定的 Grafana 实例 ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAlertRuleLimit() 获取告警规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlertRuleLimit(integer $AlertRuleLimit) 设置告警规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRecordingRuleLimit() 获取预聚合规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordingRuleLimit(integer $RecordingRuleLimit) 设置预聚合规则限制
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusInstancesItem extends AbstractModel
 {
@@ -390,6 +398,18 @@ class PrometheusInstancesItem extends AbstractModel
     public $GrafanaInstanceId;
 
     /**
+     * @var integer 告警规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlertRuleLimit;
+
+    /**
+     * @var integer 预聚合规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordingRuleLimit;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $InstanceName 实例名称。
      * @param integer $InstanceChargeType 实例计费模式。取值范围：
@@ -475,6 +495,10 @@ class PrometheusInstancesItem extends AbstractModel
      * @param PrometheusInstanceGrantInfo $Grant 实例的授权信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GrafanaInstanceId 绑定的 Grafana 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AlertRuleLimit 告警规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RecordingRuleLimit 预聚合规则限制
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -602,6 +626,14 @@ class PrometheusInstancesItem extends AbstractModel
 
         if (array_key_exists("GrafanaInstanceId",$param) and $param["GrafanaInstanceId"] !== null) {
             $this->GrafanaInstanceId = $param["GrafanaInstanceId"];
+        }
+
+        if (array_key_exists("AlertRuleLimit",$param) and $param["AlertRuleLimit"] !== null) {
+            $this->AlertRuleLimit = $param["AlertRuleLimit"];
+        }
+
+        if (array_key_exists("RecordingRuleLimit",$param) and $param["RecordingRuleLimit"] !== null) {
+            $this->RecordingRuleLimit = $param["RecordingRuleLimit"];
         }
     }
 }

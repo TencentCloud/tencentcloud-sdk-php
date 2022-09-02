@@ -56,6 +56,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method void setVerifyChannel(array $VerifyChannel) 设置签署意愿确认渠道,WEIXINAPP:人脸识别
  * @method integer getPreReadTime() 获取合同的强制预览时间：3~300s，未指定则按合同页数计算
  * @method void setPreReadTime(integer $PreReadTime) 设置合同的强制预览时间：3~300s，未指定则按合同页数计算
+ * @method string getUserId() 获取签署人userId，非企微场景不使用此字段
+ * @method void setUserId(string $UserId) 设置签署人userId，非企微场景不使用此字段
+ * @method string getApproverSource() 获取签署人用户来源,企微侧用户请传入：WEWORKAPP
+ * @method void setApproverSource(string $ApproverSource) 设置签署人用户来源,企微侧用户请传入：WEWORKAPP
+ * @method string getCustomApproverTag() 获取客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
+ * @method void setCustomApproverTag(string $CustomApproverTag) 设置客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
  */
 class ApproverInfo extends AbstractModel
 {
@@ -122,6 +128,21 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $PreReadTime;
 
     /**
+     * @var string 签署人userId，非企微场景不使用此字段
+     */
+    public $UserId;
+
+    /**
+     * @var string 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     */
+    public $ApproverSource;
+
+    /**
+     * @var string 客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
+     */
+    public $CustomApproverTag;
+
+    /**
      * @param integer $ApproverType 参与者类型：
 0：企业
 1：个人
@@ -140,6 +161,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param integer $ApproverRole 1--收款人、2--开具人、3--见证人
      * @param array $VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      * @param integer $PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
+     * @param string $UserId 签署人userId，非企微场景不使用此字段
+     * @param string $ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     * @param string $CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
      */
     function __construct()
     {
@@ -201,6 +225,18 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
         if (array_key_exists("PreReadTime",$param) and $param["PreReadTime"] !== null) {
             $this->PreReadTime = $param["PreReadTime"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("ApproverSource",$param) and $param["ApproverSource"] !== null) {
+            $this->ApproverSource = $param["ApproverSource"];
+        }
+
+        if (array_key_exists("CustomApproverTag",$param) and $param["CustomApproverTag"] !== null) {
+            $this->CustomApproverTag = $param["CustomApproverTag"];
         }
     }
 }

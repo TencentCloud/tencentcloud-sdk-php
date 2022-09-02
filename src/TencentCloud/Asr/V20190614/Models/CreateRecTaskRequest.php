@@ -34,7 +34,6 @@ use TencentCloud\Common\AbstractModel;
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
-• 16k_zh_dialect：多方言，支持23种方言。
  * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。注意：非电话场景请务必使用16k的引擎。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -49,7 +48,6 @@ use TencentCloud\Common\AbstractModel;
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
-• 16k_zh_dialect：多方言，支持23种方言。
  * @method integer getChannelNum() 获取识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。
  * @method void setChannelNum(integer $ChannelNum) 设置识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。
  * @method integer getResTextFormat() 获取识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）；3: 标点符号分段，包含每段时间戳，特别适用于字幕场景（包含词级时间、标点、语速值）。
@@ -104,7 +102,6 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
-• 16k_zh_dialect：多方言，支持23种方言。
      */
     public $EngineModelType;
 
@@ -205,7 +202,6 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
-• 16k_zh_dialect：多方言，支持23种方言。
      * @param integer $ChannelNum 识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。
      * @param integer $ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）；3: 标点符号分段，包含每段时间戳，特别适用于字幕场景（包含词级时间、标点、语速值）。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。

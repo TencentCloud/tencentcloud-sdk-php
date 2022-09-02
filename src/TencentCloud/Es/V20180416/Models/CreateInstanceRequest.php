@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置创建https集群，默认是http
  * @method OperationDuration getOperationDuration() 获取可维护时间段
  * @method void setOperationDuration(OperationDuration $OperationDuration) 设置可维护时间段
+ * @method boolean getEnableHybridStorage() 获取是否开启存算分离
+ * @method void setEnableHybridStorage(boolean $EnableHybridStorage) 设置是否开启存算分离
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -265,6 +267,11 @@ class CreateInstanceRequest extends AbstractModel
     public $OperationDuration;
 
     /**
+     * @var boolean 是否开启存算分离
+     */
+    public $EnableHybridStorage;
+
+    /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      * @param string $VpcId 私有网络ID
@@ -304,6 +311,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param WebNodeTypeInfo $WebNodeTypeInfo 可视化节点配置
      * @param string $Protocol 创建https集群，默认是http
      * @param OperationDuration $OperationDuration 可维护时间段
+     * @param boolean $EnableHybridStorage 是否开启存算分离
      */
     function __construct()
     {
@@ -457,6 +465,10 @@ class CreateInstanceRequest extends AbstractModel
         if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
             $this->OperationDuration = new OperationDuration();
             $this->OperationDuration->deserialize($param["OperationDuration"]);
+        }
+
+        if (array_key_exists("EnableHybridStorage",$param) and $param["EnableHybridStorage"] !== null) {
+            $this->EnableHybridStorage = $param["EnableHybridStorage"];
         }
     }
 }

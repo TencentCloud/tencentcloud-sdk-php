@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SentenceRecognition请求参数结构体
  *
- * @method integer getProjectId() 获取腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
- * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+ * @method integer getProjectId() 获取腾讯云项目 ID，废弃参数，默认填写0即可。
+ * @method void setProjectId(integer $ProjectId) 设置腾讯云项目 ID，废弃参数，默认填写0即可。
  * @method integer getSubServiceType() 获取子服务类型。2： 一句话识别。
  * @method void setSubServiceType(integer $SubServiceType) 设置子服务类型。2： 一句话识别。
  * @method string getEngSerViceType() 获取引擎模型类型。
@@ -34,7 +34,6 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
-• 16k_zh_dialect：多方言，支持23种方言。
  * @method void setEngSerViceType(string $EngSerViceType) 设置引擎模型类型。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -45,21 +44,20 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
-• 16k_zh_dialect：多方言，支持23种方言。
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method string getVoiceFormat() 获取识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
  * @method void setVoiceFormat(string $VoiceFormat) 设置识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
- * @method string getUsrAudioKey() 获取用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
- * @method void setUsrAudioKey(string $UsrAudioKey) 设置用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
+ * @method string getUsrAudioKey() 获取用户端对此任务的唯一标识。废弃参数，忽略即可。
+ * @method void setUsrAudioKey(string $UsrAudioKey) 设置用户端对此任务的唯一标识。废弃参数，忽略即可。
  * @method string getUrl() 获取语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时长不能超过60s，音频文件大小不能超过3MB。
  * @method void setUrl(string $Url) 设置语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时长不能超过60s，音频文件大小不能超过3MB。
  * @method string getData() 获取语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频时长不能超过60s，音频文件大小不能超过3MB（Base64后）。
  * @method void setData(string $Data) 设置语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频时长不能超过60s，音频文件大小不能超过3MB（Base64后）。
  * @method integer getDataLen() 获取数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
  * @method void setDataLen(integer $DataLen) 设置数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
- * @method string getHotwordId() 获取热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
- * @method void setHotwordId(string $HotwordId) 设置热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+ * @method integer getWordInfo() 获取是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
+ * @method void setWordInfo(integer $WordInfo) 设置是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
  * @method integer getFilterDirty() 获取是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
  * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
  * @method integer getFilterModal() 获取是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
@@ -68,13 +66,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterPunc(integer $FilterPunc) 设置是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
  * @method integer getConvertNumMode() 获取是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1。
  * @method void setConvertNumMode(integer $ConvertNumMode) 设置是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1。
- * @method integer getWordInfo() 获取是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
- * @method void setWordInfo(integer $WordInfo) 设置是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
+ * @method string getHotwordId() 获取热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+ * @method void setHotwordId(string $HotwordId) 设置热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+ * @method string getCustomizationId() 获取自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+ * @method void setCustomizationId(string $CustomizationId) 设置自学习模型 id。如设置了该参数，将生效对应的自学习模型。
  */
 class SentenceRecognitionRequest extends AbstractModel
 {
     /**
-     * @var integer 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+     * @var integer 腾讯云项目 ID，废弃参数，默认填写0即可。
      */
     public $ProjectId;
 
@@ -94,7 +94,6 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
-• 16k_zh_dialect：多方言，支持23种方言。
      */
     public $EngSerViceType;
 
@@ -109,7 +108,7 @@ class SentenceRecognitionRequest extends AbstractModel
     public $VoiceFormat;
 
     /**
-     * @var string 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
+     * @var string 用户端对此任务的唯一标识。废弃参数，忽略即可。
      */
     public $UsrAudioKey;
 
@@ -129,9 +128,9 @@ class SentenceRecognitionRequest extends AbstractModel
     public $DataLen;
 
     /**
-     * @var string 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * @var integer 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
      */
-    public $HotwordId;
+    public $WordInfo;
 
     /**
      * @var integer 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
@@ -154,12 +153,17 @@ class SentenceRecognitionRequest extends AbstractModel
     public $ConvertNumMode;
 
     /**
-     * @var integer 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
+     * @var string 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      */
-    public $WordInfo;
+    public $HotwordId;
 
     /**
-     * @param integer $ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+     * @var string 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+     */
+    public $CustomizationId;
+
+    /**
+     * @param integer $ProjectId 腾讯云项目 ID，废弃参数，默认填写0即可。
      * @param integer $SubServiceType 子服务类型。2： 一句话识别。
      * @param string $EngSerViceType 引擎模型类型。
 电话场景：
@@ -171,19 +175,19 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
-• 16k_zh_dialect：多方言，支持23种方言。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
-     * @param string $UsrAudioKey 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
+     * @param string $UsrAudioKey 用户端对此任务的唯一标识。废弃参数，忽略即可。
      * @param string $Url 语音 URL，公网可下载。当 SourceType 值为 0（语音 URL上传） 时须填写该字段，为 1 时不填；URL 的长度大于 0，小于 2048，需进行urlencode编码。音频时长不能超过60s，音频文件大小不能超过3MB。
      * @param string $Data 语音数据，当SourceType 值为1（本地语音数据上传）时必须填写，当SourceType 值为0（语音 URL上传）可不写。要使用base64编码(采用python语言时注意读取文件应该为string而不是byte，以byte格式读取后要decode()。编码后的数据不可带有回车换行符)。音频时长不能超过60s，音频文件大小不能超过3MB（Base64后）。
      * @param integer $DataLen 数据长度，单位为字节。当 SourceType 值为1（本地语音数据上传）时必须填写，当 SourceType 值为0（语音 URL上传）可不写（此数据长度为数据未进行base64编码时的数据长度）。
-     * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * @param integer $WordInfo 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
      * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
      * @param integer $FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
      * @param integer $FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
      * @param integer $ConvertNumMode 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1。
-     * @param integer $WordInfo 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
+     * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+     * @param string $CustomizationId 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
      */
     function __construct()
     {
@@ -234,8 +238,8 @@ class SentenceRecognitionRequest extends AbstractModel
             $this->DataLen = $param["DataLen"];
         }
 
-        if (array_key_exists("HotwordId",$param) and $param["HotwordId"] !== null) {
-            $this->HotwordId = $param["HotwordId"];
+        if (array_key_exists("WordInfo",$param) and $param["WordInfo"] !== null) {
+            $this->WordInfo = $param["WordInfo"];
         }
 
         if (array_key_exists("FilterDirty",$param) and $param["FilterDirty"] !== null) {
@@ -254,8 +258,12 @@ class SentenceRecognitionRequest extends AbstractModel
             $this->ConvertNumMode = $param["ConvertNumMode"];
         }
 
-        if (array_key_exists("WordInfo",$param) and $param["WordInfo"] !== null) {
-            $this->WordInfo = $param["WordInfo"];
+        if (array_key_exists("HotwordId",$param) and $param["HotwordId"] !== null) {
+            $this->HotwordId = $param["HotwordId"];
+        }
+
+        if (array_key_exists("CustomizationId",$param) and $param["CustomizationId"] !== null) {
+            $this->CustomizationId = $param["CustomizationId"];
         }
     }
 }

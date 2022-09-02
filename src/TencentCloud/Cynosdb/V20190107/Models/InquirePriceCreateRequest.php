@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() 获取可用区,每个地域提供最佳实践
  * @method void setZone(string $Zone) 设置可用区,每个地域提供最佳实践
- * @method integer getGoodsNum() 获取购买商品数量
- * @method void setGoodsNum(integer $GoodsNum) 设置购买商品数量
+ * @method integer getGoodsNum() 获取购买计算节点个数
+ * @method void setGoodsNum(integer $GoodsNum) 设置购买计算节点个数
  * @method string getInstancePayMode() 获取实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
  * @method void setInstancePayMode(string $InstancePayMode) 设置实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
  * @method string getStoragePayMode() 获取存储购买类型，可选值为：PREPAID, POSTPAID
@@ -49,7 +49,7 @@ class InquirePriceCreateRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer 购买商品数量
+     * @var integer 购买计算节点个数
      */
     public $GoodsNum;
 
@@ -95,7 +95,7 @@ class InquirePriceCreateRequest extends AbstractModel
 
     /**
      * @param string $Zone 可用区,每个地域提供最佳实践
-     * @param integer $GoodsNum 购买商品数量
+     * @param integer $GoodsNum 购买计算节点个数
      * @param string $InstancePayMode 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
      * @param string $StoragePayMode 存储购买类型，可选值为：PREPAID, POSTPAID
      * @param integer $Cpu CPU核数，PREPAID与POSTPAID实例类型必传

@@ -36,6 +36,8 @@ SUCCESS：支付成功
 CLOSED：关单
 PAY_FAIL：支付失败
 REVOKE：退票
+PART_REFUND：部分退款
+FULL_REFUND：全部退款
  * @method void setOrderStatus(string $OrderStatus) 设置订单状态。
 INIT：初始化
 PAYING：支付中
@@ -44,6 +46,8 @@ SUCCESS：支付成功
 CLOSED：关单
 PAY_FAIL：支付失败
 REVOKE：退票
+PART_REFUND：部分退款
+FULL_REFUND：全部退款
  * @method string getChannelName() 获取支付渠道名称，如TENPAY
  * @method void setChannelName(string $ChannelName) 设置支付渠道名称，如TENPAY
  * @method string getPaymentMethod() 获取付款方式。如EBANK_PAYMENT
@@ -120,6 +124,8 @@ SUCCESS：支付成功
 CLOSED：关单
 PAY_FAIL：支付失败
 REVOKE：退票
+PART_REFUND：部分退款
+FULL_REFUND：全部退款
      */
     public $OrderStatus;
 
@@ -206,6 +212,8 @@ SUCCESS：支付成功
 CLOSED：关单
 PAY_FAIL：支付失败
 REVOKE：退票
+PART_REFUND：部分退款
+FULL_REFUND：全部退款
      * @param string $ChannelName 支付渠道名称，如TENPAY
      * @param string $PaymentMethod 付款方式。如EBANK_PAYMENT
 OPENBANK_PAYMENT

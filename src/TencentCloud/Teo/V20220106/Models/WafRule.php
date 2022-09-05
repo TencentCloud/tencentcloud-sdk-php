@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Waf规则
  *
- * @method array getBlockRuleIDs() 获取黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
- * @method void setBlockRuleIDs(array $BlockRuleIDs) 设置黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
- * @method string getSwitch() 获取托管规则 开关
- * @method void setSwitch(string $Switch) 设置托管规则 开关
- * @method array getObserveRuleIDs() 获取观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
+ * @method string getSwitch() 获取托管规则开关。 on为开启
+ * @method void setSwitch(string $Switch) 设置托管规则开关。 on为开启
+ * @method array getBlockRuleIDs() 获取黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
+ * @method void setBlockRuleIDs(array $BlockRuleIDs) 设置黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
+ * @method array getObserveRuleIDs() 获取观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setObserveRuleIDs(array $ObserveRuleIDs) 设置观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
+ * @method void setObserveRuleIDs(array $ObserveRuleIDs) 设置观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WafRule extends AbstractModel
 {
     /**
-     * @var array 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
-     */
-    public $BlockRuleIDs;
-
-    /**
-     * @var string 托管规则 开关
+     * @var string 托管规则开关。 on为开启
      */
     public $Switch;
 
     /**
-     * @var array 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
+     * @var array 黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
+     */
+    public $BlockRuleIDs;
+
+    /**
+     * @var array 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObserveRuleIDs;
 
     /**
-     * @param array $BlockRuleIDs 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
-     * @param string $Switch 托管规则 开关
-     * @param array $ObserveRuleIDs 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
+     * @param string $Switch 托管规则开关。 on为开启
+     * @param array $BlockRuleIDs 黑名单ID列表，将规则ID加入本参数列表中代表该ID关闭，即该规则ID不再生效。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
+     * @param array $ObserveRuleIDs 观察模式ID列表，将规则ID加入本参数列表中代表该ID使用观察模式生效，即该规则ID进入观察模式。ID参考接口 [DescribeSecurityPolicyManagedRules](https://tcloud4api.woa.com/document/product/1657/76030?!preview&!document=1)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -66,12 +66,12 @@ class WafRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BlockRuleIDs",$param) and $param["BlockRuleIDs"] !== null) {
-            $this->BlockRuleIDs = $param["BlockRuleIDs"];
-        }
-
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("BlockRuleIDs",$param) and $param["BlockRuleIDs"] !== null) {
+            $this->BlockRuleIDs = $param["BlockRuleIDs"];
         }
 
         if (array_key_exists("ObserveRuleIDs",$param) and $param["ObserveRuleIDs"] !== null) {

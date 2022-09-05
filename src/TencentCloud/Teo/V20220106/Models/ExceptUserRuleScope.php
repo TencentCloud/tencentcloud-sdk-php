@@ -18,35 +18,35 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AI规则引擎防护
+ * 例外规则的生效范围
  *
- * @method string getMode() 获取AI规则引擎状态，取值有：
-<li> smart_status_close：关闭；</li>
-<li> smart_status_open：拦截处置；</li>
-<li> smart_status_observe：观察处置。</li>
+ * @method array getModules() 获取生效的模块
+
+1. waf Waf防护
+2. bot Bot防护
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMode(string $Mode) 设置AI规则引擎状态，取值有：
-<li> smart_status_close：关闭；</li>
-<li> smart_status_open：拦截处置；</li>
-<li> smart_status_observe：观察处置。</li>
+ * @method void setModules(array $Modules) 设置生效的模块
+
+1. waf Waf防护
+2. bot Bot防护
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class AiRule extends AbstractModel
+class ExceptUserRuleScope extends AbstractModel
 {
     /**
-     * @var string AI规则引擎状态，取值有：
-<li> smart_status_close：关闭；</li>
-<li> smart_status_open：拦截处置；</li>
-<li> smart_status_observe：观察处置。</li>
+     * @var array 生效的模块
+
+1. waf Waf防护
+2. bot Bot防护
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Mode;
+    public $Modules;
 
     /**
-     * @param string $Mode AI规则引擎状态，取值有：
-<li> smart_status_close：关闭；</li>
-<li> smart_status_open：拦截处置；</li>
-<li> smart_status_observe：观察处置。</li>
+     * @param array $Modules 生效的模块
+
+1. waf Waf防护
+2. bot Bot防护
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,8 +62,8 @@ class AiRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
-            $this->Mode = $param["Mode"];
+        if (array_key_exists("Modules",$param) and $param["Modules"] !== null) {
+            $this->Modules = $param["Modules"];
         }
     }
 }

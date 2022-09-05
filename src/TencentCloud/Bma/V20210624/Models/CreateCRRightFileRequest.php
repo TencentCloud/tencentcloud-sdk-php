@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220106\Models;
+namespace TencentCloud\Bma\V20210624\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 功能总开关
+ * CreateCRRightFile请求参数结构体
  *
- * @method string getWebSwitch() 获取Web类型的安全总开关生效范围，Waf，自定义规则，速率限制。
-1. on 开启
-2. off 关闭
- * @method void setWebSwitch(string $WebSwitch) 设置Web类型的安全总开关生效范围，Waf，自定义规则，速率限制。
-1. on 开启
-2. off 关闭
+ * @method integer getWorkId() 获取xxx
+ * @method void setWorkId(integer $WorkId) 设置xxx
+ * @method array getFileList() 获取xxx
+ * @method void setFileList(array $FileList) 设置xxx
  */
-class SwitchConfig extends AbstractModel
+class CreateCRRightFileRequest extends AbstractModel
 {
     /**
-     * @var string Web类型的安全总开关生效范围，Waf，自定义规则，速率限制。
-1. on 开启
-2. off 关闭
+     * @var integer xxx
      */
-    public $WebSwitch;
+    public $WorkId;
 
     /**
-     * @param string $WebSwitch Web类型的安全总开关生效范围，Waf，自定义规则，速率限制。
-1. on 开启
-2. off 关闭
+     * @var array xxx
+     */
+    public $FileList;
+
+    /**
+     * @param integer $WorkId xxx
+     * @param array $FileList xxx
      */
     function __construct()
     {
@@ -54,8 +54,17 @@ class SwitchConfig extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WebSwitch",$param) and $param["WebSwitch"] !== null) {
-            $this->WebSwitch = $param["WebSwitch"];
+        if (array_key_exists("WorkId",$param) and $param["WorkId"] !== null) {
+            $this->WorkId = $param["WorkId"];
+        }
+
+        if (array_key_exists("FileList",$param) and $param["FileList"] !== null) {
+            $this->FileList = [];
+            foreach ($param["FileList"] as $key => $value){
+                $obj = new File();
+                $obj->deserialize($value);
+                array_push($this->FileList, $obj);
+            }
         }
     }
 }

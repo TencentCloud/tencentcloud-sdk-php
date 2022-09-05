@@ -18,29 +18,25 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能客户端过滤
+ * 例外规则，用于配置需要跳过特定场景的规则
  *
- * @method string getSwitch() 获取功能开关。
+ * @method string getSwitch() 获取开关。
 1. on 开启
 2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置功能开关。
+ * @method void setSwitch(string $Switch) 设置开关。
 1. on 开启
 2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAction() 获取执行动作 
-1. monitor(观察)
-2. alg(挑战)
+ * @method array getUserRules() 获取例外规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAction(string $Action) 设置执行动作 
-1. monitor(观察)
-2. alg(挑战)
+ * @method void setUserRules(array $UserRules) 设置例外规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class RateLimitIntelligence extends AbstractModel
+class ExceptConfig extends AbstractModel
 {
     /**
-     * @var string 功能开关。
+     * @var string 开关。
 1. on 开启
 2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,21 +44,17 @@ class RateLimitIntelligence extends AbstractModel
     public $Switch;
 
     /**
-     * @var string 执行动作 
-1. monitor(观察)
-2. alg(挑战)
+     * @var array 例外规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Action;
+    public $UserRules;
 
     /**
-     * @param string $Switch 功能开关。
+     * @param string $Switch 开关。
 1. on 开启
 2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Action 执行动作 
-1. monitor(观察)
-2. alg(挑战)
+     * @param array $UserRules 例外规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -82,8 +74,13 @@ class RateLimitIntelligence extends AbstractModel
             $this->Switch = $param["Switch"];
         }
 
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists("UserRules",$param) and $param["UserRules"] !== null) {
+            $this->UserRules = [];
+            foreach ($param["UserRules"] as $key => $value){
+                $obj = new ExceptUserRule();
+                $obj->deserialize($value);
+                array_push($this->UserRules, $obj);
+            }
         }
     }
 }

@@ -18,55 +18,91 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 门神配置
+ * Waf配置。
  *
- * @method string getSwitch() 获取开关
- * @method void setSwitch(string $Switch) 设置开关
- * @method string getLevel() 获取防护级别，loose/normal/strict/stricter/custom
- * @method void setLevel(string $Level) 设置防护级别，loose/normal/strict/stricter/custom
- * @method string getMode() 获取模式 block-阻断；observe-观察模式；close-关闭
- * @method void setMode(string $Mode) 设置模式 block-阻断；observe-观察模式；close-关闭
- * @method WafRule getWafRules() 获取托管规则黑白名单
- * @method void setWafRules(WafRule $WafRules) 设置托管规则黑白名单
- * @method AiRule getAiRule() 获取AI规则引擎防护
+ * @method string getSwitch() 获取WafConfig开关，取值有：
+<li> on：开启；</li>
+<li> off：关闭。</li>开关仅与配置是否生效有关，即使为off（关闭），也可以正常修改配置的内容。
+ * @method void setSwitch(string $Switch) 设置WafConfig开关，取值有：
+<li> on：开启；</li>
+<li> off：关闭。</li>开关仅与配置是否生效有关，即使为off（关闭），也可以正常修改配置的内容。
+ * @method string getLevel() 获取防护级别，取值有：
+<li> loose：宽松；</li>
+<li> normal：正常；</li>
+<li> strict：严格；</li>
+<li> stricter：超严格；</li>
+<li> custom：自定义。</li>
+ * @method void setLevel(string $Level) 设置防护级别，取值有：
+<li> loose：宽松；</li>
+<li> normal：正常；</li>
+<li> strict：严格；</li>
+<li> stricter：超严格；</li>
+<li> custom：自定义。</li>
+ * @method string getMode() 获取全局WAF模式，取值有：
+<li> block：阻断（全局阻断，但可对详细规则配置观察）；</li>
+<li> observe：观察（无论详细规则配置什么，都为观察）。</li>
+ * @method void setMode(string $Mode) 设置全局WAF模式，取值有：
+<li> block：阻断（全局阻断，但可对详细规则配置观察）；</li>
+<li> observe：观察（无论详细规则配置什么，都为观察）。</li>
+ * @method WafRule getWafRules() 获取托管规则详细配置。
+ * @method void setWafRules(WafRule $WafRules) 设置托管规则详细配置。
+ * @method AiRule getAiRule() 获取AI规则引擎防护配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAiRule(AiRule $AiRule) 设置AI规则引擎防护
+ * @method void setAiRule(AiRule $AiRule) 设置AI规则引擎防护配置。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WafConfig extends AbstractModel
 {
     /**
-     * @var string 开关
+     * @var string WafConfig开关，取值有：
+<li> on：开启；</li>
+<li> off：关闭。</li>开关仅与配置是否生效有关，即使为off（关闭），也可以正常修改配置的内容。
      */
     public $Switch;
 
     /**
-     * @var string 防护级别，loose/normal/strict/stricter/custom
+     * @var string 防护级别，取值有：
+<li> loose：宽松；</li>
+<li> normal：正常；</li>
+<li> strict：严格；</li>
+<li> stricter：超严格；</li>
+<li> custom：自定义。</li>
      */
     public $Level;
 
     /**
-     * @var string 模式 block-阻断；observe-观察模式；close-关闭
+     * @var string 全局WAF模式，取值有：
+<li> block：阻断（全局阻断，但可对详细规则配置观察）；</li>
+<li> observe：观察（无论详细规则配置什么，都为观察）。</li>
      */
     public $Mode;
 
     /**
-     * @var WafRule 托管规则黑白名单
+     * @var WafRule 托管规则详细配置。
      */
     public $WafRules;
 
     /**
-     * @var AiRule AI规则引擎防护
+     * @var AiRule AI规则引擎防护配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AiRule;
 
     /**
-     * @param string $Switch 开关
-     * @param string $Level 防护级别，loose/normal/strict/stricter/custom
-     * @param string $Mode 模式 block-阻断；observe-观察模式；close-关闭
-     * @param WafRule $WafRules 托管规则黑白名单
-     * @param AiRule $AiRule AI规则引擎防护
+     * @param string $Switch WafConfig开关，取值有：
+<li> on：开启；</li>
+<li> off：关闭。</li>开关仅与配置是否生效有关，即使为off（关闭），也可以正常修改配置的内容。
+     * @param string $Level 防护级别，取值有：
+<li> loose：宽松；</li>
+<li> normal：正常；</li>
+<li> strict：严格；</li>
+<li> stricter：超严格；</li>
+<li> custom：自定义。</li>
+     * @param string $Mode 全局WAF模式，取值有：
+<li> block：阻断（全局阻断，但可对详细规则配置观察）；</li>
+<li> observe：观察（无论详细规则配置什么，都为观察）。</li>
+     * @param WafRule $WafRules 托管规则详细配置。
+     * @param AiRule $AiRule AI规则引擎防护配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

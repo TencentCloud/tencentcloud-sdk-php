@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getWorkId() 获取作品ID
  * @method void setWorkId(integer $WorkId) 设置作品ID
- * @method string getMonitorStatus() 获取监测状态 1-开启监测 2-关闭监测 默认为1
- * @method void setMonitorStatus(string $MonitorStatus) 设置监测状态 1-开启监测 2-关闭监测 默认为1
+ * @method string getMonitorStatus() 获取监测状态 1-开启监测 2-关闭监测
+ * @method void setMonitorStatus(string $MonitorStatus) 设置监测状态 1-开启监测 2-关闭监测
+ * @method string getMonitorEnd() 获取默认不停止，支持续期
+ * @method void setMonitorEnd(string $MonitorEnd) 设置默认不停止，支持续期
  */
 class ModifyCRMonitorRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class ModifyCRMonitorRequest extends AbstractModel
     public $WorkId;
 
     /**
-     * @var string 监测状态 1-开启监测 2-关闭监测 默认为1
+     * @var string 监测状态 1-开启监测 2-关闭监测
      */
     public $MonitorStatus;
 
     /**
+     * @var string 默认不停止，支持续期
+     */
+    public $MonitorEnd;
+
+    /**
      * @param integer $WorkId 作品ID
-     * @param string $MonitorStatus 监测状态 1-开启监测 2-关闭监测 默认为1
+     * @param string $MonitorStatus 监测状态 1-开启监测 2-关闭监测
+     * @param string $MonitorEnd 默认不停止，支持续期
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyCRMonitorRequest extends AbstractModel
 
         if (array_key_exists("MonitorStatus",$param) and $param["MonitorStatus"] !== null) {
             $this->MonitorStatus = $param["MonitorStatus"];
+        }
+
+        if (array_key_exists("MonitorEnd",$param) and $param["MonitorEnd"] !== null) {
+            $this->MonitorEnd = $param["MonitorEnd"];
         }
     }
 }

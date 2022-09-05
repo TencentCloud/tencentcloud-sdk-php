@@ -18,71 +18,99 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP黑白名单详细规则
+ * 详细规则。
  *
- * @method string getAction() 获取动作: drop拦截，trans放行，monitor观察
+ * @method integer getRuleID() 获取规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAction(string $Action) 设置动作: drop拦截，trans放行，monitor观察
+ * @method void setRuleID(integer $RuleID) 设置规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMatchFrom() 获取根据类型匹配：ip(根据ip), area(根据区域)
+ * @method string getAction() 获取处置动作。
+1. drop 拦截
+2. trans放行
+3. monitor观察
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMatchFrom(string $MatchFrom) 设置根据类型匹配：ip(根据ip), area(根据区域)
+ * @method void setAction(string $Action) 设置处置动作。
+1. drop 拦截
+2. trans放行
+3. monitor观察
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMatchContent() 获取匹配内容
+ * @method string getMatchFrom() 获取类型匹配。
+1. ip 根据ip
+2. area 根据区域
+3. ua 根据User-Agent
+4. referer 根据Referer
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMatchContent(string $MatchContent) 设置匹配内容
+ * @method void setMatchFrom(string $MatchFrom) 设置类型匹配。
+1. ip 根据ip
+2. area 根据区域
+3. ua 根据User-Agent
+4. referer 根据Referer
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRuleID() 获取规则id
+ * @method string getMatchContent() 获取匹配内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleID(integer $RuleID) 设置规则id
+ * @method void setMatchContent(string $MatchContent) 设置匹配内容。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpTableRule extends AbstractModel
 {
     /**
-     * @var string 动作: drop拦截，trans放行，monitor观察
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Action;
-
-    /**
-     * @var string 根据类型匹配：ip(根据ip), area(根据区域)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MatchFrom;
-
-    /**
-     * @var string 匹配内容
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MatchContent;
-
-    /**
-     * @var integer 规则id
+     * @var integer 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleID;
 
     /**
-     * @var string 更新时间
+     * @var string 处置动作。
+1. drop 拦截
+2. trans放行
+3. monitor观察
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Action;
+
+    /**
+     * @var string 类型匹配。
+1. ip 根据ip
+2. area 根据区域
+3. ua 根据User-Agent
+4. referer 根据Referer
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MatchFrom;
+
+    /**
+     * @var string 匹配内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MatchContent;
+
+    /**
+     * @var string 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @param string $Action 动作: drop拦截，trans放行，monitor观察
+     * @param integer $RuleID 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MatchFrom 根据类型匹配：ip(根据ip), area(根据区域)
+     * @param string $Action 处置动作。
+1. drop 拦截
+2. trans放行
+3. monitor观察
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MatchContent 匹配内容
+     * @param string $MatchFrom 类型匹配。
+1. ip 根据ip
+2. area 根据区域
+3. ua 根据User-Agent
+4. referer 根据Referer
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RuleID 规则id
+     * @param string $MatchContent 匹配内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $UpdateTime 更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -98,6 +126,10 @@ class IpTableRule extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RuleID",$param) and $param["RuleID"] !== null) {
+            $this->RuleID = $param["RuleID"];
+        }
+
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {
             $this->Action = $param["Action"];
         }
@@ -108,10 +140,6 @@ class IpTableRule extends AbstractModel
 
         if (array_key_exists("MatchContent",$param) and $param["MatchContent"] !== null) {
             $this->MatchContent = $param["MatchContent"];
-        }
-
-        if (array_key_exists("RuleID",$param) and $param["RuleID"] !== null) {
-            $this->RuleID = $param["RuleID"];
         }
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {

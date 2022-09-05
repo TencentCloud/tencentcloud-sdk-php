@@ -20,33 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 智能分析规则
  *
- * @method string getSwitch() 获取开关
+ * @method string getSwitch() 获取开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置开关
+ * @method void setSwitch(string $Switch) 设置开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getItems() 获取规则详情
+ * @method array getItems() 获取规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItems(array $Items) 设置规则详情
+ * @method void setItems(array $Items) 设置规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntelligenceRule extends AbstractModel
 {
     /**
-     * @var string 开关
+     * @var string 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
-     * @var array 规则详情
+     * @var array 规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
     /**
-     * @param string $Switch 开关
+     * @param string $Switch 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Items 规则详情
+     * @param array $Items 规则详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

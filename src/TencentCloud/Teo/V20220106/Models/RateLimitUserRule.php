@@ -20,117 +20,149 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RateLimit规则
  *
- * @method integer getThreshold() 获取RateLimit统计阈值
- * @method void setThreshold(integer $Threshold) 设置RateLimit统计阈值
- * @method integer getPeriod() 获取RateLimit统计时间
- * @method void setPeriod(integer $Period) 设置RateLimit统计时间
- * @method string getRuleName() 获取规则名
- * @method void setRuleName(string $RuleName) 设置规则名
- * @method string getAction() 获取动作：monitor(观察), drop(拦截)
- * @method void setAction(string $Action) 设置动作：monitor(观察), drop(拦截)
- * @method integer getPunishTime() 获取惩罚时长
- * @method void setPunishTime(integer $PunishTime) 设置惩罚时长
- * @method string getPunishTimeUnit() 获取处罚时长单位，second
- * @method void setPunishTimeUnit(string $PunishTimeUnit) 设置处罚时长单位，second
- * @method string getRuleStatus() 获取规则状态
- * @method void setRuleStatus(string $RuleStatus) 设置规则状态
- * @method array getConditions() 获取规则
- * @method void setConditions(array $Conditions) 设置规则
- * @method integer getRulePriority() 获取规则权重
- * @method void setRulePriority(integer $RulePriority) 设置规则权重
- * @method integer getRuleID() 获取规则id
+ * @method integer getThreshold() 获取RateLimit统计阈值，单位是次，取值范围0-4294967294。
+ * @method void setThreshold(integer $Threshold) 设置RateLimit统计阈值，单位是次，取值范围0-4294967294。
+ * @method integer getPeriod() 获取RateLimit统计时间，取值范围 10/20/30/40/50/60 单位是秒。
+ * @method void setPeriod(integer $Period) 设置RateLimit统计时间，取值范围 10/20/30/40/50/60 单位是秒。
+ * @method string getRuleName() 获取规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
+ * @method void setRuleName(string $RuleName) 设置规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
+ * @method string getAction() 获取处置动作。
+1. monitor(观察)；
+2. drop(拦截)；
+3. alg(Javascript挑战)
+ * @method void setAction(string $Action) 设置处置动作。
+1. monitor(观察)；
+2. drop(拦截)；
+3. alg(Javascript挑战)
+ * @method integer getPunishTime() 获取惩罚时长，0-100。
+ * @method void setPunishTime(integer $PunishTime) 设置惩罚时长，0-100。
+ * @method string getPunishTimeUnit() 获取处罚时长单位。
+1. second 秒; 
+2. minutes 分钟
+3. hour 小时
+ * @method void setPunishTimeUnit(string $PunishTimeUnit) 设置处罚时长单位。
+1. second 秒; 
+2. minutes 分钟
+3. hour 小时
+ * @method string getRuleStatus() 获取规则状态。
+1. on 生效
+2. off 不生效
+ * @method void setRuleStatus(string $RuleStatus) 设置规则状态。
+1. on 生效
+2. off 不生效
+ * @method array getConditions() 获取规则。
+ * @method void setConditions(array $Conditions) 设置规则。
+ * @method integer getRulePriority() 获取规则权重，取值范围0-100。
+ * @method void setRulePriority(integer $RulePriority) 设置规则权重，取值范围0-100。
+ * @method integer getRuleID() 获取规则id。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleID(integer $RuleID) 设置规则id
+ * @method void setRuleID(integer $RuleID) 设置规则id。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFreqFields() 获取过滤词
+ * @method array getFreqFields() 获取过滤词。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFreqFields(array $FreqFields) 设置过滤词
+ * @method void setFreqFields(array $FreqFields) 设置过滤词。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取更新时间.
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间.
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RateLimitUserRule extends AbstractModel
 {
     /**
-     * @var integer RateLimit统计阈值
+     * @var integer RateLimit统计阈值，单位是次，取值范围0-4294967294。
      */
     public $Threshold;
 
     /**
-     * @var integer RateLimit统计时间
+     * @var integer RateLimit统计时间，取值范围 10/20/30/40/50/60 单位是秒。
      */
     public $Period;
 
     /**
-     * @var string 规则名
+     * @var string 规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
      */
     public $RuleName;
 
     /**
-     * @var string 动作：monitor(观察), drop(拦截)
+     * @var string 处置动作。
+1. monitor(观察)；
+2. drop(拦截)；
+3. alg(Javascript挑战)
      */
     public $Action;
 
     /**
-     * @var integer 惩罚时长
+     * @var integer 惩罚时长，0-100。
      */
     public $PunishTime;
 
     /**
-     * @var string 处罚时长单位，second
+     * @var string 处罚时长单位。
+1. second 秒; 
+2. minutes 分钟
+3. hour 小时
      */
     public $PunishTimeUnit;
 
     /**
-     * @var string 规则状态
+     * @var string 规则状态。
+1. on 生效
+2. off 不生效
      */
     public $RuleStatus;
 
     /**
-     * @var array 规则
+     * @var array 规则。
      */
     public $Conditions;
 
     /**
-     * @var integer 规则权重
+     * @var integer 规则权重，取值范围0-100。
      */
     public $RulePriority;
 
     /**
-     * @var integer 规则id
+     * @var integer 规则id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleID;
 
     /**
-     * @var array 过滤词
+     * @var array 过滤词。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreqFields;
 
     /**
-     * @var string 更新时间
+     * @var string 更新时间.
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @param integer $Threshold RateLimit统计阈值
-     * @param integer $Period RateLimit统计时间
-     * @param string $RuleName 规则名
-     * @param string $Action 动作：monitor(观察), drop(拦截)
-     * @param integer $PunishTime 惩罚时长
-     * @param string $PunishTimeUnit 处罚时长单位，second
-     * @param string $RuleStatus 规则状态
-     * @param array $Conditions 规则
-     * @param integer $RulePriority 规则权重
-     * @param integer $RuleID 规则id
+     * @param integer $Threshold RateLimit统计阈值，单位是次，取值范围0-4294967294。
+     * @param integer $Period RateLimit统计时间，取值范围 10/20/30/40/50/60 单位是秒。
+     * @param string $RuleName 规则名，只能以英文字符，数字，下划线组合，且不能以下划线开头。
+     * @param string $Action 处置动作。
+1. monitor(观察)；
+2. drop(拦截)；
+3. alg(Javascript挑战)
+     * @param integer $PunishTime 惩罚时长，0-100。
+     * @param string $PunishTimeUnit 处罚时长单位。
+1. second 秒; 
+2. minutes 分钟
+3. hour 小时
+     * @param string $RuleStatus 规则状态。
+1. on 生效
+2. off 不生效
+     * @param array $Conditions 规则。
+     * @param integer $RulePriority 规则权重，取值范围0-100。
+     * @param integer $RuleID 规则id。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FreqFields 过滤词
+     * @param array $FreqFields 过滤词。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $UpdateTime 更新时间.
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

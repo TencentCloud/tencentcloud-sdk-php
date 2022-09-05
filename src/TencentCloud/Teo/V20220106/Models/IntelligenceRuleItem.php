@@ -20,33 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bot智能分析规则详情
  *
- * @method string getLabel() 获取恶意BOT
+ * @method string getLabel() 获取智能分析标签。
+1. evil_bot 恶意
+2. suspect_bot 疑似恶意
+3. good_bot 好的
+4. normal 正常
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置恶意BOT
+ * @method void setLabel(string $Label) 设置智能分析标签。
+1. evil_bot 恶意
+2. suspect_bot 疑似恶意
+3. good_bot 好的
+4. normal 正常
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAction() 获取动作
+ * @method string getAction() 获取触发智能分析标签对应的处置方式。
+1. drop 拦截
+2. trans 放行
+3. monitor 监控
+4. alg Javascript挑战
+5. captcha 数字验证码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAction(string $Action) 设置动作
+ * @method void setAction(string $Action) 设置触发智能分析标签对应的处置方式。
+1. drop 拦截
+2. trans 放行
+3. monitor 监控
+4. alg Javascript挑战
+5. captcha 数字验证码
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntelligenceRuleItem extends AbstractModel
 {
     /**
-     * @var string 恶意BOT
+     * @var string 智能分析标签。
+1. evil_bot 恶意
+2. suspect_bot 疑似恶意
+3. good_bot 好的
+4. normal 正常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
-     * @var string 动作
+     * @var string 触发智能分析标签对应的处置方式。
+1. drop 拦截
+2. trans 放行
+3. monitor 监控
+4. alg Javascript挑战
+5. captcha 数字验证码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
-     * @param string $Label 恶意BOT
+     * @param string $Label 智能分析标签。
+1. evil_bot 恶意
+2. suspect_bot 疑似恶意
+3. good_bot 好的
+4. normal 正常
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Action 动作
+     * @param string $Action 触发智能分析标签对应的处置方式。
+1. drop 拦截
+2. trans 放行
+3. monitor 监控
+4. alg Javascript挑战
+5. captcha 数字验证码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

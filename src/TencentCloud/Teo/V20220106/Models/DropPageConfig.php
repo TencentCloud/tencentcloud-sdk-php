@@ -18,51 +18,51 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能客户端过滤
+ * 拦截页面的总体配置，用于配置各个模块的拦截后行为。
  *
- * @method string getSwitch() 获取功能开关。
+ * @method string getSwitch() 获取配置开关。
 1. on 开启
 2. off 关闭
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置功能开关。
+ * @method void setSwitch(string $Switch) 设置配置开关。
 1. on 开启
 2. off 关闭
+ * @method DropPageDetail getWaf() 获取Waf(托管规则)模块的拦截页面配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAction() 获取执行动作 
-1. monitor(观察)
-2. alg(挑战)
+ * @method void setWaf(DropPageDetail $Waf) 设置Waf(托管规则)模块的拦截页面配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAction(string $Action) 设置执行动作 
-1. monitor(观察)
-2. alg(挑战)
+ * @method DropPageDetail getAcl() 获取自定义页面的拦截页面配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAcl(DropPageDetail $Acl) 设置自定义页面的拦截页面配置。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class RateLimitIntelligence extends AbstractModel
+class DropPageConfig extends AbstractModel
 {
     /**
-     * @var string 功能开关。
+     * @var string 配置开关。
 1. on 开启
 2. off 关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
-     * @var string 执行动作 
-1. monitor(观察)
-2. alg(挑战)
+     * @var DropPageDetail Waf(托管规则)模块的拦截页面配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Action;
+    public $Waf;
 
     /**
-     * @param string $Switch 功能开关。
+     * @var DropPageDetail 自定义页面的拦截页面配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Acl;
+
+    /**
+     * @param string $Switch 配置开关。
 1. on 开启
 2. off 关闭
+     * @param DropPageDetail $Waf Waf(托管规则)模块的拦截页面配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Action 执行动作 
-1. monitor(观察)
-2. alg(挑战)
+     * @param DropPageDetail $Acl 自定义页面的拦截页面配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -82,8 +82,14 @@ class RateLimitIntelligence extends AbstractModel
             $this->Switch = $param["Switch"];
         }
 
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists("Waf",$param) and $param["Waf"] !== null) {
+            $this->Waf = new DropPageDetail();
+            $this->Waf->deserialize($param["Waf"]);
+        }
+
+        if (array_key_exists("Acl",$param) and $param["Acl"] !== null) {
+            $this->Acl = new DropPageDetail();
+            $this->Acl->deserialize($param["Acl"]);
         }
     }
 }

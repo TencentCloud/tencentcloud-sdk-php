@@ -21,10 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * TagResources请求参数结构体
  *
  * @method array getResourceList() 获取资源六段式列表。腾讯云使用资源六段式描述一个资源。可参考[访问管理](https://cloud.tencent.com/document/product/598/67350)-概览-接口列表-资源六段式信息
-例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
+例如：ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}。
 N取值范围：0~9
  * @method void setResourceList(array $ResourceList) 设置资源六段式列表。腾讯云使用资源六段式描述一个资源。可参考[访问管理](https://cloud.tencent.com/document/product/598/67350)-概览-接口列表-资源六段式信息
-例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
+例如：ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}。
 N取值范围：0~9
  * @method array getTags() 获取标签键和标签值。
 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。
@@ -41,7 +41,7 @@ class TagResourcesRequest extends AbstractModel
 {
     /**
      * @var array 资源六段式列表。腾讯云使用资源六段式描述一个资源。可参考[访问管理](https://cloud.tencent.com/document/product/598/67350)-概览-接口列表-资源六段式信息
-例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
+例如：ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}。
 N取值范围：0~9
      */
     public $ResourceList;
@@ -57,7 +57,7 @@ N取值范围：0~9
 
     /**
      * @param array $ResourceList 资源六段式列表。腾讯云使用资源六段式描述一个资源。可参考[访问管理](https://cloud.tencent.com/document/product/598/67350)-概览-接口列表-资源六段式信息
-例如：ResourceList.1 = qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
+例如：ResourceList.1 = qcs::${ServiceType}:${Region}:uin/${Account}:${ResourcePrefix}/${ResourceId}。
 N取值范围：0~9
      * @param array $Tags 标签键和标签值。
 如果指定多个标签，则会为指定资源同时创建并绑定该多个标签。

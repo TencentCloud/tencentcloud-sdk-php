@@ -98,6 +98,28 @@ development: 开发环境
 企业、个体工商户必输
  * @method OrganizationInfo getOrganizationInfo() 获取公司信息
  * @method void setOrganizationInfo(OrganizationInfo $OrganizationInfo) 设置公司信息
+ * @method string getSubMerchantIdType() 获取子商户证件类型
+1 - 身份证
+3 - 回乡证
+4 - 中国护照
+5 - 台胞证
+19 - 外国护照
+52 - 组织机构代码证
+68 - 营业执照 
+73 - 统一社会信用代码
+ * @method void setSubMerchantIdType(string $SubMerchantIdType) 设置子商户证件类型
+1 - 身份证
+3 - 回乡证
+4 - 中国护照
+5 - 台胞证
+19 - 外国护照
+52 - 组织机构代码证
+68 - 营业执照 
+73 - 统一社会信用代码
+ * @method string getSubMerchantIdCode() 获取子商户证件号码
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
+ * @method void setSubMerchantIdCode(string $SubMerchantIdCode) 设置子商户证件号码
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
  */
 class CreateAcctRequest extends AbstractModel
 {
@@ -217,6 +239,25 @@ development: 开发环境
     public $OrganizationInfo;
 
     /**
+     * @var string 子商户证件类型
+1 - 身份证
+3 - 回乡证
+4 - 中国护照
+5 - 台胞证
+19 - 外国护照
+52 - 组织机构代码证
+68 - 营业执照 
+73 - 统一社会信用代码
+     */
+    public $SubMerchantIdType;
+
+    /**
+     * @var string 子商户证件号码
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
+     */
+    public $SubMerchantIdCode;
+
+    /**
      * @param string $MidasAppId 聚鑫平台分配的支付MidasAppId
      * @param string $SubMchId 业务平台的子商户ID，唯一
      * @param string $SubMchName 子商户名称
@@ -256,6 +297,17 @@ development: 开发环境
      * @param string $SubMerchantStoreName 店铺名称
 企业、个体工商户必输
      * @param OrganizationInfo $OrganizationInfo 公司信息
+     * @param string $SubMerchantIdType 子商户证件类型
+1 - 身份证
+3 - 回乡证
+4 - 中国护照
+5 - 台胞证
+19 - 外国护照
+52 - 组织机构代码证
+68 - 营业执照 
+73 - 统一社会信用代码
+     * @param string $SubMerchantIdCode 子商户证件号码
+<敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
      */
     function __construct()
     {
@@ -345,6 +397,14 @@ development: 开发环境
         if (array_key_exists("OrganizationInfo",$param) and $param["OrganizationInfo"] !== null) {
             $this->OrganizationInfo = new OrganizationInfo();
             $this->OrganizationInfo->deserialize($param["OrganizationInfo"]);
+        }
+
+        if (array_key_exists("SubMerchantIdType",$param) and $param["SubMerchantIdType"] !== null) {
+            $this->SubMerchantIdType = $param["SubMerchantIdType"];
+        }
+
+        if (array_key_exists("SubMerchantIdCode",$param) and $param["SubMerchantIdCode"] !== null) {
+            $this->SubMerchantIdCode = $param["SubMerchantIdCode"];
         }
     }
 }

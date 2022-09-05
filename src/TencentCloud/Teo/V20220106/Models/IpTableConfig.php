@@ -18,35 +18,43 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP黑白名单及IP区域控制配置
+ * 基础管控规则配置。
  *
- * @method string getSwitch() 获取开关
+ * @method string getSwitch() 获取开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置开关
+ * @method void setSwitch(string $Switch) 设置开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRules() 获取[]
+ * @method array getRules() 获取基础管控规则。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRules(array $Rules) 设置[]
+ * @method void setRules(array $Rules) 设置基础管控规则。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpTableConfig extends AbstractModel
 {
     /**
-     * @var string 开关
+     * @var string 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
-     * @var array []
+     * @var array 基础管控规则。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rules;
 
     /**
-     * @param string $Switch 开关
+     * @param string $Switch 开关。
+1. on 开启
+2. off 关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Rules []
+     * @param array $Rules 基础管控规则。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

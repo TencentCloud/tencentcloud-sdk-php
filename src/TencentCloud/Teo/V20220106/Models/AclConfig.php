@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ACL配置
  *
- * @method string getSwitch() 获取开关
- * @method void setSwitch(string $Switch) 设置开关
- * @method array getUserRules() 获取ACL用户规则
- * @method void setUserRules(array $UserRules) 设置ACL用户规则
+ * @method string getSwitch() 获取开关。
+1. on 开启
+2. off 关闭
+ * @method void setSwitch(string $Switch) 设置开关。
+1. on 开启
+2. off 关闭
+ * @method array getUserRules() 获取自定义-用户规则。
+ * @method void setUserRules(array $UserRules) 设置自定义-用户规则。
  */
 class AclConfig extends AbstractModel
 {
     /**
-     * @var string 开关
+     * @var string 开关。
+1. on 开启
+2. off 关闭
      */
     public $Switch;
 
     /**
-     * @var array ACL用户规则
+     * @var array 自定义-用户规则。
      */
     public $UserRules;
 
     /**
-     * @param string $Switch 开关
-     * @param array $UserRules ACL用户规则
+     * @param string $Switch 开关。
+1. on 开启
+2. off 关闭
+     * @param array $UserRules 自定义-用户规则。
      */
     function __construct()
     {

@@ -20,61 +20,69 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全Bot配置
  *
- * @method string getSwitch() 获取bot开关
- * @method void setSwitch(string $Switch) 设置bot开关
- * @method BotManagedRule getManagedRule() 获取预置规则
- * @method void setManagedRule(BotManagedRule $ManagedRule) 设置预置规则
- * @method BotManagedRule getUaBotRule() 获取保留
- * @method void setUaBotRule(BotManagedRule $UaBotRule) 设置保留
- * @method BotManagedRule getIspBotRule() 获取保留
- * @method void setIspBotRule(BotManagedRule $IspBotRule) 设置保留
- * @method BotPortraitRule getPortraitRule() 获取用户画像规则
- * @method void setPortraitRule(BotPortraitRule $PortraitRule) 设置用户画像规则
- * @method IntelligenceRule getIntelligenceRule() 获取Bot智能分析
+ * @method string getSwitch() 获取开关。
+1. on 开启
+2. off 关闭
+ * @method void setSwitch(string $Switch) 设置开关。
+1. on 开启
+2. off 关闭
+ * @method BotManagedRule getManagedRule() 获取通用详细基础规则。
+ * @method void setManagedRule(BotManagedRule $ManagedRule) 设置通用详细基础规则。
+ * @method BotManagedRule getUaBotRule() 获取ua基础规则。
+ * @method void setUaBotRule(BotManagedRule $UaBotRule) 设置ua基础规则。
+ * @method BotManagedRule getIspBotRule() 获取isp基础规则。
+ * @method void setIspBotRule(BotManagedRule $IspBotRule) 设置isp基础规则。
+ * @method BotPortraitRule getPortraitRule() 获取用户画像规则。
+ * @method void setPortraitRule(BotPortraitRule $PortraitRule) 设置用户画像规则。
+ * @method IntelligenceRule getIntelligenceRule() 获取Bot智能分析。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntelligenceRule(IntelligenceRule $IntelligenceRule) 设置Bot智能分析
+ * @method void setIntelligenceRule(IntelligenceRule $IntelligenceRule) 设置Bot智能分析。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotConfig extends AbstractModel
 {
     /**
-     * @var string bot开关
+     * @var string 开关。
+1. on 开启
+2. off 关闭
      */
     public $Switch;
 
     /**
-     * @var BotManagedRule 预置规则
+     * @var BotManagedRule 通用详细基础规则。
      */
     public $ManagedRule;
 
     /**
-     * @var BotManagedRule 保留
+     * @var BotManagedRule ua基础规则。
      */
     public $UaBotRule;
 
     /**
-     * @var BotManagedRule 保留
+     * @var BotManagedRule isp基础规则。
      */
     public $IspBotRule;
 
     /**
-     * @var BotPortraitRule 用户画像规则
+     * @var BotPortraitRule 用户画像规则。
      */
     public $PortraitRule;
 
     /**
-     * @var IntelligenceRule Bot智能分析
+     * @var IntelligenceRule Bot智能分析。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntelligenceRule;
 
     /**
-     * @param string $Switch bot开关
-     * @param BotManagedRule $ManagedRule 预置规则
-     * @param BotManagedRule $UaBotRule 保留
-     * @param BotManagedRule $IspBotRule 保留
-     * @param BotPortraitRule $PortraitRule 用户画像规则
-     * @param IntelligenceRule $IntelligenceRule Bot智能分析
+     * @param string $Switch 开关。
+1. on 开启
+2. off 关闭
+     * @param BotManagedRule $ManagedRule 通用详细基础规则。
+     * @param BotManagedRule $UaBotRule ua基础规则。
+     * @param BotManagedRule $IspBotRule isp基础规则。
+     * @param BotPortraitRule $PortraitRule 用户画像规则。
+     * @param IntelligenceRule $IntelligenceRule Bot智能分析。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

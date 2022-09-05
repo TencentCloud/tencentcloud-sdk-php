@@ -20,49 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RateLimit配置
  *
- * @method string getSwitch() 获取开关
- * @method void setSwitch(string $Switch) 设置开关
- * @method array getUserRules() 获取用户规则
- * @method void setUserRules(array $UserRules) 设置用户规则
- * @method RateLimitTemplate getTemplate() 获取默认模板
+ * @method string getSwitch() 获取开关。
+1. on 开启RateLimit；
+2. off 关闭RateLimit
+ * @method void setSwitch(string $Switch) 设置开关。
+1. on 开启RateLimit；
+2. off 关闭RateLimit
+ * @method array getUserRules() 获取速率限制-用户规则列表。
+ * @method void setUserRules(array $UserRules) 设置速率限制-用户规则列表。
+ * @method RateLimitTemplate getTemplate() 获取速率限制模板功能。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTemplate(RateLimitTemplate $Template) 设置默认模板
+ * @method void setTemplate(RateLimitTemplate $Template) 设置速率限制模板功能。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RateLimitIntelligence getIntelligence() 获取智能客户端过滤
+ * @method RateLimitIntelligence getIntelligence() 获取智能客户端过滤。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIntelligence(RateLimitIntelligence $Intelligence) 设置智能客户端过滤
+ * @method void setIntelligence(RateLimitIntelligence $Intelligence) 设置智能客户端过滤。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RateLimitConfig extends AbstractModel
 {
     /**
-     * @var string 开关
+     * @var string 开关。
+1. on 开启RateLimit；
+2. off 关闭RateLimit
      */
     public $Switch;
 
     /**
-     * @var array 用户规则
+     * @var array 速率限制-用户规则列表。
      */
     public $UserRules;
 
     /**
-     * @var RateLimitTemplate 默认模板
+     * @var RateLimitTemplate 速率限制模板功能。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Template;
 
     /**
-     * @var RateLimitIntelligence 智能客户端过滤
+     * @var RateLimitIntelligence 智能客户端过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Intelligence;
 
     /**
-     * @param string $Switch 开关
-     * @param array $UserRules 用户规则
-     * @param RateLimitTemplate $Template 默认模板
+     * @param string $Switch 开关。
+1. on 开启RateLimit；
+2. off 关闭RateLimit
+     * @param array $UserRules 速率限制-用户规则列表。
+     * @param RateLimitTemplate $Template 速率限制模板功能。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RateLimitIntelligence $Intelligence 智能客户端过滤
+     * @param RateLimitIntelligence $Intelligence 智能客户端过滤。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

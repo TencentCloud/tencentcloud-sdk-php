@@ -20,33 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 速率限制模板
  *
- * @method string getMode() 获取模板名称
+ * @method string getMode() 获取模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMode(string $Mode) 设置模板名称
+ * @method void setMode(string $Mode) 设置模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RateLimitTemplateDetail getDetail() 获取模板值详情
+ * @method RateLimitTemplateDetail getDetail() 获取模板值详情。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDetail(RateLimitTemplateDetail $Detail) 设置模板值详情
+ * @method void setDetail(RateLimitTemplateDetail $Detail) 设置模板值详情。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RateLimitTemplate extends AbstractModel
 {
     /**
-     * @var string 模板名称
+     * @var string 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
 
     /**
-     * @var RateLimitTemplateDetail 模板值详情
+     * @var RateLimitTemplateDetail 模板值详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
     /**
-     * @param string $Mode 模板名称
+     * @param string $Mode 模板等级名称。
+1. sup_loose 自适应 - 超级宽松
+2. loose     自适应 - 宽松
+3. emergency 自适应 - 紧急
+4. normal    自适应 - 适中
+5. strict    固定阈值 - 严格
+6. close     关闭 - 仅精准速率限制生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RateLimitTemplateDetail $Detail 模板值详情
+     * @param RateLimitTemplateDetail $Detail 模板值详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

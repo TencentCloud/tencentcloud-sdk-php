@@ -18,95 +18,119 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 安全配置
+ * 安全配置。
  *
- * @method WafConfig getWafConfig() 获取门神配置
+ * @method WafConfig getWafConfig() 获取托管规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWafConfig(WafConfig $WafConfig) 设置门神配置
+ * @method void setWafConfig(WafConfig $WafConfig) 设置托管规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RateLimitConfig getRateLimitConfig() 获取RateLimit配置
+ * @method RateLimitConfig getRateLimitConfig() 获取速率限制。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRateLimitConfig(RateLimitConfig $RateLimitConfig) 设置RateLimit配置
+ * @method void setRateLimitConfig(RateLimitConfig $RateLimitConfig) 设置速率限制。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method DDoSConfig getDdosConfig() 获取DDoS配置
+ * @method DDoSConfig getDdosConfig() 获取DDoS配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDdosConfig(DDoSConfig $DdosConfig) 设置DDoS配置
+ * @method void setDdosConfig(DDoSConfig $DdosConfig) 设置DDoS配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AclConfig getAclConfig() 获取ACL配置
+ * @method AclConfig getAclConfig() 获取自定义规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAclConfig(AclConfig $AclConfig) 设置ACL配置
+ * @method void setAclConfig(AclConfig $AclConfig) 设置自定义规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method BotConfig getBotConfig() 获取Bot配置
+ * @method BotConfig getBotConfig() 获取Bot配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBotConfig(BotConfig $BotConfig) 设置Bot配置
+ * @method void setBotConfig(BotConfig $BotConfig) 设置Bot配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SwitchConfig getSwitchConfig() 获取总开关
+ * @method SwitchConfig getSwitchConfig() 获取七层防护总开关。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitchConfig(SwitchConfig $SwitchConfig) 设置总开关
+ * @method void setSwitchConfig(SwitchConfig $SwitchConfig) 设置七层防护总开关。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method IpTableConfig getIpTableConfig() 获取IP黑白名单
+ * @method IpTableConfig getIpTableConfig() 获取基础访问管控。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIpTableConfig(IpTableConfig $IpTableConfig) 设置IP黑白名单
+ * @method void setIpTableConfig(IpTableConfig $IpTableConfig) 设置基础访问管控。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExceptConfig getExceptConfig() 获取例外规则配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExceptConfig(ExceptConfig $ExceptConfig) 设置例外规则配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DropPageConfig getDropPageConfig() 获取自定义拦截页面配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDropPageConfig(DropPageConfig $DropPageConfig) 设置自定义拦截页面配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityConfig extends AbstractModel
 {
     /**
-     * @var WafConfig 门神配置
+     * @var WafConfig 托管规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WafConfig;
 
     /**
-     * @var RateLimitConfig RateLimit配置
+     * @var RateLimitConfig 速率限制。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RateLimitConfig;
 
     /**
-     * @var DDoSConfig DDoS配置
+     * @var DDoSConfig DDoS配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DdosConfig;
 
     /**
-     * @var AclConfig ACL配置
+     * @var AclConfig 自定义规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AclConfig;
 
     /**
-     * @var BotConfig Bot配置
+     * @var BotConfig Bot配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BotConfig;
 
     /**
-     * @var SwitchConfig 总开关
+     * @var SwitchConfig 七层防护总开关。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchConfig;
 
     /**
-     * @var IpTableConfig IP黑白名单
+     * @var IpTableConfig 基础访问管控。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpTableConfig;
 
     /**
-     * @param WafConfig $WafConfig 门神配置
+     * @var ExceptConfig 例外规则配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RateLimitConfig $RateLimitConfig RateLimit配置
+     */
+    public $ExceptConfig;
+
+    /**
+     * @var DropPageConfig 自定义拦截页面配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DDoSConfig $DdosConfig DDoS配置
+     */
+    public $DropPageConfig;
+
+    /**
+     * @param WafConfig $WafConfig 托管规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AclConfig $AclConfig ACL配置
+     * @param RateLimitConfig $RateLimitConfig 速率限制。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BotConfig $BotConfig Bot配置
+     * @param DDoSConfig $DdosConfig DDoS配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SwitchConfig $SwitchConfig 总开关
+     * @param AclConfig $AclConfig 自定义规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpTableConfig $IpTableConfig IP黑白名单
+     * @param BotConfig $BotConfig Bot配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SwitchConfig $SwitchConfig 七层防护总开关。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpTableConfig $IpTableConfig 基础访问管控。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExceptConfig $ExceptConfig 例外规则配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DropPageConfig $DropPageConfig 自定义拦截页面配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -155,6 +179,16 @@ class SecurityConfig extends AbstractModel
         if (array_key_exists("IpTableConfig",$param) and $param["IpTableConfig"] !== null) {
             $this->IpTableConfig = new IpTableConfig();
             $this->IpTableConfig->deserialize($param["IpTableConfig"]);
+        }
+
+        if (array_key_exists("ExceptConfig",$param) and $param["ExceptConfig"] !== null) {
+            $this->ExceptConfig = new ExceptConfig();
+            $this->ExceptConfig->deserialize($param["ExceptConfig"]);
+        }
+
+        if (array_key_exists("DropPageConfig",$param) and $param["DropPageConfig"] !== null) {
+            $this->DropPageConfig = new DropPageConfig();
+            $this->DropPageConfig->deserialize($param["DropPageConfig"]);
         }
     }
 }

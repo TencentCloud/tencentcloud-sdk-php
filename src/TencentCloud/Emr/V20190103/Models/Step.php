@@ -26,12 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutionStep(Execution $ExecutionStep) 设置执行动作。
  * @method string getActionOnFailure() 获取执行失败策略。
 1. TERMINATE_CLUSTER 执行失败时退出并销毁集群。
-2. CANCEL_AND_WAIT 执行失败时阻塞等待。
-3. CONTINUE 执行失败时跳过并执行后续步骤。
+2. CONTINUE 执行失败时跳过并执行后续步骤。
  * @method void setActionOnFailure(string $ActionOnFailure) 设置执行失败策略。
 1. TERMINATE_CLUSTER 执行失败时退出并销毁集群。
-2. CANCEL_AND_WAIT 执行失败时阻塞等待。
-3. CONTINUE 执行失败时跳过并执行后续步骤。
+2. CONTINUE 执行失败时跳过并执行后续步骤。
  * @method string getUser() 获取指定执行Step时的用户名，非必须，默认为hadoop。
  * @method void setUser(string $User) 设置指定执行Step时的用户名，非必须，默认为hadoop。
  */
@@ -50,8 +48,7 @@ class Step extends AbstractModel
     /**
      * @var string 执行失败策略。
 1. TERMINATE_CLUSTER 执行失败时退出并销毁集群。
-2. CANCEL_AND_WAIT 执行失败时阻塞等待。
-3. CONTINUE 执行失败时跳过并执行后续步骤。
+2. CONTINUE 执行失败时跳过并执行后续步骤。
      */
     public $ActionOnFailure;
 
@@ -65,8 +62,7 @@ class Step extends AbstractModel
      * @param Execution $ExecutionStep 执行动作。
      * @param string $ActionOnFailure 执行失败策略。
 1. TERMINATE_CLUSTER 执行失败时退出并销毁集群。
-2. CANCEL_AND_WAIT 执行失败时阻塞等待。
-3. CONTINUE 执行失败时跳过并执行后续步骤。
+2. CONTINUE 执行失败时跳过并执行后续步骤。
      * @param string $User 指定执行Step时的用户名，非必须，默认为hadoop。
      */
     function __construct()

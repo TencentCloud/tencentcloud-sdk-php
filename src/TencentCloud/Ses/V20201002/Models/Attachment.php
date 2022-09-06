@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileName() 获取附件名称，最大支持255个字符长度，不支持部分附件类型，详情请参考[附件类型](https://cloud.tencent.com/document/product/1288/51951)。
  * @method void setFileName(string $FileName) 设置附件名称，最大支持255个字符长度，不支持部分附件类型，详情请参考[附件类型](https://cloud.tencent.com/document/product/1288/51951)。
- * @method string getContent() 获取base64之后的附件内容，您可以发送的附件大小上限为4 MB。 注意：腾讯云api目前要求请求包大小不得超过8 MB。如果您要发送多个附件，那么这些附件的总大小不能超过8 MB。
- * @method void setContent(string $Content) 设置base64之后的附件内容，您可以发送的附件大小上限为4 MB。 注意：腾讯云api目前要求请求包大小不得超过8 MB。如果您要发送多个附件，那么这些附件的总大小不能超过8 MB。
+ * @method string getContent() 获取Base64之后的附件内容，你可以发送的附件大小上限为4M。注意：腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍。应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 接口会返回错误。
+ * @method void setContent(string $Content) 设置Base64之后的附件内容，你可以发送的附件大小上限为4M。注意：腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍。应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 接口会返回错误。
  */
 class Attachment extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Attachment extends AbstractModel
     public $FileName;
 
     /**
-     * @var string base64之后的附件内容，您可以发送的附件大小上限为4 MB。 注意：腾讯云api目前要求请求包大小不得超过8 MB。如果您要发送多个附件，那么这些附件的总大小不能超过8 MB。
+     * @var string Base64之后的附件内容，你可以发送的附件大小上限为4M。注意：腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍。应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 接口会返回错误。
      */
     public $Content;
 
     /**
      * @param string $FileName 附件名称，最大支持255个字符长度，不支持部分附件类型，详情请参考[附件类型](https://cloud.tencent.com/document/product/1288/51951)。
-     * @param string $Content base64之后的附件内容，您可以发送的附件大小上限为4 MB。 注意：腾讯云api目前要求请求包大小不得超过8 MB。如果您要发送多个附件，那么这些附件的总大小不能超过8 MB。
+     * @param string $Content Base64之后的附件内容，你可以发送的附件大小上限为4M。注意：腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍。应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 接口会返回错误。
      */
     function __construct()
     {

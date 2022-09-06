@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getPluginId() 获取按插件 ID 过滤
+ * @method void setPluginId(string $PluginId) 设置按插件 ID 过滤
  */
 class DescribeInstalledPluginsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeInstalledPluginsRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 按插件 ID 过滤
+     */
+    public $PluginId;
+
+    /**
      * @param string $InstanceId 实例 ID
+     * @param string $PluginId 按插件 ID 过滤
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeInstalledPluginsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("PluginId",$param) and $param["PluginId"] !== null) {
+            $this->PluginId = $param["PluginId"];
         }
     }
 }

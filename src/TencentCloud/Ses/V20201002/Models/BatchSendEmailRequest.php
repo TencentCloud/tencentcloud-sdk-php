@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * BatchSendEmail请求参数结构体
  *
  * @method string getFromEmailAddress() 获取发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+发信人 &lt;邮件地址&gt; 的方式填写，例如：
+腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
  * @method void setFromEmailAddress(string $FromEmailAddress) 设置发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+发信人 &lt;邮件地址&gt; 的方式填写，例如：
+腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
  * @method integer getReceiverId() 获取收件人列表ID
  * @method void setReceiverId(integer $ReceiverId) 设置收件人列表ID
  * @method string getSubject() 获取邮件主题
@@ -53,8 +53,8 @@ class BatchSendEmailRequest extends AbstractModel
 {
     /**
      * @var string 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+发信人 &lt;邮件地址&gt; 的方式填写，例如：
+腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
      */
     public $FromEmailAddress;
 
@@ -115,8 +115,8 @@ class BatchSendEmailRequest extends AbstractModel
 
     /**
      * @param string $FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 <邮件地址> 的方式填写，例如：
-腾讯云团队 <noreply@mail.qcloud.com>
+发信人 &lt;邮件地址&gt; 的方式填写，例如：
+腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
      * @param integer $ReceiverId 收件人列表ID
      * @param string $Subject 邮件主题
      * @param integer $TaskType 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送

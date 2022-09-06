@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHardwareResourceType(string $HardwareResourceType) 设置资源类型:支持all/host/pod，默认为all
  * @method array getSearchFields() 获取支持搜索的字段
  * @method void setSearchFields(array $SearchFields) 设置支持搜索的字段
+ * @method string getOrderField() 获取无
+ * @method void setOrderField(string $OrderField) 设置无
+ * @method integer getAsc() 获取无
+ * @method void setAsc(integer $Asc) 设置无
  */
 class DescribeClusterNodesRequest extends AbstractModel
 {
@@ -96,6 +100,16 @@ class DescribeClusterNodesRequest extends AbstractModel
     public $SearchFields;
 
     /**
+     * @var string 无
+     */
+    public $OrderField;
+
+    /**
+     * @var integer 无
+     */
+    public $Asc;
+
+    /**
      * @param string $InstanceId 集群实例ID,实例ID形如: emr-xxxxxxxx
      * @param string $NodeFlag 节点标识，取值为：
 <li>all：表示获取全部类型节点，cdb信息除外。</li>
@@ -112,6 +126,8 @@ class DescribeClusterNodesRequest extends AbstractModel
      * @param integer $Limit 每页返回数量，默认值为100，最大值为100。
      * @param string $HardwareResourceType 资源类型:支持all/host/pod，默认为all
      * @param array $SearchFields 支持搜索的字段
+     * @param string $OrderField 无
+     * @param integer $Asc 无
      */
     function __construct()
     {
@@ -153,6 +169,14 @@ class DescribeClusterNodesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SearchFields, $obj);
             }
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("Asc",$param) and $param["Asc"] !== null) {
+            $this->Asc = $param["Asc"];
         }
     }
 }

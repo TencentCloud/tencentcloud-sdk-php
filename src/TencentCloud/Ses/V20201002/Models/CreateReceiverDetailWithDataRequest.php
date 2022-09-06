@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getReceiverId() 获取收件人列表ID
  * @method void setReceiverId(integer $ReceiverId) 设置收件人列表ID
- * @method array getDatas() 获取收信人邮箱以及模板参数，数组形式
- * @method void setDatas(array $Datas) 设置收信人邮箱以及模板参数，数组形式
+ * @method array getDatas() 获取收信人邮箱以及模板参数，数组形式。收件人个数限制20000个以内。
+ * @method void setDatas(array $Datas) 设置收信人邮箱以及模板参数，数组形式。收件人个数限制20000个以内。
  */
 class CreateReceiverDetailWithDataRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class CreateReceiverDetailWithDataRequest extends AbstractModel
     public $ReceiverId;
 
     /**
-     * @var array 收信人邮箱以及模板参数，数组形式
+     * @var array 收信人邮箱以及模板参数，数组形式。收件人个数限制20000个以内。
      */
     public $Datas;
 
     /**
      * @param integer $ReceiverId 收件人列表ID
-     * @param array $Datas 收信人邮箱以及模板参数，数组形式
+     * @param array $Datas 收信人邮箱以及模板参数，数组形式。收件人个数限制20000个以内。
      */
     function __construct()
     {

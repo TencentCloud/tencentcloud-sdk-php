@@ -27,7 +27,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getApproveName() 获取签署人名字
  * @method void setApproveName(string $ApproveName) 设置签署人名字
  * @method integer getApproveStatus() 获取签署人的状态
+0：还没有发起
+1：流程中 没有开始处理
+2：待处理
+3：签署态
+4：拒绝态
+5：过期没人处理
+6：取消态
+7：还没有预发起
+8：待填写
+9：因为各种原因而终止
  * @method void setApproveStatus(integer $ApproveStatus) 设置签署人的状态
+0：还没有发起
+1：流程中 没有开始处理
+2：待处理
+3：签署态
+4：拒绝态
+5：过期没人处理
+6：取消态
+7：还没有预发起
+8：待填写
+9：因为各种原因而终止
  * @method string getReceiptId() 获取模板配置时候的签署人id,与控件绑定
  * @method void setReceiptId(string $ReceiptId) 设置模板配置时候的签署人id,与控件绑定
  * @method string getCustomUserId() 获取客户自定义userId
@@ -76,6 +96,16 @@ class FlowApproverDetail extends AbstractModel
 
     /**
      * @var integer 签署人的状态
+0：还没有发起
+1：流程中 没有开始处理
+2：待处理
+3：签署态
+4：拒绝态
+5：过期没人处理
+6：取消态
+7：还没有预发起
+8：待填写
+9：因为各种原因而终止
      */
     public $ApproveStatus;
 
@@ -140,6 +170,16 @@ class FlowApproverDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproveName 签署人名字
      * @param integer $ApproveStatus 签署人的状态
+0：还没有发起
+1：流程中 没有开始处理
+2：待处理
+3：签署态
+4：拒绝态
+5：过期没人处理
+6：取消态
+7：还没有预发起
+8：待填写
+9：因为各种原因而终止
      * @param string $ReceiptId 模板配置时候的签署人id,与控件绑定
      * @param string $CustomUserId 客户自定义userId
 注意：此字段可能返回 null，表示取不到有效值。

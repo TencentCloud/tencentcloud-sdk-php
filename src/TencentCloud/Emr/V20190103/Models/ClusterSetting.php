@@ -36,8 +36,8 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
  * @method void setVPCSettings(VPCSettings $VPCSettings) 设置实例所在VPC。
  * @method LoginSettings getLoginSettings() 获取实例登录配置。
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录配置。
- * @method array getTagSpecification() 获取实例标签。
- * @method void setTagSpecification(array $TagSpecification) 设置实例标签。
+ * @method array getTagSpecification() 获取实例标签，示例：["{\"TagKey\":\"test-tag1\",\"TagValue\":\"001\"}","{\"TagKey\":\"test-tag2\",\"TagValue\":\"002\"}"]。
+ * @method void setTagSpecification(array $TagSpecification) 设置实例标签，示例：["{\"TagKey\":\"test-tag1\",\"TagValue\":\"001\"}","{\"TagKey\":\"test-tag2\",\"TagValue\":\"002\"}"]。
  * @method MetaDbInfo getMetaDB() 获取元数据库配置。
  * @method void setMetaDB(MetaDbInfo $MetaDB) 设置元数据库配置。
  * @method JobFlowResourceSpec getResourceSpec() 获取实例硬件配置。
@@ -88,7 +88,7 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
     public $LoginSettings;
 
     /**
-     * @var array 实例标签。
+     * @var array 实例标签，示例：["{\"TagKey\":\"test-tag1\",\"TagValue\":\"001\"}","{\"TagKey\":\"test-tag2\",\"TagValue\":\"002\"}"]。
      */
     public $TagSpecification;
 
@@ -136,7 +136,7 @@ POSTPAID_BY_HOUR 按量计费，默认方式。
      * @param Placement $Placement 实例位置。
      * @param VPCSettings $VPCSettings 实例所在VPC。
      * @param LoginSettings $LoginSettings 实例登录配置。
-     * @param array $TagSpecification 实例标签。
+     * @param array $TagSpecification 实例标签，示例：["{\"TagKey\":\"test-tag1\",\"TagValue\":\"001\"}","{\"TagKey\":\"test-tag2\",\"TagValue\":\"002\"}"]。
      * @param MetaDbInfo $MetaDB 元数据库配置。
      * @param JobFlowResourceSpec $ResourceSpec 实例硬件配置。
      * @param boolean $PublicIpAssigned 是否申请公网IP，默认为false。

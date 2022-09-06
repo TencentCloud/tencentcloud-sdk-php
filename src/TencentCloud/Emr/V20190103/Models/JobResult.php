@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 “JobFlowStepStatusFailed”，任务步骤执行失败。
 “JobFlowStepStatusSucceed”，任务步骤执行成功。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取YARN任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置YARN任务ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobResult extends AbstractModel
 {
@@ -75,6 +79,12 @@ class JobResult extends AbstractModel
     public $JobState;
 
     /**
+     * @var string YARN任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
      * @param string $Name 任务步骤名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionOnFailure 任务步骤失败时的处理策略，可以为以下值：
@@ -87,6 +97,8 @@ class JobResult extends AbstractModel
 “JobFlowStepStatusRunning”，任务步骤正在执行。
 “JobFlowStepStatusFailed”，任务步骤执行失败。
 “JobFlowStepStatusSucceed”，任务步骤执行成功。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId YARN任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -112,6 +124,10 @@ class JobResult extends AbstractModel
 
         if (array_key_exists("JobState",$param) and $param["JobState"] !== null) {
             $this->JobState = $param["JobState"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }

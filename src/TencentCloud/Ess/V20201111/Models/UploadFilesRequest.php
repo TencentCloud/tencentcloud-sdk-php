@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCaller(Caller $Caller) 设置调用方信息
  * @method array getFileInfos() 获取上传文件内容数组，最多支持20个文件
  * @method void setFileInfos(array $FileInfos) 设置上传文件内容数组，最多支持20个文件
- * @method string getFileUrls() 获取上传文件链接数组，最多支持20个URL
- * @method void setFileUrls(string $FileUrls) 设置上传文件链接数组，最多支持20个URL
+ * @method string getFileUrls() 获取不再使用，上传文件链接数组，最多支持20个URL
+ * @method void setFileUrls(string $FileUrls) 设置不再使用，上传文件链接数组，最多支持20个URL
  * @method boolean getCoverRect() 获取此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理
@@ -68,7 +68,7 @@ class UploadFilesRequest extends AbstractModel
     public $FileInfos;
 
     /**
-     * @var string 上传文件链接数组，最多支持20个URL
+     * @var string 不再使用，上传文件链接数组，最多支持20个URL
      */
     public $FileUrls;
 
@@ -97,7 +97,7 @@ false--否，不处理
 3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
      * @param Caller $Caller 调用方信息
      * @param array $FileInfos 上传文件内容数组，最多支持20个文件
-     * @param string $FileUrls 上传文件链接数组，最多支持20个URL
+     * @param string $FileUrls 不再使用，上传文件链接数组，最多支持20个URL
      * @param boolean $CoverRect 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
 true--是，处理置白
 false--否，不处理

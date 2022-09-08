@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) 设置询价实例的CPU核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
  * @method string getInstanceId() 获取续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
  * @method void setInstanceId(string $InstanceId) 设置续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+ * @method integer getLadder() 获取按量计费阶梯。仅PayType=HOUR_PAID有效，支持值包括：1，2，3。阶梯时长见https://cloud.tencent.com/document/product/236/18335。
+ * @method void setLadder(integer $Ladder) 设置按量计费阶梯。仅PayType=HOUR_PAID有效，支持值包括：1，2，3。阶梯时长见https://cloud.tencent.com/document/product/236/18335。
  */
 class DescribeDBPriceRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class DescribeDBPriceRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 按量计费阶梯。仅PayType=HOUR_PAID有效，支持值包括：1，2，3。阶梯时长见https://cloud.tencent.com/document/product/236/18335。
+     */
+    public $Ladder;
+
+    /**
      * @param integer $Period 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
      * @param string $Zone 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。InstanceId为空时该参数为必填项。
      * @param integer $GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。InstanceId为空时该参数为必填项。
@@ -120,6 +127,7 @@ class DescribeDBPriceRequest extends AbstractModel
      * @param integer $InstanceNodes 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
      * @param integer $Cpu 询价实例的CPU核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
      * @param string $InstanceId 续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+     * @param integer $Ladder 按量计费阶梯。仅PayType=HOUR_PAID有效，支持值包括：1，2，3。阶梯时长见https://cloud.tencent.com/document/product/236/18335。
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class DescribeDBPriceRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Ladder",$param) and $param["Ladder"] !== null) {
+            $this->Ladder = $param["Ladder"];
         }
     }
 }

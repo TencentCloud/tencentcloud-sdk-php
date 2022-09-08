@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMappingPath() 获取映射路径
  * @method void setMappingPath(string $MappingPath) 设置映射路径
- * @method string getDataSourceType() 获取DATASET、COS、CFS、HDFS
+ * @method string getDataSourceType() 获取DATASET、COS、CFS、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataSourceType(string $DataSourceType) 设置DATASET、COS、CFS、HDFS
+ * @method void setDataSourceType(string $DataSourceType) 设置DATASET、COS、CFS、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
  * @method DataSetConfig getDataSetSource() 获取来自数据集的数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,7 +51,7 @@ class DataConfig extends AbstractModel
     public $MappingPath;
 
     /**
-     * @var string DATASET、COS、CFS、HDFS
+     * @var string DATASET、COS、CFS、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceType;
@@ -82,7 +82,7 @@ class DataConfig extends AbstractModel
 
     /**
      * @param string $MappingPath 映射路径
-     * @param string $DataSourceType DATASET、COS、CFS、HDFS
+     * @param string $DataSourceType DATASET、COS、CFS、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSetConfig $DataSetSource 来自数据集的数据
 注意：此字段可能返回 null，表示取不到有效值。

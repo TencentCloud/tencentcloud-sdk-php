@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getChannelName() 获取渠道名
  * @method void setChannelName(string $ChannelName) 设置渠道名
- * @method integer getOrgId() 获取组织 ID
- * @method void setOrgId(integer $OrgId) 设置组织 ID
+ * @method integer getOrgId() 获取默认为1，已废弃，请使用 OrganizationIds
+ * @method void setOrgId(integer $OrgId) 设置默认为1，已废弃，请使用 OrganizationIds
  * @method array getReceivers() 获取接受告警通道 ID 数组
  * @method void setReceivers(array $Receivers) 设置接受告警通道 ID 数组
- * @method array getExtraOrgIds() 获取额外组织 ID 数组
- * @method void setExtraOrgIds(array $ExtraOrgIds) 设置额外组织 ID 数组
+ * @method array getExtraOrgIds() 获取额外组织 ID 数组，已废弃，请使用 OrganizationIds
+ * @method void setExtraOrgIds(array $ExtraOrgIds) 设置额外组织 ID 数组，已废弃，请使用 OrganizationIds
+ * @method array getOrganizationIds() 获取生效的所有组织 ID 数组，默认为 ["1"]
+ * @method void setOrganizationIds(array $OrganizationIds) 设置生效的所有组织 ID 数组，默认为 ["1"]
  */
 class CreateGrafanaNotificationChannelRequest extends AbstractModel
 {
@@ -44,7 +46,7 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
     public $ChannelName;
 
     /**
-     * @var integer 组织 ID
+     * @var integer 默认为1，已废弃，请使用 OrganizationIds
      */
     public $OrgId;
 
@@ -54,16 +56,22 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
     public $Receivers;
 
     /**
-     * @var array 额外组织 ID 数组
+     * @var array 额外组织 ID 数组，已废弃，请使用 OrganizationIds
      */
     public $ExtraOrgIds;
 
     /**
+     * @var array 生效的所有组织 ID 数组，默认为 ["1"]
+     */
+    public $OrganizationIds;
+
+    /**
      * @param string $InstanceId 实例 ID
      * @param string $ChannelName 渠道名
-     * @param integer $OrgId 组织 ID
+     * @param integer $OrgId 默认为1，已废弃，请使用 OrganizationIds
      * @param array $Receivers 接受告警通道 ID 数组
-     * @param array $ExtraOrgIds 额外组织 ID 数组
+     * @param array $ExtraOrgIds 额外组织 ID 数组，已废弃，请使用 OrganizationIds
+     * @param array $OrganizationIds 生效的所有组织 ID 数组，默认为 ["1"]
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
 
         if (array_key_exists("ExtraOrgIds",$param) and $param["ExtraOrgIds"] !== null) {
             $this->ExtraOrgIds = $param["ExtraOrgIds"];
+        }
+
+        if (array_key_exists("OrganizationIds",$param) and $param["OrganizationIds"] !== null) {
+            $this->OrganizationIds = $param["OrganizationIds"];
         }
     }
 }

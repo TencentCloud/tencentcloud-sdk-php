@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealth(string $Health) 设置边缘计算集群的健康检查部署信息
  * @method string getGridDaemon() 获取边缘计算集群的GridDaemon部署信息
  * @method void setGridDaemon(string $GridDaemon) 设置边缘计算集群的GridDaemon部署信息
+ * @method boolean getAutoUpgradeClusterLevel() 获取边缘集群开启自动升配
+ * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置边缘集群开启自动升配
  */
 class UpdateTKEEdgeClusterRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class UpdateTKEEdgeClusterRequest extends AbstractModel
     public $GridDaemon;
 
     /**
+     * @var boolean 边缘集群开启自动升配
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
      * @param string $ClusterId 边缘计算集群ID
      * @param string $ClusterName 边缘计算集群名称
      * @param string $ClusterDesc 边缘计算集群描述信息
@@ -112,6 +119,7 @@ class UpdateTKEEdgeClusterRequest extends AbstractModel
      * @param string $HealthRegion 边缘计算集群的健康检查多地域部署信息
      * @param string $Health 边缘计算集群的健康检查部署信息
      * @param string $GridDaemon 边缘计算集群的GridDaemon部署信息
+     * @param boolean $AutoUpgradeClusterLevel 边缘集群开启自动升配
      */
     function __construct()
     {
@@ -170,6 +178,10 @@ class UpdateTKEEdgeClusterRequest extends AbstractModel
 
         if (array_key_exists("GridDaemon",$param) and $param["GridDaemon"] !== null) {
             $this->GridDaemon = $param["GridDaemon"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = $param["AutoUpgradeClusterLevel"];
         }
     }
 }

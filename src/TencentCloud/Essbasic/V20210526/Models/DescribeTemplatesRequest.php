@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询偏移位置，默认0
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method boolean getQueryAllComponents() 获取是否返回所有组件信息
+ * @method void setQueryAllComponents(boolean $QueryAllComponents) 设置是否返回所有组件信息
+ * @method string getTemplateName() 获取模糊搜索模版名称
+ * @method void setTemplateName(string $TemplateName) 设置模糊搜索模版名称
  */
 class DescribeTemplatesRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class DescribeTemplatesRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var boolean 是否返回所有组件信息
+     */
+    public $QueryAllComponents;
+
+    /**
+     * @var string 模糊搜索模版名称
+     */
+    public $TemplateName;
+
+    /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $TemplateId 模板唯一标识
      * @param integer $ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
      * @param integer $Limit 查询个数，默认20，最大100
      * @param integer $Offset 查询偏移位置，默认0
      * @param UserInfo $Operator 操作者的信息
+     * @param boolean $QueryAllComponents 是否返回所有组件信息
+     * @param string $TemplateName 模糊搜索模版名称
      */
     function __construct()
     {
@@ -110,6 +126,14 @@ class DescribeTemplatesRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("QueryAllComponents",$param) and $param["QueryAllComponents"] !== null) {
+            $this->QueryAllComponents = $param["QueryAllComponents"];
+        }
+
+        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
+            $this->TemplateName = $param["TemplateName"];
         }
     }
 }

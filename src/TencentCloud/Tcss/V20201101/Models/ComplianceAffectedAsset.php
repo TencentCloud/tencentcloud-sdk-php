@@ -70,6 +70,10 @@ RESULT_PASSED: 通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageTag(string $ImageTag) 设置镜像的tag
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVerifyInfo() 获取检查项验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVerifyInfo(string $VerifyInfo) 设置检查项验证信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceAffectedAsset extends AbstractModel
 {
@@ -135,6 +139,12 @@ RESULT_PASSED: 通过
     public $ImageTag;
 
     /**
+     * @var string 检查项验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VerifyInfo;
+
+    /**
      * @param integer $CustomerAssetId 为客户分配的唯一的资产项的ID。
      * @param string $AssetName 资产项的名称。
      * @param string $AssetType 资产项的类型
@@ -159,6 +169,8 @@ RESULT_PASSED: 通过
      * @param string $HostIP 主机IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageTag 镜像的tag
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VerifyInfo 检查项验证信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +220,10 @@ RESULT_PASSED: 通过
 
         if (array_key_exists("ImageTag",$param) and $param["ImageTag"] !== null) {
             $this->ImageTag = $param["ImageTag"];
+        }
+
+        if (array_key_exists("VerifyInfo",$param) and $param["VerifyInfo"] !== null) {
+            $this->VerifyInfo = $param["VerifyInfo"];
         }
     }
 }

@@ -20,54 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 音频呻吟审核结果
  *
- * @method string getLabel() 获取固定为Moan
+ * @method string getLabel() 获取该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置固定为Moan
+ * @method void setLabel(string $Label) 设置该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScore() 获取分数
- * @method void setScore(integer $Score) 设置分数
- * @method float getStartTime() 获取开始时间
- * @method void setStartTime(float $StartTime) 设置开始时间
- * @method float getEndTime() 获取结束时间
- * @method void setEndTime(float $EndTime) 设置结束时间
- * @method string getSubLabelCode() 获取子标签码
- * @method void setSubLabelCode(string $SubLabelCode) 设置子标签码
+ * @method integer getScore() 获取该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
+ * @method void setScore(integer $Score) 设置该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
+ * @method float getStartTime() 获取该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
+ * @method void setStartTime(float $StartTime) 设置该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
+ * @method float getEndTime() 获取该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
+ * @method void setEndTime(float $EndTime) 设置该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
+ * @method string getSubLabelCode() 获取*内测中，敬请期待*
+ * @method void setSubLabelCode(string $SubLabelCode) 设置*内测中，敬请期待*
+ * @method string getSubLabel() 获取该字段用于返回当前标签（Lable）下的二级标签。
+ * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Lable）下的二级标签。
+ * @method string getSuggestion() 获取该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+ * @method void setSuggestion(string $Suggestion) 设置该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
  */
 class AudioResultDetailMoanResult extends AbstractModel
 {
     /**
-     * @var string 固定为Moan
+     * @var string 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
-     * @var integer 分数
+     * @var integer 该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
      */
     public $Score;
 
     /**
-     * @var float 开始时间
+     * @var float 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
      */
     public $StartTime;
 
     /**
-     * @var float 结束时间
+     * @var float 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
      */
     public $EndTime;
 
     /**
-     * @var string 子标签码
+     * @var string *内测中，敬请期待*
      */
     public $SubLabelCode;
 
     /**
-     * @param string $Label 固定为Moan
+     * @var string 该字段用于返回当前标签（Lable）下的二级标签。
+     */
+    public $SubLabel;
+
+    /**
+     * @var string 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+     */
+    public $Suggestion;
+
+    /**
+     * @param string $Label 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Score 分数
-     * @param float $StartTime 开始时间
-     * @param float $EndTime 结束时间
-     * @param string $SubLabelCode 子标签码
+     * @param integer $Score 该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
+     * @param float $StartTime 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
+     * @param float $EndTime 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
+     * @param string $SubLabelCode *内测中，敬请期待*
+     * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+     * @param string $Suggestion 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
      */
     function __construct()
     {
@@ -100,6 +116,14 @@ class AudioResultDetailMoanResult extends AbstractModel
 
         if (array_key_exists("SubLabelCode",$param) and $param["SubLabelCode"] !== null) {
             $this->SubLabelCode = $param["SubLabelCode"];
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
+            $this->Suggestion = $param["Suggestion"];
         }
     }
 }

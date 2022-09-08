@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContentType(string $ContentType) 设置x
  * @method string getContent() 获取x
  * @method void setContent(string $Content) 设置x
+ * @method string getMonitorEndTime() 获取x
+ * @method void setMonitorEndTime(string $MonitorEndTime) 设置x
  */
 class CreateCRWorkRequest extends AbstractModel
 {
@@ -220,6 +222,11 @@ class CreateCRWorkRequest extends AbstractModel
     public $Content;
 
     /**
+     * @var string x
+     */
+    public $MonitorEndTime;
+
+    /**
      * @param string $WorkName 作品名称
      * @param string $WorkCategory 作品分类
      * @param string $WorkType 作品内容类型
@@ -248,6 +255,7 @@ class CreateCRWorkRequest extends AbstractModel
      * @param string $AuthorizationEndTime x
      * @param string $ContentType x
      * @param string $Content x
+     * @param string $MonitorEndTime x
      */
     function __construct()
     {
@@ -372,6 +380,10 @@ class CreateCRWorkRequest extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("MonitorEndTime",$param) and $param["MonitorEndTime"] !== null) {
+            $this->MonitorEndTime = $param["MonitorEndTime"];
         }
     }
 }

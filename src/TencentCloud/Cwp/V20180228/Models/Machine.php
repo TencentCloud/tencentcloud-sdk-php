@@ -94,6 +94,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudTags(array $CloudTags) 设置云标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsAddedOnTheFifteen() 获取是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAddedOnTheFifteen(integer $IsAddedOnTheFifteen) 设置是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Machine extends AbstractModel
 {
@@ -235,6 +239,12 @@ class Machine extends AbstractModel
     public $CloudTags;
 
     /**
+     * @var integer 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAddedOnTheFifteen;
+
+    /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
      * @param string $MachineStatus 主机状态。
@@ -271,6 +281,8 @@ class Machine extends AbstractModel
      * @param string $KernelVersion 内核版本
      * @param string $ProtectType 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
      * @param array $CloudTags 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -395,6 +407,10 @@ class Machine extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CloudTags, $obj);
             }
+        }
+
+        if (array_key_exists("IsAddedOnTheFifteen",$param) and $param["IsAddedOnTheFifteen"] !== null) {
+            $this->IsAddedOnTheFifteen = $param["IsAddedOnTheFifteen"];
         }
     }
 }

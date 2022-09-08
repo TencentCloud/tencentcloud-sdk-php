@@ -124,6 +124,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineType() 获取引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineType(string $EngineType) 设置引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxDelayTime() 获取最大延迟阈值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxDelayTime(integer $MaxDelayTime) 设置最大延迟阈值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -352,6 +360,18 @@ class InstanceInfo extends AbstractModel
     public $TagList;
 
     /**
+     * @var string 引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineType;
+
+    /**
+     * @var integer 最大延迟阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxDelayTime;
+
+    /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
@@ -403,6 +423,10 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceNodes 节点数
      * @param array $TagList 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineType 引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxDelayTime 最大延迟阈值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -606,6 +630,14 @@ class InstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
+        }
+
+        if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
+            $this->MaxDelayTime = $param["MaxDelayTime"];
         }
     }
 }

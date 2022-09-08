@@ -68,6 +68,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrainingModelFormat(string $TrainingModelFormat) 设置模型格式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersionType() 获取模型版本类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersionType(string $VersionType) 设置模型版本类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGPUType() 获取GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGPUType(string $GPUType) 设置GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAutoClean() 获取模型自动清理开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoClean(string $AutoClean) 设置模型自动清理开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getModelCleanPeriod() 获取模型清理周期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelCleanPeriod(integer $ModelCleanPeriod) 设置模型清理周期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxReservedModels() 获取模型数量保留上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxReservedModels(integer $MaxReservedModels) 设置模型数量保留上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CosPathInfo getModelHotUpdatePath() 获取模型热更新目录
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelHotUpdatePath(CosPathInfo $ModelHotUpdatePath) 设置模型热更新目录
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrainingModelVersionDTO extends AbstractModel
 {
@@ -176,6 +200,42 @@ class TrainingModelVersionDTO extends AbstractModel
     public $TrainingModelFormat;
 
     /**
+     * @var string 模型版本类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VersionType;
+
+    /**
+     * @var string GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GPUType;
+
+    /**
+     * @var string 模型自动清理开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoClean;
+
+    /**
+     * @var integer 模型清理周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelCleanPeriod;
+
+    /**
+     * @var integer 模型数量保留上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxReservedModels;
+
+    /**
+     * @var CosPathInfo 模型热更新目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelHotUpdatePath;
+
+    /**
      * @param string $TrainingModelId 模型id
      * @param string $TrainingModelVersionId 模型版本id
      * @param string $TrainingModelVersion 模型版本
@@ -199,6 +259,18 @@ class TrainingModelVersionDTO extends AbstractModel
      * @param string $TrainingModelErrorMsg 模型错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrainingModelFormat 模型格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VersionType 模型版本类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GPUType GPU类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AutoClean 模型自动清理开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ModelCleanPeriod 模型清理周期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxReservedModels 模型数量保留上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosPathInfo $ModelHotUpdatePath 模型热更新目录
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -294,6 +366,31 @@ class TrainingModelVersionDTO extends AbstractModel
 
         if (array_key_exists("TrainingModelFormat",$param) and $param["TrainingModelFormat"] !== null) {
             $this->TrainingModelFormat = $param["TrainingModelFormat"];
+        }
+
+        if (array_key_exists("VersionType",$param) and $param["VersionType"] !== null) {
+            $this->VersionType = $param["VersionType"];
+        }
+
+        if (array_key_exists("GPUType",$param) and $param["GPUType"] !== null) {
+            $this->GPUType = $param["GPUType"];
+        }
+
+        if (array_key_exists("AutoClean",$param) and $param["AutoClean"] !== null) {
+            $this->AutoClean = $param["AutoClean"];
+        }
+
+        if (array_key_exists("ModelCleanPeriod",$param) and $param["ModelCleanPeriod"] !== null) {
+            $this->ModelCleanPeriod = $param["ModelCleanPeriod"];
+        }
+
+        if (array_key_exists("MaxReservedModels",$param) and $param["MaxReservedModels"] !== null) {
+            $this->MaxReservedModels = $param["MaxReservedModels"];
+        }
+
+        if (array_key_exists("ModelHotUpdatePath",$param) and $param["ModelHotUpdatePath"] !== null) {
+            $this->ModelHotUpdatePath = new CosPathInfo();
+            $this->ModelHotUpdatePath->deserialize($param["ModelHotUpdatePath"]);
         }
     }
 }

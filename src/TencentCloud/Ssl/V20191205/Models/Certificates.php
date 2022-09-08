@@ -148,6 +148,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSM(boolean $IsSM) 设置是否国密证书
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncryptAlgorithm() 获取证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置证书算法
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -344,6 +348,12 @@ class Certificates extends AbstractModel
     public $IsSM;
 
     /**
+     * @var string 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EncryptAlgorithm;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -407,6 +417,8 @@ class Certificates extends AbstractModel
      * @param boolean $IsIgnore 是否已忽略到期通知
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSM 是否国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EncryptAlgorithm 证书算法
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -555,6 +567,10 @@ class Certificates extends AbstractModel
 
         if (array_key_exists("IsSM",$param) and $param["IsSM"] !== null) {
             $this->IsSM = $param["IsSM"];
+        }
+
+        if (array_key_exists("EncryptAlgorithm",$param) and $param["EncryptAlgorithm"] !== null) {
+            $this->EncryptAlgorithm = $param["EncryptAlgorithm"];
         }
     }
 }

@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelName(string $ChannelName) 设置渠道名
  * @method array getReceivers() 获取接受告警通道 ID 数组
  * @method void setReceivers(array $Receivers) 设置接受告警通道 ID 数组
- * @method array getExtraOrgIds() 获取额外组织 ID 数组
- * @method void setExtraOrgIds(array $ExtraOrgIds) 设置额外组织 ID 数组
+ * @method array getExtraOrgIds() 获取已废弃，请使用 OrganizationIds
+ * @method void setExtraOrgIds(array $ExtraOrgIds) 设置已废弃，请使用 OrganizationIds
+ * @method array getOrganizationIds() 获取生效的组织 ID 数组
+ * @method void setOrganizationIds(array $OrganizationIds) 设置生效的组织 ID 数组
  */
 class UpdateGrafanaNotificationChannelRequest extends AbstractModel
 {
@@ -54,16 +56,22 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
     public $Receivers;
 
     /**
-     * @var array 额外组织 ID 数组
+     * @var array 已废弃，请使用 OrganizationIds
      */
     public $ExtraOrgIds;
+
+    /**
+     * @var array 生效的组织 ID 数组
+     */
+    public $OrganizationIds;
 
     /**
      * @param string $ChannelId 通道 ID
      * @param string $InstanceId 实例 ID
      * @param string $ChannelName 渠道名
      * @param array $Receivers 接受告警通道 ID 数组
-     * @param array $ExtraOrgIds 额外组织 ID 数组
+     * @param array $ExtraOrgIds 已废弃，请使用 OrganizationIds
+     * @param array $OrganizationIds 生效的组织 ID 数组
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
 
         if (array_key_exists("ExtraOrgIds",$param) and $param["ExtraOrgIds"] !== null) {
             $this->ExtraOrgIds = $param["ExtraOrgIds"];
+        }
+
+        if (array_key_exists("OrganizationIds",$param) and $param["OrganizationIds"] !== null) {
+            $this->OrganizationIds = $param["OrganizationIds"];
         }
     }
 }

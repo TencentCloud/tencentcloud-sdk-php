@@ -30,15 +30,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
  * @method string getUpdatedAt() 获取更新时间
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
- * @method string getOrgId() 获取默认生效组织
- * @method void setOrgId(string $OrgId) 设置默认生效组织
- * @method array getExtraOrgIds() 获取额外生效组织
+ * @method string getOrgId() 获取默认生效组织，已废弃，请使用 OrganizationIds
+ * @method void setOrgId(string $OrgId) 设置默认生效组织，已废弃，请使用 OrganizationIds
+ * @method array getExtraOrgIds() 获取额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtraOrgIds(array $ExtraOrgIds) 设置额外生效组织
+ * @method void setExtraOrgIds(array $ExtraOrgIds) 设置额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrgIds() 获取生效组织
+ * @method string getOrgIds() 获取生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrgIds(string $OrgIds) 设置生效组织
+ * @method void setOrgIds(string $OrgIds) 设置生效组织，已废弃，请使用 OrganizationIds
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrganizationIds() 获取告警渠道的所有生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrganizationIds(string $OrganizationIds) 设置告警渠道的所有生效组织
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GrafanaNotificationChannel extends AbstractModel
@@ -69,21 +73,27 @@ class GrafanaNotificationChannel extends AbstractModel
     public $UpdatedAt;
 
     /**
-     * @var string 默认生效组织
+     * @var string 默认生效组织，已废弃，请使用 OrganizationIds
      */
     public $OrgId;
 
     /**
-     * @var array 额外生效组织
+     * @var array 额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraOrgIds;
 
     /**
-     * @var string 生效组织
+     * @var string 生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgIds;
+
+    /**
+     * @var string 告警渠道的所有生效组织
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrganizationIds;
 
     /**
      * @param string $ChannelId 渠道 ID
@@ -91,10 +101,12 @@ class GrafanaNotificationChannel extends AbstractModel
      * @param array $Receivers 告警通道模板 ID 数组
      * @param string $CreatedAt 创建时间
      * @param string $UpdatedAt 更新时间
-     * @param string $OrgId 默认生效组织
-     * @param array $ExtraOrgIds 额外生效组织
+     * @param string $OrgId 默认生效组织，已废弃，请使用 OrganizationIds
+     * @param array $ExtraOrgIds 额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrgIds 生效组织
+     * @param string $OrgIds 生效组织，已废弃，请使用 OrganizationIds
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrganizationIds 告警渠道的所有生效组织
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +152,10 @@ class GrafanaNotificationChannel extends AbstractModel
 
         if (array_key_exists("OrgIds",$param) and $param["OrgIds"] !== null) {
             $this->OrgIds = $param["OrgIds"];
+        }
+
+        if (array_key_exists("OrganizationIds",$param) and $param["OrganizationIds"] !== null) {
+            $this->OrganizationIds = $param["OrganizationIds"];
         }
     }
 }

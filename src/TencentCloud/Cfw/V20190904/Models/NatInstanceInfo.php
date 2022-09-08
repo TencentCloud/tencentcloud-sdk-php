@@ -52,6 +52,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置0 :正常 1：正在初始化
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionDetail() 获取地域区域信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionDetail(string $RegionDetail) 设置地域区域信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZoneZh() 获取实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneZh(string $ZoneZh) 设置实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZoneZhBak() 获取实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneZhBak(string $ZoneZhBak) 设置实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatInstanceInfo extends AbstractModel
 {
@@ -120,6 +132,24 @@ class NatInstanceInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string 地域区域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionDetail;
+
+    /**
+     * @var string 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneZh;
+
+    /**
+     * @var string 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneZhBak;
+
+    /**
      * @param string $NatinsId nat实例id
      * @param string $NatinsName nat实例名称
      * @param string $Region 实例所在地域
@@ -135,6 +165,12 @@ class NatInstanceInfo extends AbstractModel
      * @param array $Subnets 实例关联子网数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 0 :正常 1：正在初始化
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionDetail 地域区域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ZoneZh 实例所在可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ZoneZhBak 实例所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +232,18 @@ class NatInstanceInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("RegionDetail",$param) and $param["RegionDetail"] !== null) {
+            $this->RegionDetail = $param["RegionDetail"];
+        }
+
+        if (array_key_exists("ZoneZh",$param) and $param["ZoneZh"] !== null) {
+            $this->ZoneZh = $param["ZoneZh"];
+        }
+
+        if (array_key_exists("ZoneZhBak",$param) and $param["ZoneZhBak"] !== null) {
+            $this->ZoneZhBak = $param["ZoneZhBak"];
         }
     }
 }

@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTrainingModel请求参数结构体
  *
- * @method string getImportMethod() 获取导入方式（MODEL/VERSION）
- * @method void setImportMethod(string $ImportMethod) 设置导入方式（MODEL/VERSION）
+ * @method string getImportMethod() 获取导入方式
+MODEL：导入新模型
+VERSION：导入新版本
+EXIST：导入现有版本
+ * @method void setImportMethod(string $ImportMethod) 设置导入方式
+MODEL：导入新模型
+VERSION：导入新版本
+EXIST：导入现有版本
  * @method CosPathInfo getTrainingModelCosPath() 获取模型来源cos目录，以/结尾
  * @method void setTrainingModelCosPath(CosPathInfo $TrainingModelCosPath) 设置模型来源cos目录，以/结尾
  * @method string getReasoningEnvironmentSource() 获取推理环境来源（SYSTEM/CUSTOM）
@@ -68,11 +74,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelFormat(string $ModelFormat) 设置模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML）
  * @method string getReasoningEnvironmentId() 获取推理镜像ID
  * @method void setReasoningEnvironmentId(string $ReasoningEnvironmentId) 设置推理镜像ID
+ * @method string getAutoClean() 获取模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
+ * @method void setAutoClean(string $AutoClean) 设置模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
+ * @method integer getMaxReservedModels() 获取模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
+ * @method void setMaxReservedModels(integer $MaxReservedModels) 设置模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
+ * @method integer getModelCleanPeriod() 获取模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
+ * @method void setModelCleanPeriod(integer $ModelCleanPeriod) 设置模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
  */
 class CreateTrainingModelRequest extends AbstractModel
 {
     /**
-     * @var string 导入方式（MODEL/VERSION）
+     * @var string 导入方式
+MODEL：导入新模型
+VERSION：导入新版本
+EXIST：导入现有版本
      */
     public $ImportMethod;
 
@@ -184,7 +199,25 @@ class CreateTrainingModelRequest extends AbstractModel
     public $ReasoningEnvironmentId;
 
     /**
-     * @param string $ImportMethod 导入方式（MODEL/VERSION）
+     * @var string 模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
+     */
+    public $AutoClean;
+
+    /**
+     * @var integer 模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
+     */
+    public $MaxReservedModels;
+
+    /**
+     * @var integer 模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
+     */
+    public $ModelCleanPeriod;
+
+    /**
+     * @param string $ImportMethod 导入方式
+MODEL：导入新模型
+VERSION：导入新版本
+EXIST：导入现有版本
      * @param CosPathInfo $TrainingModelCosPath 模型来源cos目录，以/结尾
      * @param string $ReasoningEnvironmentSource 推理环境来源（SYSTEM/CUSTOM）
      * @param string $TrainingModelName 模型名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
@@ -208,6 +241,9 @@ class CreateTrainingModelRequest extends AbstractModel
 注意:  默认为NORMAL
      * @param string $ModelFormat 模型格式 （PYTORCH/TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/PMML）
      * @param string $ReasoningEnvironmentId 推理镜像ID
+     * @param string $AutoClean 模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
+     * @param integer $MaxReservedModels 模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
+     * @param integer $ModelCleanPeriod 模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
      */
     function __construct()
     {
@@ -316,6 +352,18 @@ class CreateTrainingModelRequest extends AbstractModel
 
         if (array_key_exists("ReasoningEnvironmentId",$param) and $param["ReasoningEnvironmentId"] !== null) {
             $this->ReasoningEnvironmentId = $param["ReasoningEnvironmentId"];
+        }
+
+        if (array_key_exists("AutoClean",$param) and $param["AutoClean"] !== null) {
+            $this->AutoClean = $param["AutoClean"];
+        }
+
+        if (array_key_exists("MaxReservedModels",$param) and $param["MaxReservedModels"] !== null) {
+            $this->MaxReservedModels = $param["MaxReservedModels"];
+        }
+
+        if (array_key_exists("ModelCleanPeriod",$param) and $param["ModelCleanPeriod"] !== null) {
+            $this->ModelCleanPeriod = $param["ModelCleanPeriod"];
         }
     }
 }

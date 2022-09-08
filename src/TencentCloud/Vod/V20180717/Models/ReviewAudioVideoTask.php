@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCodeExt(string $ErrCodeExt) 设置错误码，空字符串表示成功，其他值表示失败，取值请参考 [视频处理类错误码](https://cloud.tencent.com/document/product/266/50368#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
+ * @method ReviewAudioVideoTaskInput getInput() 获取音视频审核任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInput(ReviewAudioVideoTaskInput $Input) 设置音视频审核任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ReviewAudioVideoTaskOutput getOutput() 获取音视频审核任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(ReviewAudioVideoTaskOutput $Output) 设置音视频审核任务的输出。
@@ -66,6 +70,12 @@ class ReviewAudioVideoTask extends AbstractModel
     public $Message;
 
     /**
+     * @var ReviewAudioVideoTaskInput 音视频审核任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Input;
+
+    /**
      * @var ReviewAudioVideoTaskOutput 音视频审核任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -88,6 +98,8 @@ class ReviewAudioVideoTask extends AbstractModel
 <li>FINISH：已完成。</li>
      * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [视频处理类错误码](https://cloud.tencent.com/document/product/266/50368#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
      * @param string $Message 错误信息。
+     * @param ReviewAudioVideoTaskInput $Input 音视频审核任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ReviewAudioVideoTaskOutput $Output 音视频审核任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
@@ -120,6 +132,11 @@ class ReviewAudioVideoTask extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("Input",$param) and $param["Input"] !== null) {
+            $this->Input = new ReviewAudioVideoTaskInput();
+            $this->Input->deserialize($param["Input"]);
         }
 
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {

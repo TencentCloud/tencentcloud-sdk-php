@@ -26,9 +26,9 @@ use \ReflectionClass;
 abstract class AbstractModel
 {
 
-    public static function newSelf(...$args)
+    public static function newSelf()
     {
-        return new static(...$args);
+        return new static();
     }
 
     /**

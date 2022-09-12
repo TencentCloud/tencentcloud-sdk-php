@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Taf\V20200210\Models;
+namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SendTrafficSecuritySmsMessage请求参数结构体
+ * DescribeDefenseSwitch请求参数结构体
  *
- * @method InputSendTrafficSecuritySmsMsg getBspData() 获取业务入参
- * @method void setBspData(InputSendTrafficSecuritySmsMsg $BspData) 设置业务入参
+
  */
-class SendTrafficSecuritySmsMessageRequest extends AbstractModel
+class DescribeDefenseSwitchRequest extends AbstractModel
 {
-    /**
-     * @var InputSendTrafficSecuritySmsMsg 业务入参
-     */
-    public $BspData;
+
 
     /**
-     * @param InputSendTrafficSecuritySmsMsg $BspData 业务入参
+
      */
     function __construct()
     {
@@ -46,9 +42,6 @@ class SendTrafficSecuritySmsMessageRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("BspData",$param) and $param["BspData"] !== null) {
-            $this->BspData = new InputSendTrafficSecuritySmsMsg();
-            $this->BspData->deserialize($param["BspData"]);
-        }
+
     }
 }

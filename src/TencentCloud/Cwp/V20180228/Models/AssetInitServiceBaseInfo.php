@@ -70,6 +70,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUuid(string $Uuid) 设置主机uuid
  * @method string getUpdateTime() 获取数据更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
+ * @method string getFirstTime() 获取首次采集时间
+ * @method void setFirstTime(string $FirstTime) 设置首次采集时间
+ * @method integer getIsNew() 获取是否新增[0:否|1:是]
+ * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
+ * @method string getMachineWanIp() 获取服务器外网IP
+ * @method void setMachineWanIp(string $MachineWanIp) 设置服务器外网IP
  */
 class AssetInitServiceBaseInfo extends AbstractModel
 {
@@ -143,6 +149,21 @@ class AssetInitServiceBaseInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 首次采集时间
+     */
+    public $FirstTime;
+
+    /**
+     * @var integer 是否新增[0:否|1:是]
+     */
+    public $IsNew;
+
+    /**
+     * @var string 服务器外网IP
+     */
+    public $MachineWanIp;
+
+    /**
      * @param string $Name 名称
      * @param integer $Type 类型：
 1:编码器
@@ -168,6 +189,9 @@ class AssetInitServiceBaseInfo extends AbstractModel
      * @param string $Quuid 主机Quuid
      * @param string $Uuid 主机uuid
      * @param string $UpdateTime 数据更新时间
+     * @param string $FirstTime 首次采集时间
+     * @param integer $IsNew 是否新增[0:否|1:是]
+     * @param string $MachineWanIp 服务器外网IP
      */
     function __construct()
     {
@@ -224,6 +248,18 @@ class AssetInitServiceBaseInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("FirstTime",$param) and $param["FirstTime"] !== null) {
+            $this->FirstTime = $param["FirstTime"];
+        }
+
+        if (array_key_exists("IsNew",$param) and $param["IsNew"] !== null) {
+            $this->IsNew = $param["IsNew"];
+        }
+
+        if (array_key_exists("MachineWanIp",$param) and $param["MachineWanIp"] !== null) {
+            $this->MachineWanIp = $param["MachineWanIp"];
         }
     }
 }

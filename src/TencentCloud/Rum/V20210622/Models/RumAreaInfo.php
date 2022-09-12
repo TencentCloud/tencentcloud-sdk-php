@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAreaName(string $AreaName) 设置片区名称
  * @method string getAreaKey() 获取片区Key
  * @method void setAreaKey(string $AreaKey) 设置片区Key
+ * @method string getAreaRegionID() 获取地域码表 id
+ * @method void setAreaRegionID(string $AreaRegionID) 设置地域码表 id
+ * @method string getAreaRegionCode() 获取地域码表 code 如 ap-xxx（xxx 为地域词）
+ * @method void setAreaRegionCode(string $AreaRegionCode) 设置地域码表 code 如 ap-xxx（xxx 为地域词）
+ * @method string getAreaAbbr() 获取地域缩写
+ * @method void setAreaAbbr(string $AreaAbbr) 设置地域缩写
  */
 class RumAreaInfo extends AbstractModel
 {
@@ -52,10 +58,28 @@ class RumAreaInfo extends AbstractModel
     public $AreaKey;
 
     /**
+     * @var string 地域码表 id
+     */
+    public $AreaRegionID;
+
+    /**
+     * @var string 地域码表 code 如 ap-xxx（xxx 为地域词）
+     */
+    public $AreaRegionCode;
+
+    /**
+     * @var string 地域缩写
+     */
+    public $AreaAbbr;
+
+    /**
      * @param integer $AreaId 片区Id
      * @param integer $AreaStatus 片区状态(1=有效，2=无效)
      * @param string $AreaName 片区名称
      * @param string $AreaKey 片区Key
+     * @param string $AreaRegionID 地域码表 id
+     * @param string $AreaRegionCode 地域码表 code 如 ap-xxx（xxx 为地域词）
+     * @param string $AreaAbbr 地域缩写
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class RumAreaInfo extends AbstractModel
 
         if (array_key_exists("AreaKey",$param) and $param["AreaKey"] !== null) {
             $this->AreaKey = $param["AreaKey"];
+        }
+
+        if (array_key_exists("AreaRegionID",$param) and $param["AreaRegionID"] !== null) {
+            $this->AreaRegionID = $param["AreaRegionID"];
+        }
+
+        if (array_key_exists("AreaRegionCode",$param) and $param["AreaRegionCode"] !== null) {
+            $this->AreaRegionCode = $param["AreaRegionCode"];
+        }
+
+        if (array_key_exists("AreaAbbr",$param) and $param["AreaAbbr"] !== null) {
+            $this->AreaAbbr = $param["AreaAbbr"];
         }
     }
 }

@@ -92,6 +92,10 @@ OPENBANK_PAYMENT
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProfitShareRespInfoList(array $ProfitShareRespInfoList) 设置分账信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTimeFinish() 获取支付完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimeFinish(string $TimeFinish) 设置支付完成时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueryOpenBankPaymentOrderResult extends AbstractModel
 {
@@ -200,6 +204,12 @@ OPENBANK_PAYMENT
     public $ProfitShareRespInfoList;
 
     /**
+     * @var string 支付完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TimeFinish;
+
+    /**
      * @param string $ChannelMerchantId 渠道商户号。外部接入平台入驻云企付平台下发
      * @param string $OutOrderId 外部商户订单号
      * @param string $ChannelOrderId 云企付平台订单号
@@ -235,6 +245,8 @@ OPENBANK_PAYMENT
      * @param integer $FeeRate 手续费费率
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProfitShareRespInfoList 分账信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TimeFinish 支付完成时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -323,6 +335,10 @@ OPENBANK_PAYMENT
                 $obj->deserialize($value);
                 array_push($this->ProfitShareRespInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("TimeFinish",$param) and $param["TimeFinish"] !== null) {
+            $this->TimeFinish = $param["TimeFinish"];
         }
     }
 }

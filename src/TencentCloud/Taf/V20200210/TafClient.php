@@ -26,7 +26,6 @@ use TencentCloud\Taf\V20200210\Models as Models;
  * @method Models\RecognizeCustomizedAudienceResponse RecognizeCustomizedAudience(Models\RecognizeCustomizedAudienceRequest $req) 流量反欺诈-流量验准定制版
  * @method Models\RecognizePreciseTargetAudienceResponse RecognizePreciseTargetAudience(Models\RecognizePreciseTargetAudienceRequest $req) 流量反欺诈-流量验准高级版
  * @method Models\RecognizeTargetAudienceResponse RecognizeTargetAudience(Models\RecognizeTargetAudienceRequest $req) 流量反欺诈-流量验准
- * @method Models\SendTrafficSecuritySmsMessageResponse SendTrafficSecuritySmsMessage(Models\SendTrafficSecuritySmsMessageRequest $req) 流量安选产品，短信发送接口
  */
 
 class TafClient extends AbstractClient

@@ -14,26 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Taf\V20200210\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SendTrafficSecuritySmsMessage返回参数结构体
+ * DescribeDBInstanceInter返回参数结构体
  *
- * @method OutputSendTrafficSecuritySmsMsg getData() 获取返回结果
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(OutputSendTrafficSecuritySmsMsg $Data) 设置返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取互通组内总条数
+ * @method void setTotalCount(integer $TotalCount) 设置互通组内总条数
+ * @method array getInterInstanceSet() 获取互通组内实例信息详情
+ * @method void setInterInstanceSet(array $InterInstanceSet) 设置互通组内实例信息详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class SendTrafficSecuritySmsMessageResponse extends AbstractModel
+class DescribeDBInstanceInterResponse extends AbstractModel
 {
     /**
-     * @var OutputSendTrafficSecuritySmsMsg 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 互通组内总条数
      */
-    public $Data;
+    public $TotalCount;
+
+    /**
+     * @var array 互通组内实例信息详情
+     */
+    public $InterInstanceSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class SendTrafficSecuritySmsMessageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param OutputSendTrafficSecuritySmsMsg $Data 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 互通组内总条数
+     * @param array $InterInstanceSet 互通组内实例信息详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,9 +62,17 @@ class SendTrafficSecuritySmsMessageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new OutputSendTrafficSecuritySmsMsg();
-            $this->Data->deserialize($param["Data"]);
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("InterInstanceSet",$param) and $param["InterInstanceSet"] !== null) {
+            $this->InterInstanceSet = [];
+            foreach ($param["InterInstanceSet"] as $key => $value){
+                $obj = new InterInstance();
+                $obj->deserialize($value);
+                array_push($this->InterInstanceSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportAssetWebServiceInfoList请求参数结构体
  *
+ * @method string getQuuid() 获取查询指定Quuid主机的信息
+ * @method void setQuuid(string $Quuid) 设置查询指定Quuid主机的信息
  * @method array getFilters() 获取过滤条件。
 <li>User- string - 是否必填：否 - 运行用户</li>
 <li>Name- string - 是否必填：否 - Web服务名：
@@ -50,13 +52,16 @@ use TencentCloud\Common\AbstractModel;
 <li>OsType- string - 是否必填：否 - Windows/linux</li>
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
  * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
- * @method string getBy() 获取可选排序：ProcessCount
- * @method void setBy(string $By) 设置可选排序：ProcessCount
- * @method string getQuuid() 获取查询指定Quuid主机的信息
- * @method void setQuuid(string $Quuid) 设置查询指定Quuid主机的信息
+ * @method string getBy() 获取可选排序：[FirstTime|ProcessCount]
+ * @method void setBy(string $By) 设置可选排序：[FirstTime|ProcessCount]
  */
 class ExportAssetWebServiceInfoListRequest extends AbstractModel
 {
+    /**
+     * @var string 查询指定Quuid主机的信息
+     */
+    public $Quuid;
+
     /**
      * @var array 过滤条件。
 <li>User- string - 是否必填：否 - 运行用户</li>
@@ -81,16 +86,12 @@ class ExportAssetWebServiceInfoListRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string 可选排序：ProcessCount
+     * @var string 可选排序：[FirstTime|ProcessCount]
      */
     public $By;
 
     /**
-     * @var string 查询指定Quuid主机的信息
-     */
-    public $Quuid;
-
-    /**
+     * @param string $Quuid 查询指定Quuid主机的信息
      * @param array $Filters 过滤条件。
 <li>User- string - 是否必填：否 - 运行用户</li>
 <li>Name- string - 是否必填：否 - Web服务名：
@@ -106,8 +107,7 @@ class ExportAssetWebServiceInfoListRequest extends AbstractModel
 10:Tengine</li>
 <li>OsType- string - 是否必填：否 - Windows/linux</li>
      * @param string $Order 排序方式，asc升序 或 desc降序
-     * @param string $By 可选排序：ProcessCount
-     * @param string $Quuid 查询指定Quuid主机的信息
+     * @param string $By 可选排序：[FirstTime|ProcessCount]
      */
     function __construct()
     {
@@ -122,6 +122,10 @@ class ExportAssetWebServiceInfoListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
+            $this->Quuid = $param["Quuid"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -137,10 +141,6 @@ class ExportAssetWebServiceInfoListRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
-        }
-
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) 设置规则 ID
  * @method integer getRuleState() 获取规则状态码
  * @method void setRuleState(integer $RuleState) 设置规则状态码
- * @method string getName() 获取规则名称
- * @method void setName(string $Name) 设置规则名称
+ * @method string getName() 获取分组名称
+ * @method void setName(string $Name) 设置分组名称
  * @method string getGroup() 获取规则内容组
  * @method void setGroup(string $Group) 设置规则内容组
  * @method integer getTotal() 获取规则数量
@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) 设置规则创建时间
  * @method string getUpdatedAt() 获取规则最近更新时间
  * @method void setUpdatedAt(string $UpdatedAt) 设置规则最近更新时间
+ * @method string getRuleName() 获取规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleName(string $RuleName) 设置规则名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordingRuleSet extends AbstractModel
 {
@@ -48,7 +52,7 @@ class RecordingRuleSet extends AbstractModel
     public $RuleState;
 
     /**
-     * @var string 规则名称
+     * @var string 分组名称
      */
     public $Name;
 
@@ -73,13 +77,21 @@ class RecordingRuleSet extends AbstractModel
     public $UpdatedAt;
 
     /**
+     * @var string 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleName;
+
+    /**
      * @param string $RuleId 规则 ID
      * @param integer $RuleState 规则状态码
-     * @param string $Name 规则名称
+     * @param string $Name 分组名称
      * @param string $Group 规则内容组
      * @param integer $Total 规则数量
      * @param string $CreatedAt 规则创建时间
      * @param string $UpdatedAt 规则最近更新时间
+     * @param string $RuleName 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class RecordingRuleSet extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
+            $this->RuleName = $param["RuleName"];
         }
     }
 }

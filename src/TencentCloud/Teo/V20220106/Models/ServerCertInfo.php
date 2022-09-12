@@ -20,101 +20,113 @@ use TencentCloud\Common\AbstractModel;
 /**
  * https 服务端证书配置
  *
- * @method string getCertId() 获取服务器证书 ID, 默认证书ID, 或在 SSL 证书管理进行证书托管时自动生成
+ * @method string getCertId() 获取服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertId(string $CertId) 设置服务器证书 ID, 默认证书ID, 或在 SSL 证书管理进行证书托管时自动生成
+ * @method void setCertId(string $CertId) 设置服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAlias() 获取证书备注名
+ * @method string getAlias() 获取证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlias(string $Alias) 设置证书备注名
+ * @method void setAlias(string $Alias) 设置证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取证书类型:
-default: 默认证书
-upload:用户上传
-managed:腾讯云托管
+ * @method string getType() 获取证书类型，取值有：
+<li>default: 默认证书;</li>
+<li>upload:用户上传;</li>
+<li>managed:腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置证书类型:
-default: 默认证书
-upload:用户上传
-managed:腾讯云托管
+ * @method void setType(string $Type) 设置证书类型，取值有：
+<li>default: 默认证书;</li>
+<li>upload:用户上传;</li>
+<li>managed:腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExpireTime() 获取证书过期时间
+ * @method string getExpireTime() 获取证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpireTime(string $ExpireTime) 设置证书过期时间
+ * @method void setExpireTime(string $ExpireTime) 设置证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDeployTime() 获取证书部署时间
+ * @method string getDeployTime() 获取证书部署时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeployTime(string $DeployTime) 设置证书部署时间
+ * @method void setDeployTime(string $DeployTime) 设置证书部署时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取部署状态:
-processing: 部署中
-deployed: 已部署
+ * @method string getStatus() 获取部署状态，取值有：
+<li>processing: 部署中;</li>
+<li>deployed: 已部署。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置部署状态:
-processing: 部署中
-deployed: 已部署
+ * @method void setStatus(string $Status) 设置部署状态，取值有：
+<li>processing: 部署中;</li>
+<li>deployed: 已部署。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSignAlgo() 获取证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSignAlgo(string $SignAlgo) 设置证书算法。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerCertInfo extends AbstractModel
 {
     /**
-     * @var string 服务器证书 ID, 默认证书ID, 或在 SSL 证书管理进行证书托管时自动生成
+     * @var string 服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
 
     /**
-     * @var string 证书备注名
+     * @var string 证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alias;
 
     /**
-     * @var string 证书类型:
-default: 默认证书
-upload:用户上传
-managed:腾讯云托管
+     * @var string 证书类型，取值有：
+<li>default: 默认证书;</li>
+<li>upload:用户上传;</li>
+<li>managed:腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 证书过期时间
+     * @var string 证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
-     * @var string 证书部署时间
+     * @var string 证书部署时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployTime;
 
     /**
-     * @var string 部署状态:
-processing: 部署中
-deployed: 已部署
+     * @var string 部署状态，取值有：
+<li>processing: 部署中;</li>
+<li>deployed: 已部署。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @param string $CertId 服务器证书 ID, 默认证书ID, 或在 SSL 证书管理进行证书托管时自动生成
+     * @var string 证书算法。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Alias 证书备注名
+     */
+    public $SignAlgo;
+
+    /**
+     * @param string $CertId 服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 证书类型:
-default: 默认证书
-upload:用户上传
-managed:腾讯云托管
+     * @param string $Alias 证书备注名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExpireTime 证书过期时间
+     * @param string $Type 证书类型，取值有：
+<li>default: 默认证书;</li>
+<li>upload:用户上传;</li>
+<li>managed:腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DeployTime 证书部署时间
+     * @param string $ExpireTime 证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 部署状态:
-processing: 部署中
-deployed: 已部署
+     * @param string $DeployTime 证书部署时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 部署状态，取值有：
+<li>processing: 部署中;</li>
+<li>deployed: 已部署。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SignAlgo 证书算法。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -152,6 +164,10 @@ deployed: 已部署
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("SignAlgo",$param) and $param["SignAlgo"] !== null) {
+            $this->SignAlgo = $param["SignAlgo"];
         }
     }
 }

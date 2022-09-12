@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutOrderId() 获取外部商户订单号，只能是数字、大小写字母，且在同一个接入平台下唯一。
  * @method void setOutOrderId(string $OutOrderId) 设置外部商户订单号，只能是数字、大小写字母，且在同一个接入平台下唯一。
+ * @method string getPayInfo() 获取渠道扩展支付信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayInfo(string $PayInfo) 设置渠道扩展支付信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPayInfoType() 获取渠道扩展支付信息类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPayInfoType(string $PayInfoType) 设置渠道扩展支付信息类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateOpenBankOrderPaymentResult extends AbstractModel
 {
@@ -58,12 +66,28 @@ class CreateOpenBankOrderPaymentResult extends AbstractModel
     public $OutOrderId;
 
     /**
+     * @var string 渠道扩展支付信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayInfo;
+
+    /**
+     * @var string 渠道扩展支付信息类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PayInfoType;
+
+    /**
      * @param string $ChannelOrderId 云企付平台订单号。
      * @param string $ThirdPayOrderId 第三方支付平台返回支付订单号。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenBankRedirectInfo $RedirectInfo 跳转参数渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutOrderId 外部商户订单号，只能是数字、大小写字母，且在同一个接入平台下唯一。
+     * @param string $PayInfo 渠道扩展支付信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PayInfoType 渠道扩展支付信息类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -93,6 +117,14 @@ class CreateOpenBankOrderPaymentResult extends AbstractModel
 
         if (array_key_exists("OutOrderId",$param) and $param["OutOrderId"] !== null) {
             $this->OutOrderId = $param["OutOrderId"];
+        }
+
+        if (array_key_exists("PayInfo",$param) and $param["PayInfo"] !== null) {
+            $this->PayInfo = $param["PayInfo"];
+        }
+
+        if (array_key_exists("PayInfoType",$param) and $param["PayInfoType"] !== null) {
+            $this->PayInfoType = $param["PayInfoType"];
         }
     }
 }

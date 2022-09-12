@@ -20,10 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetMachineList请求参数结构体
  *
- * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
- * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>OsType - String - 是否必填：否 - windows或linux</li>
@@ -56,23 +52,17 @@ use TencentCloud\Common\AbstractModel;
 4: 80%～100%</li>
 <li>Quuid：主机Quuid</li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
- * @method string getBy() 获取可选排序：PartitionCount
- * @method void setBy(string $By) 设置可选排序：PartitionCount
+ * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
+ * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
  * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
+ * @method string getBy() 获取可选排序[FirstTime|PartitionCount]
+ * @method void setBy(string $By) 设置可选排序[FirstTime|PartitionCount]
  */
 class DescribeAssetMachineListRequest extends AbstractModel
 {
-    /**
-     * @var integer 需要返回的数量，默认为10，最大值为100
-     */
-    public $Limit;
-
-    /**
-     * @var integer 偏移量，默认为0。
-     */
-    public $Offset;
-
     /**
      * @var array 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
@@ -94,9 +84,14 @@ class DescribeAssetMachineListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 可选排序：PartitionCount
+     * @var integer 需要返回的数量，默认为10，最大值为100
      */
-    public $By;
+    public $Limit;
+
+    /**
+     * @var integer 偏移量，默认为0。
+     */
+    public $Offset;
 
     /**
      * @var string 排序方式，asc升序 或 desc降序
@@ -104,8 +99,11 @@ class DescribeAssetMachineListRequest extends AbstractModel
     public $Order;
 
     /**
-     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
-     * @param integer $Offset 偏移量，默认为0。
+     * @var string 可选排序[FirstTime|PartitionCount]
+     */
+    public $By;
+
+    /**
      * @param array $Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>OsType - String - 是否必填：否 - windows或linux</li>
@@ -122,8 +120,10 @@ class DescribeAssetMachineListRequest extends AbstractModel
 4: 80%～100%</li>
 <li>Quuid：主机Quuid</li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
-     * @param string $By 可选排序：PartitionCount
+     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
+     * @param integer $Offset 偏移量，默认为0。
      * @param string $Order 排序方式，asc升序 或 desc降序
+     * @param string $By 可选排序[FirstTime|PartitionCount]
      */
     function __construct()
     {
@@ -138,14 +138,6 @@ class DescribeAssetMachineListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -155,12 +147,20 @@ class DescribeAssetMachineListRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("By",$param) and $param["By"] !== null) {
-            $this->By = $param["By"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

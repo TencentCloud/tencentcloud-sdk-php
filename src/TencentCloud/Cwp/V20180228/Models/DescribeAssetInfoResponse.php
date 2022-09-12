@@ -40,6 +40,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebServiceCount(integer $WebServiceCount) 设置Web服务数
  * @method integer getWebLocationCount() 获取Web站点数
  * @method void setWebLocationCount(integer $WebLocationCount) 设置Web站点数
+ * @method integer getAccountNewCount() 获取账号今日新增
+ * @method void setAccountNewCount(integer $AccountNewCount) 设置账号今日新增
+ * @method integer getPortNewCount() 获取端口今日新增
+ * @method void setPortNewCount(integer $PortNewCount) 设置端口今日新增
+ * @method integer getProcessNewCount() 获取进程今日新增
+ * @method void setProcessNewCount(integer $ProcessNewCount) 设置进程今日新增
+ * @method integer getSoftwareNewCount() 获取软件今日新增
+ * @method void setSoftwareNewCount(integer $SoftwareNewCount) 设置软件今日新增
+ * @method integer getDatabaseNewCount() 获取数据库今日新增
+ * @method void setDatabaseNewCount(integer $DatabaseNewCount) 设置数据库今日新增
+ * @method integer getWebAppNewCount() 获取Web应用今日新增
+ * @method void setWebAppNewCount(integer $WebAppNewCount) 设置Web应用今日新增
+ * @method integer getWebFrameNewCount() 获取Web框架今日新增
+ * @method void setWebFrameNewCount(integer $WebFrameNewCount) 设置Web框架今日新增
+ * @method integer getWebServiceNewCount() 获取Web服务今日新增
+ * @method void setWebServiceNewCount(integer $WebServiceNewCount) 设置Web服务今日新增
+ * @method integer getWebLocationNewCount() 获取Web站点今日新增
+ * @method void setWebLocationNewCount(integer $WebLocationNewCount) 设置Web站点今日新增
+ * @method integer getMachineNewCount() 获取主机今日新增
+ * @method void setMachineNewCount(integer $MachineNewCount) 设置主机今日新增
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -96,6 +116,56 @@ class DescribeAssetInfoResponse extends AbstractModel
     public $WebLocationCount;
 
     /**
+     * @var integer 账号今日新增
+     */
+    public $AccountNewCount;
+
+    /**
+     * @var integer 端口今日新增
+     */
+    public $PortNewCount;
+
+    /**
+     * @var integer 进程今日新增
+     */
+    public $ProcessNewCount;
+
+    /**
+     * @var integer 软件今日新增
+     */
+    public $SoftwareNewCount;
+
+    /**
+     * @var integer 数据库今日新增
+     */
+    public $DatabaseNewCount;
+
+    /**
+     * @var integer Web应用今日新增
+     */
+    public $WebAppNewCount;
+
+    /**
+     * @var integer Web框架今日新增
+     */
+    public $WebFrameNewCount;
+
+    /**
+     * @var integer Web服务今日新增
+     */
+    public $WebServiceNewCount;
+
+    /**
+     * @var integer Web站点今日新增
+     */
+    public $WebLocationNewCount;
+
+    /**
+     * @var integer 主机今日新增
+     */
+    public $MachineNewCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -111,6 +181,16 @@ class DescribeAssetInfoResponse extends AbstractModel
      * @param integer $WebFrameCount Web框架数
      * @param integer $WebServiceCount Web服务数
      * @param integer $WebLocationCount Web站点数
+     * @param integer $AccountNewCount 账号今日新增
+     * @param integer $PortNewCount 端口今日新增
+     * @param integer $ProcessNewCount 进程今日新增
+     * @param integer $SoftwareNewCount 软件今日新增
+     * @param integer $DatabaseNewCount 数据库今日新增
+     * @param integer $WebAppNewCount Web应用今日新增
+     * @param integer $WebFrameNewCount Web框架今日新增
+     * @param integer $WebServiceNewCount Web服务今日新增
+     * @param integer $WebLocationNewCount Web站点今日新增
+     * @param integer $MachineNewCount 主机今日新增
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -164,6 +244,46 @@ class DescribeAssetInfoResponse extends AbstractModel
 
         if (array_key_exists("WebLocationCount",$param) and $param["WebLocationCount"] !== null) {
             $this->WebLocationCount = $param["WebLocationCount"];
+        }
+
+        if (array_key_exists("AccountNewCount",$param) and $param["AccountNewCount"] !== null) {
+            $this->AccountNewCount = $param["AccountNewCount"];
+        }
+
+        if (array_key_exists("PortNewCount",$param) and $param["PortNewCount"] !== null) {
+            $this->PortNewCount = $param["PortNewCount"];
+        }
+
+        if (array_key_exists("ProcessNewCount",$param) and $param["ProcessNewCount"] !== null) {
+            $this->ProcessNewCount = $param["ProcessNewCount"];
+        }
+
+        if (array_key_exists("SoftwareNewCount",$param) and $param["SoftwareNewCount"] !== null) {
+            $this->SoftwareNewCount = $param["SoftwareNewCount"];
+        }
+
+        if (array_key_exists("DatabaseNewCount",$param) and $param["DatabaseNewCount"] !== null) {
+            $this->DatabaseNewCount = $param["DatabaseNewCount"];
+        }
+
+        if (array_key_exists("WebAppNewCount",$param) and $param["WebAppNewCount"] !== null) {
+            $this->WebAppNewCount = $param["WebAppNewCount"];
+        }
+
+        if (array_key_exists("WebFrameNewCount",$param) and $param["WebFrameNewCount"] !== null) {
+            $this->WebFrameNewCount = $param["WebFrameNewCount"];
+        }
+
+        if (array_key_exists("WebServiceNewCount",$param) and $param["WebServiceNewCount"] !== null) {
+            $this->WebServiceNewCount = $param["WebServiceNewCount"];
+        }
+
+        if (array_key_exists("WebLocationNewCount",$param) and $param["WebLocationNewCount"] !== null) {
+            $this->WebLocationNewCount = $param["WebLocationNewCount"];
+        }
+
+        if (array_key_exists("MachineNewCount",$param) and $param["MachineNewCount"] !== null) {
+            $this->MachineNewCount = $param["MachineNewCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

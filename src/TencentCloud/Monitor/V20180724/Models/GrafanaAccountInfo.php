@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotes(string $Notes) 设置备注
  * @method string getCreateAt() 获取创建时间
  * @method void setCreateAt(string $CreateAt) 设置创建时间
+ * @method string getInstanceId() 获取实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUin() 获取用户主账号 UIN
+ * @method void setUin(string $Uin) 设置用户主账号 UIN
  */
 class GrafanaAccountInfo extends AbstractModel
 {
@@ -52,10 +58,24 @@ class GrafanaAccountInfo extends AbstractModel
     public $CreateAt;
 
     /**
+     * @var string 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 用户主账号 UIN
+     */
+    public $Uin;
+
+    /**
      * @param string $UserId 用户账号ID
      * @param array $Role 用户权限
      * @param string $Notes 备注
      * @param string $CreateAt 创建时间
+     * @param string $InstanceId 实例 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uin 用户主账号 UIN
      */
     function __construct()
     {
@@ -89,6 +109,14 @@ class GrafanaAccountInfo extends AbstractModel
 
         if (array_key_exists("CreateAt",$param) and $param["CreateAt"] !== null) {
             $this->CreateAt = $param["CreateAt"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
         }
     }
 }

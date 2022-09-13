@@ -1,3 +1,5 @@
+# Release 3.0.724
+
 # Release 3.0.723
 
 ## DDoS 防护(antiddos) 版本：2020-03-09

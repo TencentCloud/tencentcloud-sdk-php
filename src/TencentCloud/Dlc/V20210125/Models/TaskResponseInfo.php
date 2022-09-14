@@ -114,6 +114,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalTime(integer $TotalTime) 设置任务耗时，单位： ms
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCmdArgs() 获取spark app job执行task的程序入口参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCmdArgs(string $CmdArgs) 设置spark app job执行task的程序入口参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -289,6 +293,12 @@ class TaskResponseInfo extends AbstractModel
     public $TotalTime;
 
     /**
+     * @var string spark app job执行task的程序入口参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CmdArgs;
+
+    /**
      * @param string $DatabaseName 任务所属Database的名称。
      * @param integer $DataAmount 任务数据量。
      * @param string $Id 任务Id。
@@ -335,6 +345,8 @@ class TaskResponseInfo extends AbstractModel
      * @param string $UiUrl spark ui url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalTime 任务耗时，单位： ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CmdArgs spark app job执行task的程序入口参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -472,6 +484,10 @@ class TaskResponseInfo extends AbstractModel
 
         if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
             $this->TotalTime = $param["TotalTime"];
+        }
+
+        if (array_key_exists("CmdArgs",$param) and $param["CmdArgs"] !== null) {
+            $this->CmdArgs = $param["CmdArgs"];
         }
     }
 }

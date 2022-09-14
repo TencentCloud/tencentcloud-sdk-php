@@ -20,73 +20,103 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOverviewL7Data请求参数结构体
  *
- * @method string getStartTime() 获取RFC3339格式，客户端时间
- * @method void setStartTime(string $StartTime) 设置RFC3339格式，客户端时间
- * @method string getEndTime() 获取RFC3339格式，客户端时间
- * @method void setEndTime(string $EndTime) 设置RFC3339格式，客户端时间
- * @method array getMetricNames() 获取指标列表，支持的指标
-l7Flow_outFlux: 访问流量
-l7Flow_request: 访问请求数
-l7Flow_outBandwidth: 访问带宽
- l7Flow_hit_outFlux: 缓存命中流量
- * @method void setMetricNames(array $MetricNames) 设置指标列表，支持的指标
-l7Flow_outFlux: 访问流量
-l7Flow_request: 访问请求数
-l7Flow_outBandwidth: 访问带宽
- l7Flow_hit_outFlux: 缓存命中流量
- * @method string getInterval() 获取时间间隔，选填{min, 5min, hour, day, week}
- * @method void setInterval(string $Interval) 设置时间间隔，选填{min, 5min, hour, day, week}
- * @method array getZoneIds() 获取ZoneId列表，仅在zone/domain维度下查询时该参数有效
- * @method void setZoneIds(array $ZoneIds) 设置ZoneId列表，仅在zone/domain维度下查询时该参数有效
- * @method array getDomains() 获取Domain列表，仅在domain维度下查询时该参数有效
- * @method void setDomains(array $Domains) 设置Domain列表，仅在domain维度下查询时该参数有效
- * @method string getProtocol() 获取协议类型， 选填{http,http2,https,all}
- * @method void setProtocol(string $Protocol) 设置协议类型， 选填{http,http2,https,all}
+ * @method string getStartTime() 获取开始时间。
+ * @method void setStartTime(string $StartTime) 设置开始时间。
+ * @method string getEndTime() 获取结束时间。
+ * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method array getMetricNames() 获取查询的指标，取值有：
+<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_request: 访问请求数；</li>
+<li>l7Flow_outBandwidth: 访问带宽；</li>
+<li>l7Flow_hit_outFlux: 缓存命中流量。</li>
+ * @method void setMetricNames(array $MetricNames) 设置查询的指标，取值有：
+<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_request: 访问请求数；</li>
+<li>l7Flow_outBandwidth: 访问带宽；</li>
+<li>l7Flow_hit_outFlux: 缓存命中流量。</li>
+ * @method string getInterval() 获取查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+ * @method void setInterval(string $Interval) 设置查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+ * @method array getZoneIds() 获取查询的站点集合，不填默认查询所有站点。
+ * @method void setZoneIds(array $ZoneIds) 设置查询的站点集合，不填默认查询所有站点。
+ * @method array getDomains() 获取查询的域名集合，不填默认查询所有子域名。
+ * @method void setDomains(array $Domains) 设置查询的域名集合，不填默认查询所有子域名。
+ * @method string getProtocol() 获取查询的协议类型，取值有：
+<li>http: http协议；</li>
+<li>https: https协议；</li>
+<li>http2: http2协议；</li>
+<li>all:  所有协议。</li>不填默认为: all，表示查询所有协议。
+ * @method void setProtocol(string $Protocol) 设置查询的协议类型，取值有：
+<li>http: http协议；</li>
+<li>https: https协议；</li>
+<li>http2: http2协议；</li>
+<li>all:  所有协议。</li>不填默认为: all，表示查询所有协议。
  * @method string getArea() 获取加速区域，取值有：
 <li>mainland：中国大陆境内;</li>
 <li>overseas：全球（不含中国大陆）。</li>
  * @method void setArea(string $Area) 设置加速区域，取值有：
 <li>mainland：中国大陆境内;</li>
 <li>overseas：全球（不含中国大陆）。</li>
+ * @method array getFilters() 获取过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
+ * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
  */
 class DescribeOverviewL7DataRequest extends AbstractModel
 {
     /**
-     * @var string RFC3339格式，客户端时间
+     * @var string 开始时间。
      */
     public $StartTime;
 
     /**
-     * @var string RFC3339格式，客户端时间
+     * @var string 结束时间。
      */
     public $EndTime;
 
     /**
-     * @var array 指标列表，支持的指标
-l7Flow_outFlux: 访问流量
-l7Flow_request: 访问请求数
-l7Flow_outBandwidth: 访问带宽
- l7Flow_hit_outFlux: 缓存命中流量
+     * @var array 查询的指标，取值有：
+<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_request: 访问请求数；</li>
+<li>l7Flow_outBandwidth: 访问带宽；</li>
+<li>l7Flow_hit_outFlux: 缓存命中流量。</li>
      */
     public $MetricNames;
 
     /**
-     * @var string 时间间隔，选填{min, 5min, hour, day, week}
+     * @var string 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
      */
     public $Interval;
 
     /**
-     * @var array ZoneId列表，仅在zone/domain维度下查询时该参数有效
+     * @var array 查询的站点集合，不填默认查询所有站点。
      */
     public $ZoneIds;
 
     /**
-     * @var array Domain列表，仅在domain维度下查询时该参数有效
+     * @var array 查询的域名集合，不填默认查询所有子域名。
      */
     public $Domains;
 
     /**
-     * @var string 协议类型， 选填{http,http2,https,all}
+     * @var string 查询的协议类型，取值有：
+<li>http: http协议；</li>
+<li>https: https协议；</li>
+<li>http2: http2协议；</li>
+<li>all:  所有协议。</li>不填默认为: all，表示查询所有协议。
      */
     public $Protocol;
 
@@ -98,20 +128,38 @@ l7Flow_outBandwidth: 访问带宽
     public $Area;
 
     /**
-     * @param string $StartTime RFC3339格式，客户端时间
-     * @param string $EndTime RFC3339格式，客户端时间
-     * @param array $MetricNames 指标列表，支持的指标
-l7Flow_outFlux: 访问流量
-l7Flow_request: 访问请求数
-l7Flow_outBandwidth: 访问带宽
- l7Flow_hit_outFlux: 缓存命中流量
-     * @param string $Interval 时间间隔，选填{min, 5min, hour, day, week}
-     * @param array $ZoneIds ZoneId列表，仅在zone/domain维度下查询时该参数有效
-     * @param array $Domains Domain列表，仅在domain维度下查询时该参数有效
-     * @param string $Protocol 协议类型， 选填{http,http2,https,all}
+     * @var array 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
+     */
+    public $Filters;
+
+    /**
+     * @param string $StartTime 开始时间。
+     * @param string $EndTime 结束时间。
+     * @param array $MetricNames 查询的指标，取值有：
+<li>l7Flow_outFlux: 访问流量；</li>
+<li>l7Flow_request: 访问请求数；</li>
+<li>l7Flow_outBandwidth: 访问带宽；</li>
+<li>l7Flow_hit_outFlux: 缓存命中流量。</li>
+     * @param string $Interval 查询时间粒度，取值有：
+<li>min ：1分钟 ；</li>
+<li>5min ：5分钟 ；</li>
+<li>hour ：1小时 ；</li>
+<li>day ：1天 。</li>
+     * @param array $ZoneIds 查询的站点集合，不填默认查询所有站点。
+     * @param array $Domains 查询的域名集合，不填默认查询所有子域名。
+     * @param string $Protocol 查询的协议类型，取值有：
+<li>http: http协议；</li>
+<li>https: https协议；</li>
+<li>http2: http2协议；</li>
+<li>all:  所有协议。</li>不填默认为: all，表示查询所有协议。
      * @param string $Area 加速区域，取值有：
 <li>mainland：中国大陆境内;</li>
 <li>overseas：全球（不含中国大陆）。</li>
+     * @param array $Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
      */
     function __construct()
     {
@@ -156,6 +204,15 @@ l7Flow_outBandwidth: 访问带宽
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new QueryCondition();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

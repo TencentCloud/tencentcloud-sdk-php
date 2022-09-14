@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220106\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeOverviewL7Data返回参数结构体
+ * GetDevice返回参数结构体
  *
- * @method string getType() 获取查询维度。
- * @method void setType(string $Type) 设置查询维度。
- * @method string getInterval() 获取查询时间间隔。
- * @method void setInterval(string $Interval) 设置查询时间间隔。
- * @method array getData() 获取七层监控类时序流量数据列表。
- * @method void setData(array $Data) 设置七层监控类时序流量数据列表。
+ * @method DeviceDetails getDeviceDetails() 获取设备详细信息
+ * @method void setDeviceDetails(DeviceDetails $DeviceDetails) 设置设备详细信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeOverviewL7DataResponse extends AbstractModel
+class GetDeviceResponse extends AbstractModel
 {
     /**
-     * @var string 查询维度。
+     * @var DeviceDetails 设备详细信息
      */
-    public $Type;
-
-    /**
-     * @var string 查询时间间隔。
-     */
-    public $Interval;
-
-    /**
-     * @var array 七层监控类时序流量数据列表。
-     */
-    public $Data;
+    public $DeviceDetails;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class DescribeOverviewL7DataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Type 查询维度。
-     * @param string $Interval 查询时间间隔。
-     * @param array $Data 七层监控类时序流量数据列表。
+     * @param DeviceDetails $DeviceDetails 设备详细信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +54,9 @@ class DescribeOverviewL7DataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
-        }
-
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
-        }
-
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new TimingDataRecord();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("DeviceDetails",$param) and $param["DeviceDetails"] !== null) {
+            $this->DeviceDetails = new DeviceDetails();
+            $this->DeviceDetails->deserialize($param["DeviceDetails"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

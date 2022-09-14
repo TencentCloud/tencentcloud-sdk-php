@@ -23,11 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSignStatus() 获取处理状态
   SUCCESS：签约成功
   FAILED：签约失败
-  PROCESSING“签约中
+  PROCESSING：签约中
  * @method void setSignStatus(string $SignStatus) 设置处理状态
   SUCCESS：签约成功
   FAILED：签约失败
-  PROCESSING“签约中
+  PROCESSING：签约中
  * @method string getSignMessage() 获取上传返回描述，例如失败原因等
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignMessage(string $SignMessage) 设置上传返回描述，例如失败原因等
@@ -43,7 +43,7 @@ class ApplyOpenBankSubMerchantSignOnlineResult extends AbstractModel
      * @var string 处理状态
   SUCCESS：签约成功
   FAILED：签约失败
-  PROCESSING“签约中
+  PROCESSING：签约中
      */
     public $SignStatus;
 
@@ -63,7 +63,7 @@ class ApplyOpenBankSubMerchantSignOnlineResult extends AbstractModel
      * @param string $SignStatus 处理状态
   SUCCESS：签约成功
   FAILED：签约失败
-  PROCESSING“签约中
+  PROCESSING：签约中
      * @param string $SignMessage 上传返回描述，例如失败原因等
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExternalReturnData 第三方渠道返回信息，见渠道特殊说明

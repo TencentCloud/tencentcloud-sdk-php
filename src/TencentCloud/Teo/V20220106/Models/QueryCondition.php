@@ -20,34 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询条件
  *
- * @method string getKey() 获取维度
- * @method void setKey(string $Key) 设置维度
- * @method string getOperator() 获取操作符
- * @method void setOperator(string $Operator) 设置操作符
- * @method array getValue() 获取维度值
- * @method void setValue(array $Value) 设置维度值
+ * @method string getKey() 获取筛选条件的key。
+ * @method void setKey(string $Key) 设置筛选条件的key。
+ * @method string getOperator() 获取查询条件操作符，操作类型有：
+<li>equals: 等于；</li>
+<li>notEquals: 不等于；</li>
+<li>include: 包含；</li>
+<li>notInclude: 不包含; </li>
+<li>startWith: 开始于；</li>
+<li>notStartWith: 不开始于；</li>
+<li>endWith: 结尾是；</li>
+<li>notEndWith: 不结尾是。</li>
+ * @method void setOperator(string $Operator) 设置查询条件操作符，操作类型有：
+<li>equals: 等于；</li>
+<li>notEquals: 不等于；</li>
+<li>include: 包含；</li>
+<li>notInclude: 不包含; </li>
+<li>startWith: 开始于；</li>
+<li>notStartWith: 不开始于；</li>
+<li>endWith: 结尾是；</li>
+<li>notEndWith: 不结尾是。</li>
+ * @method array getValue() 获取筛选条件的值。
+ * @method void setValue(array $Value) 设置筛选条件的值。
  */
 class QueryCondition extends AbstractModel
 {
     /**
-     * @var string 维度
+     * @var string 筛选条件的key。
      */
     public $Key;
 
     /**
-     * @var string 操作符
+     * @var string 查询条件操作符，操作类型有：
+<li>equals: 等于；</li>
+<li>notEquals: 不等于；</li>
+<li>include: 包含；</li>
+<li>notInclude: 不包含; </li>
+<li>startWith: 开始于；</li>
+<li>notStartWith: 不开始于；</li>
+<li>endWith: 结尾是；</li>
+<li>notEndWith: 不结尾是。</li>
      */
     public $Operator;
 
     /**
-     * @var array 维度值
+     * @var array 筛选条件的值。
      */
     public $Value;
 
     /**
-     * @param string $Key 维度
-     * @param string $Operator 操作符
-     * @param array $Value 维度值
+     * @param string $Key 筛选条件的key。
+     * @param string $Operator 查询条件操作符，操作类型有：
+<li>equals: 等于；</li>
+<li>notEquals: 不等于；</li>
+<li>include: 包含；</li>
+<li>notInclude: 不包含; </li>
+<li>startWith: 开始于；</li>
+<li>notStartWith: 不开始于；</li>
+<li>endWith: 结尾是；</li>
+<li>notEndWith: 不结尾是。</li>
+     * @param array $Value 筛选条件的值。
      */
     function __construct()
     {

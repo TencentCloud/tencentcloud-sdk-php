@@ -22,14 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method integer getLimit() 获取备份文件列表偏移
- * @method void setLimit(integer $Limit) 设置备份文件列表偏移
- * @method integer getOffset() 获取备份文件列表起始
- * @method void setOffset(integer $Offset) 设置备份文件列表起始
+ * @method integer getLimit() 获取备份文件列表大小，取值范围(0,100]
+ * @method void setLimit(integer $Limit) 设置备份文件列表大小，取值范围(0,100]
+ * @method integer getOffset() 获取备份文件列表偏移，取值范围[0,INF)
+ * @method void setOffset(integer $Offset) 设置备份文件列表偏移，取值范围[0,INF)
  * @method string getDbType() 获取数据库类型，取值范围: 
 <li> MYSQL </li>
  * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
 <li> MYSQL </li>
+ * @method array getBackupIds() 获取备份ID
+ * @method void setBackupIds(array $BackupIds) 设置备份ID
+ * @method string getBackupType() 获取备份类型，可选值：snapshot，快照备份； logic，逻辑备份
+ * @method void setBackupType(string $BackupType) 设置备份类型，可选值：snapshot，快照备份； logic，逻辑备份
+ * @method string getBackupMethod() 获取备份方式，可选值：auto，自动备份；manual，手动备
+ * @method void setBackupMethod(string $BackupMethod) 设置备份方式，可选值：auto，自动备份；manual，手动备
+ * @method string getSnapShotType() 获取快照类型，可选值：full，全量；increment，增量
+ * @method void setSnapShotType(string $SnapShotType) 设置快照类型，可选值：full，全量；increment，增量
+ * @method string getStartTime() 获取备份开始时间
+ * @method void setStartTime(string $StartTime) 设置备份开始时间
+ * @method string getEndTime() 获取备份结束时间
+ * @method void setEndTime(string $EndTime) 设置备份结束时间
+ * @method array getFileNames() 获取备份文件名，模糊查询
+ * @method void setFileNames(array $FileNames) 设置备份文件名，模糊查询
+ * @method array getBackupNames() 获取备份备注名，模糊查询
+ * @method void setBackupNames(array $BackupNames) 设置备份备注名，模糊查询
  */
 class DescribeBackupListRequest extends AbstractModel
 {
@@ -39,12 +55,12 @@ class DescribeBackupListRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer 备份文件列表偏移
+     * @var integer 备份文件列表大小，取值范围(0,100]
      */
     public $Limit;
 
     /**
-     * @var integer 备份文件列表起始
+     * @var integer 备份文件列表偏移，取值范围[0,INF)
      */
     public $Offset;
 
@@ -55,11 +71,59 @@ class DescribeBackupListRequest extends AbstractModel
     public $DbType;
 
     /**
+     * @var array 备份ID
+     */
+    public $BackupIds;
+
+    /**
+     * @var string 备份类型，可选值：snapshot，快照备份； logic，逻辑备份
+     */
+    public $BackupType;
+
+    /**
+     * @var string 备份方式，可选值：auto，自动备份；manual，手动备
+     */
+    public $BackupMethod;
+
+    /**
+     * @var string 快照类型，可选值：full，全量；increment，增量
+     */
+    public $SnapShotType;
+
+    /**
+     * @var string 备份开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 备份结束时间
+     */
+    public $EndTime;
+
+    /**
+     * @var array 备份文件名，模糊查询
+     */
+    public $FileNames;
+
+    /**
+     * @var array 备份备注名，模糊查询
+     */
+    public $BackupNames;
+
+    /**
      * @param string $ClusterId 集群ID
-     * @param integer $Limit 备份文件列表偏移
-     * @param integer $Offset 备份文件列表起始
+     * @param integer $Limit 备份文件列表大小，取值范围(0,100]
+     * @param integer $Offset 备份文件列表偏移，取值范围[0,INF)
      * @param string $DbType 数据库类型，取值范围: 
 <li> MYSQL </li>
+     * @param array $BackupIds 备份ID
+     * @param string $BackupType 备份类型，可选值：snapshot，快照备份； logic，逻辑备份
+     * @param string $BackupMethod 备份方式，可选值：auto，自动备份；manual，手动备
+     * @param string $SnapShotType 快照类型，可选值：full，全量；increment，增量
+     * @param string $StartTime 备份开始时间
+     * @param string $EndTime 备份结束时间
+     * @param array $FileNames 备份文件名，模糊查询
+     * @param array $BackupNames 备份备注名，模糊查询
      */
     function __construct()
     {
@@ -88,6 +152,38 @@ class DescribeBackupListRequest extends AbstractModel
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
             $this->DbType = $param["DbType"];
+        }
+
+        if (array_key_exists("BackupIds",$param) and $param["BackupIds"] !== null) {
+            $this->BackupIds = $param["BackupIds"];
+        }
+
+        if (array_key_exists("BackupType",$param) and $param["BackupType"] !== null) {
+            $this->BackupType = $param["BackupType"];
+        }
+
+        if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
+            $this->BackupMethod = $param["BackupMethod"];
+        }
+
+        if (array_key_exists("SnapShotType",$param) and $param["SnapShotType"] !== null) {
+            $this->SnapShotType = $param["SnapShotType"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("FileNames",$param) and $param["FileNames"] !== null) {
+            $this->FileNames = $param["FileNames"];
+        }
+
+        if (array_key_exists("BackupNames",$param) and $param["BackupNames"] !== null) {
+            $this->BackupNames = $param["BackupNames"];
         }
     }
 }

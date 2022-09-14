@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusiveGatewayBandwidth(integer $ExclusiveGatewayBandwidth) 设置独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRestrictState() 获取NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRestrictState(string $RestrictState) 设置NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatGateway extends AbstractModel
 {
@@ -174,6 +178,12 @@ class NatGateway extends AbstractModel
     public $ExclusiveGatewayBandwidth;
 
     /**
+     * @var string NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RestrictState;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
@@ -199,6 +209,8 @@ class NatGateway extends AbstractModel
      * @param boolean $IsExclusive 是否独享型NAT。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExclusiveGatewayBandwidth 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RestrictState NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -304,6 +316,10 @@ class NatGateway extends AbstractModel
 
         if (array_key_exists("ExclusiveGatewayBandwidth",$param) and $param["ExclusiveGatewayBandwidth"] !== null) {
             $this->ExclusiveGatewayBandwidth = $param["ExclusiveGatewayBandwidth"];
+        }
+
+        if (array_key_exists("RestrictState",$param) and $param["RestrictState"] !== null) {
+            $this->RestrictState = $param["RestrictState"];
         }
     }
 }

@@ -38,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
 2：仅录制视频流，
  * @method SubscribeStreamUserIds getSubscribeStreamUserIds() 获取指定订阅流白名单或者黑名单。
  * @method void setSubscribeStreamUserIds(SubscribeStreamUserIds $SubscribeStreamUserIds) 设置指定订阅流白名单或者黑名单。
- * @method integer getOutputFormat() 获取输出文件的格式，上传到云点播时此参数无效。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）
- * @method void setOutputFormat(integer $OutputFormat) 设置输出文件的格式，上传到云点播时此参数无效。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）
+ * @method integer getOutputFormat() 获取输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
+ * @method void setOutputFormat(integer $OutputFormat) 设置输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
+ * @method integer getAvMerge() 获取单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+ * @method void setAvMerge(integer $AvMerge) 设置单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
  */
 class RecordParams extends AbstractModel
 {
@@ -69,9 +71,14 @@ class RecordParams extends AbstractModel
     public $SubscribeStreamUserIds;
 
     /**
-     * @var integer 输出文件的格式，上传到云点播时此参数无效。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）
+     * @var integer 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
      */
     public $OutputFormat;
+
+    /**
+     * @var integer 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
+     */
+    public $AvMerge;
 
     /**
      * @param integer $RecordMode 录制模式：
@@ -83,7 +90,8 @@ class RecordParams extends AbstractModel
 1：仅录制音频流；
 2：仅录制视频流，
      * @param SubscribeStreamUserIds $SubscribeStreamUserIds 指定订阅流白名单或者黑名单。
-     * @param integer $OutputFormat 输出文件的格式，上传到云点播时此参数无效。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）
+     * @param integer $OutputFormat 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
+     * @param integer $AvMerge 单流录制模式下，用户的音视频是否合并，0：单流音视频不合并（默认）。1：单流音视频合并成一个ts。混流录制此参数无需设置，默认音视频合并。
      */
     function __construct()
     {
@@ -117,6 +125,10 @@ class RecordParams extends AbstractModel
 
         if (array_key_exists("OutputFormat",$param) and $param["OutputFormat"] !== null) {
             $this->OutputFormat = $param["OutputFormat"];
+        }
+
+        if (array_key_exists("AvMerge",$param) and $param["AvMerge"] !== null) {
+            $this->AvMerge = $param["AvMerge"];
         }
     }
 }

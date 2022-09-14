@@ -14,30 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBZoneConfig返回参数结构体
+ * GetDevices返回参数结构体
  *
- * @method integer getTotalCount() 获取可售卖地域配置数量
- * @method void setTotalCount(integer $TotalCount) 设置可售卖地域配置数量
- * @method array getItems() 获取可售卖地域配置详情
- * @method void setItems(array $Items) 设置可售卖地域配置详情
+ * @method array getDeviceInfos() 获取设备信息列表
+ * @method void setDeviceInfos(array $DeviceInfos) 设置设备信息列表
+ * @method integer getLength() 获取设备总记录条数
+ * @method void setLength(integer $Length) 设置设备总记录条数
+ * @method integer getTotalPage() 获取总页数
+ * @method void setTotalPage(integer $TotalPage) 设置总页数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDBZoneConfigResponse extends AbstractModel
+class GetDevicesResponse extends AbstractModel
 {
     /**
-     * @var integer 可售卖地域配置数量
+     * @var array 设备信息列表
      */
-    public $TotalCount;
+    public $DeviceInfos;
 
     /**
-     * @var array 可售卖地域配置详情
+     * @var integer 设备总记录条数
      */
-    public $Items;
+    public $Length;
+
+    /**
+     * @var integer 总页数
+     */
+    public $TotalPage;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeDBZoneConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 可售卖地域配置数量
-     * @param array $Items 可售卖地域配置详情
+     * @param array $DeviceInfos 设备信息列表
+     * @param integer $Length 设备总记录条数
+     * @param integer $TotalPage 总页数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +70,21 @@ class DescribeDBZoneConfigResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("DeviceInfos",$param) and $param["DeviceInfos"] !== null) {
+            $this->DeviceInfos = [];
+            foreach ($param["DeviceInfos"] as $key => $value){
+                $obj = new DeviceBaseInfo();
+                $obj->deserialize($value);
+                array_push($this->DeviceInfos, $obj);
+            }
         }
 
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new RegionSellConf();
-                $obj->deserialize($value);
-                array_push($this->Items, $obj);
-            }
+        if (array_key_exists("Length",$param) and $param["Length"] !== null) {
+            $this->Length = $param["Length"];
+        }
+
+        if (array_key_exists("TotalPage",$param) and $param["TotalPage"] !== null) {
+            $this->TotalPage = $param["TotalPage"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

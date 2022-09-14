@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) 设置任务流上下文，任务完成回调时透传。
  * @method string getSourceContext() 获取上传上下文，上传完成回调时透传。
  * @method void setSourceContext(string $SourceContext) 设置上传上下文，上传完成回调时透传。
+ * @method integer getMediaType() 获取上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+ * @method void setMediaType(integer $MediaType) 设置上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
  */
 class TencentVod extends AbstractModel
 {
@@ -76,6 +78,11 @@ class TencentVod extends AbstractModel
     public $SourceContext;
 
     /**
+     * @var integer 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+     */
+    public $MediaType;
+
+    /**
      * @param string $Procedure 媒体后续任务处理操作，即完成媒体上传后，可自动发起任务流操作。参数值为任务流模板名，云点播支持 创建任务流模板 并为模板命名。
      * @param integer $ExpireTime 媒体文件过期时间，为当前时间的绝对过期时间；保存一天，就填"86400"，永久保存就填"0"，默认永久保存。
      * @param string $StorageRegion 指定上传园区，仅适用于对上传地域有特殊需求的用户。
@@ -84,6 +91,7 @@ class TencentVod extends AbstractModel
      * @param integer $SubAppId 点播 子应用 ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param string $SessionContext 任务流上下文，任务完成回调时透传。
      * @param string $SourceContext 上传上下文，上传完成回调时透传。
+     * @param integer $MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ class TencentVod extends AbstractModel
 
         if (array_key_exists("SourceContext",$param) and $param["SourceContext"] !== null) {
             $this->SourceContext = $param["SourceContext"];
+        }
+
+        if (array_key_exists("MediaType",$param) and $param["MediaType"] !== null) {
+            $this->MediaType = $param["MediaType"];
         }
     }
 }

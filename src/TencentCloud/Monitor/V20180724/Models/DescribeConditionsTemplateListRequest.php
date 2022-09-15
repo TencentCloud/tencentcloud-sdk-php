@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页参数，页偏移量，从0开始计数，默认0
  * @method string getUpdateTimeOrder() 获取指定按更新时间的排序方式，asc=升序, desc=降序
  * @method void setUpdateTimeOrder(string $UpdateTimeOrder) 设置指定按更新时间的排序方式，asc=升序, desc=降序
+ * @method string getPolicyCountOrder() 获取指定按绑定策略数目的排序方式，asc=升序, desc=降序
+ * @method void setPolicyCountOrder(string $PolicyCountOrder) 设置指定按绑定策略数目的排序方式，asc=升序, desc=降序
  */
 class DescribeConditionsTemplateListRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeConditionsTemplateListRequest extends AbstractModel
     public $UpdateTimeOrder;
 
     /**
+     * @var string 指定按绑定策略数目的排序方式，asc=升序, desc=降序
+     */
+    public $PolicyCountOrder;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param string $ViewName 视图名，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得。对于云产品监控，取接口出参的 QceNamespacesNew.N.Id，例如 cvm_device
      * @param string $GroupName 根据触发条件模板名称过滤查询
@@ -80,6 +87,7 @@ class DescribeConditionsTemplateListRequest extends AbstractModel
      * @param integer $Limit 分页参数，每页返回的数量，取值1~100，默认20
      * @param integer $Offset 分页参数，页偏移量，从0开始计数，默认0
      * @param string $UpdateTimeOrder 指定按更新时间的排序方式，asc=升序, desc=降序
+     * @param string $PolicyCountOrder 指定按绑定策略数目的排序方式，asc=升序, desc=降序
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeConditionsTemplateListRequest extends AbstractModel
 
         if (array_key_exists("UpdateTimeOrder",$param) and $param["UpdateTimeOrder"] !== null) {
             $this->UpdateTimeOrder = $param["UpdateTimeOrder"];
+        }
+
+        if (array_key_exists("PolicyCountOrder",$param) and $param["PolicyCountOrder"] !== null) {
+            $this->PolicyCountOrder = $param["PolicyCountOrder"];
         }
     }
 }

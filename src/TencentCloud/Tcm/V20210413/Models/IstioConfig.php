@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisablePolicyChecks(boolean $DisablePolicyChecks) 设置禁用策略检查功能
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnablePilotHTTP() 获取支持HTTP1.0协议
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnablePilotHTTP(boolean $EnablePilotHTTP) 设置支持HTTP1.0协议
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDisableHTTPRetry() 获取禁用HTTP重试策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisableHTTPRetry(boolean $DisableHTTPRetry) 设置禁用HTTP重试策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SmartDNSConfig getSmartDNS() 获取SmartDNS策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSmartDNS(SmartDNSConfig $SmartDNS) 设置SmartDNS策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IstioConfig extends AbstractModel
 {
@@ -48,9 +60,33 @@ class IstioConfig extends AbstractModel
     public $DisablePolicyChecks;
 
     /**
+     * @var boolean 支持HTTP1.0协议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnablePilotHTTP;
+
+    /**
+     * @var boolean 禁用HTTP重试策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisableHTTPRetry;
+
+    /**
+     * @var SmartDNSConfig SmartDNS策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SmartDNS;
+
+    /**
      * @param string $OutboundTrafficPolicy 外部流量策略
      * @param TracingConfig $Tracing 调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置）
      * @param boolean $DisablePolicyChecks 禁用策略检查功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnablePilotHTTP 支持HTTP1.0协议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DisableHTTPRetry 禁用HTTP重试策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartDNSConfig $SmartDNS SmartDNS策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -77,6 +113,19 @@ class IstioConfig extends AbstractModel
 
         if (array_key_exists("DisablePolicyChecks",$param) and $param["DisablePolicyChecks"] !== null) {
             $this->DisablePolicyChecks = $param["DisablePolicyChecks"];
+        }
+
+        if (array_key_exists("EnablePilotHTTP",$param) and $param["EnablePilotHTTP"] !== null) {
+            $this->EnablePilotHTTP = $param["EnablePilotHTTP"];
+        }
+
+        if (array_key_exists("DisableHTTPRetry",$param) and $param["DisableHTTPRetry"] !== null) {
+            $this->DisableHTTPRetry = $param["DisableHTTPRetry"];
+        }
+
+        if (array_key_exists("SmartDNS",$param) and $param["SmartDNS"] !== null) {
+            $this->SmartDNS = new SmartDNSConfig();
+            $this->SmartDNS->deserialize($param["SmartDNS"]);
         }
     }
 }

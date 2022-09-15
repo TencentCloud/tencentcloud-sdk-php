@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContainer() 获取封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
  * @method void setContainer(string $Container) 设置封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+ * @method string getType() 获取剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+ * @method void setType(string $Type) 设置剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
  */
 class EditMediaOutputConfig extends AbstractModel
 {
@@ -31,7 +33,13 @@ class EditMediaOutputConfig extends AbstractModel
     public $Container;
 
     /**
+     * @var string 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+     */
+    public $Type;
+
+    /**
      * @param string $Container 封装格式，可选值：mp4、hls、mov、flv、avi。默认是 mp4。
+     * @param string $Type 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class EditMediaOutputConfig extends AbstractModel
         }
         if (array_key_exists("Container",$param) and $param["Container"] !== null) {
             $this->Container = $param["Container"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

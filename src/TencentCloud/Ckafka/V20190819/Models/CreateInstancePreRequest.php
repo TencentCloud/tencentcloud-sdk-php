@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceName() 获取实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
  * @method void setInstanceName(string $InstanceName) 设置实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method integer getZoneId() 获取可用区
- * @method void setZoneId(integer $ZoneId) 设置可用区
+ * @method integer getZoneId() 获取可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
+ * @method void setZoneId(integer $ZoneId) 设置可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
  * @method string getPeriod() 获取预付费购买时长，例如 "1m",就是一个月
  * @method void setPeriod(string $Period) 设置预付费购买时长，例如 "1m",就是一个月
  * @method integer getInstanceType() 获取实例规格说明 专业版实例[所有规格]填写1.
@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) 设置磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
  * @method boolean getMultiZoneFlag() 获取跨可用区，zoneIds必填
  * @method void setMultiZoneFlag(boolean $MultiZoneFlag) 设置跨可用区，zoneIds必填
- * @method array getZoneIds() 获取可用区列表
- * @method void setZoneIds(array $ZoneIds) 设置可用区列表
+ * @method array getZoneIds() 获取可用区列表，购买多可用区实例时为必填项
+ * @method void setZoneIds(array $ZoneIds) 设置可用区列表，购买多可用区实例时为必填项
  */
 class CreateInstancePreRequest extends AbstractModel
 {
@@ -67,7 +67,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer 可用区
+     * @var integer 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
      */
     public $ZoneId;
 
@@ -148,13 +148,13 @@ class CreateInstancePreRequest extends AbstractModel
     public $MultiZoneFlag;
 
     /**
-     * @var array 可用区列表
+     * @var array 可用区列表，购买多可用区实例时为必填项
      */
     public $ZoneIds;
 
     /**
      * @param string $InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param integer $ZoneId 可用区
+     * @param integer $ZoneId 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
      * @param string $Period 预付费购买时长，例如 "1m",就是一个月
      * @param integer $InstanceType 实例规格说明 专业版实例[所有规格]填写1.
 标准版实例 ([入门型]填写1，[标准型]填写2，[进阶型]填写3，[容量型]填写4，[高阶型1]填写5，[高阶性2]填写6,[高阶型3]填写7,[高阶型4]填写8，[独占型]填写9。
@@ -171,7 +171,7 @@ class CreateInstancePreRequest extends AbstractModel
      * @param array $Tags 标签
      * @param string $DiskType 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
      * @param boolean $MultiZoneFlag 跨可用区，zoneIds必填
-     * @param array $ZoneIds 可用区列表
+     * @param array $ZoneIds 可用区列表，购买多可用区实例时为必填项
      */
     function __construct()
     {

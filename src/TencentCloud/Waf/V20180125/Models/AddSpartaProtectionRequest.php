@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAnycast(integer $Anycast) 设置anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method array getWeights() 获取src权重
  * @method void setWeights(array $Weights) 设置src权重
+ * @method integer getActiveCheck() 获取是否开启主动健康检测，1表示开启，0表示不开启
+ * @method void setActiveCheck(integer $ActiveCheck) 设置是否开启主动健康检测，1表示开启，0表示不开启
+ * @method integer getTLSVersion() 获取TLS版本信息
+ * @method void setTLSVersion(integer $TLSVersion) 设置TLS版本信息
+ * @method array getCiphers() 获取加密套件信息
+ * @method void setCiphers(array $Ciphers) 设置加密套件信息
+ * @method integer getCipherTemplate() 获取0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+ * @method void setCipherTemplate(integer $CipherTemplate) 设置0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
  */
 class AddSpartaProtectionRequest extends AbstractModel
 {
@@ -192,6 +200,26 @@ class AddSpartaProtectionRequest extends AbstractModel
     public $Weights;
 
     /**
+     * @var integer 是否开启主动健康检测，1表示开启，0表示不开启
+     */
+    public $ActiveCheck;
+
+    /**
+     * @var integer TLS版本信息
+     */
+    public $TLSVersion;
+
+    /**
+     * @var array 加密套件信息
+     */
+    public $Ciphers;
+
+    /**
+     * @var integer 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+     */
+    public $CipherTemplate;
+
+    /**
      * @param string $Domain 需要防御的域名
      * @param integer $CertType 证书类型，0表示没有证书，CertType=1表示自有证书,2 为托管证书
      * @param integer $IsCdn 表示是否开启了CDN代理，1：有部署CDN，0：未部署CDN
@@ -216,6 +244,10 @@ class AddSpartaProtectionRequest extends AbstractModel
      * @param string $InstanceID 实例id，上线之后带上此字段
      * @param integer $Anycast anycast IP类型开关： 0 普通IP 1 Anycast IP
      * @param array $Weights src权重
+     * @param integer $ActiveCheck 是否开启主动健康检测，1表示开启，0表示不开启
+     * @param integer $TLSVersion TLS版本信息
+     * @param array $Ciphers 加密套件信息
+     * @param integer $CipherTemplate 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
      */
     function __construct()
     {
@@ -329,6 +361,22 @@ class AddSpartaProtectionRequest extends AbstractModel
 
         if (array_key_exists("Weights",$param) and $param["Weights"] !== null) {
             $this->Weights = $param["Weights"];
+        }
+
+        if (array_key_exists("ActiveCheck",$param) and $param["ActiveCheck"] !== null) {
+            $this->ActiveCheck = $param["ActiveCheck"];
+        }
+
+        if (array_key_exists("TLSVersion",$param) and $param["TLSVersion"] !== null) {
+            $this->TLSVersion = $param["TLSVersion"];
+        }
+
+        if (array_key_exists("Ciphers",$param) and $param["Ciphers"] !== null) {
+            $this->Ciphers = $param["Ciphers"];
+        }
+
+        if (array_key_exists("CipherTemplate",$param) and $param["CipherTemplate"] !== null) {
+            $this->CipherTemplate = $param["CipherTemplate"];
         }
     }
 }

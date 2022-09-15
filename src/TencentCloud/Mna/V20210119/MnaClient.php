@@ -30,6 +30,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\DescribeQosResponse DescribeQos(Models\DescribeQosRequest $req) 获取Qos加速状态
  * @method Models\GetDeviceResponse GetDevice(Models\GetDeviceRequest $req) 通过指定设备的ID查找设备详细信息
  * @method Models\GetDevicesResponse GetDevices(Models\GetDevicesRequest $req) 获取设备信息列表
+ * @method Models\GetFlowStatisticResponse GetFlowStatistic(Models\GetFlowStatisticRequest $req) 获取指定设备Id，指定时间点数据流量使用情况
  * @method Models\GetStatisticDataResponse GetStatisticData(Models\GetStatisticDataRequest $req) 在用量统计页面下载流量数据
  * @method Models\UpdateDeviceResponse UpdateDevice(Models\UpdateDeviceRequest $req) 更新设备信息
  */

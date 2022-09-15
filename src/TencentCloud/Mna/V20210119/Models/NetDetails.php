@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Mna\V20210119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSyncAssetStatus请求参数结构体
+ * 网络详细信息
  *
- * @method integer getType() 获取0: 互联网防火墙开关，1：vpc 防火墙开关
- * @method void setType(integer $Type) 设置0: 互联网防火墙开关，1：vpc 防火墙开关
+ * @method string getTime() 获取时间点，单位：s
+ * @method void setTime(string $Time) 设置时间点，单位：s
+ * @method float getCurrent() 获取流量值（bit）
+ * @method void setCurrent(float $Current) 设置流量值（bit）
  */
-class DescribeSyncAssetStatusRequest extends AbstractModel
+class NetDetails extends AbstractModel
 {
     /**
-     * @var integer 0: 互联网防火墙开关，1：vpc 防火墙开关
+     * @var string 时间点，单位：s
      */
-    public $Type;
+    public $Time;
 
     /**
-     * @param integer $Type 0: 互联网防火墙开关，1：vpc 防火墙开关
+     * @var float 流量值（bit）
+     */
+    public $Current;
+
+    /**
+     * @param string $Time 时间点，单位：s
+     * @param float $Current 流量值（bit）
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeSyncAssetStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
+            $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("Current",$param) and $param["Current"] !== null) {
+            $this->Current = $param["Current"];
         }
     }
 }

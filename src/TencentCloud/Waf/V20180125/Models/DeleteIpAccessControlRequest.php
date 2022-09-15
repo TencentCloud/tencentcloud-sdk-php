@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItems(array $Items) 设置删除的ip数组
  * @method boolean getDeleteAll() 获取删除对应的域名下的所有黑/白IP名额单
  * @method void setDeleteAll(boolean $DeleteAll) 设置删除对应的域名下的所有黑/白IP名额单
+ * @method string getSourceType() 获取是否为多域名黑白名单
+ * @method void setSourceType(string $SourceType) 设置是否为多域名黑白名单
  */
 class DeleteIpAccessControlRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteIpAccessControlRequest extends AbstractModel
     public $DeleteAll;
 
     /**
+     * @var string 是否为多域名黑白名单
+     */
+    public $SourceType;
+
+    /**
      * @param string $Domain 域名
      * @param array $Items 删除的ip数组
      * @param boolean $DeleteAll 删除对应的域名下的所有黑/白IP名额单
+     * @param string $SourceType 是否为多域名黑白名单
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("DeleteAll",$param) and $param["DeleteAll"] !== null) {
             $this->DeleteAll = $param["DeleteAll"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
         }
     }
 }

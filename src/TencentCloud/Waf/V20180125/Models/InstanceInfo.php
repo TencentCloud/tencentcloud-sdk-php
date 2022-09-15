@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBotQPS(BotQPS $BotQPS) 设置bot的qps详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getElasticBilling() 获取qps弹性计费上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElasticBilling(integer $ElasticBilling) 设置qps弹性计费上限
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -187,6 +191,12 @@ class InstanceInfo extends AbstractModel
     public $BotQPS;
 
     /**
+     * @var integer qps弹性计费上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElasticBilling;
+
+    /**
      * @param string $InstanceId id
      * @param string $InstanceName name
      * @param string $ResourceIds 资源id
@@ -211,6 +221,8 @@ class InstanceInfo extends AbstractModel
      * @param BotPkg $BotPkg Bot资源包
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BotQPS $BotQPS bot的qps详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ElasticBilling qps弹性计费上限
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -317,6 +329,10 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("BotQPS",$param) and $param["BotQPS"] !== null) {
             $this->BotQPS = new BotQPS();
             $this->BotQPS->deserialize($param["BotQPS"]);
+        }
+
+        if (array_key_exists("ElasticBilling",$param) and $param["ElasticBilling"] !== null) {
+            $this->ElasticBilling = $param["ElasticBilling"];
         }
     }
 }

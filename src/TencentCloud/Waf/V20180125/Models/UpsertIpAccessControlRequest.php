@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItems(array $Items) 设置ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳
  * @method string getEdition() 获取clb-waf或者sparta-waf
  * @method void setEdition(string $Edition) 设置clb-waf或者sparta-waf
+ * @method string getSourceType() 获取是否为多域名黑白名单
+ * @method void setSourceType(string $SourceType) 设置是否为多域名黑白名单
  */
 class UpsertIpAccessControlRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class UpsertIpAccessControlRequest extends AbstractModel
     public $Edition;
 
     /**
+     * @var string 是否为多域名黑白名单
+     */
+    public $SourceType;
+
+    /**
      * @param string $Domain 域名
      * @param array $Items ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳
      * @param string $Edition clb-waf或者sparta-waf
+     * @param string $SourceType 是否为多域名黑白名单
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class UpsertIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("Edition",$param) and $param["Edition"] !== null) {
             $this->Edition = $param["Edition"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
         }
     }
 }

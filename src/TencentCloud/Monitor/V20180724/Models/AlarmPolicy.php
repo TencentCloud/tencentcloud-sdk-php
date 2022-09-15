@@ -146,6 +146,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterDimensionsParam(string $FilterDimensionsParam) 设置策略关联的过滤维度信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsOneClick() 获取是否为一键告警策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsOneClick(integer $IsOneClick) 设置是否为一键告警策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOneClickStatus() 获取一键告警策略是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOneClickStatus(integer $OneClickStatus) 设置一键告警策略是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAdvancedMetricNumber() 获取高级指标数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvancedMetricNumber(integer $AdvancedMetricNumber) 设置高级指标数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -333,6 +345,24 @@ class AlarmPolicy extends AbstractModel
     public $FilterDimensionsParam;
 
     /**
+     * @var integer 是否为一键告警策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsOneClick;
+
+    /**
+     * @var integer 一键告警策略是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OneClickStatus;
+
+    /**
+     * @var integer 高级指标数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvancedMetricNumber;
+
+    /**
      * @param string $PolicyId 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 告警策略名称
@@ -395,6 +425,12 @@ class AlarmPolicy extends AbstractModel
      * @param array $TagInstances 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FilterDimensionsParam 策略关联的过滤维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsOneClick 是否为一键告警策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $OneClickStatus 一键告警策略是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AdvancedMetricNumber 高级指标数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -546,6 +582,18 @@ class AlarmPolicy extends AbstractModel
 
         if (array_key_exists("FilterDimensionsParam",$param) and $param["FilterDimensionsParam"] !== null) {
             $this->FilterDimensionsParam = $param["FilterDimensionsParam"];
+        }
+
+        if (array_key_exists("IsOneClick",$param) and $param["IsOneClick"] !== null) {
+            $this->IsOneClick = $param["IsOneClick"];
+        }
+
+        if (array_key_exists("OneClickStatus",$param) and $param["OneClickStatus"] !== null) {
+            $this->OneClickStatus = $param["OneClickStatus"];
+        }
+
+        if (array_key_exists("AdvancedMetricNumber",$param) and $param["AdvancedMetricNumber"] !== null) {
+            $this->AdvancedMetricNumber = $param["AdvancedMetricNumber"];
         }
     }
 }

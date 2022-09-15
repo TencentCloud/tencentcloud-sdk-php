@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(integer $Type) 设置指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
+ * @method string getHsmClusterId() 获取KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+ * @method void setHsmClusterId(string $HsmClusterId) 设置KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
  */
 class CreateKeyRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateKeyRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+     */
+    public $HsmClusterId;
+
+    /**
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名， 不可为空，1-60个字母数字 - _ 的组合，首字符必须为字母或者数字。以 kms- 作为前缀的用于云产品使用，Alias 不可重复。
      * @param string $Description CMK 的描述，最大1024字节
      * @param string $KeyUsage 指定key的用途，默认为  "ENCRYPT_DECRYPT" 表示创建对称加解密密钥，其它支持用途 “ASYMMETRIC_DECRYPT_RSA_2048” 表示创建用于加解密的RSA2048非对称密钥，“ASYMMETRIC_DECRYPT_SM2” 表示创建用于加解密的SM2非对称密钥，“ASYMMETRIC_SIGN_VERIFY_SM2” 表示创建用于签名验签的SM2非对称密钥，“ASYMMETRIC_SIGN_VERIFY_ECC” 表示创建用于签名验签的ECC非对称密钥，“ASYMMETRIC_SIGN_VERIFY_RSA_2048” 表示创建用于签名验签的RSA_2048非对称密钥，“ASYMMETRIC_SIGN_VERIFY_ECDSA384”表示创建用于签名验签的 ECDSA384 非对称秘钥。完整的秘钥用途与算法支持列表可通过 ListAlgorithms 接口获取。
      * @param integer $Type 指定key类型，默认为1，1表示默认类型，由KMS创建CMK密钥，2 表示EXTERNAL 类型，该类型需要用户导入密钥材料，参考 GetParametersForImport 和 ImportKeyMaterial 接口
      * @param array $Tags 标签列表
+     * @param string $HsmClusterId KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class CreateKeyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
+            $this->HsmClusterId = $param["HsmClusterId"];
         }
     }
 }

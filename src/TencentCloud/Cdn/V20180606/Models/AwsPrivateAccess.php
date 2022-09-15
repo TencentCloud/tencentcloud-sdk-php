@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretKey(string $SecretKey) 设置密钥。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegion() 获取地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBucket() 获取Bucketname
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBucket(string $Bucket) 设置Bucketname
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AwsPrivateAccess extends AbstractModel
 {
@@ -51,10 +59,26 @@ class AwsPrivateAccess extends AbstractModel
     public $SecretKey;
 
     /**
+     * @var string 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
+     * @var string Bucketname
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Bucket;
+
+    /**
      * @param string $Switch 开关，on/off。
      * @param string $AccessKey 访问ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecretKey 密钥。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Bucket Bucketname
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -80,6 +104,14 @@ class AwsPrivateAccess extends AbstractModel
 
         if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
             $this->SecretKey = $param["SecretKey"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
+            $this->Bucket = $param["Bucket"];
         }
     }
 }

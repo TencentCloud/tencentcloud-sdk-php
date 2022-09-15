@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目
  * @method void setLimit(integer $Limit) 设置限制数目
- * @method string getClientType() 获取客户类型：可以为new(新拓)/assign(指定)/old(存量已关联)/old_newchecking(存量-新关联考核中)/old_newnotpass(存量-新关联未达标)/direct(直销)/direct_newopp(直销(新商机))/空
- * @method void setClientType(string $ClientType) 设置客户类型：可以为new(新拓)/assign(指定)/old(存量已关联)/old_newchecking(存量-新关联考核中)/old_newnotpass(存量-新关联未达标)/direct(直销)/direct_newopp(直销(新商机))/空
+ * @method string getClientType() 获取可以为new(自拓)/assign(指派)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
+ * @method void setClientType(string $ClientType) 设置可以为new(自拓)/assign(指派)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
  * @method string getProjectType() 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
  * @method void setProjectType(string $ProjectType) 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
  * @method string getSalesUin() 获取业务员ID
@@ -95,7 +95,7 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 客户类型：可以为new(新拓)/assign(指定)/old(存量已关联)/old_newchecking(存量-新关联考核中)/old_newnotpass(存量-新关联未达标)/direct(直销)/direct_newopp(直销(新商机))/空
+     * @var string 可以为new(自拓)/assign(指派)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
      */
     public $ClientType;
 
@@ -124,7 +124,7 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
      * @param string $ClientRemark 客户备注
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目
-     * @param string $ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量已关联)/old_newchecking(存量-新关联考核中)/old_newnotpass(存量-新关联未达标)/direct(直销)/direct_newopp(直销(新商机))/空
+     * @param string $ClientType 可以为new(自拓)/assign(指派)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
      * @param string $ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      * @param string $SalesUin 业务员ID
      * @param string $SalesName 业务员姓名（模糊查询）

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWeekDays(array $WeekDays) 设置Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
  * @method string getTimePeriod() 获取时间段。
  * @method void setTimePeriod(string $TimePeriod) 设置时间段。
+ * @method integer getBackupStorageDays() 获取全量备份文件保存天数
+ * @method void setBackupStorageDays(integer $BackupStorageDays) 设置全量备份文件保存天数
+ * @method integer getBinlogStorageDays() 获取tendis binlog备份文件保存天数
+ * @method void setBinlogStorageDays(integer $BinlogStorageDays) 设置tendis binlog备份文件保存天数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +51,16 @@ class DescribeAutoBackupConfigResponse extends AbstractModel
     public $TimePeriod;
 
     /**
+     * @var integer 全量备份文件保存天数
+     */
+    public $BackupStorageDays;
+
+    /**
+     * @var integer tendis binlog备份文件保存天数
+     */
+    public $BinlogStorageDays;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +69,8 @@ class DescribeAutoBackupConfigResponse extends AbstractModel
      * @param integer $AutoBackupType 备份类型。自动备份类型： 1 “定时回档”
      * @param array $WeekDays Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
      * @param string $TimePeriod 时间段。
+     * @param integer $BackupStorageDays 全量备份文件保存天数
+     * @param integer $BinlogStorageDays tendis binlog备份文件保存天数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +96,14 @@ class DescribeAutoBackupConfigResponse extends AbstractModel
 
         if (array_key_exists("TimePeriod",$param) and $param["TimePeriod"] !== null) {
             $this->TimePeriod = $param["TimePeriod"];
+        }
+
+        if (array_key_exists("BackupStorageDays",$param) and $param["BackupStorageDays"] !== null) {
+            $this->BackupStorageDays = $param["BackupStorageDays"];
+        }
+
+        if (array_key_exists("BinlogStorageDays",$param) and $param["BinlogStorageDays"] !== null) {
+            $this->BinlogStorageDays = $param["BinlogStorageDays"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

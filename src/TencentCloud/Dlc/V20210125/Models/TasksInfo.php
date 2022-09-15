@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSQL(string $SQL) 设置base64加密后的SQL语句，用";"号分隔每个SQL语句，一次最多提交50个任务。严格按照前后顺序执行
  * @method array getConfig() 获取任务的配置信息，当前仅支持SparkSQLTask任务。
  * @method void setConfig(array $Config) 设置任务的配置信息，当前仅支持SparkSQLTask任务。
+ * @method array getParams() 获取任务的用户自定义参数信息
+ * @method void setParams(array $Params) 设置任务的用户自定义参数信息
  */
 class TasksInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class TasksInfo extends AbstractModel
     public $Config;
 
     /**
+     * @var array 任务的用户自定义参数信息
+     */
+    public $Params;
+
+    /**
      * @param string $TaskType 任务类型，SQLTask：SQL查询任务。SparkSQLTask：Spark SQL查询任务
      * @param string $FailureTolerance 容错策略。Proceed：前面任务出错/取消后继续执行后面的任务。Terminate：前面的任务出错/取消之后终止后面任务的执行，后面的任务全部标记为已取消。
      * @param string $SQL base64加密后的SQL语句，用";"号分隔每个SQL语句，一次最多提交50个任务。严格按照前后顺序执行
      * @param array $Config 任务的配置信息，当前仅支持SparkSQLTask任务。
+     * @param array $Params 任务的用户自定义参数信息
      */
     function __construct()
     {
@@ -88,6 +96,15 @@ class TasksInfo extends AbstractModel
                 $obj = new KVPair();
                 $obj->deserialize($value);
                 array_push($this->Config, $obj);
+            }
+        }
+
+        if (array_key_exists("Params",$param) and $param["Params"] !== null) {
+            $this->Params = [];
+            foreach ($param["Params"] as $key => $value){
+                $obj = new KVPair();
+                $obj->deserialize($value);
+                array_push($this->Params, $obj);
             }
         }
     }

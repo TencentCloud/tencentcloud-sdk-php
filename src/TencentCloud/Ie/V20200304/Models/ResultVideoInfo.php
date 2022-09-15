@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置画面高度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFps() 获取视频帧率
+ * @method integer getFps() 获取视频帧率，如果高于原始帧率，部分服务将无效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFps(integer $Fps) 设置视频帧率
+ * @method void setFps(integer $Fps) 设置视频帧率，如果高于原始帧率，部分服务将无效。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResultVideoInfo extends AbstractModel
@@ -68,7 +68,7 @@ class ResultVideoInfo extends AbstractModel
     public $Height;
 
     /**
-     * @var integer 视频帧率
+     * @var integer 视频帧率，如果高于原始帧率，部分服务将无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fps;
@@ -82,7 +82,7 @@ class ResultVideoInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 画面高度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Fps 视频帧率
+     * @param integer $Fps 视频帧率，如果高于原始帧率，部分服务将无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

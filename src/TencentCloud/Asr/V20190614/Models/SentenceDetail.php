@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpeechSpeed(float $SpeechSpeed) 设置单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSpeakerId() 获取声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpeakerId(integer $SpeakerId) 设置声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SentenceDetail extends AbstractModel
 {
@@ -94,6 +98,12 @@ class SentenceDetail extends AbstractModel
     public $SpeechSpeed;
 
     /**
+     * @var integer 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpeakerId;
+
+    /**
      * @param string $FinalSentence 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SliceSentence 单句中间识别结果，使用空格拆分为多个词
@@ -107,6 +117,8 @@ class SentenceDetail extends AbstractModel
      * @param array $Words 单句中词详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $SpeechSpeed 单句语速，单位：字数/秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SpeakerId 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +165,10 @@ class SentenceDetail extends AbstractModel
 
         if (array_key_exists("SpeechSpeed",$param) and $param["SpeechSpeed"] !== null) {
             $this->SpeechSpeed = $param["SpeechSpeed"];
+        }
+
+        if (array_key_exists("SpeakerId",$param) and $param["SpeakerId"] !== null) {
+            $this->SpeakerId = $param["SpeakerId"];
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置识别出的字段名称
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段name对应的字符串结果。
+ * @method integer getRow() 获取字段属于第几行，用于相同字段的排版，如发票明细表格项目，普通字段使用默认值为-1，表示无列排版。
+ * @method void setRow(integer $Row) 设置字段属于第几行，用于相同字段的排版，如发票明细表格项目，普通字段使用默认值为-1，表示无列排版。
  */
 class SingleInvoiceInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SingleInvoiceInfo extends AbstractModel
     public $Value;
 
     /**
+     * @var integer 字段属于第几行，用于相同字段的排版，如发票明细表格项目，普通字段使用默认值为-1，表示无列排版。
+     */
+    public $Row;
+
+    /**
      * @param string $Name 识别出的字段名称
      * @param string $Value 识别出的字段名称对应的值，也就是字段name对应的字符串结果。
+     * @param integer $Row 字段属于第几行，用于相同字段的排版，如发票明细表格项目，普通字段使用默认值为-1，表示无列排版。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SingleInvoiceInfo extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Row",$param) and $param["Row"] !== null) {
+            $this->Row = $param["Row"];
         }
     }
 }

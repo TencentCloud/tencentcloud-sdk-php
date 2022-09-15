@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) 设置媒体文件 ID。
  * @method string getProcedureName() 获取[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字。
  * @method void setProcedureName(string $ProcedureName) 设置[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method integer getTasksPriority() 获取任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
  * @method void setTasksPriority(integer $TasksPriority) 设置任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
  * @method string getTasksNotifyMode() 获取任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
@@ -34,8 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getExtInfo() 获取保留字段，特殊用途时使用。
  * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class ProcessMediaByProcedureRequest extends AbstractModel
 {
@@ -48,6 +48,11 @@ class ProcessMediaByProcedureRequest extends AbstractModel
      * @var string [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字。
      */
     public $ProcedureName;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var integer 任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
@@ -75,19 +80,14 @@ class ProcessMediaByProcedureRequest extends AbstractModel
     public $ExtInfo;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $FileId 媒体文件 ID。
      * @param string $ProcedureName [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param integer $TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
      * @param string $TasksNotifyMode 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $ExtInfo 保留字段，特殊用途时使用。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -110,6 +110,10 @@ class ProcessMediaByProcedureRequest extends AbstractModel
             $this->ProcedureName = $param["ProcedureName"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("TasksPriority",$param) and $param["TasksPriority"] !== null) {
             $this->TasksPriority = $param["TasksPriority"];
         }
@@ -128,10 +132,6 @@ class ProcessMediaByProcedureRequest extends AbstractModel
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
             $this->ExtInfo = $param["ExtInfo"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

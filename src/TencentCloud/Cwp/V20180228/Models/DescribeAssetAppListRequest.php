@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetAppList请求参数结构体
  *
- * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
- * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method string getQuuid() 获取查询指定Quuid主机的信息
+ * @method void setQuuid(string $Quuid) 设置查询指定Quuid主机的信息
  * @method array getFilters() 获取过滤条件。
 <li>AppName- string - 是否必填：否 - 应用名搜索</li>
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
@@ -54,24 +52,21 @@ use TencentCloud\Common\AbstractModel;
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
- * @method string getBy() 获取排序方式：ProcessCount
- * @method void setBy(string $By) 设置排序方式：ProcessCount
+ * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
+ * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
  * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
- * @method string getQuuid() 获取查询指定Quuid主机的信息
- * @method void setQuuid(string $Quuid) 设置查询指定Quuid主机的信息
+ * @method string getBy() 获取排序方式：[FirstTime|ProcessCount]
+ * @method void setBy(string $By) 设置排序方式：[FirstTime|ProcessCount]
  */
 class DescribeAssetAppListRequest extends AbstractModel
 {
     /**
-     * @var integer 需要返回的数量，默认为10，最大值为100
+     * @var string 查询指定Quuid主机的信息
      */
-    public $Limit;
-
-    /**
-     * @var integer 偏移量，默认为0。
-     */
-    public $Offset;
+    public $Quuid;
 
     /**
      * @var array 过滤条件。
@@ -93,9 +88,14 @@ class DescribeAssetAppListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 排序方式：ProcessCount
+     * @var integer 需要返回的数量，默认为10，最大值为100
      */
-    public $By;
+    public $Limit;
+
+    /**
+     * @var integer 偏移量，默认为0。
+     */
+    public $Offset;
 
     /**
      * @var string 排序方式，asc升序 或 desc降序
@@ -103,13 +103,12 @@ class DescribeAssetAppListRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string 查询指定Quuid主机的信息
+     * @var string 排序方式：[FirstTime|ProcessCount]
      */
-    public $Quuid;
+    public $By;
 
     /**
-     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
-     * @param integer $Offset 偏移量，默认为0。
+     * @param string $Quuid 查询指定Quuid主机的信息
      * @param array $Filters 过滤条件。
 <li>AppName- string - 是否必填：否 - 应用名搜索</li>
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
@@ -125,9 +124,10 @@ class DescribeAssetAppListRequest extends AbstractModel
 99:其他</li>
 <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
-     * @param string $By 排序方式：ProcessCount
+     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
+     * @param integer $Offset 偏移量，默认为0。
      * @param string $Order 排序方式，asc升序 或 desc降序
-     * @param string $Quuid 查询指定Quuid主机的信息
+     * @param string $By 排序方式：[FirstTime|ProcessCount]
      */
     function __construct()
     {
@@ -142,12 +142,8 @@ class DescribeAssetAppListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
+            $this->Quuid = $param["Quuid"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
@@ -159,16 +155,20 @@ class DescribeAssetAppListRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("By",$param) and $param["By"] !== null) {
-            $this->By = $param["By"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
         }
 
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

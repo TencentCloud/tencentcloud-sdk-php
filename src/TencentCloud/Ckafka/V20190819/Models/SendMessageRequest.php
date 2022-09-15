@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDataHubId() 获取DataHub接入ID
  * @method void setDataHubId(string $DataHubId) 设置DataHub接入ID
- * @method array getMessage() 获取发送消息内容
- * @method void setMessage(array $Message) 设置发送消息内容
+ * @method array getMessage() 获取发送消息内容(单次请求最多500条)
+ * @method void setMessage(array $Message) 设置发送消息内容(单次请求最多500条)
  */
 class SendMessageRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SendMessageRequest extends AbstractModel
     public $DataHubId;
 
     /**
-     * @var array 发送消息内容
+     * @var array 发送消息内容(单次请求最多500条)
      */
     public $Message;
 
     /**
      * @param string $DataHubId DataHub接入ID
-     * @param array $Message 发送消息内容
+     * @param array $Message 发送消息内容(单次请求最多500条)
      */
     function __construct()
     {

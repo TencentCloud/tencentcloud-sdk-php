@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取希望搜索的人体库ID。
  * @method void setGroupId(string $GroupId) 设置希望搜索的人体库ID。
- * @method Trace getTrace() 获取人体轨迹信息。
- * @method void setTrace(Trace $Trace) 设置人体轨迹信息。
- * @method integer getMaxPersonNum() 获取单张被识别的人体轨迹返回的最相似人员数量。
+ * @method Trace getTrace() 获取人体动作轨迹信息。
+ * @method void setTrace(Trace $Trace) 设置人体动作轨迹信息。
+ * @method integer getMaxPersonNum() 获取单张被识别的人体动作轨迹返回的最相似人员数量。
 默认值为5，最大值为100。
  例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。
- * @method void setMaxPersonNum(integer $MaxPersonNum) 设置单张被识别的人体轨迹返回的最相似人员数量。
+ * @method void setMaxPersonNum(integer $MaxPersonNum) 设置单张被识别的人体动作轨迹返回的最相似人员数量。
 默认值为5，最大值为100。
  例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。
  * @method float getTraceMatchThreshold() 获取出参Score中，只有超过TraceMatchThreshold值的结果才会返回。
@@ -43,12 +43,12 @@ class SearchTraceRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var Trace 人体轨迹信息。
+     * @var Trace 人体动作轨迹信息。
      */
     public $Trace;
 
     /**
-     * @var integer 单张被识别的人体轨迹返回的最相似人员数量。
+     * @var integer 单张被识别的人体动作轨迹返回的最相似人员数量。
 默认值为5，最大值为100。
  例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。
      */
@@ -62,8 +62,8 @@ class SearchTraceRequest extends AbstractModel
 
     /**
      * @param string $GroupId 希望搜索的人体库ID。
-     * @param Trace $Trace 人体轨迹信息。
-     * @param integer $MaxPersonNum 单张被识别的人体轨迹返回的最相似人员数量。
+     * @param Trace $Trace 人体动作轨迹信息。
+     * @param integer $MaxPersonNum 单张被识别的人体动作轨迹返回的最相似人员数量。
 默认值为5，最大值为100。
  例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。
      * @param float $TraceMatchThreshold 出参Score中，只有超过TraceMatchThreshold值的结果才会返回。

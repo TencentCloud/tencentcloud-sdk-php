@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWatermarkTemplates请求参数结构体
  *
- * @method array getDefinitions() 获取水印模板唯一标识过滤条件，数组长度限制：100。
- * @method void setDefinitions(array $Definitions) 设置水印模板唯一标识过滤条件，数组长度限制：100。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getType() 获取水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
 <li>text：文字水印；</li>
@@ -32,21 +32,21 @@ use TencentCloud\Common\AbstractModel;
 <li>svg：SVG 水印。</li>
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
+ * @method array getDefinitions() 获取水印模板唯一标识过滤条件，数组长度限制：100。
+ * @method void setDefinitions(array $Definitions) 设置水印模板唯一标识过滤条件，数组长度限制：100。
  * @method integer getLimit() 获取返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
  * @method void setLimit(integer $Limit) 设置返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class DescribeWatermarkTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 水印模板唯一标识过滤条件，数组长度限制：100。
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
-    public $Definitions;
+    public $SubAppId;
 
     /**
      * @var string 水印类型过滤条件，可选值：
@@ -62,6 +62,11 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array 水印模板唯一标识过滤条件，数组长度限制：100。
+     */
+    public $Definitions;
+
+    /**
      * @var integer 返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
@@ -69,21 +74,16 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
-     * @param array $Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Type 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
 <li>text：文字水印；</li>
 <li>svg：SVG 水印。</li>
      * @param integer $Offset 分页偏移量，默认值：0。
+     * @param array $Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
      * @param integer $Limit 返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -98,8 +98,8 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
-            $this->Definitions = $param["Definitions"];
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
@@ -110,12 +110,12 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
             $this->Offset = $param["Offset"];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
+            $this->Definitions = $param["Definitions"];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

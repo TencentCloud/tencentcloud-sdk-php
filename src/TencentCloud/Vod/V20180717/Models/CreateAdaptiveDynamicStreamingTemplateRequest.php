@@ -21,21 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * CreateAdaptiveDynamicStreamingTemplate请求参数结构体
  *
  * @method string getFormat() 获取自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
  * @method void setFormat(string $Format) 设置自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
  * @method array getStreamInfos() 获取自适应转码输出子流参数信息，最多输出10路子流。
 注意：各个子流的帧率必须保持一致；如果不一致，采用第一个子流的帧率作为输出帧率。
  * @method void setStreamInfos(array $StreamInfos) 设置自适应转码输出子流参数信息，最多输出10路子流。
 注意：各个子流的帧率必须保持一致；如果不一致，采用第一个子流的帧率作为输出帧率。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getName() 获取模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置模板名称，长度限制：64 个字符。
- * @method string getDrmType() 获取DRM方案类型，取值范围：
-<li>SimpleAES。</li>
+ * @method string getDrmType() 获取DRM 方案类型，取值范围：
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
- * @method void setDrmType(string $DrmType) 设置DRM方案类型，取值范围：
-<li>SimpleAES。</li>
+ * @method void setDrmType(string $DrmType) 设置DRM 方案类型，取值范围：
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
+ * @method string getDrmKeyProvider() 获取DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认为 VOD 。
+ * @method void setDrmKeyProvider(string $DrmKeyProvider) 设置DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认为 VOD 。
  * @method integer getDisableHigherVideoBitrate() 获取是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -54,14 +70,13 @@ use TencentCloud\Common\AbstractModel;
 默认为否。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
     /**
      * @var string 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      */
     public $Format;
 
@@ -72,16 +87,31 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $StreamInfos;
 
     /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
+    /**
      * @var string 模板名称，长度限制：64 个字符。
      */
     public $Name;
 
     /**
-     * @var string DRM方案类型，取值范围：
-<li>SimpleAES。</li>
+     * @var string DRM 方案类型，取值范围：
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
      */
     public $DrmType;
+
+    /**
+     * @var string DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认为 VOD 。
+     */
+    public $DrmKeyProvider;
 
     /**
      * @var integer 是否禁止视频低码率转高码率，取值范围：
@@ -105,19 +135,22 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $Format 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      * @param array $StreamInfos 自适应转码输出子流参数信息，最多输出10路子流。
 注意：各个子流的帧率必须保持一致；如果不一致，采用第一个子流的帧率作为输出帧率。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 模板名称，长度限制：64 个字符。
-     * @param string $DrmType DRM方案类型，取值范围：
-<li>SimpleAES。</li>
+     * @param string $DrmType DRM 方案类型，取值范围：
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
 如果取值为空字符串，代表不对视频做 DRM 保护。
+     * @param string $DrmKeyProvider DRM 的密钥提供商，取值范围：
+<li>SDMC：华曦达；</li>
+<li>VOD：云点播。</li>
+默认为 VOD 。
      * @param integer $DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -127,7 +160,6 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 <li>1：是。</li>
 默认为否。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -155,12 +187,20 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
 
         if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
             $this->DrmType = $param["DrmType"];
+        }
+
+        if (array_key_exists("DrmKeyProvider",$param) and $param["DrmKeyProvider"] !== null) {
+            $this->DrmKeyProvider = $param["DrmKeyProvider"];
         }
 
         if (array_key_exists("DisableHigherVideoBitrate",$param) and $param["DisableHigherVideoBitrate"] !== null) {
@@ -173,10 +213,6 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

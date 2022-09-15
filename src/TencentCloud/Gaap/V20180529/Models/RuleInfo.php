@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置规则路径
  * @method string getRealServerType() 获取源站类型
  * @method void setRealServerType(string $RealServerType) 设置源站类型
- * @method string getScheduler() 获取转发源站策略
- * @method void setScheduler(string $Scheduler) 设置转发源站策略
+ * @method string getScheduler() 获取监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+ * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
  * @method integer getHealthCheck() 获取是否开启健康检查标志，1表示开启，0表示关闭
  * @method void setHealthCheck(integer $HealthCheck) 设置是否开启健康检查标志，1表示开启，0表示关闭
  * @method integer getRuleStatus() 获取规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerNameIndication(string $ServerNameIndication) 设置服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getForcedRedirect() 获取强转HTTPS指示，当传递值为https:时表示强转为https
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setForcedRedirect(string $ForcedRedirect) 设置强转HTTPS指示，当传递值为https:时表示强转为https
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleInfo extends AbstractModel
 {
@@ -91,7 +95,7 @@ class RuleInfo extends AbstractModel
     public $RealServerType;
 
     /**
-     * @var string 转发源站策略
+     * @var string 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public $Scheduler;
 
@@ -143,12 +147,18 @@ class RuleInfo extends AbstractModel
     public $ServerNameIndication;
 
     /**
+     * @var string 强转HTTPS指示，当传递值为https:时表示强转为https
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ForcedRedirect;
+
+    /**
      * @param string $RuleId 规则信息
      * @param string $ListenerId 监听器信息
      * @param string $Domain 规则域名
      * @param string $Path 规则路径
      * @param string $RealServerType 源站类型
-     * @param string $Scheduler 转发源站策略
+     * @param string $Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      * @param integer $HealthCheck 是否开启健康检查标志，1表示开启，0表示关闭
      * @param integer $RuleStatus 规则状态，0表示运行中，1表示创建中，2表示销毁中，3表示绑定解绑源站中，4表示配置更新中
      * @param RuleCheckParams $CheckParams 健康检查相关参数
@@ -163,6 +173,8 @@ class RuleInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
 注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ForcedRedirect 强转HTTPS指示，当传递值为https:时表示强转为https
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -238,6 +250,10 @@ class RuleInfo extends AbstractModel
 
         if (array_key_exists("ServerNameIndication",$param) and $param["ServerNameIndication"] !== null) {
             $this->ServerNameIndication = $param["ServerNameIndication"];
+        }
+
+        if (array_key_exists("ForcedRedirect",$param) and $param["ForcedRedirect"] !== null) {
+            $this->ForcedRedirect = $param["ForcedRedirect"];
         }
     }
 }

@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页每页数目，整型
  * @method integer getOffset() 获取分页页码，整型
  * @method void setOffset(integer $Offset) 设置分页页码，整型
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method array getFilters() 获取过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
+ * @method void setFilters(array $Filters) 设置过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
+ * @method integer getIsDemo() 获取该参数已废弃，demo模式请在Filters内注明
+ * @method void setIsDemo(integer $IsDemo) 设置该参数已废弃，demo模式请在Filters内注明
  */
 class DescribeProjectsRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class DescribeProjectsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 过滤条件
+     * @var array 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
      */
     public $Filters;
 
     /**
+     * @var integer 该参数已废弃，demo模式请在Filters内注明
+     */
+    public $IsDemo;
+
+    /**
      * @param integer $Limit 分页每页数目，整型
      * @param integer $Offset 分页页码，整型
-     * @param array $Filters 过滤条件
+     * @param array $Filters 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
+     * @param integer $IsDemo 该参数已废弃，demo模式请在Filters内注明
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeProjectsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("IsDemo",$param) and $param["IsDemo"] !== null) {
+            $this->IsDemo = $param["IsDemo"];
         }
     }
 }

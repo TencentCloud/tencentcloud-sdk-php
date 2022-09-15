@@ -22,12 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取自适应转码模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置自适应转码模板唯一标识。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getName() 获取模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置模板名称，长度限制：64 个字符。
  * @method string getFormat() 获取自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
  * @method void setFormat(string $Format) 设置自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
  * @method integer getDisableHigherVideoBitrate() 获取是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -46,8 +50,6 @@ use TencentCloud\Common\AbstractModel;
 注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -57,13 +59,19 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
+    /**
      * @var string 模板名称，长度限制：64 个字符。
      */
     public $Name;
 
     /**
      * @var string 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      */
     public $Format;
 
@@ -93,15 +101,12 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param integer $Definition 自适应转码模板唯一标识。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 模板名称，长度限制：64 个字符。
      * @param string $Format 自适应转码格式，取值范围：
-<li>HLS。</li>
+<li>HLS；</li>
+<li>MPEG-DASH。</li>
      * @param integer $DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -111,7 +116,6 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
      * @param array $StreamInfos 自适应转码输入流参数信息，最多输入10路流。
 注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -128,6 +132,10 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -157,10 +165,6 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

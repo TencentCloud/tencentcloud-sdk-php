@@ -29,6 +29,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 2. 支持在同一个转换实例下批量添加转换规则，一个账户在一个地域最多50个。
 3. 一个完整的转换规则包括vip6:vport6:protocol:vip:vport，其中vip6:vport6:protocol必须是唯一。
  * @method Models\AddTemplateMemberResponse AddTemplateMember(Models\AddTemplateMemberRequest $req) 增加模板对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+ * @method Models\AdjustPublicAddressResponse AdjustPublicAddress(Models\AdjustPublicAddressRequest $req) 本接口 (AdjustPublicAddress) 用于更换IP地址，支持更换CVM实例的普通公网IP和包月带宽的EIP。
+
  * @method Models\AllocateAddressesResponse AllocateAddresses(Models\AllocateAddressesRequest $req) 本接口 (AllocateAddresses) 用于申请一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
 * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
 * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过24小时之前，它会一直与您的腾讯云账户保持关联。
@@ -74,6 +76,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
  * @method Models\AttachNetworkInterfaceResponse AttachNetworkInterface(Models\AttachNetworkInterfaceRequest $req) 本接口（AttachNetworkInterface）用于弹性网卡绑定云服务器。
+* 一个弹性网卡请至少绑定一个安全组，如需绑定请参见<a href="https://cloud.tencent.com/document/product/215/43132">弹性网卡绑定安全组</a>。
 * 一个云服务器可以绑定多个弹性网卡，但只能绑定一个主网卡。更多限制信息详见<a href="https://cloud.tencent.com/document/product/576/18527">弹性网卡使用限制</a>。
 * 一个弹性网卡只能同时绑定一个云服务器。
 * 只有运行中或者已关机状态的云服务器才能绑定弹性网卡，查看云服务器状态详见<a href="https://cloud.tencent.com/document/api/213/9452#InstanceStatus">腾讯云服务器信息</a>。
@@ -83,7 +86,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\AuditCrossBorderComplianceResponse AuditCrossBorderCompliance(Models\AuditCrossBorderComplianceRequest $req) 本接口（AuditCrossBorderCompliance）用于服务商操作合规化资质审批。
 * 服务商只能操作提交到本服务商的审批单，后台会校验身份。即只授权给服务商的`APPID` 调用本接口。
 * `APPROVED` 状态的审批单，可以再次操作为 `DENY`；`DENY` 状态的审批单，也可以再次操作为 `APPROVED`。
- * @method Models\CheckAssistantCidrResponse CheckAssistantCidr(Models\CheckAssistantCidrRequest $req) 本接口(CheckAssistantCidr)用于检查辅助CIDR是否与存量路由、对等连接（对端VPC的CIDR）等资源存在冲突。如果存在重叠，则返回重叠的资源。（接口灰度中，如需使用请提工单。）
+ * @method Models\CheckAssistantCidrResponse CheckAssistantCidr(Models\CheckAssistantCidrRequest $req) 本接口(CheckAssistantCidr)用于检查辅助CIDR是否与存量路由、对等连接（对端VPC的CIDR）等资源存在冲突。如果存在重叠，则返回重叠的资源。
 * 检测辅助CIDR是否与当前VPC的主CIDR和辅助CIDR存在重叠。
 * 检测辅助CIDR是否与当前VPC的路由的目的端存在重叠。
 * 检测辅助CIDR是否与当前VPC的对等连接，对端VPC下的主CIDR或辅助CIDR存在重叠。
@@ -100,7 +103,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 创建弹性网卡同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
- * @method Models\CreateAssistantCidrResponse CreateAssistantCidr(Models\CreateAssistantCidrRequest $req) 本接口(CreateAssistantCidr)用于批量创建辅助CIDR。（接口灰度中，如需使用请提工单。）
+ * @method Models\CreateAssistantCidrResponse CreateAssistantCidr(Models\CreateAssistantCidrRequest $req) 本接口(CreateAssistantCidr)用于批量创建辅助CIDR。
  * @method Models\CreateBandwidthPackageResponse CreateBandwidthPackage(Models\CreateBandwidthPackageRequest $req) 本接口 (CreateBandwidthPackage) 支持创建[设备带宽包](https://cloud.tencent.com/document/product/684/15245#bwptype)和[IP带宽包](https://cloud.tencent.com/document/product/684/15245#bwptype)。
  * @method Models\CreateCcnResponse CreateCcn(Models\CreateCcnRequest $req) 本接口（CreateCcn）用于创建云联网（CCN）。<br />
 * 创建云联网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
@@ -134,6 +137,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreateNetDetectResponse CreateNetDetect(Models\CreateNetDetectRequest $req) 本接口(CreateNetDetect)用于创建网络探测。
  * @method Models\CreateNetworkAclResponse CreateNetworkAcl(Models\CreateNetworkAclRequest $req) 本接口（CreateNetworkAcl）用于创建新的<a href="https://cloud.tencent.com/document/product/215/20088">网络ACL</a>。
 * 新建的网络ACL的入站和出站规则默认都是全部拒绝，在创建后通常您需要再调用ModifyNetworkAclEntries将网络ACL的规则设置为需要的规则。
+ * @method Models\CreateNetworkAclQuintupleEntriesResponse CreateNetworkAclQuintupleEntries(Models\CreateNetworkAclQuintupleEntriesRequest $req) 本接口（CreateNetworkAclQuintupleEntries）用于增量网络ACL五元组的入站规则和出站规则。
  * @method Models\CreateNetworkInterfaceResponse CreateNetworkInterface(Models\CreateNetworkInterfaceRequest $req) 本接口（CreateNetworkInterface）用于创建弹性网卡。
 * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
 * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
@@ -163,8 +167,8 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 <li>SecurityGroupId 字段允许输入与待修改的安全组位于相同项目中的安全组 ID，包括这个安全组 ID 本身，代表安全组下所有云服务器的内网 IP。使用这个字段时，这条规则用来匹配网络报文的过程中会随着被使用的这个 ID 所关联的云服务器变化而变化，不需要重新修改。</li>
 <li>Port 字段允许输入一个单独端口号，或者用减号分隔的两个端口号代表端口范围，例如80或8000-8010。只有当 Protocol 字段是 TCP 或 UDP 时，Port 字段才被接受，即 Protocol 字段不是 TCP 或 UDP 时，Protocol 和 Port 排他关系，不允许同时输入，否则会接口报错。</li>
 <li>Action 字段只允许输入 ACCEPT 或 DROP。</li>
-<li>CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系，不允许同时输入，Protocol + Port 和 ServiceTemplate 二者是排他关系，不允许同时输入。</li>
-<li>一次请求中只能创建单个方向的规则, 如果需要指定索引（PolicyIndex）参数, 多条规则的索引必须一致。</li>
+<li>CidrBlock, Ipv6CidrBlock, SecurityGroupId, AddressTemplate 四者是排他关系，不允许同时输入，Protocol + Port 和 ServiceTemplate 二者是排他关系，不允许同时输入。IPv6CidrBlock和ICMP是排他关系，如需使用，请输入ICMPV6。</li>
+<li>一次请求中只能创建单个方向的规则, 如果需要指定索引（PolicyIndex）参数, 多条规则的索引必须一致。如想在规则最前面插入一条，则填0即可，如果想在最后追加，该字段可不填。</li>
 </ul></li></ul>
  * @method Models\CreateSecurityGroupWithPoliciesResponse CreateSecurityGroupWithPolicies(Models\CreateSecurityGroupWithPoliciesRequest $req) 本接口（CreateSecurityGroupWithPolicies）用于创建新的安全组（SecurityGroup），并且可以同时添加安全组规则（SecurityGroupPolicy）。
 * 每个账户下每个地域的每个项目的<a href="https://cloud.tencent.com/document/product/213/12453">安全组数量限制</a>。
@@ -197,7 +201,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 子网创建后会自动关联到默认路由表。
 * 创建子网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
  * @method Models\CreateVpcResponse CreateVpc(Models\CreateVpcRequest $req) 本接口(CreateVpc)用于创建私有网络(VPC)。
-* 用户可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址），如果需要规划VPC网段请参见[网络规划](https://cloud.tencent.com/document/product/215/30313)。
+* 用户可以创建的最小网段子网掩码为28（有16个IP地址），10.0.0.0/12，172.16.0.0/12最大网段子网掩码为12（1,048,576个IP地址），192.168.0.0/16最大网段子网掩码为16（65,536个IP地址）如果需要规划VPC网段请参见[网络规划](https://cloud.tencent.com/document/product/215/30313)。
 * 同一个地域能创建的VPC资源个数也是有限制的，详见 <a href="https://cloud.tencent.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>，如果需要申请更多资源，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。
 * 创建VPC同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
  * @method Models\CreateVpcEndPointResponse CreateVpcEndPoint(Models\CreateVpcEndPointRequest $req) 创建终端节点。
@@ -212,7 +216,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreateVpnGatewaySslServerResponse CreateVpnGatewaySslServer(Models\CreateVpnGatewaySslServerRequest $req) 创建 Server端
  * @method Models\DeleteAddressTemplateResponse DeleteAddressTemplate(Models\DeleteAddressTemplateRequest $req) 本接口（DeleteAddressTemplate）用于删除IP地址模板
  * @method Models\DeleteAddressTemplateGroupResponse DeleteAddressTemplateGroup(Models\DeleteAddressTemplateGroupRequest $req) 本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合
- * @method Models\DeleteAssistantCidrResponse DeleteAssistantCidr(Models\DeleteAssistantCidrRequest $req) 本接口(DeleteAssistantCidr)用于删除辅助CIDR。（接口灰度中，如需使用请提工单。）
+ * @method Models\DeleteAssistantCidrResponse DeleteAssistantCidr(Models\DeleteAssistantCidrRequest $req) 本接口(DeleteAssistantCidr)用于删除辅助CIDR。
  * @method Models\DeleteBandwidthPackageResponse DeleteBandwidthPackage(Models\DeleteBandwidthPackageRequest $req) 接口支持删除共享带宽包，包括[设备带宽包](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85)和[IP带宽包](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
  * @method Models\DeleteCcnResponse DeleteCcn(Models\DeleteCcnRequest $req) 本接口（DeleteCcn）用于删除云联网。
 * 删除后，云联网关联的所有实例间路由将被删除，网络将会中断，请务必确认
@@ -239,6 +243,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeleteNatGatewaySourceIpTranslationNatRuleResponse DeleteNatGatewaySourceIpTranslationNatRule(Models\DeleteNatGatewaySourceIpTranslationNatRuleRequest $req) 本接口（DeleteNatGatewaySourceIpTranslationNatRule）用于删除NAT网关端口SNAT转发规则。
  * @method Models\DeleteNetDetectResponse DeleteNetDetect(Models\DeleteNetDetectRequest $req) 本接口(DeleteNetDetect)用于删除网络探测实例。
  * @method Models\DeleteNetworkAclResponse DeleteNetworkAcl(Models\DeleteNetworkAclRequest $req) 本接口（DeleteNetworkAcl）用于删除网络ACL。
+ * @method Models\DeleteNetworkAclQuintupleEntriesResponse DeleteNetworkAclQuintupleEntries(Models\DeleteNetworkAclQuintupleEntriesRequest $req) 本接口（DeleteNetworkAclQuintupleEntries）用于删除网络ACL五元组指定的入站规则和出站规则（但不是全量删除该ACL下的所有条目）。在NetworkAclQuintupleEntrySet参数中：NetworkAclQuintupleEntry需要提供NetworkAclQuintupleEntryId。
  * @method Models\DeleteNetworkInterfaceResponse DeleteNetworkInterface(Models\DeleteNetworkInterfaceRequest $req) 本接口（DeleteNetworkInterface）用于删除弹性网卡。
 * 弹性网卡上绑定了云服务器时，不能被删除。
 * 删除指定弹性网卡，弹性网卡必须先和子机解绑才能删除。删除之后弹性网卡上所有内网IP都将被退还。
@@ -276,7 +281,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeAddressTemplatesResponse DescribeAddressTemplates(Models\DescribeAddressTemplatesRequest $req) 本接口（DescribeAddressTemplates）用于查询IP地址模板
  * @method Models\DescribeAddressesResponse DescribeAddresses(Models\DescribeAddressesRequest $req) 本接口 (DescribeAddresses) 用于查询一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）的详细信息。
 * 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIP。
- * @method Models\DescribeAssistantCidrResponse DescribeAssistantCidr(Models\DescribeAssistantCidrRequest $req) 本接口（DescribeAssistantCidr）用于查询辅助CIDR列表。（接口灰度中，如需使用请提工单。）
+ * @method Models\DescribeAssistantCidrResponse DescribeAssistantCidr(Models\DescribeAssistantCidrRequest $req) 本接口（DescribeAssistantCidr）用于查询辅助CIDR列表。
  * @method Models\DescribeBandwidthPackageBillUsageResponse DescribeBandwidthPackageBillUsage(Models\DescribeBandwidthPackageBillUsageRequest $req) 本接口 (DescribeBandwidthPackageBillUsage) 用于查询后付费共享带宽包当前的计费用量.
  * @method Models\DescribeBandwidthPackageQuotaResponse DescribeBandwidthPackageQuota(Models\DescribeBandwidthPackageQuotaRequest $req) 接口用于查询账户在当前地域的带宽包上限数量以及使用数量
  * @method Models\DescribeBandwidthPackageResourcesResponse DescribeBandwidthPackageResources(Models\DescribeBandwidthPackageResourcesRequest $req) 本接口 (DescribeBandwidthPackageResources) 用于根据共享带宽包唯一ID查询共享带宽包内的资源列表，支持按条件过滤查询结果和分页查询。
@@ -311,7 +316,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 2. 支持过滤查询
  * @method Models\DescribeIpGeolocationDatabaseUrlResponse DescribeIpGeolocationDatabaseUrl(Models\DescribeIpGeolocationDatabaseUrlRequest $req) 本接口（DescribeIpGeolocationDatabaseUrl）用于获取IP地理位置库下载链接。
  * @method Models\DescribeIpGeolocationInfosResponse DescribeIpGeolocationInfos(Models\DescribeIpGeolocationInfosRequest $req) 本接口（DescribeIpGeolocationInfos）用于查询IP地址信息，包括地理位置信息和网络信息。
-本接口目前处于内测中，如需使用，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2)。
+本接口仅供存量客户使用，如有疑问，请提交[工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2)。
  * @method Models\DescribeLocalGatewayResponse DescribeLocalGateway(Models\DescribeLocalGatewayRequest $req) 该接口用于查询CDC的本地网关。
  * @method Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse DescribeNatGatewayDestinationIpPortTranslationNatRules(Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest $req) 本接口（DescribeNatGatewayDestinationIpPortTranslationNatRules）用于查询NAT网关端口转发规则对象数组。
  * @method Models\DescribeNatGatewayDirectConnectGatewayRouteResponse DescribeNatGatewayDirectConnectGatewayRoute(Models\DescribeNatGatewayDirectConnectGatewayRouteRequest $req) 查询专线绑定NAT的路由
@@ -319,6 +324,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeNatGatewaysResponse DescribeNatGateways(Models\DescribeNatGatewaysRequest $req) 本接口（DescribeNatGateways）用于查询 NAT 网关。
  * @method Models\DescribeNetDetectStatesResponse DescribeNetDetectStates(Models\DescribeNetDetectStatesRequest $req) 本接口(DescribeNetDetectStates)用于查询网络探测验证结果列表。
  * @method Models\DescribeNetDetectsResponse DescribeNetDetects(Models\DescribeNetDetectsRequest $req) 本接口（DescribeNetDetects）用于查询网络探测列表。
+ * @method Models\DescribeNetworkAclQuintupleEntriesResponse DescribeNetworkAclQuintupleEntries(Models\DescribeNetworkAclQuintupleEntriesRequest $req) 本接口（DescribeNetworkAclQuintupleEntries）查询入方向或出方向网络ACL五元组条目列表。
  * @method Models\DescribeNetworkAclsResponse DescribeNetworkAcls(Models\DescribeNetworkAclsRequest $req) 本接口（DescribeNetworkAcls）用于查询网络ACL列表。
  * @method Models\DescribeNetworkInterfaceLimitResponse DescribeNetworkInterfaceLimit(Models\DescribeNetworkInterfaceLimitRequest $req) 本接口（DescribeNetworkInterfaceLimit）根据CVM实例ID或弹性网卡ID查询弹性网卡配额，返回该CVM实例或弹性网卡能绑定的弹性网卡配额，以及弹性网卡可以分配的IP配额
  * @method Models\DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(Models\DescribeNetworkInterfacesRequest $req) 本接口（DescribeNetworkInterfaces）用于查询弹性网卡列表。
@@ -338,6 +344,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DescribeTenantCcnsResponse DescribeTenantCcns(Models\DescribeTenantCcnsRequest $req) 本接口（DescribeTenantCcns）用于获取要锁定的云联网实例列表。
 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（DescribeCrossBorderCcnRegionBandwidthLimits）
 如有需要, 可以封禁任意云联网实例, 可接入到内部运营系统
+ * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) 本接口 (DescribeTrafficPackages)  用于查询共享流量包详细信息，包括共享流量包唯一标识ID，名称，流量使用信息等
  * @method Models\DescribeVpcEndPointResponse DescribeVpcEndPoint(Models\DescribeVpcEndPointRequest $req) 查询终端节点列表。
  * @method Models\DescribeVpcEndPointServiceResponse DescribeVpcEndPointService(Models\DescribeVpcEndPointServiceRequest $req) 查询终端节点服务列表。
  * @method Models\DescribeVpcEndPointServiceWhiteListResponse DescribeVpcEndPointServiceWhiteList(Models\DescribeVpcEndPointServiceWhiteListRequest $req) 查询终端节点服务的服务白名单列表。
@@ -393,6 +400,7 @@ LimitTypes取值范围：
  * @method Models\DetachNetworkInterfaceResponse DetachNetworkInterface(Models\DetachNetworkInterfaceRequest $req) 本接口（DetachNetworkInterface）用于弹性网卡解绑云服务器。
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
  * @method Models\DisableCcnRoutesResponse DisableCcnRoutes(Models\DisableCcnRoutesRequest $req) 本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由
+ * @method Models\DisableFlowLogsResponse DisableFlowLogs(Models\DisableFlowLogsRequest $req) 本接口（DisableFlowLogs）用于停止流日志。
  * @method Models\DisableGatewayFlowMonitorResponse DisableGatewayFlowMonitor(Models\DisableGatewayFlowMonitorRequest $req) 本接口（DisableGatewayFlowMonitor）用于关闭网关流量监控。
  * @method Models\DisableRoutesResponse DisableRoutes(Models\DisableRoutesRequest $req) 本接口（DisableRoutes）用于禁用已启用的子网路由
  * @method Models\DisableVpnGatewaySslClientCertResponse DisableVpnGatewaySslClientCert(Models\DisableVpnGatewaySslClientCertRequest $req) 禁用SSL-VPN-CLIENT 证书
@@ -413,6 +421,7 @@ LimitTypes取值范围：
  * @method Models\DownloadVpnGatewaySslClientCertResponse DownloadVpnGatewaySslClientCert(Models\DownloadVpnGatewaySslClientCertRequest $req) 下载SSL-VPN-CLIENT 客户端证书
  * @method Models\EnableCcnRoutesResponse EnableCcnRoutes(Models\EnableCcnRoutesRequest $req) 本接口（EnableCcnRoutes）用于启用已经加入云联网（CCN）的路由。<br />
 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
+ * @method Models\EnableFlowLogsResponse EnableFlowLogs(Models\EnableFlowLogsRequest $req) 本接口（EnableFlowLogs）用于启动流日志。
  * @method Models\EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitor(Models\EnableGatewayFlowMonitorRequest $req) 本接口（EnableGatewayFlowMonitor）用于开启网关流量监控。
  * @method Models\EnableRoutesResponse EnableRoutes(Models\EnableRoutesRequest $req) 本接口（EnableRoutes）用于启用已禁用的子网路由。<br />
 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
@@ -451,7 +460,7 @@ LimitTypes取值范围：
  * @method Models\ModifyAddressTemplateAttributeResponse ModifyAddressTemplateAttribute(Models\ModifyAddressTemplateAttributeRequest $req) 本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板
  * @method Models\ModifyAddressTemplateGroupAttributeResponse ModifyAddressTemplateGroupAttribute(Models\ModifyAddressTemplateGroupAttributeRequest $req) 本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合
  * @method Models\ModifyAddressesBandwidthResponse ModifyAddressesBandwidth(Models\ModifyAddressesBandwidthRequest $req) 本接口（ModifyAddressesBandwidth）用于调整[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)(简称EIP)带宽，支持后付费EIP, 预付费EIP和带宽包EIP
- * @method Models\ModifyAssistantCidrResponse ModifyAssistantCidr(Models\ModifyAssistantCidrRequest $req) 本接口(ModifyAssistantCidr)用于批量修改辅助CIDR，支持新增和删除。（接口灰度中，如需使用请提工单。）
+ * @method Models\ModifyAssistantCidrResponse ModifyAssistantCidr(Models\ModifyAssistantCidrRequest $req) 本接口(ModifyAssistantCidr)用于批量修改辅助CIDR，支持新增和删除。
  * @method Models\ModifyBandwidthPackageAttributeResponse ModifyBandwidthPackageAttribute(Models\ModifyBandwidthPackageAttributeRequest $req) 接口用于修改带宽包属性，包括带宽包名字等
  * @method Models\ModifyCcnAttachedInstancesAttributeResponse ModifyCcnAttachedInstancesAttribute(Models\ModifyCcnAttachedInstancesAttributeRequest $req) 修改CCN关联实例属性，目前仅修改备注description
  * @method Models\ModifyCcnAttributeResponse ModifyCcnAttribute(Models\ModifyCcnAttributeRequest $req) 本接口（ModifyCcnAttribute）用于修改云联网（CCN）的相关属性。
@@ -476,8 +485,9 @@ LimitTypes取值范围：
  * @method Models\ModifyNetworkAclEntriesResponse ModifyNetworkAclEntries(Models\ModifyNetworkAclEntriesRequest $req) 本接口（ModifyNetworkAclEntries）用于修改（包括添加和删除）网络ACL的入站规则和出站规则。在NetworkAclEntrySet参数中：
 * 若同时传入入站规则和出站规则，则重置原有的入站规则和出站规则，并分别导入传入的规则。
 * 若仅传入入站规则，则仅重置原有的入站规则，并导入传入的规则，不影响原有的出站规则（若仅传入出站规则，处理方式类似入站方向）。
+ * @method Models\ModifyNetworkAclQuintupleEntriesResponse ModifyNetworkAclQuintupleEntries(Models\ModifyNetworkAclQuintupleEntriesRequest $req) 本接口（ModifyNetworkAclQuintupleEntries）用于修改网络ACL五元组的入站规则和出站规则。在NetworkAclQuintupleEntrySet参数中：NetworkAclQuintupleEntry需要提供NetworkAclQuintupleEntryId。
  * @method Models\ModifyNetworkInterfaceAttributeResponse ModifyNetworkInterfaceAttribute(Models\ModifyNetworkInterfaceAttributeRequest $req) 本接口（ModifyNetworkInterfaceAttribute）用于修改弹性网卡属性。
- * @method Models\ModifyNetworkInterfaceQosResponse ModifyNetworkInterfaceQos(Models\ModifyNetworkInterfaceQosRequest $req) 修改弹性网卡服务质量
+ * @method Models\ModifyNetworkInterfaceQosResponse ModifyNetworkInterfaceQos(Models\ModifyNetworkInterfaceQosRequest $req) 修改弹性网卡服务质量。
  * @method Models\ModifyPrivateIpAddressesAttributeResponse ModifyPrivateIpAddressesAttribute(Models\ModifyPrivateIpAddressesAttributeRequest $req) 本接口（ModifyPrivateIpAddressesAttribute）用于修改弹性网卡内网IP属性。
  * @method Models\ModifyRouteTableAttributeResponse ModifyRouteTableAttribute(Models\ModifyRouteTableAttributeRequest $req) 本接口（ModifyRouteTableAttribute）用于修改路由表（RouteTable）属性。
  * @method Models\ModifySecurityGroupAttributeResponse ModifySecurityGroupAttribute(Models\ModifySecurityGroupAttributeRequest $req) 本接口（ModifySecurityGroupAttribute）用于修改安全组（SecurityGroupPolicy）属性。
@@ -511,7 +521,7 @@ LimitTypes取值范围：
  * @method Models\ModifyVpnGatewayAttributeResponse ModifyVpnGatewayAttribute(Models\ModifyVpnGatewayAttributeRequest $req) 本接口（ModifyVpnGatewayAttribute）用于修改VPN网关属性。
  * @method Models\ModifyVpnGatewayCcnRoutesResponse ModifyVpnGatewayCcnRoutes(Models\ModifyVpnGatewayCcnRoutesRequest $req) 本接口（ModifyVpnGatewayCcnRoutes）用于修改VPN网关云联网路由
  * @method Models\ModifyVpnGatewayRoutesResponse ModifyVpnGatewayRoutes(Models\ModifyVpnGatewayRoutesRequest $req) 修改VPN路由是否启用
- * @method Models\NotifyRoutesResponse NotifyRoutes(Models\NotifyRoutesRequest $req) 路由表列表页操作增加“发布到云联网”，用于发布路由到云联网。
+ * @method Models\NotifyRoutesResponse NotifyRoutes(Models\NotifyRoutesRequest $req) 本接口（NotifyRoutes）用于路由表列表页操作增加“发布到云联网”，发布路由到云联网。
  * @method Models\RefreshDirectConnectGatewayRouteToNatGatewayResponse RefreshDirectConnectGatewayRouteToNatGateway(Models\RefreshDirectConnectGatewayRouteToNatGatewayRequest $req) 刷新专线直连nat路由，更新nat到专线的路由表
  * @method Models\RejectAttachCcnInstancesResponse RejectAttachCcnInstances(Models\RejectAttachCcnInstancesRequest $req) 本接口（RejectAttachCcnInstances）用于跨账号关联实例时，云联网所有者拒绝关联操作。
 

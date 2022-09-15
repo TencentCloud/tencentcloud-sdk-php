@@ -102,6 +102,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterType() 获取实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterType(string $ClusterType) 设置实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFeatures() 获取实例功能列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeatures(array $Features) 设置实例功能列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
 {
@@ -267,6 +275,18 @@ class InstanceDetail extends AbstractModel
     public $PublicNetwork;
 
     /**
+     * @var string 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterType;
+
+    /**
+     * @var array 实例功能列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Features;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $Vip 访问实例的vip 信息
@@ -307,6 +327,10 @@ class InstanceDetail extends AbstractModel
      * @param string $PublicNetworkChargeType 公网带宽类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PublicNetwork 公网带宽值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterType 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Features 实例功能列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -450,6 +474,14 @@ class InstanceDetail extends AbstractModel
 
         if (array_key_exists("PublicNetwork",$param) and $param["PublicNetwork"] !== null) {
             $this->PublicNetwork = $param["PublicNetwork"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("Features",$param) and $param["Features"] !== null) {
+            $this->Features = $param["Features"];
         }
     }
 }

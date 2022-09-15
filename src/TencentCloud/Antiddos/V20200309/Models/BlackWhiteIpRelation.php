@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceDetailList(array $InstanceDetailList) 设置黑白IP所属的实例
  * @method integer getMask() 获取ip掩码，0表示32位完整ip
  * @method void setMask(integer $Mask) 设置ip掩码，0表示32位完整ip
+ * @method string getModifyTime() 获取修改时间
+ * @method void setModifyTime(string $ModifyTime) 设置修改时间
  */
 class BlackWhiteIpRelation extends AbstractModel
 {
@@ -52,10 +54,16 @@ class BlackWhiteIpRelation extends AbstractModel
     public $Mask;
 
     /**
+     * @var string 修改时间
+     */
+    public $ModifyTime;
+
+    /**
      * @param string $Ip IP地址
      * @param string $Type IP类型，取值[black(黑IP)，white(白IP)]
      * @param array $InstanceDetailList 黑白IP所属的实例
      * @param integer $Mask ip掩码，0表示32位完整ip
+     * @param string $ModifyTime 修改时间
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class BlackWhiteIpRelation extends AbstractModel
 
         if (array_key_exists("Mask",$param) and $param["Mask"] !== null) {
             $this->Mask = $param["Mask"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
         }
     }
 }

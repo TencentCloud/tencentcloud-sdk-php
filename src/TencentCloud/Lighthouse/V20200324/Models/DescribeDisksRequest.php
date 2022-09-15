@@ -43,11 +43,13 @@ disk-usage
 按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
+取值：SYSTEM_DISK或DATA_DISK
 disk-state
 按照【云硬盘状态】进行过滤。
 类型：String
 必选：否
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 DiskIds 和 Filters。
+取值：参考数据结构[Disk](https://cloud.tencent.com/document/api/1207/47576#Disk)中DiskState取值。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 DiskIds 和 Filters。
  * @method void setFilters(array $Filters) 设置过滤器列表。
 disk-id
 按照【云硬盘 ID】进行过滤。
@@ -69,11 +71,13 @@ disk-usage
 按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
+取值：SYSTEM_DISK或DATA_DISK
 disk-state
 按照【云硬盘状态】进行过滤。
 类型：String
 必选：否
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 DiskIds 和 Filters。
+取值：参考数据结构[Disk](https://cloud.tencent.com/document/api/1207/47576#Disk)中DiskState取值。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 DiskIds 和 Filters。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -112,11 +116,13 @@ disk-usage
 按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
+取值：SYSTEM_DISK或DATA_DISK
 disk-state
 按照【云硬盘状态】进行过滤。
 类型：String
 必选：否
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 DiskIds 和 Filters。
+取值：参考数据结构[Disk](https://cloud.tencent.com/document/api/1207/47576#Disk)中DiskState取值。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 DiskIds 和 Filters。
      */
     public $Filters;
 
@@ -163,11 +169,13 @@ disk-usage
 按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
+取值：SYSTEM_DISK或DATA_DISK
 disk-state
 按照【云硬盘状态】进行过滤。
 类型：String
 必选：否
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 DiskIds 和 Filters。
+取值：参考数据结构[Disk](https://cloud.tencent.com/document/api/1207/47576#Disk)中DiskState取值。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 DiskIds 和 Filters。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      * @param string $OrderField 云硬盘列表排序的依据字段。取值范围："CREATED_TIME"：依据云硬盘的创建时间排序。 "EXPIRED_TIME"：依据云硬盘的到期时间排序。"DISK_SIZE"：依据云硬盘的大小排序。默认按云硬盘创建时间排序。

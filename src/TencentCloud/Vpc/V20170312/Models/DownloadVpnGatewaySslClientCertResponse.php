@@ -20,17 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DownloadVpnGatewaySslClientCert返回参数结构体
  *
- * @method string getSslClientConfigsSet() 获取SSL-VPN-CLIENT 证书配置
- * @method void setSslClientConfigsSet(string $SslClientConfigsSet) 设置SSL-VPN-CLIENT 证书配置
+ * @method string getSslClientConfigsSet() 获取无
+ * @method void setSslClientConfigsSet(string $SslClientConfigsSet) 设置无
+ * @method array getSslClientConfig() 获取SSL-VPN client配置
+ * @method void setSslClientConfig(array $SslClientConfig) 设置SSL-VPN client配置
+ * @method integer getAuthenticated() 获取是否鉴权成功 只有传入SamlToken 才生效
+ * @method void setAuthenticated(integer $Authenticated) 设置是否鉴权成功 只有传入SamlToken 才生效
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
 {
     /**
-     * @var string SSL-VPN-CLIENT 证书配置
+     * @var string 无
      */
     public $SslClientConfigsSet;
+
+    /**
+     * @var array SSL-VPN client配置
+     */
+    public $SslClientConfig;
+
+    /**
+     * @var integer 是否鉴权成功 只有传入SamlToken 才生效
+     */
+    public $Authenticated;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +52,9 @@ class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SslClientConfigsSet SSL-VPN-CLIENT 证书配置
+     * @param string $SslClientConfigsSet 无
+     * @param array $SslClientConfig SSL-VPN client配置
+     * @param integer $Authenticated 是否鉴权成功 只有传入SamlToken 才生效
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +72,19 @@ class DownloadVpnGatewaySslClientCertResponse extends AbstractModel
         }
         if (array_key_exists("SslClientConfigsSet",$param) and $param["SslClientConfigsSet"] !== null) {
             $this->SslClientConfigsSet = $param["SslClientConfigsSet"];
+        }
+
+        if (array_key_exists("SslClientConfig",$param) and $param["SslClientConfig"] !== null) {
+            $this->SslClientConfig = [];
+            foreach ($param["SslClientConfig"] as $key => $value){
+                $obj = new SslClientConfig();
+                $obj->deserialize($value);
+                array_push($this->SslClientConfig, $obj);
+            }
+        }
+
+        if (array_key_exists("Authenticated",$param) and $param["Authenticated"] !== null) {
+            $this->Authenticated = $param["Authenticated"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

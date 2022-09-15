@@ -70,6 +70,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDDoSLevel(string $DDoSLevel) 设置四层防护严格级别
  * @method integer getCCEnable() 获取CC防护开关
  * @method void setCCEnable(integer $CCEnable) 设置CC防护开关
+ * @method array getTagInfoList() 获取资源关联标签
+ * @method void setTagInfoList(array $TagInfoList) 设置资源关联标签
+ * @method integer getIpCountNewFlag() 获取新版本1ip高防包
+ * @method void setIpCountNewFlag(integer $IpCountNewFlag) 设置新版本1ip高防包
+ * @method integer getVitalityVersion() 获取攻击封堵套餐标记
+ * @method void setVitalityVersion(integer $VitalityVersion) 设置攻击封堵套餐标记
  */
 class BGPInstance extends AbstractModel
 {
@@ -151,6 +157,21 @@ class BGPInstance extends AbstractModel
     public $CCEnable;
 
     /**
+     * @var array 资源关联标签
+     */
+    public $TagInfoList;
+
+    /**
+     * @var integer 新版本1ip高防包
+     */
+    public $IpCountNewFlag;
+
+    /**
+     * @var integer 攻击封堵套餐标记
+     */
+    public $VitalityVersion;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPInstanceUsages $Usage 资产实例的使用统计信息
@@ -176,6 +197,9 @@ class BGPInstance extends AbstractModel
 ]
      * @param string $DDoSLevel 四层防护严格级别
      * @param integer $CCEnable CC防护开关
+     * @param array $TagInfoList 资源关联标签
+     * @param integer $IpCountNewFlag 新版本1ip高防包
+     * @param integer $VitalityVersion 攻击封堵套餐标记
      */
     function __construct()
     {
@@ -250,6 +274,23 @@ class BGPInstance extends AbstractModel
 
         if (array_key_exists("CCEnable",$param) and $param["CCEnable"] !== null) {
             $this->CCEnable = $param["CCEnable"];
+        }
+
+        if (array_key_exists("TagInfoList",$param) and $param["TagInfoList"] !== null) {
+            $this->TagInfoList = [];
+            foreach ($param["TagInfoList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("IpCountNewFlag",$param) and $param["IpCountNewFlag"] !== null) {
+            $this->IpCountNewFlag = $param["IpCountNewFlag"];
+        }
+
+        if (array_key_exists("VitalityVersion",$param) and $param["VitalityVersion"] !== null) {
+            $this->VitalityVersion = $param["VitalityVersion"];
         }
     }
 }

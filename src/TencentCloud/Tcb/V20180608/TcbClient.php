@@ -43,6 +43,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeActivityInfoResponse DescribeActivityInfo(Models\DescribeActivityInfoRequest $req) 查询活动信息
  * @method Models\DescribeActivityRecordResponse DescribeActivityRecord(Models\DescribeActivityRecordRequest $req) 查询活动记录信息
  * @method Models\DescribeAuthDomainsResponse DescribeAuthDomains(Models\DescribeAuthDomainsRequest $req) 获取安全域名列表
+ * @method Models\DescribeBaasPackageListResponse DescribeBaasPackageList(Models\DescribeBaasPackageListRequest $req) 获取新套餐列表，含详情，如果传了PackageId，则只获取指定套餐详情
  * @method Models\DescribeCloudBaseBuildServiceResponse DescribeCloudBaseBuildService(Models\DescribeCloudBaseBuildServiceRequest $req) 获取云托管代码上传url
  * @method Models\DescribeCloudBaseProjectLatestVersionListResponse DescribeCloudBaseProjectLatestVersionList(Models\DescribeCloudBaseProjectLatestVersionListRequest $req) 获取云开发项目列表
  * @method Models\DescribeCloudBaseProjectVersionListResponse DescribeCloudBaseProjectVersionList(Models\DescribeCloudBaseProjectVersionListRequest $req) 云项目部署列表
@@ -91,6 +92,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DestroyStaticStoreResponse DestroyStaticStore(Models\DestroyStaticStoreRequest $req) 销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
  * @method Models\EstablishCloudBaseRunServerResponse EstablishCloudBaseRunServer(Models\EstablishCloudBaseRunServerRequest $req) 创建云应用服务
  * @method Models\EstablishWxGatewayRouteResponse EstablishWxGatewayRoute(Models\EstablishWxGatewayRouteRequest $req) 创建或修改安全网关路由
+ * @method Models\FreezeCloudBaseRunServersResponse FreezeCloudBaseRunServers(Models\FreezeCloudBaseRunServersRequest $req) 批量冻结
  * @method Models\ModifyCloudBaseRunServerFlowConfResponse ModifyCloudBaseRunServerFlowConf(Models\ModifyCloudBaseRunServerFlowConfRequest $req) 修改容器内的版本流量配置
  * @method Models\ModifyCloudBaseRunServerVersionResponse ModifyCloudBaseRunServerVersion(Models\ModifyCloudBaseRunServerVersionRequest $req) 修改服务版本的副本数，环境变量
  * @method Models\ModifyDatabaseACLResponse ModifyDatabaseACL(Models\ModifyDatabaseACLRequest $req) 修改数据库权限
@@ -102,6 +104,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) 搜索CLS日志，TCB角色秘钥访问
  * @method Models\TurnOffStandaloneGatewayResponse TurnOffStandaloneGateway(Models\TurnOffStandaloneGatewayRequest $req) 本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
  * @method Models\TurnOnStandaloneGatewayResponse TurnOnStandaloneGateway(Models\TurnOnStandaloneGatewayRequest $req) 本接口（TurnOnStandaloneGateway）用于开启小租户网关。
+ * @method Models\UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServers(Models\UnfreezeCloudBaseRunServersRequest $req) 批量解冻服务
  */
 
 class TcbClient extends AbstractClient

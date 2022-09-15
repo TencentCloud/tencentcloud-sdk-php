@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置查询语句。
  * @method integer getNumber() 获取告警对象序号。
  * @method void setNumber(integer $Number) 设置告警对象序号。
- * @method integer getStartTimeOffset() 获取查询范围起始时间相对当前的历史时间，取值为非正，最大值为0，最小值为-1440。
- * @method void setStartTimeOffset(integer $StartTimeOffset) 设置查询范围起始时间相对当前的历史时间，取值为非正，最大值为0，最小值为-1440。
- * @method integer getEndTimeOffset() 获取查询范围终止时间相对当前的历史时间，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
- * @method void setEndTimeOffset(integer $EndTimeOffset) 设置查询范围终止时间相对当前的历史时间，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
+ * @method integer getStartTimeOffset() 获取查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
+ * @method void setStartTimeOffset(integer $StartTimeOffset) 设置查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
+ * @method integer getEndTimeOffset() 获取查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
+ * @method void setEndTimeOffset(integer $EndTimeOffset) 设置查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
  */
 class AlarmTargetInfo extends AbstractModel
 {
@@ -70,12 +70,12 @@ class AlarmTargetInfo extends AbstractModel
     public $Number;
 
     /**
-     * @var integer 查询范围起始时间相对当前的历史时间，取值为非正，最大值为0，最小值为-1440。
+     * @var integer 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
      */
     public $StartTimeOffset;
 
     /**
-     * @var integer 查询范围终止时间相对当前的历史时间，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
+     * @var integer 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
      */
     public $EndTimeOffset;
 
@@ -86,8 +86,8 @@ class AlarmTargetInfo extends AbstractModel
      * @param string $TopicName 日志主题名称。
      * @param string $Query 查询语句。
      * @param integer $Number 告警对象序号。
-     * @param integer $StartTimeOffset 查询范围起始时间相对当前的历史时间，取值为非正，最大值为0，最小值为-1440。
-     * @param integer $EndTimeOffset 查询范围终止时间相对当前的历史时间，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
+     * @param integer $StartTimeOffset 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
+     * @param integer $EndTimeOffset 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
      */
     function __construct()
     {

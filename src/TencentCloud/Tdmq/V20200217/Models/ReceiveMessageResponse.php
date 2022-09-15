@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubName(string $SubName) 设置返回订阅者的名字，用来创建 ack consumer时使用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMessageIDList() 获取BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessageIDList(string $MessageIDList) 设置BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMessagesPayload() 获取BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessagesPayload(string $MessagesPayload) 设置BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,6 +75,18 @@ class ReceiveMessageResponse extends AbstractModel
     public $SubName;
 
     /**
+     * @var string BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MessageIDList;
+
+    /**
+     * @var string BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MessagesPayload;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -78,6 +98,10 @@ class ReceiveMessageResponse extends AbstractModel
      * @param string $ErrorMsg 返回的错误信息，如果为空，说明没有错误
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubName 返回订阅者的名字，用来创建 ack consumer时使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MessageIDList BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MessagesPayload BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -112,6 +136,14 @@ class ReceiveMessageResponse extends AbstractModel
 
         if (array_key_exists("SubName",$param) and $param["SubName"] !== null) {
             $this->SubName = $param["SubName"];
+        }
+
+        if (array_key_exists("MessageIDList",$param) and $param["MessageIDList"] !== null) {
+            $this->MessageIDList = $param["MessageIDList"];
+        }
+
+        if (array_key_exists("MessagesPayload",$param) and $param["MessagesPayload"] !== null) {
+            $this->MessagesPayload = $param["MessagesPayload"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

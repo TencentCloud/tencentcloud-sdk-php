@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsHaEnable(string $IsHaEnable) 设置是否开启高可用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getKubeInjectEnable() 获取KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKubeInjectEnable(boolean $KubeInjectEnable) 设置KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NamespaceInfo extends AbstractModel
 {
@@ -164,6 +168,12 @@ class NamespaceInfo extends AbstractModel
     public $IsHaEnable;
 
     /**
+     * @var boolean KubeInjectEnable值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KubeInjectEnable;
+
+    /**
      * @param string $NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceCode 命名空间编码
@@ -191,6 +201,8 @@ class NamespaceInfo extends AbstractModel
      * @param string $NamespaceType 命名空间类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsHaEnable 是否开启高可用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $KubeInjectEnable KubeInjectEnable值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -265,6 +277,10 @@ class NamespaceInfo extends AbstractModel
 
         if (array_key_exists("IsHaEnable",$param) and $param["IsHaEnable"] !== null) {
             $this->IsHaEnable = $param["IsHaEnable"];
+        }
+
+        if (array_key_exists("KubeInjectEnable",$param) and $param["KubeInjectEnable"] !== null) {
+            $this->KubeInjectEnable = $param["KubeInjectEnable"];
         }
     }
 }

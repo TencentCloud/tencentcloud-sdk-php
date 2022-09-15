@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getImageIds() 获取准备删除的镜像Id列表
  * @method void setImageIds(array $ImageIds) 设置准备删除的镜像Id列表
+ * @method boolean getDeleteBindedSnap() 获取是否删除镜像关联的快照
+ * @method void setDeleteBindedSnap(boolean $DeleteBindedSnap) 设置是否删除镜像关联的快照
+ * @method boolean getDryRun() 获取检测是否支持删除镜像
+ * @method void setDryRun(boolean $DryRun) 设置检测是否支持删除镜像
  */
 class DeleteImagesRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DeleteImagesRequest extends AbstractModel
     public $ImageIds;
 
     /**
+     * @var boolean 是否删除镜像关联的快照
+     */
+    public $DeleteBindedSnap;
+
+    /**
+     * @var boolean 检测是否支持删除镜像
+     */
+    public $DryRun;
+
+    /**
      * @param array $ImageIds 准备删除的镜像Id列表
+     * @param boolean $DeleteBindedSnap 是否删除镜像关联的快照
+     * @param boolean $DryRun 检测是否支持删除镜像
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DeleteImagesRequest extends AbstractModel
         }
         if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
             $this->ImageIds = $param["ImageIds"];
+        }
+
+        if (array_key_exists("DeleteBindedSnap",$param) and $param["DeleteBindedSnap"] !== null) {
+            $this->DeleteBindedSnap = $param["DeleteBindedSnap"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

@@ -89,11 +89,13 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
 请注意，本接口最多支持同时描述**50**个任务信息
  * @method Models\ImportMediaResponse ImportMedia(Models\ImportMediaRequest $req) 将URL指向的媒资视频文件导入系统之中。
 
-**请注意，本接口为异步接口**。接口返回MediaId仅代表导入视频任务发起，不代表任务完成，您可调用读接口(DescribeMedia/DescribeMedias)接口查询MediaId对应的媒资文件的状态。
+**请注意，本接口为异步接口**。接口返回MediaId仅代表导入视频任务发起，不代表任务完成，您可调用读接口(DescribeMedia/DescribeMedias)接口查询MediaId
 
-当前URL只支持COS地址，其形式为`https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${ObjectKey}`，其中`${Bucket}`为您的COS桶名称，Region为COS桶所在[可用区](https://cloud.tencent.com/document/product/213/6091)，`${ObjectKey}`为指向存储在COS桶内的待分析的视频的[ObjectKey](https://cloud.tencent.com/document/product/436/13324)
+URL字段推荐您使用COS地址，其形式为`https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${ObjectKey}`，其中`${Bucket}`为您的COS桶名称，Region为COS桶所在[可用区](https://cloud.tencent.com/document/product/213/6091)，`${ObjectKey}`为指向存储在COS桶内的待分析的视频的[ObjectKey](https://cloud.tencent.com/document/product/436/13324)
 
-分析完成后，本产品将在您的`${Bucket}`桶内创建名为`${ObjectKey}-${task-start-time}`的目录(`task-start-time`形式为1970-01-01T08:08:08)并将分析结果将回传回该目录，也即，结构化分析结果(包括图片，JSON等数据)将会写回`https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${ObjectKey}-${task-start-time}`目录
+另外，目前产品也支持使用外部URL地址，但是当传入URL为非COS地址时，需要您指定额外的WriteBackCosPath以供产品回写结果数据。
+
+分析完成后，本产品将在您的`${Bucket}`桶内创建名为`${ObjectKey}_${task-create-time}`的目录(`task-create-time`形式为1970-01-01T08:08:08)并将分析结果将回传回该目录，也即，结构化分析结果(包括图片，JSON等数据)将会写回`https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${ObjectKey}_${task-create-time}`目录
 
  * @method Models\ModifyCallbackResponse ModifyCallback(Models\ModifyCallbackRequest $req) 用户设置对应事件的回调地址
 
@@ -108,7 +110,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
 
 事件通知服务具备重试能力，事件通知失败后会总计重试3次；
 为了避免重试对您的服务器以及网络带宽造成冲击，请保持正常回包。触发重试条件如下：
-- 长时间（20 秒）未回包应答。
+- 长时间（5 秒）未回包应答。
 - 应答 HTTP STATUS 不为200。
 
 
@@ -119,7 +121,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
 |---------|---------|---------|---------|
 | EventType | 是 | int | 回调时间类型，1-任务分析完成，2-媒资导入完成 |
 | TaskId | 是 | String | 任务ID |
-| TaskStatus | 是 | [TaskStatus](/document/product/1611/63373?!preview&preview_docmenu=1&lang=cn&!document=1#TaskStatus) | 任务执行状态 |
+| TaskStatus | 是 | [TaskStatus](/document/product/1509/65063#TaskInfo) | 任务执行状态 |
 | FailedReason | 是 | String | 若任务失败，该字段为失败原因 |
 
 
@@ -128,7 +130,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
 |---------|---------|---------|---------|
 | EventType | 是 | int | 回调时间类型，1-任务分析完成，2-媒资导入完成 |
 | MediaId | 是 | String | 媒资ID |
-| MediaStatus | 是 | [MediaStatus](/document/product/1611/63373?!preview&preview_docmenu=1&lang=cn&!document=1#MediaStatus) | 媒资导入状态|
+| MediaStatus | 是 | [MediaStatus](/document/product/1509/65063#MediaInfo) | 媒资导入状态|
 | FailedReason | 是 | String | 若任务失败，该字段为失败原因 |
  * @method Models\QueryCallbackResponse QueryCallback(Models\QueryCallbackRequest $req) 查询用户回调设置
  * @method Models\UpdateCustomCategoryResponse UpdateCustomCategory(Models\UpdateCustomCategoryRequest $req) 更新自定义人物分类

@@ -110,6 +110,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBNodeSet(array $DBNodeSet) 设置实例的节点信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSupportTDE() 获取实例是否支持TDE数据加密  0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportTDE(integer $IsSupportTDE) 设置实例是否支持TDE数据加密  0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -303,6 +307,12 @@ class DBInstance extends AbstractModel
     public $DBNodeSet;
 
     /**
+     * @var integer 实例是否支持TDE数据加密  0：不支持，1：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportTDE;
+
+    /**
      * @param string $Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param string $Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      * @param integer $ProjectId 项目ID
@@ -347,6 +357,8 @@ class DBInstance extends AbstractModel
      * @param string $DBMajorVersion PostgreSQL主要版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DBNodeSet 实例的节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSupportTDE 实例是否支持TDE数据加密  0：不支持，1：支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -524,6 +536,10 @@ class DBInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DBNodeSet, $obj);
             }
+        }
+
+        if (array_key_exists("IsSupportTDE",$param) and $param["IsSupportTDE"] !== null) {
+            $this->IsSupportTDE = $param["IsSupportTDE"];
         }
     }
 }

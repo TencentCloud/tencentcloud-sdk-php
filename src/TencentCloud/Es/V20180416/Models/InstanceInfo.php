@@ -38,12 +38,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetUid(string $SubnetUid) 设置实例所属子网的UID
  * @method integer getStatus() 获取实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
  * @method void setStatus(integer $Status) 设置实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+ * @method string getRenewFlag() 获取自动续费标识。取值范围：
+RENEW_FLAG_AUTO：自动续费  
+RENEW_FLAG_MANUAL：不自动续费
+默认取值：
+RENEW_FLAG_DEFAULT：不自动续费
+若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+ * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：
+RENEW_FLAG_AUTO：自动续费  
+RENEW_FLAG_MANUAL：不自动续费
+默认取值：
+RENEW_FLAG_DEFAULT：不自动续费
+若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
  * @method string getChargeType() 获取实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
  * @method void setChargeType(string $ChargeType) 设置实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
  * @method integer getChargePeriod() 获取包年包月购买时长,单位:月
  * @method void setChargePeriod(integer $ChargePeriod) 设置包年包月购买时长,单位:月
- * @method string getRenewFlag() 获取自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
- * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
  * @method string getNodeType() 获取节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
  * @method void setNodeType(string $NodeType) 设置节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
  * @method integer getNodeNum() 获取节点个数
@@ -244,6 +254,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsPrivateDomain(string $EsPrivateDomain) 设置https集群内网域名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEsConfigSets() 获取集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEsConfigSets(array $EsConfigSets) 设置集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OperationDuration getOperationDuration() 获取集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperationDuration(OperationDuration $OperationDuration) 设置集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOptionalWebServiceInfos() 获取web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOptionalWebServiceInfos(array $OptionalWebServiceInfos) 设置web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoIndexEnabled() 获取自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoIndexEnabled(boolean $AutoIndexEnabled) 设置自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableHybridStorage() 获取是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableHybridStorage(boolean $EnableHybridStorage) 设置是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -293,6 +323,16 @@ class InstanceInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string 自动续费标识。取值范围：
+RENEW_FLAG_AUTO：自动续费  
+RENEW_FLAG_MANUAL：不自动续费
+默认取值：
+RENEW_FLAG_DEFAULT：不自动续费
+若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+     */
+    public $RenewFlag;
+
+    /**
      * @var string 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      */
     public $ChargeType;
@@ -301,11 +341,6 @@ class InstanceInfo extends AbstractModel
      * @var integer 包年包月购买时长,单位:月
      */
     public $ChargePeriod;
-
-    /**
-     * @var string 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
-     */
-    public $RenewFlag;
 
     /**
      * @var string 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
@@ -656,6 +691,36 @@ class InstanceInfo extends AbstractModel
     public $EsPrivateDomain;
 
     /**
+     * @var array 集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EsConfigSets;
+
+    /**
+     * @var OperationDuration 集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperationDuration;
+
+    /**
+     * @var array web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OptionalWebServiceInfos;
+
+    /**
+     * @var boolean 自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoIndexEnabled;
+
+    /**
+     * @var boolean 是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableHybridStorage;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -665,9 +730,14 @@ class InstanceInfo extends AbstractModel
      * @param string $VpcUid 实例所属VPC的UID
      * @param string $SubnetUid 实例所属子网的UID
      * @param integer $Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+     * @param string $RenewFlag 自动续费标识。取值范围：
+RENEW_FLAG_AUTO：自动续费  
+RENEW_FLAG_MANUAL：不自动续费
+默认取值：
+RENEW_FLAG_DEFAULT：不自动续费
+若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
      * @param string $ChargeType 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      * @param integer $ChargePeriod 包年包月购买时长,单位:月
-     * @param string $RenewFlag 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
      * @param string $NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param integer $NodeNum 节点个数
      * @param integer $CpuNum 节点CPU核数
@@ -768,6 +838,16 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EsPrivateDomain https集群内网域名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $EsConfigSets 集群的配置组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationDuration $OperationDuration 集群可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OptionalWebServiceInfos web节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoIndexEnabled 自治索引开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableHybridStorage 是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -818,16 +898,16 @@ class InstanceInfo extends AbstractModel
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
         }
 
         if (array_key_exists("ChargePeriod",$param) and $param["ChargePeriod"] !== null) {
             $this->ChargePeriod = $param["ChargePeriod"];
-        }
-
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
         }
 
         if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
@@ -1098,6 +1178,37 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("EsPrivateDomain",$param) and $param["EsPrivateDomain"] !== null) {
             $this->EsPrivateDomain = $param["EsPrivateDomain"];
+        }
+
+        if (array_key_exists("EsConfigSets",$param) and $param["EsConfigSets"] !== null) {
+            $this->EsConfigSets = [];
+            foreach ($param["EsConfigSets"] as $key => $value){
+                $obj = new EsConfigSetInfo();
+                $obj->deserialize($value);
+                array_push($this->EsConfigSets, $obj);
+            }
+        }
+
+        if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
+            $this->OperationDuration = new OperationDuration();
+            $this->OperationDuration->deserialize($param["OperationDuration"]);
+        }
+
+        if (array_key_exists("OptionalWebServiceInfos",$param) and $param["OptionalWebServiceInfos"] !== null) {
+            $this->OptionalWebServiceInfos = [];
+            foreach ($param["OptionalWebServiceInfos"] as $key => $value){
+                $obj = new OptionalWebServiceInfo();
+                $obj->deserialize($value);
+                array_push($this->OptionalWebServiceInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("AutoIndexEnabled",$param) and $param["AutoIndexEnabled"] !== null) {
+            $this->AutoIndexEnabled = $param["AutoIndexEnabled"];
+        }
+
+        if (array_key_exists("EnableHybridStorage",$param) and $param["EnableHybridStorage"] !== null) {
+            $this->EnableHybridStorage = $param["EnableHybridStorage"];
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBaseLineInSwitch(integer $BaseLineInSwitch) 设置1 打开 0 关闭
  * @method integer getBaseLineOutSwitch() 获取1 打开 0 关闭
  * @method void setBaseLineOutSwitch(integer $BaseLineOutSwitch) 设置1 打开 0 关闭
+ * @method integer getVpcFwCount() 获取vpc间防火墙实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcFwCount(integer $VpcFwCount) 设置vpc间防火墙实例数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UnHandleEvent extends AbstractModel
 {
@@ -52,10 +56,18 @@ class UnHandleEvent extends AbstractModel
     public $BaseLineOutSwitch;
 
     /**
+     * @var integer vpc间防火墙实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VpcFwCount;
+
+    /**
      * @param array $EventTableListStruct 伪攻击链类型
      * @param integer $BaseLineUser 1 是  0否
      * @param integer $BaseLineInSwitch 1 打开 0 关闭
      * @param integer $BaseLineOutSwitch 1 打开 0 关闭
+     * @param integer $VpcFwCount vpc间防火墙实例数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -89,6 +101,10 @@ class UnHandleEvent extends AbstractModel
 
         if (array_key_exists("BaseLineOutSwitch",$param) and $param["BaseLineOutSwitch"] !== null) {
             $this->BaseLineOutSwitch = $param["BaseLineOutSwitch"];
+        }
+
+        if (array_key_exists("VpcFwCount",$param) and $param["VpcFwCount"] !== null) {
+            $this->VpcFwCount = $param["VpcFwCount"];
         }
     }
 }

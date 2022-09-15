@@ -151,7 +151,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeUserClusterResponse DescribeUserCluster(Models\DescribeUserClusterRequest $req) 安全概览和集群安全页进入调用该接口，查询用户集群相关信息。
  * @method Models\DescribeValueAddedSrvInfoResponse DescribeValueAddedSrvInfo(Models\DescribeValueAddedSrvInfoRequest $req) DescribeValueAddedSrvInfo查询增值服务需购买信息
  * @method Models\DescribeVirusDetailResponse DescribeVirusDetail(Models\DescribeVirusDetailRequest $req) 运行时查询木马文件信息
- * @method Models\DescribeVirusListResponse DescribeVirusList(Models\DescribeVirusListRequest $req) 运行时文件查杀事件列表
+ * @method Models\DescribeVirusListResponse DescribeVirusList(Models\DescribeVirusListRequest $req) 查询运行时文件查杀事件列表
  * @method Models\DescribeVirusMonitorSettingResponse DescribeVirusMonitorSetting(Models\DescribeVirusMonitorSettingRequest $req) 运行时查询文件查杀实时监控设置
  * @method Models\DescribeVirusScanSettingResponse DescribeVirusScanSetting(Models\DescribeVirusScanSettingRequest $req) 运行时查询文件查杀设置
  * @method Models\DescribeVirusScanTaskStatusResponse DescribeVirusScanTaskStatus(Models\DescribeVirusScanTaskStatusRequest $req) 运行时查询文件查杀任务状态

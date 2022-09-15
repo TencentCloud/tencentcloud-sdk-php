@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IsolateDBInstances请求参数结构体
  *
- * @method array getDBInstanceIdSet() 获取实例ID集合
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID集合
+ * @method array getDBInstanceIdSet() 获取实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
  */
 class IsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID集合
+     * @var array 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
      */
     public $DBInstanceIdSet;
 
     /**
-     * @param array $DBInstanceIdSet 实例ID集合
+     * @param array $DBInstanceIdSet 实例ID集合。注意：当前已不支持同时隔离多个实例，这里只能传入单个实例ID。
      */
     function __construct()
     {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置页码，从1开始
  * @method integer getRp() 获取每页行数，不能大于200
  * @method void setRp(integer $Rp) 设置每页行数，不能大于200
+ * @method array getTags() 获取标签筛选
+ * @method void setTags(array $Tags) 设置标签筛选
  */
 class DescribeRoleListRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeRoleListRequest extends AbstractModel
     public $Rp;
 
     /**
+     * @var array 标签筛选
+     */
+    public $Tags;
+
+    /**
      * @param integer $Page 页码，从1开始
      * @param integer $Rp 每页行数，不能大于200
+     * @param array $Tags 标签筛选
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class DescribeRoleListRequest extends AbstractModel
 
         if (array_key_exists("Rp",$param) and $param["Rp"] !== null) {
             $this->Rp = $param["Rp"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new RoleTags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

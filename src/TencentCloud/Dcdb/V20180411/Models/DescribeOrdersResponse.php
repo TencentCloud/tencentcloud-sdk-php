@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrders返回参数结构体
  *
- * @method array getTotalCount() 获取返回的订单数量。
- * @method void setTotalCount(array $TotalCount) 设置返回的订单数量。
+ * @method integer getTotalCount() 获取返回的订单数量。
+ * @method void setTotalCount(integer $TotalCount) 设置返回的订单数量。
  * @method array getDeals() 获取订单信息列表。
  * @method void setDeals(array $Deals) 设置订单信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOrdersResponse extends AbstractModel
 {
     /**
-     * @var array 返回的订单数量。
+     * @var integer 返回的订单数量。
      */
     public $TotalCount;
 
@@ -45,7 +45,7 @@ class DescribeOrdersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TotalCount 返回的订单数量。
+     * @param integer $TotalCount 返回的订单数量。
      * @param array $Deals 订单信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

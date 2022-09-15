@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMpPath(string $MpPath) 设置小程序路径
  * @method string getMpUserName() 获取小程序原始 id
  * @method void setMpUserName(string $MpUserName) 设置小程序原始 id
+ * @method OpenBankFormInfo getFormInfo() 获取网银支付提交页面信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFormInfo(OpenBankFormInfo $FormInfo) 设置网银支付提交页面信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OpenBankRedirectInfo extends AbstractModel
 {
@@ -76,6 +80,12 @@ class OpenBankRedirectInfo extends AbstractModel
     public $MpUserName;
 
     /**
+     * @var OpenBankFormInfo 网银支付提交页面信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FormInfo;
+
+    /**
      * @param string $QRCodeUrl 生成二维码，引导用户扫码
      * @param string $QRCodeKey 二维码凭证
      * @param string $Url 跳转 URL,用于客户端跳转，订单未支付时返回该参数
@@ -84,6 +94,8 @@ class OpenBankRedirectInfo extends AbstractModel
      * @param string $MpAppId 小程序 appid
      * @param string $MpPath 小程序路径
      * @param string $MpUserName 小程序原始 id
+     * @param OpenBankFormInfo $FormInfo 网银支付提交页面信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -124,6 +136,11 @@ class OpenBankRedirectInfo extends AbstractModel
 
         if (array_key_exists("MpUserName",$param) and $param["MpUserName"] !== null) {
             $this->MpUserName = $param["MpUserName"];
+        }
+
+        if (array_key_exists("FormInfo",$param) and $param["FormInfo"] !== null) {
+            $this->FormInfo = new OpenBankFormInfo();
+            $this->FormInfo->deserialize($param["FormInfo"]);
         }
     }
 }

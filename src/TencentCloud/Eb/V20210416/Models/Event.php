@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置事件类型，可自定义，选填。云服务默认写 COS:Created:PostObject，用“：”分割类型字段
  * @method string getSubject() 获取事件来源详细描述，可自定义，选填。云服务默认为标准qcs资源表示语法：qcs::dts:ap-guangzhou:appid/uin:xxx
  * @method void setSubject(string $Subject) 设置事件来源详细描述，可自定义，选填。云服务默认为标准qcs资源表示语法：qcs::dts:ap-guangzhou:appid/uin:xxx
+ * @method integer getTime() 获取事件发生的毫秒时间戳，
+time.Now().UnixNano()/1e6
+ * @method void setTime(integer $Time) 设置事件发生的毫秒时间戳，
+time.Now().UnixNano()/1e6
  */
 class Event extends AbstractModel
 {
@@ -52,10 +56,18 @@ class Event extends AbstractModel
     public $Subject;
 
     /**
+     * @var integer 事件发生的毫秒时间戳，
+time.Now().UnixNano()/1e6
+     */
+    public $Time;
+
+    /**
      * @param string $Source 事件源的信息,新产品上报必须符合EB的规范
      * @param string $Data 事件数据，内容由创建事件的系统来控制，当前datacontenttype仅支持application/json;charset=utf-8，所以该字段是json字符串
      * @param string $Type 事件类型，可自定义，选填。云服务默认写 COS:Created:PostObject，用“：”分割类型字段
      * @param string $Subject 事件来源详细描述，可自定义，选填。云服务默认为标准qcs资源表示语法：qcs::dts:ap-guangzhou:appid/uin:xxx
+     * @param integer $Time 事件发生的毫秒时间戳，
+time.Now().UnixNano()/1e6
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class Event extends AbstractModel
 
         if (array_key_exists("Subject",$param) and $param["Subject"] !== null) {
             $this->Subject = $param["Subject"];
+        }
+
+        if (array_key_exists("Time",$param) and $param["Time"] !== null) {
+            $this->Time = $param["Time"];
         }
     }
 }

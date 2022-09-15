@@ -21,15 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 视频流配置参数
  *
  * @method string getCodec() 获取视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
-<li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+<font color=red>注意：</font>
+<li> av1，H.266 编码容器目前只支持 mp4 ；</li>
+<li> H.266 目前只支持恒定 CRF 码率控制方式。 </li>
  * @method void setCodec(string $Codec) 设置视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
-<li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+<font color=red>注意：</font>
+<li> av1，H.266 编码容器目前只支持 mp4 ；</li>
+<li> H.266 目前只支持恒定 CRF 码率控制方式。 </li>
  * @method integer getFps() 获取视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
  * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 100]，单位：Hz。
@@ -46,25 +52,25 @@ use TencentCloud\Common\AbstractModel;
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
- * @method integer getWidth() 获取视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+ * @method integer getWidth() 获取视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
- * @method void setWidth(integer $Width) 设置视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+ * @method void setWidth(integer $Width) 设置视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
- * @method integer getHeight() 获取视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+ * @method integer getHeight() 获取视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
- * @method void setHeight(integer $Height) 设置视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+ * @method void setHeight(integer $Height) 设置视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -83,24 +89,41 @@ use TencentCloud\Common\AbstractModel;
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
  * @method integer getVcrf() 获取视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
+
+<font color=red>注意：</font>
+<li>如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）；</li>
+<li>当指定视频流编码格式为 H.266 时，该字段必填，推荐值为 28；</li>
+<li>如果没有特殊需求，不建议指定该参数。</li>
  * @method void setVcrf(integer $Vcrf) 设置视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
+
+<font color=red>注意：</font>
+<li>如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）；</li>
+<li>当指定视频流编码格式为 H.266 时，该字段必填，推荐值为 28；</li>
+<li>如果没有特殊需求，不建议指定该参数。</li>
  * @method integer getGop() 获取关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
 当填 0 或不填时，系统将自动设置 gop 长度。
  * @method void setGop(integer $Gop) 设置关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
 当填 0 或不填时，系统将自动设置 gop 长度。
+ * @method string getPreserveHDRSwitch() 获取当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
+<li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
+<li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
+默认值：OFF。
+ * @method void setPreserveHDRSwitch(string $PreserveHDRSwitch) 设置当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
+<li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
+<li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
+默认值：OFF。
  */
 class VideoTemplateInfo extends AbstractModel
 {
     /**
      * @var string 视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
-<li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+<font color=red>注意：</font>
+<li> av1，H.266 编码容器目前只支持 mp4 ；</li>
+<li> H.266 目前只支持恒定 CRF 码率控制方式。 </li>
      */
     public $Codec;
 
@@ -125,7 +148,7 @@ class VideoTemplateInfo extends AbstractModel
     public $ResolutionAdaptive;
 
     /**
-     * @var integer 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @var integer 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -135,7 +158,7 @@ class VideoTemplateInfo extends AbstractModel
     public $Width;
 
     /**
-     * @var integer 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @var integer 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -156,8 +179,11 @@ class VideoTemplateInfo extends AbstractModel
 
     /**
      * @var integer 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
+
+<font color=red>注意：</font>
+<li>如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）；</li>
+<li>当指定视频流编码格式为 H.266 时，该字段必填，推荐值为 28；</li>
+<li>如果没有特殊需求，不建议指定该参数。</li>
      */
     public $Vcrf;
 
@@ -168,11 +194,22 @@ class VideoTemplateInfo extends AbstractModel
     public $Gop;
 
     /**
+     * @var string 当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
+<li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
+<li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
+默认值：OFF。
+     */
+    public $PreserveHDRSwitch;
+
+    /**
      * @param string $Codec 视频流的编码格式，可选值：
-<li>libx264：H.264 编码</li>
-<li>libx265：H.265 编码</li>
-<li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+<li>libx264：H.264 编码；</li>
+<li>libx265：H.265 编码；</li>
+<li>av1：AOMedia Video 1 编码；</li>
+<li>H.266：H.266 编码。</li>
+<font color=red>注意：</font>
+<li> av1，H.266 编码容器目前只支持 mp4 ；</li>
+<li> H.266 目前只支持恒定 CRF 码率控制方式。 </li>
      * @param integer $Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
@@ -181,13 +218,13 @@ class VideoTemplateInfo extends AbstractModel
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
-     * @param integer $Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @param integer $Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 默认值：0。
-     * @param integer $Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * @param integer $Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -200,10 +237,17 @@ class VideoTemplateInfo extends AbstractModel
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
      * @param integer $Vcrf 视频恒定码率控制因子，取值范围为[1, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
+
+<font color=red>注意：</font>
+<li>如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）；</li>
+<li>当指定视频流编码格式为 H.266 时，该字段必填，推荐值为 28；</li>
+<li>如果没有特殊需求，不建议指定该参数。</li>
      * @param integer $Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
 当填 0 或不填时，系统将自动设置 gop 长度。
+     * @param string $PreserveHDRSwitch 当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
+<li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
+<li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
+默认值：OFF。
      */
     function __construct()
     {
@@ -252,6 +296,10 @@ class VideoTemplateInfo extends AbstractModel
 
         if (array_key_exists("Gop",$param) and $param["Gop"] !== null) {
             $this->Gop = $param["Gop"];
+        }
+
+        if (array_key_exists("PreserveHDRSwitch",$param) and $param["PreserveHDRSwitch"] !== null) {
+            $this->PreserveHDRSwitch = $param["PreserveHDRSwitch"];
         }
     }
 }

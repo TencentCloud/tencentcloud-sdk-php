@@ -79,12 +79,20 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\DescribeFirewallRulesTemplateResponse DescribeFirewallRulesTemplate(Models\DescribeFirewallRulesTemplateRequest $req) 本接口（DescribeFirewallRulesTemplate）用于查询防火墙规则模板。
  * @method Models\DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotas(Models\DescribeGeneralResourceQuotasRequest $req) 本接口（DescribeGeneralResourceQuotas）用于查询通用资源配额信息。
  * @method Models\DescribeInstanceLoginKeyPairAttributeResponse DescribeInstanceLoginKeyPairAttribute(Models\DescribeInstanceLoginKeyPairAttributeRequest $req) 本接口用于查询实例默认登录密钥属性。
- * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) 本接口（DescribeInstanceVncUrl）用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
+ * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) 本接口 ( DescribeInstanceVncUrl ) 用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
 
-* 处于 RUNNING 状态的机器可使用此功能。
+* 处于 `STOPPED` 状态的机器无法使用此功能。
 * 管理终端地址的有效期为 15 秒，调用接口成功后如果 15 秒内不使用该链接进行访问，管理终端地址自动失效，您需要重新查询。
 * 管理终端地址一旦被访问，将自动失效，您需要重新查询。
 * 如果连接断开，每分钟内重新连接的次数不能超过 30 次。
+* 参数 `InstanceVncUrl` ：调用接口成功后会返回的 `InstanceVncUrl` 的值。
+获取到 `InstanceVncUrl` 后，您需要在链接 `https://img.qcloud.com/qcloud/app/active_vnc/index.html?` 末尾加上参数 `InstanceVncUrl=xxxx`。
+ 最后组成的 URL 格式如下：
+
+```
+https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
+```
+
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用于查询一个或多个实例的详细信息。
 
 * 可以根据实例 ID、实例名称或者实例的内网 IP 查询实例的详细信息。
@@ -116,7 +124,12 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\InquirePriceCreateDisksResponse InquirePriceCreateDisks(Models\InquirePriceCreateDisksRequest $req) 本接口（InquirePriceCreateDisks）用于新购云硬盘询价。
  * @method Models\InquirePriceCreateInstancesResponse InquirePriceCreateInstances(Models\InquirePriceCreateInstancesRequest $req) 本接口（InquiryPriceCreateInstances）用于创建实例询价。
  * @method Models\InquirePriceRenewDisksResponse InquirePriceRenewDisks(Models\InquirePriceRenewDisksRequest $req) 本接口（InquirePriceRenewDisks）用于续费云硬盘询价。
- * @method Models\InquirePriceRenewInstancesResponse InquirePriceRenewInstances(Models\InquirePriceRenewInstancesRequest $req) 本接口（InquirePriceCreateInstances）用于续费实例询价。
+ * @method Models\InquirePriceRenewInstancesResponse InquirePriceRenewInstances(Models\InquirePriceRenewInstancesRequest $req) 本接口（InquirePriceRenewInstances）用于续费实例询价。
+ * @method Models\IsolateInstancesResponse IsolateInstances(Models\IsolateInstancesRequest $req) 本接口(IsolateInstances)用于退还一个或多个轻量应用服务器实例。
+* 只有状态为 RUNNING 或 STOPPED 的实例才可以进行此操作。
+* 接口调用成功后，实例会进入SHUTDOWN 状态。
+* 支持批量操作。每次请求批量资源（包括实例与数据盘）的上限为 20。
+* 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
  * @method Models\ModifyBlueprintAttributeResponse ModifyBlueprintAttribute(Models\ModifyBlueprintAttributeRequest $req) 本接口 (ModifyBlueprintAttribute) 用于修改镜像属性。
  * @method Models\ModifyDisksAttributeResponse ModifyDisksAttribute(Models\ModifyDisksAttributeRequest $req) 本接口(ModifyDisksAttribute)用于修改云硬盘属性。
  * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识。
@@ -161,6 +174,10 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * 只有状态为 RUNNING 的实例才可以进行此操作。
 * 接口调用成功时，实例会进入 REBOOTING 状态；重启实例成功时，实例会进入 RUNNING 状态。
 * 支持批量操作，每次请求批量实例的上限为 100。
+* 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+ * @method Models\RenewInstancesResponse RenewInstances(Models\RenewInstancesRequest $req) 本接口(RenewInstances)用于续费一个或多个轻量应用服务器实例。
+* 只有状态为 RUNNING，STOPPED 或 SHUTDOWN 的实例才可以进行此操作。
+* 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
  * @method Models\ResetAttachCcnResponse ResetAttachCcn(Models\ResetAttachCcnRequest $req) 本接口 (ResetAttachCcn) 用于关联云联网实例申请过期时，重新申请关联操作。
  * @method Models\ResetInstanceResponse ResetInstance(Models\ResetInstanceRequest $req) 本接口（ResetInstance）用于重装指定实例上的镜像。

@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
 <li>once：动态水印播放完后，不再出现；</li>
 <li>repeat_last_frame：水印播放完后，停留在最后一帧；</li>
 <li>repeat：水印循环播放，直到视频结束。</li>
+ * @method integer getTransparency() 获取图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明。</li>
+ * @method void setTransparency(integer $Transparency) 设置图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明。</li>
  */
 class ImageWatermarkTemplate extends AbstractModel
 {
@@ -76,6 +82,13 @@ class ImageWatermarkTemplate extends AbstractModel
     public $RepeatType;
 
     /**
+     * @var integer 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明。</li>
+     */
+    public $Transparency;
+
+    /**
      * @param string $ImageUrl 水印图片地址。
      * @param string $Width 水印的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Width 为视频宽度的百分比大小，如 10% 表示 Width 为视频宽度的 10%；</li>
@@ -88,6 +101,9 @@ class ImageWatermarkTemplate extends AbstractModel
 <li>once：动态水印播放完后，不再出现；</li>
 <li>repeat_last_frame：水印播放完后，停留在最后一帧；</li>
 <li>repeat：水印循环播放，直到视频结束。</li>
+     * @param integer $Transparency 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明。</li>
      */
     function __construct()
     {
@@ -116,6 +132,10 @@ class ImageWatermarkTemplate extends AbstractModel
 
         if (array_key_exists("RepeatType",$param) and $param["RepeatType"] !== null) {
             $this->RepeatType = $param["RepeatType"];
+        }
+
+        if (array_key_exists("Transparency",$param) and $param["Transparency"] !== null) {
+            $this->Transparency = $param["Transparency"];
         }
     }
 }

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(integer $RoomId) 设置房间ID
  * @method integer getUserId() 获取用户ID
  * @method void setUserId(integer $UserId) 设置用户ID
+ * @method string getUserIdStr() 获取字符串类型用户ID
+ * @method void setUserIdStr(string $UserIdStr) 设置字符串类型用户ID
+ * @method string getRoomIdStr() 获取字符串类型房间ID
+ * @method void setRoomIdStr(string $RoomIdStr) 设置字符串类型房间ID
  */
 class DescribeUserInAndOutTimeRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeUserInAndOutTimeRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var string 字符串类型用户ID
+     */
+    public $UserIdStr;
+
+    /**
+     * @var string 字符串类型房间ID
+     */
+    public $RoomIdStr;
+
+    /**
      * @param integer $BizId 应用ID
      * @param integer $RoomId 房间ID
      * @param integer $UserId 用户ID
+     * @param string $UserIdStr 字符串类型用户ID
+     * @param string $RoomIdStr 字符串类型房间ID
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeUserInAndOutTimeRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("UserIdStr",$param) and $param["UserIdStr"] !== null) {
+            $this->UserIdStr = $param["UserIdStr"];
+        }
+
+        if (array_key_exists("RoomIdStr",$param) and $param["RoomIdStr"] !== null) {
+            $this->RoomIdStr = $param["RoomIdStr"];
         }
     }
 }

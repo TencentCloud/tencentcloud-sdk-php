@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getExpireTime() 获取禁推过期时间。
  * @method void setExpireTime(string $ExpireTime) 设置禁推过期时间。
+ * @method string getAppName() 获取推流路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppName(string $AppName) 设置推流路径。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDomainName() 获取推流域名。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomainName(string $DomainName) 设置推流域名。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ForbidStreamInfo extends AbstractModel
 {
@@ -45,9 +53,25 @@ class ForbidStreamInfo extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var string 推流路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppName;
+
+    /**
+     * @var string 推流域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DomainName;
+
+    /**
      * @param string $StreamName 流名称。
      * @param string $CreateTime 创建时间。
      * @param string $ExpireTime 禁推过期时间。
+     * @param string $AppName 推流路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DomainName 推流域名。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +96,14 @@ class ForbidStreamInfo extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
+            $this->AppName = $param["AppName"];
+        }
+
+        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
+            $this->DomainName = $param["DomainName"];
         }
     }
 }

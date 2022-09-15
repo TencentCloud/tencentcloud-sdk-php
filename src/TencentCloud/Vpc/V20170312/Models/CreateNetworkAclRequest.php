@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method string getNetworkAclName() 获取网络ACL名称，最大长度不能超过60个字节。
  * @method void setNetworkAclName(string $NetworkAclName) 设置网络ACL名称，最大长度不能超过60个字节。
+ * @method string getNetworkAclType() 获取网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)
+ * @method void setNetworkAclType(string $NetworkAclType) 设置网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateNetworkAclRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class CreateNetworkAclRequest extends AbstractModel
     public $NetworkAclName;
 
     /**
+     * @var string 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)
+     */
+    public $NetworkAclType;
+
+    /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public $Tags;
+
+    /**
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param string $NetworkAclName 网络ACL名称，最大长度不能超过60个字节。
+     * @param string $NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()
     {
@@ -60,6 +76,19 @@ class CreateNetworkAclRequest extends AbstractModel
 
         if (array_key_exists("NetworkAclName",$param) and $param["NetworkAclName"] !== null) {
             $this->NetworkAclName = $param["NetworkAclName"];
+        }
+
+        if (array_key_exists("NetworkAclType",$param) and $param["NetworkAclType"] !== null) {
+            $this->NetworkAclType = $param["NetworkAclType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

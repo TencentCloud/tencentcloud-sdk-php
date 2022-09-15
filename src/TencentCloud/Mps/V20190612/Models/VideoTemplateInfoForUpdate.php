@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
  * @method void setCodec(string $Codec) 设置视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
  * @method integer getFps() 获取视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
  * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 100]，单位：Hz。
@@ -41,9 +43,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResolutionAdaptive() 获取分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+注意：自适应模式时，Width不能小于Height。
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) 设置分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+注意：自适应模式时，Width不能小于Height。
  * @method integer getWidth() 获取视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -72,6 +76,14 @@ use TencentCloud\Common\AbstractModel;
 如果没有特殊需求，不建议指定该参数。
  * @method void setVcrf(integer $Vcrf) 设置视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
 如果没有特殊需求，不建议指定该参数。
+ * @method integer getContentAdaptStream() 获取内容自适应编码。可选值：
+<li>0：不开启</li>
+<li>1：开启</li>
+默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。
+ * @method void setContentAdaptStream(integer $ContentAdaptStream) 设置内容自适应编码。可选值：
+<li>0：不开启</li>
+<li>1：开启</li>
+默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -80,7 +92,8 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
      */
     public $Codec;
 
@@ -100,6 +113,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
      * @var string 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+注意：自适应模式时，Width不能小于Height。
      */
     public $ResolutionAdaptive;
 
@@ -138,11 +152,20 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $Vcrf;
 
     /**
+     * @var integer 内容自适应编码。可选值：
+<li>0：不开启</li>
+<li>1：开启</li>
+默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。
+     */
+    public $ContentAdaptStream;
+
+    /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。av1 编码容器目前只支持 mp4 。
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
      * @param integer $Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
@@ -150,6 +173,7 @@ class VideoTemplateInfoForUpdate extends AbstractModel
      * @param string $ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
+注意：自适应模式时，Width不能小于Height。
      * @param integer $Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -164,6 +188,10 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
      * @param integer $Vcrf 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
 如果没有特殊需求，不建议指定该参数。
+     * @param integer $ContentAdaptStream 内容自适应编码。可选值：
+<li>0：不开启</li>
+<li>1：开启</li>
+默认值: 0.   当开启该参数时，将会自适应生成多个不同分辨率，不同码率的码流， 其中VideoTemplate的宽和高为多个码流中的最大分辨率，VideoTemplate中的码率为多个码流中的最高码率， VideoTemplate中的vcrf为多个码流中的最高质量。 当不设置分辨率、码率和vcrf时， ContentAdaptStream 参数生成的最高分辨率为视频源的分辨率，视频质量为接近vmaf95分。 若要开启该参数或了解计费细节, 请联系您的腾讯云商务。
      */
     function __construct()
     {
@@ -212,6 +240,10 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 
         if (array_key_exists("Vcrf",$param) and $param["Vcrf"] !== null) {
             $this->Vcrf = $param["Vcrf"];
+        }
+
+        if (array_key_exists("ContentAdaptStream",$param) and $param["ContentAdaptStream"] !== null) {
+            $this->ContentAdaptStream = $param["ContentAdaptStream"];
         }
     }
 }

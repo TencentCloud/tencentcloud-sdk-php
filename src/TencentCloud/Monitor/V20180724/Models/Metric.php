@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricConfig(MetricConfig $MetricConfig) 设置指标配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsAdvanced() 获取是否为高级指标。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAdvanced(integer $IsAdvanced) 设置是否为高级指标。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsOpen() 获取高级指标是否开通。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsOpen(integer $IsOpen) 设置高级指标是否开通。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProductId() 获取集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductId(integer $ProductId) 设置集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Metric extends AbstractModel
 {
@@ -83,6 +95,24 @@ class Metric extends AbstractModel
     public $MetricConfig;
 
     /**
+     * @var integer 是否为高级指标。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAdvanced;
+
+    /**
+     * @var integer 高级指标是否开通。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsOpen;
+
+    /**
+     * @var integer 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductId;
+
+    /**
      * @param string $Namespace 告警策略类型
      * @param string $MetricName 指标名
      * @param string $Description 指标展示名
@@ -91,6 +121,12 @@ class Metric extends AbstractModel
      * @param array $Dimensions 维度列表
      * @param string $Unit 单位
      * @param MetricConfig $MetricConfig 指标配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsAdvanced 是否为高级指标。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsOpen 高级指标是否开通。1是 0否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProductId 集成中心产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -137,6 +173,18 @@ class Metric extends AbstractModel
         if (array_key_exists("MetricConfig",$param) and $param["MetricConfig"] !== null) {
             $this->MetricConfig = new MetricConfig();
             $this->MetricConfig->deserialize($param["MetricConfig"]);
+        }
+
+        if (array_key_exists("IsAdvanced",$param) and $param["IsAdvanced"] !== null) {
+            $this->IsAdvanced = $param["IsAdvanced"];
+        }
+
+        if (array_key_exists("IsOpen",$param) and $param["IsOpen"] !== null) {
+            $this->IsOpen = $param["IsOpen"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

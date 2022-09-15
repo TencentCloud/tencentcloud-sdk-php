@@ -34,9 +34,12 @@ use TencentCloud\Ssa\V20180608\Models as Models;
  * @method Models\DescribeConfigListResponse DescribeConfigList(Models\DescribeConfigListRequest $req) 云配置检查项总览页检查项列表
  * @method Models\DescribeEventDetailResponse DescribeEventDetail(Models\DescribeEventDetailRequest $req) 获取安全事件详情
  * @method Models\DescribeLeakDetectionListResponse DescribeLeakDetectionList(Models\DescribeLeakDetectionListRequest $req) 获取泄露列表
+ * @method Models\DescribeMappingResultsResponse DescribeMappingResults(Models\DescribeMappingResultsRequest $req) 获取测绘列表
  * @method Models\DescribeSafetyEventListResponse DescribeSafetyEventList(Models\DescribeSafetyEventListRequest $req) 获取安全事件列表
  * @method Models\DescribeSocAlertDetailsResponse DescribeSocAlertDetails(Models\DescribeSocAlertDetailsRequest $req) 返回告警详情
  * @method Models\DescribeSocAlertListResponse DescribeSocAlertList(Models\DescribeSocAlertListRequest $req) 拉取告警列表
+ * @method Models\DescribeSocCheckItemListResponse DescribeSocCheckItemList(Models\DescribeSocCheckItemListRequest $req) 云安全配置检查项列表
+ * @method Models\DescribeSocCheckResultListResponse DescribeSocCheckResultList(Models\DescribeSocCheckResultListRequest $req) 云安全配置检查项结果列表
  * @method Models\DescribeSocCspmComplianceResponse DescribeSocCspmCompliance(Models\DescribeSocCspmComplianceRequest $req) 合规详情项
  * @method Models\DescribeVulDetailResponse DescribeVulDetail(Models\DescribeVulDetailRequest $req) 漏洞列表页，获取漏洞详情信息
  * @method Models\DescribeVulListResponse DescribeVulList(Models\DescribeVulListRequest $req) 漏洞管理页，获取漏洞列表

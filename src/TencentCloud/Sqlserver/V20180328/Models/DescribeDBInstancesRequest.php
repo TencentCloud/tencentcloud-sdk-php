@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchKey(string $SearchKey) 设置模糊查询关键字，支持实例id、实例名、内网ip
  * @method array getUidSet() 获取实例唯一Uid列表
  * @method void setUidSet(array $UidSet) 设置实例唯一Uid列表
+ * @method string getInstanceType() 获取实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+ * @method void setInstanceType(string $InstanceType) 设置实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -165,6 +167,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $UidSet;
 
     /**
+     * @var string 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     */
+    public $InstanceType;
+
+    /**
      * @param integer $ProjectId 项目ID
      * @param integer $Status 实例状态。取值范围：
 <li>1：申请中</li>
@@ -192,6 +199,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $TagKeys 实例标签列表
      * @param string $SearchKey 模糊查询关键字，支持实例id、实例名、内网ip
      * @param array $UidSet 实例唯一Uid列表
+     * @param string $InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("UidSet",$param) and $param["UidSet"] !== null) {
             $this->UidSet = $param["UidSet"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

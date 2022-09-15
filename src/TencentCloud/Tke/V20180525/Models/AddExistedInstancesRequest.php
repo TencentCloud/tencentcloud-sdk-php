@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceAdvancedSettingsOverrides(array $InstanceAdvancedSettingsOverrides) 设置参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
 
 参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
+ * @method string getImageId() 获取节点镜像（节点选项时，该参数是必传参数）
+ * @method void setImageId(string $ImageId) 设置节点镜像（节点选项时，该参数是必传参数）
  */
 class AddExistedInstancesRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ class AddExistedInstancesRequest extends AbstractModel
     public $InstanceAdvancedSettingsOverrides;
 
     /**
+     * @var string 节点镜像（节点选项时，该参数是必传参数）
+     */
+    public $ImageId;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIds 实例列表，不支持竞价实例
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 实例额外需要设置参数信息(默认值)
@@ -112,6 +119,7 @@ class AddExistedInstancesRequest extends AbstractModel
      * @param array $InstanceAdvancedSettingsOverrides 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
 
 参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
+     * @param string $ImageId 节点镜像（节点选项时，该参数是必传参数）
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class AddExistedInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceAdvancedSettingsOverrides, $obj);
             }
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
         }
     }
 }

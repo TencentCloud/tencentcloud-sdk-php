@@ -36,6 +36,16 @@ __WORKING__: 正常工作
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBankNotice(string $BankNotice) 设置银行渠道维护公告。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBankId() 获取支持银行代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBankId(string $BankId) 设置支持银行代码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCardType() 获取卡类型。
+D：借记卡，C：信用卡，Z：借贷合一卡。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCardType(string $CardType) 设置卡类型。
+D：借记卡，C：信用卡，Z：借贷合一卡。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SupportBankInfo extends AbstractModel
 {
@@ -64,6 +74,19 @@ __WORKING__: 正常工作
     public $BankNotice;
 
     /**
+     * @var string 支持银行代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BankId;
+
+    /**
+     * @var string 卡类型。
+D：借记卡，C：信用卡，Z：借贷合一卡。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CardType;
+
+    /**
      * @param string $BankCode 银行简称。
      * @param string $BankName 银行名称。
      * @param string $MaintainStatus 状态。
@@ -71,6 +94,11 @@ __MAINTAINING__: 维护中
 __WORKING__: 正常工作
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BankNotice 银行渠道维护公告。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BankId 支持银行代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CardType 卡类型。
+D：借记卡，C：信用卡，Z：借贷合一卡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +128,14 @@ __WORKING__: 正常工作
 
         if (array_key_exists("BankNotice",$param) and $param["BankNotice"] !== null) {
             $this->BankNotice = $param["BankNotice"];
+        }
+
+        if (array_key_exists("BankId",$param) and $param["BankId"] !== null) {
+            $this->BankId = $param["BankId"];
+        }
+
+        if (array_key_exists("CardType",$param) and $param["CardType"] !== null) {
+            $this->CardType = $param["CardType"];
         }
     }
 }

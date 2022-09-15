@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastTime(string $LastTime) 设置最后检测时间
  * @method integer getHostCount() 获取影响主机数
  * @method void setHostCount(integer $HostCount) 设置影响主机数
- * @method integer getLevel() 获取漏洞等级 1:低 2:中 3:高 4:提示
- * @method void setLevel(integer $Level) 设置漏洞等级 1:低 2:中 3:高 4:提示
+ * @method integer getLevel() 获取漏洞等级 1:低 2:中 3:高 4:严重
+ * @method void setLevel(integer $Level) 设置漏洞等级 1:低 2:中 3:高 4:严重
  * @method integer getFrom() 获取废弃字段
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrom(integer $From) 设置废弃字段
@@ -80,6 +80,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置最后扫描任务的id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsSupportDefense() 获取是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSupportDefense(integer $IsSupportDefense) 设置是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDefenseAttackCount() 获取已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefenseAttackCount(integer $DefenseAttackCount) 设置已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFirstAppearTime() 获取首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFirstAppearTime(string $FirstAppearTime) 设置首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVulCategory() 获取漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVulCategory(integer $VulCategory) 设置漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulInfoList extends AbstractModel
 {
@@ -119,7 +135,7 @@ class VulInfoList extends AbstractModel
     public $HostCount;
 
     /**
-     * @var integer 漏洞等级 1:低 2:中 3:高 4:提示
+     * @var integer 漏洞等级 1:低 2:中 3:高 4:严重
      */
     public $Level;
 
@@ -190,6 +206,30 @@ class VulInfoList extends AbstractModel
     public $TaskId;
 
     /**
+     * @var integer 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSupportDefense;
+
+    /**
+     * @var integer 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefenseAttackCount;
+
+    /**
+     * @var string 首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FirstAppearTime;
+
+    /**
+     * @var integer 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VulCategory;
+
+    /**
      * @param string $Ids 漏洞包含的事件id串，多个用“,”分割
      * @param string $Name 漏洞名
      * @param integer $Status 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
@@ -197,7 +237,7 @@ class VulInfoList extends AbstractModel
      * @param string $PublishTime 漏洞披露事件
      * @param string $LastTime 最后检测时间
      * @param integer $HostCount 影响主机数
-     * @param integer $Level 漏洞等级 1:低 2:中 3:高 4:提示
+     * @param integer $Level 漏洞等级 1:低 2:中 3:高 4:严重
      * @param integer $From 废弃字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Descript 描述
@@ -219,6 +259,14 @@ class VulInfoList extends AbstractModel
      * @param integer $FixSwitch 是否能自动修复且包含能自动修复的主机， 0=否  1=是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskId 最后扫描任务的id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsSupportDefense 是否支持防御， 0:不支持 1:支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefenseAttackCount 已防御的攻击次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FirstAppearTime 首次出现时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VulCategory 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -308,6 +356,22 @@ class VulInfoList extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("IsSupportDefense",$param) and $param["IsSupportDefense"] !== null) {
+            $this->IsSupportDefense = $param["IsSupportDefense"];
+        }
+
+        if (array_key_exists("DefenseAttackCount",$param) and $param["DefenseAttackCount"] !== null) {
+            $this->DefenseAttackCount = $param["DefenseAttackCount"];
+        }
+
+        if (array_key_exists("FirstAppearTime",$param) and $param["FirstAppearTime"] !== null) {
+            $this->FirstAppearTime = $param["FirstAppearTime"];
+        }
+
+        if (array_key_exists("VulCategory",$param) and $param["VulCategory"] !== null) {
+            $this->VulCategory = $param["VulCategory"];
         }
     }
 }

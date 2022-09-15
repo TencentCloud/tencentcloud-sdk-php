@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 分别表示按权重轮询、最小连接数， 默认为 WRR。
  * @method integer getSniSwitch() 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
  * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
+ * @method string getTargetType() 获取后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+ * @method void setTargetType(string $TargetType) 设置后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
  * @method integer getKeepaliveEnable() 获取是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
  * @method void setKeepaliveEnable(integer $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
  * @method boolean getDeregisterTargetRst() 获取解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
@@ -89,6 +91,11 @@ class ModifyListenerRequest extends AbstractModel
     public $SniSwitch;
 
     /**
+     * @var string 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+     */
+    public $TargetType;
+
+    /**
      * @var integer 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
      */
     public $KeepaliveEnable;
@@ -113,6 +120,7 @@ class ModifyListenerRequest extends AbstractModel
      * @param string $Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
      * @param integer $SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
+     * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
      * @param integer $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
      * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
      * @param string $SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
@@ -162,6 +170,10 @@ class ModifyListenerRequest extends AbstractModel
 
         if (array_key_exists("SniSwitch",$param) and $param["SniSwitch"] !== null) {
             $this->SniSwitch = $param["SniSwitch"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
         }
 
         if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {

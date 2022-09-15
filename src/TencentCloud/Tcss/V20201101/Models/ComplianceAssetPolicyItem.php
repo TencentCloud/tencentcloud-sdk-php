@@ -62,6 +62,10 @@ RESULT_FAILED: 未通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastCheckTime(string $LastCheckTime) 设置最近检测的时间。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVerifyInfo() 获取验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVerifyInfo(string $VerifyInfo) 设置验证信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceAssetPolicyItem extends AbstractModel
 {
@@ -135,6 +139,12 @@ RESULT_FAILED: 未通过
     public $LastCheckTime;
 
     /**
+     * @var string 验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VerifyInfo;
+
+    /**
      * @param integer $CustomerPolicyItemId 为客户分配的唯一的检测项的ID。
      * @param integer $BasePolicyItemId 检测项的原始ID
      * @param string $Name 检测项的名称。
@@ -155,6 +165,8 @@ RESULT_FAILED: 未通过
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FixSuggestion 处理建议。
      * @param string $LastCheckTime 最近检测的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VerifyInfo 验证信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -216,6 +228,10 @@ RESULT_FAILED: 未通过
 
         if (array_key_exists("LastCheckTime",$param) and $param["LastCheckTime"] !== null) {
             $this->LastCheckTime = $param["LastCheckTime"];
+        }
+
+        if (array_key_exists("VerifyInfo",$param) and $param["VerifyInfo"] !== null) {
+            $this->VerifyInfo = $param["VerifyInfo"];
         }
     }
 }

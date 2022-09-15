@@ -31,7 +31,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 <br>•   本地文件必须为UTF-8编码格式，每行仅添加一个热词且不能包含标点和特殊字符。
 <br>•   热词权重取值范围为[1,10]之间的整数，权重越大代表该词被识别出来的概率越大。
  * @method Models\CreateAsyncRecognitionTaskResponse CreateAsyncRecognitionTask(Models\CreateAsyncRecognitionTaskRequest $req) 本接口用于对语音流进行准实时识别，通过异步回调来返回识别结果。适用于直播审核等场景。
-<br>• 支持rtmp、hls、rtsp等流媒体协议，以及各类基于http协议的直播流
+<br>• 支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls)
 <br>• 音频流时长无限制，服务会自动拉取音频流数据，若连续10分钟拉不到流数据时，服务会终止识别任务
 <br>• 服务通过回调的方式来提供识别结果，用户需要提供CallbackUrl。回调时机为一小段话(最长15秒)回调一次。
 <br>• 签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
@@ -44,7 +44,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 • 支持语音 URL 和本地语音文件两种请求方式
 • 语音 URL 的音频时长不能长于5小时，文件大小不超过512MB
 • 本地语音文件不能大于5MB
-• 提交录音文件识别请求后，在5小时内完成识别（半小时内发送超过1000小时录音或者2万条识别任务的除外），识别结果在服务端可保存7天
+• 提交录音文件识别请求后，在3小时内完成识别（大多数情况下1小时音频约3分钟以内完成识别，半小时内发送超过1000小时录音或者2万条识别任务的除外），识别结果在服务端可保存7天
 • 支持回调或轮询的方式获取结果，结果获取请参考[ 录音文件识别结果查询](https://cloud.tencent.com/document/product/1093/37822)。
 •   请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
 •   签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
@@ -66,7 +66,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
  * @method Models\GetCustomizationListResponse GetCustomizationList(Models\GetCustomizationListRequest $req) 查询自学习模型列表
  * @method Models\ModifyCustomizationResponse ModifyCustomization(Models\ModifyCustomizationRequest $req) 用户通过该接口可以更新自学习模型，如模型名称、模型类型、模型语料。
  * @method Models\ModifyCustomizationStateResponse ModifyCustomizationState(Models\ModifyCustomizationStateRequest $req) 通过该接口，用户可以修改自学习模型状态，上下线自学习模型
- * @method Models\SentenceRecognitionResponse SentenceRecognition(Models\SentenceRecognitionRequest $req) 本接口用于对60秒之内的短音频文件进行识别。<br>•   支持中文普通话、英语、粤语、日语、上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话。<br>•   支持本地语音文件上传和语音URL上传两种请求方式，音频时长不能超过60s，音频文件大小不能超过3MB。<br>•   音频格式支持wav、mp3；采样率建议8000Hz或者16000Hz；采样精度建议16bits；声道支持单声道。<br>•   请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"<br>•   签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。<br>•   默认接口请求频率限制：25次/秒，如您有提高请求频率限制的需求，请提[工单](https://console.cloud.tencent.com/workorder/category)进行咨询。
+ * @method Models\SentenceRecognitionResponse SentenceRecognition(Models\SentenceRecognitionRequest $req) 本接口用于对60秒之内的短音频文件进行识别。<br>•   支持中文普通话、英语、粤语、日语、上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话。<br>•   支持本地语音文件上传和语音URL上传两种请求方式，音频时长不能超过60s，音频文件大小不能超过3MB。<br>•   音频格式支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。<br>•   请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"<br>•   签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。<br>•   默认接口请求频率限制：25次/秒，如您有提高请求频率限制的需求，请提[工单](https://console.cloud.tencent.com/workorder/category)进行咨询。
  * @method Models\SetVocabStateResponse SetVocabState(Models\SetVocabStateRequest $req) 用户通过该接口可以设置热词表的默认状态。初始状态为0，用户可设置状态为1，即为默认状态。默认状态表示用户在请求识别时，如不设置热词表ID，则默认使用状态为1的热词表。
  * @method Models\UpdateAsrVocabResponse UpdateAsrVocab(Models\UpdateAsrVocabRequest $req) 用户通过本接口进行对应的词表信息更新。
  */

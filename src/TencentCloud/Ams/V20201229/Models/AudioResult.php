@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Lable）下的二级标签。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRecognitionResults() 获取识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecognitionResults(array $RecognitionResults) 设置识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioResult extends AbstractModel
 {
@@ -132,6 +136,12 @@ class AudioResult extends AbstractModel
     public $SubLabel;
 
     /**
+     * @var array 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecognitionResults;
+
+    /**
      * @param integer $HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
@@ -151,6 +161,8 @@ class AudioResult extends AbstractModel
      * @param array $MoanResults 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
      * @param array $LanguageResults 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
      * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RecognitionResults 识别类标签结果信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -227,6 +239,15 @@ class AudioResult extends AbstractModel
 
         if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
             $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("RecognitionResults",$param) and $param["RecognitionResults"] !== null) {
+            $this->RecognitionResults = [];
+            foreach ($param["RecognitionResults"] as $key => $value){
+                $obj = new RecognitionResult();
+                $obj->deserialize($value);
+                array_push($this->RecognitionResults, $obj);
+            }
         }
     }
 }

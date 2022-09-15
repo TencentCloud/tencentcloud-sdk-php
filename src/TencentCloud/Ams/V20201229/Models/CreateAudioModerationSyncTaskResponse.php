@@ -56,6 +56,24 @@ Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMoanResults(array $MoanResults) 设置音频中低俗内容审核结果；
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubLabel() 获取该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLanguageResults() 获取该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLanguageResults(array $LanguageResults) 设置该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSpeakerResults() 获取音频中说话人识别返回结果；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpeakerResults(array $SpeakerResults) 设置音频中说话人识别返回结果；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRecognitionResults() 获取识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecognitionResults(array $RecognitionResults) 设置识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -112,6 +130,31 @@ Block 建议屏蔽；
     public $MoanResults;
 
     /**
+     * @var string 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubLabel;
+
+    /**
+     * @var array 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LanguageResults;
+
+    /**
+     * @var array 音频中说话人识别返回结果；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpeakerResults;
+
+    /**
+     * @var array 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecognitionResults;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -134,6 +177,15 @@ Block 建议屏蔽；
      * @param array $TextResults 音频中对话内容审核结果；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MoanResults 音频中低俗内容审核结果；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
+注意：此字段可能返回null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LanguageResults 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SpeakerResults 音频中说话人识别返回结果；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RecognitionResults 识别类标签结果信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -189,6 +241,37 @@ Block 建议屏蔽；
                 $obj = new MoanResult();
                 $obj->deserialize($value);
                 array_push($this->MoanResults, $obj);
+            }
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("LanguageResults",$param) and $param["LanguageResults"] !== null) {
+            $this->LanguageResults = [];
+            foreach ($param["LanguageResults"] as $key => $value){
+                $obj = new AudioResultDetailLanguageResult();
+                $obj->deserialize($value);
+                array_push($this->LanguageResults, $obj);
+            }
+        }
+
+        if (array_key_exists("SpeakerResults",$param) and $param["SpeakerResults"] !== null) {
+            $this->SpeakerResults = [];
+            foreach ($param["SpeakerResults"] as $key => $value){
+                $obj = new AudioResultDetailSpeakerResult();
+                $obj->deserialize($value);
+                array_push($this->SpeakerResults, $obj);
+            }
+        }
+
+        if (array_key_exists("RecognitionResults",$param) and $param["RecognitionResults"] !== null) {
+            $this->RecognitionResults = [];
+            foreach ($param["RecognitionResults"] as $key => $value){
+                $obj = new RecognitionResult();
+                $obj->deserialize($value);
+                array_push($this->RecognitionResults, $obj);
             }
         }
 

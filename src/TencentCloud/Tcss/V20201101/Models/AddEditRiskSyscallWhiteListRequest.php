@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddEditRiskSyscallWhiteList请求参数结构体
  *
- * @method string getEventId() 获取仅在添加白名单时候使用
- * @method void setEventId(string $EventId) 设置仅在添加白名单时候使用
- * @method RiskSyscallWhiteListInfo getWhiteListInfo() 获取增加白名单信息，白名单id为空，编辑白名单id不能为空
- * @method void setWhiteListInfo(RiskSyscallWhiteListInfo $WhiteListInfo) 设置增加白名单信息，白名单id为空，编辑白名单id不能为空
+ * @method string getEventId() 获取仅在添加事件白名单时候使用
+ * @method void setEventId(string $EventId) 设置仅在添加事件白名单时候使用
+ * @method RiskSyscallWhiteListInfo getWhiteListInfo() 获取增加或编辑白名单信。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空.
+ * @method void setWhiteListInfo(RiskSyscallWhiteListInfo $WhiteListInfo) 设置增加或编辑白名单信。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空.
  */
 class AddEditRiskSyscallWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string 仅在添加白名单时候使用
+     * @var string 仅在添加事件白名单时候使用
      */
     public $EventId;
 
     /**
-     * @var RiskSyscallWhiteListInfo 增加白名单信息，白名单id为空，编辑白名单id不能为空
+     * @var RiskSyscallWhiteListInfo 增加或编辑白名单信。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空.
      */
     public $WhiteListInfo;
 
     /**
-     * @param string $EventId 仅在添加白名单时候使用
-     * @param RiskSyscallWhiteListInfo $WhiteListInfo 增加白名单信息，白名单id为空，编辑白名单id不能为空
+     * @param string $EventId 仅在添加事件白名单时候使用
+     * @param RiskSyscallWhiteListInfo $WhiteListInfo 增加或编辑白名单信。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空.
      */
     function __construct()
     {

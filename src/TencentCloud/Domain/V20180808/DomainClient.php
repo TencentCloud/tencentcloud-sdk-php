@@ -38,6 +38,7 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\DescribeDomainNameListResponse DescribeDomainNameList(Models\DescribeDomainNameListRequest $req) 本接口 (  DescribeDomainNameList ) 我的域名列表。
 
  * @method Models\DescribeDomainPriceListResponse DescribeDomainPriceList(Models\DescribeDomainPriceListRequest $req) 按照域名后缀获取对应的价格列表
+ * @method Models\DescribeDomainSimpleInfoResponse DescribeDomainSimpleInfo(Models\DescribeDomainSimpleInfoRequest $req) 获取域名实名信息详情
  * @method Models\DescribePhoneEmailListResponse DescribePhoneEmailList(Models\DescribePhoneEmailListRequest $req) 本接口用于获取已验证的手机邮箱列表
  * @method Models\DescribeTemplateResponse DescribeTemplate(Models\DescribeTemplateRequest $req) 本接口 (DescribeTemplate) 用于获取模板信息。
  * @method Models\DescribeTemplateListResponse DescribeTemplateList(Models\DescribeTemplateListRequest $req) 本接口 (DescribeTemplateList) 用于获取信息模板列表。

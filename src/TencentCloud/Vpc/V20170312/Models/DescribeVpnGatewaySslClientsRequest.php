@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置请求对象个数
  * @method array getSslVpnClientIds() 获取SSL-VPN-CLIENT实例ID。形如：vpngwSslClient-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
  * @method void setSslVpnClientIds(array $SslVpnClientIds) 设置SSL-VPN-CLIENT实例ID。形如：vpngwSslClient-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
+ * @method boolean getIsVpnPortal() 获取VPN门户网站使用。默认是False。
+ * @method void setIsVpnPortal(boolean $IsVpnPortal) 设置VPN门户网站使用。默认是False。
  */
 class DescribeVpnGatewaySslClientsRequest extends AbstractModel
 {
@@ -67,6 +69,11 @@ class DescribeVpnGatewaySslClientsRequest extends AbstractModel
     public $SslVpnClientIds;
 
     /**
+     * @var boolean VPN门户网站使用。默认是False。
+     */
+    public $IsVpnPortal;
+
+    /**
      * @param array $Filters 过滤条件，参数不支持同时指定SslVpnClientIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
@@ -76,6 +83,7 @@ class DescribeVpnGatewaySslClientsRequest extends AbstractModel
      * @param integer $Offset 偏移量
      * @param integer $Limit 请求对象个数
      * @param array $SslVpnClientIds SSL-VPN-CLIENT实例ID。形如：vpngwSslClient-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定SslVpnClientIds和Filters。
+     * @param boolean $IsVpnPortal VPN门户网站使用。默认是False。
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class DescribeVpnGatewaySslClientsRequest extends AbstractModel
 
         if (array_key_exists("SslVpnClientIds",$param) and $param["SslVpnClientIds"] !== null) {
             $this->SslVpnClientIds = $param["SslVpnClientIds"];
+        }
+
+        if (array_key_exists("IsVpnPortal",$param) and $param["IsVpnPortal"] !== null) {
+            $this->IsVpnPortal = $param["IsVpnPortal"];
         }
     }
 }

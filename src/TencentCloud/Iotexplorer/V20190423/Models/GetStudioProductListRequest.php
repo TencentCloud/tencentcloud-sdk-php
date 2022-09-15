@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getDevStatus() 获取产品DevStatus
  * @method void setDevStatus(string $DevStatus) 设置产品DevStatus
- * @method integer getOffset() 获取Offset
- * @method void setOffset(integer $Offset) 设置Offset
- * @method integer getLimit() 获取Limit
- * @method void setLimit(integer $Limit) 设置Limit
+ * @method integer getOffset() 获取偏移量
+ * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getLimit() 获取数量限制
+ * @method void setLimit(integer $Limit) 设置数量限制
  */
 class GetStudioProductListRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class GetStudioProductListRequest extends AbstractModel
     public $DevStatus;
 
     /**
-     * @var integer Offset
+     * @var integer 偏移量
      */
     public $Offset;
 
     /**
-     * @var integer Limit
+     * @var integer 数量限制
      */
     public $Limit;
 
     /**
      * @param string $ProjectId 项目ID
      * @param string $DevStatus 产品DevStatus
-     * @param integer $Offset Offset
-     * @param integer $Limit Limit
+     * @param integer $Offset 偏移量
+     * @param integer $Limit 数量限制
      */
     function __construct()
     {

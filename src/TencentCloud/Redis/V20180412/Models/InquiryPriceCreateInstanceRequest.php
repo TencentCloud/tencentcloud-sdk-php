@@ -42,6 +42,8 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
  * @method void setReplicasReadonly(boolean $ReplicasReadonly) 设置是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
  * @method string getZoneName() 获取实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
  * @method void setZoneName(string $ZoneName) 设置实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+ * @method string getProductVersion() 获取"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
+ * @method void setProductVersion(string $ProductVersion) 设置"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
@@ -97,6 +99,11 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     public $ZoneName;
 
     /**
+     * @var string "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
+     */
+    public $ProductVersion;
+
+    /**
      * @param integer $TypeId 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
      * @param integer $MemSize 内存容量，单位为MB， 数值需为1024的整数倍，具体规格以 [查询产品售卖规格](https://cloud.tencent.com/document/api/239/30600) 返回的规格为准。
 TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架构时，MemSize是单分片内存容量。
@@ -108,6 +115,7 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
      * @param integer $RedisReplicasNum 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
      * @param boolean $ReplicasReadonly 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
      * @param string $ZoneName 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+     * @param string $ProductVersion "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
 
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("ProductVersion",$param) and $param["ProductVersion"] !== null) {
+            $this->ProductVersion = $param["ProductVersion"];
         }
     }
 }

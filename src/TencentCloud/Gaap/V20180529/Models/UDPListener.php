@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 2表示销毁中；
 3表示源站调整中；
 4表示配置变更中。
- * @method string getScheduler() 获取监听器源站访问策略
- * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略
+ * @method string getScheduler() 获取监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+ * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
  * @method integer getBindStatus() 获取监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常
  * @method void setBindStatus(integer $BindStatus) 设置监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常
  * @method array getRealServerSet() 获取监听器绑定的源站信息
@@ -57,6 +57,50 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSessionPersist() 获取是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionPersist(integer $SessionPersist) 设置是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDelayLoop() 获取源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDelayLoop(integer $DelayLoop) 设置源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConnectTimeout() 获取源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConnectTimeout(integer $ConnectTimeout) 设置源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHealthyThreshold() 获取健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthyThreshold(integer $HealthyThreshold) 设置健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getUnhealthyThreshold() 获取不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) 设置不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFailoverSwitch() 获取源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailoverSwitch(integer $FailoverSwitch) 设置源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHealthCheck() 获取源站是否开启健康检查：1开启，0关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthCheck(integer $HealthCheck) 设置源站是否开启健康检查：1开启，0关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCheckType() 获取UDP源站健康类型。PORT表示检查端口，PING表示PING。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckType(string $CheckType) 设置UDP源站健康类型。PORT表示检查端口，PING表示PING。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCheckPort() 获取UDP源站健康检查探测端口。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckPort(integer $CheckPort) 设置UDP源站健康检查探测端口。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContextType() 获取UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContextType(string $ContextType) 设置UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSendContext() 获取UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSendContext(string $SendContext) 设置UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecvContext() 获取UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecvContext(string $RecvContext) 设置UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UDPListener extends AbstractModel
@@ -103,7 +147,7 @@ class UDPListener extends AbstractModel
     public $ListenerStatus;
 
     /**
-     * @var string 监听器源站访问策略
+     * @var string 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public $Scheduler;
 
@@ -129,6 +173,72 @@ class UDPListener extends AbstractModel
     public $SessionPersist;
 
     /**
+     * @var integer 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DelayLoop;
+
+    /**
+     * @var integer 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConnectTimeout;
+
+    /**
+     * @var integer 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthyThreshold;
+
+    /**
+     * @var integer 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UnhealthyThreshold;
+
+    /**
+     * @var integer 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailoverSwitch;
+
+    /**
+     * @var integer 源站是否开启健康检查：1开启，0关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthCheck;
+
+    /**
+     * @var string UDP源站健康类型。PORT表示检查端口，PING表示PING。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckType;
+
+    /**
+     * @var integer UDP源站健康检查探测端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckPort;
+
+    /**
+     * @var string UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContextType;
+
+    /**
+     * @var string UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SendContext;
+
+    /**
+     * @var string UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecvContext;
+
+    /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
@@ -142,11 +252,33 @@ class UDPListener extends AbstractModel
 2表示销毁中；
 3表示源站调整中；
 4表示配置变更中。
-     * @param string $Scheduler 监听器源站访问策略
+     * @param string $Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      * @param integer $BindStatus 监听器绑定源站状态， 0表示正常，1表示IP异常，2表示域名解析异常
      * @param array $RealServerSet 监听器绑定的源站信息
      * @param integer $CreateTime 监听器创建时间，Unix时间戳
      * @param integer $SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HealthCheck 源站是否开启健康检查：1开启，0关闭。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CheckType UDP源站健康类型。PORT表示检查端口，PING表示PING。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CheckPort UDP源站健康检查探测端口。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContextType UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SendContext UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecvContext UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -213,6 +345,50 @@ class UDPListener extends AbstractModel
 
         if (array_key_exists("SessionPersist",$param) and $param["SessionPersist"] !== null) {
             $this->SessionPersist = $param["SessionPersist"];
+        }
+
+        if (array_key_exists("DelayLoop",$param) and $param["DelayLoop"] !== null) {
+            $this->DelayLoop = $param["DelayLoop"];
+        }
+
+        if (array_key_exists("ConnectTimeout",$param) and $param["ConnectTimeout"] !== null) {
+            $this->ConnectTimeout = $param["ConnectTimeout"];
+        }
+
+        if (array_key_exists("HealthyThreshold",$param) and $param["HealthyThreshold"] !== null) {
+            $this->HealthyThreshold = $param["HealthyThreshold"];
+        }
+
+        if (array_key_exists("UnhealthyThreshold",$param) and $param["UnhealthyThreshold"] !== null) {
+            $this->UnhealthyThreshold = $param["UnhealthyThreshold"];
+        }
+
+        if (array_key_exists("FailoverSwitch",$param) and $param["FailoverSwitch"] !== null) {
+            $this->FailoverSwitch = $param["FailoverSwitch"];
+        }
+
+        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+            $this->HealthCheck = $param["HealthCheck"];
+        }
+
+        if (array_key_exists("CheckType",$param) and $param["CheckType"] !== null) {
+            $this->CheckType = $param["CheckType"];
+        }
+
+        if (array_key_exists("CheckPort",$param) and $param["CheckPort"] !== null) {
+            $this->CheckPort = $param["CheckPort"];
+        }
+
+        if (array_key_exists("ContextType",$param) and $param["ContextType"] !== null) {
+            $this->ContextType = $param["ContextType"];
+        }
+
+        if (array_key_exists("SendContext",$param) and $param["SendContext"] !== null) {
+            $this->SendContext = $param["SendContext"];
+        }
+
+        if (array_key_exists("RecvContext",$param) and $param["RecvContext"] !== null) {
+            $this->RecvContext = $param["RecvContext"];
         }
     }
 }

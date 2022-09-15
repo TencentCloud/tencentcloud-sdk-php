@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源ID，格式：creatorUin/$creatorUin/$keyId
  * @method void setResourceId(string $ResourceId) 设置资源ID，格式：creatorUin/$creatorUin/$keyId
+ * @method string getHsmClusterId() 获取HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHsmClusterId(string $HsmClusterId) 设置HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KeyMetadata extends AbstractModel
 {
@@ -138,6 +142,12 @@ class KeyMetadata extends AbstractModel
     public $ResourceId;
 
     /**
+     * @var string HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HsmClusterId;
+
+    /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
      * @param integer $CreateTime 密钥创建时间
@@ -156,6 +166,8 @@ class KeyMetadata extends AbstractModel
      * @param integer $ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
+     * @param string $HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -228,6 +240,10 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
+            $this->HsmClusterId = $param["HsmClusterId"];
         }
     }
 }

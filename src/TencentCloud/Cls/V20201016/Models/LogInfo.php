@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogJson(string $LogJson) 设置日志内容的Json序列化字符串
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHostName() 获取日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostName(string $HostName) 设置日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogInfo extends AbstractModel
 {
@@ -83,6 +87,12 @@ class LogInfo extends AbstractModel
     public $LogJson;
 
     /**
+     * @var string 日志来源主机名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostName;
+
+    /**
      * @param integer $Time 日志时间，单位ms
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
@@ -91,6 +101,8 @@ class LogInfo extends AbstractModel
      * @param string $PkgId 日志上报请求包的ID
      * @param string $PkgLogId 请求包内日志的ID
      * @param string $LogJson 日志内容的Json序列化字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HostName 日志来源主机名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -136,6 +148,10 @@ class LogInfo extends AbstractModel
 
         if (array_key_exists("LogJson",$param) and $param["LogJson"] !== null) {
             $this->LogJson = $param["LogJson"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
         }
     }
 }

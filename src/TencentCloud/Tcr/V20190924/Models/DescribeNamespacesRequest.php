@@ -26,8 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceName(string $NamespaceName) 设置指定命名空间，不填写默认查询所有命名空间
  * @method integer getLimit() 获取每页个数
  * @method void setLimit(integer $Limit) 设置每页个数
- * @method integer getOffset() 获取页偏移
- * @method void setOffset(integer $Offset) 设置页偏移
+ * @method integer getOffset() 获取页面偏移（第几页）
+ * @method void setOffset(integer $Offset) 设置页面偏移（第几页）
+ * @method boolean getAll() 获取列出所有命名空间
+ * @method void setAll(boolean $All) 设置列出所有命名空间
+ * @method array getFilters() 获取过滤条件
+ * @method void setFilters(array $Filters) 设置过滤条件
+ * @method boolean getKmsSignPolicy() 获取仅查询启用了 KMS 镜像签名的空间
+ * @method void setKmsSignPolicy(boolean $KmsSignPolicy) 设置仅查询启用了 KMS 镜像签名的空间
  */
 class DescribeNamespacesRequest extends AbstractModel
 {
@@ -47,15 +53,33 @@ class DescribeNamespacesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 页偏移
+     * @var integer 页面偏移（第几页）
      */
     public $Offset;
+
+    /**
+     * @var boolean 列出所有命名空间
+     */
+    public $All;
+
+    /**
+     * @var array 过滤条件
+     */
+    public $Filters;
+
+    /**
+     * @var boolean 仅查询启用了 KMS 镜像签名的空间
+     */
+    public $KmsSignPolicy;
 
     /**
      * @param string $RegistryId 实例Id
      * @param string $NamespaceName 指定命名空间，不填写默认查询所有命名空间
      * @param integer $Limit 每页个数
-     * @param integer $Offset 页偏移
+     * @param integer $Offset 页面偏移（第几页）
+     * @param boolean $All 列出所有命名空间
+     * @param array $Filters 过滤条件
+     * @param boolean $KmsSignPolicy 仅查询启用了 KMS 镜像签名的空间
      */
     function __construct()
     {
@@ -84,6 +108,23 @@ class DescribeNamespacesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("All",$param) and $param["All"] !== null) {
+            $this->All = $param["All"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("KmsSignPolicy",$param) and $param["KmsSignPolicy"] !== null) {
+            $this->KmsSignPolicy = $param["KmsSignPolicy"];
         }
     }
 }

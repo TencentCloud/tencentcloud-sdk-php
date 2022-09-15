@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterCIDR(string $ClusterCIDR) 设置用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
  * @method boolean getIgnoreClusterCIDRConflict() 获取是否忽略 ClusterCIDR 冲突错误, 默认不忽略
  * @method void setIgnoreClusterCIDRConflict(boolean $IgnoreClusterCIDRConflict) 设置是否忽略 ClusterCIDR 冲突错误, 默认不忽略
- * @method integer getMaxNodePodNum() 获取集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
- * @method void setMaxNodePodNum(integer $MaxNodePodNum) 设置集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+ * @method integer getMaxNodePodNum() 获取集群中每个Node上最大的Pod数量。取值范围16～256。不为2的幂值时会向上取最接近的2的幂值。
+ * @method void setMaxNodePodNum(integer $MaxNodePodNum) 设置集群中每个Node上最大的Pod数量。取值范围16～256。不为2的幂值时会向上取最接近的2的幂值。
  * @method integer getMaxClusterServiceNum() 获取集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。默认值256
  * @method void setMaxClusterServiceNum(integer $MaxClusterServiceNum) 设置集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。默认值256
  * @method string getServiceCIDR() 获取用于分配集群服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEniSubnetIds(array $EniSubnetIds) 设置VPC-CNI网络模式下，弹性网卡的子网Id。
  * @method integer getClaimExpiredSeconds() 获取VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
  * @method void setClaimExpiredSeconds(integer $ClaimExpiredSeconds) 设置VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
+ * @method boolean getIgnoreServiceCIDRConflict() 获取是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+ * @method void setIgnoreServiceCIDRConflict(boolean $IgnoreServiceCIDRConflict) 设置是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
  */
 class ClusterCIDRSettings extends AbstractModel
 {
@@ -48,7 +50,7 @@ class ClusterCIDRSettings extends AbstractModel
     public $IgnoreClusterCIDRConflict;
 
     /**
-     * @var integer 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+     * @var integer 集群中每个Node上最大的Pod数量。取值范围16～256。不为2的幂值时会向上取最接近的2的幂值。
      */
     public $MaxNodePodNum;
 
@@ -73,13 +75,19 @@ class ClusterCIDRSettings extends AbstractModel
     public $ClaimExpiredSeconds;
 
     /**
+     * @var boolean 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+     */
+    public $IgnoreServiceCIDRConflict;
+
+    /**
      * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
-     * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+     * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量。取值范围16～256。不为2的幂值时会向上取最接近的2的幂值。
      * @param integer $MaxClusterServiceNum 集群最大的service数量。取值范围32～32768，不为2的幂值时会向上取最接近的2的幂值。默认值256
      * @param string $ServiceCIDR 用于分配集群服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突。且网段范围必须在内网网段内，例如:10.1.0.0/14, 192.168.0.1/18,172.16.0.0/16。
      * @param array $EniSubnetIds VPC-CNI网络模式下，弹性网卡的子网Id。
      * @param integer $ClaimExpiredSeconds VPC-CNI网络模式下，弹性网卡IP的回收时间，取值范围[300,15768000)
+     * @param boolean $IgnoreServiceCIDRConflict 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ClusterCIDRSettings extends AbstractModel
 
         if (array_key_exists("ClaimExpiredSeconds",$param) and $param["ClaimExpiredSeconds"] !== null) {
             $this->ClaimExpiredSeconds = $param["ClaimExpiredSeconds"];
+        }
+
+        if (array_key_exists("IgnoreServiceCIDRConflict",$param) and $param["IgnoreServiceCIDRConflict"] !== null) {
+            $this->IgnoreServiceCIDRConflict = $param["IgnoreServiceCIDRConflict"];
         }
     }
 }

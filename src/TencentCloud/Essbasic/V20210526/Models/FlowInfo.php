@@ -18,41 +18,103 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 此结构体 (FlowInfo) 用于描述流程信息。
+ * 此结构体 (FlowInfo) 用于描述签署流程信息。
+
+【动态表格传参说明】
+当模板的 ComponentType='DYNAMIC_TABLE'时（渠道版），FormField.ComponentValue需要传递json格式的字符串参数，用于确定表头&填充动态表格（支持内容的单元格合并）
+输入示例
+
+```
+{
+    "headers":[
+        {
+            "content":"head1"
+        },
+        {
+            "content":"head2"
+        },
+        {
+            "content":"head3"
+        }
+    ],
+    "rowCount":3,
+    "body":{
+        "cells":[
+            {
+                "rowStart":1,
+                "rowEnd":1,
+                "columnStart":1,
+                "columnEnd":1,
+                "content":"123"
+            },
+            {
+                "rowStart":2,
+                "rowEnd":3,
+                "columnStart":1,
+                "columnEnd":2,
+                "content":"456"
+            },
+            {
+                "rowStart":3,
+                "rowEnd":3,
+                "columnStart":3,
+                "columnEnd":3,
+                "content":"789"
+            }
+        ]
+    }
+}
+
+```
+
+表格参数说明
+
+| 名称                | 类型    | 描述                                              |
+| ------------------- | ------- | ------------------------------------------------- |
+| headers             | Array   | 表头：不超过10列，不支持单元格合并，字数不超过100 |
+| rowCount            | Integer | 表格内容最大行数                                  |
+| cells.N.rowStart    | Integer | 单元格坐标：行起始index                           |
+| cells.N.rowEnd      | Integer | 单元格坐标：行结束index                           |
+| cells.N.columnStart | Integer | 单元格坐标：列起始index                           |
+| cells.N.columnEnd   | Integer | 单元格坐标：列结束index                           |
+| cells.N.content     | String  | 单元格内容，字数不超过100                         |
+
  *
- * @method string getFlowName() 获取合同名字
- * @method void setFlowName(string $FlowName) 设置合同名字
+ * @method string getFlowName() 获取合同名字，最大长度200个字符
+ * @method void setFlowName(string $FlowName) 设置合同名字，最大长度200个字符
  * @method integer getDeadline() 获取签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
  * @method void setDeadline(integer $Deadline) 设置签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
  * @method string getTemplateId() 获取模板ID
  * @method void setTemplateId(string $TemplateId) 设置模板ID
- * @method string getFlowType() 获取合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
- * @method void setFlowType(string $FlowType) 设置合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
- * @method string getCallbackUrl() 获取回调地址
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
- * @method array getFlowApprovers() 获取多个签署人信息，渠道侧目前不支持超过5个签署方信息
- * @method void setFlowApprovers(array $FlowApprovers) 设置多个签署人信息，渠道侧目前不支持超过5个签署方信息
+ * @method array getFlowApprovers() 获取多个签署人信息，最大支持50个签署方
+ * @method void setFlowApprovers(array $FlowApprovers) 设置多个签署人信息，最大支持50个签署方
  * @method array getFormFields() 获取表单K-V对列表
  * @method void setFormFields(array $FormFields) 设置表单K-V对列表
- * @method string getFlowDescription() 获取合同描述
- * @method void setFlowDescription(string $FlowDescription) 设置合同描述
- * @method string getCustomerData() 获取渠道的业务信息，限制1024字符
- * @method void setCustomerData(string $CustomerData) 设置渠道的业务信息，限制1024字符
+ * @method string getCallbackUrl() 获取回调地址，最大长度1000个字符
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，最大长度1000个字符
+ * @method string getFlowType() 获取合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+ * @method void setFlowType(string $FlowType) 设置合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+ * @method string getFlowDescription() 获取合同描述，最大长度1000个字符
+ * @method void setFlowDescription(string $FlowDescription) 设置合同描述，最大长度1000个字符
+ * @method string getCustomerData() 获取渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method void setCustomerData(string $CustomerData) 设置渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+ * @method string getCustomShowMap() 获取合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+ * @method void setCustomShowMap(string $CustomShowMap) 设置合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
  * @method array getCcInfos() 获取被抄送人的信息列表，抄送功能暂不开放
  * @method void setCcInfos(array $CcInfos) 设置被抄送人的信息列表，抄送功能暂不开放
+ * @method boolean getNeedSignReview() 获取发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 ChannelCreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+ * @method void setNeedSignReview(boolean $NeedSignReview) 设置发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 ChannelCreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
  */
 class FlowInfo extends AbstractModel
 {
     /**
-     * @var string 合同名字
+     * @var string 合同名字，最大长度200个字符
      */
     public $FlowName;
 
@@ -67,21 +129,7 @@ class FlowInfo extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
-     */
-    public $FlowType;
-
-    /**
-     * @var string 回调地址
-     */
-    public $CallbackUrl;
-
-    /**
-     * @var array 多个签署人信息，渠道侧目前不支持超过5个签署方信息
+     * @var array 多个签署人信息，最大支持50个签署方
      */
     public $FlowApprovers;
 
@@ -91,14 +139,29 @@ class FlowInfo extends AbstractModel
     public $FormFields;
 
     /**
-     * @var string 合同描述
+     * @var string 回调地址，最大长度1000个字符
+     */
+    public $CallbackUrl;
+
+    /**
+     * @var string 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+     */
+    public $FlowType;
+
+    /**
+     * @var string 合同描述，最大长度1000个字符
      */
     public $FlowDescription;
 
     /**
-     * @var string 渠道的业务信息，限制1024字符
+     * @var string 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
      */
     public $CustomerData;
+
+    /**
+     * @var string 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+     */
+    public $CustomShowMap;
 
     /**
      * @var array 被抄送人的信息列表，抄送功能暂不开放
@@ -106,20 +169,29 @@ class FlowInfo extends AbstractModel
     public $CcInfos;
 
     /**
-     * @param string $FlowName 合同名字
+     * @var boolean 发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 ChannelCreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+     */
+    public $NeedSignReview;
+
+    /**
+     * @param string $FlowName 合同名字，最大长度200个字符
      * @param integer $Deadline 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
      * @param string $TemplateId 模板ID
-     * @param string $FlowType 合同类型：
-1. “劳务”
-2. “销售”
-3. “租赁”
-4. “其他”
-     * @param string $CallbackUrl 回调地址
-     * @param array $FlowApprovers 多个签署人信息，渠道侧目前不支持超过5个签署方信息
+     * @param array $FlowApprovers 多个签署人信息，最大支持50个签署方
      * @param array $FormFields 表单K-V对列表
-     * @param string $FlowDescription 合同描述
-     * @param string $CustomerData 渠道的业务信息，限制1024字符
+     * @param string $CallbackUrl 回调地址，最大长度1000个字符
+     * @param string $FlowType 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+     * @param string $FlowDescription 合同描述，最大长度1000个字符
+     * @param string $CustomerData 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
      * @param array $CcInfos 被抄送人的信息列表，抄送功能暂不开放
+     * @param boolean $NeedSignReview 发起方企业的签署人进行签署操作是否需要企业内部审批。
+若设置为true,审核结果需通过接口 ChannelCreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+
+注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
      */
     function __construct()
     {
@@ -146,14 +218,6 @@ class FlowInfo extends AbstractModel
             $this->TemplateId = $param["TemplateId"];
         }
 
-        if (array_key_exists("FlowType",$param) and $param["FlowType"] !== null) {
-            $this->FlowType = $param["FlowType"];
-        }
-
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
-        }
-
         if (array_key_exists("FlowApprovers",$param) and $param["FlowApprovers"] !== null) {
             $this->FlowApprovers = [];
             foreach ($param["FlowApprovers"] as $key => $value){
@@ -172,12 +236,24 @@ class FlowInfo extends AbstractModel
             }
         }
 
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("FlowType",$param) and $param["FlowType"] !== null) {
+            $this->FlowType = $param["FlowType"];
+        }
+
         if (array_key_exists("FlowDescription",$param) and $param["FlowDescription"] !== null) {
             $this->FlowDescription = $param["FlowDescription"];
         }
 
         if (array_key_exists("CustomerData",$param) and $param["CustomerData"] !== null) {
             $this->CustomerData = $param["CustomerData"];
+        }
+
+        if (array_key_exists("CustomShowMap",$param) and $param["CustomShowMap"] !== null) {
+            $this->CustomShowMap = $param["CustomShowMap"];
         }
 
         if (array_key_exists("CcInfos",$param) and $param["CcInfos"] !== null) {
@@ -187,6 +263,10 @@ class FlowInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CcInfos, $obj);
             }
+        }
+
+        if (array_key_exists("NeedSignReview",$param) and $param["NeedSignReview"] !== null) {
+            $this->NeedSignReview = $param["NeedSignReview"];
         }
     }
 }

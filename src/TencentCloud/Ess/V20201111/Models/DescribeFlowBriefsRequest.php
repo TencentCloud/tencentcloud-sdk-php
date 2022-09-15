@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowBriefs请求参数结构体
  *
- * @method UserInfo getOperator() 获取操作人信息
- * @method void setOperator(UserInfo $Operator) 设置操作人信息
- * @method array getFlowIds() 获取需要查询的流程ID列表
- * @method void setFlowIds(array $FlowIds) 设置需要查询的流程ID列表
- * @method Agent getAgent() 获取代理商信息
- * @method void setAgent(Agent $Agent) 设置代理商信息
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
+ * @method array getFlowIds() 获取需要查询的流程ID列表，限制最大20个
+ * @method void setFlowIds(array $FlowIds) 设置需要查询的流程ID列表，限制最大20个
+ * @method Agent getAgent() 获取应用相关信息
+ * @method void setAgent(Agent $Agent) 设置应用相关信息
  */
 class DescribeFlowBriefsRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 操作人信息
+     * @var UserInfo 调用方用户信息，userId 必填
      */
     public $Operator;
 
     /**
-     * @var array 需要查询的流程ID列表
+     * @var array 需要查询的流程ID列表，限制最大20个
      */
     public $FlowIds;
 
     /**
-     * @var Agent 代理商信息
+     * @var Agent 应用相关信息
      */
     public $Agent;
 
     /**
-     * @param UserInfo $Operator 操作人信息
-     * @param array $FlowIds 需要查询的流程ID列表
-     * @param Agent $Agent 代理商信息
+     * @param UserInfo $Operator 调用方用户信息，userId 必填
+     * @param array $FlowIds 需要查询的流程ID列表，限制最大20个
+     * @param Agent $Agent 应用相关信息
      */
     function __construct()
     {

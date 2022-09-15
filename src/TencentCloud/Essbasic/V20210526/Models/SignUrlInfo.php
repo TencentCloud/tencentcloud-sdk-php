@@ -72,6 +72,10 @@ PERSON 自然人
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenId(string $OpenId) 设置企业经办人 用户在渠道的编号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFlowGroupId() 获取合同组签署链接对应的合同组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组签署链接对应的合同组id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SignUrlInfo extends AbstractModel
 {
@@ -150,6 +154,12 @@ PERSON 自然人
     public $OpenId;
 
     /**
+     * @var string 合同组签署链接对应的合同组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FlowGroupId;
+
+    /**
      * @param string $SignUrl 签署链接
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Deadline 链接失效时间,默认30分钟
@@ -175,6 +185,8 @@ PERSON 自然人
      * @param string $FlowId 签署链接对应流程Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OpenId 企业经办人 用户在渠道的编号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FlowGroupId 合同组签署链接对应的合同组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -236,6 +248,10 @@ PERSON 自然人
 
         if (array_key_exists("OpenId",$param) and $param["OpenId"] !== null) {
             $this->OpenId = $param["OpenId"];
+        }
+
+        if (array_key_exists("FlowGroupId",$param) and $param["FlowGroupId"] !== null) {
+            $this->FlowGroupId = $param["FlowGroupId"];
         }
     }
 }

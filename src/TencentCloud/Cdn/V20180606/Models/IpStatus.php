@@ -34,6 +34,10 @@ offline：下线状态
  * @method void setStatus(string $Status) 设置节点状态
 online：上线状态，正常调度服务中
 offline：下线状态
+ * @method string getIpv6() 获取节点 IPV6
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpv6(string $Ipv6) 设置节点 IPV6
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpStatus extends AbstractModel
 {
@@ -65,6 +69,12 @@ offline：下线状态
     public $Status;
 
     /**
+     * @var string 节点 IPV6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ipv6;
+
+    /**
      * @param string $Ip 节点 IP
      * @param string $District 节点所属区域
      * @param string $Isp 节点所属运营商
@@ -72,6 +82,8 @@ offline：下线状态
      * @param string $Status 节点状态
 online：上线状态，正常调度服务中
 offline：下线状态
+     * @param string $Ipv6 节点 IPV6
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -104,6 +116,10 @@ offline：下线状态
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Ipv6",$param) and $param["Ipv6"] !== null) {
+            $this->Ipv6 = $param["Ipv6"];
         }
     }
 }

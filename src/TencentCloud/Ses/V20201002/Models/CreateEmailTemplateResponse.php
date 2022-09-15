@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEmailTemplate返回参数结构体
  *
+ * @method integer getTemplateID() 获取模板id
+ * @method void setTemplateID(integer $TemplateID) 设置模板id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateEmailTemplateResponse extends AbstractModel
 {
     /**
+     * @var integer 模板id
+     */
+    public $TemplateID;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $TemplateID 模板id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,10 @@ class CreateEmailTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TemplateID",$param) and $param["TemplateID"] !== null) {
+            $this->TemplateID = $param["TemplateID"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

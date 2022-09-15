@@ -24,8 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method string getAutoScalingGroupName() 获取伸缩组名称
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置伸缩组名称
- * @method string getAutoScalingGroupStatus() 获取伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
- * @method void setAutoScalingGroupStatus(string $AutoScalingGroupStatus) 设置伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+ * @method string getAutoScalingGroupStatus() 获取伸缩组当前状态。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>CVM_ABNORMAL：启动配置异常<br>
+<li>LB_ABNORMAL：负载均衡器异常<br>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
+<li>VPC_ABNORMAL：VPC网络异常<br>
+<li>SUBNET_ABNORMAL：VPC子网异常<br>
+<li>INSUFFICIENT_BALANCE：余额不足<br>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
+ * @method void setAutoScalingGroupStatus(string $AutoScalingGroupStatus) 设置伸缩组当前状态。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>CVM_ABNORMAL：启动配置异常<br>
+<li>LB_ABNORMAL：负载均衡器异常<br>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
+<li>VPC_ABNORMAL：VPC网络异常<br>
+<li>SUBNET_ABNORMAL：VPC子网异常<br>
+<li>INSUFFICIENT_BALANCE：余额不足<br>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
  * @method string getCreatedTime() 获取创建时间，采用UTC标准计时
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间，采用UTC标准计时
  * @method integer getDefaultCooldown() 获取默认冷却时间，单位秒
@@ -110,7 +130,17 @@ class AutoScalingGroup extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
-     * @var string 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+     * @var string 伸缩组当前状态。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>CVM_ABNORMAL：启动配置异常<br>
+<li>LB_ABNORMAL：负载均衡器异常<br>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
+<li>VPC_ABNORMAL：VPC网络异常<br>
+<li>SUBNET_ABNORMAL：VPC子网异常<br>
+<li>INSUFFICIENT_BALANCE：余额不足<br>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
      */
     public $AutoScalingGroupStatus;
 
@@ -264,7 +294,17 @@ class AutoScalingGroup extends AbstractModel
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $AutoScalingGroupName 伸缩组名称
-     * @param string $AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+     * @param string $AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br>
+<li>NORMAL：正常<br>
+<li>CVM_ABNORMAL：启动配置异常<br>
+<li>LB_ABNORMAL：负载均衡器异常<br>
+<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常<br>
+<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常<br>
+<li>VPC_ABNORMAL：VPC网络异常<br>
+<li>SUBNET_ABNORMAL：VPC子网异常<br>
+<li>INSUFFICIENT_BALANCE：余额不足<br>
+<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配<br>
+<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配
      * @param string $CreatedTime 创建时间，采用UTC标准计时
      * @param integer $DefaultCooldown 默认冷却时间，单位秒
      * @param integer $DesiredCapacity 期望实例数

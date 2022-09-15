@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueNameList(array $QueueNameList) 设置CMQ 队列名称列表过滤
  * @method boolean getIsTagFilter() 获取标签过滤查找时，需要设置为 true
  * @method void setIsTagFilter(boolean $IsTagFilter) 设置标签过滤查找时，需要设置为 true
- * @method array getFilters() 获取过滤器。目前支持按标签过滤。
- * @method void setFilters(array $Filters) 设置过滤器。目前支持按标签过滤。
+ * @method array getFilters() 获取过滤器。目前支持按标签过滤，标签的Name需要加前缀“tag:”，例如：tag:负责人、tag:环境、tag:业务
+ * @method void setFilters(array $Filters) 设置过滤器。目前支持按标签过滤，标签的Name需要加前缀“tag:”，例如：tag:负责人、tag:环境、tag:业务
  */
 class DescribeCmqQueuesRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeCmqQueuesRequest extends AbstractModel
     public $IsTagFilter;
 
     /**
-     * @var array 过滤器。目前支持按标签过滤。
+     * @var array 过滤器。目前支持按标签过滤，标签的Name需要加前缀“tag:”，例如：tag:负责人、tag:环境、tag:业务
      */
     public $Filters;
 
@@ -71,7 +71,7 @@ class DescribeCmqQueuesRequest extends AbstractModel
      * @param string $QueueName 根据QueueName进行过滤
      * @param array $QueueNameList CMQ 队列名称列表过滤
      * @param boolean $IsTagFilter 标签过滤查找时，需要设置为 true
-     * @param array $Filters 过滤器。目前支持按标签过滤。
+     * @param array $Filters 过滤器。目前支持按标签过滤，标签的Name需要加前缀“tag:”，例如：tag:负责人、tag:环境、tag:业务
      */
     function __construct()
     {

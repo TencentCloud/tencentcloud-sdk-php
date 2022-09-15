@@ -92,8 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVip(string $Vip) 设置实例 IP
  * @method integer getVport() 获取端口号
  * @method void setVport(integer $Vport) 设置端口号
- * @method integer getCdbError() 获取是否锁定标记
- * @method void setCdbError(integer $CdbError) 设置是否锁定标记
+ * @method integer getCdbError() 获取磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
+ * @method void setCdbError(integer $CdbError) 设置磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
  * @method string getUniqVpcId() 获取私有网络描述符，例如：“vpc-5v8wn9mg”
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络描述符，例如：“vpc-5v8wn9mg”
  * @method string getUniqSubnetId() 获取子网描述符，例如：“subnet-1typ0s7d”
@@ -123,6 +123,14 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTagList() 获取标签列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineType() 获取引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineType(string $EngineType) 设置引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxDelayTime() 获取最大延迟阈值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxDelayTime(integer $MaxDelayTime) 设置最大延迟阈值
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
@@ -288,7 +296,7 @@ class InstanceInfo extends AbstractModel
     public $Vport;
 
     /**
-     * @var integer 是否锁定标记
+     * @var integer 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
      */
     public $CdbError;
 
@@ -352,6 +360,18 @@ class InstanceInfo extends AbstractModel
     public $TagList;
 
     /**
+     * @var string 引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineType;
+
+    /**
+     * @var integer 最大延迟阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxDelayTime;
+
+    /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
@@ -388,7 +408,7 @@ class InstanceInfo extends AbstractModel
      * @param string $CreateTime 实例创建时间
      * @param string $Vip 实例 IP
      * @param integer $Vport 端口号
-     * @param integer $CdbError 是否锁定标记
+     * @param integer $CdbError 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
      * @param string $UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
      * @param string $UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
      * @param string $PhysicalId 物理 ID
@@ -403,6 +423,10 @@ class InstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceNodes 节点数
      * @param array $TagList 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineType 引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxDelayTime 最大延迟阈值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -606,6 +630,14 @@ class InstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
+        }
+
+        if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
+            $this->MaxDelayTime = $param["MaxDelayTime"];
         }
     }
 }

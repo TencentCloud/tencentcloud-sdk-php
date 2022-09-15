@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpcName() 获取vpc名称，最大长度不能超过60个字节。
  * @method void setVpcName(string $VpcName) 设置vpc名称，最大长度不能超过60个字节。
- * @method string getCidrBlock() 获取vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
- * @method void setCidrBlock(string $CidrBlock) 设置vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+ * @method string getCidrBlock() 获取vpc的cidr，仅能在10.0.0.0/12，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
+ * @method void setCidrBlock(string $CidrBlock) 设置vpc的cidr，仅能在10.0.0.0/12，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
  * @method string getEnableMulticast() 获取是否开启组播。true: 开启, false: 不开启。
  * @method void setEnableMulticast(string $EnableMulticast) 设置是否开启组播。true: 开启, false: 不开启。
  * @method array getDnsServers() 获取DNS地址，最多支持4个。
@@ -41,7 +41,7 @@ class CreateVpcRequest extends AbstractModel
     public $VpcName;
 
     /**
-     * @var string vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * @var string vpc的cidr，仅能在10.0.0.0/12，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
      */
     public $CidrBlock;
 
@@ -67,7 +67,7 @@ class CreateVpcRequest extends AbstractModel
 
     /**
      * @param string $VpcName vpc名称，最大长度不能超过60个字节。
-     * @param string $CidrBlock vpc的cidr，仅能在10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * @param string $CidrBlock vpc的cidr，仅能在10.0.0.0/12，172.16.0.0/12，192.168.0.0/16这三个内网网段内。
      * @param string $EnableMulticast 是否开启组播。true: 开启, false: 不开启。
      * @param array $DnsServers DNS地址，最多支持4个。
      * @param string $DomainName DHCP使用的域名。

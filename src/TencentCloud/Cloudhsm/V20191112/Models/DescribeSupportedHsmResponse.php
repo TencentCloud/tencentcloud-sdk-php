@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSupportedHsm返回参数结构体
  *
  * @method array getDeviceTypes() 获取当前地域所支持的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceTypes(array $DeviceTypes) 设置当前地域所支持的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -29,6 +31,7 @@ class DescribeSupportedHsmResponse extends AbstractModel
 {
     /**
      * @var array 当前地域所支持的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceTypes;
 
@@ -39,6 +42,7 @@ class DescribeSupportedHsmResponse extends AbstractModel
 
     /**
      * @param array $DeviceTypes 当前地域所支持的设备列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

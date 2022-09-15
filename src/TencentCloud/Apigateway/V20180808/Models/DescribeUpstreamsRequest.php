@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUpstreams请求参数结构体
  *
- * @method integer getLimit() 获取分页
- * @method void setLimit(integer $Limit) 设置分页
- * @method integer getOffset() 获取分页
- * @method void setOffset(integer $Offset) 设置分页
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method integer getLimit() 获取分页大小
+ * @method void setLimit(integer $Limit) 设置分页大小
+ * @method integer getOffset() 获取分页起始位置
+ * @method void setOffset(integer $Offset) 设置分页起始位置
+ * @method array getFilters() 获取过滤条件，支持后端通道ID（UpstreamId）、后端通道名字（UpstreamName）过滤查询
+ * @method void setFilters(array $Filters) 设置过滤条件，支持后端通道ID（UpstreamId）、后端通道名字（UpstreamName）过滤查询
  */
 class DescribeUpstreamsRequest extends AbstractModel
 {
     /**
-     * @var integer 分页
+     * @var integer 分页大小
      */
     public $Limit;
 
     /**
-     * @var integer 分页
+     * @var integer 分页起始位置
      */
     public $Offset;
 
     /**
-     * @var array 过滤条件
+     * @var array 过滤条件，支持后端通道ID（UpstreamId）、后端通道名字（UpstreamName）过滤查询
      */
     public $Filters;
 
     /**
-     * @param integer $Limit 分页
-     * @param integer $Offset 分页
-     * @param array $Filters 过滤条件
+     * @param integer $Limit 分页大小
+     * @param integer $Offset 分页起始位置
+     * @param array $Filters 过滤条件，支持后端通道ID（UpstreamId）、后端通道名字（UpstreamName）过滤查询
      */
     function __construct()
     {

@@ -38,9 +38,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUin(string $CreateUin) 设置创建人Uin
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getServiceCount() 获取该实例已上报的服务数
+ * @method integer getServiceCount() 获取该实例已上报的服务端应用数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceCount(integer $ServiceCount) 设置该实例已上报的服务数
+ * @method void setServiceCount(integer $ServiceCount) 设置该实例已上报的服务端应用数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCountOfReportSpanPerDay() 获取日均上报Span数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,6 +104,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogTopicID(string $LogTopicID) 设置日志主题ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getClientCount() 获取该实例已上报的客户端应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientCount(integer $ClientCount) 设置该实例已上报的客户端应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取该实例已上报的总应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置该实例已上报的总应用数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -137,7 +145,7 @@ class ApmInstanceDetail extends AbstractModel
     public $CreateUin;
 
     /**
-     * @var integer 该实例已上报的服务数
+     * @var integer 该实例已上报的服务端应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceCount;
@@ -238,6 +246,18 @@ class ApmInstanceDetail extends AbstractModel
     public $LogTopicID;
 
     /**
+     * @var integer 该实例已上报的客户端应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientCount;
+
+    /**
+     * @var integer 该实例已上报的总应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalCount;
+
+    /**
      * @param float $AmountOfUsedStorage 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 实例名
@@ -247,7 +267,7 @@ class ApmInstanceDetail extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param string $CreateUin 创建人Uin
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ServiceCount 该实例已上报的服务数
+     * @param integer $ServiceCount 该实例已上报的服务端应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CountOfReportSpanPerDay 日均上报Span数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -279,6 +299,10 @@ class ApmInstanceDetail extends AbstractModel
      * @param integer $IsRelatedLog 日志功能开关 0 关 | 1 开
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogTopicID 日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClientCount 该实例已上报的客户端应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 该实例已上报的总应用数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -385,6 +409,14 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("LogTopicID",$param) and $param["LogTopicID"] !== null) {
             $this->LogTopicID = $param["LogTopicID"];
+        }
+
+        if (array_key_exists("ClientCount",$param) and $param["ClientCount"] !== null) {
+            $this->ClientCount = $param["ClientCount"];
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
     }
 }

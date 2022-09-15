@@ -66,6 +66,7 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\DescribeSaleInfoResponse DescribeSaleInfo(Models\DescribeSaleInfoRequest $req) 本接口(DescribeSaleInfo)用于查询云数据库可售卖的地域和可用区信息。
  * @method Models\DescribeSqlLogsResponse DescribeSqlLogs(Models\DescribeSqlLogsRequest $req) 本接口（DescribeSqlLogs）用于获取实例SQL日志。
  * @method Models\DescribeUpgradePriceResponse DescribeUpgradePrice(Models\DescribeUpgradePriceRequest $req) 本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询变配的价格。
+ * @method Models\DestroyDBInstanceResponse DestroyDBInstance(Models\DestroyDBInstanceRequest $req) 本接口(DestroyDBInstance)用于销毁已隔离的包年包月实例。
  * @method Models\DestroyHourDBInstanceResponse DestroyHourDBInstance(Models\DestroyHourDBInstanceRequest $req) 本接口（DestroyHourDBInstance）用于销毁按量计费实例。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
  * @method Models\FlushBinlogResponse FlushBinlog(Models\FlushBinlogRequest $req) 相当于在mysqld中执行flush logs，完成切分的binlog将展示在实例控制台binlog列表里。

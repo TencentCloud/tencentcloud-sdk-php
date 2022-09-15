@@ -66,6 +66,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageSize(integer $ImageSize) 设置镜像大小
  * @method string getHostStatus() 获取主机状态 offline,online,pause
  * @method void setHostStatus(string $HostStatus) 设置主机状态 offline,online,pause
+ * @method string getNetStatus() 获取网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+ * @method void setNetStatus(string $NetStatus) 设置网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+ * @method string getNetSubStatus() 获取网络子状态
+ * @method void setNetSubStatus(string $NetSubStatus) 设置网络子状态
+ * @method string getIsolateSource() 获取隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolateSource(string $IsolateSource) 设置隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsolateTime() 获取隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolateTime(string $IsolateTime) 设置隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -187,6 +211,34 @@ class DescribeAssetContainerDetailResponse extends AbstractModel
     public $HostStatus;
 
     /**
+     * @var string 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public $NetStatus;
+
+    /**
+     * @var string 网络子状态
+     */
+    public $NetSubStatus;
+
+    /**
+     * @var string 隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolateSource;
+
+    /**
+     * @var string 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolateTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -215,6 +267,18 @@ class DescribeAssetContainerDetailResponse extends AbstractModel
      * @param string $ImageCreateTime 镜像创建时间
      * @param integer $ImageSize 镜像大小
      * @param string $HostStatus 主机状态 offline,online,pause
+     * @param string $NetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     * @param string $NetSubStatus 网络子状态
+     * @param string $IsolateSource 隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsolateTime 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -326,6 +390,22 @@ class DescribeAssetContainerDetailResponse extends AbstractModel
 
         if (array_key_exists("HostStatus",$param) and $param["HostStatus"] !== null) {
             $this->HostStatus = $param["HostStatus"];
+        }
+
+        if (array_key_exists("NetStatus",$param) and $param["NetStatus"] !== null) {
+            $this->NetStatus = $param["NetStatus"];
+        }
+
+        if (array_key_exists("NetSubStatus",$param) and $param["NetSubStatus"] !== null) {
+            $this->NetSubStatus = $param["NetSubStatus"];
+        }
+
+        if (array_key_exists("IsolateSource",$param) and $param["IsolateSource"] !== null) {
+            $this->IsolateSource = $param["IsolateSource"];
+        }
+
+        if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
+            $this->IsolateTime = $param["IsolateTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

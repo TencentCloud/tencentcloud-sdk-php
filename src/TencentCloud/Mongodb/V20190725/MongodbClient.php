@@ -30,9 +30,6 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\CreateDBInstanceResponse CreateDBInstance(Models\CreateDBInstanceRequest $req) 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
  * @method Models\CreateDBInstanceHourResponse CreateDBInstanceHour(Models\CreateDBInstanceHourRequest $req) 本接口(CreateDBInstanceHour)用于创建按量计费的MongoDB云数据库实例。
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) 查询异步任务状态接口
- * @method Models\DescribeBackupAccessResponse DescribeBackupAccess(Models\DescribeBackupAccessRequest $req) 备份下载功能已调整，此接口即将下线
-
-本接口（DescribeBackupAccess）用于获取备份文件的下载授权，具体的备份文件信息可通过查询实例备份列表（DescribeDBBackups）接口获取
  * @method Models\DescribeBackupDownloadTaskResponse DescribeBackupDownloadTask(Models\DescribeBackupDownloadTaskRequest $req) 查询备份下载任务信息
  * @method Models\DescribeClientConnectionsResponse DescribeClientConnections(Models\DescribeClientConnectionsRequest $req) 本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。
  * @method Models\DescribeCurrentOpResponse DescribeCurrentOp(Models\DescribeCurrentOpRequest $req) 本接口(DescribeCurrentOp)用于查询MongoDB云数据库实例的当前正在执行的操作。
@@ -50,6 +47,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstances(Models\InquirePriceRenewDBInstancesRequest $req) 本接口 (InquiryPriceRenewDBInstances) 用于续费包年包月实例询价。
  * @method Models\IsolateDBInstanceResponse IsolateDBInstance(Models\IsolateDBInstanceRequest $req) 本接口(IsolateDBInstance)用于隔离MongoDB云数据库按量计费实例。隔离后实例保留在回收站中，不能再写入数据。隔离一定时间后，实例会彻底删除，回收站保存时间请参考按量计费的服务条款。在隔离中的按量计费实例无法恢复，请谨慎操作。
  * @method Models\KillOpsResponse KillOps(Models\KillOpsRequest $req) 本接口(KillOps)用于终止MongoDB云数据库实例上执行的特定操作。
+ * @method Models\ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddress(Models\ModifyDBInstanceNetworkAddressRequest $req) 本接口(ModifyDBInstanceNetworkAddress)用于修改云数据库实例的网络信息，可进行基础网络转VPC网络和VPC网络之间的变换。
  * @method Models\ModifyDBInstanceSecurityGroupResponse ModifyDBInstanceSecurityGroup(Models\ModifyDBInstanceSecurityGroupRequest $req) 修改实例绑定的安全组
  * @method Models\ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(Models\ModifyDBInstanceSpecRequest $req) 本接口(ModifyDBInstanceSpec)用于调整MongoDB云数据库实例配置。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
  * @method Models\OfflineIsolatedDBInstanceResponse OfflineIsolatedDBInstance(Models\OfflineIsolatedDBInstanceRequest $req) 本接口(OfflineIsolatedDBInstance)用于立即下线隔离状态的云数据库实例。进行操作的实例状态必须为隔离状态。
@@ -57,6 +55,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\RenewDBInstancesResponse RenewDBInstances(Models\RenewDBInstancesRequest $req) 本接口(RenewDBInstance)用于续费云数据库实例，仅支持付费模式为包年包月的实例。按量计费实例不需要续费。
  * @method Models\ResetDBInstancePasswordResponse ResetDBInstancePassword(Models\ResetDBInstancePasswordRequest $req) 修改实例用户的密码
  * @method Models\SetAccountUserPrivilegeResponse SetAccountUserPrivilege(Models\SetAccountUserPrivilegeRequest $req) 账户权限设置。
+ * @method Models\TerminateDBInstancesResponse TerminateDBInstances(Models\TerminateDBInstancesRequest $req) 包年包月实例隔离接口
  */
 
 class MongodbClient extends AbstractClient

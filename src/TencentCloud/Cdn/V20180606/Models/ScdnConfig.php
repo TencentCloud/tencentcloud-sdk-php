@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvancedRules(array $AdvancedRules) 设置增强自定义 cc 防护规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getGlobalAdvancedRules() 获取增强自定义 cc 防护规则， 全局
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGlobalAdvancedRules(array $GlobalAdvancedRules) 设置增强自定义 cc 防护规则， 全局
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScdnConfig extends AbstractModel
 {
@@ -51,10 +55,18 @@ class ScdnConfig extends AbstractModel
     public $AdvancedRules;
 
     /**
+     * @var array 增强自定义 cc 防护规则， 全局
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GlobalAdvancedRules;
+
+    /**
      * @param string $Switch on | off
      * @param array $Rules 自定义 cc 防护规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AdvancedRules 增强自定义 cc 防护规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $GlobalAdvancedRules 增强自定义 cc 防护规则， 全局
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -89,6 +101,15 @@ class ScdnConfig extends AbstractModel
                 $obj = new AdvancedCCRules();
                 $obj->deserialize($value);
                 array_push($this->AdvancedRules, $obj);
+            }
+        }
+
+        if (array_key_exists("GlobalAdvancedRules",$param) and $param["GlobalAdvancedRules"] !== null) {
+            $this->GlobalAdvancedRules = [];
+            foreach ($param["GlobalAdvancedRules"] as $key => $value){
+                $obj = new AdvancedCCRules();
+                $obj->deserialize($value);
+                array_push($this->GlobalAdvancedRules, $obj);
             }
         }
     }

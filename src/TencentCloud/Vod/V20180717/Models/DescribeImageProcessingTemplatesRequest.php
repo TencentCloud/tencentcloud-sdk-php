@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImageProcessingTemplates请求参数结构体
  *
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method array getDefinitions() 获取图片处理模板标识列表。长度限制：100。
  * @method void setDefinitions(array $Definitions) 设置图片处理模板标识列表。长度限制：100。
  * @method string getType() 获取模板类型过滤条件，可选值：
@@ -32,11 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class DescribeImageProcessingTemplatesRequest extends AbstractModel
 {
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
     /**
      * @var array 图片处理模板标识列表。长度限制：100。
      */
@@ -60,18 +65,13 @@ class DescribeImageProcessingTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param array $Definitions 图片处理模板标识列表。长度限制：100。
      * @param string $Type 模板类型过滤条件，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -86,6 +86,10 @@ class DescribeImageProcessingTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
             $this->Definitions = $param["Definitions"];
         }
@@ -100,10 +104,6 @@ class DescribeImageProcessingTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

@@ -100,6 +100,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigInfoVisible(boolean $ConfigInfoVisible) 设置引擎实例是否展示参数配置页面
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConsoleDefaultPwd() 获取引擎实例控制台默认密码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsoleDefaultPwd(string $ConsoleDefaultPwd) 设置引擎实例控制台默认密码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTradeType() 获取交易付费类型，0后付费/1预付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTradeType(integer $TradeType) 设置交易付费类型，0后付费/1预付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoRenewFlag() 获取自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCurDeadline() 获取预付费到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurDeadline(string $CurDeadline) 设置预付费到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsolateTime() 获取隔离开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolateTime(string $IsolateTime) 设置隔离开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRegionInfos() 获取实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionInfos(array $RegionInfos) 设置实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SREInstance extends AbstractModel
 {
@@ -240,6 +264,42 @@ class SREInstance extends AbstractModel
     public $ConfigInfoVisible;
 
     /**
+     * @var string 引擎实例控制台默认密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsoleDefaultPwd;
+
+    /**
+     * @var integer 交易付费类型，0后付费/1预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TradeType;
+
+    /**
+     * @var integer 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoRenewFlag;
+
+    /**
+     * @var string 预付费到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CurDeadline;
+
+    /**
+     * @var string 隔离开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolateTime;
+
+    /**
+     * @var array 实例地域相关的描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionInfos;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -279,6 +339,18 @@ class SREInstance extends AbstractModel
      * @param boolean $EnableConsoleIntranet 引擎实例是否开启控制台内网访问地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ConfigInfoVisible 引擎实例是否展示参数配置页面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConsoleDefaultPwd 引擎实例控制台默认密码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TradeType 交易付费类型，0后付费/1预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoRenewFlag 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CurDeadline 预付费到期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsolateTime 隔离开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RegionInfos 实例地域相关的描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -408,6 +480,35 @@ class SREInstance extends AbstractModel
 
         if (array_key_exists("ConfigInfoVisible",$param) and $param["ConfigInfoVisible"] !== null) {
             $this->ConfigInfoVisible = $param["ConfigInfoVisible"];
+        }
+
+        if (array_key_exists("ConsoleDefaultPwd",$param) and $param["ConsoleDefaultPwd"] !== null) {
+            $this->ConsoleDefaultPwd = $param["ConsoleDefaultPwd"];
+        }
+
+        if (array_key_exists("TradeType",$param) and $param["TradeType"] !== null) {
+            $this->TradeType = $param["TradeType"];
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("CurDeadline",$param) and $param["CurDeadline"] !== null) {
+            $this->CurDeadline = $param["CurDeadline"];
+        }
+
+        if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
+            $this->IsolateTime = $param["IsolateTime"];
+        }
+
+        if (array_key_exists("RegionInfos",$param) and $param["RegionInfos"] !== null) {
+            $this->RegionInfos = [];
+            foreach ($param["RegionInfos"] as $key => $value){
+                $obj = new DescribeInstanceRegionInfo();
+                $obj->deserialize($value);
+                array_push($this->RegionInfos, $obj);
+            }
         }
     }
 }

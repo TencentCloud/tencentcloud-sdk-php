@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
  * @method integer getDelayThresh() 获取根据传入时间判断备机不可用
  * @method void setDelayThresh(integer $DelayThresh) 设置根据传入时间判断备机不可用
+ * @method integer getSlaveConst() 获取针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+ * @method void setSlaveConst(integer $SlaveConst) 设置针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+ * @method integer getMaxUserConnections() 获取用户最大连接数限制参数。不传或者传0表示为不限制，对应max_user_connections参数，目前10.1内核版本不支持设置。
+ * @method void setMaxUserConnections(integer $MaxUserConnections) 设置用户最大连接数限制参数。不传或者传0表示为不限制，对应max_user_connections参数，目前10.1内核版本不支持设置。
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class CreateAccountRequest extends AbstractModel
     public $DelayThresh;
 
     /**
+     * @var integer 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+     */
+    public $SlaveConst;
+
+    /**
+     * @var integer 用户最大连接数限制参数。不传或者传0表示为不限制，对应max_user_connections参数，目前10.1内核版本不支持设置。
+     */
+    public $MaxUserConnections;
+
+    /**
      * @param string $InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param string $UserName 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
      * @param string $Host 可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
@@ -80,6 +94,8 @@ class CreateAccountRequest extends AbstractModel
      * @param integer $ReadOnly 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      * @param string $Description 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
      * @param integer $DelayThresh 根据传入时间判断备机不可用
+     * @param integer $SlaveConst 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+     * @param integer $MaxUserConnections 用户最大连接数限制参数。不传或者传0表示为不限制，对应max_user_connections参数，目前10.1内核版本不支持设置。
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class CreateAccountRequest extends AbstractModel
 
         if (array_key_exists("DelayThresh",$param) and $param["DelayThresh"] !== null) {
             $this->DelayThresh = $param["DelayThresh"];
+        }
+
+        if (array_key_exists("SlaveConst",$param) and $param["SlaveConst"] !== null) {
+            $this->SlaveConst = $param["SlaveConst"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

@@ -33,6 +33,8 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 支持批量操作。每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口 (AssociateSecurityGroups) 用于绑定安全组到指定实例。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+ * @method Models\ConfigureChcAssistVpcResponse ConfigureChcAssistVpc(Models\ConfigureChcAssistVpcRequest $req) 配置CHC物理服务器的带外和部署网络。传入带外网络和部署网络信息
+ * @method Models\ConfigureChcDeployVpcResponse ConfigureChcDeployVpc(Models\ConfigureChcDeployVpcRequest $req) 配置CHC物理服务器部署网络
  * @method Models\CreateDisasterRecoverGroupResponse CreateDisasterRecoverGroup(Models\CreateDisasterRecoverGroupRequest $req) 本接口 (CreateDisasterRecoverGroup)用于创建[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。创建好的置放群组，可在[创建实例](https://cloud.tencent.com/document/api/213/15730)时指定。
  * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
  * @method Models\CreateKeyPairResponse CreateKeyPair(Models\CreateKeyPairRequest $req) 本接口 (CreateKeyPair) 用于创建一个 `OpenSSH RSA` 密钥对，可以用于登录 `Linux` 实例。
@@ -60,6 +62,11 @@ use TencentCloud\Cvm\V20170312\Models as Models;
  * @method Models\DeleteLaunchTemplateResponse DeleteLaunchTemplate(Models\DeleteLaunchTemplateRequest $req) 本接口（DeleteLaunchTemplate）用于删除一个实例启动模板。
  * @method Models\DeleteLaunchTemplateVersionsResponse DeleteLaunchTemplateVersions(Models\DeleteLaunchTemplateVersionsRequest $req) 本接口（DeleteLaunchTemplateVersions）用于删除一个或者多个实例启动模板版本。
  * @method Models\DescribeAccountQuotaResponse DescribeAccountQuota(Models\DescribeAccountQuotaRequest $req) 本接口(DescribeAccountQuota)用于查询用户配额详情。
+ * @method Models\DescribeChcDeniedActionsResponse DescribeChcDeniedActions(Models\DescribeChcDeniedActionsRequest $req) 查询CHC物理服务器禁止做的操作，返回给用户
+ * @method Models\DescribeChcHostsResponse DescribeChcHosts(Models\DescribeChcHostsRequest $req) 本接口 (DescribeChcHosts) 用于查询一个或多个CHC物理服务器详细信息。
+
+* 可以根据实例`ID`、实例名称或者设备类型等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。
+* 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
  * @method Models\DescribeDisasterRecoverGroupQuotaResponse DescribeDisasterRecoverGroupQuota(Models\DescribeDisasterRecoverGroupQuotaRequest $req) 本接口 (DescribeDisasterRecoverGroupQuota)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)配额。
  * @method Models\DescribeDisasterRecoverGroupsResponse DescribeDisasterRecoverGroups(Models\DescribeDisasterRecoverGroupsRequest $req) 本接口 (DescribeDisasterRecoverGroups)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)信息。
  * @method Models\DescribeHostsResponse DescribeHosts(Models\DescribeHostsRequest $req) 本接口 (DescribeHosts) 用于获取一个或多个CDH实例的详细信息。
@@ -85,7 +92,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 管理终端地址的有效期为 15 秒，调用接口成功后如果 15 秒内不使用该链接进行访问，管理终端地址自动失效，您需要重新查询。
 * 管理终端地址一旦被访问，将自动失效，您需要重新查询。
 * 如果连接断开，每分钟内重新连接的次数不能超过 30 次。
-* 获取到 `InstanceVncUrl` 后，您需要在链接 <https://img.qcloud.com/qcloud/app/active_vnc/index.html?> 末尾加上参数 `InstanceVncUrl=xxxx`  。
+获取到 `InstanceVncUrl` 后，您需要在链接 `https://img.qcloud.com/qcloud/app/active_vnc/index.html?` 末尾加上参数 `InstanceVncUrl=xxxx`。
 
   - 参数 `InstanceVncUrl` ：调用接口成功后会返回的 `InstanceVncUrl` 的值。
 
@@ -128,6 +135,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 支持批量操作。每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口 (DisassociateSecurityGroups) 用于解绑实例的指定安全组。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+ * @method Models\ExportImagesResponse ExportImages(Models\ExportImagesRequest $req) 提供导出自定义镜像到指定COS存储桶的能力
  * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
  * @method Models\ImportKeyPairResponse ImportKeyPair(Models\ImportKeyPairRequest $req) 本接口 (ImportKeyPair) 用于导入密钥对。
 
@@ -169,6 +177,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 查询退还实例可以返还的费用。
 * 支持批量操作，每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定[错误码](#4.-.E9.94.99.E8.AF.AF.E7.A0.81)返回。
+ * @method Models\ModifyChcAttributeResponse ModifyChcAttribute(Models\ModifyChcAttributeRequest $req) 修改CHC物理服务器的属性
  * @method Models\ModifyDisasterRecoverGroupAttributeResponse ModifyDisasterRecoverGroupAttribute(Models\ModifyDisasterRecoverGroupAttributeRequest $req) 本接口 (ModifyDisasterRecoverGroupAttribute)用于修改[分散置放群组](https://cloud.tencent.com/document/product/213/15486)属性。
  * @method Models\ModifyHostsAttributeResponse ModifyHostsAttribute(Models\ModifyHostsAttributeRequest $req) 本接口（ModifyHostsAttribute）用于修改CDH实例的属性，如实例名称和续费标记等。参数HostName和RenewFlag必须设置其中一个，但不能同时设置。
  * @method Models\ModifyImageAttributeResponse ModifyImageAttribute(Models\ModifyImageAttributeRequest $req) 本接口（ModifyImageAttribute）用于修改镜像属性。
@@ -196,14 +205,12 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
  * @method Models\ModifyInstancesChargeTypeResponse ModifyInstancesChargeType(Models\ModifyInstancesChargeTypeRequest $req) 本接口 (ModifyInstancesChargeType) 用于切换实例的计费模式。
 
-* 只支持从 `POSTPAID_BY_HOUR` 计费模式切换为`PREPAID`计费模式。
 * 关机不收费的实例、`BC1`和`BS1`机型族的实例、设置定时销毁的实例不支持该操作。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
  * @method Models\ModifyInstancesProjectResponse ModifyInstancesProject(Models\ModifyInstancesProjectRequest $req) 本接口 (ModifyInstancesProject) 用于修改实例所属项目。
 
 * 项目为一个虚拟概念，用户可以在一个账户下面建立多个项目，每个项目中管理不同的资源；将多个不同实例分属到不同项目中，后续使用 [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口查询实例，项目ID可用于过滤结果。
 * 绑定负载均衡的实例不支持修改实例所属项目，请先使用[`DeregisterInstancesFromLoadBalancer`](https://cloud.tencent.com/document/api/214/1258)接口解绑负载均衡。
-[^_^]: # ( 修改实例所属项目会自动解关联实例原来关联的安全组，修改完成后可使用[`ModifyInstancesAttribute`](https://cloud.tencent.com/document/api/213/15739)接口关联安全组。)
 * 支持批量操作。每次请求批量实例的上限为100。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
  * @method Models\ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(Models\ModifyInstancesRenewFlagRequest $req) 本接口 (ModifyInstancesRenewFlag) 用于修改包年包月实例续费标识。
@@ -232,6 +239,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 支持强制重启。强制重启的效果等同于关闭物理计算机的电源开关再重新启动。强制重启可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常重启时使用。
 * 支持批量操作，每次请求批量实例的上限为100。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+ * @method Models\RemoveChcAssistVpcResponse RemoveChcAssistVpc(Models\RemoveChcAssistVpcRequest $req) 清理CHC物理服务器的带外网络和部署网络
+ * @method Models\RemoveChcDeployVpcResponse RemoveChcDeployVpc(Models\RemoveChcDeployVpcRequest $req) 清理CHC物理服务器的部署网络
  * @method Models\RenewHostsResponse RenewHosts(Models\RenewHostsRequest $req) 本接口 (RenewHosts) 用于续费包年包月CDH实例。
 
 * 只支持操作包年包月实例，否则操作会以特定[错误码](#6.-.E9.94.99.E8.AF.AF.E7.A0.81)返回。
@@ -283,7 +292,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 预付费实例的购买会预先扣除本次实例购买所需金额，按小时后付费实例购买会预先冻结本次实例购买一小时内所需金额，在调用本接口前请确保账户余额充足。
 * 调用本接口创建实例，支持代金券自动抵扣（注意，代金券不可用于抵扣后付费冻结金额），详情请参考[代金券选用规则](https://cloud.tencent.com/document/product/555/7428)。
 * 本接口允许购买的实例数量遵循[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)，所创建的实例和官网入口创建的实例共用配额。
-* 本接口为异步接口，当创建实例请求下发成功后会返回一个实例`ID`列表和一个`RequestId`，此时创建实例操作并未立即完成。在此期间实例的状态将会处于“PENDING”，实例创建结果可以通过调用 [DescribeInstancesStatus](https://cloud.tencent.com/document/product/213/15738)  接口查询，如果实例状态(InstanceState)由“PENDING”变为“RUNNING”，则代表实例创建成功，“LAUNCH_FAILED”代表实例创建失败。
+* 本接口为异步接口，当创建实例请求下发成功后会返回一个实例`ID`列表和一个`RequestId`，此时创建实例操作并未立即完成。在此期间实例的状态将会处于“PENDING”，实例创建结果可以通过调用 [DescribeInstancesStatus](https://cloud.tencent.com/document/product/213/15738)  接口查询，如果实例状态(InstanceState)由“PENDING(创建中)”变为“RUNNING(运行中)”，则代表实例创建成功，“LAUNCH_FAILED”代表实例创建失败。
  * @method Models\StartInstancesResponse StartInstances(Models\StartInstancesRequest $req) 本接口 (StartInstances) 用于启动一个或多个实例。
 
 * 只有状态为`STOPPED`的实例才可以进行此操作。
@@ -306,8 +315,9 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 不再使用的实例，可通过本接口主动退还。
 * 按量计费的实例通过本接口可直接退还；包年包月实例如符合[退还规则](https://cloud.tencent.com/document/product/213/9711)，也可通过本接口主动退还。
-* 包年包月实例首次调用本接口，实例将被移至回收站，再次调用本接口，实例将被销毁，且不可恢复。按量计费实例调用本接口将被直接销毁
+* 包年包月实例首次调用本接口，实例将被移至回收站，再次调用本接口，实例将被销毁，且不可恢复。按量计费实例调用本接口将被直接销毁。
 * 支持批量操作，每次请求批量实例的上限为100。
+* 批量操作时，所有实例的付费类型必须一致。
  */
 
 class CvmClient extends AbstractClient

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSpecification(TagSpecification $TagSpecification) 设置云标签描述
  * @method integer getRegistryChargeType() 获取实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
  * @method void setRegistryChargeType(integer $RegistryChargeType) 设置实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
+ * @method boolean getSyncTag() 获取是否同步TCR云标签至生成的COS Bucket
+ * @method void setSyncTag(boolean $SyncTag) 设置是否同步TCR云标签至生成的COS Bucket
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateInstanceRequest extends AbstractModel
     public $RegistryChargeType;
 
     /**
+     * @var boolean 是否同步TCR云标签至生成的COS Bucket
+     */
+    public $SyncTag;
+
+    /**
      * @param string $RegistryName 企业版实例名称
      * @param string $RegistryType 企业版实例类型（basic 基础版；standard 标准版；premium 高级版）
      * @param TagSpecification $TagSpecification 云标签描述
      * @param integer $RegistryChargeType 实例计费类型，0表示按量计费，1表示预付费，默认为按量计费
+     * @param boolean $SyncTag 是否同步TCR云标签至生成的COS Bucket
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("RegistryChargeType",$param) and $param["RegistryChargeType"] !== null) {
             $this->RegistryChargeType = $param["RegistryChargeType"];
+        }
+
+        if (array_key_exists("SyncTag",$param) and $param["SyncTag"] !== null) {
+            $this->SyncTag = $param["SyncTag"];
         }
     }
 }

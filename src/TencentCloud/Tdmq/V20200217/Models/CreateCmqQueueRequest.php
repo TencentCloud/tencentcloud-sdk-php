@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVisibilityTimeout(integer $VisibilityTimeout) 设置消息可见性超时。取值范围 1-43200 秒（即12小时内），默认值 30。
  * @method integer getMaxMsgSize() 获取消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
  * @method void setMaxMsgSize(integer $MaxMsgSize) 设置消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
- * @method integer getMsgRetentionSeconds() 获取消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
- * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
- * @method integer getRewindSeconds() 获取队列是否开启回溯消息能力，该参数取值范围0-msgRetentionSeconds,即最大的回溯时间为消息在队列中的保留周期，0表示不开启。
- * @method void setRewindSeconds(integer $RewindSeconds) 设置队列是否开启回溯消息能力，该参数取值范围0-msgRetentionSeconds,即最大的回溯时间为消息在队列中的保留周期，0表示不开启。
+ * @method integer getMsgRetentionSeconds() 获取消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
+ * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
+ * @method integer getRewindSeconds() 获取队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
+ * @method void setRewindSeconds(integer $RewindSeconds) 设置队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
  * @method integer getTransaction() 获取1 表示事务队列，0 表示普通队列
  * @method void setTransaction(integer $Transaction) 设置1 表示事务队列，0 表示普通队列
  * @method integer getFirstQueryInterval() 获取第一次回查间隔
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrace(boolean $Trace) 设置是否开启消息轨迹追踪，当不设置字段时，默认为不开启，该字段为true表示开启，为false表示不开启
  * @method array getTags() 获取标签数组
  * @method void setTags(array $Tags) 设置标签数组
+ * @method integer getRetentionSizeInMB() 获取队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
+ * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) 设置队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
  */
 class CreateCmqQueueRequest extends AbstractModel
 {
@@ -81,12 +83,12 @@ class CreateCmqQueueRequest extends AbstractModel
     public $MaxMsgSize;
 
     /**
-     * @var integer 消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
+     * @var integer 消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
      */
     public $MsgRetentionSeconds;
 
     /**
-     * @var integer 队列是否开启回溯消息能力，该参数取值范围0-msgRetentionSeconds,即最大的回溯时间为消息在队列中的保留周期，0表示不开启。
+     * @var integer 队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
      */
     public $RewindSeconds;
 
@@ -136,13 +138,18 @@ class CreateCmqQueueRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
+     */
+    public $RetentionSizeInMB;
+
+    /**
      * @param string $QueueName 队列名字，在单个地域同一帐号下唯一。队列名称是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
      * @param integer $MaxMsgHeapNum 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
      * @param integer $PollingWaitSeconds 消息接收长轮询等待时间。取值范围 0-30 秒，默认值 0。
      * @param integer $VisibilityTimeout 消息可见性超时。取值范围 1-43200 秒（即12小时内），默认值 30。
      * @param integer $MaxMsgSize 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
-     * @param integer $MsgRetentionSeconds 消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
-     * @param integer $RewindSeconds 队列是否开启回溯消息能力，该参数取值范围0-msgRetentionSeconds,即最大的回溯时间为消息在队列中的保留周期，0表示不开启。
+     * @param integer $MsgRetentionSeconds 消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
+     * @param integer $RewindSeconds 队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
      * @param integer $Transaction 1 表示事务队列，0 表示普通队列
      * @param integer $FirstQueryInterval 第一次回查间隔
      * @param integer $MaxQueryCount 最大回查次数
@@ -152,6 +159,7 @@ class CreateCmqQueueRequest extends AbstractModel
      * @param integer $MaxTimeToLive policy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间msgRetentionSeconds
      * @param boolean $Trace 是否开启消息轨迹追踪，当不设置字段时，默认为不开启，该字段为true表示开启，为false表示不开启
      * @param array $Tags 标签数组
+     * @param integer $RetentionSizeInMB 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class CreateCmqQueueRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("RetentionSizeInMB",$param) and $param["RetentionSizeInMB"] !== null) {
+            $this->RetentionSizeInMB = $param["RetentionSizeInMB"];
         }
     }
 }

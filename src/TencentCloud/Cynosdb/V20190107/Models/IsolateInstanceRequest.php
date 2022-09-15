@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getInstanceIdList() 获取实例ID数组
  * @method void setInstanceIdList(array $InstanceIdList) 设置实例ID数组
- * @method string getDbType() 获取数据库类型，取值范围: 
-<li> MYSQL </li>
- * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
-<li> MYSQL </li>
+ * @method string getDbType() 获取该参数已废弃
+ * @method void setDbType(string $DbType) 设置该参数已废弃
  */
 class IsolateInstanceRequest extends AbstractModel
 {
@@ -42,16 +40,14 @@ class IsolateInstanceRequest extends AbstractModel
     public $InstanceIdList;
 
     /**
-     * @var string 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * @var string 该参数已废弃
      */
     public $DbType;
 
     /**
      * @param string $ClusterId 集群ID
      * @param array $InstanceIdList 实例ID数组
-     * @param string $DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * @param string $DbType 该参数已废弃
      */
     function __construct()
     {

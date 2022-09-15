@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
  * @method array getTags() 获取迁移实例的tag
  * @method void setTags(array $Tags) 设置迁移实例的tag
+ * @method string getSrcNodeType() 获取源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+ * @method void setSrcNodeType(string $SrcNodeType) 设置源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+ * @method array getSrcInfoMulti() 获取源实例信息，具体内容跟迁移任务类型相关
+ * @method void setSrcInfoMulti(array $SrcInfoMulti) 设置源实例信息，具体内容跟迁移任务类型相关
  */
 class CreateMigrateJobRequest extends AbstractModel
 {
@@ -106,6 +110,16 @@ class CreateMigrateJobRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+     */
+    public $SrcNodeType;
+
+    /**
+     * @var array 源实例信息，具体内容跟迁移任务类型相关
+     */
+    public $SrcInfoMulti;
+
+    /**
      * @param string $JobName 数据迁移任务名称
      * @param MigrateOption $MigrateOption 迁移任务配置选项
      * @param string $SrcDatabaseType 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona，sqlserver 不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
@@ -120,6 +134,8 @@ class CreateMigrateJobRequest extends AbstractModel
 对于database-schema-table三级结构：
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
      * @param array $Tags 迁移实例的tag
+     * @param string $SrcNodeType 源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+     * @param array $SrcInfoMulti 源实例信息，具体内容跟迁移任务类型相关
      */
     function __construct()
     {
@@ -179,6 +195,19 @@ class CreateMigrateJobRequest extends AbstractModel
                 $obj = new TagItem();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("SrcNodeType",$param) and $param["SrcNodeType"] !== null) {
+            $this->SrcNodeType = $param["SrcNodeType"];
+        }
+
+        if (array_key_exists("SrcInfoMulti",$param) and $param["SrcInfoMulti"] !== null) {
+            $this->SrcInfoMulti = [];
+            foreach ($param["SrcInfoMulti"] as $key => $value){
+                $obj = new SrcInfo();
+                $obj->deserialize($value);
+                array_push($this->SrcInfoMulti, $obj);
             }
         }
     }

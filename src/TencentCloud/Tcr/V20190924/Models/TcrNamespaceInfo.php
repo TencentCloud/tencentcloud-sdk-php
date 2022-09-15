@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublic(boolean $Public) 设置访问级别
  * @method integer getNamespaceId() 获取命名空间的Id
  * @method void setNamespaceId(integer $NamespaceId) 设置命名空间的Id
+ * @method TagSpecification getTagSpecification() 获取实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagSpecification(TagSpecification $TagSpecification) 设置实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMetadata() 获取命名空间元数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetadata(array $Metadata) 设置命名空间元数据
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TcrNamespaceInfo extends AbstractModel
 {
@@ -52,10 +60,26 @@ class TcrNamespaceInfo extends AbstractModel
     public $NamespaceId;
 
     /**
+     * @var TagSpecification 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagSpecification;
+
+    /**
+     * @var array 命名空间元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Metadata;
+
+    /**
      * @param string $Name 命名空间名称
      * @param string $CreationTime 创建时间
      * @param boolean $Public 访问级别
      * @param integer $NamespaceId 命名空间的Id
+     * @param TagSpecification $TagSpecification 实例云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Metadata 命名空间元数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +108,20 @@ class TcrNamespaceInfo extends AbstractModel
 
         if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
             $this->NamespaceId = $param["NamespaceId"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = new TagSpecification();
+            $this->TagSpecification->deserialize($param["TagSpecification"]);
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = [];
+            foreach ($param["Metadata"] as $key => $value){
+                $obj = new KeyValueString();
+                $obj->deserialize($value);
+                array_push($this->Metadata, $obj);
+            }
         }
     }
 }

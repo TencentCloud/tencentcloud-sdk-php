@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
- * @method string getDBVersion() 获取数据库版本
- * @method void setDBVersion(string $DBVersion) 设置数据库版本
+ * @method string getDBVersion() 获取TDSQL-C PostgreSQL 合入的社区版本号
+ * @method void setDBVersion(string $DBVersion) 设置TDSQL-C PostgreSQL 合入的社区版本号
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method string getStatus() 获取集群状态。目前包括
@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceCount(integer $InstanceCount) 设置集群内实例的数量
  * @method array getEndpointSet() 获取集群内访问点信息
  * @method void setEndpointSet(array $EndpointSet) 设置集群内访问点信息
+ * @method string getDBMajorVersion() 获取TDSQL-C PostgreSQL 合入的社区主要版本号
+ * @method void setDBMajorVersion(string $DBMajorVersion) 设置TDSQL-C PostgreSQL 合入的社区主要版本号
+ * @method string getDBKernelVersion() 获取TDSQL-C PostgreSQL 内核版本号
+ * @method void setDBKernelVersion(string $DBKernelVersion) 设置TDSQL-C PostgreSQL 内核版本号
  */
 class Cluster extends AbstractModel
 {
@@ -100,7 +104,7 @@ class Cluster extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 数据库版本
+     * @var string TDSQL-C PostgreSQL 合入的社区版本号
      */
     public $DBVersion;
 
@@ -176,11 +180,21 @@ class Cluster extends AbstractModel
     public $EndpointSet;
 
     /**
+     * @var string TDSQL-C PostgreSQL 合入的社区主要版本号
+     */
+    public $DBMajorVersion;
+
+    /**
+     * @var string TDSQL-C PostgreSQL 内核版本号
+     */
+    public $DBKernelVersion;
+
+    /**
      * @param string $ClusterId 集群ID，集群的唯一标识
      * @param string $ClusterName 集群名字，不修改时默认和集群ID相同
      * @param string $Region 地域
      * @param string $Zone 可用区
-     * @param string $DBVersion 数据库版本
+     * @param string $DBVersion TDSQL-C PostgreSQL 合入的社区版本号
      * @param integer $ProjectId 项目ID
      * @param string $Status 集群状态。目前包括
  - creating ：创建中
@@ -204,6 +218,8 @@ class Cluster extends AbstractModel
      * @param string $DBCharset 数据库字符集
      * @param integer $InstanceCount 集群内实例的数量
      * @param array $EndpointSet 集群内访问点信息
+     * @param string $DBMajorVersion TDSQL-C PostgreSQL 合入的社区主要版本号
+     * @param string $DBKernelVersion TDSQL-C PostgreSQL 内核版本号
      */
     function __construct()
     {
@@ -289,6 +305,14 @@ class Cluster extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EndpointSet, $obj);
             }
+        }
+
+        if (array_key_exists("DBMajorVersion",$param) and $param["DBMajorVersion"] !== null) {
+            $this->DBMajorVersion = $param["DBMajorVersion"];
+        }
+
+        if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
+            $this->DBKernelVersion = $param["DBKernelVersion"];
         }
     }
 }

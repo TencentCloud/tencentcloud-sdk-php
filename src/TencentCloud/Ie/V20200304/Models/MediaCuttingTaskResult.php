@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastFile(TaskResultFile $LastFile) 设置最后一个结果文件。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getImageCount() 获取任务结果包含的图片总数。
+静态图：总数即为文件数；
+雪碧图：所有小图总数；
+动图、视频：不计算图片数，为 0。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageCount(integer $ImageCount) 设置任务结果包含的图片总数。
+静态图：总数即为文件数；
+雪碧图：所有小图总数；
+动图、视频：不计算图片数，为 0。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaCuttingTaskResult extends AbstractModel
 {
@@ -64,6 +74,15 @@ class MediaCuttingTaskResult extends AbstractModel
     public $LastFile;
 
     /**
+     * @var integer 任务结果包含的图片总数。
+静态图：总数即为文件数；
+雪碧图：所有小图总数；
+动图、视频：不计算图片数，为 0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageCount;
+
+    /**
      * @param TaskResultFile $ListFile 如果ResultListType不为NoListFile时，结果（TaskResultFile）列表文件的存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResultCount 结果个数。
@@ -71,6 +90,11 @@ class MediaCuttingTaskResult extends AbstractModel
      * @param TaskResultFile $FirstFile 第一个结果文件。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskResultFile $LastFile 最后一个结果文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ImageCount 任务结果包含的图片总数。
+静态图：总数即为文件数；
+雪碧图：所有小图总数；
+动图、视频：不计算图片数，为 0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -103,6 +127,10 @@ class MediaCuttingTaskResult extends AbstractModel
         if (array_key_exists("LastFile",$param) and $param["LastFile"] !== null) {
             $this->LastFile = new TaskResultFile();
             $this->LastFile->deserialize($param["LastFile"]);
+        }
+
+        if (array_key_exists("ImageCount",$param) and $param["ImageCount"] !== null) {
+            $this->ImageCount = $param["ImageCount"];
         }
     }
 }

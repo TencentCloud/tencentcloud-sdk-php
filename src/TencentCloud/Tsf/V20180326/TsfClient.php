@@ -25,6 +25,8 @@ use TencentCloud\Tsf\V20180326\Models as Models;
 /**
  * @method Models\AddClusterInstancesResponse AddClusterInstances(Models\AddClusterInstancesRequest $req) 添加云主机节点至TSF集群
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) 添加云主机节点至TSF集群
+ * @method Models\AssociateBusinessLogConfigResponse AssociateBusinessLogConfig(Models\AssociateBusinessLogConfigRequest $req) 关联日志配置项到应用
+ * @method Models\AssociateConfigWithGroupResponse AssociateConfigWithGroup(Models\AssociateConfigWithGroupRequest $req) 关联投递配置到部署组
  * @method Models\BindApiGroupResponse BindApiGroup(Models\BindApiGroupRequest $req) 网关与API分组批量绑定
  * @method Models\BindPluginResponse BindPlugin(Models\BindPluginRequest $req) 插件与网关分组/API批量绑定
  * @method Models\ChangeApiUsableStatusResponse ChangeApiUsableStatus(Models\ChangeApiUsableStatusRequest $req) 启用或禁用API
@@ -46,7 +48,6 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreatePathRewritesResponse CreatePathRewrites(Models\CreatePathRewritesRequest $req) 创建路径重写
  * @method Models\CreatePublicConfigResponse CreatePublicConfig(Models\CreatePublicConfigRequest $req) 创建公共配置项
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
- * @method Models\CreateServerlessGroupResponse CreateServerlessGroup(Models\CreateServerlessGroupRequest $req) 创建Serverless部署组
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
  * @method Models\CreateTaskFlowResponse CreateTaskFlow(Models\CreateTaskFlowRequest $req) 创建工作流
  * @method Models\CreateUnitRuleResponse CreateUnitRule(Models\CreateUnitRuleRequest $req) 创建单元化规则
@@ -71,7 +72,6 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DeleteUnitRuleResponse DeleteUnitRule(Models\DeleteUnitRuleRequest $req) 删除单元化规则
  * @method Models\DeployContainerGroupResponse DeployContainerGroup(Models\DeployContainerGroupRequest $req) 部署容器应用-更新
  * @method Models\DeployGroupResponse DeployGroup(Models\DeployGroupRequest $req) 部署虚拟机部署组应用
- * @method Models\DeployServerlessGroupResponse DeployServerlessGroup(Models\DeployServerlessGroupRequest $req) 部署Serverless应用
  * @method Models\DescribeApiDetailResponse DescribeApiDetail(Models\DescribeApiDetailRequest $req) 查询API详情
  * @method Models\DescribeApiGroupResponse DescribeApiGroup(Models\DescribeApiGroupRequest $req) 查询API分组
  * @method Models\DescribeApiGroupsResponse DescribeApiGroups(Models\DescribeApiGroupsRequest $req) 查询API 分组信息列表
@@ -80,8 +80,11 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeApiVersionsResponse DescribeApiVersions(Models\DescribeApiVersionsRequest $req) 查询API 版本
  * @method Models\DescribeApplicationResponse DescribeApplication(Models\DescribeApplicationRequest $req) 获取应用详情
  * @method Models\DescribeApplicationAttributeResponse DescribeApplicationAttribute(Models\DescribeApplicationAttributeRequest $req) 获取应用列表其它字段，如实例数量信息等
+ * @method Models\DescribeApplicationBusinessLogConfigResponse DescribeApplicationBusinessLogConfig(Models\DescribeApplicationBusinessLogConfigRequest $req) 查询应用关联日志配置项信息
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 获取应用列表
  * @method Models\DescribeBasicResourceUsageResponse DescribeBasicResourceUsage(Models\DescribeBasicResourceUsageRequest $req) TSF基本资源信息概览接口
+ * @method Models\DescribeBusinessLogConfigResponse DescribeBusinessLogConfig(Models\DescribeBusinessLogConfigRequest $req) 查询业务日志配置项信息
+ * @method Models\DescribeBusinessLogConfigsResponse DescribeBusinessLogConfigs(Models\DescribeBusinessLogConfigsRequest $req) 查询日志配置项列表
  * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req) 查询集群实例
  * @method Models\DescribeConfigResponse DescribeConfig(Models\DescribeConfigRequest $req) 查询配置
  * @method Models\DescribeConfigReleaseLogsResponse DescribeConfigReleaseLogs(Models\DescribeConfigReleaseLogsRequest $req) 查询配置发布历史
@@ -93,6 +96,9 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req)  容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
  * @method Models\DescribeContainerGroupsResponse DescribeContainerGroups(Models\DescribeContainerGroupsRequest $req) 容器部署组列表
  * @method Models\DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(Models\DescribeCreateGatewayApiStatusRequest $req) 查询一键导入API分组任务的状态
+ * @method Models\DescribeDeliveryConfigResponse DescribeDeliveryConfig(Models\DescribeDeliveryConfigRequest $req) 获取单个投递项配置信息
+ * @method Models\DescribeDeliveryConfigByGroupIdResponse DescribeDeliveryConfigByGroupId(Models\DescribeDeliveryConfigByGroupIdRequest $req) 用部署组id获取绑定信息
+ * @method Models\DescribeDeliveryConfigsResponse DescribeDeliveryConfigs(Models\DescribeDeliveryConfigsRequest $req) 获取多个投递项配置 
  * @method Models\DescribeDownloadInfoResponse DescribeDownloadInfo(Models\DescribeDownloadInfoRequest $req) TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeEnabledUnitRuleResponse DescribeEnabledUnitRule(Models\DescribeEnabledUnitRuleRequest $req) 查询生效的单元化规则
@@ -104,6 +110,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 查询虚拟机部署组详情
  * @method Models\DescribeGroupAttributeResponse DescribeGroupAttribute(Models\DescribeGroupAttributeRequest $req) 获取部署组其他属性
  * @method Models\DescribeGroupBindedGatewaysResponse DescribeGroupBindedGateways(Models\DescribeGroupBindedGatewaysRequest $req) 查询某个API分组已绑定的网关部署组信息列表
+ * @method Models\DescribeGroupBusinessLogConfigsResponse DescribeGroupBusinessLogConfigs(Models\DescribeGroupBusinessLogConfigsRequest $req) 查询分组管理日志配置列表
  * @method Models\DescribeGroupGatewaysResponse DescribeGroupGateways(Models\DescribeGroupGatewaysRequest $req) 查询某个网关绑定的API 分组信息列表
  * @method Models\DescribeGroupInstancesResponse DescribeGroupInstances(Models\DescribeGroupInstancesRequest $req) 查询虚拟机部署组云主机列表
  * @method Models\DescribeGroupReleaseResponse DescribeGroupRelease(Models\DescribeGroupReleaseRequest $req) 查询部署组相关的发布信息
@@ -113,6 +120,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeImageRepositoryResponse DescribeImageRepository(Models\DescribeImageRepositoryRequest $req) 镜像仓库列表 
  * @method Models\DescribeImageTagsResponse DescribeImageTags(Models\DescribeImageTagsRequest $req) 镜像版本列表
  * @method Models\DescribeInovcationIndicatorsResponse DescribeInovcationIndicators(Models\DescribeInovcationIndicatorsRequest $req) 查询调用监控指标
+ * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 无
  * @method Models\DescribeInvocationMetricDataCurveResponse DescribeInvocationMetricDataCurve(Models\DescribeInvocationMetricDataCurveRequest $req) 查询调用指标数据变化曲线
  * @method Models\DescribeInvocationMetricDataDimensionResponse DescribeInvocationMetricDataDimension(Models\DescribeInvocationMetricDataDimensionRequest $req) 查询维度
  * @method Models\DescribeInvocationMetricDataPointResponse DescribeInvocationMetricDataPoint(Models\DescribeInvocationMetricDataPointRequest $req) 查询单值指标维度
@@ -129,6 +137,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribePkgsResponse DescribePkgs(Models\DescribePkgsRequest $req) 无
  * @method Models\DescribePluginInstancesResponse DescribePluginInstances(Models\DescribePluginInstancesRequest $req) 分页查询网关分组/API绑定（或未绑定）的插件列表
  * @method Models\DescribePodInstancesResponse DescribePodInstances(Models\DescribePodInstancesRequest $req) 获取部署组实例列表
+ * @method Models\DescribeProgramsResponse DescribePrograms(Models\DescribeProgramsRequest $req) 查询数据集列表
  * @method Models\DescribePublicConfigResponse DescribePublicConfig(Models\DescribePublicConfigRequest $req) 查询公共配置（单条）
  * @method Models\DescribePublicConfigReleaseLogsResponse DescribePublicConfigReleaseLogs(Models\DescribePublicConfigReleaseLogsRequest $req) 查询公共配置发布历史
  * @method Models\DescribePublicConfigReleasesResponse DescribePublicConfigReleases(Models\DescribePublicConfigReleasesRequest $req) 查询公共配置发布信息
@@ -137,8 +146,6 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeReleasedConfigResponse DescribeReleasedConfig(Models\DescribeReleasedConfigRequest $req) 查询group发布的配置
  * @method Models\DescribeRepositoriesResponse DescribeRepositories(Models\DescribeRepositoriesRequest $req) 查询仓库列表
  * @method Models\DescribeRepositoryResponse DescribeRepository(Models\DescribeRepositoryRequest $req) 查询仓库信息
- * @method Models\DescribeServerlessGroupResponse DescribeServerlessGroup(Models\DescribeServerlessGroupRequest $req) 查询Serverless部署组明细
- * @method Models\DescribeServerlessGroupsResponse DescribeServerlessGroups(Models\DescribeServerlessGroupsRequest $req) 查询Serverless部署组列表
  * @method Models\DescribeSimpleApplicationsResponse DescribeSimpleApplications(Models\DescribeSimpleApplicationsRequest $req) 查询简单应用列表
  * @method Models\DescribeSimpleClustersResponse DescribeSimpleClusters(Models\DescribeSimpleClustersRequest $req) 查询简单集群列表
  * @method Models\DescribeSimpleGroupsResponse DescribeSimpleGroups(Models\DescribeSimpleGroupsRequest $req) 查询简单部署组列表
@@ -158,6 +165,8 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DisableTaskFlowResponse DisableTaskFlow(Models\DisableTaskFlowRequest $req) 停用工作流
  * @method Models\DisableUnitRouteResponse DisableUnitRoute(Models\DisableUnitRouteRequest $req) 禁用单元化路由
  * @method Models\DisableUnitRuleResponse DisableUnitRule(Models\DisableUnitRuleRequest $req) 禁用单元化规则
+ * @method Models\DisassociateBusinessLogConfigResponse DisassociateBusinessLogConfig(Models\DisassociateBusinessLogConfigRequest $req) 取消关联业务日志配置项和应用
+ * @method Models\DisassociateKafkaConfigResponse DisassociateKafkaConfig(Models\DisassociateKafkaConfigRequest $req) 取消关联投递信息和部署组
  * @method Models\DraftApiGroupResponse DraftApiGroup(Models\DraftApiGroupRequest $req) 下线Api分组
  * @method Models\EnableTaskResponse EnableTask(Models\EnableTaskRequest $req) 启用任务
  * @method Models\EnableTaskFlowResponse EnableTaskFlow(Models\EnableTaskFlowRequest $req) 启用工作流
@@ -176,6 +185,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\ModifyUploadInfoResponse ModifyUploadInfo(Models\ModifyUploadInfoRequest $req) 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。
  * @method Models\OperateApplicationTcrBindingResponse OperateApplicationTcrBinding(Models\OperateApplicationTcrBindingRequest $req) 绑定解绑tcr仓库
+ * @method Models\ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(Models\ReassociateBusinessLogConfigRequest $req) 重关联业务日志配置
  * @method Models\RedoTaskResponse RedoTask(Models\RedoTaskRequest $req) 重新执行任务
  * @method Models\RedoTaskBatchResponse RedoTaskBatch(Models\RedoTaskBatchRequest $req) 重新执行任务批次
  * @method Models\RedoTaskExecuteResponse RedoTaskExecute(Models\RedoTaskExecuteRequest $req) 重新执行在某个节点上执行任务。

@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyIds(array $PolicyIds) 设置告警通知模板绑定的告警策略ID列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAMPConsumerId() 获取后台 amp consumer id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAMPConsumerId(string $AMPConsumerId) 设置后台 amp consumer id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCLSNotices() 获取推送cls渠道
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLSNotices(array $CLSNotices) 设置推送cls渠道
@@ -128,6 +132,12 @@ class AlarmNotice extends AbstractModel
     public $PolicyIds;
 
     /**
+     * @var string 后台 amp consumer id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AMPConsumerId;
+
+    /**
      * @var array 推送cls渠道
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,6 +163,8 @@ class AlarmNotice extends AbstractModel
      * @param string $NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PolicyIds 告警通知模板绑定的告警策略ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AMPConsumerId 后台 amp consumer id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CLSNotices 推送cls渠道
 注意：此字段可能返回 null，表示取不到有效值。
@@ -218,6 +230,10 @@ class AlarmNotice extends AbstractModel
 
         if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
             $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("AMPConsumerId",$param) and $param["AMPConsumerId"] !== null) {
+            $this->AMPConsumerId = $param["AMPConsumerId"];
         }
 
         if (array_key_exists("CLSNotices",$param) and $param["CLSNotices"] !== null) {

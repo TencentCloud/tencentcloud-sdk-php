@@ -23,17 +23,27 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Emr\V20190103\Models as Models;
 
 /**
+ * @method Models\AddUsersForUserManagerResponse AddUsersForUserManager(Models\AddUsersForUserManagerRequest $req) 该接口支持安装了OpenLdap组件的集群。
+新增用户列表（用户管理）。
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建EMR集群实例
  * @method Models\DescribeClusterNodesResponse DescribeClusterNodes(Models\DescribeClusterNodesRequest $req) 查询硬件节点信息
  * @method Models\DescribeCvmQuotaResponse DescribeCvmQuota(Models\DescribeCvmQuotaRequest $req) 获取账户的CVM配额
+ * @method Models\DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(Models\DescribeEmrApplicationStaticsRequest $req)  yarn application 统计接口查询
  * @method Models\DescribeInstanceRenewNodesResponse DescribeInstanceRenewNodes(Models\DescribeInstanceRenewNodesRequest $req) 预付费集群隔离后续费资源查询
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询EMR实例
+ * @method Models\DescribeInstancesListResponse DescribeInstancesList(Models\DescribeInstancesListRequest $req) EMR集群实例列表查询
  * @method Models\DescribeJobFlowResponse DescribeJobFlow(Models\DescribeJobFlowRequest $req) 查询流程任务
+ * @method Models\DescribeResourceScheduleResponse DescribeResourceSchedule(Models\DescribeResourceScheduleRequest $req) 获取yarn资源调度页面的数据
+ * @method Models\DescribeUsersForUserManagerResponse DescribeUsersForUserManager(Models\DescribeUsersForUserManagerRequest $req) 该接口支持安装了OpenLdap组件的集群。
+批量导出用户。对于kerberos集群，如果需要kertab文件下载地址，可以将NeedKeytabInfo设置为true；注意SupportDownLoadKeyTab为true，但是DownLoadKeyTabUrl为空字符串，表示keytab文件在后台没有准备好（正在生成）。
  * @method Models\InquirePriceRenewEmrResponse InquirePriceRenewEmr(Models\InquirePriceRenewEmrRequest $req) 集群续费询价。
  * @method Models\InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(Models\InquiryPriceCreateInstanceRequest $req) 创建实例询价
  * @method Models\InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(Models\InquiryPriceRenewInstanceRequest $req) 续费询价。
  * @method Models\InquiryPriceScaleOutInstanceResponse InquiryPriceScaleOutInstance(Models\InquiryPriceScaleOutInstanceRequest $req) 扩容询价. 当扩容时候，请通过该接口查询价格。
  * @method Models\InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstance(Models\InquiryPriceUpdateInstanceRequest $req) 变配询价
+ * @method Models\ModifyResourcePoolsResponse ModifyResourcePools(Models\ModifyResourcePoolsRequest $req) 刷新动态资源池
+ * @method Models\ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(Models\ModifyResourceScheduleConfigRequest $req) 修改yarn资源调度的资源配置
+ * @method Models\ModifyResourceSchedulerResponse ModifyResourceScheduler(Models\ModifyResourceSchedulerRequest $req) 修改了yarn的资源调度器，点击部署生效
  * @method Models\RunJobFlowResponse RunJobFlow(Models\RunJobFlowRequest $req) 创建流程作业
  * @method Models\ScaleOutInstanceResponse ScaleOutInstance(Models\ScaleOutInstanceRequest $req) 实例扩容
  * @method Models\SyncPodStateResponse SyncPodState(Models\SyncPodStateRequest $req) EMR同步TKE中POD状态

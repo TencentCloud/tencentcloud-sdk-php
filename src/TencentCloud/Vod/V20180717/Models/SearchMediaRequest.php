@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchMedia请求参数结构体
  *
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method array getFileIds() 获取文件 ID 集合，匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
 <li>单个 ID 长度限制：40个字符。</li>
@@ -49,10 +51,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClassIds(array $ClassIds) 设置分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
 <li>数组长度限制：10。</li>
  * @method array getTags() 获取标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
  * @method void setTags(array $Tags) 设置标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
  * @method array getCategories() 获取文件类型。匹配集合中的任意元素：
 <li>Video: 视频文件</li>
@@ -66,9 +68,9 @@ use TencentCloud\Common\AbstractModel;
 <li>数组长度限制：10。</li>
  * @method void setSourceTypes(array $SourceTypes) 设置媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
 <li>数组长度限制：10。</li>
- * @method array getStreamIds() 获取推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+ * @method array getStreamIds() 获取推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
- * @method void setStreamIds(array $StreamIds) 设置推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+ * @method void setStreamIds(array $StreamIds) 设置推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
  * @method array getVids() 获取直播录制文件的唯一标识。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
@@ -124,8 +126,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageRegions(array $StorageRegions) 设置媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
 <li>单个存储地区长度限制：20个字符。</li>
 <li>数组长度限制：20。</li>
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method array getStorageClasses() 获取存储类型数组。可选值有：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
@@ -136,6 +136,16 @@ use TencentCloud\Common\AbstractModel;
 <li> STANDARD_IA：低频存储。</li>
 <li> ARCHIVE：归档存储。</li>
 <li> DEEP_ARCHIVE：深度归档存储。</li>
+ * @method array getTrtcSdkAppIds() 获取TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+ * @method void setTrtcSdkAppIds(array $TrtcSdkAppIds) 设置TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+ * @method array getTrtcRoomIds() 获取TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
+ * @method void setTrtcRoomIds(array $TrtcRoomIds) 设置TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
  * @method string getText() 获取（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
  * @method void setText(string $Text) 设置（不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -145,9 +155,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceType(string $SourceType) 设置（不推荐：应使用 SourceTypes 替代）
 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
  * @method string getStreamId() 获取（不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
  * @method void setStreamId(string $StreamId) 设置（不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
  * @method string getVid() 获取（不推荐：应使用 Vids 替代）
 直播录制文件的唯一标识。
  * @method void setVid(string $Vid) 设置（不推荐：应使用 Vids 替代）
@@ -175,6 +185,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class SearchMediaRequest extends AbstractModel
 {
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
     /**
      * @var array 文件 ID 集合，匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
@@ -211,7 +226,7 @@ class SearchMediaRequest extends AbstractModel
 
     /**
      * @var array 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public $Tags;
@@ -231,7 +246,7 @@ class SearchMediaRequest extends AbstractModel
     public $SourceTypes;
 
     /**
-     * @var array 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+     * @var array 推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
      */
     public $StreamIds;
@@ -296,11 +311,6 @@ class SearchMediaRequest extends AbstractModel
     public $StorageRegions;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @var array 存储类型数组。可选值有：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
@@ -308,6 +318,19 @@ class SearchMediaRequest extends AbstractModel
 <li> DEEP_ARCHIVE：深度归档存储。</li>
      */
     public $StorageClasses;
+
+    /**
+     * @var array TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public $TrtcSdkAppIds;
+
+    /**
+     * @var array TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
+     */
+    public $TrtcRoomIds;
 
     /**
      * @var string （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -323,7 +346,7 @@ class SearchMediaRequest extends AbstractModel
 
     /**
      * @var string （不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
      */
     public $StreamId;
 
@@ -352,6 +375,7 @@ class SearchMediaRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param array $FileIds 文件 ID 集合，匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
 <li>单个 ID 长度限制：40个字符。</li>
@@ -367,7 +391,7 @@ class SearchMediaRequest extends AbstractModel
      * @param array $ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
 <li>数组长度限制：10。</li>
      * @param array $Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：8个字符。</li>
+<li>单个标签长度限制：16个字符。</li>
 <li>数组长度限制：10。</li>
      * @param array $Categories 文件类型。匹配集合中的任意元素：
 <li>Video: 视频文件</li>
@@ -375,7 +399,7 @@ class SearchMediaRequest extends AbstractModel
 <li>Image: 图片文件</li>
      * @param array $SourceTypes 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
 <li>数组长度限制：10。</li>
-     * @param array $StreamIds 推流 [直播码](https://cloud.tencent.com/document/product/267/5959) 集合。匹配集合中的任意元素。
+     * @param array $StreamIds 推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
      * @param array $Vids 直播录制文件的唯一标识。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
@@ -404,18 +428,22 @@ class SearchMediaRequest extends AbstractModel
      * @param array $StorageRegions 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
 <li>单个存储地区长度限制：20个字符。</li>
 <li>数组长度限制：20。</li>
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param array $StorageClasses 存储类型数组。可选值有：
 <li> STANDARD：标准存储。</li>
 <li> STANDARD_IA：低频存储。</li>
 <li> ARCHIVE：归档存储。</li>
 <li> DEEP_ARCHIVE：深度归档存储。</li>
+     * @param array $TrtcSdkAppIds TRTC 应用 ID 集合。匹配集合中的任意元素。
+<li>数组长度限制：10。</li>
+     * @param array $TrtcRoomIds TRTC 房间 ID 集合。匹配集合中的任意元素。
+<li>单个房间 ID 长度限制：64个字符；</li>
+<li>数组长度限制：10。</li>
      * @param string $Text （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
      * @param string $SourceType （不推荐：应使用 SourceTypes 替代）
 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
      * @param string $StreamId （不推荐：应使用 StreamIds 替代）
-推流 [直播码](https://cloud.tencent.com/document/product/267/5959)。
+推流直播码。
      * @param string $Vid （不推荐：应使用 Vids 替代）
 直播录制文件的唯一标识。
      * @param string $StartTime （不推荐：应使用 CreateTime 替代）
@@ -442,6 +470,10 @@ class SearchMediaRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("FileIds",$param) and $param["FileIds"] !== null) {
             $this->FileIds = $param["FileIds"];
         }
@@ -513,12 +545,16 @@ class SearchMediaRequest extends AbstractModel
             $this->StorageRegions = $param["StorageRegions"];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
-        }
-
         if (array_key_exists("StorageClasses",$param) and $param["StorageClasses"] !== null) {
             $this->StorageClasses = $param["StorageClasses"];
+        }
+
+        if (array_key_exists("TrtcSdkAppIds",$param) and $param["TrtcSdkAppIds"] !== null) {
+            $this->TrtcSdkAppIds = $param["TrtcSdkAppIds"];
+        }
+
+        if (array_key_exists("TrtcRoomIds",$param) and $param["TrtcRoomIds"] !== null) {
+            $this->TrtcRoomIds = $param["TrtcRoomIds"];
         }
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {

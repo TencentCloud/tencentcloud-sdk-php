@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeTaskDetail返回参数结构体
  *
  * @method TaskInfo getTaskInfo() 获取任务信息，不包含任务结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskInfo(TaskInfo $TaskInfo) 设置任务信息，不包含任务结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method Data getTaskData() 获取任务结果数据，只在任务结束时返回
  * @method void setTaskData(Data $TaskData) 设置任务结果数据，只在任务结束时返回
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -31,6 +33,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 {
     /**
      * @var TaskInfo 任务信息，不包含任务结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskInfo;
 
@@ -46,6 +49,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 
     /**
      * @param TaskInfo $TaskInfo 任务信息，不包含任务结果
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Data $TaskData 任务结果数据，只在任务结束时返回
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

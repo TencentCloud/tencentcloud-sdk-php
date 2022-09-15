@@ -39,6 +39,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\DescribeManagerDetailResponse DescribeManagerDetail(Models\DescribeManagerDetailRequest $req) 查询管理人详情
  * @method Models\DescribeManagersResponse DescribeManagers(Models\DescribeManagersRequest $req) 查询管理人列表
  * @method Models\DownloadCertificateResponse DownloadCertificate(Models\DownloadCertificateRequest $req) 本接口（DownloadCertificate）用于下载证书。
+ * @method Models\HostCertificateResponse HostCertificate(Models\HostCertificateRequest $req) 云资源托管
  * @method Models\ModifyCertificateAliasResponse ModifyCertificateAlias(Models\ModifyCertificateAliasRequest $req) 用户传入证书id和备注来修改证书备注。
  * @method Models\ModifyCertificateProjectResponse ModifyCertificateProject(Models\ModifyCertificateProjectRequest $req) 批量修改证书所属项目。
  * @method Models\ReplaceCertificateResponse ReplaceCertificate(Models\ReplaceCertificateRequest $req) 本接口（ReplaceCertificate）用于重颁发证书。已申请的免费证书仅支持 RSA 算法、密钥对参数为2048的证书重颁发，并且目前仅支持1次重颁发。

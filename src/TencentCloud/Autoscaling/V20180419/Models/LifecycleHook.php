@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) 设置通知目标
  * @method string getLifecycleTransitionType() 获取生命周期挂钩适用场景
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) 设置生命周期挂钩适用场景
+ * @method LifecycleCommand getLifecycleCommand() 获取远程命令执行对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) 设置远程命令执行对象
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LifecycleHook extends AbstractModel
 {
@@ -94,6 +98,12 @@ class LifecycleHook extends AbstractModel
     public $LifecycleTransitionType;
 
     /**
+     * @var LifecycleCommand 远程命令执行对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LifecycleCommand;
+
+    /**
      * @param string $LifecycleHookId 生命周期挂钩ID
      * @param string $LifecycleHookName 生命周期挂钩名称
      * @param string $AutoScalingGroupId 伸缩组ID
@@ -104,6 +114,8 @@ class LifecycleHook extends AbstractModel
      * @param string $CreatedTime 创建时间
      * @param NotificationTarget $NotificationTarget 通知目标
      * @param string $LifecycleTransitionType 生命周期挂钩适用场景
+     * @param LifecycleCommand $LifecycleCommand 远程命令执行对象
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -157,6 +169,11 @@ class LifecycleHook extends AbstractModel
 
         if (array_key_exists("LifecycleTransitionType",$param) and $param["LifecycleTransitionType"] !== null) {
             $this->LifecycleTransitionType = $param["LifecycleTransitionType"];
+        }
+
+        if (array_key_exists("LifecycleCommand",$param) and $param["LifecycleCommand"] !== null) {
+            $this->LifecycleCommand = new LifecycleCommand();
+            $this->LifecycleCommand->deserialize($param["LifecycleCommand"]);
         }
     }
 }

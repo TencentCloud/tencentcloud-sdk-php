@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessInfo(ProcessDetailInfo $ProcessInfo) 设置进程信息
  * @method EscapeEventDescription getEventDetail() 获取事件描述
  * @method void setEventDetail(EscapeEventDescription $EventDetail) 设置事件描述
+ * @method ProcessBaseInfo getParentProcessInfo() 获取父进程信息
+ * @method void setParentProcessInfo(ProcessBaseInfo $ParentProcessInfo) 设置父进程信息
+ * @method ProcessBaseInfo getAncestorProcessInfo() 获取祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAncestorProcessInfo(ProcessBaseInfo $AncestorProcessInfo) 设置祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +53,17 @@ class DescribeEscapeEventDetailResponse extends AbstractModel
     public $EventDetail;
 
     /**
+     * @var ProcessBaseInfo 父进程信息
+     */
+    public $ParentProcessInfo;
+
+    /**
+     * @var ProcessBaseInfo 祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AncestorProcessInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +72,9 @@ class DescribeEscapeEventDetailResponse extends AbstractModel
      * @param RunTimeEventBaseInfo $EventBaseInfo 事件基本信息
      * @param ProcessDetailInfo $ProcessInfo 进程信息
      * @param EscapeEventDescription $EventDetail 事件描述
+     * @param ProcessBaseInfo $ParentProcessInfo 父进程信息
+     * @param ProcessBaseInfo $AncestorProcessInfo 祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -83,6 +103,16 @@ class DescribeEscapeEventDetailResponse extends AbstractModel
         if (array_key_exists("EventDetail",$param) and $param["EventDetail"] !== null) {
             $this->EventDetail = new EscapeEventDescription();
             $this->EventDetail->deserialize($param["EventDetail"]);
+        }
+
+        if (array_key_exists("ParentProcessInfo",$param) and $param["ParentProcessInfo"] !== null) {
+            $this->ParentProcessInfo = new ProcessBaseInfo();
+            $this->ParentProcessInfo->deserialize($param["ParentProcessInfo"]);
+        }
+
+        if (array_key_exists("AncestorProcessInfo",$param) and $param["AncestorProcessInfo"] !== null) {
+            $this->AncestorProcessInfo = new ProcessBaseInfo();
+            $this->AncestorProcessInfo->deserialize($param["AncestorProcessInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

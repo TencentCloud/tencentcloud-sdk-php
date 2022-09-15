@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 注意，参数 RuleId，InstanceId，PolicyId，PolicyName 必须至少传一个。
  * @method void setRuleId(string $RuleId) 设置审计规则 ID。可使用该审计规则 ID 查询到其关联的审计策略。
 注意，参数 RuleId，InstanceId，PolicyId，PolicyName 必须至少传一个。
+ * @method string getInstanceName() 获取实例名称
+ * @method void setInstanceName(string $InstanceName) 设置实例名称
  */
 class DescribeAuditPoliciesRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ class DescribeAuditPoliciesRequest extends AbstractModel
     public $RuleId;
 
     /**
+     * @var string 实例名称
+     */
+    public $InstanceName;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $PolicyId 审计策略 ID。
      * @param string $PolicyName 审计策略名称。支持按审计策略名称进行模糊匹配查询。
@@ -76,6 +83,7 @@ class DescribeAuditPoliciesRequest extends AbstractModel
      * @param integer $Offset 分页偏移量。
      * @param string $RuleId 审计规则 ID。可使用该审计规则 ID 查询到其关联的审计策略。
 注意，参数 RuleId，InstanceId，PolicyId，PolicyName 必须至少传一个。
+     * @param string $InstanceName 实例名称
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ class DescribeAuditPoliciesRequest extends AbstractModel
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
         }
     }
 }

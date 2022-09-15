@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 您也可以指定在同region 下自行创建的KMS CMK进行加密。
  * @method array getTags() 获取标签列表。
  * @method void setTags(array $Tags) 设置标签列表。
+ * @method string getSSHKeyName() 获取用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
+ * @method void setSSHKeyName(string $SSHKeyName) 设置用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
  */
 class CreateSSHKeyPairSecretRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ class CreateSSHKeyPairSecretRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
+     */
+    public $SSHKeyName;
+
+    /**
      * @param string $SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
      * @param integer $ProjectId 密钥对创建后所属的项目ID。
      * @param string $Description 描述信息，用于详细描述用途等，最大支持2048字节。
@@ -72,6 +79,7 @@ class CreateSSHKeyPairSecretRequest extends AbstractModel
 如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
 您也可以指定在同region 下自行创建的KMS CMK进行加密。
      * @param array $Tags 标签列表。
+     * @param string $SSHKeyName 用户自定义输入的SSH密钥对的名称，可由数字，字母和下划线组成，只能以数字和字母开头，长度不超过25个字符。
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class CreateSSHKeyPairSecretRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("SSHKeyName",$param) and $param["SSHKeyName"] !== null) {
+            $this->SSHKeyName = $param["SSHKeyName"];
         }
     }
 }

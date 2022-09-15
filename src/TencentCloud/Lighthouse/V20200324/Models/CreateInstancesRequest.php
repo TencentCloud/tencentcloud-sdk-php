@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstances请求参数结构体
  *
- * @method string getBundleId() 获取Lighthouse套餐ID。
- * @method void setBundleId(string $BundleId) 设置Lighthouse套餐ID。
- * @method string getBlueprintId() 获取Lighthouse镜像ID。
- * @method void setBlueprintId(string $BlueprintId) 设置Lighthouse镜像ID。
- * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取当前Lighthouse实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
- * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置当前Lighthouse实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
- * @method string getInstanceName() 获取Lighthouse实例显示名称。
- * @method void setInstanceName(string $InstanceName) 设置Lighthouse实例显示名称。
- * @method integer getInstanceCount() 获取购买Lighthouse实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
- * @method void setInstanceCount(integer $InstanceCount) 设置购买Lighthouse实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
+ * @method string getBundleId() 获取套餐ID。
+ * @method void setBundleId(string $BundleId) 设置套餐ID。
+ * @method string getBlueprintId() 获取镜像ID。
+ * @method void setBlueprintId(string $BlueprintId) 设置镜像ID。
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
+ * @method string getInstanceName() 获取实例显示名称。
+ * @method void setInstanceName(string $InstanceName) 设置实例显示名称。
+ * @method integer getInstanceCount() 获取购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
+ * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
  * @method array getZones() 获取可用区列表。默认为随机可用区
  * @method void setZones(array $Zones) 设置可用区列表。默认为随机可用区
  * @method boolean getDryRun() 获取是否只预检此次请求。
@@ -48,31 +48,33 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setLoginConfiguration(LoginConfiguration $LoginConfiguration) 设置实例登录密码信息配置。本字段目前仅支持WINDOWS实例进行密码设置。默认缺失情况下代表用户选择实例创建后设置登录密码。
  * @method array getContainers() 获取要创建的容器配置列表。
  * @method void setContainers(array $Containers) 设置要创建的容器配置列表。
+ * @method boolean getAutoVoucher() 获取是否自动使用代金券。默认不使用。
+ * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动使用代金券。默认不使用。
  */
 class CreateInstancesRequest extends AbstractModel
 {
     /**
-     * @var string Lighthouse套餐ID。
+     * @var string 套餐ID。
      */
     public $BundleId;
 
     /**
-     * @var string Lighthouse镜像ID。
+     * @var string 镜像ID。
      */
     public $BlueprintId;
 
     /**
-     * @var InstanceChargePrepaid 当前Lighthouse实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
+     * @var InstanceChargePrepaid 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
      */
     public $InstanceChargePrepaid;
 
     /**
-     * @var string Lighthouse实例显示名称。
+     * @var string 实例显示名称。
      */
     public $InstanceName;
 
     /**
-     * @var integer 购买Lighthouse实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
+     * @var integer 购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
      */
     public $InstanceCount;
 
@@ -106,11 +108,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $Containers;
 
     /**
-     * @param string $BundleId Lighthouse套餐ID。
-     * @param string $BlueprintId Lighthouse镜像ID。
-     * @param InstanceChargePrepaid $InstanceChargePrepaid 当前Lighthouse实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
-     * @param string $InstanceName Lighthouse实例显示名称。
-     * @param integer $InstanceCount 购买Lighthouse实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
+     * @var boolean 是否自动使用代金券。默认不使用。
+     */
+    public $AutoVoucher;
+
+    /**
+     * @param string $BundleId 套餐ID。
+     * @param string $BlueprintId 镜像ID。
+     * @param InstanceChargePrepaid $InstanceChargePrepaid 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
+     * @param string $InstanceName 实例显示名称。
+     * @param integer $InstanceCount 购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
      * @param array $Zones 可用区列表。默认为随机可用区
      * @param boolean $DryRun 是否只预检此次请求。
 true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和库存。
@@ -120,6 +127,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param LoginConfiguration $LoginConfiguration 实例登录密码信息配置。本字段目前仅支持WINDOWS实例进行密码设置。默认缺失情况下代表用户选择实例创建后设置登录密码。
      * @param array $Containers 要创建的容器配置列表。
+     * @param boolean $AutoVoucher 是否自动使用代金券。默认不使用。
      */
     function __construct()
     {
@@ -179,6 +187,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
                 $obj->deserialize($value);
                 array_push($this->Containers, $obj);
             }
+        }
+
+        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
+            $this->AutoVoucher = $param["AutoVoucher"];
         }
     }
 }

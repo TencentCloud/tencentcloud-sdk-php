@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaInfo(MediaResultInfo $MediaInfo) 设置媒体信息，对于媒体文件，部分任务支持返回
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMd5() 获取文件对应的md5。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMd5(string $Md5) 设置文件对应的md5。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResultFile extends AbstractModel
 {
@@ -54,11 +58,19 @@ class TaskResultFile extends AbstractModel
     public $MediaInfo;
 
     /**
+     * @var string 文件对应的md5。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Md5;
+
+    /**
      * @param string $Url 文件链接。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileSize 文件大小，部分任务支持，单位：字节
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaResultInfo $MediaInfo 媒体信息，对于媒体文件，部分任务支持返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Md5 文件对应的md5。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -85,6 +97,10 @@ class TaskResultFile extends AbstractModel
         if (array_key_exists("MediaInfo",$param) and $param["MediaInfo"] !== null) {
             $this->MediaInfo = new MediaResultInfo();
             $this->MediaInfo->deserialize($param["MediaInfo"]);
+        }
+
+        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
+            $this->Md5 = $param["Md5"];
         }
     }
 }

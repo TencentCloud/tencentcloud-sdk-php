@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 视频处理 URL 对象信息。
+ * 媒体处理 URL 对象信息。
  *
  * @method string getUrl() 获取视频的 URL。
  * @method void setUrl(string $Url) 设置视频的 URL。

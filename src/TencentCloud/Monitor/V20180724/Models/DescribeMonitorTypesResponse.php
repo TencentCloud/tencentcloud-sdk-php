@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMonitorTypes() 获取监控类型，云产品监控为 MT_QCE
  * @method void setMonitorTypes(array $MonitorTypes) 设置监控类型，云产品监控为 MT_QCE
+ * @method array getMonitorTypeInfos() 获取监控类型详情
+ * @method void setMonitorTypeInfos(array $MonitorTypeInfos) 设置监控类型详情
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeMonitorTypesResponse extends AbstractModel
     public $MonitorTypes;
 
     /**
+     * @var array 监控类型详情
+     */
+    public $MonitorTypeInfos;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $MonitorTypes 监控类型，云产品监控为 MT_QCE
+     * @param array $MonitorTypeInfos 监控类型详情
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,15 @@ class DescribeMonitorTypesResponse extends AbstractModel
         }
         if (array_key_exists("MonitorTypes",$param) and $param["MonitorTypes"] !== null) {
             $this->MonitorTypes = $param["MonitorTypes"];
+        }
+
+        if (array_key_exists("MonitorTypeInfos",$param) and $param["MonitorTypeInfos"] !== null) {
+            $this->MonitorTypeInfos = [];
+            foreach ($param["MonitorTypeInfos"] as $key => $value){
+                $obj = new MonitorTypeInfo();
+                $obj->deserialize($value);
+                array_push($this->MonitorTypeInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

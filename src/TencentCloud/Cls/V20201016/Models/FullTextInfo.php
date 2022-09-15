@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getCaseSensitive() 获取是否大小写敏感
  * @method void setCaseSensitive(boolean $CaseSensitive) 设置是否大小写敏感
- * @method string getTokenizer() 获取全文索引的分词符，字符串中每个字符代表一个分词符
- * @method void setTokenizer(string $Tokenizer) 设置全文索引的分词符，字符串中每个字符代表一个分词符
+ * @method string getTokenizer() 获取全文索引的分词符，其中的每个字符代表一个分词符；
+仅支持英文符号及\n\t\r；
+推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\ 作为分词符；
+ * @method void setTokenizer(string $Tokenizer) 设置全文索引的分词符，其中的每个字符代表一个分词符；
+仅支持英文符号及\n\t\r；
+推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\ 作为分词符；
  * @method boolean getContainZH() 获取是否包含中文
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainZH(boolean $ContainZH) 设置是否包含中文
@@ -37,7 +41,9 @@ class FullTextInfo extends AbstractModel
     public $CaseSensitive;
 
     /**
-     * @var string 全文索引的分词符，字符串中每个字符代表一个分词符
+     * @var string 全文索引的分词符，其中的每个字符代表一个分词符；
+仅支持英文符号及\n\t\r；
+推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\ 作为分词符；
      */
     public $Tokenizer;
 
@@ -49,7 +55,9 @@ class FullTextInfo extends AbstractModel
 
     /**
      * @param boolean $CaseSensitive 是否大小写敏感
-     * @param string $Tokenizer 全文索引的分词符，字符串中每个字符代表一个分词符
+     * @param string $Tokenizer 全文索引的分词符，其中的每个字符代表一个分词符；
+仅支持英文符号及\n\t\r；
+推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\ 作为分词符；
      * @param boolean $ContainZH 是否包含中文
 注意：此字段可能返回 null，表示取不到有效值。
      */

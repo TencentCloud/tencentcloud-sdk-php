@@ -38,8 +38,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskSize(integer $DiskSize) 设置磁盘大小
  * @method string getRenewFlag() 获取续费标识
  * @method void setRenewFlag(string $RenewFlag) 设置续费标识
- * @method string getDiskState() 获取磁盘状态
- * @method void setDiskState(string $DiskState) 设置磁盘状态
+ * @method string getDiskState() 获取磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
+ * @method void setDiskState(string $DiskState) 设置磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
  * @method boolean getAttached() 获取磁盘挂载状态
  * @method void setAttached(boolean $Attached) 设置磁盘挂载状态
  * @method boolean getDeleteWithInstance() 获取是否随实例释放
@@ -50,16 +70,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestOperationState(string $LatestOperationState) 设置上一次操作状态
  * @method string getLatestOperationRequestId() 获取上一次请求ID
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) 设置上一次请求ID
- * @method string getCreatedTime() 获取创建时间
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间
- * @method string getExpiredTime() 获取到期时间
+ * @method string getCreatedTime() 获取创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+ * @method string getExpiredTime() 获取到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpiredTime(string $ExpiredTime) 设置到期时间
+ * @method void setExpiredTime(string $ExpiredTime) 设置到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIsolatedTime() 获取隔离时间
+ * @method string getIsolatedTime() 获取隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsolatedTime(string $IsolatedTime) 设置隔离时间
+ * @method void setIsolatedTime(string $IsolatedTime) 设置隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDiskBackupCount() 获取云硬盘的已有备份点数量。
+ * @method void setDiskBackupCount(integer $DiskBackupCount) 设置云硬盘的已有备份点数量。
+ * @method integer getDiskBackupQuota() 获取云硬盘的备份点配额数量。
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置云硬盘的备份点配额数量。
  */
 class Disk extends AbstractModel
 {
@@ -109,7 +139,17 @@ class Disk extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string 磁盘状态
+     * @var string 磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
      */
     public $DiskState;
 
@@ -139,21 +179,34 @@ class Disk extends AbstractModel
     public $LatestOperationRequestId;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
      */
     public $CreatedTime;
 
     /**
-     * @var string 到期时间
+     * @var string 到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiredTime;
 
     /**
-     * @var string 隔离时间
+     * @var string 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolatedTime;
+
+    /**
+     * @var integer 云硬盘的已有备份点数量。
+     */
+    public $DiskBackupCount;
+
+    /**
+     * @var integer 云硬盘的备份点配额数量。
+     */
+    public $DiskBackupQuota;
 
     /**
      * @param string $DiskId 磁盘ID
@@ -165,17 +218,32 @@ class Disk extends AbstractModel
      * @param string $DiskChargeType 磁盘付费类型
      * @param integer $DiskSize 磁盘大小
      * @param string $RenewFlag 续费标识
-     * @param string $DiskState 磁盘状态
+     * @param string $DiskState 磁盘状态，取值范围：
+<li>PENDING：创建中。 </li>
+<li>UNATTACHED：未挂载。</li>
+<li>ATTACHING：挂载中。</li>
+<li>ATTACHED：已挂载。</li>
+<li>DETACHING：卸载中。 </li>
+<li> SHUTDOWN：已隔离。</li>
+<li> CREATED_FAILED：创建失败。</li>
+<li>TERMINATING：销毁中。</li>
+<li> DELETING：删除中。</li>
+<li> FREEZING：冻结中。</li>
      * @param boolean $Attached 磁盘挂载状态
      * @param boolean $DeleteWithInstance 是否随实例释放
      * @param string $LatestOperation 上一次操作
      * @param string $LatestOperationState 上一次操作状态
      * @param string $LatestOperationRequestId 上一次请求ID
-     * @param string $CreatedTime 创建时间
-     * @param string $ExpiredTime 到期时间
+     * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
+     * @param string $ExpiredTime 到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IsolatedTime 隔离时间
+     * @param string $IsolatedTime 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DiskBackupCount 云硬盘的已有备份点数量。
+     * @param integer $DiskBackupQuota 云硬盘的备份点配额数量。
      */
     function __construct()
     {
@@ -260,6 +328,14 @@ class Disk extends AbstractModel
 
         if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
             $this->IsolatedTime = $param["IsolatedTime"];
+        }
+
+        if (array_key_exists("DiskBackupCount",$param) and $param["DiskBackupCount"] !== null) {
+            $this->DiskBackupCount = $param["DiskBackupCount"];
+        }
+
+        if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
+            $this->DiskBackupQuota = $param["DiskBackupQuota"];
         }
     }
 }

@@ -81,17 +81,19 @@ ftp：历史 FTP 托管源源站，现已不维护
 修改 Origins 时需要同时填充对应的 OriginType
 IPv6 功能目前尚未全量，需要先申请试用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServerName() 获取回主源站时 Host 头部，不填充则默认为加速域名
+ * @method string getServerName() 获取当源站类型为cos或者第三方存储加速时,ServerName字段必填
+回主源站时 Host 头部，不填充则默认为加速域名
 若接入的是泛域名，则回源 Host 默认为访问时的子域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServerName(string $ServerName) 设置回主源站时 Host 头部，不填充则默认为加速域名
+ * @method void setServerName(string $ServerName) 设置当源站类型为cos或者第三方存储加速时,ServerName字段必填
+回主源站时 Host 头部，不填充则默认为加速域名
 若接入的是泛域名，则回源 Host 默认为访问时的子域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCosPrivateAccess() 获取OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket
-注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。
+注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。取值范围: on/off
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosPrivateAccess(string $CosPrivateAccess) 设置OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket
-注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。
+注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。取值范围: on/off
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginPullProtocol() 获取回源协议配置
 http：强制 http 回源
@@ -149,6 +151,10 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvanceHttps(AdvanceHttps $AdvanceHttps) 设置HTTPS回源高级配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginCompany() 获取对象存储回源厂商
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginCompany(string $OriginCompany) 设置对象存储回源厂商
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Origin extends AbstractModel
 {
@@ -188,7 +194,8 @@ IPv6 功能目前尚未全量，需要先申请试用
     public $OriginType;
 
     /**
-     * @var string 回主源站时 Host 头部，不填充则默认为加速域名
+     * @var string 当源站类型为cos或者第三方存储加速时,ServerName字段必填
+回主源站时 Host 头部，不填充则默认为加速域名
 若接入的是泛域名，则回源 Host 默认为访问时的子域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -196,7 +203,7 @@ IPv6 功能目前尚未全量，需要先申请试用
 
     /**
      * @var string OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket
-注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。
+注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。取值范围: on/off
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosPrivateAccess;
@@ -262,6 +269,12 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
     public $AdvanceHttps;
 
     /**
+     * @var string 对象存储回源厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginCompany;
+
+    /**
      * @param array $Origins 主源站列表
 修改源站时，需要同时填充对应的 OriginType
 注意：此字段可能返回 null，表示取不到有效值。
@@ -289,11 +302,12 @@ ftp：历史 FTP 托管源源站，现已不维护
 修改 Origins 时需要同时填充对应的 OriginType
 IPv6 功能目前尚未全量，需要先申请试用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServerName 回主源站时 Host 头部，不填充则默认为加速域名
+     * @param string $ServerName 当源站类型为cos或者第三方存储加速时,ServerName字段必填
+回主源站时 Host 头部，不填充则默认为加速域名
 若接入的是泛域名，则回源 Host 默认为访问时的子域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosPrivateAccess OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket
-注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。
+注意：需要先授权 CDN 访问该私有 Bucket 的权限后，才可开启此配置。取值范围: on/off
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginPullProtocol 回源协议配置
 http：强制 http 回源
@@ -322,6 +336,8 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
      * @param array $PathBasedOrigin 分路径回源配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AdvanceHttps $AdvanceHttps HTTPS回源高级配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginCompany 对象存储回源厂商
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -394,6 +410,10 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
         if (array_key_exists("AdvanceHttps",$param) and $param["AdvanceHttps"] !== null) {
             $this->AdvanceHttps = new AdvanceHttps();
             $this->AdvanceHttps->deserialize($param["AdvanceHttps"]);
+        }
+
+        if (array_key_exists("OriginCompany",$param) and $param["OriginCompany"] !== null) {
+            $this->OriginCompany = $param["OriginCompany"];
         }
     }
 }

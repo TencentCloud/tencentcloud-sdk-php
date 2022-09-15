@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRollbackTimeRange返回参数结构体
  *
- * @method string getTimeRangeStart() 获取有效回归时间范围开始时间点
- * @method void setTimeRangeStart(string $TimeRangeStart) 设置有效回归时间范围开始时间点
- * @method string getTimeRangeEnd() 获取有效回归时间范围结束时间点
- * @method void setTimeRangeEnd(string $TimeRangeEnd) 设置有效回归时间范围结束时间点
+ * @method string getTimeRangeStart() 获取有效回归时间范围开始时间点（已废弃）
+ * @method void setTimeRangeStart(string $TimeRangeStart) 设置有效回归时间范围开始时间点（已废弃）
+ * @method string getTimeRangeEnd() 获取有效回归时间范围结束时间点（已废弃）
+ * @method void setTimeRangeEnd(string $TimeRangeEnd) 设置有效回归时间范围结束时间点（已废弃）
+ * @method array getRollbackTimeRanges() 获取可回档时间范围
+ * @method void setRollbackTimeRanges(array $RollbackTimeRanges) 设置可回档时间范围
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRollbackTimeRangeResponse extends AbstractModel
 {
     /**
-     * @var string 有效回归时间范围开始时间点
+     * @var string 有效回归时间范围开始时间点（已废弃）
      */
     public $TimeRangeStart;
 
     /**
-     * @var string 有效回归时间范围结束时间点
+     * @var string 有效回归时间范围结束时间点（已废弃）
      */
     public $TimeRangeEnd;
+
+    /**
+     * @var array 可回档时间范围
+     */
+    public $RollbackTimeRanges;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeRollbackTimeRangeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TimeRangeStart 有效回归时间范围开始时间点
-     * @param string $TimeRangeEnd 有效回归时间范围结束时间点
+     * @param string $TimeRangeStart 有效回归时间范围开始时间点（已废弃）
+     * @param string $TimeRangeEnd 有效回归时间范围结束时间点（已废弃）
+     * @param array $RollbackTimeRanges 可回档时间范围
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,15 @@ class DescribeRollbackTimeRangeResponse extends AbstractModel
 
         if (array_key_exists("TimeRangeEnd",$param) and $param["TimeRangeEnd"] !== null) {
             $this->TimeRangeEnd = $param["TimeRangeEnd"];
+        }
+
+        if (array_key_exists("RollbackTimeRanges",$param) and $param["RollbackTimeRanges"] !== null) {
+            $this->RollbackTimeRanges = [];
+            foreach ($param["RollbackTimeRanges"] as $key => $value){
+                $obj = new RollbackTimeRange();
+                $obj->deserialize($value);
+                array_push($this->RollbackTimeRanges, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

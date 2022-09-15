@@ -46,9 +46,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(ComposeMediaTaskOutput $Output) 设置制作媒体文件任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaMetaData getMetaData() 获取原始视频的元信息。
+ * @method MediaMetaData getMetaData() 获取输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
+ * @method void setMetaData(MediaMetaData $MetaData) 设置输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
@@ -99,7 +99,7 @@ class ComposeMediaTask extends AbstractModel
     public $Output;
 
     /**
-     * @var MediaMetaData 原始视频的元信息。
+     * @var MediaMetaData 输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaData;
@@ -128,7 +128,7 @@ class ComposeMediaTask extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ComposeMediaTaskOutput $Output 制作媒体文件任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaMetaData $MetaData 原始视频的元信息。
+     * @param MediaMetaData $MetaData 输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。

@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceStatuses(array $InstanceStatuses) 设置实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁)
  * @method array getInstanceIds() 获取实例Id
  * @method void setInstanceIds(array $InstanceIds) 设置实例Id
- * @method array getFilters() 获取过滤参数
- * @method void setFilters(array $Filters) 设置过滤参数
+ * @method array getFilters() 获取过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
+ * @method void setFilters(array $Filters) 设置过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
+ * @method integer getIsDemo() 获取该参数已废弃，demo模式请在Filters内注明
+ * @method void setIsDemo(integer $IsDemo) 设置该参数已废弃，demo模式请在Filters内注明
  */
 class DescribeTawInstancesRequest extends AbstractModel
 {
@@ -75,9 +77,14 @@ class DescribeTawInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var array 过滤参数
+     * @var array 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
      */
     public $Filters;
+
+    /**
+     * @var integer 该参数已废弃，demo模式请在Filters内注明
+     */
+    public $IsDemo;
 
     /**
      * @param array $ChargeStatuses 计费状态
@@ -87,7 +94,8 @@ class DescribeTawInstancesRequest extends AbstractModel
      * @param array $AreaIds 片区Id
      * @param array $InstanceStatuses 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁)
      * @param array $InstanceIds 实例Id
-     * @param array $Filters 过滤参数
+     * @param array $Filters 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
+     * @param integer $IsDemo 该参数已废弃，demo模式请在Filters内注明
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class DescribeTawInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("IsDemo",$param) and $param["IsDemo"] !== null) {
+            $this->IsDemo = $param["IsDemo"];
         }
     }
 }

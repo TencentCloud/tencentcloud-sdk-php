@@ -46,30 +46,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注
  * @method string getMachineNo() 获取机器编码
  * @method void setMachineNo(string $MachineNo) 设置机器编码
- * @method string getType() 获取发票类型
-01：专用发票 
-02：货运发票
-03：机动车发票 
-04：普通发票 
-10：电子发票 
-11：卷式发票 
-14：通行费发票 
-15：二手车发票
- * @method void setType(string $Type) 设置发票类型
-01：专用发票 
-02：货运发票
-03：机动车发票 
-04：普通发票 
-10：电子发票 
-11：卷式发票 
-14：通行费发票 
-15：二手车发票
+ * @method string getType() 获取票种类型
+01：增值税专用发票，
+02：货运运输业增值税专用发票，
+03：机动车销售统一发票，
+04：增值税普通发票，
+08：增值税电子专用发票（含全电，全电仅新版接口支持），
+10：增值税电子普通发票（含全电，全电仅新版接口支持），
+11：增值税普通发票（卷式），
+14：增值税电子（通行费）发票，
+15：二手车销售统一发票，
+32：深圳区块链发票
+ * @method void setType(string $Type) 设置票种类型
+01：增值税专用发票，
+02：货运运输业增值税专用发票，
+03：机动车销售统一发票，
+04：增值税普通发票，
+08：增值税电子专用发票（含全电，全电仅新版接口支持），
+10：增值税电子普通发票（含全电，全电仅新版接口支持），
+11：增值税普通发票（卷式），
+14：增值税电子（通行费）发票，
+15：二手车销售统一发票，
+32：深圳区块链发票
  * @method string getCheckCode() 获取检验码
  * @method void setCheckCode(string $CheckCode) 设置检验码
  * @method string getIsAbandoned() 获取是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
  * @method void setIsAbandoned(string $IsAbandoned) 设置是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
  * @method string getHasSellerList() 获取是否有销货清单 
 Y: 有清单 N：无清单 
 卷票无
@@ -88,6 +92,10 @@ Y: 有清单 N：无清单
  * @method void setAmountWithTax(string $AmountWithTax) 设置含税金额
  * @method array getItems() 获取项目明细
  * @method void setItems(array $Items) 设置项目明细
+ * @method string getTaxBureau() 获取所属税局
+ * @method void setTaxBureau(string $TaxBureau) 设置所属税局
+ * @method string getTrafficFreeFlag() 获取通行费标志:Y、是;N、否
+ * @method void setTrafficFreeFlag(string $TrafficFreeFlag) 设置通行费标志:Y、是;N、否
  */
 class VatInvoice extends AbstractModel
 {
@@ -157,15 +165,17 @@ class VatInvoice extends AbstractModel
     public $MachineNo;
 
     /**
-     * @var string 发票类型
-01：专用发票 
-02：货运发票
-03：机动车发票 
-04：普通发票 
-10：电子发票 
-11：卷式发票 
-14：通行费发票 
-15：二手车发票
+     * @var string 票种类型
+01：增值税专用发票，
+02：货运运输业增值税专用发票，
+03：机动车销售统一发票，
+04：增值税普通发票，
+08：增值税电子专用发票（含全电，全电仅新版接口支持），
+10：增值税电子普通发票（含全电，全电仅新版接口支持），
+11：增值税普通发票（卷式），
+14：增值税电子（通行费）发票，
+15：二手车销售统一发票，
+32：深圳区块链发票
      */
     public $Type;
 
@@ -176,7 +186,7 @@ class VatInvoice extends AbstractModel
 
     /**
      * @var string 是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
      */
     public $IsAbandoned;
 
@@ -218,6 +228,16 @@ Y: 有清单 N：无清单
     public $Items;
 
     /**
+     * @var string 所属税局
+     */
+    public $TaxBureau;
+
+    /**
+     * @var string 通行费标志:Y、是;N、否
+     */
+    public $TrafficFreeFlag;
+
+    /**
      * @param string $Code 发票代码
      * @param string $Number 发票号码
      * @param string $Date 开票日期
@@ -231,18 +251,20 @@ Y: 有清单 N：无清单
      * @param string $SellerBankAccount 销方银行账号
      * @param string $Remark 备注
      * @param string $MachineNo 机器编码
-     * @param string $Type 发票类型
-01：专用发票 
-02：货运发票
-03：机动车发票 
-04：普通发票 
-10：电子发票 
-11：卷式发票 
-14：通行费发票 
-15：二手车发票
+     * @param string $Type 票种类型
+01：增值税专用发票，
+02：货运运输业增值税专用发票，
+03：机动车销售统一发票，
+04：增值税普通发票，
+08：增值税电子专用发票（含全电，全电仅新版接口支持），
+10：增值税电子普通发票（含全电，全电仅新版接口支持），
+11：增值税普通发票（卷式），
+14：增值税电子（通行费）发票，
+15：二手车销售统一发票，
+32：深圳区块链发票
      * @param string $CheckCode 检验码
      * @param string $IsAbandoned 是否作废（红冲）是否作废（红冲）
-Y: 已作废 N：未作废 H：红冲
+Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
      * @param string $HasSellerList 是否有销货清单 
 Y: 有清单 N：无清单 
 卷票无
@@ -252,6 +274,8 @@ Y: 有清单 N：无清单
      * @param string $TaxAmount 税额
      * @param string $AmountWithTax 含税金额
      * @param array $Items 项目明细
+     * @param string $TaxBureau 所属税局
+     * @param string $TrafficFreeFlag 通行费标志:Y、是;N、否
      */
     function __construct()
     {
@@ -361,6 +385,14 @@ Y: 有清单 N：无清单
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("TaxBureau",$param) and $param["TaxBureau"] !== null) {
+            $this->TaxBureau = $param["TaxBureau"];
+        }
+
+        if (array_key_exists("TrafficFreeFlag",$param) and $param["TrafficFreeFlag"] !== null) {
+            $this->TrafficFreeFlag = $param["TrafficFreeFlag"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(ConsumerContent $Content) 设置如果需要投递元数据信息，元数据信息的描述
  * @method Ckafka getCkafka() 获取CKafka的描述
  * @method void setCkafka(Ckafka $Ckafka) 设置CKafka的描述
+ * @method integer getCompression() 获取投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+ * @method void setCompression(integer $Compression) 设置投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
  */
 class CreateConsumerRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateConsumerRequest extends AbstractModel
     public $Ckafka;
 
     /**
+     * @var integer 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+     */
+    public $Compression;
+
+    /**
      * @param string $TopicId 投递任务绑定的日志主题 ID
      * @param boolean $NeedContent 是否投递日志的元数据信息，默认为 true
      * @param ConsumerContent $Content 如果需要投递元数据信息，元数据信息的描述
      * @param Ckafka $Ckafka CKafka的描述
+     * @param integer $Compression 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
      */
     function __construct()
     {
@@ -86,6 +94,10 @@ class CreateConsumerRequest extends AbstractModel
         if (array_key_exists("Ckafka",$param) and $param["Ckafka"] !== null) {
             $this->Ckafka = new Ckafka();
             $this->Ckafka->deserialize($param["Ckafka"]);
+        }
+
+        if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
+            $this->Compression = $param["Compression"];
         }
     }
 }

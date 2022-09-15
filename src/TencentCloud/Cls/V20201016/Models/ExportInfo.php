@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormat(string $Format) 设置日志导出格式
  * @method integer getCount() 获取日志导出数量
  * @method void setCount(integer $Count) 设置日志导出数量
- * @method string getStatus() 获取日志下载状态。Processing:导出正在进行中，Complete:导出完成，Failed:导出失败，Expired:日志导出已过期（三天有效期）。
- * @method void setStatus(string $Status) 设置日志下载状态。Processing:导出正在进行中，Complete:导出完成，Failed:导出失败，Expired:日志导出已过期（三天有效期）。
+ * @method string getStatus() 获取日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
+ * @method void setStatus(string $Status) 设置日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
  * @method integer getFrom() 获取日志导出起始时间
  * @method void setFrom(integer $From) 设置日志导出起始时间
  * @method integer getTo() 获取日志导出结束时间
@@ -90,7 +90,7 @@ class ExportInfo extends AbstractModel
     public $Count;
 
     /**
-     * @var string 日志下载状态。Processing:导出正在进行中，Complete:导出完成，Failed:导出失败，Expired:日志导出已过期（三天有效期）。
+     * @var string 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
      */
     public $Status;
 
@@ -123,7 +123,7 @@ class ExportInfo extends AbstractModel
      * @param string $Order 日志导出时间排序
      * @param string $Format 日志导出格式
      * @param integer $Count 日志导出数量
-     * @param string $Status 日志下载状态。Processing:导出正在进行中，Complete:导出完成，Failed:导出失败，Expired:日志导出已过期（三天有效期）。
+     * @param string $Status 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
      * @param integer $From 日志导出起始时间
      * @param integer $To 日志导出结束时间
      * @param string $CosPath 日志导出路径

@@ -24,7 +24,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
 
 /**
  * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 创建会话
- * @method Models\DescribeInstancesCountResponse DescribeInstancesCount(Models\DescribeInstancesCountRequest $req) 获取实例总数和运行数
+ * @method Models\DescribeInstancesCountResponse DescribeInstancesCount(Models\DescribeInstancesCountRequest $req) 获取并发总数和运行数
  * @method Models\SaveGameArchiveResponse SaveGameArchive(Models\SaveGameArchiveRequest $req) 保存游戏存档
  * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) 开始云端推流
  * @method Models\StopGameResponse StopGame(Models\StopGameRequest $req) 强制退出游戏

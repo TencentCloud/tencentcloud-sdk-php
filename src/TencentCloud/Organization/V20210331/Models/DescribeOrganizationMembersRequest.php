@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLang(string $Lang) 设置国际站：en，国内站：zh
  * @method string getSearchKey() 获取成员名或者成员ID搜索
  * @method void setSearchKey(string $SearchKey) 设置成员名或者成员ID搜索
+ * @method string getAuthName() 获取主体名称
+ * @method void setAuthName(string $AuthName) 设置主体名称
+ * @method string getProduct() 获取集团服务（服务管理员查询时，必须指定）
+ * @method void setProduct(string $Product) 设置集团服务（服务管理员查询时，必须指定）
  */
 class DescribeOrganizationMembersRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class DescribeOrganizationMembersRequest extends AbstractModel
     public $SearchKey;
 
     /**
+     * @var string 主体名称
+     */
+    public $AuthName;
+
+    /**
+     * @var string 集团服务（服务管理员查询时，必须指定）
+     */
+    public $Product;
+
+    /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目
      * @param string $Lang 国际站：en，国内站：zh
      * @param string $SearchKey 成员名或者成员ID搜索
+     * @param string $AuthName 主体名称
+     * @param string $Product 集团服务（服务管理员查询时，必须指定）
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class DescribeOrganizationMembersRequest extends AbstractModel
 
         if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
             $this->SearchKey = $param["SearchKey"];
+        }
+
+        if (array_key_exists("AuthName",$param) and $param["AuthName"] !== null) {
+            $this->AuthName = $param["AuthName"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

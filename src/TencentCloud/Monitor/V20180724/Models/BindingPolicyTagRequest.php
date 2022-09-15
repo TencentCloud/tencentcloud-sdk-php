@@ -26,12 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyId(string $PolicyId) 设置策略ID
  * @method string getGroupId() 获取用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
  * @method void setGroupId(string $GroupId) 设置用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
- * @method PolicyTag getTag() 获取策略标签
- * @method void setTag(PolicyTag $Tag) 设置策略标签
  * @method string getServiceType() 获取产品类型
  * @method void setServiceType(string $ServiceType) 设置产品类型
+ * @method PolicyTag getTag() 获取策略标签
+ * @method void setTag(PolicyTag $Tag) 设置策略标签
  * @method integer getInstanceGroupId() 获取实例分组ID
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组ID
+ * @method array getBatchTag() 获取批量绑定标签
+ * @method void setBatchTag(array $BatchTag) 设置批量绑定标签
  */
 class BindingPolicyTagRequest extends AbstractModel
 {
@@ -51,14 +53,14 @@ class BindingPolicyTagRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var PolicyTag 策略标签
-     */
-    public $Tag;
-
-    /**
      * @var string 产品类型
      */
     public $ServiceType;
+
+    /**
+     * @var PolicyTag 策略标签
+     */
+    public $Tag;
 
     /**
      * @var integer 实例分组ID
@@ -66,12 +68,18 @@ class BindingPolicyTagRequest extends AbstractModel
     public $InstanceGroupId;
 
     /**
+     * @var array 批量绑定标签
+     */
+    public $BatchTag;
+
+    /**
      * @param string $Module 固定取值 monitor
      * @param string $PolicyId 策略ID
      * @param string $GroupId 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
-     * @param PolicyTag $Tag 策略标签
      * @param string $ServiceType 产品类型
+     * @param PolicyTag $Tag 策略标签
      * @param integer $InstanceGroupId 实例分组ID
+     * @param array $BatchTag 批量绑定标签
      */
     function __construct()
     {
@@ -98,17 +106,26 @@ class BindingPolicyTagRequest extends AbstractModel
             $this->GroupId = $param["GroupId"];
         }
 
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
+        }
+
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = new PolicyTag();
             $this->Tag->deserialize($param["Tag"]);
         }
 
-        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
-            $this->ServiceType = $param["ServiceType"];
-        }
-
         if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
             $this->InstanceGroupId = $param["InstanceGroupId"];
+        }
+
+        if (array_key_exists("BatchTag",$param) and $param["BatchTag"] !== null) {
+            $this->BatchTag = [];
+            foreach ($param["BatchTag"] as $key => $value){
+                $obj = new PolicyTag();
+                $obj->deserialize($value);
+                array_push($this->BatchTag, $obj);
+            }
         }
     }
 }

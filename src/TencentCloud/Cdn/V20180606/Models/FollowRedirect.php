@@ -26,6 +26,10 @@ off：关闭
  * @method void setSwitch(string $Switch) 设置回源跟随开关
 on：开启
 off：关闭
+ * @method RedirectConfig getRedirectConfig() 获取自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRedirectConfig(RedirectConfig $RedirectConfig) 设置自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FollowRedirect extends AbstractModel
 {
@@ -37,9 +41,17 @@ off：关闭
     public $Switch;
 
     /**
+     * @var RedirectConfig 自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RedirectConfig;
+
+    /**
      * @param string $Switch 回源跟随开关
 on：开启
 off：关闭
+     * @param RedirectConfig $RedirectConfig 自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -56,6 +68,11 @@ off：关闭
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("RedirectConfig",$param) and $param["RedirectConfig"] !== null) {
+            $this->RedirectConfig = new RedirectConfig();
+            $this->RedirectConfig->deserialize($param["RedirectConfig"]);
         }
     }
 }

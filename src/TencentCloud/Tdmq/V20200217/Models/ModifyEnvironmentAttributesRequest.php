@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() 获取命名空间名称。
  * @method void setEnvironmentId(string $EnvironmentId) 设置命名空间名称。
- * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒，最大1296000。
- * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒，最大1296000。
+ * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒，范围60秒~15天。
+ * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒，范围60秒~15天。
  * @method string getRemark() 获取备注，字符串最长不超过128。
  * @method void setRemark(string $Remark) 设置备注，字符串最长不超过128。
  * @method string getClusterId() 获取集群ID
@@ -39,7 +39,7 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var integer 未消费消息过期时间，单位：秒，最大1296000。
+     * @var integer 未消费消息过期时间，单位：秒，范围60秒~15天。
      */
     public $MsgTTL;
 
@@ -60,7 +60,7 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
 
     /**
      * @param string $EnvironmentId 命名空间名称。
-     * @param integer $MsgTTL 未消费消息过期时间，单位：秒，最大1296000。
+     * @param integer $MsgTTL 未消费消息过期时间，单位：秒，范围60秒~15天。
      * @param string $Remark 备注，字符串最长不超过128。
      * @param string $ClusterId 集群ID
      * @param RetentionPolicy $RetentionPolicy 消息保留策略

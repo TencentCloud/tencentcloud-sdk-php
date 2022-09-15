@@ -36,12 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) 设置Labels标签
  * @method array getTaints() 获取Taints互斥
  * @method void setTaints(array $Taints) 设置Taints互斥
- * @method string getNodePoolOs() 获取节点池os
- * @method void setNodePoolOs(string $NodePoolOs) 设置节点池os
+ * @method string getContainerRuntime() 获取节点池纬度运行时类型及版本
+ * @method void setContainerRuntime(string $ContainerRuntime) 设置节点池纬度运行时类型及版本
+ * @method string getRuntimeVersion() 获取运行时版本
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
+ * @method string getNodePoolOs() 获取节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
+ * @method void setNodePoolOs(string $NodePoolOs) 设置节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
  * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method array getTags() 获取资源标签
  * @method void setTags(array $Tags) 设置资源标签
+ * @method boolean getDeletionProtection() 获取删除保护开关
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
  */
 class CreateClusterNodePoolRequest extends AbstractModel
 {
@@ -86,7 +92,17 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $Taints;
 
     /**
-     * @var string 节点池os
+     * @var string 节点池纬度运行时类型及版本
+     */
+    public $ContainerRuntime;
+
+    /**
+     * @var string 运行时版本
+     */
+    public $RuntimeVersion;
+
+    /**
+     * @var string 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
      */
     public $NodePoolOs;
 
@@ -101,6 +117,11 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean 删除保护开关
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $ClusterId cluster id
      * @param string $AutoScalingGroupPara AutoScalingGroupPara AS组参数
      * @param string $LaunchConfigurePara LaunchConfigurePara 运行参数
@@ -109,9 +130,12 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param string $Name 节点池名称
      * @param array $Labels Labels标签
      * @param array $Taints Taints互斥
-     * @param string $NodePoolOs 节点池os
+     * @param string $ContainerRuntime 节点池纬度运行时类型及版本
+     * @param string $RuntimeVersion 运行时版本
+     * @param string $NodePoolOs 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
      * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      * @param array $Tags 资源标签
+     * @param boolean $DeletionProtection 删除保护开关
      */
     function __construct()
     {
@@ -169,6 +193,14 @@ class CreateClusterNodePoolRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("ContainerRuntime",$param) and $param["ContainerRuntime"] !== null) {
+            $this->ContainerRuntime = $param["ContainerRuntime"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
+        }
+
         if (array_key_exists("NodePoolOs",$param) and $param["NodePoolOs"] !== null) {
             $this->NodePoolOs = $param["NodePoolOs"];
         }
@@ -184,6 +216,10 @@ class CreateClusterNodePoolRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

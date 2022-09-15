@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UnbindAutoSnapshotPolicy请求参数结构体
  *
- * @method array getDiskIds() 获取要解绑定期快照策略的云盘ID列表。
- * @method void setDiskIds(array $DiskIds) 设置要解绑定期快照策略的云盘ID列表。
  * @method string getAutoSnapshotPolicyId() 获取要解绑的定期快照策略ID。
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置要解绑的定期快照策略ID。
+ * @method array getDiskIds() 获取要解绑定期快照策略的云盘ID列表。
+ * @method void setDiskIds(array $DiskIds) 设置要解绑定期快照策略的云盘ID列表。
  */
 class UnbindAutoSnapshotPolicyRequest extends AbstractModel
 {
-    /**
-     * @var array 要解绑定期快照策略的云盘ID列表。
-     */
-    public $DiskIds;
-
     /**
      * @var string 要解绑的定期快照策略ID。
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @param array $DiskIds 要解绑定期快照策略的云盘ID列表。
+     * @var array 要解绑定期快照策略的云盘ID列表。
+     */
+    public $DiskIds;
+
+    /**
      * @param string $AutoSnapshotPolicyId 要解绑的定期快照策略ID。
+     * @param array $DiskIds 要解绑定期快照策略的云盘ID列表。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class UnbindAutoSnapshotPolicyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
-            $this->DiskIds = $param["DiskIds"];
-        }
-
         if (array_key_exists("AutoSnapshotPolicyId",$param) and $param["AutoSnapshotPolicyId"] !== null) {
             $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
+        }
+
+        if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
+            $this->DiskIds = $param["DiskIds"];
         }
     }
 }

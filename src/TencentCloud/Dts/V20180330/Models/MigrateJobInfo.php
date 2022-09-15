@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSrcInfoMulti() 获取源实例为集群时且接入为非cdb时源实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSrcInfoMulti(array $SrcInfoMulti) 设置源实例为集群时且接入为非cdb时源实例信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MigrateJobInfo extends AbstractModel
 {
@@ -146,6 +150,12 @@ class MigrateJobInfo extends AbstractModel
     public $Tags;
 
     /**
+     * @var array 源实例为集群时且接入为非cdb时源实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SrcInfoMulti;
+
+    /**
      * @param string $JobId 数据迁移任务ID
      * @param string $JobName 数据迁移任务名称
      * @param MigrateOption $MigrateOption 迁移任务配置选项
@@ -163,6 +173,8 @@ class MigrateJobInfo extends AbstractModel
      * @param MigrateDetailInfo $Detail 任务详情
      * @param array $ErrorInfo 任务错误信息提示，当任务发生错误时，不为null或者空值
      * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SrcInfoMulti 源实例为集群时且接入为非cdb时源实例信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -257,6 +269,15 @@ class MigrateJobInfo extends AbstractModel
                 $obj = new TagItem();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("SrcInfoMulti",$param) and $param["SrcInfoMulti"] !== null) {
+            $this->SrcInfoMulti = [];
+            foreach ($param["SrcInfoMulti"] as $key => $value){
+                $obj = new SrcInfo();
+                $obj->deserialize($value);
+                array_push($this->SrcInfoMulti, $obj);
             }
         }
     }

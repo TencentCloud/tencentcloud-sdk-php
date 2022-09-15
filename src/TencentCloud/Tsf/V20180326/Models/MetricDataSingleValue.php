@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricDataValue(string $MetricDataValue) 设置指标值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getDailyPercent() 获取日环比
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDailyPercent(float $DailyPercent) 设置日环比
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetricDataSingleValue extends AbstractModel
 {
@@ -54,11 +58,19 @@ class MetricDataSingleValue extends AbstractModel
     public $MetricDataValue;
 
     /**
+     * @var float 日环比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DailyPercent;
+
+    /**
      * @param string $MetricName 指标
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetricFunction 统计方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetricDataValue 指标值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $DailyPercent 日环比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class MetricDataSingleValue extends AbstractModel
 
         if (array_key_exists("MetricDataValue",$param) and $param["MetricDataValue"] !== null) {
             $this->MetricDataValue = $param["MetricDataValue"];
+        }
+
+        if (array_key_exists("DailyPercent",$param) and $param["DailyPercent"] !== null) {
+            $this->DailyPercent = $param["DailyPercent"];
         }
     }
 }

@@ -20,27 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 网关坐标
  *
- * @method float getAccuracy() 获取准确度
- * @method void setAccuracy(float $Accuracy) 设置准确度
- * @method float getAltitude() 获取海拔
- * @method void setAltitude(float $Altitude) 设置海拔
  * @method float getLatitude() 获取纬度
  * @method void setLatitude(float $Latitude) 设置纬度
  * @method float getLongitude() 获取精度
  * @method void setLongitude(float $Longitude) 设置精度
+ * @method float getAccuracy() 获取准确度
+ * @method void setAccuracy(float $Accuracy) 设置准确度
+ * @method float getAltitude() 获取海拔
+ * @method void setAltitude(float $Altitude) 设置海拔
  */
 class LoRaGatewayLocation extends AbstractModel
 {
-    /**
-     * @var float 准确度
-     */
-    public $Accuracy;
-
-    /**
-     * @var float 海拔
-     */
-    public $Altitude;
-
     /**
      * @var float 纬度
      */
@@ -52,10 +42,20 @@ class LoRaGatewayLocation extends AbstractModel
     public $Longitude;
 
     /**
-     * @param float $Accuracy 准确度
-     * @param float $Altitude 海拔
+     * @var float 准确度
+     */
+    public $Accuracy;
+
+    /**
+     * @var float 海拔
+     */
+    public $Altitude;
+
+    /**
      * @param float $Latitude 纬度
      * @param float $Longitude 精度
+     * @param float $Accuracy 准确度
+     * @param float $Altitude 海拔
      */
     function __construct()
     {
@@ -70,20 +70,20 @@ class LoRaGatewayLocation extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Accuracy",$param) and $param["Accuracy"] !== null) {
-            $this->Accuracy = $param["Accuracy"];
-        }
-
-        if (array_key_exists("Altitude",$param) and $param["Altitude"] !== null) {
-            $this->Altitude = $param["Altitude"];
-        }
-
         if (array_key_exists("Latitude",$param) and $param["Latitude"] !== null) {
             $this->Latitude = $param["Latitude"];
         }
 
         if (array_key_exists("Longitude",$param) and $param["Longitude"] !== null) {
             $this->Longitude = $param["Longitude"];
+        }
+
+        if (array_key_exists("Accuracy",$param) and $param["Accuracy"] !== null) {
+            $this->Accuracy = $param["Accuracy"];
+        }
+
+        if (array_key_exists("Altitude",$param) and $param["Altitude"] !== null) {
+            $this->Altitude = $param["Altitude"];
         }
     }
 }

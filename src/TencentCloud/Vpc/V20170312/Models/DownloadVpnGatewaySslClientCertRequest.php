@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSslVpnClientId() 获取SSL-VPN-CLIENT 实例ID。
  * @method void setSslVpnClientId(string $SslVpnClientId) 设置SSL-VPN-CLIENT 实例ID。
+ * @method string getSamlToken() 获取SAML-TOKEN
+ * @method void setSamlToken(string $SamlToken) 设置SAML-TOKEN
+ * @method boolean getIsVpnPortal() 获取VPN门户网站使用。默认Flase
+ * @method void setIsVpnPortal(boolean $IsVpnPortal) 设置VPN门户网站使用。默认Flase
  */
 class DownloadVpnGatewaySslClientCertRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DownloadVpnGatewaySslClientCertRequest extends AbstractModel
     public $SslVpnClientId;
 
     /**
+     * @var string SAML-TOKEN
+     */
+    public $SamlToken;
+
+    /**
+     * @var boolean VPN门户网站使用。默认Flase
+     */
+    public $IsVpnPortal;
+
+    /**
      * @param string $SslVpnClientId SSL-VPN-CLIENT 实例ID。
+     * @param string $SamlToken SAML-TOKEN
+     * @param boolean $IsVpnPortal VPN门户网站使用。默认Flase
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DownloadVpnGatewaySslClientCertRequest extends AbstractModel
         }
         if (array_key_exists("SslVpnClientId",$param) and $param["SslVpnClientId"] !== null) {
             $this->SslVpnClientId = $param["SslVpnClientId"];
+        }
+
+        if (array_key_exists("SamlToken",$param) and $param["SamlToken"] !== null) {
+            $this->SamlToken = $param["SamlToken"];
+        }
+
+        if (array_key_exists("IsVpnPortal",$param) and $param["IsVpnPortal"] !== null) {
+            $this->IsVpnPortal = $param["IsVpnPortal"];
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentProcessInfo(ProcessDetailBaseInfo $ParentProcessInfo) 设置父进程信息
  * @method ReverseShellEventDescription getEventDetail() 获取事件描述
  * @method void setEventDetail(ReverseShellEventDescription $EventDetail) 设置事件描述
+ * @method ProcessBaseInfo getAncestorProcessInfo() 获取祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAncestorProcessInfo(ProcessBaseInfo $AncestorProcessInfo) 设置祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +58,12 @@ class DescribeReverseShellDetailResponse extends AbstractModel
     public $EventDetail;
 
     /**
+     * @var ProcessBaseInfo 祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AncestorProcessInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +73,8 @@ class DescribeReverseShellDetailResponse extends AbstractModel
      * @param ProcessDetailInfo $ProcessInfo 进程信息
      * @param ProcessDetailBaseInfo $ParentProcessInfo 父进程信息
      * @param ReverseShellEventDescription $EventDetail 事件描述
+     * @param ProcessBaseInfo $AncestorProcessInfo 祖先进程信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -96,6 +108,11 @@ class DescribeReverseShellDetailResponse extends AbstractModel
         if (array_key_exists("EventDetail",$param) and $param["EventDetail"] !== null) {
             $this->EventDetail = new ReverseShellEventDescription();
             $this->EventDetail->deserialize($param["EventDetail"]);
+        }
+
+        if (array_key_exists("AncestorProcessInfo",$param) and $param["AncestorProcessInfo"] !== null) {
+            $this->AncestorProcessInfo = new ProcessBaseInfo();
+            $this->AncestorProcessInfo->deserialize($param["AncestorProcessInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

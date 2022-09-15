@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置类型，取值范围：
 - TKE
 - EKS
+ * @method array getHostedNamespaces() 获取集群关联的 Namespace 列表
+ * @method void setHostedNamespaces(array $HostedNamespaces) 设置集群关联的 Namespace 列表
  */
 class Cluster extends AbstractModel
 {
@@ -113,6 +115,11 @@ class Cluster extends AbstractModel
     public $Type;
 
     /**
+     * @var array 集群关联的 Namespace 列表
+     */
+    public $HostedNamespaces;
+
+    /**
      * @param string $ClusterId 集群Id
      * @param string $Region 地域
      * @param string $Role 集群角色，取值范围：
@@ -128,6 +135,7 @@ class Cluster extends AbstractModel
      * @param string $Type 类型，取值范围：
 - TKE
 - EKS
+     * @param array $HostedNamespaces 集群关联的 Namespace 列表
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("HostedNamespaces",$param) and $param["HostedNamespaces"] !== null) {
+            $this->HostedNamespaces = $param["HostedNamespaces"];
         }
     }
 }

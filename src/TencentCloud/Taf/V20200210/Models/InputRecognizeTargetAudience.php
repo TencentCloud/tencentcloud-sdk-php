@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 流量反欺诈-验准入参
  *
+ * @method array getModelIdList() 获取模型ID列表
+ * @method void setModelIdList(array $ModelIdList) 设置模型ID列表
  * @method string getUid() 获取设备ID，AccountType指定的类型
  * @method void setUid(string $Uid) 设置设备ID，AccountType指定的类型
  * @method integer getAccountType() 获取设备号类型，1.imei 2.imeiMd5（小写后转MD5转小写）3.idfa， 4.idfaMd5（大写后转MD5转小写），5.手机号,256.其它
  * @method void setAccountType(integer $AccountType) 设置设备号类型，1.imei 2.imeiMd5（小写后转MD5转小写）3.idfa， 4.idfaMd5（大写后转MD5转小写），5.手机号,256.其它
- * @method array getModelIdList() 获取模型ID列表
- * @method void setModelIdList(array $ModelIdList) 设置模型ID列表
  * @method string getIp() 获取用户IP
  * @method void setIp(string $Ip) 设置用户IP
  * @method string getOs() 获取操作系统类型(unknown，android，ios，windows)
@@ -104,6 +104,11 @@ use TencentCloud\Common\AbstractModel;
 class InputRecognizeTargetAudience extends AbstractModel
 {
     /**
+     * @var array 模型ID列表
+     */
+    public $ModelIdList;
+
+    /**
      * @var string 设备ID，AccountType指定的类型
      */
     public $Uid;
@@ -112,11 +117,6 @@ class InputRecognizeTargetAudience extends AbstractModel
      * @var integer 设备号类型，1.imei 2.imeiMd5（小写后转MD5转小写）3.idfa， 4.idfaMd5（大写后转MD5转小写），5.手机号,256.其它
      */
     public $AccountType;
-
-    /**
-     * @var array 模型ID列表
-     */
-    public $ModelIdList;
 
     /**
      * @var string 用户IP
@@ -304,9 +304,9 @@ class InputRecognizeTargetAudience extends AbstractModel
     public $DeviceList;
 
     /**
+     * @param array $ModelIdList 模型ID列表
      * @param string $Uid 设备ID，AccountType指定的类型
      * @param integer $AccountType 设备号类型，1.imei 2.imeiMd5（小写后转MD5转小写）3.idfa， 4.idfaMd5（大写后转MD5转小写），5.手机号,256.其它
-     * @param array $ModelIdList 模型ID列表
      * @param string $Ip 用户IP
      * @param string $Os 操作系统类型(unknown，android，ios，windows)
      * @param string $Osv 操作系统版本
@@ -358,16 +358,16 @@ class InputRecognizeTargetAudience extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ModelIdList",$param) and $param["ModelIdList"] !== null) {
+            $this->ModelIdList = $param["ModelIdList"];
+        }
+
         if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
             $this->Uid = $param["Uid"];
         }
 
         if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
             $this->AccountType = $param["AccountType"];
-        }
-
-        if (array_key_exists("ModelIdList",$param) and $param["ModelIdList"] !== null) {
-            $this->ModelIdList = $param["ModelIdList"];
         }
 
         if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {

@@ -158,6 +158,22 @@ pause：暂停中。
 包含：源 url，偏移时间，上报时间。
  * @method string getComment() 获取任务备注信息。
  * @method void setComment(string $Comment) 设置任务备注信息。
+ * @method string getBackupSourceType() 获取备源类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupSourceType(string $BackupSourceType) 设置备源类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBackupSourceUrl() 获取备源URL。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackupSourceUrl(string $BackupSourceUrl) 设置备源URL。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWatermarkList() 获取水印信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWatermarkList(array $WatermarkList) 设置水印信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PullStreamTaskInfo extends AbstractModel
 {
@@ -323,6 +339,26 @@ pause：暂停中。
     public $Comment;
 
     /**
+     * @var string 备源类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupSourceType;
+
+    /**
+     * @var string 备源URL。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackupSourceUrl;
+
+    /**
+     * @var array 水印信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WatermarkList;
+
+    /**
      * @param string $TaskId 拉流任务Id。
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
@@ -392,6 +428,14 @@ pause：暂停中。
 任务最新拉流信息。
 包含：源 url，偏移时间，上报时间。
      * @param string $Comment 任务备注信息。
+     * @param string $BackupSourceType 备源类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BackupSourceUrl 备源URL。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WatermarkList 水印信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -497,6 +541,23 @@ pause：暂停中。
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("BackupSourceType",$param) and $param["BackupSourceType"] !== null) {
+            $this->BackupSourceType = $param["BackupSourceType"];
+        }
+
+        if (array_key_exists("BackupSourceUrl",$param) and $param["BackupSourceUrl"] !== null) {
+            $this->BackupSourceUrl = $param["BackupSourceUrl"];
+        }
+
+        if (array_key_exists("WatermarkList",$param) and $param["WatermarkList"] !== null) {
+            $this->WatermarkList = [];
+            foreach ($param["WatermarkList"] as $key => $value){
+                $obj = new PullPushWatermarkInfo();
+                $obj->deserialize($value);
+                array_push($this->WatermarkList, $obj);
+            }
         }
     }
 }

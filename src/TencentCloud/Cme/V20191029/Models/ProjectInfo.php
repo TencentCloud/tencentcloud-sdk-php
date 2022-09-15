@@ -46,10 +46,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamConnectProjectInfo(StreamConnectProjectInfo $StreamConnectProjectInfo) 设置云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取项目创建时间，格式按照 ISO 8601 标准表示。
- * @method void setCreateTime(string $CreateTime) 设置项目创建时间，格式按照 ISO 8601 标准表示。
+ * @method MediaCastProjectInfo getMediaCastProjectInfo() 获取点播转直播项目信息，仅当项目类别取值为 MEDIA_CAST 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMediaCastProjectInfo(MediaCastProjectInfo $MediaCastProjectInfo) 设置点播转直播项目信息，仅当项目类别取值为 MEDIA_CAST 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取项目更新时间，格式按照 ISO 8601 标准表示。
  * @method void setUpdateTime(string $UpdateTime) 设置项目更新时间，格式按照 ISO 8601 标准表示。
+ * @method string getCreateTime() 获取项目创建时间，格式按照 ISO 8601 标准表示。
+ * @method void setCreateTime(string $CreateTime) 设置项目创建时间，格式按照 ISO 8601 标准表示。
  */
 class ProjectInfo extends AbstractModel
 {
@@ -95,14 +99,20 @@ class ProjectInfo extends AbstractModel
     public $StreamConnectProjectInfo;
 
     /**
-     * @var string 项目创建时间，格式按照 ISO 8601 标准表示。
+     * @var MediaCastProjectInfo 点播转直播项目信息，仅当项目类别取值为 MEDIA_CAST 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $CreateTime;
+    public $MediaCastProjectInfo;
 
     /**
      * @var string 项目更新时间，格式按照 ISO 8601 标准表示。
      */
     public $UpdateTime;
+
+    /**
+     * @var string 项目创建时间，格式按照 ISO 8601 标准表示。
+     */
+    public $CreateTime;
 
     /**
      * @param string $ProjectId 项目 Id。
@@ -118,8 +128,10 @@ class ProjectInfo extends AbstractModel
      * @param string $CoverUrl 项目封面图片地址。
      * @param StreamConnectProjectInfo $StreamConnectProjectInfo 云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 项目创建时间，格式按照 ISO 8601 标准表示。
+     * @param MediaCastProjectInfo $MediaCastProjectInfo 点播转直播项目信息，仅当项目类别取值为 MEDIA_CAST 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 项目更新时间，格式按照 ISO 8601 标准表示。
+     * @param string $CreateTime 项目创建时间，格式按照 ISO 8601 标准表示。
      */
     function __construct()
     {
@@ -164,12 +176,17 @@ class ProjectInfo extends AbstractModel
             $this->StreamConnectProjectInfo->deserialize($param["StreamConnectProjectInfo"]);
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
+        if (array_key_exists("MediaCastProjectInfo",$param) and $param["MediaCastProjectInfo"] !== null) {
+            $this->MediaCastProjectInfo = new MediaCastProjectInfo();
+            $this->MediaCastProjectInfo->deserialize($param["MediaCastProjectInfo"]);
         }
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

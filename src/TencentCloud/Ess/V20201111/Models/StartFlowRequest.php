@@ -20,26 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartFlow请求参数结构体
  *
- * @method UserInfo getOperator() 获取用户信息
- * @method void setOperator(UserInfo $Operator) 设置用户信息
- * @method string getFlowId() 获取流程编号
- * @method void setFlowId(string $FlowId) 设置流程编号
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
+ * @method string getFlowId() 获取签署流程编号，由CreateFlow接口返回
+ * @method void setFlowId(string $FlowId) 设置签署流程编号，由CreateFlow接口返回
+ * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
+ * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
  * @method Agent getAgent() 获取应用相关信息
  * @method void setAgent(Agent $Agent) 设置应用相关信息
- * @method string getClientToken() 获取客户端Token，保持接口幂等性
- * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性
  */
 class StartFlowRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 用户信息
+     * @var UserInfo 调用方用户信息，userId 必填
      */
     public $Operator;
 
     /**
-     * @var string 流程编号
+     * @var string 签署流程编号，由CreateFlow接口返回
      */
     public $FlowId;
+
+    /**
+     * @var string 客户端Token，保持接口幂等性,最大长度64个字符
+     */
+    public $ClientToken;
 
     /**
      * @var Agent 应用相关信息
@@ -47,15 +52,10 @@ class StartFlowRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 客户端Token，保持接口幂等性
-     */
-    public $ClientToken;
-
-    /**
-     * @param UserInfo $Operator 用户信息
-     * @param string $FlowId 流程编号
+     * @param UserInfo $Operator 调用方用户信息，userId 必填
+     * @param string $FlowId 签署流程编号，由CreateFlow接口返回
+     * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      * @param Agent $Agent 应用相关信息
-     * @param string $ClientToken 客户端Token，保持接口幂等性
      */
     function __construct()
     {
@@ -79,13 +79,13 @@ class StartFlowRequest extends AbstractModel
             $this->FlowId = $param["FlowId"];
         }
 
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
+        }
+
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
-        }
-
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

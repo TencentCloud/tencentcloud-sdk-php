@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserToken请求参数结构体
  *
- * @method integer getSecond() 获取无
- * @method void setSecond(integer $Second) 设置无
+ * @method integer getSecond() 获取token过期时间，有效值是1~300秒
+ * @method void setSecond(integer $Second) 设置token过期时间，有效值是1~300秒
  */
 class CreateUserTokenRequest extends AbstractModel
 {
     /**
-     * @var integer 无
+     * @var integer token过期时间，有效值是1~300秒
      */
     public $Second;
 
     /**
-     * @param integer $Second 无
+     * @param integer $Second token过期时间，有效值是1~300秒
      */
     function __construct()
     {

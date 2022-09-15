@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li> STANDARD_IA：低频存储。</li>
 <li> ARCHIVE：归档存储。</li>
 <li> DEEP_ARCHIVE：深度归档存储。</li>
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getRestoreTier() 获取取回模式。当文件的存储类型从归档或深度归档转换为标准存储时，需要指定取回（也称为解冻）操作的模式，具体说明请参考[数据取回及取回模式](https://cloud.tencent.com/document/product/266/56196#retake)。
 当媒体文件目前的存储类型为归档存储时，有以下取值：
 <li>Expedited：极速模式。</li>
@@ -68,7 +68,7 @@ class ModifyMediaStorageClassRequest extends AbstractModel
     public $StorageClass;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     public $SubAppId;
 
@@ -91,7 +91,7 @@ class ModifyMediaStorageClassRequest extends AbstractModel
 <li> STANDARD_IA：低频存储。</li>
 <li> ARCHIVE：归档存储。</li>
 <li> DEEP_ARCHIVE：深度归档存储。</li>
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $RestoreTier 取回模式。当文件的存储类型从归档或深度归档转换为标准存储时，需要指定取回（也称为解冻）操作的模式，具体说明请参考[数据取回及取回模式](https://cloud.tencent.com/document/product/266/56196#retake)。
 当媒体文件目前的存储类型为归档存储时，有以下取值：
 <li>Expedited：极速模式。</li>

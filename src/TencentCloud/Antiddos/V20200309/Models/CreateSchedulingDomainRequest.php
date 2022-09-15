@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSchedulingDomain请求参数结构体
  *
-
+ * @method string getProduct() 获取代表是否混合云本地化的产品。
+hybrid: 宙斯盾本地化
+不填写：其他
+ * @method void setProduct(string $Product) 设置代表是否混合云本地化的产品。
+hybrid: 宙斯盾本地化
+不填写：其他
  */
 class CreateSchedulingDomainRequest extends AbstractModel
 {
-
+    /**
+     * @var string 代表是否混合云本地化的产品。
+hybrid: 宙斯盾本地化
+不填写：其他
+     */
+    public $Product;
 
     /**
-
+     * @param string $Product 代表是否混合云本地化的产品。
+hybrid: 宙斯盾本地化
+不填写：其他
      */
     function __construct()
     {
@@ -42,6 +54,8 @@ class CreateSchedulingDomainRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
+        }
     }
 }

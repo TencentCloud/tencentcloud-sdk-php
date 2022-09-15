@@ -2,7 +2,6 @@
 require_once __DIR__.'/../../../vendor/autoload.php';
 use TencentCloud\Ess\V20201111\EssClient;
 use TencentCloud\Ess\V20201111\Models\UserInfo;
-use TencentCloud\Ess\V20201111\Models\Agent;
 use TencentCloud\Ess\V20201111\Models\StartFlowRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
@@ -30,13 +29,7 @@ try {
 
     $userInfo = new UserInfo();
     $userInfo->setUserId("********************************");
-    $userInfo->setClientIp("********************************");
     $req->setOperator($userInfo);
-
-    $agent = new Agent();
-    $agent->setAppId("********************************");
-    $agent->setChannel("********************************");
-    $req->setAgent($agent);
 
     $req->setFlowId("********************************");
 

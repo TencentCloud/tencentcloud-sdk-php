@@ -70,6 +70,12 @@ IMPORTFAILED-导入失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotSet(array $SnapshotSet) 设置镜像关联的快照信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取镜像关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置镜像关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLicenseType() 获取镜像许可类型
+ * @method void setLicenseType(string $LicenseType) 设置镜像许可类型
  */
 class Image extends AbstractModel
 {
@@ -159,6 +165,17 @@ IMPORTFAILED-导入失败
     public $SnapshotSet;
 
     /**
+     * @var array 镜像关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
+     * @var string 镜像许可类型
+     */
+    public $LicenseType;
+
+    /**
      * @param string $ImageId 镜像ID
      * @param string $OsName 镜像操作系统
      * @param string $ImageType 镜像类型
@@ -184,6 +201,9 @@ IMPORTFAILED-导入失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SnapshotSet 镜像关联的快照信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 镜像关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LicenseType 镜像许可类型
      */
     function __construct()
     {
@@ -261,6 +281,19 @@ IMPORTFAILED-导入失败
                 $obj->deserialize($value);
                 array_push($this->SnapshotSet, $obj);
             }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
+            $this->LicenseType = $param["LicenseType"];
         }
     }
 }

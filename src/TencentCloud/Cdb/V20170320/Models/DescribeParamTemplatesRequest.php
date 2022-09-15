@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEngineVersions() 获取引擎版本，缺省则查询所有
  * @method void setEngineVersions(array $EngineVersions) 设置引擎版本，缺省则查询所有
+ * @method array getEngineTypes() 获取引擎类型，缺省则查询所有
+ * @method void setEngineTypes(array $EngineTypes) 设置引擎类型，缺省则查询所有
+ * @method array getTemplateNames() 获取模板名称，缺省则查询所有
+ * @method void setTemplateNames(array $TemplateNames) 设置模板名称，缺省则查询所有
+ * @method array getTemplateIds() 获取模板id，缺省则查询所有
+ * @method void setTemplateIds(array $TemplateIds) 设置模板id，缺省则查询所有
  */
 class DescribeParamTemplatesRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class DescribeParamTemplatesRequest extends AbstractModel
     public $EngineVersions;
 
     /**
+     * @var array 引擎类型，缺省则查询所有
+     */
+    public $EngineTypes;
+
+    /**
+     * @var array 模板名称，缺省则查询所有
+     */
+    public $TemplateNames;
+
+    /**
+     * @var array 模板id，缺省则查询所有
+     */
+    public $TemplateIds;
+
+    /**
      * @param array $EngineVersions 引擎版本，缺省则查询所有
+     * @param array $EngineTypes 引擎类型，缺省则查询所有
+     * @param array $TemplateNames 模板名称，缺省则查询所有
+     * @param array $TemplateIds 模板id，缺省则查询所有
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class DescribeParamTemplatesRequest extends AbstractModel
         }
         if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
             $this->EngineVersions = $param["EngineVersions"];
+        }
+
+        if (array_key_exists("EngineTypes",$param) and $param["EngineTypes"] !== null) {
+            $this->EngineTypes = $param["EngineTypes"];
+        }
+
+        if (array_key_exists("TemplateNames",$param) and $param["TemplateNames"] !== null) {
+            $this->TemplateNames = $param["TemplateNames"];
+        }
+
+        if (array_key_exists("TemplateIds",$param) and $param["TemplateIds"] !== null) {
+            $this->TemplateIds = $param["TemplateIds"];
         }
     }
 }

@@ -36,6 +36,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatisticsCount(integer $StatisticsCount) 设置最近数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSearchData() 获取可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSearchData(string $SearchData) 设置可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIpCountryIso() 获取可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpCountryIso(string $IpCountryIso) 设置可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIpProvinceIso() 获取可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpProvinceIso(string $IpProvinceIso) 设置可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIpCity() 获取可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpCity(string $IpCity) 设置可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEventSubType() 获取可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEventSubType(string $EventSubType) 设置可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConcernInfo extends AbstractModel
 {
@@ -64,6 +84,36 @@ class ConcernInfo extends AbstractModel
     public $StatisticsCount;
 
     /**
+     * @var string 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SearchData;
+
+    /**
+     * @var string 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpCountryIso;
+
+    /**
+     * @var string 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpProvinceIso;
+
+    /**
+     * @var string 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpCity;
+
+    /**
+     * @var string 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EventSubType;
+
+    /**
      * @param integer $ConcernType 关注点类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EntityType 实体类型
@@ -71,6 +121,16 @@ class ConcernInfo extends AbstractModel
      * @param string $Concern 关注点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StatisticsCount 最近数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SearchData 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IpCountryIso 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IpProvinceIso 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IpCity 可疑关注点字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EventSubType 可疑关注点字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +160,26 @@ class ConcernInfo extends AbstractModel
 
         if (array_key_exists("StatisticsCount",$param) and $param["StatisticsCount"] !== null) {
             $this->StatisticsCount = $param["StatisticsCount"];
+        }
+
+        if (array_key_exists("SearchData",$param) and $param["SearchData"] !== null) {
+            $this->SearchData = $param["SearchData"];
+        }
+
+        if (array_key_exists("IpCountryIso",$param) and $param["IpCountryIso"] !== null) {
+            $this->IpCountryIso = $param["IpCountryIso"];
+        }
+
+        if (array_key_exists("IpProvinceIso",$param) and $param["IpProvinceIso"] !== null) {
+            $this->IpProvinceIso = $param["IpProvinceIso"];
+        }
+
+        if (array_key_exists("IpCity",$param) and $param["IpCity"] !== null) {
+            $this->IpCity = $param["IpCity"];
+        }
+
+        if (array_key_exists("EventSubType",$param) and $param["EventSubType"] !== null) {
+            $this->EventSubType = $param["EventSubType"];
         }
     }
 }

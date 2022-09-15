@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PrepareFlows请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息
- * @method array getFlowInfos() 获取多个合同（流程）信息
- * @method void setFlowInfos(array $FlowInfos) 设置多个合同（流程）信息
- * @method string getJumpUrl() 获取操作完成后的跳转地址
- * @method void setJumpUrl(string $JumpUrl) 设置操作完成后的跳转地址
+ * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method array getFlowInfos() 获取多个合同（签署流程）信息，最大支持20个签署流程。
+ * @method void setFlowInfos(array $FlowInfos) 设置多个合同（签署流程）信息，最大支持20个签署流程。
+ * @method string getJumpUrl() 获取操作完成后的跳转地址，最大长度200
+ * @method void setJumpUrl(string $JumpUrl) 设置操作完成后的跳转地址，最大长度200
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
 class PrepareFlowsRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息
+     * @var Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
 
     /**
-     * @var array 多个合同（流程）信息
+     * @var array 多个合同（签署流程）信息，最大支持20个签署流程。
      */
     public $FlowInfos;
 
     /**
-     * @var string 操作完成后的跳转地址
+     * @var string 操作完成后的跳转地址，最大长度200
      */
     public $JumpUrl;
 
@@ -52,9 +52,9 @@ class PrepareFlowsRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 渠道应用相关信息
-     * @param array $FlowInfos 多个合同（流程）信息
-     * @param string $JumpUrl 操作完成后的跳转地址
+     * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param array $FlowInfos 多个合同（签署流程）信息，最大支持20个签署流程。
+     * @param string $JumpUrl 操作完成后的跳转地址，最大长度200
      * @param UserInfo $Operator 操作者的信息
      */
     function __construct()

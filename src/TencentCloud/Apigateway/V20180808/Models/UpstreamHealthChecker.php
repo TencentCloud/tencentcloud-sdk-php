@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VPC通道健康检查参数配置
+ * 后端通道健康检查参数配置
  *
  * @method boolean getEnableActiveCheck() 获取标识是否开启主动健康检查。
  * @method void setEnableActiveCheck(boolean $EnableActiveCheck) 设置标识是否开启主动健康检查。

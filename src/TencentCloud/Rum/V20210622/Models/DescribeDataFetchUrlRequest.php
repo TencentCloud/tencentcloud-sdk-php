@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置来源
  * @method string getEnv() 获取环境
  * @method void setEnv(string $Env) 设置环境
+ * @method string getStatus() 获取httpcode响应码
+ * @method void setStatus(string $Status) 设置httpcode响应码
+ * @method string getRet() 获取retcode
+ * @method void setRet(string $Ret) 设置retcode
  */
 class DescribeDataFetchUrlRequest extends AbstractModel
 {
@@ -185,6 +189,16 @@ class DescribeDataFetchUrlRequest extends AbstractModel
     public $Env;
 
     /**
+     * @var string httpcode响应码
+     */
+    public $Status;
+
+    /**
+     * @var string retcode
+     */
+    public $Ret;
+
+    /**
      * @param integer $StartTime 开始时间
      * @param string $Type allcount：性能视图，day：14天数据，count40x：40X视图，count50x：50X视图，count5xand4x：40∑50视图，top：资源top视图，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
      * @param integer $EndTime 结束时间
@@ -208,6 +222,8 @@ class DescribeDataFetchUrlRequest extends AbstractModel
      * @param string $CostType 耗时计算方式
      * @param string $Url 来源
      * @param string $Env 环境
+     * @param string $Status httpcode响应码
+     * @param string $Ret retcode
      */
     function __construct()
     {
@@ -312,6 +328,14 @@ class DescribeDataFetchUrlRequest extends AbstractModel
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {
             $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Ret",$param) and $param["Ret"] !== null) {
+            $this->Ret = $param["Ret"];
         }
     }
 }

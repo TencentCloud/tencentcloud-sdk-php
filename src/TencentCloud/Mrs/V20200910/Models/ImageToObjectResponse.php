@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplate(Template $Template) 设置报告结构化结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTextTypeList() 获取多级分类结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTextTypeList(array $TextTypeList) 设置多级分类结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +40,20 @@ class ImageToObjectResponse extends AbstractModel
     public $Template;
 
     /**
+     * @var array 多级分类结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TextTypeList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param Template $Template 报告结构化结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TextTypeList 多级分类结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -61,6 +73,15 @@ class ImageToObjectResponse extends AbstractModel
         if (array_key_exists("Template",$param) and $param["Template"] !== null) {
             $this->Template = new Template();
             $this->Template->deserialize($param["Template"]);
+        }
+
+        if (array_key_exists("TextTypeList",$param) and $param["TextTypeList"] !== null) {
+            $this->TextTypeList = [];
+            foreach ($param["TextTypeList"] as $key => $value){
+                $obj = new TextType();
+                $obj->deserialize($value);
+                array_push($this->TextTypeList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

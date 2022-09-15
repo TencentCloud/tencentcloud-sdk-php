@@ -26,9 +26,12 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\CancelIgnoreVulResponse CancelIgnoreVul(Models\CancelIgnoreVulRequest $req) 取消漏洞忽略
  * @method Models\ChangeRuleEventsIgnoreStatusResponse ChangeRuleEventsIgnoreStatus(Models\ChangeRuleEventsIgnoreStatusRequest $req) 根据检测项id或事件id批量忽略事件或取消忽略
  * @method Models\CheckBashRuleParamsResponse CheckBashRuleParams(Models\CheckBashRuleParamsRequest $req) 校验高危命令用户规则新增和编辑时的参数。
- * @method Models\CloseProVersionResponse CloseProVersion(Models\CloseProVersionRequest $req) 本接口 (CloseProVersion) 用于关闭专业版。
  * @method Models\CreateBaselineStrategyResponse CreateBaselineStrategy(Models\CreateBaselineStrategyRequest $req) 根据策略信息创建基线策略
  * @method Models\CreateEmergencyVulScanResponse CreateEmergencyVulScan(Models\CreateEmergencyVulScanRequest $req) 创建应急漏洞扫描任务
+ * @method Models\CreateLicenseOrderResponse CreateLicenseOrder(Models\CreateLicenseOrderRequest $req) CreateLicenseOrder 该接口可以创建专业版/旗舰版订单
+支持预付费后付费创建
+后付费订单直接闯将成功
+预付费订单仅下单不支付,需要调用计费支付接口进行支付
  * @method Models\CreateProtectServerResponse CreateProtectServer(Models\CreateProtectServerRequest $req) 添加网站防护服务器
  * @method Models\CreateScanMalwareSettingResponse CreateScanMalwareSetting(Models\CreateScanMalwareSettingRequest $req) 该接口可以对入侵检测-文件查杀扫描检测
  * @method Models\CreateSearchLogResponse CreateSearchLog(Models\CreateSearchLogRequest $req) 添加历史搜索记录
@@ -38,6 +41,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DeleteBashEventsResponse DeleteBashEvents(Models\DeleteBashEventsRequest $req) 根据Ids删除高危命令事件
  * @method Models\DeleteBashRulesResponse DeleteBashRules(Models\DeleteBashRulesRequest $req) 删除高危命令规则
  * @method Models\DeleteBruteAttacksResponse DeleteBruteAttacks(Models\DeleteBruteAttacksRequest $req) 本接口 (DeleteBruteAttacks) 用于删除暴力破解记录。
+ * @method Models\DeleteLicenseRecordResponse DeleteLicenseRecord(Models\DeleteLicenseRecordRequest $req) 对授权管理-订单列表内已过期的订单进行删除.(删除后的订单不在统计范畴内)
  * @method Models\DeleteLoginWhiteListResponse DeleteLoginWhiteList(Models\DeleteLoginWhiteListRequest $req) 本接口用于删除异地登录白名单规则。
  * @method Models\DeleteMachineResponse DeleteMachine(Models\DeleteMachineRequest $req) 本接口（DeleteMachine）用于卸载云镜客户端。
  * @method Models\DeleteMachineTagResponse DeleteMachineTag(Models\DeleteMachineTagRequest $req) 删除服务器关联的标签
@@ -120,6 +124,10 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeIgnoreRuleEffectHostListResponse DescribeIgnoreRuleEffectHostList(Models\DescribeIgnoreRuleEffectHostListRequest $req) 根据检测项id与筛选条件查询忽略检测项影响主机列表信息
  * @method Models\DescribeImportMachineInfoResponse DescribeImportMachineInfo(Models\DescribeImportMachineInfoRequest $req) 查询批量导入机器信息
  * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
+ * @method Models\DescribeLicenseBindListResponse DescribeLicenseBindList(Models\DescribeLicenseBindListRequest $req) 该接口可以获取设置中心-授权管理,某个授权下已绑定的授权机器列表
+ * @method Models\DescribeLicenseBindScheduleResponse DescribeLicenseBindSchedule(Models\DescribeLicenseBindScheduleRequest $req) 查询授权绑定任务的进度
+ * @method Models\DescribeLicenseGeneralResponse DescribeLicenseGeneral(Models\DescribeLicenseGeneralRequest $req) 授权管理-授权概览信息
+ * @method Models\DescribeLicenseListResponse DescribeLicenseList(Models\DescribeLicenseListRequest $req) 获取用户所有授权订单信息
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 获取日志检索容量使用统计
  * @method Models\DescribeLoginWhiteCombinedListResponse DescribeLoginWhiteCombinedList(Models\DescribeLoginWhiteCombinedListRequest $req) 获取异地登录白名单合并后列表
  * @method Models\DescribeLoginWhiteListResponse DescribeLoginWhiteList(Models\DescribeLoginWhiteListRequest $req) 获取异地登录白名单列表
@@ -144,7 +152,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeProcessStatisticsResponse DescribeProcessStatistics(Models\DescribeProcessStatisticsRequest $req) 本接口 (DescribeProcessStatistics) 用于获取进程统计列表数据。
  * @method Models\DescribeProtectDirListResponse DescribeProtectDirList(Models\DescribeProtectDirListRequest $req) 网页防篡改防护目录列表
  * @method Models\DescribeProtectDirRelatedServerResponse DescribeProtectDirRelatedServer(Models\DescribeProtectDirRelatedServerRequest $req) 查询防护目录关联服务器列表信息
- * @method Models\DescribeProtectNetListResponse DescribeProtectNetList(Models\DescribeProtectNetListRequest $req) 专家服务-旗舰护网列表
+ * @method Models\DescribeProtectNetListResponse DescribeProtectNetList(Models\DescribeProtectNetListRequest $req) 专家服务-旗舰重保列表
  * @method Models\DescribeReverseShellEventsResponse DescribeReverseShellEvents(Models\DescribeReverseShellEventsRequest $req) 获取反弹Shell列表
  * @method Models\DescribeReverseShellRulesResponse DescribeReverseShellRules(Models\DescribeReverseShellRulesRequest $req) 获取反弹Shell规则列表
  * @method Models\DescribeRiskDnsListResponse DescribeRiskDnsList(Models\DescribeRiskDnsListRequest $req) 入侵检测，获取恶意请求列表
@@ -159,6 +167,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeSearchLogsResponse DescribeSearchLogs(Models\DescribeSearchLogsRequest $req) 获取历史搜索记录
  * @method Models\DescribeSearchTemplatesResponse DescribeSearchTemplates(Models\DescribeSearchTemplatesRequest $req) 获取快速检索列表
  * @method Models\DescribeSecurityDynamicsResponse DescribeSecurityDynamics(Models\DescribeSecurityDynamicsRequest $req) 本接口 (DescribeSecurityDynamics) 用于获取安全事件动态消息数据。
+ * @method Models\DescribeSecurityEventStatResponse DescribeSecurityEventStat(Models\DescribeSecurityEventStatRequest $req) 获取安全事件统计
  * @method Models\DescribeSecurityEventsCntResponse DescribeSecurityEventsCnt(Models\DescribeSecurityEventsCntRequest $req) 获取安全概览相关事件统计数据接口
  * @method Models\DescribeSecurityTrendsResponse DescribeSecurityTrends(Models\DescribeSecurityTrendsRequest $req) 本接口 (DescribeSecurityTrends) 用于获取安全事件统计数据。
  * @method Models\DescribeServerRelatedDirInfoResponse DescribeServerRelatedDirInfo(Models\DescribeServerRelatedDirInfoRequest $req) 查询服务区关联目录详情
@@ -182,6 +191,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeWebPageGeneralizeResponse DescribeWebPageGeneralize(Models\DescribeWebPageGeneralizeRequest $req) 查询网站防篡改概览信息
  * @method Models\DescribeWebPageProtectStatResponse DescribeWebPageProtectStat(Models\DescribeWebPageProtectStatRequest $req) 网站防篡改-查询动态防护信息
  * @method Models\DescribeWebPageServiceInfoResponse DescribeWebPageServiceInfo(Models\DescribeWebPageServiceInfoRequest $req) 网站防篡改-查询网页防篡改服务器购买信息及服务器信息
+ * @method Models\DestroyOrderResponse DestroyOrder(Models\DestroyOrderRequest $req) DestroyOrder  该接口可以对资源销毁.
  * @method Models\EditBashRulesResponse EditBashRules(Models\EditBashRulesRequest $req) 新增或修改高危命令规则
  * @method Models\EditTagsResponse EditTags(Models\EditTagsRequest $req) 新增或编辑标签
  * @method Models\ExportAssetCoreModuleListResponse ExportAssetCoreModuleList(Models\ExportAssetCoreModuleListRequest $req) 导出资产管理内核模块列表
@@ -193,6 +203,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportBruteAttacksResponse ExportBruteAttacks(Models\ExportBruteAttacksRequest $req) 本接口 (ExportBruteAttacks) 用于导出密码破解记录成CSV文件。
  * @method Models\ExportIgnoreBaselineRuleResponse ExportIgnoreBaselineRule(Models\ExportIgnoreBaselineRuleRequest $req) 导出已忽略基线检测项信息
  * @method Models\ExportIgnoreRuleEffectHostListResponse ExportIgnoreRuleEffectHostList(Models\ExportIgnoreRuleEffectHostListRequest $req) 根据检测项id导出忽略检测项影响主机列表
+ * @method Models\ExportLicenseDetailResponse ExportLicenseDetail(Models\ExportLicenseDetailRequest $req) 导出授权列表对应的绑定信息
  * @method Models\ExportMaliciousRequestsResponse ExportMaliciousRequests(Models\ExportMaliciousRequestsRequest $req) 本接口 (ExportMaliciousRequests) 用于导出下载恶意请求文件。
  * @method Models\ExportMalwaresResponse ExportMalwares(Models\ExportMalwaresRequest $req) 本接口 (ExportMalwares) 用于导出木马记录CSV文件。
  * @method Models\ExportNonlocalLoginPlacesResponse ExportNonlocalLoginPlaces(Models\ExportNonlocalLoginPlacesRequest $req) 本接口 (ExportNonlocalLoginPlaces) 用于导出异地登录事件记录CSV文件。
@@ -208,21 +219,19 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ExportVulListResponse ExportVulList(Models\ExportVulListRequest $req) 漏洞管理-导出漏洞列表
  * @method Models\ExportWebPageEventListResponse ExportWebPageEventList(Models\ExportWebPageEventListRequest $req) 导出篡改事件列表
  * @method Models\IgnoreImpactedHostsResponse IgnoreImpactedHosts(Models\IgnoreImpactedHostsRequest $req) 本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
- * @method Models\InquiryPriceOpenProVersionPrepaidResponse InquiryPriceOpenProVersionPrepaid(Models\InquiryPriceOpenProVersionPrepaidRequest $req) 本接口 (InquiryPriceOpenProVersionPrepaid) 用于开通专业版询价(预付费)。
  * @method Models\ModifyAutoOpenProVersionConfigResponse ModifyAutoOpenProVersionConfig(Models\ModifyAutoOpenProVersionConfigRequest $req)  用于设置新增主机自动开通专业防护配置。
  * @method Models\ModifyBanModeResponse ModifyBanMode(Models\ModifyBanModeRequest $req) 修改爆破阻断模式
  * @method Models\ModifyBanStatusResponse ModifyBanStatus(Models\ModifyBanStatusRequest $req) 设置阻断开关状态
  * @method Models\ModifyBruteAttackRulesResponse ModifyBruteAttackRules(Models\ModifyBruteAttackRulesRequest $req) 修改暴力破解规则
+ * @method Models\ModifyLicenseBindsResponse ModifyLicenseBinds(Models\ModifyLicenseBindsRequest $req) 设置中心-授权管理 对某个授权批量绑定机器
+ * @method Models\ModifyLicenseUnBindsResponse ModifyLicenseUnBinds(Models\ModifyLicenseUnBindsRequest $req) 设置中心-授权管理 对某个授权批量解绑机器
  * @method Models\ModifyMalwareTimingScanSettingsResponse ModifyMalwareTimingScanSettings(Models\ModifyMalwareTimingScanSettingsRequest $req) 定时扫描设置
- * @method Models\ModifyProVersionRenewFlagResponse ModifyProVersionRenewFlag(Models\ModifyProVersionRenewFlagRequest $req) 本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
+ * @method Models\ModifyOrderAttributeResponse ModifyOrderAttribute(Models\ModifyOrderAttributeRequest $req) 对订单属性编辑
  * @method Models\ModifyWarningSettingResponse ModifyWarningSetting(Models\ModifyWarningSettingRequest $req) 修改告警设置
  * @method Models\ModifyWebPageProtectDirResponse ModifyWebPageProtectDir(Models\ModifyWebPageProtectDirRequest $req) 创建/修改网站防护目录
  * @method Models\ModifyWebPageProtectSettingResponse ModifyWebPageProtectSetting(Models\ModifyWebPageProtectSettingRequest $req) 修改网站防护设置
  * @method Models\ModifyWebPageProtectSwitchResponse ModifyWebPageProtectSwitch(Models\ModifyWebPageProtectSwitchRequest $req) 网站防篡改防护设置开关
- * @method Models\OpenProVersionResponse OpenProVersion(Models\OpenProVersionRequest $req) 本接口 (OpenProVersion) 用于开通专业版。
- * @method Models\OpenProVersionPrepaidResponse OpenProVersionPrepaid(Models\OpenProVersionPrepaidRequest $req) 本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。
  * @method Models\RecoverMalwaresResponse RecoverMalwares(Models\RecoverMalwaresRequest $req) 本接口（RecoverMalwares）用于批量恢复已经被隔离的木马文件。
- * @method Models\RenewProVersionResponse RenewProVersion(Models\RenewProVersionRequest $req) 本接口 (RenewProVersion) 用于续费专业版(包年包月)。
  * @method Models\ScanAssetResponse ScanAsset(Models\ScanAssetRequest $req) 资产指纹启动扫描
  * @method Models\ScanVulResponse ScanVul(Models\ScanVulRequest $req)  一键检测
  * @method Models\ScanVulAgainResponse ScanVulAgain(Models\ScanVulAgainRequest $req) 漏洞管理-重新检测接口

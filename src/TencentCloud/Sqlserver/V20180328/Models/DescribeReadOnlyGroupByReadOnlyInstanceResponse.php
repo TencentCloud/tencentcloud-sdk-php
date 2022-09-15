@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置只读组在私有网络子网ID
  * @method string getMasterInstanceId() 获取主实例ID，形如mssql-sgeshe3th
  * @method void setMasterInstanceId(string $MasterInstanceId) 设置主实例ID，形如mssql-sgeshe3th
+ * @method string getMasterRegionId() 获取主实例的地域ID
+ * @method void setMasterRegionId(string $MasterRegionId) 设置主实例的地域ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -110,6 +112,11 @@ class DescribeReadOnlyGroupByReadOnlyInstanceResponse extends AbstractModel
     public $MasterInstanceId;
 
     /**
+     * @var string 主实例的地域ID
+     */
+    public $MasterRegionId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -127,6 +134,7 @@ class DescribeReadOnlyGroupByReadOnlyInstanceResponse extends AbstractModel
      * @param string $VpcId 只读组在私有网络ID
      * @param string $SubnetId 只读组在私有网络子网ID
      * @param string $MasterInstanceId 主实例ID，形如mssql-sgeshe3th
+     * @param string $MasterRegionId 主实例的地域ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -188,6 +196,10 @@ class DescribeReadOnlyGroupByReadOnlyInstanceResponse extends AbstractModel
 
         if (array_key_exists("MasterInstanceId",$param) and $param["MasterInstanceId"] !== null) {
             $this->MasterInstanceId = $param["MasterInstanceId"];
+        }
+
+        if (array_key_exists("MasterRegionId",$param) and $param["MasterRegionId"] !== null) {
+            $this->MasterRegionId = $param["MasterRegionId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

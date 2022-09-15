@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置起始时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method string getEndTime() 获取结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
  * @method void setEndTime(string $EndTime) 设置结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+ * @method integer getSubAppId() 获取<b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
  * @method string getInterval() 获取统计时间粒度，有效值：
 <li>Minute：以5分钟为粒度。</li>
 <li>Day：以天为粒度。</li>
@@ -62,10 +66,6 @@ use TencentCloud\Common\AbstractModel;
 <li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
 <li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
 默认值为 TotalStorage。
- * @method integer getSubAppId() 获取点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
- * @method void setSubAppId(integer $SubAppId) 设置点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
  * @method string getArea() 获取查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
 <li>Outside Chinese Mainland：中国境外。</li>
@@ -86,6 +86,12 @@ class DescribeStorageDetailsRequest extends AbstractModel
      * @var string 结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      */
     public $EndTime;
+
+    /**
+     * @var integer <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string 统计时间粒度，有效值：
@@ -115,12 +121,6 @@ class DescribeStorageDetailsRequest extends AbstractModel
     public $StorageType;
 
     /**
-     * @var integer 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
-     */
-    public $SubAppId;
-
-    /**
      * @var string 查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
 <li>Outside Chinese Mainland：中国境外。</li>
@@ -131,6 +131,8 @@ class DescribeStorageDetailsRequest extends AbstractModel
     /**
      * @param string $StartTime 起始时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      * @param string $EndTime 结束时间，需大于开始日期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+     * @param integer $SubAppId <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
      * @param string $Interval 统计时间粒度，有效值：
 <li>Minute：以5分钟为粒度。</li>
 <li>Day：以天为粒度。</li>
@@ -150,8 +152,6 @@ class DescribeStorageDetailsRequest extends AbstractModel
 <li>DeepArchiveStandardRetrieval：深度归档标准取回量。</li>
 <li>DeepArchiveBulkRetrieval：深度归档批量取回量。</li>
 默认值为 TotalStorage。
-     * @param integer $SubAppId 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
      * @param string $Area 查询的存储区域，有效值：
 <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
 <li>Outside Chinese Mainland：中国境外。</li>
@@ -178,16 +178,16 @@ class DescribeStorageDetailsRequest extends AbstractModel
             $this->EndTime = $param["EndTime"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
             $this->Interval = $param["Interval"];
         }
 
         if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
             $this->StorageType = $param["StorageType"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {

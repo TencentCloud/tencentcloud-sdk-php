@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBacktracking(integer $Backtracking) 设置增量采集模式下的回溯数据量，默认-1（全量采集）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsGBK() 获取是否为Gbk编码.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsGBK(integer $IsGBK) 设置是否为Gbk编码.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getJsonStandard() 获取是否为标准json.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJsonStandard(integer $JsonStandard) 设置是否为标准json.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExtractRuleInfo extends AbstractModel
 {
@@ -124,6 +132,18 @@ class ExtractRuleInfo extends AbstractModel
     public $Backtracking;
 
     /**
+     * @var integer 是否为Gbk编码.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsGBK;
+
+    /**
+     * @var integer 是否为标准json.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JsonStandard;
+
+    /**
      * @param string $TimeKey 时间字段的key名字，time_key和time_format必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
@@ -143,6 +163,10 @@ class ExtractRuleInfo extends AbstractModel
      * @param string $UnMatchLogKey 失败日志的key
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Backtracking 增量采集模式下的回溯数据量，默认-1（全量采集）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsGBK 是否为Gbk编码.   0: 否, 1: 是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $JsonStandard 是否为标准json.   0: 否, 1: 是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -201,6 +225,14 @@ class ExtractRuleInfo extends AbstractModel
 
         if (array_key_exists("Backtracking",$param) and $param["Backtracking"] !== null) {
             $this->Backtracking = $param["Backtracking"];
+        }
+
+        if (array_key_exists("IsGBK",$param) and $param["IsGBK"] !== null) {
+            $this->IsGBK = $param["IsGBK"];
+        }
+
+        if (array_key_exists("JsonStandard",$param) and $param["JsonStandard"] !== null) {
+            $this->JsonStandard = $param["JsonStandard"];
         }
     }
 }

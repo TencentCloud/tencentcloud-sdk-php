@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
+15：非税发票
+16：全电发票
  * @method void setTypes(array $Types) 设置需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -62,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
+15：非税发票
+16：全电发票
+ * @method string getReturnOther() 获取是否识别其他类型发票，默认为Yes
+Yes：识别其他类型发票
+No：不识别其他类型发票
+ * @method void setReturnOther(string $ReturnOther) 设置是否识别其他类型发票，默认为Yes
+Yes：识别其他类型发票
+No：不识别其他类型发票
  */
 class MixedInvoiceOCRRequest extends AbstractModel
 {
@@ -95,8 +105,17 @@ class MixedInvoiceOCRRequest extends AbstractModel
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
+15：非税发票
+16：全电发票
      */
     public $Types;
+
+    /**
+     * @var string 是否识别其他类型发票，默认为Yes
+Yes：识别其他类型发票
+No：不识别其他类型发票
+     */
+    public $ReturnOther;
 
     /**
      * @param string $ImageBase64 图片的 Base64 值。
@@ -120,6 +139,11 @@ class MixedInvoiceOCRRequest extends AbstractModel
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
+15：非税发票
+16：全电发票
+     * @param string $ReturnOther 是否识别其他类型发票，默认为Yes
+Yes：识别其他类型发票
+No：不识别其他类型发票
      */
     function __construct()
     {
@@ -144,6 +168,10 @@ class MixedInvoiceOCRRequest extends AbstractModel
 
         if (array_key_exists("Types",$param) and $param["Types"] !== null) {
             $this->Types = $param["Types"];
+        }
+
+        if (array_key_exists("ReturnOther",$param) and $param["ReturnOther"] !== null) {
+            $this->ReturnOther = $param["ReturnOther"];
         }
     }
 }

@@ -18,11 +18,7 @@ namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * type ProbeTaskBasicConfiguration struct {
-	TaskID        TaskID `json:"TaskId" gorm:"column:task_id"`
-	Name          string `json:"Name" binding:"required" gorm:"column:name"`
-	TargetAddress string `json:"TargetAddress" binding:"required" gorm:"column:target_address"`
-}
+ * 拨测任务基础配置
  *
  * @method string getName() 获取拨测任务名称
  * @method void setName(string $Name) 设置拨测任务名称

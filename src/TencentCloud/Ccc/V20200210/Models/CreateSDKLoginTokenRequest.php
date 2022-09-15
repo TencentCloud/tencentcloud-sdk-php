@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSDKLoginToken请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用ID。
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID。
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getSeatUserId() 获取坐席账号。
  * @method void setSeatUserId(string $SeatUserId) 设置坐席账号。
  */
 class CreateSDKLoginTokenRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID。
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -38,7 +38,7 @@ class CreateSDKLoginTokenRequest extends AbstractModel
     public $SeatUserId;
 
     /**
-     * @param integer $SdkAppId 应用ID。
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $SeatUserId 坐席账号。
      */
     function __construct()

@@ -1,9 +1,7 @@
 <?php
 require_once __DIR__.'/../../../vendor/autoload.php';
 use TencentCloud\Ess\V20201111\EssClient;
-use TencentCloud\Ess\V20201111\Models\CreateFlow;
 use TencentCloud\Ess\V20201111\Models\UserInfo;
-use TencentCloud\Ess\V20201111\Models\Agent;
 use TencentCloud\Ess\V20201111\Models\FlowCreateApprover;
 use TencentCloud\Ess\V20201111\Models\CreateFlowRequest;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
@@ -32,13 +30,7 @@ try {
 
     $userInfo = new UserInfo();
     $userInfo->setUserId("********************************");
-    $userInfo->setClientIp("********************************");
     $req->setOperator($userInfo);
-
-    $agent = new Agent();
-    $agent->setAppId("********************************");
-    $agent->setChannel("********************************");
-    $req->setAgent($agent);
 
     // 企业方 静默签署时type为3/非静默签署type为0
     $enterpriseInfo = new FlowCreateApprover();
@@ -61,7 +53,8 @@ try {
     array_push($req->Approvers, $clientInfo);
 
     $req->setFlowName("********************************");
-    $req->setDeadLine(1672474522);
+    // 请设置合理的时间，否则容易造成合同过期
+    $req->setDeadLine(time() + 7 * 24 * 3600);
 
     $resp = $client->CreateFlow($req);
 

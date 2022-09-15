@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
  * @method string getContext() 获取请求上下文, 用作查询游标
  * @method void setContext(string $Context) 设置请求上下文, 用作查询游标
- * @method integer getSize() 获取单次获取的历史数据项目的最大数量, 缺省10
- * @method void setSize(integer $Size) 设置单次获取的历史数据项目的最大数量, 缺省10
+ * @method integer getSize() 获取查询数据项目的最大数量, 默认为10。假设传Size=10，返回的实际事件数量为N，则 5 <= N <= 10。
+ * @method void setSize(integer $Size) 设置查询数据项目的最大数量, 默认为10。假设传Size=10，返回的实际事件数量为N，则 5 <= N <= 10。
  * @method string getEventId() 获取事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
  * @method void setEventId(string $EventId) 设置事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
  * @method string getUserId() 获取用户ID
@@ -67,7 +67,7 @@ class DescribeCloudStorageEventsRequest extends AbstractModel
     public $Context;
 
     /**
-     * @var integer 单次获取的历史数据项目的最大数量, 缺省10
+     * @var integer 查询数据项目的最大数量, 默认为10。假设传Size=10，返回的实际事件数量为N，则 5 <= N <= 10。
      */
     public $Size;
 
@@ -92,7 +92,7 @@ class DescribeCloudStorageEventsRequest extends AbstractModel
      * @param integer $StartTime 起始时间（Unix 时间戳，秒级）, 为0 表示 当前时间 - 24h
      * @param integer $EndTime 结束时间（Unix 时间戳，秒级）, 为0 表示当前时间
      * @param string $Context 请求上下文, 用作查询游标
-     * @param integer $Size 单次获取的历史数据项目的最大数量, 缺省10
+     * @param integer $Size 查询数据项目的最大数量, 默认为10。假设传Size=10，返回的实际事件数量为N，则 5 <= N <= 10。
      * @param string $EventId 事件标识符，可以用来指定查询特定的事件，如果不指定，则查询所有事件。
      * @param string $UserId 用户ID
      * @param integer $ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无

@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDocument返回参数结构体
  *
- * @method string getDocumentId() 获取返回的电子文档ID
- * @method void setDocumentId(string $DocumentId) 设置返回的电子文档ID
- * @method string getPreviewFileUrl() 获取返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+ * @method string getDocumentId() 获取签署流程电子文档ID
+ * @method void setDocumentId(string $DocumentId) 设置签署流程电子文档ID
+ * @method string getPreviewFileUrl() 获取签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreviewFileUrl(string $PreviewFileUrl) 设置返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+ * @method void setPreviewFileUrl(string $PreviewFileUrl) 设置签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateDocumentResponse extends AbstractModel
 {
     /**
-     * @var string 返回的电子文档ID
+     * @var string 签署流程电子文档ID
      */
     public $DocumentId;
 
     /**
-     * @var string 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+     * @var string 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewFileUrl;
@@ -48,8 +48,8 @@ class CreateDocumentResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DocumentId 返回的电子文档ID
-     * @param string $PreviewFileUrl 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+     * @param string $DocumentId 签署流程电子文档ID
+     * @param string $PreviewFileUrl 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

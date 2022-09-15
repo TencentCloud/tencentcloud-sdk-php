@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取指定时间点截图模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置指定时间点截图模板唯一标识。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getName() 获取指定时间点截图模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置指定时间点截图模板名称，长度限制：64 个字符。
  * @method integer getWidth() 获取截图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
@@ -60,8 +62,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormat(string $Format) 设置图片格式，取值可以为 jpg 和 png。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -81,6 +81,11 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
      * @var integer 指定时间点截图模板唯一标识。
      */
     public $Definition;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string 指定时间点截图模板名称，长度限制：64 个字符。
@@ -126,11 +131,6 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @var string 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -142,6 +142,7 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
 
     /**
      * @param integer $Definition 指定时间点截图模板唯一标识。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 指定时间点截图模板名称，长度限制：64 个字符。
      * @param integer $Width 截图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
@@ -161,7 +162,6 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
 默认值：open。
      * @param string $Format 图片格式，取值可以为 jpg 和 png。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -186,6 +186,10 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
             $this->Definition = $param["Definition"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -208,10 +212,6 @@ class ModifySnapshotByTimeOffsetTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("FillType",$param) and $param["FillType"] !== null) {

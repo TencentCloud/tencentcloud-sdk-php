@@ -30,7 +30,7 @@ PullVodPushLive -点播。
 SourceType 为直播（PullLivePushLive）只可以填1个，
 SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
-当前支持的拉流协议：http，https，rtmp。
+当前支持的拉流协议：http，https，rtmp，rtmps，rtsp，srt。
 注意：
 1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
 2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
@@ -42,7 +42,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 SourceType 为直播（PullLivePushLive）只可以填1个，
 SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
-当前支持的拉流协议：http，https，rtmp。
+当前支持的拉流协议：http，https，rtmp，rtmps，rtsp，srt。
 注意：
 1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
 2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
@@ -52,10 +52,10 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 6. 点播源请使用小文件，尽量时长保持在1小时内，较大文件打开和续播耗时较久，耗时超过15秒会有无法正常转推风险。
  * @method string getDomainName() 获取推流域名。
 将拉取过来的流推到该域名。
-注意：请使用已在云直播配置的推流域名。
+注意：如果目标地址为非云直播，且样式不同于云直播，请使用 ToUrl 传入完整推流地址，详细用法请参考 ToUrl 参数说明。
  * @method void setDomainName(string $DomainName) 设置推流域名。
 将拉取过来的流推到该域名。
-注意：请使用已在云直播配置的推流域名。
+注意：如果目标地址为非云直播，且样式不同于云直播，请使用 ToUrl 传入完整推流地址，详细用法请参考 ToUrl 参数说明。
  * @method string getAppName() 获取推流路径。
 将拉取过来的流推到该路径。
  * @method void setAppName(string $AppName) 设置推流路径。
@@ -152,6 +152,42 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
 示例: ignore_region  用于忽略传入地域, 内部按负载分配。
  * @method string getComment() 获取任务描述，限制 512 字节。
  * @method void setComment(string $Comment) 设置任务描述，限制 512 字节。
+ * @method string getToUrl() 获取完整目标 URL 地址。
+用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
+
+注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
+ * @method void setToUrl(string $ToUrl) 设置完整目标 URL 地址。
+用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
+
+注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
+ * @method string getBackupSourceType() 获取备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+ * @method void setBackupSourceType(string $BackupSourceType) 设置备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+ * @method string getBackupSourceUrl() 获取备源 URL。
+只允许填一个备源 URL
+ * @method void setBackupSourceUrl(string $BackupSourceUrl) 设置备源 URL。
+只允许填一个备源 URL
+ * @method array getWatermarkList() 获取水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg，gif 等。
+ * @method void setWatermarkList(array $WatermarkList) 设置水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg，gif 等。
  */
 class CreateLivePullStreamTaskRequest extends AbstractModel
 {
@@ -167,7 +203,7 @@ PullVodPushLive -点播。
 SourceType 为直播（PullLivePushLive）只可以填1个，
 SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
-当前支持的拉流协议：http，https，rtmp。
+当前支持的拉流协议：http，https，rtmp，rtmps，rtsp，srt。
 注意：
 1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
 2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
@@ -181,7 +217,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
     /**
      * @var string 推流域名。
 将拉取过来的流推到该域名。
-注意：请使用已在云直播配置的推流域名。
+注意：如果目标地址为非云直播，且样式不同于云直播，请使用 ToUrl 传入完整推流地址，详细用法请参考 ToUrl 参数说明。
      */
     public $DomainName;
 
@@ -282,6 +318,40 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
     public $Comment;
 
     /**
+     * @var string 完整目标 URL 地址。
+用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
+
+注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
+     */
+    public $ToUrl;
+
+    /**
+     * @var string 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+     */
+    public $BackupSourceType;
+
+    /**
+     * @var string 备源 URL。
+只允许填一个备源 URL
+     */
+    public $BackupSourceUrl;
+
+    /**
+     * @var array 水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg，gif 等。
+     */
+    public $WatermarkList;
+
+    /**
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
@@ -289,7 +359,7 @@ PullVodPushLive -点播。
 SourceType 为直播（PullLivePushLive）只可以填1个，
 SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
-当前支持的拉流协议：http，https，rtmp。
+当前支持的拉流协议：http，https，rtmp，rtmps，rtsp，srt。
 注意：
 1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
 2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
@@ -299,7 +369,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 6. 点播源请使用小文件，尽量时长保持在1小时内，较大文件打开和续播耗时较久，耗时超过15秒会有无法正常转推风险。
      * @param string $DomainName 推流域名。
 将拉取过来的流推到该域名。
-注意：请使用已在云直播配置的推流域名。
+注意：如果目标地址为非云直播，且样式不同于云直播，请使用 ToUrl 传入完整推流地址，详细用法请参考 ToUrl 参数说明。
      * @param string $AppName 推流路径。
 将拉取过来的流推到该路径。
      * @param string $StreamName 推流名称。
@@ -348,6 +418,24 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
      * @param string $ExtraCmd 其他参数。
 示例: ignore_region  用于忽略传入地域, 内部按负载分配。
      * @param string $Comment 任务描述，限制 512 字节。
+     * @param string $ToUrl 完整目标 URL 地址。
+用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
+
+注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
+     * @param string $BackupSourceType 备源的类型：
+PullLivePushLive -直播，
+PullVodPushLive -点播。
+注意：
+1. 仅当主源类型为直播源时，备源才会生效。
+2. 主直播源拉流中断时，自动使用备源进行拉流。
+3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+     * @param string $BackupSourceUrl 备源 URL。
+只允许填一个备源 URL
+     * @param array $WatermarkList 水印信息列表。
+注意：
+1. 最多支持4个不同位置的水印。
+2. 水印图片 URL 请使用合法外网可访问地址。
+3. 支持的水印图片格式：png，jpg，gif 等。
      */
     function __construct()
     {
@@ -420,6 +508,27 @@ ContinueBreakPoint：播放完当前正在播放的点播 url 后再使用新的
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("ToUrl",$param) and $param["ToUrl"] !== null) {
+            $this->ToUrl = $param["ToUrl"];
+        }
+
+        if (array_key_exists("BackupSourceType",$param) and $param["BackupSourceType"] !== null) {
+            $this->BackupSourceType = $param["BackupSourceType"];
+        }
+
+        if (array_key_exists("BackupSourceUrl",$param) and $param["BackupSourceUrl"] !== null) {
+            $this->BackupSourceUrl = $param["BackupSourceUrl"];
+        }
+
+        if (array_key_exists("WatermarkList",$param) and $param["WatermarkList"] !== null) {
+            $this->WatermarkList = [];
+            foreach ($param["WatermarkList"] as $key => $value){
+                $obj = new PullPushWatermarkInfo();
+                $obj->deserialize($value);
+                array_push($this->WatermarkList, $obj);
+            }
         }
     }
 }

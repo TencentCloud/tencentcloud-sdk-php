@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallee(string $Callee) 设置被叫号码
  * @method integer getState() 获取呼叫状态 0初始 1已接听 2未接听 3呼叫中 4待重试
  * @method void setState(integer $State) 设置呼叫状态 0初始 1已接听 2未接听 3呼叫中 4待重试
+ * @method array getSessions() 获取会话ID列表
+ * @method void setSessions(array $Sessions) 设置会话ID列表
  */
 class AutoCalloutTaskCalleeInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AutoCalloutTaskCalleeInfo extends AbstractModel
     public $State;
 
     /**
+     * @var array 会话ID列表
+     */
+    public $Sessions;
+
+    /**
      * @param string $Callee 被叫号码
      * @param integer $State 呼叫状态 0初始 1已接听 2未接听 3呼叫中 4待重试
+     * @param array $Sessions 会话ID列表
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AutoCalloutTaskCalleeInfo extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("Sessions",$param) and $param["Sessions"] !== null) {
+            $this->Sessions = $param["Sessions"];
         }
     }
 }

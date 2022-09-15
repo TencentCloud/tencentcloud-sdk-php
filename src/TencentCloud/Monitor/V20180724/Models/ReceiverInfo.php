@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 接收人信息
  *
- * @method integer getStartTime() 获取告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
- * @method void setStartTime(integer $StartTime) 设置告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+ * @method integer getStartTime() 获取告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+ * @method void setStartTime(integer $StartTime) 设置告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
  * @method integer getEndTime() 获取告警时间段结束时间。含义同StartTime
  * @method void setEndTime(integer $EndTime) 设置告警时间段结束时间。含义同StartTime
  * @method array getNotifyWay() 获取告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT"
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置ReceiverId
  * @method array getSendFor() 获取电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
  * @method void setSendFor(array $SendFor) 设置电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
- * @method array getUidList() 获取电话告警接收者uid
- * @method void setUidList(array $UidList) 设置电话告警接收者uid
+ * @method array getUidList() 获取电话告警接收者 UID
+ * @method void setUidList(array $UidList) 设置电话告警接收者 UID
  * @method integer getRoundNumber() 获取电话告警轮数
  * @method void setRoundNumber(integer $RoundNumber) 设置电话告警轮数
  * @method integer getPersonInterval() 获取电话告警对个人间隔（秒）
@@ -44,17 +44,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecoverNotify(array $RecoverNotify) 设置恢复通知方式。可选"SMS"
  * @method integer getNeedSendNotice() 获取是否需要电话告警触达提示。0不需要，1需要
  * @method void setNeedSendNotice(integer $NeedSendNotice) 设置是否需要电话告警触达提示。0不需要，1需要
- * @method array getReceiverGroupList() 获取接收组列表。通过平台接口查询到的接收组id列表
- * @method void setReceiverGroupList(array $ReceiverGroupList) 设置接收组列表。通过平台接口查询到的接收组id列表
- * @method array getReceiverUserList() 获取接收人列表。通过平台接口查询到的接收人id列表
- * @method void setReceiverUserList(array $ReceiverUserList) 设置接收人列表。通过平台接口查询到的接收人id列表
+ * @method array getReceiverGroupList() 获取接收组列表。通过平台接口查询到的接收组 ID 列表
+ * @method void setReceiverGroupList(array $ReceiverGroupList) 设置接收组列表。通过平台接口查询到的接收组 ID 列表
+ * @method array getReceiverUserList() 获取接收人列表。通过平台接口查询到的接收人 ID 列表
+ * @method void setReceiverUserList(array $ReceiverUserList) 设置接收人列表。通过平台接口查询到的接收人 ID 列表
  * @method string getReceiveLanguage() 获取告警接收语言，枚举值（zh-CN，en-US）
  * @method void setReceiveLanguage(string $ReceiveLanguage) 设置告警接收语言，枚举值（zh-CN，en-US）
  */
 class ReceiverInfo extends AbstractModel
 {
     /**
-     * @var integer 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+     * @var integer 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      */
     public $StartTime;
 
@@ -84,7 +84,7 @@ class ReceiverInfo extends AbstractModel
     public $SendFor;
 
     /**
-     * @var array 电话告警接收者uid
+     * @var array 电话告警接收者 UID
      */
     public $UidList;
 
@@ -114,12 +114,12 @@ class ReceiverInfo extends AbstractModel
     public $NeedSendNotice;
 
     /**
-     * @var array 接收组列表。通过平台接口查询到的接收组id列表
+     * @var array 接收组列表。通过平台接口查询到的接收组 ID 列表
      */
     public $ReceiverGroupList;
 
     /**
-     * @var array 接收人列表。通过平台接口查询到的接收人id列表
+     * @var array 接收人列表。通过平台接口查询到的接收人 ID 列表
      */
     public $ReceiverUserList;
 
@@ -129,20 +129,20 @@ class ReceiverInfo extends AbstractModel
     public $ReceiveLanguage;
 
     /**
-     * @param integer $StartTime 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+     * @param integer $StartTime 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      * @param integer $EndTime 告警时间段结束时间。含义同StartTime
      * @param array $NotifyWay 告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT"
      * @param string $ReceiverType 接收人类型。“group” 或 “user”
      * @param integer $Id ReceiverId
      * @param array $SendFor 电话告警通知时机。可选"OCCUR"(告警时通知),"RECOVER"(恢复时通知)
-     * @param array $UidList 电话告警接收者uid
+     * @param array $UidList 电话告警接收者 UID
      * @param integer $RoundNumber 电话告警轮数
      * @param integer $PersonInterval 电话告警对个人间隔（秒）
      * @param integer $RoundInterval 电话告警每轮间隔（秒）
      * @param array $RecoverNotify 恢复通知方式。可选"SMS"
      * @param integer $NeedSendNotice 是否需要电话告警触达提示。0不需要，1需要
-     * @param array $ReceiverGroupList 接收组列表。通过平台接口查询到的接收组id列表
-     * @param array $ReceiverUserList 接收人列表。通过平台接口查询到的接收人id列表
+     * @param array $ReceiverGroupList 接收组列表。通过平台接口查询到的接收组 ID 列表
+     * @param array $ReceiverUserList 接收人列表。通过平台接口查询到的接收人 ID 列表
      * @param string $ReceiveLanguage 告警接收语言，枚举值（zh-CN，en-US）
      */
     function __construct()

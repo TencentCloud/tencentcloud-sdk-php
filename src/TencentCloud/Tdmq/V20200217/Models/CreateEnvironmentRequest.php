@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() 获取环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
- * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒，最小60，最大1296000，（15天）。
- * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒，最小60，最大1296000，（15天）。
+ * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+ * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒，取值范围：60秒~15天。
  * @method string getRemark() 获取说明，128个字符以内。
  * @method void setRemark(string $Remark) 设置说明，128个字符以内。
  * @method string getClusterId() 获取Pulsar 集群的ID
@@ -39,7 +39,7 @@ class CreateEnvironmentRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var integer 未消费消息过期时间，单位：秒，最小60，最大1296000，（15天）。
+     * @var integer 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
      */
     public $MsgTTL;
 
@@ -60,7 +60,7 @@ class CreateEnvironmentRequest extends AbstractModel
 
     /**
      * @param string $EnvironmentId 环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
-     * @param integer $MsgTTL 未消费消息过期时间，单位：秒，最小60，最大1296000，（15天）。
+     * @param integer $MsgTTL 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
      * @param string $Remark 说明，128个字符以内。
      * @param string $ClusterId Pulsar 集群的ID
      * @param RetentionPolicy $RetentionPolicy 消息保留策略

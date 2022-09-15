@@ -76,6 +76,10 @@ DELETING：删除中
  * @method void setEniType(integer $EniType) 设置网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
  * @method string getEcmRegion() 获取EcmRegion ecm区域
  * @method void setEcmRegion(string $EcmRegion) 设置EcmRegion ecm区域
+ * @method string getBusiness() 获取网卡绑定的子机类型：cvm，eks。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBusiness(string $Business) 设置网卡绑定的子机类型：cvm，eks。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkInterface extends AbstractModel
 {
@@ -176,6 +180,12 @@ DELETING：删除中
     public $EcmRegion;
 
     /**
+     * @var string 网卡绑定的子机类型：cvm，eks。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Business;
+
+    /**
      * @param string $NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      * @param string $NetworkInterfaceName 弹性网卡名称。
      * @param string $NetworkInterfaceDescription 弹性网卡描述。
@@ -204,6 +214,8 @@ DELETING：删除中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
      * @param string $EcmRegion EcmRegion ecm区域
+     * @param string $Business 网卡绑定的子机类型：cvm，eks。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -300,6 +312,10 @@ DELETING：删除中
 
         if (array_key_exists("EcmRegion",$param) and $param["EcmRegion"] !== null) {
             $this->EcmRegion = $param["EcmRegion"];
+        }
+
+        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
+            $this->Business = $param["Business"];
         }
     }
 }

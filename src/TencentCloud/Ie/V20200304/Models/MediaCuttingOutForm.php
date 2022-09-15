@@ -58,10 +58,14 @@ Black：黑色填充；
 Stretch：拉伸；
 Gaussian：高斯模糊；
 默认White。
- * @method integer getSpriteRowCount() 获取Type=Sprite时有效，表示雪碧图行数，范围为 [1,200]，默认100。
- * @method void setSpriteRowCount(integer $SpriteRowCount) 设置Type=Sprite时有效，表示雪碧图行数，范围为 [1,200]，默认100。
- * @method integer getSpriteColumnCount() 获取Type=Sprite时有效，表示雪碧图列数，范围为 [1,200]，默认100。
- * @method void setSpriteColumnCount(integer $SpriteColumnCount) 设置Type=Sprite时有效，表示雪碧图列数，范围为 [1,200]，默认100。
+ * @method integer getSpriteRowCount() 获取【废弃】参考SpriteInfo
+ * @method void setSpriteRowCount(integer $SpriteRowCount) 设置【废弃】参考SpriteInfo
+ * @method integer getSpriteColumnCount() 获取【废弃】参考SpriteInfo
+ * @method void setSpriteColumnCount(integer $SpriteColumnCount) 设置【废弃】参考SpriteInfo
+ * @method SpriteImageInfo getSpriteInfo() 获取Type=Sprite时有效，表示雪碧图参数信息。
+ * @method void setSpriteInfo(SpriteImageInfo $SpriteInfo) 设置Type=Sprite时有效，表示雪碧图参数信息。
+ * @method DynamicImageInfo getDynamicInfo() 获取Type=Dynamic时有效，表示动图参数信息。
+ * @method void setDynamicInfo(DynamicImageInfo $DynamicInfo) 设置Type=Dynamic时有效，表示动图参数信息。
  */
 class MediaCuttingOutForm extends AbstractModel
 {
@@ -93,14 +97,24 @@ Gaussian：高斯模糊；
     public $FillType;
 
     /**
-     * @var integer Type=Sprite时有效，表示雪碧图行数，范围为 [1,200]，默认100。
+     * @var integer 【废弃】参考SpriteInfo
      */
     public $SpriteRowCount;
 
     /**
-     * @var integer Type=Sprite时有效，表示雪碧图列数，范围为 [1,200]，默认100。
+     * @var integer 【废弃】参考SpriteInfo
      */
     public $SpriteColumnCount;
+
+    /**
+     * @var SpriteImageInfo Type=Sprite时有效，表示雪碧图参数信息。
+     */
+    public $SpriteInfo;
+
+    /**
+     * @var DynamicImageInfo Type=Dynamic时有效，表示动图参数信息。
+     */
+    public $DynamicInfo;
 
     /**
      * @param string $Type 输出类型，可选值：
@@ -122,8 +136,10 @@ Black：黑色填充；
 Stretch：拉伸；
 Gaussian：高斯模糊；
 默认White。
-     * @param integer $SpriteRowCount Type=Sprite时有效，表示雪碧图行数，范围为 [1,200]，默认100。
-     * @param integer $SpriteColumnCount Type=Sprite时有效，表示雪碧图列数，范围为 [1,200]，默认100。
+     * @param integer $SpriteRowCount 【废弃】参考SpriteInfo
+     * @param integer $SpriteColumnCount 【废弃】参考SpriteInfo
+     * @param SpriteImageInfo $SpriteInfo Type=Sprite时有效，表示雪碧图参数信息。
+     * @param DynamicImageInfo $DynamicInfo Type=Dynamic时有效，表示动图参数信息。
      */
     function __construct()
     {
@@ -152,6 +168,16 @@ Gaussian：高斯模糊；
 
         if (array_key_exists("SpriteColumnCount",$param) and $param["SpriteColumnCount"] !== null) {
             $this->SpriteColumnCount = $param["SpriteColumnCount"];
+        }
+
+        if (array_key_exists("SpriteInfo",$param) and $param["SpriteInfo"] !== null) {
+            $this->SpriteInfo = new SpriteImageInfo();
+            $this->SpriteInfo->deserialize($param["SpriteInfo"]);
+        }
+
+        if (array_key_exists("DynamicInfo",$param) and $param["DynamicInfo"] !== null) {
+            $this->DynamicInfo = new DynamicImageInfo();
+            $this->DynamicInfo->deserialize($param["DynamicInfo"]);
         }
     }
 }

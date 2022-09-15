@@ -28,8 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricNames(array $MetricNames) 设置指标名列表
  * @method array getConditions() 获取维度条件，操作符支持=、in
  * @method void setConditions(array $Conditions) 设置维度条件，操作符支持=、in
- * @method integer getPeriod() 获取统计粒度。默认取值为300，单位为s
- * @method void setPeriod(integer $Period) 设置统计粒度。默认取值为300，单位为s
+ * @method integer getPeriod() 获取统计粒度。默认取值为300，单位为s；可选的值为60、300、3600、86400
+受存储时长限制，统计粒度与统计的时间范围有关：
+60s：EndTime-StartTime<12小时，且StartTime距当前时间不能超过15天；
+300s：EndTime-StartTime<3天，且StartTime距当前时间不能超过31天；
+3600s：EndTime-StartTime<30天，且StartTime距当前时间不能超过93天；
+86400s：EndTime-StartTime<186天，且StartTime距当前时间不能超过186天。
+ * @method void setPeriod(integer $Period) 设置统计粒度。默认取值为300，单位为s；可选的值为60、300、3600、86400
+受存储时长限制，统计粒度与统计的时间范围有关：
+60s：EndTime-StartTime<12小时，且StartTime距当前时间不能超过15天；
+300s：EndTime-StartTime<3天，且StartTime距当前时间不能超过31天；
+3600s：EndTime-StartTime<30天，且StartTime距当前时间不能超过93天；
+86400s：EndTime-StartTime<186天，且StartTime距当前时间不能超过186天。
  * @method string getStartTime() 获取起始时间，默认为当前时间，如2020-12-08T19:51:23+08:00
  * @method void setStartTime(string $StartTime) 设置起始时间，默认为当前时间，如2020-12-08T19:51:23+08:00
  * @method string getEndTime() 获取结束时间，默认为当前时间，如2020-12-08T19:51:23+08:00
@@ -60,7 +70,12 @@ class DescribeStatisticDataRequest extends AbstractModel
     public $Conditions;
 
     /**
-     * @var integer 统计粒度。默认取值为300，单位为s
+     * @var integer 统计粒度。默认取值为300，单位为s；可选的值为60、300、3600、86400
+受存储时长限制，统计粒度与统计的时间范围有关：
+60s：EndTime-StartTime<12小时，且StartTime距当前时间不能超过15天；
+300s：EndTime-StartTime<3天，且StartTime距当前时间不能超过31天；
+3600s：EndTime-StartTime<30天，且StartTime距当前时间不能超过93天；
+86400s：EndTime-StartTime<186天，且StartTime距当前时间不能超过186天。
      */
     public $Period;
 
@@ -84,7 +99,12 @@ class DescribeStatisticDataRequest extends AbstractModel
      * @param string $Namespace 命名空间，目前只支持QCE/TKE
      * @param array $MetricNames 指标名列表
      * @param array $Conditions 维度条件，操作符支持=、in
-     * @param integer $Period 统计粒度。默认取值为300，单位为s
+     * @param integer $Period 统计粒度。默认取值为300，单位为s；可选的值为60、300、3600、86400
+受存储时长限制，统计粒度与统计的时间范围有关：
+60s：EndTime-StartTime<12小时，且StartTime距当前时间不能超过15天；
+300s：EndTime-StartTime<3天，且StartTime距当前时间不能超过31天；
+3600s：EndTime-StartTime<30天，且StartTime距当前时间不能超过93天；
+86400s：EndTime-StartTime<186天，且StartTime距当前时间不能超过186天。
      * @param string $StartTime 起始时间，默认为当前时间，如2020-12-08T19:51:23+08:00
      * @param string $EndTime 结束时间，默认为当前时间，如2020-12-08T19:51:23+08:00
      * @param array $GroupBys 按指定维度groupBy

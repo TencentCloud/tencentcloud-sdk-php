@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAIRecognitionTemplate请求参数结构体
  *
- * @method string getName() 获取视频内容识别模板名称，长度限制：64 个字符。
- * @method void setName(string $Name) 设置视频内容识别模板名称，长度限制：64 个字符。
- * @method string getComment() 获取视频内容识别模板描述信息，长度限制：256 个字符。
- * @method void setComment(string $Comment) 设置视频内容识别模板描述信息，长度限制：256 个字符。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method string getName() 获取音视频内容识别模板名称，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置音视频内容识别模板名称，长度限制：64 个字符。
+ * @method string getComment() 获取音视频内容识别模板描述信息，长度限制：256 个字符。
+ * @method void setComment(string $Comment) 设置音视频内容识别模板描述信息，长度限制：256 个字符。
  * @method HeadTailConfigureInfo getHeadTailConfigure() 获取视频片头片尾识别控制参数。
  * @method void setHeadTailConfigure(HeadTailConfigureInfo $HeadTailConfigure) 设置视频片头片尾识别控制参数。
  * @method SegmentConfigureInfo getSegmentConfigure() 获取视频拆条识别控制参数。
@@ -42,18 +44,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) 设置物体识别控制参数。
  * @method float getScreenshotInterval() 获取截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
  * @method void setScreenshotInterval(float $ScreenshotInterval) 设置截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class CreateAIRecognitionTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 视频内容识别模板名称，长度限制：64 个字符。
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
+    /**
+     * @var string 音视频内容识别模板名称，长度限制：64 个字符。
      */
     public $Name;
 
     /**
-     * @var string 视频内容识别模板描述信息，长度限制：256 个字符。
+     * @var string 音视频内容识别模板描述信息，长度限制：256 个字符。
      */
     public $Comment;
 
@@ -103,13 +108,9 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
     public $ScreenshotInterval;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
-     * @param string $Name 视频内容识别模板名称，长度限制：64 个字符。
-     * @param string $Comment 视频内容识别模板描述信息，长度限制：256 个字符。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param string $Name 音视频内容识别模板名称，长度限制：64 个字符。
+     * @param string $Comment 音视频内容识别模板描述信息，长度限制：256 个字符。
      * @param HeadTailConfigureInfo $HeadTailConfigure 视频片头片尾识别控制参数。
      * @param SegmentConfigureInfo $SegmentConfigure 视频拆条识别控制参数。
      * @param FaceConfigureInfo $FaceConfigure 人脸识别控制参数。
@@ -119,7 +120,6 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
      * @param AsrWordsConfigureInfo $AsrWordsConfigure 语音关键词识别控制参数。
      * @param ObjectConfigureInfo $ObjectConfigure 物体识别控制参数。
      * @param float $ScreenshotInterval 截帧间隔，单位为秒。当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -134,6 +134,10 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -184,10 +188,6 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
 
         if (array_key_exists("ScreenshotInterval",$param) and $param["ScreenshotInterval"] !== null) {
             $this->ScreenshotInterval = $param["ScreenshotInterval"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

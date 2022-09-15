@@ -20,17 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContentReviewTemplates请求参数结构体
  *
- * @method array getDefinitions() 获取内容智能识别模板唯一标识过滤条件，数组长度限制：50。
- * @method void setDefinitions(array $Definitions) 设置内容智能识别模板唯一标识过滤条件，数组长度限制：50。
+ * @method array getDefinitions() 获取智能审核模板唯一标识过滤条件，数组长度限制：50。
+ * @method void setDefinitions(array $Definitions) 设置智能审核模板唯一标识过滤条件，数组长度限制：50。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：50。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：50。
+ * @method string getType() 获取模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+ * @method void setType(string $Type) 设置模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
  */
 class DescribeContentReviewTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 内容智能识别模板唯一标识过滤条件，数组长度限制：50。
+     * @var array 智能审核模板唯一标识过滤条件，数组长度限制：50。
      */
     public $Definitions;
 
@@ -45,9 +51,19 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Definitions 内容智能识别模板唯一标识过滤条件，数组长度限制：50。
+     * @var string 模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
+     */
+    public $Type;
+
+    /**
+     * @param array $Definitions 智能审核模板唯一标识过滤条件，数组长度限制：50。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：50。
+     * @param string $Type 模板类型过滤条件，不填则返回所有，可选值：
+* Preset：系统预置模板；
+* Custom：用户自定义模板。
      */
     function __construct()
     {
@@ -72,6 +88,10 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

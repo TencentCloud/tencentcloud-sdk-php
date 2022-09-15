@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置页大小
  * @method integer getPageIndex() 获取页码
  * @method void setPageIndex(integer $PageIndex) 设置页码
- * @method integer getScenes() 获取业务场景 参考ScenesType
- * @method void setScenes(integer $Scenes) 设置业务场景 参考ScenesType
+ * @method integer getScenes() 获取1:急需关注 2.重保监控 3.全量告警
+ * @method void setScenes(integer $Scenes) 设置1:急需关注 2.重保监控 3.全量告警
  * @method array getFilter() 获取查询参数
  * @method void setFilter(array $Filter) 设置查询参数
  * @method array getSorter() 获取排序参数
  * @method void setSorter(array $Sorter) 设置排序参数
+ * @method boolean getExportFlag() 获取是否导出
+ * @method void setExportFlag(boolean $ExportFlag) 设置是否导出
  */
 class DescribeSocAlertListRequest extends AbstractModel
 {
@@ -44,7 +46,7 @@ class DescribeSocAlertListRequest extends AbstractModel
     public $PageIndex;
 
     /**
-     * @var integer 业务场景 参考ScenesType
+     * @var integer 1:急需关注 2.重保监控 3.全量告警
      */
     public $Scenes;
 
@@ -59,11 +61,17 @@ class DescribeSocAlertListRequest extends AbstractModel
     public $Sorter;
 
     /**
+     * @var boolean 是否导出
+     */
+    public $ExportFlag;
+
+    /**
      * @param integer $PageSize 页大小
      * @param integer $PageIndex 页码
-     * @param integer $Scenes 业务场景 参考ScenesType
+     * @param integer $Scenes 1:急需关注 2.重保监控 3.全量告警
      * @param array $Filter 查询参数
      * @param array $Sorter 排序参数
+     * @param boolean $ExportFlag 是否导出
      */
     function __construct()
     {
@@ -106,6 +114,10 @@ class DescribeSocAlertListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Sorter, $obj);
             }
+        }
+
+        if (array_key_exists("ExportFlag",$param) and $param["ExportFlag"] !== null) {
+            $this->ExportFlag = $param["ExportFlag"];
         }
     }
 }

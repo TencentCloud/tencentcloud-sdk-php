@@ -52,9 +52,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredPodNumber(integer $DesiredPodNumber) 设置该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method GPUArgs getGPUArgs() 获取GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGPUArgs(GPUArgs $GPUArgs) 设置GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPreStartUserScript() 获取base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreStartUserScript(string $PreStartUserScript) 设置base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTaints() 获取节点污点
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaints(array $Taints) 设置节点污点
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAdvancedSettings extends AbstractModel
@@ -108,10 +116,22 @@ class InstanceAdvancedSettings extends AbstractModel
     public $DesiredPodNumber;
 
     /**
+     * @var GPUArgs GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GPUArgs;
+
+    /**
      * @var string base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreStartUserScript;
+
+    /**
+     * @var array 节点污点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Taints;
 
     /**
      * @param string $MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
@@ -130,7 +150,11 @@ class InstanceAdvancedSettings extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param GPUArgs $GPUArgs GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Taints 节点污点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,8 +213,22 @@ class InstanceAdvancedSettings extends AbstractModel
             $this->DesiredPodNumber = $param["DesiredPodNumber"];
         }
 
+        if (array_key_exists("GPUArgs",$param) and $param["GPUArgs"] !== null) {
+            $this->GPUArgs = new GPUArgs();
+            $this->GPUArgs->deserialize($param["GPUArgs"]);
+        }
+
         if (array_key_exists("PreStartUserScript",$param) and $param["PreStartUserScript"] !== null) {
             $this->PreStartUserScript = $param["PreStartUserScript"];
+        }
+
+        if (array_key_exists("Taints",$param) and $param["Taints"] !== null) {
+            $this->Taints = [];
+            foreach ($param["Taints"] as $key => $value){
+                $obj = new Taint();
+                $obj->deserialize($value);
+                array_push($this->Taints, $obj);
+            }
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResult() 获取认证结果码:
 【收费结果码】
-0: 认证通过
--4: 信息不一致
+0:   三要素信息一致
+-4:  三要素信息不一致
 
 【不收费结果码】
 -7: 身份证号码有误
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 -11: 验证中心服务繁忙
  * @method void setResult(string $Result) 设置认证结果码:
 【收费结果码】
-0: 认证通过
--4: 信息不一致
+0:   三要素信息一致
+-4:  三要素信息不一致
 
 【不收费结果码】
 -7: 身份证号码有误
@@ -50,8 +50,8 @@ class EncryptedPhoneVerificationResponse extends AbstractModel
     /**
      * @var string 认证结果码:
 【收费结果码】
-0: 认证通过
--4: 信息不一致
+0:   三要素信息一致
+-4:  三要素信息不一致
 
 【不收费结果码】
 -7: 身份证号码有误
@@ -74,8 +74,8 @@ class EncryptedPhoneVerificationResponse extends AbstractModel
     /**
      * @param string $Result 认证结果码:
 【收费结果码】
-0: 认证通过
--4: 信息不一致
+0:   三要素信息一致
+-4:  三要素信息不一致
 
 【不收费结果码】
 -7: 身份证号码有误

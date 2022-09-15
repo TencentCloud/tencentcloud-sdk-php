@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContinentName(string $ContinentName) 设置大洲名称。
  * @method string getContinentInnerCode() 获取大洲编码。
  * @method void setContinentInnerCode(string $ContinentInnerCode) 设置大洲编码。
+ * @method string getRemark() 获取标注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置标注信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CountryAreaMap extends AbstractModel
 {
@@ -66,12 +70,20 @@ class CountryAreaMap extends AbstractModel
     public $ContinentInnerCode;
 
     /**
+     * @var string 标注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
      * @param string $NationCountryName 国家名称。
      * @param string $NationCountryInnerCode 国家编码。
      * @param string $GeographicalZoneName 地区名称。
      * @param string $GeographicalZoneInnerCode 地区编码。
      * @param string $ContinentName 大洲名称。
      * @param string $ContinentInnerCode 大洲编码。
+     * @param string $Remark 标注信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class CountryAreaMap extends AbstractModel
 
         if (array_key_exists("ContinentInnerCode",$param) and $param["ContinentInnerCode"] !== null) {
             $this->ContinentInnerCode = $param["ContinentInnerCode"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

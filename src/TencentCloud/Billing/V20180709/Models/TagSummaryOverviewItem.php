@@ -36,6 +36,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCost(string $TotalCost) 设置原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCashPayAmount() 获取现金金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCashPayAmount(string $CashPayAmount) 设置现金金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIncentivePayAmount() 获取赠送金金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVoucherPayAmount() 获取代金券金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTransferPayAmount() 获取分成金金额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金金额
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagSummaryOverviewItem extends AbstractModel
 {
@@ -64,6 +80,30 @@ class TagSummaryOverviewItem extends AbstractModel
     public $TotalCost;
 
     /**
+     * @var string 现金金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CashPayAmount;
+
+    /**
+     * @var string 赠送金金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IncentivePayAmount;
+
+    /**
+     * @var string 代金券金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VoucherPayAmount;
+
+    /**
+     * @var string 分成金金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TransferPayAmount;
+
+    /**
      * @param string $TagValue 标签值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealTotalCost 实际花费
@@ -71,6 +111,14 @@ class TagSummaryOverviewItem extends AbstractModel
      * @param string $RealTotalCostRatio 费用所占百分比，两位小数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CashPayAmount 现金金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IncentivePayAmount 赠送金金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VoucherPayAmount 代金券金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TransferPayAmount 分成金金额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +148,22 @@ class TagSummaryOverviewItem extends AbstractModel
 
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
             $this->TotalCost = $param["TotalCost"];
+        }
+
+        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
+            $this->CashPayAmount = $param["CashPayAmount"];
+        }
+
+        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
+            $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        }
+
+        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
+            $this->VoucherPayAmount = $param["VoucherPayAmount"];
+        }
+
+        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
+            $this->TransferPayAmount = $param["TransferPayAmount"];
         }
     }
 }

@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedicalInsuranceTypeCode(string $MedicalInsuranceTypeCode) 设置居民医保代码
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBedNo() 获取床号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBedNo(string $BedNo) 设置床号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PatientInfo extends AbstractModel
 {
@@ -234,6 +238,12 @@ class PatientInfo extends AbstractModel
     public $MedicalInsuranceTypeCode;
 
     /**
+     * @var string 床号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BedNo;
+
+    /**
      * @param string $Name 患者姓名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sex 患者性别
@@ -275,6 +285,8 @@ class PatientInfo extends AbstractModel
      * @param string $ProfessionCode 职业代码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MedicalInsuranceTypeCode 居民医保代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BedNo 床号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -372,6 +384,10 @@ class PatientInfo extends AbstractModel
 
         if (array_key_exists("MedicalInsuranceTypeCode",$param) and $param["MedicalInsuranceTypeCode"] !== null) {
             $this->MedicalInsuranceTypeCode = $param["MedicalInsuranceTypeCode"];
+        }
+
+        if (array_key_exists("BedNo",$param) and $param["BedNo"] !== null) {
+            $this->BedNo = $param["BedNo"];
         }
     }
 }

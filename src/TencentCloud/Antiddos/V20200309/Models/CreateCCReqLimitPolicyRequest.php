@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method CCReqLimitPolicyRecord getPolicy() 获取策略项
  * @method void setPolicy(CCReqLimitPolicyRecord $Policy) 设置策略项
+ * @method integer getIsGlobal() 获取是否为兜底频控
+ * @method void setIsGlobal(integer $IsGlobal) 设置是否为兜底频控
  */
 class CreateCCReqLimitPolicyRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateCCReqLimitPolicyRequest extends AbstractModel
     public $Policy;
 
     /**
+     * @var integer 是否为兜底频控
+     */
+    public $IsGlobal;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $Ip IP值
      * @param string $Protocol 协议，可取值HTTP，HTTPS
      * @param string $Domain 域名
      * @param CCReqLimitPolicyRecord $Policy 策略项
+     * @param integer $IsGlobal 是否为兜底频控
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class CreateCCReqLimitPolicyRequest extends AbstractModel
         if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
             $this->Policy = new CCReqLimitPolicyRecord();
             $this->Policy->deserialize($param["Policy"]);
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
         }
     }
 }

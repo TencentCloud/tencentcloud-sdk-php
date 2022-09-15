@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTelCallInfo返回参数结构体
  *
- * @method integer getTelCallOutCount() 获取电话呼出统计分钟数
- * @method void setTelCallOutCount(integer $TelCallOutCount) 设置电话呼出统计分钟数
- * @method integer getTelCallInCount() 获取电话呼入统计分钟数
- * @method void setTelCallInCount(integer $TelCallInCount) 设置电话呼入统计分钟数
+ * @method integer getTelCallOutCount() 获取呼出套餐包消耗分钟数
+ * @method void setTelCallOutCount(integer $TelCallOutCount) 设置呼出套餐包消耗分钟数
+ * @method integer getTelCallInCount() 获取呼入套餐包消耗分钟数
+ * @method void setTelCallInCount(integer $TelCallInCount) 设置呼入套餐包消耗分钟数
  * @method integer getSeatUsedCount() 获取坐席使用统计个数
  * @method void setSeatUsedCount(integer $SeatUsedCount) 设置坐席使用统计个数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTelCallInfoResponse extends AbstractModel
 {
     /**
-     * @var integer 电话呼出统计分钟数
+     * @var integer 呼出套餐包消耗分钟数
      */
     public $TelCallOutCount;
 
     /**
-     * @var integer 电话呼入统计分钟数
+     * @var integer 呼入套餐包消耗分钟数
      */
     public $TelCallInCount;
 
@@ -52,8 +52,8 @@ class DescribeTelCallInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TelCallOutCount 电话呼出统计分钟数
-     * @param integer $TelCallInCount 电话呼入统计分钟数
+     * @param integer $TelCallOutCount 呼出套餐包消耗分钟数
+     * @param integer $TelCallInCount 呼入套餐包消耗分钟数
      * @param integer $SeatUsedCount 坐席使用统计个数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 目标视频信息。
  *
- * @method integer getWidth() 获取视频宽度，单位像素
- * @method void setWidth(integer $Width) 设置视频宽度，单位像素
- * @method integer getHeight() 获取视频高度，单位像素
- * @method void setHeight(integer $Height) 设置视频高度，单位像素
+ * @method integer getWidth() 获取视频宽度，单位像素，一般要求是偶数，否则会向下对齐。
+ * @method void setWidth(integer $Width) 设置视频宽度，单位像素，一般要求是偶数，否则会向下对齐。
+ * @method integer getHeight() 获取视频高度，单位像素，一般要求是偶数，否则会向下对齐。
+ * @method void setHeight(integer $Height) 设置视频高度，单位像素，一般要求是偶数，否则会向下对齐。
  * @method integer getFrameRate() 获取视频帧率，范围在1到120之间
  * @method void setFrameRate(integer $FrameRate) 设置视频帧率，范围在1到120之间
  */
 class TargetVideoInfo extends AbstractModel
 {
     /**
-     * @var integer 视频宽度，单位像素
+     * @var integer 视频宽度，单位像素，一般要求是偶数，否则会向下对齐。
      */
     public $Width;
 
     /**
-     * @var integer 视频高度，单位像素
+     * @var integer 视频高度，单位像素，一般要求是偶数，否则会向下对齐。
      */
     public $Height;
 
@@ -45,8 +45,8 @@ class TargetVideoInfo extends AbstractModel
     public $FrameRate;
 
     /**
-     * @param integer $Width 视频宽度，单位像素
-     * @param integer $Height 视频高度，单位像素
+     * @param integer $Width 视频宽度，单位像素，一般要求是偶数，否则会向下对齐。
+     * @param integer $Height 视频高度，单位像素，一般要求是偶数，否则会向下对齐。
      * @param integer $FrameRate 视频帧率，范围在1到120之间
      */
     function __construct()

@@ -112,6 +112,10 @@ reject：拒绝，高风险恶意
 2062 疑似 虚拟设备 请求设备为模拟器、脚本、云设备等虚拟设备
 2063 疑似 群控设备 请求设备为猫池、手机墙等群控设备
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConstId() 获取唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConstId(string $ConstId) 设置唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputManageMarketingRiskValue extends AbstractModel
 {
@@ -186,6 +190,12 @@ reject：拒绝，高风险恶意
     public $RiskType;
 
     /**
+     * @var string 唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConstId;
+
+    /**
      * @param string $UserId 账号ID。对应输入参数：
 AccountType是1时，对应QQ的OpenID。
 AccountType是2时，对应微信的OpenID/UnionID。
@@ -232,6 +242,8 @@ reject：拒绝，高风险恶意
 2062 疑似 虚拟设备 请求设备为模拟器、脚本、云设备等虚拟设备
 2063 疑似 群控设备 请求设备为猫池、手机墙等群控设备
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConstId 唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -268,6 +280,10 @@ reject：拒绝，高风险恶意
 
         if (array_key_exists("RiskType",$param) and $param["RiskType"] !== null) {
             $this->RiskType = $param["RiskType"];
+        }
+
+        if (array_key_exists("ConstId",$param) and $param["ConstId"] !== null) {
+            $this->ConstId = $param["ConstId"];
         }
     }
 }

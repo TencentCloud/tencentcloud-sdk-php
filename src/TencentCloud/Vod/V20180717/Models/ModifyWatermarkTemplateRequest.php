@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取水印模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置水印模板唯一标识。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getName() 获取水印模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置水印模板名称，长度限制：64 个字符。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
@@ -54,8 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextTemplate(TextWatermarkTemplateInputForUpdate $TextTemplate) 设置文字水印模板，该字段仅对文字水印模板有效。
  * @method SvgWatermarkInputForUpdate getSvgTemplate() 获取SVG 水印模板，该字段仅对 SVG 水印模板有效。
  * @method void setSvgTemplate(SvgWatermarkInputForUpdate $SvgTemplate) 设置SVG 水印模板，该字段仅对 SVG 水印模板有效。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class ModifyWatermarkTemplateRequest extends AbstractModel
 {
@@ -63,6 +63,11 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
      * @var integer 水印模板唯一标识。
      */
     public $Definition;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string 水印模板名称，长度限制：64 个字符。
@@ -113,12 +118,8 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
     public $SvgTemplate;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param integer $Definition 水印模板唯一标识。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 水印模板名称，长度限制：64 个字符。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param string $CoordinateOrigin 原点位置，可选值：
@@ -135,7 +136,6 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
      * @param ImageWatermarkInputForUpdate $ImageTemplate 图片水印模板，该字段仅对图片水印模板有效。
      * @param TextWatermarkTemplateInputForUpdate $TextTemplate 文字水印模板，该字段仅对文字水印模板有效。
      * @param SvgWatermarkInputForUpdate $SvgTemplate SVG 水印模板，该字段仅对 SVG 水印模板有效。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -152,6 +152,10 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -187,10 +191,6 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
         if (array_key_exists("SvgTemplate",$param) and $param["SvgTemplate"] !== null) {
             $this->SvgTemplate = new SvgWatermarkInputForUpdate();
             $this->SvgTemplate->deserialize($param["SvgTemplate"]);
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

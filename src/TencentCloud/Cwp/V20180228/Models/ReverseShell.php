@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentProcGroup(string $ParentProcGroup) 设置父进程用户组
  * @method string getParentProcPath() 获取父进程路径
  * @method void setParentProcPath(string $ParentProcPath) 设置父进程路径
- * @method integer getStatus() 获取处理状态：0-待处理 2-白名单
- * @method void setStatus(integer $Status) 设置处理状态：0-待处理 2-白名单
+ * @method integer getStatus() 获取处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
+ * @method void setStatus(integer $Status) 设置处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
  * @method string getCreateTime() 获取产生时间
  * @method void setCreateTime(string $CreateTime) 设置产生时间
  * @method string getMachineName() 获取主机名
@@ -139,7 +139,7 @@ class ReverseShell extends AbstractModel
     public $ParentProcPath;
 
     /**
-     * @var integer 处理状态：0-待处理 2-白名单
+     * @var integer 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
      */
     public $Status;
 
@@ -179,7 +179,7 @@ class ReverseShell extends AbstractModel
      * @param string $ParentProcUser 父进程用户
      * @param string $ParentProcGroup 父进程用户组
      * @param string $ParentProcPath 父进程路径
-     * @param integer $Status 处理状态：0-待处理 2-白名单
+     * @param integer $Status 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
      * @param string $CreateTime 产生时间
      * @param string $MachineName 主机名
      * @param string $ProcTree 进程树

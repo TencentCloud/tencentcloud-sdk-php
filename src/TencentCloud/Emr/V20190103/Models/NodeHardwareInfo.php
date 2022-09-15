@@ -182,6 +182,38 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportModifyPayMode(integer $SupportModifyPayMode) 设置是否支持变更计费类型 1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRootStorageType() 获取系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRootStorageType(integer $RootStorageType) 设置系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZone(string $Zone) 设置可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SubnetInfo getSubnetInfo() 获取子网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubnetInfo(SubnetInfo $SubnetInfo) 设置子网
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClients() 获取客户端
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClients(string $Clients) 设置客户端
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCurrentTime() 获取系统当前时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrentTime(string $CurrentTime) 设置系统当前时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsFederation() 获取是否用于联邦
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsFederation(integer $IsFederation) 设置是否用于联邦
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceName() 获取设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeviceName(string $DeviceName) 设置设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServiceClient() 获取服务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceClient(string $ServiceClient) 设置服务
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -427,6 +459,54 @@ class NodeHardwareInfo extends AbstractModel
     public $SupportModifyPayMode;
 
     /**
+     * @var integer 系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RootStorageType;
+
+    /**
+     * @var string 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zone;
+
+    /**
+     * @var SubnetInfo 子网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubnetInfo;
+
+    /**
+     * @var string 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Clients;
+
+    /**
+     * @var string 系统当前时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CurrentTime;
+
+    /**
+     * @var integer 是否用于联邦
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsFederation;
+
+    /**
+     * @var string 设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeviceName;
+
+    /**
+     * @var string 服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceClient;
+
+    /**
      * @param integer $AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialNo 序列号
@@ -507,6 +587,22 @@ class NodeHardwareInfo extends AbstractModel
      * @param string $DynamicPodSpec 浮动规格值json字符串
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportModifyPayMode 是否支持变更计费类型 1是，0否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RootStorageType 系统盘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetInfo $SubnetInfo 子网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Clients 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CurrentTime 系统当前时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsFederation 是否用于联邦
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceName 设备名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServiceClient 服务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -691,6 +787,39 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("SupportModifyPayMode",$param) and $param["SupportModifyPayMode"] !== null) {
             $this->SupportModifyPayMode = $param["SupportModifyPayMode"];
+        }
+
+        if (array_key_exists("RootStorageType",$param) and $param["RootStorageType"] !== null) {
+            $this->RootStorageType = $param["RootStorageType"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("SubnetInfo",$param) and $param["SubnetInfo"] !== null) {
+            $this->SubnetInfo = new SubnetInfo();
+            $this->SubnetInfo->deserialize($param["SubnetInfo"]);
+        }
+
+        if (array_key_exists("Clients",$param) and $param["Clients"] !== null) {
+            $this->Clients = $param["Clients"];
+        }
+
+        if (array_key_exists("CurrentTime",$param) and $param["CurrentTime"] !== null) {
+            $this->CurrentTime = $param["CurrentTime"];
+        }
+
+        if (array_key_exists("IsFederation",$param) and $param["IsFederation"] !== null) {
+            $this->IsFederation = $param["IsFederation"];
+        }
+
+        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
+            $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("ServiceClient",$param) and $param["ServiceClient"] !== null) {
+            $this->ServiceClient = $param["ServiceClient"];
         }
     }
 }

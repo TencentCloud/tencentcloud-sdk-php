@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDiskIds() 获取一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
  * @method void setDiskIds(array $DiskIds) 设置一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
- * @method integer getProjectId() 获取新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
- * @method void setProjectId(integer $ProjectId) 设置新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
  * @method string getDiskName() 获取新的云硬盘名称。
  * @method void setDiskName(string $DiskName) 设置新的云硬盘名称。
  * @method boolean getPortable() 获取是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
  * @method void setPortable(boolean $Portable) 设置是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
+ * @method integer getProjectId() 获取新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
+ * @method void setProjectId(integer $ProjectId) 设置新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
  * @method boolean getDeleteWithInstance() 获取成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
  * @method string getDiskType() 获取变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。<br>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
@@ -41,11 +41,6 @@ class ModifyDiskAttributesRequest extends AbstractModel
     public $DiskIds;
 
     /**
-     * @var integer 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
-     */
-    public $ProjectId;
-
-    /**
      * @var string 新的云硬盘名称。
      */
     public $DiskName;
@@ -54,6 +49,11 @@ class ModifyDiskAttributesRequest extends AbstractModel
      * @var boolean 是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
      */
     public $Portable;
+
+    /**
+     * @var integer 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
+     */
+    public $ProjectId;
 
     /**
      * @var boolean 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
@@ -67,9 +67,9 @@ class ModifyDiskAttributesRequest extends AbstractModel
 
     /**
      * @param array $DiskIds 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
-     * @param integer $ProjectId 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
      * @param string $DiskName 新的云硬盘名称。
      * @param boolean $Portable 是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
+     * @param integer $ProjectId 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
      * @param boolean $DeleteWithInstance 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
      * @param string $DiskType 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。<br>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
      */
@@ -90,16 +90,16 @@ class ModifyDiskAttributesRequest extends AbstractModel
             $this->DiskIds = $param["DiskIds"];
         }
 
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
         if (array_key_exists("DiskName",$param) and $param["DiskName"] !== null) {
             $this->DiskName = $param["DiskName"];
         }
 
         if (array_key_exists("Portable",$param) and $param["Portable"] !== null) {
             $this->Portable = $param["Portable"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
 
         if (array_key_exists("DeleteWithInstance",$param) and $param["DeleteWithInstance"] !== null) {

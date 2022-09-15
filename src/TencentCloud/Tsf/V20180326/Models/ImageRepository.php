@@ -76,9 +76,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置applicationid值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ScalableRule getApplicationName() 获取ApplicationName值
+ * @method ScalableRule getApplicationName() 获取ApplicationName值（废弃）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setApplicationName(ScalableRule $ApplicationName) 设置ApplicationName值
+ * @method void setApplicationName(ScalableRule $ApplicationName) 设置ApplicationName值（废弃）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationNameReal() 获取ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationNameReal(string $ApplicationNameReal) 设置ApplicationName值
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageRepository extends AbstractModel
@@ -168,10 +172,16 @@ class ImageRepository extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @var ScalableRule ApplicationName值
+     * @var ScalableRule ApplicationName值（废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
+
+    /**
+     * @var string ApplicationName值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationNameReal;
 
     /**
      * @param string $Reponame 仓库名,含命名空间,如tsf/nginx
@@ -202,7 +212,9 @@ class ImageRepository extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId applicationid值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScalableRule $ApplicationName ApplicationName值
+     * @param ScalableRule $ApplicationName ApplicationName值（废弃）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationNameReal ApplicationName值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -278,6 +290,10 @@ class ImageRepository extends AbstractModel
         if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
             $this->ApplicationName = new ScalableRule();
             $this->ApplicationName->deserialize($param["ApplicationName"]);
+        }
+
+        if (array_key_exists("ApplicationNameReal",$param) and $param["ApplicationNameReal"] !== null) {
+            $this->ApplicationNameReal = $param["ApplicationNameReal"];
         }
     }
 }

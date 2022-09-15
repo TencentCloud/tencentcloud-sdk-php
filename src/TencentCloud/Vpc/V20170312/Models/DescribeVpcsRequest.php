@@ -24,7 +24,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcIds(array $VpcIds) 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
  * @method array getFilters() 获取过滤条件，不支持同时指定VpcIds和Filters参数。
 支持的过滤条件如下：
-<li>vpc-name：VPC实例名称。</li>
+<li>vpc-name：VPC实例名称，支持模糊查询。</li>
 <li>is-default ：是否默认VPC。</li>
 <li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
 <li>cidr-block：VPC的CIDR。</li>
@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
   **说明：**若同一个过滤条件（Filter）存在多个Values，则同一Filter下Values间的关系为逻辑或（OR）关系；若存在多个过滤条件（Filter），Filter之间的关系为逻辑与（AND）关系。
  * @method void setFilters(array $Filters) 设置过滤条件，不支持同时指定VpcIds和Filters参数。
 支持的过滤条件如下：
-<li>vpc-name：VPC实例名称。</li>
+<li>vpc-name：VPC实例名称，支持模糊查询。</li>
 <li>is-default ：是否默认VPC。</li>
 <li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
 <li>cidr-block：VPC的CIDR。</li>
@@ -55,7 +55,7 @@ class DescribeVpcsRequest extends AbstractModel
     /**
      * @var array 过滤条件，不支持同时指定VpcIds和Filters参数。
 支持的过滤条件如下：
-<li>vpc-name：VPC实例名称。</li>
+<li>vpc-name：VPC实例名称，支持模糊查询。</li>
 <li>is-default ：是否默认VPC。</li>
 <li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
 <li>cidr-block：VPC的CIDR。</li>
@@ -79,7 +79,7 @@ class DescribeVpcsRequest extends AbstractModel
      * @param array $VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @param array $Filters 过滤条件，不支持同时指定VpcIds和Filters参数。
 支持的过滤条件如下：
-<li>vpc-name：VPC实例名称。</li>
+<li>vpc-name：VPC实例名称，支持模糊查询。</li>
 <li>is-default ：是否默认VPC。</li>
 <li>vpc-id ：VPC实例ID，例如：vpc-f49l6u0z。</li>
 <li>cidr-block：VPC的CIDR。</li>

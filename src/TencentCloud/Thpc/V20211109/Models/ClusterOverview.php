@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManagerNodeCount(integer $ManagerNodeCount) 设置管控节点数量。
  * @method array getManagerNodeSet() 获取管控节点概览。
  * @method void setManagerNodeSet(array $ManagerNodeSet) 设置管控节点概览。
+ * @method array getLoginNodeSet() 获取登录节点概览。
+ * @method void setLoginNodeSet(array $LoginNodeSet) 设置登录节点概览。
+ * @method integer getLoginNodeCount() 获取登录节点数量。
+ * @method void setLoginNodeCount(integer $LoginNodeCount) 设置登录节点数量。
  */
 class ClusterOverview extends AbstractModel
 {
@@ -94,6 +98,16 @@ class ClusterOverview extends AbstractModel
     public $ManagerNodeSet;
 
     /**
+     * @var array 登录节点概览。
+     */
+    public $LoginNodeSet;
+
+    /**
+     * @var integer 登录节点数量。
+     */
+    public $LoginNodeCount;
+
+    /**
      * @param string $ClusterId 集群ID。
      * @param string $ClusterStatus 集群状态。取值范围：<br><li>PENDING：创建中<br><li>INITING：初始化中<br><li>INIT_FAILED：初始化失败<br><li>RUNNING：运行中<br><li>TERMINATING：销毁中
      * @param string $ClusterName 集群名称。
@@ -104,6 +118,8 @@ class ClusterOverview extends AbstractModel
      * @param array $ComputeNodeSet 计算节点概览。
      * @param integer $ManagerNodeCount 管控节点数量。
      * @param array $ManagerNodeSet 管控节点概览。
+     * @param array $LoginNodeSet 登录节点概览。
+     * @param integer $LoginNodeCount 登录节点数量。
      */
     function __construct()
     {
@@ -167,6 +183,19 @@ class ClusterOverview extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ManagerNodeSet, $obj);
             }
+        }
+
+        if (array_key_exists("LoginNodeSet",$param) and $param["LoginNodeSet"] !== null) {
+            $this->LoginNodeSet = [];
+            foreach ($param["LoginNodeSet"] as $key => $value){
+                $obj = new LoginNodeOverview();
+                $obj->deserialize($value);
+                array_push($this->LoginNodeSet, $obj);
+            }
+        }
+
+        if (array_key_exists("LoginNodeCount",$param) and $param["LoginNodeCount"] !== null) {
+            $this->LoginNodeCount = $param["LoginNodeCount"];
         }
     }
 }

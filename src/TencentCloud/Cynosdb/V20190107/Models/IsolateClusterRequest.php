@@ -22,10 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getDbType() 获取数据库类型，取值范围: 
-<li> MYSQL </li>
- * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
-<li> MYSQL </li>
+ * @method string getDbType() 获取该参数已废用
+ * @method void setDbType(string $DbType) 设置该参数已废用
  */
 class IsolateClusterRequest extends AbstractModel
 {
@@ -35,15 +33,13 @@ class IsolateClusterRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * @var string 该参数已废用
      */
     public $DbType;
 
     /**
      * @param string $ClusterId 集群ID
-     * @param string $DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * @param string $DbType 该参数已废用
      */
     function __construct()
     {

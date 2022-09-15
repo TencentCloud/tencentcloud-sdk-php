@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getFps() 获取帧率，取值范围：[1, 30]，单位：Hz。
  * @method void setFps(integer $Fps) 设置帧率，取值范围：[1, 30]，单位：Hz。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method integer getWidth() 获取动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -62,8 +64,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置转动图模板名称，长度限制：64 个字符。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
 {
@@ -71,6 +71,11 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
      * @var integer 帧率，取值范围：[1, 30]，单位：Hz。
      */
     public $Fps;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var integer 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
@@ -121,12 +126,8 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param integer $Fps 帧率，取值范围：[1, 30]，单位：Hz。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param integer $Width 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -147,7 +148,6 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
      * @param float $Quality 图片质量，取值范围：[1, 100]，默认值为 75。
      * @param string $Name 转动图模板名称，长度限制：64 个字符。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -164,6 +164,10 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
             $this->Fps = $param["Fps"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Width",$param) and $param["Width"] !== null) {
@@ -192,10 +196,6 @@ class CreateAnimatedGraphicsTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

@@ -88,7 +88,8 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeBackupsResponse DescribeBackups(Models\DescribeBackupsRequest $req) 本接口(DescribeBackups)用于查询云数据库实例的备份数据。
  * @method Models\DescribeBinlogBackupOverviewResponse DescribeBinlogBackupOverview(Models\DescribeBinlogBackupOverviewRequest $req) 本接口(DescribeBinlogBackupOverview)用于查询用户在当前地域总的日志备份概览。
  * @method Models\DescribeBinlogsResponse DescribeBinlogs(Models\DescribeBinlogsRequest $req) 本接口(DescribeBinlogs)用于查询云数据库实例的 binlog 文件列表。
- * @method Models\DescribeCDBProxyResponse DescribeCDBProxy(Models\DescribeCDBProxyRequest $req) 查询数据库代理
+ * @method Models\DescribeCDBProxyResponse DescribeCDBProxy(Models\DescribeCDBProxyRequest $req) 查询数据库代理（待下线，替换接口QueryCDBProxy）
+ * @method Models\DescribeCdbZoneConfigResponse DescribeCdbZoneConfig(Models\DescribeCdbZoneConfigRequest $req) 本接口(DescribeCdbZoneConfig)用于查询云数据库各地域可售卖的规格配置。
  * @method Models\DescribeCloneListResponse DescribeCloneList(Models\DescribeCloneListRequest $req) 本接口(DescribeCloneList) 用于查询用户实例的克隆任务列表。
  * @method Models\DescribeDBImportRecordsResponse DescribeDBImportRecords(Models\DescribeDBImportRecordsRequest $req) 本接口(DescribeDBImportRecords)用于查询云数据库导入任务操作日志。
  * @method Models\DescribeDBInstanceCharsetResponse DescribeDBInstanceCharset(Models\DescribeDBInstanceCharsetRequest $req) 本接口(DescribeDBInstanceCharset)用于查询云数据库实例的字符集，获取字符集的名称。
@@ -102,7 +103,6 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 注意：对某个地域进行询价，请使用对应地域的接入点，接入点信息请参照 <a href="https://cloud.tencent.com/document/api/236/15832">服务地址</a> 文档。例如：对广州地域进行询价，请把请求发到：cdb.ap-guangzhou.tencentcloudapi.com。同理对上海地域询价，把请求发到：cdb.ap-shanghai.tencentcloudapi.com。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
  * @method Models\DescribeDBSwitchRecordsResponse DescribeDBSwitchRecords(Models\DescribeDBSwitchRecordsRequest $req) 本接口(DescribeDBSwitchRecords)用于查询云数据库实例切换记录。
- * @method Models\DescribeDBZoneConfigResponse DescribeDBZoneConfig(Models\DescribeDBZoneConfigRequest $req) 本接口(DescribeDBZoneConfig)用于查询可创建的云数据库各地域可售卖的规格配置。
  * @method Models\DescribeDataBackupOverviewResponse DescribeDataBackupOverview(Models\DescribeDataBackupOverviewRequest $req) 本接口(DescribeDataBackupOverview)用于查询用户在当前地域总的数据备份概览。
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口(DescribeDatabases)用于查询云数据库实例的数据库信息，仅支持主实例和灾备实例，不支持只读实例。
  * @method Models\DescribeDefaultParamsResponse DescribeDefaultParams(Models\DescribeDefaultParamsRequest $req) 该接口（DescribeDefaultParams）用于查询默认的可设置参数列表。
@@ -157,6 +157,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
  * @method Models\ModifyDBInstanceVipVportResponse ModifyDBInstanceVipVport(Models\ModifyDBInstanceVipVportRequest $req) 本接口(ModifyDBInstanceVipVport)用于修改云数据库实例的IP和端口号，也可进行基础网络转 VPC 网络和 VPC 网络下的子网变更。
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口(ModifyInstanceParam)用于修改云数据库实例的参数。
+ * @method Models\ModifyInstancePasswordComplexityResponse ModifyInstancePasswordComplexity(Models\ModifyInstancePasswordComplexityRequest $req) 本接口(ModifyInstancePasswordComplexity)用于修改云数据库实例的密码复杂度。
  * @method Models\ModifyInstanceTagResponse ModifyInstanceTag(Models\ModifyInstanceTagRequest $req) 本接口(ModifyInstanceTag)用于对实例标签进行添加、修改或者删除。
  * @method Models\ModifyLocalBinlogConfigResponse ModifyLocalBinlogConfig(Models\ModifyLocalBinlogConfigRequest $req) 该接口用于修改实例本地binlog保留策略。
  * @method Models\ModifyNameOrDescByDpIdResponse ModifyNameOrDescByDpId(Models\ModifyNameOrDescByDpIdRequest $req) 修改置放群组的名称或者描述
@@ -168,6 +169,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 该接口为异步操作，部分资源的回收可能存在延迟。您可以通过使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口，指定实例 InstanceId 和状态 Status 为 [5,6,7] 进行查询，若返回实例为空，则实例资源已全部释放。
 
 注意，实例下线后，相关资源和数据将无法找回，请谨慎操作。
+ * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) CDB实例开通审计服务
  * @method Models\OpenDBInstanceGTIDResponse OpenDBInstanceGTID(Models\OpenDBInstanceGTIDRequest $req) 本接口(OpenDBInstanceGTID)用于开启云数据库实例的 GTID，只支持版本为 5.6 以及以上的实例。
  * @method Models\OpenWanServiceResponse OpenWanService(Models\OpenWanServiceRequest $req) 本接口(OpenWanService)用于开通实例外网访问。
 
@@ -176,6 +178,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\ReleaseIsolatedDBInstancesResponse ReleaseIsolatedDBInstances(Models\ReleaseIsolatedDBInstancesRequest $req) 本接口（ReleaseIsolatedDBInstances）用于恢复已隔离云数据库实例。
  * @method Models\ReloadBalanceProxyNodeResponse ReloadBalanceProxyNode(Models\ReloadBalanceProxyNodeRequest $req) 重新负载均衡数据库代理
  * @method Models\RenewDBInstanceResponse RenewDBInstance(Models\RenewDBInstanceRequest $req) 本接口(RenewDBInstance)用于续费云数据库实例，支持付费模式为包年包月的实例。按量计费实例可通过该接口续费为包年包月的实例。
+ * @method Models\ResetRootAccountResponse ResetRootAccount(Models\ResetRootAccountRequest $req) 重置实例ROOT账号，初始化账号权限
  * @method Models\RestartDBInstancesResponse RestartDBInstances(Models\RestartDBInstancesRequest $req) 本接口(RestartDBInstances)用于重启云数据库实例。
 
 注意：

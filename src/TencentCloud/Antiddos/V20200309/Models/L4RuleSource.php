@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置8000
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBackup() 获取备份源站，1: 备份源站，0: 普通源站
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackup(integer $Backup) 设置备份源站，1: 备份源站，0: 普通源站
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class L4RuleSource extends AbstractModel
 {
@@ -48,9 +52,17 @@ class L4RuleSource extends AbstractModel
     public $Port;
 
     /**
+     * @var integer 备份源站，1: 备份源站，0: 普通源站
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Backup;
+
+    /**
      * @param string $Source 回源IP或域名
      * @param integer $Weight 权重值，取值[0,100]
      * @param integer $Port 8000
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Backup 备份源站，1: 备份源站，0: 普通源站
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -76,6 +88,10 @@ class L4RuleSource extends AbstractModel
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Backup",$param) and $param["Backup"] !== null) {
+            $this->Backup = $param["Backup"];
         }
     }
 }

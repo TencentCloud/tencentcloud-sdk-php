@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowCount(integer $RowCount) 设置雪碧图中小图的行数。
  * @method integer getColumnCount() 获取雪碧图中小图的列数。
  * @method void setColumnCount(integer $ColumnCount) 设置雪碧图中小图的列数。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getName() 获取雪碧图模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置雪碧图模板名称，长度限制：64 个字符。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
@@ -80,8 +82,6 @@ use TencentCloud\Common\AbstractModel;
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
@@ -108,6 +108,11 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
      * @var integer 雪碧图中小图的列数。
      */
     public $ColumnCount;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string 雪碧图模板名称，长度限制：64 个字符。
@@ -156,11 +161,6 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
     public $ResolutionAdaptive;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $SampleType 采样类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li>
@@ -169,6 +169,7 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 <li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li>
      * @param integer $RowCount 雪碧图中小图的行数。
      * @param integer $ColumnCount 雪碧图中小图的列数。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 雪碧图模板名称，长度限制：64 个字符。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
@@ -191,7 +192,6 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -222,6 +222,10 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
             $this->ColumnCount = $param["ColumnCount"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -244,10 +248,6 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 
         if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
             $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

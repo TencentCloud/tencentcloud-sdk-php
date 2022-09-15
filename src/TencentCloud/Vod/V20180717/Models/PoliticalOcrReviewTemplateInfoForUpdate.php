@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置文本鉴别涉及令人不适宜的信息的任务开关，可选值：
 <li>ON：开启文本鉴别涉及令人不适宜的信息的任务；</li>
 <li>OFF：关闭文本鉴别涉及令人不适宜的信息的任务。</li>
- * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
- * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
- * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
- * @method void setReviewConfidence(integer $ReviewConfidence) 设置判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
+ * @method integer getBlockConfidence() 获取判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
+ * @method void setBlockConfidence(integer $BlockConfidence) 设置判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
+ * @method integer getReviewConfidence() 获取判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核。取值范围：0~100。
+ * @method void setReviewConfidence(integer $ReviewConfidence) 设置判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核。取值范围：0~100。
  */
 class PoliticalOcrReviewTemplateInfoForUpdate extends AbstractModel
 {
@@ -41,12 +41,12 @@ class PoliticalOcrReviewTemplateInfoForUpdate extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
+     * @var integer 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
      */
     public $BlockConfidence;
 
     /**
-     * @var integer 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
+     * @var integer 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核。取值范围：0~100。
      */
     public $ReviewConfidence;
 
@@ -54,8 +54,8 @@ class PoliticalOcrReviewTemplateInfoForUpdate extends AbstractModel
      * @param string $Switch 文本鉴别涉及令人不适宜的信息的任务开关，可选值：
 <li>ON：开启文本鉴别涉及令人不适宜的信息的任务；</li>
 <li>OFF：关闭文本鉴别涉及令人不适宜的信息的任务。</li>
-     * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
-     * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
+     * @param integer $BlockConfidence 判定涉嫌违规的分数阈值，当审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
+     * @param integer $ReviewConfidence 判定需人工复核是否违规的分数阈值，当审核达到该分数以上，认为需人工复核。取值范围：0~100。
      */
     function __construct()
     {

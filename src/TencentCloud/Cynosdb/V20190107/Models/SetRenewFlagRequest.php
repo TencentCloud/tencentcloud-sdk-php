@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getResourceIds() 获取需操作的实例ID
  * @method void setResourceIds(array $ResourceIds) 设置需操作的实例ID
- * @method integer getAutoRenewFlag() 获取自动续费标志位
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志位
+ * @method integer getAutoRenewFlag() 获取自动续费标志位，续费标记 0:正常续费  1:自动续费 2:到期不续
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标志位，续费标记 0:正常续费  1:自动续费 2:到期不续
  */
 class SetRenewFlagRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SetRenewFlagRequest extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var integer 自动续费标志位
+     * @var integer 自动续费标志位，续费标记 0:正常续费  1:自动续费 2:到期不续
      */
     public $AutoRenewFlag;
 
     /**
      * @param array $ResourceIds 需操作的实例ID
-     * @param integer $AutoRenewFlag 自动续费标志位
+     * @param integer $AutoRenewFlag 自动续费标志位，续费标记 0:正常续费  1:自动续费 2:到期不续
      */
     function __construct()
     {

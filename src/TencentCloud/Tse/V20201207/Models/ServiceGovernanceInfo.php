@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthOpen(boolean $AuthOpen) 设置当前实例鉴权是否开启
  * @method array getFeatures() 获取该实例支持的功能，鉴权就是 Auth
  * @method void setFeatures(array $Features) 设置该实例支持的功能，鉴权就是 Auth
+ * @method string getMainPassword() 获取主账户名默认为 polaris，该值为主账户的默认密码
+ * @method void setMainPassword(string $MainPassword) 设置主账户名默认为 polaris，该值为主账户的默认密码
+ * @method array getPgwVpcInfos() 获取服务治理pushgateway引擎绑定的网络信息
+ * @method void setPgwVpcInfos(array $PgwVpcInfos) 设置服务治理pushgateway引擎绑定的网络信息
  */
 class ServiceGovernanceInfo extends AbstractModel
 {
@@ -59,11 +63,23 @@ class ServiceGovernanceInfo extends AbstractModel
     public $Features;
 
     /**
+     * @var string 主账户名默认为 polaris，该值为主账户的默认密码
+     */
+    public $MainPassword;
+
+    /**
+     * @var array 服务治理pushgateway引擎绑定的网络信息
+     */
+    public $PgwVpcInfos;
+
+    /**
      * @param string $EngineRegion 引擎所在的地域
      * @param array $BoundK8SInfos 服务治理引擎绑定的kubernetes集群信息
      * @param array $VpcInfos 服务治理引擎绑定的网络信息
      * @param boolean $AuthOpen 当前实例鉴权是否开启
      * @param array $Features 该实例支持的功能，鉴权就是 Auth
+     * @param string $MainPassword 主账户名默认为 polaris，该值为主账户的默认密码
+     * @param array $PgwVpcInfos 服务治理pushgateway引擎绑定的网络信息
      */
     function __construct()
     {
@@ -106,6 +122,19 @@ class ServiceGovernanceInfo extends AbstractModel
 
         if (array_key_exists("Features",$param) and $param["Features"] !== null) {
             $this->Features = $param["Features"];
+        }
+
+        if (array_key_exists("MainPassword",$param) and $param["MainPassword"] !== null) {
+            $this->MainPassword = $param["MainPassword"];
+        }
+
+        if (array_key_exists("PgwVpcInfos",$param) and $param["PgwVpcInfos"] !== null) {
+            $this->PgwVpcInfos = [];
+            foreach ($param["PgwVpcInfos"] as $key => $value){
+                $obj = new VpcInfo();
+                $obj->deserialize($value);
+                array_push($this->PgwVpcInfos, $obj);
+            }
         }
     }
 }

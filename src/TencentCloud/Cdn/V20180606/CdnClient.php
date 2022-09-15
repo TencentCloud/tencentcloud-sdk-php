@@ -23,7 +23,8 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cdn\V20180606\Models as Models;
 
 /**
- * @method Models\AddCdnDomainResponse AddCdnDomain(Models\AddCdnDomainRequest $req) AddCdnDomain 用于新增内容分发网络加速域名。
+ * @method Models\AddCLSTopicDomainsResponse AddCLSTopicDomains(Models\AddCLSTopicDomainsRequest $req) AddCLSTopicDomains 用于新增域名到某日志主题下
+ * @method Models\AddCdnDomainResponse AddCdnDomain(Models\AddCdnDomainRequest $req) AddCdnDomain 用于新增内容分发网络加速域名。1分钟内最多可新增100个域名。
  * @method Models\CreateClsLogTopicResponse CreateClsLogTopic(Models\CreateClsLogTopicRequest $req) CreateClsLogTopic 用于创建日志主题。注意：一个日志集下至多可创建10个日志主题。
  * @method Models\CreateDiagnoseUrlResponse CreateDiagnoseUrl(Models\CreateDiagnoseUrlRequest $req) CreateDiagnoseUrl 用于添加域名诊断任务URL
  * @method Models\CreateEdgePackTaskResponse CreateEdgePackTask(Models\CreateEdgePackTaskRequest $req) 动态打包任务提交接口
@@ -86,7 +87,6 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) DescribePurgeTasks 用于查询提交的 URL 刷新、目录刷新记录及执行进度，通过 PurgePathCache 与 PurgeUrlsCache 接口提交的任务均可通过此接口进行查询。
  * @method Models\DescribePushQuotaResponse DescribePushQuota(Models\DescribePushQuotaRequest $req) DescribePushQuota  用于查询预热配额和每日可用量。
  * @method Models\DescribePushTasksResponse DescribePushTasks(Models\DescribePushTasksRequest $req) DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
-接口灰度中，暂未全量开放，敬请期待。
  * @method Models\DescribeReportDataResponse DescribeReportData(Models\DescribeReportDataRequest $req) DescribeReportData 用于查询域名/项目维度的日/周/月报表数据。
  * @method Models\DescribeScdnBotDataResponse DescribeScdnBotData(Models\DescribeScdnBotDataRequest $req) 获取BOT统计数据列表
  * @method Models\DescribeScdnBotRecordsResponse DescribeScdnBotRecords(Models\DescribeScdnBotRecordsRequest $req) 查询BOT会话记录列表
@@ -105,7 +105,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 + 仅支持 90 天内数据查询，且从2021年09月20日开始有数据
 + 本接口为beta版，尚未正式全量发布
 
- * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) DescribeTrafficPackages 用于查询中国境内 CDN 流量包详情。
+ * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) DescribeTrafficPackages 用于查询 CDN 流量包详情。
  * @method Models\DescribeUrlViolationsResponse DescribeUrlViolations(Models\DescribeUrlViolationsRequest $req) DescribeUrlViolations 用于查询被 CDN 系统扫描到的域名违规 URL 列表及当前状态。
 对应内容分发网络控制台【图片鉴黄】页面。
  * @method Models\DescribeWafDataResponse DescribeWafData(Models\DescribeWafDataRequest $req) Waf统计数据查询
@@ -139,11 +139,11 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\ManageClsTopicDomainsResponse ManageClsTopicDomains(Models\ManageClsTopicDomainsRequest $req) ManageClsTopicDomains 用于管理某日志主题下绑定的域名列表。
  * @method Models\ModifyPurgeFetchTaskStatusResponse ModifyPurgeFetchTaskStatus(Models\ModifyPurgeFetchTaskStatusRequest $req) ModifyPurgeFetchTaskStatus 用于上报定时刷新预热任务执行状态
  * @method Models\PurgePathCacheResponse PurgePathCache(Models\PurgePathCacheRequest $req) PurgePathCache 用于批量提交目录刷新，根据域名的加速区域进行对应区域的刷新。
-默认情况下境内、境外加速区域每日目录刷新额度为各 100 条，每次最多可提交 20 条。
+默认情况下境内、境外加速区域每日目录刷新额度为各 100 条，每次最多可提交 500 条。
  * @method Models\PurgeUrlsCacheResponse PurgeUrlsCache(Models\PurgeUrlsCacheRequest $req) PurgeUrlsCache 用于批量提交 URL 进行刷新，根据 URL 中域名的当前加速区域进行对应区域的刷新。
 默认情况下境内、境外加速区域每日 URL 刷新额度各为 10000 条，每次最多可提交 1000 条。
  * @method Models\PushUrlsCacheResponse PushUrlsCache(Models\PushUrlsCacheRequest $req) PushUrlsCache 用于将指定 URL 资源列表加载至 CDN 节点，支持指定加速区域预热。
-默认情况下境内、境外每日预热 URL 限额为各 1000 条，每次最多可提交 20 条。注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
+默认情况下境内、境外每日预热 URL 限额为各 1000 条，每次最多可提交 500 条。注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
  * @method Models\SearchClsLogResponse SearchClsLog(Models\SearchClsLogRequest $req) SearchClsLog 用于 CLS 日志检索。支持检索今天，24小时（可选近7中的某一天），近7天的日志数据。
  * @method Models\StartCdnDomainResponse StartCdnDomain(Models\StartCdnDomainRequest $req) StartCdnDomain 用于启用已停用域名的加速服务
  * @method Models\StartScdnDomainResponse StartScdnDomain(Models\StartScdnDomainRequest $req) StartScdnDomain 用于开启域名的安全防护配置
@@ -152,6 +152,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
  * @method Models\StopScdnDomainResponse StopScdnDomain(Models\StopScdnDomainRequest $req) StopScdnDomain 用于关闭域名的安全防护配置
  * @method Models\UpdateDomainConfigResponse UpdateDomainConfig(Models\UpdateDomainConfigRequest $req) UpdateDomainConfig 用于修改内容分发网络加速域名配置信息
 注意：如果需要更新复杂类型的配置项，必须传递整个对象的所有属性，未传递的属性将使用默认值，建议通过查询接口获取配置属性后，直接修改后传递给本接口。Https配置由于证书的特殊性，更新时不用传递证书和密钥字段。
+云审计相关：接口的入参可能包含密钥等敏感信息，所以此接口的入参不会上报到云审计。
  * @method Models\UpdateImageConfigResponse UpdateImageConfig(Models\UpdateImageConfigRequest $req) UpdateImageConfig 用于更新控制台图片优化的相关配置，支持Webp、TPG 和 Guetzli。 
  * @method Models\UpdatePayTypeResponse UpdatePayType(Models\UpdatePayTypeRequest $req) 本接口(UpdatePayType)用于修改账号计费类型，暂不支持月结用户或子账号修改。
  * @method Models\UpdateScdnDomainResponse UpdateScdnDomain(Models\UpdateScdnDomainRequest $req) UpdateScdnDomain 用于修改 SCDN 加速域名安全相关配置

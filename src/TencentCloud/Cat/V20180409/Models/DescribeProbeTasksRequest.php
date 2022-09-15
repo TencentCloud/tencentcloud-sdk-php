@@ -27,7 +27,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTargetAddress() 获取拨测目标
  * @method void setTargetAddress(string $TargetAddress) 设置拨测目标
  * @method array getTaskStatus() 获取任务状态列表
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
  * @method void setTaskStatus(array $TaskStatus) 设置任务状态列表
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100
@@ -45,7 +65,23 @@ use TencentCloud\Common\AbstractModel;
 <li>1 = 正常</li>
 <li> 2 = 欠费 </li>
  * @method array getTaskType() 获取拨测类型
+<li>1 = 页面浏览</li>
+<li> 2 =文件上传 </li>
+<li> 3 = 文件下载</li>
+<li> 4 = 端口性能 </li>
+<li> 5 = 网络质量 </li>
+<li> 6 =流媒体 </li>
+
+即使拨测只支持页面浏览，网络质量，文件下载
  * @method void setTaskType(array $TaskType) 设置拨测类型
+<li>1 = 页面浏览</li>
+<li> 2 =文件上传 </li>
+<li> 3 = 文件下载</li>
+<li> 4 = 端口性能 </li>
+<li> 5 = 网络质量 </li>
+<li> 6 =流媒体 </li>
+
+即使拨测只支持页面浏览，网络质量，文件下载
  * @method array getTaskCategory() 获取节点类型
  * @method void setTaskCategory(array $TaskCategory) 设置节点类型
  * @method string getOrderBy() 获取排序的列
@@ -74,6 +110,16 @@ class DescribeProbeTasksRequest extends AbstractModel
 
     /**
      * @var array 任务状态列表
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
      */
     public $TaskStatus;
 
@@ -103,6 +149,14 @@ class DescribeProbeTasksRequest extends AbstractModel
 
     /**
      * @var array 拨测类型
+<li>1 = 页面浏览</li>
+<li> 2 =文件上传 </li>
+<li> 3 = 文件下载</li>
+<li> 4 = 端口性能 </li>
+<li> 5 = 网络质量 </li>
+<li> 6 =流媒体 </li>
+
+即使拨测只支持页面浏览，网络质量，文件下载
      */
     public $TaskType;
 
@@ -131,6 +185,16 @@ class DescribeProbeTasksRequest extends AbstractModel
      * @param string $TaskName 任务名
      * @param string $TargetAddress 拨测目标
      * @param array $TaskStatus 任务状态列表
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大值为100
      * @param integer $PayMode 付费模式
@@ -140,6 +204,14 @@ class DescribeProbeTasksRequest extends AbstractModel
 <li>1 = 正常</li>
 <li> 2 = 欠费 </li>
      * @param array $TaskType 拨测类型
+<li>1 = 页面浏览</li>
+<li> 2 =文件上传 </li>
+<li> 3 = 文件下载</li>
+<li> 4 = 端口性能 </li>
+<li> 5 = 网络质量 </li>
+<li> 6 =流媒体 </li>
+
+即使拨测只支持页面浏览，网络质量，文件下载
      * @param array $TaskCategory 节点类型
      * @param string $OrderBy 排序的列
      * @param boolean $Ascend 是否正序

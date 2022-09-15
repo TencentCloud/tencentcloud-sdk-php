@@ -23,14 +23,28 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Trtc\V20190722\Models as Models;
 
 /**
+ * @method Models\CreateCloudRecordingResponse CreateCloudRecording(Models\CreateCloudRecordingRequest $req) 接口说明：
+启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。您可以通过此 API 接口把TRTC 房间中的每一路音视频流做单独的录制有或者多路视频画面混流一路。
+
+您可以通过此接口实现如下目标：
+* 指定订阅流参数（RecordParams）来指定需要录制的主播的黑名单或者白名单。
+* 指定第三方存储的参数（StorageParams）来指定上传到您希望的云存储，目前仅支持云点播存储（CloudVod）
+* 指定混流模式下的音视频转码详细参数（MixTranscodeParams），包括视频分辨率、视频码率、视频帧率、以及声音质量等
+* 指定混流模式各路画面的位置和布局或者也可以指定自动模板的方式来配置。
+
+关键名词：
+* 单流录制：分别录制房间的订阅UserId的音频和视频。录制服务会实时将录制文件上传至云点播存储。
+* 合流录制：将房间内订阅UserId的音视频混录成一个音视频文件，并将录制文件上传至云点播存储（录制结束后可前往云点播控制台查看录制文件：https://console.cloud.tencent.com/vod/media）。
  * @method Models\CreatePictureResponse CreatePicture(Models\CreatePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
- * @method Models\CreateTroubleInfoResponse CreateTroubleInfo(Models\CreateTroubleInfoRequest $req) 创建异常信息
+ * @method Models\DeleteCloudRecordingResponse DeleteCloudRecording(Models\DeleteCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
  * @method Models\DeletePictureResponse DeletePicture(Models\DeletePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁删除自定义背景图或水印，可通过此接口删除已上传的图片。无需频繁删除图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
- * @method Models\DescribeAbnormalEventResponse DescribeAbnormalEvent(Models\DescribeAbnormalEventRequest $req) 查询SDKAppID下用户的异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询15天内数据，查询起止时间不超过1个小时。支持跨天查询。异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
- * @method Models\DescribeCallDetailResponse DescribeCallDetail(Models\DescribeCallDetailRequest $req) 查询指定时间内的用户列表及用户通话质量数据，可查询14天内数据。DataType 不为null，查询起止时间不超过1个小时，查询用户不超过6个，支持跨天查询。DataType，UserIds为null时，查询起止时间不超过4个小时， 默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。
-**注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
- * @method Models\DescribeDetailEventResponse DescribeDetailEvent(Models\DescribeDetailEventRequest $req) 查询用户某次通话内的进退房，视频开关等详细事件。可查询14天内数据。
- * @method Models\DescribeHistoryScaleResponse DescribeHistoryScale(Models\DescribeHistoryScaleRequest $req) 可查询sdkqppid 每天的房间数和用户数，每分钟1次，可查询最近14天的数据。当天未结束，无法查到当天的房间数与用户数。 
+ * @method Models\DescribeCallDetailInfoResponse DescribeCallDetailInfo(Models\DescribeCallDetailInfoRequest $req) 查询指定时间内的用户列表及用户通话质量数据，可查询14天内数据。DataType 不为null，查询起止时间不超过1个小时，查询用户不超过6个，支持跨天查询。DataType为null时，查询起止时间不超过4个小时， 默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。（同老接口DescribeCallDetail）
+**注意**：
+1.该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
+2.该接口目前免费提供中，监控仪表盘商业化计费后该接口需要订阅付费版后方可调用，仪表盘商业化说明请见：https://cloud.tencent.com/document/product/647/77735
+ * @method Models\DescribeCloudRecordingResponse DescribeCloudRecording(Models\DescribeCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来查询录制状态。仅在录制任务进行时有效，录制退出后查询将会返回错误。
+录制文件上传到云点播VOD时，StorageFileList中不会返回录制文件信息，请订阅相关录制文件回调事件，获取录制文件信息。
+ * @method Models\DescribeExternalTrtcMeasureResponse DescribeExternalTrtcMeasure(Models\DescribeExternalTrtcMeasureRequest $req) 获取Trtc的用量统计数据。走计费渠道二期 只允许查两天的数据
  * @method Models\DescribePictureResponse DescribePicture(Models\DescribePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁查找自定义背景图或水印信息，可通过此接口查找已上传的图片信息。无需频繁查找图片信息的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中查看。
  * @method Models\DescribeRecordStatisticResponse DescribeRecordStatistic(Models\DescribeRecordStatisticRequest $req) 查询云端录制计费时长。
 
@@ -38,17 +52,26 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 - 单次查询统计区间最多不能超过31天。
 - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
 - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
- * @method Models\DescribeRoomInformationResponse DescribeRoomInformation(Models\DescribeRoomInformationRequest $req) 查询sdkappid下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。
-**注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
+ * @method Models\DescribeRoomInfoResponse DescribeRoomInfo(Models\DescribeRoomInfoRequest $req) 查询SdkAppId下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。（同老接口DescribeRoomInformation）
+**注意**：
+1.该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
+2.该接口目前免费提供中，监控仪表盘商业化计费后该接口需要订阅付费版后方可调用，仪表盘商业化说明请见：https://cloud.tencent.com/document/product/647/77735
+ * @method Models\DescribeScaleInfoResponse DescribeScaleInfo(Models\DescribeScaleInfoRequest $req) 可查询SdkAppId每天的房间数和用户数，按天统计，可查询最近14天的数据。当天未结束，数据未统计完成，无法查到当天的房间数与用户数。（同老接口DescribeHistoryScale） 
  * @method Models\DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTime(Models\DescribeTrtcMcuTranscodeTimeRequest $req) 查询旁路转码计费时长。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
 - 单次查询统计区间最多不能超过31天。
 - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
 - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
- * @method Models\DescribeUserInformationResponse DescribeUserInformation(Models\DescribeUserInformationRequest $req) 查询指定时间内的用户列表，可查询14天内数据，查询起止时间不超过4小时。默认每页查询6个用户，支持每页最大查询100个用户PageSize不超过100）。
-**注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
+ * @method Models\DescribeUnusualEventResponse DescribeUnusualEvent(Models\DescribeUnusualEventRequest $req) 查询SdkAppId下任意20条异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询14天内数据，查询起止时间不超过1个小时。支持跨天查询。（同老接口DescribeAbnormalEvent）
+异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
+ * @method Models\DescribeUserEventResponse DescribeUserEvent(Models\DescribeUserEventRequest $req) 查询用户某次通话内的进退房，视频开关等详细事件。可查询14天内数据。（同接口DescribeDetailEvent）
+ * @method Models\DescribeUserInfoResponse DescribeUserInfo(Models\DescribeUserInfoRequest $req) 查询指定时间内的用户列表，可查询14天内数据，查询起止时间不超过4小时。默认每页查询6个用户，支持每页最大查询100个用户PageSize不超过100）。（同老接口DescribeUserInformation）
+**注意**：
+1.该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
+2.该接口目前免费提供中，监控仪表盘商业化计费后该接口需要订阅付费版后方可调用，仪表盘商业化说明请见：https://cloud.tencent.com/document/product/647/77735
  * @method Models\DismissRoomResponse DismissRoom(Models\DismissRoomRequest $req) 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\DismissRoomByStrRoomIdResponse DismissRoomByStrRoomId(Models\DismissRoomByStrRoomIdRequest $req) 接口说明：把房间所有用户从房间移出，解散房间。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
+ * @method Models\ModifyCloudRecordingResponse ModifyCloudRecording(Models\ModifyCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来更新录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。更新操作是全量覆盖，并不是增量更新的模式，也就是说每次更新都需要携带全量的信息。
  * @method Models\ModifyPictureResponse ModifyPicture(Models\ModifyPictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁修改自定义背景图或水印素材，可通过此接口修改已上传的图片。无需频繁修改图片素材的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
  * @method Models\RemoveUserResponse RemoveUser(Models\RemoveUserRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。
  * @method Models\RemoveUserByStrRoomIdResponse RemoveUserByStrRoomId(Models\RemoveUserByStrRoomIdRequest $req) 接口说明：将用户从房间移出，适用于主播/房主/管理员踢人等场景。支持所有平台，Android、iOS、Windows 和 macOS 需升级到 TRTC SDK 6.6及以上版本。

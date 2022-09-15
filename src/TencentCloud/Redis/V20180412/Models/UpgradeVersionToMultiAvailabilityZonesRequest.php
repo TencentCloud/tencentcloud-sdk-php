@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method boolean getUpgradeProxyAndRedisServer() 获取是否升级proxy和redis内核版本，升级后可支持就近接入
+ * @method void setUpgradeProxyAndRedisServer(boolean $UpgradeProxyAndRedisServer) 设置是否升级proxy和redis内核版本，升级后可支持就近接入
  */
 class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean 是否升级proxy和redis内核版本，升级后可支持就近接入
+     */
+    public $UpgradeProxyAndRedisServer;
+
+    /**
      * @param string $InstanceId 实例ID
+     * @param boolean $UpgradeProxyAndRedisServer 是否升级proxy和redis内核版本，升级后可支持就近接入
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("UpgradeProxyAndRedisServer",$param) and $param["UpgradeProxyAndRedisServer"] !== null) {
+            $this->UpgradeProxyAndRedisServer = $param["UpgradeProxyAndRedisServer"];
         }
     }
 }

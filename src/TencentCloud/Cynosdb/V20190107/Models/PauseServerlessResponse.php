@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PauseServerless返回参数结构体
  *
- * @method integer getFlowId() 获取异步流程Id
- * @method void setFlowId(integer $FlowId) 设置异步流程Id
+ * @method integer getFlowId() 获取异步流程ID
+ * @method void setFlowId(integer $FlowId) 设置异步流程ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class PauseServerlessResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程Id
+     * @var integer 异步流程ID
      */
     public $FlowId;
 
@@ -38,7 +38,7 @@ class PauseServerlessResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowId 异步流程Id
+     * @param integer $FlowId 异步流程ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

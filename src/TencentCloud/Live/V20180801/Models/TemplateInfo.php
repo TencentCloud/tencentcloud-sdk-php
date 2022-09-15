@@ -112,6 +112,14 @@ baseline/main/high。默认baseline
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) 设置是否以短边作为高度，0：否，1：是。默认0。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDRMType() 获取DRM 加密类型，可选值：fairplay、normalaes、widevine。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDRMType(string $DRMType) 设置DRM 加密类型，可选值：fairplay、normalaes、widevine。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDRMTracks() 获取DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDRMTracks(string $DRMTracks) 设置DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
 {
@@ -246,6 +254,18 @@ baseline/main/high。默认baseline
     public $ShortEdgeAsHeight;
 
     /**
+     * @var string DRM 加密类型，可选值：fairplay、normalaes、widevine。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DRMType;
+
+    /**
+     * @var string DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DRMTracks;
+
+    /**
      * @param string $Vcodec 视频编码：h264/h265/origin，默认h264。
 
 origin: 保持原始编码格式
@@ -291,6 +311,10 @@ baseline/main/high。默认baseline
 
 取值范围：0.0到0.5
      * @param integer $ShortEdgeAsHeight 是否以短边作为高度，0：否，1：是。默认0。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DRMType DRM 加密类型，可选值：fairplay、normalaes、widevine。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DRMTracks DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -388,6 +412,14 @@ baseline/main/high。默认baseline
 
         if (array_key_exists("ShortEdgeAsHeight",$param) and $param["ShortEdgeAsHeight"] !== null) {
             $this->ShortEdgeAsHeight = $param["ShortEdgeAsHeight"];
+        }
+
+        if (array_key_exists("DRMType",$param) and $param["DRMType"] !== null) {
+            $this->DRMType = $param["DRMType"];
+        }
+
+        if (array_key_exists("DRMTracks",$param) and $param["DRMTracks"] !== null) {
+            $this->DRMTracks = $param["DRMTracks"];
         }
     }
 }

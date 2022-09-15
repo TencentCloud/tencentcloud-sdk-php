@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 ]
  * @method string getFilterIp() 获取IP搜索
  * @method void setFilterIp(string $FilterIp) 设置IP搜索
+ * @method string getFilterCname() 获取高防IP实例资源的cname
+ * @method void setFilterCname(string $FilterCname) 设置高防IP实例资源的cname
  */
 class DescribeListIPAlarmConfigRequest extends AbstractModel
 {
@@ -68,6 +70,11 @@ class DescribeListIPAlarmConfigRequest extends AbstractModel
     public $FilterIp;
 
     /**
+     * @var string 高防IP实例资源的cname
+     */
+    public $FilterCname;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为100;最大取值为100
      * @param string $FilterInstanceId 资源实例ID搜索, 支持资源实例前缀通配搜索，例如bgp-*表示获取高防包类型的资源实例
@@ -76,6 +83,7 @@ class DescribeListIPAlarmConfigRequest extends AbstractModel
 2(攻击清洗流量告警阈值)
 ]
      * @param string $FilterIp IP搜索
+     * @param string $FilterCname 高防IP实例资源的cname
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeListIPAlarmConfigRequest extends AbstractModel
 
         if (array_key_exists("FilterIp",$param) and $param["FilterIp"] !== null) {
             $this->FilterIp = $param["FilterIp"];
+        }
+
+        if (array_key_exists("FilterCname",$param) and $param["FilterCname"] !== null) {
+            $this->FilterCname = $param["FilterCname"];
         }
     }
 }

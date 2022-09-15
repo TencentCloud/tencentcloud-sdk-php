@@ -34,10 +34,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerName(string $ContainerName) 设置容器名称
  * @method string getContainerId() 获取容器id
  * @method void setContainerId(string $ContainerId) 设置容器id
- * @method string getContainerStatus() 获取容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
- * @method void setContainerStatus(string $ContainerStatus) 设置容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
+ * @method string getContainerStatus() 获取容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
+ * @method void setContainerStatus(string $ContainerStatus) 设置容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
  * @method string getImageName() 获取镜像名称
  * @method void setImageName(string $ImageName) 设置镜像名称
  * @method string getImageId() 获取镜像id
@@ -90,6 +102,60 @@ TOO_MANY: 任务过多
 OFFLINE: 离线
 INTERNAL: 服务内部错误
 VALIDATION: 参数非法
+ * @method string getContainerNetStatus() 获取网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+ * @method void setContainerNetStatus(string $ContainerNetStatus) 设置网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+ * @method string getContainerNetSubStatus() 获取容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+ * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+ * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
+ * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
+ * @method string getMD5() 获取md5值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMD5(string $MD5) 设置md5值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRiskLevel() 获取风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskLevel(string $RiskLevel) 设置风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCheckPlatform() 获取检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckPlatform(array $CheckPlatform) 设置检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VirusInfo extends AbstractModel
 {
@@ -129,8 +195,14 @@ class VirusInfo extends AbstractModel
     public $ContainerId;
 
     /**
-     * @var string 容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
+     * @var string 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
      */
     public $ContainerStatus;
 
@@ -189,6 +261,57 @@ VALIDATION: 参数非法
     public $SubStatus;
 
     /**
+     * @var string 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public $ContainerNetStatus;
+
+    /**
+     * @var string 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     */
+    public $ContainerNetSubStatus;
+
+    /**
+     * @var string 容器隔离操作来源
+     */
+    public $ContainerIsolateOperationSrc;
+
+    /**
+     * @var string md5值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MD5;
+
+    /**
+     * @var string 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RiskLevel;
+
+    /**
+     * @var array 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckPlatform;
+
+    /**
      * @param string $FileName 文件名称
      * @param string $FilePath 文件路径
      * @param string $VirusName 病毒名称
@@ -196,8 +319,14 @@ VALIDATION: 参数非法
      * @param string $ModifyTime 更新时间
      * @param string $ContainerName 容器名称
      * @param string $ContainerId 容器id
-     * @param string $ContainerStatus 容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-												       CS_CREATE:已经创建， CS_DESTORY:销毁
+     * @param string $ContainerStatus 容器状态
+正在运行: RUNNING
+暂停: PAUSED
+停止: STOPPED
+已经创建: CREATED
+已经销毁: DESTROYED
+正在重启中: RESTARTING
+迁移中: REMOVING
      * @param string $ImageName 镜像名称
      * @param string $ImageId 镜像id
      * @param string $Status DEAL_NONE:文件待处理
@@ -224,6 +353,33 @@ TOO_MANY: 任务过多
 OFFLINE: 离线
 INTERNAL: 服务内部错误
 VALIDATION: 参数非法
+     * @param string $ContainerNetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     * @param string $ContainerNetSubStatus 容器子状态
+"AGENT_OFFLINE"       //Agent离线
+	"NODE_DESTROYED"      //节点已销毁
+	"CONTAINER_EXITED"    //容器已退出
+	"CONTAINER_DESTROYED" //容器已销毁
+	"SHARED_HOST"         // 容器与主机共享网络
+	"RESOURCE_LIMIT"      //隔离操作资源超限
+	"UNKNOW"              // 原因未知
+     * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
+     * @param string $MD5 md5值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RiskLevel 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CheckPlatform 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -296,6 +452,30 @@ VALIDATION: 参数非法
 
         if (array_key_exists("SubStatus",$param) and $param["SubStatus"] !== null) {
             $this->SubStatus = $param["SubStatus"];
+        }
+
+        if (array_key_exists("ContainerNetStatus",$param) and $param["ContainerNetStatus"] !== null) {
+            $this->ContainerNetStatus = $param["ContainerNetStatus"];
+        }
+
+        if (array_key_exists("ContainerNetSubStatus",$param) and $param["ContainerNetSubStatus"] !== null) {
+            $this->ContainerNetSubStatus = $param["ContainerNetSubStatus"];
+        }
+
+        if (array_key_exists("ContainerIsolateOperationSrc",$param) and $param["ContainerIsolateOperationSrc"] !== null) {
+            $this->ContainerIsolateOperationSrc = $param["ContainerIsolateOperationSrc"];
+        }
+
+        if (array_key_exists("MD5",$param) and $param["MD5"] !== null) {
+            $this->MD5 = $param["MD5"];
+        }
+
+        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
+            $this->RiskLevel = $param["RiskLevel"];
+        }
+
+        if (array_key_exists("CheckPlatform",$param) and $param["CheckPlatform"] !== null) {
+            $this->CheckPlatform = $param["CheckPlatform"];
         }
     }
 }

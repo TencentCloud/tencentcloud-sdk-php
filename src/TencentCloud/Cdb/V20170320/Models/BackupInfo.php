@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWay(string $Way) 设置备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
  * @method string getManualBackupName() 获取手动备份别名
  * @method void setManualBackupName(string $ManualBackupName) 设置手动备份别名
+ * @method string getSaveMode() 获取备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
+ * @method void setSaveMode(string $SaveMode) 设置备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
  */
 class BackupInfo extends AbstractModel
 {
@@ -122,6 +124,11 @@ class BackupInfo extends AbstractModel
     public $ManualBackupName;
 
     /**
+     * @var string 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
+     */
+    public $SaveMode;
+
+    /**
      * @param string $Name 备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
      * @param string $Date 备份快照时间，时间格式：2016-03-17 02:10:37
@@ -136,6 +143,7 @@ class BackupInfo extends AbstractModel
      * @param string $Method 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
      * @param string $Way 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
      * @param string $ManualBackupName 手动备份别名
+     * @param string $SaveMode 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("ManualBackupName",$param) and $param["ManualBackupName"] !== null) {
             $this->ManualBackupName = $param["ManualBackupName"];
+        }
+
+        if (array_key_exists("SaveMode",$param) and $param["SaveMode"] !== null) {
+            $this->SaveMode = $param["SaveMode"];
         }
     }
 }

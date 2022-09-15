@@ -52,6 +52,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostName(string $HostName) 设置主机名称
  * @method string getPublicIp() 获取外网ip
  * @method void setPublicIp(string $PublicIp) 设置外网ip
+ * @method string getNetStatus() 获取网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+ * @method void setNetStatus(string $NetStatus) 设置网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+ * @method string getNetSubStatus() 获取网络子状态
+ * @method void setNetSubStatus(string $NetSubStatus) 设置网络子状态
+ * @method string getIsolateSource() 获取隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolateSource(string $IsolateSource) 设置隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsolateTime() 获取隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolateTime(string $IsolateTime) 设置隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerInfo extends AbstractModel
 {
@@ -136,6 +160,34 @@ class ContainerInfo extends AbstractModel
     public $PublicIp;
 
     /**
+     * @var string 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     */
+    public $NetStatus;
+
+    /**
+     * @var string 网络子状态
+     */
+    public $NetSubStatus;
+
+    /**
+     * @var string 隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolateSource;
+
+    /**
+     * @var string 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolateTime;
+
+    /**
      * @param string $ContainerID 容器id
      * @param string $ContainerName 容器名称
      * @param string $Status 容器运行状态
@@ -152,6 +204,18 @@ class ContainerInfo extends AbstractModel
      * @param string $UpdateTime 更新时间
      * @param string $HostName 主机名称
      * @param string $PublicIp 外网ip
+     * @param string $NetStatus 网络状态
+未隔离  	NORMAL
+已隔离		ISOLATED
+隔离中		ISOLATING
+隔离失败	ISOLATE_FAILED
+解除隔离中  RESTORING
+解除隔离失败 RESTORE_FAILED
+     * @param string $NetSubStatus 网络子状态
+     * @param string $IsolateSource 隔离来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsolateTime 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -228,6 +292,22 @@ class ContainerInfo extends AbstractModel
 
         if (array_key_exists("PublicIp",$param) and $param["PublicIp"] !== null) {
             $this->PublicIp = $param["PublicIp"];
+        }
+
+        if (array_key_exists("NetStatus",$param) and $param["NetStatus"] !== null) {
+            $this->NetStatus = $param["NetStatus"];
+        }
+
+        if (array_key_exists("NetSubStatus",$param) and $param["NetSubStatus"] !== null) {
+            $this->NetSubStatus = $param["NetSubStatus"];
+        }
+
+        if (array_key_exists("IsolateSource",$param) and $param["IsolateSource"] !== null) {
+            $this->IsolateSource = $param["IsolateSource"];
+        }
+
+        if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
+            $this->IsolateTime = $param["IsolateTime"];
         }
     }
 }

@@ -124,9 +124,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubjectAltName(array $SubjectAltName) 设置证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getIsVip() 获取是否为 VIP 客户。
+ * @method boolean getIsVip() 获取是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsVip(boolean $IsVip) 设置是否为 VIP 客户。
+ * @method void setIsVip(boolean $IsVip) 设置是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsWildcard() 获取是否为泛域名证书。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -144,9 +144,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmittedData(SubmittedData $SubmittedData) 设置提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getRenewAble() 获取是否可重颁发证书。
+ * @method boolean getRenewAble() 获取是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenewAble(boolean $RenewAble) 设置是否可重颁发证书。
+ * @method void setRenewAble(boolean $RenewAble) 设置是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeployable() 获取是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,6 +155,30 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTags() 获取关联标签列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置关联标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method RootCertificates getRootCert() 获取根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRootCert(RootCertificates $RootCert) 设置根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncryptCert() 获取国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncryptCert(string $EncryptCert) 设置国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncryptPrivateKey() 获取国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncryptPrivateKey(string $EncryptPrivateKey) 设置国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCertFingerprint() 获取签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCertFingerprint(string $CertFingerprint) 设置签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncryptCertFingerprint() 获取加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncryptCertFingerprint(string $EncryptCertFingerprint) 设置加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEncryptAlgorithm() 获取证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置证书算法
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -318,7 +342,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $SubjectAltName;
 
     /**
-     * @var boolean 是否为 VIP 客户。
+     * @var boolean 是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsVip;
@@ -348,7 +372,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
     public $SubmittedData;
 
     /**
-     * @var boolean 是否可重颁发证书。
+     * @var boolean 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewAble;
@@ -364,6 +388,42 @@ class DescribeCertificateDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
+
+    /**
+     * @var RootCertificates 根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RootCert;
+
+    /**
+     * @var string 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EncryptCert;
+
+    /**
+     * @var string 国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EncryptPrivateKey;
+
+    /**
+     * @var string 签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CertFingerprint;
+
+    /**
+     * @var string 加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EncryptCertFingerprint;
+
+    /**
+     * @var string 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EncryptAlgorithm;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -423,7 +483,7 @@ class DescribeCertificateDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubjectAltName 证书包含的多个域名（不包含主域名，主域名使用Domain字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $IsVip 是否为 VIP 客户。
+     * @param boolean $IsVip 是否为付费证书。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsWildcard 是否为泛域名证书。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -433,11 +493,23 @@ class DescribeCertificateDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubmittedData $SubmittedData 提交的资料信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $RenewAble 是否可重颁发证书。
+     * @param boolean $RenewAble 是否可续费。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Deployable 是否可部署。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 关联标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RootCertificates $RootCert 根证书。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EncryptCert 国密加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EncryptPrivateKey 国密加密私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CertFingerprint 签名证书 SHA1指纹
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EncryptCertFingerprint 加密证书 SHA1指纹 （国密证书特有）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EncryptAlgorithm 证书算法
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -596,6 +668,31 @@ class DescribeCertificateDetailResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("RootCert",$param) and $param["RootCert"] !== null) {
+            $this->RootCert = new RootCertificates();
+            $this->RootCert->deserialize($param["RootCert"]);
+        }
+
+        if (array_key_exists("EncryptCert",$param) and $param["EncryptCert"] !== null) {
+            $this->EncryptCert = $param["EncryptCert"];
+        }
+
+        if (array_key_exists("EncryptPrivateKey",$param) and $param["EncryptPrivateKey"] !== null) {
+            $this->EncryptPrivateKey = $param["EncryptPrivateKey"];
+        }
+
+        if (array_key_exists("CertFingerprint",$param) and $param["CertFingerprint"] !== null) {
+            $this->CertFingerprint = $param["CertFingerprint"];
+        }
+
+        if (array_key_exists("EncryptCertFingerprint",$param) and $param["EncryptCertFingerprint"] !== null) {
+            $this->EncryptCertFingerprint = $param["EncryptCertFingerprint"];
+        }
+
+        if (array_key_exists("EncryptAlgorithm",$param) and $param["EncryptAlgorithm"] !== null) {
+            $this->EncryptAlgorithm = $param["EncryptAlgorithm"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

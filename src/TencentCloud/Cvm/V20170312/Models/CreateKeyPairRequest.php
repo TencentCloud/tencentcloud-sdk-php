@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 可以通过以下方式获取项目ID：
 <li>通过项目列表查询项目ID。
 <li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+ * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
+ * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
  */
 class CreateKeyPairRequest extends AbstractModel
 {
@@ -47,11 +49,17 @@ class CreateKeyPairRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var array 标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $KeyName 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
      * @param integer $ProjectId 密钥对创建后所属的项目ID。
 可以通过以下方式获取项目ID：
 <li>通过项目列表查询项目ID。
 <li>通过调用接口DescribeProject，取返回信息中的`projectId `获取项目ID。
+     * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class CreateKeyPairRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContainer() 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
  * @method void setContainer(string $Container) 设置封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getName() 获取转码模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置转码模板名称，长度限制：64 个字符。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
@@ -48,8 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数，当 RemoveAudio 为 0，该字段必填。
  * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class CreateTranscodeTemplateRequest extends AbstractModel
 {
@@ -57,6 +57,11 @@ class CreateTranscodeTemplateRequest extends AbstractModel
      * @var string 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
     public $Container;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string 转码模板名称，长度限制：64 个字符。
@@ -100,12 +105,8 @@ class CreateTranscodeTemplateRequest extends AbstractModel
     public $TEHDConfig;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 转码模板名称，长度限制：64 个字符。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param integer $RemoveVideo 是否去除视频数据，可选值：
@@ -119,7 +120,6 @@ class CreateTranscodeTemplateRequest extends AbstractModel
      * @param VideoTemplateInfo $VideoTemplate 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      * @param TEHDConfig $TEHDConfig 极速高清转码参数。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -136,6 +136,10 @@ class CreateTranscodeTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Container",$param) and $param["Container"] !== null) {
             $this->Container = $param["Container"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -167,10 +171,6 @@ class CreateTranscodeTemplateRequest extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfig();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

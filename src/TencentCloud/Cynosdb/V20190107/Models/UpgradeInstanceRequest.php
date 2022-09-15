@@ -24,18 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method integer getCpu() 获取数据库CPU
  * @method void setCpu(integer $Cpu) 设置数据库CPU
- * @method integer getMemory() 获取数据库内存
- * @method void setMemory(integer $Memory) 设置数据库内存
+ * @method integer getMemory() 获取数据库内存，单位GB
+ * @method void setMemory(integer $Memory) 设置数据库内存，单位GB
  * @method string getUpgradeType() 获取升级类型：upgradeImmediate，upgradeInMaintain
  * @method void setUpgradeType(string $UpgradeType) 设置升级类型：upgradeImmediate，upgradeInMaintain
- * @method integer getStorageLimit() 获取存储上限，为0表示使用标准配置
- * @method void setStorageLimit(integer $StorageLimit) 设置存储上限，为0表示使用标准配置
+ * @method integer getStorageLimit() 获取该参数已废弃
+ * @method void setStorageLimit(integer $StorageLimit) 设置该参数已废弃
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
- * @method string getDbType() 获取数据库类型，取值范围: 
-<li> MYSQL </li>
- * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
-<li> MYSQL </li>
+ * @method string getDbType() 获取该参数已废弃
+ * @method void setDbType(string $DbType) 设置该参数已废弃
  * @method integer getDealMode() 获取交易模式 0-下单并支付 1-下单
  * @method void setDealMode(integer $DealMode) 设置交易模式 0-下单并支付 1-下单
  */
@@ -52,7 +50,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer 数据库内存
+     * @var integer 数据库内存，单位GB
      */
     public $Memory;
 
@@ -62,7 +60,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $UpgradeType;
 
     /**
-     * @var integer 存储上限，为0表示使用标准配置
+     * @var integer 该参数已废弃
      */
     public $StorageLimit;
 
@@ -72,8 +70,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @var string 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * @var string 该参数已废弃
      */
     public $DbType;
 
@@ -85,12 +82,11 @@ class UpgradeInstanceRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例ID
      * @param integer $Cpu 数据库CPU
-     * @param integer $Memory 数据库内存
+     * @param integer $Memory 数据库内存，单位GB
      * @param string $UpgradeType 升级类型：upgradeImmediate，upgradeInMaintain
-     * @param integer $StorageLimit 存储上限，为0表示使用标准配置
+     * @param integer $StorageLimit 该参数已废弃
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
-     * @param string $DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * @param string $DbType 该参数已废弃
      * @param integer $DealMode 交易模式 0-下单并支付 1-下单
      */
     function __construct()

@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUpstreamBindApis请求参数结构体
  *
- * @method integer getLimit() 获取分页
- * @method void setLimit(integer $Limit) 设置分页
- * @method integer getOffset() 获取分页
- * @method void setOffset(integer $Offset) 设置分页
- * @method string getUpstreamId() 获取vpc通道Id
- * @method void setUpstreamId(string $UpstreamId) 设置vpc通道Id
+ * @method integer getLimit() 获取分页大小
+ * @method void setLimit(integer $Limit) 设置分页大小
+ * @method integer getOffset() 获取分页起始位置
+ * @method void setOffset(integer $Offset) 设置分页起始位置
+ * @method string getUpstreamId() 获取后端通道ID
+ * @method void setUpstreamId(string $UpstreamId) 设置后端通道ID
  * @method array getFilters() 获取ServiceId和ApiId过滤查询
  * @method void setFilters(array $Filters) 设置ServiceId和ApiId过滤查询
  */
 class DescribeUpstreamBindApisRequest extends AbstractModel
 {
     /**
-     * @var integer 分页
+     * @var integer 分页大小
      */
     public $Limit;
 
     /**
-     * @var integer 分页
+     * @var integer 分页起始位置
      */
     public $Offset;
 
     /**
-     * @var string vpc通道Id
+     * @var string 后端通道ID
      */
     public $UpstreamId;
 
@@ -52,9 +52,9 @@ class DescribeUpstreamBindApisRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $Limit 分页
-     * @param integer $Offset 分页
-     * @param string $UpstreamId vpc通道Id
+     * @param integer $Limit 分页大小
+     * @param integer $Offset 分页起始位置
+     * @param string $UpstreamId 后端通道ID
      * @param array $Filters ServiceId和ApiId过滤查询
      */
     function __construct()

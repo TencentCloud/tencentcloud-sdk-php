@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 5 销毁出粗
 6 已连通
 7 未知
+ * @method integer getSsoEnabled() 获取是否开启SSO认证。1：开启  0： 不开启
+ * @method void setSsoEnabled(integer $SsoEnabled) 设置是否开启SSO认证。1：开启  0： 不开启
+ * @method string getEiamApplicationId() 获取EIAM应用ID
+ * @method void setEiamApplicationId(string $EiamApplicationId) 设置EIAM应用ID
+ * @method integer getAccessPolicyEnabled() 获取是否开启策略控制。0：不开启 1： 开启
+ * @method void setAccessPolicyEnabled(integer $AccessPolicyEnabled) 设置是否开启策略控制。0：不开启 1： 开启
+ * @method array getAccessPolicy() 获取策略信息
+ * @method void setAccessPolicy(array $AccessPolicy) 设置策略信息
  */
 class SslVpnSever extends AbstractModel
 {
@@ -156,6 +164,26 @@ class SslVpnSever extends AbstractModel
     public $State;
 
     /**
+     * @var integer 是否开启SSO认证。1：开启  0： 不开启
+     */
+    public $SsoEnabled;
+
+    /**
+     * @var string EIAM应用ID
+     */
+    public $EiamApplicationId;
+
+    /**
+     * @var integer 是否开启策略控制。0：不开启 1： 开启
+     */
+    public $AccessPolicyEnabled;
+
+    /**
+     * @var array 策略信息
+     */
+    public $AccessPolicy;
+
+    /**
      * @param string $VpcId VPC实例ID.
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SslVpnServerId SSL-VPN-SERVER 实例ID。
@@ -180,6 +208,10 @@ class SslVpnSever extends AbstractModel
 5 销毁出粗
 6 已连通
 7 未知
+     * @param integer $SsoEnabled 是否开启SSO认证。1：开启  0： 不开启
+     * @param string $EiamApplicationId EIAM应用ID
+     * @param integer $AccessPolicyEnabled 是否开启策略控制。0：不开启 1： 开启
+     * @param array $AccessPolicy 策略信息
      */
     function __construct()
     {
@@ -252,6 +284,27 @@ class SslVpnSever extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("SsoEnabled",$param) and $param["SsoEnabled"] !== null) {
+            $this->SsoEnabled = $param["SsoEnabled"];
+        }
+
+        if (array_key_exists("EiamApplicationId",$param) and $param["EiamApplicationId"] !== null) {
+            $this->EiamApplicationId = $param["EiamApplicationId"];
+        }
+
+        if (array_key_exists("AccessPolicyEnabled",$param) and $param["AccessPolicyEnabled"] !== null) {
+            $this->AccessPolicyEnabled = $param["AccessPolicyEnabled"];
+        }
+
+        if (array_key_exists("AccessPolicy",$param) and $param["AccessPolicy"] !== null) {
+            $this->AccessPolicy = [];
+            foreach ($param["AccessPolicy"] as $key => $value){
+                $obj = new AccessPolicy();
+                $obj->deserialize($value);
+                array_push($this->AccessPolicy, $obj);
+            }
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
  * @method string getSubnetId() 获取子网ID，changeVpc、changeBaseToVpc的时候需要提供
  * @method void setSubnetId(string $SubnetId) 设置子网ID，changeVpc、changeBaseToVpc的时候需要提供
+ * @method integer getRecycle() 获取原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
+ * @method void setRecycle(integer $Recycle) 设置原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
  */
 class ModifyNetworkConfigRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyNetworkConfigRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var integer 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
+     */
+    public $Recycle;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Operation 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
      * @param string $Vip VIP地址，changeVip的时候填写，不填则默认分配
      * @param string $VpcId 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
      * @param string $SubnetId 子网ID，changeVpc、changeBaseToVpc的时候需要提供
+     * @param integer $Recycle 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyNetworkConfigRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("Recycle",$param) and $param["Recycle"] !== null) {
+            $this->Recycle = $param["Recycle"];
         }
     }
 }

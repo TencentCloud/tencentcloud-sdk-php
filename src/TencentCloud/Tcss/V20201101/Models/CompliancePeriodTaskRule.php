@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrequency(integer $Frequency) 设置执行的频率（几天一次），取值为：1,3,7。
  * @method string getExecutionTime() 获取在这天的什么时间执行，格式为：HH:mm:SS。
  * @method void setExecutionTime(string $ExecutionTime) 设置在这天的什么时间执行，格式为：HH:mm:SS。
+ * @method boolean getEnable() 获取是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnable(boolean $Enable) 设置是否开启
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompliancePeriodTaskRule extends AbstractModel
 {
@@ -38,8 +42,16 @@ class CompliancePeriodTaskRule extends AbstractModel
     public $ExecutionTime;
 
     /**
+     * @var boolean 是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Enable;
+
+    /**
      * @param integer $Frequency 执行的频率（几天一次），取值为：1,3,7。
      * @param string $ExecutionTime 在这天的什么时间执行，格式为：HH:mm:SS。
+     * @param boolean $Enable 是否开启
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class CompliancePeriodTaskRule extends AbstractModel
 
         if (array_key_exists("ExecutionTime",$param) and $param["ExecutionTime"] !== null) {
             $this->ExecutionTime = $param["ExecutionTime"];
+        }
+
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页个数
  * @method array getGroupIds() 获取可选，根据部署组ID进行过滤
  * @method void setGroupIds(array $GroupIds) 设置可选，根据部署组ID进行过滤
+ * @method array getFilters() 获取过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
+ * @method void setFilters(array $Filters) 设置过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
  */
 class DescribeMicroserviceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeMicroserviceRequest extends AbstractModel
     public $GroupIds;
 
     /**
+     * @var array 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
+     */
+    public $Filters;
+
+    /**
      * @param string $MicroserviceId 微服务ID
      * @param integer $Offset 偏移量
      * @param integer $Limit 分页个数
      * @param array $GroupIds 可选，根据部署组ID进行过滤
+     * @param array $Filters 过滤条件。多个 filter 之间是与关系，单个 filter 多个 value 之间是或关系。filter name 取值有：id（实例id）、name（实例名）、lan-ip（内网ip）、node-ip（所在节点ip）
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class DescribeMicroserviceRequest extends AbstractModel
 
         if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
             $this->GroupIds = $param["GroupIds"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

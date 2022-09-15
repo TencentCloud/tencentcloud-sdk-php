@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 海外分区直播带宽出参，分区信息
  *
- * @method string getName() 获取大区名称
- * @method void setName(string $Name) 设置大区名称
- * @method array getCountrys() 获取国家明细数据
- * @method void setCountrys(array $Countrys) 设置国家明细数据
+ * @method string getName() 获取大区名称。
+ * @method void setName(string $Name) 设置大区名称。
+ * @method array getCountrys() 获取国家或地区明细数据。
+ * @method void setCountrys(array $Countrys) 设置国家或地区明细数据。
  */
 class BillAreaInfo extends AbstractModel
 {
     /**
-     * @var string 大区名称
+     * @var string 大区名称。
      */
     public $Name;
 
     /**
-     * @var array 国家明细数据
+     * @var array 国家或地区明细数据。
      */
     public $Countrys;
 
     /**
-     * @param string $Name 大区名称
-     * @param array $Countrys 国家明细数据
+     * @param string $Name 大区名称。
+     * @param array $Countrys 国家或地区明细数据。
      */
     function __construct()
     {

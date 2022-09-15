@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置通知结束时间 一天开始的秒数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWeekday() 获取通知周期 1-7表示周一到周日
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeekday(array $Weekday) 设置通知周期 1-7表示周一到周日
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class URLNotice extends AbstractModel
 {
@@ -74,6 +78,12 @@ class URLNotice extends AbstractModel
     public $EndTime;
 
     /**
+     * @var array 通知周期 1-7表示周一到周日
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Weekday;
+
+    /**
      * @param string $URL 回调 url（限长256字符）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsValid 是否通过验证 0=否 1=是
@@ -83,6 +93,8 @@ class URLNotice extends AbstractModel
      * @param integer $StartTime 通知开始时间 一天开始的秒数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 通知结束时间 一天开始的秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Weekday 通知周期 1-7表示周一到周日
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class URLNotice extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Weekday",$param) and $param["Weekday"] !== null) {
+            $this->Weekday = $param["Weekday"];
         }
     }
 }

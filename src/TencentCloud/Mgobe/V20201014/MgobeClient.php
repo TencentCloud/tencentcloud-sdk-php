@@ -23,13 +23,27 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mgobe\V20201014\Models as Models;
 
 /**
- * @method Models\ChangeRoomPlayerProfileResponse ChangeRoomPlayerProfile(Models\ChangeRoomPlayerProfileRequest $req) 修改房间玩家自定义属性
- * @method Models\ChangeRoomPlayerStatusResponse ChangeRoomPlayerStatus(Models\ChangeRoomPlayerStatusRequest $req) 修改玩家自定义状态
- * @method Models\DescribePlayerResponse DescribePlayer(Models\DescribePlayerRequest $req) 该接口用于查询玩家信息。支持两种用法，当OpenId不传的时候，PlayerId必传，传入PlayerId可以查询当前PlayerId的玩家信息，当OpenId传入的时候，PlayerId可不传，按照OpenId查询玩家信息。
- * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 该接口用于查询房间信息。支持两种用法，当房间Id不传的时候，玩家Id必传，传入玩家Id可以查询当前玩家所在的房间信息，当房间Id传入的时候，玩家Id可不传，按照房间Id查询房间信息。
- * @method Models\DismissRoomResponse DismissRoom(Models\DismissRoomRequest $req) 通过game_id、room_id解散房间
- * @method Models\ModifyRoomResponse ModifyRoom(Models\ModifyRoomRequest $req) 修改房间
- * @method Models\RemoveRoomPlayerResponse RemoveRoomPlayer(Models\RemoveRoomPlayerRequest $req) 踢出房间玩家
+ * @method Models\ChangeRoomPlayerProfileResponse ChangeRoomPlayerProfile(Models\ChangeRoomPlayerProfileRequest $req) 此接口无法使用，游戏联机对战引擎MGOBE已于6.1正式下架，感谢您的支持
+
+修改房间玩家自定义属性
+ * @method Models\ChangeRoomPlayerStatusResponse ChangeRoomPlayerStatus(Models\ChangeRoomPlayerStatusRequest $req) 此接口无法使用，游戏联机对战引擎MGOBE已于6.1正式下架，感谢您的支持
+
+修改玩家自定义状态
+ * @method Models\DescribePlayerResponse DescribePlayer(Models\DescribePlayerRequest $req) 此接口无法使用，游戏联机对战引擎MGOBE已于6.1正式下架，感谢您的支持
+
+该接口用于查询玩家信息。支持两种用法，当OpenId不传的时候，PlayerId必传，传入PlayerId可以查询当前PlayerId的玩家信息，当OpenId传入的时候，PlayerId可不传，按照OpenId查询玩家信息。
+ * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 此接口无法使用，游戏联机对战引擎MGOBE已于6.1正式下架，感谢您的支持
+
+该接口用于查询房间信息。支持两种用法，当房间Id不传的时候，玩家Id必传，传入玩家Id可以查询当前玩家所在的房间信息，当房间Id传入的时候，玩家Id可不传，按照房间Id查询房间信息。
+ * @method Models\DismissRoomResponse DismissRoom(Models\DismissRoomRequest $req) 此接口无法使用，游戏联机对战引擎MGOBE已于6.1正式下架，感谢您的支持
+
+通过game_id、room_id解散房间
+ * @method Models\ModifyRoomResponse ModifyRoom(Models\ModifyRoomRequest $req) 此接口无法使用，游戏联机对战引擎MGOBE已于6.1正式下架，感谢您的支持
+
+修改房间
+ * @method Models\RemoveRoomPlayerResponse RemoveRoomPlayer(Models\RemoveRoomPlayerRequest $req) 此接口无法使用，游戏联机对战引擎MGOBE已于6.1正式下架，感谢您的支持
+
+踢出房间玩家
  */
 
 class MgobeClient extends AbstractClient

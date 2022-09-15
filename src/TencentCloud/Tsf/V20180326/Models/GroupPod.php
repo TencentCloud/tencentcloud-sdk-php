@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodId(string $PodId) 设置实例ID(对应到kubernetes的pod id)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取实例状态，请参考后面的实例以及容器的状态定义
+ * @method string getStatus() 获取实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置实例状态，请参考后面的实例以及容器的状态定义
+ * @method void setStatus(string $Status) 设置实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取实例处于当前状态的原因，例如容器下载镜像失败
 注意：此字段可能返回 null，表示取不到有效值。
@@ -92,7 +92,7 @@ class GroupPod extends AbstractModel
     public $PodId;
 
     /**
-     * @var string 实例状态，请参考后面的实例以及容器的状态定义
+     * @var string 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -168,7 +168,7 @@ class GroupPod extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PodId 实例ID(对应到kubernetes的pod id)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 实例状态，请参考后面的实例以及容器的状态定义
+     * @param string $Status 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 实例处于当前状态的原因，例如容器下载镜像失败
 注意：此字段可能返回 null，表示取不到有效值。

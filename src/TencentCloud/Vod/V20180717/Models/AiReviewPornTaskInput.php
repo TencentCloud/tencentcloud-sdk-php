@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 智能识别涉及令人反感的信息的任务输入参数类型
+ * 音视频审核涉及令人反感的信息的任务输入参数类型
  *
  * @method integer getDefinition() 获取鉴别涉及令人反感的信息的模板 ID。
  * @method void setDefinition(integer $Definition) 设置鉴别涉及令人反感的信息的模板 ID。

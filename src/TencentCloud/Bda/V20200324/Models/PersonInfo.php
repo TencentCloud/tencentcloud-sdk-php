@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPersonName(string $PersonName) 设置人员名称。
  * @method string getPersonId() 获取人员ID。
  * @method void setPersonId(string $PersonId) 设置人员ID。
- * @method array getTraceInfos() 获取包含的人体轨迹图片信息列表。
- * @method void setTraceInfos(array $TraceInfos) 设置包含的人体轨迹图片信息列表。
+ * @method array getTraceInfos() 获取包含的人体动作轨迹图片信息列表。
+ * @method void setTraceInfos(array $TraceInfos) 设置包含的人体动作轨迹图片信息列表。
  */
 class PersonInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class PersonInfo extends AbstractModel
     public $PersonId;
 
     /**
-     * @var array 包含的人体轨迹图片信息列表。
+     * @var array 包含的人体动作轨迹图片信息列表。
      */
     public $TraceInfos;
 
     /**
      * @param string $PersonName 人员名称。
      * @param string $PersonId 人员ID。
-     * @param array $TraceInfos 包含的人体轨迹图片信息列表。
+     * @param array $TraceInfos 包含的人体动作轨迹图片信息列表。
      */
     function __construct()
     {

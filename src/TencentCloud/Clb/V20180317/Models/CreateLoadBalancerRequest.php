@@ -41,17 +41,17 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method integer getNumber() 获取创建负载均衡的个数，默认值 1。
  * @method void setNumber(integer $Number) 设置创建负载均衡的个数，默认值 1。
  * @method string getMasterZoneId() 获取仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主可用区的列表。
  * @method void setMasterZoneId(string $MasterZoneId) 设置仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主可用区的列表。
  * @method string getZoneId() 获取仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
  * @method void setZoneId(string $ZoneId) 设置仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
  * @method InternetAccessible getInternetAccessible() 获取仅适用于公网负载均衡。负载均衡的网络计费模式。
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置仅适用于公网负载均衡。负载均衡的网络计费模式。
  * @method string getVipIsp() 获取仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
  * @method void setVipIsp(string $VipIsp) 设置仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
- * @method array getTags() 获取购买负载均衡的同时，给负载均衡打上标签。
- * @method void setTags(array $Tags) 设置购买负载均衡的同时，给负载均衡打上标签。
+ * @method array getTags() 获取购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
+ * @method void setTags(array $Tags) 设置购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
  * @method string getVip() 获取指定VIP申请负载均衡。指定此参数后：
 <ul><li>若创建共享型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。</li>
 <li>若创建独占型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。
@@ -79,9 +79,9 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method string getClusterTag() 获取Stgw独占集群的标签。
  * @method void setClusterTag(string $ClusterTag) 设置Stgw独占集群的标签。
  * @method string getSlaveZoneId() 获取仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，例如 100001 或 ap-guangzhou-1
-注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 DescribeMasterZones 接口查询一个地域的主/备可用区的列表。
+注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主/备可用区的列表。
  * @method void setSlaveZoneId(string $SlaveZoneId) 设置仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，例如 100001 或 ap-guangzhou-1
-注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 DescribeMasterZones 接口查询一个地域的主/备可用区的列表。
+注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主/备可用区的列表。
  * @method string getEipAddressId() 获取EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
  * @method void setEipAddressId(string $EipAddressId) 设置EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
  * @method boolean getLoadBalancerPassToTarget() 获取Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
@@ -133,7 +133,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * @var string 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主可用区的列表。
      */
     public $MasterZoneId;
 
@@ -153,7 +153,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $VipIsp;
 
     /**
-     * @var array 购买负载均衡的同时，给负载均衡打上标签。
+     * @var array 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
      */
     public $Tags;
 
@@ -204,7 +204,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 
     /**
      * @var string 仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，例如 100001 或 ap-guangzhou-1
-注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 DescribeMasterZones 接口查询一个地域的主/备可用区的列表。
+注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主/备可用区的列表。
      */
     public $SlaveZoneId;
 
@@ -230,11 +230,11 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。说明：取值为IPV6表示为IPV6 NAT64版本；取值为IPv6FullChain，表示为IPv6版本。
      * @param integer $Number 创建负载均衡的个数，默认值 1。
      * @param string $MasterZoneId 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主可用区的列表。
      * @param string $ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
      * @param InternetAccessible $InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费模式。
      * @param string $VipIsp 仅适用于公网负载均衡。CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费(BANDWIDTH_PACKAGE)。
-     * @param array $Tags 购买负载均衡的同时，给负载均衡打上标签。
+     * @param array $Tags 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
      * @param string $Vip 指定VIP申请负载均衡。指定此参数后：
 <ul><li>若创建共享型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。</li>
 <li>若创建独占型集群的公网负载均衡实例，则上述的VpcId选填，若实例是IPv6类型的，则SubnetId必填；若是IPv4、IPv6 NAT64类型，则SubnetId不填。
@@ -249,7 +249,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param array $SnatIps 开启绑定跨地域/跨Vpc绑定IP的功能后，创建SnatIp。
      * @param string $ClusterTag Stgw独占集群的标签。
      * @param string $SlaveZoneId 仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，例如 100001 或 ap-guangzhou-1
-注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 DescribeMasterZones 接口查询一个地域的主/备可用区的列表。
+注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主/备可用区的列表。
      * @param string $EipAddressId EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
      * @param boolean $LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
      */

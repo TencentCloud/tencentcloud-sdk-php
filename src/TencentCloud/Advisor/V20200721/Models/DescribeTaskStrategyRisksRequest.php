@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数量,默认100
  * @method integer getOffset() 获取偏移量,默认0
  * @method void setOffset(integer $Offset) 设置偏移量,默认0
+ * @method string getEnv() 获取环境
+ * @method void setEnv(string $Env) 设置环境
+ * @method string getTaskType() 获取任务类型
+ * @method void setTaskType(string $TaskType) 设置任务类型
  */
 class DescribeTaskStrategyRisksRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeTaskStrategyRisksRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 环境
+     */
+    public $Env;
+
+    /**
+     * @var string 任务类型
+     */
+    public $TaskType;
+
+    /**
      * @param integer $StrategyId 评估项ID
      * @param integer $Limit 限制数量,默认100
      * @param integer $Offset 偏移量,默认0
+     * @param string $Env 环境
+     * @param string $TaskType 任务类型
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeTaskStrategyRisksRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Env",$param) and $param["Env"] !== null) {
+            $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
     }
 }

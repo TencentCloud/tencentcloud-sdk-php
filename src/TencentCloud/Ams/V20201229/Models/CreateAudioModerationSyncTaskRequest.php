@@ -24,20 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBizType(string $BizType) 设置Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；调用时不传入Biztype代表采用默认的识别策略。
  * @method string getDataId() 获取数据标识，可以由英文字母、数字、下划线、-、@#组成，不超过64个字符
  * @method void setDataId(string $DataId) 设置数据标识，可以由英文字母、数字、下划线、-、@#组成，不超过64个字符
- * @method string getFileFormat() 获取音频文件资源格式，当前为mp3，wav，请按照实际文件格式填入
- * @method void setFileFormat(string $FileFormat) 设置音频文件资源格式，当前为mp3，wav，请按照实际文件格式填入
+ * @method string getFileFormat() 获取音频文件资源格式，当前支持格式：wav、mp3、m4a，请按照实际文件格式填入。
+ * @method void setFileFormat(string $FileFormat) 设置音频文件资源格式，当前支持格式：wav、mp3、m4a，请按照实际文件格式填入。
  * @method string getName() 获取文件名称，可以由英文字母、数字、下划线、-、@#组成，不超过64个字符
  * @method void setName(string $Name) 设置文件名称，可以由英文字母、数字、下划线、-、@#组成，不超过64个字符
  * @method string getFileContent() 获取数据Base64编码，短音频同步接口仅传入可音频内容；
-支持范围：文件大小不能超过5M，时长不可超过60s，码率范围为8-16Kbps；
-支持格式：wav、mp3
+支持范围：文件大小不能超过5M，时长不可超过60s；
+支持格式：wav (PCM编码)、mp3、m4a (采样率：16kHz~48kHz，位深：16bit 小端，声道数：单声道/双声道，建议格式：16kHz/16bit/单声道)。
  * @method void setFileContent(string $FileContent) 设置数据Base64编码，短音频同步接口仅传入可音频内容；
-支持范围：文件大小不能超过5M，时长不可超过60s，码率范围为8-16Kbps；
-支持格式：wav、mp3
+支持范围：文件大小不能超过5M，时长不可超过60s；
+支持格式：wav (PCM编码)、mp3、m4a (采样率：16kHz~48kHz，位深：16bit 小端，声道数：单声道/双声道，建议格式：16kHz/16bit/单声道)。
  * @method string getFileUrl() 获取音频资源访问链接，与FileContent参数必须二选一输入；
-支持范围：同FileContent；
+支持范围及格式：同FileContent；
  * @method void setFileUrl(string $FileUrl) 设置音频资源访问链接，与FileContent参数必须二选一输入；
-支持范围：同FileContent；
+支持范围及格式：同FileContent；
  */
 class CreateAudioModerationSyncTaskRequest extends AbstractModel
 {
@@ -52,7 +52,7 @@ class CreateAudioModerationSyncTaskRequest extends AbstractModel
     public $DataId;
 
     /**
-     * @var string 音频文件资源格式，当前为mp3，wav，请按照实际文件格式填入
+     * @var string 音频文件资源格式，当前支持格式：wav、mp3、m4a，请按照实际文件格式填入。
      */
     public $FileFormat;
 
@@ -63,27 +63,27 @@ class CreateAudioModerationSyncTaskRequest extends AbstractModel
 
     /**
      * @var string 数据Base64编码，短音频同步接口仅传入可音频内容；
-支持范围：文件大小不能超过5M，时长不可超过60s，码率范围为8-16Kbps；
-支持格式：wav、mp3
+支持范围：文件大小不能超过5M，时长不可超过60s；
+支持格式：wav (PCM编码)、mp3、m4a (采样率：16kHz~48kHz，位深：16bit 小端，声道数：单声道/双声道，建议格式：16kHz/16bit/单声道)。
      */
     public $FileContent;
 
     /**
      * @var string 音频资源访问链接，与FileContent参数必须二选一输入；
-支持范围：同FileContent；
+支持范围及格式：同FileContent；
      */
     public $FileUrl;
 
     /**
      * @param string $BizType Biztype为策略的具体的编号，用于接口调度，在内容安全控制台中可配置。不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；调用时不传入Biztype代表采用默认的识别策略。
      * @param string $DataId 数据标识，可以由英文字母、数字、下划线、-、@#组成，不超过64个字符
-     * @param string $FileFormat 音频文件资源格式，当前为mp3，wav，请按照实际文件格式填入
+     * @param string $FileFormat 音频文件资源格式，当前支持格式：wav、mp3、m4a，请按照实际文件格式填入。
      * @param string $Name 文件名称，可以由英文字母、数字、下划线、-、@#组成，不超过64个字符
      * @param string $FileContent 数据Base64编码，短音频同步接口仅传入可音频内容；
-支持范围：文件大小不能超过5M，时长不可超过60s，码率范围为8-16Kbps；
-支持格式：wav、mp3
+支持范围：文件大小不能超过5M，时长不可超过60s；
+支持格式：wav (PCM编码)、mp3、m4a (采样率：16kHz~48kHz，位深：16bit 小端，声道数：单声道/双声道，建议格式：16kHz/16bit/单声道)。
      * @param string $FileUrl 音频资源访问链接，与FileContent参数必须二选一输入；
-支持范围：同FileContent；
+支持范围及格式：同FileContent；
      */
     function __construct()
     {

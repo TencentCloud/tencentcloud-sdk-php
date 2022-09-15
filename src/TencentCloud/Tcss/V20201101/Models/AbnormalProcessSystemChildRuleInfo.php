@@ -46,6 +46,10 @@ REVERSE_SHELL：反弹shell
 FILELESS：无文件程序执行
 RISK_CMD：高危命令
 ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
+ * @method string getRuleLevel() 获取威胁等级，HIGH:高，MIDDLE:中，LOW:低
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleLevel(string $RuleLevel) 设置威胁等级，HIGH:高，MIDDLE:中，LOW:低
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AbnormalProcessSystemChildRuleInfo extends AbstractModel
 {
@@ -79,6 +83,12 @@ ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
     public $RuleType;
 
     /**
+     * @var string 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleLevel;
+
+    /**
      * @param string $RuleId 子策略Id
      * @param boolean $IsEnable 子策略状态，true为开启，false为关闭
      * @param string $RuleMode 策略模式,  RULE_MODE_RELEASE: 放行
@@ -92,6 +102,8 @@ REVERSE_SHELL：反弹shell
 FILELESS：无文件程序执行
 RISK_CMD：高危命令
 ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
+     * @param string $RuleLevel 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ ABNORMAL_CHILD_PROC: 敏感服务异常子进程启动
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("RuleLevel",$param) and $param["RuleLevel"] !== null) {
+            $this->RuleLevel = $param["RuleLevel"];
         }
     }
 }

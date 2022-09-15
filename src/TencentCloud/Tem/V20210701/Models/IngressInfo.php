@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMixed() 获取是否混合 https，默认 false，可选值 true 代表有 https 协议监听
  * @method void setMixed(boolean $Mixed) 设置是否混合 https，默认 false，可选值 true 代表有 https 协议监听
+ * @method string getRewriteType() 获取重定向模式，可选值：
+- AUTO（自动重定向http到https）
+- NONE（不使用重定向）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRewriteType(string $RewriteType) 设置重定向模式，可选值：
+- AUTO（自动重定向http到https）
+- NONE（不使用重定向）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IngressInfo extends AbstractModel
 {
@@ -119,6 +127,14 @@ class IngressInfo extends AbstractModel
     public $Mixed;
 
     /**
+     * @var string 重定向模式，可选值：
+- AUTO（自动重定向http到https）
+- NONE（不使用重定向）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RewriteType;
+
+    /**
      * @param string $EnvironmentId 环境ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterNamespace 环境namespace
@@ -136,6 +152,10 @@ class IngressInfo extends AbstractModel
      * @param string $CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Mixed 是否混合 https，默认 false，可选值 true 代表有 https 协议监听
+     * @param string $RewriteType 重定向模式，可选值：
+- AUTO（自动重定向http到https）
+- NONE（不使用重定向）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -202,6 +222,10 @@ class IngressInfo extends AbstractModel
 
         if (array_key_exists("Mixed",$param) and $param["Mixed"] !== null) {
             $this->Mixed = $param["Mixed"];
+        }
+
+        if (array_key_exists("RewriteType",$param) and $param["RewriteType"] !== null) {
+            $this->RewriteType = $param["RewriteType"];
         }
     }
 }

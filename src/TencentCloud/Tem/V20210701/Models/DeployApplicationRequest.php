@@ -100,10 +100,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadiness(HealthCheckConfig $Readiness) 设置就绪探针配置
  * @method DeployStrategyConf getDeployStrategyConf() 获取分批发布策略配置
  * @method void setDeployStrategyConf(DeployStrategyConf $DeployStrategyConf) 设置分批发布策略配置
- * @method array getHorizontalAutoscaler() 获取弹性策略
- * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) 设置弹性策略
- * @method array getCronHorizontalAutoscaler() 获取定时弹性策略
- * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) 设置定时弹性策略
+ * @method array getHorizontalAutoscaler() 获取弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
+ * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) 设置弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
+ * @method array getCronHorizontalAutoscaler() 获取定时弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
+ * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) 设置定时弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
  * @method integer getLogEnable() 获取是否启用log，1为启用，0为不启用
  * @method void setLogEnable(integer $LogEnable) 设置是否启用log，1为启用，0为不启用
  * @method boolean getConfEdited() 获取（除开镜像配置）配置是否修改
@@ -126,6 +126,22 @@ use TencentCloud\Common\AbstractModel;
 当选择konajdk时，可选参数：
 - ALPINE
 - TENCENTOS
+ * @method EnablePrometheusConf getEnablePrometheusConf() 获取metrics业务指标监控配置
+ * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) 设置metrics业务指标监控配置
+ * @method integer getEnableTracing() 获取1：开始自动apm采集（skywalking）；
+0：关闭apm采集；
+ * @method void setEnableTracing(integer $EnableTracing) 设置1：开始自动apm采集（skywalking）；
+0：关闭apm采集；
+ * @method integer getEnableMetrics() 获取1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+ * @method void setEnableMetrics(integer $EnableMetrics) 设置1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+ * @method string getTcrInstanceId() 获取镜像部署时，选择的tcr实例id
+ * @method void setTcrInstanceId(string $TcrInstanceId) 设置镜像部署时，选择的tcr实例id
+ * @method string getRepoServer() 获取镜像部署时，选择的镜像服务器地址
+ * @method void setRepoServer(string $RepoServer) 设置镜像部署时，选择的镜像服务器地址
+ * @method integer getRepoType() 获取镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
+ * @method void setRepoType(integer $RepoType) 设置镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -298,12 +314,12 @@ class DeployApplicationRequest extends AbstractModel
     public $DeployStrategyConf;
 
     /**
-     * @var array 弹性策略
+     * @var array 弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
      */
     public $HorizontalAutoscaler;
 
     /**
-     * @var array 定时弹性策略
+     * @var array 定时弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
      */
     public $CronHorizontalAutoscaler;
 
@@ -337,6 +353,38 @@ class DeployApplicationRequest extends AbstractModel
 - TENCENTOS
      */
     public $OsFlavour;
+
+    /**
+     * @var EnablePrometheusConf metrics业务指标监控配置
+     */
+    public $EnablePrometheusConf;
+
+    /**
+     * @var integer 1：开始自动apm采集（skywalking）；
+0：关闭apm采集；
+     */
+    public $EnableTracing;
+
+    /**
+     * @var integer 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+     */
+    public $EnableMetrics;
+
+    /**
+     * @var string 镜像部署时，选择的tcr实例id
+     */
+    public $TcrInstanceId;
+
+    /**
+     * @var string 镜像部署时，选择的镜像服务器地址
+     */
+    public $RepoServer;
+
+    /**
+     * @var integer 镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
+     */
+    public $RepoType;
 
     /**
      * @param string $ApplicationId 应用ID
@@ -379,8 +427,8 @@ class DeployApplicationRequest extends AbstractModel
      * @param HealthCheckConfig $Liveness 存活探针配置
      * @param HealthCheckConfig $Readiness 就绪探针配置
      * @param DeployStrategyConf $DeployStrategyConf 分批发布策略配置
-     * @param array $HorizontalAutoscaler 弹性策略
-     * @param array $CronHorizontalAutoscaler 定时弹性策略
+     * @param array $HorizontalAutoscaler 弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
+     * @param array $CronHorizontalAutoscaler 定时弹性策略（已弃用，请使用弹性伸缩策略组合相关接口）
      * @param integer $LogEnable 是否启用log，1为启用，0为不启用
      * @param boolean $ConfEdited （除开镜像配置）配置是否修改
      * @param boolean $SpeedUp 是否开启应用加速
@@ -392,6 +440,14 @@ class DeployApplicationRequest extends AbstractModel
 当选择konajdk时，可选参数：
 - ALPINE
 - TENCENTOS
+     * @param EnablePrometheusConf $EnablePrometheusConf metrics业务指标监控配置
+     * @param integer $EnableTracing 1：开始自动apm采集（skywalking）；
+0：关闭apm采集；
+     * @param integer $EnableMetrics 1：开始自动metrics采集（open-telemetry）；
+0：关闭metrics采集；
+     * @param string $TcrInstanceId 镜像部署时，选择的tcr实例id
+     * @param string $RepoServer 镜像部署时，选择的镜像服务器地址
+     * @param integer $RepoType 镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
      */
     function __construct()
     {
@@ -597,6 +653,31 @@ class DeployApplicationRequest extends AbstractModel
 
         if (array_key_exists("OsFlavour",$param) and $param["OsFlavour"] !== null) {
             $this->OsFlavour = $param["OsFlavour"];
+        }
+
+        if (array_key_exists("EnablePrometheusConf",$param) and $param["EnablePrometheusConf"] !== null) {
+            $this->EnablePrometheusConf = new EnablePrometheusConf();
+            $this->EnablePrometheusConf->deserialize($param["EnablePrometheusConf"]);
+        }
+
+        if (array_key_exists("EnableTracing",$param) and $param["EnableTracing"] !== null) {
+            $this->EnableTracing = $param["EnableTracing"];
+        }
+
+        if (array_key_exists("EnableMetrics",$param) and $param["EnableMetrics"] !== null) {
+            $this->EnableMetrics = $param["EnableMetrics"];
+        }
+
+        if (array_key_exists("TcrInstanceId",$param) and $param["TcrInstanceId"] !== null) {
+            $this->TcrInstanceId = $param["TcrInstanceId"];
+        }
+
+        if (array_key_exists("RepoServer",$param) and $param["RepoServer"] !== null) {
+            $this->RepoServer = $param["RepoServer"];
+        }
+
+        if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
+            $this->RepoType = $param["RepoType"];
         }
     }
 }

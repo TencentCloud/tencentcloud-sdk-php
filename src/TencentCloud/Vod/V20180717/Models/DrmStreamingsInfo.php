@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSimpleAesDefinition() 获取保护类型为 SimpleAES 的转自适应码流模板 ID。
  * @method void setSimpleAesDefinition(integer $SimpleAesDefinition) 设置保护类型为 SimpleAES 的转自适应码流模板 ID。
+ * @method integer getWidevineDefinition() 获取保护类型为 Widevine 的转自适应码流模板 ID。
+ * @method void setWidevineDefinition(integer $WidevineDefinition) 设置保护类型为 Widevine 的转自适应码流模板 ID。
+ * @method integer getFairPlayDefinition() 获取保护类型为 FairPlay 的转自适应码流模板 ID。
+ * @method void setFairPlayDefinition(integer $FairPlayDefinition) 设置保护类型为 FairPlay 的转自适应码流模板 ID。
  */
 class DrmStreamingsInfo extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DrmStreamingsInfo extends AbstractModel
     public $SimpleAesDefinition;
 
     /**
+     * @var integer 保护类型为 Widevine 的转自适应码流模板 ID。
+     */
+    public $WidevineDefinition;
+
+    /**
+     * @var integer 保护类型为 FairPlay 的转自适应码流模板 ID。
+     */
+    public $FairPlayDefinition;
+
+    /**
      * @param integer $SimpleAesDefinition 保护类型为 SimpleAES 的转自适应码流模板 ID。
+     * @param integer $WidevineDefinition 保护类型为 Widevine 的转自适应码流模板 ID。
+     * @param integer $FairPlayDefinition 保护类型为 FairPlay 的转自适应码流模板 ID。
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DrmStreamingsInfo extends AbstractModel
         }
         if (array_key_exists("SimpleAesDefinition",$param) and $param["SimpleAesDefinition"] !== null) {
             $this->SimpleAesDefinition = $param["SimpleAesDefinition"];
+        }
+
+        if (array_key_exists("WidevineDefinition",$param) and $param["WidevineDefinition"] !== null) {
+            $this->WidevineDefinition = $param["WidevineDefinition"];
+        }
+
+        if (array_key_exists("FairPlayDefinition",$param) and $param["FairPlayDefinition"] !== null) {
+            $this->FairPlayDefinition = $param["FairPlayDefinition"];
         }
     }
 }

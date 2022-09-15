@@ -24,6 +24,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
 
 /**
  * @method Models\AddRealServersResponse AddRealServers(Models\AddRealServersRequest $req) 添加源站(服务器)信息，支持IP或域名
+ * @method Models\BanAndRecoverProxyResponse BanAndRecoverProxy(Models\BanAndRecoverProxyRequest $req) 本接口（BanAndRecoverProxy）用于联通封禁解封GAAP跨境通道实例，支持按照客户UIN维度下发请求。被封禁的实例带宽上限将会被限制到0Mbps，无法正常处理客户端和源站之间的请求。
  * @method Models\BindListenerRealServersResponse BindListenerRealServers(Models\BindListenerRealServersRequest $req) 本接口（BindListenerRealServers）用于TCP/UDP监听器绑定解绑源站。
 注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。例如：原来绑定的源站为A，B，C，本次调用的选择绑定的源站为C，D，E，那么调用后所绑定的源站为C，D，E。
  * @method Models\BindRuleRealServersResponse BindRuleRealServers(Models\BindRuleRealServersRequest $req) 该接口用于7层监听器的转发规则绑定源站。注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。
@@ -36,6 +37,9 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 本接口（CreateDomain）用于创建HTTP/HTTPS监听器的访问域名，客户端请求通过访问该域名来请求后端业务。
 该接口仅支持version3.0的通道。
  * @method Models\CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(Models\CreateDomainErrorPageInfoRequest $req) 定制域名指定错误码的错误响应
+ * @method Models\CreateFirstLinkSessionResponse CreateFirstLinkSession(Models\CreateFirstLinkSessionRequest $req) 本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
+ * @method Models\CreateGlobalDomainResponse CreateGlobalDomain(Models\CreateGlobalDomainRequest $req) 用来创建统一域名
+ * @method Models\CreateGlobalDomainDnsResponse CreateGlobalDomainDns(Models\CreateGlobalDomainDnsRequest $req) 创建域名解析记录
  * @method Models\CreateHTTPListenerResponse CreateHTTPListener(Models\CreateHTTPListenerRequest $req) 该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
  * @method Models\CreateHTTPSListenerResponse CreateHTTPSListener(Models\CreateHTTPSListenerRequest $req) 该接口（CreateHTTPSListener）用于在通道实例下创建HTTPS协议类型的监听器。
  * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) 本接口（CreateProxy）用于创建/复制一个指定配置的加速通道。当复制通道时，需要设置新通道的基本配置参数，并设置ClonedProxyId来指定被复制的通道。
@@ -49,6 +53,9 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) 本接口（DeleteCertificate）用于删除证书。
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 本接口（DeleteDomain）仅适用于7层监听器，用于删除该监听器下对应域名及域名下的所有规则，所有已绑定源站的规则将自动解绑。
  * @method Models\DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(Models\DeleteDomainErrorPageInfoRequest $req) 删除域名的定制错误
+ * @method Models\DeleteFirstLinkSessionResponse DeleteFirstLinkSession(Models\DeleteFirstLinkSessionRequest $req) 本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
+ * @method Models\DeleteGlobalDomainResponse DeleteGlobalDomain(Models\DeleteGlobalDomainRequest $req) 删除统一域名
+ * @method Models\DeleteGlobalDomainDnsResponse DeleteGlobalDomainDns(Models\DeleteGlobalDomainDnsRequest $req) 删除域名的某条解析记录
  * @method Models\DeleteListenersResponse DeleteListeners(Models\DeleteListenersRequest $req) 该接口（DeleteListeners）用于批量删除通道或通道组的监听器，包括4/7层监听器。
  * @method Models\DeleteProxyGroupResponse DeleteProxyGroup(Models\DeleteProxyGroupRequest $req) 本接口（DeleteProxyGroup）用于删除通道组。
  * @method Models\DeleteRuleResponse DeleteRule(Models\DeleteRuleRequest $req) 该接口（DeleteRule）用于删除HTTP/HTTPS监听器的转发规则。
@@ -60,10 +67,14 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DescribeCertificateDetailResponse DescribeCertificateDetail(Models\DescribeCertificateDetailRequest $req) 本接口（DescribeCertificateDetail）用于查询证书详情，包括证书ID，证书名字，证书类型，证书内容以及密钥等信息。
  * @method Models\DescribeCertificatesResponse DescribeCertificates(Models\DescribeCertificatesRequest $req) 本接口（DescribeCertificates）用来查询可以使用的证书列表。
  * @method Models\DescribeCountryAreaMappingResponse DescribeCountryAreaMapping(Models\DescribeCountryAreaMappingRequest $req) 本接口（DescribeCountryAreaMapping）用于获取国家地区编码映射表。
+ * @method Models\DescribeCrossBorderProxiesResponse DescribeCrossBorderProxies(Models\DescribeCrossBorderProxiesRequest $req) 本接口（DescribeCrossBorderProxies）用于查询跨境通道实例列表。
  * @method Models\DescribeCustomHeaderResponse DescribeCustomHeader(Models\DescribeCustomHeaderRequest $req) 本接口（DescribeCustomHeader）用于自定义header列表
  * @method Models\DescribeDestRegionsResponse DescribeDestRegions(Models\DescribeDestRegionsRequest $req) 本接口（DescribeDestRegions）用于查询源站区域，即源站服务器所在区域。
  * @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) 查询目前定制域名的错误响应
  * @method Models\DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIds(Models\DescribeDomainErrorPageInfoByIdsRequest $req) 根据定制错误ID查询错误响应
+ * @method Models\DescribeFirstLinkSessionResponse DescribeFirstLinkSession(Models\DescribeFirstLinkSessionRequest $req) 本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
+ * @method Models\DescribeGlobalDomainDnsResponse DescribeGlobalDomainDns(Models\DescribeGlobalDomainDnsRequest $req) 查询域名解析列表
+ * @method Models\DescribeGlobalDomainsResponse DescribeGlobalDomains(Models\DescribeGlobalDomainsRequest $req) 查询域名列表
  * @method Models\DescribeGroupAndStatisticsProxyResponse DescribeGroupAndStatisticsProxy(Models\DescribeGroupAndStatisticsProxyRequest $req) 该接口为内部接口，用于查询可以获取统计数据的通道组和通道信息
  * @method Models\DescribeGroupDomainConfigResponse DescribeGroupDomainConfig(Models\DescribeGroupDomainConfigRequest $req) 本接口（DescribeGroupDomainConfig）用于获取通道组域名解析配置详情。
  * @method Models\DescribeHTTPListenersResponse DescribeHTTPListeners(Models\DescribeHTTPListenersRequest $req) 该接口（DescribeHTTPListeners）用来查询HTTP监听器信息。
@@ -91,10 +102,14 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DescribeTCPListenersResponse DescribeTCPListeners(Models\DescribeTCPListenersRequest $req) 该接口（DescribeTCPListeners）用于查询单通道或者通道组下的TCP监听器信息。
  * @method Models\DescribeUDPListenersResponse DescribeUDPListeners(Models\DescribeUDPListenersRequest $req) 该接口（DescribeUDPListeners）用于查询单通道或者通道组下的UDP监听器信息
  * @method Models\DestroyProxiesResponse DestroyProxies(Models\DestroyProxiesRequest $req) 本接口（DestroyProxies）用于销毁。通道销毁后，不再产生任何费用。
+ * @method Models\DisableGlobalDomainResponse DisableGlobalDomain(Models\DisableGlobalDomainRequest $req) 暂停域名解析
+ * @method Models\EnableGlobalDomainResponse EnableGlobalDomain(Models\EnableGlobalDomainRequest $req) 开启域名解析
  * @method Models\InquiryPriceCreateProxyResponse InquiryPriceCreateProxy(Models\InquiryPriceCreateProxyRequest $req) 本接口（InquiryPriceCreateProxy）用于创建加速通道询价。
  * @method Models\ModifyCertificateResponse ModifyCertificate(Models\ModifyCertificateRequest $req) 本接口（ModifyCertificate）用于修改监听器下的域名对应的证书。该接口仅适用于version3.0的通道。
  * @method Models\ModifyCertificateAttributesResponse ModifyCertificateAttributes(Models\ModifyCertificateAttributesRequest $req) 本接口（ModifyCertificateAttributes）用于修改证书，包括证书名字以及证书内容。
  * @method Models\ModifyDomainResponse ModifyDomain(Models\ModifyDomainRequest $req) 本接口（ModifyDomain）用于监听器下的域名。当通道版本为3.0时，支持对该域名所对应的证书修改。
+ * @method Models\ModifyGlobalDomainAttributeResponse ModifyGlobalDomainAttribute(Models\ModifyGlobalDomainAttributeRequest $req) 修改域名属性
+ * @method Models\ModifyGlobalDomainDnsResponse ModifyGlobalDomainDns(Models\ModifyGlobalDomainDnsRequest $req) 修改域名解析记录
  * @method Models\ModifyGroupDomainConfigResponse ModifyGroupDomainConfig(Models\ModifyGroupDomainConfigRequest $req) 本接口（ModifyGroupDomainConfig）用于配置通道组就近接入域名。
  * @method Models\ModifyHTTPListenerAttributeResponse ModifyHTTPListenerAttribute(Models\ModifyHTTPListenerAttributeRequest $req) 该接口（ModifyHTTPListenerAttribute）用于修改通道的HTTP监听器配置信息，目前仅支持修改监听器的名称。
 注意：通道组通道暂时不支持HTTP/HTTPS监听器。

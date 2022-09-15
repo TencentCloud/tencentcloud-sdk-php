@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRiskSyscallEventsExport请求参数结构体
  *
- * @method array getExportField() 获取导出字段
- * @method void setExportField(array $ExportField) 设置导出字段
  * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -32,14 +30,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrder(string $Order) 设置升序降序,asc desc
  * @method string getBy() 获取排序字段
  * @method void setBy(string $By) 设置排序字段
+ * @method array getExportField() 获取导出字段
+ * @method void setExportField(array $ExportField) 设置导出字段
  */
 class DescribeRiskSyscallEventsExportRequest extends AbstractModel
 {
-    /**
-     * @var array 导出字段
-     */
-    public $ExportField;
-
     /**
      * @var integer 需要返回的数量，默认为10，最大值为100
      */
@@ -66,12 +61,17 @@ class DescribeRiskSyscallEventsExportRequest extends AbstractModel
     public $By;
 
     /**
-     * @param array $ExportField 导出字段
+     * @var array 导出字段
+     */
+    public $ExportField;
+
+    /**
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
      * @param string $Order 升序降序,asc desc
      * @param string $By 排序字段
+     * @param array $ExportField 导出字段
      */
     function __construct()
     {
@@ -86,10 +86,6 @@ class DescribeRiskSyscallEventsExportRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
-            $this->ExportField = $param["ExportField"];
-        }
-
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
         }
@@ -113,6 +109,10 @@ class DescribeRiskSyscallEventsExportRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
+        }
+
+        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
+            $this->ExportField = $param["ExportField"];
         }
     }
 }

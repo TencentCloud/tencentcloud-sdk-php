@@ -25,12 +25,12 @@ use TencentCloud\Common\AbstractModel;
 	IdpStatus bool
 	BanStatus bool
  *
- * @method integer getLeakNum() 获取暴漏漏洞数量
- * @method void setLeakNum(integer $LeakNum) 设置暴漏漏洞数量
+ * @method integer getLeakNum() 获取暴露漏洞数量
+ * @method void setLeakNum(integer $LeakNum) 设置暴露漏洞数量
  * @method integer getIPNum() 获取防护ip数量
  * @method void setIPNum(integer $IPNum) 设置防护ip数量
- * @method integer getPortNum() 获取暴漏端口数量
- * @method void setPortNum(integer $PortNum) 设置暴漏端口数量
+ * @method integer getPortNum() 获取暴露端口数量
+ * @method void setPortNum(integer $PortNum) 设置暴露端口数量
  * @method boolean getIPStatus() 获取是否开启防护
  * @method void setIPStatus(boolean $IPStatus) 设置是否开启防护
  * @method boolean getIdpStatus() 获取是否拦截攻击
@@ -41,7 +41,7 @@ use TencentCloud\Common\AbstractModel;
 class ScanResultInfo extends AbstractModel
 {
     /**
-     * @var integer 暴漏漏洞数量
+     * @var integer 暴露漏洞数量
      */
     public $LeakNum;
 
@@ -51,7 +51,7 @@ class ScanResultInfo extends AbstractModel
     public $IPNum;
 
     /**
-     * @var integer 暴漏端口数量
+     * @var integer 暴露端口数量
      */
     public $PortNum;
 
@@ -71,9 +71,9 @@ class ScanResultInfo extends AbstractModel
     public $BanStatus;
 
     /**
-     * @param integer $LeakNum 暴漏漏洞数量
+     * @param integer $LeakNum 暴露漏洞数量
      * @param integer $IPNum 防护ip数量
-     * @param integer $PortNum 暴漏端口数量
+     * @param integer $PortNum 暴露端口数量
      * @param boolean $IPStatus 是否开启防护
      * @param boolean $IdpStatus 是否拦截攻击
      * @param boolean $BanStatus 是否禁封端口

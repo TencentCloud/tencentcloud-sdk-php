@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyTypeList(array $ProxyTypeList) 设置转发类型列表
  * @method array getRealServers() 获取源站列表
  * @method void setRealServers(array $RealServers) 设置源站列表
- * @method array getInstanceDetails() 获取规则所属的资源实例
- * @method void setInstanceDetails(array $InstanceDetails) 设置规则所属的资源实例
+ * @method array getInstanceDetails() 获取资源实例
+ * @method void setInstanceDetails(array $InstanceDetails) 设置资源实例
+ * @method array getInstanceDetailRule() 获取规则所属的资源实例
+ * @method void setInstanceDetailRule(array $InstanceDetailRule) 设置规则所属的资源实例
  */
 class Layer7Rule extends AbstractModel
 {
@@ -47,15 +49,21 @@ class Layer7Rule extends AbstractModel
     public $RealServers;
 
     /**
-     * @var array 规则所属的资源实例
+     * @var array 资源实例
      */
     public $InstanceDetails;
+
+    /**
+     * @var array 规则所属的资源实例
+     */
+    public $InstanceDetailRule;
 
     /**
      * @param string $Domain 域名
      * @param array $ProxyTypeList 转发类型列表
      * @param array $RealServers 源站列表
-     * @param array $InstanceDetails 规则所属的资源实例
+     * @param array $InstanceDetails 资源实例
+     * @param array $InstanceDetailRule 规则所属的资源实例
      */
     function __construct()
     {
@@ -98,6 +106,15 @@ class Layer7Rule extends AbstractModel
                 $obj = new InstanceRelation();
                 $obj->deserialize($value);
                 array_push($this->InstanceDetails, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceDetailRule",$param) and $param["InstanceDetailRule"] !== null) {
+            $this->InstanceDetailRule = [];
+            foreach ($param["InstanceDetailRule"] as $key => $value){
+                $obj = new RuleInstanceRelation();
+                $obj->deserialize($value);
+                array_push($this->InstanceDetailRule, $obj);
             }
         }
     }

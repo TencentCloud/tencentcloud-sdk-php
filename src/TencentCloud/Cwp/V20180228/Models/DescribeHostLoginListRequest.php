@@ -27,21 +27,27 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
 <li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
 <li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白</li>
+<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
 <li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
 <li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白</li>
+<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
+ * @method string getOrder() 获取排序方式：根据请求次数排序：asc-升序/desc-降序
+ * @method void setOrder(string $Order) 设置排序方式：根据请求次数排序：asc-升序/desc-降序
+ * @method string getBy() 获取排序字段：LoginTime-发生时间
+ * @method void setBy(string $By) 设置排序字段：LoginTime-发生时间
  */
 class DescribeHostLoginListRequest extends AbstractModel
 {
@@ -59,14 +65,25 @@ class DescribeHostLoginListRequest extends AbstractModel
      * @var array 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
 <li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
 <li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白</li>
+<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
      */
     public $Filters;
+
+    /**
+     * @var string 排序方式：根据请求次数排序：asc-升序/desc-降序
+     */
+    public $Order;
+
+    /**
+     * @var string 排序字段：LoginTime-发生时间
+     */
+    public $By;
 
     /**
      * @param integer $Limit 需要返回的数量，最大值为100
@@ -74,12 +91,15 @@ class DescribeHostLoginListRequest extends AbstractModel
      * @param array $Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
 <li>LoginTimeEnd - String - 是否必填：否 - 按照修改时间段筛选，结束时间</li>
 <li>SrcIp - String - 是否必填：否 - 来源ip筛选</li>
-<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白</li>
+<li>Status - int - 是否必填：否 - 状态筛选1:正常登录；5：已加白,14:已处理，15：已忽略</li>
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
+     * @param string $Order 排序方式：根据请求次数排序：asc-升序/desc-降序
+     * @param string $By 排序字段：LoginTime-发生时间
      */
     function __construct()
     {
@@ -109,6 +129,14 @@ class DescribeHostLoginListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSupportedHsm请求参数结构体
  *
-
+ * @method string getHsmType() 获取Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+ * @method void setHsmType(string $HsmType) 设置Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
  */
 class DescribeSupportedHsmRequest extends AbstractModel
 {
-
+    /**
+     * @var string Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+     */
+    public $HsmType;
 
     /**
-
+     * @param string $HsmType Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeSupportedHsmRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("HsmType",$param) and $param["HsmType"] !== null) {
+            $this->HsmType = $param["HsmType"];
+        }
     }
 }

@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimestamp(integer $StartTimestamp) 设置起始时间
  * @method integer getEndTimestamp() 获取结束时间
  * @method void setEndTimestamp(integer $EndTimestamp) 设置结束时间
- * @method integer getInstanceId() 获取实例ID
- * @method void setInstanceId(integer $InstanceId) 设置实例ID
- * @method integer getSdkAppId() 获取应用ID
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
+ * @method integer getInstanceId() 获取实例 ID（废弃）
+ * @method void setInstanceId(integer $InstanceId) 设置实例 ID（废弃）
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getLimit() 获取返回记录条数 最大为100默认20
  * @method void setLimit(integer $Limit) 设置返回记录条数 最大为100默认20
  * @method integer getOffset() 获取返回记录偏移 默认为0
@@ -48,12 +48,12 @@ class DescribeIMCdrsRequest extends AbstractModel
     public $EndTimestamp;
 
     /**
-     * @var integer 实例ID
+     * @var integer 实例 ID（废弃）
      */
     public $InstanceId;
 
     /**
-     * @var integer 应用ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -75,8 +75,8 @@ class DescribeIMCdrsRequest extends AbstractModel
     /**
      * @param integer $StartTimestamp 起始时间
      * @param integer $EndTimestamp 结束时间
-     * @param integer $InstanceId 实例ID
-     * @param integer $SdkAppId 应用ID
+     * @param integer $InstanceId 实例 ID（废弃）
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $Limit 返回记录条数 最大为100默认20
      * @param integer $Offset 返回记录偏移 默认为0
      * @param integer $Type 1为全媒体，2为文本客服，不填则查询全部

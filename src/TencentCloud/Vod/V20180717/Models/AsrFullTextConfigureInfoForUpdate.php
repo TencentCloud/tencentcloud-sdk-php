@@ -26,10 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) 设置语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
- * @method string getSubtitleFormat() 获取生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
- * @method void setSubtitleFormat(string $SubtitleFormat) 设置生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+ * @method SubtitleFormatsOperation getSubtitleFormatsOperation() 获取字幕格式列表操作信息。
+ * @method void setSubtitleFormatsOperation(SubtitleFormatsOperation $SubtitleFormatsOperation) 设置字幕格式列表操作信息。
+ * @method string getSubtitleFormat() 获取生成的字幕文件格式，<font color='red'>填空字符串</font>表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font>
+ * @method void setSubtitleFormat(string $SubtitleFormat) 设置生成的字幕文件格式，<font color='red'>填空字符串</font>表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font>
  */
 class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 {
@@ -41,8 +47,15 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
     public $Switch;
 
     /**
-     * @var string 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+     * @var SubtitleFormatsOperation 字幕格式列表操作信息。
+     */
+    public $SubtitleFormatsOperation;
+
+    /**
+     * @var string 生成的字幕文件格式，<font color='red'>填空字符串</font>表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font>
      */
     public $SubtitleFormat;
 
@@ -50,8 +63,11 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
      * @param string $Switch 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
-     * @param string $SubtitleFormat 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+     * @param SubtitleFormatsOperation $SubtitleFormatsOperation 字幕格式列表操作信息。
+     * @param string $SubtitleFormat 生成的字幕文件格式，<font color='red'>填空字符串</font>表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件；</li>
+<li>srt：生成 SRT 字幕文件。</li>
+<font color='red'>注意：此字段已废弃，建议使用 SubtitleFormatsOperation。</font>
      */
     function __construct()
     {
@@ -68,6 +84,11 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("SubtitleFormatsOperation",$param) and $param["SubtitleFormatsOperation"] !== null) {
+            $this->SubtitleFormatsOperation = new SubtitleFormatsOperation();
+            $this->SubtitleFormatsOperation->deserialize($param["SubtitleFormatsOperation"]);
         }
 
         if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述集群的基本配置信息
  *
- * @method string getClusterOs() 获取集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
- * @method void setClusterOs(string $ClusterOs) 设置集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+ * @method string getClusterOs() 获取集群操作系统，支持设置公共镜像(字段传相应镜像ID)和自定义镜像(字段传相应镜像Name)，详情参考：https://cloud.tencent.com/document/product/457/68289
+ * @method void setClusterOs(string $ClusterOs) 设置集群操作系统，支持设置公共镜像(字段传相应镜像ID)和自定义镜像(字段传相应镜像Name)，详情参考：https://cloud.tencent.com/document/product/457/68289
  * @method string getClusterVersion() 获取集群版本,默认值为1.10.5
  * @method void setClusterVersion(string $ClusterVersion) 设置集群版本,默认值为1.10.5
  * @method string getClusterName() 获取集群名称
@@ -36,15 +36,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
  * @method string getOsCustomizeType() 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
- * @method boolean getNeedWorkSecurityGroup() 获取是否开启节点的默认安全组(默认: 否，Aphla特性)
- * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) 设置是否开启节点的默认安全组(默认: 否，Aphla特性)
+ * @method boolean getNeedWorkSecurityGroup() 获取是否开启节点的默认安全组(默认: 否，Alpha特性)
+ * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) 设置是否开启节点的默认安全组(默认: 否，Alpha特性)
  * @method string getSubnetId() 获取当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
  * @method void setSubnetId(string $SubnetId) 设置当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+ * @method string getClusterLevel() 获取集群等级，针对托管集群生效
+ * @method void setClusterLevel(string $ClusterLevel) 设置集群等级，针对托管集群生效
+ * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() 获取自动变配集群等级，针对托管集群生效
+ * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) 设置自动变配集群等级，针对托管集群生效
  */
 class ClusterBasicSettings extends AbstractModel
 {
     /**
-     * @var string 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+     * @var string 集群操作系统，支持设置公共镜像(字段传相应镜像ID)和自定义镜像(字段传相应镜像Name)，详情参考：https://cloud.tencent.com/document/product/457/68289
      */
     public $ClusterOs;
 
@@ -84,7 +88,7 @@ class ClusterBasicSettings extends AbstractModel
     public $OsCustomizeType;
 
     /**
-     * @var boolean 是否开启节点的默认安全组(默认: 否，Aphla特性)
+     * @var boolean 是否开启节点的默认安全组(默认: 否，Alpha特性)
      */
     public $NeedWorkSecurityGroup;
 
@@ -94,7 +98,17 @@ class ClusterBasicSettings extends AbstractModel
     public $SubnetId;
 
     /**
-     * @param string $ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+     * @var string 集群等级，针对托管集群生效
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
+     * @param string $ClusterOs 集群操作系统，支持设置公共镜像(字段传相应镜像ID)和自定义镜像(字段传相应镜像Name)，详情参考：https://cloud.tencent.com/document/product/457/68289
      * @param string $ClusterVersion 集群版本,默认值为1.10.5
      * @param string $ClusterName 集群名称
      * @param string $ClusterDescription 集群描述
@@ -102,8 +116,10 @@ class ClusterBasicSettings extends AbstractModel
      * @param integer $ProjectId 集群内新增资源所属项目ID。
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
      * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
-     * @param boolean $NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Aphla特性)
+     * @param boolean $NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Alpha特性)
      * @param string $SubnetId 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+     * @param string $ClusterLevel 集群等级，针对托管集群生效
+     * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
      */
     function __construct()
     {
@@ -161,6 +177,15 @@ class ClusterBasicSettings extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel();
+            $this->AutoUpgradeClusterLevel->deserialize($param["AutoUpgradeClusterLevel"]);
         }
     }
 }

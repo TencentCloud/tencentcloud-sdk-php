@@ -92,6 +92,8 @@ overseas：中国境外锁定
 global：全球锁定
  * @method string getProduct() 获取域名所属产品，cdn/ecdn
  * @method void setProduct(string $Product) 设置域名所属产品，cdn/ecdn
+ * @method string getParentHost() 获取主域名
+ * @method void setParentHost(string $ParentHost) 设置主域名
  */
 class BriefDomain extends AbstractModel
 {
@@ -188,6 +190,11 @@ global：全球锁定
     public $Product;
 
     /**
+     * @var string 主域名
+     */
+    public $ParentHost;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号 ID
      * @param string $Domain 加速域名
@@ -224,6 +231,7 @@ mainland：中国境内锁定
 overseas：中国境外锁定
 global：全球锁定
      * @param string $Product 域名所属产品，cdn/ecdn
+     * @param string $ParentHost 主域名
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ global：全球锁定
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("ParentHost",$param) and $param["ParentHost"] !== null) {
+            $this->ParentHost = $param["ParentHost"];
         }
     }
 }

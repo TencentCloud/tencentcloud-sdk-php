@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEdgeUnitID(integer $EdgeUnitID) 设置单元ID
  * @method string getConfigMapName() 获取ConfigMap名称
  * @method void setConfigMapName(string $ConfigMapName) 设置ConfigMap名称
- * @method string getYaml() 获取Yaml配置
- * @method void setYaml(string $Yaml) 设置Yaml配置
+ * @method string getYaml() 获取Yaml配置, base64之后的串
+ * @method void setYaml(string $Yaml) 设置Yaml配置, base64之后的串
  * @method string getConfigMapNamespace() 获取ConfigMap命名空间
  * @method void setConfigMapNamespace(string $ConfigMapNamespace) 设置ConfigMap命名空间
  */
@@ -42,7 +42,7 @@ class ModifyConfigMapRequest extends AbstractModel
     public $ConfigMapName;
 
     /**
-     * @var string Yaml配置
+     * @var string Yaml配置, base64之后的串
      */
     public $Yaml;
 
@@ -54,7 +54,7 @@ class ModifyConfigMapRequest extends AbstractModel
     /**
      * @param integer $EdgeUnitID 单元ID
      * @param string $ConfigMapName ConfigMap名称
-     * @param string $Yaml Yaml配置
+     * @param string $Yaml Yaml配置, base64之后的串
      * @param string $ConfigMapNamespace ConfigMap命名空间
      */
     function __construct()

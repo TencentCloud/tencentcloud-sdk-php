@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置API 的后端服务路径，如 /path。如果 ServiceType 是 HTTP，则此参数必传。前后端路径可不同。
  * @method string getMethod() 获取API的后端服务请求方法，如 GET。如果 ServiceType 是 HTTP，则此参数必传。前后端方法可不同。
  * @method void setMethod(string $Method) 设置API的后端服务请求方法，如 GET。如果 ServiceType 是 HTTP，则此参数必传。前后端方法可不同。
+ * @method string getUpstreamId() 获取当绑定vpc通道才需要
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpstreamId(string $UpstreamId) 设置当绑定vpc通道才需要
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CosConfig getCosConfig() 获取API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosConfig(CosConfig $CosConfig) 设置API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
@@ -63,6 +67,12 @@ class ServiceConfig extends AbstractModel
     public $Method;
 
     /**
+     * @var string 当绑定vpc通道才需要
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpstreamId;
+
+    /**
      * @var CosConfig API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -74,6 +84,8 @@ class ServiceConfig extends AbstractModel
      * @param string $Url API 的后端服务url。如果ServiceType是HTTP，则此参数必传。
      * @param string $Path API 的后端服务路径，如 /path。如果 ServiceType 是 HTTP，则此参数必传。前后端路径可不同。
      * @param string $Method API的后端服务请求方法，如 GET。如果 ServiceType 是 HTTP，则此参数必传。前后端方法可不同。
+     * @param string $UpstreamId 当绑定vpc通道才需要
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CosConfig $CosConfig API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -108,6 +120,10 @@ class ServiceConfig extends AbstractModel
 
         if (array_key_exists("Method",$param) and $param["Method"] !== null) {
             $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("UpstreamId",$param) and $param["UpstreamId"] !== null) {
+            $this->UpstreamId = $param["UpstreamId"];
         }
 
         if (array_key_exists("CosConfig",$param) and $param["CosConfig"] !== null) {

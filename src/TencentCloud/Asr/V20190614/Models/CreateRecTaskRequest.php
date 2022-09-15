@@ -20,7 +20,7 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRecTask请求参数结构体
  *
- * @method string getEngineModelType() 获取引擎模型类型。
+ * @method string getEngineModelType() 获取引擎模型类型。注意：非电话场景请务必使用16k的引擎。
 电话场景：
 • 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
@@ -34,9 +34,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
-• 16k_wuu-SH：16k 上海话方言；
-• 16k_zh_dialect：多方言。
- * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。
+ * @method void setEngineModelType(string $EngineModelType) 设置引擎模型类型。注意：非电话场景请务必使用16k的引擎。
 电话场景：
 • 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
@@ -50,12 +48,10 @@ use TencentCloud\Common\AbstractModel;
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
-• 16k_wuu-SH：16k 上海话方言；
-• 16k_zh_dialect：多方言。
  * @method integer getChannelNum() 获取识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。
  * @method void setChannelNum(integer $ChannelNum) 设置识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。
- * @method integer getResTextFormat() 获取识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
- * @method void setResTextFormat(integer $ResTextFormat) 设置识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
+ * @method integer getResTextFormat() 获取识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）；3: 标点符号分段，包含每段时间戳，特别适用于字幕场景（包含词级时间、标点、语速值）。
+ * @method void setResTextFormat(integer $ResTextFormat) 设置识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）；3: 标点符号分段，包含每段时间戳，特别适用于字幕场景（包含词级时间、标点、语速值）。
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method integer getSpeakerDiarization() 获取是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video，单声道音频)，默认值为 0。
@@ -78,10 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConvertNumMode(integer $ConvertNumMode) 设置是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
  * @method integer getFilterDirty() 获取是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
  * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
- * @method string getHotwordId() 获取热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
- * @method void setHotwordId(string $HotwordId) 设置热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
- * @method string getCustomizationId() 获取自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
- * @method void setCustomizationId(string $CustomizationId) 设置自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+ * @method string getHotwordId() 获取热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
+ * @method void setHotwordId(string $HotwordId) 设置热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
+ * @method string getCustomizationId() 获取自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+ * @method void setCustomizationId(string $CustomizationId) 设置自学习模型 id。如设置了该参数，将生效对应的自学习模型。
  * @method string getExtra() 获取附加参数(该参数无意义，忽略即可)
  * @method void setExtra(string $Extra) 设置附加参数(该参数无意义，忽略即可)
  * @method integer getFilterPunc() 获取是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
@@ -92,7 +88,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateRecTaskRequest extends AbstractModel
 {
     /**
-     * @var string 引擎模型类型。
+     * @var string 引擎模型类型。注意：非电话场景请务必使用16k的引擎。
 电话场景：
 • 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
@@ -106,8 +102,6 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
-• 16k_wuu-SH：16k 上海话方言；
-• 16k_zh_dialect：多方言。
      */
     public $EngineModelType;
 
@@ -117,7 +111,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $ChannelNum;
 
     /**
-     * @var integer 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
+     * @var integer 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）；3: 标点符号分段，包含每段时间戳，特别适用于字幕场景（包含词级时间、标点、语速值）。
      */
     public $ResTextFormat;
 
@@ -169,12 +163,12 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterDirty;
 
     /**
-     * @var string 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
+     * @var string 热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
      */
     public $HotwordId;
 
     /**
-     * @var string 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+     * @var string 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
      */
     public $CustomizationId;
 
@@ -194,7 +188,7 @@ class CreateRecTaskRequest extends AbstractModel
     public $FilterModal;
 
     /**
-     * @param string $EngineModelType 引擎模型类型。
+     * @param string $EngineModelType 引擎模型类型。注意：非电话场景请务必使用16k的引擎。
 电话场景：
 • 8k_en：电话 8k 英语；
 • 8k_zh：电话 8k 中文普通话通用；
@@ -208,10 +202,8 @@ class CreateRecTaskRequest extends AbstractModel
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
 • 16k_th 泰语；
-• 16k_wuu-SH：16k 上海话方言；
-• 16k_zh_dialect：多方言。
      * @param integer $ChannelNum 识别声道数。1：单声道（非电话场景，直接选择单声道即可，忽略音频声道数）；2：双声道（仅支持8k_zh电话场景，双声道应分别对应通话双方）。注意：双声道的电话音频已物理分离说话人，无需再开启说话人分离功能。
-     * @param integer $ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）
+     * @param integer $ResTextFormat 识别结果返回形式。0： 识别结果文本(含分段时间戳)； 1：词级别粒度的[详细识别结果](https://cloud.tencent.com/document/api/1093/37824#SentenceDetail)(不含标点，含语速值)；2：词级别粒度的详细识别结果（包含标点、语速值）；3: 标点符号分段，包含每段时间戳，特别适用于字幕场景（包含词级时间、标点、语速值）。
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param integer $SpeakerDiarization 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video，单声道音频)，默认值为 0。
 注意：8k电话场景建议使用双声道来区分通话双方，设置ChannelNum=2即可，不用开启说话人分离。
@@ -223,8 +215,8 @@ class CreateRecTaskRequest extends AbstractModel
      * @param integer $DataLen 数据长度，非必填（此数据长度为数据未进行base64编码时的数据长度）。
      * @param integer $ConvertNumMode 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
      * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
-     * @param string $HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
-     * @param string $CustomizationId 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+     * @param string $HotwordId 热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
+     * @param string $CustomizationId 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
      * @param string $Extra 附加参数(该参数无意义，忽略即可)
      * @param integer $FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
      * @param integer $FilterModal 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。

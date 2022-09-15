@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSuperPlayerConfigs请求参数结构体
  *
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method array getNames() 获取播放器配置名字过滤条件，数组长度限制：100。
  * @method void setNames(array $Names) 设置播放器配置名字过滤条件，数组长度限制：100。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
@@ -32,11 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置播放器配置类型过滤条件，可选值：
 <li>Preset：系统预置配置；</li>
 <li>Custom：用户自定义配置。</li>
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class DescribeSuperPlayerConfigsRequest extends AbstractModel
 {
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
     /**
      * @var array 播放器配置名字过滤条件，数组长度限制：100。
      */
@@ -60,18 +65,13 @@ class DescribeSuperPlayerConfigsRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param array $Names 播放器配置名字过滤条件，数组长度限制：100。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param string $Type 播放器配置类型过滤条件，可选值：
 <li>Preset：系统预置配置；</li>
 <li>Custom：用户自定义配置。</li>
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -86,6 +86,10 @@ class DescribeSuperPlayerConfigsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Names",$param) and $param["Names"] !== null) {
             $this->Names = $param["Names"];
         }
@@ -100,10 +104,6 @@ class DescribeSuperPlayerConfigsRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResumeServerless请求参数结构体
  *
- * @method string getClusterId() 获取集群id
- * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
  */
 class ResumeServerlessRequest extends AbstractModel
 {
     /**
-     * @var string 集群id
+     * @var string 集群ID
      */
     public $ClusterId;
 
     /**
-     * @param string $ClusterId 集群id
+     * @param string $ClusterId 集群ID
      */
     function __construct()
     {

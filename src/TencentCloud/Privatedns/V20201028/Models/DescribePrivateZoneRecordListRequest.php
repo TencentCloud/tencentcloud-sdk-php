@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置过滤参数（支持使用Value、RecordType过滤）
  * @method integer getOffset() 获取分页偏移量，从0开始
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始
- * @method integer getLimit() 获取分页限制数目， 最大100，默认20
- * @method void setLimit(integer $Limit) 设置分页限制数目， 最大100，默认20
+ * @method integer getLimit() 获取分页限制数目， 最大200，默认20
+ * @method void setLimit(integer $Limit) 设置分页限制数目， 最大200，默认20
  */
 class DescribePrivateZoneRecordListRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribePrivateZoneRecordListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页限制数目， 最大100，默认20
+     * @var integer 分页限制数目， 最大200，默认20
      */
     public $Limit;
 
@@ -55,7 +55,7 @@ class DescribePrivateZoneRecordListRequest extends AbstractModel
      * @param string $ZoneId 私有域ID: zone-xxxxxx
      * @param array $Filters 过滤参数（支持使用Value、RecordType过滤）
      * @param integer $Offset 分页偏移量，从0开始
-     * @param integer $Limit 分页限制数目， 最大100，默认20
+     * @param integer $Limit 分页限制数目， 最大200，默认20
      */
     function __construct()
     {

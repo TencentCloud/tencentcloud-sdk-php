@@ -18,28 +18,28 @@ namespace TencentCloud\Ssa\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询_通用字段
+ * 自定义泄露事件列表
  *
- * @method integer getCount() 获取Count
- * @method void setCount(integer $Count) 设置Count
- * @method array getList() 获取List
- * @method void setList(array $List) 设置List
+ * @method integer getCount() 获取数据条数
+ * @method void setCount(integer $Count) 设置数据条数
+ * @method array getList() 获取自定义泄露事件列表
+ * @method void setList(array $List) 设置自定义泄露事件列表
  */
 class SaDivulgeDataQueryPubList extends AbstractModel
 {
     /**
-     * @var integer Count
+     * @var integer 数据条数
      */
     public $Count;
 
     /**
-     * @var array List
+     * @var array 自定义泄露事件列表
      */
     public $List;
 
     /**
-     * @param integer $Count Count
-     * @param array $List List
+     * @param integer $Count 数据条数
+     * @param array $List 自定义泄露事件列表
      */
     function __construct()
     {

@@ -18,28 +18,28 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述了定期快照的执行策略。可理解为在DayOfWeek指定的那几天中，在Hour指定的小时执行该条定期快照策略。
+ * 描述了定期快照的执行策略。可理解为在DayOfWeek/DayOfMonth指定的几天中，或者是IntervalDays设定的间隔的几天，在Hour指定的小时执行该条定期快照策略。注：DayOfWeek/DayOfMonth/IntervalDays为互斥规则，仅可设置其中一条策略规则。
  *
- * @method array getDayOfWeek() 获取指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
- * @method void setDayOfWeek(array $DayOfWeek) 设置指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
  * @method array getHour() 获取指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
  * @method void setHour(array $Hour) 设置指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
+ * @method array getDayOfWeek() 获取指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+ * @method void setDayOfWeek(array $DayOfWeek) 设置指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
  */
 class Policy extends AbstractModel
 {
-    /**
-     * @var array 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
-     */
-    public $DayOfWeek;
-
     /**
      * @var array 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
      */
     public $Hour;
 
     /**
-     * @param array $DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+     * @var array 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+     */
+    public $DayOfWeek;
+
+    /**
      * @param array $Hour 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
+     * @param array $DayOfWeek 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Policy extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DayOfWeek",$param) and $param["DayOfWeek"] !== null) {
-            $this->DayOfWeek = $param["DayOfWeek"];
-        }
-
         if (array_key_exists("Hour",$param) and $param["Hour"] !== null) {
             $this->Hour = $param["Hour"];
+        }
+
+        if (array_key_exists("DayOfWeek",$param) and $param["DayOfWeek"] !== null) {
+            $this->DayOfWeek = $param["DayOfWeek"];
         }
     }
 }

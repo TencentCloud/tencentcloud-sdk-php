@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPersonId() 获取素材 ID。
  * @method void setPersonId(string $PersonId) 设置素材 ID。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method string getName() 获取名称，长度限制：128 个字符。
  * @method void setName(string $Name) 设置名称，长度限制：128 个字符。
  * @method string getDescription() 获取描述，长度限制：1024 个字符。
@@ -38,8 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) 设置五官操作信息。
  * @method AiSampleTagOperation getTagOperationInfo() 获取标签操作信息。
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) 设置标签操作信息。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class ModifyPersonSampleRequest extends AbstractModel
 {
@@ -47,6 +47,11 @@ class ModifyPersonSampleRequest extends AbstractModel
      * @var string 素材 ID。
      */
     public $PersonId;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string 名称，长度限制：128 个字符。
@@ -77,12 +82,8 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $TagOperationInfo;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $PersonId 素材 ID。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 名称，长度限制：128 个字符。
      * @param string $Description 描述，长度限制：1024 个字符。
      * @param array $Usages 素材应用场景，可选值：
@@ -91,7 +92,6 @@ class ModifyPersonSampleRequest extends AbstractModel
 3. All：用于内容识别、不适宜的内容识别，等价于 1+2。
      * @param AiSampleFaceOperation $FaceOperationInfo 五官操作信息。
      * @param AiSampleTagOperation $TagOperationInfo 标签操作信息。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -108,6 +108,10 @@ class ModifyPersonSampleRequest extends AbstractModel
         }
         if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
             $this->PersonId = $param["PersonId"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -130,10 +134,6 @@ class ModifyPersonSampleRequest extends AbstractModel
         if (array_key_exists("TagOperationInfo",$param) and $param["TagOperationInfo"] !== null) {
             $this->TagOperationInfo = new AiSampleTagOperation();
             $this->TagOperationInfo->deserialize($param["TagOperationInfo"]);
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

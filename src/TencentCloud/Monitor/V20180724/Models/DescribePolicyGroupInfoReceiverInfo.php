@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiverGroupList(array $ReceiverGroupList) 设置告警接收组id列表
  * @method array getReceiverUserList() 获取告警接收人id列表
  * @method void setReceiverUserList(array $ReceiverUserList) 设置告警接收人id列表
- * @method integer getStartTime() 获取告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
- * @method void setStartTime(integer $StartTime) 设置告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+ * @method integer getStartTime() 获取告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+ * @method void setStartTime(integer $StartTime) 设置告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
  * @method integer getEndTime() 获取告警时间段结束时间。含义同StartTime
  * @method void setEndTime(integer $EndTime) 设置告警时间段结束时间。含义同StartTime
  * @method string getReceiverType() 获取接收类型。“group”(接收组)或“user”(接收人)
@@ -66,7 +66,7 @@ class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
     public $ReceiverUserList;
 
     /**
-     * @var integer 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+     * @var integer 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      */
     public $StartTime;
 
@@ -130,7 +130,7 @@ class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
     /**
      * @param array $ReceiverGroupList 告警接收组id列表
      * @param array $ReceiverUserList 告警接收人id列表
-     * @param integer $StartTime 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+     * @param integer $StartTime 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
      * @param integer $EndTime 告警时间段结束时间。含义同StartTime
      * @param string $ReceiverType 接收类型。“group”(接收组)或“user”(接收人)
      * @param array $NotifyWay 告警通知方式。可选 "SMS","SITE","EMAIL","CALL","WECHAT"

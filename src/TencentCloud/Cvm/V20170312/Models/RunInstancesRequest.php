@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSystemDisk(SystemDisk $SystemDisk) 设置实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
  * @method array getDataDisks() 获取实例数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
  * @method void setDataDisks(array $DataDisks) 设置实例数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
- * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若不指定该参数，则默认使用基础网络。若在此参数中指定了私有网络IP，即表示每个实例的主网卡IP；同时，InstanceCount参数必须与私有网络IP的个数一致且不能大于20。
- * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若不指定该参数，则默认使用基础网络。若在此参数中指定了私有网络IP，即表示每个实例的主网卡IP；同时，InstanceCount参数必须与私有网络IP的个数一致且不能大于20。
+ * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若在此参数中指定了私有网络IP，即表示每个实例的主网卡IP；同时，InstanceCount参数必须与私有网络IP的个数一致且不能大于20。
+ * @method void setVirtualPrivateCloud(VirtualPrivateCloud $VirtualPrivateCloud) 设置私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若在此参数中指定了私有网络IP，即表示每个实例的主网卡IP；同时，InstanceCount参数必须与私有网络IP的个数一致且不能大于20。
  * @method InternetAccessible getInternetAccessible() 获取公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
  * @method integer getInstanceCount() 获取购买实例数量。包年包月实例取值范围：[1，300]，按量计费实例取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
@@ -84,8 +84,12 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
  * @method LaunchTemplate getLaunchTemplate() 获取实例启动模板。
  * @method void setLaunchTemplate(LaunchTemplate $LaunchTemplate) 设置实例启动模板。
+ * @method string getDedicatedClusterId() 获取指定专用集群创建。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置指定专用集群创建。
  * @method array getChcIds() 获取指定CHC物理服务器来创建CHC云主机。
  * @method void setChcIds(array $ChcIds) 设置指定CHC物理服务器来创建CHC云主机。
+ * @method boolean getDisableApiTermination() 获取实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) 设置实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
  */
 class RunInstancesRequest extends AbstractModel
 {
@@ -128,7 +132,7 @@ class RunInstancesRequest extends AbstractModel
     public $DataDisks;
 
     /**
-     * @var VirtualPrivateCloud 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若不指定该参数，则默认使用基础网络。若在此参数中指定了私有网络IP，即表示每个实例的主网卡IP；同时，InstanceCount参数必须与私有网络IP的个数一致且不能大于20。
+     * @var VirtualPrivateCloud 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若在此参数中指定了私有网络IP，即表示每个实例的主网卡IP；同时，InstanceCount参数必须与私有网络IP的个数一致且不能大于20。
      */
     public $VirtualPrivateCloud;
 
@@ -222,9 +226,19 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $LaunchTemplate;
 
     /**
+     * @var string 指定专用集群创建。
+     */
+    public $DedicatedClusterId;
+
+    /**
      * @var array 指定CHC物理服务器来创建CHC云主机。
      */
     public $ChcIds;
+
+    /**
+     * @var boolean 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
+     */
+    public $DisableApiTermination;
 
     /**
      * @param string $InstanceChargeType 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）<br><li>SPOTPAID：竞价付费<br><li>CDCPAID：专用集群付费<br>默认值：POSTPAID_BY_HOUR。
@@ -237,7 +251,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  <b>注：如果您不指定LaunchTemplate参数，则ImageId为必选参数。若同时传递ImageId和LaunchTemplate，则默认覆盖LaunchTemplate中对应的ImageId的值。</b>
      * @param SystemDisk $SystemDisk 实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
      * @param array $DataDisks 实例数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
-     * @param VirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若不指定该参数，则默认使用基础网络。若在此参数中指定了私有网络IP，即表示每个实例的主网卡IP；同时，InstanceCount参数必须与私有网络IP的个数一致且不能大于20。
+     * @param VirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。若在此参数中指定了私有网络IP，即表示每个实例的主网卡IP；同时，InstanceCount参数必须与私有网络IP的个数一致且不能大于20。
      * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
      * @param integer $InstanceCount 购买实例数量。包年包月实例取值范围：[1，300]，按量计费实例取值范围：[1，100]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量，具体配额相关限制详见[CVM实例购买限制](https://cloud.tencent.com/document/product/213/2664)。
      * @param string $InstanceName 实例显示名称。<br><li>不指定实例显示名称则默认显示‘未命名’。</li><li>购买多台实例，如果指定模式串`{R:x}`，表示生成数字`[x, x+n-1]`，其中`n`表示购买实例的数量，例如`server_{R:3}`，购买1台时，实例显示名称为`server_3`；购买2台时，实例显示名称分别为`server_3`，`server_4`。支持指定多个模式串`{R:x}`。</li><li>购买多台实例，如果不指定模式串，则在实例显示名称添加后缀`1、2...n`，其中`n`表示购买实例的数量，例如`server_`，购买2台时，实例显示名称分别为`server_1`，`server_2`。</li><li>最多支持60个字符（包含模式串）。
@@ -259,7 +273,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param string $CamRoleName CAM角色名称。可通过[`DescribeRoleList`](https://cloud.tencent.com/document/product/598/13887)接口返回值中的`roleName`获取。
      * @param string $HpcClusterId 高性能计算集群ID。若创建的实例为高性能计算实例，需指定实例放置的集群，否则不可指定。
      * @param LaunchTemplate $LaunchTemplate 实例启动模板。
+     * @param string $DedicatedClusterId 指定专用集群创建。
      * @param array $ChcIds 指定CHC物理服务器来创建CHC云主机。
+     * @param boolean $DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
      */
     function __construct()
     {
@@ -394,8 +410,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
             $this->LaunchTemplate->deserialize($param["LaunchTemplate"]);
         }
 
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
         if (array_key_exists("ChcIds",$param) and $param["ChcIds"] !== null) {
             $this->ChcIds = $param["ChcIds"];
+        }
+
+        if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
+            $this->DisableApiTermination = $param["DisableApiTermination"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
  * @method integer getRole() 获取根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk
  * @method void setRole(integer $Role) 设置根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk
+ * @method string getHsmClusterId() 获取KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+ * @method void setHsmClusterId(string $HsmClusterId) 设置KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
  */
 class ListKeysRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ListKeysRequest extends AbstractModel
     public $Role;
 
     /**
+     * @var string KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+     */
+    public $HsmClusterId;
+
+    /**
      * @param integer $Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      * @param integer $Limit 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
      * @param integer $Role 根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk
+     * @param string $HsmClusterId KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ListKeysRequest extends AbstractModel
 
         if (array_key_exists("Role",$param) and $param["Role"] !== null) {
             $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
+            $this->HsmClusterId = $param["HsmClusterId"];
         }
     }
 }

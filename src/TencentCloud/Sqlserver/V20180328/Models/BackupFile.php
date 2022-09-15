@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBs(array $DBs) 设置备份文件的库的名称
  * @method string getDownloadLink() 获取下载地址
  * @method void setDownloadLink(string $DownloadLink) 设置下载地址
+ * @method string getRegion() 获取当前实例地域码
+ * @method void setRegion(string $Region) 设置当前实例地域码
+ * @method array getCrossBackupAddr() 获取备份的跨地域region和所对应的下载地址
+ * @method void setCrossBackupAddr(array $CrossBackupAddr) 设置备份的跨地域region和所对应的下载地址
  */
 class BackupFile extends AbstractModel
 {
@@ -59,11 +63,23 @@ class BackupFile extends AbstractModel
     public $DownloadLink;
 
     /**
+     * @var string 当前实例地域码
+     */
+    public $Region;
+
+    /**
+     * @var array 备份的跨地域region和所对应的下载地址
+     */
+    public $CrossBackupAddr;
+
+    /**
      * @param integer $Id 备份文件唯一标识
      * @param string $FileName 备份文件名称
      * @param integer $Size 文件大小(K)
      * @param array $DBs 备份文件的库的名称
      * @param string $DownloadLink 下载地址
+     * @param string $Region 当前实例地域码
+     * @param array $CrossBackupAddr 备份的跨地域region和所对应的下载地址
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class BackupFile extends AbstractModel
 
         if (array_key_exists("DownloadLink",$param) and $param["DownloadLink"] !== null) {
             $this->DownloadLink = $param["DownloadLink"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("CrossBackupAddr",$param) and $param["CrossBackupAddr"] !== null) {
+            $this->CrossBackupAddr = [];
+            foreach ($param["CrossBackupAddr"] as $key => $value){
+                $obj = new CrossBackupAddr();
+                $obj->deserialize($value);
+                array_push($this->CrossBackupAddr, $obj);
+            }
         }
     }
 }

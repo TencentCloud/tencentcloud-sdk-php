@@ -70,6 +70,14 @@ STATIC：静态
  * @method void setTencentBackupAddress(string $TencentBackupAddress) 设置TencentBackupAddress，腾讯侧备用互联 IP
  * @method string getCloudAttachId() 获取高速上云服务ID
  * @method void setCloudAttachId(string $CloudAttachId) 设置高速上云服务ID
+ * @method integer getBfdEnable() 获取是否开启BFD
+ * @method void setBfdEnable(integer $BfdEnable) 设置是否开启BFD
+ * @method integer getNqaEnable() 获取是否开启NQA
+ * @method void setNqaEnable(integer $NqaEnable) 设置是否开启NQA
+ * @method BFDInfo getBfdInfo() 获取BFD配置信息
+ * @method void setBfdInfo(BFDInfo $BfdInfo) 设置BFD配置信息
+ * @method NQAInfo getNqaInfo() 获取NQA配置信息
+ * @method void setNqaInfo(NQAInfo $NqaInfo) 设置NQA配置信息
  */
 class CreateDirectConnectTunnelRequest extends AbstractModel
 {
@@ -163,6 +171,26 @@ STATIC：静态
     public $CloudAttachId;
 
     /**
+     * @var integer 是否开启BFD
+     */
+    public $BfdEnable;
+
+    /**
+     * @var integer 是否开启NQA
+     */
+    public $NqaEnable;
+
+    /**
+     * @var BFDInfo BFD配置信息
+     */
+    public $BfdInfo;
+
+    /**
+     * @var NQAInfo NQA配置信息
+     */
+    public $NqaInfo;
+
+    /**
      * @param string $DirectConnectId 专线 ID，例如：dc-kd7d06of
      * @param string $DirectConnectTunnelName 专用通道名称
      * @param string $DirectConnectOwnerAccount 物理专线 owner，缺省为当前客户（物理专线 owner）
@@ -188,6 +216,10 @@ STATIC：静态
      * @param string $CustomerAddress CustomerAddress，用户侧互联 IP
      * @param string $TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
      * @param string $CloudAttachId 高速上云服务ID
+     * @param integer $BfdEnable 是否开启BFD
+     * @param integer $NqaEnable 是否开启NQA
+     * @param BFDInfo $BfdInfo BFD配置信息
+     * @param NQAInfo $NqaInfo NQA配置信息
      */
     function __construct()
     {
@@ -270,6 +302,24 @@ STATIC：静态
 
         if (array_key_exists("CloudAttachId",$param) and $param["CloudAttachId"] !== null) {
             $this->CloudAttachId = $param["CloudAttachId"];
+        }
+
+        if (array_key_exists("BfdEnable",$param) and $param["BfdEnable"] !== null) {
+            $this->BfdEnable = $param["BfdEnable"];
+        }
+
+        if (array_key_exists("NqaEnable",$param) and $param["NqaEnable"] !== null) {
+            $this->NqaEnable = $param["NqaEnable"];
+        }
+
+        if (array_key_exists("BfdInfo",$param) and $param["BfdInfo"] !== null) {
+            $this->BfdInfo = new BFDInfo();
+            $this->BfdInfo->deserialize($param["BfdInfo"]);
+        }
+
+        if (array_key_exists("NqaInfo",$param) and $param["NqaInfo"] !== null) {
+            $this->NqaInfo = new NQAInfo();
+            $this->NqaInfo->deserialize($param["NqaInfo"]);
         }
     }
 }

@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPluginName() 获取用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
  * @method void setPluginName(string $PluginName) 设置用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
- * @method string getPluginType() 获取插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
- * @method void setPluginType(string $PluginType) 设置插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
+ * @method string getPluginType() 获取插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter, CircuitBreaker, ProxyCache。
+ * @method void setPluginType(string $PluginType) 设置插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter, CircuitBreaker, ProxyCache。
  * @method string getPluginData() 获取插件定义语句，支持json。
  * @method void setPluginData(string $PluginData) 设置插件定义语句，支持json。
  * @method string getDescription() 获取插件描述，限定200字以内。
  * @method void setDescription(string $Description) 设置插件描述，限定200字以内。
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class CreatePluginRequest extends AbstractModel
 {
@@ -37,7 +39,7 @@ class CreatePluginRequest extends AbstractModel
     public $PluginName;
 
     /**
-     * @var string 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
+     * @var string 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter, CircuitBreaker, ProxyCache。
      */
     public $PluginType;
 
@@ -52,10 +54,16 @@ class CreatePluginRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $PluginName 用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
-     * @param string $PluginType 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
+     * @param string $PluginType 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter, CircuitBreaker, ProxyCache。
      * @param string $PluginData 插件定义语句，支持json。
      * @param string $Description 插件描述，限定200字以内。
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class CreatePluginRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

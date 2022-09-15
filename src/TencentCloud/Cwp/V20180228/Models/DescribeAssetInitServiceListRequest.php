@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAssetInitServiceList请求参数结构体
  *
- * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
- * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
- * @method integer getOffset() 获取偏移量，默认为0。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method string getUuid() 获取服务器Uuid
+ * @method void setUuid(string $Uuid) 设置服务器Uuid
+ * @method string getQuuid() 获取服务器Quuid
+ * @method void setQuuid(string $Quuid) 设置服务器Quuid
  * @method array getFilters() 获取过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name- string - 是否必填：否 - 包名</li>
@@ -64,22 +64,26 @@ use TencentCloud\Common\AbstractModel;
 12:资源管理器
 13:驱动服务
 14:登录</li>
- * @method string getUuid() 获取服务器Uuid
- * @method void setUuid(string $Uuid) 设置服务器Uuid
- * @method string getQuuid() 获取服务器Quuid
- * @method void setQuuid(string $Quuid) 设置服务器Quuid
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100
+ * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100
+ * @method string getOrder() 获取排序方式，asc升序 或 desc降序
+ * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
+ * @method string getBy() 获取排序方式：[FirstTime]
+ * @method void setBy(string $By) 设置排序方式：[FirstTime]
  */
 class DescribeAssetInitServiceListRequest extends AbstractModel
 {
     /**
-     * @var integer 需要返回的数量，默认为10，最大值为100
+     * @var string 服务器Uuid
      */
-    public $Limit;
+    public $Uuid;
 
     /**
-     * @var integer 偏移量，默认为0。
+     * @var string 服务器Quuid
      */
-    public $Offset;
+    public $Quuid;
 
     /**
      * @var array 过滤条件。
@@ -106,18 +110,28 @@ class DescribeAssetInitServiceListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 服务器Uuid
+     * @var integer 偏移量，默认为0。
      */
-    public $Uuid;
+    public $Offset;
 
     /**
-     * @var string 服务器Quuid
+     * @var integer 需要返回的数量，默认为10，最大值为100
      */
-    public $Quuid;
+    public $Limit;
 
     /**
-     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
-     * @param integer $Offset 偏移量，默认为0。
+     * @var string 排序方式，asc升序 或 desc降序
+     */
+    public $Order;
+
+    /**
+     * @var string 排序方式：[FirstTime]
+     */
+    public $By;
+
+    /**
+     * @param string $Uuid 服务器Uuid
+     * @param string $Quuid 服务器Quuid
      * @param array $Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Name- string - 是否必填：否 - 包名</li>
@@ -138,8 +152,10 @@ class DescribeAssetInitServiceListRequest extends AbstractModel
 12:资源管理器
 13:驱动服务
 14:登录</li>
-     * @param string $Uuid 服务器Uuid
-     * @param string $Quuid 服务器Quuid
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 需要返回的数量，默认为10，最大值为100
+     * @param string $Order 排序方式，asc升序 或 desc降序
+     * @param string $By 排序方式：[FirstTime]
      */
     function __construct()
     {
@@ -154,12 +170,12 @@ class DescribeAssetInitServiceListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
+            $this->Quuid = $param["Quuid"];
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
@@ -171,12 +187,20 @@ class DescribeAssetInitServiceListRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

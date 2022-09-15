@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicName() 获取主题名
  * @method void setTopicName(string $TopicName) 设置主题名
- * @method string getMsgContent() 获取消息内容
- * @method void setMsgContent(string $MsgContent) 设置消息内容
- * @method array getMsgTag() 获取消息标签
- * @method void setMsgTag(array $MsgTag) 设置消息标签
+ * @method string getMsgContent() 获取消息内容，消息总大小需不大于1024K
+ * @method void setMsgContent(string $MsgContent) 设置消息内容，消息总大小需不大于1024K
+ * @method array getMsgTag() 获取消息标签，支持传递多标签或单路由，单个标签、路由长度不能超过64个字符。
+ * @method void setMsgTag(array $MsgTag) 设置消息标签，支持传递多标签或单路由，单个标签、路由长度不能超过64个字符。
  */
 class PublishCmqMsgRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class PublishCmqMsgRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var string 消息内容
+     * @var string 消息内容，消息总大小需不大于1024K
      */
     public $MsgContent;
 
     /**
-     * @var array 消息标签
+     * @var array 消息标签，支持传递多标签或单路由，单个标签、路由长度不能超过64个字符。
      */
     public $MsgTag;
 
     /**
      * @param string $TopicName 主题名
-     * @param string $MsgContent 消息内容
-     * @param array $MsgTag 消息标签
+     * @param string $MsgContent 消息内容，消息总大小需不大于1024K
+     * @param array $MsgTag 消息标签，支持传递多标签或单路由，单个标签、路由长度不能超过64个字符。
      */
     function __construct()
     {

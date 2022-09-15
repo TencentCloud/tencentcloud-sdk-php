@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述用户已购买预留实例计费信息
  *
- * @method string getReservedInstancesId() 获取已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
- * @method void setReservedInstancesId(string $ReservedInstancesId) 设置已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+ * @method string getReservedInstancesId() 获取（此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。
+ * @method void setReservedInstancesId(string $ReservedInstancesId) 设置（此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。
  * @method string getInstanceType() 获取预留实例计费的规格。形如：S3.MEDIUM4。
 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费规格列表</a>
  * @method void setInstanceType(string $InstanceType) 设置预留实例计费的规格。形如：S3.MEDIUM4。
@@ -60,11 +60,15 @@ use TencentCloud\Common\AbstractModel;
 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费类型列表</a>
  * @method void setInstanceFamily(string $InstanceFamily) 设置预留实例计费的类型。形如：S3。
 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费类型列表</a>
+ * @method string getReservedInstanceId() 获取已购买的预留实例计费ID。形如：ri-rtbh4han。
+ * @method void setReservedInstanceId(string $ReservedInstanceId) 设置已购买的预留实例计费ID。形如：ri-rtbh4han。
+ * @method string getReservedInstanceName() 获取预留实例显示名称。形如：riname-01
+ * @method void setReservedInstanceName(string $ReservedInstanceName) 设置预留实例显示名称。形如：riname-01
  */
 class ReservedInstances extends AbstractModel
 {
     /**
-     * @var string 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+     * @var string （此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。
      */
     public $ReservedInstancesId;
 
@@ -132,7 +136,17 @@ class ReservedInstances extends AbstractModel
     public $InstanceFamily;
 
     /**
-     * @param string $ReservedInstancesId 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+     * @var string 已购买的预留实例计费ID。形如：ri-rtbh4han。
+     */
+    public $ReservedInstanceId;
+
+    /**
+     * @var string 预留实例显示名称。形如：riname-01
+     */
+    public $ReservedInstanceName;
+
+    /**
+     * @param string $ReservedInstancesId （此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。
      * @param string $InstanceType 预留实例计费的规格。形如：S3.MEDIUM4。
 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费规格列表</a>
      * @param string $Zone 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
@@ -152,6 +166,8 @@ class ReservedInstances extends AbstractModel
 返回项： All Upfront (预付全部费用)。
      * @param string $InstanceFamily 预留实例计费的类型。形如：S3。
 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费类型列表</a>
+     * @param string $ReservedInstanceId 已购买的预留实例计费ID。形如：ri-rtbh4han。
+     * @param string $ReservedInstanceName 预留实例显示名称。形如：riname-01
      */
     function __construct()
     {
@@ -212,6 +228,14 @@ class ReservedInstances extends AbstractModel
 
         if (array_key_exists("InstanceFamily",$param) and $param["InstanceFamily"] !== null) {
             $this->InstanceFamily = $param["InstanceFamily"];
+        }
+
+        if (array_key_exists("ReservedInstanceId",$param) and $param["ReservedInstanceId"] !== null) {
+            $this->ReservedInstanceId = $param["ReservedInstanceId"];
+        }
+
+        if (array_key_exists("ReservedInstanceName",$param) and $param["ReservedInstanceName"] !== null) {
+            $this->ReservedInstanceName = $param["ReservedInstanceName"];
         }
     }
 }

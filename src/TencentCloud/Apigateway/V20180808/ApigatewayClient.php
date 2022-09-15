@@ -42,7 +42,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
  * @method Models\CreatePluginResponse CreatePlugin(Models\CreatePluginRequest $req) 创建API网关插件。
  * @method Models\CreateServiceResponse CreateService(Models\CreateServiceRequest $req) 本接口（CreateService）用于创建服务。
 API 网关使用的最大单元为服务，每个服务中可创建多个 API 接口。每个服务有一个默认域名供客户调用，用户也可绑定自定义域名到此服务中。 
- * @method Models\CreateUpstreamResponse CreateUpstream(Models\CreateUpstreamRequest $req) 用于创建创建VPC通道
+ * @method Models\CreateUpstreamResponse CreateUpstream(Models\CreateUpstreamRequest $req) 用于创建创建后端通道
  * @method Models\CreateUsagePlanResponse CreateUsagePlan(Models\CreateUsagePlanRequest $req) 本接口（CreateUsagePlan）用于创建使用计划。
 用户在使用 API 网关时，需要创建使用计划并将其绑定到服务的环境中使用。
  * @method Models\DeleteAPIDocResponse DeleteAPIDoc(Models\DeleteAPIDocRequest $req) 删除 API 文档
@@ -54,7 +54,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DeleteServiceResponse DeleteService(Models\DeleteServiceRequest $req) 本接口（DeleteService）用于删除 API 网关中某个服务。
  * @method Models\DeleteServiceSubDomainMappingResponse DeleteServiceSubDomainMapping(Models\DeleteServiceSubDomainMappingRequest $req) 本接口（DeleteServiceSubDomainMapping）用于删除服务中某个环境的自定义域名映射。
 当用户使用自定义域名，并使用了自定义映射时，可使用此接口。但需注意，若删除了所有环境的映射时，调用此 API 均会返回失败。
- * @method Models\DeleteUpstreamResponse DeleteUpstream(Models\DeleteUpstreamRequest $req) 删除VPC通道，需要注意有api绑定时，不允许删除
+ * @method Models\DeleteUpstreamResponse DeleteUpstream(Models\DeleteUpstreamRequest $req) 删除后端通道，需要注意有API绑定时，不允许删除
  * @method Models\DeleteUsagePlanResponse DeleteUsagePlan(Models\DeleteUsagePlanRequest $req) 本接口（DeleteUsagePlan）用于删除使用计划。
  * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) 本接口（DemoteServiceUsagePlan）用于将某个服务在某个环境的使用计划，降级到API上。
 如果服务内没有API不允许进行此操作。
@@ -78,6 +78,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribeApisStatusResponse DescribeApisStatus(Models\DescribeApisStatusRequest $req) 本接口（DescribeApisStatus）用于查看一个服务下的某个 API 或所有 API 列表及其相关信息。
  * @method Models\DescribeExclusiveInstanceDetailResponse DescribeExclusiveInstanceDetail(Models\DescribeExclusiveInstanceDetailRequest $req) 本接口（DescribeExclusiveInstanceDetail）用于查询独享实例详情信息。​
  * @method Models\DescribeExclusiveInstancesResponse DescribeExclusiveInstances(Models\DescribeExclusiveInstancesRequest $req) 本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。​
+ * @method Models\DescribeExclusiveInstancesStatusResponse DescribeExclusiveInstancesStatus(Models\DescribeExclusiveInstancesStatusRequest $req) 查询专享实例列表（新）
  * @method Models\DescribeIPStrategyResponse DescribeIPStrategy(Models\DescribeIPStrategyRequest $req) 本接口（DescribeIPStrategy）用于查询IP策略详情。
  * @method Models\DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(Models\DescribeIPStrategyApisStatusRequest $req) 本接口（DescribeIPStrategyApisStatus）用于查询IP策略可以绑定的API列表。即服务下所有API和该策略已绑定API的差集。
  * @method Models\DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(Models\DescribeIPStrategysStatusRequest $req) 本接口（DescribeIPStrategysStatus）用于查询服务IP策略列表。
@@ -100,8 +101,8 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
  * @method Models\DescribeServiceUsagePlanResponse DescribeServiceUsagePlan(Models\DescribeServiceUsagePlanRequest $req) 本接口（DescribeServiceUsagePlan）用于查询服务使用计划详情。
 服务若需要鉴权限流生效，则需要绑定使用计划到此服务中，本接口用于查询绑定到一个服务的所有使用计划。
  * @method Models\DescribeServicesStatusResponse DescribeServicesStatus(Models\DescribeServicesStatusRequest $req) 本接口（DescribeServicesStatus）用于搜索查询某一个服务或多个服务的列表，并返回服务相关的域名、时间等信息。
- * @method Models\DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(Models\DescribeUpstreamBindApisRequest $req) 查询VPC通道绑定的api列表
- * @method Models\DescribeUpstreamsResponse DescribeUpstreams(Models\DescribeUpstreamsRequest $req) 查询VPC通道列表详情
+ * @method Models\DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(Models\DescribeUpstreamBindApisRequest $req) 查询后端通道所绑定的API列表
+ * @method Models\DescribeUpstreamsResponse DescribeUpstreams(Models\DescribeUpstreamsRequest $req) 查询后端通道列表详情
  * @method Models\DescribeUsagePlanResponse DescribeUsagePlan(Models\DescribeUsagePlanRequest $req) 本接口（DescribeUsagePlan）用于查询一个使用计划的详细信息，包括名称、QPS、创建时间绑定的环境等。
  * @method Models\DescribeUsagePlanEnvironmentsResponse DescribeUsagePlanEnvironments(Models\DescribeUsagePlanEnvironmentsRequest $req) 本接口（DescribeUsagePlanEnvironments）用于查询使用计划绑定的环境列表。
 用户在绑定了某个使用计划到环境后，可使用本接口查询这个使用计划绑定的所有服务的环境。
@@ -112,6 +113,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
  * @method Models\DisableApiKeyResponse DisableApiKey(Models\DisableApiKeyRequest $req) 本接口（DisableApiKey）用于禁用一对 API 密钥。
  * @method Models\EnableApiKeyResponse EnableApiKey(Models\EnableApiKeyRequest $req) 本接口（EnableApiKey）用于启动一对被禁用的 API 密钥。
  * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) 本接口（GenerateApiDocument）用于自动生成 API 文档和 SDK，一个服务的一个环境生成一份文档和 SDK。
+ * @method Models\ImportOpenApiResponse ImportOpenApi(Models\ImportOpenApiRequest $req) 本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。 
  * @method Models\ModifyAPIDocResponse ModifyAPIDoc(Models\ModifyAPIDocRequest $req) 修改 API 文档
  * @method Models\ModifyApiResponse ModifyApi(Models\ModifyApiRequest $req) 本接口（ModifyApi）用于修改 API 接口，可调用此接口对已经配置的 API 接口进行编辑修改。修改后的 API 需要重新发布 API 所在的服务到对应环境方能生效。
  * @method Models\ModifyApiAppResponse ModifyApiApp(Models\ModifyApiAppRequest $req) 本接口（ModifyApiApp）用于修改已经创建的应用。
@@ -123,7 +125,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
  * @method Models\ModifyServiceResponse ModifyService(Models\ModifyServiceRequest $req) 本接口（ModifyService）用于修改服务的相关信息。当服务创建后，服务的名称、描述和服务类型均可被修改。
  * @method Models\ModifyServiceEnvironmentStrategyResponse ModifyServiceEnvironmentStrategy(Models\ModifyServiceEnvironmentStrategyRequest $req) 本接口（ModifyServiceEnvironmentStrategy）用于修改服务限流策略
  * @method Models\ModifySubDomainResponse ModifySubDomain(Models\ModifySubDomainRequest $req) 本接口（ModifySubDomain）用于修改服务的自定义域名设置中的路径映射，可以修改绑定自定义域名之前的路径映射规则。
- * @method Models\ModifyUpstreamResponse ModifyUpstream(Models\ModifyUpstreamRequest $req) 修改VPC通道
+ * @method Models\ModifyUpstreamResponse ModifyUpstream(Models\ModifyUpstreamRequest $req) 修改后端通道
  * @method Models\ModifyUsagePlanResponse ModifyUsagePlan(Models\ModifyUsagePlanRequest $req) 本接口（ModifyUsagePlan）用于修改使用计划的名称，描述及 QPS。
  * @method Models\ReleaseServiceResponse ReleaseService(Models\ReleaseServiceRequest $req) 本接口（ReleaseService）用于发布服务。
 API 网关的服务创建后，需要发布到某个环境方生效后，使用者才能进行调用，此接口用于发布服务到环境，如 release 环境。

@@ -26,14 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置姓名，加密方式以EncryptionMode为准
  * @method string getPhone() 获取手机号，加密方式以EncryptionMode为准
  * @method void setPhone(string $Phone) 设置手机号，加密方式以EncryptionMode为准
- * @method string getEncryptionMode() 获取敏感信息的加密方式，目前只支持MD5加密传输，参数取值：
+ * @method string getEncryptionMode() 获取敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1：使用MD5加密
- * @method void setEncryptionMode(string $EncryptionMode) 设置敏感信息的加密方式，目前只支持MD5加密传输，参数取值：
+1:   使用MD5加密
+2:   使用SHA256
+ * @method void setEncryptionMode(string $EncryptionMode) 设置敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1：使用MD5加密
+1:   使用MD5加密
+2:   使用SHA256
  */
 class EncryptedPhoneVerificationRequest extends AbstractModel
 {
@@ -53,10 +55,11 @@ class EncryptedPhoneVerificationRequest extends AbstractModel
     public $Phone;
 
     /**
-     * @var string 敏感信息的加密方式，目前只支持MD5加密传输，参数取值：
+     * @var string 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1：使用MD5加密
+1:   使用MD5加密
+2:   使用SHA256
      */
     public $EncryptionMode;
 
@@ -64,10 +67,11 @@ class EncryptedPhoneVerificationRequest extends AbstractModel
      * @param string $IdCard 身份证号，加密方式以EncryptionMode为准
      * @param string $Name 姓名，加密方式以EncryptionMode为准
      * @param string $Phone 手机号，加密方式以EncryptionMode为准
-     * @param string $EncryptionMode 敏感信息的加密方式，目前只支持MD5加密传输，参数取值：
+     * @param string $EncryptionMode 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
 
 0：明文，不加密
-1：使用MD5加密
+1:   使用MD5加密
+2:   使用SHA256
      */
     function __construct()
     {

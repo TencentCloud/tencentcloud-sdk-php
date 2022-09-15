@@ -64,8 +64,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceTypes() 获取实例机型列表。
  * @method void setInstanceTypes(array $InstanceTypes) 设置实例机型列表。
- * @method array getInstanceTags() 获取标签列表。
- * @method void setInstanceTags(array $InstanceTags) 设置标签列表。
+ * @method array getInstanceTags() 获取实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+ * @method void setInstanceTags(array $InstanceTags) 设置实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+ * @method array getTags() 获取标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVersionNumber() 获取版本号。
  * @method void setVersionNumber(integer $VersionNumber) 设置版本号。
  * @method string getUpdatedTime() 获取更新时间。
@@ -86,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskTypePolicy(string $DiskTypePolicy) 设置云盘类型选择策略。取值范围：
 <br><li>ORIGINAL：使用设置的云盘类型
 <br><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型
+ * @method string getHpcClusterId() 获取高性能计算集群ID。<br>
+注意：此字段默认为空。
+ * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。<br>
+注意：此字段默认为空。
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -184,9 +192,15 @@ class LaunchConfiguration extends AbstractModel
     public $InstanceTypes;
 
     /**
-     * @var array 标签列表。
+     * @var array 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
      */
     public $InstanceTags;
+
+    /**
+     * @var array 标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
 
     /**
      * @var integer 版本号。
@@ -231,6 +245,12 @@ class LaunchConfiguration extends AbstractModel
     public $DiskTypePolicy;
 
     /**
+     * @var string 高性能计算集群ID。<br>
+注意：此字段默认为空。
+     */
+    public $HpcClusterId;
+
+    /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
      * @param string $LaunchConfigurationName 启动配置名称。
@@ -253,7 +273,9 @@ class LaunchConfiguration extends AbstractModel
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceTypes 实例机型列表。
-     * @param array $InstanceTags 标签列表。
+     * @param array $InstanceTags 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
+     * @param array $Tags 标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VersionNumber 版本号。
      * @param string $UpdatedTime 更新时间。
      * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
@@ -264,6 +286,8 @@ class LaunchConfiguration extends AbstractModel
      * @param string $DiskTypePolicy 云盘类型选择策略。取值范围：
 <br><li>ORIGINAL：使用设置的云盘类型
 <br><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型
+     * @param string $HpcClusterId 高性能计算集群ID。<br>
+注意：此字段默认为空。
      */
     function __construct()
     {
@@ -374,6 +398,15 @@ class LaunchConfiguration extends AbstractModel
             }
         }
 
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
         if (array_key_exists("VersionNumber",$param) and $param["VersionNumber"] !== null) {
             $this->VersionNumber = $param["VersionNumber"];
         }
@@ -407,6 +440,10 @@ class LaunchConfiguration extends AbstractModel
 
         if (array_key_exists("DiskTypePolicy",$param) and $param["DiskTypePolicy"] !== null) {
             $this->DiskTypePolicy = $param["DiskTypePolicy"];
+        }
+
+        if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {
+            $this->HpcClusterId = $param["HpcClusterId"];
         }
     }
 }

@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TranscodeTemplate extends AbstractModel
 {
@@ -142,6 +146,12 @@ class TranscodeTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var EnhanceConfig 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnhanceConfig;
+
+    /**
      * @param string $Definition 转码模板唯一标识。
      * @param string $Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
      * @param string $Name 转码模板名称。
@@ -164,6 +174,8 @@ class TranscodeTemplate extends AbstractModel
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param EnhanceConfig $EnhanceConfig 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -231,6 +243,11 @@ class TranscodeTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
     }
 }

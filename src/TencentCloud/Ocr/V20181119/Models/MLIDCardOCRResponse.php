@@ -40,23 +40,19 @@ use TencentCloud\Common\AbstractModel;
 -9107       模糊图片告警
  * @method string getImage() 获取证件图片
  * @method void setImage(string $Image) 设置证件图片
- * @method string getAdvancedInfo() 获取扩展字段：
+ * @method string getAdvancedInfo() 获取此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展字段：
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
  * @method string getType() 获取证件类型
 MyKad  身份证
@@ -74,8 +70,8 @@ MyKAS    临时身份证
 POLIS  警察证
 IKAD   劳工证
 MyKid 儿童卡
- * @method string getBirthday() 获取出生日期（目前该字段仅支持IKAD劳工证）
- * @method void setBirthday(string $Birthday) 设置出生日期（目前该字段仅支持IKAD劳工证）
+ * @method string getBirthday() 获取出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
+ * @method void setBirthday(string $Birthday) 设置出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -116,14 +112,12 @@ class MLIDCardOCRResponse extends AbstractModel
     public $Image;
 
     /**
-     * @var string 扩展字段：
+     * @var string 此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
      */
     public $AdvancedInfo;
@@ -141,7 +135,7 @@ MyKid 儿童卡
     public $Type;
 
     /**
-     * @var string 出生日期（目前该字段仅支持IKAD劳工证）
+     * @var string 出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
      */
     public $Birthday;
 
@@ -161,14 +155,12 @@ MyKid 儿童卡
 -9106       证件遮挡告警
 -9107       模糊图片告警
      * @param string $Image 证件图片
-     * @param string $AdvancedInfo 扩展字段：
+     * @param string $AdvancedInfo 此字段为扩展字段。
+返回字段识别结果的置信度，格式如下
 {
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
+  字段名:{
+    Confidence:0.9999
+  }
 }
      * @param string $Type 证件类型
 MyKad  身份证
@@ -178,7 +170,7 @@ MyKAS    临时身份证
 POLIS  警察证
 IKAD   劳工证
 MyKid 儿童卡
-     * @param string $Birthday 出生日期（目前该字段仅支持IKAD劳工证）
+     * @param string $Birthday 出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

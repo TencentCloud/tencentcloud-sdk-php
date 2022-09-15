@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntentionVerifyBestFrame(string $IntentionVerifyBestFrame) 设置意愿确认环节中录制视频的最佳帧（base64）。若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAsrResultSimilarity() 获取本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAsrResultSimilarity(string $AsrResultSimilarity) 设置本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntentionVerifyData extends AbstractModel
 {
@@ -74,6 +78,12 @@ class IntentionVerifyData extends AbstractModel
     public $IntentionVerifyBestFrame;
 
     /**
+     * @var string 本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AsrResultSimilarity;
+
+    /**
      * @param string $IntentionVerifyVideo 意愿确认环节中录制的视频（base64）。若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsrResult 意愿确认环节中用户语音转文字的识别结果。若不存在则为空字符串。
@@ -83,6 +93,8 @@ class IntentionVerifyData extends AbstractModel
      * @param string $ErrorMessage 意愿确认环节的结果信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IntentionVerifyBestFrame 意愿确认环节中录制视频的最佳帧（base64）。若不存在则为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AsrResultSimilarity 本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class IntentionVerifyData extends AbstractModel
 
         if (array_key_exists("IntentionVerifyBestFrame",$param) and $param["IntentionVerifyBestFrame"] !== null) {
             $this->IntentionVerifyBestFrame = $param["IntentionVerifyBestFrame"];
+        }
+
+        if (array_key_exists("AsrResultSimilarity",$param) and $param["AsrResultSimilarity"] !== null) {
+            $this->AsrResultSimilarity = $param["AsrResultSimilarity"];
         }
     }
 }

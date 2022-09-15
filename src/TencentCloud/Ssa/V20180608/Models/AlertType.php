@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警字段
  *
- * @method string getAlertTime() 获取时间戳
+ * @method string getAlertTime() 获取标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAlertTime(string $AlertTime) 设置时间戳
+ * @method void setAlertTime(string $AlertTime) 设置标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlertId() 获取唯一id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -124,7 +124,7 @@ use TencentCloud\Common\AbstractModel;
 class AlertType extends AbstractModel
 {
     /**
-     * @var string 时间戳
+     * @var string 标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlertTime;
@@ -274,7 +274,7 @@ class AlertType extends AbstractModel
     public $VictimAssetSub;
 
     /**
-     * @param string $AlertTime 时间戳
+     * @param string $AlertTime 标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlertId 唯一id
 注意：此字段可能返回 null，表示取不到有效值。

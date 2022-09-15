@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getWxAppId() 获取wx应用Id
  * @method void setWxAppId(string $WxAppId) 设置wx应用Id
+ * @method boolean getAllRegions() 获取是否查询全地域
+ * @method void setAllRegions(boolean $AllRegions) 设置是否查询全地域
  */
 class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel
     public $WxAppId;
 
     /**
+     * @var boolean 是否查询全地域
+     */
+    public $AllRegions;
+
+    /**
      * @param string $WxAppId wx应用Id
+     * @param boolean $AllRegions 是否查询全地域
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeWxCloudBaseRunEnvsRequest extends AbstractModel
         }
         if (array_key_exists("WxAppId",$param) and $param["WxAppId"] !== null) {
             $this->WxAppId = $param["WxAppId"];
+        }
+
+        if (array_key_exists("AllRegions",$param) and $param["AllRegions"] !== null) {
+            $this->AllRegions = $param["AllRegions"];
         }
     }
 }

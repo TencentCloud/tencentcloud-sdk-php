@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method integer getID() 获取项目ID
  * @method void setID(integer $ID) 设置项目ID
+ * @method integer getIsDemo() 获取该参数已废弃
+ * @method void setIsDemo(integer $IsDemo) 设置该参数已废弃
  */
 class DescribeScoresRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeScoresRequest extends AbstractModel
     public $ID;
 
     /**
+     * @var integer 该参数已废弃
+     */
+    public $IsDemo;
+
+    /**
      * @param string $EndTime 结束时间
      * @param string $StartTime 开始时间
      * @param integer $ID 项目ID
+     * @param integer $IsDemo 该参数已废弃
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeScoresRequest extends AbstractModel
 
         if (array_key_exists("ID",$param) and $param["ID"] !== null) {
             $this->ID = $param["ID"];
+        }
+
+        if (array_key_exists("IsDemo",$param) and $param["IsDemo"] !== null) {
+            $this->IsDemo = $param["IsDemo"];
         }
     }
 }

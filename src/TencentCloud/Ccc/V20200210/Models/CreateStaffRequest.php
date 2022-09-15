@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateStaff请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用ID
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method array getStaffs() 获取客服信息，个数不超过 10
  * @method void setStaffs(array $Staffs) 设置客服信息，个数不超过 10
  */
 class CreateStaffRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -38,7 +38,7 @@ class CreateStaffRequest extends AbstractModel
     public $Staffs;
 
     /**
-     * @param integer $SdkAppId 应用ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param array $Staffs 客服信息，个数不超过 10
      */
     function __construct()

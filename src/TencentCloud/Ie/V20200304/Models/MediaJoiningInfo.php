@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
 其中Format只支持mp4.
  * @method void setTargetInfo(MediaTargetInfo $TargetInfo) 设置输出目标信息，拼接只采用FileName和Format，用于指定目标文件名和格式。
 其中Format只支持mp4.
+ * @method string getMode() 获取拼接模式：
+Fast：快速；
+Normal：正常；
+ * @method void setMode(string $Mode) 设置拼接模式：
+Fast：快速；
+Normal：正常；
  */
 class MediaJoiningInfo extends AbstractModel
 {
@@ -34,8 +40,18 @@ class MediaJoiningInfo extends AbstractModel
     public $TargetInfo;
 
     /**
+     * @var string 拼接模式：
+Fast：快速；
+Normal：正常；
+     */
+    public $Mode;
+
+    /**
      * @param MediaTargetInfo $TargetInfo 输出目标信息，拼接只采用FileName和Format，用于指定目标文件名和格式。
 其中Format只支持mp4.
+     * @param string $Mode 拼接模式：
+Fast：快速；
+Normal：正常；
      */
     function __construct()
     {
@@ -53,6 +69,10 @@ class MediaJoiningInfo extends AbstractModel
         if (array_key_exists("TargetInfo",$param) and $param["TargetInfo"] !== null) {
             $this->TargetInfo = new MediaTargetInfo();
             $this->TargetInfo->deserialize($param["TargetInfo"]);
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
         }
     }
 }

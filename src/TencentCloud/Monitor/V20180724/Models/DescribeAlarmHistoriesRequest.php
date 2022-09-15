@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置起始时间，默认一天前的时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 晚于 `StartTime` 才可能被搜索到。
  * @method integer getEndTime() 获取结束时间，默认当前时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 早于 `EndTime` 才可能被搜索到。
  * @method void setEndTime(integer $EndTime) 设置结束时间，默认当前时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 早于 `EndTime` 才可能被搜索到。
- * @method array getMonitorTypes() 获取根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
- * @method void setMonitorTypes(array $MonitorTypes) 设置根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
+ * @method array getMonitorTypes() 获取根据监控类型过滤，不选默认查所有类型。"MT_QCE"=云产品监控，支持的枚举值有："MT_QCE"=云产品监控；"MT_TAW"=应用性能观测；"MT_RUM"=前端性能监控；"MT_PROBE"=云拨测
+ * @method void setMonitorTypes(array $MonitorTypes) 设置根据监控类型过滤，不选默认查所有类型。"MT_QCE"=云产品监控，支持的枚举值有："MT_QCE"=云产品监控；"MT_TAW"=应用性能观测；"MT_RUM"=前端性能监控；"MT_PROBE"=云拨测
  * @method string getAlarmObject() 获取根据告警对象过滤 字符串模糊搜索
  * @method void setAlarmObject(string $AlarmObject) 设置根据告警对象过滤 字符串模糊搜索
  * @method array getAlarmStatus() 获取根据告警状态过滤 ALARM=未恢复 OK=已恢复 NO_CONF=已失效 NO_DATA=数据不足，不选默认查所有
@@ -94,7 +94,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
+     * @var array 根据监控类型过滤，不选默认查所有类型。"MT_QCE"=云产品监控，支持的枚举值有："MT_QCE"=云产品监控；"MT_TAW"=应用性能观测；"MT_RUM"=前端性能监控；"MT_PROBE"=云拨测
      */
     public $MonitorTypes;
 
@@ -162,7 +162,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
      * @param string $Order 默认按首次出现时间倒序排列 "ASC"=正序 "DESC"=逆序
      * @param integer $StartTime 起始时间，默认一天前的时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 晚于 `StartTime` 才可能被搜索到。
      * @param integer $EndTime 结束时间，默认当前时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 早于 `EndTime` 才可能被搜索到。
-     * @param array $MonitorTypes 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
+     * @param array $MonitorTypes 根据监控类型过滤，不选默认查所有类型。"MT_QCE"=云产品监控，支持的枚举值有："MT_QCE"=云产品监控；"MT_TAW"=应用性能观测；"MT_RUM"=前端性能监控；"MT_PROBE"=云拨测
      * @param string $AlarmObject 根据告警对象过滤 字符串模糊搜索
      * @param array $AlarmStatus 根据告警状态过滤 ALARM=未恢复 OK=已恢复 NO_CONF=已失效 NO_DATA=数据不足，不选默认查所有
      * @param array $ProjectIds 根据项目ID过滤，-1=无项目 0=默认项目

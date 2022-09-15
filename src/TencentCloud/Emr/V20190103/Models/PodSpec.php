@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置代表vpc子网唯一id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPodName() 获取pod name
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodName(string $PodName) 设置pod name
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PodSpec extends AbstractModel
 {
@@ -117,6 +121,12 @@ class PodSpec extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string pod name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodName;
+
+    /**
      * @param string $ResourceProviderIdentifier 外部资源提供者的标识符，例如"cls-a1cd23fa"。
      * @param string $ResourceProviderType 外部资源提供者类型，例如"tke",当前仅支持"tke"。
      * @param string $NodeType 资源的用途，即节点类型，当前仅支持"TASK"。
@@ -131,6 +141,8 @@ class PodSpec extends AbstractModel
      * @param string $VpcId 代表vpc网络唯一id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 代表vpc子网唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PodName pod name
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -198,6 +210,10 @@ class PodSpec extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
         }
     }
 }

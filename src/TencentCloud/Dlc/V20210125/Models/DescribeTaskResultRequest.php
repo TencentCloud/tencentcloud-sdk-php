@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取任务唯一ID
  * @method void setTaskId(string $TaskId) 设置任务唯一ID
- * @method string getNextToken() 获取上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。
- * @method void setNextToken(string $NextToken) 设置上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。
+ * @method string getNextToken() 获取上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
+ * @method void setNextToken(string $NextToken) 设置上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
  * @method integer getMaxResults() 获取返回结果的最大行数，范围0~1000，默认为1000.
  * @method void setMaxResults(integer $MaxResults) 设置返回结果的最大行数，范围0~1000，默认为1000.
  */
@@ -35,7 +35,7 @@ class DescribeTaskResultRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。
+     * @var string 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
      */
     public $NextToken;
 
@@ -46,7 +46,7 @@ class DescribeTaskResultRequest extends AbstractModel
 
     /**
      * @param string $TaskId 任务唯一ID
-     * @param string $NextToken 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。
+     * @param string $NextToken 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
      * @param integer $MaxResults 返回结果的最大行数，范围0~1000，默认为1000.
      */
     function __construct()

@@ -39,6 +39,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateDefaultAlarmThresholdResponse CreateDefaultAlarmThreshold(Models\CreateDefaultAlarmThresholdRequest $req) 设置单IP默认告警阈值配置
  * @method Models\CreateIPAlarmThresholdConfigResponse CreateIPAlarmThresholdConfig(Models\CreateIPAlarmThresholdConfigRequest $req) 设置单IP告警阈值配置
  * @method Models\CreateL7RuleCertsResponse CreateL7RuleCerts(Models\CreateL7RuleCertsRequest $req) 批量配置L7转发规则的证书供SSL测调用
+ * @method Models\CreateNewL7RulesResponse CreateNewL7Rules(Models\CreateNewL7RulesRequest $req) 添加7层转发规则
  * @method Models\CreatePacketFilterConfigResponse CreatePacketFilterConfig(Models\CreatePacketFilterConfigRequest $req) 添加DDoS防护的特征过滤规则
  * @method Models\CreatePortAclConfigResponse CreatePortAclConfig(Models\CreatePortAclConfigRequest $req) 添加DDoS防护的端口acl策略
  * @method Models\CreatePortAclConfigListResponse CreatePortAclConfigList(Models\CreatePortAclConfigListRequest $req) 批量添加DDoS防护的端口acl策略
@@ -46,7 +47,6 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateSchedulingDomainResponse CreateSchedulingDomain(Models\CreateSchedulingDomainRequest $req) 创建一个域名，可用于在封堵时调度切换IP
  * @method Models\CreateWaterPrintConfigResponse CreateWaterPrintConfig(Models\CreateWaterPrintConfigRequest $req) 添加DDoS防护的水印防护配置
  * @method Models\CreateWaterPrintKeyResponse CreateWaterPrintKey(Models\CreateWaterPrintKeyRequest $req) 添加DDoS防护的水印防护密钥
- * @method Models\DeleteBlackWhiteIpListResponse DeleteBlackWhiteIpList(Models\DeleteBlackWhiteIpListRequest $req) 删除DDoS防护的IP黑白名单
  * @method Models\DeleteCCLevelPolicyResponse DeleteCCLevelPolicy(Models\DeleteCCLevelPolicyRequest $req) 删除CC分级策略
  * @method Models\DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicy(Models\DeleteCCPrecisionPolicyRequest $req) 删除CC精准防护策略
  * @method Models\DeleteCCRequestLimitPolicyResponse DeleteCCRequestLimitPolicy(Models\DeleteCCRequestLimitPolicyRequest $req) 删除CC频率限制策略
@@ -61,9 +61,10 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DeleteWaterPrintConfigResponse DeleteWaterPrintConfig(Models\DeleteWaterPrintConfigRequest $req) 删除DDoS防护的水印防护配置
  * @method Models\DeleteWaterPrintKeyResponse DeleteWaterPrintKey(Models\DeleteWaterPrintKeyRequest $req) 删除DDoS防护的水印防护密钥
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) 获取基础防护攻击状态
+ * @method Models\DescribeBgpBizTrendResponse DescribeBgpBizTrend(Models\DescribeBgpBizTrendRequest $req) 获取高防包流量折线图
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) 获取业务流量曲线
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) 获取DDoS防护的IP黑白名单
- * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) 获取CC防护等级列表
+ * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) 获取边界防护CC防护等级列表
  * @method Models\DescribeCCLevelPolicyResponse DescribeCCLevelPolicy(Models\DescribeCCLevelPolicyRequest $req) 获取CC分级策略
  * @method Models\DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(Models\DescribeCCPrecisionPlyListRequest $req) 获取CC精准防护列表
  * @method Models\DescribeCCReqLimitPolicyListResponse DescribeCCReqLimitPolicyList(Models\DescribeCCReqLimitPolicyListRequest $req) 获取CC频率限制策略列表
@@ -92,6 +93,13 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListProtocolBlockConfigResponse DescribeListProtocolBlockConfig(Models\DescribeListProtocolBlockConfigRequest $req) 获取DDoS防护的协议封禁配置列表
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) 获取智能调度域名列表
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) 获取DDoS防护的水印防护配置列表
+ * @method Models\DescribeNewL7RulesResponse DescribeNewL7Rules(Models\DescribeNewL7RulesRequest $req) 高防IP获取7层规则
+ * @method Models\DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealth(Models\DescribeNewL7RulesErrHealthRequest $req) 获取L7转发规则健康检查异常结果列表
+ * @method Models\DescribeOverviewAttackTrendResponse DescribeOverviewAttackTrend(Models\DescribeOverviewAttackTrendRequest $req) 拉取防护概览攻击趋势
+ * @method Models\DescribeOverviewCCTrendResponse DescribeOverviewCCTrend(Models\DescribeOverviewCCTrendRequest $req) 获取防护概览总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
+ * @method Models\DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(Models\DescribeOverviewDDoSEventListRequest $req) 获取防护概览的ddos攻击事件
+ * @method Models\DescribeOverviewDDoSTrendResponse DescribeOverviewDDoSTrend(Models\DescribeOverviewDDoSTrendRequest $req) 获取防护概览DDoS攻击流量带宽和攻击包速率数据
+ * @method Models\DescribeOverviewIndexResponse DescribeOverviewIndex(Models\DescribeOverviewIndexRequest $req) 拉取防护概览指标
  * @method Models\DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(Models\DisassociateDDoSEipAddressRequest $req) 本接口 (DisassociateDDoSEipAddress) 用于解绑高防弹性公网IP。
  * @method Models\ModifyCCLevelPolicyResponse ModifyCCLevelPolicy(Models\ModifyCCLevelPolicyRequest $req) 修改CC防护等级
  * @method Models\ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(Models\ModifyCCPrecisionPolicyRequest $req) 修改CC精准防护策略
@@ -104,7 +112,6 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\ModifyDDoSSpeedLimitConfigResponse ModifyDDoSSpeedLimitConfig(Models\ModifyDDoSSpeedLimitConfigRequest $req) 修改DDoS防护的访问限速配置
  * @method Models\ModifyDDoSThresholdResponse ModifyDDoSThreshold(Models\ModifyDDoSThresholdRequest $req) 修改DDoS清洗阈值
  * @method Models\ModifyDomainUsrNameResponse ModifyDomainUsrName(Models\ModifyDomainUsrNameRequest $req) 修改智能解析域名名称
- * @method Models\ModifyL7RulesEdgeResponse ModifyL7RulesEdge(Models\ModifyL7RulesEdgeRequest $req) 修改边界防护L7转发规则
  * @method Models\ModifyNewDomainRulesResponse ModifyNewDomainRules(Models\ModifyNewDomainRulesRequest $req) 修改7层转发规则
  * @method Models\ModifyPacketFilterConfigResponse ModifyPacketFilterConfig(Models\ModifyPacketFilterConfigRequest $req) 修改DDoS防护的特征过滤规则
  * @method Models\ModifyPortAclConfigResponse ModifyPortAclConfig(Models\ModifyPortAclConfigRequest $req) 修改DDoS防护的端口acl策略

@@ -21,15 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * SyncProxyOrganization请求参数结构体
  *
  * @method Agent getAgent() 获取应用信息
-此接口Agent.ProxyOrganizationOpenId必填
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
  * @method void setAgent(Agent $Agent) 设置应用信息
-此接口Agent.ProxyOrganizationOpenId必填
- * @method string getProxyOrganizationName() 获取渠道侧合作企业名称
- * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道侧合作企业名称
- * @method string getUniformSocialCreditCode() 获取渠道侧合作企业统一社会信用代码
- * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置渠道侧合作企业统一社会信用代码
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
+ * @method string getProxyOrganizationName() 获取渠道侧合作企业名称，最大长度64个字符
+ * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道侧合作企业名称，最大长度64个字符
  * @method string getBusinessLicense() 获取营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
  * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+ * @method string getUniformSocialCreditCode() 获取渠道侧合作企业统一社会信用代码，最大长度200个字符
+ * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置渠道侧合作企业统一社会信用代码，最大长度200个字符
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
@@ -37,24 +37,24 @@ class SyncProxyOrganizationRequest extends AbstractModel
 {
     /**
      * @var Agent 应用信息
-此接口Agent.ProxyOrganizationOpenId必填
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
      */
     public $Agent;
 
     /**
-     * @var string 渠道侧合作企业名称
+     * @var string 渠道侧合作企业名称，最大长度64个字符
      */
     public $ProxyOrganizationName;
-
-    /**
-     * @var string 渠道侧合作企业统一社会信用代码
-     */
-    public $UniformSocialCreditCode;
 
     /**
      * @var string 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
      */
     public $BusinessLicense;
+
+    /**
+     * @var string 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     */
+    public $UniformSocialCreditCode;
 
     /**
      * @var UserInfo 操作者的信息
@@ -63,10 +63,10 @@ class SyncProxyOrganizationRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 应用信息
-此接口Agent.ProxyOrganizationOpenId必填
-     * @param string $ProxyOrganizationName 渠道侧合作企业名称
-     * @param string $UniformSocialCreditCode 渠道侧合作企业统一社会信用代码
+此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
+     * @param string $ProxyOrganizationName 渠道侧合作企业名称，最大长度64个字符
      * @param string $BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+     * @param string $UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
      * @param UserInfo $Operator 操作者的信息
      */
     function __construct()
@@ -91,12 +91,12 @@ class SyncProxyOrganizationRequest extends AbstractModel
             $this->ProxyOrganizationName = $param["ProxyOrganizationName"];
         }
 
-        if (array_key_exists("UniformSocialCreditCode",$param) and $param["UniformSocialCreditCode"] !== null) {
-            $this->UniformSocialCreditCode = $param["UniformSocialCreditCode"];
-        }
-
         if (array_key_exists("BusinessLicense",$param) and $param["BusinessLicense"] !== null) {
             $this->BusinessLicense = $param["BusinessLicense"];
+        }
+
+        if (array_key_exists("UniformSocialCreditCode",$param) and $param["UniformSocialCreditCode"] !== null) {
+            $this->UniformSocialCreditCode = $param["UniformSocialCreditCode"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

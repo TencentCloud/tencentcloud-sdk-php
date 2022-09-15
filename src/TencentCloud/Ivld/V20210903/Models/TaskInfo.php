@@ -73,6 +73,10 @@ TaskStatus定义如下:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置媒资自定义标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCallbackURL() 获取任务分析完成后的后调地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCallbackURL(string $CallbackURL) 设置任务分析完成后的后调地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfo extends AbstractModel
 {
@@ -144,6 +148,12 @@ class TaskInfo extends AbstractModel
     public $Label;
 
     /**
+     * @var string 任务分析完成后的后调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CallbackURL;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $TaskName 描述任务名称，指定后可根据名称筛选
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,6 +172,8 @@ class TaskInfo extends AbstractModel
      * @param string $MediaName 媒资文件名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CallbackURL 任务分析完成后的后调地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -224,6 +236,10 @@ class TaskInfo extends AbstractModel
 
         if (array_key_exists("Label",$param) and $param["Label"] !== null) {
             $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("CallbackURL",$param) and $param["CallbackURL"] !== null) {
+            $this->CallbackURL = $param["CallbackURL"];
         }
     }
 }

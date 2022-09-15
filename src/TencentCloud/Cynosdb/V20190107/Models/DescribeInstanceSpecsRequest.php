@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
 <li> MYSQL </li>
  * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
 <li> MYSQL </li>
+ * @method boolean getIncludeZoneStocks() 获取是否需要返回可用区信息
+ * @method void setIncludeZoneStocks(boolean $IncludeZoneStocks) 设置是否需要返回可用区信息
  */
 class DescribeInstanceSpecsRequest extends AbstractModel
 {
@@ -34,8 +36,14 @@ class DescribeInstanceSpecsRequest extends AbstractModel
     public $DbType;
 
     /**
+     * @var boolean 是否需要返回可用区信息
+     */
+    public $IncludeZoneStocks;
+
+    /**
      * @param string $DbType 数据库类型，取值范围: 
 <li> MYSQL </li>
+     * @param boolean $IncludeZoneStocks 是否需要返回可用区信息
      */
     function __construct()
     {
@@ -52,6 +60,10 @@ class DescribeInstanceSpecsRequest extends AbstractModel
         }
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
             $this->DbType = $param["DbType"];
+        }
+
+        if (array_key_exists("IncludeZoneStocks",$param) and $param["IncludeZoneStocks"] !== null) {
+            $this->IncludeZoneStocks = $param["IncludeZoneStocks"];
         }
     }
 }

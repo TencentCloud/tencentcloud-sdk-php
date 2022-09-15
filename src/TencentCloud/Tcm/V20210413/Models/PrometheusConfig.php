@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method string getInstanceId() 获取关联已存在实例Id，不填则默认创建
  * @method void setInstanceId(string $InstanceId) 设置关联已存在实例Id，不填则默认创建
+ * @method CustomPromConfig getCustomProm() 获取第三方 Prometheus
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomProm(CustomPromConfig $CustomProm) 设置第三方 Prometheus
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusConfig extends AbstractModel
 {
@@ -52,10 +56,18 @@ class PrometheusConfig extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var CustomPromConfig 第三方 Prometheus
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomProm;
+
+    /**
      * @param string $VpcId 虚拟网络Id
      * @param string $SubnetId 子网Id
      * @param string $Region 地域
      * @param string $InstanceId 关联已存在实例Id，不填则默认创建
+     * @param CustomPromConfig $CustomProm 第三方 Prometheus
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,11 @@ class PrometheusConfig extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("CustomProm",$param) and $param["CustomProm"] !== null) {
+            $this->CustomProm = new CustomPromConfig();
+            $this->CustomProm->deserialize($param["CustomProm"]);
         }
     }
 }

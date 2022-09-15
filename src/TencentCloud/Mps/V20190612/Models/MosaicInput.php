@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 视频处理任务中的马赛克参数类型
+ * 媒体处理任务中的马赛克参数类型
  *
  * @method string getCoordinateOrigin() 获取原点位置，目前仅支持：
 <li>TopLeft：表示坐标原点位于视频图像左上角，马赛克原点为图片或文字的左上角。</li>

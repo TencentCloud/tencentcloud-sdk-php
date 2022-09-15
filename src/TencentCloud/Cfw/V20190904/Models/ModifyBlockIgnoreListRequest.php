@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIOC(array $IOC) 设置IP、Domain二选一，不能同时为空
  * @method string getIocAction() 获取可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
  * @method void setIocAction(string $IocAction) 设置可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
- * @method string getStartTime() 获取时间格式：yyyy-MM-dd HH:mm:ss
- * @method void setStartTime(string $StartTime) 设置时间格式：yyyy-MM-dd HH:mm:ss
- * @method string getEndTime() 获取时间格式：yyyy-MM-dd HH:mm:ss
- * @method void setEndTime(string $EndTime) 设置时间格式：yyyy-MM-dd HH:mm:ss
+ * @method string getStartTime() 获取时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+ * @method void setStartTime(string $StartTime) 设置时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+ * @method string getEndTime() 获取时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+ * @method void setEndTime(string $EndTime) 设置时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
  */
 class ModifyBlockIgnoreListRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class ModifyBlockIgnoreListRequest extends AbstractModel
     public $IocAction;
 
     /**
-     * @var string 时间格式：yyyy-MM-dd HH:mm:ss
+     * @var string 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
      */
     public $StartTime;
 
     /**
-     * @var string 时间格式：yyyy-MM-dd HH:mm:ss
+     * @var string 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
      */
     public $EndTime;
 
@@ -62,8 +62,8 @@ class ModifyBlockIgnoreListRequest extends AbstractModel
      * @param integer $RuleType 1拦截列表 2 忽略列表
      * @param array $IOC IP、Domain二选一，不能同时为空
      * @param string $IocAction 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
-     * @param string $StartTime 时间格式：yyyy-MM-dd HH:mm:ss
-     * @param string $EndTime 时间格式：yyyy-MM-dd HH:mm:ss
+     * @param string $StartTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
+     * @param string $EndTime 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
      */
     function __construct()
     {

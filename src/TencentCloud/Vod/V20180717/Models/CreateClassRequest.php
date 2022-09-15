@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentId(integer $ParentId) 设置父类 ID，一级分类填写 -1。
  * @method string getClassName() 获取分类名称，长度限制：1-64 个字符。
  * @method void setClassName(string $ClassName) 设置分类名称，长度限制：1-64 个字符。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  */
 class CreateClassRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateClassRequest extends AbstractModel
     public $ClassName;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     public $SubAppId;
 
     /**
      * @param integer $ParentId 父类 ID，一级分类填写 -1。
      * @param string $ClassName 分类名称，长度限制：1-64 个字符。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     function __construct()
     {

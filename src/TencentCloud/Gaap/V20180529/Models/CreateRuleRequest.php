@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置转发规则的路径
  * @method string getRealServerType() 获取转发规则对应源站的类型，支持IP和DOMAIN类型。
  * @method void setRealServerType(string $RealServerType) 设置转发规则对应源站的类型，支持IP和DOMAIN类型。
- * @method string getScheduler() 获取规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
- * @method void setScheduler(string $Scheduler) 设置规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+ * @method string getScheduler() 获取监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+ * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
  * @method integer getHealthCheck() 获取规则是否开启健康检查，1开启，0关闭。
  * @method void setHealthCheck(integer $HealthCheck) 设置规则是否开启健康检查，1开启，0关闭。
  * @method RuleCheckParams getCheckParams() 获取源站健康检查相关参数
@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) 设置服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
  * @method string getServerNameIndication() 获取服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
  * @method void setServerNameIndication(string $ServerNameIndication) 设置服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+ * @method string getForcedRedirect() 获取HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+ * @method void setForcedRedirect(string $ForcedRedirect) 设置HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
  */
 class CreateRuleRequest extends AbstractModel
 {
@@ -68,7 +70,7 @@ class CreateRuleRequest extends AbstractModel
     public $RealServerType;
 
     /**
-     * @var string 规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * @var string 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      */
     public $Scheduler;
 
@@ -104,11 +106,16 @@ class CreateRuleRequest extends AbstractModel
     public $ServerNameIndication;
 
     /**
+     * @var string HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     */
+    public $ForcedRedirect;
+
+    /**
      * @param string $ListenerId 7层监听器ID
      * @param string $Domain 转发规则的域名
      * @param string $Path 转发规则的路径
      * @param string $RealServerType 转发规则对应源站的类型，支持IP和DOMAIN类型。
-     * @param string $Scheduler 规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * @param string $Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
      * @param integer $HealthCheck 规则是否开启健康检查，1开启，0关闭。
      * @param RuleCheckParams $CheckParams 源站健康检查相关参数
      * @param string $ForwardProtocol 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
@@ -116,6 +123,7 @@ class CreateRuleRequest extends AbstractModel
      * @param string $ForwardHost 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
      * @param string $ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
      * @param string $ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+     * @param string $ForcedRedirect HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class CreateRuleRequest extends AbstractModel
 
         if (array_key_exists("ServerNameIndication",$param) and $param["ServerNameIndication"] !== null) {
             $this->ServerNameIndication = $param["ServerNameIndication"];
+        }
+
+        if (array_key_exists("ForcedRedirect",$param) and $param["ForcedRedirect"] !== null) {
+            $this->ForcedRedirect = $param["ForcedRedirect"];
         }
     }
 }

@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPurpose(string $Purpose) 设置验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
  * @method string getInstanceId() 获取官方云盘实例 ID
  * @method void setInstanceId(string $InstanceId) 设置官方云盘实例 ID
- * @method string getPhoneNumber() 获取将作为超级管理员账号的手机号码，仅限中国境内手机号，无需国家代码“+86”。
- * @method void setPhoneNumber(string $PhoneNumber) 设置将作为超级管理员账号的手机号码，仅限中国境内手机号，无需国家代码“+86”。
+ * @method string getPhoneNumber() 获取将作为超级管理员账号的手机号码
+ * @method void setPhoneNumber(string $PhoneNumber) 设置将作为超级管理员账号的手机号码
+ * @method string getCountryCode() 获取将作为超级管理员账号的手机号码的国家代码。默认为 +86。
+ * @method void setCountryCode(string $CountryCode) 设置将作为超级管理员账号的手机号码的国家代码。默认为 +86。
  */
 class SendSmsCodeRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class SendSmsCodeRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 将作为超级管理员账号的手机号码，仅限中国境内手机号，无需国家代码“+86”。
+     * @var string 将作为超级管理员账号的手机号码
      */
     public $PhoneNumber;
 
     /**
+     * @var string 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
+     */
+    public $CountryCode;
+
+    /**
      * @param string $Purpose 验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
      * @param string $InstanceId 官方云盘实例 ID
-     * @param string $PhoneNumber 将作为超级管理员账号的手机号码，仅限中国境内手机号，无需国家代码“+86”。
+     * @param string $PhoneNumber 将作为超级管理员账号的手机号码
+     * @param string $CountryCode 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class SendSmsCodeRequest extends AbstractModel
 
         if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
             $this->PhoneNumber = $param["PhoneNumber"];
+        }
+
+        if (array_key_exists("CountryCode",$param) and $param["CountryCode"] !== null) {
+            $this->CountryCode = $param["CountryCode"];
         }
     }
 }

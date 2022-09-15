@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsStar(integer $IsStar) 设置是否星标  1:是 0:否
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProjectStatus() 获取项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectStatus(integer $ProjectStatus) 设置项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RumProject extends AbstractModel
 {
@@ -141,6 +145,12 @@ class RumProject extends AbstractModel
     public $IsStar;
 
     /**
+     * @var integer 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectStatus;
+
+    /**
      * @param string $Name 项目名
      * @param string $Creator 创建者 id
      * @param string $InstanceID 实例 id
@@ -159,6 +169,8 @@ class RumProject extends AbstractModel
      * @param string $Desc 项目描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsStar 是否星标  1:是 0:否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProjectStatus 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -232,6 +244,10 @@ class RumProject extends AbstractModel
 
         if (array_key_exists("IsStar",$param) and $param["IsStar"] !== null) {
             $this->IsStar = $param["IsStar"];
+        }
+
+        if (array_key_exists("ProjectStatus",$param) and $param["ProjectStatus"] !== null) {
+            $this->ProjectStatus = $param["ProjectStatus"];
         }
     }
 }

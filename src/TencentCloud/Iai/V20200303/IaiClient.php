@@ -28,17 +28,6 @@ use TencentCloud\Iai\V20200303\Models as Models;
 
 >     
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
- * @method Models\CheckSimilarPersonResponse CheckSimilarPerson(Models\CheckSimilarPersonRequest $req) 对指定的人员库进行人员查重，给出疑似相同人的信息。
-
-可以使用本接口对已有的单个人员库进行人员查重，避免同一人在单个人员库中拥有多个身份；也可以使用本接口对已有的多个人员库进行人员查重，查询同一人是否同时存在多个人员库中。
-
-不支持跨算法模型版本查重，且目前仅支持算法模型为3.0的人员库使用查重功能。
-
->     
-- 若对完全相同的指定人员库进行查重操作，需等待上次操作完成才可。即，若两次请求输入的 GroupIds 相同，第一次请求若未完成，第二次请求将返回失败。
-
->     
-- 查重的人员库状态为腾讯云开始进行查重任务的那一刻，即您可以理解为当您发起查重请求后，若您的查重任务需要排队，在排队期间您对人员库的增删操作均会会影响查重的结果。腾讯云将以开始进行查重任务的那一刻人员库的状态进行查重。查重任务开始后，您对人员库的任何操作均不影响查重任务的进行。但建议查重任务开始后，请不要对人员库中人员和人脸进行增删操作。
  * @method Models\CompareFaceResponse CompareFace(Models\CompareFaceRequest $req) 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
 
 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://cloud.tencent.com/document/product/867/44983)或[人员验证](https://cloud.tencent.com/document/product/867/44982)接口。
@@ -47,9 +36,9 @@ use TencentCloud\Iai\V20200303\Models as Models;
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
  * @method Models\CompareMaskFaceResponse CompareMaskFace(Models\CompareMaskFaceRequest $req) 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
 
-戴口罩人脸比对接口可在人脸戴口罩情况下使用，口罩遮挡程度最高可以遮挡鼻尖。
+防疫场景人脸比对接口可在人脸戴口罩情况下使用，口罩遮挡程度最高可以遮挡鼻尖。
 
-如图片人脸不存在戴口罩情况，建议使用人脸比对服务。
+如图片人脸不存在防疫场景下戴口罩的情况，建议使用人脸比对服务。
  * @method Models\CopyPersonResponse CopyPerson(Models\CopyPersonRequest $req) 将已存在于某人员库的人员复制到其他人员库，该人员的描述信息不会被复制。单个人员最多只能同时存在100个人员库中。
 >     
 - 注：若该人员创建时算法模型版本为2.0，复制到非2.0算法模型版本的Group中时，复制操作将会失败。
@@ -125,21 +114,12 @@ use TencentCloud\Iai\V20200303\Models as Models;
  * @method Models\DetectLiveFaceAccurateResponse DetectLiveFaceAccurate(Models\DetectLiveFaceAccurateRequest $req) 人脸静态活体检测（高精度版）可用于对用户上传的静态图片进行防翻拍活体检测，以判断是否是翻拍图片。
 
 相比现有静态活体检测服务，高精度版在维持高真人通过率的前提下，增强了对高清屏幕、裁剪纸片、3D面具等攻击的防御能力，攻击拦截率约为业内同类型产品形态4-5倍。同时支持多场景人脸核验，满足移动端、PC端各类型场景的图片活体检验需求，适用于各个行业不同的活体检验应用。
- * @method Models\EstimateCheckSimilarPersonCostTimeResponse EstimateCheckSimilarPersonCostTime(Models\EstimateCheckSimilarPersonCostTimeRequest $req) 获取若要开始一个人员查重任务，这个任务结束的预估时间。
-
-若EndTimestamp符合您预期，请您尽快发起人员查重请求，否则导致可能需要更多处理时间。
-
-若预估时间超过5小时，则无法使用人员查重功能。
- * @method Models\GetCheckSimilarPersonJobIdListResponse GetCheckSimilarPersonJobIdList(Models\GetCheckSimilarPersonJobIdListRequest $req) 获取人员查重任务列表，按任务创建时间逆序（最新的在前面）。
-
-只保留最近1年的数据。
  * @method Models\GetGroupInfoResponse GetGroupInfo(Models\GetGroupInfoRequest $req) 获取人员库信息。
  * @method Models\GetGroupListResponse GetGroupList(Models\GetGroupListRequest $req) 获取人员库列表。
  * @method Models\GetPersonBaseInfoResponse GetPersonBaseInfo(Models\GetPersonBaseInfoRequest $req) 获取指定人员的信息，包括姓名、性别、人脸等。
  * @method Models\GetPersonGroupInfoResponse GetPersonGroupInfo(Models\GetPersonGroupInfoRequest $req) 获取指定人员的信息，包括加入的人员库、描述内容等。
  * @method Models\GetPersonListResponse GetPersonList(Models\GetPersonListRequest $req) 获取指定人员库中的人员列表。
  * @method Models\GetPersonListNumResponse GetPersonListNum(Models\GetPersonListNumRequest $req) 获取指定人员库中人员数量。
- * @method Models\GetSimilarPersonResultResponse GetSimilarPersonResult(Models\GetSimilarPersonResultRequest $req) 获取人员查重接口（CheckSimilarPerson）结果。
  * @method Models\GetUpgradeGroupFaceModelVersionJobListResponse GetUpgradeGroupFaceModelVersionJobList(Models\GetUpgradeGroupFaceModelVersionJobListRequest $req) 获取人员库升级任务列表
 
  * @method Models\GetUpgradeGroupFaceModelVersionResultResponse GetUpgradeGroupFaceModelVersionResult(Models\GetUpgradeGroupFaceModelVersionResultRequest $req) 人员库升级结果查询

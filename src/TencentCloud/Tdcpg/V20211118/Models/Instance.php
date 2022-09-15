@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) 设置实例类型
  - RW：读写实例
  - RO：只读实例
+ * @method string getDBMajorVersion() 获取TDSQL-C PostgreSQL 合入的社区主要版本号
+ * @method void setDBMajorVersion(string $DBMajorVersion) 设置TDSQL-C PostgreSQL 合入的社区主要版本号
+ * @method string getDBKernelVersion() 获取TDSQL-C PostgreSQL 内核版本号
+ * @method void setDBKernelVersion(string $DBKernelVersion) 设置TDSQL-C PostgreSQL 内核版本号
  */
 class Instance extends AbstractModel
 {
@@ -147,6 +151,16 @@ class Instance extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var string TDSQL-C PostgreSQL 合入的社区主要版本号
+     */
+    public $DBMajorVersion;
+
+    /**
+     * @var string TDSQL-C PostgreSQL 内核版本号
+     */
+    public $DBKernelVersion;
+
+    /**
      * @param string $InstanceId 实例ID，集群下唯一
      * @param string $InstanceName 实例名字，默认和实例ID一致
      * @param string $ClusterId 集群ID
@@ -168,6 +182,8 @@ class Instance extends AbstractModel
      * @param string $InstanceType 实例类型
  - RW：读写实例
  - RO：只读实例
+     * @param string $DBMajorVersion TDSQL-C PostgreSQL 合入的社区主要版本号
+     * @param string $DBKernelVersion TDSQL-C PostgreSQL 内核版本号
      */
     function __construct()
     {
@@ -240,6 +256,14 @@ class Instance extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("DBMajorVersion",$param) and $param["DBMajorVersion"] !== null) {
+            $this->DBMajorVersion = $param["DBMajorVersion"];
+        }
+
+        if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
+            $this->DBKernelVersion = $param["DBKernelVersion"];
         }
     }
 }

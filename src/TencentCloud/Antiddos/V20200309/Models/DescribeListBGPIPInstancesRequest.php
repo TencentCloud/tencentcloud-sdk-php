@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterDamDDoSStatus(integer $FilterDamDDoSStatus) 设置是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
  * @method string getFilterStatus() 获取获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
  * @method void setFilterStatus(string $FilterStatus) 设置获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+ * @method string getFilterCname() 获取获取特定的实例Cname
+ * @method void setFilterCname(string $FilterCname) 设置获取特定的实例Cname
+ * @method array getFilterInstanceIdList() 获取批量查询实例ID对应的高防IP实例资源
+ * @method void setFilterInstanceIdList(array $FilterInstanceIdList) 设置批量查询实例ID对应的高防IP实例资源
+ * @method TagFilter getFilterTag() 获取标签搜索
+ * @method void setFilterTag(TagFilter $FilterTag) 设置标签搜索
+ * @method array getFilterPackType() 获取按照套餐类型进行过滤
+ * @method void setFilterPackType(array $FilterPackType) 设置按照套餐类型进行过滤
  */
 class DescribeListBGPIPInstancesRequest extends AbstractModel
 {
@@ -119,6 +127,26 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterStatus;
 
     /**
+     * @var string 获取特定的实例Cname
+     */
+    public $FilterCname;
+
+    /**
+     * @var array 批量查询实例ID对应的高防IP实例资源
+     */
+    public $FilterInstanceIdList;
+
+    /**
+     * @var TagFilter 标签搜索
+     */
+    public $FilterTag;
+
+    /**
+     * @var array 按照套餐类型进行过滤
+     */
+    public $FilterPackType;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -136,6 +164,10 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
      * @param array $FilterEipEipAddressStatus 高防弹性公网IP实例的绑定状态搜索条件，取值范围 [BINDING、 BIND、UNBINDING、UNBIND]。该搜索条件只在FilterEipType=1时才有效。
      * @param integer $FilterDamDDoSStatus 是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
      * @param string $FilterStatus 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+     * @param string $FilterCname 获取特定的实例Cname
+     * @param array $FilterInstanceIdList 批量查询实例ID对应的高防IP实例资源
+     * @param TagFilter $FilterTag 标签搜索
+     * @param array $FilterPackType 按照套餐类型进行过滤
      */
     function __construct()
     {
@@ -192,6 +224,23 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterStatus",$param) and $param["FilterStatus"] !== null) {
             $this->FilterStatus = $param["FilterStatus"];
+        }
+
+        if (array_key_exists("FilterCname",$param) and $param["FilterCname"] !== null) {
+            $this->FilterCname = $param["FilterCname"];
+        }
+
+        if (array_key_exists("FilterInstanceIdList",$param) and $param["FilterInstanceIdList"] !== null) {
+            $this->FilterInstanceIdList = $param["FilterInstanceIdList"];
+        }
+
+        if (array_key_exists("FilterTag",$param) and $param["FilterTag"] !== null) {
+            $this->FilterTag = new TagFilter();
+            $this->FilterTag->deserialize($param["FilterTag"]);
+        }
+
+        if (array_key_exists("FilterPackType",$param) and $param["FilterPackType"] !== null) {
+            $this->FilterPackType = $param["FilterPackType"];
         }
     }
 }

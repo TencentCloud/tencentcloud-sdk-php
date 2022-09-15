@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页条数，默认为20
  * @method string getGroupType() 获取分组类型。 ms： 微服务分组； external:外部Api分组
  * @method void setGroupType(string $GroupType) 设置分组类型。 ms： 微服务分组； external:外部Api分组
- * @method string getAuthType() 获取鉴权类型。 secret： 秘钥鉴权； none:无鉴权
- * @method void setAuthType(string $AuthType) 设置鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+ * @method string getAuthType() 获取鉴权类型。 secret： 密钥鉴权； none:无鉴权
+ * @method void setAuthType(string $AuthType) 设置鉴权类型。 secret： 密钥鉴权； none:无鉴权
  * @method string getStatus() 获取发布状态, drafted: 未发布。 released: 发布
  * @method void setStatus(string $Status) 设置发布状态, drafted: 未发布。 released: 发布
  * @method string getOrderBy() 获取排序字段："created_time"或"group_context"
@@ -62,7 +62,7 @@ class DescribeApiGroupsRequest extends AbstractModel
     public $GroupType;
 
     /**
-     * @var string 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+     * @var string 鉴权类型。 secret： 密钥鉴权； none:无鉴权
      */
     public $AuthType;
 
@@ -91,7 +91,7 @@ class DescribeApiGroupsRequest extends AbstractModel
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 每页条数，默认为20
      * @param string $GroupType 分组类型。 ms： 微服务分组； external:外部Api分组
-     * @param string $AuthType 鉴权类型。 secret： 秘钥鉴权； none:无鉴权
+     * @param string $AuthType 鉴权类型。 secret： 密钥鉴权； none:无鉴权
      * @param string $Status 发布状态, drafted: 未发布。 released: 发布
      * @param string $OrderBy 排序字段："created_time"或"group_context"
      * @param integer $OrderType 排序类型：0(ASC)或1(DESC)

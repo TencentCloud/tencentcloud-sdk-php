@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取符合过滤条件的记录总数。
  * @method void setTotalCount(integer $TotalCount) 设置符合过滤条件的记录总数。
- * @method array getAIAnalysisTemplateSet() 获取视频内容分析模板详情列表。
- * @method void setAIAnalysisTemplateSet(array $AIAnalysisTemplateSet) 设置视频内容分析模板详情列表。
+ * @method array getAIAnalysisTemplateSet() 获取音视频内容分析模板详情列表。
+ * @method void setAIAnalysisTemplateSet(array $AIAnalysisTemplateSet) 设置音视频内容分析模板详情列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeAIAnalysisTemplatesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 视频内容分析模板详情列表。
+     * @var array 音视频内容分析模板详情列表。
      */
     public $AIAnalysisTemplateSet;
 
@@ -46,7 +46,7 @@ class DescribeAIAnalysisTemplatesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 符合过滤条件的记录总数。
-     * @param array $AIAnalysisTemplateSet 视频内容分析模板详情列表。
+     * @param array $AIAnalysisTemplateSet 音视频内容分析模板详情列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

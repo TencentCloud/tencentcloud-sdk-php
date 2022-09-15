@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportAssetCoreModuleList请求参数结构体
  *
+ * @method string getUuid() 获取服务器Uuid
+ * @method void setUuid(string $Uuid) 设置服务器Uuid
+ * @method string getQuuid() 获取服务器Quuid
+ * @method void setQuuid(string $Quuid) 设置服务器Quuid
  * @method array getFilters() 获取过滤条件。
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
@@ -28,15 +32,21 @@ use TencentCloud\Common\AbstractModel;
 <li>User- string - 是否必填：否 - 用户</li>
  * @method string getOrder() 获取排序方式，asc升序 或 desc降序
  * @method void setOrder(string $Order) 设置排序方式，asc升序 或 desc降序
- * @method string getBy() 获取排序依据:Size,ProcessCount,ModuleCount
- * @method void setBy(string $By) 设置排序依据:Size,ProcessCount,ModuleCount
- * @method string getUuid() 获取服务器Uuid
- * @method void setUuid(string $Uuid) 设置服务器Uuid
- * @method string getQuuid() 获取服务器Quuid
- * @method void setQuuid(string $Quuid) 设置服务器Quuid
+ * @method string getBy() 获取排序依据[FirstTime|Size|ProcessCount|ModuleCount]
+ * @method void setBy(string $By) 设置排序依据[FirstTime|Size|ProcessCount|ModuleCount]
  */
 class ExportAssetCoreModuleListRequest extends AbstractModel
 {
+    /**
+     * @var string 服务器Uuid
+     */
+    public $Uuid;
+
+    /**
+     * @var string 服务器Quuid
+     */
+    public $Quuid;
+
     /**
      * @var array 过滤条件。
 <li>Name- string - 是否必填：否 - 包名</li>
@@ -50,28 +60,18 @@ class ExportAssetCoreModuleListRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var string 排序依据:Size,ProcessCount,ModuleCount
+     * @var string 排序依据[FirstTime|Size|ProcessCount|ModuleCount]
      */
     public $By;
 
     /**
-     * @var string 服务器Uuid
-     */
-    public $Uuid;
-
-    /**
-     * @var string 服务器Quuid
-     */
-    public $Quuid;
-
-    /**
+     * @param string $Uuid 服务器Uuid
+     * @param string $Quuid 服务器Quuid
      * @param array $Filters 过滤条件。
 <li>Name- string - 是否必填：否 - 包名</li>
 <li>User- string - 是否必填：否 - 用户</li>
      * @param string $Order 排序方式，asc升序 或 desc降序
-     * @param string $By 排序依据:Size,ProcessCount,ModuleCount
-     * @param string $Uuid 服务器Uuid
-     * @param string $Quuid 服务器Quuid
+     * @param string $By 排序依据[FirstTime|Size|ProcessCount|ModuleCount]
      */
     function __construct()
     {
@@ -86,6 +86,14 @@ class ExportAssetCoreModuleListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
+            $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
+            $this->Quuid = $param["Quuid"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -101,14 +109,6 @@ class ExportAssetCoreModuleListRequest extends AbstractModel
 
         if (array_key_exists("By",$param) and $param["By"] !== null) {
             $this->By = $param["By"];
-        }
-
-        if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
-            $this->Uuid = $param["Uuid"];
-        }
-
-        if (array_key_exists("Quuid",$param) and $param["Quuid"] !== null) {
-            $this->Quuid = $param["Quuid"];
         }
     }
 }

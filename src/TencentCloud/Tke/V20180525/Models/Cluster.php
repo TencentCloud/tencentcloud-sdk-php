@@ -74,6 +74,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableExternalNode(boolean $EnableExternalNode) 设置集群是否开启第三方节点支持
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterLevel() 获取集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterLevel(string $ClusterLevel) 设置集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoUpgradeClusterLevel() 获取自动变配集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置自动变配集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuntimeVersion() 获取运行时版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -181,6 +197,30 @@ class Cluster extends AbstractModel
     public $EnableExternalNode;
 
     /**
+     * @var string 集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var boolean 自动变配集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
+     * @var boolean 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QGPUShareEnable;
+
+    /**
+     * @var string 运行时版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuntimeVersion;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterDescription 集群描述
@@ -207,6 +247,14 @@ class Cluster extends AbstractModel
      * @param boolean $DeletionProtection 删除保护开关
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableExternalNode 集群是否开启第三方节点支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterLevel 集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $QGPUShareEnable 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuntimeVersion 运行时版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -302,6 +350,22 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("EnableExternalNode",$param) and $param["EnableExternalNode"] !== null) {
             $this->EnableExternalNode = $param["EnableExternalNode"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = $param["AutoUpgradeClusterLevel"];
+        }
+
+        if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
+            $this->QGPUShareEnable = $param["QGPUShareEnable"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
         }
     }
 }

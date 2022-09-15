@@ -152,6 +152,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceTags(array $ResourceTags) 设置实例标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbVersionId() 获取数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbVersionId(string $DbVersionId) 设置数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -426,6 +430,12 @@ class DBInstance extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbVersionId;
+
+    /**
      * @param string $InstanceId 实例 ID，唯一标识一个 TDSQL 实例
      * @param string $InstanceName 实例名称，用户可修改
      * @param integer $AppId 实例所属应用 ID
@@ -491,6 +501,8 @@ class DBInstance extends AbstractModel
      * @param integer $InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceTags 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbVersionId 数据库版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -713,6 +725,10 @@ class DBInstance extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("DbVersionId",$param) and $param["DbVersionId"] !== null) {
+            $this->DbVersionId = $param["DbVersionId"];
         }
     }
 }

@@ -64,6 +64,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置文件名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCheckPlatform() 获取检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckPlatform(array $CheckPlatform) 设置检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageVirusInfo extends AbstractModel
 {
@@ -134,6 +148,17 @@ class ImageVirusInfo extends AbstractModel
     public $FileName;
 
     /**
+     * @var array 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckPlatform;
+
+    /**
      * @param string $Path 路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskLevel 风险等级
@@ -155,6 +180,13 @@ class ImageVirusInfo extends AbstractModel
      * @param string $Md5 文件md5
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CheckPlatform 检测平台
+1: 云查杀引擎
+2: tav
+3: binaryAi
+4: 异常行为
+5: 威胁情报
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -212,6 +244,10 @@ class ImageVirusInfo extends AbstractModel
 
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
             $this->FileName = $param["FileName"];
+        }
+
+        if (array_key_exists("CheckPlatform",$param) and $param["CheckPlatform"] !== null) {
+            $this->CheckPlatform = $param["CheckPlatform"];
         }
     }
 }

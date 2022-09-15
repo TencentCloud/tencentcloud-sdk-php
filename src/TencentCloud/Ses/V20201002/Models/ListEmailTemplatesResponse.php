@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTemplatesMetadata() 获取邮件模板列表
  * @method void setTemplatesMetadata(array $TemplatesMetadata) 设置邮件模板列表
- * @method integer getTotalCount() 获取模版总数量
- * @method void setTotalCount(integer $TotalCount) 设置模版总数量
+ * @method integer getTotalCount() 获取模板总数量
+ * @method void setTotalCount(integer $TotalCount) 设置模板总数量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class ListEmailTemplatesResponse extends AbstractModel
     public $TemplatesMetadata;
 
     /**
-     * @var integer 模版总数量
+     * @var integer 模板总数量
      */
     public $TotalCount;
 
@@ -46,7 +46,7 @@ class ListEmailTemplatesResponse extends AbstractModel
 
     /**
      * @param array $TemplatesMetadata 邮件模板列表
-     * @param integer $TotalCount 模版总数量
+     * @param integer $TotalCount 模板总数量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -32,6 +32,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterDesc(string $ClusterDesc) 设置集群描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterLevel() 获取集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterLevel(string $ClusterLevel) 设置集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() 获取自动变配集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) 设置自动变配集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +68,24 @@ class ModifyClusterAttributeResponse extends AbstractModel
     public $ClusterDesc;
 
     /**
+     * @var string 集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var AutoUpgradeClusterLevel 自动变配集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
+     * @var boolean 是否开启QGPU共享
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QGPUShareEnable;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -66,6 +96,12 @@ class ModifyClusterAttributeResponse extends AbstractModel
      * @param string $ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterDesc 集群描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterLevel 集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $QGPUShareEnable 是否开启QGPU共享
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -92,6 +128,19 @@ class ModifyClusterAttributeResponse extends AbstractModel
 
         if (array_key_exists("ClusterDesc",$param) and $param["ClusterDesc"] !== null) {
             $this->ClusterDesc = $param["ClusterDesc"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel();
+            $this->AutoUpgradeClusterLevel->deserialize($param["AutoUpgradeClusterLevel"]);
+        }
+
+        if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
+            $this->QGPUShareEnable = $param["QGPUShareEnable"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

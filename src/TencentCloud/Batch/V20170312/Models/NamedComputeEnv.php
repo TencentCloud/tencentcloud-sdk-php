@@ -38,14 +38,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInputMappings(array $InputMappings) 设置输入映射信息
  * @method AgentRunningMode getAgentRunningMode() 获取agent运行模式，适用于Windows系统
  * @method void setAgentRunningMode(AgentRunningMode $AgentRunningMode) 设置agent运行模式，适用于Windows系统
- * @method Notification getNotifications() 获取通知信息
- * @method void setNotifications(Notification $Notifications) 设置通知信息
+ * @method array getNotifications() 获取通知信息
+ * @method void setNotifications(array $Notifications) 设置通知信息
  * @method string getActionIfComputeNodeInactive() 获取非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
  * @method void setActionIfComputeNodeInactive(string $ActionIfComputeNodeInactive) 设置非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
- * @method integer getResourceMaxRetryCount() 获取对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
- * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) 设置对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
+ * @method integer getResourceMaxRetryCount() 获取对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值100，如果不设置的话，系统会设置一个默认值，当前为7
+ * @method void setResourceMaxRetryCount(integer $ResourceMaxRetryCount) 设置对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值100，如果不设置的话，系统会设置一个默认值，当前为7
  * @method array getTags() 获取标签列表。通过指定该参数可以支持绑定标签到计算环境。每个计算环境最多绑定10个标签。
  * @method void setTags(array $Tags) 设置标签列表。通过指定该参数可以支持绑定标签到计算环境。每个计算环境最多绑定10个标签。
+ * @method string getNotificationTarget() 获取表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
+ * @method void setNotificationTarget(string $NotificationTarget) 设置表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
  */
 class NamedComputeEnv extends AbstractModel
 {
@@ -95,7 +103,7 @@ class NamedComputeEnv extends AbstractModel
     public $AgentRunningMode;
 
     /**
-     * @var Notification 通知信息
+     * @var array 通知信息
      */
     public $Notifications;
 
@@ -105,7 +113,7 @@ class NamedComputeEnv extends AbstractModel
     public $ActionIfComputeNodeInactive;
 
     /**
-     * @var integer 对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
+     * @var integer 对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值100，如果不设置的话，系统会设置一个默认值，当前为7
      */
     public $ResourceMaxRetryCount;
 
@@ -113,6 +121,14 @@ class NamedComputeEnv extends AbstractModel
      * @var array 标签列表。通过指定该参数可以支持绑定标签到计算环境。每个计算环境最多绑定10个标签。
      */
     public $Tags;
+
+    /**
+     * @var string 表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
+     */
+    public $NotificationTarget;
 
     /**
      * @param string $EnvName 计算环境名称
@@ -124,10 +140,14 @@ class NamedComputeEnv extends AbstractModel
      * @param array $Authentications 授权信息
      * @param array $InputMappings 输入映射信息
      * @param AgentRunningMode $AgentRunningMode agent运行模式，适用于Windows系统
-     * @param Notification $Notifications 通知信息
+     * @param array $Notifications 通知信息
      * @param string $ActionIfComputeNodeInactive 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
-     * @param integer $ResourceMaxRetryCount 对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值11，如果不设置的话，系统会设置一个默认值，当前为7
+     * @param integer $ResourceMaxRetryCount 对于实例创建失败或异常退还的计算节点，定期重新创建实例资源的最大重试次数，最大值100，如果不设置的话，系统会设置一个默认值，当前为7
      * @param array $Tags 标签列表。通过指定该参数可以支持绑定标签到计算环境。每个计算环境最多绑定10个标签。
+     * @param string $NotificationTarget 表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
      */
     function __construct()
     {
@@ -196,8 +216,12 @@ class NamedComputeEnv extends AbstractModel
         }
 
         if (array_key_exists("Notifications",$param) and $param["Notifications"] !== null) {
-            $this->Notifications = new Notification();
-            $this->Notifications->deserialize($param["Notifications"]);
+            $this->Notifications = [];
+            foreach ($param["Notifications"] as $key => $value){
+                $obj = new Notification();
+                $obj->deserialize($value);
+                array_push($this->Notifications, $obj);
+            }
         }
 
         if (array_key_exists("ActionIfComputeNodeInactive",$param) and $param["ActionIfComputeNodeInactive"] !== null) {
@@ -215,6 +239,10 @@ class NamedComputeEnv extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("NotificationTarget",$param) and $param["NotificationTarget"] !== null) {
+            $this->NotificationTarget = $param["NotificationTarget"];
         }
     }
 }

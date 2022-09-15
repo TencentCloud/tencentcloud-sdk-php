@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SaDivulgeDataQueryPub返回参数结构体
  *
- * @method SaDivulgeDataQueryPubList getData() 获取结果
- * @method void setData(SaDivulgeDataQueryPubList $Data) 设置结果
+ * @method SaDivulgeDataQueryPubList getData() 获取自定义泄露事件列表
+ * @method void setData(SaDivulgeDataQueryPubList $Data) 设置自定义泄露事件列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class SaDivulgeDataQueryPubResponse extends AbstractModel
 {
     /**
-     * @var SaDivulgeDataQueryPubList 结果
+     * @var SaDivulgeDataQueryPubList 自定义泄露事件列表
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class SaDivulgeDataQueryPubResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param SaDivulgeDataQueryPubList $Data 结果
+     * @param SaDivulgeDataQueryPubList $Data 自定义泄露事件列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBuyStatus() 获取购买状态
+待购: Pending
+已购: Normal
+隔离: Isolate
+ * @method void setBuyStatus(string $BuyStatus) 设置购买状态
+待购: Pending
+已购: Normal
+隔离: Isolate
+ * @method boolean getIsPurchased() 获取是否曾经购买过(false:未曾 true:曾经购买过)
+ * @method void setIsPurchased(boolean $IsPurchased) 设置是否曾经购买过(false:未曾 true:曾经购买过)
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -70,6 +80,19 @@ class DescribeProVersionInfoResponse extends AbstractModel
     public $ResourceId;
 
     /**
+     * @var string 购买状态
+待购: Pending
+已购: Normal
+隔离: Isolate
+     */
+    public $BuyStatus;
+
+    /**
+     * @var boolean 是否曾经购买过(false:未曾 true:曾经购买过)
+     */
+    public $IsPurchased;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -83,6 +106,11 @@ class DescribeProVersionInfoResponse extends AbstractModel
      * @param integer $MaxPostPayCoresCnt 弹性计费上限
      * @param string $ResourceId 资源ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BuyStatus 购买状态
+待购: Pending
+已购: Normal
+隔离: Isolate
+     * @param boolean $IsPurchased 是否曾经购买过(false:未曾 true:曾经购买过)
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +144,14 @@ class DescribeProVersionInfoResponse extends AbstractModel
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("BuyStatus",$param) and $param["BuyStatus"] !== null) {
+            $this->BuyStatus = $param["BuyStatus"];
+        }
+
+        if (array_key_exists("IsPurchased",$param) and $param["IsPurchased"] !== null) {
+            $this->IsPurchased = $param["IsPurchased"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

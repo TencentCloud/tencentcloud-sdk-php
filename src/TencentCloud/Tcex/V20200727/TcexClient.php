@@ -23,8 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tcex\V20200727\Models as Models;
 
 /**
- * @method Models\DescribeInvocationResultResponse DescribeInvocationResult(Models\DescribeInvocationResultRequest $req) 获取服务调用结果。和InvokeService接口配置合适，其InvokeId参数为InvokeService接口返回的RequestId。
- * @method Models\InvokeServiceResponse InvokeService(Models\InvokeServiceRequest $req) 通过传入文档url，测试服务算法。此接口需要和DescribeInvocationResult接口配置使用，该接口使用InvokeService返回的RequestId作为InvokeId参数，用于查询调用结果。
+ * @method Models\DescribeInvocationResultResponse DescribeInvocationResult(Models\DescribeInvocationResultRequest $req) 产品控制台已经下线
+
+获取服务调用结果。和InvokeService接口配置合适，其InvokeId参数为InvokeService接口返回的RequestId。
+ * @method Models\InvokeServiceResponse InvokeService(Models\InvokeServiceRequest $req) 产品控制台已经下线
+
+通过传入文档url，测试服务算法。此接口需要和DescribeInvocationResult接口配置使用，该接口使用InvokeService返回的RequestId作为InvokeId参数，用于查询调用结果。
  */
 
 class TcexClient extends AbstractClient

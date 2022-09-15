@@ -19,12 +19,27 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 此结构 (FormField) 用于描述内容控件填充结构。
+
  *
- * @method string getComponentValue() 获取表单域或控件的Value
- * @method void setComponentValue(string $ComponentValue) 设置表单域或控件的Value
- * @method string getComponentId() 获取表单域或控件的ID，跟ComponentName二选一，不能全为空
+ * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+ * @method void setComponentValue(string $ComponentValue) 设置控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+ * @method string getComponentId() 获取表单域或控件的ID，跟ComponentName二选一，不能全为空；
+CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComponentId(string $ComponentId) 设置表单域或控件的ID，跟ComponentName二选一，不能全为空
+ * @method void setComponentId(string $ComponentId) 设置表单域或控件的ID，跟ComponentName二选一，不能全为空；
+CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentName() 获取控件的名字，跟ComponentId二选一，不能全为空
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,12 +49,19 @@ use TencentCloud\Common\AbstractModel;
 class FormField extends AbstractModel
 {
     /**
-     * @var string 表单域或控件的Value
+     * @var string 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
      */
     public $ComponentValue;
 
     /**
-     * @var string 表单域或控件的ID，跟ComponentName二选一，不能全为空
+     * @var string 表单域或控件的ID，跟ComponentName二选一，不能全为空；
+CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentId;
@@ -51,8 +73,15 @@ class FormField extends AbstractModel
     public $ComponentName;
 
     /**
-     * @param string $ComponentValue 表单域或控件的Value
-     * @param string $ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空
+     * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
+TEXT - 文本内容
+MULTI_LINE_TEXT - 文本内容
+CHECK_BOX - true/false
+FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+SELECTOR - 选项值
+DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+     * @param string $ComponentId 表单域或控件的ID，跟ComponentName二选一，不能全为空；
+CreateFlowsByTemplates 接口不使用此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentName 控件的名字，跟ComponentId二选一，不能全为空
 注意：此字段可能返回 null，表示取不到有效值。

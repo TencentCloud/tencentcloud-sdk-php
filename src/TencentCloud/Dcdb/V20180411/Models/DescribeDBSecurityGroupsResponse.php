@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVIP(string $VIP) 设置实例VIP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVPort() 获取实例端口
+ * @method string getVPort() 获取实例端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVPort(integer $VPort) 设置实例端口
+ * @method void setVPort(string $VPort) 设置实例端口
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -47,7 +47,7 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
     public $VIP;
 
     /**
-     * @var integer 实例端口
+     * @var string 实例端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VPort;
@@ -61,7 +61,7 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
      * @param array $Groups 安全组详情。
      * @param string $VIP 实例VIP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VPort 实例端口
+     * @param string $VPort 实例端口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

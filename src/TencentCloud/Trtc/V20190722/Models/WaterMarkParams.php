@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getWaterMarkId() 获取混流-水印图片ID。取值为实时音视频控制台上传的图片ID。
  * @method void setWaterMarkId(integer $WaterMarkId) 设置混流-水印图片ID。取值为实时音视频控制台上传的图片ID。
- * @method integer getWaterMarkWidth() 获取混流-水印宽。单位为像素值。
- * @method void setWaterMarkWidth(integer $WaterMarkWidth) 设置混流-水印宽。单位为像素值。
- * @method integer getWaterMarkHeight() 获取混流-水印高。单位为像素值。
- * @method void setWaterMarkHeight(integer $WaterMarkHeight) 设置混流-水印高。单位为像素值。
- * @method integer getLocationX() 获取水印在输出时的X偏移。单位为像素值。
- * @method void setLocationX(integer $LocationX) 设置水印在输出时的X偏移。单位为像素值。
- * @method integer getLocationY() 获取水印在输出时的Y偏移。单位为像素值。
- * @method void setLocationY(integer $LocationY) 设置水印在输出时的Y偏移。单位为像素值。
- * @method string getWaterMarkUrl() 获取混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
- * @method void setWaterMarkUrl(string $WaterMarkUrl) 设置混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+ * @method integer getWaterMarkWidth() 获取混流-水印宽。单位为像素值。水印宽+X偏移不能超过整个画布宽。
+ * @method void setWaterMarkWidth(integer $WaterMarkWidth) 设置混流-水印宽。单位为像素值。水印宽+X偏移不能超过整个画布宽。
+ * @method integer getWaterMarkHeight() 获取混流-水印高。单位为像素值。水印高+Y偏移不能超过整个画布高。
+ * @method void setWaterMarkHeight(integer $WaterMarkHeight) 设置混流-水印高。单位为像素值。水印高+Y偏移不能超过整个画布高。
+ * @method integer getLocationX() 获取水印在输出时的X偏移。单位为像素值。水印宽+X偏移不能超过整个画布宽。
+ * @method void setLocationX(integer $LocationX) 设置水印在输出时的X偏移。单位为像素值。水印宽+X偏移不能超过整个画布宽。
+ * @method integer getLocationY() 获取水印在输出时的Y偏移。单位为像素值。水印高+Y偏移不能超过整个画布高。
+ * @method void setLocationY(integer $LocationY) 设置水印在输出时的Y偏移。单位为像素值。水印高+Y偏移不能超过整个画布高。
+ * @method string getWaterMarkUrl() 获取混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过2MB。
+ * @method void setWaterMarkUrl(string $WaterMarkUrl) 设置混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过2MB。
  */
 class WaterMarkParams extends AbstractModel
 {
@@ -41,37 +41,37 @@ class WaterMarkParams extends AbstractModel
     public $WaterMarkId;
 
     /**
-     * @var integer 混流-水印宽。单位为像素值。
+     * @var integer 混流-水印宽。单位为像素值。水印宽+X偏移不能超过整个画布宽。
      */
     public $WaterMarkWidth;
 
     /**
-     * @var integer 混流-水印高。单位为像素值。
+     * @var integer 混流-水印高。单位为像素值。水印高+Y偏移不能超过整个画布高。
      */
     public $WaterMarkHeight;
 
     /**
-     * @var integer 水印在输出时的X偏移。单位为像素值。
+     * @var integer 水印在输出时的X偏移。单位为像素值。水印宽+X偏移不能超过整个画布宽。
      */
     public $LocationX;
 
     /**
-     * @var integer 水印在输出时的Y偏移。单位为像素值。
+     * @var integer 水印在输出时的Y偏移。单位为像素值。水印高+Y偏移不能超过整个画布高。
      */
     public $LocationY;
 
     /**
-     * @var string 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+     * @var string 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过2MB。
      */
     public $WaterMarkUrl;
 
     /**
      * @param integer $WaterMarkId 混流-水印图片ID。取值为实时音视频控制台上传的图片ID。
-     * @param integer $WaterMarkWidth 混流-水印宽。单位为像素值。
-     * @param integer $WaterMarkHeight 混流-水印高。单位为像素值。
-     * @param integer $LocationX 水印在输出时的X偏移。单位为像素值。
-     * @param integer $LocationY 水印在输出时的Y偏移。单位为像素值。
-     * @param string $WaterMarkUrl 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+     * @param integer $WaterMarkWidth 混流-水印宽。单位为像素值。水印宽+X偏移不能超过整个画布宽。
+     * @param integer $WaterMarkHeight 混流-水印高。单位为像素值。水印高+Y偏移不能超过整个画布高。
+     * @param integer $LocationX 水印在输出时的X偏移。单位为像素值。水印宽+X偏移不能超过整个画布宽。
+     * @param integer $LocationY 水印在输出时的Y偏移。单位为像素值。水印高+Y偏移不能超过整个画布高。
+     * @param string $WaterMarkUrl 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过2MB。
      */
     function __construct()
     {

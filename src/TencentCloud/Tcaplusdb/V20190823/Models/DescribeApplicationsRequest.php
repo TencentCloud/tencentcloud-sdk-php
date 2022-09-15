@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID，用于获取指定集群的单据
  * @method void setClusterId(string $ClusterId) 设置集群ID，用于获取指定集群的单据
- * @method integer getLimit() 获取分页
- * @method void setLimit(integer $Limit) 设置分页
- * @method integer getOffset() 获取分页
- * @method void setOffset(integer $Offset) 设置分页
- * @method integer getCensorStatus() 获取申请单状态，用于过滤
- * @method void setCensorStatus(integer $CensorStatus) 设置申请单状态，用于过滤
+ * @method integer getLimit() 获取分页，限制当前返回多少条记录，大于等于10
+ * @method void setLimit(integer $Limit) 设置分页，限制当前返回多少条记录，大于等于10
+ * @method integer getOffset() 获取分页，从多少条数据开始返回
+ * @method void setOffset(integer $Offset) 设置分页，从多少条数据开始返回
+ * @method integer getCensorStatus() 获取申请单状态，用于过滤，0-待审核 1-已经审核并提交任务 2-已驳回
+ * @method void setCensorStatus(integer $CensorStatus) 设置申请单状态，用于过滤，0-待审核 1-已经审核并提交任务 2-已驳回
  * @method string getTableGroupId() 获取表格组id，用于过滤
  * @method void setTableGroupId(string $TableGroupId) 设置表格组id，用于过滤
  * @method string getTableName() 获取表格名，用于过滤
  * @method void setTableName(string $TableName) 设置表格名，用于过滤
  * @method string getApplicant() 获取申请人uin，用于过滤
  * @method void setApplicant(string $Applicant) 设置申请人uin，用于过滤
- * @method integer getApplyType() 获取申请类型，用于过滤
- * @method void setApplyType(integer $ApplyType) 设置申请类型，用于过滤
+ * @method integer getApplyType() 获取申请类型，用于过滤，0加表 1删除表 2清理表 3修改表 4表重建 5存储层扩缩容 6接入层扩缩容 7复制表数据 8key回档
+ * @method void setApplyType(integer $ApplyType) 设置申请类型，用于过滤，0加表 1删除表 2清理表 3修改表 4表重建 5存储层扩缩容 6接入层扩缩容 7复制表数据 8key回档
  */
 class DescribeApplicationsRequest extends AbstractModel
 {
@@ -45,17 +45,17 @@ class DescribeApplicationsRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer 分页
+     * @var integer 分页，限制当前返回多少条记录，大于等于10
      */
     public $Limit;
 
     /**
-     * @var integer 分页
+     * @var integer 分页，从多少条数据开始返回
      */
     public $Offset;
 
     /**
-     * @var integer 申请单状态，用于过滤
+     * @var integer 申请单状态，用于过滤，0-待审核 1-已经审核并提交任务 2-已驳回
      */
     public $CensorStatus;
 
@@ -75,19 +75,19 @@ class DescribeApplicationsRequest extends AbstractModel
     public $Applicant;
 
     /**
-     * @var integer 申请类型，用于过滤
+     * @var integer 申请类型，用于过滤，0加表 1删除表 2清理表 3修改表 4表重建 5存储层扩缩容 6接入层扩缩容 7复制表数据 8key回档
      */
     public $ApplyType;
 
     /**
      * @param string $ClusterId 集群ID，用于获取指定集群的单据
-     * @param integer $Limit 分页
-     * @param integer $Offset 分页
-     * @param integer $CensorStatus 申请单状态，用于过滤
+     * @param integer $Limit 分页，限制当前返回多少条记录，大于等于10
+     * @param integer $Offset 分页，从多少条数据开始返回
+     * @param integer $CensorStatus 申请单状态，用于过滤，0-待审核 1-已经审核并提交任务 2-已驳回
      * @param string $TableGroupId 表格组id，用于过滤
      * @param string $TableName 表格名，用于过滤
      * @param string $Applicant 申请人uin，用于过滤
-     * @param integer $ApplyType 申请类型，用于过滤
+     * @param integer $ApplyType 申请类型，用于过滤，0加表 1删除表 2清理表 3修改表 4表重建 5存储层扩缩容 6接入层扩缩容 7复制表数据 8key回档
      */
     function __construct()
     {

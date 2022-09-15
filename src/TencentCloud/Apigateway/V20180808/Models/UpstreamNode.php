@@ -18,41 +18,41 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VPC通道后端节点元数据
+ * 后端通道后端节点元数据
  *
- * @method string getHost() 获取IP（domain）
- * @method void setHost(string $Host) 设置IP（domain）
+ * @method string getHost() 获取IP或域名
+ * @method void setHost(string $Host) 设置IP或域名
  * @method integer getPort() 获取端口[0, 65535]
  * @method void setPort(integer $Port) 设置端口[0, 65535]
  * @method integer getWeight() 获取权重[0, 100], 0为禁用
  * @method void setWeight(integer $Weight) 设置权重[0, 100], 0为禁用
- * @method string getVmInstanceId() 获取vm实例id
+ * @method string getVmInstanceId() 获取CVM实例ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVmInstanceId(string $VmInstanceId) 设置vm实例id
+ * @method void setVmInstanceId(string $VmInstanceId) 设置CVM实例ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取染色标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置染色标签
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHealthy() 获取节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报
+ * @method string getHealthy() 获取节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报。目前只支持VPC通道。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHealthy(string $Healthy) 设置节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报
+ * @method void setHealthy(string $Healthy) 设置节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报。目前只支持VPC通道。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getServiceName() 获取k8s服务名字
+ * @method string getServiceName() 获取K8S容器服务名字
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setServiceName(string $ServiceName) 设置k8s服务名字
+ * @method void setServiceName(string $ServiceName) 设置K8S容器服务名字
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNameSpace() 获取k8s命名空间
+ * @method string getNameSpace() 获取K8S命名空间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNameSpace(string $NameSpace) 设置k8s命名空间
+ * @method void setNameSpace(string $NameSpace) 设置K8S命名空间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取TKE集群的ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置TKE集群的ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSource() 获取Node的来源
+ * @method string getSource() 获取Node的来源，取值范围：K8S
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSource(string $Source) 设置Node的来源
+ * @method void setSource(string $Source) 设置Node的来源，取值范围：K8S
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqueServiceName() 获取API网关内部记录唯一的服务名字
 注意：此字段可能返回 null，表示取不到有效值。
@@ -62,7 +62,7 @@ use TencentCloud\Common\AbstractModel;
 class UpstreamNode extends AbstractModel
 {
     /**
-     * @var string IP（domain）
+     * @var string IP或域名
      */
     public $Host;
 
@@ -77,7 +77,7 @@ class UpstreamNode extends AbstractModel
     public $Weight;
 
     /**
-     * @var string vm实例id
+     * @var string CVM实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VmInstanceId;
@@ -89,19 +89,19 @@ class UpstreamNode extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报
+     * @var string 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报。目前只支持VPC通道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Healthy;
 
     /**
-     * @var string k8s服务名字
+     * @var string K8S容器服务名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
-     * @var string k8s命名空间
+     * @var string K8S命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameSpace;
@@ -113,7 +113,7 @@ class UpstreamNode extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Node的来源
+     * @var string Node的来源，取值范围：K8S
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
@@ -125,22 +125,22 @@ class UpstreamNode extends AbstractModel
     public $UniqueServiceName;
 
     /**
-     * @param string $Host IP（domain）
+     * @param string $Host IP或域名
      * @param integer $Port 端口[0, 65535]
      * @param integer $Weight 权重[0, 100], 0为禁用
-     * @param string $VmInstanceId vm实例id
+     * @param string $VmInstanceId CVM实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 染色标签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Healthy 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报
+     * @param string $Healthy 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报。目前只支持VPC通道。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ServiceName k8s服务名字
+     * @param string $ServiceName K8S容器服务名字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NameSpace k8s命名空间
+     * @param string $NameSpace K8S命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId TKE集群的ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Source Node的来源
+     * @param string $Source Node的来源，取值范围：K8S
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqueServiceName API网关内部记录唯一的服务名字
 注意：此字段可能返回 null，表示取不到有效值。

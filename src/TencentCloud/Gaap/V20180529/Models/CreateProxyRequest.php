@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkType(string $NetworkType) 设置网络类型，normal表示常规BGP，cn2表示精品BGP，triple表示三网
  * @method string getPackageType() 获取通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
  * @method void setPackageType(string $PackageType) 设置通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
- * @method integer getHttp3Supported() 获取支持Http3的开关，其中：0，表示不需要支持Http3接入；1，表示需要支持Http3接入。注意：如果开启了Http3的功能，那么该通道就不再支持TCP/UDP接入的功能。该功能的启停无法在通道创建完毕后再修改。
- * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3的开关，其中：0，表示不需要支持Http3接入；1，表示需要支持Http3接入。注意：如果开启了Http3的功能，那么该通道就不再支持TCP/UDP接入的功能。该功能的启停无法在通道创建完毕后再修改。
+ * @method integer getHttp3Supported() 获取该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+ * @method void setHttp3Supported(integer $Http3Supported) 设置该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
  */
 class CreateProxyRequest extends AbstractModel
 {
@@ -130,7 +130,7 @@ class CreateProxyRequest extends AbstractModel
     public $PackageType;
 
     /**
-     * @var integer 支持Http3的开关，其中：0，表示不需要支持Http3接入；1，表示需要支持Http3接入。注意：如果开启了Http3的功能，那么该通道就不再支持TCP/UDP接入的功能。该功能的启停无法在通道创建完毕后再修改。
+     * @var integer 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
      */
     public $Http3Supported;
 
@@ -151,7 +151,7 @@ class CreateProxyRequest extends AbstractModel
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
      * @param string $NetworkType 网络类型，normal表示常规BGP，cn2表示精品BGP，triple表示三网
      * @param string $PackageType 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
-     * @param integer $Http3Supported 支持Http3的开关，其中：0，表示不需要支持Http3接入；1，表示需要支持Http3接入。注意：如果开启了Http3的功能，那么该通道就不再支持TCP/UDP接入的功能。该功能的启停无法在通道创建完毕后再修改。
+     * @param integer $Http3Supported 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
      */
     function __construct()
     {

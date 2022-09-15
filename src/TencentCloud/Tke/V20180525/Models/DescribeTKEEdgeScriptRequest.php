@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeName(string $NodeName) 设置节点名字
  * @method string getConfig() 获取json格式的节点配置
  * @method void setConfig(string $Config) 设置json格式的节点配置
+ * @method string getScriptVersion() 获取可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看
+ * @method void setScriptVersion(string $ScriptVersion) 设置可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看
  */
 class DescribeTKEEdgeScriptRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeTKEEdgeScriptRequest extends AbstractModel
     public $Config;
 
     /**
+     * @var string 可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看
+     */
+    public $ScriptVersion;
+
+    /**
      * @param string $ClusterId 集群id
      * @param string $Interface 网卡名
      * @param string $NodeName 节点名字
      * @param string $Config json格式的节点配置
+     * @param string $ScriptVersion 可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeTKEEdgeScriptRequest extends AbstractModel
 
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = $param["Config"];
+        }
+
+        if (array_key_exists("ScriptVersion",$param) and $param["ScriptVersion"] !== null) {
+            $this->ScriptVersion = $param["ScriptVersion"];
         }
     }
 }

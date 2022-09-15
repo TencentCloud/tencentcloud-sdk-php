@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadUrl(string $DownloadUrl) 设置execle下载地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJobId() 获取任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobId(string $JobId) 设置任务ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +40,20 @@ class DescribeReverseShellEventsExportResponse extends AbstractModel
     public $DownloadUrl;
 
     /**
+     * @var string 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $DownloadUrl execle下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JobId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -60,6 +72,10 @@ class DescribeReverseShellEventsExportResponse extends AbstractModel
         }
         if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
             $this->DownloadUrl = $param["DownloadUrl"];
+        }
+
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

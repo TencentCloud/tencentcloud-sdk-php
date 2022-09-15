@@ -32,13 +32,13 @@ use TencentCloud\Common\AbstractModel;
 <li>Disabled：已禁用。</li>
  * @method WorkflowTrigger getTrigger() 获取工作流绑定的输入规则，当上传视频命中该规则到该对象时即触发工作流。
  * @method void setTrigger(WorkflowTrigger $Trigger) 设置工作流绑定的输入规则，当上传视频命中该规则到该对象时即触发工作流。
- * @method TaskOutputStorage getOutputStorage() 获取视频处理的文件输出存储位置。
+ * @method TaskOutputStorage getOutputStorage() 获取媒体处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置视频处理的文件输出存储位置。
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置媒体处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaProcessTaskInput getMediaProcessTask() 获取视频处理类型任务参数。
+ * @method MediaProcessTaskInput getMediaProcessTask() 获取媒体处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置视频处理类型任务参数。
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) 设置媒体处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AiContentReviewTaskInput getAiContentReviewTask() 获取视频内容审核类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskPriority() 获取任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method void setTaskPriority(integer $TaskPriority) 设置任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
- * @method string getOutputDir() 获取视频处理生成的文件输出的目标目录，如`/movie/201907/`。
- * @method void setOutputDir(string $OutputDir) 设置视频处理生成的文件输出的目标目录，如`/movie/201907/`。
+ * @method string getOutputDir() 获取媒体处理生成的文件输出的目标目录，如`/movie/201907/`。
+ * @method void setOutputDir(string $OutputDir) 设置媒体处理生成的文件输出的目标目录，如`/movie/201907/`。
  * @method string getCreateTime() 获取工作流创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setCreateTime(string $CreateTime) 设置工作流创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getUpdateTime() 获取工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
@@ -90,13 +90,13 @@ class WorkflowInfo extends AbstractModel
     public $Trigger;
 
     /**
-     * @var TaskOutputStorage 视频处理的文件输出存储位置。
+     * @var TaskOutputStorage 媒体处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputStorage;
 
     /**
-     * @var MediaProcessTaskInput 视频处理类型任务参数。
+     * @var MediaProcessTaskInput 媒体处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MediaProcessTask;
@@ -131,7 +131,7 @@ class WorkflowInfo extends AbstractModel
     public $TaskPriority;
 
     /**
-     * @var string 视频处理生成的文件输出的目标目录，如`/movie/201907/`。
+     * @var string 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。
      */
     public $OutputDir;
 
@@ -152,9 +152,9 @@ class WorkflowInfo extends AbstractModel
 <li>Enabled：已启用，</li>
 <li>Disabled：已禁用。</li>
      * @param WorkflowTrigger $Trigger 工作流绑定的输入规则，当上传视频命中该规则到该对象时即触发工作流。
-     * @param TaskOutputStorage $OutputStorage 视频处理的文件输出存储位置。
+     * @param TaskOutputStorage $OutputStorage 媒体处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaProcessTaskInput $MediaProcessTask 视频处理类型任务参数。
+     * @param MediaProcessTaskInput $MediaProcessTask 媒体处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiContentReviewTaskInput $AiContentReviewTask 视频内容审核类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -165,7 +165,7 @@ class WorkflowInfo extends AbstractModel
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskPriority 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
-     * @param string $OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。
+     * @param string $OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。
      * @param string $CreateTime 工作流创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $UpdateTime 工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */

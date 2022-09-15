@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsNew() 获取是否新增[0:否|1:是]
+ * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
+ * @method string getFirstTime() 获取首次采集时间
+ * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  */
 class AssetMachineBaseInfo extends AbstractModel
 {
@@ -149,6 +153,16 @@ class AssetMachineBaseInfo extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var integer 是否新增[0:否|1:是]
+     */
+    public $IsNew;
+
+    /**
+     * @var string 首次采集时间
+     */
+    public $FirstTime;
+
+    /**
      * @param string $Quuid 服务器Quuid
      * @param string $Uuid 服务器uuid
      * @param string $MachineIp 服务器内网IP
@@ -168,6 +182,8 @@ class AssetMachineBaseInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 数据更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsNew 是否新增[0:否|1:是]
+     * @param string $FirstTime 首次采集时间
      */
     function __construct()
     {
@@ -253,6 +269,14 @@ class AssetMachineBaseInfo extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("IsNew",$param) and $param["IsNew"] !== null) {
+            $this->IsNew = $param["IsNew"];
+        }
+
+        if (array_key_exists("FirstTime",$param) and $param["FirstTime"] !== null) {
+            $this->FirstTime = $param["FirstTime"];
         }
     }
 }

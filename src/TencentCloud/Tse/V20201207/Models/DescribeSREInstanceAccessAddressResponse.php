@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsoleIntranetAddress(string $ConsoleIntranetAddress) 设置控制台内网访问地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInternetBandWidth() 获取客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInternetBandWidth(integer $InternetBandWidth) 设置客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConsoleInternetBandWidth() 获取控制台公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsoleInternetBandWidth(integer $ConsoleInternetBandWidth) 设置控制台公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,6 +75,18 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
     public $ConsoleIntranetAddress;
 
     /**
+     * @var integer 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InternetBandWidth;
+
+    /**
+     * @var integer 控制台公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsoleInternetBandWidth;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -78,6 +98,10 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
      * @param string $ConsoleInternetAddress 控制台公网访问地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsoleIntranetAddress 控制台内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InternetBandWidth 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConsoleInternetBandWidth 控制台公网带宽
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -117,6 +141,14 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
 
         if (array_key_exists("ConsoleIntranetAddress",$param) and $param["ConsoleIntranetAddress"] !== null) {
             $this->ConsoleIntranetAddress = $param["ConsoleIntranetAddress"];
+        }
+
+        if (array_key_exists("InternetBandWidth",$param) and $param["InternetBandWidth"] !== null) {
+            $this->InternetBandWidth = $param["InternetBandWidth"];
+        }
+
+        if (array_key_exists("ConsoleInternetBandWidth",$param) and $param["ConsoleInternetBandWidth"] !== null) {
+            $this->ConsoleInternetBandWidth = $param["ConsoleInternetBandWidth"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

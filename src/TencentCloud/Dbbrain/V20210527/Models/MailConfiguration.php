@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSendMail() 获取是否开启邮件发送: 0, 否; 1, 是。
  * @method void setSendMail(integer $SendMail) 设置是否开启邮件发送: 0, 否; 1, 是。
- * @method array getRegion() 获取地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模版，配置需要发送巡检邮件的地域；订阅的邮件发送模版，配置当前订阅实例的所属地域。
- * @method void setRegion(array $Region) 设置地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模版，配置需要发送巡检邮件的地域；订阅的邮件发送模版，配置当前订阅实例的所属地域。
+ * @method array getRegion() 获取地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模板，配置需要发送巡检邮件的地域；订阅的邮件发送模板，配置当前订阅实例的所属地域。
+ * @method void setRegion(array $Region) 设置地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模板，配置需要发送巡检邮件的地域；订阅的邮件发送模板，配置当前订阅实例的所属地域。
  * @method array getHealthStatus() 获取发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
  * @method void setHealthStatus(array $HealthStatus) 设置发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
  * @method array getContactPerson() 获取联系人id, 联系人/联系组不能都为空。
@@ -39,7 +39,7 @@ class MailConfiguration extends AbstractModel
     public $SendMail;
 
     /**
-     * @var array 地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模版，配置需要发送巡检邮件的地域；订阅的邮件发送模版，配置当前订阅实例的所属地域。
+     * @var array 地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模板，配置需要发送巡检邮件的地域；订阅的邮件发送模板，配置当前订阅实例的所属地域。
      */
     public $Region;
 
@@ -60,7 +60,7 @@ class MailConfiguration extends AbstractModel
 
     /**
      * @param integer $SendMail 是否开启邮件发送: 0, 否; 1, 是。
-     * @param array $Region 地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模版，配置需要发送巡检邮件的地域；订阅的邮件发送模版，配置当前订阅实例的所属地域。
+     * @param array $Region 地域配置, 如["ap-guangzhou", "ap-shanghai"]。巡检的邮件发送模板，配置需要发送巡检邮件的地域；订阅的邮件发送模板，配置当前订阅实例的所属地域。
      * @param array $HealthStatus 发送指定的健康等级的报告, 如["HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK"]。
      * @param array $ContactPerson 联系人id, 联系人/联系组不能都为空。
      * @param array $ContactGroup 联系组id, 联系人/联系组不能都为空。

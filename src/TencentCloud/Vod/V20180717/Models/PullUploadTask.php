@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) 设置转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaMetaData getMetaData() 获取原始视频的元信息。
- * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
+ * @method MediaMetaData getMetaData() 获取输出视频的元信息。
+ * @method void setMetaData(MediaMetaData $MetaData) 设置输出视频的元信息。
  * @method string getFileUrl() 获取转拉上传完成后生成的播放地址。
  * @method void setFileUrl(string $FileUrl) 设置转拉上传完成后生成的播放地址。
  * @method string getProcedureTaskId() 获取若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
@@ -94,7 +94,7 @@ class PullUploadTask extends AbstractModel
     public $MediaBasicInfo;
 
     /**
-     * @var MediaMetaData 原始视频的元信息。
+     * @var MediaMetaData 输出视频的元信息。
      */
     public $MetaData;
 
@@ -131,7 +131,7 @@ class PullUploadTask extends AbstractModel
      * @param string $FileId 转拉上传完成后生成的视频 ID。
      * @param MediaBasicInfo $MediaBasicInfo 转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaMetaData $MetaData 原始视频的元信息。
+     * @param MediaMetaData $MetaData 输出视频的元信息。
      * @param string $FileUrl 转拉上传完成后生成的播放地址。
      * @param string $ProcedureTaskId 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。

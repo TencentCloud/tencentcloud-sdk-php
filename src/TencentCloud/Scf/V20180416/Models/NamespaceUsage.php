@@ -30,9 +30,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalConcurrencyMem(integer $TotalConcurrencyMem) 设置命名空间配额总量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalAllocatedConcurrencyMem() 获取命名空间配额使用量
+ * @method integer getTotalAllocatedConcurrencyMem() 获取命名空间并发使用量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalAllocatedConcurrencyMem(integer $TotalAllocatedConcurrencyMem) 设置命名空间配额使用量
+ * @method void setTotalAllocatedConcurrencyMem(integer $TotalAllocatedConcurrencyMem) 设置命名空间并发使用量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalAllocatedProvisionedMem() 获取命名空间预置使用量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalAllocatedProvisionedMem(integer $TotalAllocatedProvisionedMem) 设置命名空间预置使用量
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class NamespaceUsage extends AbstractModel
@@ -59,10 +63,16 @@ class NamespaceUsage extends AbstractModel
     public $TotalConcurrencyMem;
 
     /**
-     * @var integer 命名空间配额使用量
+     * @var integer 命名空间并发使用量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalAllocatedConcurrencyMem;
+
+    /**
+     * @var integer 命名空间预置使用量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalAllocatedProvisionedMem;
 
     /**
      * @param array $Functions 函数数组
@@ -70,7 +80,9 @@ class NamespaceUsage extends AbstractModel
      * @param integer $FunctionsCount 命名空间函数个数
      * @param integer $TotalConcurrencyMem 命名空间配额总量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalAllocatedConcurrencyMem 命名空间配额使用量
+     * @param integer $TotalAllocatedConcurrencyMem 命名空间并发使用量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalAllocatedProvisionedMem 命名空间预置使用量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -104,6 +116,10 @@ class NamespaceUsage extends AbstractModel
 
         if (array_key_exists("TotalAllocatedConcurrencyMem",$param) and $param["TotalAllocatedConcurrencyMem"] !== null) {
             $this->TotalAllocatedConcurrencyMem = $param["TotalAllocatedConcurrencyMem"];
+        }
+
+        if (array_key_exists("TotalAllocatedProvisionedMem",$param) and $param["TotalAllocatedProvisionedMem"] !== null) {
+            $this->TotalAllocatedProvisionedMem = $param["TotalAllocatedProvisionedMem"];
         }
     }
 }

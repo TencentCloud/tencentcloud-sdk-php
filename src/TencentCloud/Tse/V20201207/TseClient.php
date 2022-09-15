@@ -23,8 +23,15 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tse\V20201207\Models as Models;
 
 /**
+ * @method Models\CreateEngineResponse CreateEngine(Models\CreateEngineRequest $req) 创建引擎实例
+ * @method Models\DeleteEngineResponse DeleteEngine(Models\DeleteEngineRequest $req) 删除引擎实例
+ * @method Models\DescribeCloudNativeAPIGatewayNodesResponse DescribeCloudNativeAPIGatewayNodes(Models\DescribeCloudNativeAPIGatewayNodesRequest $req) 获取云原生网关节点列表
+ * @method Models\DescribeNacosReplicasResponse DescribeNacosReplicas(Models\DescribeNacosReplicasRequest $req) 查询Nacos类型引擎实例副本信息
+ * @method Models\DescribeNacosServerInterfacesResponse DescribeNacosServerInterfaces(Models\DescribeNacosServerInterfacesRequest $req) 查询nacos服务接口列表
  * @method Models\DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddress(Models\DescribeSREInstanceAccessAddressRequest $req) 查询引擎实例访问地址
  * @method Models\DescribeSREInstancesResponse DescribeSREInstances(Models\DescribeSREInstancesRequest $req) 用于查询引擎实例列表
+ * @method Models\DescribeZookeeperReplicasResponse DescribeZookeeperReplicas(Models\DescribeZookeeperReplicasRequest $req) 查询Zookeeper类型注册引擎实例副本信息
+ * @method Models\DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfaces(Models\DescribeZookeeperServerInterfacesRequest $req) 查询zookeeper服务接口列表
  */
 
 class TseClient extends AbstractClient

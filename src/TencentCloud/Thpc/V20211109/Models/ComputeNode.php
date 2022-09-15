@@ -36,14 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
  * @method string getInstanceName() 获取节点显示名称。<br><li>
 不指定节点显示名称则默认显示‘未命名’。
-</li><li>购买多个节点，如果指定模式串`{R:x}`，表示生成数字[`[x, x+n-1]`，其中`n`表示购买节点的数量，例如`server_{R:3}`，购买1个时，节点显示名称为`server_3`；购买2个时，节点显示名称分别为`server_3`，`server_4`。支持指定多个模式串`{R:x}`。
-购买多个节点，如果不指定模式串，则在节点显示名称添加后缀`1、2...n`，其中`n`表示购买节点的数量，例如`server_`，购买2个时，节点显示名称分别为`server_1`，`server_2`。</li><li>
-最多支持60个字符（包含模式串）。
+最多支持60个字符。
  * @method void setInstanceName(string $InstanceName) 设置节点显示名称。<br><li>
 不指定节点显示名称则默认显示‘未命名’。
-</li><li>购买多个节点，如果指定模式串`{R:x}`，表示生成数字[`[x, x+n-1]`，其中`n`表示购买节点的数量，例如`server_{R:3}`，购买1个时，节点显示名称为`server_3`；购买2个时，节点显示名称分别为`server_3`，`server_4`。支持指定多个模式串`{R:x}`。
-购买多个节点，如果不指定模式串，则在节点显示名称添加后缀`1、2...n`，其中`n`表示购买节点的数量，例如`server_`，购买2个时，节点显示名称分别为`server_1`，`server_2`。</li><li>
-最多支持60个字符（包含模式串）。
+最多支持60个字符。
  */
 class ComputeNode extends AbstractModel
 {
@@ -81,9 +77,7 @@ class ComputeNode extends AbstractModel
     /**
      * @var string 节点显示名称。<br><li>
 不指定节点显示名称则默认显示‘未命名’。
-</li><li>购买多个节点，如果指定模式串`{R:x}`，表示生成数字[`[x, x+n-1]`，其中`n`表示购买节点的数量，例如`server_{R:3}`，购买1个时，节点显示名称为`server_3`；购买2个时，节点显示名称分别为`server_3`，`server_4`。支持指定多个模式串`{R:x}`。
-购买多个节点，如果不指定模式串，则在节点显示名称添加后缀`1、2...n`，其中`n`表示购买节点的数量，例如`server_`，购买2个时，节点显示名称分别为`server_1`，`server_2`。</li><li>
-最多支持60个字符（包含模式串）。
+最多支持60个字符。
      */
     public $InstanceName;
 
@@ -97,9 +91,7 @@ class ComputeNode extends AbstractModel
      * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
      * @param string $InstanceName 节点显示名称。<br><li>
 不指定节点显示名称则默认显示‘未命名’。
-</li><li>购买多个节点，如果指定模式串`{R:x}`，表示生成数字[`[x, x+n-1]`，其中`n`表示购买节点的数量，例如`server_{R:3}`，购买1个时，节点显示名称为`server_3`；购买2个时，节点显示名称分别为`server_3`，`server_4`。支持指定多个模式串`{R:x}`。
-购买多个节点，如果不指定模式串，则在节点显示名称添加后缀`1、2...n`，其中`n`表示购买节点的数量，例如`server_`，购买2个时，节点显示名称分别为`server_1`，`server_2`。</li><li>
-最多支持60个字符（包含模式串）。
+最多支持60个字符。
      */
     function __construct()
     {

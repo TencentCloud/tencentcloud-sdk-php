@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSkillGroupInfoList请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用ID
- * @method void setSdkAppId(integer $SdkAppId) 设置应用ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getPageSize() 获取分页尺寸，上限 100
  * @method void setPageSize(integer $PageSize) 设置分页尺寸，上限 100
  * @method integer getPageNumber() 获取分页页码，从 0 开始
@@ -30,11 +30,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkillGroupId(integer $SkillGroupId) 设置技能组ID，查询单个技能组时使用
  * @method integer getModifiedTime() 获取查询修改时间大于等于ModifiedTime的技能组时使用
  * @method void setModifiedTime(integer $ModifiedTime) 设置查询修改时间大于等于ModifiedTime的技能组时使用
+ * @method string getSkillGroupName() 获取技能组名称
+ * @method void setSkillGroupName(string $SkillGroupName) 设置技能组名称
  */
 class DescribeSkillGroupInfoListRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -59,11 +61,17 @@ class DescribeSkillGroupInfoListRequest extends AbstractModel
     public $ModifiedTime;
 
     /**
-     * @param integer $SdkAppId 应用ID
+     * @var string 技能组名称
+     */
+    public $SkillGroupName;
+
+    /**
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $PageSize 分页尺寸，上限 100
      * @param integer $PageNumber 分页页码，从 0 开始
      * @param integer $SkillGroupId 技能组ID，查询单个技能组时使用
      * @param integer $ModifiedTime 查询修改时间大于等于ModifiedTime的技能组时使用
+     * @param string $SkillGroupName 技能组名称
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeSkillGroupInfoListRequest extends AbstractModel
 
         if (array_key_exists("ModifiedTime",$param) and $param["ModifiedTime"] !== null) {
             $this->ModifiedTime = $param["ModifiedTime"];
+        }
+
+        if (array_key_exists("SkillGroupName",$param) and $param["SkillGroupName"] !== null) {
+            $this->SkillGroupName = $param["SkillGroupName"];
         }
     }
 }

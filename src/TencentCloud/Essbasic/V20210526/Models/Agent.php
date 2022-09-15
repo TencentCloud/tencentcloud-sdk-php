@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAppId() 获取腾讯电子签颁发给渠道的应用ID，32位字符串
  * @method void setAppId(string $AppId) 设置腾讯电子签颁发给渠道的应用ID，32位字符串
- * @method string getProxyOrganizationId() 获取腾讯电子签颁发给渠道侧合作企业的企业ID
- * @method void setProxyOrganizationId(string $ProxyOrganizationId) 设置腾讯电子签颁发给渠道侧合作企业的企业ID
- * @method string getProxyAppId() 获取腾讯电子签颁发给渠道侧合作企业的应用ID
- * @method void setProxyAppId(string $ProxyAppId) 设置腾讯电子签颁发给渠道侧合作企业的应用ID
+ * @method string getProxyOrganizationOpenId() 获取渠道/平台合作企业的企业ID，最大64位字符串
+ * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置渠道/平台合作企业的企业ID，最大64位字符串
  * @method UserInfo getProxyOperator() 获取渠道/平台合作企业经办人（操作员）
  * @method void setProxyOperator(UserInfo $ProxyOperator) 设置渠道/平台合作企业经办人（操作员）
- * @method string getProxyOrganizationOpenId() 获取渠道/平台合作企业的企业ID
- * @method void setProxyOrganizationOpenId(string $ProxyOrganizationOpenId) 设置渠道/平台合作企业的企业ID
+ * @method string getProxyAppId() 获取腾讯电子签颁发给渠道侧合作企业的应用ID
+ * @method void setProxyAppId(string $ProxyAppId) 设置腾讯电子签颁发给渠道侧合作企业的应用ID
+ * @method string getProxyOrganizationId() 获取内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
+ * @method void setProxyOrganizationId(string $ProxyOrganizationId) 设置内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
  */
 class Agent extends AbstractModel
 {
@@ -39,14 +39,9 @@ class Agent extends AbstractModel
     public $AppId;
 
     /**
-     * @var string 腾讯电子签颁发给渠道侧合作企业的企业ID
+     * @var string 渠道/平台合作企业的企业ID，最大64位字符串
      */
-    public $ProxyOrganizationId;
-
-    /**
-     * @var string 腾讯电子签颁发给渠道侧合作企业的应用ID
-     */
-    public $ProxyAppId;
+    public $ProxyOrganizationOpenId;
 
     /**
      * @var UserInfo 渠道/平台合作企业经办人（操作员）
@@ -54,16 +49,21 @@ class Agent extends AbstractModel
     public $ProxyOperator;
 
     /**
-     * @var string 渠道/平台合作企业的企业ID
+     * @var string 腾讯电子签颁发给渠道侧合作企业的应用ID
      */
-    public $ProxyOrganizationOpenId;
+    public $ProxyAppId;
+
+    /**
+     * @var string 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
+     */
+    public $ProxyOrganizationId;
 
     /**
      * @param string $AppId 腾讯电子签颁发给渠道的应用ID，32位字符串
-     * @param string $ProxyOrganizationId 腾讯电子签颁发给渠道侧合作企业的企业ID
-     * @param string $ProxyAppId 腾讯电子签颁发给渠道侧合作企业的应用ID
+     * @param string $ProxyOrganizationOpenId 渠道/平台合作企业的企业ID，最大64位字符串
      * @param UserInfo $ProxyOperator 渠道/平台合作企业经办人（操作员）
-     * @param string $ProxyOrganizationOpenId 渠道/平台合作企业的企业ID
+     * @param string $ProxyAppId 腾讯电子签颁发给渠道侧合作企业的应用ID
+     * @param string $ProxyOrganizationId 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
      */
     function __construct()
     {
@@ -82,12 +82,8 @@ class Agent extends AbstractModel
             $this->AppId = $param["AppId"];
         }
 
-        if (array_key_exists("ProxyOrganizationId",$param) and $param["ProxyOrganizationId"] !== null) {
-            $this->ProxyOrganizationId = $param["ProxyOrganizationId"];
-        }
-
-        if (array_key_exists("ProxyAppId",$param) and $param["ProxyAppId"] !== null) {
-            $this->ProxyAppId = $param["ProxyAppId"];
+        if (array_key_exists("ProxyOrganizationOpenId",$param) and $param["ProxyOrganizationOpenId"] !== null) {
+            $this->ProxyOrganizationOpenId = $param["ProxyOrganizationOpenId"];
         }
 
         if (array_key_exists("ProxyOperator",$param) and $param["ProxyOperator"] !== null) {
@@ -95,8 +91,12 @@ class Agent extends AbstractModel
             $this->ProxyOperator->deserialize($param["ProxyOperator"]);
         }
 
-        if (array_key_exists("ProxyOrganizationOpenId",$param) and $param["ProxyOrganizationOpenId"] !== null) {
-            $this->ProxyOrganizationOpenId = $param["ProxyOrganizationOpenId"];
+        if (array_key_exists("ProxyAppId",$param) and $param["ProxyAppId"] !== null) {
+            $this->ProxyAppId = $param["ProxyAppId"];
+        }
+
+        if (array_key_exists("ProxyOrganizationId",$param) and $param["ProxyOrganizationId"] !== null) {
+            $this->ProxyOrganizationId = $param["ProxyOrganizationId"];
         }
     }
 }

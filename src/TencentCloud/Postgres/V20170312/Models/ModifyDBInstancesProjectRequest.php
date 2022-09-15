@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstancesProject请求参数结构体
  *
- * @method array getDBInstanceIdSet() 获取postgresql实例ID数组
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置postgresql实例ID数组
- * @method string getProjectId() 获取postgresql实例所属新项目的ID
- * @method void setProjectId(string $ProjectId) 设置postgresql实例所属新项目的ID
+ * @method array getDBInstanceIdSet() 获取实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
+ * @method string getProjectId() 获取所属新项目的ID
+ * @method void setProjectId(string $ProjectId) 设置所属新项目的ID
  */
 class ModifyDBInstancesProjectRequest extends AbstractModel
 {
     /**
-     * @var array postgresql实例ID数组
+     * @var array 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
      */
     public $DBInstanceIdSet;
 
     /**
-     * @var string postgresql实例所属新项目的ID
+     * @var string 所属新项目的ID
      */
     public $ProjectId;
 
     /**
-     * @param array $DBInstanceIdSet postgresql实例ID数组
-     * @param string $ProjectId postgresql实例所属新项目的ID
+     * @param array $DBInstanceIdSet 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
+     * @param string $ProjectId 所属新项目的ID
      */
     function __construct()
     {

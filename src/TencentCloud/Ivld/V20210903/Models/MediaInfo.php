@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置媒资自定义标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCallbackURL() 获取媒资导入完成后的回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCallbackURL(string $CallbackURL) 设置媒资导入完成后的回调地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaInfo extends AbstractModel
 {
@@ -117,6 +121,12 @@ class MediaInfo extends AbstractModel
     public $Label;
 
     /**
+     * @var string 媒资导入完成后的回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CallbackURL;
+
+    /**
      * @param string $MediaId 媒资ID
      * @param string $Name 媒资名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,6 +141,8 @@ class MediaInfo extends AbstractModel
      * @param float $Progress 导入视频进度，取值范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 媒资自定义标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CallbackURL 媒资导入完成后的回调地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -177,6 +189,10 @@ class MediaInfo extends AbstractModel
 
         if (array_key_exists("Label",$param) and $param["Label"] !== null) {
             $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("CallbackURL",$param) and $param["CallbackURL"] !== null) {
+            $this->CallbackURL = $param["CallbackURL"];
         }
     }
 }

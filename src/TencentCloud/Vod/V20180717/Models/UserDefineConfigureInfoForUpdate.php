@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 用户自定义智能识别任务控制参数。
+ * 用户自定义音视频审核任务控制参数。
  *
- * @method UserDefineFaceReviewTemplateInfoForUpdate getFaceReviewInfo() 获取用户自定义人物智能识别控制参数。
- * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo) 设置用户自定义人物智能识别控制参数。
- * @method UserDefineAsrTextReviewTemplateInfoForUpdate getAsrReviewInfo() 获取用户自定义语音智能识别控制参数。
- * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo) 设置用户自定义语音智能识别控制参数。
- * @method UserDefineOcrTextReviewTemplateInfoForUpdate getOcrReviewInfo() 获取用户自定义文本智能识别控制参数。
- * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo) 设置用户自定义文本智能识别控制参数。
+ * @method UserDefineFaceReviewTemplateInfoForUpdate getFaceReviewInfo() 获取用户自定义人物音视频审核控制参数。
+ * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo) 设置用户自定义人物音视频审核控制参数。
+ * @method UserDefineAsrTextReviewTemplateInfoForUpdate getAsrReviewInfo() 获取用户自定义语音音视频审核控制参数。
+ * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo) 设置用户自定义语音音视频审核控制参数。
+ * @method UserDefineOcrTextReviewTemplateInfoForUpdate getOcrReviewInfo() 获取用户自定义文本音视频审核控制参数。
+ * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo) 设置用户自定义文本音视频审核控制参数。
  */
 class UserDefineConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var UserDefineFaceReviewTemplateInfoForUpdate 用户自定义人物智能识别控制参数。
+     * @var UserDefineFaceReviewTemplateInfoForUpdate 用户自定义人物音视频审核控制参数。
      */
     public $FaceReviewInfo;
 
     /**
-     * @var UserDefineAsrTextReviewTemplateInfoForUpdate 用户自定义语音智能识别控制参数。
+     * @var UserDefineAsrTextReviewTemplateInfoForUpdate 用户自定义语音音视频审核控制参数。
      */
     public $AsrReviewInfo;
 
     /**
-     * @var UserDefineOcrTextReviewTemplateInfoForUpdate 用户自定义文本智能识别控制参数。
+     * @var UserDefineOcrTextReviewTemplateInfoForUpdate 用户自定义文本音视频审核控制参数。
      */
     public $OcrReviewInfo;
 
     /**
-     * @param UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo 用户自定义人物智能识别控制参数。
-     * @param UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo 用户自定义语音智能识别控制参数。
-     * @param UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo 用户自定义文本智能识别控制参数。
+     * @param UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo 用户自定义人物音视频审核控制参数。
+     * @param UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo 用户自定义语音音视频审核控制参数。
+     * @param UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo 用户自定义文本音视频审核控制参数。
      */
     function __construct()
     {

@@ -29,7 +29,7 @@ use TencentCloud\Common\AbstractModel;
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
--6: 公安比对系统升级中，请稍后再试
+-6: 权威比对系统升级中，请稍后再试
 -7: 认证次数超过当日限制
  * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
 收费结果码：
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
--6: 公安比对系统升级中，请稍后再试
+-6: 权威比对系统升级中，请稍后再试
 -7: 认证次数超过当日限制
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
@@ -59,7 +59,7 @@ class IdCardVerificationResponse extends AbstractModel
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
--6: 公安比对系统升级中，请稍后再试
+-6: 权威比对系统升级中，请稍后再试
 -7: 认证次数超过当日限制
      */
     public $Result;
@@ -84,7 +84,7 @@ class IdCardVerificationResponse extends AbstractModel
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
 -5: 证件库中无此身份证记录
--6: 公安比对系统升级中，请稍后再试
+-6: 权威比对系统升级中，请稍后再试
 -7: 认证次数超过当日限制
      * @param string $Description 业务结果描述。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteContentReviewTemplate请求参数结构体
  *
- * @method integer getDefinition() 获取内容智能识别模板唯一标识。
- * @method void setDefinition(integer $Definition) 设置内容智能识别模板唯一标识。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+ * @method integer getDefinition() 获取内容审核模板唯一标识。
+ * @method void setDefinition(integer $Definition) 设置内容审核模板唯一标识。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  */
 class DeleteContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 内容智能识别模板唯一标识。
+     * @var integer 内容审核模板唯一标识。
      */
     public $Definition;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     public $SubAppId;
 
     /**
-     * @param integer $Definition 内容智能识别模板唯一标识。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * @param integer $Definition 内容审核模板唯一标识。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     function __construct()
     {

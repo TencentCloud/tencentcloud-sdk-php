@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalcValue(string $CalcValue) 设置检测值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContinueTime() 获取持续时间
+ * @method string getContinueTime() 获取持续时间，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContinueTime(string $ContinueTime) 设置持续时间
+ * @method void setContinueTime(string $ContinueTime) 设置持续时间，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMetricID() 获取指标ID
  * @method void setMetricID(integer $MetricID) 设置指标ID
@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleID(integer $RuleID) 设置规则ID
  * @method string getUnit() 获取指标单位
  * @method void setUnit(string $Unit) 设置指标单位
+ * @method integer getIsAdvanced() 获取是否为高级指标，0：否；1：是
+ * @method void setIsAdvanced(integer $IsAdvanced) 设置是否为高级指标，0：否；1：是
+ * @method integer getIsOpen() 获取是否开通高级指标，0：否；1：是
+ * @method void setIsOpen(integer $IsOpen) 设置是否开通高级指标，0：否；1：是
+ * @method string getProductId() 获取产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductId(string $ProductId) 设置产品ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Condition extends AbstractModel
 {
@@ -72,7 +80,7 @@ class Condition extends AbstractModel
     public $CalcValue;
 
     /**
-     * @var string 持续时间
+     * @var string 持续时间，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContinueTime;
@@ -103,19 +111,39 @@ class Condition extends AbstractModel
     public $Unit;
 
     /**
+     * @var integer 是否为高级指标，0：否；1：是
+     */
+    public $IsAdvanced;
+
+    /**
+     * @var integer 是否开通高级指标，0：否；1：是
+     */
+    public $IsOpen;
+
+    /**
+     * @var string 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductId;
+
+    /**
      * @param integer $AlarmNotifyPeriod 告警通知频率
      * @param integer $AlarmNotifyType 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
      * @param string $CalcType 检测方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CalcValue 检测值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ContinueTime 持续时间
+     * @param string $ContinueTime 持续时间，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MetricID 指标ID
      * @param string $MetricDisplayName 指标展示名称（对外）
      * @param integer $Period 周期
      * @param integer $RuleID 规则ID
      * @param string $Unit 指标单位
+     * @param integer $IsAdvanced 是否为高级指标，0：否；1：是
+     * @param integer $IsOpen 是否开通高级指标，0：否；1：是
+     * @param string $ProductId 产品ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +196,18 @@ class Condition extends AbstractModel
 
         if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
             $this->Unit = $param["Unit"];
+        }
+
+        if (array_key_exists("IsAdvanced",$param) and $param["IsAdvanced"] !== null) {
+            $this->IsAdvanced = $param["IsAdvanced"];
+        }
+
+        if (array_key_exists("IsOpen",$param) and $param["IsOpen"] !== null) {
+            $this->IsOpen = $param["IsOpen"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

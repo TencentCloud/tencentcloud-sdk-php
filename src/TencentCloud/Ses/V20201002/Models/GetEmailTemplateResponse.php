@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method TemplateContent getTemplateContent() 获取模板内容数据
  * @method void setTemplateContent(TemplateContent $TemplateContent) 设置模板内容数据
+ * @method integer getTemplateStatus() 获取模板状态 0-审核通过 1-待审核 2-审核拒绝
+ * @method void setTemplateStatus(integer $TemplateStatus) 设置模板状态 0-审核通过 1-待审核 2-审核拒绝
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class GetEmailTemplateResponse extends AbstractModel
     public $TemplateContent;
 
     /**
+     * @var integer 模板状态 0-审核通过 1-待审核 2-审核拒绝
+     */
+    public $TemplateStatus;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param TemplateContent $TemplateContent 模板内容数据
+     * @param integer $TemplateStatus 模板状态 0-审核通过 1-待审核 2-审核拒绝
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -57,6 +65,10 @@ class GetEmailTemplateResponse extends AbstractModel
         if (array_key_exists("TemplateContent",$param) and $param["TemplateContent"] !== null) {
             $this->TemplateContent = new TemplateContent();
             $this->TemplateContent->deserialize($param["TemplateContent"]);
+        }
+
+        if (array_key_exists("TemplateStatus",$param) and $param["TemplateStatus"] !== null) {
+            $this->TemplateStatus = $param["TemplateStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

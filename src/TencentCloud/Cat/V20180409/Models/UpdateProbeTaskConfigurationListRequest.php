@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParameters(string $Parameters) 设置拨测参数
  * @method string getCron() 获取定时任务cron表达式
  * @method void setCron(string $Cron) 设置定时任务cron表达式
+ * @method array getResourceIDs() 获取预付费套餐id
+需要与taskId对应
+ * @method void setResourceIDs(array $ResourceIDs) 设置预付费套餐id
+需要与taskId对应
  */
 class UpdateProbeTaskConfigurationListRequest extends AbstractModel
 {
@@ -59,11 +63,19 @@ class UpdateProbeTaskConfigurationListRequest extends AbstractModel
     public $Cron;
 
     /**
+     * @var array 预付费套餐id
+需要与taskId对应
+     */
+    public $ResourceIDs;
+
+    /**
      * @param array $TaskIds 任务 ID
      * @param array $Nodes 拨测节点
      * @param integer $Interval 拨测间隔
      * @param string $Parameters 拨测参数
      * @param string $Cron 定时任务cron表达式
+     * @param array $ResourceIDs 预付费套餐id
+需要与taskId对应
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class UpdateProbeTaskConfigurationListRequest extends AbstractModel
 
         if (array_key_exists("Cron",$param) and $param["Cron"] !== null) {
             $this->Cron = $param["Cron"];
+        }
+
+        if (array_key_exists("ResourceIDs",$param) and $param["ResourceIDs"] !== null) {
+            $this->ResourceIDs = $param["ResourceIDs"];
         }
     }
 }

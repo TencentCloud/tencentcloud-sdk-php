@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWordSamples请求参数结构体
  *
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method array getUsages() 获取<b>关键词应用场景过滤条件，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过音频识别技术，进行内容识别；
@@ -46,11 +48,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
  * @method integer getLimit() 获取返回记录条数，默认值：100，最大值：100。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：100，最大值：100。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class DescribeWordSamplesRequest extends AbstractModel
 {
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
     /**
      * @var array <b>关键词应用场景过滤条件，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
@@ -85,11 +90,7 @@ class DescribeWordSamplesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param array $Usages <b>关键词应用场景过滤条件，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过音频识别技术，进行内容识别；
@@ -103,7 +104,6 @@ class DescribeWordSamplesRequest extends AbstractModel
      * @param array $Tags 标签过滤条件，数组长度限制：20 个词。
      * @param integer $Offset 分页偏移量，默认值：0。
      * @param integer $Limit 返回记录条数，默认值：100，最大值：100。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -118,6 +118,10 @@ class DescribeWordSamplesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
             $this->Usages = $param["Usages"];
         }
@@ -136,10 +140,6 @@ class DescribeWordSamplesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

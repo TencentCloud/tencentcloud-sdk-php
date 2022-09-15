@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayload(string $Payload) 设置要发送的消息的内容
  * @method string getStringToken() 获取Token 是用来做鉴权使用的，可以不填，系统会自动获取
  * @method void setStringToken(string $StringToken) 设置Token 是用来做鉴权使用的，可以不填，系统会自动获取
- * @method string getProducerName() 获取设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成
- * @method void setProducerName(string $ProducerName) 设置设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成
+ * @method string getProducerName() 获取设置 producer 的名字，要求全局唯一。该参数建议用户无需手动配置，此时系统会随机生成，如果手动设置有可能会造成创建 Producer 失败进而导致消息发送失败。
+该参数主要用于某些特定场景下，只允许特定的 Producer 生产消息时设置，用户的大部分场景使用不到该特性。
+ * @method void setProducerName(string $ProducerName) 设置设置 producer 的名字，要求全局唯一。该参数建议用户无需手动配置，此时系统会随机生成，如果手动设置有可能会造成创建 Producer 失败进而导致消息发送失败。
+该参数主要用于某些特定场景下，只允许特定的 Producer 生产消息时设置，用户的大部分场景使用不到该特性。
  * @method integer getSendTimeout() 获取设置消息发送的超时时间，默认为30s
  * @method void setSendTimeout(integer $SendTimeout) 设置设置消息发送的超时时间，默认为30s
  * @method integer getMaxPendingMessages() 获取内存中缓存的最大的生产消息的数量，默认为1000条
@@ -51,7 +53,8 @@ class SendMessagesRequest extends AbstractModel
     public $StringToken;
 
     /**
-     * @var string 设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成
+     * @var string 设置 producer 的名字，要求全局唯一。该参数建议用户无需手动配置，此时系统会随机生成，如果手动设置有可能会造成创建 Producer 失败进而导致消息发送失败。
+该参数主要用于某些特定场景下，只允许特定的 Producer 生产消息时设置，用户的大部分场景使用不到该特性。
      */
     public $ProducerName;
 
@@ -69,7 +72,8 @@ class SendMessagesRequest extends AbstractModel
      * @param string $Topic 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，即：tenant/namespace/topic。如果不指定，默认使用的是：public/default
      * @param string $Payload 要发送的消息的内容
      * @param string $StringToken Token 是用来做鉴权使用的，可以不填，系统会自动获取
-     * @param string $ProducerName 设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成
+     * @param string $ProducerName 设置 producer 的名字，要求全局唯一。该参数建议用户无需手动配置，此时系统会随机生成，如果手动设置有可能会造成创建 Producer 失败进而导致消息发送失败。
+该参数主要用于某些特定场景下，只允许特定的 Producer 生产消息时设置，用户的大部分场景使用不到该特性。
      * @param integer $SendTimeout 设置消息发送的超时时间，默认为30s
      * @param integer $MaxPendingMessages 内存中缓存的最大的生产消息的数量，默认为1000条
      */

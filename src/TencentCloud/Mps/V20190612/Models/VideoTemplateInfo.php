@@ -24,26 +24,34 @@ use TencentCloud\Common\AbstractModel;
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
  * @method void setCodec(string $Codec) 设置视频流的编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
  * @method integer getFps() 获取视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
+注意：自适应码率时取值范围是 [0, 60]
  * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
- * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [75, 35000]，单位：kbps。
+注意：自适应码率时取值范围是 [0, 60]
+ * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
- * @method void setBitrate(integer $Bitrate) 设置视频流的码率，取值范围：0 和 [75, 35000]，单位：kbps。
+ * @method void setBitrate(integer $Bitrate) 设置视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
  * @method string getResolutionAdaptive() 获取分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
+注意：自适应模式时，Width不能小于Height。
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) 设置分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
+注意：自适应模式时，Width不能小于Height。
  * @method integer getWidth() 获取视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -78,12 +86,14 @@ use TencentCloud\Common\AbstractModel;
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
+注意：自适应码流只支持 stretch、black。
  * @method void setFillType(string $FillType) 设置填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
+注意：自适应码流只支持 stretch、black。
  * @method integer getVcrf() 获取视频恒定码率控制因子，取值范围为[1, 51]。
 如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
 如果没有特殊需求，不建议指定该参数。
@@ -98,17 +108,20 @@ class VideoTemplateInfo extends AbstractModel
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
      */
     public $Codec;
 
     /**
      * @var integer 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
+注意：自适应码率时取值范围是 [0, 60]
      */
     public $Fps;
 
     /**
-     * @var integer 视频流的码率，取值范围：0 和 [75, 35000]，单位：kbps。
+     * @var integer 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      */
     public $Bitrate;
@@ -118,6 +131,7 @@ class VideoTemplateInfo extends AbstractModel
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
+注意：自适应模式时，Width不能小于Height。
      */
     public $ResolutionAdaptive;
 
@@ -154,6 +168,7 @@ class VideoTemplateInfo extends AbstractModel
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
+注意：自适应码流只支持 stretch、black。
      */
     public $FillType;
 
@@ -169,14 +184,18 @@ class VideoTemplateInfo extends AbstractModel
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+注意：av1 编码容器目前只支持 mp4 。
      * @param integer $Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
-     * @param integer $Bitrate 视频流的码率，取值范围：0 和 [75, 35000]，单位：kbps。
+注意：自适应码率时取值范围是 [0, 60]
+     * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      * @param string $ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
+注意：自适应模式时，Width不能小于Height。
      * @param integer $Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -197,6 +216,7 @@ class VideoTemplateInfo extends AbstractModel
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 默认值：black 。
+注意：自适应码流只支持 stretch、black。
      * @param integer $Vcrf 视频恒定码率控制因子，取值范围为[1, 51]。
 如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
 如果没有特殊需求，不建议指定该参数。

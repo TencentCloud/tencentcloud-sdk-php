@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目Id。
  * @method integer getOffset() 获取偏移量。
  * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取拉取数量限制。
- * @method void setLimit(integer $Limit) 设置拉取数量限制。
+ * @method integer getLimit() 获取拉取数量限制，默认20
+ * @method void setLimit(integer $Limit) 设置拉取数量限制，默认20
  * @method string getSearchKey() 获取搜索条件，支持安全组id或者安全组名称。
  * @method void setSearchKey(string $SearchKey) 设置搜索条件，支持安全组id或者安全组名称。
  */
@@ -49,7 +49,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 拉取数量限制。
+     * @var integer 拉取数量限制，默认20
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
      * @param string $Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
      * @param integer $ProjectId 项目Id。
      * @param integer $Offset 偏移量。
-     * @param integer $Limit 拉取数量限制。
+     * @param integer $Limit 拉取数量限制，默认20
      * @param string $SearchKey 搜索条件，支持安全组id或者安全组名称。
      */
     function __construct()

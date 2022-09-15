@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForce(boolean $Force) 设置是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
  * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+ * @method string getLicenseType() 获取导入镜像后，激活操作系统采用的许可证类型。
+可选项：
+TencentCloud: 腾讯云官方许可
+BYOL: 自带许可（Bring Your Own License）
+ * @method void setLicenseType(string $LicenseType) 设置导入镜像后，激活操作系统采用的许可证类型。
+可选项：
+TencentCloud: 腾讯云官方许可
+BYOL: 自带许可（Bring Your Own License）
  */
 class ImportImageRequest extends AbstractModel
 {
@@ -87,6 +95,14 @@ class ImportImageRequest extends AbstractModel
     public $TagSpecification;
 
     /**
+     * @var string 导入镜像后，激活操作系统采用的许可证类型。
+可选项：
+TencentCloud: 腾讯云官方许可
+BYOL: 自带许可（Bring Your Own License）
+     */
+    public $LicenseType;
+
+    /**
      * @param string $Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      * @param string $OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
      * @param string $OsVersion 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
@@ -96,6 +112,10 @@ class ImportImageRequest extends AbstractModel
      * @param boolean $DryRun 只检查参数，不执行任务
      * @param boolean $Force 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
+     * @param string $LicenseType 导入镜像后，激活操作系统采用的许可证类型。
+可选项：
+TencentCloud: 腾讯云官方许可
+BYOL: 自带许可（Bring Your Own License）
      */
     function __construct()
     {
@@ -149,6 +169,10 @@ class ImportImageRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
+        }
+
+        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
+            $this->LicenseType = $param["LicenseType"];
         }
     }
 }

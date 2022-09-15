@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页个数，用于分页，默认20
  * @method integer getOffset() 获取页数，默认值为1
  * @method void setOffset(integer $Offset) 设置页数，默认值为1
+ * @method string getDigest() 获取指定镜像 Digest 进行查找
+ * @method void setDigest(string $Digest) 设置指定镜像 Digest 进行查找
  */
 class DescribeImagesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeImagesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 指定镜像 Digest 进行查找
+     */
+    public $Digest;
+
+    /**
      * @param string $RegistryId 实例ID
      * @param string $NamespaceName 命名空间名称
      * @param string $RepositoryName 镜像仓库名称
      * @param string $ImageVersion 指定镜像版本进行查找，当前为模糊搜索
      * @param integer $Limit 每页个数，用于分页，默认20
      * @param integer $Offset 页数，默认值为1
+     * @param string $Digest 指定镜像 Digest 进行查找
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeImagesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Digest",$param) and $param["Digest"] !== null) {
+            $this->Digest = $param["Digest"];
         }
     }
 }

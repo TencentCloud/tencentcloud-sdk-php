@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGlobalRuleId(integer $GlobalRuleId) 设置是否为全局规则，0否，1是
  * @method integer getUserRuleId() 获取用户规则id
  * @method void setUserRuleId(integer $UserRuleId) 设置用户规则id
- * @method integer getStatus() 获取状态；0-待处理，2-已加白，3-非信任状态
- * @method void setStatus(integer $Status) 设置状态；0-待处理，2-已加白，3-非信任状态
+ * @method integer getStatus() 获取状态；0-待处理，2-已加白，3-非信任状态，4-已处理，5-已忽略
+ * @method void setStatus(integer $Status) 设置状态；0-待处理，2-已加白，3-非信任状态，4-已处理，5-已忽略
  * @method string getCreateTime() 获取首次访问时间
  * @method void setCreateTime(string $CreateTime) 设置首次访问时间
  * @method string getMergeTime() 获取最近访问时间
@@ -102,7 +102,7 @@ class RiskDnsList extends AbstractModel
     public $UserRuleId;
 
     /**
-     * @var integer 状态；0-待处理，2-已加白，3-非信任状态
+     * @var integer 状态；0-待处理，2-已加白，3-非信任状态，4-已处理，5-已忽略
      */
     public $Status;
 
@@ -190,7 +190,7 @@ class RiskDnsList extends AbstractModel
      * @param string $ProcessMd5 进程MD5
      * @param integer $GlobalRuleId 是否为全局规则，0否，1是
      * @param integer $UserRuleId 用户规则id
-     * @param integer $Status 状态；0-待处理，2-已加白，3-非信任状态
+     * @param integer $Status 状态；0-待处理，2-已加白，3-非信任状态，4-已处理，5-已忽略
      * @param string $CreateTime 首次访问时间
      * @param string $MergeTime 最近访问时间
      * @param string $Quuid 唯一 Quuid

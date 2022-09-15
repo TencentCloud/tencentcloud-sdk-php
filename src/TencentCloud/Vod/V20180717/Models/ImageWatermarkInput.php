@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
 <li>once：动态水印播放完后，不再出现；</li>
 <li>repeat_last_frame：水印播放完后，停留在最后一帧；</li>
 <li>repeat：水印循环播放，直到视频结束（默认值）。</li>
+ * @method integer getTransparency() 获取图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明</li>
+默认值：0。
+ * @method void setTransparency(integer $Transparency) 设置图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明</li>
+默认值：0。
  */
 class ImageWatermarkInput extends AbstractModel
 {
@@ -79,6 +87,14 @@ class ImageWatermarkInput extends AbstractModel
     public $RepeatType;
 
     /**
+     * @var integer 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明</li>
+默认值：0。
+     */
+    public $Transparency;
+
+    /**
      * @param string $ImageContent 水印图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串。支持 jpeg、png、gif 图片格式。
      * @param string $Width 水印的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Width 为视频宽度的百分比大小，如 10% 表示 Width 为视频宽度的 10%；</li>
@@ -92,6 +108,10 @@ class ImageWatermarkInput extends AbstractModel
 <li>once：动态水印播放完后，不再出现；</li>
 <li>repeat_last_frame：水印播放完后，停留在最后一帧；</li>
 <li>repeat：水印循环播放，直到视频结束（默认值）。</li>
+     * @param integer $Transparency 图片透明度，取值范围：[0, 100]
+<li>0：完全不透明</li>
+<li>100：完全透明</li>
+默认值：0。
      */
     function __construct()
     {
@@ -120,6 +140,10 @@ class ImageWatermarkInput extends AbstractModel
 
         if (array_key_exists("RepeatType",$param) and $param["RepeatType"] !== null) {
             $this->RepeatType = $param["RepeatType"];
+        }
+
+        if (array_key_exists("Transparency",$param) and $param["Transparency"] !== null) {
+            $this->Transparency = $param["Transparency"];
         }
     }
 }

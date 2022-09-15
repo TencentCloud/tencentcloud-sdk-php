@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClientBalance返回参数结构体
  *
- * @method integer getBalance() 获取账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
- * @method void setBalance(integer $Balance) 设置账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+ * @method integer getBalance() 获取账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
+ * @method void setBalance(integer $Balance) 设置账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
  * @method integer getCash() 获取账户现金余额，单位分
  * @method void setCash(integer $Cash) 设置账户现金余额，单位分
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeClientBalanceResponse extends AbstractModel
 {
     /**
-     * @var integer 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+     * @var integer 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
      */
     public $Balance;
 
@@ -45,7 +45,7 @@ class DescribeClientBalanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+     * @param integer $Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
      * @param integer $Cash 账户现金余额，单位分
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

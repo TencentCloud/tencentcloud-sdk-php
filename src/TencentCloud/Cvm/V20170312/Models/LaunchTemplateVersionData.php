@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceChargeType() 获取实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
+ * @method string getInstanceChargeType() 获取实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`专用宿主机`付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`专用宿主机`付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method SystemDisk getSystemDisk() 获取实例系统盘信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -134,7 +134,7 @@ class LaunchTemplateVersionData extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
+     * @var string 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`专用宿主机`付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceChargeType;
@@ -260,7 +260,7 @@ class LaunchTemplateVersionData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceChargeType 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
+     * @param string $InstanceChargeType 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`专用宿主机`付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SystemDisk $SystemDisk 实例系统盘信息。
 注意：此字段可能返回 null，表示取不到有效值。

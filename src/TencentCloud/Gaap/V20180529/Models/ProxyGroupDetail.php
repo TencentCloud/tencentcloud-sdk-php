@@ -31,11 +31,13 @@ use TencentCloud\Common\AbstractModel;
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
  * @method void setStatus(integer $Status) 设置通道组状态：
 0表示正常运行；
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
  * @method string getOwnerUin() 获取归属Uin
  * @method void setOwnerUin(string $OwnerUin) 设置归属Uin
  * @method string getCreateUin() 获取创建Uin
@@ -86,6 +88,32 @@ use TencentCloud\Common\AbstractModel;
 0表示关闭；
 1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFeatureBitmap() 获取特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeatureBitmap(integer $FeatureBitmap) 设置特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -110,6 +138,7 @@ class ProxyGroupDetail extends AbstractModel
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
      */
     public $Status;
 
@@ -199,6 +228,23 @@ class ProxyGroupDetail extends AbstractModel
     public $Http3Supported;
 
     /**
+     * @var integer 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FeatureBitmap;
+
+    /**
      * @param integer $CreateTime 创建时间
      * @param integer $ProjectId 项目ID
      * @param integer $ProxyNum 通道组中通道数量
@@ -207,6 +253,7 @@ class ProxyGroupDetail extends AbstractModel
 1表示创建中；
 4表示销毁中；
 11表示迁移中；
+12表示部分部署中。
      * @param string $OwnerUin 归属Uin
      * @param string $CreateUin 创建Uin
      * @param string $GroupName 通道名称
@@ -231,6 +278,19 @@ class ProxyGroupDetail extends AbstractModel
      * @param integer $Http3Supported 支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -326,6 +386,10 @@ class ProxyGroupDetail extends AbstractModel
 
         if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
             $this->Http3Supported = $param["Http3Supported"];
+        }
+
+        if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
+            $this->FeatureBitmap = $param["FeatureBitmap"];
         }
     }
 }

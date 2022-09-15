@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置总数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWarning() 获取备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWarning(string $Warning) 设置备注信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +50,12 @@ class DescribeBasicAlarmListResponse extends AbstractModel
     public $Total;
 
     /**
+     * @var string 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Warning;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -54,6 +64,8 @@ class DescribeBasicAlarmListResponse extends AbstractModel
      * @param array $Alarms 告警列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Warning 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -81,6 +93,10 @@ class DescribeBasicAlarmListResponse extends AbstractModel
 
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Warning",$param) and $param["Warning"] !== null) {
+            $this->Warning = $param["Warning"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

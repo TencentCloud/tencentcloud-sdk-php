@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortBy(string $SortBy) 设置排序字段，支持如下字段类型，create-time
  * @method string getSorting() 获取排序方式，desc表示正序，asc表示反序， 默认为asc
  * @method void setSorting(string $Sorting) 设置排序方式，desc表示正序，asc表示反序， 默认为asc
- * @method array getFilters() 获取过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
- * @method void setFilters(array $Filters) 设置过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+ * @method array getFilters() 获取过滤条件，支持如下字段类型，user-type：根据用户类型过滤。user-keyword：根据用户名称过滤
+ * @method void setFilters(array $Filters) 设置过滤条件，支持如下字段类型，user-type：根据用户类型过滤。user-keyword：根据用户名称过滤
  */
 class DescribeUsersRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeUsersRequest extends AbstractModel
     public $Sorting;
 
     /**
-     * @var array 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+     * @var array 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。user-keyword：根据用户名称过滤
      */
     public $Filters;
 
@@ -71,7 +71,7 @@ class DescribeUsersRequest extends AbstractModel
      * @param integer $Limit 返回数量，默认20，最大值100
      * @param string $SortBy 排序字段，支持如下字段类型，create-time
      * @param string $Sorting 排序方式，desc表示正序，asc表示反序， 默认为asc
-     * @param array $Filters 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+     * @param array $Filters 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。user-keyword：根据用户名称过滤
      */
     function __construct()
     {

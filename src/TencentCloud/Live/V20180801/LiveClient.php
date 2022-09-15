@@ -29,8 +29,6 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\AddLiveDomainResponse AddLiveDomain(Models\AddLiveDomainRequest $req) 添加域名，一次只能提交一个域名。域名必须已备案。
  * @method Models\AddLiveWatermarkResponse AddLiveWatermark(Models\AddLiveWatermarkRequest $req) 添加水印，成功返回水印 ID 后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印 ID 绑定到流使用。
 水印数量上限 100，超过后需要先删除，再添加。
- * @method Models\BindLiveDomainCertResponse BindLiveDomainCert(Models\BindLiveDomainCertRequest $req) 域名绑定证书。
-注意：需先调用添加证书接口进行证书添加。获取到证书Id后再调用该接口进行绑定。
  * @method Models\CancelCommonMixStreamResponse CancelCommonMixStream(Models\CancelCommonMixStreamRequest $req) 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
  * @method Models\CreateCommonMixStreamResponse CreateCommonMixStream(Models\CreateCommonMixStreamRequest $req) 该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
 注意：当前最多支持16路混流。
@@ -40,16 +38,14 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplate(Models\CreateLiveCallbackTemplateRequest $req) 创建回调模板，成功返回模板id后，需要调用[CreateLiveCallbackRule](/document/product/267/32638)接口将模板 ID 绑定到域名/路径使用。
 <br>回调协议相关文档：[事件消息通知](/document/product/267/32744)。
 注意：至少填写一个回调 URL。
- * @method Models\CreateLiveCertResponse CreateLiveCert(Models\CreateLiveCertRequest $req) 添加证书
- * @method Models\CreateLivePullStreamTaskResponse CreateLivePullStreamTask(Models\CreateLivePullStreamTaskRequest $req) 创建直播拉流任务。支持将外部已有的点播文件，或者直播源拉取过来转推到直播系统。
+ * @method Models\CreateLivePullStreamTaskResponse CreateLivePullStreamTask(Models\CreateLivePullStreamTaskRequest $req) 创建直播拉流任务。支持将外部已有的点播文件，或者直播源拉取过来转推到指定的目标地址。
 注意：
 1. 默认支持任务数上限20个，如有特殊需求，可通过提单到售后进行评估增加上限。
-2. 目前仅支持推流到腾讯云直播，暂不支持推到第三方。
-3. 源流视频编码目前只支持: H264, H265。其他编码格式建议先进行转码处理。
-4. 源流音频编码目前只支持: AAC。其他编码格式建议先进行转码处理。
-5. 过期不用的任务需自行清理，未清理的过期任务也会占用上限额度，如需要自动清理过期任务，可提单给售后进行配置。
-6. 拉流转推功能为计费增值服务，计费规则详情可参见[计费文档](https://cloud.tencent.com/document/product/267/53308)。
-7. 拉流转推功能仅提供内容拉取与推送服务，请确保内容已获得授权并符合内容传播相关的法律法规。若内容有侵权或违规相关问题，云直播会停止相关的功能服务并保留追究法律责任的权利。
+2. 源流视频编码目前只支持: H264, H265。其他编码格式建议先进行转码处理。
+3. 源流音频编码目前只支持: AAC。其他编码格式建议先进行转码处理。
+4. 可在控制台开启过期自动清理，避免过期任务占用任务数额度。
+5. 拉流转推功能为计费增值服务，计费规则详情可参见[计费文档](https://cloud.tencent.com/document/product/267/53308)。
+6. 拉流转推功能仅提供内容拉取与推送服务，请确保内容已获得授权并符合内容传播相关的法律法规。若内容有侵权或违规相关问题，云直播会停止相关的功能服务并保留追究法律责任的权利。
  * @method Models\CreateLiveRecordResponse CreateLiveRecord(Models\CreateLiveRecordRequest $req) - 使用前提
   1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
   2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 [对应文档](https://cloud.tencent.com/document/product/266/2838)。
@@ -73,11 +69,11 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\CreateLiveSnapshotRuleResponse CreateLiveSnapshotRule(Models\CreateLiveSnapshotRuleRequest $req) 创建截图规则，需要先调用[CreateLiveSnapshotTemplate](/document/product/267/32624)接口创建截图模板，然后将返回的模板 ID 绑定到流进行使用。
 <br>截图相关文档：[直播截图](/document/product/267/32737)。
 注意：单个域名仅支持关联一个截图模板。
- * @method Models\CreateLiveSnapshotTemplateResponse CreateLiveSnapshotTemplate(Models\CreateLiveSnapshotTemplateRequest $req) 创建截图模板，成功返回模板id后，需要调用[CreateLiveSnapshotRule](/document/product/267/32625)接口，将模板id绑定到流使用。
+ * @method Models\CreateLiveSnapshotTemplateResponse CreateLiveSnapshotTemplate(Models\CreateLiveSnapshotTemplateRequest $req) 创建截图模板，数量上限：50，成功返回模板id后，需要调用[CreateLiveSnapshotRule](/document/product/267/32625)接口，将模板id绑定到流使用。
 <br>截图相关文档：[直播截图](/document/product/267/32737)。
  * @method Models\CreateLiveTranscodeRuleResponse CreateLiveTranscodeRule(Models\CreateLiveTranscodeRuleRequest $req) 创建转码规则，需要先调用[CreateLiveTranscodeTemplate](/document/product/267/32646)接口创建转码模板，将返回的模板id绑定到流使用。
 <br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
- * @method Models\CreateLiveTranscodeTemplateResponse CreateLiveTranscodeTemplate(Models\CreateLiveTranscodeTemplateRequest $req) 创建转码模板，成功返回模板id后，需要调用[CreateLiveTranscodeRule](/document/product/267/32647)接口，将返回的模板id绑定到流使用。
+ * @method Models\CreateLiveTranscodeTemplateResponse CreateLiveTranscodeTemplate(Models\CreateLiveTranscodeTemplateRequest $req) 创建转码模板，数量上限：50，成功返回模板id后，需要调用[CreateLiveTranscodeRule](/document/product/267/32647)接口，将返回的模板id绑定到流使用。
 <br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
  * @method Models\CreateLiveWatermarkRuleResponse CreateLiveWatermarkRule(Models\CreateLiveWatermarkRuleRequest $req) 创建水印规则，需要先调用[AddLiveWatermark](/document/product/267/30154)接口添加水印，将返回的水印id绑定到流使用。
  * @method Models\CreatePullStreamConfigResponse CreatePullStreamConfig(Models\CreatePullStreamConfigRequest $req) 创建临时拉流转推任务，目前限制添加10条任务。
@@ -93,7 +89,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 1. 断流会结束当前录制并生成录制文件。在结束时间到达之前任务仍然有效，期间只要正常推流都会正常录制，与是否多次推、断流无关。
 2. 使用上避免创建时间段相互重叠的录制任务。若同一条流当前存在多个时段重叠的任务，为避免重复录制系统将启动最多3个录制任务。
 3. 创建的录制任务记录在平台侧只保留3个月。
-4. 当前录制任务管理API（CreateRecordTask/StopRecordTask/DeleteRecordTask）与旧API（CreateLiveRecord/StopLiveRecord/DeleteLiveRecord）不兼容，两套接口不能混用。
+4. 当前录制任务管理API（[CreateRecordTask](https://cloud.tencent.com/document/product/267/45983)/[StopRecordTask](https://cloud.tencent.com/document/product/267/45981)/[DeleteRecordTask](https://cloud.tencent.com/document/product/267/45982)）与旧API（CreateLiveRecord/StopLiveRecord/DeleteLiveRecord）不兼容，两套接口不能混用。
 5. 避免 创建录制任务 与 推流 操作同时进行，可能导致因录制任务未生效而引起任务延迟启动问题，两者操作间隔建议大于3秒。
  * @method Models\CreateScreenshotTaskResponse CreateScreenshotTask(Models\CreateScreenshotTaskRequest $req) 创建一个在指定时间启动、结束的截图任务，并使用指定截图模板ID对应的配置进行截图。
 - 注意事项
@@ -104,7 +100,6 @@ use TencentCloud\Live\V20180801\Models as Models;
 5. 避免 创建截图任务 与 推流 操作同时进行，可能导致因截图任务未生效而引起任务延迟启动问题，两者操作间隔建议大于3秒。
  * @method Models\DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(Models\DeleteLiveCallbackRuleRequest $req) 删除回调规则。
  * @method Models\DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(Models\DeleteLiveCallbackTemplateRequest $req) 删除回调模板。
- * @method Models\DeleteLiveCertResponse DeleteLiveCert(Models\DeleteLiveCertRequest $req) 删除域名对应的证书
  * @method Models\DeleteLiveDomainResponse DeleteLiveDomain(Models\DeleteLiveDomainRequest $req) 删除已添加的直播域名
  * @method Models\DeleteLivePullStreamTaskResponse DeleteLivePullStreamTask(Models\DeleteLivePullStreamTaskRequest $req) 删除接口 CreateLivePullStreamTask 创建的拉流任务。
 注意：
@@ -124,8 +119,8 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DeleteRecordTaskResponse DeleteRecordTask(Models\DeleteRecordTaskRequest $req) 删除录制任务配置。删除操作不影响正在运行当中的任务，仅对删除之后新的推流有效。
  * @method Models\DeleteScreenshotTaskResponse DeleteScreenshotTask(Models\DeleteScreenshotTaskRequest $req) 删除截图任务配置。删除操作不影响正在运行当中的任务，仅对删除之后新的推流有效。
  * @method Models\DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(Models\DescribeAllStreamPlayInfoListRequest $req) 输入某个时间点（1分钟维度），查询该时间点所有流的下行信息。
- * @method Models\DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxList(Models\DescribeAreaBillBandwidthAndFluxListRequest $req) 海外分区直播计费带宽和流量数据查询。
- * @method Models\DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(Models\DescribeBillBandwidthAndFluxListRequest $req) 直播计费带宽和流量数据查询。
+ * @method Models\DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxList(Models\DescribeAreaBillBandwidthAndFluxListRequest $req) 海外分区直播播放带宽和流量数据查询。
+ * @method Models\DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(Models\DescribeBillBandwidthAndFluxListRequest $req) 直播播放带宽和流量数据查询。
  * @method Models\DescribeCallbackRecordsListResponse DescribeCallbackRecordsList(Models\DescribeCallbackRecordsListRequest $req) 用于查询回调事件。
  * @method Models\DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(Models\DescribeConcurrentRecordStreamNumRequest $req) 查询并发录制路数，对慢直播和普通直播适用。
  * @method Models\DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthList(Models\DescribeDeliverBandwidthListRequest $req) 查询直播转推计费带宽，查询时间范围最大支持3个月内的数据，时间跨度最长31天。
@@ -140,6 +135,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveDelayInfoListResponse DescribeLiveDelayInfoList(Models\DescribeLiveDelayInfoListRequest $req) 获取直播延播列表。
  * @method Models\DescribeLiveDomainResponse DescribeLiveDomain(Models\DescribeLiveDomainRequest $req) 查询直播域名信息。
  * @method Models\DescribeLiveDomainCertResponse DescribeLiveDomainCert(Models\DescribeLiveDomainCertRequest $req) 获取域名证书信息。
+ * @method Models\DescribeLiveDomainCertBindingsResponse DescribeLiveDomainCertBindings(Models\DescribeLiveDomainCertBindingsRequest $req) 查询绑定证书的域名列表。
  * @method Models\DescribeLiveDomainPlayInfoListResponse DescribeLiveDomainPlayInfoList(Models\DescribeLiveDomainPlayInfoListRequest $req) 查询实时的域名维度下行播放数据，由于数据处理有耗时，接口默认查询4分钟前的准实时数据。
  * @method Models\DescribeLiveDomainRefererResponse DescribeLiveDomainReferer(Models\DescribeLiveDomainRefererRequest $req) 查询直播域名 Referer 黑白名单配置。
 由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 WebRTC 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
@@ -182,11 +178,12 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 2.2 通过定时（间隔>1min）查询[直播中的流接口](/document/api/267/20472)，判断主播是否在线。
 2.3 通过 本接口 查询直播流状态，判断主播是否在线。
 2.4 以上任一方式判断为在线，都认为主播开播中，并且接口查询超时或解析异常时，也默认为在线，减少对业务的影响。
+ * @method Models\DescribeLiveTimeShiftBillInfoListResponse DescribeLiveTimeShiftBillInfoList(Models\DescribeLiveTimeShiftBillInfoListRequest $req) 提供给客户对账，按天统计，维度：推流域名、时移文件时长（累加）、配置天数（不累加）、时移总时长（累加）。
  * @method Models\DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(Models\DescribeLiveTranscodeDetailInfoRequest $req) 支持查询某天或某段时间的转码详细信息。
  * @method Models\DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(Models\DescribeLiveTranscodeRulesRequest $req) 获取转码规则列表
  * @method Models\DescribeLiveTranscodeTemplateResponse DescribeLiveTranscodeTemplate(Models\DescribeLiveTranscodeTemplateRequest $req) 获取单个转码模板。
  * @method Models\DescribeLiveTranscodeTemplatesResponse DescribeLiveTranscodeTemplates(Models\DescribeLiveTranscodeTemplatesRequest $req) 获取转码模板列表。
- * @method Models\DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfo(Models\DescribeLiveTranscodeTotalInfoRequest $req) 查询转码总量数据，可查询近30天内数据。
+ * @method Models\DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfo(Models\DescribeLiveTranscodeTotalInfoRequest $req) 查询转码总量数据，可查询近三个月内的数据。
 注意：
 如果是查询某一天内，则返回5分钟粒度数据；
 如果是查询跨天或指定域名， 则返回1小时粒度数据。
@@ -218,15 +215,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 注意：按AppName查询请先联系工单申请，开通后配置生效预计需要5个工作日左右，具体时间以最终回复为准。
  * @method Models\DescribeStreamPushInfoListResponse DescribeStreamPushInfoList(Models\DescribeStreamPushInfoListRequest $req) 查询流id的上行推流质量数据，包括音视频的帧率，码率，流逝时间，编码格式等。
  * @method Models\DescribeTopClientIpSumInfoListResponse DescribeTopClientIpSumInfoList(Models\DescribeTopClientIpSumInfoListRequest $req) 查询某段时间top n客户端ip汇总信息（暂支持top 1000）
+ * @method Models\DescribeTranscodeTaskNumResponse DescribeTranscodeTaskNum(Models\DescribeTranscodeTaskNumRequest $req) 查询转码任务数。
  * @method Models\DescribeUploadStreamNumsResponse DescribeUploadStreamNums(Models\DescribeUploadStreamNumsRequest $req) 直播上行路数查询
  * @method Models\DescribeVisitTopSumInfoListResponse DescribeVisitTopSumInfoList(Models\DescribeVisitTopSumInfoListRequest $req) 查询某时间段top n的域名或流id信息（暂支持top 1000）。
  * @method Models\DropLiveStreamResponse DropLiveStream(Models\DropLiveStreamRequest $req) 断开推流连接，但可以重新推流。
+注：对已经不活跃的流，调用该断流接口时，接口返回成功。
  * @method Models\EnableLiveDomainResponse EnableLiveDomain(Models\EnableLiveDomainRequest $req) 启用状态为停用的直播域名。
  * @method Models\ForbidLiveDomainResponse ForbidLiveDomain(Models\ForbidLiveDomainRequest $req) 停止使用某个直播域名。
  * @method Models\ForbidLiveStreamResponse ForbidLiveStream(Models\ForbidLiveStreamRequest $req) 禁止某条流的推送，可以预设某个时刻将流恢复。
  * @method Models\ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(Models\ModifyLiveCallbackTemplateRequest $req) 修改回调模板。
- * @method Models\ModifyLiveCertResponse ModifyLiveCert(Models\ModifyLiveCertRequest $req) 修改证书
- * @method Models\ModifyLiveDomainCertResponse ModifyLiveDomainCert(Models\ModifyLiveDomainCertRequest $req) 修改域名和证书绑定信息
+ * @method Models\ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(Models\ModifyLiveDomainCertBindingsRequest $req) 批量绑定证书对应的播放域名，并更新启用状态。
+新建自有证书将自动上传至腾讯云ssl。
  * @method Models\ModifyLiveDomainRefererResponse ModifyLiveDomainReferer(Models\ModifyLiveDomainRefererRequest $req) 设置直播域名 Referer 黑白名单。
 由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 WebRTC 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
  * @method Models\ModifyLivePlayAuthKeyResponse ModifyLivePlayAuthKey(Models\ModifyLivePlayAuthKeyRequest $req) 修改播放鉴权key

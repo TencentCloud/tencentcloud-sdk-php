@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(Rect $Location) 设置印章坐标
  * @method array getOtherTexts() 获取其它文本内容
  * @method void setOtherTexts(array $OtherTexts) 设置其它文本内容
+ * @method array getSealInfos() 获取全部印章信息
+ * @method void setSealInfos(array $SealInfos) 设置全部印章信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class SealOCRResponse extends AbstractModel
     public $OtherTexts;
 
     /**
+     * @var array 全部印章信息
+     */
+    public $SealInfos;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class SealOCRResponse extends AbstractModel
      * @param string $SealBody 印章内容
      * @param Rect $Location 印章坐标
      * @param array $OtherTexts 其它文本内容
+     * @param array $SealInfos 全部印章信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -81,6 +89,15 @@ class SealOCRResponse extends AbstractModel
 
         if (array_key_exists("OtherTexts",$param) and $param["OtherTexts"] !== null) {
             $this->OtherTexts = $param["OtherTexts"];
+        }
+
+        if (array_key_exists("SealInfos",$param) and $param["SealInfos"] !== null) {
+            $this->SealInfos = [];
+            foreach ($param["SealInfos"] as $key => $value){
+                $obj = new SealInfo();
+                $obj->deserialize($value);
+                array_push($this->SealInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

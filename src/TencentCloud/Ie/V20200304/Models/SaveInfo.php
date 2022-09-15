@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 1：CosInfo。
  * @method CosInfo getCosInfo() 获取Cos形式存储信息，当Type等于1时必选。
  * @method void setCosInfo(CosInfo $CosInfo) 设置Cos形式存储信息，当Type等于1时必选。
+ * @method string getId() 获取存储信息ID标记，用于多个输出场景。部分任务支持多输出时，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
+ * @method void setId(string $Id) 设置存储信息ID标记，用于多个输出场景。部分任务支持多输出时，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
  */
 class SaveInfo extends AbstractModel
 {
@@ -41,9 +45,17 @@ class SaveInfo extends AbstractModel
     public $CosInfo;
 
     /**
+     * @var string 存储信息ID标记，用于多个输出场景。部分任务支持多输出时，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
+     */
+    public $Id;
+
+    /**
      * @param integer $Type 存储类型，可选值： 
 1：CosInfo。
      * @param CosInfo $CosInfo Cos形式存储信息，当Type等于1时必选。
+     * @param string $Id 存储信息ID标记，用于多个输出场景。部分任务支持多输出时，一般要求必选。
+ID只能包含字母、数字、下划线、中划线，长读不能超过128。
      */
     function __construct()
     {
@@ -65,6 +77,10 @@ class SaveInfo extends AbstractModel
         if (array_key_exists("CosInfo",$param) and $param["CosInfo"] !== null) {
             $this->CosInfo = new CosInfo();
             $this->CosInfo->deserialize($param["CosInfo"]);
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

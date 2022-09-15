@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
 <li>ssl-vpn-server-name - String - （过滤条件）SSL-VPN-SERVER实例名称。</li>
 <li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li>
+ * @method boolean getIsVpnPortal() 获取vpn门户使用。 默认Flase
+ * @method void setIsVpnPortal(boolean $IsVpnPortal) 设置vpn门户使用。 默认Flase
  */
 class DescribeVpnGatewaySslServersRequest extends AbstractModel
 {
@@ -67,6 +69,11 @@ class DescribeVpnGatewaySslServersRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var boolean vpn门户使用。 默认Flase
+     */
+    public $IsVpnPortal;
+
+    /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 请求对象个数
      * @param array $SslVpnServerIds SSL-VPN-SERVER实例ID。形如：vpngwSslServer-12345678。每次请求的实例的上限为100。参数不支持同时指定SslVpnServerIds和Filters。
@@ -76,6 +83,7 @@ class DescribeVpnGatewaySslServersRequest extends AbstractModel
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
 <li>ssl-vpn-server-name - String - （过滤条件）SSL-VPN-SERVER实例名称。</li>
 <li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li>
+     * @param boolean $IsVpnPortal vpn门户使用。 默认Flase
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class DescribeVpnGatewaySslServersRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("IsVpnPortal",$param) and $param["IsVpnPortal"] !== null) {
+            $this->IsVpnPortal = $param["IsVpnPortal"];
         }
     }
 }

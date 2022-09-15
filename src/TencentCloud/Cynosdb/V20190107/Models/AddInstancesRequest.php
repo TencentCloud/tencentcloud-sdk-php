@@ -24,28 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method integer getCpu() 获取Cpu核数
  * @method void setCpu(integer $Cpu) 设置Cpu核数
- * @method integer getMemory() 获取内存
- * @method void setMemory(integer $Memory) 设置内存
- * @method integer getReadOnlyCount() 获取新增只读实例数
- * @method void setReadOnlyCount(integer $ReadOnlyCount) 设置新增只读实例数
- * @method string getInstanceGrpId() 获取实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
- * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
- * @method string getVpcId() 获取所属VPC网络ID
- * @method void setVpcId(string $VpcId) 设置所属VPC网络ID
- * @method string getSubnetId() 获取所属子网ID
- * @method void setSubnetId(string $SubnetId) 设置所属子网ID
- * @method integer getPort() 获取新增RO组时使用的Port
- * @method void setPort(integer $Port) 设置新增RO组时使用的Port
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method integer getMemory() 获取内存，单位为GB
+ * @method void setMemory(integer $Memory) 设置内存，单位为GB
+ * @method integer getReadOnlyCount() 获取新增只读实例数，取值范围为[0,4]
+ * @method void setReadOnlyCount(integer $ReadOnlyCount) 设置新增只读实例数，取值范围为[0,4]
+ * @method string getInstanceGrpId() 获取实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+ * @method void setInstanceGrpId(string $InstanceGrpId) 设置实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+ * @method string getVpcId() 获取所属VPC网络ID，该参数已废弃
+ * @method void setVpcId(string $VpcId) 设置所属VPC网络ID，该参数已废弃
+ * @method string getSubnetId() 获取所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
+ * @method void setSubnetId(string $SubnetId) 设置所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
+ * @method integer getPort() 获取新增RO组时使用的Port，取值范围为[0,65535)
+ * @method void setPort(integer $Port) 设置新增RO组时使用的Port，取值范围为[0,65535)
+ * @method string getInstanceName() 获取实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
+ * @method void setInstanceName(string $InstanceName) 设置实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
  * @method string getDbType() 获取数据库类型，取值范围: 
 <li> MYSQL </li>
  * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
 <li> MYSQL </li>
- * @method string getOrderSource() 获取订单来源
- * @method void setOrderSource(string $OrderSource) 设置订单来源
+ * @method string getOrderSource() 获取订单来源，字符串长度范围为[0,64)
+ * @method void setOrderSource(string $OrderSource) 设置订单来源，字符串长度范围为[0,64)
  * @method integer getDealMode() 获取交易模式 0-下单并支付 1-下单
  * @method void setDealMode(integer $DealMode) 设置交易模式 0-下单并支付 1-下单
  */
@@ -62,37 +62,37 @@ class AddInstancesRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer 内存
+     * @var integer 内存，单位为GB
      */
     public $Memory;
 
     /**
-     * @var integer 新增只读实例数
+     * @var integer 新增只读实例数，取值范围为[0,4]
      */
     public $ReadOnlyCount;
 
     /**
-     * @var string 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
+     * @var string 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
      */
     public $InstanceGrpId;
 
     /**
-     * @var string 所属VPC网络ID
+     * @var string 所属VPC网络ID，该参数已废弃
      */
     public $VpcId;
 
     /**
-     * @var string 所属子网ID
+     * @var string 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
      */
     public $SubnetId;
 
     /**
-     * @var integer 新增RO组时使用的Port
+     * @var integer 新增RO组时使用的Port，取值范围为[0,65535)
      */
     public $Port;
 
     /**
-     * @var string 实例名称
+     * @var string 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
      */
     public $InstanceName;
 
@@ -108,7 +108,7 @@ class AddInstancesRequest extends AbstractModel
     public $DbType;
 
     /**
-     * @var string 订单来源
+     * @var string 订单来源，字符串长度范围为[0,64)
      */
     public $OrderSource;
 
@@ -120,17 +120,17 @@ class AddInstancesRequest extends AbstractModel
     /**
      * @param string $ClusterId 集群ID
      * @param integer $Cpu Cpu核数
-     * @param integer $Memory 内存
-     * @param integer $ReadOnlyCount 新增只读实例数
-     * @param string $InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
-     * @param string $VpcId 所属VPC网络ID
-     * @param string $SubnetId 所属子网ID
-     * @param integer $Port 新增RO组时使用的Port
-     * @param string $InstanceName 实例名称
+     * @param integer $Memory 内存，单位为GB
+     * @param integer $ReadOnlyCount 新增只读实例数，取值范围为[0,4]
+     * @param string $InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * @param string $VpcId 所属VPC网络ID，该参数已废弃
+     * @param string $SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
+     * @param integer $Port 新增RO组时使用的Port，取值范围为[0,65535)
+     * @param string $InstanceName 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
      * @param string $DbType 数据库类型，取值范围: 
 <li> MYSQL </li>
-     * @param string $OrderSource 订单来源
+     * @param string $OrderSource 订单来源，字符串长度范围为[0,64)
      * @param integer $DealMode 交易模式 0-下单并支付 1-下单
      */
     function __construct()

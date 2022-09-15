@@ -32,6 +32,54 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置人物名称。
  * @method array getSegmentSet() 获取人物出现的片段结果集。
  * @method void setSegmentSet(array $SegmentSet) 设置人物出现的片段结果集。
+ * @method string getGender() 获取人物性别：
+<li>Male：男性；</li>
+<li>Female：女性。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGender(string $Gender) 设置人物性别：
+<li>Male：男性；</li>
+<li>Female：女性。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBirthday() 获取人物出生日期。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBirthday(string $Birthday) 设置人物出生日期。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProfession() 获取人物职业或者职务。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProfession(string $Profession) 设置人物职业或者职务。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchoolOfGraduation() 获取人物毕业院校。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchoolOfGraduation(string $SchoolOfGraduation) 设置人物毕业院校。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAbstract() 获取人物简介。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAbstract(string $Abstract) 设置人物简介。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPlaceOfBirth() 获取人物出生地或者籍贯。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPlaceOfBirth(string $PlaceOfBirth) 设置人物出生地或者籍贯。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPersonType() 获取人物类型：
+<li>Politician：官员；</li>
+<li>Artist：艺人。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPersonType(string $PersonType) 设置人物类型：
+<li>Politician：官员；</li>
+<li>Artist：艺人。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemark() 获取敏感度标注：
+<li>Normal：正常；</li>
+<li>Sensitive：敏感。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置敏感度标注：
+<li>Normal：正常；</li>
+<li>Sensitive：敏感。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUrl() 获取截图链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUrl(string $Url) 设置截图链接
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiRecognitionTaskFaceResultItem extends AbstractModel
 {
@@ -58,12 +106,96 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
     public $SegmentSet;
 
     /**
+     * @var string 人物性别：
+<li>Male：男性；</li>
+<li>Female：女性。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Gender;
+
+    /**
+     * @var string 人物出生日期。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Birthday;
+
+    /**
+     * @var string 人物职业或者职务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Profession;
+
+    /**
+     * @var string 人物毕业院校。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SchoolOfGraduation;
+
+    /**
+     * @var string 人物简介。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Abstract;
+
+    /**
+     * @var string 人物出生地或者籍贯。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PlaceOfBirth;
+
+    /**
+     * @var string 人物类型：
+<li>Politician：官员；</li>
+<li>Artist：艺人。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PersonType;
+
+    /**
+     * @var string 敏感度标注：
+<li>Normal：正常；</li>
+<li>Sensitive：敏感。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
+     * @var string 截图链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Url;
+
+    /**
      * @param string $Id 人物唯一标识 ID。
      * @param string $Type 人物库类型，表示识别出的人物来自哪个人物库：
 <li>Default：默认人物库；</li>
 <li>UserDefine：用户自定义人物库。</li>
      * @param string $Name 人物名称。
      * @param array $SegmentSet 人物出现的片段结果集。
+     * @param string $Gender 人物性别：
+<li>Male：男性；</li>
+<li>Female：女性。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Birthday 人物出生日期。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Profession 人物职业或者职务。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchoolOfGraduation 人物毕业院校。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Abstract 人物简介。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PlaceOfBirth 人物出生地或者籍贯。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PersonType 人物类型：
+<li>Politician：官员；</li>
+<li>Artist：艺人。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remark 敏感度标注：
+<li>Normal：正常；</li>
+<li>Sensitive：敏感。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Url 截图链接
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -97,6 +229,42 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
+            $this->Gender = $param["Gender"];
+        }
+
+        if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
+            $this->Birthday = $param["Birthday"];
+        }
+
+        if (array_key_exists("Profession",$param) and $param["Profession"] !== null) {
+            $this->Profession = $param["Profession"];
+        }
+
+        if (array_key_exists("SchoolOfGraduation",$param) and $param["SchoolOfGraduation"] !== null) {
+            $this->SchoolOfGraduation = $param["SchoolOfGraduation"];
+        }
+
+        if (array_key_exists("Abstract",$param) and $param["Abstract"] !== null) {
+            $this->Abstract = $param["Abstract"];
+        }
+
+        if (array_key_exists("PlaceOfBirth",$param) and $param["PlaceOfBirth"] !== null) {
+            $this->PlaceOfBirth = $param["PlaceOfBirth"];
+        }
+
+        if (array_key_exists("PersonType",$param) and $param["PersonType"] !== null) {
+            $this->PersonType = $param["PersonType"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

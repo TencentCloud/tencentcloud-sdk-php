@@ -76,7 +76,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\EnableTopicRuleResponse EnableTopicRule(Models\EnableTopicRuleRequest $req) 启用规则
  * @method Models\GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublic(Models\GenSingleDeviceSignatureOfPublicRequest $req) 无
  * @method Models\GetBatchProductionsListResponse GetBatchProductionsList(Models\GetBatchProductionsListRequest $req) 列出量产数据列表信息。
- * @method Models\GetCOSURLResponse GetCOSURL(Models\GetCOSURLRequest $req) 本接口（GetCOSURL）用于获取固件存储在COS的URL 
+ * @method Models\GetCOSURLResponse GetCOSURL(Models\GetCOSURLRequest $req) 本接口（GetCOSURL）用于获取固件COS存储的上传请求URL地址
  * @method Models\GetDeviceListResponse GetDeviceList(Models\GetDeviceListRequest $req) 用于查询某个产品下的设备列表
  * @method Models\GetDeviceLocationHistoryResponse GetDeviceLocationHistory(Models\GetDeviceLocationHistoryRequest $req) 获取设备历史位置
  * @method Models\GetFamilyDeviceUserListResponse GetFamilyDeviceUserList(Models\GetFamilyDeviceUserListRequest $req) 用于获取设备绑定的用户列表
@@ -100,6 +100,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ModifyStudioProductResponse ModifyStudioProduct(Models\ModifyStudioProductRequest $req) 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
  * @method Models\ModifyTopicPolicyResponse ModifyTopicPolicy(Models\ModifyTopicPolicyRequest $req) 本接口（UpdateTopicPolicy）用于更新Topic信息 
  * @method Models\ModifyTopicRuleResponse ModifyTopicRule(Models\ModifyTopicRuleRequest $req) 修改规则
+ * @method Models\PublishBroadcastMessageResponse PublishBroadcastMessage(Models\PublishBroadcastMessageRequest $req) 发布广播消息
  * @method Models\PublishMessageResponse PublishMessage(Models\PublishMessageRequest $req) 本接口（PublishMessage）用于使用自定义透传协议进行设备远控
  * @method Models\PublishRRPCMessageResponse PublishRRPCMessage(Models\PublishRRPCMessageRequest $req) 下发RRPC消息
  * @method Models\ReleaseStudioProductResponse ReleaseStudioProduct(Models\ReleaseStudioProductRequest $req) 产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
@@ -110,7 +111,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\UnbindProductsResponse UnbindProducts(Models\UnbindProductsRequest $req) 批量解绑子产品
  * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) 批量禁用启用设备
  * @method Models\UpdateFirmwareResponse UpdateFirmware(Models\UpdateFirmwareRequest $req) 本接口（UpdateFirmware）用于对指定设备发起固件升级请求 
- * @method Models\UploadFirmwareResponse UploadFirmware(Models\UploadFirmwareRequest $req) 本接口（UploadFirmware）用于上传设备固件至平台
+ * @method Models\UploadFirmwareResponse UploadFirmware(Models\UploadFirmwareRequest $req) 本接口（UploadFirmware）用于创建设备固件版本信息，在平台用于固件版本升级、固件资源下发等。
  */
 
 class IotexplorerClient extends AbstractClient

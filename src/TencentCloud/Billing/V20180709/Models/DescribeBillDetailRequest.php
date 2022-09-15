@@ -68,10 +68,6 @@ use TencentCloud\Common\AbstractModel;
 小时费用
 预留实例退款
 按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
 包年包月转按量
  * @method void setActionType(string $ActionType) 设置查询交易类型，如下：
 包年包月新购
@@ -98,10 +94,6 @@ use TencentCloud\Common\AbstractModel;
 预付费用
 小时费用
 预留实例退款
-按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
 按量计费冲正
 包年包月转按量
  * @method integer getProjectId() 获取项目ID:资源所属项目ID
@@ -191,10 +183,6 @@ class DescribeBillDetailRequest extends AbstractModel
 小时费用
 预留实例退款
 按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
 包年包月转按量
      */
     public $ActionType;
@@ -247,10 +235,6 @@ class DescribeBillDetailRequest extends AbstractModel
 预付费用
 小时费用
 预留实例退款
-按量计费冲正
-按量计费冲正
-按量计费冲正
-按量计费冲正
 按量计费冲正
 包年包月转按量
      * @param integer $ProjectId 项目ID:资源所属项目ID

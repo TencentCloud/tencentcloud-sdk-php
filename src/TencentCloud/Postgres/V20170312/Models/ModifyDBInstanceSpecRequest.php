@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表，目前仅支持指定一张代金券。
  * @method integer getActivityId() 获取活动ID。
  * @method void setActivityId(integer $ActivityId) 设置活动ID。
- * @method integer getSwitchTag() 获取指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
- * @method void setSwitchTag(integer $SwitchTag) 设置指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
- * @method string getSwitchStartTime() 获取切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
- * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
- * @method string getSwitchEndTime() 获取切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
- * @method void setSwitchEndTime(string $SwitchEndTime) 设置切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
+ * @method integer getSwitchTag() 获取指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
+ * @method void setSwitchTag(integer $SwitchTag) 设置指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
+ * @method string getSwitchStartTime() 获取切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
+ * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
+ * @method string getSwitchEndTime() 获取切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
+ * @method void setSwitchEndTime(string $SwitchEndTime) 设置切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -72,17 +72,17 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $ActivityId;
 
     /**
-     * @var integer 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+     * @var integer 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
      */
     public $SwitchTag;
 
     /**
-     * @var string 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
+     * @var string 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
      */
     public $SwitchStartTime;
 
     /**
-     * @var string 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
+     * @var string 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
      */
     public $SwitchEndTime;
 
@@ -93,9 +93,9 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
      * @param integer $AutoVoucher 是否自动使用代金券,1是,0否，默认不使用。
      * @param array $VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      * @param integer $ActivityId 活动ID。
-     * @param integer $SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
-     * @param string $SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
-     * @param string $SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
+     * @param integer $SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
+     * @param string $SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
+     * @param string $SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
      */
     function __construct()
     {

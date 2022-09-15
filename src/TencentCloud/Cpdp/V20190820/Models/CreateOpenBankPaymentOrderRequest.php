@@ -22,20 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getChannelMerchantId() 获取云企付渠道商户号。外部接入平台入驻云企付平台后下发。
  * @method void setChannelMerchantId(string $ChannelMerchantId) 设置云企付渠道商户号。外部接入平台入驻云企付平台后下发。
- * @method string getChannelName() 获取渠道名称。
+ * @method string getChannelName() 获取渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
- * @method void setChannelName(string $ChannelName) 设置渠道名称。
+__HUIFU__: 汇付斗拱
+ * @method void setChannelName(string $ChannelName) 设置渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
- * @method string getPaymentMethod() 获取付款方式。如
+__HUIFU__: 汇付斗拱
+ * @method string getPaymentMethod() 获取付款方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
- * @method void setPaymentMethod(string $PaymentMethod) 设置付款方式。如
+__SAFT_ISV__:支付宝安心发
+__TRANS_TO_CHANGE__: 微信支付转账到零钱v2
+__TRANS_TO_CHANGE_V3__: 微信支付转账到零钱v3
+__ONLINEBANK__: 汇付网银
+ * @method void setPaymentMethod(string $PaymentMethod) 设置付款方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
+__SAFT_ISV__:支付宝安心发
+__TRANS_TO_CHANGE__: 微信支付转账到零钱v2
+__TRANS_TO_CHANGE_V3__: 微信支付转账到零钱v3
+__ONLINEBANK__: 汇付网银
  * @method string getPaymentMode() 获取付款模式。默认直接支付，如
 __DIRECT__:直接支付
 __FREEZE__:担保支付
@@ -56,14 +66,10 @@ __FREEZE__:担保支付
  * @method void setNotifyUrl(string $NotifyUrl) 设置通知地址，如www.test.com。
  * @method string getExpireTime() 获取订单过期时间，yyyy-MM-dd HH:mm:ss格式。
  * @method void setExpireTime(string $ExpireTime) 设置订单过期时间，yyyy-MM-dd HH:mm:ss格式。
- * @method string getFrontUrl() 获取前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
- * @method void setFrontUrl(string $FrontUrl) 设置前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
- * @method string getRefreshUrl() 获取前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
- * @method void setRefreshUrl(string $RefreshUrl) 设置前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+ * @method string getFrontUrl() 获取前端成功回调URL。条件可选。
+ * @method void setFrontUrl(string $FrontUrl) 设置前端成功回调URL。条件可选。
+ * @method string getRefreshUrl() 获取前端刷新 URL。条件可选。
+ * @method void setRefreshUrl(string $RefreshUrl) 设置前端刷新 URL。条件可选。
  * @method OpenBankSceneInfo getSceneInfo() 获取设备信息，条件可选。
  * @method void setSceneInfo(OpenBankSceneInfo $SceneInfo) 设置设备信息，条件可选。
  * @method OpenBankGoodsInfo getGoodsInfo() 获取商品信息，条件可选。
@@ -80,6 +86,10 @@ __SHARE_BY_INFO__：分润时指定金额，此时如果分润信息 ProfitShar
 __SHARE_BY_API__：后续调用分润接口决定分润金额
  * @method array getProfitShareInfoList() 获取分润信息，配合ProfitShareFlag使用。
  * @method void setProfitShareInfoList(array $ProfitShareInfoList) 设置分润信息，配合ProfitShareFlag使用。
+ * @method OpenBankSettlementRulesInfo getSettlementRulesInfo() 获取商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+ * @method void setSettlementRulesInfo(OpenBankSettlementRulesInfo $SettlementRulesInfo) 设置商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+ * @method string getExternalPaymentData() 获取底层支付渠道特殊字段，若无特殊说明时，可以为空
+ * @method void setExternalPaymentData(string $ExternalPaymentData) 设置底层支付渠道特殊字段，若无特殊说明时，可以为空
  * @method string getRemark() 获取备注信息。
  * @method void setRemark(string $Remark) 设置备注信息。
  * @method string getEnvironment() 获取环境类型
@@ -99,17 +109,22 @@ class CreateOpenBankPaymentOrderRequest extends AbstractModel
     public $ChannelMerchantId;
 
     /**
-     * @var string 渠道名称。
+     * @var string 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
+__HUIFU__: 汇付斗拱
      */
     public $ChannelName;
 
     /**
-     * @var string 付款方式。如
+     * @var string 付款方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
+__SAFT_ISV__:支付宝安心发
+__TRANS_TO_CHANGE__: 微信支付转账到零钱v2
+__TRANS_TO_CHANGE_V3__: 微信支付转账到零钱v3
+__ONLINEBANK__: 汇付网银
      */
     public $PaymentMethod;
 
@@ -156,14 +171,12 @@ __FREEZE__:担保支付
     public $ExpireTime;
 
     /**
-     * @var string 前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+     * @var string 前端成功回调URL。条件可选。
      */
     public $FrontUrl;
 
     /**
-     * @var string 前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+     * @var string 前端刷新 URL。条件可选。
      */
     public $RefreshUrl;
 
@@ -196,6 +209,16 @@ __SHARE_BY_API__：后续调用分润接口决定分润金额
     public $ProfitShareInfoList;
 
     /**
+     * @var OpenBankSettlementRulesInfo 商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+     */
+    public $SettlementRulesInfo;
+
+    /**
+     * @var string 底层支付渠道特殊字段，若无特殊说明时，可以为空
+     */
+    public $ExternalPaymentData;
+
+    /**
      * @var string 备注信息。
      */
     public $Remark;
@@ -210,13 +233,18 @@ __sandbox__:沙箱环境
 
     /**
      * @param string $ChannelMerchantId 云企付渠道商户号。外部接入平台入驻云企付平台后下发。
-     * @param string $ChannelName 渠道名称。
+     * @param string $ChannelName 渠道名称。详见附录-云企付枚举类说明-ChannelName。
 __TENPAY__: 商企付
 __WECHAT__: 微信支付
 __ALIPAY__: 支付宝
-     * @param string $PaymentMethod 付款方式。如
+__HUIFU__: 汇付斗拱
+     * @param string $PaymentMethod 付款方式。详见附录-云企付枚举类说明-PaymentMethod。
 __EBANK_PAYMENT__:B2B EBank付款
 __OPENBANK_PAYMENT__:B2C  openbank付款
+__SAFT_ISV__:支付宝安心发
+__TRANS_TO_CHANGE__: 微信支付转账到零钱v2
+__TRANS_TO_CHANGE_V3__: 微信支付转账到零钱v3
+__ONLINEBANK__: 汇付网银
      * @param string $PaymentMode 付款模式。默认直接支付，如
 __DIRECT__:直接支付
 __FREEZE__:担保支付
@@ -227,10 +255,8 @@ __FREEZE__:担保支付
      * @param OpenBankPayeeInfo $PayeeInfo 收款方信息。
      * @param string $NotifyUrl 通知地址，如www.test.com。
      * @param string $ExpireTime 订单过期时间，yyyy-MM-dd HH:mm:ss格式。
-     * @param string $FrontUrl 前端成功回调URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
-     * @param string $RefreshUrl 前端刷新 URL。条件可选
-当付款方式PaymentMethod为EBANK_PAYMENT时必填
+     * @param string $FrontUrl 前端成功回调URL。条件可选。
+     * @param string $RefreshUrl 前端刷新 URL。条件可选。
      * @param OpenBankSceneInfo $SceneInfo 设备信息，条件可选。
      * @param OpenBankGoodsInfo $GoodsInfo 商品信息，条件可选。
      * @param string $Attachment 附加信息，查询时原样返回。
@@ -239,6 +265,8 @@ __NO_NEED_SHARE__：无需分润；
 __SHARE_BY_INFO__：分润时指定金额，此时如果分润信息 ProfitShareInfo为空，只冻结，不分账给其他商户；需要调用解冻接口。
 __SHARE_BY_API__：后续调用分润接口决定分润金额
      * @param array $ProfitShareInfoList 分润信息，配合ProfitShareFlag使用。
+     * @param OpenBankSettlementRulesInfo $SettlementRulesInfo 商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+     * @param string $ExternalPaymentData 底层支付渠道特殊字段，若无特殊说明时，可以为空
      * @param string $Remark 备注信息。
      * @param string $Environment 环境类型
 __release__:生产环境
@@ -337,6 +365,15 @@ __sandbox__:沙箱环境
                 $obj->deserialize($value);
                 array_push($this->ProfitShareInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("SettlementRulesInfo",$param) and $param["SettlementRulesInfo"] !== null) {
+            $this->SettlementRulesInfo = new OpenBankSettlementRulesInfo();
+            $this->SettlementRulesInfo->deserialize($param["SettlementRulesInfo"]);
+        }
+
+        if (array_key_exists("ExternalPaymentData",$param) and $param["ExternalPaymentData"] !== null) {
+            $this->ExternalPaymentData = $param["ExternalPaymentData"];
         }
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {

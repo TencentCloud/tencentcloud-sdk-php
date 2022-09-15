@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 视频处理任务类型
+ * 媒体处理任务类型
  *
  * @method array getTranscodeTaskSet() 获取视频转码任务列表。
  * @method void setTranscodeTaskSet(array $TranscodeTaskSet) 设置视频转码任务列表。

@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStateIfCreateCvmFailed(string $StateIfCreateCvmFailed) 设置表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
  * @method array getTags() 获取标签列表。通过指定该参数可以支持绑定标签到作业。每个作业最多绑定10个标签。
  * @method void setTags(array $Tags) 设置标签列表。通过指定该参数可以支持绑定标签到作业。每个作业最多绑定10个标签。
+ * @method string getNotificationTarget() 获取表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
+ * @method void setNotificationTarget(string $NotificationTarget) 设置表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
  */
 class Job extends AbstractModel
 {
@@ -87,6 +95,14 @@ class Job extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
+     */
+    public $NotificationTarget;
+
+    /**
      * @param array $Tasks 任务信息
      * @param string $JobName 作业名称
      * @param string $JobDescription 作业描述
@@ -96,6 +112,10 @@ class Job extends AbstractModel
      * @param string $TaskExecutionDependOn 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
      * @param string $StateIfCreateCvmFailed 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
      * @param array $Tags 标签列表。通过指定该参数可以支持绑定标签到作业。每个作业最多绑定10个标签。
+     * @param string $NotificationTarget 表示通知信息的通知目标类型。
+取值范围：CMQ，TDMQ_CMQ。
+CMQ:表示向腾讯云CMQ发送消息。
+TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
      */
     function __construct()
     {
@@ -164,6 +184,10 @@ class Job extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("NotificationTarget",$param) and $param["NotificationTarget"] !== null) {
+            $this->NotificationTarget = $param["NotificationTarget"];
         }
     }
 }

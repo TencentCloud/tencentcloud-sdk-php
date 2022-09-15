@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页条数
  * @method integer getOffset() 获取偏移值
  * @method void setOffset(integer $Offset) 设置偏移值
- * @method integer getDirection() 获取出站还是入站，0：入站，1：出站
- * @method void setDirection(integer $Direction) 设置出站还是入站，0：入站，1：出站
+ * @method integer getDirection() 获取出站还是入站，1：入站，0：出站
+ * @method void setDirection(integer $Direction) 设置出站还是入站，1：入站，0：出站
  * @method string getEdgeId() 获取EdgeId值
  * @method void setEdgeId(string $EdgeId) 设置EdgeId值
  * @method string getStatus() 获取规则是否开启，'0': 未开启，'1': 开启, 默认为'0'
@@ -69,7 +69,7 @@ class DescribeAcListsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 出站还是入站，0：入站，1：出站
+     * @var integer 出站还是入站，1：入站，0：出站
      */
     public $Direction;
 
@@ -99,7 +99,7 @@ class DescribeAcListsRequest extends AbstractModel
      * @param string $SearchValue 搜索值
      * @param integer $Limit 每页条数
      * @param integer $Offset 偏移值
-     * @param integer $Direction 出站还是入站，0：入站，1：出站
+     * @param integer $Direction 出站还是入站，1：入站，0：出站
      * @param string $EdgeId EdgeId值
      * @param string $Status 规则是否开启，'0': 未开启，'1': 开启, 默认为'0'
      * @param string $Area 地域

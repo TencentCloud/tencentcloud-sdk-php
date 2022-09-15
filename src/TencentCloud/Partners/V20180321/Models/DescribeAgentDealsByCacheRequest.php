@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
  * @method array getOwnerUins() 获取下单人账号ID列表
  * @method void setOwnerUins(array $OwnerUins) 设置下单人账号ID列表
- * @method array getDealNames() 获取订单号列表
- * @method void setDealNames(array $DealNames) 设置订单号列表
+ * @method array getDealNames() 获取子订单号列表
+ * @method void setDealNames(array $DealNames) 设置子订单号列表
+ * @method array getBigDealIds() 获取大订单号列表
+ * @method void setBigDealIds(array $BigDealIds) 设置大订单号列表
  * @method integer getPayerMode() 获取支付方式，0：自付；1：代付
  * @method void setPayerMode(integer $PayerMode) 设置支付方式，0：自付；1：代付
  */
@@ -77,9 +79,14 @@ class DescribeAgentDealsByCacheRequest extends AbstractModel
     public $OwnerUins;
 
     /**
-     * @var array 订单号列表
+     * @var array 子订单号列表
      */
     public $DealNames;
+
+    /**
+     * @var array 大订单号列表
+     */
+    public $BigDealIds;
 
     /**
      * @var integer 支付方式，0：自付；1：代付
@@ -94,7 +101,8 @@ class DescribeAgentDealsByCacheRequest extends AbstractModel
      * @param integer $Order 0:下单时间降序；其他：下单时间升序
      * @param integer $Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      * @param array $OwnerUins 下单人账号ID列表
-     * @param array $DealNames 订单号列表
+     * @param array $DealNames 子订单号列表
+     * @param array $BigDealIds 大订单号列表
      * @param integer $PayerMode 支付方式，0：自付；1：代付
      */
     function __construct()
@@ -140,6 +148,10 @@ class DescribeAgentDealsByCacheRequest extends AbstractModel
 
         if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
             $this->DealNames = $param["DealNames"];
+        }
+
+        if (array_key_exists("BigDealIds",$param) and $param["BigDealIds"] !== null) {
+            $this->BigDealIds = $param["BigDealIds"];
         }
 
         if (array_key_exists("PayerMode",$param) and $param["PayerMode"] !== null) {

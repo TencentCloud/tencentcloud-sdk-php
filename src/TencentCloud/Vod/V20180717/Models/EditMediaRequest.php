@@ -22,16 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInputType() 获取输入视频的类型，可以取的值为  File，Stream 两种。
  * @method void setInputType(string $InputType) 设置输入视频的类型，可以取的值为  File，Stream 两种。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method array getFileInfos() 获取输入的视频文件信息，当 InputType 为 File 时必填。
  * @method void setFileInfos(array $FileInfos) 设置输入的视频文件信息，当 InputType 为 File 时必填。
  * @method array getStreamInfos() 获取输入的流信息，当 InputType 为 Stream 时必填。
  * @method void setStreamInfos(array $StreamInfos) 设置输入的流信息，当 InputType 为 Stream 时必填。
  * @method integer getDefinition() 获取编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
-<li>20：拼接时，以码率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准。</li>
  * @method void setDefinition(integer $Definition) 设置编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
-<li>20：拼接时，以码率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准。</li>
  * @method string getProcedureName() 获取[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
  * @method void setProcedureName(string $ProcedureName) 设置[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
  * @method EditMediaOutputConfig getOutputConfig() 获取编辑后生成的文件配置。
@@ -44,8 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) 设置用于任务去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getExtInfo() 获取保留字段，特殊用途时使用。
  * @method void setExtInfo(string $ExtInfo) 设置保留字段，特殊用途时使用。
- * @method integer getSubAppId() 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
- * @method void setSubAppId(integer $SubAppId) 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
  */
 class EditMediaRequest extends AbstractModel
 {
@@ -53,6 +53,11 @@ class EditMediaRequest extends AbstractModel
      * @var string 输入视频的类型，可以取的值为  File，Stream 两种。
      */
     public $InputType;
+
+    /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
 
     /**
      * @var array 输入的视频文件信息，当 InputType 为 File 时必填。
@@ -67,7 +72,7 @@ class EditMediaRequest extends AbstractModel
     /**
      * @var integer 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
-<li>20：拼接时，以码率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准。</li>
      */
     public $Definition;
 
@@ -102,24 +107,19 @@ class EditMediaRequest extends AbstractModel
     public $ExtInfo;
 
     /**
-     * @var integer 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public $SubAppId;
-
-    /**
      * @param string $InputType 输入视频的类型，可以取的值为  File，Stream 两种。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param array $FileInfos 输入的视频文件信息，当 InputType 为 File 时必填。
      * @param array $StreamInfos 输入的流信息，当 InputType 为 Stream 时必填。
      * @param integer $Definition 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
-<li>20：拼接时，以码率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准。</li>
      * @param string $ProcedureName [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
      * @param EditMediaOutputConfig $OutputConfig 编辑后生成的文件配置。
      * @param string $SessionContext 标识来源上下文，用于透传用户请求信息，在EditMediaComplete回调和任务流状态变更回调将返回该字段值，最长 1000个字符。
      * @param integer $TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param string $SessionId 用于任务去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $ExtInfo 保留字段，特殊用途时使用。
-     * @param integer $SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     function __construct()
     {
@@ -136,6 +136,10 @@ class EditMediaRequest extends AbstractModel
         }
         if (array_key_exists("InputType",$param) and $param["InputType"] !== null) {
             $this->InputType = $param["InputType"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("FileInfos",$param) and $param["FileInfos"] !== null) {
@@ -183,10 +187,6 @@ class EditMediaRequest extends AbstractModel
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
             $this->ExtInfo = $param["ExtInfo"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

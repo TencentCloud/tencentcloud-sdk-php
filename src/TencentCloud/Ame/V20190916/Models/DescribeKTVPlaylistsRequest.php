@@ -20,26 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKTVPlaylists请求参数结构体
  *
+ * @method string getType() 获取歌单类型，取值有：
+·OfficialRec：官方推荐
+·Normal：自定义
+当该字段未填时，默认为取OfficialRec
+ * @method void setType(string $Type) 设置歌单类型，取值有：
+·OfficialRec：官方推荐
+·Normal：自定义
+当该字段未填时，默认为取OfficialRec
  * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
  * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
  * @method integer getLimit() 获取分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
  * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
  */
 class DescribeKTVPlaylistsRequest extends AbstractModel
 {
     /**
+     * @var string 歌单类型，取值有：
+·OfficialRec：官方推荐
+·Normal：自定义
+当该字段未填时，默认为取OfficialRec
+     */
+    public $Type;
+
+    /**
      * @var integer 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
      */
     public $Offset;
 
     /**
      * @var integer 分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
      */
     public $Limit;
 
     /**
+     * @param string $Type 歌单类型，取值有：
+·OfficialRec：官方推荐
+·Normal：自定义
+当该字段未填时，默认为取OfficialRec
      * @param integer $Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
      * @param integer $Limit 分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+取值范围：Offset + Limit 不超过5000
      */
     function __construct()
     {
@@ -54,6 +82,10 @@ class DescribeKTVPlaylistsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(boolean $Enable) 设置使能开关。
  * @method string getDescription() 获取规则描述，不限字符类型，200字符描述以内。
  * @method void setDescription(string $Description) 设置规则描述，不限字符类型，200字符描述以内。
+ * @method string getEventPattern() 获取参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
+ * @method void setEventPattern(string $EventPattern) 设置参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
  * @method string getRuleName() 获取事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
  * @method void setRuleName(string $RuleName) 设置事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
  */
@@ -54,6 +56,11 @@ class UpdateRuleRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
+     */
+    public $EventPattern;
+
+    /**
      * @var string 事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
      */
     public $RuleName;
@@ -63,6 +70,7 @@ class UpdateRuleRequest extends AbstractModel
      * @param string $EventBusId 事件集ID
      * @param boolean $Enable 使能开关。
      * @param string $Description 规则描述，不限字符类型，200字符描述以内。
+     * @param string $EventPattern 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
      * @param string $RuleName 事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
      */
     function __construct()
@@ -92,6 +100,10 @@ class UpdateRuleRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("EventPattern",$param) and $param["EventPattern"] !== null) {
+            $this->EventPattern = $param["EventPattern"];
         }
 
         if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {

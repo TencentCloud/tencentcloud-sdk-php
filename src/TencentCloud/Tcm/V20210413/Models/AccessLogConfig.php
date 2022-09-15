@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncoding(string $Encoding) 设置编码格式，可选值：TEXT、JSON
  * @method string getFormat() 获取日志格式
  * @method void setFormat(string $Format) 设置日志格式
+ * @method string getAddress() 获取GRPC第三方服务器地址
+ * @method void setAddress(string $Address) 设置GRPC第三方服务器地址
+ * @method boolean getEnableServer() 获取是否启用GRPC第三方服务器
+ * @method void setEnableServer(boolean $EnableServer) 设置是否启用GRPC第三方服务器
+ * @method boolean getEnableStdout() 获取是否启用标准输出
+ * @method void setEnableStdout(boolean $EnableStdout) 设置是否启用标准输出
  */
 class AccessLogConfig extends AbstractModel
 {
@@ -66,12 +72,30 @@ class AccessLogConfig extends AbstractModel
     public $Format;
 
     /**
+     * @var string GRPC第三方服务器地址
+     */
+    public $Address;
+
+    /**
+     * @var boolean 是否启用GRPC第三方服务器
+     */
+    public $EnableServer;
+
+    /**
+     * @var boolean 是否启用标准输出
+     */
+    public $EnableStdout;
+
+    /**
      * @param boolean $Enable 是否启用
      * @param string $Template 采用的模板，可选值：istio（默认）、trace
      * @param SelectedRange $SelectedRange 选中的范围
      * @param CLS $CLS 腾讯云日志服务相关参数
      * @param string $Encoding 编码格式，可选值：TEXT、JSON
      * @param string $Format 日志格式
+     * @param string $Address GRPC第三方服务器地址
+     * @param boolean $EnableServer 是否启用GRPC第三方服务器
+     * @param boolean $EnableStdout 是否启用标准输出
      */
     function __construct()
     {
@@ -110,6 +134,18 @@ class AccessLogConfig extends AbstractModel
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
+            $this->Address = $param["Address"];
+        }
+
+        if (array_key_exists("EnableServer",$param) and $param["EnableServer"] !== null) {
+            $this->EnableServer = $param["EnableServer"];
+        }
+
+        if (array_key_exists("EnableStdout",$param) and $param["EnableStdout"] !== null) {
+            $this->EnableStdout = $param["EnableStdout"];
         }
     }
 }

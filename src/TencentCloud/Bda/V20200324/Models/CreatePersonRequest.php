@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 支持英文、数字、-%@#&_，，长度限制64B。
  * @method void setPersonId(string $PersonId) 设置人员ID，单个腾讯云账号下不可修改，不可重复。 
 支持英文、数字、-%@#&_，，长度限制64B。
- * @method Trace getTrace() 获取人体轨迹信息。
- * @method void setTrace(Trace $Trace) 设置人体轨迹信息。
+ * @method Trace getTrace() 获取人体动作轨迹信息。
+ * @method void setTrace(Trace $Trace) 设置人体动作轨迹信息。
  */
 class CreatePersonRequest extends AbstractModel
 {
@@ -50,7 +50,7 @@ class CreatePersonRequest extends AbstractModel
     public $PersonId;
 
     /**
-     * @var Trace 人体轨迹信息。
+     * @var Trace 人体动作轨迹信息。
      */
     public $Trace;
 
@@ -59,7 +59,7 @@ class CreatePersonRequest extends AbstractModel
      * @param string $PersonName 人员名称。[1，60]个字符，可修改，可重复。
      * @param string $PersonId 人员ID，单个腾讯云账号下不可修改，不可重复。 
 支持英文、数字、-%@#&_，，长度限制64B。
-     * @param Trace $Trace 人体轨迹信息。
+     * @param Trace $Trace 人体动作轨迹信息。
      */
     function __construct()
     {

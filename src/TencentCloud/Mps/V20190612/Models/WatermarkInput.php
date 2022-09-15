@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 视频处理任务中的水印参数类型
+ * 媒体处理任务中的水印参数类型
  *
  * @method integer getDefinition() 获取水印模板 ID。
  * @method void setDefinition(integer $Definition) 设置水印模板 ID。

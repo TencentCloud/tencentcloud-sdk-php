@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIngressEntries(array $IngressEntries) 设置网络ACl入站规则。
  * @method array getEgressEntries() 获取网络ACL出站规则。
  * @method void setEgressEntries(array $EgressEntries) 设置网络ACL出站规则。
+ * @method string getNetworkAclType() 获取网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+ * @method void setNetworkAclType(string $NetworkAclType) 设置网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+ * @method array getTagSet() 获取标签键值对
+ * @method void setTagSet(array $TagSet) 设置标签键值对
  */
 class NetworkAcl extends AbstractModel
 {
@@ -73,6 +77,16 @@ class NetworkAcl extends AbstractModel
     public $EgressEntries;
 
     /**
+     * @var string 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+     */
+    public $NetworkAclType;
+
+    /**
+     * @var array 标签键值对
+     */
+    public $TagSet;
+
+    /**
      * @param string $VpcId `VPC`实例`ID`。
      * @param string $NetworkAclId 网络ACL实例`ID`。
      * @param string $NetworkAclName 网络ACL名称，最大长度为60。
@@ -80,6 +94,8 @@ class NetworkAcl extends AbstractModel
      * @param array $SubnetSet 网络ACL关联的子网数组。
      * @param array $IngressEntries 网络ACl入站规则。
      * @param array $EgressEntries 网络ACL出站规则。
+     * @param string $NetworkAclType 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+     * @param array $TagSet 标签键值对
      */
     function __construct()
     {
@@ -134,6 +150,19 @@ class NetworkAcl extends AbstractModel
                 $obj = new NetworkAclEntry();
                 $obj->deserialize($value);
                 array_push($this->EgressEntries, $obj);
+            }
+        }
+
+        if (array_key_exists("NetworkAclType",$param) and $param["NetworkAclType"] !== null) {
+            $this->NetworkAclType = $param["NetworkAclType"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
             }
         }
     }

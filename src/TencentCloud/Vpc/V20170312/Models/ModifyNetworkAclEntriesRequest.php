@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNetworkAclId() 获取网络ACL实例ID。例如：acl-12345678。
  * @method void setNetworkAclId(string $NetworkAclId) 设置网络ACL实例ID。例如：acl-12345678。
- * @method NetworkAclEntrySet getNetworkAclEntrySet() 获取网络ACL规则集。
- * @method void setNetworkAclEntrySet(NetworkAclEntrySet $NetworkAclEntrySet) 设置网络ACL规则集。
+ * @method NetworkAclEntrySet getNetworkAclEntrySet() 获取网络ACL规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+ * @method void setNetworkAclEntrySet(NetworkAclEntrySet $NetworkAclEntrySet) 设置网络ACL规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+ * @method NetworkAclQuintupleEntries getNetworkAclQuintupleSet() 获取网络ACL五元组规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+ * @method void setNetworkAclQuintupleSet(NetworkAclQuintupleEntries $NetworkAclQuintupleSet) 设置网络ACL五元组规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
  */
 class ModifyNetworkAclEntriesRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class ModifyNetworkAclEntriesRequest extends AbstractModel
     public $NetworkAclId;
 
     /**
-     * @var NetworkAclEntrySet 网络ACL规则集。
+     * @var NetworkAclEntrySet 网络ACL规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
      */
     public $NetworkAclEntrySet;
 
     /**
+     * @var NetworkAclQuintupleEntries 网络ACL五元组规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+     */
+    public $NetworkAclQuintupleSet;
+
+    /**
      * @param string $NetworkAclId 网络ACL实例ID。例如：acl-12345678。
-     * @param NetworkAclEntrySet $NetworkAclEntrySet 网络ACL规则集。
+     * @param NetworkAclEntrySet $NetworkAclEntrySet 网络ACL规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+     * @param NetworkAclQuintupleEntries $NetworkAclQuintupleSet 网络ACL五元组规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
      */
     function __construct()
     {
@@ -61,6 +69,11 @@ class ModifyNetworkAclEntriesRequest extends AbstractModel
         if (array_key_exists("NetworkAclEntrySet",$param) and $param["NetworkAclEntrySet"] !== null) {
             $this->NetworkAclEntrySet = new NetworkAclEntrySet();
             $this->NetworkAclEntrySet->deserialize($param["NetworkAclEntrySet"]);
+        }
+
+        if (array_key_exists("NetworkAclQuintupleSet",$param) and $param["NetworkAclQuintupleSet"] !== null) {
+            $this->NetworkAclQuintupleSet = new NetworkAclQuintupleEntries();
+            $this->NetworkAclQuintupleSet->deserialize($param["NetworkAclQuintupleSet"]);
         }
     }
 }

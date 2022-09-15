@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDateOfExpiration(string $DateOfExpiration) 设置有效期
  * @method string getIssuingCountry() 获取发行国
  * @method void setIssuingCountry(string $IssuingCountry) 设置发行国
- * @method string getNationality() 获取国籍
- * @method void setNationality(string $Nationality) 设置国籍
+ * @method string getNationality() 获取国家地区代码
+ * @method void setNationality(string $Nationality) 设置国家地区代码
  * @method array getWarn() 获取告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
@@ -102,7 +102,7 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $IssuingCountry;
 
     /**
-     * @var string 国籍
+     * @var string 国家地区代码
      */
     public $Nationality;
 
@@ -154,7 +154,7 @@ class MLIDPassportOCRResponse extends AbstractModel
      * @param string $Sex 性别（F女，M男）
      * @param string $DateOfExpiration 有效期
      * @param string $IssuingCountry 发行国
-     * @param string $Nationality 国籍
+     * @param string $Nationality 国家地区代码
      * @param array $Warn 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警

@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSSLId(string $SSLId) 设置当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
  * @method string getId() 获取同ruleId
  * @method void setId(string $Id) 设置同ruleId
+ * @method integer getCCAIEnable() 获取智能cc开关，取值[0(关闭), 1(开启)]
+ * @method void setCCAIEnable(integer $CCAIEnable) 设置智能cc开关，取值[0(关闭), 1(开启)]
  */
 class L7RuleEntry extends AbstractModel
 {
@@ -177,6 +179,11 @@ class L7RuleEntry extends AbstractModel
     public $Id;
 
     /**
+     * @var integer 智能cc开关，取值[0(关闭), 1(开启)]
+     */
+    public $CCAIEnable;
+
+    /**
      * @param integer $KeepTime 会话保持时间，单位秒
      * @param string $Domain 转发域名
      * @param string $Protocol 转发协议，取值[http, https]
@@ -200,6 +207,7 @@ class L7RuleEntry extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      * @param string $Id 同ruleId
+     * @param integer $CCAIEnable 智能cc开关，取值[0(关闭), 1(开启)]
      */
     function __construct()
     {
@@ -301,6 +309,10 @@ class L7RuleEntry extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("CCAIEnable",$param) and $param["CCAIEnable"] !== null) {
+            $this->CCAIEnable = $param["CCAIEnable"];
         }
     }
 }

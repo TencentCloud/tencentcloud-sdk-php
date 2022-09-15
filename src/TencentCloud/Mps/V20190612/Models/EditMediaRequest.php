@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFileInfos() 获取输入的视频文件信息。
  * @method void setFileInfos(array $FileInfos) 设置输入的视频文件信息。
- * @method TaskOutputStorage getOutputStorage() 获取视频处理输出文件的目标存储。
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置视频处理输出文件的目标存储。
- * @method string getOutputObjectPath() 获取视频处理输出文件的目标路径。
- * @method void setOutputObjectPath(string $OutputObjectPath) 设置视频处理输出文件的目标路径。
+ * @method TaskOutputStorage getOutputStorage() 获取媒体处理输出文件的目标存储。
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置媒体处理输出文件的目标存储。
+ * @method string getOutputObjectPath() 获取媒体处理输出文件的目标路径。
+ * @method void setOutputObjectPath(string $OutputObjectPath) 设置媒体处理输出文件的目标路径。
  * @method EditMediaOutputConfig getOutputConfig() 获取编辑后生成的文件配置。
  * @method void setOutputConfig(EditMediaOutputConfig $OutputConfig) 设置编辑后生成的文件配置。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，不填代表不获取事件通知。
@@ -45,12 +45,12 @@ class EditMediaRequest extends AbstractModel
     public $FileInfos;
 
     /**
-     * @var TaskOutputStorage 视频处理输出文件的目标存储。
+     * @var TaskOutputStorage 媒体处理输出文件的目标存储。
      */
     public $OutputStorage;
 
     /**
-     * @var string 视频处理输出文件的目标路径。
+     * @var string 媒体处理输出文件的目标路径。
      */
     public $OutputObjectPath;
 
@@ -81,8 +81,8 @@ class EditMediaRequest extends AbstractModel
 
     /**
      * @param array $FileInfos 输入的视频文件信息。
-     * @param TaskOutputStorage $OutputStorage 视频处理输出文件的目标存储。
-     * @param string $OutputObjectPath 视频处理输出文件的目标路径。
+     * @param TaskOutputStorage $OutputStorage 媒体处理输出文件的目标存储。
+     * @param string $OutputObjectPath 媒体处理输出文件的目标路径。
      * @param EditMediaOutputConfig $OutputConfig 编辑后生成的文件配置。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      * @param integer $TasksPriority 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。

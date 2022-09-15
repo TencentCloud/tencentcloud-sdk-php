@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEmailIdentities() 获取发信域名列表
  * @method void setEmailIdentities(array $EmailIdentities) 设置发信域名列表
+ * @method integer getMaxReputationLevel() 获取最大信誉等级
+ * @method void setMaxReputationLevel(integer $MaxReputationLevel) 设置最大信誉等级
+ * @method integer getMaxDailyQuota() 获取单域名最高日发送量
+ * @method void setMaxDailyQuota(integer $MaxDailyQuota) 设置单域名最高日发送量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,24 @@ class ListEmailIdentitiesResponse extends AbstractModel
     public $EmailIdentities;
 
     /**
+     * @var integer 最大信誉等级
+     */
+    public $MaxReputationLevel;
+
+    /**
+     * @var integer 单域名最高日发送量
+     */
+    public $MaxDailyQuota;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $EmailIdentities 发信域名列表
+     * @param integer $MaxReputationLevel 最大信誉等级
+     * @param integer $MaxDailyQuota 单域名最高日发送量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +77,14 @@ class ListEmailIdentitiesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EmailIdentities, $obj);
             }
+        }
+
+        if (array_key_exists("MaxReputationLevel",$param) and $param["MaxReputationLevel"] !== null) {
+            $this->MaxReputationLevel = $param["MaxReputationLevel"];
+        }
+
+        if (array_key_exists("MaxDailyQuota",$param) and $param["MaxDailyQuota"] !== null) {
+            $this->MaxDailyQuota = $param["MaxDailyQuota"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

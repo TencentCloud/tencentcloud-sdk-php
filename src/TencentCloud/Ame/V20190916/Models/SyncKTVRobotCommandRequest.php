@@ -33,6 +33,7 @@ use TencentCloud\Common\AbstractModel;
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
 <li>SetDestroyMode：设置销毁模式</li>
+<li>SetVolume：设置音量</li>
  * @method void setCommand(string $Command) 设置指令，取值有：
 <li>Play：播放</li>
 <li>Pause：暂停</li>
@@ -44,6 +45,7 @@ use TencentCloud\Common\AbstractModel;
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
 <li>SetDestroyMode：设置销毁模式</li>
+<li>SetVolume：设置音量</li>
  * @method PlayCommandInput getPlayCommandInput() 获取播放参数。
  * @method void setPlayCommandInput(PlayCommandInput $PlayCommandInput) 设置播放参数。
  * @method SetPlaylistCommandInput getSetPlaylistCommandInput() 获取播放列表变更信息，当Command取SetPlaylist时，必填。
@@ -58,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSetPlayModeCommandInput(SetPlayModeCommandInput $SetPlayModeCommandInput) 设置播放模式，当Command取SetPlayMode时，必填。
  * @method SetDestroyModeCommandInput getSetDestroyModeCommandInput() 获取销毁模式，当Command取SetDestroyMode时，必填。
  * @method void setSetDestroyModeCommandInput(SetDestroyModeCommandInput $SetDestroyModeCommandInput) 设置销毁模式，当Command取SetDestroyMode时，必填。
+ * @method SetVolumeCommandInput getSetVolumeCommandInput() 获取音量，当Command取SetVolume时，必填。
+ * @method void setSetVolumeCommandInput(SetVolumeCommandInput $SetVolumeCommandInput) 设置音量，当Command取SetVolume时，必填。
  */
 class SyncKTVRobotCommandRequest extends AbstractModel
 {
@@ -78,6 +82,7 @@ class SyncKTVRobotCommandRequest extends AbstractModel
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
 <li>SetDestroyMode：设置销毁模式</li>
+<li>SetVolume：设置音量</li>
      */
     public $Command;
 
@@ -117,6 +122,11 @@ class SyncKTVRobotCommandRequest extends AbstractModel
     public $SetDestroyModeCommandInput;
 
     /**
+     * @var SetVolumeCommandInput 音量，当Command取SetVolume时，必填。
+     */
+    public $SetVolumeCommandInput;
+
+    /**
      * @param string $RobotId 机器人Id。
      * @param string $Command 指令，取值有：
 <li>Play：播放</li>
@@ -129,6 +139,7 @@ class SyncKTVRobotCommandRequest extends AbstractModel
 <li>SetAudioParam：音频参数变更</li>
 <li>SendMessage：发送自定义消息</li>
 <li>SetDestroyMode：设置销毁模式</li>
+<li>SetVolume：设置音量</li>
      * @param PlayCommandInput $PlayCommandInput 播放参数。
      * @param SetPlaylistCommandInput $SetPlaylistCommandInput 播放列表变更信息，当Command取SetPlaylist时，必填。
      * @param SeekCommandInput $SeekCommandInput 播放进度，当Command取Seek时，必填。
@@ -136,6 +147,7 @@ class SyncKTVRobotCommandRequest extends AbstractModel
      * @param SendMessageCommandInput $SendMessageCommandInput 自定义消息，当Command取SendMessage时，必填。
      * @param SetPlayModeCommandInput $SetPlayModeCommandInput 播放模式，当Command取SetPlayMode时，必填。
      * @param SetDestroyModeCommandInput $SetDestroyModeCommandInput 销毁模式，当Command取SetDestroyMode时，必填。
+     * @param SetVolumeCommandInput $SetVolumeCommandInput 音量，当Command取SetVolume时，必填。
      */
     function __construct()
     {
@@ -191,6 +203,11 @@ class SyncKTVRobotCommandRequest extends AbstractModel
         if (array_key_exists("SetDestroyModeCommandInput",$param) and $param["SetDestroyModeCommandInput"] !== null) {
             $this->SetDestroyModeCommandInput = new SetDestroyModeCommandInput();
             $this->SetDestroyModeCommandInput->deserialize($param["SetDestroyModeCommandInput"]);
+        }
+
+        if (array_key_exists("SetVolumeCommandInput",$param) and $param["SetVolumeCommandInput"] !== null) {
+            $this->SetVolumeCommandInput = new SetVolumeCommandInput();
+            $this->SetVolumeCommandInput->deserialize($param["SetVolumeCommandInput"]);
         }
     }
 }

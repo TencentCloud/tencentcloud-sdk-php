@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigure(array $Configure) 设置七层限频具体配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSwitch() 获取是否开启改规则 on 开启，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSwitch(string $Switch) 设置是否开启改规则 on 开启，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdvancedCCRules extends AbstractModel
 {
@@ -101,6 +105,12 @@ class AdvancedCCRules extends AbstractModel
     public $Configure;
 
     /**
+     * @var string 是否开启改规则 on 开启，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Switch;
+
+    /**
      * @param string $RuleName 规则名称
      * @param integer $DetectionTime 探测时长
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,6 +125,8 @@ class AdvancedCCRules extends AbstractModel
      * @param string $RedirectUrl 动作为 redirect 时，重定向的url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Configure 七层限频具体配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Switch 是否开启改规则 on 开启，off关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -165,6 +177,10 @@ class AdvancedCCRules extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Configure, $obj);
             }
+        }
+
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

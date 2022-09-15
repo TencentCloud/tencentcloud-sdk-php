@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSponsor(SponsorInfo $Sponsor) 设置可选填写。详情请跳转至SponsorInfo查看。
  * @method OnlineScamInfo getOnlineScam() 获取可选填写。详情请跳转至OnlineScamInfo查看。
  * @method void setOnlineScam(OnlineScamInfo $OnlineScam) 设置可选填写。详情请跳转至OnlineScamInfo查看。
+ * @method string getPlatform() 获取平台: 1android
+ * @method void setPlatform(string $Platform) 设置平台: 1android
  */
 class InputManageMarketingRisk extends AbstractModel
 {
@@ -189,6 +191,11 @@ class InputManageMarketingRisk extends AbstractModel
     public $OnlineScam;
 
     /**
+     * @var string 平台: 1android
+     */
+    public $Platform;
+
+    /**
      * @param AccountInfo $Account 账号信息。
      * @param string $SceneCode 场景类型：场景SceneCode, 控制台上新建对应的场景并获取对应的值；
 例如：e_register_protection_1521184361
@@ -216,6 +223,7 @@ class InputManageMarketingRisk extends AbstractModel
      * @param array $Details 详细信息
      * @param SponsorInfo $Sponsor 可选填写。详情请跳转至SponsorInfo查看。
      * @param OnlineScamInfo $OnlineScam 可选填写。详情请跳转至OnlineScamInfo查看。
+     * @param string $Platform 平台: 1android
      */
     function __construct()
     {
@@ -320,6 +328,10 @@ class InputManageMarketingRisk extends AbstractModel
         if (array_key_exists("OnlineScam",$param) and $param["OnlineScam"] !== null) {
             $this->OnlineScam = new OnlineScamInfo();
             $this->OnlineScam->deserialize($param["OnlineScam"]);
+        }
+
+        if (array_key_exists("Platform",$param) and $param["Platform"] !== null) {
+            $this->Platform = $param["Platform"];
         }
     }
 }

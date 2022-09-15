@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
+<li>ScheduleTask：编排处理任务。</li>
  * @method void setTaskType(string $TaskType) 设置任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
+<li>ScheduleTask：编排处理任务。</li>
  * @method string getStatus() 获取任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -42,13 +44,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginProcessTime(string $BeginProcessTime) 设置任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getFinishTime() 获取任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setFinishTime(string $FinishTime) 设置任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
- * @method WorkflowTask getWorkflowTask() 获取视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWorkflowTask(WorkflowTask $WorkflowTask) 设置视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EditMediaTask getEditMediaTask() 获取视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditMediaTask(EditMediaTask $EditMediaTask) 设置视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method WorkflowTask getWorkflowTask() 获取视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkflowTask(WorkflowTask $WorkflowTask) 设置视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method LiveStreamProcessTask getLiveStreamProcessTask() 获取直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
  * @method string getExtInfo() 获取扩展信息字段，仅用于特定场景。
  * @method void setExtInfo(string $ExtInfo) 设置扩展信息字段，仅用于特定场景。
+ * @method ScheduleTask getScheduleTask() 获取编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleTask(ScheduleTask $ScheduleTask) 设置编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -76,6 +82,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
+<li>ScheduleTask：编排处理任务。</li>
      */
     public $TaskType;
 
@@ -103,16 +110,16 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $FinishTime;
 
     /**
-     * @var WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $WorkflowTask;
-
-    /**
      * @var EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EditMediaTask;
+
+    /**
+     * @var WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkflowTask;
 
     /**
      * @var LiveStreamProcessTask 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
@@ -147,6 +154,12 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $ExtInfo;
 
     /**
+     * @var ScheduleTask 编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleTask;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -156,6 +169,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>EditMediaTask：视频编辑任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
+<li>ScheduleTask：编排处理任务。</li>
      * @param string $Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -163,9 +177,9 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param string $CreateTime 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-     * @param WorkflowTask $WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTask $EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMediaTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowTask $WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveStreamProcessTask $LiveStreamProcessTask 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -175,6 +189,8 @@ class DescribeTaskDetailResponse extends AbstractModel
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
      * @param string $ExtInfo 扩展信息字段，仅用于特定场景。
+     * @param ScheduleTask $ScheduleTask 编排处理任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -210,14 +226,14 @@ class DescribeTaskDetailResponse extends AbstractModel
             $this->FinishTime = $param["FinishTime"];
         }
 
-        if (array_key_exists("WorkflowTask",$param) and $param["WorkflowTask"] !== null) {
-            $this->WorkflowTask = new WorkflowTask();
-            $this->WorkflowTask->deserialize($param["WorkflowTask"]);
-        }
-
         if (array_key_exists("EditMediaTask",$param) and $param["EditMediaTask"] !== null) {
             $this->EditMediaTask = new EditMediaTask();
             $this->EditMediaTask->deserialize($param["EditMediaTask"]);
+        }
+
+        if (array_key_exists("WorkflowTask",$param) and $param["WorkflowTask"] !== null) {
+            $this->WorkflowTask = new WorkflowTask();
+            $this->WorkflowTask->deserialize($param["WorkflowTask"]);
         }
 
         if (array_key_exists("LiveStreamProcessTask",$param) and $param["LiveStreamProcessTask"] !== null) {
@@ -244,6 +260,11 @@ class DescribeTaskDetailResponse extends AbstractModel
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
             $this->ExtInfo = $param["ExtInfo"];
+        }
+
+        if (array_key_exists("ScheduleTask",$param) and $param["ScheduleTask"] !== null) {
+            $this->ScheduleTask = new ScheduleTask();
+            $this->ScheduleTask->deserialize($param["ScheduleTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRegions请求参数结构体
  *
- * @method string getProduct() 获取待查询产品的名称，例如cvm
- * @method void setProduct(string $Product) 设置待查询产品的名称，例如cvm
+ * @method string getProduct() 获取待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
+ * @method void setProduct(string $Product) 设置待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
  */
 class DescribeRegionsRequest extends AbstractModel
 {
     /**
-     * @var string 待查询产品的名称，例如cvm
+     * @var string 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
      */
     public $Product;
 
     /**
-     * @param string $Product 待查询产品的名称，例如cvm
+     * @param string $Product 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
      */
     function __construct()
     {

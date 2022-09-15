@@ -38,6 +38,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+ * @method string getRspImgType() 获取返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+ * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
  */
 class SegmentPortraitPicRequest extends AbstractModel
 {
@@ -59,6 +61,11 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $Url;
 
     /**
+     * @var string 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+     */
+    public $RspImgType;
+
+    /**
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
 图片分辨率须小于2000*2000。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -68,6 +75,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * @param string $RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
+            $this->RspImgType = $param["RspImgType"];
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHoldApplicationUntilProxyStarts(boolean $HoldApplicationUntilProxyStarts) 设置是否等待sidecar启动
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHoldProxyUntilApplicationEnds() 获取是否允许sidecar等待
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHoldProxyUntilApplicationEnds(boolean $HoldProxyUntilApplicationEnds) 设置是否允许sidecar等待
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InjectConfig extends AbstractModel
 {
@@ -44,9 +48,17 @@ class InjectConfig extends AbstractModel
     public $HoldApplicationUntilProxyStarts;
 
     /**
+     * @var boolean 是否允许sidecar等待
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HoldProxyUntilApplicationEnds;
+
+    /**
      * @param array $ExcludeIPRanges 不需要进行代理的 ip 地址范围
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HoldApplicationUntilProxyStarts 是否等待sidecar启动
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HoldProxyUntilApplicationEnds 是否允许sidecar等待
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +80,10 @@ class InjectConfig extends AbstractModel
 
         if (array_key_exists("HoldApplicationUntilProxyStarts",$param) and $param["HoldApplicationUntilProxyStarts"] !== null) {
             $this->HoldApplicationUntilProxyStarts = $param["HoldApplicationUntilProxyStarts"];
+        }
+
+        if (array_key_exists("HoldProxyUntilApplicationEnds",$param) and $param["HoldProxyUntilApplicationEnds"] !== null) {
+            $this->HoldProxyUntilApplicationEnds = $param["HoldProxyUntilApplicationEnds"];
         }
     }
 }

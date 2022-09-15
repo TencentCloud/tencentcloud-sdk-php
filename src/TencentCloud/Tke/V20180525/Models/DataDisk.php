@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountTarget(string $MountTarget) 设置挂载目录
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskPartition() 获取挂载设备名或分区名
+ * @method string getDiskPartition() 获取挂载设备名或分区名，当且仅当添加已有节点时需要
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskPartition(string $DiskPartition) 设置挂载设备名或分区名
+ * @method void setDiskPartition(string $DiskPartition) 设置挂载设备名或分区名，当且仅当添加已有节点时需要
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataDisk extends AbstractModel
@@ -78,7 +78,7 @@ class DataDisk extends AbstractModel
     public $MountTarget;
 
     /**
-     * @var string 挂载设备名或分区名
+     * @var string 挂载设备名或分区名，当且仅当添加已有节点时需要
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskPartition;
@@ -94,7 +94,7 @@ class DataDisk extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountTarget 挂载目录
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskPartition 挂载设备名或分区名
+     * @param string $DiskPartition 挂载设备名或分区名，当且仅当添加已有节点时需要
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

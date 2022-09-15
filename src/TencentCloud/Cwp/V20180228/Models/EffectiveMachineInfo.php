@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineStatus(string $MachineStatus) 设置在线状态 OFFLINE，ONLINE
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method LicenseOrder getLicenseOrder() 获取授权订单对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLicenseOrder(LicenseOrder $LicenseOrder) 设置授权订单对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVulNum() 获取漏洞数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVulNum(integer $VulNum) 设置漏洞数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EffectiveMachineInfo extends AbstractModel
 {
@@ -104,6 +112,18 @@ class EffectiveMachineInfo extends AbstractModel
     public $MachineStatus;
 
     /**
+     * @var LicenseOrder 授权订单对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LicenseOrder;
+
+    /**
+     * @var integer 漏洞数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VulNum;
+
+    /**
      * @param string $MachineName 机器名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachinePublicIp 机器公网ip
@@ -119,6 +139,10 @@ class EffectiveMachineInfo extends AbstractModel
      * @param string $KernelVersion 内核版本号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineStatus 在线状态 OFFLINE，ONLINE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LicenseOrder $LicenseOrder 授权订单对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VulNum 漏洞数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -169,6 +193,15 @@ class EffectiveMachineInfo extends AbstractModel
 
         if (array_key_exists("MachineStatus",$param) and $param["MachineStatus"] !== null) {
             $this->MachineStatus = $param["MachineStatus"];
+        }
+
+        if (array_key_exists("LicenseOrder",$param) and $param["LicenseOrder"] !== null) {
+            $this->LicenseOrder = new LicenseOrder();
+            $this->LicenseOrder->deserialize($param["LicenseOrder"]);
+        }
+
+        if (array_key_exists("VulNum",$param) and $param["VulNum"] !== null) {
+            $this->VulNum = $param["VulNum"];
         }
     }
 }

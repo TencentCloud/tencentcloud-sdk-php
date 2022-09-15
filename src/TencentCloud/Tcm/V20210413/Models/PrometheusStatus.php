@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGrafana(GrafanaInfo $Grafana) 设置Grafana信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取Prometheus 类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(string $Type) 设置Prometheus 类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusStatus extends AbstractModel
 {
@@ -76,6 +80,12 @@ class PrometheusStatus extends AbstractModel
     public $Grafana;
 
     /**
+     * @var string Prometheus 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
      * @param string $PrometheusId Prometheus Id
      * @param string $DisplayName 展示名称
      * @param string $InstanceId 实例Id
@@ -83,6 +93,8 @@ class PrometheusStatus extends AbstractModel
      * @param string $State 状态
      * @param string $Region 地区
      * @param GrafanaInfo $Grafana Grafana信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type Prometheus 类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -125,6 +137,10 @@ class PrometheusStatus extends AbstractModel
         if (array_key_exists("Grafana",$param) and $param["Grafana"] !== null) {
             $this->Grafana = new GrafanaInfo();
             $this->Grafana->deserialize($param["Grafana"]);
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

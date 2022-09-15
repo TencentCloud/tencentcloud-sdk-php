@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubDomain(string $SubDomain) 设置主机记录，如 www，如果不传，默认为 @。
  * @method string getRecordLineId() 获取线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
  * @method void setRecordLineId(string $RecordLineId) 设置线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+ * @method integer getTtl() 获取TTL值，如果不传，默认为域名的TTL值。
+ * @method void setTtl(integer $Ttl) 设置TTL值，如果不传，默认为域名的TTL值。
  */
 class ModifyDynamicDNSRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyDynamicDNSRequest extends AbstractModel
     public $RecordLineId;
 
     /**
+     * @var integer TTL值，如果不传，默认为域名的TTL值。
+     */
+    public $Ttl;
+
+    /**
      * @param string $Domain 域名
      * @param integer $RecordId 记录ID。
      * @param string $RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
@@ -80,6 +87,7 @@ class ModifyDynamicDNSRequest extends AbstractModel
      * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      * @param string $SubDomain 主机记录，如 www，如果不传，默认为 @。
      * @param string $RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @param integer $Ttl TTL值，如果不传，默认为域名的TTL值。
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ModifyDynamicDNSRequest extends AbstractModel
 
         if (array_key_exists("RecordLineId",$param) and $param["RecordLineId"] !== null) {
             $this->RecordLineId = $param["RecordLineId"];
+        }
+
+        if (array_key_exists("Ttl",$param) and $param["Ttl"] !== null) {
+            $this->Ttl = $param["Ttl"];
         }
     }
 }

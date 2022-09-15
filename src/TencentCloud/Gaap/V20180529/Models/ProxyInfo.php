@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerRegion(string $RealServerRegion) 设置源站地域。
  * @method integer getBandwidth() 获取带宽，单位：Mbps。
  * @method void setBandwidth(integer $Bandwidth) 设置带宽，单位：Mbps。
- * @method integer getConcurrent() 获取并发，单位：个/秒。
- * @method void setConcurrent(integer $Concurrent) 设置并发，单位：个/秒。
+ * @method integer getConcurrent() 获取并发，单位：万个/秒。
+ * @method void setConcurrent(integer $Concurrent) 设置并发，单位：万个/秒。
  * @method string getStatus() 获取通道状态。其中：
 RUNNING表示运行中；
 CREATING表示创建中；
@@ -48,7 +48,9 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中。
+CLONING表示复制中；
+RECOVERING表示通道维护中；
+MOVING表示迁移中。
  * @method void setStatus(string $Status) 设置通道状态。其中：
 RUNNING表示运行中；
 CREATING表示创建中；
@@ -59,7 +61,9 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中。
+CLONING表示复制中；
+RECOVERING表示通道维护中；
+MOVING表示迁移中。
  * @method string getDomain() 获取接入域名。
  * @method void setDomain(string $Domain) 设置接入域名。
  * @method string getIP() 获取接入IP。
@@ -124,9 +128,9 @@ CLONING表示复制中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本：IPv4、IPv6
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNetworkType() 获取网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+ * @method string getNetworkType() 获取网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetworkType(string $NetworkType) 设置网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+ * @method void setNetworkType(string $NetworkType) 设置网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageType() 获取通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
@@ -153,6 +157,32 @@ CrossBorder表示跨境通道。
  * @method integer getInBanBlacklist() 获取是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInBanBlacklist(integer $InBanBlacklist) 设置是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFeatureBitmap() 获取特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFeatureBitmap(integer $FeatureBitmap) 设置特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
@@ -194,7 +224,7 @@ class ProxyInfo extends AbstractModel
     public $Bandwidth;
 
     /**
-     * @var integer 并发，单位：个/秒。
+     * @var integer 并发，单位：万个/秒。
      */
     public $Concurrent;
 
@@ -209,7 +239,9 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中。
+CLONING表示复制中；
+RECOVERING表示通道维护中；
+MOVING表示迁移中。
      */
     public $Status;
 
@@ -322,7 +354,7 @@ CLONING表示复制中。
     public $IPAddressVersion;
 
     /**
-     * @var string 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+     * @var string 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkType;
@@ -361,6 +393,23 @@ CrossBorder表示跨境通道。
     public $InBanBlacklist;
 
     /**
+     * @var integer 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FeatureBitmap;
+
+    /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
@@ -369,7 +418,7 @@ CrossBorder表示跨境通道。
      * @param string $AccessRegion 接入地域。
      * @param string $RealServerRegion 源站地域。
      * @param integer $Bandwidth 带宽，单位：Mbps。
-     * @param integer $Concurrent 并发，单位：个/秒。
+     * @param integer $Concurrent 并发，单位：万个/秒。
      * @param string $Status 通道状态。其中：
 RUNNING表示运行中；
 CREATING表示创建中；
@@ -380,7 +429,9 @@ CLOSED表示已关闭；
 ADJUSTING表示配置变更中；
 ISOLATING表示隔离中；
 ISOLATED表示已隔离；
-CLONING表示复制中。
+CLONING表示复制中；
+RECOVERING表示通道维护中；
+MOVING表示迁移中。
      * @param string $Domain 接入域名。
      * @param string $IP 接入IP。
      * @param string $Version 通道版本号：1.0，2.0，3.0。
@@ -413,7 +464,7 @@ CLONING表示复制中。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本：IPv4、IPv6
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
+     * @param string $NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
@@ -427,6 +478,19 @@ CrossBorder表示跨境通道。
 1表示启用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
+0，表示不支持该特性；
+1，表示支持该特性。
+特性位图含义如下（从右往左）：
+第1个bit，支持4层加速；
+第2个bit，支持7层加速；
+第3个bit，支持Http3接入；
+第4个bit，支持IPv6；
+第5个bit，支持精品BGP接入；
+第6个bit，支持三网接入；
+第7个bit，支持接入段Qos加速。
+注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -588,6 +652,10 @@ CrossBorder表示跨境通道。
 
         if (array_key_exists("InBanBlacklist",$param) and $param["InBanBlacklist"] !== null) {
             $this->InBanBlacklist = $param["InBanBlacklist"];
+        }
+
+        if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
+            $this->FeatureBitmap = $param["FeatureBitmap"];
         }
     }
 }

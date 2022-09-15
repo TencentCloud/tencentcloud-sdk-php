@@ -64,6 +64,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPortMappings(array $PortMappings) 设置端口映射
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getServicePortMappingList() 获取每种类型访问配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServicePortMappingList(array $ServicePortMappingList) 设置每种类型访问配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getFlushAll() 获取刷新复写所有类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFlushAll(boolean $FlushAll) 设置刷新复写所有类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableRegistryNextDeploy() 获取1: 下次部署自动注入注册中心信息；0：不注入
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableRegistryNextDeploy(integer $EnableRegistryNextDeploy) 设置1: 下次部署自动注入注册中心信息；0：不注入
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取返回应用id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置返回应用id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAllIpDone() 获取所有服务IP是否已经ready
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAllIpDone(boolean $AllIpDone) 设置所有服务IP是否已经ready
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EksService extends AbstractModel
 {
@@ -134,6 +154,36 @@ class EksService extends AbstractModel
     public $PortMappings;
 
     /**
+     * @var array 每种类型访问配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServicePortMappingList;
+
+    /**
+     * @var boolean 刷新复写所有类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FlushAll;
+
+    /**
+     * @var integer 1: 下次部署自动注入注册中心信息；0：不注入
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableRegistryNextDeploy;
+
+    /**
+     * @var string 返回应用id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
+     * @var boolean 所有服务IP是否已经ready
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AllIpDone;
+
+    /**
      * @param string $Name service name
      * @param array $Ports 可用端口
      * @param string $Yaml yaml 内容
@@ -155,6 +205,16 @@ class EksService extends AbstractModel
      * @param string $LoadBalanceId 负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PortMappings 端口映射
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ServicePortMappingList 每种类型访问配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $FlushAll 刷新复写所有类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableRegistryNextDeploy 1: 下次部署自动注入注册中心信息；0：不注入
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId 返回应用id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AllIpDone 所有服务IP是否已经ready
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -217,6 +277,31 @@ class EksService extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PortMappings, $obj);
             }
+        }
+
+        if (array_key_exists("ServicePortMappingList",$param) and $param["ServicePortMappingList"] !== null) {
+            $this->ServicePortMappingList = [];
+            foreach ($param["ServicePortMappingList"] as $key => $value){
+                $obj = new ServicePortMapping();
+                $obj->deserialize($value);
+                array_push($this->ServicePortMappingList, $obj);
+            }
+        }
+
+        if (array_key_exists("FlushAll",$param) and $param["FlushAll"] !== null) {
+            $this->FlushAll = $param["FlushAll"];
+        }
+
+        if (array_key_exists("EnableRegistryNextDeploy",$param) and $param["EnableRegistryNextDeploy"] !== null) {
+            $this->EnableRegistryNextDeploy = $param["EnableRegistryNextDeploy"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("AllIpDone",$param) and $param["AllIpDone"] !== null) {
+            $this->AllIpDone = $param["AllIpDone"];
         }
     }
 }

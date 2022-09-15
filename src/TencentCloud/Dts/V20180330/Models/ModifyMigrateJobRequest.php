@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 如果是'整个实例'的迁移模式,不需设置该字段
+ * @method string getSrcNodeType() 获取源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+ * @method void setSrcNodeType(string $SrcNodeType) 设置源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+ * @method array getSrcInfoMulti() 获取源实例信息，具体内容跟迁移任务类型相关
+ * @method void setSrcInfoMulti(array $SrcInfoMulti) 设置源实例信息，具体内容跟迁移任务类型相关
  */
 class ModifyMigrateJobRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class ModifyMigrateJobRequest extends AbstractModel
     public $DatabaseInfo;
 
     /**
+     * @var string 源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+     */
+    public $SrcNodeType;
+
+    /**
+     * @var array 源实例信息，具体内容跟迁移任务类型相关
+     */
+    public $SrcInfoMulti;
+
+    /**
      * @param string $JobId 待修改的数据迁移任务ID
      * @param string $JobName 数据迁移任务名称
      * @param MigrateOption $MigrateOption 迁移任务配置选项
@@ -116,6 +130,8 @@ class ModifyMigrateJobRequest extends AbstractModel
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 如果是'整个实例'的迁移模式,不需设置该字段
+     * @param string $SrcNodeType 源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+     * @param array $SrcInfoMulti 源实例信息，具体内容跟迁移任务类型相关
      */
     function __construct()
     {
@@ -163,6 +179,19 @@ class ModifyMigrateJobRequest extends AbstractModel
 
         if (array_key_exists("DatabaseInfo",$param) and $param["DatabaseInfo"] !== null) {
             $this->DatabaseInfo = $param["DatabaseInfo"];
+        }
+
+        if (array_key_exists("SrcNodeType",$param) and $param["SrcNodeType"] !== null) {
+            $this->SrcNodeType = $param["SrcNodeType"];
+        }
+
+        if (array_key_exists("SrcInfoMulti",$param) and $param["SrcInfoMulti"] !== null) {
+            $this->SrcInfoMulti = [];
+            foreach ($param["SrcInfoMulti"] as $key => $value){
+                $obj = new SrcInfo();
+                $obj->deserialize($value);
+                array_push($this->SrcInfoMulti, $obj);
+            }
         }
     }
 }

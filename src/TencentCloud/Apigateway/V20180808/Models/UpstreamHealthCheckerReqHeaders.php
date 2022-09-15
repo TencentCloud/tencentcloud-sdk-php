@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VPC通道主动健康检查的请求头配置
+ * 后端通道主动健康检查的请求头配置
  *
 
  */

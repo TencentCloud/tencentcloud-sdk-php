@@ -23,10 +23,18 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Gse\V20191112\Models as Models;
 
 /**
- * @method Models\AttachCcnInstancesResponse AttachCcnInstances(Models\AttachCcnInstancesRequest $req) 本接口（AttachCcnInstances）用于关联云联网实例。
- * @method Models\CopyFleetResponse CopyFleet(Models\CopyFleetRequest $req) 本接口（CopyFleet）用于复制服务器舰队。
- * @method Models\CreateAliasResponse CreateAlias(Models\CreateAliasRequest $req) 本接口（CreateAlias）用于创建别名。
- * @method Models\CreateAssetResponse CreateAsset(Models\CreateAssetRequest $req) 本接口（CreateAsset）用于创建生成包。
+ * @method Models\AttachCcnInstancesResponse AttachCcnInstances(Models\AttachCcnInstancesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（AttachCcnInstances）用于关联云联网实例。
+ * @method Models\CopyFleetResponse CopyFleet(Models\CopyFleetRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（CopyFleet）用于复制服务器舰队。
+ * @method Models\CreateAliasResponse CreateAlias(Models\CreateAliasRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（CreateAlias）用于创建别名。
+ * @method Models\CreateAssetResponse CreateAsset(Models\CreateAssetRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（CreateAsset）用于创建生成包。
 通过获取上传cos的临时密钥，将文件上传至cos，然后将生成包的zip名称下发给本接口完成资源创建。  
 
 上传文件至 cos支持俩种方式：
@@ -40,61 +48,161 @@ use TencentCloud\Gse\V20191112\Models as Models;
     3. 使用 COS API 进行上传([参考文档](https://cloud.tencent.com/document/product/436/7742))
 
 具体使用场景可以参考 [GetUploadCredentials](https://cloud.tencent.com/document/product/1165/48727) ,  [GetUploadFederationToken](https://cloud.tencent.com/document/product/1165/48742)和下面 CreateAsset 示例。  
- * @method Models\CreateAssetWithImageResponse CreateAssetWithImage(Models\CreateAssetWithImageRequest $req) 本接口（CreateAssetWithImage）用于创建生成包镜像信息。
- * @method Models\CreateFleetResponse CreateFleet(Models\CreateFleetRequest $req) 本接口（CreateFleet）用于创建服务器舰队。
- * @method Models\CreateGameServerSessionResponse CreateGameServerSession(Models\CreateGameServerSessionRequest $req) 本接口（CreateGameServerSession）用于创建游戏服务会话。
- * @method Models\CreateGameServerSessionQueueResponse CreateGameServerSessionQueue(Models\CreateGameServerSessionQueueRequest $req) 本接口（CreateGameServerSessionQueue）用于创建游戏服务器会话队列。
- * @method Models\DeleteAliasResponse DeleteAlias(Models\DeleteAliasRequest $req) 本接口（DeleteAlias）用于删除别名。
- * @method Models\DeleteAssetResponse DeleteAsset(Models\DeleteAssetRequest $req) 本接口（DeleteAsset）用于删除生成包。
- * @method Models\DeleteFleetResponse DeleteFleet(Models\DeleteFleetRequest $req) 本接口（DeleteFleet）用于删除服务器舰队。
- * @method Models\DeleteGameServerSessionQueueResponse DeleteGameServerSessionQueue(Models\DeleteGameServerSessionQueueRequest $req) 本接口（DeleteGameServerSessionQueue）用于删除游戏服务器会话队列。
- * @method Models\DeleteScalingPolicyResponse DeleteScalingPolicy(Models\DeleteScalingPolicyRequest $req) 本接口（DeleteScalingPolicy）用于删除服务器舰队的扩缩容策略。
+ * @method Models\CreateAssetWithImageResponse CreateAssetWithImage(Models\CreateAssetWithImageRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（CreateAssetWithImage）用于创建生成包镜像信息。
+ * @method Models\CreateFleetResponse CreateFleet(Models\CreateFleetRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（CreateFleet）用于创建服务器舰队。
+ * @method Models\CreateGameServerSessionResponse CreateGameServerSession(Models\CreateGameServerSessionRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（CreateGameServerSession）用于创建游戏服务会话。
+ * @method Models\CreateGameServerSessionQueueResponse CreateGameServerSessionQueue(Models\CreateGameServerSessionQueueRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（CreateGameServerSessionQueue）用于创建游戏服务器会话队列。
+ * @method Models\DeleteAliasResponse DeleteAlias(Models\DeleteAliasRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DeleteAlias）用于删除别名。
+ * @method Models\DeleteAssetResponse DeleteAsset(Models\DeleteAssetRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DeleteAsset）用于删除生成包。
+ * @method Models\DeleteFleetResponse DeleteFleet(Models\DeleteFleetRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DeleteFleet）用于删除服务器舰队。
+ * @method Models\DeleteGameServerSessionQueueResponse DeleteGameServerSessionQueue(Models\DeleteGameServerSessionQueueRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DeleteGameServerSessionQueue）用于删除游戏服务器会话队列。
+ * @method Models\DeleteScalingPolicyResponse DeleteScalingPolicy(Models\DeleteScalingPolicyRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DeleteScalingPolicy）用于删除服务器舰队的扩缩容策略。
 通过服务器舰队ID和策略名称删除服务器舰队的扩缩容策略，只传递服务器舰队ID时，会将这个服务器舰队下的所有策略都删除。
 传递策略名称时，单独删除策略名称对应的策略。
- * @method Models\DeleteTimerScalingPolicyResponse DeleteTimerScalingPolicy(Models\DeleteTimerScalingPolicyRequest $req) 本接口（DeleteTimerScalingPolicy）用于删除fleet下的定时器。
+ * @method Models\DeleteTimerScalingPolicyResponse DeleteTimerScalingPolicy(Models\DeleteTimerScalingPolicyRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
 
- * @method Models\DescribeAliasResponse DescribeAlias(Models\DescribeAliasRequest $req) 本接口（DescribeAlias）用于获取别名详情。
- * @method Models\DescribeAssetResponse DescribeAsset(Models\DescribeAssetRequest $req) 本接口（DescribeAsset）获取生成包信息。
- * @method Models\DescribeAssetSystemsResponse DescribeAssetSystems(Models\DescribeAssetSystemsRequest $req) 本接口（DescribeAssetSystems）用于获取生成包支持的操作系统。
- * @method Models\DescribeAssetsResponse DescribeAssets(Models\DescribeAssetsRequest $req) 本接口（DescribeAssets）用于获取生成包列表。
- * @method Models\DescribeCcnInstancesResponse DescribeCcnInstances(Models\DescribeCcnInstancesRequest $req) 本接口（DescribeCcnInstances）用于查询云联网实例。
- * @method Models\DescribeFleetAttributesResponse DescribeFleetAttributes(Models\DescribeFleetAttributesRequest $req) 本接口（DescribeFleetAttributes）用于查询服务器舰队属性。
- * @method Models\DescribeFleetCapacityResponse DescribeFleetCapacity(Models\DescribeFleetCapacityRequest $req) 本接口（DescribeFleetCapacity）用于查询服务部署容量配置。
- * @method Models\DescribeFleetEventsResponse DescribeFleetEvents(Models\DescribeFleetEventsRequest $req) 本接口（DescribeFleetEvents）用于查询服务器舰队相关的事件列表。
- * @method Models\DescribeFleetPortSettingsResponse DescribeFleetPortSettings(Models\DescribeFleetPortSettingsRequest $req) 本接口（DescribeFleetPortSettings）用于获取服务器舰队安全组信息。
- * @method Models\DescribeFleetRelatedResourcesResponse DescribeFleetRelatedResources(Models\DescribeFleetRelatedResourcesRequest $req) 本接口（DescribeFleetRelatedResources）用于获取与游戏服务器舰队关联的资源信息，如别名、队列
- * @method Models\DescribeFleetStatisticDetailsResponse DescribeFleetStatisticDetails(Models\DescribeFleetStatisticDetailsRequest $req) 本接口（DescribeFleetStatisticDetails）用于查询服务部署统计详情。
- * @method Models\DescribeFleetStatisticFlowsResponse DescribeFleetStatisticFlows(Models\DescribeFleetStatisticFlowsRequest $req) 本接口（DescribeFleetStatisticFlows）用于查询服务部署统计用量。
- * @method Models\DescribeFleetStatisticSummaryResponse DescribeFleetStatisticSummary(Models\DescribeFleetStatisticSummaryRequest $req) 本接口（DescribeFleetStatisticSummary）用于查询服务部署统计汇总信息。
- * @method Models\DescribeFleetUtilizationResponse DescribeFleetUtilization(Models\DescribeFleetUtilizationRequest $req) 本接口（DescribeFleetUtilization）用于查询服务器舰队的利用率信息。
- * @method Models\DescribeGameServerSessionDetailsResponse DescribeGameServerSessionDetails(Models\DescribeGameServerSessionDetailsRequest $req) 本接口（DescribeGameServerSessionDetails）用于查询游戏服务器会话详情列表。
- * @method Models\DescribeGameServerSessionPlacementResponse DescribeGameServerSessionPlacement(Models\DescribeGameServerSessionPlacementRequest $req) 本接口（DescribeGameServerSessionPlacement）用于查询游戏服务器会话的放置。
- * @method Models\DescribeGameServerSessionQueuesResponse DescribeGameServerSessionQueues(Models\DescribeGameServerSessionQueuesRequest $req) 本接口（DescribeGameServerSessionQueues）用于查询游戏服务器会话队列。
- * @method Models\DescribeGameServerSessionsResponse DescribeGameServerSessions(Models\DescribeGameServerSessionsRequest $req) 本接口（DescribeGameServerSessions）用于查询游戏服务器会话列表。
- * @method Models\DescribeInstanceLimitResponse DescribeInstanceLimit(Models\DescribeInstanceLimitRequest $req) 本接口（DescribeInstanceLimit）用于查询用户实例数限额。
- * @method Models\DescribeInstanceTypesResponse DescribeInstanceTypes(Models\DescribeInstanceTypesRequest $req) 本接口（DescribeInstanceTypes）用于获取服务器实例类型列表。
- * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用于查询服务器实例列表。
- * @method Models\DescribeInstancesExtendResponse DescribeInstancesExtend(Models\DescribeInstancesExtendRequest $req) 本接口（DescribeInstancesExtend）用于查询实例扩展信息列表。
- * @method Models\DescribePlayerSessionsResponse DescribePlayerSessions(Models\DescribePlayerSessionsRequest $req) 本接口（DescribePlayerSessions）用于获取玩家会话列表。
- * @method Models\DescribeRuntimeConfigurationResponse DescribeRuntimeConfiguration(Models\DescribeRuntimeConfigurationRequest $req) 本接口（DescribeRuntimeConfiguration）用于获取服务器舰队运行配置。
- * @method Models\DescribeScalingPoliciesResponse DescribeScalingPolicies(Models\DescribeScalingPoliciesRequest $req) 本接口（DescribeScalingPolicies）用于查询服务器舰队的动态扩缩容策略列表。
- * @method Models\DescribeTimerScalingPoliciesResponse DescribeTimerScalingPolicies(Models\DescribeTimerScalingPoliciesRequest $req) 本接口（DescribeTimerScalingPolicies）用于查询fleet下的定时器列表。可以通过fleetid，定时器名称分页查询。
+本接口（DeleteTimerScalingPolicy）用于删除fleet下的定时器。
 
- * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 本接口（DescribeUserQuota）获取用户单个模块配额。
- * @method Models\DescribeUserQuotasResponse DescribeUserQuotas(Models\DescribeUserQuotasRequest $req) 本接口（DescribeUserQuotas）用于获取用户配额
- * @method Models\DetachCcnInstancesResponse DetachCcnInstances(Models\DetachCcnInstancesRequest $req) 本接口（DetachCcnInstances）用于解关联云联网实例。
- * @method Models\EndGameServerSessionAndProcessResponse EndGameServerSessionAndProcess(Models\EndGameServerSessionAndProcessRequest $req) 本接口（EndGameServerSessionAndProcess）用于终止游戏服务器会话和对应的进程，适用于时限保护和不保护。
- * @method Models\GetGameServerInstanceLogUrlResponse GetGameServerInstanceLogUrl(Models\GetGameServerInstanceLogUrlRequest $req) 本接口用于获取游戏服务器实例的日志URL。
- * @method Models\GetGameServerSessionLogUrlResponse GetGameServerSessionLogUrl(Models\GetGameServerSessionLogUrlRequest $req) 本接口（GetGameServerSessionLogUrl）用于获取游戏服务器会话的日志URL。
- * @method Models\GetInstanceAccessResponse GetInstanceAccess(Models\GetInstanceAccessRequest $req) 本接口（GetInstanceAccess）用于获取实例登录所需要的凭据。
- * @method Models\GetUploadCredentialsResponse GetUploadCredentials(Models\GetUploadCredentialsRequest $req) 本接口（GetUploadCredentials）获取上传文件授权信息。
+ * @method Models\DescribeAliasResponse DescribeAlias(Models\DescribeAliasRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeAlias）用于获取别名详情。
+ * @method Models\DescribeAssetResponse DescribeAsset(Models\DescribeAssetRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeAsset）获取生成包信息。
+ * @method Models\DescribeAssetSystemsResponse DescribeAssetSystems(Models\DescribeAssetSystemsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeAssetSystems）用于获取生成包支持的操作系统。
+ * @method Models\DescribeAssetsResponse DescribeAssets(Models\DescribeAssetsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeAssets）用于获取生成包列表。
+ * @method Models\DescribeCcnInstancesResponse DescribeCcnInstances(Models\DescribeCcnInstancesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeCcnInstances）用于查询云联网实例。
+ * @method Models\DescribeFleetAttributesResponse DescribeFleetAttributes(Models\DescribeFleetAttributesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeFleetAttributes）用于查询服务器舰队属性。
+ * @method Models\DescribeFleetCapacityResponse DescribeFleetCapacity(Models\DescribeFleetCapacityRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeFleetCapacity）用于查询服务部署容量配置。
+ * @method Models\DescribeFleetEventsResponse DescribeFleetEvents(Models\DescribeFleetEventsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeFleetEvents）用于查询服务器舰队相关的事件列表。
+ * @method Models\DescribeFleetPortSettingsResponse DescribeFleetPortSettings(Models\DescribeFleetPortSettingsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeFleetPortSettings）用于获取服务器舰队安全组信息。
+ * @method Models\DescribeFleetRelatedResourcesResponse DescribeFleetRelatedResources(Models\DescribeFleetRelatedResourcesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeFleetRelatedResources）用于获取与游戏服务器舰队关联的资源信息，如别名、队列
+ * @method Models\DescribeFleetStatisticDetailsResponse DescribeFleetStatisticDetails(Models\DescribeFleetStatisticDetailsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeFleetStatisticDetails）用于查询服务部署统计详情。
+ * @method Models\DescribeFleetStatisticFlowsResponse DescribeFleetStatisticFlows(Models\DescribeFleetStatisticFlowsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeFleetStatisticFlows）用于查询服务部署统计用量。
+ * @method Models\DescribeFleetStatisticSummaryResponse DescribeFleetStatisticSummary(Models\DescribeFleetStatisticSummaryRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeFleetStatisticSummary）用于查询服务部署统计汇总信息。
+ * @method Models\DescribeFleetUtilizationResponse DescribeFleetUtilization(Models\DescribeFleetUtilizationRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeFleetUtilization）用于查询服务器舰队的利用率信息。
+ * @method Models\DescribeGameServerSessionDetailsResponse DescribeGameServerSessionDetails(Models\DescribeGameServerSessionDetailsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeGameServerSessionDetails）用于查询游戏服务器会话详情列表。
+ * @method Models\DescribeGameServerSessionPlacementResponse DescribeGameServerSessionPlacement(Models\DescribeGameServerSessionPlacementRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeGameServerSessionPlacement）用于查询游戏服务器会话的放置。
+ * @method Models\DescribeGameServerSessionQueuesResponse DescribeGameServerSessionQueues(Models\DescribeGameServerSessionQueuesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeGameServerSessionQueues）用于查询游戏服务器会话队列。
+ * @method Models\DescribeGameServerSessionsResponse DescribeGameServerSessions(Models\DescribeGameServerSessionsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeGameServerSessions）用于查询游戏服务器会话列表。
+ * @method Models\DescribeInstanceLimitResponse DescribeInstanceLimit(Models\DescribeInstanceLimitRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeInstanceLimit）用于查询用户实例数限额。
+ * @method Models\DescribeInstanceTypesResponse DescribeInstanceTypes(Models\DescribeInstanceTypesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeInstanceTypes）用于获取服务器实例类型列表。
+ * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeInstances）用于查询服务器实例列表。
+ * @method Models\DescribeInstancesExtendResponse DescribeInstancesExtend(Models\DescribeInstancesExtendRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeInstancesExtend）用于查询实例扩展信息列表。
+ * @method Models\DescribePlayerSessionsResponse DescribePlayerSessions(Models\DescribePlayerSessionsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribePlayerSessions）用于获取玩家会话列表。
+ * @method Models\DescribeRuntimeConfigurationResponse DescribeRuntimeConfiguration(Models\DescribeRuntimeConfigurationRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeRuntimeConfiguration）用于获取服务器舰队运行配置。
+ * @method Models\DescribeScalingPoliciesResponse DescribeScalingPolicies(Models\DescribeScalingPoliciesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeScalingPolicies）用于查询服务器舰队的动态扩缩容策略列表。
+ * @method Models\DescribeTimerScalingPoliciesResponse DescribeTimerScalingPolicies(Models\DescribeTimerScalingPoliciesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeTimerScalingPolicies）用于查询fleet下的定时器列表。可以通过fleetid，定时器名称分页查询。
+
+ * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeUserQuota）获取用户单个模块配额。
+ * @method Models\DescribeUserQuotasResponse DescribeUserQuotas(Models\DescribeUserQuotasRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DescribeUserQuotas）用于获取用户配额
+ * @method Models\DetachCcnInstancesResponse DetachCcnInstances(Models\DetachCcnInstancesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（DetachCcnInstances）用于解关联云联网实例。
+ * @method Models\EndGameServerSessionAndProcessResponse EndGameServerSessionAndProcess(Models\EndGameServerSessionAndProcessRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（EndGameServerSessionAndProcess）用于终止游戏服务器会话和对应的进程，适用于时限保护和不保护。
+ * @method Models\GetGameServerInstanceLogUrlResponse GetGameServerInstanceLogUrl(Models\GetGameServerInstanceLogUrlRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口用于获取游戏服务器实例的日志URL。
+ * @method Models\GetGameServerSessionLogUrlResponse GetGameServerSessionLogUrl(Models\GetGameServerSessionLogUrlRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（GetGameServerSessionLogUrl）用于获取游戏服务器会话的日志URL。
+ * @method Models\GetInstanceAccessResponse GetInstanceAccess(Models\GetInstanceAccessRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（GetInstanceAccess）用于获取实例登录所需要的凭据。
+ * @method Models\GetUploadCredentialsResponse GetUploadCredentials(Models\GetUploadCredentialsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（GetUploadCredentials）获取上传文件授权信息。
 通过 [GetUploadCredentials](https://cloud.tencent.com/document/product/1165/48727) 接口获取临时授权信息后，调用 COS API将数据上传，根据上传的 BucketKey 信息进行生成包 [CreateAsset](https://cloud.tencent.com/document/product/1165/48731) 的创建。参考下面的示例部分。
- * @method Models\GetUploadFederationTokenResponse GetUploadFederationToken(Models\GetUploadFederationTokenRequest $req) 本接口（GetUploadFederationToken）用于 获取生成包上传所需要的临时密钥。
- * @method Models\JoinGameServerSessionResponse JoinGameServerSession(Models\JoinGameServerSessionRequest $req) 本接口（JoinGameServerSession）用于加入游戏服务器会话。
- * @method Models\JoinGameServerSessionBatchResponse JoinGameServerSessionBatch(Models\JoinGameServerSessionBatchRequest $req) 本接口（JoinGameServerSessionBatch）用于批量加入游戏服务器会话。
- * @method Models\ListAliasesResponse ListAliases(Models\ListAliasesRequest $req) 本接口（ListAliases）用于检索帐户下的所有别名。
- * @method Models\ListFleetsResponse ListFleets(Models\ListFleetsRequest $req) 本接口（ListFleets）用于获取服务器舰队列表。
- * @method Models\PutScalingPolicyResponse PutScalingPolicy(Models\PutScalingPolicyRequest $req) 本接口（PutScalingPolicy）用于设置服务器舰队的动态扩缩容策略。
+ * @method Models\GetUploadFederationTokenResponse GetUploadFederationToken(Models\GetUploadFederationTokenRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（GetUploadFederationToken）用于 获取生成包上传所需要的临时密钥。
+ * @method Models\JoinGameServerSessionResponse JoinGameServerSession(Models\JoinGameServerSessionRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（JoinGameServerSession）用于加入游戏服务器会话。
+ * @method Models\JoinGameServerSessionBatchResponse JoinGameServerSessionBatch(Models\JoinGameServerSessionBatchRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（JoinGameServerSessionBatch）用于批量加入游戏服务器会话。
+ * @method Models\ListAliasesResponse ListAliases(Models\ListAliasesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（ListAliases）用于检索帐户下的所有别名。
+ * @method Models\ListFleetsResponse ListFleets(Models\ListFleetsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（ListFleets）用于获取服务器舰队列表。
+ * @method Models\PutScalingPolicyResponse PutScalingPolicy(Models\PutScalingPolicyRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（PutScalingPolicy）用于设置服务器舰队的动态扩缩容策略。
 
 通过此接口可以增加或者更新服务器舰队的扩缩容策略。
 服务器舰队可以有多个扩缩容策略，但是只有一个TargetBased基于目标的策略。
@@ -192,32 +300,72 @@ if [AvailableGameServerSessions] >= [400] for [5] minutes, then scaling by [curr
 **PercentChangeInCapacity**
 
     按比例增加或减少的百分比。正值按比例扩容，负值按比例缩容；例如，值“-10”将按10%的比例缩容CVM实例。
- * @method Models\PutTimerScalingPolicyResponse PutTimerScalingPolicy(Models\PutTimerScalingPolicyRequest $req) 本接口（PutTimerScalingPolicy）用于给fleet创建或更新定时器。
+ * @method Models\PutTimerScalingPolicyResponse PutTimerScalingPolicy(Models\PutTimerScalingPolicyRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（PutTimerScalingPolicy）用于给fleet创建或更新定时器。
 
 填写字段timer_id，表示更新；不填字段timer_id表示新增。
 
- * @method Models\ResolveAliasResponse ResolveAlias(Models\ResolveAliasRequest $req) 本接口（ResolveAlias）用于获取别名当前指向的fleetId。
- * @method Models\SearchGameServerSessionsResponse SearchGameServerSessions(Models\SearchGameServerSessionsRequest $req) 本接口（SearchGameServerSessions）用于搜索游戏服务器会话列表。
- * @method Models\SetServerReservedResponse SetServerReserved(Models\SetServerReservedRequest $req) 本接口（SetServerReserved）用于将异常的实例标记为保留，用于问题排查。
+ * @method Models\ResolveAliasResponse ResolveAlias(Models\ResolveAliasRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（ResolveAlias）用于获取别名当前指向的fleetId。
+ * @method Models\SearchGameServerSessionsResponse SearchGameServerSessions(Models\SearchGameServerSessionsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（SearchGameServerSessions）用于搜索游戏服务器会话列表。
+ * @method Models\SetServerReservedResponse SetServerReserved(Models\SetServerReservedRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（SetServerReserved）用于将异常的实例标记为保留，用于问题排查。
 
 字段ReserveValue：0默认值，不保留；1 保留
 
- * @method Models\SetServerWeightResponse SetServerWeight(Models\SetServerWeightRequest $req) 本接口（SetServerWeight）用于设置服务器权重。
- * @method Models\StartFleetActionsResponse StartFleetActions(Models\StartFleetActionsRequest $req) 本接口（StartFleetActions）用于启用服务器舰队自动扩缩容。
- * @method Models\StartGameServerSessionPlacementResponse StartGameServerSessionPlacement(Models\StartGameServerSessionPlacementRequest $req) 本接口（StartGameServerSessionPlacement）用于开始放置游戏服务器会话。
- * @method Models\StopFleetActionsResponse StopFleetActions(Models\StopFleetActionsRequest $req) 本接口（StopFleetActions）用于停止服务器舰队自动扩缩容，改为手动扩缩容。
- * @method Models\StopGameServerSessionPlacementResponse StopGameServerSessionPlacement(Models\StopGameServerSessionPlacementRequest $req) 本接口（StopGameServerSessionPlacement）用于停止放置游戏服务器会话。
- * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) 本接口（UpdateAlias）用于更新别名的属性。
- * @method Models\UpdateAssetResponse UpdateAsset(Models\UpdateAssetRequest $req) 本接口（UpdateAsset）用于修改生成包信息。
- * @method Models\UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOpt(Models\UpdateBucketAccelerateOptRequest $req) 本接口（UpdateBucketAccelerateOpt）用于开启cos全球加速。
- * @method Models\UpdateBucketCORSOptResponse UpdateBucketCORSOpt(Models\UpdateBucketCORSOptRequest $req) 本接口（UpdateBucketCORSOpt）用于设置cos跨域访问。
- * @method Models\UpdateFleetAttributesResponse UpdateFleetAttributes(Models\UpdateFleetAttributesRequest $req) 本接口（UpdateFleetAttributes）用于更新服务器舰队属性。
- * @method Models\UpdateFleetCapacityResponse UpdateFleetCapacity(Models\UpdateFleetCapacityRequest $req) 本接口（UpdateFleetCapacity）用于更新服务器舰队容量配置。
- * @method Models\UpdateFleetNameResponse UpdateFleetName(Models\UpdateFleetNameRequest $req) 本接口（UpdateFleetName）用于更新服务器舰队名称。
- * @method Models\UpdateFleetPortSettingsResponse UpdateFleetPortSettings(Models\UpdateFleetPortSettingsRequest $req) 本接口（UpdateFleetPortSettings）用于更新服务器舰队安全组。
- * @method Models\UpdateGameServerSessionResponse UpdateGameServerSession(Models\UpdateGameServerSessionRequest $req) 本接口（UpdateGameServerSession）用于更新游戏服务器会话。
- * @method Models\UpdateGameServerSessionQueueResponse UpdateGameServerSessionQueue(Models\UpdateGameServerSessionQueueRequest $req) 本接口（UpdateGameServerSessionQueue）用于修改游戏服务器会话队列。
- * @method Models\UpdateRuntimeConfigurationResponse UpdateRuntimeConfiguration(Models\UpdateRuntimeConfigurationRequest $req) 本接口（UpdateRuntimeConfiguration）用于更新服务器舰队配置。
+ * @method Models\SetServerWeightResponse SetServerWeight(Models\SetServerWeightRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（SetServerWeight）用于设置服务器权重。
+ * @method Models\StartFleetActionsResponse StartFleetActions(Models\StartFleetActionsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（StartFleetActions）用于启用服务器舰队自动扩缩容。
+ * @method Models\StartGameServerSessionPlacementResponse StartGameServerSessionPlacement(Models\StartGameServerSessionPlacementRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（StartGameServerSessionPlacement）用于开始放置游戏服务器会话。
+ * @method Models\StopFleetActionsResponse StopFleetActions(Models\StopFleetActionsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（StopFleetActions）用于停止服务器舰队自动扩缩容，改为手动扩缩容。
+ * @method Models\StopGameServerSessionPlacementResponse StopGameServerSessionPlacement(Models\StopGameServerSessionPlacementRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（StopGameServerSessionPlacement）用于停止放置游戏服务器会话。
+ * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateAlias）用于更新别名的属性。
+ * @method Models\UpdateAssetResponse UpdateAsset(Models\UpdateAssetRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateAsset）用于修改生成包信息。
+ * @method Models\UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOpt(Models\UpdateBucketAccelerateOptRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateBucketAccelerateOpt）用于开启cos全球加速。
+ * @method Models\UpdateBucketCORSOptResponse UpdateBucketCORSOpt(Models\UpdateBucketCORSOptRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateBucketCORSOpt）用于设置cos跨域访问。
+ * @method Models\UpdateFleetAttributesResponse UpdateFleetAttributes(Models\UpdateFleetAttributesRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateFleetAttributes）用于更新服务器舰队属性。
+ * @method Models\UpdateFleetCapacityResponse UpdateFleetCapacity(Models\UpdateFleetCapacityRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateFleetCapacity）用于更新服务器舰队容量配置。
+ * @method Models\UpdateFleetNameResponse UpdateFleetName(Models\UpdateFleetNameRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateFleetName）用于更新服务器舰队名称。
+ * @method Models\UpdateFleetPortSettingsResponse UpdateFleetPortSettings(Models\UpdateFleetPortSettingsRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateFleetPortSettings）用于更新服务器舰队安全组。
+ * @method Models\UpdateGameServerSessionResponse UpdateGameServerSession(Models\UpdateGameServerSessionRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateGameServerSession）用于更新游戏服务器会话。
+ * @method Models\UpdateGameServerSessionQueueResponse UpdateGameServerSessionQueue(Models\UpdateGameServerSessionQueueRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateGameServerSessionQueue）用于修改游戏服务器会话队列。
+ * @method Models\UpdateRuntimeConfigurationResponse UpdateRuntimeConfiguration(Models\UpdateRuntimeConfigurationRequest $req) 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+
+本接口（UpdateRuntimeConfiguration）用于更新服务器舰队配置。
  */
 
 class GseClient extends AbstractClient

@@ -20,19 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceUrlsByFlows请求参数结构体
  *
- * @method Agent getAgent() 获取渠道应用相关信息
- * @method void setAgent(Agent $Agent) 设置渠道应用相关信息
+ * @method Agent getAgent() 获取渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method array getFlowIds() 获取查询资源所对应的签署流程Id，最多支持50个。
+ * @method void setFlowIds(array $FlowIds) 设置查询资源所对应的签署流程Id，最多支持50个。
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method array getFlowIds() 获取查询资源所对应的流程Id
- * @method void setFlowIds(array $FlowIds) 设置查询资源所对应的流程Id
  */
 class DescribeResourceUrlsByFlowsRequest extends AbstractModel
 {
     /**
-     * @var Agent 渠道应用相关信息
+     * @var Agent 渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public $Agent;
+
+    /**
+     * @var array 查询资源所对应的签署流程Id，最多支持50个。
+     */
+    public $FlowIds;
 
     /**
      * @var UserInfo 操作者的信息
@@ -40,14 +48,10 @@ class DescribeResourceUrlsByFlowsRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var array 查询资源所对应的流程Id
-     */
-    public $FlowIds;
-
-    /**
-     * @param Agent $Agent 渠道应用相关信息
+     * @param Agent $Agent 渠道应用相关信息。
+此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param array $FlowIds 查询资源所对应的签署流程Id，最多支持50个。
      * @param UserInfo $Operator 操作者的信息
-     * @param array $FlowIds 查询资源所对应的流程Id
      */
     function __construct()
     {
@@ -67,13 +71,13 @@ class DescribeResourceUrlsByFlowsRequest extends AbstractModel
             $this->Agent->deserialize($param["Agent"]);
         }
 
+        if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
+            $this->FlowIds = $param["FlowIds"];
+        }
+
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("FlowIds",$param) and $param["FlowIds"] !== null) {
-            $this->FlowIds = $param["FlowIds"];
         }
     }
 }

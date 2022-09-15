@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecords(array $Records) 设置指标结果集
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取查询指标结果集条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置查询指标结果集条数
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,12 +40,20 @@ class DescribeMetricRecordsResponse extends AbstractModel
     public $Records;
 
     /**
+     * @var integer 查询指标结果集条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $Records 指标结果集
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 查询指标结果集条数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -65,6 +77,10 @@ class DescribeMetricRecordsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Records, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

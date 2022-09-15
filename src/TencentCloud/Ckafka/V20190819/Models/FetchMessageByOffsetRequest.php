@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置主题名
  * @method integer getPartition() 获取分区id
  * @method void setPartition(integer $Partition) 设置分区id
- * @method integer getOffset() 获取位点信息
- * @method void setOffset(integer $Offset) 设置位点信息
+ * @method integer getOffset() 获取位点信息，必填
+ * @method void setOffset(integer $Offset) 设置位点信息，必填
  */
 class FetchMessageByOffsetRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class FetchMessageByOffsetRequest extends AbstractModel
     public $Partition;
 
     /**
-     * @var integer 位点信息
+     * @var integer 位点信息，必填
      */
     public $Offset;
 
@@ -55,7 +55,7 @@ class FetchMessageByOffsetRequest extends AbstractModel
      * @param string $InstanceId 实例Id
      * @param string $Topic 主题名
      * @param integer $Partition 分区id
-     * @param integer $Offset 位点信息
+     * @param integer $Offset 位点信息，必填
      */
     function __construct()
     {

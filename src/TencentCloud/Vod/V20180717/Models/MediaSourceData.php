@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Unknown：未知来源。</li>
  * @method string getSourceContext() 获取用户创建文件时透传的字段
  * @method void setSourceContext(string $SourceContext) 设置用户创建文件时透传的字段
+ * @method TrtcRecordInfo getTrtcRecordInfo() 获取TRTC 伴生录制信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrtcRecordInfo(TrtcRecordInfo $TrtcRecordInfo) 设置TRTC 伴生录制信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaSourceData extends AbstractModel
 {
@@ -53,6 +57,12 @@ class MediaSourceData extends AbstractModel
     public $SourceContext;
 
     /**
+     * @var TrtcRecordInfo TRTC 伴生录制信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TrtcRecordInfo;
+
+    /**
      * @param string $SourceType 媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
@@ -60,6 +70,8 @@ class MediaSourceData extends AbstractModel
 <li>WebPageRecord：来自全景录制。</li>
 <li>Unknown：未知来源。</li>
      * @param string $SourceContext 用户创建文件时透传的字段
+     * @param TrtcRecordInfo $TrtcRecordInfo TRTC 伴生录制信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -80,6 +92,11 @@ class MediaSourceData extends AbstractModel
 
         if (array_key_exists("SourceContext",$param) and $param["SourceContext"] !== null) {
             $this->SourceContext = $param["SourceContext"];
+        }
+
+        if (array_key_exists("TrtcRecordInfo",$param) and $param["TrtcRecordInfo"] !== null) {
+            $this->TrtcRecordInfo = new TrtcRecordInfo();
+            $this->TrtcRecordInfo->deserialize($param["TrtcRecordInfo"]);
         }
     }
 }

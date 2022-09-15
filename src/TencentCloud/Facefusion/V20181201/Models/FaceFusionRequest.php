@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
  * @method void setCelebrityIdentify(integer $CelebrityIdentify) 设置0表示不需要不适宜内容识别，1表示需要不适宜内容识别。默认值为0。
 请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
- * @method string getUrl() 获取图片Url地址，目前Url方式还不支持，后续会支持，可以使用FuseFace接口
- * @method void setUrl(string $Url) 设置图片Url地址，目前Url方式还不支持，后续会支持，可以使用FuseFace接口
+ * @method string getUrl() 获取图片Url地址
+ * @method void setUrl(string $Url) 设置图片Url地址
  */
 class FaceFusionRequest extends AbstractModel
 {
@@ -71,7 +71,7 @@ class FaceFusionRequest extends AbstractModel
     public $CelebrityIdentify;
 
     /**
-     * @var string 图片Url地址，目前Url方式还不支持，后续会支持，可以使用FuseFace接口
+     * @var string 图片Url地址
      */
     public $Url;
 
@@ -83,7 +83,7 @@ class FaceFusionRequest extends AbstractModel
      * @param integer $PornDetect 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      * @param integer $CelebrityIdentify 0表示不需要不适宜内容识别，1表示需要不适宜内容识别。默认值为0。
 请注意，不适宜内容识别服务开启后，您需要根据返回结果自行判断是否调整您的业务逻辑。例如提示您的用户图片非法，请更换图片。
-     * @param string $Url 图片Url地址，目前Url方式还不支持，后续会支持，可以使用FuseFace接口
+     * @param string $Url 图片Url地址
      */
     function __construct()
     {

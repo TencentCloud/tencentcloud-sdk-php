@@ -112,6 +112,10 @@ global：全球加速
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) 设置回源S3私有鉴权
  * @method OssPrivateAccess getOssPrivateAccess() 获取回源OSS私有鉴权
  * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) 设置回源OSS私有鉴权
+ * @method HwPrivateAccess getHwPrivateAccess() 获取华为云对象存储回源鉴权
+ * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) 设置华为云对象存储回源鉴权
+ * @method QnPrivateAccess getQnPrivateAccess() 获取七牛云对象存储回源鉴权
+ * @method void setQnPrivateAccess(QnPrivateAccess $QnPrivateAccess) 设置七牛云对象存储回源鉴权
  */
 class AddCdnDomainRequest extends AbstractModel
 {
@@ -306,6 +310,16 @@ global：全球加速
     public $OssPrivateAccess;
 
     /**
+     * @var HwPrivateAccess 华为云对象存储回源鉴权
+     */
+    public $HwPrivateAccess;
+
+    /**
+     * @var QnPrivateAccess 七牛云对象存储回源鉴权
+     */
+    public $QnPrivateAccess;
+
+    /**
      * @param string $Domain 域名
      * @param string $ServiceType 加速域名业务类型
 web：网页小文件
@@ -352,6 +366,8 @@ global：全球加速
      * @param Quic $Quic Quic访问（收费服务，详见计费说明和产品文档）
      * @param AwsPrivateAccess $AwsPrivateAccess 回源S3私有鉴权
      * @param OssPrivateAccess $OssPrivateAccess 回源OSS私有鉴权
+     * @param HwPrivateAccess $HwPrivateAccess 华为云对象存储回源鉴权
+     * @param QnPrivateAccess $QnPrivateAccess 七牛云对象存储回源鉴权
      */
     function __construct()
     {
@@ -544,6 +560,16 @@ global：全球加速
         if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
             $this->OssPrivateAccess = new OssPrivateAccess();
             $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
+        }
+
+        if (array_key_exists("HwPrivateAccess",$param) and $param["HwPrivateAccess"] !== null) {
+            $this->HwPrivateAccess = new HwPrivateAccess();
+            $this->HwPrivateAccess->deserialize($param["HwPrivateAccess"]);
+        }
+
+        if (array_key_exists("QnPrivateAccess",$param) and $param["QnPrivateAccess"] !== null) {
+            $this->QnPrivateAccess = new QnPrivateAccess();
+            $this->QnPrivateAccess->deserialize($param["QnPrivateAccess"]);
         }
     }
 }

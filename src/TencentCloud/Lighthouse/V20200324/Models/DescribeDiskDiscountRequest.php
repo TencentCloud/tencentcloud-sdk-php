@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) 设置云硬盘类型, 取值: "CLOUD_PREMIUM"。
  * @method integer getDiskSize() 获取云硬盘大小。
  * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小。
+ * @method integer getDiskBackupQuota() 获取指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
  */
 class DescribeDiskDiscountRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDiskDiscountRequest extends AbstractModel
     public $DiskSize;
 
     /**
+     * @var integer 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+     */
+    public $DiskBackupQuota;
+
+    /**
      * @param string $DiskType 云硬盘类型, 取值: "CLOUD_PREMIUM"。
      * @param integer $DiskSize 云硬盘大小。
+     * @param integer $DiskBackupQuota 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDiskDiscountRequest extends AbstractModel
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
+            $this->DiskBackupQuota = $param["DiskBackupQuota"];
         }
     }
 }

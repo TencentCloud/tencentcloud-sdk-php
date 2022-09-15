@@ -30,13 +30,16 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) 本接口（AttachUserPolicy）可用于绑定到用户的策略。
  * @method Models\ConsumeCustomMFATokenResponse ConsumeCustomMFAToken(Models\ConsumeCustomMFATokenRequest $req) 验证自定义多因子Token
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 创建用户组
+ * @method Models\CreateOIDCConfigResponse CreateOIDCConfig(Models\CreateOIDCConfigRequest $req) 创建角色OIDC配置
  * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) 本接口（CreatePolicy）可用于创建策略。
  * @method Models\CreatePolicyVersionResponse CreatePolicyVersion(Models\CreatePolicyVersionRequest $req) 该接口（CreatePolicyVersion）用于新增策略版本，用户创建了一个策略版本之后可以方便的通过变更策略版本的方式来变更策略。
  * @method Models\CreateRoleResponse CreateRole(Models\CreateRoleRequest $req) 本接口（CreateRole）用于创建角色。
  * @method Models\CreateSAMLProviderResponse CreateSAMLProvider(Models\CreateSAMLProviderRequest $req) 创建SAML身份提供商
  * @method Models\CreateServiceLinkedRoleResponse CreateServiceLinkedRole(Models\CreateServiceLinkedRoleRequest $req) 创建服务相关角色
+ * @method Models\CreateUserOIDCConfigResponse CreateUserOIDCConfig(Models\CreateUserOIDCConfigRequest $req) 创建用户OIDC配置。只能创建一个用户OIDC身份提供商，并且创建用户OIDC配置之后会自动关闭用户SAML SSO身份提供商。
  * @method Models\CreateUserSAMLConfigResponse CreateUserSAMLConfig(Models\CreateUserSAMLConfigRequest $req) 创建用户SAML配置
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除用户组
+ * @method Models\DeleteOIDCConfigResponse DeleteOIDCConfig(Models\DeleteOIDCConfigRequest $req) 删除OIDC身份提供商
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) 本接口（DeletePolicy）可用于删除策略。
  * @method Models\DeletePolicyVersionResponse DeletePolicyVersion(Models\DeletePolicyVersionRequest $req) 本接口（DeletePolicyVersion）可用于删除一个策略的策略版本。
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) 本接口（DeleteRole）用于删除指定角色。
@@ -45,15 +48,18 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\DeleteServiceLinkedRoleResponse DeleteServiceLinkedRole(Models\DeleteServiceLinkedRoleRequest $req) 删除服务相关角色
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除子用户
  * @method Models\DeleteUserPermissionsBoundaryResponse DeleteUserPermissionsBoundary(Models\DeleteUserPermissionsBoundaryRequest $req) 删除用户权限边界
+ * @method Models\DescribeOIDCConfigResponse DescribeOIDCConfig(Models\DescribeOIDCConfigRequest $req) 查询角色OIDC配置
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 本接口（DescribeRoleList）用于获取账号下的角色列表。
- * @method Models\DescribeSafeAuthFlagResponse DescribeSafeAuthFlag(Models\DescribeSafeAuthFlagRequest $req) 查询安全设置
+ * @method Models\DescribeSafeAuthFlagResponse DescribeSafeAuthFlag(Models\DescribeSafeAuthFlagRequest $req) 查询用户安全设置
  * @method Models\DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(Models\DescribeSafeAuthFlagCollRequest $req) 查询安全设置
  * @method Models\DescribeSafeAuthFlagIntlResponse DescribeSafeAuthFlagIntl(Models\DescribeSafeAuthFlagIntlRequest $req) 查询安全设置(国际站)
  * @method Models\DescribeSubAccountsResponse DescribeSubAccounts(Models\DescribeSubAccountsRequest $req) 通过子用户UIN列表查询子用户
+ * @method Models\DescribeUserOIDCConfigResponse DescribeUserOIDCConfig(Models\DescribeUserOIDCConfigRequest $req) 查询用户OIDC配置
  * @method Models\DescribeUserSAMLConfigResponse DescribeUserSAMLConfig(Models\DescribeUserSAMLConfigRequest $req) 查询用户SAML配置
  * @method Models\DetachGroupPolicyResponse DetachGroupPolicy(Models\DetachGroupPolicyRequest $req) 本接口（DetachGroupPolicy）可用于解除绑定到用户组的策略。
  * @method Models\DetachRolePolicyResponse DetachRolePolicy(Models\DetachRolePolicyRequest $req) 本接口（DetachRolePolicy）用于解除绑定角色的策略。
  * @method Models\DetachUserPolicyResponse DetachUserPolicy(Models\DetachUserPolicyRequest $req) 本接口（DetachUserPolicy）可用于解除绑定到用户的策略。
+ * @method Models\DisableUserSSOResponse DisableUserSSO(Models\DisableUserSSORequest $req) 禁用用户SSO
  * @method Models\GetAccountSummaryResponse GetAccountSummary(Models\GetAccountSummaryRequest $req) 查询账户摘要 
  * @method Models\GetCustomMFATokenInfoResponse GetCustomMFATokenInfo(Models\GetCustomMFATokenInfoRequest $req) 获取自定义多因子Token关联信息
  * @method Models\GetGroupResponse GetGroup(Models\GetGroupRequest $req) 查询用户组详情
@@ -88,14 +94,18 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) 从用户组删除用户
  * @method Models\SetDefaultPolicyVersionResponse SetDefaultPolicyVersion(Models\SetDefaultPolicyVersionRequest $req) 本接口（SetDefaultPolicyVersion）可用于设置生效的策略版本。
  * @method Models\SetMfaFlagResponse SetMfaFlag(Models\SetMfaFlagRequest $req) 设置子用户的登录保护和敏感操作校验方式
+ * @method Models\TagRoleResponse TagRole(Models\TagRoleRequest $req) 角色绑定标签
+ * @method Models\UntagRoleResponse UntagRole(Models\UntagRoleRequest $req) 角色解绑标签。
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) 本接口（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文档。
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 更新用户组
+ * @method Models\UpdateOIDCConfigResponse UpdateOIDCConfig(Models\UpdateOIDCConfigRequest $req) 修改角色OIDC配置
  * @method Models\UpdatePolicyResponse UpdatePolicy(Models\UpdatePolicyRequest $req) 本接口（UpdatePolicy ）可用于更新策略。
 如果已存在策略版本，本接口会直接更新策略的默认版本，不会创建新版本，如果不存在任何策略版本，则直接创建一个默认版本。
  * @method Models\UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(Models\UpdateRoleConsoleLoginRequest $req) 本接口（UpdateRoleConsoleLogin）用于修改角色是否可登录。
  * @method Models\UpdateRoleDescriptionResponse UpdateRoleDescription(Models\UpdateRoleDescriptionRequest $req) 本接口（UpdateRoleDescription）用于修改角色的描述信息。
  * @method Models\UpdateSAMLProviderResponse UpdateSAMLProvider(Models\UpdateSAMLProviderRequest $req) 更新SAML身份提供商信息
  * @method Models\UpdateUserResponse UpdateUser(Models\UpdateUserRequest $req) 更新子用户
+ * @method Models\UpdateUserOIDCConfigResponse UpdateUserOIDCConfig(Models\UpdateUserOIDCConfigRequest $req) 修改用户OIDC配置
  * @method Models\UpdateUserSAMLConfigResponse UpdateUserSAMLConfig(Models\UpdateUserSAMLConfigRequest $req) 修改用户SAML配置
  */
 

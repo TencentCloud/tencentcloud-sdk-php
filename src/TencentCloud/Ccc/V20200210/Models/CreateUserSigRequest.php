@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUserSig请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getUid() 获取用户 ID
  * @method void setUid(string $Uid) 设置用户 ID
  * @method integer getExpiredTime() 获取有效期，单位秒，不超过 1 小时
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateUserSigRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -52,7 +52,7 @@ class CreateUserSigRequest extends AbstractModel
     public $ClientData;
 
     /**
-     * @param integer $SdkAppId 应用 ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Uid 用户 ID
      * @param integer $ExpiredTime 有效期，单位秒，不超过 1 小时
      * @param string $ClientData 用户签名数据

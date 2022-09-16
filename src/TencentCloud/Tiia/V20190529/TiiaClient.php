@@ -26,15 +26,15 @@ use TencentCloud\Tiia\V20190529\Models as Models;
  * @method Models\AssessQualityResponse AssessQuality(Models\AssessQualityRequest $req) 评估输入图片在视觉上的质量，从多个方面评估，并同时给出综合的、客观的清晰度评分，和主观的美观度评分。
 >     
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
- * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 用于创建一个空的图片库，如果图片库已存在则返回错误。不同类型图库对应不同的图像搜索服务，根据输入参数GroupType区分。
+ * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 本接口用于创建一个空的图片库，图片库主要用于存储在创建图片时提取的图片特征数据，如果图片库已存在则返回错误。不同的图片库类型对应不同的图像搜索服务类型，根据输入参数GroupType区分。
 
-| 服务类型 | GroupType参数值 |功能描述 |
-|  :------  | :----- |:-----------------  |
-| 相同图像搜索<img width=30/>    | 4 |在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于图片版权保护、原图查询等场景。|
-| 商品图像搜索<img width=30/>   | 5 |在自建图库中搜索相同或相似的商品图片，适用于商品分类、检索、推荐等电商场景。|
-| 相似图像搜索<img width=30/>   | 6 |在自建图片库中搜索与输入图片高度相似的图片，适用于相似图案、logo、纹理等图像元素的搜索。|
+| 服务类型 | GroupType入参 |功能描述 |
+|  :----------  | :----- |:-----------------  |
+| 相同图像搜索<div style="width: 70pt"> | 4 |在自建图片库中搜索相同原图或高相似图，并给出相似度打分，可支持裁剪、翻转、调色、加水印等二次编辑后的图片搜索。适用于图片版权保护、原图查询等场景。|
+| 商品图像搜索<div style="width: 70pt"> | 5 |在自建图库中搜索同款商品，并给出相似度打分。对于服饰类商品可支持识别服饰类别、属性等信息。适用于商品分类、检索、推荐等电商场景。|
+| 相似图像搜索<div style="width: 70pt"> | 6 |在自建图库中搜索相似的图案、logo、纹理等图像元素或主体，并给出相似度打分。|
 
- * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 创建图片，并添加对应图片的自定义信息。
+ * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 创建图片，并添加对应图片的自定义信息。模型将在创建图片时自动提取图像特征并存储到指定的图片库中。
  * @method Models\CropImageResponse CropImage(Models\CropImageRequest $req) 根据输入的裁剪比例，智能判断一张图片的最佳裁剪区域，确保原图的主体区域不受影响。
 
 可以自动裁剪图片，适应不同平台、设备的展示要求，避免简单拉伸带来的变形。
@@ -115,7 +115,7 @@ use TencentCloud\Tiia\V20190529\Models as Models;
 
 >?   
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
- * @method Models\SearchImageResponse SearchImage(Models\SearchImageRequest $req) 本接口用于对一张待识别的商品图片，在指定图片库中检索出最相似的图片列表。
+ * @method Models\SearchImageResponse SearchImage(Models\SearchImageRequest $req) 本接口用于对一张图片，在指定图片库中检索出与之相似的图片列表。
  */
 
 class TiiaClient extends AbstractClient

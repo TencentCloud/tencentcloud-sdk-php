@@ -298,6 +298,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 
  * @method Models\DescribeCrossBorderComplianceResponse DescribeCrossBorderCompliance(Models\DescribeCrossBorderComplianceRequest $req) 本接口（DescribeCrossBorderCompliance）用于查询用户创建的合规化资质审批单。
 服务商可以查询服务名下的任意 `APPID` 创建的审批单；非服务商，只能查询自己审批单。
+ * @method Models\DescribeCrossBorderFlowMonitorResponse DescribeCrossBorderFlowMonitor(Models\DescribeCrossBorderFlowMonitorRequest $req) 查询跨境带宽监控数据，该接口特提供给联通使用
  * @method Models\DescribeCustomerGatewayVendorsResponse DescribeCustomerGatewayVendors(Models\DescribeCustomerGatewayVendorsRequest $req) 本接口（DescribeCustomerGatewayVendors）用于查询可支持的对端网关厂商信息。
  * @method Models\DescribeCustomerGatewaysResponse DescribeCustomerGateways(Models\DescribeCustomerGatewaysRequest $req) 本接口（DescribeCustomerGateways）用于查询对端网关列表。
  * @method Models\DescribeDhcpIpsResponse DescribeDhcpIps(Models\DescribeDhcpIpsRequest $req) 本接口（DescribeDhcpIps）用于查询DhcpIp列表

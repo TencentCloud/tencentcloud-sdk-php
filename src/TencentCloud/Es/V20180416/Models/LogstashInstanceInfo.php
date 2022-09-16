@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtendedFiles(array $ExtendedFiles) 设置扩展文件列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OperationDuration getOperationDuration() 获取可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperationDuration(OperationDuration $OperationDuration) 设置可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogstashInstanceInfo extends AbstractModel
 {
@@ -205,6 +209,12 @@ class LogstashInstanceInfo extends AbstractModel
     public $ExtendedFiles;
 
     /**
+     * @var OperationDuration 可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperationDuration;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -231,6 +241,8 @@ class LogstashInstanceInfo extends AbstractModel
      * @param string $YMLConfig 实例的YML配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExtendedFiles 扩展文件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperationDuration $OperationDuration 可维护时间段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -354,6 +366,11 @@ class LogstashInstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ExtendedFiles, $obj);
             }
+        }
+
+        if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
+            $this->OperationDuration = new OperationDuration();
+            $this->OperationDuration->deserialize($param["OperationDuration"]);
         }
     }
 }

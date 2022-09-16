@@ -26,20 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置图库名称描述。
  * @method integer getMaxCapacity() 获取图库可容纳的最大图片数量。
  * @method void setMaxCapacity(integer $MaxCapacity) 设置图库可容纳的最大图片数量。
- * @method string getBrief() 获取简介。
- * @method void setBrief(string $Brief) 设置简介。
+ * @method string getBrief() 获取图库简介。
+ * @method void setBrief(string $Brief) 设置图库简介。
  * @method integer getMaxQps() 获取访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
  * @method void setMaxQps(integer $MaxQps) 设置访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
- * @method integer getGroupType() 获取图库类型，对应不同服务类型，默认为4。1～3为历史版本，不推荐。
-参数值：
-4：在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于图片版权保护、原图查询等场景。
-5：在自建图库中搜索相同或相似的商品图片，适用于商品分类、检索、推荐等电商场景。
-6：在自建图片库中搜索与输入图片高度相似的图片，适用于相似图案、logo、纹理等图像元素的搜索。
- * @method void setGroupType(integer $GroupType) 设置图库类型，对应不同服务类型，默认为4。1～3为历史版本，不推荐。
-参数值：
-4：在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于图片版权保护、原图查询等场景。
-5：在自建图库中搜索相同或相似的商品图片，适用于商品分类、检索、推荐等电商场景。
-6：在自建图片库中搜索与输入图片高度相似的图片，适用于相似图案、logo、纹理等图像元素的搜索。
+ * @method integer getGroupType() 获取图库类型，对应不同的图像搜索服务类型，默认为4。1～3为历史版本，不推荐。
+参数取值：
+4：相同图像搜索。
+5：商品图像搜索。
+6：相似图像搜索。
+ * @method void setGroupType(integer $GroupType) 设置图库类型，对应不同的图像搜索服务类型，默认为4。1～3为历史版本，不推荐。
+参数取值：
+4：相同图像搜索。
+5：商品图像搜索。
+6：相似图像搜索。
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -59,7 +59,7 @@ class CreateGroupRequest extends AbstractModel
     public $MaxCapacity;
 
     /**
-     * @var string 简介。
+     * @var string 图库简介。
      */
     public $Brief;
 
@@ -69,11 +69,11 @@ class CreateGroupRequest extends AbstractModel
     public $MaxQps;
 
     /**
-     * @var integer 图库类型，对应不同服务类型，默认为4。1～3为历史版本，不推荐。
-参数值：
-4：在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于图片版权保护、原图查询等场景。
-5：在自建图库中搜索相同或相似的商品图片，适用于商品分类、检索、推荐等电商场景。
-6：在自建图片库中搜索与输入图片高度相似的图片，适用于相似图案、logo、纹理等图像元素的搜索。
+     * @var integer 图库类型，对应不同的图像搜索服务类型，默认为4。1～3为历史版本，不推荐。
+参数取值：
+4：相同图像搜索。
+5：商品图像搜索。
+6：相似图像搜索。
      */
     public $GroupType;
 
@@ -81,13 +81,13 @@ class CreateGroupRequest extends AbstractModel
      * @param string $GroupId 图库ID，不可重复，仅支持字母、数字和下划线。
      * @param string $GroupName 图库名称描述。
      * @param integer $MaxCapacity 图库可容纳的最大图片数量。
-     * @param string $Brief 简介。
+     * @param string $Brief 图库简介。
      * @param integer $MaxQps 访问限制默认为10qps，如需扩容请联系[在线客服](https://cloud.tencent.com/online-service)申请。
-     * @param integer $GroupType 图库类型，对应不同服务类型，默认为4。1～3为历史版本，不推荐。
-参数值：
-4：在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于图片版权保护、原图查询等场景。
-5：在自建图库中搜索相同或相似的商品图片，适用于商品分类、检索、推荐等电商场景。
-6：在自建图片库中搜索与输入图片高度相似的图片，适用于相似图案、logo、纹理等图像元素的搜索。
+     * @param integer $GroupType 图库类型，对应不同的图像搜索服务类型，默认为4。1～3为历史版本，不推荐。
+参数取值：
+4：相同图像搜索。
+5：商品图像搜索。
+6：相似图像搜索。
      */
     function __construct()
     {

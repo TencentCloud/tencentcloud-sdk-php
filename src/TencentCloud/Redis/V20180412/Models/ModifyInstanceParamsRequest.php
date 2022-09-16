@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceParams请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method array getInstanceParams() 获取实例修改的参数列表
- * @method void setInstanceParams(array $InstanceParams) 设置实例修改的参数列表
+ * @method string getInstanceId() 获取实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method array getInstanceParams() 获取实例修改的参数列表。
+ * @method void setInstanceParams(array $InstanceParams) 设置实例修改的参数列表。
  */
 class ModifyInstanceParamsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var array 实例修改的参数列表
+     * @var array 实例修改的参数列表。
      */
     public $InstanceParams;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param array $InstanceParams 实例修改的参数列表
+     * @param string $InstanceId 实例ID。
+     * @param array $InstanceParams 实例修改的参数列表。
      */
     function __construct()
     {

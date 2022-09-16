@@ -22,68 +22,94 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGroupId() 获取图库名称。
  * @method void setGroupId(string $GroupId) 设置图库名称。
- * @method string getImageUrl() 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
-图片分辨率不超4096\*4096。 
-Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
- * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
-图片分辨率不超4096\*4096。 
-Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
- * @method string getImageBase64() 获取图片 base64 数据，base64 编码后大小不可超过5M。 
-图片分辨率不超过4096\*4096。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
- * @method void setImageBase64(string $ImageBase64) 设置图片 base64 数据，base64 编码后大小不可超过5M。 
-图片分辨率不超过4096\*4096。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
- * @method integer getLimit() 获取返回数量，默认值为10，最大值为100。
- * @method void setLimit(integer $Limit) 设置返回数量，默认值为10，最大值为100。
- * @method integer getOffset() 获取起始序号，默认值为0。
- * @method void setOffset(integer $Offset) 设置起始序号，默认值为0。
- * @method integer getMatchThreshold() 获取出参Score中，只有超过**MatchThreshold**值的结果才会返回。默认为0
- * @method void setMatchThreshold(integer $MatchThreshold) 设置出参Score中，只有超过**MatchThreshold**值的结果才会返回。默认为0
- * @method string getFilter() 获取针对入库时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
- * @method void setFilter(string $Filter) 设置针对入库时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+ * @method string getImageUrl() 获取图片的 Url 。
+ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+图片限制：
+• 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+• 图片大小：对应图片 base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+• 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
+建议：
+• 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
+ * @method void setImageUrl(string $ImageUrl) 设置图片的 Url 。
+ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+图片限制：
+• 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+• 图片大小：对应图片 base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+• 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
+建议：
+• 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
+ * @method string getImageBase64() 获取图片 base64 数据。
+ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+图片限制：
+• 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+• 图片大小：base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+• 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
+ * @method void setImageBase64(string $ImageBase64) 设置图片 base64 数据。
+ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+图片限制：
+• 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+• 图片大小：base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+• 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
+ * @method integer getLimit() 获取返回结果的数量，默认值为10，最大值为100。
+按照相似度分数由高到低排序。
+**<font color=#1E90FF>注意：服务类型为相似图像搜索时返回数量限制为1，即返回top1的结果。</font>**
+ * @method void setLimit(integer $Limit) 设置返回结果的数量，默认值为10，最大值为100。
+按照相似度分数由高到低排序。
+**<font color=#1E90FF>注意：服务类型为相似图像搜索时返回数量限制为1，即返回top1的结果。</font>**
+ * @method integer getOffset() 获取返回结果的起始序号，默认值为0。
+ * @method void setOffset(integer $Offset) 设置返回结果的起始序号，默认值为0。
+ * @method integer getMatchThreshold() 获取匹配阈值。
+只有图片相似度分数超过MatchThreshold值的结果才会返回。
+默认值：
+• 相同图像搜索：50。
+• 商品图像搜索：28。
+• 相似图像搜索：56。
+建议：
+可以手动调整MatchThreshold值来控制输出结果的范围。入股发现无检索结果，建议调整为较低的阈值。
+ * @method void setMatchThreshold(integer $MatchThreshold) 设置匹配阈值。
+只有图片相似度分数超过MatchThreshold值的结果才会返回。
+默认值：
+• 相同图像搜索：50。
+• 商品图像搜索：28。
+• 相似图像搜索：56。
+建议：
+可以手动调整MatchThreshold值来控制输出结果的范围。入股发现无检索结果，建议调整为较低的阈值。
+ * @method string getFilter() 获取标签过滤条件。
+针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+ * @method void setFilter(string $Filter) 设置标签过滤条件。
+针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
  * @method ImageRect getImageRect() 获取图像主体区域。
 若设置主体区域，提取指定的区域进行检索。
  * @method void setImageRect(ImageRect $ImageRect) 设置图像主体区域。
 若设置主体区域，提取指定的区域进行检索。
  * @method boolean getEnableDetect() 获取是否需要启用主体识别，默认为**TRUE** 。
-1. 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体进行检索并进行主体识别。主体识别结果可在**Response中**获取。
-2. 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图检索图片。
-注意：服务类型为商品图像搜索时生效。
+• 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体进行检索并进行主体识别。主体识别结果可在**Response中**获取。
+• 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图检索图片。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
  * @method void setEnableDetect(boolean $EnableDetect) 设置是否需要启用主体识别，默认为**TRUE** 。
-1. 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体进行检索并进行主体识别。主体识别结果可在**Response中**获取。
-2. 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图检索图片。
-注意：服务类型为商品图像搜索时生效。
+• 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体进行检索并进行主体识别。主体识别结果可在**Response中**获取。
+• 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图检索图片。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
  * @method integer getCategoryId() 获取图像类目ID。
-若设置类目ID，提取对应类目的主体进行检索。
-注意：服务类型为商品图像搜索时生效。
-类目信息：
+若设置类目ID，提取以下类目的主体进行检索。
+类目取值说明：
 0：上衣。
 1：裙装。
 2：下装。
 3：包。
 4：鞋。
 5：配饰。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
  * @method void setCategoryId(integer $CategoryId) 设置图像类目ID。
-若设置类目ID，提取对应类目的主体进行检索。
-注意：服务类型为商品图像搜索时生效。
-类目信息：
+若设置类目ID，提取以下类目的主体进行检索。
+类目取值说明：
 0：上衣。
 1：裙装。
 2：下装。
 3：包。
 4：鞋。
 5：配饰。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
  */
 class SearchImageRequest extends AbstractModel
 {
@@ -93,41 +119,54 @@ class SearchImageRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string 图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
-图片分辨率不超4096\*4096。 
-Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
+     * @var string 图片的 Url 。
+ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+图片限制：
+• 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+• 图片大小：对应图片 base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+• 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
+建议：
+• 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
      */
     public $ImageUrl;
 
     /**
-     * @var string 图片 base64 数据，base64 编码后大小不可超过5M。 
-图片分辨率不超过4096\*4096。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
+     * @var string 图片 base64 数据。
+ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+图片限制：
+• 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+• 图片大小：base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+• 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
      */
     public $ImageBase64;
 
     /**
-     * @var integer 返回数量，默认值为10，最大值为100。
+     * @var integer 返回结果的数量，默认值为10，最大值为100。
+按照相似度分数由高到低排序。
+**<font color=#1E90FF>注意：服务类型为相似图像搜索时返回数量限制为1，即返回top1的结果。</font>**
      */
     public $Limit;
 
     /**
-     * @var integer 起始序号，默认值为0。
+     * @var integer 返回结果的起始序号，默认值为0。
      */
     public $Offset;
 
     /**
-     * @var integer 出参Score中，只有超过**MatchThreshold**值的结果才会返回。默认为0
+     * @var integer 匹配阈值。
+只有图片相似度分数超过MatchThreshold值的结果才会返回。
+默认值：
+• 相同图像搜索：50。
+• 商品图像搜索：28。
+• 相似图像搜索：56。
+建议：
+可以手动调整MatchThreshold值来控制输出结果的范围。入股发现无检索结果，建议调整为较低的阈值。
      */
     public $MatchThreshold;
 
     /**
-     * @var string 针对入库时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+     * @var string 标签过滤条件。
+针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
      */
     public $Filter;
 
@@ -139,59 +178,72 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * @var boolean 是否需要启用主体识别，默认为**TRUE** 。
-1. 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体进行检索并进行主体识别。主体识别结果可在**Response中**获取。
-2. 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图检索图片。
-注意：服务类型为商品图像搜索时生效。
+• 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体进行检索并进行主体识别。主体识别结果可在**Response中**获取。
+• 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图检索图片。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
      */
     public $EnableDetect;
 
     /**
      * @var integer 图像类目ID。
-若设置类目ID，提取对应类目的主体进行检索。
-注意：服务类型为商品图像搜索时生效。
-类目信息：
+若设置类目ID，提取以下类目的主体进行检索。
+类目取值说明：
 0：上衣。
 1：裙装。
 2：下装。
 3：包。
 4：鞋。
 5：配饰。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
      */
     public $CategoryId;
 
     /**
      * @param string $GroupId 图库名称。
-     * @param string $ImageUrl 图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
-图片分辨率不超4096\*4096。 
-Url、Image必须提供一个，如果都提供，只使用 Url。 
-图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-非腾讯云存储的Url速度和稳定性可能受一定影响。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
-     * @param string $ImageBase64 图片 base64 数据，base64 编码后大小不可超过5M。 
-图片分辨率不超过4096\*4096。 
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
-     * @param integer $Limit 返回数量，默认值为10，最大值为100。
-     * @param integer $Offset 起始序号，默认值为0。
-     * @param integer $MatchThreshold 出参Score中，只有超过**MatchThreshold**值的结果才会返回。默认为0
-     * @param string $Filter 针对入库时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+     * @param string $ImageUrl 图片的 Url 。
+ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+图片限制：
+• 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+• 图片大小：对应图片 base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+• 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
+建议：
+• 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
+     * @param string $ImageBase64 图片 base64 数据。
+ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+图片限制：
+• 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+• 图片大小：base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+• 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
+     * @param integer $Limit 返回结果的数量，默认值为10，最大值为100。
+按照相似度分数由高到低排序。
+**<font color=#1E90FF>注意：服务类型为相似图像搜索时返回数量限制为1，即返回top1的结果。</font>**
+     * @param integer $Offset 返回结果的起始序号，默认值为0。
+     * @param integer $MatchThreshold 匹配阈值。
+只有图片相似度分数超过MatchThreshold值的结果才会返回。
+默认值：
+• 相同图像搜索：50。
+• 商品图像搜索：28。
+• 相似图像搜索：56。
+建议：
+可以手动调整MatchThreshold值来控制输出结果的范围。入股发现无检索结果，建议调整为较低的阈值。
+     * @param string $Filter 标签过滤条件。
+针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
      * @param ImageRect $ImageRect 图像主体区域。
 若设置主体区域，提取指定的区域进行检索。
      * @param boolean $EnableDetect 是否需要启用主体识别，默认为**TRUE** 。
-1. 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体进行检索并进行主体识别。主体识别结果可在**Response中**获取。
-2. 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图检索图片。
-注意：服务类型为商品图像搜索时生效。
+• 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体进行检索并进行主体识别。主体识别结果可在**Response中**获取。
+• 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图检索图片。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
      * @param integer $CategoryId 图像类目ID。
-若设置类目ID，提取对应类目的主体进行检索。
-注意：服务类型为商品图像搜索时生效。
-类目信息：
+若设置类目ID，提取以下类目的主体进行检索。
+类目取值说明：
 0：上衣。
 1：裙装。
 2：下装。
 3：包。
 4：鞋。
 5：配饰。
+**<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
      */
     function __construct()
     {

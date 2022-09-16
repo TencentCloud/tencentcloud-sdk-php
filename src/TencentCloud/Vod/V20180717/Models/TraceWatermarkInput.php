@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 溯源水印参数
  *
- * @method integer getDefinition() 获取水印模板 ID。
- * @method void setDefinition(integer $Definition) 设置水印模板 ID。
+ * @method string getSwitch() 获取溯源水印任务开关，此字段必填，可选值：
+<li>ON：开启溯源水印；</li>
+<li>OFF：关闭溯源水印。</li>
+ * @method void setSwitch(string $Switch) 设置溯源水印任务开关，此字段必填，可选值：
+<li>ON：开启溯源水印；</li>
+<li>OFF：关闭溯源水印。</li>
+ * @method integer getDefinition() 获取该字段已废弃，请勿使用。
+ * @method void setDefinition(integer $Definition) 设置该字段已废弃，请勿使用。
  */
 class TraceWatermarkInput extends AbstractModel
 {
     /**
-     * @var integer 水印模板 ID。
+     * @var string 溯源水印任务开关，此字段必填，可选值：
+<li>ON：开启溯源水印；</li>
+<li>OFF：关闭溯源水印。</li>
+     */
+    public $Switch;
+
+    /**
+     * @var integer 该字段已废弃，请勿使用。
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 水印模板 ID。
+     * @param string $Switch 溯源水印任务开关，此字段必填，可选值：
+<li>ON：开启溯源水印；</li>
+<li>OFF：关闭溯源水印。</li>
+     * @param integer $Definition 该字段已废弃，请勿使用。
      */
     function __construct()
     {
@@ -46,6 +62,10 @@ class TraceWatermarkInput extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
+        }
+
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
         }

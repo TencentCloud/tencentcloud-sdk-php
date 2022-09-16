@@ -26,10 +26,12 @@ use TencentCloud\Yinsuda\V20220527\Models as Models;
  * @method Models\BatchDescribeKTVMusicDetailsResponse BatchDescribeKTVMusicDetails(Models\BatchDescribeKTVMusicDetailsRequest $req) 批量获取歌曲详细信息，包括：歌词下载链接、播放凭证、音高数据下载链接信息等。
  * @method Models\CreateKTVRobotResponse CreateKTVRobot(Models\CreateKTVRobotRequest $req) 创建机器人，支持进入 RTC 房间，播放曲库歌曲。
  * @method Models\DescribeKTVMatchMusicsResponse DescribeKTVMatchMusics(Models\DescribeKTVMatchMusicsRequest $req) 根据输入的规则匹配曲库中的歌曲。
+ * @method Models\DescribeKTVMusicsByTagResponse DescribeKTVMusicsByTag(Models\DescribeKTVMusicsByTagRequest $req) 通过标签过滤歌曲列表。
  * @method Models\DescribeKTVPlaylistDetailResponse DescribeKTVPlaylistDetail(Models\DescribeKTVPlaylistDetailRequest $req) 根据歌单 Id 获取歌单详情。
  * @method Models\DescribeKTVPlaylistsResponse DescribeKTVPlaylists(Models\DescribeKTVPlaylistsRequest $req) 获取歌单列表。
  * @method Models\DescribeKTVRobotsResponse DescribeKTVRobots(Models\DescribeKTVRobotsRequest $req) 获取机器人列表，支持 Id、状态等过滤条件。
  * @method Models\DescribeKTVSuggestionsResponse DescribeKTVSuggestions(Models\DescribeKTVSuggestionsRequest $req) 根据关键词获取联想词列表。
+ * @method Models\DescribeKTVTagsResponse DescribeKTVTags(Models\DescribeKTVTagsRequest $req) 获取标签分组及分组下的标签列表信息。
  * @method Models\DestroyKTVRobotResponse DestroyKTVRobot(Models\DestroyKTVRobotRequest $req) 销毁机器人，机器人退出 RTC 房间。
  * @method Models\SearchKTVMusicsResponse SearchKTVMusics(Models\SearchKTVMusicsRequest $req) 根据关键词搜索歌曲，返回相关歌曲列表。
  * @method Models\SyncKTVRobotCommandResponse SyncKTVRobotCommand(Models\SyncKTVRobotCommandRequest $req) 下发操作机器人指令，支持播放、暂停、恢复、歌单设置等操作指令，实现对机器人行为的控制。

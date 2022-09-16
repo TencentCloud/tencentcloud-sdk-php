@@ -44,6 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoStreamSet(array $VideoStreamSet) 设置视频流信息。
  * @method array getAudioStreamSet() 获取音频流信息。
  * @method void setAudioStreamSet(array $AudioStreamSet) 设置音频流信息。
+ * @method string getDigitalWatermarkType() 获取数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
+ * @method void setDigitalWatermarkType(string $DigitalWatermarkType) 设置数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -104,6 +110,13 @@ class MediaTranscodeItem extends AbstractModel
     public $AudioStreamSet;
 
     /**
+     * @var string 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
+     */
+    public $DigitalWatermarkType;
+
+    /**
      * @param string $Url 转码后的视频文件地址。
      * @param integer $Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
      * @param integer $Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
@@ -116,6 +129,9 @@ class MediaTranscodeItem extends AbstractModel
      * @param string $Container 容器类型，例如 m4a，mp4 等。
      * @param array $VideoStreamSet 视频流信息。
      * @param array $AudioStreamSet 音频流信息。
+     * @param string $DigitalWatermarkType 数字水印类型。可选值：
+<li>Trace 表示经过溯源水印处理；</li>
+<li>None 表示没有经过数字水印处理。</li>
      */
     function __construct()
     {
@@ -182,6 +198,10 @@ class MediaTranscodeItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AudioStreamSet, $obj);
             }
+        }
+
+        if (array_key_exists("DigitalWatermarkType",$param) and $param["DigitalWatermarkType"] !== null) {
+            $this->DigitalWatermarkType = $param["DigitalWatermarkType"];
         }
     }
 }

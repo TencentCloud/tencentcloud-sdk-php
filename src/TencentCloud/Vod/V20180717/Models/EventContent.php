@@ -34,6 +34,7 @@ use TencentCloud\Common\AbstractModel;
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <li>FastClipMediaComplete：快速剪辑完成；</li>
 <li>ReviewAudioVideoComplete：音视频审核完成。</li>
+<li>ExtractTraceWatermarkComplete：提取溯源水印完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -52,6 +53,7 @@ use TencentCloud\Common\AbstractModel;
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <li>FastClipMediaComplete：快速剪辑完成；</li>
 <li>ReviewAudioVideoComplete：音视频审核完成。</li>
+<li>ExtractTraceWatermarkComplete：提取溯源水印完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -122,9 +124,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) 设置视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() 获取溯源水印提取完成事件，当事件类型为ExtractTraceWatermarkComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent) 设置溯源水印提取完成事件，当事件类型为ExtractTraceWatermarkComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() 获取音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent) 设置音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() 获取降码率完成事件，当事件类型为 ReduceMediaBitrateComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent) 设置降码率完成事件，当事件类型为 ReduceMediaBitrateComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventContent extends AbstractModel
@@ -147,6 +157,7 @@ class EventContent extends AbstractModel
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <li>FastClipMediaComplete：快速剪辑完成；</li>
 <li>ReviewAudioVideoComplete：音视频审核完成。</li>
+<li>ExtractTraceWatermarkComplete：提取溯源水印完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -253,10 +264,22 @@ class EventContent extends AbstractModel
     public $RestoreMediaCompleteEvent;
 
     /**
+     * @var ExtractTraceWatermarkTask 溯源水印提取完成事件，当事件类型为ExtractTraceWatermarkComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtractTraceWatermarkCompleteEvent;
+
+    /**
      * @var ReviewAudioVideoTask 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReviewAudioVideoCompleteEvent;
+
+    /**
+     * @var ReduceMediaBitrateTask 降码率完成事件，当事件类型为 ReduceMediaBitrateComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReduceMediaBitrateCompleteEvent;
 
     /**
      * @param string $EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
@@ -272,6 +295,7 @@ class EventContent extends AbstractModel
 <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
 <li>FastClipMediaComplete：快速剪辑完成；</li>
 <li>ReviewAudioVideoComplete：音视频审核完成。</li>
+<li>ExtractTraceWatermarkComplete：提取溯源水印完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -310,7 +334,11 @@ class EventContent extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RestoreMediaTask $RestoreMediaCompleteEvent 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent 溯源水印提取完成事件，当事件类型为ExtractTraceWatermarkComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent 降码率完成事件，当事件类型为 ReduceMediaBitrateComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -414,9 +442,19 @@ class EventContent extends AbstractModel
             $this->RestoreMediaCompleteEvent->deserialize($param["RestoreMediaCompleteEvent"]);
         }
 
+        if (array_key_exists("ExtractTraceWatermarkCompleteEvent",$param) and $param["ExtractTraceWatermarkCompleteEvent"] !== null) {
+            $this->ExtractTraceWatermarkCompleteEvent = new ExtractTraceWatermarkTask();
+            $this->ExtractTraceWatermarkCompleteEvent->deserialize($param["ExtractTraceWatermarkCompleteEvent"]);
+        }
+
         if (array_key_exists("ReviewAudioVideoCompleteEvent",$param) and $param["ReviewAudioVideoCompleteEvent"] !== null) {
             $this->ReviewAudioVideoCompleteEvent = new ReviewAudioVideoTask();
             $this->ReviewAudioVideoCompleteEvent->deserialize($param["ReviewAudioVideoCompleteEvent"]);
+        }
+
+        if (array_key_exists("ReduceMediaBitrateCompleteEvent",$param) and $param["ReduceMediaBitrateCompleteEvent"] !== null) {
+            $this->ReduceMediaBitrateCompleteEvent = new ReduceMediaBitrateTask();
+            $this->ReduceMediaBitrateCompleteEvent->deserialize($param["ReduceMediaBitrateCompleteEvent"]);
         }
     }
 }

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNearExpiryLicenseCnt(integer $NearExpiryLicenseCnt) 设置即将到期授权数 (15天内到期的)
  * @method integer getExpireLicenseCnt() 获取已到期授权数(不包含已删除的记录)
  * @method void setExpireLicenseCnt(integer $ExpireLicenseCnt) 设置已到期授权数(不包含已删除的记录)
- * @method boolean getAutoOpenStatus() 获取自动升级开关状态,默认 false,  ture 开启, false 关闭
- * @method void setAutoOpenStatus(boolean $AutoOpenStatus) 设置自动升级开关状态,默认 false,  ture 开启, false 关闭
+ * @method boolean getAutoOpenStatus() 获取自动升级开关状态,默认 false,  true 开启, false 关闭
+ * @method void setAutoOpenStatus(boolean $AutoOpenStatus) 设置自动升级开关状态,默认 false,  true 开启, false 关闭
  * @method string getProtectType() 获取PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
  * @method void setProtectType(string $ProtectType) 设置PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
  * @method boolean getIsOpenStatusHistory() 获取历史是否开通过自动升级开关
@@ -86,7 +86,7 @@ class DescribeLicenseGeneralResponse extends AbstractModel
     public $ExpireLicenseCnt;
 
     /**
-     * @var boolean 自动升级开关状态,默认 false,  ture 开启, false 关闭
+     * @var boolean 自动升级开关状态,默认 false,  true 开启, false 关闭
      */
     public $AutoOpenStatus;
 
@@ -142,7 +142,7 @@ class DescribeLicenseGeneralResponse extends AbstractModel
      * @param integer $AvailableFlagshipVersionLicenseCnt 可用旗舰版授权数
      * @param integer $NearExpiryLicenseCnt 即将到期授权数 (15天内到期的)
      * @param integer $ExpireLicenseCnt 已到期授权数(不包含已删除的记录)
-     * @param boolean $AutoOpenStatus 自动升级开关状态,默认 false,  ture 开启, false 关闭
+     * @param boolean $AutoOpenStatus 自动升级开关状态,默认 false,  true 开启, false 关闭
      * @param string $ProtectType PROVERSION_POSTPAY 专业版-后付费, PROVERSION_PREPAY 专业版-预付费, FLAGSHIP_PREPAY 旗舰版-预付费
      * @param boolean $IsOpenStatusHistory 历史是否开通过自动升级开关
      * @param integer $UsedLicenseCnt 已使用授权数

@@ -20,25 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConsoleLoginUrl返回参数结构体
  *
- * @method string getConsoleUrl() 获取控制台url，此链接5分钟内有效，且只能访问一次
- * @method void setConsoleUrl(string $ConsoleUrl) 设置控制台url，此链接5分钟内有效，且只能访问一次
- * @method boolean getIsActivated() 获取渠道合作企业是否认证开通腾讯电子签。
-当渠道合作企业未完成认证开通腾讯电子签,建议先调用同步企业信息(SyncProxyOrganization)和同步经办人信息(SyncProxyOrganizationOperators)接口成功后再跳转到登录页面。
- * @method void setIsActivated(boolean $IsActivated) 设置渠道合作企业是否认证开通腾讯电子签。
-当渠道合作企业未完成认证开通腾讯电子签,建议先调用同步企业信息(SyncProxyOrganization)和同步经办人信息(SyncProxyOrganizationOperators)接口成功后再跳转到登录页面。
+ * @method string getConsoleUrl() 获取子客Web控制台url，此链接5分钟内有效，且只能访问一次
+ * @method void setConsoleUrl(string $ConsoleUrl) 设置子客Web控制台url，此链接5分钟内有效，且只能访问一次
+ * @method boolean getIsActivated() 获取渠道子客企业是否已开通腾讯电子签。
+ * @method void setIsActivated(boolean $IsActivated) 设置渠道子客企业是否已开通腾讯电子签。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateConsoleLoginUrlResponse extends AbstractModel
 {
     /**
-     * @var string 控制台url，此链接5分钟内有效，且只能访问一次
+     * @var string 子客Web控制台url，此链接5分钟内有效，且只能访问一次
      */
     public $ConsoleUrl;
 
     /**
-     * @var boolean 渠道合作企业是否认证开通腾讯电子签。
-当渠道合作企业未完成认证开通腾讯电子签,建议先调用同步企业信息(SyncProxyOrganization)和同步经办人信息(SyncProxyOrganizationOperators)接口成功后再跳转到登录页面。
+     * @var boolean 渠道子客企业是否已开通腾讯电子签。
      */
     public $IsActivated;
 
@@ -48,9 +45,8 @@ class CreateConsoleLoginUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ConsoleUrl 控制台url，此链接5分钟内有效，且只能访问一次
-     * @param boolean $IsActivated 渠道合作企业是否认证开通腾讯电子签。
-当渠道合作企业未完成认证开通腾讯电子签,建议先调用同步企业信息(SyncProxyOrganization)和同步经办人信息(SyncProxyOrganizationOperators)接口成功后再跳转到登录页面。
+     * @param string $ConsoleUrl 子客Web控制台url，此链接5分钟内有效，且只能访问一次
+     * @param boolean $IsActivated 渠道子客企业是否已开通腾讯电子签。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

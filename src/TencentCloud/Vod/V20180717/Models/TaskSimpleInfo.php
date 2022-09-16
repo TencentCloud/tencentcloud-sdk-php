@@ -29,6 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskType() 获取任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务</li>
+<li>ReduceMediaBitrate：降码率任务</li>
 <li>WechatDistribute：微信发布任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
@@ -39,6 +40,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(string $TaskType) 设置任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务</li>
+<li>ReduceMediaBitrate：降码率任务</li>
 <li>WechatDistribute：微信发布任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
@@ -78,6 +80,7 @@ class TaskSimpleInfo extends AbstractModel
      * @var string 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务</li>
+<li>ReduceMediaBitrate：降码率任务</li>
 <li>WechatDistribute：微信发布任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>
@@ -120,6 +123,7 @@ class TaskSimpleInfo extends AbstractModel
      * @param string $TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务</li>
+<li>ReduceMediaBitrate：降码率任务</li>
 <li>WechatDistribute：微信发布任务。</li>
 兼容 2017 版的任务类型：
 <li>Transcode：视频转码任务；</li>

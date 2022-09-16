@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeType(string $NodeType) 设置实例规格
  * @method integer getDiskSize() 获取节点磁盘容量
  * @method void setDiskSize(integer $DiskSize) 设置节点磁盘容量
+ * @method OperationDurationUpdated getOperationDuration() 获取可维护时间段
+ * @method void setOperationDuration(OperationDurationUpdated $OperationDuration) 设置可维护时间段
  */
 class UpdateLogstashInstanceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class UpdateLogstashInstanceRequest extends AbstractModel
     public $DiskSize;
 
     /**
+     * @var OperationDurationUpdated 可维护时间段
+     */
+    public $OperationDuration;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $NodeNum 实例节点数量
      * @param string $YMLConfig 实例YML配置
@@ -88,6 +95,7 @@ class UpdateLogstashInstanceRequest extends AbstractModel
      * @param array $ExtendedFiles 扩展文件列表
      * @param string $NodeType 实例规格
      * @param integer $DiskSize 节点磁盘容量
+     * @param OperationDurationUpdated $OperationDuration 可维护时间段
      */
     function __construct()
     {
@@ -138,6 +146,11 @@ class UpdateLogstashInstanceRequest extends AbstractModel
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
+            $this->OperationDuration = new OperationDurationUpdated();
+            $this->OperationDuration->deserialize($param["OperationDuration"]);
         }
     }
 }

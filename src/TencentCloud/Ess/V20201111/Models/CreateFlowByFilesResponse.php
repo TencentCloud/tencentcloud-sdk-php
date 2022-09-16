@@ -20,11 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowByFiles返回参数结构体
  *
- * @method string getFlowId() 获取签署流程编号
- * @method void setFlowId(string $FlowId) 设置签署流程编号
- * @method string getPreviewUrl() 获取合同预览链接
+ * @method string getFlowId() 获取签署流程编号。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，不会正式发起合同，此处不会有值返回；如入参 是否需要预览 NeedPreview 设置为 false，此处会正常返回签署流程编号 FlowId。
+ * @method void setFlowId(string $FlowId) 设置签署流程编号。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，不会正式发起合同，此处不会有值返回；如入参 是否需要预览 NeedPreview 设置为 false，此处会正常返回签署流程编号 FlowId。
+ * @method string getPreviewUrl() 获取合同预览链接。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，会开启“预览模式”，此处会返回预览链接；如入参 是否需要预览 NeedPreview 设置为 false，此处不会有值返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreviewUrl(string $PreviewUrl) 设置合同预览链接
+ * @method void setPreviewUrl(string $PreviewUrl) 设置合同预览链接。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，会开启“预览模式”，此处会返回预览链接；如入参 是否需要预览 NeedPreview 设置为 false，此处不会有值返回。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +40,16 @@ use TencentCloud\Common\AbstractModel;
 class CreateFlowByFilesResponse extends AbstractModel
 {
     /**
-     * @var string 签署流程编号
+     * @var string 签署流程编号。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，不会正式发起合同，此处不会有值返回；如入参 是否需要预览 NeedPreview 设置为 false，此处会正常返回签署流程编号 FlowId。
      */
     public $FlowId;
 
     /**
-     * @var string 合同预览链接
+     * @var string 合同预览链接。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，会开启“预览模式”，此处会返回预览链接；如入参 是否需要预览 NeedPreview 设置为 false，此处不会有值返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewUrl;
@@ -48,8 +60,12 @@ class CreateFlowByFilesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FlowId 签署流程编号
-     * @param string $PreviewUrl 合同预览链接
+     * @param string $FlowId 签署流程编号。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，不会正式发起合同，此处不会有值返回；如入参 是否需要预览 NeedPreview 设置为 false，此处会正常返回签署流程编号 FlowId。
+     * @param string $PreviewUrl 合同预览链接。
+
+注：如入参 是否需要预览 NeedPreview 设置为 true，会开启“预览模式”，此处会返回预览链接；如入参 是否需要预览 NeedPreview 设置为 false，此处不会有值返回。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

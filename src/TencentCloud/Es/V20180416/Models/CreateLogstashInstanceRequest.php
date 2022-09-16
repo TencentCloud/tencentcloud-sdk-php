@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseType(string $LicenseType) 设置License类型<li>oss：开源版</li><li>xpack：xpack版</li>默认值xpack
  * @method array getTagList() 获取标签信息列表
  * @method void setTagList(array $TagList) 设置标签信息列表
+ * @method OperationDuration getOperationDuration() 获取可维护时间段
+ * @method void setOperationDuration(OperationDuration $OperationDuration) 设置可维护时间段
  */
 class CreateLogstashInstanceRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class CreateLogstashInstanceRequest extends AbstractModel
     public $TagList;
 
     /**
+     * @var OperationDuration 可维护时间段
+     */
+    public $OperationDuration;
+
+    /**
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param string $Zone 可用区
      * @param string $LogstashVersion 实例版本（支持"6.8.13"、"7.10.1"）
@@ -160,6 +167,7 @@ class CreateLogstashInstanceRequest extends AbstractModel
      * @param integer $DiskSize 节点磁盘容量（单位GB）
      * @param string $LicenseType License类型<li>oss：开源版</li><li>xpack：xpack版</li>默认值xpack
      * @param array $TagList 标签信息列表
+     * @param OperationDuration $OperationDuration 可维护时间段
      */
     function __construct()
     {
@@ -245,6 +253,11 @@ class CreateLogstashInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
+            $this->OperationDuration = new OperationDuration();
+            $this->OperationDuration->deserialize($param["OperationDuration"]);
         }
     }
 }

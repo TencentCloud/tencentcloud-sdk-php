@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
  * @method void setApproverType(integer $ApproverType) 设置参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
  * @method string getApproverName() 获取本环节需要操作人的名字
  * @method void setApproverName(string $ApproverName) 设置本环节需要操作人的名字
  * @method string getApproverMobile() 获取本环节需要操作人的手机号
@@ -70,7 +70,7 @@ class ApproverInfo extends AbstractModel
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
      */
     public $ApproverType;
 
@@ -147,7 +147,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
      * @param string $ApproverName 本环节需要操作人的名字
      * @param string $ApproverMobile 本环节需要操作人的手机号
      * @param array $SignComponents 本环节操作人签署控件配置

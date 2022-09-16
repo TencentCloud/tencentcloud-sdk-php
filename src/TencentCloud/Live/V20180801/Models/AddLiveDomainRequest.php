@@ -54,6 +54,18 @@ use TencentCloud\Common\AbstractModel;
 0： 标准直播，
 1 ：小程序直播 。
 默认值： 0。
+ * @method string getVerifyOwnerType() 获取域名归属校验类型。
+可取值（与 AuthenticateDomainOwner 接口的 VerifyType 参数一致。）：
+dnsCheck ：立即验证配置 dns 的解析记录是否与待验证内容一致，成功则保存记录。
+fileCheck ：立即验证 web 文件是否与待验证内容一致，成功则保存记录。
+dbCheck :  检查是否已经验证成功过。
+若不传默认为 dbCheck 。
+ * @method void setVerifyOwnerType(string $VerifyOwnerType) 设置域名归属校验类型。
+可取值（与 AuthenticateDomainOwner 接口的 VerifyType 参数一致。）：
+dnsCheck ：立即验证配置 dns 的解析记录是否与待验证内容一致，成功则保存记录。
+fileCheck ：立即验证 web 文件是否与待验证内容一致，成功则保存记录。
+dbCheck :  检查是否已经验证成功过。
+若不传默认为 dbCheck 。
  */
 class AddLiveDomainRequest extends AbstractModel
 {
@@ -95,6 +107,16 @@ class AddLiveDomainRequest extends AbstractModel
     public $IsMiniProgramLive;
 
     /**
+     * @var string 域名归属校验类型。
+可取值（与 AuthenticateDomainOwner 接口的 VerifyType 参数一致。）：
+dnsCheck ：立即验证配置 dns 的解析记录是否与待验证内容一致，成功则保存记录。
+fileCheck ：立即验证 web 文件是否与待验证内容一致，成功则保存记录。
+dbCheck :  检查是否已经验证成功过。
+若不传默认为 dbCheck 。
+     */
+    public $VerifyOwnerType;
+
+    /**
      * @param string $DomainName 域名名称。
      * @param integer $DomainType 域名类型，
 0：推流域名，
@@ -112,6 +134,12 @@ class AddLiveDomainRequest extends AbstractModel
 0： 标准直播，
 1 ：小程序直播 。
 默认值： 0。
+     * @param string $VerifyOwnerType 域名归属校验类型。
+可取值（与 AuthenticateDomainOwner 接口的 VerifyType 参数一致。）：
+dnsCheck ：立即验证配置 dns 的解析记录是否与待验证内容一致，成功则保存记录。
+fileCheck ：立即验证 web 文件是否与待验证内容一致，成功则保存记录。
+dbCheck :  检查是否已经验证成功过。
+若不传默认为 dbCheck 。
      */
     function __construct()
     {
@@ -144,6 +172,10 @@ class AddLiveDomainRequest extends AbstractModel
 
         if (array_key_exists("IsMiniProgramLive",$param) and $param["IsMiniProgramLive"] !== null) {
             $this->IsMiniProgramLive = $param["IsMiniProgramLive"];
+        }
+
+        if (array_key_exists("VerifyOwnerType",$param) and $param["VerifyOwnerType"] !== null) {
+            $this->VerifyOwnerType = $param["VerifyOwnerType"];
         }
     }
 }

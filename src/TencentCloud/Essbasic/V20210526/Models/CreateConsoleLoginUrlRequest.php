@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
  * @method void setAgent(Agent $Agent) 设置应用信息
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
- * @method string getProxyOrganizationName() 获取渠道侧合作企业名称，最大长度64个字符
- * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道侧合作企业名称，最大长度64个字符
- * @method string getProxyOperatorName() 获取渠道侧合作企业经办人的姓名，最大长度50个字符
- * @method void setProxyOperatorName(string $ProxyOperatorName) 设置渠道侧合作企业经办人的姓名，最大长度50个字符
+ * @method string getProxyOrganizationName() 获取渠道子客企业名称，最大长度64个字符
+ * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置渠道子客企业名称，最大长度64个字符
+ * @method string getProxyOperatorName() 获取渠道子客企业经办人的姓名，最大长度50个字符
+ * @method void setProxyOperatorName(string $ProxyOperatorName) 设置渠道子客企业经办人的姓名，最大长度50个字符
  * @method string getModule() 获取控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
  * @method void setModule(string $Module) 设置控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
  * @method string getModuleId() 获取控制台指定模块Id
  * @method void setModuleId(string $ModuleId) 设置控制台指定模块Id
- * @method string getUniformSocialCreditCode() 获取渠道侧合作企业统一社会信用代码，最大长度200个字符
- * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置渠道侧合作企业统一社会信用代码，最大长度200个字符
+ * @method string getUniformSocialCreditCode() 获取渠道子客企业统一社会信用代码，最大长度200个字符
+ * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置渠道子客企业统一社会信用代码，最大长度200个字符
  * @method string getMenuStatus() 获取是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
  * @method void setMenuStatus(string $MenuStatus) 设置是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
  * @method UserInfo getOperator() 获取操作者的信息
@@ -48,12 +48,12 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 渠道侧合作企业名称，最大长度64个字符
+     * @var string 渠道子客企业名称，最大长度64个字符
      */
     public $ProxyOrganizationName;
 
     /**
-     * @var string 渠道侧合作企业经办人的姓名，最大长度50个字符
+     * @var string 渠道子客企业经办人的姓名，最大长度50个字符
      */
     public $ProxyOperatorName;
 
@@ -68,7 +68,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     public $ModuleId;
 
     /**
-     * @var string 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     * @var string 渠道子客企业统一社会信用代码，最大长度200个字符
      */
     public $UniformSocialCreditCode;
 
@@ -85,11 +85,11 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
     /**
      * @param Agent $Agent 应用信息
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
-     * @param string $ProxyOrganizationName 渠道侧合作企业名称，最大长度64个字符
-     * @param string $ProxyOperatorName 渠道侧合作企业经办人的姓名，最大长度50个字符
+     * @param string $ProxyOrganizationName 渠道子客企业名称，最大长度64个字符
+     * @param string $ProxyOperatorName 渠道子客企业经办人的姓名，最大长度50个字符
      * @param string $Module 控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
      * @param string $ModuleId 控制台指定模块Id
-     * @param string $UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     * @param string $UniformSocialCreditCode 渠道子客企业统一社会信用代码，最大长度200个字符
      * @param string $MenuStatus 是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
      * @param UserInfo $Operator 操作者的信息
      */

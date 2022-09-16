@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreludeInterval(integer $PreludeInterval) 设置前奏间隔。
  * @method array getGenreSet() 获取歌曲流派列表。
  * @method void setGenreSet(array $GenreSet) 设置歌曲流派列表。
+ * @method KTVBPMInfo getBPMInfo() 获取节拍信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBPMInfo(KTVBPMInfo $BPMInfo) 设置节拍信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KTVMusicDetailInfo extends AbstractModel
 {
@@ -73,6 +77,12 @@ class KTVMusicDetailInfo extends AbstractModel
     public $GenreSet;
 
     /**
+     * @var KTVBPMInfo 节拍信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BPMInfo;
+
+    /**
      * @param KTVMusicBaseInfo $KTVMusicBaseInfo 歌曲基础信息。
      * @param string $PlayToken 播放凭证。
      * @param string $LyricsUrl 歌词下载链接。
@@ -80,6 +90,8 @@ class KTVMusicDetailInfo extends AbstractModel
      * @param array $ChorusClipSet 副歌片段信息。
      * @param integer $PreludeInterval 前奏间隔。
      * @param array $GenreSet 歌曲流派列表。
+     * @param KTVBPMInfo $BPMInfo 节拍信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -126,6 +138,11 @@ class KTVMusicDetailInfo extends AbstractModel
 
         if (array_key_exists("GenreSet",$param) and $param["GenreSet"] !== null) {
             $this->GenreSet = $param["GenreSet"];
+        }
+
+        if (array_key_exists("BPMInfo",$param) and $param["BPMInfo"] !== null) {
+            $this->BPMInfo = new KTVBPMInfo();
+            $this->BPMInfo->deserialize($param["BPMInfo"]);
         }
     }
 }

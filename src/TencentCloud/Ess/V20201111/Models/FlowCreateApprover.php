@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
  * @method void setApproverType(integer $ApproverType) 设置参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
  * @method string getOrganizationName() 获取如果签署方为企业，需要填入企业全称
  * @method void setOrganizationName(string $OrganizationName) 设置如果签署方为企业，需要填入企业全称
  * @method string getApproverName() 获取签署方经办人姓名
@@ -62,6 +62,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method void setApproverSource(string $ApproverSource) 设置签署人用户来源,企微侧用户请传入：WEWORKAPP
  * @method string getCustomApproverTag() 获取客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
  * @method void setCustomApproverTag(string $CustomApproverTag) 设置客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+ * @method RegisterInfo getRegisterInfo() 获取快速注册相关信息，目前暂未开放！
+ * @method void setRegisterInfo(RegisterInfo $RegisterInfo) 设置快速注册相关信息，目前暂未开放！
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -70,7 +72,7 @@ class FlowCreateApprover extends AbstractModel
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
      */
     public $ApproverType;
 
@@ -147,11 +149,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $CustomApproverTag;
 
     /**
+     * @var RegisterInfo 快速注册相关信息，目前暂未开放！
+     */
+    public $RegisterInfo;
+
+    /**
      * @param integer $ApproverType 参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
      * @param string $OrganizationName 如果签署方为企业，需要填入企业全称
      * @param string $ApproverName 签署方经办人姓名
      * @param string $ApproverMobile 签署方经办人手机号码
@@ -168,6 +175,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param boolean $Required 当前只支持true，默认为true
      * @param string $ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
      * @param string $CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+     * @param RegisterInfo $RegisterInfo 快速注册相关信息，目前暂未开放！
      */
     function __construct()
     {
@@ -240,6 +248,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
         if (array_key_exists("CustomApproverTag",$param) and $param["CustomApproverTag"] !== null) {
             $this->CustomApproverTag = $param["CustomApproverTag"];
+        }
+
+        if (array_key_exists("RegisterInfo",$param) and $param["RegisterInfo"] !== null) {
+            $this->RegisterInfo = new RegisterInfo();
+            $this->RegisterInfo->deserialize($param["RegisterInfo"]);
         }
     }
 }

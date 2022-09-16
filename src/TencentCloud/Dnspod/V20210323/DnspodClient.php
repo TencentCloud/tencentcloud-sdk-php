@@ -41,6 +41,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeDomainResponse DescribeDomain(Models\DescribeDomainRequest $req) 获取域名信息
  * @method Models\DescribeDomainAliasListResponse DescribeDomainAliasList(Models\DescribeDomainAliasListRequest $req) 获取域名别名列表
  * @method Models\DescribeDomainAnalyticsResponse DescribeDomainAnalytics(Models\DescribeDomainAnalyticsRequest $req) 统计各个域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况
+ * @method Models\DescribeDomainGroupListResponse DescribeDomainGroupList(Models\DescribeDomainGroupListRequest $req) 获取域名分组列表
  * @method Models\DescribeDomainListResponse DescribeDomainList(Models\DescribeDomainListRequest $req) 获取域名列表
  * @method Models\DescribeDomainLogListResponse DescribeDomainLogList(Models\DescribeDomainLogListRequest $req) 获取域名日志
  * @method Models\DescribeDomainPurviewResponse DescribeDomainPurview(Models\DescribeDomainPurviewRequest $req) 获取域名权限

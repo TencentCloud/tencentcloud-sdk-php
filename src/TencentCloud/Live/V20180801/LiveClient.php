@@ -29,6 +29,7 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\AddLiveDomainResponse AddLiveDomain(Models\AddLiveDomainRequest $req) 添加域名，一次只能提交一个域名。域名必须已备案。
  * @method Models\AddLiveWatermarkResponse AddLiveWatermark(Models\AddLiveWatermarkRequest $req) 添加水印，成功返回水印 ID 后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印 ID 绑定到流使用。
 水印数量上限 100，超过后需要先删除，再添加。
+ * @method Models\AuthenticateDomainOwnerResponse AuthenticateDomainOwner(Models\AuthenticateDomainOwnerRequest $req) 验证用户是否拥有特定直播域名。
  * @method Models\CancelCommonMixStreamResponse CancelCommonMixStream(Models\CancelCommonMixStreamRequest $req) 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
  * @method Models\CreateCommonMixStreamResponse CreateCommonMixStream(Models\CreateCommonMixStreamRequest $req) 该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
 注意：当前最多支持16路混流。

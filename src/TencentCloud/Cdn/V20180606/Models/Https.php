@@ -31,12 +31,10 @@ off：关闭
  * @method string getHttp2() 获取http2 配置开关
 on：开启
 off：关闭
-初次启用 https 加速会默认开启 http2 配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttp2(string $Http2) 设置http2 配置开关
 on：开启
 off：关闭
-初次启用 https 加速会默认开启 http2 配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOcspStapling() 获取OCSP 配置开关
 on：开启
@@ -111,7 +109,6 @@ off：关闭
      * @var string http2 配置开关
 on：开启
 off：关闭
-初次启用 https 加速会默认开启 http2 配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Http2;
@@ -185,7 +182,6 @@ off：关闭
      * @param string $Http2 http2 配置开关
 on：开启
 off：关闭
-初次启用 https 加速会默认开启 http2 配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OcspStapling OCSP 配置开关
 on：开启

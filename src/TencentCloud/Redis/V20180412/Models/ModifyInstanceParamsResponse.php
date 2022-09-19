@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceParams返回参数结构体
  *
- * @method boolean getChanged() 获取修改是否成功。修改成功为true，失败为false。
- * @method void setChanged(boolean $Changed) 设置修改是否成功。修改成功为true，失败为false。
+ * @method boolean getChanged() 获取说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
+ * @method void setChanged(boolean $Changed) 设置说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
  * @method integer getTaskId() 获取任务ID。
  * @method void setTaskId(integer $TaskId) 设置任务ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceParamsResponse extends AbstractModel
 {
     /**
-     * @var boolean 修改是否成功。修改成功为true，失败为false。
+     * @var boolean 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
      */
     public $Changed;
 
@@ -45,7 +45,7 @@ class ModifyInstanceParamsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Changed 修改是否成功。修改成功为true，失败为false。
+     * @param boolean $Changed 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
      * @param integer $TaskId 任务ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainNameConfig(DomainNameConfig $DomainNameConfig) 设置域名解析配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNotificationHooks() 获取通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNotificationHooks(array $NotificationHooks) 设置通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Scenario extends AbstractModel
 {
@@ -252,6 +256,12 @@ class Scenario extends AbstractModel
     public $DomainNameConfig;
 
     /**
+     * @var array 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NotificationHooks;
+
+    /**
      * @param string $ScenarioId 场景ID
      * @param string $Name 场景名
      * @param string $Description 场景描述
@@ -295,6 +305,8 @@ class Scenario extends AbstractModel
      * @param array $Plugins 扩展包信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainNameConfig $DomainNameConfig 域名解析配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NotificationHooks 通知事件回调
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -432,6 +444,15 @@ class Scenario extends AbstractModel
         if (array_key_exists("DomainNameConfig",$param) and $param["DomainNameConfig"] !== null) {
             $this->DomainNameConfig = new DomainNameConfig();
             $this->DomainNameConfig->deserialize($param["DomainNameConfig"]);
+        }
+
+        if (array_key_exists("NotificationHooks",$param) and $param["NotificationHooks"] !== null) {
+            $this->NotificationHooks = [];
+            foreach ($param["NotificationHooks"] as $key => $value){
+                $obj = new NotificationHook();
+                $obj->deserialize($value);
+                array_push($this->NotificationHooks, $obj);
+            }
         }
     }
 }

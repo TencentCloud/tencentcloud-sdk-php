@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataTargetRecordMapping(array $DataTargetRecordMapping) 设置表与消息间的映射关系
  * @method boolean getDropInvalidMessage() 获取是否抛弃解析失败的消息，默认为true
  * @method void setDropInvalidMessage(boolean $DropInvalidMessage) 设置是否抛弃解析失败的消息，默认为true
+ * @method boolean getIsTableRegular() 获取输入的table是否为正则表达式
+ * @method void setIsTableRegular(boolean $IsTableRegular) 设置输入的table是否为正则表达式
+ * @method string getKeyColumns() 获取格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+ * @method void setKeyColumns(string $KeyColumns) 设置格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+ * @method boolean getRecordWithSchema() 获取如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+ * @method void setRecordWithSchema(boolean $RecordWithSchema) 设置如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
  */
 class PostgreSQLParam extends AbstractModel
 {
@@ -94,6 +100,21 @@ class PostgreSQLParam extends AbstractModel
     public $DropInvalidMessage;
 
     /**
+     * @var boolean 输入的table是否为正则表达式
+     */
+    public $IsTableRegular;
+
+    /**
+     * @var string 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     */
+    public $KeyColumns;
+
+    /**
+     * @var boolean 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     */
+    public $RecordWithSchema;
+
+    /**
      * @param string $Database PostgreSQL的数据库名称
      * @param string $Table PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
      * @param string $Resource 该PostgreSQL在连接管理内的Id
@@ -104,6 +125,9 @@ class PostgreSQLParam extends AbstractModel
      * @param string $DataTargetPrimaryKeyField 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
      * @param array $DataTargetRecordMapping 表与消息间的映射关系
      * @param boolean $DropInvalidMessage 是否抛弃解析失败的消息，默认为true
+     * @param boolean $IsTableRegular 输入的table是否为正则表达式
+     * @param string $KeyColumns 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+     * @param boolean $RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
      */
     function __construct()
     {
@@ -161,6 +185,18 @@ class PostgreSQLParam extends AbstractModel
 
         if (array_key_exists("DropInvalidMessage",$param) and $param["DropInvalidMessage"] !== null) {
             $this->DropInvalidMessage = $param["DropInvalidMessage"];
+        }
+
+        if (array_key_exists("IsTableRegular",$param) and $param["IsTableRegular"] !== null) {
+            $this->IsTableRegular = $param["IsTableRegular"];
+        }
+
+        if (array_key_exists("KeyColumns",$param) and $param["KeyColumns"] !== null) {
+            $this->KeyColumns = $param["KeyColumns"];
+        }
+
+        if (array_key_exists("RecordWithSchema",$param) and $param["RecordWithSchema"] !== null) {
+            $this->RecordWithSchema = $param["RecordWithSchema"];
         }
     }
 }

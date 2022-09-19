@@ -148,6 +148,34 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCronId(string $CronId) 设置定时任务ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取场景类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setType(string $Type) 设置场景类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DomainNameConfig getDomainNameConfig() 获取域名绑定配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDomainNameConfig(DomainNameConfig $DomainNameConfig) 设置域名绑定配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDebug() 获取false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDebug(boolean $Debug) 设置false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAbortReason() 获取中断原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAbortReason(integer $AbortReason) 设置中断原因
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedAt() 获取任务的创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedAt(string $CreatedAt) 设置任务的创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectId() 获取项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNotificationHooks() 获取通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNotificationHooks(array $NotificationHooks) 设置通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Job extends AbstractModel
 {
@@ -340,6 +368,48 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     public $CronId;
 
     /**
+     * @var string 场景类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Type;
+
+    /**
+     * @var DomainNameConfig 域名绑定配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DomainNameConfig;
+
+    /**
+     * @var boolean false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Debug;
+
+    /**
+     * @var integer 中断原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AbortReason;
+
+    /**
+     * @var string 任务的创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedAt;
+
+    /**
+     * @var string 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectId;
+
+    /**
+     * @var array 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NotificationHooks;
+
+    /**
      * @param string $JobId 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScenarioId 任务的场景ID
@@ -403,6 +473,20 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
      * @param array $Plugins 拓展包文件信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CronId 定时任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type 场景类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DomainNameConfig $DomainNameConfig 域名绑定配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Debug false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AbortReason 中断原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedAt 任务的创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NotificationHooks 通知事件回调
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -572,6 +656,40 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 
         if (array_key_exists("CronId",$param) and $param["CronId"] !== null) {
             $this->CronId = $param["CronId"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("DomainNameConfig",$param) and $param["DomainNameConfig"] !== null) {
+            $this->DomainNameConfig = new DomainNameConfig();
+            $this->DomainNameConfig->deserialize($param["DomainNameConfig"]);
+        }
+
+        if (array_key_exists("Debug",$param) and $param["Debug"] !== null) {
+            $this->Debug = $param["Debug"];
+        }
+
+        if (array_key_exists("AbortReason",$param) and $param["AbortReason"] !== null) {
+            $this->AbortReason = $param["AbortReason"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("NotificationHooks",$param) and $param["NotificationHooks"] !== null) {
+            $this->NotificationHooks = [];
+            foreach ($param["NotificationHooks"] as $key => $value){
+                $obj = new NotificationHook();
+                $obj->deserialize($value);
+                array_push($this->NotificationHooks, $obj);
+            }
         }
     }
 }

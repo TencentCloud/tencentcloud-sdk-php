@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置文件状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedAt() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedAt(string $CreatedAt) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectId() 获取项目 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectId(string $ProjectId) 设置项目 ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class File extends AbstractModel
 {
@@ -146,6 +154,18 @@ class File extends AbstractModel
     public $Status;
 
     /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedAt;
+
+    /**
+     * @var string 项目 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectId;
+
+    /**
      * @param string $FileId 文件 ID
      * @param integer $Kind 文件种类，参数文件-1，协议文件-2，请求文件-3
      * @param string $Name 文件名
@@ -167,6 +187,10 @@ class File extends AbstractModel
      * @param array $ScenarioSet 关联场景
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 文件状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedAt 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectId 项目 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -246,6 +270,14 @@ class File extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

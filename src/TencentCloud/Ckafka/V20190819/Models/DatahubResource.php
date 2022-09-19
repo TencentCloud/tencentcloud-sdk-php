@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSQLServerParam(SQLServerParam $SQLServerParam) 设置SQLServer配置，Type为SQLSERVER时必填
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CtsdbParam getCtsdbParam() 获取Ctsdb配置，Type为CTSDB时必填
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCtsdbParam(CtsdbParam $CtsdbParam) 设置Ctsdb配置，Type为CTSDB时必填
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatahubResource extends AbstractModel
 {
@@ -171,6 +175,12 @@ class DatahubResource extends AbstractModel
     public $SQLServerParam;
 
     /**
+     * @var CtsdbParam Ctsdb配置，Type为CTSDB时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CtsdbParam;
+
+    /**
      * @param string $Type 资源类型
      * @param KafkaParam $KafkaParam ckafka配置，Type为KAFKA时必填
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,6 +209,8 @@ class DatahubResource extends AbstractModel
      * @param MariaDBParam $MariaDBParam MariaDB配置，Type为MARIADB时必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SQLServerParam $SQLServerParam SQLServer配置，Type为SQLSERVER时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CtsdbParam $CtsdbParam Ctsdb配置，Type为CTSDB时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -286,6 +298,11 @@ class DatahubResource extends AbstractModel
         if (array_key_exists("SQLServerParam",$param) and $param["SQLServerParam"] !== null) {
             $this->SQLServerParam = new SQLServerParam();
             $this->SQLServerParam->deserialize($param["SQLServerParam"]);
+        }
+
+        if (array_key_exists("CtsdbParam",$param) and $param["CtsdbParam"] !== null) {
+            $this->CtsdbParam = new CtsdbParam();
+            $this->CtsdbParam->deserialize($param["CtsdbParam"]);
         }
     }
 }

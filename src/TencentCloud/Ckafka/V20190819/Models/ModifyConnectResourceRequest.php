@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMariaDBConnectParam(MariaDBModifyConnectParam $MariaDBConnectParam) 设置MariaDB配置，Type为MARIADB时必填
  * @method SQLServerModifyConnectParam getSQLServerConnectParam() 获取SQLServer配置，Type为SQLSERVER时必填
  * @method void setSQLServerConnectParam(SQLServerModifyConnectParam $SQLServerConnectParam) 设置SQLServer配置，Type为SQLSERVER时必填
+ * @method CtsdbModifyConnectParam getCtsdbConnectParam() 获取Ctsdb配置，Type为CTSDB
+ * @method void setCtsdbConnectParam(CtsdbModifyConnectParam $CtsdbConnectParam) 设置Ctsdb配置，Type为CTSDB
  */
 class ModifyConnectResourceRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class ModifyConnectResourceRequest extends AbstractModel
     public $SQLServerConnectParam;
 
     /**
+     * @var CtsdbModifyConnectParam Ctsdb配置，Type为CTSDB
+     */
+    public $CtsdbConnectParam;
+
+    /**
      * @param string $ResourceId 连接源的Id
      * @param string $ResourceName 连接源名称，为空时不修改
      * @param string $Description 连接源描述，为空时不修改
@@ -120,6 +127,7 @@ class ModifyConnectResourceRequest extends AbstractModel
      * @param PostgreSQLModifyConnectParam $PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
      * @param MariaDBModifyConnectParam $MariaDBConnectParam MariaDB配置，Type为MARIADB时必填
      * @param SQLServerModifyConnectParam $SQLServerConnectParam SQLServer配置，Type为SQLSERVER时必填
+     * @param CtsdbModifyConnectParam $CtsdbConnectParam Ctsdb配置，Type为CTSDB
      */
     function __construct()
     {
@@ -188,6 +196,11 @@ class ModifyConnectResourceRequest extends AbstractModel
         if (array_key_exists("SQLServerConnectParam",$param) and $param["SQLServerConnectParam"] !== null) {
             $this->SQLServerConnectParam = new SQLServerModifyConnectParam();
             $this->SQLServerConnectParam->deserialize($param["SQLServerConnectParam"]);
+        }
+
+        if (array_key_exists("CtsdbConnectParam",$param) and $param["CtsdbConnectParam"] !== null) {
+            $this->CtsdbConnectParam = new CtsdbModifyConnectParam();
+            $this->CtsdbConnectParam->deserialize($param["CtsdbConnectParam"]);
         }
     }
 }

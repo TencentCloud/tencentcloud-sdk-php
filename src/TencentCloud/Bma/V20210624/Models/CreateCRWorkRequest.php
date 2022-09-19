@@ -50,34 +50,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSamplePublicURL(string $SamplePublicURL) 设置作品发布Url
  * @method string getIsMonitor() 获取是否启用监测 0：不启用 1：启用 默认为0
  * @method void setIsMonitor(string $IsMonitor) 设置是否启用监测 0：不启用 1：启用 默认为0
- * @method string getIsCert() 获取是否启用存证0：不启用 1：启用 默认为1
- * @method void setIsCert(string $IsCert) 设置是否启用存证0：不启用 1：启用 默认为1
+ * @method string getIsCert() 获取是否启用存证0：不存证  2：存证 默认为0
+ * @method void setIsCert(string $IsCert) 设置是否启用存证0：不存证  2：存证 默认为0
  * @method string getCertUrl() 获取存证回调地址
  * @method void setCertUrl(string $CertUrl) 设置存证回调地址
  * @method string getMonitorUrl() 获取监测回调地址
  * @method void setMonitorUrl(string $MonitorUrl) 设置监测回调地址
  * @method string getProduceType() 获取创作性质（原创,改编,翻译,汇编,注释,整理,其他)
  * @method void setProduceType(string $ProduceType) 设置创作性质（原创,改编,翻译,汇编,注释,整理,其他)
- * @method array getWhiteLists() 获取xxx
- * @method void setWhiteLists(array $WhiteLists) 设置xxx
- * @method integer getWorkId() 获取x
- * @method void setWorkId(integer $WorkId) 设置x
- * @method string getProducerName() 获取xx
- * @method void setProducerName(string $ProducerName) 设置xx
- * @method string getNickname() 获取xx
- * @method void setNickname(string $Nickname) 设置xx
- * @method string getAuthorization() 获取x
- * @method void setAuthorization(string $Authorization) 设置x
- * @method string getAuthorizationStartTime() 获取x
- * @method void setAuthorizationStartTime(string $AuthorizationStartTime) 设置x
- * @method string getAuthorizationEndTime() 获取x
- * @method void setAuthorizationEndTime(string $AuthorizationEndTime) 设置x
- * @method string getContentType() 获取x
- * @method void setContentType(string $ContentType) 设置x
- * @method string getContent() 获取x
- * @method void setContent(string $Content) 设置x
- * @method string getMonitorEndTime() 获取x
- * @method void setMonitorEndTime(string $MonitorEndTime) 设置x
+ * @method array getWhiteLists() 获取白名单
+ * @method void setWhiteLists(array $WhiteLists) 设置白名单
+ * @method integer getWorkId() 获取作品ID
+ * @method void setWorkId(integer $WorkId) 设置作品ID
+ * @method string getProducerName() 获取著作权人姓名
+ * @method void setProducerName(string $ProducerName) 设置著作权人姓名
+ * @method string getNickname() 获取作者
+ * @method void setNickname(string $Nickname) 设置作者
+ * @method string getAuthorization() 获取授权书
+ * @method void setAuthorization(string $Authorization) 设置授权书
+ * @method string getAuthorizationStartTime() 获取授权书开始时间
+ * @method void setAuthorizationStartTime(string $AuthorizationStartTime) 设置授权书开始时间
+ * @method string getAuthorizationEndTime() 获取授权书结束时间
+ * @method void setAuthorizationEndTime(string $AuthorizationEndTime) 设置授权书结束时间
+ * @method string getContentType() 获取内容格式
+ * @method void setContentType(string $ContentType) 设置内容格式
+ * @method string getContent() 获取文件内容
+ * @method void setContent(string $Content) 设置文件内容
+ * @method string getMonitorEndTime() 获取监测结束时间
+ * @method void setMonitorEndTime(string $MonitorEndTime) 设置监测结束时间
  */
 class CreateCRWorkRequest extends AbstractModel
 {
@@ -157,7 +157,7 @@ class CreateCRWorkRequest extends AbstractModel
     public $IsMonitor;
 
     /**
-     * @var string 是否启用存证0：不启用 1：启用 默认为1
+     * @var string 是否启用存证0：不存证  2：存证 默认为0
      */
     public $IsCert;
 
@@ -177,52 +177,52 @@ class CreateCRWorkRequest extends AbstractModel
     public $ProduceType;
 
     /**
-     * @var array xxx
+     * @var array 白名单
      */
     public $WhiteLists;
 
     /**
-     * @var integer x
+     * @var integer 作品ID
      */
     public $WorkId;
 
     /**
-     * @var string xx
+     * @var string 著作权人姓名
      */
     public $ProducerName;
 
     /**
-     * @var string xx
+     * @var string 作者
      */
     public $Nickname;
 
     /**
-     * @var string x
+     * @var string 授权书
      */
     public $Authorization;
 
     /**
-     * @var string x
+     * @var string 授权书开始时间
      */
     public $AuthorizationStartTime;
 
     /**
-     * @var string x
+     * @var string 授权书结束时间
      */
     public $AuthorizationEndTime;
 
     /**
-     * @var string x
+     * @var string 内容格式
      */
     public $ContentType;
 
     /**
-     * @var string x
+     * @var string 文件内容
      */
     public $Content;
 
     /**
-     * @var string x
+     * @var string 监测结束时间
      */
     public $MonitorEndTime;
 
@@ -242,20 +242,20 @@ class CreateCRWorkRequest extends AbstractModel
      * @param string $GrantType 授予类型
      * @param string $SamplePublicURL 作品发布Url
      * @param string $IsMonitor 是否启用监测 0：不启用 1：启用 默认为0
-     * @param string $IsCert 是否启用存证0：不启用 1：启用 默认为1
+     * @param string $IsCert 是否启用存证0：不存证  2：存证 默认为0
      * @param string $CertUrl 存证回调地址
      * @param string $MonitorUrl 监测回调地址
      * @param string $ProduceType 创作性质（原创,改编,翻译,汇编,注释,整理,其他)
-     * @param array $WhiteLists xxx
-     * @param integer $WorkId x
-     * @param string $ProducerName xx
-     * @param string $Nickname xx
-     * @param string $Authorization x
-     * @param string $AuthorizationStartTime x
-     * @param string $AuthorizationEndTime x
-     * @param string $ContentType x
-     * @param string $Content x
-     * @param string $MonitorEndTime x
+     * @param array $WhiteLists 白名单
+     * @param integer $WorkId 作品ID
+     * @param string $ProducerName 著作权人姓名
+     * @param string $Nickname 作者
+     * @param string $Authorization 授权书
+     * @param string $AuthorizationStartTime 授权书开始时间
+     * @param string $AuthorizationEndTime 授权书结束时间
+     * @param string $ContentType 内容格式
+     * @param string $Content 文件内容
+     * @param string $MonitorEndTime 监测结束时间
      */
     function __construct()
     {

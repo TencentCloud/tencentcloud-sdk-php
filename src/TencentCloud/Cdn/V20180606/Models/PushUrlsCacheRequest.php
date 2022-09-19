@@ -56,6 +56,8 @@ global：预热全球节点
  * @method void setDisableRange(boolean $DisableRange) 设置是否关闭Range回源
 注意事项：
 此功能灰度发布中，敬请期待
+ * @method array getHeaders() 获取自定义 HTTP 请求头。最多定义 20 个，Name 长度不超过 128 字节，Value 长度不超过 1024 字节
+ * @method void setHeaders(array $Headers) 设置自定义 HTTP 请求头。最多定义 20 个，Name 长度不超过 128 字节，Value 长度不超过 1024 字节
  * @method boolean getUrlEncode() 获取是否对URL进行编码
  * @method void setUrlEncode(boolean $UrlEncode) 设置是否对URL进行编码
  */
@@ -104,6 +106,11 @@ global：预热全球节点
     public $DisableRange;
 
     /**
+     * @var array 自定义 HTTP 请求头。最多定义 20 个，Name 长度不超过 128 字节，Value 长度不超过 1024 字节
+     */
+    public $Headers;
+
+    /**
      * @var boolean 是否对URL进行编码
      */
     public $UrlEncode;
@@ -127,6 +134,7 @@ global：预热全球节点
      * @param boolean $DisableRange 是否关闭Range回源
 注意事项：
 此功能灰度发布中，敬请期待
+     * @param array $Headers 自定义 HTTP 请求头。最多定义 20 个，Name 长度不超过 128 字节，Value 长度不超过 1024 字节
      * @param boolean $UrlEncode 是否对URL进行编码
      */
     function __construct()
@@ -164,6 +172,15 @@ global：预热全球节点
 
         if (array_key_exists("DisableRange",$param) and $param["DisableRange"] !== null) {
             $this->DisableRange = $param["DisableRange"];
+        }
+
+        if (array_key_exists("Headers",$param) and $param["Headers"] !== null) {
+            $this->Headers = [];
+            foreach ($param["Headers"] as $key => $value){
+                $obj = new HTTPHeader();
+                $obj->deserialize($value);
+                array_push($this->Headers, $obj);
+            }
         }
 
         if (array_key_exists("UrlEncode",$param) and $param["UrlEncode"] !== null) {

@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeMetricLabelWithValues返回参数结构体
  *
  * @method array getMetricLabelWithValuesSet() 获取指标所有的label和values数组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricLabelWithValuesSet(array $MetricLabelWithValuesSet) 设置指标所有的label和values数组
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -29,6 +31,7 @@ class DescribeMetricLabelWithValuesResponse extends AbstractModel
 {
     /**
      * @var array 指标所有的label和values数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricLabelWithValuesSet;
 
@@ -39,6 +42,7 @@ class DescribeMetricLabelWithValuesResponse extends AbstractModel
 
     /**
      * @param array $MetricLabelWithValuesSet 指标所有的label和values数组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

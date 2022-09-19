@@ -44,6 +44,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAppId() 获取App ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(integer $AppId) 设置App ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUin() 获取主账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUin(string $Uin) 设置主账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubAccountUin() 获取子账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubAccountUin(string $SubAccountUin) 设置子账号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertChannelRecord extends AbstractModel
 {
@@ -84,6 +96,24 @@ class AlertChannelRecord extends AbstractModel
     public $UpdatedAt;
 
     /**
+     * @var integer App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
+     * @var string 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uin;
+
+    /**
+     * @var string 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubAccountUin;
+
+    /**
      * @param string $NoticeId Notice ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AMPConsumerId Consumer ID
@@ -95,6 +125,12 @@ class AlertChannelRecord extends AbstractModel
      * @param string $CreatedAt 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AppId App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uin 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubAccountUin 子账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +168,18 @@ class AlertChannelRecord extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
         }
     }
 }

@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMax(float $Max) 设置请求最大耗时，单位秒
  * @method float getErrorPercentage() 获取请求错误率
  * @method void setErrorPercentage(float $ErrorPercentage) 设置请求错误率
+ * @method float getP99() 获取请求p99耗时，单位秒
+ * @method void setP99(float $P99) 设置请求p99耗时，单位秒
+ * @method string getStatus() 获取响应状态码
+ * @method void setStatus(string $Status) 设置响应状态码
+ * @method string getResult() 获取响应详情
+ * @method void setResult(string $Result) 设置响应详情
  */
 class RequestSummary extends AbstractModel
 {
@@ -87,6 +93,21 @@ class RequestSummary extends AbstractModel
     public $ErrorPercentage;
 
     /**
+     * @var float 请求p99耗时，单位秒
+     */
+    public $P99;
+
+    /**
+     * @var string 响应状态码
+     */
+    public $Status;
+
+    /**
+     * @var string 响应详情
+     */
+    public $Result;
+
+    /**
      * @param string $Service 请求URL
      * @param string $Method 请求方法
      * @param integer $Count 请求次数
@@ -96,6 +117,9 @@ class RequestSummary extends AbstractModel
      * @param float $Min 请求最小耗时，单位秒
      * @param float $Max 请求最大耗时，单位秒
      * @param float $ErrorPercentage 请求错误率
+     * @param float $P99 请求p99耗时，单位秒
+     * @param string $Status 响应状态码
+     * @param string $Result 响应详情
      */
     function __construct()
     {
@@ -144,6 +168,18 @@ class RequestSummary extends AbstractModel
 
         if (array_key_exists("ErrorPercentage",$param) and $param["ErrorPercentage"] !== null) {
             $this->ErrorPercentage = $param["ErrorPercentage"];
+        }
+
+        if (array_key_exists("P99",$param) and $param["P99"] !== null) {
+            $this->P99 = $param["P99"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
     }
 }

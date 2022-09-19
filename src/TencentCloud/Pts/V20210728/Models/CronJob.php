@@ -80,6 +80,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobOwner(string $JobOwner) 设置tom
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAppId() 获取App ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(integer $AppId) 设置App ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUin() 获取主账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUin(string $Uin) 设置主账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubAccountUin() 获取子账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubAccountUin(string $SubAccountUin) 设置子账号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CronJob extends AbstractModel
 {
@@ -174,6 +186,24 @@ class CronJob extends AbstractModel
     public $JobOwner;
 
     /**
+     * @var integer App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
+     * @var string 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uin;
+
+    /**
+     * @var string 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubAccountUin;
+
+    /**
      * @param string $CronJobId 定时任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 定时任务名字
@@ -203,6 +233,12 @@ class CronJob extends AbstractModel
      * @param string $Note 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobOwner tom
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AppId App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uin 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubAccountUin 子账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -276,6 +312,18 @@ class CronJob extends AbstractModel
 
         if (array_key_exists("JobOwner",$param) and $param["JobOwner"] !== null) {
             $this->JobOwner = $param["JobOwner"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
         }
     }
 }

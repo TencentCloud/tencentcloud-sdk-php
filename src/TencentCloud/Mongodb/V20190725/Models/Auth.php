@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户权限
  *
- * @method string getNameSpace() 获取*表示所有数据库,db.name表示特定的name数据库。
- * @method void setNameSpace(string $NameSpace) 设置*表示所有数据库,db.name表示特定的name数据库。
- * @method integer getMask() 获取用于控制权限,0无权限，1只读，2只写，3读写。
- * @method void setMask(integer $Mask) 设置用于控制权限,0无权限，1只读，2只写，3读写。
+ * @method integer getMask() 获取当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+ * @method void setMask(integer $Mask) 设置当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+ * @method string getNameSpace() 获取指具有当前账号权限的数据库名。
+<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+ * @method void setNameSpace(string $NameSpace) 设置指具有当前账号权限的数据库名。
+<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
  */
 class Auth extends AbstractModel
 {
     /**
-     * @var string *表示所有数据库,db.name表示特定的name数据库。
-     */
-    public $NameSpace;
-
-    /**
-     * @var integer 用于控制权限,0无权限，1只读，2只写，3读写。
+     * @var integer 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
      */
     public $Mask;
 
     /**
-     * @param string $NameSpace *表示所有数据库,db.name表示特定的name数据库。
-     * @param integer $Mask 用于控制权限,0无权限，1只读，2只写，3读写。
+     * @var string 指具有当前账号权限的数据库名。
+<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+     */
+    public $NameSpace;
+
+    /**
+     * @param integer $Mask 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
+     * @param string $NameSpace 指具有当前账号权限的数据库名。
+<ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
      */
     function __construct()
     {
@@ -54,12 +58,12 @@ class Auth extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NameSpace",$param) and $param["NameSpace"] !== null) {
-            $this->NameSpace = $param["NameSpace"];
-        }
-
         if (array_key_exists("Mask",$param) and $param["Mask"] !== null) {
             $this->Mask = $param["Mask"];
+        }
+
+        if (array_key_exists("NameSpace",$param) and $param["NameSpace"] !== null) {
+            $this->NameSpace = $param["NameSpace"];
         }
     }
 }

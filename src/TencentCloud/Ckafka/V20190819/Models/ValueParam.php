@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据处理——Value处理参数
  *
- * @method string getType() 获取处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换
- * @method void setType(string $Type) 设置处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换
+ * @method string getType() 获取处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
+ * @method void setType(string $Type) 设置处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
  * @method ReplaceParam getReplace() 获取替换，TYPE=REPLACE时必传
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplace(ReplaceParam $Replace) 设置替换，TYPE=REPLACE时必传
@@ -38,11 +38,23 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegexReplace(RegexReplaceParam $RegexReplace) 设置正则替换，TYPE=REGEX_REPLACE时必传
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SplitParam getSplit() 获取值支持一拆多，TYPE=SPLIT时必传
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSplit(SplitParam $Split) 设置值支持一拆多，TYPE=SPLIT时必传
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method KVParam getKV() 获取key-value二次解析，TYPE=KV时必传
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKV(KVParam $KV) 设置key-value二次解析，TYPE=KV时必传
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResult() 获取处理结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(string $Result) 设置处理结果
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ValueParam extends AbstractModel
 {
     /**
-     * @var string 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换
+     * @var string 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
      */
     public $Type;
 
@@ -71,7 +83,25 @@ class ValueParam extends AbstractModel
     public $RegexReplace;
 
     /**
-     * @param string $Type 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换
+     * @var SplitParam 值支持一拆多，TYPE=SPLIT时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Split;
+
+    /**
+     * @var KVParam key-value二次解析，TYPE=KV时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KV;
+
+    /**
+     * @var string 处理结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Result;
+
+    /**
+     * @param string $Type 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
      * @param ReplaceParam $Replace 替换，TYPE=REPLACE时必传
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubstrParam $Substr 截取，TYPE=SUBSTR时必传
@@ -79,6 +109,12 @@ class ValueParam extends AbstractModel
      * @param DateParam $Date 时间转换，TYPE=DATE时必传
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RegexReplaceParam $RegexReplace 正则替换，TYPE=REGEX_REPLACE时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SplitParam $Split 值支持一拆多，TYPE=SPLIT时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KVParam $KV key-value二次解析，TYPE=KV时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Result 处理结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +152,20 @@ class ValueParam extends AbstractModel
         if (array_key_exists("RegexReplace",$param) and $param["RegexReplace"] !== null) {
             $this->RegexReplace = new RegexReplaceParam();
             $this->RegexReplace->deserialize($param["RegexReplace"]);
+        }
+
+        if (array_key_exists("Split",$param) and $param["Split"] !== null) {
+            $this->Split = new SplitParam();
+            $this->Split->deserialize($param["Split"]);
+        }
+
+        if (array_key_exists("KV",$param) and $param["KV"] !== null) {
+            $this->KV = new KVParam();
+            $this->KV->deserialize($param["KV"]);
+        }
+
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
     }
 }

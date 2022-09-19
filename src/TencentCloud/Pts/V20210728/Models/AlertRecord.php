@@ -48,6 +48,34 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobId(string $JobId) 设置任务 ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAppId() 获取App ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(integer $AppId) 设置App ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUin() 获取主账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUin(string $Uin) 设置主账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubAccountUin() 获取子账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubAccountUin(string $SubAccountUin) 设置子账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScenarioName() 获取场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScenarioName(string $ScenarioName) 设置场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTarget() 获取告警对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTarget(string $Target) 设置告警对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJobSLAId() 获取告警规则 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobSLAId(string $JobSLAId) 设置告警规则 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJobSLADescription() 获取告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobSLADescription(string $JobSLADescription) 设置告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertRecord extends AbstractModel
 {
@@ -94,6 +122,48 @@ class AlertRecord extends AbstractModel
     public $JobId;
 
     /**
+     * @var integer App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
+     * @var string 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uin;
+
+    /**
+     * @var string 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubAccountUin;
+
+    /**
+     * @var string 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScenarioName;
+
+    /**
+     * @var string 告警对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Target;
+
+    /**
+     * @var string 告警规则 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobSLAId;
+
+    /**
+     * @var string 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobSLADescription;
+
+    /**
      * @param string $AlertRecordId 告警历史记录项 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID
@@ -107,6 +177,20 @@ class AlertRecord extends AbstractModel
      * @param string $UpdatedAt 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobId 任务 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AppId App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uin 主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubAccountUin 子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScenarioName 场景名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Target 告警对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JobSLAId 告警规则 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JobSLADescription 告警规则描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -149,6 +233,34 @@ class AlertRecord extends AbstractModel
 
         if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
             $this->JobId = $param["JobId"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("ScenarioName",$param) and $param["ScenarioName"] !== null) {
+            $this->ScenarioName = $param["ScenarioName"];
+        }
+
+        if (array_key_exists("Target",$param) and $param["Target"] !== null) {
+            $this->Target = $param["Target"];
+        }
+
+        if (array_key_exists("JobSLAId",$param) and $param["JobSLAId"] !== null) {
+            $this->JobSLAId = $param["JobSLAId"];
+        }
+
+        if (array_key_exists("JobSLADescription",$param) and $param["JobSLADescription"] !== null) {
+            $this->JobSLADescription = $param["JobSLADescription"];
         }
     }
 }

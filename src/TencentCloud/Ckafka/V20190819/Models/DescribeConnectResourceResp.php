@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepList(array $StepList) 设置步骤列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MySQLConnectParam getMySQLConnectParam() 获取MySQL配置，Type为MYSQL时返回
+ * @method MySQLConnectParam getMySQLConnectParam() 获取MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMySQLConnectParam(MySQLConnectParam $MySQLConnectParam) 设置MySQL配置，Type为MYSQL时返回
+ * @method void setMySQLConnectParam(MySQLConnectParam $MySQLConnectParam) 设置MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
  * @method PostgreSQLConnectParam getPostgreSQLConnectParam() 获取PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,6 +79,18 @@ use TencentCloud\Common\AbstractModel;
  * @method ClickHouseConnectParam getClickHouseConnectParam() 获取ClickHouse配置，Type为CLICKHOUSE时返回
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClickHouseConnectParam(ClickHouseConnectParam $ClickHouseConnectParam) 设置ClickHouse配置，Type为CLICKHOUSE时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method MariaDBConnectParam getMariaDBConnectParam() 获取MariaDB配置，Type为MARIADB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMariaDBConnectParam(MariaDBConnectParam $MariaDBConnectParam) 设置MariaDB配置，Type为MARIADB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method SQLServerConnectParam getSQLServerConnectParam() 获取SQLServer配置，Type为SQLSERVER时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSQLServerConnectParam(SQLServerConnectParam $SQLServerConnectParam) 设置SQLServer配置，Type为SQLSERVER时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CtsdbConnectParam getCtsdbConnectParam() 获取Ctsdb配置，Type为CTSDB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCtsdbConnectParam(CtsdbConnectParam $CtsdbConnectParam) 设置Ctsdb配置，Type为CTSDB时返回
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeConnectResourceResp extends AbstractModel
@@ -138,7 +150,7 @@ class DescribeConnectResourceResp extends AbstractModel
     public $StepList;
 
     /**
-     * @var MySQLConnectParam MySQL配置，Type为MYSQL时返回
+     * @var MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MySQLConnectParam;
@@ -174,6 +186,24 @@ class DescribeConnectResourceResp extends AbstractModel
     public $ClickHouseConnectParam;
 
     /**
+     * @var MariaDBConnectParam MariaDB配置，Type为MARIADB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MariaDBConnectParam;
+
+    /**
+     * @var SQLServerConnectParam SQLServer配置，Type为SQLSERVER时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SQLServerConnectParam;
+
+    /**
+     * @var CtsdbConnectParam Ctsdb配置，Type为CTSDB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CtsdbConnectParam;
+
+    /**
      * @param string $ResourceId 连接源的Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 连接源名称
@@ -192,7 +222,7 @@ class DescribeConnectResourceResp extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StepList 步骤列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MySQLConnectParam $MySQLConnectParam MySQL配置，Type为MYSQL时返回
+     * @param MySQLConnectParam $MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PostgreSQLConnectParam $PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,6 +233,12 @@ class DescribeConnectResourceResp extends AbstractModel
      * @param EsConnectParam $EsConnectParam Es配置，Type为ES时返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClickHouseConnectParam $ClickHouseConnectParam ClickHouse配置，Type为CLICKHOUSE时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MariaDBConnectParam $MariaDBConnectParam MariaDB配置，Type为MARIADB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SQLServerConnectParam $SQLServerConnectParam SQLServer配置，Type为SQLSERVER时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CtsdbConnectParam $CtsdbConnectParam Ctsdb配置，Type为CTSDB时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -282,6 +318,21 @@ class DescribeConnectResourceResp extends AbstractModel
         if (array_key_exists("ClickHouseConnectParam",$param) and $param["ClickHouseConnectParam"] !== null) {
             $this->ClickHouseConnectParam = new ClickHouseConnectParam();
             $this->ClickHouseConnectParam->deserialize($param["ClickHouseConnectParam"]);
+        }
+
+        if (array_key_exists("MariaDBConnectParam",$param) and $param["MariaDBConnectParam"] !== null) {
+            $this->MariaDBConnectParam = new MariaDBConnectParam();
+            $this->MariaDBConnectParam->deserialize($param["MariaDBConnectParam"]);
+        }
+
+        if (array_key_exists("SQLServerConnectParam",$param) and $param["SQLServerConnectParam"] !== null) {
+            $this->SQLServerConnectParam = new SQLServerConnectParam();
+            $this->SQLServerConnectParam->deserialize($param["SQLServerConnectParam"]);
+        }
+
+        if (array_key_exists("CtsdbConnectParam",$param) and $param["CtsdbConnectParam"] !== null) {
+            $this->CtsdbConnectParam = new CtsdbConnectParam();
+            $this->CtsdbConnectParam->deserialize($param["CtsdbConnectParam"]);
         }
     }
 }

@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppName(string $AppName) 设置应用名称
  * @method string getPrivacyTextName() 获取隐私申明文件名称
  * @method void setPrivacyTextName(string $PrivacyTextName) 设置隐私申明文件名称
+ * @method string getAppSha1() 获取软件Sha1值(PrivacyTextMD5不为空时必填)
+ * @method void setAppSha1(string $AppSha1) 设置软件Sha1值(PrivacyTextMD5不为空时必填)
+ * @method string getPrivacyTextMD5() 获取隐私申明文本md5(AppSha1不为空时必填)
+ * @method void setPrivacyTextMD5(string $PrivacyTextMD5) 设置隐私申明文本md5(AppSha1不为空时必填)
  */
 class CreateAppScanTaskRepeatRequest extends AbstractModel
 {
@@ -94,6 +98,16 @@ class CreateAppScanTaskRepeatRequest extends AbstractModel
     public $PrivacyTextName;
 
     /**
+     * @var string 软件Sha1值(PrivacyTextMD5不为空时必填)
+     */
+    public $AppSha1;
+
+    /**
+     * @var string 隐私申明文本md5(AppSha1不为空时必填)
+     */
+    public $PrivacyTextMD5;
+
+    /**
      * @param integer $Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
      * @param integer $TaskType 任务类型, 0:基础版, 1:专家版, 2:本地化
@@ -104,6 +118,8 @@ class CreateAppScanTaskRepeatRequest extends AbstractModel
      * @param string $PrivacyTextUrl 隐私文本下载地址(任务来源为2时必填)
      * @param string $AppName 应用名称
      * @param string $PrivacyTextName 隐私申明文件名称
+     * @param string $AppSha1 软件Sha1值(PrivacyTextMD5不为空时必填)
+     * @param string $PrivacyTextMD5 隐私申明文本md5(AppSha1不为空时必填)
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class CreateAppScanTaskRepeatRequest extends AbstractModel
 
         if (array_key_exists("PrivacyTextName",$param) and $param["PrivacyTextName"] !== null) {
             $this->PrivacyTextName = $param["PrivacyTextName"];
+        }
+
+        if (array_key_exists("AppSha1",$param) and $param["AppSha1"] !== null) {
+            $this->AppSha1 = $param["AppSha1"];
+        }
+
+        if (array_key_exists("PrivacyTextMD5",$param) and $param["PrivacyTextMD5"] !== null) {
+            $this->PrivacyTextMD5 = $param["PrivacyTextMD5"];
         }
     }
 }

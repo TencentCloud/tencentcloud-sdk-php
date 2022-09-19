@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatform(integer $Platform) 设置应用平台, 0:android, 1:ios, 2:小程序
  * @method string getAppPackage() 获取App包名
  * @method void setAppPackage(string $AppPackage) 设置App包名
- * @method string getAppName() 获取App名称
- * @method void setAppName(string $AppName) 设置App名称
+ * @method string getAppName() 获取App名称(任务来源为2时必填)
+ * @method void setAppName(string $AppName) 设置App名称(任务来源为2时必填)
  * @method string getAppVersion() 获取App版本
  * @method void setAppVersion(string $AppVersion) 设置App版本
  * @method string getFileID() 获取上传的软件文件ID(任务来源为1时必填)
@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAgreePrivacy(integer $IsAgreePrivacy) 设置是否同意隐私条款，0:不同意(默认), 1:同意
  * @method string getPrivacyTextName() 获取隐私申明文件名称
  * @method void setPrivacyTextName(string $PrivacyTextName) 设置隐私申明文件名称
+ * @method string getAppSha1() 获取软件Sha1值(PrivacyTextMD5不为空时必填)
+ * @method void setAppSha1(string $AppSha1) 设置软件Sha1值(PrivacyTextMD5不为空时必填)
+ * @method string getPrivacyTextMD5() 获取隐私申明文本md5(AppSha1不为空时必填)
+ * @method void setPrivacyTextMD5(string $PrivacyTextMD5) 设置隐私申明文本md5(AppSha1不为空时必填)
  */
 class CreateAppScanTaskRequest extends AbstractModel
 {
@@ -78,7 +82,7 @@ class CreateAppScanTaskRequest extends AbstractModel
     public $AppPackage;
 
     /**
-     * @var string App名称
+     * @var string App名称(任务来源为2时必填)
      */
     public $AppName;
 
@@ -143,11 +147,21 @@ class CreateAppScanTaskRequest extends AbstractModel
     public $PrivacyTextName;
 
     /**
+     * @var string 软件Sha1值(PrivacyTextMD5不为空时必填)
+     */
+    public $AppSha1;
+
+    /**
+     * @var string 隐私申明文本md5(AppSha1不为空时必填)
+     */
+    public $PrivacyTextMD5;
+
+    /**
      * @param integer $TaskType 任务类型, 0:基础版, 1:专家版, 2:本地化
      * @param integer $Source 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
      * @param string $AppPackage App包名
-     * @param string $AppName App名称
+     * @param string $AppName App名称(任务来源为2时必填)
      * @param string $AppVersion App版本
      * @param string $FileID 上传的软件文件ID(任务来源为1时必填)
      * @param string $AppDownloadUrl 软件下载链接地址(任务来源为2时必填)
@@ -160,6 +174,8 @@ class CreateAppScanTaskRequest extends AbstractModel
      * @param string $Remark 备注信息
      * @param integer $IsAgreePrivacy 是否同意隐私条款，0:不同意(默认), 1:同意
      * @param string $PrivacyTextName 隐私申明文件名称
+     * @param string $AppSha1 软件Sha1值(PrivacyTextMD5不为空时必填)
+     * @param string $PrivacyTextMD5 隐私申明文本md5(AppSha1不为空时必填)
      */
     function __construct()
     {
@@ -240,6 +256,14 @@ class CreateAppScanTaskRequest extends AbstractModel
 
         if (array_key_exists("PrivacyTextName",$param) and $param["PrivacyTextName"] !== null) {
             $this->PrivacyTextName = $param["PrivacyTextName"];
+        }
+
+        if (array_key_exists("AppSha1",$param) and $param["AppSha1"] !== null) {
+            $this->AppSha1 = $param["AppSha1"];
+        }
+
+        if (array_key_exists("PrivacyTextMD5",$param) and $param["PrivacyTextMD5"] !== null) {
+            $this->PrivacyTextMD5 = $param["PrivacyTextMD5"];
         }
     }
 }

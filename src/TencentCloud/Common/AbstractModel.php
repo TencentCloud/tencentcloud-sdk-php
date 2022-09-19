@@ -26,7 +26,7 @@ use \ReflectionClass;
 abstract class AbstractModel
 {
 
-    public static function newInstance()
+    public static function newStatic()
     {
         return new static();
     }

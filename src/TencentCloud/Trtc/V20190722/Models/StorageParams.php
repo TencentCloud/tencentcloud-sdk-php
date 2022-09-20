@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method CloudStorage getCloudStorage() 获取第三方云存储的账号信息（暂不支持）。
  * @method void setCloudStorage(CloudStorage $CloudStorage) 设置第三方云存储的账号信息（暂不支持）。
- * @method CloudVod getCloudVod() 获取第三方云点播的账号信息。
- * @method void setCloudVod(CloudVod $CloudVod) 设置第三方云点播的账号信息。
+ * @method CloudVod getCloudVod() 获取腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
+ * @method void setCloudVod(CloudVod $CloudVod) 设置腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
  */
 class StorageParams extends AbstractModel
 {
@@ -33,13 +33,13 @@ class StorageParams extends AbstractModel
     public $CloudStorage;
 
     /**
-     * @var CloudVod 第三方云点播的账号信息。
+     * @var CloudVod 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
      */
     public $CloudVod;
 
     /**
      * @param CloudStorage $CloudStorage 第三方云存储的账号信息（暂不支持）。
-     * @param CloudVod $CloudVod 第三方云点播的账号信息。
+     * @param CloudVod $CloudVod 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
      */
     function __construct()
     {

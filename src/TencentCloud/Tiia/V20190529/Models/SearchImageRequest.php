@@ -65,7 +65,7 @@ ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl�
 • 商品图像搜索：28。
 • 相似图像搜索：56。
 建议：
-可以手动调整MatchThreshold值来控制输出结果的范围。入股发现无检索结果，建议调整为较低的阈值。
+可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，建议调整为较低的阈值。
  * @method void setMatchThreshold(integer $MatchThreshold) 设置匹配阈值。
 只有图片相似度分数超过MatchThreshold值的结果才会返回。
 默认值：
@@ -73,7 +73,7 @@ ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl�
 • 商品图像搜索：28。
 • 相似图像搜索：56。
 建议：
-可以手动调整MatchThreshold值来控制输出结果的范围。入股发现无检索结果，建议调整为较低的阈值。
+可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，建议调整为较低的阈值。
  * @method string getFilter() 获取标签过滤条件。
 针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
  * @method void setFilter(string $Filter) 设置标签过滤条件。
@@ -160,7 +160,7 @@ ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl�
 • 商品图像搜索：28。
 • 相似图像搜索：56。
 建议：
-可以手动调整MatchThreshold值来控制输出结果的范围。入股发现无检索结果，建议调整为较低的阈值。
+可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，建议调整为较低的阈值。
      */
     public $MatchThreshold;
 
@@ -225,7 +225,7 @@ ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl�
 • 商品图像搜索：28。
 • 相似图像搜索：56。
 建议：
-可以手动调整MatchThreshold值来控制输出结果的范围。入股发现无检索结果，建议调整为较低的阈值。
+可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，建议调整为较低的阈值。
      * @param string $Filter 标签过滤条件。
 针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
      * @param ImageRect $ImageRect 图像主体区域。

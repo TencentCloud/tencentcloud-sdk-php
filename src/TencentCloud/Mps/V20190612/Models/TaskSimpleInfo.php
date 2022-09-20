@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginProcessTime(string $BeginProcessTime) 设置任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。
  * @method string getFinishTime() 获取任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
  * @method void setFinishTime(string $FinishTime) 设置任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
+ * @method array getSubTaskTypes() 获取子任务类型。
+ * @method void setSubTaskTypes(array $SubTaskTypes) 设置子任务类型。
  */
 class TaskSimpleInfo extends AbstractModel
 {
@@ -68,6 +70,11 @@ class TaskSimpleInfo extends AbstractModel
     public $FinishTime;
 
     /**
+     * @var array 子任务类型。
+     */
+    public $SubTaskTypes;
+
+    /**
      * @param string $TaskId 任务 ID。
      * @param string $TaskType 任务类型，包含：
 <li> WorkflowTask：工作流处理任务；</li>
@@ -76,6 +83,7 @@ class TaskSimpleInfo extends AbstractModel
      * @param string $CreateTime 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $BeginProcessTime 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。
      * @param string $FinishTime 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
+     * @param array $SubTaskTypes 子任务类型。
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class TaskSimpleInfo extends AbstractModel
 
         if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
             $this->FinishTime = $param["FinishTime"];
+        }
+
+        if (array_key_exists("SubTaskTypes",$param) and $param["SubTaskTypes"] !== null) {
+            $this->SubTaskTypes = $param["SubTaskTypes"];
         }
     }
 }

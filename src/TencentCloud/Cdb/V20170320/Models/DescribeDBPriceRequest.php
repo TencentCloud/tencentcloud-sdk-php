@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNodes(integer $InstanceNodes) 设置实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
  * @method integer getCpu() 获取询价实例的CPU核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
  * @method void setCpu(integer $Cpu) 设置询价实例的CPU核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
- * @method string getInstanceId() 获取续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
- * @method void setInstanceId(string $InstanceId) 设置续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+ * @method string getInstanceId() 获取询价续费实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+ * @method void setInstanceId(string $InstanceId) 设置询价续费实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
  * @method integer getLadder() 获取按量计费阶梯。仅PayType=HOUR_PAID有效，支持值包括：1，2，3。阶梯时长见https://cloud.tencent.com/document/product/236/18335。
  * @method void setLadder(integer $Ladder) 设置按量计费阶梯。仅PayType=HOUR_PAID有效，支持值包括：1，2，3。阶梯时长见https://cloud.tencent.com/document/product/236/18335。
  */
@@ -105,7 +105,7 @@ class DescribeDBPriceRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var string 续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+     * @var string 询价续费实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
      */
     public $InstanceId;
 
@@ -126,7 +126,7 @@ class DescribeDBPriceRequest extends AbstractModel
      * @param string $DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。 不指定则默认为通用型实例。
      * @param integer $InstanceNodes 实例节点数。对于 RO 和 基础版实例， 该值默认为1。 如果需要询价三节点实例， 请将该值设置为3。其余主实例该值默认为2。
      * @param integer $Cpu 询价实例的CPU核心数目，单位：核，为保证传入 CPU 值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的核心数目，当未指定该值时，将按照 Memory 大小补全一个默认值。
-     * @param string $InstanceId 续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+     * @param string $InstanceId 询价续费实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
      * @param integer $Ladder 按量计费阶梯。仅PayType=HOUR_PAID有效，支持值包括：1，2，3。阶梯时长见https://cloud.tencent.com/document/product/236/18335。
      */
     function __construct()

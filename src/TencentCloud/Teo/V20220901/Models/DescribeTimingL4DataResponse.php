@@ -14,46 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeVpcRuleOverview返回参数结构体
+ * DescribeTimingL4Data返回参数结构体
  *
- * @method integer getStrategyNum() 获取阻断策略规则数量
+ * @method integer getTotalCount() 获取查询结果的总条数。
+ * @method void setTotalCount(integer $TotalCount) 设置查询结果的总条数。
+ * @method array getData() 获取四层时序流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStrategyNum(integer $StrategyNum) 设置阻断策略规则数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStartRuleNum() 获取启用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartRuleNum(integer $StartRuleNum) 设置启用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取规则总量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置规则总量
+ * @method void setData(array $Data) 设置四层时序流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeVpcRuleOverviewResponse extends AbstractModel
+class DescribeTimingL4DataResponse extends AbstractModel
 {
     /**
-     * @var integer 阻断策略规则数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 查询结果的总条数。
      */
-    public $StrategyNum;
+    public $TotalCount;
 
     /**
-     * @var integer 启用规则数量
+     * @var array 四层时序流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $StartRuleNum;
-
-    /**
-     * @var integer 规则总量
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Total;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,11 +48,8 @@ class DescribeVpcRuleOverviewResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $StrategyNum 阻断策略规则数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StartRuleNum 启用规则数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total 规则总量
+     * @param integer $TotalCount 查询结果的总条数。
+     * @param array $Data 四层时序流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -82,16 +66,17 @@ class DescribeVpcRuleOverviewResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StrategyNum",$param) and $param["StrategyNum"] !== null) {
-            $this->StrategyNum = $param["StrategyNum"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("StartRuleNum",$param) and $param["StartRuleNum"] !== null) {
-            $this->StartRuleNum = $param["StartRuleNum"];
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new TimingDataRecord();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

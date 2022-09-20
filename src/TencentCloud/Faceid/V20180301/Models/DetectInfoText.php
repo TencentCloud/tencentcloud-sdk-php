@@ -116,6 +116,20 @@ use TencentCloud\Common\AbstractModel;
 二次验证库；
 人工审核库；
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLivenessMode() 获取本次流程最终活体类型。包括：
+0：未知
+1：数字活体
+2：动作活体
+3：静默活体
+4：一闪活体（动作+光线）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLivenessMode(integer $LivenessMode) 设置本次流程最终活体类型。包括：
+0：未知
+1：数字活体
+2：动作活体
+3：静默活体
+4：一闪活体（动作+光线）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectInfoText extends AbstractModel
 {
@@ -256,6 +270,17 @@ class DetectInfoText extends AbstractModel
     public $CompareLibType;
 
     /**
+     * @var integer 本次流程最终活体类型。包括：
+0：未知
+1：数字活体
+2：动作活体
+3：静默活体
+4：一闪活体（动作+光线）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LivenessMode;
+
+    /**
      * @param integer $ErrCode 本次流程最终验证结果。0为成功
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
@@ -303,6 +328,13 @@ class DetectInfoText extends AbstractModel
 业务方自有库（用户上传照片、客户的混合库、混合部署库）；
 二次验证库；
 人工审核库；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LivenessMode 本次流程最终活体类型。包括：
+0：未知
+1：数字活体
+2：动作活体
+3：静默活体
+4：一闪活体（动作+光线）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -409,6 +441,10 @@ class DetectInfoText extends AbstractModel
 
         if (array_key_exists("CompareLibType",$param) and $param["CompareLibType"] !== null) {
             $this->CompareLibType = $param["CompareLibType"];
+        }
+
+        if (array_key_exists("LivenessMode",$param) and $param["LivenessMode"] !== null) {
+            $this->LivenessMode = $param["LivenessMode"];
         }
     }
 }

@@ -14,30 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBInstances返回参数结构体
+ * ImageEnhancement返回参数结构体
  *
- * @method integer getTotalCount() 获取符合查询条件的实例总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的实例总数。
- * @method array getItems() 获取实例详细信息列表。
- * @method void setItems(array $Items) 设置实例详细信息列表。
+ * @method string getImageTag() 获取图片数据标识：
+“origin”：原图
+“preprocess”:预处理后的图
+ * @method void setImageTag(string $ImageTag) 设置图片数据标识：
+“origin”：原图
+“preprocess”:预处理后的图
+ * @method string getImage() 获取图片数据，返回预处理后图像或原图像base64字符
+ * @method void setImage(string $Image) 设置图片数据，返回预处理后图像或原图像base64字符
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDBInstancesResponse extends AbstractModel
+class ImageEnhancementResponse extends AbstractModel
 {
     /**
-     * @var integer 符合查询条件的实例总数。
+     * @var string 图片数据标识：
+“origin”：原图
+“preprocess”:预处理后的图
      */
-    public $TotalCount;
+    public $ImageTag;
 
     /**
-     * @var array 实例详细信息列表。
+     * @var string 图片数据，返回预处理后图像或原图像base64字符
      */
-    public $Items;
+    public $Image;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +51,10 @@ class DescribeDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合查询条件的实例总数。
-     * @param array $Items 实例详细信息列表。
+     * @param string $ImageTag 图片数据标识：
+“origin”：原图
+“preprocess”:预处理后的图
+     * @param string $Image 图片数据，返回预处理后图像或原图像base64字符
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +70,12 @@ class DescribeDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("ImageTag",$param) and $param["ImageTag"] !== null) {
+            $this->ImageTag = $param["ImageTag"];
         }
 
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new InstanceInfo();
-                $obj->deserialize($value);
-                array_push($this->Items, $obj);
-            }
+        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
+            $this->Image = $param["Image"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

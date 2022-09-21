@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParamList(array $ParamList) 设置参数列表。
  * @method string getTemplateType() 获取默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
  * @method void setTemplateType(string $TemplateType) 设置默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+ * @method string getEngineType() 获取实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+ * @method void setEngineType(string $EngineType) 设置实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
  */
 class CreateParamTemplateRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateParamTemplateRequest extends AbstractModel
     public $TemplateType;
 
     /**
+     * @var string 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+     */
+    public $EngineType;
+
+    /**
      * @param string $Name 参数模板名称。
      * @param string $Description 参数模板描述。
      * @param string $EngineVersion MySQL 版本号。
      * @param integer $TemplateId 源参数模板 ID。
      * @param array $ParamList 参数列表。
      * @param string $TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     * @param string $EngineType 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateParamTemplateRequest extends AbstractModel
 
         if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
             $this->TemplateType = $param["TemplateType"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

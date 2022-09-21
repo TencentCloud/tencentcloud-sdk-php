@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSummaryTagSet(array $SummaryTagSet) 设置概要标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getUnknownPersonSet() 获取未知人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnknownPersonSet(array $UnknownPersonSet) 设置未知人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMultiLevelPersonInfoSet() 获取树状已分类人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMultiLevelPersonInfoSet(array $MultiLevelPersonInfoSet) 设置树状已分类人物信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ShowInfo extends AbstractModel
 {
@@ -174,6 +182,18 @@ class ShowInfo extends AbstractModel
     public $SummaryTagSet;
 
     /**
+     * @var array 未知人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UnknownPersonSet;
+
+    /**
+     * @var array 树状已分类人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MultiLevelPersonInfoSet;
+
+    /**
      * @param string $Date 节目日期(只在新闻有效)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Logo 台标
@@ -203,6 +223,10 @@ class ShowInfo extends AbstractModel
      * @param array $MediaClassifierSet 媒资分类信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SummaryTagSet 概要标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $UnknownPersonSet 未知人物信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MultiLevelPersonInfoSet 树状已分类人物信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -293,6 +317,24 @@ class ShowInfo extends AbstractModel
 
         if (array_key_exists("SummaryTagSet",$param) and $param["SummaryTagSet"] !== null) {
             $this->SummaryTagSet = $param["SummaryTagSet"];
+        }
+
+        if (array_key_exists("UnknownPersonSet",$param) and $param["UnknownPersonSet"] !== null) {
+            $this->UnknownPersonSet = [];
+            foreach ($param["UnknownPersonSet"] as $key => $value){
+                $obj = new UnknownPerson();
+                $obj->deserialize($value);
+                array_push($this->UnknownPersonSet, $obj);
+            }
+        }
+
+        if (array_key_exists("MultiLevelPersonInfoSet",$param) and $param["MultiLevelPersonInfoSet"] !== null) {
+            $this->MultiLevelPersonInfoSet = [];
+            foreach ($param["MultiLevelPersonInfoSet"] as $key => $value){
+                $obj = new MultiLevelPersonInfo();
+                $obj->deserialize($value);
+                array_push($this->MultiLevelPersonInfoSet, $obj);
+            }
         }
     }
 }

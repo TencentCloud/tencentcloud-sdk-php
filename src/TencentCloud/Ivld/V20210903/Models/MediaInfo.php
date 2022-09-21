@@ -54,9 +54,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedReason(string $FailedReason) 设置若状态为失败，表示失败原因
 注意：此字段可能返回 null，表示取不到有效值。
- * @method MediaMetadata getMetadata() 获取媒资视频元信息
+ * @method MediaMetadata getMetadata() 获取媒资视频元信息，仅在MediaType=VIDEO时有效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetadata(MediaMetadata $Metadata) 设置媒资视频元信息
+ * @method void setMetadata(MediaMetadata $Metadata) 设置媒资视频元信息，仅在MediaType=VIDEO时有效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getProgress() 获取导入视频进度，取值范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
@@ -69,6 +69,22 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCallbackURL() 获取媒资导入完成后的回调地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallbackURL(string $CallbackURL) 设置媒资导入完成后的回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMediaType() 获取媒资文件类型，具体参看[MediaPreknownInfo](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMediaType(integer $MediaType) 设置媒资文件类型，具体参看[MediaPreknownInfo](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AudioMetadata getAudioMetadata() 获取媒资音频元信息，仅在MediaType=Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioMetadata(AudioMetadata $AudioMetadata) 设置媒资音频元信息，仅在MediaType=Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageMetadata getImageMetadata() 获取媒资图片文件元信息，仅在MediaType=Image时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageMetadata(ImageMetadata $ImageMetadata) 设置媒资图片文件元信息，仅在MediaType=Image时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TextMetadata getTextMetadata() 获取媒资文本文件元信息，仅在MediaType=Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTextMetadata(TextMetadata $TextMetadata) 设置媒资文本文件元信息，仅在MediaType=Text时有效
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaInfo extends AbstractModel
@@ -103,7 +119,7 @@ class MediaInfo extends AbstractModel
     public $FailedReason;
 
     /**
-     * @var MediaMetadata 媒资视频元信息
+     * @var MediaMetadata 媒资视频元信息，仅在MediaType=VIDEO时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadata;
@@ -127,6 +143,30 @@ class MediaInfo extends AbstractModel
     public $CallbackURL;
 
     /**
+     * @var integer 媒资文件类型，具体参看[MediaPreknownInfo](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MediaType;
+
+    /**
+     * @var AudioMetadata 媒资音频元信息，仅在MediaType=Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AudioMetadata;
+
+    /**
+     * @var ImageMetadata 媒资图片文件元信息，仅在MediaType=Image时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageMetadata;
+
+    /**
+     * @var TextMetadata 媒资文本文件元信息，仅在MediaType=Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TextMetadata;
+
+    /**
      * @param string $MediaId 媒资ID
      * @param string $Name 媒资名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -136,13 +176,21 @@ class MediaInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailedReason 若状态为失败，表示失败原因
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaMetadata $Metadata 媒资视频元信息
+     * @param MediaMetadata $Metadata 媒资视频元信息，仅在MediaType=VIDEO时有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Progress 导入视频进度，取值范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 媒资自定义标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CallbackURL 媒资导入完成后的回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MediaType 媒资文件类型，具体参看[MediaPreknownInfo](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioMetadata $AudioMetadata 媒资音频元信息，仅在MediaType=Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageMetadata $ImageMetadata 媒资图片文件元信息，仅在MediaType=Image时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextMetadata $TextMetadata 媒资文本文件元信息，仅在MediaType=Text时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -193,6 +241,25 @@ class MediaInfo extends AbstractModel
 
         if (array_key_exists("CallbackURL",$param) and $param["CallbackURL"] !== null) {
             $this->CallbackURL = $param["CallbackURL"];
+        }
+
+        if (array_key_exists("MediaType",$param) and $param["MediaType"] !== null) {
+            $this->MediaType = $param["MediaType"];
+        }
+
+        if (array_key_exists("AudioMetadata",$param) and $param["AudioMetadata"] !== null) {
+            $this->AudioMetadata = new AudioMetadata();
+            $this->AudioMetadata->deserialize($param["AudioMetadata"]);
+        }
+
+        if (array_key_exists("ImageMetadata",$param) and $param["ImageMetadata"] !== null) {
+            $this->ImageMetadata = new ImageMetadata();
+            $this->ImageMetadata->deserialize($param["ImageMetadata"]);
+        }
+
+        if (array_key_exists("TextMetadata",$param) and $param["TextMetadata"] !== null) {
+            $this->TextMetadata = new TextMetadata();
+            $this->TextMetadata->deserialize($param["TextMetadata"]);
         }
     }
 }

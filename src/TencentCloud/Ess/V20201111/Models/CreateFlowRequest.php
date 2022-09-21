@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowType(string $FlowType) 设置签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
  * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
  * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
- * @method string getCallbackUrl() 获取暂未开放
- * @method void setCallbackUrl(string $CallbackUrl) 设置暂未开放
+ * @method string getRelatedFlowId() 获取暂未开放
+ * @method void setRelatedFlowId(string $RelatedFlowId) 设置暂未开放
  * @method integer getDeadLine() 获取签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
  * @method void setDeadLine(integer $DeadLine) 设置签署流程的签署截止时间。
@@ -58,8 +58,8 @@ false：有序签
 若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
- * @method string getRelatedFlowId() 获取暂未开放
- * @method void setRelatedFlowId(string $RelatedFlowId) 设置暂未开放
+ * @method string getCallbackUrl() 获取暂未开放
+ * @method void setCallbackUrl(string $CallbackUrl) 设置暂未开放
  * @method Agent getAgent() 获取应用相关信息
  * @method void setAgent(Agent $Agent) 设置应用相关信息
  */
@@ -93,7 +93,7 @@ class CreateFlowRequest extends AbstractModel
     /**
      * @var string 暂未开放
      */
-    public $CallbackUrl;
+    public $RelatedFlowId;
 
     /**
      * @var integer 签署流程的签署截止时间。
@@ -135,7 +135,7 @@ false：有序签
     /**
      * @var string 暂未开放
      */
-    public $RelatedFlowId;
+    public $CallbackUrl;
 
     /**
      * @var Agent 应用相关信息
@@ -148,7 +148,7 @@ false：有序签
      * @param array $Approvers 签署流程参与者信息，最大限制50方
      * @param string $FlowType 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
      * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
-     * @param string $CallbackUrl 暂未开放
+     * @param string $RelatedFlowId 暂未开放
      * @param integer $DeadLine 签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
      * @param string $UserData 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
@@ -162,7 +162,7 @@ false：有序签
 若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
-     * @param string $RelatedFlowId 暂未开放
+     * @param string $CallbackUrl 暂未开放
      * @param Agent $Agent 应用相关信息
      */
     function __construct()
@@ -204,8 +204,8 @@ false：有序签
             $this->ClientToken = $param["ClientToken"];
         }
 
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
+        if (array_key_exists("RelatedFlowId",$param) and $param["RelatedFlowId"] !== null) {
+            $this->RelatedFlowId = $param["RelatedFlowId"];
         }
 
         if (array_key_exists("DeadLine",$param) and $param["DeadLine"] !== null) {
@@ -232,8 +232,8 @@ false：有序签
             $this->NeedSignReview = $param["NeedSignReview"];
         }
 
-        if (array_key_exists("RelatedFlowId",$param) and $param["RelatedFlowId"] !== null) {
-            $this->RelatedFlowId = $param["RelatedFlowId"];
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
 
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {

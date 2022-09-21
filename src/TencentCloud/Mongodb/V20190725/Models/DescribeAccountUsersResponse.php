@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBInstances返回参数结构体
+ * DescribeAccountUsers返回参数结构体
  *
- * @method integer getTotalCount() 获取符合查询条件的实例总数。
- * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的实例总数。
- * @method array getItems() 获取实例详细信息列表。
- * @method void setItems(array $Items) 设置实例详细信息列表。
+ * @method array getUsers() 获取实例账号列表。
+ * @method void setUsers(array $Users) 设置实例账号列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDBInstancesResponse extends AbstractModel
+class DescribeAccountUsersResponse extends AbstractModel
 {
     /**
-     * @var integer 符合查询条件的实例总数。
+     * @var array 实例账号列表。
      */
-    public $TotalCount;
-
-    /**
-     * @var array 实例详细信息列表。
-     */
-    public $Items;
+    public $Users;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 符合查询条件的实例总数。
-     * @param array $Items 实例详细信息列表。
+     * @param array $Users 实例账号列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +54,12 @@ class DescribeDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new InstanceInfo();
+        if (array_key_exists("Users",$param) and $param["Users"] !== null) {
+            $this->Users = [];
+            foreach ($param["Users"] as $key => $value){
+                $obj = new UserInfo();
                 $obj->deserialize($value);
-                array_push($this->Items, $obj);
+                array_push($this->Users, $obj);
             }
         }
 

@@ -83,6 +83,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\UploadFilesResponse UploadFiles(Models\UploadFilesRequest $req) 此接口（UploadFiles）用于文件上传。
 适用场景：用于生成pdf资源编号（FileIds）来配合“用PDF创建流程”接口使用，使用场景可详见“用PDF创建流程”接口说明。
 调用时需要设置Domain 为 file.ess.tencent.cn，设置Version为2020-12-22
+ * @method Models\VerifyPdfResponse VerifyPdf(Models\VerifyPdfRequest $req) 验证合同文件
  */
 
 class EssClient extends AbstractClient

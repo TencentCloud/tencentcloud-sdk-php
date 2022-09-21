@@ -27,17 +27,23 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProductVaildYears() 获取产品有效期
  * @method void setProductVaildYears(integer $ProductVaildYears) 设置产品有效期
  * @method array getFeatures() 获取设备功能码 ypsxth音频双向通话 spdxth视频单向通话 sxysp双向音视频
+注意：此字段只支持创建'摄像头'和'儿童手表'，摄像头传["ypsxth","spdxth"]，儿童手表传["ypsxth","spdxth","sxysp"]，创建其它品类的产品需要传递CategoryId字段，通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
  * @method void setFeatures(array $Features) 设置设备功能码 ypsxth音频双向通话 spdxth视频单向通话 sxysp双向音视频
- * @method string getChipOs() 获取设备操作系统，通用设备填default
- * @method void setChipOs(string $ChipOs) 设置设备操作系统，通用设备填default
+注意：此字段只支持创建'摄像头'和'儿童手表'，摄像头传["ypsxth","spdxth"]，儿童手表传["ypsxth","spdxth","sxysp"]，创建其它品类的产品需要传递CategoryId字段，通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
  * @method string getChipManufactureId() 获取芯片厂商id，通用设备填default
  * @method void setChipManufactureId(string $ChipManufactureId) 设置芯片厂商id，通用设备填default
  * @method string getChipId() 获取芯片id，通用设备填default
  * @method void setChipId(string $ChipId) 设置芯片id，通用设备填default
  * @method string getProductDescription() 获取产品描述信息
  * @method void setProductDescription(string $ProductDescription) 设置产品描述信息
+ * @method string getChipOs() 获取设备操作系统，通用设备填default
+ * @method void setChipOs(string $ChipOs) 设置设备操作系统，通用设备填default
  * @method integer getEncryptionType() 获取认证方式 只支持取值为2 psk认证
  * @method void setEncryptionType(integer $EncryptionType) 设置认证方式 只支持取值为2 psk认证
+ * @method integer getCategoryId() 获取产品品类id,113:摄像头,567:儿童手表,595:可视对讲门锁
+注意：通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
+ * @method void setCategoryId(integer $CategoryId) 设置产品品类id,113:摄像头,567:儿童手表,595:可视对讲门锁
+注意：通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
  * @method string getNetType() 获取连接类型，wifi表示WIFI连接，cellular表示4G连接
  * @method void setNetType(string $NetType) 设置连接类型，wifi表示WIFI连接，cellular表示4G连接
  */
@@ -60,13 +66,9 @@ class CreateProductRequest extends AbstractModel
 
     /**
      * @var array 设备功能码 ypsxth音频双向通话 spdxth视频单向通话 sxysp双向音视频
+注意：此字段只支持创建'摄像头'和'儿童手表'，摄像头传["ypsxth","spdxth"]，儿童手表传["ypsxth","spdxth","sxysp"]，创建其它品类的产品需要传递CategoryId字段，通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
      */
     public $Features;
-
-    /**
-     * @var string 设备操作系统，通用设备填default
-     */
-    public $ChipOs;
 
     /**
      * @var string 芯片厂商id，通用设备填default
@@ -84,9 +86,20 @@ class CreateProductRequest extends AbstractModel
     public $ProductDescription;
 
     /**
+     * @var string 设备操作系统，通用设备填default
+     */
+    public $ChipOs;
+
+    /**
      * @var integer 认证方式 只支持取值为2 psk认证
      */
     public $EncryptionType;
+
+    /**
+     * @var integer 产品品类id,113:摄像头,567:儿童手表,595:可视对讲门锁
+注意：通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
+     */
+    public $CategoryId;
 
     /**
      * @var string 连接类型，wifi表示WIFI连接，cellular表示4G连接
@@ -98,11 +111,14 @@ class CreateProductRequest extends AbstractModel
      * @param integer $DeviceType 产品设备类型 1.普通设备 2.NVR设备
      * @param integer $ProductVaildYears 产品有效期
      * @param array $Features 设备功能码 ypsxth音频双向通话 spdxth视频单向通话 sxysp双向音视频
-     * @param string $ChipOs 设备操作系统，通用设备填default
+注意：此字段只支持创建'摄像头'和'儿童手表'，摄像头传["ypsxth","spdxth"]，儿童手表传["ypsxth","spdxth","sxysp"]，创建其它品类的产品需要传递CategoryId字段，通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
      * @param string $ChipManufactureId 芯片厂商id，通用设备填default
      * @param string $ChipId 芯片id，通用设备填default
      * @param string $ProductDescription 产品描述信息
+     * @param string $ChipOs 设备操作系统，通用设备填default
      * @param integer $EncryptionType 认证方式 只支持取值为2 psk认证
+     * @param integer $CategoryId 产品品类id,113:摄像头,567:儿童手表,595:可视对讲门锁
+注意：通过云api调用此接口时，如果传了CategoryId字段，将忽略Features字段,但Features仍需传值(可传任意字符串数组)
      * @param string $NetType 连接类型，wifi表示WIFI连接，cellular表示4G连接
      */
     function __construct()
@@ -134,10 +150,6 @@ class CreateProductRequest extends AbstractModel
             $this->Features = $param["Features"];
         }
 
-        if (array_key_exists("ChipOs",$param) and $param["ChipOs"] !== null) {
-            $this->ChipOs = $param["ChipOs"];
-        }
-
         if (array_key_exists("ChipManufactureId",$param) and $param["ChipManufactureId"] !== null) {
             $this->ChipManufactureId = $param["ChipManufactureId"];
         }
@@ -150,8 +162,16 @@ class CreateProductRequest extends AbstractModel
             $this->ProductDescription = $param["ProductDescription"];
         }
 
+        if (array_key_exists("ChipOs",$param) and $param["ChipOs"] !== null) {
+            $this->ChipOs = $param["ChipOs"];
+        }
+
         if (array_key_exists("EncryptionType",$param) and $param["EncryptionType"] !== null) {
             $this->EncryptionType = $param["EncryptionType"];
+        }
+
+        if (array_key_exists("CategoryId",$param) and $param["CategoryId"] !== null) {
+            $this->CategoryId = $param["CategoryId"];
         }
 
         if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {

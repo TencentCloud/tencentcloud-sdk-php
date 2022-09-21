@@ -25,8 +25,11 @@ MediaPreknownInfo.MediaType:
 | MediaType 名称|  MediaType取值 | MediaType描述 |
 |---|---|---|
 | MEDIA_TYPE_INVALID | 0 | 非法的媒资文件类型 | 
-| MEDIA_TYPE_IMAGE | 1 | 图片，当前不支持 |
-| MEDIA_TYPE_VIDEO | 2 | 视频，当前只支持此类型媒资文件 |
+| MEDIA_TYPE_IMAGE | 1 | 图片 |
+| MEDIA_TYPE_VIDEO | 2 | 视频 |
+| MEDIA_TYPE_AUDIO | 3 | 音频 |
+| MEDIA_TYPE_VIDEO_STREAM | 4 | 视频流，暂不支持 |
+| MEDIA_TYPE_TEXT | 5 | 文本 |
 
 MediaPreknownInfo.MediaLabel:
 

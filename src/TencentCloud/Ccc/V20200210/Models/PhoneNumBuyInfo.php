@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBuyTime(integer $BuyTime) 设置购买时间戳
  * @method integer getEndTime() 获取截至时间戳
  * @method void setEndTime(integer $EndTime) 设置截至时间戳
- * @method integer getState() 获取号码状态，1正常|2停用
- * @method void setState(integer $State) 设置号码状态，1正常|2停用
+ * @method integer getState() 获取号码状态，1正常|2欠费停用|4管理员停用|5违规停用
+ * @method void setState(integer $State) 设置号码状态，1正常|2欠费停用|4管理员停用|5违规停用
  */
 class PhoneNumBuyInfo extends AbstractModel
 {
@@ -61,7 +61,7 @@ class PhoneNumBuyInfo extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 号码状态，1正常|2停用
+     * @var integer 号码状态，1正常|2欠费停用|4管理员停用|5违规停用
      */
     public $State;
 
@@ -71,7 +71,7 @@ class PhoneNumBuyInfo extends AbstractModel
      * @param integer $CallType 号码呼叫类型，1-呼入|2-呼出|3-呼入呼出
      * @param integer $BuyTime 购买时间戳
      * @param integer $EndTime 截至时间戳
-     * @param integer $State 号码状态，1正常|2停用
+     * @param integer $State 号码状态，1正常|2欠费停用|4管理员停用|5违规停用
      */
     function __construct()
     {

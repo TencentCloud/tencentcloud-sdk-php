@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryId(integer $CategoryId) 设置产品品类,113:摄像头,567:儿童手表,595:可视对讲门锁
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProductVaildYears() 获取产品有效年限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductVaildYears(integer $ProductVaildYears) 设置产品有效年限
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoProduct extends AbstractModel
 {
@@ -121,6 +125,12 @@ class VideoProduct extends AbstractModel
     public $CategoryId;
 
     /**
+     * @var integer 产品有效年限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductVaildYears;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param integer $DeviceType 产品设备类型（普通设备)	1.普通设备
@@ -135,6 +145,8 @@ class VideoProduct extends AbstractModel
      * @param string $NetType 连接类型，wifi表示WIFI连接，cellular表示4G连接
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CategoryId 产品品类,113:摄像头,567:儿童手表,595:可视对讲门锁
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProductVaildYears 产品有效年限
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -200,6 +212,10 @@ class VideoProduct extends AbstractModel
 
         if (array_key_exists("CategoryId",$param) and $param["CategoryId"] !== null) {
             $this->CategoryId = $param["CategoryId"];
+        }
+
+        if (array_key_exists("ProductVaildYears",$param) and $param["ProductVaildYears"] !== null) {
+            $this->ProductVaildYears = $param["ProductVaildYears"];
         }
     }
 }

@@ -77,6 +77,22 @@ TaskStatus定义如下:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallbackURL(string $CallbackURL) 设置任务分析完成后的后调地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AudioMetadata getAudioMetadata() 获取任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioMetadata(AudioMetadata $AudioMetadata) 设置任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageMetadata getImageMetadata() 获取任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageMetadata(ImageMetadata $ImageMetadata) 设置任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TextMetadata getTextMetadata() 获取任务对应的媒资文件元信息，仅在MediaType为Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTextMetadata(TextMetadata $TextMetadata) 设置任务对应的媒资文件元信息，仅在MediaType为Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaMetadata getMetadata() 获取任务对应的媒资文件元信息，仅在MediaType为Video时有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetadata(MediaMetadata $Metadata) 设置任务对应的媒资文件元信息，仅在MediaType为Video时有效
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfo extends AbstractModel
 {
@@ -154,6 +170,30 @@ class TaskInfo extends AbstractModel
     public $CallbackURL;
 
     /**
+     * @var AudioMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AudioMetadata;
+
+    /**
+     * @var ImageMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageMetadata;
+
+    /**
+     * @var TextMetadata 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TextMetadata;
+
+    /**
+     * @var MediaMetadata 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Metadata;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $TaskName 描述任务名称，指定后可根据名称筛选
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,6 +214,14 @@ class TaskInfo extends AbstractModel
      * @param string $Label 媒资自定义标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CallbackURL 任务分析完成后的后调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioMetadata $AudioMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageMetadata $ImageMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextMetadata $TextMetadata 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaMetadata $Metadata 任务对应的媒资文件元信息，仅在MediaType为Video时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -240,6 +288,26 @@ class TaskInfo extends AbstractModel
 
         if (array_key_exists("CallbackURL",$param) and $param["CallbackURL"] !== null) {
             $this->CallbackURL = $param["CallbackURL"];
+        }
+
+        if (array_key_exists("AudioMetadata",$param) and $param["AudioMetadata"] !== null) {
+            $this->AudioMetadata = new AudioMetadata();
+            $this->AudioMetadata->deserialize($param["AudioMetadata"]);
+        }
+
+        if (array_key_exists("ImageMetadata",$param) and $param["ImageMetadata"] !== null) {
+            $this->ImageMetadata = new ImageMetadata();
+            $this->ImageMetadata->deserialize($param["ImageMetadata"]);
+        }
+
+        if (array_key_exists("TextMetadata",$param) and $param["TextMetadata"] !== null) {
+            $this->TextMetadata = new TextMetadata();
+            $this->TextMetadata->deserialize($param["TextMetadata"]);
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = new MediaMetadata();
+            $this->Metadata->deserialize($param["Metadata"]);
         }
     }
 }

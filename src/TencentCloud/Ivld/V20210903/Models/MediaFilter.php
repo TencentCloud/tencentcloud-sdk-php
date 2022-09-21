@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelSet(array $LabelSet) 设置媒资自定义标签数组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMediaType() 获取媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMediaType(integer $MediaType) 设置媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaFilter extends AbstractModel
 {
@@ -66,6 +70,12 @@ class MediaFilter extends AbstractModel
     public $LabelSet;
 
     /**
+     * @var integer 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MediaType;
+
+    /**
      * @param array $MediaNameSet 媒资名称过滤条件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StatusSet 媒资状态数组，媒资状态可选值参见MediaInfo
@@ -73,6 +83,8 @@ class MediaFilter extends AbstractModel
      * @param array $MediaIdSet 媒资ID数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LabelSet 媒资自定义标签数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MediaType 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -102,6 +114,10 @@ class MediaFilter extends AbstractModel
 
         if (array_key_exists("LabelSet",$param) and $param["LabelSet"] !== null) {
             $this->LabelSet = $param["LabelSet"];
+        }
+
+        if (array_key_exists("MediaType",$param) and $param["MediaType"] !== null) {
+            $this->MediaType = $param["MediaType"];
         }
     }
 }

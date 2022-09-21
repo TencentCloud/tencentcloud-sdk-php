@@ -24,8 +24,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskInfo(TaskInfo $TaskInfo) 设置任务信息，不包含任务结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method Data getTaskData() 获取任务结果数据，只在任务结束时返回
- * @method void setTaskData(Data $TaskData) 设置任务结果数据，只在任务结束时返回
+ * @method Data getTaskData() 获取视频任务结果数据，只在视频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskData(Data $TaskData) 设置视频任务结果数据，只在视频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageData getImageTaskData() 获取图片任务结果数据，只在图片任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageTaskData(ImageData $ImageTaskData) 设置图片任务结果数据，只在图片任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AudioData getAudioTaskData() 获取音频任务结果数据，只在音频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAudioTaskData(AudioData $AudioTaskData) 设置音频任务结果数据，只在音频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TextData getTextTaskData() 获取文本任务结果数据，只在文本任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTextTaskData(TextData $TextTaskData) 设置文本任务结果数据，只在文本任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,9 +52,28 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $TaskInfo;
 
     /**
-     * @var Data 任务结果数据，只在任务结束时返回
+     * @var Data 视频任务结果数据，只在视频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskData;
+
+    /**
+     * @var ImageData 图片任务结果数据，只在图片任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageTaskData;
+
+    /**
+     * @var AudioData 音频任务结果数据，只在音频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AudioTaskData;
+
+    /**
+     * @var TextData 文本任务结果数据，只在文本任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TextTaskData;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,7 +83,14 @@ class DescribeTaskDetailResponse extends AbstractModel
     /**
      * @param TaskInfo $TaskInfo 任务信息，不包含任务结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data $TaskData 任务结果数据，只在任务结束时返回
+     * @param Data $TaskData 视频任务结果数据，只在视频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageData $ImageTaskData 图片任务结果数据，只在图片任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioData $AudioTaskData 音频任务结果数据，只在音频任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextData $TextTaskData 文本任务结果数据，只在文本任务结束时返回
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -74,6 +114,21 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("TaskData",$param) and $param["TaskData"] !== null) {
             $this->TaskData = new Data();
             $this->TaskData->deserialize($param["TaskData"]);
+        }
+
+        if (array_key_exists("ImageTaskData",$param) and $param["ImageTaskData"] !== null) {
+            $this->ImageTaskData = new ImageData();
+            $this->ImageTaskData->deserialize($param["ImageTaskData"]);
+        }
+
+        if (array_key_exists("AudioTaskData",$param) and $param["AudioTaskData"] !== null) {
+            $this->AudioTaskData = new AudioData();
+            $this->AudioTaskData->deserialize($param["AudioTaskData"]);
+        }
+
+        if (array_key_exists("TextTaskData",$param) and $param["TextTaskData"] !== null) {
+            $this->TextTaskData = new TextData();
+            $this->TextTaskData->deserialize($param["TextTaskData"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

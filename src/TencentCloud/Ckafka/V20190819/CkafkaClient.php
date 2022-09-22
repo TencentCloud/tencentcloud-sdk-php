@@ -33,7 +33,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateCdcClusterResponse CreateCdcCluster(Models\CreateCdcClusterRequest $req) 用于cdc的专用ckafka集群
  * @method Models\CreateConnectResourceResponse CreateConnectResource(Models\CreateConnectResourceRequest $req) 创建Datahub连接源
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 创建消费者组
- * @method Models\CreateDatahubTaskResponse CreateDatahubTask(Models\CreateDatahubTaskRequest $req) 创建Datahub转储任务
+ * @method Models\CreateDatahubTaskResponse CreateDatahubTask(Models\CreateDatahubTaskRequest $req) 创建DIP转储任务
  * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) 创建实例(预付费包年包月)
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 本接口用于增加主题中的分区
  * @method Models\CreateRouteResponse CreateRoute(Models\CreateRouteRequest $req) 添加实例路由

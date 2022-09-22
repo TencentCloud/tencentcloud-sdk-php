@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTransformsParam(TransformsParam $TransformsParam) 设置数据处理规则
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method array getTags() 获取标签列表
+ * @method void setTags(array $Tags) 设置标签列表
  */
 class CreateDatahubTaskRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateDatahubTaskRequest extends AbstractModel
     public $TaskId;
 
     /**
+     * @var array 标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $TaskName 任务名称
      * @param string $TaskType 任务类型，SOURCE数据接入，SINK数据流出
      * @param DatahubResource $SourceResource 数据源
@@ -96,6 +103,7 @@ class CreateDatahubTaskRequest extends AbstractModel
      * @param string $SchemaId 选择所要绑定的SchemaId
      * @param TransformsParam $TransformsParam 数据处理规则
      * @param string $TaskId 任务ID
+     * @param array $Tags 标签列表
      */
     function __construct()
     {
@@ -149,6 +157,15 @@ class CreateDatahubTaskRequest extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

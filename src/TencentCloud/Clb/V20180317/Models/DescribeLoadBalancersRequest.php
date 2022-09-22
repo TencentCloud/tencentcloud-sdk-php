@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoadBalancers请求参数结构体
  *
- * @method array getLoadBalancerIds() 获取负载均衡实例ID。
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置负载均衡实例ID。
+ * @method array getLoadBalancerIds() 获取负载均衡实例ID。实例ID数量上限为20个。
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置负载均衡实例ID。实例ID数量上限为20个。
  * @method string getLoadBalancerType() 获取负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型：
@@ -84,7 +84,7 @@ OPEN：公网属性， INTERNAL：内网属性。
 class DescribeLoadBalancersRequest extends AbstractModel
 {
     /**
-     * @var array 负载均衡实例ID。
+     * @var array 负载均衡实例ID。实例ID数量上限为20个。
      */
     public $LoadBalancerIds;
 
@@ -190,7 +190,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $Filters;
 
     /**
-     * @param array $LoadBalancerIds 负载均衡实例ID。
+     * @param array $LoadBalancerIds 负载均衡实例ID。实例ID数量上限为20个。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
      * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TerminateDBInstances请求参数结构体
+ * 通用过滤器
  *
- * @method string getInstanceId() 获取指定预隔离实例ID。格式如：cmgo-p8vnipr5。
- * @method void setInstanceId(string $InstanceId) 设置指定预隔离实例ID。格式如：cmgo-p8vnipr5。
+ * @method string getName() 获取过滤字段名称
+ * @method void setName(string $Name) 设置过滤字段名称
+ * @method array getValues() 获取过滤值列表
+ * @method void setValues(array $Values) 设置过滤值列表
  */
-class TerminateDBInstancesRequest extends AbstractModel
+class Filter extends AbstractModel
 {
     /**
-     * @var string 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
+     * @var string 过滤字段名称
      */
-    public $InstanceId;
+    public $Name;
 
     /**
-     * @param string $InstanceId 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
+     * @var array 过滤值列表
+     */
+    public $Values;
+
+    /**
+     * @param string $Name 过滤字段名称
+     * @param array $Values 过滤值列表
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class TerminateDBInstancesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

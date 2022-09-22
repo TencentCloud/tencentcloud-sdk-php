@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMessage(string $ErrorMessage) 设置异常信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取任务标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置任务标签列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDatahubTaskRes extends AbstractModel
 {
@@ -152,6 +156,12 @@ class DescribeDatahubTaskRes extends AbstractModel
     public $ErrorMessage;
 
     /**
+     * @var array 任务标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $TaskName 任务名称
      * @param string $TaskType 任务类型，SOURCE数据接入，SINK数据流出
@@ -175,6 +185,8 @@ class DescribeDatahubTaskRes extends AbstractModel
      * @param TransformsParam $TransformsParam 数据处理规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMessage 异常信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 任务标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -253,6 +265,15 @@ class DescribeDatahubTaskRes extends AbstractModel
 
         if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
             $this->ErrorMessage = $param["ErrorMessage"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

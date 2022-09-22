@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(string $Result) 设置处理结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method JsonPathReplaceParam getJsonPathReplace() 获取JsonPath替换，TYPE=JSON_PATH_REPLACE时必传
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJsonPathReplace(JsonPathReplaceParam $JsonPathReplace) 设置JsonPath替换，TYPE=JSON_PATH_REPLACE时必传
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ValueParam extends AbstractModel
 {
@@ -101,6 +105,12 @@ class ValueParam extends AbstractModel
     public $Result;
 
     /**
+     * @var JsonPathReplaceParam JsonPath替换，TYPE=JSON_PATH_REPLACE时必传
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JsonPathReplace;
+
+    /**
      * @param string $Type 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
      * @param ReplaceParam $Replace 替换，TYPE=REPLACE时必传
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,6 +125,8 @@ class ValueParam extends AbstractModel
      * @param KVParam $KV key-value二次解析，TYPE=KV时必传
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Result 处理结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JsonPathReplaceParam $JsonPathReplace JsonPath替换，TYPE=JSON_PATH_REPLACE时必传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -166,6 +178,11 @@ class ValueParam extends AbstractModel
 
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("JsonPathReplace",$param) and $param["JsonPathReplace"] !== null) {
+            $this->JsonPathReplace = new JsonPathReplaceParam();
+            $this->JsonPathReplace->deserialize($param["JsonPathReplace"]);
         }
     }
 }

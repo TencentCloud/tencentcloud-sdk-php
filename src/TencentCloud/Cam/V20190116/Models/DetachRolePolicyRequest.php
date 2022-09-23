@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPolicyId() 获取策略ID，入参PolicyId与PolicyName二选一
  * @method void setPolicyId(integer $PolicyId) 设置策略ID，入参PolicyId与PolicyName二选一
- * @method string getDetachRoleId() 获取角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
- * @method void setDetachRoleId(string $DetachRoleId) 设置角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
- * @method string getDetachRoleName() 获取角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
- * @method void setDetachRoleName(string $DetachRoleName) 设置角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+ * @method string getDetachRoleId() 获取角色ID，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
+ * @method void setDetachRoleId(string $DetachRoleId) 设置角色ID，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
+ * @method string getDetachRoleName() 获取角色名称，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
+ * @method void setDetachRoleName(string $DetachRoleName) 设置角色名称，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
  * @method string getPolicyName() 获取策略名，入参PolicyId与PolicyName二选一
  * @method void setPolicyName(string $PolicyName) 设置策略名，入参PolicyId与PolicyName二选一
  */
@@ -37,12 +37,12 @@ class DetachRolePolicyRequest extends AbstractModel
     public $PolicyId;
 
     /**
-     * @var string 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * @var string 角色ID，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
      */
     public $DetachRoleId;
 
     /**
-     * @var string 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * @var string 角色名称，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
      */
     public $DetachRoleName;
 
@@ -53,8 +53,8 @@ class DetachRolePolicyRequest extends AbstractModel
 
     /**
      * @param integer $PolicyId 策略ID，入参PolicyId与PolicyName二选一
-     * @param string $DetachRoleId 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
-     * @param string $DetachRoleName 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * @param string $DetachRoleId 角色ID，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
+     * @param string $DetachRoleName 角色名称，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
      * @param string $PolicyName 策略名，入参PolicyId与PolicyName二选一
      */
     function __construct()

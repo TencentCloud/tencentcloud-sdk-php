@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLang() 获取国际站：en，国内站：zh
  * @method void setLang(string $Lang) 设置国际站：en，国内站：zh
- * @method string getProduct() 获取产品简称（查询是否集团服务委派管理员必须）
- * @method void setProduct(string $Product) 设置产品简称（查询是否集团服务委派管理员必须）
+ * @method string getProduct() 获取产品简称（查询是否集团服务委派管理员必填）
+ * @method void setProduct(string $Product) 设置产品简称（查询是否集团服务委派管理员必填）
  */
 class DescribeOrganizationRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeOrganizationRequest extends AbstractModel
     public $Lang;
 
     /**
-     * @var string 产品简称（查询是否集团服务委派管理员必须）
+     * @var string 产品简称（查询是否集团服务委派管理员必填）
      */
     public $Product;
 
     /**
      * @param string $Lang 国际站：en，国内站：zh
-     * @param string $Product 产品简称（查询是否集团服务委派管理员必须）
+     * @param string $Product 产品简称（查询是否集团服务委派管理员必填）
      */
     function __construct()
     {

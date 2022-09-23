@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAssignManager(boolean $IsAssignManager) 设置是否集团服务委派管理员 true-是、false-否
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsAuthManager() 获取是否主体管理员 true-是、false-否
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAuthManager(boolean $IsAuthManager) 设置是否主体管理员 true-是、false-否
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -176,6 +180,12 @@ class DescribeOrganizationResponse extends AbstractModel
     public $IsAssignManager;
 
     /**
+     * @var boolean 是否主体管理员 true-是、false-否
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAuthManager;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -210,6 +220,8 @@ class DescribeOrganizationResponse extends AbstractModel
      * @param string $PayName 代付者名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAssignManager 是否集团服务委派管理员 true-是、false-否
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsAuthManager 是否主体管理员 true-是、false-否
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -289,6 +301,10 @@ class DescribeOrganizationResponse extends AbstractModel
 
         if (array_key_exists("IsAssignManager",$param) and $param["IsAssignManager"] !== null) {
             $this->IsAssignManager = $param["IsAssignManager"];
+        }
+
+        if (array_key_exists("IsAuthManager",$param) and $param["IsAuthManager"] !== null) {
+            $this->IsAuthManager = $param["IsAuthManager"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

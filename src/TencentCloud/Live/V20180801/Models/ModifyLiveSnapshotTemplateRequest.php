@@ -22,6 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTemplateId() 获取模板 ID。
  * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
+ * @method integer getCosAppId() 获取Cos 应用 ID。
+**注：此参数现在须必选。**
+ * @method void setCosAppId(integer $CosAppId) 设置Cos 应用 ID。
+**注：此参数现在须必选。**
+ * @method string getCosBucket() 获取Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
+**注：此参数现在须必选。**
+ * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
+**注：此参数现在须必选。**
+ * @method string getCosRegion() 获取Cos 地域。
+**注：此参数现在须必选。**
+ * @method void setCosRegion(string $CosRegion) 设置Cos 地域。
+**注：此参数现在须必选。**
  * @method string getTemplateName() 获取模板名称。
 长度上限：255字节。
  * @method void setTemplateName(string $TemplateName) 设置模板名称。
@@ -44,14 +58,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPornFlag(integer $PornFlag) 设置是否开启鉴黄，默认 0 。
 0：不开启。
 1：开启。
- * @method integer getCosAppId() 获取Cos 应用 ID。
- * @method void setCosAppId(integer $CosAppId) 设置Cos 应用 ID。
- * @method string getCosBucket() 获取Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
- * @method void setCosBucket(string $CosBucket) 设置Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
- * @method string getCosRegion() 获取Cos 地域。
- * @method void setCosRegion(string $CosRegion) 设置Cos 地域。
  * @method string getCosPrefix() 获取Cos Bucket文件夹前缀。
  * @method void setCosPrefix(string $CosPrefix) 设置Cos Bucket文件夹前缀。
  * @method string getCosFileName() 获取Cos 文件名称。
@@ -63,6 +69,25 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
      * @var integer 模板 ID。
      */
     public $TemplateId;
+
+    /**
+     * @var integer Cos 应用 ID。
+**注：此参数现在须必选。**
+     */
+    public $CosAppId;
+
+    /**
+     * @var string Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
+**注：此参数现在须必选。**
+     */
+    public $CosBucket;
+
+    /**
+     * @var string Cos 地域。
+**注：此参数现在须必选。**
+     */
+    public $CosRegion;
 
     /**
      * @var string 模板名称。
@@ -100,22 +125,6 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
     public $PornFlag;
 
     /**
-     * @var integer Cos 应用 ID。
-     */
-    public $CosAppId;
-
-    /**
-     * @var string Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-     */
-    public $CosBucket;
-
-    /**
-     * @var string Cos 地域。
-     */
-    public $CosRegion;
-
-    /**
      * @var string Cos Bucket文件夹前缀。
      */
     public $CosPrefix;
@@ -127,6 +136,13 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 
     /**
      * @param integer $TemplateId 模板 ID。
+     * @param integer $CosAppId Cos 应用 ID。
+**注：此参数现在须必选。**
+     * @param string $CosBucket Cos Bucket名称。
+注：CosBucket参数值不能包含-[appid] 部分。
+**注：此参数现在须必选。**
+     * @param string $CosRegion Cos 地域。
+**注：此参数现在须必选。**
      * @param string $TemplateName 模板名称。
 长度上限：255字节。
      * @param string $Description 描述信息。
@@ -138,10 +154,6 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
      * @param integer $PornFlag 是否开启鉴黄，默认 0 。
 0：不开启。
 1：开启。
-     * @param integer $CosAppId Cos 应用 ID。
-     * @param string $CosBucket Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-     * @param string $CosRegion Cos 地域。
      * @param string $CosPrefix Cos Bucket文件夹前缀。
      * @param string $CosFileName Cos 文件名称。
      */
@@ -160,6 +172,18 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
         }
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("CosAppId",$param) and $param["CosAppId"] !== null) {
+            $this->CosAppId = $param["CosAppId"];
+        }
+
+        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
+            $this->CosBucket = $param["CosBucket"];
+        }
+
+        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
+            $this->CosRegion = $param["CosRegion"];
         }
 
         if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
@@ -184,18 +208,6 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
 
         if (array_key_exists("PornFlag",$param) and $param["PornFlag"] !== null) {
             $this->PornFlag = $param["PornFlag"];
-        }
-
-        if (array_key_exists("CosAppId",$param) and $param["CosAppId"] !== null) {
-            $this->CosAppId = $param["CosAppId"];
-        }
-
-        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
-            $this->CosBucket = $param["CosBucket"];
-        }
-
-        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
-            $this->CosRegion = $param["CosRegion"];
         }
 
         if (array_key_exists("CosPrefix",$param) and $param["CosPrefix"] !== null) {

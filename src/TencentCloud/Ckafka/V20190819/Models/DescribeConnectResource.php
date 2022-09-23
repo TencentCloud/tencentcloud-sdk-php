@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCtsdbConnectParam(CtsdbConnectParam $CtsdbConnectParam) 设置Ctsdb配置，Type为CTSDB时返回
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DorisConnectParam getDorisConnectParam() 获取Doris 配置，Type 为 DORIS 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDorisConnectParam(DorisConnectParam $DorisConnectParam) 设置Doris 配置，Type 为 DORIS 时返回
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeConnectResource extends AbstractModel
 {
@@ -204,6 +208,12 @@ class DescribeConnectResource extends AbstractModel
     public $CtsdbConnectParam;
 
     /**
+     * @var DorisConnectParam Doris 配置，Type 为 DORIS 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DorisConnectParam;
+
+    /**
      * @param string $ResourceId 连接源的Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 连接源名称
@@ -239,6 +249,8 @@ class DescribeConnectResource extends AbstractModel
      * @param SQLServerConnectParam $SQLServerConnectParam SQLServer配置，Type为SQLSERVER时返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CtsdbConnectParam $CtsdbConnectParam Ctsdb配置，Type为CTSDB时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DorisConnectParam $DorisConnectParam Doris 配置，Type 为 DORIS 时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -333,6 +345,11 @@ class DescribeConnectResource extends AbstractModel
         if (array_key_exists("CtsdbConnectParam",$param) and $param["CtsdbConnectParam"] !== null) {
             $this->CtsdbConnectParam = new CtsdbConnectParam();
             $this->CtsdbConnectParam->deserialize($param["CtsdbConnectParam"]);
+        }
+
+        if (array_key_exists("DorisConnectParam",$param) and $param["DorisConnectParam"] !== null) {
+            $this->DorisConnectParam = new DorisConnectParam();
+            $this->DorisConnectParam->deserialize($param["DorisConnectParam"]);
         }
     }
 }

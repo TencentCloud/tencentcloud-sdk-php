@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinStorage(integer $MinStorage) 设置该规格所支持最小存储容量，单位：GB
  * @method integer getQps() 获取该规格的预估QPS
  * @method void setQps(integer $Qps) 设置该规格的预估QPS
- * @method integer getPid() 获取该规格对应的计费ID
- * @method void setPid(integer $Pid) 设置该规格对应的计费ID
+ * @method integer getPid() 获取【该字段废弃】
+ * @method void setPid(integer $Pid) 设置【该字段废弃】
  * @method string getType() 获取机器类型
  * @method void setType(string $Type) 设置机器类型
  * @method string getMajorVersion() 获取PostgreSQL的主要版本编号
@@ -96,7 +96,7 @@ class SpecItemInfo extends AbstractModel
     public $Qps;
 
     /**
-     * @var integer 该规格对应的计费ID
+     * @var integer 【该字段废弃】
      */
     public $Pid;
 
@@ -132,7 +132,7 @@ class SpecItemInfo extends AbstractModel
      * @param integer $MaxStorage 该规格所支持最大存储容量，单位：GB
      * @param integer $MinStorage 该规格所支持最小存储容量，单位：GB
      * @param integer $Qps 该规格的预估QPS
-     * @param integer $Pid 该规格对应的计费ID
+     * @param integer $Pid 【该字段废弃】
      * @param string $Type 机器类型
      * @param string $MajorVersion PostgreSQL的主要版本编号
 注意：此字段可能返回 null，表示取不到有效值。

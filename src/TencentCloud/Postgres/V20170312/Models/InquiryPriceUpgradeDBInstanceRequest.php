@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置实例的内存大小，单位GB
  * @method string getDBInstanceId() 获取实例ID，形如postgres-hez4fh0v
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-hez4fh0v
- * @method string getInstanceChargeType() 获取实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+ * @method string getInstanceChargeType() 获取【废弃参数，不再生效】，实例计费类型。
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置【废弃参数，不再生效】，实例计费类型。
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var string 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+     * @var string 【废弃参数，不再生效】，实例计费类型。
      */
     public $InstanceChargeType;
 
@@ -55,7 +55,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
      * @param integer $Storage 实例的磁盘大小，单位GB
      * @param integer $Memory 实例的内存大小，单位GB
      * @param string $DBInstanceId 实例ID，形如postgres-hez4fh0v
-     * @param string $InstanceChargeType 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+     * @param string $InstanceChargeType 【废弃参数，不再生效】，实例计费类型。
      */
     function __construct()
     {

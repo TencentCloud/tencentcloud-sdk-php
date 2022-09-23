@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillId(string $BillId) 设置订单流水号。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDBInstanceId() 获取克隆出的新实例ID，当前只支持后付费返回该值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDBInstanceId(string $DBInstanceId) 设置克隆出的新实例ID，当前只支持后付费返回该值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +50,12 @@ class CloneDBInstanceResponse extends AbstractModel
     public $BillId;
 
     /**
+     * @var string 克隆出的新实例ID，当前只支持后付费返回该值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DBInstanceId;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -54,6 +64,8 @@ class CloneDBInstanceResponse extends AbstractModel
      * @param string $DealName 订单号。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillId 订单流水号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DBInstanceId 克隆出的新实例ID，当前只支持后付费返回该值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -76,6 +88,10 @@ class CloneDBInstanceResponse extends AbstractModel
 
         if (array_key_exists("BillId",$param) and $param["BillId"] !== null) {
             $this->BillId = $param["BillId"];
+        }
+
+        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
+            $this->DBInstanceId = $param["DBInstanceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

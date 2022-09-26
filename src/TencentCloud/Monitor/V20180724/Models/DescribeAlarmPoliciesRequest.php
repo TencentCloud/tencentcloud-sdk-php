@@ -80,6 +80,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerTasks(array $TriggerTasks) 设置按照触发任务（例如弹性伸缩）过滤策略。最多10个
  * @method array getOneClickPolicyType() 获取根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
  * @method void setOneClickPolicyType(array $OneClickPolicyType) 设置根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
+ * @method integer getNotBindAll() 获取根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+ * @method void setNotBindAll(integer $NotBindAll) 设置根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+ * @method integer getNotInstanceGroup() 获取根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+ * @method void setNotInstanceGroup(integer $NotInstanceGroup) 设置根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+ * @method array getTags() 获取策略根据标签过滤
+ * @method void setTags(array $Tags) 设置策略根据标签过滤
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -198,6 +204,21 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $OneClickPolicyType;
 
     /**
+     * @var integer 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+     */
+    public $NotBindAll;
+
+    /**
+     * @var integer 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+     */
+    public $NotInstanceGroup;
+
+    /**
+     * @var array 策略根据标签过滤
+     */
+    public $Tags;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $PageNumber 页数，从 1 开始计数，默认 1
      * @param integer $PageSize 每页的数量，取值1~100，默认20
@@ -228,6 +249,9 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param integer $NeedCorrespondence 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
      * @param array $TriggerTasks 按照触发任务（例如弹性伸缩）过滤策略。最多10个
      * @param array $OneClickPolicyType 根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
+     * @param integer $NotBindAll 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+     * @param integer $NotInstanceGroup 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+     * @param array $Tags 策略根据标签过滤
      */
     function __construct()
     {
@@ -329,6 +353,23 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 
         if (array_key_exists("OneClickPolicyType",$param) and $param["OneClickPolicyType"] !== null) {
             $this->OneClickPolicyType = $param["OneClickPolicyType"];
+        }
+
+        if (array_key_exists("NotBindAll",$param) and $param["NotBindAll"] !== null) {
+            $this->NotBindAll = $param["NotBindAll"];
+        }
+
+        if (array_key_exists("NotInstanceGroup",$param) and $param["NotInstanceGroup"] !== null) {
+            $this->NotInstanceGroup = $param["NotInstanceGroup"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

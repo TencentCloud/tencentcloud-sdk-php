@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupIds(array $GroupIds) 设置接收组列表
  * @method array getNoticeIds() 获取根据通知模板 id 过滤，空数组/不传则不过滤
  * @method void setNoticeIds(array $NoticeIds) 设置根据通知模板 id 过滤，空数组/不传则不过滤
+ * @method array getTags() 获取模版根据标签过滤
+ * @method void setTags(array $Tags) 设置模版根据标签过滤
  */
 class DescribeAlarmNoticesRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeAlarmNoticesRequest extends AbstractModel
     public $NoticeIds;
 
     /**
+     * @var array 模版根据标签过滤
+     */
+    public $Tags;
+
+    /**
      * @param string $Module 模块名，这里填“monitor”
      * @param integer $PageNumber 页码 最小为1
      * @param integer $PageSize 分页大小 1～200
@@ -104,6 +111,7 @@ class DescribeAlarmNoticesRequest extends AbstractModel
      * @param array $UserIds 接收对象列表
      * @param array $GroupIds 接收组列表
      * @param array $NoticeIds 根据通知模板 id 过滤，空数组/不传则不过滤
+     * @param array $Tags 模版根据标签过滤
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class DescribeAlarmNoticesRequest extends AbstractModel
 
         if (array_key_exists("NoticeIds",$param) and $param["NoticeIds"] !== null) {
             $this->NoticeIds = $param["NoticeIds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

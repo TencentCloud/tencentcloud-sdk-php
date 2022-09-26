@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilter(AlarmPolicyFilter $Filter) 设置全局过滤条件
  * @method array getGroupBy() 获取聚合维度列表，指定按哪些维度 key 来做 group by
  * @method void setGroupBy(array $GroupBy) 设置聚合维度列表，指定按哪些维度 key 来做 group by
+ * @method LogAlarmReq getLogAlarmReqInfo() 获取日志告警创建请求参数信息
+ * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) 设置日志告警创建请求参数信息
  */
 class ModifyAlarmPolicyConditionRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     public $GroupBy;
 
     /**
+     * @var LogAlarmReq 日志告警创建请求参数信息
+     */
+    public $LogAlarmReqInfo;
+
+    /**
      * @param string $Module 模块名，固定值 monitor
      * @param string $PolicyId 告警策略 ID
      * @param integer $ConditionTemplateId 触发条件模板 Id，可不传
@@ -80,6 +87,7 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
      * @param AlarmPolicyEventCondition $EventCondition 事件触发条件
      * @param AlarmPolicyFilter $Filter 全局过滤条件
      * @param array $GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
+     * @param LogAlarmReq $LogAlarmReqInfo 日志告警创建请求参数信息
      */
     function __construct()
     {
@@ -123,6 +131,11 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
 
         if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
             $this->GroupBy = $param["GroupBy"];
+        }
+
+        if (array_key_exists("LogAlarmReqInfo",$param) and $param["LogAlarmReqInfo"] !== null) {
+            $this->LogAlarmReqInfo = new LogAlarmReq();
+            $this->LogAlarmReqInfo->deserialize($param["LogAlarmReqInfo"]);
         }
     }
 }

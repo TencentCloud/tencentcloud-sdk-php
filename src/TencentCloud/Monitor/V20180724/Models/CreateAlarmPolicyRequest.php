@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilter(AlarmPolicyFilter $Filter) 设置全局过滤条件
  * @method array getGroupBy() 获取聚合维度列表，指定按哪些维度 key 来做 group by
  * @method void setGroupBy(array $GroupBy) 设置聚合维度列表，指定按哪些维度 key 来做 group by
+ * @method array getTags() 获取模版绑定的标签
+ * @method void setTags(array $Tags) 设置模版绑定的标签
+ * @method LogAlarmReq getLogAlarmReqInfo() 获取日志告警信息
+ * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) 设置日志告警信息
  */
 class CreateAlarmPolicyRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $GroupBy;
 
     /**
+     * @var array 模版绑定的标签
+     */
+    public $Tags;
+
+    /**
+     * @var LogAlarmReq 日志告警信息
+     */
+    public $LogAlarmReqInfo;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param string $PolicyName 策略名称，不超过20字符
      * @param string $MonitorType 监控类型 MT_QCE=云产品监控
@@ -136,6 +150,8 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param array $TriggerTasks 触发任务列表
      * @param AlarmPolicyFilter $Filter 全局过滤条件
      * @param array $GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
+     * @param array $Tags 模版绑定的标签
+     * @param LogAlarmReq $LogAlarmReqInfo 日志告警信息
      */
     function __construct()
     {
@@ -212,6 +228,20 @@ class CreateAlarmPolicyRequest extends AbstractModel
 
         if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
             $this->GroupBy = $param["GroupBy"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("LogAlarmReqInfo",$param) and $param["LogAlarmReqInfo"] !== null) {
+            $this->LogAlarmReqInfo = new LogAlarmReq();
+            $this->LogAlarmReqInfo->deserialize($param["LogAlarmReqInfo"]);
         }
     }
 }

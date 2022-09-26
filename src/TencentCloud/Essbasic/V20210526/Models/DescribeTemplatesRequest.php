@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询偏移位置，默认0；在查询列表的时候有效
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
- * @method boolean getQueryAllComponents() 获取是否返回所有组件信息
- * @method void setQueryAllComponents(boolean $QueryAllComponents) 设置是否返回所有组件信息
- * @method string getTemplateName() 获取模糊搜索模板名称
- * @method void setTemplateName(string $TemplateName) 设置模糊搜索模板名称
+ * @method boolean getQueryAllComponents() 获取是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
+ * @method void setQueryAllComponents(boolean $QueryAllComponents) 设置是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
+ * @method string getTemplateName() 获取模糊搜索模板名称，最大长度200
+ * @method void setTemplateName(string $TemplateName) 设置模糊搜索模板名称，最大长度200
  */
 class DescribeTemplatesRequest extends AbstractModel
 {
@@ -70,12 +70,12 @@ class DescribeTemplatesRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var boolean 是否返回所有组件信息
+     * @var boolean 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
      */
     public $QueryAllComponents;
 
     /**
-     * @var string 模糊搜索模板名称
+     * @var string 模糊搜索模板名称，最大长度200
      */
     public $TemplateName;
 
@@ -86,8 +86,8 @@ class DescribeTemplatesRequest extends AbstractModel
      * @param integer $Limit 查询个数，默认20，最大100；在查询列表的时候有效
      * @param integer $Offset 查询偏移位置，默认0；在查询列表的时候有效
      * @param UserInfo $Operator 操作者的信息
-     * @param boolean $QueryAllComponents 是否返回所有组件信息
-     * @param string $TemplateName 模糊搜索模板名称
+     * @param boolean $QueryAllComponents 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
+     * @param string $TemplateName 模糊搜索模板名称，最大长度200
      */
     function __construct()
     {

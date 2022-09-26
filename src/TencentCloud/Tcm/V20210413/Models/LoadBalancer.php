@@ -56,6 +56,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtensiveClusters(ExtensiveClusters $ExtensiveClusters) 设置内网独占集群配置列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CrossRegionConfig getCrossRegionConfig() 获取负载均衡跨地域配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCrossRegionConfig(CrossRegionConfig $CrossRegionConfig) 设置负载均衡跨地域配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -118,6 +122,12 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $ExtensiveClusters;
 
     /**
+     * @var CrossRegionConfig 负载均衡跨地域配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CrossRegionConfig;
+
+    /**
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
 只读。
@@ -135,6 +145,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param array $Tags 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtensiveClusters $ExtensiveClusters 内网独占集群配置列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CrossRegionConfig $CrossRegionConfig 负载均衡跨地域配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -194,6 +206,11 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (array_key_exists("ExtensiveClusters",$param) and $param["ExtensiveClusters"] !== null) {
             $this->ExtensiveClusters = new ExtensiveClusters();
             $this->ExtensiveClusters->deserialize($param["ExtensiveClusters"]);
+        }
+
+        if (array_key_exists("CrossRegionConfig",$param) and $param["CrossRegionConfig"] !== null) {
+            $this->CrossRegionConfig = new CrossRegionConfig();
+            $this->CrossRegionConfig->deserialize($param["CrossRegionConfig"]);
         }
     }
 }

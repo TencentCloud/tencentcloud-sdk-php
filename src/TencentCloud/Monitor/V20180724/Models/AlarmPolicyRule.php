@@ -112,6 +112,14 @@ re=正则匹配
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置集成中心产品ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getValueMax() 获取最大值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValueMax(float $ValueMax) 设置最大值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getValueMin() 获取最小值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValueMin(float $ValueMin) 设置最小值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicyRule extends AbstractModel
 {
@@ -218,6 +226,18 @@ re=正则匹配
     public $ProductId;
 
     /**
+     * @var float 最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValueMax;
+
+    /**
+     * @var float 最小值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ValueMin;
+
+    /**
      * @param string $MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Period 秒数 统计周期，支持的值可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
@@ -263,6 +283,10 @@ re=正则匹配
      * @param integer $IsOpen 高级指标是否开通，0否，1是
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductId 集成中心产品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $ValueMax 最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $ValueMin 最小值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -333,6 +357,14 @@ re=正则匹配
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("ValueMax",$param) and $param["ValueMax"] !== null) {
+            $this->ValueMax = $param["ValueMax"];
+        }
+
+        if (array_key_exists("ValueMin",$param) and $param["ValueMin"] !== null) {
+            $this->ValueMin = $param["ValueMin"];
         }
     }
 }

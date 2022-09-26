@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEKSCluster请求参数结构体
  *
- * @method string getK8SVersion() 获取k8s版本号。可为1.14.4, 1.12.8。
- * @method void setK8SVersion(string $K8SVersion) 设置k8s版本号。可为1.14.4, 1.12.8。
+ * @method string getK8SVersion() 获取k8s版本号。可为1.18.4 1.20.6。
+ * @method void setK8SVersion(string $K8SVersion) 设置k8s版本号。可为1.18.4 1.20.6。
  * @method string getVpcId() 获取vpc 的Id
  * @method void setVpcId(string $VpcId) 设置vpc 的Id
  * @method string getClusterName() 获取集群名称
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) 设置子网Id 列表
  * @method string getClusterDesc() 获取集群描述信息
  * @method void setClusterDesc(string $ClusterDesc) 设置集群描述信息
- * @method string getServiceSubnetId() 获取Serivce 所在子网Id
- * @method void setServiceSubnetId(string $ServiceSubnetId) 设置Serivce 所在子网Id
+ * @method string getServiceSubnetId() 获取Service CIDR 或 Serivce 所在子网Id
+ * @method void setServiceSubnetId(string $ServiceSubnetId) 设置Service CIDR 或 Serivce 所在子网Id
  * @method array getDnsServers() 获取集群自定义的Dns服务器信息
  * @method void setDnsServers(array $DnsServers) 设置集群自定义的Dns服务器信息
  * @method string getExtraParam() 获取扩展参数。须是map[string]string 的json 格式。
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateEKSClusterRequest extends AbstractModel
 {
     /**
-     * @var string k8s版本号。可为1.14.4, 1.12.8。
+     * @var string k8s版本号。可为1.18.4 1.20.6。
      */
     public $K8SVersion;
 
@@ -71,7 +71,7 @@ class CreateEKSClusterRequest extends AbstractModel
     public $ClusterDesc;
 
     /**
-     * @var string Serivce 所在子网Id
+     * @var string Service CIDR 或 Serivce 所在子网Id
      */
     public $ServiceSubnetId;
 
@@ -101,12 +101,12 @@ class CreateEKSClusterRequest extends AbstractModel
     public $SubnetInfos;
 
     /**
-     * @param string $K8SVersion k8s版本号。可为1.14.4, 1.12.8。
+     * @param string $K8SVersion k8s版本号。可为1.18.4 1.20.6。
      * @param string $VpcId vpc 的Id
      * @param string $ClusterName 集群名称
      * @param array $SubnetIds 子网Id 列表
      * @param string $ClusterDesc 集群描述信息
-     * @param string $ServiceSubnetId Serivce 所在子网Id
+     * @param string $ServiceSubnetId Service CIDR 或 Serivce 所在子网Id
      * @param array $DnsServers 集群自定义的Dns服务器信息
      * @param string $ExtraParam 扩展参数。须是map[string]string 的json 格式。
      * @param boolean $EnableVpcCoreDNS 是否在用户集群内开启Dns。默认为true

@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskCreateTime(string $TaskCreateTime) 设置任务创建时间
  * @method string getTaskUpdateTime() 获取任务更新时间
  * @method void setTaskUpdateTime(string $TaskUpdateTime) 设置任务更新时间
+ * @method integer getTaskPreCheckStatus() 获取0--未开始，1--进行中，2--已完成
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskPreCheckStatus(integer $TaskPreCheckStatus) 设置0--未开始，1--进行中，2--已完成
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getTaskPreCheckSuccess() 获取环境检查是否通过
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskPreCheckSuccess(boolean $TaskPreCheckSuccess) 设置环境检查是否通过
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskListItem extends AbstractModel
 {
@@ -76,6 +84,18 @@ class TaskListItem extends AbstractModel
     public $TaskUpdateTime;
 
     /**
+     * @var integer 0--未开始，1--进行中，2--已完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskPreCheckStatus;
+
+    /**
+     * @var boolean 环境检查是否通过
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskPreCheckSuccess;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -84,6 +104,10 @@ class TaskListItem extends AbstractModel
      * @param integer $TaskStatus 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
      * @param string $TaskCreateTime 任务创建时间
      * @param string $TaskUpdateTime 任务更新时间
+     * @param integer $TaskPreCheckStatus 0--未开始，1--进行中，2--已完成
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $TaskPreCheckSuccess 环境检查是否通过
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -124,6 +148,14 @@ class TaskListItem extends AbstractModel
 
         if (array_key_exists("TaskUpdateTime",$param) and $param["TaskUpdateTime"] !== null) {
             $this->TaskUpdateTime = $param["TaskUpdateTime"];
+        }
+
+        if (array_key_exists("TaskPreCheckStatus",$param) and $param["TaskPreCheckStatus"] !== null) {
+            $this->TaskPreCheckStatus = $param["TaskPreCheckStatus"];
+        }
+
+        if (array_key_exists("TaskPreCheckSuccess",$param) and $param["TaskPreCheckSuccess"] !== null) {
+            $this->TaskPreCheckSuccess = $param["TaskPreCheckSuccess"];
         }
     }
 }

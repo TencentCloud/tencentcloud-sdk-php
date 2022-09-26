@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFinishTime(string $FinishTime) 设置任务完成时间
  * @method array getSubTasks() 获取子任务
  * @method void setSubTasks(array $SubTasks) 设置子任务
+ * @method integer getElapsedTime() 获取任务花费时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setElapsedTime(integer $ElapsedTime) 设置任务花费时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDetail extends AbstractModel
 {
@@ -52,10 +56,18 @@ class TaskDetail extends AbstractModel
     public $SubTasks;
 
     /**
+     * @var integer 任务花费时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ElapsedTime;
+
+    /**
      * @param string $Name 任务名
      * @param float $Progress 任务进度
      * @param string $FinishTime 任务完成时间
      * @param array $SubTasks 子任务
+     * @param integer $ElapsedTime 任务花费时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -89,6 +101,10 @@ class TaskDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SubTasks, $obj);
             }
+        }
+
+        if (array_key_exists("ElapsedTime",$param) and $param["ElapsedTime"] !== null) {
+            $this->ElapsedTime = $param["ElapsedTime"];
         }
     }
 }

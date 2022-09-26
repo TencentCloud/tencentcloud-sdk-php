@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setURLNotices(array $URLNotices) 设置回调通知 最多3个
  * @method array getCLSNotices() 获取推送CLS日志服务的操作 最多1个
  * @method void setCLSNotices(array $CLSNotices) 设置推送CLS日志服务的操作 最多1个
+ * @method array getTags() 获取模版绑定的标签
+ * @method void setTags(array $Tags) 设置模版绑定的标签
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $CLSNotices;
 
     /**
+     * @var array 模版绑定的标签
+     */
+    public $Tags;
+
+    /**
      * @param string $Module 模块名，这里填“monitor”
      * @param string $Name 通知模板名称 60字符以内
      * @param string $NoticeType 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
@@ -80,6 +87,7 @@ class CreateAlarmNoticeRequest extends AbstractModel
      * @param array $UserNotices 用户通知 最多5个
      * @param array $URLNotices 回调通知 最多3个
      * @param array $CLSNotices 推送CLS日志服务的操作 最多1个
+     * @param array $Tags 模版绑定的标签
      */
     function __construct()
     {
@@ -134,6 +142,15 @@ class CreateAlarmNoticeRequest extends AbstractModel
                 $obj = new CLSNotice();
                 $obj->deserialize($value);
                 array_push($this->CLSNotices, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

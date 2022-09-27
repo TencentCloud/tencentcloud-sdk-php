@@ -78,6 +78,16 @@ IdentityVerificationMethod 为nameIdCardAndPhone，Name,PhoneNumber,ResidentIden
  * @method void setSalt(Salt $Salt) 设置密码盐
  * @method string getPasswordEncryptTypeEnum() 获取密码加密方式（SHA1;BCRYPT）
  * @method void setPasswordEncryptTypeEnum(string $PasswordEncryptTypeEnum) 设置密码加密方式（SHA1;BCRYPT）
+ * @method string getIndexedAttribute1() 获取索引字段1
+ * @method void setIndexedAttribute1(string $IndexedAttribute1) 设置索引字段1
+ * @method string getIndexedAttribute2() 获取索引字段2
+ * @method void setIndexedAttribute2(string $IndexedAttribute2) 设置索引字段2
+ * @method string getIndexedAttribute3() 获取索引字段3
+ * @method void setIndexedAttribute3(string $IndexedAttribute3) 设置索引字段3
+ * @method string getIndexedAttribute4() 获取索引字段4
+ * @method void setIndexedAttribute4(string $IndexedAttribute4) 设置索引字段4
+ * @method string getIndexedAttribute5() 获取索引字段5
+ * @method void setIndexedAttribute5(string $IndexedAttribute5) 设置索引字段5
  */
 class ImportUser extends AbstractModel
 {
@@ -212,6 +222,31 @@ class ImportUser extends AbstractModel
     public $PasswordEncryptTypeEnum;
 
     /**
+     * @var string 索引字段1
+     */
+    public $IndexedAttribute1;
+
+    /**
+     * @var string 索引字段2
+     */
+    public $IndexedAttribute2;
+
+    /**
+     * @var string 索引字段3
+     */
+    public $IndexedAttribute3;
+
+    /**
+     * @var string 索引字段4
+     */
+    public $IndexedAttribute4;
+
+    /**
+     * @var string 索引字段5
+     */
+    public $IndexedAttribute5;
+
+    /**
      * @param string $UserName 用户名
      * @param string $PhoneNumber 手机号
      * @param string $Email 邮箱
@@ -238,6 +273,11 @@ class ImportUser extends AbstractModel
      * @param array $CustomizationAttributes 自定义属性
      * @param Salt $Salt 密码盐
      * @param string $PasswordEncryptTypeEnum 密码加密方式（SHA1;BCRYPT）
+     * @param string $IndexedAttribute1 索引字段1
+     * @param string $IndexedAttribute2 索引字段2
+     * @param string $IndexedAttribute3 索引字段3
+     * @param string $IndexedAttribute4 索引字段4
+     * @param string $IndexedAttribute5 索引字段5
      */
     function __construct()
     {
@@ -360,6 +400,26 @@ class ImportUser extends AbstractModel
 
         if (array_key_exists("PasswordEncryptTypeEnum",$param) and $param["PasswordEncryptTypeEnum"] !== null) {
             $this->PasswordEncryptTypeEnum = $param["PasswordEncryptTypeEnum"];
+        }
+
+        if (array_key_exists("IndexedAttribute1",$param) and $param["IndexedAttribute1"] !== null) {
+            $this->IndexedAttribute1 = $param["IndexedAttribute1"];
+        }
+
+        if (array_key_exists("IndexedAttribute2",$param) and $param["IndexedAttribute2"] !== null) {
+            $this->IndexedAttribute2 = $param["IndexedAttribute2"];
+        }
+
+        if (array_key_exists("IndexedAttribute3",$param) and $param["IndexedAttribute3"] !== null) {
+            $this->IndexedAttribute3 = $param["IndexedAttribute3"];
+        }
+
+        if (array_key_exists("IndexedAttribute4",$param) and $param["IndexedAttribute4"] !== null) {
+            $this->IndexedAttribute4 = $param["IndexedAttribute4"];
+        }
+
+        if (array_key_exists("IndexedAttribute5",$param) and $param["IndexedAttribute5"] !== null) {
+            $this->IndexedAttribute5 = $param["IndexedAttribute5"];
         }
     }
 }

@@ -24,18 +24,18 @@ use TencentCloud\Cloudstudio\V20210524\Models as Models;
 
 /**
  * @method Models\CreateCustomizeTemplatesResponse CreateCustomizeTemplates(Models\CreateCustomizeTemplatesRequest $req) 添加自定义模板
- * @method Models\CreateWorkspaceByAgentResponse CreateWorkspaceByAgent(Models\CreateWorkspaceByAgentRequest $req) 云主机方式创建工作空间
- * @method Models\CreateWorkspaceByTemplateResponse CreateWorkspaceByTemplate(Models\CreateWorkspaceByTemplateRequest $req) 快速开始, 基于模版创建工作空间
+ * @method Models\CreateWorkspaceByAgentResponse CreateWorkspaceByAgent(Models\CreateWorkspaceByAgentRequest $req) 云服务器方式创建工作空间
+ * @method Models\CreateWorkspaceByTemplateResponse CreateWorkspaceByTemplate(Models\CreateWorkspaceByTemplateRequest $req) 快速开始, 基于模板创建工作空间
  * @method Models\CreateWorkspaceByVersionControlResponse CreateWorkspaceByVersionControl(Models\CreateWorkspaceByVersionControlRequest $req) 根据模板创建工作空间
  * @method Models\DeleteCustomizeTemplatesByIdResponse DeleteCustomizeTemplatesById(Models\DeleteCustomizeTemplatesByIdRequest $req) 删除自定义模板
- * @method Models\DescribeCustomizeTemplatesResponse DescribeCustomizeTemplates(Models\DescribeCustomizeTemplatesRequest $req) 获取所有模版列表
+ * @method Models\DescribeCustomizeTemplatesResponse DescribeCustomizeTemplates(Models\DescribeCustomizeTemplatesRequest $req) 获取所有模板列表
  * @method Models\DescribeCustomizeTemplatesByIdResponse DescribeCustomizeTemplatesById(Models\DescribeCustomizeTemplatesByIdRequest $req) 获取特定模板信息
  * @method Models\DescribeCustomizeTemplatesPresetsResponse DescribeCustomizeTemplatesPresets(Models\DescribeCustomizeTemplatesPresetsRequest $req) 获取创建模板的预置参数
  * @method Models\DescribeWorkspaceEnvListResponse DescribeWorkspaceEnvList(Models\DescribeWorkspaceEnvListRequest $req) 环境列表接口返回信息
  * @method Models\DescribeWorkspaceNameExistResponse DescribeWorkspaceNameExist(Models\DescribeWorkspaceNameExistRequest $req) 检查工作空间是否存在
  * @method Models\DescribeWorkspaceStatusResponse DescribeWorkspaceStatus(Models\DescribeWorkspaceStatusRequest $req) 获取工作空间元信息
  * @method Models\DescribeWorkspaceStatusListResponse DescribeWorkspaceStatusList(Models\DescribeWorkspaceStatusListRequest $req) 获取用户工作空间列表
- * @method Models\ModifyCustomizeTemplateVersionControlResponse ModifyCustomizeTemplateVersionControl(Models\ModifyCustomizeTemplateVersionControlRequest $req) 修改模版默认代码仓库
+ * @method Models\ModifyCustomizeTemplateVersionControlResponse ModifyCustomizeTemplateVersionControl(Models\ModifyCustomizeTemplateVersionControlRequest $req) 修改模板默认代码仓库
  * @method Models\ModifyCustomizeTemplatesFullByIdResponse ModifyCustomizeTemplatesFullById(Models\ModifyCustomizeTemplatesFullByIdRequest $req) 全量修改自定义模板，不忽略空
  * @method Models\ModifyCustomizeTemplatesPartByIdResponse ModifyCustomizeTemplatesPartById(Models\ModifyCustomizeTemplatesPartByIdRequest $req) 全量修改自定义模板，忽略空
  * @method Models\ModifyWorkspaceAttributesResponse ModifyWorkspaceAttributes(Models\ModifyWorkspaceAttributesRequest $req) 修改工作空间的名称和描述

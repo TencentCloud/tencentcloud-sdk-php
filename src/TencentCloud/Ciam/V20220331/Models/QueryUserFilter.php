@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPropertyValue(string $PropertyValue) 设置属性value
  * @method boolean getLogic() 获取逻辑值，等于true，不等于false
  * @method void setLogic(boolean $Logic) 设置逻辑值，等于true，不等于false
+ * @method string getOperateLogic() 获取操作逻辑符（支持> < = >= <=  != between）
+ * @method void setOperateLogic(string $OperateLogic) 设置操作逻辑符（支持> < = >= <=  != between）
  */
 class QueryUserFilter extends AbstractModel
 {
@@ -45,9 +47,15 @@ class QueryUserFilter extends AbstractModel
     public $Logic;
 
     /**
+     * @var string 操作逻辑符（支持> < = >= <=  != between）
+     */
+    public $OperateLogic;
+
+    /**
      * @param string $PropertyKey 属性key
      * @param string $PropertyValue 属性value
      * @param boolean $Logic 逻辑值，等于true，不等于false
+     * @param string $OperateLogic 操作逻辑符（支持> < = >= <=  != between）
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class QueryUserFilter extends AbstractModel
 
         if (array_key_exists("Logic",$param) and $param["Logic"] !== null) {
             $this->Logic = $param["Logic"];
+        }
+
+        if (array_key_exists("OperateLogic",$param) and $param["OperateLogic"] !== null) {
+            $this->OperateLogic = $param["OperateLogic"];
         }
     }
 }

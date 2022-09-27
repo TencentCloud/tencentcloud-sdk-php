@@ -46,13 +46,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedDate(integer $CreatedDate) 设置任务创建时间
  * @method string getFormat() 获取任务的数据类型
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(string $Format) 设置任务的数据类型
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,7 +100,6 @@ class Job extends AbstractModel
     /**
      * @var string 任务的数据类型
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,7 +139,6 @@ class Job extends AbstractModel
      * @param integer $CreatedDate 任务创建时间
      * @param string $Format 任务的数据类型
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
 注意：此字段可能返回 null，表示取不到有效值。

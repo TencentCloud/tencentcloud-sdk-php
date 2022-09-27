@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageId(integer $ImageId) 设置镜像id
  * @method string getImageName() 获取镜像名称
  * @method void setImageName(string $ImageName) 设置镜像名称
- * @method string getRemoteUser() 获取云主机登录名称
- * @method void setRemoteUser(string $RemoteUser) 设置云主机登录名称
- * @method string getRemoteHost() 获取云主机登录地址
- * @method void setRemoteHost(string $RemoteHost) 设置云主机登录地址
- * @method string getRemotePort() 获取云主机登录端口
- * @method void setRemotePort(string $RemotePort) 设置云主机登录端口
+ * @method string getRemoteUser() 获取云服务器登录名称
+ * @method void setRemoteUser(string $RemoteUser) 设置云服务器登录名称
+ * @method string getRemoteHost() 获取云服务器登录地址
+ * @method void setRemoteHost(string $RemoteHost) 设置云服务器登录地址
+ * @method string getRemotePort() 获取云服务器登录端口
+ * @method void setRemotePort(string $RemotePort) 设置云服务器登录端口
  * @method string getWorkspaceType() 获取工作空间类型
  * @method void setWorkspaceType(string $WorkspaceType) 设置工作空间类型
  * @method integer getWorkspaceVersion() 获取工作空间版本
@@ -59,17 +59,17 @@ class AgentSpaceDTO extends AbstractModel
     public $ImageName;
 
     /**
-     * @var string 云主机登录名称
+     * @var string 云服务器登录名称
      */
     public $RemoteUser;
 
     /**
-     * @var string 云主机登录地址
+     * @var string 云服务器登录地址
      */
     public $RemoteHost;
 
     /**
-     * @var string 云主机登录端口
+     * @var string 云服务器登录端口
      */
     public $RemotePort;
 
@@ -97,9 +97,9 @@ class AgentSpaceDTO extends AbstractModel
      * @param string $Name 工作空间名称
      * @param integer $ImageId 镜像id
      * @param string $ImageName 镜像名称
-     * @param string $RemoteUser 云主机登录名称
-     * @param string $RemoteHost 云主机登录地址
-     * @param string $RemotePort 云主机登录端口
+     * @param string $RemoteUser 云服务器登录名称
+     * @param string $RemoteHost 云服务器登录地址
+     * @param string $RemotePort 云服务器登录端口
      * @param string $WorkspaceType 工作空间类型
      * @param integer $WorkspaceVersion 工作空间版本
      * @param WorkspaceResourceDTO $WorkspaceResourceDTO 工作空间资源结构

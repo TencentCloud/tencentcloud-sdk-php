@@ -122,6 +122,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(integer $PayMode) 设置0 后付费,1 预付费
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsNeedManageNode() 获取前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsNeedManageNode(integer $IsNeedManageNode) 设置前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -313,6 +317,12 @@ class Cluster extends AbstractModel
     public $PayMode;
 
     /**
+     * @var integer 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsNeedManageNode;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -363,6 +373,8 @@ class Cluster extends AbstractModel
      * @param float $RunningCu 运行CU
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode 0 后付费,1 预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsNeedManageNode 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -528,6 +540,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("IsNeedManageNode",$param) and $param["IsNeedManageNode"] !== null) {
+            $this->IsNeedManageNode = $param["IsNeedManageNode"];
         }
     }
 }

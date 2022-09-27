@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置查询条件，根据propertycode和propertykey
  * @method boolean getOriginal() 获取是否返回明文
  * @method void setOriginal(boolean $Original) 设置是否返回明文
+ * @method Sort getSort() 获取排序设置
+ * @method void setSort(Sort $Sort) 设置排序设置
  */
 class DescribeUserRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeUserRequest extends AbstractModel
     public $Original;
 
     /**
+     * @var Sort 排序设置
+     */
+    public $Sort;
+
+    /**
      * @param string $UserStoreId 用户目录ID
      * @param Pageable $Pageable 分页数据
      * @param array $Filters 查询条件，根据propertycode和propertykey
      * @param boolean $Original 是否返回明文
+     * @param Sort $Sort 排序设置
      */
     function __construct()
     {
@@ -90,6 +98,11 @@ class DescribeUserRequest extends AbstractModel
 
         if (array_key_exists("Original",$param) and $param["Original"] !== null) {
             $this->Original = $param["Original"];
+        }
+
+        if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
+            $this->Sort = new Sort();
+            $this->Sort->deserialize($param["Sort"]);
         }
     }
 }

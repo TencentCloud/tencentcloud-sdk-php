@@ -30,6 +30,7 @@ use TencentCloud\Common\AbstractModel;
 <li> ContentRecognition: 内容识别</li>
 <li> RemoveWatermark: 去水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
+<li> AddTraceWatermark: 添加水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
  * @method void setTaskType(string $TaskType) 设置任务类型。
 <li> Transcoding: 普通转码</li>
@@ -41,6 +42,7 @@ use TencentCloud\Common\AbstractModel;
 <li> ContentRecognition: 内容识别</li>
 <li> RemoveWatermark: 去水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
+<li> AddTraceWatermark: 添加水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
  * @method array getSummary() 获取任务数统计数据概览，用量单位为秒。
  * @method void setSummary(array $Summary) 设置任务数统计数据概览，用量单位为秒。
@@ -162,6 +164,7 @@ class TaskStatData extends AbstractModel
 <li> ContentRecognition: 内容识别</li>
 <li> RemoveWatermark: 去水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
+<li> AddTraceWatermark: 添加水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      */
     public $TaskType;
@@ -238,6 +241,7 @@ class TaskStatData extends AbstractModel
 <li> ContentRecognition: 内容识别</li>
 <li> RemoveWatermark: 去水印</li>
 <li> ExtractTraceWatermark: 提取水印</li>
+<li> AddTraceWatermark: 添加水印</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
      * @param array $Summary 任务数统计数据概览，用量单位为秒。
      * @param array $Details 不同规格任务统计数据详情。

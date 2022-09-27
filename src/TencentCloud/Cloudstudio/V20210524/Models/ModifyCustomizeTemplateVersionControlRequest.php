@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCloudStudioSessionTeam() 获取用户所属组
  * @method void setCloudStudioSessionTeam(string $CloudStudioSessionTeam) 设置用户所属组
- * @method integer getTemplateId() 获取模版ID
- * @method void setTemplateId(integer $TemplateId) 设置模版ID
+ * @method integer getTemplateId() 获取模板ID
+ * @method void setTemplateId(integer $TemplateId) 设置模板ID
  * @method string getUrl() 获取仓库地址
  * @method void setUrl(string $Url) 设置仓库地址
  * @method string getRef() 获取代码仓库分支/标签
@@ -39,7 +39,7 @@ class ModifyCustomizeTemplateVersionControlRequest extends AbstractModel
     public $CloudStudioSessionTeam;
 
     /**
-     * @var integer 模版ID
+     * @var integer 模板ID
      */
     public $TemplateId;
 
@@ -60,7 +60,7 @@ class ModifyCustomizeTemplateVersionControlRequest extends AbstractModel
 
     /**
      * @param string $CloudStudioSessionTeam 用户所属组
-     * @param integer $TemplateId 模版ID
+     * @param integer $TemplateId 模板ID
      * @param string $Url 仓库地址
      * @param string $Ref 代码仓库分支/标签
      * @param string $RefType 代码仓库 ref 类型

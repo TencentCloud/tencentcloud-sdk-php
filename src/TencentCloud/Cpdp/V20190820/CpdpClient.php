@@ -149,6 +149,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryDownloadBillURLResponse QueryDownloadBillURL(Models\QueryDownloadBillURLRequest $req) 云鉴-查询对账单下载地址的接口
  * @method Models\QueryExceedingInfoResponse QueryExceedingInfo(Models\QueryExceedingInfoRequest $req) 灵云-查询超额信息
  * @method Models\QueryExchangeRateResponse QueryExchangeRate(Models\QueryExchangeRateRequest $req) 跨境-查询汇率
+ * @method Models\QueryFinancialDataUrlResponse QueryFinancialDataUrl(Models\QueryFinancialDataUrlRequest $req) 财税-查询金融数据文件下载链接
  * @method Models\QueryFlexAmountBeforeTaxResponse QueryFlexAmountBeforeTax(Models\QueryFlexAmountBeforeTaxRequest $req) 灵云V2-查询税前金额
  * @method Models\QueryFlexBillDownloadUrlResponse QueryFlexBillDownloadUrl(Models\QueryFlexBillDownloadUrlRequest $req) 灵云V2-查询对账单文件下载链接
  * @method Models\QueryFlexFreezeOrderListResponse QueryFlexFreezeOrderList(Models\QueryFlexFreezeOrderListRequest $req) 灵云V2-查询冻结订单列表

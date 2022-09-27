@@ -24,12 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserStoreId(string $UserStoreId) 设置用户目录ID
  * @method string getFormat() 获取导出的数据类型
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
  * @method void setFormat(string $Format) 设置导出的数据类型
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
  * @method array getFilters() 获取Key可选值为condition、userGroupId
@@ -53,7 +51,6 @@ class CreateFileExportUserJobRequest extends AbstractModel
     /**
      * @var string 导出的数据类型
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
      */
@@ -76,7 +73,6 @@ class CreateFileExportUserJobRequest extends AbstractModel
      * @param string $UserStoreId 用户目录ID
      * @param string $Format 导出的数据类型
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
      * @param array $Filters Key可选值为condition、userGroupId

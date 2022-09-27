@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置过滤条件，按照 topicName 过滤，支持模糊查询
  * @method integer getOffset() 获取偏移量，不填默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
- * @method integer getLimit() 获取返回数量，不填则默认为10，最大值为50
- * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为10，最大值为50
+ * @method integer getLimit() 获取返回数量，不填则默认为20，最大值为50
+ * @method void setLimit(integer $Limit) 设置返回数量，不填则默认为20，最大值为50
  * @method string getAclRuleName() 获取Acl预设策略名称
  * @method void setAclRuleName(string $AclRuleName) 设置Acl预设策略名称
  */
@@ -49,7 +49,7 @@ class DescribeTopicRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量，不填则默认为10，最大值为50
+     * @var integer 返回数量，不填则默认为20，最大值为50
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeTopicRequest extends AbstractModel
      * @param string $InstanceId 实例 ID
      * @param string $SearchWord 过滤条件，按照 topicName 过滤，支持模糊查询
      * @param integer $Offset 偏移量，不填默认为0
-     * @param integer $Limit 返回数量，不填则默认为10，最大值为50
+     * @param integer $Limit 返回数量，不填则默认为20，最大值为50
      * @param string $AclRuleName Acl预设策略名称
      */
     function __construct()

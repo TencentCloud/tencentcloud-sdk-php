@@ -156,6 +156,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLockTime(integer $LockTime) 设置锁定时间点
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexedAttribute1() 获取索引字段1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexedAttribute1(string $IndexedAttribute1) 设置索引字段1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexedAttribute2() 获取索引字段2
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexedAttribute2(string $IndexedAttribute2) 设置索引字段2
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexedAttribute3() 获取索引字段3
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexedAttribute3(string $IndexedAttribute3) 设置索引字段3
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexedAttribute4() 获取索引字段4
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexedAttribute4(string $IndexedAttribute4) 设置索引字段4
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexedAttribute5() 获取索引字段5
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexedAttribute5(string $IndexedAttribute5) 设置索引字段5
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class User extends AbstractModel
 {
@@ -372,6 +392,36 @@ class User extends AbstractModel
     public $LockTime;
 
     /**
+     * @var string 索引字段1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexedAttribute1;
+
+    /**
+     * @var string 索引字段2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexedAttribute2;
+
+    /**
+     * @var string 索引字段3
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexedAttribute3;
+
+    /**
+     * @var string 索引字段4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexedAttribute4;
+
+    /**
+     * @var string 索引字段5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexedAttribute5;
+
+    /**
      * @param string $UserId 用户ID
      * @param string $UserName 用户名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -439,6 +489,16 @@ class User extends AbstractModel
      * @param string $LockType 锁定类型（分为管理员锁定，和登录策略锁定）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LockTime 锁定时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexedAttribute1 索引字段1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexedAttribute2 索引字段2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexedAttribute3 索引字段3
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexedAttribute4 索引字段4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexedAttribute5 索引字段5
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -601,6 +661,26 @@ class User extends AbstractModel
 
         if (array_key_exists("LockTime",$param) and $param["LockTime"] !== null) {
             $this->LockTime = $param["LockTime"];
+        }
+
+        if (array_key_exists("IndexedAttribute1",$param) and $param["IndexedAttribute1"] !== null) {
+            $this->IndexedAttribute1 = $param["IndexedAttribute1"];
+        }
+
+        if (array_key_exists("IndexedAttribute2",$param) and $param["IndexedAttribute2"] !== null) {
+            $this->IndexedAttribute2 = $param["IndexedAttribute2"];
+        }
+
+        if (array_key_exists("IndexedAttribute3",$param) and $param["IndexedAttribute3"] !== null) {
+            $this->IndexedAttribute3 = $param["IndexedAttribute3"];
+        }
+
+        if (array_key_exists("IndexedAttribute4",$param) and $param["IndexedAttribute4"] !== null) {
+            $this->IndexedAttribute4 = $param["IndexedAttribute4"];
+        }
+
+        if (array_key_exists("IndexedAttribute5",$param) and $param["IndexedAttribute5"] !== null) {
+            $this->IndexedAttribute5 = $param["IndexedAttribute5"];
         }
     }
 }

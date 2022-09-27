@@ -66,6 +66,10 @@ FAILED:已失败
  * @method void setPayeeId(string $PayeeId) 设置收款用户ID
  * @method string getOutUserId() 获取外部用户ID
  * @method void setOutUserId(string $OutUserId) 设置外部用户ID
+ * @method string getChannelOrderId() 获取渠道支付订单号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelOrderId(string $ChannelOrderId) 设置渠道支付订单号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PaymentOrderResult extends AbstractModel
 {
@@ -145,6 +149,12 @@ FAILED:已失败
     public $OutUserId;
 
     /**
+     * @var string 渠道支付订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelOrderId;
+
+    /**
      * @param string $IncomeType 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得
@@ -168,6 +178,8 @@ FAILED:已失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayeeId 收款用户ID
      * @param string $OutUserId 外部用户ID
+     * @param string $ChannelOrderId 渠道支付订单号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -232,6 +244,10 @@ FAILED:已失败
 
         if (array_key_exists("OutUserId",$param) and $param["OutUserId"] !== null) {
             $this->OutUserId = $param["OutUserId"];
+        }
+
+        if (array_key_exists("ChannelOrderId",$param) and $param["ChannelOrderId"] !== null) {
+            $this->ChannelOrderId = $param["ChannelOrderId"];
         }
     }
 }

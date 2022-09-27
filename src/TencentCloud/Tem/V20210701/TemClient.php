@@ -25,6 +25,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
 /**
  * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 创建应用
  * @method Models\CreateApplicationAutoscalerResponse CreateApplicationAutoscaler(Models\CreateApplicationAutoscalerRequest $req) 创建弹性伸缩策略组合
+ * @method Models\CreateApplicationServiceResponse CreateApplicationService(Models\CreateApplicationServiceRequest $req) 新增访问方式
  * @method Models\CreateConfigDataResponse CreateConfigData(Models\CreateConfigDataRequest $req) 创建配置
  * @method Models\CreateCosTokenResponse CreateCosToken(Models\CreateCosTokenRequest $req) 生成Cos临时秘钥
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 创建环境
@@ -35,11 +36,13 @@ use TencentCloud\Tem\V20210701\Models as Models;
   - 删除服务相关资源
   - 删除服务
  * @method Models\DeleteApplicationAutoscalerResponse DeleteApplicationAutoscaler(Models\DeleteApplicationAutoscalerRequest $req) 删除应用弹性策略组合
+ * @method Models\DeleteApplicationServiceResponse DeleteApplicationService(Models\DeleteApplicationServiceRequest $req) 删除一条访问方式
  * @method Models\DeleteIngressResponse DeleteIngress(Models\DeleteIngressRequest $req) 删除 Ingress 规则
  * @method Models\DeployApplicationResponse DeployApplication(Models\DeployApplicationRequest $req) 应用部署
  * @method Models\DescribeApplicationAutoscalerListResponse DescribeApplicationAutoscalerList(Models\DescribeApplicationAutoscalerListRequest $req) 获取应用弹性策略组合
  * @method Models\DescribeApplicationInfoResponse DescribeApplicationInfo(Models\DescribeApplicationInfoRequest $req) 服务基本信息查看
  * @method Models\DescribeApplicationPodsResponse DescribeApplicationPods(Models\DescribeApplicationPodsRequest $req) 获取应用实例列表
+ * @method Models\DescribeApplicationServiceListResponse DescribeApplicationServiceList(Models\DescribeApplicationServiceListRequest $req) 查询应用访问方式列表
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 获取运行服务列表
  * @method Models\DescribeApplicationsStatusResponse DescribeApplicationsStatus(Models\DescribeApplicationsStatusRequest $req) 单环境下所有应用状态查看
  * @method Models\DescribeConfigDataResponse DescribeConfigData(Models\DescribeConfigDataRequest $req) 查询配置详情
@@ -62,6 +65,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\ModifyApplicationAutoscalerResponse ModifyApplicationAutoscaler(Models\ModifyApplicationAutoscalerRequest $req) 修改弹性伸缩策略组合
  * @method Models\ModifyApplicationInfoResponse ModifyApplicationInfo(Models\ModifyApplicationInfoRequest $req) 修改应用基本信息
  * @method Models\ModifyApplicationReplicasResponse ModifyApplicationReplicas(Models\ModifyApplicationReplicasRequest $req) 修改应用实例数量
+ * @method Models\ModifyApplicationServiceResponse ModifyApplicationService(Models\ModifyApplicationServiceRequest $req) 修改服务访问方式列表
  * @method Models\ModifyConfigDataResponse ModifyConfigData(Models\ModifyConfigDataRequest $req) 编辑配置
  * @method Models\ModifyEnvironmentResponse ModifyEnvironment(Models\ModifyEnvironmentRequest $req) 编辑环境
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 创建或者更新 Ingress 规则

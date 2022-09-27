@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取云原生API网关实例ID。
  * @method void setGatewayId(string $GatewayId) 设置云原生API网关实例ID。
- * @method integer getOffset() 获取翻页从第几个开始获取
- * @method void setOffset(integer $Offset) 设置翻页从第几个开始获取
+ * @method string getGroupId() 获取实例分组id
+ * @method void setGroupId(string $GroupId) 设置实例分组id
  * @method integer getLimit() 获取翻页获取多少个
  * @method void setLimit(integer $Limit) 设置翻页获取多少个
+ * @method integer getOffset() 获取翻页从第几个开始获取
+ * @method void setOffset(integer $Offset) 设置翻页从第几个开始获取
  */
 class DescribeCloudNativeAPIGatewayNodesRequest extends AbstractModel
 {
@@ -35,9 +37,9 @@ class DescribeCloudNativeAPIGatewayNodesRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var integer 翻页从第几个开始获取
+     * @var string 实例分组id
      */
-    public $Offset;
+    public $GroupId;
 
     /**
      * @var integer 翻页获取多少个
@@ -45,9 +47,15 @@ class DescribeCloudNativeAPIGatewayNodesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer 翻页从第几个开始获取
+     */
+    public $Offset;
+
+    /**
      * @param string $GatewayId 云原生API网关实例ID。
-     * @param integer $Offset 翻页从第几个开始获取
+     * @param string $GroupId 实例分组id
      * @param integer $Limit 翻页获取多少个
+     * @param integer $Offset 翻页从第几个开始获取
      */
     function __construct()
     {
@@ -66,12 +74,16 @@ class DescribeCloudNativeAPIGatewayNodesRequest extends AbstractModel
             $this->GatewayId = $param["GatewayId"];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

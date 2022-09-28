@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAvailableTKEEdgeVersion请求参数结构体
  *
-
+ * @method string getClusterId() 获取填写ClusterId获取当前集群各个组件版本和最新版本
+ * @method void setClusterId(string $ClusterId) 设置填写ClusterId获取当前集群各个组件版本和最新版本
  */
 class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel
 {
-
+    /**
+     * @var string 填写ClusterId获取当前集群各个组件版本和最新版本
+     */
+    public $ClusterId;
 
     /**
-
+     * @param string $ClusterId 填写ClusterId获取当前集群各个组件版本和最新版本
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpgradeMode(string $UpgradeMode) 设置升级方式：<li>scale 蓝绿变更</li><li>restart 滚动重启</li>默认值为scale
  * @method boolean getCosBackup() 获取升级版本前是否对集群进行备份，默认不备份
  * @method void setCosBackup(boolean $CosBackup) 设置升级版本前是否对集群进行备份，默认不备份
+ * @method boolean getSkipCheckForceRestart() 获取滚动模式时，是否跳过检查，进行强制重启。默认值为false
+ * @method void setSkipCheckForceRestart(boolean $SkipCheckForceRestart) 设置滚动模式时，是否跳过检查，进行强制重启。默认值为false
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class UpgradeInstanceRequest extends AbstractModel
     public $CosBackup;
 
     /**
+     * @var boolean 滚动模式时，是否跳过检查，进行强制重启。默认值为false
+     */
+    public $SkipCheckForceRestart;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $EsVersion 目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1"
      * @param boolean $CheckOnly 是否只做升级检查，默认值为false
@@ -80,6 +87,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @param integer $BasicSecurityType 6.8（及以上版本）基础版是否开启xpack security认证<li>1：不开启</li><li>2：开启</li>
      * @param string $UpgradeMode 升级方式：<li>scale 蓝绿变更</li><li>restart 滚动重启</li>默认值为scale
      * @param boolean $CosBackup 升级版本前是否对集群进行备份，默认不备份
+     * @param boolean $SkipCheckForceRestart 滚动模式时，是否跳过检查，进行强制重启。默认值为false
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("CosBackup",$param) and $param["CosBackup"] !== null) {
             $this->CosBackup = $param["CosBackup"];
+        }
+
+        if (array_key_exists("SkipCheckForceRestart",$param) and $param["SkipCheckForceRestart"] !== null) {
+            $this->SkipCheckForceRestart = $param["SkipCheckForceRestart"];
         }
     }
 }

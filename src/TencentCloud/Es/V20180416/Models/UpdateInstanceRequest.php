@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEsConfigSet(EsConfigSetInfo $EsConfigSet) 设置新增或修改的配置组信息
  * @method OperationDurationUpdated getOperationDuration() 获取可维护时间段
  * @method void setOperationDuration(OperationDurationUpdated $OperationDuration) 设置可维护时间段
+ * @method string getKibanaAlteringPublicAccess() 获取是否开启Altering 外网告警输出
+ * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置是否开启Altering 外网告警输出
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -259,6 +261,11 @@ class UpdateInstanceRequest extends AbstractModel
     public $OperationDuration;
 
     /**
+     * @var string 是否开启Altering 外网告警输出
+     */
+    public $KibanaAlteringPublicAccess;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -296,6 +303,7 @@ class UpdateInstanceRequest extends AbstractModel
      * @param string $CerebroPrivateAccess Cerebro内网访问状态
      * @param EsConfigSetInfo $EsConfigSet 新增或修改的配置组信息
      * @param OperationDurationUpdated $OperationDuration 可维护时间段
+     * @param string $KibanaAlteringPublicAccess 是否开启Altering 外网告警输出
      */
     function __construct()
     {
@@ -448,6 +456,10 @@ class UpdateInstanceRequest extends AbstractModel
         if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
             $this->OperationDuration = new OperationDurationUpdated();
             $this->OperationDuration->deserialize($param["OperationDuration"]);
+        }
+
+        if (array_key_exists("KibanaAlteringPublicAccess",$param) and $param["KibanaAlteringPublicAccess"] !== null) {
+            $this->KibanaAlteringPublicAccess = $param["KibanaAlteringPublicAccess"];
         }
     }
 }

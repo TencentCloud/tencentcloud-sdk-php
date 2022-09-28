@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getVersions() 获取版本列表
  * @method void setVersions(array $Versions) 设置版本列表
+ * @method string getEdgeVersionLatest() 获取边缘集群最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEdgeVersionLatest(string $EdgeVersionLatest) 设置边缘集群最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEdgeVersionCurrent() 获取边缘集群当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEdgeVersionCurrent(string $EdgeVersionCurrent) 设置边缘集群当前版本
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +41,28 @@ class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel
     public $Versions;
 
     /**
+     * @var string 边缘集群最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EdgeVersionLatest;
+
+    /**
+     * @var string 边缘集群当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EdgeVersionCurrent;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $Versions 版本列表
+     * @param string $EdgeVersionLatest 边缘集群最新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EdgeVersionCurrent 边缘集群当前版本
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +80,14 @@ class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel
         }
         if (array_key_exists("Versions",$param) and $param["Versions"] !== null) {
             $this->Versions = $param["Versions"];
+        }
+
+        if (array_key_exists("EdgeVersionLatest",$param) and $param["EdgeVersionLatest"] !== null) {
+            $this->EdgeVersionLatest = $param["EdgeVersionLatest"];
+        }
+
+        if (array_key_exists("EdgeVersionCurrent",$param) and $param["EdgeVersionCurrent"] !== null) {
+            $this->EdgeVersionCurrent = $param["EdgeVersionCurrent"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

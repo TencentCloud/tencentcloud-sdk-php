@@ -46,6 +46,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObtainNote(string $ObtainNote) 设置1
  * @method string getWorkTitle() 获取1
  * @method void setWorkTitle(string $WorkTitle) 设置1
+ * @method string getTortSite() 获取1
+ * @method void setTortSite(string $TortSite) 设置1
+ * @method string getICP() 获取1
+ * @method void setICP(string $ICP) 设置1
+ * @method string getRightNote() 获取1
+ * @method void setRightNote(string $RightNote) 设置1
+ * @method integer getObtainType() 获取1
+ * @method void setObtainType(integer $ObtainType) 设置1
+ * @method string getBlockNote() 获取1
+ * @method void setBlockNote(string $BlockNote) 设置1
+ * @method integer getWorkId() 获取1
+ * @method void setWorkId(integer $WorkId) 设置1
+ * @method string getWorkName() 获取1
+ * @method void setWorkName(string $WorkName) 设置1
+ * @method integer getAuthStatus() 获取1
+ * @method void setAuthStatus(integer $AuthStatus) 设置1
+ * @method integer getCommStatus() 获取1
+ * @method void setCommStatus(integer $CommStatus) 设置1
+ * @method integer getEvidenceStatus() 获取1
+ * @method void setEvidenceStatus(integer $EvidenceStatus) 设置1
+ * @method integer getIsProducer() 获取1
+ * @method void setIsProducer(integer $IsProducer) 设置1
+ * @method integer getIsOverseas() 获取1
+ * @method void setIsOverseas(integer $IsOverseas) 设置1
  */
 class MonitorTort extends AbstractModel
 {
@@ -115,6 +139,66 @@ class MonitorTort extends AbstractModel
     public $WorkTitle;
 
     /**
+     * @var string 1
+     */
+    public $TortSite;
+
+    /**
+     * @var string 1
+     */
+    public $ICP;
+
+    /**
+     * @var string 1
+     */
+    public $RightNote;
+
+    /**
+     * @var integer 1
+     */
+    public $ObtainType;
+
+    /**
+     * @var string 1
+     */
+    public $BlockNote;
+
+    /**
+     * @var integer 1
+     */
+    public $WorkId;
+
+    /**
+     * @var string 1
+     */
+    public $WorkName;
+
+    /**
+     * @var integer 1
+     */
+    public $AuthStatus;
+
+    /**
+     * @var integer 1
+     */
+    public $CommStatus;
+
+    /**
+     * @var integer 1
+     */
+    public $EvidenceStatus;
+
+    /**
+     * @var integer 1
+     */
+    public $IsProducer;
+
+    /**
+     * @var integer 1
+     */
+    public $IsOverseas;
+
+    /**
      * @param integer $TortId 侵权信息ID
      * @param string $TortTitle 侵权标题
      * @param string $TortPlat 侵权平台
@@ -128,6 +212,18 @@ class MonitorTort extends AbstractModel
      * @param string $TortNum 1
      * @param string $ObtainNote 1
      * @param string $WorkTitle 1
+     * @param string $TortSite 1
+     * @param string $ICP 1
+     * @param string $RightNote 1
+     * @param integer $ObtainType 1
+     * @param string $BlockNote 1
+     * @param integer $WorkId 1
+     * @param string $WorkName 1
+     * @param integer $AuthStatus 1
+     * @param integer $CommStatus 1
+     * @param integer $EvidenceStatus 1
+     * @param integer $IsProducer 1
+     * @param integer $IsOverseas 1
      */
     function __construct()
     {
@@ -192,6 +288,54 @@ class MonitorTort extends AbstractModel
 
         if (array_key_exists("WorkTitle",$param) and $param["WorkTitle"] !== null) {
             $this->WorkTitle = $param["WorkTitle"];
+        }
+
+        if (array_key_exists("TortSite",$param) and $param["TortSite"] !== null) {
+            $this->TortSite = $param["TortSite"];
+        }
+
+        if (array_key_exists("ICP",$param) and $param["ICP"] !== null) {
+            $this->ICP = $param["ICP"];
+        }
+
+        if (array_key_exists("RightNote",$param) and $param["RightNote"] !== null) {
+            $this->RightNote = $param["RightNote"];
+        }
+
+        if (array_key_exists("ObtainType",$param) and $param["ObtainType"] !== null) {
+            $this->ObtainType = $param["ObtainType"];
+        }
+
+        if (array_key_exists("BlockNote",$param) and $param["BlockNote"] !== null) {
+            $this->BlockNote = $param["BlockNote"];
+        }
+
+        if (array_key_exists("WorkId",$param) and $param["WorkId"] !== null) {
+            $this->WorkId = $param["WorkId"];
+        }
+
+        if (array_key_exists("WorkName",$param) and $param["WorkName"] !== null) {
+            $this->WorkName = $param["WorkName"];
+        }
+
+        if (array_key_exists("AuthStatus",$param) and $param["AuthStatus"] !== null) {
+            $this->AuthStatus = $param["AuthStatus"];
+        }
+
+        if (array_key_exists("CommStatus",$param) and $param["CommStatus"] !== null) {
+            $this->CommStatus = $param["CommStatus"];
+        }
+
+        if (array_key_exists("EvidenceStatus",$param) and $param["EvidenceStatus"] !== null) {
+            $this->EvidenceStatus = $param["EvidenceStatus"];
+        }
+
+        if (array_key_exists("IsProducer",$param) and $param["IsProducer"] !== null) {
+            $this->IsProducer = $param["IsProducer"];
+        }
+
+        if (array_key_exists("IsOverseas",$param) and $param["IsOverseas"] !== null) {
+            $this->IsOverseas = $param["IsOverseas"];
         }
     }
 }

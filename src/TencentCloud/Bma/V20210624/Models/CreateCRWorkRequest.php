@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) 设置文件内容
  * @method string getMonitorEndTime() 获取监测结束时间
  * @method void setMonitorEndTime(string $MonitorEndTime) 设置监测结束时间
+ * @method string getApplierId() 获取申请人ID
+ * @method void setApplierId(string $ApplierId) 设置申请人ID
+ * @method string getApplierName() 获取申请人姓名
+ * @method void setApplierName(string $ApplierName) 设置申请人姓名
  */
 class CreateCRWorkRequest extends AbstractModel
 {
@@ -227,6 +231,16 @@ class CreateCRWorkRequest extends AbstractModel
     public $MonitorEndTime;
 
     /**
+     * @var string 申请人ID
+     */
+    public $ApplierId;
+
+    /**
+     * @var string 申请人姓名
+     */
+    public $ApplierName;
+
+    /**
      * @param string $WorkName 作品名称
      * @param string $WorkCategory 作品分类
      * @param string $WorkType 作品内容类型
@@ -256,6 +270,8 @@ class CreateCRWorkRequest extends AbstractModel
      * @param string $ContentType 内容格式
      * @param string $Content 文件内容
      * @param string $MonitorEndTime 监测结束时间
+     * @param string $ApplierId 申请人ID
+     * @param string $ApplierName 申请人姓名
      */
     function __construct()
     {
@@ -384,6 +400,14 @@ class CreateCRWorkRequest extends AbstractModel
 
         if (array_key_exists("MonitorEndTime",$param) and $param["MonitorEndTime"] !== null) {
             $this->MonitorEndTime = $param["MonitorEndTime"];
+        }
+
+        if (array_key_exists("ApplierId",$param) and $param["ApplierId"] !== null) {
+            $this->ApplierId = $param["ApplierId"];
+        }
+
+        if (array_key_exists("ApplierName",$param) and $param["ApplierName"] !== null) {
+            $this->ApplierName = $param["ApplierName"];
         }
     }
 }

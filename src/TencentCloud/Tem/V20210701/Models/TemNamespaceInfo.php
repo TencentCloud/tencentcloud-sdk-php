@@ -56,6 +56,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableTswTraceService(boolean $EnableTswTraceService) 设置是否开启tsw
  * @method integer getLocked() 获取环境锁，1为上锁，0则为上锁
  * @method void setLocked(integer $Locked) 设置环境锁，1为上锁，0则为上锁
+ * @method string getAppId() 获取用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(string $AppId) 设置用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUin() 获取用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUin(string $Uin) 设置用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubAccountUin() 获取用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubAccountUin(string $SubAccountUin) 设置用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterId() 获取集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterId(string $ClusterId) 设置集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemNamespaceInfo extends AbstractModel
 {
@@ -146,6 +166,36 @@ class TemNamespaceInfo extends AbstractModel
     public $Locked;
 
     /**
+     * @var string 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
+     * @var string 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uin;
+
+    /**
+     * @var string 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubAccountUin;
+
+    /**
+     * @var string 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterId;
+
+    /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvironmentId 环境id
      * @param string $Channel 渠道
      * @param string $EnvironmentName 环境名称
@@ -164,6 +214,16 @@ class TemNamespaceInfo extends AbstractModel
      * @param string $ClusterStatus 环境集群 status
      * @param boolean $EnableTswTraceService 是否开启tsw
      * @param integer $Locked 环境锁，1为上锁，0则为上锁
+     * @param string $AppId 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uin 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubAccountUin 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterId 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -244,6 +304,31 @@ class TemNamespaceInfo extends AbstractModel
 
         if (array_key_exists("Locked",$param) and $param["Locked"] !== null) {
             $this->Locked = $param["Locked"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

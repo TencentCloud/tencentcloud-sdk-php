@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHomeValidEndDate(string $HomeValidEndDate) 设置x
  * @method string getIsProducer() 获取x
  * @method void setIsProducer(string $IsProducer) 设置x
+ * @method string getEvidenceFileUrl() 获取x
+ * @method void setEvidenceFileUrl(string $EvidenceFileUrl) 设置x
+ * @method string getEvidenceValidStartDate() 获取x
+ * @method void setEvidenceValidStartDate(string $EvidenceValidStartDate) 设置x
+ * @method string getEvidenceValidEndDate() 获取x
+ * @method void setEvidenceValidEndDate(string $EvidenceValidEndDate) 设置x
  */
 class CreateCRRightRequest extends AbstractModel
 {
@@ -129,6 +135,21 @@ class CreateCRRightRequest extends AbstractModel
     public $IsProducer;
 
     /**
+     * @var string x
+     */
+    public $EvidenceFileUrl;
+
+    /**
+     * @var string x
+     */
+    public $EvidenceValidStartDate;
+
+    /**
+     * @var string x
+     */
+    public $EvidenceValidEndDate;
+
+    /**
      * @param integer $WorkId 已存证的作品ID
      * @param string $TortUrl 侵权链接
      * @param string $TortTitle 侵权标题
@@ -144,6 +165,9 @@ class CreateCRRightRequest extends AbstractModel
      * @param string $HomeValidStartDate x
      * @param string $HomeValidEndDate x
      * @param string $IsProducer x
+     * @param string $EvidenceFileUrl x
+     * @param string $EvidenceValidStartDate x
+     * @param string $EvidenceValidEndDate x
      */
     function __construct()
     {
@@ -216,6 +240,18 @@ class CreateCRRightRequest extends AbstractModel
 
         if (array_key_exists("IsProducer",$param) and $param["IsProducer"] !== null) {
             $this->IsProducer = $param["IsProducer"];
+        }
+
+        if (array_key_exists("EvidenceFileUrl",$param) and $param["EvidenceFileUrl"] !== null) {
+            $this->EvidenceFileUrl = $param["EvidenceFileUrl"];
+        }
+
+        if (array_key_exists("EvidenceValidStartDate",$param) and $param["EvidenceValidStartDate"] !== null) {
+            $this->EvidenceValidStartDate = $param["EvidenceValidStartDate"];
+        }
+
+        if (array_key_exists("EvidenceValidEndDate",$param) and $param["EvidenceValidEndDate"] !== null) {
+            $this->EvidenceValidEndDate = $param["EvidenceValidEndDate"];
         }
     }
 }

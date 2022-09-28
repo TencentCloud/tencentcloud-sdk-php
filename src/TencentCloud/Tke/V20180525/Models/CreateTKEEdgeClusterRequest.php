@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置集群是否支持自动升配
  * @method string getChargeType() 获取集群计费方式
  * @method void setChargeType(string $ChargeType) 设置集群计费方式
+ * @method string getEdgeVersion() 获取边缘集群版本，此版本区别于k8s版本，是整个集群各组件版本集合
+ * @method void setEdgeVersion(string $EdgeVersion) 设置边缘集群版本，此版本区别于k8s版本，是整个集群各组件版本集合
+ * @method string getRegistryPrefix() 获取边缘组件镜像仓库前缀
+ * @method void setRegistryPrefix(string $RegistryPrefix) 设置边缘组件镜像仓库前缀
  */
 class CreateTKEEdgeClusterRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
     public $ChargeType;
 
     /**
+     * @var string 边缘集群版本，此版本区别于k8s版本，是整个集群各组件版本集合
+     */
+    public $EdgeVersion;
+
+    /**
+     * @var string 边缘组件镜像仓库前缀
+     */
+    public $RegistryPrefix;
+
+    /**
      * @param string $K8SVersion k8s版本号
      * @param string $VpcId vpc 的Id
      * @param string $ClusterName 集群名称
@@ -120,6 +134,8 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
      * @param string $ClusterLevel 集群的级别
      * @param boolean $AutoUpgradeClusterLevel 集群是否支持自动升配
      * @param string $ChargeType 集群计费方式
+     * @param string $EdgeVersion 边缘集群版本，此版本区别于k8s版本，是整个集群各组件版本集合
+     * @param string $RegistryPrefix 边缘组件镜像仓库前缀
      */
     function __construct()
     {
@@ -182,6 +198,14 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
 
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("EdgeVersion",$param) and $param["EdgeVersion"] !== null) {
+            $this->EdgeVersion = $param["EdgeVersion"];
+        }
+
+        if (array_key_exists("RegistryPrefix",$param) and $param["RegistryPrefix"] !== null) {
+            $this->RegistryPrefix = $param["RegistryPrefix"];
         }
     }
 }

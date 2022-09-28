@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 刷新预热附带的头部信息
+ * 站点归属权校验——文件校验信息。
  *
- * @method string getName() 获取HTTP头部名称。
- * @method void setName(string $Name) 设置HTTP头部名称。
- * @method string getValue() 获取HTTP头部值。
- * @method void setValue(string $Value) 设置HTTP头部值。
+ * @method string getIdentifyPath() 获取文件校验目录。
+ * @method void setIdentifyPath(string $IdentifyPath) 设置文件校验目录。
+ * @method string getIdentifyContent() 获取文件校验内容。
+ * @method void setIdentifyContent(string $IdentifyContent) 设置文件校验内容。
  */
-class Header extends AbstractModel
+class FileAscriptionInfo extends AbstractModel
 {
     /**
-     * @var string HTTP头部名称。
+     * @var string 文件校验目录。
      */
-    public $Name;
+    public $IdentifyPath;
 
     /**
-     * @var string HTTP头部值。
+     * @var string 文件校验内容。
      */
-    public $Value;
+    public $IdentifyContent;
 
     /**
-     * @param string $Name HTTP头部名称。
-     * @param string $Value HTTP头部值。
+     * @param string $IdentifyPath 文件校验目录。
+     * @param string $IdentifyContent 文件校验内容。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Header extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("IdentifyPath",$param) and $param["IdentifyPath"] !== null) {
+            $this->IdentifyPath = $param["IdentifyPath"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("IdentifyContent",$param) and $param["IdentifyContent"] !== null) {
+            $this->IdentifyContent = $param["IdentifyContent"];
         }
     }
 }

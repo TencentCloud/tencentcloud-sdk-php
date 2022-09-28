@@ -18,31 +18,23 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 例外规则的配置，包含生效的条件，生效的范围
+ * 例外规则的配置，包含生效的条件，生效的范围。
  *
- * @method string getRuleName() 获取规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleName(string $RuleName) 设置规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleName() 获取规则名称，不可使用中文。
+ * @method void setRuleName(string $RuleName) 设置规则名称，不可使用中文。
  * @method string getAction() 获取规则的处置方式，当前仅支持skip：跳过全部托管规则。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(string $Action) 设置规则的处置方式，当前仅支持skip：跳过全部托管规则。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleStatus() 获取规则生效状态，取值有：
 <li>on：生效；</li>
 <li>off：失效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleStatus(string $RuleStatus) 设置规则生效状态，取值有：
 <li>on：生效；</li>
 <li>off：失效。</li>
+ * @method integer getRuleID() 获取规则ID。仅出参使用。默认由底层生成。
+ * @method void setRuleID(integer $RuleID) 设置规则ID。仅出参使用。默认由底层生成。
+ * @method string getUpdateTime() 获取更新时间，如果为null，默认由底层按当前时间生成。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRuleID() 获取规则ID。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRuleID(integer $RuleID) 设置规则ID。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间。仅出参使用
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间。仅出参使用
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间，如果为null，默认由底层按当前时间生成。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExceptUserRuleConditions() 获取匹配条件。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,22 +44,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExceptUserRuleScope(ExceptUserRuleScope $ExceptUserRuleScope) 设置规则生效的范围。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRulePriority() 获取优先级，取值范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRulePriority(integer $RulePriority) 设置优先级，取值范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRulePriority() 获取优先级，取值范围0-100。如果为null，默认由底层设置为0。
+ * @method void setRulePriority(integer $RulePriority) 设置优先级，取值范围0-100。如果为null，默认由底层设置为0。
  */
 class ExceptUserRule extends AbstractModel
 {
     /**
-     * @var string 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 规则名称，不可使用中文。
      */
     public $RuleName;
 
     /**
      * @var string 规则的处置方式，当前仅支持skip：跳过全部托管规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
@@ -75,18 +63,16 @@ class ExceptUserRule extends AbstractModel
      * @var string 规则生效状态，取值有：
 <li>on：生效；</li>
 <li>off：失效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleStatus;
 
     /**
-     * @var integer 规则ID。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 规则ID。仅出参使用。默认由底层生成。
      */
     public $RuleID;
 
     /**
-     * @var string 更新时间。仅出参使用
+     * @var string 更新时间，如果为null，默认由底层按当前时间生成。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
@@ -104,30 +90,24 @@ class ExceptUserRule extends AbstractModel
     public $ExceptUserRuleScope;
 
     /**
-     * @var integer 优先级，取值范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 优先级，取值范围0-100。如果为null，默认由底层设置为0。
      */
     public $RulePriority;
 
     /**
-     * @param string $RuleName 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleName 规则名称，不可使用中文。
      * @param string $Action 规则的处置方式，当前仅支持skip：跳过全部托管规则。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleStatus 规则生效状态，取值有：
 <li>on：生效；</li>
 <li>off：失效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RuleID 规则ID。仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间。仅出参使用
+     * @param integer $RuleID 规则ID。仅出参使用。默认由底层生成。
+     * @param string $UpdateTime 更新时间，如果为null，默认由底层按当前时间生成。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExceptUserRuleConditions 匹配条件。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExceptUserRuleScope $ExceptUserRuleScope 规则生效的范围。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RulePriority 优先级，取值范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RulePriority 优先级，取值范围0-100。如果为null，默认由底层设置为0。
      */
     function __construct()
     {

@@ -38,6 +38,16 @@ use TencentCloud\Common\AbstractModel;
 取值范围60-86400，单位：秒，不填写使用默认值：600。
  * @method void setTTL(integer $TTL) 设置当Type=dns_only时，指解析记录在DNS服务器缓存的生存时间。
 取值范围60-86400，单位：秒，不填写使用默认值：600。
+ * @method string getOriginType() 获取回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置（仅当Type=proxied时可以使用）。</li>不填写表示使用主备回源。
+ * @method void setOriginType(string $OriginType) 设置回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置（仅当Type=proxied时可以使用）。</li>不填写表示使用主备回源。
+ * @method array getAdvancedOriginGroups() 获取高级回源配置，当OriginType=advanced时有效。
+不填写表示不使用高级回源配置。
+ * @method void setAdvancedOriginGroups(array $AdvancedOriginGroups) 设置高级回源配置，当OriginType=advanced时有效。
+不填写表示不使用高级回源配置。
  */
 class ModifyLoadBalancingRequest extends AbstractModel
 {
@@ -75,6 +85,19 @@ class ModifyLoadBalancingRequest extends AbstractModel
     public $TTL;
 
     /**
+     * @var string 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置（仅当Type=proxied时可以使用）。</li>不填写表示使用主备回源。
+     */
+    public $OriginType;
+
+    /**
+     * @var array 高级回源配置，当OriginType=advanced时有效。
+不填写表示不使用高级回源配置。
+     */
+    public $AdvancedOriginGroups;
+
+    /**
      * @param string $ZoneId 站点ID。
      * @param string $LoadBalancingId 负载均衡ID。
      * @param string $Type 代理模式，取值有：
@@ -84,6 +107,11 @@ class ModifyLoadBalancingRequest extends AbstractModel
      * @param string $BackupOriginGroupId 备用源站源站组ID，当Type=proxied时可以填写，为空表示不使用备用源站。
      * @param integer $TTL 当Type=dns_only时，指解析记录在DNS服务器缓存的生存时间。
 取值范围60-86400，单位：秒，不填写使用默认值：600。
+     * @param string $OriginType 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置（仅当Type=proxied时可以使用）。</li>不填写表示使用主备回源。
+     * @param array $AdvancedOriginGroups 高级回源配置，当OriginType=advanced时有效。
+不填写表示不使用高级回源配置。
      */
     function __construct()
     {
@@ -120,6 +148,19 @@ class ModifyLoadBalancingRequest extends AbstractModel
 
         if (array_key_exists("TTL",$param) and $param["TTL"] !== null) {
             $this->TTL = $param["TTL"];
+        }
+
+        if (array_key_exists("OriginType",$param) and $param["OriginType"] !== null) {
+            $this->OriginType = $param["OriginType"];
+        }
+
+        if (array_key_exists("AdvancedOriginGroups",$param) and $param["AdvancedOriginGroups"] !== null) {
+            $this->AdvancedOriginGroups = [];
+            foreach ($param["AdvancedOriginGroups"] as $key => $value){
+                $obj = new AdvancedOriginGroup();
+                $obj->deserialize($value);
+                array_push($this->AdvancedOriginGroups, $obj);
+            }
         }
     }
 }

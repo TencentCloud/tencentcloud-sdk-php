@@ -18,7 +18,7 @@ namespace TencentCloud\Cloudstudio\V20210524\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 云主机创建工作空间DTO
+ * 云服务器创建工作空间 DTO
  *
  * @method string getName() 获取工作空间名称
  * @method void setName(string $Name) 设置工作空间名称

@@ -18,35 +18,35 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 域名证书配置
+ * 例外规则的详细模块配置。
  *
- * @method string getHost() 获取域名。
+ * @method string getModule() 获取模块名称，取值为：
+<li>waf：托管规则。</li>
+ * @method void setModule(string $Module) 设置模块名称，取值为：
+<li>waf：托管规则。</li>
+ * @method array getInclude() 获取模块下的需要例外的具体规则ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHost(string $Host) 设置域名。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method HostCertInfo getHostCertInfo() 获取服务端证书配置。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHostCertInfo(HostCertInfo $HostCertInfo) 设置服务端证书配置。
+ * @method void setInclude(array $Include) 设置模块下的需要例外的具体规则ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class HostsCertificate extends AbstractModel
+class PartialModule extends AbstractModel
 {
     /**
-     * @var string 域名。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 模块名称，取值为：
+<li>waf：托管规则。</li>
      */
-    public $Host;
+    public $Module;
 
     /**
-     * @var HostCertInfo 服务端证书配置。
+     * @var array 模块下的需要例外的具体规则ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $HostCertInfo;
+    public $Include;
 
     /**
-     * @param string $Host 域名。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostCertInfo $HostCertInfo 服务端证书配置。
+     * @param string $Module 模块名称，取值为：
+<li>waf：托管规则。</li>
+     * @param array $Include 模块下的需要例外的具体规则ID列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,13 +62,12 @@ class HostsCertificate extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
-            $this->Host = $param["Host"];
+        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
+            $this->Module = $param["Module"];
         }
 
-        if (array_key_exists("HostCertInfo",$param) and $param["HostCertInfo"] !== null) {
-            $this->HostCertInfo = new HostCertInfo();
-            $this->HostCertInfo->deserialize($param["HostCertInfo"]);
+        if (array_key_exists("Include",$param) and $param["Include"] !== null) {
+            $this->Include = $param["Include"];
         }
     }
 }

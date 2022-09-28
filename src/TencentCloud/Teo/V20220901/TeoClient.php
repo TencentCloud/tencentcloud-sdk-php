@@ -74,7 +74,6 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DescribeDnsDataResponse DescribeDnsData(Models\DescribeDnsDataRequest $req) 获取DNS请求数统计曲线
  * @method Models\DescribeDnsRecordsResponse DescribeDnsRecords(Models\DescribeDnsRecordsRequest $req) 查询 DNS 记录列表，支持搜索、分页、排序、过滤。
  * @method Models\DescribeDnssecResponse DescribeDnssec(Models\DescribeDnssecRequest $req) 用于查询 DNSSEC 相关信息
- * @method Models\DescribeHostCertificatesResponse DescribeHostCertificates(Models\DescribeHostCertificatesRequest $req) 查询域名证书列表，支持搜索、分页、排序、过滤。
  * @method Models\DescribeHostsSettingResponse DescribeHostsSetting(Models\DescribeHostsSettingRequest $req) 用于查询域名配置信息
  * @method Models\DescribeIdentificationsResponse DescribeIdentifications(Models\DescribeIdentificationsRequest $req) 查询站点的验证信息。
  * @method Models\DescribeLoadBalancingResponse DescribeLoadBalancing(Models\DescribeLoadBalancingRequest $req) 获取负载均衡列表

@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginRecords(array $OriginRecords) 设置源站记录信息。
  * @method string getUpdateTime() 获取源站组更新时间。
  * @method void setUpdateTime(string $UpdateTime) 设置源站组更新时间。
+ * @method string getHostHeader() 获取当OriginType=self时，表示回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostHeader(string $HostHeader) 设置当OriginType=self时，表示回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OriginGroup extends AbstractModel
 {
@@ -98,6 +102,12 @@ class OriginGroup extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 当OriginType=self时，表示回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostHeader;
+
+    /**
      * @param string $ZoneId 站点ID。
      * @param string $ZoneName 站点名称。
      * @param string $OriginGroupId 源站组ID。
@@ -112,6 +122,8 @@ class OriginGroup extends AbstractModel
 <li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
      * @param array $OriginRecords 源站记录信息。
      * @param string $UpdateTime 源站组更新时间。
+     * @param string $HostHeader 当OriginType=self时，表示回源Host。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -161,6 +173,10 @@ class OriginGroup extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("HostHeader",$param) and $param["HostHeader"] !== null) {
+            $this->HostHeader = $param["HostHeader"];
         }
     }
 }

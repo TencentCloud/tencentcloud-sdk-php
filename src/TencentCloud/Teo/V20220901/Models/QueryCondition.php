@@ -27,19 +27,19 @@ use TencentCloud\Common\AbstractModel;
 <li>notEquals: 不等于；</li>
 <li>include: 包含；</li>
 <li>notInclude: 不包含; </li>
-<li>startWith: 开始于；</li>
-<li>notStartWith: 不开始于；</li>
-<li>endWith: 结尾是；</li>
-<li>notEndWith: 不结尾是。</li>
+<li>startWith: 开始的值是value；</li>
+<li>notStartWith: 不以value的值开始；</li>
+<li>endWith: 结尾是value值；</li>
+<li>notEndWith: 不以value的值结尾。</li>
  * @method void setOperator(string $Operator) 设置查询条件操作符，操作类型有：
 <li>equals: 等于；</li>
 <li>notEquals: 不等于；</li>
 <li>include: 包含；</li>
 <li>notInclude: 不包含; </li>
-<li>startWith: 开始于；</li>
-<li>notStartWith: 不开始于；</li>
-<li>endWith: 结尾是；</li>
-<li>notEndWith: 不结尾是。</li>
+<li>startWith: 开始的值是value；</li>
+<li>notStartWith: 不以value的值开始；</li>
+<li>endWith: 结尾是value值；</li>
+<li>notEndWith: 不以value的值结尾。</li>
  * @method array getValue() 获取筛选条件的值。
  * @method void setValue(array $Value) 设置筛选条件的值。
  */
@@ -56,10 +56,10 @@ class QueryCondition extends AbstractModel
 <li>notEquals: 不等于；</li>
 <li>include: 包含；</li>
 <li>notInclude: 不包含; </li>
-<li>startWith: 开始于；</li>
-<li>notStartWith: 不开始于；</li>
-<li>endWith: 结尾是；</li>
-<li>notEndWith: 不结尾是。</li>
+<li>startWith: 开始的值是value；</li>
+<li>notStartWith: 不以value的值开始；</li>
+<li>endWith: 结尾是value值；</li>
+<li>notEndWith: 不以value的值结尾。</li>
      */
     public $Operator;
 
@@ -75,10 +75,10 @@ class QueryCondition extends AbstractModel
 <li>notEquals: 不等于；</li>
 <li>include: 包含；</li>
 <li>notInclude: 不包含; </li>
-<li>startWith: 开始于；</li>
-<li>notStartWith: 不开始于；</li>
-<li>endWith: 结尾是；</li>
-<li>notEndWith: 不结尾是。</li>
+<li>startWith: 开始的值是value；</li>
+<li>notStartWith: 不以value的值开始；</li>
+<li>endWith: 结尾是value值；</li>
+<li>notEndWith: 不以value的值结尾。</li>
      * @param array $Value 筛选条件的值。
      */
     function __construct()

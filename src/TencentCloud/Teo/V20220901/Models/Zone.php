@@ -46,16 +46,16 @@ use TencentCloud\Common\AbstractModel;
 <li> partial：CNAME 接入。</li>
  * @method boolean getPaused() 获取站点是否关闭。
  * @method void setPaused(boolean $Paused) 设置站点是否关闭。
- * @method string getCnameSpeedUp() 获取是否开启cname加速，取值有：
+ * @method string getCnameSpeedUp() 获取是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>
 <li> disabled：关闭。</li>
- * @method void setCnameSpeedUp(string $CnameSpeedUp) 设置是否开启cname加速，取值有：
+ * @method void setCnameSpeedUp(string $CnameSpeedUp) 设置是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>
 <li> disabled：关闭。</li>
- * @method string getCnameStatus() 获取cname 接入状态，取值有：
+ * @method string getCnameStatus() 获取CNAME 接入状态，取值有：
 <li> finished：站点已验证；</li>
 <li> pending：站点验证中。</li>
- * @method void setCnameStatus(string $CnameStatus) 设置cname 接入状态，取值有：
+ * @method void setCnameStatus(string $CnameStatus) 设置CNAME 接入状态，取值有：
 <li> finished：站点已验证；</li>
 <li> pending：站点验证中。</li>
  * @method array getTags() 获取资源标签列表。
@@ -127,14 +127,14 @@ class Zone extends AbstractModel
     public $Paused;
 
     /**
-     * @var string 是否开启cname加速，取值有：
+     * @var string 是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>
 <li> disabled：关闭。</li>
      */
     public $CnameSpeedUp;
 
     /**
-     * @var string cname 接入状态，取值有：
+     * @var string CNAME 接入状态，取值有：
 <li> finished：站点已验证；</li>
 <li> pending：站点验证中。</li>
      */
@@ -194,10 +194,10 @@ class Zone extends AbstractModel
 <li> full：NS 接入； </li>
 <li> partial：CNAME 接入。</li>
      * @param boolean $Paused 站点是否关闭。
-     * @param string $CnameSpeedUp 是否开启cname加速，取值有：
+     * @param string $CnameSpeedUp 是否开启 CNAME 加速，取值有：
 <li> enabled：开启；</li>
 <li> disabled：关闭。</li>
-     * @param string $CnameStatus cname 接入状态，取值有：
+     * @param string $CnameStatus CNAME 接入状态，取值有：
 <li> finished：站点已验证；</li>
 <li> pending：站点验证中。</li>
      * @param array $Tags 资源标签列表。

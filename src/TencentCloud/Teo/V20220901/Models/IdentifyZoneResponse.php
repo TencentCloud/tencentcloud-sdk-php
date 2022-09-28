@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IdentifyZone返回参数结构体
  *
- * @method AscriptionInfo getAscription() 获取站点归属信息。
- * @method void setAscription(AscriptionInfo $Ascription) 设置站点归属信息。
+ * @method AscriptionInfo getAscription() 获取站点归属校验：Dns校验信息。
+ * @method void setAscription(AscriptionInfo $Ascription) 设置站点归属校验：Dns校验信息。
+ * @method FileAscriptionInfo getFileAscription() 获取站点归属权校验：文件校验信息。
+ * @method void setFileAscription(FileAscriptionInfo $FileAscription) 设置站点归属权校验：文件校验信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class IdentifyZoneResponse extends AbstractModel
 {
     /**
-     * @var AscriptionInfo 站点归属信息。
+     * @var AscriptionInfo 站点归属校验：Dns校验信息。
      */
     public $Ascription;
+
+    /**
+     * @var FileAscriptionInfo 站点归属权校验：文件校验信息。
+     */
+    public $FileAscription;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class IdentifyZoneResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AscriptionInfo $Ascription 站点归属信息。
+     * @param AscriptionInfo $Ascription 站点归属校验：Dns校验信息。
+     * @param FileAscriptionInfo $FileAscription 站点归属权校验：文件校验信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -57,6 +65,11 @@ class IdentifyZoneResponse extends AbstractModel
         if (array_key_exists("Ascription",$param) and $param["Ascription"] !== null) {
             $this->Ascription = new AscriptionInfo();
             $this->Ascription->deserialize($param["Ascription"]);
+        }
+
+        if (array_key_exists("FileAscription",$param) and $param["FileAscription"] !== null) {
+            $this->FileAscription = new FileAscriptionInfo();
+            $this->FileAscription->deserialize($param["FileAscription"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -55,16 +55,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubjectAltName(array $SubjectAltName) 设置证书SAN域名。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取部署状态，取值有：
-<li>processing: 部署中;</li>
-<li>deployed: 已部署。</li>
+<li>processing: 部署中；</li>
+<li>deployed: 已部署；</li>
+<li>failed: 部署失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置部署状态，取值有：
-<li>processing: 部署中;</li>
-<li>deployed: 已部署。</li>
+<li>processing: 部署中；</li>
+<li>deployed: 已部署；</li>
+<li>failed: 部署失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取Status为失败时,此字段返回失败原因。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置Status为失败时,此字段返回失败原因。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSignAlgo() 获取证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSignAlgo(string $SignAlgo) 设置证书算法。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DefaultServerCertInfo extends AbstractModel
@@ -116,8 +122,9 @@ class DefaultServerCertInfo extends AbstractModel
 
     /**
      * @var string 部署状态，取值有：
-<li>processing: 部署中;</li>
-<li>deployed: 已部署。</li>
+<li>processing: 部署中；</li>
+<li>deployed: 已部署；</li>
+<li>failed: 部署失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -127,6 +134,12 @@ class DefaultServerCertInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
+
+    /**
+     * @var string 证书算法。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SignAlgo;
 
     /**
      * @param string $CertId 服务器证书 ID。
@@ -147,10 +160,13 @@ class DefaultServerCertInfo extends AbstractModel
      * @param array $SubjectAltName 证书SAN域名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 部署状态，取值有：
-<li>processing: 部署中;</li>
-<li>deployed: 已部署。</li>
+<li>processing: 部署中；</li>
+<li>deployed: 已部署；</li>
+<li>failed: 部署失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message Status为失败时,此字段返回失败原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SignAlgo 证书算法。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -200,6 +216,10 @@ class DefaultServerCertInfo extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("SignAlgo",$param) and $param["SignAlgo"] !== null) {
+            $this->SignAlgo = $param["SignAlgo"];
         }
     }
 }

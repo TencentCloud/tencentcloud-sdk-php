@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeIdentifications请求参数结构体
  *
  * @method array getFilters() 获取过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：是
+<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：是</li>
  * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：是
+<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：是</li>
  * @method integer getOffset() 获取分页查询偏移量。默认值：0。
  * @method void setOffset(integer $Offset) 设置分页查询偏移量。默认值：0。
  * @method integer getLimit() 获取分页查询限制数目。默认值：20，最大值：1000。
@@ -33,7 +33,7 @@ class DescribeIdentificationsRequest extends AbstractModel
 {
     /**
      * @var array 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：是
+<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：是</li>
      */
     public $Filters;
 
@@ -49,7 +49,7 @@ class DescribeIdentificationsRequest extends AbstractModel
 
     /**
      * @param array $Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：是
+<li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：是</li>
      * @param integer $Offset 分页查询偏移量。默认值：0。
      * @param integer $Limit 分页查询限制数目。默认值：20，最大值：1000。
      */

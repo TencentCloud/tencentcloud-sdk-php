@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取待删除的推送任务ID。
  * @method void setTopicId(string $TopicId) 设置待删除的推送任务ID。
- * @method string getLogSetRegion() 获取推送任务所属日志集地域。
- * @method void setLogSetRegion(string $LogSetRegion) 设置推送任务所属日志集地域。
+ * @method string getLogSetRegion() 获取推送任务所属日志集地域，此字段仅用于CLS推送任务。
+ * @method void setLogSetRegion(string $LogSetRegion) 设置推送任务所属日志集地域，此字段仅用于CLS推送任务。
  */
 class DeleteLogTopicTaskRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteLogTopicTaskRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 推送任务所属日志集地域。
+     * @var string 推送任务所属日志集地域，此字段仅用于CLS推送任务。
      */
     public $LogSetRegion;
 
     /**
      * @param string $TopicId 待删除的推送任务ID。
-     * @param string $LogSetRegion 推送任务所属日志集地域。
+     * @param string $LogSetRegion 推送任务所属日志集地域，此字段仅用于CLS推送任务。
      */
     function __construct()
     {

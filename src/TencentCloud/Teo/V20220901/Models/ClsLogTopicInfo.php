@@ -58,6 +58,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArea(string $Area) 设置加速区域，取值有：
 <li>mainland：中国大陆境内;</li>
 <li>overseas：全球（不含中国大陆）。</li>
+ * @method string getLogSetType() 获取推送任务类型，取值有：
+<li>cls：推送到cls；</li>
+<li>custom_endpoint：推送到自定义接口。</li>
+ * @method void setLogSetType(string $LogSetType) 设置推送任务类型，取值有：
+<li>cls：推送到cls；</li>
+<li>custom_endpoint：推送到自定义接口。</li>
  */
 class ClsLogTopicInfo extends AbstractModel
 {
@@ -133,6 +139,13 @@ class ClsLogTopicInfo extends AbstractModel
     public $Area;
 
     /**
+     * @var string 推送任务类型，取值有：
+<li>cls：推送到cls；</li>
+<li>custom_endpoint：推送到自定义接口。</li>
+     */
+    public $LogSetType;
+
+    /**
      * @param string $TaskName 任务名。
      * @param string $ZoneName 站点名称。
      * @param string $LogSetId 日志集ID。
@@ -152,6 +165,9 @@ class ClsLogTopicInfo extends AbstractModel
      * @param string $Area 加速区域，取值有：
 <li>mainland：中国大陆境内;</li>
 <li>overseas：全球（不含中国大陆）。</li>
+     * @param string $LogSetType 推送任务类型，取值有：
+<li>cls：推送到cls；</li>
+<li>custom_endpoint：推送到自定义接口。</li>
      */
     function __construct()
     {
@@ -216,6 +232,10 @@ class ClsLogTopicInfo extends AbstractModel
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("LogSetType",$param) and $param["LogSetType"] !== null) {
+            $this->LogSetType = $param["LogSetType"];
         }
     }
 }

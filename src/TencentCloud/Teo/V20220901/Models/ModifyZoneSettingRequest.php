@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 不填写表示保持原有配置。
  * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6访问配置。
 不填写表示保持原有配置。
+ * @method ClientIpCountry getClientIpCountry() 获取回源时是否携带客户端IP所属地域信息的配置。
+不填写表示保持原有配置。
+ * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) 设置回源时是否携带客户端IP所属地域信息的配置。
+不填写表示保持原有配置。
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
@@ -191,6 +195,12 @@ class ModifyZoneSettingRequest extends AbstractModel
     public $Ipv6;
 
     /**
+     * @var ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+不填写表示保持原有配置。
+     */
+    public $ClientIpCountry;
+
+    /**
      * @param string $ZoneId 待变更的站点ID。
      * @param CacheConfig $CacheConfig 缓存过期时间配置。
 不填写表示保持原有配置。
@@ -223,6 +233,8 @@ class ModifyZoneSettingRequest extends AbstractModel
      * @param CachePrefresh $CachePrefresh 缓存预刷新配置。
 不填写表示保持原有配置。
      * @param Ipv6 $Ipv6 Ipv6访问配置。
+不填写表示保持原有配置。
+     * @param ClientIpCountry $ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
 不填写表示保持原有配置。
      */
     function __construct()
@@ -320,6 +332,11 @@ class ModifyZoneSettingRequest extends AbstractModel
         if (array_key_exists("Ipv6",$param) and $param["Ipv6"] !== null) {
             $this->Ipv6 = new Ipv6();
             $this->Ipv6->deserialize($param["Ipv6"]);
+        }
+
+        if (array_key_exists("ClientIpCountry",$param) and $param["ClientIpCountry"] !== null) {
+            $this->ClientIpCountry = new ClientIpCountry();
+            $this->ClientIpCountry->deserialize($param["ClientIpCountry"]);
         }
     }
 }

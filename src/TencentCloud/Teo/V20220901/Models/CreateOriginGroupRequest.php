@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 <li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
  * @method array getOriginRecords() 获取源站记录信息。
  * @method void setOriginRecords(array $OriginRecords) 设置源站记录信息。
+ * @method string getHostHeader() 获取回源Host，仅当OriginType=self时可以设置。
+ * @method void setHostHeader(string $HostHeader) 设置回源Host，仅当OriginType=self时可以设置。
  */
 class CreateOriginGroupRequest extends AbstractModel
 {
@@ -77,6 +79,11 @@ class CreateOriginGroupRequest extends AbstractModel
     public $OriginRecords;
 
     /**
+     * @var string 回源Host，仅当OriginType=self时可以设置。
+     */
+    public $HostHeader;
+
+    /**
      * @param string $ZoneId 站点ID。
      * @param string $OriginType 源站类型，取值有：
 <li>self：自有源站；</li>
@@ -88,6 +95,7 @@ class CreateOriginGroupRequest extends AbstractModel
 <li>weight： 按权重配置；</li>
 <li>proto： 按HTTP协议配置。</li>当OriginType=third_party/cos时放空。
      * @param array $OriginRecords 源站记录信息。
+     * @param string $HostHeader 回源Host，仅当OriginType=self时可以设置。
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class CreateOriginGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OriginRecords, $obj);
             }
+        }
+
+        if (array_key_exists("HostHeader",$param) and $param["HostHeader"] !== null) {
+            $this->HostHeader = $param["HostHeader"];
         }
     }
 }

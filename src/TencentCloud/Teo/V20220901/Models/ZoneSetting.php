@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttps(Https $Https) 设置Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ClientIpCountry getClientIpCountry() 获取回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) 设置回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneSetting extends AbstractModel
 {
@@ -204,6 +208,12 @@ class ZoneSetting extends AbstractModel
     public $Https;
 
     /**
+     * @var ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientIpCountry;
+
+    /**
      * @param string $ZoneName 站点名称。
      * @param string $Area 站点加速区域信息，取值有：
 <li> mainland：中国境内加速；</li>
@@ -239,6 +249,8 @@ class ZoneSetting extends AbstractModel
      * @param Ipv6 $Ipv6 Ipv6访问配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Https $Https Https 加速配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientIpCountry $ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -340,6 +352,11 @@ class ZoneSetting extends AbstractModel
         if (array_key_exists("Https",$param) and $param["Https"] !== null) {
             $this->Https = new Https();
             $this->Https->deserialize($param["Https"]);
+        }
+
+        if (array_key_exists("ClientIpCountry",$param) and $param["ClientIpCountry"] !== null) {
+            $this->ClientIpCountry = new ClientIpCountry();
+            $this->ClientIpCountry->deserialize($param["ClientIpCountry"]);
         }
     }
 }

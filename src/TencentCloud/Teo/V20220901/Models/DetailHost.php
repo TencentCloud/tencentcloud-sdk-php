@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6(Ipv6 $Ipv6) 设置Ipv6访问配置项。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ClientIpCountry getClientIpCountry() 获取回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) 设置回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailHost extends AbstractModel
 {
@@ -232,6 +236,12 @@ class DetailHost extends AbstractModel
     public $Ipv6;
 
     /**
+     * @var ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientIpCountry;
+
+    /**
      * @param string $ZoneId 站点ID。
      * @param string $Status 加速服务状态，取值为：
 <li> process：部署中；</li>
@@ -271,6 +281,8 @@ class DetailHost extends AbstractModel
      * @param SmartRouting $SmartRouting 智能路由配置项。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6 $Ipv6 Ipv6访问配置项。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientIpCountry $ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -384,6 +396,11 @@ class DetailHost extends AbstractModel
         if (array_key_exists("Ipv6",$param) and $param["Ipv6"] !== null) {
             $this->Ipv6 = new Ipv6();
             $this->Ipv6->deserialize($param["Ipv6"]);
+        }
+
+        if (array_key_exists("ClientIpCountry",$param) and $param["ClientIpCountry"] !== null) {
+            $this->ClientIpCountry = new ClientIpCountry();
+            $this->ClientIpCountry->deserialize($param["ClientIpCountry"]);
         }
     }
 }

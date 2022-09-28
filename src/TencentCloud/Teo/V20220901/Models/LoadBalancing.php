@@ -48,6 +48,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupOriginGroupId(string $BackupOriginGroupId) 设置备用源站源站组ID。为空表示不适用备用源站。
  * @method string getUpdateTime() 获取更新时间。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
+ * @method string getOriginType() 获取回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置。</li>
+ * @method void setOriginType(string $OriginType) 设置回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置。</li>
+ * @method array getAdvancedOriginGroups() 获取高级回源配置，当OriginType=advanced时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdvancedOriginGroups(array $AdvancedOriginGroups) 设置高级回源配置，当OriginType=advanced时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancing extends AbstractModel
 {
@@ -106,6 +116,19 @@ class LoadBalancing extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置。</li>
+     */
+    public $OriginType;
+
+    /**
+     * @var array 高级回源配置，当OriginType=advanced时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdvancedOriginGroups;
+
+    /**
      * @param string $LoadBalancingId 负载均衡ID。
      * @param string $ZoneId 站点ID。
      * @param string $Host 子域名，填写@表示根域。
@@ -120,6 +143,11 @@ class LoadBalancing extends AbstractModel
      * @param string $OriginGroupId 主源源站组ID。
      * @param string $BackupOriginGroupId 备用源站源站组ID。为空表示不适用备用源站。
      * @param string $UpdateTime 更新时间。
+     * @param string $OriginType 回源类型，取值有：
+<li>normal：主备回源；</li>
+<li>advanced：高级回源配置。</li>
+     * @param array $AdvancedOriginGroups 高级回源配置，当OriginType=advanced时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -172,6 +200,19 @@ class LoadBalancing extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("OriginType",$param) and $param["OriginType"] !== null) {
+            $this->OriginType = $param["OriginType"];
+        }
+
+        if (array_key_exists("AdvancedOriginGroups",$param) and $param["AdvancedOriginGroups"] !== null) {
+            $this->AdvancedOriginGroups = [];
+            foreach ($param["AdvancedOriginGroups"] as $key => $value){
+                $obj = new AdvancedOriginGroup();
+                $obj->deserialize($value);
+                array_push($this->AdvancedOriginGroups, $obj);
+            }
         }
     }
 }

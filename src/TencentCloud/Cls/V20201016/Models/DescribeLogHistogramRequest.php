@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTo(integer $To) 设置要查询的日志的结束时间，Unix时间戳，单位ms
  * @method string getQuery() 获取查询语句
  * @method void setQuery(string $Query) 设置查询语句
- * @method integer getInterval() 获取时间间隔: 单位ms
- * @method void setInterval(integer $Interval) 设置时间间隔: 单位ms
+ * @method integer getInterval() 获取时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
+ * @method void setInterval(integer $Interval) 设置时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
  */
 class DescribeLogHistogramRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeLogHistogramRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var integer 时间间隔: 单位ms
+     * @var integer 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
      */
     public $Interval;
 
@@ -63,7 +63,7 @@ class DescribeLogHistogramRequest extends AbstractModel
      * @param integer $From 要查询的日志的起始时间，Unix时间戳，单位ms
      * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
      * @param string $Query 查询语句
-     * @param integer $Interval 时间间隔: 单位ms
+     * @param integer $Interval 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
      */
     function __construct()
     {

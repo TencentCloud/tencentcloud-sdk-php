@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Bsca\V20210811\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * MatchKBPURLList返回参数结构体
+ * DeleteIntegrationEmployees返回参数结构体
  *
- * @method array getPURLList() 获取组件列表。
- * @method void setPURLList(array $PURLList) 设置组件列表。
- * @method boolean getHit() 获取是否命中数据库。
- * @method void setHit(boolean $Hit) 设置是否命中数据库。
+ * @method DeleteStaffsResult getDeleteEmployeeResult() 获取员工删除数据
+ * @method void setDeleteEmployeeResult(DeleteStaffsResult $DeleteEmployeeResult) 设置员工删除数据
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class MatchKBPURLListResponse extends AbstractModel
+class DeleteIntegrationEmployeesResponse extends AbstractModel
 {
     /**
-     * @var array 组件列表。
+     * @var DeleteStaffsResult 员工删除数据
      */
-    public $PURLList;
-
-    /**
-     * @var boolean 是否命中数据库。
-     */
-    public $Hit;
+    public $DeleteEmployeeResult;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class MatchKBPURLListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PURLList 组件列表。
-     * @param boolean $Hit 是否命中数据库。
+     * @param DeleteStaffsResult $DeleteEmployeeResult 员工删除数据
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,9 @@ class MatchKBPURLListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PURLList",$param) and $param["PURLList"] !== null) {
-            $this->PURLList = [];
-            foreach ($param["PURLList"] as $key => $value){
-                $obj = new PURL();
-                $obj->deserialize($value);
-                array_push($this->PURLList, $obj);
-            }
-        }
-
-        if (array_key_exists("Hit",$param) and $param["Hit"] !== null) {
-            $this->Hit = $param["Hit"];
+        if (array_key_exists("DeleteEmployeeResult",$param) and $param["DeleteEmployeeResult"] !== null) {
+            $this->DeleteEmployeeResult = new DeleteStaffsResult();
+            $this->DeleteEmployeeResult->deserialize($param["DeleteEmployeeResult"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

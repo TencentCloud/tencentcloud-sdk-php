@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
  * @method array getLoadBalancerIds() 获取传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
- * @method array getForwardLoadBalancers() 获取应用型负载均衡器列表，目前长度上限为50，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
- * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) 设置应用型负载均衡器列表，目前长度上限为50，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+ * @method array getForwardLoadBalancers() 获取应用型负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+ * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) 设置应用型负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
  * @method string getLoadBalancersCheckPolicy() 获取负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
 <br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
 <br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。
@@ -46,7 +46,7 @@ class ModifyLoadBalancersRequest extends AbstractModel
     public $LoadBalancerIds;
 
     /**
-     * @var array 应用型负载均衡器列表，目前长度上限为50，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+     * @var array 应用型负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      */
     public $ForwardLoadBalancers;
 
@@ -60,7 +60,7 @@ class ModifyLoadBalancersRequest extends AbstractModel
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param array $LoadBalancerIds 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
-     * @param array $ForwardLoadBalancers 应用型负载均衡器列表，目前长度上限为50，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+     * @param array $ForwardLoadBalancers 应用型负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      * @param string $LoadBalancersCheckPolicy 负载均衡器校验策略，取值包括 ALL 和 DIFF，默认取值为 ALL。
 <br><li> ALL，所有负载均衡器都合法则通过校验，否则校验报错。
 <br><li> DIFF，仅校验负载均衡器参数中实际变化的部分，如果合法则通过校验，否则校验报错。

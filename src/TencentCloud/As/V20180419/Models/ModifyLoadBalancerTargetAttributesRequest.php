@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupId() 获取伸缩组ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
- * @method array getForwardLoadBalancers() 获取需修改目标规则属性的应用型负载均衡器列表，列表长度上限为50
- * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) 设置需修改目标规则属性的应用型负载均衡器列表，列表长度上限为50
+ * @method array getForwardLoadBalancers() 获取需修改目标规则属性的应用型负载均衡器列表，列表长度上限为100
+ * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) 设置需修改目标规则属性的应用型负载均衡器列表，列表长度上限为100
  */
 class ModifyLoadBalancerTargetAttributesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyLoadBalancerTargetAttributesRequest extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
-     * @var array 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为50
+     * @var array 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为100
      */
     public $ForwardLoadBalancers;
 
     /**
      * @param string $AutoScalingGroupId 伸缩组ID
-     * @param array $ForwardLoadBalancers 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为50
+     * @param array $ForwardLoadBalancers 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为100
      */
     function __construct()
     {

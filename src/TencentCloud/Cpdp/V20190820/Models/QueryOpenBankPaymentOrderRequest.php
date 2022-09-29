@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getChannelMerchantId() 获取渠道商户号。外部接入平台入驻云企付平台下发。
  * @method void setChannelMerchantId(string $ChannelMerchantId) 设置渠道商户号。外部接入平台入驻云企付平台下发。
- * @method string getOutOrderId() 获取外部商户订单号。与ChannelOrderId不能同时为空。
- * @method void setOutOrderId(string $OutOrderId) 设置外部商户订单号。与ChannelOrderId不能同时为空。
- * @method string getChannelOrderId() 获取云平台订单号。与OutOrderId不能同时为空。
- * @method void setChannelOrderId(string $ChannelOrderId) 设置云平台订单号。与OutOrderId不能同时为空。
+ * @method string getOutOrderId() 获取外部商户订单号。与ChannelOrderId不能同时为空。若传空串即表示忽略该参数。
+ * @method void setOutOrderId(string $OutOrderId) 设置外部商户订单号。与ChannelOrderId不能同时为空。若传空串即表示忽略该参数。
+ * @method string getChannelOrderId() 获取云平台订单号。与OutOrderId不能同时为空。若调用下单接口时，发生异常，无法取到ChannelOrderId，传空串即可
+ * @method void setChannelOrderId(string $ChannelOrderId) 设置云平台订单号。与OutOrderId不能同时为空。若调用下单接口时，发生异常，无法取到ChannelOrderId，传空串即可
  * @method string getEnvironment() 获取接入环境。沙箱环境填 sandbox。缺省默认调用生产环境。
  * @method void setEnvironment(string $Environment) 设置接入环境。沙箱环境填 sandbox。缺省默认调用生产环境。
  */
@@ -37,12 +37,12 @@ class QueryOpenBankPaymentOrderRequest extends AbstractModel
     public $ChannelMerchantId;
 
     /**
-     * @var string 外部商户订单号。与ChannelOrderId不能同时为空。
+     * @var string 外部商户订单号。与ChannelOrderId不能同时为空。若传空串即表示忽略该参数。
      */
     public $OutOrderId;
 
     /**
-     * @var string 云平台订单号。与OutOrderId不能同时为空。
+     * @var string 云平台订单号。与OutOrderId不能同时为空。若调用下单接口时，发生异常，无法取到ChannelOrderId，传空串即可
      */
     public $ChannelOrderId;
 
@@ -53,8 +53,8 @@ class QueryOpenBankPaymentOrderRequest extends AbstractModel
 
     /**
      * @param string $ChannelMerchantId 渠道商户号。外部接入平台入驻云企付平台下发。
-     * @param string $OutOrderId 外部商户订单号。与ChannelOrderId不能同时为空。
-     * @param string $ChannelOrderId 云平台订单号。与OutOrderId不能同时为空。
+     * @param string $OutOrderId 外部商户订单号。与ChannelOrderId不能同时为空。若传空串即表示忽略该参数。
+     * @param string $ChannelOrderId 云平台订单号。与OutOrderId不能同时为空。若调用下单接口时，发生异常，无法取到ChannelOrderId，传空串即可
      * @param string $Environment 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境。
      */
     function __construct()

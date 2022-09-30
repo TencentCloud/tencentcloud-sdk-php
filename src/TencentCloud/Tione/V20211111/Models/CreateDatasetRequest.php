@@ -68,6 +68,8 @@ ANNOTATION_FORMAT_FILE，文件目录结构
  * @method void setSchemaInfos(array $SchemaInfos) 设置表头信息
  * @method boolean getIsSchemaExisted() 获取数据是否存在表头
  * @method void setIsSchemaExisted(boolean $IsSchemaExisted) 设置数据是否存在表头
+ * @method string getContentType() 获取导入文件粒度，按行或者按文件
+ * @method void setContentType(string $ContentType) 设置导入文件粒度，按行或者按文件
  */
 class CreateDatasetRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ ANNOTATION_FORMAT_FILE，文件目录结构
     public $IsSchemaExisted;
 
     /**
+     * @var string 导入文件粒度，按行或者按文件
+     */
+    public $ContentType;
+
+    /**
      * @param string $DatasetName 数据集名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $DatasetType 数据集类型:
 TYPE_DATASET_TEXT，文本
@@ -160,6 +167,7 @@ ANNOTATION_FORMAT_COCO，COCO
 ANNOTATION_FORMAT_FILE，文件目录结构
      * @param array $SchemaInfos 表头信息
      * @param boolean $IsSchemaExisted 数据是否存在表头
+     * @param string $ContentType 导入文件粒度，按行或者按文件
      */
     function __construct()
     {
@@ -224,6 +232,10 @@ ANNOTATION_FORMAT_FILE，文件目录结构
 
         if (array_key_exists("IsSchemaExisted",$param) and $param["IsSchemaExisted"] !== null) {
             $this->IsSchemaExisted = $param["IsSchemaExisted"];
+        }
+
+        if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
+            $this->ContentType = $param["ContentType"];
         }
     }
 }

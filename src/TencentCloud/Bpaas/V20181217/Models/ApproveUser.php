@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNick(string $Nick) 设置用户昵称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Scf getScf() 获取动态获取Scf
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScf(Scf $Scf) 设置动态获取Scf
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApproveUser extends AbstractModel
 {
@@ -58,11 +62,19 @@ class ApproveUser extends AbstractModel
     public $Nick;
 
     /**
+     * @var Scf 动态获取Scf
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Scf;
+
+    /**
      * @param integer $Uin 用户uin
      * @param integer $Type 用户类型 (1:用户  2:用户组)
      * @param string $Desc 用户描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nick 用户昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Scf $Scf 动态获取Scf
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -92,6 +104,11 @@ class ApproveUser extends AbstractModel
 
         if (array_key_exists("Nick",$param) and $param["Nick"] !== null) {
             $this->Nick = $param["Nick"];
+        }
+
+        if (array_key_exists("Scf",$param) and $param["Scf"] !== null) {
+            $this->Scf = new Scf();
+            $this->Scf->deserialize($param["Scf"]);
         }
     }
 }

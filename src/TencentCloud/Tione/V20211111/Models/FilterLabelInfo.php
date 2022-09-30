@@ -70,6 +70,22 @@ STRUCTURE：智能结构化
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrLabels(array $OcrLabels) 设置OCR场景标签列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOcrLabelInfo() 获取OCR场景标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOcrLabelInfo(string $OcrLabelInfo) 设置OCR场景标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTextClassificationLabelList() 获取文本分类场景标签结果，内容是json结构
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTextClassificationLabelList(string $TextClassificationLabelList) 设置文本分类场景标签结果，内容是json结构
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRowText() 获取文本内容，返回50字符
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRowText(string $RowText) 设置文本内容，返回50字符
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getContentOmit() 获取文本内容是否完全返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContentOmit(boolean $ContentOmit) 设置文本内容是否完全返回
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FilterLabelInfo extends AbstractModel
 {
@@ -151,6 +167,30 @@ STRUCTURE：智能结构化
     public $OcrLabels;
 
     /**
+     * @var string OCR场景标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OcrLabelInfo;
+
+    /**
+     * @var string 文本分类场景标签结果，内容是json结构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TextClassificationLabelList;
+
+    /**
+     * @var string 文本内容，返回50字符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RowText;
+
+    /**
+     * @var boolean 文本内容是否完全返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContentOmit;
+
+    /**
      * @param string $DatasetId 数据集id
      * @param string $FileId 文件ID
      * @param string $FileName 文件路径
@@ -175,6 +215,14 @@ IDENTITY：识别
 STRUCTURE：智能结构化
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OcrLabels OCR场景标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OcrLabelInfo OCR场景标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TextClassificationLabelList 文本分类场景标签结果，内容是json结构
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RowText 文本内容，返回50字符
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ContentOmit 文本内容是否完全返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -255,6 +303,22 @@ STRUCTURE：智能结构化
                 $obj->deserialize($value);
                 array_push($this->OcrLabels, $obj);
             }
+        }
+
+        if (array_key_exists("OcrLabelInfo",$param) and $param["OcrLabelInfo"] !== null) {
+            $this->OcrLabelInfo = $param["OcrLabelInfo"];
+        }
+
+        if (array_key_exists("TextClassificationLabelList",$param) and $param["TextClassificationLabelList"] !== null) {
+            $this->TextClassificationLabelList = $param["TextClassificationLabelList"];
+        }
+
+        if (array_key_exists("RowText",$param) and $param["RowText"] !== null) {
+            $this->RowText = $param["RowText"];
+        }
+
+        if (array_key_exists("ContentOmit",$param) and $param["ContentOmit"] !== null) {
+            $this->ContentOmit = $param["ContentOmit"];
         }
     }
 }

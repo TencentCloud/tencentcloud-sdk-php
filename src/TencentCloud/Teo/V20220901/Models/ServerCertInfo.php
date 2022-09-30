@@ -31,12 +31,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取证书类型，取值有：
 <li>default：默认证书；</lil>
 <li>upload：用户上传；</li>
-<li>managed:腾讯云托管。</li>
+<li>managed：腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置证书类型，取值有：
 <li>default：默认证书；</lil>
 <li>upload：用户上传；</li>
-<li>managed:腾讯云托管。</li>
+<li>managed：腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -69,7 +69,7 @@ class ServerCertInfo extends AbstractModel
      * @var string 证书类型，取值有：
 <li>default：默认证书；</lil>
 <li>upload：用户上传；</li>
-<li>managed:腾讯云托管。</li>
+<li>managed：腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -100,7 +100,7 @@ class ServerCertInfo extends AbstractModel
      * @param string $Type 证书类型，取值有：
 <li>default：默认证书；</lil>
 <li>upload：用户上传；</li>
-<li>managed:腾讯云托管。</li>
+<li>managed：腾讯云托管。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 证书过期时间。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterLabelList(array $FilterLabelList) 设置过滤数据详情
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRowTexts() 获取数据文本行，默认返回前1000行
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRowTexts(array $RowTexts) 设置数据文本行，默认返回前1000行
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -66,6 +70,12 @@ class DescribeDatasetDetailUnstructuredResponse extends AbstractModel
     public $FilterLabelList;
 
     /**
+     * @var array 数据文本行，默认返回前1000行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RowTexts;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -78,6 +88,8 @@ class DescribeDatasetDetailUnstructuredResponse extends AbstractModel
      * @param integer $FilterTotalCount 过滤数据总量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FilterLabelList 过滤数据详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RowTexts 数据文本行，默认返回前1000行
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -113,6 +125,10 @@ class DescribeDatasetDetailUnstructuredResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FilterLabelList, $obj);
             }
+        }
+
+        if (array_key_exists("RowTexts",$param) and $param["RowTexts"] !== null) {
+            $this->RowTexts = $param["RowTexts"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

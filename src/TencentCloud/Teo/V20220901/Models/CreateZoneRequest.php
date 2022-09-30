@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJumpStart(boolean $JumpStart) 设置是否跳过站点现有的DNS记录扫描。默认值：false。
  * @method array getTags() 获取资源标签。
  * @method void setTags(array $Tags) 设置资源标签。
+ * @method boolean getAllowDuplicates() 获取是否允许重复接入。
+<li> true：允许重复接入；</li>
+<li> false：不允许重复接入。</li>不填写使用默认值false。
+ * @method void setAllowDuplicates(boolean $AllowDuplicates) 设置是否允许重复接入。
+<li> true：允许重复接入；</li>
+<li> false：不允许重复接入。</li>不填写使用默认值false。
  */
 class CreateZoneRequest extends AbstractModel
 {
@@ -58,12 +64,22 @@ class CreateZoneRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean 是否允许重复接入。
+<li> true：允许重复接入；</li>
+<li> false：不允许重复接入。</li>不填写使用默认值false。
+     */
+    public $AllowDuplicates;
+
+    /**
      * @param string $ZoneName 站点名称。
      * @param string $Type 接入方式，取值有：
 <li> full：NS接入；</li>
 <li> partial：CNAME接入。</li>不填写使用默认值full。
      * @param boolean $JumpStart 是否跳过站点现有的DNS记录扫描。默认值：false。
      * @param array $Tags 资源标签。
+     * @param boolean $AllowDuplicates 是否允许重复接入。
+<li> true：允许重复接入；</li>
+<li> false：不允许重复接入。</li>不填写使用默认值false。
      */
     function __construct()
     {
@@ -97,6 +113,10 @@ class CreateZoneRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AllowDuplicates",$param) and $param["AllowDuplicates"] !== null) {
+            $this->AllowDuplicates = $param["AllowDuplicates"];
         }
     }
 }

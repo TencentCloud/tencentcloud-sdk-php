@@ -40,6 +40,8 @@ STATUS_ALL，全部
 默认为STATUS_ALL
  * @method array getDatasetIds() 获取数据集ID列表
  * @method void setDatasetIds(array $DatasetIds) 设置数据集ID列表
+ * @method array getTextClassificationLabels() 获取要筛选的文本分类场景标签信息
+ * @method void setTextClassificationLabels(array $TextClassificationLabels) 设置要筛选的文本分类场景标签信息
  */
 class DescribeDatasetDetailUnstructuredRequest extends AbstractModel
 {
@@ -78,6 +80,11 @@ STATUS_ALL，全部
     public $DatasetIds;
 
     /**
+     * @var array 要筛选的文本分类场景标签信息
+     */
+    public $TextClassificationLabels;
+
+    /**
      * @param string $DatasetId 数据集ID
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回个数，默认20，目前最大支持2000条数据
@@ -88,6 +95,7 @@ STATUS_NON_ANNOTATED，未标注
 STATUS_ALL，全部
 默认为STATUS_ALL
      * @param array $DatasetIds 数据集ID列表
+     * @param array $TextClassificationLabels 要筛选的文本分类场景标签信息
      */
     function __construct()
     {
@@ -124,6 +132,15 @@ STATUS_ALL，全部
 
         if (array_key_exists("DatasetIds",$param) and $param["DatasetIds"] !== null) {
             $this->DatasetIds = $param["DatasetIds"];
+        }
+
+        if (array_key_exists("TextClassificationLabels",$param) and $param["TextClassificationLabels"] !== null) {
+            $this->TextClassificationLabels = [];
+            foreach ($param["TextClassificationLabels"] as $key => $value){
+                $obj = new TextLabelDistributionInfo();
+                $obj->deserialize($value);
+                array_push($this->TextClassificationLabels, $obj);
+            }
         }
     }
 }

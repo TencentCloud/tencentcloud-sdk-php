@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowLog请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getBeginTime() 获取开始时间
- * @method void setBeginTime(string $BeginTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method integer getMinQueryTime() 获取慢查询阈值（单位：微秒）
- * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询阈值（单位：微秒）
- * @method integer getLimit() 获取页面大小
- * @method void setLimit(integer $Limit) 设置页面大小
- * @method integer getOffset() 获取偏移量，取Limit整数倍
- * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍
+ * @method string getInstanceId() 获取实例Id。
+ * @method void setInstanceId(string $InstanceId) 设置实例Id。
+ * @method string getBeginTime() 获取开始时间。
+ * @method void setBeginTime(string $BeginTime) 设置开始时间。
+ * @method string getEndTime() 获取结束时间。
+ * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method integer getMinQueryTime() 获取慢查询平均执行时间阈值（单位：微秒）。
+ * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询平均执行时间阈值（单位：微秒）。
+ * @method integer getLimit() 获取每个页面展示的慢查询条数，默认值为20。
+ * @method void setLimit(integer $Limit) 设置每个页面展示的慢查询条数，默认值为20。
+ * @method integer getOffset() 获取慢查询条数的偏移量，取Limit整数倍。
+ * @method void setOffset(integer $Offset) 设置慢查询条数的偏移量，取Limit整数倍。
+ * @method string getRole() 获取节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+ * @method void setRole(string $Role) 设置节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
  */
 class DescribeSlowLogRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 实例Id。
      */
     public $InstanceId;
 
     /**
-     * @var string 开始时间
+     * @var string 开始时间。
      */
     public $BeginTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间。
      */
     public $EndTime;
 
     /**
-     * @var integer 慢查询阈值（单位：微秒）
+     * @var integer 慢查询平均执行时间阈值（单位：微秒）。
      */
     public $MinQueryTime;
 
     /**
-     * @var integer 页面大小
+     * @var integer 每个页面展示的慢查询条数，默认值为20。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，取Limit整数倍
+     * @var integer 慢查询条数的偏移量，取Limit整数倍。
      */
     public $Offset;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $BeginTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param integer $MinQueryTime 慢查询阈值（单位：微秒）
-     * @param integer $Limit 页面大小
-     * @param integer $Offset 偏移量，取Limit整数倍
+     * @var string 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+     */
+    public $Role;
+
+    /**
+     * @param string $InstanceId 实例Id。
+     * @param string $BeginTime 开始时间。
+     * @param string $EndTime 结束时间。
+     * @param integer $MinQueryTime 慢查询平均执行时间阈值（单位：微秒）。
+     * @param integer $Limit 每个页面展示的慢查询条数，默认值为20。
+     * @param integer $Offset 慢查询条数的偏移量，取Limit整数倍。
+     * @param string $Role 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeSlowLogRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

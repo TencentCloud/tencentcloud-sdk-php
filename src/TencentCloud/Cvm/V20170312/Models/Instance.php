@@ -118,6 +118,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLicenseType() 获取实例的操作系统许可类型，默认为TencentCloud
  * @method void setLicenseType(string $LicenseType) 设置实例的操作系统许可类型，默认为TencentCloud
+ * @method boolean getDisableApiTermination() 获取实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) 设置实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
  */
 class Instance extends AbstractModel
 {
@@ -315,6 +317,11 @@ class Instance extends AbstractModel
     public $LicenseType;
 
     /**
+     * @var boolean 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
+     */
+    public $DisableApiTermination;
+
+    /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
      * @param string $InstanceType 实例机型。
@@ -364,6 +371,7 @@ class Instance extends AbstractModel
      * @param GPUInfo $GPUInfo GPU信息。如果是gpu类型子机，该值会返回GPU信息，如果是其他类型子机则不返回。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LicenseType 实例的操作系统许可类型，默认为TencentCloud
+     * @param boolean $DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
      */
     function __construct()
     {
@@ -536,6 +544,10 @@ class Instance extends AbstractModel
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
+            $this->DisableApiTermination = $param["DisableApiTermination"];
         }
     }
 }

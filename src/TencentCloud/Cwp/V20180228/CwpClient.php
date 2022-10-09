@@ -65,6 +65,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeAssetDatabaseInfoResponse DescribeAssetDatabaseInfo(Models\DescribeAssetDatabaseInfoRequest $req) 获取资产管理数据库详情
  * @method Models\DescribeAssetDatabaseListResponse DescribeAssetDatabaseList(Models\DescribeAssetDatabaseListRequest $req) 查询资产管理数据库列表
  * @method Models\DescribeAssetEnvListResponse DescribeAssetEnvList(Models\DescribeAssetEnvListRequest $req) 查询资产管理环境变量列表
+ * @method Models\DescribeAssetHostTotalCountResponse DescribeAssetHostTotalCount(Models\DescribeAssetHostTotalCountRequest $req) 获取主机所有资源数量
  * @method Models\DescribeAssetInfoResponse DescribeAssetInfo(Models\DescribeAssetInfoRequest $req) 获取资产数量： 主机数、账号数、端口数、进程数、软件数、数据库数、Web应用数、Web框架数、Web服务数、Web站点数
  * @method Models\DescribeAssetInitServiceListResponse DescribeAssetInitServiceList(Models\DescribeAssetInitServiceListRequest $req) 查询资产管理启动服务列表
  * @method Models\DescribeAssetJarInfoResponse DescribeAssetJarInfo(Models\DescribeAssetJarInfoRequest $req) 获取Jar包详情

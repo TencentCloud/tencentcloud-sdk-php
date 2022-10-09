@@ -20,47 +20,47 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogList请求参数结构体
  *
- * @method string getSort() 获取排序方式  desc  asc
- * @method void setSort(string $Sort) 设置排序方式  desc  asc
- * @method string getActionType() 获取searchlog  histogram
- * @method void setActionType(string $ActionType) 设置searchlog  histogram
- * @method integer getID() 获取项目ID
- * @method void setID(integer $ID) 设置项目ID
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method integer getLimit() 获取单次查询返回的原始日志条数，最大值为100
- * @method void setLimit(integer $Limit) 设置单次查询返回的原始日志条数，最大值为100
+ * @method string getSort() 获取排序方式  desc  asc（必填）
+ * @method void setSort(string $Sort) 设置排序方式  desc  asc（必填）
+ * @method string getActionType() 获取searchlog  histogram（必填）
+ * @method void setActionType(string $ActionType) 设置searchlog  histogram（必填）
+ * @method integer getID() 获取项目ID（必填）
+ * @method void setID(integer $ID) 设置项目ID（必填）
+ * @method string getStartTime() 获取开始时间（必填）
+ * @method void setStartTime(string $StartTime) 设置开始时间（必填）
+ * @method integer getLimit() 获取单次查询返回的原始日志条数，最大值为100（必填）
+ * @method void setLimit(integer $Limit) 设置单次查询返回的原始日志条数，最大值为100（必填）
  * @method string getContext() 获取上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
  * @method void setContext(string $Context) 设置上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
- * @method string getQuery() 获取查询语句，参考控制台请求参数，语句长度最大为4096
- * @method void setQuery(string $Query) 设置查询语句，参考控制台请求参数，语句长度最大为4096
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getQuery() 获取查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+ * @method void setQuery(string $Query) 设置查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+ * @method string getEndTime() 获取结束时间（必填）
+ * @method void setEndTime(string $EndTime) 设置结束时间（必填）
  */
 class DescribeLogListRequest extends AbstractModel
 {
     /**
-     * @var string 排序方式  desc  asc
+     * @var string 排序方式  desc  asc（必填）
      */
     public $Sort;
 
     /**
-     * @var string searchlog  histogram
+     * @var string searchlog  histogram（必填）
      */
     public $ActionType;
 
     /**
-     * @var integer 项目ID
+     * @var integer 项目ID（必填）
      */
     public $ID;
 
     /**
-     * @var string 开始时间
+     * @var string 开始时间（必填）
      */
     public $StartTime;
 
     /**
-     * @var integer 单次查询返回的原始日志条数，最大值为100
+     * @var integer 单次查询返回的原始日志条数，最大值为100（必填）
      */
     public $Limit;
 
@@ -70,24 +70,24 @@ class DescribeLogListRequest extends AbstractModel
     public $Context;
 
     /**
-     * @var string 查询语句，参考控制台请求参数，语句长度最大为4096
+     * @var string 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
      */
     public $Query;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间（必填）
      */
     public $EndTime;
 
     /**
-     * @param string $Sort 排序方式  desc  asc
-     * @param string $ActionType searchlog  histogram
-     * @param integer $ID 项目ID
-     * @param string $StartTime 开始时间
-     * @param integer $Limit 单次查询返回的原始日志条数，最大值为100
+     * @param string $Sort 排序方式  desc  asc（必填）
+     * @param string $ActionType searchlog  histogram（必填）
+     * @param integer $ID 项目ID（必填）
+     * @param string $StartTime 开始时间（必填）
+     * @param integer $Limit 单次查询返回的原始日志条数，最大值为100（必填）
      * @param string $Context 上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
-     * @param string $Query 查询语句，参考控制台请求参数，语句长度最大为4096
-     * @param string $EndTime 结束时间
+     * @param string $Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * @param string $EndTime 结束时间（必填）
      */
     function __construct()
     {

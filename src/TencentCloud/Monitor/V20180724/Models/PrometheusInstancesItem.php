@@ -200,6 +200,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordingRuleLimit(integer $RecordingRuleLimit) 设置预聚合规则限制
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMigrationType() 获取迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMigrationType(integer $MigrationType) 设置迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrometheusInstancesItem extends AbstractModel
 {
@@ -410,6 +414,12 @@ class PrometheusInstancesItem extends AbstractModel
     public $RecordingRuleLimit;
 
     /**
+     * @var integer 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MigrationType;
+
+    /**
      * @param string $InstanceId 实例ID。
      * @param string $InstanceName 实例名称。
      * @param integer $InstanceChargeType 实例计费模式。取值范围：
@@ -499,6 +509,8 @@ class PrometheusInstancesItem extends AbstractModel
      * @param integer $AlertRuleLimit 告警规则限制
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordingRuleLimit 预聚合规则限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MigrationType 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -634,6 +646,10 @@ class PrometheusInstancesItem extends AbstractModel
 
         if (array_key_exists("RecordingRuleLimit",$param) and $param["RecordingRuleLimit"] !== null) {
             $this->RecordingRuleLimit = $param["RecordingRuleLimit"];
+        }
+
+        if (array_key_exists("MigrationType",$param) and $param["MigrationType"] !== null) {
+            $this->MigrationType = $param["MigrationType"];
         }
     }
 }

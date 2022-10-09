@@ -26,14 +26,20 @@ use TencentCloud\Common\AbstractModel;
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
  * @method void setMode(string $Mode) 设置模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
+ * @method string getAction() 获取模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>不填写默认取alg。
+ * @method void setAction(string $Action) 设置模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>不填写默认取alg。
  * @method RateLimitTemplateDetail getRateLimitTemplateDetail() 获取模板值详情。仅出参返回。
  * @method void setRateLimitTemplateDetail(RateLimitTemplateDetail $RateLimitTemplateDetail) 设置模板值详情。仅出参返回。
  */
@@ -46,9 +52,16 @@ class RateLimitTemplate extends AbstractModel
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
      */
     public $Mode;
+
+    /**
+     * @var string 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>不填写默认取alg。
+     */
+    public $Action;
 
     /**
      * @var RateLimitTemplateDetail 模板值详情。仅出参返回。
@@ -62,7 +75,10 @@ class RateLimitTemplate extends AbstractModel
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
+     * @param string $Action 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>不填写默认取alg。
      * @param RateLimitTemplateDetail $RateLimitTemplateDetail 模板值详情。仅出参返回。
      */
     function __construct()
@@ -80,6 +96,10 @@ class RateLimitTemplate extends AbstractModel
         }
         if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
             $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
+            $this->Action = $param["Action"];
         }
 
         if (array_key_exists("RateLimitTemplateDetail",$param) and $param["RateLimitTemplateDetail"] !== null) {

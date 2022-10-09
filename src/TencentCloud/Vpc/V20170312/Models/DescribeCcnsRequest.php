@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量
  * @method string getOrderField() 获取排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
  * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
- * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。
- * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：`ASC`，倒序：`DESC`。
+ * @method string getOrderDirection() 获取排序方法。升序：`ASC`，倒序：`DESC`。
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方法。升序：`ASC`，倒序：`DESC`。
  */
 class DescribeCcnsRequest extends AbstractModel
 {
@@ -79,7 +79,7 @@ class DescribeCcnsRequest extends AbstractModel
     public $OrderField;
 
     /**
-     * @var string 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @var string 排序方法。升序：`ASC`，倒序：`DESC`。
      */
     public $OrderDirection;
 
@@ -95,7 +95,7 @@ class DescribeCcnsRequest extends AbstractModel
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量
      * @param string $OrderField 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
-     * @param string $OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @param string $OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。
      */
     function __construct()
     {

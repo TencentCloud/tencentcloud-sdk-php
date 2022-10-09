@@ -20,31 +20,35 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 模板当前详细配置
  *
- * @method string getMode() 获取模板名称，取值有：
+ * @method string getMode() 获取模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMode(string $Mode) 设置模板名称，取值有：
+ * @method void setMode(string $Mode) 设置模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getID() 获取唯一id。
  * @method void setID(integer $ID) 设置唯一id。
- * @method string getAction() 获取处置动作。模板阀值触发后的处罚行为。
+ * @method string getAction() 获取模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAction(string $Action) 设置处置动作。模板阀值触发后的处罚行为。
+ * @method void setAction(string $Action) 设置模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPunishTime() 获取惩罚时间，0-2天，单位是秒。
+ * @method integer getPunishTime() 获取惩罚时间，取值范围0-2天，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPunishTime(integer $PunishTime) 设置惩罚时间，0-2天，单位是秒。
+ * @method void setPunishTime(integer $PunishTime) 设置惩罚时间，取值范围0-2天，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getThreshold() 获取统计阈值，单位是次，取值范围0-4294967294。
  * @method void setThreshold(integer $Threshold) 设置统计阈值，单位是次，取值范围0-4294967294。
@@ -54,13 +58,13 @@ use TencentCloud\Common\AbstractModel;
 class RateLimitTemplateDetail extends AbstractModel
 {
     /**
-     * @var string 模板名称，取值有：
+     * @var string 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
@@ -71,13 +75,15 @@ class RateLimitTemplateDetail extends AbstractModel
     public $ID;
 
     /**
-     * @var string 处置动作。模板阀值触发后的处罚行为。
+     * @var string 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
-     * @var integer 惩罚时间，0-2天，单位是秒。
+     * @var integer 惩罚时间，取值范围0-2天，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PunishTime;
@@ -93,18 +99,20 @@ class RateLimitTemplateDetail extends AbstractModel
     public $Period;
 
     /**
-     * @param string $Mode 模板名称，取值有：
+     * @param string $Mode 模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
 <li>emergency：紧急；</li>
 <li>normal：适中；</li>
 <li>strict：严格；</li>
-<li>close：关闭 - 仅精准速率限制生效。</li>
+<li>close：关闭，仅精准速率限制生效。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ID 唯一id。
-     * @param string $Action 处置动作。模板阀值触发后的处罚行为。
+     * @param string $Action 模板处置方式，取值有：
+<li>alg：JavaScript挑战；</li>
+<li>monitor：观察。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PunishTime 惩罚时间，0-2天，单位是秒。
+     * @param integer $PunishTime 惩罚时间，取值范围0-2天，单位秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Threshold 统计阈值，单位是次，取值范围0-4294967294。
      * @param integer $Period 统计周期，取值范围0-120秒。

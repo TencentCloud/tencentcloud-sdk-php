@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcnId(string $CcnId) 设置云联网实例ID
  * @method string getOrderField() 获取排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
  * @method void setOrderField(string $OrderField) 设置排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
- * @method string getOrderDirection() 获取排序方法。顺序：`ASC`，倒序：`DESC`。
- * @method void setOrderDirection(string $OrderDirection) 设置排序方法。顺序：`ASC`，倒序：`DESC`。
+ * @method string getOrderDirection() 获取排序方法。升序：`ASC`，倒序：`DESC`。
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方法。升序：`ASC`，倒序：`DESC`。
  */
 class DescribeCcnAttachedInstancesRequest extends AbstractModel
 {
@@ -73,7 +73,7 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
     public $OrderField;
 
     /**
-     * @var string 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @var string 排序方法。升序：`ASC`，倒序：`DESC`。
      */
     public $OrderDirection;
 
@@ -87,7 +87,7 @@ class DescribeCcnAttachedInstancesRequest extends AbstractModel
 <li>instance-id - String -（过滤条件）关联实例实例ID。</li>
      * @param string $CcnId 云联网实例ID
      * @param string $OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
-     * @param string $OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * @param string $OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。
      */
     function __construct()
     {

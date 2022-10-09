@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AddReplicationInstance返回参数结构体
+ * CreateAliasDomain返回参数结构体
  *
- * @method integer getTaskId() 获取异步流程ID。
- * @method void setTaskId(integer $TaskId) 设置异步流程ID。
+ * @method string getAliasId() 获取别称域名 ID。
+ * @method void setAliasId(string $AliasId) 设置别称域名 ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AddReplicationInstanceResponse extends AbstractModel
+class CreateAliasDomainResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程ID。
+     * @var string 别称域名 ID。
      */
-    public $TaskId;
+    public $AliasId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class AddReplicationInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId 异步流程ID。
+     * @param string $AliasId 别称域名 ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class AddReplicationInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("AliasId",$param) and $param["AliasId"] !== null) {
+            $this->AliasId = $param["AliasId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

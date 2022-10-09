@@ -34,8 +34,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCaptchaCode() 获取成功返回0  其它失败
  * @method void setCaptchaCode(integer $CaptchaCode) 设置成功返回0  其它失败
- * @method integer getCheckTicketSum() 获取票据校验量
- * @method void setCheckTicketSum(integer $CheckTicketSum) 设置票据校验量
+ * @method integer getCheckTicketSum() 获取票据校验总量
+ * @method void setCheckTicketSum(integer $CheckTicketSum) 设置票据校验总量
+ * @method integer getTicketThroughputSum() 获取票据验证通过量
+ * @method void setTicketThroughputSum(integer $TicketThroughputSum) 设置票据验证通过量
+ * @method integer getTicketInterceptSum() 获取票据验证拦截量
+ * @method void setTicketInterceptSum(integer $TicketInterceptSum) 设置票据验证拦截量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,9 +77,19 @@ class DescribeCaptchaDataSumResponse extends AbstractModel
     public $CaptchaCode;
 
     /**
-     * @var integer 票据校验量
+     * @var integer 票据校验总量
      */
     public $CheckTicketSum;
+
+    /**
+     * @var integer 票据验证通过量
+     */
+    public $TicketThroughputSum;
+
+    /**
+     * @var integer 票据验证拦截量
+     */
+    public $TicketInterceptSum;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -90,7 +104,9 @@ class DescribeCaptchaDataSumResponse extends AbstractModel
      * @param string $CaptchaMsg 返回信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CaptchaCode 成功返回0  其它失败
-     * @param integer $CheckTicketSum 票据校验量
+     * @param integer $CheckTicketSum 票据校验总量
+     * @param integer $TicketThroughputSum 票据验证通过量
+     * @param integer $TicketInterceptSum 票据验证拦截量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -132,6 +148,14 @@ class DescribeCaptchaDataSumResponse extends AbstractModel
 
         if (array_key_exists("CheckTicketSum",$param) and $param["CheckTicketSum"] !== null) {
             $this->CheckTicketSum = $param["CheckTicketSum"];
+        }
+
+        if (array_key_exists("TicketThroughputSum",$param) and $param["TicketThroughputSum"] !== null) {
+            $this->TicketThroughputSum = $param["TicketThroughputSum"];
+        }
+
+        if (array_key_exists("TicketInterceptSum",$param) and $param["TicketInterceptSum"] !== null) {
+            $this->TicketInterceptSum = $param["TicketInterceptSum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

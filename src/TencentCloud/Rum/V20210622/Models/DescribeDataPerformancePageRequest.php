@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCostType(string $CostType) 设置耗时计算方式
  * @method string getEnv() 获取环境变量
  * @method void setEnv(string $Env) 设置环境变量
+ * @method string getNetStatus() 获取网络状态
+ * @method void setNetStatus(string $NetStatus) 设置网络状态
  */
 class DescribeDataPerformancePageRequest extends AbstractModel
 {
@@ -178,6 +180,11 @@ class DescribeDataPerformancePageRequest extends AbstractModel
     public $Env;
 
     /**
+     * @var string 网络状态
+     */
+    public $NetStatus;
+
+    /**
      * @param integer $ID 项目ID
      * @param integer $StartTime 开始时间
      * @param integer $EndTime 结束时间
@@ -200,6 +207,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
      * @param string $From 来源页面
      * @param string $CostType 耗时计算方式
      * @param string $Env 环境变量
+     * @param string $NetStatus 网络状态
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ class DescribeDataPerformancePageRequest extends AbstractModel
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {
             $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("NetStatus",$param) and $param["NetStatus"] !== null) {
+            $this->NetStatus = $param["NetStatus"];
         }
     }
 }

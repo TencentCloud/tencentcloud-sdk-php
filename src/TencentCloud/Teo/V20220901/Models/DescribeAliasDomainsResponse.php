@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AddReplicationInstance返回参数结构体
+ * DescribeAliasDomains返回参数结构体
  *
- * @method integer getTaskId() 获取异步流程ID。
- * @method void setTaskId(integer $TaskId) 设置异步流程ID。
+ * @method integer getTotalCount() 获取符合条件的别称域名个数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的别称域名个数。
+ * @method array getAliasDomains() 获取别称域名详细信息列表。
+ * @method void setAliasDomains(array $AliasDomains) 设置别称域名详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AddReplicationInstanceResponse extends AbstractModel
+class DescribeAliasDomainsResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程ID。
+     * @var integer 符合条件的别称域名个数。
      */
-    public $TaskId;
+    public $TotalCount;
+
+    /**
+     * @var array 别称域名详细信息列表。
+     */
+    public $AliasDomains;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class AddReplicationInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId 异步流程ID。
+     * @param integer $TotalCount 符合条件的别称域名个数。
+     * @param array $AliasDomains 别称域名详细信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class AddReplicationInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("AliasDomains",$param) and $param["AliasDomains"] !== null) {
+            $this->AliasDomains = [];
+            foreach ($param["AliasDomains"] as $key => $value){
+                $obj = new AliasDomain();
+                $obj->deserialize($value);
+                array_push($this->AliasDomains, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

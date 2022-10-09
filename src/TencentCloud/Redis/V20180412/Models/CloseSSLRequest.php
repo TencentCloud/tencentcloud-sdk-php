@@ -18,36 +18,20 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AddReplicationInstance请求参数结构体
+ * CloseSSL请求参数结构体
  *
- * @method string getGroupId() 获取复制组ID。
- * @method void setGroupId(string $GroupId) 设置复制组ID。
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method string getInstanceRole() 获取给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
- * @method void setInstanceRole(string $InstanceRole) 设置给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
  */
-class AddReplicationInstanceRequest extends AbstractModel
+class CloseSSLRequest extends AbstractModel
 {
-    /**
-     * @var string 复制组ID。
-     */
-    public $GroupId;
-
     /**
      * @var string 实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
-     */
-    public $InstanceRole;
-
-    /**
-     * @param string $GroupId 复制组ID。
      * @param string $InstanceId 实例ID。
-     * @param string $InstanceRole 给复制组添加的实例分配角色。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
      */
     function __construct()
     {
@@ -62,16 +46,8 @@ class AddReplicationInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
-        }
-
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("InstanceRole",$param) and $param["InstanceRole"] !== null) {
-            $this->InstanceRole = $param["InstanceRole"];
         }
     }
 }

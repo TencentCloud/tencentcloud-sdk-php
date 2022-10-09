@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReplicationGroup请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getGroupName() 获取复制组名称
- * @method void setGroupName(string $GroupName) 设置复制组名称
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
+ * @method string getInstanceId() 获取指定复制组中的主实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定复制组中的主实例ID。
+ * @method string getGroupName() 获取复制组名称。
+ * @method void setGroupName(string $GroupName) 设置复制组名称。
+ * @method string getRemark() 获取备注信息。
+ * @method void setRemark(string $Remark) 设置备注信息。
  */
 class CreateReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 指定复制组中的主实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 复制组名称
+     * @var string 复制组名称。
      */
     public $GroupName;
 
     /**
-     * @var string 备注信息
+     * @var string 备注信息。
      */
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $GroupName 复制组名称
-     * @param string $Remark 备注信息
+     * @param string $InstanceId 指定复制组中的主实例ID。
+     * @param string $GroupName 复制组名称。
+     * @param string $Remark 备注信息。
      */
     function __construct()
     {

@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置httpcode响应码
  * @method string getRet() 获取retcode
  * @method void setRet(string $Ret) 设置retcode
+ * @method string getNetStatus() 获取网络状态
+ * @method void setNetStatus(string $NetStatus) 设置网络状态
  */
 class DescribeDataFetchUrlRequest extends AbstractModel
 {
@@ -199,6 +201,11 @@ class DescribeDataFetchUrlRequest extends AbstractModel
     public $Ret;
 
     /**
+     * @var string 网络状态
+     */
+    public $NetStatus;
+
+    /**
      * @param integer $StartTime 开始时间
      * @param string $Type allcount：性能视图，day：14天数据，count40x：40X视图，count50x：50X视图，count5xand4x：40∑50视图，top：资源top视图，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
      * @param integer $EndTime 结束时间
@@ -224,6 +231,7 @@ class DescribeDataFetchUrlRequest extends AbstractModel
      * @param string $Env 环境
      * @param string $Status httpcode响应码
      * @param string $Ret retcode
+     * @param string $NetStatus 网络状态
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class DescribeDataFetchUrlRequest extends AbstractModel
 
         if (array_key_exists("Ret",$param) and $param["Ret"] !== null) {
             $this->Ret = $param["Ret"];
+        }
+
+        if (array_key_exists("NetStatus",$param) and $param["NetStatus"] !== null) {
+            $this->NetStatus = $param["NetStatus"];
         }
     }
 }

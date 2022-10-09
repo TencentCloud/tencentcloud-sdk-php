@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReplicationGroup返回参数结构体
  *
- * @method integer getTaskId() 获取异步流程ID
- * @method void setTaskId(integer $TaskId) 设置异步流程ID
+ * @method integer getTaskId() 获取异步流程ID。
+ * @method void setTaskId(integer $TaskId) 设置异步流程ID。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateReplicationGroupResponse extends AbstractModel
 {
     /**
-     * @var integer 异步流程ID
+     * @var integer 异步流程ID。
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class CreateReplicationGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId 异步流程ID
+     * @param integer $TaskId 异步流程ID。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

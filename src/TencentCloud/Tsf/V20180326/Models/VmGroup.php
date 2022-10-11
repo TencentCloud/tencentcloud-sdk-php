@@ -160,6 +160,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAgentProfileList() 获取javaagent信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentProfileList(array $AgentProfileList) 设置javaagent信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method WarmupSetting getWarmupSetting() 获取预热属性配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置预热属性配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroup extends AbstractModel
 {
@@ -374,6 +382,18 @@ class VmGroup extends AbstractModel
     public $Alias;
 
     /**
+     * @var array javaagent信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentProfileList;
+
+    /**
+     * @var WarmupSetting 预热属性配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WarmupSetting;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
@@ -443,6 +463,10 @@ class VmGroup extends AbstractModel
      * @param string $StopScript 停止脚本 base64编码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 部署组备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AgentProfileList javaagent信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarmupSetting $WarmupSetting 预热属性配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -597,6 +621,20 @@ class VmGroup extends AbstractModel
 
         if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
             $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("AgentProfileList",$param) and $param["AgentProfileList"] !== null) {
+            $this->AgentProfileList = [];
+            foreach ($param["AgentProfileList"] as $key => $value){
+                $obj = new AgentProfile();
+                $obj->deserialize($value);
+                array_push($this->AgentProfileList, $obj);
+            }
+        }
+
+        if (array_key_exists("WarmupSetting",$param) and $param["WarmupSetting"] !== null) {
+            $this->WarmupSetting = new WarmupSetting();
+            $this->WarmupSetting->deserialize($param["WarmupSetting"]);
         }
     }
 }

@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManualBackupName(string $ManualBackupName) 设置手动备份别名
  * @method string getSaveMode() 获取备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
  * @method void setSaveMode(string $SaveMode) 设置备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
+ * @method string getRegion() 获取本地备份所在地域
+ * @method void setRegion(string $Region) 设置本地备份所在地域
+ * @method array getRemoteInfo() 获取异地备份详细信息
+ * @method void setRemoteInfo(array $RemoteInfo) 设置异地备份详细信息
+ * @method integer getCosStorageType() 获取存储方式，0-常规存储，1-归档存储，默认为0
+ * @method void setCosStorageType(integer $CosStorageType) 设置存储方式，0-常规存储，1-归档存储，默认为0
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  */
 class BackupInfo extends AbstractModel
 {
@@ -129,6 +137,26 @@ class BackupInfo extends AbstractModel
     public $SaveMode;
 
     /**
+     * @var string 本地备份所在地域
+     */
+    public $Region;
+
+    /**
+     * @var array 异地备份详细信息
+     */
+    public $RemoteInfo;
+
+    /**
+     * @var integer 存储方式，0-常规存储，1-归档存储，默认为0
+     */
+    public $CosStorageType;
+
+    /**
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Name 备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
      * @param string $Date 备份快照时间，时间格式：2016-03-17 02:10:37
@@ -144,6 +172,10 @@ class BackupInfo extends AbstractModel
      * @param string $Way 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
      * @param string $ManualBackupName 手动备份别名
      * @param string $SaveMode 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
+     * @param string $Region 本地备份所在地域
+     * @param array $RemoteInfo 异地备份详细信息
+     * @param integer $CosStorageType 存储方式，0-常规存储，1-归档存储，默认为0
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     function __construct()
     {
@@ -216,6 +248,27 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("SaveMode",$param) and $param["SaveMode"] !== null) {
             $this->SaveMode = $param["SaveMode"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("RemoteInfo",$param) and $param["RemoteInfo"] !== null) {
+            $this->RemoteInfo = [];
+            foreach ($param["RemoteInfo"] as $key => $value){
+                $obj = new RemoteBackupInfo();
+                $obj->deserialize($value);
+                array_push($this->RemoteInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("CosStorageType",$param) and $param["CosStorageType"] !== null) {
+            $this->CosStorageType = $param["CosStorageType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

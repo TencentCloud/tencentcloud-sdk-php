@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisassociateSecurityGroups请求参数结构体
  *
- * @method string getProduct() 获取数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
- * @method void setProduct(string $Product) 设置数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
- * @method string getSecurityGroupId() 获取安全组Id。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组Id。
- * @method array getInstanceIds() 获取实例ID列表，一个或者多个实例Id组成的数组。
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，一个或者多个实例Id组成的数组。
+ * @method string getProduct() 获取数据库引擎名称，本接口取值：redis。
+ * @method void setProduct(string $Product) 设置数据库引擎名称，本接口取值：redis。
+ * @method string getSecurityGroupId() 获取安全组 ID。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。
+ * @method array getInstanceIds() 获取实例ID列表，一个或者多个实例 ID 组成的数组。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，一个或者多个实例 ID 组成的数组。
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+     * @var string 数据库引擎名称，本接口取值：redis。
      */
     public $Product;
 
     /**
-     * @var string 安全组Id。
+     * @var string 安全组 ID。
      */
     public $SecurityGroupId;
 
     /**
-     * @var array 实例ID列表，一个或者多个实例Id组成的数组。
+     * @var array 实例ID列表，一个或者多个实例 ID 组成的数组。
      */
     public $InstanceIds;
 
     /**
-     * @param string $Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
-     * @param string $SecurityGroupId 安全组Id。
-     * @param array $InstanceIds 实例ID列表，一个或者多个实例Id组成的数组。
+     * @param string $Product 数据库引擎名称，本接口取值：redis。
+     * @param string $SecurityGroupId 安全组 ID。
+     * @param array $InstanceIds 实例ID列表，一个或者多个实例 ID 组成的数组。
      */
     function __construct()
     {

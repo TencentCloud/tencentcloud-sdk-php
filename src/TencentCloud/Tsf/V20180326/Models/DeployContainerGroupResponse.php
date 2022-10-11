@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getResult() 获取部署容器应用是否成功。
 true：成功。
 false：失败。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(boolean $Result) 设置部署容器应用是否成功。
 true：成功。
 false：失败。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,6 +37,7 @@ class DeployContainerGroupResponse extends AbstractModel
      * @var boolean 部署容器应用是否成功。
 true：成功。
 false：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
@@ -47,6 +50,7 @@ false：失败。
      * @param boolean $Result 部署容器应用是否成功。
 true：成功。
 false：失败。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

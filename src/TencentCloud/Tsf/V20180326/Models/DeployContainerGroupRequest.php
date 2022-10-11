@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolumeMountInfoList(array $VolumeMountInfoList) 设置数据卷挂载点信息，list
  * @method boolean getVolumeClean() 获取是否清除数据卷信息，默认false
  * @method void setVolumeClean(boolean $VolumeClean) 设置是否清除数据卷信息，默认false
+ * @method array getAgentProfileList() 获取javaagent信息: SERVICE_AGENT/OT_AGENT
+ * @method void setAgentProfileList(array $AgentProfileList) 设置javaagent信息: SERVICE_AGENT/OT_AGENT
+ * @method WarmupSetting getWarmupSetting() 获取预热配置信息
+ * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置预热配置信息
  */
 class DeployContainerGroupRequest extends AbstractModel
 {
@@ -276,6 +280,16 @@ class DeployContainerGroupRequest extends AbstractModel
     public $VolumeClean;
 
     /**
+     * @var array javaagent信息: SERVICE_AGENT/OT_AGENT
+     */
+    public $AgentProfileList;
+
+    /**
+     * @var WarmupSetting 预热配置信息
+     */
+    public $WarmupSetting;
+
+    /**
      * @param string $GroupId 部署组ID，分组唯一标识
      * @param string $TagName 镜像版本名称,如v1
      * @param integer $InstanceNum 实例数量
@@ -312,6 +326,8 @@ class DeployContainerGroupRequest extends AbstractModel
      * @param array $VolumeInfoList 数据卷信息，list
      * @param array $VolumeMountInfoList 数据卷挂载点信息，list
      * @param boolean $VolumeClean 是否清除数据卷信息，默认false
+     * @param array $AgentProfileList javaagent信息: SERVICE_AGENT/OT_AGENT
+     * @param WarmupSetting $WarmupSetting 预热配置信息
      */
     function __construct()
     {
@@ -488,6 +504,20 @@ class DeployContainerGroupRequest extends AbstractModel
 
         if (array_key_exists("VolumeClean",$param) and $param["VolumeClean"] !== null) {
             $this->VolumeClean = $param["VolumeClean"];
+        }
+
+        if (array_key_exists("AgentProfileList",$param) and $param["AgentProfileList"] !== null) {
+            $this->AgentProfileList = [];
+            foreach ($param["AgentProfileList"] as $key => $value){
+                $obj = new AgentProfile();
+                $obj->deserialize($value);
+                array_push($this->AgentProfileList, $obj);
+            }
+        }
+
+        if (array_key_exists("WarmupSetting",$param) and $param["WarmupSetting"] !== null) {
+            $this->WarmupSetting = new WarmupSetting();
+            $this->WarmupSetting->deserialize($param["WarmupSetting"]);
         }
     }
 }

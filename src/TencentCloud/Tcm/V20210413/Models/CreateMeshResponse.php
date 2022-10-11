@@ -14,37 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Tcm\V20210413\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBSecurityGroups返回参数结构体
+ * CreateMesh返回参数结构体
  *
- * @method array getGroups() 获取安全组规则。
- * @method void setGroups(array $Groups) 设置安全组规则。
- * @method string getVIP() 获取安全组生效内网地址。
- * @method void setVIP(string $VIP) 设置安全组生效内网地址。
- * @method string getVPort() 获取安全组生效内网端口。
- * @method void setVPort(string $VPort) 设置安全组生效内网端口。
+ * @method string getMeshId() 获取创建的Mesh的Id
+ * @method void setMeshId(string $MeshId) 设置创建的Mesh的Id
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDBSecurityGroupsResponse extends AbstractModel
+class CreateMeshResponse extends AbstractModel
 {
     /**
-     * @var array 安全组规则。
+     * @var string 创建的Mesh的Id
      */
-    public $Groups;
-
-    /**
-     * @var string 安全组生效内网地址。
-     */
-    public $VIP;
-
-    /**
-     * @var string 安全组生效内网端口。
-     */
-    public $VPort;
+    public $MeshId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +38,7 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Groups 安全组规则。
-     * @param string $VIP 安全组生效内网地址。
-     * @param string $VPort 安全组生效内网端口。
+     * @param string $MeshId 创建的Mesh的Id
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +54,8 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
-            $this->Groups = [];
-            foreach ($param["Groups"] as $key => $value){
-                $obj = new SecurityGroup();
-                $obj->deserialize($value);
-                array_push($this->Groups, $obj);
-            }
-        }
-
-        if (array_key_exists("VIP",$param) and $param["VIP"] !== null) {
-            $this->VIP = $param["VIP"];
-        }
-
-        if (array_key_exists("VPort",$param) and $param["VPort"] !== null) {
-            $this->VPort = $param["VPort"];
+        if (array_key_exists("MeshId",$param) and $param["MeshId"] !== null) {
+            $this->MeshId = $param["MeshId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

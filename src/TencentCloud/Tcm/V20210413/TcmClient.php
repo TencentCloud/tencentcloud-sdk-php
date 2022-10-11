@@ -23,8 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tcm\V20210413\Models as Models;
 
 /**
+ * @method Models\CreateMeshResponse CreateMesh(Models\CreateMeshRequest $req) 创建网格
+ * @method Models\DeleteMeshResponse DeleteMesh(Models\DeleteMeshRequest $req) 删除网格
  * @method Models\DescribeMeshResponse DescribeMesh(Models\DescribeMeshRequest $req) 查询网格详情
  * @method Models\DescribeMeshListResponse DescribeMeshList(Models\DescribeMeshListRequest $req) 查询网格列表
+ * @method Models\ModifyMeshResponse ModifyMesh(Models\ModifyMeshRequest $req) 修改网格
  */
 
 class TcmClient extends AbstractClient

@@ -141,6 +141,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryCloudOrderResponse QueryCloudOrder(Models\QueryCloudOrderRequest $req) 根据订单号或用户ID，查询支付订单状态。
  * @method Models\QueryCloudRefundOrderResponse QueryCloudRefundOrder(Models\QueryCloudRefundOrderRequest $req) 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时，用微信零钱支付的退款约20分钟内到账，银行卡支付的退款约3个工作日后到账。
  * @method Models\QueryCommonTransferRechargeResponse QueryCommonTransferRecharge(Models\QueryCommonTransferRechargeRequest $req) 查询普通转账充值明细。接口用于查询会员主动转账进资金汇总账户的明细情况。若会员使用绑定账号转入，则直接入账到会员子账户。若未使用绑定账号转入，则系统无法自动清分到对应子账户，则转入挂账子账户由平台自行清分。若是 “见证+收单充值”T0充值记录时备注Note为“见证+收单充值,订单号” 此接口可以查到T0到账的“见证+收单充值”充值记录。
+ * @method Models\QueryCompanyTitleResponse QueryCompanyTitle(Models\QueryCompanyTitleRequest $req) 智慧零售-查询公司抬头
  * @method Models\QueryContractResponse QueryContract(Models\QueryContractRequest $req) 通过此接口查询签约数据
  * @method Models\QueryContractPayFeeResponse QueryContractPayFee(Models\QueryContractPayFeeRequest $req) 云支付-查询支付方式费率及自定义表单项接口
  * @method Models\QueryContractPayWayListResponse QueryContractPayWayList(Models\QueryContractPayWayListRequest $req) 云支付-查询合同支付方式列表接口

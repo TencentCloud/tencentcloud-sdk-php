@@ -32,10 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManualBackupVolume(integer $ManualBackupVolume) 设置当前地域的手动备份总容量。
  * @method integer getManualBackupCount() 获取当前地域的手动备份总个数。
  * @method void setManualBackupCount(integer $ManualBackupCount) 设置当前地域的手动备份总个数。
- * @method integer getRemoteBackupVolume() 获取当前地域异地备份总容量。
- * @method void setRemoteBackupVolume(integer $RemoteBackupVolume) 设置当前地域异地备份总容量。
- * @method integer getRemoteBackupCount() 获取当前地域异地备份总个数。
- * @method void setRemoteBackupCount(integer $RemoteBackupCount) 设置当前地域异地备份总个数。
+ * @method integer getRemoteBackupVolume() 获取异地备份总容量。
+ * @method void setRemoteBackupVolume(integer $RemoteBackupVolume) 设置异地备份总容量。
+ * @method integer getRemoteBackupCount() 获取异地备份总个数。
+ * @method void setRemoteBackupCount(integer $RemoteBackupCount) 设置异地备份总个数。
+ * @method integer getDataBackupArchiveVolume() 获取当前地域归档备份总容量。
+ * @method void setDataBackupArchiveVolume(integer $DataBackupArchiveVolume) 设置当前地域归档备份总容量。
+ * @method integer getDataBackupArchiveCount() 获取当前地域归档备份总个数。
+ * @method void setDataBackupArchiveCount(integer $DataBackupArchiveCount) 设置当前地域归档备份总个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -72,14 +76,24 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
     public $ManualBackupCount;
 
     /**
-     * @var integer 当前地域异地备份总容量。
+     * @var integer 异地备份总容量。
      */
     public $RemoteBackupVolume;
 
     /**
-     * @var integer 当前地域异地备份总个数。
+     * @var integer 异地备份总个数。
      */
     public $RemoteBackupCount;
+
+    /**
+     * @var integer 当前地域归档备份总容量。
+     */
+    public $DataBackupArchiveVolume;
+
+    /**
+     * @var integer 当前地域归档备份总个数。
+     */
+    public $DataBackupArchiveCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -93,8 +107,10 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
      * @param integer $AutoBackupCount 当前地域的自动备份总个数。
      * @param integer $ManualBackupVolume 当前地域的手动备份总容量。
      * @param integer $ManualBackupCount 当前地域的手动备份总个数。
-     * @param integer $RemoteBackupVolume 当前地域异地备份总容量。
-     * @param integer $RemoteBackupCount 当前地域异地备份总个数。
+     * @param integer $RemoteBackupVolume 异地备份总容量。
+     * @param integer $RemoteBackupCount 异地备份总个数。
+     * @param integer $DataBackupArchiveVolume 当前地域归档备份总容量。
+     * @param integer $DataBackupArchiveCount 当前地域归档备份总个数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +156,14 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
 
         if (array_key_exists("RemoteBackupCount",$param) and $param["RemoteBackupCount"] !== null) {
             $this->RemoteBackupCount = $param["RemoteBackupCount"];
+        }
+
+        if (array_key_exists("DataBackupArchiveVolume",$param) and $param["DataBackupArchiveVolume"] !== null) {
+            $this->DataBackupArchiveVolume = $param["DataBackupArchiveVolume"];
+        }
+
+        if (array_key_exists("DataBackupArchiveCount",$param) and $param["DataBackupArchiveCount"] !== null) {
+            $this->DataBackupArchiveCount = $param["DataBackupArchiveCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

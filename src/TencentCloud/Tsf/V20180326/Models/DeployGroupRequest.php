@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJdkName(string $JdkName) 设置JDK名称: konaJDK或openJDK
  * @method string getJdkVersion() 获取JDK版本: 8或11 (openJDK只支持8)
  * @method void setJdkVersion(string $JdkVersion) 设置JDK版本: 8或11 (openJDK只支持8)
+ * @method array getAgentProfileList() 获取部署agent的类型、版本
+ * @method void setAgentProfileList(array $AgentProfileList) 设置部署agent的类型、版本
+ * @method WarmupSetting getWarmupSetting() 获取预热参数配置
+ * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置预热参数配置
  */
 class DeployGroupRequest extends AbstractModel
 {
@@ -143,6 +147,16 @@ class DeployGroupRequest extends AbstractModel
     public $JdkVersion;
 
     /**
+     * @var array 部署agent的类型、版本
+     */
+    public $AgentProfileList;
+
+    /**
+     * @var WarmupSetting 预热参数配置
+     */
+    public $WarmupSetting;
+
+    /**
      * @param string $GroupId 部署组ID
      * @param string $PkgId 程序包ID
      * @param string $StartupParameters 部署组启动参数
@@ -160,6 +174,8 @@ class DeployGroupRequest extends AbstractModel
      * @param boolean $IncrementalDeployment 是否进行增量部署，默认为false，全量更新
      * @param string $JdkName JDK名称: konaJDK或openJDK
      * @param string $JdkVersion JDK版本: 8或11 (openJDK只支持8)
+     * @param array $AgentProfileList 部署agent的类型、版本
+     * @param WarmupSetting $WarmupSetting 预热参数配置
      */
     function __construct()
     {
@@ -241,6 +257,20 @@ class DeployGroupRequest extends AbstractModel
 
         if (array_key_exists("JdkVersion",$param) and $param["JdkVersion"] !== null) {
             $this->JdkVersion = $param["JdkVersion"];
+        }
+
+        if (array_key_exists("AgentProfileList",$param) and $param["AgentProfileList"] !== null) {
+            $this->AgentProfileList = [];
+            foreach ($param["AgentProfileList"] as $key => $value){
+                $obj = new AgentProfile();
+                $obj->deserialize($value);
+                array_push($this->AgentProfileList, $obj);
+            }
+        }
+
+        if (array_key_exists("WarmupSetting",$param) and $param["WarmupSetting"] !== null) {
+            $this->WarmupSetting = new WarmupSetting();
+            $this->WarmupSetting->deserialize($param["WarmupSetting"]);
         }
     }
 }

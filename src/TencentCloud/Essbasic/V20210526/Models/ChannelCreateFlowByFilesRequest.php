@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadline(integer $Deadline) 设置签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
  * @method string getCallbackUrl() 获取签署流程回调地址，长度不超过255个字符
  * @method void setCallbackUrl(string $CallbackUrl) 设置签署流程回调地址，长度不超过255个字符
- * @method boolean getUnordered() 获取合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
- * @method void setUnordered(boolean $Unordered) 设置合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
+ * @method boolean getUnordered() 获取合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
+ * @method void setUnordered(boolean $Unordered) 设置合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
  * @method string getFlowType() 获取签署流程的类型，长度不超过255个字符
  * @method void setFlowType(string $FlowType) 设置签署流程的类型，长度不超过255个字符
  * @method string getFlowDescription() 获取签署流程的描述，长度不超过1000个字符
@@ -87,7 +87,7 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
     public $CallbackUrl;
 
     /**
-     * @var boolean 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
+     * @var boolean 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
      */
     public $Unordered;
 
@@ -129,7 +129,7 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
      * @param array $Components 签署文件中的发起方的填写控件，需要在发起的时候进行填充
      * @param integer $Deadline 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
      * @param string $CallbackUrl 签署流程回调地址，长度不超过255个字符
-     * @param boolean $Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
+     * @param boolean $Unordered 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
      * @param string $FlowType 签署流程的类型，长度不超过255个字符
      * @param string $FlowDescription 签署流程的描述，长度不超过1000个字符
      * @param string $CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始

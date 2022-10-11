@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoteBinlogVolume(integer $RemoteBinlogVolume) 设置异地日志备份容量（单位为字节）。
  * @method integer getRemoteBinlogCount() 获取异地日志备份个数。
  * @method void setRemoteBinlogCount(integer $RemoteBinlogCount) 设置异地日志备份个数。
+ * @method integer getBinlogArchiveVolume() 获取归档日志备份容量（单位为字节）。
+ * @method void setBinlogArchiveVolume(integer $BinlogArchiveVolume) 设置归档日志备份容量（单位为字节）。
+ * @method integer getBinlogArchiveCount() 获取归档日志备份个数。
+ * @method void setBinlogArchiveCount(integer $BinlogArchiveCount) 设置归档日志备份个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,6 +58,16 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
     public $RemoteBinlogCount;
 
     /**
+     * @var integer 归档日志备份容量（单位为字节）。
+     */
+    public $BinlogArchiveVolume;
+
+    /**
+     * @var integer 归档日志备份个数。
+     */
+    public $BinlogArchiveCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +77,8 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
      * @param integer $BinlogBackupCount 总的日志备份个数，包含异地日志备份。
      * @param integer $RemoteBinlogVolume 异地日志备份容量（单位为字节）。
      * @param integer $RemoteBinlogCount 异地日志备份个数。
+     * @param integer $BinlogArchiveVolume 归档日志备份容量（单位为字节）。
+     * @param integer $BinlogArchiveCount 归档日志备份个数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +108,14 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
 
         if (array_key_exists("RemoteBinlogCount",$param) and $param["RemoteBinlogCount"] !== null) {
             $this->RemoteBinlogCount = $param["RemoteBinlogCount"];
+        }
+
+        if (array_key_exists("BinlogArchiveVolume",$param) and $param["BinlogArchiveVolume"] !== null) {
+            $this->BinlogArchiveVolume = $param["BinlogArchiveVolume"];
+        }
+
+        if (array_key_exists("BinlogArchiveCount",$param) and $param["BinlogArchiveCount"] !== null) {
+            $this->BinlogArchiveCount = $param["BinlogArchiveCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

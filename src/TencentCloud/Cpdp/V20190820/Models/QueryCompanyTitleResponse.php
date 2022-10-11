@@ -14,37 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Cpdp\V20190820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBSecurityGroups返回参数结构体
+ * QueryCompanyTitle返回参数结构体
  *
- * @method array getGroups() 获取安全组规则。
- * @method void setGroups(array $Groups) 设置安全组规则。
- * @method string getVIP() 获取安全组生效内网地址。
- * @method void setVIP(string $VIP) 设置安全组生效内网地址。
- * @method string getVPort() 获取安全组生效内网端口。
- * @method void setVPort(string $VPort) 设置安全组生效内网端口。
+ * @method string getErrCode() 获取错误码
+ * @method void setErrCode(string $ErrCode) 设置错误码
+ * @method string getErrMessage() 获取错误消息
+ * @method void setErrMessage(string $ErrMessage) 设置错误消息
+ * @method array getResult() 获取公司抬头结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(array $Result) 设置公司抬头结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDBSecurityGroupsResponse extends AbstractModel
+class QueryCompanyTitleResponse extends AbstractModel
 {
     /**
-     * @var array 安全组规则。
+     * @var string 错误码
      */
-    public $Groups;
+    public $ErrCode;
 
     /**
-     * @var string 安全组生效内网地址。
+     * @var string 错误消息
      */
-    public $VIP;
+    public $ErrMessage;
 
     /**
-     * @var string 安全组生效内网端口。
+     * @var array 公司抬头结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $VPort;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +55,10 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Groups 安全组规则。
-     * @param string $VIP 安全组生效内网地址。
-     * @param string $VPort 安全组生效内网端口。
+     * @param string $ErrCode 错误码
+     * @param string $ErrMessage 错误消息
+     * @param array $Result 公司抬头结果
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +74,21 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
-            $this->Groups = [];
-            foreach ($param["Groups"] as $key => $value){
-                $obj = new SecurityGroup();
+        if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
+            $this->ErrCode = $param["ErrCode"];
+        }
+
+        if (array_key_exists("ErrMessage",$param) and $param["ErrMessage"] !== null) {
+            $this->ErrMessage = $param["ErrMessage"];
+        }
+
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = [];
+            foreach ($param["Result"] as $key => $value){
+                $obj = new CompanyTitleResult();
                 $obj->deserialize($value);
-                array_push($this->Groups, $obj);
+                array_push($this->Result, $obj);
             }
-        }
-
-        if (array_key_exists("VIP",$param) and $param["VIP"] !== null) {
-            $this->VIP = $param["VIP"];
-        }
-
-        if (array_key_exists("VPort",$param) and $param["VPort"] !== null) {
-            $this->VPort = $param["VPort"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogStartTime(string $BinlogStartTime) 设置binlog 文件起始时间
  * @method string getBinlogFinishTime() 获取binlog 文件截止时间
  * @method void setBinlogFinishTime(string $BinlogFinishTime) 设置binlog 文件截止时间
+ * @method string getRegion() 获取本地binlog文件所在地域
+ * @method void setRegion(string $Region) 设置本地binlog文件所在地域
+ * @method string getStatus() 获取备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+ * @method void setStatus(string $Status) 设置备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+ * @method array getRemoteInfo() 获取binlog异地备份详细信息
+ * @method void setRemoteInfo(array $RemoteInfo) 设置binlog异地备份详细信息
+ * @method integer getCosStorageType() 获取存储方式，0-常规存储，1-归档存储，默认为0
+ * @method void setCosStorageType(integer $CosStorageType) 设置存储方式，0-常规存储，1-归档存储，默认为0
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  */
 class BinlogInfo extends AbstractModel
 {
@@ -80,6 +90,31 @@ class BinlogInfo extends AbstractModel
     public $BinlogFinishTime;
 
     /**
+     * @var string 本地binlog文件所在地域
+     */
+    public $Region;
+
+    /**
+     * @var string 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+     */
+    public $Status;
+
+    /**
+     * @var array binlog异地备份详细信息
+     */
+    public $RemoteInfo;
+
+    /**
+     * @var integer 存储方式，0-常规存储，1-归档存储，默认为0
+     */
+    public $CosStorageType;
+
+    /**
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Name binlog 日志备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
      * @param string $Date 文件存储时间，时间格式：2016-03-17 02:10:37
@@ -88,6 +123,11 @@ class BinlogInfo extends AbstractModel
      * @param string $Type 日志具体类型，可能的值有：binlog - 二进制日志
      * @param string $BinlogStartTime binlog 文件起始时间
      * @param string $BinlogFinishTime binlog 文件截止时间
+     * @param string $Region 本地binlog文件所在地域
+     * @param string $Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+     * @param array $RemoteInfo binlog异地备份详细信息
+     * @param integer $CosStorageType 存储方式，0-常规存储，1-归档存储，默认为0
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     function __construct()
     {
@@ -132,6 +172,31 @@ class BinlogInfo extends AbstractModel
 
         if (array_key_exists("BinlogFinishTime",$param) and $param["BinlogFinishTime"] !== null) {
             $this->BinlogFinishTime = $param["BinlogFinishTime"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("RemoteInfo",$param) and $param["RemoteInfo"] !== null) {
+            $this->RemoteInfo = [];
+            foreach ($param["RemoteInfo"] as $key => $value){
+                $obj = new RemoteBackupInfo();
+                $obj->deserialize($value);
+                array_push($this->RemoteInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("CosStorageType",$param) and $param["CosStorageType"] !== null) {
+            $this->CosStorageType = $param["CosStorageType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

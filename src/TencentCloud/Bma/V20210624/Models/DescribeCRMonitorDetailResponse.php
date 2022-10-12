@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCRMonitorDetail返回参数结构体
  *
- * @method array getTorts() 获取MonitorTort数组
- * @method void setTorts(array $Torts) 设置MonitorTort数组
+ * @method array getTorts() 获取侵权数组
+ * @method void setTorts(array $Torts) 设置侵权数组
  * @method integer getTotalCount() 获取总记录数
  * @method void setTotalCount(integer $TotalCount) 设置总记录数
- * @method integer getMonitorStatus() 获取x
- * @method void setMonitorStatus(integer $MonitorStatus) 设置x
+ * @method integer getMonitorStatus() 获取监测状态
+ * @method void setMonitorStatus(integer $MonitorStatus) 设置监测状态
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCRMonitorDetailResponse extends AbstractModel
 {
     /**
-     * @var array MonitorTort数组
+     * @var array 侵权数组
      */
     public $Torts;
 
@@ -42,7 +42,7 @@ class DescribeCRMonitorDetailResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var integer x
+     * @var integer 监测状态
      */
     public $MonitorStatus;
 
@@ -52,9 +52,9 @@ class DescribeCRMonitorDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Torts MonitorTort数组
+     * @param array $Torts 侵权数组
      * @param integer $TotalCount 总记录数
-     * @param integer $MonitorStatus x
+     * @param integer $MonitorStatus 监测状态
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

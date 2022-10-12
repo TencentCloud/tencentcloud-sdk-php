@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTortId() 获取侵权ID
  * @method void setTortId(integer $TortId) 设置侵权ID
- * @method string getTortNum() 获取xxx
- * @method void setTortNum(string $TortNum) 设置xxx
+ * @method string getTortNum() 获取该字段已废弃
+ * @method void setTortNum(string $TortNum) 设置该字段已废弃
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class CreateCRBlockResponse extends AbstractModel
     public $TortId;
 
     /**
-     * @var string xxx
+     * @var string 该字段已废弃
      */
     public $TortNum;
 
@@ -46,7 +46,7 @@ class CreateCRBlockResponse extends AbstractModel
 
     /**
      * @param integer $TortId 侵权ID
-     * @param string $TortNum xxx
+     * @param string $TortNum 该字段已废弃
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

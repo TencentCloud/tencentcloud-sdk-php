@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCRWork返回参数结构体
  *
- * @method integer getWorkId() 获取xx
- * @method void setWorkId(integer $WorkId) 设置xx
- * @method integer getEvidenceId() 获取xx
- * @method void setEvidenceId(integer $EvidenceId) 设置xx
+ * @method integer getWorkId() 获取作品ID
+ * @method void setWorkId(integer $WorkId) 设置作品ID
+ * @method integer getEvidenceId() 获取存证ID
+ * @method void setEvidenceId(integer $EvidenceId) 设置存证ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class UpdateCRWorkResponse extends AbstractModel
 {
     /**
-     * @var integer xx
+     * @var integer 作品ID
      */
     public $WorkId;
 
     /**
-     * @var integer xx
+     * @var integer 存证ID
      */
     public $EvidenceId;
 
@@ -45,8 +45,8 @@ class UpdateCRWorkResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $WorkId xx
-     * @param integer $EvidenceId xx
+     * @param integer $WorkId 作品ID
+     * @param integer $EvidenceId 存证ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

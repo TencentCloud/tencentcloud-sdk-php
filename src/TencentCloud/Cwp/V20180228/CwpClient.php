@@ -99,6 +99,8 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeBaselineDetailResponse DescribeBaselineDetail(Models\DescribeBaselineDetailRequest $req) 根据基线id查询基线详情接口
  * @method Models\DescribeBaselineEffectHostListResponse DescribeBaselineEffectHostList(Models\DescribeBaselineEffectHostListRequest $req) 根据基线id查询基线影响主机列表
  * @method Models\DescribeBaselineHostTopResponse DescribeBaselineHostTop(Models\DescribeBaselineHostTopRequest $req) 接口返回TopN的风险服务器
+ * @method Models\DescribeBaselineItemDetectListResponse DescribeBaselineItemDetectList(Models\DescribeBaselineItemDetectListRequest $req) 获取基线检测项的列表
+ * @method Models\DescribeBaselineItemListResponse DescribeBaselineItemList(Models\DescribeBaselineItemListRequest $req) 获取基线项检测结果列表
  * @method Models\DescribeBaselineListResponse DescribeBaselineList(Models\DescribeBaselineListRequest $req) 查询基线列表信息
  * @method Models\DescribeBaselineRuleResponse DescribeBaselineRule(Models\DescribeBaselineRuleRequest $req) 根据基线id查询下属检测项信息
  * @method Models\DescribeBaselineScanScheduleResponse DescribeBaselineScanSchedule(Models\DescribeBaselineScanScheduleRequest $req) 根据任务id查询基线检测进度
@@ -238,9 +240,11 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\ScanVulSettingResponse ScanVulSetting(Models\ScanVulSettingRequest $req) 定期扫描漏洞设置
  * @method Models\SeparateMalwaresResponse SeparateMalwares(Models\SeparateMalwaresRequest $req) 本接口（SeparateMalwares）用于隔离木马。
  * @method Models\SetBashEventsStatusResponse SetBashEventsStatus(Models\SetBashEventsStatusRequest $req) 设置高危命令事件状态
+ * @method Models\StartBaselineDetectResponse StartBaselineDetect(Models\StartBaselineDetectRequest $req) 检测基线
  * @method Models\StopNoticeBanTipsResponse StopNoticeBanTips(Models\StopNoticeBanTipsRequest $req) 不再提醒爆破阻断提示弹窗
  * @method Models\SwitchBashRulesResponse SwitchBashRules(Models\SwitchBashRulesRequest $req) 切换高危命令规则状态
  * @method Models\SyncAssetScanResponse SyncAssetScan(Models\SyncAssetScanRequest $req) 同步资产扫描信息
+ * @method Models\SyncBaselineDetectSummaryResponse SyncBaselineDetectSummary(Models\SyncBaselineDetectSummaryRequest $req) 同步基线检测进度概要
  * @method Models\TrustMalwaresResponse TrustMalwares(Models\TrustMalwaresRequest $req) 本接口(TrustMalwares)将被识别木马文件设为信任。
  * @method Models\UntrustMalwaresResponse UntrustMalwares(Models\UntrustMalwaresRequest $req) 本接口（UntrustMalwares）用于取消信任木马文件。
  * @method Models\UpdateBaselineStrategyResponse UpdateBaselineStrategy(Models\UpdateBaselineStrategyRequest $req) 根据基线策略id更新策略信息

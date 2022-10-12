@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCRRight请求参数结构体
  *
- * @method integer getWorkId() 获取已存证的作品ID
- * @method void setWorkId(integer $WorkId) 设置已存证的作品ID
+ * @method integer getWorkId() 获取作品ID
+ * @method void setWorkId(integer $WorkId) 设置作品ID
  * @method string getTortUrl() 获取侵权链接
  * @method void setTortUrl(string $TortUrl) 设置侵权链接
  * @method string getTortTitle() 获取侵权标题
@@ -30,37 +30,37 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTortPlat(string $TortPlat) 设置侵权平台
  * @method string getRightUrl() 获取发函结果回调地址
  * @method void setRightUrl(string $RightUrl) 设置发函结果回调地址
- * @method string getFileUrl() 获取x
- * @method void setFileUrl(string $FileUrl) 设置x
- * @method string getValidStartDate() 获取x
- * @method void setValidStartDate(string $ValidStartDate) 设置x
- * @method string getValidEndDate() 获取x
- * @method void setValidEndDate(string $ValidEndDate) 设置x
- * @method string getCommFileUrl() 获取x
- * @method void setCommFileUrl(string $CommFileUrl) 设置x
- * @method string getCommValidStartDate() 获取x
- * @method void setCommValidStartDate(string $CommValidStartDate) 设置x
- * @method string getCommValidEndDate() 获取x
- * @method void setCommValidEndDate(string $CommValidEndDate) 设置x
- * @method string getHomeFileUrl() 获取x
- * @method void setHomeFileUrl(string $HomeFileUrl) 设置x
- * @method string getHomeValidStartDate() 获取x
- * @method void setHomeValidStartDate(string $HomeValidStartDate) 设置x
- * @method string getHomeValidEndDate() 获取x
- * @method void setHomeValidEndDate(string $HomeValidEndDate) 设置x
- * @method string getIsProducer() 获取x
- * @method void setIsProducer(string $IsProducer) 设置x
- * @method string getEvidenceFileUrl() 获取x
- * @method void setEvidenceFileUrl(string $EvidenceFileUrl) 设置x
- * @method string getEvidenceValidStartDate() 获取x
- * @method void setEvidenceValidStartDate(string $EvidenceValidStartDate) 设置x
- * @method string getEvidenceValidEndDate() 获取x
- * @method void setEvidenceValidEndDate(string $EvidenceValidEndDate) 设置x
+ * @method string getFileUrl() 获取授权书下载地址
+ * @method void setFileUrl(string $FileUrl) 设置授权书下载地址
+ * @method string getValidStartDate() 获取授权书生效日期
+ * @method void setValidStartDate(string $ValidStartDate) 设置授权书生效日期
+ * @method string getValidEndDate() 获取授权书截止日期
+ * @method void setValidEndDate(string $ValidEndDate) 设置授权书截止日期
+ * @method string getCommFileUrl() 获取委托书下载地址
+ * @method void setCommFileUrl(string $CommFileUrl) 设置委托书下载地址
+ * @method string getCommValidStartDate() 获取委托书生效日期
+ * @method void setCommValidStartDate(string $CommValidStartDate) 设置委托书生效日期
+ * @method string getCommValidEndDate() 获取委托书截止日期
+ * @method void setCommValidEndDate(string $CommValidEndDate) 设置委托书截止日期
+ * @method string getHomeFileUrl() 获取主页下载地址
+ * @method void setHomeFileUrl(string $HomeFileUrl) 设置主页下载地址
+ * @method string getHomeValidStartDate() 获取主页生效日期
+ * @method void setHomeValidStartDate(string $HomeValidStartDate) 设置主页生效日期
+ * @method string getHomeValidEndDate() 获取主页截止日期
+ * @method void setHomeValidEndDate(string $HomeValidEndDate) 设置主页截止日期
+ * @method string getIsProducer() 获取是否著作权人：0-否 1-是
+ * @method void setIsProducer(string $IsProducer) 设置是否著作权人：0-否 1-是
+ * @method string getEvidenceFileUrl() 获取存证证书下载地址
+ * @method void setEvidenceFileUrl(string $EvidenceFileUrl) 设置存证证书下载地址
+ * @method string getEvidenceValidStartDate() 获取存证证书生效日期
+ * @method void setEvidenceValidStartDate(string $EvidenceValidStartDate) 设置存证证书生效日期
+ * @method string getEvidenceValidEndDate() 获取存证证书截止日期
+ * @method void setEvidenceValidEndDate(string $EvidenceValidEndDate) 设置存证证书截止日期
  */
 class CreateCRRightRequest extends AbstractModel
 {
     /**
-     * @var integer 已存证的作品ID
+     * @var integer 作品ID
      */
     public $WorkId;
 
@@ -85,89 +85,89 @@ class CreateCRRightRequest extends AbstractModel
     public $RightUrl;
 
     /**
-     * @var string x
+     * @var string 授权书下载地址
      */
     public $FileUrl;
 
     /**
-     * @var string x
+     * @var string 授权书生效日期
      */
     public $ValidStartDate;
 
     /**
-     * @var string x
+     * @var string 授权书截止日期
      */
     public $ValidEndDate;
 
     /**
-     * @var string x
+     * @var string 委托书下载地址
      */
     public $CommFileUrl;
 
     /**
-     * @var string x
+     * @var string 委托书生效日期
      */
     public $CommValidStartDate;
 
     /**
-     * @var string x
+     * @var string 委托书截止日期
      */
     public $CommValidEndDate;
 
     /**
-     * @var string x
+     * @var string 主页下载地址
      */
     public $HomeFileUrl;
 
     /**
-     * @var string x
+     * @var string 主页生效日期
      */
     public $HomeValidStartDate;
 
     /**
-     * @var string x
+     * @var string 主页截止日期
      */
     public $HomeValidEndDate;
 
     /**
-     * @var string x
+     * @var string 是否著作权人：0-否 1-是
      */
     public $IsProducer;
 
     /**
-     * @var string x
+     * @var string 存证证书下载地址
      */
     public $EvidenceFileUrl;
 
     /**
-     * @var string x
+     * @var string 存证证书生效日期
      */
     public $EvidenceValidStartDate;
 
     /**
-     * @var string x
+     * @var string 存证证书截止日期
      */
     public $EvidenceValidEndDate;
 
     /**
-     * @param integer $WorkId 已存证的作品ID
+     * @param integer $WorkId 作品ID
      * @param string $TortUrl 侵权链接
      * @param string $TortTitle 侵权标题
      * @param string $TortPlat 侵权平台
      * @param string $RightUrl 发函结果回调地址
-     * @param string $FileUrl x
-     * @param string $ValidStartDate x
-     * @param string $ValidEndDate x
-     * @param string $CommFileUrl x
-     * @param string $CommValidStartDate x
-     * @param string $CommValidEndDate x
-     * @param string $HomeFileUrl x
-     * @param string $HomeValidStartDate x
-     * @param string $HomeValidEndDate x
-     * @param string $IsProducer x
-     * @param string $EvidenceFileUrl x
-     * @param string $EvidenceValidStartDate x
-     * @param string $EvidenceValidEndDate x
+     * @param string $FileUrl 授权书下载地址
+     * @param string $ValidStartDate 授权书生效日期
+     * @param string $ValidEndDate 授权书截止日期
+     * @param string $CommFileUrl 委托书下载地址
+     * @param string $CommValidStartDate 委托书生效日期
+     * @param string $CommValidEndDate 委托书截止日期
+     * @param string $HomeFileUrl 主页下载地址
+     * @param string $HomeValidStartDate 主页生效日期
+     * @param string $HomeValidEndDate 主页截止日期
+     * @param string $IsProducer 是否著作权人：0-否 1-是
+     * @param string $EvidenceFileUrl 存证证书下载地址
+     * @param string $EvidenceValidStartDate 存证证书生效日期
+     * @param string $EvidenceValidEndDate 存证证书截止日期
      */
     function __construct()
     {

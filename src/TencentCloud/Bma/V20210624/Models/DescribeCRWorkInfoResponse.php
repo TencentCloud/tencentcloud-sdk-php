@@ -20,162 +20,162 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCRWorkInfo返回参数结构体
  *
- * @method string getWorkName() 获取x
- * @method void setWorkName(string $WorkName) 设置x
- * @method integer getMonitorStatus() 获取x
- * @method void setMonitorStatus(integer $MonitorStatus) 设置x
- * @method integer getAuthStatus() 获取x
- * @method void setAuthStatus(integer $AuthStatus) 设置x
- * @method integer getCommStatus() 获取x
- * @method void setCommStatus(integer $CommStatus) 设置x
- * @method integer getIsProducer() 获取x
- * @method void setIsProducer(integer $IsProducer) 设置x
- * @method integer getEvidenceStatus() 获取xxx
- * @method void setEvidenceStatus(integer $EvidenceStatus) 设置xxx
- * @method string getWorkCategory() 获取xxx
- * @method void setWorkCategory(string $WorkCategory) 设置xxx
- * @method string getIsOriginal() 获取xxx
- * @method void setIsOriginal(string $IsOriginal) 设置xxx
- * @method string getIsRelease() 获取xxx
- * @method void setIsRelease(string $IsRelease) 设置xxx
- * @method string getProducerName() 获取xxx
- * @method void setProducerName(string $ProducerName) 设置xxx
- * @method string getProduceTime() 获取xxx
- * @method void setProduceTime(string $ProduceTime) 设置xxx
- * @method array getWhiteLists() 获取xxx
- * @method void setWhiteLists(array $WhiteLists) 设置xxx
- * @method string getWorkDesc() 获取xxx
- * @method void setWorkDesc(string $WorkDesc) 设置xxx
- * @method string getAuthorization() 获取xxx
- * @method void setAuthorization(string $Authorization) 设置xxx
- * @method string getAuthorizationStartTime() 获取xxx
- * @method void setAuthorizationStartTime(string $AuthorizationStartTime) 设置xxx
- * @method string getAuthorizationEndTime() 获取xxx
- * @method void setAuthorizationEndTime(string $AuthorizationEndTime) 设置xxx
- * @method string getCommission() 获取xxx
- * @method void setCommission(string $Commission) 设置xxx
- * @method string getCommissionStartTime() 获取xxx
- * @method void setCommissionStartTime(string $CommissionStartTime) 设置xxx
- * @method string getCommissionEndTime() 获取xxx
- * @method void setCommissionEndTime(string $CommissionEndTime) 设置xxx
- * @method string getEvidenceUrl() 获取xxx
- * @method void setEvidenceUrl(string $EvidenceUrl) 设置xxx
- * @method string getEvidenceStartTime() 获取xxx
- * @method void setEvidenceStartTime(string $EvidenceStartTime) 设置xxx
- * @method string getEvidenceEndTime() 获取xxx
- * @method void setEvidenceEndTime(string $EvidenceEndTime) 设置xxx
+ * @method string getWorkName() 获取作品名称
+ * @method void setWorkName(string $WorkName) 设置作品名称
+ * @method integer getMonitorStatus() 获取监测状态
+ * @method void setMonitorStatus(integer $MonitorStatus) 设置监测状态
+ * @method integer getAuthStatus() 获取授权文件状态
+ * @method void setAuthStatus(integer $AuthStatus) 设置授权文件状态
+ * @method integer getCommStatus() 获取委托书状态
+ * @method void setCommStatus(integer $CommStatus) 设置委托书状态
+ * @method integer getIsProducer() 获取是否著作权人
+ * @method void setIsProducer(integer $IsProducer) 设置是否著作权人
+ * @method integer getEvidenceStatus() 获取存证证书状态
+ * @method void setEvidenceStatus(integer $EvidenceStatus) 设置存证证书状态
+ * @method string getWorkCategory() 获取作品类型
+ * @method void setWorkCategory(string $WorkCategory) 设置作品类型
+ * @method string getIsOriginal() 获取是否原创
+ * @method void setIsOriginal(string $IsOriginal) 设置是否原创
+ * @method string getIsRelease() 获取是否已发表
+ * @method void setIsRelease(string $IsRelease) 设置是否已发表
+ * @method string getProducerName() 获取著作权人姓名
+ * @method void setProducerName(string $ProducerName) 设置著作权人姓名
+ * @method string getProduceTime() 获取发表时间
+ * @method void setProduceTime(string $ProduceTime) 设置发表时间
+ * @method array getWhiteLists() 获取白名单
+ * @method void setWhiteLists(array $WhiteLists) 设置白名单
+ * @method string getWorkDesc() 获取作品描述
+ * @method void setWorkDesc(string $WorkDesc) 设置作品描述
+ * @method string getAuthorization() 获取授权书
+ * @method void setAuthorization(string $Authorization) 设置授权书
+ * @method string getAuthorizationStartTime() 获取授权书生效日期
+ * @method void setAuthorizationStartTime(string $AuthorizationStartTime) 设置授权书生效日期
+ * @method string getAuthorizationEndTime() 获取授权书截止日期
+ * @method void setAuthorizationEndTime(string $AuthorizationEndTime) 设置授权书截止日期
+ * @method string getCommission() 获取委托书
+ * @method void setCommission(string $Commission) 设置委托书
+ * @method string getCommissionStartTime() 获取委托书生效日期
+ * @method void setCommissionStartTime(string $CommissionStartTime) 设置委托书生效日期
+ * @method string getCommissionEndTime() 获取委托书截止日期
+ * @method void setCommissionEndTime(string $CommissionEndTime) 设置委托书截止日期
+ * @method string getEvidenceUrl() 获取存证证书
+ * @method void setEvidenceUrl(string $EvidenceUrl) 设置存证证书
+ * @method string getEvidenceStartTime() 获取存证证书生效日期
+ * @method void setEvidenceStartTime(string $EvidenceStartTime) 设置存证证书生效日期
+ * @method string getEvidenceEndTime() 获取存证证书截止日期
+ * @method void setEvidenceEndTime(string $EvidenceEndTime) 设置存证证书截止日期
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCRWorkInfoResponse extends AbstractModel
 {
     /**
-     * @var string x
+     * @var string 作品名称
      */
     public $WorkName;
 
     /**
-     * @var integer x
+     * @var integer 监测状态
      */
     public $MonitorStatus;
 
     /**
-     * @var integer x
+     * @var integer 授权文件状态
      */
     public $AuthStatus;
 
     /**
-     * @var integer x
+     * @var integer 委托书状态
      */
     public $CommStatus;
 
     /**
-     * @var integer x
+     * @var integer 是否著作权人
      */
     public $IsProducer;
 
     /**
-     * @var integer xxx
+     * @var integer 存证证书状态
      */
     public $EvidenceStatus;
 
     /**
-     * @var string xxx
+     * @var string 作品类型
      */
     public $WorkCategory;
 
     /**
-     * @var string xxx
+     * @var string 是否原创
      */
     public $IsOriginal;
 
     /**
-     * @var string xxx
+     * @var string 是否已发表
      */
     public $IsRelease;
 
     /**
-     * @var string xxx
+     * @var string 著作权人姓名
      */
     public $ProducerName;
 
     /**
-     * @var string xxx
+     * @var string 发表时间
      */
     public $ProduceTime;
 
     /**
-     * @var array xxx
+     * @var array 白名单
      */
     public $WhiteLists;
 
     /**
-     * @var string xxx
+     * @var string 作品描述
      */
     public $WorkDesc;
 
     /**
-     * @var string xxx
+     * @var string 授权书
      */
     public $Authorization;
 
     /**
-     * @var string xxx
+     * @var string 授权书生效日期
      */
     public $AuthorizationStartTime;
 
     /**
-     * @var string xxx
+     * @var string 授权书截止日期
      */
     public $AuthorizationEndTime;
 
     /**
-     * @var string xxx
+     * @var string 委托书
      */
     public $Commission;
 
     /**
-     * @var string xxx
+     * @var string 委托书生效日期
      */
     public $CommissionStartTime;
 
     /**
-     * @var string xxx
+     * @var string 委托书截止日期
      */
     public $CommissionEndTime;
 
     /**
-     * @var string xxx
+     * @var string 存证证书
      */
     public $EvidenceUrl;
 
     /**
-     * @var string xxx
+     * @var string 存证证书生效日期
      */
     public $EvidenceStartTime;
 
     /**
-     * @var string xxx
+     * @var string 存证证书截止日期
      */
     public $EvidenceEndTime;
 
@@ -185,28 +185,28 @@ class DescribeCRWorkInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $WorkName x
-     * @param integer $MonitorStatus x
-     * @param integer $AuthStatus x
-     * @param integer $CommStatus x
-     * @param integer $IsProducer x
-     * @param integer $EvidenceStatus xxx
-     * @param string $WorkCategory xxx
-     * @param string $IsOriginal xxx
-     * @param string $IsRelease xxx
-     * @param string $ProducerName xxx
-     * @param string $ProduceTime xxx
-     * @param array $WhiteLists xxx
-     * @param string $WorkDesc xxx
-     * @param string $Authorization xxx
-     * @param string $AuthorizationStartTime xxx
-     * @param string $AuthorizationEndTime xxx
-     * @param string $Commission xxx
-     * @param string $CommissionStartTime xxx
-     * @param string $CommissionEndTime xxx
-     * @param string $EvidenceUrl xxx
-     * @param string $EvidenceStartTime xxx
-     * @param string $EvidenceEndTime xxx
+     * @param string $WorkName 作品名称
+     * @param integer $MonitorStatus 监测状态
+     * @param integer $AuthStatus 授权文件状态
+     * @param integer $CommStatus 委托书状态
+     * @param integer $IsProducer 是否著作权人
+     * @param integer $EvidenceStatus 存证证书状态
+     * @param string $WorkCategory 作品类型
+     * @param string $IsOriginal 是否原创
+     * @param string $IsRelease 是否已发表
+     * @param string $ProducerName 著作权人姓名
+     * @param string $ProduceTime 发表时间
+     * @param array $WhiteLists 白名单
+     * @param string $WorkDesc 作品描述
+     * @param string $Authorization 授权书
+     * @param string $AuthorizationStartTime 授权书生效日期
+     * @param string $AuthorizationEndTime 授权书截止日期
+     * @param string $Commission 委托书
+     * @param string $CommissionStartTime 委托书生效日期
+     * @param string $CommissionEndTime 委托书截止日期
+     * @param string $EvidenceUrl 存证证书
+     * @param string $EvidenceStartTime 存证证书生效日期
+     * @param string $EvidenceEndTime 存证证书截止日期
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCRRightFile返回参数结构体
  *
- * @method array getFileIds() 获取xxx
- * @method void setFileIds(array $FileIds) 设置xxx
+ * @method array getFileIds() 获取权属文件Id，按提交顺序排序
+ * @method void setFileIds(array $FileIds) 设置权属文件Id，按提交顺序排序
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCRRightFileResponse extends AbstractModel
 {
     /**
-     * @var array xxx
+     * @var array 权属文件Id，按提交顺序排序
      */
     public $FileIds;
 
@@ -38,7 +38,7 @@ class CreateCRRightFileResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FileIds xxx
+     * @param array $FileIds 权属文件Id，按提交顺序排序
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

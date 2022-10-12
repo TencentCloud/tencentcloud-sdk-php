@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Bma\V20210624\Models;
+namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCRWorkInfo请求参数结构体
+ * SyncBaselineDetectSummary请求参数结构体
  *
- * @method integer getWorkId() 获取作品ID
- * @method void setWorkId(integer $WorkId) 设置作品ID
+
  */
-class DescribeCRWorkInfoRequest extends AbstractModel
+class SyncBaselineDetectSummaryRequest extends AbstractModel
 {
-    /**
-     * @var integer 作品ID
-     */
-    public $WorkId;
+
 
     /**
-     * @param integer $WorkId 作品ID
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeCRWorkInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WorkId",$param) and $param["WorkId"] !== null) {
-            $this->WorkId = $param["WorkId"];
-        }
+
     }
 }

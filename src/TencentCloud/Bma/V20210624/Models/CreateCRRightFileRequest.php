@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCRRightFile请求参数结构体
  *
- * @method integer getWorkId() 获取xxx
- * @method void setWorkId(integer $WorkId) 设置xxx
- * @method array getFileList() 获取xxx
- * @method void setFileList(array $FileList) 设置xxx
+ * @method integer getWorkId() 获取作品ID
+ * @method void setWorkId(integer $WorkId) 设置作品ID
+ * @method array getFileList() 获取权属文件列表
+ * @method void setFileList(array $FileList) 设置权属文件列表
  */
 class CreateCRRightFileRequest extends AbstractModel
 {
     /**
-     * @var integer xxx
+     * @var integer 作品ID
      */
     public $WorkId;
 
     /**
-     * @var array xxx
+     * @var array 权属文件列表
      */
     public $FileList;
 
     /**
-     * @param integer $WorkId xxx
-     * @param array $FileList xxx
+     * @param integer $WorkId 作品ID
+     * @param array $FileList 权属文件列表
      */
     function __construct()
     {

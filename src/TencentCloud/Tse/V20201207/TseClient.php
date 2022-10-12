@@ -32,6 +32,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeSREInstancesResponse DescribeSREInstances(Models\DescribeSREInstancesRequest $req) 用于查询引擎实例列表
  * @method Models\DescribeZookeeperReplicasResponse DescribeZookeeperReplicas(Models\DescribeZookeeperReplicasRequest $req) 查询Zookeeper类型注册引擎实例副本信息
  * @method Models\DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfaces(Models\DescribeZookeeperServerInterfacesRequest $req) 查询zookeeper服务接口列表
+ * @method Models\UpdateEngineInternetAccessResponse UpdateEngineInternetAccess(Models\UpdateEngineInternetAccessRequest $req) 修改引擎公网访问配置
  */
 
 class TseClient extends AbstractClient

@@ -94,6 +94,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreserveHDRSwitch(string $PreserveHDRSwitch) 设置当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
 <li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
 <li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
+ * @method string getCodecTag() 获取编码标签，仅当视频流的编码格式为 H.265 编码时有效，可选值：
+<li>hvc1 表示 hvc1 标签；</li>
+<li>hev1 表示 hev1 标签。 </li>
+默认值：hvc1。
+ * @method void setCodecTag(string $CodecTag) 设置编码标签，仅当视频流的编码格式为 H.265 编码时有效，可选值：
+<li>hvc1 表示 hvc1 标签；</li>
+<li>hev1 表示 hev1 标签。 </li>
+默认值：hvc1。
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -175,6 +183,14 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $PreserveHDRSwitch;
 
     /**
+     * @var string 编码标签，仅当视频流的编码格式为 H.265 编码时有效，可选值：
+<li>hvc1 表示 hvc1 标签；</li>
+<li>hev1 表示 hev1 标签。 </li>
+默认值：hvc1。
+     */
+    public $CodecTag;
+
+    /**
      * @param string $Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码；</li>
 <li>libx265：H.265 编码；</li>
@@ -212,6 +228,10 @@ class VideoTemplateInfoForUpdate extends AbstractModel
      * @param string $PreserveHDRSwitch 当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
 <li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
 <li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
+     * @param string $CodecTag 编码标签，仅当视频流的编码格式为 H.265 编码时有效，可选值：
+<li>hvc1 表示 hvc1 标签；</li>
+<li>hev1 表示 hev1 标签。 </li>
+默认值：hvc1。
      */
     function __construct()
     {
@@ -264,6 +284,10 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 
         if (array_key_exists("PreserveHDRSwitch",$param) and $param["PreserveHDRSwitch"] !== null) {
             $this->PreserveHDRSwitch = $param["PreserveHDRSwitch"];
+        }
+
+        if (array_key_exists("CodecTag",$param) and $param["CodecTag"] !== null) {
+            $this->CodecTag = $param["CodecTag"];
         }
     }
 }

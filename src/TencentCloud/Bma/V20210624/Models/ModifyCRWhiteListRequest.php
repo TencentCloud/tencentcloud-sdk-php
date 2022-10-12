@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCRWhiteList请求参数结构体
  *
- * @method integer getWhiteListId() 获取白名单ID
- * @method void setWhiteListId(integer $WhiteListId) 设置白名单ID
- * @method string getPlatForm() 获取平台名称
- * @method void setPlatForm(string $PlatForm) 设置平台名称
- * @method string getPlatUrl() 获取平台站点链接
- * @method void setPlatUrl(string $PlatUrl) 设置平台站点链接
- * @method string getAuthorId() 获取作者ID
- * @method void setAuthorId(string $AuthorId) 设置作者ID
- * @method integer getWorksId() 获取作品ID
- * @method void setWorksId(integer $WorksId) 设置作品ID
- * @method integer getWorkId() 获取xxx
- * @method void setWorkId(integer $WorkId) 设置xxx
- * @method string getWhiteSites() 获取xxx
- * @method void setWhiteSites(string $WhiteSites) 设置xxx
+ * @method integer getWhiteListId() 获取该字段已废弃，白名单ID
+ * @method void setWhiteListId(integer $WhiteListId) 设置该字段已废弃，白名单ID
+ * @method string getPlatForm() 获取该字段已废弃，平台名称
+ * @method void setPlatForm(string $PlatForm) 设置该字段已废弃，平台名称
+ * @method string getPlatUrl() 获取该字段已废弃，平台站点链接
+ * @method void setPlatUrl(string $PlatUrl) 设置该字段已废弃，平台站点链接
+ * @method string getAuthorId() 获取该字段已废弃，作者ID
+ * @method void setAuthorId(string $AuthorId) 设置该字段已废弃，作者ID
+ * @method integer getWorksId() 获取该字段已废弃，作品ID
+ * @method void setWorksId(integer $WorksId) 设置该字段已废弃，作品ID
+ * @method integer getWorkId() 获取作品ID
+ * @method void setWorkId(integer $WorkId) 设置作品ID
+ * @method string getWhiteSites() 获取白名单列表，以\n分割
+ * @method void setWhiteSites(string $WhiteSites) 设置白名单列表，以\n分割
  */
 class ModifyCRWhiteListRequest extends AbstractModel
 {
     /**
-     * @var integer 白名单ID
+     * @var integer 该字段已废弃，白名单ID
      */
     public $WhiteListId;
 
     /**
-     * @var string 平台名称
+     * @var string 该字段已废弃，平台名称
      */
     public $PlatForm;
 
     /**
-     * @var string 平台站点链接
+     * @var string 该字段已废弃，平台站点链接
      */
     public $PlatUrl;
 
     /**
-     * @var string 作者ID
+     * @var string 该字段已废弃，作者ID
      */
     public $AuthorId;
 
     /**
-     * @var integer 作品ID
+     * @var integer 该字段已废弃，作品ID
      */
     public $WorksId;
 
     /**
-     * @var integer xxx
+     * @var integer 作品ID
      */
     public $WorkId;
 
     /**
-     * @var string xxx
+     * @var string 白名单列表，以\n分割
      */
     public $WhiteSites;
 
     /**
-     * @param integer $WhiteListId 白名单ID
-     * @param string $PlatForm 平台名称
-     * @param string $PlatUrl 平台站点链接
-     * @param string $AuthorId 作者ID
-     * @param integer $WorksId 作品ID
-     * @param integer $WorkId xxx
-     * @param string $WhiteSites xxx
+     * @param integer $WhiteListId 该字段已废弃，白名单ID
+     * @param string $PlatForm 该字段已废弃，平台名称
+     * @param string $PlatUrl 该字段已废弃，平台站点链接
+     * @param string $AuthorId 该字段已废弃，作者ID
+     * @param integer $WorksId 该字段已废弃，作品ID
+     * @param integer $WorkId 作品ID
+     * @param string $WhiteSites 白名单列表，以\n分割
      */
     function __construct()
     {

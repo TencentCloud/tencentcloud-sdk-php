@@ -28,13 +28,14 @@ use TencentCloud\Bma\V20210624\Models as Models;
  * @method Models\CreateBPOfflineAttachmentResponse CreateBPOfflineAttachment(Models\CreateBPOfflineAttachmentRequest $req) 添加下线材料
  * @method Models\CreateBPOfflineTicketResponse CreateBPOfflineTicket(Models\CreateBPOfflineTicketRequest $req) 添加下线工单
  * @method Models\CreateBPProtectURLsResponse CreateBPProtectURLs(Models\CreateBPProtectURLsRequest $req) 添加保护网站
- * @method Models\CreateCRBlockResponse CreateCRBlock(Models\CreateCRBlockRequest $req) 版权保护-新建拦截接口
- * @method Models\CreateCRCompanyVerifyResponse CreateCRCompanyVerify(Models\CreateCRCompanyVerifyRequest $req) 品牌经营管家-版权保护模块企业认证接口
+ * @method Models\CreateCRBlockResponse CreateCRBlock(Models\CreateCRBlockRequest $req) 新建拦截
+
+ * @method Models\CreateCRCompanyVerifyResponse CreateCRCompanyVerify(Models\CreateCRCompanyVerifyRequest $req) 本接口用于企业认证，新接入用户必须认证后才可以进行后续操作（个人认证和企业认证二选一），只需认证一次即可
  * @method Models\CreateCRRightResponse CreateCRRight(Models\CreateCRRightRequest $req) 版权保护-新建发函接口
- * @method Models\CreateCRRightFileResponse CreateCRRightFile(Models\CreateCRRightFileRequest $req) 新增权属文件
+ * @method Models\CreateCRRightFileResponse CreateCRRightFile(Models\CreateCRRightFileRequest $req) 权属文件添加
  * @method Models\CreateCRTortResponse CreateCRTort(Models\CreateCRTortRequest $req) 举报侵权链接
- * @method Models\CreateCRUserVerifyResponse CreateCRUserVerify(Models\CreateCRUserVerifyRequest $req) 品牌经营管家-版权保护个人认证接口
- * @method Models\CreateCRWorkResponse CreateCRWork(Models\CreateCRWorkRequest $req) 版权保护-添加作品接口
+ * @method Models\CreateCRUserVerifyResponse CreateCRUserVerify(Models\CreateCRUserVerifyRequest $req) 本接口用于个人认证，新接入用户必须认证后才可以进行后续操作（个人认证和企业认证二选一），只需认证一次即可
+ * @method Models\CreateCRWorkResponse CreateCRWork(Models\CreateCRWorkRequest $req) 新建作品
  * @method Models\DescribeBPCompanyInfoResponse DescribeBPCompanyInfo(Models\DescribeBPCompanyInfoRequest $req) 查询企业信息
  * @method Models\DescribeBPFakeURLsResponse DescribeBPFakeURLs(Models\DescribeBPFakeURLsRequest $req) 查询仿冒链接
  * @method Models\DescribeBPProtectURLsResponse DescribeBPProtectURLs(Models\DescribeBPProtectURLsRequest $req) 查询保护网站
@@ -43,11 +44,11 @@ use TencentCloud\Bma\V20210624\Models as Models;
  * @method Models\DescribeCRMonitorsResponse DescribeCRMonitors(Models\DescribeCRMonitorsRequest $req) 版权保护-查询监测列表接口
  * @method Models\DescribeCRWorkInfoResponse DescribeCRWorkInfo(Models\DescribeCRWorkInfoRequest $req) 查询作品基本信息
  * @method Models\ModifyBPOfflineAttachmentResponse ModifyBPOfflineAttachment(Models\ModifyBPOfflineAttachmentRequest $req) 修改下线材料
- * @method Models\ModifyCRBlockStatusResponse ModifyCRBlockStatus(Models\ModifyCRBlockStatusRequest $req) 版权保护-拦截申请接口
- * @method Models\ModifyCRMonitorResponse ModifyCRMonitor(Models\ModifyCRMonitorRequest $req) 版权保护-修改监测状态接口
- * @method Models\ModifyCRObtainStatusResponse ModifyCRObtainStatus(Models\ModifyCRObtainStatusRequest $req) 申请取证
- * @method Models\ModifyCRRightStatusResponse ModifyCRRightStatus(Models\ModifyCRRightStatusRequest $req) 版权保护-维权申请接口
- * @method Models\ModifyCRWhiteListResponse ModifyCRWhiteList(Models\ModifyCRWhiteListRequest $req) 版权保护-白名单修改接口
+ * @method Models\ModifyCRBlockStatusResponse ModifyCRBlockStatus(Models\ModifyCRBlockStatusRequest $req) 拦截申请
+ * @method Models\ModifyCRMonitorResponse ModifyCRMonitor(Models\ModifyCRMonitorRequest $req) 开启/关闭监测
+ * @method Models\ModifyCRObtainStatusResponse ModifyCRObtainStatus(Models\ModifyCRObtainStatusRequest $req) 取证申请
+ * @method Models\ModifyCRRightStatusResponse ModifyCRRightStatus(Models\ModifyCRRightStatusRequest $req) 发函申请
+ * @method Models\ModifyCRWhiteListResponse ModifyCRWhiteList(Models\ModifyCRWhiteListRequest $req) 修改白名单列表
  * @method Models\UpdateCRWorkResponse UpdateCRWork(Models\UpdateCRWorkRequest $req) 更新作品
  */
 

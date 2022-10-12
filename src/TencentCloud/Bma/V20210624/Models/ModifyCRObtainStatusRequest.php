@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCRObtainStatus请求参数结构体
  *
- * @method integer getTortId() 获取xxx
- * @method void setTortId(integer $TortId) 设置xxx
- * @method integer getObtainType() 获取xxx
- * @method void setObtainType(integer $ObtainType) 设置xxx
- * @method integer getObtainDuration() 获取xxx
- * @method void setObtainDuration(integer $ObtainDuration) 设置xxx
- * @method string getObtainUrl() 获取xxx
- * @method void setObtainUrl(string $ObtainUrl) 设置xxx
+ * @method integer getTortId() 获取侵权ID
+ * @method void setTortId(integer $TortId) 设置侵权ID
+ * @method integer getObtainType() 获取取证类型：1-网页取证 2-过程取证
+ * @method void setObtainType(integer $ObtainType) 设置取证类型：1-网页取证 2-过程取证
+ * @method integer getObtainDuration() 获取过程取证的取证时长，单位分钟，范围0-120
+ * @method void setObtainDuration(integer $ObtainDuration) 设置过程取证的取证时长，单位分钟，范围0-120
+ * @method string getObtainUrl() 获取结果回调地址
+ * @method void setObtainUrl(string $ObtainUrl) 设置结果回调地址
  */
 class ModifyCRObtainStatusRequest extends AbstractModel
 {
     /**
-     * @var integer xxx
+     * @var integer 侵权ID
      */
     public $TortId;
 
     /**
-     * @var integer xxx
+     * @var integer 取证类型：1-网页取证 2-过程取证
      */
     public $ObtainType;
 
     /**
-     * @var integer xxx
+     * @var integer 过程取证的取证时长，单位分钟，范围0-120
      */
     public $ObtainDuration;
 
     /**
-     * @var string xxx
+     * @var string 结果回调地址
      */
     public $ObtainUrl;
 
     /**
-     * @param integer $TortId xxx
-     * @param integer $ObtainType xxx
-     * @param integer $ObtainDuration xxx
-     * @param string $ObtainUrl xxx
+     * @param integer $TortId 侵权ID
+     * @param integer $ObtainType 取证类型：1-网页取证 2-过程取证
+     * @param integer $ObtainDuration 过程取证的取证时长，单位分钟，范围0-120
+     * @param string $ObtainUrl 结果回调地址
      */
     function __construct()
     {

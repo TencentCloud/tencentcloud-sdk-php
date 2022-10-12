@@ -28,60 +28,60 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkType(string $WorkType) 设置作品内容类型
  * @method string getWorkSign() 获取作品标签
  * @method void setWorkSign(string $WorkSign) 设置作品标签
- * @method string getWorkPic() 获取作品图片
- * @method void setWorkPic(string $WorkPic) 设置作品图片
- * @method string getWorkDesc() 获取创作描述
- * @method void setWorkDesc(string $WorkDesc) 设置创作描述
- * @method string getIsOriginal() 获取是否原创 0:否 1:是
- * @method void setIsOriginal(string $IsOriginal) 设置是否原创 0:否 1:是
- * @method string getIsRelease() 获取是否发布 0：未发布 1：已发布
- * @method void setIsRelease(string $IsRelease) 设置是否发布 0：未发布 1：已发布
- * @method integer getProducerID() 获取著作权人ID
- * @method void setProducerID(integer $ProducerID) 设置著作权人ID
+ * @method string getWorkPic() 获取字段已废弃，作品图片
+ * @method void setWorkPic(string $WorkPic) 设置字段已废弃，作品图片
+ * @method string getWorkDesc() 获取作品描述
+ * @method void setWorkDesc(string $WorkDesc) 设置作品描述
+ * @method string getIsOriginal() 获取是否原创：0-否 1-是
+ * @method void setIsOriginal(string $IsOriginal) 设置是否原创：0-否 1-是
+ * @method string getIsRelease() 获取是否发布：0-未发布 1-已发布
+ * @method void setIsRelease(string $IsRelease) 设置是否发布：0-未发布 1-已发布
+ * @method integer getProducerID() 获取字段已废弃，著作权人ID
+ * @method void setProducerID(integer $ProducerID) 设置字段已废弃，著作权人ID
  * @method string getProduceTime() 获取创作时间
  * @method void setProduceTime(string $ProduceTime) 设置创作时间
- * @method string getSampleContentURL() 获取样品文件路径
- * @method void setSampleContentURL(string $SampleContentURL) 设置样品文件路径
- * @method string getSampleDownloadURL() 获取样本下载Url
- * @method void setSampleDownloadURL(string $SampleDownloadURL) 设置样本下载Url
- * @method string getGrantType() 获取授予类型
- * @method void setGrantType(string $GrantType) 设置授予类型
- * @method string getSamplePublicURL() 获取作品发布Url
- * @method void setSamplePublicURL(string $SamplePublicURL) 设置作品发布Url
- * @method string getIsMonitor() 获取是否启用监测 0：不启用 1：启用 默认为0
- * @method void setIsMonitor(string $IsMonitor) 设置是否启用监测 0：不启用 1：启用 默认为0
- * @method string getIsCert() 获取是否启用存证0：不存证  2：存证 默认为0
- * @method void setIsCert(string $IsCert) 设置是否启用存证0：不存证  2：存证 默认为0
+ * @method string getSampleContentURL() 获取字段已废弃
+ * @method void setSampleContentURL(string $SampleContentURL) 设置字段已废弃
+ * @method string getSampleDownloadURL() 获取作品下载地址
+ * @method void setSampleDownloadURL(string $SampleDownloadURL) 设置作品下载地址
+ * @method string getSamplePublicURL() 获取作品在线地址
+ * @method void setSamplePublicURL(string $SamplePublicURL) 设置作品在线地址
+ * @method string getGrantType() 获取字段已废弃，授予类型
+ * @method void setGrantType(string $GrantType) 设置字段已废弃，授予类型
+ * @method string getIsMonitor() 获取是否监测：0-不监测 1-监测
+ * @method void setIsMonitor(string $IsMonitor) 设置是否监测：0-不监测 1-监测
+ * @method string getIsCert() 获取是否存证：0-不存证  2-存证 注意是2
+ * @method void setIsCert(string $IsCert) 设置是否存证：0-不存证  2-存证 注意是2
  * @method string getCertUrl() 获取存证回调地址
  * @method void setCertUrl(string $CertUrl) 设置存证回调地址
  * @method string getMonitorUrl() 获取监测回调地址
  * @method void setMonitorUrl(string $MonitorUrl) 设置监测回调地址
- * @method string getProduceType() 获取创作性质（原创,改编,翻译,汇编,注释,整理,其他)
- * @method void setProduceType(string $ProduceType) 设置创作性质（原创,改编,翻译,汇编,注释,整理,其他)
- * @method array getWhiteLists() 获取白名单
- * @method void setWhiteLists(array $WhiteLists) 设置白名单
- * @method integer getWorkId() 获取作品ID
- * @method void setWorkId(integer $WorkId) 设置作品ID
+ * @method string getProduceType() 获取字段已废弃，创作性质
+ * @method void setProduceType(string $ProduceType) 设置字段已废弃，创作性质
+ * @method array getWhiteLists() 获取白名单列表
+ * @method void setWhiteLists(array $WhiteLists) 设置白名单列表
+ * @method integer getWorkId() 获取作品ID，忽略该字段
+ * @method void setWorkId(integer $WorkId) 设置作品ID，忽略该字段
  * @method string getProducerName() 获取著作权人姓名
  * @method void setProducerName(string $ProducerName) 设置著作权人姓名
- * @method string getNickname() 获取作者
- * @method void setNickname(string $Nickname) 设置作者
- * @method string getAuthorization() 获取授权书
- * @method void setAuthorization(string $Authorization) 设置授权书
+ * @method string getNickname() 获取作者，小说类型必填
+ * @method void setNickname(string $Nickname) 设置作者，小说类型必填
+ * @method string getAuthorization() 获取授权书下载地址
+ * @method void setAuthorization(string $Authorization) 设置授权书下载地址
  * @method string getAuthorizationStartTime() 获取授权书开始时间
  * @method void setAuthorizationStartTime(string $AuthorizationStartTime) 设置授权书开始时间
  * @method string getAuthorizationEndTime() 获取授权书结束时间
  * @method void setAuthorizationEndTime(string $AuthorizationEndTime) 设置授权书结束时间
- * @method string getContentType() 获取内容格式
- * @method void setContentType(string $ContentType) 设置内容格式
- * @method string getContent() 获取文件内容
- * @method void setContent(string $Content) 设置文件内容
+ * @method string getContentType() 获取内容格式，支持txt、doc等，表示Content的具体格式
+ * @method void setContentType(string $ContentType) 设置内容格式，支持txt、doc等，表示Content的具体格式
+ * @method string getContent() 获取文件内容base64编码，该字段仅在无法提供下载链接时使用
+ * @method void setContent(string $Content) 设置文件内容base64编码，该字段仅在无法提供下载链接时使用
  * @method string getMonitorEndTime() 获取监测结束时间
  * @method void setMonitorEndTime(string $MonitorEndTime) 设置监测结束时间
- * @method string getApplierId() 获取申请人ID
- * @method void setApplierId(string $ApplierId) 设置申请人ID
- * @method string getApplierName() 获取申请人姓名
- * @method void setApplierName(string $ApplierName) 设置申请人姓名
+ * @method string getApplierId() 获取申请人ID，用于存证和取证
+ * @method void setApplierId(string $ApplierId) 设置申请人ID，用于存证和取证
+ * @method string getApplierName() 获取申请人姓名，用于存证和取证
+ * @method void setApplierName(string $ApplierName) 设置申请人姓名，用于存证和取证
  */
 class CreateCRWorkRequest extends AbstractModel
 {
@@ -106,27 +106,27 @@ class CreateCRWorkRequest extends AbstractModel
     public $WorkSign;
 
     /**
-     * @var string 作品图片
+     * @var string 字段已废弃，作品图片
      */
     public $WorkPic;
 
     /**
-     * @var string 创作描述
+     * @var string 作品描述
      */
     public $WorkDesc;
 
     /**
-     * @var string 是否原创 0:否 1:是
+     * @var string 是否原创：0-否 1-是
      */
     public $IsOriginal;
 
     /**
-     * @var string 是否发布 0：未发布 1：已发布
+     * @var string 是否发布：0-未发布 1-已发布
      */
     public $IsRelease;
 
     /**
-     * @var integer 著作权人ID
+     * @var integer 字段已废弃，著作权人ID
      */
     public $ProducerID;
 
@@ -136,32 +136,32 @@ class CreateCRWorkRequest extends AbstractModel
     public $ProduceTime;
 
     /**
-     * @var string 样品文件路径
+     * @var string 字段已废弃
      */
     public $SampleContentURL;
 
     /**
-     * @var string 样本下载Url
+     * @var string 作品下载地址
      */
     public $SampleDownloadURL;
 
     /**
-     * @var string 授予类型
-     */
-    public $GrantType;
-
-    /**
-     * @var string 作品发布Url
+     * @var string 作品在线地址
      */
     public $SamplePublicURL;
 
     /**
-     * @var string 是否启用监测 0：不启用 1：启用 默认为0
+     * @var string 字段已废弃，授予类型
+     */
+    public $GrantType;
+
+    /**
+     * @var string 是否监测：0-不监测 1-监测
      */
     public $IsMonitor;
 
     /**
-     * @var string 是否启用存证0：不存证  2：存证 默认为0
+     * @var string 是否存证：0-不存证  2-存证 注意是2
      */
     public $IsCert;
 
@@ -176,17 +176,17 @@ class CreateCRWorkRequest extends AbstractModel
     public $MonitorUrl;
 
     /**
-     * @var string 创作性质（原创,改编,翻译,汇编,注释,整理,其他)
+     * @var string 字段已废弃，创作性质
      */
     public $ProduceType;
 
     /**
-     * @var array 白名单
+     * @var array 白名单列表
      */
     public $WhiteLists;
 
     /**
-     * @var integer 作品ID
+     * @var integer 作品ID，忽略该字段
      */
     public $WorkId;
 
@@ -196,12 +196,12 @@ class CreateCRWorkRequest extends AbstractModel
     public $ProducerName;
 
     /**
-     * @var string 作者
+     * @var string 作者，小说类型必填
      */
     public $Nickname;
 
     /**
-     * @var string 授权书
+     * @var string 授权书下载地址
      */
     public $Authorization;
 
@@ -216,12 +216,12 @@ class CreateCRWorkRequest extends AbstractModel
     public $AuthorizationEndTime;
 
     /**
-     * @var string 内容格式
+     * @var string 内容格式，支持txt、doc等，表示Content的具体格式
      */
     public $ContentType;
 
     /**
-     * @var string 文件内容
+     * @var string 文件内容base64编码，该字段仅在无法提供下载链接时使用
      */
     public $Content;
 
@@ -231,12 +231,12 @@ class CreateCRWorkRequest extends AbstractModel
     public $MonitorEndTime;
 
     /**
-     * @var string 申请人ID
+     * @var string 申请人ID，用于存证和取证
      */
     public $ApplierId;
 
     /**
-     * @var string 申请人姓名
+     * @var string 申请人姓名，用于存证和取证
      */
     public $ApplierName;
 
@@ -245,33 +245,33 @@ class CreateCRWorkRequest extends AbstractModel
      * @param string $WorkCategory 作品分类
      * @param string $WorkType 作品内容类型
      * @param string $WorkSign 作品标签
-     * @param string $WorkPic 作品图片
-     * @param string $WorkDesc 创作描述
-     * @param string $IsOriginal 是否原创 0:否 1:是
-     * @param string $IsRelease 是否发布 0：未发布 1：已发布
-     * @param integer $ProducerID 著作权人ID
+     * @param string $WorkPic 字段已废弃，作品图片
+     * @param string $WorkDesc 作品描述
+     * @param string $IsOriginal 是否原创：0-否 1-是
+     * @param string $IsRelease 是否发布：0-未发布 1-已发布
+     * @param integer $ProducerID 字段已废弃，著作权人ID
      * @param string $ProduceTime 创作时间
-     * @param string $SampleContentURL 样品文件路径
-     * @param string $SampleDownloadURL 样本下载Url
-     * @param string $GrantType 授予类型
-     * @param string $SamplePublicURL 作品发布Url
-     * @param string $IsMonitor 是否启用监测 0：不启用 1：启用 默认为0
-     * @param string $IsCert 是否启用存证0：不存证  2：存证 默认为0
+     * @param string $SampleContentURL 字段已废弃
+     * @param string $SampleDownloadURL 作品下载地址
+     * @param string $SamplePublicURL 作品在线地址
+     * @param string $GrantType 字段已废弃，授予类型
+     * @param string $IsMonitor 是否监测：0-不监测 1-监测
+     * @param string $IsCert 是否存证：0-不存证  2-存证 注意是2
      * @param string $CertUrl 存证回调地址
      * @param string $MonitorUrl 监测回调地址
-     * @param string $ProduceType 创作性质（原创,改编,翻译,汇编,注释,整理,其他)
-     * @param array $WhiteLists 白名单
-     * @param integer $WorkId 作品ID
+     * @param string $ProduceType 字段已废弃，创作性质
+     * @param array $WhiteLists 白名单列表
+     * @param integer $WorkId 作品ID，忽略该字段
      * @param string $ProducerName 著作权人姓名
-     * @param string $Nickname 作者
-     * @param string $Authorization 授权书
+     * @param string $Nickname 作者，小说类型必填
+     * @param string $Authorization 授权书下载地址
      * @param string $AuthorizationStartTime 授权书开始时间
      * @param string $AuthorizationEndTime 授权书结束时间
-     * @param string $ContentType 内容格式
-     * @param string $Content 文件内容
+     * @param string $ContentType 内容格式，支持txt、doc等，表示Content的具体格式
+     * @param string $Content 文件内容base64编码，该字段仅在无法提供下载链接时使用
      * @param string $MonitorEndTime 监测结束时间
-     * @param string $ApplierId 申请人ID
-     * @param string $ApplierName 申请人姓名
+     * @param string $ApplierId 申请人ID，用于存证和取证
+     * @param string $ApplierName 申请人姓名，用于存证和取证
      */
     function __construct()
     {
@@ -334,12 +334,12 @@ class CreateCRWorkRequest extends AbstractModel
             $this->SampleDownloadURL = $param["SampleDownloadURL"];
         }
 
-        if (array_key_exists("GrantType",$param) and $param["GrantType"] !== null) {
-            $this->GrantType = $param["GrantType"];
-        }
-
         if (array_key_exists("SamplePublicURL",$param) and $param["SamplePublicURL"] !== null) {
             $this->SamplePublicURL = $param["SamplePublicURL"];
+        }
+
+        if (array_key_exists("GrantType",$param) and $param["GrantType"] !== null) {
+            $this->GrantType = $param["GrantType"];
         }
 
         if (array_key_exists("IsMonitor",$param) and $param["IsMonitor"] !== null) {

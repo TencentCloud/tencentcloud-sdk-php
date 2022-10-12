@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置页数
  * @method integer getPageNumber() 获取页码
  * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method array getFilters() 获取x
- * @method void setFilters(array $Filters) 设置x
+ * @method array getFilters() 获取过滤参数
+ * @method void setFilters(array $Filters) 设置过滤参数
  */
 class DescribeCRMonitorDetailRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeCRMonitorDetailRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var array x
+     * @var array 过滤参数
      */
     public $Filters;
 
@@ -55,7 +55,7 @@ class DescribeCRMonitorDetailRequest extends AbstractModel
      * @param integer $WorkId 作品ID
      * @param integer $PageSize 页数
      * @param integer $PageNumber 页码
-     * @param array $Filters x
+     * @param array $Filters 过滤参数
      */
     function __construct()
     {

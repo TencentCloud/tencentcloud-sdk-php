@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getWorkId() 获取作品ID
  * @method void setWorkId(integer $WorkId) 设置作品ID
- * @method string getMonitorStatus() 获取监测状态 1-开启监测 2-关闭监测
- * @method void setMonitorStatus(string $MonitorStatus) 设置监测状态 1-开启监测 2-关闭监测
- * @method string getMonitorEnd() 获取默认不停止，支持续期
- * @method void setMonitorEnd(string $MonitorEnd) 设置默认不停止，支持续期
+ * @method string getMonitorStatus() 获取监测状态：1-开启监测 2-关闭监测
+ * @method void setMonitorStatus(string $MonitorStatus) 设置监测状态：1-开启监测 2-关闭监测
+ * @method string getMonitorEnd() 获取监测截止时间
+ * @method void setMonitorEnd(string $MonitorEnd) 设置监测截止时间
  */
 class ModifyCRMonitorRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyCRMonitorRequest extends AbstractModel
     public $WorkId;
 
     /**
-     * @var string 监测状态 1-开启监测 2-关闭监测
+     * @var string 监测状态：1-开启监测 2-关闭监测
      */
     public $MonitorStatus;
 
     /**
-     * @var string 默认不停止，支持续期
+     * @var string 监测截止时间
      */
     public $MonitorEnd;
 
     /**
      * @param integer $WorkId 作品ID
-     * @param string $MonitorStatus 监测状态 1-开启监测 2-关闭监测
-     * @param string $MonitorEnd 默认不停止，支持续期
+     * @param string $MonitorStatus 监测状态：1-开启监测 2-关闭监测
+     * @param string $MonitorEnd 监测截止时间
      */
     function __construct()
     {

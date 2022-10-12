@@ -30,6 +30,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 批量修改任务责任人
  * @method Models\BatchStopTasksNewResponse BatchStopTasksNew(Models\BatchStopTasksNewRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 仅对任务状态为”调度中“和”已暂停“有效，对所选任务的任务实例进行终止，并停止调度
+ * @method Models\CreateCustomFunctionResponse CreateCustomFunction(Models\CreateCustomFunctionRequest $req)  创建用户自定义函数
  * @method Models\CreateDataSourceResponse CreateDataSource(Models\CreateDataSourceRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 创建数据源
  * @method Models\CreateFolderResponse CreateFolder(Models\CreateFolderRequest $req) <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>

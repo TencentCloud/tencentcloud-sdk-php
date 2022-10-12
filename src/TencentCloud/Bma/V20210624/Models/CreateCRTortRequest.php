@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCRTort请求参数结构体
  *
- * @method integer getWorkId() 获取xx
- * @method void setWorkId(integer $WorkId) 设置xx
- * @method string getTortURL() 获取xx
- * @method void setTortURL(string $TortURL) 设置xx
- * @method string getTortPlat() 获取xx
- * @method void setTortPlat(string $TortPlat) 设置xx
- * @method string getTortTitle() 获取xx
- * @method void setTortTitle(string $TortTitle) 设置xx
+ * @method integer getWorkId() 获取作品ID
+ * @method void setWorkId(integer $WorkId) 设置作品ID
+ * @method string getTortURL() 获取侵权网址
+ * @method void setTortURL(string $TortURL) 设置侵权网址
+ * @method string getTortPlat() 获取侵权平台
+ * @method void setTortPlat(string $TortPlat) 设置侵权平台
+ * @method string getTortTitle() 获取侵权标题
+ * @method void setTortTitle(string $TortTitle) 设置侵权标题
  */
 class CreateCRTortRequest extends AbstractModel
 {
     /**
-     * @var integer xx
+     * @var integer 作品ID
      */
     public $WorkId;
 
     /**
-     * @var string xx
+     * @var string 侵权网址
      */
     public $TortURL;
 
     /**
-     * @var string xx
+     * @var string 侵权平台
      */
     public $TortPlat;
 
     /**
-     * @var string xx
+     * @var string 侵权标题
      */
     public $TortTitle;
 
     /**
-     * @param integer $WorkId xx
-     * @param string $TortURL xx
-     * @param string $TortPlat xx
-     * @param string $TortTitle xx
+     * @param integer $WorkId 作品ID
+     * @param string $TortURL 侵权网址
+     * @param string $TortPlat 侵权平台
+     * @param string $TortTitle 侵权标题
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCRWork返回参数结构体
  *
- * @method integer getWorkId() 获取作品ID
- * @method void setWorkId(integer $WorkId) 设置作品ID
- * @method integer getEvidenceId() 获取x
- * @method void setEvidenceId(integer $EvidenceId) 设置x
+ * @method integer getWorkId() 获取作品ID，一个作品对应唯一的workid
+ * @method void setWorkId(integer $WorkId) 设置作品ID，一个作品对应唯一的workid
+ * @method integer getEvidenceId() 获取存证ID，忽略该字段
+ * @method void setEvidenceId(integer $EvidenceId) 设置存证ID，忽略该字段
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCRWorkResponse extends AbstractModel
 {
     /**
-     * @var integer 作品ID
+     * @var integer 作品ID，一个作品对应唯一的workid
      */
     public $WorkId;
 
     /**
-     * @var integer x
+     * @var integer 存证ID，忽略该字段
      */
     public $EvidenceId;
 
@@ -45,8 +45,8 @@ class CreateCRWorkResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $WorkId 作品ID
-     * @param integer $EvidenceId x
+     * @param integer $WorkId 作品ID，一个作品对应唯一的workid
+     * @param integer $EvidenceId 存证ID，忽略该字段
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

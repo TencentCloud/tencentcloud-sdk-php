@@ -20,57 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCRTort返回参数结构体
  *
- * @method integer getWorkId() 获取xx
- * @method void setWorkId(integer $WorkId) 设置xx
- * @method integer getTortId() 获取xx
- * @method void setTortId(integer $TortId) 设置xx
- * @method string getTortTitle() 获取xx
- * @method void setTortTitle(string $TortTitle) 设置xx
- * @method string getTortPlat() 获取xx
- * @method void setTortPlat(string $TortPlat) 设置xx
- * @method string getTortURL() 获取xx
- * @method void setTortURL(string $TortURL) 设置xx
- * @method string getTortDomain() 获取xx
- * @method void setTortDomain(string $TortDomain) 设置xx
- * @method string getTortBodyName() 获取xx
- * @method void setTortBodyName(string $TortBodyName) 设置xx
+ * @method integer getWorkId() 获取作品ID
+ * @method void setWorkId(integer $WorkId) 设置作品ID
+ * @method integer getTortId() 获取侵权ID
+ * @method void setTortId(integer $TortId) 设置侵权ID
+ * @method string getTortTitle() 获取侵权标题
+ * @method void setTortTitle(string $TortTitle) 设置侵权标题
+ * @method string getTortPlat() 获取侵权平台
+ * @method void setTortPlat(string $TortPlat) 设置侵权平台
+ * @method string getTortURL() 获取侵权网址
+ * @method void setTortURL(string $TortURL) 设置侵权网址
+ * @method string getTortDomain() 获取侵权域名
+ * @method void setTortDomain(string $TortDomain) 设置侵权域名
+ * @method string getTortBodyName() 获取侵权主体
+ * @method void setTortBodyName(string $TortBodyName) 设置侵权主体
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCRTortResponse extends AbstractModel
 {
     /**
-     * @var integer xx
+     * @var integer 作品ID
      */
     public $WorkId;
 
     /**
-     * @var integer xx
+     * @var integer 侵权ID
      */
     public $TortId;
 
     /**
-     * @var string xx
+     * @var string 侵权标题
      */
     public $TortTitle;
 
     /**
-     * @var string xx
+     * @var string 侵权平台
      */
     public $TortPlat;
 
     /**
-     * @var string xx
+     * @var string 侵权网址
      */
     public $TortURL;
 
     /**
-     * @var string xx
+     * @var string 侵权域名
      */
     public $TortDomain;
 
     /**
-     * @var string xx
+     * @var string 侵权主体
      */
     public $TortBodyName;
 
@@ -80,13 +80,13 @@ class CreateCRTortResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $WorkId xx
-     * @param integer $TortId xx
-     * @param string $TortTitle xx
-     * @param string $TortPlat xx
-     * @param string $TortURL xx
-     * @param string $TortDomain xx
-     * @param string $TortBodyName xx
+     * @param integer $WorkId 作品ID
+     * @param integer $TortId 侵权ID
+     * @param string $TortTitle 侵权标题
+     * @param string $TortPlat 侵权平台
+     * @param string $TortURL 侵权网址
+     * @param string $TortDomain 侵权域名
+     * @param string $TortBodyName 侵权主体
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

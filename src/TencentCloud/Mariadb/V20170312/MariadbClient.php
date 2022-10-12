@@ -45,8 +45,6 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
 如果不指定任何筛选条件，则默认返回20条实例记录，单次请求最多支持返回100条实例记录。
  * @method Models\DescribeDBLogFilesResponse DescribeDBLogFiles(Models\DescribeDBLogFilesRequest $req) 本接口(DescribeDBLogFiles)用于获取数据库的各种日志列表，包括冷备、binlog、errlog和slowlog。
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) 本接口(DescribeDBParameters)用于获取数据库的当前参数设置。
- * @method Models\DescribeDBPerformanceResponse DescribeDBPerformance(Models\DescribeDBPerformanceRequest $req) 本接口(DescribeDBPerformance)用于查看数据库实例当前性能数据。
- * @method Models\DescribeDBPerformanceDetailsResponse DescribeDBPerformanceDetails(Models\DescribeDBPerformanceDetailsRequest $req) 本接口(DescribeDBPerformanceDetails)用于查看实例性能数据详情。
  * @method Models\DescribeDBResourceUsageResponse DescribeDBResourceUsage(Models\DescribeDBResourceUsageRequest $req) 本接口(DescribeDBResourceUsage)用于查看数据库实例资源的使用情况。
  * @method Models\DescribeDBResourceUsageDetailsResponse DescribeDBResourceUsageDetails(Models\DescribeDBResourceUsageDetailsRequest $req) 本接口(DescribeDBResourceUsageDetails)用于查看数据库实例当前性能数据。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
@@ -64,7 +62,6 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 本接口（DescribeProjectSecurityGroups）用于查询项目安全组信息
  * @method Models\DescribeRenewalPriceResponse DescribeRenewalPrice(Models\DescribeRenewalPriceRequest $req) 本接口（DescribeRenewalPrice）用于在续费云数据库实例时，查询续费的价格。
  * @method Models\DescribeSaleInfoResponse DescribeSaleInfo(Models\DescribeSaleInfoRequest $req) 本接口(DescribeSaleInfo)用于查询云数据库可售卖的地域和可用区信息。
- * @method Models\DescribeSqlLogsResponse DescribeSqlLogs(Models\DescribeSqlLogsRequest $req) 本接口（DescribeSqlLogs）用于获取实例SQL日志。
  * @method Models\DescribeUpgradePriceResponse DescribeUpgradePrice(Models\DescribeUpgradePriceRequest $req) 本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询变配的价格。
  * @method Models\DestroyDBInstanceResponse DestroyDBInstance(Models\DestroyDBInstanceRequest $req) 本接口(DestroyDBInstance)用于销毁已隔离的包年包月实例。
  * @method Models\DestroyHourDBInstanceResponse DestroyHourDBInstance(Models\DestroyHourDBInstanceRequest $req) 本接口（DestroyHourDBInstance）用于销毁按量计费实例。

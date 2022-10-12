@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注
  * @method array getTagList() 获取标签
  * @method void setTagList(array $TagList) 设置标签
+ * @method string getUserName() 获取客户姓名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserName(string $UserName) 设置客户姓名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClueInfoDetail extends AbstractModel
 {
@@ -122,6 +126,12 @@ class ClueInfoDetail extends AbstractModel
     public $TagList;
 
     /**
+     * @var string 客户姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserName;
+
+    /**
      * @param string $ClueId 线索id，线索唯一识别编码
      * @param string $DealerId 接待客户经销商顾问所属组织id,多个组织使用逗号分割
      * @param integer $EnquireTime 线索获取时间，用户添加企业微信时间，单位是秒
@@ -136,6 +146,8 @@ class ClueInfoDetail extends AbstractModel
      * @param string $SalesPhone 顾问电话
      * @param string $Remark 备注
      * @param array $TagList 标签
+     * @param string $UserName 客户姓名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -204,6 +216,10 @@ class ClueInfoDetail extends AbstractModel
 
         if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
             $this->TagList = $param["TagList"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
         }
     }
 }

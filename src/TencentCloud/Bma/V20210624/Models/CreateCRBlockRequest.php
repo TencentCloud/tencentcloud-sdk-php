@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCRBlock请求参数结构体
  *
- * @method integer getWorkId() 获取已存证的作品ID
- * @method void setWorkId(integer $WorkId) 设置已存证的作品ID
+ * @method integer getWorkId() 获取作品ID
+ * @method void setWorkId(integer $WorkId) 设置作品ID
  * @method string getTortUrl() 获取侵权链接
  * @method void setTortUrl(string $TortUrl) 设置侵权链接
  * @method string getTortTitle() 获取侵权标题
@@ -30,33 +30,33 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTortPlat(string $TortPlat) 设置侵权平台
  * @method string getBlockUrl() 获取拦截结果回调地址
  * @method void setBlockUrl(string $BlockUrl) 设置拦截结果回调地址
- * @method string getFileUrl() 获取x
- * @method void setFileUrl(string $FileUrl) 设置x
- * @method string getValidStartDate() 获取x
- * @method void setValidStartDate(string $ValidStartDate) 设置x
- * @method string getValidEndDate() 获取x
- * @method void setValidEndDate(string $ValidEndDate) 设置x
- * @method string getTortPic() 获取xx
- * @method void setTortPic(string $TortPic) 设置xx
- * @method string getCommFileUrl() 获取x
- * @method void setCommFileUrl(string $CommFileUrl) 设置x
- * @method string getCommValidStartDate() 获取x
- * @method void setCommValidStartDate(string $CommValidStartDate) 设置x
- * @method string getCommValidEndDate() 获取x
- * @method void setCommValidEndDate(string $CommValidEndDate) 设置x
- * @method string getIsProducer() 获取x
- * @method void setIsProducer(string $IsProducer) 设置x
- * @method string getEvidenceFileUrl() 获取x
- * @method void setEvidenceFileUrl(string $EvidenceFileUrl) 设置x
- * @method string getEvidenceValidStartDate() 获取x
- * @method void setEvidenceValidStartDate(string $EvidenceValidStartDate) 设置x
- * @method string getEvidenceValidEndDate() 获取x
- * @method void setEvidenceValidEndDate(string $EvidenceValidEndDate) 设置x
+ * @method string getFileUrl() 获取授权书下载地址
+ * @method void setFileUrl(string $FileUrl) 设置授权书下载地址
+ * @method string getValidStartDate() 获取授权书生效日期
+ * @method void setValidStartDate(string $ValidStartDate) 设置授权书生效日期
+ * @method string getValidEndDate() 获取授权书截止日期
+ * @method void setValidEndDate(string $ValidEndDate) 设置授权书截止日期
+ * @method string getTortPic() 获取侵权截图
+ * @method void setTortPic(string $TortPic) 设置侵权截图
+ * @method string getCommFileUrl() 获取委托书下载地址
+ * @method void setCommFileUrl(string $CommFileUrl) 设置委托书下载地址
+ * @method string getCommValidStartDate() 获取委托书生效日期
+ * @method void setCommValidStartDate(string $CommValidStartDate) 设置委托书生效日期
+ * @method string getCommValidEndDate() 获取委托书截止日期
+ * @method void setCommValidEndDate(string $CommValidEndDate) 设置委托书截止日期
+ * @method string getIsProducer() 获取是否著作权人：0-否 1-是
+ * @method void setIsProducer(string $IsProducer) 设置是否著作权人：0-否 1-是
+ * @method string getEvidenceFileUrl() 获取存证证书下载地址
+ * @method void setEvidenceFileUrl(string $EvidenceFileUrl) 设置存证证书下载地址
+ * @method string getEvidenceValidStartDate() 获取存证证书生效日期
+ * @method void setEvidenceValidStartDate(string $EvidenceValidStartDate) 设置存证证书生效日期
+ * @method string getEvidenceValidEndDate() 获取存证证书截止日期
+ * @method void setEvidenceValidEndDate(string $EvidenceValidEndDate) 设置存证证书截止日期
  */
 class CreateCRBlockRequest extends AbstractModel
 {
     /**
-     * @var integer 已存证的作品ID
+     * @var integer 作品ID
      */
     public $WorkId;
 
@@ -81,77 +81,77 @@ class CreateCRBlockRequest extends AbstractModel
     public $BlockUrl;
 
     /**
-     * @var string x
+     * @var string 授权书下载地址
      */
     public $FileUrl;
 
     /**
-     * @var string x
+     * @var string 授权书生效日期
      */
     public $ValidStartDate;
 
     /**
-     * @var string x
+     * @var string 授权书截止日期
      */
     public $ValidEndDate;
 
     /**
-     * @var string xx
+     * @var string 侵权截图
      */
     public $TortPic;
 
     /**
-     * @var string x
+     * @var string 委托书下载地址
      */
     public $CommFileUrl;
 
     /**
-     * @var string x
+     * @var string 委托书生效日期
      */
     public $CommValidStartDate;
 
     /**
-     * @var string x
+     * @var string 委托书截止日期
      */
     public $CommValidEndDate;
 
     /**
-     * @var string x
+     * @var string 是否著作权人：0-否 1-是
      */
     public $IsProducer;
 
     /**
-     * @var string x
+     * @var string 存证证书下载地址
      */
     public $EvidenceFileUrl;
 
     /**
-     * @var string x
+     * @var string 存证证书生效日期
      */
     public $EvidenceValidStartDate;
 
     /**
-     * @var string x
+     * @var string 存证证书截止日期
      */
     public $EvidenceValidEndDate;
 
     /**
-     * @param integer $WorkId 已存证的作品ID
+     * @param integer $WorkId 作品ID
      * @param string $TortUrl 侵权链接
      * @param string $TortTitle 侵权标题
      * @param string $TortPlat 侵权平台
      * @param string $BlockUrl 拦截结果回调地址
-     * @param string $FileUrl x
-     * @param string $ValidStartDate x
-     * @param string $ValidEndDate x
-     * @param string $TortPic xx
-     * @param string $CommFileUrl x
-     * @param string $CommValidStartDate x
-     * @param string $CommValidEndDate x
-     * @param string $IsProducer x
-     * @param string $EvidenceFileUrl x
-     * @param string $EvidenceValidStartDate x
-     * @param string $EvidenceValidEndDate x
+     * @param string $FileUrl 授权书下载地址
+     * @param string $ValidStartDate 授权书生效日期
+     * @param string $ValidEndDate 授权书截止日期
+     * @param string $TortPic 侵权截图
+     * @param string $CommFileUrl 委托书下载地址
+     * @param string $CommValidStartDate 委托书生效日期
+     * @param string $CommValidEndDate 委托书截止日期
+     * @param string $IsProducer 是否著作权人：0-否 1-是
+     * @param string $EvidenceFileUrl 存证证书下载地址
+     * @param string $EvidenceValidStartDate 存证证书生效日期
+     * @param string $EvidenceValidEndDate 存证证书截止日期
      */
     function __construct()
     {

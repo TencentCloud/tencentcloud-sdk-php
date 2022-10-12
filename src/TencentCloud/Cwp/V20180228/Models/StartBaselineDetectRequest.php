@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Bma\V20210624\Models;
+namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCRWorkInfo请求参数结构体
+ * StartBaselineDetect请求参数结构体
  *
- * @method integer getWorkId() 获取作品ID
- * @method void setWorkId(integer $WorkId) 设置作品ID
+ * @method BaselineDetectParam getParam() 获取基线检测参数
+ * @method void setParam(BaselineDetectParam $Param) 设置基线检测参数
  */
-class DescribeCRWorkInfoRequest extends AbstractModel
+class StartBaselineDetectRequest extends AbstractModel
 {
     /**
-     * @var integer 作品ID
+     * @var BaselineDetectParam 基线检测参数
      */
-    public $WorkId;
+    public $Param;
 
     /**
-     * @param integer $WorkId 作品ID
+     * @param BaselineDetectParam $Param 基线检测参数
      */
     function __construct()
     {
@@ -46,8 +46,9 @@ class DescribeCRWorkInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WorkId",$param) and $param["WorkId"] !== null) {
-            $this->WorkId = $param["WorkId"];
+        if (array_key_exists("Param",$param) and $param["Param"] !== null) {
+            $this->Param = new BaselineDetectParam();
+            $this->Param->deserialize($param["Param"]);
         }
     }
 }

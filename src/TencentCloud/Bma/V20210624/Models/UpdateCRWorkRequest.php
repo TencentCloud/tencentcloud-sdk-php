@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCRWork请求参数结构体
  *
- * @method integer getWorkId() 获取xx
- * @method void setWorkId(integer $WorkId) 设置xx
- * @method string getContentType() 获取xx
- * @method void setContentType(string $ContentType) 设置xx
- * @method string getContent() 获取xx
- * @method void setContent(string $Content) 设置xx
- * @method string getCertType() 获取xx
- * @method void setCertType(string $CertType) 设置xx
+ * @method integer getWorkId() 获取作品ID
+ * @method void setWorkId(integer $WorkId) 设置作品ID
+ * @method string getContentType() 获取文件的扩展名，比如txt，docx
+ * @method void setContentType(string $ContentType) 设置文件的扩展名，比如txt，docx
+ * @method string getContent() 获取内容的base64编码
+ * @method void setContent(string $Content) 设置内容的base64编码
+ * @method string getCertType() 获取本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
+ * @method void setCertType(string $CertType) 设置本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
  */
 class UpdateCRWorkRequest extends AbstractModel
 {
     /**
-     * @var integer xx
+     * @var integer 作品ID
      */
     public $WorkId;
 
     /**
-     * @var string xx
+     * @var string 文件的扩展名，比如txt，docx
      */
     public $ContentType;
 
     /**
-     * @var string xx
+     * @var string 内容的base64编码
      */
     public $Content;
 
     /**
-     * @var string xx
+     * @var string 本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
      */
     public $CertType;
 
     /**
-     * @param integer $WorkId xx
-     * @param string $ContentType xx
-     * @param string $Content xx
-     * @param string $CertType xx
+     * @param integer $WorkId 作品ID
+     * @param string $ContentType 文件的扩展名，比如txt，docx
+     * @param string $Content 内容的base64编码
+     * @param string $CertType 本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
      */
     function __construct()
     {

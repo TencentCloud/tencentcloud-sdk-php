@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCRUserVerify返回参数结构体
  *
- * @method integer getStatus() 获取认证状态 0-认证成功 1-认证失败
- * @method void setStatus(integer $Status) 设置认证状态 0-认证成功 1-认证失败
- * @method string getNote() 获取认证结果返回
- * @method void setNote(string $Note) 设置认证结果返回
+ * @method integer getStatus() 获取认证状态：0-认证成功 1-认证失败
+ * @method void setStatus(integer $Status) 设置认证状态：0-认证成功 1-认证失败
+ * @method string getNote() 获取认证状态说明，包括认证失败原因等
+ * @method void setNote(string $Note) 设置认证状态说明，包括认证失败原因等
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateCRUserVerifyResponse extends AbstractModel
 {
     /**
-     * @var integer 认证状态 0-认证成功 1-认证失败
+     * @var integer 认证状态：0-认证成功 1-认证失败
      */
     public $Status;
 
     /**
-     * @var string 认证结果返回
+     * @var string 认证状态说明，包括认证失败原因等
      */
     public $Note;
 
@@ -45,8 +45,8 @@ class CreateCRUserVerifyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 认证状态 0-认证成功 1-认证失败
-     * @param string $Note 认证结果返回
+     * @param integer $Status 认证状态：0-认证成功 1-认证失败
+     * @param string $Note 认证状态说明，包括认证失败原因等
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

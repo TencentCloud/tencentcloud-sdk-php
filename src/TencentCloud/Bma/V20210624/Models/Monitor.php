@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMonitorStatus(integer $MonitorStatus) 设置0-待监测 1-监测中 2-不监测 3-暂停监测
  * @method string getWorkCategory() 获取作品类型
  * @method void setWorkCategory(string $WorkCategory) 设置作品类型
- * @method string getInsertTime() 获取xx
- * @method void setInsertTime(string $InsertTime) 设置xx
- * @method string getMonitorNote() 获取xx
- * @method void setMonitorNote(string $MonitorNote) 设置xx
+ * @method string getInsertTime() 获取新增时间
+ * @method void setInsertTime(string $InsertTime) 设置新增时间
+ * @method string getMonitorNote() 获取监测状态说明
+ * @method void setMonitorNote(string $MonitorNote) 设置监测状态说明
  */
 class Monitor extends AbstractModel
 {
@@ -84,12 +84,12 @@ class Monitor extends AbstractModel
     public $WorkCategory;
 
     /**
-     * @var string xx
+     * @var string 新增时间
      */
     public $InsertTime;
 
     /**
-     * @var string xx
+     * @var string 监测状态说明
      */
     public $MonitorNote;
 
@@ -102,8 +102,8 @@ class Monitor extends AbstractModel
      * @param string $MonitorTime 监测时间
      * @param integer $MonitorStatus 0-待监测 1-监测中 2-不监测 3-暂停监测
      * @param string $WorkCategory 作品类型
-     * @param string $InsertTime xx
-     * @param string $MonitorNote xx
+     * @param string $InsertTime 新增时间
+     * @param string $MonitorNote 监测状态说明
      */
     function __construct()
     {

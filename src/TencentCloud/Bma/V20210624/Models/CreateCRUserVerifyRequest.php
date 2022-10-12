@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserName() 获取用户真实姓名
  * @method void setUserName(string $UserName) 设置用户真实姓名
- * @method string getUserID() 获取用户身份证ID
- * @method void setUserID(string $UserID) 设置用户身份证ID
+ * @method string getUserID() 获取用户身份证号
+ * @method void setUserID(string $UserID) 设置用户身份证号
  * @method string getUserPhone() 获取用户手机号码
  * @method void setUserPhone(string $UserPhone) 设置用户手机号码
- * @method string getVerificationCode() 获取短信验证码
- * @method void setVerificationCode(string $VerificationCode) 设置短信验证码
- * @method string getType() 获取xxx
- * @method void setType(string $Type) 设置xxx
+ * @method string getVerificationCode() 获取短信验证码，接口接入可以置空
+ * @method void setVerificationCode(string $VerificationCode) 设置短信验证码，接口接入可以置空
+ * @method string getType() 获取字段已废弃，认证类型
+ * @method void setType(string $Type) 设置字段已废弃，认证类型
  */
 class CreateCRUserVerifyRequest extends AbstractModel
 {
@@ -39,7 +39,7 @@ class CreateCRUserVerifyRequest extends AbstractModel
     public $UserName;
 
     /**
-     * @var string 用户身份证ID
+     * @var string 用户身份证号
      */
     public $UserID;
 
@@ -49,21 +49,21 @@ class CreateCRUserVerifyRequest extends AbstractModel
     public $UserPhone;
 
     /**
-     * @var string 短信验证码
+     * @var string 短信验证码，接口接入可以置空
      */
     public $VerificationCode;
 
     /**
-     * @var string xxx
+     * @var string 字段已废弃，认证类型
      */
     public $Type;
 
     /**
      * @param string $UserName 用户真实姓名
-     * @param string $UserID 用户身份证ID
+     * @param string $UserID 用户身份证号
      * @param string $UserPhone 用户手机号码
-     * @param string $VerificationCode 短信验证码
-     * @param string $Type xxx
+     * @param string $VerificationCode 短信验证码，接口接入可以置空
+     * @param string $Type 字段已废弃，认证类型
      */
     function __construct()
     {

@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method string getCodeRule() 获取商户码规则
  * @method void setCodeRule(string $CodeRule) 设置商户码规则
+ * @method integer getCodeType() 获取码来源类型 0: 安心平台 1: 第三方码
+ * @method void setCodeType(integer $CodeType) 设置码来源类型 0: 安心平台 1: 第三方码
+ * @method string getCodeUrl() 获取第三方码域名前缀
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCodeUrl(string $CodeUrl) 设置第三方码域名前缀
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Merchant extends AbstractModel
 {
@@ -76,6 +82,17 @@ class Merchant extends AbstractModel
     public $CodeRule;
 
     /**
+     * @var integer 码来源类型 0: 安心平台 1: 第三方码
+     */
+    public $CodeType;
+
+    /**
+     * @var string 第三方码域名前缀
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CodeUrl;
+
+    /**
      * @param string $MerchantId 商户标识码
      * @param integer $CorpId 企业id
      * @param string $Name 商户名称
@@ -84,6 +101,9 @@ class Merchant extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
      * @param string $CodeRule 商户码规则
+     * @param integer $CodeType 码来源类型 0: 安心平台 1: 第三方码
+     * @param string $CodeUrl 第三方码域名前缀
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -124,6 +144,14 @@ class Merchant extends AbstractModel
 
         if (array_key_exists("CodeRule",$param) and $param["CodeRule"] !== null) {
             $this->CodeRule = $param["CodeRule"];
+        }
+
+        if (array_key_exists("CodeType",$param) and $param["CodeType"] !== null) {
+            $this->CodeType = $param["CodeType"];
+        }
+
+        if (array_key_exists("CodeUrl",$param) and $param["CodeUrl"] !== null) {
+            $this->CodeUrl = $param["CodeUrl"];
         }
     }
 }

@@ -24,7 +24,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
 
 /**
  * @method Models\CreateCodeBatchResponse CreateCodeBatch(Models\CreateCodeBatchRequest $req) 新增批次
- * @method Models\CreateCodePackResponse CreateCodePack(Models\CreateCodePackRequest $req) 生成码包
+ * @method Models\CreateCodePackResponse CreateCodePack(Models\CreateCodePackRequest $req) 生成普通码包
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 新建商户
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 新建商品
  * @method Models\CreateTraceChainResponse CreateTraceChain(Models\CreateTraceChainRequest $req) 上链溯源信息

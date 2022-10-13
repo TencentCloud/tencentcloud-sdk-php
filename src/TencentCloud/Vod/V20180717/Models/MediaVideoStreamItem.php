@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodec(string $Codec) 设置视频流的编码格式，例如 h264。
  * @method integer getFps() 获取帧率，单位：hz。
  * @method void setFps(integer $Fps) 设置帧率，单位：hz。
+ * @method string getCodecTag() 获取编码标签，仅当 Codec 为 hevc 时有效。
+ * @method void setCodecTag(string $CodecTag) 设置编码标签，仅当 Codec 为 hevc 时有效。
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -59,11 +61,17 @@ class MediaVideoStreamItem extends AbstractModel
     public $Fps;
 
     /**
+     * @var string 编码标签，仅当 Codec 为 hevc 时有效。
+     */
+    public $CodecTag;
+
+    /**
      * @param integer $Bitrate 视频流的码率，单位：bps。
      * @param integer $Height 视频流的高度，单位：px。
      * @param integer $Width 视频流的宽度，单位：px。
      * @param string $Codec 视频流的编码格式，例如 h264。
      * @param integer $Fps 帧率，单位：hz。
+     * @param string $CodecTag 编码标签，仅当 Codec 为 hevc 时有效。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class MediaVideoStreamItem extends AbstractModel
 
         if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
             $this->Fps = $param["Fps"];
+        }
+
+        if (array_key_exists("CodecTag",$param) and $param["CodecTag"] !== null) {
+            $this->CodecTag = $param["CodecTag"];
         }
     }
 }

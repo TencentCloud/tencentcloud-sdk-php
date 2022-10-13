@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置类型标识
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExt() 获取扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExt(string $Ext) 设置扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TraceItem extends AbstractModel
 {
@@ -94,6 +98,12 @@ class TraceItem extends AbstractModel
     public $Key;
 
     /**
+     * @var string 扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ext;
+
+    /**
      * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 单个值
@@ -107,6 +117,8 @@ class TraceItem extends AbstractModel
      * @param array $Values 多个值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key 类型标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Ext 扩展字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class TraceItem extends AbstractModel
 
         if (array_key_exists("Key",$param) and $param["Key"] !== null) {
             $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Ext",$param) and $param["Ext"] !== null) {
+            $this->Ext = $param["Ext"];
         }
     }
 }

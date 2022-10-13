@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTplName(string $TplName) 设置模板名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Job getJob() 获取调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJob(Job $Job) 设置调度任务
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CodeBatch extends AbstractModel
 {
@@ -184,6 +188,12 @@ class CodeBatch extends AbstractModel
     public $TplName;
 
     /**
+     * @var Job 调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Job;
+
+    /**
      * @param string $BatchId 批次号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CorpId 企业ID
@@ -215,6 +225,8 @@ class CodeBatch extends AbstractModel
      * @param Ext $Ext 未使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TplName 模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Job $Job 调度任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -293,6 +305,11 @@ class CodeBatch extends AbstractModel
 
         if (array_key_exists("TplName",$param) and $param["TplName"] !== null) {
             $this->TplName = $param["TplName"];
+        }
+
+        if (array_key_exists("Job",$param) and $param["Job"] !== null) {
+            $this->Job = new Job();
+            $this->Job->deserialize($param["Job"]);
         }
     }
 }

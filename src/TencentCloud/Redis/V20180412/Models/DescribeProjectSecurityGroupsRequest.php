@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjectSecurityGroups请求参数结构体
  *
- * @method string getProduct() 获取数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
- * @method void setProduct(string $Product) 设置数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
- * @method integer getProjectId() 获取项目Id。
- * @method void setProjectId(integer $ProjectId) 设置项目Id。
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
- * @method integer getLimit() 获取拉取数量限制，默认20
- * @method void setLimit(integer $Limit) 设置拉取数量限制，默认20
- * @method string getSearchKey() 获取搜索条件，支持安全组id或者安全组名称。
- * @method void setSearchKey(string $SearchKey) 设置搜索条件，支持安全组id或者安全组名称。
+ * @method string getProduct() 获取数据库引擎名称，本接口取值：redis。
+ * @method void setProduct(string $Product) 设置数据库引擎名称，本接口取值：redis。
+ * @method integer getProjectId() 获取项目 ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID。
+ * @method integer getOffset() 获取偏移量，取值为Limit的整数倍。
+ * @method void setOffset(integer $Offset) 设置偏移量，取值为Limit的整数倍。
+ * @method integer getLimit() 获取拉取数量限制，默认 20。
+ * @method void setLimit(integer $Limit) 设置拉取数量限制，默认 20。
+ * @method string getSearchKey() 获取搜索条件，支持安全组 ID 或者安全组名称。
+ * @method void setSearchKey(string $SearchKey) 设置搜索条件，支持安全组 ID 或者安全组名称。
  */
 class DescribeProjectSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
+     * @var string 数据库引擎名称，本接口取值：redis。
      */
     public $Product;
 
     /**
-     * @var integer 项目Id。
+     * @var integer 项目 ID。
      */
     public $ProjectId;
 
     /**
-     * @var integer 偏移量。
+     * @var integer 偏移量，取值为Limit的整数倍。
      */
     public $Offset;
 
     /**
-     * @var integer 拉取数量限制，默认20
+     * @var integer 拉取数量限制，默认 20。
      */
     public $Limit;
 
     /**
-     * @var string 搜索条件，支持安全组id或者安全组名称。
+     * @var string 搜索条件，支持安全组 ID 或者安全组名称。
      */
     public $SearchKey;
 
     /**
-     * @param string $Product 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
-     * @param integer $ProjectId 项目Id。
-     * @param integer $Offset 偏移量。
-     * @param integer $Limit 拉取数量限制，默认20
-     * @param string $SearchKey 搜索条件，支持安全组id或者安全组名称。
+     * @param string $Product 数据库引擎名称，本接口取值：redis。
+     * @param integer $ProjectId 项目 ID。
+     * @param integer $Offset 偏移量，取值为Limit的整数倍。
+     * @param integer $Limit 拉取数量限制，默认 20。
+     * @param string $SearchKey 搜索条件，支持安全组 ID 或者安全组名称。
      */
     function __construct()
     {

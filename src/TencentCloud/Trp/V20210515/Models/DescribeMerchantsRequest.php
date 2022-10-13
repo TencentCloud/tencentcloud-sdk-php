@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置页数
  * @method integer getCorpId() 获取企业ID
  * @method void setCorpId(integer $CorpId) 设置企业ID
+ * @method integer getCodeType() 获取码来源类型 0:自建, 1:第三方
+ * @method void setCodeType(integer $CodeType) 设置码来源类型 0:自建, 1:第三方
  */
 class DescribeMerchantsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeMerchantsRequest extends AbstractModel
     public $CorpId;
 
     /**
+     * @var integer 码来源类型 0:自建, 1:第三方
+     */
+    public $CodeType;
+
+    /**
      * @param string $Name 搜索商户名称
      * @param integer $PageSize 条数
      * @param integer $PageNumber 页数
      * @param integer $CorpId 企业ID
+     * @param integer $CodeType 码来源类型 0:自建, 1:第三方
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeMerchantsRequest extends AbstractModel
 
         if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
             $this->CorpId = $param["CorpId"];
+        }
+
+        if (array_key_exists("CodeType",$param) and $param["CodeType"] !== null) {
+            $this->CodeType = $param["CodeType"];
         }
     }
 }

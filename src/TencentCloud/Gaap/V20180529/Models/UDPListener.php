@@ -102,6 +102,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecvContext(string $RecvContext) 设置UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProxyId() 获取监听器的通道ID，如果监听器属于通道组，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxyId(string $ProxyId) 设置监听器的通道ID，如果监听器属于通道组，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupId() 获取监听器的通道组ID，如果监听器属于通道，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupId(string $GroupId) 设置监听器的通道组ID，如果监听器属于通道，则为null
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UDPListener extends AbstractModel
 {
@@ -239,6 +247,18 @@ class UDPListener extends AbstractModel
     public $RecvContext;
 
     /**
+     * @var string 监听器的通道ID，如果监听器属于通道组，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxyId;
+
+    /**
+     * @var string 监听器的通道组ID，如果监听器属于通道，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupId;
+
+    /**
      * @param string $ListenerId 监听器ID
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
@@ -279,6 +299,10 @@ class UDPListener extends AbstractModel
      * @param string $SendContext UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecvContext UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProxyId 监听器的通道ID，如果监听器属于通道组，则为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupId 监听器的通道组ID，如果监听器属于通道，则为null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -389,6 +413,14 @@ class UDPListener extends AbstractModel
 
         if (array_key_exists("RecvContext",$param) and $param["RecvContext"] !== null) {
             $this->RecvContext = $param["RecvContext"];
+        }
+
+        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
+            $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

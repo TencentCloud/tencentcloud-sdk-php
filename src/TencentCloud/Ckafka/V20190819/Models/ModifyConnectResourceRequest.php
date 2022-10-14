@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSQLServerConnectParam(SQLServerModifyConnectParam $SQLServerConnectParam) 设置SQLServer配置，Type为SQLSERVER时必填
  * @method CtsdbModifyConnectParam getCtsdbConnectParam() 获取Ctsdb配置，Type为CTSDB
  * @method void setCtsdbConnectParam(CtsdbModifyConnectParam $CtsdbConnectParam) 设置Ctsdb配置，Type为CTSDB
+ * @method DorisModifyConnectParam getDorisConnectParam() 获取Doris配置，Type为DORIS
+ * @method void setDorisConnectParam(DorisModifyConnectParam $DorisConnectParam) 设置Doris配置，Type为DORIS
  */
 class ModifyConnectResourceRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class ModifyConnectResourceRequest extends AbstractModel
     public $CtsdbConnectParam;
 
     /**
+     * @var DorisModifyConnectParam Doris配置，Type为DORIS
+     */
+    public $DorisConnectParam;
+
+    /**
      * @param string $ResourceId 连接源的Id
      * @param string $ResourceName 连接源名称，为空时不修改
      * @param string $Description 连接源描述，为空时不修改
@@ -128,6 +135,7 @@ class ModifyConnectResourceRequest extends AbstractModel
      * @param MariaDBModifyConnectParam $MariaDBConnectParam MariaDB配置，Type为MARIADB时必填
      * @param SQLServerModifyConnectParam $SQLServerConnectParam SQLServer配置，Type为SQLSERVER时必填
      * @param CtsdbModifyConnectParam $CtsdbConnectParam Ctsdb配置，Type为CTSDB
+     * @param DorisModifyConnectParam $DorisConnectParam Doris配置，Type为DORIS
      */
     function __construct()
     {
@@ -201,6 +209,11 @@ class ModifyConnectResourceRequest extends AbstractModel
         if (array_key_exists("CtsdbConnectParam",$param) and $param["CtsdbConnectParam"] !== null) {
             $this->CtsdbConnectParam = new CtsdbModifyConnectParam();
             $this->CtsdbConnectParam->deserialize($param["CtsdbConnectParam"]);
+        }
+
+        if (array_key_exists("DorisConnectParam",$param) and $param["DorisConnectParam"] !== null) {
+            $this->DorisConnectParam = new DorisModifyConnectParam();
+            $this->DorisConnectParam->deserialize($param["DorisConnectParam"]);
         }
     }
 }

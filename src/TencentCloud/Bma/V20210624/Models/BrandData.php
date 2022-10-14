@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 商标信息
  *
- * @method string getBrandName() 获取xxx
- * @method void setBrandName(string $BrandName) 设置xxx
- * @method string getBrandCertificateName() 获取xxx
- * @method void setBrandCertificateName(string $BrandCertificateName) 设置xxx
- * @method integer getBrandStatus() 获取xxx
- * @method void setBrandStatus(integer $BrandStatus) 设置xxx
- * @method string getBrandNote() 获取xxx
- * @method void setBrandNote(string $BrandNote) 设置xxx
- * @method string getTransferName() 获取xxx
- * @method void setTransferName(string $TransferName) 设置xxx
- * @method integer getTransferStatus() 获取xxx
- * @method void setTransferStatus(integer $TransferStatus) 设置xxx
- * @method string getTransferNote() 获取xxx
- * @method void setTransferNote(string $TransferNote) 设置xxx
+ * @method string getBrandName() 获取商标名称
+ * @method void setBrandName(string $BrandName) 设置商标名称
+ * @method string getBrandCertificateName() 获取商标证明
+ * @method void setBrandCertificateName(string $BrandCertificateName) 设置商标证明
+ * @method integer getBrandStatus() 获取商标审核状态 1-审核中 2-审核未通过 3-审核通过
+ * @method void setBrandStatus(integer $BrandStatus) 设置商标审核状态 1-审核中 2-审核未通过 3-审核通过
+ * @method string getBrandNote() 获取审核说明
+ * @method void setBrandNote(string $BrandNote) 设置审核说明
+ * @method string getTransferName() 获取商标转让证明
+ * @method void setTransferName(string $TransferName) 设置商标转让证明
+ * @method integer getTransferStatus() 获取商标转让证明审核状态
+ * @method void setTransferStatus(integer $TransferStatus) 设置商标转让证明审核状态
+ * @method string getTransferNote() 获取审核说明 1-审核中 2-审核未通过 3-审核通过
+ * @method void setTransferNote(string $TransferNote) 设置审核说明 1-审核中 2-审核未通过 3-审核通过
  */
 class BrandData extends AbstractModel
 {
     /**
-     * @var string xxx
+     * @var string 商标名称
      */
     public $BrandName;
 
     /**
-     * @var string xxx
+     * @var string 商标证明
      */
     public $BrandCertificateName;
 
     /**
-     * @var integer xxx
+     * @var integer 商标审核状态 1-审核中 2-审核未通过 3-审核通过
      */
     public $BrandStatus;
 
     /**
-     * @var string xxx
+     * @var string 审核说明
      */
     public $BrandNote;
 
     /**
-     * @var string xxx
+     * @var string 商标转让证明
      */
     public $TransferName;
 
     /**
-     * @var integer xxx
+     * @var integer 商标转让证明审核状态
      */
     public $TransferStatus;
 
     /**
-     * @var string xxx
+     * @var string 审核说明 1-审核中 2-审核未通过 3-审核通过
      */
     public $TransferNote;
 
     /**
-     * @param string $BrandName xxx
-     * @param string $BrandCertificateName xxx
-     * @param integer $BrandStatus xxx
-     * @param string $BrandNote xxx
-     * @param string $TransferName xxx
-     * @param integer $TransferStatus xxx
-     * @param string $TransferNote xxx
+     * @param string $BrandName 商标名称
+     * @param string $BrandCertificateName 商标证明
+     * @param integer $BrandStatus 商标审核状态 1-审核中 2-审核未通过 3-审核通过
+     * @param string $BrandNote 审核说明
+     * @param string $TransferName 商标转让证明
+     * @param integer $TransferStatus 商标转让证明审核状态
+     * @param string $TransferNote 审核说明 1-审核中 2-审核未通过 3-审核通过
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBPProtectURLs请求参数结构体
  *
- * @method integer getPageSize() 获取xxx
- * @method void setPageSize(integer $PageSize) 设置xxx
- * @method integer getPageNumber() 获取xxx
- * @method void setPageNumber(integer $PageNumber) 设置xxx
+ * @method integer getPageSize() 获取页数
+ * @method void setPageSize(integer $PageSize) 设置页数
+ * @method integer getPageNumber() 获取页码
+ * @method void setPageNumber(integer $PageNumber) 设置页码
  */
 class DescribeBPProtectURLsRequest extends AbstractModel
 {
     /**
-     * @var integer xxx
+     * @var integer 页数
      */
     public $PageSize;
 
     /**
-     * @var integer xxx
+     * @var integer 页码
      */
     public $PageNumber;
 
     /**
-     * @param integer $PageSize xxx
-     * @param integer $PageNumber xxx
+     * @param integer $PageSize 页数
+     * @param integer $PageNumber 页码
      */
     function __construct()
     {

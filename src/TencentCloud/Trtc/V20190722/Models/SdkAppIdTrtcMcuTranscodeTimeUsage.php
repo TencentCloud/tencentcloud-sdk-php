@@ -31,6 +31,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoTimeHd(integer $VideoTimeHd) 设置视频时长-高清HD，单位：秒。
  * @method integer getVideoTimeFhd() 获取视频时长-全高清FHD，单位：秒。
  * @method void setVideoTimeFhd(integer $VideoTimeFhd) 设置视频时长-全高清FHD，单位：秒。
+ * @method float getFlux() 获取带宽，单位：Mbps。
+ * @method void setFlux(float $Flux) 设置带宽，单位：Mbps。
  */
 class SdkAppIdTrtcMcuTranscodeTimeUsage extends AbstractModel
 {
@@ -60,11 +62,17 @@ class SdkAppIdTrtcMcuTranscodeTimeUsage extends AbstractModel
     public $VideoTimeFhd;
 
     /**
+     * @var float 带宽，单位：Mbps。
+     */
+    public $Flux;
+
+    /**
      * @param string $TimeKey 本组数据对应的时间点，格式如：2020-09-07或2020-09-07 00:05:05。
      * @param integer $AudioTime 语音时长，单位：秒。
      * @param integer $VideoTimeSd 视频时长-标清SD，单位：秒。
      * @param integer $VideoTimeHd 视频时长-高清HD，单位：秒。
      * @param integer $VideoTimeFhd 视频时长-全高清FHD，单位：秒。
+     * @param float $Flux 带宽，单位：Mbps。
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class SdkAppIdTrtcMcuTranscodeTimeUsage extends AbstractModel
 
         if (array_key_exists("VideoTimeFhd",$param) and $param["VideoTimeFhd"] !== null) {
             $this->VideoTimeFhd = $param["VideoTimeFhd"];
+        }
+
+        if (array_key_exists("Flux",$param) and $param["Flux"] !== null) {
+            $this->Flux = $param["Flux"];
         }
     }
 }

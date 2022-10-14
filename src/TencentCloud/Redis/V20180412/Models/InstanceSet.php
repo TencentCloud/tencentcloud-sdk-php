@@ -20,465 +20,537 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例详细信息列表
  *
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method integer getAppid() 获取用户的Appid
- * @method void setAppid(integer $Appid) 设置用户的Appid
- * @method integer getProjectId() 获取项目Id
- * @method void setProjectId(integer $ProjectId) 设置项目Id
- * @method integer getRegionId() 获取地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
- * @method void setRegionId(integer $RegionId) 设置地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
- * @method integer getZoneId() 获取区域id
- * @method void setZoneId(integer $ZoneId) 设置区域id
- * @method integer getVpcId() 获取vpc网络id 如：75101
- * @method void setVpcId(integer $VpcId) 设置vpc网络id 如：75101
- * @method integer getSubnetId() 获取vpc网络下子网id 如：46315
- * @method void setSubnetId(integer $SubnetId) 设置vpc网络下子网id 如：46315
- * @method integer getStatus() 获取实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
- * @method void setStatus(integer $Status) 设置实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
- * @method string getWanIp() 获取实例vip
- * @method void setWanIp(string $WanIp) 设置实例vip
- * @method integer getPort() 获取实例端口号
- * @method void setPort(integer $Port) 设置实例端口号
- * @method string getCreatetime() 获取实例创建时间
- * @method void setCreatetime(string $Createtime) 设置实例创建时间
- * @method float getSize() 获取实例容量大小，单位：MB
- * @method void setSize(float $Size) 设置实例容量大小，单位：MB
- * @method float getSizeUsed() 获取该字段已废弃
- * @method void setSizeUsed(float $SizeUsed) 设置该字段已废弃
- * @method integer getType() 获取实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
- * @method void setType(integer $Type) 设置实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
- * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
- * @method string getDeadlineTime() 获取实例到期时间
- * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间
- * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV
- * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV
- * @method string getProductType() 获取产品类型：standalone – 标准版，cluster – 集群版
- * @method void setProductType(string $ProductType) 设置产品类型：standalone – 标准版，cluster – 集群版
- * @method string getUniqVpcId() 获取vpc网络id 如：vpc-fk33jsf43kgv
- * @method void setUniqVpcId(string $UniqVpcId) 设置vpc网络id 如：vpc-fk33jsf43kgv
- * @method string getUniqSubnetId() 获取vpc网络下子网id 如：subnet-fd3j6l35mm0
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置vpc网络下子网id 如：subnet-fd3j6l35mm0
- * @method integer getBillingMode() 获取计费模式：0-按量计费，1-包年包月
- * @method void setBillingMode(integer $BillingMode) 设置计费模式：0-按量计费，1-包年包月
- * @method string getInstanceTitle() 获取实例运行状态描述：如”实例运行中“
- * @method void setInstanceTitle(string $InstanceTitle) 设置实例运行状态描述：如”实例运行中“
- * @method string getOfflineTime() 获取计划下线时间
- * @method void setOfflineTime(string $OfflineTime) 设置计划下线时间
- * @method integer getSubStatus() 获取流程中的实例，返回子状态
- * @method void setSubStatus(integer $SubStatus) 设置流程中的实例，返回子状态
- * @method array getTags() 获取反亲和性标签
- * @method void setTags(array $Tags) 设置反亲和性标签
- * @method array getInstanceNode() 获取实例节点信息
- * @method void setInstanceNode(array $InstanceNode) 设置实例节点信息
- * @method integer getRedisShardSize() 获取分片大小
- * @method void setRedisShardSize(integer $RedisShardSize) 设置分片大小
- * @method integer getRedisShardNum() 获取分片数量
- * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量
- * @method integer getRedisReplicasNum() 获取副本数量
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量
- * @method integer getPriceId() 获取计费Id
- * @method void setPriceId(integer $PriceId) 设置计费Id
- * @method string getCloseTime() 获取隔离时间
- * @method void setCloseTime(string $CloseTime) 设置隔离时间
- * @method integer getSlaveReadWeight() 获取从节点读取权重
- * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置从节点读取权重
- * @method array getInstanceTags() 获取实例关联的标签信息
+ * @method string getInstanceName() 获取实例名称。
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。
+ * @method string getInstanceId() 获取实例Id。
+ * @method void setInstanceId(string $InstanceId) 设置实例Id。
+ * @method integer getAppid() 获取用户的Appid。
+ * @method void setAppid(integer $Appid) 设置用户的Appid。
+ * @method integer getProjectId() 获取项目Id。
+ * @method void setProjectId(integer $ProjectId) 设置项目Id。
+ * @method integer getRegionId() 获取地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+ * @method void setRegionId(integer $RegionId) 设置地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+ * @method integer getZoneId() 获取区域id。
+ * @method void setZoneId(integer $ZoneId) 设置区域id。
+ * @method integer getVpcId() 获取vpc网络id，例如75101。
+ * @method void setVpcId(integer $VpcId) 设置vpc网络id，例如75101。
+ * @method integer getSubnetId() 获取vpc网络下子网id 如：46315。
+ * @method void setSubnetId(integer $SubnetId) 设置vpc网络下子网id 如：46315。
+ * @method integer getStatus() 获取实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
+ * @method void setStatus(integer $Status) 设置实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
+ * @method string getWanIp() 获取实例vip。
+ * @method void setWanIp(string $WanIp) 设置实例vip。
+ * @method integer getPort() 获取实例端口号。
+ * @method void setPort(integer $Port) 设置实例端口号。
+ * @method string getCreatetime() 获取实例创建时间。
+ * @method void setCreatetime(string $Createtime) 设置实例创建时间。
+ * @method float getSize() 获取实例容量大小，单位：MB。
+ * @method void setSize(float $Size) 设置实例容量大小，单位：MB。
+ * @method float getSizeUsed() 获取该字段已废弃。
+ * @method void setSizeUsed(float $SizeUsed) 设置该字段已废弃。
+ * @method integer getType() 获取实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
+ * @method void setType(integer $Type) 设置实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
+ * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
+ * @method string getDeadlineTime() 获取实例到期时间。
+ * @method void setDeadlineTime(string $DeadlineTime) 设置实例到期时间。
+ * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV。
+ * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV。
+ * @method string getProductType() 获取产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
+ * @method void setProductType(string $ProductType) 设置产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
+ * @method string getUniqVpcId() 获取vpc网络id，例如vpc-fk33jsf43kgv。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置vpc网络id，例如vpc-fk33jsf43kgv。
+ * @method string getUniqSubnetId() 获取vpc网络下子网id，例如：subnet-fd3j6l35mm0。
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置vpc网络下子网id，例如：subnet-fd3j6l35mm0。
+ * @method integer getBillingMode() 获取计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+ * @method void setBillingMode(integer $BillingMode) 设置计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+ * @method string getInstanceTitle() 获取实例运行状态描述：如”实例运行中“。
+ * @method void setInstanceTitle(string $InstanceTitle) 设置实例运行状态描述：如”实例运行中“。
+ * @method string getOfflineTime() 获取计划下线时间。
+ * @method void setOfflineTime(string $OfflineTime) 设置计划下线时间。
+ * @method integer getSubStatus() 获取流程中的实例，返回子状态。
+ * @method void setSubStatus(integer $SubStatus) 设置流程中的实例，返回子状态。
+ * @method array getTags() 获取反亲和性标签。
+ * @method void setTags(array $Tags) 设置反亲和性标签。
+ * @method array getInstanceNode() 获取实例节点信息。
+ * @method void setInstanceNode(array $InstanceNode) 设置实例节点信息。
+ * @method integer getRedisShardSize() 获取分片大小。
+ * @method void setRedisShardSize(integer $RedisShardSize) 设置分片大小。
+ * @method integer getRedisShardNum() 获取分片数量。
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量。
+ * @method integer getRedisReplicasNum() 获取副本数量。
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量。
+ * @method integer getPriceId() 获取计费Id。
+ * @method void setPriceId(integer $PriceId) 设置计费Id。
+ * @method string getCloseTime() 获取隔离时间。
+ * @method void setCloseTime(string $CloseTime) 设置隔离时间。
+ * @method integer getSlaveReadWeight() 获取从节点读取权重。
+ * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置从节点读取权重。
+ * @method array getInstanceTags() 获取实例关联的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceTags(array $InstanceTags) 设置实例关联的标签信息
+ * @method void setInstanceTags(array $InstanceTags) 设置实例关联的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProjectName() 获取项目名称
+ * @method string getProjectName() 获取项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProjectName(string $ProjectName) 设置项目名称
+ * @method void setProjectName(string $ProjectName) 设置项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getNoAuth() 获取是否为免密实例，true-免密实例；false-非免密实例
+ * @method boolean getNoAuth() 获取是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoAuth(boolean $NoAuth) 设置是否为免密实例，true-免密实例；false-非免密实例
+ * @method void setNoAuth(boolean $NoAuth) 设置是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getClientLimit() 获取客户端连接数
+ * @method integer getClientLimit() 获取客户端连接数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClientLimit(integer $ClientLimit) 设置客户端连接数
+ * @method void setClientLimit(integer $ClientLimit) 设置客户端连接数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDtsStatus() 获取DTS状态（内部参数，用户可忽略）
+ * @method integer getDtsStatus() 获取DTS状态（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDtsStatus(integer $DtsStatus) 设置DTS状态（内部参数，用户可忽略）
+ * @method void setDtsStatus(integer $DtsStatus) 设置DTS状态（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNetLimit() 获取分片带宽上限，单位MB
+ * @method integer getNetLimit() 获取分片带宽上限，单位MB。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetLimit(integer $NetLimit) 设置分片带宽上限，单位MB
+ * @method void setNetLimit(integer $NetLimit) 设置分片带宽上限，单位MB。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPasswordFree() 获取免密实例标识（内部参数，用户可忽略）
+ * @method integer getPasswordFree() 获取免密实例标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPasswordFree(integer $PasswordFree) 设置免密实例标识（内部参数，用户可忽略）
+ * @method void setPasswordFree(integer $PasswordFree) 设置免密实例标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReadOnly() 获取实例只读标识（内部参数，用户可忽略）
+ * @method string getVip6() 获取内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReadOnly(integer $ReadOnly) 设置实例只读标识（内部参数，用户可忽略）
+ * @method void setVip6(string $Vip6) 设置内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVip6() 获取内部参数，用户可忽略
+ * @method integer getReadOnly() 获取实例只读标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVip6(string $Vip6) 设置内部参数，用户可忽略
+ * @method void setReadOnly(integer $ReadOnly) 设置实例只读标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRemainBandwidthDuration() 获取内部参数，用户可忽略
+ * @method string getRemainBandwidthDuration() 获取内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置内部参数，用户可忽略
+ * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDiskSize() 获取Tendis实例的磁盘大小
+ * @method integer getDiskSize() 获取Redis实例请忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskSize(integer $DiskSize) 设置Tendis实例的磁盘大小
+ * @method void setDiskSize(integer $DiskSize) 设置Redis实例请忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMonitorVersion() 获取监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+ * @method string getMonitorVersion() 获取监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMonitorVersion(string $MonitorVersion) 设置监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+ * @method void setMonitorVersion(string $MonitorVersion) 设置监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getClientLimitMin() 获取客户端最大连接数可设置的最小值
+ * @method integer getClientLimitMin() 获取客户端最大连接数可设置的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClientLimitMin(integer $ClientLimitMin) 设置客户端最大连接数可设置的最小值
+ * @method void setClientLimitMin(integer $ClientLimitMin) 设置客户端最大连接数可设置的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getClientLimitMax() 获取客户端最大连接数可设置的最大值
+ * @method integer getClientLimitMax() 获取客户端最大连接数可设置的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClientLimitMax(integer $ClientLimitMax) 设置客户端最大连接数可设置的最大值
+ * @method void setClientLimitMax(integer $ClientLimitMax) 设置客户端最大连接数可设置的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNodeSet() 获取实例的节点详细信息
+ * @method array getNodeSet() 获取实例的节点详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeSet(array $NodeSet) 设置实例的节点详细信息
+ * @method void setNodeSet(array $NodeSet) 设置实例的节点详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取实例所在的地域信息，比如ap-guangzhou
+ * @method string getRegion() 获取实例所在的地域信息，比如ap-guangzhou。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置实例所在的地域信息，比如ap-guangzhou
+ * @method void setRegion(string $Region) 设置实例所在的地域信息，比如ap-guangzhou。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWanAddress() 获取外网地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWanAddress(string $WanAddress) 设置外网地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPolarisServer() 获取北极星服务地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolarisServer(string $PolarisServer) 设置北极星服务地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCurrentProxyVersion() 获取实例当前Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置实例当前Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCurrentRedisVersion() 获取实例当前Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrentRedisVersion(string $CurrentRedisVersion) 设置实例当前Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpgradeProxyVersion() 获取实例可升级Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) 设置实例可升级Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpgradeRedisVersion() 获取实例可升级Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) 设置实例可升级Cache小版本。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceSet extends AbstractModel
 {
     /**
-     * @var string 实例名称
+     * @var string 实例名称。
      */
     public $InstanceName;
 
     /**
-     * @var string 实例Id
+     * @var string 实例Id。
      */
     public $InstanceId;
 
     /**
-     * @var integer 用户的Appid
+     * @var integer 用户的Appid。
      */
     public $Appid;
 
     /**
-     * @var integer 项目Id
+     * @var integer 项目Id。
      */
     public $ProjectId;
 
     /**
-     * @var integer 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * @var integer 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
     public $RegionId;
 
     /**
-     * @var integer 区域id
+     * @var integer 区域id。
      */
     public $ZoneId;
 
     /**
-     * @var integer vpc网络id 如：75101
+     * @var integer vpc网络id，例如75101。
      */
     public $VpcId;
 
     /**
-     * @var integer vpc网络下子网id 如：46315
+     * @var integer vpc网络下子网id 如：46315。
      */
     public $SubnetId;
 
     /**
-     * @var integer 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+     * @var integer 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
      */
     public $Status;
 
     /**
-     * @var string 实例vip
+     * @var string 实例vip。
      */
     public $WanIp;
 
     /**
-     * @var integer 实例端口号
+     * @var integer 实例端口号。
      */
     public $Port;
 
     /**
-     * @var string 实例创建时间
+     * @var string 实例创建时间。
      */
     public $Createtime;
 
     /**
-     * @var float 实例容量大小，单位：MB
+     * @var float 实例容量大小，单位：MB。
      */
     public $Size;
 
     /**
-     * @var float 该字段已废弃
+     * @var float 该字段已废弃。
      */
     public $SizeUsed;
 
     /**
-     * @var integer 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+     * @var integer 实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
      */
     public $Type;
 
     /**
-     * @var integer 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
+     * @var integer 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 实例到期时间
+     * @var string 实例到期时间。
      */
     public $DeadlineTime;
 
     /**
-     * @var string 引擎：社区版Redis、腾讯云CKV
+     * @var string 引擎：社区版Redis、腾讯云CKV。
      */
     public $Engine;
 
     /**
-     * @var string 产品类型：standalone – 标准版，cluster – 集群版
+     * @var string 产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
      */
     public $ProductType;
 
     /**
-     * @var string vpc网络id 如：vpc-fk33jsf43kgv
+     * @var string vpc网络id，例如vpc-fk33jsf43kgv。
      */
     public $UniqVpcId;
 
     /**
-     * @var string vpc网络下子网id 如：subnet-fd3j6l35mm0
+     * @var string vpc网络下子网id，例如：subnet-fd3j6l35mm0。
      */
     public $UniqSubnetId;
 
     /**
-     * @var integer 计费模式：0-按量计费，1-包年包月
+     * @var integer 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
      */
     public $BillingMode;
 
     /**
-     * @var string 实例运行状态描述：如”实例运行中“
+     * @var string 实例运行状态描述：如”实例运行中“。
      */
     public $InstanceTitle;
 
     /**
-     * @var string 计划下线时间
+     * @var string 计划下线时间。
      */
     public $OfflineTime;
 
     /**
-     * @var integer 流程中的实例，返回子状态
+     * @var integer 流程中的实例，返回子状态。
      */
     public $SubStatus;
 
     /**
-     * @var array 反亲和性标签
+     * @var array 反亲和性标签。
      */
     public $Tags;
 
     /**
-     * @var array 实例节点信息
+     * @var array 实例节点信息。
      */
     public $InstanceNode;
 
     /**
-     * @var integer 分片大小
+     * @var integer 分片大小。
      */
     public $RedisShardSize;
 
     /**
-     * @var integer 分片数量
+     * @var integer 分片数量。
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 副本数量
+     * @var integer 副本数量。
      */
     public $RedisReplicasNum;
 
     /**
-     * @var integer 计费Id
+     * @var integer 计费Id。
      */
     public $PriceId;
 
     /**
-     * @var string 隔离时间
+     * @var string 隔离时间。
      */
     public $CloseTime;
 
     /**
-     * @var integer 从节点读取权重
+     * @var integer 从节点读取权重。
      */
     public $SlaveReadWeight;
 
     /**
-     * @var array 实例关联的标签信息
+     * @var array 实例关联的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTags;
 
     /**
-     * @var string 项目名称
+     * @var string 项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
-     * @var boolean 是否为免密实例，true-免密实例；false-非免密实例
+     * @var boolean 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoAuth;
 
     /**
-     * @var integer 客户端连接数
+     * @var integer 客户端连接数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientLimit;
 
     /**
-     * @var integer DTS状态（内部参数，用户可忽略）
+     * @var integer DTS状态（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DtsStatus;
 
     /**
-     * @var integer 分片带宽上限，单位MB
+     * @var integer 分片带宽上限，单位MB。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetLimit;
 
     /**
-     * @var integer 免密实例标识（内部参数，用户可忽略）
+     * @var integer 免密实例标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PasswordFree;
 
     /**
-     * @var integer 实例只读标识（内部参数，用户可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ReadOnly;
-
-    /**
-     * @var string 内部参数，用户可忽略
+     * @var string 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip6;
 
     /**
-     * @var string 内部参数，用户可忽略
+     * @var integer 实例只读标识（内部参数，用户可忽略）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReadOnly;
+
+    /**
+     * @var string 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainBandwidthDuration;
 
     /**
-     * @var integer Tendis实例的磁盘大小
+     * @var integer Redis实例请忽略该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
-     * @var string 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+     * @var string 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorVersion;
 
     /**
-     * @var integer 客户端最大连接数可设置的最小值
+     * @var integer 客户端最大连接数可设置的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientLimitMin;
 
     /**
-     * @var integer 客户端最大连接数可设置的最大值
+     * @var integer 客户端最大连接数可设置的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientLimitMax;
 
     /**
-     * @var array 实例的节点详细信息
+     * @var array 实例的节点详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeSet;
 
     /**
-     * @var string 实例所在的地域信息，比如ap-guangzhou
+     * @var string 实例所在的地域信息，比如ap-guangzhou。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
-     * @param string $InstanceName 实例名称
-     * @param string $InstanceId 实例Id
-     * @param integer $Appid 用户的Appid
-     * @param integer $ProjectId 项目Id
-     * @param integer $RegionId 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
-     * @param integer $ZoneId 区域id
-     * @param integer $VpcId vpc网络id 如：75101
-     * @param integer $SubnetId vpc网络下子网id 如：46315
-     * @param integer $Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
-     * @param string $WanIp 实例vip
-     * @param integer $Port 实例端口号
-     * @param string $Createtime 实例创建时间
-     * @param float $Size 实例容量大小，单位：MB
-     * @param float $SizeUsed 该字段已废弃
-     * @param integer $Type 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
-     * @param integer $AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
-     * @param string $DeadlineTime 实例到期时间
-     * @param string $Engine 引擎：社区版Redis、腾讯云CKV
-     * @param string $ProductType 产品类型：standalone – 标准版，cluster – 集群版
-     * @param string $UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
-     * @param string $UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
-     * @param integer $BillingMode 计费模式：0-按量计费，1-包年包月
-     * @param string $InstanceTitle 实例运行状态描述：如”实例运行中“
-     * @param string $OfflineTime 计划下线时间
-     * @param integer $SubStatus 流程中的实例，返回子状态
-     * @param array $Tags 反亲和性标签
-     * @param array $InstanceNode 实例节点信息
-     * @param integer $RedisShardSize 分片大小
-     * @param integer $RedisShardNum 分片数量
-     * @param integer $RedisReplicasNum 副本数量
-     * @param integer $PriceId 计费Id
-     * @param string $CloseTime 隔离时间
-     * @param integer $SlaveReadWeight 从节点读取权重
-     * @param array $InstanceTags 实例关联的标签信息
+     * @var string 外网地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProjectName 项目名称
+     */
+    public $WanAddress;
+
+    /**
+     * @var string 北极星服务地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $NoAuth 是否为免密实例，true-免密实例；false-非免密实例
+     */
+    public $PolarisServer;
+
+    /**
+     * @var string 实例当前Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ClientLimit 客户端连接数
+     */
+    public $CurrentProxyVersion;
+
+    /**
+     * @var string 实例当前Cache小版本。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DtsStatus DTS状态（内部参数，用户可忽略）
+     */
+    public $CurrentRedisVersion;
+
+    /**
+     * @var string 实例可升级Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NetLimit 分片带宽上限，单位MB
+     */
+    public $UpgradeProxyVersion;
+
+    /**
+     * @var string 实例可升级Cache小版本。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PasswordFree 免密实例标识（内部参数，用户可忽略）
+     */
+    public $UpgradeRedisVersion;
+
+    /**
+     * @param string $InstanceName 实例名称。
+     * @param string $InstanceId 实例Id。
+     * @param integer $Appid 用户的Appid。
+     * @param integer $ProjectId 项目Id。
+     * @param integer $RegionId 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * @param integer $ZoneId 区域id。
+     * @param integer $VpcId vpc网络id，例如75101。
+     * @param integer $SubnetId vpc网络下子网id 如：46315。
+     * @param integer $Status 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
+     * @param string $WanIp 实例vip。
+     * @param integer $Port 实例端口号。
+     * @param string $Createtime 实例创建时间。
+     * @param float $Size 实例容量大小，单位：MB。
+     * @param float $SizeUsed 该字段已废弃。
+     * @param integer $Type 实例类型：<ul><li>1：Redis2.8内存版（集群架构）。</li><li>2：Redis2.8内存版（标准架构）。</li><li>3：CKV 3.2内存版(标准架构)。</li><li>4：CKV 3.2内存版(集群架构)。</li><li>5：Redis2.8内存版（单机）。</li></li><li>6：Redis4.0内存版（标准架构）。</li></li><li>7：Redis4.0内存版（集群架构）。</li></li><li>8：Redis5.0内存版（标准架构）。</li></li><li>9：Redis5.0内存版（集群架构）。</li></ul>
+     * @param integer $AutoRenewFlag 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
+     * @param string $DeadlineTime 实例到期时间。
+     * @param string $Engine 引擎：社区版Redis、腾讯云CKV。
+     * @param string $ProductType 产品类型。<ul><li>standalone：标准版。</li><li>cluster ：集群版。</li></ul>
+     * @param string $UniqVpcId vpc网络id，例如vpc-fk33jsf43kgv。
+     * @param string $UniqSubnetId vpc网络下子网id，例如：subnet-fd3j6l35mm0。
+     * @param integer $BillingMode 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+     * @param string $InstanceTitle 实例运行状态描述：如”实例运行中“。
+     * @param string $OfflineTime 计划下线时间。
+     * @param integer $SubStatus 流程中的实例，返回子状态。
+     * @param array $Tags 反亲和性标签。
+     * @param array $InstanceNode 实例节点信息。
+     * @param integer $RedisShardSize 分片大小。
+     * @param integer $RedisShardNum 分片数量。
+     * @param integer $RedisReplicasNum 副本数量。
+     * @param integer $PriceId 计费Id。
+     * @param string $CloseTime 隔离时间。
+     * @param integer $SlaveReadWeight 从节点读取权重。
+     * @param array $InstanceTags 实例关联的标签信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReadOnly 实例只读标识（内部参数，用户可忽略）
+     * @param string $ProjectName 项目名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Vip6 内部参数，用户可忽略
+     * @param boolean $NoAuth 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RemainBandwidthDuration 内部参数，用户可忽略
+     * @param integer $ClientLimit 客户端连接数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DiskSize Tendis实例的磁盘大小
+     * @param integer $DtsStatus DTS状态（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MonitorVersion 监控版本: 1m-分钟粒度监控，5s-5秒粒度监控
+     * @param integer $NetLimit 分片带宽上限，单位MB。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值
+     * @param integer $PasswordFree 免密实例标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ClientLimitMax 客户端最大连接数可设置的最大值
+     * @param string $Vip6 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NodeSet 实例的节点详细信息
+     * @param integer $ReadOnly 实例只读标识（内部参数，用户可忽略）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 实例所在的地域信息，比如ap-guangzhou
+     * @param string $RemainBandwidthDuration 内部参数，用户可忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DiskSize Redis实例请忽略该参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MonitorVersion 监控版本。<ul><li>1m：分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ClientLimitMax 客户端最大连接数可设置的最大值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NodeSet 实例的节点详细信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region 实例所在的地域信息，比如ap-guangzhou。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WanAddress 外网地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PolarisServer 北极星服务地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CurrentProxyVersion 实例当前Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CurrentRedisVersion 实例当前Cache小版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpgradeProxyVersion 实例可升级Proxy版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpgradeRedisVersion 实例可升级Cache小版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -664,12 +736,12 @@ class InstanceSet extends AbstractModel
             $this->PasswordFree = $param["PasswordFree"];
         }
 
-        if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
-            $this->ReadOnly = $param["ReadOnly"];
-        }
-
         if (array_key_exists("Vip6",$param) and $param["Vip6"] !== null) {
             $this->Vip6 = $param["Vip6"];
+        }
+
+        if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
+            $this->ReadOnly = $param["ReadOnly"];
         }
 
         if (array_key_exists("RemainBandwidthDuration",$param) and $param["RemainBandwidthDuration"] !== null) {
@@ -703,6 +775,30 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("WanAddress",$param) and $param["WanAddress"] !== null) {
+            $this->WanAddress = $param["WanAddress"];
+        }
+
+        if (array_key_exists("PolarisServer",$param) and $param["PolarisServer"] !== null) {
+            $this->PolarisServer = $param["PolarisServer"];
+        }
+
+        if (array_key_exists("CurrentProxyVersion",$param) and $param["CurrentProxyVersion"] !== null) {
+            $this->CurrentProxyVersion = $param["CurrentProxyVersion"];
+        }
+
+        if (array_key_exists("CurrentRedisVersion",$param) and $param["CurrentRedisVersion"] !== null) {
+            $this->CurrentRedisVersion = $param["CurrentRedisVersion"];
+        }
+
+        if (array_key_exists("UpgradeProxyVersion",$param) and $param["UpgradeProxyVersion"] !== null) {
+            $this->UpgradeProxyVersion = $param["UpgradeProxyVersion"];
+        }
+
+        if (array_key_exists("UpgradeRedisVersion",$param) and $param["UpgradeRedisVersion"] !== null) {
+            $this->UpgradeRedisVersion = $param["UpgradeRedisVersion"];
         }
     }
 }

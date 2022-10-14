@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络ID
  * @method string getSubnetId() 获取已配置的私有网络中的子网ID
  * @method void setSubnetId(string $SubnetId) 设置已配置的私有网络中的子网ID
- * @method string getPayMode() 获取集群付费模式
+ * @method string getPayMode() 获取实例付费模式
  - PREPAID：预付费，即包年包月
  - POSTPAID_BY_HOUR：按小时后付费
- * @method void setPayMode(string $PayMode) 设置集群付费模式
+ * @method void setPayMode(string $PayMode) 设置实例付费模式
  - PREPAID：预付费，即包年包月
  - POSTPAID_BY_HOUR：按小时后付费
  * @method string getClusterName() 获取集群名，1-60个字符，可以包含中文、英文、数字和符号"-"、"_"、"."。不输入此参数时默认与ClusterId保持一致
@@ -70,6 +70,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBKernelVersion(string $DBKernelVersion) 设置TDSQL-C PostgreSQL 内核版本号。
 支持入参值为：v10.17_r1.4。当输入该参数时，会创建此版本号对应的数据库内核。
 注：该参数和DBVersion、DBMajorVersion只能传递一个，且需要传递一个。
+ * @method string getStoragePayMode() 获取存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+ * @method void setStoragePayMode(string $StoragePayMode) 设置存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+ * @method integer getStorage() 获取存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
+ * @method void setStorage(integer $Storage) 设置存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -104,7 +114,7 @@ class CreateClusterRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 集群付费模式
+     * @var string 实例付费模式
  - PREPAID：预付费，即包年包月
  - POSTPAID_BY_HOUR：按小时后付费
      */
@@ -163,13 +173,26 @@ class CreateClusterRequest extends AbstractModel
     public $DBKernelVersion;
 
     /**
+     * @var string 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+     */
+    public $StoragePayMode;
+
+    /**
+     * @var integer 存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
+     */
+    public $Storage;
+
+    /**
      * @param string $Zone 可用区
      * @param string $MasterUserPassword 数据库用户密码，必须满足 8-64个字符，至少包含 大写字母、小写字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种
      * @param integer $CPU CPU核数。取值参考文档【购买指南】
      * @param integer $Memory 内存大小，单位GiB。取值参考文档【购买指南】
      * @param string $VpcId 私有网络ID
      * @param string $SubnetId 已配置的私有网络中的子网ID
-     * @param string $PayMode 集群付费模式
+     * @param string $PayMode 实例付费模式
  - PREPAID：预付费，即包年包月
  - POSTPAID_BY_HOUR：按小时后付费
      * @param string $ClusterName 集群名，1-60个字符，可以包含中文、英文、数字和符号"-"、"_"、"."。不输入此参数时默认与ClusterId保持一致
@@ -188,6 +211,11 @@ class CreateClusterRequest extends AbstractModel
      * @param string $DBKernelVersion TDSQL-C PostgreSQL 内核版本号。
 支持入参值为：v10.17_r1.4。当输入该参数时，会创建此版本号对应的数据库内核。
 注：该参数和DBVersion、DBMajorVersion只能传递一个，且需要传递一个。
+     * @param string $StoragePayMode 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+     * @param integer $Storage 存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
      */
     function __construct()
     {
@@ -264,6 +292,14 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
             $this->DBKernelVersion = $param["DBKernelVersion"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+            $this->Storage = $param["Storage"];
         }
     }
 }

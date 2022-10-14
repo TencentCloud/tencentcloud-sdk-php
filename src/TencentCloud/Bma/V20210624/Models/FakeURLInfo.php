@@ -20,138 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 仿冒网站信息
  *
- * @method integer getFakeURLId() 获取xxx
- * @method void setFakeURLId(integer $FakeURLId) 设置xxx
- * @method string getProtectWeb() 获取xxx
- * @method void setProtectWeb(string $ProtectWeb) 设置xxx
- * @method string getDetectTime() 获取xxx
- * @method void setDetectTime(string $DetectTime) 设置xxx
- * @method string getFakeURL() 获取xxx
- * @method void setFakeURL(string $FakeURL) 设置xxx
- * @method string getSnapshot() 获取xxx
- * @method void setSnapshot(string $Snapshot) 设置xxx
- * @method string getIP() 获取xxx
- * @method void setIP(string $IP) 设置xxx
- * @method string getIPLoc() 获取xxx
- * @method void setIPLoc(string $IPLoc) 设置xxx
- * @method integer getHeat() 获取xxx
- * @method void setHeat(integer $Heat) 设置xxx
- * @method integer getStatus() 获取xxx
- * @method void setStatus(integer $Status) 设置xxx
- * @method string getNote() 获取xxx
- * @method void setNote(string $Note) 设置xxx
- * @method string getFakeURLCompany() 获取xxx
- * @method void setFakeURLCompany(string $FakeURLCompany) 设置xxx
- * @method string getFakeURLAttr() 获取xxx
- * @method void setFakeURLAttr(string $FakeURLAttr) 设置xxx
- * @method string getFakeURLName() 获取xxx
- * @method void setFakeURLName(string $FakeURLName) 设置xxx
- * @method string getFakeURLICP() 获取xxx
- * @method void setFakeURLICP(string $FakeURLICP) 设置xxx
- * @method string getFakeURLCreateTime() 获取xxx
- * @method void setFakeURLCreateTime(string $FakeURLCreateTime) 设置xxx
- * @method string getFakeURLExpireTime() 获取xxx
- * @method void setFakeURLExpireTime(string $FakeURLExpireTime) 设置xxx
+ * @method integer getFakeURLId() 获取仿冒网址ID
+ * @method void setFakeURLId(integer $FakeURLId) 设置仿冒网址ID
+ * @method string getProtectWeb() 获取保护网站
+ * @method void setProtectWeb(string $ProtectWeb) 设置保护网站
+ * @method string getDetectTime() 获取检测时间
+ * @method void setDetectTime(string $DetectTime) 设置检测时间
+ * @method string getFakeURL() 获取仿冒网址
+ * @method void setFakeURL(string $FakeURL) 设置仿冒网址
+ * @method string getSnapshot() 获取截图
+ * @method void setSnapshot(string $Snapshot) 设置截图
+ * @method string getIP() 获取IP地址
+ * @method void setIP(string $IP) 设置IP地址
+ * @method string getIPLoc() 获取IP地理位置
+ * @method void setIPLoc(string $IPLoc) 设置IP地理位置
+ * @method integer getHeat() 获取热度
+ * @method void setHeat(integer $Heat) 设置热度
+ * @method integer getStatus() 获取网址状态
+ * @method void setStatus(integer $Status) 设置网址状态
+ * @method string getNote() 获取备注
+ * @method void setNote(string $Note) 设置备注
+ * @method string getFakeURLCompany() 获取仿冒网站所属单位
+ * @method void setFakeURLCompany(string $FakeURLCompany) 设置仿冒网站所属单位
+ * @method string getFakeURLAttr() 获取仿冒网站性质
+ * @method void setFakeURLAttr(string $FakeURLAttr) 设置仿冒网站性质
+ * @method string getFakeURLName() 获取仿冒网站名称
+ * @method void setFakeURLName(string $FakeURLName) 设置仿冒网站名称
+ * @method string getFakeURLICP() 获取仿冒网站备案号
+ * @method void setFakeURLICP(string $FakeURLICP) 设置仿冒网站备案号
+ * @method string getFakeURLCreateTime() 获取仿冒网站创建时间
+ * @method void setFakeURLCreateTime(string $FakeURLCreateTime) 设置仿冒网站创建时间
+ * @method string getFakeURLExpireTime() 获取仿冒网站过期时间
+ * @method void setFakeURLExpireTime(string $FakeURLExpireTime) 设置仿冒网站过期时间
  */
 class FakeURLInfo extends AbstractModel
 {
     /**
-     * @var integer xxx
+     * @var integer 仿冒网址ID
      */
     public $FakeURLId;
 
     /**
-     * @var string xxx
+     * @var string 保护网站
      */
     public $ProtectWeb;
 
     /**
-     * @var string xxx
+     * @var string 检测时间
      */
     public $DetectTime;
 
     /**
-     * @var string xxx
+     * @var string 仿冒网址
      */
     public $FakeURL;
 
     /**
-     * @var string xxx
+     * @var string 截图
      */
     public $Snapshot;
 
     /**
-     * @var string xxx
+     * @var string IP地址
      */
     public $IP;
 
     /**
-     * @var string xxx
+     * @var string IP地理位置
      */
     public $IPLoc;
 
     /**
-     * @var integer xxx
+     * @var integer 热度
      */
     public $Heat;
 
     /**
-     * @var integer xxx
+     * @var integer 网址状态
      */
     public $Status;
 
     /**
-     * @var string xxx
+     * @var string 备注
      */
     public $Note;
 
     /**
-     * @var string xxx
+     * @var string 仿冒网站所属单位
      */
     public $FakeURLCompany;
 
     /**
-     * @var string xxx
+     * @var string 仿冒网站性质
      */
     public $FakeURLAttr;
 
     /**
-     * @var string xxx
+     * @var string 仿冒网站名称
      */
     public $FakeURLName;
 
     /**
-     * @var string xxx
+     * @var string 仿冒网站备案号
      */
     public $FakeURLICP;
 
     /**
-     * @var string xxx
+     * @var string 仿冒网站创建时间
      */
     public $FakeURLCreateTime;
 
     /**
-     * @var string xxx
+     * @var string 仿冒网站过期时间
      */
     public $FakeURLExpireTime;
 
     /**
-     * @param integer $FakeURLId xxx
-     * @param string $ProtectWeb xxx
-     * @param string $DetectTime xxx
-     * @param string $FakeURL xxx
-     * @param string $Snapshot xxx
-     * @param string $IP xxx
-     * @param string $IPLoc xxx
-     * @param integer $Heat xxx
-     * @param integer $Status xxx
-     * @param string $Note xxx
-     * @param string $FakeURLCompany xxx
-     * @param string $FakeURLAttr xxx
-     * @param string $FakeURLName xxx
-     * @param string $FakeURLICP xxx
-     * @param string $FakeURLCreateTime xxx
-     * @param string $FakeURLExpireTime xxx
+     * @param integer $FakeURLId 仿冒网址ID
+     * @param string $ProtectWeb 保护网站
+     * @param string $DetectTime 检测时间
+     * @param string $FakeURL 仿冒网址
+     * @param string $Snapshot 截图
+     * @param string $IP IP地址
+     * @param string $IPLoc IP地理位置
+     * @param integer $Heat 热度
+     * @param integer $Status 网址状态
+     * @param string $Note 备注
+     * @param string $FakeURLCompany 仿冒网站所属单位
+     * @param string $FakeURLAttr 仿冒网站性质
+     * @param string $FakeURLName 仿冒网站名称
+     * @param string $FakeURLICP 仿冒网站备案号
+     * @param string $FakeURLCreateTime 仿冒网站创建时间
+     * @param string $FakeURLExpireTime 仿冒网站过期时间
      */
     function __construct()
     {

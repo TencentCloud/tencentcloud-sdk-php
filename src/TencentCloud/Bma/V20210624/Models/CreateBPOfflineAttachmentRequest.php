@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBPOfflineAttachment请求参数结构体
  *
- * @method string getBrandName() 获取xxx
- * @method void setBrandName(string $BrandName) 设置xxx
- * @method string getBrandCertificateName() 获取xx
- * @method void setBrandCertificateName(string $BrandCertificateName) 设置xx
- * @method string getTransferName() 获取xx
- * @method void setTransferName(string $TransferName) 设置xx
- * @method string getAuthorizationName() 获取xx
- * @method void setAuthorizationName(string $AuthorizationName) 设置xx
+ * @method string getBrandName() 获取品牌名字
+ * @method void setBrandName(string $BrandName) 设置品牌名字
+ * @method string getBrandCertificateName() 获取商标证明
+ * @method void setBrandCertificateName(string $BrandCertificateName) 设置商标证明
+ * @method string getTransferName() 获取商标转让证明
+ * @method void setTransferName(string $TransferName) 设置商标转让证明
+ * @method string getAuthorizationName() 获取授权书
+ * @method void setAuthorizationName(string $AuthorizationName) 设置授权书
  */
 class CreateBPOfflineAttachmentRequest extends AbstractModel
 {
     /**
-     * @var string xxx
+     * @var string 品牌名字
      */
     public $BrandName;
 
     /**
-     * @var string xx
+     * @var string 商标证明
      */
     public $BrandCertificateName;
 
     /**
-     * @var string xx
+     * @var string 商标转让证明
      */
     public $TransferName;
 
     /**
-     * @var string xx
+     * @var string 授权书
      */
     public $AuthorizationName;
 
     /**
-     * @param string $BrandName xxx
-     * @param string $BrandCertificateName xx
-     * @param string $TransferName xx
-     * @param string $AuthorizationName xx
+     * @param string $BrandName 品牌名字
+     * @param string $BrandCertificateName 商标证明
+     * @param string $TransferName 商标转让证明
+     * @param string $AuthorizationName 授权书
      */
     function __construct()
     {

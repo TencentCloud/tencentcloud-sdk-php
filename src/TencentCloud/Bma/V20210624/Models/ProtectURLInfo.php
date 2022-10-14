@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 保护网站信息
  *
- * @method integer getProtectURLId() 获取xxx
- * @method void setProtectURLId(integer $ProtectURLId) 设置xxx
- * @method string getProtectURL() 获取xxx
- * @method void setProtectURL(string $ProtectURL) 设置xxx
- * @method string getProtectWeb() 获取xxx
- * @method void setProtectWeb(string $ProtectWeb) 设置xxx
- * @method integer getProtectURLStatus() 获取xxx
- * @method void setProtectURLStatus(integer $ProtectURLStatus) 设置xxx
- * @method string getProtectURLNote() 获取xxx
- * @method void setProtectURLNote(string $ProtectURLNote) 设置xxx
- * @method string getCreateTime() 获取xxx
- * @method void setCreateTime(string $CreateTime) 设置xxx
+ * @method integer getProtectURLId() 获取保护网站ID
+ * @method void setProtectURLId(integer $ProtectURLId) 设置保护网站ID
+ * @method string getProtectURL() 获取保护网站
+ * @method void setProtectURL(string $ProtectURL) 设置保护网站
+ * @method string getProtectWeb() 获取保护网站名称
+ * @method void setProtectWeb(string $ProtectWeb) 设置保护网站名称
+ * @method integer getProtectURLStatus() 获取保护网站审核状态 1-审核中 2-审核不通过 3-审核通过
+ * @method void setProtectURLStatus(integer $ProtectURLStatus) 设置保护网站审核状态 1-审核中 2-审核不通过 3-审核通过
+ * @method string getProtectURLNote() 获取网站审核不通过原因
+ * @method void setProtectURLNote(string $ProtectURLNote) 设置网站审核不通过原因
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
  */
 class ProtectURLInfo extends AbstractModel
 {
     /**
-     * @var integer xxx
+     * @var integer 保护网站ID
      */
     public $ProtectURLId;
 
     /**
-     * @var string xxx
+     * @var string 保护网站
      */
     public $ProtectURL;
 
     /**
-     * @var string xxx
+     * @var string 保护网站名称
      */
     public $ProtectWeb;
 
     /**
-     * @var integer xxx
+     * @var integer 保护网站审核状态 1-审核中 2-审核不通过 3-审核通过
      */
     public $ProtectURLStatus;
 
     /**
-     * @var string xxx
+     * @var string 网站审核不通过原因
      */
     public $ProtectURLNote;
 
     /**
-     * @var string xxx
+     * @var string 创建时间
      */
     public $CreateTime;
 
     /**
-     * @param integer $ProtectURLId xxx
-     * @param string $ProtectURL xxx
-     * @param string $ProtectWeb xxx
-     * @param integer $ProtectURLStatus xxx
-     * @param string $ProtectURLNote xxx
-     * @param string $CreateTime xxx
+     * @param integer $ProtectURLId 保护网站ID
+     * @param string $ProtectURL 保护网站
+     * @param string $ProtectWeb 保护网站名称
+     * @param integer $ProtectURLStatus 保护网站审核状态 1-审核中 2-审核不通过 3-审核通过
+     * @param string $ProtectURLNote 网站审核不通过原因
+     * @param string $CreateTime 创建时间
      */
     function __construct()
     {

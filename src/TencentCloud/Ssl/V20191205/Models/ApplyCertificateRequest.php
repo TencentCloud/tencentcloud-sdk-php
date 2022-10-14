@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) 设置备注名称。
  * @method string getOldCertificateId() 获取原证书 ID，用于重新申请。
  * @method void setOldCertificateId(string $OldCertificateId) 设置原证书 ID，用于重新申请。
+ * @method string getPackageId() 获取权益包ID，用于免费证书扩容包使用
+ * @method void setPackageId(string $PackageId) 设置权益包ID，用于免费证书扩容包使用
  */
 class ApplyCertificateRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class ApplyCertificateRequest extends AbstractModel
     public $OldCertificateId;
 
     /**
+     * @var string 权益包ID，用于免费证书扩容包使用
+     */
+    public $PackageId;
+
+    /**
      * @param string $DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      * @param string $DomainName 域名。
      * @param integer $ProjectId 项目 ID。
@@ -120,6 +127,7 @@ class ApplyCertificateRequest extends AbstractModel
      * @param string $CsrKeyPassword CSR 的加密密码。
      * @param string $Alias 备注名称。
      * @param string $OldCertificateId 原证书 ID，用于重新申请。
+     * @param string $PackageId 权益包ID，用于免费证书扩容包使用
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class ApplyCertificateRequest extends AbstractModel
 
         if (array_key_exists("OldCertificateId",$param) and $param["OldCertificateId"] !== null) {
             $this->OldCertificateId = $param["OldCertificateId"];
+        }
+
+        if (array_key_exists("PackageId",$param) and $param["PackageId"] !== null) {
+            $this->PackageId = $param["PackageId"];
         }
     }
 }

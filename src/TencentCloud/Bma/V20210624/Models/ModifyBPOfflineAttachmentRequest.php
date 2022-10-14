@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBPOfflineAttachment请求参数结构体
  *
- * @method string getLicenseName() 获取xx
- * @method void setLicenseName(string $LicenseName) 设置xx
- * @method string getAuthorizationName() 获取xx
- * @method void setAuthorizationName(string $AuthorizationName) 设置xx
- * @method string getBrandName() 获取xx
- * @method void setBrandName(string $BrandName) 设置xx
- * @method string getBrandCertificateName() 获取xx
- * @method void setBrandCertificateName(string $BrandCertificateName) 设置xx
- * @method string getTransferName() 获取xx
- * @method void setTransferName(string $TransferName) 设置xx
+ * @method string getLicenseName() 获取营业执照
+ * @method void setLicenseName(string $LicenseName) 设置营业执照
+ * @method string getAuthorizationName() 获取授权书
+ * @method void setAuthorizationName(string $AuthorizationName) 设置授权书
+ * @method string getBrandName() 获取商标名称
+ * @method void setBrandName(string $BrandName) 设置商标名称
+ * @method string getBrandCertificateName() 获取商标证明
+ * @method void setBrandCertificateName(string $BrandCertificateName) 设置商标证明
+ * @method string getTransferName() 获取商标转让证明
+ * @method void setTransferName(string $TransferName) 设置商标转让证明
  */
 class ModifyBPOfflineAttachmentRequest extends AbstractModel
 {
     /**
-     * @var string xx
+     * @var string 营业执照
      */
     public $LicenseName;
 
     /**
-     * @var string xx
+     * @var string 授权书
      */
     public $AuthorizationName;
 
     /**
-     * @var string xx
+     * @var string 商标名称
      */
     public $BrandName;
 
     /**
-     * @var string xx
+     * @var string 商标证明
      */
     public $BrandCertificateName;
 
     /**
-     * @var string xx
+     * @var string 商标转让证明
      */
     public $TransferName;
 
     /**
-     * @param string $LicenseName xx
-     * @param string $AuthorizationName xx
-     * @param string $BrandName xx
-     * @param string $BrandCertificateName xx
-     * @param string $TransferName xx
+     * @param string $LicenseName 营业执照
+     * @param string $AuthorizationName 授权书
+     * @param string $BrandName 商标名称
+     * @param string $BrandCertificateName 商标证明
+     * @param string $TransferName 商标转让证明
      */
     function __construct()
     {

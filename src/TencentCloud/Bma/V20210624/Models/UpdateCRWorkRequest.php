@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getWorkId() 获取作品ID
  * @method void setWorkId(integer $WorkId) 设置作品ID
- * @method string getContentType() 获取文件的扩展名，比如txt，docx
- * @method void setContentType(string $ContentType) 设置文件的扩展名，比如txt，docx
+ * @method string getContentType() 获取文件的扩展名，例如txt，docx
+ * @method void setContentType(string $ContentType) 设置文件的扩展名，例如txt，docx
  * @method string getContent() 获取内容的base64编码
  * @method void setContent(string $Content) 设置内容的base64编码
  * @method string getCertType() 获取本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
@@ -37,7 +37,7 @@ class UpdateCRWorkRequest extends AbstractModel
     public $WorkId;
 
     /**
-     * @var string 文件的扩展名，比如txt，docx
+     * @var string 文件的扩展名，例如txt，docx
      */
     public $ContentType;
 
@@ -53,7 +53,7 @@ class UpdateCRWorkRequest extends AbstractModel
 
     /**
      * @param integer $WorkId 作品ID
-     * @param string $ContentType 文件的扩展名，比如txt，docx
+     * @param string $ContentType 文件的扩展名，例如txt，docx
      * @param string $Content 内容的base64编码
      * @param string $CertType 本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
      */

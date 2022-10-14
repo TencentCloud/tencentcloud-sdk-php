@@ -32,6 +32,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutOrderId() 获取外部商户订单号，只能是数字、大小写字母，且在同一个接入平台下唯一。
  * @method void setOutOrderId(string $OutOrderId) 设置外部商户订单号，只能是数字、大小写字母，且在同一个接入平台下唯一。
+ * @method string getDealStatus() 获取充值状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDealStatus(string $DealStatus) 设置充值状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDealMessage() 获取充值返回描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDealMessage(string $DealMessage) 设置充值返回描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPcWebUrl() 获取PC web端跳转链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPcWebUrl(string $PcWebUrl) 设置PC web端跳转链接
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateOpenBankOrderRechargeResult extends AbstractModel
 {
@@ -58,12 +70,36 @@ class CreateOpenBankOrderRechargeResult extends AbstractModel
     public $OutOrderId;
 
     /**
+     * @var string 充值状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DealStatus;
+
+    /**
+     * @var string 充值返回描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DealMessage;
+
+    /**
+     * @var string PC web端跳转链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PcWebUrl;
+
+    /**
      * @param string $ChannelOrderId 云企付平台订单号。
      * @param string $ThirdPayOrderId 第三方支付平台返回支付订单号。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenBankRechargeRedirectInfo $RedirectInfo 跳转参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutOrderId 外部商户订单号，只能是数字、大小写字母，且在同一个接入平台下唯一。
+     * @param string $DealStatus 充值状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DealMessage 充值返回描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PcWebUrl PC web端跳转链接
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -93,6 +129,18 @@ class CreateOpenBankOrderRechargeResult extends AbstractModel
 
         if (array_key_exists("OutOrderId",$param) and $param["OutOrderId"] !== null) {
             $this->OutOrderId = $param["OutOrderId"];
+        }
+
+        if (array_key_exists("DealStatus",$param) and $param["DealStatus"] !== null) {
+            $this->DealStatus = $param["DealStatus"];
+        }
+
+        if (array_key_exists("DealMessage",$param) and $param["DealMessage"] !== null) {
+            $this->DealMessage = $param["DealMessage"];
+        }
+
+        if (array_key_exists("PcWebUrl",$param) and $param["PcWebUrl"] !== null) {
+            $this->PcWebUrl = $param["PcWebUrl"];
         }
     }
 }

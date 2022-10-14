@@ -130,6 +130,10 @@ REJECTED:拒绝
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJumboEnable(integer $JumboEnable) 设置专用通道是否支持巨帧。1 支持，0 不支持
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHighPrecisionBFDEnable() 获取专用通道是否支持高精度BFD。1支持，0不支持
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHighPrecisionBFDEnable(integer $HighPrecisionBFDEnable) 设置专用通道是否支持高精度BFD。1支持，0不支持
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnectTunnelExtra extends AbstractModel
 {
@@ -345,6 +349,12 @@ REJECTED:拒绝
     public $JumboEnable;
 
     /**
+     * @var integer 专用通道是否支持高精度BFD。1支持，0不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HighPrecisionBFDEnable;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param string $DirectConnectId 物理专线ID
      * @param string $State 专用通道状态
@@ -399,6 +409,8 @@ REJECTED:拒绝
      * @param string $CustomerIPv6Address 用户侧互联IPv6地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JumboEnable 专用通道是否支持巨帧。1 支持，0 不支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HighPrecisionBFDEnable 专用通道是否支持高精度BFD。1支持，0不支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -583,6 +595,10 @@ REJECTED:拒绝
 
         if (array_key_exists("JumboEnable",$param) and $param["JumboEnable"] !== null) {
             $this->JumboEnable = $param["JumboEnable"];
+        }
+
+        if (array_key_exists("HighPrecisionBFDEnable",$param) and $param["HighPrecisionBFDEnable"] !== null) {
+            $this->HighPrecisionBFDEnable = $param["HighPrecisionBFDEnable"];
         }
     }
 }

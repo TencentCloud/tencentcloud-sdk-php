@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Lcic\V20220817\Models as Models;
 
 /**
+ * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建房间内可以使用的文档。
  * @method Models\CreateRoomResponse CreateRoom(Models\CreateRoomRequest $req) 创建房间
  * @method Models\CreateSupervisorResponse CreateSupervisor(Models\CreateSupervisorRequest $req) 创建巡课
  * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 获取房间信息
@@ -30,6 +31,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\LoginOriginIdResponse LoginOriginId(Models\LoginOriginIdRequest $req) 使用源账号登录，源账号为注册时填入的originId
  * @method Models\LoginUserResponse LoginUser(Models\LoginUserRequest $req) 登录
  * @method Models\RegisterUserResponse RegisterUser(Models\RegisterUserRequest $req) 注册用户
+ * @method Models\SetAppCustomContentResponse SetAppCustomContent(Models\SetAppCustomContentRequest $req) 设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
  */
 
 class LcicClient extends AbstractClient

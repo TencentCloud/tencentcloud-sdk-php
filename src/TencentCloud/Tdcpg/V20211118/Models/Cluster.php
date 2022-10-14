@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBMajorVersion(string $DBMajorVersion) 设置TDSQL-C PostgreSQL 合入的社区主要版本号
  * @method string getDBKernelVersion() 获取TDSQL-C PostgreSQL 内核版本号
  * @method void setDBKernelVersion(string $DBKernelVersion) 设置TDSQL-C PostgreSQL 内核版本号
+ * @method string getStoragePayMode() 获取存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStoragePayMode(string $StoragePayMode) 设置存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -190,6 +198,14 @@ class Cluster extends AbstractModel
     public $DBKernelVersion;
 
     /**
+     * @var string 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StoragePayMode;
+
+    /**
      * @param string $ClusterId 集群ID，集群的唯一标识
      * @param string $ClusterName 集群名字，不修改时默认和集群ID相同
      * @param string $Region 地域
@@ -220,6 +236,10 @@ class Cluster extends AbstractModel
      * @param array $EndpointSet 集群内访问点信息
      * @param string $DBMajorVersion TDSQL-C PostgreSQL 合入的社区主要版本号
      * @param string $DBKernelVersion TDSQL-C PostgreSQL 内核版本号
+     * @param string $StoragePayMode 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -313,6 +333,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
             $this->DBKernelVersion = $param["DBKernelVersion"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
         }
     }
 }

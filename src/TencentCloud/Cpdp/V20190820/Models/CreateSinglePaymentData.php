@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTradeSerialNo() 获取平台交易流水号，唯一
  * @method void setTradeSerialNo(string $TradeSerialNo) 设置平台交易流水号，唯一
+ * @method string getAgentId() 获取代理商ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentId(string $AgentId) 设置代理商ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAgentName() 获取代理商名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentName(string $AgentName) 设置代理商名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateSinglePaymentData extends AbstractModel
 {
@@ -31,7 +39,23 @@ class CreateSinglePaymentData extends AbstractModel
     public $TradeSerialNo;
 
     /**
+     * @var string 代理商ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentId;
+
+    /**
+     * @var string 代理商名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentName;
+
+    /**
      * @param string $TradeSerialNo 平台交易流水号，唯一
+     * @param string $AgentId 代理商ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AgentName 代理商名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -48,6 +72,14 @@ class CreateSinglePaymentData extends AbstractModel
         }
         if (array_key_exists("TradeSerialNo",$param) and $param["TradeSerialNo"] !== null) {
             $this->TradeSerialNo = $param["TradeSerialNo"];
+        }
+
+        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
+            $this->AgentId = $param["AgentId"];
+        }
+
+        if (array_key_exists("AgentName",$param) and $param["AgentName"] !== null) {
+            $this->AgentName = $param["AgentName"];
         }
     }
 }

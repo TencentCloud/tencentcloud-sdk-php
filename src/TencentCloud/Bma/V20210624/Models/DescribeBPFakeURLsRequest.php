@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBPFakeURLs请求参数结构体
  *
- * @method array getFilters() 获取xxx
- * @method void setFilters(array $Filters) 设置xxx
- * @method integer getPageSize() 获取xxx
- * @method void setPageSize(integer $PageSize) 设置xxx
- * @method integer getPageNumber() 获取xxx
- * @method void setPageNumber(integer $PageNumber) 设置xxx
+ * @method array getFilters() 获取过滤条件
+ * @method void setFilters(array $Filters) 设置过滤条件
+ * @method integer getPageSize() 获取页数
+ * @method void setPageSize(integer $PageSize) 设置页数
+ * @method integer getPageNumber() 获取页码
+ * @method void setPageNumber(integer $PageNumber) 设置页码
  */
 class DescribeBPFakeURLsRequest extends AbstractModel
 {
     /**
-     * @var array xxx
+     * @var array 过滤条件
      */
     public $Filters;
 
     /**
-     * @var integer xxx
+     * @var integer 页数
      */
     public $PageSize;
 
     /**
-     * @var integer xxx
+     * @var integer 页码
      */
     public $PageNumber;
 
     /**
-     * @param array $Filters xxx
-     * @param integer $PageSize xxx
-     * @param integer $PageNumber xxx
+     * @param array $Filters 过滤条件
+     * @param integer $PageSize 页数
+     * @param integer $PageNumber 页码
      */
     function __construct()
     {

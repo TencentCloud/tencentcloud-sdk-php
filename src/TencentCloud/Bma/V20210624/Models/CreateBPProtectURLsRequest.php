@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBPProtectURLs请求参数结构体
  *
- * @method string getCompanyName() 获取xxx
- * @method void setCompanyName(string $CompanyName) 设置xxx
- * @method string getPhone() 获取xxx
- * @method void setPhone(string $Phone) 设置xxx
- * @method string getLicenseName() 获取xxx
- * @method void setLicenseName(string $LicenseName) 设置xxx
- * @method array getProtectURLs() 获取xxx
- * @method void setProtectURLs(array $ProtectURLs) 设置xxx
- * @method array getProtectWebs() 获取xxx
- * @method void setProtectWebs(array $ProtectWebs) 设置xxx
+ * @method string getCompanyName() 获取企业名称
+ * @method void setCompanyName(string $CompanyName) 设置企业名称
+ * @method string getPhone() 获取电话号码
+ * @method void setPhone(string $Phone) 设置电话号码
+ * @method string getLicenseName() 获取营业执照
+ * @method void setLicenseName(string $LicenseName) 设置营业执照
+ * @method array getProtectURLs() 获取保护网站
+ * @method void setProtectURLs(array $ProtectURLs) 设置保护网站
+ * @method array getProtectWebs() 获取网站名称
+ * @method void setProtectWebs(array $ProtectWebs) 设置网站名称
  */
 class CreateBPProtectURLsRequest extends AbstractModel
 {
     /**
-     * @var string xxx
+     * @var string 企业名称
      */
     public $CompanyName;
 
     /**
-     * @var string xxx
+     * @var string 电话号码
      */
     public $Phone;
 
     /**
-     * @var string xxx
+     * @var string 营业执照
      */
     public $LicenseName;
 
     /**
-     * @var array xxx
+     * @var array 保护网站
      */
     public $ProtectURLs;
 
     /**
-     * @var array xxx
+     * @var array 网站名称
      */
     public $ProtectWebs;
 
     /**
-     * @param string $CompanyName xxx
-     * @param string $Phone xxx
-     * @param string $LicenseName xxx
-     * @param array $ProtectURLs xxx
-     * @param array $ProtectWebs xxx
+     * @param string $CompanyName 企业名称
+     * @param string $Phone 电话号码
+     * @param string $LicenseName 营业执照
+     * @param array $ProtectURLs 保护网站
+     * @param array $ProtectWebs 网站名称
      */
     function __construct()
     {

@@ -45,6 +45,12 @@ use TencentCloud\Trtc\V20190722\Models as Models;
  * @method Models\DescribeCloudRecordingResponse DescribeCloudRecording(Models\DescribeCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来查询录制状态。仅在录制任务进行时有效，录制退出后查询将会返回错误。
 录制文件上传到云点播VOD时，StorageFileList中不会返回录制文件信息，请订阅相关录制文件回调事件，获取录制文件信息。
  * @method Models\DescribeExternalTrtcMeasureResponse DescribeExternalTrtcMeasure(Models\DescribeExternalTrtcMeasureRequest $req) 获取Trtc的用量统计数据。走计费渠道二期 只允许查两天的数据
+ * @method Models\DescribeMixTranscodingUsageResponse DescribeMixTranscodingUsage(Models\DescribeMixTranscodingUsageRequest $req) 获取TRTC混流转码的用量明细。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+- 默认接口请求频率限制：5次/秒。
  * @method Models\DescribePictureResponse DescribePicture(Models\DescribePictureRequest $req) 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁查找自定义背景图或水印信息，可通过此接口查找已上传的图片信息。无需频繁查找图片信息的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中查看。
  * @method Models\DescribeRecordStatisticResponse DescribeRecordStatistic(Models\DescribeRecordStatisticRequest $req) 查询云端录制计费时长。
 
@@ -52,6 +58,18 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 - 单次查询统计区间最多不能超过31天。
 - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
 - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+ * @method Models\DescribeRecordingUsageResponse DescribeRecordingUsage(Models\DescribeRecordingUsageRequest $req) 获取TRTC录制的用量明细。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+- 默认接口请求频率限制：5次/秒。
+ * @method Models\DescribeRelayUsageResponse DescribeRelayUsage(Models\DescribeRelayUsageRequest $req) 获取TRTC旁路转推的用量明细。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+- 默认接口请求频率限制：5次/秒。
  * @method Models\DescribeRoomInfoResponse DescribeRoomInfo(Models\DescribeRoomInfoRequest $req) 查询SdkAppId下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。（同老接口DescribeRoomInformation）
 **注意**：
 1.该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
@@ -62,6 +80,12 @@ use TencentCloud\Trtc\V20190722\Models as Models;
 - 单次查询统计区间最多不能超过31天。
 - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
 - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+ * @method Models\DescribeTrtcUsageResponse DescribeTrtcUsage(Models\DescribeTrtcUsageRequest $req) 获取TRTC音视频互动的用量明细。
+- 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+- 单次查询统计区间最多不能超过31天。
+- 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+- 默认接口请求频率限制：5次/秒。
  * @method Models\DescribeUnusualEventResponse DescribeUnusualEvent(Models\DescribeUnusualEventRequest $req) 查询SdkAppId下任意20条异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询14天内数据，查询起止时间不超过1个小时。支持跨天查询。（同老接口DescribeAbnormalEvent）
 异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
  * @method Models\DescribeUserEventResponse DescribeUserEvent(Models\DescribeUserEventRequest $req) 查询用户某次通话内的进退房，视频开关等详细事件。可查询14天内数据。（同接口DescribeDetailEvent）

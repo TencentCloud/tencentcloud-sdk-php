@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 权属文件列表
  *
- * @method string getFileUrl() 获取xxx
- * @method void setFileUrl(string $FileUrl) 设置xxx
- * @method integer getFileType() 获取xxx
- * @method void setFileType(integer $FileType) 设置xxx
- * @method string getValidStartDate() 获取xxx
- * @method void setValidStartDate(string $ValidStartDate) 设置xxx
- * @method string getValidEndDate() 获取xxx
- * @method void setValidEndDate(string $ValidEndDate) 设置xxx
+ * @method string getFileUrl() 获取文件下载地址
+ * @method void setFileUrl(string $FileUrl) 设置文件下载地址
+ * @method integer getFileType() 获取文件类型 1-委托书 2-授权书 5-存证证书 11-营业执照
+ * @method void setFileType(integer $FileType) 设置文件类型 1-委托书 2-授权书 5-存证证书 11-营业执照
+ * @method string getValidStartDate() 获取文件有效开始日期
+ * @method void setValidStartDate(string $ValidStartDate) 设置文件有效开始日期
+ * @method string getValidEndDate() 获取文件有效截止日期
+ * @method void setValidEndDate(string $ValidEndDate) 设置文件有效截止日期
  */
 class File extends AbstractModel
 {
     /**
-     * @var string xxx
+     * @var string 文件下载地址
      */
     public $FileUrl;
 
     /**
-     * @var integer xxx
+     * @var integer 文件类型 1-委托书 2-授权书 5-存证证书 11-营业执照
      */
     public $FileType;
 
     /**
-     * @var string xxx
+     * @var string 文件有效开始日期
      */
     public $ValidStartDate;
 
     /**
-     * @var string xxx
+     * @var string 文件有效截止日期
      */
     public $ValidEndDate;
 
     /**
-     * @param string $FileUrl xxx
-     * @param integer $FileType xxx
-     * @param string $ValidStartDate xxx
-     * @param string $ValidEndDate xxx
+     * @param string $FileUrl 文件下载地址
+     * @param integer $FileType 文件类型 1-委托书 2-授权书 5-存证证书 11-营业执照
+     * @param string $ValidStartDate 文件有效开始日期
+     * @param string $ValidEndDate 文件有效截止日期
      */
     function __construct()
     {

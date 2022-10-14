@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExactMatch(boolean $ExactMatch) 设置是否精确匹配
  * @method string getName() 获取搜索字段
  * @method void setName(string $Name) 设置搜索字段
+ * @method string getOperator() 获取操作符
+ * @method void setOperator(string $Operator) 设置操作符
  */
 class QueryFilter extends AbstractModel
 {
@@ -52,10 +54,16 @@ class QueryFilter extends AbstractModel
     public $Name;
 
     /**
+     * @var string 操作符
+     */
+    public $Operator;
+
+    /**
      * @param array $Names 搜索字段，目前支持："InstanceId", "ProjectId", "InstanceName", "Vip"
      * @param array $Values 搜索字符串
      * @param boolean $ExactMatch 是否精确匹配
      * @param string $Name 搜索字段
+     * @param string $Operator 操作符
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class QueryFilter extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

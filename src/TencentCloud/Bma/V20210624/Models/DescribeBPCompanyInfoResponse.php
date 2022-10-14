@@ -20,78 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBPCompanyInfo返回参数结构体
  *
- * @method string getCompanyName() 获取xx
- * @method void setCompanyName(string $CompanyName) 设置xx
- * @method string getPhone() 获取xx
- * @method void setPhone(string $Phone) 设置xx
- * @method string getLicenseName() 获取xx
- * @method void setLicenseName(string $LicenseName) 设置xx
- * @method integer getLicenseStatus() 获取xx
- * @method void setLicenseStatus(integer $LicenseStatus) 设置xx
- * @method string getLicenseNote() 获取xx
- * @method void setLicenseNote(string $LicenseNote) 设置xx
- * @method string getAuthorizationName() 获取xx
- * @method void setAuthorizationName(string $AuthorizationName) 设置xx
- * @method integer getAuthorizationStatus() 获取xx
- * @method void setAuthorizationStatus(integer $AuthorizationStatus) 设置xx
- * @method string getAuthorizationNote() 获取xx
- * @method void setAuthorizationNote(string $AuthorizationNote) 设置xx
- * @method array getBrandDatas() 获取xx
- * @method void setBrandDatas(array $BrandDatas) 设置xx
- * @method integer getCompanyId() 获取xx
- * @method void setCompanyId(integer $CompanyId) 设置xx
+ * @method string getCompanyName() 获取企业名称
+ * @method void setCompanyName(string $CompanyName) 设置企业名称
+ * @method string getPhone() 获取电话号码
+ * @method void setPhone(string $Phone) 设置电话号码
+ * @method string getLicenseName() 获取营业执照
+ * @method void setLicenseName(string $LicenseName) 设置营业执照
+ * @method integer getLicenseStatus() 获取营业执照审核状态 1-审核中 2-审核未通过，3、审核通过
+ * @method void setLicenseStatus(integer $LicenseStatus) 设置营业执照审核状态 1-审核中 2-审核未通过，3、审核通过
+ * @method string getLicenseNote() 获取营业执照备注
+ * @method void setLicenseNote(string $LicenseNote) 设置营业执照备注
+ * @method string getAuthorizationName() 获取授权书
+ * @method void setAuthorizationName(string $AuthorizationName) 设置授权书
+ * @method integer getAuthorizationStatus() 获取授权书审核状态
+ * @method void setAuthorizationStatus(integer $AuthorizationStatus) 设置授权书审核状态
+ * @method string getAuthorizationNote() 获取授权书备注
+ * @method void setAuthorizationNote(string $AuthorizationNote) 设置授权书备注
+ * @method array getBrandDatas() 获取品牌信息
+ * @method void setBrandDatas(array $BrandDatas) 设置品牌信息
+ * @method integer getCompanyId() 获取企业ID
+ * @method void setCompanyId(integer $CompanyId) 设置企业ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBPCompanyInfoResponse extends AbstractModel
 {
     /**
-     * @var string xx
+     * @var string 企业名称
      */
     public $CompanyName;
 
     /**
-     * @var string xx
+     * @var string 电话号码
      */
     public $Phone;
 
     /**
-     * @var string xx
+     * @var string 营业执照
      */
     public $LicenseName;
 
     /**
-     * @var integer xx
+     * @var integer 营业执照审核状态 1-审核中 2-审核未通过，3、审核通过
      */
     public $LicenseStatus;
 
     /**
-     * @var string xx
+     * @var string 营业执照备注
      */
     public $LicenseNote;
 
     /**
-     * @var string xx
+     * @var string 授权书
      */
     public $AuthorizationName;
 
     /**
-     * @var integer xx
+     * @var integer 授权书审核状态
      */
     public $AuthorizationStatus;
 
     /**
-     * @var string xx
+     * @var string 授权书备注
      */
     public $AuthorizationNote;
 
     /**
-     * @var array xx
+     * @var array 品牌信息
      */
     public $BrandDatas;
 
     /**
-     * @var integer xx
+     * @var integer 企业ID
      */
     public $CompanyId;
 
@@ -101,16 +101,16 @@ class DescribeBPCompanyInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CompanyName xx
-     * @param string $Phone xx
-     * @param string $LicenseName xx
-     * @param integer $LicenseStatus xx
-     * @param string $LicenseNote xx
-     * @param string $AuthorizationName xx
-     * @param integer $AuthorizationStatus xx
-     * @param string $AuthorizationNote xx
-     * @param array $BrandDatas xx
-     * @param integer $CompanyId xx
+     * @param string $CompanyName 企业名称
+     * @param string $Phone 电话号码
+     * @param string $LicenseName 营业执照
+     * @param integer $LicenseStatus 营业执照审核状态 1-审核中 2-审核未通过，3、审核通过
+     * @param string $LicenseNote 营业执照备注
+     * @param string $AuthorizationName 授权书
+     * @param integer $AuthorizationStatus 授权书审核状态
+     * @param string $AuthorizationNote 授权书备注
+     * @param array $BrandDatas 品牌信息
+     * @param integer $CompanyId 企业ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>vtt</li>
  * @method string getContent() 获取字幕内容，进行 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串。
  * @method void setContent(string $Content) 设置字幕内容，进行 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串。
- * @method string getId() 获取字幕的唯一标识。长度不能超过16个字符，可以使用大小写字母、数字、下划线（_）或横杠（-）。不能与媒资文件中现有字幕的唯一标识重复。
- * @method void setId(string $Id) 设置字幕的唯一标识。长度不能超过16个字符，可以使用大小写字母、数字、下划线（_）或横杠（-）。不能与媒资文件中现有字幕的唯一标识重复。
+ * @method string getId() 获取字幕的唯一标识。长度不能超过16个字符，可以使用大小写字母、数字、下划线（_）或横杠（-）。不能与媒体文件中现有字幕的唯一标识重复。
+ * @method void setId(string $Id) 设置字幕的唯一标识。长度不能超过16个字符，可以使用大小写字母、数字、下划线（_）或横杠（-）。不能与媒体文件中现有字幕的唯一标识重复。
  */
 class MediaSubtitleInput extends AbstractModel
 {
@@ -69,7 +69,7 @@ class MediaSubtitleInput extends AbstractModel
     public $Content;
 
     /**
-     * @var string 字幕的唯一标识。长度不能超过16个字符，可以使用大小写字母、数字、下划线（_）或横杠（-）。不能与媒资文件中现有字幕的唯一标识重复。
+     * @var string 字幕的唯一标识。长度不能超过16个字符，可以使用大小写字母、数字、下划线（_）或横杠（-）。不能与媒体文件中现有字幕的唯一标识重复。
      */
     public $Id;
 
@@ -83,7 +83,7 @@ class MediaSubtitleInput extends AbstractModel
      * @param string $Format 字幕格式。取值范围如下：
 <li>vtt</li>
      * @param string $Content 字幕内容，进行 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串。
-     * @param string $Id 字幕的唯一标识。长度不能超过16个字符，可以使用大小写字母、数字、下划线（_）或横杠（-）。不能与媒资文件中现有字幕的唯一标识重复。
+     * @param string $Id 字幕的唯一标识。长度不能超过16个字符，可以使用大小写字母、数字、下划线（_）或横杠（-）。不能与媒体文件中现有字幕的唯一标识重复。
      */
     function __construct()
     {

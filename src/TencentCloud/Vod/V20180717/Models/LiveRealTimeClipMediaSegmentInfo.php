@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 即时剪辑后媒资的片段信息。
+ * 即时剪辑后媒体的片段信息。
  *
  * @method string getStartTime() 获取片段的起始时间。格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setStartTime(string $StartTime) 设置片段的起始时间。格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。

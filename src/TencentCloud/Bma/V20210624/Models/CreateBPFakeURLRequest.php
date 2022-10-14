@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBPFakeURL请求参数结构体
  *
- * @method integer getProtectURLId() 获取xxx
- * @method void setProtectURLId(integer $ProtectURLId) 设置xxx
- * @method string getFakeURL() 获取xxx
- * @method void setFakeURL(string $FakeURL) 设置xxx
- * @method array getSnapshotNames() 获取xxx
- * @method void setSnapshotNames(array $SnapshotNames) 设置xxx
- * @method string getNote() 获取xxx
- * @method void setNote(string $Note) 设置xxx
+ * @method integer getProtectURLId() 获取保护网址ID
+ * @method void setProtectURLId(integer $ProtectURLId) 设置保护网址ID
+ * @method string getFakeURL() 获取仿冒网址
+ * @method void setFakeURL(string $FakeURL) 设置仿冒网址
+ * @method array getSnapshotNames() 获取截图
+ * @method void setSnapshotNames(array $SnapshotNames) 设置截图
+ * @method string getNote() 获取举报说明
+ * @method void setNote(string $Note) 设置举报说明
  */
 class CreateBPFakeURLRequest extends AbstractModel
 {
     /**
-     * @var integer xxx
+     * @var integer 保护网址ID
      */
     public $ProtectURLId;
 
     /**
-     * @var string xxx
+     * @var string 仿冒网址
      */
     public $FakeURL;
 
     /**
-     * @var array xxx
+     * @var array 截图
      */
     public $SnapshotNames;
 
     /**
-     * @var string xxx
+     * @var string 举报说明
      */
     public $Note;
 
     /**
-     * @param integer $ProtectURLId xxx
-     * @param string $FakeURL xxx
-     * @param array $SnapshotNames xxx
-     * @param string $Note xxx
+     * @param integer $ProtectURLId 保护网址ID
+     * @param string $FakeURL 仿冒网址
+     * @param array $SnapshotNames 截图
+     * @param string $Note 举报说明
      */
     function __construct()
     {

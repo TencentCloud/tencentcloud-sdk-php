@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEvidenceStatus(integer $EvidenceStatus) 设置存证证书状态
  * @method integer getIsProducer() 获取是否著作权人
  * @method void setIsProducer(integer $IsProducer) 设置是否著作权人
- * @method integer getIsOverseas() 获取是否海外网址
- * @method void setIsOverseas(integer $IsOverseas) 设置是否海外网址
+ * @method integer getIsOverseas() 获取是否境外网址
+ * @method void setIsOverseas(integer $IsOverseas) 设置是否境外网址
  */
 class MonitorTort extends AbstractModel
 {
@@ -194,7 +194,7 @@ class MonitorTort extends AbstractModel
     public $IsProducer;
 
     /**
-     * @var integer 是否海外网址
+     * @var integer 是否境外网址
      */
     public $IsOverseas;
 
@@ -223,7 +223,7 @@ class MonitorTort extends AbstractModel
      * @param integer $CommStatus 委托书状态
      * @param integer $EvidenceStatus 存证证书状态
      * @param integer $IsProducer 是否著作权人
-     * @param integer $IsOverseas 是否海外网址
+     * @param integer $IsOverseas 是否境外网址
      */
     function __construct()
     {

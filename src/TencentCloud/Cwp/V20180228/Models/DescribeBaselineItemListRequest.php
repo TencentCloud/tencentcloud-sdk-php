@@ -29,7 +29,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ItemName - String - 是否必填：否 - 项名称</li>
 <li>DetectStatus - int - 是否必填：否 - 检测状态[0:未通过|3:通过|5:检测中]</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
-<li>StartTime - string - 是否必填：否 - 开时时间</li>
+<li>StartTime - string - 是否必填：否 - 开始时间</li>
 <li>EndTime - string - 是否必填：否 - 结束时间</li>
  * @method void setFilters(array $Filters) 设置<li>PolicyId - int64 - 是否必填：否 - 策略Id</li>
 <li>RuleId - int64 - 是否必填：否 - 规则Id</li>
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ItemName - String - 是否必填：否 - 项名称</li>
 <li>DetectStatus - int - 是否必填：否 - 检测状态[0:未通过|3:通过|5:检测中]</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
-<li>StartTime - string - 是否必填：否 - 开时时间</li>
+<li>StartTime - string - 是否必填：否 - 开始时间</li>
 <li>EndTime - string - 是否必填：否 - 结束时间</li>
  * @method integer getLimit() 获取限制条数,默认10,最大100
  * @method void setLimit(integer $Limit) 设置限制条数,默认10,最大100
@@ -63,7 +63,7 @@ class DescribeBaselineItemListRequest extends AbstractModel
 <li>ItemName - String - 是否必填：否 - 项名称</li>
 <li>DetectStatus - int - 是否必填：否 - 检测状态[0:未通过|3:通过|5:检测中]</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
-<li>StartTime - string - 是否必填：否 - 开时时间</li>
+<li>StartTime - string - 是否必填：否 - 开始时间</li>
 <li>EndTime - string - 是否必填：否 - 结束时间</li>
      */
     public $Filters;
@@ -98,7 +98,7 @@ class DescribeBaselineItemListRequest extends AbstractModel
 <li>ItemName - String - 是否必填：否 - 项名称</li>
 <li>DetectStatus - int - 是否必填：否 - 检测状态[0:未通过|3:通过|5:检测中]</li>
 <li>Level - int - 是否必填：否 - 风险等级</li>
-<li>StartTime - string - 是否必填：否 - 开时时间</li>
+<li>StartTime - string - 是否必填：否 - 开始时间</li>
 <li>EndTime - string - 是否必填：否 - 结束时间</li>
      * @param integer $Limit 限制条数,默认10,最大100
      * @param integer $Offset 偏移量,默认0

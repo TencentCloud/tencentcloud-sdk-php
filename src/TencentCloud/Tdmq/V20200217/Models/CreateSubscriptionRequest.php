@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
  * @method string getTopicName() 获取主题名称。
  * @method void setTopicName(string $TopicName) 设置主题名称。
- * @method string getSubscriptionName() 获取订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。
- * @method void setSubscriptionName(string $SubscriptionName) 设置订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。
+ * @method string getSubscriptionName() 获取订阅者名称，不超过128个字符。
+ * @method void setSubscriptionName(string $SubscriptionName) 设置订阅者名称，不超过128个字符。
  * @method boolean getIsIdempotent() 获取是否幂等创建，若否不允许创建同名的订阅关系。
  * @method void setIsIdempotent(boolean $IsIdempotent) 设置是否幂等创建，若否不允许创建同名的订阅关系。
  * @method string getRemark() 获取备注，128个字符以内。
@@ -50,7 +50,7 @@ class CreateSubscriptionRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var string 订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。
+     * @var string 订阅者名称，不超过128个字符。
      */
     public $SubscriptionName;
 
@@ -82,7 +82,7 @@ class CreateSubscriptionRequest extends AbstractModel
     /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名称。
-     * @param string $SubscriptionName 订阅者名称，不支持中字以及除了短线和下划线外的特殊字符且不超过150个字符。
+     * @param string $SubscriptionName 订阅者名称，不超过128个字符。
      * @param boolean $IsIdempotent 是否幂等创建，若否不允许创建同名的订阅关系。
      * @param string $Remark 备注，128个字符以内。
      * @param string $ClusterId Pulsar 集群的ID

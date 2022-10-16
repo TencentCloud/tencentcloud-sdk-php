@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBPFakeURLs返回参数结构体
  *
- * @method array getFakeURLInfos() 获取xxx
- * @method void setFakeURLInfos(array $FakeURLInfos) 设置xxx
- * @method integer getTotalCount() 获取xxx
- * @method void setTotalCount(integer $TotalCount) 设置xxx
- * @method string getExportURL() 获取xxx
- * @method void setExportURL(string $ExportURL) 设置xxx
+ * @method array getFakeURLInfos() 获取仿冒网址列表
+ * @method void setFakeURLInfos(array $FakeURLInfos) 设置仿冒网址列表
+ * @method integer getTotalCount() 获取总量
+ * @method void setTotalCount(integer $TotalCount) 设置总量
+ * @method string getExportURL() 获取导出量
+ * @method void setExportURL(string $ExportURL) 设置导出量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBPFakeURLsResponse extends AbstractModel
 {
     /**
-     * @var array xxx
+     * @var array 仿冒网址列表
      */
     public $FakeURLInfos;
 
     /**
-     * @var integer xxx
+     * @var integer 总量
      */
     public $TotalCount;
 
     /**
-     * @var string xxx
+     * @var string 导出量
      */
     public $ExportURL;
 
@@ -52,9 +52,9 @@ class DescribeBPFakeURLsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $FakeURLInfos xxx
-     * @param integer $TotalCount xxx
-     * @param string $ExportURL xxx
+     * @param array $FakeURLInfos 仿冒网址列表
+     * @param integer $TotalCount 总量
+     * @param string $ExportURL 导出量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -25,10 +25,13 @@ use TencentCloud\Trp\V20210515\Models as Models;
 /**
  * @method Models\CreateCodeBatchResponse CreateCodeBatch(Models\CreateCodeBatchRequest $req) 新增批次
  * @method Models\CreateCodePackResponse CreateCodePack(Models\CreateCodePackRequest $req) 生成普通码包
+ * @method Models\CreateCustomPackResponse CreateCustomPack(Models\CreateCustomPackRequest $req) 生成自定义码包
+ * @method Models\CreateCustomRuleResponse CreateCustomRule(Models\CreateCustomRuleRequest $req) 新建自定义码规则
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 新建商户
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) 新建商品
  * @method Models\CreateTraceChainResponse CreateTraceChain(Models\CreateTraceChainRequest $req) 上链溯源信息
  * @method Models\CreateTraceCodesResponse CreateTraceCodes(Models\CreateTraceCodesRequest $req) 批量导入二维码，只支持平台发的码
+ * @method Models\CreateTraceCodesAsyncResponse CreateTraceCodesAsync(Models\CreateTraceCodesAsyncRequest $req) 异步导入激活码包，如果是第三方码包，需要域名跟配置的匹配
  * @method Models\CreateTraceDataResponse CreateTraceData(Models\CreateTraceDataRequest $req) 新增溯源信息
  * @method Models\DeleteCodeBatchResponse DeleteCodeBatch(Models\DeleteCodeBatchRequest $req) 删除批次
  * @method Models\DeleteMerchantResponse DeleteMerchant(Models\DeleteMerchantRequest $req) 删除商户
@@ -36,8 +39,13 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DeleteTraceDataResponse DeleteTraceData(Models\DeleteTraceDataRequest $req) 删除溯源信息，如果已经上链则不可删除
  * @method Models\DescribeCodeBatchByIdResponse DescribeCodeBatchById(Models\DescribeCodeBatchByIdRequest $req) 查询批次信息
  * @method Models\DescribeCodeBatchsResponse DescribeCodeBatchs(Models\DescribeCodeBatchsRequest $req) 查询批次列表
+ * @method Models\DescribeCodePackStatusResponse DescribeCodePackStatus(Models\DescribeCodePackStatusRequest $req) 查询码包状态
+ * @method Models\DescribeCodePackUrlResponse DescribeCodePackUrl(Models\DescribeCodePackUrlRequest $req) 查询码包地址
  * @method Models\DescribeCodePacksResponse DescribeCodePacks(Models\DescribeCodePacksRequest $req) 查询码包列表
  * @method Models\DescribeCodesByPackResponse DescribeCodesByPack(Models\DescribeCodesByPackRequest $req) 查询码包的二维码列表，上限 3 万
+ * @method Models\DescribeCustomRuleByIdResponse DescribeCustomRuleById(Models\DescribeCustomRuleByIdRequest $req) 查自定义码规则
+ * @method Models\DescribeCustomRulesResponse DescribeCustomRules(Models\DescribeCustomRulesRequest $req) 查自定义码规则列表
+ * @method Models\DescribeJobFileUrlResponse DescribeJobFileUrl(Models\DescribeJobFileUrlRequest $req) 获取异步任务的输出地址
  * @method Models\DescribeMerchantByIdResponse DescribeMerchantById(Models\DescribeMerchantByIdRequest $req) 查询商户信息
  * @method Models\DescribeMerchantsResponse DescribeMerchants(Models\DescribeMerchantsRequest $req) 查询商户列表
  * @method Models\DescribeProductByIdResponse DescribeProductById(Models\DescribeProductByIdRequest $req) 查询商品信息
@@ -46,6 +54,8 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeTraceCodesResponse DescribeTraceCodes(Models\DescribeTraceCodesRequest $req) 查询二维码列表
  * @method Models\DescribeTraceDataListResponse DescribeTraceDataList(Models\DescribeTraceDataListRequest $req) 查询溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
  * @method Models\ModifyCodeBatchResponse ModifyCodeBatch(Models\ModifyCodeBatchRequest $req) 修改批次
+ * @method Models\ModifyCustomRuleResponse ModifyCustomRule(Models\ModifyCustomRuleRequest $req) 修改自定义码规则
+ * @method Models\ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(Models\ModifyCustomRuleStatusRequest $req) 更新自定义码规则状态
  * @method Models\ModifyMerchantResponse ModifyMerchant(Models\ModifyMerchantRequest $req) 编辑商户
  * @method Models\ModifyProductResponse ModifyProduct(Models\ModifyProductRequest $req) 编辑商品
  * @method Models\ModifyTraceCodeResponse ModifyTraceCode(Models\ModifyTraceCodeRequest $req) 冻结或者激活二维码，所属的批次的冻结状态优先级大于单个二维码的状态，即如果批次是冻结的，那么该批次下二维码的状态都是冻结的

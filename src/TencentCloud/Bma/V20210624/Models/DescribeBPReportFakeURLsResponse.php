@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBPReportFakeURLs返回参数结构体
  *
- * @method array getReportFakeURLInfos() 获取xxx
- * @method void setReportFakeURLInfos(array $ReportFakeURLInfos) 设置xxx
- * @method integer getTotalCount() 获取xxx
- * @method void setTotalCount(integer $TotalCount) 设置xxx
+ * @method array getReportFakeURLInfos() 获取举报网站列表
+ * @method void setReportFakeURLInfos(array $ReportFakeURLInfos) 设置举报网站列表
+ * @method integer getTotalCount() 获取总量
+ * @method void setTotalCount(integer $TotalCount) 设置总量
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBPReportFakeURLsResponse extends AbstractModel
 {
     /**
-     * @var array xxx
+     * @var array 举报网站列表
      */
     public $ReportFakeURLInfos;
 
     /**
-     * @var integer xxx
+     * @var integer 总量
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeBPReportFakeURLsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ReportFakeURLInfos xxx
-     * @param integer $TotalCount xxx
+     * @param array $ReportFakeURLInfos 举报网站列表
+     * @param integer $TotalCount 总量
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

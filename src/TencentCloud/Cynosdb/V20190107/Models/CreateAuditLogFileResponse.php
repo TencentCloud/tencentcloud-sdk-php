@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Essbasic\V20210526\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateChannelFlowEvidenceReport返回参数结构体
+ * CreateAuditLogFile返回参数结构体
  *
- * @method string getReportUrl() 获取出证报告 URL（有效五分钟）
- * @method void setReportUrl(string $ReportUrl) 设置出证报告 URL（有效五分钟）
+ * @method string getFileName() 获取审计日志文件名称。
+ * @method void setFileName(string $FileName) 设置审计日志文件名称。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateChannelFlowEvidenceReportResponse extends AbstractModel
+class CreateAuditLogFileResponse extends AbstractModel
 {
     /**
-     * @var string 出证报告 URL（有效五分钟）
+     * @var string 审计日志文件名称。
      */
-    public $ReportUrl;
+    public $FileName;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateChannelFlowEvidenceReportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ReportUrl 出证报告 URL（有效五分钟）
+     * @param string $FileName 审计日志文件名称。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateChannelFlowEvidenceReportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReportUrl",$param) and $param["ReportUrl"] !== null) {
-            $this->ReportUrl = $param["ReportUrl"];
+        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
+            $this->FileName = $param["FileName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

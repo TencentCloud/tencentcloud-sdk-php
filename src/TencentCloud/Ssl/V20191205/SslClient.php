@@ -38,6 +38,7 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\DescribeDeployedResourcesResponse DescribeDeployedResources(Models\DescribeDeployedResourcesRequest $req) 证书查询关联资源
  * @method Models\DescribeManagerDetailResponse DescribeManagerDetail(Models\DescribeManagerDetailRequest $req) 查询管理人详情
  * @method Models\DescribeManagersResponse DescribeManagers(Models\DescribeManagersRequest $req) 查询管理人列表
+ * @method Models\DescribePackagesResponse DescribePackages(Models\DescribePackagesRequest $req) 获得权益包列表
  * @method Models\DownloadCertificateResponse DownloadCertificate(Models\DownloadCertificateRequest $req) 本接口（DownloadCertificate）用于下载证书。
  * @method Models\HostCertificateResponse HostCertificate(Models\HostCertificateRequest $req) 云资源托管
  * @method Models\ModifyCertificateAliasResponse ModifyCertificateAlias(Models\ModifyCertificateAliasRequest $req) 用户传入证书id和备注来修改证书备注。

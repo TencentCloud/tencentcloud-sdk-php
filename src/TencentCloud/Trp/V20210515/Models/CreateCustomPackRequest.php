@@ -30,10 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackType(integer $PackType) 设置码包类型 0: 普通码包 1: 层级码包
  * @method integer getPackLevel() 获取码包层级
  * @method void setPackLevel(integer $PackLevel) 设置码包层级
- * @method array getPackSpec() 获取层级码包规则 [{ Level, Rate, Amount, CustomId }]
- * @method void setPackSpec(array $PackSpec) 设置层级码包规则 [{ Level, Rate, Amount, CustomId }]
- * @method string getCustomId() 获取码规则ID,  普通码包时必填
- * @method void setCustomId(string $CustomId) 设置码规则ID,  普通码包时必填
+ * @method array getPackSpec() 获取层级码包规则
+ * @method void setPackSpec(array $PackSpec) 设置层级码包规则
+ * @method string getCustomId() 获取码规则ID,  和CodeParts二选一必填
+ * @method void setCustomId(string $CustomId) 设置码规则ID,  和CodeParts二选一必填
+ * @method array getCodeParts() 获取码段配置，和CustomId二选一必填
+ * @method void setCodeParts(array $CodeParts) 设置码段配置，和CustomId二选一必填
  */
 class CreateCustomPackRequest extends AbstractModel
 {
@@ -63,14 +65,19 @@ class CreateCustomPackRequest extends AbstractModel
     public $PackLevel;
 
     /**
-     * @var array 层级码包规则 [{ Level, Rate, Amount, CustomId }]
+     * @var array 层级码包规则
      */
     public $PackSpec;
 
     /**
-     * @var string 码规则ID,  普通码包时必填
+     * @var string 码规则ID,  和CodeParts二选一必填
      */
     public $CustomId;
+
+    /**
+     * @var array 码段配置，和CustomId二选一必填
+     */
+    public $CodeParts;
 
     /**
      * @param string $MerchantId 商户ID
@@ -78,8 +85,9 @@ class CreateCustomPackRequest extends AbstractModel
      * @param integer $CorpId 企业ID
      * @param integer $PackType 码包类型 0: 普通码包 1: 层级码包
      * @param integer $PackLevel 码包层级
-     * @param array $PackSpec 层级码包规则 [{ Level, Rate, Amount, CustomId }]
-     * @param string $CustomId 码规则ID,  普通码包时必填
+     * @param array $PackSpec 层级码包规则
+     * @param string $CustomId 码规则ID,  和CodeParts二选一必填
+     * @param array $CodeParts 码段配置，和CustomId二选一必填
      */
     function __construct()
     {
@@ -125,6 +133,15 @@ class CreateCustomPackRequest extends AbstractModel
 
         if (array_key_exists("CustomId",$param) and $param["CustomId"] !== null) {
             $this->CustomId = $param["CustomId"];
+        }
+
+        if (array_key_exists("CodeParts",$param) and $param["CodeParts"] !== null) {
+            $this->CodeParts = [];
+            foreach ($param["CodeParts"] as $key => $value){
+                $obj = new CodePart();
+                $obj->deserialize($value);
+                array_push($this->CodeParts, $obj);
+            }
         }
     }
 }

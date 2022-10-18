@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperationState(string $LatestOperationState) 设置最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OIDCConfigAuthenticationOptions getOIDCConfig() 获取OIDC认证配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOIDCConfig(OIDCConfigAuthenticationOptions $OIDCConfig) 设置OIDC认证配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +50,12 @@ class DescribeClusterAuthenticationOptionsResponse extends AbstractModel
     public $LatestOperationState;
 
     /**
+     * @var OIDCConfigAuthenticationOptions OIDC认证配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OIDCConfig;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -54,6 +64,8 @@ class DescribeClusterAuthenticationOptionsResponse extends AbstractModel
      * @param ServiceAccountAuthenticationOptions $ServiceAccounts ServiceAccount认证配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestOperationState 最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OIDCConfigAuthenticationOptions $OIDCConfig OIDC认证配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -77,6 +89,11 @@ class DescribeClusterAuthenticationOptionsResponse extends AbstractModel
 
         if (array_key_exists("LatestOperationState",$param) and $param["LatestOperationState"] !== null) {
             $this->LatestOperationState = $param["LatestOperationState"];
+        }
+
+        if (array_key_exists("OIDCConfig",$param) and $param["OIDCConfig"] !== null) {
+            $this->OIDCConfig = new OIDCConfigAuthenticationOptions();
+            $this->OIDCConfig->deserialize($param["OIDCConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

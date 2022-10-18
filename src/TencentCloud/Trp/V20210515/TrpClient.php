@@ -50,6 +50,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeMerchantsResponse DescribeMerchants(Models\DescribeMerchantsRequest $req) 查询商户列表
  * @method Models\DescribeProductByIdResponse DescribeProductById(Models\DescribeProductByIdRequest $req) 查询商品信息
  * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) 查询商品列表
+ * @method Models\DescribeTmpTokenResponse DescribeTmpToken(Models\DescribeTmpTokenRequest $req) 查询临时Token，主要用于上传接口
  * @method Models\DescribeTraceCodeByIdResponse DescribeTraceCodeById(Models\DescribeTraceCodeByIdRequest $req) 查询二维码信息
  * @method Models\DescribeTraceCodesResponse DescribeTraceCodes(Models\DescribeTraceCodesRequest $req) 查询二维码列表
  * @method Models\DescribeTraceDataListResponse DescribeTraceDataList(Models\DescribeTraceDataListRequest $req) 查询溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的

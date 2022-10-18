@@ -14,30 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstances返回参数结构体
+ * DescribePackages返回参数结构体
  *
- * @method integer getTotalCount() 获取实例总数量。
- * @method void setTotalCount(integer $TotalCount) 设置实例总数量。
- * @method array getInstanceSet() 获取实例详细信息列表。
- * @method void setInstanceSet(array $InstanceSet) 设置实例详细信息列表。
+ * @method array getPackages() 获取权益包列表。
+ * @method void setPackages(array $Packages) 设置权益包列表。
+ * @method integer getTotalCount() 获取总条数。
+ * @method void setTotalCount(integer $TotalCount) 设置总条数。
+ * @method integer getTotalBalance() 获取权益点总余额。
+ * @method void setTotalBalance(integer $TotalBalance) 设置权益点总余额。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeInstancesResponse extends AbstractModel
+class DescribePackagesResponse extends AbstractModel
 {
     /**
-     * @var integer 实例总数量。
+     * @var array 权益包列表。
+     */
+    public $Packages;
+
+    /**
+     * @var integer 总条数。
      */
     public $TotalCount;
 
     /**
-     * @var array 实例详细信息列表。
+     * @var integer 权益点总余额。
      */
-    public $InstanceSet;
+    public $TotalBalance;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +52,9 @@ class DescribeInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 实例总数量。
-     * @param array $InstanceSet 实例详细信息列表。
+     * @param array $Packages 权益包列表。
+     * @param integer $TotalCount 总条数。
+     * @param integer $TotalBalance 权益点总余额。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +70,21 @@ class DescribeInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Packages",$param) and $param["Packages"] !== null) {
+            $this->Packages = [];
+            foreach ($param["Packages"] as $key => $value){
+                $obj = new PackageInfo();
+                $obj->deserialize($value);
+                array_push($this->Packages, $obj);
+            }
+        }
+
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("InstanceSet",$param) and $param["InstanceSet"] !== null) {
-            $this->InstanceSet = [];
-            foreach ($param["InstanceSet"] as $key => $value){
-                $obj = new InstanceSet();
-                $obj->deserialize($value);
-                array_push($this->InstanceSet, $obj);
-            }
+        if (array_key_exists("TotalBalance",$param) and $param["TotalBalance"] !== null) {
+            $this->TotalBalance = $param["TotalBalance"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

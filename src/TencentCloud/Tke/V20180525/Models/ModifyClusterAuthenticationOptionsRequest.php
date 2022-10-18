@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method ServiceAccountAuthenticationOptions getServiceAccounts() 获取ServiceAccount认证配置
  * @method void setServiceAccounts(ServiceAccountAuthenticationOptions $ServiceAccounts) 设置ServiceAccount认证配置
+ * @method OIDCConfigAuthenticationOptions getOIDCConfig() 获取OIDC认证配置
+ * @method void setOIDCConfig(OIDCConfigAuthenticationOptions $OIDCConfig) 设置OIDC认证配置
  */
 class ModifyClusterAuthenticationOptionsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyClusterAuthenticationOptionsRequest extends AbstractModel
     public $ServiceAccounts;
 
     /**
+     * @var OIDCConfigAuthenticationOptions OIDC认证配置
+     */
+    public $OIDCConfig;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param ServiceAccountAuthenticationOptions $ServiceAccounts ServiceAccount认证配置
+     * @param OIDCConfigAuthenticationOptions $OIDCConfig OIDC认证配置
      */
     function __construct()
     {
@@ -61,6 +69,11 @@ class ModifyClusterAuthenticationOptionsRequest extends AbstractModel
         if (array_key_exists("ServiceAccounts",$param) and $param["ServiceAccounts"] !== null) {
             $this->ServiceAccounts = new ServiceAccountAuthenticationOptions();
             $this->ServiceAccounts->deserialize($param["ServiceAccounts"]);
+        }
+
+        if (array_key_exists("OIDCConfig",$param) and $param["OIDCConfig"] !== null) {
+            $this->OIDCConfig = new OIDCConfigAuthenticationOptions();
+            $this->OIDCConfig->deserialize($param["OIDCConfig"]);
         }
     }
 }

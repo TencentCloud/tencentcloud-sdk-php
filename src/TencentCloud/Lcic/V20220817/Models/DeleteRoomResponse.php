@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstances返回参数结构体
+ * DeleteRoom返回参数结构体
  *
- * @method integer getTotalCount() 获取实例总数量。
- * @method void setTotalCount(integer $TotalCount) 设置实例总数量。
- * @method array getInstanceSet() 获取实例详细信息列表。
- * @method void setInstanceSet(array $InstanceSet) 设置实例详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeInstancesResponse extends AbstractModel
+class DeleteRoomResponse extends AbstractModel
 {
-    /**
-     * @var integer 实例总数量。
-     */
-    public $TotalCount;
-
-    /**
-     * @var array 实例详细信息列表。
-     */
-    public $InstanceSet;
-
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 实例总数量。
-     * @param array $InstanceSet 实例详细信息列表。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("InstanceSet",$param) and $param["InstanceSet"] !== null) {
-            $this->InstanceSet = [];
-            foreach ($param["InstanceSet"] as $key => $value){
-                $obj = new InstanceSet();
-                $obj->deserialize($value);
-                array_push($this->InstanceSet, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

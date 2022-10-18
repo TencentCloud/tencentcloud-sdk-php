@@ -28,17 +28,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCorpId(integer $CorpId) 设置企业ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getType() 获取0
+ * @method integer getType() 获取码类型 0: 批次, 1: 码, 2: 生产任务
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置0
+ * @method void setType(integer $Type) 设置码类型 0: 批次, 1: 码, 2: 生产任务
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCode() 获取码
+ * @method string getCode() 获取码值，跟码类型一一对应
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCode(string $Code) 设置码
+ * @method void setCode(string $Code) 设置码值，跟码类型一一对应
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRank() 获取排序
+ * @method integer getRank() 获取排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRank(integer $Rank) 设置排序
+ * @method void setRank(integer $Rank) 设置排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPhase() 获取溯源阶段 0:商品 1:通用 2:物流
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,9 +68,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChainTime(string $ChainTime) 设置上链时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ChainData getChainData() 获取无
+ * @method ChainData getChainData() 获取上链数据
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChainData(ChainData $ChainData) 设置无
+ * @method void setChainData(ChainData $ChainData) 设置上链数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PhaseData getPhaseData() 获取溯源阶段配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPhaseData(PhaseData $PhaseData) 设置溯源阶段配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取溯源阶段状态 0: 无效, 1: 有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置溯源阶段状态 0: 无效, 1: 有效
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TraceData extends AbstractModel
@@ -88,19 +96,19 @@ class TraceData extends AbstractModel
     public $CorpId;
 
     /**
-     * @var integer 0
+     * @var integer 码类型 0: 批次, 1: 码, 2: 生产任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var string 码
+     * @var string 码值，跟码类型一一对应
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
-     * @var integer 排序
+     * @var integer 排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rank;
@@ -148,21 +156,33 @@ class TraceData extends AbstractModel
     public $ChainTime;
 
     /**
-     * @var ChainData 无
+     * @var ChainData 上链数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChainData;
+
+    /**
+     * @var PhaseData 溯源阶段配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PhaseData;
+
+    /**
+     * @var integer 溯源阶段状态 0: 无效, 1: 有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
 
     /**
      * @param string $TraceId 溯源ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CorpId 企业ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Type 0
+     * @param integer $Type 码类型 0: 批次, 1: 码, 2: 生产任务
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Code 码
+     * @param string $Code 码值，跟码类型一一对应
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Rank 排序
+     * @param integer $Rank 排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Phase 溯源阶段 0:商品 1:通用 2:物流
 注意：此字段可能返回 null，表示取不到有效值。
@@ -178,7 +198,11 @@ class TraceData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChainTime 上链时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChainData $ChainData 无
+     * @param ChainData $ChainData 上链数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PhaseData $PhaseData 溯源阶段配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 溯源阶段状态 0: 无效, 1: 有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -250,6 +274,15 @@ class TraceData extends AbstractModel
         if (array_key_exists("ChainData",$param) and $param["ChainData"] !== null) {
             $this->ChainData = new ChainData();
             $this->ChainData->deserialize($param["ChainData"]);
+        }
+
+        if (array_key_exists("PhaseData",$param) and $param["PhaseData"] !== null) {
+            $this->PhaseData = new PhaseData();
+            $this->PhaseData->deserialize($param["PhaseData"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回最大数量，最大为20
  * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  * @method array getFilters() 获取查询过滤实名用户，key为Status，Values为["IsVerified"]
  * @method void setFilters(array $Filters) 设置查询过滤实名用户，key为Status，Values为["IsVerified"]
  * @method integer getOffset() 获取偏移量，默认为0，最大为20000
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0，最大为20000
+ * @method UserInfo getOperator() 获取操作者的信息
+ * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
 class ChannelDescribeEmployeesRequest extends AbstractModel
 {
@@ -44,11 +44,6 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var UserInfo 操作者的信息
-     */
-    public $Operator;
-
-    /**
      * @var array 查询过滤实名用户，key为Status，Values为["IsVerified"]
      */
     public $Filters;
@@ -59,11 +54,16 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var UserInfo 操作者的信息
+     */
+    public $Operator;
+
+    /**
      * @param integer $Limit 返回最大数量，最大为20
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
-     * @param UserInfo $Operator 操作者的信息
      * @param array $Filters 查询过滤实名用户，key为Status，Values为["IsVerified"]
      * @param integer $Offset 偏移量，默认为0，最大为20000
+     * @param UserInfo $Operator 操作者的信息
      */
     function __construct()
     {
@@ -87,11 +87,6 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
             $this->Agent->deserialize($param["Agent"]);
         }
 
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -103,6 +98,11 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
         }
     }
 }

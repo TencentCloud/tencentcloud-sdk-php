@@ -20,14 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTotalTicketStatistics请求参数结构体
  *
-
+ * @method string getStartTimeStr() 获取开始时间
+ * @method void setStartTimeStr(string $StartTimeStr) 设置开始时间
+ * @method string getEndTimeStr() 获取结束时间
+ * @method void setEndTimeStr(string $EndTimeStr) 设置结束时间
+ * @method string getDimension() 获取查询粒度
+分钟：“1”
+小时：“2”
+天：“3”
+ * @method void setDimension(string $Dimension) 设置查询粒度
+分钟：“1”
+小时：“2”
+天：“3”
  */
 class GetTotalTicketStatisticsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 开始时间
+     */
+    public $StartTimeStr;
 
     /**
+     * @var string 结束时间
+     */
+    public $EndTimeStr;
 
+    /**
+     * @var string 查询粒度
+分钟：“1”
+小时：“2”
+天：“3”
+     */
+    public $Dimension;
+
+    /**
+     * @param string $StartTimeStr 开始时间
+     * @param string $EndTimeStr 结束时间
+     * @param string $Dimension 查询粒度
+分钟：“1”
+小时：“2”
+天：“3”
      */
     function __construct()
     {
@@ -42,6 +74,16 @@ class GetTotalTicketStatisticsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("StartTimeStr",$param) and $param["StartTimeStr"] !== null) {
+            $this->StartTimeStr = $param["StartTimeStr"];
+        }
 
+        if (array_key_exists("EndTimeStr",$param) and $param["EndTimeStr"] !== null) {
+            $this->EndTimeStr = $param["EndTimeStr"];
+        }
+
+        if (array_key_exists("Dimension",$param) and $param["Dimension"] !== null) {
+            $this->Dimension = $param["Dimension"];
+        }
     }
 }

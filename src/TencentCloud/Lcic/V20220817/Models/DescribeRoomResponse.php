@@ -70,6 +70,10 @@ coteaching 双师
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssistants(array $Assistants) 设置助教Id列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecordUrl() 获取录制地址。仅在房间结束后存在。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecordUrl(string $RecordUrl) 设置录制地址。仅在房间结束后存在。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -149,6 +153,12 @@ coteaching 双师
     public $Assistants;
 
     /**
+     * @var string 录制地址。仅在房间结束后存在。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecordUrl;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -178,6 +188,8 @@ coteaching 双师
 0 不禁止录制（默认值）
 1 禁止录制
      * @param array $Assistants 助教Id列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecordUrl 录制地址。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -240,6 +252,10 @@ coteaching 双师
 
         if (array_key_exists("Assistants",$param) and $param["Assistants"] !== null) {
             $this->Assistants = $param["Assistants"];
+        }
+
+        if (array_key_exists("RecordUrl",$param) and $param["RecordUrl"] !== null) {
+            $this->RecordUrl = $param["RecordUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

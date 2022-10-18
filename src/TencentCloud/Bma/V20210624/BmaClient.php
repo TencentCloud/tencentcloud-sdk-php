@@ -28,7 +28,7 @@ use TencentCloud\Bma\V20210624\Models as Models;
  * @method Models\CreateBPOfflineAttachmentResponse CreateBPOfflineAttachment(Models\CreateBPOfflineAttachmentRequest $req) 添加下线材料
  * @method Models\CreateBPOfflineTicketResponse CreateBPOfflineTicket(Models\CreateBPOfflineTicketRequest $req) 添加下线工单
  * @method Models\CreateBPProtectURLsResponse CreateBPProtectURLs(Models\CreateBPProtectURLsRequest $req) 添加保护网站
- * @method Models\CreateCRBlockResponse CreateCRBlock(Models\CreateCRBlockRequest $req) 新建拦截
+ * @method Models\CreateCRBlockResponse CreateCRBlock(Models\CreateCRBlockRequest $req) 新建协查处置
 
  * @method Models\CreateCRCompanyVerifyResponse CreateCRCompanyVerify(Models\CreateCRCompanyVerifyRequest $req) 本接口用于企业认证，新接入用户必须认证后才可以进行后续操作（个人认证和企业认证二选一），只需认证一次即可
  * @method Models\CreateCRObtainResponse CreateCRObtain(Models\CreateCRObtainRequest $req) 版权保护-新建取证接口
@@ -43,9 +43,10 @@ use TencentCloud\Bma\V20210624\Models as Models;
  * @method Models\DescribeBPReportFakeURLsResponse DescribeBPReportFakeURLs(Models\DescribeBPReportFakeURLsRequest $req) 查询举报列表
  * @method Models\DescribeCRMonitorDetailResponse DescribeCRMonitorDetail(Models\DescribeCRMonitorDetailRequest $req) 版权保护-查询作品监测详情接口
  * @method Models\DescribeCRMonitorsResponse DescribeCRMonitors(Models\DescribeCRMonitorsRequest $req) 版权保护-查询监测列表接口
+ * @method Models\DescribeCRObtainDetailResponse DescribeCRObtainDetail(Models\DescribeCRObtainDetailRequest $req) 查询取证详情
  * @method Models\DescribeCRWorkInfoResponse DescribeCRWorkInfo(Models\DescribeCRWorkInfoRequest $req) 查询作品基本信息
  * @method Models\ModifyBPOfflineAttachmentResponse ModifyBPOfflineAttachment(Models\ModifyBPOfflineAttachmentRequest $req) 修改下线材料
- * @method Models\ModifyCRBlockStatusResponse ModifyCRBlockStatus(Models\ModifyCRBlockStatusRequest $req) 拦截申请
+ * @method Models\ModifyCRBlockStatusResponse ModifyCRBlockStatus(Models\ModifyCRBlockStatusRequest $req) 协查处置申请
  * @method Models\ModifyCRMonitorResponse ModifyCRMonitor(Models\ModifyCRMonitorRequest $req) 开启/关闭监测
  * @method Models\ModifyCRObtainStatusResponse ModifyCRObtainStatus(Models\ModifyCRObtainStatusRequest $req) 取证申请
  * @method Models\ModifyCRRightStatusResponse ModifyCRRightStatus(Models\ModifyCRRightStatusRequest $req) 发函申请

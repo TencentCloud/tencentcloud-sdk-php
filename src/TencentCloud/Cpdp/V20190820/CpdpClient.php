@@ -75,6 +75,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\CreateOpenBankAggregatedSubMerchantRegistrationResponse CreateOpenBankAggregatedSubMerchantRegistration(Models\CreateOpenBankAggregatedSubMerchantRegistrationRequest $req) 云企付-子商户进件V2
  * @method Models\CreateOpenBankExternalSubMerchantAccountBookResponse CreateOpenBankExternalSubMerchantAccountBook(Models\CreateOpenBankExternalSubMerchantAccountBookRequest $req) 第三方子商户电子记账本创建接口
  * @method Models\CreateOpenBankExternalSubMerchantRegistrationResponse CreateOpenBankExternalSubMerchantRegistration(Models\CreateOpenBankExternalSubMerchantRegistrationRequest $req) 云企付-子商户进件
+ * @method Models\CreateOpenBankGlobalPaymentOrderResponse CreateOpenBankGlobalPaymentOrder(Models\CreateOpenBankGlobalPaymentOrderRequest $req) 云企付-跨境支付下单
  * @method Models\CreateOpenBankMerchantResponse CreateOpenBankMerchant(Models\CreateOpenBankMerchantRequest $req) 云企付-创建商户
  * @method Models\CreateOpenBankPaymentOrderResponse CreateOpenBankPaymentOrder(Models\CreateOpenBankPaymentOrderRequest $req) 云企付-创建支付订单。支持B2B网关支付，B2C转账下单。
  * @method Models\CreateOpenBankRechargeOrderResponse CreateOpenBankRechargeOrder(Models\CreateOpenBankRechargeOrderRequest $req) 云企付-创建充值订单

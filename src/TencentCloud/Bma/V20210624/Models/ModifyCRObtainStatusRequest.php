@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTortId() 获取侵权ID
  * @method void setTortId(integer $TortId) 设置侵权ID
- * @method integer getObtainType() 获取取证类型：1-网页取证 2-过程取证
- * @method void setObtainType(integer $ObtainType) 设置取证类型：1-网页取证 2-过程取证
+ * @method integer getObtainType() 获取取证类型：1-网页取证 2-过程取证(暂不提供)
+ * @method void setObtainType(integer $ObtainType) 设置取证类型：1-网页取证 2-过程取证(暂不提供)
  * @method integer getObtainDuration() 获取过程取证的取证时长，单位分钟，范围0-120
  * @method void setObtainDuration(integer $ObtainDuration) 设置过程取证的取证时长，单位分钟，范围0-120
  * @method string getObtainUrl() 获取取证结果回调地址
@@ -37,7 +37,7 @@ class ModifyCRObtainStatusRequest extends AbstractModel
     public $TortId;
 
     /**
-     * @var integer 取证类型：1-网页取证 2-过程取证
+     * @var integer 取证类型：1-网页取证 2-过程取证(暂不提供)
      */
     public $ObtainType;
 
@@ -53,7 +53,7 @@ class ModifyCRObtainStatusRequest extends AbstractModel
 
     /**
      * @param integer $TortId 侵权ID
-     * @param integer $ObtainType 取证类型：1-网页取证 2-过程取证
+     * @param integer $ObtainType 取证类型：1-网页取证 2-过程取证(暂不提供)
      * @param integer $ObtainDuration 过程取证的取证时长，单位分钟，范围0-120
      * @param string $ObtainUrl 取证结果回调地址
      */

@@ -77,6 +77,8 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持�
  * @method void setComponentName(string $ComponentName) 设置控件简称，不能超过30个字符
  * @method boolean getComponentRequired() 获取定义控件是否为必填项，默认为false
  * @method void setComponentRequired(boolean $ComponentRequired) 设置定义控件是否为必填项，默认为false
+ * @method string getComponentRecipientId() 获取控件关联的签署方id
+ * @method void setComponentRecipientId(string $ComponentRecipientId) 设置控件关联的签署方id
  * @method integer getFileIndex() 获取控件所属文件的序号 (文档中文件的排列序号，从0开始)
  * @method void setFileIndex(integer $FileIndex) 设置控件所属文件的序号 (文档中文件的排列序号，从0开始)
  * @method string getGenerateMode() 获取控件生成的方式：
@@ -183,6 +185,11 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持�
      * @var boolean 定义控件是否为必填项，默认为false
      */
     public $ComponentRequired;
+
+    /**
+     * @var string 控件关联的签署方id
+     */
+    public $ComponentRecipientId;
 
     /**
      * @var integer 控件所属文件的序号 (文档中文件的排列序号，从0开始)
@@ -299,6 +306,7 @@ SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持�
 表单域的控件不能作为印章和签名控件
      * @param string $ComponentName 控件简称，不能超过30个字符
      * @param boolean $ComponentRequired 定义控件是否为必填项，默认为false
+     * @param string $ComponentRecipientId 控件关联的签署方id
      * @param integer $FileIndex 控件所属文件的序号 (文档中文件的排列序号，从0开始)
      * @param string $GenerateMode 控件生成的方式：
 NORMAL - 普通控件
@@ -357,6 +365,10 @@ DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo�
 
         if (array_key_exists("ComponentRequired",$param) and $param["ComponentRequired"] !== null) {
             $this->ComponentRequired = $param["ComponentRequired"];
+        }
+
+        if (array_key_exists("ComponentRecipientId",$param) and $param["ComponentRecipientId"] !== null) {
+            $this->ComponentRecipientId = $param["ComponentRecipientId"];
         }
 
         if (array_key_exists("FileIndex",$param) and $param["FileIndex"] !== null) {

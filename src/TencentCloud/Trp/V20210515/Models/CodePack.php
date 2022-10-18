@@ -40,13 +40,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取状态
+ * @method string getStatus() 获取制码状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置状态
+ * @method void setStatus(string $Status) 设置制码状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLog() 获取记录
+ * @method string getLog() 获取执行日志
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLog(string $Log) 设置记录
+ * @method void setLog(string $Log) 设置执行日志
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateUser() 获取创建人
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,13 +68,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCipher(integer $Cipher) 设置是否暗码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTextUrl() 获取文字码地址
+ * @method string getTextUrl() 获取[弃用] 文字码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTextUrl(string $TextUrl) 设置文字码地址
+ * @method void setTextUrl(string $TextUrl) 设置[弃用] 文字码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPackUrl() 获取二维码地址
+ * @method string getPackUrl() 获取[弃用] 二维码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPackUrl(string $PackUrl) 设置二维码地址
+ * @method void setPackUrl(string $PackUrl) 设置[弃用] 二维码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMerchantName() 获取商户名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -134,13 +134,13 @@ class CodePack extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string 状态
+     * @var string 制码状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var string 记录
+     * @var string 执行日志
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Log;
@@ -176,13 +176,13 @@ class CodePack extends AbstractModel
     public $Cipher;
 
     /**
-     * @var string 文字码地址
+     * @var string [弃用] 文字码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TextUrl;
 
     /**
-     * @var string 二维码地址
+     * @var string [弃用] 二维码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackUrl;
@@ -234,9 +234,9 @@ class CodePack extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 状态
+     * @param string $Status 制码状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Log 记录
+     * @param string $Log 执行日志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateUser 创建人
 注意：此字段可能返回 null，表示取不到有效值。
@@ -248,9 +248,9 @@ class CodePack extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cipher 是否暗码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TextUrl 文字码地址
+     * @param string $TextUrl [弃用] 文字码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PackUrl 二维码地址
+     * @param string $PackUrl [弃用] 二维码地址，通过另一个接口查
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MerchantName 商户名
 注意：此字段可能返回 null，表示取不到有效值。

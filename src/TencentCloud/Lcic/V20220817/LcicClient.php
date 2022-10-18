@@ -23,16 +23,20 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Lcic\V20220817\Models as Models;
 
 /**
+ * @method Models\BindDocumentToRoomResponse BindDocumentToRoom(Models\BindDocumentToRoomRequest $req) 绑定文档到房间
  * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建房间内可以使用的文档。
  * @method Models\CreateRoomResponse CreateRoom(Models\CreateRoomRequest $req) 创建房间
  * @method Models\CreateSupervisorResponse CreateSupervisor(Models\CreateSupervisorRequest $req) 创建巡课
  * @method Models\DeleteRoomResponse DeleteRoom(Models\DeleteRoomRequest $req) 删除房间
  * @method Models\DescribeRoomResponse DescribeRoom(Models\DescribeRoomRequest $req) 获取房间信息
+ * @method Models\DescribeRoomStatisticsResponse DescribeRoomStatistics(Models\DescribeRoomStatisticsRequest $req) 获取房间统计信息，仅可在房间结束后调用。
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 获取用户信息
  * @method Models\LoginOriginIdResponse LoginOriginId(Models\LoginOriginIdRequest $req) 使用源账号登录，源账号为注册时填入的originId
  * @method Models\LoginUserResponse LoginUser(Models\LoginUserRequest $req) 登录
+ * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用
  * @method Models\RegisterUserResponse RegisterUser(Models\RegisterUserRequest $req) 注册用户
  * @method Models\SetAppCustomContentResponse SetAppCustomContent(Models\SetAppCustomContentRequest $req) 设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
+ * @method Models\UnbindDocumentFromRoomResponse UnbindDocumentFromRoom(Models\UnbindDocumentFromRoomRequest $req) 文档从房间解绑
  */
 
 class LcicClient extends AbstractClient

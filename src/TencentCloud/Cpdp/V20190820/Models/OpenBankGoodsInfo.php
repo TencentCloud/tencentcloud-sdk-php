@@ -28,6 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGoodsDescription(string $GoodsDescription) 设置银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
  * @method string getGoodsBizType() 获取业务类型。汇付渠道必填，汇付渠道传入固定值100099。
  * @method void setGoodsBizType(string $GoodsBizType) 设置业务类型。汇付渠道必填，汇付渠道传入固定值100099。
+ * @method string getSku() 获取商品编号。
+ * @method void setSku(string $Sku) 设置商品编号。
+ * @method string getPrice() 获取商品单价。
+ * @method void setPrice(string $Price) 设置商品单价。
+ * @method string getQuantity() 获取商品数量
+ * @method void setQuantity(string $Quantity) 设置商品数量
+ * @method string getProductImage() 获取商品图片url
+ * @method void setProductImage(string $ProductImage) 设置商品图片url
+ * @method string getProductUrl() 获取商品链接url
+ * @method void setProductUrl(string $ProductUrl) 设置商品链接url
  */
 class OpenBankGoodsInfo extends AbstractModel
 {
@@ -52,10 +62,40 @@ class OpenBankGoodsInfo extends AbstractModel
     public $GoodsBizType;
 
     /**
+     * @var string 商品编号。
+     */
+    public $Sku;
+
+    /**
+     * @var string 商品单价。
+     */
+    public $Price;
+
+    /**
+     * @var string 商品数量
+     */
+    public $Quantity;
+
+    /**
+     * @var string 商品图片url
+     */
+    public $ProductImage;
+
+    /**
+     * @var string 商品链接url
+     */
+    public $ProductUrl;
+
+    /**
      * @param string $GoodsName 商品标题。默认值“商品支付”。
      * @param string $GoodsDetail 商品详细描述（商品列表）。
      * @param string $GoodsDescription 银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
      * @param string $GoodsBizType 业务类型。汇付渠道必填，汇付渠道传入固定值100099。
+     * @param string $Sku 商品编号。
+     * @param string $Price 商品单价。
+     * @param string $Quantity 商品数量
+     * @param string $ProductImage 商品图片url
+     * @param string $ProductUrl 商品链接url
      */
     function __construct()
     {
@@ -84,6 +124,26 @@ class OpenBankGoodsInfo extends AbstractModel
 
         if (array_key_exists("GoodsBizType",$param) and $param["GoodsBizType"] !== null) {
             $this->GoodsBizType = $param["GoodsBizType"];
+        }
+
+        if (array_key_exists("Sku",$param) and $param["Sku"] !== null) {
+            $this->Sku = $param["Sku"];
+        }
+
+        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
+            $this->Price = $param["Price"];
+        }
+
+        if (array_key_exists("Quantity",$param) and $param["Quantity"] !== null) {
+            $this->Quantity = $param["Quantity"];
+        }
+
+        if (array_key_exists("ProductImage",$param) and $param["ProductImage"] !== null) {
+            $this->ProductImage = $param["ProductImage"];
+        }
+
+        if (array_key_exists("ProductUrl",$param) and $param["ProductUrl"] !== null) {
+            $this->ProductUrl = $param["ProductUrl"];
         }
     }
 }

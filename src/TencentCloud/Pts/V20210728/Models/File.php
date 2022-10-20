@@ -72,6 +72,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目 ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAppID() 获取用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppID(integer $AppID) 设置用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUin() 获取用户主账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUin(string $Uin) 设置用户主账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubAccountUin() 获取用户子账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubAccountUin(string $SubAccountUin) 设置用户子账号
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class File extends AbstractModel
 {
@@ -166,6 +178,24 @@ class File extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var integer 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppID;
+
+    /**
+     * @var string 用户主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uin;
+
+    /**
+     * @var string 用户子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubAccountUin;
+
+    /**
      * @param string $FileId 文件 ID
      * @param integer $Kind 文件种类，参数文件-1，协议文件-2，请求文件-3
      * @param string $Name 文件名
@@ -191,6 +221,12 @@ class File extends AbstractModel
      * @param string $CreatedAt 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AppID 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uin 用户主账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubAccountUin 用户子账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -278,6 +314,18 @@ class File extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("AppID",$param) and $param["AppID"] !== null) {
+            $this->AppID = $param["AppID"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
         }
     }
 }

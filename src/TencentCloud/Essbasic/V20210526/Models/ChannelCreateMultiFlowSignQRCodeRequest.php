@@ -34,16 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowEffectiveDay(integer $FlowEffectiveDay) 设置签署流程有效天数 默认7天 最高设置不超过30天
  * @method integer getQrEffectiveDay() 获取二维码有效天数 默认7天 最高设置不超过90天
  * @method void setQrEffectiveDay(integer $QrEffectiveDay) 设置二维码有效天数 默认7天 最高设置不超过90天
+ * @method array getRestrictions() 获取限制二维码用户条件
+ * @method void setRestrictions(array $Restrictions) 设置限制二维码用户条件
  * @method string getCallbackUrl() 获取回调地址，最大长度1000个字符
 不传默认使用渠道应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，最大长度1000个字符
 不传默认使用渠道应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
- * @method ApproverRestriction getApproverRestrictions() 获取限制二维码用户条件
- * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件
  * @method UserInfo getOperator() 获取用户信息
  * @method void setOperator(UserInfo $Operator) 设置用户信息
+ * @method ApproverRestriction getApproverRestrictions() 获取限制二维码用户条件（已弃用）
+ * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件（已弃用）
  */
 class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $QrEffectiveDay;
 
     /**
+     * @var array 限制二维码用户条件
+     */
+    public $Restrictions;
+
+    /**
      * @var string 回调地址，最大长度1000个字符
 不传默认使用渠道应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
@@ -86,14 +93,14 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $CallbackUrl;
 
     /**
-     * @var ApproverRestriction 限制二维码用户条件
-     */
-    public $ApproverRestrictions;
-
-    /**
      * @var UserInfo 用户信息
      */
     public $Operator;
+
+    /**
+     * @var ApproverRestriction 限制二维码用户条件（已弃用）
+     */
+    public $ApproverRestrictions;
 
     /**
      * @param Agent $Agent 渠道应用相关信息。
@@ -103,11 +110,12 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
      * @param integer $MaxFlowNum 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
      * @param integer $FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
      * @param integer $QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
+     * @param array $Restrictions 限制二维码用户条件
      * @param string $CallbackUrl 回调地址，最大长度1000个字符
 不传默认使用渠道应用号配置的回调地址
 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
-     * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件
      * @param UserInfo $Operator 用户信息
+     * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
      */
     function __construct()
     {
@@ -147,18 +155,27 @@ class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel
             $this->QrEffectiveDay = $param["QrEffectiveDay"];
         }
 
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
+        if (array_key_exists("Restrictions",$param) and $param["Restrictions"] !== null) {
+            $this->Restrictions = [];
+            foreach ($param["Restrictions"] as $key => $value){
+                $obj = new ApproverRestriction();
+                $obj->deserialize($value);
+                array_push($this->Restrictions, $obj);
+            }
         }
 
-        if (array_key_exists("ApproverRestrictions",$param) and $param["ApproverRestrictions"] !== null) {
-            $this->ApproverRestrictions = new ApproverRestriction();
-            $this->ApproverRestrictions->deserialize($param["ApproverRestrictions"]);
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("ApproverRestrictions",$param) and $param["ApproverRestrictions"] !== null) {
+            $this->ApproverRestrictions = new ApproverRestriction();
+            $this->ApproverRestrictions->deserialize($param["ApproverRestrictions"]);
         }
     }
 }

@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RunPrometheusInstance请求参数结构体
  *
-
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getSubnetId() 获取子网ID，默认使用实例所用子网初始化，也可通过该参数传递新的子网ID初始化
+ * @method void setSubnetId(string $SubnetId) 设置子网ID，默认使用实例所用子网初始化，也可通过该参数传递新的子网ID初始化
  */
 class RunPrometheusInstanceRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
 
     /**
+     * @var string 子网ID，默认使用实例所用子网初始化，也可通过该参数传递新的子网ID初始化
+     */
+    public $SubnetId;
 
+    /**
+     * @param string $InstanceId 实例ID
+     * @param string $SubnetId 子网ID，默认使用实例所用子网初始化，也可通过该参数传递新的子网ID初始化
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class RunPrometheusInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
     }
 }

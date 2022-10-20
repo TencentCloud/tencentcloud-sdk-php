@@ -27,7 +27,9 @@ use TencentCloud\Tcm\V20210413\Models as Models;
  * @method Models\DeleteMeshResponse DeleteMesh(Models\DeleteMeshRequest $req) 删除网格
  * @method Models\DescribeMeshResponse DescribeMesh(Models\DescribeMeshRequest $req) 查询网格详情
  * @method Models\DescribeMeshListResponse DescribeMeshList(Models\DescribeMeshListRequest $req) 查询网格列表
+ * @method Models\LinkClusterListResponse LinkClusterList(Models\LinkClusterListRequest $req) 关联集群
  * @method Models\ModifyMeshResponse ModifyMesh(Models\ModifyMeshRequest $req) 修改网格
+ * @method Models\UnlinkClusterResponse UnlinkCluster(Models\UnlinkClusterRequest $req) 解关联集群
  */
 
 class TcmClient extends AbstractClient

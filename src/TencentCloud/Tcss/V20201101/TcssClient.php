@@ -23,34 +23,75 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tcss\V20201101\Models as Models;
 
 /**
+ * @method Models\AddAndPublishNetworkFirewallPolicyDetailResponse AddAndPublishNetworkFirewallPolicyDetail(Models\AddAndPublishNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略添加并发布任务
+ * @method Models\AddAndPublishNetworkFirewallPolicyYamlDetailResponse AddAndPublishNetworkFirewallPolicyYamlDetail(Models\AddAndPublishNetworkFirewallPolicyYamlDetailRequest $req) 容器网络创建Yaml网络策略并发布任务
  * @method Models\AddAssetImageRegistryRegistryDetailResponse AddAssetImageRegistryRegistryDetail(Models\AddAssetImageRegistryRegistryDetailRequest $req) 新增单个镜像仓库详细信息
  * @method Models\AddCompliancePolicyItemToWhitelistResponse AddCompliancePolicyItemToWhitelist(Models\AddCompliancePolicyItemToWhitelistRequest $req) 将指定的检测项添加到白名单中，不显示未通过结果。
  * @method Models\AddEditAbnormalProcessRuleResponse AddEditAbnormalProcessRule(Models\AddEditAbnormalProcessRuleRequest $req) 添加编辑运行时异常进程策略
  * @method Models\AddEditAccessControlRuleResponse AddEditAccessControlRule(Models\AddEditAccessControlRuleRequest $req) 添加编辑运行时访问控制策略
+ * @method Models\AddEditImageAutoAuthorizedRuleResponse AddEditImageAutoAuthorizedRule(Models\AddEditImageAutoAuthorizedRuleRequest $req) 新增或编辑本地镜像自动授权规则
  * @method Models\AddEditReverseShellWhiteListResponse AddEditReverseShellWhiteList(Models\AddEditReverseShellWhiteListRequest $req) 添加编辑运行时反弹shell白名单
  * @method Models\AddEditRiskSyscallWhiteListResponse AddEditRiskSyscallWhiteList(Models\AddEditRiskSyscallWhiteListRequest $req) 添加编辑运行时高危系统调用白名单
  * @method Models\AddEditWarningRulesResponse AddEditWarningRules(Models\AddEditWarningRulesRequest $req) 添加编辑告警策略
+ * @method Models\AddEscapeWhiteListResponse AddEscapeWhiteList(Models\AddEscapeWhiteListRequest $req) 新增逃逸白名单
+ * @method Models\AddIgnoreVulResponse AddIgnoreVul(Models\AddIgnoreVulRequest $req) 新增漏洞扫描忽略漏洞
+ * @method Models\AddNetworkFirewallPolicyDetailResponse AddNetworkFirewallPolicyDetail(Models\AddNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略添加任务
+ * @method Models\AddNetworkFirewallPolicyYamlDetailResponse AddNetworkFirewallPolicyYamlDetail(Models\AddNetworkFirewallPolicyYamlDetailRequest $req) 容器网络创建Yaml网络策略添加任务
+ * @method Models\CheckNetworkFirewallPolicyYamlResponse CheckNetworkFirewallPolicyYaml(Models\CheckNetworkFirewallPolicyYamlRequest $req) 容器网络创建检查Yaml网络策略任务
  * @method Models\CheckRepeatAssetImageRegistryResponse CheckRepeatAssetImageRegistry(Models\CheckRepeatAssetImageRegistryRequest $req) 检查单个镜像仓库名是否重复
+ * @method Models\ConfirmNetworkFirewallPolicyResponse ConfirmNetworkFirewallPolicy(Models\ConfirmNetworkFirewallPolicyRequest $req) 容器网络创建网络策略确认任务
  * @method Models\CreateAssetImageRegistryScanTaskResponse CreateAssetImageRegistryScanTask(Models\CreateAssetImageRegistryScanTaskRequest $req) 镜像仓库创建镜像扫描任务
  * @method Models\CreateAssetImageRegistryScanTaskOneKeyResponse CreateAssetImageRegistryScanTaskOneKey(Models\CreateAssetImageRegistryScanTaskOneKeyRequest $req) 镜像仓库创建镜像一键扫描任务
  * @method Models\CreateAssetImageScanSettingResponse CreateAssetImageScanSetting(Models\CreateAssetImageScanSettingRequest $req) 添加容器安全镜像扫描设置
  * @method Models\CreateAssetImageScanTaskResponse CreateAssetImageScanTask(Models\CreateAssetImageScanTaskRequest $req) 容器安全创建镜像扫描任务
+ * @method Models\CreateAssetImageVirusExportJobResponse CreateAssetImageVirusExportJob(Models\CreateAssetImageVirusExportJobRequest $req) 创建本地镜像木马列表导出任务
  * @method Models\CreateCheckComponentResponse CreateCheckComponent(Models\CreateCheckComponentRequest $req) 安装检查组件，创建防护容器
  * @method Models\CreateClusterCheckTaskResponse CreateClusterCheckTask(Models\CreateClusterCheckTaskRequest $req) 创建集群检查任务，用户检查用户的集群相关风险项
  * @method Models\CreateComplianceTaskResponse CreateComplianceTask(Models\CreateComplianceTaskRequest $req) 创建合规检查任务，在资产级别触发重新检测时使用。
+ * @method Models\CreateComponentExportJobResponse CreateComponentExportJob(Models\CreateComponentExportJobRequest $req) 查询本地镜像组件列表导出
+ * @method Models\CreateDefenceVulExportJobResponse CreateDefenceVulExportJob(Models\CreateDefenceVulExportJobRequest $req) 创建支持防御的漏洞导出任务
+ * @method Models\CreateEmergencyVulExportJobResponse CreateEmergencyVulExportJob(Models\CreateEmergencyVulExportJobRequest $req) 创建应急漏洞导出任务
+ * @method Models\CreateEscapeEventsExportJobResponse CreateEscapeEventsExportJob(Models\CreateEscapeEventsExportJobRequest $req) 创建逃逸事件导出异步任务
+ * @method Models\CreateEscapeWhiteListExportJobResponse CreateEscapeWhiteListExportJob(Models\CreateEscapeWhiteListExportJobRequest $req) 创建逃逸白名单导出任务
  * @method Models\CreateExportComplianceStatusListJobResponse CreateExportComplianceStatusListJob(Models\CreateExportComplianceStatusListJobRequest $req) 创建一个导出安全合规信息的任务
+ * @method Models\CreateHostExportJobResponse CreateHostExportJob(Models\CreateHostExportJobRequest $req) 创建主机列表导出任务
+ * @method Models\CreateImageExportJobResponse CreateImageExportJob(Models\CreateImageExportJobRequest $req) 创建镜像导出任务
+ * @method Models\CreateNetworkFirewallClusterRefreshResponse CreateNetworkFirewallClusterRefresh(Models\CreateNetworkFirewallClusterRefreshRequest $req) 容器网络集群下发刷新任务
+ * @method Models\CreateNetworkFirewallPolicyDiscoverResponse CreateNetworkFirewallPolicyDiscover(Models\CreateNetworkFirewallPolicyDiscoverRequest $req) 容器网络集群网络策略创建自动发现任务
+ * @method Models\CreateNetworkFirewallPublishResponse CreateNetworkFirewallPublish(Models\CreateNetworkFirewallPublishRequest $req) 容器网络创建网络策略发布任务
+ * @method Models\CreateNetworkFirewallUndoPublishResponse CreateNetworkFirewallUndoPublish(Models\CreateNetworkFirewallUndoPublishRequest $req) 容器网络创建网络策略撤销任务
  * @method Models\CreateOrModifyPostPayCoresResponse CreateOrModifyPostPayCores(Models\CreateOrModifyPostPayCoresRequest $req) CreateOrModifyPostPayCores  创建或者编辑弹性计费上限
+ * @method Models\CreateProcessEventsExportJobResponse CreateProcessEventsExportJob(Models\CreateProcessEventsExportJobRequest $req) 创建异常进程事件导出异步任务
  * @method Models\CreateRefreshTaskResponse CreateRefreshTask(Models\CreateRefreshTaskRequest $req) 下发刷新任务，会刷新资产信息
+ * @method Models\CreateSearchTemplateResponse CreateSearchTemplate(Models\CreateSearchTemplateRequest $req) 添加检索模板
+ * @method Models\CreateSystemVulExportJobResponse CreateSystemVulExportJob(Models\CreateSystemVulExportJobRequest $req) 创建系统漏洞导出任务
  * @method Models\CreateVirusScanAgainResponse CreateVirusScanAgain(Models\CreateVirusScanAgainRequest $req) 运行时文件查杀重新检测
  * @method Models\CreateVirusScanTaskResponse CreateVirusScanTask(Models\CreateVirusScanTaskRequest $req) 运行时文件查杀一键扫描
+ * @method Models\CreateVulContainerExportJobResponse CreateVulContainerExportJob(Models\CreateVulContainerExportJobRequest $req) 创建受漏洞影响的容器导出任务
+ * @method Models\CreateVulDefenceEventExportJobResponse CreateVulDefenceEventExportJob(Models\CreateVulDefenceEventExportJobRequest $req) 创建漏洞防御导出任务
+ * @method Models\CreateVulDefenceHostExportJobResponse CreateVulDefenceHostExportJob(Models\CreateVulDefenceHostExportJobRequest $req) 创建漏洞防御主机导出任务
+ * @method Models\CreateVulExportJobResponse CreateVulExportJob(Models\CreateVulExportJobRequest $req) 查询本地镜像漏洞列表导出
+ * @method Models\CreateVulImageExportJobResponse CreateVulImageExportJob(Models\CreateVulImageExportJobRequest $req) 创建受漏洞影响的镜像导出任务
+ * @method Models\CreateVulScanTaskResponse CreateVulScanTask(Models\CreateVulScanTaskRequest $req) 创建漏洞扫描任务
+ * @method Models\CreateWebVulExportJobResponse CreateWebVulExportJob(Models\CreateWebVulExportJobRequest $req) 创建web漏洞导出任务
  * @method Models\DeleteAbnormalProcessRulesResponse DeleteAbnormalProcessRules(Models\DeleteAbnormalProcessRulesRequest $req) 删除运行异常进程策略
  * @method Models\DeleteAccessControlRulesResponse DeleteAccessControlRules(Models\DeleteAccessControlRulesRequest $req) 删除运行访问控制策略
  * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) 从白名单中删除将指定的检测项。
+ * @method Models\DeleteEscapeWhiteListResponse DeleteEscapeWhiteList(Models\DeleteEscapeWhiteListRequest $req) 删除逃逸白名单
+ * @method Models\DeleteIgnoreVulResponse DeleteIgnoreVul(Models\DeleteIgnoreVulRequest $req) 取消漏洞扫描忽略漏洞
+ * @method Models\DeleteMachineResponse DeleteMachine(Models\DeleteMachineRequest $req) 卸载Agent客户端
+ * @method Models\DeleteNetworkFirewallPolicyDetailResponse DeleteNetworkFirewallPolicyDetail(Models\DeleteNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略删除任务
+ * @method Models\DeleteReverseShellEventsResponse DeleteReverseShellEvents(Models\DeleteReverseShellEventsRequest $req) 删除运行时反弹shell事件
  * @method Models\DeleteReverseShellWhiteListsResponse DeleteReverseShellWhiteLists(Models\DeleteReverseShellWhiteListsRequest $req) 删除运行时反弹shell白名单
+ * @method Models\DeleteRiskSyscallEventsResponse DeleteRiskSyscallEvents(Models\DeleteRiskSyscallEventsRequest $req) 删除运行时高危系统调用事件
  * @method Models\DeleteRiskSyscallWhiteListsResponse DeleteRiskSyscallWhiteLists(Models\DeleteRiskSyscallWhiteListsRequest $req) 删除运行时高危系统调用白名单
+ * @method Models\DeleteSearchTemplateResponse DeleteSearchTemplate(Models\DeleteSearchTemplateRequest $req) 删除检索模板
+ * @method Models\DescribeABTestConfigResponse DescribeABTestConfig(Models\DescribeABTestConfigRequest $req) 获取用户当前灰度配置
  * @method Models\DescribeAbnormalProcessDetailResponse DescribeAbnormalProcessDetail(Models\DescribeAbnormalProcessDetailRequest $req) 查询运行时异常进程事件详细信息
+ * @method Models\DescribeAbnormalProcessEventTendencyResponse DescribeAbnormalProcessEventTendency(Models\DescribeAbnormalProcessEventTendencyRequest $req) 查询待处理异常进程事件趋势
  * @method Models\DescribeAbnormalProcessEventsResponse DescribeAbnormalProcessEvents(Models\DescribeAbnormalProcessEventsRequest $req) 查询运行时异常进程事件列表信息
  * @method Models\DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExport(Models\DescribeAbnormalProcessEventsExportRequest $req) 查询运行时异常进程事件列表信息导出
+ * @method Models\DescribeAbnormalProcessLevelSummaryResponse DescribeAbnormalProcessLevelSummary(Models\DescribeAbnormalProcessLevelSummaryRequest $req) 统计异常进程各威胁等级待处理事件数
  * @method Models\DescribeAbnormalProcessRuleDetailResponse DescribeAbnormalProcessRuleDetail(Models\DescribeAbnormalProcessRuleDetailRequest $req) 查询运行时异常策略详细信息
  * @method Models\DescribeAbnormalProcessRulesResponse DescribeAbnormalProcessRules(Models\DescribeAbnormalProcessRulesRequest $req) 查询运行时异常进程策略列表信息
  * @method Models\DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExport(Models\DescribeAbnormalProcessRulesExportRequest $req) 查询运行时异常进程策略列表信息导出
@@ -63,6 +104,8 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeAffectedClusterCountResponse DescribeAffectedClusterCount(Models\DescribeAffectedClusterCountRequest $req) 获取受影响的集群数量，返回数量
  * @method Models\DescribeAffectedNodeListResponse DescribeAffectedNodeList(Models\DescribeAffectedNodeListRequest $req) 查询节点类型的影响范围，返回节点列表
  * @method Models\DescribeAffectedWorkloadListResponse DescribeAffectedWorkloadList(Models\DescribeAffectedWorkloadListRequest $req) 查询workload类型的影响范围，返回workload列表
+ * @method Models\DescribeAgentDaemonSetCmdResponse DescribeAgentDaemonSetCmd(Models\DescribeAgentDaemonSetCmdRequest $req) 查询平行容器安装命令
+ * @method Models\DescribeAgentInstallCommandResponse DescribeAgentInstallCommand(Models\DescribeAgentInstallCommandRequest $req) 查询agent安装命令
  * @method Models\DescribeAssetAppServiceListResponse DescribeAssetAppServiceList(Models\DescribeAssetAppServiceListRequest $req) 容器安全查询app服务列表
  * @method Models\DescribeAssetComponentListResponse DescribeAssetComponentList(Models\DescribeAssetComponentListRequest $req) 容器安全搜索查询容器组件列表
  * @method Models\DescribeAssetContainerDetailResponse DescribeAssetContainerDetail(Models\DescribeAssetContainerDetailRequest $req) 查询容器详细信息
@@ -102,7 +145,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeAssetPortListResponse DescribeAssetPortList(Models\DescribeAssetPortListRequest $req) 容器安全搜索查询端口占用列表
  * @method Models\DescribeAssetProcessListResponse DescribeAssetProcessList(Models\DescribeAssetProcessListRequest $req) 容器安全搜索查询进程列表
  * @method Models\DescribeAssetSummaryResponse DescribeAssetSummary(Models\DescribeAssetSummaryRequest $req) 查询账户容器、镜像等统计信息
+ * @method Models\DescribeAssetSyncLastTimeResponse DescribeAssetSyncLastTime(Models\DescribeAssetSyncLastTimeRequest $req) 查询资产同步最近时间
  * @method Models\DescribeAssetWebServiceListResponse DescribeAssetWebServiceList(Models\DescribeAssetWebServiceListRequest $req) 容器安全查询web服务列表
+ * @method Models\DescribeAutoAuthorizedRuleHostResponse DescribeAutoAuthorizedRuleHost(Models\DescribeAutoAuthorizedRuleHostRequest $req) 查询自动授权规则授权范围主机信息
  * @method Models\DescribeCheckItemListResponse DescribeCheckItemList(Models\DescribeCheckItemListRequest $req) 查询所有检查项接口，返回总数和检查项列表
  * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) 查询单个集群的详细信息
  * @method Models\DescribeClusterSummaryResponse DescribeClusterSummary(Models\DescribeClusterSummaryRequest $req) 查询用户集群资产总览
@@ -118,19 +163,46 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeComplianceWhitelistItemListResponse DescribeComplianceWhitelistItemList(Models\DescribeComplianceWhitelistItemListRequest $req) 查询白名单列表
  * @method Models\DescribeContainerAssetSummaryResponse DescribeContainerAssetSummary(Models\DescribeContainerAssetSummaryRequest $req) 查询容器资产概览信息
  * @method Models\DescribeContainerSecEventSummaryResponse DescribeContainerSecEventSummary(Models\DescribeContainerSecEventSummaryRequest $req) 查询容器安全未处理事件信息
+ * @method Models\DescribeESAggregationsResponse DescribeESAggregations(Models\DescribeESAggregationsRequest $req) 获取ES字段聚合结果
+ * @method Models\DescribeESHitsResponse DescribeESHits(Models\DescribeESHitsRequest $req) 获取ES查询文档列表
+ * @method Models\DescribeEmergencyVulListResponse DescribeEmergencyVulList(Models\DescribeEmergencyVulListRequest $req) 查询应急漏洞列表
  * @method Models\DescribeEscapeEventDetailResponse DescribeEscapeEventDetail(Models\DescribeEscapeEventDetailRequest $req) DescribeEscapeEventDetail  查询容器逃逸事件详情
  * @method Models\DescribeEscapeEventInfoResponse DescribeEscapeEventInfo(Models\DescribeEscapeEventInfoRequest $req) DescribeEscapeEventInfo 查询容器逃逸事件列表
+ * @method Models\DescribeEscapeEventTendencyResponse DescribeEscapeEventTendency(Models\DescribeEscapeEventTendencyRequest $req) 查询待处理逃逸事件趋势
+ * @method Models\DescribeEscapeEventTypeSummaryResponse DescribeEscapeEventTypeSummary(Models\DescribeEscapeEventTypeSummaryRequest $req) 统计容器逃逸各事件类型和待处理事件数
  * @method Models\DescribeEscapeEventsExportResponse DescribeEscapeEventsExport(Models\DescribeEscapeEventsExportRequest $req) DescribeEscapeEventsExport  查询容器逃逸事件列表导出
  * @method Models\DescribeEscapeRuleInfoResponse DescribeEscapeRuleInfo(Models\DescribeEscapeRuleInfoRequest $req) DescribeEscapeRuleInfo 查询容器逃逸扫描规则信息
  * @method Models\DescribeEscapeSafeStateResponse DescribeEscapeSafeState(Models\DescribeEscapeSafeStateRequest $req) DescribeEscapeSafeState 查询容器逃逸安全状态
+ * @method Models\DescribeEscapeWhiteListResponse DescribeEscapeWhiteList(Models\DescribeEscapeWhiteListRequest $req) 查询逃逸白名单
  * @method Models\DescribeExportJobResultResponse DescribeExportJobResult(Models\DescribeExportJobResultRequest $req) 查询导出任务的结果
  * @method Models\DescribeImageAuthorizedInfoResponse DescribeImageAuthorizedInfo(Models\DescribeImageAuthorizedInfoRequest $req) DescribeImageAuthorizedInfo  查询镜像授权信息
+ * @method Models\DescribeImageAutoAuthorizedLogListResponse DescribeImageAutoAuthorizedLogList(Models\DescribeImageAutoAuthorizedLogListRequest $req) 查询镜像自动授权结果列表
+ * @method Models\DescribeImageAutoAuthorizedRuleResponse DescribeImageAutoAuthorizedRule(Models\DescribeImageAutoAuthorizedRuleRequest $req) 查询本地镜像自动授权规则
+ * @method Models\DescribeImageAutoAuthorizedTaskListResponse DescribeImageAutoAuthorizedTaskList(Models\DescribeImageAutoAuthorizedTaskListRequest $req) 查询镜像自动授权任务列表
+ * @method Models\DescribeImageComponentListResponse DescribeImageComponentList(Models\DescribeImageComponentListRequest $req) 查询本地镜像组件列表
  * @method Models\DescribeImageRegistryTimingScanTaskResponse DescribeImageRegistryTimingScanTask(Models\DescribeImageRegistryTimingScanTaskRequest $req) 镜像仓库查看定时任务
  * @method Models\DescribeImageRiskSummaryResponse DescribeImageRiskSummary(Models\DescribeImageRiskSummaryRequest $req) 查询本地镜像风险概览
  * @method Models\DescribeImageRiskTendencyResponse DescribeImageRiskTendency(Models\DescribeImageRiskTendencyRequest $req) 查询容器安全本地镜像风险趋势
  * @method Models\DescribeImageSimpleListResponse DescribeImageSimpleList(Models\DescribeImageSimpleListRequest $req) DescribeImageSimpleList 查询全部镜像列表
+ * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
+ * @method Models\DescribeInspectionReportResponse DescribeInspectionReport(Models\DescribeInspectionReportRequest $req) 查询检查报告
+ * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 获取日志检索容量使用统计
+ * @method Models\DescribeNetworkFirewallAuditRecordResponse DescribeNetworkFirewallAuditRecord(Models\DescribeNetworkFirewallAuditRecordRequest $req) 查询集群策略审计列表
+ * @method Models\DescribeNetworkFirewallClusterListResponse DescribeNetworkFirewallClusterList(Models\DescribeNetworkFirewallClusterListRequest $req) 查询集群策略列表
+ * @method Models\DescribeNetworkFirewallClusterRefreshStatusResponse DescribeNetworkFirewallClusterRefreshStatus(Models\DescribeNetworkFirewallClusterRefreshStatusRequest $req) 容器网络查询资产任务进度
+ * @method Models\DescribeNetworkFirewallNamespaceLabelListResponse DescribeNetworkFirewallNamespaceLabelList(Models\DescribeNetworkFirewallNamespaceLabelListRequest $req) 查询集群网络空间标签列表
+ * @method Models\DescribeNetworkFirewallNamespaceListResponse DescribeNetworkFirewallNamespaceList(Models\DescribeNetworkFirewallNamespaceListRequest $req) 查询集群网络空间列表
+ * @method Models\DescribeNetworkFirewallPodLabelsListResponse DescribeNetworkFirewallPodLabelsList(Models\DescribeNetworkFirewallPodLabelsListRequest $req) 查询集群网络pod标签
+ * @method Models\DescribeNetworkFirewallPolicyDetailResponse DescribeNetworkFirewallPolicyDetail(Models\DescribeNetworkFirewallPolicyDetailRequest $req) 容器网络集群查看策略详情
+ * @method Models\DescribeNetworkFirewallPolicyDiscoverResponse DescribeNetworkFirewallPolicyDiscover(Models\DescribeNetworkFirewallPolicyDiscoverRequest $req) 容器网络查询网络策略自动发现任务进度
+ * @method Models\DescribeNetworkFirewallPolicyListResponse DescribeNetworkFirewallPolicyList(Models\DescribeNetworkFirewallPolicyListRequest $req) 查询集群网络策略列表
+ * @method Models\DescribeNetworkFirewallPolicyStatusResponse DescribeNetworkFirewallPolicyStatus(Models\DescribeNetworkFirewallPolicyStatusRequest $req) 容器网络查询网络策略策略执行状态
+ * @method Models\DescribeNetworkFirewallPolicyYamlDetailResponse DescribeNetworkFirewallPolicyYamlDetail(Models\DescribeNetworkFirewallPolicyYamlDetailRequest $req) 容器网络集群查看Yaml网络策略详情
+ * @method Models\DescribeNewestVulResponse DescribeNewestVul(Models\DescribeNewestVulRequest $req) 查询最新披露漏洞列表
  * @method Models\DescribePostPayDetailResponse DescribePostPayDetail(Models\DescribePostPayDetailRequest $req) DescribePostPayDetail  查询后付费详情
  * @method Models\DescribeProVersionInfoResponse DescribeProVersionInfo(Models\DescribeProVersionInfoRequest $req) DescribeProVersionInfo  查询专业版需购买信息
+ * @method Models\DescribePromotionActivityResponse DescribePromotionActivity(Models\DescribePromotionActivityRequest $req) 查询促销活动
+ * @method Models\DescribePublicKeyResponse DescribePublicKey(Models\DescribePublicKeyRequest $req) 获取公钥
  * @method Models\DescribePurchaseStateInfoResponse DescribePurchaseStateInfo(Models\DescribePurchaseStateInfoRequest $req) DescribePurchaseStateInfo 查询容器安全服务已购买信息
  * @method Models\DescribeRefreshTaskResponse DescribeRefreshTask(Models\DescribeRefreshTaskRequest $req) 查询刷新任务
  * @method Models\DescribeReverseShellDetailResponse DescribeReverseShellDetail(Models\DescribeReverseShellDetailRequest $req) 查询运行时反弹shell事件详细信息
@@ -145,20 +217,66 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeRiskSyscallNamesResponse DescribeRiskSyscallNames(Models\DescribeRiskSyscallNamesRequest $req) 查询运行时高危系统调用系统名称列表
  * @method Models\DescribeRiskSyscallWhiteListDetailResponse DescribeRiskSyscallWhiteListDetail(Models\DescribeRiskSyscallWhiteListDetailRequest $req) 查询运行时高危系统调用白名单详细信息
  * @method Models\DescribeRiskSyscallWhiteListsResponse DescribeRiskSyscallWhiteLists(Models\DescribeRiskSyscallWhiteListsRequest $req) 查询运行时高危系统调用白名单列表信息
+ * @method Models\DescribeScanIgnoreVulListResponse DescribeScanIgnoreVulList(Models\DescribeScanIgnoreVulListRequest $req) 查询扫描忽略的漏洞列表
+ * @method Models\DescribeSearchExportListResponse DescribeSearchExportList(Models\DescribeSearchExportListRequest $req) 导出ES查询文档列表
+ * @method Models\DescribeSearchLogsResponse DescribeSearchLogs(Models\DescribeSearchLogsRequest $req) 获取历史搜索记录
+ * @method Models\DescribeSearchTemplatesResponse DescribeSearchTemplates(Models\DescribeSearchTemplatesRequest $req) 获取快速检索列表
  * @method Models\DescribeSecEventsTendencyResponse DescribeSecEventsTendency(Models\DescribeSecEventsTendencyRequest $req) 查询容器运行时安全事件趋势
+ * @method Models\DescribeSecLogAlertMsgResponse DescribeSecLogAlertMsg(Models\DescribeSecLogAlertMsgRequest $req) 查询安全日志告警信息
+ * @method Models\DescribeSecLogCleanSettingInfoResponse DescribeSecLogCleanSettingInfo(Models\DescribeSecLogCleanSettingInfoRequest $req) 查询安全日志清理设置详情
+ * @method Models\DescribeSecLogDeliveryClsOptionsResponse DescribeSecLogDeliveryClsOptions(Models\DescribeSecLogDeliveryClsOptionsRequest $req) 查询安全日志投递cls可选项
+ * @method Models\DescribeSecLogDeliveryClsSettingResponse DescribeSecLogDeliveryClsSetting(Models\DescribeSecLogDeliveryClsSettingRequest $req) 查询安全日志投递Cls配置
+ * @method Models\DescribeSecLogDeliveryKafkaOptionsResponse DescribeSecLogDeliveryKafkaOptions(Models\DescribeSecLogDeliveryKafkaOptionsRequest $req) 查询安全日志投递kafka可选项
+ * @method Models\DescribeSecLogDeliveryKafkaSettingResponse DescribeSecLogDeliveryKafkaSetting(Models\DescribeSecLogDeliveryKafkaSettingRequest $req) 查询安全日志投递kafka配置
+ * @method Models\DescribeSecLogJoinObjectListResponse DescribeSecLogJoinObjectList(Models\DescribeSecLogJoinObjectListRequest $req) 查询安全日志接入对象列表
+ * @method Models\DescribeSecLogJoinTypeListResponse DescribeSecLogJoinTypeList(Models\DescribeSecLogJoinTypeListRequest $req) 查询安全日志接入列表
+ * @method Models\DescribeSecLogKafkaUINResponse DescribeSecLogKafkaUIN(Models\DescribeSecLogKafkaUINRequest $req) 查询安全日志KafkaUIN
+ * @method Models\DescribeSecLogVasInfoResponse DescribeSecLogVasInfo(Models\DescribeSecLogVasInfoRequest $req) 查询安全日志商品信息
+ * @method Models\DescribeSupportDefenceVulResponse DescribeSupportDefenceVul(Models\DescribeSupportDefenceVulRequest $req) 查询支持防御的漏洞列表
+ * @method Models\DescribeSystemVulListResponse DescribeSystemVulList(Models\DescribeSystemVulListRequest $req) 查询系统漏洞列表
  * @method Models\DescribeTaskResultSummaryResponse DescribeTaskResultSummary(Models\DescribeTaskResultSummaryRequest $req) 查询检查结果总览，返回受影响的节点数量，返回7天的数据，总共7个
+ * @method Models\DescribeTcssSummaryResponse DescribeTcssSummary(Models\DescribeTcssSummaryRequest $req) 查询容器安全概览信息
+ * @method Models\DescribeUnauthorizedCoresTendencyResponse DescribeUnauthorizedCoresTendency(Models\DescribeUnauthorizedCoresTendencyRequest $req) 查询当天未授权核数趋势
  * @method Models\DescribeUnfinishRefreshTaskResponse DescribeUnfinishRefreshTask(Models\DescribeUnfinishRefreshTaskRequest $req) 查询未完成的刷新资产任务信息
  * @method Models\DescribeUserClusterResponse DescribeUserCluster(Models\DescribeUserClusterRequest $req) 安全概览和集群安全页进入调用该接口，查询用户集群相关信息。
  * @method Models\DescribeValueAddedSrvInfoResponse DescribeValueAddedSrvInfo(Models\DescribeValueAddedSrvInfoRequest $req) DescribeValueAddedSrvInfo查询增值服务需购买信息
+ * @method Models\DescribeVirusAutoIsolateSampleDetailResponse DescribeVirusAutoIsolateSampleDetail(Models\DescribeVirusAutoIsolateSampleDetailRequest $req) 查询木马自动隔离样本详情
+ * @method Models\DescribeVirusAutoIsolateSampleDownloadURLResponse DescribeVirusAutoIsolateSampleDownloadURL(Models\DescribeVirusAutoIsolateSampleDownloadURLRequest $req) 查询木马自动隔离样本下载链接
+ * @method Models\DescribeVirusAutoIsolateSampleListResponse DescribeVirusAutoIsolateSampleList(Models\DescribeVirusAutoIsolateSampleListRequest $req) 查询木马自动隔离样本列表
+ * @method Models\DescribeVirusAutoIsolateSettingResponse DescribeVirusAutoIsolateSetting(Models\DescribeVirusAutoIsolateSettingRequest $req) 查询木马自动隔离设置
  * @method Models\DescribeVirusDetailResponse DescribeVirusDetail(Models\DescribeVirusDetailRequest $req) 运行时查询木马文件信息
+ * @method Models\DescribeVirusEventTendencyResponse DescribeVirusEventTendency(Models\DescribeVirusEventTendencyRequest $req) 查询木马事件趋势
  * @method Models\DescribeVirusListResponse DescribeVirusList(Models\DescribeVirusListRequest $req) 查询运行时文件查杀事件列表
+ * @method Models\DescribeVirusManualScanEstimateTimeoutResponse DescribeVirusManualScanEstimateTimeout(Models\DescribeVirusManualScanEstimateTimeoutRequest $req) 查询木马一键检测预估超时时间
  * @method Models\DescribeVirusMonitorSettingResponse DescribeVirusMonitorSetting(Models\DescribeVirusMonitorSettingRequest $req) 运行时查询文件查杀实时监控设置
+ * @method Models\DescribeVirusSampleDownloadUrlResponse DescribeVirusSampleDownloadUrl(Models\DescribeVirusSampleDownloadUrlRequest $req) 查询木马样本下载url
  * @method Models\DescribeVirusScanSettingResponse DescribeVirusScanSetting(Models\DescribeVirusScanSettingRequest $req) 运行时查询文件查杀设置
  * @method Models\DescribeVirusScanTaskStatusResponse DescribeVirusScanTaskStatus(Models\DescribeVirusScanTaskStatusRequest $req) 运行时查询文件查杀任务状态
  * @method Models\DescribeVirusScanTimeoutSettingResponse DescribeVirusScanTimeoutSetting(Models\DescribeVirusScanTimeoutSettingRequest $req) 运行时文件扫描超时设置查询
  * @method Models\DescribeVirusSummaryResponse DescribeVirusSummary(Models\DescribeVirusSummaryRequest $req) 运行时查询木马概览信息
  * @method Models\DescribeVirusTaskListResponse DescribeVirusTaskList(Models\DescribeVirusTaskListRequest $req) 运行时查询文件查杀任务列表
+ * @method Models\DescribeVulContainerListResponse DescribeVulContainerList(Models\DescribeVulContainerListRequest $req) 查询受漏洞的容器列表
+ * @method Models\DescribeVulDefenceEventResponse DescribeVulDefenceEvent(Models\DescribeVulDefenceEventRequest $req) 查询漏洞防御事件列表
+ * @method Models\DescribeVulDefenceEventDetailResponse DescribeVulDefenceEventDetail(Models\DescribeVulDefenceEventDetailRequest $req) 查询漏洞防御事件详情
+ * @method Models\DescribeVulDefenceEventTendencyResponse DescribeVulDefenceEventTendency(Models\DescribeVulDefenceEventTendencyRequest $req) 查询漏洞防御攻击事件趋势
+ * @method Models\DescribeVulDefenceHostResponse DescribeVulDefenceHost(Models\DescribeVulDefenceHostRequest $req) 查询漏洞防御的主机列表
+ * @method Models\DescribeVulDefencePluginResponse DescribeVulDefencePlugin(Models\DescribeVulDefencePluginRequest $req) 查询漏洞防御插件列表
+ * @method Models\DescribeVulDefenceSettingResponse DescribeVulDefenceSetting(Models\DescribeVulDefenceSettingRequest $req) 查询漏洞防御设置信息
+ * @method Models\DescribeVulDetailResponse DescribeVulDetail(Models\DescribeVulDetailRequest $req) 查询漏洞详情
+ * @method Models\DescribeVulIgnoreLocalImageListResponse DescribeVulIgnoreLocalImageList(Models\DescribeVulIgnoreLocalImageListRequest $req) 查询漏洞扫描忽略的本地镜像列表
+ * @method Models\DescribeVulIgnoreRegistryImageListResponse DescribeVulIgnoreRegistryImageList(Models\DescribeVulIgnoreRegistryImageListRequest $req) 查询漏洞扫描忽略的仓库镜像列表
+ * @method Models\DescribeVulImageListResponse DescribeVulImageList(Models\DescribeVulImageListRequest $req) 查询漏洞影响的镜像列表
+ * @method Models\DescribeVulImageSummaryResponse DescribeVulImageSummary(Models\DescribeVulImageSummaryRequest $req) 查询漏洞镜像统计
+ * @method Models\DescribeVulLevelImageSummaryResponse DescribeVulLevelImageSummary(Models\DescribeVulLevelImageSummaryRequest $req) 查询应急漏洞各威胁等级统计镜像数
+ * @method Models\DescribeVulLevelSummaryResponse DescribeVulLevelSummary(Models\DescribeVulLevelSummaryRequest $req) 查询漏洞各威胁等级统计数
+ * @method Models\DescribeVulScanAuthorizedImageSummaryResponse DescribeVulScanAuthorizedImageSummary(Models\DescribeVulScanAuthorizedImageSummaryRequest $req) 统计漏洞扫描页已授权和未扫描镜像数
+ * @method Models\DescribeVulScanInfoResponse DescribeVulScanInfo(Models\DescribeVulScanInfoRequest $req) 查询漏洞扫描任务信息
+ * @method Models\DescribeVulScanLocalImageListResponse DescribeVulScanLocalImageList(Models\DescribeVulScanLocalImageListRequest $req) 查询漏洞扫描任务的本地镜像列表
+ * @method Models\DescribeVulSummaryResponse DescribeVulSummary(Models\DescribeVulSummaryRequest $req) 查询漏洞风险统计概览
+ * @method Models\DescribeVulTendencyResponse DescribeVulTendency(Models\DescribeVulTendencyRequest $req) 查询本地镜像、仓库镜像中严重&高危的漏洞趋势
+ * @method Models\DescribeVulTopRankingResponse DescribeVulTopRanking(Models\DescribeVulTopRankingRequest $req) 查询漏洞Top排名列表
  * @method Models\DescribeWarningRulesResponse DescribeWarningRules(Models\DescribeWarningRulesRequest $req) 获取告警策略列表
+ * @method Models\DescribeWebVulListResponse DescribeWebVulList(Models\DescribeWebVulListRequest $req) 查询web应用漏洞列表
  * @method Models\ExportVirusListResponse ExportVirusList(Models\ExportVirusListRequest $req) 运行时文件查杀事件列表导出
  * @method Models\InitializeUserComplianceEnvironmentResponse InitializeUserComplianceEnvironment(Models\InitializeUserComplianceEnvironmentRequest $req) 为客户初始化合规基线的使用环境，创建必要的数据和选项。
  * @method Models\ModifyAbnormalProcessRuleStatusResponse ModifyAbnormalProcessRuleStatus(Models\ModifyAbnormalProcessRuleStatusRequest $req) 修改运行时异常进程策略的开启关闭状态
@@ -170,25 +288,46 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\ModifyAssetImageRegistryScanStopOneKeyResponse ModifyAssetImageRegistryScanStopOneKey(Models\ModifyAssetImageRegistryScanStopOneKeyRequest $req) 镜像仓库停止镜像一键扫描任务
  * @method Models\ModifyAssetImageScanStopResponse ModifyAssetImageScanStop(Models\ModifyAssetImageScanStopRequest $req) 容器安全停止镜像扫描
  * @method Models\ModifyCompliancePeriodTaskResponse ModifyCompliancePeriodTask(Models\ModifyCompliancePeriodTaskRequest $req) 修改定时任务的设置，包括检测周期、开启/禁用合规基准。
+ * @method Models\ModifyContainerNetStatusResponse ModifyContainerNetStatus(Models\ModifyContainerNetStatusRequest $req) 隔离容器网络状态
  * @method Models\ModifyEscapeEventStatusResponse ModifyEscapeEventStatus(Models\ModifyEscapeEventStatusRequest $req) ModifyEscapeEventStatus  修改容器逃逸扫描事件状态
  * @method Models\ModifyEscapeRuleResponse ModifyEscapeRule(Models\ModifyEscapeRuleRequest $req) ModifyEscapeRule  修改容器逃逸扫描规则信息
+ * @method Models\ModifyEscapeWhiteListResponse ModifyEscapeWhiteList(Models\ModifyEscapeWhiteListRequest $req) 修改逃逸白名单
+ * @method Models\ModifyImageAuthorizedResponse ModifyImageAuthorized(Models\ModifyImageAuthorizedRequest $req) 批量授权镜像扫描V2.0
  * @method Models\ModifyReverseShellStatusResponse ModifyReverseShellStatus(Models\ModifyReverseShellStatusRequest $req) 修改反弹shell事件的状态信息
  * @method Models\ModifyRiskSyscallStatusResponse ModifyRiskSyscallStatus(Models\ModifyRiskSyscallStatusRequest $req) 修改高危系统调用事件的状态信息
+ * @method Models\ModifySecLogCleanSettingInfoResponse ModifySecLogCleanSettingInfo(Models\ModifySecLogCleanSettingInfoRequest $req) 修改安全日志清理设置信息
+ * @method Models\ModifySecLogDeliveryClsSettingResponse ModifySecLogDeliveryClsSetting(Models\ModifySecLogDeliveryClsSettingRequest $req) 更新安全日志-日志投递cls配置
+ * @method Models\ModifySecLogDeliveryKafkaSettingResponse ModifySecLogDeliveryKafkaSetting(Models\ModifySecLogDeliveryKafkaSettingRequest $req) 更新安全日志投递kafka设置
+ * @method Models\ModifySecLogJoinObjectsResponse ModifySecLogJoinObjects(Models\ModifySecLogJoinObjectsRequest $req) 修改安全日志接入对象
+ * @method Models\ModifySecLogJoinStateResponse ModifySecLogJoinState(Models\ModifySecLogJoinStateRequest $req) 修改安全日志接入状态
+ * @method Models\ModifySecLogKafkaUINResponse ModifySecLogKafkaUIN(Models\ModifySecLogKafkaUINRequest $req) 修改安全日志kafkaUIN
+ * @method Models\ModifyVirusAutoIsolateExampleSwitchResponse ModifyVirusAutoIsolateExampleSwitch(Models\ModifyVirusAutoIsolateExampleSwitchRequest $req) 修改木马自动隔离样本开关
+ * @method Models\ModifyVirusAutoIsolateSettingResponse ModifyVirusAutoIsolateSetting(Models\ModifyVirusAutoIsolateSettingRequest $req) 修改木马自动隔离设置
  * @method Models\ModifyVirusFileStatusResponse ModifyVirusFileStatus(Models\ModifyVirusFileStatusRequest $req) 运行时更新木马文件事件状态
  * @method Models\ModifyVirusMonitorSettingResponse ModifyVirusMonitorSetting(Models\ModifyVirusMonitorSettingRequest $req) 运行时更新文件查杀实时监控设置
  * @method Models\ModifyVirusScanSettingResponse ModifyVirusScanSetting(Models\ModifyVirusScanSettingRequest $req) 运行时更新文件查杀设置
  * @method Models\ModifyVirusScanTimeoutSettingResponse ModifyVirusScanTimeoutSetting(Models\ModifyVirusScanTimeoutSettingRequest $req) 运行时文件扫描超时设置
+ * @method Models\ModifyVulDefenceEventStatusResponse ModifyVulDefenceEventStatus(Models\ModifyVulDefenceEventStatusRequest $req) 修改漏洞防御事件状态
+ * @method Models\ModifyVulDefenceSettingResponse ModifyVulDefenceSetting(Models\ModifyVulDefenceSettingRequest $req) 编辑漏洞防御设置
+ * @method Models\OpenTcssTrialResponse OpenTcssTrial(Models\OpenTcssTrialRequest $req) 开通容器安全服务试用
  * @method Models\RemoveAssetImageRegistryRegistryDetailResponse RemoveAssetImageRegistryRegistryDetail(Models\RemoveAssetImageRegistryRegistryDetailRequest $req) 删除单个镜像仓库详细信息
  * @method Models\RenewImageAuthorizeStateResponse RenewImageAuthorizeState(Models\RenewImageAuthorizeStateRequest $req) RenewImageAuthorizeState   授权镜像扫描
+ * @method Models\ResetSecLogTopicConfigResponse ResetSecLogTopicConfig(Models\ResetSecLogTopicConfigRequest $req) 重置安全日志主题设置
  * @method Models\ScanComplianceAssetsResponse ScanComplianceAssets(Models\ScanComplianceAssetsRequest $req) 重新检测选定的资产
  * @method Models\ScanComplianceAssetsByPolicyItemResponse ScanComplianceAssetsByPolicyItem(Models\ScanComplianceAssetsByPolicyItemRequest $req) 用指定的检测项重新检测选定的资产，返回创建的合规检查任务的ID。
  * @method Models\ScanCompliancePolicyItemsResponse ScanCompliancePolicyItems(Models\ScanCompliancePolicyItemsRequest $req) 重新检测选的检测项下的所有资产，返回创建的合规检查任务的ID。
  * @method Models\ScanComplianceScanFailedAssetsResponse ScanComplianceScanFailedAssets(Models\ScanComplianceScanFailedAssetsRequest $req) 重新检测选定的检测失败的资产下的所有失败的检测项，返回创建的合规检查任务的ID。
  * @method Models\SetCheckModeResponse SetCheckMode(Models\SetCheckModeRequest $req) 设置检测模式和自动检查
  * @method Models\StopVirusScanTaskResponse StopVirusScanTask(Models\StopVirusScanTaskRequest $req) 运行时停止木马查杀任务
+ * @method Models\StopVulScanTaskResponse StopVulScanTask(Models\StopVulScanTaskRequest $req) 停止漏洞扫描任务
+ * @method Models\SwitchImageAutoAuthorizedRuleResponse SwitchImageAutoAuthorizedRule(Models\SwitchImageAutoAuthorizedRuleRequest $req) 编辑本地镜像自动授权开关
  * @method Models\SyncAssetImageRegistryAssetResponse SyncAssetImageRegistryAsset(Models\SyncAssetImageRegistryAssetRequest $req) 镜像仓库资产刷新
+ * @method Models\UpdateAndPublishNetworkFirewallPolicyDetailResponse UpdateAndPublishNetworkFirewallPolicyDetail(Models\UpdateAndPublishNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略更新并发布任务
+ * @method Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailResponse UpdateAndPublishNetworkFirewallPolicyYamlDetail(Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest $req) 容器网络更新Yaml网络策略并发布任务
  * @method Models\UpdateAssetImageRegistryRegistryDetailResponse UpdateAssetImageRegistryRegistryDetail(Models\UpdateAssetImageRegistryRegistryDetailRequest $req) 更新单个镜像仓库详细信息
  * @method Models\UpdateImageRegistryTimingScanTaskResponse UpdateImageRegistryTimingScanTask(Models\UpdateImageRegistryTimingScanTaskRequest $req) 镜像仓库更新定时任务
+ * @method Models\UpdateNetworkFirewallPolicyDetailResponse UpdateNetworkFirewallPolicyDetail(Models\UpdateNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略更新任务
+ * @method Models\UpdateNetworkFirewallPolicyYamlDetailResponse UpdateNetworkFirewallPolicyYamlDetail(Models\UpdateNetworkFirewallPolicyYamlDetailRequest $req) 容器网络更新Yaml网络策略任务
  */
 
 class TcssClient extends AbstractClient

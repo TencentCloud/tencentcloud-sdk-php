@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShippingInfo(OpenBankShippingInfo $ShippingInfo) 设置邮寄信息
  * @method OpenBankBillingInfo getBillingInfo() 获取账单信息
  * @method void setBillingInfo(OpenBankBillingInfo $BillingInfo) 设置账单信息
+ * @method string getEnvironment() 获取环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+缺省默认为生产环境
+ * @method void setEnvironment(string $Environment) 设置环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+缺省默认为生产环境
  */
 class CreateOpenBankGlobalPaymentOrderRequest extends AbstractModel
 {
@@ -129,6 +137,14 @@ class CreateOpenBankGlobalPaymentOrderRequest extends AbstractModel
     public $BillingInfo;
 
     /**
+     * @var string 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+缺省默认为生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $ChannelMerchantId 渠道商户号
      * @param string $ChannelName 渠道名称
      * @param string $PayType 付款方式
@@ -144,6 +160,10 @@ class CreateOpenBankGlobalPaymentOrderRequest extends AbstractModel
      * @param array $GoodsInfos 商品信息
      * @param OpenBankShippingInfo $ShippingInfo 邮寄信息
      * @param OpenBankBillingInfo $BillingInfo 账单信息
+     * @param string $Environment 环境类型
+__release__:生产环境
+__sandbox__:沙箱环境
+缺省默认为生产环境
      */
     function __construct()
     {
@@ -223,6 +243,10 @@ class CreateOpenBankGlobalPaymentOrderRequest extends AbstractModel
         if (array_key_exists("BillingInfo",$param) and $param["BillingInfo"] !== null) {
             $this->BillingInfo = new OpenBankBillingInfo();
             $this->BillingInfo->deserialize($param["BillingInfo"]);
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRequestsPerSecond(integer $MaxRequestsPerSecond) 设置最大RPS
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGracefulStopSeconds() 获取优雅终止任务的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGracefulStopSeconds(integer $GracefulStopSeconds) 设置优雅终止任务的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Concurrency extends AbstractModel
 {
@@ -54,11 +58,19 @@ class Concurrency extends AbstractModel
     public $MaxRequestsPerSecond;
 
     /**
+     * @var integer 优雅终止任务的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GracefulStopSeconds;
+
+    /**
      * @param array $Stages 多阶段配置数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IterationCount 运行次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxRequestsPerSecond 最大RPS
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GracefulStopSeconds 优雅终止任务的等待时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -89,6 +101,10 @@ class Concurrency extends AbstractModel
 
         if (array_key_exists("MaxRequestsPerSecond",$param) and $param["MaxRequestsPerSecond"] !== null) {
             $this->MaxRequestsPerSecond = $param["MaxRequestsPerSecond"];
+        }
+
+        if (array_key_exists("GracefulStopSeconds",$param) and $param["GracefulStopSeconds"] !== null) {
+            $this->GracefulStopSeconds = $param["GracefulStopSeconds"];
         }
     }
 }

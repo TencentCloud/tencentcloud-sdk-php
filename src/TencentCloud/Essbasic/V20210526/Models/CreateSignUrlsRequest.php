@@ -29,13 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndpoint() 获取签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
  * @method void setEndpoint(string $Endpoint) 设置签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
  * @method string getGenerateType() 获取签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接；
+"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
 "FOLLOWER"：关注方，目前是合同抄送方；
  * @method void setGenerateType(string $GenerateType) 设置签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接；
+"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
@@ -83,7 +83,7 @@ class CreateSignUrlsRequest extends AbstractModel
 
     /**
      * @var string 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接；
+"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；
@@ -138,7 +138,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
      * @param string $FlowGroupId 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
      * @param string $Endpoint 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
      * @param string $GenerateType 签署链接生成类型，默认是 "ALL"；
-"ALL"：全部签署方签署链接；
+"ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
 "CHANNEL"：渠道合作企业；
 "NOT_CHANNEL"：非渠道合作企业；
 "PERSON"：个人；

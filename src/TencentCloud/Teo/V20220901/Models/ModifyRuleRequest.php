@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置规则状态，取值有：
 <li> enable: 启用； </li>
 <li> disable: 未启用。</li>
+ * @method array getTags() 获取规则标签。
+ * @method void setTags(array $Tags) 设置规则标签。
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ class ModifyRuleRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var array 规则标签。
+     */
+    public $Tags;
+
+    /**
      * @param string $ZoneId 站点 ID。
      * @param string $RuleName 规则名称，字符串名称长度 1~255。
      * @param array $Rules 规则内容。
@@ -72,6 +79,7 @@ class ModifyRuleRequest extends AbstractModel
      * @param string $Status 规则状态，取值有：
 <li> enable: 启用； </li>
 <li> disable: 未启用。</li>
+     * @param array $Tags 规则标签。
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class ModifyRuleRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
         }
     }
 }

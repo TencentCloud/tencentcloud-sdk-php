@@ -20,6 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 此结构体 (Component) 用于描述控件属性。
 
+在通过文件发起合同时，对应的component有三种定位方式
+1. 绝对定位方式
+2. 表单域(FIELD)定位方式
+3. 关键字(KEYWORD)定位方式
+可以参考官网说明
+https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.8D.E5.AE.9A.E4.BD.8D.E6.96.B9.E5.BC.8F.E8.AF.B4.E6.98.8E
  *
  * @method string getComponentId() 获取控件编号
 
@@ -105,11 +111,17 @@ KEYWORD - 关键字
  * @method void setComponentPosY(float $ComponentPosY) 设置参数控件Y位置，单位px
  * @method string getComponentExtra() 获取参数控件样式，json格式表述
 不同类型的控件会有部分非通用参数
-TEXT控件可以指定字体
+TEXT/MULTI_LINE_TEXT控件可以指定
+1 Font：目前只支持黑体、宋体
+2 FontSize： 范围12-72
+3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
 例如：{"FontSize":12}
  * @method void setComponentExtra(string $ComponentExtra) 设置参数控件样式，json格式表述
 不同类型的控件会有部分非通用参数
-TEXT控件可以指定字体
+TEXT/MULTI_LINE_TEXT控件可以指定
+1 Font：目前只支持黑体、宋体
+2 FontSize： 范围12-72
+3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
 例如：{"FontSize":12}
  * @method string getComponentValue() 获取控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
@@ -234,7 +246,10 @@ KEYWORD - 关键字
     /**
      * @var string 参数控件样式，json格式表述
 不同类型的控件会有部分非通用参数
-TEXT控件可以指定字体
+TEXT/MULTI_LINE_TEXT控件可以指定
+1 Font：目前只支持黑体、宋体
+2 FontSize： 范围12-72
+3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
 例如：{"FontSize":12}
      */
     public $ComponentExtra;
@@ -321,7 +336,10 @@ KEYWORD - 关键字
      * @param float $ComponentPosY 参数控件Y位置，单位px
      * @param string $ComponentExtra 参数控件样式，json格式表述
 不同类型的控件会有部分非通用参数
-TEXT控件可以指定字体
+TEXT/MULTI_LINE_TEXT控件可以指定
+1 Font：目前只支持黑体、宋体
+2 FontSize： 范围12-72
+3 FontAlign： Left/Right/Center，左对齐/居中/右对齐
 例如：{"FontSize":12}
      * @param string $ComponentValue 控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容

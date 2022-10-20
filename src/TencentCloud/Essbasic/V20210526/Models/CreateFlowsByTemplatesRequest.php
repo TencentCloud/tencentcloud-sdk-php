@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method array getFlowInfos() 获取多个合同（签署流程）信息，最多支持20个
  * @method void setFlowInfos(array $FlowInfos) 设置多个合同（签署流程）信息，最多支持20个
- * @method boolean getNeedPreview() 获取是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+ * @method boolean getNeedPreview() 获取是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls（此Url返回的是PDF文件流 ）；
 预览链接有效期300秒；
- * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+ * @method void setNeedPreview(boolean $NeedPreview) 设置是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls（此Url返回的是PDF文件流 ）；
 预览链接有效期300秒；
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
@@ -44,7 +44,7 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
     public $FlowInfos;
 
     /**
-     * @var boolean 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+     * @var boolean 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls（此Url返回的是PDF文件流 ）；
 预览链接有效期300秒；
      */
     public $NeedPreview;
@@ -57,7 +57,7 @@ class CreateFlowsByTemplatesRequest extends AbstractModel
     /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param array $FlowInfos 多个合同（签署流程）信息，最多支持20个
-     * @param boolean $NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+     * @param boolean $NeedPreview 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，不会发起合同，会返回PreviewUrls（此Url返回的是PDF文件流 ）；
 预览链接有效期300秒；
      * @param UserInfo $Operator 操作者的信息
      */

@@ -40,17 +40,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRank(integer $Rank) 设置排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPhase() 获取溯源阶段 0:商品 1:通用 2:物流
+ * @method integer getPhase() 获取溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhase(integer $Phase) 设置溯源阶段 0:商品 1:通用 2:物流
+ * @method void setPhase(integer $Phase) 设置溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPhaseName() 获取环节名称
+ * @method string getPhaseName() 获取溯源环节名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPhaseName(string $PhaseName) 设置环节名称
+ * @method void setPhaseName(string $PhaseName) 设置溯源环节名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTraceTime() 获取时间
+ * @method string getTraceTime() 获取溯源时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTraceTime(string $TraceTime) 设置时间
+ * @method void setTraceTime(string $TraceTime) 设置溯源时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTraceItems() 获取无
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,19 +114,19 @@ class TraceData extends AbstractModel
     public $Rank;
 
     /**
-     * @var integer 溯源阶段 0:商品 1:通用 2:物流
+     * @var integer 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phase;
 
     /**
-     * @var string 环节名称
+     * @var string 溯源环节名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhaseName;
 
     /**
-     * @var string 时间
+     * @var string 溯源时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TraceTime;
@@ -184,11 +184,11 @@ class TraceData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Rank 排序，在Phase相同情况下，值越小排名靠前
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Phase 溯源阶段 0:商品 1:通用 2:物流
+     * @param integer $Phase 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PhaseName 环节名称
+     * @param string $PhaseName 溯源环节名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TraceTime 时间
+     * @param string $TraceTime 溯源时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TraceItems 无
 注意：此字段可能返回 null，表示取不到有效值。

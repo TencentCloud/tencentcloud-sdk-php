@@ -20,20 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMultiFlowSignQRCode请求参数结构体
  *
+ * @method UserInfo getOperator() 获取用户信息
+ * @method void setOperator(UserInfo $Operator) 设置用户信息
  * @method string getTemplateId() 获取模板ID
  * @method void setTemplateId(string $TemplateId) 设置模板ID
  * @method string getFlowName() 获取签署流程名称，最大长度不超过200字符
  * @method void setFlowName(string $FlowName) 设置签署流程名称，最大长度不超过200字符
- * @method UserInfo getOperator() 获取用户信息
- * @method void setOperator(UserInfo $Operator) 设置用户信息
- * @method Agent getAgent() 获取应用信息
- * @method void setAgent(Agent $Agent) 设置应用信息
- * @method string getCallbackUrl() 获取回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
  * @method integer getMaxFlowNum() 获取最大可发起签署流程份数，默认5份 
 发起流程数量超过此上限后二维码自动失效
  * @method void setMaxFlowNum(integer $MaxFlowNum) 设置最大可发起签署流程份数，默认5份 
@@ -42,11 +34,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowEffectiveDay(integer $FlowEffectiveDay) 设置签署流程有效天数 默认7天 最高设置不超过30天
  * @method integer getQrEffectiveDay() 获取二维码有效天数 默认7天 最高设置不超过90天
  * @method void setQrEffectiveDay(integer $QrEffectiveDay) 设置二维码有效天数 默认7天 最高设置不超过90天
- * @method ApproverRestriction getApproverRestrictions() 获取限制二维码用户条件
- * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件
+ * @method array getRestrictions() 获取限制二维码用户条件
+ * @method void setRestrictions(array $Restrictions) 设置限制二维码用户条件
+ * @method string getCallbackUrl() 获取回调地址,最大长度1000字符串
+回调时机：
+用户通过签署二维码发起签署流程时，企业额度不足导致失败
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址,最大长度1000字符串
+回调时机：
+用户通过签署二维码发起签署流程时，企业额度不足导致失败
+ * @method Agent getAgent() 获取应用信息
+ * @method void setAgent(Agent $Agent) 设置应用信息
+ * @method ApproverRestriction getApproverRestrictions() 获取限制二维码用户条件（已弃用）
+ * @method void setApproverRestrictions(ApproverRestriction $ApproverRestrictions) 设置限制二维码用户条件（已弃用）
  */
 class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 {
+    /**
+     * @var UserInfo 用户信息
+     */
+    public $Operator;
+
     /**
      * @var string 模板ID
      */
@@ -56,23 +63,6 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
      * @var string 签署流程名称，最大长度不超过200字符
      */
     public $FlowName;
-
-    /**
-     * @var UserInfo 用户信息
-     */
-    public $Operator;
-
-    /**
-     * @var Agent 应用信息
-     */
-    public $Agent;
-
-    /**
-     * @var string 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
-     */
-    public $CallbackUrl;
 
     /**
      * @var integer 最大可发起签署流程份数，默认5份 
@@ -91,23 +81,41 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
     public $QrEffectiveDay;
 
     /**
-     * @var ApproverRestriction 限制二维码用户条件
+     * @var array 限制二维码用户条件
+     */
+    public $Restrictions;
+
+    /**
+     * @var string 回调地址,最大长度1000字符串
+回调时机：
+用户通过签署二维码发起签署流程时，企业额度不足导致失败
+     */
+    public $CallbackUrl;
+
+    /**
+     * @var Agent 应用信息
+     */
+    public $Agent;
+
+    /**
+     * @var ApproverRestriction 限制二维码用户条件（已弃用）
      */
     public $ApproverRestrictions;
 
     /**
+     * @param UserInfo $Operator 用户信息
      * @param string $TemplateId 模板ID
      * @param string $FlowName 签署流程名称，最大长度不超过200字符
-     * @param UserInfo $Operator 用户信息
-     * @param Agent $Agent 应用信息
-     * @param string $CallbackUrl 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
      * @param integer $MaxFlowNum 最大可发起签署流程份数，默认5份 
 发起流程数量超过此上限后二维码自动失效
      * @param integer $FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
      * @param integer $QrEffectiveDay 二维码有效天数 默认7天 最高设置不超过90天
-     * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件
+     * @param array $Restrictions 限制二维码用户条件
+     * @param string $CallbackUrl 回调地址,最大长度1000字符串
+回调时机：
+用户通过签署二维码发起签署流程时，企业额度不足导致失败
+     * @param Agent $Agent 应用信息
+     * @param ApproverRestriction $ApproverRestrictions 限制二维码用户条件（已弃用）
      */
     function __construct()
     {
@@ -122,26 +130,17 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
+        }
+
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
         }
 
         if (array_key_exists("FlowName",$param) and $param["FlowName"] !== null) {
             $this->FlowName = $param["FlowName"];
-        }
-
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
-            $this->Agent = new Agent();
-            $this->Agent->deserialize($param["Agent"]);
-        }
-
-        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
-            $this->CallbackUrl = $param["CallbackUrl"];
         }
 
         if (array_key_exists("MaxFlowNum",$param) and $param["MaxFlowNum"] !== null) {
@@ -154,6 +153,24 @@ class CreateMultiFlowSignQRCodeRequest extends AbstractModel
 
         if (array_key_exists("QrEffectiveDay",$param) and $param["QrEffectiveDay"] !== null) {
             $this->QrEffectiveDay = $param["QrEffectiveDay"];
+        }
+
+        if (array_key_exists("Restrictions",$param) and $param["Restrictions"] !== null) {
+            $this->Restrictions = [];
+            foreach ($param["Restrictions"] as $key => $value){
+                $obj = new ApproverRestriction();
+                $obj->deserialize($value);
+                array_push($this->Restrictions, $obj);
+            }
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
 
         if (array_key_exists("ApproverRestrictions",$param) and $param["ApproverRestrictions"] !== null) {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method array getFlowIds() 获取查询资源所对应的签署流程Id，最多支持50个。
- * @method void setFlowIds(array $FlowIds) 设置查询资源所对应的签署流程Id，最多支持50个。
+ * @method array getFlowIds() 获取查询资源所对应的签署流程Id，最多支持50个
+ * @method void setFlowIds(array $FlowIds) 设置查询资源所对应的签署流程Id，最多支持50个
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
@@ -38,7 +38,7 @@ class DescribeResourceUrlsByFlowsRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var array 查询资源所对应的签署流程Id，最多支持50个。
+     * @var array 查询资源所对应的签署流程Id，最多支持50个
      */
     public $FlowIds;
 
@@ -50,7 +50,7 @@ class DescribeResourceUrlsByFlowsRequest extends AbstractModel
     /**
      * @param Agent $Agent 渠道应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
-     * @param array $FlowIds 查询资源所对应的签署流程Id，最多支持50个。
+     * @param array $FlowIds 查询资源所对应的签署流程Id，最多支持50个
      * @param UserInfo $Operator 操作者的信息
      */
     function __construct()

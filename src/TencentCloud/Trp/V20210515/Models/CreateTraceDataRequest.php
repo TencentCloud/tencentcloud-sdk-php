@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchId(string $BatchId) 设置批次ID
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
- * @method integer getPhase() 获取溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
- * @method void setPhase(integer $Phase) 设置溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
+ * @method integer getPhase() 获取溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
+ * @method void setPhase(integer $Phase) 设置溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
  * @method string getPhaseName() 获取溯源阶段名称
  * @method void setPhaseName(string $PhaseName) 设置溯源阶段名称
  * @method integer getChainStatus() 获取[无效] 上链状态
@@ -61,7 +61,7 @@ class CreateTraceDataRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var integer 溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
+     * @var integer 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
      */
     public $Phase;
 
@@ -104,7 +104,7 @@ class CreateTraceDataRequest extends AbstractModel
      * @param integer $CorpId 企业ID
      * @param string $BatchId 批次ID
      * @param string $TaskId 任务ID
-     * @param integer $Phase 溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
+     * @param integer $Phase 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
      * @param string $PhaseName 溯源阶段名称
      * @param integer $ChainStatus [无效] 上链状态
      * @param integer $Type [无效] 码类型 0: 批次, 1: 码, 2: 生产任务, 3: 物流信息

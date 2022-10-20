@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(string $Code) 设置[无效] 溯源码
  * @method integer getRank() 获取[无效] 排序
  * @method void setRank(integer $Rank) 设置[无效] 排序
- * @method integer getPhase() 获取[无效] 溯源阶段 0:商品 1:通用 2:物流
- * @method void setPhase(integer $Phase) 设置[无效] 溯源阶段 0:商品 1:通用 2:物流
+ * @method integer getPhase() 获取[无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
+ * @method void setPhase(integer $Phase) 设置[无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
  * @method string getTraceTime() 获取[无效] 溯源时间
  * @method void setTraceTime(string $TraceTime) 设置[无效] 溯源时间
  * @method string getCreateTime() 获取[无效] 创建时间
@@ -98,7 +98,7 @@ class ModifyTraceDataRequest extends AbstractModel
     public $Rank;
 
     /**
-     * @var integer [无效] 溯源阶段 0:商品 1:通用 2:物流
+     * @var integer [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
      */
     public $Phase;
 
@@ -151,7 +151,7 @@ class ModifyTraceDataRequest extends AbstractModel
      * @param integer $Type [无效] 类型
      * @param string $Code [无效] 溯源码
      * @param integer $Rank [无效] 排序
-     * @param integer $Phase [无效] 溯源阶段 0:商品 1:通用 2:物流
+     * @param integer $Phase [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
      * @param string $TraceTime [无效] 溯源时间
      * @param string $CreateTime [无效] 创建时间
      * @param integer $ChainStatus [无效] 上链状态

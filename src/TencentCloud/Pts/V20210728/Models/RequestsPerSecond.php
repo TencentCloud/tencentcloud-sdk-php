@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetRequestsPerSecond(integer $TargetRequestsPerSecond) 设置目标RPS，入参无效
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGracefulStopSeconds() 获取优雅关停的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGracefulStopSeconds(integer $GracefulStopSeconds) 设置优雅关停的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RequestsPerSecond extends AbstractModel
 {
@@ -84,6 +88,12 @@ class RequestsPerSecond extends AbstractModel
     public $TargetRequestsPerSecond;
 
     /**
+     * @var integer 优雅关停的等待时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GracefulStopSeconds;
+
+    /**
      * @param integer $MaxRequestsPerSecond 最大RPS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DurationSeconds 施压时间
@@ -95,6 +105,8 @@ class RequestsPerSecond extends AbstractModel
      * @param integer $StartRequestsPerSecond 起始RPS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetRequestsPerSecond 目标RPS，入参无效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GracefulStopSeconds 优雅关停的等待时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class RequestsPerSecond extends AbstractModel
 
         if (array_key_exists("TargetRequestsPerSecond",$param) and $param["TargetRequestsPerSecond"] !== null) {
             $this->TargetRequestsPerSecond = $param["TargetRequestsPerSecond"];
+        }
+
+        if (array_key_exists("GracefulStopSeconds",$param) and $param["GracefulStopSeconds"] !== null) {
+            $this->GracefulStopSeconds = $param["GracefulStopSeconds"];
         }
     }
 }

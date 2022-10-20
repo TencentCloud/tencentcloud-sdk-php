@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncludeQuery(boolean $IncludeQuery) 设置如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
  * @method boolean getRecordWithSchema() 获取如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
  * @method void setRecordWithSchema(boolean $RecordWithSchema) 设置如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+ * @method string getSignalDatabase() 获取存放信令表的数据库名称
+ * @method void setSignalDatabase(string $SignalDatabase) 设置存放信令表的数据库名称
  */
 class MySQLParam extends AbstractModel
 {
@@ -185,6 +187,11 @@ class MySQLParam extends AbstractModel
     public $RecordWithSchema;
 
     /**
+     * @var string 存放信令表的数据库名称
+     */
+    public $SignalDatabase;
+
+    /**
      * @param string $Database MySQL的数据库名称，"*"为全数据库
      * @param string $Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
      * @param string $Resource 该MySQL在连接管理内的Id
@@ -208,6 +215,7 @@ class MySQLParam extends AbstractModel
      * @param string $IncludeContentChanges 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
      * @param boolean $IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
      * @param boolean $RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+     * @param string $SignalDatabase 存放信令表的数据库名称
      */
     function __construct()
     {
@@ -318,6 +326,10 @@ class MySQLParam extends AbstractModel
 
         if (array_key_exists("RecordWithSchema",$param) and $param["RecordWithSchema"] !== null) {
             $this->RecordWithSchema = $param["RecordWithSchema"];
+        }
+
+        if (array_key_exists("SignalDatabase",$param) and $param["SignalDatabase"] !== null) {
+            $this->SignalDatabase = $param["SignalDatabase"];
         }
     }
 }

@@ -18,7 +18,17 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 创建签署流程签署人入参
+ * 创建签署流程签署人入参。
+
+其中签署方FlowApproverInfo需要传递的参数
+非单C、单B、B2C合同，ApproverType、RecipientId（模版发起合同时）必传，建议都传。其他身份标识
+1-个人：Name、Mobile必传
+2-渠道子客企业指定经办人：OpenId必传，OrgName必传、OrgOpenId必传；
+3-渠道合作企业不指定经办人：（暂不支持）
+4-非渠道合作企业：Name、Mobile必传，OrgName必传，且NotChannelOrganization=True。
+
+RecipientId参数：
+从DescribeTemplates接口中，可以得到模版下的签署方Recipient列表，根据模版自定义的Rolename在此结构体中确定其RecipientId
  *
  * @method string getName() 获取签署人姓名，最大长度50个字符
  * @method void setName(string $Name) 设置签署人姓名，最大长度50个字符

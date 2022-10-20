@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRules(array $Rules) 设置规则内容。
  * @method integer getRulePriority() 获取规则优先级, 值越大优先级越高，最小为 1。
  * @method void setRulePriority(integer $RulePriority) 设置规则优先级, 值越大优先级越高，最小为 1。
+ * @method array getTags() 获取规则标签。
+ * @method void setTags(array $Tags) 设置规则标签。
  */
 class RuleItem extends AbstractModel
 {
@@ -65,6 +67,11 @@ class RuleItem extends AbstractModel
     public $RulePriority;
 
     /**
+     * @var array 规则标签。
+     */
+    public $Tags;
+
+    /**
      * @param string $RuleId 规则ID。
      * @param string $RuleName 规则名称，名称字符串长度 1~255。
      * @param string $Status 规则状态，取值有:
@@ -72,6 +79,7 @@ class RuleItem extends AbstractModel
 <li> disable: 未启用。 </li>
      * @param array $Rules 规则内容。
      * @param integer $RulePriority 规则优先级, 值越大优先级越高，最小为 1。
+     * @param array $Tags 规则标签。
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class RuleItem extends AbstractModel
 
         if (array_key_exists("RulePriority",$param) and $param["RulePriority"] !== null) {
             $this->RulePriority = $param["RulePriority"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
         }
     }
 }

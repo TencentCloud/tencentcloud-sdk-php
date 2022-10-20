@@ -97,6 +97,7 @@ CHECK_BOX - true/false
 FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
 DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+SIGN_SEAL - 印章Id，于控制台查询获取
  * @method void setComponentValue(string $ComponentValue) 设置控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
@@ -104,6 +105,7 @@ CHECK_BOX - true/false
 FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
 DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+SIGN_SEAL - 印章Id，于控制台查询获取
  * @method boolean getIsFormType() 获取是否是表单域类型，默认不存在
  * @method void setIsFormType(boolean $IsFormType) 设置是否是表单域类型，默认不存在
  * @method string getGenerateMode() 获取NORMAL 正常模式，使用坐标制定签署控件位置
@@ -212,6 +214,7 @@ CHECK_BOX - true/false
 FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
 DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+SIGN_SEAL - 印章Id，于控制台查询获取
      */
     public $ComponentValue;
 
@@ -285,6 +288,7 @@ CHECK_BOX - true/false
 FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
 SELECTOR - 选项值
 DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
+SIGN_SEAL - 印章Id，于控制台查询获取
      * @param boolean $IsFormType 是否是表单域类型，默认不存在
      * @param string $GenerateMode NORMAL 正常模式，使用坐标制定签署控件位置
 FIELD 表单域，需使用ComponentName指定表单域名称

@@ -26,6 +26,10 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\AddAndPublishNetworkFirewallPolicyDetailResponse AddAndPublishNetworkFirewallPolicyDetail(Models\AddAndPublishNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略添加并发布任务
  * @method Models\AddAndPublishNetworkFirewallPolicyYamlDetailResponse AddAndPublishNetworkFirewallPolicyYamlDetail(Models\AddAndPublishNetworkFirewallPolicyYamlDetailRequest $req) 容器网络创建Yaml网络策略并发布任务
  * @method Models\AddAssetImageRegistryRegistryDetailResponse AddAssetImageRegistryRegistryDetail(Models\AddAssetImageRegistryRegistryDetailRequest $req) 新增单个镜像仓库详细信息
+ * @method Models\AddComplianceAssetPolicySetToWhitelistResponse AddComplianceAssetPolicySetToWhitelist(Models\AddComplianceAssetPolicySetToWhitelistRequest $req) 新增安全合规忽略(资产+检测项列表)列表，不显示指定的检查项包含的资产内容
+参考的AddCompliancePolicyItemToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+ * @method Models\AddCompliancePolicyAssetSetToWhitelistResponse AddCompliancePolicyAssetSetToWhitelist(Models\AddCompliancePolicyAssetSetToWhitelistRequest $req) 新增安全合规忽略(检测项+资产)列表，不显示指定的检查项包含的资产内容
+参考的AddCompliancePolicyItemToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
  * @method Models\AddCompliancePolicyItemToWhitelistResponse AddCompliancePolicyItemToWhitelist(Models\AddCompliancePolicyItemToWhitelistRequest $req) 将指定的检测项添加到白名单中，不显示未通过结果。
  * @method Models\AddEditAbnormalProcessRuleResponse AddEditAbnormalProcessRule(Models\AddEditAbnormalProcessRuleRequest $req) 添加编辑运行时异常进程策略
  * @method Models\AddEditAccessControlRuleResponse AddEditAccessControlRule(Models\AddEditAccessControlRuleRequest $req) 添加编辑运行时访问控制策略
@@ -76,6 +80,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\CreateWebVulExportJobResponse CreateWebVulExportJob(Models\CreateWebVulExportJobRequest $req) 创建web漏洞导出任务
  * @method Models\DeleteAbnormalProcessRulesResponse DeleteAbnormalProcessRules(Models\DeleteAbnormalProcessRulesRequest $req) 删除运行异常进程策略
  * @method Models\DeleteAccessControlRulesResponse DeleteAccessControlRules(Models\DeleteAccessControlRulesRequest $req) 删除运行访问控制策略
+ * @method Models\DeleteComplianceAssetPolicySetFromWhitelistResponse DeleteComplianceAssetPolicySetFromWhitelist(Models\DeleteComplianceAssetPolicySetFromWhitelistRequest $req) 移除安全合规忽略(资产+检测项)列表，不显示指定的检查项包含的资产内容
+参考的AddCompliancePolicyAssetSetToWhitelist，除输入字段外，其它应该是一致的，如果有不同可能是定义的不对
+ * @method Models\DeleteCompliancePolicyAssetSetFromWhitelistResponse DeleteCompliancePolicyAssetSetFromWhitelist(Models\DeleteCompliancePolicyAssetSetFromWhitelistRequest $req) 新增安全合规忽略(检测项+资产)列表，不显示指定的检查项包含的资产内容
  * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) 从白名单中删除将指定的检测项。
  * @method Models\DeleteEscapeWhiteListResponse DeleteEscapeWhiteList(Models\DeleteEscapeWhiteListRequest $req) 删除逃逸白名单
  * @method Models\DeleteIgnoreVulResponse DeleteIgnoreVul(Models\DeleteIgnoreVulRequest $req) 取消漏洞扫描忽略漏洞
@@ -180,6 +187,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeImageAutoAuthorizedRuleResponse DescribeImageAutoAuthorizedRule(Models\DescribeImageAutoAuthorizedRuleRequest $req) 查询本地镜像自动授权规则
  * @method Models\DescribeImageAutoAuthorizedTaskListResponse DescribeImageAutoAuthorizedTaskList(Models\DescribeImageAutoAuthorizedTaskListRequest $req) 查询镜像自动授权任务列表
  * @method Models\DescribeImageComponentListResponse DescribeImageComponentList(Models\DescribeImageComponentListRequest $req) 查询本地镜像组件列表
+ * @method Models\DescribeImageRegistryNamespaceListResponse DescribeImageRegistryNamespaceList(Models\DescribeImageRegistryNamespaceListRequest $req) 查询用户镜像仓库下的项目名称列表
  * @method Models\DescribeImageRegistryTimingScanTaskResponse DescribeImageRegistryTimingScanTask(Models\DescribeImageRegistryTimingScanTaskRequest $req) 镜像仓库查看定时任务
  * @method Models\DescribeImageRiskSummaryResponse DescribeImageRiskSummary(Models\DescribeImageRiskSummaryRequest $req) 查询本地镜像风险概览
  * @method Models\DescribeImageRiskTendencyResponse DescribeImageRiskTendency(Models\DescribeImageRiskTendencyRequest $req) 查询容器安全本地镜像风险趋势

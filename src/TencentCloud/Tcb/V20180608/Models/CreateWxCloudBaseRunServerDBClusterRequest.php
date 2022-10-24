@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWxAppId(string $WxAppId) 设置微信appid
  * @method string getDbVersion() 获取mysql内核版本，支持5.7,8.0
  * @method void setDbVersion(string $DbVersion) 设置mysql内核版本，支持5.7,8.0
+ * @method string getLowerCaseTableName() 获取0: 非大小写敏感
+1: 大小写敏感
+默认 0
+ * @method void setLowerCaseTableName(string $LowerCaseTableName) 设置0: 非大小写敏感
+1: 大小写敏感
+默认 0
  */
 class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel
 {
@@ -52,10 +58,20 @@ class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel
     public $DbVersion;
 
     /**
+     * @var string 0: 非大小写敏感
+1: 大小写敏感
+默认 0
+     */
+    public $LowerCaseTableName;
+
+    /**
      * @param string $AccountPassword 账户密码
      * @param string $EnvId 环境ID
      * @param string $WxAppId 微信appid
      * @param string $DbVersion mysql内核版本，支持5.7,8.0
+     * @param string $LowerCaseTableName 0: 非大小写敏感
+1: 大小写敏感
+默认 0
      */
     function __construct()
     {
@@ -84,6 +100,10 @@ class CreateWxCloudBaseRunServerDBClusterRequest extends AbstractModel
 
         if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
             $this->DbVersion = $param["DbVersion"];
+        }
+
+        if (array_key_exists("LowerCaseTableName",$param) and $param["LowerCaseTableName"] !== null) {
+            $this->LowerCaseTableName = $param["LowerCaseTableName"];
         }
     }
 }

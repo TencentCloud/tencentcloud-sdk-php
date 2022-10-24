@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) 设置所在的Namespace
  * @method WorkloadConfig getWorkload() 获取工作负载配置
  * @method void setWorkload(WorkloadConfig $Workload) 设置工作负载配置
+ * @method EgressGatewayStatus getStatus() 获取工作负载的状态
+ * @method void setStatus(EgressGatewayStatus $Status) 设置工作负载的状态
  */
 class EgressGateway extends AbstractModel
 {
@@ -45,9 +47,15 @@ class EgressGateway extends AbstractModel
     public $Workload;
 
     /**
+     * @var EgressGatewayStatus 工作负载的状态
+     */
+    public $Status;
+
+    /**
      * @param string $Name Egress名称
      * @param string $Namespace 所在的Namespace
      * @param WorkloadConfig $Workload 工作负载配置
+     * @param EgressGatewayStatus $Status 工作负载的状态
      */
     function __construct()
     {
@@ -73,6 +81,11 @@ class EgressGateway extends AbstractModel
         if (array_key_exists("Workload",$param) and $param["Workload"] !== null) {
             $this->Workload = new WorkloadConfig();
             $this->Workload->deserialize($param["Workload"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = new EgressGatewayStatus();
+            $this->Status->deserialize($param["Status"]);
         }
     }
 }

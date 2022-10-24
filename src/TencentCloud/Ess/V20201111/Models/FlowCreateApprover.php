@@ -52,8 +52,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
  * @method void setNotifyType(string $NotifyType) 设置是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
  * @method boolean getIsFullText() 获取签署前置条件：是否需要阅读全文，默认为不需要
  * @method void setIsFullText(boolean $IsFullText) 设置签署前置条件：是否需要阅读全文，默认为不需要
- * @method integer getPreReadTime() 获取签署前置条件：阅读时长限制，默认为不需要
- * @method void setPreReadTime(integer $PreReadTime) 设置签署前置条件：阅读时长限制，默认为不需要
+ * @method integer getPreReadTime() 获取签署前置条件：阅读时长限制，单位秒，默认为不需要
+ * @method void setPreReadTime(integer $PreReadTime) 设置签署前置条件：阅读时长限制，单位秒，默认为不需要
  * @method string getUserId() 获取签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。非企微场景不使用此字段
  * @method void setUserId(string $UserId) 设置签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。非企微场景不使用此字段
  * @method boolean getRequired() 获取当前只支持true，默认为true
@@ -124,7 +124,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     public $IsFullText;
 
     /**
-     * @var integer 签署前置条件：阅读时长限制，默认为不需要
+     * @var integer 签署前置条件：阅读时长限制，单位秒，默认为不需要
      */
     public $PreReadTime;
 
@@ -170,7 +170,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * @param array $VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
      * @param string $NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
      * @param boolean $IsFullText 签署前置条件：是否需要阅读全文，默认为不需要
-     * @param integer $PreReadTime 签署前置条件：阅读时长限制，默认为不需要
+     * @param integer $PreReadTime 签署前置条件：阅读时长限制，单位秒，默认为不需要
      * @param string $UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。非企微场景不使用此字段
      * @param boolean $Required 当前只支持true，默认为true
      * @param string $ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP

@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterAdvancedSettings(EdgeClusterAdvancedSettings $ClusterAdvancedSettings) 设置集群高级设置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLevel() 获取边缘容器集群级别
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLevel(string $Level) 设置边缘容器集群级别
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeCluster extends AbstractModel
 {
@@ -114,6 +118,12 @@ class EdgeCluster extends AbstractModel
     public $ClusterAdvancedSettings;
 
     /**
+     * @var string 边缘容器集群级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Level;
+
+    /**
      * @param string $ClusterId 集群Id
      * @param string $ClusterName 集群名称
      * @param string $VpcId Vpc Id
@@ -127,6 +137,8 @@ class EdgeCluster extends AbstractModel
      * @param integer $MaxNodePodNum 节点最大Pod数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EdgeClusterAdvancedSettings $ClusterAdvancedSettings 集群高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Level 边缘容器集群级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -189,6 +201,10 @@ class EdgeCluster extends AbstractModel
         if (array_key_exists("ClusterAdvancedSettings",$param) and $param["ClusterAdvancedSettings"] !== null) {
             $this->ClusterAdvancedSettings = new EdgeClusterAdvancedSettings();
             $this->ClusterAdvancedSettings->deserialize($param["ClusterAdvancedSettings"]);
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
     }
 }

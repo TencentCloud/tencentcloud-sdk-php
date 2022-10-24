@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method LoadBalancerStatus getLoadBalancer() 获取负载均衡实例状态
  * @method void setLoadBalancer(LoadBalancerStatus $LoadBalancer) 设置负载均衡实例状态
+ * @method string getCurrentVersion() 获取ingress gateway 当前的版本
+ * @method void setCurrentVersion(string $CurrentVersion) 设置ingress gateway 当前的版本
+ * @method string getDesiredVersion() 获取ingress gateway 目标的版本
+ * @method void setDesiredVersion(string $DesiredVersion) 设置ingress gateway 目标的版本
+ * @method string getState() 获取ingress gateway的状态，取值running, upgrading, rollbacking
+ * @method void setState(string $State) 设置ingress gateway的状态，取值running, upgrading, rollbacking
  */
 class IngressGatewayStatus extends AbstractModel
 {
@@ -31,7 +37,25 @@ class IngressGatewayStatus extends AbstractModel
     public $LoadBalancer;
 
     /**
+     * @var string ingress gateway 当前的版本
+     */
+    public $CurrentVersion;
+
+    /**
+     * @var string ingress gateway 目标的版本
+     */
+    public $DesiredVersion;
+
+    /**
+     * @var string ingress gateway的状态，取值running, upgrading, rollbacking
+     */
+    public $State;
+
+    /**
      * @param LoadBalancerStatus $LoadBalancer 负载均衡实例状态
+     * @param string $CurrentVersion ingress gateway 当前的版本
+     * @param string $DesiredVersion ingress gateway 目标的版本
+     * @param string $State ingress gateway的状态，取值running, upgrading, rollbacking
      */
     function __construct()
     {
@@ -49,6 +73,18 @@ class IngressGatewayStatus extends AbstractModel
         if (array_key_exists("LoadBalancer",$param) and $param["LoadBalancer"] !== null) {
             $this->LoadBalancer = new LoadBalancerStatus();
             $this->LoadBalancer->deserialize($param["LoadBalancer"]);
+        }
+
+        if (array_key_exists("CurrentVersion",$param) and $param["CurrentVersion"] !== null) {
+            $this->CurrentVersion = $param["CurrentVersion"];
+        }
+
+        if (array_key_exists("DesiredVersion",$param) and $param["DesiredVersion"] !== null) {
+            $this->DesiredVersion = $param["DesiredVersion"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
         }
     }
 }

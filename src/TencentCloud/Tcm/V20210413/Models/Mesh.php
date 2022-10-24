@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfig(MeshConfig $Config) 设置Mesh配置
  * @method MeshStatus getStatus() 获取Mesh详细状态
  * @method void setStatus(MeshStatus $Status) 设置Mesh详细状态
+ * @method array getTagList() 获取标签列表
+ * @method void setTagList(array $TagList) 设置标签列表
  */
 class Mesh extends AbstractModel
 {
@@ -146,6 +148,11 @@ class Mesh extends AbstractModel
     public $Status;
 
     /**
+     * @var array 标签列表
+     */
+    public $TagList;
+
+    /**
      * @param string $MeshId Mesh实例Id
      * @param string $DisplayName Mesh名称
      * @param string $Type Mesh类型，取值范围：
@@ -172,6 +179,7 @@ class Mesh extends AbstractModel
      * @param array $ClusterList 集群列表
      * @param MeshConfig $Config Mesh配置
      * @param MeshStatus $Status Mesh详细状态
+     * @param array $TagList 标签列表
      */
     function __construct()
     {
@@ -235,6 +243,15 @@ class Mesh extends AbstractModel
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = new MeshStatus();
             $this->Status->deserialize($param["Status"]);
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

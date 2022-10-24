@@ -56,6 +56,16 @@ use TencentCloud\Common\AbstractModel;
 只有当PayMode为PREPAID时生效。
  * @method integer getAutoRenewFlag() 获取是否自动续费，0-不 1-是。默认为0，只有当PayMode为PREPAID时生效。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置是否自动续费，0-不 1-是。默认为0，只有当PayMode为PREPAID时生效。
+ * @method string getStoragePayMode() 获取存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+ * @method void setStoragePayMode(string $StoragePayMode) 设置存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+ * @method integer getStorage() 获取存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
+ * @method void setStorage(integer $Storage) 设置存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
  */
 class CloneClusterToPointInTimeRequest extends AbstractModel
 {
@@ -138,6 +148,19 @@ class CloneClusterToPointInTimeRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
+     * @var string 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+     */
+    public $StoragePayMode;
+
+    /**
+     * @var integer 存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
+     */
+    public $Storage;
+
+    /**
      * @param string $Zone 可用区
      * @param string $DBVersion 数据库版本，目前仅支持 10.17
      * @param integer $CPU CPU核数。取值参考文档【购买指南】
@@ -156,6 +179,11 @@ class CloneClusterToPointInTimeRequest extends AbstractModel
      * @param integer $Period 购买时长，单位：月。取值范围为[1,60]，默认值为1。
 只有当PayMode为PREPAID时生效。
      * @param integer $AutoRenewFlag 是否自动续费，0-不 1-是。默认为0，只有当PayMode为PREPAID时生效。
+     * @param string $StoragePayMode 存储付费模式
+ - PREPAID：预付费，即包年包月
+ - POSTPAID_BY_HOUR：按小时后付费
+默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+     * @param integer $Storage 存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
      */
     function __construct()
     {
@@ -228,6 +256,14 @@ class CloneClusterToPointInTimeRequest extends AbstractModel
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+            $this->Storage = $param["Storage"];
         }
     }
 }

@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelExternalSubOrderId(string $ChannelExternalSubOrderId) 设置渠道方应答的订单号，透传处理
  * @method string getWxSubMchId() 获取微信子商户号
  * @method void setWxSubMchId(string $WxSubMchId) 设置微信子商户号
+ * @method string getChannelSubPayOrderId() 获取米大师侧渠道子订单号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelSubPayOrderId(string $ChannelSubPayOrderId) 设置米大师侧渠道子订单号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductId() 获取物品ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductId(string $ProductId) 设置物品ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudSubOrderReturn extends AbstractModel
 {
@@ -128,6 +136,18 @@ class CloudSubOrderReturn extends AbstractModel
     public $WxSubMchId;
 
     /**
+     * @var string 米大师侧渠道子订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelSubPayOrderId;
+
+    /**
+     * @var string 物品ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductId;
+
+    /**
      * @param string $SubOutTradeNo 子订单号
      * @param string $SubAppId 米大师计费SubAppId，代表子商户
      * @param string $ProductName 子订单商品名称
@@ -144,6 +164,10 @@ class CloudSubOrderReturn extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelExternalSubOrderId 渠道方应答的订单号，透传处理
      * @param string $WxSubMchId 微信子商户号
+     * @param string $ChannelSubPayOrderId 米大师侧渠道子订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductId 物品ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -214,6 +238,14 @@ class CloudSubOrderReturn extends AbstractModel
 
         if (array_key_exists("WxSubMchId",$param) and $param["WxSubMchId"] !== null) {
             $this->WxSubMchId = $param["WxSubMchId"];
+        }
+
+        if (array_key_exists("ChannelSubPayOrderId",$param) and $param["ChannelSubPayOrderId"] !== null) {
+            $this->ChannelSubPayOrderId = $param["ChannelSubPayOrderId"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

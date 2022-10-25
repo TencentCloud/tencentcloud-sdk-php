@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
-3. 支持拉流文件格式：flv，rtmp，hls，mp4。
+3. 目前不支持https协议。
+4. 支持拉流文件格式：flv，rtmp，hls，mp4。
  * @method void setFromUrl(string $FromUrl) 设置源 Url ，用于拉流的地址。目前可支持直播流及点播文件。
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
-3. 支持拉流文件格式：flv，rtmp，hls，mp4。
+3. 目前不支持https协议。
+4. 支持拉流文件格式：flv，rtmp，hls，mp4。
  * @method string getToUrl() 获取目的 Url ，用于推流的地址，目前限制该目标地址为腾讯域名。
 仅支持：rtmp 协议。
  * @method void setToUrl(string $ToUrl) 设置目的 Url ，用于推流的地址，目前限制该目标地址为腾讯域名。
@@ -86,7 +88,8 @@ class CreatePullStreamConfigRequest extends AbstractModel
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
-3. 支持拉流文件格式：flv，rtmp，hls，mp4。
+3. 目前不支持https协议。
+4. 支持拉流文件格式：flv，rtmp，hls，mp4。
      */
     public $FromUrl;
 
@@ -139,7 +142,8 @@ class CreatePullStreamConfigRequest extends AbstractModel
 注意：
 1. 多个点播url之间使用空格拼接。
 2. 目前上限支持10个url。
-3. 支持拉流文件格式：flv，rtmp，hls，mp4。
+3. 目前不支持https协议。
+4. 支持拉流文件格式：flv，rtmp，hls，mp4。
      * @param string $ToUrl 目的 Url ，用于推流的地址，目前限制该目标地址为腾讯域名。
 仅支持：rtmp 协议。
      * @param integer $AreaId 选择完成转拉推的服务所在区域:

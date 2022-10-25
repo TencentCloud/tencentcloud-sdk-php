@@ -82,6 +82,18 @@ bank：网银
  * @method void setSubOrderList(array $SubOrderList) 设置调用下单接口传进来的 SubOutTradeNoList
  * @method string getChannelExternalOrderId() 获取支付机构订单号
  * @method void setChannelExternalOrderId(string $ChannelExternalOrderId) 设置支付机构订单号
+ * @method integer getSettleCheck() 获取主单核销状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSettleCheck(integer $SettleCheck) 设置主单核销状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getChannelExternalUserInfoList() 获取渠道方用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelExternalUserInfoList(array $ChannelExternalUserInfoList) 设置渠道方用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAttachmentInfoList() 获取附加项信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttachmentInfoList(array $AttachmentInfoList) 设置附加项信息列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueryOrderOutOrderList extends AbstractModel
 {
@@ -205,6 +217,24 @@ bank：网银
     public $ChannelExternalOrderId;
 
     /**
+     * @var integer 主单核销状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SettleCheck;
+
+    /**
+     * @var array 渠道方用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelExternalUserInfoList;
+
+    /**
+     * @var array 附加项信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttachmentInfoList;
+
+    /**
      * @param string $MidasAppId 聚鑫分配的支付主MidasAppId
      * @param integer $Amt 支付金额，单位：分
      * @param string $UserId 用户Id
@@ -236,6 +266,12 @@ bank：网银
      * @param string $ChannelOrderId 聚鑫内部渠道订单号
      * @param array $SubOrderList 调用下单接口传进来的 SubOutTradeNoList
      * @param string $ChannelExternalOrderId 支付机构订单号
+     * @param integer $SettleCheck 主单核销状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ChannelExternalUserInfoList 渠道方用户信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AttachmentInfoList 附加项信息列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -341,6 +377,28 @@ bank：网银
 
         if (array_key_exists("ChannelExternalOrderId",$param) and $param["ChannelExternalOrderId"] !== null) {
             $this->ChannelExternalOrderId = $param["ChannelExternalOrderId"];
+        }
+
+        if (array_key_exists("SettleCheck",$param) and $param["SettleCheck"] !== null) {
+            $this->SettleCheck = $param["SettleCheck"];
+        }
+
+        if (array_key_exists("ChannelExternalUserInfoList",$param) and $param["ChannelExternalUserInfoList"] !== null) {
+            $this->ChannelExternalUserInfoList = [];
+            foreach ($param["ChannelExternalUserInfoList"] as $key => $value){
+                $obj = new OldChannelExternalUserInfo();
+                $obj->deserialize($value);
+                array_push($this->ChannelExternalUserInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("AttachmentInfoList",$param) and $param["AttachmentInfoList"] !== null) {
+            $this->AttachmentInfoList = [];
+            foreach ($param["AttachmentInfoList"] as $key => $value){
+                $obj = new OldAttachmentInfo();
+                $obj->deserialize($value);
+                array_push($this->AttachmentInfoList, $obj);
+            }
         }
     }
 }

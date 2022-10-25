@@ -66,6 +66,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnderDeploying(boolean $UnderDeploying) 设置是否正在发布中
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBatchDeployStatus() 获取分批次部署状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBatchDeployStatus(string $BatchDeployStatus) 设置分批次部署状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getZones() 获取可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZones(array $Zones) 设置可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNodeInfos() 获取节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeInfos(array $NodeInfos) 设置节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DescribeRunPodPage getPodList() 获取实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodList(DescribeRunPodPage $PodList) 设置实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method WorkloadInfo getWorkloadInfo() 获取工作负载信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkloadInfo(WorkloadInfo $WorkloadInfo) 设置工作负载信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateDate() 获取创建日期
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateDate(string $CreateDate) 设置创建日期
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceVersionBrief extends AbstractModel
 {
@@ -149,6 +173,42 @@ class ServiceVersionBrief extends AbstractModel
     public $UnderDeploying;
 
     /**
+     * @var string 分批次部署状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BatchDeployStatus;
+
+    /**
+     * @var array 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Zones;
+
+    /**
+     * @var array 节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeInfos;
+
+    /**
+     * @var DescribeRunPodPage 实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodList;
+
+    /**
+     * @var WorkloadInfo 工作负载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkloadInfo;
+
+    /**
+     * @var string 创建日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateDate;
+
+    /**
      * @param string $VersionName 版本名称
      * @param string $Status 状态
      * @param integer $EnableEs 是否启动弹性 -- 已废弃
@@ -171,6 +231,18 @@ class ServiceVersionBrief extends AbstractModel
      * @param string $ApplicationName 服务name
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UnderDeploying 是否正在发布中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BatchDeployStatus 分批次部署状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Zones 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NodeInfos 节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DescribeRunPodPage $PodList 实例信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkloadInfo $WorkloadInfo 工作负载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateDate 创建日期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -241,6 +313,37 @@ class ServiceVersionBrief extends AbstractModel
 
         if (array_key_exists("UnderDeploying",$param) and $param["UnderDeploying"] !== null) {
             $this->UnderDeploying = $param["UnderDeploying"];
+        }
+
+        if (array_key_exists("BatchDeployStatus",$param) and $param["BatchDeployStatus"] !== null) {
+            $this->BatchDeployStatus = $param["BatchDeployStatus"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("NodeInfos",$param) and $param["NodeInfos"] !== null) {
+            $this->NodeInfos = [];
+            foreach ($param["NodeInfos"] as $key => $value){
+                $obj = new NodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("PodList",$param) and $param["PodList"] !== null) {
+            $this->PodList = new DescribeRunPodPage();
+            $this->PodList->deserialize($param["PodList"]);
+        }
+
+        if (array_key_exists("WorkloadInfo",$param) and $param["WorkloadInfo"] !== null) {
+            $this->WorkloadInfo = new WorkloadInfo();
+            $this->WorkloadInfo->deserialize($param["WorkloadInfo"]);
+        }
+
+        if (array_key_exists("CreateDate",$param) and $param["CreateDate"] !== null) {
+            $this->CreateDate = $param["CreateDate"];
         }
     }
 }

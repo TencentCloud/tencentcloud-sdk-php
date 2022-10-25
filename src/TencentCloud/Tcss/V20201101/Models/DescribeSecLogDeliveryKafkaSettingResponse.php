@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置用户名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionID() 获取地域ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionID(string $RegionID) 设置地域ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -76,6 +80,12 @@ class DescribeSecLogDeliveryKafkaSettingResponse extends AbstractModel
     public $User;
 
     /**
+     * @var string 地域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionID;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -90,6 +100,8 @@ class DescribeSecLogDeliveryKafkaSettingResponse extends AbstractModel
      * @param array $LogTypeList 日志类型队列
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionID 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -129,6 +141,10 @@ class DescribeSecLogDeliveryKafkaSettingResponse extends AbstractModel
 
         if (array_key_exists("User",$param) and $param["User"] !== null) {
             $this->User = $param["User"];
+        }
+
+        if (array_key_exists("RegionID",$param) and $param["RegionID"] !== null) {
+            $this->RegionID = $param["RegionID"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

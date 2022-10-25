@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method string getTemplateId() 获取模板唯一标识，查询单个模版时使用
- * @method void setTemplateId(string $TemplateId) 设置模板唯一标识，查询单个模版时使用
+ * @method string getTemplateId() 获取模板唯一标识，查询单个模板时使用
+ * @method void setTemplateId(string $TemplateId) 设置模板唯一标识，查询单个模板时使用
  * @method integer getContentType() 获取查询内容：0-模板列表及详情（默认），1-仅模板列表
  * @method void setContentType(integer $ContentType) 设置查询内容：0-模板列表及详情（默认），1-仅模板列表
  * @method integer getLimit() 获取查询个数，默认20，最大100；在查询列表的时候有效
@@ -45,7 +45,7 @@ class DescribeTemplatesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 模板唯一标识，查询单个模版时使用
+     * @var string 模板唯一标识，查询单个模板时使用
      */
     public $TemplateId;
 
@@ -81,7 +81,7 @@ class DescribeTemplatesRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
-     * @param string $TemplateId 模板唯一标识，查询单个模版时使用
+     * @param string $TemplateId 模板唯一标识，查询单个模板时使用
      * @param integer $ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
      * @param integer $Limit 查询个数，默认20，最大100；在查询列表的时候有效
      * @param integer $Offset 查询偏移位置，默认0；在查询列表的时候有效

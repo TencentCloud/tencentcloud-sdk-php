@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页的大小
  * @method string getProjectId() 获取项目Id
  * @method void setProjectId(string $ProjectId) 设置项目Id
+ * @method integer getProductSource() 获取是否跨账号产品
+ * @method void setProductSource(integer $ProductSource) 设置是否跨账号产品
  */
 class DescribeGatewaySubProductsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeGatewaySubProductsRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var integer 是否跨账号产品
+     */
+    public $ProductSource;
+
+    /**
      * @param string $GatewayProductId 网关产品ID
      * @param integer $Offset 分页的偏移量
      * @param integer $Limit 分页的大小
      * @param string $ProjectId 项目Id
+     * @param integer $ProductSource 是否跨账号产品
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeGatewaySubProductsRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProductSource",$param) and $param["ProductSource"] !== null) {
+            $this->ProductSource = $param["ProductSource"];
         }
     }
 }

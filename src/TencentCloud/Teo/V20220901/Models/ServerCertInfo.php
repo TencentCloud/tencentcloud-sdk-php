@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignAlgo(string $SignAlgo) 设置签名算法。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCommonName() 获取证书归属域名名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCommonName(string $CommonName) 设置证书归属域名名称。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerCertInfo extends AbstractModel
 {
@@ -93,6 +97,12 @@ class ServerCertInfo extends AbstractModel
     public $SignAlgo;
 
     /**
+     * @var string 证书归属域名名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CommonName;
+
+    /**
      * @param string $CertId 服务器证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 证书备注名。
@@ -107,6 +117,8 @@ class ServerCertInfo extends AbstractModel
      * @param string $DeployTime 证书部署时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SignAlgo 签名算法。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CommonName 证书归属域名名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -144,6 +156,10 @@ class ServerCertInfo extends AbstractModel
 
         if (array_key_exists("SignAlgo",$param) and $param["SignAlgo"] !== null) {
             $this->SignAlgo = $param["SignAlgo"];
+        }
+
+        if (array_key_exists("CommonName",$param) and $param["CommonName"] !== null) {
+            $this->CommonName = $param["CommonName"];
         }
     }
 }

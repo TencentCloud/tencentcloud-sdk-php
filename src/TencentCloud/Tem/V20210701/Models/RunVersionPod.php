@@ -50,6 +50,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerState(string $ContainerState) 设置容器状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method NodeInfo getNodeInfo() 获取实例所在节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodeInfo(NodeInfo $NodeInfo) 设置实例所在节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStartTime() 获取启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStartTime(string $StartTime) 设置启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUnhealthy() 获取是否健康
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnhealthy(boolean $Unhealthy) 设置是否健康
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUnhealthyWarningMsg() 获取不健康时的提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnhealthyWarningMsg(string $UnhealthyWarningMsg) 设置不健康时的提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersionId() 获取版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersionId(string $VersionId) 设置版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationName() 获取应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationName(string $ApplicationName) 设置应用名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunVersionPod extends AbstractModel
 {
@@ -109,6 +133,42 @@ class RunVersionPod extends AbstractModel
     public $ContainerState;
 
     /**
+     * @var NodeInfo 实例所在节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NodeInfo;
+
+    /**
+     * @var string 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StartTime;
+
+    /**
+     * @var boolean 是否健康
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Unhealthy;
+
+    /**
+     * @var string 不健康时的提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UnhealthyWarningMsg;
+
+    /**
+     * @var string 版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VersionId;
+
+    /**
+     * @var string 应用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationName;
+
+    /**
      * @param string $Webshell shell地址
      * @param string $PodId pod的id
      * @param string $Status 状态
@@ -123,6 +183,18 @@ class RunVersionPod extends AbstractModel
      * @param boolean $Ready pod是否就绪
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerState 容器状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeInfo $NodeInfo 实例所在节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StartTime 启动时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Unhealthy 是否健康
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UnhealthyWarningMsg 不健康时的提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VersionId 版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +248,31 @@ class RunVersionPod extends AbstractModel
 
         if (array_key_exists("ContainerState",$param) and $param["ContainerState"] !== null) {
             $this->ContainerState = $param["ContainerState"];
+        }
+
+        if (array_key_exists("NodeInfo",$param) and $param["NodeInfo"] !== null) {
+            $this->NodeInfo = new NodeInfo();
+            $this->NodeInfo->deserialize($param["NodeInfo"]);
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("Unhealthy",$param) and $param["Unhealthy"] !== null) {
+            $this->Unhealthy = $param["Unhealthy"];
+        }
+
+        if (array_key_exists("UnhealthyWarningMsg",$param) and $param["UnhealthyWarningMsg"] !== null) {
+            $this->UnhealthyWarningMsg = $param["UnhealthyWarningMsg"];
+        }
+
+        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
+            $this->VersionId = $param["VersionId"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
         }
     }
 }

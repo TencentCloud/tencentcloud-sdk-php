@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsoleInternetBandWidth(integer $ConsoleInternetBandWidth) 设置控制台公网带宽
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLimiterAddressInfos() 获取北极星限流server节点接入IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLimiterAddressInfos(array $LimiterAddressInfos) 设置北极星限流server节点接入IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -87,6 +91,12 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
     public $ConsoleInternetBandWidth;
 
     /**
+     * @var array 北极星限流server节点接入IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LimiterAddressInfos;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -102,6 +112,8 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
      * @param integer $InternetBandWidth 客户端公网带宽
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConsoleInternetBandWidth 控制台公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LimiterAddressInfos 北极星限流server节点接入IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -149,6 +161,15 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
 
         if (array_key_exists("ConsoleInternetBandWidth",$param) and $param["ConsoleInternetBandWidth"] !== null) {
             $this->ConsoleInternetBandWidth = $param["ConsoleInternetBandWidth"];
+        }
+
+        if (array_key_exists("LimiterAddressInfos",$param) and $param["LimiterAddressInfos"] !== null) {
+            $this->LimiterAddressInfos = [];
+            foreach ($param["LimiterAddressInfos"] as $key => $value){
+                $obj = new PolarisLimiterAddress();
+                $obj->deserialize($value);
+                array_push($this->LimiterAddressInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

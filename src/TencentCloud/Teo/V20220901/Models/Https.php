@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertInfo(array $CertInfo) 设置证书配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplyType() 获取申请类型，取值有：
+<li>apply：托管EdgeOne；</li>
+<li>none：不托管EdgeOne。</li>不填，默认取值为none。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplyType(string $ApplyType) 设置申请类型，取值有：
+<li>apply：托管EdgeOne；</li>
+<li>none：不托管EdgeOne。</li>不填，默认取值为none。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Https extends AbstractModel
 {
@@ -98,6 +106,14 @@ class Https extends AbstractModel
     public $CertInfo;
 
     /**
+     * @var string 申请类型，取值有：
+<li>apply：托管EdgeOne；</li>
+<li>none：不托管EdgeOne。</li>不填，默认取值为none。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplyType;
+
+    /**
      * @param string $Http2 http2 配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
@@ -115,6 +131,10 @@ class Https extends AbstractModel
      * @param Hsts $Hsts HSTS 配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CertInfo 证书配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplyType 申请类型，取值有：
+<li>apply：托管EdgeOne；</li>
+<li>none：不托管EdgeOne。</li>不填，默认取值为none。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -154,6 +174,10 @@ class Https extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CertInfo, $obj);
             }
+        }
+
+        if (array_key_exists("ApplyType",$param) and $param["ApplyType"] !== null) {
+            $this->ApplyType = $param["ApplyType"];
         }
     }
 }

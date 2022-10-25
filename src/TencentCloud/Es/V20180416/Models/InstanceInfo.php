@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcUid(string $VpcUid) 设置实例所属VPC的UID
  * @method string getSubnetUid() 获取实例所属子网的UID
  * @method void setSubnetUid(string $SubnetUid) 设置实例所属子网的UID
- * @method integer getStatus() 获取实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
- * @method void setStatus(integer $Status) 设置实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+ * @method integer getStatus() 获取实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
+ * @method void setStatus(integer $Status) 设置实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
  * @method string getRenewFlag() 获取自动续费标识。取值范围：
 RENEW_FLAG_AUTO：自动续费  
 RENEW_FLAG_MANUAL：不自动续费
@@ -274,6 +274,14 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableHybridStorage(boolean $EnableHybridStorage) 设置是否支持存储计算分离
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getProcessPercent() 获取流程进度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProcessPercent(float $ProcessPercent) 设置流程进度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKibanaAlteringPublicAccess() 获取Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -318,7 +326,7 @@ class InstanceInfo extends AbstractModel
     public $SubnetUid;
 
     /**
-     * @var integer 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+     * @var integer 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
      */
     public $Status;
 
@@ -721,6 +729,18 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $EnableHybridStorage;
 
     /**
+     * @var float 流程进度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProcessPercent;
+
+    /**
+     * @var string Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KibanaAlteringPublicAccess;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -729,7 +749,7 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param string $Uin 用户UIN
      * @param string $VpcUid 实例所属VPC的UID
      * @param string $SubnetUid 实例所属子网的UID
-     * @param integer $Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+     * @param integer $Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁, 2:创建集群时初始化中
      * @param string $RenewFlag 自动续费标识。取值范围：
 RENEW_FLAG_AUTO：自动续费  
 RENEW_FLAG_MANUAL：不自动续费
@@ -847,6 +867,10 @@ RENEW_FLAG_DEFAULT：不自动续费
      * @param boolean $AutoIndexEnabled 自治索引开关
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableHybridStorage 是否支持存储计算分离
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $ProcessPercent 流程进度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KibanaAlteringPublicAccess Kibana的altering外网告警策略<li>OPEN：开启</li><li>CLOSE：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1209,6 +1233,14 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("EnableHybridStorage",$param) and $param["EnableHybridStorage"] !== null) {
             $this->EnableHybridStorage = $param["EnableHybridStorage"];
+        }
+
+        if (array_key_exists("ProcessPercent",$param) and $param["ProcessPercent"] !== null) {
+            $this->ProcessPercent = $param["ProcessPercent"];
+        }
+
+        if (array_key_exists("KibanaAlteringPublicAccess",$param) and $param["KibanaAlteringPublicAccess"] !== null) {
+            $this->KibanaAlteringPublicAccess = $param["KibanaAlteringPublicAccess"];
         }
     }
 }

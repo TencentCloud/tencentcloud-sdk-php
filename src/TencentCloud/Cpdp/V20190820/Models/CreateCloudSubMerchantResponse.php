@@ -20,17 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloudSubMerchant返回参数结构体
  *
- * @method string getSubAppId() 获取子应用Id。
+ * @method string getSubAppId() 获取子应用ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubAppId(string $SubAppId) 设置子应用Id。
+ * @method void setSubAppId(string $SubAppId) 设置子应用ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChannelSubMerchantId() 获取渠道子商户Id。
+ * @method string getChannelSubMerchantId() 获取渠道子商户ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChannelSubMerchantId(string $ChannelSubMerchantId) 设置渠道子商户Id。
+ * @method void setChannelSubMerchantId(string $ChannelSubMerchantId) 设置渠道子商户ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLevel() 获取层级，从0开始。
+ * @method integer getLevel() 获取层级，从0开始
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLevel(integer $Level) 设置层级，从0开始。
+ * @method void setLevel(integer $Level) 设置层级，从0开始
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChannelAppId() 获取渠道应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelAppId(string $ChannelAppId) 设置渠道应用ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,22 +42,28 @@ use TencentCloud\Common\AbstractModel;
 class CreateCloudSubMerchantResponse extends AbstractModel
 {
     /**
-     * @var string 子应用Id。
+     * @var string 子应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAppId;
 
     /**
-     * @var string 渠道子商户Id。
+     * @var string 渠道子商户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelSubMerchantId;
 
     /**
-     * @var integer 层级，从0开始。
+     * @var integer 层级，从0开始
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
+
+    /**
+     * @var string 渠道应用ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelAppId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,11 +71,13 @@ class CreateCloudSubMerchantResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SubAppId 子应用Id。
+     * @param string $SubAppId 子应用ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChannelSubMerchantId 渠道子商户Id。
+     * @param string $ChannelSubMerchantId 渠道子商户ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Level 层级，从0开始。
+     * @param integer $Level 层级，从0开始
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChannelAppId 渠道应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -92,6 +104,10 @@ class CreateCloudSubMerchantResponse extends AbstractModel
 
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {
             $this->Level = $param["Level"];
+        }
+
+        if (array_key_exists("ChannelAppId",$param) and $param["ChannelAppId"] !== null) {
+            $this->ChannelAppId = $param["ChannelAppId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

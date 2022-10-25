@@ -32,6 +32,10 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxAgeRules(array $MaxAgeRules) 设置MaxAge 规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MaxAgeCodeRule getMaxAgeCodeRule() 获取MaxAge 状态码相关规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxAgeCodeRule(MaxAgeCodeRule $MaxAgeCodeRule) 设置MaxAge 状态码相关规则
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MaxAge extends AbstractModel
 {
@@ -50,11 +54,19 @@ off：关闭
     public $MaxAgeRules;
 
     /**
+     * @var MaxAgeCodeRule MaxAge 状态码相关规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxAgeCodeRule;
+
+    /**
      * @param string $Switch 浏览器缓存配置开关
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MaxAgeRules MaxAge 规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxAgeCodeRule $MaxAgeCodeRule MaxAge 状态码相关规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -81,6 +93,11 @@ off：关闭
                 $obj->deserialize($value);
                 array_push($this->MaxAgeRules, $obj);
             }
+        }
+
+        if (array_key_exists("MaxAgeCodeRule",$param) and $param["MaxAgeCodeRule"] !== null) {
+            $this->MaxAgeCodeRule = new MaxAgeCodeRule();
+            $this->MaxAgeCodeRule->deserialize($param["MaxAgeCodeRule"]);
         }
     }
 }

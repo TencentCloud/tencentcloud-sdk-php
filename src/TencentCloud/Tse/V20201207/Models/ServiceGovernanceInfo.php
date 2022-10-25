@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMainPassword(string $MainPassword) 设置主账户名默认为 polaris，该值为主账户的默认密码
  * @method array getPgwVpcInfos() 获取服务治理pushgateway引擎绑定的网络信息
  * @method void setPgwVpcInfos(array $PgwVpcInfos) 设置服务治理pushgateway引擎绑定的网络信息
+ * @method array getLimiterVpcInfos() 获取服务治理限流server引擎绑定的网络信息
+ * @method void setLimiterVpcInfos(array $LimiterVpcInfos) 设置服务治理限流server引擎绑定的网络信息
  */
 class ServiceGovernanceInfo extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ServiceGovernanceInfo extends AbstractModel
     public $PgwVpcInfos;
 
     /**
+     * @var array 服务治理限流server引擎绑定的网络信息
+     */
+    public $LimiterVpcInfos;
+
+    /**
      * @param string $EngineRegion 引擎所在的地域
      * @param array $BoundK8SInfos 服务治理引擎绑定的kubernetes集群信息
      * @param array $VpcInfos 服务治理引擎绑定的网络信息
@@ -80,6 +87,7 @@ class ServiceGovernanceInfo extends AbstractModel
      * @param array $Features 该实例支持的功能，鉴权就是 Auth
      * @param string $MainPassword 主账户名默认为 polaris，该值为主账户的默认密码
      * @param array $PgwVpcInfos 服务治理pushgateway引擎绑定的网络信息
+     * @param array $LimiterVpcInfos 服务治理限流server引擎绑定的网络信息
      */
     function __construct()
     {
@@ -134,6 +142,15 @@ class ServiceGovernanceInfo extends AbstractModel
                 $obj = new VpcInfo();
                 $obj->deserialize($value);
                 array_push($this->PgwVpcInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("LimiterVpcInfos",$param) and $param["LimiterVpcInfos"] !== null) {
+            $this->LimiterVpcInfos = [];
+            foreach ($param["LimiterVpcInfos"] as $key => $value){
+                $obj = new VpcInfo();
+                $obj->deserialize($value);
+                array_push($this->LimiterVpcInfos, $obj);
             }
         }
     }

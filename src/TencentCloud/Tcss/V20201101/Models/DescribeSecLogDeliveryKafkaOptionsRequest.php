@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecLogDeliveryKafkaOptions请求参数结构体
  *
-
+ * @method string getRegionID() 获取地域，若为空则返回所有可选地域
+ * @method void setRegionID(string $RegionID) 设置地域，若为空则返回所有可选地域
  */
 class DescribeSecLogDeliveryKafkaOptionsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 地域，若为空则返回所有可选地域
+     */
+    public $RegionID;
 
     /**
-
+     * @param string $RegionID 地域，若为空则返回所有可选地域
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeSecLogDeliveryKafkaOptionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("RegionID",$param) and $param["RegionID"] !== null) {
+            $this->RegionID = $param["RegionID"];
+        }
     }
 }

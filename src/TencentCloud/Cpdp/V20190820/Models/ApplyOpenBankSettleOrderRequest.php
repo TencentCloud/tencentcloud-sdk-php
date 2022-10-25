@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSettleDetail(string $SettleDetail) 设置结算备注
  * @method string getNotifyUrl() 获取结算成功回调地址
  * @method void setNotifyUrl(string $NotifyUrl) 设置结算成功回调地址
+ * @method string getRemark() 获取附言
+ * @method void setRemark(string $Remark) 设置附言
+ * @method string getExternalSettleData() 获取结算第三方渠道扩展信息。通联国际必选
+ * @method void setExternalSettleData(string $ExternalSettleData) 设置结算第三方渠道扩展信息。通联国际必选
+ * @method string getEnvironment() 获取接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+ * @method void setEnvironment(string $Environment) 设置接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
  */
 class ApplyOpenBankSettleOrderRequest extends AbstractModel
 {
@@ -73,6 +79,21 @@ class ApplyOpenBankSettleOrderRequest extends AbstractModel
     public $NotifyUrl;
 
     /**
+     * @var string 附言
+     */
+    public $Remark;
+
+    /**
+     * @var string 结算第三方渠道扩展信息。通联国际必选
+     */
+    public $ExternalSettleData;
+
+    /**
+     * @var string 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $ChannelMerchantId 渠道商户号
      * @param string $OutSettleId 外部结算流水号
      * @param integer $SettleAmount 结算金额
@@ -80,6 +101,9 @@ class ApplyOpenBankSettleOrderRequest extends AbstractModel
      * @param string $ChannelSubMerchantId 渠道子商户号
      * @param string $SettleDetail 结算备注
      * @param string $NotifyUrl 结算成功回调地址
+     * @param string $Remark 附言
+     * @param string $ExternalSettleData 结算第三方渠道扩展信息。通联国际必选
+     * @param string $Environment 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
      */
     function __construct()
     {
@@ -120,6 +144,18 @@ class ApplyOpenBankSettleOrderRequest extends AbstractModel
 
         if (array_key_exists("NotifyUrl",$param) and $param["NotifyUrl"] !== null) {
             $this->NotifyUrl = $param["NotifyUrl"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("ExternalSettleData",$param) and $param["ExternalSettleData"] !== null) {
+            $this->ExternalSettleData = $param["ExternalSettleData"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

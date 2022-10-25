@@ -80,6 +80,10 @@ RESULT_FAILED: 未通过
  * @method void setFixSuggestion(string $FixSuggestion) 设置处理建议。
  * @method integer getBenchmarkStandardId() 获取所属的合规标准的ID
  * @method void setBenchmarkStandardId(integer $BenchmarkStandardId) 设置所属的合规标准的ID
+ * @method string getApplicableVersion() 获取检测项适用的版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicableVersion(string $ApplicableVersion) 设置检测项适用的版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompliancePolicyItemSummary extends AbstractModel
 {
@@ -174,6 +178,12 @@ RESULT_FAILED: 未通过
     public $BenchmarkStandardId;
 
     /**
+     * @var string 检测项适用的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicableVersion;
+
+    /**
      * @param integer $CustomerPolicyItemId 为客户分配的唯一的检测项的ID。
      * @param integer $BasePolicyItemId 检测项的原始ID。
      * @param string $Name 检测项的名称。
@@ -204,6 +214,8 @@ RESULT_FAILED: 未通过
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FixSuggestion 处理建议。
      * @param integer $BenchmarkStandardId 所属的合规标准的ID
+     * @param string $ApplicableVersion 检测项适用的版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -276,6 +288,10 @@ RESULT_FAILED: 未通过
 
         if (array_key_exists("BenchmarkStandardId",$param) and $param["BenchmarkStandardId"] !== null) {
             $this->BenchmarkStandardId = $param["BenchmarkStandardId"];
+        }
+
+        if (array_key_exists("ApplicableVersion",$param) and $param["ApplicableVersion"] !== null) {
+            $this->ApplicableVersion = $param["ApplicableVersion"];
         }
     }
 }

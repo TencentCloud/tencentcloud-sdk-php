@@ -78,6 +78,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 <br>转码相关文档：[直播转封装及转码](/document/product/267/32736)。
  * @method Models\CreateLiveWatermarkRuleResponse CreateLiveWatermarkRule(Models\CreateLiveWatermarkRuleRequest $req) 创建水印规则，需要先调用[AddLiveWatermark](/document/product/267/30154)接口添加水印，将返回的水印id绑定到流使用。
  * @method Models\CreatePullStreamConfigResponse CreatePullStreamConfig(Models\CreatePullStreamConfigRequest $req) 创建临时拉流转推任务，目前限制添加10条任务。
+该接口已下线,请使用新接口 CreateLivePullStreamTask。
 
 注意：该接口用于创建临时拉流转推任务，
 拉流源地址即 FromUrl 可以是腾讯或非腾讯数据源，

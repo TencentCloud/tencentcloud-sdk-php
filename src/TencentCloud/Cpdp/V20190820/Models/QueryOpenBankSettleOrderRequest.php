@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutSettleId(string $OutSettleId) 设置外部结算流水号，与渠道结算流水号二选一
  * @method string getChannelSettleId() 获取渠道结算流水号，与外部结算流水号二选一
  * @method void setChannelSettleId(string $ChannelSettleId) 设置渠道结算流水号，与外部结算流水号二选一
+ * @method string getEnvironment() 获取接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+ * @method void setEnvironment(string $Environment) 设置接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
  */
 class QueryOpenBankSettleOrderRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class QueryOpenBankSettleOrderRequest extends AbstractModel
     public $ChannelSettleId;
 
     /**
+     * @var string 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
+     */
+    public $Environment;
+
+    /**
      * @param string $ChannelMerchantId 渠道商户号
      * @param string $ChannelSubMerchantId 渠道子商户号
      * @param string $OutSettleId 外部结算流水号，与渠道结算流水号二选一
      * @param string $ChannelSettleId 渠道结算流水号，与外部结算流水号二选一
+     * @param string $Environment 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class QueryOpenBankSettleOrderRequest extends AbstractModel
 
         if (array_key_exists("ChannelSettleId",$param) and $param["ChannelSettleId"] !== null) {
             $this->ChannelSettleId = $param["ChannelSettleId"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGuetzliAdapter(GuetzliAdapter $GuetzliAdapter) 设置GuetzliAdapter配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AvifAdapter getAvifAdapter() 获取AvifAdapter配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvifAdapter(AvifAdapter $AvifAdapter) 设置AvifAdapter配置项
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +60,12 @@ class DescribeImageConfigResponse extends AbstractModel
     public $GuetzliAdapter;
 
     /**
+     * @var AvifAdapter AvifAdapter配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvifAdapter;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -66,6 +76,8 @@ class DescribeImageConfigResponse extends AbstractModel
      * @param TpgAdapter $TpgAdapter TpgAdapter配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GuetzliAdapter $GuetzliAdapter GuetzliAdapter配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvifAdapter $AvifAdapter AvifAdapter配置项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -95,6 +107,11 @@ class DescribeImageConfigResponse extends AbstractModel
         if (array_key_exists("GuetzliAdapter",$param) and $param["GuetzliAdapter"] !== null) {
             $this->GuetzliAdapter = new GuetzliAdapter();
             $this->GuetzliAdapter->deserialize($param["GuetzliAdapter"]);
+        }
+
+        if (array_key_exists("AvifAdapter",$param) and $param["AvifAdapter"] !== null) {
+            $this->AvifAdapter = new AvifAdapter();
+            $this->AvifAdapter->deserialize($param["AvifAdapter"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

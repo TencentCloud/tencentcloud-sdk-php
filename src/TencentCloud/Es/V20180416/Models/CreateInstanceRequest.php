@@ -100,6 +100,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperationDuration(OperationDuration $OperationDuration) 设置可维护时间段
  * @method boolean getEnableHybridStorage() 获取是否开启存算分离
  * @method void setEnableHybridStorage(boolean $EnableHybridStorage) 设置是否开启存算分离
+ * @method integer getDiskEnhance() 获取是否开启essd 增强型云盘
+ * @method void setDiskEnhance(integer $DiskEnhance) 设置是否开启essd 增强型云盘
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -272,6 +274,11 @@ class CreateInstanceRequest extends AbstractModel
     public $EnableHybridStorage;
 
     /**
+     * @var integer 是否开启essd 增强型云盘
+     */
+    public $DiskEnhance;
+
+    /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      * @param string $VpcId 私有网络ID
@@ -312,6 +319,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param string $Protocol 创建https集群，默认是http
      * @param OperationDuration $OperationDuration 可维护时间段
      * @param boolean $EnableHybridStorage 是否开启存算分离
+     * @param integer $DiskEnhance 是否开启essd 增强型云盘
      */
     function __construct()
     {
@@ -469,6 +477,10 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("EnableHybridStorage",$param) and $param["EnableHybridStorage"] !== null) {
             $this->EnableHybridStorage = $param["EnableHybridStorage"];
+        }
+
+        if (array_key_exists("DiskEnhance",$param) and $param["DiskEnhance"] !== null) {
+            $this->DiskEnhance = $param["DiskEnhance"];
         }
     }
 }

@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileMD5(string $FileMD5) 设置账单文件的MD5值
  * @method string getDownloadUrl() 获取账单文件的真实下载地址
  * @method void setDownloadUrl(string $DownloadUrl) 设置账单文件的真实下载地址
+ * @method string getStateType() 获取账单类型
+TRADE，对账单
+FUND，资金账单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStateType(string $StateType) 设置账单类型
+TRADE，对账单
+FUND，资金账单
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +55,14 @@ class DownloadBillResponse extends AbstractModel
     public $DownloadUrl;
 
     /**
+     * @var string 账单类型
+TRADE，对账单
+FUND，资金账单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StateType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +71,10 @@ class DownloadBillResponse extends AbstractModel
      * @param string $FileName 账单文件名
      * @param string $FileMD5 账单文件的MD5值
      * @param string $DownloadUrl 账单文件的真实下载地址
+     * @param string $StateType 账单类型
+TRADE，对账单
+FUND，资金账单
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +100,10 @@ class DownloadBillResponse extends AbstractModel
 
         if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
             $this->DownloadUrl = $param["DownloadUrl"];
+        }
+
+        if (array_key_exists("StateType",$param) and $param["StateType"] !== null) {
+            $this->StateType = $param["StateType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

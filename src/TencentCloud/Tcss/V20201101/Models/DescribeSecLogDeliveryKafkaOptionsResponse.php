@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceList() 获取实例列表
  * @method void setInstanceList(array $InstanceList) 设置实例列表
+ * @method array getRegionList() 获取地域列表
+ * @method void setRegionList(array $RegionList) 设置地域列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeSecLogDeliveryKafkaOptionsResponse extends AbstractModel
     public $InstanceList;
 
     /**
+     * @var array 地域列表
+     */
+    public $RegionList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $InstanceList 实例列表
+     * @param array $RegionList 地域列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,15 @@ class DescribeSecLogDeliveryKafkaOptionsResponse extends AbstractModel
                 $obj = new CKafkaInstanceInfo();
                 $obj->deserialize($value);
                 array_push($this->InstanceList, $obj);
+            }
+        }
+
+        if (array_key_exists("RegionList",$param) and $param["RegionList"] !== null) {
+            $this->RegionList = [];
+            foreach ($param["RegionList"] as $key => $value){
+                $obj = new RegionInfo();
+                $obj->deserialize($value);
+                array_push($this->RegionList, $obj);
             }
         }
 

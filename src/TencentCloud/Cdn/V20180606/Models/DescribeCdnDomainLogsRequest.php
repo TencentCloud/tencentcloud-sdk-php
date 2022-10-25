@@ -40,10 +40,10 @@ mainland：获取境内加速日志包下载链接
 overseas：获取境外加速日志包下载链接
 global：同时获取境内、境外加速日志包下载链接（分开打包）
 不指定时默认为 mainland
- * @method string getLogType() 获取指定下载日志的类型。
-access：获取访问日志
- * @method void setLogType(string $LogType) 设置指定下载日志的类型。
-access：获取访问日志
+ * @method string getLogType() 获取指定下载日志的类型，目前仅支持访问日志（access）。
+access：访问日志
+ * @method void setLogType(string $LogType) 设置指定下载日志的类型，目前仅支持访问日志（access）。
+access：访问日志
  */
 class DescribeCdnDomainLogsRequest extends AbstractModel
 {
@@ -82,8 +82,8 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     public $Area;
 
     /**
-     * @var string 指定下载日志的类型。
-access：获取访问日志
+     * @var string 指定下载日志的类型，目前仅支持访问日志（access）。
+access：访问日志
      */
     public $LogType;
 
@@ -98,8 +98,8 @@ mainland：获取境内加速日志包下载链接
 overseas：获取境外加速日志包下载链接
 global：同时获取境内、境外加速日志包下载链接（分开打包）
 不指定时默认为 mainland
-     * @param string $LogType 指定下载日志的类型。
-access：获取访问日志
+     * @param string $LogType 指定下载日志的类型，目前仅支持访问日志（access）。
+access：访问日志
      */
     function __construct()
     {

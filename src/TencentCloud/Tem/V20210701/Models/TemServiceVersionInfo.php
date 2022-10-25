@@ -276,6 +276,58 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableMetrics(integer $EnableMetrics) 设置1：开始自动metrics采集（open-telemetry）；
 0：关闭metrics采集；
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppId() 获取用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(string $AppId) 设置用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubAccountUin() 获取用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubAccountUin(string $SubAccountUin) 设置用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUin() 获取用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUin(string $Uin) 设置用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegion() 获取地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegion(string $Region) 设置地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGroupId() 获取应用分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupId(string $GroupId) 设置应用分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEnableRegistry() 获取是否启用注册中心
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableRegistry(integer $EnableRegistry) 设置是否启用注册中心
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAutoscalerList() 获取弹性伸缩数组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoscalerList(array $AutoscalerList) 设置弹性伸缩数组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModifier() 获取修改人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifier(string $Modifier) 设置修改人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreator() 获取创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreator(string $Creator) 设置创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DeployStrategyConf getDeployStrategyConf() 获取部署策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployStrategyConf(DeployStrategyConf $DeployStrategyConf) 设置部署策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DescribeRunPodPage getPodList() 获取实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPodList(DescribeRunPodPage $PodList) 设置实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getConfEdited() 获取发布时配置是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfEdited(boolean $ConfEdited) 设置发布时配置是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemServiceVersionInfo extends AbstractModel
 {
@@ -700,6 +752,84 @@ class TemServiceVersionInfo extends AbstractModel
     public $EnableMetrics;
 
     /**
+     * @var string 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
+     * @var string 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubAccountUin;
+
+    /**
+     * @var string 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Uin;
+
+    /**
+     * @var string 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Region;
+
+    /**
+     * @var string 应用分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupId;
+
+    /**
+     * @var integer 是否启用注册中心
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableRegistry;
+
+    /**
+     * @var array 弹性伸缩数组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoscalerList;
+
+    /**
+     * @var string 修改人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Modifier;
+
+    /**
+     * @var string 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Creator;
+
+    /**
+     * @var DeployStrategyConf 部署策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeployStrategyConf;
+
+    /**
+     * @var DescribeRunPodPage 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PodList;
+
+    /**
+     * @var boolean 发布时配置是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfEdited;
+
+    /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $VersionId 主键
      * @param string $ApplicationId 服务id
      * @param string $DeployMode 部署方式
@@ -827,6 +957,32 @@ class TemServiceVersionInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableMetrics 1：开始自动metrics采集（open-telemetry）；
 0：关闭metrics采集；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppId 用户AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubAccountUin 用户SubAccountUin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Uin 用户Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GroupId 应用分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EnableRegistry 是否启用注册中心
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AutoscalerList 弹性伸缩数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Modifier 修改人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Creator 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployStrategyConf $DeployStrategyConf 部署策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DescribeRunPodPage $PodList 实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ConfEdited 发布时配置是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1175,6 +1331,70 @@ class TemServiceVersionInfo extends AbstractModel
 
         if (array_key_exists("EnableMetrics",$param) and $param["EnableMetrics"] !== null) {
             $this->EnableMetrics = $param["EnableMetrics"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("EnableRegistry",$param) and $param["EnableRegistry"] !== null) {
+            $this->EnableRegistry = $param["EnableRegistry"];
+        }
+
+        if (array_key_exists("AutoscalerList",$param) and $param["AutoscalerList"] !== null) {
+            $this->AutoscalerList = [];
+            foreach ($param["AutoscalerList"] as $key => $value){
+                $obj = new Autoscaler();
+                $obj->deserialize($value);
+                array_push($this->AutoscalerList, $obj);
+            }
+        }
+
+        if (array_key_exists("Modifier",$param) and $param["Modifier"] !== null) {
+            $this->Modifier = $param["Modifier"];
+        }
+
+        if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
+            $this->Creator = $param["Creator"];
+        }
+
+        if (array_key_exists("DeployStrategyConf",$param) and $param["DeployStrategyConf"] !== null) {
+            $this->DeployStrategyConf = new DeployStrategyConf();
+            $this->DeployStrategyConf->deserialize($param["DeployStrategyConf"]);
+        }
+
+        if (array_key_exists("PodList",$param) and $param["PodList"] !== null) {
+            $this->PodList = new DescribeRunPodPage();
+            $this->PodList->deserialize($param["PodList"]);
+        }
+
+        if (array_key_exists("ConfEdited",$param) and $param["ConfEdited"] !== null) {
+            $this->ConfEdited = $param["ConfEdited"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

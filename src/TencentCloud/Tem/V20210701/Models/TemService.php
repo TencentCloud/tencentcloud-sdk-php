@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableTracing(integer $EnableTracing) 设置是否启用链路追踪
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemService extends AbstractModel
 {
@@ -184,6 +188,12 @@ class TemService extends AbstractModel
     public $EnableTracing;
 
     /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $ApplicationId 主键
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 服务名
@@ -215,6 +225,8 @@ class TemService extends AbstractModel
      * @param array $ActiveVersions 服务当前运行环境的实例信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableTracing 是否启用链路追踪
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -297,6 +309,15 @@ class TemService extends AbstractModel
 
         if (array_key_exists("EnableTracing",$param) and $param["EnableTracing"] !== null) {
             $this->EnableTracing = $param["EnableTracing"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

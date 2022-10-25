@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebshell(string $Webshell) 设置webshell地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeployServicePodDetail extends AbstractModel
 {
@@ -84,6 +88,12 @@ class DeployServicePodDetail extends AbstractModel
     public $Webshell;
 
     /**
+     * @var string 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $PodId pod Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PodStatus pod状态
@@ -95,6 +105,8 @@ class DeployServicePodDetail extends AbstractModel
      * @param string $Zone pod所在可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Webshell webshell地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class DeployServicePodDetail extends AbstractModel
 
         if (array_key_exists("Webshell",$param) and $param["Webshell"] !== null) {
             $this->Webshell = $param["Webshell"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

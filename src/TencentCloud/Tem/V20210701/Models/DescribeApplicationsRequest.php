@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置服务id
  * @method string getKeyword() 获取搜索关键字
  * @method void setKeyword(string $Keyword) 设置搜索关键字
+ * @method array getFilters() 获取查询过滤器
+ * @method void setFilters(array $Filters) 设置查询过滤器
  */
 class DescribeApplicationsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeApplicationsRequest extends AbstractModel
     public $Keyword;
 
     /**
+     * @var array 查询过滤器
+     */
+    public $Filters;
+
+    /**
      * @param string $EnvironmentId 命名空间ID
      * @param integer $Limit 分页Limit
      * @param integer $Offset 分页offset
      * @param integer $SourceChannel 来源渠道
      * @param string $ApplicationId 服务id
      * @param string $Keyword 搜索关键字
+     * @param array $Filters 查询过滤器
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class DescribeApplicationsRequest extends AbstractModel
 
         if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
             $this->Keyword = $param["Keyword"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new QueryFilter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

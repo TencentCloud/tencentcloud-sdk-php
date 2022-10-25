@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessType(integer $AccessType) 设置接入类型
  * @method string getKafkaVersion() 获取kafka版本号
  * @method void setKafkaVersion(string $KafkaVersion) 设置kafka版本号
+ * @method string getRegionID() 获取地域ID
+ * @method void setRegionID(string $RegionID) 设置地域ID
  */
 class ModifySecLogDeliveryKafkaSettingRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifySecLogDeliveryKafkaSettingRequest extends AbstractModel
     public $KafkaVersion;
 
     /**
+     * @var string 地域ID
+     */
+    public $RegionID;
+
+    /**
      * @param string $InstanceID 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Domain 域名
@@ -88,6 +95,7 @@ class ModifySecLogDeliveryKafkaSettingRequest extends AbstractModel
      * @param array $LogTypeList 日志类型队列
      * @param integer $AccessType 接入类型
      * @param string $KafkaVersion kafka版本号
+     * @param string $RegionID 地域ID
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class ModifySecLogDeliveryKafkaSettingRequest extends AbstractModel
 
         if (array_key_exists("KafkaVersion",$param) and $param["KafkaVersion"] !== null) {
             $this->KafkaVersion = $param["KafkaVersion"];
+        }
+
+        if (array_key_exists("RegionID",$param) and $param["RegionID"] !== null) {
+            $this->RegionID = $param["RegionID"];
         }
     }
 }

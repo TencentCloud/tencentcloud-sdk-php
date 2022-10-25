@@ -66,6 +66,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseTableMapping(boolean $UseTableMapping) 设置「分发到多个topic」开关，默认为false
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUseAutoCreateTopic() 获取使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUseAutoCreateTopic(boolean $UseAutoCreateTopic) 设置使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCompressionType() 获取写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCompressionType(string $CompressionType) 设置写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KafkaParam extends AbstractModel
 {
@@ -145,6 +153,18 @@ class KafkaParam extends AbstractModel
     public $UseTableMapping;
 
     /**
+     * @var boolean 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UseAutoCreateTopic;
+
+    /**
+     * @var string 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CompressionType;
+
+    /**
      * @param boolean $SelfBuilt 是否为自建集群
      * @param string $Resource 实例资源
      * @param string $Topic Topic名称，多个以“,”分隔
@@ -167,6 +187,10 @@ class KafkaParam extends AbstractModel
      * @param array $TableMappings Table到Topic的路由，「分发到多个topic」开关打开时必传
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseTableMapping 「分发到多个topic」开关，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -237,6 +261,14 @@ class KafkaParam extends AbstractModel
 
         if (array_key_exists("UseTableMapping",$param) and $param["UseTableMapping"] !== null) {
             $this->UseTableMapping = $param["UseTableMapping"];
+        }
+
+        if (array_key_exists("UseAutoCreateTopic",$param) and $param["UseAutoCreateTopic"] !== null) {
+            $this->UseAutoCreateTopic = $param["UseAutoCreateTopic"];
+        }
+
+        if (array_key_exists("CompressionType",$param) and $param["CompressionType"] !== null) {
+            $this->CompressionType = $param["CompressionType"];
         }
     }
 }

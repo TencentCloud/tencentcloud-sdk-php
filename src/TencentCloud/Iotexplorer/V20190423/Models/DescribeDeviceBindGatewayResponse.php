@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayName(string $GatewayName) 设置网关产品名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGatewayProductOwnerName() 获取设备对应产品所属的主账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayProductOwnerName(string $GatewayProductOwnerName) 设置设备对应产品所属的主账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGatewayProductOwnerUin() 获取设备对应产品所属的主账号 UIN
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayProductOwnerUin(string $GatewayProductOwnerUin) 设置设备对应产品所属的主账号 UIN
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +64,18 @@ class DescribeDeviceBindGatewayResponse extends AbstractModel
     public $GatewayName;
 
     /**
+     * @var string 设备对应产品所属的主账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayProductOwnerName;
+
+    /**
+     * @var string 设备对应产品所属的主账号 UIN
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayProductOwnerUin;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -66,6 +86,10 @@ class DescribeDeviceBindGatewayResponse extends AbstractModel
      * @param string $GatewayDeviceName 网关设备名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayName 网关产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GatewayProductOwnerName 设备对应产品所属的主账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GatewayProductOwnerUin 设备对应产品所属的主账号 UIN
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -92,6 +116,14 @@ class DescribeDeviceBindGatewayResponse extends AbstractModel
 
         if (array_key_exists("GatewayName",$param) and $param["GatewayName"] !== null) {
             $this->GatewayName = $param["GatewayName"];
+        }
+
+        if (array_key_exists("GatewayProductOwnerName",$param) and $param["GatewayProductOwnerName"] !== null) {
+            $this->GatewayProductOwnerName = $param["GatewayProductOwnerName"];
+        }
+
+        if (array_key_exists("GatewayProductOwnerUin",$param) and $param["GatewayProductOwnerUin"] !== null) {
+            $this->GatewayProductOwnerUin = $param["GatewayProductOwnerUin"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

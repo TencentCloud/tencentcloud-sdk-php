@@ -30,18 +30,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetName(string $TargetName) 设置目标域名名称。
  * @method string getStatus() 获取别称域名状态，取值有：
 <li> active：已生效； </li>
-<li> pending：未生效；</li>
-<li> not_filed：未备案；</li>
+<li> pending：部署中；</li>
 <li> conflict：被找回。 </li>
 <li> stop：已停用；</li>
 <li> deleted：已删除。 </li>
  * @method void setStatus(string $Status) 设置别称域名状态，取值有：
 <li> active：已生效； </li>
-<li> pending：未生效；</li>
-<li> not_filed：未备案；</li>
+<li> pending：部署中；</li>
 <li> conflict：被找回。 </li>
 <li> stop：已停用；</li>
 <li> deleted：已删除。 </li>
+ * @method integer getForbidMode() 获取封禁模式，取值有：
+<li> 0：未封禁； </li>
+<li> 11：合规封禁；</li>
+<li> 14：未备案封禁。</li>
+ * @method void setForbidMode(integer $ForbidMode) 设置封禁模式，取值有：
+<li> 0：未封禁； </li>
+<li> 11：合规封禁；</li>
+<li> 14：未备案封禁。</li>
+ * @method boolean getTargetForbid() 获取目标域名是否被封禁。
+ * @method void setTargetForbid(boolean $TargetForbid) 设置目标域名是否被封禁。
  * @method string getCreatedOn() 获取别称域名创建时间。
  * @method void setCreatedOn(string $CreatedOn) 设置别称域名创建时间。
  * @method string getModifiedOn() 获取别称域名修改时间。
@@ -72,13 +80,25 @@ class AliasDomain extends AbstractModel
     /**
      * @var string 别称域名状态，取值有：
 <li> active：已生效； </li>
-<li> pending：未生效；</li>
-<li> not_filed：未备案；</li>
+<li> pending：部署中；</li>
 <li> conflict：被找回。 </li>
 <li> stop：已停用；</li>
 <li> deleted：已删除。 </li>
      */
     public $Status;
+
+    /**
+     * @var integer 封禁模式，取值有：
+<li> 0：未封禁； </li>
+<li> 11：合规封禁；</li>
+<li> 14：未备案封禁。</li>
+     */
+    public $ForbidMode;
+
+    /**
+     * @var boolean 目标域名是否被封禁。
+     */
+    public $TargetForbid;
 
     /**
      * @var string 别称域名创建时间。
@@ -97,11 +117,15 @@ class AliasDomain extends AbstractModel
      * @param string $TargetName 目标域名名称。
      * @param string $Status 别称域名状态，取值有：
 <li> active：已生效； </li>
-<li> pending：未生效；</li>
-<li> not_filed：未备案；</li>
+<li> pending：部署中；</li>
 <li> conflict：被找回。 </li>
 <li> stop：已停用；</li>
 <li> deleted：已删除。 </li>
+     * @param integer $ForbidMode 封禁模式，取值有：
+<li> 0：未封禁； </li>
+<li> 11：合规封禁；</li>
+<li> 14：未备案封禁。</li>
+     * @param boolean $TargetForbid 目标域名是否被封禁。
      * @param string $CreatedOn 别称域名创建时间。
      * @param string $ModifiedOn 别称域名修改时间。
      */
@@ -136,6 +160,14 @@ class AliasDomain extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ForbidMode",$param) and $param["ForbidMode"] !== null) {
+            $this->ForbidMode = $param["ForbidMode"];
+        }
+
+        if (array_key_exists("TargetForbid",$param) and $param["TargetForbid"] !== null) {
+            $this->TargetForbid = $param["TargetForbid"];
         }
 
         if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {

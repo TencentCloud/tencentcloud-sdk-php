@@ -43,6 +43,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\BindAccountResponse BindAccount(Models\BindAccountRequest $req) 灵云-绑定账号
  * @method Models\BindAcctResponse BindAcct(Models\BindAcctRequest $req) 商户绑定提现银行卡，每个商户只能绑定一张提现银行卡
  * @method Models\BindOpenBankExternalSubMerchantBankAccountResponse BindOpenBankExternalSubMerchantBankAccount(Models\BindOpenBankExternalSubMerchantBankAccountRequest $req) 云企付-子商户银行卡绑定
+ * @method Models\BindOpenBankProfitSharePayeeResponse BindOpenBankProfitSharePayee(Models\BindOpenBankProfitSharePayeeRequest $req) 云企付-绑定分账收款方
  * @method Models\BindRelateAccReUnionPayResponse BindRelateAccReUnionPay(Models\BindRelateAccReUnionPayRequest $req) 会员绑定提现账户-回填银联鉴权短信码。用于会员填写动态验证码后，发往银行进行验证，验证成功则完成绑定。
  * @method Models\BindRelateAcctSmallAmountResponse BindRelateAcctSmallAmount(Models\BindRelateAcctSmallAmountRequest $req) 会员绑定提现账户-小额鉴权。会员申请绑定提现账户，绑定后从会员子账户中提现到绑定账户。
 转账鉴权有两种形式：往账鉴权和来账鉴权。
@@ -188,6 +189,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryOpenBankExternalSubMerchantRegistrationResponse QueryOpenBankExternalSubMerchantRegistration(Models\QueryOpenBankExternalSubMerchantRegistrationRequest $req) 云企付-子商户进件结果查询
  * @method Models\QueryOpenBankOrderDetailReceiptInfoResponse QueryOpenBankOrderDetailReceiptInfo(Models\QueryOpenBankOrderDetailReceiptInfoRequest $req) 云企付-单笔交易回单申请结果查询
  * @method Models\QueryOpenBankPaymentOrderResponse QueryOpenBankPaymentOrder(Models\QueryOpenBankPaymentOrderRequest $req) 云企付-查询订单支付结果
+ * @method Models\QueryOpenBankProfitSharePayeeResponse QueryOpenBankProfitSharePayee(Models\QueryOpenBankProfitSharePayeeRequest $req) 云企付-绑定分账收款方查询
  * @method Models\QueryOpenBankRefundOrderResponse QueryOpenBankRefundOrder(Models\QueryOpenBankRefundOrderRequest $req) 云企付-退款结果查询
  * @method Models\QueryOpenBankSettleOrderResponse QueryOpenBankSettleOrder(Models\QueryOpenBankSettleOrderRequest $req) 云企付-结算单查询结果
  * @method Models\QueryOpenBankSubMerchantCredentialResponse QueryOpenBankSubMerchantCredential(Models\QueryOpenBankSubMerchantCredentialRequest $req) 云企付-子商户资质文件查询

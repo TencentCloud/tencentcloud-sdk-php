@@ -181,6 +181,8 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeEscapeRuleInfoResponse DescribeEscapeRuleInfo(Models\DescribeEscapeRuleInfoRequest $req) DescribeEscapeRuleInfo 查询容器逃逸扫描规则信息
  * @method Models\DescribeEscapeSafeStateResponse DescribeEscapeSafeState(Models\DescribeEscapeSafeStateRequest $req) DescribeEscapeSafeState 查询容器逃逸安全状态
  * @method Models\DescribeEscapeWhiteListResponse DescribeEscapeWhiteList(Models\DescribeEscapeWhiteListRequest $req) 查询逃逸白名单
+ * @method Models\DescribeExportJobDownloadURLResponse DescribeExportJobDownloadURL(Models\DescribeExportJobDownloadURLRequest $req) 查询导出任务下载URL
+ * @method Models\DescribeExportJobManageListResponse DescribeExportJobManageList(Models\DescribeExportJobManageListRequest $req) 查询导出任务管理列表
  * @method Models\DescribeExportJobResultResponse DescribeExportJobResult(Models\DescribeExportJobResultRequest $req) 查询导出任务的结果
  * @method Models\DescribeImageAuthorizedInfoResponse DescribeImageAuthorizedInfo(Models\DescribeImageAuthorizedInfoRequest $req) DescribeImageAuthorizedInfo  查询镜像授权信息
  * @method Models\DescribeImageAutoAuthorizedLogListResponse DescribeImageAutoAuthorizedLogList(Models\DescribeImageAutoAuthorizedLogListRequest $req) 查询镜像自动授权结果列表

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDatabase() 获取PostgreSQL的数据库名称
  * @method void setDatabase(string $Database) 设置PostgreSQL的数据库名称
- * @method string getTable() 获取PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
- * @method void setTable(string $Table) 设置PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+ * @method string getTable() 获取PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"Schema名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"Schema名\\.数据表名"
+ * @method void setTable(string $Table) 设置PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"Schema名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"Schema名\\.数据表名"
  * @method string getResource() 获取该PostgreSQL在连接管理内的Id
  * @method void setResource(string $Resource) 设置该PostgreSQL在连接管理内的Id
  * @method string getPluginName() 获取插件名(decoderbufs/pgoutput)，默认为decoderbufs
@@ -55,7 +55,7 @@ class PostgreSQLParam extends AbstractModel
     public $Database;
 
     /**
-     * @var string PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+     * @var string PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"Schema名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"Schema名\\.数据表名"
      */
     public $Table;
 
@@ -116,7 +116,7 @@ class PostgreSQLParam extends AbstractModel
 
     /**
      * @param string $Database PostgreSQL的数据库名称
-     * @param string $Table PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+     * @param string $Table PostgreSQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"Schema名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"Schema名\\.数据表名"
      * @param string $Resource 该PostgreSQL在连接管理内的Id
      * @param string $PluginName 插件名(decoderbufs/pgoutput)，默认为decoderbufs
      * @param string $SnapshotMode 复制存量信息(never增量, initial全量)，默认为initial

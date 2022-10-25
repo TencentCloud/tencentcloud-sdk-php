@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevStatus(string $DevStatus) 设置状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProductOwnerName() 获取产品拥有者名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProductOwnerName(string $ProductOwnerName) 设置产品拥有者名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BindProductInfo extends AbstractModel
 {
@@ -98,6 +102,12 @@ class BindProductInfo extends AbstractModel
     public $DevStatus;
 
     /**
+     * @var string 产品拥有者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProductOwnerName;
+
+    /**
      * @param string $ProductId 产品ID。
      * @param string $ProductName 产品名称。
      * @param string $ProjectId 产品所属项目ID。
@@ -111,6 +121,8 @@ class BindProductInfo extends AbstractModel
      * @param string $NetType 连接类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DevStatus 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProductOwnerName 产品拥有者名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -156,6 +168,10 @@ class BindProductInfo extends AbstractModel
 
         if (array_key_exists("DevStatus",$param) and $param["DevStatus"] !== null) {
             $this->DevStatus = $param["DevStatus"];
+        }
+
+        if (array_key_exists("ProductOwnerName",$param) and $param["ProductOwnerName"] !== null) {
+            $this->ProductOwnerName = $param["ProductOwnerName"];
         }
     }
 }

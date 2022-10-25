@@ -202,9 +202,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentTime(string $CurrentTime) 设置系统当前时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsFederation() 获取是否用于联邦
+ * @method integer getIsFederation() 获取是否用于联邦 ,1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsFederation(integer $IsFederation) 设置是否用于联邦
+ * @method void setIsFederation(integer $IsFederation) 设置是否用于联邦 ,1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceName() 获取设备名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -489,7 +489,7 @@ class NodeHardwareInfo extends AbstractModel
     public $CurrentTime;
 
     /**
-     * @var integer 是否用于联邦
+     * @var integer 是否用于联邦 ,1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFederation;
@@ -598,7 +598,7 @@ class NodeHardwareInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentTime 系统当前时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsFederation 是否用于联邦
+     * @param integer $IsFederation 是否用于联邦 ,1是，0否
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 设备名称
 注意：此字段可能返回 null，表示取不到有效值。

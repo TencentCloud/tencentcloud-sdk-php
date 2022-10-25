@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量
  * @method integer getLimit() 获取分页大小
  * @method void setLimit(integer $Limit) 设置分页大小
+ * @method integer getProductSource() 获取是否跨账号绑定产品
+ * @method void setProductSource(integer $ProductSource) 设置是否跨账号绑定产品
  */
 class DescribeBindedProductsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeBindedProductsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer 是否跨账号绑定产品
+     */
+    public $ProductSource;
+
+    /**
      * @param string $GatewayProductId 网关产品ID
      * @param integer $Offset 分页偏移量
      * @param integer $Limit 分页大小
+     * @param integer $ProductSource 是否跨账号绑定产品
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeBindedProductsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("ProductSource",$param) and $param["ProductSource"] !== null) {
+            $this->ProductSource = $param["ProductSource"];
         }
     }
 }

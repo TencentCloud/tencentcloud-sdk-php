@@ -62,6 +62,10 @@ _UNKNOWN：默认未知
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSettleFee(string $SettleFee) 设置结算手续费
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCurrency() 获取账户货币。参考附录“币种类型”。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrency(string $Currency) 设置账户货币。参考附录“币种类型”。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueryOpenBankSettleOrderResult extends AbstractModel
 {
@@ -123,6 +127,12 @@ _UNKNOWN：默认未知
     public $SettleFee;
 
     /**
+     * @var string 账户货币。参考附录“币种类型”。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Currency;
+
+    /**
      * @param string $OutSettleId 外部结算流水号
      * @param string $ChannelSettleId 渠道结算流水号
      * @param string $SettleStatus 退款状态。
@@ -143,6 +153,8 @@ _UNKNOWN：默认未知
      * @param string $TimeFinish 完成时间，格式yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SettleFee 结算手续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Currency 账户货币。参考附录“币种类型”。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -192,6 +204,10 @@ _UNKNOWN：默认未知
 
         if (array_key_exists("SettleFee",$param) and $param["SettleFee"] !== null) {
             $this->SettleFee = $param["SettleFee"];
+        }
+
+        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
+            $this->Currency = $param["Currency"];
         }
     }
 }

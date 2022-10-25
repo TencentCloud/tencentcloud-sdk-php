@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateImageExportJob请求参数结构体
  *
- * @method array getExportField() 获取导出字段
- * @method void setExportField(array $ExportField) 设置导出字段
  * @method array getFilters() 获取过滤条件。
 <li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
 <li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li>
@@ -40,14 +38,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBy(string $By) 设置排序字段
  * @method string getOrder() 获取排序方式 asc,desc
  * @method void setOrder(string $Order) 设置排序方式 asc,desc
+ * @method array getExportField() 获取导出字段
+ * @method void setExportField(array $ExportField) 设置导出字段
  */
 class CreateImageExportJobRequest extends AbstractModel
 {
-    /**
-     * @var array 导出字段
-     */
-    public $ExportField;
-
     /**
      * @var array 过滤条件。
 <li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
@@ -78,7 +73,11 @@ class CreateImageExportJobRequest extends AbstractModel
     public $Order;
 
     /**
-     * @param array $ExportField 导出字段
+     * @var array 导出字段
+     */
+    public $ExportField;
+
+    /**
      * @param array $Filters 过滤条件。
 <li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
 <li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li>
@@ -88,6 +87,7 @@ class CreateImageExportJobRequest extends AbstractModel
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param string $By 排序字段
      * @param string $Order 排序方式 asc,desc
+     * @param array $ExportField 导出字段
      */
     function __construct()
     {
@@ -102,10 +102,6 @@ class CreateImageExportJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
-            $this->ExportField = $param["ExportField"];
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -129,6 +125,10 @@ class CreateImageExportJobRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
+            $this->ExportField = $param["ExportField"];
         }
     }
 }

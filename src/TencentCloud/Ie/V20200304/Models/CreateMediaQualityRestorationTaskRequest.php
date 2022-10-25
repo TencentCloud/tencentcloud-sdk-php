@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaveInfo(SaveInfo $SaveInfo) 设置任务结束后文件存储信息。
  * @method CallbackInfo getCallbackInfo() 获取任务结果回调地址信息。
  * @method void setCallbackInfo(CallbackInfo $CallbackInfo) 设置任务结果回调地址信息。
+ * @method integer getTopSpeedCodecChannel() 获取极速高清体验馆渠道标志。
+ * @method void setTopSpeedCodecChannel(integer $TopSpeedCodecChannel) 设置极速高清体验馆渠道标志。
  */
 class CreateMediaQualityRestorationTaskRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateMediaQualityRestorationTaskRequest extends AbstractModel
     public $CallbackInfo;
 
     /**
+     * @var integer 极速高清体验馆渠道标志。
+     */
+    public $TopSpeedCodecChannel;
+
+    /**
      * @param DownInfo $DownInfo 源文件地址。
      * @param array $TransInfo 画质重生任务参数信息。
      * @param SaveInfo $SaveInfo 任务结束后文件存储信息。
      * @param CallbackInfo $CallbackInfo 任务结果回调地址信息。
+     * @param integer $TopSpeedCodecChannel 极速高清体验馆渠道标志。
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class CreateMediaQualityRestorationTaskRequest extends AbstractModel
         if (array_key_exists("CallbackInfo",$param) and $param["CallbackInfo"] !== null) {
             $this->CallbackInfo = new CallbackInfo();
             $this->CallbackInfo->deserialize($param["CallbackInfo"]);
+        }
+
+        if (array_key_exists("TopSpeedCodecChannel",$param) and $param["TopSpeedCodecChannel"] !== null) {
+            $this->TopSpeedCodecChannel = $param["TopSpeedCodecChannel"];
         }
     }
 }

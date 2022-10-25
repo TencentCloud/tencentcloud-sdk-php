@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocked(integer $Locked) 设置环境是否上锁，1为上锁，0则未上锁
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NamespaceInfo extends AbstractModel
 {
@@ -103,6 +107,12 @@ class NamespaceInfo extends AbstractModel
     public $Locked;
 
     /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvironmentId ID 信息
      * @param string $NamespaceName 名字（已弃用）
      * @param string $Region 地域
@@ -115,6 +125,8 @@ class NamespaceInfo extends AbstractModel
      * @param string $ApmInstanceId APM 资源 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Locked 环境是否上锁，1为上锁，0则未上锁
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -168,6 +180,15 @@ class NamespaceInfo extends AbstractModel
 
         if (array_key_exists("Locked",$param) and $param["Locked"] !== null) {
             $this->Locked = $param["Locked"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

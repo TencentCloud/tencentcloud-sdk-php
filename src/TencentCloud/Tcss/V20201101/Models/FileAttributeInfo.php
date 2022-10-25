@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileCreateTime(string $FileCreateTime) 设置文件创建时间
  * @method string getLatestTamperedFileMTime() 获取最近被篡改文件创建时间
  * @method void setLatestTamperedFileMTime(string $LatestTamperedFileMTime) 设置最近被篡改文件创建时间
+ * @method string getNewFile() 获取新文件内容
+ * @method void setNewFile(string $NewFile) 设置新文件内容
+ * @method string getFileDiff() 获取新旧文件的差异
+ * @method void setFileDiff(string $FileDiff) 设置新旧文件的差异
  */
 class FileAttributeInfo extends AbstractModel
 {
@@ -66,12 +70,24 @@ class FileAttributeInfo extends AbstractModel
     public $LatestTamperedFileMTime;
 
     /**
+     * @var string 新文件内容
+     */
+    public $NewFile;
+
+    /**
+     * @var string 新旧文件的差异
+     */
+    public $FileDiff;
+
+    /**
      * @param string $FileName 文件名
      * @param string $FileType 文件类型
      * @param integer $FileSize 文件大小(字节)
      * @param string $FilePath 文件路径
      * @param string $FileCreateTime 文件创建时间
      * @param string $LatestTamperedFileMTime 最近被篡改文件创建时间
+     * @param string $NewFile 新文件内容
+     * @param string $FileDiff 新旧文件的差异
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class FileAttributeInfo extends AbstractModel
 
         if (array_key_exists("LatestTamperedFileMTime",$param) and $param["LatestTamperedFileMTime"] !== null) {
             $this->LatestTamperedFileMTime = $param["LatestTamperedFileMTime"];
+        }
+
+        if (array_key_exists("NewFile",$param) and $param["NewFile"] !== null) {
+            $this->NewFile = $param["NewFile"];
+        }
+
+        if (array_key_exists("FileDiff",$param) and $param["FileDiff"] !== null) {
+            $this->FileDiff = $param["FileDiff"];
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置条目
  * @method integer getPages() 获取页数
  * @method void setPages(integer $Pages) 设置页数
+ * @method integer getCurrent() 获取当前条数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrent(integer $Current) 设置当前条数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServicePage extends AbstractModel
 {
@@ -52,10 +56,18 @@ class ServicePage extends AbstractModel
     public $Pages;
 
     /**
+     * @var integer 当前条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Current;
+
+    /**
      * @param array $Records 条目
      * @param integer $Total 总数
      * @param integer $Size 条目
      * @param integer $Pages 页数
+     * @param integer $Current 当前条数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -89,6 +101,10 @@ class ServicePage extends AbstractModel
 
         if (array_key_exists("Pages",$param) and $param["Pages"] !== null) {
             $this->Pages = $param["Pages"];
+        }
+
+        if (array_key_exists("Current",$param) and $param["Current"] !== null) {
+            $this->Current = $param["Current"];
         }
     }
 }

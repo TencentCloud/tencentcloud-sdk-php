@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页下标
  * @method integer getSourceChannel() 获取来源source
  * @method void setSourceChannel(integer $SourceChannel) 设置来源source
+ * @method array getFilters() 获取查询过滤器
+ * @method void setFilters(array $Filters) 设置查询过滤器
  */
 class DescribeEnvironmentsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeEnvironmentsRequest extends AbstractModel
     public $SourceChannel;
 
     /**
+     * @var array 查询过滤器
+     */
+    public $Filters;
+
+    /**
      * @param integer $Limit 分页limit
      * @param integer $Offset 分页下标
      * @param integer $SourceChannel 来源source
+     * @param array $Filters 查询过滤器
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class DescribeEnvironmentsRequest extends AbstractModel
 
         if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
             $this->SourceChannel = $param["SourceChannel"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new QueryFilter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDatabase() 获取MySQL的数据库名称，"*"为全数据库
  * @method void setDatabase(string $Database) 设置MySQL的数据库名称，"*"为全数据库
- * @method string getTable() 获取MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
- * @method void setTable(string $Table) 设置MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+ * @method string getTable() 获取MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
+ * @method void setTable(string $Table) 设置MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
  * @method string getResource() 获取该MySQL在连接管理内的Id
  * @method void setResource(string $Resource) 设置该MySQL在连接管理内的Id
  * @method string getSnapshotMode() 获取复制存量信息(schema_only不复制, initial全量)，默认位initial
@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordWithSchema(boolean $RecordWithSchema) 设置如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
  * @method string getSignalDatabase() 获取存放信令表的数据库名称
  * @method void setSignalDatabase(string $SignalDatabase) 设置存放信令表的数据库名称
+ * @method boolean getIsTableRegular() 获取输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+ * @method void setIsTableRegular(boolean $IsTableRegular) 设置输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
  */
 class MySQLParam extends AbstractModel
 {
@@ -77,7 +79,7 @@ class MySQLParam extends AbstractModel
     public $Database;
 
     /**
-     * @var string MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+     * @var string MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
      */
     public $Table;
 
@@ -192,8 +194,13 @@ class MySQLParam extends AbstractModel
     public $SignalDatabase;
 
     /**
+     * @var boolean 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
+     */
+    public $IsTableRegular;
+
+    /**
      * @param string $Database MySQL的数据库名称，"*"为全数据库
-     * @param string $Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写
+     * @param string $Table MySQL的数据表名称，"*"为所监听的所有数据库中的非系统表，可以","间隔，监听多个数据表，但数据表需要以"数据库名.数据表名"的格式进行填写，需要填入正则表达式时，格式为"数据库名\\.数据表名"
      * @param string $Resource 该MySQL在连接管理内的Id
      * @param string $SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认位initial
      * @param string $DdlTopic 存放MySQL的Ddl信息的Topic，为空则默认不存放
@@ -216,6 +223,7 @@ class MySQLParam extends AbstractModel
      * @param boolean $IncludeQuery 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
      * @param boolean $RecordWithSchema 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
      * @param string $SignalDatabase 存放信令表的数据库名称
+     * @param boolean $IsTableRegular 输入的table是否为正则表达式，如果该选项以及IsTablePrefix同时为true，该选项的判断优先级高于IsTablePrefix
      */
     function __construct()
     {
@@ -330,6 +338,10 @@ class MySQLParam extends AbstractModel
 
         if (array_key_exists("SignalDatabase",$param) and $param["SignalDatabase"] !== null) {
             $this->SignalDatabase = $param["SignalDatabase"];
+        }
+
+        if (array_key_exists("IsTableRegular",$param) and $param["IsTableRegular"] !== null) {
+            $this->IsTableRegular = $param["IsTableRegular"];
         }
     }
 }

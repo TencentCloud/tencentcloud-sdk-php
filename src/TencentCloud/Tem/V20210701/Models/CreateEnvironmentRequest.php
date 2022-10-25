@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  * @method boolean getEnableTswTraceService() 获取是否开启tsw服务
  * @method void setEnableTswTraceService(boolean $EnableTswTraceService) 设置是否开启tsw服务
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class CreateEnvironmentRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateEnvironmentRequest extends AbstractModel
     public $EnableTswTraceService;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $EnvironmentName 环境名称
      * @param string $Vpc 私有网络名称
      * @param array $SubnetIds 子网列表
@@ -80,6 +87,7 @@ class CreateEnvironmentRequest extends AbstractModel
      * @param string $K8sVersion K8s version
      * @param integer $SourceChannel 来源渠道
      * @param boolean $EnableTswTraceService 是否开启tsw服务
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class CreateEnvironmentRequest extends AbstractModel
 
         if (array_key_exists("EnableTswTraceService",$param) and $param["EnableTswTraceService"] !== null) {
             $this->EnableTswTraceService = $param["EnableTswTraceService"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

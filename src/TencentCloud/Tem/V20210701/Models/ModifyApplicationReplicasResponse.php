@@ -20,17 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplicationReplicas返回参数结构体
  *
+ * @method boolean getResult() 获取是否成功
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(boolean $Result) 设置是否成功
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyApplicationReplicasResponse extends AbstractModel
 {
     /**
+     * @var boolean 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Result;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param boolean $Result 是否成功
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +58,10 @@ class ModifyApplicationReplicasResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

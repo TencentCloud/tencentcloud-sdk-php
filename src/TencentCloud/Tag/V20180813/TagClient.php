@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tag\V20180813\Models as Models;
 
 /**
+ * @method Models\AddProjectResponse AddProject(Models\AddProjectRequest $req) 创建项目
  * @method Models\AddResourceTagResponse AddResourceTag(Models\AddResourceTagRequest $req) 本接口用于给标签关联资源
  * @method Models\AttachResourcesTagResponse AttachResourcesTag(Models\AttachResourcesTagRequest $req) 给多个资源关联某个标签
  * @method Models\CreateTagResponse CreateTag(Models\CreateTagRequest $req) 本接口用于创建一对标签键和标签值
@@ -54,6 +55,7 @@ use TencentCloud\Tag\V20180813\Models as Models;
  * @method Models\ModifyResourcesTagValueResponse ModifyResourcesTagValue(Models\ModifyResourcesTagValueRequest $req) 修改多个资源关联的某个标签键对应的标签值
  * @method Models\TagResourcesResponse TagResources(Models\TagResourcesRequest $req) 为指定的多个云产品的多个云资源统一创建并绑定标签。
  * @method Models\UnTagResourcesResponse UnTagResources(Models\UnTagResourcesRequest $req) 指定的多个云产品的多个云资源统一解绑标签。
+ * @method Models\UpdateProjectResponse UpdateProject(Models\UpdateProjectRequest $req) 修改项目
  * @method Models\UpdateResourceTagValueResponse UpdateResourceTagValue(Models\UpdateResourceTagValueRequest $req) 本接口用于修改资源已关联的标签值（标签键不变）
  */
 

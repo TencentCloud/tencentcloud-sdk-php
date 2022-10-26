@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterInstanceIdList(array $FilterInstanceIdList) 设置实例id数组
  * @method integer getFilterEnterpriseFlag() 获取企业版搜索
  * @method void setFilterEnterpriseFlag(integer $FilterEnterpriseFlag) 设置企业版搜索
+ * @method integer getFilterLightFlag() 获取轻量版搜索
+ * @method void setFilterLightFlag(integer $FilterLightFlag) 设置轻量版搜索
+ * @method integer getFilterChannelFlag() 获取定制版搜索
+ * @method void setFilterChannelFlag(integer $FilterChannelFlag) 设置定制版搜索
  * @method TagFilter getFilterTag() 获取标签搜索
  * @method void setFilterTag(TagFilter $FilterTag) 设置标签搜索
  */
@@ -103,6 +107,16 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterEnterpriseFlag;
 
     /**
+     * @var integer 轻量版搜索
+     */
+    public $FilterLightFlag;
+
+    /**
+     * @var integer 定制版搜索
+     */
+    public $FilterChannelFlag;
+
+    /**
      * @var TagFilter 标签搜索
      */
     public $FilterTag;
@@ -119,6 +133,8 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param string $FilterBoundStatus 高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
      * @param array $FilterInstanceIdList 实例id数组
      * @param integer $FilterEnterpriseFlag 企业版搜索
+     * @param integer $FilterLightFlag 轻量版搜索
+     * @param integer $FilterChannelFlag 定制版搜索
      * @param TagFilter $FilterTag 标签搜索
      */
     function __construct()
@@ -176,6 +192,14 @@ class DescribeListBGPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterEnterpriseFlag",$param) and $param["FilterEnterpriseFlag"] !== null) {
             $this->FilterEnterpriseFlag = $param["FilterEnterpriseFlag"];
+        }
+
+        if (array_key_exists("FilterLightFlag",$param) and $param["FilterLightFlag"] !== null) {
+            $this->FilterLightFlag = $param["FilterLightFlag"];
+        }
+
+        if (array_key_exists("FilterChannelFlag",$param) and $param["FilterChannelFlag"] !== null) {
+            $this->FilterChannelFlag = $param["FilterChannelFlag"];
         }
 
         if (array_key_exists("FilterTag",$param) and $param["FilterTag"] !== null) {

@@ -62,6 +62,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseNewAnalysis(boolean $UseNewAnalysis) 设置为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效
 为false时代表使用老的检索结果返回方式, 输出AnalysisResults和ColNames有效
 两种返回方式在编码格式上有少量区别，建议使用true
+ * @method float getSamplingRate() 获取执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
+0：自动采样;
+0～1：按指定采样率采样，例如0.02;
+1：不采样，即精确分析
+默认值为1
+ * @method void setSamplingRate(float $SamplingRate) 设置执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
+0：自动采样;
+0～1：按指定采样率采样，例如0.02;
+1：不采样，即精确分析
+默认值为1
  */
 class SearchLogRequest extends AbstractModel
 {
@@ -119,6 +129,15 @@ class SearchLogRequest extends AbstractModel
     public $UseNewAnalysis;
 
     /**
+     * @var float 执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
+0：自动采样;
+0～1：按指定采样率采样，例如0.02;
+1：不采样，即精确分析
+默认值为1
+     */
+    public $SamplingRate;
+
+    /**
      * @param string $TopicId 要检索分析的日志主题ID
      * @param integer $From 要检索分析的日志的起始时间，Unix时间戳（毫秒）
      * @param integer $To 要检索分析的日志的结束时间，Unix时间戳（毫秒）
@@ -140,6 +159,11 @@ class SearchLogRequest extends AbstractModel
      * @param boolean $UseNewAnalysis 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效
 为false时代表使用老的检索结果返回方式, 输出AnalysisResults和ColNames有效
 两种返回方式在编码格式上有少量区别，建议使用true
+     * @param float $SamplingRate 执行统计分析（Query中包含SQL）时，是否对原始日志先进行采样，再进行统计分析。
+0：自动采样;
+0～1：按指定采样率采样，例如0.02;
+1：不采样，即精确分析
+默认值为1
      */
     function __construct()
     {
@@ -184,6 +208,10 @@ class SearchLogRequest extends AbstractModel
 
         if (array_key_exists("UseNewAnalysis",$param) and $param["UseNewAnalysis"] !== null) {
             $this->UseNewAnalysis = $param["UseNewAnalysis"];
+        }
+
+        if (array_key_exists("SamplingRate",$param) and $param["SamplingRate"] !== null) {
+            $this->SamplingRate = $param["SamplingRate"];
         }
     }
 }

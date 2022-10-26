@@ -33,15 +33,15 @@ bash: "container_bash",
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
-<li>Status- String - 是否必填：否 - 主机状态 /li>
-<li>HostIP- String - 是否必填：否 - 主机内网IP /li>
-<li>PublicIP- String - 是否必填：否 - 主机外网IP /li>
-<li>HostName- String - 是否必填：否 - 主机名称 /li>
+<li>Status- String - 是否必填：否 - 主机状态 </li>
+<li>HostIP- String - 是否必填：否 - 主机内网IP </li>
+<li>PublicIP- String - 是否必填：否 - 主机外网IP </li>
+<li>HostName- String - 是否必填：否 - 主机名称 </li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li>Status- String - 是否必填：否 - 主机状态 /li>
-<li>HostIP- String - 是否必填：否 - 主机内网IP /li>
-<li>PublicIP- String - 是否必填：否 - 主机外网IP /li>
-<li>HostName- String - 是否必填：否 - 主机名称 /li>
+<li>Status- String - 是否必填：否 - 主机状态 </li>
+<li>HostIP- String - 是否必填：否 - 主机内网IP </li>
+<li>PublicIP- String - 是否必填：否 - 主机外网IP </li>
+<li>HostName- String - 是否必填：否 - 主机名称 </li>
  * @method string getBy() 获取排序字段
  * @method void setBy(string $By) 设置排序字段
  * @method string getOrder() 获取排序方式
@@ -69,10 +69,10 @@ bash: "container_bash",
 
     /**
      * @var array 过滤条件。
-<li>Status- String - 是否必填：否 - 主机状态 /li>
-<li>HostIP- String - 是否必填：否 - 主机内网IP /li>
-<li>PublicIP- String - 是否必填：否 - 主机外网IP /li>
-<li>HostName- String - 是否必填：否 - 主机名称 /li>
+<li>Status- String - 是否必填：否 - 主机状态 </li>
+<li>HostIP- String - 是否必填：否 - 主机内网IP </li>
+<li>PublicIP- String - 是否必填：否 - 主机外网IP </li>
+<li>HostName- String - 是否必填：否 - 主机名称 </li>
      */
     public $Filters;
 
@@ -94,10 +94,10 @@ bash: "container_bash",
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
-<li>Status- String - 是否必填：否 - 主机状态 /li>
-<li>HostIP- String - 是否必填：否 - 主机内网IP /li>
-<li>PublicIP- String - 是否必填：否 - 主机外网IP /li>
-<li>HostName- String - 是否必填：否 - 主机名称 /li>
+<li>Status- String - 是否必填：否 - 主机状态 </li>
+<li>HostIP- String - 是否必填：否 - 主机内网IP </li>
+<li>PublicIP- String - 是否必填：否 - 主机外网IP </li>
+<li>HostName- String - 是否必填：否 - 主机名称 </li>
      * @param string $By 排序字段
      * @param string $Order 排序方式
      */

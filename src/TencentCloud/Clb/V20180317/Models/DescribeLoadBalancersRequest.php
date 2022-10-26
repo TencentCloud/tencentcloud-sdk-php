@@ -34,10 +34,10 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setDomain(string $Domain) 设置腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
  * @method array getLoadBalancerVips() 获取负载均衡实例的 VIP 地址，支持多个。
  * @method void setLoadBalancerVips(array $LoadBalancerVips) 设置负载均衡实例的 VIP 地址，支持多个。
- * @method array getBackendPublicIps() 获取负载均衡绑定的后端服务的外网 IP。
- * @method void setBackendPublicIps(array $BackendPublicIps) 设置负载均衡绑定的后端服务的外网 IP。
- * @method array getBackendPrivateIps() 获取负载均衡绑定的后端服务的内网 IP。
- * @method void setBackendPrivateIps(array $BackendPrivateIps) 设置负载均衡绑定的后端服务的内网 IP。
+ * @method array getBackendPublicIps() 获取负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
+ * @method void setBackendPublicIps(array $BackendPublicIps) 设置负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
+ * @method array getBackendPrivateIps() 获取负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。
+ * @method void setBackendPrivateIps(array $BackendPrivateIps) 设置负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。
  * @method integer getOffset() 获取数据偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为0。
  * @method integer getLimit() 获取返回负载均衡实例的数量，默认为20，最大值为100。
@@ -115,12 +115,12 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $LoadBalancerVips;
 
     /**
-     * @var array 负载均衡绑定的后端服务的外网 IP。
+     * @var array 负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
      */
     public $BackendPublicIps;
 
     /**
-     * @var array 负载均衡绑定的后端服务的内网 IP。
+     * @var array 负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。
      */
     public $BackendPrivateIps;
 
@@ -197,8 +197,8 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $Domain 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
      * @param array $LoadBalancerVips 负载均衡实例的 VIP 地址，支持多个。
-     * @param array $BackendPublicIps 负载均衡绑定的后端服务的外网 IP。
-     * @param array $BackendPrivateIps 负载均衡绑定的后端服务的内网 IP。
+     * @param array $BackendPublicIps 负载均衡绑定的后端服务的外网 IP，只支持查询云服务器的公网 IP。
+     * @param array $BackendPrivateIps 负载均衡绑定的后端服务的内网 IP，只支持查询云服务器的内网 IP。
      * @param integer $Offset 数据偏移量，默认为0。
      * @param integer $Limit 返回负载均衡实例的数量，默认为20，最大值为100。
      * @param string $OrderBy 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。

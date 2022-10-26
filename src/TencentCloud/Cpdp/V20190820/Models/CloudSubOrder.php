@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttachmentInfoList(array $AttachmentInfoList) 设置附加项信息列表。
 例如溢价信息、抵扣信息、积分信息、补贴信息
 通过该字段可以实现渠道方的优惠抵扣补贴等营销功能。
+ * @method array getExternalAttachmentDataList() 获取渠道透传数据列表。
+ * @method void setExternalAttachmentDataList(array $ExternalAttachmentDataList) 设置渠道透传数据列表。
  */
 class CloudSubOrder extends AbstractModel
 {
@@ -144,6 +146,11 @@ class CloudSubOrder extends AbstractModel
     public $AttachmentInfoList;
 
     /**
+     * @var array 渠道透传数据列表。
+     */
+    public $ExternalAttachmentDataList;
+
+    /**
      * @param string $SubOutTradeNo 子订单号。
 长度32个字符供参考，部分渠道存在长度更短的情况接入时请联系开发咨询。
      * @param string $SubAppId 支付子商户ID。
@@ -168,6 +175,7 @@ class CloudSubOrder extends AbstractModel
      * @param array $AttachmentInfoList 附加项信息列表。
 例如溢价信息、抵扣信息、积分信息、补贴信息
 通过该字段可以实现渠道方的优惠抵扣补贴等营销功能。
+     * @param array $ExternalAttachmentDataList 渠道透传数据列表。
      */
     function __construct()
     {
@@ -233,6 +241,15 @@ class CloudSubOrder extends AbstractModel
                 $obj = new CloudAttachmentInfo();
                 $obj->deserialize($value);
                 array_push($this->AttachmentInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("ExternalAttachmentDataList",$param) and $param["ExternalAttachmentDataList"] !== null) {
+            $this->ExternalAttachmentDataList = [];
+            foreach ($param["ExternalAttachmentDataList"] as $key => $value){
+                $obj = new CloudExternalAttachmentData();
+                $obj->deserialize($value);
+                array_push($this->ExternalAttachmentDataList, $obj);
             }
         }
     }

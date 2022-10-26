@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchId(string $BatchId) 设置批次ID，系统自动生成
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
- * @method string getMpTpl() 获取活动ID
- * @method void setMpTpl(string $MpTpl) 设置活动ID
- * @method string getCloneId() 获取克隆批次ID
- * @method void setCloneId(string $CloneId) 设置克隆批次ID
+ * @method string getMpTpl() 获取模版ID，或者活动ID
+ * @method void setMpTpl(string $MpTpl) 设置模版ID，或者活动ID
+ * @method string getCloneId() 获取克隆批次ID，同时会复制溯源信息
+ * @method void setCloneId(string $CloneId) 设置克隆批次ID，同时会复制溯源信息
  */
 class CreateCodeBatchRequest extends AbstractModel
 {
@@ -70,12 +70,12 @@ class CreateCodeBatchRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var string 活动ID
+     * @var string 模版ID，或者活动ID
      */
     public $MpTpl;
 
     /**
-     * @var string 克隆批次ID
+     * @var string 克隆批次ID，同时会复制溯源信息
      */
     public $CloneId;
 
@@ -86,8 +86,8 @@ class CreateCodeBatchRequest extends AbstractModel
      * @param integer $BatchType 批次类型 0:溯源 1:营销
      * @param string $BatchId 批次ID，系统自动生成
      * @param string $Remark 备注
-     * @param string $MpTpl 活动ID
-     * @param string $CloneId 克隆批次ID
+     * @param string $MpTpl 模版ID，或者活动ID
+     * @param string $CloneId 克隆批次ID，同时会复制溯源信息
      */
     function __construct()
     {

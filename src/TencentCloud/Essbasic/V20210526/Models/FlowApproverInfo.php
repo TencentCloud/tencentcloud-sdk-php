@@ -21,14 +21,14 @@ use TencentCloud\Common\AbstractModel;
  * 创建签署流程签署人入参。
 
 其中签署方FlowApproverInfo需要传递的参数
-非单C、单B、B2C合同，ApproverType、RecipientId（模版发起合同时）必传，建议都传。其他身份标识
+非单C、单B、B2C合同，ApproverType、RecipientId（模板发起合同时）必传，建议都传。其他身份标识
 1-个人：Name、Mobile必传
 2-渠道子客企业指定经办人：OpenId必传，OrgName必传、OrgOpenId必传；
 3-渠道合作企业不指定经办人：（暂不支持）
 4-非渠道合作企业：Name、Mobile必传，OrgName必传，且NotChannelOrganization=True。
 
 RecipientId参数：
-从DescribeTemplates接口中，可以得到模版下的签署方Recipient列表，根据模版自定义的Rolename在此结构体中确定其RecipientId
+从DescribeTemplates接口中，可以得到模板下的签署方Recipient列表，根据模板自定义的Rolename在此结构体中确定其RecipientId
  *
  * @method string getName() 获取签署人姓名，最大长度50个字符
  * @method void setName(string $Name) 设置签署人姓名，最大长度50个字符
@@ -58,12 +58,12 @@ RecipientId参数：
 PERSON_AUTO_SIGN-个人自动签；
 ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
-注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；
  * @method void setApproverType(string $ApproverType) 设置签署人类型，PERSON-个人；
 PERSON_AUTO_SIGN-个人自动签；
 ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
-注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；
  * @method string getRecipientId() 获取签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
  * @method void setRecipientId(string $RecipientId) 设置签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
  * @method integer getDeadline() 获取签署截止时间，默认一年
@@ -78,6 +78,10 @@ ENTERPRISESERVER-企业静默签;
  * @method void setPreReadTime(integer $PreReadTime) 设置合同的强制预览时间：3~300s，未指定则按合同页数计算
  * @method string getJumpUrl() 获取签署完前端跳转的url，暂未使用
  * @method void setJumpUrl(string $JumpUrl) 设置签署完前端跳转的url，暂未使用
+ * @method ApproverOption getApproverOption() 获取签署人个性化能力值
+ * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值
+ * @method boolean getApproverNeedSignReview() 获取当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+ * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置当前签署方进行签署操作是否需要企业内部审批，true 则为需要
  */
 class FlowApproverInfo extends AbstractModel
 {
@@ -130,7 +134,7 @@ class FlowApproverInfo extends AbstractModel
 PERSON_AUTO_SIGN-个人自动签；
 ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
-注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；
      */
     public $ApproverType;
 
@@ -170,6 +174,16 @@ ENTERPRISESERVER-企业静默签;
     public $JumpUrl;
 
     /**
+     * @var ApproverOption 签署人个性化能力值
+     */
+    public $ApproverOption;
+
+    /**
+     * @var boolean 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
+     */
+    public $ApproverNeedSignReview;
+
+    /**
      * @param string $Name 签署人姓名，最大长度50个字符
      * @param string $IdCardType 经办人身份证件类型
 1.ID_CARD 居民身份证
@@ -186,7 +200,7 @@ ENTERPRISESERVER-企业静默签;
 PERSON_AUTO_SIGN-个人自动签；
 ORGANIZATION-企业；
 ENTERPRISESERVER-企业静默签;
-注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
+注：ENTERPRISESERVER 类型仅用于使用文件创建签署流程（ChannelCreateFlowByFiles）接口；
      * @param string $RecipientId 签署流程签署人在模板中对应的签署人Id；在非单方签署、以及非B2C签署的场景下必传，用于指定当前签署方在签署流程中的位置；
      * @param integer $Deadline 签署截止时间，默认一年
      * @param string $CallbackUrl 签署完回调url，最大长度1000个字符
@@ -194,6 +208,8 @@ ENTERPRISESERVER-企业静默签;
      * @param array $ComponentLimitType 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
      * @param integer $PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
      * @param string $JumpUrl 签署完前端跳转的url，暂未使用
+     * @param ApproverOption $ApproverOption 签署人个性化能力值
+     * @param boolean $ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要
      */
     function __construct()
     {
@@ -275,6 +291,15 @@ ENTERPRISESERVER-企业静默签;
 
         if (array_key_exists("JumpUrl",$param) and $param["JumpUrl"] !== null) {
             $this->JumpUrl = $param["JumpUrl"];
+        }
+
+        if (array_key_exists("ApproverOption",$param) and $param["ApproverOption"] !== null) {
+            $this->ApproverOption = new ApproverOption();
+            $this->ApproverOption->deserialize($param["ApproverOption"]);
+        }
+
+        if (array_key_exists("ApproverNeedSignReview",$param) and $param["ApproverNeedSignReview"] !== null) {
+            $this->ApproverNeedSignReview = $param["ApproverNeedSignReview"];
         }
     }
 }

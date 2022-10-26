@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotAfter(integer $NotAfter) 设置任务停止时间戳，Unix 秒级时间戳
  * @method integer getTries() 获取最大尝试次数
  * @method void setTries(integer $Tries) 设置最大尝试次数
+ * @method array getVariables() 获取自定义变量（仅高级版支持）
+ * @method void setVariables(array $Variables) 设置自定义变量（仅高级版支持）
  */
 class CreateAutoCalloutTaskRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
     public $Tries;
 
     /**
+     * @var array 自定义变量（仅高级版支持）
+     */
+    public $Variables;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $NotBefore 任务起始时间戳，Unix 秒级时间戳
      * @param array $Callees 被叫号码列表
@@ -96,6 +103,7 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
      * @param string $Description 任务描述
      * @param integer $NotAfter 任务停止时间戳，Unix 秒级时间戳
      * @param integer $Tries 最大尝试次数
+     * @param array $Variables 自定义变量（仅高级版支持）
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class CreateAutoCalloutTaskRequest extends AbstractModel
 
         if (array_key_exists("Tries",$param) and $param["Tries"] !== null) {
             $this->Tries = $param["Tries"];
+        }
+
+        if (array_key_exists("Variables",$param) and $param["Variables"] !== null) {
+            $this->Variables = [];
+            foreach ($param["Variables"] as $key => $value){
+                $obj = new Variable();
+                $obj->deserialize($value);
+                array_push($this->Variables, $obj);
+            }
         }
     }
 }

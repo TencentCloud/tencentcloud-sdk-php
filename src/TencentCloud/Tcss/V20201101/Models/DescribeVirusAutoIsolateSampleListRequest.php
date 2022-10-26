@@ -25,13 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method array getFilters() 获取过滤条件。
-<li>MD5- String - 是否必填：否 - md5 /li>
-<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 /li>
-<li>VirusName- String - 是否必填：否 - 病毒名 /li>
+<li>MD5- String - 是否必填：否 - md5 </li>
+<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 </li>
+<li>VirusName- String - 是否必填：否 - 病毒名 </li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li>MD5- String - 是否必填：否 - md5 /li>
-<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 /li>
-<li>VirusName- String - 是否必填：否 - 病毒名 /li>
+<li>MD5- String - 是否必填：否 - md5 </li>
+<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 </li>
+<li>VirusName- String - 是否必填：否 - 病毒名 </li>
  * @method string getBy() 获取排序字段
  * @method void setBy(string $By) 设置排序字段
  * @method string getOrder() 获取排序方式
@@ -51,9 +51,9 @@ class DescribeVirusAutoIsolateSampleListRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-<li>MD5- String - 是否必填：否 - md5 /li>
-<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 /li>
-<li>VirusName- String - 是否必填：否 - 病毒名 /li>
+<li>MD5- String - 是否必填：否 - md5 </li>
+<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 </li>
+<li>VirusName- String - 是否必填：否 - 病毒名 </li>
      */
     public $Filters;
 
@@ -71,9 +71,9 @@ class DescribeVirusAutoIsolateSampleListRequest extends AbstractModel
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤条件。
-<li>MD5- String - 是否必填：否 - md5 /li>
-<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 /li>
-<li>VirusName- String - 是否必填：否 - 病毒名 /li>
+<li>MD5- String - 是否必填：否 - md5 </li>
+<li>AutoIsolateSwitch- String - 是否必填：否 - 自动隔离开关 </li>
+<li>VirusName- String - 是否必填：否 - 病毒名 </li>
      * @param string $By 排序字段
      * @param string $Order 排序方式
      */

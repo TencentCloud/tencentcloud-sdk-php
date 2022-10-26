@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCorpId(integer $CorpId) 设置企业ID
  * @method integer getStatus() 获取状态 0: 未激活 1: 已激活 -1: 已冻结
  * @method void setStatus(integer $Status) 设置状态 0: 未激活 1: 已激活 -1: 已冻结
- * @method string getMpTpl() 获取模板ID
- * @method void setMpTpl(string $MpTpl) 设置模板ID
+ * @method string getMpTpl() 获取模版ID，或者活动ID
+ * @method void setMpTpl(string $MpTpl) 设置模版ID，或者活动ID
  * @method string getMerchantId() 获取商户ID
  * @method void setMerchantId(string $MerchantId) 设置商户ID
  * @method string getProductId() 获取商品ID
@@ -53,7 +53,7 @@ class ModifyCodeBatchRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 模板ID
+     * @var string 模版ID，或者活动ID
      */
     public $MpTpl;
 
@@ -76,7 +76,7 @@ class ModifyCodeBatchRequest extends AbstractModel
      * @param string $BatchId 批次ID
      * @param integer $CorpId 企业ID
      * @param integer $Status 状态 0: 未激活 1: 已激活 -1: 已冻结
-     * @param string $MpTpl 模板ID
+     * @param string $MpTpl 模版ID，或者活动ID
      * @param string $MerchantId 商户ID
      * @param string $ProductId 商品ID
      * @param string $Remark 备注

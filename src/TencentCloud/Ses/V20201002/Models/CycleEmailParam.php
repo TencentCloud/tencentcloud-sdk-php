@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置任务开始时间
  * @method integer getIntervalTime() 获取任务周期 小时维度
  * @method void setIntervalTime(integer $IntervalTime) 设置任务周期 小时维度
+ * @method integer getTermCycle() 获取是否终止周期，用于任务更新 0否1是
+ * @method void setTermCycle(integer $TermCycle) 设置是否终止周期，用于任务更新 0否1是
  */
 class CycleEmailParam extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CycleEmailParam extends AbstractModel
     public $IntervalTime;
 
     /**
+     * @var integer 是否终止周期，用于任务更新 0否1是
+     */
+    public $TermCycle;
+
+    /**
      * @param string $BeginTime 任务开始时间
      * @param integer $IntervalTime 任务周期 小时维度
+     * @param integer $TermCycle 是否终止周期，用于任务更新 0否1是
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CycleEmailParam extends AbstractModel
 
         if (array_key_exists("IntervalTime",$param) and $param["IntervalTime"] !== null) {
             $this->IntervalTime = $param["IntervalTime"];
+        }
+
+        if (array_key_exists("TermCycle",$param) and $param["TermCycle"] !== null) {
+            $this->TermCycle = $param["TermCycle"];
         }
     }
 }

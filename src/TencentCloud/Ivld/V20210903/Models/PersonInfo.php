@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstAppear(integer $FirstAppear) 设置首次出现模态，可选值为[1,3]，详细参见AppearIndex定义
  * @method AppearInfo getAppearInfo() 获取人物出现信息
  * @method void setAppearInfo(AppearInfo $AppearInfo) 设置人物出现信息
+ * @method Rectf getAppearRect() 获取人脸在图片中的位置，仅在图片标签任务有效
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppearRect(Rectf $AppearRect) 设置人脸在图片中的位置，仅在图片标签任务有效
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PersonInfo extends AbstractModel
 {
@@ -52,10 +56,18 @@ class PersonInfo extends AbstractModel
     public $AppearInfo;
 
     /**
+     * @var Rectf 人脸在图片中的位置，仅在图片标签任务有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppearRect;
+
+    /**
      * @param string $Name 公众人物姓名
      * @param string $Job 公众人物职务
      * @param integer $FirstAppear 首次出现模态，可选值为[1,3]，详细参见AppearIndex定义
      * @param AppearInfo $AppearInfo 人物出现信息
+     * @param Rectf $AppearRect 人脸在图片中的位置，仅在图片标签任务有效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -85,6 +97,11 @@ class PersonInfo extends AbstractModel
         if (array_key_exists("AppearInfo",$param) and $param["AppearInfo"] !== null) {
             $this->AppearInfo = new AppearInfo();
             $this->AppearInfo->deserialize($param["AppearInfo"]);
+        }
+
+        if (array_key_exists("AppearRect",$param) and $param["AppearRect"] !== null) {
+            $this->AppearRect = new Rectf();
+            $this->AppearRect->deserialize($param["AppearRect"]);
         }
     }
 }

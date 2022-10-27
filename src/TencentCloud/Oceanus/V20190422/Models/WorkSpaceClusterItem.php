@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkSpaceName(string $WorkSpaceName) 设置工作空间名称
  * @method integer getStatus() 获取绑定状态  2 绑定 1  解除绑定
  * @method void setStatus(integer $Status) 设置绑定状态  2 绑定 1  解除绑定
+ * @method integer getProjectId() 获取项目ID
+ * @method void setProjectId(integer $ProjectId) 设置项目ID
+ * @method string getProjectIdStr() 获取项目ID string类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectIdStr(string $ProjectIdStr) 设置项目ID string类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkSpaceClusterItem extends AbstractModel
 {
@@ -66,12 +72,26 @@ class WorkSpaceClusterItem extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 项目ID
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 项目ID string类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectIdStr;
+
+    /**
      * @param integer $ClusterGroupId 集群 ID
      * @param string $ClusterGroupSerialId 集群 SerialId
      * @param string $ClusterName 集群名称
      * @param string $WorkSpaceId 工作空间 SerialId
      * @param string $WorkSpaceName 工作空间名称
      * @param integer $Status 绑定状态  2 绑定 1  解除绑定
+     * @param integer $ProjectId 项目ID
+     * @param string $ProjectIdStr 项目ID string类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +128,14 @@ class WorkSpaceClusterItem extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProjectIdStr",$param) and $param["ProjectIdStr"] !== null) {
+            $this->ProjectIdStr = $param["ProjectIdStr"];
         }
     }
 }

@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) 设置是否为跨AZ集群
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsHandsCluster() 获取是否手戳集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsHandsCluster(boolean $IsHandsCluster) 设置是否手戳集群
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmrListInstance extends AbstractModel
 {
@@ -264,6 +268,12 @@ class EmrListInstance extends AbstractModel
     public $IsMultiZoneCluster;
 
     /**
+     * @var boolean 是否手戳集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsHandsCluster;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $StatusDesc 状态描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -307,6 +317,8 @@ class EmrListInstance extends AbstractModel
      * @param string $ClusterClass 集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsMultiZoneCluster 是否为跨AZ集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsHandsCluster 是否手戳集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -433,6 +445,10 @@ class EmrListInstance extends AbstractModel
 
         if (array_key_exists("IsMultiZoneCluster",$param) and $param["IsMultiZoneCluster"] !== null) {
             $this->IsMultiZoneCluster = $param["IsMultiZoneCluster"];
+        }
+
+        if (array_key_exists("IsHandsCluster",$param) and $param["IsHandsCluster"] !== null) {
+            $this->IsHandsCluster = $param["IsHandsCluster"];
         }
     }
 }

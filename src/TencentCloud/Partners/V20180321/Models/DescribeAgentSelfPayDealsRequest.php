@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) 设置下单人账号ID
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取限制数目
- * @method void setLimit(integer $Limit) 设置限制数目
+ * @method integer getLimit() 获取限制数目 最大100
+ * @method void setLimit(integer $Limit) 设置限制数目 最大100
  * @method string getCreatTimeRangeStart() 获取下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
  * @method void setCreatTimeRangeStart(string $CreatTimeRangeStart) 设置下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
  * @method string getCreatTimeRangeEnd() 获取下单时间范围终止点
@@ -50,7 +50,7 @@ class DescribeAgentSelfPayDealsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 限制数目
+     * @var integer 限制数目 最大100
      */
     public $Limit;
 
@@ -82,7 +82,7 @@ class DescribeAgentSelfPayDealsRequest extends AbstractModel
     /**
      * @param string $OwnerUin 下单人账号ID
      * @param integer $Offset 偏移量
-     * @param integer $Limit 限制数目
+     * @param integer $Limit 限制数目 最大100
      * @param string $CreatTimeRangeStart 下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
      * @param string $CreatTimeRangeEnd 下单时间范围终止点
      * @param integer $Order 0:下单时间降序；其他：下单时间升序

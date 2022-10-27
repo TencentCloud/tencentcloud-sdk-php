@@ -92,6 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网，默认是集群创建时的子网
  * @method string getScaleOutServiceConfAssign() 获取预设配置组
  * @method void setScaleOutServiceConfAssign(string $ScaleOutServiceConfAssign) 设置预设配置组
+ * @method integer getAutoRenew() 获取0表示关闭自动续费，1表示开启自动续费
+ * @method void setAutoRenew(integer $AutoRenew) 设置0表示关闭自动续费，1表示开启自动续费
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -232,6 +234,11 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $ScaleOutServiceConfAssign;
 
     /**
+     * @var integer 0表示关闭自动续费，1表示开启自动续费
+     */
+    public $AutoRenew;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -268,6 +275,7 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param integer $ZoneId 可用区，默认是集群的主可用区
      * @param string $SubnetId 子网，默认是集群创建时的子网
      * @param string $ScaleOutServiceConfAssign 预设配置组
+     * @param integer $AutoRenew 0表示关闭自动续费，1表示开启自动续费
      */
     function __construct()
     {
@@ -392,6 +400,10 @@ class ScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("ScaleOutServiceConfAssign",$param) and $param["ScaleOutServiceConfAssign"] !== null) {
             $this->ScaleOutServiceConfAssign = $param["ScaleOutServiceConfAssign"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
         }
     }
 }

@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(UserInfo $Operator) 设置操作人信息，userId必填
  * @method integer getLimit() 获取返回最大数量，最大为20
  * @method void setLimit(integer $Limit) 设置返回最大数量，最大为20
- * @method array getFilters() 获取查询过滤实名用户，key为Status，Values为["IsVerified"]
- * @method void setFilters(array $Filters) 设置查询过滤实名用户，key为Status，Values为["IsVerified"]
+ * @method array getFilters() 获取查询过滤实名用户，Key为Status，Values为["IsVerified"]
+根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
+ * @method void setFilters(array $Filters) 设置查询过滤实名用户，Key为Status，Values为["IsVerified"]
+根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
  * @method integer getOffset() 获取偏移量，默认为0，最大为20000
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0，最大为20000
  */
@@ -42,7 +44,8 @@ class DescribeIntegrationEmployeesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 查询过滤实名用户，key为Status，Values为["IsVerified"]
+     * @var array 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
      */
     public $Filters;
 
@@ -54,7 +57,8 @@ class DescribeIntegrationEmployeesRequest extends AbstractModel
     /**
      * @param UserInfo $Operator 操作人信息，userId必填
      * @param integer $Limit 返回最大数量，最大为20
-     * @param array $Filters 查询过滤实名用户，key为Status，Values为["IsVerified"]
+     * @param array $Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]
+根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
      * @param integer $Offset 偏移量，默认为0，最大为20000
      */
     function __construct()

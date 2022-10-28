@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getSegmentType() 获取切片类型，仅当 Format 为 HLS 时有效。
+ * @method void setSegmentType(string $SegmentType) 设置切片类型，仅当 Format 为 HLS 时有效。
  */
 class AdaptiveDynamicStreamingTemplate extends AbstractModel
 {
@@ -150,6 +152,11 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 切片类型，仅当 Format 为 HLS 时有效。
+     */
+    public $SegmentType;
+
+    /**
      * @param integer $Definition 转自适应码流模板唯一标识。
      * @param string $Type 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
@@ -176,6 +183,7 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 <li>1：是。</li>
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $SegmentType 切片类型，仅当 Format 为 HLS 时有效。
      */
     function __construct()
     {
@@ -241,6 +249,10 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

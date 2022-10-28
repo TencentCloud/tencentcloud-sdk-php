@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnVertex(boolean $ReturnVertex) 设置是否需要返回识别出的文本行在原图上的四点坐标，默认不返回
  * @method boolean getReturnCoord() 获取是否需要返回识别出的文本行在旋转纠正之后的图像中的四点坐标，默认不返回
  * @method void setReturnCoord(boolean $ReturnCoord) 设置是否需要返回识别出的文本行在旋转纠正之后的图像中的四点坐标，默认不返回
+ * @method boolean getIsPdf() 获取是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+ * @method void setIsPdf(boolean $IsPdf) 设置是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+ * @method integer getPdfPageNumber() 获取需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+ * @method void setPdfPageNumber(integer $PdfPageNumber) 设置需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
  */
 class RecognizeMedicalInvoiceOCRRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class RecognizeMedicalInvoiceOCRRequest extends AbstractModel
     public $ReturnCoord;
 
     /**
+     * @var boolean 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     */
+    public $IsPdf;
+
+    /**
+     * @var integer 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     */
+    public $PdfPageNumber;
+
+    /**
      * @param string $ImageBase64 图片的Base64 值。
 支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载文件经Base64编码后不超过 7M。文件下载时间不超过 3 秒。
@@ -84,6 +98,8 @@ class RecognizeMedicalInvoiceOCRRequest extends AbstractModel
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param boolean $ReturnVertex 是否需要返回识别出的文本行在原图上的四点坐标，默认不返回
      * @param boolean $ReturnCoord 是否需要返回识别出的文本行在旋转纠正之后的图像中的四点坐标，默认不返回
+     * @param boolean $IsPdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
+     * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
      */
     function __construct()
     {
@@ -112,6 +128,14 @@ class RecognizeMedicalInvoiceOCRRequest extends AbstractModel
 
         if (array_key_exists("ReturnCoord",$param) and $param["ReturnCoord"] !== null) {
             $this->ReturnCoord = $param["ReturnCoord"];
+        }
+
+        if (array_key_exists("IsPdf",$param) and $param["IsPdf"] !== null) {
+            $this->IsPdf = $param["IsPdf"];
+        }
+
+        if (array_key_exists("PdfPageNumber",$param) and $param["PdfPageNumber"] !== null) {
+            $this->PdfPageNumber = $param["PdfPageNumber"];
         }
     }
 }

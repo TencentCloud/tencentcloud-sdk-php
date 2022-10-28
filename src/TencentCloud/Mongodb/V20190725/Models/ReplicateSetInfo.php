@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 语音过滤用量统计数据
+ * 副本集信息
  *
- * @method integer getDuration() 获取语音过滤总时长，单位为min
- * @method void setDuration(integer $Duration) 设置语音过滤总时长，单位为min
+ * @method array getNodes() 获取节点属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNodes(array $Nodes) 设置节点属性
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class VoiceFilterStatisticsItem extends AbstractModel
+class ReplicateSetInfo extends AbstractModel
 {
     /**
-     * @var integer 语音过滤总时长，单位为min
+     * @var array 节点属性
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Duration;
+    public $Nodes;
 
     /**
-     * @param integer $Duration 语音过滤总时长，单位为min
+     * @param array $Nodes 节点属性
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,8 +50,13 @@ class VoiceFilterStatisticsItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists("Nodes",$param) and $param["Nodes"] !== null) {
+            $this->Nodes = [];
+            foreach ($param["Nodes"] as $key => $value){
+                $obj = new NodeProperty();
+                $obj->deserialize($value);
+                array_push($this->Nodes, $obj);
+            }
         }
     }
 }

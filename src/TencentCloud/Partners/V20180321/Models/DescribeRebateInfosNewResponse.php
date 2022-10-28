@@ -14,28 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Yinsuda\V20220527\Models;
+namespace TencentCloud\Partners\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeKTVPlaylists返回参数结构体
+ * DescribeRebateInfosNew返回参数结构体
  *
- * @method array getPlaylistBaseInfoSet() 获取歌单基础信息。
- * @method void setPlaylistBaseInfoSet(array $PlaylistBaseInfoSet) 设置歌单基础信息。
- * @method integer getTotalCount() 获取歌单总数。
- * @method void setTotalCount(integer $TotalCount) 设置歌单总数。
+ * @method array getRebateInfoSet() 获取返佣信息列表
+ * @method void setRebateInfoSet(array $RebateInfoSet) 设置返佣信息列表
+ * @method integer getTotalCount() 获取符合查询条件返佣信息数目
+ * @method void setTotalCount(integer $TotalCount) 设置符合查询条件返佣信息数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeKTVPlaylistsResponse extends AbstractModel
+class DescribeRebateInfosNewResponse extends AbstractModel
 {
     /**
-     * @var array 歌单基础信息。
+     * @var array 返佣信息列表
      */
-    public $PlaylistBaseInfoSet;
+    public $RebateInfoSet;
 
     /**
-     * @var integer 歌单总数。
+     * @var integer 符合查询条件返佣信息数目
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeKTVPlaylistsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PlaylistBaseInfoSet 歌单基础信息。
-     * @param integer $TotalCount 歌单总数。
+     * @param array $RebateInfoSet 返佣信息列表
+     * @param integer $TotalCount 符合查询条件返佣信息数目
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,12 @@ class DescribeKTVPlaylistsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlaylistBaseInfoSet",$param) and $param["PlaylistBaseInfoSet"] !== null) {
-            $this->PlaylistBaseInfoSet = [];
-            foreach ($param["PlaylistBaseInfoSet"] as $key => $value){
-                $obj = new KTVPlaylistBaseInfo();
+        if (array_key_exists("RebateInfoSet",$param) and $param["RebateInfoSet"] !== null) {
+            $this->RebateInfoSet = [];
+            foreach ($param["RebateInfoSet"] as $key => $value){
+                $obj = new RebateInfoElemNew();
                 $obj->deserialize($value);
-                array_push($this->PlaylistBaseInfoSet, $obj);
+                array_push($this->RebateInfoSet, $obj);
             }
         }
 

@@ -36,6 +36,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\DescribeCurrentOpResponse DescribeCurrentOp(Models\DescribeCurrentOpRequest $req) 本接口(DescribeCurrentOp)用于查询MongoDB云数据库实例的当前正在执行的操作。
  * @method Models\DescribeDBBackupsResponse DescribeDBBackups(Models\DescribeDBBackupsRequest $req) 本接口（DescribeDBBackups）用于查询实例备份列表，目前只支持查询7天内的备份记录。
  * @method Models\DescribeDBInstanceDealResponse DescribeDBInstanceDeal(Models\DescribeDBInstanceDealRequest $req) 本接口（DescribeDBInstanceDeal）用于获取MongoDB购买、续费及变配订单详细。
+ * @method Models\DescribeDBInstanceNodePropertyResponse DescribeDBInstanceNodeProperty(Models\DescribeDBInstanceNodePropertyRequest $req) 本接口用于查询节点的属性，包括节点所在可用区、节点名称、地址、角色、状态、主从延迟、优先级、投票权、标签等属性。
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 本接口(DescribeInstanceParams)用于查询当前实例可修改的参数列表。
  * @method Models\DescribeSecurityGroupResponse DescribeSecurityGroup(Models\DescribeSecurityGroupRequest $req) 查询实例绑定的安全组

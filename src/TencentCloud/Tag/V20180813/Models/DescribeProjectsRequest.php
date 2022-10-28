@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjects请求参数结构体
  *
- * @method integer getAllList() 获取传1拉取所有项目（包括隐藏项目），不传或传0拉取显示项目
- * @method void setAllList(integer $AllList) 设置传1拉取所有项目（包括隐藏项目），不传或传0拉取显示项目
+ * @method integer getAllList() 获取传1拉取所有项目（包括隐藏项目），传0拉取显示项目
+ * @method void setAllList(integer $AllList) 设置传1拉取所有项目（包括隐藏项目），传0拉取显示项目
  * @method integer getLimit() 获取分页条数，固定值1000。
  * @method void setLimit(integer $Limit) 设置分页条数，固定值1000。
  * @method integer getOffset() 获取分页偏移量。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeProjectsRequest extends AbstractModel
 {
     /**
-     * @var integer 传1拉取所有项目（包括隐藏项目），不传或传0拉取显示项目
+     * @var integer 传1拉取所有项目（包括隐藏项目），传0拉取显示项目
      */
     public $AllList;
 
@@ -45,7 +45,7 @@ class DescribeProjectsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param integer $AllList 传1拉取所有项目（包括隐藏项目），不传或传0拉取显示项目
+     * @param integer $AllList 传1拉取所有项目（包括隐藏项目），传0拉取显示项目
      * @param integer $Limit 分页条数，固定值1000。
      * @param integer $Offset 分页偏移量。
      */

@@ -18,20 +18,24 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 语音过滤用量统计数据
+ * 流式转文本用量数据
  *
- * @method integer getDuration() 获取语音过滤总时长，单位为min
- * @method void setDuration(integer $Duration) 设置语音过滤总时长，单位为min
+ * @method float getData() 获取统计值，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(float $Data) 设置统计值，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class VoiceFilterStatisticsItem extends AbstractModel
+class StreamTextStatisticsItem extends AbstractModel
 {
     /**
-     * @var integer 语音过滤总时长，单位为min
+     * @var float 统计值，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Duration;
+    public $Data;
 
     /**
-     * @param integer $Duration 语音过滤总时长，单位为min
+     * @param float $Data 统计值，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class VoiceFilterStatisticsItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
         }
     }
 }

@@ -78,6 +78,9 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\ModifyDBInstancesProjectResponse ModifyDBInstancesProject(Models\ModifyDBInstancesProjectRequest $req) 本接口（ModifyDBInstancesProject）用于修改云数据库实例所属项目。
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) 本接口(ModifyDBParameters)用于修改数据库参数。
  * @method Models\ModifyDBSyncModeResponse ModifyDBSyncMode(Models\ModifyDBSyncModeRequest $req) 本接口（ModifyDBSyncMode）用于修改云数据库实例的同步模式。
+ * @method Models\ModifyInstanceNetworkResponse ModifyInstanceNetwork(Models\ModifyInstanceNetworkRequest $req) 本接口（ModifyInstanceNetwork）用于修改实例所属网络。
+ * @method Models\ModifyInstanceVipResponse ModifyInstanceVip(Models\ModifyInstanceVipRequest $req) 本接口（ModifyInstanceVip）用于修改实例Vip
+ * @method Models\ModifyInstanceVportResponse ModifyInstanceVport(Models\ModifyInstanceVportRequest $req) 本接口（ModifyInstanceVport）用于修改实例VPORT
  * @method Models\ModifyRealServerAccessStrategyResponse ModifyRealServerAccessStrategy(Models\ModifyRealServerAccessStrategyRequest $req) 本接口(ModifyRealServerAccessStrategy)用于修改云数据库的VPCGW到RS的访问策略。
 
 **注意**

@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method string getSegmentType() 获取切片类型，仅当 Container 为 hls 时有效。
+ * @method void setSegmentType(string $SegmentType) 设置切片类型，仅当 Container 为 hls 时有效。
  */
 class TranscodeTemplate extends AbstractModel
 {
@@ -148,6 +150,11 @@ class TranscodeTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 切片类型，仅当 Container 为 hls 时有效。
+     */
+    public $SegmentType;
+
+    /**
      * @param string $Definition 转码模板唯一标识。
      * @param string $Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
      * @param string $Name 转码模板名称。
@@ -172,6 +179,7 @@ class TranscodeTemplate extends AbstractModel
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param string $SegmentType 切片类型，仅当 Container 为 hls 时有效。
      */
     function __construct()
     {
@@ -239,6 +247,10 @@ class TranscodeTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

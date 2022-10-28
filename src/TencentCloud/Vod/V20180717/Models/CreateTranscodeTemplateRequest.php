@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数，当 RemoveAudio 为 0，该字段必填。
  * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
+ * @method string getSegmentType() 获取切片类型，当 Container 为 hls 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
+默认值：ts。
+ * @method void setSegmentType(string $SegmentType) 设置切片类型，当 Container 为 hls 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
+默认值：ts。
  */
 class CreateTranscodeTemplateRequest extends AbstractModel
 {
@@ -105,6 +113,14 @@ class CreateTranscodeTemplateRequest extends AbstractModel
     public $TEHDConfig;
 
     /**
+     * @var string 切片类型，当 Container 为 hls 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
+默认值：ts。
+     */
+    public $SegmentType;
+
+    /**
      * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 转码模板名称，长度限制：64 个字符。
@@ -120,6 +136,10 @@ class CreateTranscodeTemplateRequest extends AbstractModel
      * @param VideoTemplateInfo $VideoTemplate 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      * @param TEHDConfig $TEHDConfig 极速高清转码参数。
+     * @param string $SegmentType 切片类型，当 Container 为 hls 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
+默认值：ts。
      */
     function __construct()
     {
@@ -171,6 +191,10 @@ class CreateTranscodeTemplateRequest extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfig();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

@@ -31,11 +31,13 @@ use TencentCloud\Common\AbstractModel;
 <li>转码时长的数据，单位是秒。</li>
 <li>流量数据，单位是字节。</li>
 <li>带宽数据，单位是比特每秒。</li>
+<li>直播剪辑数据，单位是秒。</li>
  * @method void setValue(integer $Value) 设置数据大小。
 <li>存储空间的数据，单位是字节。</li>
 <li>转码时长的数据，单位是秒。</li>
 <li>流量数据，单位是字节。</li>
 <li>带宽数据，单位是比特每秒。</li>
+<li>直播剪辑数据，单位是秒。</li>
  */
 class StatDataItem extends AbstractModel
 {
@@ -52,6 +54,7 @@ class StatDataItem extends AbstractModel
 <li>转码时长的数据，单位是秒。</li>
 <li>流量数据，单位是字节。</li>
 <li>带宽数据，单位是比特每秒。</li>
+<li>直播剪辑数据，单位是秒。</li>
      */
     public $Value;
 
@@ -64,6 +67,7 @@ class StatDataItem extends AbstractModel
 <li>转码时长的数据，单位是秒。</li>
 <li>流量数据，单位是字节。</li>
 <li>带宽数据，单位是比特每秒。</li>
+<li>直播剪辑数据，单位是秒。</li>
      */
     function __construct()
     {

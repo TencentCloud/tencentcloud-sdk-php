@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterIdentifier(string $ClusterIdentifier) 设置集群实例 ID
  * @method string getFunctionId() 获取函数 ID
  * @method void setFunctionId(string $FunctionId) 设置函数 ID
+ * @method string getProjectId() 获取项目ID，必须填
+ * @method void setProjectId(string $ProjectId) 设置项目ID，必须填
  */
 class DeleteCustomFunctionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteCustomFunctionRequest extends AbstractModel
     public $FunctionId;
 
     /**
+     * @var string 项目ID，必须填
+     */
+    public $ProjectId;
+
+    /**
      * @param string $ClusterIdentifier 集群实例 ID
      * @param string $FunctionId 函数 ID
+     * @param string $ProjectId 项目ID，必须填
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteCustomFunctionRequest extends AbstractModel
 
         if (array_key_exists("FunctionId",$param) and $param["FunctionId"] !== null) {
             $this->FunctionId = $param["FunctionId"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

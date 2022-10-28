@@ -27,9 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTypes() 获取类型列表，取值有：
 <li>OfficialRec：官方推荐；</li>
 <li>Customize：自定义。</li>
+默认值为 OfficialRec。
  * @method void setTypes(array $Types) 设置类型列表，取值有：
 <li>OfficialRec：官方推荐；</li>
 <li>Customize：自定义。</li>
+默认值为 OfficialRec。
+ * @method integer getOffset() 获取分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+ * @method void setOffset(integer $Offset) 设置分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+ * @method integer getLimit() 获取分页返回的记录条数，默认值：20，最大值：50。
+ * @method void setLimit(integer $Limit) 设置分页返回的记录条数，默认值：20，最大值：50。
  */
 class DescribeKTVPlaylistsRequest extends AbstractModel
 {
@@ -47,8 +53,19 @@ class DescribeKTVPlaylistsRequest extends AbstractModel
      * @var array 类型列表，取值有：
 <li>OfficialRec：官方推荐；</li>
 <li>Customize：自定义。</li>
+默认值为 OfficialRec。
      */
     public $Types;
+
+    /**
+     * @var integer 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+     */
+    public $Offset;
+
+    /**
+     * @var integer 分页返回的记录条数，默认值：20，最大值：50。
+     */
+    public $Limit;
 
     /**
      * @param string $AppName 应用名称。
@@ -56,6 +73,9 @@ class DescribeKTVPlaylistsRequest extends AbstractModel
      * @param array $Types 类型列表，取值有：
 <li>OfficialRec：官方推荐；</li>
 <li>Customize：自定义。</li>
+默认值为 OfficialRec。
+     * @param integer $Offset 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+     * @param integer $Limit 分页返回的记录条数，默认值：20，最大值：50。
      */
     function __construct()
     {
@@ -80,6 +100,14 @@ class DescribeKTVPlaylistsRequest extends AbstractModel
 
         if (array_key_exists("Types",$param) and $param["Types"] !== null) {
             $this->Types = $param["Types"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

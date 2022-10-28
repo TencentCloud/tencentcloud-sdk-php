@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
 注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
+ * @method string getSegmentType() 获取切片类型，当 Format 为 HLS 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
+ * @method void setSegmentType(string $SegmentType) 设置切片类型，当 Format 为 HLS 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
  */
 class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -101,6 +107,13 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 切片类型，当 Format 为 HLS 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
+     */
+    public $SegmentType;
+
+    /**
      * @param integer $Definition 自适应转码模板唯一标识。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 模板名称，长度限制：64 个字符。
@@ -116,6 +129,9 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
      * @param array $StreamInfos 自适应转码输入流参数信息，最多输入10路流。
 注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
+     * @param string $SegmentType 切片类型，当 Format 为 HLS 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
      */
     function __construct()
     {
@@ -165,6 +181,10 @@ class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartDate(string $StartDate) 设置数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
  * @method string getEndDate() 获取数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
  * @method void setEndDate(string $EndDate) 设置数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
- * @method array getServices() 获取要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
- * @method void setServices(array $Services) 设置要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
+ * @method array getServices() 获取要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
+ * @method void setServices(array $Services) 设置要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
  */
 class DescribeAppStatisticsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeAppStatisticsRequest extends AbstractModel
     public $EndDate;
 
     /**
-     * @var array 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
+     * @var array 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
      */
     public $Services;
 
@@ -55,7 +55,7 @@ class DescribeAppStatisticsRequest extends AbstractModel
      * @param integer $BizId GME应用ID
      * @param string $StartDate 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
      * @param string $EndDate 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
-     * @param array $Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
+     * @param array $Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
      */
     function __construct()
     {

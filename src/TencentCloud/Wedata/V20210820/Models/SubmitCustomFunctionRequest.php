@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterIdentifier(string $ClusterIdentifier) 设置集群实例 ID
  * @method string getComment() 获取备注信息
  * @method void setComment(string $Comment) 设置备注信息
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
  */
 class SubmitCustomFunctionRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class SubmitCustomFunctionRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 项目ID
+     */
+    public $ProjectId;
+
+    /**
      * @param string $FunctionId 函数唯一标识
      * @param string $ClusterIdentifier 集群实例 ID
      * @param string $Comment 备注信息
+     * @param string $ProjectId 项目ID
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class SubmitCustomFunctionRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

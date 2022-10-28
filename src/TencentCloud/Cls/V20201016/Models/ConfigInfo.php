@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getConfigId() 获取采集规则配置ID
  * @method void setConfigId(string $ConfigId) 设置采集规则配置ID
+ * @method string getName() 获取采集规则配置名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setName(string $Name) 设置采集规则配置名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogFormat() 获取日志格式化方式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogFormat(string $LogFormat) 设置日志格式化方式
@@ -61,6 +65,12 @@ class ConfigInfo extends AbstractModel
      * @var string 采集规则配置ID
      */
     public $ConfigId;
+
+    /**
+     * @var string 采集规则配置名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Name;
 
     /**
      * @var string 日志格式化方式
@@ -116,6 +126,8 @@ class ConfigInfo extends AbstractModel
 
     /**
      * @param string $ConfigId 采集规则配置ID
+     * @param string $Name 采集规则配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogFormat 日志格式化方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path 日志采集路径
@@ -148,6 +160,10 @@ class ConfigInfo extends AbstractModel
         }
         if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
             $this->ConfigId = $param["ConfigId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("LogFormat",$param) and $param["LogFormat"] !== null) {

@@ -14,30 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Yinsuda\V20220527\Models;
+namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeKTVPlaylists返回参数结构体
+ * DescribeDBInstanceNodeProperty返回参数结构体
  *
- * @method array getPlaylistBaseInfoSet() 获取歌单基础信息。
- * @method void setPlaylistBaseInfoSet(array $PlaylistBaseInfoSet) 设置歌单基础信息。
- * @method integer getTotalCount() 获取歌单总数。
- * @method void setTotalCount(integer $TotalCount) 设置歌单总数。
+ * @method array getMongos() 获取Mongos节点属性。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMongos(array $Mongos) 设置Mongos节点属性。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getReplicateSets() 获取副本集节点信息。
+ * @method void setReplicateSets(array $ReplicateSets) 设置副本集节点信息。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeKTVPlaylistsResponse extends AbstractModel
+class DescribeDBInstanceNodePropertyResponse extends AbstractModel
 {
     /**
-     * @var array 歌单基础信息。
+     * @var array Mongos节点属性。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $PlaylistBaseInfoSet;
+    public $Mongos;
 
     /**
-     * @var integer 歌单总数。
+     * @var array 副本集节点信息。
      */
-    public $TotalCount;
+    public $ReplicateSets;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +48,9 @@ class DescribeKTVPlaylistsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PlaylistBaseInfoSet 歌单基础信息。
-     * @param integer $TotalCount 歌单总数。
+     * @param array $Mongos Mongos节点属性。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ReplicateSets 副本集节点信息。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +66,22 @@ class DescribeKTVPlaylistsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlaylistBaseInfoSet",$param) and $param["PlaylistBaseInfoSet"] !== null) {
-            $this->PlaylistBaseInfoSet = [];
-            foreach ($param["PlaylistBaseInfoSet"] as $key => $value){
-                $obj = new KTVPlaylistBaseInfo();
+        if (array_key_exists("Mongos",$param) and $param["Mongos"] !== null) {
+            $this->Mongos = [];
+            foreach ($param["Mongos"] as $key => $value){
+                $obj = new NodeProperty();
                 $obj->deserialize($value);
-                array_push($this->PlaylistBaseInfoSet, $obj);
+                array_push($this->Mongos, $obj);
             }
         }
 
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("ReplicateSets",$param) and $param["ReplicateSets"] !== null) {
+            $this->ReplicateSets = [];
+            foreach ($param["ReplicateSets"] as $key => $value){
+                $obj = new ReplicateSetInfo();
+                $obj->deserialize($value);
+                array_push($this->ReplicateSets, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

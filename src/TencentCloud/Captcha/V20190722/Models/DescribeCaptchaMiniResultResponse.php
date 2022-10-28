@@ -29,6 +29,7 @@ use TencentCloud\Common\AbstractModel;
 21     ticket error     票据验证错误
 25     invalid ticket     无效票据
 26     system internal error     系统内部错误
+31 	   UnauthorizedOperation.Unauthorized	无有效套餐包/账户已欠费
 100   param err     参数校验错误
  * @method void setCaptchaCode(integer $CaptchaCode) 设置1       ticket verification succeeded     票据验证成功
 7       CaptchaAppId does not match     票据与验证码应用APPID不匹配
@@ -39,6 +40,7 @@ use TencentCloud\Common\AbstractModel;
 21     ticket error     票据验证错误
 25     invalid ticket     无效票据
 26     system internal error     系统内部错误
+31 	   UnauthorizedOperation.Unauthorized	无有效套餐包/账户已欠费
 100   param err     参数校验错误
  * @method string getCaptchaMsg() 获取状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,6 +61,7 @@ class DescribeCaptchaMiniResultResponse extends AbstractModel
 21     ticket error     票据验证错误
 25     invalid ticket     无效票据
 26     system internal error     系统内部错误
+31 	   UnauthorizedOperation.Unauthorized	无有效套餐包/账户已欠费
 100   param err     参数校验错误
      */
     public $CaptchaCode;
@@ -84,6 +87,7 @@ class DescribeCaptchaMiniResultResponse extends AbstractModel
 21     ticket error     票据验证错误
 25     invalid ticket     无效票据
 26     system internal error     系统内部错误
+31 	   UnauthorizedOperation.Unauthorized	无有效套餐包/账户已欠费
 100   param err     参数校验错误
      * @param string $CaptchaMsg 状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。

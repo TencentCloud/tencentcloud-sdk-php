@@ -44,12 +44,18 @@ topspeed_H264：极速高清-H264，
 topspeed_H265：极速高清-H265。
  * @method integer getBitrate() 获取码率。
  * @method void setBitrate(integer $Bitrate) 设置码率。
- * @method string getType() 获取类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
- * @method void setType(string $Type) 设置类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
+ * @method string getType() 获取类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark），快直播（Webrtc）。
+ * @method void setType(string $Type) 设置类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark），快直播（Webrtc）。
  * @method string getPushDomain() 获取推流域名。
  * @method void setPushDomain(string $PushDomain) 设置推流域名。
  * @method string getResolution() 获取分辨率。
  * @method void setResolution(string $Resolution) 设置分辨率。
+ * @method string getMainlandOrOversea() 获取地域：
+Mainland：国内。
+Overseas：海外。
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置地域：
+Mainland：国内。
+Overseas：海外。
  */
 class TranscodeDetailInfo extends AbstractModel
 {
@@ -90,7 +96,7 @@ topspeed_H265：极速高清-H265。
     public $Bitrate;
 
     /**
-     * @var string 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
+     * @var string 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark），快直播（Webrtc）。
      */
     public $Type;
 
@@ -105,6 +111,13 @@ topspeed_H265：极速高清-H265。
     public $Resolution;
 
     /**
+     * @var string 地域：
+Mainland：国内。
+Overseas：海外。
+     */
+    public $MainlandOrOversea;
+
+    /**
      * @param string $StreamName 流名称。
      * @param string $StartTime 开始时间（北京时间），格式：yyyy-mm-dd HH:MM。
      * @param string $EndTime 结束时间（北京时间），格式：yyyy-mm-dd HH:MM。
@@ -117,9 +130,12 @@ liveprocessor_H265： 直播转码-H265，
 topspeed_H264：极速高清-H264，
 topspeed_H265：极速高清-H265。
      * @param integer $Bitrate 码率。
-     * @param string $Type 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark）。
+     * @param string $Type 类型，包含：转码（Transcode），混流（MixStream），水印（WaterMark），快直播（Webrtc）。
      * @param string $PushDomain 推流域名。
      * @param string $Resolution 分辨率。
+     * @param string $MainlandOrOversea 地域：
+Mainland：国内。
+Overseas：海外。
      */
     function __construct()
     {
@@ -168,6 +184,10 @@ topspeed_H265：极速高清-H265。
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
             $this->Resolution = $param["Resolution"];
+        }
+
+        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
+            $this->MainlandOrOversea = $param["MainlandOrOversea"];
         }
     }
 }

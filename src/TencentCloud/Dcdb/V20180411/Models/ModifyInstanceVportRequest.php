@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 语音过滤用量统计数据
+ * ModifyInstanceVport请求参数结构体
  *
- * @method integer getDuration() 获取语音过滤总时长，单位为min
- * @method void setDuration(integer $Duration) 设置语音过滤总时长，单位为min
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method integer getVport() 获取实例VPORT
+ * @method void setVport(integer $Vport) 设置实例VPORT
  */
-class VoiceFilterStatisticsItem extends AbstractModel
+class ModifyInstanceVportRequest extends AbstractModel
 {
     /**
-     * @var integer 语音过滤总时长，单位为min
+     * @var string 实例ID
      */
-    public $Duration;
+    public $InstanceId;
 
     /**
-     * @param integer $Duration 语音过滤总时长，单位为min
+     * @var integer 实例VPORT
+     */
+    public $Vport;
+
+    /**
+     * @param string $InstanceId 实例ID
+     * @param integer $Vport 实例VPORT
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class VoiceFilterStatisticsItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
+            $this->Vport = $param["Vport"];
         }
     }
 }

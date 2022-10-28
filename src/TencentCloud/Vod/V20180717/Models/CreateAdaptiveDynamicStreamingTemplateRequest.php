@@ -70,6 +70,14 @@ use TencentCloud\Common\AbstractModel;
 默认为否。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
+ * @method string getSegmentType() 获取切片类型，当 Format 为 HLS 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
+默认值：ts。
+ * @method void setSegmentType(string $SegmentType) 设置切片类型，当 Format 为 HLS 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
+默认值：ts。
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -135,6 +143,14 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 切片类型，当 Format 为 HLS 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
+默认值：ts。
+     */
+    public $SegmentType;
+
+    /**
      * @param string $Format 自适应转码格式，取值范围：
 <li>HLS；</li>
 <li>MPEG-DASH。</li>
@@ -160,6 +176,10 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 <li>1：是。</li>
 默认为否。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
+     * @param string $SegmentType 切片类型，当 Format 为 HLS 时有效，可选值：
+<li>ts：ts 切片；</li>
+<li>fmp4：fmp4 切片。</li>
+默认值：ts。
      */
     function __construct()
     {
@@ -213,6 +233,10 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

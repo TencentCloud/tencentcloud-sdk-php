@@ -106,6 +106,8 @@ ServerType不填默认为0
 0: 普通文本
 1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
 2：音素注册模式（提工单注册需要使用音素的单词）。
+ * @method string getKeyword() 获取主题词和关键词
+ * @method void setKeyword(string $Keyword) 设置主题词和关键词
  */
 class InitOralProcessRequest extends AbstractModel
 {
@@ -201,6 +203,11 @@ ServerType不填默认为0
     public $TextMode;
 
     /**
+     * @var string 主题词和关键词
+     */
+    public $Keyword;
+
+    /**
      * @param string $SessionId 语音段唯一标识，一段完整语音使用一个SessionId，不同语音段的评测需要使用不同的SessionId。一般使用uuid(通用唯一识别码)来作为它的值，要尽量保证SessionId的唯一性。
      * @param string $RefText 被评估语音对应的文本，仅支持中文和英文。
 句子模式下不超过个 30 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。
@@ -244,6 +251,7 @@ ServerType不填默认为0
 0: 普通文本
 1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
 2：音素注册模式（提工单注册需要使用音素的单词）。
+     * @param string $Keyword 主题词和关键词
      */
     function __construct()
     {
@@ -304,6 +312,10 @@ ServerType不填默认为0
 
         if (array_key_exists("TextMode",$param) and $param["TextMode"] !== null) {
             $this->TextMode = $param["TextMode"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

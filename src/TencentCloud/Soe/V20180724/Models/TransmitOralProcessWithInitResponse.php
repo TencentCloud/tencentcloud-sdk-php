@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
  * @method float getSuggestedScore() 获取建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracy）× 完整度（PronCompletion）×（2 - 完整度（PronCompletion）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
  * @method void setSuggestedScore(float $SuggestedScore) 设置建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracy）× 完整度（PronCompletion）×（2 - 完整度（PronCompletion）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+ * @method integer getRefTextId() 获取匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRefTextId(integer $RefTextId) 设置匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getKeyWordHits() 获取主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeyWordHits(array $KeyWordHits) 设置主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getUnKeyWordHits() 获取负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnKeyWordHits(array $UnKeyWordHits) 设置负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,6 +101,24 @@ class TransmitOralProcessWithInitResponse extends AbstractModel
     public $SuggestedScore;
 
     /**
+     * @var integer 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RefTextId;
+
+    /**
+     * @var array 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KeyWordHits;
+
+    /**
+     * @var array 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UnKeyWordHits;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -103,6 +133,12 @@ class TransmitOralProcessWithInitResponse extends AbstractModel
      * @param array $SentenceInfoSet 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
      * @param string $Status 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
      * @param float $SuggestedScore 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracy）× 完整度（PronCompletion）×（2 - 完整度（PronCompletion）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+     * @param integer $RefTextId 匹配候选文本的序号，在句子多分支、情景对 话、段落模式下表示匹配到的文本序号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $KeyWordHits 主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $UnKeyWordHits 负向主题词命中标志，0表示没命中，1表示命中
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -162,6 +198,18 @@ class TransmitOralProcessWithInitResponse extends AbstractModel
 
         if (array_key_exists("SuggestedScore",$param) and $param["SuggestedScore"] !== null) {
             $this->SuggestedScore = $param["SuggestedScore"];
+        }
+
+        if (array_key_exists("RefTextId",$param) and $param["RefTextId"] !== null) {
+            $this->RefTextId = $param["RefTextId"];
+        }
+
+        if (array_key_exists("KeyWordHits",$param) and $param["KeyWordHits"] !== null) {
+            $this->KeyWordHits = $param["KeyWordHits"];
+        }
+
+        if (array_key_exists("UnKeyWordHits",$param) and $param["UnKeyWordHits"] !== null) {
+            $this->UnKeyWordHits = $param["UnKeyWordHits"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

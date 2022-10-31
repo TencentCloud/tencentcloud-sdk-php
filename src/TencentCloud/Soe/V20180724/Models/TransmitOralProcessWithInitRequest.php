@@ -130,6 +130,8 @@ ServerType不填默认为0
 0: 普通文本
 1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
 2：音素注册模式（提工单注册需要使用音素的单词）。
+ * @method string getKeyword() 获取主题词和关键词
+ * @method void setKeyword(string $Keyword) 设置主题词和关键词
  */
 class TransmitOralProcessWithInitRequest extends AbstractModel
 {
@@ -257,6 +259,11 @@ ServerType不填默认为0
     public $TextMode;
 
     /**
+     * @var string 主题词和关键词
+     */
+    public $Keyword;
+
+    /**
      * @param integer $SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
 注意：序号上限为3000，不能超过上限。
      * @param integer $IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
@@ -312,6 +319,7 @@ ServerType不填默认为0
 0: 普通文本
 1：[音素结构](https://cloud.tencent.com/document/product/884/33698)文本
 2：音素注册模式（提工单注册需要使用音素的单词）。
+     * @param string $Keyword 主题词和关键词
      */
     function __construct()
     {
@@ -392,6 +400,10 @@ ServerType不填默认为0
 
         if (array_key_exists("TextMode",$param) and $param["TextMode"] !== null) {
             $this->TextMode = $param["TextMode"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

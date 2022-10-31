@@ -33,11 +33,11 @@ use TencentCloud\Common\AbstractModel;
 <li>custom：手动添加；</li>
 <li>origins：源站组。</li>不填保持原有值。
  * @method array getPort() 获取端口，支持格式：
-80：80端口
-81-90：81至90端口。不填保持原有值。
+<li>80：80端口；</li>
+<li>81-90：81至90端口。</li>
  * @method void setPort(array $Port) 设置端口，支持格式：
-80：80端口
-81-90：81至90端口。不填保持原有值。
+<li>80：80端口；</li>
+<li>81-90：81至90端口。</li>
  * @method string getProto() 获取协议，取值有：
 <li>TCP：TCP协议；</li>
 <li>UDP：UDP协议。</li>不填保持原有值。
@@ -45,18 +45,14 @@ use TencentCloud\Common\AbstractModel;
 <li>TCP：TCP协议；</li>
 <li>UDP：UDP协议。</li>不填保持原有值。
  * @method array getOriginValue() 获取源站信息：
-当OriginType=custom时，表示一个或多个源站，如：
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]；
-当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
+
 不填保持原有值。
  * @method void setOriginValue(array $OriginValue) 设置源站信息：
-当OriginType=custom时，表示一个或多个源站，如：
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]；
-当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
+
 不填保持原有值。
  * @method string getForwardClientIp() 获取传递客户端IP，取值有：
 <li>TOA：TOA（仅Proto=TCP时可选）；</li>
@@ -70,10 +66,16 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 <li>OFF：不传递。</li>不填保持原有值。
  * @method boolean getSessionPersist() 获取是否开启会话保持，取值有：
 <li>true：开启；</li>
-<li>false：关闭。</li>不填保持原有值。
+<li>false：关闭。</li>不填为false。
  * @method void setSessionPersist(boolean $SessionPersist) 设置是否开启会话保持，取值有：
 <li>true：开启；</li>
-<li>false：关闭。</li>不填保持原有值。
+<li>false：关闭。</li>不填为false。
+ * @method string getOriginPort() 获取源站端口，支持格式：
+<li>单端口：80；</li>
+<li>端口段：81-90，81至90端口。</li>
+ * @method void setOriginPort(string $OriginPort) 设置源站端口，支持格式：
+<li>单端口：80；</li>
+<li>端口段：81-90，81至90端口。</li>
  */
 class ModifyApplicationProxyRuleRequest extends AbstractModel
 {
@@ -101,8 +103,8 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
 
     /**
      * @var array 端口，支持格式：
-80：80端口
-81-90：81至90端口。不填保持原有值。
+<li>80：80端口；</li>
+<li>81-90：81至90端口。</li>
      */
     public $Port;
 
@@ -115,11 +117,9 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
 
     /**
      * @var array 源站信息：
-当OriginType=custom时，表示一个或多个源站，如：
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]；
-当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
+
 不填保持原有值。
      */
     public $OriginValue;
@@ -136,9 +136,16 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
     /**
      * @var boolean 是否开启会话保持，取值有：
 <li>true：开启；</li>
-<li>false：关闭。</li>不填保持原有值。
+<li>false：关闭。</li>不填为false。
      */
     public $SessionPersist;
+
+    /**
+     * @var string 源站端口，支持格式：
+<li>单端口：80；</li>
+<li>端口段：81-90，81至90端口。</li>
+     */
+    public $OriginPort;
 
     /**
      * @param string $ZoneId 站点ID。
@@ -148,17 +155,15 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 <li>custom：手动添加；</li>
 <li>origins：源站组。</li>不填保持原有值。
      * @param array $Port 端口，支持格式：
-80：80端口
-81-90：81至90端口。不填保持原有值。
+<li>80：80端口；</li>
+<li>81-90：81至90端口。</li>
      * @param string $Proto 协议，取值有：
 <li>TCP：TCP协议；</li>
 <li>UDP：UDP协议。</li>不填保持原有值。
      * @param array $OriginValue 源站信息：
-当OriginType=custom时，表示一个或多个源站，如：
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"]；
-当OriginType=origins时，要求有且仅有一个元素，表示源站组ID，如：
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>当 OriginType 为 custom 时，表示一个或多个源站，如`["8.8.8.8","9.9.9.9"]` 或 `OriginValue=["test.com"]`；</li>
+<li>当 OriginType 为 origins 时，要求有且仅有一个元素，表示源站组ID，如`["origin-537f5b41-162a-11ed-abaa-525400c5da15"]`。</li>
+
 不填保持原有值。
      * @param string $ForwardClientIp 传递客户端IP，取值有：
 <li>TOA：TOA（仅Proto=TCP时可选）；</li>
@@ -167,7 +172,10 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 <li>OFF：不传递。</li>不填保持原有值。
      * @param boolean $SessionPersist 是否开启会话保持，取值有：
 <li>true：开启；</li>
-<li>false：关闭。</li>不填保持原有值。
+<li>false：关闭。</li>不填为false。
+     * @param string $OriginPort 源站端口，支持格式：
+<li>单端口：80；</li>
+<li>端口段：81-90，81至90端口。</li>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 
         if (array_key_exists("SessionPersist",$param) and $param["SessionPersist"] !== null) {
             $this->SessionPersist = $param["SessionPersist"];
+        }
+
+        if (array_key_exists("OriginPort",$param) and $param["OriginPort"] !== null) {
+            $this->OriginPort = $param["OriginPort"];
         }
     }
 }

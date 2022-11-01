@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionCount(integer $PartitionCount) 设置主题分区个数
  * @method boolean getIndex() 获取是否开启索引
  * @method void setIndex(boolean $Index) 设置是否开启索引
+ * @method string getAssumerName() 获取云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAssumerName(string $AssumerName) 设置云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method boolean getStatus() 获取日主主题是否开启采集
@@ -53,6 +57,14 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPeriod() 获取生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriod(integer $Period) 设置生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubAssumerName() 获取云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubAssumerName(string $SubAssumerName) 设置云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescribes() 获取日志主题描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDescribes(string $Describes) 设置日志主题描述
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicInfo extends AbstractModel
@@ -81,6 +93,12 @@ class TopicInfo extends AbstractModel
      * @var boolean 是否开启索引
      */
     public $Index;
+
+    /**
+     * @var string 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AssumerName;
 
     /**
      * @var string 创建时间
@@ -123,11 +141,25 @@ class TopicInfo extends AbstractModel
     public $Period;
 
     /**
+     * @var string 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubAssumerName;
+
+    /**
+     * @var string 日志主题描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Describes;
+
+    /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
      * @param integer $PartitionCount 主题分区个数
      * @param boolean $Index 是否开启索引
+     * @param string $AssumerName 云产品标识，日志主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
      * @param boolean $Status 日主主题是否开启采集
      * @param array $Tags 日志主题绑定的标签信息
@@ -139,6 +171,10 @@ class TopicInfo extends AbstractModel
      * @param string $StorageType 日主题的存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Describes 日志主题描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -174,6 +210,10 @@ class TopicInfo extends AbstractModel
             $this->Index = $param["Index"];
         }
 
+        if (array_key_exists("AssumerName",$param) and $param["AssumerName"] !== null) {
+            $this->AssumerName = $param["AssumerName"];
+        }
+
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
         }
@@ -205,6 +245,14 @@ class TopicInfo extends AbstractModel
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("SubAssumerName",$param) and $param["SubAssumerName"] !== null) {
+            $this->SubAssumerName = $param["SubAssumerName"];
+        }
+
+        if (array_key_exists("Describes",$param) and $param["Describes"] !== null) {
+            $this->Describes = $param["Describes"];
         }
     }
 }

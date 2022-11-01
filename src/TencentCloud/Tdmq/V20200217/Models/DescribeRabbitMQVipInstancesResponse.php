@@ -14,33 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Kms\V20190118\Models;
+namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeWhiteBoxKeyDetails返回参数结构体
+ * DescribeRabbitMQVipInstances返回参数结构体
  *
- * @method array getKeyInfos() 获取白盒密钥信息列表。
- * @method void setKeyInfos(array $KeyInfos) 设置白盒密钥信息列表。
- * @method integer getTotalCount() 获取白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取未分页的总数目
+ * @method void setTotalCount(integer $TotalCount) 设置未分页的总数目
+ * @method array getInstances() 获取实例信息列表
+ * @method void setInstances(array $Instances) 设置实例信息列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel
+class DescribeRabbitMQVipInstancesResponse extends AbstractModel
 {
     /**
-     * @var array 白盒密钥信息列表。
-     */
-    public $KeyInfos;
-
-    /**
-     * @var integer 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 未分页的总数目
      */
     public $TotalCount;
+
+    /**
+     * @var array 实例信息列表
+     */
+    public $Instances;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +45,8 @@ class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $KeyInfos 白盒密钥信息列表。
-     * @param integer $TotalCount 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 未分页的总数目
+     * @param array $Instances 实例信息列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +62,17 @@ class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("KeyInfos",$param) and $param["KeyInfos"] !== null) {
-            $this->KeyInfos = [];
-            foreach ($param["KeyInfos"] as $key => $value){
-                $obj = new WhiteboxKeyInfo();
-                $obj->deserialize($value);
-                array_push($this->KeyInfos, $obj);
-            }
-        }
-
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Instances",$param) and $param["Instances"] !== null) {
+            $this->Instances = [];
+            foreach ($param["Instances"] as $key => $value){
+                $obj = new RabbitMQVipInstance();
+                $obj->deserialize($value);
+                array_push($this->Instances, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

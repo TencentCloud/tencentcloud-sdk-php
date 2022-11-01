@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubnet请求参数结构体
  *
- * @method integer getLimit() 获取返回数量。
- * @method void setLimit(integer $Limit) 设置返回数量。
- * @method integer getOffset() 获取偏移量。
- * @method void setOffset(integer $Offset) 设置偏移量。
+ * @method integer getLimit() 获取返回数量。Limit需要在[1, 100]之间。
+ * @method void setLimit(integer $Limit) 设置返回数量。Limit需要在[1, 100]之间。
+ * @method integer getOffset() 获取偏移量。偏移量最小为0。
+ * @method void setOffset(integer $Offset) 设置偏移量。偏移量最小为0。
  * @method string getVpcId() 获取查询指定VpcId下的子网信息。
  * @method void setVpcId(string $VpcId) 设置查询指定VpcId下的子网信息。
  * @method string getSearchWord() 获取查找关键字
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSubnetRequest extends AbstractModel
 {
     /**
-     * @var integer 返回数量。
+     * @var integer 返回数量。Limit需要在[1, 100]之间。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量。
+     * @var integer 偏移量。偏移量最小为0。
      */
     public $Offset;
 
@@ -52,8 +52,8 @@ class DescribeSubnetRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @param integer $Limit 返回数量。
-     * @param integer $Offset 偏移量。
+     * @param integer $Limit 返回数量。Limit需要在[1, 100]之间。
+     * @param integer $Offset 偏移量。偏移量最小为0。
      * @param string $VpcId 查询指定VpcId下的子网信息。
      * @param string $SearchWord 查找关键字
      */

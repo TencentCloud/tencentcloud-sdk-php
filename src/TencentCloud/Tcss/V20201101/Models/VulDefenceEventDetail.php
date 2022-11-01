@@ -154,6 +154,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJNDIUrl(string $JNDIUrl) 设置接口Url
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRaspDetail() 获取rasp detail
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRaspDetail(array $RaspDetail) 设置rasp detail
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulDefenceEventDetail extends AbstractModel
 {
@@ -361,6 +365,12 @@ class VulDefenceEventDetail extends AbstractModel
     public $JNDIUrl;
 
     /**
+     * @var array rasp detail
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RaspDetail;
+
+    /**
      * @param string $CVEID 漏洞CVEID
      * @param string $VulName 漏洞名称
      * @param string $PocID 漏洞PocID
@@ -427,6 +437,8 @@ class VulDefenceEventDetail extends AbstractModel
 迁移中: REMOVING
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JNDIUrl 接口Url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RaspDetail rasp detail
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -576,6 +588,15 @@ class VulDefenceEventDetail extends AbstractModel
 
         if (array_key_exists("JNDIUrl",$param) and $param["JNDIUrl"] !== null) {
             $this->JNDIUrl = $param["JNDIUrl"];
+        }
+
+        if (array_key_exists("RaspDetail",$param) and $param["RaspDetail"] !== null) {
+            $this->RaspDetail = [];
+            foreach ($param["RaspDetail"] as $key => $value){
+                $obj = new RaspInfo();
+                $obj->deserialize($value);
+                array_push($this->RaspDetail, $obj);
+            }
         }
     }
 }

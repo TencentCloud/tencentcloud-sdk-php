@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
  * @method string getNewDomain() 获取要修改的新域名。NewDomain和NewDomains只能传一个。
  * @method void setNewDomain(string $NewDomain) 设置要修改的新域名。NewDomain和NewDomains只能传一个。
- * @method CertificateInput getCertificate() 获取域名相关的证书信息，注意，仅对启用SNI的监听器适用。
- * @method void setCertificate(CertificateInput $Certificate) 设置域名相关的证书信息，注意，仅对启用SNI的监听器适用。
+ * @method CertificateInput getCertificate() 获取域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
+ * @method void setCertificate(CertificateInput $Certificate) 设置域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
  * @method boolean getHttp2() 获取是否开启Http2，注意，只有HTTPS域名才能开启Http2。
  * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
  * @method boolean getDefaultServer() 获取是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) 设置监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
  * @method array getNewDomains() 获取要修改的新域名列表。NewDomain和NewDomains只能传一个。
  * @method void setNewDomains(array $NewDomains) 设置要修改的新域名列表。NewDomain和NewDomains只能传一个。
+ * @method MultiCertInfo getMultiCertInfo() 获取域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
+ * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) 设置域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
  */
 class ModifyDomainAttributesRequest extends AbstractModel
 {
@@ -62,7 +64,7 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $NewDomain;
 
     /**
-     * @var CertificateInput 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
+     * @var CertificateInput 域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
      */
     public $Certificate;
 
@@ -87,15 +89,21 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $NewDomains;
 
     /**
+     * @var MultiCertInfo 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
+     */
+    public $MultiCertInfo;
+
+    /**
      * @param string $LoadBalancerId 负载均衡实例ID。
      * @param string $ListenerId 负载均衡监听器ID。
      * @param string $Domain 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
      * @param string $NewDomain 要修改的新域名。NewDomain和NewDomains只能传一个。
-     * @param CertificateInput $Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
+     * @param CertificateInput $Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
      * @param boolean $Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      * @param boolean $DefaultServer 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
      * @param string $NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      * @param array $NewDomains 要修改的新域名列表。NewDomain和NewDomains只能传一个。
+     * @param MultiCertInfo $MultiCertInfo 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和MultiCertInfo 同时传入。
      */
     function __construct()
     {
@@ -145,6 +153,11 @@ class ModifyDomainAttributesRequest extends AbstractModel
 
         if (array_key_exists("NewDomains",$param) and $param["NewDomains"] !== null) {
             $this->NewDomains = $param["NewDomains"];
+        }
+
+        if (array_key_exists("MultiCertInfo",$param) and $param["MultiCertInfo"] !== null) {
+            $this->MultiCertInfo = new MultiCertInfo();
+            $this->MultiCertInfo->deserialize($param["MultiCertInfo"]);
         }
     }
 }

@@ -100,6 +100,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(Models\DescribeOverviewDDoSEventListRequest $req) 获取防护概览的ddos攻击事件
  * @method Models\DescribeOverviewDDoSTrendResponse DescribeOverviewDDoSTrend(Models\DescribeOverviewDDoSTrendRequest $req) 获取防护概览DDoS攻击流量带宽和攻击包速率数据
  * @method Models\DescribeOverviewIndexResponse DescribeOverviewIndex(Models\DescribeOverviewIndexRequest $req) 拉取防护概览指标
+ * @method Models\DescribePendingRiskInfoResponse DescribePendingRiskInfo(Models\DescribePendingRiskInfoRequest $req) 查询账号维度待处理风险信息，包括是否为付费用户，查询攻击中、封堵中、过期资源数量等
  * @method Models\DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(Models\DisassociateDDoSEipAddressRequest $req) 本接口 (DisassociateDDoSEipAddress) 用于解绑高防弹性公网IP。
  * @method Models\ModifyCCLevelPolicyResponse ModifyCCLevelPolicy(Models\ModifyCCLevelPolicyRequest $req) 修改CC防护等级
  * @method Models\ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(Models\ModifyCCPrecisionPolicyRequest $req) 修改CC精准防护策略

@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnhandledFileCnt(integer $UnhandledFileCnt) 设置未处理文件篡改
  * @method integer getUnhandledVirusEventCnt() 获取未处理木马事件
  * @method void setUnhandledVirusEventCnt(integer $UnhandledVirusEventCnt) 设置未处理木马事件
+ * @method integer getUnhandledMaliciousConnectionEventCnt() 获取未处理恶意外连事件
+ * @method void setUnhandledMaliciousConnectionEventCnt(integer $UnhandledMaliciousConnectionEventCnt) 设置未处理恶意外连事件
+ * @method integer getUnhandledK8sApiEventCnt() 获取未处理k8sApi事件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUnhandledK8sApiEventCnt(integer $UnhandledK8sApiEventCnt) 设置未处理k8sApi事件
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +74,17 @@ class DescribeContainerSecEventSummaryResponse extends AbstractModel
     public $UnhandledVirusEventCnt;
 
     /**
+     * @var integer 未处理恶意外连事件
+     */
+    public $UnhandledMaliciousConnectionEventCnt;
+
+    /**
+     * @var integer 未处理k8sApi事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UnhandledK8sApiEventCnt;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +96,9 @@ class DescribeContainerSecEventSummaryResponse extends AbstractModel
      * @param integer $UnhandledAbnormalProcessCnt 未处理异常进程
      * @param integer $UnhandledFileCnt 未处理文件篡改
      * @param integer $UnhandledVirusEventCnt 未处理木马事件
+     * @param integer $UnhandledMaliciousConnectionEventCnt 未处理恶意外连事件
+     * @param integer $UnhandledK8sApiEventCnt 未处理k8sApi事件
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +136,14 @@ class DescribeContainerSecEventSummaryResponse extends AbstractModel
 
         if (array_key_exists("UnhandledVirusEventCnt",$param) and $param["UnhandledVirusEventCnt"] !== null) {
             $this->UnhandledVirusEventCnt = $param["UnhandledVirusEventCnt"];
+        }
+
+        if (array_key_exists("UnhandledMaliciousConnectionEventCnt",$param) and $param["UnhandledMaliciousConnectionEventCnt"] !== null) {
+            $this->UnhandledMaliciousConnectionEventCnt = $param["UnhandledMaliciousConnectionEventCnt"];
+        }
+
+        if (array_key_exists("UnhandledK8sApiEventCnt",$param) and $param["UnhandledK8sApiEventCnt"] !== null) {
+            $this->UnhandledK8sApiEventCnt = $param["UnhandledK8sApiEventCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

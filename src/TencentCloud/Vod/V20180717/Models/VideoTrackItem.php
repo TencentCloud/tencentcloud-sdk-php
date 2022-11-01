@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceMediaStartTime(float $SourceMediaStartTime) 设置视频片段取自素材文件的起始时间，单位为秒。默认为0。
  * @method float getDuration() 获取视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
  * @method void setDuration(float $Duration) 设置视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
+ * @method float getTargetDuration() 获取视频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对视频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+ * @method void setTargetDuration(float $TargetDuration) 设置视频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对视频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
  * @method string getCoordinateOrigin() 获取视频原点位置，取值有：
 <li>Center：坐标原点为中心位置，如画布中心。</li>
 默认值 ：Center。
@@ -78,10 +84,10 @@ use TencentCloud\Common\AbstractModel;
 <li>当 Width、Height 均为空，则 Width 和 Height 取视频素材本身的 Width、Height。</li>
 <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
 <li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
- * @method array getImageOperations() 获取对图像进行的操作，如图像旋转等。
- * @method void setImageOperations(array $ImageOperations) 设置对图像进行的操作，如图像旋转等。
  * @method array getAudioOperations() 获取对音频进行操作，如静音等。
  * @method void setAudioOperations(array $AudioOperations) 设置对音频进行操作，如静音等。
+ * @method array getImageOperations() 获取对图像进行的操作，如图像旋转等。
+ * @method void setImageOperations(array $ImageOperations) 设置对图像进行的操作，如图像旋转等。
  */
 class VideoTrackItem extends AbstractModel
 {
@@ -102,6 +108,13 @@ class VideoTrackItem extends AbstractModel
      * @var float 视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
      */
     public $Duration;
+
+    /**
+     * @var float 视频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对视频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+     */
+    public $TargetDuration;
 
     /**
      * @var string 视频原点位置，取值有：
@@ -147,14 +160,14 @@ class VideoTrackItem extends AbstractModel
     public $Height;
 
     /**
-     * @var array 对图像进行的操作，如图像旋转等。
-     */
-    public $ImageOperations;
-
-    /**
      * @var array 对音频进行操作，如静音等。
      */
     public $AudioOperations;
+
+    /**
+     * @var array 对图像进行的操作，如图像旋转等。
+     */
+    public $ImageOperations;
 
     /**
      * @param string $SourceMedia 视频片段的媒体素材来源，可以是：
@@ -163,6 +176,9 @@ class VideoTrackItem extends AbstractModel
 注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
      * @param float $SourceMediaStartTime 视频片段取自素材文件的起始时间，单位为秒。默认为0。
      * @param float $Duration 视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
+     * @param float $TargetDuration 视频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对视频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
      * @param string $CoordinateOrigin 视频原点位置，取值有：
 <li>Center：坐标原点为中心位置，如画布中心。</li>
 默认值 ：Center。
@@ -186,8 +202,8 @@ class VideoTrackItem extends AbstractModel
 <li>当 Width、Height 均为空，则 Width 和 Height 取视频素材本身的 Width、Height。</li>
 <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
 <li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
-     * @param array $ImageOperations 对图像进行的操作，如图像旋转等。
      * @param array $AudioOperations 对音频进行操作，如静音等。
+     * @param array $ImageOperations 对图像进行的操作，如图像旋转等。
      */
     function __construct()
     {
@@ -214,6 +230,10 @@ class VideoTrackItem extends AbstractModel
             $this->Duration = $param["Duration"];
         }
 
+        if (array_key_exists("TargetDuration",$param) and $param["TargetDuration"] !== null) {
+            $this->TargetDuration = $param["TargetDuration"];
+        }
+
         if (array_key_exists("CoordinateOrigin",$param) and $param["CoordinateOrigin"] !== null) {
             $this->CoordinateOrigin = $param["CoordinateOrigin"];
         }
@@ -234,21 +254,21 @@ class VideoTrackItem extends AbstractModel
             $this->Height = $param["Height"];
         }
 
-        if (array_key_exists("ImageOperations",$param) and $param["ImageOperations"] !== null) {
-            $this->ImageOperations = [];
-            foreach ($param["ImageOperations"] as $key => $value){
-                $obj = new ImageTransform();
-                $obj->deserialize($value);
-                array_push($this->ImageOperations, $obj);
-            }
-        }
-
         if (array_key_exists("AudioOperations",$param) and $param["AudioOperations"] !== null) {
             $this->AudioOperations = [];
             foreach ($param["AudioOperations"] as $key => $value){
                 $obj = new AudioTransform();
                 $obj->deserialize($value);
                 array_push($this->AudioOperations, $obj);
+            }
+        }
+
+        if (array_key_exists("ImageOperations",$param) and $param["ImageOperations"] !== null) {
+            $this->ImageOperations = [];
+            foreach ($param["ImageOperations"] as $key => $value){
+                $obj = new ImageTransform();
+                $obj->deserialize($value);
+                array_push($this->ImageOperations, $obj);
             }
         }
     }

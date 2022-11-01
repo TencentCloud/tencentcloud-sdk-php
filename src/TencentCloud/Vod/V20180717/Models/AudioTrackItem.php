@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceMediaStartTime(float $SourceMediaStartTime) 设置音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
  * @method float getDuration() 获取音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
  * @method void setDuration(float $Duration) 设置音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
+ * @method float getTargetDuration() 获取音频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对音频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+ * @method void setTargetDuration(float $TargetDuration) 设置音频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对音频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
  * @method array getAudioOperations() 获取对音频片段进行的操作，如音量调节等。
  * @method void setAudioOperations(array $AudioOperations) 设置对音频片段进行的操作，如音量调节等。
  */
@@ -56,6 +62,13 @@ class AudioTrackItem extends AbstractModel
     public $Duration;
 
     /**
+     * @var float 音频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对音频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
+     */
+    public $TargetDuration;
+
+    /**
      * @var array 对音频片段进行的操作，如音量调节等。
      */
     public $AudioOperations;
@@ -67,6 +80,9 @@ class AudioTrackItem extends AbstractModel
 注意：当使用其他媒体文件的下载 URL 作为素材来源，且开启了访问控制（如防盗链）时，需要在 URL 携带访问控制参数（如防盗链签名）。
      * @param float $SourceMediaStartTime 音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
      * @param float $Duration 音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
+     * @param float $TargetDuration 音频片段目标时长，单位为秒。
+<li>当 TargetDuration 不填或填0时，表示目标时长和 Duration 一致；</li>
+<li>当 TargetDuration 取大于0的值时，将对音频片段做快进或慢放等处理，使得输出片段的时长等于 TargetDuration。</li>
      * @param array $AudioOperations 对音频片段进行的操作，如音量调节等。
      */
     function __construct()
@@ -92,6 +108,10 @@ class AudioTrackItem extends AbstractModel
 
         if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
             $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("TargetDuration",$param) and $param["TargetDuration"] !== null) {
+            $this->TargetDuration = $param["TargetDuration"];
         }
 
         if (array_key_exists("AudioOperations",$param) and $param["AudioOperations"] !== null) {

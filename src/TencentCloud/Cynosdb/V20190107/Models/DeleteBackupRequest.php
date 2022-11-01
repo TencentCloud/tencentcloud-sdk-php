@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220901\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyAliasDomain返回参数结构体
+ * DeleteBackup请求参数结构体
  *
- * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
- * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method array getSnapshotIdList() 获取备份文件ID
+ * @method void setSnapshotIdList(array $SnapshotIdList) 设置备份文件ID
  */
-class ModifyAliasDomainResponse extends AbstractModel
+class DeleteBackupRequest extends AbstractModel
 {
     /**
-     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var string 集群ID
      */
-    public $RequestId;
+    public $ClusterId;
 
     /**
-     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @var array 备份文件ID
+     */
+    public $SnapshotIdList;
+
+    /**
+     * @param string $ClusterId 集群ID
+     * @param array $SnapshotIdList 备份文件ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class ModifyAliasDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("SnapshotIdList",$param) and $param["SnapshotIdList"] !== null) {
+            $this->SnapshotIdList = $param["SnapshotIdList"];
         }
     }
 }

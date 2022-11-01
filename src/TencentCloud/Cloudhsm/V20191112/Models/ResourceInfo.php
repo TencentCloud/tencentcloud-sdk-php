@@ -60,9 +60,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置区域Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getExpireTime() 获取过期时间
+ * @method integer getExpireTime() 获取过期时间（Epoch Unix Timestamp）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpireTime(integer $ExpireTime) 设置过期时间
+ * @method void setExpireTime(integer $ExpireTime) 设置过期时间（Epoch Unix Timestamp）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionName() 获取地域名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -172,7 +172,7 @@ class ResourceInfo extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer 过期时间
+     * @var integer 过期时间（Epoch Unix Timestamp）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
@@ -264,7 +264,7 @@ class ResourceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 区域Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ExpireTime 过期时间
+     * @param integer $ExpireTime 过期时间（Epoch Unix Timestamp）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionName 地域名
 注意：此字段可能返回 null，表示取不到有效值。

@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) 设置地域Id，返回腾讯云地域代码，如广州为1，北京为8
  * @method integer getZoneId() 获取区域Id，返回腾讯云每个地域的可用区代码
  * @method void setZoneId(integer $ZoneId) 设置区域Id，返回腾讯云每个地域的可用区代码
- * @method integer getExpireTime() 获取过期时间
- * @method void setExpireTime(integer $ExpireTime) 设置过期时间
+ * @method integer getExpireTime() 获取资源过期时间，以时间戳形式展示。
+ * @method void setExpireTime(integer $ExpireTime) 设置资源过期时间，以时间戳形式展示。
  * @method array getSgList() 获取安全组详情信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgList(array $SgList) 设置安全组详情信息
@@ -146,7 +146,7 @@ class DescribeVsmAttributesResponse extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer 过期时间
+     * @var integer 资源过期时间，以时间戳形式展示。
      */
     public $ExpireTime;
 
@@ -238,7 +238,7 @@ class DescribeVsmAttributesResponse extends AbstractModel
      * @param integer $VsmType 资源类型，17表示EVSM，33表示GVSM，49表示SVSM
      * @param integer $RegionId 地域Id，返回腾讯云地域代码，如广州为1，北京为8
      * @param integer $ZoneId 区域Id，返回腾讯云每个地域的可用区代码
-     * @param integer $ExpireTime 过期时间
+     * @param integer $ExpireTime 资源过期时间，以时间戳形式展示。
      * @param array $SgList 安全组详情信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetName 子网名

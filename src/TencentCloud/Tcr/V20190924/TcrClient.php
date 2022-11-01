@@ -86,7 +86,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 查询镜像版本列表或指定容器镜像信息
  * @method Models\DescribeImmutableTagRulesResponse DescribeImmutableTagRules(Models\DescribeImmutableTagRulesRequest $req) 列出镜像不可变规则
  * @method Models\DescribeInstanceAllResponse DescribeInstanceAll(Models\DescribeInstanceAllRequest $req) 查询全部实例信息
- * @method Models\DescribeInstanceAllNamespacesResponse DescribeInstanceAllNamespaces(Models\DescribeInstanceAllNamespacesRequest $req) 查询所有有实例命名空间列表
+ * @method Models\DescribeInstanceAllNamespacesResponse DescribeInstanceAllNamespaces(Models\DescribeInstanceAllNamespacesRequest $req) 查询所有实例命名空间列表
  * @method Models\DescribeInstanceCustomizedDomainResponse DescribeInstanceCustomizedDomain(Models\DescribeInstanceCustomizedDomainRequest $req) 查询实例自定义域名列表
  * @method Models\DescribeInstanceStatusResponse DescribeInstanceStatus(Models\DescribeInstanceStatusRequest $req) 查询实例当前状态以及过程信息
  * @method Models\DescribeInstanceTokenResponse DescribeInstanceToken(Models\DescribeInstanceTokenRequest $req) 查询长期访问凭证信息

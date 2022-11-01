@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayUin(string $PayUin) 设置代付者Uin
  * @method array getIdentityRoleID() 获取管理身份
  * @method void setIdentityRoleID(array $IdentityRoleID) 设置管理身份
+ * @method integer getAuthRelationId() 获取主体关系ID
+ * @method void setAuthRelationId(integer $AuthRelationId) 设置主体关系ID
  */
 class CreateOrganizationMemberRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateOrganizationMemberRequest extends AbstractModel
     public $IdentityRoleID;
 
     /**
+     * @var integer 主体关系ID
+     */
+    public $AuthRelationId;
+
+    /**
      * @param string $Name 名称
      * @param string $PolicyType 关系策略  取值：Financial
      * @param array $PermissionIds 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
@@ -96,6 +103,7 @@ class CreateOrganizationMemberRequest extends AbstractModel
      * @param integer $RecordId 重试创建传记录ID
      * @param string $PayUin 代付者Uin
      * @param array $IdentityRoleID 管理身份
+     * @param integer $AuthRelationId 主体关系ID
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateOrganizationMemberRequest extends AbstractModel
 
         if (array_key_exists("IdentityRoleID",$param) and $param["IdentityRoleID"] !== null) {
             $this->IdentityRoleID = $param["IdentityRoleID"];
+        }
+
+        if (array_key_exists("AuthRelationId",$param) and $param["AuthRelationId"] !== null) {
+            $this->AuthRelationId = $param["AuthRelationId"];
         }
     }
 }

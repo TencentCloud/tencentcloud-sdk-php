@@ -29,6 +29,8 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
  *
  * @method string getComponentId() 获取控件编号
 
+CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
+
 注：
 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。
 例：
@@ -38,6 +40,8 @@ https://cloud.tencent.com/document/product/1323/78346#component-.E4.B8.89.E7.A7.
 创建控件时，此值为空
 查询时返回完整结构
  * @method void setComponentId(string $ComponentId) 设置控件编号
+
+CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
 
 注：
 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。
@@ -166,6 +170,8 @@ class Component extends AbstractModel
 {
     /**
      * @var string 控件编号
+
+CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
 
 注：
 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。
@@ -309,6 +315,8 @@ SIGN_PAGING_SEAL - 可以指定印章ID
 
     /**
      * @param string $ComponentId 控件编号
+
+CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
 
 注：
 当GenerateMode=3时，通过"^"来决定是否使用关键字整词匹配能力。

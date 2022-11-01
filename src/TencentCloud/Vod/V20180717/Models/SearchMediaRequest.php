@@ -72,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
 <li>数组长度限制：10。</li>
  * @method void setStreamIds(array $StreamIds) 设置推流直播码集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
- * @method array getVids() 获取直播录制文件的唯一标识。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
- * @method void setVids(array $Vids) 设置直播录制文件的唯一标识。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
  * @method TimeRange getCreateTime() 获取匹配创建时间在此时间段内的文件。
 <li>包含所指定的头尾时间点。</li>
  * @method void setCreateTime(TimeRange $CreateTime) 设置匹配创建时间在此时间段内的文件。
@@ -158,10 +154,6 @@ use TencentCloud\Common\AbstractModel;
 推流直播码。
  * @method void setStreamId(string $StreamId) 设置（不推荐：应使用 StreamIds 替代）
 推流直播码。
- * @method string getVid() 获取（不推荐：应使用 Vids 替代）
-直播录制文件的唯一标识。
- * @method void setVid(string $Vid) 设置（不推荐：应使用 Vids 替代）
-直播录制文件的唯一标识。
  * @method string getStartTime() 获取（不推荐：应使用 CreateTime 替代）
 创建时间的开始时间。
 <li>大于等于开始时间。</li>
@@ -182,6 +174,10 @@ use TencentCloud\Common\AbstractModel;
 <li>小于结束时间。</li>
 <li>当 CreateTime.Before 也存在时，将优先使用 CreateTime.Before。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+ * @method array getVids() 获取该字段已无效。
+ * @method void setVids(array $Vids) 设置该字段已无效。
+ * @method string getVid() 获取该字段已无效。
+ * @method void setVid(string $Vid) 设置该字段已无效。
  */
 class SearchMediaRequest extends AbstractModel
 {
@@ -250,12 +246,6 @@ class SearchMediaRequest extends AbstractModel
 <li>数组长度限制：10。</li>
      */
     public $StreamIds;
-
-    /**
-     * @var array 直播录制文件的唯一标识。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-     */
-    public $Vids;
 
     /**
      * @var TimeRange 匹配创建时间在此时间段内的文件。
@@ -351,12 +341,6 @@ class SearchMediaRequest extends AbstractModel
     public $StreamId;
 
     /**
-     * @var string （不推荐：应使用 Vids 替代）
-直播录制文件的唯一标识。
-     */
-    public $Vid;
-
-    /**
      * @var string （不推荐：应使用 CreateTime 替代）
 创建时间的开始时间。
 <li>大于等于开始时间。</li>
@@ -373,6 +357,16 @@ class SearchMediaRequest extends AbstractModel
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
      */
     public $EndTime;
+
+    /**
+     * @var array 该字段已无效。
+     */
+    public $Vids;
+
+    /**
+     * @var string 该字段已无效。
+     */
+    public $Vid;
 
     /**
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
@@ -400,8 +394,6 @@ class SearchMediaRequest extends AbstractModel
      * @param array $SourceTypes 媒体文件来源集合，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
 <li>数组长度限制：10。</li>
      * @param array $StreamIds 推流直播码集合。匹配集合中的任意元素。
-<li>数组长度限制：10。</li>
-     * @param array $Vids 直播录制文件的唯一标识。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
      * @param TimeRange $CreateTime 匹配创建时间在此时间段内的文件。
 <li>包含所指定的头尾时间点。</li>
@@ -444,8 +436,6 @@ class SearchMediaRequest extends AbstractModel
 媒体文件来源，来源取值参见 [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData)。
      * @param string $StreamId （不推荐：应使用 StreamIds 替代）
 推流直播码。
-     * @param string $Vid （不推荐：应使用 Vids 替代）
-直播录制文件的唯一标识。
      * @param string $StartTime （不推荐：应使用 CreateTime 替代）
 创建时间的开始时间。
 <li>大于等于开始时间。</li>
@@ -456,6 +446,8 @@ class SearchMediaRequest extends AbstractModel
 <li>小于结束时间。</li>
 <li>当 CreateTime.Before 也存在时，将优先使用 CreateTime.Before。</li>
 <li>格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。</li>
+     * @param array $Vids 该字段已无效。
+     * @param string $Vid 该字段已无效。
      */
     function __construct()
     {
@@ -508,10 +500,6 @@ class SearchMediaRequest extends AbstractModel
 
         if (array_key_exists("StreamIds",$param) and $param["StreamIds"] !== null) {
             $this->StreamIds = $param["StreamIds"];
-        }
-
-        if (array_key_exists("Vids",$param) and $param["Vids"] !== null) {
-            $this->Vids = $param["Vids"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
@@ -569,16 +557,20 @@ class SearchMediaRequest extends AbstractModel
             $this->StreamId = $param["StreamId"];
         }
 
-        if (array_key_exists("Vid",$param) and $param["Vid"] !== null) {
-            $this->Vid = $param["Vid"];
-        }
-
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Vids",$param) and $param["Vids"] !== null) {
+            $this->Vids = $param["Vids"];
+        }
+
+        if (array_key_exists("Vid",$param) and $param["Vid"] !== null) {
+            $this->Vid = $param["Vid"];
         }
     }
 }

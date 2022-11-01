@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取应用相关信息，若是渠道版调用 appid 和proxyappid 必填
  * @method void setAgent(Agent $Agent) 设置应用相关信息，若是渠道版调用 appid 和proxyappid 必填
- * @method string getBusinessType() 获取文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
- * @method void setBusinessType(string $BusinessType) 设置文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
+ * @method string getBusinessType() 获取文件对应业务类型
+1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
+ * @method void setBusinessType(string $BusinessType) 设置文件对应业务类型
+1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
  * @method array getFileInfos() 获取上传文件内容数组，最多支持20个文件
  * @method void setFileInfos(array $FileInfos) 设置上传文件内容数组，最多支持20个文件
  * @method UserInfo getOperator() 获取操作者的信息
@@ -41,9 +41,9 @@ class UploadFilesRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
+     * @var string 文件对应业务类型
+1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
      */
     public $BusinessType;
 
@@ -59,9 +59,9 @@ class UploadFilesRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 应用相关信息，若是渠道版调用 appid 和proxyappid 必填
-     * @param string $BusinessType 文件对应业务类型，用于区分文件存储路径：
-1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
-2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
+     * @param string $BusinessType 文件对应业务类型
+1. TEMPLATE - 模板； 文件类型：.pdf/.doc/.docx/.html
+2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.doc/.docx/.jpg/.png/.xls.xlsx/.html
      * @param array $FileInfos 上传文件内容数组，最多支持20个文件
      * @param UserInfo $Operator 操作者的信息
      */

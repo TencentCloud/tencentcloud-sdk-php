@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
  * @method void setDeadLine(integer $DeadLine) 设置签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
- * @method string getUserData() 获取用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
- * @method void setUserData(string $UserData) 设置用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+ * @method string getUserData() 获取用户自定义字段，回调的时候会进行透传，长度需要小于20480
+ * @method void setUserData(string $UserData) 设置用户自定义字段，回调的时候会进行透传，长度需要小于20480
  * @method string getFlowDescription() 获取签署流程描述,最大长度1000个字符
  * @method void setFlowDescription(string $FlowDescription) 设置签署流程描述,最大长度1000个字符
  * @method boolean getUnordered() 获取发送类型：
@@ -102,7 +102,7 @@ class CreateFlowRequest extends AbstractModel
     public $DeadLine;
 
     /**
-     * @var string 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+     * @var string 用户自定义字段，回调的时候会进行透传，长度需要小于20480
      */
     public $UserData;
 
@@ -151,7 +151,7 @@ false：有序签
      * @param string $RelatedFlowId 暂未开放
      * @param integer $DeadLine 签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
-     * @param string $UserData 用户自定义字段(需进行base64 encode),回调的时候会进行透传, 长度需要小于20480
+     * @param string $UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
      * @param string $FlowDescription 签署流程描述,最大长度1000个字符
      * @param boolean $Unordered 发送类型：
 true：无序签

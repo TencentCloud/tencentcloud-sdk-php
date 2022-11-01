@@ -67,6 +67,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\CreateOrModifyPostPayCoresResponse CreateOrModifyPostPayCores(Models\CreateOrModifyPostPayCoresRequest $req) CreateOrModifyPostPayCores  创建或者编辑弹性计费上限
  * @method Models\CreateProcessEventsExportJobResponse CreateProcessEventsExportJob(Models\CreateProcessEventsExportJobRequest $req) 创建异常进程事件导出异步任务
  * @method Models\CreateRefreshTaskResponse CreateRefreshTask(Models\CreateRefreshTaskRequest $req) 下发刷新任务，会刷新资产信息
+ * @method Models\CreateRiskDnsEventExportJobResponse CreateRiskDnsEventExportJob(Models\CreateRiskDnsEventExportJobRequest $req) 创建恶意请求事件导出任务
  * @method Models\CreateSearchTemplateResponse CreateSearchTemplate(Models\CreateSearchTemplateRequest $req) 添加检索模板
  * @method Models\CreateSystemVulExportJobResponse CreateSystemVulExportJob(Models\CreateSystemVulExportJobRequest $req) 创建系统漏洞导出任务
  * @method Models\CreateVirusScanAgainResponse CreateVirusScanAgain(Models\CreateVirusScanAgainRequest $req) 运行时文件查杀重新检测

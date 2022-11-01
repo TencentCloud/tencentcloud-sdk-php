@@ -30,6 +30,7 @@ use TencentCloud\Tcm\V20210413\Models as Models;
  * @method Models\LinkClusterListResponse LinkClusterList(Models\LinkClusterListRequest $req) 关联集群
  * @method Models\LinkPrometheusResponse LinkPrometheus(Models\LinkPrometheusRequest $req) 关联Prometheus
  * @method Models\ModifyMeshResponse ModifyMesh(Models\ModifyMeshRequest $req) 修改网格
+ * @method Models\ModifyTracingConfigResponse ModifyTracingConfig(Models\ModifyTracingConfigRequest $req) 修改 Tracing 配置
  * @method Models\UnlinkClusterResponse UnlinkCluster(Models\UnlinkClusterRequest $req) 解关联集群
  * @method Models\UnlinkPrometheusResponse UnlinkPrometheus(Models\UnlinkPrometheusRequest $req) 解除关联Prometheus
  */

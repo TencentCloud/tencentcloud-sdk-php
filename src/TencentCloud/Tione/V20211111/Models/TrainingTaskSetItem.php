@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrameworkVersion(string $FrameworkVersion) 设置训练框架版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTrainingMode() 获取训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+ * @method string getFrameworkEnvironment() 获取框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTrainingMode(string $TrainingMode) 设置训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+ * @method void setFrameworkEnvironment(string $FrameworkEnvironment) 设置框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChargeType() 获取计费模式
  * @method void setChargeType(string $ChargeType) 设置计费模式
@@ -46,9 +46,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourceConfigInfos() 获取资源配置
  * @method void setResourceConfigInfos(array $ResourceConfigInfos) 设置资源配置
- * @method array getTags() 获取标签配置
+ * @method string getTrainingMode() 获取训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置标签配置
+ * @method void setTrainingMode(string $TrainingMode) 设置训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取任务状态
  * @method void setStatus(string $Status) 设置任务状态
@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置任务信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrainingTaskSetItem extends AbstractModel
 {
@@ -112,10 +116,10 @@ class TrainingTaskSetItem extends AbstractModel
     public $FrameworkVersion;
 
     /**
-     * @var string 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @var string 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TrainingMode;
+    public $FrameworkEnvironment;
 
     /**
      * @var string 计费模式
@@ -139,10 +143,10 @@ class TrainingTaskSetItem extends AbstractModel
     public $ResourceConfigInfos;
 
     /**
-     * @var array 标签配置
+     * @var string 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Tags;
+    public $TrainingMode;
 
     /**
      * @var string 任务状态
@@ -211,20 +215,26 @@ class TrainingTaskSetItem extends AbstractModel
     public $Message;
 
     /**
+     * @var array 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $Id 训练任务ID
      * @param string $Name 训练任务名称
      * @param string $FrameworkName 框架名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FrameworkVersion 训练框架版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TrainingMode 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @param string $FrameworkEnvironment 框架运行环境
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeType 计费模式
      * @param string $ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
      * @param string $ResourceGroupId 预付费专用资源组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceConfigInfos 资源配置
-     * @param array $Tags 标签配置
+     * @param string $TrainingMode 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 任务状态
      * @param integer $RuntimeInSeconds 运行时长
@@ -243,6 +253,8 @@ class TrainingTaskSetItem extends AbstractModel
      * @param ImageInfo $ImageInfo 自定义镜像信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -274,8 +286,8 @@ class TrainingTaskSetItem extends AbstractModel
             $this->FrameworkVersion = $param["FrameworkVersion"];
         }
 
-        if (array_key_exists("TrainingMode",$param) and $param["TrainingMode"] !== null) {
-            $this->TrainingMode = $param["TrainingMode"];
+        if (array_key_exists("FrameworkEnvironment",$param) and $param["FrameworkEnvironment"] !== null) {
+            $this->FrameworkEnvironment = $param["FrameworkEnvironment"];
         }
 
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
@@ -299,13 +311,8 @@ class TrainingTaskSetItem extends AbstractModel
             }
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new Tag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
+        if (array_key_exists("TrainingMode",$param) and $param["TrainingMode"] !== null) {
+            $this->TrainingMode = $param["TrainingMode"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
@@ -356,6 +363,15 @@ class TrainingTaskSetItem extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

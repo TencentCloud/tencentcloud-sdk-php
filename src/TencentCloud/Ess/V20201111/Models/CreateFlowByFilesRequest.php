@@ -68,6 +68,8 @@ false：有序签
 若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+ * @method string getUserData() 获取用户自定义字段，回调的时候会进行透传，长度需要小于20480
+ * @method void setUserData(string $UserData) 设置用户自定义字段，回调的时候会进行透传，长度需要小于20480
  * @method Agent getAgent() 获取应用号信息
  * @method void setAgent(Agent $Agent) 设置应用号信息
  */
@@ -150,6 +152,11 @@ false：有序签
     public $NeedSignReview;
 
     /**
+     * @var string 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     */
+    public $UserData;
+
+    /**
      * @var Agent 应用号信息
      */
     public $Agent;
@@ -179,6 +186,7 @@ false：有序签
 若设置为true，审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
 
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+     * @param string $UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
      * @param Agent $Agent 应用号信息
      */
     function __construct()
@@ -260,6 +268,10 @@ false：有序签
 
         if (array_key_exists("NeedSignReview",$param) and $param["NeedSignReview"] !== null) {
             $this->NeedSignReview = $param["NeedSignReview"];
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
 
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {

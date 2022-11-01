@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGoodsNum(integer $GoodsNum) 设置购买的实例数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTimeSpan() 获取商品的时间大小
+ * @method string getTimeSpan() 获取商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeSpan(string $TimeSpan) 设置商品的时间大小
+ * @method void setTimeSpan(string $TimeSpan) 设置商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTimeUnit() 获取商品的时间单位
+ * @method string getTimeUnit() 获取商品的时间单位，m表示月，y表示年
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTimeUnit(string $TimeUnit) 设置商品的时间单位
+ * @method void setTimeUnit(string $TimeUnit) 设置商品的时间单位，m表示月，y表示年
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getOriginalCost() 获取应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,13 +58,13 @@ class InquiryPriceBuyVsmResponse extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var string 商品的时间大小
+     * @var string 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSpan;
 
     /**
-     * @var string 商品的时间单位
+     * @var string 商品的时间单位，m表示月，y表示年
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
@@ -85,9 +85,9 @@ class InquiryPriceBuyVsmResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GoodsNum 购买的实例数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TimeSpan 商品的时间大小
+     * @param string $TimeSpan 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TimeUnit 商品的时间单位
+     * @param string $TimeUnit 商品的时间单位，m表示月，y表示年
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $OriginalCost 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
 注意：此字段可能返回 null，表示取不到有效值。

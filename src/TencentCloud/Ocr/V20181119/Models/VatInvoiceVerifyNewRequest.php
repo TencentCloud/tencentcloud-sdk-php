@@ -34,6 +34,14 @@ use TencentCloud\Common\AbstractModel;
 区块链为 5 位
  * @method string getAmount() 获取不含税金额，增值税专用发票、增值税电子专用发票、机动车销售统一发票、二手车销售统一发票、区块链发票时必填; 全电发票为价税合计(含税金额)
  * @method void setAmount(string $Amount) 设置不含税金额，增值税专用发票、增值税电子专用发票、机动车销售统一发票、二手车销售统一发票、区块链发票时必填; 全电发票为价税合计(含税金额)
+ * @method string getRegionCode() 获取地区编码，通用机打电子发票时必填。
+广东:4400，浙江:3300
+ * @method void setRegionCode(string $RegionCode) 设置地区编码，通用机打电子发票时必填。
+广东:4400，浙江:3300
+ * @method string getSellerTaxCode() 获取销方税号，通用机打电子发票必填
+ * @method void setSellerTaxCode(string $SellerTaxCode) 设置销方税号，通用机打电子发票必填
+ * @method boolean getEnableCommonElectronic() 获取是否开启通用机打电子发票，默认为关闭。
+ * @method void setEnableCommonElectronic(boolean $EnableCommonElectronic) 设置是否开启通用机打电子发票，默认为关闭。
  */
 class VatInvoiceVerifyNewRequest extends AbstractModel
 {
@@ -69,6 +77,22 @@ class VatInvoiceVerifyNewRequest extends AbstractModel
     public $Amount;
 
     /**
+     * @var string 地区编码，通用机打电子发票时必填。
+广东:4400，浙江:3300
+     */
+    public $RegionCode;
+
+    /**
+     * @var string 销方税号，通用机打电子发票必填
+     */
+    public $SellerTaxCode;
+
+    /**
+     * @var boolean 是否开启通用机打电子发票，默认为关闭。
+     */
+    public $EnableCommonElectronic;
+
+    /**
      * @param string $InvoiceNo 发票号码，8位、20位（全电票）
      * @param string $InvoiceDate 开票日期（不支持当天发票查询，支持五年以内开具的发票），格式：“YYYY-MM-DD”，如：2019-12-20。
      * @param string $InvoiceCode 发票代码（10或12 位），全电发票为空。查验未成功超过5次后当日无法再查。
@@ -76,6 +100,10 @@ class VatInvoiceVerifyNewRequest extends AbstractModel
      * @param string $CheckCode 校验码后 6 位，增值税普通发票、增值税电子普通发票、增值税普通发票(卷式)、增值税电子普通发票(通行费)时必填;
 区块链为 5 位
      * @param string $Amount 不含税金额，增值税专用发票、增值税电子专用发票、机动车销售统一发票、二手车销售统一发票、区块链发票时必填; 全电发票为价税合计(含税金额)
+     * @param string $RegionCode 地区编码，通用机打电子发票时必填。
+广东:4400，浙江:3300
+     * @param string $SellerTaxCode 销方税号，通用机打电子发票必填
+     * @param boolean $EnableCommonElectronic 是否开启通用机打电子发票，默认为关闭。
      */
     function __construct()
     {
@@ -112,6 +140,18 @@ class VatInvoiceVerifyNewRequest extends AbstractModel
 
         if (array_key_exists("Amount",$param) and $param["Amount"] !== null) {
             $this->Amount = $param["Amount"];
+        }
+
+        if (array_key_exists("RegionCode",$param) and $param["RegionCode"] !== null) {
+            $this->RegionCode = $param["RegionCode"];
+        }
+
+        if (array_key_exists("SellerTaxCode",$param) and $param["SellerTaxCode"] !== null) {
+            $this->SellerTaxCode = $param["SellerTaxCode"];
+        }
+
+        if (array_key_exists("EnableCommonElectronic",$param) and $param["EnableCommonElectronic"] !== null) {
+            $this->EnableCommonElectronic = $param["EnableCommonElectronic"];
         }
     }
 }

@@ -27,9 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getReviewType() 获取企业内部审核结果
 PASS: 通过
 REJECT: 拒绝
+SIGN_REJECT:拒签(流程结束)
  * @method void setReviewType(string $ReviewType) 设置企业内部审核结果
 PASS: 通过
 REJECT: 拒绝
+SIGN_REJECT:拒签(流程结束)
  * @method string getReviewMessage() 获取审核原因 
 当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
  * @method void setReviewMessage(string $ReviewMessage) 设置审核原因 
@@ -51,6 +53,7 @@ class ChannelCreateFlowSignReviewRequest extends AbstractModel
      * @var string 企业内部审核结果
 PASS: 通过
 REJECT: 拒绝
+SIGN_REJECT:拒签(流程结束)
      */
     public $ReviewType;
 
@@ -66,6 +69,7 @@ REJECT: 拒绝
      * @param string $ReviewType 企业内部审核结果
 PASS: 通过
 REJECT: 拒绝
+SIGN_REJECT:拒签(流程结束)
      * @param string $ReviewMessage 审核原因 
 当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
      */

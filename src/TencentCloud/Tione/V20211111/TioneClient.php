@@ -25,13 +25,17 @@ use TencentCloud\Tione\V20211111\Models as Models;
 /**
  * @method Models\CreateBatchTaskResponse CreateBatchTask(Models\CreateBatchTaskRequest $req) 创建跑批任务
  * @method Models\CreateDatasetResponse CreateDataset(Models\CreateDatasetRequest $req) 创建数据集
+ * @method Models\CreateModelServiceResponse CreateModelService(Models\CreateModelServiceRequest $req) 用于创建、发布一个新的模型服务
  * @method Models\CreateTrainingModelResponse CreateTrainingModel(Models\CreateTrainingModelRequest $req) 导入模型
  * @method Models\CreateTrainingTaskResponse CreateTrainingTask(Models\CreateTrainingTaskRequest $req) 创建模型训练任务
  * @method Models\DeleteBatchTaskResponse DeleteBatchTask(Models\DeleteBatchTaskRequest $req) 删除跑批任务
  * @method Models\DeleteDatasetResponse DeleteDataset(Models\DeleteDatasetRequest $req) 删除数据集
+ * @method Models\DeleteModelServiceResponse DeleteModelService(Models\DeleteModelServiceRequest $req) 根据服务id删除模型服务
+ * @method Models\DeleteModelServiceGroupResponse DeleteModelServiceGroup(Models\DeleteModelServiceGroupRequest $req) 根据服务组id删除服务组下所有模型服务
  * @method Models\DeleteTrainingModelResponse DeleteTrainingModel(Models\DeleteTrainingModelRequest $req) 删除模型
  * @method Models\DeleteTrainingModelVersionResponse DeleteTrainingModelVersion(Models\DeleteTrainingModelVersionRequest $req) 删除模型版本
  * @method Models\DeleteTrainingTaskResponse DeleteTrainingTask(Models\DeleteTrainingTaskRequest $req) 删除训练任务
+ * @method Models\DescribeAPIConfigsResponse DescribeAPIConfigs(Models\DescribeAPIConfigsRequest $req) 列举API
  * @method Models\DescribeBatchTaskResponse DescribeBatchTask(Models\DescribeBatchTaskRequest $req) 查询跑批任务
  * @method Models\DescribeBatchTaskInstancesResponse DescribeBatchTaskInstances(Models\DescribeBatchTaskInstancesRequest $req) 查询跑批实例列表
  * @method Models\DescribeBatchTasksResponse DescribeBatchTasks(Models\DescribeBatchTasksRequest $req) 批量预测任务列表信息
@@ -44,6 +48,13 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeInferTemplatesResponse DescribeInferTemplates(Models\DescribeInferTemplatesRequest $req) 查询推理镜像模板
  * @method Models\DescribeLatestTrainingMetricsResponse DescribeLatestTrainingMetrics(Models\DescribeLatestTrainingMetricsRequest $req) 查询最近上报的训练自定义指标
  * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 获取训练、推理、Notebook服务的日志
+ * @method Models\DescribeModelServiceResponse DescribeModelService(Models\DescribeModelServiceRequest $req) 查询单个服务
+ * @method Models\DescribeModelServiceCallInfoResponse DescribeModelServiceCallInfo(Models\DescribeModelServiceCallInfoRequest $req) 展示服务的调用信息
+ * @method Models\DescribeModelServiceGroupResponse DescribeModelServiceGroup(Models\DescribeModelServiceGroupRequest $req) 查询单个服务组
+ * @method Models\DescribeModelServiceGroupsResponse DescribeModelServiceGroups(Models\DescribeModelServiceGroupsRequest $req) 列举在线推理服务组
+ * @method Models\DescribeModelServiceHistoryResponse DescribeModelServiceHistory(Models\DescribeModelServiceHistoryRequest $req) 展示服务的历史版本
+ * @method Models\DescribeModelServiceHotUpdatedResponse DescribeModelServiceHotUpdated(Models\DescribeModelServiceHotUpdatedRequest $req) 用于查询模型服务能否开启热更新
+ * @method Models\DescribeModelServicesResponse DescribeModelServices(Models\DescribeModelServicesRequest $req) 查询多个服务
  * @method Models\DescribeTrainingFrameworksResponse DescribeTrainingFrameworks(Models\DescribeTrainingFrameworksRequest $req) 训练框架列表
  * @method Models\DescribeTrainingMetricsResponse DescribeTrainingMetrics(Models\DescribeTrainingMetricsRequest $req) 查询训练自定义指标
  * @method Models\DescribeTrainingModelVersionResponse DescribeTrainingModelVersion(Models\DescribeTrainingModelVersionRequest $req) 查询模型版本
@@ -52,6 +63,7 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeTrainingTaskResponse DescribeTrainingTask(Models\DescribeTrainingTaskRequest $req) 训练任务详情
  * @method Models\DescribeTrainingTaskPodsResponse DescribeTrainingTaskPods(Models\DescribeTrainingTaskPodsRequest $req) 训练任务pod列表
  * @method Models\DescribeTrainingTasksResponse DescribeTrainingTasks(Models\DescribeTrainingTasksRequest $req) 训练任务列表
+ * @method Models\ModifyServiceGroupWeightsResponse ModifyServiceGroupWeights(Models\ModifyServiceGroupWeightsRequest $req) 更新推理服务组流量分配
  * @method Models\PushTrainingMetricsResponse PushTrainingMetrics(Models\PushTrainingMetricsRequest $req) 上报训练自定义指标
  * @method Models\StartTrainingTaskResponse StartTrainingTask(Models\StartTrainingTaskRequest $req) 启动模型训练任务
  * @method Models\StopBatchTaskResponse StopBatchTask(Models\StopBatchTaskRequest $req) 停止跑批任务

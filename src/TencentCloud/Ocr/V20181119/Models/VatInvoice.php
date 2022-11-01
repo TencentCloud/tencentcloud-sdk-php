@@ -56,7 +56,8 @@ use TencentCloud\Common\AbstractModel;
 11：增值税普通发票（卷式），
 14：增值税电子（通行费）发票，
 15：二手车销售统一发票，
-32：深圳区块链发票
+32：深圳区块链发票，
+102：通用机打电子发票
  * @method void setType(string $Type) 设置票种类型
 01：增值税专用发票，
 02：货运运输业增值税专用发票，
@@ -67,7 +68,8 @@ use TencentCloud\Common\AbstractModel;
 11：增值税普通发票（卷式），
 14：增值税电子（通行费）发票，
 15：二手车销售统一发票，
-32：深圳区块链发票
+32：深圳区块链发票，
+102：通用机打电子发票
  * @method string getCheckCode() 获取检验码
  * @method void setCheckCode(string $CheckCode) 设置检验码
  * @method string getIsAbandoned() 获取是否作废（红冲）是否作废（红冲）
@@ -175,7 +177,8 @@ class VatInvoice extends AbstractModel
 11：增值税普通发票（卷式），
 14：增值税电子（通行费）发票，
 15：二手车销售统一发票，
-32：深圳区块链发票
+32：深圳区块链发票，
+102：通用机打电子发票
      */
     public $Type;
 
@@ -261,7 +264,8 @@ Y: 有清单 N：无清单
 11：增值税普通发票（卷式），
 14：增值税电子（通行费）发票，
 15：二手车销售统一发票，
-32：深圳区块链发票
+32：深圳区块链发票，
+102：通用机打电子发票
      * @param string $CheckCode 检验码
      * @param string $IsAbandoned 是否作废（红冲）是否作废（红冲）
 Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲

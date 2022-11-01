@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceAllNamespaces请求参数结构体
  *
-
+ * @method integer getLimit() 获取每页个数
+ * @method void setLimit(integer $Limit) 设置每页个数
+ * @method integer getOffset() 获取起始偏移位置
+ * @method void setOffset(integer $Offset) 设置起始偏移位置
  */
 class DescribeInstanceAllNamespacesRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 每页个数
+     */
+    public $Limit;
 
     /**
+     * @var integer 起始偏移位置
+     */
+    public $Offset;
 
+    /**
+     * @param integer $Limit 每页个数
+     * @param integer $Offset 起始偏移位置
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeInstanceAllNamespacesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
 
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
     }
 }

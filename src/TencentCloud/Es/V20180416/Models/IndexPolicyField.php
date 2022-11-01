@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrozenMinAge(string $FrozenMinAge) 设置frozen阶段转入时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getColdAction() 获取/
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColdAction(string $ColdAction) 设置/
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IndexPolicyField extends AbstractModel
 {
@@ -84,6 +88,12 @@ class IndexPolicyField extends AbstractModel
     public $FrozenMinAge;
 
     /**
+     * @var string /
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColdAction;
+
+    /**
      * @param string $WarmEnable 是否开启warm阶段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WarmMinAge warm阶段转入时间
@@ -95,6 +105,8 @@ class IndexPolicyField extends AbstractModel
      * @param string $FrozenEnable 是否开启frozen阶段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FrozenMinAge frozen阶段转入时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ColdAction /
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class IndexPolicyField extends AbstractModel
 
         if (array_key_exists("FrozenMinAge",$param) and $param["FrozenMinAge"] !== null) {
             $this->FrozenMinAge = $param["FrozenMinAge"];
+        }
+
+        if (array_key_exists("ColdAction",$param) and $param["ColdAction"] !== null) {
+            $this->ColdAction = $param["ColdAction"];
         }
     }
 }

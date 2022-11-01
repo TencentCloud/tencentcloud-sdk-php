@@ -32,11 +32,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题 ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogType() 获取日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
- * @method void setLogType(string $LogType) 设置日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
- * @method string getBeginningRegex() 获取首行正则表达式，当LogType=multiline_log 时生效
+ * @method string getLogType() 获取日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
+ * @method void setLogType(string $LogType) 设置日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
+ * @method string getBeginningRegex() 获取首行正则表达式，当 LogType 为多行全文、多行正则时生效
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBeginningRegex(string $BeginningRegex) 设置首行正则表达式，当LogType=multiline_log 时生效
+ * @method void setBeginningRegex(string $BeginningRegex) 设置首行正则表达式，当 LogType 为多行全文、多行正则时生效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogPath() 获取收集文件目录，当 InputType=container_file 时生效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -61,6 +61,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getApplicationName() 获取应用名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置应用名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method LogConfigExtractRule getExtractRule() 获取导出规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtractRule(LogConfigExtractRule $ExtractRule) 设置导出规则
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogConfig extends AbstractModel
@@ -88,12 +92,12 @@ class LogConfig extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+     * @var string 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
      */
     public $LogType;
 
     /**
-     * @var string 首行正则表达式，当LogType=multiline_log 时生效
+     * @var string 首行正则表达式，当 LogType 为多行全文、多行正则时生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginningRegex;
@@ -135,14 +139,20 @@ class LogConfig extends AbstractModel
     public $ApplicationName;
 
     /**
+     * @var LogConfigExtractRule 导出规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtractRule;
+
+    /**
      * @param string $Name 名称
      * @param string $InputType 收集类型，container_stdout 为标准输出；container_file 为文件；
      * @param string $LogsetId 日志集 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志主题 ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
-     * @param string $BeginningRegex 首行正则表达式，当LogType=multiline_log 时生效
+     * @param string $LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
+     * @param string $BeginningRegex 首行正则表达式，当 LogType 为多行全文、多行正则时生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogPath 收集文件目录，当 InputType=container_file 时生效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,6 +165,8 @@ class LogConfig extends AbstractModel
      * @param string $ApplicationId 应用 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogConfigExtractRule $ExtractRule 导出规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -216,6 +228,11 @@ class LogConfig extends AbstractModel
 
         if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
             $this->ApplicationName = $param["ApplicationName"];
+        }
+
+        if (array_key_exists("ExtractRule",$param) and $param["ExtractRule"] !== null) {
+            $this->ExtractRule = new LogConfigExtractRule();
+            $this->ExtractRule->deserialize($param["ExtractRule"]);
         }
     }
 }

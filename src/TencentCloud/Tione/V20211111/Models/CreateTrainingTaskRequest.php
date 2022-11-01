@@ -22,22 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
  * @method void setName(string $Name) 设置训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
- * @method string getTrainingMode() 获取训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
- * @method void setTrainingMode(string $TrainingMode) 设置训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
  * @method string getChargeType() 获取计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
  * @method void setChargeType(string $ChargeType) 设置计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
  * @method array getResourceConfigInfos() 获取资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
  * @method void setResourceConfigInfos(array $ResourceConfigInfos) 设置资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
  * @method CosPathInfo getCodePackagePath() 获取COS代码包路径
  * @method void setCodePackagePath(CosPathInfo $CodePackagePath) 设置COS代码包路径
+ * @method string getTrainingMode() 获取训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+ * @method void setTrainingMode(string $TrainingMode) 设置训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
  * @method CosPathInfo getOutput() 获取COS训练输出路径
  * @method void setOutput(CosPathInfo $Output) 设置COS训练输出路径
  * @method boolean getLogEnable() 获取是否上报日志
  * @method void setLogEnable(boolean $LogEnable) 设置是否上报日志
  * @method string getFrameworkName() 获取训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
  * @method void setFrameworkName(string $FrameworkName) 设置训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
- * @method string getFrameworkVersion() 获取训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
- * @method void setFrameworkVersion(string $FrameworkVersion) 设置训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+ * @method string getFrameworkVersion() 获取训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
+ * @method void setFrameworkVersion(string $FrameworkVersion) 设置训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
+ * @method string getFrameworkEnvironment() 获取训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+ * @method void setFrameworkEnvironment(string $FrameworkEnvironment) 设置训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
  * @method string getResourceGroupId() 获取预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
  * @method void setResourceGroupId(string $ResourceGroupId) 设置预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
  * @method array getTags() 获取标签配置
@@ -46,8 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置自定义镜像信息
  * @method StartCmdInfo getStartCmdInfo() 获取启动命令信息，默认为sh start.sh
  * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置启动命令信息，默认为sh start.sh
- * @method string getDataSource() 获取数据来源，eg：DATASET、COS、CFS、HDFS
- * @method void setDataSource(string $DataSource) 设置数据来源，eg：DATASET、COS、CFS、HDFS
  * @method array getDataConfigs() 获取数据配置
  * @method void setDataConfigs(array $DataConfigs) 设置数据配置
  * @method string getVpcId() 获取VPC Id
@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTuningParameters(string $TuningParameters) 设置调优参数
  * @method string getRemark() 获取备注，最多500个字
  * @method void setRemark(string $Remark) 设置备注，最多500个字
+ * @method string getDataSource() 获取数据来源，eg：DATASET、COS、CFS、HDFS
+ * @method void setDataSource(string $DataSource) 设置数据来源，eg：DATASET、COS、CFS、HDFS
  */
 class CreateTrainingTaskRequest extends AbstractModel
 {
@@ -67,11 +69,6 @@ class CreateTrainingTaskRequest extends AbstractModel
      * @var string 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
     public $Name;
-
-    /**
-     * @var string 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
-     */
-    public $TrainingMode;
 
     /**
      * @var string 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
@@ -89,6 +86,11 @@ class CreateTrainingTaskRequest extends AbstractModel
     public $CodePackagePath;
 
     /**
+     * @var string 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
+     */
+    public $TrainingMode;
+
+    /**
      * @var CosPathInfo COS训练输出路径
      */
     public $Output;
@@ -104,9 +106,14 @@ class CreateTrainingTaskRequest extends AbstractModel
     public $FrameworkName;
 
     /**
-     * @var string 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+     * @var string 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
      */
     public $FrameworkVersion;
+
+    /**
+     * @var string 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+     */
+    public $FrameworkEnvironment;
 
     /**
      * @var string 预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
@@ -127,11 +134,6 @@ class CreateTrainingTaskRequest extends AbstractModel
      * @var StartCmdInfo 启动命令信息，默认为sh start.sh
      */
     public $StartCmdInfo;
-
-    /**
-     * @var string 数据来源，eg：DATASET、COS、CFS、HDFS
-     */
-    public $DataSource;
 
     /**
      * @var array 数据配置
@@ -164,26 +166,32 @@ class CreateTrainingTaskRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 数据来源，eg：DATASET、COS、CFS、HDFS
+     */
+    public $DataSource;
+
+    /**
      * @param string $Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
-     * @param string $TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
      * @param string $ChargeType 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
      * @param array $ResourceConfigInfos 资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
      * @param CosPathInfo $CodePackagePath COS代码包路径
+     * @param string $TrainingMode 训练模式，通过DescribeTrainingFrameworks接口查询，eg：PS_WORKER、DDP、MPI、HOROVOD
      * @param CosPathInfo $Output COS训练输出路径
      * @param boolean $LogEnable 是否上报日志
      * @param string $FrameworkName 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
-     * @param string $FrameworkVersion 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
+     * @param string $FrameworkVersion 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15、1.9
+     * @param string $FrameworkEnvironment 训练框架环境，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
      * @param string $ResourceGroupId 预付费专用资源组ID，通过DescribeBillingResourceGroups接口查询
      * @param array $Tags 标签配置
      * @param ImageInfo $ImageInfo 自定义镜像信息
      * @param StartCmdInfo $StartCmdInfo 启动命令信息，默认为sh start.sh
-     * @param string $DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
      * @param array $DataConfigs 数据配置
      * @param string $VpcId VPC Id
      * @param string $SubnetId 子网Id
      * @param LogConfig $LogConfig CLS日志配置
      * @param string $TuningParameters 调优参数
      * @param string $Remark 备注，最多500个字
+     * @param string $DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
      */
     function __construct()
     {
@@ -200,10 +208,6 @@ class CreateTrainingTaskRequest extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
-        }
-
-        if (array_key_exists("TrainingMode",$param) and $param["TrainingMode"] !== null) {
-            $this->TrainingMode = $param["TrainingMode"];
         }
 
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
@@ -224,6 +228,10 @@ class CreateTrainingTaskRequest extends AbstractModel
             $this->CodePackagePath->deserialize($param["CodePackagePath"]);
         }
 
+        if (array_key_exists("TrainingMode",$param) and $param["TrainingMode"] !== null) {
+            $this->TrainingMode = $param["TrainingMode"];
+        }
+
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new CosPathInfo();
             $this->Output->deserialize($param["Output"]);
@@ -239,6 +247,10 @@ class CreateTrainingTaskRequest extends AbstractModel
 
         if (array_key_exists("FrameworkVersion",$param) and $param["FrameworkVersion"] !== null) {
             $this->FrameworkVersion = $param["FrameworkVersion"];
+        }
+
+        if (array_key_exists("FrameworkEnvironment",$param) and $param["FrameworkEnvironment"] !== null) {
+            $this->FrameworkEnvironment = $param["FrameworkEnvironment"];
         }
 
         if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
@@ -262,10 +274,6 @@ class CreateTrainingTaskRequest extends AbstractModel
         if (array_key_exists("StartCmdInfo",$param) and $param["StartCmdInfo"] !== null) {
             $this->StartCmdInfo = new StartCmdInfo();
             $this->StartCmdInfo->deserialize($param["StartCmdInfo"]);
-        }
-
-        if (array_key_exists("DataSource",$param) and $param["DataSource"] !== null) {
-            $this->DataSource = $param["DataSource"];
         }
 
         if (array_key_exists("DataConfigs",$param) and $param["DataConfigs"] !== null) {
@@ -296,6 +304,10 @@ class CreateTrainingTaskRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("DataSource",$param) and $param["DataSource"] !== null) {
+            $this->DataSource = $param["DataSource"];
         }
     }
 }

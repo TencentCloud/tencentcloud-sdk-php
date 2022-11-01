@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) 设置框架版本
  * @method array getTrainingModes() 获取训练模式
  * @method void setTrainingModes(array $TrainingModes) 设置训练模式
+ * @method string getEnvironment() 获取框架运行环境
+ * @method void setEnvironment(string $Environment) 设置框架运行环境
  */
 class FrameworkVersion extends AbstractModel
 {
@@ -38,8 +40,14 @@ class FrameworkVersion extends AbstractModel
     public $TrainingModes;
 
     /**
+     * @var string 框架运行环境
+     */
+    public $Environment;
+
+    /**
      * @param string $Version 框架版本
      * @param array $TrainingModes 训练模式
+     * @param string $Environment 框架运行环境
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class FrameworkVersion extends AbstractModel
 
         if (array_key_exists("TrainingModes",$param) and $param["TrainingModes"] !== null) {
             $this->TrainingModes = $param["TrainingModes"];
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
         }
     }
 }

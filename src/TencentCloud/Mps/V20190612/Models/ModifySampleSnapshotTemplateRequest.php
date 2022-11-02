@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSampleInterval(integer $SampleInterval) 设置采样间隔。
 <li>当 SampleType 为 Percent 时，指定采样间隔的百分比。</li>
 <li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li>
- * @method string getFormat() 获取图片格式，取值为 jpg 和 png。
- * @method void setFormat(string $Format) 设置图片格式，取值为 jpg 和 png。
+ * @method string getFormat() 获取图片格式，取值为 jpg、png、webp。
+ * @method void setFormat(string $Format) 设置图片格式，取值为 jpg、png、webp。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
  * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
@@ -140,7 +140,7 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
     public $SampleInterval;
 
     /**
-     * @var string 图片格式，取值为 jpg 和 png。
+     * @var string 图片格式，取值为 jpg、png、webp。
      */
     public $Format;
 
@@ -184,7 +184,7 @@ class ModifySampleSnapshotTemplateRequest extends AbstractModel
      * @param integer $SampleInterval 采样间隔。
 <li>当 SampleType 为 Percent 时，指定采样间隔的百分比。</li>
 <li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li>
-     * @param string $Format 图片格式，取值为 jpg 和 png。
+     * @param string $Format 图片格式，取值为 jpg、png、webp。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>

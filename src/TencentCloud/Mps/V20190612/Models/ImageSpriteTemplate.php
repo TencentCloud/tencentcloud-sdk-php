@@ -84,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
 默认值：black 。
  * @method string getComment() 获取模板描述信息。
  * @method void setComment(string $Comment) 设置模板描述信息。
+ * @method string getFormat() 获取图片格式。
+ * @method void setFormat(string $Format) 设置图片格式。
  */
 class ImageSpriteTemplate extends AbstractModel
 {
@@ -176,6 +178,11 @@ class ImageSpriteTemplate extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 图片格式。
+     */
+    public $Format;
+
+    /**
      * @param integer $Definition 雪碧图模板唯一标识。
      * @param string $Type 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
@@ -208,6 +215,7 @@ class ImageSpriteTemplate extends AbstractModel
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
      * @param string $Comment 模板描述信息。
+     * @param string $Format 图片格式。
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class ImageSpriteTemplate extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
     }
 }

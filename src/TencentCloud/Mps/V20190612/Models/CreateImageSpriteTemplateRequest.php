@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
 默认值：black 。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
+ * @method string getFormat() 获取图片格式，取值为 jpg、png、webp。默认为 jpg。
+ * @method void setFormat(string $Format) 设置图片格式，取值为 jpg、png、webp。默认为 jpg。
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
@@ -154,6 +156,11 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 图片格式，取值为 jpg、png、webp。默认为 jpg。
+     */
+    public $Format;
+
+    /**
      * @param string $SampleType 采样类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li>
@@ -184,6 +191,7 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
+     * @param string $Format 图片格式，取值为 jpg、png、webp。默认为 jpg。
      */
     function __construct()
     {
@@ -236,6 +244,10 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
     }
 }

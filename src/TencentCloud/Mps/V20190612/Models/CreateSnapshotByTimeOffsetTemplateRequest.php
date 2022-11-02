@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
- * @method string getFormat() 获取图片格式，取值可以为 jpg 和 png。默认为 jpg。
- * @method void setFormat(string $Format) 设置图片格式，取值可以为 jpg 和 png。默认为 jpg。
+ * @method string getFormat() 获取图片格式，取值可以为 jpg、png、webp。默认为 jpg。
+ * @method void setFormat(string $Format) 设置图片格式，取值可以为 jpg、png、webp。默认为 jpg。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
  * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
@@ -107,7 +107,7 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
     public $ResolutionAdaptive;
 
     /**
-     * @var string 图片格式，取值可以为 jpg 和 png。默认为 jpg。
+     * @var string 图片格式，取值可以为 jpg、png、webp。默认为 jpg。
      */
     public $Format;
 
@@ -144,7 +144,7 @@ class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
-     * @param string $Format 图片格式，取值可以为 jpg 和 png。默认为 jpg。
+     * @param string $Format 图片格式，取值可以为 jpg、png、webp。默认为 jpg。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>

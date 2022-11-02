@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKind(integer $Kind) 设置资产类型，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
  * @method string getDepartmentId() 获取所属部门ID
  * @method void setDepartmentId(string $DepartmentId) 设置所属部门ID
+ * @method array getTagFilters() 获取过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
+ * @method void setTagFilters(array $TagFilters) 设置过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
  */
 class DescribeDeviceGroupMembersRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
     public $DepartmentId;
 
     /**
+     * @var array 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
+     */
+    public $TagFilters;
+
+    /**
      * @param integer $Id 资产组ID
      * @param boolean $Bound true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
      * @param string $Name 资产名或资产IP，模糊查询
@@ -80,6 +87,7 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
      * @param integer $Limit 每页条目数，默认20, 最大500
      * @param integer $Kind 资产类型，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
      * @param string $DepartmentId 所属部门ID
+     * @param array $TagFilters 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
 
         if (array_key_exists("DepartmentId",$param) and $param["DepartmentId"] !== null) {
             $this->DepartmentId = $param["DepartmentId"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

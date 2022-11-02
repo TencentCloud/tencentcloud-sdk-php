@@ -14,36 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Trp\V20210515\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyRoomInfo返回参数结构体
+ * CreateCorporationOrder返回参数结构体
  *
- * @method integer getResult() 获取操作结果, 0成功, 非0失败
+ * @method integer getCorpId() 获取企业ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(integer $Result) 设置操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getErrMsg() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrMsg(string $ErrMsg) 设置错误信息
+ * @method void setCorpId(integer $CorpId) 设置企业ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyRoomInfoResponse extends AbstractModel
+class CreateCorporationOrderResponse extends AbstractModel
 {
     /**
-     * @var integer 操作结果, 0成功, 非0失败
+     * @var integer 企业ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Result;
-
-    /**
-     * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ErrMsg;
+    public $CorpId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,9 +41,7 @@ class ModifyRoomInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Result 操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ErrMsg 错误信息
+     * @param integer $CorpId 企业ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -70,12 +58,8 @@ class ModifyRoomInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
-        }
-
-        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
-            $this->ErrMsg = $param["ErrMsg"];
+        if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
+            $this->CorpId = $param["CorpId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

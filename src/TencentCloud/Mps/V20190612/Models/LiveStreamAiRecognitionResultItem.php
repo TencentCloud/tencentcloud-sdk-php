@@ -26,12 +26,14 @@ use TencentCloud\Common\AbstractModel;
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
  * @method void setType(string $Type) 设置结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
  * @method array getFaceRecognitionResultSet() 获取人脸识别结果，当 Type 为
 FaceRecognition 时有效。
  * @method void setFaceRecognitionResultSet(array $FaceRecognitionResultSet) 设置人脸识别结果，当 Type 为
@@ -52,6 +54,8 @@ AsrFullTextRecognition 时有效。
 OcrFullTextRecognition 时有效。
  * @method void setOcrFullTextRecognitionResultSet(array $OcrFullTextRecognitionResultSet) 设置文本全文识别结果，当 Type 为
 OcrFullTextRecognition 时有效。
+ * @method array getTransTextRecognitionResultSet() 获取翻译结果，当Type 为 TransTextRecognition 时有效。
+ * @method void setTransTextRecognitionResultSet(array $TransTextRecognitionResultSet) 设置翻译结果，当Type 为 TransTextRecognition 时有效。
  */
 class LiveStreamAiRecognitionResultItem extends AbstractModel
 {
@@ -62,6 +66,7 @@ class LiveStreamAiRecognitionResultItem extends AbstractModel
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
      */
     public $Type;
 
@@ -96,12 +101,18 @@ OcrFullTextRecognition 时有效。
     public $OcrFullTextRecognitionResultSet;
 
     /**
+     * @var array 翻译结果，当Type 为 TransTextRecognition 时有效。
+     */
+    public $TransTextRecognitionResultSet;
+
+    /**
      * @param string $Type 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
+<li>TransTextRecognition：语音翻译。</li>
      * @param array $FaceRecognitionResultSet 人脸识别结果，当 Type 为
 FaceRecognition 时有效。
      * @param array $AsrWordsRecognitionResultSet 语音关键词识别结果，当 Type 为
@@ -112,6 +123,7 @@ OcrWordsRecognition 时有效。
 AsrFullTextRecognition 时有效。
      * @param array $OcrFullTextRecognitionResultSet 文本全文识别结果，当 Type 为
 OcrFullTextRecognition 时有效。
+     * @param array $TransTextRecognitionResultSet 翻译结果，当Type 为 TransTextRecognition 时有效。
      */
     function __construct()
     {
@@ -172,6 +184,15 @@ OcrFullTextRecognition 时有效。
                 $obj = new LiveStreamOcrFullTextRecognitionResult();
                 $obj->deserialize($value);
                 array_push($this->OcrFullTextRecognitionResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TransTextRecognitionResultSet",$param) and $param["TransTextRecognitionResultSet"] !== null) {
+            $this->TransTextRecognitionResultSet = [];
+            foreach ($param["TransTextRecognitionResultSet"] as $key => $value){
+                $obj = new LiveStreamTransTextRecognitionResult();
+                $obj->deserialize($value);
+                array_push($this->TransTextRecognitionResultSet, $obj);
             }
         }
     }

@@ -70,9 +70,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseAutoCreateTopic(boolean $UseAutoCreateTopic) 设置使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCompressionType() 获取写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+ * @method string getCompressionType() 获取写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompressionType(string $CompressionType) 设置写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+ * @method void setCompressionType(string $CompressionType) 设置写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class KafkaParam extends AbstractModel
@@ -159,7 +159,7 @@ class KafkaParam extends AbstractModel
     public $UseAutoCreateTopic;
 
     /**
-     * @var string 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+     * @var string 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompressionType;
@@ -190,7 +190,7 @@ class KafkaParam extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
+     * @param string $CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

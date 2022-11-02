@@ -52,7 +52,6 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) 本接口(ModifyAppStatus)用于修改应用总开关状态。
  * @method Models\ModifyCustomizationResponse ModifyCustomization(Models\ModifyCustomizationRequest $req) 用户通过该接口可以更新语音消息转文本自学习模型。
  * @method Models\ModifyCustomizationStateResponse ModifyCustomizationState(Models\ModifyCustomizationStateRequest $req) 通过该接口，用户可以修改语音消息转文本自学习模型状态，上下线自学习模型
- * @method Models\ModifyRoomInfoResponse ModifyRoomInfo(Models\ModifyRoomInfoRequest $req) 修改房间信息
  * @method Models\ModifyUserMicStatusResponse ModifyUserMicStatus(Models\ModifyUserMicStatusRequest $req) 修改用户麦克风状态。
  * @method Models\ScanVoiceResponse ScanVoice(Models\ScanVoiceRequest $req) 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
 </br></br>

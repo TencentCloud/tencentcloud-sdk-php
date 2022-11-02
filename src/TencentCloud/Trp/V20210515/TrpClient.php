@@ -25,6 +25,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
 /**
  * @method Models\CreateCodeBatchResponse CreateCodeBatch(Models\CreateCodeBatchRequest $req) 新增批次
  * @method Models\CreateCodePackResponse CreateCodePack(Models\CreateCodePackRequest $req) 生成普通码包
+ * @method Models\CreateCorporationOrderResponse CreateCorporationOrder(Models\CreateCorporationOrderRequest $req) 以订单方式新建企业信息/配额信息
  * @method Models\CreateCustomPackResponse CreateCustomPack(Models\CreateCustomPackRequest $req) 生成自定义码包
  * @method Models\CreateCustomRuleResponse CreateCustomRule(Models\CreateCustomRuleRequest $req) 新建自定义码规则
  * @method Models\CreateMerchantResponse CreateMerchant(Models\CreateMerchantRequest $req) 新建商户

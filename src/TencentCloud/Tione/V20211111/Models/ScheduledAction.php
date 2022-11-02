@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getScheduleStop() 获取是否要定时停止服务，true or false。true 则 ScheduleStopTime 必填， false 则 ScheduleStopTime 不生效
  * @method void setScheduleStop(boolean $ScheduleStop) 设置是否要定时停止服务，true or false。true 则 ScheduleStopTime 必填， false 则 ScheduleStopTime 不生效
- * @method string getScheduleStopTime() 获取要执行定时停止的时间，格式：“2022-01-26 19:46:22”
- * @method void setScheduleStopTime(string $ScheduleStopTime) 设置要执行定时停止的时间，格式：“2022-01-26 19:46:22”
+ * @method string getScheduleStopTime() 获取要执行定时停止的时间，格式：“2022-01-26T19:46:22+08:00”
+ * @method void setScheduleStopTime(string $ScheduleStopTime) 设置要执行定时停止的时间，格式：“2022-01-26T19:46:22+08:00”
  */
 class ScheduledAction extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ScheduledAction extends AbstractModel
     public $ScheduleStop;
 
     /**
-     * @var string 要执行定时停止的时间，格式：“2022-01-26 19:46:22”
+     * @var string 要执行定时停止的时间，格式：“2022-01-26T19:46:22+08:00”
      */
     public $ScheduleStopTime;
 
     /**
      * @param boolean $ScheduleStop 是否要定时停止服务，true or false。true 则 ScheduleStopTime 必填， false 则 ScheduleStopTime 不生效
-     * @param string $ScheduleStopTime 要执行定时停止的时间，格式：“2022-01-26 19:46:22”
+     * @param string $ScheduleStopTime 要执行定时停止的时间，格式：“2022-01-26T19:46:22+08:00”
      */
     function __construct()
     {

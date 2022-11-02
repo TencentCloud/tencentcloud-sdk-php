@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) 设置日志集 ID
  * @method string getTopicId() 获取日志主题 ID
  * @method void setTopicId(string $TopicId) 设置日志主题 ID
- * @method string getLogType() 获取日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
- * @method void setLogType(string $LogType) 设置日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+ * @method string getLogType() 获取日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；json_log 为 json格式；fullregex_log 为单行正则；multiline_fullregex_log 为多行正则
+ * @method void setLogType(string $LogType) 设置日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；json_log 为 json格式；fullregex_log 为单行正则；multiline_fullregex_log 为多行正则
  * @method string getBeginningRegex() 获取首行正则表达式，当LogType=multiline_log 时生效
  * @method void setBeginningRegex(string $BeginningRegex) 设置首行正则表达式，当LogType=multiline_log 时生效
  * @method string getLogPath() 获取收集文件目录，当 InputType=container_file 时生效
@@ -76,7 +76,7 @@ class CreateLogConfigRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+     * @var string 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；json_log 为 json格式；fullregex_log 为单行正则；multiline_fullregex_log 为多行正则
      */
     public $LogType;
 
@@ -107,7 +107,7 @@ class CreateLogConfigRequest extends AbstractModel
      * @param string $ApplicationId 应用 ID
      * @param string $LogsetId 日志集 ID
      * @param string $TopicId 日志主题 ID
-     * @param string $LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；
+     * @param string $LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；json_log 为 json格式；fullregex_log 为单行正则；multiline_fullregex_log 为多行正则
      * @param string $BeginningRegex 首行正则表达式，当LogType=multiline_log 时生效
      * @param string $LogPath 收集文件目录，当 InputType=container_file 时生效
      * @param string $FilePattern 收集文件名模式，当 InputType=container_file 时生效

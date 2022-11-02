@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
 默认值：black 。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
+ * @method string getFormat() 获取图片格式，取值可以为 jpg、png、webp。
+ * @method void setFormat(string $Format) 设置图片格式，取值可以为 jpg、png、webp。
  */
 class ModifyImageSpriteTemplateRequest extends AbstractModel
 {
@@ -161,6 +163,11 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 图片格式，取值可以为 jpg、png、webp。
+     */
+    public $Format;
+
+    /**
      * @param integer $Definition 雪碧图模板唯一标识。
      * @param string $Name 雪碧图模板名称，长度限制：64 个字符。
      * @param integer $Width 雪碧图中小图的宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
@@ -192,6 +199,7 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
+     * @param string $Format 图片格式，取值可以为 jpg、png、webp。
      */
     function __construct()
     {
@@ -248,6 +256,10 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
     }
 }

@@ -68,6 +68,8 @@ lye1y7d：低功耗事件7天年套餐。
 lye1y30d：低功耗事件30天年套餐。
  * @method integer getOverride() 获取如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
  * @method void setOverride(integer $Override) 设置如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
+ * @method string getPackageQueue() 获取套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。
+ * @method void setPackageQueue(string $PackageQueue) 设置套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。
  */
 class CreateCloudStorageRequest extends AbstractModel
 {
@@ -112,6 +114,11 @@ lye1y30d：低功耗事件30天年套餐。
     public $Override;
 
     /**
+     * @var string 套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。
+     */
+    public $PackageQueue;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $PackageId 云存套餐ID：
@@ -136,6 +143,7 @@ lye1y3d：低功耗事件3天年套餐。
 lye1y7d：低功耗事件7天年套餐。
 lye1y30d：低功耗事件30天年套餐。
      * @param integer $Override 如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
+     * @param string $PackageQueue 套餐列表顺序：PackageQueue=front会立即使用新购买的套餐，新购套餐结束后，列表中下一个未过期的套餐继续生效；PackageQueue=end会等设备当前所有已购买套餐过期后才会生效新购套餐。与Override参数不能同时使用。
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ lye1y30d：低功耗事件30天年套餐。
 
         if (array_key_exists("Override",$param) and $param["Override"] !== null) {
             $this->Override = $param["Override"];
+        }
+
+        if (array_key_exists("PackageQueue",$param) and $param["PackageQueue"] !== null) {
+            $this->PackageQueue = $param["PackageQueue"];
         }
     }
 }

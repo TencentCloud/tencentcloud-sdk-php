@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取emr集群id
  * @method void setInstanceId(string $InstanceId) 设置emr集群id
- * @method string getKey() 获取标识是fair还是capacity
- * @method void setKey(string $Key) 设置标识是fair还是capacity
+ * @method string getKey() 获取取值范围：
+<li>fair:代表公平调度标识</li>
+<li>capacity:代表容量调度标识</li>
+ * @method void setKey(string $Key) 设置取值范围：
+<li>fair:代表公平调度标识</li>
+<li>capacity:代表容量调度标识</li>
  */
 class ModifyResourcePoolsRequest extends AbstractModel
 {
@@ -33,13 +37,17 @@ class ModifyResourcePoolsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 标识是fair还是capacity
+     * @var string 取值范围：
+<li>fair:代表公平调度标识</li>
+<li>capacity:代表容量调度标识</li>
      */
     public $Key;
 
     /**
      * @param string $InstanceId emr集群id
-     * @param string $Key 标识是fair还是capacity
+     * @param string $Key 取值范围：
+<li>fair:代表公平调度标识</li>
+<li>capacity:代表容量调度标识</li>
      */
     function __construct()
     {

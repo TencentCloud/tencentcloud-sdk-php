@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBound(boolean $Bound) 设置true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
  * @method string getName() 获取资产名或资产IP，模糊查询
  * @method void setName(string $Name) 设置资产名或资产IP，模糊查询
- * @method integer getOffset() 获取分页偏移位置
- * @method void setOffset(integer $Offset) 设置分页偏移位置
+ * @method integer getOffset() 获取分页偏移位置，默认值为0
+ * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取每页条目数，默认20, 最大500
  * @method void setLimit(integer $Limit) 设置每页条目数，默认20, 最大500
  * @method integer getKind() 获取资产类型，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
@@ -55,7 +55,7 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 分页偏移位置
+     * @var integer 分页偏移位置，默认值为0
      */
     public $Offset;
 
@@ -83,7 +83,7 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
      * @param integer $Id 资产组ID
      * @param boolean $Bound true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
      * @param string $Name 资产名或资产IP，模糊查询
-     * @param integer $Offset 分页偏移位置
+     * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数，默认20, 最大500
      * @param integer $Kind 资产类型，1 - Linux，2 - Windows，3 - MySQL，4 - SQLServer
      * @param string $DepartmentId 所属部门ID

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdSet(array $IdSet) 设置如果IdSet不为空，则忽略其他参数
  * @method string getName() 获取模糊查询，IdSet、UserName、Phone为空时才生效，对用户名和姓名进行模糊查询
  * @method void setName(string $Name) 设置模糊查询，IdSet、UserName、Phone为空时才生效，对用户名和姓名进行模糊查询
- * @method integer getOffset() 获取分页，偏移位置
- * @method void setOffset(integer $Offset) 设置分页，偏移位置
+ * @method integer getOffset() 获取分页偏移位置，默认值为0
+ * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取每页条目数量，默认20, 最大500
  * @method void setLimit(integer $Limit) 设置每页条目数量，默认20, 最大500
  * @method string getUserName() 获取精确查询，IdSet为空时才生效
@@ -54,7 +54,7 @@ class DescribeUsersRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 分页，偏移位置
+     * @var integer 分页偏移位置，默认值为0
      */
     public $Offset;
 
@@ -92,7 +92,7 @@ class DescribeUsersRequest extends AbstractModel
     /**
      * @param array $IdSet 如果IdSet不为空，则忽略其他参数
      * @param string $Name 模糊查询，IdSet、UserName、Phone为空时才生效，对用户名和姓名进行模糊查询
-     * @param integer $Offset 分页，偏移位置
+     * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数量，默认20, 最大500
      * @param string $UserName 精确查询，IdSet为空时才生效
      * @param string $Phone 精确查询，IdSet、UserName为空时才生效。

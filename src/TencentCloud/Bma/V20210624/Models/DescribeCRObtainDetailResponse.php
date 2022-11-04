@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObtainDuration(string $ObtainDuration) 设置取证时长
  * @method string getObtainName() 获取取证名称
  * @method void setObtainName(string $ObtainName) 设置取证名称
+ * @method string getDepositPdfCert() 获取取证公证信息
+ * @method void setDepositPdfCert(string $DepositPdfCert) 设置取证公证信息
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -131,6 +133,11 @@ class DescribeCRObtainDetailResponse extends AbstractModel
     public $ObtainName;
 
     /**
+     * @var string 取证公证信息
+     */
+    public $DepositPdfCert;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -151,6 +158,7 @@ class DescribeCRObtainDetailResponse extends AbstractModel
      * @param string $ObtainNote 取证状态说明
      * @param string $ObtainDuration 取证时长
      * @param string $ObtainName 取证名称
+     * @param string $DepositPdfCert 取证公证信息
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -224,6 +232,10 @@ class DescribeCRObtainDetailResponse extends AbstractModel
 
         if (array_key_exists("ObtainName",$param) and $param["ObtainName"] !== null) {
             $this->ObtainName = $param["ObtainName"];
+        }
+
+        if (array_key_exists("DepositPdfCert",$param) and $param["DepositPdfCert"] !== null) {
+            $this->DepositPdfCert = $param["DepositPdfCert"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -66,6 +66,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
  * @method void setLoginNodeCount(integer $LoginNodeCount) 设置指定登录节点的数量。默认取值：0。取值范围：0～10。
  * @method array getTags() 获取创建集群时同时绑定的标签对说明。
  * @method void setTags(array $Tags) 设置创建集群时同时绑定的标签对说明。
+ * @method string getAutoScalingType() 获取弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。
+ * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -165,6 +167,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $Tags;
 
     /**
+     * @var string 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。
+     */
+    public $AutoScalingType;
+
+    /**
      * @param Placement $Placement 集群中实例所在的位置。
      * @param ManagerNode $ManagerNode 指定管理节点。
      * @param integer $ManagerNodeCount 指定管理节点的数量。默认取值：1。取值范围：1～2。
@@ -188,6 +195,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param LoginNode $LoginNode 指定登录节点。
      * @param integer $LoginNodeCount 指定登录节点的数量。默认取值：0。取值范围：0～10。
      * @param array $Tags 创建集群时同时绑定的标签对说明。
+     * @param string $AutoScalingType 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。
      */
     function __construct()
     {
@@ -284,6 +292,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AutoScalingType",$param) and $param["AutoScalingType"] !== null) {
+            $this->AutoScalingType = $param["AutoScalingType"];
         }
     }
 }

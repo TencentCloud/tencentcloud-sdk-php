@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBound(boolean $Bound) 设置true - 查询已添加到该用户组的用户，false - 查询未添加到该用户组的用户
  * @method string getName() 获取用户名或用户姓名，最长64个字符，模糊查询
  * @method void setName(string $Name) 设置用户名或用户姓名，最长64个字符，模糊查询
- * @method integer getOffset() 获取分页偏移位置
- * @method void setOffset(integer $Offset) 设置分页偏移位置
+ * @method integer getOffset() 获取分页偏移位置，默认值为0
+ * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取每页条目数量，默认20, 最大500
  * @method void setLimit(integer $Limit) 设置每页条目数量，默认20, 最大500
  * @method string getDepartmentId() 获取所属部门ID
@@ -51,7 +51,7 @@ class DescribeUserGroupMembersRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 分页偏移位置
+     * @var integer 分页偏移位置，默认值为0
      */
     public $Offset;
 
@@ -69,7 +69,7 @@ class DescribeUserGroupMembersRequest extends AbstractModel
      * @param integer $Id 用户组ID
      * @param boolean $Bound true - 查询已添加到该用户组的用户，false - 查询未添加到该用户组的用户
      * @param string $Name 用户名或用户姓名，最长64个字符，模糊查询
-     * @param integer $Offset 分页偏移位置
+     * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数量，默认20, 最大500
      * @param string $DepartmentId 所属部门ID
      */

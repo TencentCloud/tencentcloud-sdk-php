@@ -18,14 +18,14 @@ namespace TencentCloud\Autoscaling\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 描述了实例的增强服务启用情况与其设置，如云安全，云监控，自动化助手等实例 Agent。
+ * 描述了实例的增强服务启用情况与其设置，如云安全，云监控等实例 Agent。
  *
  * @method RunSecurityServiceEnabled getSecurityService() 获取开启云安全服务。若不指定该参数，则默认开启云安全服务。
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) 设置开启云安全服务。若不指定该参数，则默认开启云安全服务。
  * @method RunMonitorServiceEnabled getMonitorService() 获取开启云监控服务。若不指定该参数，则默认开启云监控服务。
  * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) 设置开启云监控服务。若不指定该参数，则默认开启云监控服务。
- * @method array getAutomationService() 获取开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutomationService(array $AutomationService) 设置开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAutomationService() 获取该参数已废弃，查询时会返回空值，请勿使用。
+ * @method void setAutomationService(array $AutomationService) 设置该参数已废弃，查询时会返回空值，请勿使用。
  */
 class EnhancedService extends AbstractModel
 {
@@ -40,14 +40,14 @@ class EnhancedService extends AbstractModel
     public $MonitorService;
 
     /**
-     * @var array 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 该参数已废弃，查询时会返回空值，请勿使用。
      */
     public $AutomationService;
 
     /**
      * @param RunSecurityServiceEnabled $SecurityService 开启云安全服务。若不指定该参数，则默认开启云安全服务。
      * @param RunMonitorServiceEnabled $MonitorService 开启云监控服务。若不指定该参数，则默认开启云监控服务。
-     * @param array $AutomationService 开启自动化助手服务。若不指定该参数，则默认逻辑与CVM保持一致。注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AutomationService 该参数已废弃，查询时会返回空值，请勿使用。
      */
     function __construct()
     {

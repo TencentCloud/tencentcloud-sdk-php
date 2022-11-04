@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdSet(array $IdSet) 设置用户组ID集合
  * @method string getName() 获取用户组名，模糊查询,长度：0-64字符
  * @method void setName(string $Name) 设置用户组名，模糊查询,长度：0-64字符
- * @method integer getOffset() 获取分页偏移位置
- * @method void setOffset(integer $Offset) 设置分页偏移位置
+ * @method integer getOffset() 获取分页偏移位置，默认值为0
+ * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取每页条目数量，缺省20，最大500
  * @method void setLimit(integer $Limit) 设置每页条目数量，缺省20，最大500
  * @method string getDepartmentId() 获取部门ID，用于过滤属于某个部门的用户组
@@ -44,7 +44,7 @@ class DescribeUserGroupsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 分页偏移位置
+     * @var integer 分页偏移位置，默认值为0
      */
     public $Offset;
 
@@ -61,7 +61,7 @@ class DescribeUserGroupsRequest extends AbstractModel
     /**
      * @param array $IdSet 用户组ID集合
      * @param string $Name 用户组名，模糊查询,长度：0-64字符
-     * @param integer $Offset 分页偏移位置
+     * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数量，缺省20，最大500
      * @param string $DepartmentId 部门ID，用于过滤属于某个部门的用户组
      */

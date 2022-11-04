@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInsertTime(string $InsertTime) 设置新增时间
  * @method string getMonitorNote() 获取监测状态说明
  * @method void setMonitorNote(string $MonitorNote) 设置监测状态说明
+ * @method string getWorkCategoryAll() 获取作品类型全部展示
+ * @method void setWorkCategoryAll(string $WorkCategoryAll) 设置作品类型全部展示
+ * @method integer getEvidenceStatus() 获取存证状态
+ * @method void setEvidenceStatus(integer $EvidenceStatus) 设置存证状态
+ * @method string getEvidenceNote() 获取存证状态说明
+ * @method void setEvidenceNote(string $EvidenceNote) 设置存证状态说明
+ * @method integer getTortSiteNum() 获取侵权站点数量
+ * @method void setTortSiteNum(integer $TortSiteNum) 设置侵权站点数量
  */
 class Monitor extends AbstractModel
 {
@@ -94,6 +102,26 @@ class Monitor extends AbstractModel
     public $MonitorNote;
 
     /**
+     * @var string 作品类型全部展示
+     */
+    public $WorkCategoryAll;
+
+    /**
+     * @var integer 存证状态
+     */
+    public $EvidenceStatus;
+
+    /**
+     * @var string 存证状态说明
+     */
+    public $EvidenceNote;
+
+    /**
+     * @var integer 侵权站点数量
+     */
+    public $TortSiteNum;
+
+    /**
      * @param integer $WorkId 作品ID
      * @param string $WorkName 作品名称
      * @param string $WorkType 作品内容类型 01-视频 02-音频 03-文本 04-图片
@@ -104,6 +132,10 @@ class Monitor extends AbstractModel
      * @param string $WorkCategory 作品类型
      * @param string $InsertTime 新增时间
      * @param string $MonitorNote 监测状态说明
+     * @param string $WorkCategoryAll 作品类型全部展示
+     * @param integer $EvidenceStatus 存证状态
+     * @param string $EvidenceNote 存证状态说明
+     * @param integer $TortSiteNum 侵权站点数量
      */
     function __construct()
     {
@@ -156,6 +188,22 @@ class Monitor extends AbstractModel
 
         if (array_key_exists("MonitorNote",$param) and $param["MonitorNote"] !== null) {
             $this->MonitorNote = $param["MonitorNote"];
+        }
+
+        if (array_key_exists("WorkCategoryAll",$param) and $param["WorkCategoryAll"] !== null) {
+            $this->WorkCategoryAll = $param["WorkCategoryAll"];
+        }
+
+        if (array_key_exists("EvidenceStatus",$param) and $param["EvidenceStatus"] !== null) {
+            $this->EvidenceStatus = $param["EvidenceStatus"];
+        }
+
+        if (array_key_exists("EvidenceNote",$param) and $param["EvidenceNote"] !== null) {
+            $this->EvidenceNote = $param["EvidenceNote"];
+        }
+
+        if (array_key_exists("TortSiteNum",$param) and $param["TortSiteNum"] !== null) {
+            $this->TortSiteNum = $param["TortSiteNum"];
         }
     }
 }

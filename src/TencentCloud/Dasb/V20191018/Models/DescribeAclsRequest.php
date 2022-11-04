@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdSet(array $IdSet) 设置访问权限ID集合
  * @method string getName() 获取访问权限名称，模糊查询，最长64字符
  * @method void setName(string $Name) 设置访问权限名称，模糊查询，最长64字符
- * @method integer getOffset() 获取分页偏移位置
- * @method void setOffset(integer $Offset) 设置分页偏移位置
+ * @method integer getOffset() 获取分页偏移位置，默认值为0
+ * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取每页条目数量，默认20，最大500
  * @method void setLimit(integer $Limit) 设置每页条目数量，默认20，最大500
  * @method boolean getExact() 获取是否根据Name进行精确查询，默认值false
@@ -52,7 +52,7 @@ class DescribeAclsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 分页偏移位置
+     * @var integer 分页偏移位置，默认值为0
      */
     public $Offset;
 
@@ -89,7 +89,7 @@ class DescribeAclsRequest extends AbstractModel
     /**
      * @param array $IdSet 访问权限ID集合
      * @param string $Name 访问权限名称，模糊查询，最长64字符
-     * @param integer $Offset 分页偏移位置
+     * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数量，默认20，最大500
      * @param boolean $Exact 是否根据Name进行精确查询，默认值false
      * @param array $AuthorizedUserIdSet 有访问权限的用户ID集合

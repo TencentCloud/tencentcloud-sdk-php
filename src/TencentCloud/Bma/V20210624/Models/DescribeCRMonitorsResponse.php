@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMonitors(array $Monitors) 设置监测结果
  * @method integer getTotalCount() 获取记录总条数
  * @method void setTotalCount(integer $TotalCount) 设置记录总条数
+ * @method string getExportURL() 获取导出地址
+ * @method void setExportURL(string $ExportURL) 设置导出地址
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeCRMonitorsResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var string 导出地址
+     */
+    public $ExportURL;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeCRMonitorsResponse extends AbstractModel
     /**
      * @param array $Monitors 监测结果
      * @param integer $TotalCount 记录总条数
+     * @param string $ExportURL 导出地址
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeCRMonitorsResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ExportURL",$param) and $param["ExportURL"] !== null) {
+            $this->ExportURL = $param["ExportURL"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

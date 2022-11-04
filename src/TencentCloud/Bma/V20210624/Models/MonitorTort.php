@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsProducer(integer $IsProducer) 设置是否著作权人
  * @method integer getIsOverseas() 获取是否境外网址
  * @method void setIsOverseas(integer $IsOverseas) 设置是否境外网址
+ * @method string getIPLoc() 获取ip地理位置
+ * @method void setIPLoc(string $IPLoc) 设置ip地理位置
  */
 class MonitorTort extends AbstractModel
 {
@@ -199,6 +201,11 @@ class MonitorTort extends AbstractModel
     public $IsOverseas;
 
     /**
+     * @var string ip地理位置
+     */
+    public $IPLoc;
+
+    /**
      * @param integer $TortId 侵权信息ID
      * @param string $TortTitle 侵权标题
      * @param string $TortPlat 侵权平台
@@ -224,6 +231,7 @@ class MonitorTort extends AbstractModel
      * @param integer $EvidenceStatus 存证证书状态
      * @param integer $IsProducer 是否著作权人
      * @param integer $IsOverseas 是否境外网址
+     * @param string $IPLoc ip地理位置
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class MonitorTort extends AbstractModel
 
         if (array_key_exists("IsOverseas",$param) and $param["IsOverseas"] !== null) {
             $this->IsOverseas = $param["IsOverseas"];
+        }
+
+        if (array_key_exists("IPLoc",$param) and $param["IPLoc"] !== null) {
+            $this->IPLoc = $param["IPLoc"];
         }
     }
 }

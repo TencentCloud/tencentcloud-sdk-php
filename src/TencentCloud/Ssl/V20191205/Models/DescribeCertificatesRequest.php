@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() 获取分页偏移量，从0开始。
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
- * @method integer getLimit() 获取每页数量，默认20。
- * @method void setLimit(integer $Limit) 设置每页数量，默认20。
+ * @method integer getLimit() 获取每页数量，默认20。最大1000
+ * @method void setLimit(integer $Limit) 设置每页数量，默认20。最大1000
  * @method string getSearchKey() 获取搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
  * @method void setSearchKey(string $SearchKey) 设置搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
  * @method string getCertificateType() 获取证书类型：CA = 客户端证书，SVR = 服务器证书。
@@ -53,7 +53,7 @@ class DescribeCertificatesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 每页数量，默认20。
+     * @var integer 每页数量，默认20。最大1000
      */
     public $Limit;
 
@@ -109,7 +109,7 @@ class DescribeCertificatesRequest extends AbstractModel
 
     /**
      * @param integer $Offset 分页偏移量，从0开始。
-     * @param integer $Limit 每页数量，默认20。
+     * @param integer $Limit 每页数量，默认20。最大1000
      * @param string $SearchKey 搜索关键词，可搜索证书 ID、备注名称、域名。例如： a8xHcaIs。
      * @param string $CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
      * @param integer $ProjectId 项目 ID。

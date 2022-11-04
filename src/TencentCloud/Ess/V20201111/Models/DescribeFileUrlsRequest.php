@@ -20,26 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFileUrls请求参数结构体
  *
+ * @method UserInfo getOperator() 获取调用方用户信息，UserId 必填
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，UserId 必填
  * @method string getBusinessType() 获取文件对应的业务类型，目前支持：
+- 流程 "FLOW"，如需下载合同文件请选择此项
 - 模板 "TEMPLATE"
 - 文档 "DOCUMENT"
 - 印章  “SEAL”
-- 流程 "FLOW"
  * @method void setBusinessType(string $BusinessType) 设置文件对应的业务类型，目前支持：
+- 流程 "FLOW"，如需下载合同文件请选择此项
 - 模板 "TEMPLATE"
 - 文档 "DOCUMENT"
 - 印章  “SEAL”
-- 流程 "FLOW"
- * @method array getBusinessIds() 获取业务编号的数组，如模板编号、文档编号、印章编号
+ * @method array getBusinessIds() 获取业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
 最大支持20个资源
- * @method void setBusinessIds(array $BusinessIds) 设置业务编号的数组，如模板编号、文档编号、印章编号
+ * @method void setBusinessIds(array $BusinessIds) 设置业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
 最大支持20个资源
- * @method UserInfo getOperator() 获取操作者信息
- * @method void setOperator(UserInfo $Operator) 设置操作者信息
- * @method Agent getAgent() 获取应用相关信息
- * @method void setAgent(Agent $Agent) 设置应用相关信息
- * @method string getFileName() 获取下载后的文件命名，只有fileType为zip的时候生效
- * @method void setFileName(string $FileName) 设置下载后的文件命名，只有fileType为zip的时候生效
+ * @method string getFileName() 获取下载后的文件命名，只有FileType为zip的时候生效
+ * @method void setFileName(string $FileName) 设置下载后的文件命名，只有FileType为zip的时候生效
  * @method string getFileType() 获取文件类型，"JPG", "PDF","ZIP"等
  * @method void setFileType(string $FileType) 设置文件类型，"JPG", "PDF","ZIP"等
  * @method integer getOffset() 获取指定资源起始偏移量，默认0
@@ -48,40 +46,37 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置指定资源数量，查询全部资源则传入-1
  * @method integer getUrlTtl() 获取下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
  * @method void setUrlTtl(integer $UrlTtl) 设置下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
- * @method string getScene() 获取暂不开放
- * @method void setScene(string $Scene) 设置暂不开放
  * @method string getCcToken() 获取暂不开放
  * @method void setCcToken(string $CcToken) 设置暂不开放
+ * @method string getScene() 获取暂不开放
+ * @method void setScene(string $Scene) 设置暂不开放
+ * @method Agent getAgent() 获取应用相关信息
+ * @method void setAgent(Agent $Agent) 设置应用相关信息
  */
 class DescribeFileUrlsRequest extends AbstractModel
 {
     /**
+     * @var UserInfo 调用方用户信息，UserId 必填
+     */
+    public $Operator;
+
+    /**
      * @var string 文件对应的业务类型，目前支持：
+- 流程 "FLOW"，如需下载合同文件请选择此项
 - 模板 "TEMPLATE"
 - 文档 "DOCUMENT"
 - 印章  “SEAL”
-- 流程 "FLOW"
      */
     public $BusinessType;
 
     /**
-     * @var array 业务编号的数组，如模板编号、文档编号、印章编号
+     * @var array 业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
 最大支持20个资源
      */
     public $BusinessIds;
 
     /**
-     * @var UserInfo 操作者信息
-     */
-    public $Operator;
-
-    /**
-     * @var Agent 应用相关信息
-     */
-    public $Agent;
-
-    /**
-     * @var string 下载后的文件命名，只有fileType为zip的时候生效
+     * @var string 下载后的文件命名，只有FileType为zip的时候生效
      */
     public $FileName;
 
@@ -108,30 +103,35 @@ class DescribeFileUrlsRequest extends AbstractModel
     /**
      * @var string 暂不开放
      */
-    public $Scene;
+    public $CcToken;
 
     /**
      * @var string 暂不开放
      */
-    public $CcToken;
+    public $Scene;
 
     /**
+     * @var Agent 应用相关信息
+     */
+    public $Agent;
+
+    /**
+     * @param UserInfo $Operator 调用方用户信息，UserId 必填
      * @param string $BusinessType 文件对应的业务类型，目前支持：
+- 流程 "FLOW"，如需下载合同文件请选择此项
 - 模板 "TEMPLATE"
 - 文档 "DOCUMENT"
 - 印章  “SEAL”
-- 流程 "FLOW"
-     * @param array $BusinessIds 业务编号的数组，如模板编号、文档编号、印章编号
+     * @param array $BusinessIds 业务编号的数组，如流程编号、模板编号、文档编号、印章编号。如需下载合同文件请传入FlowId
 最大支持20个资源
-     * @param UserInfo $Operator 操作者信息
-     * @param Agent $Agent 应用相关信息
-     * @param string $FileName 下载后的文件命名，只有fileType为zip的时候生效
+     * @param string $FileName 下载后的文件命名，只有FileType为zip的时候生效
      * @param string $FileType 文件类型，"JPG", "PDF","ZIP"等
      * @param integer $Offset 指定资源起始偏移量，默认0
      * @param integer $Limit 指定资源数量，查询全部资源则传入-1
      * @param integer $UrlTtl 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
-     * @param string $Scene 暂不开放
      * @param string $CcToken 暂不开放
+     * @param string $Scene 暂不开放
+     * @param Agent $Agent 应用相关信息
      */
     function __construct()
     {
@@ -146,22 +146,17 @@ class DescribeFileUrlsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = new UserInfo();
+            $this->Operator->deserialize($param["Operator"]);
+        }
+
         if (array_key_exists("BusinessType",$param) and $param["BusinessType"] !== null) {
             $this->BusinessType = $param["BusinessType"];
         }
 
         if (array_key_exists("BusinessIds",$param) and $param["BusinessIds"] !== null) {
             $this->BusinessIds = $param["BusinessIds"];
-        }
-
-        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
-            $this->Operator = new UserInfo();
-            $this->Operator->deserialize($param["Operator"]);
-        }
-
-        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
-            $this->Agent = new Agent();
-            $this->Agent->deserialize($param["Agent"]);
         }
 
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
@@ -184,12 +179,17 @@ class DescribeFileUrlsRequest extends AbstractModel
             $this->UrlTtl = $param["UrlTtl"];
         }
 
+        if (array_key_exists("CcToken",$param) and $param["CcToken"] !== null) {
+            $this->CcToken = $param["CcToken"];
+        }
+
         if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
             $this->Scene = $param["Scene"];
         }
 
-        if (array_key_exists("CcToken",$param) and $param["CcToken"] !== null) {
-            $this->CcToken = $param["CcToken"];
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new Agent();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

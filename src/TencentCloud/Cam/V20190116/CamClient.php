@@ -29,6 +29,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\AttachRolePolicyResponse AttachRolePolicy(Models\AttachRolePolicyRequest $req) 本接口（AttachRolePolicy）用于绑定策略到角色。
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) 本接口（AttachUserPolicy）可用于绑定到用户的策略。
  * @method Models\ConsumeCustomMFATokenResponse ConsumeCustomMFAToken(Models\ConsumeCustomMFATokenRequest $req) 验证自定义多因子Token
+ * @method Models\CreateAccessKeyResponse CreateAccessKey(Models\CreateAccessKeyRequest $req) 为CAM用户创建访问密钥
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 创建用户组
  * @method Models\CreateOIDCConfigResponse CreateOIDCConfig(Models\CreateOIDCConfigRequest $req) 创建角色OIDC配置
  * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) 本接口（CreatePolicy）可用于创建策略。
@@ -38,6 +39,8 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\CreateServiceLinkedRoleResponse CreateServiceLinkedRole(Models\CreateServiceLinkedRoleRequest $req) 创建服务相关角色
  * @method Models\CreateUserOIDCConfigResponse CreateUserOIDCConfig(Models\CreateUserOIDCConfigRequest $req) 创建用户OIDC配置。只能创建一个用户OIDC身份提供商，并且创建用户OIDC配置之后会自动关闭用户SAML SSO身份提供商。
  * @method Models\CreateUserSAMLConfigResponse CreateUserSAMLConfig(Models\CreateUserSAMLConfigRequest $req) 创建用户SAML配置
+ * @method Models\DeleteAccessKeyResponse DeleteAccessKey(Models\DeleteAccessKeyRequest $req) 为CAM用户删除访问密钥。
+此接口属于高风险操作，删除密钥后不可恢复，腾讯云将永久拒绝此密钥的所有请求，请谨慎使用。
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除用户组
  * @method Models\DeleteOIDCConfigResponse DeleteOIDCConfig(Models\DeleteOIDCConfigRequest $req) 删除OIDC身份提供商
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) 本接口（DeletePolicy）可用于删除策略。
@@ -96,6 +99,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\SetMfaFlagResponse SetMfaFlag(Models\SetMfaFlagRequest $req) 设置子用户的登录保护和敏感操作校验方式
  * @method Models\TagRoleResponse TagRole(Models\TagRoleRequest $req) 角色绑定标签
  * @method Models\UntagRoleResponse UntagRole(Models\UntagRoleRequest $req) 角色解绑标签。
+ * @method Models\UpdateAccessKeyResponse UpdateAccessKey(Models\UpdateAccessKeyRequest $req) 为CAM用户更新访问密钥
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) 本接口（UpdateAssumeRolePolicy）用于修改角色信任策略的策略文档。
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 更新用户组
  * @method Models\UpdateOIDCConfigResponse UpdateOIDCConfig(Models\UpdateOIDCConfigRequest $req) 修改角色OIDC配置

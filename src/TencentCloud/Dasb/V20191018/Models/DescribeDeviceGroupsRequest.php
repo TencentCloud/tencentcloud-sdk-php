@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdSet(array $IdSet) 设置资产组ID集合
  * @method string getName() 获取资产组名，最长64个字符，模糊查询
  * @method void setName(string $Name) 设置资产组名，最长64个字符，模糊查询
- * @method integer getOffset() 获取分页偏移位置
- * @method void setOffset(integer $Offset) 设置分页偏移位置
+ * @method integer getOffset() 获取分页偏移位置，默认值为0
+ * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取每页条目数量，缺省20，最大500
  * @method void setLimit(integer $Limit) 设置每页条目数量，缺省20，最大500
  * @method string getDepartmentId() 获取部门ID，用于过滤属于某个部门的资产组
@@ -44,7 +44,7 @@ class DescribeDeviceGroupsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 分页偏移位置
+     * @var integer 分页偏移位置，默认值为0
      */
     public $Offset;
 
@@ -61,7 +61,7 @@ class DescribeDeviceGroupsRequest extends AbstractModel
     /**
      * @param array $IdSet 资产组ID集合
      * @param string $Name 资产组名，最长64个字符，模糊查询
-     * @param integer $Offset 分页偏移位置
+     * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数量，缺省20，最大500
      * @param string $DepartmentId 部门ID，用于过滤属于某个部门的资产组
      */

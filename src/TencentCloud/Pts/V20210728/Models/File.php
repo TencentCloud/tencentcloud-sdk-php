@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAccountUin(string $SubAccountUin) 设置用户子账号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAppId() 获取用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(integer $AppId) 设置用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class File extends AbstractModel
 {
@@ -196,6 +200,12 @@ class File extends AbstractModel
     public $SubAccountUin;
 
     /**
+     * @var integer 用户账号的 App ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
      * @param string $FileId 文件 ID
      * @param integer $Kind 文件种类，参数文件-1，协议文件-2，请求文件-3
      * @param string $Name 文件名
@@ -227,6 +237,8 @@ class File extends AbstractModel
      * @param string $Uin 用户主账号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAccountUin 用户子账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AppId 用户账号的 App ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -326,6 +338,10 @@ class File extends AbstractModel
 
         if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
             $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }

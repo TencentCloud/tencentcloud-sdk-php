@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(integer $ZoneId) 设置可用区数字ID
  * @method string getZoneName() 获取可用区中文名
  * @method void setZoneName(string $ZoneName) 设置可用区中文名
+ * @method boolean getOnSale() 获取是否在售
+ * @method void setOnSale(boolean $OnSale) 设置是否在售
  */
 class ZonesInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ZonesInfo extends AbstractModel
     public $ZoneName;
 
     /**
+     * @var boolean 是否在售
+     */
+    public $OnSale;
+
+    /**
      * @param string $Zone 可用区英文ID
      * @param integer $ZoneId 可用区数字ID
      * @param string $ZoneName 可用区中文名
+     * @param boolean $OnSale 是否在售
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ZonesInfo extends AbstractModel
 
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("OnSale",$param) and $param["OnSale"] !== null) {
+            $this->OnSale = $param["OnSale"];
         }
     }
 }

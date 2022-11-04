@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadWeight(integer $LoadWeight) 设置脚本权重，范围 1-100
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileId() 获取文件 ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileId(string $FileId) 设置文件 ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScriptInfo extends AbstractModel
 {
@@ -94,6 +98,12 @@ class ScriptInfo extends AbstractModel
     public $LoadWeight;
 
     /**
+     * @var string 文件 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileId;
+
+    /**
      * @param string $Name 文件名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 文件大小
@@ -107,6 +117,8 @@ class ScriptInfo extends AbstractModel
      * @param string $EncodedHttpArchive base64编码后的har结构体
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LoadWeight 脚本权重，范围 1-100
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileId 文件 ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class ScriptInfo extends AbstractModel
 
         if (array_key_exists("LoadWeight",$param) and $param["LoadWeight"] !== null) {
             $this->LoadWeight = $param["LoadWeight"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

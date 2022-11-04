@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApCodeSet(array $ApCodeSet) 设置地域码集合
  * @method integer getKind() 获取操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
  * @method void setKind(integer $Kind) 设置操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
- * @method integer getOffset() 获取分页，偏移位置
- * @method void setOffset(integer $Offset) 设置分页，偏移位置
+ * @method integer getOffset() 获取分页偏移位置，默认值为0
+ * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取每页条目数量，默认20
  * @method void setLimit(integer $Limit) 设置每页条目数量，默认20
  * @method array getAuthorizedUserIdSet() 获取有该资产访问权限的用户ID集合
@@ -73,7 +73,7 @@ class DescribeDevicesRequest extends AbstractModel
     public $Kind;
 
     /**
-     * @var integer 分页，偏移位置
+     * @var integer 分页偏移位置，默认值为0
      */
     public $Offset;
 
@@ -113,7 +113,7 @@ class DescribeDevicesRequest extends AbstractModel
      * @param string $Ip 暂未使用
      * @param array $ApCodeSet 地域码集合
      * @param integer $Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
-     * @param integer $Offset 分页，偏移位置
+     * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数量，默认20
      * @param array $AuthorizedUserIdSet 有该资产访问权限的用户ID集合
      * @param array $ResourceIdSet 过滤条件，资产绑定的堡垒机服务ID集合

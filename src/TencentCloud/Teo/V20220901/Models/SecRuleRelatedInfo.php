@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 安全规则（cc/waf/bot）相关信息
  *
- * @method integer getRuleId() 获取规则ID列表（99999为无效id）。
- * @method void setRuleId(integer $RuleId) 设置规则ID列表（99999为无效id）。
+ * @method integer getRuleId() 获取规则ID。
+ * @method void setRuleId(integer $RuleId) 设置规则ID。
  * @method string getAction() 获取执行动作（处置方式），取值有：
 <li>trans ：通过 ；</li>
 <li>alg ：算法挑战 ；</li>
@@ -56,11 +56,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置规则描述。
  * @method string getRuleTypeName() 获取规则类型名称。
  * @method void setRuleTypeName(string $RuleTypeName) 设置规则类型名称。
+ * @method string getAttackContent() 获取攻击内容。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttackContent(string $AttackContent) 设置攻击内容。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecRuleRelatedInfo extends AbstractModel
 {
     /**
-     * @var integer 规则ID列表（99999为无效id）。
+     * @var integer 规则ID。
      */
     public $RuleId;
 
@@ -102,7 +106,13 @@ class SecRuleRelatedInfo extends AbstractModel
     public $RuleTypeName;
 
     /**
-     * @param integer $RuleId 规则ID列表（99999为无效id）。
+     * @var string 攻击内容。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttackContent;
+
+    /**
+     * @param integer $RuleId 规则ID。
      * @param string $Action 执行动作（处置方式），取值有：
 <li>trans ：通过 ；</li>
 <li>alg ：算法挑战 ；</li>
@@ -120,6 +130,8 @@ class SecRuleRelatedInfo extends AbstractModel
 <li>normal  ：正常 。</li>
      * @param string $Description 规则描述。
      * @param string $RuleTypeName 规则类型名称。
+     * @param string $AttackContent 攻击内容。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -156,6 +168,10 @@ class SecRuleRelatedInfo extends AbstractModel
 
         if (array_key_exists("RuleTypeName",$param) and $param["RuleTypeName"] !== null) {
             $this->RuleTypeName = $param["RuleTypeName"];
+        }
+
+        if (array_key_exists("AttackContent",$param) and $param["AttackContent"] !== null) {
+            $this->AttackContent = $param["AttackContent"];
         }
     }
 }

@@ -48,6 +48,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置规则描述。
  * @method string getDomain() 获取子域名。
  * @method void setDomain(string $Domain) 设置子域名。
+ * @method string getBotLabel() 获取Bot标签，取值有:
+<li>evil_bot：恶意Bot；</li>
+<li>suspect_bot：疑似Bot；</li>
+<li>good_bot：正常Bot；</li>
+<li>normal：正常请求；</li>
+<li>none：未分类。</li>
+ * @method void setBotLabel(string $BotLabel) 设置Bot标签，取值有:
+<li>evil_bot：恶意Bot；</li>
+<li>suspect_bot：疑似Bot；</li>
+<li>good_bot：正常Bot；</li>
+<li>normal：正常请求；</li>
+<li>none：未分类。</li>
  */
 class SecHitRuleInfo extends AbstractModel
 {
@@ -94,6 +106,16 @@ class SecHitRuleInfo extends AbstractModel
     public $Domain;
 
     /**
+     * @var string Bot标签，取值有:
+<li>evil_bot：恶意Bot；</li>
+<li>suspect_bot：疑似Bot；</li>
+<li>good_bot：正常Bot；</li>
+<li>normal：正常请求；</li>
+<li>none：未分类。</li>
+     */
+    public $BotLabel;
+
+    /**
      * @param integer $RuleId 规则ID。
      * @param string $RuleTypeName 规则类型名称。
      * @param string $Action 执行动作（处置方式），取值有：
@@ -108,6 +130,12 @@ class SecHitRuleInfo extends AbstractModel
      * @param integer $RequestNum 请求数。
      * @param string $Description 规则描述。
      * @param string $Domain 子域名。
+     * @param string $BotLabel Bot标签，取值有:
+<li>evil_bot：恶意Bot；</li>
+<li>suspect_bot：疑似Bot；</li>
+<li>good_bot：正常Bot；</li>
+<li>normal：正常请求；</li>
+<li>none：未分类。</li>
      */
     function __construct()
     {
@@ -148,6 +176,10 @@ class SecHitRuleInfo extends AbstractModel
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("BotLabel",$param) and $param["BotLabel"] !== null) {
+            $this->BotLabel = $param["BotLabel"];
         }
     }
 }

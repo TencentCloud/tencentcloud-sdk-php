@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置页数，默认值为1
  * @method string getDigest() 获取指定镜像 Digest 进行查找
  * @method void setDigest(string $Digest) 设置指定镜像 Digest 进行查找
+ * @method boolean getExactMatch() 获取指定是否为精准匹配，true为精准匹配，不填为模糊匹配
+ * @method void setExactMatch(boolean $ExactMatch) 设置指定是否为精准匹配，true为精准匹配，不填为模糊匹配
  */
 class DescribeImagesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeImagesRequest extends AbstractModel
     public $Digest;
 
     /**
+     * @var boolean 指定是否为精准匹配，true为精准匹配，不填为模糊匹配
+     */
+    public $ExactMatch;
+
+    /**
      * @param string $RegistryId 实例ID
      * @param string $NamespaceName 命名空间名称
      * @param string $RepositoryName 镜像仓库名称
@@ -80,6 +87,7 @@ class DescribeImagesRequest extends AbstractModel
      * @param integer $Limit 每页个数，用于分页，默认20
      * @param integer $Offset 页数，默认值为1
      * @param string $Digest 指定镜像 Digest 进行查找
+     * @param boolean $ExactMatch 指定是否为精准匹配，true为精准匹配，不填为模糊匹配
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeImagesRequest extends AbstractModel
 
         if (array_key_exists("Digest",$param) and $param["Digest"] !== null) {
             $this->Digest = $param["Digest"];
+        }
+
+        if (array_key_exists("ExactMatch",$param) and $param["ExactMatch"] !== null) {
+            $this->ExactMatch = $param["ExactMatch"];
         }
     }
 }

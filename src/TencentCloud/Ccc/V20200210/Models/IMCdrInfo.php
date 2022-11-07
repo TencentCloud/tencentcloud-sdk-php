@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupName(string $SkillGroupName) 设置技能组名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method IMSatisfaction getSatisfaction() 获取满意度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSatisfaction(IMSatisfaction $Satisfaction) 设置满意度
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IMCdrInfo extends AbstractModel
 {
@@ -127,6 +131,12 @@ class IMCdrInfo extends AbstractModel
     public $SkillGroupName;
 
     /**
+     * @var IMSatisfaction 满意度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Satisfaction;
+
+    /**
      * @param string $Id 服务记录ID
      * @param integer $Duration 服务时长秒数
      * @param integer $EndStatus 结束状态
@@ -147,6 +157,8 @@ class IMCdrInfo extends AbstractModel
      * @param string $SkillGroupId 技能组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SkillGroupName 技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IMSatisfaction $Satisfaction 满意度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -200,6 +212,11 @@ class IMCdrInfo extends AbstractModel
 
         if (array_key_exists("SkillGroupName",$param) and $param["SkillGroupName"] !== null) {
             $this->SkillGroupName = $param["SkillGroupName"];
+        }
+
+        if (array_key_exists("Satisfaction",$param) and $param["Satisfaction"] !== null) {
+            $this->Satisfaction = new IMSatisfaction();
+            $this->Satisfaction->deserialize($param["Satisfaction"]);
         }
     }
 }

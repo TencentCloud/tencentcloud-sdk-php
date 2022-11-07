@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(float $Bandwidth) 设置带宽，单位Mbps。
  * @method float getFlux() 获取流量，单位MB。
  * @method void setFlux(float $Flux) 设置流量，单位MB。
+ * @method string getServerIp() 获取推流服务端 IP。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServerIp(string $ServerIp) 设置推流服务端 IP。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PushQualityData extends AbstractModel
 {
@@ -178,6 +182,12 @@ class PushQualityData extends AbstractModel
     public $Flux;
 
     /**
+     * @var string 推流服务端 IP。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServerIp;
+
+    /**
      * @param string $Time 数据时间，格式: %Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      * @param string $PushDomain 推流域名。
      * @param string $AppName 推流路径。
@@ -200,6 +210,8 @@ class PushQualityData extends AbstractModel
      * @param string $StreamParam 推流参数
      * @param float $Bandwidth 带宽，单位Mbps。
      * @param float $Flux 流量，单位MB。
+     * @param string $ServerIp 推流服务端 IP。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -300,6 +312,10 @@ class PushQualityData extends AbstractModel
 
         if (array_key_exists("Flux",$param) and $param["Flux"] !== null) {
             $this->Flux = $param["Flux"];
+        }
+
+        if (array_key_exists("ServerIp",$param) and $param["ServerIp"] !== null) {
+            $this->ServerIp = $param["ServerIp"];
         }
     }
 }

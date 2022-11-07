@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置拉流任务Id。
  * @method string getSourceType() 获取拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
+PullPicPushLive -图片。
  * @method void setSourceType(string $SourceType) 设置拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
+PullPicPushLive -图片。
  * @method array getSourceUrls() 获取拉流源url列表。
 SourceType为直播（PullLiveToLive）只可以填1个，
 SourceType为点播（PullVodToLive）可以填多个，上限10个。
@@ -174,6 +176,14 @@ PullVodPushLive -点播。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkList(array $WatermarkList) 设置水印信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVodLocalMode() 获取点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVodLocalMode(integer $VodLocalMode) 设置点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PullStreamTaskInfo extends AbstractModel
 {
@@ -185,7 +195,8 @@ class PullStreamTaskInfo extends AbstractModel
     /**
      * @var string 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
+PullPicPushLive -图片。
      */
     public $SourceType;
 
@@ -359,10 +370,19 @@ PullVodPushLive -点播。
     public $WatermarkList;
 
     /**
+     * @var integer 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VodLocalMode;
+
+    /**
      * @param string $TaskId 拉流任务Id。
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
+PullPicPushLive -图片。
      * @param array $SourceUrls 拉流源url列表。
 SourceType为直播（PullLiveToLive）只可以填1个，
 SourceType为点播（PullVodToLive）可以填多个，上限10个。
@@ -435,6 +455,10 @@ PullVodPushLive -点播。
      * @param string $BackupSourceUrl 备源URL。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WatermarkList 水印信息列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VodLocalMode 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -558,6 +582,10 @@ PullVodPushLive -点播。
                 $obj->deserialize($value);
                 array_push($this->WatermarkList, $obj);
             }
+        }
+
+        if (array_key_exists("VodLocalMode",$param) and $param["VodLocalMode"] !== null) {
+            $this->VodLocalMode = $param["VodLocalMode"];
         }
     }
 }

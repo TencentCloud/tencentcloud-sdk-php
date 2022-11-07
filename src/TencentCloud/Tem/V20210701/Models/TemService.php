@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHasAuthority() 获取是否有资源权限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasAuthority(boolean $HasAuthority) 设置是否有资源权限
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemService extends AbstractModel
 {
@@ -194,6 +198,12 @@ class TemService extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean 是否有资源权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasAuthority;
+
+    /**
      * @param string $ApplicationId 主键
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 服务名
@@ -227,6 +237,8 @@ class TemService extends AbstractModel
      * @param integer $EnableTracing 是否启用链路追踪
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HasAuthority 是否有资源权限
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -318,6 +330,10 @@ class TemService extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("HasAuthority",$param) and $param["HasAuthority"] !== null) {
+            $this->HasAuthority = $param["HasAuthority"];
         }
     }
 }

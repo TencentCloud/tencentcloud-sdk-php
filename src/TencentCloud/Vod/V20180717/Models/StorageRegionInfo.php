@@ -20,28 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 存储地域信息
  *
- * @method string getRegion() 获取存储地域
- * @method void setRegion(string $Region) 设置存储地域
- * @method string getDescription() 获取存储地域描述信息
- * @method void setDescription(string $Description) 设置存储地域描述信息
+ * @method string getRegion() 获取存储地域。
+ * @method void setRegion(string $Region) 设置存储地域。
+ * @method string getDescription() 获取存储地域描述信息。
+ * @method void setDescription(string $Description) 设置存储地域描述信息。
  * @method string getStatus() 获取状态，是否开通，取值有：
 <li>opened：已经开通。</li>
 <li>unopened：未开通。</li>
  * @method void setStatus(string $Status) 设置状态，是否开通，取值有：
 <li>opened：已经开通。</li>
 <li>unopened：未开通。</li>
- * @method boolean getIsDefault() 获取是否默认的存储地域，true：是；false：否
- * @method void setIsDefault(boolean $IsDefault) 设置是否默认的存储地域，true：是；false：否
+ * @method boolean getIsDefault() 获取是否默认的存储地域，true：是；false：否。
+ * @method void setIsDefault(boolean $IsDefault) 设置是否默认的存储地域，true：是；false：否。
+ * @method string getArea() 获取存储区域，取值有：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
+ * @method void setArea(string $Area) 设置存储区域，取值有：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
  */
 class StorageRegionInfo extends AbstractModel
 {
     /**
-     * @var string 存储地域
+     * @var string 存储地域。
      */
     public $Region;
 
     /**
-     * @var string 存储地域描述信息
+     * @var string 存储地域描述信息。
      */
     public $Description;
 
@@ -53,17 +59,27 @@ class StorageRegionInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var boolean 是否默认的存储地域，true：是；false：否
+     * @var boolean 是否默认的存储地域，true：是；false：否。
      */
     public $IsDefault;
 
     /**
-     * @param string $Region 存储地域
-     * @param string $Description 存储地域描述信息
+     * @var string 存储区域，取值有：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
+     */
+    public $Area;
+
+    /**
+     * @param string $Region 存储地域。
+     * @param string $Description 存储地域描述信息。
      * @param string $Status 状态，是否开通，取值有：
 <li>opened：已经开通。</li>
 <li>unopened：未开通。</li>
-     * @param boolean $IsDefault 是否默认的存储地域，true：是；false：否
+     * @param boolean $IsDefault 是否默认的存储地域，true：是；false：否。
+     * @param string $Area 存储区域，取值有：
+<li>Chinese Mainland：中国境内（不包含港澳台）。</li>
+<li>Outside Chinese Mainland：中国境外。</li>
      */
     function __construct()
     {
@@ -92,6 +108,10 @@ class StorageRegionInfo extends AbstractModel
 
         if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
             $this->IsDefault = $param["IsDefault"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

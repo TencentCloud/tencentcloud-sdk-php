@@ -136,6 +136,8 @@ pcre(正则表达式)
 ]
  * @method string getId() 获取特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
  * @method void setId(string $Id) 设置特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
+ * @method integer getPktLenGT() 获取大于报文长度，取值1+
+ * @method void setPktLenGT(integer $PktLenGT) 设置大于报文长度，取值1+
  */
 class PacketFilterConfig extends AbstractModel
 {
@@ -286,6 +288,11 @@ pcre(正则表达式)
     public $Id;
 
     /**
+     * @var integer 大于报文长度，取值1+
+     */
+    public $PktLenGT;
+
+    /**
      * @param string $Protocol 协议，取值[tcp udp icmp all]
      * @param integer $SportStart 起始源端口，取值0~65535
      * @param integer $SportEnd 结束源端口，取值1~65535，必须大于等于起始源端口
@@ -344,6 +351,7 @@ pcre(正则表达式)
 1(不包含)
 ]
      * @param string $Id 特征过滤配置添加成功后自动生成的规则ID，当添加新特征过滤配置时，此字段不用填写；
+     * @param integer $PktLenGT 大于报文长度，取值1+
      */
     function __construct()
     {
@@ -444,6 +452,10 @@ pcre(正则表达式)
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("PktLenGT",$param) and $param["PktLenGT"] !== null) {
+            $this->PktLenGT = $param["PktLenGT"];
         }
     }
 }

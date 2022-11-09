@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220901\Models;
+namespace TencentCloud\Cat\V20180409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 失败原因
+ * UpdateProbeTaskAttributes请求参数结构体
  *
- * @method string getReason() 获取失败原因。
- * @method void setReason(string $Reason) 设置失败原因。
- * @method array getTargets() 获取处理失败的资源列表。
- * @method void setTargets(array $Targets) 设置处理失败的资源列表。
+ * @method string getTaskId() 获取任务 ID
+ * @method void setTaskId(string $TaskId) 设置任务 ID
+ * @method string getName() 获取任务名
+ * @method void setName(string $Name) 设置任务名
  */
-class FailReason extends AbstractModel
+class UpdateProbeTaskAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 失败原因。
+     * @var string 任务 ID
      */
-    public $Reason;
+    public $TaskId;
 
     /**
-     * @var array 处理失败的资源列表。
+     * @var string 任务名
      */
-    public $Targets;
+    public $Name;
 
     /**
-     * @param string $Reason 失败原因。
-     * @param array $Targets 处理失败的资源列表。
+     * @param string $TaskId 任务 ID
+     * @param string $Name 任务名
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class FailReason extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
-            $this->Reason = $param["Reason"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
-        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
-            $this->Targets = $param["Targets"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

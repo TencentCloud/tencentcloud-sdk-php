@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSourceType() 获取拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
+PullPicPushLive -图片。
  * @method void setSourceType(string $SourceType) 设置拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
+PullPicPushLive -图片。
  * @method array getSourceUrls() 获取拉流源 url 列表。
 SourceType 为直播（PullLivePushLive）只可以填1个，
 SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
@@ -188,6 +190,14 @@ PullVodPushLive -点播。
 1. 最多支持4个不同位置的水印。
 2. 水印图片 URL 请使用合法外网可访问地址。
 3. 支持的水印图片格式：png，jpg，gif 等。
+ * @method integer getVodLocalMode() 获取点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
+ * @method void setVodLocalMode(integer $VodLocalMode) 设置点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
  */
 class CreateLivePullStreamTaskRequest extends AbstractModel
 {
@@ -195,6 +205,7 @@ class CreateLivePullStreamTaskRequest extends AbstractModel
      * @var string 拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
+PullPicPushLive -图片。
      */
     public $SourceType;
 
@@ -352,9 +363,18 @@ PullVodPushLive -点播。
     public $WatermarkList;
 
     /**
+     * @var integer 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
+     */
+    public $VodLocalMode;
+
+    /**
      * @param string $SourceType 拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
+PullPicPushLive -图片。
      * @param array $SourceUrls 拉流源 url 列表。
 SourceType 为直播（PullLivePushLive）只可以填1个，
 SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
@@ -436,6 +456,10 @@ PullVodPushLive -点播。
 1. 最多支持4个不同位置的水印。
 2. 水印图片 URL 请使用合法外网可访问地址。
 3. 支持的水印图片格式：png，jpg，gif 等。
+     * @param integer $VodLocalMode 点播源是否启用本地推流模式，默认0，不启用。
+0 - 不启用。
+1 - 启用。
+注意：启用本地模式后，会将源列表中的 MP4 文件进行本地下载，优先使用本地已下载文件进行推流，提高点播源推流稳定性。使用本地下载文件推流时，会产生增值费用。
      */
     function __construct()
     {
@@ -529,6 +553,10 @@ PullVodPushLive -点播。
                 $obj->deserialize($value);
                 array_push($this->WatermarkList, $obj);
             }
+        }
+
+        if (array_key_exists("VodLocalMode",$param) and $param["VodLocalMode"] !== null) {
+            $this->VodLocalMode = $param["VodLocalMode"];
         }
     }
 }

@@ -86,6 +86,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
  * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) 展示插件详情，支持按照插件ID进行。
  * @method Models\DescribePluginApisResponse DescribePluginApis(Models\DescribePluginApisRequest $req) 查询指定插件下绑定的API信息
  * @method Models\DescribePluginsResponse DescribePlugins(Models\DescribePluginsRequest $req) 展示插件列表和详情，支持分页，支持按照插件类型查询，支持按照插件ID批量查询，支持按照插件名称查询。
+ * @method Models\DescribePluginsByApiResponse DescribePluginsByApi(Models\DescribePluginsByApiRequest $req) 展示API上已绑定的插件列表。
  * @method Models\DescribeServiceResponse DescribeService(Models\DescribeServiceRequest $req) 本接口（DescribeService）用于查询一个服务的详细信息、包括服务的描述、域名、协议、创建时间、发布情况等信息。
  * @method Models\DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(Models\DescribeServiceEnvironmentListRequest $req) 本接口（DescribeServiceEnvironmentList）用于查询一个服务的环境列表，可查询到此服务下所有环境及其状态。
  * @method Models\DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(Models\DescribeServiceEnvironmentReleaseHistoryRequest $req) 本接口（DescribeServiceEnvironmentReleaseHistory）用于查询服务环境的发布历史。

@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDropOther(integer $DropOther) 设置其他协议封禁，取值[0(封禁关)，1(封禁开)]
  * @method integer getCheckExceptNullConnect() 获取异常空连接防护，取值[0(防护关)，1(防护开)]
  * @method void setCheckExceptNullConnect(integer $CheckExceptNullConnect) 设置异常空连接防护，取值[0(防护关)，1(防护开)]
+ * @method integer getPingOfDeath() 获取ping of death防护，取值[0(防护关)，1(防护开)]
+ * @method void setPingOfDeath(integer $PingOfDeath) 设置ping of death防护，取值[0(防护关)，1(防护开)]
+ * @method integer getTearDrop() 获取tear drop防护，取值[0(防护关)，1(防护开)]
+ * @method void setTearDrop(integer $TearDrop) 设置tear drop防护，取值[0(防护关)，1(防护开)]
  */
 class ProtocolBlockConfig extends AbstractModel
 {
@@ -59,11 +63,23 @@ class ProtocolBlockConfig extends AbstractModel
     public $CheckExceptNullConnect;
 
     /**
+     * @var integer ping of death防护，取值[0(防护关)，1(防护开)]
+     */
+    public $PingOfDeath;
+
+    /**
+     * @var integer tear drop防护，取值[0(防护关)，1(防护开)]
+     */
+    public $TearDrop;
+
+    /**
      * @param integer $DropTcp TCP封禁，取值[0(封禁关)，1(封禁开)]
      * @param integer $DropUdp UDP封禁，取值[0(封禁关)，1(封禁开)]
      * @param integer $DropIcmp ICMP封禁，取值[0(封禁关)，1(封禁开)]
      * @param integer $DropOther 其他协议封禁，取值[0(封禁关)，1(封禁开)]
      * @param integer $CheckExceptNullConnect 异常空连接防护，取值[0(防护关)，1(防护开)]
+     * @param integer $PingOfDeath ping of death防护，取值[0(防护关)，1(防护开)]
+     * @param integer $TearDrop tear drop防护，取值[0(防护关)，1(防护开)]
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ProtocolBlockConfig extends AbstractModel
 
         if (array_key_exists("CheckExceptNullConnect",$param) and $param["CheckExceptNullConnect"] !== null) {
             $this->CheckExceptNullConnect = $param["CheckExceptNullConnect"];
+        }
+
+        if (array_key_exists("PingOfDeath",$param) and $param["PingOfDeath"] !== null) {
+            $this->PingOfDeath = $param["PingOfDeath"];
+        }
+
+        if (array_key_exists("TearDrop",$param) and $param["TearDrop"] !== null) {
+            $this->TearDrop = $param["TearDrop"];
         }
     }
 }

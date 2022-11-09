@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
 <li>2：双通道</li>
 <li>6：立体声</li>
 当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+ * @method array getStreamSelects() 获取指定输出要保留的音频轨道。默认是全部保留源的。
+ * @method void setStreamSelects(array $StreamSelects) 设置指定输出要保留的音频轨道。默认是全部保留源的。
  */
 class AudioTemplateInfoForUpdate extends AbstractModel
 {
@@ -121,6 +123,11 @@ class AudioTemplateInfoForUpdate extends AbstractModel
     public $AudioChannel;
 
     /**
+     * @var array 指定输出要保留的音频轨道。默认是全部保留源的。
+     */
+    public $StreamSelects;
+
+    /**
      * @param string $Codec 音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -148,6 +155,7 @@ class AudioTemplateInfoForUpdate extends AbstractModel
 <li>2：双通道</li>
 <li>6：立体声</li>
 当媒体的封装格式是音频格式时（flac，ogg，mp3，m4a）时，声道数不允许设为立体声。
+     * @param array $StreamSelects 指定输出要保留的音频轨道。默认是全部保留源的。
      */
     function __construct()
     {
@@ -176,6 +184,10 @@ class AudioTemplateInfoForUpdate extends AbstractModel
 
         if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
             $this->AudioChannel = $param["AudioChannel"];
+        }
+
+        if (array_key_exists("StreamSelects",$param) and $param["StreamSelects"] !== null) {
+            $this->StreamSelects = $param["StreamSelects"];
         }
     }
 }

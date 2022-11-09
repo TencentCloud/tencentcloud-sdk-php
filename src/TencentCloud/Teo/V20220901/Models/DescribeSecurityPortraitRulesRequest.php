@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityPortraitRules请求参数结构体
  *
- * @method string getZoneId() 获取站点Id。
- * @method void setZoneId(string $ZoneId) 设置站点Id。
- * @method string getEntity() 获取子域名/应用名。
- * @method void setEntity(string $Entity) 设置子域名/应用名。
+ * @method string getZoneId() 获取站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method void setZoneId(string $ZoneId) 设置站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method string getEntity() 获取子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method void setEntity(string $Entity) 设置子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method string getTemplateId() 获取模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+ * @method void setTemplateId(string $TemplateId) 设置模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
  */
 class DescribeSecurityPortraitRulesRequest extends AbstractModel
 {
     /**
-     * @var string 站点Id。
+     * @var string 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public $ZoneId;
 
     /**
-     * @var string 子域名/应用名。
+     * @var string 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public $Entity;
 
     /**
-     * @param string $ZoneId 站点Id。
-     * @param string $Entity 子域名/应用名。
+     * @var string 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+     */
+    public $TemplateId;
+
+    /**
+     * @param string $ZoneId 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param string $Entity 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param string $TemplateId 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeSecurityPortraitRulesRequest extends AbstractModel
 
         if (array_key_exists("Entity",$param) and $param["Entity"] !== null) {
             $this->Entity = $param["Entity"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

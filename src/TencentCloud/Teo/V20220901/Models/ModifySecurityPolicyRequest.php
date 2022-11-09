@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点Id。
  * @method void setZoneId(string $ZoneId) 设置站点Id。
- * @method string getEntity() 获取子域名/应用名。
- * @method void setEntity(string $Entity) 设置子域名/应用名。
  * @method SecurityConfig getSecurityConfig() 获取安全配置。
  * @method void setSecurityConfig(SecurityConfig $SecurityConfig) 设置安全配置。
+ * @method string getEntity() 获取子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method void setEntity(string $Entity) 设置子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method string getTemplateId() 获取模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+ * @method void setTemplateId(string $TemplateId) 设置模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
  */
 class ModifySecurityPolicyRequest extends AbstractModel
 {
@@ -35,19 +37,25 @@ class ModifySecurityPolicyRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 子域名/应用名。
-     */
-    public $Entity;
-
-    /**
      * @var SecurityConfig 安全配置。
      */
     public $SecurityConfig;
 
     /**
+     * @var string 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+     */
+    public $Entity;
+
+    /**
+     * @var string 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     */
+    public $TemplateId;
+
+    /**
      * @param string $ZoneId 站点Id。
-     * @param string $Entity 子域名/应用名。
      * @param SecurityConfig $SecurityConfig 安全配置。
+     * @param string $Entity 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param string $TemplateId 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
      */
     function __construct()
     {
@@ -66,13 +74,17 @@ class ModifySecurityPolicyRequest extends AbstractModel
             $this->ZoneId = $param["ZoneId"];
         }
 
+        if (array_key_exists("SecurityConfig",$param) and $param["SecurityConfig"] !== null) {
+            $this->SecurityConfig = new SecurityConfig();
+            $this->SecurityConfig->deserialize($param["SecurityConfig"]);
+        }
+
         if (array_key_exists("Entity",$param) and $param["Entity"] !== null) {
             $this->Entity = $param["Entity"];
         }
 
-        if (array_key_exists("SecurityConfig",$param) and $param["SecurityConfig"] !== null) {
-            $this->SecurityConfig = new SecurityConfig();
-            $this->SecurityConfig->deserialize($param["SecurityConfig"]);
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

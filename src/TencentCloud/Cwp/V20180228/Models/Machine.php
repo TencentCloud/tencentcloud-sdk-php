@@ -98,6 +98,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAddedOnTheFifteen(integer $IsAddedOnTheFifteen) 设置是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIpList() 获取主机ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIpList(string $IpList) 设置主机ip列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Machine extends AbstractModel
 {
@@ -245,6 +249,12 @@ class Machine extends AbstractModel
     public $IsAddedOnTheFifteen;
 
     /**
+     * @var string 主机ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IpList;
+
+    /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
      * @param string $MachineStatus 主机状态。
@@ -283,6 +293,8 @@ class Machine extends AbstractModel
      * @param array $CloudTags 云标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IpList 主机ip列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -411,6 +423,10 @@ class Machine extends AbstractModel
 
         if (array_key_exists("IsAddedOnTheFifteen",$param) and $param["IsAddedOnTheFifteen"] !== null) {
             $this->IsAddedOnTheFifteen = $param["IsAddedOnTheFifteen"];
+        }
+
+        if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
+            $this->IpList = $param["IpList"];
         }
     }
 }

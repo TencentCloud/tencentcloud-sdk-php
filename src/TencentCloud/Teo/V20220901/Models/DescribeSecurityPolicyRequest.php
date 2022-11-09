@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取站点Id。
  * @method void setZoneId(string $ZoneId) 设置站点Id。
- * @method string getEntity() 获取子域名/应用名。
- * @method void setEntity(string $Entity) 设置子域名/应用名。
+ * @method string getEntity() 获取子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method void setEntity(string $Entity) 设置子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method string getTemplateId() 获取模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+ * @method void setTemplateId(string $TemplateId) 设置模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
  */
 class DescribeSecurityPolicyRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class DescribeSecurityPolicyRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 子域名/应用名。
+     * @var string 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public $Entity;
 
     /**
+     * @var string 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
+     */
+    public $TemplateId;
+
+    /**
      * @param string $ZoneId 站点Id。
-     * @param string $Entity 子域名/应用名。
+     * @param string $Entity 子域名/应用名。当使用Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param string $TemplateId 模板策略id。当使用模板Id时可不填Entity，否则必须填写Entity。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeSecurityPolicyRequest extends AbstractModel
 
         if (array_key_exists("Entity",$param) and $param["Entity"] !== null) {
             $this->Entity = $param["Entity"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

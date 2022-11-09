@@ -20,24 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityGroupManagedRules请求参数结构体
  *
- * @method string getZoneId() 获取站点Id。
- * @method void setZoneId(string $ZoneId) 设置站点Id。
- * @method string getEntity() 获取子域名/应用名。
- * @method void setEntity(string $Entity) 设置子域名/应用名。
+ * @method string getZoneId() 获取站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method void setZoneId(string $ZoneId) 设置站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method string getEntity() 获取子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method void setEntity(string $Entity) 设置子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
  * @method integer getOffset() 获取分页查询偏移量。默认值：0。
  * @method void setOffset(integer $Offset) 设置分页查询偏移量。默认值：0。
  * @method integer getLimit() 获取分页查询限制数目。默认值：20，最大值：1000。
  * @method void setLimit(integer $Limit) 设置分页查询限制数目。默认值：20，最大值：1000。
+ * @method string getTemplateId() 获取模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+ * @method void setTemplateId(string $TemplateId) 设置模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
  */
 class DescribeSecurityGroupManagedRulesRequest extends AbstractModel
 {
     /**
-     * @var string 站点Id。
+     * @var string 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public $ZoneId;
 
     /**
-     * @var string 子域名/应用名。
+     * @var string 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public $Entity;
 
@@ -52,10 +54,16 @@ class DescribeSecurityGroupManagedRulesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $ZoneId 站点Id。
-     * @param string $Entity 子域名/应用名。
+     * @var string 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+     */
+    public $TemplateId;
+
+    /**
+     * @param string $ZoneId 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param string $Entity 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      * @param integer $Offset 分页查询偏移量。默认值：0。
      * @param integer $Limit 分页查询限制数目。默认值：20，最大值：1000。
+     * @param string $TemplateId 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeSecurityGroupManagedRulesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

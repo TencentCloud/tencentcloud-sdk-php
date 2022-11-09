@@ -46,12 +46,10 @@ use TencentCloud\Common\AbstractModel;
 <li>hour：小时。</li>
  * @method string getRuleStatus() 获取规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>
-<li>hour：小时。</li>默认on生效。
+<li>off：不生效。</li>默认on生效。
  * @method void setRuleStatus(string $RuleStatus) 设置规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>
-<li>hour：小时。</li>默认on生效。
+<li>off：不生效。</li>默认on生效。
  * @method array getAclConditions() 获取规则详情。
  * @method void setAclConditions(array $AclConditions) 设置规则详情。
  * @method integer getRulePriority() 获取规则权重，取值范围0-100。
@@ -61,16 +59,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleID(integer $RuleID) 设置规则id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFreqFields() 获取过滤词，取值有：
-<li>host：域名；</li>
 <li>sip：客户端ip。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreqFields(array $FreqFields) 设置过滤词，取值有：
-<li>host：域名；</li>
 <li>sip：客户端ip。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFreqScope() 获取统计范围，字段为null时，代表source_to_eo。取值有：
+<li>source_to_eo：（响应）源站到EdgeOne。</li>
+<li>client_to_eo：（请求）客户端到EdgeOne；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFreqScope(array $FreqScope) 设置统计范围，字段为null时，代表source_to_eo。取值有：
+<li>source_to_eo：（响应）源站到EdgeOne。</li>
+<li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RateLimitUserRule extends AbstractModel
@@ -114,8 +118,7 @@ class RateLimitUserRule extends AbstractModel
     /**
      * @var string 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>
-<li>hour：小时。</li>默认on生效。
+<li>off：不生效。</li>默认on生效。
      */
     public $RuleStatus;
 
@@ -137,7 +140,6 @@ class RateLimitUserRule extends AbstractModel
 
     /**
      * @var array 过滤词，取值有：
-<li>host：域名；</li>
 <li>sip：客户端ip。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -148,6 +150,14 @@ class RateLimitUserRule extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
+
+    /**
+     * @var array 统计范围，字段为null时，代表source_to_eo。取值有：
+<li>source_to_eo：（响应）源站到EdgeOne。</li>
+<li>client_to_eo：（请求）客户端到EdgeOne；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FreqScope;
 
     /**
      * @param integer $Threshold 速率限制统计阈值，单位是次，取值范围0-4294967294。
@@ -164,17 +174,19 @@ class RateLimitUserRule extends AbstractModel
 <li>hour：小时。</li>
      * @param string $RuleStatus 规则状态，取值有：
 <li>on：生效；</li>
-<li>off：不生效。</li>
-<li>hour：小时。</li>默认on生效。
+<li>off：不生效。</li>默认on生效。
      * @param array $AclConditions 规则详情。
      * @param integer $RulePriority 规则权重，取值范围0-100。
      * @param integer $RuleID 规则id。仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FreqFields 过滤词，取值有：
-<li>host：域名；</li>
 <li>sip：客户端ip。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FreqScope 统计范围，字段为null时，代表source_to_eo。取值有：
+<li>source_to_eo：（响应）源站到EdgeOne。</li>
+<li>client_to_eo：（请求）客户端到EdgeOne；</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -241,6 +253,10 @@ class RateLimitUserRule extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("FreqScope",$param) and $param["FreqScope"] !== null) {
+            $this->FreqScope = $param["FreqScope"];
         }
     }
 }

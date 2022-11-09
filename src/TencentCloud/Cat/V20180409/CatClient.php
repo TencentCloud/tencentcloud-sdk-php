@@ -32,6 +32,7 @@ use TencentCloud\Cat\V20180409\Models as Models;
  * @method Models\DescribeProbeTasksResponse DescribeProbeTasks(Models\DescribeProbeTasksRequest $req) 查询拨测任务列表
  * @method Models\ResumeProbeTaskResponse ResumeProbeTask(Models\ResumeProbeTaskRequest $req) 恢复拨测任务
  * @method Models\SuspendProbeTaskResponse SuspendProbeTask(Models\SuspendProbeTaskRequest $req) 暂停拨测任务
+ * @method Models\UpdateProbeTaskAttributesResponse UpdateProbeTaskAttributes(Models\UpdateProbeTaskAttributesRequest $req) 更新探测任务属性
  * @method Models\UpdateProbeTaskConfigurationListResponse UpdateProbeTaskConfigurationList(Models\UpdateProbeTaskConfigurationListRequest $req) 批量更新拨测任务配置
  */
 

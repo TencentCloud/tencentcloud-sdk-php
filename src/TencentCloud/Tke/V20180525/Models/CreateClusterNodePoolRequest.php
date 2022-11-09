@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取cluster id
  * @method void setClusterId(string $ClusterId) 设置cluster id
- * @method string getAutoScalingGroupPara() 获取AutoScalingGroupPara AS组参数
- * @method void setAutoScalingGroupPara(string $AutoScalingGroupPara) 设置AutoScalingGroupPara AS组参数
- * @method string getLaunchConfigurePara() 获取LaunchConfigurePara 运行参数
- * @method void setLaunchConfigurePara(string $LaunchConfigurePara) 设置LaunchConfigurePara 运行参数
+ * @method string getAutoScalingGroupPara() 获取AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
+ * @method void setAutoScalingGroupPara(string $AutoScalingGroupPara) 设置AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
+ * @method string getLaunchConfigurePara() 获取LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
+ * @method void setLaunchConfigurePara(string $LaunchConfigurePara) 设置LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() 获取InstanceAdvancedSettings 示例参数
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) 设置InstanceAdvancedSettings 示例参数
  * @method boolean getEnableAutoscale() 获取是否启用自动伸缩
@@ -57,12 +57,12 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string AutoScalingGroupPara AS组参数
+     * @var string AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
      */
     public $AutoScalingGroupPara;
 
     /**
-     * @var string LaunchConfigurePara 运行参数
+     * @var string LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
      */
     public $LaunchConfigurePara;
 
@@ -123,8 +123,8 @@ class CreateClusterNodePoolRequest extends AbstractModel
 
     /**
      * @param string $ClusterId cluster id
-     * @param string $AutoScalingGroupPara AutoScalingGroupPara AS组参数
-     * @param string $LaunchConfigurePara LaunchConfigurePara 运行参数
+     * @param string $AutoScalingGroupPara AutoScalingGroupPara AS组参数，参考 https://cloud.tencent.com/document/product/377/20440
+     * @param string $LaunchConfigurePara LaunchConfigurePara 运行参数，参考 https://cloud.tencent.com/document/product/377/20447
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings InstanceAdvancedSettings 示例参数
      * @param boolean $EnableAutoscale 是否启用自动伸缩
      * @param string $Name 节点池名称

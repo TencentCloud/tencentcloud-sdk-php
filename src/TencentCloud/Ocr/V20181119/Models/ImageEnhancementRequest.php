@@ -54,8 +54,11 @@ use TencentCloud\Common\AbstractModel;
 205：灰度模式
 207：省墨模式
 208：文字锐化（适合非彩色图片）
+300:自动增强（自动从301～304选择任务类型）
 301：去摩尔纹
 302：去除阴影
+303：去除模糊 
+304：去除过曝
  * @method void setTaskType(integer $TaskType) 设置默认值为1，指定图像增强方法：
 1：切边增强
 2：弯曲矫正
@@ -64,8 +67,11 @@ use TencentCloud\Common\AbstractModel;
 205：灰度模式
 207：省墨模式
 208：文字锐化（适合非彩色图片）
+300:自动增强（自动从301～304选择任务类型）
 301：去摩尔纹
 302：去除阴影
+303：去除模糊 
+304：去除过曝
  */
 class ImageEnhancementRequest extends AbstractModel
 {
@@ -103,8 +109,11 @@ class ImageEnhancementRequest extends AbstractModel
 205：灰度模式
 207：省墨模式
 208：文字锐化（适合非彩色图片）
+300:自动增强（自动从301～304选择任务类型）
 301：去摩尔纹
 302：去除阴影
+303：去除模糊 
+304：去除过曝
      */
     public $TaskType;
 
@@ -130,8 +139,11 @@ class ImageEnhancementRequest extends AbstractModel
 205：灰度模式
 207：省墨模式
 208：文字锐化（适合非彩色图片）
+300:自动增强（自动从301～304选择任务类型）
 301：去摩尔纹
 302：去除阴影
+303：去除模糊 
+304：去除过曝
      */
     function __construct()
     {

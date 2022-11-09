@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDropPageConfig(DropPageConfig $DropPageConfig) 设置自定义拦截页面配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TemplateConfig getTemplateConfig() 获取模板配置。此处仅出参数使用。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateConfig(TemplateConfig $TemplateConfig) 设置模板配置。此处仅出参数使用。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityConfig extends AbstractModel
 {
@@ -104,6 +108,12 @@ class SecurityConfig extends AbstractModel
     public $DropPageConfig;
 
     /**
+     * @var TemplateConfig 模板配置。此处仅出参数使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateConfig;
+
+    /**
      * @param WafConfig $WafConfig 托管规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitConfig $RateLimitConfig 速率限制。如果为null，默认使用历史配置。
@@ -119,6 +129,8 @@ class SecurityConfig extends AbstractModel
      * @param ExceptConfig $ExceptConfig 例外规则配置。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DropPageConfig $DropPageConfig 自定义拦截页面配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateConfig $TemplateConfig 模板配置。此处仅出参数使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +184,11 @@ class SecurityConfig extends AbstractModel
         if (array_key_exists("DropPageConfig",$param) and $param["DropPageConfig"] !== null) {
             $this->DropPageConfig = new DropPageConfig();
             $this->DropPageConfig->deserialize($param["DropPageConfig"]);
+        }
+
+        if (array_key_exists("TemplateConfig",$param) and $param["TemplateConfig"] !== null) {
+            $this->TemplateConfig = new TemplateConfig();
+            $this->TemplateConfig->deserialize($param["TemplateConfig"]);
         }
     }
 }

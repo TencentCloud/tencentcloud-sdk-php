@@ -18,28 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 失败原因
+ * 安全模板配置
  *
- * @method string getReason() 获取失败原因。
- * @method void setReason(string $Reason) 设置失败原因。
- * @method array getTargets() 获取处理失败的资源列表。
- * @method void setTargets(array $Targets) 设置处理失败的资源列表。
+ * @method string getTemplateId() 获取模板ID。
+ * @method void setTemplateId(string $TemplateId) 设置模板ID。
+ * @method string getTemplateName() 获取模板名称。
+ * @method void setTemplateName(string $TemplateName) 设置模板名称。
  */
-class FailReason extends AbstractModel
+class TemplateConfig extends AbstractModel
 {
     /**
-     * @var string 失败原因。
+     * @var string 模板ID。
      */
-    public $Reason;
+    public $TemplateId;
 
     /**
-     * @var array 处理失败的资源列表。
+     * @var string 模板名称。
      */
-    public $Targets;
+    public $TemplateName;
 
     /**
-     * @param string $Reason 失败原因。
-     * @param array $Targets 处理失败的资源列表。
+     * @param string $TemplateId 模板ID。
+     * @param string $TemplateName 模板名称。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class FailReason extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
-            $this->Reason = $param["Reason"];
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
 
-        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
-            $this->Targets = $param["Targets"];
+        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
+            $this->TemplateName = $param["TemplateName"];
         }
     }
 }

@@ -26,16 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDaily(integer $Daily) 设置每日提交配额上限。
  * @method integer getDailyAvailable() 获取每日剩余的可提交配额。
  * @method void setDailyAvailable(integer $DailyAvailable) 设置每日剩余的可提交配额。
- * @method string getType() 获取配额类型，取值有：
-<li> purge_prefix：前缀；</li>
-<li> purge_url：URL；</li>
-<li> purge_host：Hostname；</li>
-<li> purge_all：全部缓存内容。</li>
- * @method void setType(string $Type) 设置配额类型，取值有：
-<li> purge_prefix：前缀；</li>
-<li> purge_url：URL；</li>
-<li> purge_host：Hostname；</li>
-<li> purge_all：全部缓存内容。</li>
+ * @method string getType() 获取刷新预热缓存类型，取值有：
+<li> purge_prefix：按前缀刷新；</li>
+<li> purge_url：按URL刷新；</li>
+<li> purge_host：按Hostname刷新；</li>
+<li> purge_all：刷新全部缓存内容；</li>
+<li> purge_cache_tag：按CacheTag刷新；</li><li> prefetch_url：按URL预热。</li>
+ * @method void setType(string $Type) 设置刷新预热缓存类型，取值有：
+<li> purge_prefix：按前缀刷新；</li>
+<li> purge_url：按URL刷新；</li>
+<li> purge_host：按Hostname刷新；</li>
+<li> purge_all：刷新全部缓存内容；</li>
+<li> purge_cache_tag：按CacheTag刷新；</li><li> prefetch_url：按URL预热。</li>
  */
 class Quota extends AbstractModel
 {
@@ -55,11 +57,12 @@ class Quota extends AbstractModel
     public $DailyAvailable;
 
     /**
-     * @var string 配额类型，取值有：
-<li> purge_prefix：前缀；</li>
-<li> purge_url：URL；</li>
-<li> purge_host：Hostname；</li>
-<li> purge_all：全部缓存内容。</li>
+     * @var string 刷新预热缓存类型，取值有：
+<li> purge_prefix：按前缀刷新；</li>
+<li> purge_url：按URL刷新；</li>
+<li> purge_host：按Hostname刷新；</li>
+<li> purge_all：刷新全部缓存内容；</li>
+<li> purge_cache_tag：按CacheTag刷新；</li><li> prefetch_url：按URL预热。</li>
      */
     public $Type;
 
@@ -67,11 +70,12 @@ class Quota extends AbstractModel
      * @param integer $Batch 单次批量提交配额上限。
      * @param integer $Daily 每日提交配额上限。
      * @param integer $DailyAvailable 每日剩余的可提交配额。
-     * @param string $Type 配额类型，取值有：
-<li> purge_prefix：前缀；</li>
-<li> purge_url：URL；</li>
-<li> purge_host：Hostname；</li>
-<li> purge_all：全部缓存内容。</li>
+     * @param string $Type 刷新预热缓存类型，取值有：
+<li> purge_prefix：按前缀刷新；</li>
+<li> purge_url：按URL刷新；</li>
+<li> purge_host：按Hostname刷新；</li>
+<li> purge_all：刷新全部缓存内容；</li>
+<li> purge_cache_tag：按CacheTag刷新；</li><li> prefetch_url：按URL预热。</li>
      */
     function __construct()
     {

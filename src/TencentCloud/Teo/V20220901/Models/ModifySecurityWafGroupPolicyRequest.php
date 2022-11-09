@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySecurityWafGroupPolicy请求参数结构体
  *
- * @method string getZoneId() 获取站点Id。
- * @method void setZoneId(string $ZoneId) 设置站点Id。
- * @method string getEntity() 获取子域名。
- * @method void setEntity(string $Entity) 设置子域名。
+ * @method string getZoneId() 获取站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method void setZoneId(string $ZoneId) 设置站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method string getEntity() 获取子域名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method void setEntity(string $Entity) 设置子域名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
  * @method string getSwitch() 获取总开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>不填默认为上次的配置。
@@ -54,16 +54,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiRule(AiRule $AiRule) 设置AI引擎模式。不填默认为上次的配置。
  * @method array getWafGroups() 获取托管规则等级组。不填默认为上次的配置。
  * @method void setWafGroups(array $WafGroups) 设置托管规则等级组。不填默认为上次的配置。
+ * @method string getTemplateId() 获取模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+ * @method void setTemplateId(string $TemplateId) 设置模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
  */
 class ModifySecurityWafGroupPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 站点Id。
+     * @var string 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public $ZoneId;
 
     /**
-     * @var string 子域名。
+     * @var string 子域名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public $Entity;
 
@@ -107,8 +109,13 @@ class ModifySecurityWafGroupPolicyRequest extends AbstractModel
     public $WafGroups;
 
     /**
-     * @param string $ZoneId 站点Id。
-     * @param string $Entity 子域名。
+     * @var string 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+     */
+    public $TemplateId;
+
+    /**
+     * @param string $ZoneId 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param string $Entity 子域名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      * @param string $Switch 总开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>不填默认为上次的配置。
@@ -124,6 +131,7 @@ class ModifySecurityWafGroupPolicyRequest extends AbstractModel
      * @param WafRule $WafRules 托管规则。不填默认为上次的配置。
      * @param AiRule $AiRule AI引擎模式。不填默认为上次的配置。
      * @param array $WafGroups 托管规则等级组。不填默认为上次的配置。
+     * @param string $TemplateId 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
      */
     function __construct()
     {
@@ -175,6 +183,10 @@ class ModifySecurityWafGroupPolicyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->WafGroups, $obj);
             }
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

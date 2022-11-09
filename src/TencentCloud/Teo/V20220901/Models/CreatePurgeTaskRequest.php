@@ -26,13 +26,15 @@ use TencentCloud\Common\AbstractModel;
 <li>purge_url：URL；</li>
 <li>purge_prefix：前缀；</li>
 <li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存。</li>
+<li>purge_all：全部缓存；</li>
+<li>purge_cache_tag：cache-tag刷新。</li>
  * @method void setType(string $Type) 设置清除缓存类型，取值有：
 <li>purge_url：URL；</li>
 <li>purge_prefix：前缀；</li>
 <li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存。</li>
- * @method array getTargets() 获取要刷新的资源列表，每个元素格式依据Type而定：
+<li>purge_all：全部缓存；</li>
+<li>purge_cache_tag：cache-tag刷新。</li>
+ * @method array getTargets() 获取要清除缓存的资源列表，每个元素格式依据Type而定：
 1) Type = purge_host 时：
 形如：www.example.com 或 foo.bar.example.com。
 2) Type = purge_prefix 时：
@@ -41,7 +43,9 @@ use TencentCloud\Common\AbstractModel;
 形如：https://www.example.com/example.jpg。
 4）Type = purge_all 时：
 Targets可为空，不需要填写。
- * @method void setTargets(array $Targets) 设置要刷新的资源列表，每个元素格式依据Type而定：
+5）Type = purge_cache_tag 时：
+形如：tag1。
+ * @method void setTargets(array $Targets) 设置要清除缓存的资源列表，每个元素格式依据Type而定：
 1) Type = purge_host 时：
 形如：www.example.com 或 foo.bar.example.com。
 2) Type = purge_prefix 时：
@@ -50,6 +54,8 @@ Targets可为空，不需要填写。
 形如：https://www.example.com/example.jpg。
 4）Type = purge_all 时：
 Targets可为空，不需要填写。
+5）Type = purge_cache_tag 时：
+形如：tag1。
  * @method boolean getEncodeUrl() 获取若有编码转换，仅清除编码转换后匹配的资源。
 若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
  * @method void setEncodeUrl(boolean $EncodeUrl) 设置若有编码转换，仅清除编码转换后匹配的资源。
@@ -67,12 +73,13 @@ class CreatePurgeTaskRequest extends AbstractModel
 <li>purge_url：URL；</li>
 <li>purge_prefix：前缀；</li>
 <li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存。</li>
+<li>purge_all：全部缓存；</li>
+<li>purge_cache_tag：cache-tag刷新。</li>
      */
     public $Type;
 
     /**
-     * @var array 要刷新的资源列表，每个元素格式依据Type而定：
+     * @var array 要清除缓存的资源列表，每个元素格式依据Type而定：
 1) Type = purge_host 时：
 形如：www.example.com 或 foo.bar.example.com。
 2) Type = purge_prefix 时：
@@ -81,6 +88,8 @@ class CreatePurgeTaskRequest extends AbstractModel
 形如：https://www.example.com/example.jpg。
 4）Type = purge_all 时：
 Targets可为空，不需要填写。
+5）Type = purge_cache_tag 时：
+形如：tag1。
      */
     public $Targets;
 
@@ -96,8 +105,9 @@ Targets可为空，不需要填写。
 <li>purge_url：URL；</li>
 <li>purge_prefix：前缀；</li>
 <li>purge_host：Hostname；</li>
-<li>purge_all：全部缓存。</li>
-     * @param array $Targets 要刷新的资源列表，每个元素格式依据Type而定：
+<li>purge_all：全部缓存；</li>
+<li>purge_cache_tag：cache-tag刷新。</li>
+     * @param array $Targets 要清除缓存的资源列表，每个元素格式依据Type而定：
 1) Type = purge_host 时：
 形如：www.example.com 或 foo.bar.example.com。
 2) Type = purge_prefix 时：
@@ -106,6 +116,8 @@ Targets可为空，不需要填写。
 形如：https://www.example.com/example.jpg。
 4）Type = purge_all 时：
 Targets可为空，不需要填写。
+5）Type = purge_cache_tag 时：
+形如：tag1。
      * @param boolean $EncodeUrl 若有编码转换，仅清除编码转换后匹配的资源。
 若内容含有非 ASCII 字符集的字符，请开启此开关进行编码转换（编码规则遵循 RFC3986）。
      */

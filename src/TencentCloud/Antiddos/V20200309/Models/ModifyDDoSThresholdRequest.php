@@ -28,6 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) 设置资源ID
  * @method string getBusiness() 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
  * @method void setBusiness(string $Business) 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+ * @method integer getOtherThresholdFlag() 获取配置其他阈值标志位，1表示配置其他阈值
+ * @method void setOtherThresholdFlag(integer $OtherThresholdFlag) 设置配置其他阈值标志位，1表示配置其他阈值
+ * @method integer getSynFloodThreshold() 获取SYN FLOOD流量阈值
+ * @method void setSynFloodThreshold(integer $SynFloodThreshold) 设置SYN FLOOD流量阈值
+ * @method integer getSynFloodPktThreshold() 获取SYN FLOOD包量阈值
+ * @method void setSynFloodPktThreshold(integer $SynFloodPktThreshold) 设置SYN FLOOD包量阈值
+ * @method integer getUdpFloodThreshold() 获取UDP FLOOD流量阈值
+ * @method void setUdpFloodThreshold(integer $UdpFloodThreshold) 设置UDP FLOOD流量阈值
+ * @method integer getUdpFloodPktThreshold() 获取UDP FLOOD包量阈值
+ * @method void setUdpFloodPktThreshold(integer $UdpFloodPktThreshold) 设置UDP FLOOD包量阈值
  */
 class ModifyDDoSThresholdRequest extends AbstractModel
 {
@@ -48,10 +58,40 @@ class ModifyDDoSThresholdRequest extends AbstractModel
     public $Business;
 
     /**
+     * @var integer 配置其他阈值标志位，1表示配置其他阈值
+     */
+    public $OtherThresholdFlag;
+
+    /**
+     * @var integer SYN FLOOD流量阈值
+     */
+    public $SynFloodThreshold;
+
+    /**
+     * @var integer SYN FLOOD包量阈值
+     */
+    public $SynFloodPktThreshold;
+
+    /**
+     * @var integer UDP FLOOD流量阈值
+     */
+    public $UdpFloodThreshold;
+
+    /**
+     * @var integer UDP FLOOD包量阈值
+     */
+    public $UdpFloodPktThreshold;
+
+    /**
      * @param integer $Threshold DDoS清洗阈值，取值[0, 60, 80, 100, 150, 200, 250, 300, 400, 500, 700, 1000];
 当设置值为0时，表示采用默认值；
      * @param string $Id 资源ID
      * @param string $Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * @param integer $OtherThresholdFlag 配置其他阈值标志位，1表示配置其他阈值
+     * @param integer $SynFloodThreshold SYN FLOOD流量阈值
+     * @param integer $SynFloodPktThreshold SYN FLOOD包量阈值
+     * @param integer $UdpFloodThreshold UDP FLOOD流量阈值
+     * @param integer $UdpFloodPktThreshold UDP FLOOD包量阈值
      */
     function __construct()
     {
@@ -76,6 +116,26 @@ class ModifyDDoSThresholdRequest extends AbstractModel
 
         if (array_key_exists("Business",$param) and $param["Business"] !== null) {
             $this->Business = $param["Business"];
+        }
+
+        if (array_key_exists("OtherThresholdFlag",$param) and $param["OtherThresholdFlag"] !== null) {
+            $this->OtherThresholdFlag = $param["OtherThresholdFlag"];
+        }
+
+        if (array_key_exists("SynFloodThreshold",$param) and $param["SynFloodThreshold"] !== null) {
+            $this->SynFloodThreshold = $param["SynFloodThreshold"];
+        }
+
+        if (array_key_exists("SynFloodPktThreshold",$param) and $param["SynFloodPktThreshold"] !== null) {
+            $this->SynFloodPktThreshold = $param["SynFloodPktThreshold"];
+        }
+
+        if (array_key_exists("UdpFloodThreshold",$param) and $param["UdpFloodThreshold"] !== null) {
+            $this->UdpFloodThreshold = $param["UdpFloodThreshold"];
+        }
+
+        if (array_key_exists("UdpFloodPktThreshold",$param) and $param["UdpFloodPktThreshold"] !== null) {
+            $this->UdpFloodPktThreshold = $param["UdpFloodPktThreshold"];
         }
     }
 }

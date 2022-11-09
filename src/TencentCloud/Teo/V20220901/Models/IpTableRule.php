@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleID(integer $RuleID) 设置规则id。仅出参使用。
  * @method string getUpdateTime() 获取更新时间。仅出参使用。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。仅出参使用。
+ * @method string getStatus() 获取规则启用状态，当返回为null时，为启用。取值有：
+<li> on：启用；</li>
+<li> off：未启用。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置规则启用状态，当返回为null时，为启用。取值有：
+<li> on：启用；</li>
+<li> off：未启用。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpTableRule extends AbstractModel
 {
@@ -74,6 +82,14 @@ class IpTableRule extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 规则启用状态，当返回为null时，为启用。取值有：
+<li> on：启用；</li>
+<li> off：未启用。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @param string $Action 动作，取值有：
 <li> drop：拦截；</li>
 <li> trans：放行；</li>
@@ -84,6 +100,10 @@ class IpTableRule extends AbstractModel
      * @param string $MatchContent 匹配内容。
      * @param integer $RuleID 规则id。仅出参使用。
      * @param string $UpdateTime 更新时间。仅出参使用。
+     * @param string $Status 规则启用状态，当返回为null时，为启用。取值有：
+<li> on：启用；</li>
+<li> off：未启用。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -116,6 +136,10 @@ class IpTableRule extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

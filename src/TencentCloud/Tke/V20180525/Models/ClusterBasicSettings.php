@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述集群的基本配置信息
  *
- * @method string getClusterOs() 获取集群操作系统，支持设置公共镜像(字段传相应镜像ID)和自定义镜像(字段传相应镜像Name)，详情参考：https://cloud.tencent.com/document/product/457/68289
- * @method void setClusterOs(string $ClusterOs) 设置集群操作系统，支持设置公共镜像(字段传相应镜像ID)和自定义镜像(字段传相应镜像Name)，详情参考：https://cloud.tencent.com/document/product/457/68289
+ * @method string getClusterOs() 获取集群操作系统，支持设置公共镜像(字段传相应镜像Name)和自定义镜像(字段传相应镜像ID)，详情参考：https://cloud.tencent.com/document/product/457/68289
+ * @method void setClusterOs(string $ClusterOs) 设置集群操作系统，支持设置公共镜像(字段传相应镜像Name)和自定义镜像(字段传相应镜像ID)，详情参考：https://cloud.tencent.com/document/product/457/68289
  * @method string getClusterVersion() 获取集群版本,默认值为1.10.5
  * @method void setClusterVersion(string $ClusterVersion) 设置集群版本,默认值为1.10.5
  * @method string getClusterName() 获取集群名称
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class ClusterBasicSettings extends AbstractModel
 {
     /**
-     * @var string 集群操作系统，支持设置公共镜像(字段传相应镜像ID)和自定义镜像(字段传相应镜像Name)，详情参考：https://cloud.tencent.com/document/product/457/68289
+     * @var string 集群操作系统，支持设置公共镜像(字段传相应镜像Name)和自定义镜像(字段传相应镜像ID)，详情参考：https://cloud.tencent.com/document/product/457/68289
      */
     public $ClusterOs;
 
@@ -108,7 +108,7 @@ class ClusterBasicSettings extends AbstractModel
     public $AutoUpgradeClusterLevel;
 
     /**
-     * @param string $ClusterOs 集群操作系统，支持设置公共镜像(字段传相应镜像ID)和自定义镜像(字段传相应镜像Name)，详情参考：https://cloud.tencent.com/document/product/457/68289
+     * @param string $ClusterOs 集群操作系统，支持设置公共镜像(字段传相应镜像Name)和自定义镜像(字段传相应镜像ID)，详情参考：https://cloud.tencent.com/document/product/457/68289
      * @param string $ClusterVersion 集群版本,默认值为1.10.5
      * @param string $ClusterName 集群名称
      * @param string $ClusterDescription 集群描述

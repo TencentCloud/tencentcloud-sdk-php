@@ -114,6 +114,8 @@ use TencentCloud\Iai\V20200303\Models as Models;
  * @method Models\DetectLiveFaceAccurateResponse DetectLiveFaceAccurate(Models\DetectLiveFaceAccurateRequest $req) 人脸静态活体检测（高精度版）可用于对用户上传的静态图片进行防翻拍活体检测，以判断是否是翻拍图片。
 
 相比现有静态活体检测服务，高精度版在维持高真人通过率的前提下，增强了对高清屏幕、裁剪纸片、3D面具等攻击的防御能力，攻击拦截率约为业内同类型产品形态4-5倍。同时支持多场景人脸核验，满足移动端、PC端各类型场景的图片活体检验需求，适用于各个行业不同的活体检验应用。
+
+人脸静态活体检测（高精度版）接口于2022年8月1日 00:00起正式开始计费，采取后付费按量计费模式，详见[计费概述](https://cloud.tencent.com/document/product/867/17640)。
  * @method Models\GetGroupInfoResponse GetGroupInfo(Models\GetGroupInfoRequest $req) 获取人员库信息。
  * @method Models\GetGroupListResponse GetGroupList(Models\GetGroupListRequest $req) 获取人员库列表。
  * @method Models\GetPersonBaseInfoResponse GetPersonBaseInfo(Models\GetPersonBaseInfoRequest $req) 获取指定人员的信息，包括姓名、性别、人脸等。

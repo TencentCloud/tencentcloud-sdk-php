@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ApplyLivenessToken返回参数结构体
+ * DescribeUserQuota返回参数结构体
  *
- * @method string getSdkToken() 获取标识一次SDK核验流程的令牌，有效时间为10分钟。流程结束后可用该令牌获取核验结果信息。
- * @method void setSdkToken(string $SdkToken) 设置标识一次SDK核验流程的令牌，有效时间为10分钟。流程结束后可用该令牌获取核验结果信息。
+ * @method integer getTotalCount() 获取UserQuota条目总数
+ * @method void setTotalCount(integer $TotalCount) 设置UserQuota条目总数
+ * @method array getUserQuotaInfo() 获取UserQuota条目
+ * @method void setUserQuotaInfo(array $UserQuotaInfo) 设置UserQuota条目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ApplyLivenessTokenResponse extends AbstractModel
+class DescribeUserQuotaResponse extends AbstractModel
 {
     /**
-     * @var string 标识一次SDK核验流程的令牌，有效时间为10分钟。流程结束后可用该令牌获取核验结果信息。
+     * @var integer UserQuota条目总数
      */
-    public $SdkToken;
+    public $TotalCount;
+
+    /**
+     * @var array UserQuota条目
+     */
+    public $UserQuotaInfo;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class ApplyLivenessTokenResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SdkToken 标识一次SDK核验流程的令牌，有效时间为10分钟。流程结束后可用该令牌获取核验结果信息。
+     * @param integer $TotalCount UserQuota条目总数
+     * @param array $UserQuotaInfo UserQuota条目
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class ApplyLivenessTokenResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SdkToken",$param) and $param["SdkToken"] !== null) {
-            $this->SdkToken = $param["SdkToken"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("UserQuotaInfo",$param) and $param["UserQuotaInfo"] !== null) {
+            $this->UserQuotaInfo = [];
+            foreach ($param["UserQuotaInfo"] as $key => $value){
+                $obj = new UserQuota();
+                $obj->deserialize($value);
+                array_push($this->UserQuotaInfo, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

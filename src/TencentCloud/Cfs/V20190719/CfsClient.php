@@ -35,6 +35,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DeleteCfsRuleResponse DeleteCfsRule(Models\DeleteCfsRuleRequest $req) 本接口（DeleteCfsRule）用于删除权限组规则。
  * @method Models\DeleteCfsSnapshotResponse DeleteCfsSnapshot(Models\DeleteCfsSnapshotRequest $req) 删除文件系统快照
  * @method Models\DeleteMountTargetResponse DeleteMountTarget(Models\DeleteMountTargetRequest $req) 本接口（DeleteMountTarget）用于删除挂载点
+ * @method Models\DeleteUserQuotaResponse DeleteUserQuota(Models\DeleteUserQuotaRequest $req) 指定条件删除文件系统配额
  * @method Models\DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(Models\DescribeAutoSnapshotPoliciesRequest $req) 查询文件系统快照定期策略列表信息
  * @method Models\DescribeAvailableZoneInfoResponse DescribeAvailableZoneInfo(Models\DescribeAvailableZoneInfoRequest $req) 本接口（DescribeAvailableZoneInfo）用于查询区域的可用情况。
  * @method Models\DescribeCfsFileSystemClientsResponse DescribeCfsFileSystemClients(Models\DescribeCfsFileSystemClientsRequest $req) 查询挂载该文件系统的客户端。此功能需要客户端安装CFS监控插件。
@@ -46,6 +47,8 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DescribeCfsSnapshotsResponse DescribeCfsSnapshots(Models\DescribeCfsSnapshotsRequest $req) 查询文件系统快照列表
  * @method Models\DescribeMountTargetsResponse DescribeMountTargets(Models\DescribeMountTargetsRequest $req) 本接口（DescribeMountTargets）用于查询文件系统挂载点信息
  * @method Models\DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(Models\DescribeSnapshotOperationLogsRequest $req) 查询快照操作日志
+ * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 查询文件系统配额
+ * @method Models\SetUserQuotaResponse SetUserQuota(Models\SetUserQuotaRequest $req) 设置文件系统配额，提供UID/GID的配额设置的接口
  * @method Models\SignUpCfsServiceResponse SignUpCfsService(Models\SignUpCfsServiceRequest $req) 本接口（SignUpCfsService）用于开通CFS服务。
  * @method Models\UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(Models\UnbindAutoSnapshotPolicyRequest $req) 解除文件系统绑定的快照策略
  * @method Models\UpdateAutoSnapshotPolicyResponse UpdateAutoSnapshotPolicy(Models\UpdateAutoSnapshotPolicyRequest $req) 更新定期自动快照策略

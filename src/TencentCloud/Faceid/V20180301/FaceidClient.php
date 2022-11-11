@@ -23,9 +23,6 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Faceid\V20180301\Models as Models;
 
 /**
- * @method Models\ApplyLivenessTokenResponse ApplyLivenessToken(Models\ApplyLivenessTokenRequest $req) 每次调用活体服务前，需要先调用本接口获取Token，需要保存此Token用来发起核验流程，并且在核验完成后获取结果信息。
- * @method Models\ApplySdkVerificationTokenResponse ApplySdkVerificationToken(Models\ApplySdkVerificationTokenRequest $req) 每次调用Web核验服务前，需要先调用本接口获取Token，需要保存此Token用来发起核验流程，并且在核验完成后获取结果信息。
- * @method Models\ApplyWebVerificationTokenResponse ApplyWebVerificationToken(Models\ApplyWebVerificationTokenRequest $req) 每次调用Web核验服务前，需要先调用本接口获取BizToken，需要保存此BizToken用来发起核验流程，并且在核验完成后获取结果信息。
  * @method Models\BankCard2EVerificationResponse BankCard2EVerification(Models\BankCard2EVerificationRequest $req) 本接口用于校验姓名和银行卡号的真实性和一致性。
  * @method Models\BankCard4EVerificationResponse BankCard4EVerification(Models\BankCard4EVerificationRequest $req) 本接口用于输入银行卡号、姓名、开户证件号、开户手机号，校验信息的真实性和一致性。
  * @method Models\BankCardVerificationResponse BankCardVerification(Models\BankCardVerificationRequest $req) 本接口用于银行卡号、姓名、开户证件号信息的真实性和一致性。
@@ -35,14 +32,8 @@ use TencentCloud\Faceid\V20180301\Models as Models;
  * @method Models\CheckIdNameDateResponse CheckIdNameDate(Models\CheckIdNameDateRequest $req) 本接口用于校验姓名、身份证号、身份证有效期的真实性和一致性。
  * @method Models\CheckPhoneAndNameResponse CheckPhoneAndName(Models\CheckPhoneAndNameRequest $req) 手机号二要素核验接口用于校验手机号和姓名的真实性和一致性，支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
 
- * @method Models\CreateUploadUrlResponse CreateUploadUrl(Models\CreateUploadUrlRequest $req) 生成一个临时的UploadUrl用于上传资源文件，客户需要使用HTTP PUT方法上传，上传完成后将ResourceUrl传给TargetAction对应接口完成资源传递（具体字段由使用场景确定）。
-数据存储于Region参数对应地域的腾讯云COS Bucket，存储有效期2小时。
  * @method Models\DetectAuthResponse DetectAuth(Models\DetectAuthRequest $req) 每次调用人脸核身SaaS化服务前，需先调用本接口获取BizToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
- * @method Models\DetectReflectLivenessAndCompareResponse DetectReflectLivenessAndCompare(Models\DetectReflectLivenessAndCompareRequest $req) 使用活体比对（光线）SDK生成的数据包检测活体，并和传入的图片进行比对。
-图片和SDK生成的数据内容必须存储在腾讯云COS，COS Bucket所在的Region需要和本接口请求的Region保持一致，推荐使用生成上传链接接口来完成资源传递。
  * @method Models\EncryptedPhoneVerificationResponse EncryptedPhoneVerification(Models\EncryptedPhoneVerificationRequest $req) 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持明文、MD5和SHA256加密传输。
- * @method Models\GenerateReflectSequenceResponse GenerateReflectSequence(Models\GenerateReflectSequenceRequest $req) 根据活体比对（光线）SDK采集的机器信息生成适合的光线序列，将光线序列传入SDK后开启核身。
-SDK生成的数据内容必须存储在腾讯云COS，COS Bucket所在的Region需要和本接口请求的Region保持一致，推荐使用生成上传链接接口来完成资源传递。
  * @method Models\GetActionSequenceResponse GetActionSequence(Models\GetActionSequenceRequest $req) 使用动作活体检测模式前，需调用本接口获取动作顺序。
  * @method Models\GetDetectInfoResponse GetDetectInfo(Models\GetDetectInfoRequest $req) 完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
  * @method Models\GetDetectInfoEnhancedResponse GetDetectInfoEnhanced(Models\GetDetectInfoEnhancedRequest $req) 完成验证后，用BizToken调用本接口获取结果信息，BizToken生成后三天内（3\*24\*3,600秒）可多次拉取。
@@ -51,13 +42,10 @@ SDK生成的数据内容必须存储在腾讯云COS，COS Bucket所在的Region�
  * @method Models\GetFaceIdResultResponse GetFaceIdResult(Models\GetFaceIdResultRequest $req) 完成验证后，用FaceIdToken调用本接口获取结果信息，FaceIdToken生成后三天内（3\*24\*3,600秒）可多次拉取。
  * @method Models\GetFaceIdTokenResponse GetFaceIdToken(Models\GetFaceIdTokenRequest $req) 每次调用人脸核身SDK服务前，需先调用本接口获取SDKToken，用来串联核身流程，在验证完成后，用于获取验证结果信息，该token仅能核身一次。
  * @method Models\GetLiveCodeResponse GetLiveCode(Models\GetLiveCodeRequest $req) 使用数字活体检测模式前，需调用本接口获取数字验证码。
- * @method Models\GetLivenessResultResponse GetLivenessResult(Models\GetLivenessResultRequest $req) 完成活体检测流程后，用核验令牌（SdkToken）调用本接口查询对应核验结果信息。Token申请后2小时内有效，可多次调用。
  * @method Models\GetRealNameAuthResultResponse GetRealNameAuthResult(Models\GetRealNameAuthResultRequest $req) 获取微信实名认证结果
  * @method Models\GetRealNameAuthTokenResponse GetRealNameAuthToken(Models\GetRealNameAuthTokenRequest $req) 该接口仅限微信公众号中使用，传入姓名和身份证号获取回调URL，在微信公众号中打开验证姓名和身份证号与微信实名的信息是否一致。
 
- * @method Models\GetSdkVerificationResultResponse GetSdkVerificationResult(Models\GetSdkVerificationResultRequest $req) 完成Sdk核验流程后，用核验令牌（Token）调用本接口查询对应核验结果信息。Token申请后三天内有效，可多次调用。
  * @method Models\GetWeChatBillDetailsResponse GetWeChatBillDetails(Models\GetWeChatBillDetailsRequest $req) 查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
- * @method Models\GetWebVerificationResultResponse GetWebVerificationResult(Models\GetWebVerificationResultRequest $req) 完成Web核验流程后，用核验令牌（BizToken）调用本接口查询对应核验结果信息。BizToken申请后三天内（3\*24\*3,600秒）有效，可多次调用。
  * @method Models\IdCardOCRVerificationResponse IdCardOCRVerification(Models\IdCardOCRVerificationRequest $req) 本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
  * @method Models\IdCardVerificationResponse IdCardVerification(Models\IdCardVerificationRequest $req) 传入姓名和身份证号，校验两者的真实性和一致性。
  * @method Models\ImageRecognitionResponse ImageRecognition(Models\ImageRecognitionRequest $req) 传入照片和身份信息，判断该照片与权威库的证件照是否属于同一个人。
@@ -72,7 +60,6 @@ SDK生成的数据内容必须存储在腾讯云COS，COS Bucket所在的Region�
  * @method Models\PhoneVerificationCMCCResponse PhoneVerificationCMCC(Models\PhoneVerificationCMCCRequest $req) 本接口用于校验中国移动手机号、姓名和身份证号的真实性和一致性。中国移动支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
  * @method Models\PhoneVerificationCTCCResponse PhoneVerificationCTCC(Models\PhoneVerificationCTCCRequest $req) 本接口用于校验中国电信手机号、姓名和身份证号的真实性和一致性。中国电信支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
  * @method Models\PhoneVerificationCUCCResponse PhoneVerificationCUCC(Models\PhoneVerificationCUCCRequest $req) 本接口用于校验中国联通手机号、姓名和身份证号的真实性和一致性。中国联通支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
- * @method Models\VideoLivenessCompareResponse VideoLivenessCompare(Models\VideoLivenessCompareRequest $req) 传入视频和照片地址，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与上传照片是否属于同一个人。
  */
 
 class FaceidClient extends AbstractClient

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Cfs\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateUploadUrl请求参数结构体
+ * SetUserQuota返回参数结构体
  *
- * @method string getTargetAction() 获取用于的接口
- * @method void setTargetAction(string $TargetAction) 设置用于的接口
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateUploadUrlRequest extends AbstractModel
+class SetUserQuotaResponse extends AbstractModel
 {
     /**
-     * @var string 用于的接口
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $TargetAction;
+    public $RequestId;
 
     /**
-     * @param string $TargetAction 用于的接口
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class CreateUploadUrlRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetAction",$param) and $param["TargetAction"] !== null) {
-            $this->TargetAction = $param["TargetAction"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

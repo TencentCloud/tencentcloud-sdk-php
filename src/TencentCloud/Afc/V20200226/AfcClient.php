@@ -27,6 +27,7 @@ use TencentCloud\Afc\V20200226\Models as Models;
  * @method Models\QueryAntiFraudVipResponse QueryAntiFraudVip(Models\QueryAntiFraudVipRequest $req) 天御反欺诈服务，主要应用于银行、证券、保险、P2P等金融行业客户，通过腾讯的大数据风控能力，
 可以准确识别恶意用户信息，解决客户在支付、活动、理财，风控等业务环节遇到的欺诈威胁，降低企业
 的损失。
+ * @method Models\TransportGeneralInterfaceResponse TransportGeneralInterface(Models\TransportGeneralInterfaceRequest $req) 天御信鸽取数平台接口
  */
 
 class AfcClient extends AbstractClient

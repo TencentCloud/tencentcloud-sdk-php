@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportNamespaceEndpoint(boolean $SupportNamespaceEndpoint) 设置是否支持命名空间接入点
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVpcs() 获取VPC信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVpcs(array $Vpcs) 设置VPC信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsVip() 获取是否为专享实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsVip(boolean $IsVip) 设置是否为专享实例
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -86,6 +94,18 @@ class RocketMQClusterInfo extends AbstractModel
     public $SupportNamespaceEndpoint;
 
     /**
+     * @var array VPC信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Vpcs;
+
+    /**
+     * @var boolean 是否为专享实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsVip;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -95,6 +115,10 @@ class RocketMQClusterInfo extends AbstractModel
      * @param string $PublicEndPoint 公网接入地址
      * @param string $VpcEndPoint VPC接入地址
      * @param boolean $SupportNamespaceEndpoint 是否支持命名空间接入点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Vpcs VPC信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsVip 是否为专享实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -140,6 +164,19 @@ class RocketMQClusterInfo extends AbstractModel
 
         if (array_key_exists("SupportNamespaceEndpoint",$param) and $param["SupportNamespaceEndpoint"] !== null) {
             $this->SupportNamespaceEndpoint = $param["SupportNamespaceEndpoint"];
+        }
+
+        if (array_key_exists("Vpcs",$param) and $param["Vpcs"] !== null) {
+            $this->Vpcs = [];
+            foreach ($param["Vpcs"] as $key => $value){
+                $obj = new VpcConfig();
+                $obj->deserialize($value);
+                array_push($this->Vpcs, $obj);
+            }
+        }
+
+        if (array_key_exists("IsVip",$param) and $param["IsVip"] !== null) {
+            $this->IsVip = $param["IsVip"];
         }
     }
 }

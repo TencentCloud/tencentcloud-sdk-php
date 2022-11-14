@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TRTC数据大盘/实时监控 API接口数据出参
  *
- * @method integer getStatementID() 获取StatementID值
+ * @method integer getStatementID() 获取StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatementID(integer $StatementID) 设置StatementID值
+ * @method void setStatementID(integer $StatementID) 设置StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSeries() 获取Series数据
+ * @method array getSeries() 获取查询结果数据，以Columns-Values形式返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSeries(array $Series) 设置Series数据
+ * @method void setSeries(array $Series) 设置查询结果数据，以Columns-Values形式返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotal() 获取Total值
+ * @method integer getTotal() 获取Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置Total值
+ * @method void setTotal(integer $Total) 设置Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TRTCDataResp extends AbstractModel
 {
     /**
-     * @var integer StatementID值
+     * @var integer StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatementID;
 
     /**
-     * @var array Series数据
+     * @var array 查询结果数据，以Columns-Values形式返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Series;
 
     /**
-     * @var integer Total值
+     * @var integer Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
-     * @param integer $StatementID StatementID值
+     * @param integer $StatementID StatementID值，监控仪表盘下固定为0。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Series Series数据
+     * @param array $Series 查询结果数据，以Columns-Values形式返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Total Total值
+     * @param integer $Total Total值，监控仪表盘功能下固定为1。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

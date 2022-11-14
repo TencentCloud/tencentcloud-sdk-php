@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 坐标。
  * @method void setItemCoord(ItemCoord $ItemCoord) 设置文本行在旋转纠正之后的图像中的像素
 坐标。
+ * @method integer getRow() 获取字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。
+ * @method void setRow(integer $Row) 设置字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。
  */
 class StructuralItem extends AbstractModel
 {
@@ -55,11 +57,17 @@ class StructuralItem extends AbstractModel
     public $ItemCoord;
 
     /**
+     * @var integer 字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。
+     */
+    public $Row;
+
+    /**
      * @param string $Name 识别出的字段名称(关键字)。
      * @param string $Value 识别出的字段名称对应的值。
      * @param integer $Confidence 置信度 0 ~100。
      * @param ItemCoord $ItemCoord 文本行在旋转纠正之后的图像中的像素
 坐标。
+     * @param integer $Row 字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class StructuralItem extends AbstractModel
         if (array_key_exists("ItemCoord",$param) and $param["ItemCoord"] !== null) {
             $this->ItemCoord = new ItemCoord();
             $this->ItemCoord->deserialize($param["ItemCoord"]);
+        }
+
+        if (array_key_exists("Row",$param) and $param["Row"] !== null) {
+            $this->Row = $param["Row"];
         }
     }
 }

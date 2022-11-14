@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreator(string $Creator) 设置模板的创建者信息
  * @method integer getCreatedOn() 获取模板创建的时间戳（精确到秒）
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳（精确到秒）
+ * @method string getPreviewUrl() 获取模板的预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreviewUrl(string $PreviewUrl) 设置模板的预览链接
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
 {
@@ -94,6 +98,12 @@ class TemplateInfo extends AbstractModel
     public $CreatedOn;
 
     /**
+     * @var string 模板的预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreviewUrl;
+
+    /**
      * @param string $TemplateId 模板ID
      * @param string $TemplateName 模板名字
      * @param string $Description 模板描述信息
@@ -104,6 +114,8 @@ class TemplateInfo extends AbstractModel
      * @param boolean $IsPromoter 是否是发起人 ,已弃用
      * @param string $Creator 模板的创建者信息
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
+     * @param string $PreviewUrl 模板的预览链接
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -171,6 +183,10 @@ class TemplateInfo extends AbstractModel
 
         if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
             $this->CreatedOn = $param["CreatedOn"];
+        }
+
+        if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
+            $this->PreviewUrl = $param["PreviewUrl"];
         }
     }
 }

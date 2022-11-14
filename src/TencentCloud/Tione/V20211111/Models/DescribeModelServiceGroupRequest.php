@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeModelServiceGroup请求参数结构体
  *
- * @method string getServiceGroupId() 获取无
- * @method void setServiceGroupId(string $ServiceGroupId) 设置无
+ * @method string getServiceGroupId() 获取服务组ID
+ * @method void setServiceGroupId(string $ServiceGroupId) 设置服务组ID
  */
 class DescribeModelServiceGroupRequest extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 服务组ID
      */
     public $ServiceGroupId;
 
     /**
-     * @param string $ServiceGroupId 无
+     * @param string $ServiceGroupId 服务组ID
      */
     function __construct()
     {

@@ -82,6 +82,16 @@ use TencentCloud\Common\AbstractModel;
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
+ * @method string getFormat() 获取图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+默认值：jpg。
+ * @method void setFormat(string $Format) 设置图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+默认值：jpg。
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
@@ -161,6 +171,15 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
     public $ResolutionAdaptive;
 
     /**
+     * @var string 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+默认值：jpg。
+     */
+    public $Format;
+
+    /**
      * @param string $SampleType 采样类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li>
@@ -192,6 +211,11 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
+     * @param string $Format 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+默认值：jpg。
      */
     function __construct()
     {
@@ -248,6 +272,10 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
 
         if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
             $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
     }
 }

@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 默认值：black 。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
+ * @method string getFormat() 获取图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+ * @method void setFormat(string $Format) 设置图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
  */
 class ModifyImageSpriteTemplateRequest extends AbstractModel
 {
@@ -138,6 +146,14 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
+     */
+    public $Format;
+
+    /**
      * @param integer $Definition 雪碧图模板唯一标识。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      * @param string $Name 雪碧图模板名称，长度限制：64 个字符。
@@ -160,6 +176,10 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
+     * @param string $Format 图片格式，取值：
+<li> jpg：jpg 格式；</li>
+<li> png：png 格式；</li>
+<li> webp：webp 格式。</li>
      */
     function __construct()
     {
@@ -220,6 +240,10 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
     }
 }

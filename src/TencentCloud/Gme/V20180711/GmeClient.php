@@ -53,11 +53,11 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\ModifyCustomizationResponse ModifyCustomization(Models\ModifyCustomizationRequest $req) 用户通过该接口可以更新语音消息转文本自学习模型。
  * @method Models\ModifyCustomizationStateResponse ModifyCustomizationState(Models\ModifyCustomizationStateRequest $req) 通过该接口，用户可以修改语音消息转文本自学习模型状态，上下线自学习模型
  * @method Models\ModifyUserMicStatusResponse ModifyUserMicStatus(Models\ModifyUserMicStatusRequest $req) 修改用户麦克风状态。
- * @method Models\ScanVoiceResponse ScanVoice(Models\ScanVoiceRequest $req) 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
+ * @method Models\ScanVoiceResponse ScanVoice(Models\ScanVoiceRequest $req) 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音内容安全服务。
 </br></br>
 
 <h4><b>功能试用说明：</b></h4>
-<li>打开前往<a href="https://console.cloud.tencent.com/gamegme/tryout">控制台 - 产品试用</a>免费试用语音分析服务。</li>
+<li>打开前往<a href="https://console.cloud.tencent.com/gamegme/tryout">控制台 - 产品试用</a>免费试用语音内容安全服务。</li>
 </br>
 
 <h4><b>接口功能说明：</b></h4>
@@ -96,8 +96,9 @@ use TencentCloud\Gme\V20180711\Models as Models;
 <p>porn:色情</p>
 <p>abuse:谩骂</p>
 <p>ad :广告</p>
-<p>contraband :违禁</p>
-<p>customized:自定义词库。目前白名单开放，如有需要请<a href="https://cloud.tencent.com/apply/p/8809fjcik56">联系我们</a>。</p>
+<p>illegal :违法</p>
+<p>moan :呻吟</p>
+<p>customized:自定义词库</p>
 </td>
 </tr>
 </tbody>

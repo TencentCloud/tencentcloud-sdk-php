@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method array getFilters() 获取查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
+查询离职员工时，Key为Status，Values为["QuiteJob"]
  * @method void setFilters(array $Filters) 设置查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
+查询离职员工时，Key为Status，Values为["QuiteJob"]
  * @method integer getOffset() 获取偏移量，默认为0，最大为20000
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0，最大为20000
  * @method UserInfo getOperator() 获取操作者的信息
@@ -48,6 +50,7 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
     /**
      * @var array 查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
+查询离职员工时，Key为Status，Values为["QuiteJob"]
      */
     public $Filters;
 
@@ -66,6 +69,7 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param array $Filters 查询过滤实名用户，Key为Status，Values为["IsVerified"]
 根据第三方系统openId过滤查询员工时,Key为StaffOpenId,Values为["OpenId","OpenId",...]
+查询离职员工时，Key为Status，Values为["QuiteJob"]
      * @param integer $Offset 偏移量，默认为0，最大为20000
      * @param UserInfo $Operator 操作者的信息
      */

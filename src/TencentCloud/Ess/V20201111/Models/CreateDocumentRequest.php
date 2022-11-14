@@ -34,10 +34,12 @@ use TencentCloud\Common\AbstractModel;
 预览链接有效期300秒；
  * @method void setNeedPreview(boolean $NeedPreview) 设置是否需要生成预览文件 默认不生成；
 预览链接有效期300秒；
- * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
- * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
+ * @method integer getPreviewType() 获取预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
+ * @method void setPreviewType(integer $PreviewType) 设置预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
  * @method Agent getAgent() 获取应用相关信息
  * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method string getClientToken() 获取客户端Token，保持接口幂等性,最大长度64个字符
+ * @method void setClientToken(string $ClientToken) 设置客户端Token，保持接口幂等性,最大长度64个字符
  */
 class CreateDocumentRequest extends AbstractModel
 {
@@ -73,14 +75,19 @@ class CreateDocumentRequest extends AbstractModel
     public $NeedPreview;
 
     /**
-     * @var string 客户端Token，保持接口幂等性,最大长度64个字符
+     * @var integer 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
      */
-    public $ClientToken;
+    public $PreviewType;
 
     /**
      * @var Agent 应用相关信息
      */
     public $Agent;
+
+    /**
+     * @var string 客户端Token，保持接口幂等性,最大长度64个字符
+     */
+    public $ClientToken;
 
     /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
@@ -90,8 +97,9 @@ class CreateDocumentRequest extends AbstractModel
      * @param array $FormFields 内容控件信息数组
      * @param boolean $NeedPreview 是否需要生成预览文件 默认不生成；
 预览链接有效期300秒；
-     * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
+     * @param integer $PreviewType 预览链接类型 默认:0-文件流, 1- H5链接 注意:此参数在NeedPreview 为true 时有效,
      * @param Agent $Agent 应用相关信息
+     * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符
      */
     function __construct()
     {
@@ -136,13 +144,17 @@ class CreateDocumentRequest extends AbstractModel
             $this->NeedPreview = $param["NeedPreview"];
         }
 
-        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
-            $this->ClientToken = $param["ClientToken"];
+        if (array_key_exists("PreviewType",$param) and $param["PreviewType"] !== null) {
+            $this->PreviewType = $param["PreviewType"];
         }
 
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

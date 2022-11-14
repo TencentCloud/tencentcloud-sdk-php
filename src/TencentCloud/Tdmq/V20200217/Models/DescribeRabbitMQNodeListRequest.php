@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQNodeList请求参数结构体
  *
- * @method string getInstanceId() 获取不适用，默认参数
- * @method void setInstanceId(string $InstanceId) 设置不适用，默认参数
+ * @method string getInstanceId() 获取rabbitmq集群ID
+ * @method void setInstanceId(string $InstanceId) 设置rabbitmq集群ID
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取一页限制
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRabbitMQNodeListRequest extends AbstractModel
 {
     /**
-     * @var string 不适用，默认参数
+     * @var string rabbitmq集群ID
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class DescribeRabbitMQNodeListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $InstanceId 不适用，默认参数
+     * @param string $InstanceId rabbitmq集群ID
      * @param integer $Offset 偏移量
      * @param integer $Limit 一页限制
      */

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
  * @method string getCallback() 获取异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
  * @method void setCallback(string $Callback) 设置异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
- * @method string getLang() 获取语言，目前jp代表日语
- * @method void setLang(string $Lang) 设置语言，目前jp代表日语
+ * @method string getLang() 获取语种，不传默认中文
+ * @method void setLang(string $Lang) 设置语种，不传默认中文
  */
 class ScanVoiceRequest extends AbstractModel
 {
@@ -67,7 +67,7 @@ class ScanVoiceRequest extends AbstractModel
     public $Callback;
 
     /**
-     * @var string 语言，目前jp代表日语
+     * @var string 语种，不传默认中文
      */
     public $Lang;
 
@@ -79,7 +79,7 @@ class ScanVoiceRequest extends AbstractModel
 <li>DataId：数据的唯一ID</li>
 <li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
      * @param string $Callback 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
-     * @param string $Lang 语言，目前jp代表日语
+     * @param string $Lang 语种，不传默认中文
      */
     function __construct()
     {

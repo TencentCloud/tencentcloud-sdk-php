@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateName(string $TemplateName) 设置模糊搜索模板名称，最大长度200
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method boolean getWithPreviewUrl() 获取是否获取模板预览链接
+ * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接
  */
 class DescribeTemplatesRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeTemplatesRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var boolean 是否获取模板预览链接
+     */
+    public $WithPreviewUrl;
+
+    /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $TemplateId 模板唯一标识，查询单个模板时使用
      * @param integer $ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
@@ -88,6 +95,7 @@ class DescribeTemplatesRequest extends AbstractModel
      * @param boolean $QueryAllComponents 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
      * @param string $TemplateName 模糊搜索模板名称，最大长度200
      * @param UserInfo $Operator 操作者的信息
+     * @param boolean $WithPreviewUrl 是否获取模板预览链接
      */
     function __construct()
     {
@@ -134,6 +142,10 @@ class DescribeTemplatesRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("WithPreviewUrl",$param) and $param["WithPreviewUrl"] !== null) {
+            $this->WithPreviewUrl = $param["WithPreviewUrl"];
         }
     }
 }

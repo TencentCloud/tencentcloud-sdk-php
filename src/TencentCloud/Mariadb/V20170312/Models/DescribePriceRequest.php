@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) 设置欲购买的数量，默认查询购买1个实例的价格。
  * @method string getPaymode() 获取付费类型。postpaid：按量付费   prepaid：预付费
  * @method void setPaymode(string $Paymode) 设置付费类型。postpaid：按量付费   prepaid：预付费
+ * @method string getAmountUnit() 获取价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+ * @method void setAmountUnit(string $AmountUnit) 设置价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
  */
 class DescribePriceRequest extends AbstractModel
 {
@@ -82,6 +88,13 @@ class DescribePriceRequest extends AbstractModel
     public $Paymode;
 
     /**
+     * @var string 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public $AmountUnit;
+
+    /**
      * @param string $Zone 欲新购实例的可用区ID。
      * @param integer $NodeCount 实例节点个数，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -92,6 +105,9 @@ class DescribePriceRequest extends AbstractModel
      * @param integer $Period 欲购买的时长，单位：月。
      * @param integer $Count 欲购买的数量，默认查询购买1个实例的价格。
      * @param string $Paymode 付费类型。postpaid：按量付费   prepaid：预付费
+     * @param string $AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
      */
     function __construct()
     {
@@ -132,6 +148,10 @@ class DescribePriceRequest extends AbstractModel
 
         if (array_key_exists("Paymode",$param) and $param["Paymode"] !== null) {
             $this->Paymode = $param["Paymode"];
+        }
+
+        if (array_key_exists("AmountUnit",$param) and $param["AmountUnit"] !== null) {
+            $this->AmountUnit = $param["AmountUnit"];
         }
     }
 }

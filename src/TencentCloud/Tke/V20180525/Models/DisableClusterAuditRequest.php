@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method boolean getDeleteLogSetAndTopic() 获取取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+ * @method void setDeleteLogSetAndTopic(boolean $DeleteLogSetAndTopic) 设置取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
  */
 class DisableClusterAuditRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DisableClusterAuditRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var boolean 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
+     */
+    public $DeleteLogSetAndTopic;
+
+    /**
      * @param string $ClusterId 集群ID
+     * @param boolean $DeleteLogSetAndTopic 取值为true代表关闭集群审计时删除默认创建的日志集和主题，false代表不删除
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DisableClusterAuditRequest extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("DeleteLogSetAndTopic",$param) and $param["DeleteLogSetAndTopic"] !== null) {
+            $this->DeleteLogSetAndTopic = $param["DeleteLogSetAndTopic"];
         }
     }
 }

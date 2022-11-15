@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationMembers返回参数结构体
  *
- * @method array getItems() 获取成员列表
- * @method void setItems(array $Items) 设置成员列表
- * @method integer getTotal() 获取总数目
- * @method void setTotal(integer $Total) 设置总数目
+ * @method array getItems() 获取成员列表。
+ * @method void setItems(array $Items) 设置成员列表。
+ * @method integer getTotal() 获取总数目。
+ * @method void setTotal(integer $Total) 设置总数目。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeOrganizationMembersResponse extends AbstractModel
 {
     /**
-     * @var array 成员列表
+     * @var array 成员列表。
      */
     public $Items;
 
     /**
-     * @var integer 总数目
+     * @var integer 总数目。
      */
     public $Total;
 
@@ -45,8 +45,8 @@ class DescribeOrganizationMembersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Items 成员列表
-     * @param integer $Total 总数目
+     * @param array $Items 成员列表。
+     * @param integer $Total 总数目。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

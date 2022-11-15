@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目Id
  * @method string getDatasourceId() 获取数据来源Id
  * @method void setDatasourceId(string $DatasourceId) 设置数据来源Id
+ * @method array getDsTypes() 获取数据源类型
+ * @method void setDsTypes(array $DsTypes) 设置数据源类型
  */
 class DescribeRuleDataSourcesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeRuleDataSourcesRequest extends AbstractModel
     public $DatasourceId;
 
     /**
+     * @var array 数据源类型
+     */
+    public $DsTypes;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param string $DatasourceId 数据来源Id
+     * @param array $DsTypes 数据源类型
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeRuleDataSourcesRequest extends AbstractModel
 
         if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
             $this->DatasourceId = $param["DatasourceId"];
+        }
+
+        if (array_key_exists("DsTypes",$param) and $param["DsTypes"] !== null) {
+            $this->DsTypes = $param["DsTypes"];
         }
     }
 }

@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpandShardConfig(ExpandShardConfig $ExpandShardConfig) 设置扩容分片配置，当UpgradeType为EXPAND时生效。
  * @method SplitShardConfig getSplitShardConfig() 获取切分分片配置，当UpgradeType为SPLIT时生效。
  * @method void setSplitShardConfig(SplitShardConfig $SplitShardConfig) 设置切分分片配置，当UpgradeType为SPLIT时生效。
+ * @method string getAmountUnit() 获取价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+ * @method void setAmountUnit(string $AmountUnit) 设置价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
  */
 class DescribeDCDBUpgradePriceRequest extends AbstractModel
 {
@@ -68,6 +74,13 @@ class DescribeDCDBUpgradePriceRequest extends AbstractModel
     public $SplitShardConfig;
 
     /**
+     * @var string 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public $AmountUnit;
+
+    /**
      * @param string $InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param string $UpgradeType 升级类型，取值范围: 
 <li> ADD: 新增分片 </li> 
@@ -76,6 +89,9 @@ class DescribeDCDBUpgradePriceRequest extends AbstractModel
      * @param AddShardConfig $AddShardConfig 新增分片配置，当UpgradeType为ADD时生效。
      * @param ExpandShardConfig $ExpandShardConfig 扩容分片配置，当UpgradeType为EXPAND时生效。
      * @param SplitShardConfig $SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
+     * @param string $AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
      */
     function __construct()
     {
@@ -111,6 +127,10 @@ class DescribeDCDBUpgradePriceRequest extends AbstractModel
         if (array_key_exists("SplitShardConfig",$param) and $param["SplitShardConfig"] !== null) {
             $this->SplitShardConfig = new SplitShardConfig();
             $this->SplitShardConfig->deserialize($param["SplitShardConfig"]);
+        }
+
+        if (array_key_exists("AmountUnit",$param) and $param["AmountUnit"] !== null) {
+            $this->AmountUnit = $param["AmountUnit"];
         }
     }
 }

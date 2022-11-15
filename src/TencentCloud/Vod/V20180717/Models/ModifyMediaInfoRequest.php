@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。
  * @method void setClearKeyFrameDescs(integer $ClearKeyFrameDescs) 设置取值 1 表示清空视频打点信息，其他值无意义。
 同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。
- * @method array getAddTags() 获取新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 16 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
- * @method void setAddTags(array $AddTags) 设置新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 16 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+ * @method array getAddTags() 获取新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+ * @method void setAddTags(array $AddTags) 设置新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
  * @method array getDeleteTags() 获取要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
  * @method void setDeleteTags(array $DeleteTags) 设置要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
  * @method integer getClearTags() 获取取值 1 表示清空媒体文件所有标签，其他值无意义。
@@ -113,7 +113,7 @@ class ModifyMediaInfoRequest extends AbstractModel
     public $ClearKeyFrameDescs;
 
     /**
-     * @var array 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 16 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+     * @var array 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
      */
     public $AddTags;
 
@@ -156,7 +156,7 @@ class ModifyMediaInfoRequest extends AbstractModel
      * @param array $DeleteKeyFrameDescs 要删除的一组视频打点信息的时间偏移，单位：秒。同一个请求里，AddKeyFrameDescs 的时间偏移参数必须与 DeleteKeyFrameDescs 都不同。
      * @param integer $ClearKeyFrameDescs 取值 1 表示清空视频打点信息，其他值无意义。
 同一个请求里，ClearKeyFrameDescs 与 AddKeyFrameDescs 不能同时出现。
-     * @param array $AddTags 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 16 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
+     * @param array $AddTags 新增的一组标签，单个媒体文件最多 16 个标签，单个标签最多 32 个字符。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
      * @param array $DeleteTags 要删除的一组标签。同一个请求里，AddTags 参数必须与 DeleteTags 都不同。
      * @param integer $ClearTags 取值 1 表示清空媒体文件所有标签，其他值无意义。
 同一个请求里，ClearTags 与 AddTags 不能同时出现。

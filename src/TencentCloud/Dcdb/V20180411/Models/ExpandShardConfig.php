@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShardMemory(integer $ShardMemory) 设置分片内存大小，单位 GB
  * @method integer getShardStorage() 获取分片存储大小，单位 GB
  * @method void setShardStorage(integer $ShardStorage) 设置分片存储大小，单位 GB
+ * @method integer getShardNodeCount() 获取分片节点数
+ * @method void setShardNodeCount(integer $ShardNodeCount) 设置分片节点数
  */
 class ExpandShardConfig extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ExpandShardConfig extends AbstractModel
     public $ShardStorage;
 
     /**
+     * @var integer 分片节点数
+     */
+    public $ShardNodeCount;
+
+    /**
      * @param array $ShardInstanceIds 分片ID数组
      * @param integer $ShardMemory 分片内存大小，单位 GB
      * @param integer $ShardStorage 分片存储大小，单位 GB
+     * @param integer $ShardNodeCount 分片节点数
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ExpandShardConfig extends AbstractModel
 
         if (array_key_exists("ShardStorage",$param) and $param["ShardStorage"] !== null) {
             $this->ShardStorage = $param["ShardStorage"];
+        }
+
+        if (array_key_exists("ShardNodeCount",$param) and $param["ShardNodeCount"] !== null) {
+            $this->ShardNodeCount = $param["ShardNodeCount"];
         }
     }
 }

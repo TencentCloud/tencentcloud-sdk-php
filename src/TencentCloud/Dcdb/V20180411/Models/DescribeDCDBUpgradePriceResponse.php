@@ -20,10 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDCDBUpgradePrice返回参数结构体
  *
- * @method integer getOriginalPrice() 获取原价，单位：分
- * @method void setOriginalPrice(integer $OriginalPrice) 设置原价，单位：分
- * @method integer getPrice() 获取实际价格，单位：分。受折扣等影响，可能和原价不同。
- * @method void setPrice(integer $Price) 设置实际价格，单位：分。受折扣等影响，可能和原价不同。
+ * @method integer getOriginalPrice() 获取原价  
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站为人民币，国际站为美元
+ * @method void setOriginalPrice(integer $OriginalPrice) 设置原价  
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站为人民币，国际站为美元
+ * @method integer getPrice() 获取实际价格，受折扣等影响，可能和原价不同
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站人民币，国际站美元
+ * @method void setPrice(integer $Price) 设置实际价格，受折扣等影响，可能和原价不同
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站人民币，国际站美元
  * @method string getFormula() 获取变配明细计算公式
  * @method void setFormula(string $Formula) 设置变配明细计算公式
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +40,16 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDCDBUpgradePriceResponse extends AbstractModel
 {
     /**
-     * @var integer 原价，单位：分
+     * @var integer 原价  
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站为人民币，国际站为美元
      */
     public $OriginalPrice;
 
     /**
-     * @var integer 实际价格，单位：分。受折扣等影响，可能和原价不同。
+     * @var integer 实际价格，受折扣等影响，可能和原价不同
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站人民币，国际站美元
      */
     public $Price;
 
@@ -52,8 +64,12 @@ class DescribeDCDBUpgradePriceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $OriginalPrice 原价，单位：分
-     * @param integer $Price 实际价格，单位：分。受折扣等影响，可能和原价不同。
+     * @param integer $OriginalPrice 原价  
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站为人民币，国际站为美元
+     * @param integer $Price 实际价格，受折扣等影响，可能和原价不同
+* 单位：默认为分，若请求参数带有AmountUnit，参考AmountUnit描述
+* 币种：国内站人民币，国际站美元
      * @param string $Formula 变配明细计算公式
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

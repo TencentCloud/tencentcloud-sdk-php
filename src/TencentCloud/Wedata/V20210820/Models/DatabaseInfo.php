@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceType(integer $DatasourceType) 设置数据源类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginDatabaseName() 获取数据库原始名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginDatabaseName(string $OriginDatabaseName) 设置数据库原始名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOriginSchemaName() 获取schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOriginSchemaName(string $OriginSchemaName) 设置schema名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseInfo extends AbstractModel
 {
@@ -84,6 +92,18 @@ class DatabaseInfo extends AbstractModel
     public $DatasourceType;
 
     /**
+     * @var string 数据库原始名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginDatabaseName;
+
+    /**
+     * @var string schema名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OriginSchemaName;
+
+    /**
      * @param string $DatasourceName 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceId 数据源Id
@@ -95,6 +115,10 @@ class DatabaseInfo extends AbstractModel
      * @param string $InstanceId 实例Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginDatabaseName 数据库原始名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OriginSchemaName schema名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +156,14 @@ class DatabaseInfo extends AbstractModel
 
         if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
             $this->DatasourceType = $param["DatasourceType"];
+        }
+
+        if (array_key_exists("OriginDatabaseName",$param) and $param["OriginDatabaseName"] !== null) {
+            $this->OriginDatabaseName = $param["OriginDatabaseName"];
+        }
+
+        if (array_key_exists("OriginSchemaName",$param) and $param["OriginSchemaName"] !== null) {
+            $this->OriginSchemaName = $param["OriginSchemaName"];
         }
     }
 }

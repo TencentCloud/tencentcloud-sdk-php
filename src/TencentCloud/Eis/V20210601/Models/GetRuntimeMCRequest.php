@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetRuntimeMC请求参数结构体
  *
- * @method integer getRuntimeId() 获取运行时id
- * @method void setRuntimeId(integer $RuntimeId) 设置运行时id
- * @method string getZone() 获取运行时地域
- * @method void setZone(string $Zone) 设置运行时地域
+ * @method integer getRuntimeId() 获取环境id
+ * @method void setRuntimeId(integer $RuntimeId) 设置环境id
+ * @method string getZone() 获取环境地域
+ * @method void setZone(string $Zone) 设置环境地域
+ * @method integer getRuntimeClass() 获取环境运行类型：0:运行时类型、1:api类型
+ * @method void setRuntimeClass(integer $RuntimeClass) 设置环境运行类型：0:运行时类型、1:api类型
  */
 class GetRuntimeMCRequest extends AbstractModel
 {
     /**
-     * @var integer 运行时id
+     * @var integer 环境id
      */
     public $RuntimeId;
 
     /**
-     * @var string 运行时地域
+     * @var string 环境地域
      */
     public $Zone;
 
     /**
-     * @param integer $RuntimeId 运行时id
-     * @param string $Zone 运行时地域
+     * @var integer 环境运行类型：0:运行时类型、1:api类型
+     */
+    public $RuntimeClass;
+
+    /**
+     * @param integer $RuntimeId 环境id
+     * @param string $Zone 环境地域
+     * @param integer $RuntimeClass 环境运行类型：0:运行时类型、1:api类型
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class GetRuntimeMCRequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("RuntimeClass",$param) and $param["RuntimeClass"] !== null) {
+            $this->RuntimeClass = $param["RuntimeClass"];
         }
     }
 }

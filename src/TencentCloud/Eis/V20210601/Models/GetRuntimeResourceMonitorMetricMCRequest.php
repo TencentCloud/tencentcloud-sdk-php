@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRateType(boolean $RateType) 设置是否返回百分比数值，仅支持CPU，Memory
  * @method integer getInterval() 获取采样粒度：60(s), 300(s), 3600(s), 86400(s)
  * @method void setInterval(integer $Interval) 设置采样粒度：60(s), 300(s), 3600(s), 86400(s)
+ * @method integer getRuntimeClass() 获取环境运行类型：0:运行时类型、1:api类型
+ * @method void setRuntimeClass(integer $RuntimeClass) 设置环境运行类型：0:运行时类型、1:api类型
  */
 class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel
     public $Interval;
 
     /**
+     * @var integer 环境运行类型：0:运行时类型、1:api类型
+     */
+    public $RuntimeClass;
+
+    /**
      * @param integer $RuntimeId 运行时id
      * @param integer $StartTime 起始时间
      * @param integer $EndTime 结束时间
      * @param integer $MetricType 指标类型：0:CPU, 1:MemUsageBytes, 2:K8sWorkloadNetworkReceiveBytesBw, 3:K8sWorkloadNetworkTransmitBytesBw
      * @param boolean $RateType 是否返回百分比数值，仅支持CPU，Memory
      * @param integer $Interval 采样粒度：60(s), 300(s), 3600(s), 86400(s)
+     * @param integer $RuntimeClass 环境运行类型：0:运行时类型、1:api类型
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class GetRuntimeResourceMonitorMetricMCRequest extends AbstractModel
 
         if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
             $this->Interval = $param["Interval"];
+        }
+
+        if (array_key_exists("RuntimeClass",$param) and $param["RuntimeClass"] !== null) {
+            $this->RuntimeClass = $param["RuntimeClass"];
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 过滤参数
  *
- * @method string getName() 获取过滤参数的名字
- * @method void setName(string $Name) 设置过滤参数的名字
  * @method array getValues() 获取数值
  * @method void setValues(array $Values) 设置数值
+ * @method string getName() 获取过滤参数的名字
+ * @method void setName(string $Name) 设置过滤参数的名字
  */
 class Filter extends AbstractModel
 {
-    /**
-     * @var string 过滤参数的名字
-     */
-    public $Name;
-
     /**
      * @var array 数值
      */
     public $Values;
 
     /**
-     * @param string $Name 过滤参数的名字
+     * @var string 过滤参数的名字
+     */
+    public $Name;
+
+    /**
      * @param array $Values 数值
+     * @param string $Name 过滤参数的名字
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Filter extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
         if (array_key_exists("Values",$param) and $param["Values"] !== null) {
             $this->Values = $param["Values"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

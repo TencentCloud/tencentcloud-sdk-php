@@ -20,74 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 运行时精简信息
  *
- * @method integer getRuntimeId() 获取运行时id
- * @method void setRuntimeId(integer $RuntimeId) 设置运行时id
- * @method string getDisplayName() 获取运行时名称，用户输入，同一uin内唯一
- * @method void setDisplayName(string $DisplayName) 设置运行时名称，用户输入，同一uin内唯一
- * @method integer getType() 获取运行时类型：0: sandbox, 1:shared, 2:private
- * @method void setType(integer $Type) 设置运行时类型：0: sandbox, 1:shared, 2:private
- * @method string getZone() 获取运行时所在地域，tianjin，beijiing，guangzhou等
- * @method void setZone(string $Zone) 设置运行时所在地域，tianjin，beijiing，guangzhou等
- * @method string getArea() 获取运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
- * @method void setArea(string $Area) 设置运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
- * @method string getAddr() 获取运行时应用listener地址后缀
- * @method void setAddr(string $Addr) 设置运行时应用listener地址后缀
- * @method integer getStatus() 获取运行时状态
- * @method void setStatus(integer $Status) 设置运行时状态
- * @method integer getExpiredAt() 获取运行时过期时间
- * @method void setExpiredAt(integer $ExpiredAt) 设置运行时过期时间
+ * @method integer getRuntimeId() 获取环境id
+ * @method void setRuntimeId(integer $RuntimeId) 设置环境id
+ * @method string getDisplayName() 获取环境名称，用户输入，同一uin内唯一
+ * @method void setDisplayName(string $DisplayName) 设置环境名称，用户输入，同一uin内唯一
+ * @method integer getType() 获取环境类型：0: sandbox, 1:shared, 2:private
+ * @method void setType(integer $Type) 设置环境类型：0: sandbox, 1:shared, 2:private
+ * @method string getZone() 获取环境所在地域，tianjin，beijiing，guangzhou等
+ * @method void setZone(string $Zone) 设置环境所在地域，tianjin，beijiing，guangzhou等
+ * @method string getArea() 获取环境所在地域，tianjin，beijiing，guangzhou等（同Zone）
+ * @method void setArea(string $Area) 设置环境所在地域，tianjin，beijiing，guangzhou等（同Zone）
+ * @method string getAddr() 获取环境应用listener地址后缀
+ * @method void setAddr(string $Addr) 设置环境应用listener地址后缀
+ * @method integer getStatus() 获取环境状态
+ * @method void setStatus(integer $Status) 设置环境状态
+ * @method integer getExpiredAt() 获取环境过期时间
+ * @method void setExpiredAt(integer $ExpiredAt) 设置环境过期时间
+ * @method integer getRuntimeClass() 获取环境运行类型：0:运行时类型、1:api类型
+ * @method void setRuntimeClass(integer $RuntimeClass) 设置环境运行类型：0:运行时类型、1:api类型
+ * @method boolean getDeployed() 获取是否已在当前环境发布
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeployed(boolean $Deployed) 设置是否已在当前环境发布
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AbstractRuntimeMC extends AbstractModel
 {
     /**
-     * @var integer 运行时id
+     * @var integer 环境id
      */
     public $RuntimeId;
 
     /**
-     * @var string 运行时名称，用户输入，同一uin内唯一
+     * @var string 环境名称，用户输入，同一uin内唯一
      */
     public $DisplayName;
 
     /**
-     * @var integer 运行时类型：0: sandbox, 1:shared, 2:private
+     * @var integer 环境类型：0: sandbox, 1:shared, 2:private
      */
     public $Type;
 
     /**
-     * @var string 运行时所在地域，tianjin，beijiing，guangzhou等
+     * @var string 环境所在地域，tianjin，beijiing，guangzhou等
      */
     public $Zone;
 
     /**
-     * @var string 运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
+     * @var string 环境所在地域，tianjin，beijiing，guangzhou等（同Zone）
      */
     public $Area;
 
     /**
-     * @var string 运行时应用listener地址后缀
+     * @var string 环境应用listener地址后缀
      */
     public $Addr;
 
     /**
-     * @var integer 运行时状态
+     * @var integer 环境状态
      */
     public $Status;
 
     /**
-     * @var integer 运行时过期时间
+     * @var integer 环境过期时间
      */
     public $ExpiredAt;
 
     /**
-     * @param integer $RuntimeId 运行时id
-     * @param string $DisplayName 运行时名称，用户输入，同一uin内唯一
-     * @param integer $Type 运行时类型：0: sandbox, 1:shared, 2:private
-     * @param string $Zone 运行时所在地域，tianjin，beijiing，guangzhou等
-     * @param string $Area 运行时所在地域，tianjin，beijiing，guangzhou等（同Zone）
-     * @param string $Addr 运行时应用listener地址后缀
-     * @param integer $Status 运行时状态
-     * @param integer $ExpiredAt 运行时过期时间
+     * @var integer 环境运行类型：0:运行时类型、1:api类型
+     */
+    public $RuntimeClass;
+
+    /**
+     * @var boolean 是否已在当前环境发布
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Deployed;
+
+    /**
+     * @param integer $RuntimeId 环境id
+     * @param string $DisplayName 环境名称，用户输入，同一uin内唯一
+     * @param integer $Type 环境类型：0: sandbox, 1:shared, 2:private
+     * @param string $Zone 环境所在地域，tianjin，beijiing，guangzhou等
+     * @param string $Area 环境所在地域，tianjin，beijiing，guangzhou等（同Zone）
+     * @param string $Addr 环境应用listener地址后缀
+     * @param integer $Status 环境状态
+     * @param integer $ExpiredAt 环境过期时间
+     * @param integer $RuntimeClass 环境运行类型：0:运行时类型、1:api类型
+     * @param boolean $Deployed 是否已在当前环境发布
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -132,6 +152,14 @@ class AbstractRuntimeMC extends AbstractModel
 
         if (array_key_exists("ExpiredAt",$param) and $param["ExpiredAt"] !== null) {
             $this->ExpiredAt = $param["ExpiredAt"];
+        }
+
+        if (array_key_exists("RuntimeClass",$param) and $param["RuntimeClass"] !== null) {
+            $this->RuntimeClass = $param["RuntimeClass"];
+        }
+
+        if (array_key_exists("Deployed",$param) and $param["Deployed"] !== null) {
+            $this->Deployed = $param["Deployed"];
         }
     }
 }

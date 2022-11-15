@@ -45,19 +45,27 @@ use TencentCloud\Common\AbstractModel;
 <li> sta_with_bot ：全球内容分发网络（不包括中国大陆）标准版套餐附带bot管理；</li>
 <li> sta_cm ：中国大陆内容分发网络标准版套餐； </li>
 <li> sta_cm_with_bot ：中国大陆内容分发网络标准版套餐附带bot管理；</li>
+<li> sta_global ：全球内容分发网络（包括中国大陆）标准版套餐； </li>
+<li> sta_global_with_bot ：全球内容分发网络（包括中国大陆）标准版套餐附带bot管理；</li>
 <li> ent ：全球内容分发网络（不包括中国大陆）企业版套餐； </li>
 <li> ent_with_bot ： 全球内容分发网络（不包括中国大陆）企业版套餐附带bot管理；</li>
 <li> ent_cm ：中国大陆内容分发网络企业版套餐； </li>
-<li> ent_cm_with_bot ：中国大陆内容分发网络企业版套餐附带bot管理。</li>
+<li> ent_cm_with_bot ：中国大陆内容分发网络企业版套餐附带bot管理；</li>
+<li> ent_global ：全球内容分发网络（包括中国大陆）企业版套餐； </li>
+<li> ent_global_with_bot ：全球内容分发网络（包括中国大陆）企业版套餐附带bot管理。</li>
  * @method void setPlanType(string $PlanType) 设置套餐类型，取值有：
 <li> sta ：全球内容分发网络（不包括中国大陆）标准版套餐； </li>
 <li> sta_with_bot ：全球内容分发网络（不包括中国大陆）标准版套餐附带bot管理；</li>
 <li> sta_cm ：中国大陆内容分发网络标准版套餐； </li>
 <li> sta_cm_with_bot ：中国大陆内容分发网络标准版套餐附带bot管理；</li>
+<li> sta_global ：全球内容分发网络（包括中国大陆）标准版套餐； </li>
+<li> sta_global_with_bot ：全球内容分发网络（包括中国大陆）标准版套餐附带bot管理；</li>
 <li> ent ：全球内容分发网络（不包括中国大陆）企业版套餐； </li>
 <li> ent_with_bot ： 全球内容分发网络（不包括中国大陆）企业版套餐附带bot管理；</li>
 <li> ent_cm ：中国大陆内容分发网络企业版套餐； </li>
-<li> ent_cm_with_bot ：中国大陆内容分发网络企业版套餐附带bot管理。</li>
+<li> ent_cm_with_bot ：中国大陆内容分发网络企业版套餐附带bot管理；</li>
+<li> ent_global ：全球内容分发网络（包括中国大陆）企业版套餐； </li>
+<li> ent_global_with_bot ：全球内容分发网络（包括中国大陆）企业版套餐附带bot管理。</li>
  * @method float getPrice() 获取套餐价格（单位：分）。
  * @method void setPrice(float $Price) 设置套餐价格（单位：分）。
  * @method integer getRequest() 获取套餐所含请求次数，该请求次数为安全加速请求次数。（单位：次）。
@@ -66,10 +74,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSiteNumber(integer $SiteNumber) 设置套餐所能绑定的站点个数。
  * @method string getArea() 获取套餐加速区域类型，取值有：
 <li> mainland ：中国大陆； </li>
-<li> overseas ：全球（不包括中国大陆）。</li>
+<li> overseas ：全球（不包括中国大陆）；</li>
+<li> global ：全球（包括中国大陆）。 </li>
  * @method void setArea(string $Area) 设置套餐加速区域类型，取值有：
 <li> mainland ：中国大陆； </li>
-<li> overseas ：全球（不包括中国大陆）。</li>
+<li> overseas ：全球（不包括中国大陆）；</li>
+<li> global ：全球（包括中国大陆）。 </li>
  */
 class PlanInfo extends AbstractModel
 {
@@ -101,10 +111,14 @@ class PlanInfo extends AbstractModel
 <li> sta_with_bot ：全球内容分发网络（不包括中国大陆）标准版套餐附带bot管理；</li>
 <li> sta_cm ：中国大陆内容分发网络标准版套餐； </li>
 <li> sta_cm_with_bot ：中国大陆内容分发网络标准版套餐附带bot管理；</li>
+<li> sta_global ：全球内容分发网络（包括中国大陆）标准版套餐； </li>
+<li> sta_global_with_bot ：全球内容分发网络（包括中国大陆）标准版套餐附带bot管理；</li>
 <li> ent ：全球内容分发网络（不包括中国大陆）企业版套餐； </li>
 <li> ent_with_bot ： 全球内容分发网络（不包括中国大陆）企业版套餐附带bot管理；</li>
 <li> ent_cm ：中国大陆内容分发网络企业版套餐； </li>
-<li> ent_cm_with_bot ：中国大陆内容分发网络企业版套餐附带bot管理。</li>
+<li> ent_cm_with_bot ：中国大陆内容分发网络企业版套餐附带bot管理；</li>
+<li> ent_global ：全球内容分发网络（包括中国大陆）企业版套餐； </li>
+<li> ent_global_with_bot ：全球内容分发网络（包括中国大陆）企业版套餐附带bot管理。</li>
      */
     public $PlanType;
 
@@ -126,7 +140,8 @@ class PlanInfo extends AbstractModel
     /**
      * @var string 套餐加速区域类型，取值有：
 <li> mainland ：中国大陆； </li>
-<li> overseas ：全球（不包括中国大陆）。</li>
+<li> overseas ：全球（不包括中国大陆）；</li>
+<li> global ：全球（包括中国大陆）。 </li>
      */
     public $Area;
 
@@ -146,16 +161,21 @@ class PlanInfo extends AbstractModel
 <li> sta_with_bot ：全球内容分发网络（不包括中国大陆）标准版套餐附带bot管理；</li>
 <li> sta_cm ：中国大陆内容分发网络标准版套餐； </li>
 <li> sta_cm_with_bot ：中国大陆内容分发网络标准版套餐附带bot管理；</li>
+<li> sta_global ：全球内容分发网络（包括中国大陆）标准版套餐； </li>
+<li> sta_global_with_bot ：全球内容分发网络（包括中国大陆）标准版套餐附带bot管理；</li>
 <li> ent ：全球内容分发网络（不包括中国大陆）企业版套餐； </li>
 <li> ent_with_bot ： 全球内容分发网络（不包括中国大陆）企业版套餐附带bot管理；</li>
 <li> ent_cm ：中国大陆内容分发网络企业版套餐； </li>
-<li> ent_cm_with_bot ：中国大陆内容分发网络企业版套餐附带bot管理。</li>
+<li> ent_cm_with_bot ：中国大陆内容分发网络企业版套餐附带bot管理；</li>
+<li> ent_global ：全球内容分发网络（包括中国大陆）企业版套餐； </li>
+<li> ent_global_with_bot ：全球内容分发网络（包括中国大陆）企业版套餐附带bot管理。</li>
      * @param float $Price 套餐价格（单位：分）。
      * @param integer $Request 套餐所含请求次数，该请求次数为安全加速请求次数。（单位：次）。
      * @param integer $SiteNumber 套餐所能绑定的站点个数。
      * @param string $Area 套餐加速区域类型，取值有：
 <li> mainland ：中国大陆； </li>
-<li> overseas ：全球（不包括中国大陆）。</li>
+<li> overseas ：全球（不包括中国大陆）；</li>
+<li> global ：全球（包括中国大陆）。 </li>
      */
     function __construct()
     {

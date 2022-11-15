@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdatedAt(integer $UpdatedAt) 设置应用实例部署更新时间
  * @method integer getProjectType() 获取应用类型：0:NormalApp普通应用 1:TemplateApp模板应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
  * @method void setProjectType(integer $ProjectType) 设置应用类型：0:NormalApp普通应用 1:TemplateApp模板应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+ * @method integer getProjectVersion() 获取应用版本：0:旧版 1:3.0新控制台
+ * @method void setProjectVersion(integer $ProjectVersion) 设置应用版本：0:旧版 1:3.0新控制台
  */
 class RuntimeDeployedInstanceMC extends AbstractModel
 {
@@ -101,6 +103,11 @@ class RuntimeDeployedInstanceMC extends AbstractModel
     public $ProjectType;
 
     /**
+     * @var integer 应用版本：0:旧版 1:3.0新控制台
+     */
+    public $ProjectVersion;
+
+    /**
      * @param integer $GroupId 项目id
      * @param string $GroupName 项目名称
      * @param integer $ProjectId 应用id
@@ -112,6 +119,7 @@ class RuntimeDeployedInstanceMC extends AbstractModel
      * @param integer $CreatedAt 应用实例部署创建时间
      * @param integer $UpdatedAt 应用实例部署更新时间
      * @param integer $ProjectType 应用类型：0:NormalApp普通应用 1:TemplateApp模板应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+     * @param integer $ProjectVersion 应用版本：0:旧版 1:3.0新控制台
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class RuntimeDeployedInstanceMC extends AbstractModel
 
         if (array_key_exists("ProjectType",$param) and $param["ProjectType"] !== null) {
             $this->ProjectType = $param["ProjectType"];
+        }
+
+        if (array_key_exists("ProjectVersion",$param) and $param["ProjectVersion"] !== null) {
+            $this->ProjectVersion = $param["ProjectVersion"];
         }
     }
 }

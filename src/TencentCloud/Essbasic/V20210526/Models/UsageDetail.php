@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCancel(integer $Cancel) 设置撤回数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFlowChannel() 获取消耗渠道
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFlowChannel(string $FlowChannel) 设置消耗渠道
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UsageDetail extends AbstractModel
 {
@@ -68,6 +72,12 @@ class UsageDetail extends AbstractModel
     public $Cancel;
 
     /**
+     * @var string 消耗渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FlowChannel;
+
+    /**
      * @param string $ProxyOrganizationOpenId 渠道侧合作企业唯一标识
      * @param string $ProxyOrganizationName 渠道侧合作企业名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -75,6 +85,8 @@ class UsageDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Usage 消耗数量
      * @param integer $Cancel 撤回数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FlowChannel 消耗渠道
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -108,6 +120,10 @@ class UsageDetail extends AbstractModel
 
         if (array_key_exists("Cancel",$param) and $param["Cancel"] !== null) {
             $this->Cancel = $param["Cancel"];
+        }
+
+        if (array_key_exists("FlowChannel",$param) and $param["FlowChannel"] !== null) {
+            $this->FlowChannel = $param["FlowChannel"];
         }
     }
 }

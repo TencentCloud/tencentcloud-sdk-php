@@ -42,6 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShardCount(integer $ShardCount) 设置实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
  * @method string getPaymode() 获取付费类型。postpaid：按量付费   prepaid：预付费
  * @method void setPaymode(string $Paymode) 设置付费类型。postpaid：按量付费   prepaid：预付费
+ * @method string getAmountUnit() 获取价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+ * @method void setAmountUnit(string $AmountUnit) 设置价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
  */
 class DescribeDCDBPriceRequest extends AbstractModel
 {
@@ -89,6 +95,13 @@ class DescribeDCDBPriceRequest extends AbstractModel
     public $Paymode;
 
     /**
+     * @var string 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public $AmountUnit;
+
+    /**
      * @param string $Zone 欲新购实例的可用区ID。
      * @param integer $Count 欲购买实例的数量，目前支持购买1-10个实例
      * @param integer $Period 欲购买的时长，单位：月。
@@ -100,6 +113,9 @@ class DescribeDCDBPriceRequest extends AbstractModel
  查询实例规格获得。
      * @param integer $ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      * @param string $Paymode 付费类型。postpaid：按量付费   prepaid：预付费
+     * @param string $AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
      */
     function __construct()
     {
@@ -144,6 +160,10 @@ class DescribeDCDBPriceRequest extends AbstractModel
 
         if (array_key_exists("Paymode",$param) and $param["Paymode"] !== null) {
             $this->Paymode = $param["Paymode"];
+        }
+
+        if (array_key_exists("AmountUnit",$param) and $param["AmountUnit"] !== null) {
+            $this->AmountUnit = $param["AmountUnit"];
         }
     }
 }

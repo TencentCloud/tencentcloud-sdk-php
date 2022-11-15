@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomains请求参数结构体
  *
- * @method integer getOffset() 获取偏移
- * @method void setOffset(integer $Offset) 设置偏移
- * @method integer getLimit() 获取容量
- * @method void setLimit(integer $Limit) 设置容量
+ * @method integer getOffset() 获取数据偏移量，从1开始。
+ * @method void setOffset(integer $Offset) 设置数据偏移量，从1开始。
+ * @method integer getLimit() 获取返回域名的数量
+ * @method void setLimit(integer $Limit) 设置返回域名的数量
  * @method array getFilters() 获取过滤数组
  * @method void setFilters(array $Filters) 设置过滤数组
  */
 class DescribeDomainsRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移
+     * @var integer 数据偏移量，从1开始。
      */
     public $Offset;
 
     /**
-     * @var integer 容量
+     * @var integer 返回域名的数量
      */
     public $Limit;
 
@@ -45,8 +45,8 @@ class DescribeDomainsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $Offset 偏移
-     * @param integer $Limit 容量
+     * @param integer $Offset 数据偏移量，从1开始。
+     * @param integer $Limit 返回域名的数量
      * @param array $Filters 过滤数组
      */
     function __construct()

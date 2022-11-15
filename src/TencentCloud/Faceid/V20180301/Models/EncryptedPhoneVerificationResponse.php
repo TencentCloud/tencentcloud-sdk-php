@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 -11: 验证中心服务繁忙
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
+ * @method string getISP() 获取运营商名称。
+取值范围为["移动","联通","电信",""]
+ * @method void setISP(string $ISP) 设置运营商名称。
+取值范围为["移动","联通","电信",""]
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,6 +71,12 @@ class EncryptedPhoneVerificationResponse extends AbstractModel
     public $Description;
 
     /**
+     * @var string 运营商名称。
+取值范围为["移动","联通","电信",""]
+     */
+    public $ISP;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -83,6 +93,8 @@ class EncryptedPhoneVerificationResponse extends AbstractModel
 -9: 没有记录
 -11: 验证中心服务繁忙
      * @param string $Description 业务结果描述。
+     * @param string $ISP 运营商名称。
+取值范围为["移动","联通","电信",""]
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +116,10 @@ class EncryptedPhoneVerificationResponse extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ISP",$param) and $param["ISP"] !== null) {
+            $this->ISP = $param["ISP"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

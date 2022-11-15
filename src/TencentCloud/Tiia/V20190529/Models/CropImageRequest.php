@@ -25,11 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWidth(integer $Width) 设置需要裁剪区域的宽度，与Height共同组成所需裁剪的图片宽高比例。
 输入数字请大于0、小于图片宽度的像素值。
  * @method integer getHeight() 获取需要裁剪区域的高度，与Width共同组成所需裁剪的图片宽高比例。
-输入数字请请大于0、小于图片高度的像素值。
+输入数字请大于0、小于图片高度的像素值。
 宽高比例（Width : Height）会简化为最简分数，即如果Width输入10、Height输入20，会简化为1：2。
 Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响效果。
  * @method void setHeight(integer $Height) 设置需要裁剪区域的高度，与Width共同组成所需裁剪的图片宽高比例。
-输入数字请请大于0、小于图片高度的像素值。
+输入数字请大于0、小于图片高度的像素值。
 宽高比例（Width : Height）会简化为最简分数，即如果Width输入10、Height输入20，会简化为1：2。
 Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响效果。
  * @method string getImageUrl() 获取图片URL地址。 
@@ -63,7 +63,7 @@ class CropImageRequest extends AbstractModel
 
     /**
      * @var integer 需要裁剪区域的高度，与Width共同组成所需裁剪的图片宽高比例。
-输入数字请请大于0、小于图片高度的像素值。
+输入数字请大于0、小于图片高度的像素值。
 宽高比例（Width : Height）会简化为最简分数，即如果Width输入10、Height输入20，会简化为1：2。
 Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响效果。
      */
@@ -91,7 +91,7 @@ Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响�
      * @param integer $Width 需要裁剪区域的宽度，与Height共同组成所需裁剪的图片宽高比例。
 输入数字请大于0、小于图片宽度的像素值。
      * @param integer $Height 需要裁剪区域的高度，与Width共同组成所需裁剪的图片宽高比例。
-输入数字请请大于0、小于图片高度的像素值。
+输入数字请大于0、小于图片高度的像素值。
 宽高比例（Width : Height）会简化为最简分数，即如果Width输入10、Height输入20，会简化为1：2。
 Width : Height建议取值在[1, 2.5]之间，超过这个范围可能会影响效果。
      * @param string $ImageUrl 图片URL地址。 

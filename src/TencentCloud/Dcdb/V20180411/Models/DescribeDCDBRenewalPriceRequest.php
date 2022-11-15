@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
  * @method integer getPeriod() 获取续费时长，单位：月。不传则默认为1个月。
  * @method void setPeriod(integer $Period) 设置续费时长，单位：月。不传则默认为1个月。
+ * @method string getAmountUnit() 获取价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+ * @method void setAmountUnit(string $AmountUnit) 设置价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
  */
 class DescribeDCDBRenewalPriceRequest extends AbstractModel
 {
@@ -38,8 +44,18 @@ class DescribeDCDBRenewalPriceRequest extends AbstractModel
     public $Period;
 
     /**
+     * @var string 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
+     */
+    public $AmountUnit;
+
+    /**
      * @param string $InstanceId 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param integer $Period 续费时长，单位：月。不传则默认为1个月。
+     * @param string $AmountUnit 价格金额单位，不传默认单位为分，取值：  
+* pent：分
+* microPent：微分
      */
     function __construct()
     {
@@ -60,6 +76,10 @@ class DescribeDCDBRenewalPriceRequest extends AbstractModel
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("AmountUnit",$param) and $param["AmountUnit"] !== null) {
+            $this->AmountUnit = $param["AmountUnit"];
         }
     }
 }

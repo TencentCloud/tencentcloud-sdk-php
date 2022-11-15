@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProxyGroupId() 获取代理组ID
  * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
+ * @method string getProxyAddressId() 获取代理组地址ID
+ * @method void setProxyAddressId(string $ProxyAddressId) 设置代理组地址ID
  */
 class ReloadBalanceProxyNodeRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ReloadBalanceProxyNodeRequest extends AbstractModel
     public $ProxyGroupId;
 
     /**
+     * @var string 代理组地址ID
+     */
+    public $ProxyAddressId;
+
+    /**
      * @param string $ProxyGroupId 代理组ID
+     * @param string $ProxyAddressId 代理组地址ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ReloadBalanceProxyNodeRequest extends AbstractModel
         }
         if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
             $this->ProxyGroupId = $param["ProxyGroupId"];
+        }
+
+        if (array_key_exists("ProxyAddressId",$param) and $param["ProxyAddressId"] !== null) {
+            $this->ProxyAddressId = $param["ProxyAddressId"];
         }
     }
 }

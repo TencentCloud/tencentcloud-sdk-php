@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBs(array $DBs) 设置多库备份时的DB列表
  * @method integer getStrategy() 获取备份策略（0-实例备份；1-多库备份）
  * @method void setStrategy(integer $Strategy) 设置备份策略（0-实例备份；1-多库备份）
- * @method integer getBackupWay() 获取备份方式，0-定时备份；1-手动临时备份
- * @method void setBackupWay(integer $BackupWay) 设置备份方式，0-定时备份；1-手动临时备份
+ * @method integer getBackupWay() 获取备份方式，0-定时备份；1-手动临时备份；2-定期备份
+ * @method void setBackupWay(integer $BackupWay) 设置备份方式，0-定时备份；1-手动临时备份；2-定期备份
  * @method string getBackupName() 获取备份任务名称，可自定义
  * @method void setBackupName(string $BackupName) 设置备份任务名称，可自定义
  * @method string getGroupId() 获取聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
@@ -108,7 +108,7 @@ class Backup extends AbstractModel
     public $Strategy;
 
     /**
-     * @var integer 备份方式，0-定时备份；1-手动临时备份
+     * @var integer 备份方式，0-定时备份；1-手动临时备份；2-定期备份
      */
     public $BackupWay;
 
@@ -153,7 +153,7 @@ class Backup extends AbstractModel
      * @param integer $Status 备份文件状态（0-创建中；1-成功；2-失败）
      * @param array $DBs 多库备份时的DB列表
      * @param integer $Strategy 备份策略（0-实例备份；1-多库备份）
-     * @param integer $BackupWay 备份方式，0-定时备份；1-手动临时备份
+     * @param integer $BackupWay 备份方式，0-定时备份；1-手动临时备份；2-定期备份
      * @param string $BackupName 备份任务名称，可自定义
      * @param string $GroupId 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
      * @param string $BackupFormat 备份文件形式（pkg-打包备份文件，single-单库备份文件）

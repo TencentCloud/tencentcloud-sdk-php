@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceObjectType(integer $SourceObjectType) 设置1.常量 2.离线表级 2.离线字段级
  * @method string getProjectId() 获取项目Id
  * @method void setProjectId(string $ProjectId) 设置项目Id
+ * @method array getSourceEngineTypes() 获取源端对应的引擎类型
+ * @method void setSourceEngineTypes(array $SourceEngineTypes) 设置源端对应的引擎类型
  */
 class DescribeRuleTemplatesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeRuleTemplatesRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var array 源端对应的引擎类型
+     */
+    public $SourceEngineTypes;
+
+    /**
      * @param integer $Type 模版类型 1.系统模版 2.自定义模版
      * @param integer $SourceObjectType 1.常量 2.离线表级 2.离线字段级
      * @param string $ProjectId 项目Id
+     * @param array $SourceEngineTypes 源端对应的引擎类型
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeRuleTemplatesRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("SourceEngineTypes",$param) and $param["SourceEngineTypes"] !== null) {
+            $this->SourceEngineTypes = $param["SourceEngineTypes"];
         }
     }
 }

@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupName(string $BackupName) 设置按照备份名称筛选，不填则不筛选此项
  * @method integer getStrategy() 获取按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项
  * @method void setStrategy(integer $Strategy) 设置按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项
- * @method integer getBackupWay() 获取按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
- * @method void setBackupWay(integer $BackupWay) 设置按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+ * @method integer getBackupWay() 获取按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，2-定期备份，不填则不筛选此项
+ * @method void setBackupWay(integer $BackupWay) 设置按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，2-定期备份，不填则不筛选此项
  * @method integer getBackupId() 获取按照备份ID筛选，不填则不筛选此项
  * @method void setBackupId(integer $BackupId) 设置按照备份ID筛选，不填则不筛选此项
  * @method string getDatabaseName() 获取按照备份的库名称筛选，不填则不筛选此项
@@ -85,7 +85,7 @@ class DescribeBackupsRequest extends AbstractModel
     public $Strategy;
 
     /**
-     * @var integer 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+     * @var integer 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，2-定期备份，不填则不筛选此项
      */
     public $BackupWay;
 
@@ -122,7 +122,7 @@ class DescribeBackupsRequest extends AbstractModel
      * @param integer $Offset 分页返回，页编号，默认值为第0页
      * @param string $BackupName 按照备份名称筛选，不填则不筛选此项
      * @param integer $Strategy 按照备份策略筛选，0-实例备份，1-多库备份，不填则不筛选此项
-     * @param integer $BackupWay 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，不填则不筛选此项
+     * @param integer $BackupWay 按照备份方式筛选，0-后台自动定时备份，1-用户手动临时备份，2-定期备份，不填则不筛选此项
      * @param integer $BackupId 按照备份ID筛选，不填则不筛选此项
      * @param string $DatabaseName 按照备份的库名称筛选，不填则不筛选此项
      * @param integer $Group 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示

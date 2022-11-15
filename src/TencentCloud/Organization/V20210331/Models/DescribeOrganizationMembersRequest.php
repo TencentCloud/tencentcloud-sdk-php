@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOrganizationMembers请求参数结构体
  *
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取限制数目
- * @method void setLimit(integer $Limit) 设置限制数目
+ * @method integer getOffset() 获取偏移量。
+ * @method void setOffset(integer $Offset) 设置偏移量。
+ * @method integer getLimit() 获取限制数目。最大50
+ * @method void setLimit(integer $Limit) 设置限制数目。最大50
  * @method string getLang() 获取国际站：en，国内站：zh
  * @method void setLang(string $Lang) 设置国际站：en，国内站：zh
- * @method string getSearchKey() 获取成员名或者成员ID搜索
- * @method void setSearchKey(string $SearchKey) 设置成员名或者成员ID搜索
- * @method string getAuthName() 获取主体名称
- * @method void setAuthName(string $AuthName) 设置主体名称
- * @method string getProduct() 获取集团服务（服务管理员查询时，必须指定）
- * @method void setProduct(string $Product) 设置集团服务（服务管理员查询时，必须指定）
+ * @method string getSearchKey() 获取成员名称或者成员ID搜索。
+ * @method void setSearchKey(string $SearchKey) 设置成员名称或者成员ID搜索。
+ * @method string getAuthName() 获取主体名称搜索。
+ * @method void setAuthName(string $AuthName) 设置主体名称搜索。
+ * @method string getProduct() 获取可信服务产品简称。可信服务管理员查询时必须指定
+ * @method void setProduct(string $Product) 设置可信服务产品简称。可信服务管理员查询时必须指定
  */
 class DescribeOrganizationMembersRequest extends AbstractModel
 {
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量。
      */
     public $Offset;
 
     /**
-     * @var integer 限制数目
+     * @var integer 限制数目。最大50
      */
     public $Limit;
 
@@ -51,27 +51,27 @@ class DescribeOrganizationMembersRequest extends AbstractModel
     public $Lang;
 
     /**
-     * @var string 成员名或者成员ID搜索
+     * @var string 成员名称或者成员ID搜索。
      */
     public $SearchKey;
 
     /**
-     * @var string 主体名称
+     * @var string 主体名称搜索。
      */
     public $AuthName;
 
     /**
-     * @var string 集团服务（服务管理员查询时，必须指定）
+     * @var string 可信服务产品简称。可信服务管理员查询时必须指定
      */
     public $Product;
 
     /**
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 限制数目
+     * @param integer $Offset 偏移量。
+     * @param integer $Limit 限制数目。最大50
      * @param string $Lang 国际站：en，国内站：zh
-     * @param string $SearchKey 成员名或者成员ID搜索
-     * @param string $AuthName 主体名称
-     * @param string $Product 集团服务（服务管理员查询时，必须指定）
+     * @param string $SearchKey 成员名称或者成员ID搜索。
+     * @param string $AuthName 主体名称搜索。
+     * @param string $Product 可信服务产品简称。可信服务管理员查询时必须指定
      */
     function __construct()
     {

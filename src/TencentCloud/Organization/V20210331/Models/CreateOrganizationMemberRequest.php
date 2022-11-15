@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOrganizationMember请求参数结构体
  *
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
- * @method string getPolicyType() 获取关系策略  取值：Financial
- * @method void setPolicyType(string $PolicyType) 设置关系策略  取值：Financial
- * @method array getPermissionIds() 获取关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
- * @method void setPermissionIds(array $PermissionIds) 设置关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
- * @method integer getNodeId() 获取成员所属部门的节点ID
- * @method void setNodeId(integer $NodeId) 设置成员所属部门的节点ID
- * @method string getAccountName() 获取账号名
- * @method void setAccountName(string $AccountName) 设置账号名
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
- * @method integer getRecordId() 获取重试创建传记录ID
- * @method void setRecordId(integer $RecordId) 设置重试创建传记录ID
- * @method string getPayUin() 获取代付者Uin
- * @method void setPayUin(string $PayUin) 设置代付者Uin
- * @method array getIdentityRoleID() 获取管理身份
- * @method void setIdentityRoleID(array $IdentityRoleID) 设置管理身份
- * @method integer getAuthRelationId() 获取主体关系ID
- * @method void setAuthRelationId(integer $AuthRelationId) 设置主体关系ID
+ * @method string getName() 获取成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+ * @method void setName(string $Name) 设置成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+ * @method string getPolicyType() 获取关系策略。取值：Financial
+ * @method void setPolicyType(string $PolicyType) 设置关系策略。取值：Financial
+ * @method array getPermissionIds() 获取成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费，1、2 默认必须
+ * @method void setPermissionIds(array $PermissionIds) 设置成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费，1、2 默认必须
+ * @method integer getNodeId() 获取成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
+ * @method void setNodeId(integer $NodeId) 设置成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
+ * @method string getAccountName() 获取账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+ * @method void setAccountName(string $AccountName) 设置账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+ * @method string getRemark() 获取备注。
+ * @method void setRemark(string $Remark) 设置备注。
+ * @method integer getRecordId() 获取成员创建记录ID。创建异常重试时需要
+ * @method void setRecordId(integer $RecordId) 设置成员创建记录ID。创建异常重试时需要
+ * @method string getPayUin() 获取代付者Uin。成员代付费时需要
+ * @method void setPayUin(string $PayUin) 设置代付者Uin。成员代付费时需要
+ * @method array getIdentityRoleID() 获取成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
+ * @method void setIdentityRoleID(array $IdentityRoleID) 设置成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
+ * @method integer getAuthRelationId() 获取认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
+ * @method void setAuthRelationId(integer $AuthRelationId) 设置认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
  */
 class CreateOrganizationMemberRequest extends AbstractModel
 {
     /**
-     * @var string 名称
+     * @var string 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
      */
     public $Name;
 
     /**
-     * @var string 关系策略  取值：Financial
+     * @var string 关系策略。取值：Financial
      */
     public $PolicyType;
 
     /**
-     * @var array 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
+     * @var array 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费，1、2 默认必须
      */
     public $PermissionIds;
 
     /**
-     * @var integer 成员所属部门的节点ID
+     * @var integer 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
      */
     public $NodeId;
 
     /**
-     * @var string 账号名
+     * @var string 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
      */
     public $AccountName;
 
     /**
-     * @var string 备注
+     * @var string 备注。
      */
     public $Remark;
 
     /**
-     * @var integer 重试创建传记录ID
+     * @var integer 成员创建记录ID。创建异常重试时需要
      */
     public $RecordId;
 
     /**
-     * @var string 代付者Uin
+     * @var string 代付者Uin。成员代付费时需要
      */
     public $PayUin;
 
     /**
-     * @var array 管理身份
+     * @var array 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
      */
     public $IdentityRoleID;
 
     /**
-     * @var integer 主体关系ID
+     * @var integer 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
      */
     public $AuthRelationId;
 
     /**
-     * @param string $Name 名称
-     * @param string $PolicyType 关系策略  取值：Financial
-     * @param array $PermissionIds 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
-     * @param integer $NodeId 成员所属部门的节点ID
-     * @param string $AccountName 账号名
-     * @param string $Remark 备注
-     * @param integer $RecordId 重试创建传记录ID
-     * @param string $PayUin 代付者Uin
-     * @param array $IdentityRoleID 管理身份
-     * @param integer $AuthRelationId 主体关系ID
+     * @param string $Name 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+     * @param string $PolicyType 关系策略。取值：Financial
+     * @param array $PermissionIds 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票、6-优惠继承、7-代付费，1、2 默认必须
+     * @param integer $NodeId 成员所属部门的节点ID。可以调用DescribeOrganizationNodes获取
+     * @param string $AccountName 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+     * @param string $Remark 备注。
+     * @param integer $RecordId 成员创建记录ID。创建异常重试时需要
+     * @param string $PayUin 代付者Uin。成员代付费时需要
+     * @param array $IdentityRoleID 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
+     * @param integer $AuthRelationId 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
      */
     function __construct()
     {

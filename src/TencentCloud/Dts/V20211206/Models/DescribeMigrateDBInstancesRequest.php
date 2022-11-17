@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method string getAccountMode() 获取资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
  * @method void setAccountMode(string $AccountMode) 设置资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
- * @method string getTmpSecretId() 获取临时秘钥Id，若为跨账号资源此项必填
- * @method void setTmpSecretId(string $TmpSecretId) 设置临时秘钥Id，若为跨账号资源此项必填
- * @method string getTmpSecretKey() 获取临时秘钥Key，若为跨账号资源此项必填
- * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时秘钥Key，若为跨账号资源此项必填
- * @method string getTmpToken() 获取临时秘钥Token，若为跨账号资源此项必填
- * @method void setTmpToken(string $TmpToken) 设置临时秘钥Token，若为跨账号资源此项必填
+ * @method string getTmpSecretId() 获取临时密钥Id，若为跨账号资源此项必填
+ * @method void setTmpSecretId(string $TmpSecretId) 设置临时密钥Id，若为跨账号资源此项必填
+ * @method string getTmpSecretKey() 获取临时密钥Key，若为跨账号资源此项必填
+ * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥Key，若为跨账号资源此项必填
+ * @method string getTmpToken() 获取临时密钥Token，若为跨账号资源此项必填
+ * @method void setTmpToken(string $TmpToken) 设置临时密钥Token，若为跨账号资源此项必填
  */
 class DescribeMigrateDBInstancesRequest extends AbstractModel
 {
@@ -79,17 +79,17 @@ class DescribeMigrateDBInstancesRequest extends AbstractModel
     public $AccountMode;
 
     /**
-     * @var string 临时秘钥Id，若为跨账号资源此项必填
+     * @var string 临时密钥Id，若为跨账号资源此项必填
      */
     public $TmpSecretId;
 
     /**
-     * @var string 临时秘钥Key，若为跨账号资源此项必填
+     * @var string 临时密钥Key，若为跨账号资源此项必填
      */
     public $TmpSecretKey;
 
     /**
-     * @var string 临时秘钥Token，若为跨账号资源此项必填
+     * @var string 临时密钥Token，若为跨账号资源此项必填
      */
     public $TmpToken;
 
@@ -101,9 +101,9 @@ class DescribeMigrateDBInstancesRequest extends AbstractModel
      * @param integer $Limit 返回数量限制
      * @param integer $Offset 偏移量
      * @param string $AccountMode 资源所属账号 为空值或self(表示本账号内资源)、other(表示其他账户资源)
-     * @param string $TmpSecretId 临时秘钥Id，若为跨账号资源此项必填
-     * @param string $TmpSecretKey 临时秘钥Key，若为跨账号资源此项必填
-     * @param string $TmpToken 临时秘钥Token，若为跨账号资源此项必填
+     * @param string $TmpSecretId 临时密钥Id，若为跨账号资源此项必填
+     * @param string $TmpSecretKey 临时密钥Key，若为跨账号资源此项必填
+     * @param string $TmpToken 临时密钥Token，若为跨账号资源此项必填
      */
     function __construct()
     {

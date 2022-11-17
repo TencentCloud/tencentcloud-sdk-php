@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArgs(string $Args) 设置容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getContainerImageAccelerate() 获取镜像加速开关，默认False
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContainerImageAccelerate(boolean $ContainerImageAccelerate) 设置镜像加速开关，默认False
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageConfig extends AbstractModel
 {
@@ -78,6 +82,12 @@ class ImageConfig extends AbstractModel
     public $Args;
 
     /**
+     * @var boolean 镜像加速开关，默认False
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContainerImageAccelerate;
+
+    /**
      * @param string $ImageType 镜像仓库类型，个人版或者企业版：personal/enterprise
      * @param string $ImageUri {domain}/{namespace}/{imageName}:{tag}@{digest}
      * @param string $RegistryId 用于企业版TCR获取镜像拉取临时凭证，ImageType为"enterprise"时必填
@@ -87,6 +97,8 @@ class ImageConfig extends AbstractModel
      * @param string $Command 容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Args 容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ContainerImageAccelerate 镜像加速开关，默认False
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -124,6 +136,10 @@ class ImageConfig extends AbstractModel
 
         if (array_key_exists("Args",$param) and $param["Args"] !== null) {
             $this->Args = $param["Args"];
+        }
+
+        if (array_key_exists("ContainerImageAccelerate",$param) and $param["ContainerImageAccelerate"] !== null) {
+            $this->ContainerImageAccelerate = $param["ContainerImageAccelerate"];
         }
     }
 }

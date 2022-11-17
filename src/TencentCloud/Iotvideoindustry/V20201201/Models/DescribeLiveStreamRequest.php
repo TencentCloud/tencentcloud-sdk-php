@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLiveChannelId() 获取频道ID
  * @method void setLiveChannelId(string $LiveChannelId) 设置频道ID
- * @method integer getExpireTime() 获取过期时间
- * @method void setExpireTime(integer $ExpireTime) 设置过期时间
+ * @method integer getExpireTime() 获取过期时间 秒级unix时间戳
+ * @method void setExpireTime(integer $ExpireTime) 设置过期时间 秒级unix时间戳
  */
 class DescribeLiveStreamRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeLiveStreamRequest extends AbstractModel
     public $LiveChannelId;
 
     /**
-     * @var integer 过期时间
+     * @var integer 过期时间 秒级unix时间戳
      */
     public $ExpireTime;
 
     /**
      * @param string $LiveChannelId 频道ID
-     * @param integer $ExpireTime 过期时间
+     * @param integer $ExpireTime 过期时间 秒级unix时间戳
      */
     function __construct()
     {

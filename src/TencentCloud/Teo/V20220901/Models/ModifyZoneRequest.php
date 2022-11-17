@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li> partial：CNAME 接入。</li>不填写保持原有配置。
  * @method VanityNameServers getVanityNameServers() 获取自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
  * @method void setVanityNameServers(VanityNameServers $VanityNameServers) 设置自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
+ * @method string getAliasZoneName() 获取站点别名。数字、英文、-和_组合，限制20个字符。
+ * @method void setAliasZoneName(string $AliasZoneName) 设置站点别名。数字、英文、-和_组合，限制20个字符。
  */
 class ModifyZoneRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ class ModifyZoneRequest extends AbstractModel
     public $VanityNameServers;
 
     /**
+     * @var string 站点别名。数字、英文、-和_组合，限制20个字符。
+     */
+    public $AliasZoneName;
+
+    /**
      * @param string $ZoneId 站点 ID。
      * @param string $Type 站点接入方式，取值有：
 <li> full：NS 接入；</li>
 <li> partial：CNAME 接入。</li>不填写保持原有配置。
      * @param VanityNameServers $VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
+     * @param string $AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
      */
     function __construct()
     {
@@ -81,6 +89,10 @@ class ModifyZoneRequest extends AbstractModel
         if (array_key_exists("VanityNameServers",$param) and $param["VanityNameServers"] !== null) {
             $this->VanityNameServers = new VanityNameServers();
             $this->VanityNameServers->deserialize($param["VanityNameServers"]);
+        }
+
+        if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
+            $this->AliasZoneName = $param["AliasZoneName"];
         }
     }
 }

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllowDuplicates(boolean $AllowDuplicates) 设置是否允许重复接入。
 <li> true：允许重复接入；</li>
 <li> false：不允许重复接入。</li>不填写使用默认值false。
+ * @method string getAliasZoneName() 获取站点别名。数字、英文、-和_组合，限制20个字符。
+ * @method void setAliasZoneName(string $AliasZoneName) 设置站点别名。数字、英文、-和_组合，限制20个字符。
  */
 class CreateZoneRequest extends AbstractModel
 {
@@ -71,6 +73,11 @@ class CreateZoneRequest extends AbstractModel
     public $AllowDuplicates;
 
     /**
+     * @var string 站点别名。数字、英文、-和_组合，限制20个字符。
+     */
+    public $AliasZoneName;
+
+    /**
      * @param string $ZoneName 站点名称。
      * @param string $Type 接入方式，取值有：
 <li> full：NS接入；</li>
@@ -80,6 +87,7 @@ class CreateZoneRequest extends AbstractModel
      * @param boolean $AllowDuplicates 是否允许重复接入。
 <li> true：允许重复接入；</li>
 <li> false：不允许重复接入。</li>不填写使用默认值false。
+     * @param string $AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
      */
     function __construct()
     {
@@ -117,6 +125,10 @@ class CreateZoneRequest extends AbstractModel
 
         if (array_key_exists("AllowDuplicates",$param) and $param["AllowDuplicates"] !== null) {
             $this->AllowDuplicates = $param["AllowDuplicates"];
+        }
+
+        if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
+            $this->AliasZoneName = $param["AliasZoneName"];
         }
     }
 }

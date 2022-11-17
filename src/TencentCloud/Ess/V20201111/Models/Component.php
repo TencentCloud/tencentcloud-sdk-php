@@ -28,7 +28,8 @@ FILL_IMAGE - 图片控件；
 DYNAMIC_TABLE - 动态表格控件；
 ATTACHMENT - 附件控件；
 SELECTOR - 选择器控件；
-DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+DISTRICT - 省市区行政区划控件；
 
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
@@ -47,7 +48,8 @@ FILL_IMAGE - 图片控件；
 DYNAMIC_TABLE - 动态表格控件；
 ATTACHMENT - 附件控件；
 SELECTOR - 选择器控件；
-DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+DISTRICT - 省市区行政区划控件；
 
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
@@ -77,6 +79,12 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
  * @method boolean getComponentRequired() 获取是否必选，默认为false
  * @method void setComponentRequired(boolean $ComponentRequired) 设置是否必选，默认为false
  * @method string getComponentExtra() 获取扩展参数：
+为JSON格式。
+
+ComponentType为FILL_IMAGE时，支持以下参数：
+NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+
 ComponentType为SIGN_SIGNATURE类型可以控制签署方式
 {“ComponentTypeLimit”: [“xxx”]}
 xxx可以为：
@@ -86,6 +94,12 @@ OCR_ESIGN -- AI智能识别手写签名
 ESIGN -- 个人印章类型
 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
  * @method void setComponentExtra(string $ComponentExtra) 设置扩展参数：
+为JSON格式。
+
+ComponentType为FILL_IMAGE时，支持以下参数：
+NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+
 ComponentType为SIGN_SIGNATURE类型可以控制签署方式
 {“ComponentTypeLimit”: [“xxx”]}
 xxx可以为：
@@ -130,6 +144,14 @@ KEYWORD 关键字，使用ComponentId指定关键字
  * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量，单位pt
  * @method float getOffsetY() 获取指定关键字时纵坐标偏移量，单位pt
  * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量，单位pt
+ * @method string getKeywordOrder() 获取指定关键字排序规则
+ * @method void setKeywordOrder(string $KeywordOrder) 设置指定关键字排序规则
+ * @method integer getKeywordPage() 获取指定关键字页码
+ * @method void setKeywordPage(integer $KeywordPage) 设置指定关键字页码
+ * @method string getRelativeLocation() 获取关键字位置模式
+ * @method void setRelativeLocation(string $RelativeLocation) 设置关键字位置模式
+ * @method array getKeywordIndexes() 获取关键字索引
+ * @method void setKeywordIndexes(array $KeywordIndexes) 设置关键字索引
  */
 class Component extends AbstractModel
 {
@@ -142,7 +164,8 @@ FILL_IMAGE - 图片控件；
 DYNAMIC_TABLE - 动态表格控件；
 ATTACHMENT - 附件控件；
 SELECTOR - 选择器控件；
-DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+DISTRICT - 省市区行政区划控件；
 
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
@@ -203,6 +226,12 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
 
     /**
      * @var string 扩展参数：
+为JSON格式。
+
+ComponentType为FILL_IMAGE时，支持以下参数：
+NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+
 ComponentType为SIGN_SIGNATURE类型可以控制签署方式
 {“ComponentTypeLimit”: [“xxx”]}
 xxx可以为：
@@ -261,6 +290,26 @@ KEYWORD 关键字，使用ComponentId指定关键字
     public $OffsetY;
 
     /**
+     * @var string 指定关键字排序规则
+     */
+    public $KeywordOrder;
+
+    /**
+     * @var integer 指定关键字页码
+     */
+    public $KeywordPage;
+
+    /**
+     * @var string 关键字位置模式
+     */
+    public $RelativeLocation;
+
+    /**
+     * @var array 关键字索引
+     */
+    public $KeywordIndexes;
+
+    /**
      * @param string $ComponentType 如果是Component控件类型，则可选的字段为：
 TEXT - 普通文本控件；
 MULTI_LINE_TEXT - 多行文本控件；
@@ -269,7 +318,8 @@ FILL_IMAGE - 图片控件；
 DYNAMIC_TABLE - 动态表格控件；
 ATTACHMENT - 附件控件；
 SELECTOR - 选择器控件；
-DATE - 日期控件；默认是格式化为xxxx年xx月xx日
+DATE - 日期控件；默认是格式化为xxxx年xx月xx日；
+DISTRICT - 省市区行政区划控件；
 
 如果是SignComponent控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
@@ -290,6 +340,12 @@ SIGN_PAGING_SEAL - 骑缝章；若文件发起，需要对应填充ComponentPosY
      * @param string $ComponentName GenerateMode==FIELD 指定表单域名称
      * @param boolean $ComponentRequired 是否必选，默认为false
      * @param string $ComponentExtra 扩展参数：
+为JSON格式。
+
+ComponentType为FILL_IMAGE时，支持以下参数：
+NotMakeImageCenter：bool。是否设置图片居中。false：居中（默认）。 true: 不居中
+FillMethod: int. 填充方式。0-铺满（默认）；1-等比例缩放
+
 ComponentType为SIGN_SIGNATURE类型可以控制签署方式
 {“ComponentTypeLimit”: [“xxx”]}
 xxx可以为：
@@ -316,6 +372,10 @@ KEYWORD 关键字，使用ComponentId指定关键字
      * @param integer $ComponentDateFontSize 日期控件类型字号
      * @param float $OffsetX 指定关键字时横坐标偏移量，单位pt
      * @param float $OffsetY 指定关键字时纵坐标偏移量，单位pt
+     * @param string $KeywordOrder 指定关键字排序规则
+     * @param integer $KeywordPage 指定关键字页码
+     * @param string $RelativeLocation 关键字位置模式
+     * @param array $KeywordIndexes 关键字索引
      */
     function __construct()
     {
@@ -400,6 +460,22 @@ KEYWORD 关键字，使用ComponentId指定关键字
 
         if (array_key_exists("OffsetY",$param) and $param["OffsetY"] !== null) {
             $this->OffsetY = $param["OffsetY"];
+        }
+
+        if (array_key_exists("KeywordOrder",$param) and $param["KeywordOrder"] !== null) {
+            $this->KeywordOrder = $param["KeywordOrder"];
+        }
+
+        if (array_key_exists("KeywordPage",$param) and $param["KeywordPage"] !== null) {
+            $this->KeywordPage = $param["KeywordPage"];
+        }
+
+        if (array_key_exists("RelativeLocation",$param) and $param["RelativeLocation"] !== null) {
+            $this->RelativeLocation = $param["RelativeLocation"];
+        }
+
+        if (array_key_exists("KeywordIndexes",$param) and $param["KeywordIndexes"] !== null) {
+            $this->KeywordIndexes = $param["KeywordIndexes"];
         }
     }
 }

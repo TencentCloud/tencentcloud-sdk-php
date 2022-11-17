@@ -76,9 +76,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientRemark(string $ClientRemark) 设置客户备注
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getActionType() 获取订单操作类型，purchase（新购），renew（续费），modify（配置变更）
+ * @method string getActionType() 获取订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费"
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setActionType(string $ActionType) 设置订单操作类型，purchase（新购），renew（续费），modify（配置变更）
+ * @method void setActionType(string $ActionType) 设置订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费"
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVoucherDecline() 获取代金券抵扣金额，单位分
 注意：此字段可能返回 null，表示取不到有效值。
@@ -220,7 +220,7 @@ class AgentDealNewElem extends AbstractModel
     public $ClientRemark;
 
     /**
-     * @var string 订单操作类型，purchase（新购），renew（续费），modify（配置变更）
+     * @var string 订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
@@ -320,7 +320,7 @@ class AgentDealNewElem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientRemark 客户备注
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ActionType 订单操作类型，purchase（新购），renew（续费），modify（配置变更）
+     * @param string $ActionType 订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费"
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VoucherDecline 代金券抵扣金额，单位分
 注意：此字段可能返回 null，表示取不到有效值。

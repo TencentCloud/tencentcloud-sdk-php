@@ -96,13 +96,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountRole(string $AccountRole) 设置跨账号同步时的角色，只允许[a-zA-Z0-9\-\_]+，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTmpSecretId() 获取临时秘钥Id，如果为跨账号实例此项必填
+ * @method string getTmpSecretId() 获取临时密钥Id，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTmpSecretId(string $TmpSecretId) 设置临时秘钥Id，如果为跨账号实例此项必填
+ * @method void setTmpSecretId(string $TmpSecretId) 设置临时密钥Id，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTmpSecretKey() 获取临时秘钥Key，如果为跨账号实例此项必填
+ * @method string getTmpSecretKey() 获取临时密钥Key，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时秘钥Key，如果为跨账号实例此项必填
+ * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥Key，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTmpToken() 获取临时Token，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
@@ -226,13 +226,13 @@ class Endpoint extends AbstractModel
     public $AccountRole;
 
     /**
-     * @var string 临时秘钥Id，如果为跨账号实例此项必填
+     * @var string 临时密钥Id，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TmpSecretId;
 
     /**
-     * @var string 临时秘钥Key，如果为跨账号实例此项必填
+     * @var string 临时密钥Key，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TmpSecretKey;
@@ -282,9 +282,9 @@ class Endpoint extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccountRole 跨账号同步时的角色，只允许[a-zA-Z0-9\-\_]+，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TmpSecretId 临时秘钥Id，如果为跨账号实例此项必填
+     * @param string $TmpSecretId 临时密钥Id，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TmpSecretKey 临时秘钥Key，如果为跨账号实例此项必填
+     * @param string $TmpSecretKey 临时密钥Key，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpToken 临时Token，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。

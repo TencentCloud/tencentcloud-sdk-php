@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinBitrate(integer $MinBitrate) 设置单位Mbps，动态调整最小码率建议值，会按实际情况调整
  * @method integer getFps() 获取帧率，可设置为30、45、60、90、120、144
  * @method void setFps(integer $Fps) 设置帧率，可设置为30、45、60、90、120、144
- * @method string getUserIp() 获取【已废弃】只在TrylockWorker时生效
- * @method void setUserIp(string $UserIp) 设置【已废弃】只在TrylockWorker时生效
+ * @method string getUserIp() 获取【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
+ * @method void setUserIp(string $UserIp) 设置【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
  * @method integer getOptimization() 获取【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
  * @method void setOptimization(integer $Optimization) 设置【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
  * @method string getHostUserId() 获取【互动云游】游戏主机用户ID
@@ -124,7 +124,7 @@ class CreateSessionRequest extends AbstractModel
     public $Fps;
 
     /**
-     * @var string 【已废弃】只在TrylockWorker时生效
+     * @var string 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
      */
     public $UserIp;
 
@@ -168,7 +168,7 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
      * @param integer $MaxBitrate 单位Mbps，动态调整最大码率建议值，会按实际情况调整
      * @param integer $MinBitrate 单位Mbps，动态调整最小码率建议值，会按实际情况调整
      * @param integer $Fps 帧率，可设置为30、45、60、90、120、144
-     * @param string $UserIp 【已废弃】只在TrylockWorker时生效
+     * @param string $UserIp 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
      * @param integer $Optimization 【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
      * @param string $HostUserId 【互动云游】游戏主机用户ID
      * @param string $Role 【互动云游】角色；Player表示玩家；Viewer表示观察者

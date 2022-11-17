@@ -78,6 +78,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationDuration(OperationDuration $OperationDuration) 设置可维护时间段
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCpuNum() 获取CPU数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCpuNum(integer $CpuNum) 设置CPU数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagList() 获取实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagList(array $TagList) 设置实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMemSize() 获取内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemSize(integer $MemSize) 设置内存大小
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogstashInstanceInfo extends AbstractModel
 {
@@ -215,6 +227,24 @@ class LogstashInstanceInfo extends AbstractModel
     public $OperationDuration;
 
     /**
+     * @var integer CPU数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CpuNum;
+
+    /**
+     * @var array 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagList;
+
+    /**
+     * @var integer 内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemSize;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -243,6 +273,12 @@ class LogstashInstanceInfo extends AbstractModel
      * @param array $ExtendedFiles 扩展文件列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationDuration $OperationDuration 可维护时间段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CpuNum CPU数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagList 实例标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MemSize 内存大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -371,6 +407,23 @@ class LogstashInstanceInfo extends AbstractModel
         if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
             $this->OperationDuration = new OperationDuration();
             $this->OperationDuration->deserialize($param["OperationDuration"]);
+        }
+
+        if (array_key_exists("CpuNum",$param) and $param["CpuNum"] !== null) {
+            $this->CpuNum = $param["CpuNum"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
+        }
+
+        if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
+            $this->MemSize = $param["MemSize"];
         }
     }
 }

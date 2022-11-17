@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBizId(integer $BizId) 设置应用 ID，登录控制台创建应用得到的AppID
  * @method string getTextUrl() 获取文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
  * @method void setTextUrl(string $TextUrl) 设置文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
+ * @method string getModelName() 获取模型名称，名称长度不超过36，默认为BizId。
+ * @method void setModelName(string $ModelName) 设置模型名称，名称长度不超过36，默认为BizId。
  */
 class CreateCustomizationRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateCustomizationRequest extends AbstractModel
     public $TextUrl;
 
     /**
+     * @var string 模型名称，名称长度不超过36，默认为BizId。
+     */
+    public $ModelName;
+
+    /**
      * @param integer $BizId 应用 ID，登录控制台创建应用得到的AppID
      * @param string $TextUrl 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
+     * @param string $ModelName 模型名称，名称长度不超过36，默认为BizId。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateCustomizationRequest extends AbstractModel
 
         if (array_key_exists("TextUrl",$param) and $param["TextUrl"] !== null) {
             $this->TextUrl = $param["TextUrl"];
+        }
+
+        if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
+            $this->ModelName = $param["ModelName"];
         }
     }
 }

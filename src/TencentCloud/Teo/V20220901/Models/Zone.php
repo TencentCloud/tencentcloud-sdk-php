@@ -82,6 +82,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVanityNameServersIps(array $VanityNameServersIps) 设置用户自定义 NS IP 信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getActiveStatus() 获取展示状态，取值有：
+<li> active：已启用；</li>
+<li> inactive：未生效；</li>
+<li> paused：已停用。</li>
+ * @method void setActiveStatus(string $ActiveStatus) 设置展示状态，取值有：
+<li> active：已启用；</li>
+<li> inactive：未生效；</li>
+<li> paused：已停用。</li>
+ * @method string getAliasZoneName() 获取站点别名。数字、英文、-和_组合，限制20个字符。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAliasZoneName(string $AliasZoneName) 设置站点别名。数字、英文、-和_组合，限制20个字符。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Zone extends AbstractModel
 {
@@ -181,6 +193,20 @@ class Zone extends AbstractModel
     public $VanityNameServersIps;
 
     /**
+     * @var string 展示状态，取值有：
+<li> active：已启用；</li>
+<li> inactive：未生效；</li>
+<li> paused：已停用。</li>
+     */
+    public $ActiveStatus;
+
+    /**
+     * @var string 站点别名。数字、英文、-和_组合，限制20个字符。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AliasZoneName;
+
+    /**
      * @param string $ZoneId 站点ID。
      * @param string $ZoneName 站点名称。
      * @param array $OriginalNameServers 站点当前使用的 NS 列表。
@@ -211,6 +237,12 @@ class Zone extends AbstractModel
      * @param VanityNameServers $VanityNameServers 用户自定义 NS 信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VanityNameServersIps 用户自定义 NS IP 信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ActiveStatus 展示状态，取值有：
+<li> active：已启用；</li>
+<li> inactive：未生效；</li>
+<li> paused：已停用。</li>
+     * @param string $AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -304,6 +336,14 @@ class Zone extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VanityNameServersIps, $obj);
             }
+        }
+
+        if (array_key_exists("ActiveStatus",$param) and $param["ActiveStatus"] !== null) {
+            $this->ActiveStatus = $param["ActiveStatus"];
+        }
+
+        if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
+            $this->AliasZoneName = $param["AliasZoneName"];
         }
     }
 }

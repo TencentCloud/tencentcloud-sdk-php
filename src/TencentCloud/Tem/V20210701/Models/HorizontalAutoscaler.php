@@ -24,12 +24,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinReplicas(integer $MinReplicas) 设置最小实例数（可以不传）
  * @method integer getMaxReplicas() 获取最大实例数（可以不传）
  * @method void setMaxReplicas(integer $MaxReplicas) 设置最大实例数（可以不传）
- * @method string getMetrics() 获取指标度量（CPU or MEMORY）
- * @method void setMetrics(string $Metrics) 设置指标度量（CPU or MEMORY）
- * @method integer getThreshold() 获取阈值（百分比）
- * @method void setThreshold(integer $Threshold) 设置阈值（百分比）
+ * @method string getMetrics() 获取指标度量
+CPU（CPU使用率，%）
+MEMORY（内存使用率，%）
+CPU_CORE_USED（CPU使用量，core）
+MEMORY_SIZE_USED(内存使用量，MiB)
+NETWORK_BANDWIDTH_RECEIVE(网络入带宽，MBps)
+NETWORK_BANDWIDTH_TRANSMIT(网络出带宽，MBps)
+NETWORK_TRAFFIC_RECEIVE(网络入流量，MiB/s)
+NETWORK_TRAFFIC_TRANSMIT(网络出流量，MiB/s)
+NETWORK_PACKETS_RECEIVE(网络入包量，Count/s)
+NETWORK_PACKETS_TRANSMIT(网络出包量，Count/s)
+FS_IOPS_WRITE(磁盘写次数，Count/s)
+FS_IOPS_READ(磁盘读次数，Count/s)
+FS_SIZE_WRITE(磁盘写大小，MiB/s)
+FS_SIZE_READ(磁盘读大小，MiB/s)
+ * @method void setMetrics(string $Metrics) 设置指标度量
+CPU（CPU使用率，%）
+MEMORY（内存使用率，%）
+CPU_CORE_USED（CPU使用量，core）
+MEMORY_SIZE_USED(内存使用量，MiB)
+NETWORK_BANDWIDTH_RECEIVE(网络入带宽，MBps)
+NETWORK_BANDWIDTH_TRANSMIT(网络出带宽，MBps)
+NETWORK_TRAFFIC_RECEIVE(网络入流量，MiB/s)
+NETWORK_TRAFFIC_TRANSMIT(网络出流量，MiB/s)
+NETWORK_PACKETS_RECEIVE(网络入包量，Count/s)
+NETWORK_PACKETS_TRANSMIT(网络出包量，Count/s)
+FS_IOPS_WRITE(磁盘写次数，Count/s)
+FS_IOPS_READ(磁盘读次数，Count/s)
+FS_SIZE_WRITE(磁盘写大小，MiB/s)
+FS_SIZE_READ(磁盘读大小，MiB/s)
+ * @method integer getThreshold() 获取阈值（整数）
+ * @method void setThreshold(integer $Threshold) 设置阈值（整数）
  * @method boolean getEnabled() 获取是否启用
  * @method void setEnabled(boolean $Enabled) 设置是否启用
+ * @method float getDoubleThreshold() 获取阈值（小数，优先使用）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDoubleThreshold(float $DoubleThreshold) 设置阈值（小数，优先使用）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HorizontalAutoscaler extends AbstractModel
 {
@@ -44,12 +76,26 @@ class HorizontalAutoscaler extends AbstractModel
     public $MaxReplicas;
 
     /**
-     * @var string 指标度量（CPU or MEMORY）
+     * @var string 指标度量
+CPU（CPU使用率，%）
+MEMORY（内存使用率，%）
+CPU_CORE_USED（CPU使用量，core）
+MEMORY_SIZE_USED(内存使用量，MiB)
+NETWORK_BANDWIDTH_RECEIVE(网络入带宽，MBps)
+NETWORK_BANDWIDTH_TRANSMIT(网络出带宽，MBps)
+NETWORK_TRAFFIC_RECEIVE(网络入流量，MiB/s)
+NETWORK_TRAFFIC_TRANSMIT(网络出流量，MiB/s)
+NETWORK_PACKETS_RECEIVE(网络入包量，Count/s)
+NETWORK_PACKETS_TRANSMIT(网络出包量，Count/s)
+FS_IOPS_WRITE(磁盘写次数，Count/s)
+FS_IOPS_READ(磁盘读次数，Count/s)
+FS_SIZE_WRITE(磁盘写大小，MiB/s)
+FS_SIZE_READ(磁盘读大小，MiB/s)
      */
     public $Metrics;
 
     /**
-     * @var integer 阈值（百分比）
+     * @var integer 阈值（整数）
      */
     public $Threshold;
 
@@ -59,11 +105,33 @@ class HorizontalAutoscaler extends AbstractModel
     public $Enabled;
 
     /**
+     * @var float 阈值（小数，优先使用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DoubleThreshold;
+
+    /**
      * @param integer $MinReplicas 最小实例数（可以不传）
      * @param integer $MaxReplicas 最大实例数（可以不传）
-     * @param string $Metrics 指标度量（CPU or MEMORY）
-     * @param integer $Threshold 阈值（百分比）
+     * @param string $Metrics 指标度量
+CPU（CPU使用率，%）
+MEMORY（内存使用率，%）
+CPU_CORE_USED（CPU使用量，core）
+MEMORY_SIZE_USED(内存使用量，MiB)
+NETWORK_BANDWIDTH_RECEIVE(网络入带宽，MBps)
+NETWORK_BANDWIDTH_TRANSMIT(网络出带宽，MBps)
+NETWORK_TRAFFIC_RECEIVE(网络入流量，MiB/s)
+NETWORK_TRAFFIC_TRANSMIT(网络出流量，MiB/s)
+NETWORK_PACKETS_RECEIVE(网络入包量，Count/s)
+NETWORK_PACKETS_TRANSMIT(网络出包量，Count/s)
+FS_IOPS_WRITE(磁盘写次数，Count/s)
+FS_IOPS_READ(磁盘读次数，Count/s)
+FS_SIZE_WRITE(磁盘写大小，MiB/s)
+FS_SIZE_READ(磁盘读大小，MiB/s)
+     * @param integer $Threshold 阈值（整数）
      * @param boolean $Enabled 是否启用
+     * @param float $DoubleThreshold 阈值（小数，优先使用）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +164,10 @@ class HorizontalAutoscaler extends AbstractModel
 
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("DoubleThreshold",$param) and $param["DoubleThreshold"] !== null) {
+            $this->DoubleThreshold = $param["DoubleThreshold"];
         }
     }
 }

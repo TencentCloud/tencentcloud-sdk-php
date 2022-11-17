@@ -88,13 +88,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountMode(string $AccountMode) 设置资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTmpSecretId() 获取临时秘钥Id
+ * @method string getTmpSecretId() 获取临时密钥Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTmpSecretId(string $TmpSecretId) 设置临时秘钥Id
+ * @method void setTmpSecretId(string $TmpSecretId) 设置临时密钥Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTmpSecretKey() 获取临时秘钥Key
+ * @method string getTmpSecretKey() 获取临时密钥Key
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时秘钥Key
+ * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥Key
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTmpToken() 获取临时Token
 注意：此字段可能返回 null，表示取不到有效值。
@@ -206,13 +206,13 @@ class DBInfo extends AbstractModel
     public $AccountMode;
 
     /**
-     * @var string 临时秘钥Id
+     * @var string 临时密钥Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TmpSecretId;
 
     /**
-     * @var string 临时秘钥Key
+     * @var string 临时密钥Key
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TmpSecretKey;
@@ -258,9 +258,9 @@ class DBInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccountMode 资源所属账号 为空或self(表示本账号内资源)、other(表示其他账户资源)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TmpSecretId 临时秘钥Id
+     * @param string $TmpSecretId 临时密钥Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TmpSecretKey 临时秘钥Key
+     * @param string $TmpSecretKey 临时密钥Key
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpToken 临时Token
 注意：此字段可能返回 null，表示取不到有效值。

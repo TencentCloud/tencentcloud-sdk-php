@@ -115,6 +115,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeBashRulesResponse DescribeBashRules(Models\DescribeBashRulesRequest $req) 获取高危命令规则列表
  * @method Models\DescribeBruteAttackListResponse DescribeBruteAttackList(Models\DescribeBruteAttackListRequest $req) 获取密码破解列表
  * @method Models\DescribeBruteAttackRulesResponse DescribeBruteAttackRules(Models\DescribeBruteAttackRulesRequest $req) 获取爆破破解规则
+ * @method Models\DescribeClientExceptionResponse DescribeClientException(Models\DescribeClientExceptionRequest $req) 获取客户端异常事件
  * @method Models\DescribeComponentStatisticsResponse DescribeComponentStatistics(Models\DescribeComponentStatisticsRequest $req) 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
  * @method Models\DescribeESAggregationsResponse DescribeESAggregations(Models\DescribeESAggregationsRequest $req) 获取ES字段聚合结果
  * @method Models\DescribeEmergencyResponseListResponse DescribeEmergencyResponseList(Models\DescribeEmergencyResponseListRequest $req) 专家服务-应急响应列表

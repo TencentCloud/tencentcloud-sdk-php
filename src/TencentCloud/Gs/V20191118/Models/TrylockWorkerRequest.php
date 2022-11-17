@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGameRegion(string $GameRegion) 设置游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等，如果不为空，优先按照该区域进行调度分配机器
  * @method integer getSetNo() 获取【废弃】资源池编号
  * @method void setSetNo(integer $SetNo) 设置【废弃】资源池编号
- * @method string getUserIp() 获取【必选】用户IP，用于就近调度，不填将严重影响用户体验
- * @method void setUserIp(string $UserIp) 设置【必选】用户IP，用于就近调度，不填将严重影响用户体验
+ * @method string getUserIp() 获取【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
+ * @method void setUserIp(string $UserIp) 设置【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
  * @method string getGroupId() 获取分组ID
  * @method void setGroupId(string $GroupId) 设置分组ID
  */
@@ -56,7 +56,7 @@ class TrylockWorkerRequest extends AbstractModel
     public $SetNo;
 
     /**
-     * @var string 【必选】用户IP，用于就近调度，不填将严重影响用户体验
+     * @var string 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
      */
     public $UserIp;
 
@@ -70,7 +70,7 @@ class TrylockWorkerRequest extends AbstractModel
      * @param string $GameId 游戏ID
      * @param string $GameRegion 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing等，如果不为空，优先按照该区域进行调度分配机器
      * @param integer $SetNo 【废弃】资源池编号
-     * @param string $UserIp 【必选】用户IP，用于就近调度，不填将严重影响用户体验
+     * @param string $UserIp 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
      * @param string $GroupId 分组ID
      */
     function __construct()

@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Teo\V20220901\Models as Models;
 
 /**
+ * @method Models\BindZoneToPlanResponse BindZoneToPlan(Models\BindZoneToPlanRequest $req) 将未绑定套餐的站点绑定到已有套餐
  * @method Models\CheckCertificateResponse CheckCertificate(Models\CheckCertificateRequest $req) 校验证书
  * @method Models\CreateAliasDomainResponse CreateAliasDomain(Models\CreateAliasDomainRequest $req) 创建别称域名。
  * @method Models\CreateApplicationProxyResponse CreateApplicationProxy(Models\CreateApplicationProxyRequest $req) 创建应用代理

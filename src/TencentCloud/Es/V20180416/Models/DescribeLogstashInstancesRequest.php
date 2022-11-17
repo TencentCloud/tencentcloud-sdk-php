@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(integer $OrderByType) 设置排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
  * @method array getVpcIds() 获取VpcId 筛选项
  * @method void setVpcIds(array $VpcIds) 设置VpcId 筛选项
+ * @method array getTagList() 获取标签信息列表
+ * @method void setTagList(array $TagList) 设置标签信息列表
  */
 class DescribeLogstashInstancesRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeLogstashInstancesRequest extends AbstractModel
     public $VpcIds;
 
     /**
+     * @var array 标签信息列表
+     */
+    public $TagList;
+
+    /**
      * @param string $Zone 实例所属可用区，不传则默认所有可用区
      * @param array $InstanceIds 实例ID列表
      * @param array $InstanceNames 实例名称列表
@@ -88,6 +95,7 @@ class DescribeLogstashInstancesRequest extends AbstractModel
      * @param integer $OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      * @param integer $OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      * @param array $VpcIds VpcId 筛选项
+     * @param array $TagList 标签信息列表
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class DescribeLogstashInstancesRequest extends AbstractModel
 
         if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
             $this->VpcIds = $param["VpcIds"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

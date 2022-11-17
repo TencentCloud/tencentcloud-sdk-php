@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeNames(array $NodeNames) 设置节点名称列表
  * @method boolean getForceRestart() 获取是否强制重启
  * @method void setForceRestart(boolean $ForceRestart) 设置是否强制重启
+ * @method string getRestartMode() 获取可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
+ * @method void setRestartMode(string $RestartMode) 设置可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
+ * @method boolean getIsOffline() 获取节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
+ * @method void setIsOffline(boolean $IsOffline) 设置节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
  */
 class RestartNodesRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class RestartNodesRequest extends AbstractModel
     public $ForceRestart;
 
     /**
+     * @var string 可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
+     */
+    public $RestartMode;
+
+    /**
+     * @var boolean 节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
+     */
+    public $IsOffline;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param array $NodeNames 节点名称列表
      * @param boolean $ForceRestart 是否强制重启
+     * @param string $RestartMode 可选重启模式"in-place","blue-green"，分别表示重启，蓝绿重启；默认值为"in-place"
+     * @param boolean $IsOffline 节点状态，在蓝绿模式中使用；离线节点蓝绿有风险
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class RestartNodesRequest extends AbstractModel
 
         if (array_key_exists("ForceRestart",$param) and $param["ForceRestart"] !== null) {
             $this->ForceRestart = $param["ForceRestart"];
+        }
+
+        if (array_key_exists("RestartMode",$param) and $param["RestartMode"] !== null) {
+            $this->RestartMode = $param["RestartMode"];
+        }
+
+        if (array_key_exists("IsOffline",$param) and $param["IsOffline"] !== null) {
+            $this->IsOffline = $param["IsOffline"];
         }
     }
 }

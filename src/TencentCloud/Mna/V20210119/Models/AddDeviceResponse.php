@@ -20,17 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddDevice返回参数结构体
  *
- * @method string getDataKey() 获取后台生成的base64字符串密钥
- * @method void setDataKey(string $DataKey) 设置后台生成的base64字符串密钥
+ * @method string getDataKey() 获取经过加密算法加密后的base64格式密钥
+ * @method void setDataKey(string $DataKey) 设置经过加密算法加密后的base64格式密钥
  * @method string getDeviceId() 获取设备ID
  * @method void setDeviceId(string $DeviceId) 设置设备ID
+ * @method string getSignature() 获取签名字符串
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSignature(string $Signature) 设置签名字符串
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class AddDeviceResponse extends AbstractModel
 {
     /**
-     * @var string 后台生成的base64字符串密钥
+     * @var string 经过加密算法加密后的base64格式密钥
      */
     public $DataKey;
 
@@ -40,13 +44,21 @@ class AddDeviceResponse extends AbstractModel
     public $DeviceId;
 
     /**
+     * @var string 签名字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Signature;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $DataKey 后台生成的base64字符串密钥
+     * @param string $DataKey 经过加密算法加密后的base64格式密钥
      * @param string $DeviceId 设备ID
+     * @param string $Signature 签名字符串
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +80,10 @@ class AddDeviceResponse extends AbstractModel
 
         if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
             $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("Signature",$param) and $param["Signature"] !== null) {
+            $this->Signature = $param["Signature"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

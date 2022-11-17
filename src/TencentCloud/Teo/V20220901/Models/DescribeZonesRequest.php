@@ -28,6 +28,26 @@ use TencentCloud\Common\AbstractModel;
 <li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：否</li><li>status<br>   按照【<strong>站点状态</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-key<br>   按照【<strong>标签键</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-value<br>   按照【<strong>标签值</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为zone-name。
  * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
 <li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：否</li><li>status<br>   按照【<strong>站点状态</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-key<br>   按照【<strong>标签键</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-value<br>   按照【<strong>标签值</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为zone-name。
+ * @method string getOrder() 获取排序字段，取值有：
+<li> type：接入类型；</li>
+<li> area：加速区域；</li>
+<li> create-time：创建时间；</li>
+<li> zone-name：站点名称；</li>
+<li> use-time：最近使用时间；</li>
+<li> active-status：生效状态。</li>不填写使用默认值create-time。
+ * @method void setOrder(string $Order) 设置排序字段，取值有：
+<li> type：接入类型；</li>
+<li> area：加速区域；</li>
+<li> create-time：创建时间；</li>
+<li> zone-name：站点名称；</li>
+<li> use-time：最近使用时间；</li>
+<li> active-status：生效状态。</li>不填写使用默认值create-time。
+ * @method string getDirection() 获取排序方向，取值有：
+<li> asc：从小到大排序；</li>
+<li> desc：从大到小排序。</li>不填写使用默认值desc。
+ * @method void setDirection(string $Direction) 设置排序方向，取值有：
+<li> asc：从小到大排序；</li>
+<li> desc：从大到小排序。</li>不填写使用默认值desc。
  */
 class DescribeZonesRequest extends AbstractModel
 {
@@ -48,10 +68,38 @@ class DescribeZonesRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 排序字段，取值有：
+<li> type：接入类型；</li>
+<li> area：加速区域；</li>
+<li> create-time：创建时间；</li>
+<li> zone-name：站点名称；</li>
+<li> use-time：最近使用时间；</li>
+<li> active-status：生效状态。</li>不填写使用默认值create-time。
+     */
+    public $Order;
+
+    /**
+     * @var string 排序方向，取值有：
+<li> asc：从小到大排序；</li>
+<li> desc：从大到小排序。</li>不填写使用默认值desc。
+     */
+    public $Direction;
+
+    /**
      * @param integer $Offset 分页查询偏移量。默认值：0。
      * @param integer $Limit 分页查询限制数目。默认值：20，最大值：1000。
      * @param array $Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
 <li>zone-name<br>   按照【<strong>站点名称</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>zone-id<br>   按照【<strong>站点ID</strong>】进行过滤。站点ID形如：zone-xxx。<br>   类型：String<br>   必选：否</li><li>status<br>   按照【<strong>站点状态</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-key<br>   按照【<strong>标签键</strong>】进行过滤。<br>   类型：String<br>   必选：否</li><li>tag-value<br>   按照【<strong>标签值</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>模糊查询时仅支持过滤字段名为zone-name。
+     * @param string $Order 排序字段，取值有：
+<li> type：接入类型；</li>
+<li> area：加速区域；</li>
+<li> create-time：创建时间；</li>
+<li> zone-name：站点名称；</li>
+<li> use-time：最近使用时间；</li>
+<li> active-status：生效状态。</li>不填写使用默认值create-time。
+     * @param string $Direction 排序方向，取值有：
+<li> asc：从小到大排序；</li>
+<li> desc：从大到小排序。</li>不填写使用默认值desc。
      */
     function __construct()
     {
@@ -81,6 +129,14 @@ class DescribeZonesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
+            $this->Direction = $param["Direction"];
         }
     }
 }

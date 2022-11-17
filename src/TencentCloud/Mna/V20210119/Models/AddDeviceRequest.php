@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置新建设备的备注
  * @method string getDataKey() 获取新建设备的base64密钥字符串，非必选，如果不填写则由系统自动生成
  * @method void setDataKey(string $DataKey) 设置新建设备的base64密钥字符串，非必选，如果不填写则由系统自动生成
+ * @method boolean getEncrypted() 获取是否设置预置密钥
+ * @method void setEncrypted(boolean $Encrypted) 设置是否设置预置密钥
  */
 class AddDeviceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AddDeviceRequest extends AbstractModel
     public $DataKey;
 
     /**
+     * @var boolean 是否设置预置密钥
+     */
+    public $Encrypted;
+
+    /**
      * @param string $DeviceName 新建设备的名称
      * @param string $Remark 新建设备的备注
      * @param string $DataKey 新建设备的base64密钥字符串，非必选，如果不填写则由系统自动生成
+     * @param boolean $Encrypted 是否设置预置密钥
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AddDeviceRequest extends AbstractModel
 
         if (array_key_exists("DataKey",$param) and $param["DataKey"] !== null) {
             $this->DataKey = $param["DataKey"];
+        }
+
+        if (array_key_exists("Encrypted",$param) and $param["Encrypted"] !== null) {
+            $this->Encrypted = $param["Encrypted"];
         }
     }
 }

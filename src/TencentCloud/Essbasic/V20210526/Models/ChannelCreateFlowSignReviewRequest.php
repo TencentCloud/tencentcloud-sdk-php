@@ -36,6 +36,8 @@ SIGN_REJECT:拒签(流程结束)
 当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
  * @method void setReviewMessage(string $ReviewMessage) 设置审核原因 
 当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
+ * @method string getRecipientId() 获取签署节点审核时需要指定
+ * @method void setRecipientId(string $RecipientId) 设置签署节点审核时需要指定
  */
 class ChannelCreateFlowSignReviewRequest extends AbstractModel
 {
@@ -64,6 +66,11 @@ SIGN_REJECT:拒签(流程结束)
     public $ReviewMessage;
 
     /**
+     * @var string 签署节点审核时需要指定
+     */
+    public $RecipientId;
+
+    /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $FlowId 签署流程编号
      * @param string $ReviewType 企业内部审核结果
@@ -72,6 +79,7 @@ REJECT: 拒绝
 SIGN_REJECT:拒签(流程结束)
      * @param string $ReviewMessage 审核原因 
 当ReviewType 是REJECT 时此字段必填,字符串长度不超过200
+     * @param string $RecipientId 签署节点审核时需要指定
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ SIGN_REJECT:拒签(流程结束)
 
         if (array_key_exists("ReviewMessage",$param) and $param["ReviewMessage"] !== null) {
             $this->ReviewMessage = $param["ReviewMessage"];
+        }
+
+        if (array_key_exists("RecipientId",$param) and $param["RecipientId"] !== null) {
+            $this->RecipientId = $param["RecipientId"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserId() 获取唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
  * @method void setUserId(string $UserId) 设置唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
- * @method string getUserIp() 获取用户IP
- * @method void setUserIp(string $UserIp) 设置用户IP
+ * @method string getUserIp() 获取用户IP，用户客户端的公网IP，用于就近调度
+ * @method void setUserIp(string $UserIp) 设置用户IP，用户客户端的公网IP，用于就近调度
  * @method string getClientSession() 获取客户端session信息，从SDK请求中获得
  * @method void setClientSession(string $ClientSession) 设置客户端session信息，从SDK请求中获得
  * @method string getRunMode() 获取云端运行模式。
@@ -41,7 +41,7 @@ class CreateSessionRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var string 用户IP
+     * @var string 用户IP，用户客户端的公网IP，用于就近调度
      */
     public $UserIp;
 
@@ -59,7 +59,7 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
 
     /**
      * @param string $UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
-     * @param string $UserIp 用户IP
+     * @param string $UserIp 用户IP，用户客户端的公网IP，用于就近调度
      * @param string $ClientSession 客户端session信息，从SDK请求中获得
      * @param string $RunMode 云端运行模式。
 RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行

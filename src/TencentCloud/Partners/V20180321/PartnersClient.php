@@ -31,12 +31,12 @@ use TencentCloud\Partners\V20180321\Models as Models;
  * @method Models\DescribeAgentBillsResponse DescribeAgentBills(Models\DescribeAgentBillsRequest $req) 代理商可查询自己及名下代客所有业务明细
  * @method Models\DescribeAgentClientGradeResponse DescribeAgentClientGrade(Models\DescribeAgentClientGradeRequest $req) 传入代客uin，查客户级别，客户审核状态，客户实名认证状态
  * @method Models\DescribeAgentClientsResponse DescribeAgentClients(Models\DescribeAgentClientsRequest $req) 代理商可查询自己名下待审核客户列表
- * @method Models\DescribeAgentDealsByCacheResponse DescribeAgentDealsByCache(Models\DescribeAgentDealsByCacheRequest $req) 供代理商拉取缓存的全量客户订单
+ * @method Models\DescribeAgentDealsByCacheResponse DescribeAgentDealsByCache(Models\DescribeAgentDealsByCacheRequest $req) 供代理商拉取缓存的全量预付费客户订单
  * @method Models\DescribeAgentDealsCacheResponse DescribeAgentDealsCache(Models\DescribeAgentDealsCacheRequest $req) 【该接口已下线，请使用升级版本DescribeAgentDealsByCache】代理商拉取缓存的全量客户订单
  * @method Models\DescribeAgentPayDealsResponse DescribeAgentPayDeals(Models\DescribeAgentPayDealsRequest $req) 【该接口已下线，请切换使用升级版本DescribeAgentPayDealsV2】可以查询代理商代付的所有订单
- * @method Models\DescribeAgentPayDealsV2Response DescribeAgentPayDealsV2(Models\DescribeAgentPayDealsV2Request $req) 可以查询代理商代付的所有订单
+ * @method Models\DescribeAgentPayDealsV2Response DescribeAgentPayDealsV2(Models\DescribeAgentPayDealsV2Request $req) 可以查询代理商代付的预付费订单
  * @method Models\DescribeAgentSelfPayDealsResponse DescribeAgentSelfPayDeals(Models\DescribeAgentSelfPayDealsRequest $req) 【该接口已下线，请切换使用升级版本DescribeAgentSelfPayDealsV2】可以查询代理商下指定客户的自付订单
- * @method Models\DescribeAgentSelfPayDealsV2Response DescribeAgentSelfPayDealsV2(Models\DescribeAgentSelfPayDealsV2Request $req) 查询代理商名下指定代客的自付订单
+ * @method Models\DescribeAgentSelfPayDealsV2Response DescribeAgentSelfPayDealsV2(Models\DescribeAgentSelfPayDealsV2Request $req) 查询代理商名下指定代客的自付订单（预付费）
  * @method Models\DescribeClientBalanceResponse DescribeClientBalance(Models\DescribeClientBalanceRequest $req) 【该接口将逐步下线，请切换使用升级版本DescribeClientBalanceNew】为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额.
  * @method Models\DescribeClientBalanceNewResponse DescribeClientBalanceNew(Models\DescribeClientBalanceNewRequest $req) 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
  * @method Models\DescribeRebateInfosResponse DescribeRebateInfos(Models\DescribeRebateInfosRequest $req) 【该接口已下线，请切换使用升级版本DescribeRebateInfosNew】代理商可查询自己名下全部返佣信息

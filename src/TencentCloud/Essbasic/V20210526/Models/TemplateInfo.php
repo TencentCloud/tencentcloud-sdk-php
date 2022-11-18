@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreator(string $Creator) 设置模板的创建者信息
  * @method integer getCreatedOn() 获取模板创建的时间戳（精确到秒）
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳（精确到秒）
- * @method string getPreviewUrl() 获取模板的预览链接
+ * @method string getPreviewUrl() 获取模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreviewUrl(string $PreviewUrl) 设置模板的预览链接
+ * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
@@ -98,7 +98,7 @@ class TemplateInfo extends AbstractModel
     public $CreatedOn;
 
     /**
-     * @var string 模板的预览链接
+     * @var string 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewUrl;
@@ -114,7 +114,7 @@ class TemplateInfo extends AbstractModel
      * @param boolean $IsPromoter 是否是发起人 ,已弃用
      * @param string $Creator 模板的创建者信息
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
-     * @param string $PreviewUrl 模板的预览链接
+     * @param string $PreviewUrl 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

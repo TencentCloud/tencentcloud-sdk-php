@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRTMPPullSettings(CreateInputRTMPPullSettings $RTMPPullSettings) 设置输入的RTMP_PULL配置信息。
  * @method CreateInputRTSPPullSettings getRTSPPullSettings() 获取输入的RTSP_PULL配置信息。
  * @method void setRTSPPullSettings(CreateInputRTSPPullSettings $RTSPPullSettings) 设置输入的RTSP_PULL配置信息。
+ * @method CreateInputHLSPullSettings getHLSPullSettings() 获取输入的HLS_PULL配置信息。
+ * @method void setHLSPullSettings(CreateInputHLSPullSettings $HLSPullSettings) 设置输入的HLS_PULL配置信息。
  */
 class CreateInput extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateInput extends AbstractModel
     public $RTSPPullSettings;
 
     /**
+     * @var CreateInputHLSPullSettings 输入的HLS_PULL配置信息。
+     */
+    public $HLSPullSettings;
+
+    /**
      * @param string $InputName 输入名称，可填大小写、数字和下划线，长度为[1, 32]。
      * @param string $Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
      * @param string $Description 输入描述，长度为[0, 255]。
@@ -96,6 +103,7 @@ class CreateInput extends AbstractModel
      * @param string $FailOver 输入的主备开关，可选[OPEN|CLOSE]，默认为CLOSE。
      * @param CreateInputRTMPPullSettings $RTMPPullSettings 输入的RTMP_PULL配置信息。
      * @param CreateInputRTSPPullSettings $RTSPPullSettings 输入的RTSP_PULL配置信息。
+     * @param CreateInputHLSPullSettings $HLSPullSettings 输入的HLS_PULL配置信息。
      */
     function __construct()
     {
@@ -148,6 +156,11 @@ class CreateInput extends AbstractModel
         if (array_key_exists("RTSPPullSettings",$param) and $param["RTSPPullSettings"] !== null) {
             $this->RTSPPullSettings = new CreateInputRTSPPullSettings();
             $this->RTSPPullSettings->deserialize($param["RTSPPullSettings"]);
+        }
+
+        if (array_key_exists("HLSPullSettings",$param) and $param["HLSPullSettings"] !== null) {
+            $this->HLSPullSettings = new CreateInputHLSPullSettings();
+            $this->HLSPullSettings->deserialize($param["HLSPullSettings"]);
         }
     }
 }

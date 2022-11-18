@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRTSPPullSettings(DescribeOutputRTSPPullSettings $RTSPPullSettings) 设置输出的RTSP拉流配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DescribeOutputHLSPullSettings getHLSPullSettings() 获取输出的HLS拉流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHLSPullSettings(DescribeOutputHLSPullSettings $HLSPullSettings) 设置输出的HLS拉流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeOutput extends AbstractModel
 {
@@ -142,6 +146,12 @@ class DescribeOutput extends AbstractModel
     public $RTSPPullSettings;
 
     /**
+     * @var DescribeOutputHLSPullSettings 输出的HLS拉流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HLSPullSettings;
+
+    /**
      * @param string $OutputId 输出Id。
      * @param string $OutputName 输出名称。
      * @param string $OutputType 输出类型。
@@ -163,6 +173,8 @@ class DescribeOutput extends AbstractModel
 当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribeOutputRTSPPullSettings $RTSPPullSettings 输出的RTSP拉流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DescribeOutputHLSPullSettings $HLSPullSettings 输出的HLS拉流配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -238,6 +250,11 @@ class DescribeOutput extends AbstractModel
         if (array_key_exists("RTSPPullSettings",$param) and $param["RTSPPullSettings"] !== null) {
             $this->RTSPPullSettings = new DescribeOutputRTSPPullSettings();
             $this->RTSPPullSettings->deserialize($param["RTSPPullSettings"]);
+        }
+
+        if (array_key_exists("HLSPullSettings",$param) and $param["HLSPullSettings"] !== null) {
+            $this->HLSPullSettings = new DescribeOutputHLSPullSettings();
+            $this->HLSPullSettings->deserialize($param["HLSPullSettings"]);
         }
     }
 }

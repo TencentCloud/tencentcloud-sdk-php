@@ -74,16 +74,32 @@ SourceType为点播（PullVodToLive）可以填多个，上限10个。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
- * @method string getRegion() 获取拉流源所在地域（请就近选取）：
+ * @method string getRegion() 获取任务创建所在地域：
 ap-beijing - 华北地区(北京)，
 ap-shanghai -华东地区(上海)，
 ap-guangzhou -华南地区(广州)，
-ap-mumbai - 印度。
- * @method void setRegion(string $Region) 设置拉流源所在地域（请就近选取）：
+ap-mumbai - 印度，
+ap-hongkong - 香港，
+eu-frankfurt - 德国，
+ap-seoul - 韩国，
+ap-bangkok - 泰国，
+ap-singapore - 新加坡，
+na-siliconvalley - 美西，
+na-ashburn - 美东，
+ap-tokyo - 日本。
+ * @method void setRegion(string $Region) 设置任务创建所在地域：
 ap-beijing - 华北地区(北京)，
 ap-shanghai -华东地区(上海)，
 ap-guangzhou -华南地区(广州)，
-ap-mumbai - 印度。
+ap-mumbai - 印度，
+ap-hongkong - 香港，
+eu-frankfurt - 德国，
+ap-seoul - 韩国，
+ap-bangkok - 泰国，
+ap-singapore - 新加坡，
+na-siliconvalley - 美西，
+na-ashburn - 美东，
+ap-tokyo - 日本。
  * @method integer getVodLoopTimes() 获取点播拉流转推循环次数。
 -1：无限循环，直到任务结束。
 0：不循环。
@@ -251,11 +267,19 @@ SourceType为点播（PullVodToLive）可以填多个，上限10个。
     public $EndTime;
 
     /**
-     * @var string 拉流源所在地域（请就近选取）：
+     * @var string 任务创建所在地域：
 ap-beijing - 华北地区(北京)，
 ap-shanghai -华东地区(上海)，
 ap-guangzhou -华南地区(广州)，
-ap-mumbai - 印度。
+ap-mumbai - 印度，
+ap-hongkong - 香港，
+eu-frankfurt - 德国，
+ap-seoul - 韩国，
+ap-bangkok - 泰国，
+ap-singapore - 新加坡，
+na-siliconvalley - 美西，
+na-ashburn - 美东，
+ap-tokyo - 日本。
      */
     public $Region;
 
@@ -405,11 +429,19 @@ SourceType为点播（PullVodToLive）可以填多个，上限10个。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param string $Region 拉流源所在地域（请就近选取）：
+     * @param string $Region 任务创建所在地域：
 ap-beijing - 华北地区(北京)，
 ap-shanghai -华东地区(上海)，
 ap-guangzhou -华南地区(广州)，
-ap-mumbai - 印度。
+ap-mumbai - 印度，
+ap-hongkong - 香港，
+eu-frankfurt - 德国，
+ap-seoul - 韩国，
+ap-bangkok - 泰国，
+ap-singapore - 新加坡，
+na-siliconvalley - 美西，
+na-ashburn - 美东，
+ap-tokyo - 日本。
      * @param integer $VodLoopTimes 点播拉流转推循环次数。
 -1：无限循环，直到任务结束。
 0：不循环。

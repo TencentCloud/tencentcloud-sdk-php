@@ -176,6 +176,14 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotificationHooks(array $NotificationHooks) 设置通知事件回调
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getNetworkReceiveRate() 获取每秒接收字节数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkReceiveRate(float $NetworkReceiveRate) 设置每秒接收字节数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getNetworkSendRate() 获取每秒发送字节数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkSendRate(float $NetworkSendRate) 设置每秒发送字节数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Job extends AbstractModel
 {
@@ -410,6 +418,18 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     public $NotificationHooks;
 
     /**
+     * @var float 每秒接收字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkReceiveRate;
+
+    /**
+     * @var float 每秒发送字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkSendRate;
+
+    /**
      * @param string $JobId 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScenarioId 任务的场景ID
@@ -487,6 +507,10 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
      * @param string $ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NotificationHooks 通知事件回调
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $NetworkReceiveRate 每秒接收字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $NetworkSendRate 每秒发送字节数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -690,6 +714,14 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
                 $obj->deserialize($value);
                 array_push($this->NotificationHooks, $obj);
             }
+        }
+
+        if (array_key_exists("NetworkReceiveRate",$param) and $param["NetworkReceiveRate"] !== null) {
+            $this->NetworkReceiveRate = $param["NetworkReceiveRate"];
+        }
+
+        if (array_key_exists("NetworkSendRate",$param) and $param["NetworkSendRate"] !== null) {
+            $this->NetworkSendRate = $param["NetworkSendRate"];
         }
     }
 }

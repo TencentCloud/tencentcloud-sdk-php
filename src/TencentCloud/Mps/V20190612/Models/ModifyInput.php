@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRTMPPullSettings(CreateInputRTMPPullSettings $RTMPPullSettings) 设置RTMP_PULL的配置信息。
  * @method CreateInputRTSPPullSettings getRTSPPullSettings() 获取RTSP_PULL的配置信息。
  * @method void setRTSPPullSettings(CreateInputRTSPPullSettings $RTSPPullSettings) 设置RTSP_PULL的配置信息。
+ * @method CreateInputHLSPullSettings getHLSPullSettings() 获取HLS_PULL的配置信息。
+ * @method void setHLSPullSettings(CreateInputHLSPullSettings $HLSPullSettings) 设置HLS_PULL的配置信息。
  */
 class ModifyInput extends AbstractModel
 {
@@ -103,6 +105,11 @@ class ModifyInput extends AbstractModel
     public $RTSPPullSettings;
 
     /**
+     * @var CreateInputHLSPullSettings HLS_PULL的配置信息。
+     */
+    public $HLSPullSettings;
+
+    /**
      * @param string $InputId 输入Id。
      * @param string $InputName 输入名称。
      * @param string $Description 输入描述。
@@ -116,6 +123,7 @@ class ModifyInput extends AbstractModel
      * @param string $FailOver 输入的主备开关，可选[OPEN|CLOSE]。
      * @param CreateInputRTMPPullSettings $RTMPPullSettings RTMP_PULL的配置信息。
      * @param CreateInputRTSPPullSettings $RTSPPullSettings RTSP_PULL的配置信息。
+     * @param CreateInputHLSPullSettings $HLSPullSettings HLS_PULL的配置信息。
      */
     function __construct()
     {
@@ -172,6 +180,11 @@ class ModifyInput extends AbstractModel
         if (array_key_exists("RTSPPullSettings",$param) and $param["RTSPPullSettings"] !== null) {
             $this->RTSPPullSettings = new CreateInputRTSPPullSettings();
             $this->RTSPPullSettings->deserialize($param["RTSPPullSettings"]);
+        }
+
+        if (array_key_exists("HLSPullSettings",$param) and $param["HLSPullSettings"] !== null) {
+            $this->HLSPullSettings = new CreateInputHLSPullSettings();
+            $this->HLSPullSettings->deserialize($param["HLSPullSettings"]);
         }
     }
 }

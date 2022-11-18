@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRTSPPullSettings(DescribeInputRTSPPullSettings $RTSPPullSettings) 设置输入的RTSP_PULL配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DescribeInputHLSPullSettings getHLSPullSettings() 获取输入的HLS_PULL配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) 设置输入的HLS_PULL配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeInput extends AbstractModel
 {
@@ -133,6 +137,12 @@ class DescribeInput extends AbstractModel
     public $RTSPPullSettings;
 
     /**
+     * @var DescribeInputHLSPullSettings 输入的HLS_PULL配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HLSPullSettings;
+
+    /**
      * @param string $InputId 输入Id。
      * @param string $InputName 输入名称。
      * @param string $Description 输入描述。
@@ -151,6 +161,8 @@ class DescribeInput extends AbstractModel
      * @param DescribeInputRTMPPullSettings $RTMPPullSettings 输入的RTMP_PULL配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribeInputRTSPPullSettings $RTSPPullSettings 输入的RTSP_PULL配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DescribeInputHLSPullSettings $HLSPullSettings 输入的HLS_PULL配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -226,6 +238,11 @@ class DescribeInput extends AbstractModel
         if (array_key_exists("RTSPPullSettings",$param) and $param["RTSPPullSettings"] !== null) {
             $this->RTSPPullSettings = new DescribeInputRTSPPullSettings();
             $this->RTSPPullSettings->deserialize($param["RTSPPullSettings"]);
+        }
+
+        if (array_key_exists("HLSPullSettings",$param) and $param["HLSPullSettings"] !== null) {
+            $this->HLSPullSettings = new DescribeInputHLSPullSettings();
+            $this->HLSPullSettings->deserialize($param["HLSPullSettings"]);
         }
     }
 }

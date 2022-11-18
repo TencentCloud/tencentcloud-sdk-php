@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
  * @method string getDesc() 获取该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
  * @method void setDesc(string $Desc) 设置该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
+ * @method string getRoomId() 获取该字段表示业务群聊场景时的房间ID。
+ * @method void setRoomId(string $RoomId) 设置该字段表示业务群聊场景时的房间ID。
+ * @method string getReceiverId() 获取该字段表示消息接受者ID
+ * @method void setReceiverId(string $ReceiverId) 设置该字段表示消息接受者ID
+ * @method integer getSendTime() 获取消息生成时间，精确到毫秒
+ * @method void setSendTime(integer $SendTime) 设置消息生成时间，精确到毫秒
  */
 class User extends AbstractModel
 {
@@ -108,6 +114,21 @@ class User extends AbstractModel
     public $Desc;
 
     /**
+     * @var string 该字段表示业务群聊场景时的房间ID。
+     */
+    public $RoomId;
+
+    /**
+     * @var string 该字段表示消息接受者ID
+     */
+    public $ReceiverId;
+
+    /**
+     * @var integer 消息生成时间，精确到毫秒
+     */
+    public $SendTime;
+
+    /**
      * @param string $UserId 该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
 备注：该字段可传入微信openid、QQopenid、字符串等账号信息，与账号类别参数（AccountType）配合使用可确定唯一账号。
      * @param string $Nickname 该字段表示业务用户对应的账号昵称信息。
@@ -124,6 +145,9 @@ class User extends AbstractModel
      * @param string $HeadUrl 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
 备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
      * @param string $Desc 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
+     * @param string $RoomId 该字段表示业务群聊场景时的房间ID。
+     * @param string $ReceiverId 该字段表示消息接受者ID
+     * @param integer $SendTime 消息生成时间，精确到毫秒
      */
     function __construct()
     {
@@ -172,6 +196,18 @@ class User extends AbstractModel
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
             $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
+            $this->RoomId = $param["RoomId"];
+        }
+
+        if (array_key_exists("ReceiverId",$param) and $param["ReceiverId"] !== null) {
+            $this->ReceiverId = $param["ReceiverId"];
+        }
+
+        if (array_key_exists("SendTime",$param) and $param["SendTime"] !== null) {
+            $this->SendTime = $param["SendTime"];
         }
     }
 }

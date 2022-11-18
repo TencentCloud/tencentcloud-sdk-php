@@ -94,6 +94,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段默认为空。
  * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。<br>
 注意：此字段默认为空。
+ * @method IPv6InternetAccessible getIPv6InternetAccessible() 获取IPv6公网带宽相关信息设置。
+ * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) 设置IPv6公网带宽相关信息设置。
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -251,6 +253,11 @@ class LaunchConfiguration extends AbstractModel
     public $HpcClusterId;
 
     /**
+     * @var IPv6InternetAccessible IPv6公网带宽相关信息设置。
+     */
+    public $IPv6InternetAccessible;
+
+    /**
      * @param integer $ProjectId 实例所属项目ID。
      * @param string $LaunchConfigurationId 启动配置ID。
      * @param string $LaunchConfigurationName 启动配置名称。
@@ -288,6 +295,7 @@ class LaunchConfiguration extends AbstractModel
 <br><li>AUTOMATIC：自动选择当前可用区下可用的云盘类型
      * @param string $HpcClusterId 高性能计算集群ID。<br>
 注意：此字段默认为空。
+     * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6公网带宽相关信息设置。
      */
     function __construct()
     {
@@ -444,6 +452,11 @@ class LaunchConfiguration extends AbstractModel
 
         if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {
             $this->HpcClusterId = $param["HpcClusterId"];
+        }
+
+        if (array_key_exists("IPv6InternetAccessible",$param) and $param["IPv6InternetAccessible"] !== null) {
+            $this->IPv6InternetAccessible = new IPv6InternetAccessible();
+            $this->IPv6InternetAccessible->deserialize($param["IPv6InternetAccessible"]);
         }
     }
 }

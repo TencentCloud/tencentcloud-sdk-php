@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodec(string $Codec) 设置返回音频格式，可取值：wav（默认），mp3，pcm
  * @method boolean getEnableSubtitle() 获取是否开启时间戳功能，默认为false。
  * @method void setEnableSubtitle(boolean $EnableSubtitle) 设置是否开启时间戳功能，默认为false。
+ * @method integer getSegmentRate() 获取断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
+ * @method void setSegmentRate(integer $SegmentRate) 设置断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -116,6 +118,11 @@ class TextToVoiceRequest extends AbstractModel
     public $EnableSubtitle;
 
     /**
+     * @var integer 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
+     */
+    public $SegmentRate;
+
+    /**
      * @param string $Text 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
      * @param string $SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
@@ -132,6 +139,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param integer $SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      * @param string $Codec 返回音频格式，可取值：wav（默认），mp3，pcm
      * @param boolean $EnableSubtitle 是否开启时间戳功能，默认为false。
+     * @param integer $SegmentRate 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更易断句，此参数建议不要随意调整，可能会影响合成效果。
      */
     function __construct()
     {
@@ -188,6 +196,10 @@ class TextToVoiceRequest extends AbstractModel
 
         if (array_key_exists("EnableSubtitle",$param) and $param["EnableSubtitle"] !== null) {
             $this->EnableSubtitle = $param["EnableSubtitle"];
+        }
+
+        if (array_key_exists("SegmentRate",$param) and $param["SegmentRate"] !== null) {
+            $this->SegmentRate = $param["SegmentRate"];
         }
     }
 }

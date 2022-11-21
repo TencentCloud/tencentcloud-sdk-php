@@ -84,7 +84,7 @@ videoFreezeRate：视频卡顿率。
 networkDelay ：网络延迟率。
 注意：
 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-2、查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
  * @method Models\DescribeTRTCMarketScaleMetricDataResponse DescribeTRTCMarketScaleMetricData(Models\DescribeTRTCMarketScaleMetricDataRequest $req) 查询TRTC监控仪表盘-数据大盘规模指标（会返回通话人数，通话房间数，峰值同时在线人数，峰值同时在线频道数）
 userCount：通话人数，
 roomCount：通话房间数，从有用户加入频道到所有用户离开频道计为一个通话频道。
@@ -92,19 +92,19 @@ peakCurrentChannels：峰值同时在线频道数。
 peakCurrentUsers：峰值同时在线人数。
 注意：
 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-2、查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
+2.查询时间范围根据监控仪表盘功能版本而定，【基础版】可查近30天，【进阶版】可查近60天。
  * @method Models\DescribeTRTCRealTimeQualityMetricDataResponse DescribeTRTCRealTimeQualityMetricData(Models\DescribeTRTCRealTimeQualityMetricDataRequest $req) 查询TRTC监控仪表盘-实时监控质量指标（会返回下列指标）
 -视频卡顿率
 -音频卡顿率
 注意：
 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-2、查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
  * @method Models\DescribeTRTCRealTimeScaleMetricDataResponse DescribeTRTCRealTimeScaleMetricData(Models\DescribeTRTCRealTimeScaleMetricDataRequest $req) 查询TRTC监控仪表盘-实时监控规模指标（会返回下列指标）
 -userCount（在线用户数）
 -roomCount（在线房间数）
 注意：
 1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘版本功能和计费说明：https://cloud.tencent.com/document/product/647/81331。
-2、查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
+2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
  * @method Models\DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTime(Models\DescribeTrtcMcuTranscodeTimeRequest $req) 查询旁路转码计费时长。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
 - 单次查询统计区间最多不能超过31天。

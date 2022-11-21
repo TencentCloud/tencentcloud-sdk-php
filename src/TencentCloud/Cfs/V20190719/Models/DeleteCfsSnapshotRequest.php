@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSnapshotId() 获取文件系统快照id
  * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照id
+ * @method array getSnapshotIds() 获取需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+ * @method void setSnapshotIds(array $SnapshotIds) 设置需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
  */
 class DeleteCfsSnapshotRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteCfsSnapshotRequest extends AbstractModel
     public $SnapshotId;
 
     /**
+     * @var array 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+     */
+    public $SnapshotIds;
+
+    /**
      * @param string $SnapshotId 文件系统快照id
+     * @param array $SnapshotIds 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteCfsSnapshotRequest extends AbstractModel
         }
         if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
             $this->SnapshotId = $param["SnapshotId"];
+        }
+
+        if (array_key_exists("SnapshotIds",$param) and $param["SnapshotIds"] !== null) {
+            $this->SnapshotIds = $param["SnapshotIds"];
         }
     }
 }

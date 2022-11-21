@@ -38,6 +38,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销;
 注意:
 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
+ * @method Models\ChannelCreateBoundFlowsResponse ChannelCreateBoundFlows(Models\ChannelCreateBoundFlowsRequest $req) 此接口（CreateConsoleLoginUrl）用于渠道子客领取合同，经办人需要有相应的角色，领取后的合同不能重复领取
  * @method Models\ChannelCreateConvertTaskApiResponse ChannelCreateConvertTaskApi(Models\ChannelCreateConvertTaskApiRequest $req) 渠道创建文件转换任务
  * @method Models\ChannelCreateFlowByFilesResponse ChannelCreateFlowByFiles(Models\ChannelCreateFlowByFilesRequest $req) 接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建签署流程。此接口静默签能力不可直接使用，需要运营申请
  * @method Models\ChannelCreateFlowGroupByFilesResponse ChannelCreateFlowGroupByFiles(Models\ChannelCreateFlowGroupByFilesRequest $req) 接口（ChannelCreateFlowGroupByFiles）用于通过多文件创建合同组签署流程。

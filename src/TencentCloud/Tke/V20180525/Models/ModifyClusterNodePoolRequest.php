@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsName(string $OsName) 设置操作系统名称
  * @method string getOsCustomizeType() 获取镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+ * @method GPUArgs getGPUArgs() 获取GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+ * @method void setGPUArgs(GPUArgs $GPUArgs) 设置GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+ * @method string getUserScript() 获取base64编码后的自定义脚本
+ * @method void setUserScript(string $UserScript) 设置base64编码后的自定义脚本
+ * @method boolean getIgnoreExistedNode() 获取更新label和taint时忽略存量节点
+ * @method void setIgnoreExistedNode(boolean $IgnoreExistedNode) 设置更新label和taint时忽略存量节点
  * @method InstanceExtraArgs getExtraArgs() 获取节点自定义参数
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置节点自定义参数
  * @method array getTags() 获取资源标签
@@ -48,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnschedulable(integer $Unschedulable) 设置设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
  * @method boolean getDeletionProtection() 获取删除保护开关
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
+ * @method string getDockerGraphPath() 获取dockerd --graph 指定值, 默认为 /var/lib/docker
+ * @method void setDockerGraphPath(string $DockerGraphPath) 设置dockerd --graph 指定值, 默认为 /var/lib/docker
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -102,6 +110,21 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $OsCustomizeType;
 
     /**
+     * @var GPUArgs GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+     */
+    public $GPUArgs;
+
+    /**
+     * @var string base64编码后的自定义脚本
+     */
+    public $UserScript;
+
+    /**
+     * @var boolean 更新label和taint时忽略存量节点
+     */
+    public $IgnoreExistedNode;
+
+    /**
      * @var InstanceExtraArgs 节点自定义参数
      */
     public $ExtraArgs;
@@ -122,6 +145,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $DeletionProtection;
 
     /**
+     * @var string dockerd --graph 指定值, 默认为 /var/lib/docker
+     */
+    public $DockerGraphPath;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $NodePoolId 节点池ID
      * @param string $Name 名称
@@ -132,10 +160,14 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param boolean $EnableAutoscale 是否开启伸缩
      * @param string $OsName 操作系统名称
      * @param string $OsCustomizeType 镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * @param GPUArgs $GPUArgs GPU驱动版本，CUDA版本，cuDNN版本以及是否启用MIG特性
+     * @param string $UserScript base64编码后的自定义脚本
+     * @param boolean $IgnoreExistedNode 更新label和taint时忽略存量节点
      * @param InstanceExtraArgs $ExtraArgs 节点自定义参数
      * @param array $Tags 资源标签
      * @param integer $Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
      * @param boolean $DeletionProtection 删除保护开关
+     * @param string $DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
      */
     function __construct()
     {
@@ -200,6 +232,19 @@ class ModifyClusterNodePoolRequest extends AbstractModel
             $this->OsCustomizeType = $param["OsCustomizeType"];
         }
 
+        if (array_key_exists("GPUArgs",$param) and $param["GPUArgs"] !== null) {
+            $this->GPUArgs = new GPUArgs();
+            $this->GPUArgs->deserialize($param["GPUArgs"]);
+        }
+
+        if (array_key_exists("UserScript",$param) and $param["UserScript"] !== null) {
+            $this->UserScript = $param["UserScript"];
+        }
+
+        if (array_key_exists("IgnoreExistedNode",$param) and $param["IgnoreExistedNode"] !== null) {
+            $this->IgnoreExistedNode = $param["IgnoreExistedNode"];
+        }
+
         if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
             $this->ExtraArgs = new InstanceExtraArgs();
             $this->ExtraArgs->deserialize($param["ExtraArgs"]);
@@ -220,6 +265,10 @@ class ModifyClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("DockerGraphPath",$param) and $param["DockerGraphPath"] !== null) {
+            $this->DockerGraphPath = $param["DockerGraphPath"];
         }
     }
 }

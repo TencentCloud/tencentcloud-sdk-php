@@ -14,30 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Tiia\V20190529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateWhitelist返回参数结构体
+ * DetectSecurity返回参数结构体
  *
- * @method string getMsg() 获取消息
- * @method void setMsg(string $Msg) 设置消息
- * @method integer getID() 获取白名单ID
- * @method void setID(integer $ID) 设置白名单ID
+ * @method array getBodies() 获取识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBodies(array $Bodies) 设置识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateWhitelistResponse extends AbstractModel
+class DetectSecurityResponse extends AbstractModel
 {
     /**
-     * @var string 消息
+     * @var array 识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Msg;
-
-    /**
-     * @var integer 白名单ID
-     */
-    public $ID;
+    public $Bodies;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +41,8 @@ class CreateWhitelistResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Msg 消息
-     * @param integer $ID 白名单ID
+     * @param array $Bodies 识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +58,13 @@ class CreateWhitelistResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
-        }
-
-        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
-            $this->ID = $param["ID"];
+        if (array_key_exists("Bodies",$param) and $param["Bodies"] !== null) {
+            $this->Bodies = [];
+            foreach ($param["Bodies"] as $key => $value){
+                $obj = new AttributesForBody();
+                $obj->deserialize($value);
+                array_push($this->Bodies, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

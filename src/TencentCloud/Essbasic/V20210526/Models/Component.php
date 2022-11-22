@@ -197,6 +197,10 @@ SIGN_PAGING_SEAL - 可以指定印章ID
  * @method void setOffsetX(float $OffsetX) 设置指定关键字时横坐标偏移量，单位pt
  * @method float getOffsetY() 获取指定关键字时纵坐标偏移量，单位pt
  * @method void setOffsetY(float $OffsetY) 设置指定关键字时纵坐标偏移量，单位pt
+ * @method string getChannelComponentId() 获取渠道控件ID。
+如果不为空，属于渠道预设控件；
+ * @method void setChannelComponentId(string $ChannelComponentId) 设置渠道控件ID。
+如果不为空，属于渠道预设控件；
  * @method integer getKeywordPage() 获取指定关键字页码
  * @method void setKeywordPage(integer $KeywordPage) 设置指定关键字页码
  * @method string getRelativeLocation() 获取关键字位置模式
@@ -368,6 +372,12 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     public $OffsetY;
 
     /**
+     * @var string 渠道控件ID。
+如果不为空，属于渠道预设控件；
+     */
+    public $ChannelComponentId;
+
+    /**
      * @var integer 指定关键字页码
      */
     public $KeywordPage;
@@ -468,6 +478,8 @@ SIGN_PAGING_SEAL - 可以指定印章ID
      * @param string $ComponentDescription 控件描述，不能超过30个字符
      * @param float $OffsetX 指定关键字时横坐标偏移量，单位pt
      * @param float $OffsetY 指定关键字时纵坐标偏移量，单位pt
+     * @param string $ChannelComponentId 渠道控件ID。
+如果不为空，属于渠道预设控件；
      * @param integer $KeywordPage 指定关键字页码
      * @param string $RelativeLocation 关键字位置模式
      * @param array $KeywordIndexes 关键字索引
@@ -559,6 +571,10 @@ SIGN_PAGING_SEAL - 可以指定印章ID
 
         if (array_key_exists("OffsetY",$param) and $param["OffsetY"] !== null) {
             $this->OffsetY = $param["OffsetY"];
+        }
+
+        if (array_key_exists("ChannelComponentId",$param) and $param["ChannelComponentId"] !== null) {
+            $this->ChannelComponentId = $param["ChannelComponentId"];
         }
 
         if (array_key_exists("KeywordPage",$param) and $param["KeywordPage"] !== null) {

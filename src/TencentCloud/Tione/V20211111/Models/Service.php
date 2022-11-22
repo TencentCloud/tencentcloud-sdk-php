@@ -90,17 +90,37 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessStatus(string $BusinessStatus) 设置服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateSource() 获取服务的创建来源 AUTO_ML,DEFAULT
+ * @method string getCreateSource() 获取服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateSource(string $CreateSource) 设置服务的创建来源 AUTO_ML,DEFAULT
+ * @method void setCreateSource(string $CreateSource) 设置服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillingInfo() 获取费用信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingInfo(string $BillingInfo) 设置费用信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取服务状态
+CREATING 创建中
+CREATE_FAILED 创建失败
+Normal	正常运行中
+Stopped  已停止
+Stopping 停止中
+Abnormal 异常
+Pending 启动中
+Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置服务状态
+CREATING 创建中
+CREATE_FAILED 创建失败
+Normal	正常运行中
+Stopped  已停止
+Stopping 停止中
+Abnormal 异常
+Pending 启动中
+Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取模型权重
 注意：此字段可能返回 null，表示取不到有效值。
@@ -233,7 +253,9 @@ class Service extends AbstractModel
     public $BusinessStatus;
 
     /**
-     * @var string 服务的创建来源 AUTO_ML,DEFAULT
+     * @var string 服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateSource;
@@ -246,6 +268,14 @@ class Service extends AbstractModel
 
     /**
      * @var string 服务状态
+CREATING 创建中
+CREATE_FAILED 创建失败
+Normal	正常运行中
+Stopped  已停止
+Stopping 停止中
+Abnormal 异常
+Pending 启动中
+Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -310,11 +340,21 @@ class Service extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessStatus 服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateSource 服务的创建来源 AUTO_ML,DEFAULT
+     * @param string $CreateSource 服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingInfo 费用信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 服务状态
+CREATING 创建中
+CREATE_FAILED 创建失败
+Normal	正常运行中
+Stopped  已停止
+Stopping 停止中
+Abnormal 异常
+Pending 启动中
+Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 模型权重
 注意：此字段可能返回 null，表示取不到有效值。

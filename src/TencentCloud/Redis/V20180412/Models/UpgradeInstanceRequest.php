@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getMemSize() 获取分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
- * @method void setMemSize(integer $MemSize) 设置分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
- * @method integer getRedisShardNum() 获取分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
- * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
- * @method integer getRedisReplicasNum() 获取副本数量，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
- * @method array getNodeSet() 获取多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
- * @method void setNodeSet(array $NodeSet) 设置多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
+ * @method string getInstanceId() 获取待变更实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置待变更实例 ID。
+ * @method integer getMemSize() 获取指实例每个分片内存变更后的大小。<ul><li>单位 MB。</li><li>每次只能修改参数MemSize、RedisShardNum和RedisReplicasNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li></ul>
+ * @method void setMemSize(integer $MemSize) 设置指实例每个分片内存变更后的大小。<ul><li>单位 MB。</li><li>每次只能修改参数MemSize、RedisShardNum和RedisReplicasNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li></ul>
+ * @method integer getRedisShardNum() 获取指实例变更后的分片数量。<ul><li>标准架构不需要配置该参数，集群架构为必填参数。</li><li>集群架构，每次只能修改参数RedisShardNum、MemSize和RedisReplicasNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li></ul>
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置指实例变更后的分片数量。<ul><li>标准架构不需要配置该参数，集群架构为必填参数。</li><li>集群架构，每次只能修改参数RedisShardNum、MemSize和RedisReplicasNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li></ul>
+ * @method integer getRedisReplicasNum() 获取指实例变更后的副本数量。<ul><li>每次只能修改参数RedisReplicasNum、MemSize和RedisShardNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li><li>多AZ实例修改副本时必须要传入NodeSet。</li></ul>
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置指实例变更后的副本数量。<ul><li>每次只能修改参数RedisReplicasNum、MemSize和RedisShardNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li><li>多AZ实例修改副本时必须要传入NodeSet。</li></ul>
+ * @method array getNodeSet() 获取多AZ实例，增加副本时的附带信息，包括副本的可用区和副本的类型（NodeType为1）。非多AZ实例不需要配置该参数。
+ * @method void setNodeSet(array $NodeSet) 设置多AZ实例，增加副本时的附带信息，包括副本的可用区和副本的类型（NodeType为1）。非多AZ实例不需要配置该参数。
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 待变更实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var integer 分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
+     * @var integer 指实例每个分片内存变更后的大小。<ul><li>单位 MB。</li><li>每次只能修改参数MemSize、RedisShardNum和RedisReplicasNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li></ul>
      */
     public $MemSize;
 
     /**
-     * @var integer 分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
+     * @var integer 指实例变更后的分片数量。<ul><li>标准架构不需要配置该参数，集群架构为必填参数。</li><li>集群架构，每次只能修改参数RedisShardNum、MemSize和RedisReplicasNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li></ul>
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 副本数量，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
+     * @var integer 指实例变更后的副本数量。<ul><li>每次只能修改参数RedisReplicasNum、MemSize和RedisShardNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li><li>多AZ实例修改副本时必须要传入NodeSet。</li></ul>
      */
     public $RedisReplicasNum;
 
     /**
-     * @var array 多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
+     * @var array 多AZ实例，增加副本时的附带信息，包括副本的可用区和副本的类型（NodeType为1）。非多AZ实例不需要配置该参数。
      */
     public $NodeSet;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param integer $MemSize 分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
-     * @param integer $RedisShardNum 分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
-     * @param integer $RedisReplicasNum 副本数量，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
-     * @param array $NodeSet 多AZ实例增加副本时的附带信息，非多AZ实例不需要传此参数。多AZ增加副本时此参数为必传参数，传入要增加的副本的信息，包括副本的可用区和副本的类型（NodeType为1）
+     * @param string $InstanceId 待变更实例 ID。
+     * @param integer $MemSize 指实例每个分片内存变更后的大小。<ul><li>单位 MB。</li><li>每次只能修改参数MemSize、RedisShardNum和RedisReplicasNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li></ul>
+     * @param integer $RedisShardNum 指实例变更后的分片数量。<ul><li>标准架构不需要配置该参数，集群架构为必填参数。</li><li>集群架构，每次只能修改参数RedisShardNum、MemSize和RedisReplicasNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li></ul>
+     * @param integer $RedisReplicasNum 指实例变更后的副本数量。<ul><li>每次只能修改参数RedisReplicasNum、MemSize和RedisShardNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li><li>多AZ实例修改副本时必须要传入NodeSet。</li></ul>
+     * @param array $NodeSet 多AZ实例，增加副本时的附带信息，包括副本的可用区和副本的类型（NodeType为1）。非多AZ实例不需要配置该参数。
      */
     function __construct()
     {

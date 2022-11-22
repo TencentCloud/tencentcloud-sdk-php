@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomId(string $CustomId) 设置码规则ID
  * @method integer getStatus() 获取码规则状态 0:未生效 1:已生效 -1:已失效
  * @method void setStatus(integer $Status) 设置码规则状态 0:未生效 1:已生效 -1:已失效
+ * @method integer getCorpId() 获取企业ID
+ * @method void setCorpId(integer $CorpId) 设置企业ID
  */
 class ModifyCustomRuleStatusRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyCustomRuleStatusRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 企业ID
+     */
+    public $CorpId;
+
+    /**
      * @param string $CustomId 码规则ID
      * @param integer $Status 码规则状态 0:未生效 1:已生效 -1:已失效
+     * @param integer $CorpId 企业ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyCustomRuleStatusRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
+            $this->CorpId = $param["CorpId"];
         }
     }
 }

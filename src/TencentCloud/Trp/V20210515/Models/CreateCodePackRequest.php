@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackLevel(integer $PackLevel) 设置码包层级
  * @method array getPackSpec() 获取码包规格
  * @method void setPackSpec(array $PackSpec) 设置码包规格
+ * @method string getBatchId() 获取批次ID，如果传了生码后会同时绑定批次，并激活码
+ * @method void setBatchId(string $BatchId) 设置批次ID，如果传了生码后会同时绑定批次，并激活码
  */
 class CreateCodePackRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateCodePackRequest extends AbstractModel
     public $PackSpec;
 
     /**
+     * @var string 批次ID，如果传了生码后会同时绑定批次，并激活码
+     */
+    public $BatchId;
+
+    /**
      * @param string $MerchantId 商户ID
      * @param integer $CodeLength 码长度
      * @param string $CodeType 码类型 alphabet 字母, number 数字, mixin 混合
@@ -88,6 +95,7 @@ class CreateCodePackRequest extends AbstractModel
      * @param integer $PackType 码包类型 0: 普通码包 1: 层级码包
      * @param integer $PackLevel 码包层级
      * @param array $PackSpec 码包规格
+     * @param string $BatchId 批次ID，如果传了生码后会同时绑定批次，并激活码
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class CreateCodePackRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PackSpec, $obj);
             }
+        }
+
+        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
+            $this->BatchId = $param["BatchId"];
         }
     }
 }

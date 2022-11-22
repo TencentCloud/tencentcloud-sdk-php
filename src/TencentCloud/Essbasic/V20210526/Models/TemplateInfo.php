@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChannelTemplateId() 获取渠道模板ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelTemplateId(string $ChannelTemplateId) 设置渠道模板ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
 {
@@ -104,6 +108,12 @@ class TemplateInfo extends AbstractModel
     public $PreviewUrl;
 
     /**
+     * @var string 渠道模板ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelTemplateId;
+
+    /**
      * @param string $TemplateId 模板ID
      * @param string $TemplateName 模板名字
      * @param string $Description 模板描述信息
@@ -115,6 +125,8 @@ class TemplateInfo extends AbstractModel
      * @param string $Creator 模板的创建者信息
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
      * @param string $PreviewUrl 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChannelTemplateId 渠道模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -187,6 +199,10 @@ class TemplateInfo extends AbstractModel
 
         if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
             $this->PreviewUrl = $param["PreviewUrl"];
+        }
+
+        if (array_key_exists("ChannelTemplateId",$param) and $param["ChannelTemplateId"] !== null) {
+            $this->ChannelTemplateId = $param["ChannelTemplateId"];
         }
     }
 }

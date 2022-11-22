@@ -82,6 +82,8 @@ MobileCheck：手机号验证
 参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
  * @method string getFlowDescription() 获取签署流程描述,最大长度1000个字符
  * @method void setFlowDescription(string $FlowDescription) 设置签署流程描述,最大长度1000个字符
+ * @method integer getSignBeanTag() 获取标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+ * @method void setSignBeanTag(integer $SignBeanTag) 设置标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
  */
 class CreateFlowByFilesRequest extends AbstractModel
 {
@@ -185,6 +187,11 @@ MobileCheck：手机号验证
     public $FlowDescription;
 
     /**
+     * @var integer 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
+     */
+    public $SignBeanTag;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署参与者信息，最大限制50方
@@ -216,6 +223,7 @@ VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
 参数说明：可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
      * @param string $FlowDescription 签署流程描述,最大长度1000个字符
+     * @param integer $SignBeanTag 标识是否允许发起后添加控件。0为不允许1为允许。如果为1，创建的时候不能有签署控件，只能创建后添加。注意发起后添加控件功能不支持添加骑缝章和签批控件
      */
     function __construct()
     {
@@ -313,6 +321,10 @@ MobileCheck：手机号验证
 
         if (array_key_exists("FlowDescription",$param) and $param["FlowDescription"] !== null) {
             $this->FlowDescription = $param["FlowDescription"];
+        }
+
+        if (array_key_exists("SignBeanTag",$param) and $param["SignBeanTag"] !== null) {
+            $this->SignBeanTag = $param["SignBeanTag"];
         }
     }
 }

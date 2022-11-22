@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHLSPullSettings(DescribeInputHLSPullSettings $HLSPullSettings) 设置输入的HLS_PULL配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ResilientStreamConf getResilientStream() 获取延播平滑吐流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResilientStream(ResilientStreamConf $ResilientStream) 设置延播平滑吐流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeInput extends AbstractModel
 {
@@ -143,6 +147,12 @@ class DescribeInput extends AbstractModel
     public $HLSPullSettings;
 
     /**
+     * @var ResilientStreamConf 延播平滑吐流配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResilientStream;
+
+    /**
      * @param string $InputId 输入Id。
      * @param string $InputName 输入名称。
      * @param string $Description 输入描述。
@@ -163,6 +173,8 @@ class DescribeInput extends AbstractModel
      * @param DescribeInputRTSPPullSettings $RTSPPullSettings 输入的RTSP_PULL配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribeInputHLSPullSettings $HLSPullSettings 输入的HLS_PULL配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResilientStreamConf $ResilientStream 延播平滑吐流配置信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -243,6 +255,11 @@ class DescribeInput extends AbstractModel
         if (array_key_exists("HLSPullSettings",$param) and $param["HLSPullSettings"] !== null) {
             $this->HLSPullSettings = new DescribeInputHLSPullSettings();
             $this->HLSPullSettings->deserialize($param["HLSPullSettings"]);
+        }
+
+        if (array_key_exists("ResilientStream",$param) and $param["ResilientStream"] !== null) {
+            $this->ResilientStream = new ResilientStreamConf();
+            $this->ResilientStream->deserialize($param["ResilientStream"]);
         }
     }
 }

@@ -51,7 +51,9 @@ RecipientId参数：
  * @method void setNotChannelOrganization(boolean $NotChannelOrganization) 设置指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
 默认为false，即签署人位于同一个渠道应用号下；
  * @method string getOpenId() 获取用户侧第三方id，最大长度64个字符
+当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
  * @method void setOpenId(string $OpenId) 设置用户侧第三方id，最大长度64个字符
+当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
  * @method string getOrganizationOpenId() 获取企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
  * @method string getApproverType() 获取签署人类型，PERSON-个人；
@@ -121,6 +123,7 @@ class FlowApproverInfo extends AbstractModel
 
     /**
      * @var string 用户侧第三方id，最大长度64个字符
+当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
      */
     public $OpenId;
 
@@ -195,6 +198,7 @@ ENTERPRISESERVER-企业静默签;
      * @param boolean $NotChannelOrganization 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
 默认为false，即签署人位于同一个渠道应用号下；
      * @param string $OpenId 用户侧第三方id，最大长度64个字符
+当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
      * @param string $OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
      * @param string $ApproverType 签署人类型，PERSON-个人；
 PERSON_AUTO_SIGN-个人自动签；

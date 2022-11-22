@@ -45,6 +45,18 @@ use TencentCloud\Tiia\V20190529\Models as Models;
  * @method Models\DeleteImagesResponse DeleteImages(Models\DeleteImagesRequest $req) 删除图片。
  * @method Models\DescribeGroupsResponse DescribeGroups(Models\DescribeGroupsRequest $req) 查询所有的图库信息。
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取指定图片库中的图片列表。
+ * @method Models\DetectChefDressResponse DetectChefDress(Models\DetectChefDressRequest $req) 可对图片中厨师穿戴进行识别，支持厨师服识别，厨师帽识别，赤膊识别和口罩识别,可应用于明厨亮灶场景。
+"被优选过滤"标签值在人体优选开关开启时才会返回。
+厨师服：厨师服定义为白色上衣
+厨师服识别(酒店版)：厨师服定义为红色，白色，黑色上衣
+
+|序号 | 标签名称 | 标签值 |
+| :-----|  :----------   |:-----------------  |
+| 1 | 厨师服识别<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
+| 2 | 厨师服识别（酒店版）<div style="width: 70pt"> |无厨师服、有厨师服、被优选过滤|
+| 3 | 厨师帽识别<div style="width: 70pt"> |无厨师帽、有厨师帽、被优选过滤	|
+| 4 | 赤膊识别<div style="width: 70pt"> |非赤膊、赤膊、被优选过滤|
+| 5 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤	|
  * @method Models\DetectDisgustResponse DetectDisgust(Models\DetectDisgustRequest $req) 输入一张图片，返回AI针对一张图片是否是恶心的一系列判断值。
 
 通过恶心图片识别, 可以判断一张图片是否令人恶心, 同时给出它属于的潜在类别, 让您能够过滤掉使人不愉快的图片。
@@ -101,6 +113,20 @@ use TencentCloud\Tiia\V20190529\Models as Models;
 客户无需自建商品库，即可快速实现商品识别、拍照搜商品等功能。
 >?   
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+ * @method Models\DetectSecurityResponse DetectSecurity(Models\DetectSecurityRequest $req) 识别常安全属性识别可对图片中人体安全防护属性进行识别，支持识别安全帽，反光衣，护目镜，工服，手套，工地安全带，口罩，抽烟，玩手机等多种属性。
+"被优选过滤"标签值在人体优选开关开启时才会返回。
+
+|序号 | 标签名称 | 标签值 |
+| :-----|  :----------   |:-----------------  |
+| 1 | 安全帽识别<div style="width: 70pt"> |无安全帽、有安全帽、被优选过滤|
+| 2 | 玩手机识别<div style="width: 70pt"> |没有电话、打电话、玩手机、被优选过滤|
+| 3 | 抽烟识别<div style="width: 70pt"> |没有抽烟、抽烟、被优选过滤	|
+| 4 | 口罩识别<div style="width: 70pt"> |无口罩、有口罩、口罩不确定、被优选过滤|
+| 5 | 工地安全带识别<div style="width: 70pt"> |无工地安全带、工地安全带、被优选过滤	|
+| 6 | 手套识别<div style="width: 70pt"> |无手套、有手套、手套不确定、被优选过滤	|
+| 7 | 工服识别<div style="width: 70pt"> |无工服、有工服、被优选过滤|
+| 8 | 护目镜识别<div style="width: 70pt"> |无护目镜、有护目镜、被优选过滤|
+| 9 | 反光衣识别<div style="width: 70pt"> |无反光衣、有反光衣、被优选过滤|
  * @method Models\EnhanceImageResponse EnhanceImage(Models\EnhanceImageRequest $req) 传入一张图片，输出清晰度提升后的图片。
 
 可以消除图片有损压缩导致的噪声，和使用滤镜、拍摄失焦导致的模糊。让图片的边缘和细节更加清晰自然。

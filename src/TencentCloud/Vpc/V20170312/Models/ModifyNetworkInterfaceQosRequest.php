@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceIds(array $NetworkInterfaceIds) 设置弹性网卡ID，支持批量修改。
  * @method string getQosLevel() 获取服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
  * @method void setQosLevel(string $QosLevel) 设置服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+ * @method integer getDirectSendMaxPort() 获取DirectSend端口范围最大值。
+ * @method void setDirectSendMaxPort(integer $DirectSendMaxPort) 设置DirectSend端口范围最大值。
  */
 class ModifyNetworkInterfaceQosRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyNetworkInterfaceQosRequest extends AbstractModel
     public $QosLevel;
 
     /**
+     * @var integer DirectSend端口范围最大值。
+     */
+    public $DirectSendMaxPort;
+
+    /**
      * @param array $NetworkInterfaceIds 弹性网卡ID，支持批量修改。
      * @param string $QosLevel 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     * @param integer $DirectSendMaxPort DirectSend端口范围最大值。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyNetworkInterfaceQosRequest extends AbstractModel
 
         if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
             $this->QosLevel = $param["QosLevel"];
+        }
+
+        if (array_key_exists("DirectSendMaxPort",$param) and $param["DirectSendMaxPort"] !== null) {
+            $this->DirectSendMaxPort = $param["DirectSendMaxPort"];
         }
     }
 }

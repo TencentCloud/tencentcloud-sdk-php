@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomId(string $CustomId) 设置码规则ID,  和CodeParts二选一必填
  * @method array getCodeParts() 获取码段配置，和CustomId二选一必填
  * @method void setCodeParts(array $CodeParts) 设置码段配置，和CustomId二选一必填
+ * @method string getBatchId() 获取批次ID，如果传了生码后会同时绑定批次，并激活码
+ * @method void setBatchId(string $BatchId) 设置批次ID，如果传了生码后会同时绑定批次，并激活码
  */
 class CreateCustomPackRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateCustomPackRequest extends AbstractModel
     public $CodeParts;
 
     /**
+     * @var string 批次ID，如果传了生码后会同时绑定批次，并激活码
+     */
+    public $BatchId;
+
+    /**
      * @param string $MerchantId 商户ID
      * @param integer $Amount 生码数量, 普通码包时必填
      * @param integer $CorpId 企业ID
@@ -88,6 +95,7 @@ class CreateCustomPackRequest extends AbstractModel
      * @param array $PackSpec 层级码包规则
      * @param string $CustomId 码规则ID,  和CodeParts二选一必填
      * @param array $CodeParts 码段配置，和CustomId二选一必填
+     * @param string $BatchId 批次ID，如果传了生码后会同时绑定批次，并激活码
      */
     function __construct()
     {
@@ -142,6 +150,10 @@ class CreateCustomPackRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CodeParts, $obj);
             }
+        }
+
+        if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
+            $this->BatchId = $param["BatchId"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTicketStatistics请求参数结构体
  *
- * @method string getCaptchaAppId() 获取验证码appid
- * @method void setCaptchaAppId(string $CaptchaAppId) 设置验证码appid
+ * @method string getCaptchaAppId() 获取验证码AppId
+ * @method void setCaptchaAppId(string $CaptchaAppId) 设置验证码AppId
  * @method string getStartTimeStr() 获取开始时间字符串
  * @method void setStartTimeStr(string $StartTimeStr) 设置开始时间字符串
  * @method string getEndTimeStr() 获取结束时间字符串
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class GetTicketStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string 验证码appid
+     * @var string 验证码AppId
      */
     public $CaptchaAppId;
 
@@ -52,7 +52,7 @@ class GetTicketStatisticsRequest extends AbstractModel
     public $Dimension;
 
     /**
-     * @param string $CaptchaAppId 验证码appid
+     * @param string $CaptchaAppId 验证码AppId
      * @param string $StartTimeStr 开始时间字符串
      * @param string $EndTimeStr 结束时间字符串
      * @param string $Dimension 查询粒度

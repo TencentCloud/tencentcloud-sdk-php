@@ -57,7 +57,6 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DescribeAliasDomainsResponse DescribeAliasDomains(Models\DescribeAliasDomainsRequest $req) 查询别称域名信息列表。
  * @method Models\DescribeApplicationProxiesResponse DescribeApplicationProxies(Models\DescribeApplicationProxiesRequest $req) 查询应用代理列表。
  * @method Models\DescribeAvailablePlansResponse DescribeAvailablePlans(Models\DescribeAvailablePlansRequest $req) 查询当前账户可用套餐信息列表
- * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) 获取计费数据。
  * @method Models\DescribeBotClientIpListResponse DescribeBotClientIpList(Models\DescribeBotClientIpListRequest $req) 本接口（DescribeBotClientIpList）用于查询Bot攻击客户端Ip信息列表。
  * @method Models\DescribeBotDataResponse DescribeBotData(Models\DescribeBotDataRequest $req) 本接口（DescribeBotData）查询Bot攻击时序数据。
  * @method Models\DescribeBotHitRuleDetailResponse DescribeBotHitRuleDetail(Models\DescribeBotHitRuleDetailRequest $req) 本接口（DescribeBotHitRuleDetail）用于查询Bot攻击命中规则详情信息。

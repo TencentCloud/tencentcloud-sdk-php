@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubUin(string $SubUin) 设置子账号uin
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
- * @method string getFrameworkName() 获取训练框架名称，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+ * @method string getFrameworkName() 获取训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFrameworkName(string $FrameworkName) 设置训练框架名称，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+ * @method void setFrameworkName(string $FrameworkName) 设置训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFrameworkVersion() 获取训练框架版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -140,8 +140,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置任务信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取任务状态
- * @method void setStatus(string $Status) 设置任务状态
+ * @method string getStatus() 获取任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+ * @method void setStatus(string $Status) 设置任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
  */
 class TrainingTaskDetail extends AbstractModel
 {
@@ -171,7 +171,7 @@ class TrainingTaskDetail extends AbstractModel
     public $Region;
 
     /**
-     * @var string 训练框架名称，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+     * @var string 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrameworkName;
@@ -354,7 +354,7 @@ class TrainingTaskDetail extends AbstractModel
     public $Message;
 
     /**
-     * @var string 任务状态
+     * @var string 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
      */
     public $Status;
 
@@ -364,7 +364,7 @@ class TrainingTaskDetail extends AbstractModel
      * @param string $Uin 主账号uin
      * @param string $SubUin 子账号uin
      * @param string $Region 地域
-     * @param string $FrameworkName 训练框架名称，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+     * @param string $FrameworkName 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FrameworkVersion 训练框架版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -419,7 +419,7 @@ class TrainingTaskDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 任务信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 任务状态
+     * @param string $Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
      */
     function __construct()
     {

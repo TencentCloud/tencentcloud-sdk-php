@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStrategyId() 获取评估项ID
  * @method void setStrategyId(integer $StrategyId) 设置评估项ID
- * @method integer getLimit() 获取限制数量,默认100
- * @method void setLimit(integer $Limit) 设置限制数量,默认100
+ * @method integer getLimit() 获取返回数量,默认值为100,最大值为200
+ * @method void setLimit(integer $Limit) 设置返回数量,默认值为100,最大值为200
  * @method integer getOffset() 获取偏移量,默认0
  * @method void setOffset(integer $Offset) 设置偏移量,默认0
  * @method string getEnv() 获取环境
@@ -39,7 +39,7 @@ class DescribeTaskStrategyRisksRequest extends AbstractModel
     public $StrategyId;
 
     /**
-     * @var integer 限制数量,默认100
+     * @var integer 返回数量,默认值为100,最大值为200
      */
     public $Limit;
 
@@ -60,7 +60,7 @@ class DescribeTaskStrategyRisksRequest extends AbstractModel
 
     /**
      * @param integer $StrategyId 评估项ID
-     * @param integer $Limit 限制数量,默认100
+     * @param integer $Limit 返回数量,默认值为100,最大值为200
      * @param integer $Offset 偏移量,默认0
      * @param string $Env 环境
      * @param string $TaskType 任务类型

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProperties(array $Properties) 设置schema拓展属性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlias() 获取schema别名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlias(string $Alias) 设置schema别名
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationNodeSchema extends AbstractModel
 {
@@ -65,12 +69,20 @@ class IntegrationNodeSchema extends AbstractModel
     public $Properties;
 
     /**
+     * @var string schema别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Alias;
+
+    /**
      * @param string $Id schema id
      * @param string $Name schema名称
      * @param string $Type schema类型
      * @param string $Value schema值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Properties schema拓展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Alias schema别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -109,6 +121,10 @@ class IntegrationNodeSchema extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Properties, $obj);
             }
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

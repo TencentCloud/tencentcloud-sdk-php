@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSinkType(string $SinkType) 设置目标表元数据类型(HIVE、GBASE)
  * @method string getSchemaName() 获取schema名称
  * @method void setSchemaName(string $SchemaName) 设置schema名称
+ * @method array getSourceFieldInfoList() 获取上游节点的字段信息
+ * @method void setSourceFieldInfoList(array $SourceFieldInfoList) 设置上游节点的字段信息
  */
 class GenHiveTableDDLSqlRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
     public $SchemaName;
 
     /**
+     * @var array 上游节点的字段信息
+     */
+    public $SourceFieldInfoList;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $SinkDatabase 目标数据库
      * @param string $Id 节点id
@@ -96,6 +103,7 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
      * @param string $TableName 来源表
      * @param string $SinkType 目标表元数据类型(HIVE、GBASE)
      * @param string $SchemaName schema名称
+     * @param array $SourceFieldInfoList 上游节点的字段信息
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
 
         if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
             $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("SourceFieldInfoList",$param) and $param["SourceFieldInfoList"] !== null) {
+            $this->SourceFieldInfoList = [];
+            foreach ($param["SourceFieldInfoList"] as $key => $value){
+                $obj = new SourceFieldInfo();
+                $obj->deserialize($value);
+                array_push($this->SourceFieldInfoList, $obj);
+            }
         }
     }
 }

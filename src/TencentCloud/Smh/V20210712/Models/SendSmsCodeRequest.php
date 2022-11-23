@@ -20,26 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendSmsCode请求参数结构体
  *
- * @method string getPurpose() 获取验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
- * @method void setPurpose(string $Purpose) 设置验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
- * @method string getInstanceId() 获取官方云盘实例 ID
- * @method void setInstanceId(string $InstanceId) 设置官方云盘实例 ID
+ * @method string getPurpose() 获取验证码目的，当前支持换绑超级管理员账号， BindSuperAdmin；体验版企业升级，ChannelUpdateVerify等
+ * @method void setPurpose(string $Purpose) 设置验证码目的，当前支持换绑超级管理员账号， BindSuperAdmin；体验版企业升级，ChannelUpdateVerify等
  * @method string getPhoneNumber() 获取将作为超级管理员账号的手机号码
  * @method void setPhoneNumber(string $PhoneNumber) 设置将作为超级管理员账号的手机号码
+ * @method string getInstanceId() 获取官方云盘实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置官方云盘实例 ID
  * @method string getCountryCode() 获取将作为超级管理员账号的手机号码的国家代码。默认为 +86。
  * @method void setCountryCode(string $CountryCode) 设置将作为超级管理员账号的手机号码的国家代码。默认为 +86。
  */
 class SendSmsCodeRequest extends AbstractModel
 {
     /**
-     * @var string 验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
+     * @var string 验证码目的，当前支持换绑超级管理员账号， BindSuperAdmin；体验版企业升级，ChannelUpdateVerify等
      */
     public $Purpose;
-
-    /**
-     * @var string 官方云盘实例 ID
-     */
-    public $InstanceId;
 
     /**
      * @var string 将作为超级管理员账号的手机号码
@@ -47,14 +42,19 @@ class SendSmsCodeRequest extends AbstractModel
     public $PhoneNumber;
 
     /**
+     * @var string 官方云盘实例 ID
+     */
+    public $InstanceId;
+
+    /**
      * @var string 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
      */
     public $CountryCode;
 
     /**
-     * @param string $Purpose 验证码目的，当前仅支持换绑超级管理员账号，固定填写 BindSuperAdmin。
-     * @param string $InstanceId 官方云盘实例 ID
+     * @param string $Purpose 验证码目的，当前支持换绑超级管理员账号， BindSuperAdmin；体验版企业升级，ChannelUpdateVerify等
      * @param string $PhoneNumber 将作为超级管理员账号的手机号码
+     * @param string $InstanceId 官方云盘实例 ID
      * @param string $CountryCode 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
      */
     function __construct()
@@ -74,12 +74,12 @@ class SendSmsCodeRequest extends AbstractModel
             $this->Purpose = $param["Purpose"];
         }
 
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("PhoneNumber",$param) and $param["PhoneNumber"] !== null) {
             $this->PhoneNumber = $param["PhoneNumber"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("CountryCode",$param) and $param["CountryCode"] !== null) {

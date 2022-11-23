@@ -34,11 +34,13 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CreateRecordResponse CreateRecord(Models\CreateRecordRequest $req) 添加记录
 
  * @method Models\CreateRecordBatchResponse CreateRecordBatch(Models\CreateRecordBatchRequest $req) 批量添加记录
+ * @method Models\CreateRecordGroupResponse CreateRecordGroup(Models\CreateRecordGroupRequest $req) 添加记录分组
  * @method Models\CreateSnapshotResponse CreateSnapshot(Models\CreateSnapshotRequest $req) 创建快照
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 删除域名
 
  * @method Models\DeleteDomainAliasResponse DeleteDomainAlias(Models\DeleteDomainAliasRequest $req) 删除域名别名
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除记录
+ * @method Models\DeleteRecordGroupResponse DeleteRecordGroup(Models\DeleteRecordGroupRequest $req) 删除记录分组
  * @method Models\DeleteShareDomainResponse DeleteShareDomain(Models\DeleteShareDomainRequest $req) 删除域名共享
  * @method Models\DeleteSnapshotResponse DeleteSnapshot(Models\DeleteSnapshotRequest $req) 删除快照
  * @method Models\DescribeBatchTaskResponse DescribeBatchTask(Models\DescribeBatchTaskRequest $req) 获取任务详情
@@ -51,6 +53,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeDomainPurviewResponse DescribeDomainPurview(Models\DescribeDomainPurviewRequest $req) 获取域名权限
  * @method Models\DescribeDomainShareInfoResponse DescribeDomainShareInfo(Models\DescribeDomainShareInfoRequest $req) 获取域名共享信息
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) 获取记录信息
+ * @method Models\DescribeRecordGroupListResponse DescribeRecordGroupList(Models\DescribeRecordGroupListRequest $req) 查询解析记录分组列表
  * @method Models\DescribeRecordLineListResponse DescribeRecordLineList(Models\DescribeRecordLineListRequest $req) 获取等级允许的线路
  * @method Models\DescribeRecordListResponse DescribeRecordList(Models\DescribeRecordListRequest $req) 获取某个域名下的解析记录
  * @method Models\DescribeRecordSnapshotRollbackResultResponse DescribeRecordSnapshotRollbackResult(Models\DescribeRecordSnapshotRollbackResultRequest $req) 查询解析记录重新回滚的结果
@@ -72,8 +75,10 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\ModifyPackageAutoRenewResponse ModifyPackageAutoRenew(Models\ModifyPackageAutoRenewRequest $req)  DNS 解析套餐自动续费设置
  * @method Models\ModifyRecordResponse ModifyRecord(Models\ModifyRecordRequest $req) 修改记录
  * @method Models\ModifyRecordBatchResponse ModifyRecordBatch(Models\ModifyRecordBatchRequest $req) 批量修改记录
+ * @method Models\ModifyRecordGroupResponse ModifyRecordGroup(Models\ModifyRecordGroupRequest $req) 修改记录分组
  * @method Models\ModifyRecordRemarkResponse ModifyRecordRemark(Models\ModifyRecordRemarkRequest $req) 设置记录备注
  * @method Models\ModifyRecordStatusResponse ModifyRecordStatus(Models\ModifyRecordStatusRequest $req) 修改解析记录的状态
+ * @method Models\ModifyRecordToGroupResponse ModifyRecordToGroup(Models\ModifyRecordToGroupRequest $req) 将记录添加到分组
  * @method Models\ModifySnapshotConfigResponse ModifySnapshotConfig(Models\ModifySnapshotConfigRequest $req) 修改快照配置
  * @method Models\ModifySubdomainStatusResponse ModifySubdomainStatus(Models\ModifySubdomainStatusRequest $req) 暂停子域名的解析记录
  * @method Models\ModifyVasAutoRenewStatusResponse ModifyVasAutoRenewStatus(Models\ModifyVasAutoRenewStatusRequest $req) 增值服务自动续费设置

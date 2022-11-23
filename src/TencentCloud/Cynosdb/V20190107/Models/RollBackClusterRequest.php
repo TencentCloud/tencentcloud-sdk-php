@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackId(integer $RollbackId) 设置回档ID
  * @method string getExpectTime() 获取期望回档时间
  * @method void setExpectTime(string $ExpectTime) 设置期望回档时间
- * @method integer getExpectTimeThresh() 获取期望阈值
- * @method void setExpectTimeThresh(integer $ExpectTimeThresh) 设置期望阈值
+ * @method integer getExpectTimeThresh() 获取期望阈值（已废弃）
+ * @method void setExpectTimeThresh(integer $ExpectTimeThresh) 设置期望阈值（已废弃）
  * @method array getRollbackDatabases() 获取回档数据库列表
  * @method void setRollbackDatabases(array $RollbackDatabases) 设置回档数据库列表
- * @method array getRollbackTables() 获取回档数据库表
- * @method void setRollbackTables(array $RollbackTables) 设置回档数据库表
+ * @method array getRollbackTables() 获取回档数据库表列表
+ * @method void setRollbackTables(array $RollbackTables) 设置回档数据库表列表
  */
 class RollBackClusterRequest extends AbstractModel
 {
@@ -58,7 +58,7 @@ class RollBackClusterRequest extends AbstractModel
     public $ExpectTime;
 
     /**
-     * @var integer 期望阈值
+     * @var integer 期望阈值（已废弃）
      */
     public $ExpectTimeThresh;
 
@@ -68,7 +68,7 @@ class RollBackClusterRequest extends AbstractModel
     public $RollbackDatabases;
 
     /**
-     * @var array 回档数据库表
+     * @var array 回档数据库表列表
      */
     public $RollbackTables;
 
@@ -77,9 +77,9 @@ class RollBackClusterRequest extends AbstractModel
      * @param string $RollbackStrategy 回档策略 timeRollback-按时间点回档 snapRollback-按备份文件回档
      * @param integer $RollbackId 回档ID
      * @param string $ExpectTime 期望回档时间
-     * @param integer $ExpectTimeThresh 期望阈值
+     * @param integer $ExpectTimeThresh 期望阈值（已废弃）
      * @param array $RollbackDatabases 回档数据库列表
-     * @param array $RollbackTables 回档数据库表
+     * @param array $RollbackTables 回档数据库表列表
      */
     function __construct()
     {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 发票代码、 机打代码、 发票号码、 发动机号码、 合格证号、 机打号码、 价税合计(小写)、 销货单位名称、 身份证号码/组织机构代码、 购买方名称、 销售方纳税人识别号、 购买方纳税人识别号、主管税务机关、 主管税务机关代码、 开票日期、 不含税价(小写)、 吨位、增值税税率或征收率、 车辆识别代号/车架号码、 增值税税额、 厂牌型号、 省、 市、 发票消费类型、 销售方电话、 销售方账号、 产地、 进口证明书号、 车辆类型、 机器编号、备注、开票人、限乘人数、商检单号、销售方地址、销售方开户银行、价税合计、发票类型。
  * @method string getValue() 获取识别出的字段名称对应的值，也就是字段name对应的字符串结果。
  * @method void setValue(string $Value) 设置识别出的字段名称对应的值，也就是字段name对应的字符串结果。
+ * @method integer getRow() 获取字段所在行，下标从0开始，非行字段或未能识别行号的返回-1
+ * @method void setRow(integer $Row) 设置字段所在行，下标从0开始，非行字段或未能识别行号的返回-1
  */
 class OnlineTaxiItineraryInfo extends AbstractModel
 {
@@ -41,9 +43,15 @@ class OnlineTaxiItineraryInfo extends AbstractModel
     public $Value;
 
     /**
+     * @var integer 字段所在行，下标从0开始，非行字段或未能识别行号的返回-1
+     */
+    public $Row;
+
+    /**
      * @param string $Name 识别出的字段名称(关键字)，支持以下字段：
 发票代码、 机打代码、 发票号码、 发动机号码、 合格证号、 机打号码、 价税合计(小写)、 销货单位名称、 身份证号码/组织机构代码、 购买方名称、 销售方纳税人识别号、 购买方纳税人识别号、主管税务机关、 主管税务机关代码、 开票日期、 不含税价(小写)、 吨位、增值税税率或征收率、 车辆识别代号/车架号码、 增值税税额、 厂牌型号、 省、 市、 发票消费类型、 销售方电话、 销售方账号、 产地、 进口证明书号、 车辆类型、 机器编号、备注、开票人、限乘人数、商检单号、销售方地址、销售方开户银行、价税合计、发票类型。
      * @param string $Value 识别出的字段名称对应的值，也就是字段name对应的字符串结果。
+     * @param integer $Row 字段所在行，下标从0开始，非行字段或未能识别行号的返回-1
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ class OnlineTaxiItineraryInfo extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Row",$param) and $param["Row"] !== null) {
+            $this->Row = $param["Row"];
         }
     }
 }

@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateDescription(string $TemplateDescription) 设置参数模板描述
  * @method string getEngineVersion() 获取引擎版本
  * @method void setEngineVersion(string $EngineVersion) 设置引擎版本
+ * @method string getDbMode() 获取数据库类型，可选值：NORMAL，SERVERLESS
+ * @method void setDbMode(string $DbMode) 设置数据库类型，可选值：NORMAL，SERVERLESS
+ * @method array getParamInfoSet() 获取参数模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setParamInfoSet(array $ParamInfoSet) 设置参数模板详情
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamTemplateListInfo extends AbstractModel
 {
@@ -52,10 +58,24 @@ class ParamTemplateListInfo extends AbstractModel
     public $EngineVersion;
 
     /**
+     * @var string 数据库类型，可选值：NORMAL，SERVERLESS
+     */
+    public $DbMode;
+
+    /**
+     * @var array 参数模板详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ParamInfoSet;
+
+    /**
      * @param integer $Id 参数模板ID
      * @param string $TemplateName 参数模板名称
      * @param string $TemplateDescription 参数模板描述
      * @param string $EngineVersion 引擎版本
+     * @param string $DbMode 数据库类型，可选值：NORMAL，SERVERLESS
+     * @param array $ParamInfoSet 参数模板详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +104,19 @@ class ParamTemplateListInfo extends AbstractModel
 
         if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
             $this->EngineVersion = $param["EngineVersion"];
+        }
+
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
+        }
+
+        if (array_key_exists("ParamInfoSet",$param) and $param["ParamInfoSet"] !== null) {
+            $this->ParamInfoSet = [];
+            foreach ($param["ParamInfoSet"] as $key => $value){
+                $obj = new TemplateParamInfo();
+                $obj->deserialize($value);
+                array_push($this->ParamInfoSet, $obj);
+            }
         }
     }
 }

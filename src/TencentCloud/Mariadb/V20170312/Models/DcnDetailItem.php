@@ -56,6 +56,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodEndTime(string $PeriodEndTime) 设置实例到期时间，格式为 2006-01-02 15:04:05
  * @method integer getInstanceType() 获取1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
  * @method void setInstanceType(integer $InstanceType) 设置1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+ * @method DCNReplicaConfig getReplicaConfig() 获取DCN复制的配置信息；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplicaConfig(DCNReplicaConfig $ReplicaConfig) 设置DCN复制的配置信息；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method DCNReplicaStatus getReplicaStatus() 获取DCN复制的状态；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReplicaStatus(DCNReplicaStatus $ReplicaStatus) 设置DCN复制的状态；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEncryptStatus() 获取是否开启了 kms
+ * @method void setEncryptStatus(integer $EncryptStatus) 设置是否开启了 kms
  */
 class DcnDetailItem extends AbstractModel
 {
@@ -150,6 +160,23 @@ class DcnDetailItem extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var DCNReplicaConfig DCN复制的配置信息；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplicaConfig;
+
+    /**
+     * @var DCNReplicaStatus DCN复制的状态；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReplicaStatus;
+
+    /**
+     * @var integer 是否开启了 kms
+     */
+    public $EncryptStatus;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 实例地域
@@ -168,6 +195,11 @@ class DcnDetailItem extends AbstractModel
      * @param string $CreateTime 实例创建时间，格式为 2006-01-02 15:04:05
      * @param string $PeriodEndTime 实例到期时间，格式为 2006-01-02 15:04:05
      * @param integer $InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+     * @param DCNReplicaConfig $ReplicaConfig DCN复制的配置信息；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DCNReplicaStatus $ReplicaStatus DCN复制的状态；对于主实例，此字段为null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EncryptStatus 是否开启了 kms
      */
     function __construct()
     {
@@ -252,6 +284,20 @@ class DcnDetailItem extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("ReplicaConfig",$param) and $param["ReplicaConfig"] !== null) {
+            $this->ReplicaConfig = new DCNReplicaConfig();
+            $this->ReplicaConfig->deserialize($param["ReplicaConfig"]);
+        }
+
+        if (array_key_exists("ReplicaStatus",$param) and $param["ReplicaStatus"] !== null) {
+            $this->ReplicaStatus = new DCNReplicaStatus();
+            $this->ReplicaStatus->deserialize($param["ReplicaStatus"]);
+        }
+
+        if (array_key_exists("EncryptStatus",$param) and $param["EncryptStatus"] !== null) {
+            $this->EncryptStatus = $param["EncryptStatus"];
         }
     }
 }

@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置自定义镜像信息
  * @method StartCmdInfo getStartCmdInfo() 获取启动命令信息，默认为sh start.sh
  * @method void setStartCmdInfo(StartCmdInfo $StartCmdInfo) 设置启动命令信息，默认为sh start.sh
- * @method array getDataConfigs() 获取数据配置
- * @method void setDataConfigs(array $DataConfigs) 设置数据配置
+ * @method array getDataConfigs() 获取数据配置，依赖DataSource字段
+ * @method void setDataConfigs(array $DataConfigs) 设置数据配置，依赖DataSource字段
  * @method string getVpcId() 获取VPC Id
  * @method void setVpcId(string $VpcId) 设置VPC Id
  * @method string getSubnetId() 获取子网Id
@@ -136,7 +136,7 @@ class CreateTrainingTaskRequest extends AbstractModel
     public $StartCmdInfo;
 
     /**
-     * @var array 数据配置
+     * @var array 数据配置，依赖DataSource字段
      */
     public $DataConfigs;
 
@@ -185,7 +185,7 @@ class CreateTrainingTaskRequest extends AbstractModel
      * @param array $Tags 标签配置
      * @param ImageInfo $ImageInfo 自定义镜像信息
      * @param StartCmdInfo $StartCmdInfo 启动命令信息，默认为sh start.sh
-     * @param array $DataConfigs 数据配置
+     * @param array $DataConfigs 数据配置，依赖DataSource字段
      * @param string $VpcId VPC Id
      * @param string $SubnetId 子网Id
      * @param LogConfig $LogConfig CLS日志配置

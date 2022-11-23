@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置转发规则的路径
  * @method string getRealServerType() 获取转发规则对应源站的类型，支持IP和DOMAIN类型。
  * @method void setRealServerType(string $RealServerType) 设置转发规则对应源站的类型，支持IP和DOMAIN类型。
- * @method string getScheduler() 获取监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
- * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+ * @method string getScheduler() 获取监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。
+ * @method void setScheduler(string $Scheduler) 设置监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。
  * @method integer getHealthCheck() 获取规则是否开启健康检查，1开启，0关闭。
  * @method void setHealthCheck(integer $HealthCheck) 设置规则是否开启健康检查，1开启，0关闭。
  * @method RuleCheckParams getCheckParams() 获取源站健康检查相关参数
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 不传递该字段时表示使用对应监听器的ForwardProtocol。
  * @method string getForwardHost() 获取回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
  * @method void setForwardHost(string $ForwardHost) 设置回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
- * @method string getServerNameIndicationSwitch() 获取服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
- * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) 设置服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+ * @method string getServerNameIndicationSwitch() 获取服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。
+ * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) 设置服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。
  * @method string getServerNameIndication() 获取服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
  * @method void setServerNameIndication(string $ServerNameIndication) 设置服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
  * @method string getForcedRedirect() 获取HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
@@ -70,7 +70,7 @@ class CreateRuleRequest extends AbstractModel
     public $RealServerType;
 
     /**
-     * @var string 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+     * @var string 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。
      */
     public $Scheduler;
 
@@ -96,7 +96,7 @@ class CreateRuleRequest extends AbstractModel
     public $ForwardHost;
 
     /**
-     * @var string 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+     * @var string 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。
      */
     public $ServerNameIndicationSwitch;
 
@@ -115,13 +115,13 @@ class CreateRuleRequest extends AbstractModel
      * @param string $Domain 转发规则的域名
      * @param string $Path 转发规则的路径
      * @param string $RealServerType 转发规则对应源站的类型，支持IP和DOMAIN类型。
-     * @param string $Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
+     * @param string $Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。
      * @param integer $HealthCheck 规则是否开启健康检查，1开启，0关闭。
      * @param RuleCheckParams $CheckParams 源站健康检查相关参数
      * @param string $ForwardProtocol 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
 不传递该字段时表示使用对应监听器的ForwardProtocol。
      * @param string $ForwardHost 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
-     * @param string $ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+     * @param string $ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。
      * @param string $ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
      * @param string $ForcedRedirect HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
      */

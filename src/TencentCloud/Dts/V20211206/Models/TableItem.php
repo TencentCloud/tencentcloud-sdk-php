@@ -18,7 +18,7 @@ namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 表图对象集合，当 TableMode 为 partial 时，此项需要填写
+ * 表对象集合，当 TableMode 为 partial 时，此项需要填写
  *
  * @method string getTableName() 获取迁移的表名
 注意：此字段可能返回 null，表示取不到有效值。

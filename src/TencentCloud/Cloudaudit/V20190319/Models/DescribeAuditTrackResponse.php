@@ -18,34 +18,33 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyAuditTrack请求参数结构体
+ * DescribeAuditTrack返回参数结构体
  *
- * @method integer getTrackId() 获取跟踪集 ID
- * @method void setTrackId(integer $TrackId) 设置跟踪集 ID
- * @method string getName() 获取跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
- * @method void setName(string $Name) 设置跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+ * @method string getName() 获取跟踪集名称
+ * @method void setName(string $Name) 设置跟踪集名称
  * @method string getActionType() 获取跟踪事件类型（读：Read；写：Write；全部：*）
  * @method void setActionType(string $ActionType) 设置跟踪事件类型（读：Read；写：Write；全部：*）
- * @method string getResourceType() 获取跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
- * @method void setResourceType(string $ResourceType) 设置跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
+ * @method string getResourceType() 获取跟踪事件所属产品（如：cos，全部：*）
+ * @method void setResourceType(string $ResourceType) 设置跟踪事件所属产品（如：cos，全部：*）
  * @method integer getStatus() 获取跟踪集状态（未开启：0；开启：1）
  * @method void setStatus(integer $Status) 设置跟踪集状态（未开启：0；开启：1）
- * @method array getEventNames() 获取跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
- * @method void setEventNames(array $EventNames) 设置跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
+ * @method array getEventNames() 获取跟踪事件接口名列表（全部：[*]）
+ * @method void setEventNames(array $EventNames) 设置跟踪事件接口名列表（全部：[*]）
  * @method Storage getStorage() 获取数据投递存储（目前支持 cos、cls）
  * @method void setStorage(Storage $Storage) 设置数据投递存储（目前支持 cos、cls）
- * @method integer getTrackForAllMembers() 获取是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
- * @method void setTrackForAllMembers(integer $TrackForAllMembers) 设置是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
+ * @method string getCreateTime() 获取跟踪集创建时间
+ * @method void setCreateTime(string $CreateTime) 设置跟踪集创建时间
+ * @method integer getTrackForAllMembers() 获取是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTrackForAllMembers(integer $TrackForAllMembers) 设置是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyAuditTrackRequest extends AbstractModel
+class DescribeAuditTrackResponse extends AbstractModel
 {
     /**
-     * @var integer 跟踪集 ID
-     */
-    public $TrackId;
-
-    /**
-     * @var string 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+     * @var string 跟踪集名称
      */
     public $Name;
 
@@ -55,7 +54,7 @@ class ModifyAuditTrackRequest extends AbstractModel
     public $ActionType;
 
     /**
-     * @var string 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
+     * @var string 跟踪事件所属产品（如：cos，全部：*）
      */
     public $ResourceType;
 
@@ -65,7 +64,7 @@ class ModifyAuditTrackRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var array 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
+     * @var array 跟踪事件接口名列表（全部：[*]）
      */
     public $EventNames;
 
@@ -75,19 +74,32 @@ class ModifyAuditTrackRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var integer 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
+     * @var string 跟踪集创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @var integer 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrackForAllMembers;
 
     /**
-     * @param integer $TrackId 跟踪集 ID
-     * @param string $Name 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     */
+    public $RequestId;
+
+    /**
+     * @param string $Name 跟踪集名称
      * @param string $ActionType 跟踪事件类型（读：Read；写：Write；全部：*）
-     * @param string $ResourceType 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
+     * @param string $ResourceType 跟踪事件所属产品（如：cos，全部：*）
      * @param integer $Status 跟踪集状态（未开启：0；开启：1）
-     * @param array $EventNames 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
+     * @param array $EventNames 跟踪事件接口名列表（全部：[*]）
      * @param Storage $Storage 数据投递存储（目前支持 cos、cls）
-     * @param integer $TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
+     * @param string $CreateTime 跟踪集创建时间
+     * @param integer $TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -102,10 +114,6 @@ class ModifyAuditTrackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrackId",$param) and $param["TrackId"] !== null) {
-            $this->TrackId = $param["TrackId"];
-        }
-
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -131,8 +139,16 @@ class ModifyAuditTrackRequest extends AbstractModel
             $this->Storage->deserialize($param["Storage"]);
         }
 
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
         if (array_key_exists("TrackForAllMembers",$param) and $param["TrackForAllMembers"] !== null) {
             $this->TrackForAllMembers = $param["TrackForAllMembers"];
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

@@ -53,8 +53,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取模型版本创建时间
  * @method void setCreateTime(string $CreateTime) 设置模型版本创建时间
  * @method string getTrainingModelStatus() 获取模型处理状态
+STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING：导入中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrainingModelStatus(string $TrainingModelStatus) 设置模型处理状态
+STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING：导入中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTrainingModelProgress() 获取模型处理进度
 注意：此字段可能返回 null，表示取不到有效值。
@@ -177,6 +179,7 @@ class TrainingModelVersionDTO extends AbstractModel
 
     /**
      * @var string 模型处理状态
+STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING：导入中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrainingModelStatus;
@@ -253,6 +256,7 @@ class TrainingModelVersionDTO extends AbstractModel
      * @param ImageInfo $ReasoningImageInfo 自定义推理环境
      * @param string $CreateTime 模型版本创建时间
      * @param string $TrainingModelStatus 模型处理状态
+STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING：导入中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TrainingModelProgress 模型处理进度
 注意：此字段可能返回 null，表示取不到有效值。

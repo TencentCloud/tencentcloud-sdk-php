@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceID(string $InstanceID) 设置主机实例ID
  * @method integer getRegionID() 获取地域ID
  * @method void setRegionID(integer $RegionID) 设置地域ID
+ * @method ProjectInfo getProject() 获取所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProject(ProjectInfo $Project) 设置所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostInfo extends AbstractModel
 {
@@ -129,6 +137,18 @@ class HostInfo extends AbstractModel
     public $RegionID;
 
     /**
+     * @var ProjectInfo 所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Project;
+
+    /**
+     * @var array 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $HostID 主机id
      * @param string $HostIP 主机ip即内网ip
      * @param string $HostName 主机名称
@@ -144,6 +164,10 @@ class HostInfo extends AbstractModel
      * @param string $Uuid 主机uuid
      * @param string $InstanceID 主机实例ID
      * @param integer $RegionID 地域ID
+     * @param ProjectInfo $Project 所属项目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -216,6 +240,20 @@ class HostInfo extends AbstractModel
 
         if (array_key_exists("RegionID",$param) and $param["RegionID"] !== null) {
             $this->RegionID = $param["RegionID"];
+        }
+
+        if (array_key_exists("Project",$param) and $param["Project"] !== null) {
+            $this->Project = new ProjectInfo();
+            $this->Project->deserialize($param["Project"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

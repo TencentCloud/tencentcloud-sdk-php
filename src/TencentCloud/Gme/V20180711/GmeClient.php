@@ -43,6 +43,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\DescribeAgeDetectTaskResponse DescribeAgeDetectTask(Models\DescribeAgeDetectTaskRequest $req) 查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
  * @method Models\DescribeAppStatisticsResponse DescribeAppStatistics(Models\DescribeAppStatisticsRequest $req) 本接口(DescribeAppStatistics)用于获取某个GME应用的用量数据。包括实时语音，语音消息及转文本，语音分析等。最长查询周期为最近60天。
  * @method Models\DescribeApplicationDataResponse DescribeApplicationData(Models\DescribeApplicationDataRequest $req) 本接口(DescribeApplicationData)用于获取数据详情信息，最多可拉取最近90天的数据。
+ * @method Models\DescribeApplicationListResponse DescribeApplicationList(Models\DescribeApplicationListRequest $req) 本接口(DescribeApplicationList)用于查询自己账号下的应用列表
  * @method Models\DescribeRealtimeScanConfigResponse DescribeRealtimeScanConfig(Models\DescribeRealtimeScanConfigRequest $req) 获取用户自定义送检信息
  * @method Models\DescribeRoomInfoResponse DescribeRoomInfo(Models\DescribeRoomInfoRequest $req) 获取房间内用户信息
  * @method Models\DescribeScanResultListResponse DescribeScanResultList(Models\DescribeScanResultListRequest $req) 本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。

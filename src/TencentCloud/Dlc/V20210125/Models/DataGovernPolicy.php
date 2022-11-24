@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditTrack请求参数结构体
+ * 数据治理规则
  *
- * @method integer getTrackId() 获取跟踪集 ID
- * @method void setTrackId(integer $TrackId) 设置跟踪集 ID
+
  */
-class DeleteAuditTrackRequest extends AbstractModel
+class DataGovernPolicy extends AbstractModel
 {
-    /**
-     * @var integer 跟踪集 ID
-     */
-    public $TrackId;
+
 
     /**
-     * @param integer $TrackId 跟踪集 ID
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DeleteAuditTrackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrackId",$param) and $param["TrackId"] !== null) {
-            $this->TrackId = $param["TrackId"];
-        }
+
     }
 }

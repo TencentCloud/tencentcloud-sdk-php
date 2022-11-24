@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditTrack请求参数结构体
+ * 主机标签信息
  *
- * @method integer getTrackId() 获取跟踪集 ID
- * @method void setTrackId(integer $TrackId) 设置跟踪集 ID
+ * @method string getTagKey() 获取标签键
+ * @method void setTagKey(string $TagKey) 设置标签键
+ * @method string getTagValue() 获取标签值
+ * @method void setTagValue(string $TagValue) 设置标签值
  */
-class DeleteAuditTrackRequest extends AbstractModel
+class TagInfo extends AbstractModel
 {
     /**
-     * @var integer 跟踪集 ID
+     * @var string 标签键
      */
-    public $TrackId;
+    public $TagKey;
 
     /**
-     * @param integer $TrackId 跟踪集 ID
+     * @var string 标签值
+     */
+    public $TagValue;
+
+    /**
+     * @param string $TagKey 标签键
+     * @param string $TagValue 标签值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteAuditTrackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrackId",$param) and $param["TrackId"] !== null) {
-            $this->TrackId = $param["TrackId"];
+        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
+            $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

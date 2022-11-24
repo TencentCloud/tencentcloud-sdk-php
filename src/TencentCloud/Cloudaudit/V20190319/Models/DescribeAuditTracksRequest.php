@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditTracks请求参数结构体
  *
-
+ * @method integer getPageNumber() 获取页码
+ * @method void setPageNumber(integer $PageNumber) 设置页码
+ * @method integer getPageSize() 获取每页数目
+ * @method void setPageSize(integer $PageSize) 设置每页数目
  */
 class DescribeAuditTracksRequest extends AbstractModel
 {
-
+    /**
+     * @var integer 页码
+     */
+    public $PageNumber;
 
     /**
+     * @var integer 每页数目
+     */
+    public $PageSize;
 
+    /**
+     * @param integer $PageNumber 页码
+     * @param integer $PageSize 每页数目
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeAuditTracksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
 
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
     }
 }

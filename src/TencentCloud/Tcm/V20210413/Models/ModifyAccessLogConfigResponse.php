@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Tcm\V20210413\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditTrack请求参数结构体
+ * ModifyAccessLogConfig返回参数结构体
  *
- * @method integer getTrackId() 获取跟踪集 ID
- * @method void setTrackId(integer $TrackId) 设置跟踪集 ID
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteAuditTrackRequest extends AbstractModel
+class ModifyAccessLogConfigResponse extends AbstractModel
 {
     /**
-     * @var integer 跟踪集 ID
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $TrackId;
+    public $RequestId;
 
     /**
-     * @param integer $TrackId 跟踪集 ID
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteAuditTrackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrackId",$param) and $param["TrackId"] !== null) {
-            $this->TrackId = $param["TrackId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

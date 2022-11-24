@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocolType() 获取连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtocolType(string $ProtocolType) 设置连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstanceNetInfo extends AbstractModel
 {
@@ -79,6 +83,12 @@ class DBInstanceNetInfo extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProtocolType;
+
+    /**
      * @param string $Address DNS域名
      * @param string $Ip IP地址
      * @param integer $Port 连接Port地址
@@ -87,6 +97,8 @@ class DBInstanceNetInfo extends AbstractModel
      * @param string $VpcId 私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProtocolType 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -128,6 +140,10 @@ class DBInstanceNetInfo extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
+            $this->ProtocolType = $param["ProtocolType"];
         }
     }
 }

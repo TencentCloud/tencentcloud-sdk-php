@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditTracks返回参数结构体
  *
+ * @method array getTracks() 获取跟踪集列表
+ * @method void setTracks(array $Tracks) 设置跟踪集列表
+ * @method integer getTotalCount() 获取总数目
+ * @method void setTotalCount(integer $TotalCount) 设置总数目
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeAuditTracksResponse extends AbstractModel
 {
     /**
+     * @var array 跟踪集列表
+     */
+    public $Tracks;
+
+    /**
+     * @var integer 总数目
+     */
+    public $TotalCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param array $Tracks 跟踪集列表
+     * @param integer $TotalCount 总数目
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +62,19 @@ class DescribeAuditTracksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Tracks",$param) and $param["Tracks"] !== null) {
+            $this->Tracks = [];
+            foreach ($param["Tracks"] as $key => $value){
+                $obj = new Tracks();
+                $obj->deserialize($value);
+                array_push($this->Tracks, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

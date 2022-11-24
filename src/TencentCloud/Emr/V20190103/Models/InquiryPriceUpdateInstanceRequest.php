@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 <li>CNY：表示人民币。</li>
  * @method void setCurrency(string $Currency) 设置货币种类。取值范围：
 <li>CNY：表示人民币。</li>
+ * @method array getResourceIdList() 获取批量变配资源ID列表
+ * @method void setResourceIdList(array $ResourceIdList) 设置批量变配资源ID列表
  */
 class InquiryPriceUpdateInstanceRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
     public $Currency;
 
     /**
+     * @var array 批量变配资源ID列表
+     */
+    public $ResourceIdList;
+
+    /**
      * @param string $TimeUnit 变配的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -100,6 +107,7 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
      * @param Placement $Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param string $Currency 货币种类。取值范围：
 <li>CNY：表示人民币。</li>
+     * @param array $ResourceIdList 批量变配资源ID列表
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
 
         if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
             $this->Currency = $param["Currency"];
+        }
+
+        if (array_key_exists("ResourceIdList",$param) and $param["ResourceIdList"] !== null) {
+            $this->ResourceIdList = $param["ResourceIdList"];
         }
     }
 }

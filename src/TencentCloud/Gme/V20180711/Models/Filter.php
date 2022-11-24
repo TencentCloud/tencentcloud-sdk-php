@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditTrack请求参数结构体
+ * 查找过滤
  *
- * @method integer getTrackId() 获取跟踪集 ID
- * @method void setTrackId(integer $TrackId) 设置跟踪集 ID
+ * @method string getName() 获取要过滤的字段名, 比如"AppName"
+ * @method void setName(string $Name) 设置要过滤的字段名, 比如"AppName"
+ * @method array getValues() 获取多个关键字
+ * @method void setValues(array $Values) 设置多个关键字
  */
-class DeleteAuditTrackRequest extends AbstractModel
+class Filter extends AbstractModel
 {
     /**
-     * @var integer 跟踪集 ID
+     * @var string 要过滤的字段名, 比如"AppName"
      */
-    public $TrackId;
+    public $Name;
 
     /**
-     * @param integer $TrackId 跟踪集 ID
+     * @var array 多个关键字
+     */
+    public $Values;
+
+    /**
+     * @param string $Name 要过滤的字段名, 比如"AppName"
+     * @param array $Values 多个关键字
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteAuditTrackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrackId",$param) and $param["TrackId"] !== null) {
-            $this->TrackId = $param["TrackId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

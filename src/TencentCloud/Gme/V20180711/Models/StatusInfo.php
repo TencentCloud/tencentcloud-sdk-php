@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditTrack请求参数结构体
+ * 服务开关状态
  *
- * @method integer getTrackId() 获取跟踪集 ID
- * @method void setTrackId(integer $TrackId) 设置跟踪集 ID
+ * @method integer getStatus() 获取服务开关状态， 0-正常，1-关闭
+ * @method void setStatus(integer $Status) 设置服务开关状态， 0-正常，1-关闭
  */
-class DeleteAuditTrackRequest extends AbstractModel
+class StatusInfo extends AbstractModel
 {
     /**
-     * @var integer 跟踪集 ID
+     * @var integer 服务开关状态， 0-正常，1-关闭
      */
-    public $TrackId;
+    public $Status;
 
     /**
-     * @param integer $TrackId 跟踪集 ID
+     * @param integer $Status 服务开关状态， 0-正常，1-关闭
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteAuditTrackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrackId",$param) and $param["TrackId"] !== null) {
-            $this->TrackId = $param["TrackId"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

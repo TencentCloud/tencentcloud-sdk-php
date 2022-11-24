@@ -20,28 +20,53 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHostExportJob请求参数结构体
  *
- * @method array getExportField() 获取导出字段
- * @method void setExportField(array $ExportField) 设置导出字段
- * @method array getFilters() 获取需要返回的数量，默认为10，最大值为10000
- * @method void setFilters(array $Filters) 设置需要返回的数量，默认为10，最大值为10000
+ * @method array getFilters() 获取过滤条件。
+<li>Status - String - 是否必填：否 - agent状态筛选，"ALL":"全部"(或不传该字段),"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中"</li>
+<li>HostName - String - 是否必填：否 - 主机名筛选</li>
+<li>Group- String - 是否必填：否 - 主机群组搜索</li>
+<li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
+<li>HostID- string - 是否必填：否 - 主机id搜索</li>
+<li>DockerVersion- string - 是否必填：否 - docker版本搜索</li>
+<li>MachineType- string - 是否必填：否 - 主机来源MachineType搜索，"ALL":"全部"(或不传该字段),主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；</li>
+<li>DockerStatus- string - 是否必填：否 - docker安装状态，"ALL":"全部"(或不传该字段),"INSTALL":"已安装","UNINSTALL":"未安装"</li>
+<li>ProjectID- string - 是否必填：否 - 所属项目id搜索</li>
+<li>Tag:xxx(tag:key)- string- 是否必填：否 - 标签键值搜索 示例Filters":[{"Name":"tag:tke-kind","Values":["service"]}]</li>
+ * @method void setFilters(array $Filters) 设置过滤条件。
+<li>Status - String - 是否必填：否 - agent状态筛选，"ALL":"全部"(或不传该字段),"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中"</li>
+<li>HostName - String - 是否必填：否 - 主机名筛选</li>
+<li>Group- String - 是否必填：否 - 主机群组搜索</li>
+<li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
+<li>HostID- string - 是否必填：否 - 主机id搜索</li>
+<li>DockerVersion- string - 是否必填：否 - docker版本搜索</li>
+<li>MachineType- string - 是否必填：否 - 主机来源MachineType搜索，"ALL":"全部"(或不传该字段),主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；</li>
+<li>DockerStatus- string - 是否必填：否 - docker安装状态，"ALL":"全部"(或不传该字段),"INSTALL":"已安装","UNINSTALL":"未安装"</li>
+<li>ProjectID- string - 是否必填：否 - 所属项目id搜索</li>
+<li>Tag:xxx(tag:key)- string- 是否必填：否 - 标签键值搜索 示例Filters":[{"Name":"tag:tke-kind","Values":["service"]}]</li>
  * @method integer getLimit() 获取偏移量，默认为0。
  * @method void setLimit(integer $Limit) 设置偏移量，默认为0。
- * @method integer getOffset() 获取过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
- * @method void setOffset(integer $Offset) 设置过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+ * @method integer getOffset() 获取需要返回的数量，默认为10，最大值为10000
+ * @method void setOffset(integer $Offset) 设置需要返回的数量，默认为10，最大值为10000
  * @method string getBy() 获取排序字段
  * @method void setBy(string $By) 设置排序字段
  * @method string getOrder() 获取升序降序,asc desc
  * @method void setOrder(string $Order) 设置升序降序,asc desc
+ * @method array getExportField() 获取导出字段
+ * @method void setExportField(array $ExportField) 设置导出字段
  */
 class CreateHostExportJobRequest extends AbstractModel
 {
     /**
-     * @var array 导出字段
-     */
-    public $ExportField;
-
-    /**
-     * @var array 需要返回的数量，默认为10，最大值为10000
+     * @var array 过滤条件。
+<li>Status - String - 是否必填：否 - agent状态筛选，"ALL":"全部"(或不传该字段),"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中"</li>
+<li>HostName - String - 是否必填：否 - 主机名筛选</li>
+<li>Group- String - 是否必填：否 - 主机群组搜索</li>
+<li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
+<li>HostID- string - 是否必填：否 - 主机id搜索</li>
+<li>DockerVersion- string - 是否必填：否 - docker版本搜索</li>
+<li>MachineType- string - 是否必填：否 - 主机来源MachineType搜索，"ALL":"全部"(或不传该字段),主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；</li>
+<li>DockerStatus- string - 是否必填：否 - docker安装状态，"ALL":"全部"(或不传该字段),"INSTALL":"已安装","UNINSTALL":"未安装"</li>
+<li>ProjectID- string - 是否必填：否 - 所属项目id搜索</li>
+<li>Tag:xxx(tag:key)- string- 是否必填：否 - 标签键值搜索 示例Filters":[{"Name":"tag:tke-kind","Values":["service"]}]</li>
      */
     public $Filters;
 
@@ -51,7 +76,7 @@ class CreateHostExportJobRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+     * @var integer 需要返回的数量，默认为10，最大值为10000
      */
     public $Offset;
 
@@ -66,12 +91,27 @@ class CreateHostExportJobRequest extends AbstractModel
     public $Order;
 
     /**
-     * @param array $ExportField 导出字段
-     * @param array $Filters 需要返回的数量，默认为10，最大值为10000
+     * @var array 导出字段
+     */
+    public $ExportField;
+
+    /**
+     * @param array $Filters 过滤条件。
+<li>Status - String - 是否必填：否 - agent状态筛选，"ALL":"全部"(或不传该字段),"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中"</li>
+<li>HostName - String - 是否必填：否 - 主机名筛选</li>
+<li>Group- String - 是否必填：否 - 主机群组搜索</li>
+<li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
+<li>HostID- string - 是否必填：否 - 主机id搜索</li>
+<li>DockerVersion- string - 是否必填：否 - docker版本搜索</li>
+<li>MachineType- string - 是否必填：否 - 主机来源MachineType搜索，"ALL":"全部"(或不传该字段),主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；</li>
+<li>DockerStatus- string - 是否必填：否 - docker安装状态，"ALL":"全部"(或不传该字段),"INSTALL":"已安装","UNINSTALL":"未安装"</li>
+<li>ProjectID- string - 是否必填：否 - 所属项目id搜索</li>
+<li>Tag:xxx(tag:key)- string- 是否必填：否 - 标签键值搜索 示例Filters":[{"Name":"tag:tke-kind","Values":["service"]}]</li>
      * @param integer $Limit 偏移量，默认为0。
-     * @param integer $Offset 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+     * @param integer $Offset 需要返回的数量，默认为10，最大值为10000
      * @param string $By 排序字段
      * @param string $Order 升序降序,asc desc
+     * @param array $ExportField 导出字段
      */
     function __construct()
     {
@@ -86,10 +126,6 @@ class CreateHostExportJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
-            $this->ExportField = $param["ExportField"];
-        }
-
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -113,6 +149,10 @@ class CreateHostExportJobRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("ExportField",$param) and $param["ExportField"] !== null) {
+            $this->ExportField = $param["ExportField"];
         }
     }
 }

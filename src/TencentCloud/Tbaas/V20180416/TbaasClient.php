@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tbaas\V20180416\Models as Models;
 
 /**
+ * @method Models\ApplyChainMakerBatchUserCertResponse ApplyChainMakerBatchUserCert(Models\ApplyChainMakerBatchUserCertRequest $req) 批量申请长安链用户签名证书
  * @method Models\ApplyUserCertResponse ApplyUserCert(Models\ApplyUserCertRequest $req) 申请用户证书
  * @method Models\CreateChaincodeAndInstallForUserResponse CreateChaincodeAndInstallForUser(Models\CreateChaincodeAndInstallForUserRequest $req) 创建并安装合约
  * @method Models\DeployDynamicBcosContractResponse DeployDynamicBcosContract(Models\DeployDynamicBcosContractRequest $req) 动态部署并发布Bcos合约

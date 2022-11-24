@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceID(string $InstanceID) 设置主机实例ID
  * @method integer getRegionID() 获取地域ID
  * @method void setRegionID(integer $RegionID) 设置地域ID
+ * @method ProjectInfo getProject() 获取所属项目
+ * @method void setProject(ProjectInfo $Project) 设置所属项目
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -194,6 +198,16 @@ class DescribeAssetHostDetailResponse extends AbstractModel
     public $RegionID;
 
     /**
+     * @var ProjectInfo 所属项目
+     */
+    public $Project;
+
+    /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -223,6 +237,8 @@ class DescribeAssetHostDetailResponse extends AbstractModel
      * @param string $PublicIp 外网ip
      * @param string $InstanceID 主机实例ID
      * @param integer $RegionID 地域ID
+     * @param ProjectInfo $Project 所属项目
+     * @param array $Tags 标签
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -332,6 +348,20 @@ class DescribeAssetHostDetailResponse extends AbstractModel
 
         if (array_key_exists("RegionID",$param) and $param["RegionID"] !== null) {
             $this->RegionID = $param["RegionID"];
+        }
+
+        if (array_key_exists("Project",$param) and $param["Project"] !== null) {
+            $this->Project = new ProjectInfo();
+            $this->Project->deserialize($param["Project"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

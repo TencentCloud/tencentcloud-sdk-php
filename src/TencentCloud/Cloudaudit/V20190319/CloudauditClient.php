@@ -32,6 +32,7 @@ use TencentCloud\Cloudaudit\V20190319\Models as Models;
  * @method Models\DeleteAuditResponse DeleteAudit(Models\DeleteAuditRequest $req) 删除跟踪集
  * @method Models\DeleteAuditTrackResponse DeleteAuditTrack(Models\DeleteAuditTrackRequest $req) 删除云审计跟踪集
  * @method Models\DescribeAuditResponse DescribeAudit(Models\DescribeAuditRequest $req) 查询跟踪集详情
+ * @method Models\DescribeAuditTrackResponse DescribeAuditTrack(Models\DescribeAuditTrackRequest $req) 查询云审计跟踪集详情
  * @method Models\DescribeAuditTracksResponse DescribeAuditTracks(Models\DescribeAuditTracksRequest $req) 查询云审计跟踪集列表
  * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) 查询云审计日志
  * @method Models\GetAttributeKeyResponse GetAttributeKey(Models\GetAttributeKeyRequest $req) 查询AttributeKey的有效取值范围

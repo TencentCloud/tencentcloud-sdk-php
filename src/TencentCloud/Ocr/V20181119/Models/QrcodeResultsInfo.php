@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTypeName(string $TypeName) 设置类型（二维码、条形码）
  * @method string getUrl() 获取二维码/条形码包含的地址
  * @method void setUrl(string $Url) 设置二维码/条形码包含的地址
- * @method QrcodePositionObj getPosition() 获取二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
- * @method void setPosition(QrcodePositionObj $Position) 设置二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
+ * @method QrcodePositionObj getPosition() 获取二维码/条形码坐标
+ * @method void setPosition(QrcodePositionObj $Position) 设置二维码/条形码坐标
  */
 class QrcodeResultsInfo extends AbstractModel
 {
@@ -40,14 +40,14 @@ class QrcodeResultsInfo extends AbstractModel
     public $Url;
 
     /**
-     * @var QrcodePositionObj 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
+     * @var QrcodePositionObj 二维码/条形码坐标
      */
     public $Position;
 
     /**
      * @param string $TypeName 类型（二维码、条形码）
      * @param string $Url 二维码/条形码包含的地址
-     * @param QrcodePositionObj $Position 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
+     * @param QrcodePositionObj $Position 二维码/条形码坐标
      */
     function __construct()
     {

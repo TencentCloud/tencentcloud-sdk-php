@@ -25,10 +25,12 @@ use TencentCloud\Tcm\V20210413\Models as Models;
 /**
  * @method Models\CreateMeshResponse CreateMesh(Models\CreateMeshRequest $req) 创建网格
  * @method Models\DeleteMeshResponse DeleteMesh(Models\DeleteMeshRequest $req) 删除网格
+ * @method Models\DescribeAccessLogConfigResponse DescribeAccessLogConfig(Models\DescribeAccessLogConfigRequest $req) 获取AccessLog配置
  * @method Models\DescribeMeshResponse DescribeMesh(Models\DescribeMeshRequest $req) 查询网格详情
  * @method Models\DescribeMeshListResponse DescribeMeshList(Models\DescribeMeshListRequest $req) 查询网格列表
  * @method Models\LinkClusterListResponse LinkClusterList(Models\LinkClusterListRequest $req) 关联集群
  * @method Models\LinkPrometheusResponse LinkPrometheus(Models\LinkPrometheusRequest $req) 关联Prometheus
+ * @method Models\ModifyAccessLogConfigResponse ModifyAccessLogConfig(Models\ModifyAccessLogConfigRequest $req) 修改访问日志配置
  * @method Models\ModifyMeshResponse ModifyMesh(Models\ModifyMeshRequest $req) 修改网格
  * @method Models\ModifyTracingConfigResponse ModifyTracingConfig(Models\ModifyTracingConfigRequest $req) 修改 Tracing 配置
  * @method Models\UnlinkClusterResponse UnlinkCluster(Models\UnlinkClusterRequest $req) 解关联集群

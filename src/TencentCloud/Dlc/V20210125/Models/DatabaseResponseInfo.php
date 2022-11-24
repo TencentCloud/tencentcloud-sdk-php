@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserSubUin(string $UserSubUin) 设置建库用户ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DataGovernPolicy getGovernPolicy() 获取数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGovernPolicy(DataGovernPolicy $GovernPolicy) 设置数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatabaseId() 获取数据库ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatabaseId(string $DatabaseId) 设置数据库ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseResponseInfo extends AbstractModel
 {
@@ -101,6 +109,18 @@ class DatabaseResponseInfo extends AbstractModel
     public $UserSubUin;
 
     /**
+     * @var DataGovernPolicy 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GovernPolicy;
+
+    /**
+     * @var string 数据库ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatabaseId;
+
+    /**
      * @param string $DatabaseName 数据库名称。
      * @param string $Comment 数据库描述信息，长度 0~256。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,6 +135,10 @@ class DatabaseResponseInfo extends AbstractModel
      * @param string $UserAlias 建库用户昵称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserSubUin 建库用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataGovernPolicy $GovernPolicy 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatabaseId 数据库ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -165,6 +189,15 @@ class DatabaseResponseInfo extends AbstractModel
 
         if (array_key_exists("UserSubUin",$param) and $param["UserSubUin"] !== null) {
             $this->UserSubUin = $param["UserSubUin"];
+        }
+
+        if (array_key_exists("GovernPolicy",$param) and $param["GovernPolicy"] !== null) {
+            $this->GovernPolicy = new DataGovernPolicy();
+            $this->GovernPolicy->deserialize($param["GovernPolicy"]);
+        }
+
+        if (array_key_exists("DatabaseId",$param) and $param["DatabaseId"] !== null) {
+            $this->DatabaseId = $param["DatabaseId"];
         }
     }
 }

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditTrack请求参数结构体
+ * 主机所属项目
  *
- * @method integer getTrackId() 获取跟踪集 ID
- * @method void setTrackId(integer $TrackId) 设置跟踪集 ID
+ * @method string getProjectName() 获取项目名称
+ * @method void setProjectName(string $ProjectName) 设置项目名称
+ * @method integer getProjectID() 获取项目ID
+ * @method void setProjectID(integer $ProjectID) 设置项目ID
  */
-class DeleteAuditTrackRequest extends AbstractModel
+class ProjectInfo extends AbstractModel
 {
     /**
-     * @var integer 跟踪集 ID
+     * @var string 项目名称
      */
-    public $TrackId;
+    public $ProjectName;
 
     /**
-     * @param integer $TrackId 跟踪集 ID
+     * @var integer 项目ID
+     */
+    public $ProjectID;
+
+    /**
+     * @param string $ProjectName 项目名称
+     * @param integer $ProjectID 项目ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteAuditTrackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrackId",$param) and $param["TrackId"] !== null) {
-            $this->TrackId = $param["TrackId"];
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("ProjectID",$param) and $param["ProjectID"] !== null) {
+            $this->ProjectID = $param["ProjectID"];
         }
     }
 }

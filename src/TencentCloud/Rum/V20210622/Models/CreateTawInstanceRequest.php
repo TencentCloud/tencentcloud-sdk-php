@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getAreaId() 获取片区Id，(至少大于0)
  * @method void setAreaId(integer $AreaId) 设置片区Id，(至少大于0)
- * @method integer getChargeType() 获取计费类型, (1=后付费，2=预付费)
- * @method void setChargeType(integer $ChargeType) 设置计费类型, (1=后付费，2=预付费)
+ * @method integer getChargeType() 获取计费类型, (1=后付费)
+ * @method void setChargeType(integer $ChargeType) 设置计费类型, (1=后付费)
  * @method integer getDataRetentionDays() 获取数据保存时间，(至少大于0)
  * @method void setDataRetentionDays(integer $DataRetentionDays) 设置数据保存时间，(至少大于0)
  * @method string getInstanceName() 获取实例名称，(最大长度不超过255字节)
@@ -47,7 +47,7 @@ class CreateTawInstanceRequest extends AbstractModel
     public $AreaId;
 
     /**
-     * @var integer 计费类型, (1=后付费，2=预付费)
+     * @var integer 计费类型, (1=后付费)
      */
     public $ChargeType;
 
@@ -88,7 +88,7 @@ class CreateTawInstanceRequest extends AbstractModel
 
     /**
      * @param integer $AreaId 片区Id，(至少大于0)
-     * @param integer $ChargeType 计费类型, (1=后付费，2=预付费)
+     * @param integer $ChargeType 计费类型, (1=后付费)
      * @param integer $DataRetentionDays 数据保存时间，(至少大于0)
      * @param string $InstanceName 实例名称，(最大长度不超过255字节)
      * @param array $Tags 标签列表

@@ -22,16 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() 获取过滤器
 ModelAccTaskName 任务名称
+ModelSource 模型来源
  * @method void setFilters(array $Filters) 设置过滤器
 ModelAccTaskName 任务名称
+ModelSource 模型来源
  * @method string getOrderField() 获取排序字段，默认CreateTime
  * @method void setOrderField(string $OrderField) 设置排序字段，默认CreateTime
  * @method string getOrder() 获取排序方式：ASC/DESC，默认DESC
  * @method void setOrder(string $Order) 设置排序方式：ASC/DESC，默认DESC
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回记录条数，默认20
- * @method void setLimit(integer $Limit) 设置返回记录条数，默认20
+ * @method integer getLimit() 获取返回记录条数，默认10
+ * @method void setLimit(integer $Limit) 设置返回记录条数，默认10
  * @method array getTagFilters() 获取标签过滤
  * @method void setTagFilters(array $TagFilters) 设置标签过滤
  */
@@ -40,6 +42,7 @@ class DescribeModelAccelerateTasksRequest extends AbstractModel
     /**
      * @var array 过滤器
 ModelAccTaskName 任务名称
+ModelSource 模型来源
      */
     public $Filters;
 
@@ -59,7 +62,7 @@ ModelAccTaskName 任务名称
     public $Offset;
 
     /**
-     * @var integer 返回记录条数，默认20
+     * @var integer 返回记录条数，默认10
      */
     public $Limit;
 
@@ -71,10 +74,11 @@ ModelAccTaskName 任务名称
     /**
      * @param array $Filters 过滤器
 ModelAccTaskName 任务名称
+ModelSource 模型来源
      * @param string $OrderField 排序字段，默认CreateTime
      * @param string $Order 排序方式：ASC/DESC，默认DESC
      * @param integer $Offset 偏移量
-     * @param integer $Limit 返回记录条数，默认20
+     * @param integer $Limit 返回记录条数，默认10
      * @param array $TagFilters 标签过滤
      */
     function __construct()

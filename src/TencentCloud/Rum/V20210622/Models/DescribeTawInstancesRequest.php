@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页Offset
  * @method array getAreaIds() 获取片区Id
  * @method void setAreaIds(array $AreaIds) 设置片区Id
- * @method array getInstanceStatuses() 获取实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁)
- * @method void setInstanceStatuses(array $InstanceStatuses) 设置实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁)
- * @method array getInstanceIds() 获取实例Id
- * @method void setInstanceIds(array $InstanceIds) 设置实例Id
+ * @method array getInstanceStatuses() 获取实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
+ * @method void setInstanceStatuses(array $InstanceStatuses) 设置实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
+ * @method array getInstanceIds() 获取实例Id, 该参数已废弃，请在Filters内注明
+ * @method void setInstanceIds(array $InstanceIds) 设置实例Id, 该参数已废弃，请在Filters内注明
  * @method array getFilters() 获取过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
  * @method void setFilters(array $Filters) 设置过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
  * @method integer getIsDemo() 获取该参数已废弃，demo模式请在Filters内注明
@@ -67,12 +67,12 @@ class DescribeTawInstancesRequest extends AbstractModel
     public $AreaIds;
 
     /**
-     * @var array 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁)
+     * @var array 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
      */
     public $InstanceStatuses;
 
     /**
-     * @var array 实例Id
+     * @var array 实例Id, 该参数已废弃，请在Filters内注明
      */
     public $InstanceIds;
 
@@ -92,8 +92,8 @@ class DescribeTawInstancesRequest extends AbstractModel
      * @param integer $Limit 分页Limit
      * @param integer $Offset 分页Offset
      * @param array $AreaIds 片区Id
-     * @param array $InstanceStatuses 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁)
-     * @param array $InstanceIds 实例Id
+     * @param array $InstanceStatuses 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=销毁中，8=已销毁), 该参数已废弃，请在Filters内注明
+     * @param array $InstanceIds 实例Id, 该参数已废弃，请在Filters内注明
      * @param array $Filters 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
      * @param integer $IsDemo 该参数已废弃，demo模式请在Filters内注明
      */

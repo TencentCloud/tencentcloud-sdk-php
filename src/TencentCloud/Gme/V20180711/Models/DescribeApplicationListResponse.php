@@ -14,26 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20211206\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateMigrationService返回参数结构体
+ * DescribeApplicationList返回参数结构体
  *
- * @method array getJobIds() 获取下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobIds(array $JobIds) 设置下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getApplicationList() 获取获取应用列表返回
+ * @method void setApplicationList(array $ApplicationList) 设置获取应用列表返回
+ * @method integer getTotal() 获取应用总数
+ * @method void setTotal(integer $Total) 设置应用总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateMigrationServiceResponse extends AbstractModel
+class DescribeApplicationListResponse extends AbstractModel
 {
     /**
-     * @var array 下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 获取应用列表返回
      */
-    public $JobIds;
+    public $ApplicationList;
+
+    /**
+     * @var integer 应用总数
+     */
+    public $Total;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class CreateMigrationServiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $JobIds 下单成功随机生成的迁移任务id列表，形如：dts-c1f6rs21
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ApplicationList 获取应用列表返回
+     * @param integer $Total 应用总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,8 +62,17 @@ class CreateMigrationServiceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobIds",$param) and $param["JobIds"] !== null) {
-            $this->JobIds = $param["JobIds"];
+        if (array_key_exists("ApplicationList",$param) and $param["ApplicationList"] !== null) {
+            $this->ApplicationList = [];
+            foreach ($param["ApplicationList"] as $key => $value){
+                $obj = new ApplicationList();
+                $obj->deserialize($value);
+                array_push($this->ApplicationList, $obj);
+            }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

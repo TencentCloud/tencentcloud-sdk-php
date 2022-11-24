@@ -201,12 +201,12 @@ SIGN_PAGING_SEAL - 可以指定印章ID
 如果不为空，属于渠道预设控件；
  * @method void setChannelComponentId(string $ChannelComponentId) 设置渠道控件ID。
 如果不为空，属于渠道预设控件；
- * @method integer getKeywordPage() 获取指定关键字页码
- * @method void setKeywordPage(integer $KeywordPage) 设置指定关键字页码
- * @method string getRelativeLocation() 获取关键字位置模式
- * @method void setRelativeLocation(string $RelativeLocation) 设置关键字位置模式
- * @method array getKeywordIndexes() 获取关键字索引
- * @method void setKeywordIndexes(array $KeywordIndexes) 设置关键字索引
+ * @method integer getKeywordPage() 获取指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+ * @method void setKeywordPage(integer $KeywordPage) 设置指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+ * @method string getRelativeLocation() 获取关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+ * @method void setRelativeLocation(string $RelativeLocation) 设置关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+ * @method array getKeywordIndexes() 获取关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+ * @method void setKeywordIndexes(array $KeywordIndexes) 设置关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
  */
 class Component extends AbstractModel
 {
@@ -378,17 +378,17 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     public $ChannelComponentId;
 
     /**
-     * @var integer 指定关键字页码
+     * @var integer 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
      */
     public $KeywordPage;
 
     /**
-     * @var string 关键字位置模式
+     * @var string 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
      */
     public $RelativeLocation;
 
     /**
-     * @var array 关键字索引
+     * @var array 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
      */
     public $KeywordIndexes;
 
@@ -480,9 +480,9 @@ SIGN_PAGING_SEAL - 可以指定印章ID
      * @param float $OffsetY 指定关键字时纵坐标偏移量，单位pt
      * @param string $ChannelComponentId 渠道控件ID。
 如果不为空，属于渠道预设控件；
-     * @param integer $KeywordPage 指定关键字页码
-     * @param string $RelativeLocation 关键字位置模式
-     * @param array $KeywordIndexes 关键字索引
+     * @param integer $KeywordPage 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+     * @param string $RelativeLocation 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+     * @param array $KeywordIndexes 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
      */
     function __construct()
     {

@@ -18,12 +18,12 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditTrack请求参数结构体
+ * DescribeAuditTrack请求参数结构体
  *
  * @method integer getTrackId() 获取跟踪集 ID
  * @method void setTrackId(integer $TrackId) 设置跟踪集 ID
  */
-class DeleteAuditTrackRequest extends AbstractModel
+class DescribeAuditTrackRequest extends AbstractModel
 {
     /**
      * @var integer 跟踪集 ID

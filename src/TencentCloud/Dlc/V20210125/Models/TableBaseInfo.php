@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserSubUin(string $UserSubUin) 设置建表用户ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method DataGovernPolicy getGovernPolicy() 获取数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGovernPolicy(DataGovernPolicy $GovernPolicy) 设置数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableBaseInfo extends AbstractModel
 {
@@ -98,6 +102,12 @@ class TableBaseInfo extends AbstractModel
     public $UserSubUin;
 
     /**
+     * @var DataGovernPolicy 数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GovernPolicy;
+
+    /**
      * @param string $DatabaseName 该数据表所属数据库名字
      * @param string $TableName 数据表名字
      * @param string $DatasourceConnectionName 该数据表所属数据源名字
@@ -111,6 +121,8 @@ class TableBaseInfo extends AbstractModel
      * @param string $UserAlias 建表用户昵称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserSubUin 建表用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataGovernPolicy $GovernPolicy 数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -156,6 +168,11 @@ class TableBaseInfo extends AbstractModel
 
         if (array_key_exists("UserSubUin",$param) and $param["UserSubUin"] !== null) {
             $this->UserSubUin = $param["UserSubUin"];
+        }
+
+        if (array_key_exists("GovernPolicy",$param) and $param["GovernPolicy"] !== null) {
+            $this->GovernPolicy = new DataGovernPolicy();
+            $this->GovernPolicy->deserialize($param["GovernPolicy"]);
         }
     }
 }

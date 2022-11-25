@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDomainAlias请求参数结构体
  *
- * @method integer getDomainAliasId() 获取域名别名ID
- * @method void setDomainAliasId(integer $DomainAliasId) 设置域名别名ID
+ * @method integer getDomainAliasId() 获取域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID
+ * @method void setDomainAliasId(integer $DomainAliasId) 设置域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getDomainId() 获取域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
- * @method void setDomainId(integer $DomainId) 设置域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+ * @method integer getDomainId() 获取域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method void setDomainId(integer $DomainId) 设置域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
  */
 class DeleteDomainAliasRequest extends AbstractModel
 {
     /**
-     * @var integer 域名别名ID
+     * @var integer 域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID
      */
     public $DomainAliasId;
 
@@ -40,14 +40,14 @@ class DeleteDomainAliasRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+     * @var integer 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public $DomainId;
 
     /**
-     * @param integer $DomainAliasId 域名别名ID
+     * @param integer $DomainAliasId 域名别名ID。可以通过接口DescribeDomainAliasList查到所有的域名别名列表以及对应的ID
      * @param string $Domain 域名
-     * @param integer $DomainId 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain
+     * @param integer $DomainId 域名ID，参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
- * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+ * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
  * @method integer getOffset() 获取记录开始的偏移，第一条记录为 0，依次类推，默认为0
  * @method void setOffset(integer $Offset) 设置记录开始的偏移，第一条记录为 0，依次类推，默认为0
  * @method integer getLimit() 获取共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。
@@ -37,7 +37,7 @@ class DescribeDomainLogListRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public $DomainId;
 
@@ -53,7 +53,7 @@ class DescribeDomainLogListRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      * @param integer $Offset 记录开始的偏移，第一条记录为 0，依次类推，默认为0
      * @param integer $Limit 共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。
      */

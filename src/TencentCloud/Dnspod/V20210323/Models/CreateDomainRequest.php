@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getGroupId() 获取域名分组ID
- * @method void setGroupId(integer $GroupId) 设置域名分组ID
+ * @method integer getGroupId() 获取域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
+ * @method void setGroupId(integer $GroupId) 设置域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
  * @method string getIsMark() 获取是否星标域名，”yes”、”no” 分别代表是和否。
  * @method void setIsMark(string $IsMark) 设置是否星标域名，”yes”、”no” 分别代表是和否。
  */
@@ -35,7 +35,7 @@ class CreateDomainRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 域名分组ID
+     * @var integer 域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
      */
     public $GroupId;
 
@@ -46,7 +46,7 @@ class CreateDomainRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param integer $GroupId 域名分组ID
+     * @param integer $GroupId 域名分组ID。可以通过接口DescribeDomainGroupList查看当前域名分组信息
      * @param string $IsMark 是否星标域名，”yes”、”no” 分别代表是和否。
      */
     function __construct()

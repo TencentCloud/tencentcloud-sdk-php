@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络 ID，如果不传则默认选择基础网络，请使用 查询私有网络列表
  * @method string getSubnetId() 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 查询子网列表
  * @method void setSubnetId(string $SubnetId) 设置私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 查询子网列表
- * @method string getPassword() 获取实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
- * @method void setPassword(string $Password) 设置实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+ * @method string getPassword() 获取实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。 自定义密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
+ * @method void setPassword(string $Password) 设置实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。 自定义密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
  * @method array getTags() 获取实例标签信息
  * @method void setTags(array $Tags) 设置实例标签信息
  * @method integer getAutoRenewFlag() 获取自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
@@ -72,6 +72,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMongosMemory(integer $MongosMemory) 设置mongos 内存大小，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
  * @method integer getMongosNodeNum() 获取mongos 数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：为了保障高可用，最低需要购买3个mongos，上限为32个
  * @method void setMongosNodeNum(integer $MongosNodeNum) 设置mongos 数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：为了保障高可用，最低需要购买3个mongos，上限为32个
+ * @method integer getReadonlyNodeNum() 获取只读节点数量，最大不超过7个
+ * @method void setReadonlyNodeNum(integer $ReadonlyNodeNum) 设置只读节点数量，最大不超过7个
+ * @method array getReadonlyNodeAvailabilityZoneList() 获取只读节点部署可用区
+ * @method void setReadonlyNodeAvailabilityZoneList(array $ReadonlyNodeAvailabilityZoneList) 设置只读节点部署可用区
+ * @method string getHiddenZone() 获取Hidden节点所在的可用区，跨可用区实例必传
+ * @method void setHiddenZone(string $HiddenZone) 设置Hidden节点所在的可用区，跨可用区实例必传
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -141,7 +147,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+     * @var string 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。 自定义密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
      */
     public $Password;
 
@@ -206,6 +212,21 @@ class CreateDBInstanceRequest extends AbstractModel
     public $MongosNodeNum;
 
     /**
+     * @var integer 只读节点数量，最大不超过7个
+     */
+    public $ReadonlyNodeNum;
+
+    /**
+     * @var array 只读节点部署可用区
+     */
+    public $ReadonlyNodeAvailabilityZoneList;
+
+    /**
+     * @var string Hidden节点所在的可用区，跨可用区实例必传
+     */
+    public $HiddenZone;
+
+    /**
      * @param integer $NodeNum 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
      * @param integer $Memory 实例内存大小，单位：GB
      * @param integer $Volume 实例硬盘大小，单位：GB
@@ -219,7 +240,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $ProjectId 项目ID，不设置为默认项目
      * @param string $VpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 查询私有网络列表
      * @param string $SubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 查询子网列表
-     * @param string $Password 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+     * @param string $Password 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。 自定义密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
      * @param array $Tags 实例标签信息
      * @param integer $AutoRenewFlag 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
      * @param integer $AutoVoucher 是否自动选择代金券，可选值为：1 - 是；0 - 否； 默认为0
@@ -232,6 +253,9 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param integer $MongosCpu mongos cpu数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
      * @param integer $MongosMemory mongos 内存大小，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
      * @param integer $MongosNodeNum mongos 数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：为了保障高可用，最低需要购买3个mongos，上限为32个
+     * @param integer $ReadonlyNodeNum 只读节点数量，最大不超过7个
+     * @param array $ReadonlyNodeAvailabilityZoneList 只读节点部署可用区
+     * @param string $HiddenZone Hidden节点所在的可用区，跨可用区实例必传
      */
     function __construct()
     {
@@ -353,6 +377,18 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("MongosNodeNum",$param) and $param["MongosNodeNum"] !== null) {
             $this->MongosNodeNum = $param["MongosNodeNum"];
+        }
+
+        if (array_key_exists("ReadonlyNodeNum",$param) and $param["ReadonlyNodeNum"] !== null) {
+            $this->ReadonlyNodeNum = $param["ReadonlyNodeNum"];
+        }
+
+        if (array_key_exists("ReadonlyNodeAvailabilityZoneList",$param) and $param["ReadonlyNodeAvailabilityZoneList"] !== null) {
+            $this->ReadonlyNodeAvailabilityZoneList = $param["ReadonlyNodeAvailabilityZoneList"];
+        }
+
+        if (array_key_exists("HiddenZone",$param) and $param["HiddenZone"] !== null) {
+            $this->HiddenZone = $param["HiddenZone"];
         }
     }
 }

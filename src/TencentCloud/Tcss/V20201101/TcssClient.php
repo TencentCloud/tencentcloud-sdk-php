@@ -60,6 +60,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\CreateExportComplianceStatusListJobResponse CreateExportComplianceStatusListJob(Models\CreateExportComplianceStatusListJobRequest $req) 创建一个导出安全合规信息的任务
  * @method Models\CreateHostExportJobResponse CreateHostExportJob(Models\CreateHostExportJobRequest $req) 创建主机列表导出任务
  * @method Models\CreateImageExportJobResponse CreateImageExportJob(Models\CreateImageExportJobRequest $req) 创建镜像导出任务
+ * @method Models\CreateK8sApiAbnormalEventExportJobResponse CreateK8sApiAbnormalEventExportJob(Models\CreateK8sApiAbnormalEventExportJobRequest $req) 创建k8s api异常事件导出任务
+ * @method Models\CreateK8sApiAbnormalRuleExportJobResponse CreateK8sApiAbnormalRuleExportJob(Models\CreateK8sApiAbnormalRuleExportJobRequest $req) 创建k8sApi异常规则导出任务
+ * @method Models\CreateK8sApiAbnormalRuleInfoResponse CreateK8sApiAbnormalRuleInfo(Models\CreateK8sApiAbnormalRuleInfoRequest $req) 创建k8sapi异常事件规则
  * @method Models\CreateNetworkFirewallClusterRefreshResponse CreateNetworkFirewallClusterRefresh(Models\CreateNetworkFirewallClusterRefreshRequest $req) 容器网络集群下发刷新任务
  * @method Models\CreateNetworkFirewallPolicyDiscoverResponse CreateNetworkFirewallPolicyDiscover(Models\CreateNetworkFirewallPolicyDiscoverRequest $req) 容器网络集群网络策略创建自动发现任务
  * @method Models\CreateNetworkFirewallPublishResponse CreateNetworkFirewallPublish(Models\CreateNetworkFirewallPublishRequest $req) 容器网络创建网络策略发布任务
@@ -87,6 +90,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DeleteCompliancePolicyItemFromWhitelistResponse DeleteCompliancePolicyItemFromWhitelist(Models\DeleteCompliancePolicyItemFromWhitelistRequest $req) 从白名单中删除将指定的检测项。
  * @method Models\DeleteEscapeWhiteListResponse DeleteEscapeWhiteList(Models\DeleteEscapeWhiteListRequest $req) 删除逃逸白名单
  * @method Models\DeleteIgnoreVulResponse DeleteIgnoreVul(Models\DeleteIgnoreVulRequest $req) 取消漏洞扫描忽略漏洞
+ * @method Models\DeleteK8sApiAbnormalRuleResponse DeleteK8sApiAbnormalRule(Models\DeleteK8sApiAbnormalRuleRequest $req) 删除k8sapi异常事件规则
  * @method Models\DeleteMachineResponse DeleteMachine(Models\DeleteMachineRequest $req) 卸载Agent客户端
  * @method Models\DeleteNetworkFirewallPolicyDetailResponse DeleteNetworkFirewallPolicyDetail(Models\DeleteNetworkFirewallPolicyDetailRequest $req) 容器网络创建网络策略删除任务
  * @method Models\DeleteReverseShellEventsResponse DeleteReverseShellEvents(Models\DeleteReverseShellEventsRequest $req) 删除运行时反弹shell事件
@@ -115,6 +119,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeAgentDaemonSetCmdResponse DescribeAgentDaemonSetCmd(Models\DescribeAgentDaemonSetCmdRequest $req) 查询平行容器安装命令
  * @method Models\DescribeAgentInstallCommandResponse DescribeAgentInstallCommand(Models\DescribeAgentInstallCommandRequest $req) 查询agent安装命令
  * @method Models\DescribeAssetAppServiceListResponse DescribeAssetAppServiceList(Models\DescribeAssetAppServiceListRequest $req) 容器安全查询app服务列表
+ * @method Models\DescribeAssetClusterListResponse DescribeAssetClusterList(Models\DescribeAssetClusterListRequest $req) 查询集群列表
  * @method Models\DescribeAssetComponentListResponse DescribeAssetComponentList(Models\DescribeAssetComponentListRequest $req) 容器安全搜索查询容器组件列表
  * @method Models\DescribeAssetContainerDetailResponse DescribeAssetContainerDetail(Models\DescribeAssetContainerDetailRequest $req) 查询容器详细信息
  * @method Models\DescribeAssetContainerListResponse DescribeAssetContainerList(Models\DescribeAssetContainerListRequest $req) 搜索查询容器列表
@@ -197,6 +202,13 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeImageSimpleListResponse DescribeImageSimpleList(Models\DescribeImageSimpleListRequest $req) DescribeImageSimpleList 查询全部镜像列表
  * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) 获取索引列表
  * @method Models\DescribeInspectionReportResponse DescribeInspectionReport(Models\DescribeInspectionReportRequest $req) 查询检查报告
+ * @method Models\DescribeK8sApiAbnormalEventInfoResponse DescribeK8sApiAbnormalEventInfo(Models\DescribeK8sApiAbnormalEventInfoRequest $req) 查询k8s api 异常事件详情
+ * @method Models\DescribeK8sApiAbnormalEventListResponse DescribeK8sApiAbnormalEventList(Models\DescribeK8sApiAbnormalEventListRequest $req) 查询k8s api异常事件列表
+ * @method Models\DescribeK8sApiAbnormalRuleInfoResponse DescribeK8sApiAbnormalRuleInfo(Models\DescribeK8sApiAbnormalRuleInfoRequest $req) 查询k8sapi异常请求规则详情
+ * @method Models\DescribeK8sApiAbnormalRuleListResponse DescribeK8sApiAbnormalRuleList(Models\DescribeK8sApiAbnormalRuleListRequest $req) 查询k8sapi异常请求规则列表
+ * @method Models\DescribeK8sApiAbnormalRuleScopeListResponse DescribeK8sApiAbnormalRuleScopeList(Models\DescribeK8sApiAbnormalRuleScopeListRequest $req) 查询k8s api 异常规则中范围列表
+ * @method Models\DescribeK8sApiAbnormalSummaryResponse DescribeK8sApiAbnormalSummary(Models\DescribeK8sApiAbnormalSummaryRequest $req) 查询k8sapi异常事件统计
+ * @method Models\DescribeK8sApiAbnormalTendencyResponse DescribeK8sApiAbnormalTendency(Models\DescribeK8sApiAbnormalTendencyRequest $req) 查询k8sapi异常事件趋势
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 获取日志检索容量使用统计
  * @method Models\DescribeNetworkFirewallAuditRecordResponse DescribeNetworkFirewallAuditRecord(Models\DescribeNetworkFirewallAuditRecordRequest $req) 查询集群策略审计列表
  * @method Models\DescribeNetworkFirewallClusterListResponse DescribeNetworkFirewallClusterList(Models\DescribeNetworkFirewallClusterListRequest $req) 查询集群策略列表
@@ -304,6 +316,9 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\ModifyEscapeRuleResponse ModifyEscapeRule(Models\ModifyEscapeRuleRequest $req) ModifyEscapeRule  修改容器逃逸扫描规则信息
  * @method Models\ModifyEscapeWhiteListResponse ModifyEscapeWhiteList(Models\ModifyEscapeWhiteListRequest $req) 修改逃逸白名单
  * @method Models\ModifyImageAuthorizedResponse ModifyImageAuthorized(Models\ModifyImageAuthorizedRequest $req) 批量授权镜像扫描V2.0
+ * @method Models\ModifyK8sApiAbnormalEventStatusResponse ModifyK8sApiAbnormalEventStatus(Models\ModifyK8sApiAbnormalEventStatusRequest $req) 修改k8sapi异常事件状态
+ * @method Models\ModifyK8sApiAbnormalRuleInfoResponse ModifyK8sApiAbnormalRuleInfo(Models\ModifyK8sApiAbnormalRuleInfoRequest $req) 修改k8sapi异常规则信息
+ * @method Models\ModifyK8sApiAbnormalRuleStatusResponse ModifyK8sApiAbnormalRuleStatus(Models\ModifyK8sApiAbnormalRuleStatusRequest $req) 修改k8sapi异常事件规则状态
  * @method Models\ModifyReverseShellStatusResponse ModifyReverseShellStatus(Models\ModifyReverseShellStatusRequest $req) 修改反弹shell事件的状态信息
  * @method Models\ModifyRiskSyscallStatusResponse ModifyRiskSyscallStatus(Models\ModifyRiskSyscallStatusRequest $req) 修改高危系统调用事件的状态信息
  * @method Models\ModifySecLogCleanSettingInfoResponse ModifySecLogCleanSettingInfo(Models\ModifySecLogCleanSettingInfoRequest $req) 修改安全日志清理设置信息

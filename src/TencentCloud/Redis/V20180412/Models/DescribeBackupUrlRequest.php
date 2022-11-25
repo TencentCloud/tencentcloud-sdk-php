@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupUrl请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getBackupId() 获取备份ID，通过DescribeInstanceBackups接口可查
- * @method void setBackupId(string $BackupId) 设置备份ID，通过DescribeInstanceBackups接口可查
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getBackupId() 获取备份 ID，可通过DescribeInstanceBackups接口返回的参数 BackupSet 获取。
+ * @method void setBackupId(string $BackupId) 设置备份 ID，可通过DescribeInstanceBackups接口返回的参数 BackupSet 获取。
  */
 class DescribeBackupUrlRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 备份ID，通过DescribeInstanceBackups接口可查
+     * @var string 备份 ID，可通过DescribeInstanceBackups接口返回的参数 BackupSet 获取。
      */
     public $BackupId;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $BackupId 备份ID，通过DescribeInstanceBackups接口可查
+     * @param string $InstanceId 实例 ID。
+     * @param string $BackupId 备份 ID，可通过DescribeInstanceBackups接口返回的参数 BackupSet 获取。
      */
     function __construct()
     {

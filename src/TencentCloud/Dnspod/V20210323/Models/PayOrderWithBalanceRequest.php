@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getBigDealIdList() 获取需要支付的大订单号数组
  * @method void setBigDealIdList(array $BigDealIdList) 设置需要支付的大订单号数组
- * @method array getVoucherIdList() 获取代金券ID数组
- * @method void setVoucherIdList(array $VoucherIdList) 设置代金券ID数组
+ * @method array getVoucherIdList() 获取代金券ID数组。可以从控制台查到拥有的代金券
+ * @method void setVoucherIdList(array $VoucherIdList) 设置代金券ID数组。可以从控制台查到拥有的代金券
  */
 class PayOrderWithBalanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class PayOrderWithBalanceRequest extends AbstractModel
     public $BigDealIdList;
 
     /**
-     * @var array 代金券ID数组
+     * @var array 代金券ID数组。可以从控制台查到拥有的代金券
      */
     public $VoucherIdList;
 
     /**
      * @param array $BigDealIdList 需要支付的大订单号数组
-     * @param array $VoucherIdList 代金券ID数组
+     * @param array $VoucherIdList 代金券ID数组。可以从控制台查到拥有的代金券
      */
     function __construct()
     {

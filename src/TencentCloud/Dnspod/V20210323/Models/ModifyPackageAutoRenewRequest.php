@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPackageAutoRenew请求参数结构体
  *
- * @method string getResourceId() 获取资源ID
- * @method void setResourceId(string $ResourceId) 设置资源ID
+ * @method string getResourceId() 获取资源ID。可以在控制台查看所有的资源
+ * @method void setResourceId(string $ResourceId) 设置资源ID。可以在控制台查看所有的资源
  * @method string getStatus() 获取enable 开启自动续费；disable 关闭自动续费
  * @method void setStatus(string $Status) 设置enable 开启自动续费；disable 关闭自动续费
  */
 class ModifyPackageAutoRenewRequest extends AbstractModel
 {
     /**
-     * @var string 资源ID
+     * @var string 资源ID。可以在控制台查看所有的资源
      */
     public $ResourceId;
 
@@ -38,7 +38,7 @@ class ModifyPackageAutoRenewRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $ResourceId 资源ID
+     * @param string $ResourceId 资源ID。可以在控制台查看所有的资源
      * @param string $Status enable 开启自动续费；disable 关闭自动续费
      */
     function __construct()

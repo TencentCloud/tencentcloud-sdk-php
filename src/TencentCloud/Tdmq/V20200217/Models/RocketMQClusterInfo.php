@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsVip(boolean $IsVip) 设置是否为专享实例
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getRocketMQFlag() 获取Rocketmq集群标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRocketMQFlag(boolean $RocketMQFlag) 设置Rocketmq集群标识
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -106,6 +110,12 @@ class RocketMQClusterInfo extends AbstractModel
     public $IsVip;
 
     /**
+     * @var boolean Rocketmq集群标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RocketMQFlag;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -119,6 +129,8 @@ class RocketMQClusterInfo extends AbstractModel
      * @param array $Vpcs VPC信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsVip 是否为专享实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $RocketMQFlag Rocketmq集群标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -177,6 +189,10 @@ class RocketMQClusterInfo extends AbstractModel
 
         if (array_key_exists("IsVip",$param) and $param["IsVip"] !== null) {
             $this->IsVip = $param["IsVip"];
+        }
+
+        if (array_key_exists("RocketMQFlag",$param) and $param["RocketMQFlag"] !== null) {
+            $this->RocketMQFlag = $param["RocketMQFlag"];
         }
     }
 }

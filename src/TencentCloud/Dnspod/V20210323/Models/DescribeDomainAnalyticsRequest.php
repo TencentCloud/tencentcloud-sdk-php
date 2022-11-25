@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndDate(string $EndDate) 设置查询的结束时间，格式：YYYY-MM-DD
  * @method string getDnsFormat() 获取DATE:按天维度统计 HOUR:按小时维度统计
  * @method void setDnsFormat(string $DnsFormat) 设置DATE:按天维度统计 HOUR:按小时维度统计
- * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
- * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+ * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
  */
 class DescribeDomainAnalyticsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeDomainAnalyticsRequest extends AbstractModel
     public $DnsFormat;
 
     /**
-     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public $DomainId;
 
@@ -63,7 +63,7 @@ class DescribeDomainAnalyticsRequest extends AbstractModel
      * @param string $StartDate 查询的开始时间，格式：YYYY-MM-DD
      * @param string $EndDate 查询的结束时间，格式：YYYY-MM-DD
      * @param string $DnsFormat DATE:按天维度统计 HOUR:按小时维度统计
-     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     function __construct()
     {

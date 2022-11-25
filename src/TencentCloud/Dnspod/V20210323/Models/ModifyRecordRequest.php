@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordLine(string $RecordLine) 设置记录线路，通过 API 记录线路获得，中文，比如：默认。
  * @method string getValue() 获取记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
  * @method void setValue(string $Value) 设置记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
- * @method integer getRecordId() 获取记录 ID 。
- * @method void setRecordId(integer $RecordId) 设置记录 ID 。
- * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
- * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+ * @method integer getRecordId() 获取记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+ * @method void setRecordId(integer $RecordId) 设置记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+ * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
  * @method string getSubDomain() 获取主机记录，如 www，如果不传，默认为 @。
  * @method void setSubDomain(string $SubDomain) 设置主机记录，如 www，如果不传，默认为 @。
  * @method string getRecordLineId() 获取线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
@@ -68,12 +68,12 @@ class ModifyRecordRequest extends AbstractModel
     public $Value;
 
     /**
-     * @var integer 记录 ID 。
+     * @var integer 记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
      */
     public $RecordId;
 
     /**
-     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public $DomainId;
 
@@ -112,8 +112,8 @@ class ModifyRecordRequest extends AbstractModel
      * @param string $RecordType 记录类型，通过 API 记录类型获得，大写英文，比如：A 。
      * @param string $RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
      * @param string $Value 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
-     * @param integer $RecordId 记录 ID 。
-     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @param integer $RecordId 记录 ID 。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      * @param string $SubDomain 主机记录，如 www，如果不传，默认为 @。
      * @param string $RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      * @param integer $MX MX 优先级，当记录类型是 MX 时有效，范围1-20，MX 记录时必选。

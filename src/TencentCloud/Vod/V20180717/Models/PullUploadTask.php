@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method integer getProgress() 获取转拉任务进度，取值范围 [0-100] 。
+ * @method void setProgress(integer $Progress) 设置转拉任务进度，取值范围 [0-100] 。
  */
 class PullUploadTask extends AbstractModel
 {
@@ -119,6 +121,11 @@ class PullUploadTask extends AbstractModel
     public $SessionId;
 
     /**
+     * @var integer 转拉任务进度，取值范围 [0-100] 。
+     */
+    public $Progress;
+
+    /**
      * @param string $TaskId 转拉上传任务 ID。
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
@@ -136,6 +143,7 @@ class PullUploadTask extends AbstractModel
      * @param string $ProcedureTaskId 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @param integer $Progress 转拉任务进度，取值范围 [0-100] 。
      */
     function __construct()
     {
@@ -194,6 +202,10 @@ class PullUploadTask extends AbstractModel
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

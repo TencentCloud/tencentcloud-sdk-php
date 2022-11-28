@@ -76,6 +76,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+ * @method string getOperator() 获取操作者。取值范围：
+<li>System: 表示系统触发。</li>
+ * @method void setOperator(string $Operator) 设置操作者。取值范围：
+<li>System: 表示系统触发。</li>
+ * @method string getOperationType() 获取操作类型。取值范围：
+<li>TSC: 表示使用极速高清进行智能降码。</li>
+ * @method void setOperationType(string $OperationType) 设置操作类型。取值范围：
+<li>TSC: 表示使用极速高清进行智能降码。</li>
  */
 class ProcedureTask extends AbstractModel
 {
@@ -172,6 +180,18 @@ class ProcedureTask extends AbstractModel
     public $SessionId;
 
     /**
+     * @var string 操作者。取值范围：
+<li>System: 表示系统触发。</li>
+     */
+    public $Operator;
+
+    /**
+     * @var string 操作类型。取值范围：
+<li>TSC: 表示使用极速高清进行智能降码。</li>
+     */
+    public $OperationType;
+
+    /**
      * @param string $TaskId 音视频处理任务 ID。
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
@@ -200,6 +220,10 @@ class ProcedureTask extends AbstractModel
 <li>None：不接受该任务流回调。</li>
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * @param string $Operator 操作者。取值范围：
+<li>System: 表示系统触发。</li>
+     * @param string $OperationType 操作类型。取值范围：
+<li>TSC: 表示使用极速高清进行智能降码。</li>
      */
     function __construct()
     {
@@ -297,6 +321,14 @@ class ProcedureTask extends AbstractModel
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("OperationType",$param) and $param["OperationType"] !== null) {
+            $this->OperationType = $param["OperationType"];
         }
     }
 }

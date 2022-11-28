@@ -31,7 +31,6 @@ use TencentCloud\Common\AbstractModel;
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li> ReviewAudioVideo：音视频审核任务。</li>
-<li> ReduceMediaBitrate：降码率任务。</li>
  * @method void setTaskType(string $TaskType) 设置任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -43,7 +42,6 @@ use TencentCloud\Common\AbstractModel;
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li> ReviewAudioVideo：音视频审核任务。</li>
-<li> ReduceMediaBitrate：降码率任务。</li>
  * @method string getStatus() 获取任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -118,9 +116,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReviewAudioVideoTask(ReviewAudioVideoTask $ReviewAudioVideoTask) 设置音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method ReduceMediaBitrateTask getReduceMediaBitrateTask() 获取降码率任务信息，仅当 TaskType 为 ReduceMediaBitrate，该字段有值。
+ * @method ReduceMediaBitrateTask getReduceMediaBitrateTask() 获取该字段已无效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) 设置降码率任务信息，仅当 TaskType 为 ReduceMediaBitrate，该字段有值。
+ * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) 设置该字段已无效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -139,7 +137,6 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li> ReviewAudioVideo：音视频审核任务。</li>
-<li> ReduceMediaBitrate：降码率任务。</li>
      */
     public $TaskType;
 
@@ -257,7 +254,7 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $ReviewAudioVideoTask;
 
     /**
-     * @var ReduceMediaBitrateTask 降码率任务信息，仅当 TaskType 为 ReduceMediaBitrate，该字段有值。
+     * @var ReduceMediaBitrateTask 该字段已无效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReduceMediaBitrateTask;
@@ -279,7 +276,6 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li> ReviewAudioVideo：音视频审核任务。</li>
-<li> ReduceMediaBitrate：降码率任务。</li>
      * @param string $Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -317,7 +313,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReviewAudioVideoTask $ReviewAudioVideoTask 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask 降码率任务信息，仅当 TaskType 为 ReduceMediaBitrate，该字段有值。
+     * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask 该字段已无效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

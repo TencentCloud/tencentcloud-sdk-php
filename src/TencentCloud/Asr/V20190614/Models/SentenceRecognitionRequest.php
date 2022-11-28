@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
+• 16k_zh-PY 中英粤;
+• 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
  * @method void setEngSerViceType(string $EngSerViceType) 设置引擎模型类型。
 电话场景：
 • 8k_en：电话 8k 英语；
@@ -44,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
+• 16k_zh-PY 中英粤;
+• 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
  * @method integer getSourceType() 获取语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method void setSourceType(integer $SourceType) 设置语音数据来源。0：语音 URL；1：语音数据（post body）。
  * @method string getVoiceFormat() 获取识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
@@ -70,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHotwordId(string $HotwordId) 设置热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
  * @method string getCustomizationId() 获取自学习模型 id。如设置了该参数，将生效对应的自学习模型。
  * @method void setCustomizationId(string $CustomizationId) 设置自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+ * @method integer getReinforceHotword() 获取热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
+ * @method void setReinforceHotword(integer $ReinforceHotword) 设置热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
  */
 class SentenceRecognitionRequest extends AbstractModel
 {
@@ -94,6 +100,8 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
+• 16k_zh-PY 中英粤;
+• 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      */
     public $EngSerViceType;
 
@@ -163,6 +171,11 @@ class SentenceRecognitionRequest extends AbstractModel
     public $CustomizationId;
 
     /**
+     * @var integer 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
+     */
+    public $ReinforceHotword;
+
+    /**
      * @param integer $ProjectId 腾讯云项目 ID，废弃参数，默认填写0即可。
      * @param integer $SubServiceType 子服务类型。2： 一句话识别。
      * @param string $EngSerViceType 引擎模型类型。
@@ -175,6 +188,8 @@ class SentenceRecognitionRequest extends AbstractModel
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
 • 16k_zh_medical：16k 医疗；
+• 16k_zh-PY 中英粤;
+• 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      * @param integer $SourceType 语音数据来源。0：语音 URL；1：语音数据（post body）。
      * @param string $VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
      * @param string $UsrAudioKey 用户端对此任务的唯一标识。废弃参数，忽略即可。
@@ -188,6 +203,7 @@ class SentenceRecognitionRequest extends AbstractModel
      * @param integer $ConvertNumMode 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1。
      * @param string $HotwordId 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
      * @param string $CustomizationId 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+     * @param integer $ReinforceHotword 热词增强功能。1:开启后（仅支持8k_zh,16k_zh），将开启同音替换功能，同音字、词在热词中配置。举例：热词配置“蜜制”并开启增强功能后，与“蜜制”同拼音（mizhi）的“秘制”、“蜜汁”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。
      */
     function __construct()
     {
@@ -264,6 +280,10 @@ class SentenceRecognitionRequest extends AbstractModel
 
         if (array_key_exists("CustomizationId",$param) and $param["CustomizationId"] !== null) {
             $this->CustomizationId = $param["CustomizationId"];
+        }
+
+        if (array_key_exists("ReinforceHotword",$param) and $param["ReinforceHotword"] !== null) {
+            $this->ReinforceHotword = $param["ReinforceHotword"];
         }
     }
 }

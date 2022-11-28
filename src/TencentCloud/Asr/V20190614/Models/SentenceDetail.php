@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpeakerId(integer $SpeakerId) 设置声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getEmotionalEnergy() 获取情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmotionalEnergy(float $EmotionalEnergy) 设置情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSilenceTime() 获取本句与上一句之间的静音时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSilenceTime(integer $SilenceTime) 设置本句与上一句之间的静音时长
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SentenceDetail extends AbstractModel
 {
@@ -104,6 +112,18 @@ class SentenceDetail extends AbstractModel
     public $SpeakerId;
 
     /**
+     * @var float 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EmotionalEnergy;
+
+    /**
+     * @var integer 本句与上一句之间的静音时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SilenceTime;
+
+    /**
      * @param string $FinalSentence 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SliceSentence 单句中间识别结果，使用空格拆分为多个词
@@ -119,6 +139,10 @@ class SentenceDetail extends AbstractModel
      * @param float $SpeechSpeed 单句语速，单位：字数/秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SpeakerId 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $EmotionalEnergy 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SilenceTime 本句与上一句之间的静音时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -169,6 +193,14 @@ class SentenceDetail extends AbstractModel
 
         if (array_key_exists("SpeakerId",$param) and $param["SpeakerId"] !== null) {
             $this->SpeakerId = $param["SpeakerId"];
+        }
+
+        if (array_key_exists("EmotionalEnergy",$param) and $param["EmotionalEnergy"] !== null) {
+            $this->EmotionalEnergy = $param["EmotionalEnergy"];
+        }
+
+        if (array_key_exists("SilenceTime",$param) and $param["SilenceTime"] !== null) {
+            $this->SilenceTime = $param["SilenceTime"];
         }
     }
 }

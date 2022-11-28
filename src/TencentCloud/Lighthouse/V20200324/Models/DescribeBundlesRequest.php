@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）
 类型：String
 必选：否
+<li>bundle-type</li>按照 【套餐类型进行过滤】。
+取值：GENERAL_BUNDLE (通用型套餐); STORAGE_BUNDLE(存储型套餐);ENTERPRISE_BUNDLE( 企业型套餐);EXCLUSIVE_BUNDLE(专属型套餐);BEFAST_BUNDLE(蜂驰型套餐);
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BundleIds 和 Filters。
  * @method void setFilters(array $Filters) 设置过滤器列表。
 <li>bundle-id</li>按照【套餐 ID】进行过滤。
@@ -43,6 +45,8 @@ use TencentCloud\Common\AbstractModel;
 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）
 类型：String
 必选：否
+<li>bundle-type</li>按照 【套餐类型进行过滤】。
+取值：GENERAL_BUNDLE (通用型套餐); STORAGE_BUNDLE(存储型套餐);ENTERPRISE_BUNDLE( 企业型套餐);EXCLUSIVE_BUNDLE(专属型套餐);BEFAST_BUNDLE(蜂驰型套餐);
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BundleIds 和 Filters。
  * @method array getZones() 获取可用区列表。默认为全部可用区。
  * @method void setZones(array $Zones) 设置可用区列表。默认为全部可用区。
@@ -73,6 +77,8 @@ class DescribeBundlesRequest extends AbstractModel
 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）
 类型：String
 必选：否
+<li>bundle-type</li>按照 【套餐类型进行过滤】。
+取值：GENERAL_BUNDLE (通用型套餐); STORAGE_BUNDLE(存储型套餐);ENTERPRISE_BUNDLE( 企业型套餐);EXCLUSIVE_BUNDLE(专属型套餐);BEFAST_BUNDLE(蜂驰型套餐);
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BundleIds 和 Filters。
      */
     public $Filters;
@@ -94,6 +100,8 @@ class DescribeBundlesRequest extends AbstractModel
 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）
 类型：String
 必选：否
+<li>bundle-type</li>按照 【套餐类型进行过滤】。
+取值：GENERAL_BUNDLE (通用型套餐); STORAGE_BUNDLE(存储型套餐);ENTERPRISE_BUNDLE( 企业型套餐);EXCLUSIVE_BUNDLE(专属型套餐);BEFAST_BUNDLE(蜂驰型套餐);
 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 BundleIds 和 Filters。
      * @param array $Zones 可用区列表。默认为全部可用区。
      */

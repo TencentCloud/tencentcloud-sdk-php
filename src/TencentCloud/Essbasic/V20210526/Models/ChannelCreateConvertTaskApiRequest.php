@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
- * @method string getResourceType() 获取资源类型 取值范围doc,docx,html,excel之一
- * @method void setResourceType(string $ResourceType) 设置资源类型 取值范围doc,docx,html,excel之一
+ * @method string getResourceType() 获取资源类型 取值范围doc,docx,html,xls,xlsx之一
+ * @method void setResourceType(string $ResourceType) 设置资源类型 取值范围doc,docx,html,xls,xlsx之一
  * @method string getResourceName() 获取资源名称，长度限制为256字符
  * @method void setResourceName(string $ResourceName) 设置资源名称，长度限制为256字符
  * @method string getResourceId() 获取资源Id，通过UploadFiles获取
@@ -41,7 +41,7 @@ class ChannelCreateConvertTaskApiRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 资源类型 取值范围doc,docx,html,excel之一
+     * @var string 资源类型 取值范围doc,docx,html,xls,xlsx之一
      */
     public $ResourceType;
 
@@ -67,7 +67,7 @@ class ChannelCreateConvertTaskApiRequest extends AbstractModel
 
     /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
-     * @param string $ResourceType 资源类型 取值范围doc,docx,html,excel之一
+     * @param string $ResourceType 资源类型 取值范围doc,docx,html,xls,xlsx之一
      * @param string $ResourceName 资源名称，长度限制为256字符
      * @param string $ResourceId 资源Id，通过UploadFiles获取
      * @param UserInfo $Operator 操作者信息

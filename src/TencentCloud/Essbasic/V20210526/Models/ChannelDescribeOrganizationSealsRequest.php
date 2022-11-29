@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回最大数量，最大为100
  * @method integer getOffset() 获取偏移量，默认为0，最大为20000
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0，最大为20000
- * @method integer getInfoType() 获取查询信息类型，为0时不返回授权用户，为1时返回
- * @method void setInfoType(integer $InfoType) 设置查询信息类型，为0时不返回授权用户，为1时返回
+ * @method integer getInfoType() 获取查询信息类型，为1时返回授权用户，为其他值时不返回
+ * @method void setInfoType(integer $InfoType) 设置查询信息类型，为1时返回授权用户，为其他值时不返回
  * @method string getSealId() 获取印章id（没有输入返回所有）
  * @method void setSealId(string $SealId) 设置印章id（没有输入返回所有）
  */
@@ -49,7 +49,7 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 查询信息类型，为0时不返回授权用户，为1时返回
+     * @var integer 查询信息类型，为1时返回授权用户，为其他值时不返回
      */
     public $InfoType;
 
@@ -62,7 +62,7 @@ class ChannelDescribeOrganizationSealsRequest extends AbstractModel
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param integer $Limit 返回最大数量，最大为100
      * @param integer $Offset 偏移量，默认为0，最大为20000
-     * @param integer $InfoType 查询信息类型，为0时不返回授权用户，为1时返回
+     * @param integer $InfoType 查询信息类型，为1时返回授权用户，为其他值时不返回
      * @param string $SealId 印章id（没有输入返回所有）
      */
     function __construct()

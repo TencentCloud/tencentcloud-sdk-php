@@ -14,20 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例权重
+ * 同步镜像信息
  *
-
+ * @method string getImageId() 获取镜像ID
+ * @method void setImageId(string $ImageId) 设置镜像ID
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
  */
-class RoWeight extends AbstractModel
+class SyncImage extends AbstractModel
 {
-
+    /**
+     * @var string 镜像ID
+     */
+    public $ImageId;
 
     /**
+     * @var string 地域
+     */
+    public $Region;
 
+    /**
+     * @param string $ImageId 镜像ID
+     * @param string $Region 地域
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class RoWeight extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
+        }
 
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
     }
 }

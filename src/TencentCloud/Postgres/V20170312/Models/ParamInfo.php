@@ -38,9 +38,9 @@ use TencentCloud\Common\AbstractModel;
 当参数类型为bool（布尔型）时，参数设置值取值范围是true | false； 
 当参数类型为enum（枚举类型）、mutil_enum（多枚举类型）时，参数的取值范围由返回值中的EnumValue确定。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUnit() 获取参数值 单位。参数没有单位是，该字段返回空
+ * @method string getUnit() 获取参数值 单位。参数没有单位时，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnit(string $Unit) 设置参数值 单位。参数没有单位是，该字段返回空
+ * @method void setUnit(string $Unit) 设置参数值 单位。参数没有单位时，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefaultValue() 获取参数默认值。以字符串形式返回
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,13 +50,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentValue(string $CurrentValue) 设置参数当前运行值。以字符串形式返回
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getEnumValue() 获取枚举类型参数，取值范围
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnumValue(array $EnumValue) 设置枚举类型参数，取值范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMax() 获取数值类型（integer、real）参数，取值下界
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMax(float $Max) 设置数值类型（integer、real）参数，取值下界
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getEnumValue() 获取枚举类型参数，取值范围
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnumValue(array $EnumValue) 设置枚举类型参数，取值范围
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMin() 获取数值类型（integer、real）参数，取值上界
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,6 +94,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastModifyTime(string $LastModifyTime) 设置参数最后一次修改时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStandbyRelated() 获取参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStandbyRelated(integer $StandbyRelated) 设置参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getVersionRelationSet() 获取参数版本关联信息，存储具体内核版本下的具体参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersionRelationSet(array $VersionRelationSet) 设置参数版本关联信息，存储具体内核版本下的具体参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSpecRelationSet() 获取参数规格关联信息，存储具体规格下具体的参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpecRelationSet(array $SpecRelationSet) 设置参数规格关联信息，存储具体规格下具体的参数信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamInfo extends AbstractModel
 {
@@ -119,7 +131,7 @@ class ParamInfo extends AbstractModel
     public $ParamValueType;
 
     /**
-     * @var string 参数值 单位。参数没有单位是，该字段返回空
+     * @var string 参数值 单位。参数没有单位时，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
@@ -137,16 +149,16 @@ class ParamInfo extends AbstractModel
     public $CurrentValue;
 
     /**
-     * @var array 枚举类型参数，取值范围
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $EnumValue;
-
-    /**
      * @var float 数值类型（integer、real）参数，取值下界
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Max;
+
+    /**
+     * @var array 枚举类型参数，取值范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnumValue;
 
     /**
      * @var float 数值类型（integer、real）参数，取值上界
@@ -203,6 +215,24 @@ class ParamInfo extends AbstractModel
     public $LastModifyTime;
 
     /**
+     * @var integer 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StandbyRelated;
+
+    /**
+     * @var array 参数版本关联信息，存储具体内核版本下的具体参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VersionRelationSet;
+
+    /**
+     * @var array 参数规格关联信息，存储具体规格下具体的参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SpecRelationSet;
+
+    /**
      * @param integer $ID 参数ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 参数名
@@ -212,15 +242,15 @@ class ParamInfo extends AbstractModel
 当参数类型为bool（布尔型）时，参数设置值取值范围是true | false； 
 当参数类型为enum（枚举类型）、mutil_enum（多枚举类型）时，参数的取值范围由返回值中的EnumValue确定。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Unit 参数值 单位。参数没有单位是，该字段返回空
+     * @param string $Unit 参数值 单位。参数没有单位时，该字段返回空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefaultValue 参数默认值。以字符串形式返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentValue 参数当前运行值。以字符串形式返回
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $EnumValue 枚举类型参数，取值范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Max 数值类型（integer、real）参数，取值下界
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $EnumValue 枚举类型参数，取值范围
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Min 数值类型（integer、real）参数，取值上界
 注意：此字段可能返回 null，表示取不到有效值。
@@ -239,6 +269,12 @@ class ParamInfo extends AbstractModel
      * @param boolean $Advanced 是否为重点参数。（true为重点参数，修改是需要重点关注，可能会影响实例性能）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastModifyTime 参数最后一次修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StandbyRelated 参数存在主备制约，0：无主备制约关系，1:备机参数值需比主机大，2:主机参数值需比备机大
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $VersionRelationSet 参数版本关联信息，存储具体内核版本下的具体参数信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SpecRelationSet 参数规格关联信息，存储具体规格下具体的参数信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -278,12 +314,12 @@ class ParamInfo extends AbstractModel
             $this->CurrentValue = $param["CurrentValue"];
         }
 
-        if (array_key_exists("EnumValue",$param) and $param["EnumValue"] !== null) {
-            $this->EnumValue = $param["EnumValue"];
-        }
-
         if (array_key_exists("Max",$param) and $param["Max"] !== null) {
             $this->Max = $param["Max"];
+        }
+
+        if (array_key_exists("EnumValue",$param) and $param["EnumValue"] !== null) {
+            $this->EnumValue = $param["EnumValue"];
         }
 
         if (array_key_exists("Min",$param) and $param["Min"] !== null) {
@@ -320,6 +356,28 @@ class ParamInfo extends AbstractModel
 
         if (array_key_exists("LastModifyTime",$param) and $param["LastModifyTime"] !== null) {
             $this->LastModifyTime = $param["LastModifyTime"];
+        }
+
+        if (array_key_exists("StandbyRelated",$param) and $param["StandbyRelated"] !== null) {
+            $this->StandbyRelated = $param["StandbyRelated"];
+        }
+
+        if (array_key_exists("VersionRelationSet",$param) and $param["VersionRelationSet"] !== null) {
+            $this->VersionRelationSet = [];
+            foreach ($param["VersionRelationSet"] as $key => $value){
+                $obj = new ParamVersionRelation();
+                $obj->deserialize($value);
+                array_push($this->VersionRelationSet, $obj);
+            }
+        }
+
+        if (array_key_exists("SpecRelationSet",$param) and $param["SpecRelationSet"] !== null) {
+            $this->SpecRelationSet = [];
+            foreach ($param["SpecRelationSet"] as $key => $value){
+                $obj = new ParamSpecRelation();
+                $obj->deserialize($value);
+                array_push($this->SpecRelationSet, $obj);
+            }
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDryRun(boolean $DryRun) 设置检测是否支持发起同步镜像。
  * @method string getImageName() 获取目标镜像名称。
  * @method void setImageName(string $ImageName) 设置目标镜像名称。
+ * @method boolean getImageSetRequired() 获取是否需要返回目的地域的镜像ID。
+ * @method void setImageSetRequired(boolean $ImageSetRequired) 设置是否需要返回目的地域的镜像ID。
  */
 class SyncImagesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class SyncImagesRequest extends AbstractModel
     public $ImageName;
 
     /**
+     * @var boolean 是否需要返回目的地域的镜像ID。
+     */
+    public $ImageSetRequired;
+
+    /**
      * @param array $ImageIds 镜像ID列表 ，镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。<br><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。<br>镜像ID必须满足限制：<br><li>镜像ID对应的镜像状态必须为`NORMAL`。<br>镜像状态请参考[镜像数据表](https://cloud.tencent.com/document/product/213/15753#Image)。
      * @param array $DestinationRegions 目的同步地域列表，必须满足如下限制：<br><li>必须是一个合法的Region。<br><li>如果是自定义镜像，则目标同步地域不能为源地域。<br><li>如果是共享镜像，则目的同步地域仅支持源地域，表示将共享镜像复制为源地域的自定义镜像。<br><li>暂不支持部分地域同步。<br>具体地域参数请参考[Region](https://cloud.tencent.com/document/product/213/6091)。
      * @param boolean $DryRun 检测是否支持发起同步镜像。
      * @param string $ImageName 目标镜像名称。
+     * @param boolean $ImageSetRequired 是否需要返回目的地域的镜像ID。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class SyncImagesRequest extends AbstractModel
 
         if (array_key_exists("ImageName",$param) and $param["ImageName"] !== null) {
             $this->ImageName = $param["ImageName"];
+        }
+
+        if (array_key_exists("ImageSetRequired",$param) and $param["ImageSetRequired"] !== null) {
+            $this->ImageSetRequired = $param["ImageSetRequired"];
         }
     }
 }

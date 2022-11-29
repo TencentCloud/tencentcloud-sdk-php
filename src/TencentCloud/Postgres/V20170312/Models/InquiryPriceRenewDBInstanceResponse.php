@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRenewDBInstance返回参数结构体
  *
- * @method integer getOriginalPrice() 获取总费用，打折前的。比如24650表示246.5元
- * @method void setOriginalPrice(integer $OriginalPrice) 设置总费用，打折前的。比如24650表示246.5元
- * @method integer getPrice() 获取实际需要付款金额。比如24650表示246.5元
- * @method void setPrice(integer $Price) 设置实际需要付款金额。比如24650表示246.5元
+ * @method integer getOriginalPrice() 获取刊例价，单位为分。如24650表示246.5元
+ * @method void setOriginalPrice(integer $OriginalPrice) 设置刊例价，单位为分。如24650表示246.5元
+ * @method integer getPrice() 获取折后实际付款金额，单位为分。如24650表示246.5元
+ * @method void setPrice(integer $Price) 设置折后实际付款金额，单位为分。如24650表示246.5元
  * @method string getCurrency() 获取币种。例如，CNY：人民币。
  * @method void setCurrency(string $Currency) 设置币种。例如，CNY：人民币。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class InquiryPriceRenewDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer 总费用，打折前的。比如24650表示246.5元
+     * @var integer 刊例价，单位为分。如24650表示246.5元
      */
     public $OriginalPrice;
 
     /**
-     * @var integer 实际需要付款金额。比如24650表示246.5元
+     * @var integer 折后实际付款金额，单位为分。如24650表示246.5元
      */
     public $Price;
 
@@ -52,8 +52,8 @@ class InquiryPriceRenewDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $OriginalPrice 总费用，打折前的。比如24650表示246.5元
-     * @param integer $Price 实际需要付款金额。比如24650表示246.5元
+     * @param integer $OriginalPrice 刊例价，单位为分。如24650表示246.5元
+     * @param integer $Price 折后实际付款金额，单位为分。如24650表示246.5元
      * @param string $Currency 币种。例如，CNY：人民币。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

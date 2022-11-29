@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceType(string $DeviceType) 设置设备类型（设备、子设备、网关）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsLora() 获取是否是 lora 设备
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsLora(boolean $IsLora) 设置是否是 lora 设备
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceInfo extends AbstractModel
 {
@@ -218,6 +222,12 @@ class DeviceInfo extends AbstractModel
     public $DeviceType;
 
     /**
+     * @var boolean 是否是 lora 设备
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsLora;
+
+    /**
      * @param string $DeviceName 设备名
      * @param integer $Status 0: 离线, 1: 在线, 2: 获取失败, 3 未激活
      * @param string $DevicePsk 设备密钥，密钥加密的设备返回
@@ -255,6 +265,8 @@ class DeviceInfo extends AbstractModel
      * @param string $ProductName 产品名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 设备类型（设备、子设备、网关）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsLora 是否是 lora 设备
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -348,6 +360,10 @@ class DeviceInfo extends AbstractModel
 
         if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
             $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("IsLora",$param) and $param["IsLora"] !== null) {
+            $this->IsLora = $param["IsLora"];
         }
     }
 }

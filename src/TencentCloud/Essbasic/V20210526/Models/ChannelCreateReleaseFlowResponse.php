@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SyncImages返回参数结构体
+ * ChannelCreateReleaseFlow返回参数结构体
  *
- * @method array getImageSet() 获取目的地域的镜像ID信息。
- * @method void setImageSet(array $ImageSet) 设置目的地域的镜像ID信息。
+ * @method string getFlowId() 获取解除协议流程编号
+ * @method void setFlowId(string $FlowId) 设置解除协议流程编号
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class SyncImagesResponse extends AbstractModel
+class ChannelCreateReleaseFlowResponse extends AbstractModel
 {
     /**
-     * @var array 目的地域的镜像ID信息。
+     * @var string 解除协议流程编号
      */
-    public $ImageSet;
+    public $FlowId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class SyncImagesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ImageSet 目的地域的镜像ID信息。
+     * @param string $FlowId 解除协议流程编号
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,13 +54,8 @@ class SyncImagesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImageSet",$param) and $param["ImageSet"] !== null) {
-            $this->ImageSet = [];
-            foreach ($param["ImageSet"] as $key => $value){
-                $obj = new SyncImage();
-                $obj->deserialize($value);
-                array_push($this->ImageSet, $obj);
-            }
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

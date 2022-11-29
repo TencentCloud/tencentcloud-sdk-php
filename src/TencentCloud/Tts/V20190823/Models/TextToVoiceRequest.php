@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodec(string $Codec) 设置返回音频格式，可取值：wav（默认），mp3，pcm
  * @method boolean getEnableSubtitle() 获取是否开启时间戳功能，默认为false。
  * @method void setEnableSubtitle(boolean $EnableSubtitle) 设置是否开启时间戳功能，默认为false。
- * @method integer getSegmentRate() 获取断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更不易断句，此参数建议不要随意调整，可能会影响合成效果。
- * @method void setSegmentRate(integer $SegmentRate) 设置断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更不易断句，此参数建议不要随意调整，可能会影响合成效果。
+ * @method integer getSegmentRate() 获取断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
+ * @method void setSegmentRate(integer $SegmentRate) 设置断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -118,7 +118,7 @@ class TextToVoiceRequest extends AbstractModel
     public $EnableSubtitle;
 
     /**
-     * @var integer 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更不易断句，此参数建议不要随意调整，可能会影响合成效果。
+     * @var integer 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
      */
     public $SegmentRate;
 
@@ -139,7 +139,7 @@ class TextToVoiceRequest extends AbstractModel
      * @param integer $SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      * @param string $Codec 返回音频格式，可取值：wav（默认），mp3，pcm
      * @param boolean $EnableSubtitle 是否开启时间戳功能，默认为false。
-     * @param integer $SegmentRate 断句敏感度，默认值为:0，取值范围:[0,1,2]，值越大则敏感度越低，更不易断句，此参数建议不要随意调整，可能会影响合成效果。
+     * @param integer $SegmentRate 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
      */
     function __construct()
     {

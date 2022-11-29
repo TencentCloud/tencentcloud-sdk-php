@@ -31,8 +31,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelectedRange(SelectedRange $SelectedRange) 设置选中的范围
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplate() 获取采用的模板，可取值为"istio, trace，默认为istio
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplate(string $Template) 设置采用的模板，可取值为"istio, trace，默认为istio
+ * @method CLS getCLS() 获取腾讯云日志服务相关参数
+ * @method void setCLS(CLS $CLS) 设置腾讯云日志服务相关参数
+ * @method string getAddress() 获取GRPC第三方服务器地址
+ * @method void setAddress(string $Address) 设置GRPC第三方服务器地址
+ * @method boolean getEnableServer() 获取是否启用GRPC第三方服务器
+ * @method void setEnableServer(boolean $EnableServer) 设置是否启用GRPC第三方服务器
+ * @method boolean getEnableStdout() 获取是否启用标准输出
+ * @method void setEnableStdout(boolean $EnableStdout) 设置是否启用标准输出
+ * @method boolean getEnable() 获取是否启用访问日志采集
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnable(boolean $Enable) 设置是否启用访问日志采集
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -62,9 +72,34 @@ class DescribeAccessLogConfigResponse extends AbstractModel
 
     /**
      * @var string 采用的模板，可取值为"istio, trace，默认为istio
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Template;
+
+    /**
+     * @var CLS 腾讯云日志服务相关参数
+     */
+    public $CLS;
+
+    /**
+     * @var string GRPC第三方服务器地址
+     */
+    public $Address;
+
+    /**
+     * @var boolean 是否启用GRPC第三方服务器
+     */
+    public $EnableServer;
+
+    /**
+     * @var boolean 是否启用标准输出
+     */
+    public $EnableStdout;
+
+    /**
+     * @var boolean 是否启用访问日志采集
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Enable;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -78,6 +113,11 @@ class DescribeAccessLogConfigResponse extends AbstractModel
      * @param SelectedRange $SelectedRange 选中的范围
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Template 采用的模板，可取值为"istio, trace，默认为istio
+     * @param CLS $CLS 腾讯云日志服务相关参数
+     * @param string $Address GRPC第三方服务器地址
+     * @param boolean $EnableServer 是否启用GRPC第三方服务器
+     * @param boolean $EnableStdout 是否启用标准输出
+     * @param boolean $Enable 是否启用访问日志采集
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -113,6 +153,27 @@ class DescribeAccessLogConfigResponse extends AbstractModel
 
         if (array_key_exists("Template",$param) and $param["Template"] !== null) {
             $this->Template = $param["Template"];
+        }
+
+        if (array_key_exists("CLS",$param) and $param["CLS"] !== null) {
+            $this->CLS = new CLS();
+            $this->CLS->deserialize($param["CLS"]);
+        }
+
+        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
+            $this->Address = $param["Address"];
+        }
+
+        if (array_key_exists("EnableServer",$param) and $param["EnableServer"] !== null) {
+            $this->EnableServer = $param["EnableServer"];
+        }
+
+        if (array_key_exists("EnableStdout",$param) and $param["EnableStdout"] !== null) {
+            $this->EnableStdout = $param["EnableStdout"];
+        }
+
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

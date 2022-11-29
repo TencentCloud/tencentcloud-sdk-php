@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoSeek(VideoSeek $VideoSeek) 设置视频拖拽配置
  * @method Cache getCache() 获取缓存过期时间配置
  * @method void setCache(Cache $Cache) 设置缓存过期时间配置
- * @method OriginPullOptimization getOriginPullOptimization() 获取跨国链路优化配置
- * @method void setOriginPullOptimization(OriginPullOptimization $OriginPullOptimization) 设置跨国链路优化配置
+ * @method OriginPullOptimization getOriginPullOptimization() 获取跨国链路优化配置（已下线）
+ * @method void setOriginPullOptimization(OriginPullOptimization $OriginPullOptimization) 设置跨国链路优化配置（已下线）
  * @method Https getHttps() 获取Https 加速配置
  * @method void setHttps(Https $Https) 设置Https 加速配置
  * @method Authentication getAuthentication() 获取时间戳防盗链配置
@@ -224,7 +224,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $Cache;
 
     /**
-     * @var OriginPullOptimization 跨国链路优化配置
+     * @var OriginPullOptimization 跨国链路优化配置（已下线）
      */
     public $OriginPullOptimization;
 
@@ -395,7 +395,7 @@ global：全球加速
      * @param ResponseHeaderCache $ResponseHeaderCache 头部缓存配置
      * @param VideoSeek $VideoSeek 视频拖拽配置
      * @param Cache $Cache 缓存过期时间配置
-     * @param OriginPullOptimization $OriginPullOptimization 跨国链路优化配置
+     * @param OriginPullOptimization $OriginPullOptimization 跨国链路优化配置（已下线）
      * @param Https $Https Https 加速配置
      * @param Authentication $Authentication 时间戳防盗链配置
      * @param Seo $Seo SEO 优化配置

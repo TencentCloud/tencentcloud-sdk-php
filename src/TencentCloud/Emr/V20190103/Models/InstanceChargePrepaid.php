@@ -26,7 +26,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置包年包月时间，默认为1，单位：月。
 取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11, 12, 24, 36, 48, 60。
  * @method boolean getRenewFlag() 获取是否自动续费，默认为否。
+<li>true：是</li>
+<li>false：否</li>
  * @method void setRenewFlag(boolean $RenewFlag) 设置是否自动续费，默认为否。
+<li>true：是</li>
+<li>false：否</li>
  */
 class InstanceChargePrepaid extends AbstractModel
 {
@@ -38,6 +42,8 @@ class InstanceChargePrepaid extends AbstractModel
 
     /**
      * @var boolean 是否自动续费，默认为否。
+<li>true：是</li>
+<li>false：否</li>
      */
     public $RenewFlag;
 
@@ -45,6 +51,8 @@ class InstanceChargePrepaid extends AbstractModel
      * @param integer $Period 包年包月时间，默认为1，单位：月。
 取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11, 12, 24, 36, 48, 60。
      * @param boolean $RenewFlag 是否自动续费，默认为否。
+<li>true：是</li>
+<li>false：否</li>
      */
     function __construct()
     {

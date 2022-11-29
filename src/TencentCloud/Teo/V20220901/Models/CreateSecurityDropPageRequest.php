@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSecurityDropPage请求参数结构体
  *
- * @method string getZoneId() 获取站点Id。
- * @method void setZoneId(string $ZoneId) 设置站点Id。
- * @method string getEntity() 获取站点子域名。
- * @method void setEntity(string $Entity) 设置站点子域名。
+ * @method string getZoneId() 获取站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method void setZoneId(string $ZoneId) 设置站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method string getEntity() 获取子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+ * @method void setEntity(string $Entity) 设置子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
  * @method string getName() 获取自定义页面的文件名。
  * @method void setName(string $Name) 设置自定义页面的文件名。
  * @method string getContent() 获取自定义页面的内容，本字段的内容需要将数据经过urlencode后传入。
@@ -40,16 +40,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) 设置页面所属的模块，取值有：
 <li> waf ：托管规则模块；</li>
 <li> rate：自定义规则模块。</li>
+ * @method string getTemplateId() 获取模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+ * @method void setTemplateId(string $TemplateId) 设置模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
  */
 class CreateSecurityDropPageRequest extends AbstractModel
 {
     /**
-     * @var string 站点Id。
+     * @var string 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public $ZoneId;
 
     /**
-     * @var string 站点子域名。
+     * @var string 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      */
     public $Entity;
 
@@ -78,8 +80,13 @@ class CreateSecurityDropPageRequest extends AbstractModel
     public $Module;
 
     /**
-     * @param string $ZoneId 站点Id。
-     * @param string $Entity 站点子域名。
+     * @var string 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
+     */
+    public $TemplateId;
+
+    /**
+     * @param string $ZoneId 站点Id。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
+     * @param string $Entity 子域名/应用名。当使用ZoneId和Entity时可不填写TemplateId，否则必须填写TemplateId。
      * @param string $Name 自定义页面的文件名。
      * @param string $Content 自定义页面的内容，本字段的内容需要将数据经过urlencode后传入。
      * @param string $Type 上传的类型，取值有：
@@ -88,6 +95,7 @@ class CreateSecurityDropPageRequest extends AbstractModel
      * @param string $Module 页面所属的模块，取值有：
 <li> waf ：托管规则模块；</li>
 <li> rate：自定义规则模块。</li>
+     * @param string $TemplateId 模板Id。当使用模板Id时可不填ZoneId和Entity，否则必须填写ZoneId和Entity。
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ class CreateSecurityDropPageRequest extends AbstractModel
 
         if (array_key_exists("Module",$param) and $param["Module"] !== null) {
             $this->Module = $param["Module"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

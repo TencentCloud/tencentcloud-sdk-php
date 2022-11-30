@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
  * @method array getFlowIds() 获取领取的合同id列表
  * @method void setFlowIds(array $FlowIds) 设置领取的合同id列表
- * @method UserInfo getOperator() 获取操作者的信息
- * @method void setOperator(UserInfo $Operator) 设置操作者的信息
+ * @method UserInfo getOperator() 获取暂未开放
+ * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
 class ChannelCreateBoundFlowsRequest extends AbstractModel
 {
@@ -43,7 +43,7 @@ class ChannelCreateBoundFlowsRequest extends AbstractModel
     public $FlowIds;
 
     /**
-     * @var UserInfo 操作者的信息
+     * @var UserInfo 暂未开放
      */
     public $Operator;
 
@@ -51,7 +51,7 @@ class ChannelCreateBoundFlowsRequest extends AbstractModel
      * @param Agent $Agent 应用信息
 此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
      * @param array $FlowIds 领取的合同id列表
-     * @param UserInfo $Operator 操作者的信息
+     * @param UserInfo $Operator 暂未开放
      */
     function __construct()
     {

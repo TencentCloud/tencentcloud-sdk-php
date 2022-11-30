@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 专用宿主机实例的资源信息
  *
- * @method integer getCpuTotal() 获取专用宿主机实例总cpu核数
- * @method void setCpuTotal(integer $CpuTotal) 设置专用宿主机实例总cpu核数
- * @method integer getCpuAvailable() 获取专用宿主机实例可用cpu核数
- * @method void setCpuAvailable(integer $CpuAvailable) 设置专用宿主机实例可用cpu核数
+ * @method integer getCpuTotal() 获取专用宿主机实例总CPU核数
+ * @method void setCpuTotal(integer $CpuTotal) 设置专用宿主机实例总CPU核数
+ * @method integer getCpuAvailable() 获取专用宿主机实例可用CPU核数
+ * @method void setCpuAvailable(integer $CpuAvailable) 设置专用宿主机实例可用CPU核数
  * @method float getMemTotal() 获取专用宿主机实例总内存大小（单位为:GiB）
  * @method void setMemTotal(float $MemTotal) 设置专用宿主机实例总内存大小（单位为:GiB）
  * @method float getMemAvailable() 获取专用宿主机实例可用内存大小（单位为:GiB）
@@ -42,12 +42,12 @@ use TencentCloud\Common\AbstractModel;
 class HostResource extends AbstractModel
 {
     /**
-     * @var integer 专用宿主机实例总cpu核数
+     * @var integer 专用宿主机实例总CPU核数
      */
     public $CpuTotal;
 
     /**
-     * @var integer 专用宿主机实例可用cpu核数
+     * @var integer 专用宿主机实例可用CPU核数
      */
     public $CpuAvailable;
 
@@ -87,8 +87,8 @@ class HostResource extends AbstractModel
     public $GpuAvailable;
 
     /**
-     * @param integer $CpuTotal 专用宿主机实例总cpu核数
-     * @param integer $CpuAvailable 专用宿主机实例可用cpu核数
+     * @param integer $CpuTotal 专用宿主机实例总CPU核数
+     * @param integer $CpuAvailable 专用宿主机实例可用CPU核数
      * @param float $MemTotal 专用宿主机实例总内存大小（单位为:GiB）
      * @param float $MemAvailable 专用宿主机实例可用内存大小（单位为:GiB）
      * @param integer $DiskTotal 专用宿主机实例总磁盘大小（单位为:GiB）

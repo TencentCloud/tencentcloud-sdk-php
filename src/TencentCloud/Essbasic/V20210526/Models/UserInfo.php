@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 接口调用者信息
  *
- * @method string getOpenId() 获取用户在渠道的编号，最大64位字符串
- * @method void setOpenId(string $OpenId) 设置用户在渠道的编号，最大64位字符串
- * @method string getChannel() 获取用户的来源渠道
- * @method void setChannel(string $Channel) 设置用户的来源渠道
- * @method string getCustomUserId() 获取自定义用户编号
- * @method void setCustomUserId(string $CustomUserId) 设置自定义用户编号
- * @method string getClientIp() 获取用户真实IP
- * @method void setClientIp(string $ClientIp) 设置用户真实IP
- * @method string getProxyIp() 获取用户代理IP
- * @method void setProxyIp(string $ProxyIp) 设置用户代理IP
+ * @method string getOpenId() 获取渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+ * @method void setOpenId(string $OpenId) 设置渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+ * @method string getChannel() 获取内部参数，暂未开放使用
+ * @method void setChannel(string $Channel) 设置内部参数，暂未开放使用
+ * @method string getCustomUserId() 获取内部参数，暂未开放使用
+ * @method void setCustomUserId(string $CustomUserId) 设置内部参数，暂未开放使用
+ * @method string getClientIp() 获取内部参数，暂未开放使用
+ * @method void setClientIp(string $ClientIp) 设置内部参数，暂未开放使用
+ * @method string getProxyIp() 获取内部参数，暂未开放使用
+ * @method void setProxyIp(string $ProxyIp) 设置内部参数，暂未开放使用
  */
 class UserInfo extends AbstractModel
 {
     /**
-     * @var string 用户在渠道的编号，最大64位字符串
+     * @var string 渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
      */
     public $OpenId;
 
     /**
-     * @var string 用户的来源渠道
+     * @var string 内部参数，暂未开放使用
      */
     public $Channel;
 
     /**
-     * @var string 自定义用户编号
+     * @var string 内部参数，暂未开放使用
      */
     public $CustomUserId;
 
     /**
-     * @var string 用户真实IP
+     * @var string 内部参数，暂未开放使用
      */
     public $ClientIp;
 
     /**
-     * @var string 用户代理IP
+     * @var string 内部参数，暂未开放使用
      */
     public $ProxyIp;
 
     /**
-     * @param string $OpenId 用户在渠道的编号，最大64位字符串
-     * @param string $Channel 用户的来源渠道
-     * @param string $CustomUserId 自定义用户编号
-     * @param string $ClientIp 用户真实IP
-     * @param string $ProxyIp 用户代理IP
+     * @param string $OpenId 渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+     * @param string $Channel 内部参数，暂未开放使用
+     * @param string $CustomUserId 内部参数，暂未开放使用
+     * @param string $ClientIp 内部参数，暂未开放使用
+     * @param string $ProxyIp 内部参数，暂未开放使用
      */
     function __construct()
     {

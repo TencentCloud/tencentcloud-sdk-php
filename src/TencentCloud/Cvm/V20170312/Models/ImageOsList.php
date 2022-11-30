@@ -18,35 +18,35 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 支持的操作系统类型，根据windows和Linux分类。
+ * 支持的操作系统类型，根据Windows和Linux分类。
  *
- * @method array getWindows() 获取支持的windows操作系统。
+ * @method array getWindows() 获取支持的Windows操作系统。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWindows(array $Windows) 设置支持的windows操作系统。
+ * @method void setWindows(array $Windows) 设置支持的Windows操作系统。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLinux() 获取支持的linux操作系统
+ * @method array getLinux() 获取支持的Linux操作系统
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLinux(array $Linux) 设置支持的linux操作系统
+ * @method void setLinux(array $Linux) 设置支持的Linux操作系统
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageOsList extends AbstractModel
 {
     /**
-     * @var array 支持的windows操作系统。
+     * @var array 支持的Windows操作系统。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Windows;
 
     /**
-     * @var array 支持的linux操作系统
+     * @var array 支持的Linux操作系统
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Linux;
 
     /**
-     * @param array $Windows 支持的windows操作系统。
+     * @param array $Windows 支持的Windows操作系统。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Linux 支持的linux操作系统
+     * @param array $Linux 支持的Linux操作系统
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

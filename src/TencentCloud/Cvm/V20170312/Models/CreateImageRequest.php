@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 取值范围：TRUE或FALSE，默认取值为FALSE。
 
 关于Sysprep的详情请参考[链接](https://cloud.tencent.com/document/product/213/43498)。
- * @method array getDataDiskIds() 获取基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
- * @method void setDataDiskIds(array $DataDiskIds) 设置基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
+ * @method array getDataDiskIds() 获取基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
+ * @method void setDataDiskIds(array $DataDiskIds) 设置基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
  * @method array getSnapshotIds() 获取基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
  * @method void setSnapshotIds(array $SnapshotIds) 设置基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
  * @method boolean getDryRun() 获取检测本次请求的是否成功，但不会对操作的资源产生任何影响
@@ -79,7 +79,7 @@ class CreateImageRequest extends AbstractModel
     public $Sysprep;
 
     /**
-     * @var array 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
+     * @var array 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
      */
     public $DataDiskIds;
 
@@ -108,7 +108,7 @@ class CreateImageRequest extends AbstractModel
 取值范围：TRUE或FALSE，默认取值为FALSE。
 
 关于Sysprep的详情请参考[链接](https://cloud.tencent.com/document/product/213/43498)。
-     * @param array $DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘Id
+     * @param array $DataDiskIds 基于实例创建整机镜像时，指定包含在镜像里的数据盘ID
      * @param array $SnapshotIds 基于快照创建镜像，指定快照ID，必须包含一个系统盘快照。不可与InstanceId同时传入。
      * @param boolean $DryRun 检测本次请求的是否成功，但不会对操作的资源产生任何影响
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。

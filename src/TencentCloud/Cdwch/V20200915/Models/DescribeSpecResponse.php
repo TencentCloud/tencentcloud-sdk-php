@@ -14,47 +14,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Iotexplorer\V20190423\Models;
+namespace TencentCloud\Cdwch\V20200915\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDeviceLocationSolve返回参数结构体
+ * DescribeSpec返回参数结构体
  *
- * @method float getLongitude() 获取经度
- * @method void setLongitude(float $Longitude) 设置经度
- * @method float getLatitude() 获取纬度
- * @method void setLatitude(float $Latitude) 设置纬度
- * @method string getLocationType() 获取类型
- * @method void setLocationType(string $LocationType) 设置类型
- * @method float getAccuracy() 获取误差精度预估，单位为米
+ * @method array getCommonSpec() 获取zookeeper节点规格描述
+ * @method void setCommonSpec(array $CommonSpec) 设置zookeeper节点规格描述
+ * @method array getDataSpec() 获取数据节点规格描述
+ * @method void setDataSpec(array $DataSpec) 设置数据节点规格描述
+ * @method array getAttachCBSSpec() 获取云盘列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccuracy(float $Accuracy) 设置误差精度预估，单位为米
+ * @method void setAttachCBSSpec(array $AttachCBSSpec) 设置云盘列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDeviceLocationSolveResponse extends AbstractModel
+class DescribeSpecResponse extends AbstractModel
 {
     /**
-     * @var float 经度
+     * @var array zookeeper节点规格描述
      */
-    public $Longitude;
+    public $CommonSpec;
 
     /**
-     * @var float 纬度
+     * @var array 数据节点规格描述
      */
-    public $Latitude;
+    public $DataSpec;
 
     /**
-     * @var string 类型
-     */
-    public $LocationType;
-
-    /**
-     * @var float 误差精度预估，单位为米
+     * @var array 云盘列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Accuracy;
+    public $AttachCBSSpec;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -62,10 +55,9 @@ class DescribeDeviceLocationSolveResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Longitude 经度
-     * @param float $Latitude 纬度
-     * @param string $LocationType 类型
-     * @param float $Accuracy 误差精度预估，单位为米
+     * @param array $CommonSpec zookeeper节点规格描述
+     * @param array $DataSpec 数据节点规格描述
+     * @param array $AttachCBSSpec 云盘列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -82,20 +74,31 @@ class DescribeDeviceLocationSolveResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Longitude",$param) and $param["Longitude"] !== null) {
-            $this->Longitude = $param["Longitude"];
+        if (array_key_exists("CommonSpec",$param) and $param["CommonSpec"] !== null) {
+            $this->CommonSpec = [];
+            foreach ($param["CommonSpec"] as $key => $value){
+                $obj = new ResourceSpec();
+                $obj->deserialize($value);
+                array_push($this->CommonSpec, $obj);
+            }
         }
 
-        if (array_key_exists("Latitude",$param) and $param["Latitude"] !== null) {
-            $this->Latitude = $param["Latitude"];
+        if (array_key_exists("DataSpec",$param) and $param["DataSpec"] !== null) {
+            $this->DataSpec = [];
+            foreach ($param["DataSpec"] as $key => $value){
+                $obj = new ResourceSpec();
+                $obj->deserialize($value);
+                array_push($this->DataSpec, $obj);
+            }
         }
 
-        if (array_key_exists("LocationType",$param) and $param["LocationType"] !== null) {
-            $this->LocationType = $param["LocationType"];
-        }
-
-        if (array_key_exists("Accuracy",$param) and $param["Accuracy"] !== null) {
-            $this->Accuracy = $param["Accuracy"];
+        if (array_key_exists("AttachCBSSpec",$param) and $param["AttachCBSSpec"] !== null) {
+            $this->AttachCBSSpec = [];
+            foreach ($param["AttachCBSSpec"] as $key => $value){
+                $obj = new DiskSpec();
+                $obj->deserialize($value);
+                array_push($this->AttachCBSSpec, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSyncJob请求参数结构体
  *
- * @method string getPayMode() 获取支付类型，PrePay：包年包月  PostPay：按时按量
- * @method void setPayMode(string $PayMode) 设置支付类型，PrePay：包年包月  PostPay：按时按量
+ * @method string getPayMode() 获取付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
+ * @method void setPayMode(string $PayMode) 设置付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
  * @method string getSrcDatabaseType() 获取源端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
  * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
  * @method string getSrcRegion() 获取源端数据库所在地域,如ap-guangzhou
@@ -32,23 +32,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstRegion(string $DstRegion) 设置目标端数据库所在地域,如ap-guangzhou
  * @method string getSpecification() 获取同步任务规格，Standard:标准版
  * @method void setSpecification(string $Specification) 设置同步任务规格，Standard:标准版
- * @method array getTags() 获取无
- * @method void setTags(array $Tags) 设置无
- * @method integer getCount() 获取同步任务数量
- * @method void setCount(integer $Count) 设置同步任务数量
- * @method integer getAutoRenew() 获取自动续费标识
- * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标识
- * @method string getInstanceClass() 获取同步链路规格
- * @method void setInstanceClass(string $InstanceClass) 设置同步链路规格
- * @method string getJobName() 获取同步链路名称
- * @method void setJobName(string $JobName) 设置同步链路名称
+ * @method array getTags() 获取标签信息
+ * @method void setTags(array $Tags) 设置标签信息
+ * @method integer getCount() 获取一次购买的同步任务数量，取值范围为[1, 10]，默认为1
+ * @method void setCount(integer $Count) 设置一次购买的同步任务数量，取值范围为[1, 10]，默认为1
+ * @method integer getAutoRenew() 获取自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值）
+ * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值）
+ * @method string getInstanceClass() 获取同步链路规格，如micro,small,medium,large，默认为medium
+ * @method void setInstanceClass(string $InstanceClass) 设置同步链路规格，如micro,small,medium,large，默认为medium
+ * @method string getJobName() 获取同步任务名称
+ * @method void setJobName(string $JobName) 设置同步任务名称
  * @method string getExistedJobId() 获取创建类似任务的现有任务Id
  * @method void setExistedJobId(string $ExistedJobId) 设置创建类似任务的现有任务Id
  */
 class CreateSyncJobRequest extends AbstractModel
 {
     /**
-     * @var string 支付类型，PrePay：包年包月  PostPay：按时按量
+     * @var string 付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
      */
     public $PayMode;
 
@@ -78,27 +78,27 @@ class CreateSyncJobRequest extends AbstractModel
     public $Specification;
 
     /**
-     * @var array 无
+     * @var array 标签信息
      */
     public $Tags;
 
     /**
-     * @var integer 同步任务数量
+     * @var integer 一次购买的同步任务数量，取值范围为[1, 10]，默认为1
      */
     public $Count;
 
     /**
-     * @var integer 自动续费标识
+     * @var integer 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值）
      */
     public $AutoRenew;
 
     /**
-     * @var string 同步链路规格
+     * @var string 同步链路规格，如micro,small,medium,large，默认为medium
      */
     public $InstanceClass;
 
     /**
-     * @var string 同步链路名称
+     * @var string 同步任务名称
      */
     public $JobName;
 
@@ -108,17 +108,17 @@ class CreateSyncJobRequest extends AbstractModel
     public $ExistedJobId;
 
     /**
-     * @param string $PayMode 支付类型，PrePay：包年包月  PostPay：按时按量
+     * @param string $PayMode 付款类型, 如：PrePay(表示包年包月)、PostPay(表示按时按量)
      * @param string $SrcDatabaseType 源端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
      * @param string $SrcRegion 源端数据库所在地域,如ap-guangzhou
      * @param string $DstDatabaseType 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
      * @param string $DstRegion 目标端数据库所在地域,如ap-guangzhou
      * @param string $Specification 同步任务规格，Standard:标准版
-     * @param array $Tags 无
-     * @param integer $Count 同步任务数量
-     * @param integer $AutoRenew 自动续费标识
-     * @param string $InstanceClass 同步链路规格
-     * @param string $JobName 同步链路名称
+     * @param array $Tags 标签信息
+     * @param integer $Count 一次购买的同步任务数量，取值范围为[1, 10]，默认为1
+     * @param integer $AutoRenew 自动续费标识，当PayMode值为PrePay则此项配置有意义，取值为：1（表示自动续费）、0（不自动续费，默认为此值）
+     * @param string $InstanceClass 同步链路规格，如micro,small,medium,large，默认为medium
+     * @param string $JobName 同步任务名称
      * @param string $ExistedJobId 创建类似任务的现有任务Id
      */
     function __construct()

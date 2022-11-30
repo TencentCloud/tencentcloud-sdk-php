@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFile(string $File) 设置访问日志输出路径。默认 /dev/stdout
  * @method string getFormat() 获取访问日志的格式。
  * @method void setFormat(string $Format) 设置访问日志的格式。
- * @method string getEncoding() 获取访问日志输出编码。默认 “TEXT”。除此之外还有“JSON”
- * @method void setEncoding(string $Encoding) 设置访问日志输出编码。默认 “TEXT”。除此之外还有“JSON”
+ * @method string getEncoding() 获取访问日志输出编码，可取值为 "TEXT" 或 "JSON"，默认 TEXT"
+ * @method void setEncoding(string $Encoding) 设置访问日志输出编码，可取值为 "TEXT" 或 "JSON"，默认 TEXT"
  * @method SelectedRange getSelectedRange() 获取选中的范围
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelectedRange(SelectedRange $SelectedRange) 设置选中的范围
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTemplate() 获取采用的模板，可取值为"istio, trace，默认为istio
- * @method void setTemplate(string $Template) 设置采用的模板，可取值为"istio, trace，默认为istio
+ * @method string getTemplate() 获取采用的模板，可取值为"istio" 或 "trace"，默认为"istio"
+ * @method void setTemplate(string $Template) 设置采用的模板，可取值为"istio" 或 "trace"，默认为"istio"
  * @method CLS getCLS() 获取腾讯云日志服务相关参数
  * @method void setCLS(CLS $CLS) 设置腾讯云日志服务相关参数
  * @method string getAddress() 获取GRPC第三方服务器地址
@@ -60,7 +60,7 @@ class DescribeAccessLogConfigResponse extends AbstractModel
     public $Format;
 
     /**
-     * @var string 访问日志输出编码。默认 “TEXT”。除此之外还有“JSON”
+     * @var string 访问日志输出编码，可取值为 "TEXT" 或 "JSON"，默认 TEXT"
      */
     public $Encoding;
 
@@ -71,7 +71,7 @@ class DescribeAccessLogConfigResponse extends AbstractModel
     public $SelectedRange;
 
     /**
-     * @var string 采用的模板，可取值为"istio, trace，默认为istio
+     * @var string 采用的模板，可取值为"istio" 或 "trace"，默认为"istio"
      */
     public $Template;
 
@@ -109,10 +109,10 @@ class DescribeAccessLogConfigResponse extends AbstractModel
     /**
      * @param string $File 访问日志输出路径。默认 /dev/stdout
      * @param string $Format 访问日志的格式。
-     * @param string $Encoding 访问日志输出编码。默认 “TEXT”。除此之外还有“JSON”
+     * @param string $Encoding 访问日志输出编码，可取值为 "TEXT" 或 "JSON"，默认 TEXT"
      * @param SelectedRange $SelectedRange 选中的范围
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Template 采用的模板，可取值为"istio, trace，默认为istio
+     * @param string $Template 采用的模板，可取值为"istio" 或 "trace"，默认为"istio"
      * @param CLS $CLS 腾讯云日志服务相关参数
      * @param string $Address GRPC第三方服务器地址
      * @param boolean $EnableServer 是否启用GRPC第三方服务器

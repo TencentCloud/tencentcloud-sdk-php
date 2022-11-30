@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 1 标清
 2 高清
 3 全高清
- * @method integer getMaxMicNumber() 获取最大连麦人数（不包括老师）。取值范围[0, 17)
- * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最大连麦人数（不包括老师）。取值范围[0, 17)
+ * @method integer getMaxMicNumber() 获取最大连麦人数（不包括老师）。取值范围[0, 16]
+ * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最大连麦人数（不包括老师）。取值范围[0, 16]
  * @method integer getAutoMic() 获取进入房间时是否自动连麦。可以有以下取值：
 0 不自动连麦（默认值）
 1 自动连麦
@@ -113,7 +113,7 @@ class DescribeRoomResponse extends AbstractModel
     public $Resolution;
 
     /**
-     * @var integer 最大连麦人数（不包括老师）。取值范围[0, 17)
+     * @var integer 最大连麦人数（不包括老师）。取值范围[0, 16]
      */
     public $MaxMicNumber;
 
@@ -173,7 +173,7 @@ coteaching 双师
 1 标清
 2 高清
 3 全高清
-     * @param integer $MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 17)
+     * @param integer $MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
      * @param integer $AutoMic 进入房间时是否自动连麦。可以有以下取值：
 0 不自动连麦（默认值）
 1 自动连麦

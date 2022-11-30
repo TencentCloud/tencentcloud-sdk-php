@@ -60,14 +60,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosBackup(CosBackup $CosBackup) 设置COS自动备份信息
  * @method array getNodeInfoList() 获取节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
  * @method void setNodeInfoList(array $NodeInfoList) 设置节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
- * @method string getPublicAccess() 获取公网访问状态
- * @method void setPublicAccess(string $PublicAccess) 设置公网访问状态
+ * @method string getPublicAccess() 获取ES集群公网访问状态
+OPEN 开启
+CLOSE 关闭
+ * @method void setPublicAccess(string $PublicAccess) 设置ES集群公网访问状态
+OPEN 开启
+CLOSE 关闭
  * @method EsPublicAcl getEsPublicAcl() 获取公网访问控制列表
  * @method void setEsPublicAcl(EsPublicAcl $EsPublicAcl) 设置公网访问控制列表
  * @method string getKibanaPublicAccess() 获取Kibana公网访问状态
+OPEN 开启
+CLOSE 关闭
  * @method void setKibanaPublicAccess(string $KibanaPublicAccess) 设置Kibana公网访问状态
+OPEN 开启
+CLOSE 关闭
  * @method string getKibanaPrivateAccess() 获取Kibana内网访问状态
+OPEN 开启
+CLOSE 关闭
  * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) 设置Kibana内网访问状态
+OPEN 开启
+CLOSE 关闭
  * @method integer getBasicSecurityType() 获取ES 6.8及以上版本基础版开启或关闭用户认证
  * @method void setBasicSecurityType(integer $BasicSecurityType) 设置ES 6.8及以上版本基础版开启或关闭用户认证
  * @method integer getKibanaPrivatePort() 获取Kibana内网端口
@@ -87,15 +99,27 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnableCerebro() 获取启用Cerebro
  * @method void setEnableCerebro(boolean $EnableCerebro) 设置启用Cerebro
  * @method string getCerebroPublicAccess() 获取Cerebro公网访问状态
+OPEN 开启
+CLOSE 关闭
  * @method void setCerebroPublicAccess(string $CerebroPublicAccess) 设置Cerebro公网访问状态
+OPEN 开启
+CLOSE 关闭
  * @method string getCerebroPrivateAccess() 获取Cerebro内网访问状态
+OPEN 开启
+CLOSE 关闭
  * @method void setCerebroPrivateAccess(string $CerebroPrivateAccess) 设置Cerebro内网访问状态
+OPEN 开启
+CLOSE 关闭
  * @method EsConfigSetInfo getEsConfigSet() 获取新增或修改的配置组信息
  * @method void setEsConfigSet(EsConfigSetInfo $EsConfigSet) 设置新增或修改的配置组信息
  * @method OperationDurationUpdated getOperationDuration() 获取可维护时间段
  * @method void setOperationDuration(OperationDurationUpdated $OperationDuration) 设置可维护时间段
- * @method string getKibanaAlteringPublicAccess() 获取是否开启Altering 外网告警输出
- * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置是否开启Altering 外网告警输出
+ * @method string getKibanaAlteringPublicAccess() 获取是否开启Alerting 外网告警输出：
+OPEN 开启
+CLOSE 关闭
+ * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) 设置是否开启Alerting 外网告警输出：
+OPEN 开启
+CLOSE 关闭
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -176,7 +200,9 @@ class UpdateInstanceRequest extends AbstractModel
     public $NodeInfoList;
 
     /**
-     * @var string 公网访问状态
+     * @var string ES集群公网访问状态
+OPEN 开启
+CLOSE 关闭
      */
     public $PublicAccess;
 
@@ -187,11 +213,15 @@ class UpdateInstanceRequest extends AbstractModel
 
     /**
      * @var string Kibana公网访问状态
+OPEN 开启
+CLOSE 关闭
      */
     public $KibanaPublicAccess;
 
     /**
      * @var string Kibana内网访问状态
+OPEN 开启
+CLOSE 关闭
      */
     public $KibanaPrivateAccess;
 
@@ -242,11 +272,15 @@ class UpdateInstanceRequest extends AbstractModel
 
     /**
      * @var string Cerebro公网访问状态
+OPEN 开启
+CLOSE 关闭
      */
     public $CerebroPublicAccess;
 
     /**
      * @var string Cerebro内网访问状态
+OPEN 开启
+CLOSE 关闭
      */
     public $CerebroPrivateAccess;
 
@@ -261,7 +295,9 @@ class UpdateInstanceRequest extends AbstractModel
     public $OperationDuration;
 
     /**
-     * @var string 是否开启Altering 外网告警输出
+     * @var string 是否开启Alerting 外网告警输出：
+OPEN 开启
+CLOSE 关闭
      */
     public $KibanaAlteringPublicAccess;
 
@@ -286,10 +322,16 @@ class UpdateInstanceRequest extends AbstractModel
      * @param boolean $ForceRestart 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
      * @param CosBackup $CosBackup COS自动备份信息
      * @param array $NodeInfoList 节点信息列表，可以只传递要更新的节点及其对应的规格信息。支持的操作包括<li>修改一种节点的个数</li><li>修改一种节点的节点规格及磁盘大小</li><li>增加一种节点类型（需要同时指定该节点的类型，个数，规格，磁盘等信息）</li>上述操作一次只能进行一种，且磁盘类型不支持修改
-     * @param string $PublicAccess 公网访问状态
+     * @param string $PublicAccess ES集群公网访问状态
+OPEN 开启
+CLOSE 关闭
      * @param EsPublicAcl $EsPublicAcl 公网访问控制列表
      * @param string $KibanaPublicAccess Kibana公网访问状态
+OPEN 开启
+CLOSE 关闭
      * @param string $KibanaPrivateAccess Kibana内网访问状态
+OPEN 开启
+CLOSE 关闭
      * @param integer $BasicSecurityType ES 6.8及以上版本基础版开启或关闭用户认证
      * @param integer $KibanaPrivatePort Kibana内网端口
      * @param integer $ScaleType 0: 蓝绿变更方式扩容，集群不重启 （默认） 1: 磁盘解挂载扩容，集群滚动重启
@@ -300,10 +342,16 @@ class UpdateInstanceRequest extends AbstractModel
      * @param string $SwitchPrivateLink 切换到新网络架构
      * @param boolean $EnableCerebro 启用Cerebro
      * @param string $CerebroPublicAccess Cerebro公网访问状态
+OPEN 开启
+CLOSE 关闭
      * @param string $CerebroPrivateAccess Cerebro内网访问状态
+OPEN 开启
+CLOSE 关闭
      * @param EsConfigSetInfo $EsConfigSet 新增或修改的配置组信息
      * @param OperationDurationUpdated $OperationDuration 可维护时间段
-     * @param string $KibanaAlteringPublicAccess 是否开启Altering 外网告警输出
+     * @param string $KibanaAlteringPublicAccess 是否开启Alerting 外网告警输出：
+OPEN 开启
+CLOSE 关闭
      */
     function __construct()
     {

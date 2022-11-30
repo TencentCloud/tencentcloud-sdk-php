@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Placement getPlacement() 获取专用宿主机实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
  * @method void setPlacement(Placement $Placement) 设置专用宿主机实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
- * @method string getHostId() 获取专用宿主机实例id
- * @method void setHostId(string $HostId) 设置专用宿主机实例id
+ * @method string getHostId() 获取专用宿主机实例ID
+ * @method void setHostId(string $HostId) 设置专用宿主机实例ID
  * @method string getHostType() 获取专用宿主机实例类型
  * @method void setHostType(string $HostType) 设置专用宿主机实例类型
  * @method string getHostName() 获取专用宿主机实例名称
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) 设置专用宿主机实例上已创建云子机的实例id列表
  * @method string getHostState() 获取专用宿主机实例状态
  * @method void setHostState(string $HostState) 设置专用宿主机实例状态
- * @method string getHostIp() 获取专用宿主机实例ip
- * @method void setHostIp(string $HostIp) 设置专用宿主机实例ip
+ * @method string getHostIp() 获取专用宿主机实例IP
+ * @method void setHostIp(string $HostIp) 设置专用宿主机实例IP
  * @method HostResource getHostResource() 获取专用宿主机实例资源信息
  * @method void setHostResource(HostResource $HostResource) 设置专用宿主机实例资源信息
  * @method string getCageId() 获取专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
@@ -57,7 +57,7 @@ class HostItem extends AbstractModel
     public $Placement;
 
     /**
-     * @var string 专用宿主机实例id
+     * @var string 专用宿主机实例ID
      */
     public $HostId;
 
@@ -102,7 +102,7 @@ class HostItem extends AbstractModel
     public $HostState;
 
     /**
-     * @var string 专用宿主机实例ip
+     * @var string 专用宿主机实例IP
      */
     public $HostIp;
 
@@ -119,7 +119,7 @@ class HostItem extends AbstractModel
 
     /**
      * @param Placement $Placement 专用宿主机实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-     * @param string $HostId 专用宿主机实例id
+     * @param string $HostId 专用宿主机实例ID
      * @param string $HostType 专用宿主机实例类型
      * @param string $HostName 专用宿主机实例名称
      * @param string $HostChargeType 专用宿主机实例付费模式
@@ -128,7 +128,7 @@ class HostItem extends AbstractModel
      * @param string $ExpiredTime 专用宿主机实例过期时间
      * @param array $InstanceIds 专用宿主机实例上已创建云子机的实例id列表
      * @param string $HostState 专用宿主机实例状态
-     * @param string $HostIp 专用宿主机实例ip
+     * @param string $HostIp 专用宿主机实例IP
      * @param HostResource $HostResource 专用宿主机实例资源信息
      * @param string $CageId 专用宿主机所属的围笼ID。该字段仅对金融专区围笼内的专用宿主机有效。
 注意：此字段可能返回 null，表示取不到有效值。

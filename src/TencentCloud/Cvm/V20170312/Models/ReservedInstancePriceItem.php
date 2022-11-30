@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
 计量单位：秒
  * @method void setDuration(integer $Duration) 设置预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒
- * @method string getProductDescription() 获取预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。
- * @method void setProductDescription(string $ProductDescription) 设置预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。
+ * @method string getProductDescription() 获取预留实例计费的平台描述（即操作系统）。形如：Linux。
+返回项： Linux 。
+ * @method void setProductDescription(string $ProductDescription) 设置预留实例计费的平台描述（即操作系统）。形如：Linux。
+返回项： Linux 。
  */
 class ReservedInstancePriceItem extends AbstractModel
 {
@@ -73,8 +73,8 @@ class ReservedInstancePriceItem extends AbstractModel
     public $Duration;
 
     /**
-     * @var string 预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。
+     * @var string 预留实例计费的平台描述（即操作系统）。形如：Linux。
+返回项： Linux 。
      */
     public $ProductDescription;
 
@@ -86,8 +86,8 @@ class ReservedInstancePriceItem extends AbstractModel
      * @param string $Zone 预留实例计费可购买的可用区。
      * @param integer $Duration 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒
-     * @param string $ProductDescription 预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。
+     * @param string $ProductDescription 预留实例计费的平台描述（即操作系统）。形如：Linux。
+返回项： Linux 。
      */
     function __construct()
     {

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置模板描述信息
  * @method array getComponents() 获取模板控件信息结构
  * @method void setComponents(array $Components) 设置模板控件信息结构
- * @method array getSignComponents() 获取签署区模板信息结构
- * @method void setSignComponents(array $SignComponents) 设置签署区模板信息结构
  * @method array getRecipients() 获取模板中的流程参与人信息
  * @method void setRecipients(array $Recipients) 设置模板中的流程参与人信息
+ * @method array getSignComponents() 获取签署区模板信息结构
+ * @method void setSignComponents(array $SignComponents) 设置签署区模板信息结构
  * @method integer getTemplateType() 获取模板类型：1-静默签；3-普通模板
  * @method void setTemplateType(integer $TemplateType) 设置模板类型：1-静默签；3-普通模板
  * @method boolean getIsPromoter() 获取是否是发起人 ,已弃用
@@ -45,8 +45,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChannelTemplateId() 获取渠道模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelTemplateId(string $ChannelTemplateId) 设置渠道模板ID
+ * @method string getPdfUrl() 获取渠道版-模板PDF文件链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPdfUrl(string $PdfUrl) 设置渠道版-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
@@ -72,14 +74,14 @@ class TemplateInfo extends AbstractModel
     public $Components;
 
     /**
-     * @var array 签署区模板信息结构
-     */
-    public $SignComponents;
-
-    /**
      * @var array 模板中的流程参与人信息
      */
     public $Recipients;
+
+    /**
+     * @var array 签署区模板信息结构
+     */
+    public $SignComponents;
 
     /**
      * @var integer 模板类型：1-静默签；3-普通模板
@@ -109,17 +111,22 @@ class TemplateInfo extends AbstractModel
 
     /**
      * @var string 渠道模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelTemplateId;
+
+    /**
+     * @var string 渠道版-模板PDF文件链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PdfUrl;
 
     /**
      * @param string $TemplateId 模板ID
      * @param string $TemplateName 模板名字
      * @param string $Description 模板描述信息
      * @param array $Components 模板控件信息结构
-     * @param array $SignComponents 签署区模板信息结构
      * @param array $Recipients 模板中的流程参与人信息
+     * @param array $SignComponents 签署区模板信息结构
      * @param integer $TemplateType 模板类型：1-静默签；3-普通模板
      * @param boolean $IsPromoter 是否是发起人 ,已弃用
      * @param string $Creator 模板的创建者信息
@@ -127,6 +134,7 @@ class TemplateInfo extends AbstractModel
      * @param string $PreviewUrl 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelTemplateId 渠道模板ID
+     * @param string $PdfUrl 渠道版-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -163,21 +171,21 @@ class TemplateInfo extends AbstractModel
             }
         }
 
-        if (array_key_exists("SignComponents",$param) and $param["SignComponents"] !== null) {
-            $this->SignComponents = [];
-            foreach ($param["SignComponents"] as $key => $value){
-                $obj = new Component();
-                $obj->deserialize($value);
-                array_push($this->SignComponents, $obj);
-            }
-        }
-
         if (array_key_exists("Recipients",$param) and $param["Recipients"] !== null) {
             $this->Recipients = [];
             foreach ($param["Recipients"] as $key => $value){
                 $obj = new Recipient();
                 $obj->deserialize($value);
                 array_push($this->Recipients, $obj);
+            }
+        }
+
+        if (array_key_exists("SignComponents",$param) and $param["SignComponents"] !== null) {
+            $this->SignComponents = [];
+            foreach ($param["SignComponents"] as $key => $value){
+                $obj = new Component();
+                $obj->deserialize($value);
+                array_push($this->SignComponents, $obj);
             }
         }
 
@@ -203,6 +211,10 @@ class TemplateInfo extends AbstractModel
 
         if (array_key_exists("ChannelTemplateId",$param) and $param["ChannelTemplateId"] !== null) {
             $this->ChannelTemplateId = $param["ChannelTemplateId"];
+        }
+
+        if (array_key_exists("PdfUrl",$param) and $param["PdfUrl"] !== null) {
+            $this->PdfUrl = $param["PdfUrl"];
         }
     }
 }

@@ -84,9 +84,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserData(string $UserData) 设置提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDisasterRecoverGroupIds() 获取置放群组id，仅支持指定一个。
+ * @method array getDisasterRecoverGroupIds() 获取置放群组ID，仅支持指定一个。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组id，仅支持指定一个。
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组ID，仅支持指定一个。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ActionTimer getActionTimer() 获取定时任务。通过该参数可以为实例指定定时任务，目前仅支持定时销毁。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -212,7 +212,7 @@ class LaunchTemplateVersionData extends AbstractModel
     public $UserData;
 
     /**
-     * @var array 置放群组id，仅支持指定一个。
+     * @var array 置放群组ID，仅支持指定一个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisasterRecoverGroupIds;
@@ -286,7 +286,7 @@ class LaunchTemplateVersionData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserData 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * @param array $DisasterRecoverGroupIds 置放群组ID，仅支持指定一个。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionTimer $ActionTimer 定时任务。通过该参数可以为实例指定定时任务，目前仅支持定时销毁。
 注意：此字段可能返回 null，表示取不到有效值。

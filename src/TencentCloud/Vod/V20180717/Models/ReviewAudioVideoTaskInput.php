@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() 获取媒体文件 ID。
  * @method void setFileId(string $FileId) 设置媒体文件 ID。
+ * @method integer getDefinition() 获取音视频审核模板 ID。
+ * @method void setDefinition(integer $Definition) 设置音视频审核模板 ID。
  */
 class ReviewAudioVideoTaskInput extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ReviewAudioVideoTaskInput extends AbstractModel
     public $FileId;
 
     /**
+     * @var integer 音视频审核模板 ID。
+     */
+    public $Definition;
+
+    /**
      * @param string $FileId 媒体文件 ID。
+     * @param integer $Definition 音视频审核模板 ID。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ReviewAudioVideoTaskInput extends AbstractModel
         }
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
     }
 }

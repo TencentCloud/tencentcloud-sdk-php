@@ -34,6 +34,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateConnectResourceResponse CreateConnectResource(Models\CreateConnectResourceRequest $req) 创建Datahub连接源
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 创建消费者组
  * @method Models\CreateDatahubTaskResponse CreateDatahubTask(Models\CreateDatahubTaskRequest $req) 创建DIP转储任务
+ * @method Models\CreateInstancePostResponse CreateInstancePost(Models\CreateInstancePostRequest $req) 创建按量计费实例
  * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) 创建实例(预付费包年包月)
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 本接口用于增加主题中的分区
  * @method Models\CreateRouteResponse CreateRoute(Models\CreateRouteRequest $req) 添加实例路由
@@ -82,6 +83,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\FetchLatestDatahubMessageListResponse FetchLatestDatahubMessageList(Models\FetchLatestDatahubMessageListRequest $req) 查询最新消息列表
  * @method Models\FetchMessageByOffsetResponse FetchMessageByOffset(Models\FetchMessageByOffsetRequest $req) 根据指定offset位置的消息
  * @method Models\FetchMessageListByOffsetResponse FetchMessageListByOffset(Models\FetchMessageListByOffsetRequest $req) 根据位点查询消息列表
+ * @method Models\InquireCkafkaPriceResponse InquireCkafkaPrice(Models\InquireCkafkaPriceRequest $req) Ckafka实例购买/续费询价
  * @method Models\ModifyConnectResourceResponse ModifyConnectResource(Models\ModifyConnectResourceRequest $req) 编辑Datahub连接源
  * @method Models\ModifyDatahubTaskResponse ModifyDatahubTask(Models\ModifyDatahubTaskRequest $req) 修改Datahub任务
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) 设置Groups 消费分组offset

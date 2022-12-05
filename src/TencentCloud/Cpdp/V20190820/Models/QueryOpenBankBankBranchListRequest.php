@@ -40,8 +40,8 @@ __OPENBANK_PAYMENT__: openbank付款
  * @method void setBankBranchName(string $BankBranchName) 设置支行名称。
  * @method string getBankAbbreviation() 获取银行简称。
  * @method void setBankAbbreviation(string $BankAbbreviation) 设置银行简称。
- * @method Paging getPageNumber() 获取页码。Index和Count必须大于等于1。
- * @method void setPageNumber(Paging $PageNumber) 设置页码。Index和Count必须大于等于1。
+ * @method Paging getPageNumber() 获取页码。Index和Count必须大于等于1。Count建议不超过100。
+ * @method void setPageNumber(Paging $PageNumber) 设置页码。Index和Count必须大于等于1。Count建议不超过100。
  * @method string getEnvironment() 获取环境类型。
 __release__:生产环境
 __sandbox__:沙箱环境
@@ -84,7 +84,7 @@ __OPENBANK_PAYMENT__: openbank付款
     public $BankAbbreviation;
 
     /**
-     * @var Paging 页码。Index和Count必须大于等于1。
+     * @var Paging 页码。Index和Count必须大于等于1。Count建议不超过100。
      */
     public $PageNumber;
 
@@ -107,7 +107,7 @@ __EBANK_PAYMENT__:ebank付款
 __OPENBANK_PAYMENT__: openbank付款
      * @param string $BankBranchName 支行名称。
      * @param string $BankAbbreviation 银行简称。
-     * @param Paging $PageNumber 页码。Index和Count必须大于等于1。
+     * @param Paging $PageNumber 页码。Index和Count必须大于等于1。Count建议不超过100。
      * @param string $Environment 环境类型。
 __release__:生产环境
 __sandbox__:沙箱环境

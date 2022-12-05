@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用户麦克风状态
  *
- * @method integer getUid() 获取用户ID
- * @method void setUid(integer $Uid) 设置用户ID
- * @method integer getEnableMic() 获取是否开麦 。1闭麦  2开麦
- * @method void setEnableMic(integer $EnableMic) 设置是否开麦 。1闭麦  2开麦
+ * @method integer getUid() 获取客户端用于标识用户的Openid。
+ * @method void setUid(integer $Uid) 设置客户端用于标识用户的Openid。
+ * @method integer getEnableMic() 获取开麦状态。1表示关闭麦克风，2表示打开麦克风。
+ * @method void setEnableMic(integer $EnableMic) 设置开麦状态。1表示关闭麦克风，2表示打开麦克风。
  */
 class UserMicStatus extends AbstractModel
 {
     /**
-     * @var integer 用户ID
+     * @var integer 客户端用于标识用户的Openid。
      */
     public $Uid;
 
     /**
-     * @var integer 是否开麦 。1闭麦  2开麦
+     * @var integer 开麦状态。1表示关闭麦克风，2表示打开麦克风。
      */
     public $EnableMic;
 
     /**
-     * @param integer $Uid 用户ID
-     * @param integer $EnableMic 是否开麦 。1闭麦  2开麦
+     * @param integer $Uid 客户端用于标识用户的Openid。
+     * @param integer $EnableMic 开麦状态。1表示关闭麦克风，2表示打开麦克风。
      */
     function __construct()
     {

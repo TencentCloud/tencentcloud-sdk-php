@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取攻击类型
  * @method void setType(string $Type) 设置攻击类型
- * @method string getStartTime() 获取起始时间
- * @method void setStartTime(string $StartTime) 设置起始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getStartTime() 获取统计起始时间
+ * @method void setStartTime(string $StartTime) 设置统计起始时间
+ * @method string getEndTime() 获取统计结束时间
+ * @method void setEndTime(string $EndTime) 设置统计结束时间
  * @method integer getPeriod() 获取周期
  * @method void setPeriod(integer $Period) 设置周期
  * @method array getData() 获取每个周期点的攻击次数
@@ -43,12 +43,12 @@ class DescribeOverviewAttackTrendResponse extends AbstractModel
     public $Type;
 
     /**
-     * @var string 起始时间
+     * @var string 统计起始时间
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 统计结束时间
      */
     public $EndTime;
 
@@ -74,8 +74,8 @@ class DescribeOverviewAttackTrendResponse extends AbstractModel
 
     /**
      * @param string $Type 攻击类型
-     * @param string $StartTime 起始时间
-     * @param string $EndTime 结束时间
+     * @param string $StartTime 统计起始时间
+     * @param string $EndTime 统计结束时间
      * @param integer $Period 周期
      * @param array $Data 每个周期点的攻击次数
      * @param integer $Count 包含的周期点数

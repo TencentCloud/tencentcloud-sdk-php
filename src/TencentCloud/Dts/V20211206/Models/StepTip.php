@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHelpDoc(string $HelpDoc) 设置帮助文档
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSkipInfo() 获取当前步骤跳过信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSkipInfo(string $SkipInfo) 设置当前步骤跳过信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StepTip extends AbstractModel
 {
@@ -64,6 +68,12 @@ class StepTip extends AbstractModel
     public $HelpDoc;
 
     /**
+     * @var string 当前步骤跳过信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SkipInfo;
+
+    /**
      * @param string $Code 错误码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息
@@ -71,6 +81,8 @@ class StepTip extends AbstractModel
      * @param string $Solution 解决方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HelpDoc 帮助文档
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SkipInfo 当前步骤跳过信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class StepTip extends AbstractModel
 
         if (array_key_exists("HelpDoc",$param) and $param["HelpDoc"] !== null) {
             $this->HelpDoc = $param["HelpDoc"];
+        }
+
+        if (array_key_exists("SkipInfo",$param) and $param["SkipInfo"] !== null) {
+            $this->SkipInfo = $param["SkipInfo"];
         }
     }
 }

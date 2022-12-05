@@ -21,7 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * CreateSinglePayment请求参数结构体
  *
  * @method integer getTransferType() 获取转账类型
+1 微信企业付款 
+2 支付宝转账 
+3 平安银企直连代发转账
  * @method void setTransferType(integer $TransferType) 设置转账类型
+1 微信企业付款 
+2 支付宝转账 
+3 平安银企直连代发转账
  * @method string getOrderId() 获取订单流水号
  * @method void setOrderId(string $OrderId) 设置订单流水号
  * @method integer getTransferAmount() 获取转账金额
@@ -43,6 +49,9 @@ class CreateSinglePaymentRequest extends AbstractModel
 {
     /**
      * @var integer 转账类型
+1 微信企业付款 
+2 支付宝转账 
+3 平安银企直连代发转账
      */
     public $TransferType;
 
@@ -88,6 +97,9 @@ class CreateSinglePaymentRequest extends AbstractModel
 
     /**
      * @param integer $TransferType 转账类型
+1 微信企业付款 
+2 支付宝转账 
+3 平安银企直连代发转账
      * @param string $OrderId 订单流水号
      * @param integer $TransferAmount 转账金额
      * @param string $AnchorId 主播ID（与主播业务ID不能同时为空，两者都填取主播ID）

@@ -70,6 +70,22 @@ FAILED:已失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelOrderId(string $ChannelOrderId) 设置渠道支付订单号
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVat() 获取增值税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVat(string $Vat) 设置增值税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndividualIncomeTax() 获取个人所得税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndividualIncomeTax(string $IndividualIncomeTax) 设置个人所得税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdditionalTaxSum() 获取附加税总税额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdditionalTaxSum(string $AdditionalTaxSum) 设置附加税总税额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdditionalTaxItem() 获取附加税税项。格式为JSON格式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdditionalTaxItem(string $AdditionalTaxItem) 设置附加税税项。格式为JSON格式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PaymentOrderResult extends AbstractModel
 {
@@ -155,6 +171,30 @@ FAILED:已失败
     public $ChannelOrderId;
 
     /**
+     * @var string 增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Vat;
+
+    /**
+     * @var string 个人所得税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndividualIncomeTax;
+
+    /**
+     * @var string 附加税总税额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdditionalTaxSum;
+
+    /**
+     * @var string 附加税税项。格式为JSON格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdditionalTaxItem;
+
+    /**
      * @param string $IncomeType 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得
@@ -179,6 +219,14 @@ FAILED:已失败
      * @param string $PayeeId 收款用户ID
      * @param string $OutUserId 外部用户ID
      * @param string $ChannelOrderId 渠道支付订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Vat 增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndividualIncomeTax 个人所得税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AdditionalTaxSum 附加税总税额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AdditionalTaxItem 附加税税项。格式为JSON格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -248,6 +296,22 @@ FAILED:已失败
 
         if (array_key_exists("ChannelOrderId",$param) and $param["ChannelOrderId"] !== null) {
             $this->ChannelOrderId = $param["ChannelOrderId"];
+        }
+
+        if (array_key_exists("Vat",$param) and $param["Vat"] !== null) {
+            $this->Vat = $param["Vat"];
+        }
+
+        if (array_key_exists("IndividualIncomeTax",$param) and $param["IndividualIncomeTax"] !== null) {
+            $this->IndividualIncomeTax = $param["IndividualIncomeTax"];
+        }
+
+        if (array_key_exists("AdditionalTaxSum",$param) and $param["AdditionalTaxSum"] !== null) {
+            $this->AdditionalTaxSum = $param["AdditionalTaxSum"];
+        }
+
+        if (array_key_exists("AdditionalTaxItem",$param) and $param["AdditionalTaxItem"] !== null) {
+            $this->AdditionalTaxItem = $param["AdditionalTaxItem"];
         }
     }
 }

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUserMicStatus请求参数结构体
  *
- * @method integer getBizId() 获取应用ID
- * @method void setBizId(integer $BizId) 设置应用ID
- * @method string getRoomId() 获取房间ID
- * @method void setRoomId(string $RoomId) 设置房间ID
- * @method array getUsers() 获取用户麦克风状态，数组长度不超过20
- * @method void setUsers(array $Users) 设置用户麦克风状态，数组长度不超过20
+ * @method integer getBizId() 获取来自 [腾讯云控制台](https://console.cloud.tencent.com/gamegme) 的 GME 服务提供的 AppID，获取请参考 [语音服务开通指引](https://cloud.tencent.com/document/product/607/10782#.E9.87.8D.E7.82.B9.E5.8F.82.E6.95.B0)。
+ * @method void setBizId(integer $BizId) 设置来自 [腾讯云控制台](https://console.cloud.tencent.com/gamegme) 的 GME 服务提供的 AppID，获取请参考 [语音服务开通指引](https://cloud.tencent.com/document/product/607/10782#.E9.87.8D.E7.82.B9.E5.8F.82.E6.95.B0)。
+ * @method string getRoomId() 获取实时语音房间号。
+ * @method void setRoomId(string $RoomId) 设置实时语音房间号。
+ * @method array getUsers() 获取需要操作的房间内用户以及该用户的目标麦克风状态。
+ * @method void setUsers(array $Users) 设置需要操作的房间内用户以及该用户的目标麦克风状态。
  */
 class ModifyUserMicStatusRequest extends AbstractModel
 {
     /**
-     * @var integer 应用ID
+     * @var integer 来自 [腾讯云控制台](https://console.cloud.tencent.com/gamegme) 的 GME 服务提供的 AppID，获取请参考 [语音服务开通指引](https://cloud.tencent.com/document/product/607/10782#.E9.87.8D.E7.82.B9.E5.8F.82.E6.95.B0)。
      */
     public $BizId;
 
     /**
-     * @var string 房间ID
+     * @var string 实时语音房间号。
      */
     public $RoomId;
 
     /**
-     * @var array 用户麦克风状态，数组长度不超过20
+     * @var array 需要操作的房间内用户以及该用户的目标麦克风状态。
      */
     public $Users;
 
     /**
-     * @param integer $BizId 应用ID
-     * @param string $RoomId 房间ID
-     * @param array $Users 用户麦克风状态，数组长度不超过20
+     * @param integer $BizId 来自 [腾讯云控制台](https://console.cloud.tencent.com/gamegme) 的 GME 服务提供的 AppID，获取请参考 [语音服务开通指引](https://cloud.tencent.com/document/product/607/10782#.E9.87.8D.E7.82.B9.E5.8F.82.E6.95.B0)。
+     * @param string $RoomId 实时语音房间号。
+     * @param array $Users 需要操作的房间内用户以及该用户的目标麦克风状态。
      */
     function __construct()
     {

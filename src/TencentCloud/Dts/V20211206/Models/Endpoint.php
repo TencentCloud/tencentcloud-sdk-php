@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTmpToken(string $TmpToken) 设置临时Token，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRoleExternalId() 获取外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRoleExternalId(string $RoleExternalId) 设置外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Endpoint extends AbstractModel
 {
@@ -244,6 +248,12 @@ class Endpoint extends AbstractModel
     public $TmpToken;
 
     /**
+     * @var string 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RoleExternalId;
+
+    /**
      * @param string $Region 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbKernel 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
@@ -287,6 +297,8 @@ class Endpoint extends AbstractModel
      * @param string $TmpSecretKey 临时密钥Key，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpToken 临时Token，如果为跨账号实例此项必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RoleExternalId 外部角色id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -388,6 +400,10 @@ class Endpoint extends AbstractModel
 
         if (array_key_exists("TmpToken",$param) and $param["TmpToken"] !== null) {
             $this->TmpToken = $param["TmpToken"];
+        }
+
+        if (array_key_exists("RoleExternalId",$param) and $param["RoleExternalId"] !== null) {
+            $this->RoleExternalId = $param["RoleExternalId"];
         }
     }
 }

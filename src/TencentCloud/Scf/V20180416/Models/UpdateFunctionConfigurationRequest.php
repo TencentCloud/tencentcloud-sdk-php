@@ -33,7 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method Environment getEnvironment() 获取函数的环境变量
  * @method void setEnvironment(Environment $Environment) 设置函数的环境变量
  * @method string getNamespace() 获取函数所属命名空间
+默认值: default
  * @method void setNamespace(string $Namespace) 设置函数所属命名空间
+默认值: default
  * @method VpcConfig getVpcConfig() 获取函数的私有网络配置
  * @method void setVpcConfig(VpcConfig $VpcConfig) 设置函数的私有网络配置
  * @method string getRole() 获取函数绑定的角色
@@ -97,6 +99,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
 
     /**
      * @var string 函数所属命名空间
+默认值: default
      */
     public $Namespace;
 
@@ -178,6 +181,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param string $Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，Nodejs8.9，Nodejs10.15，Nodejs12.16， PHP5， PHP7，Go1 ， Java8和CustomRuntime
      * @param Environment $Environment 函数的环境变量
      * @param string $Namespace 函数所属命名空间
+默认值: default
      * @param VpcConfig $VpcConfig 函数的私有网络配置
      * @param string $Role 函数绑定的角色
      * @param string $InstallDependency [在线依赖安装](https://cloud.tencent.com/document/product/583/37920)，TRUE 表示安装，默认值为 FALSE。仅支持 Node.js 函数。

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancePriceDetailSet(array $InstancePriceDetailSet) 设置待续费实例价格列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TotalPrice getTotalPrice() 获取总计价格。
+ * @method void setTotalPrice(TotalPrice $TotalPrice) 设置总计价格。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -53,6 +55,11 @@ class InquirePriceRenewInstancesResponse extends AbstractModel
     public $InstancePriceDetailSet;
 
     /**
+     * @var TotalPrice 总计价格。
+     */
+    public $TotalPrice;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class InquirePriceRenewInstancesResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstancePriceDetailSet 待续费实例价格列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalPrice $TotalPrice 总计价格。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -99,6 +107,11 @@ class InquirePriceRenewInstancesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstancePriceDetailSet, $obj);
             }
+        }
+
+        if (array_key_exists("TotalPrice",$param) and $param["TotalPrice"] !== null) {
+            $this->TotalPrice = new TotalPrice();
+            $this->TotalPrice->deserialize($param["TotalPrice"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

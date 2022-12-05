@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxRetryCount(integer $MaxRetryCount) 设置拉取Docker镜像重试次数。默认值：0。
  * @method integer getDelayOnRetry() 获取拉取Docker镜像失败时延迟时间。单位：秒。
  * @method void setDelayOnRetry(integer $DelayOnRetry) 设置拉取Docker镜像失败时延迟时间。单位：秒。
+ * @method string getDockerRunOption() 获取Docker命令运行参数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDockerRunOption(string $DockerRunOption) 设置Docker命令运行参数。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Docker extends AbstractModel
 {
@@ -66,12 +70,20 @@ class Docker extends AbstractModel
     public $DelayOnRetry;
 
     /**
+     * @var string Docker命令运行参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DockerRunOption;
+
+    /**
      * @param string $User Docker Hub 用户名或 Tencent Registry 用户名
      * @param string $Password Docker Hub 密码或 Tencent Registry 密码
      * @param string $Image Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
      * @param string $Server Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
      * @param integer $MaxRetryCount 拉取Docker镜像重试次数。默认值：0。
      * @param integer $DelayOnRetry 拉取Docker镜像失败时延迟时间。单位：秒。
+     * @param string $DockerRunOption Docker命令运行参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class Docker extends AbstractModel
 
         if (array_key_exists("DelayOnRetry",$param) and $param["DelayOnRetry"] !== null) {
             $this->DelayOnRetry = $param["DelayOnRetry"];
+        }
+
+        if (array_key_exists("DockerRunOption",$param) and $param["DockerRunOption"] !== null) {
+            $this->DockerRunOption = $param["DockerRunOption"];
         }
     }
 }

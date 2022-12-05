@@ -28,6 +28,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAmountAfterTax(string $AmountAfterTax) 设置税后金额
  * @method string getTax() 获取税金
  * @method void setTax(string $Tax) 设置税金
+ * @method string getVat() 获取增值税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVat(string $Vat) 设置增值税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndividualIncomeTax() 获取个人所得税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndividualIncomeTax(string $IndividualIncomeTax) 设置个人所得税
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdditionalTaxSum() 获取附加税总税额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdditionalTaxSum(string $AdditionalTaxSum) 设置附加税总税额
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdditionalTaxItem() 获取附加税税项。格式为JSON格式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdditionalTaxItem(string $AdditionalTaxItem) 设置附加税税项。格式为JSON格式
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplyFlexPaymentResult extends AbstractModel
 {
@@ -52,10 +68,42 @@ class ApplyFlexPaymentResult extends AbstractModel
     public $Tax;
 
     /**
+     * @var string 增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Vat;
+
+    /**
+     * @var string 个人所得税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndividualIncomeTax;
+
+    /**
+     * @var string 附加税总税额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdditionalTaxSum;
+
+    /**
+     * @var string 附加税税项。格式为JSON格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdditionalTaxItem;
+
+    /**
      * @param string $OrderId 订单ID
      * @param string $AmountBeforeTax 税前金额
      * @param string $AmountAfterTax 税后金额
      * @param string $Tax 税金
+     * @param string $Vat 增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndividualIncomeTax 个人所得税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AdditionalTaxSum 附加税总税额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AdditionalTaxItem 附加税税项。格式为JSON格式
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +132,22 @@ class ApplyFlexPaymentResult extends AbstractModel
 
         if (array_key_exists("Tax",$param) and $param["Tax"] !== null) {
             $this->Tax = $param["Tax"];
+        }
+
+        if (array_key_exists("Vat",$param) and $param["Vat"] !== null) {
+            $this->Vat = $param["Vat"];
+        }
+
+        if (array_key_exists("IndividualIncomeTax",$param) and $param["IndividualIncomeTax"] !== null) {
+            $this->IndividualIncomeTax = $param["IndividualIncomeTax"];
+        }
+
+        if (array_key_exists("AdditionalTaxSum",$param) and $param["AdditionalTaxSum"] !== null) {
+            $this->AdditionalTaxSum = $param["AdditionalTaxSum"];
+        }
+
+        if (array_key_exists("AdditionalTaxItem",$param) and $param["AdditionalTaxItem"] !== null) {
+            $this->AdditionalTaxItem = $param["AdditionalTaxItem"];
         }
     }
 }

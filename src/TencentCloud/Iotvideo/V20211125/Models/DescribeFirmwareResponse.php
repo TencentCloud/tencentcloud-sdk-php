@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取产品名称
  * @method void setProductName(string $ProductName) 设置产品名称
+ * @method string getFwType() 获取固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFwType(string $FwType) 设置固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -87,6 +91,12 @@ class DescribeFirmwareResponse extends AbstractModel
     public $ProductName;
 
     /**
+     * @var string 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FwType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -103,6 +113,8 @@ class DescribeFirmwareResponse extends AbstractModel
      * @param integer $Createtime 固件上传的秒级时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 产品名称
+     * @param string $FwType 固件升级模块
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -144,6 +156,10 @@ class DescribeFirmwareResponse extends AbstractModel
 
         if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
             $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
+            $this->FwType = $param["FwType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

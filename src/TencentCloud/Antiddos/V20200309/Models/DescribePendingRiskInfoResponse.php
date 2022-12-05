@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePendingRiskInfo返回参数结构体
  *
- * @method boolean getIsPaidUsr() 获取是否为付费用户
- * @method void setIsPaidUsr(boolean $IsPaidUsr) 设置是否为付费用户
+ * @method boolean getIsPaidUsr() 获取是否为付费用户，true：付费用户， false：普通用户
+ * @method void setIsPaidUsr(boolean $IsPaidUsr) 设置是否为付费用户，true：付费用户， false：普通用户
  * @method integer getAttackingCount() 获取攻击中的资源数量
  * @method void setAttackingCount(integer $AttackingCount) 设置攻击中的资源数量
  * @method integer getBlockingCount() 获取封堵中的资源数量
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePendingRiskInfoResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否为付费用户
+     * @var boolean 是否为付费用户，true：付费用户， false：普通用户
      */
     public $IsPaidUsr;
 
@@ -66,7 +66,7 @@ class DescribePendingRiskInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $IsPaidUsr 是否为付费用户
+     * @param boolean $IsPaidUsr 是否为付费用户，true：付费用户， false：普通用户
      * @param integer $AttackingCount 攻击中的资源数量
      * @param integer $BlockingCount 封堵中的资源数量
      * @param integer $ExpiredCount 已过期的资源数量

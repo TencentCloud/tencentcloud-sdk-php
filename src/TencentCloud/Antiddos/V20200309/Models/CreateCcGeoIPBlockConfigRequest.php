@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method string getProtocol() 获取协议类型
  * @method void setProtocol(string $Protocol) 设置协议类型
- * @method CcGeoIPBlockConfig getCcGeoIPBlockConfig() 获取CC区域封禁配置，填写参数时配置ID请为空
- * @method void setCcGeoIPBlockConfig(CcGeoIPBlockConfig $CcGeoIPBlockConfig) 设置CC区域封禁配置，填写参数时配置ID请为空
+ * @method CcGeoIPBlockConfig getCcGeoIPBlockConfig() 获取CC区域封禁配置
+ * @method void setCcGeoIPBlockConfig(CcGeoIPBlockConfig $CcGeoIPBlockConfig) 设置CC区域封禁配置
  */
 class CreateCcGeoIPBlockConfigRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class CreateCcGeoIPBlockConfigRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var CcGeoIPBlockConfig CC区域封禁配置，填写参数时配置ID请为空
+     * @var CcGeoIPBlockConfig CC区域封禁配置
      */
     public $CcGeoIPBlockConfig;
 
@@ -63,7 +63,7 @@ class CreateCcGeoIPBlockConfigRequest extends AbstractModel
      * @param string $IP ip地址
      * @param string $Domain 域名
      * @param string $Protocol 协议类型
-     * @param CcGeoIPBlockConfig $CcGeoIPBlockConfig CC区域封禁配置，填写参数时配置ID请为空
+     * @param CcGeoIPBlockConfig $CcGeoIPBlockConfig CC区域封禁配置
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSyncJobs请求参数结构体
  *
- * @method string getJobId() 获取同步任务id
- * @method void setJobId(string $JobId) 设置同步任务id
+ * @method string getJobId() 获取同步任务id，如sync-werwfs23
+ * @method void setJobId(string $JobId) 设置同步任务id，如sync-werwfs23
  * @method string getJobName() 获取同步任务名
  * @method void setJobName(string $JobName) 设置同步任务名
  * @method string getOrder() 获取排序字段，可以取值为CreateTime
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSyncJobsRequest extends AbstractModel
 {
     /**
-     * @var string 同步任务id
+     * @var string 同步任务id，如sync-werwfs23
      */
     public $JobId;
 
@@ -101,7 +101,7 @@ class DescribeSyncJobsRequest extends AbstractModel
     public $TagFilters;
 
     /**
-     * @param string $JobId 同步任务id
+     * @param string $JobId 同步任务id，如sync-werwfs23
      * @param string $JobName 同步任务名
      * @param string $Order 排序字段，可以取值为CreateTime
      * @param string $OrderSeq 排序方式，升序为ASC，降序为DESC，默认为CreateTime降序

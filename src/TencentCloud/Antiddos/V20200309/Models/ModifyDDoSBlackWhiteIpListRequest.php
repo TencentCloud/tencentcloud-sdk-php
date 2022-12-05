@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取资源Id
  * @method void setInstanceId(string $InstanceId) 设置资源Id
- * @method string getOldIpType() 获取当前黑名单类型，取值black时黑名单；取值white时白名单
- * @method void setOldIpType(string $OldIpType) 设置当前黑名单类型，取值black时黑名单；取值white时白名单
+ * @method string getOldIpType() 获取当前配置的黑白名单类型，取值black时表示黑名单；取值white时表示白名单
+ * @method void setOldIpType(string $OldIpType) 设置当前配置的黑白名单类型，取值black时表示黑名单；取值white时表示白名单
  * @method IpSegment getOldIp() 获取当前配置的Ip段，包含ip与掩码
  * @method void setOldIp(IpSegment $OldIp) 设置当前配置的Ip段，包含ip与掩码
  * @method string getNewIpType() 获取修改后黑白名单类型，取值black时黑名单，取值white时白名单
@@ -39,7 +39,7 @@ class ModifyDDoSBlackWhiteIpListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 当前黑名单类型，取值black时黑名单；取值white时白名单
+     * @var string 当前配置的黑白名单类型，取值black时表示黑名单；取值white时表示白名单
      */
     public $OldIpType;
 
@@ -60,7 +60,7 @@ class ModifyDDoSBlackWhiteIpListRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 资源Id
-     * @param string $OldIpType 当前黑名单类型，取值black时黑名单；取值white时白名单
+     * @param string $OldIpType 当前配置的黑白名单类型，取值black时表示黑名单；取值white时表示白名单
      * @param IpSegment $OldIp 当前配置的Ip段，包含ip与掩码
      * @param string $NewIpType 修改后黑白名单类型，取值black时黑名单，取值white时白名单
      * @param IpSegment $NewIp 当前配置的Ip段，包含ip与掩码

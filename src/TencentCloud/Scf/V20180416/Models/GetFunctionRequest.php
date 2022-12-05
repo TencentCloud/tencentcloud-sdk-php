@@ -23,9 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFunctionName() 获取需要获取详情的函数名称
  * @method void setFunctionName(string $FunctionName) 设置需要获取详情的函数名称
  * @method string getQualifier() 获取函数的版本号
+默认值: $LATEST
  * @method void setQualifier(string $Qualifier) 设置函数的版本号
+默认值: $LATEST
  * @method string getNamespace() 获取函数所属命名空间
+默认值: default
  * @method void setNamespace(string $Namespace) 设置函数所属命名空间
+默认值: default
  * @method string getShowCode() 获取是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
  * @method void setShowCode(string $ShowCode) 设置是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
  */
@@ -38,11 +42,13 @@ class GetFunctionRequest extends AbstractModel
 
     /**
      * @var string 函数的版本号
+默认值: $LATEST
      */
     public $Qualifier;
 
     /**
      * @var string 函数所属命名空间
+默认值: default
      */
     public $Namespace;
 
@@ -54,7 +60,9 @@ class GetFunctionRequest extends AbstractModel
     /**
      * @param string $FunctionName 需要获取详情的函数名称
      * @param string $Qualifier 函数的版本号
+默认值: $LATEST
      * @param string $Namespace 函数所属命名空间
+默认值: default
      * @param string $ShowCode 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
      */
     function __construct()

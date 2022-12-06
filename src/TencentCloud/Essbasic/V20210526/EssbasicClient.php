@@ -27,8 +27,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口失败后返回错误信息
 注意:
 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
- * @method Models\ChannelCancelFlowResponse ChannelCancelFlow(Models\ChannelCancelFlowRequest $req) 渠道版撤销签署流程接口
-仅支持未签署完成的合同
+ * @method Models\ChannelCancelFlowResponse ChannelCancelFlow(Models\ChannelCancelFlowRequest $req) 渠道版撤销签署流程接口，可以撤回：未全部签署完成；不可以撤回（终态）：已全部签署完成、已拒签、已过期、已撤回。
 注意:
 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
 
@@ -36,6 +35,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\ChannelCreateBatchCancelFlowUrlResponse ChannelCreateBatchCancelFlowUrl(Models\ChannelCreateBatchCancelFlowUrlRequest $req) 指定需要批量撤销的签署流程Id，获取批量撤销链接
 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；
 接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销;
+可以撤回：未全部签署完成；不可以撤回（终态）：已全部签署完成、已拒签、已过期、已撤回。
 注意:
 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
  * @method Models\ChannelCreateBoundFlowsResponse ChannelCreateBoundFlows(Models\ChannelCreateBoundFlowsRequest $req) 此接口（ChannelCreateBoundFlows）用于渠道子客领取合同，经办人需要有相应的角色，领取后的合同不能重复领取。

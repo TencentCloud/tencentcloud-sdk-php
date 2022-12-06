@@ -67,7 +67,7 @@ use TencentCloud\Dts\V20211206\Models as Models;
  * @method Models\StopCompareResponse StopCompare(Models\StopCompareRequest $req) 终止一致性校验任务
  * @method Models\StopMigrateJobResponse StopMigrateJob(Models\StopMigrateJobRequest $req) 本接口（StopMigrateJob）用于终止数据迁移任务。
 调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
- * @method Models\StopSyncJobResponse StopSyncJob(Models\StopSyncJobRequest $req) 终止同步任务
+ * @method Models\StopSyncJobResponse StopSyncJob(Models\StopSyncJobRequest $req) 结束同步任务，操作后可通过查询同步任务信息接口DescribeSyncJobs，获取操作后的状态。
  */
 
 class DtsClient extends AbstractClient

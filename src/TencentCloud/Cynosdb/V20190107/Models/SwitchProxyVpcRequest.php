@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置字符串子网id
  * @method integer getOldIpReserveHours() 获取旧地址回收时间
  * @method void setOldIpReserveHours(integer $OldIpReserveHours) 设置旧地址回收时间
- * @method string getProxyGroupId() 获取数据库代理组Id
- * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组Id
+ * @method string getProxyGroupId() 获取数据库代理组Id（该参数为必填项，可以通过DescribeProxies接口获得）
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置数据库代理组Id（该参数为必填项，可以通过DescribeProxies接口获得）
  */
 class SwitchProxyVpcRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class SwitchProxyVpcRequest extends AbstractModel
     public $OldIpReserveHours;
 
     /**
-     * @var string 数据库代理组Id
+     * @var string 数据库代理组Id（该参数为必填项，可以通过DescribeProxies接口获得）
      */
     public $ProxyGroupId;
 
@@ -63,7 +63,7 @@ class SwitchProxyVpcRequest extends AbstractModel
      * @param string $UniqVpcId 字符串vpc id
      * @param string $UniqSubnetId 字符串子网id
      * @param integer $OldIpReserveHours 旧地址回收时间
-     * @param string $ProxyGroupId 数据库代理组Id
+     * @param string $ProxyGroupId 数据库代理组Id（该参数为必填项，可以通过DescribeProxies接口获得）
      */
     function __construct()
     {

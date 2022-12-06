@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKey() 获取请求数
  * @method void setKey(string $Key) 设置请求数
+ * @method array getLastPeriodValue() 获取同环比上周期具体数值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastPeriodValue(array $LastPeriodValue) 设置同环比上周期具体数值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApmField extends AbstractModel
 {
@@ -71,6 +75,12 @@ class ApmField extends AbstractModel
     public $Key;
 
     /**
+     * @var array 同环比上周期具体数值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastPeriodValue;
+
+    /**
      * @param string $CompareVal 昨日同比指标值，已弃用，不建议使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CompareVals Compare值结果数组，推荐使用
@@ -80,6 +90,8 @@ class ApmField extends AbstractModel
      * @param string $Unit 指标所对应的单位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key 请求数
+     * @param array $LastPeriodValue 同环比上周期具体数值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -117,6 +129,15 @@ class ApmField extends AbstractModel
 
         if (array_key_exists("Key",$param) and $param["Key"] !== null) {
             $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("LastPeriodValue",$param) and $param["LastPeriodValue"] !== null) {
+            $this->LastPeriodValue = [];
+            foreach ($param["LastPeriodValue"] as $key => $value){
+                $obj = new APMKV();
+                $obj->deserialize($value);
+                array_push($this->LastPeriodValue, $obj);
+            }
         }
     }
 }

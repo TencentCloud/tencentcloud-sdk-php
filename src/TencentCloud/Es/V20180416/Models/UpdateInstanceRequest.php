@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEsConfig(string $EsConfig) 设置ES配置项（JSON格式字符串）
  * @method string getPassword() 获取默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
  * @method void setPassword(string $Password) 设置默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
- * @method EsAcl getEsAcl() 获取访问控制列表
- * @method void setEsAcl(EsAcl $EsAcl) 设置访问控制列表
+ * @method EsAcl getEsAcl() 获取可视化组件（Kibana、Cerebro）的公网访问策略
+ * @method void setEsAcl(EsAcl $EsAcl) 设置可视化组件（Kibana、Cerebro）的公网访问策略
  * @method integer getDiskSize() 获取已废弃请使用NodeInfoList
 磁盘大小（单位GB）
  * @method void setDiskSize(integer $DiskSize) 设置已废弃请使用NodeInfoList
@@ -150,7 +150,7 @@ class UpdateInstanceRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var EsAcl 访问控制列表
+     * @var EsAcl 可视化组件（Kibana、Cerebro）的公网访问策略
      */
     public $EsAcl;
 
@@ -308,7 +308,7 @@ CLOSE 关闭
 节点个数（2-50个）
      * @param string $EsConfig ES配置项（JSON格式字符串）
      * @param string $Password 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
-     * @param EsAcl $EsAcl 访问控制列表
+     * @param EsAcl $EsAcl 可视化组件（Kibana、Cerebro）的公网访问策略
      * @param integer $DiskSize 已废弃请使用NodeInfoList
 磁盘大小（单位GB）
      * @param string $NodeType 已废弃请使用NodeInfoList

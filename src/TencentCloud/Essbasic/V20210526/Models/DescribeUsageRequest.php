@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsage请求参数结构体
  *
- * @method Agent getAgent() 获取应用信息
- * @method void setAgent(Agent $Agent) 设置应用信息
+ * @method Agent getAgent() 获取应用信息，此接口Agent.AppId必填
+ * @method void setAgent(Agent $Agent) 设置应用信息，此接口Agent.AppId必填
  * @method string getStartDate() 获取开始时间，例如：2021-03-21
  * @method void setStartDate(string $StartDate) 设置开始时间，例如：2021-03-21
  * @method string getEndDate() 获取结束时间，例如：2021-06-21；
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUsageRequest extends AbstractModel
 {
     /**
-     * @var Agent 应用信息
+     * @var Agent 应用信息，此接口Agent.AppId必填
      */
     public $Agent;
 
@@ -82,7 +82,7 @@ class DescribeUsageRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @param Agent $Agent 应用信息
+     * @param Agent $Agent 应用信息，此接口Agent.AppId必填
      * @param string $StartDate 开始时间，例如：2021-03-21
      * @param string $EndDate 结束时间，例如：2021-06-21；
 开始时间到结束时间的区间长度小于等于90天。

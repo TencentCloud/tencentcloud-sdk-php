@@ -44,6 +44,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMatchValue(string $MatchValue) 设置匹配目标值，当multiVal时，各个key用;分割
  * @method string getDescription() 获取参数描述
  * @method void setDescription(string $Description) 设置参数描述
+ * @method integer getIsGlobal() 获取是否为全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsGlobal(integer $IsGlobal) 设置是否为全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ModifiableInfo getModifiableInfo() 获取参数是否可修改
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) 设置参数是否可修改
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsFunc() 获取是否为函数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsFunc(boolean $IsFunc) 设置是否为函数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFunc() 获取函数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFunc(string $Func) 设置函数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamInfo extends AbstractModel
 {
@@ -104,6 +120,30 @@ class ParamInfo extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 是否为全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsGlobal;
+
+    /**
+     * @var ModifiableInfo 参数是否可修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifiableInfo;
+
+    /**
+     * @var boolean 是否为函数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsFunc;
+
+    /**
+     * @var string 函数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Func;
+
+    /**
      * @param string $CurrentValue 当前值
      * @param string $Default 默认值
      * @param array $EnumValue 参数为enum/string/bool时，可选值列表
@@ -116,6 +156,14 @@ class ParamInfo extends AbstractModel
      * @param string $MatchType 匹配类型，multiVal, regex在参数类型是string时使用
      * @param string $MatchValue 匹配目标值，当multiVal时，各个key用;分割
      * @param string $Description 参数描述
+     * @param integer $IsGlobal 是否为全局参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifiableInfo $ModifiableInfo 参数是否可修改
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsFunc 是否为函数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Func 函数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -172,6 +220,23 @@ class ParamInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
+        }
+
+        if (array_key_exists("ModifiableInfo",$param) and $param["ModifiableInfo"] !== null) {
+            $this->ModifiableInfo = new ModifiableInfo();
+            $this->ModifiableInfo->deserialize($param["ModifiableInfo"]);
+        }
+
+        if (array_key_exists("IsFunc",$param) and $param["IsFunc"] !== null) {
+            $this->IsFunc = $param["IsFunc"];
+        }
+
+        if (array_key_exists("Func",$param) and $param["Func"] !== null) {
+            $this->Func = $param["Func"];
         }
     }
 }

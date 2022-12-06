@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method CkUserAlterInfo getUserInfo() 获取用户信息
  * @method void setUserInfo(CkUserAlterInfo $UserInfo) 设置用户信息
- * @method string getApiType() 获取api接口类型
- * @method void setApiType(string $ApiType) 设置api接口类型
+ * @method string getApiType() 获取api接口类型，
+AddSystemUser新增用户，UpdateSystemUser，修改用户
+ * @method void setApiType(string $ApiType) 设置api接口类型，
+AddSystemUser新增用户，UpdateSystemUser，修改用户
  */
 class ActionAlterCkUserRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class ActionAlterCkUserRequest extends AbstractModel
     public $UserInfo;
 
     /**
-     * @var string api接口类型
+     * @var string api接口类型，
+AddSystemUser新增用户，UpdateSystemUser，修改用户
      */
     public $ApiType;
 
     /**
      * @param CkUserAlterInfo $UserInfo 用户信息
-     * @param string $ApiType api接口类型
+     * @param string $ApiType api接口类型，
+AddSystemUser新增用户，UpdateSystemUser，修改用户
      */
     function __construct()
     {

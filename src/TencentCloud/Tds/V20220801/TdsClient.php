@@ -25,6 +25,7 @@ use TencentCloud\Tds\V20220801\Models as Models;
 /**
  * @method Models\DescribeFraudBaseResponse DescribeFraudBase(Models\DescribeFraudBaseRequest $req) 查询设备风险
  * @method Models\DescribeFraudPremiumResponse DescribeFraudPremium(Models\DescribeFraudPremiumRequest $req) 查询设备标识及风险
+ * @method Models\DescribeFraudUltimateResponse DescribeFraudUltimate(Models\DescribeFraudUltimateRequest $req) 查询设备标识及风险（旗舰版）
  * @method Models\DescribeTrustedIDResponse DescribeTrustedID(Models\DescribeTrustedIDRequest $req) 查询设备标识
  */
 

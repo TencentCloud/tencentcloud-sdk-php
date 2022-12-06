@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcRegion(string $SrcRegion) 设置源实例地域，如：ap-guangzhou
  * @method string getDstRegion() 获取目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
  * @method void setDstRegion(string $DstRegion) 设置目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
- * @method string getInstanceClass() 获取实例规格，包括：micro、small、medium、large、xlarge、2xlarge
- * @method void setInstanceClass(string $InstanceClass) 设置实例规格，包括：micro、small、medium、large、xlarge、2xlarge
+ * @method string getInstanceClass() 获取实例规格，包括：small、medium、large、xlarge、2xlarge
+ * @method void setInstanceClass(string $InstanceClass) 设置实例规格，包括：small、medium、large、xlarge、2xlarge
  * @method integer getCount() 获取购买数量，范围为[1,15]，默认为1
  * @method void setCount(integer $Count) 设置购买数量，范围为[1,15]，默认为1
  * @method string getJobName() 获取迁移服务名称，最大长度128
@@ -60,7 +60,7 @@ class CreateMigrationServiceRequest extends AbstractModel
     public $DstRegion;
 
     /**
-     * @var string 实例规格，包括：micro、small、medium、large、xlarge、2xlarge
+     * @var string 实例规格，包括：small、medium、large、xlarge、2xlarge
      */
     public $InstanceClass;
 
@@ -84,7 +84,7 @@ class CreateMigrationServiceRequest extends AbstractModel
      * @param string $DstDatabaseType 目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
      * @param string $SrcRegion 源实例地域，如：ap-guangzhou
      * @param string $DstRegion 目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
-     * @param string $InstanceClass 实例规格，包括：micro、small、medium、large、xlarge、2xlarge
+     * @param string $InstanceClass 实例规格，包括：small、medium、large、xlarge、2xlarge
      * @param integer $Count 购买数量，范围为[1,15]，默认为1
      * @param string $JobName 迁移服务名称，最大长度128
      * @param array $Tags 标签信息

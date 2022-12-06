@@ -104,13 +104,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置开始时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(string $Status) 设置任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间，格式为 yyyy-mm-dd hh:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已停止)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已停止)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签相关信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -266,16 +266,16 @@ class SyncJobInfo extends AbstractModel
     public $StartTime;
 
     /**
+     * @var string 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
      * @var string 结束时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
-
-    /**
-     * @var string 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已停止)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Status;
 
     /**
      * @var array 标签相关信息
@@ -356,9 +356,9 @@ class SyncJobInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 开始时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EndTime 结束时间，格式为 yyyy-mm-dd hh:mm:ss
+     * @param string $Status 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已停止)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)
+     * @param string $EndTime 结束时间，格式为 yyyy-mm-dd hh:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签相关信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -474,12 +474,12 @@ class SyncJobInfo extends AbstractModel
             $this->StartTime = $param["StartTime"];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
-        }
-
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

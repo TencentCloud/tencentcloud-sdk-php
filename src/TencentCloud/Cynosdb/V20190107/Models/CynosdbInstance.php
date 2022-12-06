@@ -110,6 +110,24 @@ pause
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStoragePayMode() 获取存储付费类型
  * @method void setStoragePayMode(integer $StoragePayMode) 设置存储付费类型
+ * @method string getPhysicalZone() 获取物理区
+ * @method void setPhysicalZone(string $PhysicalZone) 设置物理区
+ * @method string getBusinessType() 获取商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBusinessType(string $BusinessType) 设置商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTasks() 获取任务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTasks(array $Tasks) 设置任务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsFreeze() 获取是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsFreeze(string $IsFreeze) 设置是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResourceTags() 获取资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceTags(array $ResourceTags) 设置资源标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -327,6 +345,35 @@ pause
     public $StoragePayMode;
 
     /**
+     * @var string 物理区
+     */
+    public $PhysicalZone;
+
+    /**
+     * @var string 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BusinessType;
+
+    /**
+     * @var array 任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tasks;
+
+    /**
+     * @var string 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsFreeze;
+
+    /**
+     * @var array 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $Uin 用户Uin
      * @param integer $AppId 用户AppId
      * @param string $ClusterId 集群ID
@@ -372,6 +419,15 @@ pause
      * @param string $StorageId 预付费存储Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StoragePayMode 存储付费类型
+     * @param string $PhysicalZone 物理区
+     * @param string $BusinessType 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tasks 任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsFreeze 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ResourceTags 资源标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -552,6 +608,36 @@ pause
 
         if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
             $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("PhysicalZone",$param) and $param["PhysicalZone"] !== null) {
+            $this->PhysicalZone = $param["PhysicalZone"];
+        }
+
+        if (array_key_exists("BusinessType",$param) and $param["BusinessType"] !== null) {
+            $this->BusinessType = $param["BusinessType"];
+        }
+
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = [];
+            foreach ($param["Tasks"] as $key => $value){
+                $obj = new ObjectTask();
+                $obj->deserialize($value);
+                array_push($this->Tasks, $obj);
+            }
+        }
+
+        if (array_key_exists("IsFreeze",$param) and $param["IsFreeze"] !== null) {
+            $this->IsFreeze = $param["IsFreeze"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

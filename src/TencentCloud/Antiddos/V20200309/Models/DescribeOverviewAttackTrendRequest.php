@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDimension(string $Dimension) 设置纬度，当前仅支持attackcount
  * @method integer getPeriod() 获取周期，当前仅支持86400
  * @method void setPeriod(integer $Period) 设置周期，当前仅支持86400
- * @method string getStartTime() 获取统计开始时间
- * @method void setStartTime(string $StartTime) 设置统计开始时间
- * @method string getEndTime() 获取统计结束时间
- * @method void setEndTime(string $EndTime) 设置统计结束时间
+ * @method string getStartTime() 获取防护概览攻击趋势开始时间
+ * @method void setStartTime(string $StartTime) 设置防护概览攻击趋势开始时间
+ * @method string getEndTime() 获取防护概览攻击趋势结束时间
+ * @method void setEndTime(string $EndTime) 设置防护概览攻击趋势结束时间
  */
 class DescribeOverviewAttackTrendRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class DescribeOverviewAttackTrendRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var string 统计开始时间
+     * @var string 防护概览攻击趋势开始时间
      */
     public $StartTime;
 
     /**
-     * @var string 统计结束时间
+     * @var string 防护概览攻击趋势结束时间
      */
     public $EndTime;
 
@@ -62,8 +62,8 @@ class DescribeOverviewAttackTrendRequest extends AbstractModel
      * @param string $Type 攻击类型，取值ddos， cc
      * @param string $Dimension 纬度，当前仅支持attackcount
      * @param integer $Period 周期，当前仅支持86400
-     * @param string $StartTime 统计开始时间
-     * @param string $EndTime 统计结束时间
+     * @param string $StartTime 防护概览攻击趋势开始时间
+     * @param string $EndTime 防护概览攻击趋势结束时间
      */
     function __construct()
     {

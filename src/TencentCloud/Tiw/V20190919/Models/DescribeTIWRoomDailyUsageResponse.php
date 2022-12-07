@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Tiw\V20190919\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AllocateHosts返回参数结构体
+ * DescribeTIWRoomDailyUsage返回参数结构体
  *
- * @method array getHostIdSet() 获取新创建云子机的实例ID列表。
- * @method void setHostIdSet(array $HostIdSet) 设置新创建云子机的实例ID列表。
+ * @method array getUsages() 获取指定区间指定产品的房间用量列表
+ * @method void setUsages(array $Usages) 设置指定区间指定产品的房间用量列表
+ * @method integer getTotal() 获取用量列表总数
+ * @method void setTotal(integer $Total) 设置用量列表总数
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AllocateHostsResponse extends AbstractModel
+class DescribeTIWRoomDailyUsageResponse extends AbstractModel
 {
     /**
-     * @var array 新创建云子机的实例ID列表。
+     * @var array 指定区间指定产品的房间用量列表
      */
-    public $HostIdSet;
+    public $Usages;
+
+    /**
+     * @var integer 用量列表总数
+     */
+    public $Total;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class AllocateHostsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $HostIdSet 新创建云子机的实例ID列表。
+     * @param array $Usages 指定区间指定产品的房间用量列表
+     * @param integer $Total 用量列表总数
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class AllocateHostsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HostIdSet",$param) and $param["HostIdSet"] !== null) {
-            $this->HostIdSet = $param["HostIdSet"];
+        if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
+            $this->Usages = [];
+            foreach ($param["Usages"] as $key => $value){
+                $obj = new RoomUsageDataItem();
+                $obj->deserialize($value);
+                array_push($this->Usages, $obj);
+            }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

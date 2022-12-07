@@ -14,23 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Trp\V20210515\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AllocateHosts返回参数结构体
+ * DescribeCorpQuotas返回参数结构体
  *
- * @method array getHostIdSet() 获取新创建云子机的实例ID列表。
- * @method void setHostIdSet(array $HostIdSet) 设置新创建云子机的实例ID列表。
+ * @method array getCorpQuotas() 获取子企业额度使用情况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCorpQuotas(array $CorpQuotas) 设置子企业额度使用情况
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotal() 获取记录总数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotal(integer $Total) 设置记录总数量
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AllocateHostsResponse extends AbstractModel
+class DescribeCorpQuotasResponse extends AbstractModel
 {
     /**
-     * @var array 新创建云子机的实例ID列表。
+     * @var array 子企业额度使用情况
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $HostIdSet;
+    public $CorpQuotas;
+
+    /**
+     * @var integer 记录总数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Total;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +51,10 @@ class AllocateHostsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $HostIdSet 新创建云子机的实例ID列表。
+     * @param array $CorpQuotas 子企业额度使用情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Total 记录总数量
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +70,17 @@ class AllocateHostsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HostIdSet",$param) and $param["HostIdSet"] !== null) {
-            $this->HostIdSet = $param["HostIdSet"];
+        if (array_key_exists("CorpQuotas",$param) and $param["CorpQuotas"] !== null) {
+            $this->CorpQuotas = [];
+            foreach ($param["CorpQuotas"] as $key => $value){
+                $obj = new CorpQuota();
+                $obj->deserialize($value);
+                array_push($this->CorpQuotas, $obj);
+            }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

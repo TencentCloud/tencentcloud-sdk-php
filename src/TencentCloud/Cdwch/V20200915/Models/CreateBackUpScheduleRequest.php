@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getScheduleId() 获取编辑时需要传
  * @method void setScheduleId(integer $ScheduleId) 设置编辑时需要传
- * @method string getWeekDays() 获取选择的星期 逗号分隔
- * @method void setWeekDays(string $WeekDays) 设置选择的星期 逗号分隔
+ * @method string getWeekDays() 获取选择的星期 逗号分隔，例如 2 代表周二
+ * @method void setWeekDays(string $WeekDays) 设置选择的星期 逗号分隔，例如 2 代表周二
  * @method integer getExecuteHour() 获取执行小时
  * @method void setExecuteHour(integer $ExecuteHour) 设置执行小时
  * @method array getBackUpTables() 获取备份表列表
@@ -37,7 +37,7 @@ class CreateBackUpScheduleRequest extends AbstractModel
     public $ScheduleId;
 
     /**
-     * @var string 选择的星期 逗号分隔
+     * @var string 选择的星期 逗号分隔，例如 2 代表周二
      */
     public $WeekDays;
 
@@ -53,7 +53,7 @@ class CreateBackUpScheduleRequest extends AbstractModel
 
     /**
      * @param integer $ScheduleId 编辑时需要传
-     * @param string $WeekDays 选择的星期 逗号分隔
+     * @param string $WeekDays 选择的星期 逗号分隔，例如 2 代表周二
      * @param integer $ExecuteHour 执行小时
      * @param array $BackUpTables 备份表列表
      */

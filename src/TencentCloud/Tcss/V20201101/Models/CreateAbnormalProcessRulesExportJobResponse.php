@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cvm\V20170312\Models;
+namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AllocateHosts返回参数结构体
+ * CreateAbnormalProcessRulesExportJob返回参数结构体
  *
- * @method array getHostIdSet() 获取新创建云子机的实例ID列表。
- * @method void setHostIdSet(array $HostIdSet) 设置新创建云子机的实例ID列表。
+ * @method string getJobId() 获取导出任务ID，前端拿着任务ID查询任务进度
+ * @method void setJobId(string $JobId) 设置导出任务ID，前端拿着任务ID查询任务进度
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class AllocateHostsResponse extends AbstractModel
+class CreateAbnormalProcessRulesExportJobResponse extends AbstractModel
 {
     /**
-     * @var array 新创建云子机的实例ID列表。
+     * @var string 导出任务ID，前端拿着任务ID查询任务进度
      */
-    public $HostIdSet;
+    public $JobId;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class AllocateHostsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $HostIdSet 新创建云子机的实例ID列表。
+     * @param string $JobId 导出任务ID，前端拿着任务ID查询任务进度
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class AllocateHostsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("HostIdSet",$param) and $param["HostIdSet"] !== null) {
-            $this->HostIdSet = $param["HostIdSet"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

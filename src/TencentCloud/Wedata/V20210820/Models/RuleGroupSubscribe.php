@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubscribeType(array $SubscribeType) 设置订阅方式 1.邮件email  2.短信sms
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWebHooks() 获取群机器人配置的webhook信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWebHooks(array $WebHooks) 设置群机器人配置的webhook信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupSubscribe extends AbstractModel
 {
@@ -54,11 +58,19 @@ class RuleGroupSubscribe extends AbstractModel
     public $SubscribeType;
 
     /**
+     * @var array 群机器人配置的webhook信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WebHooks;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Receivers 订阅接收人列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubscribeType 订阅方式 1.邮件email  2.短信sms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WebHooks 群机器人配置的webhook信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -89,6 +101,15 @@ class RuleGroupSubscribe extends AbstractModel
 
         if (array_key_exists("SubscribeType",$param) and $param["SubscribeType"] !== null) {
             $this->SubscribeType = $param["SubscribeType"];
+        }
+
+        if (array_key_exists("WebHooks",$param) and $param["WebHooks"] !== null) {
+            $this->WebHooks = [];
+            foreach ($param["WebHooks"] as $key => $value){
+                $obj = new SubscribeWebHook();
+                $obj->deserialize($value);
+                array_push($this->WebHooks, $obj);
+            }
         }
     }
 }

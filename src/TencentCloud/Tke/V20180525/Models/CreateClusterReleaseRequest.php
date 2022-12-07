@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChart(string $Chart) 设置制品名称或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
  * @method ReleaseValues getValues() 获取自定义参数
  * @method void setValues(ReleaseValues $Values) 设置自定义参数
- * @method string getChartFrom() 获取制品来源，范围：tke-market/tcr/other
- * @method void setChartFrom(string $ChartFrom) 设置制品来源，范围：tke-market/tcr/other
+ * @method string getChartFrom() 获取制品来源，范围：tke 应用市场/第三方chart
+ * @method void setChartFrom(string $ChartFrom) 设置制品来源，范围：tke 应用市场/第三方chart
  * @method string getChartVersion() 获取制品版本
  * @method void setChartVersion(string $ChartVersion) 设置制品版本
  * @method string getChartRepoURL() 获取制品仓库URL地址
@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) 设置制品访问密码
  * @method string getChartNamespace() 获取制品命名空间
  * @method void setChartNamespace(string $ChartNamespace) 设置制品命名空间
+ * @method string getClusterType() 获取集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+ * @method void setClusterType(string $ClusterType) 设置集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
  */
 class CreateClusterReleaseRequest extends AbstractModel
 {
@@ -71,7 +73,7 @@ class CreateClusterReleaseRequest extends AbstractModel
     public $Values;
 
     /**
-     * @var string 制品来源，范围：tke-market/tcr/other
+     * @var string 制品来源，范围：tke 应用市场/第三方chart
      */
     public $ChartFrom;
 
@@ -101,17 +103,23 @@ class CreateClusterReleaseRequest extends AbstractModel
     public $ChartNamespace;
 
     /**
+     * @var string 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+     */
+    public $ClusterType;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $Name 应用名称
      * @param string $Namespace 应用命名空间
      * @param string $Chart 制品名称或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
      * @param ReleaseValues $Values 自定义参数
-     * @param string $ChartFrom 制品来源，范围：tke-market/tcr/other
+     * @param string $ChartFrom 制品来源，范围：tke 应用市场/第三方chart
      * @param string $ChartVersion 制品版本
      * @param string $ChartRepoURL 制品仓库URL地址
      * @param string $Username 制品访问用户名
      * @param string $Password 制品访问密码
      * @param string $ChartNamespace 制品命名空间
+     * @param string $ClusterType 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class CreateClusterReleaseRequest extends AbstractModel
 
         if (array_key_exists("ChartNamespace",$param) and $param["ChartNamespace"] !== null) {
             $this->ChartNamespace = $param["ChartNamespace"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

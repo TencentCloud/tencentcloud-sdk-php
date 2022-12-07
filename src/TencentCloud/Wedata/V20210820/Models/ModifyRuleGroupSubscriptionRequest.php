@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatasourceId(string $DatasourceId) 设置数据源Id
  * @method string getTableId() 获取数据表Id
  * @method void setTableId(string $TableId) 设置数据表Id
+ * @method array getWebHooks() 获取群机器人webhook信息
+ * @method void setWebHooks(array $WebHooks) 设置群机器人webhook信息
  */
 class ModifyRuleGroupSubscriptionRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyRuleGroupSubscriptionRequest extends AbstractModel
     public $TableId;
 
     /**
+     * @var array 群机器人webhook信息
+     */
+    public $WebHooks;
+
+    /**
      * @param integer $RuleGroupId 规则组ID
      * @param array $Receivers 订阅人信息
      * @param array $SubscribeType 订阅类型
@@ -80,6 +87,7 @@ class ModifyRuleGroupSubscriptionRequest extends AbstractModel
      * @param string $DatabaseId 数据库Id
      * @param string $DatasourceId 数据源Id
      * @param string $TableId 数据表Id
+     * @param array $WebHooks 群机器人webhook信息
      */
     function __construct()
     {
@@ -125,6 +133,15 @@ class ModifyRuleGroupSubscriptionRequest extends AbstractModel
 
         if (array_key_exists("TableId",$param) and $param["TableId"] !== null) {
             $this->TableId = $param["TableId"];
+        }
+
+        if (array_key_exists("WebHooks",$param) and $param["WebHooks"] !== null) {
+            $this->WebHooks = [];
+            foreach ($param["WebHooks"] as $key => $value){
+                $obj = new SubscribeWebHook();
+                $obj->deserialize($value);
+                array_push($this->WebHooks, $obj);
+            }
         }
     }
 }

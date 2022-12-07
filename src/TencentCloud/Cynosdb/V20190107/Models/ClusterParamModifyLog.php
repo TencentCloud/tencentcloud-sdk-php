@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
  */
 class ClusterParamModifyLog extends AbstractModel
 {
@@ -66,12 +70,24 @@ class ClusterParamModifyLog extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 集群ID
+     */
+    public $ClusterId;
+
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
+
+    /**
      * @param string $ParamName 参数名称
      * @param string $CurrentValue 当前值
      * @param string $UpdateValue 修改后的值
      * @param string $Status 修改状态
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
+     * @param string $ClusterId 集群ID
+     * @param string $InstanceId 实例ID
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class ClusterParamModifyLog extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthType(string $AuthType) 设置鉴权类型
  * @method string getGroupContext() 获取分组上下文
  * @method void setGroupContext(string $GroupContext) 设置分组上下文
+ * @method string getNamespaceNameKey() 获取命名空间参数key值
+ * @method void setNamespaceNameKey(string $NamespaceNameKey) 设置命名空间参数key值
+ * @method string getServiceNameKey() 获取微服务名参数key值
+ * @method void setServiceNameKey(string $ServiceNameKey) 设置微服务名参数key值
+ * @method string getNamespaceNameKeyPosition() 获取命名空间参数位置，path，header或query，默认是path
+ * @method void setNamespaceNameKeyPosition(string $NamespaceNameKeyPosition) 设置命名空间参数位置，path，header或query，默认是path
+ * @method string getServiceNameKeyPosition() 获取微服务名参数位置，path，header或query，默认是path
+ * @method void setServiceNameKeyPosition(string $ServiceNameKeyPosition) 设置微服务名参数位置，path，header或query，默认是path
  */
 class UpdateApiGroupRequest extends AbstractModel
 {
@@ -59,11 +67,35 @@ class UpdateApiGroupRequest extends AbstractModel
     public $GroupContext;
 
     /**
+     * @var string 命名空间参数key值
+     */
+    public $NamespaceNameKey;
+
+    /**
+     * @var string 微服务名参数key值
+     */
+    public $ServiceNameKey;
+
+    /**
+     * @var string 命名空间参数位置，path，header或query，默认是path
+     */
+    public $NamespaceNameKeyPosition;
+
+    /**
+     * @var string 微服务名参数位置，path，header或query，默认是path
+     */
+    public $ServiceNameKeyPosition;
+
+    /**
      * @param string $GroupId Api 分组ID
      * @param string $GroupName Api 分组名称
      * @param string $Description Api 分组描述
      * @param string $AuthType 鉴权类型
      * @param string $GroupContext 分组上下文
+     * @param string $NamespaceNameKey 命名空间参数key值
+     * @param string $ServiceNameKey 微服务名参数key值
+     * @param string $NamespaceNameKeyPosition 命名空间参数位置，path，header或query，默认是path
+     * @param string $ServiceNameKeyPosition 微服务名参数位置，path，header或query，默认是path
      */
     function __construct()
     {
@@ -96,6 +128,22 @@ class UpdateApiGroupRequest extends AbstractModel
 
         if (array_key_exists("GroupContext",$param) and $param["GroupContext"] !== null) {
             $this->GroupContext = $param["GroupContext"];
+        }
+
+        if (array_key_exists("NamespaceNameKey",$param) and $param["NamespaceNameKey"] !== null) {
+            $this->NamespaceNameKey = $param["NamespaceNameKey"];
+        }
+
+        if (array_key_exists("ServiceNameKey",$param) and $param["ServiceNameKey"] !== null) {
+            $this->ServiceNameKey = $param["ServiceNameKey"];
+        }
+
+        if (array_key_exists("NamespaceNameKeyPosition",$param) and $param["NamespaceNameKeyPosition"] !== null) {
+            $this->NamespaceNameKeyPosition = $param["NamespaceNameKeyPosition"];
+        }
+
+        if (array_key_exists("ServiceNameKeyPosition",$param) and $param["ServiceNameKeyPosition"] !== null) {
+            $this->ServiceNameKeyPosition = $param["ServiceNameKeyPosition"];
         }
     }
 }

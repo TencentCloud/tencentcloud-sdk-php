@@ -44,6 +44,7 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\DescribeCodePackUrlResponse DescribeCodePackUrl(Models\DescribeCodePackUrlRequest $req) 查询码包地址
  * @method Models\DescribeCodePacksResponse DescribeCodePacks(Models\DescribeCodePacksRequest $req) 查询码包列表
  * @method Models\DescribeCodesByPackResponse DescribeCodesByPack(Models\DescribeCodesByPackRequest $req) 查询码包的二维码列表，上限 3 万
+ * @method Models\DescribeCorpQuotasResponse DescribeCorpQuotas(Models\DescribeCorpQuotasRequest $req) 查询渠道商下属企业额度使用情况
  * @method Models\DescribeCustomRuleByIdResponse DescribeCustomRuleById(Models\DescribeCustomRuleByIdRequest $req) 查自定义码规则
  * @method Models\DescribeCustomRulesResponse DescribeCustomRules(Models\DescribeCustomRulesRequest $req) 查自定义码规则列表
  * @method Models\DescribeJobFileUrlResponse DescribeJobFileUrl(Models\DescribeJobFileUrlRequest $req) 获取异步任务的输出地址

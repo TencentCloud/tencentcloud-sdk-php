@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置用户外网IP地址
  * @method string getChannelSource() 获取来源渠道编码
  * @method void setChannelSource(string $ChannelSource) 设置来源渠道编码
- * @method integer getPlatform() 获取用户登录平台。1：安卓 2：iOS 3：H5 4：小程序
- * @method void setPlatform(integer $Platform) 设置用户登录平台。1：安卓 2：iOS 3：H5 4：小程序
+ * @method integer getPlatform() 获取用户登录平台。1：Android 2：iOS 3：H5 4：小程序
+ * @method void setPlatform(integer $Platform) 设置用户登录平台。1：Android 2：iOS 3：H5 4：小程序
  * @method string getName() 获取姓名
  * @method void setName(string $Name) 设置姓名
  * @method integer getAge() 获取年龄
@@ -58,7 +58,7 @@ class UserInfo extends AbstractModel
     public $ChannelSource;
 
     /**
-     * @var integer 用户登录平台。1：安卓 2：iOS 3：H5 4：小程序
+     * @var integer 用户登录平台。1：Android 2：iOS 3：H5 4：小程序
      */
     public $Platform;
 
@@ -102,7 +102,7 @@ female（女）
     /**
      * @param string $Ip 用户外网IP地址
      * @param string $ChannelSource 来源渠道编码
-     * @param integer $Platform 用户登录平台。1：安卓 2：iOS 3：H5 4：小程序
+     * @param integer $Platform 用户登录平台。1：Android 2：iOS 3：H5 4：小程序
      * @param string $Name 姓名
      * @param integer $Age 年龄
      * @param string $Gender 性别：

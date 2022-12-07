@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedOn(integer $CreatedOn) 设置模板创建的时间戳（精确到秒）
  * @method Recipient getPromoter() 获取发起人角色信息
  * @method void setPromoter(Recipient $Promoter) 设置发起人角色信息
+ * @method string getOrganizationId() 获取模板创建组织id
+ * @method void setOrganizationId(string $OrganizationId) 设置模板创建组织id
+ * @method string getPreviewUrl() 获取模板预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreviewUrl(string $PreviewUrl) 设置模板预览链接
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
 {
@@ -122,6 +128,17 @@ class TemplateInfo extends AbstractModel
     public $Promoter;
 
     /**
+     * @var string 模板创建组织id
+     */
+    public $OrganizationId;
+
+    /**
+     * @var string 模板预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreviewUrl;
+
+    /**
      * @param string $TemplateId 模板ID
      * @param string $TemplateName 模板名字
      * @param string $Description 模板描述信息
@@ -136,6 +153,9 @@ class TemplateInfo extends AbstractModel
      * @param string $Creator 模板的创建人
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
      * @param Recipient $Promoter 发起人角色信息
+     * @param string $OrganizationId 模板创建组织id
+     * @param string $PreviewUrl 模板预览链接
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -225,6 +245,14 @@ class TemplateInfo extends AbstractModel
         if (array_key_exists("Promoter",$param) and $param["Promoter"] !== null) {
             $this->Promoter = new Recipient();
             $this->Promoter->deserialize($param["Promoter"]);
+        }
+
+        if (array_key_exists("OrganizationId",$param) and $param["OrganizationId"] !== null) {
+            $this->OrganizationId = $param["OrganizationId"];
+        }
+
+        if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
+            $this->PreviewUrl = $param["PreviewUrl"];
         }
     }
 }

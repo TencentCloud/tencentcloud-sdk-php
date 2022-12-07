@@ -76,9 +76,9 @@ Android设备
 Android设备
  * @method void setVendorId(string $VendorId) 设置设备品牌 “华为”“oppo”“小米”
 Android设备
- * @method string getAndroidApiLevel() 获取安卓API等级
+ * @method string getAndroidApiLevel() 获取Android API等级
 Android设备
- * @method void setAndroidApiLevel(string $AndroidApiLevel) 设置安卓API等级
+ * @method void setAndroidApiLevel(string $AndroidApiLevel) 设置Android API等级
 Android设备
  * @method string getBrightness() 获取屏幕亮度
 Android设备
@@ -132,13 +132,13 @@ Android设备
 Android设备
  * @method void setChargeStatus(string $ChargeStatus) 设置充电状态；1-不在充电，2-USB充电，3-电源充电
 Android设备
- * @method string getNetworkType() 获取网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+ * @method string getNetworkType() 获取网络类型：2G/3G/4G/5G/Wi-Fi/WWAN/other
 Android设备
- * @method void setNetworkType(string $NetworkType) 设置网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+ * @method void setNetworkType(string $NetworkType) 设置网络类型：2G/3G/4G/5G/Wi-Fi/WWAN/other
 Android设备
- * @method string getWifiMac() 获取WiFi MAC地址
+ * @method string getWifiMac() 获取Wi-Fi MAC地址
 Android设备
- * @method void setWifiMac(string $WifiMac) 设置WiFi MAC地址
+ * @method void setWifiMac(string $WifiMac) 设置Wi-Fi MAC地址
 Android设备
  * @method string getDeviceName() 获取设备名称 "xxx 的 iPhone"，"xxx's IPhone" 等等
 IOS设备
@@ -284,7 +284,7 @@ Android设备
     public $VendorId;
 
     /**
-     * @var string 安卓API等级
+     * @var string Android API等级
 Android设备
      */
     public $AndroidApiLevel;
@@ -368,13 +368,13 @@ Android设备
     public $ChargeStatus;
 
     /**
-     * @var string 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+     * @var string 网络类型：2G/3G/4G/5G/Wi-Fi/WWAN/other
 Android设备
      */
     public $NetworkType;
 
     /**
-     * @var string WiFi MAC地址
+     * @var string Wi-Fi MAC地址
 Android设备
      */
     public $WifiMac;
@@ -430,7 +430,7 @@ Android设备
 Android设备
      * @param string $VendorId 设备品牌 “华为”“oppo”“小米”
 Android设备
-     * @param string $AndroidApiLevel 安卓API等级
+     * @param string $AndroidApiLevel Android API等级
 Android设备
      * @param string $Brightness 屏幕亮度
 Android设备
@@ -458,9 +458,9 @@ Android设备
 Android设备
      * @param string $ChargeStatus 充电状态；1-不在充电，2-USB充电，3-电源充电
 Android设备
-     * @param string $NetworkType 网络类型：2G/3G/4G/5G/WiFi/WWAN/other
+     * @param string $NetworkType 网络类型：2G/3G/4G/5G/Wi-Fi/WWAN/other
 Android设备
-     * @param string $WifiMac WiFi MAC地址
+     * @param string $WifiMac Wi-Fi MAC地址
 Android设备
      * @param string $DeviceName 设备名称 "xxx 的 iPhone"，"xxx's IPhone" 等等
 IOS设备

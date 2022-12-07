@@ -164,6 +164,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepoType(string $RepoType) 设置仓库类型 (person, tcr)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method WarmupSetting getWarmupSetting() 获取预热配置设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置预热配置设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method GatewayConfig getGatewayConfig() 获取Envoy网关服务配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置Envoy网关服务配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupDeploy extends AbstractModel
 {
@@ -384,6 +392,18 @@ class ContainerGroupDeploy extends AbstractModel
     public $RepoType;
 
     /**
+     * @var WarmupSetting 预热配置设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WarmupSetting;
+
+    /**
+     * @var GatewayConfig Envoy网关服务配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayConfig;
+
+    /**
      * @param string $GroupId 部署组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
@@ -455,6 +475,10 @@ class ContainerGroupDeploy extends AbstractModel
      * @param boolean $KubeInjectEnable KubeInjectEnable值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepoType 仓库类型 (person, tcr)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WarmupSetting $WarmupSetting 预热配置设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayConfig $GatewayConfig Envoy网关服务配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -634,6 +658,16 @@ class ContainerGroupDeploy extends AbstractModel
 
         if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
             $this->RepoType = $param["RepoType"];
+        }
+
+        if (array_key_exists("WarmupSetting",$param) and $param["WarmupSetting"] !== null) {
+            $this->WarmupSetting = new WarmupSetting();
+            $this->WarmupSetting->deserialize($param["WarmupSetting"]);
+        }
+
+        if (array_key_exists("GatewayConfig",$param) and $param["GatewayConfig"] !== null) {
+            $this->GatewayConfig = new GatewayConfig();
+            $this->GatewayConfig->deserialize($param["GatewayConfig"]);
         }
     }
 }

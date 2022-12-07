@@ -30,11 +30,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceFingerprint(DeviceFingerprintInfo $DeviceFingerprint) 设置设备指纹信息
  * @method string getSceneCode() 获取场景Code，不传默认活动防刷；
 e_activity_antirush；活动防刷场景
-e_login_protection；登陆保护场景
+e_login_protection；登录保护场景
 e_register_protection：注册保护场景
  * @method void setSceneCode(string $SceneCode) 设置场景Code，不传默认活动防刷；
 e_activity_antirush；活动防刷场景
-e_login_protection；登陆保护场景
+e_login_protection；登录保护场景
 e_register_protection：注册保护场景
  * @method DeviceDetailInfo getDeviceDetail() 获取设备详情
  * @method void setDeviceDetail(DeviceDetailInfo $DeviceDetail) 设置设备详情
@@ -66,7 +66,7 @@ class EvaluateUserRiskRequest extends AbstractModel
     /**
      * @var string 场景Code，不传默认活动防刷；
 e_activity_antirush；活动防刷场景
-e_login_protection；登陆保护场景
+e_login_protection；登录保护场景
 e_register_protection：注册保护场景
      */
     public $SceneCode;
@@ -88,7 +88,7 @@ e_register_protection：注册保护场景
      * @param DeviceFingerprintInfo $DeviceFingerprint 设备指纹信息
      * @param string $SceneCode 场景Code，不传默认活动防刷；
 e_activity_antirush；活动防刷场景
-e_login_protection；登陆保护场景
+e_login_protection；登录保护场景
 e_register_protection：注册保护场景
      * @param DeviceDetailInfo $DeviceDetail 设备详情
      * @param MarketingInfo $Marketing 营销信息

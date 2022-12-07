@@ -52,8 +52,8 @@ __ALIPAY__: 支付宝
  * @method void setChannelSubMerchantId(string $ChannelSubMerchantId) 设置渠道子商户号
  * @method string getNotifyUrl() 获取通知地址，如www.test.com。
  * @method void setNotifyUrl(string $NotifyUrl) 设置通知地址，如www.test.com。
- * @method string getRemark() 获取备注信息。
- * @method void setRemark(string $Remark) 设置备注信息。
+ * @method string getRemark() 获取备注信息。限制200个字符。
+ * @method void setRemark(string $Remark) 设置备注信息。限制200个字符。
  * @method string getEnvironment() 获取环境类型。
 __release__:生产环境
 __sandbox__:沙箱环境
@@ -122,7 +122,7 @@ __ALIPAY__: 支付宝
     public $NotifyUrl;
 
     /**
-     * @var string 备注信息。
+     * @var string 备注信息。限制200个字符。
      */
     public $Remark;
 
@@ -151,7 +151,7 @@ __ALIPAY__: 支付宝
      * @param OpenBankRechargePayeeInfo $PayeeInfo 收款方信息。
      * @param string $ChannelSubMerchantId 渠道子商户号
      * @param string $NotifyUrl 通知地址，如www.test.com。
-     * @param string $Remark 备注信息。
+     * @param string $Remark 备注信息。限制200个字符。
      * @param string $Environment 环境类型。
 __release__:生产环境
 __sandbox__:沙箱环境

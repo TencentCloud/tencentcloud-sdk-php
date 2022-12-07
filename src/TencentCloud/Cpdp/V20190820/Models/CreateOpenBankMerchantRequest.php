@@ -24,12 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutMerchantId(string $OutMerchantId) 设置外部商户ID。
  * @method string getChannelName() 获取渠道名称。
 __TENPAY__: 商企付
-__WECHAT__: 微信支付
-__ALIPAY__: 支付宝
  * @method void setChannelName(string $ChannelName) 设置渠道名称。
 __TENPAY__: 商企付
-__WECHAT__: 微信支付
-__ALIPAY__: 支付宝
  * @method string getOutMerchantName() 获取外部商户名称。
  * @method void setOutMerchantName(string $OutMerchantName) 设置外部商户名称。
  * @method string getExternalMerchantInfo() 获取第三方渠道商户信息。详情见附录-复杂类型。
@@ -57,8 +53,6 @@ class CreateOpenBankMerchantRequest extends AbstractModel
     /**
      * @var string 渠道名称。
 __TENPAY__: 商企付
-__WECHAT__: 微信支付
-__ALIPAY__: 支付宝
      */
     public $ChannelName;
 
@@ -94,8 +88,6 @@ _不填默认为生产环境_
      * @param string $OutMerchantId 外部商户ID。
      * @param string $ChannelName 渠道名称。
 __TENPAY__: 商企付
-__WECHAT__: 微信支付
-__ALIPAY__: 支付宝
      * @param string $OutMerchantName 外部商户名称。
      * @param string $ExternalMerchantInfo 第三方渠道商户信息。详情见附录-复杂类型。
      * @param string $OutMerchantShortName 外部商户简称。

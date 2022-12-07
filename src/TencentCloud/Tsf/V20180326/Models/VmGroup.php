@@ -168,6 +168,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置预热属性配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method GatewayConfig getGatewayConfig() 获取Envoy网关配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置Envoy网关配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroup extends AbstractModel
 {
@@ -394,6 +398,12 @@ class VmGroup extends AbstractModel
     public $WarmupSetting;
 
     /**
+     * @var GatewayConfig Envoy网关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayConfig;
+
+    /**
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
@@ -467,6 +477,8 @@ class VmGroup extends AbstractModel
      * @param array $AgentProfileList javaagent信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WarmupSetting $WarmupSetting 预热属性配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayConfig $GatewayConfig Envoy网关配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -635,6 +647,11 @@ class VmGroup extends AbstractModel
         if (array_key_exists("WarmupSetting",$param) and $param["WarmupSetting"] !== null) {
             $this->WarmupSetting = new WarmupSetting();
             $this->WarmupSetting->deserialize($param["WarmupSetting"]);
+        }
+
+        if (array_key_exists("GatewayConfig",$param) and $param["GatewayConfig"] !== null) {
+            $this->GatewayConfig = new GatewayConfig();
+            $this->GatewayConfig->deserialize($param["GatewayConfig"]);
         }
     }
 }

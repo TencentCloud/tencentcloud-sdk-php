@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClientToken() 获取调用Id
  * @method void setClientToken(string $ClientToken) 设置调用Id
- * @method string getOutputParams() 获取输出参数
+ * @method string getOutputParams() 获取输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutputParams(string $OutputParams) 设置输出参数
+ * @method void setOutputParams(string $OutputParams) 设置输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取返回状态，当设备不在线等部分情况，会通过该 Status 返回。
- * @method void setStatus(string $Status) 设置返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+ * @method string getStatus() 获取返回状态，取值设备端上报$thing/up/action	method为action_reply 的 status字段，如果不包含status字段，则取默认值，空字符串，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
+ * @method void setStatus(string $Status) 设置返回状态，取值设备端上报$thing/up/action	method为action_reply 的 status字段，如果不包含status字段，则取默认值，空字符串，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,13 +39,13 @@ class CallDeviceActionSyncResponse extends AbstractModel
     public $ClientToken;
 
     /**
-     * @var string 输出参数
+     * @var string 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputParams;
 
     /**
-     * @var string 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+     * @var string 返回状态，取值设备端上报$thing/up/action	method为action_reply 的 status字段，如果不包含status字段，则取默认值，空字符串，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
      */
     public $Status;
 
@@ -56,9 +56,9 @@ class CallDeviceActionSyncResponse extends AbstractModel
 
     /**
      * @param string $ClientToken 调用Id
-     * @param string $OutputParams 输出参数
+     * @param string $OutputParams 输出参数，取值设备端上报$thing/up/action method为action_reply 的 response字段，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
+     * @param string $Status 返回状态，取值设备端上报$thing/up/action	method为action_reply 的 status字段，如果不包含status字段，则取默认值，空字符串，物模型协议参考https://cloud.tencent.com/document/product/1081/34916#.E8.AE.BE.E5.A4.87.E8.A1.8C.E4.B8.BA.E8.B0.83.E7.94.A8
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

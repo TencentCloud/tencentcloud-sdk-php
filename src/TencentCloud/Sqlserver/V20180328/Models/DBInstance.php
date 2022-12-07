@@ -134,6 +134,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
  * @method string getTimeZone() 获取系统时区，默认：China Standard Time
  * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
+ * @method boolean getIsDrZone() 获取是否跨AZ
+ * @method void setIsDrZone(boolean $IsDrZone) 设置是否跨AZ
+ * @method SlaveZones getSlaveZones() 获取备可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSlaveZones(SlaveZones $SlaveZones) 设置备可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -395,6 +401,17 @@ class DBInstance extends AbstractModel
     public $TimeZone;
 
     /**
+     * @var boolean 是否跨AZ
+     */
+    public $IsDrZone;
+
+    /**
+     * @var SlaveZones 备可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SlaveZones;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 实例名称
      * @param integer $ProjectId 实例所在项目ID
@@ -452,6 +469,9 @@ class DBInstance extends AbstractModel
      * @param integer $TgwWanVPort 外网端口号
      * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
      * @param string $TimeZone 系统时区，默认：China Standard Time
+     * @param boolean $IsDrZone 是否跨AZ
+     * @param SlaveZones $SlaveZones 备可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -669,6 +689,15 @@ class DBInstance extends AbstractModel
 
         if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
             $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("IsDrZone",$param) and $param["IsDrZone"] !== null) {
+            $this->IsDrZone = $param["IsDrZone"];
+        }
+
+        if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
+            $this->SlaveZones = new SlaveZones();
+            $this->SlaveZones->deserialize($param["SlaveZones"]);
         }
     }
 }

@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlTypes(array $SqlTypes) 设置SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
  * @method array getSqls() 获取SQL 语句。支持传递多个sql语句。
  * @method void setSqls(array $Sqls) 设置SQL 语句。支持传递多个sql语句。
+ * @method integer getSentRows() 获取返回行数。
+ * @method void setSentRows(integer $SentRows) 设置返回行数。
+ * @method array getThreadId() 获取线程ID。
+ * @method void setThreadId(array $ThreadId) 设置线程ID。
  */
 class AuditLogFilter extends AbstractModel
 {
@@ -101,6 +105,16 @@ class AuditLogFilter extends AbstractModel
     public $Sqls;
 
     /**
+     * @var integer 返回行数。
+     */
+    public $SentRows;
+
+    /**
+     * @var array 线程ID。
+     */
+    public $ThreadId;
+
+    /**
      * @param array $Host 客户端地址。
      * @param array $User 用户名。
      * @param array $DBName 数据库名称。
@@ -112,6 +126,8 @@ class AuditLogFilter extends AbstractModel
      * @param integer $AffectRows 影响行数。表示筛选影响行数大于该值的审计日志。
      * @param array $SqlTypes SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
      * @param array $Sqls SQL 语句。支持传递多个sql语句。
+     * @param integer $SentRows 返回行数。
+     * @param array $ThreadId 线程ID。
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class AuditLogFilter extends AbstractModel
 
         if (array_key_exists("Sqls",$param) and $param["Sqls"] !== null) {
             $this->Sqls = $param["Sqls"];
+        }
+
+        if (array_key_exists("SentRows",$param) and $param["SentRows"] !== null) {
+            $this->SentRows = $param["SentRows"];
+        }
+
+        if (array_key_exists("ThreadId",$param) and $param["ThreadId"] !== null) {
+            $this->ThreadId = $param["ThreadId"];
         }
     }
 }

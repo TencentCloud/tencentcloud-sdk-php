@@ -76,6 +76,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayInstanceId(string $GatewayInstanceId) 设置网关实例ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespaceNameKey() 获取命名空间参数key值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceNameKey(string $NamespaceNameKey) 设置命名空间参数key值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServiceNameKey() 获取微服务名参数key值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceNameKey(string $ServiceNameKey) 设置微服务名参数key值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespaceNameKeyPosition() 获取命名空间参数位置，path，header或query，默认是path
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceNameKeyPosition(string $NamespaceNameKeyPosition) 设置命名空间参数位置，path，header或query，默认是path
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServiceNameKeyPosition() 获取微服务名参数位置，path，header或query，默认是path
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceNameKeyPosition(string $ServiceNameKeyPosition) 设置微服务名参数位置，path，header或query，默认是path
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiGroupInfo extends AbstractModel
 {
@@ -164,6 +180,30 @@ class ApiGroupInfo extends AbstractModel
     public $GatewayInstanceId;
 
     /**
+     * @var string 命名空间参数key值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceNameKey;
+
+    /**
+     * @var string 微服务名参数key值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceNameKey;
+
+    /**
+     * @var string 命名空间参数位置，path，header或query，默认是path
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceNameKeyPosition;
+
+    /**
+     * @var string 微服务名参数位置，path，header或query，默认是path
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceNameKeyPosition;
+
+    /**
      * @param string $GroupId Api Group Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName Api Group 名称
@@ -191,6 +231,14 @@ class ApiGroupInfo extends AbstractModel
      * @param string $GatewayInstanceType 网关实例的类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayInstanceId 网关实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NamespaceNameKey 命名空间参数key值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServiceNameKey 微服务名参数key值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NamespaceNameKeyPosition 命名空间参数位置，path，header或query，默认是path
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServiceNameKeyPosition 微服务名参数位置，path，header或query，默认是path
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -265,6 +313,22 @@ class ApiGroupInfo extends AbstractModel
 
         if (array_key_exists("GatewayInstanceId",$param) and $param["GatewayInstanceId"] !== null) {
             $this->GatewayInstanceId = $param["GatewayInstanceId"];
+        }
+
+        if (array_key_exists("NamespaceNameKey",$param) and $param["NamespaceNameKey"] !== null) {
+            $this->NamespaceNameKey = $param["NamespaceNameKey"];
+        }
+
+        if (array_key_exists("ServiceNameKey",$param) and $param["ServiceNameKey"] !== null) {
+            $this->ServiceNameKey = $param["ServiceNameKey"];
+        }
+
+        if (array_key_exists("NamespaceNameKeyPosition",$param) and $param["NamespaceNameKeyPosition"] !== null) {
+            $this->NamespaceNameKeyPosition = $param["NamespaceNameKeyPosition"];
+        }
+
+        if (array_key_exists("ServiceNameKeyPosition",$param) and $param["ServiceNameKeyPosition"] !== null) {
+            $this->ServiceNameKeyPosition = $param["ServiceNameKeyPosition"];
         }
     }
 }

@@ -59,21 +59,21 @@ ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl�
  * @method integer getOffset() 获取返回结果的起始序号，默认值为0。
  * @method void setOffset(integer $Offset) 设置返回结果的起始序号，默认值为0。
  * @method integer getMatchThreshold() 获取匹配阈值。
-只有图片相似度分数超过MatchThreshold值的结果才会返回。
-默认值：
+只有图片相似度分数超过匹配阈值的结果才会返回。
+当MatchThreshold为0（默认值）时，各服务类型将按照以下默认的匹配阈值进行结果过滤：
 • 相同图像搜索：50。
 • 商品图像搜索：28。
 • 相似图像搜索：56。
 建议：
-可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，建议调整为较低的阈值。
+可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，可能是因为图片相似度较低导致检索结果被匹配阈值过滤，建议调整为较低的阈值后再次尝试检索。
  * @method void setMatchThreshold(integer $MatchThreshold) 设置匹配阈值。
-只有图片相似度分数超过MatchThreshold值的结果才会返回。
-默认值：
+只有图片相似度分数超过匹配阈值的结果才会返回。
+当MatchThreshold为0（默认值）时，各服务类型将按照以下默认的匹配阈值进行结果过滤：
 • 相同图像搜索：50。
 • 商品图像搜索：28。
 • 相似图像搜索：56。
 建议：
-可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，建议调整为较低的阈值。
+可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，可能是因为图片相似度较低导致检索结果被匹配阈值过滤，建议调整为较低的阈值后再次尝试检索。
  * @method string getFilter() 获取标签过滤条件。
 针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
  * @method void setFilter(string $Filter) 设置标签过滤条件。
@@ -154,13 +154,13 @@ ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl�
 
     /**
      * @var integer 匹配阈值。
-只有图片相似度分数超过MatchThreshold值的结果才会返回。
-默认值：
+只有图片相似度分数超过匹配阈值的结果才会返回。
+当MatchThreshold为0（默认值）时，各服务类型将按照以下默认的匹配阈值进行结果过滤：
 • 相同图像搜索：50。
 • 商品图像搜索：28。
 • 相似图像搜索：56。
 建议：
-可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，建议调整为较低的阈值。
+可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，可能是因为图片相似度较低导致检索结果被匹配阈值过滤，建议调整为较低的阈值后再次尝试检索。
      */
     public $MatchThreshold;
 
@@ -219,13 +219,13 @@ ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl�
 **<font color=#1E90FF>注意：服务类型为相似图像搜索时返回数量限制为1，即返回top1的结果。</font>**
      * @param integer $Offset 返回结果的起始序号，默认值为0。
      * @param integer $MatchThreshold 匹配阈值。
-只有图片相似度分数超过MatchThreshold值的结果才会返回。
-默认值：
+只有图片相似度分数超过匹配阈值的结果才会返回。
+当MatchThreshold为0（默认值）时，各服务类型将按照以下默认的匹配阈值进行结果过滤：
 • 相同图像搜索：50。
 • 商品图像搜索：28。
 • 相似图像搜索：56。
 建议：
-可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，建议调整为较低的阈值。
+可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，可能是因为图片相似度较低导致检索结果被匹配阈值过滤，建议调整为较低的阈值后再次尝试检索。
      * @param string $Filter 标签过滤条件。
 针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
      * @param ImageRect $ImageRect 图像主体区域。

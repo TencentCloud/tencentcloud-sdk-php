@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：当 IsUsedClassify 为True 时，表示使用收费的报告分类服务，将会产生额外的费用，具体收费标准参见 [购买指南的产品价格](https://cloud.tencent.com/document/product/1314/54264)。
  * @method void setIsUsedClassify(boolean $IsUsedClassify) 设置是否使用分类引擎，当不确定报告类型时，可以使用收费的报告分类引擎服务。若该字段为False，则Type字段不能为0，否则无法输出结果。
 注意：当 IsUsedClassify 为True 时，表示使用收费的报告分类服务，将会产生额外的费用，具体收费标准参见 [购买指南的产品价格](https://cloud.tencent.com/document/product/1314/54264)。
+ * @method integer getUserType() 获取用户类型，新客户传1，老客户可不传
+ * @method void setUserType(integer $UserType) 设置用户类型，新客户传1，老客户可不传
  */
 class TextToObjectRequest extends AbstractModel
 {
@@ -48,10 +50,16 @@ class TextToObjectRequest extends AbstractModel
     public $IsUsedClassify;
 
     /**
+     * @var integer 用户类型，新客户传1，老客户可不传
+     */
+    public $UserType;
+
+    /**
      * @param string $Text 报告文本
      * @param integer $Type 报告类型，目前支持12（检查报告），15（病理报告），28（出院报告），29（入院报告），210（门诊病历），212（手术记录），218（诊断证明），363（心电图），27（内窥镜检查），215（处方单），219（免疫接种证明），301（C14呼气试验）。如果不清楚报告类型，可以使用分类引擎，该字段传0（同时IsUsedClassify字段必须为True，否则无法输出结果）
      * @param boolean $IsUsedClassify 是否使用分类引擎，当不确定报告类型时，可以使用收费的报告分类引擎服务。若该字段为False，则Type字段不能为0，否则无法输出结果。
 注意：当 IsUsedClassify 为True 时，表示使用收费的报告分类服务，将会产生额外的费用，具体收费标准参见 [购买指南的产品价格](https://cloud.tencent.com/document/product/1314/54264)。
+     * @param integer $UserType 用户类型，新客户传1，老客户可不传
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class TextToObjectRequest extends AbstractModel
 
         if (array_key_exists("IsUsedClassify",$param) and $param["IsUsedClassify"] !== null) {
             $this->IsUsedClassify = $param["IsUsedClassify"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
         }
     }
 }

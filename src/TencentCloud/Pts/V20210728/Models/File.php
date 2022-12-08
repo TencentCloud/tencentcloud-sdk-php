@@ -72,9 +72,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目 ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppID() 获取用户账号的 App ID
+ * @method integer getAppID() 获取此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppID(integer $AppID) 设置用户账号的 App ID
+ * @method void setAppID(integer $AppID) 设置此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户主账号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -182,7 +182,7 @@ class File extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 用户账号的 App ID
+     * @var integer 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppID;
@@ -232,7 +232,7 @@ class File extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppID 用户账号的 App ID
+     * @param integer $AppID 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户主账号
 注意：此字段可能返回 null，表示取不到有效值。

@@ -32,17 +32,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoad(Load $Load) 设置任务的施压配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getConfigs() 获取deprecated
+ * @method array getConfigs() 获取此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfigs(array $Configs) 设置deprecated
+ * @method void setConfigs(array $Configs) 设置此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDatasets() 获取任务的数据集文件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasets(array $Datasets) 设置任务的数据集文件
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getExtensions() 获取deprecated
+ * @method array getExtensions() 获取此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtensions(array $Extensions) 设置deprecated
+ * @method void setExtensions(array $Extensions) 设置此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取任务的运行状态, JobUnknown: 0,JobCreated:1,JobPending:2, JobPreparing:3,JobSelectClustering:4,JobCreateTasking:5,JobSyncTasking:6
 JobRunning:11,JobFinished:12,JobPrepareException:13,JobFinishException:14,JobAborting:15,JobAborted:16,JobAbortException:17,JobDeleted:18,
@@ -76,9 +76,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobOwner(string $JobOwner) 设置任务发起人
 注意：此字段可能返回 null，表示取不到有效值。
- * @method LoadSource getLoadSources() 获取deprecated
+ * @method LoadSource getLoadSources() 获取此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLoadSources(LoadSource $LoadSources) 设置deprecated
+ * @method void setLoadSources(LoadSource $LoadSources) 设置此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDuration() 获取任务时长
 注意：此字段可能返回 null，表示取不到有效值。
@@ -112,9 +112,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResponseTimeP90(float $ResponseTimeP90) 设置响应时间第90百分位
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getScripts() 获取deprecated
+ * @method array getScripts() 获取此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScripts(array $Scripts) 设置deprecated
+ * @method void setScripts(array $Scripts) 设置此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getResponseTimeMax() 获取最大响应时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -184,6 +184,10 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkSendRate(float $NetworkSendRate) 设置每秒发送字节数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMessage() 获取任务状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessage(string $Message) 设置任务状态描述
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Job extends AbstractModel
 {
@@ -206,7 +210,7 @@ class Job extends AbstractModel
     public $Load;
 
     /**
-     * @var array deprecated
+     * @var array 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Configs;
@@ -218,7 +222,7 @@ class Job extends AbstractModel
     public $Datasets;
 
     /**
-     * @var array deprecated
+     * @var array 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extensions;
@@ -268,7 +272,7 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     public $JobOwner;
 
     /**
-     * @var LoadSource deprecated
+     * @var LoadSource 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadSources;
@@ -322,7 +326,7 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     public $ResponseTimeP90;
 
     /**
-     * @var array deprecated
+     * @var array 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scripts;
@@ -430,17 +434,23 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     public $NetworkSendRate;
 
     /**
+     * @var string 任务状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Message;
+
+    /**
      * @param string $JobId 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScenarioId 任务的场景ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Load $Load 任务的施压配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Configs deprecated
+     * @param array $Configs 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Datasets 任务的数据集文件
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Extensions deprecated
+     * @param array $Extensions 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 任务的运行状态, JobUnknown: 0,JobCreated:1,JobPending:2, JobPreparing:3,JobSelectClustering:4,JobCreateTasking:5,JobSyncTasking:6
 JobRunning:11,JobFinished:12,JobPrepareException:13,JobFinishException:14,JobAborting:15,JobAborted:16,JobAbortException:17,JobDeleted:18,
@@ -458,7 +468,7 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobOwner 任务发起人
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoadSource $LoadSources deprecated
+     * @param LoadSource $LoadSources 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 任务时长
 注意：此字段可能返回 null，表示取不到有效值。
@@ -476,7 +486,7 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ResponseTimeP90 响应时间第90百分位
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Scripts deprecated
+     * @param array $Scripts 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ResponseTimeMax 最大响应时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -511,6 +521,8 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
      * @param float $NetworkReceiveRate 每秒接收字节数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $NetworkSendRate 每秒发送字节数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Message 任务状态描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -722,6 +734,10 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
 
         if (array_key_exists("NetworkSendRate",$param) and $param["NetworkSendRate"] !== null) {
             $this->NetworkSendRate = $param["NetworkSendRate"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

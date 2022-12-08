@@ -138,6 +138,18 @@ Waiting 就绪中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateFailedReason() 获取服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateFailedReason(string $CreateFailedReason) 设置服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupName() 获取预付费服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置预付费服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTags(array $Tags) 设置服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Service extends AbstractModel
 {
@@ -305,6 +317,24 @@ Waiting 就绪中
     public $ScheduledAction;
 
     /**
+     * @var string 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateFailedReason;
+
+    /**
+     * @var string 预付费服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupName;
+
+    /**
+     * @var array 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tags;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceId 服务id
      * @param string $ServiceGroupName 服务组名
@@ -363,6 +393,12 @@ Waiting 就绪中
      * @param ServiceLimit $ServiceLimit 服务限速限流相关配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduledAction $ScheduledAction 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupName 预付费服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 服务的标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -483,6 +519,23 @@ Waiting 就绪中
         if (array_key_exists("ScheduledAction",$param) and $param["ScheduledAction"] !== null) {
             $this->ScheduledAction = new ScheduledAction();
             $this->ScheduledAction->deserialize($param["ScheduledAction"]);
+        }
+
+        if (array_key_exists("CreateFailedReason",$param) and $param["CreateFailedReason"] !== null) {
+            $this->CreateFailedReason = $param["CreateFailedReason"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

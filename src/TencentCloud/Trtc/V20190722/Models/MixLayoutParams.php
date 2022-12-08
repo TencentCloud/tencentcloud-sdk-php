@@ -67,10 +67,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlaceHolderMode(integer $PlaceHolderMode) 设置设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
  * @method integer getBackgroundImageRenderMode() 获取背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
  * @method void setBackgroundImageRenderMode(integer $BackgroundImageRenderMode) 设置背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
- * @method string getDefaultSubBackgroundImage() 获取下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
- * @method void setDefaultSubBackgroundImage(string $DefaultSubBackgroundImage) 设置下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+ * @method string getDefaultSubBackgroundImage() 获取子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+ * @method void setDefaultSubBackgroundImage(string $DefaultSubBackgroundImage) 设置子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
  * @method array getWaterMarkList() 获取水印布局参数， 最多支持25个。
  * @method void setWaterMarkList(array $WaterMarkList) 设置水印布局参数， 最多支持25个。
+ * @method integer getRenderMode() 获取模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+ * @method void setRenderMode(integer $RenderMode) 设置模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+ * @method integer getMaxResolutionUserAlign() 获取屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+ * @method void setMaxResolutionUserAlign(integer $MaxResolutionUserAlign) 设置屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
  */
 class MixLayoutParams extends AbstractModel
 {
@@ -130,7 +134,7 @@ class MixLayoutParams extends AbstractModel
     public $BackgroundImageRenderMode;
 
     /**
-     * @var string 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * @var string 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
      */
     public $DefaultSubBackgroundImage;
 
@@ -138,6 +142,16 @@ class MixLayoutParams extends AbstractModel
      * @var array 水印布局参数， 最多支持25个。
      */
     public $WaterMarkList;
+
+    /**
+     * @var integer 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+     */
+    public $RenderMode;
+
+    /**
+     * @var integer 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+     */
+    public $MaxResolutionUserAlign;
 
     /**
      * @param integer $MixLayoutMode 布局模式:
@@ -163,8 +177,10 @@ class MixLayoutParams extends AbstractModel
      * @param string $BackgroundImageUrl 下载的url地址， 只支持jpg， png，大小限制不超过5M。
      * @param integer $PlaceHolderMode 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
      * @param integer $BackgroundImageRenderMode 背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
-     * @param string $DefaultSubBackgroundImage 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * @param string $DefaultSubBackgroundImage 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
      * @param array $WaterMarkList 水印布局参数， 最多支持25个。
+     * @param integer $RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+     * @param integer $MaxResolutionUserAlign 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
      */
     function __construct()
     {
@@ -227,6 +243,14 @@ class MixLayoutParams extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->WaterMarkList, $obj);
             }
+        }
+
+        if (array_key_exists("RenderMode",$param) and $param["RenderMode"] !== null) {
+            $this->RenderMode = $param["RenderMode"];
+        }
+
+        if (array_key_exists("MaxResolutionUserAlign",$param) and $param["MaxResolutionUserAlign"] !== null) {
+            $this->MaxResolutionUserAlign = $param["MaxResolutionUserAlign"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHandleParam(HandleParam $HandleParam) 设置图片处理参数
  * @method integer getType() 获取不填，默认为0
  * @method void setType(integer $Type) 设置不填，默认为0
+ * @method integer getUserType() 获取用户类型，新客户传1，老客户可不传
+ * @method void setUserType(integer $UserType) 设置用户类型，新客户传1，老客户可不传
  */
 class ImageToClassRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ImageToClassRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var integer 用户类型，新客户传1，老客户可不传
+     */
+    public $UserType;
+
+    /**
      * @param array $ImageInfoList 图片列表，允许传入多张图片，支持传入图片的base64编码，暂不支持图片url
      * @param HandleParam $HandleParam 图片处理参数
      * @param integer $Type 不填，默认为0
+     * @param integer $UserType 用户类型，新客户传1，老客户可不传
      */
     function __construct()
     {
@@ -78,6 +86,10 @@ class ImageToClassRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：当 IsUsedClassify 为True 时，表示使用收费的报告分类服务，将会产生额外的费用，具体收费标准参见 [购买指南的产品价格](https://cloud.tencent.com/document/product/1314/54264)。
  * @method void setIsUsedClassify(boolean $IsUsedClassify) 设置是否使用分类引擎，当不确定报告类型时，可以使用收费的报告分类引擎服务。若该字段为 False，则 Type 字段不能为 0，否则无法输出结果。
 注意：当 IsUsedClassify 为True 时，表示使用收费的报告分类服务，将会产生额外的费用，具体收费标准参见 [购买指南的产品价格](https://cloud.tencent.com/document/product/1314/54264)。
+ * @method integer getUserType() 获取用户类型，新客户传1，老客户可不传
+ * @method void setUserType(integer $UserType) 设置用户类型，新客户传1，老客户可不传
  */
 class ImageToObjectRequest extends AbstractModel
 {
@@ -55,11 +57,17 @@ class ImageToObjectRequest extends AbstractModel
     public $IsUsedClassify;
 
     /**
+     * @var integer 用户类型，新客户传1，老客户可不传
+     */
+    public $UserType;
+
+    /**
      * @param array $ImageInfoList 图片列表，允许传入多张图片，目前只支持传入图片base64编码，图片url暂不支持
      * @param HandleParam $HandleParam 图片处理参数
      * @param integer $Type 报告类型，目前支持11（检验报告），12（检查报告），15（病理报告），28（出院报告），29（入院报告），210（门诊病历），212（手术记录），218（诊断证明），363（心电图），27（内窥镜检查），215（处方单），219（免疫接种证明），301（C14呼气试验）。如果不清楚报告类型，可以使用分类引擎，该字段传0（同时IsUsedClassify字段必须为True，否则无法输出结果）
      * @param boolean $IsUsedClassify 是否使用分类引擎，当不确定报告类型时，可以使用收费的报告分类引擎服务。若该字段为 False，则 Type 字段不能为 0，否则无法输出结果。
 注意：当 IsUsedClassify 为True 时，表示使用收费的报告分类服务，将会产生额外的费用，具体收费标准参见 [购买指南的产品价格](https://cloud.tencent.com/document/product/1314/54264)。
+     * @param integer $UserType 用户类型，新客户传1，老客户可不传
      */
     function __construct()
     {
@@ -94,6 +102,10 @@ class ImageToObjectRequest extends AbstractModel
 
         if (array_key_exists("IsUsedClassify",$param) and $param["IsUsedClassify"] !== null) {
             $this->IsUsedClassify = $param["IsUsedClassify"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
         }
     }
 }

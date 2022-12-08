@@ -206,6 +206,10 @@ notInService       不在服务区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomRecordURL(string $CustomRecordURL) 设置录音转存第三方COS地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemark() 获取备注
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置备注
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TelCdrInfo extends AbstractModel
 {
@@ -423,6 +427,12 @@ notInService       不在服务区
     public $CustomRecordURL;
 
     /**
+     * @var string 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
      * @param string $Caller 主叫号码
      * @param string $Callee 被叫号码
      * @param integer $Time 呼叫发起时间戳，Unix 时间戳
@@ -515,6 +525,8 @@ notInService       不在服务区
      * @param string $AsrUrl 获取录音ASR文本信息地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomRecordURL 录音转存第三方COS地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remark 备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -664,6 +676,10 @@ notInService       不在服务区
 
         if (array_key_exists("CustomRecordURL",$param) and $param["CustomRecordURL"] !== null) {
             $this->CustomRecordURL = $param["CustomRecordURL"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

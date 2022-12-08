@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceContext(string $SourceContext) 设置上传上下文，上传完成回调时透传。
  * @method integer getMediaType() 获取上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
  * @method void setMediaType(integer $MediaType) 设置上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+ * @method string getUserDefineRecordId() 获取仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
+ * @method void setUserDefineRecordId(string $UserDefineRecordId) 设置仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
  */
 class TencentVod extends AbstractModel
 {
@@ -83,6 +85,11 @@ class TencentVod extends AbstractModel
     public $MediaType;
 
     /**
+     * @var string 仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
+     */
+    public $UserDefineRecordId;
+
+    /**
      * @param string $Procedure 媒体后续任务处理操作，即完成媒体上传后，可自动发起任务流操作。参数值为任务流模板名，云点播支持 创建任务流模板 并为模板命名。
      * @param integer $ExpireTime 媒体文件过期时间，为当前时间的绝对过期时间；保存一天，就填"86400"，永久保存就填"0"，默认永久保存。
      * @param string $StorageRegion 指定上传园区，仅适用于对上传地域有特殊需求的用户。
@@ -92,6 +99,7 @@ class TencentVod extends AbstractModel
      * @param string $SessionContext 任务流上下文，任务完成回调时透传。
      * @param string $SourceContext 上传上下文，上传完成回调时透传。
      * @param integer $MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+     * @param string $UserDefineRecordId 仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ class TencentVod extends AbstractModel
 
         if (array_key_exists("MediaType",$param) and $param["MediaType"] !== null) {
             $this->MediaType = $param["MediaType"];
+        }
+
+        if (array_key_exists("UserDefineRecordId",$param) and $param["UserDefineRecordId"] !== null) {
+            $this->UserDefineRecordId = $param["UserDefineRecordId"];
         }
     }
 }

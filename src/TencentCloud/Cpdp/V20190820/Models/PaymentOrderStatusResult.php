@@ -36,6 +36,10 @@ SUCCEED:已成功
 FAILED:已失败
  * @method string getStatusDesc() 获取状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
+ * @method string getFailReason() 获取失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailReason(string $FailReason) 设置失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PaymentOrderStatusResult extends AbstractModel
 {
@@ -56,6 +60,12 @@ FAILED:已失败
     public $StatusDesc;
 
     /**
+     * @var string 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailReason;
+
+    /**
      * @param string $Status 状态
 ACCEPTED:已受理
 ACCOUNTED:已记账
@@ -64,6 +74,8 @@ PAYED:完成付款渠道调用
 SUCCEED:已成功
 FAILED:已失败
      * @param string $StatusDesc 状态描述
+     * @param string $FailReason 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ FAILED:已失败
 
         if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
             $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("FailReason",$param) and $param["FailReason"] !== null) {
+            $this->FailReason = $param["FailReason"];
         }
     }
 }

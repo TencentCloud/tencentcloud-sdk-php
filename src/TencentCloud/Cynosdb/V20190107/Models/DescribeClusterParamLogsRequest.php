@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method array getInstanceIds() 获取实例ID列表，用来记录具体操作哪些实例
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，用来记录具体操作哪些实例
+ * @method string getOrderBy() 获取排序字段，定义在回返结果的基于哪个字段进行排序
+ * @method void setOrderBy(string $OrderBy) 设置排序字段，定义在回返结果的基于哪个字段进行排序
+ * @method string getOrderByType() 获取定义具体的排序规则，限定为desc,asc,DESC,ASC其中之一
+ * @method void setOrderByType(string $OrderByType) 设置定义具体的排序规则，限定为desc,asc,DESC,ASC其中之一
  * @method integer getLimit() 获取返回数量，默认为 20，取值范围为(0,100]
  * @method void setLimit(integer $Limit) 设置返回数量，默认为 20，取值范围为(0,100]
  * @method integer getOffset() 获取记录偏移量，默认值为0，取值范围为[0,INF)
@@ -35,6 +41,21 @@ class DescribeClusterParamLogsRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var array 实例ID列表，用来记录具体操作哪些实例
+     */
+    public $InstanceIds;
+
+    /**
+     * @var string 排序字段，定义在回返结果的基于哪个字段进行排序
+     */
+    public $OrderBy;
+
+    /**
+     * @var string 定义具体的排序规则，限定为desc,asc,DESC,ASC其中之一
+     */
+    public $OrderByType;
+
+    /**
      * @var integer 返回数量，默认为 20，取值范围为(0,100]
      */
     public $Limit;
@@ -46,6 +67,9 @@ class DescribeClusterParamLogsRequest extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID
+     * @param array $InstanceIds 实例ID列表，用来记录具体操作哪些实例
+     * @param string $OrderBy 排序字段，定义在回返结果的基于哪个字段进行排序
+     * @param string $OrderByType 定义具体的排序规则，限定为desc,asc,DESC,ASC其中之一
      * @param integer $Limit 返回数量，默认为 20，取值范围为(0,100]
      * @param integer $Offset 记录偏移量，默认值为0，取值范围为[0,INF)
      */
@@ -64,6 +88,18 @@ class DescribeClusterParamLogsRequest extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
+            $this->OrderByType = $param["OrderByType"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {

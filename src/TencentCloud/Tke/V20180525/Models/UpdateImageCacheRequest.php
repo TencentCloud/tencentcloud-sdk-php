@@ -24,6 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageCacheId(string $ImageCacheId) 设置镜像缓存Id
  * @method string getImageCacheName() 获取镜像缓存名称
  * @method void setImageCacheName(string $ImageCacheName) 设置镜像缓存名称
+ * @method array getImageRegistryCredentials() 获取镜像仓库凭证数组
+ * @method void setImageRegistryCredentials(array $ImageRegistryCredentials) 设置镜像仓库凭证数组
+ * @method array getImages() 获取用于制作镜像缓存的容器镜像列表
+ * @method void setImages(array $Images) 设置用于制作镜像缓存的容器镜像列表
+ * @method integer getImageCacheSize() 获取镜像缓存的大小。默认为20 GiB。取值范围参考[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)中的高性能云盘类型的大小限制。
+ * @method void setImageCacheSize(integer $ImageCacheSize) 设置镜像缓存的大小。默认为20 GiB。取值范围参考[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)中的高性能云盘类型的大小限制。
+ * @method integer getRetentionDays() 获取镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+ * @method void setRetentionDays(integer $RetentionDays) 设置镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+ * @method array getSecurityGroupIds() 获取安全组Id
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组Id
  */
 class UpdateImageCacheRequest extends AbstractModel
 {
@@ -38,8 +48,38 @@ class UpdateImageCacheRequest extends AbstractModel
     public $ImageCacheName;
 
     /**
+     * @var array 镜像仓库凭证数组
+     */
+    public $ImageRegistryCredentials;
+
+    /**
+     * @var array 用于制作镜像缓存的容器镜像列表
+     */
+    public $Images;
+
+    /**
+     * @var integer 镜像缓存的大小。默认为20 GiB。取值范围参考[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)中的高性能云盘类型的大小限制。
+     */
+    public $ImageCacheSize;
+
+    /**
+     * @var integer 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+     */
+    public $RetentionDays;
+
+    /**
+     * @var array 安全组Id
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $ImageCacheId 镜像缓存Id
      * @param string $ImageCacheName 镜像缓存名称
+     * @param array $ImageRegistryCredentials 镜像仓库凭证数组
+     * @param array $Images 用于制作镜像缓存的容器镜像列表
+     * @param integer $ImageCacheSize 镜像缓存的大小。默认为20 GiB。取值范围参考[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)中的高性能云盘类型的大小限制。
+     * @param integer $RetentionDays 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+     * @param array $SecurityGroupIds 安全组Id
      */
     function __construct()
     {
@@ -60,6 +100,31 @@ class UpdateImageCacheRequest extends AbstractModel
 
         if (array_key_exists("ImageCacheName",$param) and $param["ImageCacheName"] !== null) {
             $this->ImageCacheName = $param["ImageCacheName"];
+        }
+
+        if (array_key_exists("ImageRegistryCredentials",$param) and $param["ImageRegistryCredentials"] !== null) {
+            $this->ImageRegistryCredentials = [];
+            foreach ($param["ImageRegistryCredentials"] as $key => $value){
+                $obj = new ImageRegistryCredential();
+                $obj->deserialize($value);
+                array_push($this->ImageRegistryCredentials, $obj);
+            }
+        }
+
+        if (array_key_exists("Images",$param) and $param["Images"] !== null) {
+            $this->Images = $param["Images"];
+        }
+
+        if (array_key_exists("ImageCacheSize",$param) and $param["ImageCacheSize"] !== null) {
+            $this->ImageCacheSize = $param["ImageCacheSize"];
+        }
+
+        if (array_key_exists("RetentionDays",$param) and $param["RetentionDays"] !== null) {
+            $this->RetentionDays = $param["RetentionDays"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

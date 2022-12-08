@@ -86,6 +86,10 @@ FAILED:已失败
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdditionalTaxItem(string $AdditionalTaxItem) 设置附加税税项。格式为JSON格式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFailReason() 获取失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFailReason(string $FailReason) 设置失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PaymentOrderResult extends AbstractModel
 {
@@ -195,6 +199,12 @@ FAILED:已失败
     public $AdditionalTaxItem;
 
     /**
+     * @var string 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FailReason;
+
+    /**
      * @param string $IncomeType 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得
@@ -227,6 +237,8 @@ FAILED:已失败
      * @param string $AdditionalTaxSum 附加税总税额
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdditionalTaxItem 附加税税项。格式为JSON格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FailReason 失败原因。当Status为FAILED时，改字段为失败的原因。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -312,6 +324,10 @@ FAILED:已失败
 
         if (array_key_exists("AdditionalTaxItem",$param) and $param["AdditionalTaxItem"] !== null) {
             $this->AdditionalTaxItem = $param["AdditionalTaxItem"];
+        }
+
+        if (array_key_exists("FailReason",$param) and $param["FailReason"] !== null) {
+            $this->FailReason = $param["FailReason"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getText() 获取报告文本
  * @method void setText(string $Text) 设置报告文本
+ * @method integer getUserType() 获取用户类型，新客户传1，老客户可不传
+ * @method void setUserType(integer $UserType) 设置用户类型，新客户传1，老客户可不传
  */
 class TextToClassRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class TextToClassRequest extends AbstractModel
     public $Text;
 
     /**
+     * @var integer 用户类型，新客户传1，老客户可不传
+     */
+    public $UserType;
+
+    /**
      * @param string $Text 报告文本
+     * @param integer $UserType 用户类型，新客户传1，老客户可不传
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TextToClassRequest extends AbstractModel
         }
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
+            $this->UserType = $param["UserType"];
         }
     }
 }

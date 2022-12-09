@@ -33,118 +33,6 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateDocumentResponse CreateDocument(Models\CreateDocumentRequest $req) 创建签署流程电子文档
 适用场景：见创建签署流程接口。
 注：该接口需要给对应的流程指定一个模板id，并且填充该模板中需要补充的信息。是“发起流程”接口的前置接口。
-
-【动态表格传参说明】
-当模板的 ComponentType='DYNAMIC_TABLE'时（渠道版或集成版），FormField.ComponentValue需要传递json格式的字符串参数，用于确定表头&填充动态表格（支持内容的单元格合并）
-输入示例1：
-
-```
-{
-    "headers":[
-        {
-            "content":"head1"
-        },
-        {
-            "content":"head2"
-        },
-        {
-            "content":"head3"
-        }
-    ],
-    "rowCount":3,
-    "body":{
-        "cells":[
-            {
-                "rowStart":1,
-                "rowEnd":1,
-                "columnStart":1,
-                "columnEnd":1,
-                "content":"123"
-            },
-            {
-                "rowStart":2,
-                "rowEnd":3,
-                "columnStart":1,
-                "columnEnd":2,
-                "content":"456"
-            },
-            {
-                "rowStart":3,
-                "rowEnd":3,
-                "columnStart":3,
-                "columnEnd":3,
-                "content":"789"
-            }
-        ]
-    }
-}
-
-```
-
-输入示例2（表格表头宽度比例配置）：
-
-```
-{
-    "headers":[
-        {
-            "content":"head1",
-            "widthPercent": 30
-        },
-        {
-            "content":"head2",
-            "widthPercent": 30
-        },
-        {
-            "content":"head3",
-            "widthPercent": 40
-        }
-    ],
-    "rowCount":3,
-    "body":{
-        "cells":[
-            {
-                "rowStart":1,
-                "rowEnd":1,
-                "columnStart":1,
-                "columnEnd":1,
-                "content":"123"
-            },
-            {
-                "rowStart":2,
-                "rowEnd":3,
-                "columnStart":1,
-                "columnEnd":2,
-                "content":"456"
-            },
-            {
-                "rowStart":3,
-                "rowEnd":3,
-                "columnStart":3,
-                "columnEnd":3,
-                "content":"789"
-            }
-        ]
-    }
-}
-
-```
-表格参数说明
-
-| 名称                | 类型    | 描述                                              |
-| ------------------- | ------- | ------------------------------------------------- |
-| headers             | Array   | 表头：不超过10列，不支持单元格合并，字数不超过100 |
-| rowCount            | Integer | 表格内容最大行数                                  |
-| cells.N.rowStart    | Integer | 单元格坐标：行起始index                           |
-| cells.N.rowEnd      | Integer | 单元格坐标：行结束index                           |
-| cells.N.columnStart | Integer | 单元格坐标：列起始index                           |
-| cells.N.columnEnd   | Integer | 单元格坐标：列结束index                           |
-| cells.N.content     | String  | 单元格内容，字数不超过100                         |
-
-表格参数headers说明
-| 名称                | 类型    | 描述                                              |
-| ------------------- | ------- | ------------------------------------------------- |
-| widthPercent   | Integer | 表头单元格列占总表头的比例，例如1：30表示 此列占表头的30%，不填写时列宽度平均拆分；例如2：总2列，某一列填写40，剩余列可以为空，按照60计算。；例如3：总3列，某一列填写30，剩余2列可以为空，分别为(100-30)/2=35                    |
-| content    | String  | 表头单元格内容，字数不超过100                         |
  * @method Models\CreateFlowResponse CreateFlow(Models\CreateFlowRequest $req) 创建签署流程
 适用场景：在标准制式的合同场景中，可通过提前预制好模板文件，每次调用模板文件的id，补充合同内容信息及签署信息生成电子合同。
 注：该接口是通过模板生成合同流程的前置接口，先创建一个不包含签署文件的流程。配合“创建电子文档”接口和“发起流程”接口使用。
@@ -201,7 +89,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注：该接口是“创建电子文档”接口的后置接口，用于激活包含完整合同信息（模板及内容信息）的流程。激活后的流程就是一份待签署的电子合同。
  * @method Models\UploadFilesResponse UploadFiles(Models\UploadFilesRequest $req) 此接口（UploadFiles）用于文件上传。
 适用场景：用于生成pdf资源编号（FileIds）来配合“用PDF创建流程”接口使用，使用场景可详见“用PDF创建流程”接口说明。
-调用时需要设置Domain 为 file.ess.tencent.cn，设置Version为2020-12-22
+调用时需要设置Domain/接口请求域名为 file.ess.tencent.cn，并设置参数Version/版本号为2020-12-22
  * @method Models\VerifyPdfResponse VerifyPdf(Models\VerifyPdfRequest $req) 验证合同文件
  */
 

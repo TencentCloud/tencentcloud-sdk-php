@@ -148,6 +148,9 @@ use TencentCloud\Vod\V20180717\Models as Models;
 默认接口请求频率限制：100次/秒。
  * @method Models\DescribeEventsStateResponse DescribeEventsState(Models\DescribeEventsStateRequest $req) * 该接口用于业务服务器获取 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 事件通知的状态。
 
+ * @method Models\DescribeFileAttributesResponse DescribeFileAttributes(Models\DescribeFileAttributesRequest $req) 用于异步获取文件属性。
+- 当前仅支持获取源文件的 Md5。
+- 对输入文件为 HLS 或 DASH 的情况，仅获取索引文件的属性。
  * @method Models\DescribeHeadTailTemplatesResponse DescribeHeadTailTemplates(Models\DescribeHeadTailTemplatesRequest $req) 获取片头片尾模板列表。
  * @method Models\DescribeImageProcessingTemplatesResponse DescribeImageProcessingTemplates(Models\DescribeImageProcessingTemplatesRequest $req) 获取图片处理模板列表，支持根据条件，分页查询。
  * @method Models\DescribeImageReviewUsageDataResponse DescribeImageReviewUsageData(Models\DescribeImageReviewUsageDataRequest $req) 该接口返回查询时间范围内每天使用的图片审核用量信息。

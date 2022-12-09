@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
  * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
- * @method string getResourceId() 获取资源Id,通过上传uploadfile接口获得
- * @method void setResourceId(string $ResourceId) 设置资源Id,通过上传uploadfile接口获得
+ * @method string getResourceId() 获取资源Id，通过多文件上传（UploadFiles）接口获得
+ * @method void setResourceId(string $ResourceId) 设置资源Id，通过多文件上传（UploadFiles）接口获得
  * @method string getFlowName() 获取合同名称
  * @method void setFlowName(string $FlowName) 设置合同名称
  * @method boolean getUnordered() 获取是否顺序签署(true:无序签,false:顺序签)
@@ -47,7 +47,7 @@ class CreatePrepareFlowRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 资源Id,通过上传uploadfile接口获得
+     * @var string 资源Id，通过多文件上传（UploadFiles）接口获得
      */
     public $ResourceId;
 
@@ -84,7 +84,7 @@ class CreatePrepareFlowRequest extends AbstractModel
 
     /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
-     * @param string $ResourceId 资源Id,通过上传uploadfile接口获得
+     * @param string $ResourceId 资源Id，通过多文件上传（UploadFiles）接口获得
      * @param string $FlowName 合同名称
      * @param boolean $Unordered 是否顺序签署(true:无序签,false:顺序签)
      * @param integer $Deadline 签署流程的签署截止时间。

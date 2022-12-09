@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaConfig请求参数结构体
+ * 获取文件属性任务输出
  *
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-12345678
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-12345678
+ * @method string getMd5() 获取媒体文件的 Md5 值。
+ * @method void setMd5(string $Md5) 设置媒体文件的 Md5 值。
  */
-class DescribeGrafanaConfigRequest extends AbstractModel
+class DescribeFileAttributesTaskOutput extends AbstractModel
 {
     /**
-     * @var string Grafana 实例 ID，例如：grafana-12345678
+     * @var string 媒体文件的 Md5 值。
      */
-    public $InstanceId;
+    public $Md5;
 
     /**
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-12345678
+     * @param string $Md5 媒体文件的 Md5 值。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeGrafanaConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
+            $this->Md5 = $param["Md5"];
         }
     }
 }

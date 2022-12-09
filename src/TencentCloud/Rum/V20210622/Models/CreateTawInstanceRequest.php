@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodRetain(string $PeriodRetain) 设置数据存储时长计费
  * @method string getBuyingChannel() 获取实例购买渠道("cdn" 等)
  * @method void setBuyingChannel(string $BuyingChannel) 设置实例购买渠道("cdn" 等)
+ * @method integer getResourcePackageType() 获取预付费资源包类型(仅预付费需要)
+ * @method void setResourcePackageType(integer $ResourcePackageType) 设置预付费资源包类型(仅预付费需要)
+ * @method integer getResourcePackageNum() 获取预付费资源包数量(仅预付费需要)
+ * @method void setResourcePackageNum(integer $ResourcePackageNum) 设置预付费资源包数量(仅预付费需要)
  */
 class CreateTawInstanceRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class CreateTawInstanceRequest extends AbstractModel
     public $BuyingChannel;
 
     /**
+     * @var integer 预付费资源包类型(仅预付费需要)
+     */
+    public $ResourcePackageType;
+
+    /**
+     * @var integer 预付费资源包数量(仅预付费需要)
+     */
+    public $ResourcePackageNum;
+
+    /**
      * @param integer $AreaId 片区Id，(至少大于0)
      * @param integer $ChargeType 计费类型, (1=后付费)
      * @param integer $DataRetentionDays 数据保存时间，(至少大于0)
@@ -96,6 +110,8 @@ class CreateTawInstanceRequest extends AbstractModel
      * @param string $CountNum 每天数据上报量
      * @param string $PeriodRetain 数据存储时长计费
      * @param string $BuyingChannel 实例购买渠道("cdn" 等)
+     * @param integer $ResourcePackageType 预付费资源包类型(仅预付费需要)
+     * @param integer $ResourcePackageNum 预付费资源包数量(仅预付费需要)
      */
     function __construct()
     {
@@ -149,6 +165,14 @@ class CreateTawInstanceRequest extends AbstractModel
 
         if (array_key_exists("BuyingChannel",$param) and $param["BuyingChannel"] !== null) {
             $this->BuyingChannel = $param["BuyingChannel"];
+        }
+
+        if (array_key_exists("ResourcePackageType",$param) and $param["ResourcePackageType"] !== null) {
+            $this->ResourcePackageType = $param["ResourcePackageType"];
+        }
+
+        if (array_key_exists("ResourcePackageNum",$param) and $param["ResourcePackageNum"] !== null) {
+            $this->ResourcePackageNum = $param["ResourcePackageNum"];
         }
     }
 }

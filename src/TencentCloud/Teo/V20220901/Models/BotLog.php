@@ -28,26 +28,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置受攻击域名。
  * @method string getRequestUri() 获取URI。
  * @method void setRequestUri(string $RequestUri) 设置URI。
- * @method string getAttackType() 获取攻击类型。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttackType(string $AttackType) 设置攻击类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestMethod() 获取请求方法。
  * @method void setRequestMethod(string $RequestMethod) 设置请求方法。
  * @method string getAttackContent() 获取攻击内容。
  * @method void setAttackContent(string $AttackContent) 设置攻击内容。
- * @method string getRiskLevel() 获取攻击等级。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRiskLevel(string $RiskLevel) 设置攻击等级。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSipCountryCode() 获取IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
+ * @method void setSipCountryCode(string $SipCountryCode) 设置IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
+ * @method string getUa() 获取user agent。
+ * @method void setUa(string $Ua) 设置user agent。
+ * @method string getEventId() 获取攻击事件ID。
+ * @method void setEventId(string $EventId) 设置攻击事件ID。
  * @method integer getRuleId() 获取规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSipCountryCode() 获取IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
- * @method void setSipCountryCode(string $SipCountryCode) 设置IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
- * @method string getEventId() 获取请求（事件）ID。
- * @method void setEventId(string $EventId) 设置请求（事件）ID。
+ * @method string getAttackType() 获取攻击类型。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttackType(string $AttackType) 设置攻击类型。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDisposalMethod() 获取处置方式。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisposalMethod(string $DisposalMethod) 设置处置方式。
@@ -56,8 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpLog(string $HttpLog) 设置HTTP日志。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUa() 获取user agent。
- * @method void setUa(string $Ua) 设置user agent。
+ * @method string getRiskLevel() 获取攻击等级。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRiskLevel(string $RiskLevel) 设置攻击等级。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDetectionMethod() 获取检出方法。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectionMethod(string $DetectionMethod) 设置检出方法。
@@ -77,6 +77,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLabel() 获取Bot标签。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置Bot标签。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArea() 获取日志所属的区域。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArea(string $Area) 设置日志所属的区域。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotLog extends AbstractModel
@@ -102,12 +106,6 @@ class BotLog extends AbstractModel
     public $RequestUri;
 
     /**
-     * @var string 攻击类型。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AttackType;
-
-    /**
      * @var string 请求方法。
      */
     public $RequestMethod;
@@ -118,10 +116,19 @@ class BotLog extends AbstractModel
     public $AttackContent;
 
     /**
-     * @var string 攻击等级。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
      */
-    public $RiskLevel;
+    public $SipCountryCode;
+
+    /**
+     * @var string user agent。
+     */
+    public $Ua;
+
+    /**
+     * @var string 攻击事件ID。
+     */
+    public $EventId;
 
     /**
      * @var integer 规则ID。
@@ -130,14 +137,10 @@ class BotLog extends AbstractModel
     public $RuleId;
 
     /**
-     * @var string IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
+     * @var string 攻击类型。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SipCountryCode;
-
-    /**
-     * @var string 请求（事件）ID。
-     */
-    public $EventId;
+    public $AttackType;
 
     /**
      * @var string 处置方式。
@@ -152,9 +155,10 @@ class BotLog extends AbstractModel
     public $HttpLog;
 
     /**
-     * @var string user agent。
+     * @var string 攻击等级。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Ua;
+    public $RiskLevel;
 
     /**
      * @var string 检出方法。
@@ -187,25 +191,31 @@ class BotLog extends AbstractModel
     public $Label;
 
     /**
+     * @var string 日志所属的区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Area;
+
+    /**
      * @param integer $AttackTime 攻击时间，采用unix秒级时间戳。
      * @param string $AttackIp 攻击源（客户端）ip。
      * @param string $Domain 受攻击域名。
      * @param string $RequestUri URI。
-     * @param string $AttackType 攻击类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestMethod 请求方法。
      * @param string $AttackContent 攻击内容。
-     * @param string $RiskLevel 攻击等级。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
+     * @param string $Ua user agent。
+     * @param string $EventId 攻击事件ID。
      * @param integer $RuleId 规则ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
-     * @param string $EventId 请求（事件）ID。
+     * @param string $AttackType 攻击类型。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisposalMethod 处置方式。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HttpLog HTTP日志。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Ua user agent。
+     * @param string $RiskLevel 攻击等级。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DetectionMethod 检出方法。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Confidence 置信度。
@@ -215,6 +225,8 @@ class BotLog extends AbstractModel
      * @param array $RuleDetailList 规则相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label Bot标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Area 日志所属的区域。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -246,10 +258,6 @@ class BotLog extends AbstractModel
             $this->RequestUri = $param["RequestUri"];
         }
 
-        if (array_key_exists("AttackType",$param) and $param["AttackType"] !== null) {
-            $this->AttackType = $param["AttackType"];
-        }
-
         if (array_key_exists("RequestMethod",$param) and $param["RequestMethod"] !== null) {
             $this->RequestMethod = $param["RequestMethod"];
         }
@@ -258,20 +266,24 @@ class BotLog extends AbstractModel
             $this->AttackContent = $param["AttackContent"];
         }
 
-        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
-            $this->RiskLevel = $param["RiskLevel"];
+        if (array_key_exists("SipCountryCode",$param) and $param["SipCountryCode"] !== null) {
+            $this->SipCountryCode = $param["SipCountryCode"];
+        }
+
+        if (array_key_exists("Ua",$param) and $param["Ua"] !== null) {
+            $this->Ua = $param["Ua"];
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
         }
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
         }
 
-        if (array_key_exists("SipCountryCode",$param) and $param["SipCountryCode"] !== null) {
-            $this->SipCountryCode = $param["SipCountryCode"];
-        }
-
-        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
-            $this->EventId = $param["EventId"];
+        if (array_key_exists("AttackType",$param) and $param["AttackType"] !== null) {
+            $this->AttackType = $param["AttackType"];
         }
 
         if (array_key_exists("DisposalMethod",$param) and $param["DisposalMethod"] !== null) {
@@ -282,8 +294,8 @@ class BotLog extends AbstractModel
             $this->HttpLog = $param["HttpLog"];
         }
 
-        if (array_key_exists("Ua",$param) and $param["Ua"] !== null) {
-            $this->Ua = $param["Ua"];
+        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
+            $this->RiskLevel = $param["RiskLevel"];
         }
 
         if (array_key_exists("DetectionMethod",$param) and $param["DetectionMethod"] !== null) {
@@ -309,6 +321,10 @@ class BotLog extends AbstractModel
 
         if (array_key_exists("Label",$param) and $param["Label"] !== null) {
             $this->Label = $param["Label"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

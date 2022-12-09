@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasAuthority(boolean $HasAuthority) 设置资源是否有权限
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnvType() 获取环境类型: test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvType(string $EnvType) 设置环境类型: test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionId() 获取地域码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionId(string $RegionId) 设置地域码
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemNamespaceInfo extends AbstractModel
 {
@@ -206,6 +214,18 @@ class TemNamespaceInfo extends AbstractModel
     public $HasAuthority;
 
     /**
+     * @var string 环境类型: test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnvType;
+
+    /**
+     * @var string 地域码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionId;
+
+    /**
      * @param string $EnvironmentId 环境id
      * @param string $Channel 渠道
      * @param string $EnvironmentName 环境名称
@@ -235,6 +255,10 @@ class TemNamespaceInfo extends AbstractModel
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasAuthority 资源是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EnvType 环境类型: test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionId 地域码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -345,6 +369,14 @@ class TemNamespaceInfo extends AbstractModel
 
         if (array_key_exists("HasAuthority",$param) and $param["HasAuthority"] !== null) {
             $this->HasAuthority = $param["HasAuthority"];
+        }
+
+        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
+            $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstalledPlugins请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getPluginId() 获取按插件 ID 过滤
- * @method void setPluginId(string $PluginId) 设置按插件 ID 过滤
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-kleu3gt0
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-kleu3gt0
+ * @method string getPluginId() 获取按插件 ID 过滤，例如：grafana-piechart-panel，可通过接口 DescribeInstalledPlugins 查看已安装的插件 ID
+ * @method void setPluginId(string $PluginId) 设置按插件 ID 过滤，例如：grafana-piechart-panel，可通过接口 DescribeInstalledPlugins 查看已安装的插件 ID
  */
 class DescribeInstalledPluginsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-kleu3gt0
      */
     public $InstanceId;
 
     /**
-     * @var string 按插件 ID 过滤
+     * @var string 按插件 ID 过滤，例如：grafana-piechart-panel，可通过接口 DescribeInstalledPlugins 查看已安装的插件 ID
      */
     public $PluginId;
 
     /**
-     * @param string $InstanceId 实例 ID
-     * @param string $PluginId 按插件 ID 过滤
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-kleu3gt0
+     * @param string $PluginId 按插件 ID 过滤，例如：grafana-piechart-panel，可通过接口 DescribeInstalledPlugins 查看已安装的插件 ID
      */
     function __construct()
     {

@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttrFlags(array $AttrFlags) 设置监听器的属性
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTargetGroupList() 获取绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetGroupList(array $TargetGroupList) 设置绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Listener extends AbstractModel
 {
@@ -205,6 +209,12 @@ class Listener extends AbstractModel
     public $AttrFlags;
 
     /**
+     * @var array 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetGroupList;
+
+    /**
      * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Protocol 监听器协议
      * @param integer $Port 监听器端口
@@ -239,6 +249,8 @@ class Listener extends AbstractModel
      * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AttrFlags 监听器的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TargetGroupList 绑定的目标组列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -336,6 +348,15 @@ class Listener extends AbstractModel
 
         if (array_key_exists("AttrFlags",$param) and $param["AttrFlags"] !== null) {
             $this->AttrFlags = $param["AttrFlags"];
+        }
+
+        if (array_key_exists("TargetGroupList",$param) and $param["TargetGroupList"] !== null) {
+            $this->TargetGroupList = [];
+            foreach ($param["TargetGroupList"] as $key => $value){
+                $obj = new BasicTargetGroupInfo();
+                $obj->deserialize($value);
+                array_push($this->TargetGroupList, $obj);
+            }
         }
     }
 }

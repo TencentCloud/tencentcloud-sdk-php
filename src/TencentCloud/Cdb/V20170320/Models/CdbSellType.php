@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 售卖实例类型
  *
- * @method string getTypeName() 获取售卖实例名称
- * @method void setTypeName(string $TypeName) 设置售卖实例名称
+ * @method string getTypeName() 获取售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
+ * @method void setTypeName(string $TypeName) 设置售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
  * @method array getEngineVersion() 获取引擎版本号
  * @method void setEngineVersion(array $EngineVersion) 设置引擎版本号
  * @method array getConfigIds() 获取售卖规格Id
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CdbSellType extends AbstractModel
 {
     /**
-     * @var string 售卖实例名称
+     * @var string 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
      */
     public $TypeName;
 
@@ -45,7 +45,7 @@ class CdbSellType extends AbstractModel
     public $ConfigIds;
 
     /**
-     * @param string $TypeName 售卖实例名称
+     * @param string $TypeName 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
      * @param array $EngineVersion 引擎版本号
      * @param array $ConfigIds 售卖规格Id
      */

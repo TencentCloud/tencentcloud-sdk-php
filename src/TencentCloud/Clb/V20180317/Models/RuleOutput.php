@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomains(array $Domains) 设置转发规则的域名列表。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTargetGroupList() 获取绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetGroupList(array $TargetGroupList) 设置绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleOutput extends AbstractModel
 {
@@ -211,6 +215,12 @@ class RuleOutput extends AbstractModel
     public $Domains;
 
     /**
+     * @var array 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetGroupList;
+
+    /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -243,6 +253,8 @@ class RuleOutput extends AbstractModel
      * @param string $QuicStatus QUIC状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Domains 转发规则的域名列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TargetGroupList 绑定的目标组列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -348,6 +360,15 @@ class RuleOutput extends AbstractModel
 
         if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
             $this->Domains = $param["Domains"];
+        }
+
+        if (array_key_exists("TargetGroupList",$param) and $param["TargetGroupList"] !== null) {
+            $this->TargetGroupList = [];
+            foreach ($param["TargetGroupList"] as $key => $value){
+                $obj = new BasicTargetGroupInfo();
+                $obj->deserialize($value);
+                array_push($this->TargetGroupList, $obj);
+            }
         }
     }
 }

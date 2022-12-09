@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedOn(integer $CreatedOn) 设置员工创建时间戳
  * @method integer getVerifiedOn() 获取员工实名时间戳
  * @method void setVerifiedOn(integer $VerifiedOn) 设置员工实名时间戳
+ * @method integer getQuiteJob() 获取员工是否离职：0-未离职，1-离职
+ * @method void setQuiteJob(integer $QuiteJob) 设置员工是否离职：0-未离职，1-离职
  */
 class Staff extends AbstractModel
 {
@@ -106,6 +108,11 @@ class Staff extends AbstractModel
     public $VerifiedOn;
 
     /**
+     * @var integer 员工是否离职：0-未离职，1-离职
+     */
+    public $QuiteJob;
+
+    /**
      * @param string $UserId 员工在电子签平台的id
      * @param string $DisplayName 显示的员工名
      * @param string $Mobile 员工手机号
@@ -120,6 +127,7 @@ class Staff extends AbstractModel
      * @param boolean $Verified 员工是否实名
      * @param integer $CreatedOn 员工创建时间戳
      * @param integer $VerifiedOn 员工实名时间戳
+     * @param integer $QuiteJob 员工是否离职：0-未离职，1-离职
      */
     function __construct()
     {
@@ -178,6 +186,10 @@ class Staff extends AbstractModel
 
         if (array_key_exists("VerifiedOn",$param) and $param["VerifiedOn"] !== null) {
             $this->VerifiedOn = $param["VerifiedOn"];
+        }
+
+        if (array_key_exists("QuiteJob",$param) and $param["QuiteJob"] !== null) {
+            $this->QuiteJob = $param["QuiteJob"];
         }
     }
 }

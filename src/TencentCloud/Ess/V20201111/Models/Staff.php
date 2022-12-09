@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifiedOn(integer $VerifiedOn) 设置员工实名时间戳
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getQuiteJob() 获取员工是否离职：0-未离职，1-离职
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuiteJob(integer $QuiteJob) 设置员工是否离职：0-未离职，1-离职
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Staff extends AbstractModel
 {
@@ -109,6 +113,12 @@ class Staff extends AbstractModel
     public $VerifiedOn;
 
     /**
+     * @var integer 员工是否离职：0-未离职，1-离职
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QuiteJob;
+
+    /**
      * @param string $UserId 用户在电子签平台的id
      * @param string $DisplayName 显示的用户名/昵称
      * @param string $Mobile 用户手机号
@@ -123,6 +133,8 @@ class Staff extends AbstractModel
      * @param boolean $Verified 员工是否实名
      * @param integer $CreatedOn 员工创建时间戳
      * @param integer $VerifiedOn 员工实名时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $QuiteJob 员工是否离职：0-未离职，1-离职
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -182,6 +194,10 @@ class Staff extends AbstractModel
 
         if (array_key_exists("VerifiedOn",$param) and $param["VerifiedOn"] !== null) {
             $this->VerifiedOn = $param["VerifiedOn"];
+        }
+
+        if (array_key_exists("QuiteJob",$param) and $param["QuiteJob"] !== null) {
+            $this->QuiteJob = $param["QuiteJob"];
         }
     }
 }

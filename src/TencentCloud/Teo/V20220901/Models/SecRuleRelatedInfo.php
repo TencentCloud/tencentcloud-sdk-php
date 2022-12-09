@@ -60,6 +60,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackContent(string $AttackContent) 设置攻击内容。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleType() 获取规则类型，取值有：
+<li>waf: 托管规则；</li>
+<li>acl：自定义规则；</li>
+<li>rate：速率限制规则；</li>
+<li>bot：bot防护规则。</li>
+ * @method void setRuleType(string $RuleType) 设置规则类型，取值有：
+<li>waf: 托管规则；</li>
+<li>acl：自定义规则；</li>
+<li>rate：速率限制规则；</li>
+<li>bot：bot防护规则。</li>
+ * @method boolean getRuleEnabled() 获取规则是否开启。
+ * @method void setRuleEnabled(boolean $RuleEnabled) 设置规则是否开启。
+ * @method boolean getRuleDeleted() 获取规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+ * @method void setRuleDeleted(boolean $RuleDeleted) 设置规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+ * @method boolean getAlarmEnabled() 获取规则是否启用监控告警。
+ * @method void setAlarmEnabled(boolean $AlarmEnabled) 设置规则是否启用监控告警。
  */
 class SecRuleRelatedInfo extends AbstractModel
 {
@@ -112,6 +132,32 @@ class SecRuleRelatedInfo extends AbstractModel
     public $AttackContent;
 
     /**
+     * @var string 规则类型，取值有：
+<li>waf: 托管规则；</li>
+<li>acl：自定义规则；</li>
+<li>rate：速率限制规则；</li>
+<li>bot：bot防护规则。</li>
+     */
+    public $RuleType;
+
+    /**
+     * @var boolean 规则是否开启。
+     */
+    public $RuleEnabled;
+
+    /**
+     * @var boolean 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+     */
+    public $RuleDeleted;
+
+    /**
+     * @var boolean 规则是否启用监控告警。
+     */
+    public $AlarmEnabled;
+
+    /**
      * @param integer $RuleId 规则ID。
      * @param string $Action 执行动作（处置方式），取值有：
 <li>trans ：通过 ；</li>
@@ -132,6 +178,16 @@ class SecRuleRelatedInfo extends AbstractModel
      * @param string $RuleTypeName 规则类型名称。
      * @param string $AttackContent 攻击内容。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleType 规则类型，取值有：
+<li>waf: 托管规则；</li>
+<li>acl：自定义规则；</li>
+<li>rate：速率限制规则；</li>
+<li>bot：bot防护规则。</li>
+     * @param boolean $RuleEnabled 规则是否开启。
+     * @param boolean $RuleDeleted 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+     * @param boolean $AlarmEnabled 规则是否启用监控告警。
      */
     function __construct()
     {
@@ -172,6 +228,22 @@ class SecRuleRelatedInfo extends AbstractModel
 
         if (array_key_exists("AttackContent",$param) and $param["AttackContent"] !== null) {
             $this->AttackContent = $param["AttackContent"];
+        }
+
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("RuleEnabled",$param) and $param["RuleEnabled"] !== null) {
+            $this->RuleEnabled = $param["RuleEnabled"];
+        }
+
+        if (array_key_exists("RuleDeleted",$param) and $param["RuleDeleted"] !== null) {
+            $this->RuleDeleted = $param["RuleDeleted"];
+        }
+
+        if (array_key_exists("AlarmEnabled",$param) and $param["AlarmEnabled"] !== null) {
+            $this->AlarmEnabled = $param["AlarmEnabled"];
         }
     }
 }

@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCiphers(array $Ciphers) 设置加密套件信息
  * @method integer getCipherTemplate() 获取0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
  * @method void setCipherTemplate(integer $CipherTemplate) 设置0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+ * @method integer getProxyReadTimeout() 获取300s
+ * @method void setProxyReadTimeout(integer $ProxyReadTimeout) 设置300s
+ * @method integer getProxySendTimeout() 获取300s
+ * @method void setProxySendTimeout(integer $ProxySendTimeout) 设置300s
  */
 class AddSpartaProtectionRequest extends AbstractModel
 {
@@ -220,6 +224,16 @@ class AddSpartaProtectionRequest extends AbstractModel
     public $CipherTemplate;
 
     /**
+     * @var integer 300s
+     */
+    public $ProxyReadTimeout;
+
+    /**
+     * @var integer 300s
+     */
+    public $ProxySendTimeout;
+
+    /**
      * @param string $Domain 需要防御的域名
      * @param integer $CertType 证书类型，0表示没有证书，CertType=1表示自有证书,2 为托管证书
      * @param integer $IsCdn 表示是否开启了CDN代理，1：有部署CDN，0：未部署CDN
@@ -248,6 +262,8 @@ class AddSpartaProtectionRequest extends AbstractModel
      * @param integer $TLSVersion TLS版本信息
      * @param array $Ciphers 加密套件信息
      * @param integer $CipherTemplate 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+     * @param integer $ProxyReadTimeout 300s
+     * @param integer $ProxySendTimeout 300s
      */
     function __construct()
     {
@@ -377,6 +393,14 @@ class AddSpartaProtectionRequest extends AbstractModel
 
         if (array_key_exists("CipherTemplate",$param) and $param["CipherTemplate"] !== null) {
             $this->CipherTemplate = $param["CipherTemplate"];
+        }
+
+        if (array_key_exists("ProxyReadTimeout",$param) and $param["ProxyReadTimeout"] !== null) {
+            $this->ProxyReadTimeout = $param["ProxyReadTimeout"];
+        }
+
+        if (array_key_exists("ProxySendTimeout",$param) and $param["ProxySendTimeout"] !== null) {
+            $this->ProxySendTimeout = $param["ProxySendTimeout"];
         }
     }
 }

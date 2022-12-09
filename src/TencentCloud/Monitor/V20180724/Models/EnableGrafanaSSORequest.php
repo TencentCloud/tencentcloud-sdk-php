@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableGrafanaSSO请求参数结构体
  *
- * @method boolean getEnableSSO() 获取是否开启 SSO
- * @method void setEnableSSO(boolean $EnableSSO) 设置是否开启 SSO
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method boolean getEnableSSO() 获取是否开启 SSO，true为开启，false 为不开启
+ * @method void setEnableSSO(boolean $EnableSSO) 设置是否开启 SSO，true为开启，false 为不开启
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
  */
 class EnableGrafanaSSORequest extends AbstractModel
 {
     /**
-     * @var boolean 是否开启 SSO
+     * @var boolean 是否开启 SSO，true为开启，false 为不开启
      */
     public $EnableSSO;
 
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public $InstanceId;
 
     /**
-     * @param boolean $EnableSSO 是否开启 SSO
-     * @param string $InstanceId 实例 ID
+     * @param boolean $EnableSSO 是否开启 SSO，true为开启，false 为不开启
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     function __construct()
     {

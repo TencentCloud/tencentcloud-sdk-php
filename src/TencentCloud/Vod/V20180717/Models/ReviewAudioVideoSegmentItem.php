@@ -68,6 +68,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setText(string $Text) 设置当 Form 为 OCR 或 ASR 时有效，表示识别出来的 OCR 或 ASR 文本内容。
  * @method array getKeywordSet() 获取当 Form 为 OCR 或 ASR 时有效，表示嫌疑片段命中的违规关键词列表。
  * @method void setKeywordSet(array $KeywordSet) 设置当 Form 为 OCR 或 ASR 时有效，表示嫌疑片段命中的违规关键词列表。
+ * @method string getUrl() 获取嫌疑图片 URL （图片不会永久存储，到达
+ PicUrlExpireTime 时间点后图片将被删除）。
+ * @method void setUrl(string $Url) 设置嫌疑图片 URL （图片不会永久存储，到达
+ PicUrlExpireTime 时间点后图片将被删除）。
+ * @method string getPicUrlExpireTime() 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  */
 class ReviewAudioVideoSegmentItem extends AbstractModel
 {
@@ -136,6 +142,17 @@ class ReviewAudioVideoSegmentItem extends AbstractModel
     public $KeywordSet;
 
     /**
+     * @var string 嫌疑图片 URL （图片不会永久存储，到达
+ PicUrlExpireTime 时间点后图片将被删除）。
+     */
+    public $Url;
+
+    /**
+     * @var string 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public $PicUrlExpireTime;
+
+    /**
      * @param float $StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
      * @param float $Confidence 嫌疑片段涉及令人反感的信息的分数。
@@ -160,6 +177,9 @@ class ReviewAudioVideoSegmentItem extends AbstractModel
      * @param array $AreaCoordSet 当 Form 为 Image 或 OCR 时有效，表示嫌疑人物、图标或文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      * @param string $Text 当 Form 为 OCR 或 ASR 时有效，表示识别出来的 OCR 或 ASR 文本内容。
      * @param array $KeywordSet 当 Form 为 OCR 或 ASR 时有效，表示嫌疑片段命中的违规关键词列表。
+     * @param string $Url 嫌疑图片 URL （图片不会永久存储，到达
+ PicUrlExpireTime 时间点后图片将被删除）。
+     * @param string $PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     function __construct()
     {
@@ -212,6 +232,14 @@ class ReviewAudioVideoSegmentItem extends AbstractModel
 
         if (array_key_exists("KeywordSet",$param) and $param["KeywordSet"] !== null) {
             $this->KeywordSet = $param["KeywordSet"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("PicUrlExpireTime",$param) and $param["PicUrlExpireTime"] !== null) {
+            $this->PicUrlExpireTime = $param["PicUrlExpireTime"];
         }
     }
 }

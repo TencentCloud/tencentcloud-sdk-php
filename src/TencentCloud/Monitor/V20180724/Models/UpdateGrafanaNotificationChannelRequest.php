@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGrafanaNotificationChannel请求参数结构体
  *
- * @method string getChannelId() 获取通道 ID
- * @method void setChannelId(string $ChannelId) 设置通道 ID
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getChannelName() 获取渠道名
- * @method void setChannelName(string $ChannelName) 设置渠道名
+ * @method string getChannelId() 获取通道 ID，例如：nchannel-abcd1234
+ * @method void setChannelId(string $ChannelId) 设置通道 ID，例如：nchannel-abcd1234
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-12345678
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-12345678
+ * @method string getChannelName() 获取告警通道名称，例如：test
+ * @method void setChannelName(string $ChannelName) 设置告警通道名称，例如：test
  * @method array getReceivers() 获取接受告警通道 ID 数组
  * @method void setReceivers(array $Receivers) 设置接受告警通道 ID 数组
  * @method array getExtraOrgIds() 获取已废弃，请使用 OrganizationIds
@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
 class UpdateGrafanaNotificationChannelRequest extends AbstractModel
 {
     /**
-     * @var string 通道 ID
+     * @var string 通道 ID，例如：nchannel-abcd1234
      */
     public $ChannelId;
 
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-12345678
      */
     public $InstanceId;
 
     /**
-     * @var string 渠道名
+     * @var string 告警通道名称，例如：test
      */
     public $ChannelName;
 
@@ -66,9 +66,9 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
     public $OrganizationIds;
 
     /**
-     * @param string $ChannelId 通道 ID
-     * @param string $InstanceId 实例 ID
-     * @param string $ChannelName 渠道名
+     * @param string $ChannelId 通道 ID，例如：nchannel-abcd1234
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-12345678
+     * @param string $ChannelName 告警通道名称，例如：test
      * @param array $Receivers 接受告警通道 ID 数组
      * @param array $ExtraOrgIds 已废弃，请使用 OrganizationIds
      * @param array $OrganizationIds 生效的组织 ID 数组

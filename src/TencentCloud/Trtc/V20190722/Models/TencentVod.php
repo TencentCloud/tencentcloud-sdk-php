@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) 设置任务流上下文，任务完成回调时透传。
  * @method string getSourceContext() 获取上传上下文，上传完成回调时透传。
  * @method void setSourceContext(string $SourceContext) 设置上传上下文，上传完成回调时透传。
- * @method integer getMediaType() 获取上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
- * @method void setMediaType(integer $MediaType) 设置上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+ * @method integer getMediaType() 获取上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效)。
+ * @method void setMediaType(integer $MediaType) 设置上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效)。
  * @method string getUserDefineRecordId() 获取仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
  * @method void setUserDefineRecordId(string $UserDefineRecordId) 设置仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
  */
@@ -80,7 +80,7 @@ class TencentVod extends AbstractModel
     public $SourceContext;
 
     /**
-     * @var integer 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+     * @var integer 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效)。
      */
     public $MediaType;
 
@@ -98,7 +98,7 @@ class TencentVod extends AbstractModel
      * @param integer $SubAppId 点播 子应用 ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param string $SessionContext 任务流上下文，任务完成回调时透传。
      * @param string $SourceContext 上传上下文，上传完成回调时透传。
-     * @param integer $MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+     * @param integer $MediaType 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls, 2:aac(StreamType=1纯音频录制时有效)。
      * @param string $UserDefineRecordId 仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
      */
     function __construct()

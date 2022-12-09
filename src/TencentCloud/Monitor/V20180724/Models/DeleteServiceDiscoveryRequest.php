@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteServiceDiscovery请求参数结构体
  *
- * @method string getInstanceId() 获取Prometheus 实例 ID
- * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
+ * @method string getInstanceId() 获取Prometheus 实例 ID，例如：prom-sdfk2342a
+ * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID，例如：prom-sdfk2342a
  * @method string getKubeClusterId() 获取<li>类型是 TKE，为对应的腾讯云容器服务集群 ID</li>
  * @method void setKubeClusterId(string $KubeClusterId) 设置<li>类型是 TKE，为对应的腾讯云容器服务集群 ID</li>
  * @method integer getKubeType() 获取用户 Kubernetes 集群类型：
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteServiceDiscoveryRequest extends AbstractModel
 {
     /**
-     * @var string Prometheus 实例 ID
+     * @var string Prometheus 实例 ID，例如：prom-sdfk2342a
      */
     public $InstanceId;
 
@@ -71,7 +71,7 @@ class DeleteServiceDiscoveryRequest extends AbstractModel
     public $Yaml;
 
     /**
-     * @param string $InstanceId Prometheus 实例 ID
+     * @param string $InstanceId Prometheus 实例 ID，例如：prom-sdfk2342a
      * @param string $KubeClusterId <li>类型是 TKE，为对应的腾讯云容器服务集群 ID</li>
      * @param integer $KubeType 用户 Kubernetes 集群类型：
 <li> 1 = 容器服务集群(TKE) </li>

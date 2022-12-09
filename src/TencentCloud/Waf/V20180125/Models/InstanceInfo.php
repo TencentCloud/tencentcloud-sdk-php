@@ -74,6 +74,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticBilling(integer $ElasticBilling) 设置qps弹性计费上限
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAttackLogPost() 获取攻击日志投递开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAttackLogPost(integer $AttackLogPost) 设置攻击日志投递开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxBandwidth() 获取带宽峰值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxBandwidth(integer $MaxBandwidth) 设置带宽峰值
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -197,6 +205,18 @@ class InstanceInfo extends AbstractModel
     public $ElasticBilling;
 
     /**
+     * @var integer 攻击日志投递开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AttackLogPost;
+
+    /**
+     * @var integer 带宽峰值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxBandwidth;
+
+    /**
      * @param string $InstanceId id
      * @param string $InstanceName name
      * @param string $ResourceIds 资源id
@@ -223,6 +243,10 @@ class InstanceInfo extends AbstractModel
      * @param BotQPS $BotQPS bot的qps详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticBilling qps弹性计费上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AttackLogPost 攻击日志投递开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxBandwidth 带宽峰值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -333,6 +357,14 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("ElasticBilling",$param) and $param["ElasticBilling"] !== null) {
             $this->ElasticBilling = $param["ElasticBilling"];
+        }
+
+        if (array_key_exists("AttackLogPost",$param) and $param["AttackLogPost"] !== null) {
+            $this->AttackLogPost = $param["AttackLogPost"];
+        }
+
+        if (array_key_exists("MaxBandwidth",$param) and $param["MaxBandwidth"] !== null) {
+            $this->MaxBandwidth = $param["MaxBandwidth"];
         }
     }
 }

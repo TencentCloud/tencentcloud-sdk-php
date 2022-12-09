@@ -54,6 +54,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCnameSpeedupStatus() 获取CNAME加速状态：开通：ENABLED, 关闭，DISABLED
  * @method void setCnameSpeedupStatus(string $CnameSpeedupStatus) 设置CNAME加速状态：开通：ENABLED, 关闭，DISABLED
+ * @method string getForwardRuleName() 获取转发规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setForwardRuleName(string $ForwardRuleName) 设置转发规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getForwardRuleType() 获取转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setForwardRuleType(string $ForwardRuleType) 设置转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getForwardAddress() 获取转发的地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setForwardAddress(string $ForwardAddress) 设置转发的地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEndPointName() 获取终端节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndPointName(string $EndPointName) 设置终端节点名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrivateZone extends AbstractModel
 {
@@ -131,6 +147,30 @@ class PrivateZone extends AbstractModel
     public $CnameSpeedupStatus;
 
     /**
+     * @var string 转发规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ForwardRuleName;
+
+    /**
+     * @var string 转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ForwardRuleType;
+
+    /**
+     * @var string 转发的地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ForwardAddress;
+
+    /**
+     * @var string 终端节点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndPointName;
+
+    /**
      * @param string $ZoneId 私有域id: zone-xxxxxxxx
      * @param integer $OwnerUin 域名所有者uin
      * @param string $Domain 私有域名
@@ -148,6 +188,14 @@ class PrivateZone extends AbstractModel
      * @param boolean $IsCustomTld 是否自定义TLD
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CnameSpeedupStatus CNAME加速状态：开通：ENABLED, 关闭，DISABLED
+     * @param string $ForwardRuleName 转发规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ForwardRuleType 转发规则类型：云上到云下，DOWN；云下到云上，UP，目前只支持DOWN
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ForwardAddress 转发的地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EndPointName 终端节点名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -231,6 +279,22 @@ class PrivateZone extends AbstractModel
 
         if (array_key_exists("CnameSpeedupStatus",$param) and $param["CnameSpeedupStatus"] !== null) {
             $this->CnameSpeedupStatus = $param["CnameSpeedupStatus"];
+        }
+
+        if (array_key_exists("ForwardRuleName",$param) and $param["ForwardRuleName"] !== null) {
+            $this->ForwardRuleName = $param["ForwardRuleName"];
+        }
+
+        if (array_key_exists("ForwardRuleType",$param) and $param["ForwardRuleType"] !== null) {
+            $this->ForwardRuleType = $param["ForwardRuleType"];
+        }
+
+        if (array_key_exists("ForwardAddress",$param) and $param["ForwardAddress"] !== null) {
+            $this->ForwardAddress = $param["ForwardAddress"];
+        }
+
+        if (array_key_exists("EndPointName",$param) and $param["EndPointName"] !== null) {
+            $this->EndPointName = $param["EndPointName"];
         }
     }
 }

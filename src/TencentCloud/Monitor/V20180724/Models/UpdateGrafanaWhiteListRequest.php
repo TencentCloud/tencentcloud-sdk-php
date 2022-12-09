@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGrafanaWhiteList请求参数结构体
  *
- * @method string getInstanceId() 获取实例名
- * @method void setInstanceId(string $InstanceId) 设置实例名
- * @method array getWhitelist() 获取白名单数组
- * @method void setWhitelist(array $Whitelist) 设置白名单数组
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method array getWhitelist() 获取白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
+ * @method void setWhitelist(array $Whitelist) 设置白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
  */
 class UpdateGrafanaWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string 实例名
+     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public $InstanceId;
 
     /**
-     * @var array 白名单数组
+     * @var array 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
      */
     public $Whitelist;
 
     /**
-     * @param string $InstanceId 实例名
-     * @param array $Whitelist 白名单数组
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param array $Whitelist 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
      */
     function __construct()
     {

@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getDealName() 获取预付费订单 id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDealName(string $DealName) 设置预付费订单 id
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class CreateTawInstanceResponse extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 预付费订单 id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DealName;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $InstanceId 实例Id
+     * @param string $DealName 预付费订单 id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +68,10 @@ class CreateTawInstanceResponse extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

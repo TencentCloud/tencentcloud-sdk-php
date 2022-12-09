@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdatePrometheusScrapeJob请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getAgentId() 获取Agent ID
- * @method void setAgentId(string $AgentId) 设置Agent ID
- * @method string getJobId() 获取抓取任务 ID
- * @method void setJobId(string $JobId) 设置抓取任务 ID
- * @method string getConfig() 获取抓取任务配置
- * @method void setConfig(string $Config) 设置抓取任务配置
+ * @method string getInstanceId() 获取Prometheus 实例 ID，例如：prom-abcd1234
+ * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID，例如：prom-abcd1234
+ * @method string getAgentId() 获取Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+ * @method void setAgentId(string $AgentId) 设置Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+ * @method string getJobId() 获取抓取任务 ID，例如：job-abcd1234，可在控制台 Agent 管理-抓取任务配置中获取
+ * @method void setJobId(string $JobId) 设置抓取任务 ID，例如：job-abcd1234，可在控制台 Agent 管理-抓取任务配置中获取
+ * @method string getConfig() 获取抓取任务配置，格式：job_name:xx
+ * @method void setConfig(string $Config) 设置抓取任务配置，格式：job_name:xx
  */
 class UpdatePrometheusScrapeJobRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string Prometheus 实例 ID，例如：prom-abcd1234
      */
     public $InstanceId;
 
     /**
-     * @var string Agent ID
+     * @var string Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
      */
     public $AgentId;
 
     /**
-     * @var string 抓取任务 ID
+     * @var string 抓取任务 ID，例如：job-abcd1234，可在控制台 Agent 管理-抓取任务配置中获取
      */
     public $JobId;
 
     /**
-     * @var string 抓取任务配置
+     * @var string 抓取任务配置，格式：job_name:xx
      */
     public $Config;
 
     /**
-     * @param string $InstanceId 实例 ID
-     * @param string $AgentId Agent ID
-     * @param string $JobId 抓取任务 ID
-     * @param string $Config 抓取任务配置
+     * @param string $InstanceId Prometheus 实例 ID，例如：prom-abcd1234
+     * @param string $AgentId Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+     * @param string $JobId 抓取任务 ID，例如：job-abcd1234，可在控制台 Agent 管理-抓取任务配置中获取
+     * @param string $Config 抓取任务配置，格式：job_name:xx
      */
     function __construct()
     {

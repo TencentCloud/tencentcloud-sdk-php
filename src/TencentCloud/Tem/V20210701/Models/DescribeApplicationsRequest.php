@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyword(string $Keyword) 设置搜索关键字
  * @method array getFilters() 获取查询过滤器
  * @method void setFilters(array $Filters) 设置查询过滤器
+ * @method SortType getSortInfo() 获取排序字段
+ * @method void setSortInfo(SortType $SortInfo) 设置排序字段
  */
 class DescribeApplicationsRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeApplicationsRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var SortType 排序字段
+     */
+    public $SortInfo;
+
+    /**
      * @param string $EnvironmentId 命名空间ID
      * @param integer $Limit 分页Limit
      * @param integer $Offset 分页offset
@@ -80,6 +87,7 @@ class DescribeApplicationsRequest extends AbstractModel
      * @param string $ApplicationId 服务id
      * @param string $Keyword 搜索关键字
      * @param array $Filters 查询过滤器
+     * @param SortType $SortInfo 排序字段
      */
     function __construct()
     {
@@ -125,6 +133,11 @@ class DescribeApplicationsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("SortInfo",$param) and $param["SortInfo"] !== null) {
+            $this->SortInfo = new SortType();
+            $this->SortInfo->deserialize($param["SortInfo"]);
         }
     }
 }

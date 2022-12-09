@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) 设置子网网络
  * @method integer getSourceChannel() 获取来源渠道
  * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
+ * @method string getEnvType() 获取环境类型：test、pre、prod
+ * @method void setEnvType(string $EnvType) 设置环境类型：test、pre、prod
  */
 class ModifyEnvironmentRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyEnvironmentRequest extends AbstractModel
     public $SourceChannel;
 
     /**
+     * @var string 环境类型：test、pre、prod
+     */
+    public $EnvType;
+
+    /**
      * @param string $EnvironmentId 环境id
      * @param string $EnvironmentName 环境名称
      * @param string $Description 环境描述
      * @param string $Vpc 私有网络名称
      * @param array $SubnetIds 子网网络
      * @param integer $SourceChannel 来源渠道
+     * @param string $EnvType 环境类型：test、pre、prod
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ModifyEnvironmentRequest extends AbstractModel
 
         if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
             $this->SourceChannel = $param["SourceChannel"];
+        }
+
+        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
+            $this->EnvType = $param["EnvType"];
         }
     }
 }

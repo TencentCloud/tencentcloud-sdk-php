@@ -20,17 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityRuleId返回参数结构体
  *
- * @method array getWafGroupRules() 获取规则列表。
- * @method void setWafGroupRules(array $WafGroupRules) 设置规则列表。
+ * @method array getWafGroupRules() 获取托管规则类型的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWafGroupRules(array $WafGroupRules) 设置托管规则类型的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecurityRules() 获取自定义规则、速率限制、Bot规则的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityRules(array $SecurityRules) 设置自定义规则、速率限制、Bot规则的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeSecurityRuleIdResponse extends AbstractModel
 {
     /**
-     * @var array 规则列表。
+     * @var array 托管规则类型的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WafGroupRules;
+
+    /**
+     * @var array 自定义规则、速率限制、Bot规则的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityRules;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +51,10 @@ class DescribeSecurityRuleIdResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $WafGroupRules 规则列表。
+     * @param array $WafGroupRules 托管规则类型的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecurityRules 自定义规则、速率限制、Bot规则的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +76,15 @@ class DescribeSecurityRuleIdResponse extends AbstractModel
                 $obj = new WafGroupRule();
                 $obj->deserialize($value);
                 array_push($this->WafGroupRules, $obj);
+            }
+        }
+
+        if (array_key_exists("SecurityRules",$param) and $param["SecurityRules"] !== null) {
+            $this->SecurityRules = [];
+            foreach ($param["SecurityRules"] as $key => $value){
+                $obj = new SecurityRule();
+                $obj->deserialize($value);
+                array_push($this->SecurityRules, $obj);
             }
         }
 

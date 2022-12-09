@@ -34,8 +34,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMatchFrom(string $MatchFrom) 设置根据类型匹配，取值有：
 <li>ip：对ip进行匹配；</li>
 <li>area：对ip所属地区匹配。</li>
- * @method string getMatchContent() 获取匹配内容。
- * @method void setMatchContent(string $MatchContent) 设置匹配内容。
+ * @method string getOperator() 获取规则的匹配方式，默认为空代表等于。
+取值有：
+<li> is_emty：配置为空；</li>
+<li> not_exists：配置为不存在；</li>
+<li> include：包含；</li>
+<li> not_include：不包含；</li>
+<li> equal：等于；</li>
+<li> not_equal：不等于。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperator(string $Operator) 设置规则的匹配方式，默认为空代表等于。
+取值有：
+<li> is_emty：配置为空；</li>
+<li> not_exists：配置为不存在；</li>
+<li> include：包含；</li>
+<li> not_include：不包含；</li>
+<li> equal：等于；</li>
+<li> not_equal：不等于。</li>
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleID() 获取规则id。仅出参使用。
  * @method void setRuleID(integer $RuleID) 设置规则id。仅出参使用。
  * @method string getUpdateTime() 获取更新时间。仅出参使用。
@@ -48,6 +64,12 @@ use TencentCloud\Common\AbstractModel;
 <li> on：启用；</li>
 <li> off：未启用。</li>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleName() 获取规则名。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleName(string $RuleName) 设置规则名。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMatchContent() 获取匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
+ * @method void setMatchContent(string $MatchContent) 设置匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
  */
 class IpTableRule extends AbstractModel
 {
@@ -67,9 +89,17 @@ class IpTableRule extends AbstractModel
     public $MatchFrom;
 
     /**
-     * @var string 匹配内容。
+     * @var string 规则的匹配方式，默认为空代表等于。
+取值有：
+<li> is_emty：配置为空；</li>
+<li> not_exists：配置为不存在；</li>
+<li> include：包含；</li>
+<li> not_include：不包含；</li>
+<li> equal：等于；</li>
+<li> not_equal：不等于。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $MatchContent;
+    public $Operator;
 
     /**
      * @var integer 规则id。仅出参使用。
@@ -90,6 +120,17 @@ class IpTableRule extends AbstractModel
     public $Status;
 
     /**
+     * @var string 规则名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleName;
+
+    /**
+     * @var string 匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
+     */
+    public $MatchContent;
+
+    /**
      * @param string $Action 动作，取值有：
 <li> drop：拦截；</li>
 <li> trans：放行；</li>
@@ -97,13 +138,24 @@ class IpTableRule extends AbstractModel
      * @param string $MatchFrom 根据类型匹配，取值有：
 <li>ip：对ip进行匹配；</li>
 <li>area：对ip所属地区匹配。</li>
-     * @param string $MatchContent 匹配内容。
+     * @param string $Operator 规则的匹配方式，默认为空代表等于。
+取值有：
+<li> is_emty：配置为空；</li>
+<li> not_exists：配置为不存在；</li>
+<li> include：包含；</li>
+<li> not_include：不包含；</li>
+<li> equal：等于；</li>
+<li> not_equal：不等于。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleID 规则id。仅出参使用。
      * @param string $UpdateTime 更新时间。仅出参使用。
      * @param string $Status 规则启用状态，当返回为null时，为启用。取值有：
 <li> on：启用；</li>
 <li> off：未启用。</li>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleName 规则名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MatchContent 匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
      */
     function __construct()
     {
@@ -126,8 +178,8 @@ class IpTableRule extends AbstractModel
             $this->MatchFrom = $param["MatchFrom"];
         }
 
-        if (array_key_exists("MatchContent",$param) and $param["MatchContent"] !== null) {
-            $this->MatchContent = $param["MatchContent"];
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
 
         if (array_key_exists("RuleID",$param) and $param["RuleID"] !== null) {
@@ -140,6 +192,14 @@ class IpTableRule extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
+            $this->RuleName = $param["RuleName"];
+        }
+
+        if (array_key_exists("MatchContent",$param) and $param["MatchContent"] !== null) {
+            $this->MatchContent = $param["MatchContent"];
         }
     }
 }

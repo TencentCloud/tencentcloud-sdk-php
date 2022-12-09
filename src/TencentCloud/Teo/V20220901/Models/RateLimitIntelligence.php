@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(string $Action) 设置执行动作，取值有：
 <li>monitor：观察；</li>
 <li>alg：挑战。</li>
+ * @method integer getRuleId() 获取规则id，仅出参使用。
+ * @method void setRuleId(integer $RuleId) 设置规则id，仅出参使用。
  */
 class RateLimitIntelligence extends AbstractModel
 {
@@ -50,12 +52,18 @@ class RateLimitIntelligence extends AbstractModel
     public $Action;
 
     /**
+     * @var integer 规则id，仅出参使用。
+     */
+    public $RuleId;
+
+    /**
      * @param string $Switch 功能开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      * @param string $Action 执行动作，取值有：
 <li>monitor：观察；</li>
 <li>alg：挑战。</li>
+     * @param integer $RuleId 规则id，仅出参使用。
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ class RateLimitIntelligence extends AbstractModel
 
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {
             $this->Action = $param["Action"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
     }
 }

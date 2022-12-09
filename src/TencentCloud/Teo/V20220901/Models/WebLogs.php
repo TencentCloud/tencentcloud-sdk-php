@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReqMethod(string $ReqMethod) 设置请求类型。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArea() 获取日志所属区域。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setArea(string $Area) 设置日志所属区域。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WebLogs extends AbstractModel
 {
@@ -103,6 +107,12 @@ class WebLogs extends AbstractModel
     public $ReqMethod;
 
     /**
+     * @var string 日志所属区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Area;
+
+    /**
      * @param string $EventId 请求（事件）ID。
      * @param string $AttackIp 攻击源（客户端）Ip。
      * @param string $Domain 受攻击子域名。
@@ -115,6 +125,8 @@ class WebLogs extends AbstractModel
      * @param array $RuleDetailList 规则相关信息列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReqMethod 请求类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Area 日志所属区域。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -173,6 +185,10 @@ class WebLogs extends AbstractModel
 
         if (array_key_exists("ReqMethod",$param) and $param["ReqMethod"] !== null) {
             $this->ReqMethod = $param["ReqMethod"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

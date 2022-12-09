@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableSSOCamCheck请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method boolean getEnableSSOCamCheck() 获取是否开启cam鉴权
- * @method void setEnableSSOCamCheck(boolean $EnableSSOCamCheck) 设置是否开启cam鉴权
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method boolean getEnableSSOCamCheck() 获取是否开启 cam 鉴权，true为开启，false 为不开启
+ * @method void setEnableSSOCamCheck(boolean $EnableSSOCamCheck) 设置是否开启 cam 鉴权，true为开启，false 为不开启
  */
 class EnableSSOCamCheckRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public $InstanceId;
 
     /**
-     * @var boolean 是否开启cam鉴权
+     * @var boolean 是否开启 cam 鉴权，true为开启，false 为不开启
      */
     public $EnableSSOCamCheck;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param boolean $EnableSSOCamCheck 是否开启cam鉴权
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param boolean $EnableSSOCamCheck 是否开启 cam 鉴权，true为开启，false 为不开启
      */
     function __construct()
     {

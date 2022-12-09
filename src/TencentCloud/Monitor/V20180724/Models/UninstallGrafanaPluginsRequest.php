@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UninstallGrafanaPlugins请求参数结构体
  *
- * @method array getPluginIds() 获取插件 ID 数组
- * @method void setPluginIds(array $PluginIds) 设置插件 ID 数组
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method array getPluginIds() 获取插件 ID 数组，例如"PluginIds": [ "grafana-clock-panel" ]，可通过 DescribePluginOverviews 获取 PluginId
+ * @method void setPluginIds(array $PluginIds) 设置插件 ID 数组，例如"PluginIds": [ "grafana-clock-panel" ]，可通过 DescribePluginOverviews 获取 PluginId
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefg
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefg
  */
 class UninstallGrafanaPluginsRequest extends AbstractModel
 {
     /**
-     * @var array 插件 ID 数组
+     * @var array 插件 ID 数组，例如"PluginIds": [ "grafana-clock-panel" ]，可通过 DescribePluginOverviews 获取 PluginId
      */
     public $PluginIds;
 
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-abcdefg
      */
     public $InstanceId;
 
     /**
-     * @param array $PluginIds 插件 ID 数组
-     * @param string $InstanceId 实例 ID
+     * @param array $PluginIds 插件 ID 数组，例如"PluginIds": [ "grafana-clock-panel" ]，可通过 DescribePluginOverviews 获取 PluginId
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefg
      */
     function __construct()
     {

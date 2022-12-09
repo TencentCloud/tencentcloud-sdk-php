@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalZone(boolean $LocalZone) 设置可用区是否是LocalZone可用区，如：false
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEdgeZone() 获取可用区是否是EdgeZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEdgeZone(boolean $EdgeZone) 设置可用区是否是EdgeZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneInfo extends AbstractModel
 {
@@ -74,6 +78,12 @@ class ZoneInfo extends AbstractModel
     public $LocalZone;
 
     /**
+     * @var boolean 可用区是否是EdgeZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EdgeZone;
+
+    /**
      * @param integer $ZoneId 可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区字符串形式的唯一ID，如：ap-guangzhou-1
@@ -83,6 +93,8 @@ class ZoneInfo extends AbstractModel
      * @param string $ZoneRegion 可用区所属地域，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $LocalZone 可用区是否是LocalZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EdgeZone 可用区是否是EdgeZone可用区，如：false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class ZoneInfo extends AbstractModel
 
         if (array_key_exists("LocalZone",$param) and $param["LocalZone"] !== null) {
             $this->LocalZone = $param["LocalZone"];
+        }
+
+        if (array_key_exists("EdgeZone",$param) and $param["EdgeZone"] !== null) {
+            $this->EdgeZone = $param["EdgeZone"];
         }
     }
 }

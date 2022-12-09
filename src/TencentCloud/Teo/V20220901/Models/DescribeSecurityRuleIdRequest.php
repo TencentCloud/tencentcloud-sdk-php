@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityRuleId请求参数结构体
  *
- * @method array getRuleIdList() 获取规则Id数组。
- * @method void setRuleIdList(array $RuleIdList) 设置规则Id数组。
  * @method string getRuleType() 获取规则类型，取值有：
 <li>waf：web托管规则；</li>
 <li>acl：自定义规则；</li>
@@ -34,14 +32,13 @@ use TencentCloud\Common\AbstractModel;
 <li>bot：Bot基础规则。</li>
  * @method string getEntity() 获取子域名/应用名。
  * @method void setEntity(string $Entity) 设置子域名/应用名。
+ * @method array getRuleIdList() 获取规则Id数组。 当为空时查询 子域名或者应用名下所有规则
+ * @method void setRuleIdList(array $RuleIdList) 设置规则Id数组。 当为空时查询 子域名或者应用名下所有规则
+ * @method array getDomains() 获取子域名数组。
+ * @method void setDomains(array $Domains) 设置子域名数组。
  */
 class DescribeSecurityRuleIdRequest extends AbstractModel
 {
-    /**
-     * @var array 规则Id数组。
-     */
-    public $RuleIdList;
-
     /**
      * @var string 规则类型，取值有：
 <li>waf：web托管规则；</li>
@@ -57,13 +54,24 @@ class DescribeSecurityRuleIdRequest extends AbstractModel
     public $Entity;
 
     /**
-     * @param array $RuleIdList 规则Id数组。
+     * @var array 规则Id数组。 当为空时查询 子域名或者应用名下所有规则
+     */
+    public $RuleIdList;
+
+    /**
+     * @var array 子域名数组。
+     */
+    public $Domains;
+
+    /**
      * @param string $RuleType 规则类型，取值有：
 <li>waf：web托管规则；</li>
 <li>acl：自定义规则；</li>
 <li>rate：速率限制规则；</li>
 <li>bot：Bot基础规则。</li>
      * @param string $Entity 子域名/应用名。
+     * @param array $RuleIdList 规则Id数组。 当为空时查询 子域名或者应用名下所有规则
+     * @param array $Domains 子域名数组。
      */
     function __construct()
     {
@@ -78,16 +86,20 @@ class DescribeSecurityRuleIdRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleIdList",$param) and $param["RuleIdList"] !== null) {
-            $this->RuleIdList = $param["RuleIdList"];
-        }
-
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
         }
 
         if (array_key_exists("Entity",$param) and $param["Entity"] !== null) {
             $this->Entity = $param["Entity"];
+        }
+
+        if (array_key_exists("RuleIdList",$param) and $param["RuleIdList"] !== null) {
+            $this->RuleIdList = $param["RuleIdList"];
+        }
+
+        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+            $this->Domains = $param["Domains"];
         }
     }
 }

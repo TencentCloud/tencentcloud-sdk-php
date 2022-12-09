@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoDuration(float $VideoDuration) 设置视频时长，单位：秒。
  * @method float getAudioDuration() 获取音频时长，单位：秒。
  * @method void setAudioDuration(float $AudioDuration) 设置音频时长，单位：秒。
+ * @method string getMd5() 获取媒体文件的 Md5 值。
+<li><font color=red>注意</font>：如需要获取媒体文件的 Md5，调用 DescribeFileAttributes 接口，待任务执行完成后获取。</li>
+ * @method void setMd5(string $Md5) 设置媒体文件的 Md5 值。
+<li><font color=red>注意</font>：如需要获取媒体文件的 Md5，调用 DescribeFileAttributes 接口，待任务执行完成后获取。</li>
  */
 class MediaMetaData extends AbstractModel
 {
@@ -101,6 +105,12 @@ class MediaMetaData extends AbstractModel
     public $AudioDuration;
 
     /**
+     * @var string 媒体文件的 Md5 值。
+<li><font color=red>注意</font>：如需要获取媒体文件的 Md5，调用 DescribeFileAttributes 接口，待任务执行完成后获取。</li>
+     */
+    public $Md5;
+
+    /**
      * @param integer $Size 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
      * @param string $Container 容器类型，例如 m4a，mp4 等。
      * @param integer $Bitrate 视频流码率平均值与音频流码率平均值之和，单位：bps。
@@ -112,6 +122,8 @@ class MediaMetaData extends AbstractModel
      * @param array $AudioStreamSet 音频流信息。
      * @param float $VideoDuration 视频时长，单位：秒。
      * @param float $AudioDuration 音频时长，单位：秒。
+     * @param string $Md5 媒体文件的 Md5 值。
+<li><font color=red>注意</font>：如需要获取媒体文件的 Md5，调用 DescribeFileAttributes 接口，待任务执行完成后获取。</li>
      */
     function __construct()
     {
@@ -178,6 +190,10 @@ class MediaMetaData extends AbstractModel
 
         if (array_key_exists("AudioDuration",$param) and $param["AudioDuration"] !== null) {
             $this->AudioDuration = $param["AudioDuration"];
+        }
+
+        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
+            $this->Md5 = $param["Md5"];
         }
     }
 }

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourcePath(string $SourcePath) 设置源端路径
  * @method string getDestinationPath() 获取目的端路径
  * @method void setDestinationPath(string $DestinationPath) 设置目的端路径
+ * @method OutputMappingOption getOutputMappingOption() 获取输出映射选项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutputMappingOption(OutputMappingOption $OutputMappingOption) 设置输出映射选项
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputMapping extends AbstractModel
 {
@@ -38,8 +42,16 @@ class OutputMapping extends AbstractModel
     public $DestinationPath;
 
     /**
+     * @var OutputMappingOption 输出映射选项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OutputMappingOption;
+
+    /**
      * @param string $SourcePath 源端路径
      * @param string $DestinationPath 目的端路径
+     * @param OutputMappingOption $OutputMappingOption 输出映射选项
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,11 @@ class OutputMapping extends AbstractModel
 
         if (array_key_exists("DestinationPath",$param) and $param["DestinationPath"] !== null) {
             $this->DestinationPath = $param["DestinationPath"];
+        }
+
+        if (array_key_exists("OutputMappingOption",$param) and $param["OutputMappingOption"] !== null) {
+            $this->OutputMappingOption = new OutputMappingOption();
+            $this->OutputMappingOption->deserialize($param["OutputMappingOption"]);
         }
     }
 }

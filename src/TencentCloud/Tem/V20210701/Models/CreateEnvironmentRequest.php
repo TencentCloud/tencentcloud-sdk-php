@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableTswTraceService(boolean $EnableTswTraceService) 设置是否开启tsw服务
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
+ * @method string getEnvType() 获取环境类型：test、pre、prod
+ * @method void setEnvType(string $EnvType) 设置环境类型：test、pre、prod
+ * @method string getCreateRegion() 获取创建环境的region
+ * @method void setCreateRegion(string $CreateRegion) 设置创建环境的region
  */
 class CreateEnvironmentRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class CreateEnvironmentRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 环境类型：test、pre、prod
+     */
+    public $EnvType;
+
+    /**
+     * @var string 创建环境的region
+     */
+    public $CreateRegion;
+
+    /**
      * @param string $EnvironmentName 环境名称
      * @param string $Vpc 私有网络名称
      * @param array $SubnetIds 子网列表
@@ -88,6 +102,8 @@ class CreateEnvironmentRequest extends AbstractModel
      * @param integer $SourceChannel 来源渠道
      * @param boolean $EnableTswTraceService 是否开启tsw服务
      * @param array $Tags 标签
+     * @param string $EnvType 环境类型：test、pre、prod
+     * @param string $CreateRegion 创建环境的region
      */
     function __construct()
     {
@@ -137,6 +153,14 @@ class CreateEnvironmentRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
+            $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("CreateRegion",$param) and $param["CreateRegion"] !== null) {
+            $this->CreateRegion = $param["CreateRegion"];
         }
     }
 }

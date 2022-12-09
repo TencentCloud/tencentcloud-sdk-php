@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页起始值, 默认值0
  * @method integer getLimit() 获取分页大小，默认值20
  * @method void setLimit(integer $Limit) 设置分页大小，默认值20
- * @method integer getOrderByKey() 获取排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
- * @method void setOrderByKey(integer $OrderByKey) 设置排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+ * @method integer getOrderByKey() 获取排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序
+ * @method void setOrderByKey(integer $OrderByKey) 设置排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序
  * @method integer getOrderByType() 获取排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
  * @method void setOrderByType(integer $OrderByType) 设置排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
  * @method array getTagList() 获取节点标签信息列表
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpList(array $IpList) 设置私有网络vip列表
  * @method array getZoneList() 获取可用区列表
  * @method void setZoneList(array $ZoneList) 设置可用区列表
- * @method array getHealthStatus() 获取健康状态筛列表
- * @method void setHealthStatus(array $HealthStatus) 设置健康状态筛列表
+ * @method array getHealthStatus() 获取健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
+ * @method void setHealthStatus(array $HealthStatus) 设置健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
  * @method array getVpcIds() 获取Vpc列表 筛选项
  * @method void setVpcIds(array $VpcIds) 设置Vpc列表 筛选项
  */
@@ -73,7 +73,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+     * @var integer 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序
      */
     public $OrderByKey;
 
@@ -98,7 +98,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $ZoneList;
 
     /**
-     * @var array 健康状态筛列表
+     * @var array 健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
      */
     public $HealthStatus;
 
@@ -113,12 +113,12 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $InstanceNames 集群实例名称列表
      * @param integer $Offset 分页起始值, 默认值0
      * @param integer $Limit 分页大小，默认值20
-     * @param integer $OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+     * @param integer $OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序
      * @param integer $OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      * @param array $TagList 节点标签信息列表
      * @param array $IpList 私有网络vip列表
      * @param array $ZoneList 可用区列表
-     * @param array $HealthStatus 健康状态筛列表
+     * @param array $HealthStatus 健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
      * @param array $VpcIds Vpc列表 筛选项
      */
     function __construct()

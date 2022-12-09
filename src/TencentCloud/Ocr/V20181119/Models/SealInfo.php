@@ -26,6 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(Rect $Location) 设置印章坐标
  * @method array getOtherTexts() 获取印章其它文本内容
  * @method void setOtherTexts(array $OtherTexts) 设置印章其它文本内容
+ * @method string getSealShape() 获取印章类型，表示为:
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
+ * @method void setSealShape(string $SealShape) 设置印章类型，表示为:
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
  */
 class SealInfo extends AbstractModel
 {
@@ -45,9 +57,25 @@ class SealInfo extends AbstractModel
     public $OtherTexts;
 
     /**
+     * @var string 印章类型，表示为:
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
+     */
+    public $SealShape;
+
+    /**
      * @param string $SealBody 印章主体内容
      * @param Rect $Location 印章坐标
      * @param array $OtherTexts 印章其它文本内容
+     * @param string $SealShape 印章类型，表示为:
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
      */
     function __construct()
     {
@@ -73,6 +101,10 @@ class SealInfo extends AbstractModel
 
         if (array_key_exists("OtherTexts",$param) and $param["OtherTexts"] !== null) {
             $this->OtherTexts = $param["OtherTexts"];
+        }
+
+        if (array_key_exists("SealShape",$param) and $param["SealShape"] !== null) {
+            $this->SealShape = $param["SealShape"];
         }
     }
 }

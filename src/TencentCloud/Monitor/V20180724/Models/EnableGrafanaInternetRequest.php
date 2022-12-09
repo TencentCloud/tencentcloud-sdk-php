@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableGrafanaInternet请求参数结构体
  *
- * @method string getInstanceID() 获取实例 ID
- * @method void setInstanceID(string $InstanceID) 设置实例 ID
- * @method boolean getEnableInternet() 获取开启或关闭
- * @method void setEnableInternet(boolean $EnableInternet) 设置开启或关闭
+ * @method string getInstanceID() 获取Grafana 实例 ID，例如：grafana-kleu3gt0
+ * @method void setInstanceID(string $InstanceID) 设置Grafana 实例 ID，例如：grafana-kleu3gt0
+ * @method boolean getEnableInternet() 获取开启或关闭公网访问，true为开启，false 为不开启
+ * @method void setEnableInternet(boolean $EnableInternet) 设置开启或关闭公网访问，true为开启，false 为不开启
  */
 class EnableGrafanaInternetRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-kleu3gt0
      */
     public $InstanceID;
 
     /**
-     * @var boolean 开启或关闭
+     * @var boolean 开启或关闭公网访问，true为开启，false 为不开启
      */
     public $EnableInternet;
 
     /**
-     * @param string $InstanceID 实例 ID
-     * @param boolean $EnableInternet 开启或关闭
+     * @param string $InstanceID Grafana 实例 ID，例如：grafana-kleu3gt0
+     * @param boolean $EnableInternet 开启或关闭公网访问，true为开启，false 为不开启
      */
     function __construct()
     {

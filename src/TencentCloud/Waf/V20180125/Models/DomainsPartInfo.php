@@ -74,6 +74,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCipherTemplate(integer $CipherTemplate) 设置模版
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProxyReadTimeout() 获取300s
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxyReadTimeout(integer $ProxyReadTimeout) 设置300s
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProxySendTimeout() 获取300s
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxySendTimeout(integer $ProxySendTimeout) 设置300s
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -197,6 +205,18 @@ class DomainsPartInfo extends AbstractModel
     public $CipherTemplate;
 
     /**
+     * @var integer 300s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxyReadTimeout;
+
+    /**
+     * @var integer 300s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxySendTimeout;
+
+    /**
      * @param integer $HttpsRewrite 是否开启httpRewrite
      * @param string $HttpsUpstreamPort https回源端口
      * @param integer $IsCdn 是否是cdn
@@ -223,6 +243,10 @@ class DomainsPartInfo extends AbstractModel
      * @param array $Ciphers 加密套件信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CipherTemplate 模版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProxyReadTimeout 300s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProxySendTimeout 300s
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -333,6 +357,14 @@ class DomainsPartInfo extends AbstractModel
 
         if (array_key_exists("CipherTemplate",$param) and $param["CipherTemplate"] !== null) {
             $this->CipherTemplate = $param["CipherTemplate"];
+        }
+
+        if (array_key_exists("ProxyReadTimeout",$param) and $param["ProxyReadTimeout"] !== null) {
+            $this->ProxyReadTimeout = $param["ProxyReadTimeout"];
+        }
+
+        if (array_key_exists("ProxySendTimeout",$param) and $param["ProxySendTimeout"] !== null) {
+            $this->ProxySendTimeout = $param["ProxySendTimeout"];
         }
     }
 }

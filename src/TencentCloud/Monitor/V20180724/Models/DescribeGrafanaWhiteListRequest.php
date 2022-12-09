@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaWhiteList请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
  */
 class DescribeGrafanaWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例 ID
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     function __construct()
     {

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlertRule请求参数结构体
  *
- * @method string getInstanceId() 获取Prometheus 实例 ID
- * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
+ * @method string getInstanceId() 获取Prometheus 实例 ID，例如：prom-abcd1234
+ * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID，例如：prom-abcd1234
  * @method string getRuleName() 获取规则名称
  * @method void setRuleName(string $RuleName) 设置规则名称
- * @method string getExpr() 获取规则表达式
- * @method void setExpr(string $Expr) 设置规则表达式
+ * @method string getExpr() 获取规则表达式，可参考<a href="https://cloud.tencent.com/document/product/1416/56008">告警规则说明</a>
+ * @method void setExpr(string $Expr) 设置规则表达式，可参考<a href="https://cloud.tencent.com/document/product/1416/56008">告警规则说明</a>
  * @method array getReceivers() 获取告警通知模板 ID 列表
  * @method void setReceivers(array $Receivers) 设置告警通知模板 ID 列表
  * @method integer getRuleState() 获取规则状态码，取值如下：
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAlertRuleRequest extends AbstractModel
 {
     /**
-     * @var string Prometheus 实例 ID
+     * @var string Prometheus 实例 ID，例如：prom-abcd1234
      */
     public $InstanceId;
 
@@ -60,7 +60,7 @@ class CreateAlertRuleRequest extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string 规则表达式
+     * @var string 规则表达式，可参考<a href="https://cloud.tencent.com/document/product/1416/56008">告警规则说明</a>
      */
     public $Expr;
 
@@ -99,9 +99,9 @@ class CreateAlertRuleRequest extends AbstractModel
     public $Type;
 
     /**
-     * @param string $InstanceId Prometheus 实例 ID
+     * @param string $InstanceId Prometheus 实例 ID，例如：prom-abcd1234
      * @param string $RuleName 规则名称
-     * @param string $Expr 规则表达式
+     * @param string $Expr 规则表达式，可参考<a href="https://cloud.tencent.com/document/product/1416/56008">告警规则说明</a>
      * @param array $Receivers 告警通知模板 ID 列表
      * @param integer $RuleState 规则状态码，取值如下：
 <li>2=RuleEnabled</li>

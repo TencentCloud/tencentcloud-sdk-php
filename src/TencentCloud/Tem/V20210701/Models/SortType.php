@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGrafanaConfig请求参数结构体
+ * 查询过滤器
  *
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-12345678
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-12345678
+ * @method string getKey() 获取排序字段名称
+ * @method void setKey(string $Key) 设置排序字段名称
+ * @method integer getType() 获取0：升序，1：倒序
+ * @method void setType(integer $Type) 设置0：升序，1：倒序
  */
-class DescribeGrafanaConfigRequest extends AbstractModel
+class SortType extends AbstractModel
 {
     /**
-     * @var string Grafana 实例 ID，例如：grafana-12345678
+     * @var string 排序字段名称
      */
-    public $InstanceId;
+    public $Key;
 
     /**
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-12345678
+     * @var integer 0：升序，1：倒序
+     */
+    public $Type;
+
+    /**
+     * @param string $Key 排序字段名称
+     * @param integer $Type 0：升序，1：倒序
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeGrafanaConfigRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

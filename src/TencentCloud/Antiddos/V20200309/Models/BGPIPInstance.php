@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceVersion(integer $InstanceVersion) 设置资源实例版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConvoyId() 获取重保实例
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConvoyId(string $ConvoyId) 设置重保实例
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -260,6 +264,12 @@ class BGPIPInstance extends AbstractModel
     public $InstanceVersion;
 
     /**
+     * @var string 重保实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConvoyId;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPIPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPIPInstanceUsages $Usage 资产实例的使用统计信息
@@ -307,6 +317,8 @@ class BGPIPInstance extends AbstractModel
 注意：当资产实例不是全力防护套餐包的实例时，此字段为null
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceVersion 资源实例版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConvoyId 重保实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -426,6 +438,10 @@ class BGPIPInstance extends AbstractModel
 
         if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
             $this->InstanceVersion = $param["InstanceVersion"];
+        }
+
+        if (array_key_exists("ConvoyId",$param) and $param["ConvoyId"] !== null) {
+            $this->ConvoyId = $param["ConvoyId"];
         }
     }
 }

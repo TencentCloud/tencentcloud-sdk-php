@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterChannelFlag(integer $FilterChannelFlag) 设置定制版搜索
  * @method TagFilter getFilterTag() 获取标签搜索
  * @method void setFilterTag(TagFilter $FilterTag) 设置标签搜索
+ * @method integer getFilterTrialFlag() 获取试用资源搜索，1: 应急防护资源；2：PLG试用资源
+ * @method void setFilterTrialFlag(integer $FilterTrialFlag) 设置试用资源搜索，1: 应急防护资源；2：PLG试用资源
+ * @method integer getFilterConvoy() 获取重保护航搜索
+ * @method void setFilterConvoy(integer $FilterConvoy) 设置重保护航搜索
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterTag;
 
     /**
+     * @var integer 试用资源搜索，1: 应急防护资源；2：PLG试用资源
+     */
+    public $FilterTrialFlag;
+
+    /**
+     * @var integer 重保护航搜索
+     */
+    public $FilterConvoy;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -136,6 +150,8 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param integer $FilterLightFlag 轻量版搜索
      * @param integer $FilterChannelFlag 定制版搜索
      * @param TagFilter $FilterTag 标签搜索
+     * @param integer $FilterTrialFlag 试用资源搜索，1: 应急防护资源；2：PLG试用资源
+     * @param integer $FilterConvoy 重保护航搜索
      */
     function __construct()
     {
@@ -205,6 +221,14 @@ class DescribeListBGPInstancesRequest extends AbstractModel
         if (array_key_exists("FilterTag",$param) and $param["FilterTag"] !== null) {
             $this->FilterTag = new TagFilter();
             $this->FilterTag->deserialize($param["FilterTag"]);
+        }
+
+        if (array_key_exists("FilterTrialFlag",$param) and $param["FilterTrialFlag"] !== null) {
+            $this->FilterTrialFlag = $param["FilterTrialFlag"];
+        }
+
+        if (array_key_exists("FilterConvoy",$param) and $param["FilterConvoy"] !== null) {
+            $this->FilterConvoy = $param["FilterConvoy"];
         }
     }
 }

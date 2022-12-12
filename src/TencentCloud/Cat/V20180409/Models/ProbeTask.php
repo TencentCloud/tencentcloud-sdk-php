@@ -26,8 +26,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskId() 获取任务 ID
  * @method void setTaskId(string $TaskId) 设置任务 ID
- * @method integer getTaskType() 获取任务类型
- * @method void setTaskType(integer $TaskType) 设置任务类型
+ * @method integer getTaskType() 获取拨测类型
+<li>1 = 页面浏览</li>
+<li> 2 =文件上传 </li>
+<li> 3 = 文件下载</li>
+<li> 4 = 端口性能 </li>
+<li> 5 = 网络质量 </li>
+<li> 6 =流媒体 </li>
+
+即时拨测只支持页面浏览，网络质量，文件下载
+ * @method void setTaskType(integer $TaskType) 设置拨测类型
+<li>1 = 页面浏览</li>
+<li> 2 =文件上传 </li>
+<li> 3 = 文件下载</li>
+<li> 4 = 端口性能 </li>
+<li> 5 = 网络质量 </li>
+<li> 6 =流媒体 </li>
+
+即时拨测只支持页面浏览，网络质量，文件下载
  * @method array getNodes() 获取拨测节点列表
  * @method void setNodes(array $Nodes) 设置拨测节点列表
  * @method integer getInterval() 获取拨测间隔
@@ -35,7 +51,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getParameters() 获取拨测参数
  * @method void setParameters(string $Parameters) 设置拨测参数
  * @method integer getStatus() 获取任务状态
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
  * @method void setStatus(integer $Status) 设置任务状态
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
  * @method string getTargetAddress() 获取目标地址
  * @method void setTargetAddress(string $TargetAddress) 设置目标地址
  * @method integer getPayMode() 获取付费模式
@@ -63,8 +99,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCron(string $Cron) 设置定时任务cron表达式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCronState() 获取定时任务启动状态
+<li>1 = 定时任务表达式生效</li>
+<li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCronState(integer $CronState) 设置定时任务启动状态
+<li>1 = 定时任务表达式生效</li>
+<li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagInfoList() 获取任务当前绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
@@ -85,7 +125,15 @@ class ProbeTask extends AbstractModel
     public $TaskId;
 
     /**
-     * @var integer 任务类型
+     * @var integer 拨测类型
+<li>1 = 页面浏览</li>
+<li> 2 =文件上传 </li>
+<li> 3 = 文件下载</li>
+<li> 4 = 端口性能 </li>
+<li> 5 = 网络质量 </li>
+<li> 6 =流媒体 </li>
+
+即时拨测只支持页面浏览，网络质量，文件下载
      */
     public $TaskType;
 
@@ -106,6 +154,16 @@ class ProbeTask extends AbstractModel
 
     /**
      * @var integer 任务状态
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
      */
     public $Status;
 
@@ -148,6 +206,8 @@ class ProbeTask extends AbstractModel
 
     /**
      * @var integer 定时任务启动状态
+<li>1 = 定时任务表达式生效</li>
+<li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CronState;
@@ -162,11 +222,29 @@ class ProbeTask extends AbstractModel
      * @param string $Name 任务名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 任务 ID
-     * @param integer $TaskType 任务类型
+     * @param integer $TaskType 拨测类型
+<li>1 = 页面浏览</li>
+<li> 2 =文件上传 </li>
+<li> 3 = 文件下载</li>
+<li> 4 = 端口性能 </li>
+<li> 5 = 网络质量 </li>
+<li> 6 =流媒体 </li>
+
+即时拨测只支持页面浏览，网络质量，文件下载
      * @param array $Nodes 拨测节点列表
      * @param integer $Interval 拨测间隔
      * @param string $Parameters 拨测参数
      * @param integer $Status 任务状态
+<li>1 = 创建中</li>
+<li> 2 = 运行中 </li>
+<li> 3 = 运行异常 </li>
+<li> 4 = 暂停中 </li>
+<li> 5 = 暂停异常 </li>
+<li> 6 = 任务暂停 </li>
+<li> 7 = 任务删除中 </li>
+<li> 8 = 任务删除异常 </li>
+<li> 9 = 任务删除</li>
+<li> 10 = 定时任务暂停中 </li>
      * @param string $TargetAddress 目标地址
      * @param integer $PayMode 付费模式
 <li>1 = 试用版本</li>
@@ -181,6 +259,8 @@ class ProbeTask extends AbstractModel
      * @param string $Cron 定时任务cron表达式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CronState 定时任务启动状态
+<li>1 = 定时任务表达式生效</li>
+<li> 2 = 定时任务表达式未生效（一般为任务手动暂停）</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagInfoList 任务当前绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。

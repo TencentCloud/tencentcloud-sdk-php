@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置索引所属集群APP ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIndexDocs() 获取索引文档数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexDocs(integer $IndexDocs) 设置索引文档数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IndexMetaField extends AbstractModel
 {
@@ -154,6 +158,12 @@ class IndexMetaField extends AbstractModel
     public $AppId;
 
     /**
+     * @var integer 索引文档数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexDocs;
+
+    /**
      * @param string $IndexType 索引类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexName 索引名
@@ -179,6 +189,8 @@ class IndexMetaField extends AbstractModel
      * @param IndexSettingsField $IndexSettingsField 索引配置字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 索引所属集群APP ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IndexDocs 索引文档数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -252,6 +264,10 @@ class IndexMetaField extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("IndexDocs",$param) and $param["IndexDocs"] !== null) {
+            $this->IndexDocs = $param["IndexDocs"];
         }
     }
 }

@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryFinancialDataUrl请求参数结构体
  *
- * @method string getEndTime() 获取数据查询范围:结束时间
- * @method void setEndTime(string $EndTime) 设置数据查询范围:结束时间
- * @method string getStartTime() 获取数据查询范围:开始时间
- * @method void setStartTime(string $StartTime) 设置数据查询范围:开始时间
- * @method string getDataType() 获取数据类型：ADDED_INVOICE_REPORT  增值税开票数据，NATURAL_FINANCE_REPORT 自然人金融数据
- * @method void setDataType(string $DataType) 设置数据类型：ADDED_INVOICE_REPORT  增值税开票数据，NATURAL_FINANCE_REPORT 自然人金融数据
+ * @method string getEndTime() 获取数据查询范围:结束时间 yyyy-MM-dd HH:mm:ss
+ * @method void setEndTime(string $EndTime) 设置数据查询范围:结束时间 yyyy-MM-dd HH:mm:ss
+ * @method string getStartTime() 获取数据查询范围:开始时间 yyyy-MM-dd HH:mm:ss
+ * @method void setStartTime(string $StartTime) 设置数据查询范围:开始时间 yyyy-MM-dd HH:mm:ss
+ * @method string getDataType() 获取数据类型：ADDED_INVOICE_REPORT  增值税开票数据，NATURAL_FINANCE_REPORT 自然人金融数据,
+NATURAL_FINANCE_REPORT_BY_TIME 按次报税数据导出,
+NATURAL_FINANCE_REPORT_STAT_BY_DAY 按日累计报税数据导出
+ * @method void setDataType(string $DataType) 设置数据类型：ADDED_INVOICE_REPORT  增值税开票数据，NATURAL_FINANCE_REPORT 自然人金融数据,
+NATURAL_FINANCE_REPORT_BY_TIME 按次报税数据导出,
+NATURAL_FINANCE_REPORT_STAT_BY_DAY 按日累计报税数据导出
  */
 class QueryFinancialDataUrlRequest extends AbstractModel
 {
     /**
-     * @var string 数据查询范围:结束时间
+     * @var string 数据查询范围:结束时间 yyyy-MM-dd HH:mm:ss
      */
     public $EndTime;
 
     /**
-     * @var string 数据查询范围:开始时间
+     * @var string 数据查询范围:开始时间 yyyy-MM-dd HH:mm:ss
      */
     public $StartTime;
 
     /**
-     * @var string 数据类型：ADDED_INVOICE_REPORT  增值税开票数据，NATURAL_FINANCE_REPORT 自然人金融数据
+     * @var string 数据类型：ADDED_INVOICE_REPORT  增值税开票数据，NATURAL_FINANCE_REPORT 自然人金融数据,
+NATURAL_FINANCE_REPORT_BY_TIME 按次报税数据导出,
+NATURAL_FINANCE_REPORT_STAT_BY_DAY 按日累计报税数据导出
      */
     public $DataType;
 
     /**
-     * @param string $EndTime 数据查询范围:结束时间
-     * @param string $StartTime 数据查询范围:开始时间
-     * @param string $DataType 数据类型：ADDED_INVOICE_REPORT  增值税开票数据，NATURAL_FINANCE_REPORT 自然人金融数据
+     * @param string $EndTime 数据查询范围:结束时间 yyyy-MM-dd HH:mm:ss
+     * @param string $StartTime 数据查询范围:开始时间 yyyy-MM-dd HH:mm:ss
+     * @param string $DataType 数据类型：ADDED_INVOICE_REPORT  增值税开票数据，NATURAL_FINANCE_REPORT 自然人金融数据,
+NATURAL_FINANCE_REPORT_BY_TIME 按次报税数据导出,
+NATURAL_FINANCE_REPORT_STAT_BY_DAY 按日累计报税数据导出
      */
     function __construct()
     {

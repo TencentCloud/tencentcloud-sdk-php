@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterEipEipAddressStatus(array $FilterEipEipAddressStatus) 设置高防弹性公网IP实例的绑定状态搜索条件，取值范围 [BINDING、 BIND、UNBINDING、UNBIND]。该搜索条件只在FilterEipType=1时才有效。
  * @method integer getFilterDamDDoSStatus() 获取是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
  * @method void setFilterDamDDoSStatus(integer $FilterDamDDoSStatus) 设置是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
- * @method string getFilterStatus() 获取获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
- * @method void setFilterStatus(string $FilterStatus) 设置获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+ * @method string getFilterStatus() 获取获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking，试用资源填trial
+ * @method void setFilterStatus(string $FilterStatus) 设置获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking，试用资源填trial
  * @method string getFilterCname() 获取获取特定的实例Cname
  * @method void setFilterCname(string $FilterCname) 设置获取特定的实例Cname
  * @method array getFilterInstanceIdList() 获取批量查询实例ID对应的高防IP实例资源
@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterTag(TagFilter $FilterTag) 设置标签搜索
  * @method array getFilterPackType() 获取按照套餐类型进行过滤
  * @method void setFilterPackType(array $FilterPackType) 设置按照套餐类型进行过滤
+ * @method integer getFilterConvoy() 获取重保护航搜索
+ * @method void setFilterConvoy(integer $FilterConvoy) 设置重保护航搜索
  */
 class DescribeListBGPIPInstancesRequest extends AbstractModel
 {
@@ -122,7 +124,7 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterDamDDoSStatus;
 
     /**
-     * @var string 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+     * @var string 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking，试用资源填trial
      */
     public $FilterStatus;
 
@@ -147,6 +149,11 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterPackType;
 
     /**
+     * @var integer 重保护航搜索
+     */
+    public $FilterConvoy;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -163,11 +170,12 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
      * @param integer $FilterEipType 是否只获取高防弹性公网IP实例。填写时，只能填写1或者0。当填写1时，表示返回高防弹性公网IP实例。当填写0时，表示返回非高防弹性公网IP实例。
      * @param array $FilterEipEipAddressStatus 高防弹性公网IP实例的绑定状态搜索条件，取值范围 [BINDING、 BIND、UNBINDING、UNBIND]。该搜索条件只在FilterEipType=1时才有效。
      * @param integer $FilterDamDDoSStatus 是否只获取安全加速实例。填写时，只能填写1或者0。当填写1时，表示返回安全加速实例。当填写0时，表示返回非安全加速实例。
-     * @param string $FilterStatus 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+     * @param string $FilterStatus 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking，试用资源填trial
      * @param string $FilterCname 获取特定的实例Cname
      * @param array $FilterInstanceIdList 批量查询实例ID对应的高防IP实例资源
      * @param TagFilter $FilterTag 标签搜索
      * @param array $FilterPackType 按照套餐类型进行过滤
+     * @param integer $FilterConvoy 重保护航搜索
      */
     function __construct()
     {
@@ -241,6 +249,10 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterPackType",$param) and $param["FilterPackType"] !== null) {
             $this->FilterPackType = $param["FilterPackType"];
+        }
+
+        if (array_key_exists("FilterConvoy",$param) and $param["FilterConvoy"] !== null) {
+            $this->FilterConvoy = $param["FilterConvoy"];
         }
     }
 }

@@ -30,21 +30,59 @@ use TencentCloud\Tiia\V20190529\Models as Models;
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) 本接口用于创建一个空的图片库，图片库主要用于存储在创建图片时提取的图片特征数据，如果图片库已存在则返回错误。不同的图片库类型对应不同的图像搜索服务类型，根据输入参数GroupType区分。
 
-| 服务类型 | GroupType入参 |功能描述 |
-|  :----------  | :----- |:-----------------  |
-| 相同图像搜索<div style="width: 70pt"> | 4 |在自建图片库中搜索相同原图或高相似图，并给出相似度打分，可支持裁剪、翻转、调色、加水印等二次编辑后的图片搜索。适用于图片版权保护、原图查询等场景。|
-| 商品图像搜索<div style="width: 70pt"> | 5 |在自建图库中搜索同款商品，并给出相似度打分。对于服饰类商品可支持识别服饰类别、属性等信息。适用于商品分类、检索、推荐等电商场景。|
-| 相似图像搜索<div style="width: 70pt"> | 6 |在自建图库中搜索相似的图案、logo、纹理等图像元素或主体，并给出相似度打分。|
+<table>
+    <th>服务类型</th><th>GroupType</th><th>功能描述</th>
+    <tr>
+        <td>通用图像搜索</td>
+        <td>4</td>
+        <td>通用图像搜索1.0版。<br>在自建图片库中搜索相同原图或相似图片集，并给出相似度打分，可支持裁剪、翻转、调色、加水印等二次编辑后的图片搜索。适用于图片版权保护、原图查询等场景。</td>
+    </tr>
+    <tr>
+        <td rowspan="2">商品图像搜索</td>
+        <td>7</td><td>商品图像搜索2.0升级版。<br>
+        在自建图库中搜索同款或相似商品，并给出相似度打分。对于服饰类商品可支持识别服饰类别、属性等信息。适用于商品分类、检索、推荐等电商场景。</td>
+    </tr>
+     <tr>
+        <td>5</td>
+        <td>商品图像搜索1.0版。<br>
+        功能和2.0升级版类似。</td>
+    </tr>
+    <tr>
+    <td>图案花纹搜索</td><td>6</td><td>图案花纹搜索1.0版。<br>
+    在自建图库中搜索相似的图案、logo、纹理等图像元素或主体，并给出相似度打分。</td>
+    </tr>
+</table> 
 
- * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 创建图片，并添加对应图片的自定义信息。模型将在创建图片时自动提取图像特征并存储到指定的图片库中。
+>   
+- 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+
+
+ * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 创建图片，并添加对应图片的自定义信息。模型将在创建图片时自动提取图像特征并存储到指定的图片库中，每创建一张图片会对应提取和存储一条图片特征数据。
+
+>   
+- 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+
+
  * @method Models\CropImageResponse CropImage(Models\CropImageRequest $req) 根据输入的裁剪比例，智能判断一张图片的最佳裁剪区域，确保原图的主体区域不受影响，以适应不同平台、设备的展示要求，避免简单拉伸带来的变形。
 
 >   
 - 可前往 [图像处理](https://cloud.tencent.com/document/product/1590) 产品文档中查看更多产品信息。
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
  * @method Models\DeleteImagesResponse DeleteImages(Models\DeleteImagesRequest $req) 删除图片。
+
+>   
+- 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+
  * @method Models\DescribeGroupsResponse DescribeGroups(Models\DescribeGroupsRequest $req) 查询所有的图库信息。
+
+>   
+- 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 获取指定图片库中的图片列表。
+
+>   
+- 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+
  * @method Models\DetectChefDressResponse DetectChefDress(Models\DetectChefDressRequest $req) 可对图片中厨师穿戴进行识别，支持厨师服识别，厨师帽识别，赤膊识别和口罩识别,可应用于明厨亮灶场景。
 "被优选过滤"标签值在人体优选开关开启时才会返回。
 厨师服：厨师服定义为白色上衣
@@ -143,6 +181,9 @@ use TencentCloud\Tiia\V20190529\Models as Models;
 >?   
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
  * @method Models\SearchImageResponse SearchImage(Models\SearchImageRequest $req) 本接口用于对一张图片，在指定图片库中检索出与之相似的图片列表。
+
+>   
+- 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
  */
 
 class TiiaClient extends AbstractClient

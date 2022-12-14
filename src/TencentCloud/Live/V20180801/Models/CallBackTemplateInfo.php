@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPornCensorshipNotifyUrl(string $PornCensorshipNotifyUrl) 设置鉴黄回调 URL。
  * @method string getCallbackKey() 获取回调的鉴权 key。
  * @method void setCallbackKey(string $CallbackKey) 设置回调的鉴权 key。
+ * @method string getPushExceptionNotifyUrl() 获取推流异常回调 URL。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPushExceptionNotifyUrl(string $PushExceptionNotifyUrl) 设置推流异常回调 URL。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CallBackTemplateInfo extends AbstractModel
 {
@@ -94,6 +98,12 @@ class CallBackTemplateInfo extends AbstractModel
     public $CallbackKey;
 
     /**
+     * @var string 推流异常回调 URL。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PushExceptionNotifyUrl;
+
+    /**
      * @param integer $TemplateId 模板 ID。
      * @param string $TemplateName 模板名称。
      * @param string $Description 描述信息。
@@ -104,6 +114,8 @@ class CallBackTemplateInfo extends AbstractModel
      * @param string $SnapshotNotifyUrl 截图回调 URL。
      * @param string $PornCensorshipNotifyUrl 鉴黄回调 URL。
      * @param string $CallbackKey 回调的鉴权 key。
+     * @param string $PushExceptionNotifyUrl 推流异常回调 URL。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -156,6 +168,10 @@ class CallBackTemplateInfo extends AbstractModel
 
         if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
             $this->CallbackKey = $param["CallbackKey"];
+        }
+
+        if (array_key_exists("PushExceptionNotifyUrl",$param) and $param["PushExceptionNotifyUrl"] !== null) {
+            $this->PushExceptionNotifyUrl = $param["PushExceptionNotifyUrl"];
         }
     }
 }

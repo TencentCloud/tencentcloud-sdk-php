@@ -25,6 +25,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
 /**
  * @method Models\AddUsersForUserManagerResponse AddUsersForUserManager(Models\AddUsersForUserManagerRequest $req) 该接口支持安装了OpenLdap组件的集群。
 新增用户列表（用户管理）。
+ * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建EMR集群实例
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建EMR集群实例
  * @method Models\DeleteUserManagerUserListResponse DeleteUserManagerUserList(Models\DeleteUserManagerUserListRequest $req) 删除用户列表（用户管理）
 
@@ -47,6 +48,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(Models\ModifyResourceScheduleConfigRequest $req) 修改YARN资源调度的资源配置
  * @method Models\ModifyResourceSchedulerResponse ModifyResourceScheduler(Models\ModifyResourceSchedulerRequest $req) 修改了yarn的资源调度器，点击部署生效
  * @method Models\RunJobFlowResponse RunJobFlow(Models\RunJobFlowRequest $req) 创建流程作业
+ * @method Models\ScaleOutClusterResponse ScaleOutCluster(Models\ScaleOutClusterRequest $req) 扩容集群节点
  * @method Models\ScaleOutInstanceResponse ScaleOutInstance(Models\ScaleOutInstanceRequest $req) 扩容节点
  * @method Models\SyncPodStateResponse SyncPodState(Models\SyncPodStateRequest $req) EMR同步TKE中POD状态
  * @method Models\TerminateInstanceResponse TerminateInstance(Models\TerminateInstanceRequest $req) 销毁EMR实例。此接口仅支持弹性MapReduce正式计费版本。

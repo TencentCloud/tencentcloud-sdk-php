@@ -28,12 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetName(string $TargetName) 设置目标域名名称。
  * @method string getCertType() 获取证书配置，取值有：
 <li> none：不配置；</li>
-<li> hosting：SSL托管证书；</li>
-<li> apply：申请免费证书。</li>默认取值为 none。
+<li> hosting：SSL托管证书。</li>默认取值为 none。
  * @method void setCertType(string $CertType) 设置证书配置，取值有：
 <li> none：不配置；</li>
-<li> hosting：SSL托管证书；</li>
-<li> apply：申请免费证书。</li>默认取值为 none。
+<li> hosting：SSL托管证书。</li>默认取值为 none。
  * @method array getCertId() 获取当 CertType 取值为 hosting 时需填入相应证书 ID。
  * @method void setCertId(array $CertId) 设置当 CertType 取值为 hosting 时需填入相应证书 ID。
  */
@@ -57,8 +55,7 @@ class CreateAliasDomainRequest extends AbstractModel
     /**
      * @var string 证书配置，取值有：
 <li> none：不配置；</li>
-<li> hosting：SSL托管证书；</li>
-<li> apply：申请免费证书。</li>默认取值为 none。
+<li> hosting：SSL托管证书。</li>默认取值为 none。
      */
     public $CertType;
 
@@ -73,8 +70,7 @@ class CreateAliasDomainRequest extends AbstractModel
      * @param string $TargetName 目标域名名称。
      * @param string $CertType 证书配置，取值有：
 <li> none：不配置；</li>
-<li> hosting：SSL托管证书；</li>
-<li> apply：申请免费证书。</li>默认取值为 none。
+<li> hosting：SSL托管证书。</li>默认取值为 none。
      * @param array $CertId 当 CertType 取值为 hosting 时需填入相应证书 ID。
      */
     function __construct()

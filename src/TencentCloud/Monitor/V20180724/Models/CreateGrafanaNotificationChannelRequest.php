@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGrafanaNotificationChannel请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getChannelName() 获取渠道名
- * @method void setChannelName(string $ChannelName) 设置渠道名
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method string getChannelName() 获取告警通道名称，例如：test
+ * @method void setChannelName(string $ChannelName) 设置告警通道名称，例如：test
  * @method integer getOrgId() 获取默认为1，已废弃，请使用 OrganizationIds
  * @method void setOrgId(integer $OrgId) 设置默认为1，已废弃，请使用 OrganizationIds
  * @method array getReceivers() 获取接受告警通道 ID 数组
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateGrafanaNotificationChannelRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public $InstanceId;
 
     /**
-     * @var string 渠道名
+     * @var string 告警通道名称，例如：test
      */
     public $ChannelName;
 
@@ -66,8 +66,8 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
     public $OrganizationIds;
 
     /**
-     * @param string $InstanceId 实例 ID
-     * @param string $ChannelName 渠道名
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param string $ChannelName 告警通道名称，例如：test
      * @param integer $OrgId 默认为1，已废弃，请使用 OrganizationIds
      * @param array $Receivers 接受告警通道 ID 数组
      * @param array $ExtraOrgIds 额外组织 ID 数组，已废弃，请使用 OrganizationIds

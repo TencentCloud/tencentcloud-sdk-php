@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询偏移量
  * @method integer getLimit() 获取查询数量
  * @method void setLimit(integer $Limit) 设置查询数量
- * @method array getInstanceIds() 获取实例 ID 数组
- * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 数组
- * @method string getInstanceName() 获取实例名，支持前缀模糊搜索
- * @method void setInstanceName(string $InstanceName) 设置实例名，支持前缀模糊搜索
+ * @method array getInstanceIds() 获取Grafana 实例 ID 数组
+ * @method void setInstanceIds(array $InstanceIds) 设置Grafana 实例 ID 数组
+ * @method string getInstanceName() 获取Grafana 实例名，支持前缀模糊搜索
+ * @method void setInstanceName(string $InstanceName) 设置Grafana 实例名，支持前缀模糊搜索
  * @method array getInstanceStatus() 获取查询状态
  * @method void setInstanceStatus(array $InstanceStatus) 设置查询状态
  * @method array getTagFilters() 获取标签过滤数组
@@ -46,12 +46,12 @@ class DescribeGrafanaInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 实例 ID 数组
+     * @var array Grafana 实例 ID 数组
      */
     public $InstanceIds;
 
     /**
-     * @var string 实例名，支持前缀模糊搜索
+     * @var string Grafana 实例名，支持前缀模糊搜索
      */
     public $InstanceName;
 
@@ -68,8 +68,8 @@ class DescribeGrafanaInstancesRequest extends AbstractModel
     /**
      * @param integer $Offset 查询偏移量
      * @param integer $Limit 查询数量
-     * @param array $InstanceIds 实例 ID 数组
-     * @param string $InstanceName 实例名，支持前缀模糊搜索
+     * @param array $InstanceIds Grafana 实例 ID 数组
+     * @param string $InstanceName Grafana 实例名，支持前缀模糊搜索
      * @param array $InstanceStatus 查询状态
      * @param array $TagFilters 标签过滤数组
      */

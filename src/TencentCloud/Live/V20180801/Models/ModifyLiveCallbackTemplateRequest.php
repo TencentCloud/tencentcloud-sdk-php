@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 [事件消息通知](/document/product/267/32744)。
  * @method void setCallbackKey(string $CallbackKey) 设置回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
 [事件消息通知](/document/product/267/32744)。
+ * @method string getPushExceptionNotifyUrl() 获取推流异常回调 URL。
+ * @method void setPushExceptionNotifyUrl(string $PushExceptionNotifyUrl) 设置推流异常回调 URL。
  */
 class ModifyLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
     public $CallbackKey;
 
     /**
+     * @var string 推流异常回调 URL。
+     */
+    public $PushExceptionNotifyUrl;
+
+    /**
      * @param integer $TemplateId DescribeLiveCallbackTemplates接口返回的模板 ID。
      * @param string $TemplateName 模板名称。
      * @param string $Description 描述信息。
@@ -100,6 +107,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
      * @param string $PornCensorshipNotifyUrl 鉴黄回调 URL。
      * @param string $CallbackKey 回调 Key，回调 URL 公用，回调签名详见事件消息通知文档。
 [事件消息通知](/document/product/267/32744)。
+     * @param string $PushExceptionNotifyUrl 推流异常回调 URL。
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
 
         if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
             $this->CallbackKey = $param["CallbackKey"];
+        }
+
+        if (array_key_exists("PushExceptionNotifyUrl",$param) and $param["PushExceptionNotifyUrl"] !== null) {
+            $this->PushExceptionNotifyUrl = $param["PushExceptionNotifyUrl"];
         }
     }
 }

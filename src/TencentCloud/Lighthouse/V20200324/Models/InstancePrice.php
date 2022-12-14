@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscount(integer $Discount) 设置折扣。
  * @method float getDiscountPrice() 获取折后价。
  * @method void setDiscountPrice(float $DiscountPrice) 设置折后价。
+ * @method string getCurrency() 获取价格货币单位。取值范围CNY:人民币。USD:美元。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCurrency(string $Currency) 设置价格货币单位。取值范围CNY:人民币。USD:美元。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstancePrice extends AbstractModel
 {
@@ -52,10 +56,18 @@ class InstancePrice extends AbstractModel
     public $DiscountPrice;
 
     /**
+     * @var string 价格货币单位。取值范围CNY:人民币。USD:美元。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Currency;
+
+    /**
      * @param float $OriginalBundlePrice 套餐单价原价。
      * @param float $OriginalPrice 原价。
      * @param integer $Discount 折扣。
      * @param float $DiscountPrice 折后价。
+     * @param string $Currency 价格货币单位。取值范围CNY:人民币。USD:美元。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class InstancePrice extends AbstractModel
 
         if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
             $this->DiscountPrice = $param["DiscountPrice"];
+        }
+
+        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
+            $this->Currency = $param["Currency"];
         }
     }
 }

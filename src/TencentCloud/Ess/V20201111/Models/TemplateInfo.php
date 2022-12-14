@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置模板预览链接
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTemplateVersion() 获取模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateVersion(string $TemplateVersion) 设置模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getPublished() 获取模板是否已发布。true-已发布；false-未发布
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPublished(boolean $Published) 设置模板是否已发布。true-已发布；false-未发布
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
 {
@@ -139,6 +147,18 @@ class TemplateInfo extends AbstractModel
     public $PreviewUrl;
 
     /**
+     * @var string 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateVersion;
+
+    /**
+     * @var boolean 模板是否已发布。true-已发布；false-未发布
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Published;
+
+    /**
      * @param string $TemplateId 模板ID
      * @param string $TemplateName 模板名字
      * @param string $Description 模板描述信息
@@ -155,6 +175,10 @@ class TemplateInfo extends AbstractModel
      * @param Recipient $Promoter 发起人角色信息
      * @param string $OrganizationId 模板创建组织id
      * @param string $PreviewUrl 模板预览链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TemplateVersion 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Published 模板是否已发布。true-已发布；false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -253,6 +277,14 @@ class TemplateInfo extends AbstractModel
 
         if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
             $this->PreviewUrl = $param["PreviewUrl"];
+        }
+
+        if (array_key_exists("TemplateVersion",$param) and $param["TemplateVersion"] !== null) {
+            $this->TemplateVersion = $param["TemplateVersion"];
+        }
+
+        if (array_key_exists("Published",$param) and $param["Published"] !== null) {
+            $this->Published = $param["Published"];
         }
     }
 }

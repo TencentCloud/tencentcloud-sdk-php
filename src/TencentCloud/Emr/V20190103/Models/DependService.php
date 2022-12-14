@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CleanGrafanaInstance请求参数结构体
+ * 共用组件信息
  *
- * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
- * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method string getServiceName() 获取共用组件名
+ * @method void setServiceName(string $ServiceName) 设置共用组件名
+ * @method string getInstanceId() 获取共用组件集群
+ * @method void setInstanceId(string $InstanceId) 设置共用组件集群
  */
-class CleanGrafanaInstanceRequest extends AbstractModel
+class DependService extends AbstractModel
 {
     /**
-     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
+     * @var string 共用组件名
+     */
+    public $ServiceName;
+
+    /**
+     * @var string 共用组件集群
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param string $ServiceName 共用组件名
+     * @param string $InstanceId 共用组件集群
      */
     function __construct()
     {
@@ -46,6 +54,10 @@ class CleanGrafanaInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
+            $this->ServiceName = $param["ServiceName"];
+        }
+
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
         }

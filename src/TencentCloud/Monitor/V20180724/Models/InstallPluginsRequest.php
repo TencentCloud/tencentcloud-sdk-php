@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getPlugins() 获取插件信息
  * @method void setPlugins(array $Plugins) 设置插件信息
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
  */
 class InstallPluginsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class InstallPluginsRequest extends AbstractModel
     public $Plugins;
 
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public $InstanceId;
 
     /**
      * @param array $Plugins 插件信息
-     * @param string $InstanceId 实例 ID
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     function __construct()
     {

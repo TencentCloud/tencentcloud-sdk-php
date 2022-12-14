@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置资源名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取资源状态
+ * @method integer getStatus() 获取资源状态，1-正常，2-隔离，3-销毁
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置资源状态
+ * @method void setStatus(integer $Status) 设置资源状态，1-正常，2-隔离，3-销毁
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVip() 获取资源IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,9 +48,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModel(string $Model) 设置资源所属HSM规格
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVsmType() 获取资源类型
+ * @method integer getVsmType() 获取云加密机类型id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVsmType(integer $VsmType) 设置资源类型
+ * @method void setVsmType(integer $VsmType) 设置云加密机类型id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取地域Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -124,7 +124,7 @@ class ResourceInfo extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var integer 资源状态
+     * @var integer 资源状态，1-正常，2-隔离，3-销毁
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -154,7 +154,7 @@ class ResourceInfo extends AbstractModel
     public $Model;
 
     /**
-     * @var integer 资源类型
+     * @var integer 云加密机类型id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VsmType;
@@ -248,7 +248,7 @@ class ResourceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 资源名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 资源状态
+     * @param integer $Status 资源状态，1-正常，2-隔离，3-销毁
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip 资源IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -258,7 +258,7 @@ class ResourceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Model 资源所属HSM规格
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VsmType 资源类型
+     * @param integer $VsmType 云加密机类型id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId 地域Id
 注意：此字段可能返回 null，表示取不到有效值。

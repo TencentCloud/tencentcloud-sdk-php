@@ -46,8 +46,10 @@ use TencentCloud\Common\AbstractModel;
 该参数仅包年包月生效
  * @method void setAutoRenewFlag(boolean $AutoRenewFlag) 设置是否自动续费, 默认不自动续费.
 该参数仅包年包月生效
- * @method string getAutoProtectOpenConfig() 获取自动防护授权配置值, 不空则表示开启
- * @method void setAutoProtectOpenConfig(string $AutoProtectOpenConfig) 设置自动防护授权配置值, 不空则表示开启
+ * @method string getAutoProtectOpenConfig() 获取该字段作废
+ * @method void setAutoProtectOpenConfig(string $AutoProtectOpenConfig) 设置该字段作废
+ * @method OrderModifyObject getModifyConfig() 获取变配参数
+ * @method void setModifyConfig(OrderModifyObject $ModifyConfig) 设置变配参数
  */
 class CreateLicenseOrderRequest extends AbstractModel
 {
@@ -93,9 +95,14 @@ class CreateLicenseOrderRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var string 自动防护授权配置值, 不空则表示开启
+     * @var string 该字段作废
      */
     public $AutoProtectOpenConfig;
+
+    /**
+     * @var OrderModifyObject 变配参数
+     */
+    public $ModifyConfig;
 
     /**
      * @param array $Tags 标签数组, 空则表示不需要绑定标签
@@ -111,7 +118,8 @@ class CreateLicenseOrderRequest extends AbstractModel
 该参数仅包年包月生效
      * @param boolean $AutoRenewFlag 是否自动续费, 默认不自动续费.
 该参数仅包年包月生效
-     * @param string $AutoProtectOpenConfig 自动防护授权配置值, 不空则表示开启
+     * @param string $AutoProtectOpenConfig 该字段作废
+     * @param OrderModifyObject $ModifyConfig 变配参数
      */
     function __construct()
     {
@@ -161,6 +169,11 @@ class CreateLicenseOrderRequest extends AbstractModel
 
         if (array_key_exists("AutoProtectOpenConfig",$param) and $param["AutoProtectOpenConfig"] !== null) {
             $this->AutoProtectOpenConfig = $param["AutoProtectOpenConfig"];
+        }
+
+        if (array_key_exists("ModifyConfig",$param) and $param["ModifyConfig"] !== null) {
+            $this->ModifyConfig = new OrderModifyObject();
+            $this->ModifyConfig->deserialize($param["ModifyConfig"]);
         }
     }
 }

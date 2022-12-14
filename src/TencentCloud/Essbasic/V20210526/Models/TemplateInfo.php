@@ -44,11 +44,23 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChannelTemplateId() 获取渠道模板ID
- * @method void setChannelTemplateId(string $ChannelTemplateId) 设置渠道模板ID
  * @method string getPdfUrl() 获取渠道版-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPdfUrl(string $PdfUrl) 设置渠道版-模板PDF文件链接
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChannelTemplateId() 获取关联的渠道模板ID
+ * @method void setChannelTemplateId(string $ChannelTemplateId) 设置关联的渠道模板ID
+ * @method string getChannelTemplateName() 获取关联的渠道模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelTemplateName(string $ChannelTemplateName) 设置关联的渠道模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getChannelAutoSave() 获取0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setChannelAutoSave(integer $ChannelAutoSave) 设置0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTemplateVersion() 获取模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTemplateVersion(string $TemplateVersion) 设置模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
@@ -110,15 +122,33 @@ class TemplateInfo extends AbstractModel
     public $PreviewUrl;
 
     /**
-     * @var string 渠道模板ID
-     */
-    public $ChannelTemplateId;
-
-    /**
      * @var string 渠道版-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PdfUrl;
+
+    /**
+     * @var string 关联的渠道模板ID
+     */
+    public $ChannelTemplateId;
+
+    /**
+     * @var string 关联的渠道模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelTemplateName;
+
+    /**
+     * @var integer 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ChannelAutoSave;
+
+    /**
+     * @var string 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TemplateVersion;
 
     /**
      * @param string $TemplateId 模板ID
@@ -133,8 +163,14 @@ class TemplateInfo extends AbstractModel
      * @param integer $CreatedOn 模板创建的时间戳（精确到秒）
      * @param string $PreviewUrl 模板的H5预览链接,可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChannelTemplateId 渠道模板ID
      * @param string $PdfUrl 渠道版-模板PDF文件链接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChannelTemplateId 关联的渠道模板ID
+     * @param string $ChannelTemplateName 关联的渠道模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ChannelAutoSave 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TemplateVersion 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -209,12 +245,24 @@ class TemplateInfo extends AbstractModel
             $this->PreviewUrl = $param["PreviewUrl"];
         }
 
+        if (array_key_exists("PdfUrl",$param) and $param["PdfUrl"] !== null) {
+            $this->PdfUrl = $param["PdfUrl"];
+        }
+
         if (array_key_exists("ChannelTemplateId",$param) and $param["ChannelTemplateId"] !== null) {
             $this->ChannelTemplateId = $param["ChannelTemplateId"];
         }
 
-        if (array_key_exists("PdfUrl",$param) and $param["PdfUrl"] !== null) {
-            $this->PdfUrl = $param["PdfUrl"];
+        if (array_key_exists("ChannelTemplateName",$param) and $param["ChannelTemplateName"] !== null) {
+            $this->ChannelTemplateName = $param["ChannelTemplateName"];
+        }
+
+        if (array_key_exists("ChannelAutoSave",$param) and $param["ChannelAutoSave"] !== null) {
+            $this->ChannelAutoSave = $param["ChannelAutoSave"];
+        }
+
+        if (array_key_exists("TemplateVersion",$param) and $param["TemplateVersion"] !== null) {
+            $this->TemplateVersion = $param["TemplateVersion"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyId() 获取CMK唯一标识符
  * @method void setKeyId(string $KeyId) 设置CMK唯一标识符
+ * @method integer getRotateDays() 获取密钥轮转周期，单位天，允许范围 7 ~ 365，默认值 365。
+ * @method void setRotateDays(integer $RotateDays) 设置密钥轮转周期，单位天，允许范围 7 ~ 365，默认值 365。
  */
 class EnableKeyRotationRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class EnableKeyRotationRequest extends AbstractModel
     public $KeyId;
 
     /**
+     * @var integer 密钥轮转周期，单位天，允许范围 7 ~ 365，默认值 365。
+     */
+    public $RotateDays;
+
+    /**
      * @param string $KeyId CMK唯一标识符
+     * @param integer $RotateDays 密钥轮转周期，单位天，允许范围 7 ~ 365，默认值 365。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class EnableKeyRotationRequest extends AbstractModel
         }
         if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
             $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("RotateDays",$param) and $param["RotateDays"] !== null) {
+            $this->RotateDays = $param["RotateDays"];
         }
     }
 }

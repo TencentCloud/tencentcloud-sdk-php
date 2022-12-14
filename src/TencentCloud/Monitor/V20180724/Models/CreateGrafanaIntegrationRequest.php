@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGrafanaIntegration请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getKind() 获取类型
- * @method void setKind(string $Kind) 设置类型
- * @method string getContent() 获取配置
- * @method void setContent(string $Content) 设置配置
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method string getKind() 获取集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
+ * @method void setKind(string $Kind) 设置集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
+ * @method string getContent() 获取集成配置
+ * @method void setContent(string $Content) 设置集成配置
  */
 class CreateGrafanaIntegrationRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public $InstanceId;
 
     /**
-     * @var string 类型
+     * @var string 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
      */
     public $Kind;
 
     /**
-     * @var string 配置
+     * @var string 集成配置
      */
     public $Content;
 
     /**
-     * @param string $InstanceId 实例 ID
-     * @param string $Kind 类型
-     * @param string $Content 配置
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param string $Kind 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
+     * @param string $Content 集成配置
      */
     function __construct()
     {

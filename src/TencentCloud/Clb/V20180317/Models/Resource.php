@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(array $Type) 设置运营商内具体资源信息，如"CMCC", "CUCC", "CTCC", "BGP", "INTERNAL"。
  * @method string getIsp() 获取运营商信息，如"CMCC", "CUCC", "CTCC", "BGP", "INTERNAL"。
  * @method void setIsp(string $Isp) 设置运营商信息，如"CMCC", "CUCC", "CTCC", "BGP", "INTERNAL"。
+ * @method array getAvailabilitySet() 获取可用资源。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAvailabilitySet(array $AvailabilitySet) 设置可用资源。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
@@ -38,8 +42,16 @@ class Resource extends AbstractModel
     public $Isp;
 
     /**
+     * @var array 可用资源。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AvailabilitySet;
+
+    /**
      * @param array $Type 运营商内具体资源信息，如"CMCC", "CUCC", "CTCC", "BGP", "INTERNAL"。
      * @param string $Isp 运营商信息，如"CMCC", "CUCC", "CTCC", "BGP", "INTERNAL"。
+     * @param array $AvailabilitySet 可用资源。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,15 @@ class Resource extends AbstractModel
 
         if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
             $this->Isp = $param["Isp"];
+        }
+
+        if (array_key_exists("AvailabilitySet",$param) and $param["AvailabilitySet"] !== null) {
+            $this->AvailabilitySet = [];
+            foreach ($param["AvailabilitySet"] as $key => $value){
+                $obj = new ResourceAvailability();
+                $obj->deserialize($value);
+                array_push($this->AvailabilitySet, $obj);
+            }
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPublishCdnUrl() 获取CDN转推URL。
  * @method void setPublishCdnUrl(string $PublishCdnUrl) 设置CDN转推URL。
- * @method integer getIsTencentCdn() 获取是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：为避免误产生转推费用，该参数建议明确填写。转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明。
- * @method void setIsTencentCdn(integer $IsTencentCdn) 设置是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：为避免误产生转推费用，该参数建议明确填写。转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明。
+ * @method integer getIsTencentCdn() 获取是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
+ * @method void setIsTencentCdn(integer $IsTencentCdn) 设置是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
  */
 class McuPublishCdnParam extends AbstractModel
 {
@@ -33,13 +33,13 @@ class McuPublishCdnParam extends AbstractModel
     public $PublishCdnUrl;
 
     /**
-     * @var integer 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：为避免误产生转推费用，该参数建议明确填写。转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明。
+     * @var integer 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
      */
     public $IsTencentCdn;
 
     /**
      * @param string $PublishCdnUrl CDN转推URL。
-     * @param integer $IsTencentCdn 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：为避免误产生转推费用，该参数建议明确填写。转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明。
+     * @param integer $IsTencentCdn 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
      */
     function __construct()
     {

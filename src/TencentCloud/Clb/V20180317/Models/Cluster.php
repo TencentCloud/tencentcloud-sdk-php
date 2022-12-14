@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClustersVersion(string $ClustersVersion) 设置集群版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDisasterRecoveryType() 获取集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisasterRecoveryType(string $DisasterRecoveryType) 设置集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -226,6 +230,12 @@ class Cluster extends AbstractModel
     public $ClustersVersion;
 
     /**
+     * @var string 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisasterRecoveryType;
+
+    /**
      * @param string $ClusterId 集群唯一ID
      * @param string $ClusterName 集群名称
      * @param string $ClusterType 集群类型，如TGW，STGW，VPCGW
@@ -263,6 +273,8 @@ class Cluster extends AbstractModel
      * @param ClustersZone $ClustersZone 集群所在的可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClustersVersion 集群版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DisasterRecoveryType 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -365,6 +377,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("ClustersVersion",$param) and $param["ClustersVersion"] !== null) {
             $this->ClustersVersion = $param["ClustersVersion"];
+        }
+
+        if (array_key_exists("DisasterRecoveryType",$param) and $param["DisasterRecoveryType"] !== null) {
+            $this->DisasterRecoveryType = $param["DisasterRecoveryType"];
         }
     }
 }

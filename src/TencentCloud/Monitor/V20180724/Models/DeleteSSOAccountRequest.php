@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSSOAccount请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getUserId() 获取用户账号ID
- * @method void setUserId(string $UserId) 设置用户账号ID
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-abcdefgh
+ * @method string getUserId() 获取用户账号 ID ，例如：10000000
+ * @method void setUserId(string $UserId) 设置用户账号 ID ，例如：10000000
  */
 class DeleteSSOAccountRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public $InstanceId;
 
     /**
-     * @var string 用户账号ID
+     * @var string 用户账号 ID ，例如：10000000
      */
     public $UserId;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $UserId 用户账号ID
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param string $UserId 用户账号 ID ，例如：10000000
      */
     function __construct()
     {

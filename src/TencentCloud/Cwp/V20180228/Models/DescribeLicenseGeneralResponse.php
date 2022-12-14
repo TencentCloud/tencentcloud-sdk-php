@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCwpVersionLicenseCnt(integer $CwpVersionLicenseCnt) 设置普惠版总授权数(有效订单的授权数)
  * @method integer getAvailableLHLicenseCnt() 获取可用惠普版授权数
  * @method void setAvailableLHLicenseCnt(integer $AvailableLHLicenseCnt) 设置可用惠普版授权数
+ * @method boolean getAutoRepurchaseSwitch() 获取自动加购开关, true 开启, false 关闭
+ * @method void setAutoRepurchaseSwitch(boolean $AutoRepurchaseSwitch) 设置自动加购开关, true 开启, false 关闭
+ * @method boolean getAutoRepurchaseRenewSwitch() 获取自动加购订单是否自动续费 ,true 开启, false 关闭
+ * @method void setAutoRepurchaseRenewSwitch(boolean $AutoRepurchaseRenewSwitch) 设置自动加购订单是否自动续费 ,true 开启, false 关闭
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -131,6 +135,16 @@ class DescribeLicenseGeneralResponse extends AbstractModel
     public $AvailableLHLicenseCnt;
 
     /**
+     * @var boolean 自动加购开关, true 开启, false 关闭
+     */
+    public $AutoRepurchaseSwitch;
+
+    /**
+     * @var boolean 自动加购订单是否自动续费 ,true 开启, false 关闭
+     */
+    public $AutoRepurchaseRenewSwitch;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -151,6 +165,8 @@ class DescribeLicenseGeneralResponse extends AbstractModel
      * @param integer $ProVersionLicenseCnt 专业版总授权数(有效订单)
      * @param integer $CwpVersionLicenseCnt 普惠版总授权数(有效订单的授权数)
      * @param integer $AvailableLHLicenseCnt 可用惠普版授权数
+     * @param boolean $AutoRepurchaseSwitch 自动加购开关, true 开启, false 关闭
+     * @param boolean $AutoRepurchaseRenewSwitch 自动加购订单是否自动续费 ,true 开启, false 关闭
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -224,6 +240,14 @@ class DescribeLicenseGeneralResponse extends AbstractModel
 
         if (array_key_exists("AvailableLHLicenseCnt",$param) and $param["AvailableLHLicenseCnt"] !== null) {
             $this->AvailableLHLicenseCnt = $param["AvailableLHLicenseCnt"];
+        }
+
+        if (array_key_exists("AutoRepurchaseSwitch",$param) and $param["AutoRepurchaseSwitch"] !== null) {
+            $this->AutoRepurchaseSwitch = $param["AutoRepurchaseSwitch"];
+        }
+
+        if (array_key_exists("AutoRepurchaseRenewSwitch",$param) and $param["AutoRepurchaseRenewSwitch"] !== null) {
+            $this->AutoRepurchaseRenewSwitch = $param["AutoRepurchaseRenewSwitch"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

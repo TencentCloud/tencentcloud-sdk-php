@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGrafanaIntegration请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
- * @method string getIntegrationId() 获取集成 ID
- * @method void setIntegrationId(string $IntegrationId) 设置集成 ID
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-12345678
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-12345678
+ * @method string getIntegrationId() 获取集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234
+ * @method void setIntegrationId(string $IntegrationId) 设置集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234
  */
 class DeleteGrafanaIntegrationRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-12345678
      */
     public $InstanceId;
 
     /**
-     * @var string 集成 ID
+     * @var string 集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234
      */
     public $IntegrationId;
 
     /**
-     * @param string $InstanceId 实例 ID
-     * @param string $IntegrationId 集成 ID
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-12345678
+     * @param string $IntegrationId 集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234
      */
     function __construct()
     {

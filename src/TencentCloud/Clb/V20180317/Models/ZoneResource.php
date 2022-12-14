@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneRegion(string $ZoneRegion) 设置可用区所属地域，如：ap-guangzhou
  * @method boolean getLocalZone() 获取可用区是否是LocalZone可用区，如：false
  * @method void setLocalZone(boolean $LocalZone) 设置可用区是否是LocalZone可用区，如：false
+ * @method string getZoneResourceType() 获取可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
+ * @method void setZoneResourceType(string $ZoneResourceType) 设置可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
+ * @method boolean getEdgeZone() 获取可用区是否是EdgeZone可用区，如：false
+ * @method void setEdgeZone(boolean $EdgeZone) 设置可用区是否是EdgeZone可用区，如：false
  */
 class ZoneResource extends AbstractModel
 {
@@ -72,6 +76,16 @@ class ZoneResource extends AbstractModel
     public $LocalZone;
 
     /**
+     * @var string 可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
+     */
+    public $ZoneResourceType;
+
+    /**
+     * @var boolean 可用区是否是EdgeZone可用区，如：false
+     */
+    public $EdgeZone;
+
+    /**
      * @param string $MasterZone 主可用区，如"ap-guangzhou-1"。
      * @param array $ResourceSet 资源列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -80,6 +94,8 @@ class ZoneResource extends AbstractModel
      * @param string $IPVersion IP版本，如IPv4，IPv6，IPv6_Nat。
      * @param string $ZoneRegion 可用区所属地域，如：ap-guangzhou
      * @param boolean $LocalZone 可用区是否是LocalZone可用区，如：false
+     * @param string $ZoneResourceType 可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
+     * @param boolean $EdgeZone 可用区是否是EdgeZone可用区，如：false
      */
     function __construct()
     {
@@ -121,6 +137,14 @@ class ZoneResource extends AbstractModel
 
         if (array_key_exists("LocalZone",$param) and $param["LocalZone"] !== null) {
             $this->LocalZone = $param["LocalZone"];
+        }
+
+        if (array_key_exists("ZoneResourceType",$param) and $param["ZoneResourceType"] !== null) {
+            $this->ZoneResourceType = $param["ZoneResourceType"];
+        }
+
+        if (array_key_exists("EdgeZone",$param) and $param["EdgeZone"] !== null) {
+            $this->EdgeZone = $param["EdgeZone"];
         }
     }
 }

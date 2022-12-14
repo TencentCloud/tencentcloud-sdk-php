@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancePrice(InstancePrice $InstancePrice) 设置询价信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDiscountDetail() 获取折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiscountDetail(array $DiscountDetail) 设置折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstancePriceDetail extends AbstractModel
 {
@@ -44,9 +48,17 @@ class InstancePriceDetail extends AbstractModel
     public $InstancePrice;
 
     /**
+     * @var array 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiscountDetail;
+
+    /**
      * @param string $InstanceId 实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancePrice $InstancePrice 询价信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DiscountDetail 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -69,6 +81,15 @@ class InstancePriceDetail extends AbstractModel
         if (array_key_exists("InstancePrice",$param) and $param["InstancePrice"] !== null) {
             $this->InstancePrice = new InstancePrice();
             $this->InstancePrice->deserialize($param["InstancePrice"]);
+        }
+
+        if (array_key_exists("DiscountDetail",$param) and $param["DiscountDetail"] !== null) {
+            $this->DiscountDetail = [];
+            foreach ($param["DiscountDetail"] as $key => $value){
+                $obj = new DiscountDetail();
+                $obj->deserialize($value);
+                array_push($this->DiscountDetail, $obj);
+            }
         }
     }
 }

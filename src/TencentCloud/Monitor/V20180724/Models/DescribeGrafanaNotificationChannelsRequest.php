@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaNotificationChannels请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getInstanceId() 获取Grafana 实例 ID，例如：grafana-12345678
+ * @method void setInstanceId(string $InstanceId) 设置Grafana 实例 ID，例如：grafana-12345678
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取查询数量
  * @method void setLimit(integer $Limit) 设置查询数量
- * @method string getChannelName() 获取渠道名
- * @method void setChannelName(string $ChannelName) 设置渠道名
- * @method array getChannelIDs() 获取渠道 ID
- * @method void setChannelIDs(array $ChannelIDs) 设置渠道 ID
- * @method integer getChannelState() 获取状态
- * @method void setChannelState(integer $ChannelState) 设置状态
+ * @method string getChannelName() 获取告警通道名称，例如：test
+ * @method void setChannelName(string $ChannelName) 设置告警通道名称，例如：test
+ * @method array getChannelIDs() 获取告警通道 ID，例如：nchannel-abcd1234
+ * @method void setChannelIDs(array $ChannelIDs) 设置告警通道 ID，例如：nchannel-abcd1234
+ * @method integer getChannelState() 获取告警通道状态
+ * @method void setChannelState(integer $ChannelState) 设置告警通道状态
  */
 class DescribeGrafanaNotificationChannelsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string Grafana 实例 ID，例如：grafana-12345678
      */
     public $InstanceId;
 
@@ -51,27 +51,27 @@ class DescribeGrafanaNotificationChannelsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 渠道名
+     * @var string 告警通道名称，例如：test
      */
     public $ChannelName;
 
     /**
-     * @var array 渠道 ID
+     * @var array 告警通道 ID，例如：nchannel-abcd1234
      */
     public $ChannelIDs;
 
     /**
-     * @var integer 状态
+     * @var integer 告警通道状态
      */
     public $ChannelState;
 
     /**
-     * @param string $InstanceId 实例 ID
+     * @param string $InstanceId Grafana 实例 ID，例如：grafana-12345678
      * @param integer $Offset 偏移量
      * @param integer $Limit 查询数量
-     * @param string $ChannelName 渠道名
-     * @param array $ChannelIDs 渠道 ID
-     * @param integer $ChannelState 状态
+     * @param string $ChannelName 告警通道名称，例如：test
+     * @param array $ChannelIDs 告警通道 ID，例如：nchannel-abcd1234
+     * @param integer $ChannelState 告警通道状态
      */
     function __construct()
     {

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateClusterNodePoolFromExistingAsg请求参数结构体
+ * VPC 参数
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getAutoscalingGroupId() 获取伸缩组ID
- * @method void setAutoscalingGroupId(string $AutoscalingGroupId) 设置伸缩组ID
+ * @method string getVpcId() 获取VPC ID
+ * @method void setVpcId(string $VpcId) 设置VPC ID
+ * @method string getSubnetId() 获取Subnet ID
+ * @method void setSubnetId(string $SubnetId) 设置Subnet ID
  */
-class CreateClusterNodePoolFromExistingAsgRequest extends AbstractModel
+class VirtualPrivateCloud extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string VPC ID
      */
-    public $ClusterId;
+    public $VpcId;
 
     /**
-     * @var string 伸缩组ID
+     * @var string Subnet ID
      */
-    public $AutoscalingGroupId;
+    public $SubnetId;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $AutoscalingGroupId 伸缩组ID
+     * @param string $VpcId VPC ID
+     * @param string $SubnetId Subnet ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class CreateClusterNodePoolFromExistingAsgRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
-        if (array_key_exists("AutoscalingGroupId",$param) and $param["AutoscalingGroupId"] !== null) {
-            $this->AutoscalingGroupId = $param["AutoscalingGroupId"];
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

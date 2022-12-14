@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
+ * @method string getServiceType() 获取挂载的PAAS服务类型，CLB,CDB,CRS
+ * @method void setServiceType(string $ServiceType) 设置挂载的PAAS服务类型，CLB,CDB,CRS
  */
 class EndPointService extends AbstractModel
 {
@@ -100,6 +102,11 @@ class EndPointService extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 挂载的PAAS服务类型，CLB,CDB,CRS
+     */
+    public $ServiceType;
+
+    /**
      * @param string $EndPointServiceId 终端节点服务ID
      * @param string $VpcId VPCID。
      * @param string $ServiceOwner APPID。
@@ -112,6 +119,7 @@ class EndPointService extends AbstractModel
      * @param array $EndPointSet 终端节点对象数组。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
+     * @param string $ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class EndPointService extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
         }
     }
 }

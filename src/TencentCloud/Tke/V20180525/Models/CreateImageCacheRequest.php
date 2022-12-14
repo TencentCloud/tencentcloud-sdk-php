@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageCacheSize(integer $ImageCacheSize) 设置镜像缓存的大小。默认为20 GiB。取值范围参考[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)中的高性能云盘类型的大小限制。
  * @method integer getRetentionDays() 获取镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
  * @method void setRetentionDays(integer $RetentionDays) 设置镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+ * @method array getRegistrySkipVerifyList() 获取指定拉取镜像仓库的镜像时不校验证书。如["harbor.example.com"]。
+ * @method void setRegistrySkipVerifyList(array $RegistrySkipVerifyList) 设置指定拉取镜像仓库的镜像时不校验证书。如["harbor.example.com"]。
+ * @method array getRegistryHttpEndPointList() 获取指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。
+ * @method void setRegistryHttpEndPointList(array $RegistryHttpEndPointList) 设置指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。
+ * @method string getResolveConfig() 获取自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
+"nameserver 4.4.4.4\nnameserver 8.8.8.8"
+ * @method void setResolveConfig(string $ResolveConfig) 设置自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
+"nameserver 4.4.4.4\nnameserver 8.8.8.8"
  */
 class CreateImageCacheRequest extends AbstractModel
 {
@@ -104,6 +112,22 @@ class CreateImageCacheRequest extends AbstractModel
     public $RetentionDays;
 
     /**
+     * @var array 指定拉取镜像仓库的镜像时不校验证书。如["harbor.example.com"]。
+     */
+    public $RegistrySkipVerifyList;
+
+    /**
+     * @var array 指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。
+     */
+    public $RegistryHttpEndPointList;
+
+    /**
+     * @var string 自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
+"nameserver 4.4.4.4\nnameserver 8.8.8.8"
+     */
+    public $ResolveConfig;
+
+    /**
      * @param array $Images 用于制作镜像缓存的容器镜像列表
      * @param string $SubnetId 实例所属子网Id
      * @param string $VpcId 实例所属VPC Id
@@ -116,6 +140,10 @@ class CreateImageCacheRequest extends AbstractModel
 另外此参数和ExistedEipIds互斥
      * @param integer $ImageCacheSize 镜像缓存的大小。默认为20 GiB。取值范围参考[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)中的高性能云盘类型的大小限制。
      * @param integer $RetentionDays 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+     * @param array $RegistrySkipVerifyList 指定拉取镜像仓库的镜像时不校验证书。如["harbor.example.com"]。
+     * @param array $RegistryHttpEndPointList 指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。
+     * @param string $ResolveConfig 自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
+"nameserver 4.4.4.4\nnameserver 8.8.8.8"
      */
     function __construct()
     {
@@ -178,6 +206,18 @@ class CreateImageCacheRequest extends AbstractModel
 
         if (array_key_exists("RetentionDays",$param) and $param["RetentionDays"] !== null) {
             $this->RetentionDays = $param["RetentionDays"];
+        }
+
+        if (array_key_exists("RegistrySkipVerifyList",$param) and $param["RegistrySkipVerifyList"] !== null) {
+            $this->RegistrySkipVerifyList = $param["RegistrySkipVerifyList"];
+        }
+
+        if (array_key_exists("RegistryHttpEndPointList",$param) and $param["RegistryHttpEndPointList"] !== null) {
+            $this->RegistryHttpEndPointList = $param["RegistryHttpEndPointList"];
+        }
+
+        if (array_key_exists("ResolveConfig",$param) and $param["ResolveConfig"] !== null) {
+            $this->ResolveConfig = $param["ResolveConfig"];
         }
     }
 }

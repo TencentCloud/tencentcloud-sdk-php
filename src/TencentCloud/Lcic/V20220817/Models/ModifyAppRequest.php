@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
- * @method string getCallback() 获取回调地址。
- * @method void setCallback(string $Callback) 设置回调地址。
+ * @method string getCallback() 获取回调地址。端口目前仅支持80、443
+ * @method void setCallback(string $Callback) 设置回调地址。端口目前仅支持80、443
  */
 class ModifyAppRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyAppRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string 回调地址。
+     * @var string 回调地址。端口目前仅支持80、443
      */
     public $Callback;
 
     /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
-     * @param string $Callback 回调地址。
+     * @param string $Callback 回调地址。端口目前仅支持80、443
      */
     function __construct()
     {

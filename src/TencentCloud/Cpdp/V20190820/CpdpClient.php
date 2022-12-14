@@ -163,6 +163,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryFlexPayeeInfoResponse QueryFlexPayeeInfo(Models\QueryFlexPayeeInfoRequest $req) 灵云V2-收款用户信息查询
  * @method Models\QueryFlexPaymentOrderListResponse QueryFlexPaymentOrderList(Models\QueryFlexPaymentOrderListRequest $req) 灵云V2-查询付款订单列表
  * @method Models\QueryFlexPaymentOrderStatusResponse QueryFlexPaymentOrderStatus(Models\QueryFlexPaymentOrderStatusRequest $req) 灵云V2-查询付款订单状态
+ * @method Models\QueryFlexPlatformAccountBalanceResponse QueryFlexPlatformAccountBalance(Models\QueryFlexPlatformAccountBalanceRequest $req) 灵云V2-平台账户余额查询
  * @method Models\QueryFlexSettlementOrderListResponse QueryFlexSettlementOrderList(Models\QueryFlexSettlementOrderListRequest $req) 灵云V2-查询结算订单列表
  * @method Models\QueryFundsTransactionDetailsResponse QueryFundsTransactionDetails(Models\QueryFundsTransactionDetailsRequest $req) 聚鑫-查询会员资金交易信息列表
  * @method Models\QueryInvoiceResponse QueryInvoice(Models\QueryInvoiceRequest $req) 智慧零售-发票查询

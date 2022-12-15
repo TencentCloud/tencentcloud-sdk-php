@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置查询过滤器
  * @method SortType getSortInfo() 获取排序字段
  * @method void setSortInfo(SortType $SortInfo) 设置排序字段
+ * @method string getEnvironmentId() 获取环境id
+ * @method void setEnvironmentId(string $EnvironmentId) 设置环境id
  */
 class DescribeEnvironmentsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeEnvironmentsRequest extends AbstractModel
     public $SortInfo;
 
     /**
+     * @var string 环境id
+     */
+    public $EnvironmentId;
+
+    /**
      * @param integer $Limit 分页limit
      * @param integer $Offset 分页下标
      * @param integer $SourceChannel 来源source
      * @param array $Filters 查询过滤器
      * @param SortType $SortInfo 排序字段
+     * @param string $EnvironmentId 环境id
      */
     function __construct()
     {
@@ -102,6 +110,10 @@ class DescribeEnvironmentsRequest extends AbstractModel
         if (array_key_exists("SortInfo",$param) and $param["SortInfo"] !== null) {
             $this->SortInfo = new SortType();
             $this->SortInfo->deserialize($param["SortInfo"]);
+        }
+
+        if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
+            $this->EnvironmentId = $param["EnvironmentId"];
         }
     }
 }

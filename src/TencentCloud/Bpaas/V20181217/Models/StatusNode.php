@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfName(string $ScfName) 设置scf函数名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSubStatus() 获取状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）
+ * @method integer getSubStatus() 获取状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubStatus(integer $SubStatus) 设置状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）
+ * @method void setSubStatus(integer $SubStatus) 设置状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApprovedUin() 获取审批节点审批人
 注意：此字段可能返回 null，表示取不到有效值。
@@ -76,6 +76,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallMethod(integer $CallMethod) 设置外部审批类型 scf:0或null ; CKafka:1
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataHubId() 获取CKafka - 接入资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataHubId(string $DataHubId) 设置CKafka - 接入资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskName() 获取CKafka - 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskName(string $TaskName) 设置CKafka - 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCKafkaRegion() 获取CKafka - 地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCKafkaRegion(string $CKafkaRegion) 设置CKafka - 地域
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExternalUrl() 获取外部审批Url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExternalUrl(string $ExternalUrl) 设置外部审批Url
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatusNode extends AbstractModel
 {
@@ -112,7 +128,7 @@ class StatusNode extends AbstractModel
     public $ScfName;
 
     /**
-     * @var integer 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）
+     * @var integer 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubStatus;
@@ -172,6 +188,30 @@ class StatusNode extends AbstractModel
     public $CallMethod;
 
     /**
+     * @var string CKafka - 接入资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataHubId;
+
+    /**
+     * @var string CKafka - 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskName;
+
+    /**
+     * @var string CKafka - 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CKafkaRegion;
+
+    /**
+     * @var string 外部审批Url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExternalUrl;
+
+    /**
      * @param string $NodeId 节点id
      * @param string $NodeName 节点名称
      * @param integer $NodeType 节点类型 1:审批节点 2:执行节点 3:条件节点
@@ -180,7 +220,7 @@ class StatusNode extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScfName scf函数名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SubStatus 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）
+     * @param integer $SubStatus 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ApprovedUin 审批节点审批人
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,6 +239,14 @@ class StatusNode extends AbstractModel
      * @param integer $ApproveType 审批节点审批类型，1人工审批 2自动通过 3自动决绝 4外部审批scf
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CallMethod 外部审批类型 scf:0或null ; CKafka:1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataHubId CKafka - 接入资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskName CKafka - 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CKafkaRegion CKafka - 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExternalUrl 外部审批Url
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -278,6 +326,22 @@ class StatusNode extends AbstractModel
 
         if (array_key_exists("CallMethod",$param) and $param["CallMethod"] !== null) {
             $this->CallMethod = $param["CallMethod"];
+        }
+
+        if (array_key_exists("DataHubId",$param) and $param["DataHubId"] !== null) {
+            $this->DataHubId = $param["DataHubId"];
+        }
+
+        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
+            $this->TaskName = $param["TaskName"];
+        }
+
+        if (array_key_exists("CKafkaRegion",$param) and $param["CKafkaRegion"] !== null) {
+            $this->CKafkaRegion = $param["CKafkaRegion"];
+        }
+
+        if (array_key_exists("ExternalUrl",$param) and $param["ExternalUrl"] !== null) {
+            $this->ExternalUrl = $param["ExternalUrl"];
         }
     }
 }

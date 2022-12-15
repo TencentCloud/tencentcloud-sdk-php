@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取参数个数
  * @method void setTotalCount(integer $TotalCount) 设置参数个数
  * @method array getItems() 获取实例参数列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置实例参数列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,6 +38,7 @@ class DescribeClusterParamsResponse extends AbstractModel
 
     /**
      * @var array 实例参数列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
@@ -47,6 +50,7 @@ class DescribeClusterParamsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 参数个数
      * @param array $Items 实例参数列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

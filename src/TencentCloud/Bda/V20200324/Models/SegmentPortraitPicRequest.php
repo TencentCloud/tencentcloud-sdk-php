@@ -38,8 +38,16 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
- * @method string getRspImgType() 获取返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
- * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+ * @method string getRspImgType() 获取返回图像方式（base64 或 Url ) ，二选一。url有效期为30分钟。
+ * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 Url ) ，二选一。url有效期为30分钟。
+ * @method string getScene() 获取适用场景类型。
+
+取值：GEN/GS。GEN为通用场景模式；GS为绿幕场景模式，针对绿幕场景下的人像分割效果更好。
+两种模式选择一种传入，默认为GEN。
+ * @method void setScene(string $Scene) 设置适用场景类型。
+
+取值：GEN/GS。GEN为通用场景模式；GS为绿幕场景模式，针对绿幕场景下的人像分割效果更好。
+两种模式选择一种传入，默认为GEN。
  */
 class SegmentPortraitPicRequest extends AbstractModel
 {
@@ -61,9 +69,17 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     public $Url;
 
     /**
-     * @var string 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+     * @var string 返回图像方式（base64 或 Url ) ，二选一。url有效期为30分钟。
      */
     public $RspImgType;
+
+    /**
+     * @var string 适用场景类型。
+
+取值：GEN/GS。GEN为通用场景模式；GS为绿幕场景模式，针对绿幕场景下的人像分割效果更好。
+两种模式选择一种传入，默认为GEN。
+     */
+    public $Scene;
 
     /**
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过5M。
@@ -75,7 +91,11 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。  
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-     * @param string $RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+     * @param string $RspImgType 返回图像方式（base64 或 Url ) ，二选一。url有效期为30分钟。
+     * @param string $Scene 适用场景类型。
+
+取值：GEN/GS。GEN为通用场景模式；GS为绿幕场景模式，针对绿幕场景下的人像分割效果更好。
+两种模式选择一种传入，默认为GEN。
      */
     function __construct()
     {
@@ -100,6 +120,10 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
         if (array_key_exists("RspImgType",$param) and $param["RspImgType"] !== null) {
             $this->RspImgType = $param["RspImgType"];
+        }
+
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
         }
     }
 }

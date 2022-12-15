@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 复制组实例
  *
- * @method integer getAppId() 获取用户AppID
- * @method void setAppId(integer $AppId) 设置用户AppID
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getRegionId() 获取地域ID 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
- * @method void setRegionId(integer $RegionId) 设置地域ID 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
- * @method integer getZoneId() 获取区域ID
- * @method void setZoneId(integer $ZoneId) 设置区域ID
- * @method integer getRedisReplicasNum() 获取副本数量
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量
- * @method integer getRedisShardNum() 获取分片数量
- * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量
- * @method integer getRedisShardSize() 获取分片大小
- * @method void setRedisShardSize(integer $RedisShardSize) 设置分片大小
+ * @method integer getAppId() 获取用户AppID。
+ * @method void setAppId(integer $AppId) 设置用户AppID。
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getInstanceName() 获取实例名称。
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。
+ * @method integer getRegionId() 获取地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
+ * @method void setRegionId(integer $RegionId) 设置地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
+ * @method integer getZoneId() 获取区域 ID。
+ * @method void setZoneId(integer $ZoneId) 设置区域 ID。
+ * @method integer getRedisReplicasNum() 获取副本数量。
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量。
+ * @method integer getRedisShardNum() 获取分片数量。
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量。
+ * @method integer getRedisShardSize() 获取分片内存大小。
+ * @method void setRedisShardSize(integer $RedisShardSize) 设置分片内存大小。
  * @method integer getDiskSize() 获取实例的磁盘大小
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置实例的磁盘大小
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV
- * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV
- * @method string getRole() 获取实例角色，rw可读写，r只读
- * @method void setRole(string $Role) 设置实例角色，rw可读写，r只读
- * @method string getVip() 获取实例VIP
- * @method void setVip(string $Vip) 设置实例VIP
- * @method string getVip6() 获取内部参数，用户可忽略
+ * @method string getEngine() 获取引擎：社区版Redis、腾讯云CKV。
+ * @method void setEngine(string $Engine) 设置引擎：社区版Redis、腾讯云CKV。
+ * @method string getRole() 获取实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
+ * @method void setRole(string $Role) 设置实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
+ * @method string getVip() 获取实例 VIP 地址。
+ * @method void setVip(string $Vip) 设置实例 VIP 地址。
+ * @method string getVip6() 获取内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVip6(string $Vip6) 设置内部参数，用户可忽略
+ * @method void setVip6(string $Vip6) 设置内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVpcID() 获取vpc网络ID 如：75101
- * @method void setVpcID(integer $VpcID) 设置vpc网络ID 如：75101
- * @method integer getVPort() 获取实例端口
- * @method void setVPort(integer $VPort) 设置实例端口
- * @method integer getStatus() 获取实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
- * @method void setStatus(integer $Status) 设置实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
- * @method integer getGrocerySysId() 获取仓库ID
- * @method void setGrocerySysId(integer $GrocerySysId) 设置仓库ID
- * @method integer getProductType() 获取实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
- * @method void setProductType(integer $ProductType) 设置实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取更新实例
- * @method void setUpdateTime(string $UpdateTime) 设置更新实例
+ * @method integer getVpcID() 获取VPC 网络ID，如：75101。
+ * @method void setVpcID(integer $VpcID) 设置VPC 网络ID，如：75101。
+ * @method integer getVPort() 获取实例端口。
+ * @method void setVPort(integer $VPort) 设置实例端口。
+ * @method integer getStatus() 获取实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+ * @method void setStatus(integer $Status) 设置实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+ * @method integer getGrocerySysId() 获取仓库ID。
+ * @method void setGrocerySysId(integer $GrocerySysId) 设置仓库ID。
+ * @method integer getProductType() 获取实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul>
+ * @method void setProductType(integer $ProductType) 设置实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul>
+ * @method string getCreateTime() 获取实例加入复制组的时间。
+ * @method void setCreateTime(string $CreateTime) 设置实例加入复制组的时间。
+ * @method string getUpdateTime() 获取复制组中实例更新的时间。
+ * @method void setUpdateTime(string $UpdateTime) 设置复制组中实例更新的时间。
  */
 class Instances extends AbstractModel
 {
     /**
-     * @var integer 用户AppID
+     * @var integer 用户AppID。
      */
     public $AppId;
 
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string 实例名称。
      */
     public $InstanceName;
 
     /**
-     * @var integer 地域ID 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+     * @var integer 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
      */
     public $RegionId;
 
     /**
-     * @var integer 区域ID
+     * @var integer 区域 ID。
      */
     public $ZoneId;
 
     /**
-     * @var integer 副本数量
+     * @var integer 副本数量。
      */
     public $RedisReplicasNum;
 
     /**
-     * @var integer 分片数量
+     * @var integer 分片数量。
      */
     public $RedisShardNum;
 
     /**
-     * @var integer 分片大小
+     * @var integer 分片内存大小。
      */
     public $RedisShardSize;
 
@@ -114,84 +114,84 @@ class Instances extends AbstractModel
     public $DiskSize;
 
     /**
-     * @var string 引擎：社区版Redis、腾讯云CKV
+     * @var string 引擎：社区版Redis、腾讯云CKV。
      */
     public $Engine;
 
     /**
-     * @var string 实例角色，rw可读写，r只读
+     * @var string 实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
      */
     public $Role;
 
     /**
-     * @var string 实例VIP
+     * @var string 实例 VIP 地址。
      */
     public $Vip;
 
     /**
-     * @var string 内部参数，用户可忽略
+     * @var string 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip6;
 
     /**
-     * @var integer vpc网络ID 如：75101
+     * @var integer VPC 网络ID，如：75101。
      */
     public $VpcID;
 
     /**
-     * @var integer 实例端口
+     * @var integer 实例端口。
      */
     public $VPort;
 
     /**
-     * @var integer 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     * @var integer 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
      */
     public $Status;
 
     /**
-     * @var integer 仓库ID
+     * @var integer 仓库ID。
      */
     public $GrocerySysId;
 
     /**
-     * @var integer 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+     * @var integer 实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul>
      */
     public $ProductType;
 
     /**
-     * @var string 创建时间
+     * @var string 实例加入复制组的时间。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新实例
+     * @var string 复制组中实例更新的时间。
      */
     public $UpdateTime;
 
     /**
-     * @param integer $AppId 用户AppID
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
-     * @param integer $RegionId 地域ID 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
-     * @param integer $ZoneId 区域ID
-     * @param integer $RedisReplicasNum 副本数量
-     * @param integer $RedisShardNum 分片数量
-     * @param integer $RedisShardSize 分片大小
+     * @param integer $AppId 用户AppID。
+     * @param string $InstanceId 实例 ID。
+     * @param string $InstanceName 实例名称。
+     * @param integer $RegionId 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
+     * @param integer $ZoneId 区域 ID。
+     * @param integer $RedisReplicasNum 副本数量。
+     * @param integer $RedisShardNum 分片数量。
+     * @param integer $RedisShardSize 分片内存大小。
      * @param integer $DiskSize 实例的磁盘大小
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Engine 引擎：社区版Redis、腾讯云CKV
-     * @param string $Role 实例角色，rw可读写，r只读
-     * @param string $Vip 实例VIP
-     * @param string $Vip6 内部参数，用户可忽略
+     * @param string $Engine 引擎：社区版Redis、腾讯云CKV。
+     * @param string $Role 实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
+     * @param string $Vip 实例 VIP 地址。
+     * @param string $Vip6 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VpcID vpc网络ID 如：75101
-     * @param integer $VPort 实例端口
-     * @param integer $Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
-     * @param integer $GrocerySysId 仓库ID
-     * @param integer $ProductType 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 更新实例
+     * @param integer $VpcID VPC 网络ID，如：75101。
+     * @param integer $VPort 实例端口。
+     * @param integer $Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+     * @param integer $GrocerySysId 仓库ID。
+     * @param integer $ProductType 实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul>
+     * @param string $CreateTime 实例加入复制组的时间。
+     * @param string $UpdateTime 复制组中实例更新的时间。
      */
     function __construct()
     {

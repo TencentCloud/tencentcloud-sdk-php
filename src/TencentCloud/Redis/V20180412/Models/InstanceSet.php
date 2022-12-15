@@ -18,28 +18,28 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例详细信息列表
+ * 实例详细信息列表。
  *
  * @method string getInstanceName() 获取实例名称。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
- * @method string getInstanceId() 获取实例Id。
- * @method void setInstanceId(string $InstanceId) 设置实例Id。
- * @method integer getAppid() 获取用户的Appid。
- * @method void setAppid(integer $Appid) 设置用户的Appid。
- * @method integer getProjectId() 获取项目Id。
- * @method void setProjectId(integer $ProjectId) 设置项目Id。
- * @method integer getRegionId() 获取地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
- * @method void setRegionId(integer $RegionId) 设置地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
- * @method integer getZoneId() 获取区域id。
- * @method void setZoneId(integer $ZoneId) 设置区域id。
- * @method integer getVpcId() 获取vpc网络id，例如75101。
- * @method void setVpcId(integer $VpcId) 设置vpc网络id，例如75101。
- * @method integer getSubnetId() 获取vpc网络下子网id 如：46315。
- * @method void setSubnetId(integer $SubnetId) 设置vpc网络下子网id 如：46315。
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method integer getAppid() 获取用户的 AppID。
+ * @method void setAppid(integer $Appid) 设置用户的 AppID。
+ * @method integer getProjectId() 获取项目 ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID。
+ * @method integer getRegionId() 获取地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>24：莫斯科。</li><li>25：东京。</li></ul>
+ * @method void setRegionId(integer $RegionId) 设置地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>24：莫斯科。</li><li>25：东京。</li></ul>
+ * @method integer getZoneId() 获取区域 ID。
+ * @method void setZoneId(integer $ZoneId) 设置区域 ID。
+ * @method integer getVpcId() 获取vpc网络 ID，例如75101。
+ * @method void setVpcId(integer $VpcId) 设置vpc网络 ID，例如75101。
+ * @method integer getSubnetId() 获取vpc网络下子网ID，如：46315。
+ * @method void setSubnetId(integer $SubnetId) 设置vpc网络下子网ID，如：46315。
  * @method integer getStatus() 获取实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
  * @method void setStatus(integer $Status) 设置实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
- * @method string getWanIp() 获取实例vip。
- * @method void setWanIp(string $WanIp) 设置实例vip。
+ * @method string getWanIp() 获取实例 VIP。
+ * @method void setWanIp(string $WanIp) 设置实例 VIP。
  * @method integer getPort() 获取实例端口号。
  * @method void setPort(integer $Port) 设置实例端口号。
  * @method string getCreatetime() 获取实例创建时间。
@@ -80,8 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量。
  * @method integer getRedisReplicasNum() 获取副本数量。
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量。
- * @method integer getPriceId() 获取计费Id。
- * @method void setPriceId(integer $PriceId) 设置计费Id。
+ * @method integer getPriceId() 获取计费 ID。
+ * @method void setPriceId(integer $PriceId) 设置计费 ID。
  * @method string getCloseTime() 获取隔离时间。
  * @method void setCloseTime(string $CloseTime) 设置隔离时间。
  * @method integer getSlaveReadWeight() 获取从节点读取权重。
@@ -183,37 +183,37 @@ class InstanceSet extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string 实例Id。
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var integer 用户的Appid。
+     * @var integer 用户的 AppID。
      */
     public $Appid;
 
     /**
-     * @var integer 项目Id。
+     * @var integer 项目 ID。
      */
     public $ProjectId;
 
     /**
-     * @var integer 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * @var integer 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>24：莫斯科。</li><li>25：东京。</li></ul>
      */
     public $RegionId;
 
     /**
-     * @var integer 区域id。
+     * @var integer 区域 ID。
      */
     public $ZoneId;
 
     /**
-     * @var integer vpc网络id，例如75101。
+     * @var integer vpc网络 ID，例如75101。
      */
     public $VpcId;
 
     /**
-     * @var integer vpc网络下子网id 如：46315。
+     * @var integer vpc网络下子网ID，如：46315。
      */
     public $SubnetId;
 
@@ -223,7 +223,7 @@ class InstanceSet extends AbstractModel
     public $Status;
 
     /**
-     * @var string 实例vip。
+     * @var string 实例 VIP。
      */
     public $WanIp;
 
@@ -328,7 +328,7 @@ class InstanceSet extends AbstractModel
     public $RedisReplicasNum;
 
     /**
-     * @var integer 计费Id。
+     * @var integer 计费 ID。
      */
     public $PriceId;
 
@@ -476,15 +476,15 @@ class InstanceSet extends AbstractModel
 
     /**
      * @param string $InstanceName 实例名称。
-     * @param string $InstanceId 实例Id。
-     * @param integer $Appid 用户的Appid。
-     * @param integer $ProjectId 项目Id。
-     * @param integer $RegionId 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
-     * @param integer $ZoneId 区域id。
-     * @param integer $VpcId vpc网络id，例如75101。
-     * @param integer $SubnetId vpc网络下子网id 如：46315。
+     * @param string $InstanceId 实例 ID。
+     * @param integer $Appid 用户的 AppID。
+     * @param integer $ProjectId 项目 ID。
+     * @param integer $RegionId 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>24：莫斯科。</li><li>25：东京。</li></ul>
+     * @param integer $ZoneId 区域 ID。
+     * @param integer $VpcId vpc网络 ID，例如75101。
+     * @param integer $SubnetId vpc网络下子网ID，如：46315。
      * @param integer $Status 实例当前状态。<ul><li>0：待初始化。</li><li>1：实例在流程中。</li><li>2：实例运行中。</li><li>-2：实例已隔离。</li><li>-3：实例待删除。</li></ul>
-     * @param string $WanIp 实例vip。
+     * @param string $WanIp 实例 VIP。
      * @param integer $Port 实例端口号。
      * @param string $Createtime 实例创建时间。
      * @param float $Size 实例容量大小，单位：MB。
@@ -505,7 +505,7 @@ class InstanceSet extends AbstractModel
      * @param integer $RedisShardSize 分片大小。
      * @param integer $RedisShardNum 分片数量。
      * @param integer $RedisReplicasNum 副本数量。
-     * @param integer $PriceId 计费Id。
+     * @param integer $PriceId 计费 ID。
      * @param string $CloseTime 隔离时间。
      * @param integer $SlaveReadWeight 从节点读取权重。
      * @param array $InstanceTags 实例关联的标签信息。

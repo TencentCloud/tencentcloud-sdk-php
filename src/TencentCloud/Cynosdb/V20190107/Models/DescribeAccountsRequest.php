@@ -26,8 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountNames(array $AccountNames) 设置需要过滤的账户列表
  * @method string getDbType() 获取数据库类型，取值范围: 
 <li> MYSQL </li>
+该参数已废用
  * @method void setDbType(string $DbType) 设置数据库类型，取值范围: 
 <li> MYSQL </li>
+该参数已废用
+ * @method array getHosts() 获取需要过滤的账户列表
+ * @method void setHosts(array $Hosts) 设置需要过滤的账户列表
+ * @method integer getLimit() 获取限制量
+ * @method void setLimit(integer $Limit) 设置限制量
+ * @method integer getOffset() 获取偏移量
+ * @method void setOffset(integer $Offset) 设置偏移量
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -44,14 +52,34 @@ class DescribeAccountsRequest extends AbstractModel
     /**
      * @var string 数据库类型，取值范围: 
 <li> MYSQL </li>
+该参数已废用
      */
     public $DbType;
+
+    /**
+     * @var array 需要过滤的账户列表
+     */
+    public $Hosts;
+
+    /**
+     * @var integer 限制量
+     */
+    public $Limit;
+
+    /**
+     * @var integer 偏移量
+     */
+    public $Offset;
 
     /**
      * @param string $ClusterId 集群ID
      * @param array $AccountNames 需要过滤的账户列表
      * @param string $DbType 数据库类型，取值范围: 
 <li> MYSQL </li>
+该参数已废用
+     * @param array $Hosts 需要过滤的账户列表
+     * @param integer $Limit 限制量
+     * @param integer $Offset 偏移量
      */
     function __construct()
     {
@@ -76,6 +104,18 @@ class DescribeAccountsRequest extends AbstractModel
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
             $this->DbType = $param["DbType"];
+        }
+
+        if (array_key_exists("Hosts",$param) and $param["Hosts"] !== null) {
+            $this->Hosts = $param["Hosts"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

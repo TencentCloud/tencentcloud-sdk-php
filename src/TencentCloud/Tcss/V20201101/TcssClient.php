@@ -208,7 +208,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\DescribeK8sApiAbnormalEventListResponse DescribeK8sApiAbnormalEventList(Models\DescribeK8sApiAbnormalEventListRequest $req) 查询k8s api异常事件列表
  * @method Models\DescribeK8sApiAbnormalRuleInfoResponse DescribeK8sApiAbnormalRuleInfo(Models\DescribeK8sApiAbnormalRuleInfoRequest $req) 查询k8sapi异常请求规则详情
  * @method Models\DescribeK8sApiAbnormalRuleListResponse DescribeK8sApiAbnormalRuleList(Models\DescribeK8sApiAbnormalRuleListRequest $req) 查询k8sapi异常请求规则列表
- * @method Models\DescribeK8sApiAbnormalRuleScopeListResponse DescribeK8sApiAbnormalRuleScopeList(Models\DescribeK8sApiAbnormalRuleScopeListRequest $req) 查询k8s api 异常规则中范围列表
+ * @method Models\DescribeK8sApiAbnormalRuleScopeListResponse DescribeK8sApiAbnormalRuleScopeList(Models\DescribeK8sApiAbnormalRuleScopeListRequest $req) 查询k8sapi 异常规则中范围列表
  * @method Models\DescribeK8sApiAbnormalSummaryResponse DescribeK8sApiAbnormalSummary(Models\DescribeK8sApiAbnormalSummaryRequest $req) 查询k8sapi异常事件统计
  * @method Models\DescribeK8sApiAbnormalTendencyResponse DescribeK8sApiAbnormalTendency(Models\DescribeK8sApiAbnormalTendencyRequest $req) 查询k8sapi异常事件趋势
  * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 获取日志检索容量使用统计

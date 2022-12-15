@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRollbackTimeRange返回参数结构体
  *
  * @method string getTimeRangeStart() 获取有效回归时间范围开始时间点（已废弃）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeRangeStart(string $TimeRangeStart) 设置有效回归时间范围开始时间点（已废弃）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeRangeEnd() 获取有效回归时间范围结束时间点（已废弃）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeRangeEnd(string $TimeRangeEnd) 设置有效回归时间范围结束时间点（已废弃）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRollbackTimeRanges() 获取可回档时间范围
  * @method void setRollbackTimeRanges(array $RollbackTimeRanges) 设置可回档时间范围
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -33,11 +37,13 @@ class DescribeRollbackTimeRangeResponse extends AbstractModel
 {
     /**
      * @var string 有效回归时间范围开始时间点（已废弃）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeRangeStart;
 
     /**
      * @var string 有效回归时间范围结束时间点（已废弃）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeRangeEnd;
 
@@ -53,7 +59,9 @@ class DescribeRollbackTimeRangeResponse extends AbstractModel
 
     /**
      * @param string $TimeRangeStart 有效回归时间范围开始时间点（已废弃）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeRangeEnd 有效回归时间范围结束时间点（已废弃）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RollbackTimeRanges 可回档时间范围
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

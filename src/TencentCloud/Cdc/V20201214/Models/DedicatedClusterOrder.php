@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrderType() 获取订单类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrderType(string $OrderType) 设置订单类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DedicatedClusterOrder extends AbstractModel
 {
@@ -181,6 +185,12 @@ class DedicatedClusterOrder extends AbstractModel
     public $TimeSpan;
 
     /**
+     * @var string 订单类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrderType;
+
+    /**
      * @param string $DedicatedClusterId 专用集群id
      * @param string $DedicatedClusterTypeId 专用集群类型id（移到下一层级，已经废弃，后续将删除）
      * @param array $SupportedStorageType 支持的存储类型列表（移到下一层级，已经废弃，后续将删除）
@@ -207,6 +217,8 @@ class DedicatedClusterOrder extends AbstractModel
      * @param string $TimeUnit 购买时长的单位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeSpan 购买时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrderType 订单类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -301,6 +313,10 @@ class DedicatedClusterOrder extends AbstractModel
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
             $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
+            $this->OrderType = $param["OrderType"];
         }
     }
 }

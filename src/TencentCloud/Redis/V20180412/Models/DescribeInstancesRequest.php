@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method integer getLimit() 获取实例数量，参数默认值20，最大值为1000。
- * @method void setLimit(integer $Limit) 设置实例数量，参数默认值20，最大值为1000。
- * @method integer getOffset() 获取偏移量，取Limit整数倍。
- * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍。
+ * @method integer getLimit() 获取每页输出实例的数量，参数默认值20，最大值为1000。
+ * @method void setLimit(integer $Limit) 设置每页输出实例的数量，参数默认值20，最大值为1000。
+ * @method integer getOffset() 获取分页偏移量，取Limit整数倍。
+ * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。
  * @method string getInstanceId() 获取实例 ID，如：crs-6ubhgouj。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，如：crs-6ubhgouj。
  * @method string getOrderBy() 获取实例排序依据，枚举值如下所示：<ul><li>projectId：项目ID。</li><li>createtime：实例创建时间。</li><li>instancename：实例名称。</li><li>type：实例类型。</li><li>curDeadline：实例到期时间。</li></ul>
@@ -78,12 +78,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer 实例数量，参数默认值20，最大值为1000。
+     * @var integer 每页输出实例的数量，参数默认值20，最大值为1000。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，取Limit整数倍。
+     * @var integer 分页偏移量，取Limit整数倍。
      */
     public $Offset;
 
@@ -213,8 +213,8 @@ class DescribeInstancesRequest extends AbstractModel
     public $AzMode;
 
     /**
-     * @param integer $Limit 实例数量，参数默认值20，最大值为1000。
-     * @param integer $Offset 偏移量，取Limit整数倍。
+     * @param integer $Limit 每页输出实例的数量，参数默认值20，最大值为1000。
+     * @param integer $Offset 分页偏移量，取Limit整数倍。
      * @param string $InstanceId 实例 ID，如：crs-6ubhgouj。
      * @param string $OrderBy 实例排序依据，枚举值如下所示：<ul><li>projectId：项目ID。</li><li>createtime：实例创建时间。</li><li>instancename：实例名称。</li><li>type：实例类型。</li><li>curDeadline：实例到期时间。</li></ul>
      * @param integer $OrderType 实例排序方式，默认为倒序排序。<ul><li>1：倒序。</li><li>0：顺序。</li></ul>

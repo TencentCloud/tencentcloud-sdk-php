@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
+ * @method integer getLimit() 获取限制量
+ * @method void setLimit(integer $Limit) 设置限制量
+ * @method integer getOffset() 获取偏移量
+ * @method void setOffset(integer $Offset) 设置偏移量
+ * @method string getSearchKey() 获取搜索关键字
+ * @method void setSearchKey(string $SearchKey) 设置搜索关键字
  */
 class DescribeProjectSecurityGroupsRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var integer 限制量
+     */
+    public $Limit;
+
+    /**
+     * @var integer 偏移量
+     */
+    public $Offset;
+
+    /**
+     * @var string 搜索关键字
+     */
+    public $SearchKey;
+
+    /**
      * @param integer $ProjectId 项目ID
+     * @param integer $Limit 限制量
+     * @param integer $Offset 偏移量
+     * @param string $SearchKey 搜索关键字
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
         }
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
+            $this->SearchKey = $param["SearchKey"];
         }
     }
 }

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileNames(array $FileNames) 设置备份文件名，模糊查询
  * @method array getBackupNames() 获取备份备注名，模糊查询
  * @method void setBackupNames(array $BackupNames) 设置备份备注名，模糊查询
+ * @method array getSnapshotIdList() 获取快照备份Id列表
+ * @method void setSnapshotIdList(array $SnapshotIdList) 设置快照备份Id列表
  */
 class DescribeBackupListRequest extends AbstractModel
 {
@@ -111,6 +113,11 @@ class DescribeBackupListRequest extends AbstractModel
     public $BackupNames;
 
     /**
+     * @var array 快照备份Id列表
+     */
+    public $SnapshotIdList;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param integer $Limit 备份文件列表大小，取值范围(0,100]
      * @param integer $Offset 备份文件列表偏移，取值范围[0,INF)
@@ -124,6 +131,7 @@ class DescribeBackupListRequest extends AbstractModel
      * @param string $EndTime 备份结束时间
      * @param array $FileNames 备份文件名，模糊查询
      * @param array $BackupNames 备份备注名，模糊查询
+     * @param array $SnapshotIdList 快照备份Id列表
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ class DescribeBackupListRequest extends AbstractModel
 
         if (array_key_exists("BackupNames",$param) and $param["BackupNames"] !== null) {
             $this->BackupNames = $param["BackupNames"];
+        }
+
+        if (array_key_exists("SnapshotIdList",$param) and $param["SnapshotIdList"] !== null) {
+            $this->SnapshotIdList = $param["SnapshotIdList"];
         }
     }
 }

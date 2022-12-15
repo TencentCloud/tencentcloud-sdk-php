@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClusterParams请求参数结构体
+ * DeleteParameterTemplate请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getParamName() 获取参数名字
- * @method void setParamName(string $ParamName) 设置参数名字
+ * @method string getTemplateId() 获取参数模板ID，用于唯一确认待操作的参数模板
+ * @method void setTemplateId(string $TemplateId) 设置参数模板ID，用于唯一确认待操作的参数模板
  */
-class DescribeClusterParamsRequest extends AbstractModel
+class DeleteParameterTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 参数模板ID，用于唯一确认待操作的参数模板
      */
-    public $ClusterId;
+    public $TemplateId;
 
     /**
-     * @var string 参数名字
-     */
-    public $ParamName;
-
-    /**
-     * @param string $ClusterId 集群ID
-     * @param string $ParamName 参数名字
+     * @param string $TemplateId 参数模板ID，用于唯一确认待操作的参数模板
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DescribeClusterParamsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
-        }
-
-        if (array_key_exists("ParamName",$param) and $param["ParamName"] !== null) {
-            $this->ParamName = $param["ParamName"];
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

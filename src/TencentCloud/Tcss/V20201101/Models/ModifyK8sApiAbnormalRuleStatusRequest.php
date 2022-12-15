@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleID() 获取规则ID
  * @method void setRuleID(string $RuleID) 设置规则ID
- * @method boolean getStatus() 获取状态(ture:开 false:关)
- * @method void setStatus(boolean $Status) 设置状态(ture:开 false:关)
+ * @method boolean getStatus() 获取状态(true:开 false:关)
+ * @method void setStatus(boolean $Status) 设置状态(true:开 false:关)
  */
 class ModifyK8sApiAbnormalRuleStatusRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyK8sApiAbnormalRuleStatusRequest extends AbstractModel
     public $RuleID;
 
     /**
-     * @var boolean 状态(ture:开 false:关)
+     * @var boolean 状态(true:开 false:关)
      */
     public $Status;
 
     /**
      * @param string $RuleID 规则ID
-     * @param boolean $Status 状态(ture:开 false:关)
+     * @param boolean $Status 状态(true:开 false:关)
      */
     function __construct()
     {

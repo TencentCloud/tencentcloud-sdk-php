@@ -151,7 +151,7 @@ use TencentCloud\Tiia\V20190529\Models as Models;
 客户无需自建商品库，即可快速实现商品识别、拍照搜商品等功能。
 >?   
 - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
- * @method Models\DetectSecurityResponse DetectSecurity(Models\DetectSecurityRequest $req) 识别常安全属性识别可对图片中人体安全防护属性进行识别，支持识别安全帽，反光衣，护目镜，工服，手套，工地安全带，口罩，抽烟，玩手机等多种属性。
+ * @method Models\DetectSecurityResponse DetectSecurity(Models\DetectSecurityRequest $req) 安全属性识别可对图片中人体安全防护属性进行识别，支持识别安全帽，反光衣，护目镜，工服，手套，工地安全带，口罩，抽烟，玩手机等多种属性。
 "被优选过滤"标签值在人体优选开关开启时才会返回。
 
 |序号 | 标签名称 | 标签值 |

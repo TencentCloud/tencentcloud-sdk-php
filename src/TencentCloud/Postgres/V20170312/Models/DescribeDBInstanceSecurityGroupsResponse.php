@@ -14,33 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cynosdb\V20190107\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAccounts返回参数结构体
+ * DescribeDBInstanceSecurityGroups返回参数结构体
  *
- * @method array getAccountSet() 获取数据库账号列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountSet(array $AccountSet) 设置数据库账号列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取账号总数量
- * @method void setTotalCount(integer $TotalCount) 设置账号总数量
+ * @method array getSecurityGroupSet() 获取安全组信息数组
+ * @method void setSecurityGroupSet(array $SecurityGroupSet) 设置安全组信息数组
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAccountsResponse extends AbstractModel
+class DescribeDBInstanceSecurityGroupsResponse extends AbstractModel
 {
     /**
-     * @var array 数据库账号列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 安全组信息数组
      */
-    public $AccountSet;
-
-    /**
-     * @var integer 账号总数量
-     */
-    public $TotalCount;
+    public $SecurityGroupSet;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +38,7 @@ class DescribeAccountsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AccountSet 数据库账号列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 账号总数量
+     * @param array $SecurityGroupSet 安全组信息数组
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +54,13 @@ class DescribeAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccountSet",$param) and $param["AccountSet"] !== null) {
-            $this->AccountSet = [];
-            foreach ($param["AccountSet"] as $key => $value){
-                $obj = new Account();
+        if (array_key_exists("SecurityGroupSet",$param) and $param["SecurityGroupSet"] !== null) {
+            $this->SecurityGroupSet = [];
+            foreach ($param["SecurityGroupSet"] as $key => $value){
+                $obj = new SecurityGroup();
                 $obj->deserialize($value);
-                array_push($this->AccountSet, $obj);
+                array_push($this->SecurityGroupSet, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

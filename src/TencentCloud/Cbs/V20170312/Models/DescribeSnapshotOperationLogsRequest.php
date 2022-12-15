@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
 <li>snapshot-id - Array of String - 是否必填：是 - 按快照ID过滤，每个请求最多可指定10个快照ID。
  * @method void setFilters(array $Filters) 设置过滤条件。支持以下条件：
 <li>snapshot-id - Array of String - 是否必填：是 - 按快照ID过滤，每个请求最多可指定10个快照ID。
- * @method string getBeginTime() 获取要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
- * @method void setBeginTime(string $BeginTime) 设置要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
  * @method string getEndTime() 获取要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
  * @method void setEndTime(string $EndTime) 设置要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
+ * @method string getBeginTime() 获取要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
+ * @method void setBeginTime(string $BeginTime) 设置要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
  */
 class DescribeSnapshotOperationLogsRequest extends AbstractModel
 {
@@ -38,20 +38,20 @@ class DescribeSnapshotOperationLogsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
-     */
-    public $BeginTime;
-
-    /**
      * @var string 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
      */
     public $EndTime;
 
     /**
+     * @var string 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
+     */
+    public $BeginTime;
+
+    /**
      * @param array $Filters 过滤条件。支持以下条件：
 <li>snapshot-id - Array of String - 是否必填：是 - 按快照ID过滤，每个请求最多可指定10个快照ID。
-     * @param string $BeginTime 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
      * @param string $EndTime 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
+     * @param string $BeginTime 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
      */
     function __construct()
     {
@@ -75,12 +75,12 @@ class DescribeSnapshotOperationLogsRequest extends AbstractModel
             }
         }
 
-        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
-            $this->BeginTime = $param["BeginTime"];
-        }
-
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
+            $this->BeginTime = $param["BeginTime"];
         }
     }
 }

@@ -120,6 +120,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseType(string $LicenseType) 设置实例的操作系统许可类型，默认为TencentCloud
  * @method boolean getDisableApiTermination() 获取实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
  * @method void setDisableApiTermination(boolean $DisableApiTermination) 设置实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
+ * @method string getDefaultLoginUser() 获取默认登录用户。
+ * @method void setDefaultLoginUser(string $DefaultLoginUser) 设置默认登录用户。
+ * @method integer getDefaultLoginPort() 获取默认登录端口。
+ * @method void setDefaultLoginPort(integer $DefaultLoginPort) 设置默认登录端口。
+ * @method string getLatestOperationErrorMsg() 获取实例的最新操作错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLatestOperationErrorMsg(string $LatestOperationErrorMsg) 设置实例的最新操作错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -322,6 +330,22 @@ class Instance extends AbstractModel
     public $DisableApiTermination;
 
     /**
+     * @var string 默认登录用户。
+     */
+    public $DefaultLoginUser;
+
+    /**
+     * @var integer 默认登录端口。
+     */
+    public $DefaultLoginPort;
+
+    /**
+     * @var string 实例的最新操作错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LatestOperationErrorMsg;
+
+    /**
      * @param Placement $Placement 实例所在的位置。
      * @param string $InstanceId 实例`ID`。
      * @param string $InstanceType 实例机型。
@@ -372,6 +396,10 @@ class Instance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LicenseType 实例的操作系统许可类型，默认为TencentCloud
      * @param boolean $DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
+     * @param string $DefaultLoginUser 默认登录用户。
+     * @param integer $DefaultLoginPort 默认登录端口。
+     * @param string $LatestOperationErrorMsg 实例的最新操作错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -548,6 +576,18 @@ class Instance extends AbstractModel
 
         if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
             $this->DisableApiTermination = $param["DisableApiTermination"];
+        }
+
+        if (array_key_exists("DefaultLoginUser",$param) and $param["DefaultLoginUser"] !== null) {
+            $this->DefaultLoginUser = $param["DefaultLoginUser"];
+        }
+
+        if (array_key_exists("DefaultLoginPort",$param) and $param["DefaultLoginPort"] !== null) {
+            $this->DefaultLoginPort = $param["DefaultLoginPort"];
+        }
+
+        if (array_key_exists("LatestOperationErrorMsg",$param) and $param["LatestOperationErrorMsg"] !== null) {
+            $this->LatestOperationErrorMsg = $param["LatestOperationErrorMsg"];
         }
     }
 }

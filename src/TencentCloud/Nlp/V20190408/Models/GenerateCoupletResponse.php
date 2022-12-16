@@ -14,33 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Nlp\V20190408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAllAccessControlRule返回参数结构体
+ * GenerateCouplet返回参数结构体
  *
- * @method integer getStatus() 获取状态值 0: 修改成功, 非0: 修改失败
- * @method void setStatus(integer $Status) 设置状态值 0: 修改成功, 非0: 修改失败
- * @method integer getInfo() 获取删除了几条访问控制规则
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInfo(integer $Info) 设置删除了几条访问控制规则
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopScroll() 获取横批。
+ * @method void setTopScroll(string $TopScroll) 设置横批。
+ * @method array getContent() 获取上联与下联。
+ * @method void setContent(array $Content) 设置上联与下联。
+ * @method string getRandomCause() 获取当对联随机生成时，展示随机生成原因。
+ * @method void setRandomCause(string $RandomCause) 设置当对联随机生成时，展示随机生成原因。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteAllAccessControlRuleResponse extends AbstractModel
+class GenerateCoupletResponse extends AbstractModel
 {
     /**
-     * @var integer 状态值 0: 修改成功, 非0: 修改失败
+     * @var string 横批。
      */
-    public $Status;
+    public $TopScroll;
 
     /**
-     * @var integer 删除了几条访问控制规则
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 上联与下联。
      */
-    public $Info;
+    public $Content;
+
+    /**
+     * @var string 当对联随机生成时，展示随机生成原因。
+     */
+    public $RandomCause;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +52,9 @@ class DeleteAllAccessControlRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 状态值 0: 修改成功, 非0: 修改失败
-     * @param integer $Info 删除了几条访问控制规则
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopScroll 横批。
+     * @param array $Content 上联与下联。
+     * @param string $RandomCause 当对联随机生成时，展示随机生成原因。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +70,16 @@ class DeleteAllAccessControlRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("TopScroll",$param) and $param["TopScroll"] !== null) {
+            $this->TopScroll = $param["TopScroll"];
         }
 
-        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
-            $this->Info = $param["Info"];
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("RandomCause",$param) and $param["RandomCause"] !== null) {
+            $this->RandomCause = $param["RandomCause"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

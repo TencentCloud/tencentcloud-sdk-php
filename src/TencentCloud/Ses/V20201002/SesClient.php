@@ -49,6 +49,7 @@ use TencentCloud\Ses\V20201002\Models as Models;
  * @method Models\ListSendTasksResponse ListSendTasks(Models\ListSendTasksRequest $req) 分页查询批量发送邮件任务，包含即时发送任务，定时发送任务，周期重复发送任务，查询发送情况，包括请求数量，已发数量，缓存数量，任务状态等信息
  * @method Models\SendEmailResponse SendEmail(Models\SendEmailRequest $req) 您可以通过此API发送HTML或者TEXT邮件，适用于触发类邮件（验证码、交易类）。默认仅支持使用模板发送邮件。
  * @method Models\UpdateEmailIdentityResponse UpdateEmailIdentity(Models\UpdateEmailIdentityRequest $req) 您已经成功配置好了您的DNS，接下来请求腾讯云验证您的DNS配置是否正确
+ * @method Models\UpdateEmailSmtpPassWordResponse UpdateEmailSmtpPassWord(Models\UpdateEmailSmtpPassWordRequest $req) 设置邮箱的smtp密码。若要通过smtp发送邮件，必须为邮箱设置smtp密码。初始时，邮箱没有设置smtp密码，不能使用smtp的方式发送邮件。设置smtp密码后，可以修改密码。
  * @method Models\UpdateEmailTemplateResponse UpdateEmailTemplate(Models\UpdateEmailTemplateRequest $req) 更新邮件模板，更新后需再次审核
  */
 

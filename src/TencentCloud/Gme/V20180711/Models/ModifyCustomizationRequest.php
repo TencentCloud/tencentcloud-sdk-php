@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBizId(integer $BizId) 设置应用 ID，登录控制台创建应用得到的AppID
  * @method string getTextUrl() 获取文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
  * @method void setTextUrl(string $TextUrl) 设置文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
- * @method string getModelId() 获取要修改的模型ID
- * @method void setModelId(string $ModelId) 设置要修改的模型ID
+ * @method string getModelId() 获取修改的模型ID
+ * @method void setModelId(string $ModelId) 设置修改的模型ID
  */
 class ModifyCustomizationRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyCustomizationRequest extends AbstractModel
     public $TextUrl;
 
     /**
-     * @var string 要修改的模型ID
+     * @var string 修改的模型ID
      */
     public $ModelId;
 
     /**
      * @param integer $BizId 应用 ID，登录控制台创建应用得到的AppID
      * @param string $TextUrl 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
-     * @param string $ModelId 要修改的模型ID
+     * @param string $ModelId 修改的模型ID
      */
     function __construct()
     {

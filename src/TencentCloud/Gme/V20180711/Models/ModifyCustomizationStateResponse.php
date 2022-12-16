@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCustomizationState返回参数结构体
  *
- * @method string getModelId() 获取自学习模型ID
- * @method void setModelId(string $ModelId) 设置自学习模型ID
+ * @method string getModelId() 获取模型ID
+ * @method void setModelId(string $ModelId) 设置模型ID
  * @method integer getErrorCode() 获取返回值。0为成功，非0为失败。
  * @method void setErrorCode(integer $ErrorCode) 设置返回值。0为成功，非0为失败。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyCustomizationStateResponse extends AbstractModel
 {
     /**
-     * @var string 自学习模型ID
+     * @var string 模型ID
      */
     public $ModelId;
 
@@ -45,7 +45,7 @@ class ModifyCustomizationStateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ModelId 自学习模型ID
+     * @param string $ModelId 模型ID
      * @param integer $ErrorCode 返回值。0为成功，非0为失败。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

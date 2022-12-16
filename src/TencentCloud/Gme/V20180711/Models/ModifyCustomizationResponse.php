@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getErrorCode() 获取返回值。0为成功，非0为失败。
  * @method void setErrorCode(integer $ErrorCode) 设置返回值。0为成功，非0为失败。
- * @method string getModelId() 获取自学习模型ID
- * @method void setModelId(string $ModelId) 设置自学习模型ID
+ * @method string getModelId() 获取模型ID
+ * @method void setModelId(string $ModelId) 设置模型ID
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class ModifyCustomizationResponse extends AbstractModel
     public $ErrorCode;
 
     /**
-     * @var string 自学习模型ID
+     * @var string 模型ID
      */
     public $ModelId;
 
@@ -46,7 +46,7 @@ class ModifyCustomizationResponse extends AbstractModel
 
     /**
      * @param integer $ErrorCode 返回值。0为成功，非0为失败。
-     * @param string $ModelId 自学习模型ID
+     * @param string $ModelId 模型ID
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

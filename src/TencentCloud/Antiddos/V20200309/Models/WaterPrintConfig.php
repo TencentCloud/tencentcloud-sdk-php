@@ -42,6 +42,10 @@ shortfpcheckall（精简模式）
 checkall（普通模式）
 shortfpcheckall（精简模式）
 ]
+ * @method integer getCloudSdkProxy() 获取是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudSdkProxy(integer $CloudSdkProxy) 设置是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WaterPrintConfig extends AbstractModel
 {
@@ -77,6 +81,12 @@ shortfpcheckall（精简模式）
     public $Verify;
 
     /**
+     * @var integer 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudSdkProxy;
+
+    /**
      * @param integer $Offset 水印偏移量，取值范围[0, 100)
      * @param integer $OpenStatus 是否开启，取值[
 0（手动开启）
@@ -88,6 +98,8 @@ shortfpcheckall（精简模式）
 checkall（普通模式）
 shortfpcheckall（精简模式）
 ]
+     * @param integer $CloudSdkProxy 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -130,6 +142,10 @@ shortfpcheckall（精简模式）
 
         if (array_key_exists("Verify",$param) and $param["Verify"] !== null) {
             $this->Verify = $param["Verify"];
+        }
+
+        if (array_key_exists("CloudSdkProxy",$param) and $param["CloudSdkProxy"] !== null) {
+            $this->CloudSdkProxy = $param["CloudSdkProxy"];
         }
     }
 }

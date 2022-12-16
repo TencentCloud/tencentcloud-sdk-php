@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置资源实例ID
  * @method integer getOpenStatus() 获取水印开启/关闭状态，1表示开启；0表示关闭
  * @method void setOpenStatus(integer $OpenStatus) 设置水印开启/关闭状态，1表示开启；0表示关闭
+ * @method integer getCloudSdkProxy() 获取是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+ * @method void setCloudSdkProxy(integer $CloudSdkProxy) 设置是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
  */
 class SwitchWaterPrintConfigRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SwitchWaterPrintConfigRequest extends AbstractModel
     public $OpenStatus;
 
     /**
+     * @var integer 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+     */
+    public $CloudSdkProxy;
+
+    /**
      * @param string $InstanceId 资源实例ID
      * @param integer $OpenStatus 水印开启/关闭状态，1表示开启；0表示关闭
+     * @param integer $CloudSdkProxy 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SwitchWaterPrintConfigRequest extends AbstractModel
 
         if (array_key_exists("OpenStatus",$param) and $param["OpenStatus"] !== null) {
             $this->OpenStatus = $param["OpenStatus"];
+        }
+
+        if (array_key_exists("CloudSdkProxy",$param) and $param["CloudSdkProxy"] !== null) {
+            $this->CloudSdkProxy = $param["CloudSdkProxy"];
         }
     }
 }

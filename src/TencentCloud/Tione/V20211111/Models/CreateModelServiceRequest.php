@@ -118,6 +118,8 @@ HYBRID_PAID:
  * @method void setVolumeMount(VolumeMount $VolumeMount) 设置挂载配置，目前只支持CFS
  * @method ServiceLimit getServiceLimit() 获取服务限速限流相关配置
  * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置服务限速限流相关配置
+ * @method string getCallbackUrl() 获取回调地址，用于回调创建服务状态信息
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，用于回调创建服务状态信息
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -275,6 +277,11 @@ HYBRID_PAID:
     public $ServiceLimit;
 
     /**
+     * @var string 回调地址，用于回调创建服务状态信息
+     */
+    public $CallbackUrl;
+
+    /**
      * @param ImageInfo $ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
      * @param string $ServiceGroupId 新增版本时需要填写
      * @param string $ServiceGroupName 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
@@ -324,6 +331,7 @@ HYBRID_PAID:
      * @param ScheduledAction $ScheduledAction 定时停止配置
      * @param VolumeMount $VolumeMount 挂载配置，目前只支持CFS
      * @param ServiceLimit $ServiceLimit 服务限速限流相关配置
+     * @param string $CallbackUrl 回调地址，用于回调创建服务状态信息
      */
     function __construct()
     {
@@ -463,6 +471,10 @@ HYBRID_PAID:
         if (array_key_exists("ServiceLimit",$param) and $param["ServiceLimit"] !== null) {
             $this->ServiceLimit = new ServiceLimit();
             $this->ServiceLimit->deserialize($param["ServiceLimit"]);
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
     }
 }

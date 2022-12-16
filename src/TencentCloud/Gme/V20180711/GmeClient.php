@@ -35,9 +35,9 @@ use TencentCloud\Gme\V20180711\Models as Models;
 <li>音频文件格式支持的类型：.wav、.m4a、.amr、.mp3、.aac、.wma、.ogg</li>
 </br>
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 本接口(CreateApp)用于创建一个GME应用。
- * @method Models\CreateCustomizationResponse CreateCustomization(Models\CreateCustomizationRequest $req) 用户使用该接口可以创建语音消息转文本自学习模型，以供识别调用
+ * @method Models\CreateCustomizationResponse CreateCustomization(Models\CreateCustomizationRequest $req) 用户使用该接口可以创建语音消息转文本热句模型，以供识别调用
  * @method Models\CreateScanUserResponse CreateScanUser(Models\CreateScanUserRequest $req) 新增自定义送检用户
- * @method Models\DeleteCustomizationResponse DeleteCustomization(Models\DeleteCustomizationRequest $req) 用户通过该接口可以删除语音消息转文本自学习模型
+ * @method Models\DeleteCustomizationResponse DeleteCustomization(Models\DeleteCustomizationRequest $req) 用户通过该接口可以删除语音消息转文本热句模型
  * @method Models\DeleteRoomMemberResponse DeleteRoomMember(Models\DeleteRoomMemberRequest $req) 本接口(DeleteRoomMember)用户删除房间或者剔除房间内用户
  * @method Models\DeleteScanUserResponse DeleteScanUser(Models\DeleteScanUserRequest $req) 删除自定义送检用户
  * @method Models\DescribeAgeDetectTaskResponse DescribeAgeDetectTask(Models\DescribeAgeDetectTaskRequest $req) 查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
@@ -49,10 +49,10 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\DescribeScanResultListResponse DescribeScanResultList(Models\DescribeScanResultListRequest $req) 本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。
 <p style="color:red">如果在提交语音检测任务时未设置 Callback 字段，则需要通过本接口获取检测结果</p>
  * @method Models\DescribeUserInAndOutTimeResponse DescribeUserInAndOutTime(Models\DescribeUserInAndOutTimeRequest $req) 拉取用户在房间得进出时间
- * @method Models\GetCustomizationListResponse GetCustomizationList(Models\GetCustomizationListRequest $req) 查询语音消息转文本自学习模型列表
+ * @method Models\GetCustomizationListResponse GetCustomizationList(Models\GetCustomizationListRequest $req) 查询语音消息转文本热句模型列表
  * @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) 本接口(ModifyAppStatus)用于修改应用总开关状态。
- * @method Models\ModifyCustomizationResponse ModifyCustomization(Models\ModifyCustomizationRequest $req) 用户通过该接口可以更新语音消息转文本自学习模型。
- * @method Models\ModifyCustomizationStateResponse ModifyCustomizationState(Models\ModifyCustomizationStateRequest $req) 通过该接口，用户可以修改语音消息转文本自学习模型状态，上下线自学习模型
+ * @method Models\ModifyCustomizationResponse ModifyCustomization(Models\ModifyCustomizationRequest $req) 用户通过该接口可以更新语音消息转文本热句模型。
+ * @method Models\ModifyCustomizationStateResponse ModifyCustomizationState(Models\ModifyCustomizationStateRequest $req) 通过该接口，用户可以修改语音消息转文本热句模型状态，上下线热句模型
  * @method Models\ModifyUserMicStatusResponse ModifyUserMicStatus(Models\ModifyUserMicStatusRequest $req) **接口作用**：此接口用于修改房间用户的麦克风状态，例如房间内用户麦克风为打开状态，可调用此接口将该用户麦克风进行关闭，关闭后即使该用户使用客户端接口 EnableMic 打开麦克风，依然无法与房间内成员通话，属于被禁言状态。该状态持续到此用户退房后失效，或者调用该接口重新打开此用户麦克风状态。
 **接口应用场景**：此接口多用于游戏业务中台或者风控后台，对一些发表不当言论的玩家进行禁言处理。
 **接口使用前提**：目前 ModifyUserMicStatus 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
@@ -110,7 +110,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
 <h4 id="Callback_Declare"><b>回调相关说明：</b></h4>
 <li>如果在请求参数中指定了回调地址参数 Callback，即一个 HTTP(S) 协议接口的 URL，则需要支持 POST 方法，传输数据编码采用 UTF-8。</li>
 <li>在推送回调数据后，接收到的 HTTP 状态码为 200 时，表示推送成功。</li>
-<li>HTTP 头参数说明：</li>
+<li>HTTP 请求参数（query）说明：</li>
 <table>
 <thread>
 <tr>

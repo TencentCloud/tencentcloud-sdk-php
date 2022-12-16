@@ -53,6 +53,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\DescribeTelCdrResponse DescribeTelCdr(Models\DescribeTelCdrRequest $req) 获取电话服务记录与录音
  * @method Models\DescribeTelSessionResponse DescribeTelSession(Models\DescribeTelSessionRequest $req) 获取 PSTN 会话信息
  * @method Models\DisableCCCPhoneNumberResponse DisableCCCPhoneNumber(Models\DisableCCCPhoneNumberRequest $req) 停用号码
+ * @method Models\HangUpCallResponse HangUpCall(Models\HangUpCallRequest $req) 挂断电话
  * @method Models\ModifyExtensionResponse ModifyExtension(Models\ModifyExtensionRequest $req) 修改话机账号(绑定技能组、绑定坐席账号)
  * @method Models\ModifyStaffResponse ModifyStaff(Models\ModifyStaffRequest $req) 修改客服账号
  * @method Models\ResetExtensionPasswordResponse ResetExtensionPassword(Models\ResetExtensionPasswordRequest $req) 重置话机注册密码

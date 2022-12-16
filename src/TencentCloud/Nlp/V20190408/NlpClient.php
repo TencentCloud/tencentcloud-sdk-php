@@ -35,6 +35,8 @@ use TencentCloud\Nlp\V20190408\Models as Models;
  * @method Models\DescribeDictResponse DescribeDict(Models\DescribeDictRequest $req) 根据id或名称查询自定义词库信息。
  * @method Models\DescribeDictsResponse DescribeDicts(Models\DescribeDictsRequest $req) 返回属于当前用户的所有自定义词库列表。
  * @method Models\DescribeWordItemsResponse DescribeWordItems(Models\DescribeWordItemsRequest $req) 依据自定义词库的ID，查询对应的词条信息。
+ * @method Models\GenerateCoupletResponse GenerateCouplet(Models\GenerateCoupletRequest $req) 根据用户输入的命题关键词自动生成一副春联，包括上联、下联和横批。（如需开通请联系商务）
+ * @method Models\GeneratePoetryResponse GeneratePoetry(Models\GeneratePoetryRequest $req) 根据用户输入的命题关键词自动生成一首七言律诗或五言律诗。（如需开通请联系商务）
  * @method Models\KeywordsExtractionResponse KeywordsExtraction(Models\KeywordsExtractionRequest $req) 基于关键词提取平台，通过对文本内容进行深度分析，提取出文本内容中的关键信息，为用户实现诸如新闻内容关键词自动提取、评论关键词提取等提供基础服务。
  * @method Models\LexicalAnalysisResponse LexicalAnalysis(Models\LexicalAnalysisRequest $req) 词法分析接口提供以下三个功能：
 

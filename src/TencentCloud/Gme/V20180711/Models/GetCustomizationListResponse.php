@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetCustomizationList返回参数结构体
  *
- * @method array getCustomizationConfigs() 获取语音消息转文本自学习模型配置
+ * @method array getCustomizationConfigs() 获取语音消息转文本热句模型配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomizationConfigs(array $CustomizationConfigs) 设置语音消息转文本自学习模型配置
+ * @method void setCustomizationConfigs(array $CustomizationConfigs) 设置语音消息转文本热句模型配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GetCustomizationListResponse extends AbstractModel
 {
     /**
-     * @var array 语音消息转文本自学习模型配置
+     * @var array 语音消息转文本热句模型配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomizationConfigs;
@@ -41,7 +41,7 @@ class GetCustomizationListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $CustomizationConfigs 语音消息转文本自学习模型配置
+     * @param array $CustomizationConfigs 语音消息转文本热句模型配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */

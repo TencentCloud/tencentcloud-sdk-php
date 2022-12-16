@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Ccc\V20200210\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteCustomization请求参数结构体
+ * HangUpCall请求参数结构体
  *
- * @method string getModelId() 获取删除的模型ID
- * @method void setModelId(string $ModelId) 设置删除的模型ID
- * @method integer getBizId() 获取应用 ID，登录控制台创建应用得到的AppID
- * @method void setBizId(integer $BizId) 设置应用 ID，登录控制台创建应用得到的AppID
+ * @method integer getSdkAppId() 获取TCCC 实例应用 ID
+ * @method void setSdkAppId(integer $SdkAppId) 设置TCCC 实例应用 ID
+ * @method string getSessionId() 获取会话ID
+ * @method void setSessionId(string $SessionId) 设置会话ID
  */
-class DeleteCustomizationRequest extends AbstractModel
+class HangUpCallRequest extends AbstractModel
 {
     /**
-     * @var string 删除的模型ID
+     * @var integer TCCC 实例应用 ID
      */
-    public $ModelId;
+    public $SdkAppId;
 
     /**
-     * @var integer 应用 ID，登录控制台创建应用得到的AppID
+     * @var string 会话ID
      */
-    public $BizId;
+    public $SessionId;
 
     /**
-     * @param string $ModelId 删除的模型ID
-     * @param integer $BizId 应用 ID，登录控制台创建应用得到的AppID
+     * @param integer $SdkAppId TCCC 实例应用 ID
+     * @param string $SessionId 会话ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteCustomizationRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ModelId",$param) and $param["ModelId"] !== null) {
-            $this->ModelId = $param["ModelId"];
+        if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
+            $this->SdkAppId = $param["SdkAppId"];
         }
 
-        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
-            $this->BizId = $param["BizId"];
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }

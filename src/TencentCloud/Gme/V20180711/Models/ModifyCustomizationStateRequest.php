@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCustomizationState请求参数结构体
  *
- * @method string getModelId() 获取自学习模型ID
- * @method void setModelId(string $ModelId) 设置自学习模型ID
+ * @method string getModelId() 获取模型ID
+ * @method void setModelId(string $ModelId) 设置模型ID
  * @method integer getToState() 获取想要变换的模型状态，-1代表下线，1代表上线
  * @method void setToState(integer $ToState) 设置想要变换的模型状态，-1代表下线，1代表上线
  * @method integer getBizId() 获取应用 ID，登录控制台创建应用得到的AppID
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyCustomizationStateRequest extends AbstractModel
 {
     /**
-     * @var string 自学习模型ID
+     * @var string 模型ID
      */
     public $ModelId;
 
@@ -45,7 +45,7 @@ class ModifyCustomizationStateRequest extends AbstractModel
     public $BizId;
 
     /**
-     * @param string $ModelId 自学习模型ID
+     * @param string $ModelId 模型ID
      * @param integer $ToState 想要变换的模型状态，-1代表下线，1代表上线
      * @param integer $BizId 应用 ID，登录控制台创建应用得到的AppID
      */

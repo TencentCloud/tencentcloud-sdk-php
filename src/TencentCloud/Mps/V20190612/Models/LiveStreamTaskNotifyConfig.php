@@ -29,7 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTopicName() 获取当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
  * @method void setTopicName(string $TopicName) 设置当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
  * @method string getNotifyType() 获取通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+
+<font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
  * @method void setNotifyType(string $NotifyType) 设置通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+
+<font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
  * @method string getNotifyUrl() 获取HTTP回调地址，NotifyType为URL时必填。
  * @method void setNotifyUrl(string $NotifyUrl) 设置HTTP回调地址，NotifyType为URL时必填。
  */
@@ -57,6 +61,8 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
 
     /**
      * @var string 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+
+<font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
      */
     public $NotifyType;
 
@@ -71,6 +77,8 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
      * @param string $QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
      * @param string $TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
      * @param string $NotifyType 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+
+<font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
      * @param string $NotifyUrl HTTP回调地址，NotifyType为URL时必填。
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒体处理的输入对象信息。
  *
- * @method string getType() 获取输入来源对象的类型，支持 COS 和 URL 两种。
- * @method void setType(string $Type) 设置输入来源对象的类型，支持 COS 和 URL 两种。
+ * @method string getType() 获取输入来源对象的类型，支持 COS、URL 两种。
+ * @method void setType(string $Type) 设置输入来源对象的类型，支持 COS、URL 两种。
  * @method CosInputInfo getCosInputInfo() 获取当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
  * @method void setCosInputInfo(CosInputInfo $CosInputInfo) 设置当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
  * @method UrlInputInfo getUrlInputInfo() 获取当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class MediaInputInfo extends AbstractModel
 {
     /**
-     * @var string 输入来源对象的类型，支持 COS 和 URL 两种。
+     * @var string 输入来源对象的类型，支持 COS、URL 两种。
      */
     public $Type;
 
@@ -48,7 +48,7 @@ class MediaInputInfo extends AbstractModel
     public $UrlInputInfo;
 
     /**
-     * @param string $Type 输入来源对象的类型，支持 COS 和 URL 两种。
+     * @param string $Type 输入来源对象的类型，支持 COS、URL 两种。
      * @param CosInputInfo $CosInputInfo 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
      * @param UrlInputInfo $UrlInputInfo 当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -76,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpCountNewFlag(integer $IpCountNewFlag) 设置新版本1ip高防包
  * @method integer getVitalityVersion() 获取攻击封堵套餐标记
  * @method void setVitalityVersion(integer $VitalityVersion) 设置攻击封堵套餐标记
+ * @method integer getLine() 获取网络线路
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLine(integer $Line) 设置网络线路
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getElasticServiceBandwidth() 获取弹性业务带宽开关
+ * @method void setElasticServiceBandwidth(integer $ElasticServiceBandwidth) 设置弹性业务带宽开关
  */
 class BGPInstance extends AbstractModel
 {
@@ -172,6 +178,17 @@ class BGPInstance extends AbstractModel
     public $VitalityVersion;
 
     /**
+     * @var integer 网络线路
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Line;
+
+    /**
+     * @var integer 弹性业务带宽开关
+     */
+    public $ElasticServiceBandwidth;
+
+    /**
      * @param InstanceRelation $InstanceDetail 资产实例的详细信息
      * @param BGPInstanceSpecification $SpecificationLimit 资产实例的规格信息
      * @param BGPInstanceUsages $Usage 资产实例的使用统计信息
@@ -200,6 +217,9 @@ class BGPInstance extends AbstractModel
      * @param array $TagInfoList 资源关联标签
      * @param integer $IpCountNewFlag 新版本1ip高防包
      * @param integer $VitalityVersion 攻击封堵套餐标记
+     * @param integer $Line 网络线路
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ElasticServiceBandwidth 弹性业务带宽开关
      */
     function __construct()
     {
@@ -291,6 +311,14 @@ class BGPInstance extends AbstractModel
 
         if (array_key_exists("VitalityVersion",$param) and $param["VitalityVersion"] !== null) {
             $this->VitalityVersion = $param["VitalityVersion"];
+        }
+
+        if (array_key_exists("Line",$param) and $param["Line"] !== null) {
+            $this->Line = $param["Line"];
+        }
+
+        if (array_key_exists("ElasticServiceBandwidth",$param) and $param["ElasticServiceBandwidth"] !== null) {
+            $this->ElasticServiceBandwidth = $param["ElasticServiceBandwidth"];
         }
     }
 }

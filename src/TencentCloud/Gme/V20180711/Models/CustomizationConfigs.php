@@ -18,7 +18,7 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 语音消息转文本自学习模型配置
+ * 语音消息转文本热句模型配置
  *
  * @method integer getBizId() 获取应用 ID，登录控制台创建应用得到的AppID
  * @method void setBizId(integer $BizId) 设置应用 ID，登录控制台创建应用得到的AppID

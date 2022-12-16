@@ -56,6 +56,12 @@ use TencentCloud\Common\AbstractModel;
 注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessMedia）有设置，将覆盖原有编排的默认回调。
 
 注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。
+ * @method string getTaskType() 获取任务类型，默认Online
+<li> Online：实时任务</li>
+<li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
+ * @method void setTaskType(string $TaskType) 设置任务类型，默认Online
+<li> Online：实时任务</li>
+<li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
  */
 class ProcessMediaRequest extends AbstractModel
 {
@@ -126,6 +132,13 @@ class ProcessMediaRequest extends AbstractModel
     public $ScheduleId;
 
     /**
+     * @var string 任务类型，默认Online
+<li> Online：实时任务</li>
+<li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
+     */
+    public $TaskType;
+
+    /**
      * @param MediaInputInfo $InputInfo 媒体处理的文件输入信息。
      * @param TaskOutputStorage $OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
      * @param string $OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
@@ -144,6 +157,9 @@ class ProcessMediaRequest extends AbstractModel
 注意2：对于TaskNotifyConfig参数，若创建任务接口（ProcessMedia）有设置，将覆盖原有编排的默认回调。
 
 注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。
+     * @param string $TaskType 任务类型，默认Online
+<li> Online：实时任务</li>
+<li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
      */
     function __construct()
     {
@@ -211,6 +227,10 @@ class ProcessMediaRequest extends AbstractModel
 
         if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
             $this->ScheduleId = $param["ScheduleId"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
     }
 }

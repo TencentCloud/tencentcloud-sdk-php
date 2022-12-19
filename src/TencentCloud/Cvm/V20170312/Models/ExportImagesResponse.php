@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskId() 获取导出镜像任务ID
  * @method void setTaskId(integer $TaskId) 设置导出镜像任务ID
+ * @method array getCosPaths() 获取导出镜像的COS文件名列表
+ * @method void setCosPaths(array $CosPaths) 设置导出镜像的COS文件名列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class ExportImagesResponse extends AbstractModel
     public $TaskId;
 
     /**
+     * @var array 导出镜像的COS文件名列表
+     */
+    public $CosPaths;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $TaskId 导出镜像任务ID
+     * @param array $CosPaths 导出镜像的COS文件名列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class ExportImagesResponse extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("CosPaths",$param) and $param["CosPaths"] !== null) {
+            $this->CosPaths = $param["CosPaths"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

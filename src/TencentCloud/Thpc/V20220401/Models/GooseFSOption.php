@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述GooseFS挂载信息
  *
- * @method string getLocalPath() 获取文件系统本地挂载路径
- * @method void setLocalPath(string $LocalPath) 设置文件系统本地挂载路径
- * @method string getRemotePath() 获取文件系统远程挂载路径
- * @method void setRemotePath(string $RemotePath) 设置文件系统远程挂载路径
- * @method array getMasters() 获取文件系统master的ip和端口
- * @method void setMasters(array $Masters) 设置文件系统master的ip和端口
+ * @method string getLocalPath() 获取文件系统本地挂载路径。
+ * @method void setLocalPath(string $LocalPath) 设置文件系统本地挂载路径。
+ * @method string getRemotePath() 获取文件系统远程挂载路径。
+ * @method void setRemotePath(string $RemotePath) 设置文件系统远程挂载路径。
+ * @method array getMasters() 获取文件系统master的ip和端口。
+ * @method void setMasters(array $Masters) 设置文件系统master的ip和端口。
  */
 class GooseFSOption extends AbstractModel
 {
     /**
-     * @var string 文件系统本地挂载路径
+     * @var string 文件系统本地挂载路径。
      */
     public $LocalPath;
 
     /**
-     * @var string 文件系统远程挂载路径
+     * @var string 文件系统远程挂载路径。
      */
     public $RemotePath;
 
     /**
-     * @var array 文件系统master的ip和端口
+     * @var array 文件系统master的ip和端口。
      */
     public $Masters;
 
     /**
-     * @param string $LocalPath 文件系统本地挂载路径
-     * @param string $RemotePath 文件系统远程挂载路径
-     * @param array $Masters 文件系统master的ip和端口
+     * @param string $LocalPath 文件系统本地挂载路径。
+     * @param string $RemotePath 文件系统远程挂载路径。
+     * @param array $Masters 文件系统master的ip和端口。
      */
     function __construct()
     {

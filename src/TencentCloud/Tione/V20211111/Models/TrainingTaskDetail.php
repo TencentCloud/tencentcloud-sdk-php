@@ -142,6 +142,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
  * @method void setStatus(string $Status) 设置任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+ * @method string getCallbackUrl() 获取回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrainingTaskDetail extends AbstractModel
 {
@@ -359,6 +363,12 @@ class TrainingTaskDetail extends AbstractModel
     public $Status;
 
     /**
+     * @var string 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CallbackUrl;
+
+    /**
      * @param string $Id 训练任务ID
      * @param string $Name 训练任务名称
      * @param string $Uin 主账号uin
@@ -420,6 +430,8 @@ class TrainingTaskDetail extends AbstractModel
      * @param string $Message 任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * @param string $CallbackUrl 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -604,6 +616,10 @@ class TrainingTaskDetail extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
     }
 }

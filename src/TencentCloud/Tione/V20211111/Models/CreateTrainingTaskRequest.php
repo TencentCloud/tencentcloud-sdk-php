@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注，最多500个字
  * @method string getDataSource() 获取数据来源，eg：DATASET、COS、CFS、HDFS
  * @method void setDataSource(string $DataSource) 设置数据来源，eg：DATASET、COS、CFS、HDFS
+ * @method string getCallbackUrl() 获取回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
  */
 class CreateTrainingTaskRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class CreateTrainingTaskRequest extends AbstractModel
     public $DataSource;
 
     /**
+     * @var string 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
+     */
+    public $CallbackUrl;
+
+    /**
      * @param string $Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $ChargeType 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
      * @param array $ResourceConfigInfos 资源配置，需填写对应算力规格ID和节点数量，算力规格ID查询接口为DescribeBillingSpecsPrice，eg：[{"Role":"WORKER", "InstanceType": "TI.S.MEDIUM.POST", "InstanceNum": 1}]
@@ -192,6 +199,7 @@ class CreateTrainingTaskRequest extends AbstractModel
      * @param string $TuningParameters 调优参数
      * @param string $Remark 备注，最多500个字
      * @param string $DataSource 数据来源，eg：DATASET、COS、CFS、HDFS
+     * @param string $CallbackUrl 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
      */
     function __construct()
     {
@@ -308,6 +316,10 @@ class CreateTrainingTaskRequest extends AbstractModel
 
         if (array_key_exists("DataSource",$param) and $param["DataSource"] !== null) {
             $this->DataSource = $param["DataSource"];
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
     }
 }

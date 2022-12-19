@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCallbackUrl() 获取回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrainingTaskSetItem extends AbstractModel
 {
@@ -221,6 +225,12 @@ class TrainingTaskSetItem extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CallbackUrl;
+
+    /**
      * @param string $Id 训练任务ID
      * @param string $Name 训练任务名称
      * @param string $FrameworkName 框架名称
@@ -255,6 +265,8 @@ class TrainingTaskSetItem extends AbstractModel
      * @param string $Message 任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CallbackUrl 回调地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -372,6 +384,10 @@ class TrainingTaskSetItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
     }
 }

@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网Id
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
+ * @method string getCallbackUrl() 获取任务执行结果回调URL，仅支持http和https。回调格式&内容详见: [TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+ * @method void setCallbackUrl(string $CallbackUrl) 设置任务执行结果回调URL，仅支持http和https。回调格式&内容详见: [TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
  */
 class CreateBatchTaskRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class CreateBatchTaskRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 任务执行结果回调URL，仅支持http和https。回调格式&内容详见: [TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+     */
+    public $CallbackUrl;
+
+    /**
      * @param string $BatchTaskName 跑批任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $ChargeType 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
      * @param ResourceConfigInfo $ResourceConfigInfo 资源配置
@@ -168,6 +175,7 @@ class CreateBatchTaskRequest extends AbstractModel
      * @param string $VpcId VPC Id
      * @param string $SubnetId 子网Id
      * @param string $Remark 备注
+     * @param string $CallbackUrl 任务执行结果回调URL，仅支持http和https。回调格式&内容详见: [TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
      */
     function __construct()
     {
@@ -273,6 +281,10 @@ class CreateBatchTaskRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
+            $this->CallbackUrl = $param["CallbackUrl"];
         }
     }
 }

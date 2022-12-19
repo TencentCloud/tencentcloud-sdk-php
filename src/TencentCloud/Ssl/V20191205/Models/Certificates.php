@@ -152,6 +152,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置证书算法
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCAEncryptAlgorithms() 获取上传CA证书的加密算法
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCAEncryptAlgorithms(array $CAEncryptAlgorithms) 设置上传CA证书的加密算法
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCAEndTimes() 获取上传CA证书的过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCAEndTimes(array $CAEndTimes) 设置上传CA证书的过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCACommonNames() 获取上传CA证书的通用名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCACommonNames(array $CACommonNames) 设置上传CA证书的通用名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PreAuditInfo getPreAuditInfo() 获取证书预审核信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPreAuditInfo(PreAuditInfo $PreAuditInfo) 设置证书预审核信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -354,6 +370,30 @@ class Certificates extends AbstractModel
     public $EncryptAlgorithm;
 
     /**
+     * @var array 上传CA证书的加密算法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CAEncryptAlgorithms;
+
+    /**
+     * @var array 上传CA证书的过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CAEndTimes;
+
+    /**
+     * @var array 上传CA证书的通用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CACommonNames;
+
+    /**
+     * @var PreAuditInfo 证书预审核信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PreAuditInfo;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -419,6 +459,14 @@ class Certificates extends AbstractModel
      * @param boolean $IsSM 是否国密证书
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptAlgorithm 证书算法
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CAEncryptAlgorithms 上传CA证书的加密算法
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CAEndTimes 上传CA证书的过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CACommonNames 上传CA证书的通用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreAuditInfo $PreAuditInfo 证书预审核信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -571,6 +619,23 @@ class Certificates extends AbstractModel
 
         if (array_key_exists("EncryptAlgorithm",$param) and $param["EncryptAlgorithm"] !== null) {
             $this->EncryptAlgorithm = $param["EncryptAlgorithm"];
+        }
+
+        if (array_key_exists("CAEncryptAlgorithms",$param) and $param["CAEncryptAlgorithms"] !== null) {
+            $this->CAEncryptAlgorithms = $param["CAEncryptAlgorithms"];
+        }
+
+        if (array_key_exists("CAEndTimes",$param) and $param["CAEndTimes"] !== null) {
+            $this->CAEndTimes = $param["CAEndTimes"];
+        }
+
+        if (array_key_exists("CACommonNames",$param) and $param["CACommonNames"] !== null) {
+            $this->CACommonNames = $param["CACommonNames"];
+        }
+
+        if (array_key_exists("PreAuditInfo",$param) and $param["PreAuditInfo"] !== null) {
+            $this->PreAuditInfo = new PreAuditInfo();
+            $this->PreAuditInfo->deserialize($param["PreAuditInfo"]);
         }
     }
 }

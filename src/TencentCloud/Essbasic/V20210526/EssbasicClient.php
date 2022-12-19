@@ -64,7 +64,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
  * @method Models\CreateFlowsByTemplatesResponse CreateFlowsByTemplates(Models\CreateFlowsByTemplatesRequest $req) 接口（CreateFlowsByTemplates）用于使用多个模板批量创建签署流程。当前可批量发起合同（签署流程）数量最大为20个。
 如若在模板中配置了动态表格, 上传的附件必须为A4大小
 合同发起人必须在电子签已经进行实名。
- * @method Models\CreateSealByImageResponse CreateSealByImage(Models\CreateSealByImageRequest $req) 渠道通过图片为子客代创建印章，图片最大5m；此接口不可直接使用，请联系运营/客服咨询相关流程
+ * @method Models\CreateSealByImageResponse CreateSealByImage(Models\CreateSealByImageRequest $req) 渠道通过图片为子客代创建印章，图片最大5MB
  * @method Models\CreateSignUrlsResponse CreateSignUrls(Models\CreateSignUrlsRequest $req) 创建跳转小程序查看或签署的链接。
 
 跳转小程序的几种方式：主要是设置不同的EndPoint

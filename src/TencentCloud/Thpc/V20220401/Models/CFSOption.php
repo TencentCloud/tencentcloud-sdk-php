@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述CFS文件系统版本和挂载信息
  *
- * @method string getLocalPath() 获取文件系统本地挂载路径
- * @method void setLocalPath(string $LocalPath) 设置文件系统本地挂载路径
- * @method string getRemotePath() 获取文件系统远程挂载ip及路径
- * @method void setRemotePath(string $RemotePath) 设置文件系统远程挂载ip及路径
+ * @method string getLocalPath() 获取文件系统本地挂载路径。
+ * @method void setLocalPath(string $LocalPath) 设置文件系统本地挂载路径。
+ * @method string getRemotePath() 获取文件系统远程挂载ip及路径。
+ * @method void setRemotePath(string $RemotePath) 设置文件系统远程挂载ip及路径。
  * @method string getProtocol() 获取文件系统协议类型，默认值NFS 3.0。
 <li>NFS 3.0。
 <li>NFS 4.0。
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class CFSOption extends AbstractModel
 {
     /**
-     * @var string 文件系统本地挂载路径
+     * @var string 文件系统本地挂载路径。
      */
     public $LocalPath;
 
     /**
-     * @var string 文件系统远程挂载ip及路径
+     * @var string 文件系统远程挂载ip及路径。
      */
     public $RemotePath;
 
@@ -61,8 +61,8 @@ class CFSOption extends AbstractModel
     public $StorageType;
 
     /**
-     * @param string $LocalPath 文件系统本地挂载路径
-     * @param string $RemotePath 文件系统远程挂载ip及路径
+     * @param string $LocalPath 文件系统本地挂载路径。
+     * @param string $RemotePath 文件系统远程挂载ip及路径。
      * @param string $Protocol 文件系统协议类型，默认值NFS 3.0。
 <li>NFS 3.0。
 <li>NFS 4.0。

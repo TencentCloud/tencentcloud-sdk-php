@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoAcceptFlag(boolean $AutoAcceptFlag) 设置是否自动接受。
  * @method string getServiceInstanceId() 获取后端服务ID，比如lb-xxx。
  * @method void setServiceInstanceId(string $ServiceInstanceId) 设置后端服务ID，比如lb-xxx。
- * @method boolean getIsPassService() 获取是否是PassService类型。
- * @method void setIsPassService(boolean $IsPassService) 设置是否是PassService类型。
+ * @method boolean getIsPassService() 获取~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
+ * @method void setIsPassService(boolean $IsPassService) 设置~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
+ * @method string getServiceType() 获取挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+ * @method void setServiceType(string $ServiceType) 设置挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
  */
 class CreateVpcEndPointServiceRequest extends AbstractModel
 {
@@ -54,16 +56,22 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
     public $ServiceInstanceId;
 
     /**
-     * @var boolean 是否是PassService类型。
+     * @var boolean ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
      */
     public $IsPassService;
+
+    /**
+     * @var string 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+     */
+    public $ServiceType;
 
     /**
      * @param string $VpcId VPC实例ID。
      * @param string $EndPointServiceName 终端节点服务名称。
      * @param boolean $AutoAcceptFlag 是否自动接受。
      * @param string $ServiceInstanceId 后端服务ID，比如lb-xxx。
-     * @param boolean $IsPassService 是否是PassService类型。
+     * @param boolean $IsPassService ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
+     * @param string $ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
 
         if (array_key_exists("IsPassService",$param) and $param["IsPassService"] !== null) {
             $this->IsPassService = $param["IsPassService"];
+        }
+
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
         }
     }
 }

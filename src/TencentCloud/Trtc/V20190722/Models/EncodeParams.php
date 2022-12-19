@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MCU混流输出流编码参数
  *
- * @method integer getAudioSampleRate() 获取混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
- * @method void setAudioSampleRate(integer $AudioSampleRate) 设置混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
- * @method integer getAudioBitrate() 获取混流-输出流音频码率。取值范围[8,500]，单位为kbps。
- * @method void setAudioBitrate(integer $AudioBitrate) 设置混流-输出流音频码率。取值范围[8,500]，单位为kbps。
- * @method integer getAudioChannels() 获取混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
- * @method void setAudioChannels(integer $AudioChannels) 设置混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
+ * @method integer getAudioSampleRate() 获取混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
+ * @method void setAudioSampleRate(integer $AudioSampleRate) 设置混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
+ * @method integer getAudioBitrate() 获取混流-输出流音频码率。取值范围[8,500]，单位为kbps。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
+ * @method void setAudioBitrate(integer $AudioBitrate) 设置混流-输出流音频码率。取值范围[8,500]，单位为kbps。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
+ * @method integer getAudioChannels() 获取混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
+ * @method void setAudioChannels(integer $AudioChannels) 设置混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
  * @method integer getVideoWidth() 获取混流-输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
  * @method void setVideoWidth(integer $VideoWidth) 设置混流-输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
  * @method integer getVideoHeight() 获取混流-输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
@@ -54,25 +54,25 @@ use TencentCloud\Common\AbstractModel;
 灰色：0x999999。对应的十进制整数是10066329。
  * @method integer getBackgroundImageId() 获取混流-输出流背景图片，取值为实时音视频控制台上传的图片ID。
  * @method void setBackgroundImageId(integer $BackgroundImageId) 设置混流-输出流背景图片，取值为实时音视频控制台上传的图片ID。
- * @method integer getAudioCodec() 获取混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]
- * @method void setAudioCodec(integer $AudioCodec) 设置混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]
+ * @method integer getAudioCodec() 获取混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
+ * @method void setAudioCodec(integer $AudioCodec) 设置混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
  * @method string getBackgroundImageUrl() 获取混流-输出流背景图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。BackgroundImageUrl和BackgroundImageId参数都填时，以BackgroundImageUrl为准。图片大小限制不超过2MB。
  * @method void setBackgroundImageUrl(string $BackgroundImageUrl) 设置混流-输出流背景图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。BackgroundImageUrl和BackgroundImageId参数都填时，以BackgroundImageUrl为准。图片大小限制不超过2MB。
  */
 class EncodeParams extends AbstractModel
 {
     /**
-     * @var integer 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
+     * @var integer 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
      */
     public $AudioSampleRate;
 
     /**
-     * @var integer 混流-输出流音频码率。取值范围[8,500]，单位为kbps。
+     * @var integer 混流-输出流音频码率。取值范围[8,500]，单位为kbps。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
      */
     public $AudioBitrate;
 
     /**
-     * @var integer 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
+     * @var integer 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
      */
     public $AudioChannels;
 
@@ -119,7 +119,7 @@ class EncodeParams extends AbstractModel
     public $BackgroundImageId;
 
     /**
-     * @var integer 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]
+     * @var integer 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
      */
     public $AudioCodec;
 
@@ -129,9 +129,9 @@ class EncodeParams extends AbstractModel
     public $BackgroundImageUrl;
 
     /**
-     * @param integer $AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。
-     * @param integer $AudioBitrate 混流-输出流音频码率。取值范围[8,500]，单位为kbps。
-     * @param integer $AudioChannels 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。
+     * @param integer $AudioSampleRate 混流-输出流音频采样率。取值为[48000, 44100, 32000, 24000, 16000, 8000]，单位是Hz。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
+     * @param integer $AudioBitrate 混流-输出流音频码率。取值范围[8,500]，单位为kbps。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
+     * @param integer $AudioChannels 混流-输出流音频声道数，取值范围[1,2]，1表示混流输出音频为单声道，2表示混流输出音频为双声道。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
      * @param integer $VideoWidth 混流-输出流宽，音视频输出时必填。取值范围[0,1920]，单位为像素值。
      * @param integer $VideoHeight 混流-输出流高，音视频输出时必填。取值范围[0,1080]，单位为像素值。
      * @param integer $VideoBitrate 混流-输出流码率，音视频输出时必填。取值范围[1,10000]，单位为kbps。
@@ -146,7 +146,7 @@ class EncodeParams extends AbstractModel
 白色：0xFFFFFF。对应的十进制整数是16777215。
 灰色：0x999999。对应的十进制整数是10066329。
      * @param integer $BackgroundImageId 混流-输出流背景图片，取值为实时音视频控制台上传的图片ID。
-     * @param integer $AudioCodec 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]
+     * @param integer $AudioCodec 混流-输出流音频编码类型，取值范围[0,1, 2]，0为LC-AAC，1为HE-AAC，2为HE-AACv2。默认值为0。当音频编码设置为HE-AACv2时，只支持输出流音频声道数为双声道。HE-AAC和HE-AACv2支持的输出流音频采样率范围为[48000, 44100, 32000, 24000, 16000]。混流任务发起过程中，为了保持CDN链接的稳定，不要修改音频参数（codec、采样率、码率、声道数）。
      * @param string $BackgroundImageUrl 混流-输出流背景图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。BackgroundImageUrl和BackgroundImageId参数都填时，以BackgroundImageUrl为准。图片大小限制不超过2MB。
      */
     function __construct()

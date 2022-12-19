@@ -118,8 +118,8 @@ HYBRID_PAID:
  * @method void setVolumeMount(VolumeMount $VolumeMount) 设置挂载配置，目前只支持CFS
  * @method ServiceLimit getServiceLimit() 获取服务限速限流相关配置
  * @method void setServiceLimit(ServiceLimit $ServiceLimit) 设置服务限速限流相关配置
- * @method string getCallbackUrl() 获取回调地址，用于回调创建服务状态信息
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，用于回调创建服务状态信息
+ * @method string getCallbackUrl() 获取回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+ * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -277,7 +277,7 @@ HYBRID_PAID:
     public $ServiceLimit;
 
     /**
-     * @var string 回调地址，用于回调创建服务状态信息
+     * @var string 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
      */
     public $CallbackUrl;
 
@@ -331,7 +331,7 @@ HYBRID_PAID:
      * @param ScheduledAction $ScheduledAction 定时停止配置
      * @param VolumeMount $VolumeMount 挂载配置，目前只支持CFS
      * @param ServiceLimit $ServiceLimit 服务限速限流相关配置
-     * @param string $CallbackUrl 回调地址，用于回调创建服务状态信息
+     * @param string $CallbackUrl 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
      */
     function __construct()
     {

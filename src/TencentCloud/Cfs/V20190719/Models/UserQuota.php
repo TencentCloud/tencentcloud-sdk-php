@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileHardLimit(integer $FileHardLimit) 设置文件硬限制，单位个
  * @method string getFileSystemId() 获取文件系统ID
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
+ * @method integer getCapacityUsed() 获取容量使用，单位GiB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCapacityUsed(integer $CapacityUsed) 设置容量使用，单位GiB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFileUsed() 获取文件使用个数，单位个
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileUsed(integer $FileUsed) 设置文件使用个数，单位个
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserQuota extends AbstractModel
 {
@@ -59,11 +67,27 @@ class UserQuota extends AbstractModel
     public $FileSystemId;
 
     /**
+     * @var integer 容量使用，单位GiB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CapacityUsed;
+
+    /**
+     * @var integer 文件使用个数，单位个
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileUsed;
+
+    /**
      * @param string $UserType 指定配额类型，包括Uid、Gid
      * @param string $UserId UID/GID信息
      * @param integer $CapacityHardLimit 容量硬限制，单位GiB
      * @param integer $FileHardLimit 文件硬限制，单位个
      * @param string $FileSystemId 文件系统ID
+     * @param integer $CapacityUsed 容量使用，单位GiB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FileUsed 文件使用个数，单位个
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +120,14 @@ class UserQuota extends AbstractModel
 
         if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
             $this->FileSystemId = $param["FileSystemId"];
+        }
+
+        if (array_key_exists("CapacityUsed",$param) and $param["CapacityUsed"] !== null) {
+            $this->CapacityUsed = $param["CapacityUsed"];
+        }
+
+        if (array_key_exists("FileUsed",$param) and $param["FileUsed"] !== null) {
+            $this->FileUsed = $param["FileUsed"];
         }
     }
 }

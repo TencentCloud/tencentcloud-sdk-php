@@ -25,7 +25,9 @@ use TencentCloud\Cdwch\V20200915\Models as Models;
 /**
  * @method Models\ActionAlterCkUserResponse ActionAlterCkUser(Models\ActionAlterCkUserRequest $req) 新增和修改用户接口
  * @method Models\CreateBackUpScheduleResponse CreateBackUpSchedule(Models\CreateBackUpScheduleRequest $req) 创建或者修改备份策略
+ * @method Models\CreateInstanceNewResponse CreateInstanceNew(Models\CreateInstanceNewRequest $req) 创建集群
  * @method Models\DescribeCkSqlApisResponse DescribeCkSqlApis(Models\DescribeCkSqlApisRequest $req) 查询集群用户、集群表，数据库等相关信息
+ * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 根据实例ID查询某个实例的具体信息
  * @method Models\DescribeInstanceShardsResponse DescribeInstanceShards(Models\DescribeInstanceShardsRequest $req) 获取实例shard信息列表
  * @method Models\DescribeSpecResponse DescribeSpec(Models\DescribeSpecRequest $req) 购买页拉取集群的数据节点和zookeeper节点的规格列表
  * @method Models\ModifyClusterConfigsResponse ModifyClusterConfigs(Models\ModifyClusterConfigsRequest $req) 在集群配置页面修改集群配置文件接口，xml模式

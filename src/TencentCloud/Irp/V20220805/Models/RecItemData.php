@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemTraceId(string $ItemTraceId) 设置推荐追踪id，本次推荐内容产生的后续行为上报均要用该ItemTraceId上报。每次接口调用返回的ItemTraceId不同
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getScore() 获取推荐结果分，取值范围[0,1000000]
+ * @method float getScore() 获取推荐预测分，分值越高被推荐的理由越充分，取值范围[0,1000000]，用于做二次排序的参考
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScore(float $Score) 设置推荐结果分，取值范围[0,1000000]
+ * @method void setScore(float $Score) 设置推荐预测分，分值越高被推荐的理由越充分，取值范围[0,1000000]，用于做二次排序的参考
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecItemData extends AbstractModel
@@ -55,7 +55,7 @@ class RecItemData extends AbstractModel
     public $ItemTraceId;
 
     /**
-     * @var float 推荐结果分，取值范围[0,1000000]
+     * @var float 推荐预测分，分值越高被推荐的理由越充分，取值范围[0,1000000]，用于做二次排序的参考
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
@@ -66,7 +66,7 @@ class RecItemData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ItemTraceId 推荐追踪id，本次推荐内容产生的后续行为上报均要用该ItemTraceId上报。每次接口调用返回的ItemTraceId不同
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Score 推荐结果分，取值范围[0,1000000]
+     * @param float $Score 推荐预测分，分值越高被推荐的理由越充分，取值范围[0,1000000]，用于做二次排序的参考
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

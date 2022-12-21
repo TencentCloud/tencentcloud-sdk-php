@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogArchiveVolume(integer $BinlogArchiveVolume) 设置归档日志备份容量（单位为字节）。
  * @method integer getBinlogArchiveCount() 获取归档日志备份个数。
  * @method void setBinlogArchiveCount(integer $BinlogArchiveCount) 设置归档日志备份个数。
+ * @method integer getBinlogStandbyVolume() 获取标准存储日志备份容量（单位为字节）。
+ * @method void setBinlogStandbyVolume(integer $BinlogStandbyVolume) 设置标准存储日志备份容量（单位为字节）。
+ * @method integer getBinlogStandbyCount() 获取标准存储日志备份个数。
+ * @method void setBinlogStandbyCount(integer $BinlogStandbyCount) 设置标准存储日志备份个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -68,6 +72,16 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
     public $BinlogArchiveCount;
 
     /**
+     * @var integer 标准存储日志备份容量（单位为字节）。
+     */
+    public $BinlogStandbyVolume;
+
+    /**
+     * @var integer 标准存储日志备份个数。
+     */
+    public $BinlogStandbyCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -79,6 +93,8 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
      * @param integer $RemoteBinlogCount 异地日志备份个数。
      * @param integer $BinlogArchiveVolume 归档日志备份容量（单位为字节）。
      * @param integer $BinlogArchiveCount 归档日志备份个数。
+     * @param integer $BinlogStandbyVolume 标准存储日志备份容量（单位为字节）。
+     * @param integer $BinlogStandbyCount 标准存储日志备份个数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -116,6 +132,14 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
 
         if (array_key_exists("BinlogArchiveCount",$param) and $param["BinlogArchiveCount"] !== null) {
             $this->BinlogArchiveCount = $param["BinlogArchiveCount"];
+        }
+
+        if (array_key_exists("BinlogStandbyVolume",$param) and $param["BinlogStandbyVolume"] !== null) {
+            $this->BinlogStandbyVolume = $param["BinlogStandbyVolume"];
+        }
+
+        if (array_key_exists("BinlogStandbyCount",$param) and $param["BinlogStandbyCount"] !== null) {
+            $this->BinlogStandbyCount = $param["BinlogStandbyCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeepMetadata(boolean $KeepMetadata) 设置是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method BatchAnalyseParam getBatchAnalyse() 获取数组解析
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBatchAnalyse(BatchAnalyseParam $BatchAnalyse) 设置数组解析
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TransformsParam extends AbstractModel
 {
@@ -108,6 +112,12 @@ class TransformsParam extends AbstractModel
     public $KeepMetadata;
 
     /**
+     * @var BatchAnalyseParam 数组解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BatchAnalyse;
+
+    /**
      * @param string $Content 原始数据
      * @param array $FieldChain 处理链
      * @param array $FilterParam 过滤器
@@ -123,6 +133,8 @@ class TransformsParam extends AbstractModel
      * @param RowParam $RowParam 输出格式为ROW必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $KeepMetadata 是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BatchAnalyseParam $BatchAnalyse 数组解析
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -184,6 +196,11 @@ class TransformsParam extends AbstractModel
 
         if (array_key_exists("KeepMetadata",$param) and $param["KeepMetadata"] !== null) {
             $this->KeepMetadata = $param["KeepMetadata"];
+        }
+
+        if (array_key_exists("BatchAnalyse",$param) and $param["BatchAnalyse"] !== null) {
+            $this->BatchAnalyse = new BatchAnalyseParam();
+            $this->BatchAnalyse->deserialize($param["BatchAnalyse"]);
         }
     }
 }

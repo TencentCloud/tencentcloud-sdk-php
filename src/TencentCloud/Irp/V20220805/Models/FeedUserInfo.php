@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastLoginIp(string $LastLoginIp) 设置用户上一次登录的ip
  * @method integer getLastModifyTimestamp() 获取用户信息的最后修改时间戳，秒级时间戳（1639624786）
  * @method void setLastModifyTimestamp(integer $LastModifyTimestamp) 设置用户信息的最后修改时间戳，秒级时间戳（1639624786）
- * @method string getExtension() 获取json字符串，用于画像数据的扩展
- * @method void setExtension(string $Extension) 设置json字符串，用于画像数据的扩展
+ * @method string getExtension() 获取json字符串，用于画像数据的扩展，需要base64加密
+ * @method void setExtension(string $Extension) 设置json字符串，用于画像数据的扩展，需要base64加密
  */
 class FeedUserInfo extends AbstractModel
 {
@@ -152,7 +152,7 @@ class FeedUserInfo extends AbstractModel
     public $LastModifyTimestamp;
 
     /**
-     * @var string json字符串，用于画像数据的扩展
+     * @var string json字符串，用于画像数据的扩展，需要base64加密
      */
     public $Extension;
 
@@ -175,7 +175,7 @@ class FeedUserInfo extends AbstractModel
      * @param integer $LastLoginTimestamp 用户上一次登录时间，秒级时间戳（1639624786）
      * @param string $LastLoginIp 用户上一次登录的ip
      * @param integer $LastModifyTimestamp 用户信息的最后修改时间戳，秒级时间戳（1639624786）
-     * @param string $Extension json字符串，用于画像数据的扩展
+     * @param string $Extension json字符串，用于画像数据的扩展，需要base64加密
      */
     function __construct()
     {

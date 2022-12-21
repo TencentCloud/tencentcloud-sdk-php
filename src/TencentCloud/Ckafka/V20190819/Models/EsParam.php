@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDropCls(DropCls $DropCls) 设置当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
  * @method string getDatabasePrimaryKey() 获取转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键
  * @method void setDatabasePrimaryKey(string $DatabasePrimaryKey) 设置转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键
+ * @method FailureParam getDropDlq() 获取死信队列
+ * @method void setDropDlq(FailureParam $DropDlq) 设置死信队列
  */
 class EsParam extends AbstractModel
 {
@@ -136,6 +138,11 @@ class EsParam extends AbstractModel
     public $DatabasePrimaryKey;
 
     /**
+     * @var FailureParam 死信队列
+     */
+    public $DropDlq;
+
+    /**
      * @param string $Resource 实例资源
      * @param integer $Port Es的连接port
      * @param string $UserName Es用户名
@@ -152,6 +159,7 @@ class EsParam extends AbstractModel
      * @param string $IndexType Es自定义index名称的类型，STRING，JSONPATH，默认为STRING
      * @param DropCls $DropCls 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
      * @param string $DatabasePrimaryKey 转储到ES的消息为Database的binlog时，如果需要同步数据库操作，即增删改的操作到ES时填写数据库表主键
+     * @param FailureParam $DropDlq 死信队列
      */
     function __construct()
     {
@@ -229,6 +237,11 @@ class EsParam extends AbstractModel
 
         if (array_key_exists("DatabasePrimaryKey",$param) and $param["DatabasePrimaryKey"] !== null) {
             $this->DatabasePrimaryKey = $param["DatabasePrimaryKey"];
+        }
+
+        if (array_key_exists("DropDlq",$param) and $param["DropDlq"] !== null) {
+            $this->DropDlq = new FailureParam();
+            $this->DropDlq->deserialize($param["DropDlq"]);
         }
     }
 }

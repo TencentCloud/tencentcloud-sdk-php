@@ -23,12 +23,15 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Thpc\V20220401\Models as Models;
 
 /**
+ * @method Models\AddClusterStorageOptionResponse AddClusterStorageOption(Models\AddClusterStorageOptionRequest $req) 本接口（AddClusterStorageOption）用于添加集群存储选项信息。
  * @method Models\AddNodesResponse AddNodes(Models\AddNodesRequest $req) 本接口(AddNodes)用于添加一个或者多个计算节点或者登录节点到指定集群。
  * @method Models\BindAutoScalingGroupResponse BindAutoScalingGroup(Models\BindAutoScalingGroupRequest $req) 本接口(BindAutoScalingGroup)用于为集群队列绑定弹性伸缩组
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 本接口 (CreateCluster) 用于创建并启动集群。
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 本接口（DeleteCluster）用于删除一个指定的集群。
+ * @method Models\DeleteClusterStorageOptionResponse DeleteClusterStorageOption(Models\DeleteClusterStorageOptionRequest $req) 本接口 (DeleteClusterStorageOption) 用于删除集群存储选项信息。
  * @method Models\DeleteNodesResponse DeleteNodes(Models\DeleteNodesRequest $req) 本接口(DeleteNodes)用于删除指定集群中一个或者多个计算节点或者登录节点。
  * @method Models\DescribeClusterActivitiesResponse DescribeClusterActivities(Models\DescribeClusterActivitiesRequest $req) 本接口（DescribeClusterActivities）用于查询集群活动历史记录列表。
+ * @method Models\DescribeClusterStorageOptionResponse DescribeClusterStorageOption(Models\DescribeClusterStorageOptionRequest $req) 本接口 (DescribeClusterStorageOption) 用于查询集群存储选项信息。
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。
  * @method Models\SetAutoScalingConfigurationResponse SetAutoScalingConfiguration(Models\SetAutoScalingConfigurationRequest $req) 本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
  */

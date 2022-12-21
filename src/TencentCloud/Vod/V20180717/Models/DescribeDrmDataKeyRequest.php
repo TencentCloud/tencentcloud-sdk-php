@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEdkList() 获取加密后的数据密钥列表，最大支持10个。
  * @method void setEdkList(array $EdkList) 设置加密后的数据密钥列表，最大支持10个。
+ * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  */
 class DescribeDrmDataKeyRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeDrmDataKeyRequest extends AbstractModel
     public $EdkList;
 
     /**
+     * @var integer <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public $SubAppId;
+
+    /**
      * @param array $EdkList 加密后的数据密钥列表，最大支持10个。
+     * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeDrmDataKeyRequest extends AbstractModel
         }
         if (array_key_exists("EdkList",$param) and $param["EdkList"] !== null) {
             $this->EdkList = $param["EdkList"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

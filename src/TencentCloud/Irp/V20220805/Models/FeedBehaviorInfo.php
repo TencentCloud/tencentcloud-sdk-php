@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsVersion(string $OsVersion) 设置行为发生时的操作系统版本，<b>用作特征</b>
  * @method string getDeviceModel() 获取行为发生时的机型，<b>用作特征</b>
  * @method void setDeviceModel(string $DeviceModel) 设置行为发生时的机型，<b>用作特征</b>
- * @method string getExtension() 获取json字符串，<b>用于行为数据的扩展</b>
- * @method void setExtension(string $Extension) 设置json字符串，<b>用于行为数据的扩展</b>
+ * @method string getExtension() 获取json字符串，<b>用于行为数据的扩展</b>，需要base64加密
+ * @method void setExtension(string $Extension) 设置json字符串，<b>用于行为数据的扩展</b>，需要base64加密
  */
 class FeedBehaviorInfo extends AbstractModel
 {
@@ -169,7 +169,7 @@ class FeedBehaviorInfo extends AbstractModel
     public $DeviceModel;
 
     /**
-     * @var string json字符串，<b>用于行为数据的扩展</b>
+     * @var string json字符串，<b>用于行为数据的扩展</b>，需要base64加密
      */
     public $Extension;
 
@@ -195,7 +195,7 @@ class FeedBehaviorInfo extends AbstractModel
      * @param string $AppVersion 行为发生时的客户端app版本，<b>用作特征</b>
      * @param string $OsVersion 行为发生时的操作系统版本，<b>用作特征</b>
      * @param string $DeviceModel 行为发生时的机型，<b>用作特征</b>
-     * @param string $Extension json字符串，<b>用于行为数据的扩展</b>
+     * @param string $Extension json字符串，<b>用于行为数据的扩展</b>，需要base64加密
      */
     function __construct()
     {

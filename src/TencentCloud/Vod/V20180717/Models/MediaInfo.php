@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取媒体文件唯一标识 ID。
  * @method void setFileId(string $FileId) 设置媒体文件唯一标识 ID。
+ * @method FileReviewInfo getReviewInfo() 获取审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReviewInfo(FileReviewInfo $ReviewInfo) 设置审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaInfo extends AbstractModel
 {
@@ -141,6 +145,12 @@ class MediaInfo extends AbstractModel
     public $FileId;
 
     /**
+     * @var FileReviewInfo 审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReviewInfo;
+
+    /**
      * @param MediaBasicInfo $BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
@@ -164,6 +174,8 @@ class MediaInfo extends AbstractModel
      * @param MediaSubtitleInfo $SubtitleInfo 字幕信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 媒体文件唯一标识 ID。
+     * @param FileReviewInfo $ReviewInfo 审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -235,6 +247,11 @@ class MediaInfo extends AbstractModel
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("ReviewInfo",$param) and $param["ReviewInfo"] !== null) {
+            $this->ReviewInfo = new FileReviewInfo();
+            $this->ReviewInfo->deserialize($param["ReviewInfo"]);
         }
     }
 }

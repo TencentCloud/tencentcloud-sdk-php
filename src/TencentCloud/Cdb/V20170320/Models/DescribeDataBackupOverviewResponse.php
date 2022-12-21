@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataBackupArchiveVolume(integer $DataBackupArchiveVolume) 设置当前地域归档备份总容量。
  * @method integer getDataBackupArchiveCount() 获取当前地域归档备份总个数。
  * @method void setDataBackupArchiveCount(integer $DataBackupArchiveCount) 设置当前地域归档备份总个数。
+ * @method integer getDataBackupStandbyVolume() 获取当前地域标准存储备份总容量。
+ * @method void setDataBackupStandbyVolume(integer $DataBackupStandbyVolume) 设置当前地域标准存储备份总容量。
+ * @method integer getDataBackupStandbyCount() 获取当前地域标准存储备份总个数。
+ * @method void setDataBackupStandbyCount(integer $DataBackupStandbyCount) 设置当前地域标准存储备份总个数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -96,6 +100,16 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
     public $DataBackupArchiveCount;
 
     /**
+     * @var integer 当前地域标准存储备份总容量。
+     */
+    public $DataBackupStandbyVolume;
+
+    /**
+     * @var integer 当前地域标准存储备份总个数。
+     */
+    public $DataBackupStandbyCount;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -111,6 +125,8 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
      * @param integer $RemoteBackupCount 异地备份总个数。
      * @param integer $DataBackupArchiveVolume 当前地域归档备份总容量。
      * @param integer $DataBackupArchiveCount 当前地域归档备份总个数。
+     * @param integer $DataBackupStandbyVolume 当前地域标准存储备份总容量。
+     * @param integer $DataBackupStandbyCount 当前地域标准存储备份总个数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -164,6 +180,14 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
 
         if (array_key_exists("DataBackupArchiveCount",$param) and $param["DataBackupArchiveCount"] !== null) {
             $this->DataBackupArchiveCount = $param["DataBackupArchiveCount"];
+        }
+
+        if (array_key_exists("DataBackupStandbyVolume",$param) and $param["DataBackupStandbyVolume"] !== null) {
+            $this->DataBackupStandbyVolume = $param["DataBackupStandbyVolume"];
+        }
+
+        if (array_key_exists("DataBackupStandbyCount",$param) and $param["DataBackupStandbyCount"] !== null) {
+            $this->DataBackupStandbyCount = $param["DataBackupStandbyCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

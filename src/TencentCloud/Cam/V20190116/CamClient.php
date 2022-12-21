@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cam\V20190116\Models as Models;
 
 /**
- * @method Models\AddUserResponse AddUser(Models\AddUserRequest $req) 添加子用户
+ * @method Models\AddUserResponse AddUser(Models\AddUserRequest $req) 创建子用户
  * @method Models\AddUserToGroupResponse AddUserToGroup(Models\AddUserToGroupRequest $req) 用户加入到用户组
  * @method Models\AttachGroupPolicyResponse AttachGroupPolicy(Models\AttachGroupPolicyRequest $req) 本接口（AttachGroupPolicy）可用于绑定策略到用户组。
  * @method Models\AttachRolePolicyResponse AttachRolePolicy(Models\AttachRolePolicyRequest $req) 本接口（AttachRolePolicy）用于绑定策略到角色。

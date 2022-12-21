@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseAutoCreateTopic(boolean $UseAutoCreateTopic) 设置使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMsgMultiple() 获取源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMsgMultiple(integer $MsgMultiple) 设置源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicParam extends AbstractModel
 {
@@ -81,6 +85,12 @@ class TopicParam extends AbstractModel
     public $UseAutoCreateTopic;
 
     /**
+     * @var integer 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MsgMultiple;
+
+    /**
      * @param string $Resource 单独售卖Topic的Topic名称
      * @param string $OffsetType Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,6 +101,8 @@ class TopicParam extends AbstractModel
      * @param string $CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，可选择"gzip", "snappy", "lz4"中的一个进行填写。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -128,6 +140,10 @@ class TopicParam extends AbstractModel
 
         if (array_key_exists("UseAutoCreateTopic",$param) and $param["UseAutoCreateTopic"] !== null) {
             $this->UseAutoCreateTopic = $param["UseAutoCreateTopic"];
+        }
+
+        if (array_key_exists("MsgMultiple",$param) and $param["MsgMultiple"] !== null) {
+            $this->MsgMultiple = $param["MsgMultiple"];
         }
     }
 }

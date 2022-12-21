@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogArchiveDays(integer $BinlogArchiveDays) 设置日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
  * @method string getEnableBinlogArchive() 获取是否开启日志备份归档策略，off-关闭，on-打开，默认为off
  * @method void setEnableBinlogArchive(string $EnableBinlogArchive) 设置是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+ * @method string getEnableBackupStandby() 获取是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+ * @method void setEnableBackupStandby(string $EnableBackupStandby) 设置是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+ * @method integer getBackupStandbyDays() 获取数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+ * @method void setBackupStandbyDays(integer $BackupStandbyDays) 设置数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+ * @method string getEnableBinlogStandby() 获取是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+ * @method void setEnableBinlogStandby(string $EnableBinlogStandby) 设置是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+ * @method integer getBinlogStandbyDays() 获取日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+ * @method void setBinlogStandbyDays(integer $BinlogStandbyDays) 设置日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
  */
 class ModifyBackupConfigRequest extends AbstractModel
 {
@@ -136,6 +144,26 @@ class ModifyBackupConfigRequest extends AbstractModel
     public $EnableBinlogArchive;
 
     /**
+     * @var string 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+     */
+    public $EnableBackupStandby;
+
+    /**
+     * @var integer 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     */
+    public $BackupStandbyDays;
+
+    /**
+     * @var string 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+     */
+    public $EnableBinlogStandby;
+
+    /**
+     * @var integer 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     */
+    public $BinlogStandbyDays;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      * @param integer $ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
      * @param string $StartTime (将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
@@ -152,6 +180,10 @@ class ModifyBackupConfigRequest extends AbstractModel
      * @param integer $BackupArchiveDays 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
      * @param integer $BinlogArchiveDays 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
      * @param string $EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+     * @param string $EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+     * @param integer $BackupStandbyDays 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * @param string $EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+     * @param integer $BinlogStandbyDays 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
      */
     function __construct()
     {
@@ -229,6 +261,22 @@ class ModifyBackupConfigRequest extends AbstractModel
 
         if (array_key_exists("EnableBinlogArchive",$param) and $param["EnableBinlogArchive"] !== null) {
             $this->EnableBinlogArchive = $param["EnableBinlogArchive"];
+        }
+
+        if (array_key_exists("EnableBackupStandby",$param) and $param["EnableBackupStandby"] !== null) {
+            $this->EnableBackupStandby = $param["EnableBackupStandby"];
+        }
+
+        if (array_key_exists("BackupStandbyDays",$param) and $param["BackupStandbyDays"] !== null) {
+            $this->BackupStandbyDays = $param["BackupStandbyDays"];
+        }
+
+        if (array_key_exists("EnableBinlogStandby",$param) and $param["EnableBinlogStandby"] !== null) {
+            $this->EnableBinlogStandby = $param["EnableBinlogStandby"];
+        }
+
+        if (array_key_exists("BinlogStandbyDays",$param) and $param["BinlogStandbyDays"] !== null) {
+            $this->BinlogStandbyDays = $param["BinlogStandbyDays"];
         }
     }
 }

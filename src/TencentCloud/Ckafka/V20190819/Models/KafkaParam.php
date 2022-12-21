@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompressionType(string $CompressionType) 设置写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMsgMultiple() 获取源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMsgMultiple(integer $MsgMultiple) 设置源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KafkaParam extends AbstractModel
 {
@@ -165,6 +169,12 @@ class KafkaParam extends AbstractModel
     public $CompressionType;
 
     /**
+     * @var integer 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MsgMultiple;
+
+    /**
      * @param boolean $SelfBuilt 是否为自建集群
      * @param string $Resource 实例资源
      * @param string $Topic Topic名称，多个以“,”分隔
@@ -191,6 +201,8 @@ class KafkaParam extends AbstractModel
      * @param boolean $UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -269,6 +281,10 @@ class KafkaParam extends AbstractModel
 
         if (array_key_exists("CompressionType",$param) and $param["CompressionType"] !== null) {
             $this->CompressionType = $param["CompressionType"];
+        }
+
+        if (array_key_exists("MsgMultiple",$param) and $param["MsgMultiple"] !== null) {
+            $this->MsgMultiple = $param["MsgMultiple"];
         }
     }
 }

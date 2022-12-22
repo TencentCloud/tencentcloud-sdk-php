@@ -90,6 +90,7 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\ModifyProjectLimitResponse ModifyProjectLimit(Models\ModifyProjectLimitRequest $req) 新增修改限流
  * @method Models\ResumeInstanceResponse ResumeInstance(Models\ResumeInstanceRequest $req) 恢复实例
  * @method Models\StopInstanceResponse StopInstance(Models\StopInstanceRequest $req) 停止实例
+ * @method Models\StopProjectResponse StopProject(Models\StopProjectRequest $req) 停止项目使用与上报数据
  */
 
 class RumClient extends AbstractClient

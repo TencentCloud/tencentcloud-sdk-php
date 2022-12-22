@@ -14,63 +14,63 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Anicloud\V20220923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 组成CacheKey的一部分
+ * 购买详情
  *
- * @method string getSwitch() 获取on | off CacheKey是否由QueryString组成
+ * @method string getProductCode() 获取按照四层接入的产品需要传入产品标签,例如:p_cvm
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSwitch(string $Switch) 设置on | off CacheKey是否由QueryString组成
+ * @method void setProductCode(string $ProductCode) 设置按照四层接入的产品需要传入产品标签,例如:p_cvm
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReorder() 获取是否重新排序
+ * @method string getSubProductCode() 获取四层定义的子产品标签,例如:sp_cvm_s1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReorder(string $Reorder) 设置是否重新排序
+ * @method void setSubProductCode(string $SubProductCode) 设置四层定义的子产品标签,例如:sp_cvm_s1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAction() 获取includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
+ * @method array getType() 获取资源类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAction(string $Action) 设置includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
+ * @method void setType(array $Type) 设置资源类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getValue() 获取使用/排除的url参数数组，';' 分割
+ * @method integer getGoodsNum() 获取资源数量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValue(string $Value) 设置使用/排除的url参数数组，';' 分割
+ * @method void setGoodsNum(integer $GoodsNum) 设置资源数量
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class QueryStringKey extends AbstractModel
+class GoodsDetail extends AbstractModel
 {
     /**
-     * @var string on | off CacheKey是否由QueryString组成
+     * @var string 按照四层接入的产品需要传入产品标签,例如:p_cvm
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Switch;
+    public $ProductCode;
 
     /**
-     * @var string 是否重新排序
+     * @var string 四层定义的子产品标签,例如:sp_cvm_s1
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Reorder;
+    public $SubProductCode;
 
     /**
-     * @var string includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
+     * @var array 资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Action;
+    public $Type;
 
     /**
-     * @var string 使用/排除的url参数数组，';' 分割
+     * @var integer 资源数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Value;
+    public $GoodsNum;
 
     /**
-     * @param string $Switch on | off CacheKey是否由QueryString组成
+     * @param string $ProductCode 按照四层接入的产品需要传入产品标签,例如:p_cvm
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Reorder 是否重新排序
+     * @param string $SubProductCode 四层定义的子产品标签,例如:sp_cvm_s1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Action includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
+     * @param array $Type 资源类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Value 使用/排除的url参数数组，';' 分割
+     * @param integer $GoodsNum 资源数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -86,20 +86,20 @@ class QueryStringKey extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
+            $this->ProductCode = $param["ProductCode"];
         }
 
-        if (array_key_exists("Reorder",$param) and $param["Reorder"] !== null) {
-            $this->Reorder = $param["Reorder"];
+        if (array_key_exists("SubProductCode",$param) and $param["SubProductCode"] !== null) {
+            $this->SubProductCode = $param["SubProductCode"];
         }
 
-        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
-            $this->Action = $param["Action"];
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("GoodsNum",$param) and $param["GoodsNum"] !== null) {
+            $this->GoodsNum = $param["GoodsNum"];
         }
     }
 }

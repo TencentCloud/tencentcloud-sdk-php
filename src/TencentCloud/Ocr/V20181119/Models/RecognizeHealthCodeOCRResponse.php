@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVaccination(string $Vaccination) 设置疫苗接种信息，返回接种针数或接种情况（允许返回空值）
  * @method string getSpotName() 获取场所名称（允许返回空值）
  * @method void setSpotName(string $SpotName) 设置场所名称（允许返回空值）
+ * @method string getVaccinationTime() 获取疫苗接种时间
+ * @method void setVaccinationTime(string $VaccinationTime) 设置疫苗接种时间
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,6 +91,11 @@ class RecognizeHealthCodeOCRResponse extends AbstractModel
     public $SpotName;
 
     /**
+     * @var string 疫苗接种时间
+     */
+    public $VaccinationTime;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -103,6 +110,7 @@ class RecognizeHealthCodeOCRResponse extends AbstractModel
      * @param string $TestingTime 核酸检测时间（允许返回空值）
      * @param string $Vaccination 疫苗接种信息，返回接种针数或接种情况（允许返回空值）
      * @param string $SpotName 场所名称（允许返回空值）
+     * @param string $VaccinationTime 疫苗接种时间
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -152,6 +160,10 @@ class RecognizeHealthCodeOCRResponse extends AbstractModel
 
         if (array_key_exists("SpotName",$param) and $param["SpotName"] !== null) {
             $this->SpotName = $param["SpotName"];
+        }
+
+        if (array_key_exists("VaccinationTime",$param) and $param["VaccinationTime"] !== null) {
+            $this->VaccinationTime = $param["VaccinationTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

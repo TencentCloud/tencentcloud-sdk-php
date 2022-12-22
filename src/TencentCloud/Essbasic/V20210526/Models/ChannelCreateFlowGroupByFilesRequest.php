@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowGroupName(string $FlowGroupName) 设置合同组名称，长度不超过200个字符
  * @method Agent getAgent() 获取渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
  * @method void setAgent(Agent $Agent) 设置渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+ * @method string getApproverVerifyType() 获取签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+ * @method void setApproverVerifyType(string $ApproverVerifyType) 设置签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
  * @method UserInfo getOperator() 获取操作者的信息
  * @method void setOperator(UserInfo $Operator) 设置操作者的信息
  */
@@ -47,6 +55,14 @@ class ChannelCreateFlowGroupByFilesRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var string 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+     */
+    public $ApproverVerifyType;
+
+    /**
      * @var UserInfo 操作者的信息
      */
     public $Operator;
@@ -55,6 +71,10 @@ class ChannelCreateFlowGroupByFilesRequest extends AbstractModel
      * @param array $FlowFileInfos 每个子合同的发起所需的信息，数量限制2-100
      * @param string $FlowGroupName 合同组名称，长度不超过200个字符
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param string $ApproverVerifyType 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
      * @param UserInfo $Operator 操作者的信息
      */
     function __construct()
@@ -86,6 +106,10 @@ class ChannelCreateFlowGroupByFilesRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("ApproverVerifyType",$param) and $param["ApproverVerifyType"] !== null) {
+            $this->ApproverVerifyType = $param["ApproverVerifyType"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

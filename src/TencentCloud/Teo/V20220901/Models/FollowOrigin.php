@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultCache(string $DefaultCache) 设置源站未返回 Cache-Control 头时, 设置缓存/不缓存
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDefaultCacheStrategy() 获取源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultCacheStrategy(string $DefaultCacheStrategy) 设置源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FollowOrigin extends AbstractModel
 {
@@ -57,12 +61,20 @@ class FollowOrigin extends AbstractModel
     public $DefaultCache;
 
     /**
+     * @var string 源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultCacheStrategy;
+
+    /**
      * @param string $Switch 遵循源站配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      * @param integer $DefaultCacheTime 源站未返回 Cache-Control 头时, 设置默认的缓存时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefaultCache 源站未返回 Cache-Control 头时, 设置缓存/不缓存
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DefaultCacheStrategy 源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -88,6 +100,10 @@ class FollowOrigin extends AbstractModel
 
         if (array_key_exists("DefaultCache",$param) and $param["DefaultCache"] !== null) {
             $this->DefaultCache = $param["DefaultCache"];
+        }
+
+        if (array_key_exists("DefaultCacheStrategy",$param) and $param["DefaultCacheStrategy"] !== null) {
+            $this->DefaultCacheStrategy = $param["DefaultCacheStrategy"];
         }
     }
 }

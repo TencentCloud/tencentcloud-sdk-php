@@ -369,7 +369,6 @@ use TencentCloud\Vod\V20180717\Models as Models;
 ><li>图片文件大小支持：文件 < 5M；</li>
 ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响审核效果；</li>
 ><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
-
  * @method Models\SearchMediaResponse SearchMedia(Models\SearchMediaRequest $req) 搜索媒体信息，支持多种条件筛选，以及支持对返回结果排序、过滤等功能，具体包括：
 - 指定文件 ID 集合 FileIds ，返回匹配集合中任意 ID 的媒体。
 - 根据多个媒体文件名 Names 或描述信息 Descriptions 进行模糊搜索。

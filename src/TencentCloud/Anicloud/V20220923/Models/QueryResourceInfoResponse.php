@@ -14,36 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Anicloud\V20220923\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ReviewImage返回参数结构体
+ * QueryResourceInfo返回参数结构体
  *
- * @method array getReviewResultSet() 获取图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
- * @method void setReviewResultSet(array $ReviewResultSet) 设置图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
- * @method ReviewImageResult getMediaReviewResult() 获取图片审核任务结果。
+ * @method Resource getResource() 获取资源信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMediaReviewResult(ReviewImageResult $MediaReviewResult) 设置图片审核任务结果。
+ * @method void setResource(Resource $Resource) 设置资源信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class ReviewImageResponse extends AbstractModel
+class QueryResourceInfoResponse extends AbstractModel
 {
     /**
-     * @var array 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
-     */
-    public $ReviewResultSet;
-
-    /**
-     * @var ReviewImageResult 图片审核任务结果。
+     * @var Resource 资源信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $MediaReviewResult;
+    public $Resource;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,9 +41,7 @@ class ReviewImageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ReviewResultSet 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
-     * @param ReviewImageResult $MediaReviewResult 图片审核任务结果。
+     * @param Resource $Resource 资源信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -70,18 +58,9 @@ class ReviewImageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReviewResultSet",$param) and $param["ReviewResultSet"] !== null) {
-            $this->ReviewResultSet = [];
-            foreach ($param["ReviewResultSet"] as $key => $value){
-                $obj = new ContentReviewResult();
-                $obj->deserialize($value);
-                array_push($this->ReviewResultSet, $obj);
-            }
-        }
-
-        if (array_key_exists("MediaReviewResult",$param) and $param["MediaReviewResult"] !== null) {
-            $this->MediaReviewResult = new ReviewImageResult();
-            $this->MediaReviewResult->deserialize($param["MediaReviewResult"]);
+        if (array_key_exists("Resource",$param) and $param["Resource"] !== null) {
+            $this->Resource = new Resource();
+            $this->Resource->deserialize($param["Resource"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

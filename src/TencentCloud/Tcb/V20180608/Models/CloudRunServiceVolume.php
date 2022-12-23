@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmptyDir(CloudBaseRunEmptyDirVolumeSource $EmptyDir) 设置emptydir数据卷详细信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CloudBaseRunServiceVolumeHostPath getHostPath() 获取主机路径挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHostPath(CloudBaseRunServiceVolumeHostPath $HostPath) 设置主机路径挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudRunServiceVolume extends AbstractModel
 {
@@ -74,6 +78,12 @@ class CloudRunServiceVolume extends AbstractModel
     public $EmptyDir;
 
     /**
+     * @var CloudBaseRunServiceVolumeHostPath 主机路径挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HostPath;
+
+    /**
      * @param string $Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudBaseRunNfsVolumeSource $NFS NFS的挂载方式
@@ -83,6 +93,8 @@ class CloudRunServiceVolume extends AbstractModel
      * @param boolean $EnableEmptyDirVolume 是否开启临时目录逐步废弃，请使用 EmptyDir
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudBaseRunEmptyDirVolumeSource $EmptyDir emptydir数据卷详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudBaseRunServiceVolumeHostPath $HostPath 主机路径挂载信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -118,6 +130,11 @@ class CloudRunServiceVolume extends AbstractModel
         if (array_key_exists("EmptyDir",$param) and $param["EmptyDir"] !== null) {
             $this->EmptyDir = new CloudBaseRunEmptyDirVolumeSource();
             $this->EmptyDir->deserialize($param["EmptyDir"]);
+        }
+
+        if (array_key_exists("HostPath",$param) and $param["HostPath"] !== null) {
+            $this->HostPath = new CloudBaseRunServiceVolumeHostPath();
+            $this->HostPath->deserialize($param["HostPath"]);
         }
     }
 }

@@ -24,22 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置同步实例id（即标识一个同步作业），形如sync-werwfs23
  * @method string getSrcAccessType() 获取源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、noProxy,注意具体可选值依赖当前链路
  * @method void setSrcAccessType(string $SrcAccessType) 设置源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、noProxy,注意具体可选值依赖当前链路
- * @method Endpoint getSrcInfo() 获取源端信息
- * @method void setSrcInfo(Endpoint $SrcInfo) 设置源端信息
  * @method string getDstAccessType() 获取目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、noProxy,注意具体可选值依赖当前链路
  * @method void setDstAccessType(string $DstAccessType) 设置目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、noProxy,注意具体可选值依赖当前链路
- * @method Endpoint getDstInfo() 获取目标端信息
- * @method void setDstInfo(Endpoint $DstInfo) 设置目标端信息
  * @method Options getOptions() 获取同步任务选项
  * @method void setOptions(Options $Options) 设置同步任务选项
  * @method Objects getObjects() 获取同步库表对象信息
  * @method void setObjects(Objects $Objects) 设置同步库表对象信息
  * @method string getJobName() 获取同步任务名称
  * @method void setJobName(string $JobName) 设置同步任务名称
+ * @method string getJobMode() 获取枚举值是 liteMode 和 fullMode ，分别对应精简模式或正常模式
+ * @method void setJobMode(string $JobMode) 设置枚举值是 liteMode 和 fullMode ，分别对应精简模式或正常模式
  * @method string getRunMode() 获取运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
  * @method void setRunMode(string $RunMode) 设置运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
  * @method string getExpectRunTime() 获取期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
  * @method void setExpectRunTime(string $ExpectRunTime) 设置期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
+ * @method Endpoint getSrcInfo() 获取源端信息，单节点数据库使用
+ * @method void setSrcInfo(Endpoint $SrcInfo) 设置源端信息，单节点数据库使用
+ * @method Endpoint getDstInfo() 获取目标端信息，单节点数据库使用
+ * @method void setDstInfo(Endpoint $DstInfo) 设置目标端信息，单节点数据库使用
+ * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试的时间段、可设置5至720分钟、0表示不重试
+ * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试的时间段、可设置5至720分钟、0表示不重试
  */
 class ConfigureSyncJobRequest extends AbstractModel
 {
@@ -54,19 +58,9 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $SrcAccessType;
 
     /**
-     * @var Endpoint 源端信息
-     */
-    public $SrcInfo;
-
-    /**
      * @var string 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、noProxy,注意具体可选值依赖当前链路
      */
     public $DstAccessType;
-
-    /**
-     * @var Endpoint 目标端信息
-     */
-    public $DstInfo;
 
     /**
      * @var Options 同步任务选项
@@ -84,6 +78,11 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $JobName;
 
     /**
+     * @var string 枚举值是 liteMode 和 fullMode ，分别对应精简模式或正常模式
+     */
+    public $JobMode;
+
+    /**
      * @var string 运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
      */
     public $RunMode;
@@ -94,16 +93,33 @@ class ConfigureSyncJobRequest extends AbstractModel
     public $ExpectRunTime;
 
     /**
+     * @var Endpoint 源端信息，单节点数据库使用
+     */
+    public $SrcInfo;
+
+    /**
+     * @var Endpoint 目标端信息，单节点数据库使用
+     */
+    public $DstInfo;
+
+    /**
+     * @var integer 自动重试的时间段、可设置5至720分钟、0表示不重试
+     */
+    public $AutoRetryTimeRangeMinutes;
+
+    /**
      * @param string $JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23
      * @param string $SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、noProxy,注意具体可选值依赖当前链路
-     * @param Endpoint $SrcInfo 源端信息
      * @param string $DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)、noProxy,注意具体可选值依赖当前链路
-     * @param Endpoint $DstInfo 目标端信息
      * @param Options $Options 同步任务选项
      * @param Objects $Objects 同步库表对象信息
      * @param string $JobName 同步任务名称
+     * @param string $JobMode 枚举值是 liteMode 和 fullMode ，分别对应精简模式或正常模式
      * @param string $RunMode 运行模式，取值如：Immediate(表示立即运行，默认为此项值)、Timed(表示定时运行)
      * @param string $ExpectRunTime 期待启动时间，当RunMode取值为Timed时，此值必填，形如："2006-01-02 15:04:05"
+     * @param Endpoint $SrcInfo 源端信息，单节点数据库使用
+     * @param Endpoint $DstInfo 目标端信息，单节点数据库使用
+     * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试
      */
     function __construct()
     {
@@ -126,18 +142,8 @@ class ConfigureSyncJobRequest extends AbstractModel
             $this->SrcAccessType = $param["SrcAccessType"];
         }
 
-        if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {
-            $this->SrcInfo = new Endpoint();
-            $this->SrcInfo->deserialize($param["SrcInfo"]);
-        }
-
         if (array_key_exists("DstAccessType",$param) and $param["DstAccessType"] !== null) {
             $this->DstAccessType = $param["DstAccessType"];
-        }
-
-        if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
-            $this->DstInfo = new Endpoint();
-            $this->DstInfo->deserialize($param["DstInfo"]);
         }
 
         if (array_key_exists("Options",$param) and $param["Options"] !== null) {
@@ -154,12 +160,30 @@ class ConfigureSyncJobRequest extends AbstractModel
             $this->JobName = $param["JobName"];
         }
 
+        if (array_key_exists("JobMode",$param) and $param["JobMode"] !== null) {
+            $this->JobMode = $param["JobMode"];
+        }
+
         if (array_key_exists("RunMode",$param) and $param["RunMode"] !== null) {
             $this->RunMode = $param["RunMode"];
         }
 
         if (array_key_exists("ExpectRunTime",$param) and $param["ExpectRunTime"] !== null) {
             $this->ExpectRunTime = $param["ExpectRunTime"];
+        }
+
+        if (array_key_exists("SrcInfo",$param) and $param["SrcInfo"] !== null) {
+            $this->SrcInfo = new Endpoint();
+            $this->SrcInfo->deserialize($param["SrcInfo"]);
+        }
+
+        if (array_key_exists("DstInfo",$param) and $param["DstInfo"] !== null) {
+            $this->DstInfo = new Endpoint();
+            $this->DstInfo->deserialize($param["DstInfo"]);
+        }
+
+        if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
+            $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
         }
     }
 }

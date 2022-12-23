@@ -150,6 +150,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyDetail(array $PolicyDetail) 设置自动扩缩容策略组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method TkeClusterInfo getTkeClusterInfo() 获取Tke集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTkeClusterInfo(TkeClusterInfo $TkeClusterInfo) 设置Tke集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTkeWorkloadType() 获取版本工作负载类型；deployment/deamonset
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTkeWorkloadType(string $TkeWorkloadType) 设置版本工作负载类型；deployment/deamonset
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -369,6 +377,18 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
     public $PolicyDetail;
 
     /**
+     * @var TkeClusterInfo Tke集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TkeClusterInfo;
+
+    /**
+     * @var string 版本工作负载类型；deployment/deamonset
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TkeWorkloadType;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -438,6 +458,10 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
      * @param string $RepoLanguage 仓库语言
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PolicyDetail 自动扩缩容策略组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TkeClusterInfo $TkeClusterInfo Tke集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TkeWorkloadType 版本工作负载类型；deployment/deamonset
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -605,6 +629,15 @@ class DescribeCloudBaseRunServerVersionResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PolicyDetail, $obj);
             }
+        }
+
+        if (array_key_exists("TkeClusterInfo",$param) and $param["TkeClusterInfo"] !== null) {
+            $this->TkeClusterInfo = new TkeClusterInfo();
+            $this->TkeClusterInfo->deserialize($param["TkeClusterInfo"]);
+        }
+
+        if (array_key_exists("TkeWorkloadType",$param) and $param["TkeWorkloadType"] !== null) {
+            $this->TkeWorkloadType = $param["TkeWorkloadType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

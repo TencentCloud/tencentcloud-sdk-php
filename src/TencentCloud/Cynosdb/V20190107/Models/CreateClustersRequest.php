@@ -142,6 +142,8 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
  * @method void setParamTemplateId(integer $ParamTemplateId) 设置参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
  * @method string getSlaveZone() 获取多可用区地址
  * @method void setSlaveZone(string $SlaveZone) 设置多可用区地址
+ * @method array getInstanceInitInfos() 获取实例初始化配置信息，主要用于购买集群时选不同规格实例
+ * @method void setInstanceInitInfos(array $InstanceInitInfos) 设置实例初始化配置信息，主要用于购买集群时选不同规格实例
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -367,6 +369,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $SlaveZone;
 
     /**
+     * @var array 实例初始化配置信息，主要用于购买集群时选不同规格实例
+     */
+    public $InstanceInitInfos;
+
+    /**
      * @param string $Zone 可用区
      * @param string $VpcId 所属VPC网络ID
      * @param string $SubnetId 所属子网ID
@@ -428,6 +435,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param integer $DealMode 交易模式，0-下单且支付，1-下单
      * @param integer $ParamTemplateId 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
      * @param string $SlaveZone 多可用区地址
+     * @param array $InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
      */
     function __construct()
     {
@@ -610,6 +618,15 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
         if (array_key_exists("SlaveZone",$param) and $param["SlaveZone"] !== null) {
             $this->SlaveZone = $param["SlaveZone"];
+        }
+
+        if (array_key_exists("InstanceInitInfos",$param) and $param["InstanceInitInfos"] !== null) {
+            $this->InstanceInitInfos = [];
+            foreach ($param["InstanceInitInfos"] as $key => $value){
+                $obj = new InstanceInitInfo();
+                $obj->deserialize($value);
+                array_push($this->InstanceInitInfos, $obj);
+            }
         }
     }
 }

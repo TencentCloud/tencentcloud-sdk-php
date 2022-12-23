@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpectRunTime(string $ExpectRunTime) 设置期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
  * @method array getTags() 获取标签信息
  * @method void setTags(array $Tags) 设置标签信息
+ * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试的时间段、可设置5至720分钟、0表示不重试
+ * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试的时间段、可设置5至720分钟、0表示不重试
  */
 class ModifyMigrationJobRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyMigrationJobRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 自动重试的时间段、可设置5至720分钟、0表示不重试
+     */
+    public $AutoRetryTimeRangeMinutes;
+
+    /**
      * @param string $JobId 任务id
      * @param string $RunMode 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
      * @param MigrateOption $MigrateOption 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息
@@ -88,6 +95,7 @@ class ModifyMigrationJobRequest extends AbstractModel
      * @param string $JobName 迁移任务名称，最大长度128
      * @param string $ExpectRunTime 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
      * @param array $Tags 标签信息
+     * @param integer $AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ class ModifyMigrationJobRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
+            $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
         }
     }
 }

@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 不填写表示保持原有配置。
  * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) 设置回源时是否携带客户端IP所属地域信息的配置。
 不填写表示保持原有配置。
+ * @method Grpc getGrpc() 获取Grpc协议支持配置。
+不填写表示保持原有配置。
+ * @method void setGrpc(Grpc $Grpc) 设置Grpc协议支持配置。
+不填写表示保持原有配置。
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
@@ -201,6 +205,12 @@ class ModifyZoneSettingRequest extends AbstractModel
     public $ClientIpCountry;
 
     /**
+     * @var Grpc Grpc协议支持配置。
+不填写表示保持原有配置。
+     */
+    public $Grpc;
+
+    /**
      * @param string $ZoneId 待变更的站点ID。
      * @param CacheConfig $CacheConfig 缓存过期时间配置。
 不填写表示保持原有配置。
@@ -235,6 +245,8 @@ class ModifyZoneSettingRequest extends AbstractModel
      * @param Ipv6 $Ipv6 Ipv6访问配置。
 不填写表示保持原有配置。
      * @param ClientIpCountry $ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+不填写表示保持原有配置。
+     * @param Grpc $Grpc Grpc协议支持配置。
 不填写表示保持原有配置。
      */
     function __construct()
@@ -337,6 +349,11 @@ class ModifyZoneSettingRequest extends AbstractModel
         if (array_key_exists("ClientIpCountry",$param) and $param["ClientIpCountry"] !== null) {
             $this->ClientIpCountry = new ClientIpCountry();
             $this->ClientIpCountry->deserialize($param["ClientIpCountry"]);
+        }
+
+        if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
+            $this->Grpc = new Grpc();
+            $this->Grpc->deserialize($param["Grpc"]);
         }
     }
 }

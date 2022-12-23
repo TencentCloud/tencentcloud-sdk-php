@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvancedObjects(array $AdvancedObjects) 设置高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即Options.InitType字段值为Structure或Full
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OnlineDDL getOnlineDDL() 获取OnlineDDL类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOnlineDDL(OnlineDDL $OnlineDDL) 设置OnlineDDL类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Objects extends AbstractModel
 {
@@ -54,11 +58,19 @@ class Objects extends AbstractModel
     public $AdvancedObjects;
 
     /**
+     * @var OnlineDDL OnlineDDL类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OnlineDDL;
+
+    /**
      * @param string $Mode 迁移对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Databases 同步对象，当 Mode 为 Partial 时，不为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AdvancedObjects 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即Options.InitType字段值为Structure或Full
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OnlineDDL $OnlineDDL OnlineDDL类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -89,6 +101,11 @@ class Objects extends AbstractModel
 
         if (array_key_exists("AdvancedObjects",$param) and $param["AdvancedObjects"] !== null) {
             $this->AdvancedObjects = $param["AdvancedObjects"];
+        }
+
+        if (array_key_exists("OnlineDDL",$param) and $param["OnlineDDL"] !== null) {
+            $this->OnlineDDL = new OnlineDDL();
+            $this->OnlineDDL->deserialize($param["OnlineDDL"]);
         }
     }
 }

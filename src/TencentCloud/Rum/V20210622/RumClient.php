@@ -80,6 +80,8 @@ use TencentCloud\Rum\V20210622\Models as Models;
  * @method Models\DescribePvListResponse DescribePvList(Models\DescribePvListRequest $req) 获取项目下的PV列表
  * @method Models\DescribeReleaseFileSignResponse DescribeReleaseFileSign(Models\DescribeReleaseFileSignRequest $req) 获取上传文件存储的临时密钥
  * @method Models\DescribeReleaseFilesResponse DescribeReleaseFiles(Models\DescribeReleaseFilesRequest $req) 获取项目对应sourcemap文件列表
+ * @method Models\DescribeRumLogListResponse DescribeRumLogList(Models\DescribeRumLogListRequest $req) 获取项目下的日志列表（实例创建的项目下的日志列表）
+ * @method Models\DescribeRumStatsLogListResponse DescribeRumStatsLogList(Models\DescribeRumStatsLogListRequest $req) 获取项目下的日志列表，分钟级
  * @method Models\DescribeScoresResponse DescribeScores(Models\DescribeScoresRequest $req) 获取首页分数列表
  * @method Models\DescribeTawAreasResponse DescribeTawAreas(Models\DescribeTawAreasRequest $req) 查询片区信息
  * @method Models\DescribeTawInstancesResponse DescribeTawInstances(Models\DescribeTawInstancesRequest $req) 查询实例信息

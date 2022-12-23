@@ -96,6 +96,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) 设置回源时是否携带客户端IP所属地域信息的配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method Grpc getGrpc() 获取Grpc协议支持配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGrpc(Grpc $Grpc) 设置Grpc协议支持配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneSetting extends AbstractModel
 {
@@ -214,6 +218,12 @@ class ZoneSetting extends AbstractModel
     public $ClientIpCountry;
 
     /**
+     * @var Grpc Grpc协议支持配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Grpc;
+
+    /**
      * @param string $ZoneName 站点名称。
      * @param string $Area 站点加速区域信息，取值有：
 <li> mainland：中国境内加速；</li>
@@ -251,6 +261,8 @@ class ZoneSetting extends AbstractModel
      * @param Https $Https Https 加速配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientIpCountry $ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Grpc $Grpc Grpc协议支持配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -357,6 +369,11 @@ class ZoneSetting extends AbstractModel
         if (array_key_exists("ClientIpCountry",$param) and $param["ClientIpCountry"] !== null) {
             $this->ClientIpCountry = new ClientIpCountry();
             $this->ClientIpCountry->deserialize($param["ClientIpCountry"]);
+        }
+
+        if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
+            $this->Grpc = new Grpc();
+            $this->Grpc->deserialize($param["Grpc"]);
         }
     }
 }

@@ -26,6 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommonDiscount(integer $CommonDiscount) 设置公共折扣。
  * @method integer getFinalDiscount() 获取最终折扣。
  * @method void setFinalDiscount(integer $FinalDiscount) 设置最终折扣。
+ * @method float getActivityDiscount() 获取活动折扣。取值为null，表示无有效值，即没有折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setActivityDiscount(float $ActivityDiscount) 设置活动折扣。取值为null，表示无有效值，即没有折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiscountType() 获取折扣类型。
+user：用户折扣; common：官网折扣; activity：活动折扣。 取值为null，表示无有效值，即没有折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiscountType(string $DiscountType) 设置折扣类型。
+user：用户折扣; common：官网折扣; activity：活动折扣。 取值为null，表示无有效值，即没有折扣。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PolicyDetail extends AbstractModel
 {
@@ -45,9 +55,27 @@ class PolicyDetail extends AbstractModel
     public $FinalDiscount;
 
     /**
+     * @var float 活动折扣。取值为null，表示无有效值，即没有折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ActivityDiscount;
+
+    /**
+     * @var string 折扣类型。
+user：用户折扣; common：官网折扣; activity：活动折扣。 取值为null，表示无有效值，即没有折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiscountType;
+
+    /**
      * @param integer $UserDiscount 用户折扣。
      * @param integer $CommonDiscount 公共折扣。
      * @param integer $FinalDiscount 最终折扣。
+     * @param float $ActivityDiscount 活动折扣。取值为null，表示无有效值，即没有折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiscountType 折扣类型。
+user：用户折扣; common：官网折扣; activity：活动折扣。 取值为null，表示无有效值，即没有折扣。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +100,14 @@ class PolicyDetail extends AbstractModel
 
         if (array_key_exists("FinalDiscount",$param) and $param["FinalDiscount"] !== null) {
             $this->FinalDiscount = $param["FinalDiscount"];
+        }
+
+        if (array_key_exists("ActivityDiscount",$param) and $param["ActivityDiscount"] !== null) {
+            $this->ActivityDiscount = $param["ActivityDiscount"];
+        }
+
+        if (array_key_exists("DiscountType",$param) and $param["DiscountType"] !== null) {
+            $this->DiscountType = $param["DiscountType"];
         }
     }
 }

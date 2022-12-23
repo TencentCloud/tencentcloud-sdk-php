@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRole() 获取tdsql mysql版的节点类型，枚举值为proxy、set
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRole(string $Role) 设置tdsql mysql版的节点类型，枚举值为proxy、set
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbKernel() 获取数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbKernel(string $DbKernel) 设置数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
@@ -84,17 +88,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineVersion(string $EngineVersion) 设置数据库版本，当实例为RDS实例时才有效，其他实例忽略，格式如：5.6或者5.7，默认为5.6
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountMode() 获取资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountMode(string $AccountMode) 设置资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccount() 获取实例所属账号，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccount(string $Account) 设置实例所属账号，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccountMode() 获取资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAccountMode(string $AccountMode) 设置资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccountRole() 获取跨账号同步时的角色，只允许[a-zA-Z0-9\-\_]+，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountRole(string $AccountRole) 设置跨账号同步时的角色，只允许[a-zA-Z0-9\-\_]+，如果为跨账号实例此项必填
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRoleExternalId() 获取外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRoleExternalId(string $RoleExternalId) 设置外部角色id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTmpSecretId() 获取临时密钥Id，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
@@ -108,9 +116,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTmpToken(string $TmpToken) 设置临时Token，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRoleExternalId() 获取外部角色id
+ * @method string getEncryptConn() 获取是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoleExternalId(string $RoleExternalId) 设置外部角色id
+ * @method void setEncryptConn(string $EncryptConn) 设置是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Endpoint extends AbstractModel
@@ -120,6 +128,12 @@ class Endpoint extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
+
+    /**
+     * @var string tdsql mysql版的节点类型，枚举值为proxy、set
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Role;
 
     /**
      * @var string 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
@@ -212,22 +226,28 @@ class Endpoint extends AbstractModel
     public $EngineVersion;
 
     /**
-     * @var string 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AccountMode;
-
-    /**
      * @var string 实例所属账号，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Account;
 
     /**
+     * @var string 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AccountMode;
+
+    /**
      * @var string 跨账号同步时的角色，只允许[a-zA-Z0-9\-\_]+，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountRole;
+
+    /**
+     * @var string 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RoleExternalId;
 
     /**
      * @var string 临时密钥Id，如果为跨账号实例此项必填
@@ -248,13 +268,15 @@ class Endpoint extends AbstractModel
     public $TmpToken;
 
     /**
-     * @var string 外部角色id
+     * @var string 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $RoleExternalId;
+    public $EncryptConn;
 
     /**
      * @param string $Region 地域英文名，如：ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Role tdsql mysql版的节点类型，枚举值为proxy、set
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbKernel 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
 注意：此字段可能返回 null，表示取不到有效值。
@@ -286,11 +308,13 @@ class Endpoint extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineVersion 数据库版本，当实例为RDS实例时才有效，其他实例忽略，格式如：5.6或者5.7，默认为5.6
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountMode 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Account 实例所属账号，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccountMode 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccountRole 跨账号同步时的角色，只允许[a-zA-Z0-9\-\_]+，如果为跨账号实例此项必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RoleExternalId 外部角色id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpSecretId 临时密钥Id，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
@@ -298,7 +322,7 @@ class Endpoint extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpToken 临时Token，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RoleExternalId 外部角色id
+     * @param string $EncryptConn 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -316,6 +340,10 @@ class Endpoint extends AbstractModel
         }
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
 
         if (array_key_exists("DbKernel",$param) and $param["DbKernel"] !== null) {
@@ -378,16 +406,20 @@ class Endpoint extends AbstractModel
             $this->EngineVersion = $param["EngineVersion"];
         }
 
-        if (array_key_exists("AccountMode",$param) and $param["AccountMode"] !== null) {
-            $this->AccountMode = $param["AccountMode"];
-        }
-
         if (array_key_exists("Account",$param) and $param["Account"] !== null) {
             $this->Account = $param["Account"];
         }
 
+        if (array_key_exists("AccountMode",$param) and $param["AccountMode"] !== null) {
+            $this->AccountMode = $param["AccountMode"];
+        }
+
         if (array_key_exists("AccountRole",$param) and $param["AccountRole"] !== null) {
             $this->AccountRole = $param["AccountRole"];
+        }
+
+        if (array_key_exists("RoleExternalId",$param) and $param["RoleExternalId"] !== null) {
+            $this->RoleExternalId = $param["RoleExternalId"];
         }
 
         if (array_key_exists("TmpSecretId",$param) and $param["TmpSecretId"] !== null) {
@@ -402,8 +434,8 @@ class Endpoint extends AbstractModel
             $this->TmpToken = $param["TmpToken"];
         }
 
-        if (array_key_exists("RoleExternalId",$param) and $param["RoleExternalId"] !== null) {
-            $this->RoleExternalId = $param["RoleExternalId"];
+        if (array_key_exists("EncryptConn",$param) and $param["EncryptConn"] !== null) {
+            $this->EncryptConn = $param["EncryptConn"];
         }
     }
 }

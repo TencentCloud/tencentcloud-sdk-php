@@ -14,47 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cam\V20190116\Models;
+namespace TencentCloud\Tcb\V20180608\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 密钥最后使用时间
+ * tke集群信息
  *
- * @method string getSecretId() 获取密钥ID
- * @method void setSecretId(string $SecretId) 设置密钥ID
- * @method string getLastUsedDate() 获取最后访问日期(有1天延迟)
+ * @method string getClusterId() 获取集群ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastUsedDate(string $LastUsedDate) 设置最后访问日期(有1天延迟)
+ * @method void setClusterId(string $ClusterId) 设置集群ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLastSecretUsedDate() 获取最后密钥访问日期
+ * @method string getVpcId() 获取集群的vpcId
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLastSecretUsedDate(integer $LastSecretUsedDate) 设置最后密钥访问日期
+ * @method void setVpcId(string $VpcId) 设置集群的vpcId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersionClbSubnetId() 获取版本内网CLB所在子网Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersionClbSubnetId(string $VersionClbSubnetId) 设置版本内网CLB所在子网Id
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class SecretIdLastUsed extends AbstractModel
+class TkeClusterInfo extends AbstractModel
 {
     /**
-     * @var string 密钥ID
-     */
-    public $SecretId;
-
-    /**
-     * @var string 最后访问日期(有1天延迟)
+     * @var string 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $LastUsedDate;
+    public $ClusterId;
 
     /**
-     * @var integer 最后密钥访问日期
+     * @var string 集群的vpcId
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $LastSecretUsedDate;
+    public $VpcId;
 
     /**
-     * @param string $SecretId 密钥ID
-     * @param string $LastUsedDate 最后访问日期(有1天延迟)
+     * @var string 版本内网CLB所在子网Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LastSecretUsedDate 最后密钥访问日期
+     */
+    public $VersionClbSubnetId;
+
+    /**
+     * @param string $ClusterId 集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcId 集群的vpcId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VersionClbSubnetId 版本内网CLB所在子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,16 +74,16 @@ class SecretIdLastUsed extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecretId",$param) and $param["SecretId"] !== null) {
-            $this->SecretId = $param["SecretId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("LastUsedDate",$param) and $param["LastUsedDate"] !== null) {
-            $this->LastUsedDate = $param["LastUsedDate"];
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
-        if (array_key_exists("LastSecretUsedDate",$param) and $param["LastSecretUsedDate"] !== null) {
-            $this->LastSecretUsedDate = $param["LastSecretUsedDate"];
+        if (array_key_exists("VersionClbSubnetId",$param) and $param["VersionClbSubnetId"] !== null) {
+            $this->VersionClbSubnetId = $param["VersionClbSubnetId"];
         }
     }
 }

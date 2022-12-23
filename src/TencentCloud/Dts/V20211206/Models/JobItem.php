@@ -88,6 +88,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoRetryTimeRangeMinutes() 获取自动重试时间段信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) 设置自动重试时间段信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobItem extends AbstractModel
 {
@@ -194,6 +198,12 @@ class JobItem extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer 自动重试时间段信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoRetryTimeRangeMinutes;
+
+    /**
      * @param string $JobId 数据迁移任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobName 数据迁移任务名称
@@ -227,6 +237,8 @@ class JobItem extends AbstractModel
      * @param TradeInfo $TradeInfo 计费状态信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoRetryTimeRangeMinutes 自动重试时间段信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -319,6 +331,10 @@ class JobItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
+            $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
         }
     }
 }

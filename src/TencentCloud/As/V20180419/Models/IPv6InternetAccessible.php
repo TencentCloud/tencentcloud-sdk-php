@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 <br><li> IPv6对标准账户类型支持TRAFFIC_POSTPAID_BY_HOUR。
 <br><li> IPv6对传统账户类型支持BANDWIDTH_PACKAGE。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInternetMaxBandwidthOut() 获取公网出带宽上限，单位：Mbps。<br>默认值：0Mbps，此时不为IPv6分配公网带宽。不同机型、可用区、计费模式的带宽上限范围不一致，具体限制详见[公网带宽上限](https://cloud.tencent.com/document/product/213/12523)。
+ * @method integer getInternetMaxBandwidthOut() 获取公网出带宽上限，单位：Mbps。<br>默认值：0，此时不为IPv6分配公网带宽。不同机型、可用区、计费模式的带宽上限范围不一致，具体限制详见[公网带宽上限](https://cloud.tencent.com/document/product/213/12523)。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网出带宽上限，单位：Mbps。<br>默认值：0Mbps，此时不为IPv6分配公网带宽。不同机型、可用区、计费模式的带宽上限范围不一致，具体限制详见[公网带宽上限](https://cloud.tencent.com/document/product/213/12523)。
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网出带宽上限，单位：Mbps。<br>默认值：0，此时不为IPv6分配公网带宽。不同机型、可用区、计费模式的带宽上限范围不一致，具体限制详见[公网带宽上限](https://cloud.tencent.com/document/product/213/12523)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBandwidthPackageId() 获取带宽包ID。可通过[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口返回值中的`BandwidthPackageId`获取。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,7 +48,7 @@ class IPv6InternetAccessible extends AbstractModel
     public $InternetChargeType;
 
     /**
-     * @var integer 公网出带宽上限，单位：Mbps。<br>默认值：0Mbps，此时不为IPv6分配公网带宽。不同机型、可用区、计费模式的带宽上限范围不一致，具体限制详见[公网带宽上限](https://cloud.tencent.com/document/product/213/12523)。
+     * @var integer 公网出带宽上限，单位：Mbps。<br>默认值：0，此时不为IPv6分配公网带宽。不同机型、可用区、计费模式的带宽上限范围不一致，具体限制详见[公网带宽上限](https://cloud.tencent.com/document/product/213/12523)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternetMaxBandwidthOut;
@@ -64,7 +64,7 @@ class IPv6InternetAccessible extends AbstractModel
 <br><li> IPv6对标准账户类型支持TRAFFIC_POSTPAID_BY_HOUR。
 <br><li> IPv6对传统账户类型支持BANDWIDTH_PACKAGE。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps。<br>默认值：0Mbps，此时不为IPv6分配公网带宽。不同机型、可用区、计费模式的带宽上限范围不一致，具体限制详见[公网带宽上限](https://cloud.tencent.com/document/product/213/12523)。
+     * @param integer $InternetMaxBandwidthOut 公网出带宽上限，单位：Mbps。<br>默认值：0，此时不为IPv6分配公网带宽。不同机型、可用区、计费模式的带宽上限范围不一致，具体限制详见[公网带宽上限](https://cloud.tencent.com/document/product/213/12523)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BandwidthPackageId 带宽包ID。可通过[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口返回值中的`BandwidthPackageId`获取。
 注意：此字段可能返回 null，表示取不到有效值。

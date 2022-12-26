@@ -74,6 +74,7 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DescribeDDoSMajorAttackEventResponse DescribeDDoSMajorAttackEvent(Models\DescribeDDoSMajorAttackEventRequest $req) 本接口（DescribeDDoSMajorAttackEvent）用于查询DDoS主攻击事件列表。
  * @method Models\DescribeDDoSPolicyResponse DescribeDDoSPolicy(Models\DescribeDDoSPolicyRequest $req) 查询DDoS防护配置详情
  * @method Models\DescribeDefaultCertificatesResponse DescribeDefaultCertificates(Models\DescribeDefaultCertificatesRequest $req) 查询默认证书列表
+ * @method Models\DescribeDistributionL4AccessDataResponse DescribeDistributionL4AccessData(Models\DescribeDistributionL4AccessDataRequest $req) 本接口（DescribeDistributionL4AccessData）用于查询四层连接时长的时序数据。
  * @method Models\DescribeDnsDataResponse DescribeDnsData(Models\DescribeDnsDataRequest $req) 获取DNS请求数统计曲线
  * @method Models\DescribeDnsRecordsResponse DescribeDnsRecords(Models\DescribeDnsRecordsRequest $req) 查询 DNS 记录列表，支持搜索、分页、排序、过滤。
  * @method Models\DescribeDnssecResponse DescribeDnssec(Models\DescribeDnssecRequest $req) 用于查询 DNSSEC 相关信息
@@ -100,6 +101,7 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DescribeSpeedTestingDetailsResponse DescribeSpeedTestingDetails(Models\DescribeSpeedTestingDetailsRequest $req) 用于查询拨测分地区数据
  * @method Models\DescribeSpeedTestingMetricDataResponse DescribeSpeedTestingMetricData(Models\DescribeSpeedTestingMetricDataRequest $req) 查询站点拨测结果
  * @method Models\DescribeSpeedTestingQuotaResponse DescribeSpeedTestingQuota(Models\DescribeSpeedTestingQuotaRequest $req) 查询站点拨测配额
+ * @method Models\DescribeTimingL4AccessDataResponse DescribeTimingL4AccessData(Models\DescribeTimingL4AccessDataRequest $req) 本接口（DescribeTimingL4AccessData）用于查询四层连接数的时序数据列表。
  * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) 本接口（DescribeTimingL4Data）用于查询四层时序流量数据列表。
  * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) 本接口（DescribeTimingL7AnalysisData）查询七层数据分析类时序数据。
  * @method Models\DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(Models\DescribeTimingL7CacheDataRequest $req) 本接口（DescribeTimingL7CacheData）用于查询七层缓存分析时序类流量数据。

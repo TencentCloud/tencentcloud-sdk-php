@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 表对象集合，当 TableMode 为 partial 时，此项需要填写
  *
- * @method string getTableName() 获取迁移的表名
+ * @method string getTableName() 获取迁移的表名，大小写敏感
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableName(string $TableName) 设置迁移的表名
+ * @method void setTableName(string $TableName) 设置迁移的表名，大小写敏感
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewTableName() 获取迁移后的表名，当TableEditMode为rename时此项必填
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class TableItem extends AbstractModel
 {
     /**
-     * @var string 迁移的表名
+     * @var string 迁移的表名，大小写敏感
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
@@ -64,7 +64,7 @@ class TableItem extends AbstractModel
     public $TableEditMode;
 
     /**
-     * @param string $TableName 迁移的表名
+     * @param string $TableName 迁移的表名，大小写敏感
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewTableName 迁移后的表名，当TableEditMode为rename时此项必填
 注意：此字段可能返回 null，表示取不到有效值。

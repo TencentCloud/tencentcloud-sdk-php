@@ -20,17 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTimingL7CacheData返回参数结构体
  *
+ * @method integer getTotalCount() 获取查询结果的总条数。
+ * @method void setTotalCount(integer $TotalCount) 设置查询结果的总条数。
  * @method array getData() 获取七层缓存分析时序类流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置七层缓存分析时序类流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取查询结果的总条数。
- * @method void setTotalCount(integer $TotalCount) 设置查询结果的总条数。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTimingL7CacheDataResponse extends AbstractModel
 {
+    /**
+     * @var integer 查询结果的总条数。
+     */
+    public $TotalCount;
+
     /**
      * @var array 七层缓存分析时序类流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -38,19 +43,14 @@ class DescribeTimingL7CacheDataResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var integer 查询结果的总条数。
-     */
-    public $TotalCount;
-
-    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $TotalCount 查询结果的总条数。
      * @param array $Data 七层缓存分析时序类流量数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 查询结果的总条数。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,6 +66,10 @@ class DescribeTimingL7CacheDataResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = [];
             foreach ($param["Data"] as $key => $value){
@@ -73,10 +77,6 @@ class DescribeTimingL7CacheDataResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -40,13 +40,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServices(array $Services) 设置开通服务
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFactoryQuota() 获取工厂配额
+ * @method integer getFactoryQuota() 获取商户配额
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFactoryQuota(integer $FactoryQuota) 设置工厂配额
+ * @method void setFactoryQuota(integer $FactoryQuota) 设置商户配额
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getItemQuota() 获取产品配额
+ * @method integer getItemQuota() 获取商品配额
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItemQuota(integer $ItemQuota) 设置产品配额
+ * @method void setItemQuota(integer $ItemQuota) 设置商品配额
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTrackQuota() 获取溯源码配额
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,9 +68,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrackType(integer $TrackType) 设置溯源类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取开通版本 basic standard enterprise
+ * @method string getVersion() 获取开通版本 lite:轻量版, basic:基础版, standard:标准版
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置开通版本 basic standard enterprise
+ * @method void setVersion(string $Version) 设置开通版本 lite:轻量版, basic:基础版, standard:标准版
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Quota extends AbstractModel
@@ -106,13 +106,13 @@ class Quota extends AbstractModel
     public $Services;
 
     /**
-     * @var integer 工厂配额
+     * @var integer 商户配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FactoryQuota;
 
     /**
-     * @var integer 产品配额
+     * @var integer 商品配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemQuota;
@@ -148,7 +148,7 @@ class Quota extends AbstractModel
     public $TrackType;
 
     /**
-     * @var string 开通版本 basic standard enterprise
+     * @var string 开通版本 lite:轻量版, basic:基础版, standard:标准版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
@@ -164,9 +164,9 @@ class Quota extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Services 开通服务
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FactoryQuota 工厂配额
+     * @param integer $FactoryQuota 商户配额
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ItemQuota 产品配额
+     * @param integer $ItemQuota 商品配额
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TrackQuota 溯源码配额
 注意：此字段可能返回 null，表示取不到有效值。
@@ -178,7 +178,7 @@ class Quota extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TrackType 溯源类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version 开通版本 basic standard enterprise
+     * @param string $Version 开通版本 lite:轻量版, basic:基础版, standard:标准版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

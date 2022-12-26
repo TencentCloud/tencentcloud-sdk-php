@@ -18,7 +18,7 @@ namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 迁移对象信息
+ * 迁移对象信息，在配置库表视图等对象信息时大小写敏感
  *
  * @method string getDbName() 获取需要迁移或同步的库名，当ObjectMode为partial时，此项必填
 注意：此字段可能返回 null，表示取不到有效值。

@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method Task getTask() 获取任务信息
  * @method void setTask(Task $Task) 设置任务信息
+ * @method TaskReportInfo getReportInfo() 获取任务对应的演练报告信息，null表示未导出报告
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setReportInfo(TaskReportInfo $ReportInfo) 设置任务对应的演练报告信息，null表示未导出报告
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +37,20 @@ class DescribeTaskResponse extends AbstractModel
     public $Task;
 
     /**
+     * @var TaskReportInfo 任务对应的演练报告信息，null表示未导出报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ReportInfo;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param Task $Task 任务信息
+     * @param TaskReportInfo $ReportInfo 任务对应的演练报告信息，null表示未导出报告
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -57,6 +69,11 @@ class DescribeTaskResponse extends AbstractModel
         if (array_key_exists("Task",$param) and $param["Task"] !== null) {
             $this->Task = new Task();
             $this->Task->deserialize($param["Task"]);
+        }
+
+        if (array_key_exists("ReportInfo",$param) and $param["ReportInfo"] !== null) {
+            $this->ReportInfo = new TaskReportInfo();
+            $this->ReportInfo->deserialize($param["ReportInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

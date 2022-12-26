@@ -30,18 +30,18 @@ use TencentCloud\Common\AbstractModel;
 <li> l7Flow_singleIpRequest：独立IP请求数。</li>
  * @method array getZoneIds() 获取查询的站点集合，不填默认查询所有站点。
  * @method void setZoneIds(array $ZoneIds) 设置查询的站点集合，不填默认查询所有站点。
- * @method array getFilters() 获取筛选条件, key可选的值有：
-<li>country：国家/地区；</li>
-<li>domain：域名；</li>
-<li>protocol：协议类型；</li>
-<li>tagKey：标签Key；</li>
-<li>tagValue；标签Value。</li>
- * @method void setFilters(array $Filters) 设置筛选条件, key可选的值有：
-<li>country：国家/地区；</li>
-<li>domain：域名；</li>
-<li>protocol：协议类型；</li>
-<li>tagKey：标签Key；</li>
-<li>tagValue；标签Value。</li>
+ * @method array getFilters() 获取过滤条件，详细的过滤条件如下：
+<li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循<a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>规范。<br>   类型：String<br>   必选：否</li>
+<li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
+<li>protocol<br>   按照【<strong>HTTP协议</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   HTTP/1.0：HTTP 1.0；<br>   HTTP/1.1：HTTP 1.1；<br>   HTTP/2.0：HTTP 2.0；<br>   HTTP/3.0：HTTP 3.0；<br>   WebSocket：WebSocket。</li>
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+ * @method void setFilters(array $Filters) 设置过滤条件，详细的过滤条件如下：
+<li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循<a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>规范。<br>   类型：String<br>   必选：否</li>
+<li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
+<li>protocol<br>   按照【<strong>HTTP协议</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   HTTP/1.0：HTTP 1.0；<br>   HTTP/1.1：HTTP 1.1；<br>   HTTP/2.0：HTTP 2.0；<br>   HTTP/3.0：HTTP 3.0；<br>   WebSocket：WebSocket。</li>
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
  * @method string getInterval() 获取查询时间粒度，取值有：
 <li>min：1分钟；</li>
 <li>5min：5分钟；</li>
@@ -54,10 +54,12 @@ use TencentCloud\Common\AbstractModel;
 <li>day：1天;。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
  * @method string getArea() 获取数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>不填将根据用户所在地智能选择地区。
+<li>mainland：中国大陆地区数据；</li>
+<li>global：全球数据。</li>不填默认取值为global。
  * @method void setArea(string $Area) 设置数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>不填将根据用户所在地智能选择地区。
+<li>mainland：中国大陆地区数据；</li>
+<li>global：全球数据。</li>不填默认取值为global。
  */
 class DescribeSingleL7AnalysisDataRequest extends AbstractModel
 {
@@ -83,12 +85,12 @@ class DescribeSingleL7AnalysisDataRequest extends AbstractModel
     public $ZoneIds;
 
     /**
-     * @var array 筛选条件, key可选的值有：
-<li>country：国家/地区；</li>
-<li>domain：域名；</li>
-<li>protocol：协议类型；</li>
-<li>tagKey：标签Key；</li>
-<li>tagValue；标签Value。</li>
+     * @var array 过滤条件，详细的过滤条件如下：
+<li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循<a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>规范。<br>   类型：String<br>   必选：否</li>
+<li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
+<li>protocol<br>   按照【<strong>HTTP协议</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   HTTP/1.0：HTTP 1.0；<br>   HTTP/1.1：HTTP 1.1；<br>   HTTP/2.0：HTTP 2.0；<br>   HTTP/3.0：HTTP 3.0；<br>   WebSocket：WebSocket。</li>
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
      */
     public $Filters;
 
@@ -104,7 +106,8 @@ class DescribeSingleL7AnalysisDataRequest extends AbstractModel
     /**
      * @var string 数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>不填将根据用户所在地智能选择地区。
+<li>mainland：中国大陆地区数据；</li>
+<li>global：全球数据。</li>不填默认取值为global。
      */
     public $Area;
 
@@ -114,12 +117,12 @@ class DescribeSingleL7AnalysisDataRequest extends AbstractModel
      * @param array $MetricNames 查询的指标，取值有:
 <li> l7Flow_singleIpRequest：独立IP请求数。</li>
      * @param array $ZoneIds 查询的站点集合，不填默认查询所有站点。
-     * @param array $Filters 筛选条件, key可选的值有：
-<li>country：国家/地区；</li>
-<li>domain：域名；</li>
-<li>protocol：协议类型；</li>
-<li>tagKey：标签Key；</li>
-<li>tagValue；标签Value。</li>
+     * @param array $Filters 过滤条件，详细的过滤条件如下：
+<li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循<a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>规范。<br>   类型：String<br>   必选：否</li>
+<li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
+<li>protocol<br>   按照【<strong>HTTP协议</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   HTTP/1.0：HTTP 1.0；<br>   HTTP/1.1：HTTP 1.1；<br>   HTTP/2.0：HTTP 2.0；<br>   HTTP/3.0：HTTP 3.0；<br>   WebSocket：WebSocket。</li>
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
      * @param string $Interval 查询时间粒度，取值有：
 <li>min：1分钟；</li>
 <li>5min：5分钟；</li>
@@ -127,7 +130,8 @@ class DescribeSingleL7AnalysisDataRequest extends AbstractModel
 <li>day：1天;。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
      * @param string $Area 数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>不填将根据用户所在地智能选择地区。
+<li>mainland：中国大陆地区数据；</li>
+<li>global：全球数据。</li>不填默认取值为global。
      */
     function __construct()
     {

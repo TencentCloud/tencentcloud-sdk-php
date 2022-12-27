@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortOrder(string $SortOrder) 设置按升序或降序排列，可选值为asc，desc
  * @method string getFilterOneGroup() 获取订阅组名称，指定此参数后将只返回该订阅组信息
  * @method void setFilterOneGroup(string $FilterOneGroup) 设置订阅组名称，指定此参数后将只返回该订阅组信息
+ * @method array getTypes() 获取group类型
+ * @method void setTypes(array $Types) 设置group类型
  */
 class DescribeRocketMQGroupsRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $FilterOneGroup;
 
     /**
+     * @var array group类型
+     */
+    public $Types;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $NamespaceId 命名空间
      * @param integer $Offset 偏移量
@@ -96,6 +103,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
      * @param string $SortedBy 按照指定字段排序，可选值为tps，accumulative
      * @param string $SortOrder 按升序或降序排列，可选值为asc，desc
      * @param string $FilterOneGroup 订阅组名称，指定此参数后将只返回该订阅组信息
+     * @param array $Types group类型
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
 
         if (array_key_exists("FilterOneGroup",$param) and $param["FilterOneGroup"] !== null) {
             $this->FilterOneGroup = $param["FilterOneGroup"];
+        }
+
+        if (array_key_exists("Types",$param) and $param["Types"] !== null) {
+            $this->Types = $param["Types"];
         }
     }
 }

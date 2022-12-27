@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getBroadcastEnabled() 获取是否开启广播消费
  * @method void setBroadcastEnabled(boolean $BroadcastEnabled) 设置是否开启广播消费
+ * @method string getGroupType() 获取Group类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGroupType(string $GroupType) 设置Group类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRetryMaxTimes() 获取重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRetryMaxTimes(integer $RetryMaxTimes) 设置重试次数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQGroup extends AbstractModel
 {
@@ -124,6 +132,18 @@ class RocketMQGroup extends AbstractModel
     public $BroadcastEnabled;
 
     /**
+     * @var string Group类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GroupType;
+
+    /**
+     * @var integer 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RetryMaxTimes;
+
+    /**
      * @param string $Name 消费组名称
      * @param integer $ConsumerNum 在线消费者数量
      * @param integer $TPS 消费TPS
@@ -140,6 +160,10 @@ class RocketMQGroup extends AbstractModel
      * @param string $ConsumerType 消费者类型，枚举值ACTIVELY, PASSIVELY
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $BroadcastEnabled 是否开启广播消费
+     * @param string $GroupType Group类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RetryMaxTimes 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -204,6 +228,14 @@ class RocketMQGroup extends AbstractModel
 
         if (array_key_exists("BroadcastEnabled",$param) and $param["BroadcastEnabled"] !== null) {
             $this->BroadcastEnabled = $param["BroadcastEnabled"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("RetryMaxTimes",$param) and $param["RetryMaxTimes"] !== null) {
+            $this->RetryMaxTimes = $param["RetryMaxTimes"];
         }
     }
 }

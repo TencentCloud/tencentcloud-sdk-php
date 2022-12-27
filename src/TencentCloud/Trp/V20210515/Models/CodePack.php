@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAmount(integer $Amount) 设置码数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCodeLength() 获取码长度
+ * @method integer getCodeLength() 获取防伪码长度
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCodeLength(integer $CodeLength) 设置码长度
+ * @method void setCodeLength(integer $CodeLength) 设置防伪码长度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCodeType() 获取码类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,7 +158,7 @@ class CodePack extends AbstractModel
     public $Amount;
 
     /**
-     * @var integer 码长度
+     * @var integer 防伪码长度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeLength;
@@ -242,7 +242,7 @@ class CodePack extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Amount 码数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CodeLength 码长度
+     * @param integer $CodeLength 防伪码长度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CodeType 码类型
 注意：此字段可能返回 null，表示取不到有效值。

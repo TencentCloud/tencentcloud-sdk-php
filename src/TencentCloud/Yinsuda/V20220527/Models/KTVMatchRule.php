@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMusicInfo(KTVMatchRuleMusicInfo $MusicInfo) 设置歌曲匹配信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMusicIdToMatchAME() 获取音速达歌曲 Id，用于匹配 AME 曲库歌曲。
+ * @method void setMusicIdToMatchAME(string $MusicIdToMatchAME) 设置音速达歌曲 Id，用于匹配 AME 曲库歌曲。
  */
 class KTVMatchRule extends AbstractModel
 {
@@ -41,9 +43,15 @@ class KTVMatchRule extends AbstractModel
     public $MusicInfo;
 
     /**
+     * @var string 音速达歌曲 Id，用于匹配 AME 曲库歌曲。
+     */
+    public $MusicIdToMatchAME;
+
+    /**
      * @param string $AMEMusicId AME 曲库 Id。
      * @param KTVMatchRuleMusicInfo $MusicInfo 歌曲匹配信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MusicIdToMatchAME 音速达歌曲 Id，用于匹配 AME 曲库歌曲。
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class KTVMatchRule extends AbstractModel
         if (array_key_exists("MusicInfo",$param) and $param["MusicInfo"] !== null) {
             $this->MusicInfo = new KTVMatchRuleMusicInfo();
             $this->MusicInfo->deserialize($param["MusicInfo"]);
+        }
+
+        if (array_key_exists("MusicIdToMatchAME",$param) and $param["MusicIdToMatchAME"] !== null) {
+            $this->MusicIdToMatchAME = $param["MusicIdToMatchAME"];
         }
     }
 }

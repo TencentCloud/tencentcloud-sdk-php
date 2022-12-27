@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220901\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLoadBalancing返回参数结构体
+ * DescribeProxyProcessStatistics返回参数结构体
  *
- * @method integer getTotalCount() 获取记录总数。
- * @method void setTotalCount(integer $TotalCount) 设置记录总数。
- * @method array getData() 获取负载均衡信息。
- * @method void setData(array $Data) 设置负载均衡信息。
+ * @method ProcessStatistic getProcessStatistics() 获取实时会话统计详情。
+ * @method void setProcessStatistics(ProcessStatistic $ProcessStatistics) 设置实时会话统计详情。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLoadBalancingResponse extends AbstractModel
+class DescribeProxyProcessStatisticsResponse extends AbstractModel
 {
     /**
-     * @var integer 记录总数。
+     * @var ProcessStatistic 实时会话统计详情。
      */
-    public $TotalCount;
-
-    /**
-     * @var array 负载均衡信息。
-     */
-    public $Data;
+    public $ProcessStatistics;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeLoadBalancingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 记录总数。
-     * @param array $Data 负载均衡信息。
+     * @param ProcessStatistic $ProcessStatistics 实时会话统计详情。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,9 @@ class DescribeLoadBalancingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new LoadBalancing();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("ProcessStatistics",$param) and $param["ProcessStatistics"] !== null) {
+            $this->ProcessStatistics = new ProcessStatistic();
+            $this->ProcessStatistics->deserialize($param["ProcessStatistics"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

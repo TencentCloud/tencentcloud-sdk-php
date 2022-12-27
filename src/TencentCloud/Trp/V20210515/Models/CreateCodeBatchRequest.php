@@ -28,14 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method integer getBatchType() 获取批次类型 0:溯源 1:营销
  * @method void setBatchType(integer $BatchType) 设置批次类型 0:溯源 1:营销
- * @method string getBatchId() 获取批次ID，系统自动生成
- * @method void setBatchId(string $BatchId) 设置批次ID，系统自动生成
+ * @method string getBatchId() 获取批次ID，留空时系统自动生成
+ * @method void setBatchId(string $BatchId) 设置批次ID，留空时系统自动生成
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
  * @method string getMpTpl() 获取模版ID，或者活动ID
  * @method void setMpTpl(string $MpTpl) 设置模版ID，或者活动ID
  * @method string getCloneId() 获取克隆批次ID，同时会复制溯源信息
  * @method void setCloneId(string $CloneId) 设置克隆批次ID，同时会复制溯源信息
+ * @method string getBatchCode() 获取批次编号，业务字段不判断唯一性
+ * @method void setBatchCode(string $BatchCode) 设置批次编号，业务字段不判断唯一性
  */
 class CreateCodeBatchRequest extends AbstractModel
 {
@@ -60,7 +62,7 @@ class CreateCodeBatchRequest extends AbstractModel
     public $BatchType;
 
     /**
-     * @var string 批次ID，系统自动生成
+     * @var string 批次ID，留空时系统自动生成
      */
     public $BatchId;
 
@@ -80,14 +82,20 @@ class CreateCodeBatchRequest extends AbstractModel
     public $CloneId;
 
     /**
+     * @var string 批次编号，业务字段不判断唯一性
+     */
+    public $BatchCode;
+
+    /**
      * @param integer $CorpId 企业ID
      * @param string $MerchantId 商户ID
      * @param string $ProductId 产品ID
      * @param integer $BatchType 批次类型 0:溯源 1:营销
-     * @param string $BatchId 批次ID，系统自动生成
+     * @param string $BatchId 批次ID，留空时系统自动生成
      * @param string $Remark 备注
      * @param string $MpTpl 模版ID，或者活动ID
      * @param string $CloneId 克隆批次ID，同时会复制溯源信息
+     * @param string $BatchCode 批次编号，业务字段不判断唯一性
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CreateCodeBatchRequest extends AbstractModel
 
         if (array_key_exists("CloneId",$param) and $param["CloneId"] !== null) {
             $this->CloneId = $param["CloneId"];
+        }
+
+        if (array_key_exists("BatchCode",$param) and $param["BatchCode"] !== null) {
+            $this->BatchCode = $param["BatchCode"];
         }
     }
 }

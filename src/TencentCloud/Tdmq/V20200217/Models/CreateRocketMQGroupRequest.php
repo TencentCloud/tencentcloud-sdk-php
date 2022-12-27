@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getRemark() 获取说明信息，最长128个字符
  * @method void setRemark(string $Remark) 设置说明信息，最长128个字符
+ * @method string getGroupType() 获取Group类型（TCP/HTTP）
+ * @method void setGroupType(string $GroupType) 设置Group类型（TCP/HTTP）
+ * @method integer getRetryMaxTimes() 获取Group最大重试次数
+ * @method void setRetryMaxTimes(integer $RetryMaxTimes) 设置Group最大重试次数
  */
 class CreateRocketMQGroupRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class CreateRocketMQGroupRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string Group类型（TCP/HTTP）
+     */
+    public $GroupType;
+
+    /**
+     * @var integer Group最大重试次数
+     */
+    public $RetryMaxTimes;
+
+    /**
      * @param string $GroupId Group名称，8~64个字符
      * @param array $Namespaces 命名空间，目前只支持单个命名空间
      * @param boolean $ReadEnable 是否开启消费
      * @param boolean $BroadcastEnable 是否开启广播消费
      * @param string $ClusterId 集群ID
      * @param string $Remark 说明信息，最长128个字符
+     * @param string $GroupType Group类型（TCP/HTTP）
+     * @param integer $RetryMaxTimes Group最大重试次数
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class CreateRocketMQGroupRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("RetryMaxTimes",$param) and $param["RetryMaxTimes"] !== null) {
+            $this->RetryMaxTimes = $param["RetryMaxTimes"];
         }
     }
 }

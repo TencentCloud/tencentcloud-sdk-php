@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackSpec(array $PackSpec) 设置码包规格
  * @method string getBatchId() 获取批次ID，如果传了生码后会同时绑定批次，并激活码
  * @method void setBatchId(string $BatchId) 设置批次ID，如果传了生码后会同时绑定批次，并激活码
+ * @method integer getSerialType() 获取是否有流水码 0:无 1:有
+ * @method void setSerialType(integer $SerialType) 设置是否有流水码 0:无 1:有
  */
 class CreateCodePackRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateCodePackRequest extends AbstractModel
     public $BatchId;
 
     /**
+     * @var integer 是否有流水码 0:无 1:有
+     */
+    public $SerialType;
+
+    /**
      * @param string $MerchantId 商户ID
      * @param integer $CodeLength 码长度
      * @param string $CodeType 码类型 alphabet 字母, number 数字, mixin 混合
@@ -96,6 +103,7 @@ class CreateCodePackRequest extends AbstractModel
      * @param integer $PackLevel 码包层级
      * @param array $PackSpec 码包规格
      * @param string $BatchId 批次ID，如果传了生码后会同时绑定批次，并激活码
+     * @param integer $SerialType 是否有流水码 0:无 1:有
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class CreateCodePackRequest extends AbstractModel
 
         if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
             $this->BatchId = $param["BatchId"];
+        }
+
+        if (array_key_exists("SerialType",$param) and $param["SerialType"] !== null) {
+            $this->SerialType = $param["SerialType"];
         }
     }
 }

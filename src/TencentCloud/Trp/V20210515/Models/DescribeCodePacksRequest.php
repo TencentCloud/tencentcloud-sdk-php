@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyword(string $Keyword) 设置查询关键字
  * @method integer getCorpId() 获取企业ID
  * @method void setCorpId(integer $CorpId) 设置企业ID
+ * @method integer getSerialType() 获取是否有流水码 0:无 1:有
+ * @method void setSerialType(integer $SerialType) 设置是否有流水码 0:无 1:有
  */
 class DescribeCodePacksRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeCodePacksRequest extends AbstractModel
     public $CorpId;
 
     /**
+     * @var integer 是否有流水码 0:无 1:有
+     */
+    public $SerialType;
+
+    /**
      * @param integer $PageSize 每页数量
      * @param integer $PageNumber 页数
      * @param string $Keyword 查询关键字
      * @param integer $CorpId 企业ID
+     * @param integer $SerialType 是否有流水码 0:无 1:有
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeCodePacksRequest extends AbstractModel
 
         if (array_key_exists("CorpId",$param) and $param["CorpId"] !== null) {
             $this->CorpId = $param["CorpId"];
+        }
+
+        if (array_key_exists("SerialType",$param) and $param["SerialType"] !== null) {
+            $this->SerialType = $param["SerialType"];
         }
     }
 }

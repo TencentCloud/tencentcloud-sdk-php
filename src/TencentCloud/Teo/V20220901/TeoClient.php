@@ -30,9 +30,7 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\CreateApplicationProxyRuleResponse CreateApplicationProxyRule(Models\CreateApplicationProxyRuleRequest $req) 创建应用代理规则
  * @method Models\CreateCredentialResponse CreateCredential(Models\CreateCredentialRequest $req) 用于创建COS回源私有凭证
  * @method Models\CreateCustomErrorPageResponse CreateCustomErrorPage(Models\CreateCustomErrorPageRequest $req) 创建自定义规则的自定义页
- * @method Models\CreateDnsRecordResponse CreateDnsRecord(Models\CreateDnsRecordRequest $req) 创建 DNS 记录
  * @method Models\CreateIpTableListResponse CreateIpTableList(Models\CreateIpTableListRequest $req) 创建IP黑白名单列表
- * @method Models\CreateLoadBalancingResponse CreateLoadBalancing(Models\CreateLoadBalancingRequest $req) 创建负载均衡
  * @method Models\CreateLogSetResponse CreateLogSet(Models\CreateLogSetRequest $req) 本接口（CreateClsLog）用于创建CLS日志集。
  * @method Models\CreateLogTopicTaskResponse CreateLogTopicTask(Models\CreateLogTopicTaskRequest $req) 本接口（CreateLogTopicTask）用于创建日志推送任务。
  * @method Models\CreateOriginGroupResponse CreateOriginGroup(Models\CreateOriginGroupRequest $req) 创建源站组
@@ -47,8 +45,6 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DeleteAliasDomainResponse DeleteAliasDomain(Models\DeleteAliasDomainRequest $req) 删除别称域名。
  * @method Models\DeleteApplicationProxyResponse DeleteApplicationProxy(Models\DeleteApplicationProxyRequest $req) 删除应用代理
  * @method Models\DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(Models\DeleteApplicationProxyRuleRequest $req) 删除应用代理规则
- * @method Models\DeleteDnsRecordsResponse DeleteDnsRecords(Models\DeleteDnsRecordsRequest $req) 批量删除 DNS 记录
- * @method Models\DeleteLoadBalancingResponse DeleteLoadBalancing(Models\DeleteLoadBalancingRequest $req) 删除负载均衡
  * @method Models\DeleteLogTopicTaskResponse DeleteLogTopicTask(Models\DeleteLogTopicTaskRequest $req) 本接口（DeleteLogTopicTask）用于删除日志推送任务。
  * @method Models\DeleteOriginGroupResponse DeleteOriginGroup(Models\DeleteOriginGroupRequest $req) 删除源站组
  * @method Models\DeleteRulesResponse DeleteRules(Models\DeleteRulesRequest $req) 批量删除规则引擎规则。
@@ -76,11 +72,9 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DescribeDefaultCertificatesResponse DescribeDefaultCertificates(Models\DescribeDefaultCertificatesRequest $req) 查询默认证书列表
  * @method Models\DescribeDistributionL4AccessDataResponse DescribeDistributionL4AccessData(Models\DescribeDistributionL4AccessDataRequest $req) 本接口（DescribeDistributionL4AccessData）用于查询四层连接时长的时序数据。
  * @method Models\DescribeDnsDataResponse DescribeDnsData(Models\DescribeDnsDataRequest $req) 获取DNS请求数统计曲线
- * @method Models\DescribeDnsRecordsResponse DescribeDnsRecords(Models\DescribeDnsRecordsRequest $req) 查询 DNS 记录列表，支持搜索、分页、排序、过滤。
  * @method Models\DescribeDnssecResponse DescribeDnssec(Models\DescribeDnssecRequest $req) 用于查询 DNSSEC 相关信息
  * @method Models\DescribeHostsSettingResponse DescribeHostsSetting(Models\DescribeHostsSettingRequest $req) 用于查询域名配置信息
  * @method Models\DescribeIdentificationsResponse DescribeIdentifications(Models\DescribeIdentificationsRequest $req) 查询站点的验证信息。
- * @method Models\DescribeLoadBalancingResponse DescribeLoadBalancing(Models\DescribeLoadBalancingRequest $req) 获取负载均衡列表
  * @method Models\DescribeLogSetsResponse DescribeLogSets(Models\DescribeLogSetsRequest $req) 本接口（DescribeLogSets）用于获取日志集列表。
  * @method Models\DescribeLogTopicTaskDetailResponse DescribeLogTopicTaskDetail(Models\DescribeLogTopicTaskDetailRequest $req) 本接口（DescribeLogTopicTaskDetail）用于获取日志推送任务详细信息。
  * @method Models\DescribeLogTopicTasksResponse DescribeLogTopicTasks(Models\DescribeLogTopicTasksRequest $req) 本接口（DescribeLogTopicTasks）用于获取日志推送任务列表。
@@ -132,10 +126,8 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\ModifyDDoSPolicyResponse ModifyDDoSPolicy(Models\ModifyDDoSPolicyRequest $req) 修改DDoS防护分区配置
  * @method Models\ModifyDDoSPolicyHostResponse ModifyDDoSPolicyHost(Models\ModifyDDoSPolicyHostRequest $req) 域名DDoS高可用开关
  * @method Models\ModifyDefaultCertificateResponse ModifyDefaultCertificate(Models\ModifyDefaultCertificateRequest $req) 修改默认证书状态
- * @method Models\ModifyDnsRecordResponse ModifyDnsRecord(Models\ModifyDnsRecordRequest $req) 修改 DNS 记录
  * @method Models\ModifyDnssecResponse ModifyDnssec(Models\ModifyDnssecRequest $req) 设置站点DNSSEC状态
  * @method Models\ModifyHostsCertificateResponse ModifyHostsCertificate(Models\ModifyHostsCertificateRequest $req) 用于修改域名证书
- * @method Models\ModifyLoadBalancingResponse ModifyLoadBalancing(Models\ModifyLoadBalancingRequest $req) 修改负载均衡
  * @method Models\ModifyLogTopicTaskResponse ModifyLogTopicTask(Models\ModifyLogTopicTaskRequest $req) 本接口（ModifyLogTopicTask）用于修改日志推送任务信息。
  * @method Models\ModifyOriginGroupResponse ModifyOriginGroup(Models\ModifyOriginGroupRequest $req) 修改源站组
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) 修改规则引擎规则。

@@ -18,7 +18,7 @@ namespace TencentCloud\Ecm\V20190719\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP地址模版
+ * IP地址模板
  *
  * @method string getAddressId() 获取IP地址ID，例如：eipm-2uw6ujo6。
  * @method void setAddressId(string $AddressId) 设置IP地址ID，例如：eipm-2uw6ujo6。

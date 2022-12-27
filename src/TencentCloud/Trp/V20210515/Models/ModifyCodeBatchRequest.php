@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductId(string $ProductId) 设置商品ID
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
+ * @method string getBatchCode() 获取批次编码，业务字段不判断唯一性
+ * @method void setBatchCode(string $BatchCode) 设置批次编码，业务字段不判断唯一性
  */
 class ModifyCodeBatchRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyCodeBatchRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 批次编码，业务字段不判断唯一性
+     */
+    public $BatchCode;
+
+    /**
      * @param string $BatchId 批次ID
      * @param integer $CorpId 企业ID
      * @param integer $Status 状态 0: 未激活 1: 已激活 -1: 已冻结
@@ -80,6 +87,7 @@ class ModifyCodeBatchRequest extends AbstractModel
      * @param string $MerchantId 商户ID
      * @param string $ProductId 商品ID
      * @param string $Remark 备注
+     * @param string $BatchCode 批次编码，业务字段不判断唯一性
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ModifyCodeBatchRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("BatchCode",$param) and $param["BatchCode"] !== null) {
+            $this->BatchCode = $param["BatchCode"];
         }
     }
 }

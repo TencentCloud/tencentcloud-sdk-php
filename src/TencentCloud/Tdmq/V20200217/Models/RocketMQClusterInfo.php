@@ -52,6 +52,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRocketMQFlag(boolean $RocketMQFlag) 设置Rocketmq集群标识
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取计费状态，1表示正常，2表示已停服，3表示已销毁
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置计费状态，1表示正常，2表示已停服，3表示已销毁
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsolateTime() 获取欠费停服时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsolateTime(integer $IsolateTime) 设置欠费停服时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHttpPublicEndpoint() 获取HTTP协议公网接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttpPublicEndpoint(string $HttpPublicEndpoint) 设置HTTP协议公网接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHttpVpcEndpoint() 获取HTTP协议VPC接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttpVpcEndpoint(string $HttpVpcEndpoint) 设置HTTP协议VPC接入地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -116,6 +132,30 @@ class RocketMQClusterInfo extends AbstractModel
     public $RocketMQFlag;
 
     /**
+     * @var integer 计费状态，1表示正常，2表示已停服，3表示已销毁
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var integer 欠费停服时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsolateTime;
+
+    /**
+     * @var string HTTP协议公网接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HttpPublicEndpoint;
+
+    /**
+     * @var string HTTP协议VPC接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HttpVpcEndpoint;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -131,6 +171,14 @@ class RocketMQClusterInfo extends AbstractModel
      * @param boolean $IsVip 是否为专享实例
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RocketMQFlag Rocketmq集群标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 计费状态，1表示正常，2表示已停服，3表示已销毁
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsolateTime 欠费停服时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HttpPublicEndpoint HTTP协议公网接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HttpVpcEndpoint HTTP协议VPC接入地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -193,6 +241,22 @@ class RocketMQClusterInfo extends AbstractModel
 
         if (array_key_exists("RocketMQFlag",$param) and $param["RocketMQFlag"] !== null) {
             $this->RocketMQFlag = $param["RocketMQFlag"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
+            $this->IsolateTime = $param["IsolateTime"];
+        }
+
+        if (array_key_exists("HttpPublicEndpoint",$param) and $param["HttpPublicEndpoint"] !== null) {
+            $this->HttpPublicEndpoint = $param["HttpPublicEndpoint"];
+        }
+
+        if (array_key_exists("HttpVpcEndpoint",$param) and $param["HttpVpcEndpoint"] !== null) {
+            $this->HttpVpcEndpoint = $param["HttpVpcEndpoint"];
         }
     }
 }

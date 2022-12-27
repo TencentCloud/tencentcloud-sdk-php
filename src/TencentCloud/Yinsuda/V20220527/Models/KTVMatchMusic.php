@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKTVMusicBaseInfo(KTVMusicBaseInfo $KTVMusicBaseInfo) 设置匹配到的歌曲基础信息。
  * @method KTVMatchRule getMatchRule() 获取命中规则。
  * @method void setMatchRule(KTVMatchRule $MatchRule) 设置命中规则。
+ * @method AMEMusicBaseInfo getAMEMusicBaseInfo() 获取AME 歌曲基础信息，仅在使用音速达歌曲 Id 匹配 AME 曲库时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAMEMusicBaseInfo(AMEMusicBaseInfo $AMEMusicBaseInfo) 设置AME 歌曲基础信息，仅在使用音速达歌曲 Id 匹配 AME 曲库时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KTVMatchMusic extends AbstractModel
 {
@@ -38,8 +42,16 @@ class KTVMatchMusic extends AbstractModel
     public $MatchRule;
 
     /**
+     * @var AMEMusicBaseInfo AME 歌曲基础信息，仅在使用音速达歌曲 Id 匹配 AME 曲库时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AMEMusicBaseInfo;
+
+    /**
      * @param KTVMusicBaseInfo $KTVMusicBaseInfo 匹配到的歌曲基础信息。
      * @param KTVMatchRule $MatchRule 命中规则。
+     * @param AMEMusicBaseInfo $AMEMusicBaseInfo AME 歌曲基础信息，仅在使用音速达歌曲 Id 匹配 AME 曲库时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -62,6 +74,11 @@ class KTVMatchMusic extends AbstractModel
         if (array_key_exists("MatchRule",$param) and $param["MatchRule"] !== null) {
             $this->MatchRule = new KTVMatchRule();
             $this->MatchRule->deserialize($param["MatchRule"]);
+        }
+
+        if (array_key_exists("AMEMusicBaseInfo",$param) and $param["AMEMusicBaseInfo"] !== null) {
+            $this->AMEMusicBaseInfo = new AMEMusicBaseInfo();
+            $this->AMEMusicBaseInfo->deserialize($param["AMEMusicBaseInfo"]);
         }
     }
 }

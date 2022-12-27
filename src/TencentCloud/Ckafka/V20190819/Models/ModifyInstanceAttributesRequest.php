@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDynamicRetentionConfig(DynamicRetentionTime $DynamicRetentionConfig) 设置动态消息保留策略配置
  * @method integer getRebalanceTime() 获取修改升配置rebalance时间
  * @method void setRebalanceTime(integer $RebalanceTime) 设置修改升配置rebalance时间
- * @method integer getPublicNetwork() 获取时间戳
- * @method void setPublicNetwork(integer $PublicNetwork) 设置时间戳
+ * @method integer getPublicNetwork() 获取公网带宽
+ * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽
  * @method DynamicDiskConfig getDynamicDiskConfig() 获取动态硬盘扩容策略配置
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) 设置动态硬盘扩容策略配置
  * @method integer getMaxMessageByte() 获取实例级别单条消息大小（单位byte)
@@ -72,7 +72,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $RebalanceTime;
 
     /**
-     * @var integer 时间戳
+     * @var integer 公网带宽
      */
     public $PublicNetwork;
 
@@ -93,7 +93,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
      * @param ModifyInstanceAttributesConfig $Config 实例配置
      * @param DynamicRetentionTime $DynamicRetentionConfig 动态消息保留策略配置
      * @param integer $RebalanceTime 修改升配置rebalance时间
-     * @param integer $PublicNetwork 时间戳
+     * @param integer $PublicNetwork 公网带宽
      * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略配置
      * @param integer $MaxMessageByte 实例级别单条消息大小（单位byte)
      */

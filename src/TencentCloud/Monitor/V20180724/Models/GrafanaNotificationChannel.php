@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraOrgIds(array $ExtraOrgIds) 设置额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrgIds() 获取生效组织，已废弃，请使用 OrganizationIds
+ * @method array getOrgIds() 获取生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrgIds(string $OrgIds) 设置生效组织，已废弃，请使用 OrganizationIds
+ * @method void setOrgIds(array $OrgIds) 设置生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOrganizationIds() 获取告警渠道的所有生效组织
+ * @method array getOrganizationIds() 获取告警渠道的所有生效组织
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrganizationIds(string $OrganizationIds) 设置告警渠道的所有生效组织
+ * @method void setOrganizationIds(array $OrganizationIds) 设置告警渠道的所有生效组织
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GrafanaNotificationChannel extends AbstractModel
@@ -84,13 +84,13 @@ class GrafanaNotificationChannel extends AbstractModel
     public $ExtraOrgIds;
 
     /**
-     * @var string 生效组织，已废弃，请使用 OrganizationIds
+     * @var array 生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgIds;
 
     /**
-     * @var string 告警渠道的所有生效组织
+     * @var array 告警渠道的所有生效组织
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationIds;
@@ -104,9 +104,9 @@ class GrafanaNotificationChannel extends AbstractModel
      * @param string $OrgId 默认生效组织，已废弃，请使用 OrganizationIds
      * @param array $ExtraOrgIds 额外生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrgIds 生效组织，已废弃，请使用 OrganizationIds
+     * @param array $OrgIds 生效组织，已废弃，请使用 OrganizationIds
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OrganizationIds 告警渠道的所有生效组织
+     * @param array $OrganizationIds 告警渠道的所有生效组织
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

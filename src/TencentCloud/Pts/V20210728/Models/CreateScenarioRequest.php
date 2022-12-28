@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlugins(array $Plugins) 设置拓展包文件路径
  * @method DomainNameConfig getDomainNameConfig() 获取域名解析配置
  * @method void setDomainNameConfig(DomainNameConfig $DomainNameConfig) 设置域名解析配置
+ * @method string getOwner() 获取创建人名
+ * @method void setOwner(string $Owner) 设置创建人名
  */
 class CreateScenarioRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class CreateScenarioRequest extends AbstractModel
     public $DomainNameConfig;
 
     /**
+     * @var string 创建人名
+     */
+    public $Owner;
+
+    /**
      * @param string $Name 场景名
      * @param string $Type 压测引擎类型
      * @param string $ProjectId 项目ID
@@ -160,6 +167,7 @@ class CreateScenarioRequest extends AbstractModel
      * @param SLAPolicy $SLAPolicy SLA 策略
      * @param array $Plugins 拓展包文件路径
      * @param DomainNameConfig $DomainNameConfig 域名解析配置
+     * @param string $Owner 创建人名
      */
     function __construct()
     {
@@ -268,6 +276,10 @@ class CreateScenarioRequest extends AbstractModel
         if (array_key_exists("DomainNameConfig",$param) and $param["DomainNameConfig"] !== null) {
             $this->DomainNameConfig = new DomainNameConfig();
             $this->DomainNameConfig->deserialize($param["DomainNameConfig"]);
+        }
+
+        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+            $this->Owner = $param["Owner"];
         }
     }
 }

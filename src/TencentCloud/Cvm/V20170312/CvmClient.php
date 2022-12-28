@@ -150,6 +150,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 只支持从 `POSTPAID_BY_HOUR` 计费模式切换为`PREPAID`计费模式。
 * 关机不收费的实例、`BC1`和`BS1`机型族的实例、设置定时销毁的实例、竞价实例不支持该操作。
+ * @method Models\InquiryPriceRenewHostsResponse InquiryPriceRenewHosts(Models\InquiryPriceRenewHostsRequest $req) 本接口 (InquiryPriceRenewHosts) 用于续费包年包月`CDH`实例询价。
+* 只支持查询包年包月`CDH`实例的续费价格。
  * @method Models\InquiryPriceRenewInstancesResponse InquiryPriceRenewInstances(Models\InquiryPriceRenewInstancesRequest $req) 本接口 (InquiryPriceRenewInstances) 用于续费包年包月实例询价。
 
 * 只支持查询包年包月实例的续费价格。

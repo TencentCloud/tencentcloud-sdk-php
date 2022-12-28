@@ -26,9 +26,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternational(integer $International) 设置是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
- * @method array getTemplateIdSet() 获取模板 ID 数组。数组为空时默认查询模板列表信息（仅允许主账号使用），请使用 Limit 和 Offset 字段设置查询范围。
+ * @method array getTemplateIdSet() 获取模板 ID 数组。数组为空时默认查询模板列表信息，请使用 Limit 和 Offset 字段设置查询范围。
 <dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
- * @method void setTemplateIdSet(array $TemplateIdSet) 设置模板 ID 数组。数组为空时默认查询模板列表信息（仅允许主账号使用），请使用 Limit 和 Offset 字段设置查询范围。
+ * @method void setTemplateIdSet(array $TemplateIdSet) 设置模板 ID 数组。数组为空时默认查询模板列表信息，请使用 Limit 和 Offset 字段设置查询范围。
 <dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
  * @method integer getLimit() 获取最大上限，最多100。
 注：默认为0，TemplateIdSet 为空时启用。
@@ -49,7 +49,7 @@ class DescribeSmsTemplateListRequest extends AbstractModel
     public $International;
 
     /**
-     * @var array 模板 ID 数组。数组为空时默认查询模板列表信息（仅允许主账号使用），请使用 Limit 和 Offset 字段设置查询范围。
+     * @var array 模板 ID 数组。数组为空时默认查询模板列表信息，请使用 Limit 和 Offset 字段设置查询范围。
 <dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
      */
     public $TemplateIdSet;
@@ -70,7 +70,7 @@ class DescribeSmsTemplateListRequest extends AbstractModel
      * @param integer $International 是否国际/港澳台短信：
 0：表示国内短信。
 1：表示国际/港澳台短信。
-     * @param array $TemplateIdSet 模板 ID 数组。数组为空时默认查询模板列表信息（仅允许主账号使用），请使用 Limit 和 Offset 字段设置查询范围。
+     * @param array $TemplateIdSet 模板 ID 数组。数组为空时默认查询模板列表信息，请使用 Limit 和 Offset 字段设置查询范围。
 <dx-alert infotype="notice" title="注意">默认数组长度最大100</dx-alert>
      * @param integer $Limit 最大上限，最多100。
 注：默认为0，TemplateIdSet 为空时启用。

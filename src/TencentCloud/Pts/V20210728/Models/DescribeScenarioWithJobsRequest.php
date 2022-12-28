@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIgnoreScript(boolean $IgnoreScript) 设置是否需要返回场景的脚本内容
  * @method boolean getIgnoreDataset() 获取是否需要返回测试数据文件信息
  * @method void setIgnoreDataset(boolean $IgnoreDataset) 设置是否需要返回测试数据文件信息
+ * @method string getScenarioType() 获取场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter	
+ * @method void setScenarioType(string $ScenarioType) 设置场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter	
+ * @method string getOwner() 获取创建人员
+ * @method void setOwner(string $Owner) 设置创建人员
  */
 class DescribeScenarioWithJobsRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class DescribeScenarioWithJobsRequest extends AbstractModel
     public $IgnoreDataset;
 
     /**
+     * @var string 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter	
+     */
+    public $ScenarioType;
+
+    /**
+     * @var string 创建人员
+     */
+    public $Owner;
+
+    /**
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认为20，最大为100
      * @param array $ProjectIds 项目ID数组
@@ -112,6 +126,8 @@ class DescribeScenarioWithJobsRequest extends AbstractModel
      * @param ScenarioRelatedJobsParams $ScenarioRelatedJobsParams job相关参数
      * @param boolean $IgnoreScript 是否需要返回场景的脚本内容
      * @param boolean $IgnoreDataset 是否需要返回测试数据文件信息
+     * @param string $ScenarioType 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter	
+     * @param string $Owner 创建人员
      */
     function __construct()
     {
@@ -169,6 +185,14 @@ class DescribeScenarioWithJobsRequest extends AbstractModel
 
         if (array_key_exists("IgnoreDataset",$param) and $param["IgnoreDataset"] !== null) {
             $this->IgnoreDataset = $param["IgnoreDataset"];
+        }
+
+        if (array_key_exists("ScenarioType",$param) and $param["ScenarioType"] !== null) {
+            $this->ScenarioType = $param["ScenarioType"];
+        }
+
+        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+            $this->Owner = $param["Owner"];
         }
     }
 }

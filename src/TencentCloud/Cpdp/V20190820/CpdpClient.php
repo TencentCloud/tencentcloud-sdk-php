@@ -24,6 +24,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
 
 /**
  * @method Models\AddContractResponse AddContract(Models\AddContractRequest $req) 云支付-添加合同接口
+ * @method Models\AddFlexFundingAccountResponse AddFlexFundingAccount(Models\AddFlexFundingAccountRequest $req) 灵云V2-绑定收款用户资金账号信息
  * @method Models\AddFlexIdInfoResponse AddFlexIdInfo(Models\AddFlexIdInfoRequest $req) 灵云V2-补充证件信息
  * @method Models\AddFlexPhoneNoResponse AddFlexPhoneNo(Models\AddFlexPhoneNoRequest $req) 灵云V2-补充手机号信息
  * @method Models\AddMerchantResponse AddMerchant(Models\AddMerchantRequest $req) 云支付-添加商户接口
@@ -121,6 +122,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\MigrateOrderRefundQueryResponse MigrateOrderRefundQuery(Models\MigrateOrderRefundQueryRequest $req) 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时。
  * @method Models\ModifyAgentTaxPaymentInfoResponse ModifyAgentTaxPaymentInfo(Models\ModifyAgentTaxPaymentInfoRequest $req) 直播平台-修改代理商完税信息
  * @method Models\ModifyBindedAccountResponse ModifyBindedAccount(Models\ModifyBindedAccountRequest $req) 灵云-重新绑定账号
+ * @method Models\ModifyFlexFundingAccountResponse ModifyFlexFundingAccount(Models\ModifyFlexFundingAccountRequest $req) 灵云V2-修改收款用户资金账号信息
  * @method Models\ModifyFlexPayeeAccountRightStatusResponse ModifyFlexPayeeAccountRightStatus(Models\ModifyFlexPayeeAccountRightStatusRequest $req) 灵云V2-收款用户账户权益状态修改
  * @method Models\ModifyMerchantResponse ModifyMerchant(Models\ModifyMerchantRequest $req) 云鉴-商户信息修改的接口
  * @method Models\ModifyMntMbrBindRelateAcctBankCodeResponse ModifyMntMbrBindRelateAcctBankCode(Models\ModifyMntMbrBindRelateAcctBankCodeRequest $req) 维护会员绑定提现账户联行号。此接口可以支持市场修改会员的提现账户的开户行信息，具体包括开户行行名、开户行的银行联行号（大小额联行号）和超级网银行号。
@@ -164,6 +166,7 @@ use TencentCloud\Cpdp\V20190820\Models as Models;
  * @method Models\QueryFlexPaymentOrderListResponse QueryFlexPaymentOrderList(Models\QueryFlexPaymentOrderListRequest $req) 灵云V2-查询付款订单列表
  * @method Models\QueryFlexPaymentOrderStatusResponse QueryFlexPaymentOrderStatus(Models\QueryFlexPaymentOrderStatusRequest $req) 灵云V2-查询付款订单状态
  * @method Models\QueryFlexPlatformAccountBalanceResponse QueryFlexPlatformAccountBalance(Models\QueryFlexPlatformAccountBalanceRequest $req) 灵云V2-平台账户余额查询
+ * @method Models\QueryFlexServiceProviderAccountBalanceResponse QueryFlexServiceProviderAccountBalance(Models\QueryFlexServiceProviderAccountBalanceRequest $req) 灵云V2-查询服务商账户余额
  * @method Models\QueryFlexSettlementOrderListResponse QueryFlexSettlementOrderList(Models\QueryFlexSettlementOrderListRequest $req) 灵云V2-查询结算订单列表
  * @method Models\QueryFundsTransactionDetailsResponse QueryFundsTransactionDetails(Models\QueryFundsTransactionDetailsRequest $req) 聚鑫-查询会员资金交易信息列表
  * @method Models\QueryInvoiceResponse QueryInvoice(Models\QueryInvoiceRequest $req) 智慧零售-发票查询

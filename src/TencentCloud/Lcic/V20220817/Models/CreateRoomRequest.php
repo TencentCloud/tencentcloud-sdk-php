@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 1 标清
 2 高清
 3 全高清
- * @method integer getMaxMicNumber() 获取最大连麦人数（不包括老师）。取值范围[0, 17)
- * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最大连麦人数（不包括老师）。取值范围[0, 17)
+ * @method integer getMaxMicNumber() 获取最大连麦人数（不包括老师）。取值范围[0, 16]
+ * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最大连麦人数（不包括老师）。取值范围[0, 16]
  * @method string getSubType() 获取房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
@@ -46,8 +46,8 @@ coteaching 双师
 videodoc 文档+视频
 video 纯视频
 coteaching 双师
- * @method string getTeacherId() 获取老师ID。
- * @method void setTeacherId(string $TeacherId) 设置老师ID。
+ * @method string getTeacherId() 获取老师ID。通过[注册用户]接口获取的UserId。
+ * @method void setTeacherId(string $TeacherId) 设置老师ID。通过[注册用户]接口获取的UserId。
  * @method integer getAutoMic() 获取进入房间时是否自动连麦。可以有以下取值：
 0 不自动连麦（默认值）
 1 自动连麦
@@ -66,8 +66,8 @@ coteaching 双师
  * @method void setDisableRecord(integer $DisableRecord) 设置禁止录制。可以有以下取值：
 0 不禁止录制（默认值）
 1 禁止录制
- * @method array getAssistants() 获取助教Id列表。
- * @method void setAssistants(array $Assistants) 设置助教Id列表。
+ * @method array getAssistants() 获取助教Id列表。通过[注册用户]接口获取的UserId。
+ * @method void setAssistants(array $Assistants) 设置助教Id列表。通过[注册用户]接口获取的UserId。
  * @method integer getRecordLayout() 获取录制布局。
  * @method void setRecordLayout(integer $RecordLayout) 设置录制布局。
  */
@@ -102,7 +102,7 @@ class CreateRoomRequest extends AbstractModel
     public $Resolution;
 
     /**
-     * @var integer 最大连麦人数（不包括老师）。取值范围[0, 17)
+     * @var integer 最大连麦人数（不包括老师）。取值范围[0, 16]
      */
     public $MaxMicNumber;
 
@@ -115,7 +115,7 @@ coteaching 双师
     public $SubType;
 
     /**
-     * @var string 老师ID。
+     * @var string 老师ID。通过[注册用户]接口获取的UserId。
      */
     public $TeacherId;
 
@@ -141,7 +141,7 @@ coteaching 双师
     public $DisableRecord;
 
     /**
-     * @var array 助教Id列表。
+     * @var array 助教Id列表。通过[注册用户]接口获取的UserId。
      */
     public $Assistants;
 
@@ -159,12 +159,12 @@ coteaching 双师
 1 标清
 2 高清
 3 全高清
-     * @param integer $MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 17)
+     * @param integer $MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
      * @param string $SubType 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
 coteaching 双师
-     * @param string $TeacherId 老师ID。
+     * @param string $TeacherId 老师ID。通过[注册用户]接口获取的UserId。
      * @param integer $AutoMic 进入房间时是否自动连麦。可以有以下取值：
 0 不自动连麦（默认值）
 1 自动连麦
@@ -174,7 +174,7 @@ coteaching 双师
      * @param integer $DisableRecord 禁止录制。可以有以下取值：
 0 不禁止录制（默认值）
 1 禁止录制
-     * @param array $Assistants 助教Id列表。
+     * @param array $Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
      * @param integer $RecordLayout 录制布局。
      */
     function __construct()

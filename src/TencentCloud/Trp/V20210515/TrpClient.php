@@ -62,6 +62,8 @@ use TencentCloud\Trp\V20210515\Models as Models;
  * @method Models\ModifyMerchantResponse ModifyMerchant(Models\ModifyMerchantRequest $req) 编辑商户
  * @method Models\ModifyProductResponse ModifyProduct(Models\ModifyProductRequest $req) 编辑商品
  * @method Models\ModifyTraceCodeResponse ModifyTraceCode(Models\ModifyTraceCodeRequest $req) 冻结或者激活二维码，所属的批次的冻结状态优先级大于单个二维码的状态，即如果批次是冻结的，那么该批次下二维码的状态都是冻结的
+ * @method Models\ModifyTraceCodeUnlinkResponse ModifyTraceCodeUnlink(Models\ModifyTraceCodeUnlinkRequest $req) 解绑溯源码和批次的关系，让溯源码重置为未关联的状态，以便关联其他批次
+注意：溯源码必须属于指定的批次才会解绑
  * @method Models\ModifyTraceDataResponse ModifyTraceData(Models\ModifyTraceDataRequest $req) 修改溯源信息
  * @method Models\ModifyTraceDataRanksResponse ModifyTraceDataRanks(Models\ModifyTraceDataRanksRequest $req) 修改溯源信息的排序
  */

@@ -168,6 +168,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreAuditInfo(PreAuditInfo $PreAuditInfo) 设置证书预审核信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAutoRenewFlag() 获取是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificates extends AbstractModel
 {
@@ -394,6 +398,12 @@ class Certificates extends AbstractModel
     public $PreAuditInfo;
 
     /**
+     * @var integer 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoRenewFlag;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID。
@@ -467,6 +477,8 @@ class Certificates extends AbstractModel
      * @param array $CACommonNames 上传CA证书的通用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PreAuditInfo $PreAuditInfo 证书预审核信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AutoRenewFlag 是否自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -636,6 +648,10 @@ class Certificates extends AbstractModel
         if (array_key_exists("PreAuditInfo",$param) and $param["PreAuditInfo"] !== null) {
             $this->PreAuditInfo = new PreAuditInfo();
             $this->PreAuditInfo->deserialize($param["PreAuditInfo"]);
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }

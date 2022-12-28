@@ -32,9 +32,9 @@ long及double类型字段需为空；
 注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义
  * @method boolean getSqlFlag() 获取字段是否开启分析功能
  * @method void setSqlFlag(boolean $SqlFlag) 设置字段是否开启分析功能
- * @method boolean getContainZH() 获取是否包含中文
+ * @method boolean getContainZH() 获取是否包含中文，long及double类型字段需为false
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContainZH(boolean $ContainZH) 设置是否包含中文
+ * @method void setContainZH(boolean $ContainZH) 设置是否包含中文，long及double类型字段需为false
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ValueInfo extends AbstractModel
@@ -58,7 +58,7 @@ long及double类型字段需为空；
     public $SqlFlag;
 
     /**
-     * @var boolean 是否包含中文
+     * @var boolean 是否包含中文，long及double类型字段需为false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainZH;
@@ -70,7 +70,7 @@ long及double类型字段需为空；
 long及double类型字段需为空；
 注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义
      * @param boolean $SqlFlag 字段是否开启分析功能
-     * @param boolean $ContainZH 是否包含中文
+     * @param boolean $ContainZH 是否包含中文，long及double类型字段需为false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

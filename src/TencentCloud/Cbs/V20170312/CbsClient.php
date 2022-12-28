@@ -49,6 +49,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * 每个地域可创建的定期快照策略数量限制请参考文档[定期快照](/document/product/362/8191)。
 * 每个地域可创建的快照有数量和容量的限制，具体请见腾讯云控制台快照页面提示，如果快照超配额，定期快照创建会失败。
+ * @method Models\CreateDiskBackupResponse CreateDiskBackup(Models\CreateDiskBackupRequest $req) 为云硬盘创建一个备份点。
  * @method Models\CreateDisksResponse CreateDisks(Models\CreateDisksRequest $req) 本接口（CreateDisks）用于创建云硬盘。
 
 * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。

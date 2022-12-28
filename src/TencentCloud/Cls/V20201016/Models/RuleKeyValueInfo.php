@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getCaseSensitive() 获取是否大小写敏感
  * @method void setCaseSensitive(boolean $CaseSensitive) 设置是否大小写敏感
- * @method array getKeyValues() 获取需要建立索引的键值对信息；最大只能配置100个键值对
- * @method void setKeyValues(array $KeyValues) 设置需要建立索引的键值对信息；最大只能配置100个键值对
+ * @method array getKeyValues() 获取需要建立索引的键值对信息
+ * @method void setKeyValues(array $KeyValues) 设置需要建立索引的键值对信息
  */
 class RuleKeyValueInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RuleKeyValueInfo extends AbstractModel
     public $CaseSensitive;
 
     /**
-     * @var array 需要建立索引的键值对信息；最大只能配置100个键值对
+     * @var array 需要建立索引的键值对信息
      */
     public $KeyValues;
 
     /**
      * @param boolean $CaseSensitive 是否大小写敏感
-     * @param array $KeyValues 需要建立索引的键值对信息；最大只能配置100个键值对
+     * @param array $KeyValues 需要建立索引的键值对信息
      */
     function __construct()
     {

@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZoneId() 获取站点 ID。
  * @method void setZoneId(string $ZoneId) 设置站点 ID。
  * @method array getFilters() 获取过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>rule-id<br>   按照【<strong>规则ID</strong>】进行过滤。<br>   类型：string<br>   必选：否
+<li>rule-id<br>   按照【<strong>规则ID</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
  * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>rule-id<br>   按照【<strong>规则ID</strong>】进行过滤。<br>   类型：string<br>   必选：否
+<li>rule-id<br>   按照【<strong>规则ID</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
  */
 class DescribeRulesRequest extends AbstractModel
 {
@@ -36,14 +36,14 @@ class DescribeRulesRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>rule-id<br>   按照【<strong>规则ID</strong>】进行过滤。<br>   类型：string<br>   必选：否
+<li>rule-id<br>   按照【<strong>规则ID</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
      */
     public $Filters;
 
     /**
      * @param string $ZoneId 站点 ID。
      * @param array $Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>rule-id<br>   按照【<strong>规则ID</strong>】进行过滤。<br>   类型：string<br>   必选：否
+<li>rule-id<br>   按照【<strong>规则ID</strong>】进行过滤。<br>   类型：string<br>   必选：否</li>
      */
     function __construct()
     {

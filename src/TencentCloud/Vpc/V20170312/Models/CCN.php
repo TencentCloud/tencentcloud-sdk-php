@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableFlag(boolean $RouteTableFlag) 设置是否开启云联网多路由表特性。False：未开启，True：开启。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getRouteBroadcastPolicyFlag() 获取是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRouteBroadcastPolicyFlag(boolean $RouteBroadcastPolicyFlag) 设置是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CCN extends AbstractModel
 {
@@ -127,6 +131,12 @@ class CCN extends AbstractModel
     public $RouteTableFlag;
 
     /**
+     * @var boolean 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RouteBroadcastPolicyFlag;
+
+    /**
      * @param string $CcnId 云联网唯一ID
      * @param string $CcnName 云联网名称
      * @param string $CcnDescription 云联网描述信息
@@ -143,6 +153,8 @@ class CCN extends AbstractModel
      * @param integer $RouteTableCount 实例关联的路由表个数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RouteTableFlag 是否开启云联网多路由表特性。False：未开启，True：开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $RouteBroadcastPolicyFlag 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -213,6 +225,10 @@ class CCN extends AbstractModel
 
         if (array_key_exists("RouteTableFlag",$param) and $param["RouteTableFlag"] !== null) {
             $this->RouteTableFlag = $param["RouteTableFlag"];
+        }
+
+        if (array_key_exists("RouteBroadcastPolicyFlag",$param) and $param["RouteBroadcastPolicyFlag"] !== null) {
+            $this->RouteBroadcastPolicyFlag = $param["RouteBroadcastPolicyFlag"];
         }
     }
 }

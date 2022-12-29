@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWithPreviewUrl(boolean $WithPreviewUrl) 设置是否获取模板预览链接
  * @method boolean getWithPdfUrl() 获取是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
  * @method void setWithPdfUrl(boolean $WithPdfUrl) 设置是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+ * @method string getChannelTemplateId() 获取渠道模板ID
+ * @method void setChannelTemplateId(string $ChannelTemplateId) 设置渠道模板ID
  */
 class DescribeTemplatesRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeTemplatesRequest extends AbstractModel
     public $WithPdfUrl;
 
     /**
+     * @var string 渠道模板ID
+     */
+    public $ChannelTemplateId;
+
+    /**
      * @param Agent $Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      * @param string $TemplateId 模板唯一标识，查询单个模板时使用
      * @param integer $ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
@@ -104,6 +111,7 @@ class DescribeTemplatesRequest extends AbstractModel
      * @param UserInfo $Operator 操作者的信息
      * @param boolean $WithPreviewUrl 是否获取模板预览链接
      * @param boolean $WithPdfUrl 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+     * @param string $ChannelTemplateId 渠道模板ID
      */
     function __construct()
     {
@@ -158,6 +166,10 @@ class DescribeTemplatesRequest extends AbstractModel
 
         if (array_key_exists("WithPdfUrl",$param) and $param["WithPdfUrl"] !== null) {
             $this->WithPdfUrl = $param["WithPdfUrl"];
+        }
+
+        if (array_key_exists("ChannelTemplateId",$param) and $param["ChannelTemplateId"] !== null) {
+            $this->ChannelTemplateId = $param["ChannelTemplateId"];
         }
     }
 }

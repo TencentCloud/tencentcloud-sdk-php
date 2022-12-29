@@ -27,17 +27,14 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\CheckSnapshotRollbackResponse CheckSnapshotRollback(Models\CheckSnapshotRollbackRequest $req) 快照回滚前检查
  * @method Models\CreateDealResponse CreateDeal(Models\CreateDealRequest $req) DNSPod商品下单
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) 添加域名
-
  * @method Models\CreateDomainAliasResponse CreateDomainAlias(Models\CreateDomainAliasRequest $req) 创建域名别名
  * @method Models\CreateDomainBatchResponse CreateDomainBatch(Models\CreateDomainBatchRequest $req) 批量添加域名
  * @method Models\CreateDomainGroupResponse CreateDomainGroup(Models\CreateDomainGroupRequest $req) 创建域名分组
  * @method Models\CreateRecordResponse CreateRecord(Models\CreateRecordRequest $req) 添加记录
-
  * @method Models\CreateRecordBatchResponse CreateRecordBatch(Models\CreateRecordBatchRequest $req) 批量添加记录
  * @method Models\CreateRecordGroupResponse CreateRecordGroup(Models\CreateRecordGroupRequest $req) 添加记录分组
  * @method Models\CreateSnapshotResponse CreateSnapshot(Models\CreateSnapshotRequest $req) 创建快照
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 删除域名
-
  * @method Models\DeleteDomainAliasResponse DeleteDomainAlias(Models\DeleteDomainAliasRequest $req) 删除域名别名
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除记录
  * @method Models\DeleteRecordGroupResponse DeleteRecordGroup(Models\DeleteRecordGroupRequest $req) 删除记录分组
@@ -71,8 +68,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\ModifyDomainStatusResponse ModifyDomainStatus(Models\ModifyDomainStatusRequest $req) 修改域名状态
  * @method Models\ModifyDomainUnlockResponse ModifyDomainUnlock(Models\ModifyDomainUnlockRequest $req) 域名锁定解锁
  * @method Models\ModifyDynamicDNSResponse ModifyDynamicDNS(Models\ModifyDynamicDNSRequest $req) 更新动态 DNS 记录
-
- * @method Models\ModifyPackageAutoRenewResponse ModifyPackageAutoRenew(Models\ModifyPackageAutoRenewRequest $req)  DNS 解析套餐自动续费设置
+ * @method Models\ModifyPackageAutoRenewResponse ModifyPackageAutoRenew(Models\ModifyPackageAutoRenewRequest $req) DNS 解析套餐自动续费设置
  * @method Models\ModifyRecordResponse ModifyRecord(Models\ModifyRecordRequest $req) 修改记录
  * @method Models\ModifyRecordBatchResponse ModifyRecordBatch(Models\ModifyRecordBatchRequest $req) 批量修改记录
  * @method Models\ModifyRecordFieldsResponse ModifyRecordFields(Models\ModifyRecordFieldsRequest $req) 修改记录可选字段

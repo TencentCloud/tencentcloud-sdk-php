@@ -74,6 +74,10 @@ Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecognitionResults(array $RecognitionResults) 设置识别类标签结果信息列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDuration() 获取识别音频时长，单位为毫秒；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDuration(string $Duration) 设置识别音频时长，单位为毫秒；
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -155,6 +159,12 @@ Block 建议屏蔽；
     public $RecognitionResults;
 
     /**
+     * @var string 识别音频时长，单位为毫秒；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Duration;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -186,6 +196,8 @@ Block 建议屏蔽；
      * @param array $SpeakerResults 音频中说话人识别返回结果；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RecognitionResults 识别类标签结果信息列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Duration 识别音频时长，单位为毫秒；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -273,6 +285,10 @@ Block 建议屏蔽；
                 $obj->deserialize($value);
                 array_push($this->RecognitionResults, $obj);
             }
+        }
+
+        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
+            $this->Duration = $param["Duration"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置该字段用于返回呻吟检测的置信度，取值范围：0（置信度最低）-100（置信度最高），越高代表音频越有可能属于说话人声纹。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getStartTime() 获取该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为毫秒。
+ * @method float getStartTime() 获取该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStartTime(float $StartTime) 设置该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为毫秒。
+ * @method void setStartTime(float $StartTime) 设置该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getEndTime() 获取该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为毫秒。
+ * @method float getEndTime() 获取该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEndTime(float $EndTime) 设置该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为毫秒。
+ * @method void setEndTime(float $EndTime) 设置该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioResultDetailSpeakerResult extends AbstractModel
@@ -52,13 +52,13 @@ class AudioResultDetailSpeakerResult extends AbstractModel
     public $Score;
 
     /**
-     * @var float 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为毫秒。
+     * @var float 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
-     * @var float 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为毫秒。
+     * @var float 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
@@ -68,9 +68,9 @@ class AudioResultDetailSpeakerResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 该字段用于返回呻吟检测的置信度，取值范围：0（置信度最低）-100（置信度最高），越高代表音频越有可能属于说话人声纹。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $StartTime 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为毫秒。
+     * @param float $StartTime 该字段用于返回对应说话人的片段在音频文件内的开始时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $EndTime 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为毫秒。
+     * @param float $EndTime 该字段用于返回对应说话人的片段在音频文件内的结束时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWanIP() 获取外网IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWanIP(string $WanIP) 设置外网IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWanStatus() 获取外网状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWanStatus(string $WanStatus) 设置外网状态
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetAddr extends AbstractModel
 {
@@ -104,6 +112,18 @@ class NetAddr extends AbstractModel
     public $Description;
 
     /**
+     * @var string 外网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WanIP;
+
+    /**
+     * @var string 外网状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WanStatus;
+
+    /**
      * @param string $Vip 内网ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Vport 内网端口号
@@ -119,6 +139,10 @@ class NetAddr extends AbstractModel
      * @param string $UniqVpcId 私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WanIP 外网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WanStatus 外网状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +188,14 @@ class NetAddr extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("WanIP",$param) and $param["WanIP"] !== null) {
+            $this->WanIP = $param["WanIP"];
+        }
+
+        if (array_key_exists("WanStatus",$param) and $param["WanStatus"] !== null) {
+            $this->WanStatus = $param["WanStatus"];
         }
     }
 }

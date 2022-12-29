@@ -76,6 +76,94 @@ resume
 resuming
 pause
 pausing
+ * @method string getLogBin() 获取binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogBin(string $LogBin) 设置binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPitrType() 获取pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPitrType(string $PitrType) 设置pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPhysicalZone() 获取物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPhysicalZone(string $PhysicalZone) 设置物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStorageId() 获取存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorageId(string $StorageId) 设置存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStorage() 获取存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorage(integer $Storage) 设置存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxStorageSize() 获取最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxStorageSize(integer $MaxStorageSize) 设置最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMinStorageSize() 获取最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMinStorageSize(integer $MinStorageSize) 设置最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStoragePayMode() 获取存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStoragePayMode(integer $StoragePayMode) 设置存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbMode() 获取数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbMode(string $DbMode) 设置数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStorageLimit() 获取存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStorageLimit(integer $StorageLimit) 设置存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method Ability getAbility() 获取集群支持的功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAbility(Ability $Ability) 设置集群支持的功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCynosVersion() 获取cynos版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCynosVersion(string $CynosVersion) 设置cynos版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBusinessType() 获取商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBusinessType(string $BusinessType) 设置商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHasSlaveZone() 获取是否有从可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasSlaveZone(string $HasSlaveZone) 设置是否有从可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsFreeze() 获取是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsFreeze(string $IsFreeze) 设置是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTasks() 获取任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTasks(array $Tasks) 设置任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMasterZone() 获取主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMasterZone(string $MasterZone) 设置主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSlaveZones() 获取从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSlaveZones(array $SlaveZones) 设置从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProxyStatus() 获取Proxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProxyStatus(string $ProxyStatus) 设置Proxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsSkipTrade() 获取是否跳过交易
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSkipTrade(string $IsSkipTrade) 设置是否跳过交易
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsOpenPasswordComplexity() 获取是否打开密码复杂度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsOpenPasswordComplexity(string $IsOpenPasswordComplexity) 设置是否打开密码复杂度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNetworkStatus() 获取网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNetworkStatus(string $NetworkStatus) 设置网络类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -204,6 +292,138 @@ pausing
     public $ServerlessStatus;
 
     /**
+     * @var string binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogBin;
+
+    /**
+     * @var string pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PitrType;
+
+    /**
+     * @var string 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PhysicalZone;
+
+    /**
+     * @var string 存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StorageId;
+
+    /**
+     * @var integer 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Storage;
+
+    /**
+     * @var integer 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxStorageSize;
+
+    /**
+     * @var integer 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MinStorageSize;
+
+    /**
+     * @var integer 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StoragePayMode;
+
+    /**
+     * @var string 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbMode;
+
+    /**
+     * @var integer 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StorageLimit;
+
+    /**
+     * @var Ability 集群支持的功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ability;
+
+    /**
+     * @var string cynos版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CynosVersion;
+
+    /**
+     * @var string 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BusinessType;
+
+    /**
+     * @var string 是否有从可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasSlaveZone;
+
+    /**
+     * @var string 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsFreeze;
+
+    /**
+     * @var array 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Tasks;
+
+    /**
+     * @var string 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MasterZone;
+
+    /**
+     * @var array 从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SlaveZones;
+
+    /**
+     * @var string Proxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProxyStatus;
+
+    /**
+     * @var string 是否跳过交易
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSkipTrade;
+
+    /**
+     * @var string 是否打开密码复杂度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsOpenPasswordComplexity;
+
+    /**
+     * @var string 网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NetworkStatus;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域
@@ -232,6 +452,50 @@ resume
 resuming
 pause
 pausing
+     * @param string $LogBin binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PitrType pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PhysicalZone 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StorageId 存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Storage 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxStorageSize 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MinStorageSize 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StoragePayMode 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbMode 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StorageLimit 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ability $Ability 集群支持的功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CynosVersion cynos版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BusinessType 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HasSlaveZone 是否有从可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsFreeze 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tasks 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MasterZone 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SlaveZones 从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProxyStatus Proxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsSkipTrade 是否跳过交易
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsOpenPasswordComplexity 是否打开密码复杂度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NetworkStatus 网络类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -355,6 +619,100 @@ pausing
 
         if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
             $this->ServerlessStatus = $param["ServerlessStatus"];
+        }
+
+        if (array_key_exists("LogBin",$param) and $param["LogBin"] !== null) {
+            $this->LogBin = $param["LogBin"];
+        }
+
+        if (array_key_exists("PitrType",$param) and $param["PitrType"] !== null) {
+            $this->PitrType = $param["PitrType"];
+        }
+
+        if (array_key_exists("PhysicalZone",$param) and $param["PhysicalZone"] !== null) {
+            $this->PhysicalZone = $param["PhysicalZone"];
+        }
+
+        if (array_key_exists("StorageId",$param) and $param["StorageId"] !== null) {
+            $this->StorageId = $param["StorageId"];
+        }
+
+        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+            $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("MaxStorageSize",$param) and $param["MaxStorageSize"] !== null) {
+            $this->MaxStorageSize = $param["MaxStorageSize"];
+        }
+
+        if (array_key_exists("MinStorageSize",$param) and $param["MinStorageSize"] !== null) {
+            $this->MinStorageSize = $param["MinStorageSize"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
+        }
+
+        if (array_key_exists("StorageLimit",$param) and $param["StorageLimit"] !== null) {
+            $this->StorageLimit = $param["StorageLimit"];
+        }
+
+        if (array_key_exists("Ability",$param) and $param["Ability"] !== null) {
+            $this->Ability = new Ability();
+            $this->Ability->deserialize($param["Ability"]);
+        }
+
+        if (array_key_exists("CynosVersion",$param) and $param["CynosVersion"] !== null) {
+            $this->CynosVersion = $param["CynosVersion"];
+        }
+
+        if (array_key_exists("BusinessType",$param) and $param["BusinessType"] !== null) {
+            $this->BusinessType = $param["BusinessType"];
+        }
+
+        if (array_key_exists("HasSlaveZone",$param) and $param["HasSlaveZone"] !== null) {
+            $this->HasSlaveZone = $param["HasSlaveZone"];
+        }
+
+        if (array_key_exists("IsFreeze",$param) and $param["IsFreeze"] !== null) {
+            $this->IsFreeze = $param["IsFreeze"];
+        }
+
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = [];
+            foreach ($param["Tasks"] as $key => $value){
+                $obj = new ObjectTask();
+                $obj->deserialize($value);
+                array_push($this->Tasks, $obj);
+            }
+        }
+
+        if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
+            $this->MasterZone = $param["MasterZone"];
+        }
+
+        if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
+            $this->SlaveZones = $param["SlaveZones"];
+        }
+
+        if (array_key_exists("ProxyStatus",$param) and $param["ProxyStatus"] !== null) {
+            $this->ProxyStatus = $param["ProxyStatus"];
+        }
+
+        if (array_key_exists("IsSkipTrade",$param) and $param["IsSkipTrade"] !== null) {
+            $this->IsSkipTrade = $param["IsSkipTrade"];
+        }
+
+        if (array_key_exists("IsOpenPasswordComplexity",$param) and $param["IsOpenPasswordComplexity"] !== null) {
+            $this->IsOpenPasswordComplexity = $param["IsOpenPasswordComplexity"];
+        }
+
+        if (array_key_exists("NetworkStatus",$param) and $param["NetworkStatus"] !== null) {
+            $this->NetworkStatus = $param["NetworkStatus"];
         }
     }
 }

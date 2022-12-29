@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceMemory(integer $InstanceMemory) 设置内存
  * @method integer getInstanceStorage() 获取硬盘
  * @method void setInstanceStorage(integer $InstanceStorage) 设置硬盘
+ * @method string getInstanceRole() 获取实例角色
+ * @method void setInstanceRole(string $InstanceRole) 设置实例角色
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ClusterInstanceDetail extends AbstractModel
     public $InstanceStorage;
 
     /**
+     * @var string 实例角色
+     */
+    public $InstanceRole;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $InstanceType 引擎类型
@@ -88,6 +95,7 @@ class ClusterInstanceDetail extends AbstractModel
      * @param integer $InstanceCpu cpu核数
      * @param integer $InstanceMemory 内存
      * @param integer $InstanceStorage 硬盘
+     * @param string $InstanceRole 实例角色
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("InstanceStorage",$param) and $param["InstanceStorage"] !== null) {
             $this->InstanceStorage = $param["InstanceStorage"];
+        }
+
+        if (array_key_exists("InstanceRole",$param) and $param["InstanceRole"] !== null) {
+            $this->InstanceRole = $param["InstanceRole"];
         }
     }
 }

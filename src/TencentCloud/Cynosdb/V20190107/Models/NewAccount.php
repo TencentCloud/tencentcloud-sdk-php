@@ -18,26 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 新创建的账号
+ * x08新创建的账号
  *
- * @method string getAccountName() 获取账户名
- * @method void setAccountName(string $AccountName) 设置账户名
- * @method string getAccountPassword() 获取密码
- * @method void setAccountPassword(string $AccountPassword) 设置密码
+ * @method string getAccountName() 获取账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
+ * @method void setAccountName(string $AccountName) 设置账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
+ * @method string getAccountPassword() 获取密码，密码长度范围为8到64个字符
+ * @method void setAccountPassword(string $AccountPassword) 设置密码，密码长度范围为8到64个字符
  * @method string getHost() 获取主机
  * @method void setHost(string $Host) 设置主机
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
+ * @method integer getMaxUserConnections() 获取用户最大连接数，不能大于10240
+ * @method void setMaxUserConnections(integer $MaxUserConnections) 设置用户最大连接数，不能大于10240
  */
 class NewAccount extends AbstractModel
 {
     /**
-     * @var string 账户名
+     * @var string 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
      */
     public $AccountName;
 
     /**
-     * @var string 密码
+     * @var string 密码，密码长度范围为8到64个字符
      */
     public $AccountPassword;
 
@@ -52,10 +54,16 @@ class NewAccount extends AbstractModel
     public $Description;
 
     /**
-     * @param string $AccountName 账户名
-     * @param string $AccountPassword 密码
+     * @var integer 用户最大连接数，不能大于10240
+     */
+    public $MaxUserConnections;
+
+    /**
+     * @param string $AccountName 账户名，包含字母数字_,以字母开头，字母或数字结尾，长度1-16
+     * @param string $AccountPassword 密码，密码长度范围为8到64个字符
      * @param string $Host 主机
      * @param string $Description 描述
+     * @param integer $MaxUserConnections 用户最大连接数，不能大于10240
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class NewAccount extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

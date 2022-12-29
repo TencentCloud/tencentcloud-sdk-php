@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
  * @method void setScore(integer $Score) 设置该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
- * @method float getStartTime() 获取该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
- * @method void setStartTime(float $StartTime) 设置该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
- * @method float getEndTime() 获取该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
- * @method void setEndTime(float $EndTime) 设置该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
+ * @method float getStartTime() 获取该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为秒。
+ * @method void setStartTime(float $StartTime) 设置该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为秒。
+ * @method float getEndTime() 获取该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为秒。
+ * @method void setEndTime(float $EndTime) 设置该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为秒。
  * @method string getSubLabelCode() 获取*内测中，敬请期待*
  * @method void setSubLabelCode(string $SubLabelCode) 设置*内测中，敬请期待*
  * @method string getSubLabel() 获取该字段用于返回当前标签（Lable）下的二级标签。
@@ -53,12 +53,12 @@ class AudioResultDetailMoanResult extends AbstractModel
     public $Score;
 
     /**
-     * @var float 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
+     * @var float 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为秒。
      */
     public $StartTime;
 
     /**
-     * @var float 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
+     * @var float 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为秒。
      */
     public $EndTime;
 
@@ -82,8 +82,8 @@ class AudioResultDetailMoanResult extends AbstractModel
      * @param string $Label 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
-     * @param float $StartTime 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
-     * @param float $EndTime 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
+     * @param float $StartTime 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为秒。
+     * @param float $EndTime 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为秒。
      * @param string $SubLabelCode *内测中，敬请期待*
      * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
 注意：此字段可能返回 null，表示取不到有效值。

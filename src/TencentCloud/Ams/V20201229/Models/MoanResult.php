@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
  * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
- * @method float getStartTime() 获取违规事件开始时间，单位为毫秒（ms）；
- * @method void setStartTime(float $StartTime) 设置违规事件开始时间，单位为毫秒（ms）；
- * @method float getEndTime() 获取违规事件结束时间，单位为毫秒（ms）；
- * @method void setEndTime(float $EndTime) 设置违规事件结束时间，单位为毫秒（ms）；
+ * @method float getStartTime() 获取违规事件开始时间，单位为秒（s）；
+ * @method void setStartTime(float $StartTime) 设置违规事件开始时间，单位为秒（s）；
+ * @method float getEndTime() 获取违规事件结束时间，单位为秒（s）；
+ * @method void setEndTime(float $EndTime) 设置违规事件结束时间，单位为秒（s）；
  * @method string getSubLabel() 获取该字段用于返回当前标签（Lable）下的二级标签。
 注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,12 +64,12 @@ class MoanResult extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var float 违规事件开始时间，单位为毫秒（ms）；
+     * @var float 违规事件开始时间，单位为秒（s）；
      */
     public $StartTime;
 
     /**
-     * @var float 违规事件结束时间，单位为毫秒（ms）；
+     * @var float 违规事件结束时间，单位为秒（s）；
      */
     public $EndTime;
 
@@ -87,8 +87,8 @@ class MoanResult extends AbstractModel
 （如：Moan 99，则该样本属于呻吟/娇喘的置信度非常高。）
      * @param string $Suggestion 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-     * @param float $StartTime 违规事件开始时间，单位为毫秒（ms）；
-     * @param float $EndTime 违规事件结束时间，单位为毫秒（ms）；
+     * @param float $StartTime 违规事件开始时间，单位为秒（s）；
+     * @param float $EndTime 违规事件结束时间，单位为秒（s）；
      * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
 注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。

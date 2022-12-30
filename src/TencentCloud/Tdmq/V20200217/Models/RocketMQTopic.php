@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取主题名称
  * @method void setName(string $Name) 设置主题名称
+ * @method string getType() 获取主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter
+ * @method void setType(string $Type) 设置主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter
+ * @method integer getGroupNum() 获取订阅组数量
+ * @method void setGroupNum(integer $GroupNum) 设置订阅组数量
  * @method string getRemark() 获取说明
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置说明
@@ -39,6 +43,16 @@ class RocketMQTopic extends AbstractModel
      * @var string 主题名称
      */
     public $Name;
+
+    /**
+     * @var string 主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter
+     */
+    public $Type;
+
+    /**
+     * @var integer 订阅组数量
+     */
+    public $GroupNum;
 
     /**
      * @var string 说明
@@ -63,6 +77,8 @@ class RocketMQTopic extends AbstractModel
 
     /**
      * @param string $Name 主题名称
+     * @param string $Type 主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter
+     * @param integer $GroupNum 订阅组数量
      * @param string $Remark 说明
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PartitionNum 读写分区数
@@ -84,6 +100,14 @@ class RocketMQTopic extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("GroupNum",$param) and $param["GroupNum"] !== null) {
+            $this->GroupNum = $param["GroupNum"];
         }
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {

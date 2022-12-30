@@ -42,6 +42,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExecutorGroupName(string $ExecutorGroupName) 设置集成资源组名称
  * @method integer getTaskCount() 获取关联任务数
  * @method void setTaskCount(integer $TaskCount) 设置关联任务数
+ * @method string getAgentGroupId() 获取采集器组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentGroupId(string $AgentGroupId) 设置采集器组ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCvmAgentStatusList() 获取agent状态统计
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCvmAgentStatusList(array $CvmAgentStatusList) 设置agent状态统计
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAgentTotal() 获取agent数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentTotal(integer $AgentTotal) 设置agent数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InLongAgentDetail extends AbstractModel
 {
@@ -97,6 +109,24 @@ class InLongAgentDetail extends AbstractModel
     public $TaskCount;
 
     /**
+     * @var string 采集器组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentGroupId;
+
+    /**
+     * @var array agent状态统计
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CvmAgentStatusList;
+
+    /**
+     * @var integer agent数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentTotal;
+
+    /**
      * @param string $AgentId Agent ID
      * @param string $AgentName Agent Name
      * @param string $Status Agent状态(running运行中，initializing 操作中，failed心跳异常)
@@ -108,6 +138,12 @@ class InLongAgentDetail extends AbstractModel
      * @param string $ExecutorGroupId 集成资源组Id
      * @param string $ExecutorGroupName 集成资源组名称
      * @param integer $TaskCount 关联任务数
+     * @param string $AgentGroupId 采集器组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CvmAgentStatusList agent状态统计
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AgentTotal agent数量
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -160,6 +196,23 @@ class InLongAgentDetail extends AbstractModel
 
         if (array_key_exists("TaskCount",$param) and $param["TaskCount"] !== null) {
             $this->TaskCount = $param["TaskCount"];
+        }
+
+        if (array_key_exists("AgentGroupId",$param) and $param["AgentGroupId"] !== null) {
+            $this->AgentGroupId = $param["AgentGroupId"];
+        }
+
+        if (array_key_exists("CvmAgentStatusList",$param) and $param["CvmAgentStatusList"] !== null) {
+            $this->CvmAgentStatusList = [];
+            foreach ($param["CvmAgentStatusList"] as $key => $value){
+                $obj = new CvmAgentStatus();
+                $obj->deserialize($value);
+                array_push($this->CvmAgentStatusList, $obj);
+            }
+        }
+
+        if (array_key_exists("AgentTotal",$param) and $param["AgentTotal"] !== null) {
+            $this->AgentTotal = $param["AgentTotal"];
         }
     }
 }

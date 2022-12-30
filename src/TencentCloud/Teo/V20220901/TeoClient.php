@@ -79,6 +79,7 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DescribeLogTopicTaskDetailResponse DescribeLogTopicTaskDetail(Models\DescribeLogTopicTaskDetailRequest $req) 本接口（DescribeLogTopicTaskDetail）用于获取日志推送任务详细信息。
  * @method Models\DescribeLogTopicTasksResponse DescribeLogTopicTasks(Models\DescribeLogTopicTasksRequest $req) 本接口（DescribeLogTopicTasks）用于获取日志推送任务列表。
  * @method Models\DescribeOriginGroupResponse DescribeOriginGroup(Models\DescribeOriginGroupRequest $req) 获取源站组列表
+ * @method Models\DescribeOriginProtectionResponse DescribeOriginProtection(Models\DescribeOriginProtectionRequest $req) 查询源站防护信息
  * @method Models\DescribeOverviewL7DataResponse DescribeOverviewL7Data(Models\DescribeOverviewL7DataRequest $req) 本接口（DescribeOverviewL7Data）用于查询七层监控类时序流量数据。
  * @method Models\DescribePrefetchTasksResponse DescribePrefetchTasks(Models\DescribePrefetchTasksRequest $req) 查询预热任务状态
  * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) 查询清除缓存历史记录
@@ -141,6 +142,7 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\ReclaimAliasDomainResponse ReclaimAliasDomain(Models\ReclaimAliasDomainRequest $req) 当客户取回站定的同时会取回此站点下关联的别称域名，此时入参为ZoneId；当客户接入站点发现已被别称域名接入时通过验证之后可取回域名，此时入参为ZoneName。
  * @method Models\ReclaimZoneResponse ReclaimZone(Models\ReclaimZoneRequest $req) 站点被其他用户接入后，验证了站点所有权之后，可以找回该站点。
  * @method Models\SwitchLogTopicTaskResponse SwitchLogTopicTask(Models\SwitchLogTopicTaskRequest $req) 本接口（SwitchLogTopicTask）用于开启/关闭推送任务。
+ * @method Models\UpdateOriginProtectionIPWhitelistResponse UpdateOriginProtectionIPWhitelist(Models\UpdateOriginProtectionIPWhitelistRequest $req) 更新源站防护IP白名单
  */
 
 class TeoClient extends AbstractClient

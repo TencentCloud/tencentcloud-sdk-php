@@ -23,9 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStreamName() 获取流名称。
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getCreateTime() 获取创建时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method string getExpireTime() 获取禁推过期时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setExpireTime(string $ExpireTime) 设置禁推过期时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method string getAppName() 获取推流路径。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppName(string $AppName) 设置推流路径。
@@ -44,11 +48,13 @@ class ForbidStreamInfo extends AbstractModel
 
     /**
      * @var string 创建时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $CreateTime;
 
     /**
      * @var string 禁推过期时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $ExpireTime;
 
@@ -67,7 +73,9 @@ class ForbidStreamInfo extends AbstractModel
     /**
      * @param string $StreamName 流名称。
      * @param string $CreateTime 创建时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param string $ExpireTime 禁推过期时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param string $AppName 推流路径。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DomainName 推流域名。

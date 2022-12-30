@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getSnapshotIdList() 获取备份文件ID
- * @method void setSnapshotIdList(array $SnapshotIdList) 设置备份文件ID
+ * @method array getSnapshotIdList() 获取备份文件ID，旧版本使用的字段，不推荐使用
+ * @method void setSnapshotIdList(array $SnapshotIdList) 设置备份文件ID，旧版本使用的字段，不推荐使用
+ * @method array getBackupIds() 获取备份文件ID，推荐使用
+ * @method void setBackupIds(array $BackupIds) 设置备份文件ID，推荐使用
  */
 class DeleteBackupRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class DeleteBackupRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array 备份文件ID
+     * @var array 备份文件ID，旧版本使用的字段，不推荐使用
      */
     public $SnapshotIdList;
 
     /**
+     * @var array 备份文件ID，推荐使用
+     */
+    public $BackupIds;
+
+    /**
      * @param string $ClusterId 集群ID
-     * @param array $SnapshotIdList 备份文件ID
+     * @param array $SnapshotIdList 备份文件ID，旧版本使用的字段，不推荐使用
+     * @param array $BackupIds 备份文件ID，推荐使用
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteBackupRequest extends AbstractModel
 
         if (array_key_exists("SnapshotIdList",$param) and $param["SnapshotIdList"] !== null) {
             $this->SnapshotIdList = $param["SnapshotIdList"];
+        }
+
+        if (array_key_exists("BackupIds",$param) and $param["BackupIds"] !== null) {
+            $this->BackupIds = $param["BackupIds"];
         }
     }
 }

@@ -37,14 +37,18 @@ use TencentCloud\Common\AbstractModel;
 1：已开启。
 0：已关闭。
  * @method string getCertExpireTime() 获取证书过期时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setCertExpireTime(string $CertExpireTime) 设置证书过期时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method integer getCertId() 获取证书Id。
  * @method void setCertId(integer $CertId) 设置证书Id。
  * @method string getCloudCertId() 获取腾讯云ssl的证书Id。
  * @method void setCloudCertId(string $CloudCertId) 设置腾讯云ssl的证书Id。
  * @method string getUpdateTime() 获取规则最后更新时间。
+注：此字段为北京时间（UTC+8时区）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置规则最后更新时间。
+注：此字段为北京时间（UTC+8时区）。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveDomainCertBindings extends AbstractModel
@@ -75,6 +79,7 @@ class LiveDomainCertBindings extends AbstractModel
 
     /**
      * @var string 证书过期时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $CertExpireTime;
 
@@ -90,6 +95,7 @@ class LiveDomainCertBindings extends AbstractModel
 
     /**
      * @var string 规则最后更新时间。
+注：此字段为北京时间（UTC+8时区）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
@@ -104,9 +110,11 @@ class LiveDomainCertBindings extends AbstractModel
 1：已开启。
 0：已关闭。
      * @param string $CertExpireTime 证书过期时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param integer $CertId 证书Id。
      * @param string $CloudCertId 腾讯云ssl的证书Id。
      * @param string $UpdateTime 规则最后更新时间。
+注：此字段为北京时间（UTC+8时区）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

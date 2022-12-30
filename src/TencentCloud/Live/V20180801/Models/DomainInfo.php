@@ -35,7 +35,9 @@ use TencentCloud\Common\AbstractModel;
 0: 停用。
 1: 启用。
  * @method string getCreateTime() 获取添加时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setCreateTime(string $CreateTime) 设置添加时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method integer getBCName() 获取是否有 CName 到固定规则域名:
 0: 否。
 1: 是。
@@ -63,7 +65,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRentTag() 获取失效参数，可忽略。
  * @method void setRentTag(integer $RentTag) 设置失效参数，可忽略。
  * @method string getRentExpireTime() 获取失效参数，可忽略。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setRentExpireTime(string $RentExpireTime) 设置失效参数，可忽略。
+注：此字段为北京时间（UTC+8时区）。
  * @method integer getIsMiniProgramLive() 获取0: 标准直播。
 1: 小程序直播。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,6 +98,7 @@ class DomainInfo extends AbstractModel
 
     /**
      * @var string 添加时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $CreateTime;
 
@@ -136,6 +141,7 @@ class DomainInfo extends AbstractModel
 
     /**
      * @var string 失效参数，可忽略。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $RentExpireTime;
 
@@ -155,6 +161,7 @@ class DomainInfo extends AbstractModel
 0: 停用。
 1: 启用。
      * @param string $CreateTime 添加时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param integer $BCName 是否有 CName 到固定规则域名:
 0: 否。
 1: 是。
@@ -169,6 +176,7 @@ class DomainInfo extends AbstractModel
      * @param string $CurrentCName 当前客户使用的 cname 信息。
      * @param integer $RentTag 失效参数，可忽略。
      * @param string $RentExpireTime 失效参数，可忽略。
+注：此字段为北京时间（UTC+8时区）。
      * @param integer $IsMiniProgramLive 0: 标准直播。
 1: 小程序直播。
 注意：此字段可能返回 null，表示取不到有效值。

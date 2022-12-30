@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getModuleType() 获取模块类型 当前提供 Malware 木马 , Vul 漏洞 , Baseline 基线
  * @method void setModuleType(string $ModuleType) 设置模块类型 当前提供 Malware 木马 , Vul 漏洞 , Baseline 基线
  * @method array getFilters() 获取过滤参数;
-<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要<li/>
+<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要</li>
  * @method void setFilters(array $Filters) 设置过滤参数;
-<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要<li/>
+<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要</li>
  */
 class DescribeScanStateRequest extends AbstractModel
 {
@@ -36,14 +36,14 @@ class DescribeScanStateRequest extends AbstractModel
 
     /**
      * @var array 过滤参数;
-<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要<li/>
+<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要</li>
      */
     public $Filters;
 
     /**
      * @param string $ModuleType 模块类型 当前提供 Malware 木马 , Vul 漏洞 , Baseline 基线
      * @param array $Filters 过滤参数;
-<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要<li/>
+<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要</li>
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgentId(string $AgentId) 设置采集器ID
  * @method string getAgentName() 获取Agent Name
  * @method void setAgentName(string $AgentName) 设置Agent Name
- * @method integer getAgentType() 获取集群类型，1：TKE Agent，2：BOSS SDK，默认：1
- * @method void setAgentType(integer $AgentType) 设置集群类型，1：TKE Agent，2：BOSS SDK，默认：1
+ * @method integer getAgentType() 获取集群类型，1：TKE Agent，2：BOSS SDK，默认：1，3：CVM，4：自建服务器 【传多个用逗号分割】
+ * @method void setAgentType(integer $AgentType) 设置集群类型，1：TKE Agent，2：BOSS SDK，默认：1，3：CVM，4：自建服务器 【传多个用逗号分割】
  * @method string getStatus() 获取Agent状态(running运行中，initializing 操作中，failed心跳异常)
  * @method void setStatus(string $Status) 设置Agent状态(running运行中，initializing 操作中，failed心跳异常)
  * @method string getVpcId() 获取Vpc Id
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置分页每页记录数，默认10
  * @method integer getLike() 获取名称搜索是否开启模糊匹配，1：开启，0：不开启（精确匹配）
  * @method void setLike(integer $Like) 设置名称搜索是否开启模糊匹配，1：开启，0：不开启（精确匹配）
+ * @method string getAgentTypes() 获取agent类型【多个用逗号分隔】
+ * @method void setAgentTypes(string $AgentTypes) 设置agent类型【多个用逗号分隔】
  */
 class DescribeInLongAgentListRequest extends AbstractModel
 {
@@ -57,7 +59,7 @@ class DescribeInLongAgentListRequest extends AbstractModel
     public $AgentName;
 
     /**
-     * @var integer 集群类型，1：TKE Agent，2：BOSS SDK，默认：1
+     * @var integer 集群类型，1：TKE Agent，2：BOSS SDK，默认：1，3：CVM，4：自建服务器 【传多个用逗号分割】
      */
     public $AgentType;
 
@@ -87,15 +89,21 @@ class DescribeInLongAgentListRequest extends AbstractModel
     public $Like;
 
     /**
+     * @var string agent类型【多个用逗号分隔】
+     */
+    public $AgentTypes;
+
+    /**
      * @param string $ProjectId WeData项目ID
      * @param string $AgentId 采集器ID
      * @param string $AgentName Agent Name
-     * @param integer $AgentType 集群类型，1：TKE Agent，2：BOSS SDK，默认：1
+     * @param integer $AgentType 集群类型，1：TKE Agent，2：BOSS SDK，默认：1，3：CVM，4：自建服务器 【传多个用逗号分割】
      * @param string $Status Agent状态(running运行中，initializing 操作中，failed心跳异常)
      * @param string $VpcId Vpc Id
      * @param integer $PageIndex 分页页码，从1开始，默认：1
      * @param integer $PageSize 分页每页记录数，默认10
      * @param integer $Like 名称搜索是否开启模糊匹配，1：开启，0：不开启（精确匹配）
+     * @param string $AgentTypes agent类型【多个用逗号分隔】
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeInLongAgentListRequest extends AbstractModel
 
         if (array_key_exists("Like",$param) and $param["Like"] !== null) {
             $this->Like = $param["Like"];
+        }
+
+        if (array_key_exists("AgentTypes",$param) and $param["AgentTypes"] !== null) {
+            $this->AgentTypes = $param["AgentTypes"];
         }
     }
 }

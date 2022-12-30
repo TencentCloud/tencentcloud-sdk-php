@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 规则信息
  *
  * @method string getCreateTime() 获取规则创建时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setCreateTime(string $CreateTime) 设置规则创建时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method string getUpdateTime() 获取规则更新时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setUpdateTime(string $UpdateTime) 设置规则更新时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method integer getTemplateId() 获取模板 ID。
  * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
  * @method string getDomainName() 获取推流域名。
@@ -35,11 +39,13 @@ class CallBackRuleInfo extends AbstractModel
 {
     /**
      * @var string 规则创建时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $CreateTime;
 
     /**
      * @var string 规则更新时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $UpdateTime;
 
@@ -60,7 +66,9 @@ class CallBackRuleInfo extends AbstractModel
 
     /**
      * @param string $CreateTime 规则创建时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param string $UpdateTime 规则更新时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param integer $TemplateId 模板 ID。
      * @param string $DomainName 推流域名。
      * @param string $AppName 推流路径。

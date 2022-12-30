@@ -27,7 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取描述信息。
  * @method void setDescription(string $Description) 设置描述信息。
  * @method string getCreateTime() 获取创建时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setCreateTime(string $CreateTime) 设置创建时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
  * @method string getHttpsCrt() 获取证书内容。
  * @method void setHttpsCrt(string $HttpsCrt) 设置证书内容。
  * @method integer getCertType() 获取证书类型。
@@ -37,7 +39,9 @@ use TencentCloud\Common\AbstractModel;
 0：用户添加证书，
 1：腾讯云托管证书。
  * @method string getCertExpireTime() 获取证书过期时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setCertExpireTime(string $CertExpireTime) 设置证书过期时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
  * @method array getDomainList() 获取使用此证书的域名列表。
  * @method void setDomainList(array $DomainList) 设置使用此证书的域名列表。
  */
@@ -60,6 +64,7 @@ class CertInfo extends AbstractModel
 
     /**
      * @var string 创建时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $CreateTime;
 
@@ -77,6 +82,7 @@ class CertInfo extends AbstractModel
 
     /**
      * @var string 证书过期时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $CertExpireTime;
 
@@ -90,11 +96,13 @@ class CertInfo extends AbstractModel
      * @param string $CertName 证书名称。
      * @param string $Description 描述信息。
      * @param string $CreateTime 创建时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
      * @param string $HttpsCrt 证书内容。
      * @param integer $CertType 证书类型。
 0：用户添加证书，
 1：腾讯云托管证书。
      * @param string $CertExpireTime 证书过期时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
      * @param array $DomainList 使用此证书的域名列表。
      */
     function __construct()

@@ -33,7 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取当前状态。0：未使用，1:使用中。
  * @method void setStatus(integer $Status) 设置当前状态。0：未使用，1:使用中。
  * @method string getCreateTime() 获取添加时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setCreateTime(string $CreateTime) 设置添加时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method integer getWidth() 获取水印宽。
  * @method void setWidth(integer $Width) 设置水印宽。
  * @method integer getHeight() 获取水印高。
@@ -73,6 +75,7 @@ class WatermarkInfo extends AbstractModel
 
     /**
      * @var string 添加时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $CreateTime;
 
@@ -94,6 +97,7 @@ class WatermarkInfo extends AbstractModel
      * @param string $WatermarkName 水印名称。
      * @param integer $Status 当前状态。0：未使用，1:使用中。
      * @param string $CreateTime 添加时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param integer $Width 水印宽。
      * @param integer $Height 水印高。
      */

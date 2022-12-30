@@ -45,9 +45,13 @@ use TencentCloud\Common\AbstractModel;
 当为转码包时单位为分钟。
 当为连麦包时单位为小时。
  * @method string getBuyTime() 获取购买时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setBuyTime(string $BuyTime) 设置购买时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method string getExpireTime() 获取过期时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method void setExpireTime(string $ExpireTime) 设置过期时间。
+注：此字段为北京时间（UTC+8时区）。
  * @method integer getType() 获取包类型，可选值:
 0: 流量包。
 1: 普通转码包。
@@ -105,11 +109,13 @@ class LivePackageInfo extends AbstractModel
 
     /**
      * @var string 购买时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $BuyTime;
 
     /**
      * @var string 过期时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public $ExpireTime;
 
@@ -147,7 +153,9 @@ class LivePackageInfo extends AbstractModel
 当为转码包时单位为分钟。
 当为连麦包时单位为小时。
      * @param string $BuyTime 购买时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param string $ExpireTime 过期时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param integer $Type 包类型，可选值:
 0: 流量包。
 1: 普通转码包。

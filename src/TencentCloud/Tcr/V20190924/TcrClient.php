@@ -41,7 +41,6 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CreateReplicationInstanceResponse CreateReplicationInstance(Models\CreateReplicationInstanceRequest $req) 创建从实例
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 用于企业版创建镜像仓库
  * @method Models\CreateRepositoryPersonalResponse CreateRepositoryPersonal(Models\CreateRepositoryPersonalRequest $req) 用于在个人版仓库中创建镜像仓库
- * @method Models\CreateSecurityPoliciesResponse CreateSecurityPolicies(Models\CreateSecurityPoliciesRequest $req) 创建实例公网访问白名单策略
  * @method Models\CreateSecurityPolicyResponse CreateSecurityPolicy(Models\CreateSecurityPolicyRequest $req) 创建实例公网访问白名单策略
  * @method Models\CreateSignatureResponse CreateSignature(Models\CreateSignatureRequest $req) 为一个镜像版本创建签名
  * @method Models\CreateSignaturePolicyResponse CreateSignaturePolicy(Models\CreateSignaturePolicyRequest $req) 创建镜像签名策略

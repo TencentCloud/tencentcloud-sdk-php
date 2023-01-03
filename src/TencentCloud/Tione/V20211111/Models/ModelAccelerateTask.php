@@ -128,6 +128,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelSignature(string $ModelSignature) 设置SAVED_MODEL保存时配置的签名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getQATModel() 获取是否是QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQATModel(boolean $QATModel) 设置是否是QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModelAccelerateTask extends AbstractModel
 {
@@ -294,6 +298,12 @@ class ModelAccelerateTask extends AbstractModel
     public $ModelSignature;
 
     /**
+     * @var boolean 是否是QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QATModel;
+
+    /**
      * @param string $ModelAccTaskId 模型加速任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelAccTaskName 模型加速任务名称
@@ -347,6 +357,8 @@ class ModelAccelerateTask extends AbstractModel
      * @param boolean $IsSaved 优化模型是否已保存到模型仓库
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelSignature SAVED_MODEL保存时配置的签名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $QATModel 是否是QAT模型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -481,6 +493,10 @@ class ModelAccelerateTask extends AbstractModel
 
         if (array_key_exists("ModelSignature",$param) and $param["ModelSignature"] !== null) {
             $this->ModelSignature = $param["ModelSignature"];
+        }
+
+        if (array_key_exists("QATModel",$param) and $param["QATModel"] !== null) {
+            $this->QATModel = $param["QATModel"];
         }
     }
 }

@@ -80,6 +80,8 @@ EXIST：导入现有版本
  * @method void setMaxReservedModels(integer $MaxReservedModels) 设置模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
  * @method integer getModelCleanPeriod() 获取模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
  * @method void setModelCleanPeriod(integer $ModelCleanPeriod) 设置模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
+ * @method boolean getIsQAT() 获取是否QAT模型
+ * @method void setIsQAT(boolean $IsQAT) 设置是否QAT模型
  */
 class CreateTrainingModelRequest extends AbstractModel
 {
@@ -214,6 +216,11 @@ EXIST：导入现有版本
     public $ModelCleanPeriod;
 
     /**
+     * @var boolean 是否QAT模型
+     */
+    public $IsQAT;
+
+    /**
      * @param string $ImportMethod 导入方式
 MODEL：导入新模型
 VERSION：导入新版本
@@ -244,6 +251,7 @@ EXIST：导入现有版本
      * @param string $AutoClean 模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
      * @param integer $MaxReservedModels 模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
      * @param integer $ModelCleanPeriod 模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
+     * @param boolean $IsQAT 是否QAT模型
      */
     function __construct()
     {
@@ -364,6 +372,10 @@ EXIST：导入现有版本
 
         if (array_key_exists("ModelCleanPeriod",$param) and $param["ModelCleanPeriod"] !== null) {
             $this->ModelCleanPeriod = $param["ModelCleanPeriod"];
+        }
+
+        if (array_key_exists("IsQAT",$param) and $param["IsQAT"] !== null) {
+            $this->IsQAT = $param["IsQAT"];
         }
     }
 }

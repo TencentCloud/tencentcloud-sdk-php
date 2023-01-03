@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) 设置媒体文件 ID。
  * @method integer getDefinition() 获取音视频审核模板 ID。
  * @method void setDefinition(integer $Definition) 设置音视频审核模板 ID。
+ * @method array getReviewContents() 获取审核的内容，可选值：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+ * @method void setReviewContents(array $ReviewContents) 设置审核的内容，可选值：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
  */
 class ReviewAudioVideoTaskInput extends AbstractModel
 {
@@ -38,8 +44,18 @@ class ReviewAudioVideoTaskInput extends AbstractModel
     public $Definition;
 
     /**
+     * @var array 审核的内容，可选值：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+     */
+    public $ReviewContents;
+
+    /**
      * @param string $FileId 媒体文件 ID。
      * @param integer $Definition 音视频审核模板 ID。
+     * @param array $ReviewContents 审核的内容，可选值：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
      */
     function __construct()
     {
@@ -60,6 +76,10 @@ class ReviewAudioVideoTaskInput extends AbstractModel
 
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ReviewContents",$param) and $param["ReviewContents"] !== null) {
+            $this->ReviewContents = $param["ReviewContents"];
         }
     }
 }

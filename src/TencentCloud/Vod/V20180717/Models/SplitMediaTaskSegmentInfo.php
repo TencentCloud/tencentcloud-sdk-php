@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(TaskOutputMediaInfo $Output) 设置视频拆条任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProcedureTaskId() 获取若发起视频拆条任务时指定了视频处理流程，则该字段为流程任务 ID。
- * @method void setProcedureTaskId(string $ProcedureTaskId) 设置若发起视频拆条任务时指定了视频处理流程，则该字段为流程任务 ID。
+ * @method string getProcedureTaskId() 获取任务类型为 Procedure 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
+ * @method void setProcedureTaskId(string $ProcedureTaskId) 设置任务类型为 Procedure 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
+ * @method string getReviewAudioVideoTaskId() 获取任务类型为 ReviewAudioVideo 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
+ * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) 设置任务类型为 ReviewAudioVideo 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
  */
 class SplitMediaTaskSegmentInfo extends AbstractModel
 {
@@ -43,15 +45,21 @@ class SplitMediaTaskSegmentInfo extends AbstractModel
     public $Output;
 
     /**
-     * @var string 若发起视频拆条任务时指定了视频处理流程，则该字段为流程任务 ID。
+     * @var string 任务类型为 Procedure 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
      */
     public $ProcedureTaskId;
+
+    /**
+     * @var string 任务类型为 ReviewAudioVideo 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
+     */
+    public $ReviewAudioVideoTaskId;
 
     /**
      * @param SplitMediaTaskInput $Input 视频拆条任务输入信息。
      * @param TaskOutputMediaInfo $Output 视频拆条任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProcedureTaskId 若发起视频拆条任务时指定了视频处理流程，则该字段为流程任务 ID。
+     * @param string $ProcedureTaskId 任务类型为 Procedure 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
+     * @param string $ReviewAudioVideoTaskId 任务类型为 ReviewAudioVideo 的任务 ID。若发起[视频拆条](https://cloud.tencent.com/document/api/266/51098)任务时，视频拆条任务信息列表指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
      */
     function __construct()
     {
@@ -78,6 +86,10 @@ class SplitMediaTaskSegmentInfo extends AbstractModel
 
         if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
             $this->ProcedureTaskId = $param["ProcedureTaskId"];
+        }
+
+        if (array_key_exists("ReviewAudioVideoTaskId",$param) and $param["ReviewAudioVideoTaskId"] !== null) {
+            $this->ReviewAudioVideoTaskId = $param["ReviewAudioVideoTaskId"];
         }
     }
 }

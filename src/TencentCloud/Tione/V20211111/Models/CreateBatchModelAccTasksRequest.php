@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelOutputPath(CosPathInfo $ModelOutputPath) 设置模型加速保存路径
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
- * @method string getOptimizationLevel() 获取优化级别(NO_LOSS/FP16)，默认FP16
- * @method void setOptimizationLevel(string $OptimizationLevel) 设置优化级别(NO_LOSS/FP16)，默认FP16
- * @method string getGPUType() 获取GPU卡类型(T4/V100)，默认T4
- * @method void setGPUType(string $GPUType) 设置GPU卡类型(T4/V100)，默认T4
+ * @method string getOptimizationLevel() 获取优化级别(NO_LOSS/FP16/INT8)，默认FP16
+ * @method void setOptimizationLevel(string $OptimizationLevel) 设置优化级别(NO_LOSS/FP16/INT8)，默认FP16
+ * @method string getGPUType() 获取GPU卡类型(T4/V100/A10)，默认T4
+ * @method void setGPUType(string $GPUType) 设置GPU卡类型(T4/V100/A10)，默认T4
  * @method HyperParameter getHyperParameter() 获取专业参数设置
  * @method void setHyperParameter(HyperParameter $HyperParameter) 设置专业参数设置
  */
@@ -58,12 +58,12 @@ class CreateBatchModelAccTasksRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 优化级别(NO_LOSS/FP16)，默认FP16
+     * @var string 优化级别(NO_LOSS/FP16/INT8)，默认FP16
      */
     public $OptimizationLevel;
 
     /**
-     * @var string GPU卡类型(T4/V100)，默认T4
+     * @var string GPU卡类型(T4/V100/A10)，默认T4
      */
     public $GPUType;
 
@@ -77,8 +77,8 @@ class CreateBatchModelAccTasksRequest extends AbstractModel
      * @param array $BatchModelAccTasks 批量模型加速任务
      * @param CosPathInfo $ModelOutputPath 模型加速保存路径
      * @param array $Tags 标签
-     * @param string $OptimizationLevel 优化级别(NO_LOSS/FP16)，默认FP16
-     * @param string $GPUType GPU卡类型(T4/V100)，默认T4
+     * @param string $OptimizationLevel 优化级别(NO_LOSS/FP16/INT8)，默认FP16
+     * @param string $GPUType GPU卡类型(T4/V100/A10)，默认T4
      * @param HyperParameter $HyperParameter 专业参数设置
      */
     function __construct()

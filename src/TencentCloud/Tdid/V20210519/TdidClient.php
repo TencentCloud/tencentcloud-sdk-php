@@ -38,7 +38,9 @@ use TencentCloud\Tdid\V20210519\Models as Models;
  * @method Models\DeployByNameResponse DeployByName(Models\DeployByNameRequest $req) 通过Name部署TDID合约
  * @method Models\DownCptResponse DownCpt(Models\DownCptRequest $req) 凭证模版下载
  * @method Models\EnableHashResponse EnableHash(Models\EnableHashRequest $req) 启用合约
- * @method Models\GetAgencyTDidResponse GetAgencyTDid(Models\GetAgencyTDidRequest $req) 本机构DID详情
+ * @method Models\GetAgencyTDidResponse GetAgencyTDid(Models\GetAgencyTDidRequest $req) 该接口已废弃
+
+本机构DID详情
  * @method Models\GetAuthoritiesListResponse GetAuthoritiesList(Models\GetAuthoritiesListRequest $req) 权威机构列表
  * @method Models\GetAuthorityIssuerResponse GetAuthorityIssuer(Models\GetAuthorityIssuerRequest $req) 获取权威机构信息
  * @method Models\GetConsortiumClusterListResponse GetConsortiumClusterList(Models\GetConsortiumClusterListRequest $req) 获取联盟bcos网络列表
@@ -75,7 +77,9 @@ use TencentCloud\Tdid\V20210519\Models as Models;
  * @method Models\RemoveHashResponse RemoveHash(Models\RemoveHashRequest $req) 删除合约
  * @method Models\SetCredentialStatusResponse SetCredentialStatus(Models\SetCredentialStatusRequest $req) 设置凭证链上状态
  * @method Models\VerifyCredentialResponse VerifyCredential(Models\VerifyCredentialRequest $req) 验证凭证
- * @method Models\VerifyPurchaseResponse VerifyPurchase(Models\VerifyPurchaseRequest $req) 验证购买
+ * @method Models\VerifyPurchaseResponse VerifyPurchase(Models\VerifyPurchaseRequest $req) 该接口已废弃
+
+验证购买
  */
 
 class TdidClient extends AbstractClient

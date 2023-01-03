@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例组信息
  *
- * @method integer getAppId() 获取appId
- * @method void setAppId(integer $AppId) 设置appId
+ * @method integer getAppId() 获取用户appId
+ * @method void setAppId(integer $AppId) 设置用户appId
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getCreatedTime() 获取创建时间
@@ -50,11 +50,29 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWanStatus(string $WanStatus) 设置外网状态
  * @method array getInstanceSet() 获取实例组包含实例信息
  * @method void setInstanceSet(array $InstanceSet) 设置实例组包含实例信息
+ * @method string getUniqVpcId() 获取VPC的ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置VPC的ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUniqSubnetId() 获取子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method OldAddrInfo getOldAddrInfo() 获取正在回收IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOldAddrInfo(OldAddrInfo $OldAddrInfo) 设置正在回收IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProcessingTasks() 获取正在进行的任务
+ * @method void setProcessingTasks(array $ProcessingTasks) 设置正在进行的任务
+ * @method array getTasks() 获取任务列表
+ * @method void setTasks(array $Tasks) 设置任务列表
+ * @method integer getNetServiceId() 获取biz_net_service表id
+ * @method void setNetServiceId(integer $NetServiceId) 设置biz_net_service表id
  */
 class CynosdbInstanceGrp extends AbstractModel
 {
     /**
-     * @var integer appId
+     * @var integer 用户appId
      */
     public $AppId;
 
@@ -129,7 +147,40 @@ class CynosdbInstanceGrp extends AbstractModel
     public $InstanceSet;
 
     /**
-     * @param integer $AppId appId
+     * @var string VPC的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UniqSubnetId;
+
+    /**
+     * @var OldAddrInfo 正在回收IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OldAddrInfo;
+
+    /**
+     * @var array 正在进行的任务
+     */
+    public $ProcessingTasks;
+
+    /**
+     * @var array 任务列表
+     */
+    public $Tasks;
+
+    /**
+     * @var integer biz_net_service表id
+     */
+    public $NetServiceId;
+
+    /**
+     * @param integer $AppId 用户appId
      * @param string $ClusterId 集群ID
      * @param string $CreatedTime 创建时间
      * @param string $DeletedTime 删除时间
@@ -144,6 +195,15 @@ class CynosdbInstanceGrp extends AbstractModel
      * @param integer $WanPort 外网端口
      * @param string $WanStatus 外网状态
      * @param array $InstanceSet 实例组包含实例信息
+     * @param string $UniqVpcId VPC的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UniqSubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OldAddrInfo $OldAddrInfo 正在回收IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ProcessingTasks 正在进行的任务
+     * @param array $Tasks 任务列表
+     * @param integer $NetServiceId biz_net_service表id
      */
     function __construct()
     {
@@ -221,6 +281,36 @@ class CynosdbInstanceGrp extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceSet, $obj);
             }
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("OldAddrInfo",$param) and $param["OldAddrInfo"] !== null) {
+            $this->OldAddrInfo = new OldAddrInfo();
+            $this->OldAddrInfo->deserialize($param["OldAddrInfo"]);
+        }
+
+        if (array_key_exists("ProcessingTasks",$param) and $param["ProcessingTasks"] !== null) {
+            $this->ProcessingTasks = $param["ProcessingTasks"];
+        }
+
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = [];
+            foreach ($param["Tasks"] as $key => $value){
+                $obj = new ObjectTask();
+                $obj->deserialize($value);
+                array_push($this->Tasks, $obj);
+            }
+        }
+
+        if (array_key_exists("NetServiceId",$param) and $param["NetServiceId"] !== null) {
+            $this->NetServiceId = $param["NetServiceId"];
         }
     }
 }

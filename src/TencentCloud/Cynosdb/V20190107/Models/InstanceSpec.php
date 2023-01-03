@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneStockInfos(array $ZoneStockInfos) 设置地域库存信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStockCount() 获取库存数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStockCount(integer $StockCount) 设置库存数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceSpec extends AbstractModel
 {
@@ -90,6 +94,12 @@ class InstanceSpec extends AbstractModel
     public $ZoneStockInfos;
 
     /**
+     * @var integer 库存数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StockCount;
+
+    /**
      * @param integer $Cpu 实例CPU，单位：核
      * @param integer $Memory 实例内存，单位：GB
      * @param integer $MaxStorageSize 实例最大可用存储，单位：GB
@@ -99,6 +109,8 @@ class InstanceSpec extends AbstractModel
      * @param integer $MaxIops 最大IOPS
      * @param integer $MaxIoBandWidth 最大IO带宽
      * @param array $ZoneStockInfos 地域库存信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $StockCount 库存数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -153,6 +165,10 @@ class InstanceSpec extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ZoneStockInfos, $obj);
             }
+        }
+
+        if (array_key_exists("StockCount",$param) and $param["StockCount"] !== null) {
+            $this->StockCount = $param["StockCount"];
         }
     }
 }

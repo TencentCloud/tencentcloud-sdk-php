@@ -27,16 +27,21 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\AddClusterSlaveZoneResponse AddClusterSlaveZone(Models\AddClusterSlaveZoneRequest $req) 增加从可用区
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) 本接口（AddInstances）用于集群添加实例
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 安全组批量绑定云资源
+ * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) TDSQL-C for MySQL实例关闭审计服务
  * @method Models\CreateAccountsResponse CreateAccounts(Models\CreateAccountsRequest $req) 创建账号
  * @method Models\CreateAuditLogFileResponse CreateAuditLogFile(Models\CreateAuditLogFileRequest $req) 本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
+ * @method Models\CreateAuditRuleTemplateResponse CreateAuditRuleTemplate(Models\CreateAuditRuleTemplateRequest $req) 创建审计规则模版
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) 为集群创建手动备份
  * @method Models\CreateClustersResponse CreateClusters(Models\CreateClustersRequest $req) 创建集群
  * @method Models\DeleteAuditLogFileResponse DeleteAuditLogFile(Models\DeleteAuditLogFileRequest $req) 本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
+ * @method Models\DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(Models\DeleteAuditRuleTemplatesRequest $req) 删除审计规则模版
  * @method Models\DeleteBackupResponse DeleteBackup(Models\DeleteBackupRequest $req) 为集群删除手动备份，无法删除自动备份
  * @method Models\DescribeAccountAllGrantPrivilegesResponse DescribeAccountAllGrantPrivileges(Models\DescribeAccountAllGrantPrivilegesRequest $req) 账号所有权限
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口(DescribeAccounts)用于查询数据库管理账号。
  * @method Models\DescribeAuditLogFilesResponse DescribeAuditLogFiles(Models\DescribeAuditLogFilesRequest $req) 本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
  * @method Models\DescribeAuditLogsResponse DescribeAuditLogs(Models\DescribeAuditLogsRequest $req) 本接口(DescribeAuditLogs)用于查询数据库审计日志。
+ * @method Models\DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplates(Models\DescribeAuditRuleTemplatesRequest $req) 查询审计规则模版信息
+ * @method Models\DescribeAuditRuleWithInstanceIdsResponse DescribeAuditRuleWithInstanceIds(Models\DescribeAuditRuleWithInstanceIdsRequest $req) 获取实例的审计规则
  * @method Models\DescribeBackupConfigResponse DescribeBackupConfig(Models\DescribeBackupConfigRequest $req) 获取指定集群的备份配置信息，包括全量备份时间段，备份文件保留时间
  * @method Models\DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrl(Models\DescribeBackupDownloadUrlRequest $req) 此接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
  * @method Models\DescribeBackupListResponse DescribeBackupList(Models\DescribeBackupListRequest $req) 查询备份文件列表
@@ -44,7 +49,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeBinlogSaveDaysResponse DescribeBinlogSaveDays(Models\DescribeBinlogSaveDaysRequest $req) 此接口（DescribeBinlogSaveDays）用于查询集群的Binlog保留天数。
  * @method Models\DescribeBinlogsResponse DescribeBinlogs(Models\DescribeBinlogsRequest $req) 此接口（DescribeBinlogs）用来查询集群Binlog日志列表。
  * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) 该接口（DescribeClusterDetail）显示集群详情
- * @method Models\DescribeClusterInstanceGrpsResponse DescribeClusterInstanceGrps(Models\DescribeClusterInstanceGrpsRequest $req) 本接口（DescribeClusterInstanceGrps）用于查询实例组
+ * @method Models\DescribeClusterInstanceGrpsResponse DescribeClusterInstanceGrps(Models\DescribeClusterInstanceGrpsRequest $req) 本接口（DescribeClusterInstanceGrps）用于查询实例组信息。
  * @method Models\DescribeClusterParamLogsResponse DescribeClusterParamLogs(Models\DescribeClusterParamLogsRequest $req) 本接口（DescribeClusterParamLogs）查询参数修改日志
  * @method Models\DescribeClusterParamsResponse DescribeClusterParams(Models\DescribeClusterParamsRequest $req) 本接口（DescribeClusterParams）用于查询集群参数
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 查询集群列表
@@ -67,6 +72,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\IsolateClusterResponse IsolateCluster(Models\IsolateClusterRequest $req) 隔离集群
  * @method Models\IsolateInstanceResponse IsolateInstance(Models\IsolateInstanceRequest $req) 本接口(IsolateInstance)用于隔离实例。
  * @method Models\ModifyAccountParamsResponse ModifyAccountParams(Models\ModifyAccountParamsRequest $req) 修改账号参数
+ * @method Models\ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplates(Models\ModifyAuditRuleTemplatesRequest $req) 修改审计规则模版
+ * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) 本接口(ModifyAuditService)用于修改云数据库审计日志保存时长、审计规则等服务配置。
  * @method Models\ModifyBackupConfigResponse ModifyBackupConfig(Models\ModifyBackupConfigRequest $req) 修改指定集群的备份配置
  * @method Models\ModifyBackupNameResponse ModifyBackupName(Models\ModifyBackupNameRequest $req) 此接口（ModifyBackupName）用于修改备份文件备注名。
  * @method Models\ModifyClusterNameResponse ModifyClusterName(Models\ModifyClusterNameRequest $req) 修改集群名称
@@ -78,6 +85,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyMaintainPeriodConfigResponse ModifyMaintainPeriodConfig(Models\ModifyMaintainPeriodConfigRequest $req) 修改维护时间配置
  * @method Models\OfflineClusterResponse OfflineCluster(Models\OfflineClusterRequest $req) 下线集群
  * @method Models\OfflineInstanceResponse OfflineInstance(Models\OfflineInstanceRequest $req) 下线实例
+ * @method Models\OpenAuditServiceResponse OpenAuditService(Models\OpenAuditServiceRequest $req) TDSQL-C for MySQL实例开通审计服务
  * @method Models\PauseServerlessResponse PauseServerless(Models\PauseServerlessRequest $req) 暂停serverless集群
  * @method Models\RemoveClusterSlaveZoneResponse RemoveClusterSlaveZone(Models\RemoveClusterSlaveZoneRequest $req) 删除从可用区
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) 本接口(ResetAccountPassword)用于重置实例的数据库账号密码。

@@ -52,8 +52,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaMetaData getMetaData() 获取输出视频的元信息。
  * @method void setMetaData(MediaMetaData $MetaData) 设置输出视频的元信息。
- * @method string getProcedureTaskId() 获取若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
- * @method void setProcedureTaskId(string $ProcedureTaskId) 设置若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+ * @method string getProcedureTaskId() 获取任务类型为 Procedure 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
+ * @method void setProcedureTaskId(string $ProcedureTaskId) 设置任务类型为 Procedure 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
+ * @method string getReviewAudioVideoTaskId() 获取任务类型为 ReviewAudioVideo 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
+ * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) 设置任务类型为 ReviewAudioVideo 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
@@ -114,9 +116,14 @@ class EditMediaTask extends AbstractModel
     public $MetaData;
 
     /**
-     * @var string 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+     * @var string 任务类型为 Procedure 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
      */
     public $ProcedureTaskId;
+
+    /**
+     * @var string 任务类型为 ReviewAudioVideo 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
+     */
+    public $ReviewAudioVideoTaskId;
 
     /**
      * @var string 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
@@ -145,7 +152,8 @@ class EditMediaTask extends AbstractModel
      * @param EditMediaTaskOutput $Output 视频编辑任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 输出视频的元信息。
-     * @param string $ProcedureTaskId 若发起视频编辑任务时指定了视频处理流程，则该字段为流程任务 ID。
+     * @param string $ProcedureTaskId 任务类型为 Procedure 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
+     * @param string $ReviewAudioVideoTaskId 任务类型为 ReviewAudioVideo 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
@@ -203,6 +211,10 @@ class EditMediaTask extends AbstractModel
 
         if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
             $this->ProcedureTaskId = $param["ProcedureTaskId"];
+        }
+
+        if (array_key_exists("ReviewAudioVideoTaskId",$param) and $param["ReviewAudioVideoTaskId"] !== null) {
+            $this->ReviewAudioVideoTaskId = $param["ReviewAudioVideoTaskId"];
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {

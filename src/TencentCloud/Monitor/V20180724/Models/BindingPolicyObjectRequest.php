@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceGroupId(integer $InstanceGroupId) 设置实例分组ID
  * @method array getDimensions() 获取需要绑定的对象维度信息
  * @method void setDimensions(array $Dimensions) 设置需要绑定的对象维度信息
+ * @method string getEbSubject() 获取事件配置的告警
+ * @method void setEbSubject(string $EbSubject) 设置事件配置的告警
+ * @method integer getEbEventFlag() 获取是否配置了事件告警
+ * @method void setEbEventFlag(integer $EbEventFlag) 设置是否配置了事件告警
  */
 class BindingPolicyObjectRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class BindingPolicyObjectRequest extends AbstractModel
     public $Dimensions;
 
     /**
+     * @var string 事件配置的告警
+     */
+    public $EbSubject;
+
+    /**
+     * @var integer 是否配置了事件告警
+     */
+    public $EbEventFlag;
+
+    /**
      * @param string $Module 必填。固定值"monitor"
      * @param integer $GroupId 策略组id，例如 4739573。逐渐弃用，建议使用 PolicyId 参数
      * @param string $PolicyId 告警策略ID，例如“policy-gh892hg0”。PolicyId 参数与 GroupId 参数至少要填一个，否则会报参数错误，建议使用该参数。若两者同时存在则以该参数为准
      * @param integer $InstanceGroupId 实例分组ID
      * @param array $Dimensions 需要绑定的对象维度信息
+     * @param string $EbSubject 事件配置的告警
+     * @param integer $EbEventFlag 是否配置了事件告警
      */
     function __construct()
     {
@@ -101,6 +117,14 @@ class BindingPolicyObjectRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Dimensions, $obj);
             }
+        }
+
+        if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
+            $this->EbSubject = $param["EbSubject"];
+        }
+
+        if (array_key_exists("EbEventFlag",$param) and $param["EbEventFlag"] !== null) {
+            $this->EbEventFlag = $param["EbEventFlag"];
         }
     }
 }

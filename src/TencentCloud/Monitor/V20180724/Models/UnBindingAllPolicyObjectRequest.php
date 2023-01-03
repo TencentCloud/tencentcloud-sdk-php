@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) 设置策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
  * @method string getPolicyId() 获取告警策略ID，使用此字段时 GroupId 会被忽略
  * @method void setPolicyId(string $PolicyId) 设置告警策略ID，使用此字段时 GroupId 会被忽略
+ * @method string getEbSubject() 获取事件配置的告警
+ * @method void setEbSubject(string $EbSubject) 设置事件配置的告警
+ * @method integer getEbEventFlag() 获取是否配置了事件告警
+ * @method void setEbEventFlag(integer $EbEventFlag) 设置是否配置了事件告警
  */
 class UnBindingAllPolicyObjectRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class UnBindingAllPolicyObjectRequest extends AbstractModel
     public $PolicyId;
 
     /**
+     * @var string 事件配置的告警
+     */
+    public $EbSubject;
+
+    /**
+     * @var integer 是否配置了事件告警
+     */
+    public $EbEventFlag;
+
+    /**
      * @param string $Module 固定值，为"monitor"
      * @param integer $GroupId 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
      * @param string $PolicyId 告警策略ID，使用此字段时 GroupId 会被忽略
+     * @param string $EbSubject 事件配置的告警
+     * @param integer $EbEventFlag 是否配置了事件告警
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class UnBindingAllPolicyObjectRequest extends AbstractModel
 
         if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
             $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
+            $this->EbSubject = $param["EbSubject"];
+        }
+
+        if (array_key_exists("EbEventFlag",$param) and $param["EbEventFlag"] !== null) {
+            $this->EbEventFlag = $param["EbEventFlag"];
         }
     }
 }

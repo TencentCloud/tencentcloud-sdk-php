@@ -25,6 +25,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
 /**
  * @method Models\AssignProjectResponse AssignProject(Models\AssignProjectRequest $req) 本接口(AssignProject)用于指定云数据库实例的所属项目。
 
+ * @method Models\CreateAccountUserResponse CreateAccountUser(Models\CreateAccountUserRequest $req) 创建实例账号。
  * @method Models\CreateBackupDBInstanceResponse CreateBackupDBInstance(Models\CreateBackupDBInstanceRequest $req) 备份实例接口
  * @method Models\CreateBackupDownloadTaskResponse CreateBackupDownloadTask(Models\CreateBackupDownloadTaskRequest $req) 本接口用来创建某个备份文件的下载任务
  * @method Models\CreateDBInstanceResponse CreateDBInstance(Models\CreateDBInstanceRequest $req) 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。

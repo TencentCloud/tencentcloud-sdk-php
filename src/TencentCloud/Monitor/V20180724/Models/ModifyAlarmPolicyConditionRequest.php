@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupBy(array $GroupBy) 设置聚合维度列表，指定按哪些维度 key 来做 group by
  * @method LogAlarmReq getLogAlarmReqInfo() 获取日志告警创建请求参数信息
  * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) 设置日志告警创建请求参数信息
+ * @method array getNoticeIds() 获取模版id，专供prom使用
+ * @method void setNoticeIds(array $NoticeIds) 设置模版id，专供prom使用
+ * @method integer getEnable() 获取启停状态，0=停用，1=启用
+ * @method void setEnable(integer $Enable) 设置启停状态，0=停用，1=启用
+ * @method string getPolicyName() 获取专供prom策略名称
+ * @method void setPolicyName(string $PolicyName) 设置专供prom策略名称
+ * @method string getEbSubject() 获取事件配置的告警
+ * @method void setEbSubject(string $EbSubject) 设置事件配置的告警
  */
 class ModifyAlarmPolicyConditionRequest extends AbstractModel
 {
@@ -80,6 +88,26 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     public $LogAlarmReqInfo;
 
     /**
+     * @var array 模版id，专供prom使用
+     */
+    public $NoticeIds;
+
+    /**
+     * @var integer 启停状态，0=停用，1=启用
+     */
+    public $Enable;
+
+    /**
+     * @var string 专供prom策略名称
+     */
+    public $PolicyName;
+
+    /**
+     * @var string 事件配置的告警
+     */
+    public $EbSubject;
+
+    /**
      * @param string $Module 模块名，固定值 monitor
      * @param string $PolicyId 告警策略 ID
      * @param integer $ConditionTemplateId 触发条件模板 Id，可不传
@@ -88,6 +116,10 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
      * @param AlarmPolicyFilter $Filter 全局过滤条件
      * @param array $GroupBy 聚合维度列表，指定按哪些维度 key 来做 group by
      * @param LogAlarmReq $LogAlarmReqInfo 日志告警创建请求参数信息
+     * @param array $NoticeIds 模版id，专供prom使用
+     * @param integer $Enable 启停状态，0=停用，1=启用
+     * @param string $PolicyName 专供prom策略名称
+     * @param string $EbSubject 事件配置的告警
      */
     function __construct()
     {
@@ -136,6 +168,22 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
         if (array_key_exists("LogAlarmReqInfo",$param) and $param["LogAlarmReqInfo"] !== null) {
             $this->LogAlarmReqInfo = new LogAlarmReq();
             $this->LogAlarmReqInfo->deserialize($param["LogAlarmReqInfo"]);
+        }
+
+        if (array_key_exists("NoticeIds",$param) and $param["NoticeIds"] !== null) {
+            $this->NoticeIds = $param["NoticeIds"];
+        }
+
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
+            $this->PolicyName = $param["PolicyName"];
+        }
+
+        if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
+            $this->EbSubject = $param["EbSubject"];
         }
     }
 }

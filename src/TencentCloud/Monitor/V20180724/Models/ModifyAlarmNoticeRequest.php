@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setURLNotices(array $URLNotices) 设置回调通知 最多3个
  * @method array getCLSNotices() 获取告警通知推送到CLS服务 最多1个
  * @method void setCLSNotices(array $CLSNotices) 设置告警通知推送到CLS服务 最多1个
+ * @method array getPolicyIds() 获取告警通知模板绑定的告警策略ID列表
+ * @method void setPolicyIds(array $PolicyIds) 设置告警通知模板绑定的告警策略ID列表
  */
 class ModifyAlarmNoticeRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyAlarmNoticeRequest extends AbstractModel
     public $CLSNotices;
 
     /**
+     * @var array 告警通知模板绑定的告警策略ID列表
+     */
+    public $PolicyIds;
+
+    /**
      * @param string $Module 模块名，这里填“monitor”
      * @param string $Name 告警通知规则名称 60字符以内
      * @param string $NoticeType 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
@@ -88,6 +95,7 @@ class ModifyAlarmNoticeRequest extends AbstractModel
      * @param array $UserNotices 用户通知 最多5个
      * @param array $URLNotices 回调通知 最多3个
      * @param array $CLSNotices 告警通知推送到CLS服务 最多1个
+     * @param array $PolicyIds 告警通知模板绑定的告警策略ID列表
      */
     function __construct()
     {
@@ -147,6 +155,10 @@ class ModifyAlarmNoticeRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CLSNotices, $obj);
             }
+        }
+
+        if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
+            $this->PolicyIds = $param["PolicyIds"];
         }
     }
 }

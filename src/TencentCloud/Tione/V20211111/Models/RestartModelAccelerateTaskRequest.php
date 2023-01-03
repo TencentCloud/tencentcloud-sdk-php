@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelVersion(string $ModelVersion) 设置模型版本
  * @method CosPathInfo getModelInputPath() 获取模型输入cos路径
  * @method void setModelInputPath(CosPathInfo $ModelInputPath) 设置模型输入cos路径
- * @method string getOptimizationLevel() 获取优化级别（NO_LOSS/FP16），默认FP16
- * @method void setOptimizationLevel(string $OptimizationLevel) 设置优化级别（NO_LOSS/FP16），默认FP16
+ * @method string getOptimizationLevel() 获取优化级别（NO_LOSS/FP16/INT8），默认FP16
+ * @method void setOptimizationLevel(string $OptimizationLevel) 设置优化级别（NO_LOSS/FP16/INT8），默认FP16
  * @method integer getModelInputNum() 获取input节点个数（废弃）
  * @method void setModelInputNum(integer $ModelInputNum) 设置input节点个数（废弃）
  * @method array getModelInputInfos() 获取input节点信息（废弃）
@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelFormat(string $ModelFormat) 设置模型格式（TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/MMDETECTION/ONNX/HUGGING_FACE）
  * @method array getTensorInfos() 获取模型Tensor信息
  * @method void setTensorInfos(array $TensorInfos) 设置模型Tensor信息
- * @method string getGPUType() 获取GPU类型（T4/V100），默认T4
- * @method void setGPUType(string $GPUType) 设置GPU类型（T4/V100），默认T4
+ * @method string getGPUType() 获取GPU类型（T4/V100/A10），默认T4
+ * @method void setGPUType(string $GPUType) 设置GPU类型（T4/V100/A10），默认T4
  * @method HyperParameter getHyperParameter() 获取模型专业参数
  * @method void setHyperParameter(HyperParameter $HyperParameter) 设置模型专业参数
  * @method string getAccEngineVersion() 获取加速引擎版本
@@ -102,7 +102,7 @@ class RestartModelAccelerateTaskRequest extends AbstractModel
     public $ModelInputPath;
 
     /**
-     * @var string 优化级别（NO_LOSS/FP16），默认FP16
+     * @var string 优化级别（NO_LOSS/FP16/INT8），默认FP16
      */
     public $OptimizationLevel;
 
@@ -132,7 +132,7 @@ class RestartModelAccelerateTaskRequest extends AbstractModel
     public $TensorInfos;
 
     /**
-     * @var string GPU类型（T4/V100），默认T4
+     * @var string GPU类型（T4/V100/A10），默认T4
      */
     public $GPUType;
 
@@ -165,13 +165,13 @@ class RestartModelAccelerateTaskRequest extends AbstractModel
      * @param string $ModelName 模型名称
      * @param string $ModelVersion 模型版本
      * @param CosPathInfo $ModelInputPath 模型输入cos路径
-     * @param string $OptimizationLevel 优化级别（NO_LOSS/FP16），默认FP16
+     * @param string $OptimizationLevel 优化级别（NO_LOSS/FP16/INT8），默认FP16
      * @param integer $ModelInputNum input节点个数（废弃）
      * @param array $ModelInputInfos input节点信息（废弃）
      * @param CosPathInfo $ModelOutputPath 模型输出cos路径
      * @param string $ModelFormat 模型格式（TORCH_SCRIPT/DETECTRON2/SAVED_MODEL/FROZEN_GRAPH/MMDETECTION/ONNX/HUGGING_FACE）
      * @param array $TensorInfos 模型Tensor信息
-     * @param string $GPUType GPU类型（T4/V100），默认T4
+     * @param string $GPUType GPU类型（T4/V100/A10），默认T4
      * @param HyperParameter $HyperParameter 模型专业参数
      * @param string $AccEngineVersion 加速引擎版本
      * @param array $Tags 标签

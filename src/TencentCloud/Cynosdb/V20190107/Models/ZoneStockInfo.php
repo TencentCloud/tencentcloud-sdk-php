@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method boolean getHasStock() 获取是否有库存
  * @method void setHasStock(boolean $HasStock) 设置是否有库存
+ * @method integer getStockCount() 获取库存数量
+ * @method void setStockCount(integer $StockCount) 设置库存数量
  */
 class ZoneStockInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ZoneStockInfo extends AbstractModel
     public $HasStock;
 
     /**
+     * @var integer 库存数量
+     */
+    public $StockCount;
+
+    /**
      * @param string $Zone 可用区
      * @param boolean $HasStock 是否有库存
+     * @param integer $StockCount 库存数量
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ZoneStockInfo extends AbstractModel
 
         if (array_key_exists("HasStock",$param) and $param["HasStock"] !== null) {
             $this->HasStock = $param["HasStock"];
+        }
+
+        if (array_key_exists("StockCount",$param) and $param["StockCount"] !== null) {
+            $this->StockCount = $param["StockCount"];
         }
     }
 }

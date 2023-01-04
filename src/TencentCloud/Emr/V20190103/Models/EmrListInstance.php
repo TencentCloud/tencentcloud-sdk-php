@@ -112,6 +112,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsHandsCluster(boolean $IsHandsCluster) 设置是否手戳集群
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOutSideSoftInfo() 获取体外客户端组件信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutSideSoftInfo(array $OutSideSoftInfo) 设置体外客户端组件信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmrListInstance extends AbstractModel
 {
@@ -274,6 +278,12 @@ class EmrListInstance extends AbstractModel
     public $IsHandsCluster;
 
     /**
+     * @var array 体外客户端组件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OutSideSoftInfo;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $StatusDesc 状态描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -319,6 +329,8 @@ class EmrListInstance extends AbstractModel
      * @param boolean $IsMultiZoneCluster 是否为跨AZ集群
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsHandsCluster 是否手戳集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OutSideSoftInfo 体外客户端组件信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -449,6 +461,15 @@ class EmrListInstance extends AbstractModel
 
         if (array_key_exists("IsHandsCluster",$param) and $param["IsHandsCluster"] !== null) {
             $this->IsHandsCluster = $param["IsHandsCluster"];
+        }
+
+        if (array_key_exists("OutSideSoftInfo",$param) and $param["OutSideSoftInfo"] !== null) {
+            $this->OutSideSoftInfo = [];
+            foreach ($param["OutSideSoftInfo"] as $key => $value){
+                $obj = new SoftDependInfo();
+                $obj->deserialize($value);
+                array_push($this->OutSideSoftInfo, $obj);
+            }
         }
     }
 }

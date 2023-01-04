@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstPort(integer $DstPort) 设置目标端口
  * @method string getHttpContent() 获取攻击内容
  * @method void setHttpContent(string $HttpContent) 设置攻击内容
+ * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DefendAttackLog extends AbstractModel
 {
@@ -122,6 +126,12 @@ class DefendAttackLog extends AbstractModel
     public $HttpContent;
 
     /**
+     * @var MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param integer $Id 日志ID
      * @param string $Uuid 客户端ID
      * @param string $SrcIp 来源IP
@@ -136,6 +146,8 @@ class DefendAttackLog extends AbstractModel
      * @param string $DstIp 目标IP
      * @param integer $DstPort 目标端口
      * @param string $HttpContent 攻击内容
+     * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -204,6 +216,11 @@ class DefendAttackLog extends AbstractModel
 
         if (array_key_exists("HttpContent",$param) and $param["HttpContent"] !== null) {
             $this->HttpContent = $param["HttpContent"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

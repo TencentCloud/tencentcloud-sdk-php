@@ -94,6 +94,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetGroupList(array $TargetGroupList) 设置绑定的目标组列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxConn() 获取监听器最大连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxConn(integer $MaxConn) 设置监听器最大连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxCps() 获取监听器最大新增连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMaxCps(integer $MaxCps) 设置监听器最大新增连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Listener extends AbstractModel
 {
@@ -215,6 +223,18 @@ class Listener extends AbstractModel
     public $TargetGroupList;
 
     /**
+     * @var integer 监听器最大连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxConn;
+
+    /**
+     * @var integer 监听器最大新增连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MaxCps;
+
+    /**
      * @param string $ListenerId 负载均衡监听器 ID
      * @param string $Protocol 监听器协议
      * @param integer $Port 监听器端口
@@ -251,6 +271,10 @@ class Listener extends AbstractModel
      * @param array $AttrFlags 监听器的属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TargetGroupList 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxConn 监听器最大连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxCps 监听器最大新增连接数，-1表示监听器维度不限速。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -357,6 +381,14 @@ class Listener extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TargetGroupList, $obj);
             }
+        }
+
+        if (array_key_exists("MaxConn",$param) and $param["MaxConn"] !== null) {
+            $this->MaxConn = $param["MaxConn"];
+        }
+
+        if (array_key_exists("MaxCps",$param) and $param["MaxCps"] !== null) {
+            $this->MaxCps = $param["MaxCps"];
         }
     }
 }

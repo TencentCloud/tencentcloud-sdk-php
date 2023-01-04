@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertId(string $CertId) 设置证书 ID，如果不填写此项则必须上传证书内容，包括CertName, CertContent，若为服务端证书必须包含CertKey。
  * @method string getCertName() 获取上传证书的名称，如果没有 CertId，则此项必传。
  * @method void setCertName(string $CertName) 设置上传证书的名称，如果没有 CertId，则此项必传。
- * @method string getCertContent() 获取上传证书的公钥，如果没有 CertId，则此项必传。
- * @method void setCertContent(string $CertContent) 设置上传证书的公钥，如果没有 CertId，则此项必传。
- * @method string getCertKey() 获取上传服务端证书的私钥，如果没有 CertId，则此项必传。
- * @method void setCertKey(string $CertKey) 设置上传服务端证书的私钥，如果没有 CertId，则此项必传。
+ * @method string getCertContent() 获取上传证书的公钥；如果没有 CertId，则此项必传。
+ * @method void setCertContent(string $CertContent) 设置上传证书的公钥；如果没有 CertId，则此项必传。
+ * @method string getCertKey() 获取上传服务端证书的私钥；如果没有 CertId，则此项必传。
+ * @method void setCertKey(string $CertKey) 设置上传服务端证书的私钥；如果没有 CertId，则此项必传。
  */
 class CertInfo extends AbstractModel
 {
@@ -42,20 +42,20 @@ class CertInfo extends AbstractModel
     public $CertName;
 
     /**
-     * @var string 上传证书的公钥，如果没有 CertId，则此项必传。
+     * @var string 上传证书的公钥；如果没有 CertId，则此项必传。
      */
     public $CertContent;
 
     /**
-     * @var string 上传服务端证书的私钥，如果没有 CertId，则此项必传。
+     * @var string 上传服务端证书的私钥；如果没有 CertId，则此项必传。
      */
     public $CertKey;
 
     /**
      * @param string $CertId 证书 ID，如果不填写此项则必须上传证书内容，包括CertName, CertContent，若为服务端证书必须包含CertKey。
      * @param string $CertName 上传证书的名称，如果没有 CertId，则此项必传。
-     * @param string $CertContent 上传证书的公钥，如果没有 CertId，则此项必传。
-     * @param string $CertKey 上传服务端证书的私钥，如果没有 CertId，则此项必传。
+     * @param string $CertContent 上传证书的公钥；如果没有 CertId，则此项必传。
+     * @param string $CertKey 上传服务端证书的私钥；如果没有 CertId，则此项必传。
      */
     function __construct()
     {

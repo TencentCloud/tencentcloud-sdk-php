@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置唯一ID
  * @method integer getFileType() 获取文件类型 0-常规文件；1-目录；2-软链
  * @method void setFileType(integer $FileType) 设置文件类型 0-常规文件；1-目录；2-软链
+ * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtectEventLists extends AbstractModel
 {
@@ -87,6 +91,12 @@ class ProtectEventLists extends AbstractModel
     public $FileType;
 
     /**
+     * @var MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param string $HostName 服务器名称
      * @param string $HostIp 服务器ip
      * @param string $EventDir 事件地址
@@ -96,6 +106,8 @@ class ProtectEventLists extends AbstractModel
      * @param string $RestoreTime 恢复时间
      * @param integer $Id 唯一ID
      * @param integer $FileType 文件类型 0-常规文件；1-目录；2-软链
+     * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -144,6 +156,11 @@ class ProtectEventLists extends AbstractModel
 
         if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
             $this->FileType = $param["FileType"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

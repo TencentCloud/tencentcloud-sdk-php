@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneBak(string $ZoneBak) 设置备可用区，为空则选择默认可用区
  * @method integer getCrossAZone() 获取异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
  * @method void setCrossAZone(integer $CrossAZone) 设置异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
+ * @method FwCidrInfo getFwCidrInfo() 获取指定防火墙使用网段信息
+ * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置指定防火墙使用网段信息
  */
 class CreateNatFwInstanceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateNatFwInstanceRequest extends AbstractModel
     public $CrossAZone;
 
     /**
+     * @var FwCidrInfo 指定防火墙使用网段信息
+     */
+    public $FwCidrInfo;
+
+    /**
      * @param string $Name 防火墙实例名称
      * @param integer $Width 带宽
      * @param integer $Mode 模式 1：接入模式；0：新增模式
@@ -88,6 +95,7 @@ class CreateNatFwInstanceRequest extends AbstractModel
      * @param string $Zone 主可用区，为空则选择默认可用区
      * @param string $ZoneBak 备可用区，为空则选择默认可用区
      * @param integer $CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
+     * @param FwCidrInfo $FwCidrInfo 指定防火墙使用网段信息
      */
     function __construct()
     {
@@ -133,6 +141,11 @@ class CreateNatFwInstanceRequest extends AbstractModel
 
         if (array_key_exists("CrossAZone",$param) and $param["CrossAZone"] !== null) {
             $this->CrossAZone = $param["CrossAZone"];
+        }
+
+        if (array_key_exists("FwCidrInfo",$param) and $param["FwCidrInfo"] !== null) {
+            $this->FwCidrInfo = new FwCidrInfo();
+            $this->FwCidrInfo->deserialize($param["FwCidrInfo"]);
         }
     }
 }

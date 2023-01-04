@@ -24,9 +24,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) 设置媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
  * @method integer getSubAppId() 获取<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
- * @method integer getDefinition() 获取音视频审核模板 ID，默认值为 10。取值范围：
+ * @method array getReviewContents() 获取审核的内容，可选值有：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+不填或填空数组时，默认为审核 Media。
+ * @method void setReviewContents(array $ReviewContents) 设置审核的内容，可选值有：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+不填或填空数组时，默认为审核 Media。
+ * @method integer getDefinition() 获取审核模板 ID，默认值为 10。取值范围：
 <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
- * @method void setDefinition(integer $Definition) 设置音视频审核模板 ID，默认值为 10。取值范围：
+ * @method void setDefinition(integer $Definition) 设置审核模板 ID，默认值为 10。取值范围：
 <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
  * @method integer getTasksPriority() 获取任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
  * @method void setTasksPriority(integer $TasksPriority) 设置任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
@@ -50,7 +58,15 @@ class ReviewAudioVideoRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var integer 音视频审核模板 ID，默认值为 10。取值范围：
+     * @var array 审核的内容，可选值有：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+不填或填空数组时，默认为审核 Media。
+     */
+    public $ReviewContents;
+
+    /**
+     * @var integer 审核模板 ID，默认值为 10。取值范围：
 <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
      */
     public $Definition;
@@ -78,7 +94,11 @@ class ReviewAudioVideoRequest extends AbstractModel
     /**
      * @param string $FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
      * @param integer $SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
-     * @param integer $Definition 音视频审核模板 ID，默认值为 10。取值范围：
+     * @param array $ReviewContents 审核的内容，可选值有：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+不填或填空数组时，默认为审核 Media。
+     * @param integer $Definition 审核模板 ID，默认值为 10。取值范围：
 <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
      * @param integer $TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，音视频审核完成回调将返回该字段值，最长 1000 个字符。
@@ -104,6 +124,10 @@ class ReviewAudioVideoRequest extends AbstractModel
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("ReviewContents",$param) and $param["ReviewContents"] !== null) {
+            $this->ReviewContents = $param["ReviewContents"];
         }
 
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {

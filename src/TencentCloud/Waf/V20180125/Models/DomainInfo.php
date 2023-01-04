@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPostCLSStatus(integer $PostCLSStatus) 设置是否开启投递CLS功能
  * @method integer getPostCKafkaStatus() 获取是否开启投递CKafka功能
  * @method void setPostCKafkaStatus(integer $PostCKafkaStatus) 设置是否开启投递CKafka功能
+ * @method string getAlbType() 获取应用型负载均衡类型: clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlbType(string $AlbType) 设置应用型负载均衡类型: clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainInfo extends AbstractModel
 {
@@ -192,6 +196,12 @@ class DomainInfo extends AbstractModel
     public $PostCKafkaStatus;
 
     /**
+     * @var string 应用型负载均衡类型: clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlbType;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名ID
      * @param string $InstanceId 实例ID
@@ -216,6 +226,8 @@ class DomainInfo extends AbstractModel
      * @param integer $Level 版本信息
      * @param integer $PostCLSStatus 是否开启投递CLS功能
      * @param integer $PostCKafkaStatus 是否开启投递CKafka功能
+     * @param string $AlbType 应用型负载均衡类型: clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -334,6 +346,10 @@ class DomainInfo extends AbstractModel
 
         if (array_key_exists("PostCKafkaStatus",$param) and $param["PostCKafkaStatus"] !== null) {
             $this->PostCKafkaStatus = $param["PostCKafkaStatus"];
+        }
+
+        if (array_key_exists("AlbType",$param) and $param["AlbType"] !== null) {
+            $this->AlbType = $param["AlbType"];
         }
     }
 }

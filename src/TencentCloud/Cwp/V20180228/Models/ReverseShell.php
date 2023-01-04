@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcTree(string $ProcTree) 设置进程树
  * @method integer getDetectBy() 获取检测方法
  * @method void setDetectBy(integer $DetectBy) 设置检测方法
+ * @method MachineExtraInfo getMachineExtraInfo() 获取 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReverseShell extends AbstractModel
 {
@@ -164,6 +168,12 @@ class ReverseShell extends AbstractModel
     public $DetectBy;
 
     /**
+     * @var MachineExtraInfo  主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param integer $Id ID 主键
      * @param string $Uuid 云镜UUID
      * @param string $Quuid 主机ID
@@ -184,6 +194,8 @@ class ReverseShell extends AbstractModel
      * @param string $MachineName 主机名
      * @param string $ProcTree 进程树
      * @param integer $DetectBy 检测方法
+     * @param MachineExtraInfo $MachineExtraInfo  主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -276,6 +288,11 @@ class ReverseShell extends AbstractModel
 
         if (array_key_exists("DetectBy",$param) and $param["DetectBy"] !== null) {
             $this->DetectBy = $param["DetectBy"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

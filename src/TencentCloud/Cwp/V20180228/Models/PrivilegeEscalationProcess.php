@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置发生时间
  * @method string getMachineName() 获取机器名
  * @method void setMachineName(string $MachineName) 设置机器名
+ * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrivilegeEscalationProcess extends AbstractModel
 {
@@ -150,6 +154,12 @@ class PrivilegeEscalationProcess extends AbstractModel
     public $MachineName;
 
     /**
+     * @var MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param integer $Id 数据ID
      * @param string $Uuid 云镜ID
      * @param string $Quuid 主机ID
@@ -168,6 +178,8 @@ class PrivilegeEscalationProcess extends AbstractModel
      * @param integer $Status 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
      * @param string $CreateTime 发生时间
      * @param string $MachineName 机器名
+     * @param MachineExtraInfo $MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -252,6 +264,11 @@ class PrivilegeEscalationProcess extends AbstractModel
 
         if (array_key_exists("MachineName",$param) and $param["MachineName"] !== null) {
             $this->MachineName = $param["MachineName"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuSize(integer $CpuSize) 设置Cpu数量
  * @method string getCpuLoad() 获取Cpu使用率百分比
  * @method void setCpuLoad(string $CpuLoad) 设置Cpu使用率百分比
- * @method integer getProtectLevel() 获取防护级别：0基础版，1专业版
- * @method void setProtectLevel(integer $ProtectLevel) 设置防护级别：0基础版，1专业版
+ * @method integer getProtectLevel() 获取防护级别：0基础版，1专业版，2旗舰版，3普惠版
+ * @method void setProtectLevel(integer $ProtectLevel) 设置防护级别：0基础版，1专业版，2旗舰版，3普惠版
  * @method string getRiskStatus() 获取风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
  * @method void setRiskStatus(string $RiskStatus) 设置风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
  * @method integer getProtectDays() 获取已防护天数
@@ -95,6 +95,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUpdateTime() 获取数据更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method MachineExtraInfo getMachineExtraInfo() 获取主机二外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机二外信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetMachineDetail extends AbstractModel
@@ -170,7 +174,7 @@ class AssetMachineDetail extends AbstractModel
     public $CpuLoad;
 
     /**
-     * @var integer 防护级别：0基础版，1专业版
+     * @var integer 防护级别：0基础版，1专业版，2旗舰版，3普惠版
      */
     public $ProtectLevel;
 
@@ -278,6 +282,12 @@ class AssetMachineDetail extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var MachineExtraInfo 主机二外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param string $Quuid 服务器Quuid
      * @param string $Uuid 服务器uuid
      * @param string $MachineIp 服务器内网IP
@@ -292,7 +302,7 @@ class AssetMachineDetail extends AbstractModel
      * @param string $MachineWanIp 主机外网IP
      * @param integer $CpuSize Cpu数量
      * @param string $CpuLoad Cpu使用率百分比
-     * @param integer $ProtectLevel 防护级别：0基础版，1专业版
+     * @param integer $ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3普惠版
      * @param string $RiskStatus 风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
      * @param integer $ProtectDays 已防护天数
      * @param string $BuyTime 专业版开通时间
@@ -315,6 +325,8 @@ class AssetMachineDetail extends AbstractModel
      * @param string $InstanceId 主机ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 数据更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo $MachineExtraInfo 主机二外信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -478,6 +490,11 @@ class AssetMachineDetail extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

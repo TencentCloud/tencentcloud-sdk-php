@@ -104,6 +104,10 @@ XTI - 威胁情报
 ABROAD - 海外IP；
 XTI - 威胁情报
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostLoginList extends AbstractModel
 {
@@ -230,6 +234,12 @@ XTI - 威胁情报
     public $Desc;
 
     /**
+     * @var MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param integer $Id 记录Id
      * @param string $Uuid Uuid串
 注意：此字段可能返回 null，表示取不到有效值。
@@ -271,6 +281,8 @@ XTI - 威胁情报
      * @param string $Desc 高危信息说明：
 ABROAD - 海外IP；
 XTI - 威胁情报
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo $MachineExtraInfo 附加信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -364,6 +376,11 @@ XTI - 威胁情报
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
             $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

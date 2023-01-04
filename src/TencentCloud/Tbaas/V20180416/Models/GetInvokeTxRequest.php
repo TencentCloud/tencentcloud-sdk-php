@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置区块链网络ID，可在区块链网络详情或列表中获取
  * @method string getChannelName() 获取业务所属通道名称，可在通道详情或列表中获取
  * @method void setChannelName(string $ChannelName) 设置业务所属通道名称，可在通道详情或列表中获取
- * @method string getPeerName() 获取执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
- * @method void setPeerName(string $PeerName) 设置执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
- * @method string getPeerGroup() 获取执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
- * @method void setPeerGroup(string $PeerGroup) 设置执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+ * @method string getPeerName() 获取执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
+ * @method void setPeerName(string $PeerName) 设置执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
+ * @method string getPeerGroup() 获取执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
+ * @method void setPeerGroup(string $PeerGroup) 设置执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
  * @method string getTxId() 获取交易ID
  * @method void setTxId(string $TxId) 设置交易ID
  * @method string getGroupName() 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
@@ -60,12 +60,12 @@ class GetInvokeTxRequest extends AbstractModel
     public $ChannelName;
 
     /**
-     * @var string 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @var string 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
      */
     public $PeerName;
 
     /**
-     * @var string 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @var string 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
      */
     public $PeerGroup;
 
@@ -84,8 +84,8 @@ class GetInvokeTxRequest extends AbstractModel
      * @param string $Operation 操作名，固定字段：query_txid
      * @param string $ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      * @param string $ChannelName 业务所属通道名称，可在通道详情或列表中获取
-     * @param string $PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
-     * @param string $PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * @param string $PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
+     * @param string $PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
      * @param string $TxId 交易ID
      * @param string $GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      */

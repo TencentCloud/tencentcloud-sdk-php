@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgress(integer $Progress) 设置过渡进度
  * @method string getExceptionMessage() 获取异常信息
  * @method void setExceptionMessage(string $ExceptionMessage) 设置异常信息
+ * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtectDirRelatedServer extends AbstractModel
 {
@@ -115,6 +119,12 @@ class ProtectDirRelatedServer extends AbstractModel
     public $ExceptionMessage;
 
     /**
+     * @var MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param string $Id 唯一ID
      * @param string $HostName 服务器名称
      * @param string $HostIp 服务器IP
@@ -128,6 +138,8 @@ class ProtectDirRelatedServer extends AbstractModel
      * @param integer $Exception 异常状态
      * @param integer $Progress 过渡进度
      * @param string $ExceptionMessage 异常信息
+     * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -192,6 +204,11 @@ class ProtectDirRelatedServer extends AbstractModel
 
         if (array_key_exists("ExceptionMessage",$param) and $param["ExceptionMessage"] !== null) {
             $this->ExceptionMessage = $param["ExceptionMessage"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

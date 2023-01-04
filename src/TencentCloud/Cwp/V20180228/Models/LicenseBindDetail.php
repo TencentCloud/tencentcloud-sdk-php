@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsUnBind(boolean $IsUnBind) 设置是否允许解绑,false 不允许解绑
  * @method boolean getIsSwitchBind() 获取是否允许换绑,false 不允许换绑
  * @method void setIsSwitchBind(boolean $IsSwitchBind) 设置是否允许换绑,false 不允许换绑
+ * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LicenseBindDetail extends AbstractModel
 {
@@ -87,6 +91,12 @@ class LicenseBindDetail extends AbstractModel
     public $IsSwitchBind;
 
     /**
+     * @var MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param string $MachineName 机器别名
      * @param string $MachineWanIp 机器公网IP
      * @param string $MachineIp 机器内网IP
@@ -96,6 +106,8 @@ class LicenseBindDetail extends AbstractModel
      * @param string $AgentStatus 云镜客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
      * @param boolean $IsUnBind 是否允许解绑,false 不允许解绑
      * @param boolean $IsSwitchBind 是否允许换绑,false 不允许换绑
+     * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -144,6 +156,11 @@ class LicenseBindDetail extends AbstractModel
 
         if (array_key_exists("IsSwitchBind",$param) and $param["IsSwitchBind"] !== null) {
             $this->IsSwitchBind = $param["IsSwitchBind"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

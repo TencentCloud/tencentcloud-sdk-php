@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulNum(integer $VulNum) 设置漏洞数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCloudTags() 获取云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudTags(array $CloudTags) 设置云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceID() 获取机器instance ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceID(string $InstanceID) 设置机器instance ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EffectiveMachineInfo extends AbstractModel
 {
@@ -124,6 +132,18 @@ class EffectiveMachineInfo extends AbstractModel
     public $VulNum;
 
     /**
+     * @var array 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudTags;
+
+    /**
+     * @var string 机器instance ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceID;
+
+    /**
      * @param string $MachineName 机器名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachinePublicIp 机器公网ip
@@ -143,6 +163,10 @@ class EffectiveMachineInfo extends AbstractModel
      * @param LicenseOrder $LicenseOrder 授权订单对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulNum 漏洞数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CloudTags 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceID 机器instance ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -202,6 +226,19 @@ class EffectiveMachineInfo extends AbstractModel
 
         if (array_key_exists("VulNum",$param) and $param["VulNum"] !== null) {
             $this->VulNum = $param["VulNum"];
+        }
+
+        if (array_key_exists("CloudTags",$param) and $param["CloudTags"] !== null) {
+            $this->CloudTags = [];
+            foreach ($param["CloudTags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->CloudTags, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
+            $this->InstanceID = $param["InstanceID"];
         }
     }
 }

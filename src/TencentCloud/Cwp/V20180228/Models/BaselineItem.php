@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置主机安全uuid
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineItem extends AbstractModel
 {
@@ -176,6 +180,12 @@ class BaselineItem extends AbstractModel
     public $Uuid;
 
     /**
+     * @var MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param integer $ItemId 项Id
      * @param string $ItemName 项名称
      * @param integer $CategoryId 检测项分类
@@ -203,6 +213,8 @@ class BaselineItem extends AbstractModel
      * @param integer $CanBeFixed 是否可以修复
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 主机安全uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -284,6 +296,11 @@ class BaselineItem extends AbstractModel
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReplicationGroup请求参数结构体
  *
- * @method integer getLimit() 获取实例列表的大小，参数默认值20
- * @method void setLimit(integer $Limit) 设置实例列表的大小，参数默认值20
- * @method integer getOffset() 获取偏移量，取Limit整数倍
- * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍
- * @method string getGroupId() 获取复制组ID
- * @method void setGroupId(string $GroupId) 设置复制组ID
- * @method string getSearchKey() 获取实例ID和实例名称，支持模糊查询
- * @method void setSearchKey(string $SearchKey) 设置实例ID和实例名称，支持模糊查询
+ * @method integer getLimit() 获取每页输出实例列表的大小，参数默认值20。
+ * @method void setLimit(integer $Limit) 设置每页输出实例列表的大小，参数默认值20。
+ * @method integer getOffset() 获取分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+ * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+ * @method string getGroupId() 获取复制组ID。
+ * @method void setGroupId(string $GroupId) 设置复制组ID。
+ * @method string getSearchKey() 获取设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
+ * @method void setSearchKey(string $SearchKey) 设置设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
  */
 class DescribeReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var integer 实例列表的大小，参数默认值20
+     * @var integer 每页输出实例列表的大小，参数默认值20。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，取Limit整数倍
+     * @var integer 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public $Offset;
 
     /**
-     * @var string 复制组ID
+     * @var string 复制组ID。
      */
     public $GroupId;
 
     /**
-     * @var string 实例ID和实例名称，支持模糊查询
+     * @var string 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
      */
     public $SearchKey;
 
     /**
-     * @param integer $Limit 实例列表的大小，参数默认值20
-     * @param integer $Offset 偏移量，取Limit整数倍
-     * @param string $GroupId 复制组ID
-     * @param string $SearchKey 实例ID和实例名称，支持模糊查询
+     * @param integer $Limit 每页输出实例列表的大小，参数默认值20。
+     * @param integer $Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @param string $GroupId 复制组ID。
+     * @param string $SearchKey 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
      */
     function __construct()
     {

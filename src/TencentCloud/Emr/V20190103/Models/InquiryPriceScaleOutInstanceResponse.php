@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceSpec(PriceResource $PriceSpec) 设置询价的节点规格。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getMultipleEmrPrice() 获取对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMultipleEmrPrice(array $MultipleEmrPrice) 设置对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -72,6 +76,12 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
     public $PriceSpec;
 
     /**
+     * @var array 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MultipleEmrPrice;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -86,6 +96,8 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
 <li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceResource $PriceSpec 询价的节点规格。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $MultipleEmrPrice 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -117,6 +129,15 @@ class InquiryPriceScaleOutInstanceResponse extends AbstractModel
         if (array_key_exists("PriceSpec",$param) and $param["PriceSpec"] !== null) {
             $this->PriceSpec = new PriceResource();
             $this->PriceSpec->deserialize($param["PriceSpec"]);
+        }
+
+        if (array_key_exists("MultipleEmrPrice",$param) and $param["MultipleEmrPrice"] !== null) {
+            $this->MultipleEmrPrice = [];
+            foreach ($param["MultipleEmrPrice"] as $key => $value){
+                $obj = new EmrPrice();
+                $obj->deserialize($value);
+                array_push($this->MultipleEmrPrice, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

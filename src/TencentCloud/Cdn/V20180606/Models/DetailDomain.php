@@ -310,6 +310,10 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQnPrivateAccess(QnPrivateAccess $QnPrivateAccess) 设置七牛云对象存储回源鉴权
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method HttpsBilling getHttpsBilling() 获取https 请求计费开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHttpsBilling(HttpsBilling $HttpsBilling) 设置https 请求计费开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
 {
@@ -715,6 +719,12 @@ off：不支持
     public $QnPrivateAccess;
 
     /**
+     * @var HttpsBilling https 请求计费开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HttpsBilling;
+
+    /**
      * @param string $ResourceId 域名 ID
      * @param integer $AppId 腾讯云账号ID
      * @param string $Domain 加速域名
@@ -859,6 +869,8 @@ off：不支持
      * @param HwPrivateAccess $HwPrivateAccess 华为云对象存储回源鉴权
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QnPrivateAccess $QnPrivateAccess 七牛云对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HttpsBilling $HttpsBilling https 请求计费开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1185,6 +1197,11 @@ off：不支持
         if (array_key_exists("QnPrivateAccess",$param) and $param["QnPrivateAccess"] !== null) {
             $this->QnPrivateAccess = new QnPrivateAccess();
             $this->QnPrivateAccess->deserialize($param["QnPrivateAccess"]);
+        }
+
+        if (array_key_exists("HttpsBilling",$param) and $param["HttpsBilling"] !== null) {
+            $this->HttpsBilling = new HttpsBilling();
+            $this->HttpsBilling->deserialize($param["HttpsBilling"]);
         }
     }
 }

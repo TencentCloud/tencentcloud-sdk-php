@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatGwList(array $NatGwList) 设置接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
  * @method array getVpcList() 获取新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
  * @method void setVpcList(array $VpcList) 设置新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
+ * @method FwCidrInfo getFwCidrInfo() 获取指定防火墙使用网段信息
+ * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置指定防火墙使用网段信息
  */
 class ModifyNatFwReSelectRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyNatFwReSelectRequest extends AbstractModel
     public $VpcList;
 
     /**
+     * @var FwCidrInfo 指定防火墙使用网段信息
+     */
+    public $FwCidrInfo;
+
+    /**
      * @param integer $Mode 模式 1：接入模式；0：新增模式
      * @param string $CfwInstance 防火墙实例id
      * @param array $NatGwList 接入模式重新接入的nat网关列表，其中NatGwList和VpcList只能传递一个。
      * @param array $VpcList 新增模式重新接入的vpc列表，其中NatGwList和NatgwList只能传递一个。
+     * @param FwCidrInfo $FwCidrInfo 指定防火墙使用网段信息
      */
     function __construct()
     {
@@ -84,6 +92,11 @@ class ModifyNatFwReSelectRequest extends AbstractModel
 
         if (array_key_exists("VpcList",$param) and $param["VpcList"] !== null) {
             $this->VpcList = $param["VpcList"];
+        }
+
+        if (array_key_exists("FwCidrInfo",$param) and $param["FwCidrInfo"] !== null) {
+            $this->FwCidrInfo = new FwCidrInfo();
+            $this->FwCidrInfo->deserialize($param["FwCidrInfo"]);
         }
     }
 }

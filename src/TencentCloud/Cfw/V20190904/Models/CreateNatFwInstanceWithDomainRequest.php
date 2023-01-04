@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCreateDomain(integer $IsCreateDomain) 设置0不创建域名,1创建域名
  * @method string getDomain() 获取如果要创建域名则必填
  * @method void setDomain(string $Domain) 设置如果要创建域名则必填
+ * @method FwCidrInfo getFwCidrInfo() 获取指定防火墙使用网段信息
+ * @method void setFwCidrInfo(FwCidrInfo $FwCidrInfo) 设置指定防火墙使用网段信息
  */
 class CreateNatFwInstanceWithDomainRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateNatFwInstanceWithDomainRequest extends AbstractModel
     public $Domain;
 
     /**
+     * @var FwCidrInfo 指定防火墙使用网段信息
+     */
+    public $FwCidrInfo;
+
+    /**
      * @param string $Name 防火墙实例名称
      * @param integer $Width 带宽
      * @param integer $Mode 模式 1：接入模式；0：新增模式
@@ -104,6 +111,7 @@ class CreateNatFwInstanceWithDomainRequest extends AbstractModel
      * @param integer $CrossAZone 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
      * @param integer $IsCreateDomain 0不创建域名,1创建域名
      * @param string $Domain 如果要创建域名则必填
+     * @param FwCidrInfo $FwCidrInfo 指定防火墙使用网段信息
      */
     function __construct()
     {
@@ -157,6 +165,11 @@ class CreateNatFwInstanceWithDomainRequest extends AbstractModel
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("FwCidrInfo",$param) and $param["FwCidrInfo"] !== null) {
+            $this->FwCidrInfo = new FwCidrInfo();
+            $this->FwCidrInfo->deserialize($param["FwCidrInfo"]);
         }
     }
 }

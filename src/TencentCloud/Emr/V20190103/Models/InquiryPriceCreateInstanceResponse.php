@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSpan(integer $TimeSpan) 设置购买实例的时长。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPriceList() 获取价格清单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPriceList(array $PriceList) 设置价格清单
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -72,6 +76,12 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
     public $TimeSpan;
 
     /**
+     * @var array 价格清单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PriceList;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -86,6 +96,8 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
 <li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeSpan 购买实例的时长。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PriceList 价格清单
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -116,6 +128,15 @@ class InquiryPriceCreateInstanceResponse extends AbstractModel
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
             $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("PriceList",$param) and $param["PriceList"] !== null) {
+            $this->PriceList = [];
+            foreach ($param["PriceList"] as $key => $value){
+                $obj = new ZoneDetailPriceResult();
+                $obj->deserialize($value);
+                array_push($this->PriceList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

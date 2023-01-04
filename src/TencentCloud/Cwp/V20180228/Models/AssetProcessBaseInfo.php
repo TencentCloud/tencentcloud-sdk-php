@@ -80,6 +80,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
  * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
+ * @method MachineExtraInfo getMachineExtraInfo() 获取
+ 附加信息
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置
+ 附加信息
+
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetProcessBaseInfo extends AbstractModel
 {
@@ -226,6 +234,14 @@ class AssetProcessBaseInfo extends AbstractModel
     public $IsNew;
 
     /**
+     * @var MachineExtraInfo 
+ 附加信息
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param string $MachineIp 主机内网IP
      * @param string $MachineWanIp 主机外网IP
      * @param string $Quuid 主机Quuid
@@ -256,6 +272,10 @@ class AssetProcessBaseInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 首次采集时间
      * @param integer $IsNew 是否新增[0:否|1:是]
+     * @param MachineExtraInfo $MachineExtraInfo 
+ 附加信息
+
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -385,6 +405,11 @@ class AssetProcessBaseInfo extends AbstractModel
 
         if (array_key_exists("IsNew",$param) and $param["IsNew"] !== null) {
             $this->IsNew = $param["IsNew"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

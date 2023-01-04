@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoteBinlogSave(string $RemoteBinlogSave) 设置异地日志备份开关，off - 关闭异地备份，on-开启异地备份，只有在参数RemoteBackupSave为on时，RemoteBinlogSave参数才可设置为on
  * @method array getRemoteRegion() 获取用户设置异地备份地域列表
  * @method void setRemoteRegion(array $RemoteRegion) 设置用户设置异地备份地域列表
- * @method integer getExpireDays() 获取异地备份保留天时间，单位为天
- * @method void setExpireDays(integer $ExpireDays) 设置异地备份保留天时间，单位为天
+ * @method integer getExpireDays() 获取异地备份保留时间，单位为天
+ * @method void setExpireDays(integer $ExpireDays) 设置异地备份保留时间，单位为天
  */
 class ModifyRemoteBackupConfigRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyRemoteBackupConfigRequest extends AbstractModel
     public $RemoteRegion;
 
     /**
-     * @var integer 异地备份保留天时间，单位为天
+     * @var integer 异地备份保留时间，单位为天
      */
     public $ExpireDays;
 
@@ -63,7 +63,7 @@ class ModifyRemoteBackupConfigRequest extends AbstractModel
      * @param string $RemoteBackupSave 异地数据备份开关，off - 关闭异地备份，on-开启异地备份
      * @param string $RemoteBinlogSave 异地日志备份开关，off - 关闭异地备份，on-开启异地备份，只有在参数RemoteBackupSave为on时，RemoteBinlogSave参数才可设置为on
      * @param array $RemoteRegion 用户设置异地备份地域列表
-     * @param integer $ExpireDays 异地备份保留天时间，单位为天
+     * @param integer $ExpireDays 异地备份保留时间，单位为天
      */
     function __construct()
     {

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailType(integer $FailType) 设置失败详情
  * @method string getMachineWanIp() 获取外网ip
  * @method void setMachineWanIp(string $MachineWanIp) 设置外网ip
+ * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScanTaskDetails extends AbstractModel
 {
@@ -115,6 +119,12 @@ class ScanTaskDetails extends AbstractModel
     public $MachineWanIp;
 
     /**
+     * @var MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param string $HostIp 服务器IP
      * @param string $HostName 服务器名称
      * @param string $OsName 操作系统
@@ -128,6 +138,8 @@ class ScanTaskDetails extends AbstractModel
      * @param integer $Id id唯一
      * @param integer $FailType 失败详情
      * @param string $MachineWanIp 外网ip
+     * @param MachineExtraInfo $MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -192,6 +204,11 @@ class ScanTaskDetails extends AbstractModel
 
         if (array_key_exists("MachineWanIp",$param) and $param["MachineWanIp"] !== null) {
             $this->MachineWanIp = $param["MachineWanIp"];
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

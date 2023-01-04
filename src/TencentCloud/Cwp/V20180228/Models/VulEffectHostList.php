@@ -84,6 +84,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddresses(string $PublicIpAddresses) 设置外网ip
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCloudTags() 获取云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCloudTags(array $CloudTags) 设置云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulEffectHostList extends AbstractModel
 {
@@ -184,6 +192,18 @@ class VulEffectHostList extends AbstractModel
     public $PublicIpAddresses;
 
     /**
+     * @var array 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CloudTags;
+
+    /**
+     * @var MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MachineExtraInfo;
+
+    /**
      * @param integer $EventId 事件id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
@@ -215,6 +235,10 @@ class VulEffectHostList extends AbstractModel
      * @param string $InstanceState 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIpAddresses 外网ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CloudTags 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -292,6 +316,20 @@ class VulEffectHostList extends AbstractModel
 
         if (array_key_exists("PublicIpAddresses",$param) and $param["PublicIpAddresses"] !== null) {
             $this->PublicIpAddresses = $param["PublicIpAddresses"];
+        }
+
+        if (array_key_exists("CloudTags",$param) and $param["CloudTags"] !== null) {
+            $this->CloudTags = [];
+            foreach ($param["CloudTags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->CloudTags, $obj);
+            }
+        }
+
+        if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
+            $this->MachineExtraInfo = new MachineExtraInfo();
+            $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
         }
     }
 }

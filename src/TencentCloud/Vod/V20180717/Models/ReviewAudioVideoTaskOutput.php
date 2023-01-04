@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) 设置涉及违规信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
  * @method string getSegmentSetFileUrlExpireTime() 获取涉及违规信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
  * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) 设置涉及违规信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+ * @method ReviewImageResult getCoverReviewResult() 获取封面审核结果。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCoverReviewResult(ReviewImageResult $CoverReviewResult) 设置封面审核结果。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReviewAudioVideoTaskOutput extends AbstractModel
 {
@@ -114,6 +118,12 @@ class ReviewAudioVideoTaskOutput extends AbstractModel
     public $SegmentSetFileUrlExpireTime;
 
     /**
+     * @var ReviewImageResult 封面审核结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CoverReviewResult;
+
+    /**
      * @param string $Suggestion 音视频内容审核的结果建议，取值范围：
 <li>pass：建议通过；</li>
 <li>review：建议复审；</li>
@@ -136,6 +146,8 @@ class ReviewAudioVideoTaskOutput extends AbstractModel
 <font color=red>注意</font> ：该列表最多仅展示前 10个 元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
      * @param string $SegmentSetFileUrl 涉及违规信息的嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
      * @param string $SegmentSetFileUrlExpireTime 涉及违规信息的嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param ReviewImageResult $CoverReviewResult 封面审核结果。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -177,6 +189,11 @@ class ReviewAudioVideoTaskOutput extends AbstractModel
 
         if (array_key_exists("SegmentSetFileUrlExpireTime",$param) and $param["SegmentSetFileUrlExpireTime"] !== null) {
             $this->SegmentSetFileUrlExpireTime = $param["SegmentSetFileUrlExpireTime"];
+        }
+
+        if (array_key_exists("CoverReviewResult",$param) and $param["CoverReviewResult"] !== null) {
+            $this->CoverReviewResult = new ReviewImageResult();
+            $this->CoverReviewResult->deserialize($param["CoverReviewResult"]);
         }
     }
 }

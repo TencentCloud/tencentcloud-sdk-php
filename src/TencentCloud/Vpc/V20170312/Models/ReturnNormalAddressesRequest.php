@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReturnNormalAddresses请求参数结构体
  *
- * @method array getAddressIps() 获取1
- * @method void setAddressIps(array $AddressIps) 设置1
+ * @method array getAddressIps() 获取EIP 的 IP 地址,示例：101.35.139.183
+ * @method void setAddressIps(array $AddressIps) 设置EIP 的 IP 地址,示例：101.35.139.183
  */
 class ReturnNormalAddressesRequest extends AbstractModel
 {
     /**
-     * @var array 1
+     * @var array EIP 的 IP 地址,示例：101.35.139.183
      */
     public $AddressIps;
 
     /**
-     * @param array $AddressIps 1
+     * @param array $AddressIps EIP 的 IP 地址,示例：101.35.139.183
      */
     function __construct()
     {

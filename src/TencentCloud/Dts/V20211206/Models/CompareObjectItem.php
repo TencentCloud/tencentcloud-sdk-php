@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 一致性校验库表对象
  *
- * @method string getDbName() 获取迁移的库
+ * @method string getDbName() 获取数据库名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDbName(string $DbName) 设置迁移的库
+ * @method void setDbName(string $DbName) 设置数据库名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbMode() 获取数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbMode(string $DbMode) 设置数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchemaName() 获取迁移的 schema
+ * @method string getSchemaName() 获取schema名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSchemaName(string $SchemaName) 设置迁移的 schema
+ * @method void setSchemaName(string $SchemaName) 设置schema名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableMode() 获取表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class CompareObjectItem extends AbstractModel
 {
     /**
-     * @var string 迁移的库
+     * @var string 数据库名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbName;
@@ -64,7 +64,7 @@ class CompareObjectItem extends AbstractModel
     public $DbMode;
 
     /**
-     * @var string 迁移的 schema
+     * @var string schema名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchemaName;
@@ -94,11 +94,11 @@ class CompareObjectItem extends AbstractModel
     public $Views;
 
     /**
-     * @param string $DbName 迁移的库
+     * @param string $DbName 数据库名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbMode 数据库选择模式: all 为当前对象下的所有对象,partial 为部分对象
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchemaName 迁移的 schema
+     * @param string $SchemaName schema名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableMode 表选择模式: all 为当前对象下的所有表对象,partial 为部分表对象
 注意：此字段可能返回 null，表示取不到有效值。

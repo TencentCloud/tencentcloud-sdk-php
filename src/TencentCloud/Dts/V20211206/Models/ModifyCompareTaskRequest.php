@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCompareTask请求参数结构体
  *
- * @method string getJobId() 获取迁移任务 Id
- * @method void setJobId(string $JobId) 设置迁移任务 Id
+ * @method string getJobId() 获取任务 Id
+ * @method void setJobId(string $JobId) 设置任务 Id
  * @method string getCompareTaskId() 获取对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
  * @method void setCompareTaskId(string $CompareTaskId) 设置对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
- * @method string getObjectMode() 获取数据对比对象模式，sameAsMigrate(全部迁移对象， **默认为此项配置**)，custom(自定义模式)
- * @method void setObjectMode(string $ObjectMode) 设置数据对比对象模式，sameAsMigrate(全部迁移对象， **默认为此项配置**)，custom(自定义模式)
+ * @method string getObjectMode() 获取数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集
+ * @method void setObjectMode(string $ObjectMode) 设置数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集
  * @method CompareObject getObjects() 获取对比对象，若CompareObjectMode取值为custom，则此项必填
  * @method void setObjects(CompareObject $Objects) 设置对比对象，若CompareObjectMode取值为custom，则此项必填
+ * @method CompareOptions getOptions() 获取一致性校验选项
+ * @method void setOptions(CompareOptions $Options) 设置一致性校验选项
  */
 class ModifyCompareTaskRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务 Id
+     * @var string 任务 Id
      */
     public $JobId;
 
@@ -49,7 +51,7 @@ class ModifyCompareTaskRequest extends AbstractModel
     public $TaskName;
 
     /**
-     * @var string 数据对比对象模式，sameAsMigrate(全部迁移对象， **默认为此项配置**)，custom(自定义模式)
+     * @var string 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集
      */
     public $ObjectMode;
 
@@ -59,11 +61,17 @@ class ModifyCompareTaskRequest extends AbstractModel
     public $Objects;
 
     /**
-     * @param string $JobId 迁移任务 Id
+     * @var CompareOptions 一致性校验选项
+     */
+    public $Options;
+
+    /**
+     * @param string $JobId 任务 Id
      * @param string $CompareTaskId 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
      * @param string $TaskName 任务名称
-     * @param string $ObjectMode 数据对比对象模式，sameAsMigrate(全部迁移对象， **默认为此项配置**)，custom(自定义模式)
+     * @param string $ObjectMode 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集
      * @param CompareObject $Objects 对比对象，若CompareObjectMode取值为custom，则此项必填
+     * @param CompareOptions $Options 一致性校验选项
      */
     function __construct()
     {
@@ -97,6 +105,11 @@ class ModifyCompareTaskRequest extends AbstractModel
         if (array_key_exists("Objects",$param) and $param["Objects"] !== null) {
             $this->Objects = new CompareObject();
             $this->Objects->deserialize($param["Objects"]);
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = new CompareOptions();
+            $this->Options->deserialize($param["Options"]);
         }
     }
 }

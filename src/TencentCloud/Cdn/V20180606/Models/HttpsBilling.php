@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 支持 https 请求开关，若关闭，下发配置拦截https请求
  *
- * @method string getSwitch() 获取https请求计费开关
- * @method void setSwitch(string $Switch) 设置https请求计费开关
+ * @method string getSwitch() 获取HTTPS服务
+ * @method void setSwitch(string $Switch) 设置HTTPS服务
  */
 class HttpsBilling extends AbstractModel
 {
     /**
-     * @var string https请求计费开关
+     * @var string HTTPS服务
      */
     public $Switch;
 
     /**
-     * @param string $Switch https请求计费开关
+     * @param string $Switch HTTPS服务
      */
     function __construct()
     {

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页设置，表示每页显示多少条任务，默认为 20
  * @method integer getOffset() 获取分页偏移量
  * @method void setOffset(integer $Offset) 设置分页偏移量
+ * @method string getCompareTaskId() 获取校验任务 ID
+ * @method void setCompareTaskId(string $CompareTaskId) 设置校验任务 ID
+ * @method array getStatus() 获取任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+ * @method void setStatus(array $Status) 设置任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
  */
 class DescribeCompareTasksRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeCompareTasksRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 校验任务 ID
+     */
+    public $CompareTaskId;
+
+    /**
+     * @var array 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+     */
+    public $Status;
+
+    /**
      * @param string $JobId 迁移任务 Id
      * @param integer $Limit 分页设置，表示每页显示多少条任务，默认为 20
      * @param integer $Offset 分页偏移量
+     * @param string $CompareTaskId 校验任务 ID
+     * @param array $Status 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeCompareTasksRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("CompareTaskId",$param) and $param["CompareTaskId"] !== null) {
+            $this->CompareTaskId = $param["CompareTaskId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

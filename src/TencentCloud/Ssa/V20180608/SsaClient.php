@@ -24,6 +24,7 @@ use TencentCloud\Ssa\V20180608\Models as Models;
 
 /**
  * @method Models\DescribeAssetDetailResponse DescribeAssetDetail(Models\DescribeAssetDetailRequest $req) 资产安全页资产详情
+ * @method Models\DescribeAssetDetailListResponse DescribeAssetDetailList(Models\DescribeAssetDetailListRequest $req) 资产条件查询
  * @method Models\DescribeAssetListResponse DescribeAssetList(Models\DescribeAssetListRequest $req) 资产安全资产列表
  * @method Models\DescribeAssetsMappingListResponse DescribeAssetsMappingList(Models\DescribeAssetsMappingListRequest $req) 资产测绘-测绘列表
  * @method Models\DescribeCheckConfigAssetListResponse DescribeCheckConfigAssetList(Models\DescribeCheckConfigAssetListRequest $req) 云安全配置管理资产组列表

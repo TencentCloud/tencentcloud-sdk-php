@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCompareTask请求参数结构体
  *
- * @method string getJobId() 获取迁移任务 Id
- * @method void setJobId(string $JobId) 设置迁移任务 Id
+ * @method string getJobId() 获取任务 Id
+ * @method void setJobId(string $JobId) 设置任务 Id
  * @method string getTaskName() 获取数据对比任务名称，若为空则默认给CompareTaskId相同值
  * @method void setTaskName(string $TaskName) 设置数据对比任务名称，若为空则默认给CompareTaskId相同值
  * @method string getObjectMode() 获取数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)，custom(自定义模式)
  * @method void setObjectMode(string $ObjectMode) 设置数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)，custom(自定义模式)
  * @method CompareObject getObjects() 获取一致性对比对象配置
  * @method void setObjects(CompareObject $Objects) 设置一致性对比对象配置
+ * @method CompareOptions getOptions() 获取一致性校验选项
+ * @method void setOptions(CompareOptions $Options) 设置一致性校验选项
  */
 class CreateCompareTaskRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务 Id
+     * @var string 任务 Id
      */
     public $JobId;
 
@@ -52,10 +54,16 @@ class CreateCompareTaskRequest extends AbstractModel
     public $Objects;
 
     /**
-     * @param string $JobId 迁移任务 Id
+     * @var CompareOptions 一致性校验选项
+     */
+    public $Options;
+
+    /**
+     * @param string $JobId 任务 Id
      * @param string $TaskName 数据对比任务名称，若为空则默认给CompareTaskId相同值
      * @param string $ObjectMode 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)，custom(自定义模式)
      * @param CompareObject $Objects 一致性对比对象配置
+     * @param CompareOptions $Options 一致性校验选项
      */
     function __construct()
     {
@@ -85,6 +93,11 @@ class CreateCompareTaskRequest extends AbstractModel
         if (array_key_exists("Objects",$param) and $param["Objects"] !== null) {
             $this->Objects = new CompareObject();
             $this->Objects->deserialize($param["Objects"]);
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = new CompareOptions();
+            $this->Options->deserialize($param["Options"]);
         }
     }
 }

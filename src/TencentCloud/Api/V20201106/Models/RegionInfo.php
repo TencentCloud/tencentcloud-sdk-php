@@ -26,6 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionName(string $RegionName) 设置地域描述，例如，华南地区(广州)
  * @method string getRegionState() 获取地域是否可用状态
  * @method void setRegionState(string $RegionState) 设置地域是否可用状态
+ * @method integer getRegionTypeMC() 获取控制台类型，api调用时默认null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionTypeMC(integer $RegionTypeMC) 设置控制台类型，api调用时默认null
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLocationMC() 获取不同语言的地区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLocationMC(string $LocationMC) 设置不同语言的地区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionNameMC() 获取控制台展示的地域描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionNameMC(string $RegionNameMC) 设置控制台展示的地域描述
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegionIdMC() 获取控制台展示的RegionId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRegionIdMC(string $RegionIdMC) 设置控制台展示的RegionId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RegionInfo extends AbstractModel
 {
@@ -45,9 +61,41 @@ class RegionInfo extends AbstractModel
     public $RegionState;
 
     /**
+     * @var integer 控制台类型，api调用时默认null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionTypeMC;
+
+    /**
+     * @var string 不同语言的地区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LocationMC;
+
+    /**
+     * @var string 控制台展示的地域描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionNameMC;
+
+    /**
+     * @var string 控制台展示的RegionId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RegionIdMC;
+
+    /**
      * @param string $Region 地域名称，例如，ap-guangzhou
      * @param string $RegionName 地域描述，例如，华南地区(广州)
      * @param string $RegionState 地域是否可用状态
+     * @param integer $RegionTypeMC 控制台类型，api调用时默认null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LocationMC 不同语言的地区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionNameMC 控制台展示的地域描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegionIdMC 控制台展示的RegionId
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +120,22 @@ class RegionInfo extends AbstractModel
 
         if (array_key_exists("RegionState",$param) and $param["RegionState"] !== null) {
             $this->RegionState = $param["RegionState"];
+        }
+
+        if (array_key_exists("RegionTypeMC",$param) and $param["RegionTypeMC"] !== null) {
+            $this->RegionTypeMC = $param["RegionTypeMC"];
+        }
+
+        if (array_key_exists("LocationMC",$param) and $param["LocationMC"] !== null) {
+            $this->LocationMC = $param["LocationMC"];
+        }
+
+        if (array_key_exists("RegionNameMC",$param) and $param["RegionNameMC"] !== null) {
+            $this->RegionNameMC = $param["RegionNameMC"];
+        }
+
+        if (array_key_exists("RegionIdMC",$param) and $param["RegionIdMC"] !== null) {
+            $this->RegionIdMC = $param["RegionIdMC"];
         }
     }
 }

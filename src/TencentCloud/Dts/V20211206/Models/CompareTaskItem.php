@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 一致性校验对象信息
  *
- * @method string getJobId() 获取迁移任务id
+ * @method string getJobId() 获取任务id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setJobId(string $JobId) 设置迁移任务id
+ * @method void setJobId(string $JobId) 设置任务id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCompareTaskId() 获取对比任务 Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,11 +64,23 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinishedAt(string $FinishedAt) 设置对比结束时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMethod() 获取对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMethod(string $Method) 设置对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CompareOptions getOptions() 获取对比配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOptions(CompareOptions $Options) 设置对比配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMessage() 获取一致性校验提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMessage(string $Message) 设置一致性校验提示信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareTaskItem extends AbstractModel
 {
     /**
-     * @var string 迁移任务id
+     * @var string 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
@@ -134,7 +146,25 @@ class CompareTaskItem extends AbstractModel
     public $FinishedAt;
 
     /**
-     * @param string $JobId 迁移任务id
+     * @var string 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Method;
+
+    /**
+     * @var CompareOptions 对比配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Options;
+
+    /**
+     * @var string 一致性校验提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Message;
+
+    /**
+     * @param string $JobId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompareTaskId 对比任务 Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,6 +185,12 @@ class CompareTaskItem extends AbstractModel
      * @param string $StartedAt 任务启动时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FinishedAt 对比结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Method 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CompareOptions $Options 对比配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Message 一致性校验提示信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -215,6 +251,19 @@ class CompareTaskItem extends AbstractModel
 
         if (array_key_exists("FinishedAt",$param) and $param["FinishedAt"] !== null) {
             $this->FinishedAt = $param["FinishedAt"];
+        }
+
+        if (array_key_exists("Method",$param) and $param["Method"] !== null) {
+            $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = new CompareOptions();
+            $this->Options->deserialize($param["Options"]);
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

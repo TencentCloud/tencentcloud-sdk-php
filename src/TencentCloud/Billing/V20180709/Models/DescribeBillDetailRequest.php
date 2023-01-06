@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置付费模式 prePay/postPay
  * @method string getResourceId() 获取查询指定资源信息
  * @method void setResourceId(string $ResourceId) 设置查询指定资源信息
- * @method string getActionType() 获取查询交易类型，如下：
+ * @method string getActionType() 获取查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
 包年包月新购
 包年包月续费
 包年包月配置变更
@@ -69,7 +69,7 @@ use TencentCloud\Common\AbstractModel;
 预留实例退款
 按量计费冲正
 包年包月转按量
- * @method void setActionType(string $ActionType) 设置查询交易类型，如下：
+ * @method void setActionType(string $ActionType) 设置查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
 包年包月新购
 包年包月续费
 包年包月配置变更
@@ -157,7 +157,7 @@ class DescribeBillDetailRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 查询交易类型，如下：
+     * @var string 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
 包年包月新购
 包年包月续费
 包年包月配置变更
@@ -210,7 +210,7 @@ class DescribeBillDetailRequest extends AbstractModel
      * @param string $ProductCode 已废弃参数，未开放
      * @param string $PayMode 付费模式 prePay/postPay
      * @param string $ResourceId 查询指定资源信息
-     * @param string $ActionType 查询交易类型，如下：
+     * @param string $ActionType 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
 包年包月新购
 包年包月续费
 包年包月配置变更

@@ -203,6 +203,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 同一个VPC内，多个子网的网段不能重叠。
 * 子网创建后会自动关联到默认路由表。
 * 创建子网同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
+ * @method Models\CreateTrafficPackagesResponse CreateTrafficPackages(Models\CreateTrafficPackagesRequest $req) 本接口 (CreateTrafficPackages) 用于创建共享流量包。
  * @method Models\CreateVpcResponse CreateVpc(Models\CreateVpcRequest $req) 本接口(CreateVpc)用于创建私有网络(VPC)。
 * 用户可以创建的最小网段子网掩码为28（有16个IP地址），10.0.0.0/12，172.16.0.0/12最大网段子网掩码为12（1,048,576个IP地址），192.168.0.0/16最大网段子网掩码为16（65,536个IP地址）如果需要规划VPC网段请参见[网络规划](https://cloud.tencent.com/document/product/215/30313)。
 * 同一个地域能创建的VPC资源个数也是有限制的，详见 <a href="https://cloud.tencent.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>，如果需要申请更多资源，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。

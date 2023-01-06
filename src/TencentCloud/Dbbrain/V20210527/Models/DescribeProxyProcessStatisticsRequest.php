@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method string getInstanceProxyId() 获取当前实例下的 ProxyID。
- * @method void setInstanceProxyId(string $InstanceProxyId) 设置当前实例下的 ProxyID。
+ * @method string getInstanceProxyId() 获取该实例下需要查询的某一个 ProxyID 。
+ * @method void setInstanceProxyId(string $InstanceProxyId) 设置该实例下需要查询的某一个 ProxyID 。
  * @method integer getLimit() 获取返回数量。
  * @method void setLimit(integer $Limit) 设置返回数量。
  * @method string getProduct() 获取服务产品类型，支持值包括： "redis" - 云数据库 Redis。
@@ -43,7 +43,7 @@ class DescribeProxyProcessStatisticsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 当前实例下的 ProxyID。
+     * @var string 该实例下需要查询的某一个 ProxyID 。
      */
     public $InstanceProxyId;
 
@@ -74,7 +74,7 @@ class DescribeProxyProcessStatisticsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID 。
-     * @param string $InstanceProxyId 当前实例下的 ProxyID。
+     * @param string $InstanceProxyId 该实例下需要查询的某一个 ProxyID 。
      * @param integer $Limit 返回数量。
      * @param string $Product 服务产品类型，支持值包括： "redis" - 云数据库 Redis。
      * @param integer $Offset 偏移量，默认0。

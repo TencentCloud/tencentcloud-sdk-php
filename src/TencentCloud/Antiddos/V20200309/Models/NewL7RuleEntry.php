@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRewriteHttps(integer $RewriteHttps) 设置http强制跳转https，1表示打开，0表示关闭
  * @method integer getErrCode() 获取规则配置失败时的详细错误原因(仅当Status=2时有效)，1001证书不存在，1002证书获取失败，1003证书上传失败，1004证书已过期
  * @method void setErrCode(integer $ErrCode) 设置规则配置失败时的详细错误原因(仅当Status=2时有效)，1001证书不存在，1002证书获取失败，1003证书上传失败，1004证书已过期
+ * @method integer getVersion() 获取版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersion(integer $Version) 设置版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NewL7RuleEntry extends AbstractModel
 {
@@ -209,6 +213,12 @@ class NewL7RuleEntry extends AbstractModel
     public $ErrCode;
 
     /**
+     * @var integer 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Version;
+
+    /**
      * @param string $Protocol 转发协议，取值[http, https]
      * @param string $Domain 转发域名
      * @param integer $LbType 负载均衡方式，取值[1(加权轮询)]
@@ -236,6 +246,8 @@ class NewL7RuleEntry extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RewriteHttps http强制跳转https，1表示打开，0表示关闭
      * @param integer $ErrCode 规则配置失败时的详细错误原因(仅当Status=2时有效)，1001证书不存在，1002证书获取失败，1003证书上传失败，1004证书已过期
+     * @param integer $Version 版本
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -357,6 +369,10 @@ class NewL7RuleEntry extends AbstractModel
 
         if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
             $this->ErrCode = $param["ErrCode"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }

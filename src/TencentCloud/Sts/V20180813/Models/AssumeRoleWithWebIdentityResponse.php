@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssumeRoleWithWebIdentity返回参数结构体
  *
- * @method integer getExpiredTime() 获取临时秘钥过期时间(时间戳)
- * @method void setExpiredTime(integer $ExpiredTime) 设置临时秘钥过期时间(时间戳)
- * @method string getExpiration() 获取临时秘钥过期时间
- * @method void setExpiration(string $Expiration) 设置临时秘钥过期时间
- * @method Credentials getCredentials() 获取临时秘钥
- * @method void setCredentials(Credentials $Credentials) 设置临时秘钥
+ * @method integer getExpiredTime() 获取临时密钥过期时间(时间戳)
+ * @method void setExpiredTime(integer $ExpiredTime) 设置临时密钥过期时间(时间戳)
+ * @method string getExpiration() 获取临时密钥过期时间
+ * @method void setExpiration(string $Expiration) 设置临时密钥过期时间
+ * @method Credentials getCredentials() 获取临时密钥
+ * @method void setCredentials(Credentials $Credentials) 设置临时密钥
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
 class AssumeRoleWithWebIdentityResponse extends AbstractModel
 {
     /**
-     * @var integer 临时秘钥过期时间(时间戳)
+     * @var integer 临时密钥过期时间(时间戳)
      */
     public $ExpiredTime;
 
     /**
-     * @var string 临时秘钥过期时间
+     * @var string 临时密钥过期时间
      */
     public $Expiration;
 
     /**
-     * @var Credentials 临时秘钥
+     * @var Credentials 临时密钥
      */
     public $Credentials;
 
@@ -52,9 +52,9 @@ class AssumeRoleWithWebIdentityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $ExpiredTime 临时秘钥过期时间(时间戳)
-     * @param string $Expiration 临时秘钥过期时间
-     * @param Credentials $Credentials 临时秘钥
+     * @param integer $ExpiredTime 临时密钥过期时间(时间戳)
+     * @param string $Expiration 临时密钥过期时间
+     * @param Credentials $Credentials 临时密钥
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Faceid\V20180301\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetRealNameAuthResult请求参数结构体
+ * DescribeTopicProduceConnection请求参数结构体
  *
- * @method string getAuthToken() 获取实名认证凭证
- * @method void setAuthToken(string $AuthToken) 设置实名认证凭证
+ * @method string getInstanceId() 获取实例id
+ * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getTopicName() 获取topic名称
+ * @method void setTopicName(string $TopicName) 设置topic名称
  */
-class GetRealNameAuthResultRequest extends AbstractModel
+class DescribeTopicProduceConnectionRequest extends AbstractModel
 {
     /**
-     * @var string 实名认证凭证
+     * @var string 实例id
      */
-    public $AuthToken;
+    public $InstanceId;
 
     /**
-     * @param string $AuthToken 实名认证凭证
+     * @var string topic名称
+     */
+    public $TopicName;
+
+    /**
+     * @param string $InstanceId 实例id
+     * @param string $TopicName topic名称
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class GetRealNameAuthResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AuthToken",$param) and $param["AuthToken"] !== null) {
-            $this->AuthToken = $param["AuthToken"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

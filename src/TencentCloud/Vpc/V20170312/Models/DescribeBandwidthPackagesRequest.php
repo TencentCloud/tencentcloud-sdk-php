@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
 <li> tag-value - String - 是否必填：否 - （过滤条件）按照标签值进行过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。tag-key使用具体的标签键进行替换。</li>
- * @method integer getOffset() 获取查询带宽包偏移量
- * @method void setOffset(integer $Offset) 设置查询带宽包偏移量
- * @method integer getLimit() 获取查询带宽包数量限制
- * @method void setLimit(integer $Limit) 设置查询带宽包数量限制
+ * @method integer getOffset() 获取查询带宽包偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
+ * @method void setOffset(integer $Offset) 设置查询带宽包偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
+ * @method integer getLimit() 获取查询带宽包返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
+ * @method void setLimit(integer $Limit) 设置查询带宽包返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
  */
 class DescribeBandwidthPackagesRequest extends AbstractModel
 {
@@ -72,12 +72,12 @@ class DescribeBandwidthPackagesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 查询带宽包偏移量
+     * @var integer 查询带宽包偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
      */
     public $Offset;
 
     /**
-     * @var integer 查询带宽包数量限制
+     * @var integer 查询带宽包返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
      */
     public $Limit;
 
@@ -94,8 +94,8 @@ class DescribeBandwidthPackagesRequest extends AbstractModel
 <li> tag-key - String - 是否必填：否 - （过滤条件）按照标签键进行过滤。</li>
 <li> tag-value - String - 是否必填：否 - （过滤条件）按照标签值进行过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。tag-key使用具体的标签键进行替换。</li>
-     * @param integer $Offset 查询带宽包偏移量
-     * @param integer $Limit 查询带宽包数量限制
+     * @param integer $Offset 查询带宽包偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
+     * @param integer $Limit 查询带宽包返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
      */
     function __construct()
     {

@@ -76,6 +76,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeTopicAttributesResponse DescribeTopicAttributes(Models\DescribeTopicAttributesRequest $req) 获取主题属性
 
  * @method Models\DescribeTopicDetailResponse DescribeTopicDetail(Models\DescribeTopicDetailRequest $req) 获取主题列表详情（仅控制台调用）
+ * @method Models\DescribeTopicProduceConnectionResponse DescribeTopicProduceConnection(Models\DescribeTopicProduceConnectionRequest $req) 查询topic 生产端连接信息
  * @method Models\DescribeTopicSubscribeGroupResponse DescribeTopicSubscribeGroup(Models\DescribeTopicSubscribeGroupRequest $req) 查询订阅某主题消息分组信息
  * @method Models\DescribeTopicSyncReplicaResponse DescribeTopicSyncReplica(Models\DescribeTopicSyncReplicaRequest $req) 获取Topic 副本详情信息
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 查询用户信息

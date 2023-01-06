@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPureAudioHoldPlaceMode(integer $PureAudioHoldPlaceMode) 设置悬浮模板、九宫格、屏幕分享模板生效，用于控制纯音频上行是否占用画面布局位置。设置为0是代表后台默认处理方式，悬浮小画面占布局位置，九宫格画面占布局位置、屏幕分享小画面不占布局位置；设置为1时代表纯音频上行占布局位置；设置为2时代表纯音频上行不占布局位置。默认为0。
  * @method WaterMarkParams getWaterMarkParams() 获取水印参数。
  * @method void setWaterMarkParams(WaterMarkParams $WaterMarkParams) 设置水印参数。
+ * @method integer getRenderMode() 获取屏幕分享模板、悬浮模板、九宫格模板、画中画模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底，不填采用后台的默认渲染方式（屏幕分享大画面为缩放，其他为裁剪）。
+ * @method void setRenderMode(integer $RenderMode) 设置屏幕分享模板、悬浮模板、九宫格模板、画中画模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底，不填采用后台的默认渲染方式（屏幕分享大画面为缩放，其他为裁剪）。
  */
 class LayoutParams extends AbstractModel
 {
@@ -94,6 +96,11 @@ class LayoutParams extends AbstractModel
     public $WaterMarkParams;
 
     /**
+     * @var integer 屏幕分享模板、悬浮模板、九宫格模板、画中画模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底，不填采用后台的默认渲染方式（屏幕分享大画面为缩放，其他为裁剪）。
+     */
+    public $RenderMode;
+
+    /**
      * @param integer $Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。
      * @param string $MainVideoUserId 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的用户ID。
      * @param integer $MainVideoStreamType 屏幕分享模板、悬浮模板、画中画模板中有效，代表大画面对应的流类型，0为摄像头，1为屏幕分享。左侧大画面为web用户时此值填0。
@@ -104,6 +111,7 @@ class LayoutParams extends AbstractModel
      * @param integer $PlaceHolderMode 自定义模板中有效，设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
      * @param integer $PureAudioHoldPlaceMode 悬浮模板、九宫格、屏幕分享模板生效，用于控制纯音频上行是否占用画面布局位置。设置为0是代表后台默认处理方式，悬浮小画面占布局位置，九宫格画面占布局位置、屏幕分享小画面不占布局位置；设置为1时代表纯音频上行占布局位置；设置为2时代表纯音频上行不占布局位置。默认为0。
      * @param WaterMarkParams $WaterMarkParams 水印参数。
+     * @param integer $RenderMode 屏幕分享模板、悬浮模板、九宫格模板、画中画模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底，不填采用后台的默认渲染方式（屏幕分享大画面为缩放，其他为裁剪）。
      */
     function __construct()
     {
@@ -163,6 +171,10 @@ class LayoutParams extends AbstractModel
         if (array_key_exists("WaterMarkParams",$param) and $param["WaterMarkParams"] !== null) {
             $this->WaterMarkParams = new WaterMarkParams();
             $this->WaterMarkParams->deserialize($param["WaterMarkParams"]);
+        }
+
+        if (array_key_exists("RenderMode",$param) and $param["RenderMode"] !== null) {
+            $this->RenderMode = $param["RenderMode"];
         }
     }
 }

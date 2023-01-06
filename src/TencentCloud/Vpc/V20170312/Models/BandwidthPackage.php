@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBandwidthPackageId() 获取带宽包唯一标识Id
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识Id
- * @method string getNetworkType() 获取带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
- * @method void setNetworkType(string $NetworkType) 设置带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
+ * @method string getNetworkType() 获取带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
+ * @method void setNetworkType(string $NetworkType) 设置带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
  * @method string getChargeType() 获取带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
  * @method void setChargeType(string $ChargeType) 设置带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
  * @method string getBandwidthPackageName() 获取带宽包名称
@@ -45,7 +45,7 @@ class BandwidthPackage extends AbstractModel
     public $BandwidthPackageId;
 
     /**
-     * @var string 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
+     * @var string 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
      */
     public $NetworkType;
 
@@ -81,7 +81,7 @@ class BandwidthPackage extends AbstractModel
 
     /**
      * @param string $BandwidthPackageId 带宽包唯一标识Id
-     * @param string $NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
+     * @param string $NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
      * @param string $ChargeType 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
      * @param string $BandwidthPackageName 带宽包名称
      * @param string $CreatedTime 带宽包创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。

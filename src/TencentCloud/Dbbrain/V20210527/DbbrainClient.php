@@ -47,7 +47,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeMailProfileResponse DescribeMailProfile(Models\DescribeMailProfileRequest $req) 获取发送邮件的配置， 包括数据库巡检的邮件配置以及定期生成健康报告的邮件发送配置。
  * @method Models\DescribeMySqlProcessListResponse DescribeMySqlProcessList(Models\DescribeMySqlProcessListRequest $req) 查询关系型数据库的实时线程列表。
  * @method Models\DescribeNoPrimaryKeyTablesResponse DescribeNoPrimaryKeyTables(Models\DescribeNoPrimaryKeyTablesRequest $req) 查询实例无主键表。
- * @method Models\DescribeProxyProcessStatisticsResponse DescribeProxyProcessStatistics(Models\DescribeProxyProcessStatisticsRequest $req) 获取当前实例会话统计详情信息。【注意】该接口仅限部分环境调用。
+ * @method Models\DescribeProxyProcessStatisticsResponse DescribeProxyProcessStatistics(Models\DescribeProxyProcessStatisticsRequest $req) 获取当前实例下的单个proxy的会话统计详情信息， 返回数据为单个 proxy 的会话统计信息。【注意】该接口仅限部分环境调用。
  * @method Models\DescribeProxySessionKillTasksResponse DescribeProxySessionKillTasks(Models\DescribeProxySessionKillTasksRequest $req) 用于查询 redis 执行 kill 会话任务后代理节点的执行结果，入参异步任务 ID 从接口 CreateProxySessionKillTask 调用成功后取得。当前 product 只支持：redis。
  * @method Models\DescribeRedisTopBigKeysResponse DescribeRedisTopBigKeys(Models\DescribeRedisTopBigKeysRequest $req) 查询redis实例大key列表。
  * @method Models\DescribeRedisTopKeyPrefixListResponse DescribeRedisTopKeyPrefixList(Models\DescribeRedisTopKeyPrefixListRequest $req) 查询redis实例top key前缀列表。

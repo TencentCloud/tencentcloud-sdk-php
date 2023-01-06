@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 后付费共享带宽包的当前计费用量
  *
- * @method integer getBandwidthUsage() 获取当前计费用量，单位为 Mbps
- * @method void setBandwidthUsage(integer $BandwidthUsage) 设置当前计费用量，单位为 Mbps
+ * @method float getBandwidthUsage() 获取当前计费用量，单位为 Mbps
+ * @method void setBandwidthUsage(float $BandwidthUsage) 设置当前计费用量，单位为 Mbps
  */
 class BandwidthPackageBillBandwidth extends AbstractModel
 {
     /**
-     * @var integer 当前计费用量，单位为 Mbps
+     * @var float 当前计费用量，单位为 Mbps
      */
     public $BandwidthUsage;
 
     /**
-     * @param integer $BandwidthUsage 当前计费用量，单位为 Mbps
+     * @param float $BandwidthUsage 当前计费用量，单位为 Mbps
      */
     function __construct()
     {

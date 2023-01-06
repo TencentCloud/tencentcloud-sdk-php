@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpecName(string $SpecName) 设置计费项名称
  * @method string getSpecAlias() 获取计费项显示名称
  * @method void setSpecAlias(string $SpecAlias) 设置计费项显示名称
+ * @method boolean getAvailable() 获取是否售罄
+ * @method void setAvailable(boolean $Available) 设置是否售罄
+ * @method array getAvailableRegion() 获取当前资源售罄时，可用的区域有哪些
+ * @method void setAvailableRegion(array $AvailableRegion) 设置当前资源售罄时，可用的区域有哪些
  */
 class Spec extends AbstractModel
 {
@@ -45,9 +49,21 @@ class Spec extends AbstractModel
     public $SpecAlias;
 
     /**
+     * @var boolean 是否售罄
+     */
+    public $Available;
+
+    /**
+     * @var array 当前资源售罄时，可用的区域有哪些
+     */
+    public $AvailableRegion;
+
+    /**
      * @param string $SpecId 计费项标签
      * @param string $SpecName 计费项名称
      * @param string $SpecAlias 计费项显示名称
+     * @param boolean $Available 是否售罄
+     * @param array $AvailableRegion 当前资源售罄时，可用的区域有哪些
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class Spec extends AbstractModel
 
         if (array_key_exists("SpecAlias",$param) and $param["SpecAlias"] !== null) {
             $this->SpecAlias = $param["SpecAlias"];
+        }
+
+        if (array_key_exists("Available",$param) and $param["Available"] !== null) {
+            $this->Available = $param["Available"];
+        }
+
+        if (array_key_exists("AvailableRegion",$param) and $param["AvailableRegion"] !== null) {
+            $this->AvailableRegion = $param["AvailableRegion"];
         }
     }
 }

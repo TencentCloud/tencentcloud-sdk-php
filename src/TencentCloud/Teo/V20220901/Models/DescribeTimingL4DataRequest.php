@@ -36,26 +36,30 @@ use TencentCloud\Common\AbstractModel;
 <li>l4Flow_inFlux: 访问入流量；</li>
 <li>l4Flow_outFlux: 访问出流量；</li>
 <li> l4Flow_outPkt: 访问出包量。</li>
- * @method array getZoneIds() 获取站点集合，不填默认选择全部站点。
- * @method void setZoneIds(array $ZoneIds) 设置站点集合，不填默认选择全部站点。
+ * @method array getZoneIds() 获取站点集合。
+若不填写，默认选择全部站点，且最多只能查询近30天的数据；
+若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+ * @method void setZoneIds(array $ZoneIds) 设置站点集合。
+若不填写，默认选择全部站点，且最多只能查询近30天的数据；
+若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
  * @method array getProxyIds() 获取四层实例列表, 不填表示选择全部实例。
  * @method void setProxyIds(array $ProxyIds) 设置四层实例列表, 不填表示选择全部实例。
  * @method string getInterval() 获取查询时间粒度，取值有：
 <li>min: 1分钟 ；</li>
 <li>5min: 5分钟 ；</li>
 <li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
  * @method void setInterval(string $Interval) 设置查询时间粒度，取值有：
 <li>min: 1分钟 ；</li>
 <li>5min: 5分钟 ；</li>
 <li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
- * @method array getFilters() 获取过滤条件，详细的过滤条件如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
- * @method void setFilters(array $Filters) 设置过滤条件，详细的过滤条件如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+ * @method array getFilters() 获取过滤条件，详细的过滤条件Key值如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
+ * @method void setFilters(array $Filters) 设置过滤条件，详细的过滤条件Key值如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
  * @method string getArea() 获取数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
 <li>mainland：中国大陆地区数据；</li>
@@ -88,7 +92,9 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array 站点集合，不填默认选择全部站点。
+     * @var array 站点集合。
+若不填写，默认选择全部站点，且最多只能查询近30天的数据；
+若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
      */
     public $ZoneIds;
 
@@ -102,14 +108,14 @@ class DescribeTimingL4DataRequest extends AbstractModel
 <li>min: 1分钟 ；</li>
 <li>5min: 5分钟 ；</li>
 <li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
      */
     public $Interval;
 
     /**
-     * @var array 过滤条件，详细的过滤条件如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+     * @var array 过滤条件，详细的过滤条件Key值如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
      */
     public $Filters;
 
@@ -130,16 +136,18 @@ class DescribeTimingL4DataRequest extends AbstractModel
 <li>l4Flow_inFlux: 访问入流量；</li>
 <li>l4Flow_outFlux: 访问出流量；</li>
 <li> l4Flow_outPkt: 访问出包量。</li>
-     * @param array $ZoneIds 站点集合，不填默认选择全部站点。
+     * @param array $ZoneIds 站点集合。
+若不填写，默认选择全部站点，且最多只能查询近30天的数据；
+若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
      * @param array $ProxyIds 四层实例列表, 不填表示选择全部实例。
      * @param string $Interval 查询时间粒度，取值有：
 <li>min: 1分钟 ；</li>
 <li>5min: 5分钟 ；</li>
 <li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
-     * @param array $Filters 过滤条件，详细的过滤条件如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+     * @param array $Filters 过滤条件，详细的过滤条件Key值如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
      * @param string $Area 数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
 <li>mainland：中国大陆地区数据；</li>

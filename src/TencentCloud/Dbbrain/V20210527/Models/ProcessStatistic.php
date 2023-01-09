@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实时会话统计详情。
  *
-
+ * @method array getItems() 获取会话详情数组。
+ * @method void setItems(array $Items) 设置会话详情数组。
+ * @method integer getAllConnSum() 获取总连接数。
+ * @method void setAllConnSum(integer $AllConnSum) 设置总连接数。
+ * @method integer getActiveConnSum() 获取总活跃连接数。
+ * @method void setActiveConnSum(integer $ActiveConnSum) 设置总活跃连接数。
  */
 class ProcessStatistic extends AbstractModel
 {
-
+    /**
+     * @var array 会话详情数组。
+     */
+    public $Items;
 
     /**
+     * @var integer 总连接数。
+     */
+    public $AllConnSum;
 
+    /**
+     * @var integer 总活跃连接数。
+     */
+    public $ActiveConnSum;
+
+    /**
+     * @param array $Items 会话详情数组。
+     * @param integer $AllConnSum 总连接数。
+     * @param integer $ActiveConnSum 总活跃连接数。
      */
     function __construct()
     {
@@ -42,6 +62,21 @@ class ProcessStatistic extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new SessionItem();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
+        }
 
+        if (array_key_exists("AllConnSum",$param) and $param["AllConnSum"] !== null) {
+            $this->AllConnSum = $param["AllConnSum"];
+        }
+
+        if (array_key_exists("ActiveConnSum",$param) and $param["ActiveConnSum"] !== null) {
+            $this->ActiveConnSum = $param["ActiveConnSum"];
+        }
     }
 }

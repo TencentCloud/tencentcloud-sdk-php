@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTaskFromTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取从经验库中查询到的经验模版ID
- * @method void setTemplateId(integer $TemplateId) 设置从经验库中查询到的经验模版ID
+ * @method integer getTemplateId() 获取从经验库中查询到的经验模板ID
+ * @method void setTemplateId(integer $TemplateId) 设置从经验库中查询到的经验模板ID
  * @method TaskConfig getTaskConfig() 获取演练的配置参数
  * @method void setTaskConfig(TaskConfig $TaskConfig) 设置演练的配置参数
  */
 class CreateTaskFromTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 从经验库中查询到的经验模版ID
+     * @var integer 从经验库中查询到的经验模板ID
      */
     public $TemplateId;
 
@@ -38,7 +38,7 @@ class CreateTaskFromTemplateRequest extends AbstractModel
     public $TaskConfig;
 
     /**
-     * @param integer $TemplateId 从经验库中查询到的经验模版ID
+     * @param integer $TemplateId 从经验库中查询到的经验模板ID
      * @param TaskConfig $TaskConfig 演练的配置参数
      */
     function __construct()

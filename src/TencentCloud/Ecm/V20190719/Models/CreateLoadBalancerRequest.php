@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签。
  * @method array getSecurityGroups() 获取安全组。
  * @method void setSecurityGroups(array $SecurityGroups) 设置安全组。
+ * @method string getAddressIPVersion() 获取仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
+ * @method void setAddressIPVersion(string $AddressIPVersion) 设置仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
+ * @method string getSubnetId() 获取在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+ * @method void setSubnetId(string $SubnetId) 设置在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -90,6 +94,16 @@ class CreateLoadBalancerRequest extends AbstractModel
     public $SecurityGroups;
 
     /**
+     * @var string 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
+     */
+    public $AddressIPVersion;
+
+    /**
+     * @var string 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+     */
+    public $SubnetId;
+
+    /**
      * @param string $EcmRegion ECM区域，形如ap-xian-ecm。
      * @param string $LoadBalancerType 负载均衡实例的网络类型。目前只支持传入OPEN，表示公网属性。
      * @param string $VipIsp CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通。
@@ -100,6 +114,8 @@ class CreateLoadBalancerRequest extends AbstractModel
      * @param LoadBalancerInternetAccessible $InternetAccessible 负载均衡的带宽限制等信息。
      * @param array $Tags 标签。
      * @param array $SecurityGroups 安全组。
+     * @param string $AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
+     * @param string $SubnetId 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
      */
     function __construct()
     {
@@ -154,6 +170,14 @@ class CreateLoadBalancerRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
             $this->SecurityGroups = $param["SecurityGroups"];
+        }
+
+        if (array_key_exists("AddressIPVersion",$param) and $param["AddressIPVersion"] !== null) {
+            $this->AddressIPVersion = $param["AddressIPVersion"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

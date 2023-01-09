@@ -310,9 +310,9 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQnPrivateAccess(QnPrivateAccess $QnPrivateAccess) 设置七牛云对象存储回源鉴权
 注意：此字段可能返回 null，表示取不到有效值。
- * @method HttpsBilling getHttpsBilling() 获取HTTPS服务
+ * @method HttpsBilling getHttpsBilling() 获取HTTPS服务，缺省时默认开启
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttpsBilling(HttpsBilling $HttpsBilling) 设置HTTPS服务
+ * @method void setHttpsBilling(HttpsBilling $HttpsBilling) 设置HTTPS服务，缺省时默认开启
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailDomain extends AbstractModel
@@ -719,7 +719,7 @@ off：不支持
     public $QnPrivateAccess;
 
     /**
-     * @var HttpsBilling HTTPS服务
+     * @var HttpsBilling HTTPS服务，缺省时默认开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpsBilling;
@@ -870,7 +870,7 @@ off：不支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QnPrivateAccess $QnPrivateAccess 七牛云对象存储回源鉴权
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpsBilling $HttpsBilling HTTPS服务
+     * @param HttpsBilling $HttpsBilling HTTPS服务，缺省时默认开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

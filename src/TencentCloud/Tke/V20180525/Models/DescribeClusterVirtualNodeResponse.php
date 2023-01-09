@@ -14,26 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Chdfs\V20201112\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAccessRules返回参数结构体
+ * DescribeClusterVirtualNode返回参数结构体
  *
- * @method array getAccessRules() 获取权限规则列表
+ * @method array getNodes() 获取节点列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessRules(array $AccessRules) 设置权限规则列表
+ * @method void setNodes(array $Nodes) 设置节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置节点总数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAccessRulesResponse extends AbstractModel
+class DescribeClusterVirtualNodeResponse extends AbstractModel
 {
     /**
-     * @var array 权限规则列表
+     * @var array 节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $AccessRules;
+    public $Nodes;
+
+    /**
+     * @var integer 节点总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +51,9 @@ class CreateAccessRulesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AccessRules 权限规则列表
+     * @param array $Nodes 节点列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 节点总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -58,13 +70,17 @@ class CreateAccessRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessRules",$param) and $param["AccessRules"] !== null) {
-            $this->AccessRules = [];
-            foreach ($param["AccessRules"] as $key => $value){
-                $obj = new AccessRule();
+        if (array_key_exists("Nodes",$param) and $param["Nodes"] !== null) {
+            $this->Nodes = [];
+            foreach ($param["Nodes"] as $key => $value){
+                $obj = new VirtualNode();
                 $obj->deserialize($value);
-                array_push($this->AccessRules, $obj);
+                array_push($this->Nodes, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

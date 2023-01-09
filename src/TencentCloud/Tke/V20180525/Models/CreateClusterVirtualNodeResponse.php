@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Chdfs\V20201112\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAccessRules返回参数结构体
+ * CreateClusterVirtualNode返回参数结构体
  *
- * @method array getAccessRules() 获取权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessRules(array $AccessRules) 设置权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNodeName() 获取虚拟节点名称
+ * @method void setNodeName(string $NodeName) 设置虚拟节点名称
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAccessRulesResponse extends AbstractModel
+class CreateClusterVirtualNodeResponse extends AbstractModel
 {
     /**
-     * @var array 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 虚拟节点名称
      */
-    public $AccessRules;
+    public $NodeName;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +38,7 @@ class CreateAccessRulesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $AccessRules 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NodeName 虚拟节点名称
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,13 +54,8 @@ class CreateAccessRulesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AccessRules",$param) and $param["AccessRules"] !== null) {
-            $this->AccessRules = [];
-            foreach ($param["AccessRules"] as $key => $value){
-                $obj = new AccessRule();
-                $obj->deserialize($value);
-                array_push($this->AccessRules, $obj);
-            }
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

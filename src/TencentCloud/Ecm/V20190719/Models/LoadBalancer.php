@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置后端机器是否放通来自ELB的流量。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAddressIPv6() 获取负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAddressIPv6(string $AddressIPv6) 设置负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancer extends AbstractModel
 {
@@ -177,6 +181,12 @@ class LoadBalancer extends AbstractModel
     public $LoadBalancerPassToTarget;
 
     /**
+     * @var string 负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AddressIPv6;
+
+    /**
      * @param string $Region 区域。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Position $Position 位置信息。
@@ -207,6 +217,8 @@ class LoadBalancer extends AbstractModel
      * @param array $SecureGroups 安全组。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $LoadBalancerPassToTarget 后端机器是否放通来自ELB的流量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AddressIPv6 负载均衡实例的IPv6地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -287,6 +299,10 @@ class LoadBalancer extends AbstractModel
 
         if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
             $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
+        }
+
+        if (array_key_exists("AddressIPv6",$param) and $param["AddressIPv6"] !== null) {
+            $this->AddressIPv6 = $param["AddressIPv6"];
         }
     }
 }

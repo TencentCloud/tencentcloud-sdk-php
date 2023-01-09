@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS服务，若关闭，下发配置拦截https请求，开启时会产生计费
+ * 虚拟节点
  *
- * @method string getSwitch() 获取HTTPS服务，缺省时默认开启【会产生计费】
- * @method void setSwitch(string $Switch) 设置HTTPS服务，缺省时默认开启【会产生计费】
+ * @method string getDisplayName() 获取节点展示名称
+ * @method void setDisplayName(string $DisplayName) 设置节点展示名称
+ * @method string getSubnetId() 获取子网ID
+ * @method void setSubnetId(string $SubnetId) 设置子网ID
  */
-class HttpsBilling extends AbstractModel
+class VirtualNodeSpec extends AbstractModel
 {
     /**
-     * @var string HTTPS服务，缺省时默认开启【会产生计费】
+     * @var string 节点展示名称
      */
-    public $Switch;
+    public $DisplayName;
 
     /**
-     * @param string $Switch HTTPS服务，缺省时默认开启【会产生计费】
+     * @var string 子网ID
+     */
+    public $SubnetId;
+
+    /**
+     * @param string $DisplayName 节点展示名称
+     * @param string $SubnetId 子网ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class HttpsBilling extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("DisplayName",$param) and $param["DisplayName"] !== null) {
+            $this->DisplayName = $param["DisplayName"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

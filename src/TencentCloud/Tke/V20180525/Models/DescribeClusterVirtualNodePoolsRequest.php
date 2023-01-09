@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * HTTPS服务，若关闭，下发配置拦截https请求，开启时会产生计费
+ * DescribeClusterVirtualNodePools请求参数结构体
  *
- * @method string getSwitch() 获取HTTPS服务，缺省时默认开启【会产生计费】
- * @method void setSwitch(string $Switch) 设置HTTPS服务，缺省时默认开启【会产生计费】
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
  */
-class HttpsBilling extends AbstractModel
+class DescribeClusterVirtualNodePoolsRequest extends AbstractModel
 {
     /**
-     * @var string HTTPS服务，缺省时默认开启【会产生计费】
+     * @var string 集群ID
      */
-    public $Switch;
+    public $ClusterId;
 
     /**
-     * @param string $Switch HTTPS服务，缺省时默认开启【会产生计费】
+     * @param string $ClusterId 集群ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class HttpsBilling extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
-            $this->Switch = $param["Switch"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

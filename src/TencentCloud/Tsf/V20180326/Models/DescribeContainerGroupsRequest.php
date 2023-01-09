@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSearchWord() 获取搜索字段，模糊搜索groupName字段
  * @method void setSearchWord(string $SearchWord) 设置搜索字段，模糊搜索groupName字段
- * @method string getApplicationId() 获取分组所属应用ID
- * @method void setApplicationId(string $ApplicationId) 设置分组所属应用ID
+ * @method string getApplicationId() 获取分组所属应用ID。必填
+ * @method void setApplicationId(string $ApplicationId) 设置分组所属应用ID。必填
  * @method string getOrderBy() 获取排序字段，默认为 createTime字段，支持id， name， createTime
  * @method void setOrderBy(string $OrderBy) 设置排序字段，默认为 createTime字段，支持id， name， createTime
  * @method integer getOrderType() 获取排序方式，默认为1：倒序排序，0：正序，1：倒序
@@ -45,7 +45,7 @@ class DescribeContainerGroupsRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var string 分组所属应用ID
+     * @var string 分组所属应用ID。必填
      */
     public $ApplicationId;
 
@@ -81,7 +81,7 @@ class DescribeContainerGroupsRequest extends AbstractModel
 
     /**
      * @param string $SearchWord 搜索字段，模糊搜索groupName字段
-     * @param string $ApplicationId 分组所属应用ID
+     * @param string $ApplicationId 分组所属应用ID。必填
      * @param string $OrderBy 排序字段，默认为 createTime字段，支持id， name， createTime
      * @param integer $OrderType 排序方式，默认为1：倒序排序，0：正序，1：倒序
      * @param integer $Offset 偏移量，取值从0开始

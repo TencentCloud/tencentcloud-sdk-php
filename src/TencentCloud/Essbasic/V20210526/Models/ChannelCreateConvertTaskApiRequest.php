@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceName(string $ResourceName) 设置资源名称，长度限制为256字符
  * @method string getResourceId() 获取资源Id，通过UploadFiles获取
  * @method void setResourceId(string $ResourceId) 设置资源Id，通过UploadFiles获取
- * @method UserInfo getOperator() 获取操作者信息
- * @method void setOperator(UserInfo $Operator) 设置操作者信息
+ * @method UserInfo getOperator() 获取调用方用户信息，userId 必填
+ * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填
  * @method OrganizationInfo getOrganization() 获取暂未开放
  * @method void setOrganization(OrganizationInfo $Organization) 设置暂未开放
  */
@@ -56,7 +56,7 @@ class ChannelCreateConvertTaskApiRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var UserInfo 操作者信息
+     * @var UserInfo 调用方用户信息，userId 必填
      */
     public $Operator;
 
@@ -70,7 +70,7 @@ class ChannelCreateConvertTaskApiRequest extends AbstractModel
      * @param string $ResourceType 资源类型 取值范围doc,docx,html,xls,xlsx之一
      * @param string $ResourceName 资源名称，长度限制为256字符
      * @param string $ResourceId 资源Id，通过UploadFiles获取
-     * @param UserInfo $Operator 操作者信息
+     * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param OrganizationInfo $Organization 暂未开放
      */
     function __construct()

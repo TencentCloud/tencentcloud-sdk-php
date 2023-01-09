@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDegradeCapacityUsed(integer $DegradeCapacityUsed) 设置已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDeepArchiveCapacityUsed() 获取已使用COS深度归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeepArchiveCapacityUsed(integer $DeepArchiveCapacityUsed) 设置已使用COS深度归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIntelligentCapacityUsed() 获取已使用COS智能分层存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntelligentCapacityUsed(integer $IntelligentCapacityUsed) 设置已使用COS智能分层存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,6 +81,18 @@ class DescribeFileSystemResponse extends AbstractModel
     public $DegradeCapacityUsed;
 
     /**
+     * @var integer 已使用COS深度归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeepArchiveCapacityUsed;
+
+    /**
+     * @var integer 已使用COS智能分层存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IntelligentCapacityUsed;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -86,6 +106,10 @@ class DescribeFileSystemResponse extends AbstractModel
      * @param integer $StandardCapacityUsed 已使用COS标准存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DegradeCapacityUsed 已使用COS低频存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DeepArchiveCapacityUsed 已使用COS深度归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IntelligentCapacityUsed 已使用COS智能分层存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -121,6 +145,14 @@ class DescribeFileSystemResponse extends AbstractModel
 
         if (array_key_exists("DegradeCapacityUsed",$param) and $param["DegradeCapacityUsed"] !== null) {
             $this->DegradeCapacityUsed = $param["DegradeCapacityUsed"];
+        }
+
+        if (array_key_exists("DeepArchiveCapacityUsed",$param) and $param["DeepArchiveCapacityUsed"] !== null) {
+            $this->DeepArchiveCapacityUsed = $param["DeepArchiveCapacityUsed"];
+        }
+
+        if (array_key_exists("IntelligentCapacityUsed",$param) and $param["IntelligentCapacityUsed"] !== null) {
+            $this->IntelligentCapacityUsed = $param["IntelligentCapacityUsed"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

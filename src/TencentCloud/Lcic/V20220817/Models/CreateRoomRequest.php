@@ -48,11 +48,11 @@ video 纯视频
 coteaching 双师
  * @method string getTeacherId() 获取老师ID。通过[注册用户]接口获取的UserId。
  * @method void setTeacherId(string $TeacherId) 设置老师ID。通过[注册用户]接口获取的UserId。
- * @method integer getAutoMic() 获取进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+ * @method integer getAutoMic() 获取进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
- * @method void setAutoMic(integer $AutoMic) 设置进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+ * @method void setAutoMic(integer $AutoMic) 设置进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
  * @method integer getAudioQuality() 获取高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
@@ -60,12 +60,14 @@ coteaching 双师
  * @method void setAudioQuality(integer $AudioQuality) 设置高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
 1 开启高音质
- * @method integer getDisableRecord() 获取禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+ * @method integer getDisableRecord() 获取上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
- * @method void setDisableRecord(integer $DisableRecord) 设置禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
+ * @method void setDisableRecord(integer $DisableRecord) 设置上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
  * @method array getAssistants() 获取助教Id列表。通过[注册用户]接口获取的UserId。
  * @method void setAssistants(array $Assistants) 设置助教Id列表。通过[注册用户]接口获取的UserId。
  * @method integer getRecordLayout() 获取录制布局。
@@ -120,8 +122,8 @@ coteaching 双师
     public $TeacherId;
 
     /**
-     * @var integer 进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+     * @var integer 进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
      */
     public $AutoMic;
@@ -134,9 +136,10 @@ coteaching 双师
     public $AudioQuality;
 
     /**
-     * @var integer 禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+     * @var integer 上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      */
     public $DisableRecord;
 
@@ -165,15 +168,16 @@ videodoc 文档+视频
 video 纯视频
 coteaching 双师
      * @param string $TeacherId 老师ID。通过[注册用户]接口获取的UserId。
-     * @param integer $AutoMic 进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+     * @param integer $AutoMic 进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
      * @param integer $AudioQuality 高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
 1 开启高音质
-     * @param integer $DisableRecord 禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+     * @param integer $DisableRecord 上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      * @param array $Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
      * @param integer $RecordLayout 录制布局。
      */

@@ -23,9 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取发票类型
 026:增值税电子普通发票
 028:增值税电子专用发票
+010:电子发票（普通发票）
+020:电子发票（增值税专用发票）
  * @method void setType(string $Type) 设置发票类型
 026:增值税电子普通发票
 028:增值税电子专用发票
+010:电子发票（普通发票）
+020:电子发票（增值税专用发票）
  * @method string getInvoiceCode() 获取发票代码
  * @method void setInvoiceCode(string $InvoiceCode) 设置发票代码
  * @method string getInvoiceNumber() 获取发票号码
@@ -67,6 +71,8 @@ class VerifyOfdVatInvoiceOCRResponse extends AbstractModel
      * @var string 发票类型
 026:增值税电子普通发票
 028:增值税电子专用发票
+010:电子发票（普通发票）
+020:电子发票（增值税专用发票）
      */
     public $Type;
 
@@ -159,6 +165,8 @@ class VerifyOfdVatInvoiceOCRResponse extends AbstractModel
      * @param string $Type 发票类型
 026:增值税电子普通发票
 028:增值税电子专用发票
+010:电子发票（普通发票）
+020:电子发票（增值税专用发票）
      * @param string $InvoiceCode 发票代码
      * @param string $InvoiceNumber 发票号码
      * @param string $IssueDate 开票日期

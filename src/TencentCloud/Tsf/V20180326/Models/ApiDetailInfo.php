@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置Api描述信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApiMatchType() 获取API路径匹配类型。normal：普通API；wildcard：通配API。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApiMatchType(string $ApiMatchType) 设置API路径匹配类型。normal：普通API；wildcard：通配API。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiDetailInfo extends AbstractModel
 {
@@ -234,6 +238,12 @@ class ApiDetailInfo extends AbstractModel
     public $Description;
 
     /**
+     * @var string API路径匹配类型。normal：普通API；wildcard：通配API。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApiMatchType;
+
+    /**
      * @param string $ApiId API ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceId 命名空间ID
@@ -275,6 +285,8 @@ class ApiDetailInfo extends AbstractModel
      * @param string $ApiType API类型。 ms ： 微服务API； external :外部服务Api
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description Api描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApiMatchType API路径匹配类型。normal：普通API；wildcard：通配API。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -372,6 +384,10 @@ class ApiDetailInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ApiMatchType",$param) and $param["ApiMatchType"] !== null) {
+            $this->ApiMatchType = $param["ApiMatchType"];
         }
     }
 }

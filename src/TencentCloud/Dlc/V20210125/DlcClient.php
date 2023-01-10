@@ -83,6 +83,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyWorkGroupResponse ModifyWorkGroup(Models\ModifyWorkGroupRequest $req) 修改工作组信息
  * @method Models\ReportHeartbeatMetaDataResponse ReportHeartbeatMetaData(Models\ReportHeartbeatMetaDataRequest $req) 上报元数据心跳
+ * @method Models\SuspendResumeDataEngineResponse SuspendResumeDataEngine(Models\SuspendResumeDataEngineRequest $req) 本接口用于控制暂停或恢复数据引擎
  * @method Models\UnbindWorkGroupsFromUserResponse UnbindWorkGroupsFromUser(Models\UnbindWorkGroupsFromUserRequest $req) 解绑用户上的用户组
  * @method Models\UnlockMetaDataResponse UnlockMetaData(Models\UnlockMetaDataRequest $req) 元数据解锁
  */

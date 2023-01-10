@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFps(integer $Fps) 设置帧率，单位：hz。
  * @method string getCodecTag() 获取编码标签，仅当 Codec 为 hevc 时有效。
  * @method void setCodecTag(string $CodecTag) 设置编码标签，仅当 Codec 为 hevc 时有效。
+ * @method DynamicRangeInfo getDynamicRangeInfo() 获取画面动态范围信息。
+<li><font color=red>注意</font>：在 2023-01-10T00:00:00Z 后处理的转码文件，此字段有效。</li>
+ * @method void setDynamicRangeInfo(DynamicRangeInfo $DynamicRangeInfo) 设置画面动态范围信息。
+<li><font color=red>注意</font>：在 2023-01-10T00:00:00Z 后处理的转码文件，此字段有效。</li>
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -66,12 +70,20 @@ class MediaVideoStreamItem extends AbstractModel
     public $CodecTag;
 
     /**
+     * @var DynamicRangeInfo 画面动态范围信息。
+<li><font color=red>注意</font>：在 2023-01-10T00:00:00Z 后处理的转码文件，此字段有效。</li>
+     */
+    public $DynamicRangeInfo;
+
+    /**
      * @param integer $Bitrate 视频流的码率，单位：bps。
      * @param integer $Height 视频流的高度，单位：px。
      * @param integer $Width 视频流的宽度，单位：px。
      * @param string $Codec 视频流的编码格式，例如 h264。
      * @param integer $Fps 帧率，单位：hz。
      * @param string $CodecTag 编码标签，仅当 Codec 为 hevc 时有效。
+     * @param DynamicRangeInfo $DynamicRangeInfo 画面动态范围信息。
+<li><font color=red>注意</font>：在 2023-01-10T00:00:00Z 后处理的转码文件，此字段有效。</li>
      */
     function __construct()
     {
@@ -108,6 +120,11 @@ class MediaVideoStreamItem extends AbstractModel
 
         if (array_key_exists("CodecTag",$param) and $param["CodecTag"] !== null) {
             $this->CodecTag = $param["CodecTag"];
+        }
+
+        if (array_key_exists("DynamicRangeInfo",$param) and $param["DynamicRangeInfo"] !== null) {
+            $this->DynamicRangeInfo = new DynamicRangeInfo();
+            $this->DynamicRangeInfo->deserialize($param["DynamicRangeInfo"]);
         }
     }
 }

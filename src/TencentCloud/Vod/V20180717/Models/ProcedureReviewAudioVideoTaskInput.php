@@ -23,10 +23,12 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDefinition() 获取审核模板。
  * @method void setDefinition(integer $Definition) 设置审核模板。
  * @method array getReviewContents() 获取审核的内容，可选值：
-<li>Media：原始音视频。</li>
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
 不填或填空数组时，默认为审核 Media。
  * @method void setReviewContents(array $ReviewContents) 设置审核的内容，可选值：
-<li>Media：原始音视频。</li>
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
 不填或填空数组时，默认为审核 Media。
  */
 class ProcedureReviewAudioVideoTaskInput extends AbstractModel
@@ -38,7 +40,8 @@ class ProcedureReviewAudioVideoTaskInput extends AbstractModel
 
     /**
      * @var array 审核的内容，可选值：
-<li>Media：原始音视频。</li>
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
 不填或填空数组时，默认为审核 Media。
      */
     public $ReviewContents;
@@ -46,7 +49,8 @@ class ProcedureReviewAudioVideoTaskInput extends AbstractModel
     /**
      * @param integer $Definition 审核模板。
      * @param array $ReviewContents 审核的内容，可选值：
-<li>Media：原始音视频。</li>
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
 不填或填空数组时，默认为审核 Media。
      */
     function __construct()

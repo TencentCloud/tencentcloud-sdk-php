@@ -52,6 +52,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHighRiskCount(integer $HighRiskCount) 设置诊断风险项数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivacyTextName() 获取隐私申明文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivacyTextName(string $PrivacyTextName) 设置隐私申明文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSoftwareMD5() 获取软件MD5
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSoftwareMD5(string $SoftwareMD5) 设置软件MD5
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPrivacyTextMD5() 获取隐私文本MD5
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrivacyTextMD5(string $PrivacyTextMD5) 设置隐私文本MD5
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppInfoItem extends AbstractModel
 {
@@ -108,6 +120,24 @@ class AppInfoItem extends AbstractModel
     public $HighRiskCount;
 
     /**
+     * @var string 隐私申明文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrivacyTextName;
+
+    /**
+     * @var string 软件MD5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SoftwareMD5;
+
+    /**
+     * @var string 隐私文本MD5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrivacyTextMD5;
+
+    /**
      * @param string $AppPackage 小程序apiiid
      * @param string $AppName 小程序应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,6 +153,12 @@ class AppInfoItem extends AbstractModel
      * @param string $BehaviorTitle 小程序隐私诊断堆栈报告名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HighRiskCount 诊断风险项数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PrivacyTextName 隐私申明文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SoftwareMD5 软件MD5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PrivacyTextMD5 隐私文本MD5
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +208,18 @@ class AppInfoItem extends AbstractModel
 
         if (array_key_exists("HighRiskCount",$param) and $param["HighRiskCount"] !== null) {
             $this->HighRiskCount = $param["HighRiskCount"];
+        }
+
+        if (array_key_exists("PrivacyTextName",$param) and $param["PrivacyTextName"] !== null) {
+            $this->PrivacyTextName = $param["PrivacyTextName"];
+        }
+
+        if (array_key_exists("SoftwareMD5",$param) and $param["SoftwareMD5"] !== null) {
+            $this->SoftwareMD5 = $param["SoftwareMD5"];
+        }
+
+        if (array_key_exists("PrivacyTextMD5",$param) and $param["PrivacyTextMD5"] !== null) {
+            $this->PrivacyTextMD5 = $param["PrivacyTextMD5"];
         }
     }
 }

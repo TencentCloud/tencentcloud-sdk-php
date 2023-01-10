@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置任务启动时间
  * @method string getEndTime() 获取任务完成时间(更新时间)
  * @method void setEndTime(string $EndTime) 设置任务完成时间(更新时间)
+ * @method string getContactName() 获取联系人信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContactName(string $ContactName) 设置联系人信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppTaskData extends AbstractModel
 {
@@ -83,6 +87,12 @@ class AppTaskData extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 联系人信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ContactName;
+
+    /**
      * @param string $TaskID 任务id
      * @param integer $TaskType 任务类型, 0:基础版, 1:专家版, 2:本地化
      * @param integer $TaskStatus 0:默认值(待检测/待咨询), 1.检测中, 2:待评估, 3:评估中, 4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
@@ -92,6 +102,8 @@ class AppTaskData extends AbstractModel
      * @param AppInfoItem $AppInfo 应用信息
      * @param string $StartTime 任务启动时间
      * @param string $EndTime 任务完成时间(更新时间)
+     * @param string $ContactName 联系人信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -137,6 +149,10 @@ class AppTaskData extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("ContactName",$param) and $param["ContactName"] !== null) {
+            $this->ContactName = $param["ContactName"];
         }
     }
 }

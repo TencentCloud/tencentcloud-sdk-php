@@ -48,6 +48,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineRule(string $LineRule) 设置换行规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableAuth() 获取是否需要认证
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableAuth(boolean $EnableAuth) 设置是否需要认证
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUsername() 获取用户名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsername(string $Username) 设置用户名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPassword() 获取密码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPassword(string $Password) 设置密码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getKafkaInfos() 获取投递的topic和path
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKafkaInfos(array $KafkaInfos) 设置投递的topic和path
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableGlobalLineRule() 获取是否应用单行规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnableGlobalLineRule(boolean $EnableGlobalLineRule) 设置是否应用单行规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCustomRule() 获取自定义分行规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCustomRule(string $CustomRule) 设置自定义分行规则
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KafkaDeliveryConfig extends AbstractModel
 {
@@ -94,6 +118,42 @@ class KafkaDeliveryConfig extends AbstractModel
     public $LineRule;
 
     /**
+     * @var boolean 是否需要认证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableAuth;
+
+    /**
+     * @var string 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Username;
+
+    /**
+     * @var string 密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Password;
+
+    /**
+     * @var array 投递的topic和path
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KafkaInfos;
+
+    /**
+     * @var boolean 是否应用单行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnableGlobalLineRule;
+
+    /**
+     * @var string 自定义分行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CustomRule;
+
+    /**
      * @param string $ConfigId 配置项id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigName 配置名称
@@ -107,6 +167,18 @@ class KafkaDeliveryConfig extends AbstractModel
      * @param string $Topic kafka topic
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LineRule 换行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableAuth 是否需要认证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Username 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Password 密码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $KafkaInfos 投递的topic和path
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableGlobalLineRule 是否应用单行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CustomRule 自定义分行规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +220,35 @@ class KafkaDeliveryConfig extends AbstractModel
 
         if (array_key_exists("LineRule",$param) and $param["LineRule"] !== null) {
             $this->LineRule = $param["LineRule"];
+        }
+
+        if (array_key_exists("EnableAuth",$param) and $param["EnableAuth"] !== null) {
+            $this->EnableAuth = $param["EnableAuth"];
+        }
+
+        if (array_key_exists("Username",$param) and $param["Username"] !== null) {
+            $this->Username = $param["Username"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("KafkaInfos",$param) and $param["KafkaInfos"] !== null) {
+            $this->KafkaInfos = [];
+            foreach ($param["KafkaInfos"] as $key => $value){
+                $obj = new DeliveryKafkaInfo();
+                $obj->deserialize($value);
+                array_push($this->KafkaInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("EnableGlobalLineRule",$param) and $param["EnableGlobalLineRule"] !== null) {
+            $this->EnableGlobalLineRule = $param["EnableGlobalLineRule"];
+        }
+
+        if (array_key_exists("CustomRule",$param) and $param["CustomRule"] !== null) {
+            $this->CustomRule = $param["CustomRule"];
         }
     }
 }

@@ -40,11 +40,11 @@ use TencentCloud\Common\AbstractModel;
 3 全高清
  * @method integer getMaxMicNumber() 获取最大连麦人数（不包括老师）。取值范围[0, 16]
  * @method void setMaxMicNumber(integer $MaxMicNumber) 设置最大连麦人数（不包括老师）。取值范围[0, 16]
- * @method integer getAutoMic() 获取进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+ * @method integer getAutoMic() 获取进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
- * @method void setAutoMic(integer $AutoMic) 设置进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+ * @method void setAutoMic(integer $AutoMic) 设置进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
  * @method integer getAudioQuality() 获取高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
@@ -60,12 +60,14 @@ coteaching 双师
 videodoc 文档+视频
 video 纯视频
 coteaching 双师
- * @method integer getDisableRecord() 获取禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+ * @method integer getDisableRecord() 获取上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
- * @method void setDisableRecord(integer $DisableRecord) 设置禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
+ * @method void setDisableRecord(integer $DisableRecord) 设置上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
  * @method array getAssistants() 获取助教Id列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssistants(array $Assistants) 设置助教Id列表。
@@ -118,8 +120,8 @@ class DescribeRoomResponse extends AbstractModel
     public $MaxMicNumber;
 
     /**
-     * @var integer 进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+     * @var integer 进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
      */
     public $AutoMic;
@@ -140,9 +142,10 @@ coteaching 双师
     public $SubType;
 
     /**
-     * @var integer 禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+     * @var integer 上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      */
     public $DisableRecord;
 
@@ -174,8 +177,8 @@ coteaching 双师
 2 高清
 3 全高清
      * @param integer $MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
-     * @param integer $AutoMic 进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+     * @param integer $AutoMic 进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
      * @param integer $AudioQuality 高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
@@ -184,9 +187,10 @@ coteaching 双师
 videodoc 文档+视频
 video 纯视频
 coteaching 双师
-     * @param integer $DisableRecord 禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+     * @param integer $DisableRecord 上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      * @param array $Assistants 助教Id列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordUrl 录制地址。仅在房间结束后存在。

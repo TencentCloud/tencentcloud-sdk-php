@@ -43,7 +43,11 @@ use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Credential;
 
 try {
-    $cred = new Credential("secretId", "secretKey");
+    // 为了保护密钥安全，建议将密钥设置在环境变量中或者配置文件中。
+    // 硬编码密钥到代码中有可能随代码泄露而暴露，有安全隐患，并不推荐。
+    // $cred = new Credential("SecretId", "SecretKey");
+    $cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"),
+                           getenv("TENCENTCLOUD_SECRET_KEY"));
     $client = new CvmClient($cred, "ap-guangzhou");
     $req = new DescribeInstancesRequest();
     $resp = $client->DescribeInstances($req);
@@ -71,8 +75,12 @@ use TencentCloud\Common\Profile\ClientProfile;
 use TencentCloud\Common\Profile\HttpProfile;
 
 try {
-    // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
-    $cred = new Credential("secretId", "secretKey");
+    // 实例化一个证书对象，入参需要传入腾讯云账户 SecretId，SecretKey
+    // 为了保护密钥安全，建议将密钥设置在环境变量中或者配置文件中。
+    // 硬编码密钥到代码中有可能随代码泄露而暴露，有安全隐患，并不推荐。
+    // $cred = new Credential("SecretId", "SecretKey");
+    $cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"),
+                           getenv("TENCENTCLOUD_SECRET_KEY"));
 
     // 实例化一个http选项，可选的，没有特殊需求可以跳过
     $httpProfile = new HttpProfile();
@@ -126,8 +134,6 @@ catch(TencentCloudSDKException $e) {
 
 或者使用 GuzzleHttp 代理配置:
 ```php
-$cred = new Credential("secretId", "secretKey");
-
 $httpProfile = new HttpProfile();
 $httpProfile->setProxy('https://ip:port');
 

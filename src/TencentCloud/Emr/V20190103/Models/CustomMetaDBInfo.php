@@ -27,12 +27,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMetaDataPass() 获取自定义MetaDB密码
  * @method void setMetaDataPass(string $MetaDataPass) 设置自定义MetaDB密码
  * @method string getMetaType() 获取hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
  * @method void setMetaType(string $MetaType) 设置hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
  * @method string getUnifyMetaInstanceId() 获取EMR-MetaDB实例
  * @method void setUnifyMetaInstanceId(string $UnifyMetaInstanceId) 设置EMR-MetaDB实例
@@ -56,8 +56,8 @@ class CustomMetaDBInfo extends AbstractModel
 
     /**
      * @var string hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
      */
     public $MetaType;
@@ -72,8 +72,8 @@ class CustomMetaDBInfo extends AbstractModel
      * @param string $MetaDataUser 自定义MetaDB用户名
      * @param string $MetaDataPass 自定义MetaDB密码
      * @param string $MetaType hive共享元数据库类型。取值范围：
-<li>EMR_NEW_META：表示集群默认创建</li>
-<li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
+<li>EMR_DEFAULT_META：表示集群默认创建</li>
+<li>EMR_EXIST_META：表示集群使用指定EMR-MetaDB。</li>
 <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
      * @param string $UnifyMetaInstanceId EMR-MetaDB实例
      */

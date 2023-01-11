@@ -30,6 +30,7 @@ use TencentCloud\Thpc\V20220401\Models as Models;
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 本接口（DeleteCluster）用于删除一个指定的集群。
  * @method Models\DeleteClusterStorageOptionResponse DeleteClusterStorageOption(Models\DeleteClusterStorageOptionRequest $req) 本接口 (DeleteClusterStorageOption) 用于删除集群存储选项信息。
  * @method Models\DeleteNodesResponse DeleteNodes(Models\DeleteNodesRequest $req) 本接口(DeleteNodes)用于删除指定集群中一个或者多个计算节点或者登录节点。
+ * @method Models\DescribeAutoScalingConfigurationResponse DescribeAutoScalingConfiguration(Models\DescribeAutoScalingConfigurationRequest $req) 本接口(DescribeAutoScalingConfiguration)用于查询集群弹性伸缩配置信息。本接口仅适用于弹性伸缩类型为THPC_AS的集群。
  * @method Models\DescribeClusterActivitiesResponse DescribeClusterActivities(Models\DescribeClusterActivitiesRequest $req) 本接口（DescribeClusterActivities）用于查询集群活动历史记录列表。
  * @method Models\DescribeClusterStorageOptionResponse DescribeClusterStorageOption(Models\DescribeClusterStorageOptionRequest $req) 本接口 (DescribeClusterStorageOption) 用于查询集群存储选项信息。
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。

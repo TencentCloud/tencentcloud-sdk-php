@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableName(string $TableName) 设置表名称
  * @method string getSnapshotName() 获取快照名称
  * @method void setSnapshotName(string $SnapshotName) 设置快照名称
+ * @method array getSelectedTables() 获取批量拉取快照的表格列表
+ * @method void setSelectedTables(array $SelectedTables) 设置批量拉取快照的表格列表
  */
 class DescribeSnapshotsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeSnapshotsRequest extends AbstractModel
     public $SnapshotName;
 
     /**
+     * @var array 批量拉取快照的表格列表
+     */
+    public $SelectedTables;
+
+    /**
      * @param string $ClusterId 表格所属集群id
      * @param string $TableGroupId 所属表格组ID
      * @param string $TableName 表名称
      * @param string $SnapshotName 快照名称
+     * @param array $SelectedTables 批量拉取快照的表格列表
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class DescribeSnapshotsRequest extends AbstractModel
 
         if (array_key_exists("SnapshotName",$param) and $param["SnapshotName"] !== null) {
             $this->SnapshotName = $param["SnapshotName"];
+        }
+
+        if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
+            $this->SelectedTables = [];
+            foreach ($param["SelectedTables"] as $key => $value){
+                $obj = new SelectedTableInfoNew();
+                $obj->deserialize($value);
+                array_push($this->SelectedTables, $obj);
+            }
         }
     }
 }

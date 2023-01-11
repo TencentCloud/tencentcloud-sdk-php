@@ -62,6 +62,10 @@ false：有序签
  * @method void setCallbackUrl(string $CallbackUrl) 设置暂未开放
  * @method Agent getAgent() 获取应用相关信息
  * @method void setAgent(Agent $Agent) 设置应用相关信息
+ * @method array getCcInfos() 获取被抄送人的信息列表。
+注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
+ * @method void setCcInfos(array $CcInfos) 设置被抄送人的信息列表。
+注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
  */
 class CreateFlowRequest extends AbstractModel
 {
@@ -143,6 +147,12 @@ false：有序签
     public $Agent;
 
     /**
+     * @var array 被抄送人的信息列表。
+注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
+     */
+    public $CcInfos;
+
+    /**
      * @param UserInfo $Operator 调用方用户信息，userId 必填
      * @param string $FlowName 签署流程名称,最大长度200个字符
      * @param array $Approvers 签署流程参与者信息，最大限制50方
@@ -164,6 +174,8 @@ false：有序签
 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
      * @param string $CallbackUrl 暂未开放
      * @param Agent $Agent 应用相关信息
+     * @param array $CcInfos 被抄送人的信息列表。
+注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
      */
     function __construct()
     {
@@ -239,6 +251,15 @@ false：有序签
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("CcInfos",$param) and $param["CcInfos"] !== null) {
+            $this->CcInfos = [];
+            foreach ($param["CcInfos"] as $key => $value){
+                $obj = new CcInfo();
+                $obj->deserialize($value);
+                array_push($this->CcInfos, $obj);
+            }
         }
     }
 }

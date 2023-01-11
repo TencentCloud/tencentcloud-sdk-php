@@ -29,16 +29,16 @@ use TencentCloud\Common\AbstractModel;
 <li>数组长度限制：10。</li>
 <li>单个 ID 长度限制：40个字符。</li>
  * @method array getNames() 获取文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：40个字符。</li>
+<li>单个文件名长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
  * @method void setNames(array $Names) 设置文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：40个字符。</li>
+<li>单个文件名长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
  * @method array getNamePrefixes() 获取文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：20个字符。</li>
+<li>单个文件名前缀长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
  * @method void setNamePrefixes(array $NamePrefixes) 设置文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：20个字符。</li>
+<li>单个文件名前缀长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
  * @method array getDescriptions() 获取文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
 <li>单个描述长度限制：100个字符。</li>
@@ -51,11 +51,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClassIds(array $ClassIds) 设置分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
 <li>数组长度限制：10。</li>
  * @method array getTags() 获取标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：16个字符。</li>
-<li>数组长度限制：10。</li>
+<li>单个标签长度限制：32个字符。</li>
+<li>数组长度限制：16。</li>
  * @method void setTags(array $Tags) 设置标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：16个字符。</li>
-<li>数组长度限制：10。</li>
+<li>单个标签长度限制：32个字符。</li>
+<li>数组长度限制：16。</li>
  * @method array getCategories() 获取文件类型。匹配集合中的任意元素：
 <li>Video: 视频文件</li>
 <li>Audio: 音频文件</li>
@@ -195,14 +195,14 @@ class SearchMediaRequest extends AbstractModel
 
     /**
      * @var array 文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：40个字符。</li>
+<li>单个文件名长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public $Names;
 
     /**
      * @var array 文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：20个字符。</li>
+<li>单个文件名前缀长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public $NamePrefixes;
@@ -222,8 +222,8 @@ class SearchMediaRequest extends AbstractModel
 
     /**
      * @var array 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：16个字符。</li>
-<li>数组长度限制：10。</li>
+<li>单个标签长度限制：32个字符。</li>
+<li>数组长度限制：16。</li>
      */
     public $Tags;
 
@@ -374,10 +374,10 @@ class SearchMediaRequest extends AbstractModel
 <li>数组长度限制：10。</li>
 <li>单个 ID 长度限制：40个字符。</li>
      * @param array $Names 文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：40个字符。</li>
+<li>单个文件名长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      * @param array $NamePrefixes 文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：20个字符。</li>
+<li>单个文件名前缀长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      * @param array $Descriptions 文件描述集合，模糊匹配媒体文件的描述，匹配度越高，排序越优先。
 <li>单个描述长度限制：100个字符。</li>
@@ -385,8 +385,8 @@ class SearchMediaRequest extends AbstractModel
      * @param array $ClassIds 分类 ID 集合，匹配集合指定 ID 的分类及其所有子类。
 <li>数组长度限制：10。</li>
      * @param array $Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：16个字符。</li>
-<li>数组长度限制：10。</li>
+<li>单个标签长度限制：32个字符。</li>
+<li>数组长度限制：16。</li>
      * @param array $Categories 文件类型。匹配集合中的任意元素：
 <li>Video: 视频文件</li>
 <li>Audio: 音频文件</li>

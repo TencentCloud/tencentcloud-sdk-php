@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetails(array $Details) 设置ocr结果详情
  * @method string getText() 获取ocr识别出的文本结果
  * @method void setText(string $Text) 设置ocr识别出的文本结果
+ * @method integer getHitFlag() 获取是否命中结果，0 未命中 1命中
+ * @method void setHitFlag(integer $HitFlag) 设置是否命中结果，0 未命中 1命中
  */
 class OcrResult extends AbstractModel
 {
@@ -79,6 +81,11 @@ class OcrResult extends AbstractModel
     public $Text;
 
     /**
+     * @var integer 是否命中结果，0 未命中 1命中
+     */
+    public $HitFlag;
+
+    /**
      * @param string $Scene 场景识别结果
      * @param string $Suggestion 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
@@ -88,6 +95,7 @@ class OcrResult extends AbstractModel
      * @param integer $Score 该标签模型命中的分值
      * @param array $Details ocr结果详情
      * @param string $Text ocr识别出的文本结果
+     * @param integer $HitFlag 是否命中结果，0 未命中 1命中
      */
     function __construct()
     {
@@ -133,6 +141,10 @@ class OcrResult extends AbstractModel
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
+            $this->HitFlag = $param["HitFlag"];
         }
     }
 }

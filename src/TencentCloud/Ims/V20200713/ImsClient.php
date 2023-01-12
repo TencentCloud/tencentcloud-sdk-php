@@ -23,8 +23,6 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ims\V20200713\Models as Models;
 
 /**
- * @method Models\DescribeImageStatResponse DescribeImageStat(Models\DescribeImageStatRequest $req) 控制台识别统计
- * @method Models\DescribeImsListResponse DescribeImsList(Models\DescribeImsListRequest $req) 图片机器审核明细
  * @method Models\ImageModerationResponse ImageModeration(Models\ImageModerationRequest $req) 图片内容检测服务（Image Moderation, IM）能自动扫描图片，识别可能令人反感、不安全或不适宜的内容，同时支持用户配置图片黑名单，打击自定义识别类型的图片。
 
 <div class="rno-api-explorer" style="margin-bottom:20px">

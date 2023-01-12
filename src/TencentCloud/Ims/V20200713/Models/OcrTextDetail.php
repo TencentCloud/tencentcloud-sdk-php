@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(Location $Location) 设置OCR位置
  * @method integer getRate() 获取OCR文本识别置信度
  * @method void setRate(integer $Rate) 设置OCR文本识别置信度
+ * @method string getSubLabel() 获取OCR文本命中的二级标签
+ * @method void setSubLabel(string $SubLabel) 设置OCR文本命中的二级标签
  */
 class OcrTextDetail extends AbstractModel
 {
@@ -83,6 +85,11 @@ class OcrTextDetail extends AbstractModel
     public $Rate;
 
     /**
+     * @var string OCR文本命中的二级标签
+     */
+    public $SubLabel;
+
+    /**
      * @param string $Text OCR文本内容
      * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
 以及令人反感、不安全或不适宜的内容类型。
@@ -92,6 +99,7 @@ class OcrTextDetail extends AbstractModel
      * @param integer $Score 该标签模型命中的分值
      * @param Location $Location OCR位置
      * @param integer $Rate OCR文本识别置信度
+     * @param string $SubLabel OCR文本命中的二级标签
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class OcrTextDetail extends AbstractModel
 
         if (array_key_exists("Rate",$param) and $param["Rate"] !== null) {
             $this->Rate = $param["Rate"];
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
         }
     }
 }

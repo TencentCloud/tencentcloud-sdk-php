@@ -14,40 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ims\V20200713\Models;
+namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeImageStat返回参数结构体
+ * DescribeExtendedServiceAuthInfo返回参数结构体
  *
- * @method Overview getOverview() 获取识别结果统计
- * @method void setOverview(Overview $Overview) 设置识别结果统计
- * @method array getTrendCount() 获取识别量统计
- * @method void setTrendCount(array $TrendCount) 设置识别量统计
- * @method array getEvilCount() 获取违规数据分布
+ * @method array getAuthInfo() 获取企业扩展服务授权信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEvilCount(array $EvilCount) 设置违规数据分布
+ * @method void setAuthInfo(array $AuthInfo) 设置企业扩展服务授权信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeImageStatResponse extends AbstractModel
+class DescribeExtendedServiceAuthInfoResponse extends AbstractModel
 {
     /**
-     * @var Overview 识别结果统计
-     */
-    public $Overview;
-
-    /**
-     * @var array 识别量统计
-     */
-    public $TrendCount;
-
-    /**
-     * @var array 违规数据分布
+     * @var array 企业扩展服务授权信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $EvilCount;
+    public $AuthInfo;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -55,9 +41,7 @@ class DescribeImageStatResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param Overview $Overview 识别结果统计
-     * @param array $TrendCount 识别量统计
-     * @param array $EvilCount 违规数据分布
+     * @param array $AuthInfo 企业扩展服务授权信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -74,26 +58,12 @@ class DescribeImageStatResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Overview",$param) and $param["Overview"] !== null) {
-            $this->Overview = new Overview();
-            $this->Overview->deserialize($param["Overview"]);
-        }
-
-        if (array_key_exists("TrendCount",$param) and $param["TrendCount"] !== null) {
-            $this->TrendCount = [];
-            foreach ($param["TrendCount"] as $key => $value){
-                $obj = new TrendCount();
+        if (array_key_exists("AuthInfo",$param) and $param["AuthInfo"] !== null) {
+            $this->AuthInfo = [];
+            foreach ($param["AuthInfo"] as $key => $value){
+                $obj = new ExtentServiceAuthInfo();
                 $obj->deserialize($value);
-                array_push($this->TrendCount, $obj);
-            }
-        }
-
-        if (array_key_exists("EvilCount",$param) and $param["EvilCount"] !== null) {
-            $this->EvilCount = [];
-            foreach ($param["EvilCount"] as $key => $value){
-                $obj = new EvilCount();
-                $obj->deserialize($value);
-                array_push($this->EvilCount, $obj);
+                array_push($this->AuthInfo, $obj);
             }
         }
 

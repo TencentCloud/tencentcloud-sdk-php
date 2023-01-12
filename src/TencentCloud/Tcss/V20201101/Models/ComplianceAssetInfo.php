@@ -72,6 +72,10 @@ RESULT_PASSED: 通过。
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取主机节点的实例id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置主机节点的实例id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceAssetInfo extends AbstractModel
 {
@@ -146,6 +150,12 @@ RESULT_PASSED: 通过。
     public $CheckResult;
 
     /**
+     * @var string 主机节点的实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
      * @param integer $CustomerAssetId 客户资产的ID。
      * @param string $AssetType 资产类别。
      * @param string $AssetName 资产的名称。
@@ -171,6 +181,8 @@ CHECK_FAILED, 检测失败
      * @param string $CheckResult 检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 主机节点的实例id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +240,10 @@ RESULT_PASSED: 通过。
 
         if (array_key_exists("CheckResult",$param) and $param["CheckResult"] !== null) {
             $this->CheckResult = $param["CheckResult"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

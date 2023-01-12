@@ -30,7 +30,7 @@ use TencentCloud\Btoe\V20210514\Models as Models;
  * @method Models\CreateHashDepositNoCertResponse CreateHashDepositNoCert(Models\CreateHashDepositNoCertRequest $req) 用户通过本接口向BTOE写入待存证的原文数据Hash值，BTOE对业务数据Hash值存证上链，本接口不生成区块链存证电子凭证。
  * @method Models\CreateHashDepositNoSealResponse CreateHashDepositNoSeal(Models\CreateHashDepositNoSealRequest $req) 用户通过本接口向BTOE写入待存证的原文数据Hash值，BTOE对业务数据Hash值存证上链，并生成无电子签章的区块链存证电子凭证。
  * @method Models\CreateImageDepositResponse CreateImageDeposit(Models\CreateImageDepositRequest $req) 用户通过本接口向BTOE写入待存证的图片原文件或下载URL，BTOE对图片原文件存储后，将其Hash值存证上链，并生成含有电子签章的区块链存证电子凭证。图片类型支持格式：png、jpg、jpeg、bmp、gif、svg；原文件上传大小不超过5 MB，下载URL文件大小不超过10 MB。
- * @method Models\CreateVideoDepositResponse CreateVideoDeposit(Models\CreateVideoDepositRequest $req) 用户通过本接口向BTOE写入待存证的视频的原文件或下载URL，BTOE对视频原文件存储后，将其Hash值存证上链，并生成含有电子签章的区块链存证电子凭证。视频文件支持格式：mp4、avi、mkv、mov、flv,wmv,rmvb,3gp；文件大小限制：直接上传原文件不大于5MB，下载URL文件大小不大于200 MB。
+ * @method Models\CreateVideoDepositResponse CreateVideoDeposit(Models\CreateVideoDepositRequest $req) 用户通过本接口向BTOE写入待存证的视频的原文件或下载URL，BTOE对视频原文件存储后，将其Hash值存证上链，并生成含有电子签章的区块链存证电子凭证。视频文件支持格式：mp4、avi、mkv、mov、flv,wmv,rmvb,3gp；文件大小限制：直接上传原文件不大于5MB。
  * @method Models\GetDepositCertResponse GetDepositCert(Models\GetDepositCertRequest $req) 用户通过存证编码向BTOE查询存证电子凭证信息。
  * @method Models\GetDepositFileResponse GetDepositFile(Models\GetDepositFileRequest $req) 用户通过存证编码向BTOE获取存证文件的下载URL。
 -注：Hash类存证、业务数据明文存证不产生存证文件。

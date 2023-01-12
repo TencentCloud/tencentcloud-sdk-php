@@ -20,14 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 识别出的算术式信息及评估结果
  *
- * @method string getItem() 获取识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
- * @method void setItem(string $Item) 设置识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
+ * @method string getItem() 获取识别的算式是否正确，算式运算结果:
+‘YES’:正确 
+‘NO’: 错误 
+‘NA’: 非法参数
+‘EMPTY’: 未作答
+ * @method void setItem(string $Item) 设置识别的算式是否正确，算式运算结果:
+‘YES’:正确 
+‘NO’: 错误 
+‘NA’: 非法参数
+‘EMPTY’: 未作答
  * @method string getItemString() 获取识别出的算式，识别出的文本行字符串
  * @method void setItemString(string $ItemString) 设置识别出的算式，识别出的文本行字符串
  * @method ItemCoord getItemCoord() 获取识别的算式在图片上的位置信息，文本行在旋转纠正之后的图像中的像素坐 标，表示为(左上角 x, 左上角 y，宽 width， 高 height)
  * @method void setItemCoord(ItemCoord $ItemCoord) 设置识别的算式在图片上的位置信息，文本行在旋转纠正之后的图像中的像素坐 标，表示为(左上角 x, 左上角 y，宽 width， 高 height)
  * @method string getAnswer() 获取错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
+(注:使用@@标记答案填写区域)
  * @method void setAnswer(string $Answer) 设置错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
+(注:使用@@标记答案填写区域)
  * @method string getExpressionType() 获取算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpressionType(string $ExpressionType) 设置算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
@@ -44,7 +54,11 @@ use TencentCloud\Common\AbstractModel;
 class Item extends AbstractModel
 {
     /**
-     * @var string 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
+     * @var string 识别的算式是否正确，算式运算结果:
+‘YES’:正确 
+‘NO’: 错误 
+‘NA’: 非法参数
+‘EMPTY’: 未作答
      */
     public $Item;
 
@@ -60,6 +74,7 @@ class Item extends AbstractModel
 
     /**
      * @var string 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
+(注:使用@@标记答案填写区域)
      */
     public $Answer;
 
@@ -82,10 +97,15 @@ class Item extends AbstractModel
     public $QuestionId;
 
     /**
-     * @param string $Item 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
+     * @param string $Item 识别的算式是否正确，算式运算结果:
+‘YES’:正确 
+‘NO’: 错误 
+‘NA’: 非法参数
+‘EMPTY’: 未作答
      * @param string $ItemString 识别出的算式，识别出的文本行字符串
      * @param ItemCoord $ItemCoord 识别的算式在图片上的位置信息，文本行在旋转纠正之后的图像中的像素坐 标，表示为(左上角 x, 左上角 y，宽 width， 高 height)
      * @param string $Answer 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
+(注:使用@@标记答案填写区域)
      * @param string $ExpressionType 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ItemConf 文本行置信度

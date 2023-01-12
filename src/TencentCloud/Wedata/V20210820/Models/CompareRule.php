@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置比较条件列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCycleStep() 获取周期性模板默认周期，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCycleStep(integer $CycleStep) 设置周期性模板默认周期，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareRule extends AbstractModel
 {
@@ -34,7 +38,15 @@ class CompareRule extends AbstractModel
     public $Items;
 
     /**
+     * @var integer 周期性模板默认周期，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CycleStep;
+
+    /**
      * @param array $Items 比较条件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CycleStep 周期性模板默认周期，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -57,6 +69,10 @@ class CompareRule extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("CycleStep",$param) and $param["CycleStep"] !== null) {
+            $this->CycleStep = $param["CycleStep"];
         }
     }
 }

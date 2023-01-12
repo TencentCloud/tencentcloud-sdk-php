@@ -74,6 +74,10 @@ RESULT_PASSED: 通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyInfo(string $VerifyInfo) 设置检查项验证信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取主机实例id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置主机实例id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceAffectedAsset extends AbstractModel
 {
@@ -145,6 +149,12 @@ RESULT_PASSED: 通过
     public $VerifyInfo;
 
     /**
+     * @var string 主机实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
      * @param integer $CustomerAssetId 为客户分配的唯一的资产项的ID。
      * @param string $AssetName 资产项的名称。
      * @param string $AssetType 资产项的类型
@@ -171,6 +181,8 @@ RESULT_PASSED: 通过
      * @param string $ImageTag 镜像的tag
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VerifyInfo 检查项验证信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 主机实例id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -224,6 +236,10 @@ RESULT_PASSED: 通过
 
         if (array_key_exists("VerifyInfo",$param) and $param["VerifyInfo"] !== null) {
             $this->VerifyInfo = $param["VerifyInfo"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

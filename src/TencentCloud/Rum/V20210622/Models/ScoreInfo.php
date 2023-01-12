@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordNum(integer $RecordNum) 设置num
  * @method string getPageDuration() 获取Duration
  * @method void setPageDuration(string $PageDuration) 设置Duration
+ * @method string getCreateTime() 获取时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScoreInfo extends AbstractModel
 {
@@ -115,6 +119,12 @@ class ScoreInfo extends AbstractModel
     public $PageDuration;
 
     /**
+     * @var string 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param string $StaticDuration duration
      * @param string $PagePv pv
      * @param string $ApiFail 失败
@@ -128,6 +138,8 @@ class ScoreInfo extends AbstractModel
      * @param string $StaticNum num
      * @param integer $RecordNum num
      * @param string $PageDuration Duration
+     * @param string $CreateTime 时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -192,6 +204,10 @@ class ScoreInfo extends AbstractModel
 
         if (array_key_exists("PageDuration",$param) and $param["PageDuration"] !== null) {
             $this->PageDuration = $param["PageDuration"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

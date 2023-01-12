@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FuseFace请求参数结构体
  *
- * @method string getProjectId() 获取活动 ID，请在人脸融合控制台查看。
- * @method void setProjectId(string $ProjectId) 设置活动 ID，请在人脸融合控制台查看。
- * @method string getModelId() 获取素材 ID，请在人脸融合控制台查看。
- * @method void setModelId(string $ModelId) 设置素材 ID，请在人脸融合控制台查看。
+ * @method string getProjectId() 获取活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
+ * @method void setProjectId(string $ProjectId) 设置活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
+ * @method string getModelId() 获取素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
+ * @method void setModelId(string $ModelId) 设置素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
  * @method string getRspImgType() 获取返回图像方式（url 或 base64) ，二选一。url有效期为7天。
  * @method void setRspImgType(string $RspImgType) 设置返回图像方式（url 或 base64) ，二选一。url有效期为7天。
  * @method array getMergeInfos() 获取用户人脸图片、素材模板图的人脸位置信息。
@@ -54,12 +54,12 @@ use TencentCloud\Common\AbstractModel;
 class FuseFaceRequest extends AbstractModel
 {
     /**
-     * @var string 活动 ID，请在人脸融合控制台查看。
+     * @var string 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      */
     public $ProjectId;
 
     /**
-     * @var string 素材 ID，请在人脸融合控制台查看。
+     * @var string 素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      */
     public $ModelId;
 
@@ -101,8 +101,8 @@ class FuseFaceRequest extends AbstractModel
     public $LogoParam;
 
     /**
-     * @param string $ProjectId 活动 ID，请在人脸融合控制台查看。
-     * @param string $ModelId 素材 ID，请在人脸融合控制台查看。
+     * @param string $ProjectId 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
+     * @param string $ModelId 素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      * @param string $RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
      * @param array $MergeInfos 用户人脸图片、素材模板图的人脸位置信息。
      * @param integer $FuseProfileDegree 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 

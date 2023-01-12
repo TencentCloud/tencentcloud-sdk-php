@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScore(integer $Score) 设置分数
  * @method Location getLocation() 获取检测框坐标
  * @method void setLocation(Location $Location) 设置检测框坐标
+ * @method string getSubLabel() 获取二级标签名称
+ * @method void setSubLabel(string $SubLabel) 设置二级标签名称
  */
 class ObjectDetail extends AbstractModel
 {
@@ -62,12 +64,18 @@ class ObjectDetail extends AbstractModel
     public $Location;
 
     /**
+     * @var string 二级标签名称
+     */
+    public $SubLabel;
+
+    /**
      * @param integer $Id 序号
      * @param string $Name 标签名称
      * @param string $Value 标签值，
 当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
      * @param integer $Score 分数
      * @param Location $Location 检测框坐标
+     * @param string $SubLabel 二级标签名称
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class ObjectDetail extends AbstractModel
         if (array_key_exists("Location",$param) and $param["Location"] !== null) {
             $this->Location = new Location();
             $this->Location->deserialize($param["Location"]);
+        }
+
+        if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
+            $this->SubLabel = $param["SubLabel"];
         }
     }
 }

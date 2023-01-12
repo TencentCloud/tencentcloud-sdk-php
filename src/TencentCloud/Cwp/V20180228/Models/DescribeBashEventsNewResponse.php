@@ -14,33 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ims\V20200713\Models;
+namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeImsList返回参数结构体
+ * DescribeBashEventsNew返回参数结构体
  *
- * @method array getImsDetailSet() 获取返回列表数据----非必选，该参数暂未对外开放
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImsDetailSet(array $ImsDetailSet) 设置返回列表数据----非必选，该参数暂未对外开放
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总条数
  * @method void setTotalCount(integer $TotalCount) 设置总条数
+ * @method array getList() 获取高危命令事件列表
+ * @method void setList(array $List) 设置高危命令事件列表
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeImsListResponse extends AbstractModel
+class DescribeBashEventsNewResponse extends AbstractModel
 {
-    /**
-     * @var array 返回列表数据----非必选，该参数暂未对外开放
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ImsDetailSet;
-
     /**
      * @var integer 总条数
      */
     public $TotalCount;
+
+    /**
+     * @var array 高危命令事件列表
+     */
+    public $List;
 
     /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,9 +45,8 @@ class DescribeImsListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ImsDetailSet 返回列表数据----非必选，该参数暂未对外开放
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总条数
+     * @param array $List 高危命令事件列表
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,17 +62,17 @@ class DescribeImsListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ImsDetailSet",$param) and $param["ImsDetailSet"] !== null) {
-            $this->ImsDetailSet = [];
-            foreach ($param["ImsDetailSet"] as $key => $value){
-                $obj = new ImsDetail();
-                $obj->deserialize($value);
-                array_push($this->ImsDetailSet, $obj);
-            }
-        }
-
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("List",$param) and $param["List"] !== null) {
+            $this->List = [];
+            foreach ($param["List"] as $key => $value){
+                $obj = new BashEventNew();
+                $obj->deserialize($value);
+                array_push($this->List, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

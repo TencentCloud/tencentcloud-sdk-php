@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置主题名称，3-64个字符，只能包含字母、数字、“-”及“_”
  * @method array getNamespaces() 获取主题所在的命名空间，目前支持在单个命名空间下创建主题
  * @method void setNamespaces(array $Namespaces) 设置主题所在的命名空间，目前支持在单个命名空间下创建主题
- * @method string getType() 获取主题类型，可选值为Normal, GlobalOrder, PartitionedOrder
- * @method void setType(string $Type) 设置主题类型，可选值为Normal, GlobalOrder, PartitionedOrder
+ * @method string getType() 获取主题类型，可选值为Normal, PartitionedOrder, Transaction, DelayScheduled。
+ * @method void setType(string $Type) 设置主题类型，可选值为Normal, PartitionedOrder, Transaction, DelayScheduled。
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getRemark() 获取主题说明，最大128个字符
@@ -46,7 +46,7 @@ class CreateRocketMQTopicRequest extends AbstractModel
     public $Namespaces;
 
     /**
-     * @var string 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder
+     * @var string 主题类型，可选值为Normal, PartitionedOrder, Transaction, DelayScheduled。
      */
     public $Type;
 
@@ -68,7 +68,7 @@ class CreateRocketMQTopicRequest extends AbstractModel
     /**
      * @param string $Topic 主题名称，3-64个字符，只能包含字母、数字、“-”及“_”
      * @param array $Namespaces 主题所在的命名空间，目前支持在单个命名空间下创建主题
-     * @param string $Type 主题类型，可选值为Normal, GlobalOrder, PartitionedOrder
+     * @param string $Type 主题类型，可选值为Normal, PartitionedOrder, Transaction, DelayScheduled。
      * @param string $ClusterId 集群ID
      * @param string $Remark 主题说明，最大128个字符
      * @param integer $PartitionNum 分区数，全局顺序无效

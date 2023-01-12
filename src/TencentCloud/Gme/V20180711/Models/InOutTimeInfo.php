@@ -18,7 +18,7 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 用户进出房间信息
+ * 房间内的事件
  *
  * @method integer getStartTime() 获取进入房间时间
  * @method void setStartTime(integer $StartTime) 设置进入房间时间

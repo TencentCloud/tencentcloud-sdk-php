@@ -13,7 +13,9 @@ use TencentCloud\Common\Profile\HttpProfile;
 
 try {
     // 实例化一个证书对象，入参需要传入腾讯云账户secretId，secretKey
-    $cred = new Credential("【secretId】", "【secretKey】");
+    // $cred = new Credential("【secretId】", "【secretKey】");
+    $cred = new Credential(getenv("TENCENTCLOUD_SECRET_ID"),
+                           getenv("TENCENTCLOUD_SECRET_KEY"));
 
     // 实例化一个http选项，可选的，没有特殊需求可以跳过
     $httpProfile = new HttpProfile();

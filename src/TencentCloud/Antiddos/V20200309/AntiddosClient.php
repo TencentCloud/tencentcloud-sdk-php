@@ -81,7 +81,6 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListBGPIPInstancesResponse DescribeListBGPIPInstances(Models\DescribeListBGPIPInstancesRequest $req) 获取高防IP资产实例列表
 
  * @method Models\DescribeListBGPInstancesResponse DescribeListBGPInstances(Models\DescribeListBGPInstancesRequest $req) 获取高防包资产实例列表
-
  * @method Models\DescribeListBlackWhiteIpListResponse DescribeListBlackWhiteIpList(Models\DescribeListBlackWhiteIpListRequest $req) 获取DDoS防护的IP黑白名单列表
  * @method Models\DescribeListDDoSAIResponse DescribeListDDoSAI(Models\DescribeListDDoSAIRequest $req) 获取DDoS防护的AI防护开关列表
  * @method Models\DescribeListDDoSGeoIPBlockConfigResponse DescribeListDDoSGeoIPBlockConfig(Models\DescribeListDDoSGeoIPBlockConfigRequest $req) 获取DDoS防护的区域封禁配置列表

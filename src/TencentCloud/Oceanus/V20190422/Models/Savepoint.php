@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSerialId(string $SerialId) 设置快照 serialId
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTimeConsuming() 获取耗时
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimeConsuming(integer $TimeConsuming) 设置耗时
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPathStatus() 获取快照路径状态 1：可用；2：不可用；
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPathStatus(integer $PathStatus) 设置快照路径状态 1：可用；2：不可用；
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Savepoint extends AbstractModel
 {
@@ -144,6 +152,18 @@ class Savepoint extends AbstractModel
     public $SerialId;
 
     /**
+     * @var integer 耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TimeConsuming;
+
+    /**
+     * @var integer 快照路径状态 1：可用；2：不可用；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PathStatus;
+
+    /**
      * @param integer $Id 主键
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VersionId 版本号
@@ -167,6 +187,10 @@ class Savepoint extends AbstractModel
      * @param integer $Timeout 固定超时时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SerialId 快照 serialId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TimeConsuming 耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PathStatus 快照路径状态 1：可用；2：不可用；
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +252,14 @@ class Savepoint extends AbstractModel
 
         if (array_key_exists("SerialId",$param) and $param["SerialId"] !== null) {
             $this->SerialId = $param["SerialId"];
+        }
+
+        if (array_key_exists("TimeConsuming",$param) and $param["TimeConsuming"] !== null) {
+            $this->TimeConsuming = $param["TimeConsuming"];
+        }
+
+        if (array_key_exists("PathStatus",$param) and $param["PathStatus"] !== null) {
+            $this->PathStatus = $param["PathStatus"];
         }
     }
 }

@@ -46,6 +46,8 @@ major 大版本原地升级
  * @method void setSkipPreCheck(boolean $SkipPreCheck) 设置是否忽略节点升级前检查
  * @method float getMaxNotReadyPercent() 获取最大可容忍的不可用Pod比例
  * @method void setMaxNotReadyPercent(float $MaxNotReadyPercent) 设置最大可容忍的不可用Pod比例
+ * @method boolean getUpgradeRunTime() 获取是否升级节点运行时，默认false不升级
+ * @method void setUpgradeRunTime(boolean $UpgradeRunTime) 设置是否升级节点运行时，默认false不升级
  */
 class UpgradeClusterInstancesRequest extends AbstractModel
 {
@@ -91,6 +93,11 @@ major 大版本原地升级
     public $MaxNotReadyPercent;
 
     /**
+     * @var boolean 是否升级节点运行时，默认false不升级
+     */
+    public $UpgradeRunTime;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $Operation create 表示开始一次升级任务
 pause 表示停止任务
@@ -104,6 +111,7 @@ major 大版本原地升级
      * @param UpgradeNodeResetParam $ResetParam 当节点重新加入集群时候所使用的参数，参考添加已有节点接口
      * @param boolean $SkipPreCheck 是否忽略节点升级前检查
      * @param float $MaxNotReadyPercent 最大可容忍的不可用Pod比例
+     * @param boolean $UpgradeRunTime 是否升级节点运行时，默认false不升级
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ major 大版本原地升级
 
         if (array_key_exists("MaxNotReadyPercent",$param) and $param["MaxNotReadyPercent"] !== null) {
             $this->MaxNotReadyPercent = $param["MaxNotReadyPercent"];
+        }
+
+        if (array_key_exists("UpgradeRunTime",$param) and $param["UpgradeRunTime"] !== null) {
+            $this->UpgradeRunTime = $param["UpgradeRunTime"];
         }
     }
 }

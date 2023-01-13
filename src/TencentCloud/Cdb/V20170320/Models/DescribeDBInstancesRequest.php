@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置私有网络字符型subnetId
  * @method array getTags() 获取标签键值
  * @method void setTags(array $Tags) 设置标签键值
+ * @method array getProxyVips() 获取数据库代理 IP 。
+ * @method void setProxyVips(array $ProxyVips) 设置数据库代理 IP 。
+ * @method array getProxyIds() 获取数据库代理 ID 。
+ * @method void setProxyIds(array $ProxyIds) 设置数据库代理 ID 。
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -248,6 +252,16 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var array 数据库代理 IP 。
+     */
+    public $ProxyVips;
+
+    /**
+     * @var array 数据库代理 ID 。
+     */
+    public $ProxyIds;
+
+    /**
      * @param integer $ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      * @param array $InstanceTypes 实例类型，可取值：1 - 主实例，2 - 灾备实例，3 - 只读实例。
      * @param array $Vips 实例的内网 IP 地址。
@@ -280,6 +294,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $UniqueVpcIds 私有网络字符型vpcId
      * @param array $UniqSubnetIds 私有网络字符型subnetId
      * @param array $Tags 标签键值
+     * @param array $ProxyVips 数据库代理 IP 。
+     * @param array $ProxyIds 数据库代理 ID 。
      */
     function __construct()
     {
@@ -425,6 +441,14 @@ class DescribeDBInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ProxyVips",$param) and $param["ProxyVips"] !== null) {
+            $this->ProxyVips = $param["ProxyVips"];
+        }
+
+        if (array_key_exists("ProxyIds",$param) and $param["ProxyIds"] !== null) {
+            $this->ProxyIds = $param["ProxyIds"];
         }
     }
 }

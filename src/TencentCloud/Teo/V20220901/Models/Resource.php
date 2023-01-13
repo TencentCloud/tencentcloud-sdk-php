@@ -55,9 +55,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getArea() 获取地域，取值有：
 <li>mainland：国内；</li>
 <li>overseas：海外。</li>
+<li>global：全球。</li>
  * @method void setArea(string $Area) 设置地域，取值有：
 <li>mainland：国内；</li>
 <li>overseas：海外。</li>
+<li>global：全球。</li>
  */
 class Resource extends AbstractModel
 {
@@ -117,6 +119,7 @@ class Resource extends AbstractModel
      * @var string 地域，取值有：
 <li>mainland：国内；</li>
 <li>overseas：海外。</li>
+<li>global：全球。</li>
      */
     public $Area;
 
@@ -140,6 +143,7 @@ class Resource extends AbstractModel
      * @param string $Area 地域，取值有：
 <li>mainland：国内；</li>
 <li>overseas：海外。</li>
+<li>global：全球。</li>
      */
     function __construct()
     {

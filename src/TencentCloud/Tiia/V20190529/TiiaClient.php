@@ -184,6 +184,12 @@ use TencentCloud\Tiia\V20190529\Models as Models;
 
 >   
 - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+
+
+ * @method Models\UpdateImageResponse UpdateImage(Models\UpdateImageRequest $req) 本接口支持根据图库ID、物品ID、图片名称来修改图片信息（暂仅支持修改Tags）
+
+>   
+- 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
  */
 
 class TiiaClient extends AbstractClient

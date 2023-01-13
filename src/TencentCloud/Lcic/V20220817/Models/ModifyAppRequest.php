@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
- * @method string getCallback() 获取回调地址。端口目前仅支持80、443
- * @method void setCallback(string $Callback) 设置回调地址。端口目前仅支持80、443
+ * @method string getCallback() 获取回调地址。
+ * @method void setCallback(string $Callback) 设置回调地址。
+ * @method string getCallbackKey() 获取回调key。
+ * @method void setCallbackKey(string $CallbackKey) 设置回调key。
  */
 class ModifyAppRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class ModifyAppRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var string 回调地址。端口目前仅支持80、443
+     * @var string 回调地址。
      */
     public $Callback;
 
     /**
+     * @var string 回调key。
+     */
+    public $CallbackKey;
+
+    /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
-     * @param string $Callback 回调地址。端口目前仅支持80、443
+     * @param string $Callback 回调地址。
+     * @param string $CallbackKey 回调key。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyAppRequest extends AbstractModel
 
         if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
             $this->Callback = $param["Callback"];
+        }
+
+        if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
+            $this->CallbackKey = $param["CallbackKey"];
         }
     }
 }

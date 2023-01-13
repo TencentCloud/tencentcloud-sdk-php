@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterBoundStatus(string $FilterBoundStatus) 设置高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
  * @method array getFilterInstanceIdList() 获取实例id数组
  * @method void setFilterInstanceIdList(array $FilterInstanceIdList) 设置实例id数组
- * @method integer getFilterEnterpriseFlag() 获取企业版搜索
- * @method void setFilterEnterpriseFlag(integer $FilterEnterpriseFlag) 设置企业版搜索
+ * @method integer getFilterEnterpriseFlag() 获取企业版搜索,  1：包含重保护航套餐下的企业版列表, 2: 不包含重保护航套餐的企业版列表
+ * @method void setFilterEnterpriseFlag(integer $FilterEnterpriseFlag) 设置企业版搜索,  1：包含重保护航套餐下的企业版列表, 2: 不包含重保护航套餐的企业版列表
  * @method integer getFilterLightFlag() 获取轻量版搜索
  * @method void setFilterLightFlag(integer $FilterLightFlag) 设置轻量版搜索
  * @method integer getFilterChannelFlag() 获取定制版搜索
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterTrialFlag(integer $FilterTrialFlag) 设置试用资源搜索，1: 应急防护资源；2：PLG试用资源
  * @method integer getFilterConvoy() 获取重保护航搜索
  * @method void setFilterConvoy(integer $FilterConvoy) 设置重保护航搜索
+ * @method boolean getExcludeAdvancedInfo() 获取默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
+ * @method void setExcludeAdvancedInfo(boolean $ExcludeAdvancedInfo) 设置默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -106,7 +108,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterInstanceIdList;
 
     /**
-     * @var integer 企业版搜索
+     * @var integer 企业版搜索,  1：包含重保护航套餐下的企业版列表, 2: 不包含重保护航套餐的企业版列表
      */
     public $FilterEnterpriseFlag;
 
@@ -136,6 +138,11 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterConvoy;
 
     /**
+     * @var boolean 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
+     */
+    public $ExcludeAdvancedInfo;
+
+    /**
      * @param integer $Offset 页起始偏移，取值为(页码-1)*一页条数
      * @param integer $Limit 一页条数，当Limit=0时，默认一页条数为20;最大取值为100
      * @param string $FilterIp IP搜索
@@ -146,12 +153,13 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param string $FilterStatus 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
      * @param string $FilterBoundStatus 高防包绑定状态搜索，bounding：绑定中； failed：绑定失败
      * @param array $FilterInstanceIdList 实例id数组
-     * @param integer $FilterEnterpriseFlag 企业版搜索
+     * @param integer $FilterEnterpriseFlag 企业版搜索,  1：包含重保护航套餐下的企业版列表, 2: 不包含重保护航套餐的企业版列表
      * @param integer $FilterLightFlag 轻量版搜索
      * @param integer $FilterChannelFlag 定制版搜索
      * @param TagFilter $FilterTag 标签搜索
      * @param integer $FilterTrialFlag 试用资源搜索，1: 应急防护资源；2：PLG试用资源
      * @param integer $FilterConvoy 重保护航搜索
+     * @param boolean $ExcludeAdvancedInfo 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
      */
     function __construct()
     {
@@ -229,6 +237,10 @@ class DescribeListBGPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterConvoy",$param) and $param["FilterConvoy"] !== null) {
             $this->FilterConvoy = $param["FilterConvoy"];
+        }
+
+        if (array_key_exists("ExcludeAdvancedInfo",$param) and $param["ExcludeAdvancedInfo"] !== null) {
+            $this->ExcludeAdvancedInfo = $param["ExcludeAdvancedInfo"];
         }
     }
 }

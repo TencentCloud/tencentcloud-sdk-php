@@ -209,7 +209,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\UpdateEdgeClusterVersionResponse UpdateEdgeClusterVersion(Models\UpdateEdgeClusterVersionRequest $req) 升级边缘集群组件到指定版本，此版本为TKEEdge专用版本。
  * @method Models\UpdateImageCacheResponse UpdateImageCache(Models\UpdateImageCacheRequest $req) 更新镜像缓存接口
  * @method Models\UpdateTKEEdgeClusterResponse UpdateTKEEdgeCluster(Models\UpdateTKEEdgeClusterRequest $req) 修改边缘计算集群名称等属性 
- * @method Models\UpgradeClusterInstancesResponse UpgradeClusterInstances(Models\UpgradeClusterInstancesRequest $req) 给集群的一批work节点进行升级 
+ * @method Models\UpgradeClusterInstancesResponse UpgradeClusterInstances(Models\UpgradeClusterInstancesRequest $req) 给集群的一批work节点进行升级
  * @method Models\UpgradeClusterReleaseResponse UpgradeClusterRelease(Models\UpgradeClusterReleaseRequest $req) 升级集群中已安装的应用
  */
 

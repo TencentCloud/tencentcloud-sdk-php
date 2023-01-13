@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnBlockTime(string $UnBlockTime) 设置解封时间（预计解封时间）
  * @method string getActionType() 获取解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
  * @method void setActionType(string $ActionType) 设置解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
+ * @method integer getProtectFlag() 获取高防标记，0：非高防，1：高防
+ * @method void setProtectFlag(integer $ProtectFlag) 设置高防标记，0：非高防，1：高防
  */
 class IpBlockData extends AbstractModel
 {
@@ -59,11 +61,17 @@ class IpBlockData extends AbstractModel
     public $ActionType;
 
     /**
+     * @var integer 高防标记，0：非高防，1：高防
+     */
+    public $ProtectFlag;
+
+    /**
      * @param string $Ip IP
      * @param string $Status 状态（Blocked：被封堵；UnBlocking：解封中；UnBlockFailed：解封失败）
      * @param string $BlockTime 封堵时间
      * @param string $UnBlockTime 解封时间（预计解封时间）
      * @param string $ActionType 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
+     * @param integer $ProtectFlag 高防标记，0：非高防，1：高防
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class IpBlockData extends AbstractModel
 
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
+        }
+
+        if (array_key_exists("ProtectFlag",$param) and $param["ProtectFlag"] !== null) {
+            $this->ProtectFlag = $param["ProtectFlag"];
         }
     }
 }

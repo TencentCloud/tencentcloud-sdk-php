@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(string $Saturday) 设置周六的时间窗，格式如： 02:00-06:00
  * @method string getSunday() 获取周日的时间窗，格式如： 02:00-06:00
  * @method void setSunday(string $Sunday) 设置周日的时间窗，格式如： 02:00-06:00
+ * @method string getBackupPeriodStrategy() 获取常规备份保留策略，weekly-按周备份，monthly-按月备份，默认为weekly
+ * @method void setBackupPeriodStrategy(string $BackupPeriodStrategy) 设置常规备份保留策略，weekly-按周备份，monthly-按月备份，默认为weekly
+ * @method array getDays() 获取如果设置为按月备份，需填入每月具体备份日期，相邻备份天数不得超过两天。例[1,4,7,9,11,14,17,19,22,25,28,30,31]
+ * @method void setDays(array $Days) 设置如果设置为按月备份，需填入每月具体备份日期，相邻备份天数不得超过两天。例[1,4,7,9,11,14,17,19,22,25,28,30,31]
+ * @method string getBackupPeriodTime() 获取月度备份时间窗，BackupPeriodStrategy为monthly时必填。格式如： 02:00-06:00
+ * @method void setBackupPeriodTime(string $BackupPeriodTime) 设置月度备份时间窗，BackupPeriodStrategy为monthly时必填。格式如： 02:00-06:00
  */
 class CommonTimeWindow extends AbstractModel
 {
@@ -73,6 +79,21 @@ class CommonTimeWindow extends AbstractModel
     public $Sunday;
 
     /**
+     * @var string 常规备份保留策略，weekly-按周备份，monthly-按月备份，默认为weekly
+     */
+    public $BackupPeriodStrategy;
+
+    /**
+     * @var array 如果设置为按月备份，需填入每月具体备份日期，相邻备份天数不得超过两天。例[1,4,7,9,11,14,17,19,22,25,28,30,31]
+     */
+    public $Days;
+
+    /**
+     * @var string 月度备份时间窗，BackupPeriodStrategy为monthly时必填。格式如： 02:00-06:00
+     */
+    public $BackupPeriodTime;
+
+    /**
      * @param string $Monday 周一的时间窗，格式如： 02:00-06:00
      * @param string $Tuesday 周二的时间窗，格式如： 02:00-06:00
      * @param string $Wednesday 周三的时间窗，格式如： 02:00-06:00
@@ -80,6 +101,9 @@ class CommonTimeWindow extends AbstractModel
      * @param string $Friday 周五的时间窗，格式如： 02:00-06:00
      * @param string $Saturday 周六的时间窗，格式如： 02:00-06:00
      * @param string $Sunday 周日的时间窗，格式如： 02:00-06:00
+     * @param string $BackupPeriodStrategy 常规备份保留策略，weekly-按周备份，monthly-按月备份，默认为weekly
+     * @param array $Days 如果设置为按月备份，需填入每月具体备份日期，相邻备份天数不得超过两天。例[1,4,7,9,11,14,17,19,22,25,28,30,31]
+     * @param string $BackupPeriodTime 月度备份时间窗，BackupPeriodStrategy为monthly时必填。格式如： 02:00-06:00
      */
     function __construct()
     {
@@ -120,6 +144,18 @@ class CommonTimeWindow extends AbstractModel
 
         if (array_key_exists("Sunday",$param) and $param["Sunday"] !== null) {
             $this->Sunday = $param["Sunday"];
+        }
+
+        if (array_key_exists("BackupPeriodStrategy",$param) and $param["BackupPeriodStrategy"] !== null) {
+            $this->BackupPeriodStrategy = $param["BackupPeriodStrategy"];
+        }
+
+        if (array_key_exists("Days",$param) and $param["Days"] !== null) {
+            $this->Days = $param["Days"];
+        }
+
+        if (array_key_exists("BackupPeriodTime",$param) and $param["BackupPeriodTime"] !== null) {
+            $this->BackupPeriodTime = $param["BackupPeriodTime"];
         }
     }
 }

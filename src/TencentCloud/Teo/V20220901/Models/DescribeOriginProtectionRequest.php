@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getZoneIds() 获取查询的站点集合，不填默认查询所有站点。
  * @method void setZoneIds(array $ZoneIds) 设置查询的站点集合，不填默认查询所有站点。
- * @method Filter getFilters() 获取过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+ * @method array getFilters() 获取过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
 <li>need-update<br>   按照【<strong>站点是否需要更新源站防护IP白名单</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：需要更新<br>   false：无需更新<br></li>
 <li>plan-support<br>   按照【<strong>站点套餐是否支持源站防护</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：支持<br>   false：不支持<br></li>
- * @method void setFilters(Filter $Filters) 设置过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+ * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
 <li>need-update<br>   按照【<strong>站点是否需要更新源站防护IP白名单</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：需要更新<br>   false：无需更新<br></li>
 <li>plan-support<br>   按照【<strong>站点套餐是否支持源站防护</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：支持<br>   false：不支持<br></li>
  * @method integer getOffset() 获取分页查询偏移量，默认为0。
@@ -41,7 +41,7 @@ class DescribeOriginProtectionRequest extends AbstractModel
     public $ZoneIds;
 
     /**
-     * @var Filter 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+     * @var array 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
 <li>need-update<br>   按照【<strong>站点是否需要更新源站防护IP白名单</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：需要更新<br>   false：无需更新<br></li>
 <li>plan-support<br>   按照【<strong>站点套餐是否支持源站防护</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：支持<br>   false：不支持<br></li>
      */
@@ -59,7 +59,7 @@ class DescribeOriginProtectionRequest extends AbstractModel
 
     /**
      * @param array $ZoneIds 查询的站点集合，不填默认查询所有站点。
-     * @param Filter $Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+     * @param array $Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
 <li>need-update<br>   按照【<strong>站点是否需要更新源站防护IP白名单</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：需要更新<br>   false：无需更新<br></li>
 <li>plan-support<br>   按照【<strong>站点套餐是否支持源站防护</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：支持<br>   false：不支持<br></li>
      * @param integer $Offset 分页查询偏移量，默认为0。
@@ -83,8 +83,12 @@ class DescribeOriginProtectionRequest extends AbstractModel
         }
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = new Filter();
-            $this->Filters->deserialize($param["Filters"]);
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

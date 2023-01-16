@@ -46,6 +46,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 在通过接口(CreateFlowsByTemplates 或者ChannelCreateFlowByFiles)创建签署流程时，若指定了参数 NeedSignReview 为true,则可以调用此接口提交企业内部签署审批结果。
 若签署流程状态正常，且本企业存在签署方未签署，同一签署流程可以多次提交签署审批结果，签署时的最后一个“审批结果”有效。
+ * @method Models\ChannelCreateFlowSignUrlResponse ChannelCreateFlowSignUrl(Models\ChannelCreateFlowSignUrlRequest $req) 渠道版创建签署链接，需要联系运营人员开白后才可使用
  * @method Models\ChannelCreateMultiFlowSignQRCodeResponse ChannelCreateMultiFlowSignQRCode(Models\ChannelCreateMultiFlowSignQRCodeRequest $req) 此接口（ChannelCreateMultiFlowSignQRCode）用于创建一码多扫签署流程二维码。
 适用的模版仅限于B2C（1、无序签署，2、顺序签署时B静默签署，3、顺序签署时B非首位签署）、单C的模版，且模版中发起方没有填写控件。
  * @method Models\ChannelCreateReleaseFlowResponse ChannelCreateReleaseFlow(Models\ChannelCreateReleaseFlowRequest $req) 渠道版发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBizId() 获取应用id
  * @method void setBizId(integer $BizId) 设置应用id
- * @method string getTaskId() 获取创建年龄语音识别任务时返回的taskid
- * @method void setTaskId(string $TaskId) 设置创建年龄语音识别任务时返回的taskid
+ * @method string getTaskId() 获取[创建年龄语音识别任务](https://cloud.tencent.com/document/product/607/60620)时返回的taskid
+ * @method void setTaskId(string $TaskId) 设置[创建年龄语音识别任务](https://cloud.tencent.com/document/product/607/60620)时返回的taskid
  */
 class DescribeAgeDetectTaskRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeAgeDetectTaskRequest extends AbstractModel
     public $BizId;
 
     /**
-     * @var string 创建年龄语音识别任务时返回的taskid
+     * @var string [创建年龄语音识别任务](https://cloud.tencent.com/document/product/607/60620)时返回的taskid
      */
     public $TaskId;
 
     /**
      * @param integer $BizId 应用id
-     * @param string $TaskId 创建年龄语音识别任务时返回的taskid
+     * @param string $TaskId [创建年龄语音识别任务](https://cloud.tencent.com/document/product/607/60620)时返回的taskid
      */
     function __construct()
     {

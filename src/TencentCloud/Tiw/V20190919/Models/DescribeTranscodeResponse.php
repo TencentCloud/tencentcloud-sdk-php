@@ -58,6 +58,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setThumbnailResolution(string $ThumbnailResolution) 设置动态转码缩略图生成分辨率
  * @method string getCompressFileUrl() 获取转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串
  * @method void setCompressFileUrl(string $CompressFileUrl) 设置转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串
+ * @method string getResourceListUrl() 获取资源清单文件下载URL(内测体验)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceListUrl(string $ResourceListUrl) 设置资源清单文件下载URL(内测体验)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExt() 获取文档制作方式(内测体验)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExt(string $Ext) 设置文档制作方式(内测体验)
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
@@ -123,6 +131,18 @@ class DescribeTranscodeResponse extends AbstractModel
     public $CompressFileUrl;
 
     /**
+     * @var string 资源清单文件下载URL(内测体验)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceListUrl;
+
+    /**
+     * @var string 文档制作方式(内测体验)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Ext;
+
+    /**
      * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -147,6 +167,10 @@ class DescribeTranscodeResponse extends AbstractModel
 如果发起文档转码请求参数中带了ThumbnailResolution参数，并且转码类型为动态转码，该参数不为空，其余情况该参数为空字符串
      * @param string $ThumbnailResolution 动态转码缩略图生成分辨率
      * @param string $CompressFileUrl 转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串
+     * @param string $ResourceListUrl 资源清单文件下载URL(内测体验)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Ext 文档制作方式(内测体验)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -200,6 +224,14 @@ class DescribeTranscodeResponse extends AbstractModel
 
         if (array_key_exists("CompressFileUrl",$param) and $param["CompressFileUrl"] !== null) {
             $this->CompressFileUrl = $param["CompressFileUrl"];
+        }
+
+        if (array_key_exists("ResourceListUrl",$param) and $param["ResourceListUrl"] !== null) {
+            $this->ResourceListUrl = $param["ResourceListUrl"];
+        }
+
+        if (array_key_exists("Ext",$param) and $param["Ext"] !== null) {
+            $this->Ext = $param["Ext"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

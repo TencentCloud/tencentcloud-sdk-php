@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取（过滤条件）按照实例ID过滤
  * @method void setInstanceId(string $InstanceId) 设置（过滤条件）按照实例ID过滤
- * @method string getSearchWord() 获取（过滤条件）按照实例名称过滤，支持模糊查询
- * @method void setSearchWord(string $SearchWord) 设置（过滤条件）按照实例名称过滤，支持模糊查询
+ * @method string getSearchWord() 获取（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
+ * @method void setSearchWord(string $SearchWord) 设置（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
  * @method array getStatus() 获取（过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
  * @method void setStatus(array $Status) 设置（过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
  * @method integer getOffset() 获取偏移量，不填默认为0。
@@ -47,7 +47,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string （过滤条件）按照实例名称过滤，支持模糊查询
+     * @var string （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
      */
     public $SearchWord;
 
@@ -88,7 +88,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
 
     /**
      * @param string $InstanceId （过滤条件）按照实例ID过滤
-     * @param string $SearchWord （过滤条件）按照实例名称过滤，支持模糊查询
+     * @param string $SearchWord （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
      * @param array $Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
      * @param integer $Offset 偏移量，不填默认为0。
      * @param integer $Limit 返回数量，不填则默认10，最大值20。

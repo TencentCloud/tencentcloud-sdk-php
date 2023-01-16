@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMerchantName(string $MerchantName) 设置商户名称
  * @method string getProductName() 获取产品名称
  * @method void setProductName(string $ProductName) 设置产品名称
+ * @method integer getAgentId() 获取渠道商ID
+ * @method void setAgentId(integer $AgentId) 设置渠道商ID
+ * @method integer getLevel() 获取码层级 0: 最小级, 1: 一级, 2: 二级
+ * @method void setLevel(integer $Level) 设置码层级 0: 最小级, 1: 一级, 2: 二级
  */
 class TraceCode extends AbstractModel
 {
@@ -101,6 +105,16 @@ class TraceCode extends AbstractModel
     public $ProductName;
 
     /**
+     * @var integer 渠道商ID
+     */
+    public $AgentId;
+
+    /**
+     * @var integer 码层级 0: 最小级, 1: 一级, 2: 二级
+     */
+    public $Level;
+
+    /**
      * @param string $Code 二维码
      * @param integer $CorpId 企业ID
      * @param string $PackId 码包ID
@@ -112,6 +126,8 @@ class TraceCode extends AbstractModel
      * @param string $UpdateTime 修改时间
      * @param string $MerchantName 商户名称
      * @param string $ProductName 产品名称
+     * @param integer $AgentId 渠道商ID
+     * @param integer $Level 码层级 0: 最小级, 1: 一级, 2: 二级
      */
     function __construct()
     {
@@ -168,6 +184,14 @@ class TraceCode extends AbstractModel
 
         if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
             $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("AgentId",$param) and $param["AgentId"] !== null) {
+            $this->AgentId = $param["AgentId"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
     }
 }

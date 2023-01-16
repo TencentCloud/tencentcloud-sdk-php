@@ -18,28 +18,16 @@ namespace TencentCloud\Lcic\V20220817\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAppDetail请求参数结构体
+ * 应用配置信息
  *
- * @method string getApplicationId() 获取应用ID
- * @method void setApplicationId(string $ApplicationId) 设置应用ID
- * @method string getDeveloperId() 获取开发商ID
- * @method void setDeveloperId(string $DeveloperId) 设置开发商ID
+
  */
-class DescribeAppDetailRequest extends AbstractModel
+class AppConfig extends AbstractModel
 {
-    /**
-     * @var string 应用ID
-     */
-    public $ApplicationId;
+
 
     /**
-     * @var string 开发商ID
-     */
-    public $DeveloperId;
 
-    /**
-     * @param string $ApplicationId 应用ID
-     * @param string $DeveloperId 开发商ID
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class DescribeAppDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
-            $this->ApplicationId = $param["ApplicationId"];
-        }
 
-        if (array_key_exists("DeveloperId",$param) and $param["DeveloperId"] !== null) {
-            $this->DeveloperId = $param["DeveloperId"];
-        }
     }
 }
